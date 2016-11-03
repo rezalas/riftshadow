@@ -1,0 +1,548 @@
+#AREA
+zatuhl.are~
+The Ancient Woods of Zatuhl-Mne~
+Indural~
+0 0
+16600 16899
+unopened
+none
+0
+1
+Indural~
+
+#MOBS
+#16600
+A mob to create my gear on~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 sidhe~
+1 4d4+4 4d4+4 1 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#0
+
+
+
+#OBJS
+#16600
+shield flames~
+the Shield of Law~
+A massive shield enveloped by white flames~
+armor
+adamantium~
+50 100 50 100 0
+60 20 900000 P
+WEAR TAKE
+WEAR SHIELD
+RESTRICT TITAN_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+ITEM NODISARM
+ITEM NOLOCATE
+ITEM BURNPROOF
+ITEM NOSAC
+APPLY AC 100
+APPLY NONE 4
+APPLY NONE 4
+APPLY NONE 4
+LIMIT 1
+VERB Relic
+CABAL PHALANX
+TIMER 0
+
+#16601
+sword flame~
+the flaming sword of Law~
+A sword reathed in flame floats here~
+weapon
+adamantium~
+sword 1000 1000 wrath A
+51 10 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+ITEM NOLOCATE
+ITEM ANTICHAOTIC
+LIMIT 1
+CABAL PHALANX
+TIMER 0
+FLAG IMM FIRE
+FLAG AFF 'diamondskin' none SHOW
+FLAG AFF 'diamondskin' none SHOW
+FLAG AFF 'diamondskin' none SHOW
+
+#16602
+breastplate torso~
+the breastplate of Ardweath~
+A polished silver breastplate is here~
+armor
+adamantium~
+50 50 50 50 0
+51 10 0 P
+WEAR TAKE
+WEAR BODY
+RESTRICT TITAN_ONLY
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+ITEM ANTICHAOTIC
+APPLY NONE 3
+APPLY NONE 3
+APPLY NONE 3
+APPLY NONE 3
+APPLY AC 30
+LIMIT 1
+CABAL PHALANX
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#16600
+Ancient woods of zatuhl-Mne~
+Leaving the plains behind you come apon an ancient grove of trees that
+seems to span into the distance as far as the eye can see.  Before you the
+tree canopies seem to be placed rather low in a valley, but further
+inspection shows the steep slope that lies to the north and the east places
+these trees at several hundred feet tall.  The motion of the wind and fog
+that sits among the canopies gives the illusion that some of the trees are
+moving.
+~
+forest
+D NORTH 16601 0 0
+door~
+A darkend slope leading below the tree line.  
+~
+D EAST 16602 0 0
+door~
+A slope leading below the tree line.  
+~
+D UP 16257 0 0
+door~
+~
+OWNER none~
+#16601
+A steep path through the canopy~
+~
+forest
+D SOUTH 16600 0 0
+door~
+~
+D DOWN 16603 0 0
+door~
+~
+OWNER none~
+#16602
+A steep path through the canopy~
+~
+forest
+D WEST 16600 0 0
+door~
+~
+D DOWN 16604 0 0
+door~
+~
+OWNER none~
+#16603
+A steep path through the canopy~
+~
+forest
+D EAST 16605 0 0
+door~
+~
+D UP 16601 0 0
+door~
+~
+OWNER none~
+#16604
+A steep path through the canopy~
+~
+forest
+D NORTH 16605 0 0
+door~
+~
+D UP 16602 0 0
+door~
+~
+OWNER none~
+#16605
+A small Path through the dense treeline~
+~
+forest
+D NORTH 16606 0 0
+door~
+~
+D SOUTH 16604 0 0
+door~
+~
+D WEST 16603 0 0
+door~
+~
+OWNER none~
+#16606
+an Ancient Grove~
+Entrance to the grove, a small pixie MOB says "Be careful in this forest,
+it sees everything, it knows everyone, it forgives nothing."  
+~
+forest
+D NORTH 16607 0 0
+door~
+~
+D EAST 16610 0 0
+door~
+~
+D SOUTH 16605 0 0
+door~
+~
+OWNER none~
+#16607
+Inside the Grove~
+2x1 of the grove,
+~
+forest
+D NORTH 16608 0 0
+door~
+~
+D EAST 16611 0 0
+door~
+~
+D SOUTH 16606 0 0
+door~
+~
+OWNER none~
+#16608
+Inside the Grove~
+3x1 room, nothing special, you can hear the waterfall up ahead.  You can
+see the alter to the east 
+~
+forest
+D NORTH 16609 0 0
+door~
+~
+D EAST 16612 0 0
+door~
+~
+D SOUTH 16607 0 0
+door~
+~
+OWNER none~
+#16609
+A small corner of the Grove~
+4x1 of 4x4, contains a small waterfall from a large rock segment jutting
+from the hillside.  
+~
+forest
+D EAST 16613 0 0
+door~
+~
+D SOUTH 16608 0 0
+door~
+~
+OWNER none~
+#16610
+Inside the Grove~
+~
+forest
+D NORTH 16611 0 0
+door~
+~
+D EAST 16614 0 0
+door~
+~
+D WEST 16606 0 0
+door~
+~
+OWNER none~
+#16611
+Inside the Grove~
+~
+forest
+D NORTH 16612 0 0
+door~
+~
+D EAST 16615 0 0
+door~
+~
+D SOUTH 16610 0 0
+door~
+~
+D WEST 16607 0 0
+door~
+~
+OWNER none~
+#16612
+Infront of a long Altar~
+middle 1
+~
+forest
+D NORTH 16613 0 0
+door~
+~
+D EAST 16616 0 0
+door~
+~
+D SOUTH 16611 0 0
+door~
+~
+D WEST 16608 0 0
+door~
+~
+OWNER none~
+#16613
+Inside the Grove~
+~
+forest
+D NORTH 16622 0 0
+door~
+~
+D EAST 16617 0 0
+door~
+~
+D SOUTH 16612 0 0
+door~
+~
+D WEST 16609 0 0
+door~
+~
+OWNER none~
+#16614
+Inside the Grove~
+~
+forest
+D NORTH 16615 0 0
+door~
+~
+D EAST 16618 0 0
+door~
+~
+D WEST 16610 0 0
+door~
+~
+OWNER none~
+#16615
+Inside the Grove~
+~
+forest
+D NORTH 16616 0 0
+door~
+~
+D EAST 16619 0 0
+door~
+~
+D SOUTH 16614 0 0
+door~
+~
+D WEST 16611 0 0
+door~
+~
+OWNER none~
+#16616
+Infront of a long Altar~
+middle 2
+~
+forest
+D NORTH 16617 0 0
+door~
+~
+D EAST 16620 0 0
+door~
+~
+D SOUTH 16615 0 0
+door~
+~
+D WEST 16612 0 0
+door~
+~
+OWNER none~
+#16617
+Inside the Grove~
+~
+forest
+D NORTH 16623 0 0
+door~
+~
+D EAST 16621 0 0
+door~
+~
+D SOUTH 16616 0 0
+door~
+~
+D WEST 16613 0 0
+door~
+~
+OWNER none~
+#16618
+A small corner of the Grove~
+1x4 within the grove, hidden entrance to the east leads into a druids home.
+~
+forest
+D NORTH 16619 0 0
+door~
+~
+D WEST 16614 0 0
+door~
+~
+OWNER none~
+#16619
+Inside the Grove~
+~
+forest
+D NORTH 16620 0 0
+door~
+~
+D SOUTH 16618 0 0
+door~
+~
+D WEST 16615 0 0
+door~
+~
+OWNER none~
+#16620
+Inside the Grove~
+~
+forest
+D NORTH 16621 0 0
+door~
+~
+D SOUTH 16619 0 0
+door~
+~
+D WEST 16616 0 0
+door~
+~
+OWNER none~
+#16621
+A small corner of the Grove~
+4x4 of 4x4, contains a deer.
+~
+forest
+D SOUTH 16620 0 0
+door~
+~
+D WEST 16617 0 0
+door~
+~
+OWNER none~
+#16622
+A path leaving the Grove~
+~
+forest
+D NORTH 16624 0 0
+door~
+~
+D EAST 16623 0 0
+door~
+~
+D SOUTH 16613 0 0
+door~
+~
+OWNER none~
+#16623
+A path leaving the Grove~
+~
+forest
+D NORTH 16625 0 0
+door~
+~
+D SOUTH 16617 0 0
+door~
+~
+D WEST 16622 0 0
+door~
+~
+OWNER none~
+#16624
+A wide path among the trees~
+To the east will be a large lake where a Black Dragon sleeps at the
+bottom, he is not aggro, but tracks.  
+~
+forest
+D EAST 16625 0 0
+door~
+~
+D SOUTH 16622 0 0
+door~
+~
+D WEST 16628 0 0
+door~
+~
+OWNER none~
+#16625
+A wide path among the trees~
+~
+forest
+D EAST 16626 0 0
+door~
+~
+D SOUTH 16623 0 0
+door~
+~
+D WEST 16624 0 0
+door~
+~
+OWNER none~
+#16626
+Dummy Room~
+~
+forest
+D EAST 16627 0 0
+door~
+~
+D WEST 16625 0 0
+door~
+~
+OWNER none~
+#16627
+Dummy Room~
+~
+forest
+D WEST 16626 0 0
+door~
+~
+OWNER none~
+#16628
+A wide path among the trees~
+~
+forest
+D EAST 16624 0 0
+door~
+~
+D WEST 16629 0 0
+door~
+~
+OWNER none~
+#16629
+A wide path among the trees~
+~
+unused
+D EAST 16628 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 16600 TO 16612 GLIMIT 1 LLIMIT 1
+OBJECT 16600 TO 16613
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

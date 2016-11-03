@@ -1,0 +1,7 @@
+<?
+	$target_level = 54;
+	include("../check_trust.inc");
+	$conn  = mysql_connect("localhost", "rift", "rift123");
+	@mysql_db_query("rift","delete from helpfiles where id=$_GET[id]", $conn);
+	Header("Location: http://admin.riftshadow.org");
+?>

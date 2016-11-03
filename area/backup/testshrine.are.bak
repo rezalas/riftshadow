@@ -1,0 +1,73 @@
+#AREA
+testshrine.are~
+Test Shrine~
+None~
+1 51
+100 101
+shrine
+none
+0
+1
+None~
+
+#MOBS
+#100
+testmob ward humpty echo~
+{bAight, stop what you're doin, cause I'm about to ruin the image and the style that you're used to.  I look funny, but yo I'm makin money, see, so yo world I hope you're ready for me.{x~
+Humpty is here, doing the Humpty Dance.
+~
+He looks funny, but yo, he's making money.
+~
+1000 0 100 human~
+30 1d1+19999 5d4+40 0 100 crush
+100 100 0 23
+standing male none
+0 0 large
+ACT NPC
+ACT WARD_MOB
+#0
+
+
+
+#OBJS
+#100
+stone altar~
+a circular stone altar made of granite~
+A small, circular stone altar made of granite dominates the center of the room.~
+altar
+granite~
+0 0 0 0 0
+0 0 0 P
+LIMIT 1
+
+#0
+
+
+
+#ROOMS
+#100
+Before A Large Altar~
+This poorly lit room is fairly plain, with a floor of smooth stone.  There is
+but one thing of interest.
+~
+inside
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER Eladrian~
+#0
+
+
+
+#RESETS
+OBJECT 100 TO 100
+MOB 100 TO 100 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 100 pulse_prog pulse_prog_area_echo_ward
+END
+#SPECS
+END
+#$

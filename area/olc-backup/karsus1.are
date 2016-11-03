@@ -1,0 +1,697 @@
+#AREA
+karsus1.are~
+Karsus New Area~
+Karsus~
+0 0
+24000 24099
+normal
+arid
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24000
+Dummy Room~
+This is the example description. 
+~
+forest
+D north 24001 0 0
+~
+~
+D west 24002 0 0
+~
+~
+OWNER none~
+#24001
+Dummy Room~
+This is the example description. 
+~
+unused
+D south 24000 0 0
+~
+~
+D west 24003 0 0
+~
+~
+OWNER none~
+#24002
+Dummy Room~
+This is the example description. 
+~
+unused
+D north 24003 0 0
+~
+~
+D east 24000 0 0
+~
+~
+OWNER none~
+#24003
+Dummy Room~
+This is the example description. 
+~
+unused
+D north 24004 0 0
+~
+~
+D east 24001 0 0
+~
+~
+D south 24002 0 0
+~
+~
+D west 24006 0 0
+~
+~
+OWNER none~
+#24004
+Dummy Room~
+This is the example description. 
+~
+unused
+D south 24003 0 0
+~
+~
+D west 24005 0 0
+~
+~
+OWNER none~
+#24005
+Dummy Room~
+This is the example description. 
+~
+unused
+D east 24004 0 0
+~
+~
+D south 24006 0 0
+~
+~
+D west 24007 0 0
+~
+~
+OWNER none~
+#24006
+Dummy Room~
+This is the example description. 
+~
+unused
+D north 24005 0 0
+~
+~
+D east 24003 0 0
+~
+~
+D west 24008 0 0
+~
+~
+OWNER none~
+#24007
+Dummy Room~
+This is the example description. 
+~
+unused
+D east 24005 0 0
+~
+~
+D south 24008 0 0
+~
+~
+OWNER none~
+#24008
+Dummy Room~
+This is the example description. 
+~
+unused
+D north 24007 0 0
+~
+~
+D east 24006 0 0
+~
+~
+OWNER none~
+#24009
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24010
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24011
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24012
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24013
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24014
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24015
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24016
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24017
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24018
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24019
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24020
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24021
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24022
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24023
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24024
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24025
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24026
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24027
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24028
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24029
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24030
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24031
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24032
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24033
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24034
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24035
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24036
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24037
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24038
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24039
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24040
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24041
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24042
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24043
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24044
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24045
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24046
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24047
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24048
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24049
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24050
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24051
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24052
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24053
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24054
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24055
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24056
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24057
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24058
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24059
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24060
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24061
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24062
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24063
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24064
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24065
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24066
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24067
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24068
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24069
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24070
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24071
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24072
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24073
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24074
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24075
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24076
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24077
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24078
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24079
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24080
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24081
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24082
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24083
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24084
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24085
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24086
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24087
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24088
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24089
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24090
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24091
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24092
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24093
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24094
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24095
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24096
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24097
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24098
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#24099
+Dummy Room~
+This is the example description. 
+~
+unused
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

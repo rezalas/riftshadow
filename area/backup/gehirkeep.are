@@ -1,0 +1,1344 @@
+#AREA
+gehirkeep.are~
+Gehir Keep~
+Jathruk~
+0 0
+18100 18199
+unopened
+none
+0
+1
+Jathruk~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#18100
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D SOUTH 18101 0 0
+~
+~
+OWNER none~
+#18101
+Dummy Room~
+~
+unused
+D NORTH 18100 0 0
+~
+~
+D EAST 18102 0 0
+~
+~
+OWNER none~
+#18102
+A Small, Rugged Tunnel~
+~
+unused
+D WEST 18101 0 0
+~
+~
+D UP 18103 0 0
+~
+~
+OWNER none~
+#18103
+A Large, Underground Room~
+~
+unused
+D EAST 18104 0 0
+~
+~
+D SOUTH 18107 0 0
+~
+~
+D DOWN 18102 0 0
+~
+~
+OWNER none~
+#18104
+A Large, Underground Room~
+~
+unused
+D EAST 18105 0 0
+~
+~
+D SOUTH 18108 0 0
+~
+~
+D WEST 18103 0 0
+~
+~
+OWNER none~
+#18105
+A large, Underground Room~
+~
+unused
+D EAST 18106 0 0
+~
+~
+D SOUTH 18109 0 0
+~
+~
+D WEST 18104 0 0
+~
+~
+OWNER none~
+#18106
+A Large, Underground Room~
+~
+unused
+D SOUTH 18110 0 0
+~
+~
+D WEST 18105 0 0
+~
+~
+OWNER none~
+#18107
+A Large, Underground Room~
+~
+unused
+D NORTH 18103 0 0
+~
+~
+D EAST 18108 0 0
+~
+~
+OWNER none~
+#18108
+A Large, Underground Room~
+~
+unused
+D NORTH 18104 0 0
+~
+~
+D EAST 18109 0 0
+~
+~
+D WEST 18107 0 0
+~
+~
+OWNER none~
+#18109
+A Large, Underground Room~
+~
+unused
+D NORTH 18105 0 0
+~
+~
+D EAST 18110 0 0
+~
+~
+D WEST 18108 0 0
+~
+~
+OWNER none~
+#18110
+A Large, Underground Room~
+~
+unused
+D NORTH 18106 0 0
+~
+~
+D EAST 18111 0 0
+~
+~
+D WEST 18109 0 0
+~
+~
+OWNER none~
+#18111
+A Rough Tunnel~
+~
+unused
+D WEST 18110 0 0
+~
+~
+D UP 18116 0 0
+~
+~
+OWNER none~
+#18112
+Dummy Room~
+~
+unused
+D NORTH 18117 0 0
+~
+~
+D EAST 18113 0 0
+~
+~
+D UP 18140 0 0
+~
+~
+OWNER none~
+#18113
+Dummy Room~
+~
+unused
+D NORTH 18118 0 0
+~
+~
+D EAST 18114 0 0
+~
+~
+D WEST 18112 0 0
+~
+~
+OWNER none~
+#18114
+Dummy Room~
+~
+unused
+D NORTH 18119 0 0
+~
+~
+D EAST 18115 0 0
+~
+~
+D WEST 18113 0 0
+~
+~
+OWNER none~
+#18115
+Dummy Room~
+~
+unused
+D NORTH 18120 0 0
+~
+~
+D EAST 18116 0 0
+~
+~
+D WEST 18114 0 0
+~
+~
+OWNER none~
+#18116
+Dummy Room~
+~
+unused
+D NORTH 18121 0 0
+~
+~
+D WEST 18115 0 0
+~
+~
+D DOWN 18111 0 0
+~
+~
+OWNER none~
+#18117
+Dummy Room~
+~
+unused
+D NORTH 18123 0 0
+~
+~
+D EAST 18118 0 0
+~
+~
+D SOUTH 18112 0 0
+~
+~
+OWNER none~
+#18118
+Dummy Room~
+~
+unused
+D NORTH 18124 0 0
+~
+~
+D EAST 18119 0 0
+~
+~
+D SOUTH 18113 0 0
+~
+~
+D WEST 18117 0 0
+~
+~
+OWNER none~
+#18119
+Dummy Room~
+~
+unused
+D NORTH 18125 0 0
+~
+~
+D EAST 18120 0 0
+~
+~
+D SOUTH 18114 0 0
+~
+~
+D WEST 18118 0 0
+~
+~
+OWNER none~
+#18120
+Dummy Room~
+~
+unused
+D NORTH 18126 0 0
+~
+~
+D EAST 18121 0 0
+~
+~
+D SOUTH 18115 0 0
+~
+~
+D WEST 18119 0 0
+~
+~
+OWNER none~
+#18121
+Dummy Room~
+~
+unused
+D NORTH 18127 0 0
+~
+~
+D EAST 18122 0 0
+~
+~
+D SOUTH 18116 0 0
+~
+~
+D WEST 18120 0 0
+~
+~
+OWNER none~
+#18122
+Dummy Room~
+~
+unused
+D NORTH 18128 0 0
+~
+~
+D WEST 18121 0 0
+~
+~
+OWNER none~
+#18123
+Dummy Room~
+~
+unused
+D NORTH 18129 0 0
+~
+~
+D EAST 18124 0 0
+~
+~
+D SOUTH 18117 0 0
+~
+~
+OWNER none~
+#18124
+Dummy Room~
+~
+unused
+D NORTH 18130 0 0
+~
+~
+D EAST 18125 0 0
+~
+~
+D SOUTH 18118 0 0
+~
+~
+D WEST 18123 0 0
+~
+~
+OWNER none~
+#18125
+Dummy Room~
+~
+unused
+D NORTH 18131 0 0
+~
+~
+D EAST 18126 0 0
+~
+~
+D SOUTH 18119 0 0
+~
+~
+D WEST 18124 0 0
+~
+~
+OWNER none~
+#18126
+Dummy Room~
+~
+unused
+D NORTH 18132 0 0
+~
+~
+D EAST 18127 0 0
+~
+~
+D SOUTH 18120 0 0
+~
+~
+D WEST 18125 0 0
+~
+~
+OWNER none~
+#18127
+Dummy Room~
+~
+unused
+D NORTH 18133 0 0
+~
+~
+D EAST 18128 0 0
+~
+~
+D SOUTH 18121 0 0
+~
+~
+D WEST 18126 0 0
+~
+~
+OWNER none~
+#18128
+Dummy Room~
+~
+unused
+D NORTH 18134 0 0
+~
+~
+D EAST 875 0 0
+~
+~
+D SOUTH 18122 0 0
+~
+~
+D WEST 18127 0 0
+~
+~
+OWNER none~
+#18129
+Dummy Room~
+~
+unused
+D NORTH 18135 0 0
+~
+~
+D EAST 18130 0 0
+~
+~
+D SOUTH 18123 0 0
+~
+~
+OWNER none~
+#18130
+Dummy Room~
+~
+unused
+D NORTH 18136 0 0
+~
+~
+D EAST 18131 0 0
+~
+~
+D SOUTH 18124 0 0
+~
+~
+D WEST 18129 0 0
+~
+~
+OWNER none~
+#18131
+Dummy Room~
+~
+unused
+D NORTH 18137 0 0
+~
+~
+D EAST 18132 0 0
+~
+~
+D SOUTH 18125 0 0
+~
+~
+D WEST 18130 0 0
+~
+~
+OWNER none~
+#18132
+Dummy Room~
+~
+unused
+D NORTH 18138 0 0
+~
+~
+D EAST 18133 0 0
+~
+~
+D SOUTH 18126 0 0
+~
+~
+D WEST 18131 0 0
+~
+~
+OWNER none~
+#18133
+Dummy Room~
+~
+unused
+D NORTH 18139 0 0
+~
+~
+D EAST 18134 0 0
+~
+~
+D SOUTH 18127 0 0
+~
+~
+D WEST 18132 0 0
+~
+~
+OWNER none~
+#18134
+Dummy Room~
+~
+unused
+D SOUTH 18128 0 0
+~
+~
+D WEST 18133 0 0
+~
+~
+OWNER none~
+#18135
+Dummy Room~
+~
+unused
+D EAST 18136 0 0
+~
+~
+D SOUTH 18129 0 0
+~
+~
+D UP 18163 0 0
+~
+~
+OWNER none~
+#18136
+Dummy Room~
+~
+unused
+D EAST 18137 0 0
+~
+~
+D SOUTH 18130 0 0
+~
+~
+D WEST 18135 0 0
+~
+~
+OWNER none~
+#18137
+Dummy Room~
+~
+unused
+D EAST 18138 0 0
+~
+~
+D SOUTH 18131 0 0
+~
+~
+D WEST 18136 0 0
+~
+~
+OWNER none~
+#18138
+Dummy Room~
+~
+unused
+D EAST 18139 0 0
+~
+~
+D SOUTH 18132 0 0
+~
+~
+D WEST 18137 0 0
+~
+~
+OWNER none~
+#18139
+Dummy Room~
+~
+unused
+D SOUTH 18133 0 0
+~
+~
+D WEST 18138 0 0
+~
+~
+OWNER none~
+#18140
+Dummy Room~
+~
+unused
+D NORTH 18145 0 0
+~
+~
+D EAST 18141 0 0
+~
+~
+D DOWN 18112 0 0
+~
+~
+OWNER none~
+#18141
+Dummy Room~
+~
+unused
+D NORTH 18146 0 0
+~
+~
+D EAST 18142 0 0
+~
+~
+D WEST 18140 0 0
+~
+~
+OWNER none~
+#18142
+Dummy Room~
+~
+unused
+D NORTH 18147 0 0
+~
+~
+D EAST 18143 0 0
+~
+~
+D WEST 18141 0 0
+~
+~
+OWNER none~
+#18143
+Dummy Room~
+~
+unused
+D NORTH 18148 0 0
+~
+~
+D EAST 18144 0 0
+~
+~
+D WEST 18142 0 0
+~
+~
+OWNER none~
+#18144
+Dummy Room~
+~
+unused
+D NORTH 18149 0 0
+~
+~
+D WEST 18143 0 0
+~
+~
+D UP 18170 0 0
+~
+~
+OWNER none~
+#18145
+Dummy Room~
+~
+unused
+D NORTH 18151 0 0
+~
+~
+D EAST 18146 0 0
+~
+~
+D SOUTH 18140 0 0
+~
+~
+OWNER none~
+#18146
+Dummy Room~
+~
+unused
+D NORTH 18152 0 0
+~
+~
+D EAST 18147 0 0
+~
+~
+D SOUTH 18141 0 0
+~
+~
+D WEST 18145 0 0
+~
+~
+OWNER none~
+#18147
+Dummy Room~
+~
+unused
+D NORTH 18153 0 0
+~
+~
+D EAST 18148 0 0
+~
+~
+D SOUTH 18142 0 0
+~
+~
+D WEST 18146 0 0
+~
+~
+OWNER none~
+#18148
+Dummy Room~
+~
+unused
+D NORTH 18154 0 0
+~
+~
+D EAST 18149 0 0
+~
+~
+D SOUTH 18143 0 0
+~
+~
+D WEST 18147 0 0
+~
+~
+OWNER none~
+#18149
+Dummy Room~
+~
+unused
+D NORTH 18155 0 0
+~
+~
+D EAST 18150 0 0
+~
+~
+D SOUTH 18144 0 0
+~
+~
+D WEST 18148 0 0
+~
+~
+OWNER none~
+#18150
+Dummy Room~
+~
+unused
+D NORTH 18156 0 0
+~
+~
+D WEST 18149 0 0
+~
+~
+OWNER none~
+#18151
+Dummy Room~
+~
+unused
+D NORTH 18157 0 0
+~
+~
+D EAST 18152 0 0
+~
+~
+D SOUTH 18145 0 0
+~
+~
+OWNER none~
+#18152
+Dummy Room~
+~
+unused
+D NORTH 18158 0 0
+~
+~
+D EAST 18153 0 0
+~
+~
+D SOUTH 18146 0 0
+~
+~
+D WEST 18151 0 0
+~
+~
+OWNER none~
+#18153
+Dummy Room~
+~
+unused
+D NORTH 18159 0 0
+~
+~
+D EAST 18154 0 0
+~
+~
+D SOUTH 18147 0 0
+~
+~
+D WEST 18152 0 0
+~
+~
+OWNER none~
+#18154
+Dummy Room~
+~
+unused
+D NORTH 18160 0 0
+~
+~
+D EAST 18155 0 0
+~
+~
+D SOUTH 18148 0 0
+~
+~
+D WEST 18153 0 0
+~
+~
+OWNER none~
+#18155
+Dummy Room~
+~
+unused
+D NORTH 18161 0 0
+~
+~
+D EAST 18156 0 0
+~
+~
+D SOUTH 18149 0 0
+~
+~
+D WEST 18154 0 0
+~
+~
+OWNER none~
+#18156
+Dummy Room~
+~
+unused
+D NORTH 18162 0 0
+~
+~
+D SOUTH 18150 0 0
+~
+~
+D WEST 18155 0 0
+~
+~
+OWNER none~
+#18157
+Dummy Room~
+~
+unused
+D NORTH 18163 0 0
+~
+~
+D EAST 18158 0 0
+~
+~
+D SOUTH 18151 0 0
+~
+~
+OWNER none~
+#18158
+Dummy Room~
+~
+unused
+D NORTH 18164 0 0
+~
+~
+D EAST 18159 0 0
+~
+~
+D SOUTH 18152 0 0
+~
+~
+D WEST 18157 0 0
+~
+~
+OWNER none~
+#18159
+Dummy Room~
+~
+unused
+D NORTH 18165 0 0
+~
+~
+D EAST 18160 0 0
+~
+~
+D SOUTH 18153 0 0
+~
+~
+D WEST 18158 0 0
+~
+~
+OWNER none~
+#18160
+Dummy Room~
+~
+unused
+D NORTH 18166 0 0
+~
+~
+D EAST 18161 0 0
+~
+~
+D SOUTH 18154 0 0
+~
+~
+D WEST 18159 0 0
+~
+~
+OWNER none~
+#18161
+Dummy Room~
+~
+unused
+D NORTH 18167 0 0
+~
+~
+D EAST 18162 0 0
+~
+~
+D SOUTH 18155 0 0
+~
+~
+D WEST 18160 0 0
+~
+~
+OWNER none~
+#18162
+Dummy Room~
+~
+unused
+D SOUTH 18156 0 0
+~
+~
+D WEST 18161 0 0
+~
+~
+OWNER none~
+#18163
+Dummy Room~
+~
+unused
+D EAST 18164 0 0
+~
+~
+D SOUTH 18157 0 0
+~
+~
+D DOWN 18135 0 0
+~
+~
+OWNER none~
+#18164
+Dummy Room~
+~
+unused
+D EAST 18165 0 0
+~
+~
+D SOUTH 18158 0 0
+~
+~
+D WEST 18163 0 0
+~
+~
+OWNER none~
+#18165
+Dummy Room~
+~
+unused
+D EAST 18166 0 0
+~
+~
+D SOUTH 18159 0 0
+~
+~
+D WEST 18164 0 0
+~
+~
+OWNER none~
+#18166
+Dummy Room~
+~
+unused
+D EAST 18167 0 0
+~
+~
+D SOUTH 18160 0 0
+~
+~
+D WEST 18165 0 0
+~
+~
+OWNER none~
+#18167
+Dummy Room~
+~
+unused
+D SOUTH 18161 0 0
+~
+~
+D WEST 18166 0 0
+~
+~
+D UP 18185 0 0
+~
+~
+OWNER none~
+#18168
+Dummy Room~
+~
+unused
+D NORTH 18171 0 0
+~
+~
+D EAST 18169 0 0
+~
+~
+D UP 18186 0 0
+~
+~
+OWNER none~
+#18169
+Dummy Room~
+~
+unused
+D NORTH 18172 0 0
+~
+~
+D EAST 18170 0 0
+~
+~
+D WEST 18168 0 0
+~
+~
+OWNER none~
+#18170
+Dummy Room~
+~
+unused
+D NORTH 18173 0 0
+~
+~
+D WEST 18169 0 0
+~
+~
+D DOWN 18144 0 0
+~
+~
+OWNER none~
+#18171
+Dummy Room~
+~
+unused
+D NORTH 18175 0 0
+~
+~
+D EAST 18172 0 0
+~
+~
+D SOUTH 18168 0 0
+~
+~
+OWNER none~
+#18172
+Dummy Room~
+~
+unused
+D NORTH 18176 0 0
+~
+~
+D EAST 18173 0 0
+~
+~
+D SOUTH 18169 0 0
+~
+~
+D WEST 18171 0 0
+~
+~
+OWNER none~
+#18173
+Dummy Room~
+~
+unused
+D NORTH 18177 0 0
+~
+~
+D EAST 18174 0 0
+~
+~
+D SOUTH 18170 0 0
+~
+~
+D WEST 18172 0 0
+~
+~
+OWNER none~
+#18174
+Dummy Room~
+~
+unused
+D NORTH 18178 0 0
+~
+~
+D WEST 18173 0 0
+~
+~
+D UP 18187 0 0
+~
+~
+OWNER none~
+#18175
+Dummy Room~
+~
+unused
+D NORTH 18179 0 0
+~
+~
+D EAST 18176 0 0
+~
+~
+D SOUTH 18171 0 0
+~
+~
+OWNER none~
+#18176
+Dummy Room~
+~
+unused
+D NORTH 18180 0 0
+~
+~
+D EAST 18177 0 0
+~
+~
+D SOUTH 18172 0 0
+~
+~
+D WEST 18175 0 0
+~
+~
+OWNER none~
+#18177
+Dummy Room~
+~
+unused
+D NORTH 18181 0 0
+~
+~
+D EAST 18178 0 0
+~
+~
+D SOUTH 18173 0 0
+~
+~
+D WEST 18176 0 0
+~
+~
+OWNER none~
+#18178
+Dummy Room~
+~
+unused
+D NORTH 18182 0 0
+~
+~
+D SOUTH 18174 0 0
+~
+~
+D WEST 18177 0 0
+~
+~
+OWNER none~
+#18179
+Dummy Room~
+~
+unused
+D NORTH 18183 0 0
+~
+~
+D EAST 18180 0 0
+~
+~
+D SOUTH 18175 0 0
+~
+~
+OWNER none~
+#18180
+Dummy Room~
+~
+unused
+D NORTH 18184 0 0
+~
+~
+D EAST 18181 0 0
+~
+~
+D SOUTH 18176 0 0
+~
+~
+D WEST 18179 0 0
+~
+~
+OWNER none~
+#18181
+Dummy Room~
+~
+unused
+D NORTH 18185 0 0
+~
+~
+D EAST 18182 0 0
+~
+~
+D SOUTH 18177 0 0
+~
+~
+D WEST 18180 0 0
+~
+~
+OWNER none~
+#18182
+Dummy Room~
+~
+unused
+D SOUTH 18178 0 0
+~
+~
+D WEST 18181 0 0
+~
+~
+D UP 18189 0 0
+~
+~
+OWNER none~
+#18183
+Dummy Room~
+~
+unused
+D EAST 18184 0 0
+~
+~
+D SOUTH 18179 0 0
+~
+~
+D UP 18190 0 0
+~
+~
+OWNER none~
+#18184
+Dummy Room~
+~
+unused
+D EAST 18185 0 0
+~
+~
+D SOUTH 18180 0 0
+~
+~
+D WEST 18183 0 0
+~
+~
+OWNER none~
+#18185
+Dummy Room~
+~
+unused
+D SOUTH 18181 0 0
+~
+~
+D WEST 18184 0 0
+~
+~
+D DOWN 18167 0 0
+~
+~
+OWNER none~
+#18186
+Within the Southwest Tower~
+~
+unused
+D DOWN 18168 0 0
+~
+~
+OWNER none~
+#18187
+Dummy Room~
+~
+unused
+D NORTH 18188 0 0
+~
+~
+D DOWN 18174 0 0
+~
+~
+OWNER none~
+#18188
+Along the Eastern Battlements~
+~
+unused
+D NORTH 18189 0 0
+~
+~
+D SOUTH 18187 0 0
+~
+~
+OWNER none~
+#18189
+Dummy Room~
+~
+unused
+D SOUTH 18188 0 0
+~
+~
+D DOWN 18182 0 0
+~
+~
+OWNER none~
+#18190
+Within the Northwest Tower~
+~
+unused
+D DOWN 18183 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,3930 @@
+#AREA
+southroad2.are~
+Old Southern Road~
+Karsus~
+1 51
+600 699
+unopened
+temperate
+0
+1
+
+#MOBS
+#600
+Wandering monk~
+A wandering monk~
+A monk shrouded in long dark brown robes seems to be wandering aimlessly.   
+~
+Hands folded in each others sleeves and a long cowl pulled down over his   
+face this monk seems to see where he is wandering, even tho he wanders in   
+circles.   
+~
+1000 600 100 unique~
+35 10d4+800 10d4+1 0 100 punch
+0 0 0 0
+standing either none
+M 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#600
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 605 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 601 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 581 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#601
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 600 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 606 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 602 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 585 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#602
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 601 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 607 0 0
+~
+Through the dense forest you can see a field.   
+~
+D SOUTH 603 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 589 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#603
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 602 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 608 0 0
+~
+Through the dense forest you can see a field.   
+~
+D SOUTH 604 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 592 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#604
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 603 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 609 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#605
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 611 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 606 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 600 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#606
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 605 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 612 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 607 0 0
+~
+The field on this side of the road is a sea of grasses.   
+~
+D WEST 601 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#607
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 606 0 0
+~
+In that direction is where the paved road is.   
+~
+D EAST 613 0 0
+~
+In that direction is where the paved road is.   
+~
+D SOUTH 608 0 0
+~
+The field continues on in this direction.   
+~
+D WEST 602 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#608
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 607 0 0
+~
+The field continues on in this direction.   
+~
+D EAST 614 0 0
+~
+The field continues on in this direction.   
+~
+D SOUTH 609 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D WEST 603 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#609
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 608 0 0
+~
+Through the dense forest you can see a field.   
+~
+D EAST 615 0 0
+~
+Through the dense forest you can see a field.   
+~
+D SOUTH 610 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 604 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#610
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 609 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 616 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#611
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 617 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 612 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 605 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#612
+Along the Old Southern Road~
+Portions of the paved road have sunken into the wet ground making the   
+road uneven. Pave corners that are exposed are heavily worn and give the   
+road a worn riverbed look, ripples of living stone. Raised mounds of dirt   
+grow a short cropped layer of grass that is finger than the other wide   
+bladed grass that you have encountered.   
+~
+road
+D NORTH 611 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 618 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D SOUTH 613 0 0
+~
+The road continues on in this direction.   
+~
+D WEST 606 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#613
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 612 0 0
+~
+The road continues on in this direction.   
+~
+D EAST 619 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 614 0 0
+~
+The field on this side of the road is a sea of grasses.   
+~
+D WEST 607 0 0
+~
+The field on this side of the road is a sea of grasses.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#614
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 613 0 0
+~
+In that direction is where the paved road is.   
+~
+D EAST 620 0 0
+~
+The field continues on in this direction.   
+~
+D SOUTH 615 0 0
+~
+The field continues on in this direction.   
+~
+D WEST 608 0 0
+~
+The field continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#615
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 614 0 0
+~
+The field continues on in this direction.   
+~
+D EAST 621 0 0
+~
+The field continues on in this direction.   
+~
+D SOUTH 616 0 0
+~
+The field continues on in this direction.   
+~
+D WEST 609 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#616
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 615 0 0
+~
+The field continues on in this direction.   
+~
+D EAST 622 0 0
+~
+The field continues on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The mountains fingers claw gently at the edge of the field.   
+~
+D WEST 610 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#617
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D SOUTH 618 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 611 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#618
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 617 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 623 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 619 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 612 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#619
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 618 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 624 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 620 0 0
+~
+The field on this side of the road is a sea of grasses.   
+~
+D WEST 613 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#620
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 619 0 0
+~
+In that direction is where the paved road is.   
+~
+D EAST 625 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D SOUTH 621 0 0
+~
+The field continues on in this direction.   
+~
+D WEST 614 0 0
+~
+The field continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#621
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 620 0 0
+~
+In that direction is where the paved road is.   
+~
+D EAST 626 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D SOUTH 622 0 0
+~
+The field continues on in this direction.   
+~
+D WEST 615 0 0
+~
+The field continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#622
+Fields of the Old Southern Road~
+Grasses cover the undulating ground of the fields to the side of the old   
+southern road. Sprouting up from the thick weave of grasses is the   
+occasional shrub and small bush. Large rocks can be seen raising their   
+head above the tips of the long grasses, lizards absorbing the heat lay   
+on the surface. The winds passing over the grasses flows like a river   
+weaving in and out through the rocks and bushes.   
+~
+field
+D NORTH 621 0 0
+~
+The field continues on in this direction.   
+~
+D EAST 627 0 0
+~
+Thick forest has grown to the edge of the field.   
+~
+D SOUTH 0 0 0
+~
+The mountains fingers claw gently at the edge of the field.   
+~
+D WEST 616 0 0
+~
+The field continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the field is the open sky.   
+~
+D DOWN 0 0 0
+~
+The ground is dry yes still soft enabling the grasses to grow.   
+~
+E grass grasses~
+The mass of grasses sways in the breeze the overall affect dipicting   
+the sea when it is calm. Small ripples and waves smothly rolling across   
+it's surface.   
+~
+#623
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 628 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 624 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 618 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#624
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 623 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 629 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 625 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 619 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#625
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 624 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 630 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 626 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 620 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#626
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 625 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 631 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 627 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 621 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#627
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 626 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 632 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 622 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#628
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 633 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 629 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 623 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#629
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 628 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 634 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 630 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 624 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#630
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 629 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 635 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 631 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 625 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#631
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 630 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 636 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 632 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 626 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#632
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 631 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 637 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 627 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#633
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 638 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 634 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 628 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#634
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 633 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 639 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 635 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 629 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#635
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 634 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 640 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 636 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 630 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#636
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 635 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 641 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 637 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 631 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#637
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 636 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 642 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 632 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#638
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 643 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 639 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 633 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#639
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 638 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 644 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 640 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 634 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#640
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 639 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 645 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 641 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 635 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#641
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 640 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 646 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 642 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 636 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#642
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 641 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 647 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 637 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#643
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 648 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 644 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 638 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#644
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 643 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 649 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 645 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 639 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#645
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 644 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 650 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 646 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 640 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#646
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 645 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 651 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 647 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 641 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#647
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 646 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 652 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 642 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#648
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 653 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 649 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 643 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#649
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 648 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 654 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 650 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 644 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#650
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 649 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 655 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 651 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 645 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#651
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 650 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 656 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 652 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 646 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#652
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 651 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 657 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 647 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#653
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 659 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 654 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 648 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#654
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 653 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 660 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 655 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 649 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#655
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 654 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 661 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 656 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 650 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#656
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 655 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 662 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 657 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 651 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#657
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 656 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 663 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 652 0 0
+~
+Through the dense forest you can see a field.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#658
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 664 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 659 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#659
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 658 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 665 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D SOUTH 660 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 653 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#660
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 659 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 666 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 661 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 654 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#661
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 660 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 667 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 662 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 655 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#662
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 661 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 668 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 663 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 656 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#663
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 662 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 669 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 657 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#664
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 670 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 665 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 658 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#665
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 664 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 671 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 666 0 0
+~
+The road continues on in this direction.   
+~
+D WEST 659 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#666
+Along the Old Southern Road~
+Portions of the paved road have sunken into the wet ground making the   
+road uneven. Pave corners that are exposed are heavily worn and give the   
+road a worn riverbed look, ripples of living stone. Raised mounds of dirt   
+grow a short cropped layer of grass that is finger than the other wide   
+bladed grass that you have encountered.   
+~
+road
+D NORTH 665 0 0
+~
+The road continues on in this direction.   
+~
+D EAST 672 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D SOUTH 667 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 660 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#667
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 666 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 673 0 0
+~
+Through the dense forest you can see a field.   
+~
+D SOUTH 668 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 661 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#668
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 667 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 674 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 669 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 662 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#669
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 668 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 663 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#670
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 675 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 671 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 664 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#671
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 671 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 676 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 672 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 665 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#672
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 671 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 677 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 673 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 666 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#673
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 672 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 678 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 674 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 667 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#674
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 673 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 668 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#675
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 679 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 676 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 670 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#676
+Along the Old Southern Road~
+Portions of the paved road have sunken into the wet ground making the   
+road uneven. Pave corners that are exposed are heavily worn and give the   
+road a worn riverbed look, ripples of living stone. Raised mounds of dirt   
+grow a short cropped layer of grass that is finger than the other wide   
+bladed grass that you have encountered.   
+~
+road
+D NORTH 675 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 680 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 677 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 671 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#677
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 676 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 681 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 678 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 672 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#678
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 677 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 673 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#679
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 683 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 680 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 675 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#680
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 679 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 684 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 681 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 676 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#681
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 680 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 685 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 682 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 677 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#682
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 681 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 686 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#683
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 687 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 684 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 679 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#684
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 683 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 688 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 685 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 680 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#685
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 684 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 689 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 686 0 0
+~
+The forest grows on in this direction.   
+~
+D WEST 681 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#686
+Deep within the thick forest~
+The moisture level within here is slightly higher than on the edge, the   
+smell of the forest floor floods your nose. Decaying vegitation and the   
+smell of pollen aren't a aweful smell, but it still blocks out all other   
+sense of smell. Light flickers through the canopy as the winds above   
+ripple their way across the tops of the taller trees. There is a weird   
+noise now and again that seems unlike a bird or a animal, but it doesn't   
+sound dangerous.   
+~
+forest
+D NORTH 685 0 0
+~
+The forest grows on in this direction.   
+~
+D EAST 696 ABEGHI 0
+boulder~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 682 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life. There   
+is a large oblong boulder about seven foot high that leans hard up   
+against the side of the mountains feet.   
+~
+#687
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 691 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 688 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 683 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#688
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 687 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 692 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 689 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 684 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#689
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 688 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 692 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 685 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#690
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 693 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 691 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 687 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#691
+Along the Old Southern Road~
+Portions of the paved road have sunken into the wet ground making the   
+road uneven. Pave corners that are exposed are heavily worn and give the   
+road a worn riverbed look, ripples of living stone. Raised mounds of dirt   
+grow a short cropped layer of grass that is finger than the other wide   
+bladed grass that you have encountered.   
+~
+road
+D NORTH 690 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 694 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 692 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 688 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#692
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 691 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 695 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 689 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#693
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+~
+forest
+D NORTH 0 0 0
+~
+The forest has growen to thick here for you to pass.   
+~
+D EAST 702 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 694 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D WEST 690 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#694
+Along the Old Southern Road~
+Curls of dust wisp over the paved road forming into dry puddles. Two deep   
+tracks run down each side of the road from the heavy carts that use it,   
+grass and weeds striving for a footing sprout out in all directions   
+indicating that the road has not seen regular use in some time. On the   
+edge of the road the grass thrives and grows to almost two feet, long   
+blades hang out over the road.   
+~
+road
+D NORTH 693 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D EAST 701 0 0
+~
+The road continues on in this direction.   
+~
+D SOUTH 695 0 0
+~
+Thick forest has almost grown to the edge of the road here.   
+~
+D WEST 691 0 0
+~
+The road continues on in this direction.   
+~
+D UP 0 0 0
+~
+High above the open road is the sky.   
+~
+D DOWN 0 0 0
+~
+The ground of the road is paved with large riverbed stones.   
+~
+E paved pavers~
+smooth rocks, taken from a river bed probably, have been used to pave   
+this road.   
+~
+#695
+Forests lining the Old Southern Road~
+Closest to the road are short trees and large shrubs stretching towards   
+the expanse of light that shines over the road. The canopy of the trees   
+have left the forest floor bare, covered only with fallen vegetation.   
+The trees are closely packed granting only enough space for a horse to   
+pass between the trunks, occasionally there is a great oak or pine that   
+has survived above all others.    
+    
+~
+forest
+D NORTH 694 0 0
+~
+Through the dense forest you can see the paved road.   
+~
+D EAST 700 0 0
+~
+The forest grows on in this direction.   
+~
+D SOUTH 0 0 0
+~
+The edge of the forrest thins slightly as the mountains edge melds.   
+~
+D WEST 692 0 0
+~
+The forest grows on in this direction.   
+~
+D UP 0 0 0
+~
+Peering up through the canopy of the forest you see the sky.   
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with almost 6 inches of dead material.   
+~
+E tree trees~
+The trees here are growing straight and tall, striving to break the   
+upper canopy to gain as much light as possible to sustain life.   
+~
+#696
+A steep mountain cut stairs~
+Cut directly into the exposed stone is a very steep set fo stairs. A   
+small chain has been attached to the stone as a support line for those   
+who are climbing the stairs. These stairs would be next to impossible to   
+climb down. The stairs do not look like they have been used in a very   
+long time. Spiders have had time to spin their webs across the passage.   
+~
+mountains
+D NORTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D EAST 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D SOUTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D WEST 686 ABEGHI 0
+boulder~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D UP 697 0 0
+~
+Above you the stone stairs snake onward.   
+~
+D DOWN 0 0 0
+~
+The stairs are cut deep into the stone, you wonder what could have   
+cut them.   
+~
+E rock Boulder~
+A large boulder is covering the westernly exit, you should be able to   
+push it aside enough to slip through.   
+~
+#697
+A steep mountain cut stairs~
+Cut directly into the exposed stone is a very steep set fo stairs. A   
+small chain has been attached to the stone as a support line for those   
+who are climbing the stairs. These stairs would be next to impossible to   
+climb down. The stairs do not look like they have been used in a very   
+long time. Spiders have had time to spin their webs across the passage.   
+~
+mountains
+D NORTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D EAST 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D SOUTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D WEST 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D UP 698 0 0
+~
+Above you the stone stairs snake onward.   
+~
+D DOWN 696 0 0
+~
+The stairs are cut deep into the stone, you wonder what could have   
+cut them. The stairs continue downward.   
+~
+#698
+A steep mountain cut stairs~
+Cut directly into the exposed stone is a very steep set fo stairs. A   
+small chain has been attached to the stone as a support line for those   
+who are climbing the stairs. These stairs would be next to impossible to   
+climb down. The stairs do not look like they have been used in a very   
+long time. Spiders have had time to spin their webs across the passage.   
+~
+mountains
+D NORTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D EAST 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D SOUTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D WEST 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D UP 699 0 0
+~
+Above you the stone stairs snake onward.   
+~
+D DOWN 697 0 0
+~
+The stairs are cut deep into the stone, you wonder what could have   
+cut them.   
+~
+#699
+A steep mountain cut stairs~
+Cut directly into the exposed stone is a very steep set fo stairs. A   
+small chain has been attached to the stone as a support line for those   
+who are climbing the stairs. These stairs would be next to impossible to   
+climb down. The stairs do not look like they have been used in a very   
+long time. Spiders have had time to spin their webs across the passage.   
+On the east wall is a massive iron door.   
+~
+mountains
+D NORTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D EAST 0 0 0
+~
+There is a large solid iron door with a small view slide bracketed   
+into the door at eye level.   
+~
+D SOUTH 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D WEST 0 0 0
+~
+Cold hard stone covers this wall, old footings and hand holds are    
+evident.    
+~
+D UP 0 0 0
+~
+The hard rock of the roof curves towards the east.   
+~
+D DOWN 698 0 0
+~
+The stairs are cut deep into the stone, you wonder what could have   
+cut them.   
+~
+#0
+
+
+
+#RESETS
+MOB 600 TO 647 GLIMIT 1 LLIMIT 1
+DOOR 686 east CLOSED
+DOOR 696 west CLOSED
+S
+
+#IMPROGS
+END
+#$

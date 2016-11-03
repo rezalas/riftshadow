@@ -1,0 +1,49 @@
+<?
+	$target_level=58;
+	include("../check_trust.inc");
+	include("../header.inc");
+?>
+<table class=disp width=50% align=center>
+<tr><td colspan=2 align=center><b>Editing <? echo "$name"; ?></td></tr>
+
+<?
+	$get_res = mysql_db_query("rift_core","select * from class_type where name='$name'",$core_conn);
+	if(mysql_num_rows($get_res) < 1)
+		die("Error");
+	$row = mysql_fetch_array($get_res);
+
+	echo "<tr><td>Name:</td><td><input name=name value='$row[name]'></td></tr>";
+	echo "<tr><td>Abbrev</td><td><input name=abbrev value='$row[who_name]'></td></tr>"; 
+	echo "<tr><td>Prime</td>";
+	echo "<td><select name=prime>";
+	fetch_data("stats", $row[attr_prime], $core_conn);
+	echo "</select></td></tr>";
+    echo "<tr><td>Align</td>";
+	echo "<td><select name=align>";
+	fetch_data("align_allowed", $row[align], $core_conn);
+	echo "</select></td></tr>";
+    echo "<tr><td>Weapon</td>";
+	echo "<td><input name=weapon value='$row[weapon]'></td></tr>";
+    echo "<tr><td>Adept</td>";
+	echo "<td><input name=adept value='$row[skill_adept]'></td></tr>";
+    echo "<tr><td>HP Range</td>";
+	echo "<td><input name=hp_min value='$row[hp_min]' size=2 maxlength=2>-<input name=hp_max value='$row[hp_max]' size=2 maxlength=2></td></tr>";
+    echo "<tr><td>Base Group</td>";
+	echo "<td><input name=base_group value='$row[base_group]'></td></tr>";
+    echo "<tr><td>Default Group</td>";
+	echo "<td><input name=default_group value='$row[default_group]'></td></tr>";
+    echo "<tr><td>Casting Type</td>";
+	echo "<td><select name=ctype>";
+	fetch_data("magical_class", $row[ctype], $core_conn);
+	echo "</select></td></tr>";
+    echo "<tr><td>Status</td>";
+	echo "<td><select name=status>";
+	fetch_data("race_status", $row[status], $core_conn);
+	echo "</select></td></tr>";
+?>
+
+<tr><td colspan=2 align=center><input type=submit value=Submit></td></tr>
+	
+<?
+	include("../footer.inc");
+?>

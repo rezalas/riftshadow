@@ -1,0 +1,6993 @@
+#AREA
+elvenstronghold.are~
+The Elven Stronghold~
+Wispen~
+20 51
+4600 4799
+normal
+none
+ABCGIJKLNOSVWdhklmo
+1
+Wispen Gawinn~
+
+#MOBS
+#4600
+elven elf ranger archer~
+an elven ranger~
+A large archer is here watching the forests.
+~
+A large elf draped in green cloaks and a large hood is here with a long bow slung over his shoulder. On his back he wears a full quiver of arrows.
+~
+1000 0 0 elf~
+40 20d8+2464 4d8+18 0 100 sting
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF TRIP
+#4601
+elf elven blacksmith~
+an elven blacksmith~
+An strong elf covered in soot hammers out some metal here.
+~
+A strong elf covered in soot is here, wearing a set of elven mail and a
+thick apron.  His body is muscular from the relentless hammering of armor
+and weapons.  
+~
+1000 0 0 elf~
+38 19d8+2213 5d6+16 0 100 smash
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+OFF KICK
+#4602
+warrior elven elf~
+an elven guardsman~
+A quick elven guardsman is here preparing for battle.
+~
+A slender elf wearing a complete set of elven chain mail is before you. 
+He posesses a stern visage but carries a twinkle in his eye.  
+~
+1000 0 0 elf~
+35 17d8+1867 4d7+14 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF KICK
+#4603
+elf elfven man~
+an elven man~
+An elven man is feasting here merrily.
+~
+A slender elf in bright clothing is here feasting and looking merry.
+~
+1000 0 0 elf~
+25 12d8+944 2d10+7 0 100 slice
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF PARRY
+#4604
+elven elf woman~
+an elven woman~
+A beautiful elven woman is enjoying the feasting here.
+~
+A beautiful elven woman draped in colerful robes stands here with flowers
+in her hair and a smile in her eyes.  
+~
+1000 0 0 elf~
+25 12d8+944 2d7+10 0 100 slice
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF PARRY
+#4605
+server waiter elf elven~
+an elven server~
+An elven server moves quickly through the room with a tray over his head.
+~
+Dressed in black robes this elf looks a bit overwhelmed by the ammount of
+food he is carrying around.  
+~
+1000 0 0 elf~
+20 10d8+604 2d6+6 0 100 crush
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT FASTWANDER
+OFF TRIP
+#4606
+elven elf man dancer~
+an elven dancer~
+A male elf dances about merrily to the music.
+~
+Draped in colorful clothing this slender elf wears his blonde hair tied
+behind his head.  His face is young and healthy looking and his eyes sparkle
+in the light.  
+~
+1000 0 0 elf~
+25 12d8+944 2d10+7 0 100 slap
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF TRIP
+#4607
+elf elven woman dancer~
+an elven dancer~
+A slender female elf dances about to the beat of the music.
+~
+A beautiful female elf smiles happily.  She is draped in beautiful
+clothes of nearly every color.  Her hair is braided and laced with beautiful
+wildflowers.  
+~
+1000 0 0 elf~
+25 12d8+944 4d10+7 0 100 slap
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF TRIP
+#4608
+musician drummer elven elf~
+an elven drummer~
+A large elf is here beating on a drum.
+~
+He is a large elf in brown leather and a large floppy hat.  You notice he
+has a few drumsticks hanging out of his pocket.  
+~
+1000 0 0 elf~
+30 15d8+1364 4d6+8 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF CRUSH
+#4609
+elf elven woman harpist harp~
+an elven harpist~
+A elven woman with beautiful long hair plucks a harp beautifully here.
+~
+With long golden hair cascading down her back you see this elven woman
+has rose buds througout her hair.  She is wearing a beautiful jade dress
+that matches her gleaming eyes.  
+~
+1000 0 0 elf~
+30 15d8+1364 4d6+8 0 100 pierce
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF TRIP
+#4610
+elf elven musician piccolo~
+a small elf~
+A small elf is here playing a silver piccolo.
+~
+A small elf wearing deep purple robes and a black hat smiles to himself. 
+His face is wrinkled from smiling and his eyes are a bright blue.  
+~
+1000 0 0 elf~
+30 15d8+1364 4d6+8 0 100 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF TRIP
+#4611
+noble elven elf man~
+an elven noble~
+A elven man in extravagant clothing is sitting here.
+~
+Beautiful golden chains and expensive clothing cover this well groomed
+elf.  His hair and skin are extremely well taken care of and he looks about
+with a superior tone.  
+~
+1000 0 0 elf~
+35 17d8+1867 4d7+14 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+#4612
+female elven elf noble~
+an elven noble~
+A beautiful elf in an expensive dress sits here quietly.
+~
+Wearing a beautiful white dress this elven woman is wearing a ring on
+almost every finger and has a beautiful necklace around her neck.  
+~
+1000 0 0 elf~
+35 17d8+1867 4d7+14 0 100 slash
+0 0 0 0
+standing female affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+#4613
+spectral dragon blackened bones~
+the Spectral Dragon~
+A massive spectral dragon made of blackened bones rises up before you.
+~
+A massive spectral dragon flickers slightly before you.  Huge blackened
+bones form its entire body.  A deep crimson burns in its eye sockets as it
+looks towards you.  
+~
+-1000 0 0 dragon~
+60 30d8+7128 10d6+50 80 100 defilement
+200 200 200 200
+standing male rich
+0 0 giant
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT UNDEAD
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF PASS_DOOR
+AFF HASTE
+AFF DARKSANC
+C 'vampiric touch'
+#4614
+soul elven spectre~
+an elven spectre~
+A lost elven soul floats quietly in the room.
+~
+A greenish translucense floats before you.
+~
+0 0 0 spectre~
+55 27d8+5268 3d12+22 0 100 none
+100 100 100 100
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+C 'energy drain'
+#4615
+elven ambassador~
+an elven ambassador~
+A regal elven man stands here stiffly.
+~
+This elven man wears lavish clothing and is extremely well groomed.  His
+face is kind looking and without blemish.  His hair is tied neatly behind
+his head, and he dons a strange looking cap.  
+~
+1000 24940 0 elf~
+45 22d8+3177 8d8+45 0 100 smash
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+#4616
+celestial titan ambassador~
+a celestial ambassador~
+A cleancut celestial titan stands here regally. 
+~
+Clad in large robes and a leather belt across his chest you see a very
+clean looking titan.  His hair flows down his back and tied at the very
+bottom.  
+~
+1000 0 0 celestial~
+45 22d8+3177 8d8+45 0 100 chop
+0 0 0 0
+standing male rich
+0 0 huge
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF KICK
+AFF SANCTUARY
+#4617
+planar titan ambassador~
+a planar ambassador~
+A massive planar titan is thumbing through a small book here.
+~
+Clothed in a sky blue cloak and shining steel armor this planar titan
+carries a small book at his side.  On his arm he wears a strange emblem of a
+wolf.  His visage is cast with a bit of worry, and his brow is wrinkled from
+constant thought.  
+~
+0 0 0 planar~
+45 22d8+3177 8d8+45 0 100 crush
+0 0 0 0
+standing male rich
+0 0 huge
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+#4618
+sidhe ambassador~
+a sidhe ambassador~
+A beautiful female sidhe is here tending to her image.
+~
+Clothed in green robes this sidhe wears a wreath of wildflowers in her
+hair and a belt of vines around her waste.  She hovers silently before you
+quite breathtakingly.  
+~
+1000 0 0 sidhe~
+45 22d8+3177 8d8+45 0 100 stab
+0 0 0 0
+standing female rich
+0 0 small
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+C 'drown'
+#4619
+minotaur ambassador~
+a minotaur ambassador~
+A large minotaur snorts to himself as he paces back and forth.
+~
+An extremely large minotaur is before you.  His horns are capped with
+gold and his hooves have been shined to a soft glow.  He wears black leather
+armor and a large medallion around his neck.  
+~
+0 0 0 minotaur~
+45 22d8+3177 8d8+45 0 100 none
+0 0 0 0
+standing male rich
+0 0 large
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+AFF SANCTUARY
+#4620
+halfling ambassador~
+a halfling ambassador~
+A small halfling crouches in the shadows here.
+~
+Cloaked in black garb this halfling moves about with unparalleled
+stealth.  His face cannot even be seen past the dark hood he wears over his
+head.  
+~
+0 0 0 halfling~
+45 22d8+3177 8d8+45 55 100 slash
+0 0 0 0
+standing male rich
+0 0 small
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+AFF SANCTUARY
+AFF HIDE
+#4621
+stronghold patrol guard~
+a stronghold patrolman~
+A member of the stronghold patrol keeps vigil over the halls.
+~
+Clothed from head to toe in elven chain mail this patrolman guards the
+halls with his life.  
+~
+1000 0 0 elf~
+40 20d8+2464 4d8+14 0 100 slice
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT INTELLIGENT
+ACT FASTWANDER
+OFF DISARM
+OFF DODGE
+OFF PARRY
+#4622
+elven elf lord~
+the Elven Lord~
+A regal elven man stands here in flowing robes.
+~
+A tall and slender elven man with long flowing robes, and and elven armor
+is before you.  He is extremely well groomed and wears strange flowers in
+his long blonde hair.  Beautiful eyes of azure emminate grace and goodness,
+and his skin is milky white and youthfull.  
+~
+1000 0 0 elf~
+51 25d8+4274 10d4+36 50 100 slash
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INTELLIGENT
+OFF AREA_ATTACK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+AFF PROTECTION
+AFF HASTE
+C 'heal'
+C 'slow'
+C 'wrath'
+#4623
+human ambassador~
+a human ambassador~
+A well-kept human stands here, deep in thought.
+~
+A tall and slender human stands before you.  Lead-colored eyes peer out
+from beneath two well groomed eyebrows.  His hair is blonde and tied behind
+his head with a leather band.  He wears a short beard which is trimmed to
+perfection.  
+~
+1000 0 0 human~
+45 22d8+3177 8d8+25 0 100 slash
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+AFF HASTE
+#0
+
+
+
+#OBJS
+#4600
+stronghold key large black~
+a large black key~
+A large black key rests here.~
+key
+obsidian~
+0 0 0 0 0
+40 10 50000 P
+WEAR TAKE
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+VERB none
+TIMER 0
+
+#4601
+small alabaster key~
+a small alabaster key~
+A small alabaster key lies here.~
+key
+unknown~
+0 0 0 0 0
+51 0 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+LIMIT 0
+TIMER 0
+
+#4602
+mithril chain mail lion~
+a chainmail shirt emblazoned with a lion~
+A chainmail shirt emblozoned with a lion~
+armor
+mithril~
+5 5 5 5 0
+35 15 10000 P
+WEAR TAKE
+WEAR BODY
+APPLY HITROLL 2
+APPLY HP 10
+APPLY STR 1
+LIMIT 0
+VERB ?
+TIMER 0
+
+#4603
+sleeves mithril chain~
+some chainmail mithril sleeves~
+A pair of chainmail mithril sleeves~
+armor
+mithril~
+5 5 5 5 0
+35 15 10000 P
+WEAR TAKE
+WEAR ARMS
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#4604
+helm mithril sturdy~
+a sturdy mithril helm~
+A sturdy mithril helm~
+armor
+mithril~
+5 5 5 5 0
+35 12 10000 P
+WEAR TAKE
+WEAR HEAD
+APPLY DAMROLL 2
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#4605
+chainmail boots mithril~
+a pair of mithril boots~
+A pair of chainmail mithril boots~
+armor
+mithril~
+5 5 5 5 0
+35 12 10000 P
+WEAR TAKE
+WEAR FEET
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#4606
+mithril leggings chainmail~
+a pair of chainmail mithril leggings~
+A fine pair of mithril leggings are here in a pile~
+armor
+mithril~
+5 5 5 5 0
+35 15 10000 P
+WEAR TAKE
+WEAR LEGS
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#4607
+light pair mithril gloves~
+a pair of light mithril gloves~
+A light looking pair of mithril gloves lie here.~
+armor
+mithril~
+5 5 5 5 0
+35 5 10000 P
+WEAR TAKE
+WEAR HANDS
+APPLY DAMROLL 2
+APPLY HP 5
+LIMIT 0
+TIMER 0
+
+#4608
+light mithril scimitar~
+a light mithril scimitar~
+A light mithril scimitar lies on the ground here.~
+weapon
+mithril~
+sword 4 9 slash 0
+35 10 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#4609
+large adamantite battleaxe~
+a massive battleaxe named "Drejan"~
+A massive battleaxe covered in frost lies on the ground here.~
+weapon
+adamantite~
+axe 7 7 frbite 0
+45 40 10000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT MINOTAUR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM BLESS
+ITEM NOLOCATE
+APPLY DAMROLL 7
+APPLY HITROLL 4
+LIMIT 10
+TIMER 0
+
+#4610
+hide mountain lion~
+the hide of the mountain lion~
+A pile of mountain lion fur rests here.~
+armor
+hide~
+10 10 10 10 0
+45 10 10000 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT MINOTAUR_ONLY
+ITEM HUM
+APPLY DAMROLL 3
+APPLY HITROLL 7
+APPLY STR 3
+LIMIT 3
+TIMER 0
+
+#4611
+razor sharp stiletto~
+a razor-sharp stiletto~
+A long and slender blade glistens on the ground.~
+weapon
+iron~
+dagger 7 6 slash 0
+45 8 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HALFLING_ONLY
+ITEM GLOW
+ITEM HUM
+APPLY DEX 3
+APPLY DAMROLL 5
+APPLY HITROLL 4
+LIMIT 3
+TIMER 0
+
+#4612
+hood silent cadence black~
+the Hood of the Silent Cadence~
+A pile of dark cloth lies here.~
+armor
+shadow~
+8 7 8 7 0
+45 2 0 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT HALFLING_ONLY
+ITEM HUM
+ITEM DARK
+ITEM MAGIC
+ITEM NOLOCATE
+APPLY NONE -1
+APPLY DEX 4
+APPLY HP 20
+APPLY DAMROLL 3
+APPLY HITROLL 1
+LIMIT 1
+MSG WEAR Shadows form around you, hiding you from plain view.~
+Shadows dance across the area and conceal someone.~
+MSG REMOVE The shadows disperse, and you can be seen plainly once more.~
+The area seems a bit brighter suddenly.~
+VERB pull
+TIMER 0
+FLAG AFF 'hide' none SHOW
+
+#4613
+carapace~
+the Carapace of the Planes~
+A massive ethereal carapace floats here.~
+armor
+etherealness~
+20 20 20 20 0
+45 20 0 P
+WEAR TAKE
+WEAR BODY
+RESTRICT TITAN_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+LIMIT 3
+TIMER 0
+
+#4614
+heavy maul~
+a heavy maul of iron called "Zek'ven'dever"~
+A huge maul of iron glows softly here.~
+weapon
+iron~
+mace 7 7 crush 0
+45 50 10000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+ITEM GLOW
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM NOREMOVE
+APPLY STR 3
+APPLY DAMROLL 4
+LIMIT 10
+TIMER 0
+
+#4615
+circlet snowflakes~
+a sparkling circlet of snowflakes~
+A beautiful circle of snowfloaks sparkles upon the ground.~
+armor
+ice~
+9 9 9 9 0
+45 2 10000 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT SIDHE_ONLY
+ITEM GLOW
+ITEM HUM
+APPLY INT 4
+APPLY MANA 30
+APPLY HP 50
+LIMIT 1
+MSG WEAR Your skin tingles momentarily.~
+A cold wind blows through the area momentarily.~
+MSG REMOVE A wave of warmth washes over you.~
+A few snowflakes float to the ground and melt instantly.~
+TIMER 0
+
+#4616
+vine living~
+a living vine called "Lorug D'dro"~
+A living vine lies in here in a heap.~
+weapon
+plant~
+whip 7 6 nature AB
+45 0 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT SIDHE_ONLY
+ITEM HUM
+LIMIT 3
+TIMER 0
+
+#4617
+scimitar flaming~
+an ornate scimitar engulfed in flames~
+A beautiful scimitar lies here engulfed in flames.~
+weapon
+mithril~
+sword 6 7 flbite 0
+45 10 10000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT ELF_ONLY
+ITEM GLOW
+ITEM BLESS
+ITEM NOREMOVE
+APPLY HITROLL 5
+APPLY DEX 3
+LIMIT 3
+TIMER 0
+
+#4618
+medallion elven ~
+the Golden Medallion of Elves~
+A breathtaking medallion of gold lies on the ground.~
+armor
+gold~
+2 2 2 2 0
+45 10 10000 P
+WEAR TAKE
+WEAR NECK
+RESTRICT ELF_ONLY
+ITEM HUM
+APPLY DEX 3
+APPLY STR 1
+APPLY MANA 45
+APPLY DAMROLL 2
+LIMIT 3
+TIMER 0
+
+#4619
+girdle massive celestial strength~
+the Massive Girdle of Celstial Strength~
+A massive girdle covered in strange markings lies on the ground here.~
+armor
+leather~
+8 7 8 9 0
+45 20 10000 P
+WEAR TAKE
+WEAR WAIST
+RESTRICT TITAN_ONLY
+ITEM HUM
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY DAMROLL 3
+LIMIT 3
+TIMER 0
+FLAG AFF 'giant strength' none SHOW
+
+#4620
+ornate ivory halberd~
+an ornate halberd made from the purest ivory~
+A beautiful halberd made from ivory lies here.~
+weapon
+ivory~
+polearm 7 7 light 0
+45 60 10000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY HITROLL 3
+APPLY DAMROLL 4
+LIMIT 10
+TIMER 0
+
+#4621
+ancient battered signet ring~
+an ancient and battered signet ring~
+A old battered ring lies here.~
+armor
+mithril~
+0 0 0 0 0
+51 2 0 P
+WEAR TAKE
+WEAR FINGER
+RESTRICT ELF_ONLY
+LIMIT 1
+TIMER 0
+
+#4622
+living oak staff~
+a long staff of living oak~
+A beautiful staff of oak spins slowly above the ground here.~
+weapon
+wood~
+staff 7 6 smash 0
+51 10 10000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM NOREMOVE
+LIMIT 1
+TIMER 0
+E staff~
+A small symbol carved in the staff resembles a wanning moon.
+~
+
+#4623
+silver chair~
+a beautiful silver chair embossed with stars~
+A beautiful silver chair embossed with stars sits here.~
+furniture
+silver~
+1 10000 0 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#4624
+statue dark thief~
+a statue of an elven thief~
+A statue of a slender, hooded elf stands here.~
+furniture
+stone~
+0 0 0 0 0
+51 200 0 P
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4625
+statue elf warrior~
+a statue of an elven warrior~
+A statue of an elven warrior in full armor stands here.~
+furniture
+stone~
+0 0 0 0 0
+51 200 0 P
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4626
+statue shaman elf~
+a statue of an elven shaman~
+A statue of an elf in religious garb stands with hands raised.~
+furniture
+stone~
+0 0 0 0 0
+51 200 0 P
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4627
+statue mage elf~
+a statue of an elven mage~
+A statue of an elf in long flowing robes stands here.~
+furniture
+stone~
+0 0 0 0 0
+51 200 0 P
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4628
+statue elf ranger~
+a statue of an elven ranger~
+A statue of an elf wearing a quiver across his back stands here.~
+furniture
+stone~
+0 0 0 0 0
+51 200 0 P
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4629
+statue elf monk~
+a statue of an elven monk~
+A statue of an elf with a scroll in one hand stands here.~
+furniture
+stone~
+0 0 0 0 0
+51 200 0 P
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4630
+hammer blacksmith~
+a sturdy forge hammer~
+A sturdy hammer lies here on the ground.~
+weapon
+steel~
+mace 4 9 crush 0
+30 20 5000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#4631
+stars~
+the star~
+As you look behind one of the embossed stars you notice~
+container
+stone~
+100 0 0 1000 3
+1 1000 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#4632
+cloak deep green~
+a deep green cloak~
+A deep green pile of cloth lies here.~
+armor
+cloth~
+2 5 5 5 0
+35 5 5000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DAMROLL 1
+APPLY HITROLL 2
+APPLY DEX 2
+LIMIT 0
+TIMER 0
+
+#4633
+mouth~
+the mouth of the lion~
+As you look closer you notice the the leg of this table is hollow.~
+container
+wood~
+1000 0 0 1000 2
+1 100 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#4634
+wand lion ~
+a lion-headed wand~
+A small wand with the head of a lion lies here.~
+wand
+wood~
+51 5 5 'stoneskin' 0
+40 2 5000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#4635
+leggings crystalline pair~
+a pair of crystalline leggings~
+A pair of leggings sparkle on the ground here.~
+armor
+crystal~
+8 8 8 8 0
+45 15 13000 P
+WEAR TAKE
+WEAR LEGS
+RESTRICT HUMAN_ONLY
+ITEM HUM
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY DAMROLL 3
+APPLY HITROLL 4
+APPLY HP 10
+LIMIT 3
+TIMER 0
+
+#4636
+sword pitted iron rapier~
+a pitted rapier named 'Ui Dham'~
+A pitted iron rapier lies on the ground here.~
+weapon
+iron~
+sword 7 7 acbite DH
+45 10 4500 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HUMAN_ONLY
+ITEM HUM
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY DAMROLL 4
+APPLY DEX -2
+LIMIT 2
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#4600
+Before a vast ravine~
+Before you lies a deep ravine spanned by a wooden bridge ahead.  The
+massive canopy of trees above you destroys any posibility of sunlight
+breaking through. The forest life about you sings with vibrance, and 
+the smell of moist ground fills the air. The only way through the
+dense woods is to the north or south.
+~
+unused
+D NORTH 4601 0 0
+~
+A massive ravine opens up in this directions. You can see a small wooden bridge leading to the other side.
+~
+D EAST 0 0 0
+~
+The forest thickens in this direction.  The mass of trees only allows you
+to see several feet off the trail.  
+~
+D SOUTH 328 0 0
+~
+~
+D WEST 0 0 0
+~
+The forest thickens in this direction.  The mass of trees only allows you
+to see several feet off the trail.  
+~
+D UP 0 0 0
+~
+A massive canopy covers the sky above your head.  Tiny specks of light
+strugle to make thier way through the foliage.  
+~
+D DOWN 0 0 0
+~
+The damp earth is a rich black color with scattered leaves upon it.
+~
+OWNER none~
+#4601
+Upon a wooden bridge~
+You have stumbled upon a old looking wooden bridge. It is built
+from old oak trunks, and is at least 10 feet wide. Looking down 
+the ravine opens up before you revealing a rushing river that
+continues to deepen the ravine. 
+~
+unused
+D NORTH 4602 0 0
+~
+~
+D EAST 0 0 0
+~
+A massive ravine cuts through the forest in this direction.  You can see
+a small creek running at the bottom.  
+~
+D SOUTH 4600 0 0
+~
+~
+D WEST 0 0 0
+~
+A massive ravine cuts through the forest in this direction.  You can see
+a small creek running at the bottom.  
+~
+D UP 0 0 0
+~
+You can see the sky overhead here because of the space the ravine has created. 
+~
+D DOWN 0 0 0
+~
+Large planks of wood a placed closely together forming a bridge across the ravine.
+~
+OWNER none~
+#4602
+Before the gates of the Elven Stronghold~
+A large green hill covered in trees rises up before you.
+Small windows of can barely be seen at the top of the hill,
+and several smoke stacks poke through the hillside. A massive 
+gate is set directly into the hill, and a golden plaque catches
+your attention to the left of the gate.
+~
+unused
+D NORTH 4603 ABCEH 4600
+~
+Massive vines twist and turn forming a massive gate to the north.
+~
+D EAST 0 0 0
+~
+A massive wall of grey stone rises up here.
+~
+D SOUTH 4601 0 0
+~
+A wooden bridge makes its way across the ravine in this direction.
+~
+D WEST 0 0 0
+~
+A massive wall of grey stone rises up here. You notice a series of small bumps upon the stone.
+~
+D UP 0 0 0
+~
+A massive green hill rises rises high above your head.
+~
+D DOWN 0 0 0
+~
+Brown packed dirt covers the ground beneath you.
+~
+E bumps~
+As you look more closely at the bumps you notice they are actually small
+stars embossed on the face of the stone.  
+~
+E plaque~
+Only those who can reach the stars will pass through these gates.
+~
+OWNER none~
+#4603
+The Entrance Hall~
+You are beneath a spectacular dome painted with dozens of intricate
+constellations.  Tall pillars guilded with gold and silver twist and turn
+like the roots of a tree to the base of the dome.  Strange runes carved from
+wood sit atop the massive pillars.  Intricate archways lead in every
+direction from this room.  
+~
+unused
+ROOM INDOORS
+D NORTH 4606 0 0
+~
+A massive archway leads into a spectacular room.
+~
+D EAST 4605 0 0
+~
+A large archway leads into a small room.
+~
+D SOUTH 4602 ABEH 4600
+~
+~
+D WEST 4604 0 0
+~
+A large archway leads into a small room.
+~
+D UP 0 0 0
+~
+A massive dome open covered in constellations rises above your head.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4604
+A Guard Room~
+A rather small room surrounds you.  There is no furniture, only several
+weapons hang from the wall.  Marble covers the entire floor seamlessly,
+giving it a simple but elegant feel.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a dull grey stone.
+~
+D EAST 4603 0 0
+~
+A archway leads back out into the main hall.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a dull grey stone.
+~
+D WEST 0 0 0
+~
+The wall here is made of a dull grey stone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4605
+A Guard Room~
+A rather small room surrounds you.  There is no furniture, only several
+weapons hang from the wall.  Marble covers the entire floor seamlessly,
+giving it a simple but elegant feel.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a dull grey stone.
+~
+D EAST 0 0 0
+~
+The wall here is made of a dull grey stone.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a dull grey stone.
+~
+D WEST 4603 0 0
+~
+An archway leads back out into the main hall.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4606
+A Large Apex~
+This room is even more spectacular than the room to the south.  A double
+leveled dome rises high above you.  On the first level of the dome a
+painting of a massive library can be seen, and the upper dome is adorned
+with portraits of unknown elves that seem to look down upon you.  Pillars
+sculpted to resemble tree branches reach high above you supporting the
+domes.  Circular doorways are positioned in the four cardinal directions of
+the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 4645 0 0
+~
+A circlular doorway is set against the wall here.
+~
+D EAST 4607 0 0
+~
+A circlular doorway is set against the wall here.
+~
+D SOUTH 4603 0 0
+~
+A circlular doorway is set against the wall here.
+~
+D WEST 4633 0 0
+~
+A circlular doorway is set against the wall here.
+~
+D UP 0 0 0
+~
+A massive double leveled dome rises up overhead. It is covered with paintings of unknown elves and a massive library.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4607
+A Hallway Outside of the Grand Hall~
+This wide hallway is lined with brass lanterns that causes the shadows to
+dance about merrily.  Wreaths and bouquets of wildflowers decorate the wall
+inbetween the lanterns.  The smells of food and incense wafts down the hall.
+The smells and light look a bit brighter down the hallway to the east.
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Beautiful wildflowers are placed inbetween the lanterns on the the wall here.
+~
+D EAST 4608 A 0
+~
+A doorway leads into a grand hall.
+~
+D SOUTH 0 0 0
+~
+Beautiful wildflowers are placed inbetween the lanterns on the the wall here.
+~
+D WEST 4606 0 0
+~
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4608
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4609 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4612 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4610 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4607 A 0
+~
+A doorway leads out to the hallway.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4609
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4620 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4613 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4608 0 0
+~
+The hall continues in this direction.
+~
+D WEST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4610
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4608 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4611 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4632 0 0
+~
+The hall continues in this direction.
+~
+D WEST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4611
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4612 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4616 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4631 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4610 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4612
+The Center of the Grand Hall~
+All about you song and dance flow in harmony.  The floors shine brightly
+from the many feet that have danced across it.  Encircling this dancing area
+the musicians play merrily.  Above your head the ceiling is a bit taller and
+you can see that a host of fireflys has made it thier home.  Thier tiny
+lights twinkle and give the ceiling the appearance of a beautiful night sky.
+~
+unused
+ROOM INDOORS
+D NORTH 4613 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4615 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4611 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4608 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4613
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4621 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4614 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4612 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4609 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4614
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4622 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4619 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4615 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4613 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4615
+The Center of the Grand Hall~
+All about you song and dance flow in harmony.  The floors shine brightly
+from the many feet that have danced across it.  Encircling this dancing area
+the musicians play merrily.  Above your head the ceiling is a bit taller and
+you can see that a host of fireflys has made it thier home.  Thier tiny
+lights twinkle and give the ceiling the appearance of a beautiful night sky.
+~
+unused
+ROOM INDOORS
+D NORTH 4614 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4618 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4616 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4612 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4616
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4615 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4617 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4630 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4611 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4617
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4618 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4627 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4629 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4616 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4618
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4619 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4626 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4617 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4615 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4619
+The Grand Hall~
+You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~
+unused
+ROOM INDOORS
+D NORTH 4623 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4625 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4618 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4614 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4620
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D EAST 4621 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4609 0 0
+~
+The hall continues in this direction.
+~
+D WEST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4621
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D EAST 4622 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4613 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4620 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4622
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D EAST 4623 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4614 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4621 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4623
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D EAST 4624 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 4619 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4622 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4624
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D EAST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D SOUTH 4625 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4623 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4625
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4624 0 0
+~
+The hall continues in this direction.
+~
+D EAST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D SOUTH 4626 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4619 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4626
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4625 0 0
+~
+The hall continues in this direction.
+~
+D EAST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D SOUTH 4627 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4618 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4627
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4626 0 0
+~
+The hall continues in this direction.
+~
+D EAST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D SOUTH 4628 0 0
+~
+The hall continues in this direction.
+~
+D WEST 4617 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearings their teeth.
+~
+OWNER none~
+#4628
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4627 0 0
+~
+The hall continues in this direction.
+~
+D EAST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D WEST 4629 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4629
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4617 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4628 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D WEST 4630 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions with their mouths open.
+~
+OWNER none~
+#4630
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4616 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4629 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D WEST 4631 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4631
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4611 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4630 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D WEST 4632 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+This wall of beautiful dark wood is covered with wildflowers and lanters.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4632
+The Upper Gallery~
+This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~
+unused
+ROOM INDOORS
+D NORTH 4610 0 0
+~
+The hall continues in this direction.
+~
+D EAST 4631 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D WEST 0 0 0
+~
+The wall here is made of a beautifull dark wood covered in wildflowers and lanterns.
+~
+D UP 0 0 0
+~
+A tall wooden ceiling hung with flowers and herbs is above you.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+E table~
+This massive table is covered with delicacies of every kind.  Silver
+goblets filled with the finest red wine wait to be tasted.  The tables legs
+are carvings of fierce lions bearing their teeth.
+~
+OWNER none~
+#4633
+An Ornate Hallway~
+This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~
+unused
+ROOM INDOORS
+D NORTH 4634 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4606 0 0
+~
+A massive domed room lies in this direction.
+~
+D SOUTH 0 0 0
+~
+The walls here are made of a highly polished marble.
+~
+D WEST 0 0 0
+~
+The walls here are made of a highly polished marble.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4634
+An Ornate Hallway~
+This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~
+unused
+ROOM INDOORS
+D NORTH 4637 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4636 A 0
+~
+A small room lies in this direction.
+~
+D SOUTH 4633 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4635 A 0
+~
+A small room lies in this direction.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4635
+A Guest Room~
+A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 4634 A 0
+~
+~
+D SOUTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D UP 0 0 0
+~
+Beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4636
+A Guest Room~
+A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D SOUTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D WEST 4634 A 0
+~
+~
+D UP 0 0 0
+~
+Beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4637
+An Ornate Hallway~
+This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~
+unused
+ROOM INDOORS
+D NORTH 4640 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4639 AB 0
+~
+A small room lies in this direction.
+~
+D SOUTH 4634 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4638 AB 0
+~
+A small room lies in this direction.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4638
+A Guest Room~
+A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 4637 0 0
+~
+~
+D SOUTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D UP 0 0 0
+~
+Beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4639
+A Guest Room~
+A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D SOUTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D WEST 4637 0 0
+~
+~
+D UP 0 0 0
+~
+Beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4640
+An Ornate Hallway~
+This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~
+unused
+ROOM INDOORS
+D NORTH 4643 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4642 AB 0
+~
+A small room lies in this direction.
+~
+D SOUTH 4637 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4641 AB 0
+~
+A small room lies in this direction.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4641
+A Guest Room~
+A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 4640 0 0
+~
+~
+D SOUTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+n desc
+~
+D UP 0 0 0
+~
+Beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4642
+A Guest Room~
+A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D SOUTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D WEST 4640 0 0
+~
+~
+D UP 0 0 0
+~
+Beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4643
+An Ornate Hallway~
+This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 4644 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4640 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4644
+An Arched Hallway~
+This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~
+unused
+ROOM INDOORS
+D NORTH 4649 ABCDEHI 0
+~
+A beautiful marble covers the wall here.
+~
+D EAST 4650 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4647 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4643 0 0
+~
+The hallway continues in this direction.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4645
+An Arched Hallway~
+This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~
+unused
+ROOM INDOORS
+D NORTH 4646 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D SOUTH 4606 0 0
+~
+A massive domed room lies in this direction.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4646
+An Arched Hallway~
+This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~
+unused
+ROOM INDOORS
+D NORTH 4647 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4648 0 0
+~
+A spiral staircase can be seen in the next room.
+~
+D SOUTH 4645 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4647
+An Arched Hallway~
+This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~
+unused
+ROOM INDOORS
+D NORTH 4644 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D SOUTH 4646 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+A beautiful marble covers the wall here.
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4648
+The Bottom of a Spiral Staircase~
+This small alcove contains a large spiral staircase comprised of slabs of
+grey stone.  The stair way spirals high above your head leading to the
+floors above.  Occasional torches are positioned on the way up the stairs,
+giving off small ammounts of light.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a dull grey stone.
+~
+D EAST 0 0 0
+~
+The wall is made of a dull grey stone.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a dull grey stone.
+~
+D WEST 4646 0 0
+~
+~
+D UP 4653 0 0
+~
+A massive spiral staircase rises overhead.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4649
+Entrance to Gwenidill~
+The only source of light in this barren room is a single candle that
+burns in the center.  The light from the candle causes shadows to dance
+across the room.  You notice a large rune inscribed upon the floor near the
+candle.  
+~
+unused
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4644 AB 0
+~
+~
+D DOWN 4704 0 0
+~
+~
+E writing~
+As you look more closely at the writing you notice the phrase "HAKRI
+GWENIDILL MAFRE FINAE" is repeated around the entire rune.  
+~
+E rune~
+A massive rune has been inscribed upon the floor here. Around the rune something has been written in a forgotten language. 
+~
+OWNER none~
+#4650
+Hall of the Elven Lords~
+This is the old hall leading to the chambers of the Elven Lord.  Various
+symbols and runes line the hallway here, to declare the glory of the elven
+race.  A long rug woven with gold lines the hall here, along with different
+portraits of the latest Elven Lords.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Runes and symbols between portraits of elven lords cover the walls along the hall here.
+~
+D EAST 4651 0 0
+~
+~
+D SOUTH 0 0 0
+~
+Runes and symbols between portraits of elven lords cover the walls along the hall here.
+~
+D WEST 4644 0 0
+~
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4651
+Before the Chambers of the Elven Lord~
+A large door of gold stands here embossed with a large dragon.  Vines
+grow all about the walls near the door and beautiful flowers are in full
+bloom among the vines.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Runes and symbols between portraits of elven lords cover the walls along the hall here.
+~
+D EAST 4652 A 4601
+~
+A large golden door embossed with a massive dragon is set in the wall here.
+~
+D SOUTH 0 0 0
+~
+Runes and symbols between portraits of elven lords cover the walls along the hall here.
+~
+D WEST 4650 0 0
+~
+~
+D UP 0 0 0
+~
+A beautiful white marble covers the ceiling here.
+~
+D DOWN 0 0 0
+~
+Smooth marble covers the floor beneath you.
+~
+OWNER none~
+#4652
+The Bed Chambers of the Elven Lord~
+A spectacular and spacious rooms surrounds you.  A breathtaking bed lies
+in the rear of the room.  The bed posts have been carved to look like the
+trunks of a tree which lead up to branches that mingle above the bed.  A
+massive chest sits at the foot of the bed, and a beautiful dresser sits
+against the wall.  Upon the ceiling there is a wonderous scene depicting an
+ancient temple.  Upon the floor an elaborate symbol is carved into the stone
+itself.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A massive bed sits near the wall here.
+~
+D EAST 0 0 0
+~
+The wall here is covered in a beautiful white marble with golden veins throughout.
+~
+D SOUTH 0 0 0
+~
+The wall here is covered in a beautiful white marble with golden veins throughout.
+~
+D WEST 4651 A 4601
+~
+A doorway leads back out to the hallway.
+~
+D UP 0 0 0
+~
+An ancient stronghold has been painted across the entire ceiling.  There
+is a large part of it covered by the foliage of the bed however.  
+~
+D DOWN 0 0 0
+~
+A beautiful symbol covers nearly the entire floor beneath your feet.
+~
+E writing~
+The key to past lies in the present.  Only when the five stars have been
+united will the way be seen.  When the five stars of the Chiliad are
+together then will the key be revealed.  
+~
+E symbol~
+The symbol here is in the form of a five pointed star.  At the tip of
+each star there is a slight indentation as if somthing was meant to be
+placed there.  As you look closer at the star itself, you notice there is
+some writing in the center.  
+~
+OWNER none~
+#4653
+On a Spiral Staircase~
+This staircase is comprised of large slabs of grey stone.  Occasional
+torches are positioned on the wall that give off a small ammount of light. 
+The smell of dirt and the moisture in the air give the stairwell an earthy
+feeling.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a dull grey stone.
+~
+D EAST 0 0 0
+~
+The wall is made of a dull grey stone.
+~
+D SOUTH 4654 0 0
+~
+The hallway starts in this direction.
+~
+D WEST 0 0 0
+~
+The wall is made of a dull grey stone.
+~
+D UP 4680 0 0
+~
+The staircase continues up to the next level.
+~
+D DOWN 4648 0 0
+~
+The staircase spirals down beneath you.
+~
+OWNER none~
+#4654
+A Wide Hallway~
+The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the walls to the east.  
+~
+unused
+ROOM INDOORS
+D NORTH 4653 0 0
+~
+A staircase lies in this direction.
+~
+D EAST 0 0 0
+~
+The walls here are made of a rough fieldstone.
+~
+D SOUTH 4655 0 0
+~
+The hall continues in this direction.
+~
+D WEST 0 0 0
+~
+The walls here are made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4655
+A Split in the Hallway~
+The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the east.  
+~
+unused
+ROOM INDOORS
+D NORTH 4654 0 0
+~
+~
+D EAST 4656 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4663 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4656
+A Wide Hallway~
+The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the east.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 4657 0 0
+~
+A massive forge can be seen in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4655 0 0
+~
+The hall continues in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4657
+The Elven Forge~
+The heat in this room is incredible dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which sends an
+orange glow throughout the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 4658 0 0
+~
+The forge continues in this direction.
+~
+D EAST 4661 0 0
+~
+The forge continues in this direction.
+~
+D SOUTH 4659 0 0
+~
+The forge continues in this direction.
+~
+D WEST 4656 0 0
+~
+A hallway can be seen in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4658
+The Elven Forge~
+The heat in this room is incredible dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which sends an
+orange glow throughout the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 4662 0 0
+~
+The forge continues in this direction.
+~
+D SOUTH 4657 0 0
+~
+The forge continues in this direction.
+~
+D WEST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4659
+The Elven Forge~
+The heat in this room is incredible dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which sends an
+orange glow throughout the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 4657 0 0
+~
+The forge continues in this direction.
+~
+D EAST 4660 0 0
+~
+The forge continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4660
+The Elven Forge~
+The heat in this room is incredible dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which sends an
+orange glow throughout the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 4661 0 0
+~
+The forge continues in this direction.
+~
+D EAST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4659 0 0
+~
+The forge continues in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4661
+The Elven Forge~
+The heat in this room is incredible dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which sends an
+orange glow throughout the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 4662 0 0
+~
+The forge continues in this direction.
+~
+D EAST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D SOUTH 4660 0 0
+~
+The forge continues in this direction.
+~
+D WEST 4657 0 0
+~
+The forge continues in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4662
+The Elven Forge~
+The heat in this room is incredible dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which sends an
+orange glow throughout the room.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D SOUTH 4661 0 0
+~
+The forge continues in this direction.
+~
+D WEST 4658 0 0
+~
+The forge continues in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4663
+A Wide Hallway~
+The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the east.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 4655 0 0
+~
+The hall continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4664 0 0
+~
+Barracks can be seen in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4664
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4666 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4663 0 0
+~
+A hallway can be seen in this direction.
+~
+D SOUTH 4665 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4670 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4665
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4664 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4671 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4666
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4667 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D SOUTH 4664 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4669 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4667
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D SOUTH 4666 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4668 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4668
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 4667 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4669 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4675 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4669
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4668 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4666 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4670 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4674 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4670
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4669 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4664 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4671 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4673 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4671
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4670 0 0
+~
+The wall is made of a rough fieldstone.
+The barracks continue in this direction.
+~
+D EAST 4665 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4672 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4672
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4673 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4671 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 4679 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4673
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4674 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4670 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4672 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4678 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4674
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4675 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4669 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4673 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4677 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4675
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 4668 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4674 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 4676 0 0
+~
+The barracks continue in this direction.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4676
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D EAST 4675 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4677 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4677
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4676 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4674 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4678 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4678
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4677 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4673 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 4679 0 0
+~
+The barracks continue in this direction.
+~
+D WEST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4679
+The Guard Barracks~
+This massive room is filled only with beds.  Rows and rows of beds are
+lined up in rows with a single truck at the fot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this thier
+home.  
+~
+unused
+ROOM INDOORS
+D NORTH 4678 0 0
+~
+The barracks continue in this direction.
+~
+D EAST 4672 0 0
+~
+The barracks continue in this direction.
+~
+D SOUTH 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D WEST 0 0 0
+~
+The wall is made of a rough fieldstone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of a dull grey stone.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4680
+The Top of a Spiral Staircase~
+This staircase is comprised of large slabs of grey stone.  Occasional
+torches are positioned on the wall that give off a small ammount of light. 
+The smell of dirt and the moisture in the air give the stairwell an earthy
+feeling.  Below you, you can see the staircase winding down to the floors
+below.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The wall here is made of dull grey stone.
+~
+D EAST 0 0 0
+~
+The wall here is made of dull grey stone.
+~
+D SOUTH 4681 0 0
+~
+The leads in this direction.
+~
+D WEST 0 0 0
+~
+The wall here is made of dull grey stone.
+~
+D UP 0 0 0
+~
+The ceiling here is made of dull grey stone.
+~
+D DOWN 4653 0 0
+~
+The stairs spiral down beneath you.
+~
+OWNER none~
+#4681
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4680 0 0
+~
+A staircase can be seen in this directoin.
+~
+D EAST 4684 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4686 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4682 0 0
+~
+The hallway continues in this direction.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4682
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4700 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4681 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4688 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4683 0 0
+~
+The hallway continues in this direction.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4683
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4702 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4682 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4690 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4684
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4698 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 4685 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4692 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4681 0 0
+~
+The hallway continues in this direction.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4685
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4696 0 0
+~
+The hallway continues in this direction.
+~
+D SOUTH 4694 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 4684 0 0
+~
+The hallway continues in this direction.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4686
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4681 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4687 0 0
+~
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4687
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 4686 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4688
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4682 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4689 0 0
+~
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4689
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 4688 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4690
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4683 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4691 0 0
+~
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4691
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 4690 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4692
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4684 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4693 0 0
+~
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4693
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 4692 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4694
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4685 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4695 0 0
+~
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4695
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 4694 0 0
+~
+The hallway continues in this direction.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4696
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4697 0 0
+~
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4685 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4697
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4696 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4698
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4699 0 0
+~
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4684 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4699
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4698 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4700
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4701 0 0
+~
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4682 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4701
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4700 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4702
+A Small Hallway~
+A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~
+unused
+ROOM INDOORS
+D NORTH 4703 0 0
+~
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4683 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4703
+An Archer's Post~
+This small area is where the archers take thier post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~
+unused
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A beautiful view of the forest can be seen through the window.
+~
+D EAST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D SOUTH 4702 0 0
+~
+The hallway continues in this direction.
+~
+D WEST 0 0 0
+~
+Roots can be seen running through the dirt walls here.
+~
+D UP 0 0 0
+~
+Roots and bugs can be seen running through the dirt ceiling overhead.
+~
+D DOWN 0 0 0
+~
+Hard packed dirt covers the floor beneath you.
+~
+OWNER none~
+#4704
+Entrance to the Ancient Halls of Gwenidill~
+A strange glow seems to eminate from the walls here, giving light to the
+halls.  The air is heavy with age, and the absolute silence of these halls
+is devastating.  An inch of dust covers the floor, and the eyes of a
+thousand years seems to bare down on you.  A identical rune to the one in
+the upper room is inscribed upon the floor, although it seems to be
+inverted.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4705 0 0
+~
+~
+D UP 4649 0 0
+~
+~
+OWNER none~
+#4705
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence is devastating.  An inch of
+dust covers the floor, and the eyes of a thousand years seems to beard down
+on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4704 0 0
+~
+~
+D SOUTH 4706 0 0
+~
+~
+OWNER none~
+#4706
+Hall of the Elven Chiliad~
+This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4705 0 0
+~
+~
+D EAST 4707 0 0
+~
+~
+D SOUTH 4710 0 0
+~
+~
+D WEST 4708 0 0
+~
+~
+E arch~
+The symbol of the Elven Chiliad has been carved into the archway here.
+~
+OWNER none~
+#4707
+Hall of the Elven Chiliad~
+This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D SOUTH 4711 0 0
+~
+~
+D WEST 4706 0 0
+~
+~
+OWNER none~
+#4708
+Hall of the Elven Chiliad~
+This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4706 0 0
+~
+~
+D SOUTH 4709 0 0
+~
+~
+D WEST 4712 0 0
+~
+~
+E arch~
+A beautiful symbol depicting a crecent moon is carved into the archway
+here.  
+~
+OWNER none~
+#4709
+Hall of the Elven Chiliad~
+This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4708 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+D EAST 4710 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+D WEST 4784 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+E arch~
+A symbol of three interlocking rings is carved into the archway here.  
+~
+OWNER none~
+#4710
+Hall of the Elven Chiliad~
+This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4706 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+D EAST 4711 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+D SOUTH 4720 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+D WEST 4709 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+E arch~
+A symbol depicting a golden coin has been chisled into the archway.  
+~
+OWNER none~
+#4711
+Hall of the Elven Chiliad~
+This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4707 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+D EAST 4733 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.  
+~
+D WEST 4710 0 0
+~
+A thick haze prevents you from seeing to far ahead of you.
+~
+E arch~
+A tome, crown, and a night sky have been carved into the archway overhead.  
+~
+OWNER none~
+#4712
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4708 0 0
+~
+~
+D WEST 4713 0 0
+~
+~
+OWNER none~
+#4713
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4714 0 0
+~
+~
+D EAST 4712 0 0
+~
+~
+OWNER none~
+#4714
+Before a Strange Doorway~
+You are before a small doorway made of a strange wood.  There is quite a
+bit of static electricity in near this doorway, and a cool breeze flows from
+underneath the doorway.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4713 0 0
+~
+~
+D WEST 4715 A 0
+~
+~
+OWNER none~
+#4715
+A Large Laboratory~
+Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hands about in the air as if it was used only moments ago.  
+~
+unused
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4718 0 0
+~
+~
+D EAST 4714 A 0
+~
+~
+D WEST 4716 0 0
+~
+~
+OWNER none~
+#4716
+A Large Laboratory~
+Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hands about in the air as if it was used only moments ago.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4717 0 0
+~
+~
+D EAST 4715 0 0
+~
+~
+OWNER none~
+#4717
+A Large Laboratory~
+Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hands about in the air as if it was used only moments ago.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4718 0 0
+~
+~
+D SOUTH 4716 0 0
+~
+~
+D WEST 4719 ABI 0
+~
+~
+OWNER none~
+#4718
+A Large Laboratory~
+Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hands about in the air as if it was used only moments ago.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4715 0 0
+~
+~
+D WEST 4717 0 0
+~
+~
+OWNER none~
+#4719
+A Hidden Alcove~
+This small alcove contains only one desc with several journals upon it. 
+A candle covered in dust is melted to the desk, and random reagents are
+scattered on the floor.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 4717 ABI 0
+~
+~
+OWNER none~
+#4720
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4710 0 0
+~
+~
+D SOUTH 4721 0 0
+~
+~
+OWNER none~
+#4721
+Before a Scorched Gate~
+A massive blackened gate stands in the south wall here.  Scorch marks
+line all the edges of the gates, and the floor is burnt as well.  The gate
+itself is inscribed with symbols of warning, and a large crown is embossed
+upon the center.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4720 0 0
+~
+~
+D SOUTH 4722 A 0
+~
+~
+OWNER none~
+#4722
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4721 A 0
+~
+~
+D EAST 4730 0 0
+~
+~
+D SOUTH 4726 0 0
+~
+~
+D WEST 4724 0 0
+~
+~
+OWNER none~
+#4723
+Dummy Room~
+~
+unused
+D EAST 4722 0 0
+~
+~
+OWNER none~
+#4724
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4722 0 0
+~
+~
+D SOUTH 4725 0 0
+~
+~
+OWNER none~
+#4725
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4724 0 0
+~
+~
+D EAST 4726 0 0
+~
+~
+OWNER none~
+#4726
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4722 0 0
+~
+~
+D EAST 4727 0 0
+~
+~
+D WEST 4725 0 0
+~
+~
+OWNER none~
+#4727
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4730 0 0
+~
+~
+D EAST 4728 0 0
+~
+~
+D WEST 4726 0 0
+~
+~
+OWNER none~
+#4728
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4731 0 0
+~
+~
+D EAST 4729 0 0
+~
+~
+D WEST 4727 0 0
+~
+~
+OWNER none~
+#4729
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4732 0 0
+~
+~
+D WEST 4728 0 0
+~
+~
+OWNER none~
+#4730
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4731 0 0
+~
+~
+D SOUTH 4727 0 0
+~
+~
+D WEST 4722 0 0
+~
+~
+OWNER none~
+#4731
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4732 0 0
+~
+~
+D SOUTH 4728 0 0
+~
+~
+D WEST 4730 0 0
+~
+~
+OWNER none~
+#4732
+The Elven Coffers~
+Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4729 0 0
+~
+~
+D WEST 4731 0 0
+~
+~
+OWNER none~
+#4733
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 4734 0 0
+~
+~
+D WEST 4711 0 0
+~
+~
+OWNER none~
+#4734
+A Large Rotunda~
+This circular room lies under a large dome.  The ceiling of the dome is
+covered in stars that glow with an inner light.  The walls are made of an
+obsidian that seems to suck up the light around it.  Arched doorways lead
+off in all directions each baring a different symbol above it.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4735 0 0
+~
+~
+D EAST 4764 0 0
+~
+~
+D SOUTH 4775 0 0
+~
+~
+D WEST 4733 0 0
+~
+~
+OWNER none~
+#4735
+Before a Set of Ornate Doors~
+A large set of oaken doors stand fifthteen feet high in the northern
+walls.  Vines and trees have been carved ornately into the face of the
+doors.  To lanterns containing candles lie on either side of the door frame,
+and a strange rune is cut into the stone beneath your feet.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4736 A 0
+~
+~
+D SOUTH 4734 0 0
+~
+~
+OWNER none~
+#4736
+The Ancient Gallery~
+You are on the upper level of a two story room.  All along the walls here
+portraits of the Lords of this stronghold hang with candles on either side. 
+A smooth wood railing runs the edge of the balcony and you can see a massive
+library on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4747 0 0
+~
+~
+D SOUTH 4735 A 0
+~
+~
+D WEST 4737 0 0
+~
+~
+E portrait~
+A stout elven man in green robes stands with his arm resting on the hilt
+of a magnificent scimitar.  
+ 
+A brass plate on the frame of the panting says:
+"Lord Hrenifin the Lover of Nature"
+~
+OWNER none~
+#4737
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4736 0 0
+~
+~
+D WEST 4738 0 0
+~
+~
+OWNER none~
+#4738
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4739 0 0
+~
+~
+D EAST 4737 0 0
+~
+~
+OWNER none~
+#4739
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  A spiral
+stairway comes up through the floor here, leading down to the library.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4740 0 0
+~
+~
+D SOUTH 4738 0 0
+~
+~
+D DOWN 4763 0 0
+~
+~
+OWNER none~
+#4740
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4741 0 0
+~
+~
+D SOUTH 4739 0 0
+~
+~
+OWNER none~
+#4741
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4742 0 0
+~
+~
+D WEST 4740 0 0
+~
+~
+OWNER none~
+#4742
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4743 0 0
+~
+~
+D WEST 4741 0 0
+~
+~
+OWNER none~
+#4743
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4744 0 0
+~
+~
+D WEST 4742 0 0
+~
+~
+OWNER none~
+#4744
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4745 0 0
+~
+~
+D WEST 4743 0 0
+~
+~
+OWNER none~
+#4745
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  A spiral
+staircase rises up through the floor here, leading down to the library.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4744 0 0
+~
+~
+D SOUTH 4746 0 0
+~
+~
+D DOWN 4748 0 0
+~
+~
+OWNER none~
+#4746
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4745 0 0
+~
+~
+D WEST 4747 0 0
+~
+~
+OWNER none~
+#4747
+The Ancient Gallery~
+A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4746 0 0
+~
+~
+D WEST 4736 0 0
+~
+~
+OWNER none~
+#4748
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  A large spiral staircase leads up to the gallery here.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4749 0 0
+~
+~
+D SOUTH 4750 0 0
+~
+~
+D WEST 4752 0 0
+~
+~
+D UP 4745 0 0
+~
+~
+OWNER none~
+#4749
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4748 0 0
+~
+~
+D WEST 4753 0 0
+~
+~
+OWNER none~
+#4750
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4748 0 0
+~
+~
+D WEST 4751 0 0
+~
+~
+OWNER none~
+#4751
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4752 0 0
+~
+~
+D EAST 4750 0 0
+~
+~
+D WEST 4756 0 0
+~
+~
+OWNER none~
+#4752
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4753 0 0
+~
+~
+D EAST 4748 0 0
+~
+~
+D SOUTH 4751 0 0
+~
+~
+D WEST 4755 0 0
+~
+~
+OWNER none~
+#4753
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4749 0 0
+~
+~
+D SOUTH 4752 0 0
+~
+~
+D WEST 4754 0 0
+~
+~
+OWNER none~
+#4754
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4753 0 0
+~
+~
+D SOUTH 4755 0 0
+~
+~
+D WEST 4759 0 0
+~
+~
+OWNER none~
+#4755
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4754 0 0
+~
+~
+D EAST 4752 0 0
+~
+~
+D SOUTH 4756 0 0
+~
+~
+D WEST 4758 0 0
+~
+~
+OWNER none~
+#4756
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4755 0 0
+~
+~
+D EAST 4751 0 0
+~
+~
+D WEST 4757 0 0
+~
+~
+OWNER none~
+#4757
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4758 0 0
+~
+~
+D EAST 4756 0 0
+~
+~
+D WEST 4761 0 0
+~
+~
+OWNER none~
+#4758
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4759 0 0
+~
+~
+D EAST 4755 0 0
+~
+~
+D SOUTH 4757 0 0
+~
+~
+D WEST 4763 0 0
+~
+~
+OWNER none~
+#4759
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4754 0 0
+~
+~
+D SOUTH 4758 0 0
+~
+~
+D WEST 4762 0 0
+~
+~
+OWNER none~
+#4760
+A massive library~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4761
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4763 0 0
+~
+~
+D EAST 4757 0 0
+~
+~
+OWNER none~
+#4762
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4759 0 0
+~
+~
+D SOUTH 4763 0 0
+~
+~
+OWNER none~
+#4763
+A Massive Library~
+Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  A spiral staircase leads up to the gallery here.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4762 0 0
+~
+~
+D EAST 4758 0 0
+~
+~
+D SOUTH 4761 0 0
+~
+~
+D UP 4739 0 0
+~
+~
+OWNER none~
+#4764
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4765 0 0
+~
+~
+D WEST 4734 0 0
+~
+~
+OWNER none~
+#4765
+Before a Door Embossed with Stars~
+A smaller door occupies the eastern wall here.  Single starts are
+embossed upon this door that seems to be made of alabaster.  Two strange
+torches burn with a dim blue light on either side of the door frame.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4766 A 0
+~
+~
+D WEST 4764 0 0
+~
+~
+OWNER none~
+#4766
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps of constellations and even single stars line the entire outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4767 0 0
+~
+~
+D EAST 4774 0 0
+~
+~
+D SOUTH 4768 0 0
+~
+~
+D WEST 4765 A 0
+~
+~
+OWNER none~
+#4767
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4773 0 0
+~
+~
+D SOUTH 4766 0 0
+~
+~
+OWNER none~
+#4768
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4766 0 0
+~
+~
+D EAST 4769 0 0
+~
+~
+OWNER none~
+#4769
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4774 0 0
+~
+~
+D EAST 4770 0 0
+~
+~
+D WEST 4768 0 0
+~
+~
+OWNER none~
+#4770
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4771 0 0
+~
+~
+D WEST 4769 0 0
+~
+~
+OWNER none~
+#4771
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4772 0 0
+~
+~
+D SOUTH 4770 0 0
+~
+~
+D WEST 4774 0 0
+~
+~
+OWNER none~
+#4772
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4771 0 0
+~
+~
+D WEST 4773 0 0
+~
+~
+OWNER none~
+#4773
+Inside the Observatory~
+A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4772 0 0
+~
+~
+D SOUTH 4774 0 0
+~
+~
+D WEST 4767 0 0
+~
+~
+OWNER none~
+#4774
+Under a Massive Telescope~
+A massive contraption of brass rises mightily over your head.  Gear,
+wheels, and pullies command your attention at every glance.  A beautiful
+silver chair embossed with stars sits facing the telescope.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4773 0 0
+~
+~
+D EAST 4771 0 0
+~
+~
+D SOUTH 4769 0 0
+~
+~
+D WEST 4766 0 0
+~
+~
+OWNER none~
+#4775
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4734 0 0
+~
+~
+D SOUTH 4776 0 0
+~
+~
+OWNER none~
+#4776
+Before a Door Depicting a Large Constellation~
+Two large doors of guilded gold dominate the eastern wall.  A large
+constellation in the shape of a lion is embossed upon the doors face.  A
+crystal chandelier hangs down from the ceiling, and strange candles within
+it burn with a golden light.  Two tapestries depicting grand feasts hang
+upon the southern and western walls.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4775 0 0
+~
+~
+D EAST 4777 A 0
+~
+~
+OWNER none~
+#4777
+Throne Room of the First Elven Lord~
+A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4780 0 0
+~
+~
+D SOUTH 4778 0 0
+~
+~
+D WEST 4776 A 0
+~
+~
+OWNER none~
+#4778
+Throne Room of the First Elven Lord~
+A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4777 0 0
+~
+~
+D EAST 4779 0 0
+~
+~
+OWNER none~
+#4779
+Throne Room of the First Elven Lord~
+A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4780 0 0
+~
+~
+D EAST 4782 0 0
+~
+~
+D SOUTH 4783 ABI 0
+~
+~
+D WEST 4778 0 0
+~
+~
+OWNER none~
+#4780
+Throne Room of the First Elven Lord~
+A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4781 0 0
+~
+~
+D SOUTH 4779 0 0
+~
+~
+D WEST 4777 0 0
+~
+~
+OWNER none~
+#4781
+Throne Room of the First Elven Lord~
+A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D SOUTH 4782 0 0
+~
+~
+D WEST 4780 0 0
+~
+~
+OWNER none~
+#4782
+Throne Room of the First Elven Lord~
+A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4781 0 0
+~
+~
+D WEST 4779 0 0
+~
+~
+OWNER none~
+#4783
+Behind the Throne~
+You have stumbled into the secret room behind the massive throne. 
+Lifeless stone walls suround you completely.  The only thing that catches
+your eye is a carving of a lion upon the back wall.  
+~
+unused
+ROOM INDOORS
+D NORTH 4779 AB 0
+~
+~
+E carving~
+A beautiful lion in full stride has been etched into the wall here.  The
+lion's mouth is open and there is a small indentation that looks as if
+somthing could be placed in the mouth.  
+~
+E lion~
+A beautiful lion in full stride has been etched into the wall here.  The
+lion's mouth is open and there is a small indentation that looks as if
+somthing could be placed in the mouth.  
+~
+OWNER none~
+#4784
+A Hallway through Gwenidill~
+The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4709 0 0
+~
+~
+D WEST 4785 0 0
+~
+~
+OWNER none~
+#4785
+Before a Door Carved with Ancient Runes~
+A large door covered in the runes of ancient dieties commands attention
+at the southern wall.  All along the walls near the doors small prayers are
+written to remind others.  The floor here is a black marble mixed with veins
+of gold running throughout.  Large golden stands are postioned at either end
+of the doorway.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4784 0 0
+~
+~
+D SOUTH 4786 A 0
+~
+~
+OWNER none~
+#4786
+The Pantheon of Gwenidill~
+Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4785 A 0
+~
+~
+D EAST 4787 0 0
+~
+~
+D SOUTH 4791 0 0
+~
+~
+D WEST 4788 0 0
+~
+~
+OWNER none~
+#4787
+The Pantheon of Gwenidill~
+Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D WEST 4786 0 0
+~
+~
+OWNER none~
+#4788
+The Pantheon of Gwenidill~
+Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4786 0 0
+~
+~
+D SOUTH 4790 0 0
+~
+~
+D WEST 4789 0 0
+~
+~
+OWNER none~
+#4789
+The Pantheon of Gwenidill~
+Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D EAST 4788 0 0
+~
+~
+OWNER none~
+#4790
+The Pantheon of Gwenidill~
+Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4788 0 0
+~
+~
+D EAST 4791 0 0
+~
+~
+OWNER none~
+#4791
+The Pantheon of Gwenidill~
+Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+D NORTH 4786 0 0
+~
+~
+D WEST 4790 0 0
+~
+~
+OWNER none~
+#4792
+The Inner Sanctum of Virinahn~
+An infinate plane stretches out in all directions.  The ground as far as
+the eye can see is sand as white as snow.  The sky is black and formless
+with only a single star in the sky above.  A constant breeze blows across
+the plane, but without sound, leaving the impression of an infinite void.  
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+OBJECT 4631 TO 4602
+PUT 4600 IN 4631 COUNT 1
+MOB 4621 TO 4604 GLIMIT 10 LLIMIT 1
+EQUIP 4604 HEAD
+EQUIP 4603 ARMS
+EQUIP 4602 BODY
+EQUIP 4605 FEET
+EQUIP 4606 LEGS
+EQUIP 4607 HANDS
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+MOB 4621 TO 4605 GLIMIT 10 LLIMIT 1
+EQUIP 4607 HANDS
+EQUIP 4606 LEGS
+EQUIP 4605 FEET
+EQUIP 4602 BODY
+EQUIP 4603 ARMS
+EQUIP 4604 HEAD
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+MOB 4621 TO 4606 GLIMIT 10 LLIMIT 1
+EQUIP 4602 BODY
+EQUIP 4603 ARMS
+EQUIP 4604 HEAD
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+EQUIP 4605 FEET
+EQUIP 4606 LEGS
+EQUIP 4607 HANDS
+MOB 4621 TO 4607 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4608 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4608 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4608 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4609 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4609 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4609 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4610 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4610 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4610 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4611 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4611 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4611 GLIMIT 10 LLIMIT 1
+MOB 4610 TO 4612 GLIMIT 2 LLIMIT 1
+MOB 4609 TO 4612 GLIMIT 2 LLIMIT 1
+MOB 4608 TO 4612 GLIMIT 2 LLIMIT 1
+MOB 4607 TO 4612 GLIMIT 2 LLIMIT 1
+MOB 4606 TO 4612 GLIMIT 2 LLIMIT 1
+MOB 4621 TO 4613 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4613 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4613 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4613 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4614 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4614 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4614 GLIMIT 10 LLIMIT 1
+MOB 4621 TO 4615 GLIMIT 10 LLIMIT 1
+MOB 4610 TO 4615 GLIMIT 2 LLIMIT 1
+MOB 4609 TO 4615 GLIMIT 2 LLIMIT 1
+MOB 4608 TO 4615 GLIMIT 2 LLIMIT 1
+MOB 4607 TO 4615 GLIMIT 2 LLIMIT 1
+MOB 4606 TO 4615 GLIMIT 2 LLIMIT 1
+MOB 4605 TO 4616 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4616 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4616 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4617 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4617 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4617 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4618 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4618 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4618 GLIMIT 10 LLIMIT 1
+MOB 4605 TO 4619 GLIMIT 10 LLIMIT 1
+MOB 4604 TO 4619 GLIMIT 10 LLIMIT 1
+MOB 4603 TO 4619 GLIMIT 10 LLIMIT 1
+MOB 4612 TO 4620 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4620 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4621 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4621 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4622 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4622 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4623 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4623 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4624 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4624 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4625 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4625 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4626 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4626 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4627 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4627 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4628 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4628 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4629 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4629 GLIMIT 13 LLIMIT 1
+OBJECT 4633 TO 4629
+PUT 4634 IN 4633 COUNT 1
+MOB 4612 TO 4630 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4630 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4631 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4631 GLIMIT 13 LLIMIT 1
+MOB 4612 TO 4632 GLIMIT 13 LLIMIT 1
+MOB 4611 TO 4632 GLIMIT 13 LLIMIT 1
+MOB 4615 TO 4635 GLIMIT 1 LLIMIT 1
+EQUIP 4617 WIELD
+EQUIP 4618 NECKONE
+MOB 4623 TO 4635 GLIMIT 1 LLIMIT 1
+EQUIP 4635 LEGS
+EQUIP 4636 WIELD
+MOB 4616 TO 4636 GLIMIT 1 LLIMIT 1
+EQUIP 4619 WAIST
+EQUIP 4620 WIELD
+MOB 4621 TO 4637 GLIMIT 10 LLIMIT 1
+EQUIP 4604 HEAD
+EQUIP 4603 ARMS
+EQUIP 4602 BODY
+EQUIP 4607 HANDS
+EQUIP 4606 LEGS
+EQUIP 4605 FEET
+MOB 4617 TO 4638 GLIMIT 1 LLIMIT 1
+EQUIP 4613 BODY
+EQUIP 4614 WIELD
+MOB 4618 TO 4639 GLIMIT 1 LLIMIT 1
+EQUIP 4616 WIELD
+EQUIP 4615 HEAD
+MOB 4619 TO 4641 GLIMIT 1 LLIMIT 1
+EQUIP 4609 WIELD
+EQUIP 4610 ABOUT
+MOB 4620 TO 4642 GLIMIT 1 LLIMIT 1
+EQUIP 4611 WIELD
+EQUIP 4612 HEAD
+MOB 4621 TO 4644 GLIMIT 10 LLIMIT 1
+EQUIP 4605 FEET
+EQUIP 4604 HEAD
+EQUIP 4603 ARMS
+EQUIP 4602 BODY
+EQUIP 4607 HANDS
+EQUIP 4606 LEGS
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+MOB 4621 TO 4647 GLIMIT 10 LLIMIT 1
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+EQUIP 4602 BODY
+EQUIP 4603 ARMS
+EQUIP 4604 HEAD
+EQUIP 4605 FEET
+EQUIP 4606 LEGS
+EQUIP 4607 HANDS
+MOB 4621 TO 4650 GLIMIT 10 LLIMIT 1
+EQUIP 4606 LEGS
+EQUIP 4607 HANDS
+EQUIP 4602 BODY
+EQUIP 4605 FEET
+EQUIP 4604 HEAD
+EQUIP 4603 ARMS
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+MOB 4621 TO 4651 GLIMIT 10 LLIMIT 1
+EQUIP 4605 FEET
+EQUIP 4604 HEAD
+EQUIP 4603 ARMS
+EQUIP 4602 BODY
+EQUIP 4606 LEGS
+EQUIP 4607 HANDS
+EQUIP 4608 WIELD
+EQUIP 4608 WIELD
+MOB 4622 TO 4652 GLIMIT 1 LLIMIT 1
+EQUIP 4622 WIELD
+EQUIP 4621 LFINGER
+EQUIP 4621 LFINGER
+MOB 4601 TO 4657 GLIMIT 10 LLIMIT 1
+EQUIP 4630 WIELD
+MOB 4601 TO 4658 GLIMIT 10 LLIMIT 1
+EQUIP 4630 WIELD
+MOB 4601 TO 4659 GLIMIT 10 LLIMIT 1
+EQUIP 4630 WIELD
+MOB 4601 TO 4660 GLIMIT 10 LLIMIT 1
+EQUIP 4630 WIELD
+MOB 4601 TO 4661 GLIMIT 10 LLIMIT 1
+EQUIP 4630 WIELD
+MOB 4601 TO 4662 GLIMIT 10 LLIMIT 1
+EQUIP 4630 WIELD
+MOB 4602 TO 4664 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4603 ARMS
+EQUIP 4608 WIELD
+MOB 4602 TO 4665 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4603 ARMS
+EQUIP 4608 WIELD
+MOB 4602 TO 4666 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4604 HEAD
+EQUIP 4608 WIELD
+MOB 4602 TO 4666 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4667 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4667 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4668 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4669 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4604 HEAD
+EQUIP 4608 WIELD
+MOB 4602 TO 4669 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4604 HEAD
+MOB 4602 TO 4669 GLIMIT 30 LLIMIT 2
+EQUIP 4608 WIELD
+EQUIP 4602 BODY
+MOB 4602 TO 4670 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4605 FEET
+EQUIP 4608 WIELD
+MOB 4602 TO 4670 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4605 FEET
+MOB 4602 TO 4670 GLIMIT 30 LLIMIT 2
+EQUIP 4608 WIELD
+EQUIP 4602 BODY
+EQUIP 4605 FEET
+MOB 4602 TO 4671 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4606 LEGS
+EQUIP 4608 WIELD
+MOB 4602 TO 4671 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4606 LEGS
+MOB 4602 TO 4672 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4606 LEGS
+EQUIP 4608 WIELD
+EQUIP 4603 ARMS
+MOB 4602 TO 4672 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4606 LEGS
+EQUIP 4608 WIELD
+MOB 4602 TO 4673 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4673 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4674 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4603 ARMS
+MOB 4602 TO 4675 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4675 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4676 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+MOB 4602 TO 4677 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4607 HANDS
+MOB 4602 TO 4678 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4607 HANDS
+MOB 4602 TO 4678 GLIMIT 30 LLIMIT 2
+EQUIP 4608 WIELD
+EQUIP 4602 BODY
+EQUIP 4607 HANDS
+MOB 4602 TO 4679 GLIMIT 30 LLIMIT 3
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4607 HANDS
+EQUIP 4606 LEGS
+MOB 4602 TO 4679 GLIMIT 30 LLIMIT 2
+EQUIP 4602 BODY
+EQUIP 4608 WIELD
+EQUIP 4607 HANDS
+MOB 4600 TO 4687 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4689 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4691 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4693 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4695 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4697 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4699 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4701 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4600 TO 4703 GLIMIT 9 LLIMIT 1
+EQUIP 4632 ABOUT
+MOB 4614 TO 4705 GLIMIT 10 LLIMIT 1
+OBJECT 4629 TO 4706
+OBJECT 4628 TO 4707
+OBJECT 4625 TO 4708
+OBJECT 4624 TO 4709
+OBJECT 4626 TO 4710
+OBJECT 4627 TO 4711
+MOB 4614 TO 4712 GLIMIT 10 LLIMIT 1
+MOB 4613 TO 4722 GLIMIT 1 LLIMIT 1
+MOB 4614 TO 4725 GLIMIT 10 LLIMIT 1
+MOB 4614 TO 4733 GLIMIT 10 LLIMIT 1
+MOB 4614 TO 4734 GLIMIT 10 LLIMIT 1
+MOB 4614 TO 4764 GLIMIT 10 LLIMIT 1
+OBJECT 4623 TO 4774
+MOB 4614 TO 4775 GLIMIT 10 LLIMIT 1
+MOB 4614 TO 4784 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

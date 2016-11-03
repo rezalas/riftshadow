@@ -1,0 +1,3465 @@
+#AREA
+mtcim.are~
+Mount Cim~
+Zethus~
+20 51
+200 299
+normal
+none
+0
+1
+
+#MOBS
+#200
+common traveler~
+a common traveler~
+A human man in worn traveling clothes seems lost in the bustle.         
+~
+The look of frustration that is so common along this oft cramped and          
+rough trail has found a home on this traveler's face. His clothes are          
+smudged with dirt, and on his back is a simple knapsack that seems very          
+light and empty. As he pushes his way through the crowd, he keeps one          
+hand out in front of him and the other on the dagger in his belt.         
+~
+0 0 100 human~
+20 10d7+600 5d5+3 0 100 pierce
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+#201
+fat merchant~
+a fat merchant~
+A fat man in colorful, though tacky, clothes pushes through the crowd.         
+~
+A tangle of greasy brown hair crowns this large merchant. His clothing          
+is far too elaborate for the obviously low quality materials used to          
+make them, and are dyed with the brightest hues of the basic colors.          
+Sweat covers his face as he grumbles, puffs and uses his size to try          
+to wade through the sea of people around him.         
+~
+0 0 100 human~
+35 20d5+950 5d12+5 0 100 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#202
+guard trail sentry~
+a trail sentry~
+A sword-wielding guard in light leather armor paces along the side of the          
+trail.         
+~
+Clad in well made but light Cimarrite armor, this guard is carefully         
+watching the passing crowd, watching for thieves or fights that often          
+break out in the bustling traffic.          
+~
+0 0 100 human~
+30 20d5+750 5d9+9 0 100 pound
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#203
+boy ragged pickpocket~
+a pickpocket~
+A ragged young boy weaves through the traffic deftly.         
+~
+The glimmer in this adolescent's eyes and the feral dirt that is          
+smudged all over his clothing and body instantly reveals him for          
+what he is. But, as his slender figure weaves its way through the          
+crowd effortlessly, there are few that seem to notice him at all,          
+much less notice him lifting a few coins from their heavy purses.         
+~
+0 0 100 human~
+15 10d5+250 5d2+2 0 100 pierce
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#204
+rugged human hiker~
+a hiker~
+A rugged human wades through the sea of people eagerly.         
+~
+This man is obviously not a woodsman, but does seem much more at ease         
+with the wilds than the average city person. His clothing looks warm and         
+worn, but comfortable.         
+~
+0 0 100 human~
+25 10d5+750 5d7+2 0 100 pierce
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#205
+worldly elegant traveled merchant~
+a worldly merchant~
+An elegantly dressed merchant strides through the crowd.         
+~
+This merchant is dressed in the finest, most exotic clothes of any of          
+the merchants on this trail. The is a cold, indifferent strength behind          
+his eyes and his strong, high-set cheekbones give his face the look of          
+one that has seen more than most of the world has. You also note that          
+this is one of the only travelers on this road that is unarmed.         
+~
+0 201 100 human~
+45 25d5+3350 10d5+14 0 100 pierce
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+IMM SUMMON
+#206
+peasant commoner man~
+a common man~
+A commoner from a nearby village commutes to Cimar through the mountains.         
+~
+Clad in somewhat crude, yet durable, woolen clothes, this commoner looks          
+to be from the nearby Koteras Village.         
+~
+0 200 100 human~
+20 10d5+550 6d3+2 0 100 pierce
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#207
+common peasant woman~
+a peasant woman~
+A peasant woman gathers brush from the side of the trail.         
+~
+A bit sweaty and frustrated looking, this common woman searches along         
+the side of the trail for dry brush to use for a variety of things.         
+~
+0 200 100 human~
+20 10d5+450 5d2+2 0 100 pierce
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#208
+merchant bodyguard planar titan~
+a merchant's bodyguard~
+A planar titan eyes the crowd warily as he follows his boss.         
+~
+The massive frame of this giant is covered in traveling clothes.        
+His dark skin glistens and his large muscles flex as he slowly        
+and almost cautiously cracks his knuckles as he looks around        
+at the crowd for shady-looking people.         
+~
+0 201 100 planar~
+60 60d5+8000 15d11+15 0 60 beating
+0 0 0 0
+standing male poor
+0 0 huge
+ACT NPC
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+AFF HASTE
+IMM SUMMON
+CLASS warrior Barbarian none 
+#209
+skinny lanky merchant man~
+a lanky merchant~
+An awkward, skinny man pulls a mule loaded with goods toward Cimar.         
+~
+This funny looking man has a look of awe on his face... or perhaps simply a         
+very severe slack-jaw. His adam's apple juts an inch out of his throat and         
+bobs back and forth with his head as he walks, a fully loaded mule in tow.         
+~
+0 0 100 human~
+20 10d5+650 4d7+2 0 100 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#210
+mule~
+a burdened mule~
+This mule follows its master, bags loaded onto its back.         
+~
+Its coarse coat covered with dust, this mule seems somewhat malnourished          
+by the look of its ribs and legs. Colorful bags have been loaded onto an          
+apparatus on its saddle.         
+~
+0 0 100 pig~
+20 10d5+350 5d2+12 0 100 none
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#211
+buck deer~
+a buck~
+A buck with large antlers grazes on the grass here.         
+~
+Stocky, muscular and proud-looking, this buck quietly and gracefully        
+grazes on the grass that grows around here. A sense of power and        
+nobility seems to fill its being.        
+~
+0 209 100 dog~
+20 10d5+590 10d4+2 0 100 charge
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#212
+mountain lion wildcat feline~
+a mountain lion~
+A large wildcat slinks through the shadows, searching for prey.         
+~
+Sleek, silent and powerful, this feline hunter keeps its head lowered          
+as it gazes cooly at its surroundings. Its greyish coat blends in with          
+the surrounding rock and much of the dirt that makes up Mount Cim.         
+~
+0 203 100 cat~
+25 10d5+750 3d10+7 0 100 claw
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+#213
+small tiny squirrel chittering~
+a tiny squirrel~
+A small squirrel skitters about, chittering softly.         
+~
+Chittering contentedly, this hyperactive young squirrel seems to be         
+searching for things to eat on the forest floor. Its peppered grey-brown         
+fur is very soft looking, and its slightly curled, bushy tail bristles         
+with excitement.         
+~
+0 204 100 rabbit~
+5 10d4+40 5d2+4 0 100 bite
+0 0 0 0
+standing either none
+0 0 tiny
+ACT NPC
+#214
+chipmunk~
+a plump chipmunk~
+A rather healthy looking chipmunk runs around the forest here.         
+~
+This chipmunk's large black eyes are scanning the forest floor for food         
+as it runs about with surprising speed for one of its rather... healthy          
+size.         
+~
+0 205 100 rabbit~
+5 10d4+40 5d2+4 0 100 bite
+0 0 0 0
+standing either none
+0 0 tiny
+ACT NPC
+#215
+racoon~
+a large racoon~
+A large racoon forages through the brush in search of food.         
+~
+The racoons of Mount Cim are known for their size. The largest can          
+reach up to thirty pounds. Its bandit-like mask and ringed tail         
+along with its inquisitive eyes, which are in constant motion,         
+make this animal unique indeed.         
+~
+0 206 100 fox~
+10 10d5+250 5d4+2 0 100 bite
+0 0 0 0
+standing either none
+0 0 small
+ACT NPC
+#216
+mottled lizard skink~
+a mottled skink~
+A grey lizard covered with brown spots scurries through the forest.         
+~
+An utterly blank look has found its home in the large, reptilian eyes         
+of this lizard. Its rough grey skin is covered with wavy brown stripes,         
+allowing it to camoflage itself rather well from most predators and prey.         
+~
+0 207 100 lizard~
+5 10d5+20 5d2+2 0 100 bite
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+#217
+fawn deer~
+a fawn~
+A fawn quietly grazes on the grass.         
+~
+This is a placid-looking fawn, nibbling on grass and entirely oblivious        
+to your presence here. Almond-shaped white spots cover her side, helping        
+her to blend in with her environment.        
+~
+0 208 100 dog~
+20 10d5+550 3d15+2 0 100 beating
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#219
+bright snake~
+a brightly-colored snake~
+A brown snake with red and yellow stripes slithers about the rocky floor.         
+~
+This snake's dark brown color contrasts greatly with the bright red and          
+yellow stripes that wrap around its serpentine form. Obviously, this snake         
+makes no attempt to blend in with its surroundings.         
+~
+0 210 100 snake~
+10 10d5+250 7d2+2 0 100 disease
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+#221
+grey wolf~
+a grey wolf~
+A large grey wolf pads swiftly through the forest.         
+~
+Its eyes opened wide with a sense of awareness that most of the humanoid         
+races will never be able to achieve, this grey wolf quickly and quietly          
+trots through the forest, searching for prey.         
+~
+0 210 100 wolf~
+20 10d5+650 15d2+9 0 100 bite
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+#222
+coyote~
+a skinny coyote~
+A thin coyote with matted fur scans the area ravenously.         
+~
+This coyote has a horribly ravenous look on its face. Its ribs jut out         
+of its sides, healthy fat nowhere to be seen. Its coat is far from shiny         
+or smooth, and its legs are constantly trembling from the hunger and cold.         
+~
+0 212 100 fox~
+20 10d5+550 15d3+2 0 100 bite
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+#223
+mountain goat~
+a mountain goat~
+A mountain goat trots along the rocky terrain with natural ease.         
+~
+Large, bulbous eyes are set into the sides of this grey mountain goat's          
+head, just beneath its tall, thin horns. It maneuvers up and down the rocky          
+slopes of Mount Cim with great ease.         
+~
+0 213 100 pig~
+20 10d6+500 5d7+7 0 100 charge
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+#224
+orc bandit~
+an orcish bandit~
+A filthy orc in tattered leather awaits a weak traveler to prey upon.         
+~
+Clad in something that looks like it was more likely to be sewn          
+together by a necromancer than by a tailor, this orc grumbles and          
+gnashes his tusk-like bottom teeth while waiting away from the main          
+trail for a traveler to ambush.         
+~
+-1000 214 100 hobgoblin~
+30 10d5+950 5d7+17 0 100 slash
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+AFF SNEAK
+AFF HIDE
+IMM SUMMON
+#225
+goblin raider~
+a goblin raider~
+A small goblin in crude skins awaits a weak traveler to prey upon.         
+~
+NOT IN AREA         
+~
+-1000 214 100 goblin~
+20 10d5+550 5d8+2 0 100 pound
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+IMM SUMMON
+#226
+orc berserker~
+an orcish berserker~
+A large, froth-mouthed orc screams wildly and swings around an axe.         
+~
+A howl and a splatter of rabid froth on the floor is all the warning         
+that an orcish berserker will give. This orc's green, boil-covered          
+skin is as tough as leather, and the crude, blood covered stone axe          
+that he is swinging around looks as if it would be more than enough          
+to cleave through flesh.         
+~
+-1000 214 100 hobgoblin~
+35 10d7+250 12d5+12 0 90 cleave
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BASH
+IMM SUMMON
+CLASS warrior none none 
+#227
+hobgoblin~
+a hobgoblin~
+A tall, dark green-skinned creature glares menacingly at you.         
+~
+A "perfect" specimen of the highest-bred species of the goblin          
+race, this tall, menacing creature twirls a claymore around with          
+frightening ease. Perhaps the most frightening thing about this          
+type of goblin, however, is the glint of malevolent intelligence          
+behind its eyes.         
+~
+-1000 215 100 hobgoblin~
+45 10d15+4550 15d6+12 0 80 slice
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+IMM SUMMON
+CLASS warrior none none 
+#228
+human ranger~
+a human ranger~
+A cloaked human moves through the wilderness quietly.         
+~
+A forest green cloak covering his hair and much of his face, this          
+woodsman looks to enjoy the solitary life higher up on Mount Cim.          
+Mud, in splotches, covers his clothing and his blade. His blade,          
+however, is obviously in very good condition otherwise.         
+~
+0 216 100 human~
+29 10d5+850 4d10+2 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF BASH
+AFF SNEAK
+IMM SUMMON
+#229
+elven elf ranger~
+an elven ranger~
+An elven ranger stands here, silently staring at the waterfall.         
+~
+A thoughtful, even sad expression sits upon this elf's face as he          
+stares into the darkness behind the waterfall. His muscle tone is          
+well defined, and his sinewy limbs look ready to spring at any          
+moment, even though he is in a relaxed stance. His slender hands          
+are wrapped around a short bladed sword that shines with great          
+intensity.         
+~
+1000 216 100 elf~
+60 2d50+7050 15d7+50 0 75 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF HASTE
+IMM SUMMON
+RES MAGIC
+CLASS warrior none none 
+C 'faerie fire'
+C 'cure critical'
+#230
+guard trail sentry~
+a trail sentry~
+A guard stands by the entrance to the pass, a large spear by his side.         
+~
+Staring at the moving crowd sternly, this guard is careful as to who he lets         
+in or out of the traffic. A spear that nears ten feet in length rests in his         
+hands, the gleaming steel spearhead high in the air.         
+~
+0 200 100 human~
+30 20d5+750 5d9+9 0 100 pound
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+IMM SUMMON
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#200
+thin steel knife dirk~
+a thin steel dirk~
+A small, sharp, steel-bladed knife has been left here.~
+weapon
+steel~
+dagger 5 5 stab 0
+15 3 20 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 1
+LIMIT 0
+
+#201
+acid etched scimitar sword~
+an acid etched scimitar~
+An intricately decorated sword with an extremely sharp, curved blade lies here.~
+weapon
+steel~
+sword 6 7 slice D
+28 12 78 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 4
+APPLY DAMROLL 3
+LIMIT 0
+
+#202
+bronze shortsword short sword~
+a bronze shortsword~
+A rather plain-looking shortsword of a dark metal has been left here.~
+weapon
+bronze~
+sword 3 10 slash 0
+15 20 14 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 1
+LIMIT 0
+
+#203
+shining elven short sword falchion~
+a shining elven falchion~
+A gleaming short-bladed sword with a lies here without an owner.~
+weapon
+mithril~
+sword 7 8 slice D
+45 12 2000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM MAGIC
+APPLY DEX 2
+APPLY HITROLL 8
+APPLY DAMROLL 5
+LIMIT 3
+MSG WEAR This enchanted blade feels exceptionally light in your hands.~
+~
+
+#204
+crude iron sword~
+a crude iron sword~
+An dull and rusted sword has been dropped here.~
+weapon
+iron~
+sword 3 8 slash 0
+13 23 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+
+#205
+stone axe~
+a stone axe~
+An axe of crudely chiseled stone lies awkwardly on the ground.~
+weapon
+stone~
+axe 4 9 cleave 0
+19 30 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -1
+APPLY DAMROLL 2
+LIMIT 0
+
+#206
+huge steel claymore sword broad~
+a huge steel claymore~
+A very large and broad sword lies heavily on the floor.~
+weapon
+steel~
+sword 4 10 cleave 0
+22 25 20 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 3
+LIMIT 0
+
+#207
+weathered traveling cloak~
+a weathered traveling cloak~
+A pile of tattered cloth lies in a heap here.~
+armor
+cloth~
+5 3 3 5 0
+10 3 0 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DEX 2
+LIMIT 0
+
+#208
+light leather armor~
+some light leather armor~
+A set of light leather armor has been set down here.~
+armor
+leather~
+3 4 4 4 0
+15 5 10 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 5
+LIMIT 0
+
+#209
+patterened silk silken robes robe~
+an intricately patterned silken robe~
+An expensive looking heap of patterned silk has been left on the ground.~
+armor
+silk~
+5 5 5 5 0
+46 2 200 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+APPLY DEX -2
+APPLY STR -3
+APPLY CON 1
+APPLY MANA 30
+APPLY HP 30
+LIMIT 4
+MSG WEAR The patterns on the robe swirl briefly, and your muscles feel fatigued.~
+The patterns on $p begin to swirl, and $n sags as if burdened.~
+MSG REMOVE As you take off $p, your muscles suddenly feel less tired.~
+$n seems less burdened.~
+
+#210
+niche smooth~
+a mossy niche~
+A mossy niche is set into the wall of the cave.~
+container
+stone~
+9 0 0 3 100
+52 0 0 P
+ITEM NOSHOW
+LIMIT 0
+E rock smooth~
+~
+
+#211
+pink coral key~
+a coral key~
+A key of a smooth pink material has been dropped here.~
+key
+coral~
+0 0 0 0 0
+52 1 0 P
+WEAR TAKE
+LIMIT 0
+
+#212
+shiny multi-colored seashell talisman~
+a multi-colored seashell talisman~
+A small, shiny seashell attached to a thin silver chain has been left here.~
+treasure
+bone~
+0 0 0 0 0
+52 1 3000 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM MAGIC
+ITEM NOREMOVE
+APPLY MANA 40
+APPLY HITROLL -8
+APPLY DAMROLL -8
+LIMIT 1
+MSG WEAR As you wear a multi-colored seashell talisman, you can feel your 
+blood beginning to move through your veins more quickly and a brief tingling
+sensation in your airway.~
+$n seems uncomfortable for a moment, then relaxes.~
+MSG REMOVE You feel less alive.~
+$n looks somewhat pale.~
+TIMER 400
+FLAG AFF 'water breathing' waterbreath NOSHOW
+FLAG AFF 'regeneration' none NOSHOW
+
+#213
+dirty green forester's cloak~
+a dirty green forester's cloak~
+A filthy green pile of cloth lies in a pile of its own dirt.~
+armor
+cloth~
+6 6 6 6 0
+29 4 100 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DEX 2
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+
+#214
+simple dress~
+a simple dress~
+A commoner's dress lies here.~
+armor
+cloth~
+1 0 0 0 0
+1 5 5 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+
+#215
+woven leather bracelet~
+a thin bracelet of woven leather~
+A bracelet of interwoven strips of leather has been left on the ground.~
+armor
+leather~
+1 1 0 3 0
+23 1 10 P
+WEAR TAKE
+WEAR WRIST
+ITEM MAGIC
+APPLY STR 1
+APPLY SVSPELL -8
+APPLY MANA 10
+LIMIT 0
+
+#216
+red silk silken sash~
+an elegant sash of red silk~
+A strip of a delicate red material lies here.~
+armor
+silk~
+0 0 0 0 0
+25 1 200 P
+WEAR TAKE
+WEAR WAIST
+ITEM MAGIC
+APPLY HP 15
+APPLY DEX 1
+LIMIT 0
+
+#217
+coat hide crude skins skin~
+a coat of crudely stitched hides~
+A variety of different skins crudely stitched together lie in a heap.~
+armor
+leather~
+3 3 3 3 0
+20 6 0 P
+WEAR TAKE
+WEAR ABOUT
+APPLY STR 1
+APPLY DAMROLL 1
+APPLY DEX -1
+LIMIT 0
+
+#218
+rusty rusted chain mail chainmail~
+a suit of rusted chainmail~
+A suit of rusted and broken interlocking chains lies here, unwanted.~
+armor
+iron~
+5 0 1 0 0
+7 9 0 P
+WEAR TAKE
+WEAR BODY
+APPLY DEX -1
+LIMIT 0
+
+#219
+leather tunic~
+a leather tunic~
+A well-made tunic of leather has been left on the ground.~
+armor
+leather~
+3 1 3 1 0
+8 1 10 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 5
+APPLY DAMROLL 1
+LIMIT 0
+
+#220
+black blackened iron bejeweled axe~
+a bejeweled axe of blackened iron~
+A huge black axe set with jewels and a long red ribbon, tied around the         
+haft, has been left here.~
+weapon
+iron~
+axe 7 7 cleave D
+50 30 2000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM MAGIC
+APPLY HITROLL 3
+APPLY DAMROLL 6
+APPLY STR 2
+LIMIT 1
+
+#221
+exotic shortcloak~
+a shortcloak of exotic design~
+A small piece of material covered with strange, flower-like designs lies         
+on the ground.~
+armor
+cloth~
+3 3 3 3 0
+30 2 200 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MANA 20
+APPLY HP 10
+LIMIT 0
+
+#222
+boots old cracked leather~
+some old, cracked leather boots~
+A pair of worn out traveling boots lie here.~
+armor
+leather~
+2 2 2 2 0
+20 4 0 P
+WEAR TAKE
+WEAR FEET
+APPLY NONE 1
+APPLY MOVE 10
+LIMIT 0
+
+#223
+shield cimar guard boar~
+A shield embossed with a picture of a boar~
+A shield with a picture of a boar on its front has been dropped here.~
+armor
+steel~
+5 5 5 5 0
+20 6 10 P
+WEAR TAKE
+WEAR SHIELD
+APPLY DAMROLL 2
+APPLY NONE 1
+LIMIT 0
+
+#224
+pink coral wand~
+a pink coral wand~
+A slender wand of pink coral hovers above the ground slightly.~
+wand
+coral~
+40 3 3 'dehydrate' 0
+40 2 1000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+APPLY INT 4
+APPLY HP -20
+APPLY MANA 100
+LIMIT 0
+
+#225
+scroll white parchment~
+a scroll of white parchment~
+A scrap of white parchment with symbols on it has been dropped here.~
+scroll
+paper~
+20 'detect invis' 'infravision' 'reserved' 'reserved'
+25 2 100 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+
+#226
+scroll leather~
+a scroll of white leather~
+A scrap of white leather with symbols on it has been left here.~
+scroll
+leather~
+20 'reserved' 'cure poison' 'reserved' 'reserved'
+25 2 100 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+
+#227
+steel spear~
+a long steel spear~
+A steel spear, taller than a human, lies on the ground.~
+weapon
+steel~
+axe 4 9 cleave 0
+20 23 10 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 3
+LIMIT 0
+
+#228
+black brocade bag~
+a black brocade bag~
+A fancy black bag lies on the ground.~
+container
+cloth~
+50 0 0 20 1
+1 2 70 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+
+#229
+knapsack sack worn leather~
+a worn leather knapsack~
+A leather sack lies open on the ground.~
+container
+leather~
+100 0 0 50 1
+1 2 29 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+
+#230
+white moss~
+some white moss~
+An odd patch of luminescent white moss lies here.~
+trash
+moss~
+0 0 0 0 0
+1 1 100 P
+WEAR TAKE
+ITEM GLOW
+ITEM NOLOCATE
+LIMIT 0
+
+#231
+mouth statues statue humanoid humanoids rock~
+the mouth of a statue~
+One of the statue's mouths is opened, and you think you can see something inside...~
+container
+stone~
+5 0 0 5 1
+1 0 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#200
+The Start of a Rough Trail~
+At the top of this ridge begins a beaten path through the well-known         
+Mount Cim, a double-peaked mountain that serves as a foundation for         
+the largest city in all of Shalar. To the east, a crowd of people         
+hustles and bustles to enter the pass to the north, while below         
+are the outskirts of Cimar.         
+~
+hills
+D NORTH 0 0 0
+~
+A tall wall of jagged gray rock rises above you to the north.         
+~
+D EAST 201 0 0
+~
+The beginning of the trail continues along the cliff to the east.         
+~
+D SOUTH 0 0 0
+~
+The cliffside drops straight down to the outskirts below.         
+~
+D WEST 0 0 0
+~
+A tall wall of jagged gray rock rises above you to the west.         
+~
+D DOWN 0 0 0
+~
+You can climb down to the outskirts of Cimar.         
+~
+E mountain mountains peaks peak~
+From here you can see the towering body of Mount Cim: a large         
+mountain with two peaks, both capped in snow. The jagged rocks range          
+in color from brown to gray, the pinnacles cloaked in white. Thin          
+trails and patches of forest seem to be scattered around the bottom          
+half of the mountain. Between the double peaks lies a sort of valley,         
+where the forest seems to be the thickest.         
+~
+#201
+The Start of a Rough Trail~
+At the top of this ridge begins a beaten path through the well-known         
+Mount Cim, a double-peaked mountain that serves as a foundation for         
+the largest city in all of Shalar. A crowd of people hustles and bustles          
+to enter the pass while to the north, while below are the outskirts of          
+Cimar. To the east, the ridge continues. A stone marker marks the         
+beginning of the trail.         
+~
+hills
+D NORTH 204 0 0
+~
+The trail narrows and continues into the mountain to the north.         
+~
+D EAST 202 0 0
+~
+The beginning of the trail continues along the cliff to the east.         
+~
+D SOUTH 6025 0 0
+~
+The cliffside drops almost straight down into a forest below.         
+~
+D WEST 200 0 0
+~
+The beginning of the trail continues along the cliff to the west, ending         
+abruptly at a wall of stone.         
+~
+D DOWN 0 0 0
+~
+You can climb down to the outskirts of Cimar.         
+~
+E stone marker~
+Area created by Viscrinth for Riftshadow MUD.         
+         
+Ask author for permission to use on another MUD.         
+         
+Copyright Viscrinth (sumguy4334@aol.com) January, 2001         
+~
+#202
+The Start of a Rough Trail~
+At the top of this ridge begins a beaten path through the well-known         
+Mount Cim, a double-peaked mountain that serves as a foundation for         
+the largest city in all of Shalar. To the west, a crowd of people         
+hustles and bustles to enter the pass to the north, while below         
+are the outskirts of Cimar.         
+~
+hills
+D NORTH 0 0 0
+~
+A tall wall of jagged gray rock rises above you to the north.         
+~
+D EAST 203 0 0
+~
+The beginning of the trail continues along the cliff to the east, ending         
+abruptly at a wall of stone.         
+~
+D SOUTH 0 0 0
+~
+The cliffside drops straight down to the outskirts below.         
+~
+D WEST 201 0 0
+~
+The beginning of the trail continues along the cliff to the east.         
+~
+D DOWN 0 0 0
+~
+You can climb down to the outskirts of Cimar.         
+~
+#203
+The Start of a Rough Trail~
+At the top of this ridge begins a beaten path through the well-known         
+Mount Cim, a double-peaked mountain that serves as a foundation for         
+the largest city in all of Shalar. To the west, a crowd of people         
+hustles and bustles to enter the pass to the north, while below         
+are the outskirts of Cimar.         
+~
+hills
+D NORTH 0 0 0
+~
+A tall wall of jagged gray rock rises above you to the north.         
+~
+D EAST 0 0 0
+~
+A tall wall of jagged gray rock rises above you to the east.         
+~
+D SOUTH 0 0 0
+~
+The cliffside drops straight down to the outskirts below.         
+~
+D WEST 202 0 0
+~
+The beginning of the trail continues along the cliff to the east.         
+~
+D DOWN 0 0 0
+~
+You can climb down to the outskirts of Cimar.         
+~
+#204
+A Narrow Pass~
+Two enormous structures of rock stand on either side of the trail,         
+narrowing it to hardly eight feet in width... Just enough for most         
+merchant caravans to be able to squeeze through. It would seem that         
+the two separate formations were once one, but they were somehow          
+artificially separated to make this trail possible. Two small wooden         
+ledges have been built into the walls about twenty feet up, where         
+archers have been stationed. The ground is obviously well travelled,         
+and its lack of rocks and brush is not surprising. All that covers          
+the light rock is a thin layer of powdery gray dirt.         
+~
+mountains
+D NORTH 205 0 0
+~
+The trail continues into the mountains. The trail would look almost         
+as if it would be ending not far to the north, if it were not for the         
+numerous people passing beyond your line of sight to the east and west.         
+~
+D EAST 0 0 0
+~
+To the east, a wall of rock towers above you. The archers on their landing         
+seem to be scanning the surrounding mountains carefully, watching for any         
+sign of threat, for any ambushing party in so narrow a space could easily be          
+devastating to any merchant party.         
+~
+D SOUTH 201 0 0
+~
+~
+D WEST 0 0 0
+~
+To the west, a wall of rock towers above you. The archers on their landing         
+seem to be scanning the surrounding mountains carefully, watching for any          
+sign of threat, for any ambushing party in so narrow a space could easily be          
+devastating to any merchant party.         
+~
+#205
+A T-Crossing in The Mountain Pass~
+Here, most of the traffic turns to the east. A few of the more rugged          
+adventurers slink off to the west, where the trail becomes quite a bit          
+rougher. Another elevated guard post is set into the northern rock wall          
+to watch for pickpockets, goblins or any other possible manifestation          
+of trouble.          
+~
+mountains
+D NORTH 0 0 0
+~
+The wall of rock to the north serves as a perfect place for a guard post.         
+~
+D EAST 206 0 0
+~
+The trail seems to open up and continue on to the east.         
+~
+D SOUTH 204 0 0
+~
+The trail narrows and continues to the south.         
+~
+D WEST 227 0 0
+~
+The trail rises up slightly and turns to the north in the distance.         
+~
+#206
+A Worn Trail Through the Mountains~
+The trail widens here, and the dusty gray earth seems to be becoming          
+lighter in hue. The crowd speaks freely here, showing that the danger          
+in this place is lesser than it is in other parts of the mountain.          
+To the west, there is a T-crossing in the path, while to the east          
+the trail continues, and becomes even lighter in color.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 207 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 205 0 0
+~
+~
+#207
+A Turn in the Worn Trail~
+The bustling crowd here is continually kicking up the chalky grey dust         
+that covers the ground. The walls of rock and the sparse trees keep the         
+caravans following trail controlled, preventing travel anywhere off of          
+the trail for very far. The trail turns sharply, most of the crowd          
+heading to the north, where in the distance, it twists again.         
+~
+mountains
+D NORTH 208 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 206 0 0
+~
+~
+#208
+A Turn in the Worn Path~
+The bustling crowd here is continually kicking up the chalky grey dust         
+that covers the ground. The walls of rock and the sparse trees keep the         
+caravans following trail controlled, preventing travel anywhere off of          
+the trail for very far. The trail turns sharply, most of the crowd heading         
+to the east, where in the distance, it twists again.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 209 0 0
+~
+~
+D SOUTH 207 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#209
+A Turn in the Worn Path~
+The bustling crowd here is continually kicking up the chalky light-grey          
+dust that covers the ground. The walls of rock and the sparse trees keep          
+the caravans following  trail controlled, preventing travel anywhere off          
+of the trail for very far. The trail turns sharply, most of the crowd          
+heading to the north, where in the distance, the dust seems to have          
+finally reached a brilliant white hue.         
+~
+mountains
+D NORTH 210 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 208 0 0
+~
+~
+#210
+A Worn, White Path Through the Mountains~
+The bustling crowd here is continually kicking up the chalky white dust         
+that covers the ground. To the south, the dust gets a bit darker.          
+Evergreen trees sporadically cover the slopes along the sides of the          
+path, and a few pine cones can be found on the floor here and there.          
+Fauna, however, does not show its face here. The sea of people has          
+begun to move a bit more quickly here due to the eagerness to reach         
+the end of this mountainous region, which is not far off.         
+~
+mountains
+D NORTH 211 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 209 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#211
+A Worn, White Path Through the Mountains~
+The bustling crowd here is continually kicking up the chalky white dust         
+that covers the ground. Evergreen trees sporadically cover the slopes          
+along the sides of the path, and a few pine cones can be found on the          
+floor here and there. Fauna, however, does not show its face here. The          
+sea of people has begun to move a bit more quickly here due to the          
+eagerness to reach the end of this mountainous region, which is not          
+far off. The ground slopes downward quite steeply here toward the          
+east, causing this path to intersect with another.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 219 0 0
+~
+~
+D SOUTH 210 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 213 0 0
+~
+~
+#212
+A Trail of Whitened Earth~
+The bustling crowd here is continually kicking up the chalky white dust          
+that covers the ground. Evergreen trees sporadically cover the slopes along         
+the sides of the path, and a few pine cones can be found on the floor here          
+and there. Fauna, however, does not show its face here. To the east the          
+ground flattens out, and in the distance, beyond a cloud of this white          
+dust, lies a small village.         
+~
+mountains
+D NORTH 213 0 0
+~
+~
+D EAST 11884 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#213
+A Worn, White Intersection In the Mountains~
+The bustling crowd here is continually kicking up the chalky white dust          
+that covers the ground. Evergreen trees sporadically cover the slopes          
+along the sides of the path, and a few pine cones can be found on the          
+floor here and there. Fauna, however, does not show its face here. The          
+main trail runs north and south, with an offshoot sloping up and to the          
+west to what appears to be another trail. Most of the traffic seems to          
+be travelling southward.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 214 0 0
+~
+~
+D SOUTH 212 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 211 0 0
+~
+~
+#214
+A Turn in the Worn, White Path~
+The bustling crowd here is continually kicking up the chalky white dust          
+that covers the ground.  The vast majority of them are southbound, while          
+very occasionally, a few rugged-looking individuals struggle against the          
+crowd, heading north. Evergreen trees sporadically cover the slopes along          
+the sides of the path, and a few pine cones can be found on the floor here          
+and there. Fauna, however, does not show its face here. To the south lies          
+a crossroads of sorts, while to the north, the trail becomes a bit more          
+rough.         
+~
+mountains
+D NORTH 215 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 213 0 0
+~
+~
+#215
+A Worn, White Path Through the Mountains~
+The bustling crowd here is continually kicking up the chalky white dust          
+that covers the ground.  The vast majority of them are southbound, while          
+very occasionally, a few rugged-looking individuals struggle against the          
+crowd, heading north. Evergreen trees sporadically cover the slopes along          
+the sides of the path, and a few pine cones can be found on the floor here          
+and there. Fauna, however, does not show its face here. To the south, the          
+trail continues, while to the north, the trail becomes a bit more rough,          
+and the dirt becomes darker.         
+~
+mountains
+D NORTH 216 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 214 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#216
+A Turn in the Worn Path~
+The bustling crowd here is continually kicking up the chalky grey dust         
+that covers the ground.  The vast majority of them are southbound,          
+while very occasionally, a few rugged-looking individuals struggle          
+against the crowd, heading north. Evergreen trees sporadically cover          
+the slopes along the sides of the path, and a few pine cones can be          
+found on the floor here and there. Fauna, however, does not show its          
+face here. To the south, the trail becomes much brighter in color,          
+while to the west, it becomes a bit more rough.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 215 0 0
+~
+~
+D WEST 217 0 0
+~
+~
+#217
+A Turn in the Worn Path~
+The bustling crowd here is continually kicking up the chalky grey dust          
+that covers the ground.  The vast majority of them are southbound, while         
+very occasionally, a few rugged-looking individuals struggle against          
+the crowd, heading north. Evergreen trees sporadically cover the slopes          
+along the sides of the path, and a few pine cones can be found on the          
+floor here and there. Fauna, however, does not show its face here. The          
+trail continues bending and winding to the north and to the east.         
+~
+mountains
+D NORTH 218 0 0
+~
+~
+D EAST 216 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#218
+A Turn in the Worn Path~
+The bustling crowd here is continually kicking up the chalky grey dust          
+that covers the ground.  The vast majority of them are southbound, while          
+very occasionally, a few rugged-looking individuals struggle against the          
+crowd, heading north. Evergreen trees sporadically cover the slopes along          
+the sides of the path, and a few pine cones can be found on the floor here          
+and there. Fauna, however, does not show its face here. The trail continues          
+bending and winding to the south and to the east.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 219 0 0
+~
+~
+D SOUTH 217 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#219
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. The trail has become narrow due         
+to the suddenly increased steepness of the slopes surrounding it to the          
+north and south. The grey powdery dirt is much rougher now, as many          
+pebbles tumble from the surrounding slopes. To the east, the trail          
+continues to narrow, while to the west, it opens back up.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 220 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 211 0 0
+~
+~
+#220
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. The trail has become narrow          
+due to the suddenly increased steepness of the slopes surrounding it to          
+the north and south. The grey powdery dirt is much rougher now, as many          
+pebbles tumble from the surrounding slopes. To the east, the trail          
+continues to be narrow, while further to the west, it opens back up.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 221 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 219 0 0
+~
+~
+#221
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. The trail has become narrow          
+due to the suddenly increased steepness of the slopes surrounding it          
+to the north and south. The grey powdery dirt is much rougher now, as          
+many pebbles tumble from the surrounding slopes. This narrow trail          
+continues to the east and west.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 222 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 220 0 0
+~
+~
+#222
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. Due to the bend in the trail,          
+there is some degree of gridlock in the traffic of the crowd. The          
+trail has become narrow due to the suddenly increased steepness of the          
+slopes surrounding it to the north and south. The grey powdery dirt is          
+much rougher now, as many pebbles tumble from the surrounding slopes.         
+The trail bends to the north and west.          
+~
+mountains
+D NORTH 223 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 221 0 0
+~
+~
+#223
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. The trail has become narrow          
+due to the suddenly increased steepness of the slopes surrounding it          
+to the north and south. The grey powdery dirt is much rougher now, as          
+many pebbles tumble from the surrounding slopes. This narrow trail          
+continues to the north and south. To the south, things seem to be          
+slowing down slightly.         
+~
+mountains
+D NORTH 224 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 222 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#224
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. The trail has become narrow          
+due to the suddenly increased steepness of the slopes surrounding it          
+to the north and south. The grey powdery dirt is much rougher now, as          
+many pebbles tumble from the surrounding slopes. This narrow trail          
+continues to the north and south.         
+~
+mountains
+D NORTH 225 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 223 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#225
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. Due to the bend in the trail,          
+there is some degree of gridlock in the traffic of the crowd. The trail          
+has become narrow due to the suddenly increased steepness of the slopes          
+surrounding it to the north and south. The grey powdery dirt is much          
+rougher now, as many pebbles tumble from the surrounding slopes. The          
+trail bends to the south and east.          
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 226 0 0
+~
+~
+D SOUTH 224 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 261 0 0
+~
+~
+#226
+A Narrow Trail~
+The crowd here is relatively quiet, perhaps out of fear of a raid, or          
+perhaps out of a sort of claustrophobia. Due to the bend in the trail,          
+there is some degree of gridlock in the traffic of the crowd. The          
+trail has become narrow due to the suddenly increased steepness of the          
+slopes surrounding it to the north and south. The grey powdery dirt is          
+much rougher now, as many pebbles tumble from the surrounding slopes.         
+The trail bends to the south and east, where you can make out a small         
+village.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 11856 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 225 0 0
+~
+~
+#227
+A Winding Trail, Guard Outpost~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. A small band of guards have set up an outpost here to          
+keep any of the undesirable creatures from the mountains away from the          
+common travelers of these mountain roads and the city of Cimar. The trail          
+continues to the west, and to the east there is an intersection.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 205 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 228 0 0
+~
+~
+#228
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. To the north lie a few trees, though the wildlife          
+around this area is scarce. To the east, the winding trail continues         
+toward an outpost.         
+~
+mountains
+D NORTH 229 0 0
+~
+~
+D EAST 227 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#229
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. Although it is far from a forest, there are a few trees         
+scattered about this area. From time to time, a small wilderness creature         
+can be spotted around here. The trail winds to the west and to the south.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 228 0 0
+~
+~
+D WEST 230 0 0
+~
+~
+#230
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. Although it is far from a forest, there are a few trees         
+scattered about this area. From time to time, a small wilderness creature         
+can be spotted around here. The trail winds to the east and to the west.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 229 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 231 0 0
+~
+~
+#231
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. Although it is far from a forest, there are a few trees         
+scattered about this area. From time to time, a small wilderness creature         
+can be spotted around here. The trail winds to the east and to the south.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 230 0 0
+~
+~
+D SOUTH 232 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#232
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. Although it is far from a forest, there are a few trees         
+scattered about this area. From time to time, a small wilderness creature         
+can be spotted around here. The trail winds to the west and to the north.         
+~
+mountains
+D NORTH 231 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 233 0 0
+~
+~
+#233
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. Although it is far from a forest, there are a few trees         
+scattered about this area. From time to time, a small wilderness creature         
+can be spotted around here. The trail winds to the east and to the south.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 232 0 0
+~
+~
+D SOUTH 234 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#234
+A Winding Trail~
+This trail is very rough, and is obviously traveled very rarely. It winds         
+back and forth around giant boulders and crevices and can become quite          
+narrow at points. Although it is far from a forest, there are a few trees         
+scattered about this area. From time to time, a small wilderness creature         
+can be spotted around here. The trail winds to the west and to the north.         
+~
+mountains
+D NORTH 233 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 235 0 0
+~
+~
+D DOWN 0 0 0
+~
+~
+#235
+A Trail's End~
+The trail ends here, and the wilderness begins. Although it is far from a          
+forest, there are a few trees scattered about this area. From time to time,          
+a small wilderness creature can be spotted around here. Rocks and steep          
+slopes make this a tiresome trek, but it is possible for the well-traveled          
+or stubborn to handle. To the east, you can return to the trail, while to         
+the north or to the west, the mountain awaits.         
+~
+mountains
+D NORTH 236 0 0
+~
+~
+D EAST 234 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 238 0 0
+~
+~
+D DOWN 6151 0 0
+~
+~
+#236
+On the Western Side of Mount Cim~
+This part of the mountain is rather steep, and it is possible to ascend         
+the mountain if navigated correctly. There are a few trees scattered about         
+this area. From time to time, a small wilderness creature can be spotted         
+around here. Large rocks and other such obstacles make this a tiresome trek,         
+but it is possible for the well-traveled or stubborn to handle. To the south         
+lies the end, or beginning, of a trail, while to the west, the side of the         
+mountain continues.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 235 0 0
+~
+~
+D WEST 237 0 0
+~
+~
+#237
+On the Western Side of Mount Cim~
+This part of the mountain is rather steep, and it is possible to ascend         
+the mountain if navigated correctly. There are a few trees scattered about         
+this area. From time to time, a small wilderness creature can be spotted         
+around here. Large rocks and other such obstacles make this a tiresome trek,         
+but it is possible for the well-traveled or stubborn to handle. The side of          
+the mountain continues in all directions.         
+~
+mountains
+D NORTH 240 0 0
+~
+~
+D EAST 236 0 0
+~
+~
+D SOUTH 238 0 0
+~
+~
+D WEST 239 0 0
+~
+~
+#238
+On the Western Side of Mount Cim~
+This part of the mountain is rather steep, and it is possible to ascend         
+the mountain if navigated correctly. There are a few trees scattered about         
+this area. From time to time, a small wilderness creature can be spotted         
+around here. Large rocks and other such obstacles make this a tiresome trek,         
+but it is possible for the well-traveled or stubborn to handle. The side of          
+the mountain continues to the north and south.         
+~
+mountains
+D NORTH 237 0 0
+~
+~
+D EAST 235 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#239
+On the Western Side of Mount Cim~
+This part of the mountain is rather steep, and it is possible to ascend         
+the mountain if navigated correctly. There are a few trees scattered about         
+this area. From time to time, a small wilderness creature can be spotted         
+around here. Large rocks and other such obstacles make this a tiresome trek,         
+but it is possible for the well-traveled or stubborn to handle. The side of          
+the mountain continues to the east and west.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 237 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 241 0 0
+~
+~
+#240
+On the Western Side of Mount Cim~
+This part of the mountain is rather steep, and it is possible to ascend         
+the mountain if navigated correctly. There are a few trees scattered about         
+this area. From time to time, a small wilderness creature can be spotted         
+around here. Large rocks and other such obstacles make this a tiresome trek,         
+but it is possible for the well-traveled or stubborn to handle. The rock          
+walls have formed a sort of culdesac here, though the rock to the northeast         
+seems stable enough to climb. To the south, the bottom of the western side         
+of the mountain continues.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 237 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 243 0 0
+~
+~
+#241
+On the Western Side of Mount Cim~
+This part of the mountain is rather steep, and it is possible to ascend         
+the mountain if navigated correctly. There are a few trees scattered about         
+this area. From time to time, a small wilderness creature can be spotted         
+around here. Large rocks and other such obstacles make this a tiresome trek,         
+but it is possible for the well-traveled or stubborn to handle. The side of          
+the mountain continues to the north and east.         
+~
+mountains
+D NORTH 242 0 0
+~
+~
+D EAST 239 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#242
+A Dead End~
+The rock walls have formed a sort of culdesac here. This part of the          
+mountain is rather steep, and it is possible to ascend the mountain          
+if navigated correctly. There are a few trees scattered about this area.          
+From time to time, a small wilderness creature can be spotted around here.          
+Large rocks and other such obstacles make this a tiresome trek, but it is          
+possible for the well-traveled or stubborn to handle. The side of the          
+mountain continues to the south.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 241 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#243
+A Ledge on the Western Side of Mount Cim~
+Along the side of this steep incline sits a narrow ledge that winds around         
+the mountain, allowing a relatively easy climb. The air begins to thin         
+noticeably. The ledge continues to the north, or you could descend back         
+to the lower part of the mountain.         
+~
+mountains
+D NORTH 244 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 240 0 0
+~
+~
+#244
+A Ledge on the Western Side of Mount Cim~
+Along the side of this steep incline sits a narrow ledge that winds          
+around the mountain, allowing a relatively easy climb. The air begins          
+to thin noticeably. The ledge curves around to the south and the east,          
+so that a part of it juts out into empty air.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 245 0 0
+~
+~
+D SOUTH 243 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#245
+A Ledge on the Western Side of Mount Cim~
+Along the side of this steep incline sits a narrow ledge that winds around         
+the mountain, allowing a relatively easy climb. The air begins to thin         
+noticeably. The ledge continues to the east and to the west.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 246 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 244 0 0
+~
+~
+#246
+A Ledge on the Western Side of Mount Cim~
+Along the side of this steep incline sits a narrow ledge that winds around         
+the mountain, allowing a relatively easy climb. The air begins to thin         
+noticeably. The ledge continues to the north and to the west.         
+~
+mountains
+D NORTH 247 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 245 0 0
+~
+~
+#247
+A Ledge on the Western Side of Mount Cim~
+Along the side of this steep incline sits a narrow ledge that winds around         
+the mountain, allowing a relatively easy climb. The air begins to thin         
+noticeably. The ledge comes to a halt to the north and east, while to the          
+west is nothing but space. The eastern wall is slanted, so that it looks          
+rather easy to climb.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 246 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 248 0 0
+~
+~
+#248
+Nearing a Plateau~
+This broad, declining strip of land slopes downward to the east and         
+drops abruptly to the west. Off in the distance to the east, you can         
+see a forested plateau and the two frosted peaks of Mount Cim climbing         
+high into the clouds. To the south you can see the city of Cimar, far          
+below.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 249 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 247 0 0
+~
+~
+#249
+Nearing a Plateau~
+This broad, declining strip of land slopes downward to the east and         
+climbs upward to the west. Off in the distance to the east, you can         
+see a forested plateau and the two frosted peaks of Mount Cim climbing         
+high into the clouds. To the south the slope continues, toward the forested         
+plateau.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 250 0 0
+~
+~
+D WEST 248 0 0
+~
+~
+#250
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground. To the north, the forest thins out and the terrain becomes          
+more mountainous again.         
+~
+mountains
+D NORTH 249 0 0
+~
+~
+D EAST 252 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#252
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 264 0 0
+~
+~
+D SOUTH 253 0 0
+~
+~
+D WEST 250 0 0
+~
+~
+#253
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground.         
+~
+mountains
+D NORTH 252 0 0
+~
+~
+D EAST 259 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 254 0 0
+~
+~
+#254
+At the Base of the Western Mountain~
+This is where the western peak begins to rise from the plateau that         
+serves as a foundation for both peaks of the mountain. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground. To the east, the plateau leads away from the western peak, and         
+on the northern rock wall are some jagged rocks that could serve as         
+handholds.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 253 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 255 0 0
+~
+~
+D UP 267 0 0
+~
+~
+#255
+Along the Base of the Western Mountain~
+This is where the western peak begins to rise from the plateau that         
+serves as a foundation for both peaks of the mountain. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground. To the east and south, the plateau continues along the base          
+of the western peak.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 254 0 0
+~
+~
+D SOUTH 256 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#256
+Along the Base of the Western Mountain~
+This is where the western peak begins to rise from the plateau that         
+serves as a foundation for both peaks of the mountain. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground. To the north and west, the plateau continues along the base         
+of the western peak.          
+~
+mountains
+D NORTH 255 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 257 0 0
+~
+~
+#257
+Along the Base of the Western Mountain~
+This is where the western peak begins to rise from the plateau that         
+serves as a foundation for both peaks of the mountain. The air is          
+rather thin and cold, and occasionally, a patch of snow can be found on         
+the ground. To the east, the plateau continues along the base of the          
+western peak, while to the south, a part of the plateau juts out over         
+Cimar.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 256 0 0
+~
+~
+D SOUTH 258 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#258
+Before a Jutting Cliff~
+This cliff is composed of pure stone, and although narrow and somewhat         
+thin, it is very solid. Back to the north is a forested plateau, while to         
+the south, the cliff juts out into the air, giving a perfect bird's-eye         
+view of the city of Cimar.         
+~
+mountains
+D NORTH 257 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#259
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate. Something seems          
+strange about the floor here.         
+~
+mountains
+D NORTH 264 0 0
+~
+~
+D EAST 260 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 253 0 0
+~
+~
+D DOWN 2523 AB 0
+a trap door covered with grass~
+Upon close examination of the ground, you can see a faint outline in the         
+soil.         
+~
+E floor~
+Upon close examination of the ground, you can see a faint outline in the          
+soil.         
+~
+#260
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate.         
+~
+mountains
+D NORTH 263 0 0
+~
+~
+D EAST 261 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 259 0 0
+~
+~
+#261
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate.         
+~
+mountains
+D NORTH 262 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 260 0 0
+~
+~
+D DOWN 225 0 0
+~
+~
+#262
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate. The edge of the          
+plateau slopes down to a worn trail.         
+~
+mountains
+D NORTH 266 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 261 0 0
+~
+~
+D WEST 263 0 0
+~
+~
+#263
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate.         
+~
+mountains
+D NORTH 802 0 0
+~
+~
+D EAST 262 0 0
+~
+~
+D SOUTH 260 0 0
+~
+~
+D WEST 264 0 0
+~
+~
+#264
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate.         
+~
+mountains
+D NORTH 265 0 0
+~
+~
+D EAST 263 0 0
+~
+~
+D SOUTH 259 0 0
+~
+~
+D WEST 252 0 0
+~
+~
+#265
+A Forested Plateau~
+The ground is relatively even, with the exception of the odd up or down         
+slope or outstanding tree root. The trees here are exceptionally tall,         
+and the forest is rather dense, making passage difficult. The scent of          
+pine fills the cold, thin air, and occasionally, a patch of snow can be          
+found on the ground. The wildlife is quite rich here, and the lushness         
+of this forest is remarkable, despite the climate.         
+~
+mountains
+D NORTH 804 0 0
+~
+~
+D EAST 802 0 0
+~
+~
+D SOUTH 264 0 0
+~
+~
+D WEST 801 0 0
+~
+~
+#266
+At the Base of the Eastern Mountain~
+The forest thins here as it runs up against a sheer wall of granite. A few         
+stones stick out from the wall to the north, but they are perfectly shaped         
+and obviously artificial. It is apparent that the wilderness here is not as         
+pure and untouched as most would think. To the south, the forest continues,         
+while climbing the rock to the north would bring you closer to the peak.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 262 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 286 0 0
+~
+~
+#267
+High Up on the Western Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. You are able to         
+continue your trek to the east, or head downward, back to the flat, forested          
+area.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 268 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 254 0 0
+~
+~
+#268
+High Up on the Western Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the east         
+begins an incline, while to the west you can make your way back down         
+toward the safer forested area.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 269 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 267 0 0
+~
+~
+#269
+High Up on the Western Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. The incline         
+continues to the north, while the mountain declines toward the east. The         
+east and south are sheer rock and empty air, respectively.         
+~
+mountains
+D NORTH 270 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 268 0 0
+~
+~
+#270
+High Up on the Western Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the north,         
+the climb continues, and to the south, the mountain declines gradually.         
+~
+mountains
+D NORTH 271 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 269 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#271
+Below a Ledge, High on the Western Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the south,         
+the mountain declines gradually, and although you could continue further         
+to the west, it ends in a sheer wall of rock. The northern wall, though         
+is climbable.          
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 270 0 0
+~
+~
+D WEST 272 0 0
+~
+~
+D UP 273 0 0
+~
+~
+#272
+High Up on the Western Mountain~
+Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. There is nothing         
+here, save a dead end and a way back to the east. The winds can't reach         
+you here, and it is quite peaceful compared to what lies back to the east.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 271 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#273
+A Ledge Below the Western Peak~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost abound at this impressive height, and the only         
+sort of plants that can survive these conditions are small, scraggly and         
+rough. To the south, this ledge continues, while below you lies the harsh         
+path back to the plateau.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 274 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 271 0 0
+~
+~
+#274
+A Ledge Below the Western Peak~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost abound at this impressive height, and the only         
+sort of plants that can survive these conditions are small, scraggly and         
+rough. To the north, this ledge continues, while the eastern wall is          
+climbable, and very possibly access to the western peak.         
+~
+mountains
+D NORTH 273 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 275 0 0
+~
+~
+#275
+The Western Peak of Mount Cim~
+Finally, you stand upon the icy apex of the western peak of Mount Cim.         
+Looking toward the northeast, the eastern peak is visible, and of         
+approximately the same height. All around you the air is very free,         
+but the ground is very steep, especially to the east. Below, Cimar          
+looks small, yet intricate and the bustling people in the pass near         
+the mountain's base aren't even visible. Much of the rest of the lands          
+further away seem very hazy due both to the facts that you are above          
+many of the clouds, and that you are simply very far away from them.          
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 276 I 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 274 0 0
+~
+~
+#276
+A Dark and Narrow Passage~
+This cramped and narrow passage is composed entirely of a sort of          
+slick, jagged black rock, which is uncharacteristic of Mount Cim,          
+a mountain almost completely made of gray stone. To climb back up         
+to the peak from here is impossible, due to the sheerness and glass-         
+like smoothness of the rock. From here, you can only head to the south.         
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 277 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#277
+A Passage of Jagged Stone~
+This cramped and narrow passage is composed entirely of a sort of          
+slick, jagged black rock, which is uncharacteristic of Mount Cim,          
+a mountain almost completely made of gray stone. The passage drops         
+down into darkness from here.         
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 276 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 278 0 0
+~
+~
+#278
+An Earthen Cave~
+A thick pile of soft earth acts as a cushion to any who might have fallen         
+from above into here. Roots line the brown dirt walls, and a strange,         
+humid warmth permeates this cave. A cold breeze blows in from the south         
+from time to time.         
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 279 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#279
+A Mossy Crevice~
+This crevice opens up into a secluded place somewhere between the two peaks         
+of the mountain. In the distance, you can hear and smell running water, and         
+a fine mist constantly drifts in from the south. The rocks around you are         
+covered with moss from the constant exposure to dampness.         
+~
+mountains
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 278 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 280 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#280
+A Hidden Waterfall~
+A semicircle of rocks surround a small pool, into which a beautiful         
+waterfall flows. Although it is small, it makes a loud noise due to the         
+shape of the rocks behind it. There is something strange about the pool,         
+though... It has no obvious outlet, yet it never gets any more full than         
+it is.         
+~
+mountains
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 279 0 0
+~
+~
+D EAST 281 I 0
+~
+Whatever is behind the waterfall seems dark...         
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+E pool~
+Upon closer examination, you notice that the pool has a perfectly circular         
+hole toward the back of it, toward which the entire pool is slanted so          
+that the water drains into the depths of the mountain. An even stranger          
+problem: Where is the water coming from?         
+~
+#281
+A Damp Cavern~
+Darkness envelopes this cavern almost as strongly as the scent of damp         
+earth does. The sound of the waterfall echoes loudly throughout the cave,         
+which continues to the south and east, while the waterfall lies back to         
+the west.          
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+~
+D EAST 282 0 0
+~
+~
+D SOUTH 283 0 0
+~
+~
+D WEST 280 0 0
+~
+~
+#282
+A Damp Cavern~
+Darkness envelopes this cavern almost as strongly as the scent of damp         
+earth does. A strange symbol is carved into the northern wall. The sound          
+of the waterfall echoes loudly throughout the cave, which continues to the          
+south and west, while the waterfall lies back to the west.          
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 285 ABCDE 211
+~
+A bizarre humanoid face with a grin-like expression is carved into the          
+north wall. A deep hole is set into its mocking mouth.         
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 284 0 0
+~
+~
+D WEST 281 0 0
+~
+~
+E symbol~
+A bizarre humanoid face with a grin-like expression is carved into the          
+north wall. A deep hole is set into his mocking mouth.         
+~
+#283
+A Damp Cavern~
+Darkness envelopes this cavern almost as strongly as the scent of damp         
+earth does. The sound of the waterfall echoes loudly throughout the cave,         
+which continues to the north and east, while the waterfall lies back to         
+the west.          
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 281 0 0
+~
+~
+D EAST 284 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#284
+A Damp Cavern~
+Darkness envelopes this cavern almost as strongly as the scent of damp         
+earth does. The sound of the waterfall echoes loudly throughout the cave,         
+which continues to the north, west and east, while the waterfall lies back          
+to the west. A breeze wafts in from the east.         
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 282 0 0
+~
+~
+D EAST 242 I 0
+~
+A tiny crevice leads out of the side of the mountain.         
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 283 0 0
+~
+~
+#285
+A Beautifully Carved Alcove~
+Thin beams of light enter this room from numerous holes in the ceiling,          
+revealing a shrine-like room. The walls are covered with multi-colored          
+shells from the southern seas, causing the reflecting light to take on          
+a prismatic effect. Numerous statues of odd-looking humanoids are carved          
+from the rock itself, so that the statues are literally part of the          
+mountain. It is quite obvious that this place has remained relatively          
+untouched for ages upon ages.         
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 282 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#286
+A High Ledge on the Eastern Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the west,         
+the ledge continues, and on the northern wall are some smooth stones that         
+make climbing down possible.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 287 0 0
+~
+~
+D DOWN 266 0 0
+~
+~
+#287
+A High Ledge on the Eastern Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the south,         
+the ledge continues to rise, and to the east, the ledge declines gradually.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 286 0 0
+~
+~
+D SOUTH 288 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#288
+A High Ledge on the Eastern Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the south,         
+the ledge continues to rise, and to the north, the ledge declines          
+gradually.         
+~
+mountains
+D NORTH 287 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 289 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#289
+A High Ledge on the Eastern Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the east,         
+the ledge continues to rise, and to the north, the ledge declines          
+gradually.         
+~
+mountains
+D NORTH 288 0 0
+~
+~
+D EAST 290 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#290
+A High Ledge on the Eastern Mountain~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Patches of frost have begun to appear at this impressive height,          
+and both the flora and the fauna have begun to disappear. To the east,         
+the ledge continues to rise, and to the west, the ledge declines          
+gradually.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 291 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 289 0 0
+~
+~
+#291
+Below the Eastern Peak~
+The chilling wind whips around you as the air becomes thinner by the         
+moment. Much of the ground is covered by a layer of ice, and the plant-         
+life is completely nonexistant at thie height. To the west, a ledge         
+gradually slopes down and around toward the plateau below you. On the         
+southern wall, some indentations have been carved into the rock, allowing         
+an easy climb to the eastern peak.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 290 0 0
+~
+~
+D UP 292 0 0
+~
+~
+#292
+The Eastern Peak of Mount Cim~
+A broad ledge serves as footing here, for the peak itself is almost         
+unclimbable. The remainder of the peak rises about fifteen feet above         
+the ledge, but it is sheer and icy. Below you, you can see the entirety         
+of Mount Cim, along with the frosty clouds that swirl around both          
+peaks. Over to the west, you can see the other peak of the mountain,         
+standing at about the same height. A weathered trail branches off of         
+the ledge and leads around the peak to the south, while you can climb         
+down to a narrower ledge via some handholds below you.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 293 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 291 0 0
+~
+~
+#293
+An Ancient Trail Around the Eastern Peak~
+This path is composed of intricately carved cobblestones that have been         
+weathered by the harsh climate up here. A thin layer of ice covers the         
+trail, making the carvings' features indistinguishable. A frigid wind         
+whips around you, bringing with it a puff of snow. To the north lies a         
+broad ledge, while to the east, the ancient trail continues.         
+~
+mountains
+D NORTH 292 0 0
+~
+~
+D EAST 294 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#294
+An Ancient Trail Around the Eastern Peak~
+This path is composed of intricately carved cobblestones that have been         
+weathered by the harsh climate up here. A thin layer of ice covers the         
+trail, making the carvings' features indistinguishable. A frigid wind         
+whips around you, bringing with it a puff of snow. The ancient trail          
+continues to the east and west.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 295 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 293 0 0
+~
+~
+#295
+An Ancient Trail Around the Eastern Peak~
+This path is composed of intricately carved cobblestones that have been         
+weathered by the harsh climate up here. A thin layer of ice covers the         
+trail, making the carvings' features indistinguishable. A frigid wind         
+whips around you, bringing with it a puff of snow. The ancient trail         
+curves here to the north and to the west.         
+~
+mountains
+D NORTH 296 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 293 0 0
+~
+~
+#296
+An Ancient Trail Around the Eastern Peak~
+This path is composed of intricately carved cobblestones that have been         
+weathered by the harsh climate up here. A thin layer of ice covers the         
+trail, making the carvings' features indistinguishable. A frigid wind         
+whips around you, bringing with it a puff of snow. The ancient trail         
+curves here to the south and to the east.         
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 297 0 0
+~
+~
+D SOUTH 295 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#297
+The End of an Ancient Trail~
+This is as far as it is physically possible to climb. The chilling          
+winds whip around the peak, and the trail stops abruptly, ending in          
+a sheer vertical cliff facing toward the east. Brilliantly white ice          
+covers the ground beneath you, and the footing is far from steady. To          
+the north, the mountain continues to climb for another twenty feet or          
+so. Just off the weathered trail, a small crevice is set into the ground.          
+~
+mountains
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 296 0 0
+~
+~
+D DOWN 298 I 0
+~
+~
+#298
+A Small, Frigid Cave~
+In this tiny, cramped cave, every wall is composed of frost-covered      
+jagged black stones.  In the eastern wall, there is a deep, mossy niche.       
+Cold wind drifts in from above, where the eastern peak stands proudly.  The      
+ground is solid, yet as you step, something crunches beneath your feet.  You      
+can climb back out of this cramped cavern using the rocks to the north.        
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+A deep, mossy niche has been set into the eastern wall of the cave.         
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 297 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 230 TO 201 GLIMIT 4 LLIMIT 4
+EQUIP 227 WIELD
+EQUIP 223 SHIELD
+EQUIP 208 BODY
+MOB 230 TO 201 GLIMIT 4 LLIMIT 4
+EQUIP 227 WIELD
+EQUIP 223 SHIELD
+EQUIP 208 BODY
+MOB 200 TO 204 GLIMIT 3 LLIMIT 1
+EQUIP 219 BODY
+EQUIP 200 WIELD
+MOB 202 TO 204 GLIMIT 4 LLIMIT 4
+EQUIP 208 BODY
+EQUIP 202 WIELD
+EQUIP 223 SHIELD
+MOB 203 TO 204 GLIMIT 1 LLIMIT 1
+MOB 206 TO 204 GLIMIT 4 LLIMIT 4
+EQUIP 219 BODY
+MOB 201 TO 205 GLIMIT 1 LLIMIT 1
+EQUIP 221 ABOUT
+EQUIP 200 WIELD
+MOB 202 TO 205 GLIMIT 4 LLIMIT 4
+EQUIP 208 BODY
+EQUIP 202 WIELD
+EQUIP 223 SHIELD
+MOB 204 TO 205 GLIMIT 1 LLIMIT 1
+EQUIP 222 FEET
+MOB 200 TO 206 GLIMIT 3 LLIMIT 1
+EQUIP 219 BODY
+EQUIP 200 WIELD
+MOB 206 TO 206 GLIMIT 4 LLIMIT 4
+EQUIP 219 BODY
+MOB 207 TO 206 GLIMIT 2 LLIMIT 2
+EQUIP 214 BODY
+MOB 205 TO 207 GLIMIT 1 LLIMIT 1
+EQUIP 209 ABOUT
+EQUIP 216 WAIST
+MOB 208 TO 207 GLIMIT 1 LLIMIT 1
+EQUIP 220 WIELD
+EQUIP 216 WAIST
+EQUIP 219 BODY
+MOB 206 TO 208 GLIMIT 4 LLIMIT 4
+EQUIP 219 BODY
+MOB 206 TO 210 GLIMIT 4 LLIMIT 4
+EQUIP 219 BODY
+MOB 206 TO 210 GLIMIT 4 LLIMIT 4
+EQUIP 219 BODY
+MOB 202 TO 211 GLIMIT 4 LLIMIT 4
+EQUIP 208 BODY
+EQUIP 202 WIELD
+EQUIP 223 SHIELD
+MOB 207 TO 211 GLIMIT 2 LLIMIT 2
+EQUIP 214 BODY
+MOB 200 TO 213 GLIMIT 3 LLIMIT 1
+EQUIP 219 BODY
+EQUIP 200 WIELD
+MOB 209 TO 213 GLIMIT 1 LLIMIT 1
+EQUIP 201 WIELD
+EQUIP 204 WRISTONE
+MOB 210 TO 213 GLIMIT 1 LLIMIT 1
+EQUIP 228 ABOUT
+EQUIP 229 BODY
+MOB 202 TO 216 GLIMIT 4 LLIMIT 4
+EQUIP 208 BODY
+EQUIP 202 WIELD
+EQUIP 223 SHIELD
+MOB 230 TO 227 GLIMIT 4 LLIMIT 4
+EQUIP 227 WIELD
+EQUIP 223 SHIELD
+EQUIP 208 BODY
+MOB 230 TO 227 GLIMIT 4 LLIMIT 4
+EQUIP 227 WIELD
+EQUIP 223 SHIELD
+EQUIP 208 BODY
+MOB 224 TO 230 GLIMIT 2 LLIMIT 2
+EQUIP 217 BODY
+EQUIP 204 WIELD
+MOB 224 TO 234 GLIMIT 2 LLIMIT 2
+EQUIP 217 BODY
+EQUIP 204 WIELD
+MOB 227 TO 238 GLIMIT 1 LLIMIT 1
+EQUIP 206 WIELD
+EQUIP 218 BODY
+MOB 226 TO 239 GLIMIT 1 LLIMIT 1
+EQUIP 217 BODY
+EQUIP 205 WIELD
+MOB 219 TO 250 GLIMIT 2 LLIMIT 2
+MOB 211 TO 252 GLIMIT 3 LLIMIT 3
+MOB 213 TO 252 GLIMIT 4 LLIMIT 3
+MOB 217 TO 252 GLIMIT 2 LLIMIT 1
+MOB 222 TO 254 GLIMIT 1 LLIMIT 1
+MOB 214 TO 255 GLIMIT 1 LLIMIT 1
+MOB 219 TO 255 GLIMIT 2 LLIMIT 2
+MOB 223 TO 257 GLIMIT 2 LLIMIT 2
+MOB 216 TO 258 GLIMIT 1 LLIMIT 1
+MOB 213 TO 259 GLIMIT 4 LLIMIT 3
+MOB 217 TO 259 GLIMIT 2 LLIMIT 1
+MOB 211 TO 260 GLIMIT 3 LLIMIT 3
+MOB 213 TO 260 GLIMIT 4 LLIMIT 3
+MOB 221 TO 260 GLIMIT 1 LLIMIT 1
+MOB 211 TO 262 GLIMIT 3 LLIMIT 3
+MOB 215 TO 262 GLIMIT 2 LLIMIT 2
+MOB 212 TO 263 GLIMIT 1 LLIMIT 1
+MOB 215 TO 264 GLIMIT 2 LLIMIT 2
+MOB 213 TO 265 GLIMIT 4 LLIMIT 3
+MOB 228 TO 265 GLIMIT 2 LLIMIT 2
+EQUIP 213 ABOUT
+EQUIP 201 WIELD
+MOB 223 TO 267 GLIMIT 2 LLIMIT 2
+MOB 229 TO 280 GLIMIT 1 LLIMIT 1
+EQUIP 213 ABOUT
+EQUIP 203 WIELD
+DOOR 282 north CLOSED
+DOOR 282 north LOCKED
+OBJECT 231 TO 285
+PUT 224 IN 231 COUNT 1
+PUT 212 IN 231 COUNT 1
+MOB 228 TO 287 GLIMIT 2 LLIMIT 2
+EQUIP 213 ABOUT
+EQUIP 201 WIELD
+OBJECT 210 TO 298
+PUT 211 IN 210 COUNT 1
+PUT 230 IN 210 COUNT 1
+S
+
+#IMPROGS
+END
+#$

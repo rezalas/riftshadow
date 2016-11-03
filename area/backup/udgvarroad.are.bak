@@ -1,0 +1,245 @@
+#AREA
+udgvarroad.are~
+Iseldheim-Varggin Shih Road~
+Tiernus~
+1 51
+24813 24824
+normal
+temperate
+0
+1
+RS Tyner Tiernus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24813
+A Worn Trail, Before the Gates of Iseldheim~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  A city rises up to the east, and the trail continues to the
+west.  
+~
+road
+D EAST 3817 0 0
+~
+~
+D WEST 24814 0 0
+~
+The desolate trail continues to the west.
+~
+#24814
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues ot the east and west.  
+~
+road
+D EAST 24813 0 0
+~
+The desolate trail continues to the east.
+~
+D WEST 24815 0 0
+~
+The desolate trail continues to the west.
+~
+#24815
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and east.  
+~
+road
+D NORTH 24816 0 0
+~
+The desolate trail continues to the north.
+~
+D EAST 24814 0 0
+~
+The desolate trail continues to the east.
+~
+#24816
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24817 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24815 0 0
+~
+The desolate trail continues to the south.
+~
+#24817
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24818 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24816 0 0
+~
+The desolate trail continues to the south.
+~
+#24818
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24819 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24817 0 0
+~
+The desolate trail continues to the south.
+~
+#24819
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24820 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24818 0 0
+~
+The desolate trail continues to the south.
+~
+#24820
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24821 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24819 0 0
+~
+The desolate trail continues to the south.
+~
+#24821
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24822 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24820 0 0
+~
+The desolate trail continues to the south.
+~
+#24822
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the north and south.  
+~
+road
+D NORTH 24823 0 0
+~
+The desolate trail continues to the north.
+~
+D SOUTH 24821 0 0
+~
+The desolate trail continues to the south.
+~
+#24823
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile land.  The trail continues to the west and south.  Dark mountains
+loom above you to the north.  A narrow crevice opens up to the north,
+granting access to the inside of the mountain.  
+~
+road
+D NORTH 0 0 0
+door~
+A narrow crevice is opened in the mountains to the north.
+~
+D SOUTH 24822 0 0
+~
+The desolate trail continues to the south.
+~
+D WEST 24824 0 0
+~
+The desolate trail continues to the west.
+~
+#24824
+A Worn, Desolate Trail~
+This trail is really just a worn area that wanders through this deolate
+plain of parched earth.  Furrows and cracks run along the ground, the
+thirsty land gaping at the sky in its plea for water.  Here and there short,
+leathery plants spring up from the ground, the sole survivors of this
+hostile and.  The trail continues to the north and east.  
+~
+road
+D NORTH 22000 0 0
+~
+The desolate trail continues to the north.
+~
+D EAST 24823 0 0
+~
+The desolate trail continues to the east.
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

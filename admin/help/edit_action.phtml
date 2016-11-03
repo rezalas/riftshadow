@@ -1,0 +1,10 @@
+<?
+	$target_level = 53;
+	include("../check_trust.inc");
+	$nhelpdata = addslashes($_POST[helpdata]);
+	$ntitle = addslashes($_POST[title]);
+	$conn  = mysql_connect("localhost", "rift", "rift123");
+	@mysql_db_query("rift",
+	"update helpfiles set title='$ntitle', skill='$_POST[skill]', minlevel=$_POST[minlevel], helpdata='$nhelpdata' where id=$_POST[id]",$conn);
+	Header("Location: http://admin.riftshadow.org/help/search.phtml?step=2&search=$_POST[id]");
+?>

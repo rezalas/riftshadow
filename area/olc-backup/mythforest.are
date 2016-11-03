@@ -1,0 +1,1572 @@
+#AREA
+mythforest.are~
+Forest of Myth Drannor~
+Ceran~
+20 40
+22500 22599
+normal
+temperate
+0
+1
+
+#MOBS
+#22500
+scout man~
+a Knight scout of Myth Drannor~
+A man forest armor is watching you from the trees.      
+~
+This man has the bearing of one who is set in his ideals. He watches the      
+forests for intruders and to prevent the further spread of it's evil beyond      
+the forest confines.      
+~
+1000 22500 100 human~
+25 5d10+550 2d10+7 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+AFF INFRARED
+CLASS warrior none none 
+#22501
+giant spider~
+a giant spider~
+A giant spider scuttles at you from out of the undergrowth.      
+~
+This bloated spider is as large as a small horse. It's spindly legs twitch      
+as it scuttles across the ground.      
+~
+-1000 22501 100 unique~
+18 3d9+283 2d7+4 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF ASSIST_VNUM
+IMM SUMMON
+IMM CHARM
+IMM POISON
+CLASS warrior none none 
+#22502
+treant tree~
+a treant~
+A huge tree opens it's eyes and regards you with disdain.      
+~
+There is something almost majestic about the sheer power and size of this      
+creature. A pair of deep brown eyes seem to reside within the tree-like      
+creature and they stare at you in contempt.      
+~
+0 0 100 unique~
+46 25d10+3250 6d6+16 0 100 pound
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF PARRY
+AFF INFRARED
+RES WEAPON
+VUL FIRE
+CLASS warrior none none 
+#22503
+darkened beast~
+a darkened beast~
+A large darken beast stalks the forest for prey.      
+~
+This creature resembles a large black dog, but it's tail is spiked and it's      
+eyes are a malevolent red. A snarl of fierce hate sounds from it's jaws.      
+~
+-1000 0 100 wolf~
+30 6d12+850 4d6+8 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BERSERK
+OFF KICK
+OFF DIRT_KICK
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF INFRARED
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#22504
+elf skeleton~
+an elven skeleton~
+The skeletal remains of an ancient elf rise up before you!      
+~
+This is one the the long dead elven warriors who vowed to forever keep watch      
+over the city of Myth Drannor. Even in death his vows have been kept, and now      
+he stands eternal watch over the dead city's gates.      
+~
+-1000 0 100 human~
+32 10d10+1000 6d4+9 0 100 wrath
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT UNDEAD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM ACID
+IMM POISON
+IMM NEGATIVE
+IMM MENTAL
+IMM DISEASE
+IMM DROWNING
+VUL BASH
+VUL HOLY
+CLASS warrior none none 
+#22505
+shade~
+a forest shade~
+A cold and insubstantial shadow moves amongst the trees.      
+~
+A feeling of cold dread passes across you as this shadow slowly turns to      
+regard you. Pale blue eyes can be seen in it's flickering form, but little      
+else of substance seems to exist.      
+~
+-1000 0 100 human~
+35 10d10+1300 4d7+11 0 100 drain
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FADE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+VUL FIRE
+VUL LIGHTNING
+VUL ENERGY
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#22500
+rust iron sword~
+a rusted iron sword~
+A rust covered iron sword lies on the ground.~
+weapon
+iron~
+sword 5 7 slash 0
+25 7 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -2
+APPLY DAMROLL -2
+LIMIT 0
+TIMER 0
+
+#22501
+cloth tunic forest green~
+a forest green tunic~
+A tunic of soft green cloth is on the ground.~
+armor
+cloth~
+7 6 7 5 5
+25 2 2000 P
+WEAR TAKE
+WEAR BODY
+ITEM ANTINEUTRAL
+APPLY DAMROLL 1
+APPLY MOVE 25
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#22528
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22540 0 0
+~
+~
+D EAST 22529 0 0
+~
+~
+D SOUTH 22534 0 0
+~
+~
+D WEST 22527 0 0
+~
+~
+#22529
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22541 0 0
+~
+~
+D EAST 22530 0 0
+~
+~
+D SOUTH 22535 0 0
+~
+~
+D WEST 22528 0 0
+~
+~
+#22530
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22542 0 0
+~
+~
+D EAST 22525 0 0
+~
+~
+D SOUTH 22536 0 0
+~
+~
+D WEST 22529 0 0
+~
+~
+#22531
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22525 0 0
+~
+~
+D EAST 22532 0 0
+~
+~
+D SOUTH 22537 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22532
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22526 0 0
+~
+~
+D EAST 22533 0 0
+~
+~
+D SOUTH 22538 0 0
+~
+~
+D WEST 22531 0 0
+~
+~
+#22533
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22527 0 0
+~
+~
+D EAST 22534 0 0
+~
+~
+D SOUTH 22539 0 0
+~
+~
+D WEST 22532 0 0
+~
+~
+#22534
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22528 0 0
+~
+~
+D EAST 22535 0 0
+~
+~
+D SOUTH 22540 0 0
+~
+~
+D WEST 22533 0 0
+~
+~
+#22535
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22529 0 0
+~
+~
+D EAST 22536 0 0
+~
+~
+D SOUTH 22541 0 0
+~
+~
+D WEST 22534 0 0
+~
+~
+#22536
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22530 0 0
+~
+~
+D EAST 22541 0 0
+~
+~
+D SOUTH 22542 0 0
+~
+~
+D WEST 22535 0 0
+~
+~
+#22537
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22531 0 0
+~
+~
+D EAST 22538 0 0
+~
+~
+D SOUTH 22525 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22538
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22532 0 0
+~
+~
+D EAST 22539 0 0
+~
+~
+D SOUTH 22526 0 0
+~
+~
+D WEST 22537 0 0
+~
+~
+#22539
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22533 0 0
+~
+~
+D EAST 22540 0 0
+~
+~
+D SOUTH 22527 0 0
+~
+~
+D WEST 22538 0 0
+~
+~
+#22540
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22534 0 0
+~
+~
+D EAST 22541 0 0
+~
+~
+D SOUTH 22528 0 0
+~
+~
+D WEST 22539 0 0
+~
+~
+#22541
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22535 0 0
+~
+~
+D EAST 22542 0 0
+~
+~
+D SOUTH 22529 0 0
+~
+~
+D WEST 22540 0 0
+~
+~
+#22542
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22536 0 0
+~
+~
+D EAST 22539 0 0
+~
+~
+D SOUTH 22530 0 0
+~
+~
+D WEST 22541 0 0
+~
+~
+#22543
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22555 0 0
+~
+~
+D EAST 22544 0 0
+~
+~
+D SOUTH 22549 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22544
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22556 0 0
+~
+~
+D EAST 22545 0 0
+~
+~
+D SOUTH 22550 0 0
+~
+~
+D WEST 22543 0 0
+~
+~
+#22545
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22557 0 0
+~
+~
+D EAST 22546 0 0
+~
+~
+D SOUTH 22551 0 0
+~
+~
+D WEST 22544 0 0
+~
+~
+#22546
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22558 0 0
+~
+~
+D EAST 22547 0 0
+~
+~
+D SOUTH 22552 0 0
+~
+~
+D WEST 22545 0 0
+~
+~
+#22547
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22559 0 0
+~
+~
+D EAST 22548 0 0
+~
+~
+D SOUTH 22553 0 0
+~
+~
+D WEST 22546 0 0
+~
+~
+#22548
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22560 0 0
+~
+~
+D EAST 22559 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22547 0 0
+~
+~
+#22549
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22543 0 0
+~
+~
+D EAST 22550 0 0
+~
+~
+D SOUTH 22555 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22550
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22544 0 0
+~
+~
+D EAST 22551 0 0
+~
+~
+D SOUTH 22556 0 0
+~
+~
+D WEST 22549 0 0
+~
+~
+#22551
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22545 0 0
+~
+~
+D EAST 22552 0 0
+~
+~
+D SOUTH 22557 0 0
+~
+~
+D WEST 22550 0 0
+~
+~
+#22552
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22546 0 0
+~
+~
+D EAST 22553 0 0
+~
+~
+D SOUTH 22558 0 0
+~
+~
+D WEST 22551 0 0
+~
+~
+#22553
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22547 0 0
+~
+~
+D EAST 22554 0 0
+~
+~
+D SOUTH 22559 0 0
+~
+~
+D WEST 22552 0 0
+~
+~
+#22554
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22548 0 0
+~
+~
+D EAST 22547 0 0
+~
+~
+D SOUTH 22560 0 0
+~
+~
+D WEST 22553 0 0
+~
+~
+#22555
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22549 0 0
+~
+~
+D EAST 22556 0 0
+~
+~
+D SOUTH 22543 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22556
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22550 0 0
+~
+~
+D EAST 22557 0 0
+~
+~
+D SOUTH 22544 0 0
+~
+~
+D WEST 22555 0 0
+~
+~
+#22557
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22551 0 0
+~
+~
+D EAST 22558 0 0
+~
+~
+D SOUTH 22545 0 0
+~
+~
+D WEST 22556 0 0
+~
+~
+#22558
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22552 0 0
+~
+~
+D EAST 22559 0 0
+~
+~
+D SOUTH 22546 0 0
+~
+~
+D WEST 22557 0 0
+~
+~
+#22559
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22553 0 0
+~
+~
+D EAST 22560 0 0
+~
+~
+D SOUTH 22547 0 0
+~
+~
+D WEST 22558 0 0
+~
+~
+#22560
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22554 0 0
+~
+~
+D EAST 22553 0 0
+~
+~
+D SOUTH 22548 0 0
+~
+~
+D WEST 22559 0 0
+~
+~
+#22500
+On a rough dirt path through the forest~
+You are walking on a narrow, badly kept dirt track. All around you the trees      
+are thick and dark, creating cool shadows all around you. The path heads east      
+into the forest or west to what looks like a small outpost.      
+~
+forest
+ROOM INDOORS
+D EAST 22501 0 0
+~
+~
+D WEST 13606 0 0
+~
+~
+#22501
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads east and west.      
+~
+forest
+ROOM INDOORS
+D EAST 22502 0 0
+~
+~
+D WEST 22500 0 0
+~
+~
+#22502
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads south and west.      
+~
+forest
+ROOM INDOORS
+D SOUTH 22503 0 0
+~
+~
+D WEST 22501 0 0
+~
+~
+#22503
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. All around you lies the darkened forest, while   
+the path heads north and east.      
+~
+forest
+ROOM INDOORS
+D NORTH 22502 0 0
+~
+~
+D EAST 22504 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22536 0 0
+~
+~
+#22504
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path continues east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22536 0 0
+~
+~
+D EAST 22505 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22503 0 0
+~
+~
+#22505
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path continues east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 22506 0 0
+~
+~
+D SOUTH 22553 0 0
+~
+~
+D WEST 22504 0 0
+~
+~
+#22506
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path continues east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22535 0 0
+~
+~
+D EAST 22507 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22505 0 0
+~
+~
+#22507
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path continues east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22534 0 0
+~
+~
+D EAST 22508 0 0
+~
+~
+D SOUTH 22552 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22508
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path continues south and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22530 0 0
+~
+~
+D EAST 22559 0 0
+~
+~
+D SOUTH 22509 0 0
+~
+~
+D WEST 22507 0 0
+~
+~
+#22509
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads north, east and south.      
+~
+forest
+ROOM INDOORS
+D NORTH 22508 0 0
+~
+~
+D EAST 22510 0 0
+~
+~
+D SOUTH 22520 0 0
+~
+~
+D WEST 22553 0 0
+~
+~
+#22510
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. All around you lies the darkened forest, while   
+the path heads east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22536 0 0
+~
+~
+D EAST 22511 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22509 0 0
+~
+~
+#22511
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. All around you lies the darkened forest, while   
+the path heads east and west. To the south you can see large stone ruins in      
+the trees.      
+~
+forest
+ROOM INDOORS
+D NORTH 22535 0 0
+~
+~
+D EAST 22512 0 0
+~
+~
+D SOUTH 22524 0 0
+~
+~
+D WEST 22510 0 0
+~
+~
+#22512
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. All around you lies the darkened forest, while   
+the path heads east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22536 0 0
+~
+~
+D EAST 22513 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22511 0 0
+~
+~
+#22513
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads south and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22536 0 0
+~
+~
+D EAST 22553 0 0
+~
+~
+D SOUTH 22514 0 0
+~
+~
+D WEST 22512 0 0
+~
+~
+#22514
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads north and east.      
+~
+forest
+ROOM INDOORS
+D NORTH 22513 0 0
+~
+~
+D EAST 22515 0 0
+~
+~
+D SOUTH 22553 0 0
+~
+~
+D WEST 22535 0 0
+~
+~
+#22515
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads east and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22542 0 0
+~
+~
+D EAST 22516 0 0
+~
+~
+D SOUTH 22554 0 0
+~
+~
+D WEST 22514 0 0
+~
+~
+#22516
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads south and west.      
+~
+forest
+ROOM INDOORS
+D NORTH 22536 0 0
+~
+~
+D EAST 22552 0 0
+~
+~
+D SOUTH 22517 0 0
+~
+~
+D WEST 22515 0 0
+~
+~
+#22517
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads north and south.      
+~
+forest
+ROOM INDOORS
+D NORTH 22516 0 0
+~
+~
+D EAST 22560 0 0
+~
+~
+D SOUTH 22518 0 0
+~
+~
+D WEST 22530 0 0
+~
+~
+#22518
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. To the west you can make out some stone ruins      
+amidst the trees. The path heads north.      
+~
+forest
+ROOM INDOORS
+D NORTH 22517 0 0
+~
+~
+D EAST 22553 0 0
+~
+~
+D SOUTH 22536 0 0
+~
+~
+D WEST 22519 0 0
+~
+~
+#22519
+Before some stone ruins~
+You find yourself standing amidst the rubble and decay of some ancient city.      
+Beautifully worked stones of old dwarven workmanship lie scattered across the      
+ground and a dark, cold shadow seems to cover everything. The faint shapes of      
+creatures can be seen moving from within the ruins, while all around you the      
+forests seem subdued and quiet. A narrow path heads east into the forest, or      
+you can go west into the ruins of Myth Drannor.      
+~
+forest
+ROOM INDOORS
+D EAST 22518 0 0
+~
+~
+D WEST 13705 0 0
+~
+~
+#22520
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads north and south through the      
+dark forest.      
+~
+forest
+ROOM INDOORS
+D NORTH 22509 0 0
+~
+~
+D EAST 22553 0 0
+~
+~
+D SOUTH 22521 0 0
+~
+~
+D WEST 22536 0 0
+~
+~
+#22521
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. The path heads north and south through the      
+dark forest.      
+~
+forest
+ROOM INDOORS
+D NORTH 22520 0 0
+~
+~
+D EAST 22553 0 0
+~
+~
+D SOUTH 22522 0 0
+~
+~
+D WEST 22536 0 0
+~
+~
+#22522
+On a rough dirt track through the forest~
+You find yourself on a narrow pathway through the dense forest. It apppears      
+little used and much of the surrounding foliage has overgrown onto it. In the      
+shadow of the surrounding forest you see faint movement and hear the sounds      
+of creatures in the underbrush. You can see some stone ruins to the east, and      
+the path heads north.      
+~
+forest
+ROOM INDOORS
+D NORTH 22521 0 0
+~
+~
+D EAST 22523 0 0
+~
+~
+D SOUTH 22535 0 0
+~
+~
+D WEST 22554 0 0
+~
+~
+#22523
+Before some stone ruins~
+You find yourself standing amidst the rubble and decay of some ancient city.      
+Beautifully worked stones of old dwarven workmanship lie scattered across the      
+ground and a dark, cold shadow seems to cover everything. The faint shapes of      
+creatures can be seen moving from within the ruins, while all around you the      
+forests seem subdued and quiet. A narrow path heads west into the forest, or      
+you can go north into the ruins of Myth Drannor.      
+~
+forest
+ROOM INDOORS
+D NORTH 13700 0 0
+~
+~
+D WEST 22522 0 0
+~
+~
+#22524
+Before some stone ruins~
+You find yourself standing amidst the rubble and decay of some ancient city.      
+Beautifully worked stones of old dwarven workmanship lie scattered across the      
+ground and a dark, cold shadow seems to cover everything. The faint shapes of      
+creatures can be seen moving from within the ruins, while all around you the      
+forests seem subdued and quiet. A narrow path heads north into the forest, or      
+you can go south into the ruins of Myth Drannor.      
+~
+forest
+ROOM INDOORS
+D NORTH 22511 0 0
+~
+~
+D SOUTH 13712 0 0
+~
+~
+#22525
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22537 0 0
+~
+~
+D EAST 22526 0 0
+~
+~
+D SOUTH 22531 0 0
+~
+~
+D WEST 22506 0 0
+~
+~
+#22526
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22538 0 0
+~
+~
+D EAST 22527 0 0
+~
+~
+D SOUTH 22532 0 0
+~
+~
+D WEST 22525 0 0
+~
+~
+#22527
+Within the Forest of Myth Drannor~
+You are standing deep within the darkened forests of Myth Drannor. What the      
+elves once cared for is now corrupted and twisted, and much of the beauty of      
+the land if now gone. The trees are foreboding and loom threateningly above      
+you, and the undergrowth is filled with small, scuttling creatures. The      
+forest spreads out all around you, making it hard to see anything.      
+~
+forest
+ROOM INDOORS
+D NORTH 22539 0 0
+~
+~
+D EAST 22528 0 0
+~
+~
+D SOUTH 22533 0 0
+~
+~
+D WEST 22526 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 22500 TO 22504 GLIMIT 4 LLIMIT 1
+EQUIP 22501 BODY
+MOB 22502 TO 22508 GLIMIT 5 LLIMIT 1
+MOB 22500 TO 22509 GLIMIT 4 LLIMIT 1
+EQUIP 22501 BODY
+MOB 22500 TO 22515 GLIMIT 4 LLIMIT 1
+EQUIP 22501 BODY
+MOB 22504 TO 22519 GLIMIT 3 LLIMIT 1
+EQUIP 22500 WIELD
+MOB 22500 TO 22521 GLIMIT 4 LLIMIT 1
+EQUIP 22501 BODY
+MOB 22504 TO 22523 GLIMIT 3 LLIMIT 1
+EQUIP 22500 WIELD
+MOB 22504 TO 22524 GLIMIT 3 LLIMIT 1
+EQUIP 22500 WIELD
+MOB 22501 TO 22525 GLIMIT 12 LLIMIT 2
+MOB 22503 TO 22525 GLIMIT 6 LLIMIT 2
+MOB 22501 TO 22527 GLIMIT 12 LLIMIT 3
+MOB 22505 TO 22527 GLIMIT 6 LLIMIT 1
+MOB 22502 TO 22528 GLIMIT 5 LLIMIT 1
+MOB 22505 TO 22530 GLIMIT 6 LLIMIT 1
+MOB 22501 TO 22534 GLIMIT 12 LLIMIT 1
+MOB 22503 TO 22537 GLIMIT 6 LLIMIT 2
+MOB 22502 TO 22538 GLIMIT 5 LLIMIT 1
+MOB 22505 TO 22538 GLIMIT 6 LLIMIT 1
+MOB 22501 TO 22539 GLIMIT 12 LLIMIT 1
+MOB 22501 TO 22541 GLIMIT 12 LLIMIT 1
+MOB 22503 TO 22541 GLIMIT 6 LLIMIT 2
+MOB 22503 TO 22544 GLIMIT 6 LLIMIT 2
+MOB 22501 TO 22545 GLIMIT 12 LLIMIT 3
+MOB 22505 TO 22546 GLIMIT 6 LLIMIT 1
+MOB 22501 TO 22547 GLIMIT 12 LLIMIT 3
+MOB 22501 TO 22549 GLIMIT 12 LLIMIT 2
+MOB 22501 TO 22550 GLIMIT 12 LLIMIT 2
+MOB 22502 TO 22550 GLIMIT 5 LLIMIT 1
+MOB 22505 TO 22551 GLIMIT 6 LLIMIT 1
+MOB 22503 TO 22552 GLIMIT 6 LLIMIT 2
+MOB 22503 TO 22556 GLIMIT 6 LLIMIT 1
+MOB 22501 TO 22557 GLIMIT 12 LLIMIT 2
+MOB 22501 TO 22559 GLIMIT 12 LLIMIT 3
+MOB 22502 TO 22559 GLIMIT 5 LLIMIT 1
+MOB 22501 TO 22560 GLIMIT 12 LLIMIT 2
+MOB 22505 TO 22560 GLIMIT 6 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

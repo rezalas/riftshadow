@@ -1,0 +1,40 @@
+#AREA
+barrenhollows1.are~
+barren hollows 1~
+karsus~
+40 51
+28800 28999
+unopened
+none
+0
+9
+Karsus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#28800
+barren hollows~
+filler test
+~
+cave
+ROOM DARK
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

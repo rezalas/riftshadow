@@ -1,0 +1,1171 @@
+#AREA
+carantoc.are~
+The Tombs of Carantoc~
+Zethus~
+1 51
+3400 3499
+unopened
+none
+0
+1
+Carantoc Zethus~
+
+#MOBS
+#3400
+disfigured zombie man~
+a disfigured zombie~
+An apparently diseased man staggers through the corridor, bumping into walls.
+~
+This dirty diseased creature stumbles as it moves, causing the scraps of
+linen that still cling to its body to sway as if in the breeze.  Its skin
+sags and hangs bloated from its face and body.  A horrible stench of rot
+emanates from the creature and everything it touches.  The look of pure
+hunger in its eyes makes you wonder if this creature is alive at all... 
+~
+-1000 0 0 zombie~
+24 12d8+870 3d5+23 3 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+OFF FAST
+IMM SUMMON
+#3401
+figure grotesque ghoul groaning~
+a groaning ghoul~
+A grotesque figure shambles through the catacombs at an unnatural speed, groaning loudly.
+~
+This short, squat figure represents a step in the evolution of undead. 
+Its rotting skin bulges with muscles as cold as the earth.  The small,
+shrunken head appears even smaller because of the rippling shoulder and arm
+muscles that surround it.  Dried trails of pus lead to infected yellow eyes
+sunken deep in the creature's skull.  The minimal intelligence visible in
+those eyes shows why this was only a step.  
+~
+-1000 0 0 zombie~
+30 15d8+1364 3d4+30 30 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+OFF DODGE
+OFF FAST
+#3402
+ancient skeleton~
+an ancient skeleton~
+A skeleton awkwardly attempts to walk through the crumbling corridors.
+~
+Splintering ashen bones seem to move and walk without direction.  These
+bones have clearly seen better days as they frantically claw at anything
+around them.  No weapons or armor hang from the bones, though the blood
+covering them is too fresh to be theirs.  They seem to be all human bones,
+but the hands are strangely clawed.  
+~
+-1000 0 0 skeleton~
+27 13d8+1103 3d4+29 40 100 claw
+60 60 60 60
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+#3403
+skeleton skeletal figure lich half-lich~
+a half-lich~
+A tall skeletal figure paces the crypt, examining and re-examining its surroundings.
+~
+All of nature's laws are defied in this very one being.  Some portions of
+him are skeletal, while others seem entirely human.  A cruel line divides
+his face, with one eye socket sitting empty and the other containing a
+bloody orb.  Bleach-white bones erupt from under the edges of the skin that
+remains.  An expression that covers everything from utter depression to
+absolute rage adorns the human side of his face.  Scars and open wounds on
+his skin stand out to remind himself that as dead as he is, he still bleeds.
+~
+0 0 0 human~
+47 23d8+3507 10d2+49 60 100 defilement
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT UNDEAD
+C 'weaken'
+C 'vampiric touch'
+#3404
+slave elf elven battered~
+an elven slave~
+A battered elven slave struggles to complete the temple.
+~
+This slave wears nothing but a ragged loincloth as he toils, building
+monuments to Carantoc.  His once-beautiful face is now battered and scarred.
+His expression is one of pain and horror.  His eyes scream with revulsion at
+the horrors he has seen.  Open wounds, burns, and lashings scar his back.  
+~
+100 8296 8294 elf~
+25 12d8+200 1d5+2 12 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#3400
+alcove shadow shadowy~
+a shadowy alcove~
+The red light rushes into this alcove and disappears, begging you to enter.~
+portal
+unknown~
+-1 0 0 3406 0
+51 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#3401
+circle blinding white light portal~
+a circle of blinding white light~
+A circle of blinding white light comes close to shattering the thick darkness.~
+portal
+unknown~
+-1 0 0 2629 0
+0 0 0 P
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#3402
+altar grand high~
+the grand altar~
+An altar carved of glowing red stone dominates the room with its prescence.~
+altar
+ruby~
+0 0 0 0 0
+60 5000 0 P
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#3403
+altar obsidian~
+a massive obsidian altar~
+A huge, plain altar made of black obsidian stands in the center of the room.~
+treasure
+obsidian~
+0 0 0 0 0
+50 1000 0 P
+LIMIT 0
+TIMER 0
+
+#3404
+statue small bust rafe wyndham~
+a small statue~
+A small statue rests in the alcove.  Represented here in marble is a striking, well-dressed man.  Something seems to be wrong with the mouth...~
+treasure
+marble~
+0 0 0 0 0
+51 500 0 P
+ITEM NOSHOW
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#3405
+mouth~
+rafe's mouth~
+Peering inside the statue's mouth, you find it hollow.~
+container
+flesh~
+0 0 0 0 0
+1 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#3406
+note small torn paper~
+a torn note~
+A small scrap of paper lies here, hopelessly torn and frayed.~
+trash
+paper~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E note~
+This torn scrap bears the scribbling of someone either in a hurry, or
+insane.  You can make out a few words: 
+treasure... sarcophagus...
+wants it buried with him, damn...
+take... opporunity
+I'll... my own treasure stash...
+~
+
+#3411
+axe stone~
+a stone-bladed axe~
+A small hand-axe with stone for the blade waits to be used.~
+weapon
+stone~
+axe 8 3 slice 0
+18 10 50 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#3433
+stone sarcophagus~
+a stone sarcophagus~
+An enormous stone sarcophagus dominates the room.~
+treasure
+stone~
+0 0 0 0 0
+51 700 0 P
+LIMIT 0
+TIMER 0
+
+#3441
+plain wooden coffin~
+a wooden coffin~
+A plain wooden coffin sits here, covered in dust.~
+container
+wood~
+15 AC 0 10 0
+51 500 0 P
+LIMIT 0
+TIMER 0
+E plain wooden coffin~
+This simple pine box seems out of place in such close proximity to the
+massive, ornate sarcophagus in the burial hall.  The wood is utterly plain,
+and bears a kind of desolate loneliness broken only by the dust.  
+~
+E dust~
+At first glance, dust seems to cover the coffin completely.  Staring at
+the coffin, strange patterns and symbols adorn it that no speck of dust
+dares to touch.  
+~
+
+#3498
+morningstar spiked mace morning star paontauz~
+a rune-engraven wickedly spiked morningstar named 'Blackguard'~
+A morningstar covered in short, thin, spikes lies here.  It beckons you to return it to Paontauz.~
+weapon
+onyx~
+mace 9 5 smash 0
+1 17 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT ELF_ONLY
+ITEM GLOW
+ITEM ANTIGOOD
+ITEM FIXED
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#3499
+Fate~
+fate~
+A shimmering crystal sphere that seems to contain an entire world within it.~
+wand
+crystal~
+59 500 500 'teleport' 0
+50 0 0 P
+WEAR TAKE
+WEAR HOLD
+RESTRICT MINOTAUR_ONLY
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#3400
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the north and
+east.  
+~
+unused
+ROOM INDOORS
+D NORTH 3401 0 0
+~
+~
+D EAST 3402 0 0
+~
+~
+OWNER none~
+#3401
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the north and
+south.  
+~
+unused
+ROOM INDOORS
+D NORTH 3408 0 0
+~
+~
+D SOUTH 3400 0 0
+~
+~
+OWNER none~
+#3402
+The Entrance to a Great Mausoleum~
+This room leads into two large, seemingly identical hallways.  Sunlight
+streams in from the open southern entrance.  The walls are made of seamless
+granite, wholly barren and bleak.  Two identical desks sit side by side,
+meticulously clean.  Despite their cleanliness, the desks appear to be
+abandoned.  The hallways extend to the east and west, while the compound
+ends to the south.  
+~
+unused
+ROOM INDOORS
+D EAST 3403 0 0
+~
+~
+D WEST 3400 0 0
+~
+~
+OWNER none~
+#3403
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the north and
+west.  
+~
+unused
+ROOM INDOORS
+D NORTH 3404 0 0
+~
+~
+D WEST 3402 0 0
+~
+~
+OWNER none~
+#3404
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the north and
+south.  
+~
+unused
+ROOM INDOORS
+D NORTH 3405 0 0
+~
+~
+D SOUTH 3403 0 0
+~
+~
+OWNER none~
+#3405
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the south and
+west.  
+~
+unused
+ROOM INDOORS
+D SOUTH 3404 0 0
+~
+~
+D WEST 3406 0 0
+~
+~
+OWNER none~
+#3406
+At an Obsidian Altar~
+Dust and the sound of hard work fill the air with their chorus.  Battered
+slaves busily build furnishings for a large black altar that fills most of
+the room.  The construction moves at a fevered pace, though you see no
+worshippers in waiting.  You'd expect the sounds to reverberate through the
+surrounding halls, but instead it seems to stop dead.  No overseers or
+slavedrivers with whips stand over the slaves.  A grand chamber opens up to
+the north, while the hallway continues to the east and west.  
+~
+unused
+ROOM INDOORS
+D NORTH 3434 0 0
+door~
+~
+D EAST 3405 0 0
+~
+~
+D WEST 3407 0 0
+~
+~
+OWNER none~
+#3407
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the south and
+east.  
+~
+unused
+ROOM INDOORS
+D EAST 3406 0 0
+~
+~
+D SOUTH 3408 0 0
+~
+~
+OWNER none~
+#3408
+The Foyer of a Great Mausoleum~
+The barren granite hallway insulates the room from external sounds. 
+Stillness reigns as you pass through this segment of the foyer.  The walls,
+completely bare, form a prison that prevents your escape.  Entombed in this
+silent passageway, you look up to the ceiling, eight feet up, to find
+something to break the monotony, but find nothing.  The light enters through
+tiny slits high up on the walls.  The hallway continues to the north and
+south, with a barred door leading west.
+~
+unused
+ROOM INDOORS
+D NORTH 3407 0 0
+~
+~
+D SOUTH 3401 0 0
+~
+~
+D WEST 3433 A 0
+door of steel bars~
+Bars run horizontally and vertically across the doorway here, seeming to
+guard something important.  On closer inspection, though, you find the bars
+aren't locked.  
+~
+OWNER none~
+#3409
+The Entrance to the Catacombs~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and the ceilings.  The corridor continues to the north and
+to the east, each direction equally dark.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3420 0 0
+~
+~
+D EAST 3410 0 0
+~
+~
+OWNER none~
+#3410
+A Damp Section of a Crumbling Corridor~
+Shallow puddles are scattered about the corridor here, giving rise to the
+sour odor of mildew.  Water drips at an uneven pace from the ceiling to feed
+these foul puddles.  Rusty chains hang ominously from the walls, some still
+closed and locked, hauntingly enough.  Chunks of wet rock and mud litter the
+ground, long since having rotted off of the walls and ceiling.  The corridor
+continues to the east and west, and a heavy iron door is set into the
+northern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3421 A 0
+~
+~
+D EAST 3411 0 0
+~
+~
+D WEST 3409 0 0
+~
+~
+OWNER none~
+#3411
+A Damp Section of a Crumbling Corridor~
+Shallow puddles are scattered about the corridor here, giving rise to the
+sour odor of mildew.  Water drips at an uneven pace from the ceiling to feed
+these foul puddles.  Rusty chains hang ominously from the walls, some still
+closed and locked, hauntingly enough.  Chunks of wet rock and mud litter the
+ground, long since having rotted off of the walls and ceiling.  The corridor
+continues to the east and west, and a heavy iron door is set into the
+northern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3422 A 0
+~
+~
+D EAST 3412 0 0
+~
+~
+D WEST 3410 0 0
+~
+~
+OWNER none~
+#3412
+A Crumbling Corridor~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and ceilings.  
+~
+unused
+ROOM INDOORS
+D NORTH 3413 0 0
+~
+~
+D WEST 3411 0 0
+~
+~
+OWNER none~
+#3413
+A Damp Section of a Crumbling Corridor~
+Shallow puddles are scattered about the corridor here, giving rise to the
+sour odor of mildew.  Water drips at an uneven pace from the ceiling to feed
+these foul puddles.  Rusty chains hang ominously from the walls, some still
+closed and locked, hauntingly enough.  Chunks of wet rock and mud litter the
+ground, long since having rotted off of the walls and ceiling.  The corridor
+continues to the north, where you can make out a bright point of light, and
+the south, where the darkness thickens.  A heavy iron door is set into the
+western wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3414 0 0
+~
+~
+D SOUTH 3412 0 0
+~
+~
+D WEST 3428 A 0
+~
+~
+OWNER none~
+#3414
+A Crumbling Corridor~
+A bright circle of light is set into the ground here, illuminating the
+pitch-black dungeon around it.  The sound of dripping water ripples through
+the stale darkness of this stone corridor, accompanied by the sickly sweet
+scent of death.  Brown streaks of mildew cover the gray granite walls along
+with a great number of rusted and empty torch-holders, which obviously
+haven't been put to use for quite some time.  Chunks of rock litter the
+ground, long since having rotted off of the walls and ceilings.  A heavy
+iron door is set into the western wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3415 0 0
+~
+~
+D SOUTH 3413 0 0
+~
+~
+D WEST 3427 AB 0
+~
+~
+OWNER none~
+#3415
+A Crumbling Corridor~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and ceilings.  Some light pierces through the darkness,
+coming from the south.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D SOUTH 3414 0 0
+~
+~
+D WEST 3416 0 0
+~
+~
+OWNER none~
+#3416
+A Crumbling Corridor~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and ceilings.  The corridor continues to the east and west
+and a heavy iron door is set into the southern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 3415 0 0
+~
+~
+D SOUTH 3426 AB 0
+~
+~
+D WEST 3417 0 0
+~
+~
+OWNER none~
+#3417
+A Crumbling Corridor~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and ceilings.  The corridor continues to the east and west
+and a heavy iron door is set into the southern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 3416 0 0
+~
+~
+D SOUTH 3425 A 0
+~
+~
+D WEST 3418 0 0
+~
+~
+OWNER none~
+#3418
+A Damp Section of a Crumbling Corridor~
+Shallow puddles are scattered about the corridor here, giving rise to the
+sour odor of mildew.  Water drips at an uneven pace from the ceiling to feed
+these foul puddles.  Rusty chains hang ominously from the walls, some still
+closed and locked, hauntingly enough.  Chunks of wet rock and mud litter the
+ground, long since having rotted off of the walls and ceiling.  The corridor
+continues to the east and south, each way seeming darker than the other.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 3417 0 0
+~
+~
+D SOUTH 3419 0 0
+~
+~
+OWNER none~
+#3419
+A Damp Section of a Crumbling Corridor~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and the ceilings.  The corridor continues to the north and
+south.  A heavy iron door is set into the eastern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3418 0 0
+~
+~
+D EAST 3424 AB 0
+~
+~
+D SOUTH 3420 0 0
+~
+~
+OWNER none~
+#3420
+A Crumbling Corridor~
+The sound of dripping water ripples through the stale darkness of this
+stone corridor, accompanied by the sickly sweet scent of death.  Brown
+streaks of mildew cover the gray granite walls along with a great number of
+rusted and empty torch-holders, which obviously haven't been put to use for
+quite some time.  Chunks of rock litter the ground, long since having rotted
+off of the walls and the ceilings.  The corridor continues to the north and
+south.  A heavy iron door is set into the eastern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3419 0 0
+~
+~
+D EAST 3423 AB 0
+iron door~
+~
+D SOUTH 3409 0 0
+~
+~
+OWNER none~
+#3421
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D SOUTH 3410 A 0
+~
+~
+OWNER none~
+#3422
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D SOUTH 3411 A 0
+~
+~
+OWNER none~
+#3423
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D WEST 3420 AB 0
+iron door~
+~
+OWNER none~
+#3424
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D WEST 3419 AB 0
+~
+~
+OWNER none~
+#3425
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3417 A 0
+~
+~
+OWNER none~
+#3426
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 3416 AB 0
+~
+~
+OWNER none~
+#3427
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 3414 AB 0
+~
+~
+OWNER none~
+#3428
+A Narrow Crypt~
+The horrid stenches of dust and stale death assault your senses.  The air
+here is unfit for mortal breath.  Clay urns line the walls, each set into
+its own small alcove.  A sarcophagus sits in the middle of the room...
+empty.
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 3413 A 0
+~
+~
+OWNER none~
+#3429
+The Entrance to the Corrupted Fane~
+Cold, hard silence sits heavily on this barren room.  A dim light shines
+from several candles on the walls.  The room is exquisitely clean, with not
+a bit of dirt, dust, or anything else on the walls or the floor.  A strange
+feeling accompanies the emptiness in this room.  No living creatures stir
+and nothing breaks the extreme silence.  Despite the nausea in your stomach,
+you feel drawn to continue forward.  
+~
+unused
+ROOM INDOORS
+D EAST 3430 0 0
+~
+~
+D SOUTH 3432 0 0
+~
+~
+OWNER none~
+#3430
+The Corrupted Fane~
+Harsh red light floods your vision, pouring in from the south.  Even the
+pale gray of the walls seems to reflect the hellish light.  The floor is
+covered with an intricate mosaic, displaying a large hellhound.  Intense
+cold seems to accompany the red light as it rushes in, illuminating a
+shadowy alcove in the northern wall.  Though devoid of all life, the room
+reeks with the stench of rotting flesh.  The eastern wall is home to a
+painting depicting a cave of small minotaurs.  As the cold continues to fill
+your body, you feel pulled to the south.  
+~
+unused
+ROOM INDOORS
+D SOUTH 3431 0 0
+~
+~
+D WEST 3429 0 0
+~
+~
+E painting~
+This painting would nearly blend into the wall with its dull and dark
+colors, but it is made very visible by its intricate frame.  Drab though it
+may be, the figures in the painting are sharply rendered.  It depicts a
+large cave filled with very young minotaurs, all crowded around a small
+being.  Covered with blood so early in their young lives, these minotaurs
+are shown in their most belligerent state.  The small figure they crowd
+around appears to be a Sidhe still grasping onto the last threads of life. 
+Badly beaten, the small creature lies helplessly in the hands of the brutes.
+~
+E hellhound~
+The image of the large beast covers most of the floor in this room.  Its
+jaws hang open displaying large bloody fangs designed only to inflict pain. 
+Sharp spikes cover its back and its tail ends in a barbed hook.  Crimson
+eyes stare blankly back, knowing nothing except blood and death.  The feral
+animal's fur ranges from shades of dark gray to pitch black.  Its face
+frozen in a permanent snarl, its body poised to strike, the image of this
+beast serves as the symbol of Carantoc.  
+~
+OWNER none~
+#3431
+The Grand Altar~
+Glowing a fierce red that illuminates the entire room, an intricate altar
+rises directly from the floor.  The walls here bear no candles, but glow
+with the same blood-red light.  Behind the altar, corpses seemingly human
+rot on thick wooden pikes.  The aroma of death is palpable in the air,
+enticing you into its sickly sweet embrace.  Covering the floor completely
+is a pool of blood, gleaming in the light from the altar.  A dripping sound
+draws your attention towards a ledge above the eastern wall.  Rows of teeth
+meet your gaze as you look into the mouths of voracious hellhounds leaning
+over the ledge, blood slowly dripping from their teeth.  Embossed into the
+southern wall is a horned visage, grinning sardonically.  Its eyes glow with
+a fire brighter than the altar.  The face belongs to a minotaur or a demon,
+but you cannot tell which.  Only the blood-red light escapes this room,
+rushing to the north.  
+~
+unused
+ROOM INDOORS
+D NORTH 3430 0 0
+~
+~
+D WEST 3432 0 0
+~
+~
+OWNER carantoc~
+#3432
+The Corrupted Fane~
+The two walls of this room contrast starkly, the western covered with
+weapons and the southern covered by a bookshelf.  Weapons of every
+classification, each dripping with blood, hang from the western wall.  Its
+racks contain freshly-bloodied swords, axes, flails, whips, and several
+implements you can only imagine are used for torture alone.  Seeming far
+more mundane than the western wall, the southern wall is mostly covered by a
+large bookshelf.  What you can see of it is inscribed with strange magical
+runes and icons.  Covering the shelf are hundreds of books and tomes, their
+paper yellowed with age.  The books seem free of dust, though a smeared
+reddish substance is evident on many of them.  The combined smells of aged
+paper and fresh corpses assault your nose.  As you look over the room, the
+distinct taste of blood fills your mouth.  A strange cold fills you, coaxing
+you eastward.  
+~
+unused
+ROOM INDOORS
+D NORTH 3429 0 0
+~
+~
+D EAST 3431 0 0
+~
+~
+OWNER none~
+#3433
+A Small Burial Chamber~
+Evenly-spaced candles spread around the room illuminate the burial
+chamber much more than the hall.  A huge stone sarcophagus in the center
+dominates the room.  Rising from the lid of the sarcophagus, a gold-trimmed
+visage surveys the room.  A beautiful woven tapestry covers a majority of
+the floor, with the stone only showing at the far edge.  The sequence of
+candles on the walls ceases for a stretch to allow for a portrait,
+presumably of the deaceased.  
+~
+inside
+ROOM INDOORS
+D EAST 3408 A 0
+door of steel bars~
+~
+OWNER none~
+#3434
+An Exceedingly Large Burial Hall~
+Doubling the dimensions of the hallway outside, this room expands over
+your head and to your left and right.  To the north, you can barely glimpse
+a huge monument of some sort in the distance.  Immense light rushes in from
+the northeast, its source too distant to identify.  Thick, soft, rugs cover
+the floor and dance into intricate patterns and designs.  The room expands
+in all directions except south, which leads back to the comparatively
+mundane altar room.
+~
+inside
+ROOM INDOORS
+D NORTH 3438 0 0
+door~
+~
+D EAST 3435 0 0
+door~
+~
+D SOUTH 3406 0 0
+door~
+~
+D WEST 3436 0 0
+door~
+~
+OWNER none~
+#3435
+An Exceedingly Large Burial Hall~
+~
+inside
+ROOM INDOORS
+D NORTH 3439 0 0
+door~
+~
+D WEST 3434 0 0
+door~
+~
+OWNER none~
+#3436
+A Corner Lined with Shelves~
+~
+inside
+ROOM INDOORS
+D NORTH 3437 0 0
+door~
+~
+D EAST 3434 0 0
+door~
+~
+OWNER none~
+#3437
+Before a Collection of Portraits~
+Cold gazes and harsh stares regard you from both of the walls.  Large
+portraits line both walls, six in total, each of their faces eerily similar.
+Small plaques under each portrait bear the name of the Wyndham portrayed. 
+All the portraits are framed with well-finished wood and have thick glass
+over them.  Barely visible beams of light from the east provide illumination
+as they weave around a massive object.  A faint dusty smell emanates from
+the south.  
+~
+inside
+ROOM INDOORS
+D EAST 3438 0 0
+door~
+~
+D SOUTH 3436 0 0
+door~
+~
+E plaque plaques~
+You see from the plaque that the portraits run left to right along the
+walls in descending familial order.  Oddly, no dates are given.  The plaque
+inscriptions, in order: 
+Lord Rafe Wyndham XVII, Builder of the Great Crypts
+ 
+Lord Jaime Wyndham II
+ 
+Lord Richard Wyndham VI, Honorbound Paladin
+ 
+Lady Aleis Wyndham
+ 
+Lord Areventar Wyndham III, Knight
+ 
+Lord Rafe Wyndham XVIII, the Great, Expander of the Great Crypts, Eternal Patriach of the Wyndham Clan
+~
+OWNER none~
+#3438
+Standing Before an Enormous Sarcophagus~
+~
+inside
+ROOM INDOORS
+D NORTH 3440 0 0
+door~
+~
+D EAST 3439 0 0
+door~
+~
+D SOUTH 3434 0 0
+door~
+~
+D WEST 3437 0 0
+door~
+~
+OWNER none~
+#3439
+Under a Bright Skylight~
+Despite the darkness that envelops the surrounding area, shadows seem not
+exist under this skylight.  Light explodes from seemingly all directions,
+becoming almost tangible as it is focused into beams.  A large crystalline
+chandelier hangs down from under the skylight, bending and twisting the
+light.  A closer look at the skylight reveals strange markings scratched
+into the glass.  They seem to serve as a runic ward of sorts.  Squinting,
+you notice the scratches are on the outside.  Perhaps they serve to keep
+evil out...or to keep it in.  
+~
+inside
+ROOM INDOORS
+D SOUTH 3435 0 0
+door~
+~
+D WEST 3438 0 0
+door~
+~
+ALTDESC 0 The Light of Rebirth~
+ Brilliantly sparkling white light floods the room from seemingly all
+directions, rendering you momentarily blind.  As your eyes adjust to the
+brightness, you find yourself in a small shrine illuminated by what must be
+thousands of candles.  A tiny alcove in the eastern wall contains a small
+statue, perhaps three feet tall.  Because of the brightness afforded by the
+candles, it takes you a moment to notice the crystalline chandelier and
+skylight directly above you.  Little moonlight seems to come from either,
+the majesty of the candles too overpowering.  
+~
+OWNER none~
+#3440
+Behind the Sarcophagus~
+~
+inside
+ROOM INDOORS
+D NORTH 3441 I 0
+door~
+The northern wall appears to move and shift as you look at it, never
+seeming quite solid.  
+~
+D SOUTH 3438 0 0
+door~
+~
+OWNER none~
+#3441
+A Hidden Niche~
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 3440 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 3404 TO 3406 GLIMIT 1 LLIMIT 1
+OBJECT 3403 TO 3406
+MOB 3402 TO 3409 GLIMIT 5 LLIMIT 1
+MOB 3401 TO 3410 GLIMIT 6 LLIMIT 1
+MOB 3401 TO 3411 GLIMIT 6 LLIMIT 1
+MOB 3400 TO 3412 GLIMIT 6 LLIMIT 2
+MOB 3402 TO 3413 GLIMIT 5 LLIMIT 1
+MOB 3401 TO 3413 GLIMIT 6 LLIMIT 1
+MOB 3401 TO 3414 GLIMIT 6 LLIMIT 1
+OBJECT 3401 TO 3414
+MOB 3402 TO 3415 GLIMIT 5 LLIMIT 1
+MOB 3400 TO 3415 GLIMIT 6 LLIMIT 2
+MOB 3402 TO 3417 GLIMIT 5 LLIMIT 1
+MOB 3400 TO 3417 GLIMIT 6 LLIMIT 1
+MOB 3400 TO 3418 GLIMIT 6 LLIMIT 1
+MOB 3401 TO 3419 GLIMIT 6 LLIMIT 1
+MOB 3402 TO 3420 GLIMIT 5 LLIMIT 1
+MOB 3401 TO 3420 GLIMIT 6 LLIMIT 1
+MOB 3403 TO 3421 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3422 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3423 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3424 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3425 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3426 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3427 GLIMIT 8 LLIMIT 1
+MOB 3403 TO 3428 GLIMIT 8 LLIMIT 1
+OBJECT 3400 TO 3430
+OBJECT 3402 TO 3431
+MOB 3404 TO 3431 GLIMIT 1 LLIMIT 1
+OBJECT 3433 TO 3433
+OBJECT 3404 TO 3439
+OBJECT 3405 TO 3439
+PUT 3406 IN 3405 COUNT 1
+OBJECT 3441 TO 3441
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

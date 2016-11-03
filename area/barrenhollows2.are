@@ -1,0 +1,49 @@
+#AREA
+barrenhollows2.are~
+barren hollows~
+karsus~
+40 50
+28800 28999
+unopened
+none
+0
+1
+Karsus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#28800
+Dummy Room~
+~
+unused
+D NORTH 28801 0 0
+~
+~
+OWNER none~
+#28801
+Dummy Room~
+~
+unused
+D SOUTH 28800 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

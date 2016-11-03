@@ -1,0 +1,333 @@
+#AREA
+mountpath.are~
+Iseldheim Mountain Path~
+Lyntress~
+0 0
+29400 29424
+road_river
+none
+0
+1
+Lyntress~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#29400
+A Steep Path~
+A small rocky path has begun up a mammoth of a mountain.  A few steps
+away is the base of the mountian.  Around the base is a multitude of small
+and medium sized boulders, a very odd colour of gray black.  Gazing upward
+there is a small shelf to stand on.  Further than that the moutain is
+sprinkled with some powdery snow right before clouds hinder the view.  
+~
+unused
+D SOUTH 24429 0 0
+door~
+~
+D UP 29401 0 0
+door~
+~
+OWNER none~
+#29401
+A Narrow Shelf~
+This spot on the ledge has been well used, with what looks to be an
+indentation where travelers have passed across to climb upwards.  Though a
+noticeable amount of small red moss growing in a crevice between the wall of
+the moutain and the floor of the ledge.  Up on the rock wall small dark
+rocks serve as noticable footholds to climb up on.  Looking up, there is a
+little more powdery snow visible than before towards the top of the
+mountain.  
+~
+unused
+D EAST 29402 0 0
+door~
+~
+D UP 29403 0 0
+door~
+~
+D DOWN 29400 0 0
+door~
+~
+OWNER none~
+#29402
+A Narrow Shelf~
+A small ledge allows walking almost freely without thought of falling. 
+With bits of moss growing here and there on the little ledge, this spot
+looks like it's not been used much, unlike the rest of the trail.  Carefully
+looking over the ledge there are small boulders resting below, but little
+movement from any wildlife.  Though a twittering bird can be heard far off
+in the distance.  
+~
+unused
+D WEST 29401 0 0
+door~
+~
+OWNER none~
+#29403
+A Mountain Path~
+A well worn trail stretches out to the north in the dark stone.  The
+climate has changed quite noticeably for the worse.  The wind has become
+sharp and biting, and small flakes of feathery snow are starting to fall all
+around.  Small almost black bits of stone rest here and there along the
+path, seeming a bit out of place because of their dull, yet noticeable
+luster.  
+~
+unused
+D NORTH 29404 0 0
+door~
+~
+D DOWN 29401 0 0
+door~
+~
+OWNER none~
+#29404
+A Mountain Path~
+Continuing on the path it starts to ascend slightly.  The snowflakes have
+become a bit larger, though no less feathery.  The sky has turned a gray
+cloudy colour, while the white clouds surrounding the top of the mountain
+have become wafty and seem to have moved down a bit.  The small black little
+stones continue to sprinkle the path with their odd black shimmer.  
+~
+unused
+D NORTH 29405 0 0
+door~
+~
+D SOUTH 29403 0 0
+door~
+~
+OWNER none~
+#29405
+A Turn in the Path~
+Ascending further, the trail continues on to the east.  A small strange
+looking plant grows out of a crack in the mountain wall.  The cold weather
+doesn't look to faze it.  The ground is starting to accumulate a little bit
+of snow, though most of it melts before it can touch down and take its hold.
+The mountain wall has two noticeably different colors to it now, a dark gray
+black color, and shimmery black color mixed in.  The shimmery black looks
+like the small pebbles that litter the ground.  
+~
+unused
+D EAST 29406 0 0
+door~
+~
+D SOUTH 29404 0 0
+door~
+~
+OWNER none~
+#29406
+Rounding the Mountain~
+The path is becoming steep as the ascent continues on to the south. 
+Movement causes the little black pebbles to roll down the path.  Little is
+to be seen around this large wall of massive rock.  Flakes of icy snow
+continue to fall, though the sharp wind hurtles most of it away.  There are
+some larger stones that look like the odd black pebbles here, but they are
+sharp and jagged.  
+~
+unused
+D SOUTH 29408 0 0
+door~
+~
+D WEST 29405 0 0
+door~
+~
+OWNER none~
+#29407
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#29408
+A Mountain Trail~
+An abrupt wall is here that looks as if someone had sheered it off on
+purpose.  Small noticeable black rocks serve as footholds to climb up the
+wall.  More red moss is growing here in the crevice between the rock wall
+and floor, as well as another strange looking plant.  The snow has started
+to accumulate more on the ground, though it melts before it can touch down
+near the moss.  
+~
+unused
+D NORTH 29406 0 0
+door~
+~
+D UP 29409 0 0
+door~
+~
+OWNER none~
+#29409
+A Mountain Path~
+The wind has become ever the more biting, and has begun to blow harder. 
+The snow has picked up and is falling heavily now, though it still is not
+managing to take hold of the rocky floor.  The ascent continues on to the
+west.  Looking out past the mountain the clouds block any kind of view.  No
+sounds except the howling wind can be heard anymore, and the occasional fall
+of a few jagged rocks down the path.  
+~
+unused
+D WEST 29410 0 0
+door~
+~
+D DOWN 29408 0 0
+door~
+~
+OWNER none~
+#29410
+A Turn in the Path~
+Ascending further to the north the path continues on.  The wind has
+become relentless in it's howling and sharpness.  The clouds seems to be all
+around you obscuring your view any farther than a few feet.  The odd black
+rocks roll and skip down the path at the blowing of the wind.  A medium
+sized boulder is in the way on the path.  Carefully moving around it will
+make the northern pathway accessible.  
+~
+unused
+D NORTH 29411 0 0
+door~
+~
+D EAST 29409 0 0
+door~
+~
+OWNER none~
+#29411
+A Mountain Path~
+As the path contiues north, a small cave can be seen to the east.  The
+snow is starting to take hold of the rocky floor, and is being swept, little
+by little, into the entrance of the cave.  The small black pebbles and
+jagged stones aren't moving at the wind's command anymore, but rather are
+stuck to the mountain by a thin layer of shiny ice, bringing out their
+luster among the white snow even more.  
+~
+unused
+D NORTH 29413 0 0
+door~
+~
+D EAST 29412 0 0
+door~
+~
+D SOUTH 29410 0 0
+door~
+~
+OWNER none~
+#29412
+A Small Cave~
+A dim light cascades through the opening of the cave from outside.  Small
+flurries of snow come in the entrance every now and again, only to melt if
+they get any further than a foot or two past the opening.  The wind's
+relentless howling has died down, and the temperature is suprisingly warm. 
+A larger version of the odd black pebbles and rocks is slightly gleaming in
+the back of the cave.  
+~
+unused
+D WEST 29411 0 0
+door~
+~
+OWNER none~
+#29413
+A Narrow Ledge~
+Still ascending this ledge barely accomodates the size of your feet.  The
+snow flakes have started to turn into hail, and the snow on the narrow ledge
+here is thick, but covered in a sheet of ice.  The wind has picked up and
+continues its almost deafening howl.  Movement is a terrible task, and the
+cold is stinging.  The odd black stones have disappeared under the coating
+of snow, though their outline can still be seen.  
+~
+unused
+D EAST 29414 0 0
+door~
+~
+D SOUTH 29411 0 0
+door~
+~
+OWNER none~
+#29414
+A Narrow Ledge~
+Another abrupt wall is here, starting to be covered by ice.  Barely are
+the footholds of black rock visible.  The snow and hail have made a slippery
+path here, thick, but deadly if the wrong step is made.  There is less snow
+and ice near the spot where the rock wall and ledge meet up.  Some of the
+odd black stones are half visible here, due to the minimal shelter from the
+wind and snow.  
+~
+unused
+D WEST 29413 0 0
+door~
+~
+D UP 29415 0 0
+door~
+~
+OWNER none~
+#29415
+A Snowy Mountain Path~
+The ascent has come to an almost abrupt halt.  The stoney floor has
+flattened out, but no sign of it can be seen.  There is at least a foot of
+snow covering it.  Being above the clouds, there is a gray blue sky to be
+seen.  The mountain wall still towers overhead, but not too far.  The wind
+is not as violent, but still slightly sharp.  In the distance the sounds of
+a city can be heard, particularly the sounds of what seem to be horses
+hooves clomping about.  
+~
+unused
+D WEST 29416 0 0
+door~
+~
+D DOWN 29414 0 0
+door~
+~
+OWNER none~
+#29416
+A Turn in the Path~
+The snowy ascent has come to an end, now on flat snow and ice.  The snow
+is still falling, though it has become fluffy and less icy again.  The wind
+picks up every now and again, making a rope bridge in the distance creak and
+groan a little.  Some of the larger odd black rocks have become visible
+again, shining brighter against the cold white snow.  The sounds of a city
+are growing louder, the clank of metal can be heard, ever present over the
+sound of hooves.  
+~
+unused
+D NORTH 29417 0 0
+door~
+~
+D EAST 29415 0 0
+door~
+~
+OWNER none~
+#29417
+A Wide Plank-Bridge~
+Swaying, the bridge moves unsteadily under weight.  Though the planks
+have turned color from the harsh wintery weather the bridge looks well
+maintained.  None of the planks are missing, and the rope, serving as
+railing and holding the planks together, has been well made.  The gate and
+walls of a city are well visible now, even through the steady flurries of
+snow.  Even the sounds of grunting from the citizens can be slightly heard
+over the wind and clomp of hooves.  
+~
+unused
+D NORTH 3800 0 0
+door~
+~
+D SOUTH 29416 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

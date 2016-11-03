@@ -1,0 +1,572 @@
+#AREA
+bounty.are~
+Bounty Cabal~
+Jathruk/Tiernus~
+1 51
+23600 23624
+cabal
+none
+0
+1
+Jathruk Tiernus~
+
+#MOBS
+#23600
+cleric healer bounty~
+the old cleric~
+A old, wizened cleric ignores you and continues his prayer.
+~
+He is an old, wise cleric serving his cabal, the Bounty, and praying to
+his gods for the mangled to extract a few more precious gold coins.  
+~
+0 23600 100 human~
+60 1d1+11999 10d10+10 0 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT CLERIC
+ACT NOPURGE
+ACT HEALER
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM SLEEP
+RES WEAPON
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#23601
+hunter guardian bounty bountyc~
+the Guardian Hunter~
+Dressed in heavy, protective armor, the Guardian Hunter lounges here looking for intruders.
+~
+He is a strong looking mercenary with a sharp look in his eyes.  He
+seizes everybody in the vicinity without authorization to enter the Bounty
+Headquarters.  
+~
+0 23601 100 human~
+30 1d1+7499 10d5+30 0 100 slash
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+CABAL bounty
+B cabal EQUALTO 4 23602 EMOTE growls and blocks the way inward.~
+#23602
+greedy shopkeeper~
+A shady-looking shopkeeper~
+A suspicious looking man is here, offering to sell you wares of dubious origin.
+~
+Wrapped in shadows, you wonder where this man gets his things, but decide
+it would be much wiser not to ask.  
+~
+0 23602 100 human~
+52 1d1+8999 10d14+30 0 100 stab
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT OUTDOORS
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#23603
+master guardian sensei bounty bountyc~
+the Master Sensei~
+A deadly looking man stands here quietly in black robes, seemingly motionless.
+~
+The master is the true leader of the Bounty Hunters, and his status has
+been well earned through his unparalleled grasp of both the concepts of
+martial arts and of hand to hand combat.  
+~
+0 23601 100 human~
+45 1d1+14999 10d14+30 0 100 punch
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT INNER_GUARDIAN
+ACT NOPURGE
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+CABAL bounty
+#23604
+dargor short man~
+Dargor~
+A short man stands here holding a closed book tightly against his chest.
+~
+A bit of hair sprouts out of the back of this seedy-looking man's head,
+otherwise he is completely bald.  Scars cover his face and all exposed areas
+of flesh, and he seems to favor his left leg over his right.  It seems clear
+that this is the only duty that he can currently perform for the Guild.  
+~
+0 0 0 human~
+35 17d8+1867 6d3+43 30 100 beating
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+IMM CHARM
+CABAL bounty
+#23624
+dummy mob~
+dummy mob~
+~
+~
+0 0 0 human~
+1 0d8+2 0d0+0 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#23601
+gold cabal object bounty contracts~
+the Bounty Hunter Contracts~
+A listing of all the Bounty Hunter Contracts.~
+treasure
+paper~
+0 0 0 0 0
+51 0 100000 P
+WEAR TAKE
+WEAR HOLD
+ITEM NOPURGE
+LIMIT 1
+CABAL BOUNTY
+TIMER 0
+
+#23606
+bounty bounties~
+a massive, heavily used book.~
+A massive, heavily used book sits upon Dargor's desk.~
+trash
+vellum~
+0 0 0 0 0
+60 0 0 P
+LIMIT 0
+VERB check
+TIMER 0
+E book tome massive~
+This huge, heavily worn book contains unintelligible markings.  Clearly
+the bounties are stored in some shorthand you do not understand.  Perhaps
+understand.  Perhaps Dargor will translate them for you if you want to CHECK
+BOUNTIES.  
+~
+
+#23610
+red black potion~
+a deadly looking red and black potion~
+A deadly looking red and black potion froths here.~
+potion
+glass~
+53 'acid blast' 'fireball' 'iceball' 'reserved'
+51 0 2000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+ITEM INVENTORY
+LIMIT 0
+TIMER 0
+
+#23611
+glowing white potion~
+a bubbling potion glowing blinding white~
+A potion that glows brightly bubbles here.~
+potion
+glass~
+30 'sanctuary' 'bless' 'reserved' 'reserved'
+51 0 3000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+ITEM INVENTORY
+LIMIT 0
+TIMER 0
+
+#23612
+translucent potion~
+a small translucent potion~
+A potion that light seems to flow through lies here on the ground.~
+potion
+glass~
+45 'pass door' 'protective shield' 'reserved' 'reserved'
+51 0 5000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+ITEM INVENTORY
+LIMIT 0
+TIMER 0
+
+#23620
+Bounty belt small utility~
+a Bounty Hunter's utility belt~
+A small belt is here, marked with the insignia of the Bounty Hunter's Guild.~
+armor
+hard leather~
+2 2 2 2 0
+10 2 500 P
+WEAR TAKE
+WEAR WAIST
+RESTRICT BOUNTY_ONLY
+LIMIT 0
+TIMER 0
+
+#23621
+well-made throwing net bounty~
+a well-made throwing net~
+A large, well-made net lies here, marked in one corner with the insignia of the Bounty Hunter's Guild.~
+armor
+hemp~
+0 0 0 0 0
+25 5 500 P
+WEAR TAKE
+WEAR HOLD
+RESTRICT BOUNTY_ONLY
+LIMIT 0
+VERB throw
+TIMER 0
+
+#23622
+small acrid vial~
+a small, acrid smelling vial~
+A small vial lies here, marked with a small insignia of the Bounty Hunter's Guild~
+trash
+glass~
+0 0 0 0 0
+30 1 1000 P
+WEAR TAKE
+WEAR HOLD
+RESTRICT BOUNTY_ONLY
+LIMIT 0
+TIMER 0
+
+#23623
+small acrid vial~
+a small, acrid smelling vial~
+A small vial lies here, marked with a small insignia of the Bounty Hunter's Guild~
+trash
+glass~
+0 0 0 0 0
+45 1 1000 P
+WEAR TAKE
+WEAR HOLD
+RESTRICT BOUNTY_ONLY
+LIMIT 0
+TIMER 0
+
+#23624
+small acrid vial~
+a small, acrid smelling vial~
+A small vial lies here, marked with a small insignia of the Bounty Hunter's Guild~
+trash
+glass~
+0 0 0 0 0
+51 1 1000 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#23600
+A Dusty Saloon~
+Pushing through the creaky, swinging wooden doors, you enter what appears
+to be a well established saloon.  Despite the dust and dirt that seems to
+pervade everywhere around here, the occupants seem to be enjoying
+themselves, as the loud buzz of dozens of simultaeneous conversations
+reaches your ears.  Ahead of you is the bar, stocked with a surprising
+number of odd looking bottles for such a homely establishment, while on
+either side of you card games and their grizzled, tough looking players
+continue unabated.  A small door in the corner leads off to a quiet
+corridor.  
+~
+inside
+ROOM INDOORS
+D NORTH 23601 AF 0
+small oak door~
+A small oak door in the corner leads off to a quieter part of the saloon.
+~
+D WEST 21506 AF 0
+~
+The swinging saloon doors open to reveal the dusty road outside.
+~
+#23601
+A Quiet Corridor~
+Strangely quiet, stepping inside this narrow, wood paneled corridor
+provides a sharp contrast to the noise and bustle of the saloon outside. 
+You notice a thick, reinforced door straight ahead, opened, with a chair and
+spitoon, clearly intended to provide some convenience to someone guarding
+this odd door.  A small sign on the door says 'Hunters'.  
+~
+inside
+ROOM INDOORS
+D NORTH 23602 0 0
+~
+~
+D SOUTH 23600 AF 0
+small oak door~
+A small oak door leads back out to the road.
+~
+CABAL bounty
+#23602
+A Back Room~
+Unidentifiable smoke hangs thickly in this dimly lit, quiet room.  Old,
+broken backed chairs have been discarded carelessly in the corners, while
+the gloomy, inadequate light in the room is provided by a flickering, rusted
+lantern.  A wide, creaky wooden staircase leads down into what appears to be
+some sort of basement, while to the north a small, dark alcove lies.  
+~
+inside
+ROOM INDOORS
+D NORTH 23604 0 0
+~
+~
+D EAST 23605 0 0
+~
+~
+D SOUTH 23601 0 0
+~
+~
+D DOWN 23603 0 0
+~
+~
+CABAL bounty
+#23603
+Before the Vault~
+Dominating the room, a massive iron vault looms over the northern edge of
+the room.  Dark grey in color, thick steel bands wrap around it, adding even
+more protection to the giant vessel.  Visible even in the dim light is a
+large combination lock, the doors closed.  Behind you, the creaky wooden
+stairs offer the only escape from the vault room.  Eerie shadows seem to
+move in the scant light provided by the flickering torches that are the only
+source of illumination.  
+~
+inside
+ROOM INDOORS
+D UP 23602 0 0
+~
+~
+CABAL bounty
+#23604
+A Small Alcove~
+This small, dark alcove is lit only by tiny candles interspersed around
+its semicircular shape.  Miniature statues and religious relics to more
+deities than you can count adorn the room.  In the center of the alcove is a
+large, round statue of a fat man with a disturbing grin on his face.  Below
+the statue is a tiny tag, etched with some words you can just barely make
+out.  To the south the alcove expands into the back room.  
+~
+inside
+ROOM INDOORS
+D SOUTH 23602 0 0
+~
+~
+E tiny tag statue~
+The small tag at the bottom of the statue reads in elaborate script:
+'Dispater - Lord of Greed'
+~
+CABAL bounty
+#23605
+A Darkened Hallway~
+Unidentifiable smoke hangs thickly in this dimly lit, quiet hallway. 
+Old, broken backed chairs have been discarded carelessly in the corners,
+while the gloomy, inadequate light in the room is provided by a flickering,
+rusted lantern.  The darkened hallway continues around to the north, into
+what appears to be a small study, and out into a larger room to the west.  
+~
+unused
+ROOM INDOORS
+D NORTH 23606 0 0
+~
+This hallway leads to a small room.
+~
+D WEST 23602 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#23606
+Within Dargor's Study~
+This small, cramped room is full of all manner of books, maps, and
+papers.  Near the eastern wall, as large desk faces the hallway, with one
+particularly large book sitting atop it.  A rather seedy-looking man sits at
+the desk, writing in the book, often in languages you have never seen
+before.  
+~
+unused
+ROOM INDOORS
+D SOUTH 23605 0 0
+~
+A darkened hallway leads out of the room.
+~
+CABAL bounty
+OWNER none~
+#23607
+Within the Guild Halls~
+~
+unused
+ROOM NOWHERE
+D NORTH 23611 0 0
+~
+~
+D EAST 23608 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#23608
+Dummy Room~
+~
+unused
+ROOM NOWHERE
+D NORTH 23612 0 0
+~
+~
+D EAST 23609 0 0
+~
+~
+D WEST 23607 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#23609
+Dummy Room~
+~
+unused
+ROOM NOWHERE
+D NORTH 23613 0 0
+~
+~
+D WEST 23608 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#23610
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NOWHERE
+CABAL bounty
+OWNER none~
+#23611
+Dummy Room~
+~
+unused
+ROOM NOWHERE
+D EAST 23612 0 0
+~
+~
+D SOUTH 23607 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#23612
+Dummy Room~
+~
+unused
+ROOM NOWHERE
+D EAST 23613 0 0
+~
+~
+D SOUTH 23608 0 0
+~
+~
+D WEST 23611 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#23613
+Dummy Room~
+~
+unused
+ROOM NOWHERE
+D SOUTH 23609 0 0
+~
+~
+D WEST 23612 0 0
+~
+~
+CABAL bounty
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 23601 TO 23601 GLIMIT 1 LLIMIT 1
+MOB 23603 TO 23603 GLIMIT 1 LLIMIT 1
+MOB 23600 TO 23604 GLIMIT 1 LLIMIT 1
+GIVE 23621
+OBJECT 23606 TO 23606
+MOB 23604 TO 23606 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 23601 greet_prog greet_prog_outer_guardian
+M 23601 death_prog death_prog_outer_guardian
+M 23601 attack_prog attack_prog_outer_guardian
+M 23603 greet_prog greet_prog_inner_guardian
+M 23603 death_prog death_prog_inner_guardian
+I 23601 give_prog give_prog_cabal_item
+I 23606 verb_prog verb_prog_check_bounties
+I 23621 verb_prog verb_prog_throw_net
+END
+#$

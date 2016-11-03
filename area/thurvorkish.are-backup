@@ -1,0 +1,908 @@
+#AREA
+thurvorkish.are~
+Thur Vorkish~
+Dhyrron~
+25 51
+4600 4699
+normal
+temperate
+0
+1
+Dhyrron~
+
+#MOBS
+#4699
+dhyrron's bitch~
+Dhyrron's bitch~
+Dhyrron's bitch is here.
+~
+She smells, swears, farts and picks her nose.  She glances erotically
+at you and flings a wad of snot at you.  Her hair is matted and smells
+somewhat of urine!.  F 
+~
+-1000 0 0 abyss~
+60 30d8+7128 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#4600
+Dummy Room~
+~
+unused
+D NORTH 4601 0 0
+~
+~
+OWNER none~
+#4601
+The Gates of Thur Vorkish~
+You are standing before a massive mithril gate supported by two identical
+towers crafted in smooth polished marble.  They do not look as though they
+were meant to withstand any sort of attacking force, though some parts of
+the gate have been repaired with makeshift parts.  To the left of the gate
+you notice a large wooden lever attached to a giant metallic chain that is
+fed through an expertly masoned stone channel.  
+ ~
+unused
+D NORTH 4602 0 0
+~
+~
+D SOUTH 4600 0 0
+~
+~
+OWNER none~
+#4602
+A Large Downtrodden Chamber~
+~
+unused
+D NORTH 4642 0 0
+~
+~
+D EAST 4610 0 0
+~
+~
+D SOUTH 4601 0 0
+~
+~
+D WEST 4603 0 0
+~
+~
+OWNER none~
+#4603
+Dummy Room~
+~
+unused
+D EAST 4602 0 0
+~
+~
+D WEST 4604 0 0
+~
+~
+OWNER none~
+#4604
+Dummy Room~
+~
+unused
+D EAST 4603 0 0
+~
+~
+D WEST 4605 0 0
+~
+~
+OWNER none~
+#4605
+a well-lit temple hallway~
+~
+unused
+D NORTH 4663 AB 0
+large iron-bound door~
+~
+D EAST 4604 0 0
+~
+~
+D WEST 4606 0 0
+~
+~
+OWNER none~
+#4606
+Dummy Room~
+~
+unused
+D EAST 4605 0 0
+~
+~
+D WEST 4607 0 0
+~
+~
+OWNER none~
+#4607
+Dummy Room~
+~
+unused
+D EAST 4606 0 0
+~
+~
+D WEST 4608 0 0
+~
+~
+OWNER none~
+#4608
+Dummy Room~
+~
+unused
+D NORTH 0 0 0
+~
+~
+D EAST 4607 0 0
+~
+~
+D WEST 4609 0 0
+~
+~
+OWNER none~
+#4609
+Dummy Room~
+~
+unused
+D NORTH 4640 0 0
+~
+~
+D EAST 4608 0 0
+~
+~
+OWNER none~
+#4610
+Dummy Room~
+~
+unused
+D EAST 4611 0 0
+~
+~
+D WEST 4602 0 0
+~
+~
+OWNER none~
+#4611
+Dummy Room~
+~
+unused
+D EAST 4612 0 0
+~
+~
+D WEST 4610 0 0
+~
+~
+OWNER none~
+#4612
+Dummy Room~
+~
+unused
+D EAST 4613 0 0
+~
+~
+D WEST 4611 0 0
+~
+~
+OWNER none~
+#4613
+Dummy Room~
+~
+unused
+D EAST 4614 0 0
+~
+~
+D WEST 4612 0 0
+~
+~
+OWNER none~
+#4614
+Dummy Room~
+~
+unused
+D NORTH 4641 A 0
+plain wooden door~
+~
+D EAST 4615 0 0
+~
+~
+D WEST 4613 0 0
+~
+~
+OWNER none~
+#4615
+Dummy Room~
+~
+unused
+D EAST 4616 0 0
+~
+~
+D WEST 4614 0 0
+~
+~
+OWNER none~
+#4616
+Dummy Room~
+~
+unused
+D NORTH 4617 0 0
+~
+~
+D WEST 4615 0 0
+~
+~
+OWNER none~
+#4617
+Dummy Room~
+~
+unused
+D NORTH 4618 0 0
+~
+~
+D SOUTH 4616 0 0
+~
+~
+OWNER none~
+#4618
+Dummy Room~
+~
+unused
+D NORTH 4619 0 0
+~
+~
+D SOUTH 4617 0 0
+~
+~
+OWNER none~
+#4619
+Dummy Room~
+~
+unused
+D NORTH 4620 0 0
+~
+~
+D SOUTH 4618 0 0
+~
+~
+D WEST 4650 0 0
+~
+~
+OWNER none~
+#4620
+Dummy Room~
+~
+unused
+D NORTH 4621 0 0
+~
+~
+D SOUTH 4619 0 0
+~
+~
+OWNER none~
+#4621
+Dummy Room~
+~
+unused
+D NORTH 4622 0 0
+~
+~
+D SOUTH 4620 0 0
+~
+~
+OWNER none~
+#4622
+Dummy Room~
+~
+unused
+D SOUTH 4621 0 0
+~
+~
+D WEST 4623 0 0
+~
+~
+OWNER none~
+#4623
+Dummy Room~
+~
+unused
+D EAST 4622 0 0
+~
+~
+D WEST 4624 0 0
+~
+~
+OWNER none~
+#4624
+Dummy Room~
+~
+unused
+D EAST 4623 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 4625 0 0
+~
+~
+OWNER none~
+#4625
+Dummy Room~
+~
+unused
+D EAST 4624 0 0
+~
+~
+D WEST 4626 0 0
+~
+~
+OWNER none~
+#4626
+Dummy Room~
+~
+unused
+D EAST 4625 0 0
+~
+~
+D WEST 4627 0 0
+~
+~
+OWNER none~
+#4627
+Dummy Room~
+~
+unused
+D EAST 4626 0 0
+~
+~
+D WEST 4628 0 0
+~
+~
+OWNER none~
+#4628
+Dummy Room~
+~
+unused
+D EAST 4627 0 0
+~
+~
+D WEST 4629 0 0
+~
+~
+OWNER none~
+#4629
+Dummy Room~
+~
+unused
+D EAST 4628 0 0
+~
+~
+D SOUTH 4652 0 0
+~
+~
+D WEST 4630 0 0
+~
+~
+OWNER none~
+#4630
+Dummy Room~
+~
+unused
+D EAST 4629 0 0
+~
+~
+D WEST 4631 0 0
+~
+~
+OWNER none~
+#4631
+Dummy Room~
+~
+unused
+D EAST 4630 0 0
+~
+~
+D WEST 4632 0 0
+~
+~
+OWNER none~
+#4632
+Dummy Room~
+~
+unused
+D EAST 4631 0 0
+~
+~
+D WEST 4633 0 0
+~
+~
+OWNER none~
+#4633
+Dummy Room~
+~
+unused
+D EAST 4632 0 0
+~
+~
+D WEST 4634 0 0
+~
+~
+OWNER none~
+#4634
+Dummy Room~
+~
+unused
+D EAST 4633 0 0
+~
+~
+D WEST 4635 0 0
+~
+~
+OWNER none~
+#4635
+Dummy Room~
+~
+unused
+D EAST 4634 0 0
+~
+~
+D SOUTH 4636 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+OWNER none~
+#4636
+Dummy Room~
+~
+unused
+D NORTH 4635 0 0
+~
+~
+D SOUTH 4637 0 0
+~
+~
+OWNER none~
+#4637
+Dummy Room~
+~
+unused
+D NORTH 4636 0 0
+~
+~
+D SOUTH 4638 0 0
+~
+~
+OWNER none~
+#4638
+Dummy Room~
+~
+unused
+D NORTH 4637 0 0
+~
+~
+D EAST 4659 0 0
+~
+~
+D SOUTH 4639 0 0
+~
+~
+OWNER none~
+#4639
+Dummy Room~
+~
+unused
+D NORTH 4638 0 0
+~
+~
+D SOUTH 4640 0 0
+~
+~
+OWNER none~
+#4640
+Dummy Room~
+~
+unused
+D NORTH 4639 0 0
+~
+~
+D SOUTH 4609 0 0
+~
+~
+OWNER none~
+#4641
+The Quiet Sleeping Quarters~
+The room is rather plain and cut down to the bare essentials.  Several
+empty beds are aligned upon each wall.  A few small chests have been placed
+in the back of the room for the initiates to store their few possessions
+while they perform their duties.  A lone lit torch provides the only amount
+of light within this quiet sanctuary.  
+~
+unused
+D SOUTH 4614 A 0
+plain wooden door~
+~
+OWNER none~
+#4642
+Dummy Room~
+~
+unused
+D NORTH 4643 0 0
+~
+~
+D SOUTH 4602 0 0
+~
+~
+OWNER none~
+#4643
+Dummy Room~
+~
+unused
+D NORTH 4644 0 0
+~
+~
+D SOUTH 4642 0 0
+~
+~
+D WEST 4666 AB 0
+poorly hidden wall mat~
+~
+OWNER none~
+#4644
+The Central Auditorium of Vorkish~
+~
+unused
+D NORTH 4651 0 0
+~
+~
+D EAST 4645 0 0
+~
+~
+D SOUTH 4643 0 0
+~
+~
+D WEST 4654 0 0
+~
+~
+D DOWN 4653 A 0
+large silver gate~
+~
+OWNER none~
+#4645
+Dummy Room~
+~
+unused
+D EAST 4646 0 0
+~
+~
+D WEST 4644 0 0
+~
+~
+OWNER none~
+#4646
+Dummy Room~
+~
+unused
+D NORTH 4662 A 0
+heavily repaired doorway~
+~
+D EAST 4647 0 0
+~
+~
+D WEST 4645 0 0
+~
+~
+OWNER none~
+#4647
+Dummy Room~
+~
+unused
+D EAST 4648 0 0
+~
+~
+D WEST 4646 0 0
+~
+~
+OWNER none~
+#4648
+A Poorly-Lit Hallway~
+~
+unused
+D NORTH 4660 A 0
+tattered wooden door~
+~
+D EAST 4649 0 0
+~
+~
+D SOUTH 4661 A 0
+plain wooden door~
+~
+D WEST 4647 0 0
+~
+~
+OWNER none~
+#4649
+Dummy Room~
+~
+unused
+D EAST 4650 0 0
+~
+~
+D WEST 4648 0 0
+~
+~
+OWNER none~
+#4650
+Dummy Room~
+~
+unused
+D EAST 4619 0 0
+~
+~
+D WEST 4649 0 0
+~
+~
+OWNER none~
+#4651
+Dummy Room~
+~
+unused
+D NORTH 4652 0 0
+~
+~
+D SOUTH 4644 0 0
+~
+~
+OWNER none~
+#4652
+Dummy Room~
+~
+unused
+D NORTH 4629 0 0
+~
+~
+D SOUTH 4651 0 0
+~
+~
+OWNER none~
+#4653
+Dummy Room~
+~
+unused
+D SOUTH 4667 0 0
+~
+~
+D UP 4644 A 0
+large silver gate~
+~
+OWNER none~
+#4654
+Dummy Room~
+~
+unused
+D EAST 4644 0 0
+~
+~
+D WEST 4655 0 0
+~
+~
+OWNER none~
+#4655
+Dummy Room~
+~
+unused
+D EAST 4654 0 0
+~
+~
+D WEST 4656 0 0
+~
+~
+OWNER none~
+#4656
+Dummy Room~
+~
+unused
+D EAST 4655 0 0
+~
+~
+D WEST 4657 0 0
+~
+~
+OWNER none~
+#4657
+Dummy Room~
+~
+unused
+D EAST 4656 0 0
+~
+~
+D WEST 4658 0 0
+~
+~
+OWNER none~
+#4658
+Dummy Room~
+~
+unused
+D EAST 4657 0 0
+~
+~
+D WEST 4659 0 0
+~
+~
+OWNER none~
+#4659
+Dummy Room~
+~
+unused
+D EAST 4658 0 0
+~
+~
+D WEST 4638 0 0
+~
+~
+OWNER none~
+#4660
+A Ransacked Library~
+~
+unused
+D SOUTH 4648 A 0
+tattered wooden door~
+~
+OWNER none~
+#4661
+Dummy Room~
+~
+unused
+D NORTH 4648 A 0
+plain wooden door~
+~
+OWNER none~
+#4662
+An Ill-Stocked Apothecary~
+~
+unused
+D SOUTH 4646 A 0
+heavily repaired doorway~
+~
+OWNER none~
+#4663
+The Private Chambers of the Monitor~
+~
+unused
+D EAST 4664 0 0
+~
+~
+D SOUTH 4605 AB 0
+large iron-bound door~
+~
+OWNER none~
+#4664
+The Monitor's Personal Study~
+~
+unused
+D NORTH 4665 AB 0
+small ivory seal~
+~
+D WEST 4663 0 0
+~
+~
+OWNER none~
+#4665
+Dummy Room~
+~
+unused
+D EAST 4666 0 0
+~
+~
+D SOUTH 4664 A 0
+small ivory seal~
+~
+OWNER none~
+#4666
+Dummy Room~
+~
+unused
+D EAST 4643 AB 0
+poorly hidden wall mat~
+~
+D WEST 4665 0 0
+~
+~
+OWNER none~
+#4667
+Dummy Room~
+~
+unused
+D NORTH 4653 0 0
+~
+~
+D SOUTH 4668 0 0
+~
+~
+D WEST 4675 0 0
+~
+~
+OWNER none~
+#4668
+Dummy Room~
+~
+unused
+D NORTH 4667 0 0
+~
+~
+D EAST 4677 0 0
+~
+~
+D SOUTH 4669 0 0
+~
+~
+D WEST 4676 0 0
+~
+~
+OWNER none~
+#4669
+Dummy Room~
+~
+unused
+D NORTH 4668 0 0
+~
+~
+D SOUTH 4670 0 0
+~
+~
+OWNER none~
+#4670
+Dummy Room~
+~
+unused
+D NORTH 4669 0 0
+~
+~
+D EAST 4671 0 0
+~
+~
+OWNER none~
+#4671
+Dummy Room~
+~
+unused
+D EAST 4672 0 0
+~
+~
+D WEST 4670 0 0
+~
+~
+OWNER none~
+#4672
+Dummy Room~
+~
+unused
+D NORTH 4674 AB 0
+heavy stone seal~
+~
+D EAST 4673 0 0
+~
+~
+D WEST 4671 0 0
+~
+~
+OWNER none~
+#4673
+A Dark Menacing Passageway~
+Very little light enters this cavern.  The smoothly polished walls are
+reflecting minute amounts of light comming from a large bronze seal that is
+entrenched into the eastern most edge of the wall.  The seal is etched with
+various dwarven runes and mystical symbols which seem to pulse with a
+powerfu

@@ -1,0 +1,1523 @@
+#AREA
+fallenkeep.are~
+The Fallen Keep~
+Rendsin~
+20 30
+4400 4599
+unopened
+none
+0
+1
+Rendsin~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#4400
+A forest pathway~
+The dense forest has been cut away by man allowing passage deeper
+into the forest. It seems that the trees were not only chopped down
+but also magically singed to prevent them from growing back.
+The pathway allows you to travel north or south.
+~
+unused
+D NORTH 4401 0 0
+~
+~
+OWNER none~
+#4401
+A forest pathway~
+The dense forest has been cut away by man allowing passage deeper
+into the forest. It seems that the trees were not only chopped down
+but also magically singed to prevent them from growing back.
+The pathway allows you to travel north or south.
+~
+unused
+D NORTH 4402 0 0
+~
+~
+D SOUTH 4400 0 0
+~
+~
+OWNER none~
+#4402
+A forest pathway~
+The dense forest has been cut away by man allowing passage deeper
+into the forest. It seems that the trees were not only chopped down
+but also magically singed to prevent them from growing back.
+The pathway allows you to travel north or south.
+~
+unused
+D NORTH 4403 0 0
+~
+~
+D SOUTH 4401 0 0
+~
+~
+OWNER none~
+#4403
+A forest pathway~
+The dense forest has been cut away by man allowing passage deeper
+into the forest. It seems that the trees were not only chopped down
+but also magically singed to prevent them from growing back.
+The pathway allows you to travel north or south.
+~
+unused
+D NORTH 4404 0 0
+~
+~
+D SOUTH 4402 0 0
+~
+~
+OWNER none~
+#4404
+A small grove~
+You are standing within a man made grove. The normal foilage has been trampled
+to the ground but after time flowers and other grasses have come about to make
+a new carpet for the forest.
+~
+unused
+D NORTH 4405 0 0
+~
+~
+D EAST 4408 0 0
+~
+~
+D SOUTH 4403 0 0
+~
+~
+D WEST 4406 0 0
+~
+~
+OWNER none~
+#4405
+A small grove~
+~
+unused
+D NORTH 4410 0 0
+~
+~
+D EAST 4409 0 0
+~
+~
+D SOUTH 4404 0 0
+~
+~
+D WEST 4407 0 0
+~
+~
+OWNER none~
+#4406
+A small grove~
+Walking through the grove you see the normal foilage has been trampled 
+to the ground but newly grown flowers and grasses have taken its place.
+As you stand in the grove you start to notice a large building to the north.
+~
+unused
+D NORTH 4407 0 0
+~
+~
+D EAST 4404 0 0
+~
+~
+OWNER none~
+#4407
+A small grove~
+Walking through the grove you see the normal foilage has been trampled
+to the ground but newly grown flowers and grasses have taken its place.
+As you stand in the grove you start to notice a large building to the north.
+~
+unused
+D EAST 4405 0 0
+~
+~
+D SOUTH 4406 0 0
+~
+~
+D WEST 4417 ABI 0
+~
+~
+OWNER none~
+#4408
+A small grove~
+~
+unused
+D NORTH 4409 0 0
+~
+~
+D WEST 4404 0 0
+~
+~
+OWNER none~
+#4409
+A small grove~
+~
+unused
+D SOUTH 4408 0 0
+~
+~
+D WEST 4405 0 0
+~
+~
+OWNER none~
+#4410
+The base of the keep~
+~
+unused
+D SOUTH 4405 0 0
+~
+~
+D UP 4411 0 0
+~
+~
+OWNER none~
+#4411
+Climbing the ladder~
+~
+unused
+D UP 4412 0 0
+~
+~
+D DOWN 4410 0 0
+~
+~
+OWNER none~
+#4412
+Climbing the ladder~
+~
+unused
+D UP 4413 0 0
+~
+~
+D DOWN 4411 0 0
+~
+~
+OWNER none~
+#4413
+Climbing the ladder~
+~
+unused
+D UP 4414 0 0
+~
+~
+D DOWN 4412 0 0
+~
+~
+OWNER none~
+#4414
+Top of the ladder~
+~
+unused
+D NORTH 4415 0 0
+~
+~
+D DOWN 4413 0 0
+~
+~
+OWNER none~
+#4415
+The keep entrance~
+~
+unused
+D NORTH 4416 A 0
+~
+~
+D SOUTH 4414 0 0
+~
+~
+OWNER none~
+#4416
+The hall of peasants~
+~
+unused
+D EAST 4418 0 0
+~
+~
+D SOUTH 4415 A 0
+~
+~
+D WEST 4446 0 0
+~
+~
+OWNER none~
+#4417
+Brambles and thorns~
+~
+unused
+D EAST 4407 ABI 0
+~
+~
+OWNER none~
+#4418
+The hall of peasants~
+~
+unused
+D EAST 4419 0 0
+~
+~
+D WEST 4416 0 0
+~
+~
+OWNER none~
+#4419
+The hall of peasants~
+~
+unused
+D NORTH 4447 AB 0
+~
+~
+D EAST 4420 0 0
+~
+~
+D SOUTH 4448 AB 0
+~
+~
+D WEST 4418 0 0
+~
+~
+OWNER none~
+#4420
+The hall of peasants~
+~
+unused
+D EAST 4421 0 0
+~
+~
+D WEST 4419 0 0
+~
+~
+OWNER none~
+#4421
+The hall of peasants~
+~
+unused
+D NORTH 4449 AB 0
+~
+~
+D EAST 4422 0 0
+~
+~
+D SOUTH 4450 AB 0
+~
+~
+D WEST 4420 0 0
+~
+~
+OWNER none~
+#4422
+The hall of peasants~
+~
+unused
+D NORTH 4423 0 0
+~
+~
+D WEST 4421 0 0
+~
+~
+OWNER none~
+#4423
+The hall of peasants~
+~
+unused
+D NORTH 4424 0 0
+~
+~
+D EAST 4452 AB 0
+~
+~
+D SOUTH 4422 0 0
+~
+~
+D WEST 4451 AB 0
+~
+~
+OWNER none~
+#4424
+The hall of peasants~
+~
+unused
+D NORTH 4425 0 0
+~
+~
+D SOUTH 4423 0 0
+~
+~
+OWNER none~
+#4425
+The hall of peasants~
+~
+unused
+D NORTH 4426 0 0
+~
+~
+D EAST 4454 AB 0
+~
+~
+D SOUTH 4424 0 0
+~
+~
+D WEST 4453 AB 0
+~
+~
+OWNER none~
+#4426
+The hall of peasants~
+~
+unused
+D NORTH 4427 0 0
+~
+~
+D SOUTH 4425 0 0
+~
+~
+OWNER none~
+#4427
+The hall of peasants~
+~
+unused
+D SOUTH 4426 0 0
+~
+~
+D WEST 4428 0 0
+~
+~
+OWNER none~
+#4428
+The hall of peasants~
+~
+unused
+D EAST 4427 0 0
+~
+~
+D WEST 4429 0 0
+~
+~
+OWNER none~
+#4429
+The hall of peasants~
+~
+unused
+D EAST 4428 0 0
+~
+~
+D WEST 4430 0 0
+~
+~
+OWNER none~
+#4430
+The hall of peasants~
+~
+unused
+D EAST 4429 0 0
+~
+~
+D WEST 4431 0 0
+~
+~
+OWNER none~
+#4431
+The hall of peasants~
+~
+unused
+D EAST 4430 0 0
+~
+~
+D SOUTH 4471 0 0
+~
+~
+D WEST 4432 0 0
+~
+~
+OWNER none~
+#4432
+The hall of peasants~
+~
+unused
+D EAST 4431 0 0
+~
+~
+D SOUTH 4459 0 0
+~
+~
+D WEST 4433 0 0
+~
+~
+OWNER none~
+#4433
+The hall of peasants~
+~
+unused
+D EAST 4432 0 0
+~
+~
+D SOUTH 4470 0 0
+~
+~
+D WEST 4434 0 0
+~
+~
+OWNER none~
+#4434
+The hall of peasants~
+~
+unused
+D EAST 4433 0 0
+~
+~
+D WEST 4435 0 0
+~
+~
+OWNER none~
+#4435
+The hall of peasants~
+~
+unused
+D EAST 4434 0 0
+~
+~
+D WEST 4436 0 0
+~
+~
+OWNER none~
+#4436
+The hall of peasants~
+~
+unused
+D EAST 4435 0 0
+~
+~
+D WEST 4437 0 0
+~
+~
+OWNER none~
+#4437
+The hall of peasants~
+~
+unused
+D EAST 4436 0 0
+~
+~
+D SOUTH 4438 0 0
+~
+~
+OWNER none~
+#4438
+The hall of peasants~
+~
+unused
+D NORTH 4437 0 0
+~
+~
+D SOUTH 4439 0 0
+~
+~
+D WEST 4464 AB 0
+~
+~
+OWNER none~
+#4439
+The hall of peasants~
+~
+unused
+D NORTH 4438 0 0
+~
+~
+D EAST 4465 AB 0
+~
+~
+D SOUTH 4440 0 0
+~
+~
+OWNER none~
+#4440
+The hall of peasants~
+~
+unused
+D NORTH 4439 0 0
+~
+~
+D SOUTH 4441 0 0
+~
+~
+OWNER none~
+#4441
+The hall of peasants~
+~
+unused
+D NORTH 4440 0 0
+~
+~
+D EAST 4463 AB 0
+~
+~
+D SOUTH 4442 0 0
+~
+~
+D WEST 4462 AB 0
+~
+~
+OWNER none~
+#4442
+The hall of peasants~
+~
+unused
+D NORTH 4441 0 0
+~
+~
+D EAST 4443 0 0
+~
+~
+OWNER none~
+#4443
+The hall of peasants~
+~
+unused
+D NORTH 4457 AB 0
+~
+~
+D EAST 4444 0 0
+~
+~
+D SOUTH 4458 AB 0
+~
+~
+D WEST 4442 0 0
+~
+~
+OWNER none~
+#4444
+The hall of peasants~
+~
+unused
+D EAST 4445 0 0
+~
+~
+D WEST 4443 0 0
+~
+~
+OWNER none~
+#4445
+The hall of peasants~
+~
+unused
+D NORTH 4455 AB 0
+~
+~
+D EAST 4446 0 0
+~
+~
+D SOUTH 4456 AB 0
+~
+~
+D WEST 4444 0 0
+~
+~
+OWNER none~
+#4446
+The hall of peasants~
+~
+unused
+D EAST 4416 0 0
+~
+~
+D WEST 4445 0 0
+~
+~
+OWNER none~
+#4447
+Common quarters~
+~
+unused
+D SOUTH 4419 AB 0
+~
+~
+OWNER none~
+#4448
+Common quarters~
+~
+unused
+D NORTH 4419 AB 0
+~
+~
+OWNER none~
+#4449
+Common quarters~
+~
+unused
+D SOUTH 4421 A 0
+~
+~
+OWNER none~
+#4450
+Dummy Room~
+~
+unused
+D NORTH 4421 0 0
+~
+~
+OWNER none~
+#4451
+Common quarters~
+~
+unused
+D EAST 4423 A 0
+~
+~
+OWNER none~
+#4452
+Common quarters~
+~
+unused
+D WEST 4423 A 0
+~
+~
+OWNER none~
+#4453
+A storage closet~
+~
+unused
+D EAST 4425 AB 0
+~
+~
+OWNER none~
+#4454
+The break room~
+~
+unused
+D WEST 4425 AB 0
+~
+~
+OWNER none~
+#4455
+Common quarters~
+~
+unused
+D SOUTH 4445 A 0
+~
+~
+OWNER none~
+#4456
+Common quarters~
+~
+unused
+D NORTH 4445 A 0
+~
+~
+OWNER none~
+#4457
+Common quarters~
+~
+unused
+D SOUTH 4443 A 0
+~
+~
+OWNER none~
+#4458
+Common quarters~
+~
+unused
+D NORTH 4443 A 0
+~
+~
+OWNER none~
+#4459
+The hall of peasants~
+~
+unused
+D NORTH 4432 0 0
+~
+~
+D SOUTH 4460 0 0
+~
+~
+OWNER none~
+#4460
+The hall of peasants~
+~
+unused
+D NORTH 4459 0 0
+~
+~
+D EAST 4461 0 0
+~
+~
+OWNER none~
+#4461
+The residents stairwell~
+~
+unused
+D WEST 4460 0 0
+~
+~
+D UP 4472 0 0
+~
+~
+OWNER none~
+#4462
+Cook's quarters~
+~
+unused
+D EAST 4441 AB 0
+~
+~
+OWNER none~
+#4463
+Cook's quarters~
+~
+unused
+D WEST 4441 A 0
+~
+~
+OWNER none~
+#4464
+Assistant's quarters~
+~
+unused
+D EAST 4438 A 0
+~
+~
+OWNER none~
+#4465
+Inside the kitchen~
+~
+unused
+D EAST 4466 0 0
+~
+~
+D SOUTH 4469 0 0
+~
+~
+D WEST 4439 AB 0
+~
+~
+OWNER none~
+#4466
+Inside the kitchen~
+~
+unused
+D SOUTH 4467 0 0
+~
+~
+D WEST 4465 0 0
+~
+~
+OWNER none~
+#4467
+Inside the kitchen~
+~
+unused
+D NORTH 4466 0 0
+~
+~
+D SOUTH 4468 0 0
+~
+~
+D WEST 4469 0 0
+~
+~
+OWNER none~
+#4468
+The chopping block~
+~
+unused
+D NORTH 4467 0 0
+~
+~
+OWNER none~
+#4469
+Inside the kitchen~
+~
+unused
+D NORTH 4465 0 0
+~
+~
+D EAST 4467 0 0
+~
+~
+OWNER none~
+#4470
+Guard post~
+~
+unused
+D NORTH 4433 0 0
+~
+~
+OWNER none~
+#4471
+Guard post~
+~
+unused
+D NORTH 4431 0 0
+~
+~
+OWNER none~
+#4472
+The residents stairwell~
+~
+unused
+D NORTH 4473 0 0
+~
+~
+D DOWN 4461 0 0
+~
+~
+OWNER none~
+#4473
+The residents stairwell~
+~
+unused
+D SOUTH 4472 0 0
+~
+~
+D UP 4474 0 0
+~
+~
+OWNER none~
+#4474
+Top of the stairwell~
+~
+unused
+D SOUTH 4475 0 0
+~
+~
+D DOWN 4473 0 0
+~
+~
+OWNER none~
+#4475
+The residents hall~
+~
+unused
+D NORTH 4474 0 0
+~
+~
+D SOUTH 4476 0 0
+~
+~
+OWNER none~
+#4476
+The residents hall~
+~
+unused
+D NORTH 4475 0 0
+~
+~
+D SOUTH 4477 0 0
+~
+~
+OWNER none~
+#4477
+The residents hall~
+~
+unused
+D NORTH 4476 0 0
+~
+~
+D EAST 4478 0 0
+~
+~
+D WEST 4483 0 0
+~
+~
+OWNER none~
+#4478
+The residents hall~
+~
+unused
+D EAST 4479 0 0
+~
+~
+D WEST 4477 0 0
+~
+~
+OWNER none~
+#4479
+The residents hall~
+~
+unused
+D NORTH 4507 AB 0
+~
+~
+D EAST 4480 0 0
+~
+~
+D SOUTH 4508 AB 0
+~
+~
+D WEST 4478 0 0
+~
+~
+OWNER none~
+#4480
+The residents hall~
+~
+unused
+D EAST 4481 0 0
+~
+~
+D WEST 4479 0 0
+~
+~
+OWNER none~
+#4481
+The residents hall~
+~
+unused
+D NORTH 4509 AB 0
+~
+~
+D EAST 4482 0 0
+~
+~
+D SOUTH 4510 AB 0
+~
+~
+D WEST 4480 0 0
+~
+~
+OWNER none~
+#4482
+The residents hall~
+~
+unused
+D NORTH 4506 0 0
+~
+~
+D WEST 4481 0 0
+~
+~
+OWNER none~
+#4483
+The residents hall~
+~
+unused
+D EAST 4477 0 0
+~
+~
+D WEST 4484 0 0
+~
+~
+OWNER none~
+#4484
+The residents hall~
+~
+unused
+D NORTH 4511 AB 0
+~
+~
+D EAST 4483 0 0
+~
+~
+D SOUTH 4512 AB 0
+~
+~
+D WEST 4485 0 0
+~
+~
+OWNER none~
+#4485
+The residents hall~
+~
+unused
+D EAST 4484 0 0
+~
+~
+D WEST 4486 0 0
+~
+~
+OWNER none~
+#4486
+The residents hall~
+~
+unused
+D NORTH 4513 AB 0
+~
+~
+D EAST 4485 0 0
+~
+~
+D SOUTH 4514 AB 0
+~
+~
+D WEST 4487 0 0
+~
+~
+OWNER none~
+#4487
+The residents hall~
+~
+unused
+D NORTH 4488 0 0
+~
+~
+D EAST 4486 0 0
+~
+~
+OWNER none~
+#4488
+The residents hall~
+~
+unused
+D NORTH 4489 0 0
+~
+~
+D SOUTH 4487 0 0
+~
+~
+OWNER none~
+#4489
+The residents hall~
+~
+unused
+D NORTH 4490 0 0
+~
+~
+D EAST 4523 AB 0
+~
+~
+D SOUTH 4488 0 0
+~
+~
+D WEST 4525 AB 0
+~
+~
+OWNER none~
+#4490
+The residents hall~
+~
+unused
+D NORTH 4491 0 0
+~
+~
+D EAST 4527 AB 0
+~
+~
+D SOUTH 4489 0 0
+~
+~
+D WEST 4529 AB 0
+~
+~
+OWNER none~
+#4491
+The residents hall~
+~
+unused
+D NORTH 4492 0 0
+~
+~
+D SOUTH 4490 0 0
+~
+~
+OWNER none~
+#4492
+The residents hall~
+~
+unused
+D EAST 4493 0 0
+~
+~
+D SOUTH 4491 0 0
+~
+~
+OWNER none~
+#4493
+The residents hall~
+~
+unused
+D EAST 4494 0 0
+~
+~
+D WEST 4492 0 0
+~
+~
+OWNER none~
+#4494
+The residents hall~
+~
+unused
+D EAST 4495 0 0
+~
+~
+D WEST 4493 0 0
+~
+~
+OWNER none~
+#4495
+The residents hall~
+~
+unused
+D EAST 4496 0 0
+~
+~
+D WEST 4494 0 0
+~
+~
+OWNER none~
+#4496
+The residents hall~
+~
+unused
+D EAST 4497 0 0
+~
+~
+D WEST 4495 0 0
+~
+~
+OWNER none~
+#4497
+The residents hall~
+~
+unused
+D EAST 4498 0 0
+~
+~
+D WEST 4496 0 0
+~
+~
+OWNER none~
+#4498
+The residents hall~
+~
+unused
+D EAST 4499 0 0
+~
+~
+D WEST 4497 0 0
+~
+~
+OWNER none~
+#4499
+The residents hall~
+~
+unused
+D EAST 4500 0 0
+~
+~
+D WEST 4498 0 0
+~
+~
+OWNER none~
+#4500
+The residents hall~
+~
+unused
+D EAST 4501 0 0
+~
+~
+D WEST 4499 0 0
+~
+~
+OWNER none~
+#4501
+The residents hall~
+~
+unused
+D EAST 4502 0 0
+~
+~
+D WEST 4500 0 0
+~
+~
+OWNER none~
+#4502
+The residents hall~
+~
+unused
+D SOUTH 4503 0 0
+~
+~
+D WEST 4501 0 0
+~
+~
+OWNER none~
+#4503
+The residents hall~
+~
+unused
+D NORTH 4502 0 0
+~
+~
+D SOUTH 4504 0 0
+~
+~
+OWNER none~
+#4504
+The residents hall~
+~
+unused
+D NORTH 4503 0 0
+~
+~
+D EAST 4521 AB 0
+~
+~
+D SOUTH 4505 0 0
+~
+~
+D WEST 4519 AB 0
+~
+~
+OWNER none~
+#4505
+The residents hall~
+~
+unused
+D NORTH 4504 0 0
+~
+~
+D EAST 4517 AB 0
+~
+~
+D SOUTH 4506 0 0
+~
+~
+D WEST 4515 AB 0
+~
+~
+OWNER none~
+#4506
+The residents hall~
+~
+unused
+D NORTH 4505 0 0
+~
+~
+D SOUTH 4482 0 0
+~
+~
+OWNER none~
+#4507
+A nicely furnished room~
+~
+unused
+D SOUTH 4479 AB 0
+~
+~
+OWNER none~
+#4508
+A nicely furnished room~
+~
+unused
+D NORTH 4479 A 0
+~
+~
+OWNER none~
+#4509
+A nicely furnished room~
+~
+unused
+D SOUTH 4481 A 0
+~
+~
+OWNER none~
+#4510
+A nicely furnished room~
+~
+unused
+D NORTH 4481 A 0
+~
+~
+OWNER none~
+#4511
+A nicely furnished room~
+~
+unused
+D SOUTH 4484 A 0
+~
+~
+OWNER none~
+#4512
+A nicely furnished room~
+~
+unused
+D NORTH 4484 A 0
+~
+~
+OWNER none~
+#4513
+A nicely furnished room~
+~
+unused
+D SOUTH 4486 A 0
+~
+~
+OWNER none~
+#4514
+A nicely furnished room~
+~
+unused
+D NORTH 4486 A 0
+~
+~
+OWNER none~
+#4515
+A lavish suite~
+~
+unused
+D EAST 4505 A 0
+~
+~
+D SOUTH 4516 0 0
+~
+~
+OWNER none~
+#4516
+A lavish suite~
+~
+unused
+D NORTH 4515 0 0
+~
+~
+OWNER none~
+#4517
+A lavish suite~
+~
+unused
+D SOUTH 4518 0 0
+~
+~
+D WEST 4505 A 0
+~
+~
+OWNER none~
+#4518
+A lavish suite~
+~
+unused
+D NORTH 4517 0 0
+~
+~
+OWNER none~
+#4519
+A lavish suite~
+~
+unused
+D NORTH 4520 0 0
+~
+~
+D EAST 4504 AB 0
+~
+~
+OWNER none~
+#4520
+A lavish suite~
+~
+unused
+D SOUTH 4519 0 0
+~
+~
+OWNER none~
+#4521
+A lavish suite~
+~
+unused
+D NORTH 4522 0 0
+~
+~
+D WEST 4504 A 0
+~
+~
+OWNER none~
+#4522
+A lavish suite~
+~
+unused
+D SOUTH 4521 0 0
+~
+~
+OWNER none~
+#4523
+A lavish suite~
+~
+unused
+D SOUTH 4524 0 0
+~
+~
+D WEST 4489 A 0
+~
+~
+OWNER none~
+#4524
+A lavish suite~
+~
+unused
+D NORTH 4523 0 0
+~
+~
+OWNER none~
+#4525
+A lavish suite~
+~
+unused
+D EAST 4489 A 0
+~
+~
+D SOUTH 4526 0 0
+~
+~
+OWNER none~
+#4526
+A lavish suite~
+~
+unused
+D NORTH 4525 0 0
+~
+~
+OWNER none~
+#4527
+A lavish suite~
+~
+unused
+D NORTH 4528 0 0
+~
+~
+D WEST 4490 A 0
+~
+~
+OWNER none~
+#4528
+A lavish suite~
+~
+unused
+D SOUTH 4527 0 0
+~
+~
+OWNER none~
+#4529
+A lavish suite~
+~
+unused
+D NORTH 4530 0 0
+~
+~
+D EAST 4490 A 0
+~
+~
+OWNER none~
+#4530
+A lavish suite~
+~
+unused
+D SOUTH 4529 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

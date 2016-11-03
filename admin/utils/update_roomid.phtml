@@ -1,0 +1,35 @@
+<?
+	include("../header.inc");
+	mysql_select_db("rift_core", $conn);
+//	$res = mysql_query("SELECT vnum,room_id FROM world_rooms ORDER BY vnum", $conn);
+	$res = mysql_db_query("rift_core","select wr.name,wrr0.room_id as 0_to_room,wrr1.room_id as 1_to_room,wrr2.room_id AS 2_to_room,wrr3.room_id AS 3_to_room,wrr4.room_id AS 4_to_room,wrr5.room_id AS 5_to_room FROM world_rooms AS wr LEFT JOIN world_rooms_rid AS wrr0 ON wr.0_to_room=wrr0.vnum LEFT JOIN world_rooms_rid AS wrr1 ON wr.1_to_room=wrr1.vnum LEFT JOIN world_rooms_rid AS wrr2 ON wr.2_to_room=wrr2.vnum LEFT JOIN world_rooms_rid AS wrr3 ON wr.3_to_room=wrr3.vnum LEFT JOIN world_rooms_rid AS wrr4 ON wr.4_to_room=wrr4.vnum LEFT JOIN world_rooms_rid AS wrr5 ON wr.5_to_room=wrr5.vnum ORDER BY vnum LIMIT 1", $conn);
+//	mysql_query("LOCK TABLES world_rooms WRITE", $conn);
+	echo mysql_num_rows($res);
+	die();
+	for($count = 0; $row = mysql_fetch_row($res); $count++)
+	{
+/*		if($row[room_id] != $count)
+		{
+			@mysql_db_query("rift_core","UPDATE world_rooms SET 0_to_room=$count WHERE 0_to_room=$row[room_id]", $conn);
+			@mysql_db_query("rift_core","UPDATE world_rooms SET 1_to_room=$count WHERE 1_to_room=$row[room_id]", $conn);
+			@mysql_db_query("rift_core","UPDATE world_rooms SET 2_to_room=$count WHERE 2_to_room=$row[room_id]", $conn);
+			@mysql_db_query("rift_core","UPDATE world_rooms SET 3_to_room=$count WHERE 3_to_room=$row[room_id]", $conn);
+			@mysql_db_query("rift_core","UPDATE world_rooms SET 4_to_room=$count WHERE 4_to_room=$row[room_id]", $conn);
+			@mysql_db_query("rift_core","UPDATE world_rooms SET 5_to_room=$count WHERE 5_to_room=$row[room_id]", $conn);
+		} */
+
+/*
+		@mysql_db_query("rift_core","UPDATE world_rooms SET 0_to_room=$count WHERE 0_to_room=$row[vnum]", $conn);
+		@mysql_db_query("rift_core","UPDATE world_rooms SET 1_to_room=$count WHERE 1_to_room=$row[vnum]", $conn);
+		@mysql_db_query("rift_core","UPDATE world_rooms SET 2_to_room=$count WHERE 2_to_room=$row[vnum]", $conn);
+		@mysql_db_query("rift_core","UPDATE world_rooms SET 3_to_room=$count WHERE 3_to_room=$row[vnum]", $conn);
+		@mysql_db_query("rift_core","UPDATE world_rooms SET 4_to_room=$count WHERE 4_to_room=$row[vnum]", $conn);
+		@mysql_db_query("rift_core","UPDATE world_rooms SET 5_to_room=$count WHERE 5_to_room=$row[vnum]", $conn);
+*/
+/*		if($row[room_id] != $count)
+			mysql_query("UPDATE world_rooms SET room_id=$count WHERE vnum=$row[0]", $conn); */
+	}
+	mysql_query("UNLOCK TABLES;");
+	echo "World Rooms ID re-sorted.<br>";
+	echo "New RoomID's applied to World Rooms.<br>";
+?>

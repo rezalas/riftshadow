@@ -1,0 +1,804 @@
+#AREA
+caelumaedan.are~
+Caelumaedan~
+ROM~
+51 60
+1200 1299
+normal
+temperate
+0
+
+#MOBS
+#1200
+Heimdall~
+Heimdall~
+Heimdall, guardian of Bifrost, stands guard over the Rainbow Bridge.      
+~
+Standing over 7 feet tall and muscled as only a god can be, Heimdall keeps      
+his unsleeping gaze over the Rainbow bridge.  His trusty Gjallor-horn never      
+leaves his side, and shall remain unwinded until the dread ship Naglfar sails      
+towards Valhalla on the dawn of Ragnarok.      
+~
+1000 0 100 human~
+57 1d1+19999 5d4+40 0 100 crush
+0 0 0 0
+standing male none
+0 0 large
+ACT NOPURGE
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior Barbarian Duelist 
+#1201
+player mob~
+the player mob~
+The Player Mob stands here.      
+~
+The Player Mob stands here.      
+~
+1000 0 100 human~
+1 1d1+1 5d4+40 0 100 crush
+0 0 0 0
+standing male none
+0 0 large
+ACT NOPURGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#1202
+captain obvious~
+Captain Obvious~
+Captain Obvious is here, obviously.      
+~
+You don't need to LOOK at him.  His appearance is obvious!      
+~
+1000 0 100 human~
+57 1d1+19999 5d4+40 0 100 crush
+0 0 0 0
+standing male none
+0 0 large
+ACT SMARTTRACK
+ACT NOPURGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior Gladiator Duelist 
+#1203
+test guildguard~
+a test guildguard~
+A test guildguard stands here.    
+~
+This is a test guildguard.    
+~
+0 1200 100 human~
+60 1d1+999 5d5+10 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+#1204
+private obvious~
+Private Obvious~
+Private Obvious is here, obviously following the Captain.   
+~
+You don't need to LOOK at him.  His appearance is obvious!      
+~
+1000 0 100 human~
+52 1d1+19999 5d4+40 0 100 crush
+0 0 0 0
+standing male none
+0 0 large
+#0
+
+
+
+#OBJS
+#1200
+pit~
+the Immortal pit~
+The Immortal Pit is here.~
+container
+~
+10000 0 0 1000 100
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E pit~
+This is where Rygath makes sure a freak occurance doesn't crash the MUD.      
+~
+
+#1201
+big ball~
+a big ball~
+A really big ball is here.~
+trash
+~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+VERB rub
+
+#1202
+ring tarnished gold~
+a tarnished gold ring~
+A tarnished gold ring lies here, caked in grime.~
+armor
+gold~
+1 1 1 10 0
+10 2 10 P
+WEAR TAKE
+WEAR FINGER
+ITEM MAGIC
+LIMIT 0
+VERB twist
+NOTES Makes the wearer invisible if twisted.~
+
+#1203
+bones dice~
+a pair of dice carved from bone~
+A pair of polished white dice lie here.~
+dice
+bone~
+2 6 0 0 0
+10 2 10 P
+WEAR TAKE
+LIMIT 0
+NOTES A pair of six-sided dice for testing roll command.~
+
+#1205
+pistol colt~
+a gold-plated Colt 45~
+A fine implement for busting caps in the asses of people.~
+trash
+gold~
+0 0 0 0 0
+60 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+VERB fire
+NOTES Fires a bullet while in combat~
+
+#1206
+talisman ways~
+a talisman of the ways~
+This plain wooden talisman has a small inscription on it.~
+armor
+wood~
+0 0 0 0 0
+60 0 0 P
+WEAR TAKE
+WEAR NECK
+ITEM FIXED
+LIMIT 0
+VERB gate
+E inscription~
+Speak the magical words "vnum" to unleash my power.  Also... ever wanted to    
+have goto?  Now you do!  Just use gate.   
+~
+
+#0
+
+
+
+#ROOMS
+#1200
+The Chat Room~
+You are lounging in a quiet cosy parlour, warmed by a gentle magical fire      
+which twinkles happily in a warm fireplace.  This is one of the many rooms      
+where the heroes and gods come to socialize.  It is by far one of the most      
+comfortable!       
+~
+inside
+ROOM INDOORS
+ROOM HERO_ONLY
+ROOM LAW
+D SOUTH 1213 0 -1
+~
+Asgard lies to the south.      
+~
+#1201
+Moses' Hangout~
+You see here a cozy little room with a fireplace.  You can tell it is Moses'      
+room by the two stone tablets and a bible on a small ledge near the fireplace.      
+This room was designed for total relaxation.  You can watch television, listen      
+to the stereo, even soak in a hot tub.      
+There is a bell here for the butler.      
+~
+inside
+ROOM INDOORS
+ROOM HERO_ONLY
+D NORTH 1213 0 -1
+~
+Asgard lies to the north.      
+~
+#1202
+The Center of the Universe~
+You are at the centre of the universe, everything is filled with bright      
+light in all colors. You feel time and space no longer exist here.      
+Exits fill the room in all 42 dimensions, leading everywhere.      
+~
+inside
+ROOM INDOORS
+ROOM PRIVATE
+ROOM HERO_ONLY
+D EAST 1213 0 -1
+~
+Asgard lies to the east.      
+~
+#1203
+Valhalla~
+This is the huge Hall of Valhalla, where the Gods rule supreme.  The      
+cavernous building stretches infinitely in all directions.  Valhalla       
+continues to the east, and the gods make their homes north and south of      
+the halls.  The golden gates are to the west.  You know not what lies       
+upward...      
+~
+inside
+ROOM INDOORS
+D NORTH 1209 AB -1
+door~
+Alander's workroom is to the north.      
+~
+D EAST 1217 0 -1
+~
+Valhalla continues east.      
+~
+D SOUTH 1208 AB -1
+door~
+A sea cave is south of here.      
+~
+D WEST 1216 0 -1
+~
+The entrance to Valhalla is to the west.      
+~
+D UP 1 0 -1
+~
+If you want to know what is up there, you shall have to go look...      
+~
+#1204
+Priscilla's Pleasure Palace ~
+As you look around you, you see the largest collection of erotic toys      
+in the world!!!  On a table in the middle of the room lies a book titled :      
+"All You Ever Wanted to Know About Sex..But Were Afraid to Ask"      
+There are things here that you never even imagined in your wildest dreams!      
+~
+inside
+ROOM INDOORS
+ROOM PRIVATE
+ROOM GOD_ONLY
+D NORTH 1218 AB -1
+door~
+Valhalla is to the north.      
+~
+#1205
+The Eye of the Hurricane~
+The shrieking winds of a monstrous storm surround you, spinning you around      
+in an endless web of fury. But then, in the middle of turmoil, you find a      
+strange calm. You find yourself hovering in the calm eye of a hurricane. All      
+around you you can see the desruction caused by the powerful storm. White      
+hot flashes of lightning flicker from the depths of the hurricane.  But      
+everything is strangely peaceful in here, with the sun shining in from above      
+and a flock of birds winging across the sky.  You stretch out and relax, this      
+storm is going to be here a while.      
+~
+air
+ROOM NO_MOB
+ROOM INDOORS
+ROOM PRIVATE
+ROOM NORECALL
+ROOM IMP_ONLY
+#1206
+Walking on the Moon~
+The proud and lonely silence of Mare Imbrium surrounds you, as you gaze upon      
+the sterile splendor of the moon.  All around is the velvet curtain of night,      
+studded with a thousand gleaming jewels.  Below you hangs the beautiful      
+fields of Earth, looking fragile and far away, but full of hope.  A sense of      
+wistful regret touches you, as you think about what might have been, and what      
+will be.      
+~
+inside
+ROOM NO_MOB
+ROOM PRIVATE
+ROOM NORECALL
+ROOM IMP_ONLY
+E crater mare imbrium~
+A small shipping tag is pinned to the ground with a worn hunting knife.      
+Upon it is a dedication to Robert Anson Heinlein, the father of the future.      
+~
+#1207
+The Satin Memorial Reading Room~
+Half read books lie everywhere: Yeats, Tennyson, Chandler, Barrie;      
+a battered paperback de Laclos; a dusty leather-bound Donne.  A      
+damp novel perches precariously on the edge of a large bathtub.      
+As your eyes travel beyond the steam rising to the air toward the      
+rose-brambled balcony railing, you notice a well-creased printout      
+of a poem sitting on a the velvet cushions of a rosewood chair      
+that has been set so as to see the stark black mountains      
+from one angle, or the wine-dark sea from another.      
+~
+hills
+ROOM INDOORS
+ROOM PRIVATE
+ROOM NORECALL
+ROOM GOD_ONLY
+D SOUTH 1217 AB -1
+door~
+Valhalla is to the south.      
+~
+E rose rose-brambled balcony railing~
+Climbing white roses have swarmed over the original marble to obscure      
+it almost completely.  The air is sweet not with roses, though,      
+but with Satin's sandalwood perfume.      
+~
+E rosewood chair~
+It looks comfortable, and the cushions are ivory velvet.      
+~
+E stark black mountains wine wine-dark dark sea~
+The ocean is constantly smashing up against the cliffs and rending      
+huge slabs from it.  The beach is scarcely a beach at all, more a      
+collection of rough flakes varying in size from a small car to a      
+small fist.  As the water comes up over the rocks and ebbs back      
+down, it filters through the spaces and makes an unnerving rattling      
+sound.      
+~
+E print out print-out creased well poem~
+This page has been read over so many times that you can barely discern      
+the words, and in fact with much poring only the following becomes      
+clear:      
+        'I know that I am studly - Heck, I'm sexy, cute and cuddly      
+         And I know that I'm extremely modest too.'      
+~
+E yeats~
+The page it is flipped open to reads:      
+      
+A sudden blow: the great wings beating still      
+Above the staggering girl, her thighs carressed      
+By the dark webs, her nape caught in his bill,      
+he holds her helpless breast upon his breast.      
+How can those terrified vague fingers push      
+The feathered glory from her loosening thighs?      
+And how can body, laid in that white rush,      
+But feel that strange heart beating where it lies?      
+A shudder in the loins engenders there      
+The broken wall, the burning roof and tower      
+And Agammemnon dead.  Being so caught up,      
+So mastered by this brute blood of the air,      
+Did she put on his knowledge with his power      
+Before his indifferent beak could let her drop?      
+~
+E chandler~
+She has just started the Lady in the Lake:      
+      
+Gillerain Regal, the Champagne of Perfumes.  It was definitely      
+the stuff to get.  One drop of that in the hollow of your      
+throat and the matched pink pearls started falling off you like      
+summer rain.      
+~
+E barrie~
+A copy of Peter Pan is opened near the end:      
+      
+What sort of form was Hook showing?  Misguided man though he      
+was, we may be glad, without sympathising with him, that in      
+the end he stayed true to the traditions of his race.  The      
+other boys were flying about him now, flouting, scornful; and      
+as he staggered about the deck striking at them impotently, his      
+mind was no longer with them; it was slouching in the playing      
+fields of long ago, or being sent up for good, or watching      
+the wall-game from a famous wall.  And his shoes were right,      
+and his waistcoat was right, and his tie was right, and his      
+socks were right.      
+      
+James Hook, thou not wholly unheroic figure, farewell.      
+~
+E tennyson~
+.       "My mariners      
+         Souls that have toiled, and wrought, and thought with me -      
+         The ever with a frolic welcome took      
+         The thunder and the sunshine, and opposed      
+         Free hearts, free foreheads - you and I are old;      
+         Old age hath yet his honour and the toil      
+         Death closes all; but something ere the end,      
+         Some work of noble note, may yet be done,      
+         Not unbecoming of men that strove with the gods.      
+         The lights begin to twinkle from the rocks;      
+         The long day wanes; the slow moon climbs; the deep      
+         Moans round with many voices."      
+~
+E battered paperback de Laclos~
+.       'One is very soon bored of everything, my angel; it is a law      
+        of nature.  It is not my fault.      
+        If, that is to say, that I am bored with an adventure that has      
+        claimed my attentions for four mortal months, it is not my fault.      
+        If, that is to say, my love is equal to your virtue - and that      
+        is certainly saying a great deal - it is not surprising that      
+        one should come to the end at the same time as the other.  It      
+        is not my fault.      
+        A woman that I love madly now insists that I give you up for      
+        her.  It is not my fault.      
+        I quite realize that this is the perfect opportunity to accuse      
+        me of perjury: but if, where nature has gifted men with no      
+        more than constancy, she has given women obstinacy, it is      
+        not my fault.      
+        Believe this, you should take another lover, even as I take      
+        another mistress.  This is good, very good advice: if you      
+        find it bad, it is not my fault.      
+        Good-bye, my angel.  I took you with pleasure, I leave you      
+        without regret.  I shall come back perhaps.  Such is life.      
+        It is not my fault.      
+~
+E dusty leather bound leather-bound Donne~
+.       `Cruel and sudden, hast thou since      
+        Purpled thy nail in blood of innocence?      
+        Wherein could this flea guilty be,      
+        Except in the drop it sucked from thee?      
+        Yet thou trimph'st and say'st that thou      
+        Find'st not thyself, nor me the weaker now;      
+          'Tis true, then learn how false fears be:      
+          Just so much honour when thou yield'st to me      
+          Will waste as this flea's death took life from thee.'      
+~
+#1208
+A Sea Cave~
+You are in a small cave in a cliff next to a deep green sea.  Fine      
+gold and pink sand blanket the floor.  Shells are scattered and strewn      
+about.  A blow hole in the roof of the cave allows beams of light to stream      
+in and illuminate the cave.  The wind blows outside the entrance, but      
+you are protected from the weather in your cozy cave.  The foamy surf      
+never seems to quite reach your feet.  Several boulders here have been      
+worn by time into a shape similar to a comfortable chair.      
+~
+inside
+ROOM INDOORS
+ROOM PRIVATE
+ROOM GOD_ONLY
+D NORTH 1203 AB -1
+door~
+Valhalla lies to the north.      
+~
+#1209
+The Archmage's Workroom~
+This well-lit room is absolutely filled with clutter -- enchanting gear,      
+reagents, spell components, ancient tomes, scrolls, braziers, exotic incense      
+and countless other tools of the magical trade, all jumbled together with      
+seemingly no attention paid to organization.  You have no doubts that Alander      
+can find whatever he needs without delay, however.  A heavy oak door stands      
+barred to the south, to discourage idle visitors, and Alander's quarters      
+are east.      
+~
+inside
+ROOM INDOORS
+ROOM SAFE
+ROOM HERO_ONLY
+D SOUTH 1203 AB -1
+door~
+Valhalla is to the south.      
+~
+E tools scrolls braziers components~
+It's all worth a fortune, but you'd better not touch it.  Alander keeps      
+inventory and holds grudges.      
+~
+E clutter mess~
+You notice Jimmy Hoffa's ring.      
+~
+#1210
+Office~
+The first thing you notice about this office is the floor; it      
+is a black & white checkerboard pattern, with 8 squares to a side.  The      
+south wall is a HUGE picture window that produces a magnificent view of       
+the land.  In front of the window is a large desk.  Completely covering      
+the east wall is a bookshelf, that is crammed full.  In the northwest      
+corner, you notice a statue.      
+~
+inside
+ROOM INDOORS
+ROOM PRIVATE
+ROOM GOD_ONLY
+D NORTH 1217 AB -1
+door~
+Valhalla is to the north      
+~
+E desk~
+This desk is much larger than anyone could possibly need.  At one end you       
+notice a large, disorderly mass of papers; it must be all his immortal      
+paperwork.  At the other end is a magnificent wooden inlaid board with      
+handcrafted ebony and hardwood pieces.      
+~
+E statue~
+You recognize this as a statue of Robert James Fischer, one of the most       
+creative, if not eccentric, players of all time.  The inscription on the      
+base reads, "I like the moment when I crush a man's ego."      
+~
+E bookshelf~
+This is the most amazing collection of chess books you have ever seen.      
+Everything from Damiano's manuscripts, to a complete collection of the      
+Encyclopedia of Chess Openings, to the latest Imformants are all here.      
+~
+#1211
+Arena of Judgement~
+The scene lain before you is one that gives you the feeling of being placed      
+under a higher authority.  The jury is out.  A statue of Pontius Pilate is      
+in the aft of the Arena.  Staring balefully, the statue faces a distant      
+hillside where many aged crosses still stand.  The Arena is set in a wide      
+pit-like field of trampled bloodstained grass, and is guarded by high walls      
+of veinous marble.  A bloodstone seat awaits the true paragon of Romanity.      
+~
+inside
+ROOM INDOORS
+ROOM PRIVATE
+ROOM GOD_ONLY
+D SOUTH 1218 AB -1
+door~
+Valhalla is to the south.      
+~
+E statue~
+A statue of Pontius Pilate is here.  On it's face is the expression of some      
+age old contemplation.  Standing at the statues bronzy feet is a Blood red      
+shield that glimmers like a pool of blood.      
+~
+#1212
+The Realm of the Dead~
+You are standing on an immense, grey stone floor that stretches as far as you      
+can see in all directions.  Rough winds plunging from the dark, starless sky      
+tear savagely at your fragile body.      
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 1212 0 -1
+~
+The hard floor seems to go on forever.      
+~
+D EAST 1212 0 -1
+~
+The hard floor seems to go on forever.      
+~
+D SOUTH 1212 0 -1
+~
+The hard floor seems to go on forever.      
+~
+D WEST 1212 0 -1
+~
+The hard floor seems to go on forever.      
+~
+E sky wind winds~
+Cold winds plunge ceaselessly at you from the dark, cloudless sky.      
+~
+E floor~
+The stone floor is the same shade of grey as the sky and is completely plain      
+and unscratched.  It is probably too hard for anything to leave as much as a      
+scratch on it.      
+~
+#1213
+Asgard~
+You stand on a huge expanse of glass.  Below you are clouds and the       
+pains of mortality.  As you stand in Asgard, home of the bravest of the      
+brave, you are frozen in awe of the power held within these walls.  A       
+huge mansion lies to the east beyond a set of magnificent golden doors.       
+~
+inside
+ROOM HERO_ONLY
+D NORTH 1200 0 -1
+~
+The chat room is to the north.      
+~
+D EAST 1216 0 -1
+~
+The golden doors of Valhalla are to the east      
+~
+D SOUTH 1201 0 -1
+~
+Moses' hangout is to the south.      
+~
+D WEST 1202 0 -1
+~
+The center of the universe is to the west.      
+~
+D DOWN 1221 0 -1
+~
+The Rainbow Bridge is below you.  You can barely see it through the clouds.      
+~
+#1214
+The Room of Lost Souls~
+This is the room full of souls that never made it to Asgard.  They are       
+trapped here eternally, left to wander about in misery.  They were infidels      
+and cowards.  Their cries of misery send a shiver down your spine.      
+~
+inside
+ROOM INDOORS
+D DOWN 1219 0 -1
+~
+~
+#1215
+Head of the Rainbow Bridge~
+Standing on the mortal end of the Rainbow Bridge, the bridge arches up       
+before you and seems to disappear into the clouds.  You wonder if it is       
+wise to venture upward into the realm of the gods.  But it seems so calm      
+and peaceful here that it would be a shame to leave...      
+~
+city
+ROOM INDOORS
+ROOM GOD_ONLY
+D UP 1220 0 -1
+~
+The Rainbow Bridge stretches ahead before you.      
+~
+D DOWN 3054 0 -1
+~
+The altar of Midgaard is below you.      
+~
+#1216
+The Entrance of Valhalla~
+The huge ornate entrance of Valhalla is before you.  It seems as though      
+atleast eight-hundred soldiers could walk abreast of one another through      
+these doors. You stare in awe at the sparkling mansion before you.  You      
+wonder what secrets are held behind these doors and long to hear the stories      
+of bravery and glory that you know are kept within the walls of Valhalla.      
+~
+city
+ROOM GOD_ONLY
+D EAST 1203 0 -1
+~
+Valhalla lies to the east.      
+~
+D WEST 1213 0 -1
+~
+Asgard lies to the west.      
+~
+#1217
+Valhalla~
+You are standing in the halls of Valhalla.  Pictures of Odin, Thor, Tyr,      
+Loki, Freyr, Feyja, and Balder line the walls.  The cavernous hall extends      
+to the east and west.  Rooms belonging to the gods lie to the north and       
+south.  There appears to be an exit above you, but you do not know what is      
+up there...      
+~
+inside
+D NORTH 1207 AB -1
+door~
+The Satin Memorial Reading Room is north of here.      
+~
+D EAST 1218 0 -1
+~
+Valhalla continues east.      
+~
+D SOUTH 1210 AB -1
+door~
+Bigfoots' room is south of here.      
+~
+D WEST 1203 0 -1
+~
+Valhalla continues west.      
+~
+D UP 1212 0 -1
+~
+If you want to know what is up there you shall have to go and look...      
+~
+#1218
+Valhalla~
+You are standing in the halls of Valhalla.  Tapestries of the gods line      
+the walls.  A statue of Odin is here.  The halls continue to the east and      
+west, and there are doors to the north and south of you.  There is some       
+sort of exit above you, but you do not know where it leads...      
+~
+inside
+D NORTH 1211 AB -1
+door~
+Pontius' room is north of here.      
+~
+D EAST 1219 0 -1
+~
+Valhalla continues east.      
+~
+D SOUTH 1204 AB -1
+door~
+Priscilla's Pleasure Palace is south of here.      
+~
+D WEST 1217 0 -1
+~
+Valhalla continues west.      
+~
+D UP 2 0 -1
+~
+If you want to know what is up there you shall have to go up and see...      
+~
+E statue odin~
+The statue of Odin has been exquisitely crafted.  It is of white marble      
+with black and gold veins.  It looks to be of magical origin.      
+~
+#1219
+Valhalla~
+You have reached the end of the halls of Valhalla.  There are heavy doors      
+on 3 walls.  They lead into the rooms of the gods.  The hall goes back to      
+the west, and there is some sort of an exit above you.  Torches sputter      
+softly and the scent of incense is strong here.      
+~
+inside
+D NORTH 3161 0 -1
+~
+Melancholys' room is north of here.      
+~
+D EAST 3150 0 -1
+~
+Kates' room is east of here.      
+~
+D SOUTH 3170 0 -1
+~
+The Temple of Stupid is south of here.      
+~
+D WEST 1218 0 -1
+~
+Valhalla goes back to the west.      
+~
+D UP 1214 0 -1
+~
+If you want to know what is up from here, you shall have to go up and see...      
+~
+#1220
+On the Rainbow Bridge~
+You have reached the center of the Rainbow Bridge.  Clouds and mist swirl      
+around your feet.  The view from here is incredible.  It is little wonder       
+that the heavens were saved for the gods personal pleasures.      
+~
+city
+ROOM HERO_ONLY
+D UP 1221 0 -1
+~
+The Rainbow Bridge continues upwards into the heavens.      
+~
+D DOWN 1215 0 -1
+~
+The Rainbow Bridge disappears down into the clouds.      
+~
+E clouds~
+The clouds are beautiful.  There are shades of gray, pink and purple swirled      
+into the blue sky.      
+~
+#1221
+The End of the Rainbow Bridge~
+You have reached the end of the Rainbow Bridge.  Asgard stretches out above       
+you.  Looking around, you search for the legendary guardian of Asgard.  The      
+clouds are far below you and a sense of beauty and peacefulness surrounds you.       
+~
+inside
+ROOM HERO_ONLY
+D UP 1213 0 -1
+~
+Asgard is above you, spread out in all its glory.      
+~
+D DOWN 1220 0 -1
+~
+Bifrost, the Rainbow Bridge leads down to the Temple of Midgaard.      
+~
+#0
+
+
+
+#RESETS
+OBJECT 1201 TO 1200
+MOB 1203 TO 1203 GLIMIT 1 LLIMIT 1
+DOOR 1203 south CLOSED
+DOOR 1203 north CLOSED
+DOOR 1204 north CLOSED
+DOOR 1207 south CLOSED
+DOOR 1208 north CLOSED
+DOOR 1209 south CLOSED
+DOOR 1210 north CLOSED
+DOOR 1211 south CLOSED
+OBJECT 1200 TO 1213
+MOB 1202 TO 1214 GLIMIT 2 LLIMIT 2
+MOB 1202 TO 1214 GLIMIT 2 LLIMIT 2
+DOOR 1217 north CLOSED
+DOOR 1217 south CLOSED
+DOOR 1218 south CLOSED
+DOOR 1218 north CLOSED
+MOB 1200 TO 1221 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+I 1201 verb_prog verb_prog_rub_ball
+I 1202 verb_prog verb_prog_twist_ring
+I 1205 verb_prog verb_prog_fire_pistol
+I 1206 speech_prog speech_prog_vnum_talisman
+I 1206 verb_prog verb_prog_gate_talisman
+END
+#$

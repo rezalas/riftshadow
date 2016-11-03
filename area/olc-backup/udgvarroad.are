@@ -1,0 +1,164 @@
+#AREA
+udgvarroad.are~
+Udgaard-Varggin Shih Road~
+RS~
+1 51
+24513 24524
+normal
+temperate
+0
+1
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24513
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D EAST 11693 0 0
+~
+~
+D WEST 24514 0 0
+~
+~
+#24514
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D EAST 24513 0 0
+~
+~
+D WEST 24515 0 0
+~
+~
+#24515
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24516 0 0
+~
+~
+D EAST 24514 0 0
+~
+~
+#24516
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24517 0 0
+~
+~
+D SOUTH 24515 0 0
+~
+~
+#24517
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24518 0 0
+~
+~
+D SOUTH 24516 0 0
+~
+~
+#24518
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24519 0 0
+~
+~
+D SOUTH 24517 0 0
+~
+~
+#24519
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24520 0 0
+~
+~
+D SOUTH 24518 0 0
+~
+~
+#24520
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24521 0 0
+~
+~
+D SOUTH 24519 0 0
+~
+~
+#24521
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24522 0 0
+~
+~
+D SOUTH 24520 0 0
+~
+~
+#24522
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 24523 0 0
+~
+~
+D SOUTH 24521 0 0
+~
+~
+#24523
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D SOUTH 24522 0 0
+~
+~
+D WEST 24524 0 0
+~
+~
+#24524
+On the Road~
+The road from Udgaard to Varggin Shih   
+~
+road
+D NORTH 22000 0 0
+~
+~
+D EAST 24523 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

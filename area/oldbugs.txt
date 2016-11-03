@@ -1,0 +1,249 @@
+[  866] Eladrian: FUX0R
+[ 3014] Ferguson: I gained 0 experience and then advanced to 31st level.  Looks strange.
+[ 3014] Ferguson: I fought cityguard, mayor went in, I got the message that he screams and attacks, but nothing happened
+[ 3001] Ferguson: You draw upon the water in your surroundings to revitalize  @@@ 
+[ 3001] Ferguson: When I am a ghost and try to use a spell to kill the mob, but fail, I get "Gods protect" message twice
+[ 3001] Ferguson: Lightling bolt did UNSPEAKABLE THINGS on a warrior dummy
+[  327] Rosolino: when you lore, it shows you twice.
+[ 9611] Ferguson: Invisibility and infravision spells seem to be missing... it may be a feature, though
+[ 3054] Ferguson: "You are no more a ghost" message appears sometimes even when I'm not a ghost
+[13040] Ferguson: When guard performed crush on me, I got "Your  MUTILATES you!" message
+[ 3004] Ferguson: When somebody struck me on the head and I died, I yelled after that
+[ 3004] Ferguson: I mean, I yelled after my death
+[  628] Mingus: Fills screen with trash when protected (ghost) and aggro.
+[13914] Mingus: What gives, can't buy a damn thing it seems.
+[ 3014] Mingus: thunderclap should work like a base area spell, rather than have everybody effected start attacking you right off.
+[19223] Candoli: Fighting Devil Lieu in Emerald:  Blinded and yet can see "The Devil Lieu is writing/gushing/etc"
+[19223] Candoli: Incapacitated...  Been at -4hp for 4 ticks now while I fought the devil lieu
+[19231] Candoli: Drive:  Driving a mob (dryad for example), I get the "A Dryad crawls in" after I get to the next room.  I would think it should already be there.
+[13578] Candoli: Overhead.  After knocking someone out, would be "nice" to be able to switch to sword and hack into their skull
+[15802] Ferguson: Emerald forest: "Adderly opens the ."
+[19269] Ferguson: Our groupmate quit, but he's still on "group" message.  Suggested fix: remove the character from group on quit.
+[ 9251] Mingus: rulers are on water, in elemental canyon and should be.
+[  601] Mingus: after attacking a mob, still takes forever to quit. As if it were a person.
+[ 9510] Ferguson: When blind, I still can see whom I am fighting (mob condition line)
+[ 3617] Rosolino: there is a problem with dart, you still bleed even after you die
+[ 9222] Mingus: when you fail an aggro spell on a link dead person they attack and let you kill them...
+[ 3014] Candoli: Lightning strike:  Killed Mingus, then he calls an === oblit=== lightning strike down on me.  Ow.
+[ 1480] Candoli: I imagine this is a POS bug, but when blind I can still scan
+[  717] Ferguson: Can't enter Mausoleum: I can open secret, but can't go down
+[ 3054] Ferguson: Watershield doesn't help against bash (feature?)
+[ 3054] Candoli: Do Abyss'ers have a weapon resist?
+[ 3054] Candoli: Dash south charge ranger (already aggro to me), seemed to crash the mud
+[18054] Mulligan: when you try to gouge someone too big for you, you get the "cannot aim" thing, but it lags you anyway, as though you tried it.
+[18054] Mulligan: berserk lasts a *really* long time. Is that as it is intended?
+[18055] Mulligan: "The Founder attempts to bash his, but instead.."
+[18054] Mulligan: "You drive your spear deep into the Founder's flesh, blood spilling forth as you withdraw it!" "Your thrust lands on empty air near the Founder." "Your foe is already bleeding!"  So, I bleed him, but I hit and miss on him because of the displacement, but it wont let me try again
+[18054] Mingus: bleed don't work right on mobs, says they bleed but on the tick nothing...
+[18054] Mulligan: I get the "Your foe is still bleeding" echo when I try to bleed, but at the tick there is no bleeding.
+[18054] Mulligan: Typing "hobble" to use the hobble skill gets a "huh?" as though there is no such skill.
+[ 1200] Rygath: Sun Feb 25 10:55:02 2001: testing
+[ 9201] Tyner: Sun Feb 25 11:49:56 2001: I'm sure it's been logged already, but hidden and invisible creatures you otherwise wouldn't detect are visible on scan.
+[ 3054] Ferguson: Sun Feb 25 18:00:31 2001: Midgaard Healer's level is too low to heal most of maledictions
+[23253] Mulligan: Sun Feb 25 18:40:19 2001: mobs that are resist weapon are sometimes immune. very strange. Evlen lich archmage for exmple.
+[  643] Tyner: Sun Feb 25 19:01:45 2001: Berserk's duration is way long.
+[ 3005] Mingus: Sun Feb 25 20:34:30 2001: fleeing into a door stops the fight against mobs that don't track.
+[12200] Seikilos: Sun Feb 25 21:29:22 2001: list
+[22058] Tyner: Sun Feb 25 21:41:04 2001: My spear suddenly became invisible and uncursed.. go figure.
+[24254] Desmond: Mon Feb 26 02:03:50 2001: Catch gained  but already at 75% rather than 1% like all other spec skills.
+[24254] Desmond: Mon Feb 26 02:04:20 2001: When killed through an overhead strike, died, showed at pit, and then yelled about the overhead strike.
+[15890] Mingus: Mon Feb 26 02:35:28 2001: idea doesn't work: keep the healers free for the real game, but lag the shit out of people who use them say 3 rounds worth of lag.
+[15890] Mingus: Mon Feb 26 02:37:50 2001: hypothermia allows you to go back to sleep after your awoken, after you re-sleep your out "cold" should give you a message about not being able to.
+[ 9209] Desmond: Mon Feb 26 09:46:19 2001: Blinded by a mob in Elemental Canyon. Could not see who I was fighting (correct) except for enemy status line: "A rainbow warrior is gushing blood." (bug)
+[ 9515] Parker: Mon Feb 26 11:56:36 2001: the removeing of both weapons before being allowed to wield a twohanded
+[ 3054] Vornak: Mon Feb 26 12:47:22 2001: There is a bug that makes copies of your zombies, if you lose link. Say I have two zombies of tyner and a ghoul. If I lose link and come up, there will be two extra zombies of tyner and one extra ghoul in the room. But they wont be in my group
+[ 3054] Tyner: Mon Feb 26 13:05:14 2001: The corpse of the zombie of Tyner is lying here.  Really?
+[19206] Candoli: Mon Feb 26 15:23:50 2001: Deflect:  Fighting with a polearm as barbarian, still deflecting like a dragoon.  Can't integrate yet
+[  722] Adderly: Mon Feb 26 16:16:00 2001: You scan and see hidden mobs. Even though you dont have detect hidden.
+[ 3012] Tyner: Mon Feb 26 16:25:01 2001: Outflank works on everyone that's fighting in the room, not just those in pk that you're fighting
+[  727] Candoli: Mon Feb 26 17:23:03 2001: Drive:  Can drive aggro mobs into different areas/towns
+[ 3054] Tyner: Mon Feb 26 17:37:55 2001: Should diamond skin really be castable right away after it fails? How about a second affect, blackjack style so there's a delay between castings.
+[23231] Mingus: Mon Feb 26 19:17:56 2001: Within the Blue tower, has an up, but then not a down. Searched the tower no other exit.
+[23254] Mingus: Mon Feb 26 19:20:15 2001: When you flee into a door it stops the fight against mobs that are set to autoattack though non-aggressive.
+[ 3054] Mulligan: Mon Feb 26 21:48:27 2001: saves and ac are not standardized, make them both positive for good or negative for good.
+[ 3054] Mulligan: Mon Feb 26 21:48:32 2001: add the noreply feature?
+[ 3054] Candoli: Mon Feb 26 21:56:41 2001: After wearing a polearm, a "wear all" lets me wear a shield
+[  201] Mulligan: Mon Feb 26 22:01:33 2001: The room desc is a bit screwed up here, in the fourth line.
+[  204] Mulligan: Mon Feb 26 22:07:36 2001: On "A pickpocket" here, his desc says "...and the feral dirt that is..." You can't have feral dirt.  Dirt can't be feral.
+[  204] Mulligan: Mon Feb 26 22:10:01 2001: The desc on the "A common traveler" says "...knapsack that seems very light and empty." Can't be "very" empty.  Perhaps "seems very light, most likely empty." or somesuch.
+[  205] Mulligan: Mon Feb 26 22:11:28 2001: The room desc mentioned "goblins." Are there goblins in RS?
+[  240] Mulligan: Mon Feb 26 22:33:38 2001: I always thought culdesac was spelled cul-de-sac or some such.
+[  254] Mulligan: Mon Feb 26 22:44:16 2001: this coyote seems to have no legs. 
+[  280] Mulligan: Mon Feb 26 22:57:44 2001: The mob here, an elven ranger, is casting heal (I would guess upon himself), disarming, casting fireball, etc., during battle. 
+[  280] Mulligan: Mon Feb 26 22:58:20 2001: some items, like this shining elven short sword falchion, lore without giving the average, and gives weapons flags.
+[  285] Mulligan: Mon Feb 26 23:03:27 2001: wand lores weird here.
+[  207] Mulligan: Mon Feb 26 23:11:27 2001: The desc here needs a "the" in the third line, between the words following and train.
+[  207] Mulligan: Mon Feb 26 23:16:00 2001: I really think the size issues for use of gladiator skills should be two sizes. Not being able to use them on titans, celestials, etc., really reduces their already somewhat restricted nature.
+[ 3054] Candoli: Mon Feb 26 23:34:28 2001: Autoassist:  Autoassist off and I was repeatedly pulled into the fight
+[ 3054] Candoli: Mon Feb 26 23:43:47 2001: Bleeding... still affected after death
+[  210] Mulligan: Mon Feb 26 23:54:02 2001: the common man here has a desc which says he is wearing crude woolen clothing, but he is wearing a leather tunic.
+[  291] Mulligan: Tue Feb 27 00:06:22 2001: The desc in this room has a typo: "thie" instead of "this".
+[ 3014] Rosolino: Tue Feb 27 00:06:31 2001: disrupt formate is fucked
+[ 3054] Adderly: Tue Feb 27 00:10:01 2001: Bug with shatter, you shatter both weapons of your wielder if you succed.
+[  207] Mulligan: Tue Feb 27 00:53:36 2001: the merchant in this room has two typos in his desc: should be "There is a" rather than "The is a" and it should be "who is unarmed" not "that is unarmed".
+[ 6502] Blakey: Tue Feb 27 01:00:25 2001: You can teleport into norecall areas
+[ 7855] Blakey: Tue Feb 27 01:00:55 2001: you can transfer from norecalla reas
+[  211] Mulligan: Tue Feb 27 01:02:30 2001: the sword wielding guard here has a shield embossed with a picture of a boar. It should really just be a shield embossed with a boar, the picture part is redundant.
+[  211] Mulligan: Tue Feb 27 01:04:39 2001: when I killed the mule in this room, his items (a bag and a knapsack) did not appear on the floor.
+[  213] Mulligan: Tue Feb 27 01:06:57 2001: the lanky merchant in this room has his equ loaded wrong. He's wearing a crude iron sword around his wrist, and an acid etched scimitar as the only thing wielded.
+[11888] Mulligan: Tue Feb 27 01:18:07 2001: The room desc here needs to add a "the" in front of Koteras Patrol.
+[11891] Mulligan: Tue Feb 27 01:19:41 2001: in the room desc of this room, the word "Any" needs to have a lower case a.
+[11868] Mulligan: Tue Feb 27 01:24:18 2001: The desc in this room needs changing. The middle line is an incomplete sentence.
+[11872] Mulligan: Tue Feb 27 01:30:32 2001: The desc in this room says "while the northeast the wooden halls..."  A 'to' is needed before that 'the'.
+[11874] Mulligan: Tue Feb 27 01:31:28 2001: I'm not sure if "in time of the peasantry" is really English, in the room desc here.
+[11874] Mulligan: Tue Feb 27 01:32:00 2001: The A peasant mob desc has a dash/hyphen that needs centering.
+[11875] Mulligan: Tue Feb 27 01:37:17 2001: The elven traveller desc should say "with _a_ forest-hued cloak."
+[11825] Mulligan: Tue Feb 27 02:15:51 2001: The desc here has a stone saying "grandest city ever to rise on proud earth." Perhaps that should be Shalar rather than earth?
+[13166] Mulligan: Tue Feb 27 03:31:12 2001: Ok, I am *still* lagged two rounds when I try to do a skill but can't for some reason. "You lack a sufficient understanding of mob x's anatomy" when I try exploit, or "You cannot do that with  your current armament" etc. I shouldn't be lagged for trying.
+[ 3001] Parker: Tue Feb 27 06:36:22 2001: when hurling my guardian sword it disappeared without warning.
+[ 3542] Candoli: Tue Feb 27 13:45:45 2001: brace doesn't seem to show up on the skill list
+[ 3054] Mulligan: Tue Feb 27 21:10:00 2001: when inducted into Horde, the trophy skill shows up in my skill list, and also in my power list. The others are just in powers list
+[18052] Coltrane: Tue Feb 27 21:41:01 2001: The Armor class not going in the negatives has been cleared up, but when it was in the negatives, I actually did better, when I got hit it often absorbed damage from the blows. Now it does not at all. It either hits, or doesnt.
+[  205] Mulligan: Tue Feb 27 21:51:50 2001: While under the influence of "rage" (Horde) I cannot wear a shield. I should be able to.
+[11864] Mulligan: Tue Feb 27 21:56:35 2001: typing "q" should get "quaff" rather than "question".
+[11853] Mulligan: Tue Feb 27 22:00:24 2001: the desc in this room is misleading re: exits. I got a second opinion and he agreed. I'd change it to more accurately reflect the way you can go from here, etc.
+[11854] Mulligan: Tue Feb 27 22:03:47 2001: same room descs, and no north exit, this room and the one west of it dont make sense, unless there are doors missing? descs added by mistake?
+[  203] Mulligan: Tue Feb 27 22:09:20 2001: the exits in this room are screwed up.
+[11849] Mulligan: Tue Feb 27 22:21:01 2001: The room desc specifically mentions a large wooden sign here - but there is no sign. At least not when you try to "l sign" or "l barricade" or "l wooden" or "l large".
+[21500] Mulligan: Tue Feb 27 22:23:47 2001: clearly the desc here needs fixing.
+[ 2401] Mulligan: Tue Feb 27 22:40:21 2001: The desc clearly states there is a north and south here, but there is no north and south.
+[ 2401] Mulligan: Tue Feb 27 22:47:23 2001: weapons on the guards here are loring differently, some with averages and dice, others with weapon flags and type.
+[ 2437] Mulligan: Tue Feb 27 23:10:46 2001: doors are a bit screwed here, in that when you try to open in directions you get you can't do that for nondoors, open doors, closed doors, etc.
+[ 2449] Mulligan: Tue Feb 27 23:25:47 2001: can't go east here into the littered park?
+[ 2200] Mulligan: Tue Feb 27 23:30:35 2001: "The air is quiet clean,..." should of course be "quite clean."
+[ 2209] Mulligan: Tue Feb 27 23:36:17 2001: I came from the west where my exits were east and south - but now I end up in a north only room. Seems like a bug.
+[ 2210] Mulligan: Tue Feb 27 23:36:56 2001: again the "quiet clean" needs to be "quite clean."
+[ 2212] Mulligan: Tue Feb 27 23:40:15 2001: "You don't feel to safe in here,..." should be a "too" rather than "to".
+[ 2212] Mulligan: Tue Feb 27 23:40:41 2001: "...a night to many at the Local Inn." needs to be "too many" also.
+[ 2217] Mulligan: Tue Feb 27 23:41:51 2001: this room also needs the "to" changed to "too".
+[20126] Eladrian: Wed Feb 28 00:14:35 2001: West exit here is bugged
+[ 1200] Eladrian: Wed Feb 28 01:36:30 2001: diamondskin needs warning echoes as they approach death
+[18054] Coltrane: Wed Feb 28 01:45:31 2001: I used the 'CALM' power after a fight, and it allowed me to sleep, but im still showing all the effects of Rage as if it were still active.
+[ 3001] Mulligan: Wed Feb 28 02:23:41 2001: rage lasts after death in many ways
+[ 3025] Coltrane: Wed Feb 28 03:00:59 2001: Hurl now destroys whatever weapon is throw, or at least the weapon is not recoverable
+[ 3054] Mingus: Wed Feb 28 03:32:30 2001: Healer, I would guess nicely transfered into is AFK. Kinda funny.
+[12355] Mingus: Wed Feb 28 17:57:20 2001: this room needs to be word wrapped.
+[ 3102] Mingus: Wed Feb 28 19:10:27 2001: calling of aura lives past death.
+[ 3014] Mulligan: Wed Feb 28 22:32:38 2001: Rage makes me remove all my equ, including any glowing equ, and so it's pitch black when I step out of town.
+[ 3054] Mulligan: Wed Feb 28 23:16:41 2001: I get "You get a little madder" even though I am not berserked.
+[ 3023] Mulligan: Thu Mar  1 01:08:19 2001: All of a sudden after a fight I found myself with -hit and -dam. Maybe a trophy/rage afteraffect? Don't know, but Seikilos saw it and didn't know either. Needs checking.
+[ 3023] Mulligan: Thu Mar  1 02:37:39 2001: my dex is all fucked up now, it's down 6 for no reason.
+[ 3054] Tyner: Thu Mar  1 14:56:20 2001: When I outflank in a direction, even if there is no exit it is effective when someone flees.
+[11401] Tyner: Thu Mar  1 15:22:16 2001: What's up with this echo all the time for no reason - You can no longer detect nearby heat variations.
+[ 3054] Tyner: Thu Mar  1 18:30:24 2001: catch works when you're blind.
+[22043] Duke: Thu Mar  1 20:14:33 2001: Faerie fire could possibly take away autosneak for its duration
+[13113] Mingus: Fri Mar  2 02:19:13 2001: this arch bishop can't hold its own mace.
+[ 3054] Mingus: Fri Mar  2 20:32:39 2001: ... idea: Makes as part of healer code, them being flagged dead. So that they arn't attackable.
+[18214] Adderly: Fri Mar  2 22:34:49 2001: ghost doesnt stop mobs from beating your as
+[ 2400] Mulligan: Sat Mar  3 00:31:58 2001: terrain mastery seems to not work. It's never gotten improvement for me, or seen any echo of it working
+[ 3054] Mulligan: Sat Mar  3 01:40:43 2001: dessicate is spelled with two s's and one c. The echo of a necro spells it wrong. :P
+[ 3114] Mingus: Sat Mar  3 02:39:30 2001: items in rooms with water float onto dry land. Like in the pond in midgaard for example.
+[ 3014] Mingus: Sat Mar  3 02:50:03 2001: gravity wells affect imms.
+[ 3115] Mingus: Sat Mar  3 03:35:05 2001: no anchor in town. Sure its gonna be bash bait, but anchors should be allowed in towns.
+[ 3054] Mulligan: Sat Mar  3 04:21:32 2001: acid singer scimitar went off from my inventory during a fight
+[ 3054] Adderly: Sat Mar  3 15:31:35 2001: dart without a weapon crashes the mud
+[  734] Mingus: Sat Mar  3 16:51:27 2001: dragon sea isn't water.
+[ 6001] Mingus: Sat Mar  3 18:21:51 2001: Immolation lasts past death.
+[ 3114] Mingus: Sat Mar  3 19:19:10 2001: interference needs a affect.
+[ 3114] Mingus: Sat Mar  3 19:19:32 2001: fleeing from a fight with your well in the room, crashes it.
+[ 3054] Mingus: Sat Mar  3 19:29:06 2001: loosing concentration on healer allows you to attack.
+[ 9609] Mingus: Sun Mar  4 15:46:09 2001: when I cannot cast a spell like say diamond skin or gravity well because of something like for diamond too bloody... It shouldn't fucking lag my ass!
+[ 3011] Mulligan: Sun Mar  4 16:33:18 2001: half hours on durations?
+[ 3054] Candoli: Sun Mar  4 22:46:21 2001: Didn't notice an echo when hex wore off
+[ 3054] Candoli: Sun Mar  4 23:02:49 2001: No echo for decrepify while sleeping
+[ 3013] Candoli: Mon Mar  5 12:11:04 2001: retreat Can stack the retreats
+[ 3054] Tyner: Mon Mar  5 13:52:06 2001: I was affected by Crippling Blow and I quit.. upon returning I "continued to bleed from my wounds" but did not take any damage
+[ 3054] Tyner: Mon Mar  5 13:52:24 2001: Actually, it wasn't crippling blow that was causing the bleeding, it was something else.
+[11515] Tyner: Mon Mar  5 14:47:03 2001: I don't think bash affects a retreat in progress
+[ 3054] Mulligan: Mon Mar  5 20:32:53 2001: A person who dies from excessive agitate ("Mulligant collapes in a heap, wisps of smoke rising from his charred corpse") shouldn't leave a normal corpse, and that corpse should not be useable by necros.
+[  758] Tyner: Mon Mar  5 22:55:36 2001: You can't switch posture from offense to defense, or vice versa.. you must go into neutral first
+[  758] Tyner: Mon Mar  5 22:56:19 2001: Catch doesn't seem to work on mobs.. should it?
+[ 3054] Tyner: Tue Mar  6 21:12:53 2001: I demand that concuss work with an axe, the flat of an axe is just as good as a mace.
+[ 3054] Tyner: Wed Mar  7 11:12:14 2001: You can't concuss with a mace when dual wielding an axe.. go figure.
+[ 9135] Tyner: Mon Mar 12 18:45:03 2001: The maneuvering help file is mislabeled "manuevering," making it problematic to access.
+[ 1200] Eladrian: Wed Apr 11 17:06:24 2001: (buf,0)
+[ 3759] Bahadur: Sat May 19 14:29:20 2001: not showing up in 'where' as I stand in this practice room in mud school.
+[24210] Janlo: Sat May 19 15:44:24 2001: When i type "spell" it says Dark vessel should only take 16 mana to cast but i fail when i have over 60 mana(failing due to not enough mana error)
+[24212] Janlo: Sat May 19 15:45:26 2001: You can see weather conditions while sleeping
+[ 2512] Durelian: Sat May 19 15:54:59 2001: As soon as i join, 1 minute passes and i'm thirsty/hungry
+[ 3619] Durren: Sat May 19 15:57:54 2001: this probably isnt a bug but i found it odd taht the outfit command makes you level 25 and gives you some nice armor....
+[ 2512] Noethan: Sat May 19 16:29:35 2001: prompt %X %hhp %mm %mmv
+[ 3757] Noethan: Sat May 19 16:31:09 2001: Thief lore-- can't practice it
+[ 3757] Janlo: Sat May 19 16:35:53 2001: You can hear yells while alseep too..but this might not be a bug
+[ 3751] Iladriel: Sat May 19 16:43:19 2001: ghosts can be mauled by assisting creatures
+[ 3744] Noethan: Sat May 19 17:01:53 2001: Victims of hidden people yell out name: stole from Talinso while hidden, he yelled out name
+[ 1020] Klendathu: Sat May 19 17:16:24 2001: I waited for my unholy Communion to go down, when it did, it went back up to 48.
+[ 3757] Noethan: Sat May 19 17:33:31 2001: Group TNL doesn't work right.. everyone's always at 100%
+[11849] Baadal: Sat May 19 18:32:13 2001: the desc in this room says 'large wooden sigh' but no sign can be looked at.
+[ 3757] Klendathu: Sat May 19 18:38:14 2001: I have steal as an Anti-Paladin and cannot practice it.  -Klendathu
+[ 2377] Karsus: Sat May 19 18:41:17 2001: % tnl Xp in the group display, doesnt seem to be working.
+[ 2365] Baadal: Sat May 19 19:48:01 2001: Using the group command, tnl% shows up as 100, always.
+[ 3758] Smeg: Sat May 19 19:48:16 2001: allocate in rolling says that you have over racial max already when you try to allocate more than you can have, it doesn
+[11851] Thyran: Sat May 19 20:11:17 2001: Can still see some objects while blind
+[ 3742] Eseig: Sat May 19 20:43:32 2001: I'm not autoassisting, though I have it on.  Group of three, I'm the third
+[  213] Eseig: Sat May 19 21:15:05 2001: Autosplit not doing anything
+[19210] Eseig: Sat May 19 21:28:26 2001: Drank a little beer, now I'm getting "You are sober." every tick...
+[ 2304] Mchammer: Sat May 19 21:51:04 2001: Spelling error in sewers, "A large cucoon" should read "a large cocoon"
+[ 1200] Eladrian: Sat May 19 23:39:17 2001: Make "gain level" msg bold/colored
+[ 3759] Firgen: Sun May 20 00:56:57 2001: Can't practice lore?
+[ 2512] Firgen: Sun May 20 02:19:38 2001: thieves stepping out of the shadows to detect hidden?
+[ 2520] Firgen: Sun May 20 03:01:01 2001: most emotes don't bring me out of hiding, but rolling my eyes does...
+[ 6216] Eladrian: Sun May 20 03:45:16 2001: lunn attacks ghosts
+[19234] Verrucchio: Sun May 20 04:46:00 2001: The Emerald forest: the Ranger Lord is a bit too easy to kill, as well as the bear in the guild. I have not yet tested the witches and the rest of the creatures in the witch wood, but will take a moment to look at them as well.
+[19247] Baadal: Sun May 20 10:24:04 2001: When I try to blind someone who has dirt in his eyes, I get You failed to blind, instead of he is already blind.
+[19254] Baadal: Sun May 20 11:38:17 2001: When I try to wield a weapon which is not for my align, I get zapped and drop it, but still get the message you are skilled with etc etc.
+[20116] Baadal: Sun May 20 11:48:11 2001: affect of the armor spell shows armor class by 9, not -9.
+[ 2512] Craevenwulfe: Sun May 20 13:47:47 2001: assisting, i an ap attacked snails, warrior didn't assist (despite having autoassist on) and had to type k snail for each one
+[ 1886] Craevenwulfe: Sun May 20 15:17:36 2001: unholy communion just doesn't work
+[20199] Verrucchio: Sun May 20 15:32:02 2001: I have been seeing clouds in places like Dragon Tower and the city underwater.. just thought it was strange.
+[  345] Hans: Sun May 20 15:33:27 2001: Room title "Steep Slope", no-exit room, rom desc gives me the feeling its a death trap room,"You slip, you fall, you DIE!!", only you don't die,
+[ 6000] Baadal: Sun May 20 15:34:52 2001: desc says dimly lit path leads north, no north here.
+[ 3598] Lindexious: Sun May 20 16:46:38 2001: I'm around the gate of aetullan, i got disconnected, when i logged back on it was pitch black, now some screens are pitch black and some screens i can see on, even though i'm wearing 4 glowing items.
+[ 3759] Bosephus: Sun May 20 17:00:39 2001: Not sure if this is known but it appears there is no autosave when you quit.
+[ 1478] Baadal: Sun May 20 17:09:47 2001: consume attempts to consume the first item on the ground, instead of the first corpse.
+[ 3759] Bosephus: Sun May 20 17:47:31 2001: Not sure where all it does this, but in the arena when i open down in the center it still doesn't show there is a possible exit down, even when i type 'exit'.
+[20150] Baadal: Sun May 20 21:03:41 2001: consume seems to have changed. when I try to consume I get Consume what?
+[ 2512] Mchammer: Sun May 20 22:38:17 2001: if somebody fails blackjack and you sleep, you can't wake up
+[ 2510] Smeg: Mon May 21 01:01:50 2001: guild guards and guildmasters track making it rather easy to gain entry to teh guilds
+[ 2510] Smeg: Mon May 21 01:50:33 2001: word of recal, goes to teh wrong home town, I also go to the wrong hometown when I die, or when I rub a talisman
+[ 2510] Smeg: Mon May 21 02:01:12 2001: for some strange reason my skills that are at 100% keep droping 1 point now and again, like enhanced damage and recal
+[  986] Soreth: Mon May 21 03:05:58 2001: zheas road is connected wrong here. went north, but there's no south exit.
+[24214] Smeg: Mon May 21 03:19:58 2001: you can see weather when sleeping
+[ 2512] Firgen: Mon May 21 03:32:14 2001: Gonsalves's iceball made me yell, even though he's out of my range.  Didn't harm me though
+[24257] Smeg: Mon May 21 06:00:58 2001: 100% skills are not saving for me, they save at 99% and then when I log on again i have to raise them the extra point
+[24307] Smeg: Mon May 21 08:54:45 2001: no message for defend
+[24324] Smeg: Mon May 21 09:16:57 2001: word does not word other people coprrectly, it says it does but it doesn't transfer them
+[ 2799] Derven: Mon May 21 10:21:35 2001: Yah when I strip the mud crashes MMMMKAY ?
+[ 3712] Pyzondar: Mon May 21 12:23:40 2001: When have recently created my char and walk into a room with an aggressive mob, I get spammed with 'The gods protect you from the aggressive monster.'. Also, the message appears twice for each aggr_update
+[ 2512] Pyzondar: Mon May 21 12:26:59 2001: When I walk into the room with the Official RS beta2 healer I get a 'The gods protect someone from you.' message
+[ 3751] Pyzondar: Mon May 21 12:34:12 2001: Autoassist doesn't work, at all
+[ 3749] Pyzondar: Mon May 21 12:46:03 2001: The bug I reported with autoassist fixed itself when I got rid of the newbie timer
+[ 1200] Eladrian: Mon May 21 17:07:27 2001: invigorate helpfile -> vigorize
+[ 2512] Eseig: Mon May 21 20:00:03 2001: Paracack healing slept me even though I don't trust anyone :P
+[ 2512] Eseig: Mon May 21 20:09:35 2001: When healing slept, the echo to me is 'Eseig falls into..." instead of "You fall into..."
+[ 2512] Eseig: Mon May 21 20:43:30 2001: I killed Kundali with metal shards at the Temple, and the remainder of the shards hit his reincarnation, and we continued fighting...
+[ 2512] Eseig: Mon May 21 21:31:11 2001: As a drow, I can alter my weapons to mithril and wield them.
+[ 2481] Ziess: Tue May 22 00:25:57 2001: Weaken does not give a warning when the spell fails. Maybe something like 'Ziess's muscles wither slightly then regain their vigor.'
+[19243] Ziess: Tue May 22 01:11:25 2001: deafen does not give a warning that the spell failed
+[ 2522] Pheon: Tue May 22 13:11:31 2001: There is a bug on the message sent when someone in the room with you retreats
+[ 1006] Caliphano: Tue May 22 16:46:16 2001: My hometown is Cimar and when I go into Aetullan, I cant quit out, it says i'm not safe enough.
+[ 2408] Caliphano: Tue May 22 17:33:32 2001: I incapacitated a player, and he didn't die or heal. but just stayed there incapacitated for many ticks.
+[11660] Xanth: Tue May 22 17:57:07 2001: Udgaard you can't buy from shops
+[24321] Smeg: Wed May 23 11:20:13 2001: defend does not appear to be working
+[ 2521] Ramisiv: Wed May 23 17:22:35 2001: You can walk right into the Cimar ranger guild.
+[  995] Eladrian: Thu May 24 21:15:05 2001: North exit from this room = bugz0red
+[ 1200] Morglum: Thu May 24 22:49:12 2001: broken bones goes through death
+[ 3759] Byvarn: Fri May 25 00:51:04 2001: for some reason I can't practice drag
+[ 2538] Zarlak: Fri May 25 05:27:27 2001: The healer won't heal poison on me even though I have 500 gold.
+[ 3720] Ranto: Fri May 25 08:56:33 2001: You can no longer detect nearby heat variations., should this be the wear off message for ghost?
+[ 9227] Ranto: Fri May 25 12:30:10 2001: lore is printing double
+[ 3758] Azheri: Fri May 25 15:02:37 2001: Typing 'help' at the race creation prompt yields "No matching helpfiles.", same for help race during creation
+[ 3758] Azheri: Fri May 25 15:03:16 2001: Trying to deallocate causes me to move on to the next prompt, for alignment.
+[ 3759] Azheri: Fri May 25 15:14:28 2001: The imp helpfile doesn't mention Imps as being assassins.
+[ 3744] Rywald: Fri May 25 15:58:44 2001: Cannot cast mana channel on another when I'm affected by it.
+[ 2545] Rywald: Fri May 25 15:59:15 2001: (Er, it's mana conduit rather than mana channel, sorry)
+[  264] Azheri: Fri May 25 18:08:41 2001: When I died to a demonfire, I was cursed after my death.
+[ 2538] Carantoc: Fri May 25 19:10:37 2001: if you lose conc on a spell vs a linkdead person it will begin combat anyway
+[19246] Manshon: Sat May 26 00:40:08 2001: harden fist you can't parry with them.
+[ 2538] Yuvien: Sat May 26 02:10:20 2001: For whatever reason 'where' isn't working. It displays 'none' when me and two other people are in the area
+[ 2538] Yuvien: Sat May 26 02:10:33 2001: Errm.. At least it did back in mud school.

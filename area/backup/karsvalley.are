@@ -1,0 +1,3834 @@
+#AREA
+karsvalley.are~
+The Glimmering Forest~
+Karsus~
+0 0
+15900 15999
+unopened
+none
+0
+1
+Karsus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#15999
+map old tattered glimmering forest~
+old tattered map~
+A bound piece of tattered parchment has been left here.~
+trash
+parchment~
+0 0 0 0 0
+1 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E map~
+D--#--#--#     #--#
+|  |  |  |     |  |
+#--#--#--#--#  #--#--@--#
+  |  |  |  |  |  |  |  |  |    
+#--#--#--#--#--#--#--#--#--#
+|  |  |  |  |  |  |  |  
+U--#--#--#--#--#--#--#
+           *--#--#  #--*--*--#
+|  |     |  |  |  |  
+#--#--*--#--#--#--*--#--#
+|  |  |  |  |  |  |  |  |  
+#--#--*--*--*--*--*--#--#
+|  |  |  |  |  |     |  |  
+#--#--#  #--#--*--#  #--#--#
+|  |  |     |  |  |  |  |  |  
+#--#--#--#--#--*--#  #--#--#
+|  |  |  |  |  |     |  |  
+#--#--#--#--#--#     #--#
+~
+
+#0
+
+
+
+#ROOMS
+#15900
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+ROOM NO_MOB
+D NORTH 15921 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15901 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15901
+Southern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15920 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15900 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15902 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15902
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15919 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15901 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15903 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15903
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15918 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15902 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15904 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15904
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15917 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15903 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15905 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15905
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15906 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15904 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15906
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15909 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15917 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15905 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15907 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15907
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 15908 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15906 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15908
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15909 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15907 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15909
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15910 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15916 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15906 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15908 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15910
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 15911 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15915 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15909 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15911
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15912 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15910 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15912
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15913 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15915 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15911 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15913
+Western trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15977 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15946 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15914 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15912 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15914
+Western trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15913 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15945 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15926 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15915 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15915
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15912 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15914 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15916 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15910 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15916
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15915 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15917 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15909 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15917
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15916 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15918 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15904 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15906 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15918
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15919 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15903 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15917 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15919
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15925 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15920 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15902 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15918 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15920
+The Southern Trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15924 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15921 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15901 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15919 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15921
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15923 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15900 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15920 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15922
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#15923
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15927 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15921 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15924 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15924
+Southern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15944 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15923 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15920 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15925 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15925
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15945 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15924 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15919 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15926 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15926
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15914 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15925 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15927
+Eastern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15942 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15928 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15923 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15944 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15928
+Eastern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15941 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15929 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15927 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15929
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15940 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15938 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15930 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15928 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15930
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15929 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15937 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15933 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15931 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15931
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15930 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15932 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15932
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15931 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15933 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15933
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15930 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15936 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15934 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15932 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15934
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15933 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15935 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15935
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15936 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15934 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15936
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15937 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15935 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15933 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15937
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15938 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15936 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15930 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15938
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15939 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15937 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15929 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15939
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15954 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15938 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15940 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15940
+Within the glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15953 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15939 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15929 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15941 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15941
+Eastern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15952 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15940 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15928 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15942 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15942
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15951 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15941 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15927 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15943 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15943
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15942 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15944 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15946 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15944
+A junction on a forest trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15943 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15927 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15924 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15945 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15945
+Western trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15946 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15944 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15925 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15914 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15946
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15947 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15943 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15945 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15913 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15947
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15969 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15948 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15946 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15977 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15948
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15949 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15947 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15949
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15962 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15950 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15948 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15969 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15950
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15961 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15959 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15951 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15949 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15951
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the
+canopy unbranched, upon reaching the canopy massive arms spread wide their
+fingers straining to gain as much coverage as possible.  Wildlife noises
+echo through the forest from trunk to trunk in a weird eerie way.  Light
+cascades through the canopy upon each gust of wind, beams of light strike
+spots lighting it up for a brief moment before the shifting canopy casts it
+in shadow again.  
+~
+forest
+D NORTH 15950 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15952 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15942 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15952
+Eastern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15959 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15953 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15941 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15951 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15953
+Eastern trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15958 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15954 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15940 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15952 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15954
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15955 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15939 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15953 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15955
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15956 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15954 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15958 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15956
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15955 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15957 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15957
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15968 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15956 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15958 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15960 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15958
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15957 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15955 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15953 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15959 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15959
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15960 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15958 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15952 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15950 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15960
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15967 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15957 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15959 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15961 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15961
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15964 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15960 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15950 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15962 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15962
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15963 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15961 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15949 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15970 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15963
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15964 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15962 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15964
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15965 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15967 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15961 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15963 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15965
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15966 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15964 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15966
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15967 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15965 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15967
+Before a cool spring glade~
+Ancient trees have grown excedingly tall with a small shaded glade spring
+at their feet.  Smaller bushes line the edged of the spring and even grass
+has managed to take hold where the soil is to shallow for larger plants to
+grow.  When light manages to break through the canopy above the spring
+luminates into a iradescent blue.  
+~
+forest
+D NORTH 15966 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15968 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15960 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15964 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The shaded glade spring glows blue when light is cast apon it, swiming in
+the water are some small fish.  Perhaps if your fast enough you might be
+able to catch some.  
+~
+OWNER none~
+#15968
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15957 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15967 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15969
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15970 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15949 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15947 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15976 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15970
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15971 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15962 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15969 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15975 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15971
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15972 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15970 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15974 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15972
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 0 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15971 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15973 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15973
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15972 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15974 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15978 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15974
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15973 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15971 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15975 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15979 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15975
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15974 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15970 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15976 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15980 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15976
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15975 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15969 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15977 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15981 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15977
+Western trail~
+A bare dirt trail snakes its way through the forest, thick gnarled roots
+occasional surface through the bare packed dirt.  On either side of the
+trail are bushes and young trees waiting for a lucky break when they might
+be able to spring up to take the place of a fallen giant.  A strong breeze
+gusts its way up and down the trail, swirling with it lose dirt and the rare
+fallen leaf.  
+~
+trail
+D NORTH 15976 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15947 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15913 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15978
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15973 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15979 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15982 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15979
+Within the Glimmering forest~
+Some small vegetation has managed to strangle a tree of its sustenance,
+culling its ability to absorb light at the canopy level and enabling enough
+light to shine through to provide for those plants underneath it.  Even
+patches of grass has started to grow in the fertile ground.  Smaller
+wildlife can be seen scurrying from bush to bush as the occasional bird can
+be seen flying through the maze of tree trunks.  
+~
+forest
+D NORTH 15978 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15974 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15980 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15983 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15980
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15979 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15975 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15981 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15984 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15981
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15980 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15976 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 15987 I 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  To the south west there
+seems to be a large boulder that you might be able to scale upwards and
+start a ascent up the cliff side.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15982
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15978 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15983 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 15995 I 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  Hidden to the northwest is a pile of rocks that
+looks like it has a small opening leading downward.  
+~
+OWNER none~
+#15983
+Within the Glimmering forest~
+Ancient trees as wide as a ten feet stretch from the ground to the canopy
+unbranched, upon reaching the canopy massive arms spread wide their fingers
+straining to gain as much coverage as possible.  Wildlife noises echo
+through the forest from trunk to trunk in a weird eerie way.  Light cascades
+through the canopy upon each gust of wind, beams of light strike spots
+lighting it up for a brief moment before the shifting canopy casts it in
+shadow again.  
+~
+forest
+D NORTH 15982 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15979 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15984 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15986 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15984
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 15983 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15980 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 15985 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15985
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 15986 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15984 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 0 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15986
+The edge of the forest~
+Ancient trees reach to the upper canopy as smaller bushes and shrugs
+strive to reach the edge of the forest.  The mountain starts to slope slowly
+then rapidly climbs into a cliff face that is covered with eight to ten foot
+high shrubs.  The breeze is a lot stronger here at the edge of the forest
+where the ancient trees hold little cover over the foothill.  
+~
+forest
+D NORTH 0 0 0
+~
+The forest continues on to the north.  
+~
+D EAST 15983 0 0
+~
+The forest continues on to the east.  
+~
+D SOUTH 15985 0 0
+~
+The forest continues on to the south.  
+~
+D WEST 0 0 0
+~
+The forest continues on to the west.  
+~
+D UP 0 0 0
+~
+The canopy spans high above you blocking out a lot of light yet allowing
+glimmers of light to penatrate to the forest floor.  
+~
+D DOWN 0 0 0
+~
+The forest floor is covered with a very thin layer of decaying material,
+traveling should be easy.  
+~
+OWNER none~
+#15987
+Scaling the mountain side~
+Perched on a small outcropping of rock surrounded by extremely dense
+bushes on all sides you can just see out above the upper canopy of the
+forest that lies to the east, rising high and steep to your west is the
+heavily vegetated cliff.  The air is clear and full of the fresh smells of
+nature giving rise to the urge to push onwards.  
+~
+forest
+D NORTH 0 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 0 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 15988 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 15990 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+D DOWN 15981 I 0
+~
+The cliff has many fissures and gaps through the stone, sediment over
+time and through erosion has settled here providing viable footholds for
+vegetation to take hold.  
+~
+OWNER none~
+#15988
+Scaling the mountain side~
+Perched on a small outcropping of rock surrounded by extremely dense
+bushes on all sides you can just see out above the upper canopy of the
+forest that lies to the east, rising high and steep to your west is the
+heavily vegetated cliff.  The air is clear and full of the fresh smells of
+nature giving rise to the urge to push onwards.  
+~
+forest
+D NORTH 15987 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 0 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 0 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 15989 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+D DOWN 0 0 0
+~
+The cliff has many fissures and gaps through the stone, sediment over
+time and through erosion has settled here providing viable footholds for
+vegetation to take hold.  
+~
+OWNER none~
+#15989
+Scaling the mountain side~
+Perched on a small outcropping of rock surrounded by extremely dense
+bushes on all sides you can just see out above the upper canopy of the
+forest that lies to the east, rising high and steep to your west is the
+heavily vegetated cliff.  The air is clear and full of the fresh smells of
+nature giving rise to the urge to push onwards.  
+~
+forest
+D NORTH 15990 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 15988 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 0 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 15992 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+D DOWN 0 0 0
+~
+The cliff has many fissures and gaps through the stone, sediment over
+time and through erosion has settled here providing viable footholds for
+vegetation to take hold.  
+~
+OWNER none~
+#15990
+Scaling the mountain side~
+Perched on a small outcropping of rock surrounded by extremely dense
+bushes on all sides you can just see out above the upper canopy of the
+forest that lies to the east, rising high and steep to your west is the
+heavily vegetated cliff.  The air is clear and full of the fresh smells of
+nature giving rise to the urge to push onwards.  
+~
+forest
+D NORTH 0 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 15987 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 15989 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 15991 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+OWNER none~
+#15991
+Scaling the mountain side~
+The bushes are not as dense here as they seem to struggle in finding foot
+in the cracks and gaps between rocks.  Large rocky protrusions stick up from
+the ground a couple feet, some many feet.  Wind wisps by the rocks with an
+eerie wail that sounds more of a chime than a howl.  
+~
+forest
+D NORTH 0 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 15990 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 15992 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 0 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+D DOWN 0 0 0
+~
+The cliff has many fissures and gaps through the stone, sediment over
+time and through erosion has settled here providing viable footholds for
+vegetation to take hold.  
+~
+OWNER none~
+#15992
+Scaling the mountain side~
+The bushes are not as dense here as they seem to struggle in finding foot
+in the cracks and gaps between rocks.  Large rocky protrusions stick up from
+the ground a couple feet, some many feet.  Wind wisps by the rocks with an
+eerie wail that sounds more of a chime than a howl.  
+~
+forest
+D NORTH 15991 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 15989 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 15993 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 0 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+D DOWN 0 0 0
+~
+The cliff has many fissures and gaps through the stone, sediment over
+time and through erosion has settled here providing viable footholds for
+vegetation to take hold.  
+~
+OWNER none~
+#15993
+Scaling the mountain side~
+A small trail lined with dense bushes on either side snakes its way
+across the mountainside.  Sections of rocks have crumbled away making this
+trail extremely dangerous.  With the diminished cover of the bushes the wind
+gusts are considerably stronger here.  The footing and wind conditions could
+make for a dangerous crossing.  
+~
+forest
+D NORTH 15992 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D EAST 15994 0 0
+~
+To the east a thick forest canopy can be seen, bird life can be seen
+flying from treetop to treetop.  The occasional larger tree has punctured
+the canopy and has managed to stretch its upper fingers out above those
+around it, soaking up as much light as possible.  
+~
+D SOUTH 0 0 0
+~
+In this direction the cliff side parallels, some sections protrude more
+than others, but the vegetation cover is still just as thick.  
+~
+D WEST 0 0 0
+~
+The slope of the cliff rises at a steep rate, some sections can be scaled
+others are not.  Thick shrubs and bushes sprout up in all directions
+covering almost all of the cliff face.  
+~
+D UP 0 0 0
+~
+The sky opens up before you, obscured by the occasional bush that grows
+higher than you and suffering from being whipped about by strong winds.  
+~
+D DOWN 0 0 0
+~
+The cliff has many fissures and gaps through the stone, sediment over
+time and through erosion has settled here providing viable footholds for
+vegetation to take hold.  
+~
+OWNER none~
+#15994
+Within the Hermits abode~
+Stepping into this small abode is quiet an outstanding sight, A half
+spherical cage grows to about the height of ten feet.  Branches have woven
+themselves over and under each other as it guided by some mystical force. 
+Upon the ground even the rocks appear to be well worn and in comfortable
+looking shapes, a slight rise in the center that is reasonably level appears
+to be a table.  Small sunken indentations around the raised section of stone
+appear to be cushioned positions to sit.  
+~
+forest
+D NORTH 0 0 0
+~
+The cage of interwoven branches makes it almost impossible to see what is
+to the north.  
+~
+D EAST 0 0 0
+~
+The cage of interwoven branches makes it almost impossible to see what is
+to the east.  
+~
+D SOUTH 0 0 0
+~
+The cage of interwoven branches makes it almost impossible to see what is
+to the south.  
+~
+D WEST 15993 0 0
+~
+A snaking trail along the cliff side leads off into the bushes to the
+west.  
+~
+D UP 0 0 0
+~
+The cage of interwoven branches makes it almost impossible to see the sky
+above.  This structure looks to be almost water proof.  
+~
+OWNER none~
+#15995
+Within the hidden caves~
+This natural cavern looks like water at one stage had carved out its
+bowls.  When the cavern had neared the surface the pressure had caused a
+collapsed and the fallen rock looks to have blocked off the water causing it
+to flow in a different route.  Long needles of light puncture the darkness
+of this cave splintering off in a myriad of shards when it strikes the rocks
+strewn over the floor.  The air is still fairly damp and a large amount of
+lichen and mosses grow upon the walls.  
+~
+cave
+D NORTH 15996 0 0
+~
+The cave continues on to the north.
+~
+D EAST 0 0 0
+~
+Rocks have fallen from the ceiling piling up against the wall, Razor
+sharp and heavily pitted, these rocks provide idea footing for mosses and
+lichens to thrive.  
+~
+D SOUTH 0 0 0
+~
+The rock wall on this side of the cave is littered with mosses and
+lichens of all different sizes and shapes.  There is the occasional luminous
+moss, but its glow is extremely faint indicating that even it is having a
+very hard time surviving.  
+~
+D WEST 15998 0 0
+~
+The cave continues on to the west.
+~
+D UP 15982 I 0
+~
+Some sections of the rock above you are quiet sharp and jiggered, other
+sections that are lower seem to be worn smooth.  
+~
+D DOWN 0 0 0
+~
+The floor in sections is bare stone that has been worn smooth, other
+sections are covered with fine sand and gravel.  Occasionally there are
+small rocks large enough for mosses to get a footing upon.  
+~
+OWNER none~
+#15996
+Within the hidden caves~
+;This natural cavern looks like water at one stage had carved out its
+bowls.  When the cavern had neared the surface the pressure had caused a
+collapsed and the fallen rock looks to have blocked off the water causing it
+to flow in a different route.  This section however isn't as deeply cut as
+other sections, a small platue leveling off a couple feet above the floor. 
+Strew across this raised section is what looks to be an extremely large
+nest, belonging to which creature you do not know.  
+~
+cave
+D NORTH 0 0 0
+~
+The rock wall on this side of the cave is littered with mosses and
+lichens of all different sizes and shapes.  There is the occasional luminous
+moss, but its glow is extremely faint indicating that even it is having a
+very hard time surviving.  
+~
+D EAST 0 0 0
+~
+Rocks have fallen from the ceiling piling up against the wall, Razor
+sharp and heavily pitted, these rocks provide idea footing for mosses and
+lichens to thrive.  
+~
+D SOUTH 15995 0 0
+~
+The cave continues on to the south.
+~
+D WEST 15997 0 0
+~
+The cave continues on to the west.
+~
+D UP 0 0 0
+~
+Some sections of the rock above you are quiet sharp and jiggered, other
+sections that are lower seem to be worn smooth.  
+~
+D DOWN 0 0 0
+~
+The floor in sections is bare stone that has been worn smooth, other
+sections are covered with fine sand and gravel.  Occasionally there are
+small rocks large enough for mosses to get a footing upon.  
+~
+OWNER none~
+#15997
+Within the hidden caves~
+This natural cavern looks like water at one stage had carved out its
+bowls.  When the cavern had neared the surface the pressure had caused a
+collapsed and the fallen rock looks to have blocked off the water causing it
+to flow in a different route.  The air is still fairly damp and a large
+amount of lichen and mosses grow upon the walls.  
+~
+cave
+D NORTH 0 0 0
+~
+The rock wall on this side of the cave is littered with mosses and
+lichens of all different sizes and shapes.  There is the occasional luminous
+moss, but its glow is extremely faint indicating that even it is having a
+very hard time surviving.  
+~
+D EAST 15996 0 0
+~
+The cave continues on to the east.
+~
+D SOUTH 15998 0 0
+~
+The cave continues on to the south.
+~
+D WEST 15999 0 0
+~
+The cave continues on to the west.
+~
+D UP 0 0 0
+~
+Some sections of the rock above you are quiet sharp and jiggered, other
+sections that are lower seem to be worn smooth.  
+~
+D DOWN 0 0 0
+~
+The floor in sections is bare stone that has been worn smooth, other
+sections are covered with fine sand and gravel.  Occasionally there are
+small rocks large enough for mosses to get a footing upon.  
+~
+OWNER none~
+#15998
+Within the hidden caves~
+This natural cavern looks like water at one stage had carved out its
+bowls.  When the cavern had neared the surface the pressure had caused a
+collapsed and the fallen rock looks to have blocked off the water causing it
+to flow in a different route.  The air is still fairly damp and a large
+amount of lichen and mosses grow upon the walls.  
+~
+cave
+D NORTH 15997 0 0
+~
+The cave continues on to the north.
+~
+D EAST 15995 0 0
+~
+The cave continues on to the east.
+~
+D SOUTH 0 0 0
+~
+The rock wall on this side of the cave is littered with mosses and
+lichens of all different sizes and shapes.  There is the occasional luminous
+moss, but its glow is extremely faint indicating that even it is having a
+very hard time surviving.  
+~
+D WEST 0 0 0
+~
+The rock wall on this side of the cave is littered with mosses and
+lichens of all different sizes and shapes.  There is the occasional luminous
+moss, but its glow is extremely faint indicating that even it is having a
+very hard time surviving.  
+~
+D UP 0 0 0
+~
+Some sections of the rock above you are quiet sharp and jiggered, other
+sections that are lower seem to be worn smooth.  
+~
+D DOWN 0 0 0
+~
+The floor in sections is bare stone that has been worn smooth, other
+sections are covered with fine sand and gravel.  Occasionally there are
+small rocks large enough for mosses to get a footing upon.  
+~
+OWNER none~
+#15999
+before a desecrated shrine~
+This natural cavern looks like water at one stage had carved out its
+bowls.  When the cavern had neared the surface the pressure had caused a
+collapsed and the fallen rock looks to have blocked off the water causing it
+to flow in a different route.  Placed in the center of this room is a large
+granite tablet.  Shards of granite, obvious from the tablet, lay struin
+around the room.  Years of not being touched mosses and lichens have claimed
+owner ship of everything.  
+~
+cave
+D EAST 15997 0 0
+~
+The cave continues on to the east.
+~
+D WEST 0 0 0
+~
+The rock wall on this side of the cave is littered with mosses and
+lichens of all different sizes and shapes.  There is the occasional luminous
+moss, but its glow is extremely faint indicating that even it is having a
+very hard time surviving.  
+~
+D UP 0 0 0
+~
+Some sections of the rock above you are quiet sharp and jiggered, other
+sections that are lower seem to be worn smooth.  
+~
+D DOWN 0 0 0
+~
+The floor in sections is bare stone that has been worn smooth, other
+sections are covered with fine sand and gravel.  Occasionally there are
+small rocks large enough for mosses to get a footing upon.  
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

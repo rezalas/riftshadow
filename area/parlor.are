@@ -1,0 +1,740 @@
+#AREA
+parlor.are~
+The Parlor~
+None~
+1 51
+155 199
+shrine
+temperate
+0
+1
+Alyssa~
+
+#MOBS
+#155
+drow sareh receptionist~
+Sareh~
+A beautiful young drow appears to be pleasantly conducting office business here.
+~
+~
+-1000 0 0 drow~
+51 25d8+4274 25d25+25 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INTELLIGENT
+#156
+yochlol handmaiden creature tentacles~
+the Handmaiden~
+A large, menacing creature with massive tentacles whips about here.
+~
+~
+-1000 0 0 demon~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+RES CHARM
+RES MENTAL
+VUL MITHRIL
+#157
+drow headmistress mistress zari~
+Zari~
+An attractive, mature-looking drow is here, perusing the guest list.
+~
+~
+-1000 0 0 drow~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#158
+alluring drow mistress Shil'Uzar~
+Shil'Uzar~
+An alluring drow with silvery white hair is here, running her hand through the bath water.
+~
+~
+-1000 0 0 drow~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#159
+drow bodyguard~
+a drow bodyguard~
+A muscular drow in black armour is here, maintaining security throughout the premises.
+~
+~
+0 0 0 drow~
+50 25d8+4066 10d10+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#160
+shil'uzar shiluzar~
+Shil'Uzar~
+A curvaceous drow with shoulder-length hair is here, offering an alluring smile.
+~
+~
+0 0 0 drow~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#161
+nazira~
+Nazira~
+An attractive but austere drow woman stands here with a serious expression on her face.
+~
+~
+0 0 0 drow~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#162
+zahreen~
+Zahreen~
+A young drow medical assistant is here, arranging flasks.
+~
+~
+0 0 0 drow~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#163
+zefarah~
+Zefarah~
+A fashionable drow mistress is here, managing important business matters.
+~
+~
+0 0 0 drow~
+51 25d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#155
+open-toe stiletto platform sandals heels~
+a pair of shiny black open-toe platform sandals with stiletto heels~
+A pair of black, open-toe platform sandals with stiletto heels is here.~
+armor
+hard leather~
+0 0 0 0 0
+60 1 50000 P
+WEAR TAKE
+WEAR FEET
+LIMIT 0
+TIMER 0
+E open-toe~
+You see a rather wicked pair of shiny black, open toe platform sandals. 
+The heel itself is about five inches long and appears sharp enough to pierce
+through skin.  
+~
+
+#156
+thigh-high boots spiked heels~
+a pair of thigh-high leather boots with spiked heels~
+These devilish black leather boots are crafted for the discerning connoisseur.~
+armor
+shiny leather~
+0 0 0 0 0
+53 3 50000 P
+WEAR TAKE
+WEAR FEET
+RESTRICT DROW_ONLY
+LIMIT 0
+TIMER 0
+
+#157
+stiletto-heeled pumps~
+a pair of black stiletto-heeled pumps~
+These expertly crafted, shiny black leather pumps reveal no flaws in their workmanship.  From the tip of the four-inch heel to the perfectly polished front end of the pump, you can find no scuffs or blemishes in the material.  These pumps are apparently made for small, slender feet.~
+armor
+hard leather~
+0 0 0 0 0
+1 1 40000 P
+WEAR TAKE
+WEAR FEET
+RESTRICT DROW_ONLY
+LIMIT 0
+TIMER 0
+
+#187
+blah~
+blahb lah~
+dummy desc~
+armor
+none~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR LEGS
+WEAR COSMETIC
+ITEM UNDER_CLOTHES
+LIMIT 0
+TIMER 0
+NAMEOFLOC set this~
+
+#190
+iron cage~
+an expertly crafted iron cage~
+A cruel-looking iron cage is in here in the corner of the room.~
+furniture
+iron~
+2 5000 EH 0 0
+1 800 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#191
+four-poster bed~
+an elegant four-poster bed~
+An elegant four poster bed is here, waiting for its mistress.~
+furniture
+wood~
+5 5000 EKQ 0 0
+1 500 0 P
+LIMIT 0
+TIMER 0
+
+#192
+wardrobe~
+a tall, lavish wardrobe~
+A tall, lavish wardrobe is here, full of stylish outfits and footwear.~
+container
+wood~
+10000 AC 0 1000 0
+1 800 0 P
+LIMIT 0
+TIMER 0
+
+#193
+black desk~
+a massive black desk~
+A massive, imposing black executive desk is here.~
+furniture
+wood~
+1 5000 DH 0 0
+1 500 0 P
+LIMIT 0
+TIMER 0
+
+#194
+toy chest~
+a small chest beset with jewels~
+A small chest beset with jewels lies here beside the bed.~
+container
+brass~
+10000 AC 0 10000 0
+1 500 0 P
+LIMIT 0
+TIMER 0
+
+#195
+shoe rack metallic~
+a shoe rack~
+A long metallic shoe rack is here at the bottom of the wardrobe.~
+container
+metal~
+10000 0 0 100 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#196
+dresser~
+an ornate wooden dresser~
+An ornate wooden dresser containing various amenities is here.~
+container
+wood~
+10000 AC 0 1000 0
+1 100 0 P
+LIMIT 0
+TIMER 0
+
+#197
+fancy drawer~
+a fancy drawer~
+This drawer in the dresser is expertly crafted and covered in ornamentation.~
+container
+wood~
+1000 AC 0 1000 0
+1 500 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#198
+hospital bed~
+a hospital bed~
+A clean hospital bed with freshly placed sheets is here in the corner of the laboratory.~
+furniture
+steel~
+2 5000 EHK 0 0
+1 500 0 P
+LIMIT 0
+TIMER 0
+
+#199
+operating table~
+a large operating table~
+A large operating table is here in the centre of the laboratory.~
+furniture
+steel~
+1 500 EHK 0 0
+1 500 0 P
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#155
+The Parlor Entrance~
+You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 157 0 0
+door~
+~
+OWNER none~
+#156
+The southwestern bath and steam chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 159 0 0
+door~
+~
+D EAST 157 0 0
+door~
+~
+OWNER none~
+#157
+A luxurious marble-tiled hallway~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 160 0 0
+door~
+~
+D EAST 158 0 0
+door~
+~
+D SOUTH 155 0 0
+door~
+~
+D WEST 156 0 0
+door~
+~
+OWNER none~
+#158
+The southeastern bath and steam chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 161 0 0
+door~
+~
+D WEST 157 0 0
+door~
+~
+OWNER none~
+#159
+The western bath and steam chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 162 0 0
+door~
+~
+D EAST 160 0 0
+door~
+~
+D SOUTH 156 0 0
+door~
+~
+OWNER none~
+#160
+A luxurious marble-tiled hallway~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 163 0 0
+door~
+~
+D EAST 161 0 0
+door~
+~
+D SOUTH 157 0 0
+door~
+~
+D WEST 159 0 0
+door~
+~
+D UP 174 0 0
+door~
+~
+OWNER none~
+#161
+The eastern bath and steam chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 164 0 0
+door~
+~
+D SOUTH 158 0 0
+door~
+~
+D WEST 160 0 0
+door~
+~
+OWNER none~
+#162
+The northwestern bath and steam chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 163 0 0
+door~
+~
+D SOUTH 159 0 0
+door~
+~
+OWNER none~
+#163
+A luxurious marble-tiled hallway~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 165 0 0
+door~
+~
+D EAST 164 0 0
+door~
+~
+D SOUTH 160 0 0
+door~
+~
+D WEST 162 0 0
+door~
+~
+OWNER none~
+#164
+The northeastern bath and steam chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 161 0 0
+door~
+~
+D WEST 163 0 0
+door~
+~
+OWNER none~
+#165
+The Back Room~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 173 0 0
+door~
+~
+D SOUTH 163 0 0
+door~
+~
+D WEST 172 0 0
+door~
+~
+D DOWN 166 0 0
+door~
+~
+OWNER none~
+#166
+A dimly lit passageway beneath the back room~
+You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 167 0 0
+door~
+~
+D UP 165 0 0
+door~
+~
+OWNER none~
+#167
+A dark underground passageway~
+You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 168 0 0
+door~
+~
+D EAST 170 0 0
+door~
+~
+D SOUTH 166 0 0
+door~
+~
+D WEST 169 0 0
+door~
+~
+OWNER none~
+#168
+A dark underground passageway~
+You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 177 0 0
+door~
+~
+D SOUTH 167 0 0
+door~
+~
+D WEST 171 0 0
+door~
+~
+OWNER none~
+#169
+The Torture Chamber~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 167 0 0
+door~
+~
+OWNER none~
+#170
+The Chamber of Sacrifice~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 167 0 0
+door~
+~
+OWNER none~
+#171
+The Laboratory of Science and Medicine~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 168 0 0
+door~
+~
+OWNER none~
+#172
+An elegant washroom~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 165 0 0
+door~
+~
+OWNER none~
+#173
+The dressing and powder room~
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 165 0 0
+door~
+~
+OWNER none~
+#174
+A formal reception area~
+You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 175 0 0
+door~
+~
+D DOWN 160 0 0
+door~
+~
+OWNER none~
+#175
+An Executive Office Suite~
+You are in a stately office chamber which obviously belongs to someone of
+high standing.  There are tall bookshelves on the east side of the room,
+full of books written in the drowish language.  There is a large desk here
+upon which piles of paper sit, waiting to be stamped or processed by a
+bureaucratic hand.  The floor is covered with exquisite carpetting made from
+the fur of some unknown animal.  In the corner of the room is a large
+aquarium that is full of colourful fish.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 174 0 0
+door~
+~
+OWNER none~
+#177
+The Chamber of Femininity~
+You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 168 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 157 TO 155 GLIMIT 1 LLIMIT 1
+MOB 158 TO 156 GLIMIT 1 LLIMIT 1
+MOB 160 TO 164 GLIMIT 1 LLIMIT 1
+MOB 159 TO 168 GLIMIT 12 LLIMIT 1
+MOB 161 TO 169 GLIMIT 1 LLIMIT 1
+OBJECT 190 TO 169
+MOB 162 TO 171 GLIMIT 1 LLIMIT 1
+OBJECT 198 TO 171
+OBJECT 199 TO 171
+MOB 155 TO 174 GLIMIT 1 LLIMIT 1
+OBJECT 193 TO 175
+OBJECT 197 TO 177
+OBJECT 196 TO 177
+OBJECT 195 TO 177
+OBJECT 194 TO 177
+OBJECT 192 TO 177
+OBJECT 191 TO 177
+S
+
+#IMPROGS
+I 192 pulse_prog pulse_prog_repop_container
+I 194 pulse_prog pulse_prog_repop_container
+I 195 pulse_prog pulse_prog_repop_container
+I 196 pulse_prog pulse_prog_repop_container
+I 197 pulse_prog pulse_prog_repop_container
+END
+#SPECS
+END
+#$

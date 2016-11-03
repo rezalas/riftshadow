@@ -1,0 +1,2891 @@
+#AREA
+sanihar.are~
+Sanihar il Dur~
+Vornak~
+30 45
+9300 9499
+unopened
+temperate
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#9300
+The village weapon's depot~
+ROOMDESC    
+~
+inside
+D NORTH 9379 A 0
+door~
+The door lead out to the cobbled path.    
+~
+D EAST 0 0 0
+~
+A small cot sits along the eastern wall, along with a small locker.    
+~
+D SOUTH 0 0 0
+~
+A massive collection of weapons lines the southern wall.    
+~
+D WEST 0 0 0
+~
+A small furnace lines the western wall, much too small to provide weapons for the village militia.    
+~
+D UP 0 0 0
+~
+The ceiling has a hallowed tree trunk potruding from it, probably to siphon the smoke out of the building.    
+~
+D DOWN 0 0 0
+~
+A waxy substance coats half the floor  in the building the other half has woodust sprinkled on it.    
+~
+#9301
+A clearing behind the tree~
+As  you pass through the small opening in the giant tree you emerge into a small clearing    
+free of any vegetation or wildlife. An eerie silence permeates the air, the sounds present    
+in the forest you just left are non existant. A small dirt path heads off to the south you    
+can see numerous footprints going back and forth on the path. Oddly enough there is no other    
+sign of inhabitants, if it was not for the footprints this place would seem totally deserted.    
+~
+field
+D NORTH 9120 0 0
+~
+THIS DESC NEEDS TO BE CHANGED.    
+~
+D EAST 0 0 0
+~
+The clearing comes to an end, you can on the path heading south or north through the tree.    
+~
+D SOUTH 9302 0 0
+~
+The path leads south.    
+~
+D WEST 0 0 0
+~
+The clearing comes to an end, you can on the path heading south or north through the tree.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Numerous sets of footprints head off north and south.    
+~
+#9302
+Begining of a dirt path~
+ROOMDESC    
+~
+trail
+D NORTH 9301 0 0
+~
+The narrow path leads north to the clearing.    
+~
+D EAST 0 0 0
+~
+Giant trees block your way.    
+~
+D SOUTH 9303 0 0
+~
+The narrow path continues south.     
+~
+D WEST 0 0 0
+~
+Giant trees block your way.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Small twigs and broken branches litter the path.    
+~
+#9303
+A dirt path~
+ROOMDESC    
+~
+trail
+D NORTH 9302 0 0
+~
+The path leads north, you can see a small clearing in the distance.     
+~
+D EAST 0 0 0
+~
+Giant trees block your way.    
+~
+D SOUTH 9304 0 0
+~
+The narrow path continues south.    
+~
+D WEST 0 0 0
+~
+Giant trees block your way.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Small twigs and broken branches litter the path.    
+~
+#9304
+A dirt path~
+ROOMDESC    
+~
+trail
+D NORTH 9303 0 0
+~
+The narrow path continues north.     
+~
+D EAST 0 0 0
+~
+Giant trees block your way.    
+~
+D SOUTH 9305 0 0
+~
+The narrow path continues south.    
+~
+D WEST 0 0 0
+~
+Giant trees block your way.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Small twigs and broken branches litter the path.    
+~
+#9305
+A dirt path~
+ROOMDESC    
+~
+trail
+D NORTH 9304 0 0
+~
+The narrow path continues north.    
+~
+D EAST 0 0 0
+~
+Giant trees block your way.    
+~
+D SOUTH 9306 0 0
+~
+The narrow path continues south.    
+~
+D WEST 0 0 0
+~
+Giant trees block your way.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Small twigs and broken branches litter the path.    
+~
+#9306
+Before the village gates~
+ROOMDESC    
+~
+trail
+D NORTH 9305 0 0
+~
+The narrow path continues north.    
+~
+D EAST 0 0 0
+~
+Thick tree cover blocks your sight.    
+~
+D SOUTH 9307 AB 0
+wooden gates~
+The path continues past the village gates and into the village.     
+~
+D WEST 0 0 0
+~
+Thick tree cover blocks your sight.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground is littered with pieces of metal and bone. It would seem that many a battle have been fought before these gates.    
+~
+E gate gates wooden~
+Heavy gates made of thick strips of (tree name) trunk secure the village entrance. A small metal plaque teeters on the gates.    
+~
+E metal sign plaque~
+Abandon all hope, those who enter the Domain of Sanihar il Dur.    
+~
+#9307
+Inside the village gates ~
+ROOMDESC    
+~
+trail
+D NORTH 9306 AB 0
+wooden gates~
+Beyond the gates you see a path leading away from the village.     
+~
+D EAST 9314 0 0
+0     
+~
+The village ends a short distance to the east.     
+~
+D SOUTH 9308 0 0
+0     
+~
+An old path through the village continues north and south.    
+~
+D WEST 9330 0 0
+0     
+~
+The village continues to the west, you can see huts off in the distance.     
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you     
+that it has been here for quite a long time. You see several small patches of dirt encrusted    
+with blood, possibly a sign of a freshly fought battle.     
+~
+#9308
+An old path through the village~
+ROOMDESC    
+~
+trail
+D NORTH 9307 0 0
+~
+The path continues north, towards the village gates.     
+~
+D EAST 9315 0 0
+~
+The village ends a short distance to the east.     
+~
+D SOUTH 9309 0 0
+~
+An old path through the village continues south.    
+~
+D WEST 9331 0 0
+~
+The village continues to the west.     
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you     
+that it has been here for quite a long time.    
+~
+#9309
+An old path through the village~
+ROOMDESC    
+~
+trail
+D NORTH 9308 0 0
+~
+An old path through the village continues north.    
+~
+D EAST 9316 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9310 0 0
+~
+An old path through the village continues south.    
+~
+D WEST 9332 0 0
+~
+The village continues to the west.     
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you     
+that it has been here for quite a long time.    
+~
+#9310
+An old path through the village~
+ROOMDESC    
+~
+trail
+D NORTH 9309 0 0
+~
+An old path through the village continues north.    
+~
+D EAST 9317 0 0
+~
+The village continues to the east.     
+~
+D SOUTH 9311 0 0
+~
+An old path through the village continues south.    
+~
+D WEST 9333 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you     
+that it has been here for quite a long time.    
+~
+#9311
+An old path through the village~
+ROOMDESC    
+~
+trail
+D NORTH 9310 0 0
+~
+An old path through the village continues north.    
+~
+D EAST 9318 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9312 0 0
+~
+An old path through the village continues south.    
+~
+D WEST 9334 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you    
+that it has been here for quite a long time.    
+~
+#9312
+An old path through the village~
+ROOMDESC    
+~
+trail
+D NORTH 9311 0 0
+~
+An old path through the village continues north.    
+~
+D EAST 9319 0 0
+~
+A well trodden path heads off to the east.     
+~
+D SOUTH 9313 AB 0
+door~
+A small house lies south of you.     
+~
+D WEST 9335 0 0
+~
+A newer cut path veers off to the west.     
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The old path dissapears under the house that lies south of you.     
+~
+#9313
+A small house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9312 AB 0
+door~
+The door leads back out of the  house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.     
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+As you gaze up at the ceiling you notice a mural painted on its surface.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.     
+~
+E mural picture ceiling~
+A strange encounter has been painted on the surface of the ceiling. A young elven boy bleeds    
+to death on a thick marble pedestal. A massive grey haired man dressed in priests robes and    
+wielding a onyx bladed sacrificial dagger kneels in front of him. Praying to a statue of a 10    
+headed behemoth wielding a sword wrought of human flesh and bones. Their faces and limbs visible    
+on the massive blade of the double bladed sword.     
+~
+#9314
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D EAST 0 0 0
+~
+Dense tree cover blocks your way.     
+~
+D SOUTH 9315 0 0
+~
+The village continues to the south.    
+~
+D WEST 9307 0 0
+~
+The village gates lie to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Comact dirt and  patches of dying brown grass cover the ground around you.     
+~
+#9315
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9314 0 0
+~
+The village continues to the north.    
+~
+D EAST 9321 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9316 0 0
+~
+The village continues to the south.    
+~
+D WEST 9308 0 0
+~
+An old path lies to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground around you.    
+~
+#9316
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9315 0 0
+~
+The village continues to the north.    
+~
+D EAST 9322 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9317 0 0
+0     
+~
+The village continues to the south.    
+~
+D WEST 9309 0 0
+~
+An old path lies to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground around you.    
+~
+#9317
+Before the butcher shop~
+ROOMDESC    
+~
+trail
+D NORTH 9316 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 A 0
+door~
+You see a small shop close by.    
+~
+D SOUTH 9318 0 0
+~
+The village continues to the south.    
+~
+D WEST 9310 0 0
+~
+An old path lies to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground here is a filthy mixture of dirty water, blood, and soap suds. You see pieces of    
+animal remains floating around in the mud. A disgusting mess only a butcher would be capable of.    
+~
+E plaque sign door~
+Thlash the Butcher    
+~
+#9318
+Before the baker's hut~
+ROOMDESC    
+~
+trail
+D NORTH 9317 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 A 0
+door~
+The bakers house lies to the east.    
+~
+D SOUTH 9319 0 0
+~
+A well trodden path lies to the south.    
+~
+D WEST 9311 0 0
+~
+An old path lies to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+MUD! and lots of it, watch your step!    
+~
+E door sign plaque~
+Wukran's Bakery.    
+~
+#9319
+On a well trodden path~
+ROOMDESC    
+~
+trail
+D NORTH 9318 0 0
+~
+The village continues to the north.    
+~
+D EAST 9323 0 0
+~
+A well trodden path continues east.     
+~
+D SOUTH 9320 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9312 0 0
+~
+An old path lies to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.     
+~
+D DOWN 0 0 0
+~
+The earth here has been trodden upon mercilessly, its texture resembles a city pavement more than    
+it does a dirt track in a village.     
+~
+#9320
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9319 AB 0
+door~
+The door leads back out of the house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.     
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.     
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9321
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D EAST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D SOUTH 9322 0 0
+~
+The village continues to the south.    
+~
+D WEST 9315 0 0
+~
+The village continues to the south.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.     
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying  brown grass cover the earth before you.    
+~
+#9322
+Northern quarter of Sanihar il Dur.~
+ROOMDESC    
+~
+trail
+D NORTH 9321 0 0
+~
+The village continues to the north.    
+~
+D EAST 9325 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 0 0 0
+~
+A thick grey wall lies before you.     
+~
+D WEST 9316 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the earth before you.    
+~
+#9323
+On  a well trodden path~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+The thick grey wall of the bakery lies before you.    
+~
+D EAST 9328 0 0
+~
+A well trodden path continues east.     
+~
+D SOUTH 9324 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9319 0 0
+~
+A well trodden path continues west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The earth here has been trodden upon mercilessly, its texture resembles a city pavement more than    
+it does a dirt track in a village.     
+~
+#9324
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9323 AB 0
+door~
+A door leads back out of the house.     
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.     
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9325
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D EAST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D SOUTH 9326 0 0
+~
+The village continues to the south.    
+~
+D WEST 9322 0 0
+~
+The village continues to the west.     
+~
+D UP 0 0 0
+~
+You gaze up at the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.     
+~
+#9326
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9325 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D SOUTH 9327 0 0
+~
+The village continues to the south.    
+~
+D WEST 0 0 0
+~
+Back wall of the butcher shop lies before you.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9327
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9326 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D SOUTH 9328 0 0
+~
+A well trodden path lies to the south.    
+~
+D WEST 0 0 0
+~
+Back wall of the bakery lies before you.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9328
+On a well trodden path~
+ROOMDESC    
+~
+trail
+D NORTH 9327 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 0 0
+~
+A well trodden path continues to the east.    
+~
+D SOUTH 9329 AB 0
+door~
+A small house lies to the south.     
+~
+D WEST 9323 0 0
+~
+A well trodden path continues to the west.     
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The earth here has been trodden upon mercilessly, its texture resembles a city pavement more than    
+it does a dirt track in a village.     
+~
+#9329
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9328 AB 0
+door~
+A door leads back out of the house.     
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.     
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9330
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D EAST 9307 0 0
+~
+The village gates lie to the east.    
+~
+D SOUTH 9331 0 0
+~
+The village continues to the south.    
+~
+D WEST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D UP 0 0 0
+~
+You gaze up at the stars.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9331
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9330 0 0
+~
+The village continues to the north.     
+~
+D EAST 9308 0 0
+~
+An old path lies to the east.    
+~
+D SOUTH 9332 0 0
+~
+The village continues to the south.    
+~
+D WEST 0 0 0
+~
+A thick grey wall blocks your progress in that direction.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9332
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9331 0 0
+~
+The village continues to the north.    
+~
+D EAST 9309 0 0
+~
+An old path lies to the east.    
+~
+D SOUTH 9333 0 0
+~
+The village continues to the south.    
+~
+D WEST 9338 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9333
+Before the herbalist's shop~
+ROOMDESC    
+~
+trail
+D NORTH 9332 0 0
+~
+The village continues to the north.    
+~
+D EAST 9310 0 0
+~
+An old path lies to the east.     
+~
+D SOUTH 9334 0 0
+~
+The village continues to the south.    
+~
+D WEST 0 A 0
+door~
+A small building that houses the  village's herbal shop.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+E plaque sign door~
+Lashan's Herbal Shop.    
+~
+#9334
+Before the Incense shop~
+ROOMDESC    
+~
+trail
+D NORTH 9333 0 0
+~
+The village continues to the north.    
+~
+D EAST 9311 0 0
+~
+An old path lies to the east.     
+~
+D SOUTH 9335 0 0
+~
+THe village continues to the south.    
+~
+D WEST 0 A 0
+door~
+A small building that houses the village's incense store.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+E plaque sign door~
+Zavier's Incense store.    
+~
+#9335
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9334 0 0
+~
+The village continues to the north.    
+~
+D EAST 9312 0 0
+~
+An old path lies to the east.    
+~
+D SOUTH 9336 AB 0
+door~
+A small house lies to the south.     
+~
+D WEST 9339 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You stare into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9336
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9335 AB 0
+door~
+A door leads back out of the house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.      
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.     
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9337
+A house in the northern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 9338 AB 0
+door~
+A door leads back out of the house.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.     
+~
+D UP 0 0 0
+~
+A thick grey ceiling streches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9338
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9337 AB 0
+door~
+A small house lies to the north.    
+~
+D EAST 9332 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 0 0 0
+~
+A thick grey wall blocks your progress to the south.    
+~
+D WEST 9342 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9339
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+A thick grey wall blocks your progress to the north.    
+~
+D EAST 9335 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9340 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9345 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9340
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9339 AB 0
+door~
+A door leads back out of the house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling strecthes over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9341
+A house in the northern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 9342 AB 0
+door~
+A door leads back out of the house.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling strecthes over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.    
+~
+#9342
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9341 AB 0
+door~
+A small house lies to the north.    
+~
+D EAST 9338 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9343 0 0
+~
+The village continues to the south.    
+~
+D WEST 9348 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt, and patches of dying brown grass cover the ground before you.    
+~
+#9343
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9342 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 0 0
+~
+A thick grey wall blocks your progress in that direction.    
+~
+D SOUTH 9344 0 0
+~
+The village continues to the south.    
+~
+D WEST 9349 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9344
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9343 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 0 0
+~
+A thick grey wall blocks your progress in that direction.    
+~
+D SOUTH 9345 0 0
+~
+The village continues to the south.    
+~
+D WEST 9350 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9345
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9344 0 0
+~
+The village continues to the north.    
+~
+D EAST 9339 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9346 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9351 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9346
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9345 AB 0
+door~
+A door leads back out of the house.     
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9347
+A house in the northern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D SOUTH 9348 AB 0
+door~
+A door leads back out of the house.    
+~
+D WEST 0 0 0
+~
+A dark grey wall seems extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9348
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9347 AB 0
+door~
+A small house lies to the north.    
+~
+D EAST 9342 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9349 0 0
+~
+The village continues to the south.    
+~
+D WEST 9354 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9349
+Nortern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9348 0 0
+~
+The village continues to the north.    
+~
+D EAST 9343 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9350 0 0
+~
+The village continues to the south.    
+~
+D WEST 9355 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9350
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9349 0 0
+~
+The village continues to the north.    
+~
+D EAST 9344 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9351 0 0
+~
+The village continues to the south.    
+~
+D WEST 9356 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9351
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9350 0 0
+~
+The village continues to the north.    
+~
+D EAST 9345 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9352 0 0
+~
+The village continues to the south.    
+~
+D WEST 9357 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9352
+Begining of a ragged old path~
+ROOMDESC    
+~
+trail
+D NORTH 9351 0 0
+~
+The village continues to the north.    
+~
+D EAST 0 0 0
+~
+A thick grey wall blocks your progress in that direction.    
+~
+D SOUTH 9396 0 0
+~
+A ragged old trail heads out of the village.    
+~
+D WEST 0 0 0
+~
+A thick grey wall blocks your progress in that direction.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground here is covered with a thick carpet of grass, there are numerous scuff marks heading    
+to the south. What ever it was that went there, did not go willingly.    
+~
+#9353
+A house in the northern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D SOUTH 9354 AB 0
+door~
+A door leads back out of the house.    
+~
+D WEST 0 0 0
+~
+A dark grey well i extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9354
+A path around the Prophecy Stone~
+ROOMDESC    
+~
+trail
+D NORTH 9353 AB 0
+~
+A small house lies to the north.    
+~
+D EAST 9348 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9355 0 0
+~
+The dull gray path continues south.    
+~
+D WEST 9360 0 0
+~
+The dull gray path continues west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9355
+Eastern face of the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 9354 0 0
+~
+The dull gray path continues north.    
+~
+D EAST 9349 0 0
+~
+The village continues to the west.    
+~
+D SOUTH 9356 0 0
+~
+The dull gray path continues south.    
+~
+D WEST 0 0 0
+~
+Massive onyx rock has an intricate picture painted on it.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9356
+The path around the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 9355 0 0
+~
+The dull gray path continues south.    
+~
+D EAST 9350 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9357 0 0
+~
+The village continues to the south.    
+~
+D WEST 9361 0 0
+~
+The dull gray path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9357
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9356 0 0
+~
+The village continues to the north.    
+~
+D EAST 9351 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9358 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9362 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9358
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9357 AB 0
+door~
+A door leads back out of the house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.     
+~
+D SOUTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9359
+A house facing the Prophecy Stone~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D SOUTH 9360 AB 0
+door~
+A small door leads out to the path around the eastern face of the Prophecy Stone.    
+~
+D WEST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9360
+Northern face of the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 9359 AB 0
+door~
+A small house lies to the north.    
+~
+D EAST 9354 0 0
+~
+A dull gray path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+A massive onyx stone with a picture of an epic battle drawn on it towers before you.     
+~
+D WEST 9365 0 0
+~
+A dull gray path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9361
+Southern face of the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 0 0 0
+~
+A massive onyx stone with intricate pictures etched into it towers before you.    
+~
+D EAST 9356 0 0
+~
+A dull gray path continues to the east.    
+~
+D SOUTH 9362 0 0
+~
+The village continues to the south.    
+~
+D WEST 9367 0 0
+~
+A dull gray path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9362
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9361 0 0
+~
+The village continues to the north.    
+~
+D EAST 9357 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9363 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9368 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9363
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9362 AB 0
+door~
+A door leads back out of the house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+Thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9364
+A house in the northern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D SOUTH 9365 AB 0
+door~
+A door leads back out of the house.    
+~
+D WEST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+Thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9365
+The path around the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 9364 AB 0
+door~
+A small house lies to the north.    
+~
+D EAST 9360 0 0
+~
+A dull gray path continues to the east.    
+~
+D SOUTH 9366 0 0
+~
+A dull grey path continues to the south.    
+~
+D WEST 9371 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9366
+Western face of the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 9365 0 0
+~
+A dull gray path continues to the north.    
+~
+D EAST 0 0 0
+~
+A massive onyx  rock with an incomplete picture drawn on it towers before you.    
+~
+D SOUTH 9367 0 0
+~
+A dull gray path continues to the south.    
+~
+D WEST 9372 0 0
+~
+The village continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9367
+The path around the Prophecy Stone~
+ROOMDESC    
+~
+road
+D NORTH 9366 0 0
+~
+A dull gray path continues to the north.    
+~
+D EAST 9361 0 0
+~
+A dull gray path continues to the east.    
+~
+D SOUTH 9368 0 0
+~
+The village continues to the south.    
+~
+D WEST 9373 0 0
+~
+The village continues the the west.    
+~
+D UP 0 0 0
+~
+You gaze up at the sky.    
+~
+D DOWN 0 0 0
+~
+The ground has been paved with the same gray clay that is present through out the village.    
+~
+#9368
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9367 0 0
+~
+The village continues to the north.    
+~
+D EAST 9362 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9369 AB 0
+door~
+A small house lies to the south.    
+~
+D WEST 9374 AB 0
+door~
+A large nondescript building lies to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9369
+A house in the southern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 9368 AB 0
+door~
+A small door leads back out of the house.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D SOUTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D WEST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9370
+A house in the northern quarter~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D EAST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D SOUTH 9371 AB 0
+door~
+A door leads back out of the house.     
+~
+D WEST 0 0 0
+~
+A dark grey wall is extremely well made and well maintained.    
+~
+D UP 0 0 0
+~
+A thich grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the gray clay floor giving it a dull luster.    
+~
+#9371
+Northern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9370 AB 0
+door~
+A small house lies to the north.    
+~
+D EAST 9365 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9372 0 0
+~
+A small path lies to the south.    
+~
+D WEST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9372
+A cobbled path leading away from the Prophecy Stone~
+ROOMDESC    
+~
+trail
+D NORTH 9371 0 0
+~
+The village continues to the north.    
+~
+D EAST 9366 0 0
+~
+A dull gray path lies east of you.    
+~
+D SOUTH 9373 0 0
+~
+The village continues to the south.    
+~
+D WEST 9376 0 0
+~
+A cobbled path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9373
+Southern quarter of Sanihar il Dur~
+ROOMDESC    
+~
+trail
+D NORTH 9372 0 0
+~
+A cobbled path lies to the north.    
+~
+D EAST 9367 0 0
+~
+The village continues to the east.    
+~
+D SOUTH 9374 AB 0
+door~
+A small nondescript building stands before you, a wooden door leads inside.    
+~
+D WEST 0 0 0
+~
+A thich gray wall blocks your path.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.    
+~
+#9374
+The village barracks~
+ROOMDESC    
+~
+inside
+D NORTH 9373 AB 0
+door~
+A large door opens out into the southern quarters.    
+~
+D EAST 9368 AB 0
+door~
+A small door leads out of the barracks.    
+~
+D SOUTH 0 0 0
+~
+All manner of weapons line the southern wall.    
+~
+D WEST 0 0 0
+~
+Entire western wall of the barracks is lined with small cots.    
+~
+D UP 0 0 0
+~
+A dull gray ceiling strecthes over your head.    
+~
+D DOWN 0 0 0
+~
+The floor here is covered with a thick carpet made of some sort or fiborous rope.    
+~
+#9375
+Guard Captain's office~
+ROOMDESC    
+~
+inside
+D NORTH 9376 AB 0
+heavy wooden door~
+The doors lead back out to the cobbled path.    
+~
+D EAST 0 0 0
+~
+A massive hearth stands alone in this side of the room.    
+~
+D SOUTH 0 0 0
+~
+Thick clay walls have been covered up with all manner of trophies and banners.    
+~
+D WEST 0 0 0
+~
+The walls on this side of the room are awfully bare.    
+~
+D UP 0 0 0
+~
+A thick grey ceiling stretches over your head.    
+~
+D DOWN 0 0 0
+~
+A thick brown carpet lines the floors in this room.    
+~
+#9376
+A cobbled path~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D EAST 9372 0 0
+~
+A cobbled path continues to the east.    
+~
+D SOUTH 9375 AB 0
+heavy wooden door~
+A heavy wooden door leads into a massive well maintained building.    
+~
+D WEST 9377 0 0
+~
+A cobbled path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9377
+A cobbled path~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your path.    
+~
+D EAST 9376 0 0
+~
+A cobbled path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Dense tree cover blocks your path.    
+~
+D WEST 9378 0 0
+~
+A cobbled path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9378
+A cobbled path~
+ROOMDESC    
+~
+trail
+D NORTH 0 0 0
+~
+Dense tree cover blocks your path.    
+~
+D EAST 9377 0 0
+~
+A cobbled path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Dense tree cover blocks your path.    
+~
+D WEST 9379 0 0
+~
+A cobbled path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9379
+A cobbled path~
+ROOMDESC    
+~
+trail
+D NORTH 9380 A 0
+door~
+A small smithy lies to your north.    
+~
+D EAST 9378 0 0
+~
+A cobbled path continues to the east.    
+~
+D SOUTH 9300 A 0
+door~
+A small smithy lies to your south.    
+~
+D WEST 9381 0 0
+~
+A cobbled path continues to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9380
+The village armory~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A massive furnace sits in the northern part of the armory.    
+~
+D EAST 0 0 0
+~
+A line of freshly forged helms, gauntlets and breastplates sits along the eastern wall.    
+~
+D SOUTH 9379 A 0
+door~
+The door leads back out to the cobbled path.    
+~
+D WEST 0 0 0
+~
+This appears to be the molding area of the armory.    
+~
+D UP 0 0 0
+~
+A bottle shaped hollow roof serves as a natural chimney for the furnace.    
+~
+D DOWN 0 0 0
+~
+The floor is littered with bits and pieces of metals, used leather and metal dust.    
+~
+#9381
+A turn in the cobbled path~
+ROOMDESC    
+~
+trail
+D NORTH 9382 0 0
+~
+A cobbled path continues to the north.    
+~
+D EAST 9379 0 0
+~
+A cobbled path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Dense tree cover blocks your path.    
+~
+D WEST 0 0 0
+~
+Dense tree cover blocks your path.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9382
+A cobbled path~
+ROOMDESC    
+~
+trail
+D NORTH 9383 0 0
+~
+The cobbled path comes to an end at the temple steps.    
+~
+D EAST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D SOUTH 9381 0 0
+~
+A cobbled path continues to the south.    
+~
+D WEST 0 0 0
+~
+Dense tree cover blocks your way.    
+~
+D UP 0 0 0
+~
+You gaze up at the sky.    
+~
+D DOWN 0 0 0
+~
+The path is made of mismatched cray colored clay bricks, they seem to have been handled rather carelessly.    
+~
+#9383
+At the temple steps~
+ROOMDESC    
+~
+trail
+D NORTH 9384 0 0
+~
+The steps continue north into the temple proper.    
+~
+D EAST 0 0 0
+~
+Massive granite walls block your progress to the east.    
+~
+D SOUTH 9382 0 0
+~
+A cobbled path leads south.    
+~
+D WEST 0 0 0
+~
+Massive granite walls block your progress to the west.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+The steps are carved out of a hard igneous rock, it has been polished diligently giving its surface    
+a mirror like shine.    
+~
+#9384
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 9389 0 0
+~
+The hollow cavern continues to the north.    
+~
+D EAST 9385 0 0
+~
+The hollow cavern continues to the east.    
+~
+D SOUTH 9383 0 0
+~
+Steps lead back out of the templ.    
+~
+D WEST 9392 0 0
+~
+The hollow cavern continues to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seem to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9385
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 9387 0 0
+~
+The hollow cavern continues to the north.    
+~
+D EAST 0 0 0
+~
+The massive walls of the granite cavern seem to be writhing in the darkness.    
+~
+D SOUTH 0 0 0
+~
+The massive walls of the granite cavern seem to be writhing in the darkness.    
+~
+D WEST 9384 0 0
+~
+The hollow cavern continues to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9386
+A dark alcove within the cavern~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+The rounded walls of the alcove seem to close in around you.    
+~
+D EAST 0 0 0
+~
+The rounded walls of the alcove seem to close in around you.    
+~
+D SOUTH 0 0 0
+~
+The rounded walls of the alcove seem to close in around you.    
+~
+D WEST 9387 0 0
+~
+The vast cavern lies to the west.    
+~
+D UP 0 0 0
+~
+The rounded ceiling of the alcove seems to close in around you.    
+~
+D DOWN 0 0 0
+~
+The floor here is quite rough, if you are not carefully you could severly hurt yourself on several     
+sharp edges jutting out from the unfinished surface.    
+~
+#9387
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 9388 0 0
+~
+The hollow cavern continues to the north.    
+~
+D EAST 9386 0 0
+~
+A dark alcove lies to the east.    
+~
+D SOUTH 9385 0 0
+~
+The hollow cavern continues to the south.    
+~
+D WEST 9389 0 0
+~
+The hollow cavern continues to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9388
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+The massive walls of the granite cavern seem to be writhing in the darkness.    
+~
+D EAST 0 0 0
+~
+The massive walls of the granite cavern seem to be writhing in the darkness.    
+~
+D SOUTH 9387 0 0
+~
+The hollow cavern continues to the south.    
+~
+D WEST 9390 0 0
+~
+The hollow cavern continues to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9389
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 9390 0 0
+~
+The hollow cavern continues to the north.    
+~
+D EAST 9387 0 0
+~
+The hollow cavern continues to the east.    
+~
+D SOUTH 9384 0 0
+~
+The hollow cavern continues to the south.    
+~
+D WEST 9393 0 0
+~
+The hollow cavern continues to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9390
+Steps leading to the massive altar~
+ROOMDESC    
+~
+inside
+D NORTH 9391 0 0
+~
+Steps lead up to a massive onyx altar, you can see numerous candles surrounding the altar and hideous statue facing the altar and the rest of the cavern.     
+~
+D EAST 9388 0 0
+~
+The hollow cavern continues to the east.    
+~
+D SOUTH 9389 0 0
+~
+The hollow cavern continues to the south.    
+~
+D WEST 9394 0 0
+~
+The hollow cavern continues to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9391
+Altar to Dur~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+A massive statue sits at the northern base of the altar.    
+~
+D EAST 0 0 0
+~
+The walls in the altar room seem to hiss with anguish, almost as if crying after being forced to watch thousands of terrible deeds in the name Dur.    
+~
+D SOUTH 9390 0 0
+~
+Steps lead back into the main cavern.    
+~
+D WEST 0 0 0
+~
+The walls in the altar room seem to hiss with anguish, almost as if crying after being forced to watch thousands of terrible deeds in the name Dur.    
+~
+D UP 0 0 0
+~
+A narrow opening in the ceiling lets in a ray of sunlight that strikes the statue at the base of its neck.    
+~
+D DOWN 0 0 0
+~
+The floor of the altar room is slick with the blood from the high priests latest sacrifice.    
+~
+#9392
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 9393 0 0
+~
+The hollow cavern continues to the north.    
+~
+D EAST 9384 0 0
+~
+The hollow cavern continues to the east.    
+~
+D SOUTH 0 0 0
+~
+The massive walls of the granite cavern seems to be writhing in the darkness.    
+~
+D WEST 0 0 0
+~
+The massive walls of the granite cavern seems to be writhing in the darkness.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9393
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 9394 0 0
+~
+The hollow cavern continues to the north.    
+~
+D EAST 9389 0 0
+~
+The hollow cavern continues to the east.    
+~
+D SOUTH 9392 0 0
+~
+The hollow cavern continues to the south.    
+~
+D WEST 9395 0 0
+~
+A dark alcove lies to the west.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9394
+Within the Temple of Dur~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+The massive walls of the granite cavern seems to be writhing in the darkness.    
+~
+D EAST 9390 0 0
+~
+The steps leading up to the Altar to Dur lie to your east.    
+~
+D SOUTH 9393 0 0
+~
+The hollow cavern continues to the south.    
+~
+D WEST 0 0 0
+~
+The massive walls of the granite cavern seems to be writhing in the darkness.    
+~
+D UP 0 0 0
+~
+The massive ceiling of the granite cavern seems to be writhing in the darkness.    
+~
+D DOWN 0 0 0
+~
+The exquisitely polished granite floor gleams even in the poor lighting of the temple, with a little more light you could probably see your face on it.    
+~
+#9395
+The temple executioner's alcove~
+ROOMDESC    
+~
+inside
+D NORTH 0 0 0
+~
+Blood blood and more blood, the walls of the alcove are drowning in the fruits of the executioners labor.    
+~
+D EAST 9393 0 0
+~
+The alcove merges into the massive hollow cavern.    
+~
+D SOUTH 0 0 0
+~
+Blood blood and more blood, the walls of the alcove are drowning in the fruits of the executioners labor.    
+~
+D WEST 0 0 0
+~
+Blood blood and more blood, the walls of the alcove are drowning in the fruits of the executioners labor.    
+~
+D UP 0 0 0
+~
+Hard to imagine how it would be possible, but even the ceiling of the alcove is drenched in blood.    
+~
+D DOWN 0 0 0
+~
+Massive amounts of blood, and smalls pieces of fragmented bones and flesh litter the floor ot the alcov.    
+There is enough blood and gore here to give a butcher nightmares.    
+~
+#9396
+A ragged old trail~
+ROOMDESC    
+~
+trail
+D NORTH 9352 0 0
+~
+The ragged old trail leads back into the Southern quarter of Sanihar il Dur.    
+~
+D EAST 0 0 0
+~
+Dense tree growth blocks your way.    
+~
+D SOUTH 0 0 0
+~
+The ragged old trail disapears around the bend a little distance to the south.    
+~
+D WEST 0 0 0
+~
+Dense tree growth blocks your way.    
+~
+D UP 0 0 0
+~
+You gaze up into the sky.    
+~
+D DOWN 0 0 0
+~
+A thick carpet of heavy woodland grass lines the ground before you.    
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

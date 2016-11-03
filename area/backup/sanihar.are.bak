@@ -1,0 +1,7347 @@
+#AREA
+sanihar.are~
+Evergreen Forest~
+Erifdel~
+40 51
+9300 9499
+normal
+temperate
+0
+1
+Erifdel~
+
+#MOBS
+#9300
+minotaur hiker~
+a minotaur hiker~
+A hiking minotaur is walking along the trail.
+~
+A large minotaur is before you garbed with animal furs from the waist
+down.  His upper body remains unclothed yet a cape is fastened around his
+neck to protect himself against the harsh climates of the mountain. 
+Carrying a walking stick, he continues his journey along the pass with
+occasional grunts.  
+~
+850 0 0 minotaur~
+44 44d8+2423 2d10+25 10 100 crush
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#9301
+minotaur sentry~
+a minotaur sentry~
+A minotaur with the duty of sentry guards the trail.
+~
+This creature makes no movement to acknowledge your presence as he trains
+his vigilence upon the nearby surroundings.  Clothed in untreated leather
+and pelts of animal fur, he barely wears any other pieces of protective
+armor.  A constant sneer seems to make up his bovine face as if he would
+prefer to be anywhere else but upon this mountain pass on watch.  
+~
+950 0 0 minotaur~
+46 46d8+2638 2d12+25 10 100 slash
+25 25 25 25
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#9302
+minotaur pilgrim~
+a minotaur pilgrim~
+A minotaur travels along the forest trail during his pilgrimage.
+~
+This minotaur barely lifts his gaze from the ground as he treks along the
+forest path.  His clothing is made up of a simple robe with no extra type of
+adornments to mark his frame.  Despite his passive looks, it is obvious to
+note his well seasoned muscles as though he has gone through some type of
+training of combat arts within his religion.  Making not a sound, he
+continues along with some greater purpose.  
+~
+1000 0 0 minotaur~
+49 49d8+3869 2d10+35 15 100 punch
+25 25 25 25
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#9303
+minotaur wanderer~
+a minotaur wanderer~
+A hiking minotaur wanders through the forest.
+~
+This minotaur's body is covered with animal hides and sewn leather that
+has been fashioned with crude dexterity.  Strapped to his backside is a
+large gnarled staff that appears to be crafted from solid oak despite the
+surrounding pine trees.  His movements seem quite fluent in these woodlands
+as if he has spent most of his time studying the terrain and ways of the
+forest.  A certain compassion seems to lay within his eyes as he rests his
+hands upon tree after tree during his sojourn.  
+~
+900 0 0 minotaur~
+51 51d8+3974 2d10+30 15 100 pound
+30 30 30 30
+standing male moderate
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT FAST_TRACK
+#9304
+minotaur guard~
+a minotaur guard~
+A minotaur guard has been positioned along the pass here.
+~
+This minotaur is fashioned from head to hoof in crude metal pieces that
+offer him protection against any beast that might assault the passing
+caravans.  If not for two horns and the typical shape of a minotaur's face,
+it would be near impossible to know what type of heritage this beast
+possesses beneath his full-plated helmet.  He barely seems to move as he
+keeps a trained eye upon his surroundings, but now and then you notice him
+stamping the ground with his hooves.  
+~
+1000 0 0 minotaur~
+55 55d8+5500 2d15+35 25 100 slash
+35 35 35 35
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#9305
+imp scout~
+an imp scout~
+An imp darts from one hiding location to another, scouting the region.
+~
+An imp darts about in the air as he studies his surroundings.  Barely
+clothed for protection or these environments his body is adorned with scars
+and other crude markings upon his leathery skin.  Skirting from bush to
+bush, its hard to tell if this creature is excited or has a matabolism
+similiar to a humming bird.  
+~
+-1000 0 0 imp~
+44 44d8+2623 2d10+25 10 100 claw
+30 30 30 35
+standing male poor
+0 P small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#9306
+imp guard~
+An imp guard~
+An imp flaps his wings while guarding the tunnel for intruders.
+~
+This imp tries to hide himself within the darkness as he watches the
+tunnel for intruders.  He carries a strange whip that seems to wrap around
+his body several times while not in use, and crude leather offers his frame
+some minimal protection against foes.  
+~
+-1000 0 0 imp~
+47 47d8+3206 2d10+35 10 100 claw
+35 35 35 45
+standing male poor
+0 P small
+ACT NPC
+ACT SENTINEL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#9307
+patrol imp guard~
+a patrolling imp~
+An imp beats his wings as he patrols the corridor.
+~
+This imp has several thin pieces of armor strapped to his frame, most
+appearing to be magically crafted from onyx stone or some other foreign
+rock.  Beady eyes that glow with vision trained to see through the darkness
+watch the catacomb of tunnels for intruders who might venture too far within
+its depths.  
+~
+-1000 0 0 imp~
+51 51d8+3674 2d12+35 15 100 claw
+40 40 40 60
+standing male poor
+0 P small
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT FAST_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+YELL yell INTRUDER!~
+#9308
+elite imp guard~
+An elite guard~
+A sneering imp watches his surroundings for intruders.
+~
+A muscular imp is covered in magical plates of onyx armor as he stands on
+guard in the massive chamber.  His face seems to resemble a constant sneer
+with teeth that protrude over his lower lip as he glares around the
+darkness.  Blades of similiar onyx are strapped along his sides.  
+~
+-1000 0 0 imp~
+55 55d8+5106 2d13+40 20 100 claw
+40 40 40 55
+standing male affluent
+0 P small
+ACT NPC
+ACT SENTINEL
+ACT FAST_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#9309
+holy minotaur paladin Taerthin~
+Taerthin~
+A large minotaur in gleaming armor keeps a trained eye upon the surroundings.
+~
+A large minotaur stands before you in platemail the color of ivory.  His
+bovine face is covered by a full plated helmet that has been crafted
+specifically for his race.  A sunburst design is fashioned upon the chest of
+his platemail and a large two-handed blade resides within his grasp with
+ease.  His eyes seem to be trained upon the surroundings as well as the
+caravan's inventory.  
+~
+1000 0 0 minotaur~
+59 59d8+8988 3d20+40 45 100 divine
+80 80 80 80
+standing male rich
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT INTELLIGENT
+OFF BASH
+OFF PARRY
+OFF RESCUE
+OFF ASSIST_ALIGN
+OFF ASSIST_VNUM
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+A 'seraphic mantle' (null)
+A 'shield of faith' (null)
+A 'protection' (null)
+C 'spiritual hammer'
+#9310
+female human sorceress Sarlyna~
+Sarlyna~
+A female covered with blue robes stands here within the caravan.
+~
+This female stands out of place with her frail form compared next to the
+surrounding minotaurs.  Yet despite her petite appearance, she seems to be
+composed with some sort of determination as she continues to walk amidst the
+caravan with her eyes on the surroundings.  Blue robes adorn her full
+figured body that hold a resemblance to shimmering water.  Arcane symbols
+and silver threading can be seen forming intricate patterns along the
+sleeves and back of her garments.  
+~
+1000 0 0 human~
+60 60d8+9132 2d15+30 40 100 magic
+65 65 65 75
+standing female rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF PARRY
+OFF ASSIST_ALIGN
+OFF ASSIST_VNUM
+OFF NO_TRACK
+AFF DETECT_INVIS
+IMM SUMMON
+A 'coldshield' (null)
+A 'frigid aura' (null)
+A 'icy carapace' (null)
+A 'frost glaze' (null)
+A 'cloak of mist' (null)
+C 'enervate'
+C 'rust'
+C 'chill'
+C 'prismatic spray'
+#9311
+imp antipaladin anti Vherthix~
+Vherthix~
+An imp in bone carved armor stands here studying a diagram upon the table.
+~
+A small imp is covered in bone plated armor that almost holds an ivory
+color except that age and decay have caused it's material to darken and
+mold.  Staring at several diagrams and pieces of ancient text, his attention
+seems to be focused upon his own devious thoughts and contemplation.  
+~
+-1000 0 0 imp~
+59 59d8+8988 3d20+40 40 100 slash
+60 60 60 75
+standing male affluent
+0 P small
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT INTELLIGENT
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+OFF ASSIST_VNUM
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+A 'protection' (null)
+A 'armor' (null)
+C 'demonfire'
+C 'weaken'
+C 'curse'
+#9312
+imp necromancer mage Xerthorx~
+Xerthorx~
+A small imp stands suspended within the air, looking up to regard you as you enter.
+~
+A small imp in black silk robes stands within mid-air as his wings flap
+rythmically behind him.  Robes the color of night hang down to the floor
+despite his small frame, as if they were originally fashioned for somebody
+the size of a human.  Several decorations adorn his body, mostly composed of
+some type of bone or other symoblism of necromancy.  
+~
+-1000 0 0 imp~
+59 59d8+8988 3d15+30 40 100 claw
+55 55 55 65
+standing male affluent
+0 P small
+ACT NPC
+ACT SENTINEL
+OFF PARRY
+OFF ASSIST_ALIGN
+OFF ASSIST_RACE
+OFF ASSIST_VNUM
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+A 'sanguine ward' (null)
+C 'vampiric touch'
+C 'chill touch'
+C 'atrophy'
+#9313
+sorceress female laertheena~
+Laertheena~
+A female sorceress stands tranfixed as her focus it consumed upon the portal before her.
+~
+An ugly human is before you.  Focusing her chanting upon a portal of
+strange creation, she appears to have not slept for some time.  Eyes remain
+sunken within her sockets and several scars marr what was once a beautiful
+face.  Her raven black hair is matted and flows freely if not unkempt down
+her backside.  
+~
+-1000 0 0 human~
+60 60d8+9992 3d15+40 45 100 magic
+60 60 60 70
+standing female rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+A 'corona' (null)
+A 'heatshield' (null)
+A 'armor' (null)
+C 'sap endurance'
+C 'emulsify'
+C 'immolate'
+C 'molten stones'
+C 'heat earth'
+#9314
+demon~
+A test demon~
+A demon of testing stands before you growling and frothing at the mouth.
+~
+~
+-1000 0 0 demon~
+60 3d125+2600 2d5+65 0 100 mental
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#0
+
+
+
+#OBJS
+#9300
+stones circle~
+a circle of stones~
+A circle of stones are filled with ashes from a once used campfire.~
+trash
+stone~
+0 0 0 0 0
+1 100 0 P
+LIMIT 0
+TIMER 0
+
+#9301
+mouth~
+a statue~
+A grinning statue is formed from onyx stone.~
+container
+onyx~
+100 0 0 1 0
+1 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#9302
+claw~
+a statue~
+A statue of onyx sits here.~
+container
+unknown~
+100 0 0 500 100
+1 0 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+
+#9303
+pouch~
+a pouch of magical regeants~
+A stone pouch has been carved from onyx stone, but it appears to have a leather flap covering it's opening.~
+container
+unknown~
+100 C 0 1 0
+1 0 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#9304
+table~
+a stone table~
+A stone table stands within the center of the room.~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+E diagram~
+One large diagram stands out, as it appears to be more of a sketch than
+any type of geometrical design.  It appears to show a deep incline with
+several marks that are in place to represent creatures.  Two of these marks
+have strange quotations about them as if to show a certain respect or
+caution.  Between the two is a strange shape that resembles a box.  A drop
+of blood is stained into the parchment where the box is drawn.  
+~
+E parchments documents~
+The parchments seem to contain writing in some uncommon language, perhaps
+the common tongue of some abyssal race.  
+~
+E table~
+The table itself is carved from onyx rock, ornate and detailed in design
+from its legs to the surface.  Upon the top are several parchments and
+documents as well as a multitude of diagrams.  
+~
+
+#9305
+sheath~
+a stone sheath~
+A sheath of stone is carved upon the backside of the statue.~
+container
+onyx~
+100 0 0 1 0
+51 100 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+
+#9306
+carriage caravan~
+a carriage~
+An Ornate Carriage rolls along the ravine trail.~
+container
+wood~
+100 BCD 9307 1 0
+51 200 0 P
+ITEM MAGIC
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+E doorway~
+The doorway itself is only large enough to store objects within.  A small
+key hole is carved into it's center.  
+~
+E carriage~
+The carriage is crafted and built from solid oak wood that has been
+carefully pieced together.  The top of the carriage is slightly slanted to
+allow rain and other debris to fall off easily by the wind alone.  Several
+runes and intricate carvings line the sealed doorway that lead to its
+contents.  
+~
+
+#9307
+ivory key~
+an ivory key~
+A key of snow-white ivory sits here radiating light.~
+key
+ivory~
+0 0 0 0 0
+51 2 0 P
+WEAR TAKE
+ITEM GLOW
+ITEM BLESS
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+
+#9308
+rock stone onyx shard~
+a strange shard of onyx stone~
+A rock of solid black stone seems to absorb any light that comes near it.~
+treasure
+Onyx~
+0 0 0 0 0
+51 10 0 P
+WEAR TAKE
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+
+#9309
+helm horned ivory~
+a horned helmet of ivory~
+A strange helmet with ivory plating lays here.~
+armor
+ivory~
+3 8 8 6 0
+51 12 15000 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT MINOTAUR_ONLY
+ITEM GLOW
+ITEM ANTIEVIL
+APPLY HITROLL 2
+APPLY DAMROLL 3
+APPLY MANA 20
+APPLY HP 20
+LIMIT 2
+TIMER 0
+
+#9310
+platemail armor sunburst~
+platemail adorned with an ivory sunburst~
+A large suit of platemail lays here with a sunburst insignia upon its front plate.~
+armor
+Steel~
+11 20 16 16 0
+51 43 20000 P
+WEAR TAKE
+WEAR BODY
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY HP 15
+APPLY DEX -2
+APPLY HITROLL 4
+APPLY DAMROLL 4
+LIMIT 1
+TIMER 0
+
+#9311
+bladed sword ivory massive~
+a double bladed sword of pure ivory~
+A massive sword rests upon the ground inlaid with ivory stone.~
+weapon
+ivory~
+sword 3 17 slash DF
+52 28 1484 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM ANTIEVIL
+ITEM NOREMOVE
+APPLY HITROLL 5
+APPLY DAMROLL 6
+LIMIT 2
+TIMER 0
+
+#9312
+blue robes shimmering~
+magnificant robes of shimmering blue silk~
+A robe shimmers upon the ground as the light plays across it's surface.~
+armor
+Silk~
+5 5 5 4 0
+52 6 25000 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT MAGE_ONLY
+ITEM MAGIC
+APPLY MANA 35
+APPLY AC 5
+APPLY INT 2
+APPLY HP 35
+LIMIT 1
+MSG WEAR The robe seems to tighten about your body as it ripples by an unfelt breeze.~
+A magnificant robe of shimmering blue silk begins to ripple like the surface of a pond.~
+MSG REMOVE A robe of shimmering blue silk seems to become lifeless once more.~
+A magnificant robe of shimmering blue silk ceases to ripple as it becomes lifeless once more.~
+TIMER 0
+FLAG RES DROWNING
+NOTES Might be too powerful, please let me know.
+~
+
+#9313
+glass orb liquid~
+a glass orb filled with liquid~
+A fragile orb of glass sits upon the ground.~
+staff
+glass~
+5 2 2 'cloak of mist' 0
+51 4 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+
+#9314
+motes electricity~
+motes of electricty~
+Electrically charged motes are contained here.~
+pill
+electricity~
+45 'mana conduit' 'scramble neurons' 'impair synaptics' 'reserved'
+45 0 0 P
+WEAR TAKE
+ITEM HUM
+ITEM MAGIC
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+NOTES Utility item, tried balancing it out with the other electrical spells. 
+ 
+Also, is there any way to make unique echoes for pill items... would love
+to make my own echo for the combination of these three spells instead of
+just the default ones.
+~
+
+#9315
+onyx sword crimson blade~
+an onyx pommeled sword with a crimson blade~
+A crimson bladed sword lays upon the ground.~
+weapon
+onyx~
+sword 3 15 slice 0
+51 12 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+ITEM NOLOCATE
+APPLY DAMROLL 4
+APPLY HITROLL 4
+APPLY MANA 15
+APPLY HP 25
+LIMIT 2
+TIMER 0
+
+#9316
+platemail armor bone~
+platemail crafted from the bones of a demon~
+A pile of bones are here.~
+armor
+bone~
+14 19 17 17 0
+1 24 0 P
+WEAR TAKE
+WEAR BODY
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY MANA 35
+APPLY STR 3
+APPLY AGE 10
+APPLY DAMROLL 6
+LIMIT 3
+TIMER 0
+E pile bones~
+At first glance, the bones appear to be nothing more than littered
+remains, but you realize they form the protection of platemail to be worn
+upon one's torso.  
+~
+
+#9317
+armplate armplates black bone~
+aged armplates of black bone~
+Bone armplates are laying here, crafted from the remains of some extraplanar creature.~
+armor
+bone~
+3 6 6 6 0
+51 7 0 P
+WEAR TAKE
+WEAR ARMS
+ITEM DARK
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY HITROLL 2
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#9318
+flail spiked aged bone~
+an aged flail of blackened bone with protruding spikes at its length~
+A spiked flail lays upon the ground with a bone pommeled handle.~
+weapon
+iron~
+flail 3 16 infinite 0
+51 13 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY DEX 1
+APPLY STR 1
+APPLY HITROLL 4
+APPLY DAMROLL 6
+LIMIT 1
+TIMER 0
+E length~
+An iron ball has been crafted into the shape of a demons head with jagged
+spikes that line the edge of its open mouth.  The mouth itself has been
+carved hollow, released a thick black shadow.  
+~
+
+#9319
+whip flesh sinew coil~
+a coiled whip of flesh~
+Strands of flesh and sinew lay upon the ground.~
+weapon
+flesh~
+whip 4 15 chaotic D
+53 4 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT NECROMANCER_ONLY
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+APPLY HP 30
+APPLY HITROLL 3
+APPLY INT 2
+APPLY WIS 2
+LIMIT 1
+TIMER 0
+
+#9320
+mask skull~
+a mask crafted from the skull of a female demon~
+The skull of a succubus lays upon the ground grinning with malevolence.~
+armor
+bone~
+3 3 3 3 0
+56 7 0 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT NECROMANCER_ONLY
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NOREMOVE
+APPLY MANA 35
+APPLY HP 35
+APPLY INT 3
+APPLY SAVES -20
+APPLY DAMROLL 1
+APPLY WIS 1
+APPLY STR -1
+APPLY AC 6
+APPLY CON -5
+LIMIT 1
+TIMER 0
+FLAG RES HOLY
+NOTES I would love a prog for this item, meant for evil only, however I want it wearable
+by anyone.  The counter to this is that if a neutral or goodie does wear it, when they
+sleep, they would receive a "dream" about a succubus seducing them (pg13) and thus
+not allowing them to sleep properly, or not allow to waken when they'd like.
+ 
+For any evil wearing it, there would be nothing extra that I'd want (but I'm not opposed
+to having any extras if someone has ideas).  Limit is set at one.
+~
+
+#9321
+acrid smoke fumes mass~
+an acrid smoke portal~
+Acrid fumes have thickened within the center of the pentagram forming an obstruction to sight.~
+portal
+unknown~
+-1 0 0 9499 0
+51 0 0 P
+LIMIT 1
+TIMER 0
+E acrid fumes smoke~
+The fumes have grown so thick that you cannot see the chamber walls
+through it's substance, yet it seems to beckon you to enter it's growing
+mass.  
+~
+
+#9322
+ring onyx engraved~
+a ring of onyx with ruby engraved runes~
+An onyx ring sits upon the ground emiting a red hued glow.~
+armor
+ruby~
+0 0 0 0 0
+51 1 2000 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM MAGIC
+APPLY AC 3
+APPLY MANA 35
+APPLY HP 20
+APPLY DAMROLL 1
+APPLY HITROLL 3
+LIMIT 7
+TIMER 0
+
+#9323
+bones~
+a pile of bones~
+A pile of bones.~
+container
+bone~
+200 0 0 1 0
+52 0 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+E altar bones~
+At second glance, this altar appears to be more of an accumulation of
+sacrificed victims and other offerings to the type of creatures this
+sorcerer deals with.  The pile holds bones from all types of creatures as
+well as sizes, considering that both skulls of imps as well as titans are
+sporadically split asunder within the mass of death. 
+~
+
+#9324
+shaft stone~
+a sleek shaft of ruby stone with crystal engravings~
+A ruby shaft of stone lays upon the ground.~
+wand
+ruby~
+20 2 2 'earthen embrace' 0
+51 0 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+ITEM NOLOCATE
+LIMIT 2
+TIMER 0
+
+#9325
+leather boots ruby~
+leather boots with ruby designs~
+Leather boots with ruby colored threading lay upon the ground.~
+armor
+leather~
+4 4 4 4 0
+49 4 0 P
+WEAR TAKE
+WEAR FEET
+ITEM MAGIC
+APPLY AC 2
+APPLY HP 15
+APPLY MANA 15
+APPLY MOVE 50
+APPLY HITROLL 2
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#9326
+iron sword black~
+a sword of black iron~
+A blade fashioned from iron lays upon the ground.~
+weapon
+iron~
+sword 3 14 slash 0
+45 8 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM ANTIGOOD
+APPLY HITROLL 4
+APPLY DAMROLL 4
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#9327
+oak staff twisted~
+an oaken staff of twisted wood~
+A staff of twisted oak rests upon the ground.~
+weapon
+wood~
+staff 3 16 pound 0
+44 12 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY DEX 2
+LIMIT 0
+TIMER 0
+
+#9328
+leather leggings~
+finely crafted leather leggings~
+Well treated leather lays upon the ground collecting dust.~
+armor
+leather~
+5 3 5 5 0
+45 9 0 P
+WEAR TAKE
+WEAR LEGS
+APPLY HP 15
+APPLY DAMROLL 2
+APPLY HITROLL 2
+APPLY DEX -2
+LIMIT 0
+TIMER 0
+
+#9329
+steel gloves~
+a pair of steel-plated gloves~
+Gloves fashioned from steel are laying upon the ground.~
+armor
+steel~
+5 5 5 5 0
+44 12 1500 P
+WEAR TAKE
+WEAR HANDS
+APPLY DAMROLL 3
+APPLY STR 1
+APPLY DEX -1
+LIMIT 0
+TIMER 0
+
+#9330
+ruby gloves leather~
+ruby inscribed gloves of black leather~
+A pile of ruby colored leather lays upon the ground.~
+armor
+leather~
+3 3 3 3 0
+53 6 4000 P
+WEAR TAKE
+WEAR HANDS
+ITEM GLOW
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY HP 25
+APPLY MANA 25
+APPLY AC 4
+APPLY INT 1
+LIMIT 0
+TIMER 0
+
+#9331
+shard skull bone~
+a broken shard of bone~
+A shard of white bone lays upon the ground.~
+trash
+bone~
+0 0 0 0 0
+51 2 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM ROTDEATH
+ITEM NOLOCATE
+ITEM MELTDROP
+LIMIT 0
+TIMER 0
+E shard bone~
+The broken shard resembles the remains of a skull that has been split
+asunder.  This portion looks to be the left half of the remains.  
+~
+
+#9332
+shard bone white~
+a broken shard of bone~
+A shard of white bone lays upon the ground.~
+trash
+bone~
+0 0 0 0 0
+51 0 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM ROTDEATH
+ITEM NOLOCATE
+ITEM MELTDROP
+LIMIT 0
+TIMER 0
+E shard bone~
+The broken shard resembles the remains of a skull that has been split
+asunder.  This portion looks to be the right half of the remains.  
+~
+
+#9333
+key skull~
+a skull shaped key~
+A strange key sits upon the ground resembling the shape of a skull.~
+key
+bone~
+0 0 0 0 0
+51 1 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#9334
+altar glass~
+a glass altar~
+A glass altar is melded into the roof.~
+container
+Glass~
+300 0 0 100 0
+51 100 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+E glass altar~
+The altar is formed of seamless glass that naturally melds into the stone
+roof.  Upon the upper surface of the altar is a pool of water that has
+formed within the depression of its surface.  A prism of colors seem to
+dance throughout its entirety from some unseen light.  
+~
+
+#9335
+wings xerthorx~
+the wings of Xerthorx~
+A pair of leathery wings sit decaying upon the ground.~
+trash
+flesh~
+0 0 0 0 0
+55 0 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#9336
+wings vherthix~
+the wings of Vherthix~
+A pair of leathery wings sit decaying upon the ground.~
+trash
+flesh~
+0 0 0 0 0
+55 0 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#9495
+tendril darkness erifdel~
+a piercing tendril of darkness~
+A strange tendril of darkness lies upon the ground, absorbing all nearby light.~
+weapon
+Magic~
+dagger 6 45 mental D
+54 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+LIMIT 0
+TIMER 0
+
+#9496
+no name~
+dummy object~
+dummy desc~
+food
+unknown~
+0 0 0 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#9497
+staff testing~
+a staff of miracles and testing~
+A staff lays here, meant for the hands of a god.~
+wand
+unknown~
+60 20 20 'shroud of secrecy' 0
+51 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 1
+VERB quicksand
+TIMER 0
+
+#9498
+robe black silk~
+a moth eaten robe of black silk~
+A silken robe lays here that once held an ornate quality of fine craftsmanship.~
+armor
+silk~
+110 110 110 110 0
+51 5 0 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+APPLY MANA 1000
+APPLY HP 1000
+LIMIT 1
+VERB inferno
+TIMER 0
+FLAG AFF 'strangle' none NOSHOW
+FLAG AFF 'blackjack' none NOSHOW
+FLAG AFF 'sphere of plasma' none NOSHOW
+FLAG AFF 'frigid aura' none NOSHOW
+FLAG AFF 'fly' flying NOSHOW
+NOTES ~
+
+#9499
+whip flesh~
+a whip fashioned from strands of flesh~
+A strange whip lays on the ground, carrying a horrible smell of decay.~
+weapon
+flesh~
+sword 5 100 infinite C
+55 3 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+LIMIT 1
+MSG WEAR The strands of flesh seem to writhe in your hands.~
+A whip of flesh begins to writhe as if in agony.~
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#9300
+A Rocky Trail~
+This trail appears to be wide enough for several men to easily stand side
+by side before the mountain walls begin to rise on each side of the path. 
+The ground is fairly dry and rocky except for the natural affects of the
+weather, and though many areas of the ground remain uneven, well packed dirt
+suggests it is used regularly.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A trail can be seen far below you, but there is no possible passage in this direction.
+~
+D EAST 0 0 0
+~
+A large cliff begins to rise to your east.
+~
+D SOUTH 2819 0 0
+door~
+The rocky trail continues in this direction.
+~
+D WEST 0 0 0
+~
+A large cliff begins to rise to your west.
+~
+D DOWN 9301 0 0
+~
+Many rocks and natural layers of dibris clutter the ground as a trail
+leads in this direction.  Two grooves seem to stand out underneath it all.  
+~
+E grooves~
+Two parallel grooves cut there way into the ground, though obviously not
+from the weather's erosion.  
+~
+#9301
+A Rocky Trail~
+This trail appears to be wide enough for several men to easily stand side
+by side before the mountain walls begin to rise on each side of the path. 
+The ground is fairly dry and rocky except for the natural affects of the
+weather, and though many areas of the ground remain uneven, well packed dirt
+suggests it is used regularly.
+~
+mountains
+D NORTH 0 0 0
+door~
+An eroded cliff face blocks passage in this direction.
+~
+D EAST 9302 0 0
+~
+The rocky trail continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+An eroded cliff face blocks passage in this direction.
+~
+D WEST 0 0 0
+~
+An eroded cliff face is before you.
+~
+D UP 9300 0 0
+door~
+~
+D DOWN 0 0 0
+~
+From underneath the natural piles of dibris, the two parallel grooves
+turn sharply in their straight trek.  
+~
+#9302
+A Canyon Trail~
+Canyon walls surround each side of the trail blocking vision to anything
+else other than the way one is coming or going.  The walls are quite smooth
+from years of weather and natural erosion, yet the ground remains somewhat
+rocky and treacherous to travel upon.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A trail and green valley lay far below you in this direction.
+~
+D EAST 0 0 0
+~
+A large canyon wall soars before you, smoothed over by years of erosion except for several small blemishes.
+~
+D SOUTH 0 0 0
+door~
+A large canyon wall soars before you, smoothed over by years of erosion.
+~
+D WEST 9301 0 0
+~
+A rocky trail continues in this direction.
+~
+D DOWN 9303 0 0
+door~
+A trail of light rock and stone lead downwards out of the alpine air.
+~
+E blemishes~
+A single line is scratched into the wall, though the erosion has almost
+caused it to fade away completely.  A square is also carved upon the line
+and combined with other small markings, but those have already been worn
+away by the wind to clarify any detail.  
+~
+#9303
+A Small Plateau~
+Strong winds cause earie howls to revibrate along the canyon walls as it
+makes its natural course along the trails below you.  The surface of this
+plateau is completely windswept and smooth due to the constant gusts of
+nature at this altitude.  
+~
+mountains
+D NORTH 9304 0 0
+door~
+A dirt trail leads away from the plateau in this direction.
+~
+D EAST 0 0 0
+~
+The plateau drops off a short ways away.
+~
+D SOUTH 0 0 0
+door~
+A large canyon wall stands on the southern edge of this plateau.
+~
+D WEST 0 0 0
+~
+The plateau drops off a short ways away.
+~
+D UP 9302 0 0
+door~
+The canyon trail leads upwards from this plateau.
+~
+D DOWN 0 0 0
+door~
+The plateau's surface is strewn with the occasional rock, but otherwise
+the natural erosion has made it significantly smooth.  
+~
+#9304
+A Wide Path of Dirt~
+Beginning to surround both sides of this dirt trail, foliage and other
+forms of life have managed to survive within this enviroment.  Small pine
+trees adorn this side of the mountain in their struggle of survival against
+the high altitude, but their success is evident.  
+~
+trail
+D NORTH 0 0 0
+door~
+A valley of pine trees and deep green foliage have found life in this direction.
+~
+D EAST 0 0 0
+~
+Pine trees have grown along the trail amoung bushes and other forms of wildlife.
+~
+D SOUTH 9303 0 0
+door~
+A dirt trail leads further up the mountain.
+~
+D WEST 0 0 0
+~
+Pine trees have grown along the trail amoung bushes and other forms of wildlife.
+~
+D DOWN 9305 0 0
+door~
+The dirt trail continues to wind downard into the beginnings of a valley.
+~
+E bushes~
+The bushes are lushly green, but their survival here is based upon the
+lack of needed care and attention that other plants are subject to.  Thorns
+runs along the branch-work and are hidden underneath the blossoms of these
+specific bushes.  
+~
+#9305
+Edge of The Valley~
+Near the base of the mountain, a large valley opens before you that is
+filled with deep green floral.  The sounds of wildlife and the occasional
+snap of twigs can be heard echoing off of the surrounding canyon walls and
+pine trees.  
+~
+trail
+D NORTH 9307 0 0
+door~
+A trail through the pine trees is continued in this direction.
+~
+D EAST 0 0 0
+~
+Boulders and mountain stone are nearly hidden amidst the valley floral.
+~
+D SOUTH 9306 FI 0
+boulder~
+The mountain wall begins to form amidst a pile of boulders and other large rocks.
+~
+D WEST 0 0 0
+~
+Boulders and mountain stone are nearly hidden amidst the valley floral.
+~
+D UP 9304 0 0
+~
+A dirt trail begins to lead up the mountain side.
+~
+D DOWN 0 0 0
+door~
+The trail consists of pact dirt and tree roots that have grown too close to the surface.
+~
+E boulders~
+Significantly sized boulders are strewn about the mountain wall, yet one
+boulder seems to stand out from the rest.  Only darkness can be seen behind
+it's resting place.  
+~
+#9306
+A Small Cave~
+This enclave offers little light except for what is allowed through the
+small entrance.  The walls are unwelcoming with their jagged formation of
+stone and rock, however a circle of stones sit within the center of this
+cave.  Despite the natural appeal of this location, perhaps others have
+favored it over the wilds that lay to your north.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9305 0 0
+door~
+A large boulder hinders your view of the forest.
+~
+D EAST 0 0 0
+~
+Walls of jagged rock give evidence that this cave was formed naturally.
+~
+D SOUTH 0 0 0
+door~
+Walls of jagged rock give evidence that this cave was formed naturally.
+~
+D WEST 0 0 0
+~
+Walls of jagged rock give evidence that this cave was formed naturally.
+~
+D UP 0 0 0
+~
+A solid formation of rock is above you.
+~
+D DOWN 0 0 0
+~
+The ground is covered with dust and ashes from others who have used this cave as a camping location.
+~
+E dust~
+The dust covers the floor of this cave in a thin layer, however in
+several locations there are odd marks that have unsettled it's natural
+dormancy.  Thin lines that resemble claw marks lead back towards the small
+entrance.  
+~
+E formation~
+An alcove of itself, the natural formation creates an almost dome-like
+appearance.  Jagged rocks look threatening to any who would raise their
+voice loud enough.  
+~
+#9307
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9354 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D EAST 9308 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 9305 0 0
+door~
+The edge of the valley lays in this direction.
+~
+D WEST 9350 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+#9308
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9355 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D EAST 9309 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D WEST 9307 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you
+that it has been here for quite a long time.
+~
+#9309
+A Turn in The Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9310 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D SOUTH 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D WEST 9308 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you
+that it has been here for quite a long time.
+~
+#9310
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9311 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D SOUTH 9309 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9355 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you
+that it has been here for quite a long time.
+~
+#9311
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9312 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9361 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9310 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9360 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+The dirt on the path is very fine and pale yellow, absence of any pebbles or rocks tells you
+that it has been here for quite a long time.
+~
+#9312
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9313 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9366 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9311 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9365 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+The old path dissapears under the house that lies south of you.
+~
+#9313
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9314 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9371 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9312 0 0
+~
+A trail of dirt continues in this direction.
+~
+D WEST 9370 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.
+~
+#9314
+A Turn in The Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9378 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D EAST 9375 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9313 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9315 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+Comact dirt and  patches of dying brown grass cover the ground around you.
+~
+#9315
+A Turn in The Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9316 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9314 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 9370 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D WEST 9374 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground around you.
+~
+#9316
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9317 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9378 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9315 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9377 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground around you.
+~
+#9317
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9318 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9384 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9316 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9383 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+The ground here is a filthy mixture of dirty water, blood, and soap suds. You see pieces of
+animal remains floating around in the mud. A disgusting mess only a butcher would be capable of.
+~
+#9318
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9319 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9390 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9317 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9389 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+MUD! and lots of it, watch your step!
+~
+E door sign plaque~
+Wukran's Bakery.
+~
+#9319
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9320 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9397 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9318 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9396 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+The earth here has been trodden upon mercilessly, its texture resembles a city pavement more than
+it does a dirt track in a village.
+~
+#9320
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9321 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9403 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9319 0 0
+~
+A trail of dirt continues in this direction.
+~
+D WEST 9402 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.
+~
+#9321
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9322 0 0
+~
+A trail of dirt continues in this direction.
+~
+D EAST 9407 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9320 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9406 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying  brown grass cover the earth before you.
+~
+#9322
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9323 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9410 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9321 0 0
+~
+A trail of dirt continues in this direction.
+~
+D WEST 9409 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the earth before you.
+~
+#9323
+A Pass Through The Mountains~
+The dirt trail becomes more rocky as it carves it's way through the
+mountain.  The path remains fairly level due to its regular use, but the
+occasional rock and miscellaneous debris can be seen at time to time.  Walls
+of rock continue to rise on each side of the trail. 
+~
+mountains
+D NORTH 0 0 0
+~
+Solid rock rises before you.
+~
+D EAST 9324 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 9322 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 0 0 0
+door~
+Solid rock rises before you.
+~
+D DOWN 0 0 0
+~
+The earth here has been trodden upon mercilessly, its texture resembles a city pavement more than
+it does a dirt track in a village.
+~
+#9324
+A Pass Through The Mountains~
+The dirt trail becomes more rocky as it carves it's way through the
+mountain.  The path remains fairly level due to its regular use, but the
+occasional rock and miscellaneous debris can be seen at time to time.  Walls
+of rock continue to rise on each side of the trail. 
+~
+mountains
+D NORTH 9325 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 0 0 0
+~
+Solid rock rises before you.
+~
+D SOUTH 0 0 0
+~
+Solid rock rises before you.
+~
+D WEST 9323 0 0
+~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.
+~
+#9325
+A Pass Through The Mountains~
+The dirt trail becomes more rocky as it carves it's way through the
+mountain.  The path remains fairly level due to its regular use, but the
+occasional rock and miscellaneous debris can be seen at time to time.  Walls
+of rock continue to rise on each side of the trail. 
+~
+mountains
+D NORTH 9326 0 0
+~
+A trail of dirt continues in this direction.
+~
+D EAST 0 0 0
+~
+Solid rock rises before you.
+~
+D SOUTH 9324 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 0 0 0
+door~
+Solid rock rises before you.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+#9326
+A Pass Through The Mountains~
+The dirt trail becomes more rocky as it carves it's way through the
+mountain.  The path remains fairly level due to its regular use, but the
+occasional rock and miscellaneous debris can be seen at time to time.  Walls
+of rock continue to rise on each side of the trail. 
+~
+mountains
+D NORTH 9327 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 0 0 0
+~
+Solid rock rises before you.
+~
+D SOUTH 9325 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 0 0 0
+~
+Solid rock rises before you.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+#9327
+A Pass Through The Mountains~
+The dirt trail becomes more rocky as it carves it's way through the
+mountain.  The path remains fairly level due to its regular use, but the
+occasional rock and miscellaneous debris can be seen at time to time.  Walls
+of rock continue to rise on each side of the trail.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Solid rock rises before you.
+~
+D EAST 9328 0 0
+~
+A trail of dirt continues in this direction.
+~
+D SOUTH 9326 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 0 0 0
+~
+Solid rock rises before you.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+#9328
+A Pass Through The Mountains~
+The dirt trail becomes more rocky as it carves it's way through the
+mountain.  The path remains fairly level due to its regular use, but the
+occasional rock and miscellaneous debris can be seen at time to time.  Walls
+of rock continue to rise on each side of the trail.  
+~
+trail
+D NORTH 0 0 0
+door~
+Solid rock rises before you.
+~
+D EAST 9329 0 0
+~
+A trail of dirt continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Solid rock rises before you.
+~
+D WEST 9327 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+The earth here has been trodden upon mercilessly, its texture resembles a city pavement more than
+it does a dirt track in a village.
+~
+#9329
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9411 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D EAST 9330 0 0
+~
+A trail of dirt continues in this direction.
+~
+D SOUTH 9412 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D WEST 9328 0 0
+~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.
+~
+#9330
+The Beginning of a Ravine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles to the natural hedges that have grown sporadically through this
+region.  The wide dirt trail becomes very rocky near this ravine due to the
+absence of dirt and much of the nearby foilage.  
+~
+trail
+D NORTH 9414 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9415 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D WEST 9329 0 0
+~
+A trail of dirt continues in this direction.
+~
+D DOWN 9331 0 0
+~
+A trail of dirt continues in this direction.
+~
+#9331
+A Pathway Through The Ravine~
+The walls of rock and stone surround both sides of the trail to the north
+and south, hiding most of the wildlife by their immense height.  Many large
+boulders provide obstacles to passing caravans or wandering adventurers
+within this ravine, but somehow another sense of danger seems to betray the
+tranquility of this passage. 
+~
+mountains
+D NORTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D EAST 9332 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D WEST 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D UP 9330 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+#9332
+A Pathway Through The Ravine~
+The walls of rock and stone surround both sides of the trail to the north
+and south, hiding most of the wildlife by their immense height.  Many large
+boulders provide obstacles to passing caravans or wandering adventurers
+within this ravine, but somehow another sense of danger seems to betray the
+tranquility of this passage. 
+~
+mountains
+D NORTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D EAST 9333 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D WEST 9331 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+#9333
+A Pathway Through The Ravine~
+The walls of rock and stone surround both sides of the trail to the north
+and south, hiding most of the wildlife by their immense height.  Many large
+boulders provide obstacles to passing caravans or wandering adventurers
+within this ravine, but somehow another sense of danger seems to betray the
+tranquility of this passage. 
+~
+mountains
+D NORTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D EAST 9334 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D WEST 9332 A 0
+door~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+E plaque sign door~
+Lashan's Herbal Shop.
+~
+#9334
+A Pathway Through The Ravine~
+The walls of rock and stone surround both sides of the trail to the north
+and south, hiding most of the wildlife by their immense height.  Many large
+boulders provide obstacles to passing caravans or wandering adventurers
+within this ravine, but somehow another sense of danger seems to betray the
+tranquility of this passage.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D EAST 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D SOUTH 0 0 0
+door~
+Walls of the ravine tower above you.
+~
+D WEST 9333 A 0
+door~
+A trail of dirt continues in this direction.
+~
+D UP 9335 0 0
+~
+A trail of dirt continues in this direction.
+~
+D DOWN 0 0 0
+~
+Compact dirt and patches of dying brown grass cover the ground before you.
+~
+E plaque sign door~
+Zavier's Incense store.
+~
+#9335
+The Beginning of a Ravine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles to the natural hedges that have grown sporadically through this
+region.  The wide dirt trail becomes very rocky near this ravine due to the
+absence of dirt and much of the nearby foilage. 
+~
+trail
+D NORTH 9336 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9446 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9440 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 9334 0 0
+~
+A trail of dirt continues in this direction.
+~
+#9336
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9337 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D EAST 9445 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9335 0 0
+~
+A trail of dirt continues in this direction.
+~
+D WEST 9435 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.
+~
+#9337
+A Wide Dirt Trail~
+Pine trees line the entire valley floor as this dirt trail weaves in and
+out of their path.  The denseness of their needles help offer a shelter
+against the harsh climates of the mountain terrain as well as a habitat for
+many forms of wildlife.  The dirt path is smooth from regular use, but some
+areas remain uneven due to roots and other natural obstructions.  
+~
+trail
+D NORTH 9338 0 0
+~
+A trail of dirt continues in this direction.
+~
+D EAST 9444 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9336 0 0
+door~
+A trail of dirt continues in this direction.
+~
+D WEST 9434 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+A thick waxy polish has been applied to the grey clay floor giving it a dull luster.
+~
+#9338
+A Trail of Pine Needles~
+Trees of pine can be seen everywhere within the valley floor as this
+trail begins to weave through a specifically dense circle of them.  The
+trunks of each pine that make up this circle seem to be titanic compared
+with the other trees that have grown within the valley.  
+~
+forest
+D NORTH 9339 0 0
+door~
+~
+D EAST 0 0 0
+door~
+Large pine trees have grown together to form a wall.
+~
+D SOUTH 9337 0 0
+~
+A trail of dirt continues in this direction.
+~
+D WEST 0 0 0
+door~
+Large pine trees have grown together to form a wall.
+~
+D DOWN 0 0 0
+~
+Compact dirt and pine needles cover the ground before you.
+~
+#9339
+A Circle of Pine Trees~
+Surrounding the passage are a circle of pine trees that have lived over
+centuries judging by their immense size and height.  Whether their existance
+is due to some form of magic or simply natural growth remains impossible to
+tell at a glance.  Regardless of that, there is a sense of definate
+tranquility in this location.  
+~
+trail
+D NORTH 9340 I 0
+~
+Majestic pine trees stand fifty feet in height.
+~
+D EAST 0 0 0
+door~
+Majestic pine trees stand fifty feet in height.
+~
+D SOUTH 9338 0 0
+door~
+A trail of pine needles continue in this direction.
+~
+D WEST 0 0 0
+door~
+Majestic pine trees stand fifty feet in height.
+~
+D DOWN 0 0 0
+~
+Compact dirt and fallen pine needles encircle a pond of crystal clear water.
+~
+#9340
+A Plateau of Grass~
+The valley of trees seem to vanish to the south as the grassland spreads
+out in nearly every direction.  The grass is unusually green despite the
+harsh climates of this altitude and lack of fertile dirt.  The grass lays
+evenly as though not many adventurers traverse this region of the valley.  
+~
+field
+D NORTH 9343 0 0
+door~
+The plateau continues in this direction.  
+~
+D EAST 9342 0 0
+~
+The plateau continues in this direction.  
+~
+D SOUTH 9339 I 0
+~
+Large pine trees have grown together.
+~
+D WEST 9341 0 0
+~
+The plateau continues in this direction.  
+~
+D DOWN 0 0 0
+~
+Thin grass rises from the rocky ground, making travel less tedious.  
+~
+#9341
+A Plateau of Grass~
+The valley of trees seem to vanish to the south as the grassland spreads
+out in nearly every direction.  The grass is unusually green despite the
+harsh climates of this altitude and lack of fertile dirt.  The grass lays
+evenly as though not many adventurers traverse this region of the valley.
+~
+field
+D NORTH 9344 0 0
+~
+The plateau continues in this direction.  
+~
+D EAST 9340 0 0
+~
+The plateau continues in this direction.  
+~
+D SOUTH 9342 0 0
+door~
+The plateau continues in this direction.  
+~
+D WEST 9342 0 0
+~
+The plateau continues in this direction.  
+~
+D DOWN 0 0 0
+~
+Thin grass rises from the rocky ground, making travel less tedious.  
+~
+#9342
+A Plateau of Grass~
+The valley of trees seem to vanish to the south as the grassland spreads
+out in nearly every direction.  The grass is unusually green despite the
+harsh climates of this altitude and lack of fertile dirt.  The grass lays
+evenly as though not many adventurers traverse this region of the valley.
+~
+field
+D NORTH 9345 0 0
+door~
+The plateau continues in this direction.  
+~
+D EAST 9341 0 0
+door~
+The plateau continues in this direction.  
+~
+D SOUTH 9345 0 0
+door~
+The plateau continues in this direction.  
+~
+D WEST 9340 0 0
+door~
+The plateau continues in this direction.  
+~
+D DOWN 0 0 0
+~
+Thin grass rises from the rocky ground, making travel less tedious.  
+~
+#9343
+A Plateau of Grass~
+The valley of trees seem to vanish to the south as the grassland spreads
+out in nearly every direction.  The grass is unusually green despite the
+harsh climates of this altitude and lack of fertile dirt.  Some of the grass
+in this vicinity seems to be flattened as if recently walked upon.  
+~
+field
+D NORTH 9342 0 0
+door~
+The plateau continues in this direction.  
+~
+D EAST 9345 0 0
+~
+The plateau continues in this direction.  
+~
+D SOUTH 9340 0 0
+door~
+The plateau continues in this direction.  
+~
+D WEST 9344 0 0
+door~
+The plateau continues in this direction.  
+~
+D DOWN 0 0 0
+~
+Thin grass rises from the rocky ground, making travel less tedious.  
+~
+E grass~
+The path would be all but invisible to further inspection if not for the
+trampled grass of recent travels.  The path continues to the north, leading
+to an odd, but simple structure.  
+~
+#9344
+A Plateau of Grass~
+The valley of trees seem to vanish to the south as the grassland spreads
+out in nearly every direction.  The grass is unusually green despite the
+harsh climates of this altitude and lack of fertile dirt.  The grass lays
+evenly as though not many adventurers traverse this region of the valley.
+~
+field
+D NORTH 9346 0 0
+door~
+The plateau continues in this direction, leading to a strange structure.
+~
+D EAST 9343 0 0
+~
+The plateau continues in this direction.  
+~
+D SOUTH 9341 0 0
+door~
+The plateau continues in this direction.  
+~
+D WEST 9345 0 0
+door~
+The plateau continues in this direction.  
+~
+D DOWN 0 0 0
+~
+Thin grass rises from the rocky ground, making travel less tedious.  
+~
+#9345
+A Plateau of Grass~
+The valley of trees seem to vanish to the south as the grassland spreads
+out in nearly every direction.  The grass is unusually green despite the
+harsh climates of this altitude and lack of fertile dirt.  The grass lays
+evenly as though not many adventurers traverse this region of the valley.
+~
+field
+D NORTH 9342 0 0
+door~
+The plateau continues in this direction.  
+~
+D EAST 9344 0 0
+door~
+The plateau continues in this direction.  
+~
+D SOUTH 9342 0 0
+door~
+The plateau continues in this direction.  
+~
+D WEST 9343 0 0
+door~
+The plateau continues in this direction.  
+~
+D DOWN 0 0 0
+~
+Thin grass rises from the rocky ground, making travel less tedious.  
+~
+#9346
+An Odd Structure~
+The formation of this building seems strangely unnatural.  It's walls
+seem to meld into the ground seamlessly and the objects that adorn the room
+seem to be just as connected to the ground.  Benches line the room, perhaps
+for some type of gathering or prayer as they seem to point towards the far
+end of the structure in their placement.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A large dias stands at the far end of the structure.  
+~
+D EAST 0 0 0
+~
+The wall seems to be formed from compact dirt and stone.  
+~
+D SOUTH 9344 0 0
+door~
+The plateau continues in this direction.  
+~
+D WEST 0 0 0
+~
+The wall seems to be formed from compact dirt and stone.  
+~
+D UP 9347 0 0
+~
+A spiral staircase of dirt leads upwards to some second level.  
+~
+D DOWN 0 0 0
+~
+The floor of this structure is made from clay like dirt, solid yet
+somewhat soft at the same time.  
+~
+#9347
+An Ivory Roof~
+The top of the structure shines brightly in the sunlight, allowing a
+strange sense of tranquility and strength as the plateau of grass spreads
+out far below you.  The roof of this building seems to be formed from pure
+ivory, thick and as white as snow.  Upon the southern end of the roof is an
+altar that seems to be fashioned from within the ivory itself.  The base of
+its stature melds directly into the roof.  
+~
+mountains
+D NORTH 0 0 0
+~
+A plateau of grass spreads out before you.
+~
+D EAST 0 0 0
+~
+A plateau of grass spreads out before you.
+~
+D SOUTH 0 0 0
+door~
+A plateau of grass spreads out before you.
+~
+D WEST 0 0 0
+~
+A plateau of grass spreads out before you.
+~
+D DOWN 9346 0 0
+~
+A strange staircase of rock and dirt leads back within the structure.
+~
+ALTDESC 0 An Onyx Roof~
+ The top of the structure absorbs the remaining light within the darkness,
+allowing a strange sense of silence and omniscience as the plateau of grass
+spreads out far below you.  The entirety of this roof seems to be formed
+from the blackest onyx, as even the rays of the moon are absorbed into it's
+darkness.  Upon the southern end of the roof is an altar that seems to be
+fashioned from within the onyx itself.  The very base of its stature melds
+seamlessly into the onyx stone of the roof.  
+~
+#9348
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision.  
+~
+forest
+D NORTH 9351 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9349 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+#9349
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the south.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision.
+~
+forest
+D NORTH 9352 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9350 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9348 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9350
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the south.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision.
+~
+forest
+D NORTH 9353 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9307 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9349 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9351
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9356 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9352 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9348 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9352
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.  
+~
+forest
+D NORTH 9357 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9353 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9349 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9351 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9353
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9358 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9354 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9350 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9352 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9354
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9359 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9355 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9307 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9353 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9355
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9360 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9310 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9308 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9354 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9356
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9357 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9351 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9357
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9362 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9358 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9352 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9356 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9358
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9363 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9359 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9353 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9357 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9359
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9364 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9360 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9354 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9358 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9360
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9365 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9311 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9355 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9359 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9361
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9366 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9311 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9362
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9367 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9363 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9357 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9363
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9368 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9364 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9358 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9362 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9364
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9369 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9365 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9359 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9363 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9365
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9370 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9312 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9360 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9364 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9366
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9371 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9361 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9312 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9367
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9372 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9368 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9362 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9368
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9373 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9369 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9363 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9367 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9369
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9374 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9370 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9364 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9368 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9370
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9315 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9313 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9365 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9369 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9371
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9375 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9366 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9313 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9372
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9373 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9367 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9373
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9376 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9374 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9368 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9372 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9374
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9377 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9315 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9369 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9373 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9375
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9379 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9371 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9314 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9376
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9382 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9377 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9373 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9377
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9383 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9316 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9374 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9376 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9378
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9384 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9379 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9314 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9316 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9379
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9385 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9380 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9375 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9378 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9380
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9386 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9381 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9379 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9381
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9387 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9380 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9382
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9388 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9383 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9376 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9383
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9389 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9317 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9377 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9382 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9384
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9390 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9385 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9378 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9317 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9385
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9391 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9386 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9379 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9384 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9386
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9392 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9387 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9380 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9385 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9387
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9393 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9381 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9386 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9388
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9395 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9389 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9382 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9389
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9396 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9318 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9383 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9388 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9390
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9397 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9391 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9384 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9318 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9391
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9398 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9392 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9385 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9390 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9392
+A forest of pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9399 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9393 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9386 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9391 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9393
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9387 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9392 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 9457 ABI 0
+pine~
+Pine needles seem to be piled here, hiding the ground beneath them.
+~
+E pine pile~
+The needles seem to conceal a passage downwards into darkness.
+~
+#9394
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the west.  Pine needles and other floral of this
+habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9400 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9395 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9395
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the southwest.  Pine needles and other floral of
+this habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision.
+~
+forest
+D NORTH 9401 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9396 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9388 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9394 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9396
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9402 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9319 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9389 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9395 0 0
+~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+~
+Moss and pine needles are strewn about.  
+~
+#9397
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9403 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9398 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9390 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9319 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9398
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9404 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9399 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9391 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9397 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9399
+A forest of pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9392 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9398 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9400
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the northwest.  Pine needles and other floral of
+this habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision.  
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9401 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9394 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9401
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the northwest.  Pine needles and other floral of
+this habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9405 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9402 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9395 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9400 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9402
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9406 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9320 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9396 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9401 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9403
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9407 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9404 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9397 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9320 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9404
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9408 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9398 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9403 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9405
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the northwest.  Pine needles and other floral of
+this habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9406 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9401 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9406
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the northwest.  Pine needles and other floral of
+this habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 9409 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9321 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9402 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9405 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9407
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9410 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9408 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9403 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9321 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9408
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9404 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9407 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9409
+A Forest of Pine~
+The deep green hue of the forest begins to fade away as the surrounding
+mountains begin to rise to the northwest.  Pine needles and other floral of
+this habitat are scattered about the general vacinity in their survival for
+growth and birth.  Glimpses of animals seem to play at the sides of your
+vision. 
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9322 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9406 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9410
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9407 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9322 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9411
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9414 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9329 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9412
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9329 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9415 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9413
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9418 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9414 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9414
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9413 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9419 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9330 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9411 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9415
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9330 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9420 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9416 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9412 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9416
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9415 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9421 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9417 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9417
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9416 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9422 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9418
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9419 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9413 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9419
+The Edge of a Ravine~
+The deep green hues of the forest can be seen in every direction from the
+edge of this large ravine.  At this vantage point, the trail can also be
+seen winding down within the naturally formed canyon walls of the ravine, as
+if to say that it has existed for quite some time.  
+~
+forest
+D NORTH 9418 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9423 0 0
+door~
+The edge of the ravine continues in this direction.  
+~
+D SOUTH 0 0 0
+door~
+A wide ravine sits in this direction.  
+~
+D WEST 9414 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Stones and loose debris make up the ledge.  
+~
+OWNER none~
+#9420
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+A wide ravine sits in this direction.  
+~
+D EAST 9424 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9421 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9415 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9421
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9420 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9425 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9422 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9416 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9422
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9421 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9426 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9417 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9423
+The Edge of a Ravine~
+The deep green hues of the forest can be seen in every direction from the
+edge of this large ravine.  At this vantage point, the trail can also be
+seen winding down within the naturally formed canyon walls of the ravine, as
+if to say that it has existed for quite some time.  
+~
+forest
+D NORTH 0 0 0
+door~
+The solid stone face of the mountain rises before you.  
+~
+D EAST 9428 0 0
+door~
+The edge of the ravine continues in this direction.  
+~
+D SOUTH 9424 I 0
+door~
+A fallen pine tree covers the wide ravine.  
+~
+D WEST 9419 0 0
+door~
+The edge of the ravine continues in this direction.  
+~
+D DOWN 0 0 0
+door~
+Stones and loose debris make up the ledge.  
+~
+OWNER none~
+#9424
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9423 I 0
+door~
+A fallen pine tree covers the wide ravine.
+~
+D EAST 9429 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9425 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9420 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9425
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9424 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9430 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9426 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9421 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9426
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9425 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9431 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9427 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9422 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9427
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9426 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9432 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9428
+The Edge of a Ravine~
+The deep green hues of the forest can be seen in every direction from the
+edge of this large ravine.  At this vantage point, the trail can also be
+seen winding down within the naturally formed canyon walls of the ravine, as
+if to say that it has existed for quite some time.  
+~
+forest
+D NORTH 0 0 0
+door~
+The solid stone face of the mountain rises before you.  
+~
+D EAST 9435 0 0
+door~
+The edge of the ravine continues in this direction.  
+~
+D SOUTH 0 0 0
+door~
+A wide ravine sits in this direction.  
+~
+D WEST 9423 0 0
+door~
+The edge of the ravine continues in this direction.  
+~
+D DOWN 0 0 0
+door~
+Stones and loose debris make up the ledge.  
+~
+OWNER none~
+#9429
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+A wide ravine sits in this direction.  
+~
+D EAST 9436 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9430 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9424 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9430
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9429 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9437 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9431 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9425 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9431
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9430 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9438 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9432 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9426 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9432
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9431 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9439 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9433 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9427 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9433
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9432 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 9480 ABI 0
+net~
+A net of pine needles seem to conceal a large tunnel that leads downwards.
+~
+OWNER none~
+#9434
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+unused
+D NORTH 0 0 0
+door~
+Solid rock rises before you.
+~
+D EAST 9337 0 0
+door~
+~
+D SOUTH 9435 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D WEST 0 0 0
+door~
+Solid rock rises before you.
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.
+~
+OWNER none~
+#9435
+The Edge of a Ravine~
+The deep green hues of the forest can be seen in every direction from the
+edge of this large ravine.  At this vantage point, the trail can also be
+seen winding down within the naturally formed canyon walls of the ravine, as
+if to say that it has existed for quite some time.  
+~
+forest
+D NORTH 9434 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9336 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+A wide ravine sits in this direction.  
+~
+D WEST 9428 0 0
+door~
+The edge of the ravine continues in this direction.  
+~
+D DOWN 0 0 0
+door~
+Stones and loose debris make up the ledge.  
+~
+OWNER none~
+#9436
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+A wide ravine sits in this direction.  
+~
+D EAST 9440 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9437 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9429 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9437
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9436 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9441 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9438 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9430 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9438
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9437 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9442 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9439 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9431 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9439
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9438 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9443 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9432 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9440
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9335 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9447 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9441 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9436 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9441
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9440 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9448 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9442 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9437 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9442
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9441 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9443 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9438 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9443
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9442 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9439 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9444
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+unused
+D NORTH 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D EAST 9450 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D SOUTH 9445 0 0
+door~
+~
+D WEST 9337 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.
+~
+OWNER none~
+#9445
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9444 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9451 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9446 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9336 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9446
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9445 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9452 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9447 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9335 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9447
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9446 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9453 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9448 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9440 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9448
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9447 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9441 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9449
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+unused
+D NORTH 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D EAST 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D SOUTH 9450 0 0
+door~
+~
+D WEST 0 0 0
+door~
+The solid stone face of the mountain rises in this direction.
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.
+~
+OWNER none~
+#9450
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9449 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9454 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9451 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9444 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9451
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9450 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9455 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9452 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9445 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9452
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9451 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 9456 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9453 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9446 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9453
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9452 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9447 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9454
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9455 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9450 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9455
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9454 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 9456 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9451 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9456
+A Forest of Pine~
+The deep green hues of the forest can be seen in every direction from the
+pine needles of the surrounding trees to the natural hedges that have grown
+sporadically through this region.  Thick grass covers the ground, but the
+majority of its color is made up of dense moss that has grown underneath.
+~
+forest
+D NORTH 9455 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D EAST 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D WEST 9452 0 0
+door~
+Pine trees and other forms of wildlife can be seen in this direction.  
+~
+D DOWN 0 0 0
+door~
+Moss and pine needles are strewn about.  
+~
+OWNER none~
+#9457
+A Steep Decent~
+The formation of this passage includes jagged stone, moss and fungus that
+have found an environment of darkness to live within.  The color of the
+forest is not evident in these surroundings as the overall theme is consumed
+by shadows and other hues of grey. 
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D EAST 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D SOUTH 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D WEST 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D UP 9393 AB 0
+trapdoor~
+A stone trapdoor blocks the passage upwards.
+~
+D DOWN 9458 0 0
+door~
+A rocky tunnel continues in this direction.
+~
+OWNER none~
+#9458
+A Rocky Tunnel~
+The formation of this passage includes jagged stone, moss and fungus that
+have found an environment of darkness to live within.  The color of the
+forest is not evident in these surroundings as the overall theme is consumed
+by shadows and other hues of grey.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D EAST 9459 0 0
+door~
+~
+D SOUTH 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D WEST 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D UP 9457 0 0
+door~
+The tunnel continues in this direction.
+~
+D DOWN 0 0 0
+door~
+A floor of compact stone and dirt is below you.
+~
+OWNER none~
+#9459
+A Rocky Tunnel~
+The formation of this passage includes jagged stone, moss and fungus that
+have found an environment of darkness to live within.  The color of the
+forest is not evident in these surroundings as the overall theme is consumed
+by shadows and other hues of grey. 
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D EAST 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D SOUTH 0 0 0
+door~
+A wall of compact stone and dirt is before you.
+~
+D WEST 9458 0 0
+door~
+The tunnel continues in this direction.
+~
+D UP 0 0 0
+door~
+A surface of jagged stone and compact dirt make up this tunnel's ceiling.
+~
+D DOWN 9460 0 0
+door~
+The tunnel grows darker as it continues in this direction.
+~
+OWNER none~
+#9460
+A Dark Tunnel~
+Walls of onyx make up this narrow passage, adding to the darkness by
+their own lack of color.  Darkness remains the only thing to be seen in any
+direction other than the immediate vicinity and to accompany the shade is
+the distant dripping sound of water that echoes upon the smooth walls.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A wall of solid onyx is before you.
+~
+D EAST 0 0 0
+door~
+A wall of solid onyx is before you.
+~
+D SOUTH 9461 0 0
+door~
+The tunnel begins to open wider as it leads to a cavern.
+~
+D WEST 0 0 0
+door~
+A wall of solid onyx is before you.
+~
+D UP 9459 0 0
+door~
+The tunnel becomes rocky as it continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The floor is carved from solid onyx.
+~
+OWNER none~
+#9461
+A Cavern Corner~
+Darkness envelopes the cavern as the walls seem to fade out of view. 
+Echoes of water dripping in the distance seem to remain all that can be
+heard.  Towards the east, it appears that the cavern opens up in width yet
+the ceiling remains scarcely in view amidst the thickness of the shadows.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9460 0 0
+door~
+A tunnel leads away from the cavern in this direction.
+~
+D EAST 9462 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D SOUTH 0 0 0
+door~
+The cavern wall holds traces of onyx, but otherwise its consistancy is solid stone and dirt.
+~
+D WEST 0 0 0
+door~
+The cavern wall holds traces of onyx, but otherwise its consistancy is solid stone and dirt.
+~
+D UP 0 0 0
+door~
+The cavern ceiling fades away into the darkness.
+~
+D DOWN 0 0 0
+door~
+Puddles of water have gathered sporadically throughout the cavern from the underground moisture.
+~
+OWNER none~
+#9462
+A Large Cavern~
+The walls of this cavern remain nearly hidden within the darkness, but
+its ceiling is low enough to remain seen.  Faded sounds of scratching or the
+occasional pebble bouncing along the stone structure can be heard echoing
+upon the walls, allowing the cavern to seem much larger than it really is. 
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The cavern wall holds traces of onyx, but otherwise its consistancy is solid stone and dirt.
+~
+D EAST 9464 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D SOUTH 9463 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D WEST 9461 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D UP 0 0 0
+door~
+The ceiling of the cavern fades away within the darkness.
+~
+D DOWN 0 0 0
+door~
+Puddles of water have gathered sporadically throughout the cavern from the underground moisture.
+~
+OWNER none~
+#9463
+A Large Cavern~
+The walls of this cavern remain nearly hidden within the darkness, but
+its ceiling is low enough to remain seen.  Faded sounds of scratching or the
+occasional pebble bouncing along the stone structure can be heard echoing
+upon the walls, allowing the cavern to seem much larger than it really is. 
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9462 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D EAST 9465 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D SOUTH 0 0 0
+door~
+The cavern wall holds traces of onyx, but otherwise its consistancy is solid stone and dirt.
+~
+D WEST 0 0 0
+door~
+The cavern wall holds traces of onyx, but otherwise its consistancy is solid stone and dirt.
+~
+D UP 0 0 0
+door~
+The ceiling of the cavern fades away within the darkness.
+~
+D DOWN 0 0 0
+door~
+Puddles of water have gathered sporadically throughout the cavern from the underground moisture.
+~
+OWNER none~
+#9464
+A Large Cavern~
+The walls of this cavern remain nearly hidden within the darkness, but
+its ceiling is low enough to remain seen.  Faded sounds of scratching or the
+occasional pebble bouncing along the stone structure can be heard echoing
+upon the walls, allowing the cavern to seem much larger than it really is. 
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9466 0 0
+door~
+A passage seems to lead away from the cavern in this direction.
+~
+D EAST 0 0 0
+door~
+The cavern wall remains concealed by darkness.
+~
+D SOUTH 9465 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D WEST 9462 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D UP 0 0 0
+door~
+The ceiling of the cavern fades away within the darkness.
+~
+D DOWN 0 0 0
+door~
+Puddles of water have gathered sporadically throughout the cavern from the underground moisture.
+~
+OWNER none~
+#9465
+A Large Cavern~
+The walls of this cavern remain nearly hidden within the darkness, but
+its ceiling is low enough to remain seen.  Faded sounds of scratching or the
+occasional pebble bouncing along the stone structure can be heard echoing
+upon the walls, allowing the cavern to seem much larger than it really is. 
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9464 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D EAST 0 0 0
+door~
+The cavern wall remains concealed by darkness.
+~
+D SOUTH 9481 0 0
+door~
+A passage seems to lead away from the cavern in this direction.
+~
+D WEST 9463 0 0
+door~
+The thick darkness conceals the length of the cavern.
+~
+D UP 0 0 0
+door~
+The ceiling of the cavern fades away within the darkness.
+~
+D DOWN 0 0 0
+door~
+Puddles of water have gathered sporadically throughout the cavern from the underground moisture.
+~
+OWNER none~
+#9466
+A Narrow Passage~
+This section of stone seems well carved with flat vertical walls instead
+of jagged stone.  The surface appears rough and dark from its natural hue,
+and similiar in comparison to the floor and ceiling.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A wall of flat stone blocks passage in this direction.
+~
+D EAST 9467 0 0
+door~
+~
+D SOUTH 9464 0 0
+door~
+~
+D WEST 0 0 0
+door~
+A wall of flat stone blocks passage in this direction.
+~
+D UP 0 0 0
+door~
+The ceiling passage is formed from the same stone as the floor and walls.
+~
+OWNER none~
+#9467
+A Large Antechamber~
+Ornate formations of stone and miscellaneous carvings can be seen
+everywhere within this large chamber.  Smooth grey granite seems perfectly
+formed as though built with a greater purpose.  Veins of onyx can be found
+running throughout the granite formations, yet they appear to have been
+incorporated within each design to offer a finer appearance.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A large statue resembling the body of an imp sits against the northern wall.
+~
+D EAST 9468 0 0
+door~
+The chamber continues in this direction.
+~
+D SOUTH 9470 0 0
+door~
+The chamber grows darker in this direction.
+~
+D WEST 9466 0 0
+door~
+A passage leads away from the chamber in this direction.
+~
+D UP 0 0 0
+door~
+A polished ceiling of onyx stone carries a reflection of the chamber.
+~
+D DOWN 0 0 0
+door~
+Solid tiles of stone make up the flooring within this chamber.
+~
+E statue~
+A remarkable statue of onyx stone stands against the northern wall. 
+Crafted with perfect detail, it would hardly matter if it was done so by
+magic or hands alone.  The visage of an Imp's face is apparent in the design
+even if the torso and arms have been exaggerated to show a more grandeur
+appearance.  Other than the formation, the imp appears to bear no further
+clothing or adornments but some type of scar has been crafted upon its
+chest.  
+~
+E scar chest~
+Two parallel scars run horizontally across the statue's chest, and one
+single scar runs vertical along the center of it's chest connecting the two
+former scars at their center's.  
+~
+OWNER none~
+#9468
+A Large Antechamber~
+Ornate formations of stone and miscellaneous carvings can be seen
+everywhere within this large chamber.  Smooth grey granite seems perfectly
+formed as though built with a greater purpose.  Veins of onyx can be found
+running throughout the granite formations, yet they appear to have been
+incorporated within each design to offer a finer appearance.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A strange statue stands against the northern wall.
+~
+D EAST 9469 0 0
+door~
+The chamber continues in this direction.
+~
+D SOUTH 9471 0 0
+door~
+~
+D WEST 9467 0 0
+door~
+The chamber continues in this direction.
+~
+D UP 0 0 0
+door~
+A polished ceiling of onyx stone carries a reflection of the chamber.
+~
+D DOWN 0 0 0
+door~
+Solid tiles of stone make up the flooring within this chamber.
+~
+E statue strange~
+An undefined statue of solid onyx stands before you against the northern
+wall of this chamber.  It's entire mass has been polished devotedly by it's
+apparent gloss and shine, yet the majority of its features are very vague in
+design.  Oversized limbs form its extremities, and even an extra pair of
+arms lay folded across the torso portion.  A strange mass of stone sits upon
+the location that a head would normally be placed.  Eyes and other forms are
+still depicted in the head-like stone, yet its deep ruby color contrasts
+dramatically with the lower onyx body, as if symbolizing something more.  
+~
+E stone~
+A deep ruby has been carved in the shape of a head, yet its overall
+formation is extremely disportionate.  Eyes, mouth and other oddities are
+depicted in vague detail.  On closer examination, some type of design seems
+to have been crafted within the ruby stone itself.  
+~
+E design~
+Several letters have been crafted within the ruby stone, yet they remain just visible despite the darkness
+of the ruby.  The letters appear to be u, n, c, t, u.
+~
+OWNER none~
+#9469
+A Large Antechamber~
+Ornate formations of stone and miscellaneous carvings can be seen
+everywhere within this large chamber.  Smooth grey granite seems perfectly
+formed as though built with a greater purpose.  Veins of onyx can be found
+running throughout the granite formations, yet they appear to have been
+incorporated within each design to offer a finer appearance.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A large statue resembling the body of an imp sits against the northern wall.
+~
+D EAST 9474 0 0
+door~
+A passage leads away from the chamber in this direction.
+~
+D SOUTH 9472 0 0
+door~
+The chamber grows darker in this direction.
+~
+D WEST 9468 0 0
+door~
+The chamber continues in this direction.
+~
+D UP 0 0 0
+door~
+A polished ceiling of onyx stone carries a reflection of the chamber.
+~
+D DOWN 0 0 0
+door~
+Solid tiles of stone make up the flooring within this chamber.
+~
+E statue~
+A remarkable statue of onyx stone stands against the northern wall. 
+Crafted with perfect detail, it would hardly matter if it was done so by
+magic or hands alone.  The visage of an Imp's face is apparent in the design
+even if the torso and arms have been exaggerated to show a more grandeur
+appearance.  Other than the formation, the imp appears to bear no further
+clothing or adornments but some type of scar has been crafted upon its
+chest. 
+~
+E scar chest~
+A strange scar arcs across the upper portion of the statue's chest as it
+travels downards, but in its center it's transposed to complete a bottom arc
+in the opposite direction as the former.  
+~
+OWNER none~
+#9470
+A Dark Alcove~
+This alcove seems to consume the surrounding light, yet its formation is
+constructed of solid onyx instead of the granite stone that can be found
+elsewhere within the chamber.  A large statue of an imp sits within the
+corner, grinning with malevolence.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9467 0 0
+door~
+The chamber continues in this direction.
+~
+D EAST 9471 0 0
+door~
+The chamber continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+The wall has been carved away to form this alcove.
+~
+D WEST 0 0 0
+door~
+The wall has been carved away to form this alcove.
+~
+D UP 0 0 0
+door~
+A polished ceiling of onyx stone carries a reflection of the chamber.
+~
+D DOWN 0 0 0
+door~
+Solid tiles of stone make up the flooring within this chamber.
+~
+E belt~
+Along the belt appears to be several wands and staves that are surrounded
+by pouches of regeants, all carved with perfect detail to honor the imp
+that the statue represents.
+~
+E mouth~
+You realize that there are no fangs or any other obstructions to stop
+your hand from reaching within its mouth.
+~
+E statue~
+The onyx statue grins widely with a sense of malevolence.  Obviously dark
+hearted as its creation is based off of the appearance of an imp, its
+clothing seems to be formed of a sleek robe with several artifacts adorning
+his belt, carved with perfect detail.  A strange whip is wrapped about the
+frame of the statue several times, carved from a vein of granite other than
+the surrounding onyx.  Looking back towards the face of the statue, it seems
+a bit obnoxious for it to be grining so widely.  
+~
+OWNER none~
+#9471
+A Large Antechamber~
+Ornate formations of stone and miscellaneous carvings can be seen
+everywhere within this large chamber.  Smooth grey granite seems perfectly
+formed as though built with a greater purpose.  Veins of onyx can be found
+running throughout the granite formations, yet they appear to have been
+incorporated within each design to offer a finer appearance.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 9468 0 0
+door~
+The chamber continues in this direction.
+~
+D EAST 9472 0 0
+door~
+The chamber grows darker in this direction.
+~
+D SOUTH 9473 ABCD 9333
+door~
+Ornate doors stand to the south.
+~
+D WEST 9470 0 0
+door~
+The chamber grows darker in this direction.
+~
+D UP 0 0 0
+door~
+A polished ceiling of onyx stone carries a reflection of the chamber.
+~
+D DOWN 0 0 0
+door~
+Solid tiles of stone make up the flooring within this chamber.
+~
+OWNER none~
+#9472
+A Dark Alcove~
+This alcove seems to consume the surrounding light, yet its formation is
+constructed of solid onyx instead of the granite stone that can be found
+elsewhere within the chamber.  A large statue of an imp sits within the
+corner, smirking with contempt.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9469 0 0
+door~
+The chamber continues in this direction.
+~
+D EAST 0 0 0
+door~
+The wall has been carved away to form this alcove.
+~
+D SOUTH 0 0 0
+door~
+The wall has been carved away to form this alcove.
+~
+D WEST 9471 0 0
+door~
+The chamber continues in this direction.
+~
+D UP 0 0 0
+door~
+A polished ceiling of onyx stone carries a reflection of the chamber.
+~
+D DOWN 0 0 0
+door~
+Solid tiles of stone make up the flooring within this chamber.
+~
+E reflection~
+Within the reflection you are able to notice a large sheath that is carved onto the back of the statue.
+~
+E weaponry~
+Swords, daggers, flails and even an axe are carved in remarkable detail upon the stone statue.
+~
+E claw~
+There seems to be room enough for an object within the claw.
+~
+E statue~
+An onyx statue stands here.  Fitted with armor and an assortment of
+weaponry perfectly carved with detail.  You could almost imagine the stone
+imp a real creature if not for its solid construction.  The claws of the imp
+are focused upon the wielded weapon that it carries, yet his left claw seems
+to be clutching something other than the pommel of the blade.  
+~
+OWNER none~
+#9473
+An Ornate Chamber~
+A large table sits within the center of the room with several documents
+upon it.  Murals and other inscriptions of foreign language adorn the walls
+of this chamber.  The southern portion of the room holds a slab of onyx that
+has been stained crimson by countless sacrifices and acts of torture.  A
+sense of foreboding seems to assault you for intruding here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 9471 ABDEH 0
+door~
+~
+E slab~
+The strange stone slab is naturally formed from onyx stone, yet its
+surface holds the deep shade of crimson.  It's purpose more than obvious
+from the dried substance that has formed it's crimson coloring.  
+~
+OWNER none~
+#9474
+A Small Cavern~
+The walls of this cavern remain nearly hidden within the darkness, but
+its ceiling is low enough to remain seen.  Faded sounds of scratching or the
+occasional pebble bouncing along the stone structure can be heard echoing
+upon the walls, allowing the cavern to seem much larger than it really is.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9475 0 0
+door~
+A tunnel shrouded in darkness leads north.
+~
+D EAST 0 0 0
+door~
+The cavern wall fades away into the darkness.
+~
+D SOUTH 9487 0 0
+door~
+A narrow passage continues in this direction.
+~
+D WEST 9469 0 0
+door~
+A door-shaped tunnel leads away from this cavern.
+~
+D UP 0 0 0
+door~
+The low hung cavern is formed of crude stone, jagged and sharp in several areas.
+~
+D DOWN 0 0 0
+door~
+Loose pebbles and gouge marks line the cavern floor.
+~
+OWNER none~
+#9475
+A Wide Passage~
+The sides of the tunnel have traces of onyx stone, but otherwise are
+fashioned from solid rock and have been left rough and jagged in some areas.
+Towards the south the passage seems to widen within the darkness, a constant
+dripping of water growing louder.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9476 0 0
+door~
+The tunnel continues in this direction.
+~
+D EAST 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D SOUTH 9474 0 0
+door~
+Darkness envelopes the tunnel in this direction.
+~
+D WEST 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D UP 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D DOWN 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+OWNER none~
+#9476
+A Twist Within the Tunnel~
+The walls of this tunnel twist sharply continuing in another direction,
+leaving only darkness behind.  The sides of the tunnel have traces of onyx
+stone, but otherwise are fashioned from solid rock and have been left rough
+and jagged in some areas.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D EAST 9477 0 0
+door~
+The tunnel continues in this direction.
+~
+D SOUTH 9475 0 0
+door~
+The tunnel continues in this direction.
+~
+D WEST 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D UP 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D DOWN 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+OWNER none~
+#9477
+A Twist Within the Tunnel~
+The walls of this tunnel twist sharply continuing in another direction,
+leaving only darkness behind.  The sides of the tunnel have traces of onyx
+stone, but otherwise are fashioned from solid rock and have been left rough
+and jagged in some areas.  Strange markings seem to outline the passage to
+the north.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9478 0 0
+door~
+The tunnel continues in this direction.
+~
+D EAST 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D SOUTH 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D WEST 9476 0 0
+door~
+The tunnel continues in this direction.
+~
+D UP 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+D DOWN 0 0 0
+door~
+Traces of onyx can be seen within the solid rock.
+~
+E markings~
+These markings appear to be ancient runes and sigils that have perhaps
+been here since the beginning of its birth, yet there is nothing to offer
+evidence either way.  They hold a faded blue hue and most are nearly
+concealed by cobwebs and dust.
+~
+OWNER none~
+#9478
+A Narrow Tunnel~
+Walls of onyx make up this narrow passage, adding to the darkness by
+their own lack of color.  Darkness remains the only thing to be seen in any
+direction other than the immediate vicinity and to accompany the shade is
+the distant dripping sound of water that echoes upon the smooth walls.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9479 0 0
+door~
+A narrow tunnel continues in this direction.
+~
+D EAST 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D SOUTH 9477 0 0
+door~
+A narrow tunnel continues in this direction.
+~
+D WEST 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D UP 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D DOWN 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+TRAP 'mana drain' 5 5 3
+Ancient runes and sigils begin to flare with life as you pass, regaining strength with each second of your presence.~
+Blue light floods the tunnel as a strange force surges through your mind!~
+OWNER none~
+#9479
+Base of a Vertical Shaft~
+Onyx walls make up this small cavern that seems to serve as some type of
+tunnel.  The walls are perfectly smooth and the ground almost holds a
+reflection due to the finesse of it's creation.  Strange markings seem to
+outline the passage to the south.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D EAST 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D SOUTH 9478 0 0
+door~
+A narrow tunnel continues in this direction.
+~
+D WEST 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D UP 9480 0 0
+door~
+A vertical shaft continues upwards, but there remains nothing to climb upon.
+~
+D DOWN 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+E markings~
+These markings appear to be ancient runes and sigils that have perhaps
+been here since the beginning of its birth, yet there is nothing to offer
+evidence either way.  They hold a faded blue hue and most are nearly
+concealed by cobwebs and dust.  
+~
+OWNER none~
+#9480
+A Vertical Shaft~
+A circular shaft of onyx stone is carved in such a way that it leaves
+nothing to climb upon.  The only possible means of travel is upwards towards
+a distant light or downwards within the darkness.  The only sounds to be
+heard is the faint dripping of liquid and the faded sounds of wilderness
+above.  
+~
+vertical
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D EAST 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D SOUTH 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D WEST 0 0 0
+door~
+Onyx stone has been carved smooth to the touch.
+~
+D UP 9433 ABI 0
+netting~
+A distant light can be seen above through a strange netting.
+~
+D DOWN 9479 0 0
+door~
+Nothing can be seen besides complete darkness.
+~
+E netting~
+A strange netting of leaves has been left to conceal the passage upwards.
+~
+OWNER none~
+#9481
+A Narrow Passage~
+This section of stone seems well carved with flat vertical walls instead
+of jagged stone.  The surface appears rough and dark from its natural hue,
+and similiar in comparison to the floor and ceiling.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9465 0 0
+door~
+The passage seems to open up wider in this direction.
+~
+D EAST 9482 0 0
+door~
+The passage continues east into the darkness.
+~
+D SOUTH 0 0 0
+door~
+Walls of flat stone block passage in this direction.
+~
+D WEST 0 0 0
+door~
+Walls of flat stone block passage in this direction.
+~
+OWNER none~
+#9482
+A Dark Corridor~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the corridor.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D EAST 9483 0 0
+door~
+You can't see a thing.
+~
+D SOUTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D WEST 9481 0 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+The ceiling can vaguely be seen through the darkness.
+~
+D DOWN 0 0 0
+door~
+The floor is roughly carved from solid stone.
+~
+OWNER none~
+#9483
+A Dark Corridor~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the corridor.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D EAST 9484 0 0
+door~
+You can't see a thing.
+~
+D SOUTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D WEST 9482 0 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+The ceiling can vaguely be seen through the darkness.
+~
+D DOWN 9488 ABI 0
+slab~
+The floor is carved from onyx stone.
+~
+E onyx~
+An onyx slab of stone lays flush with the surrounding rock.
+~
+OWNER none~
+#9484
+A Dark Corridor~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the corridor.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D EAST 9485 0 0
+door~
+You can't see a thing.
+~
+D SOUTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D WEST 9483 0 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+The ceiling can vaguely be seen through the darkness.
+~
+D DOWN 0 0 0
+door~
+The floor is roughly carved from solid stone.
+~
+OWNER none~
+#9485
+A Dark Corridor~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the corridor.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9486 0 0
+door~
+You can't see a thing.
+~
+D EAST 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D SOUTH 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D WEST 9484 0 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+The ceiling can vaguely be seen through the darkness.
+~
+D DOWN 0 0 0
+door~
+The floor is roughly carved from solid stone.
+~
+OWNER none~
+#9486
+A dark Corridor~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the corridor.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9487 0 0
+door~
+You can't see a thing.
+~
+D EAST 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D SOUTH 9485 0 0
+door~
+You can't see a thing.
+~
+D WEST 0 0 0
+door~
+The walls remain nearly hidden within the darkness.
+~
+D UP 0 0 0
+door~
+The ceiling can vaguely be seen through the darkness.
+~
+D DOWN 0 0 0
+door~
+The floor is roughly carved from solid stone.
+~
+OWNER none~
+#9487
+A Narrow Passage~
+This section of stone seems well carved with flat vertical walls instead
+of jagged stone.  The surface appears rough and dark from its natural hue,
+and similiar in comparison to the floor and ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9474 0 0
+door~
+The passage opens wider yet remains concealed by darkness.
+~
+D EAST 0 0 0
+door~
+The stone wall is rough yet carved perfectly flat.
+~
+D SOUTH 9486 0 0
+door~
+The passage continues south into the darkness.
+~
+D WEST 0 0 0
+door~
+The stone wall is rough yet carved perfectly flat.
+~
+D UP 0 0 0
+door~
+The ceiling can vaguely be seen through the darkness.
+~
+D DOWN 0 0 0
+door~
+The floor is roughly carved from solid stone.
+~
+OWNER none~
+#9488
+A Dark Stairwell~
+The shadows grow thicker as the passage leads further into the heart of
+the tunnels.  Walls of onyx make up the entirety of the tunnel, though veins
+of marble form intricate patterns in their natural design.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9489 0 0
+door~
+~
+D UP 9483 AB 0
+door~
+~
+OWNER none~
+#9489
+A Dark Tunnel~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the distance.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9490 0 0
+door~
+~
+D SOUTH 9488 0 0
+door~
+~
+OWNER none~
+#9490
+A Dark Tunnel~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the distance.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9491 0 0
+door~
+~
+D EAST 9495 I 0
+door~
+~
+D SOUTH 9489 0 0
+door~
+~
+D WEST 9494 I 0
+door~
+~
+OWNER none~
+#9491
+A Dark Tunnel~
+The length of his hallway seems impossible to gauge due to the sheer
+darkness of the shadows.  No sources of light can be seen in any direction
+and the walls themself seem to absorb what little lighting there is.  The
+sounds of distant scraping and other undistinguishable noises can be heard
+echoing throughout the distance.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 9496 I 0
+door~
+You can't see a thing.
+~
+D EAST 9493 I 0
+door~
+You can't see a thing.
+~
+D SOUTH 9490 0 0
+door~
+You can't see a thing.
+~
+D WEST 9492 I 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+You can't see a thing.
+~
+D DOWN 0 0 0
+door~
+You can't see a thing.
+~
+OWNER none~
+#9492
+A Dark Alcove~
+Darkness consumes every object and direction making sight nearly
+impossible.  Within the walls of this concave are several inscriptions and
+designs carved into the solid onyx.  Veins of marble have been incorporated
+within the designs to add remarkable elegance to their crude display and
+untelligable writings.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+You can't see a thing.
+~
+D EAST 9491 I 0
+door~
+You can't see a thing.
+~
+D SOUTH 0 0 0
+door~
+You can't see a thing.
+~
+D WEST 0 0 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+You can't see a thing.
+~
+D DOWN 0 0 0
+door~
+You can't see a thing.
+~
+OWNER none~
+#9493
+A Dark Alcove~
+Darkness consumes every object and direction making sight nearly
+impossible.  Within the walls of this concave are several inscriptions and
+designs carved into the solid onyx.  Veins of marble have been incorporated
+within the designs to add remarkable elegance to their crude display and
+untelligable writings.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+You can't see a thing.
+~
+D EAST 0 0 0
+door~
+You can't see a thing.
+~
+D SOUTH 0 0 0
+door~
+You can't see a thing.
+~
+D WEST 9491 I 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+You can't see a thing.
+~
+D DOWN 0 0 0
+door~
+You can't see a thing.
+~
+OWNER none~
+#9494
+A Dark Alcove~
+Darkness consumes every object and direction making sight nearly
+impossible.  Within the walls of this concave are several inscriptions and
+designs carved into the solid onyx.  Veins of marble have been incorporated
+within the designs to add remarkable elegance to their crude display and
+untelligable writings.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 9490 I 0
+door~
+~
+OWNER none~
+#9495
+A Dark Alcove~
+Darkness consumes every object and direction making sight nearly
+impossible.  Within the walls of this concave are several inscriptions and
+designs carved into the solid onyx.  Veins of marble have been incorporated
+within the designs to add remarkable elegance to their crude display and
+untelligable writings.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D WEST 9490 I 0
+door~
+~
+OWNER none~
+#9496
+A Dark Alcove~
+Darkness consumes every object and direction making sight nearly
+impossible.  Within the walls of this concave are several inscriptions and
+designs carved into the solid onyx.  Veins of marble have been incorporated
+within the designs to add remarkable elegance to their crude display and
+untelligable writings.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+You can't see a thing.
+~
+D EAST 0 0 0
+door~
+You can't see a thing.
+~
+D SOUTH 9491 I 0
+door~
+You can't see a thing.
+~
+D WEST 0 0 0
+door~
+You can't see a thing.
+~
+D UP 0 0 0
+door~
+You can't see a thing.
+~
+D DOWN 9497 ABCI 9336
+slab~
+You can't see a thing.
+~
+OWNER none~
+#9497
+An Ancient Hallway~
+This corridor is lit with pale blue light that is projected from the
+magical torches that line the wall.  The blue flames seem to dance and
+flicker in a surreal manner that is unlike anything else in these realms. 
+Sounds of muffled chanting can be heard within the distance.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The wall is lined with magical torches.  
+~
+D EAST 0 0 0
+door~
+Magical torches and faded runes hang upon the wall.  
+~
+D SOUTH 9498 0 0
+door~
+The hallway continues in this direction.  
+~
+D WEST 0 0 0
+door~
+Magical torches and faded runes hang upon the wall.  
+~
+D UP 9496 AB 0
+slab~
+A slab of polished marble secretly hides the passage upwards.  Writing
+seems to be etched upon its center.  
+~
+D DOWN 0 0 0
+door~
+Marble flooring seems perfectly polished.  
+~
+OWNER none~
+#9498
+An Ancient Hallway~
+This corridor is lit with pale blue light that is projected from the
+magical torches that line the wall.  The blue flames seem to dance and
+flicker in a surreal manner that is unlike anything else in these realms. 
+Sounds of muffled chanting can be heard in the distance.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 9497 0 0
+door~
+The hallway continues in this direction.  
+~
+D EAST 0 0 0
+door~
+Magical torches and faded runes hang upon the wall.  
+~
+D SOUTH 9499 0 0
+door~
+The hallway continues in this direction.  
+~
+D WEST 0 0 0
+door~
+Magical torches and faded runes hang upon the wall.  
+~
+D UP 0 0 0
+door~
+A polished ceiling is smooth and perfectly formed.  
+~
+D DOWN 0 0 0
+door~
+Marble flooring seems perfectly polished.  
+~
+OWNER none~
+#9499
+An Enormous Chamber~
+This room appears to be more equivilent to the inner halls of a temple
+than anything else.  A large pentagram takes up the entire floor space of
+the chamber in crimson coloring that could only be discerned as dried blood.
+Within the center of its formation is some type of altar formed from the
+bones of miscellaneous creatures that emits an acrid smoke born of magic
+than any type of flame.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 9498 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 9300 TO 9301 GLIMIT 5 LLIMIT 1
+MOB 9300 TO 9303 GLIMIT 5 LLIMIT 1
+MOB 9301 TO 9303 GLIMIT 4 LLIMIT 2
+MOB 9301 TO 9303 GLIMIT 4 LLIMIT 2
+MOB 9300 TO 9304 GLIMIT 5 LLIMIT 2
+MOB 9301 TO 9305 GLIMIT 4 LLIMIT 2
+MOB 9301 TO 9305 GLIMIT 4 LLIMIT 2
+OBJECT 9300 TO 9306
+MOB 9302 TO 9308 GLIMIT 12 LLIMIT 1
+MOB 9302 TO 9310 GLIMIT 12 LLIMIT 2
+MOB 9302 TO 9315 GLIMIT 12 LLIMIT 1
+MOB 9302 TO 9316 GLIMIT 12 LLIMIT 1
+MOB 9302 TO 9318 GLIMIT 12 LLIMIT 2
+MOB 9302 TO 9322 GLIMIT 12 LLIMIT 1
+MOB 9304 TO 9323 GLIMIT 8 LLIMIT 1
+MOB 9304 TO 9323 GLIMIT 8 LLIMIT 1
+MOB 9304 TO 9324 GLIMIT 8 LLIMIT 2
+MOB 9304 TO 9324 GLIMIT 8 LLIMIT 2
+MOB 9304 TO 9326 GLIMIT 8 LLIMIT 1
+MOB 9304 TO 9326 GLIMIT 8 LLIMIT 1
+MOB 9304 TO 9328 GLIMIT 8 LLIMIT 1
+MOB 9304 TO 9328 GLIMIT 8 LLIMIT 1
+MOB 9302 TO 9330 GLIMIT 12 LLIMIT 1
+OBJECT 9306 TO 9332
+PUT 9308 IN 9306 COUNT 1
+MOB 9309 TO 9332 GLIMIT 1 LLIMIT 1
+GIVE 9307
+EQUIP 9309 HEAD
+EQUIP 9310 BODY
+EQUIP 9311 WIELD
+MOB 9310 TO 9332 GLIMIT 1 LLIMIT 1
+EQUIP 9312 ABOUT
+GIVE 9313
+FOLLOW 9310 9309
+MOB 9302 TO 9333 GLIMIT 12 LLIMIT 1
+MOB 9302 TO 9336 GLIMIT 12 LLIMIT 2
+OBJECT 9334 TO 9347
+MOB 9303 TO 9372 GLIMIT 6 LLIMIT 1
+MOB 9303 TO 9382 GLIMIT 6 LLIMIT 1
+EQUIP 9327 WIELD
+MOB 9303 TO 9387 GLIMIT 6 LLIMIT 1
+MOB 9305 TO 9393 GLIMIT 6 LLIMIT 2
+MOB 9305 TO 9393 GLIMIT 6 LLIMIT 2
+DOOR 9393 down CLOSED
+MOB 9303 TO 9416 GLIMIT 6 LLIMIT 1
+MOB 9305 TO 9417 GLIMIT 6 LLIMIT 2
+MOB 9305 TO 9417 GLIMIT 6 LLIMIT 2
+MOB 9305 TO 9433 GLIMIT 6 LLIMIT 2
+DOOR 9433 down CLOSED
+MOB 9305 TO 9433 GLIMIT 6 LLIMIT 2
+EQUIP 9329 HANDS
+MOB 9303 TO 9448 GLIMIT 6 LLIMIT 1
+MOB 9303 TO 9456 GLIMIT 6 LLIMIT 1
+EQUIP 9328 LEGS
+MOB 9306 TO 9457 GLIMIT 8 LLIMIT 1
+DOOR 9457 up CLOSED
+MOB 9306 TO 9459 GLIMIT 8 LLIMIT 1
+MOB 9306 TO 9461 GLIMIT 8 LLIMIT 1
+MOB 9306 TO 9463 GLIMIT 8 LLIMIT 1
+MOB 9306 TO 9464 GLIMIT 8 LLIMIT 1
+MOB 9306 TO 9465 GLIMIT 8 LLIMIT 1
+MOB 9308 TO 9467 GLIMIT 6 LLIMIT 1
+MOB 9308 TO 9468 GLIMIT 6 LLIMIT 1
+MOB 9308 TO 9469 GLIMIT 6 LLIMIT 1
+OBJECT 9303 TO 9470
+PUT 9314 IN 9303 COUNT 1
+OBJECT 9301 TO 9470
+PUT 9331 IN 9301 COUNT 1
+MOB 9308 TO 9471 GLIMIT 6 LLIMIT 2
+MOB 9308 TO 9471 GLIMIT 6 LLIMIT 2
+DOOR 9471 south LOCKED
+OBJECT 9305 TO 9472
+PUT 9315 IN 9305 COUNT 1
+OBJECT 9302 TO 9472
+PUT 9332 IN 9302 COUNT 1
+OBJECT 9304 TO 9473
+DOOR 9473 north CLOSED
+MOB 9311 TO 9473 GLIMIT 1 LLIMIT 1
+EQUIP 9316 BODY
+EQUIP 9317 ARMS
+EQUIP 9318 WIELD
+MOB 9312 TO 9473 GLIMIT 1 LLIMIT 1
+EQUIP 9319 WIELD
+EQUIP 9320 HEAD
+MOB 9306 TO 9475 GLIMIT 8 LLIMIT 1
+DOOR 9480 up CLOSED
+MOB 9307 TO 9482 GLIMIT 3 LLIMIT 1
+EQUIP 9326 WIELD
+DOOR 9483 down CLOSED
+MOB 9307 TO 9483 GLIMIT 3 LLIMIT 1
+EQUIP 9326 WIELD
+MOB 9307 TO 9484 GLIMIT 3 LLIMIT 1
+EQUIP 9326 WIELD
+MOB 9306 TO 9487 GLIMIT 8 LLIMIT 1
+DOOR 9488 up CLOSED
+DOOR 9496 down LOCKED
+DOOR 9497 up CLOSED
+OBJECT 9321 TO 9499
+MOB 9313 TO 9499 GLIMIT 1 LLIMIT 1
+EQUIP 9322 LFINGER
+EQUIP 9325 FEET
+EQUIP 9330 HANDS
+OBJECT 9323 TO 9499
+PUT 9324 IN 9323 COUNT 1
+S
+
+#IMPROGS
+I 9319 fight_prog fight_prog_essence_darkness
+I 9498 fight_prog fight_prog_amber_medallion
+I 9499 fight_prog fight_prog_essence_darkness
+END
+#SPECS
+END
+#$

@@ -1,0 +1,1540 @@
+#AREA
+gehirvalley.are~
+Valley of Gehir~
+Taithin~
+35 51
+800 899
+unopened
+temperate
+0
+
+#MOBS
+#800
+Elf elven ranger~
+An elven ranger~
+An elven ranger moves cautiously about the forest.   
+~
+To be added.   
+~
+1000 800 100 elf~
+40 15d10+1920 4d8+18 0 100 slash
+0 0 0 0
+standing either poor
+0 0 medium
+ACT WANDER
+ACT STAY_AREA
+ACT SMARTTRACK
+OFF DODGE
+AFF DETECT_CAMO
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#800
+Below a Forested Plateau~
+You are only a few dozen feet below the forested plateau to your south,   
+but the amount of trees and wildlife is noticably less.  To your north you   
+can see a small forested valley, and the rest of the mountain range beyond   
+it, but in your immediate surroundings, you have only a few rocks, trees,   
+and mountain goats to keep you company.   
+~
+mountains
+D EAST 801 0 0
+~
+The mountainside continues eastward.   
+~
+D SOUTH 252 0 0
+~
+The bulk of Mount Cim is here, though it does appear possible to make your   
+way up to the plateau above.   
+~
+D WEST 0 0 0
+~
+All passage westward is blocked by the steep cliffs of Mount Cim's western   
+peak.   
+~
+D DOWN 803 0 0
+~
+The slopes descend northward, heading down towards a small valley.   
+~
+#801
+Below a Forested Plateau~
+You are only a few dozen feet below the forested plateau above you, but   
+the amount of trees and wildlife is noticably less.  A small cliff blocks   
+passage to the south, though it does not appear to be too difficult to   
+climb.  To your north you can see a small forested valley, and mountain   
+ranges beyond, while to your east and west you can continue along Mount   
+Cim's lower slopes.     
+~
+mountains
+D NORTH 804 0 0
+~
+~
+D EAST 802 0 0
+~
+~
+D WEST 800 0 0
+~
+~
+D UP 265 0 0
+~
+~
+#802
+Below a Forested Plateau~
+To be added.   
+~
+mountains
+D WEST 801 0 0
+~
+~
+D UP 263 0 0
+~
+~
+D DOWN 805 0 0
+~
+~
+#803
+Halfway to a forested plateau~
+To be added.   
+~
+mountains
+D NORTH 807 0 0
+~
+~
+D EAST 804 0 0
+~
+~
+D SOUTH 800 0 0
+~
+~
+#804
+Below a Forested Plateau~
+To be added.   
+~
+mountains
+D NORTH 808 0 0
+~
+~
+D EAST 805 0 0
+~
+~
+D SOUTH 801 0 0
+~
+~
+D WEST 803 0 0
+~
+~
+#805
+Halfway up the mountain.~
+To be added.   
+~
+forest
+D NORTH 809 0 0
+~
+~
+D SOUTH 802 0 0
+~
+~
+D WEST 804 0 0
+~
+~
+#806
+Near the valley floor.~
+To be added.   
+~
+forest
+D NORTH 811 0 0
+~
+~
+D EAST 807 0 0
+~
+~
+#807
+The lower slopes of the mountain.~
+To be added.   
+~
+forest
+D NORTH 812 0 0
+~
+~
+D EAST 808 0 0
+~
+~
+D SOUTH 803 0 0
+~
+~
+D WEST 806 0 0
+~
+~
+#808
+Halfway up the mountain.~
+To be added.   
+~
+forest
+D NORTH 813 0 0
+~
+~
+D EAST 809 0 0
+~
+~
+D WEST 807 0 0
+~
+~
+D UP 804 0 0
+~
+~
+#809
+The lower slopes of the mountain.~
+To be added.   
+~
+forest
+D NORTH 814 0 0
+~
+~
+D EAST 810 0 0
+~
+~
+D SOUTH 805 0 0
+~
+~
+D WEST 808 0 0
+~
+~
+#810
+Near the valley floor.~
+To be added.   
+~
+forest
+D NORTH 815 0 0
+~
+~
+D WEST 809 0 0
+~
+~
+#811
+Southern lakeshore.~
+To be added.   
+~
+forest
+D NORTH 838 0 0
+~
+~
+D EAST 812 0 0
+~
+~
+D SOUTH 806 0 0
+~
+~
+#812
+Southeast of the lake.~
+To be added.   
+~
+forest
+D NORTH 817 0 0
+~
+~
+D EAST 813 0 0
+~
+~
+D SOUTH 807 0 0
+~
+~
+D WEST 811 0 0
+~
+~
+#813
+The lower slopes of the mountainside.~
+To be added.   
+~
+forest
+D NORTH 818 0 0
+~
+~
+D EAST 814 0 0
+~
+~
+D WEST 812 0 0
+~
+~
+D UP 808 0 0
+~
+~
+#814
+Hills before Mt. Cim.~
+To be added.   
+~
+forest
+D NORTH 819 0 0
+~
+~
+D EAST 815 0 0
+~
+~
+D SOUTH 809 0 0
+~
+~
+D WEST 813 0 0
+~
+~
+#815
+The ruins of an ancient tower.~
+To be added.   
+~
+forest
+D NORTH 820 0 0
+~
+~
+D EAST 816 0 0
+~
+~
+D SOUTH 810 0 0
+~
+~
+D WEST 814 0 0
+~
+~
+#816
+Near eastern hills.~
+To be added.   
+~
+forest
+D NORTH 821 0 0
+~
+~
+D WEST 815 0 0
+~
+~
+#817
+On the eastern shore of a small lake.~
+To be added.   
+~
+forest
+D NORTH 822 0 0
+~
+~
+D EAST 818 0 0
+~
+~
+D SOUTH 812 0 0
+~
+~
+D WEST 838 0 0
+~
+~
+#818
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 823 0 0
+~
+~
+D EAST 819 0 0
+~
+~
+D SOUTH 813 0 0
+~
+~
+D WEST 817 0 0
+~
+~
+D UP 896 I 0
+~
+~
+#819
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 824 0 0
+~
+~
+D EAST 820 0 0
+~
+~
+D SOUTH 814 0 0
+~
+~
+D WEST 818 0 0
+~
+~
+#820
+North of some ruins.~
+To be added.   
+~
+forest
+D NORTH 825 0 0
+~
+~
+D EAST 821 0 0
+~
+~
+D SOUTH 815 0 0
+~
+~
+D WEST 819 0 0
+~
+~
+#821
+By the eastern edge.~
+To be added.   
+~
+forest
+D NORTH 826 0 0
+~
+~
+D SOUTH 816 0 0
+~
+~
+D WEST 820 0 0
+~
+~
+#822
+Along the eastern shore of the lake.~
+To be added.   
+~
+forest
+D NORTH 827 0 0
+~
+~
+D EAST 823 0 0
+~
+~
+D SOUTH 817 0 0
+~
+~
+D WEST 841 0 0
+~
+~
+#823
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 828 0 0
+~
+~
+D EAST 824 0 0
+~
+~
+D SOUTH 818 0 0
+~
+~
+D WEST 822 0 0
+~
+~
+#824
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 829 0 0
+~
+~
+D EAST 825 0 0
+~
+~
+D SOUTH 819 0 0
+~
+~
+D WEST 823 0 0
+~
+~
+#825
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 830 0 0
+~
+~
+D EAST 826 0 0
+~
+~
+D SOUTH 820 0 0
+~
+~
+D WEST 824 0 0
+~
+~
+D UP 897 I 0
+~
+~
+#826
+Near the eastern hills.~
+To be added.   
+~
+forest
+D NORTH 831 0 0
+~
+~
+D SOUTH 821 0 0
+~
+~
+D WEST 825 0 0
+~
+~
+#827
+At the lake's edge, by the river's start.~
+To be added.   
+~
+forest
+D NORTH 848 0 0
+~
+~
+D EAST 828 0 0
+~
+~
+D SOUTH 822 0 0
+~
+~
+D WEST 844 0 0
+~
+~
+#828
+Near the river.~
+To be added.   
+~
+forest
+D NORTH 849 0 0
+~
+~
+D EAST 829 0 0
+~
+~
+D SOUTH 823 0 0
+~
+~
+D WEST 827 0 0
+~
+~
+#829
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 833 0 0
+~
+~
+D EAST 830 0 0
+~
+~
+D SOUTH 824 0 0
+~
+~
+D WEST 828 0 0
+~
+~
+#830
+In a forested valley.~
+To be added.   
+~
+forest
+D NORTH 834 0 0
+~
+~
+D EAST 831 0 0
+~
+~
+D SOUTH 825 0 0
+~
+~
+D WEST 829 0 0
+~
+~
+#831
+Near the river.~
+To be added.   
+~
+forest
+D NORTH 855 0 0
+~
+~
+D EAST 832 0 0
+~
+~
+D SOUTH 826 0 0
+~
+~
+D WEST 830 0 0
+~
+~
+#832
+By eastern hills.~
+To be added.   
+~
+forest
+D NORTH 856 0 0
+~
+~
+D WEST 831 0 0
+~
+~
+#833
+On the riverbank.~
+To be added.   
+~
+forest
+D NORTH 852 0 0
+~
+~
+D EAST 834 0 0
+~
+~
+D SOUTH 829 0 0
+~
+~
+D WEST 849 0 0
+~
+~
+#834
+On the riverbank.~
+To be added.   
+~
+forest
+D NORTH 853 0 0
+~
+~
+D EAST 855 0 0
+~
+~
+D SOUTH 830 0 0
+~
+~
+D WEST 833 0 0
+~
+~
+#836
+Southwest side of the lake.~
+To be added.   
+~
+water
+D NORTH 839 0 0
+~
+~
+D EAST 837 0 0
+~
+~
+D DOWN 857 0 0
+~
+~
+#837
+South edge of the lake.~
+To be added.   
+~
+water
+D NORTH 840 0 0
+~
+~
+D EAST 838 0 0
+~
+~
+D SOUTH 899 I 0
+~
+~
+D WEST 836 0 0
+~
+~
+D DOWN 858 0 0
+~
+~
+#838
+Southeast edge of the lake.~
+To be added.   
+~
+water
+D NORTH 841 0 0
+~
+~
+D EAST 817 0 0
+~
+~
+D SOUTH 811 0 0
+~
+~
+D WEST 837 0 0
+~
+~
+D DOWN 859 0 0
+~
+~
+#839
+West side of the lake.~
+To be added.   
+~
+water
+D NORTH 842 0 0
+~
+~
+D EAST 840 0 0
+~
+~
+D SOUTH 836 0 0
+~
+~
+D DOWN 860 0 0
+~
+~
+#840
+Middle of the lake.~
+To be added.   
+~
+water
+D NORTH 843 0 0
+~
+~
+D EAST 841 0 0
+~
+~
+D SOUTH 837 0 0
+~
+~
+D WEST 839 0 0
+~
+~
+D DOWN 861 0 0
+~
+~
+#841
+East side of the lake.~
+To be added.   
+~
+water
+D NORTH 844 0 0
+~
+~
+D EAST 822 0 0
+~
+~
+D SOUTH 838 0 0
+~
+~
+D WEST 840 0 0
+~
+~
+D DOWN 862 0 0
+~
+~
+#842
+West side of the lake.~
+To be added.   
+~
+water
+D NORTH 845 0 0
+~
+~
+D EAST 843 0 0
+~
+~
+D SOUTH 839 0 0
+~
+~
+D DOWN 863 0 0
+~
+~
+#843
+Middle of the lake.~
+To be added.   
+~
+water
+D NORTH 846 0 0
+~
+~
+D EAST 844 0 0
+~
+~
+D SOUTH 840 0 0
+~
+~
+D WEST 842 0 0
+~
+~
+D DOWN 864 0 0
+~
+~
+#844
+East side of te lake.~
+To be added.   
+~
+water
+D NORTH 847 0 0
+~
+~
+D EAST 827 0 0
+~
+~
+D SOUTH 841 0 0
+~
+~
+D WEST 843 0 0
+~
+~
+D DOWN 865 0 0
+~
+~
+#845
+Northwest corner of the lake, by the ancient castle.~
+To be added.   
+~
+water
+D EAST 846 0 0
+~
+~
+D SOUTH 842 0 0
+~
+~
+D DOWN 866 0 0
+~
+~
+#846
+North side of the lake, by the ancient castle.~
+To be added.   
+~
+water
+D EAST 847 0 0
+~
+~
+D SOUTH 843 0 0
+~
+~
+D WEST 845 0 0
+~
+~
+D DOWN 867 0 0
+~
+~
+#847
+Northeast corner of the lake, river's start.~
+To be added.   
+~
+water
+D EAST 848 0 0
+~
+~
+D SOUTH 844 0 0
+~
+~
+D WEST 846 0 0
+~
+~
+#848
+On the river.~
+To be added.   
+~
+water
+D NORTH 850 0 0
+~
+~
+D EAST 849 0 0
+~
+~
+D SOUTH 827 0 0
+~
+~
+D WEST 847 0 0
+~
+~
+#849
+Northward turn in the river.~
+To be added.   
+~
+water
+D NORTH 851 0 0
+~
+~
+D EAST 833 0 0
+~
+~
+D SOUTH 828 0 0
+~
+~
+D WEST 848 0 0
+~
+~
+#850
+Flooded area of the ancient castle.~
+To be added.   
+~
+water
+D EAST 851 0 0
+~
+~
+D SOUTH 848 0 0
+~
+~
+#851
+River flowing east.~
+To be added.   
+~
+water
+D NORTH 871 0 0
+~
+~
+D EAST 852 0 0
+~
+~
+D SOUTH 849 0 0
+~
+~
+D WEST 850 0 0
+~
+~
+#852
+River flowing east.~
+To be added.   
+~
+water
+D NORTH 872 0 0
+~
+~
+D EAST 853 0 0
+~
+~
+D SOUTH 833 0 0
+~
+~
+D WEST 851 0 0
+~
+~
+#853
+River flowing east.~
+To be added.   
+~
+water
+D NORTH 873 0 0
+~
+~
+D EAST 854 0 0
+~
+~
+D SOUTH 834 0 0
+~
+~
+D WEST 852 0 0
+~
+~
+#854
+River turning southward.~
+To be added.   
+~
+water
+D NORTH 874 0 0
+~
+~
+D SOUTH 855 0 0
+~
+~
+D WEST 853 0 0
+~
+~
+#855
+River turning east.~
+To be added.   
+~
+water
+D NORTH 854 0 0
+~
+~
+D EAST 856 0 0
+~
+~
+D SOUTH 831 0 0
+~
+~
+D WEST 834 0 0
+~
+~
+#856
+Riverbed heading east.~
+To be added.   
+~
+water
+D SOUTH 832 0 0
+~
+~
+D WEST 855 0 0
+~
+~
+#857
+Southwest corner of the lake floor.~
+To be added.   
+~
+underwater
+D NORTH 860 0 0
+~
+~
+D EAST 858 0 0
+~
+~
+D UP 836 0 0
+~
+~
+#858
+Southern side of the lake floor.~
+To be added.   
+~
+underwater
+D NORTH 861 0 0
+~
+~
+D EAST 859 0 0
+~
+~
+D WEST 857 0 0
+~
+~
+D UP 837 0 0
+~
+~
+#859
+Southeastern corner of the bottom of the lake.~
+To be added.   
+~
+underwater
+D NORTH 862 0 0
+~
+~
+D WEST 858 0 0
+~
+~
+D UP 838 0 0
+~
+~
+#860
+Western side of the bottom of the lake.~
+To be added.   
+~
+underwater
+D NORTH 863 0 0
+~
+~
+D EAST 861 0 0
+~
+~
+D SOUTH 857 0 0
+~
+~
+D UP 839 0 0
+~
+~
+#861
+Middle of the lake floor.~
+To be added.   
+~
+underwater
+D NORTH 864 0 0
+~
+~
+D EAST 862 0 0
+~
+~
+D SOUTH 858 0 0
+~
+~
+D WEST 860 0 0
+~
+~
+D UP 840 0 0
+~
+~
+#862
+Eastern side of the lake floor.~
+To be added.   
+~
+underwater
+D NORTH 865 0 0
+~
+~
+D SOUTH 859 0 0
+~
+~
+D WEST 861 0 0
+~
+~
+D UP 841 0 0
+~
+~
+#863
+Western side of the bottom of the lake.~
+To be added.   
+~
+underwater
+D NORTH 866 0 0
+~
+~
+D EAST 864 0 0
+~
+~
+D SOUTH 860 0 0
+~
+~
+D UP 842 0 0
+~
+~
+#864
+Middle of the lake floor.~
+To be added.   
+~
+underwater
+D NORTH 867 0 0
+~
+~
+D EAST 865 0 0
+~
+~
+D SOUTH 861 0 0
+~
+~
+D WEST 863 0 0
+~
+~
+D UP 843 0 0
+~
+~
+#865
+Eastern side of the lake floor.~
+To be added.   
+~
+underwater
+D SOUTH 862 0 0
+~
+~
+D WEST 864 0 0
+~
+~
+D UP 844 0 0
+~
+~
+#866
+Northwest side of the lake floor.~
+To be added.   
+~
+underwater
+D EAST 867 0 0
+~
+~
+D SOUTH 863 0 0
+~
+~
+D UP 845 0 0
+~
+~
+#867
+North side of the lake floor.~
+To be added.   
+~
+underwater
+D SOUTH 864 0 0
+~
+~
+D WEST 866 0 0
+~
+~
+D UP 846 0 0
+~
+~
+#871
+By the remains of an ancient castle.~
+To be added.   
+~
+forest
+D NORTH 875 0 0
+~
+~
+D EAST 872 0 0
+~
+~
+D SOUTH 852 0 0
+~
+~
+#872
+Northern bank of the river.~
+To be added.   
+~
+forest
+D NORTH 876 0 0
+~
+~
+D EAST 873 0 0
+~
+~
+D SOUTH 853 0 0
+~
+~
+D WEST 871 0 0
+~
+~
+D UP 898 I 0
+~
+~
+#873
+Northern bank of the river.~
+To be added.   
+~
+forest
+D NORTH 877 0 0
+~
+~
+D EAST 874 0 0
+~
+~
+D SOUTH 854 0 0
+~
+~
+D WEST 872 0 0
+~
+~
+#874
+Northern bank of the river, by the eastern plains.~
+To be added.   
+~
+forest
+D NORTH 878 0 0
+~
+~
+D SOUTH 855 0 0
+~
+~
+D WEST 873 0 0
+~
+~
+#875
+By the ruins of an ancient castle.~
+To be added.   
+~
+forest
+D NORTH 879 0 0
+~
+~
+D EAST 876 0 0
+~
+~
+D SOUTH 871 0 0
+~
+~
+#876
+Northern forest.~
+To be added.   
+~
+forest
+D NORTH 880 0 0
+~
+~
+D EAST 877 0 0
+~
+~
+D SOUTH 872 0 0
+~
+~
+D WEST 875 0 0
+~
+~
+#877
+Northern forest.~
+To be added.   
+~
+forest
+D NORTH 881 0 0
+~
+~
+D EAST 878 0 0
+~
+~
+D SOUTH 873 0 0
+~
+~
+D WEST 875 0 0
+~
+~
+#878
+Eastern edge.~
+To be added.   
+~
+forest
+D NORTH 882 0 0
+~
+~
+D SOUTH 874 0 0
+~
+~
+D WEST 877 0 0
+~
+~
+#879
+By the ancient ruins.~
+To be added.   
+~
+forest
+D NORTH 884 0 0
+~
+~
+D EAST 880 0 0
+~
+~
+D SOUTH 875 0 0
+~
+~
+#880
+Northern forest.~
+To be added.   
+~
+forest
+D NORTH 885 0 0
+~
+~
+D EAST 881 0 0
+~
+~
+D SOUTH 876 0 0
+~
+~
+D WEST 879 0 0
+~
+~
+#881
+Northern forest.~
+To be added.   
+~
+forest
+D NORTH 886 0 0
+~
+~
+D EAST 882 0 0
+~
+~
+D SOUTH 877 0 0
+~
+~
+D WEST 880 0 0
+~
+~
+#882
+Northern forest, eastern edge.~
+To be added.   
+~
+forest
+D NORTH 887 0 0
+~
+~
+D SOUTH 878 0 0
+~
+~
+D WEST 881 0 0
+~
+~
+#883
+Northeast corner of the ruins.~
+To be added.   
+~
+forest
+D EAST 884 0 0
+~
+~
+#884
+Northern forest.~
+To be added.   
+~
+forest
+D EAST 885 0 0
+~
+~
+D SOUTH 879 0 0
+~
+~
+D WEST 883 0 0
+~
+~
+#885
+Southwest patrol, elven camp.~
+To be added.   
+~
+forest
+D NORTH 888 0 0
+~
+~
+D EAST 886 0 0
+~
+~
+D SOUTH 880 0 0
+~
+~
+D WEST 884 0 0
+~
+~
+#886
+Southern patrol, elven camp.~
+To be added.   
+~
+forest
+D NORTH 889 0 0
+~
+~
+D EAST 887 0 0
+~
+~
+D SOUTH 881 0 0
+~
+~
+D WEST 885 0 0
+~
+~
+#887
+Southeast corner, elven camp.~
+To be added.   
+~
+forest
+D NORTH 890 0 0
+~
+~
+D SOUTH 882 0 0
+~
+~
+D WEST 886 0 0
+~
+~
+#888
+Western side of camp.~
+To be added.   
+~
+forest
+D NORTH 891 0 0
+~
+~
+D EAST 889 0 0
+~
+~
+D SOUTH 885 0 0
+~
+~
+#889
+Middle of camp.~
+To be added.   
+~
+forest
+D NORTH 892 0 0
+~
+~
+D EAST 890 0 0
+~
+~
+D SOUTH 886 0 0
+~
+~
+D WEST 888 0 0
+~
+~
+#890
+Eastern side of camp.~
+To be added.   
+~
+forest
+D NORTH 893 0 0
+~
+~
+D SOUTH 887 0 0
+~
+~
+D WEST 889 0 0
+~
+~
+#891
+Northwest side.~
+To be added.   
+~
+forest
+D EAST 892 0 0
+~
+~
+D SOUTH 888 0 0
+~
+~
+#892
+Back of the elven camp.~
+To be added.   
+~
+forest
+D EAST 893 0 0
+~
+~
+D SOUTH 889 0 0
+~
+~
+D WEST 891 0 0
+~
+~
+#893
+Northeast corner of camp.~
+To be added.   
+~
+forest
+D EAST 894 0 0
+~
+~
+D SOUTH 890 0 0
+~
+~
+D WEST 892 0 0
+~
+~
+#894
+Secluded area of the elven camp.~
+To be added.   
+~
+forest
+D WEST 893 0 0
+~
+~
+#896
+Among the eaves of the forest.~
+To be added.   
+~
+forest
+ROOM NOWHERE
+D DOWN 818 0 0
+~
+~
+#897
+Among the eaves of the forest.~
+To be added.   
+~
+forest
+ROOM NOWHERE
+D DOWN 825 0 0
+~
+~
+#898
+Among the eaves of the forest.~
+To be added.   
+~
+forest
+ROOM NOWHERE
+D DOWN 872 0 0
+~
+~
+#899
+Ranger's camp.~
+To be added.   
+~
+forest
+ROOM LAW
+ROOM NOWHERE
+D NORTH 837 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 800 TO 816 GLIMIT 5 LLIMIT 5
+S
+
+#IMPROGS
+END
+#$

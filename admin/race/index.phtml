@@ -1,0 +1,68 @@
+<?
+	$target_level=58;
+	include("../check_trust.inc");
+	include("../header.inc");
+?>
+
+<table class=disp width=95% align=center>
+<tr><td colspan=20 align=center><b>Current Race Information</td></tr>
+
+<tr class=bold>
+	<td>Name<br>Short<br>IMM<br>Racial</td>
+	<td>ACT</td>
+	<td>AFF</td>
+	<td>OFF</td>
+	<td>IMM</td>
+	<td>RES</td>
+	<td>VULN</td>
+	<td>FORM</td>
+	<td>PARTS</td>
+	<td>A/L</td>
+	<td>Size</td>
+	<td>Age - Death</td>
+	<td>Align</td>
+	<td>Max Stats</td>
+</tr>
+
+<?
+	$get_res = mysql_db_query("rift_core","select * from race_table order by pcrace DESC,name asc",$core_conn);
+	if(mysql_num_rows($get_res) < 1)
+		die("Error");
+
+
+	for($count = 0; $row = mysql_fetch_array($get_res); $count++)
+	{
+		echo "<tr valign=top";
+		if($row[pcrace] == 1)
+			echo " bgcolor=FCF7B6";
+		echo "><td><a href='edit.phtml?name=$row[name]'>$row[name]</a><br>$row[short_name]<br>$row[imm_name]<br>$row[race_time]<br>";
+		if($row[pcrace] == 1)
+			echo "<b>".define_lookup("race_status", $row[race_status], "name", $core_conn)."</b>";
+	    echo "</td>";
+		echo "<td>".bit_lookup("act_flags", $row[act_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("aff_flags", $row[aff_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("off_flags", $row[off_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("imm_flags", $row[imm_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("res_flags", $row[res_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("vuln_flags", $row[vuln_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("form_flags", $row[form_flags], $core_conn)."</td>";
+		echo "<td>".bit_lookup("body_parts", $row[body_parts], $core_conn)."</td>";
+		echo "<td>$row[arms]/$row[legs]</td>";
+		echo "<td>".define_lookup("size", $row[size], "name", $core_conn)."</td>";
+		echo "<td>$row[age_mod] - $row[deathtime]</td>";
+		echo "<td>".define_lookup("align_allowed", $row[align], "name", $core_conn)."</td>";
+		echo "<td>$row[max_str]-$row[max_int]-$row[max_wis]-$row[max_dex]-$row[max_con]</td>";
+		echo "</tr>";
+	}
+?>
+
+</table>
+<br>
+<hr>
+
+New Race<br>
+
+	
+<?
+	include("../footer.inc");
+?>

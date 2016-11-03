@@ -1,0 +1,6196 @@
+#AREA
+sidhe.are~
+Sidhe Village~
+Matrika~
+1 51
+4100 4249
+normal
+temperate
+0
+1
+Matrika~
+
+#MOBS
+#4100
+raptor bird~
+A raptor~
+A huge raptor searches for prey.
+~
+A huge ugly bird, built for hunting and killing circles slowly searching
+for prey.  Its small beady head is perched on a short crooked neck, tipped
+with a wickedly sharp hook-tipped beak.  Its body is sleek, streamlining it
+for flight.  Broad wings with slotted tips sweep out as it gains height. 
+Light brown and green feathers cover the top of its body, while the bottom
+is a light grey making it difficult to see as it flies overhead.  
+~
+0 29728 8302 bat~
+25 12d8+944 2d10+7 0 100 claw
+0 0 0 0
+standing male none
+HM 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+ACT OUTDOORS
+AFF INFRARED
+VUL LIGHTNING
+VUL DROWNING
+YELL ~
+#4101
+Sidhe girl~
+a sidhe girl~
+A lithe sidhe girl jumps playfully.
+~
+The young little girl runs around giggling and hopping from foot to foot.
+Her long light green hair is a mess, all tangles and flying around loosely. 
+Deep blue eyes punctuate a small little face with soft features.  Her eyes
+jump around with young enthusiasm, drinking in everything around her.  A
+long toga made from a glossy sheer light green material covers her lithe
+form.  Small delicate wings extrude from her shoulders unhindered.  
+~
+1000 0 25376 sidhe~
+10 5d8+151 2d4+2 0 100 pound
+0 0 0 0
+standing female none
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INTELLIGENT
+ACT DIURNAL
+#4102
+Sidhe girl~
+A sidhe girl~
+A lithe sidhe girl jumps playfully.
+~
+The young little girl runs around giggling and hopping from foot to foot.
+Her long light green hair is a mess, all tangles and flying around loosely. 
+Deep blue eyes punctuate a small little face with soft features.  Her eyes
+jump around with young enthusiasm, drinking in everything around her.  A
+long toga made from a glossy sheer light green material covers her lithe
+form.  Small delicate wings extrude from her shoulders unhindered.  
+~
+1000 0 0 sidhe~
+15 7d8+339 2d6+3 0 100 pound
+0 0 0 0
+standing female none
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INTELLIGENT
+ACT DIURNAL
+#4103
+alchemist woman~
+An alchemist~
+An old woman leans over a large workbench.
+~
+A hunched over old woman dressed in dark clothing, mostly black.  Her
+grey hair is tied tightly into a bun on the top of her head pulling at her
+scalp.  She has sharp facial features, with dark piercing grey eyes and a
+hawk like nose.  Her small thin lips are constantly drawn in a sneer.  She
+is surrounded by a bulky black robe that hides a large hump to her back. 
+She glances at you briefly as you enter then returns to bend over what she
+is working on at the table.  
+~
+0 8307 8307 human~
+58 29d8+6267 5d10+45 0 100 pound
+0 0 0 0
+standing female moderate
+B 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT MAGE
+ACT INTELLIGENT
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT east
+C 'acid stream'
+#4104
+Grackle Bird~
+A grackle~
+A small bird flutters around the air.
+~
+A dainty little creature swiftly flutters around.  The small body has
+narrow curved wings that flap up and down at an amazingly fast speed.  Its
+sleek body is covered in brightly colored feathers that have a wet texture. 
+Short tail feathers with a deep fork allow this creature great
+maneuverability in the air.  
+~
+0 0 0 bat~
+13 6d8+254 2d5+3 0 100 none
+0 0 0 0
+standing male none
+0 U small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+ACT OUTDOORS
+AFF INFRARED
+AFF HASTE
+#4105
+sidhe boy~
+A sidhe boy~
+A young sidhe boy smiles while playing.
+~
+A young sidhe that appears to be on the verge of becoming a man hovers
+quietly near by.  His light blonde hair is cropped short, straight across
+his temples.  Small pointed ears poke out from under a little green cap. 
+Broad lightly colored wings sweep out from his back.  A long toga made from
+a glossy light green material covers his small form.  
+~
+1000 0 0 sidhe~
+7 3d8+74 1d8+1 0 100 pound
+0 0 0 0
+standing male poor
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INTELLIGENT
+ACT DIURNAL
+#4106
+Sidhe boy~
+A sidhe boy~
+A young sidhe boy watches all that surrounds him.
+~
+A young sidhe that appears to be on the verge of becoming a man hovers
+quietly near by.  His light blonde hair is cropped short, straight across
+his temples.  Small pointed ears poke out from under a little green cap. 
+Broad lightly colored wings sweep out from his back.  A long toga made from
+a glossy light green material covers his small form.  
+~
+1000 0 0 sidhe~
+12 6d8+217 1d10+3 0 100 pound
+0 0 0 0
+standing male poor
+0 P medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT INTELLIGENT
+ACT DIURNAL
+#4107
+sidhe wash girl~
+A sidhe girl~
+A young sidhe girl crouches by the pool.
+~
+A young sidhe girl kneels near a pond carefully washing some clothing. 
+Her long light green hair is tied into a long ponytail, loosely hanging
+between her shoulders.  Playful azure eyes punctuate a small little face
+with soft features.  A long toga made from a glossy sheer light green
+material covers her lithe form.  Small delicate wings extrude from her
+shoulders unhindered.  She pays little attention to her surroundings as she
+concentrates on her duties.  
+~
+1000 0 0 sidhe~
+5 2d8+38 1d6+1 0 100 pound
+0 0 0 0
+standing female none
+0 P medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT INTELLIGENT
+ACT DIURNAL
+YELL Mommy, Mommy help!~
+#4108
+sidhe man~
+A sidhe man~
+A lithe sidhe man hovers nearby.
+~
+A tall slender fellow with a stiff posture flies slowly, hovering
+occasionally.  His long blonde hair flows freely down his back to his
+shoulders.  Two little cobalt colored eyes accent a long slim face with a
+sharp nose.  
+~
+1000 0 0 sidhe~
+35 17d8+1867 4d7+14 0 100 pound
+0 0 0 0
+standing male moderate
+0 P medium
+ACT NPC
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT DIURNAL
+#4109
+sidhe woman~
+A sidhe woman~
+A short stocky sidhe woman stands quietly.
+~
+A short stocky creature hovers silently with effortless flaps from her
+large beautiful wings.  Her feathers are all sorts of colors, the most
+prominent being white.  Her face is small and dainty with the exception of a
+long sharply pointed nose with a small hook on the end.  A thin circlet of
+wood positioned firmly on the top of her head keeps her long hair from her
+eyes.  
+~
+1000 0 0 sidhe~
+30 15d8+1364 4d6+8 0 100 pound
+0 0 0 0
+standing female moderate
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INTELLIGENT
+ACT DIURNAL
+#4110
+sidhe mage man~
+A sidhe mage~
+A tall sidhe covered in a bulky green cloak.
+~
+A tall, thin man covered in a dark green cloak hovers quietly, oblivious
+to all that surrounds him.  Short glimpses of light blonde hair and striking
+cobalt eyes can be seen from the depths of a large bulky hood.  The hood is
+an extension to the long spacious cloak covering him from head to foot. 
+Slight openings in the back of the cloak run down from the shoulders to mid
+leg.  Large white wings protrude through the openings.  
+~
+1000 0 0 sidhe~
+40 20d8+2464 4d8+18 0 100 pound
+0 0 0 0
+standing male moderate
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT MAGE
+ACT INTELLIGENT
+IMM SUMMON
+C 'magic missile'
+C 'icelance'
+#4111
+sidhe mage woman~
+A sidhe mage~
+A sidhe mage floats softly in the air.
+~
+She hovers a few feet off the ground controlling her movement with
+effortless flaps from her grand wings, which she keeps close to her body so
+as not to interfere with anyone else.  A black leather thong ties her long
+grey hair back from her face.  A thick braid runs halfway down her back. 
+Her eyes are of a bright blue and sparkle as they constantly dart around
+looking for something.  
+~
+1000 0 0 sidhe~
+45 22d8+3177 8d4+22 0 100 pound
+0 0 0 0
+standing female moderate
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT MAGE
+ACT INTELLIGENT
+IMM SUMMON
+C 'magic missile'
+C 'scorch'
+#4112
+Eodirao bartender man human~
+Eodirao the bartender~
+A man stands behind the bar wiping the counter with a dirty rag.
+~
+A short, plump man of extreme girth smiles at all who enter his
+establishment.  Flowing white hair covers his head and freely falls to his
+shoulders.  He obviously has a bit of a weight problem as can be seen with
+the bits of flesh bulging out between his clothing.  A thick leather apron
+almost entirely covers his front from neck to foot.  A large cudgel hangs
+loosely in the ropes tying the apron around him.  
+~
+500 0 0 human~
+37 18d8+2093 3d10+15 0 100 pound
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+#4113
+pephaiya server waitress woman elf~
+Pephaiya the server~
+A tall thin elf rushes between the tables and bar.
+~
+A tall thin creature of great beauty and grace constantly moves around
+the chamber.  Her long blonde hair falls freely to her shoulders, whipping
+around her head as she rushes from tables to the bar and back.  She barely
+slows down while carrying large steins full of ale and small platters full
+of steaming meat.  
+~
+1000 0 0 elf~
+28 14d8+1187 2d12+8 0 100 pound
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+AFF SNEAK
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT west
+#4114
+All'Tarrael all tarrael man ranger human~
+All'Tarrael~
+A large man sits with a hide laid out over his legs.  
+~
+A large man sits near a small fire pit with a large hide laid out over
+his legs.  He nonchalantly looks up briefly, snorts and returns to his
+sewing with the hide before him.  His dark black hair is cut shoulder length
+and combed back over his forehead, a small piece of leather tied around his
+temple holds it in place.  His shirt has the sleeves removed, exposing his
+strong forearms.  Muscles ripple at the minute detailed work he is
+performing.  A row of three parallel scars marks his left forearm.  
+~
+0 0 0 human~
+48 24d8+3683 6d6+26 0 100 pound
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT INTELLIGENT
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+IMM SUMMON
+IMM CHARM
+TEACHES tracking~
+#4115
+rellah baker woman sidhe~
+Rellah the baker~
+A plump woman flies around with a tray of bread.
+~
+A large woman hums absently as she scurries around her shop.  A plump
+woman for a sidhe, but by human standards she is still quite thin.  Her hair
+is twirled upon itself into a large bun that sits on the top of her head. 
+The bun is held in place by a small wooden comb with simple engravings.  She
+wears a loose dark green apron smudged with spots of flour.  A light pitched
+hum emanates from her enlightening the entire room with her cheeriness.  
+~
+1000 0 0 sidhe~
+51 25d8+4274 5d8+32 0 100 pound
+0 0 0 0
+standing female moderate
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 14 EXIT north
+#4116
+chaskissa matron light woman sidhe~
+Chaskissa~
+A tall woman radiating confidence and power sits quietly at a desk.
+~
+A tall imposing woman sits quietly working at a small desk.  Lustrous
+billowing silver hair is kept in tight ringlets down her back with white
+ribbons woven throughout.  Her sharp features give her an exotic beauty that
+does not quite reach her joyful eyes.  Full sweeping curly silver lashes
+surmount tilted almond shaped green eyes.  Her tiny nose runs down to a
+sharp upturned tip.  Her tiny pointed ears each have three small rings
+through them, each a different color of gold; one white, one yellow and one
+red in the middle.  She is elegant and radiates confidence and power.  
+~
+1000 0 0 sidhe~
+55 27d8+5267 10d4+36 0 100 pound
+0 0 0 0
+standing female rich
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT TRAIN
+ACT PRACTICE
+ACT MAGE
+ACT INTELLIGENT
+ACT DIURNAL
+AFF DETECT_INVIS
+AFF SANCTUARY
+AFF PROTECTION
+AFF PASS_DOOR
+IMM SUMMON
+IMM CHARM
+C 'smother'
+C 'asphyxiate'
+#4117
+councilor sidhe man~
+A councilor~
+A young man listens closely to everything around him.
+~
+A young sidhe covered in clothing that appears to be expensive floats
+here.  Upon closer inspection, certain subtleties can be seen to indicate
+that his clothing is made from cheap functional material and masked to
+appear expensive.  He says little and appears to listen closely to what is
+spoken around him.  Occasionally he will attempt to prove his value by
+adamantly agreeing with another.  
+~
+1000 0 0 sidhe~
+48 24d8+3683 6d6+26 0 100 pound
+0 0 0 0
+standing male moderate
+0 P medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT INTELLIGENT
+AFF DETECT_INVIS
+AFF PROTECTION
+IMM SUMMON
+#4118
+Ardaryk man celestial titan~
+Ardaryk~
+A large celestial warrior is standing here.
+~
+A large muscular warrior stands here, smiling at those that pass near
+him.  His long golden hair falls freely and is kept from his eyes by a small
+piece of leather tied around his temple.  He has colorful markings on his
+face.  His left cheek reveals a large red griffin in flight.  His right
+bears a very light yellow symbol of wavy lines.  It has faded closely to the
+color of his skin making it difficult to discern.  He is constantly by his
+sister's side, watching her with a protective eye.  
+~
+1000 4119 0 celestial~
+47 23d8+3506 6d6+25 0 100 pound
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT FAST_TRACK
+ACT LAW
+OFF DISARM
+OFF PARRY
+OFF RESCUE
+OFF ASSIST_ALIGN
+CLASS warrior Gladiator none 
+#4119
+khalirda celestial titan woman~
+Khalirda~
+A female celestial warrior is standing here.
+~
+A large muscular warrior stands here, smiling at those that pass near
+her.  A small thin circlet of bone encircles her forehead gathering her long
+golden hair.  Her hair is braided with strands of silver and gold threads
+and falls down her back to below her shoulder blades.  Her face is large but
+it fits her large body perfectly.  Her eyes are a cold gray and watch
+everyone with a hint of suspicion.  
+~
+1000 4118 0 celestial~
+45 22d8+3177 8d4+22 0 100 pound
+0 0 0 0
+standing female moderate
+0 0 large
+ACT NPC
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT LAW
+OFF BASH
+OFF ASSIST_ALIGN
+CLASS warrior Tactician none 
+#4120
+treant tree~
+A treant~
+A short thick tree with two large branches planted solidly into the ground.
+~
+~
+1000 0 0 grimalkin~
+34 17d8+1760 4d7+13 0 100 beating
+0 0 0 0
+standing male none
+DE 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT UPDATE_ALWAYS
+ACT LAW
+OFF CRUSH
+OFF ASSIST_ALIGN
+AFF DETECT_INVIS
+IMM CHARM
+IMM BASH
+IMM POISON
+IMM DISEASE
+IMM SLEEP
+VUL ACID
+#4121
+raptor bird~
+A huge raptor~
+A large bird sweeps through the skies seeking out prey.
+~
+A huge ugly bird, built for hunting and killing circles slowly searching
+for prey.  Its small beady head is perched on a short crooked neck, tipped
+with a wickedly sharp hook-tipped beak.  Its body is sleek, streamlining it
+for flight.  Broad wings with slotted tips sweep out as it gains height. 
+Light brown and green feathers cover the top of its body, while the bottom
+is a light grey making it difficult to see as it flies overhead.  Gigantic
+talons reach out from its clawed feet.  
+~
+0 0 0 wyvern~
+30 15d8+1364 4d6+8 0 100 claw
+0 0 0 0
+standing male none
+0 PU medium
+ACT NPC
+ACT STAY_AREA
+ACT SMARTTRACK
+ACT FAST_TRACK
+ACT NOALIGN
+ACT OUTDOORS
+AFF INFRARED
+#4122
+cougar cat beast~
+A cougar~
+A large cougar snarls while searching for prey.
+~
+Prowling high among the rocks, a large creature covered with deep reddish
+tawny fur hiding great muscle underneath.  The chest, throat, belly, insides
+of legs, and small patches on either side of the nose are white.  The fur
+darkens towards his middle and the backs of his ears.  Dark stripes on his
+muzzle match similar patterns on the tip of his tail.  The sides of his
+muzzle are open in a vicious grin, wrinkling his nose and exposing his large
+canines.  
+~
+0 0 0 cat~
+20 10d8+604 2d6+6 0 100 claw
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT SMARTTRACK
+ACT NOALIGN
+ACT OUTDOORS
+AFF INFRARED
+AFF CAMOUFLAGE
+AFF RAGE
+AFF SNEAK
+#4123
+chaskissa matron light sidhe woman~
+Chaskissa~
+A beautiful woman sleeps peacefully.
+~
+A beautiful woman sleeps peacefully in a large bed.  Lustrous billowing
+silver hair falls freely around her small sharp face.  Her sharp features
+give her an exotic beauty that does not quite reach her joyful eyes.  Full
+sweeping curly silver lashes surmount tilted almond shaped eyes.  Her tiny
+nose runs down to a sharp upturned tip.  She is elegant and radiates
+confidence and power.  
+~
+1000 0 0 sidhe~
+55 27d8+5267 10d4+36 0 100 pound
+0 0 0 0
+sleeping female none
+0 P medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+ACT INTELLIGENT
+ACT NOCTURNAL
+AFF DETECT_INVIS
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+C 'smother'
+C 'asphyxiate'
+#4124
+councilor sidhe man~
+A councilor~
+A tired looking man hovers here.
+~
+An older sidhe man, he appears to be familiar with the long meetings of
+the council.  Already bored with the constant arguing he has begun to tune
+out the conversations around him.  Nodding slightly once in a while, his
+eyes wander looking for an escape to present itself.  His clothing is
+expensive indicating his high ranking in the council.  
+~
+1000 0 0 sidhe~
+50 25d8+4066 5d8+30 0 100 pound
+0 0 0 0
+standing male affluent
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT MAGE
+ACT INTELLIGENT
+AFF DETECT_INVIS
+AFF PROTECTION
+IMM SUMMON
+CLASS sorcerer Heat Ice
+NOTES trying to make an ice sorcerer not sure I set the class right.
+~
+A 'icy carapace' (null)
+C 'icelance'
+C 'icelance'
+C 'ice blast'
+#4125
+sidhe girl~
+A sidhe girl~
+A young sidhe girl sleeps peacefully.
+~
+Her long light green hair is allowed to fall freely on the soft pillow
+cradling her little head as she sleeps peacefully.  A small little face with
+soft features is punctuated with a sharp nose.  Her lithe form is covered
+with a long toga made from a glossy sheer light green material.  Small
+delicate wings surround her upper body in a big hug.  
+~
+1000 0 0 sidhe~
+13 6d8+254 2d5+3 0 100 pound
+0 0 0 0
+sleeping female none
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT NOCTURNAL
+#4126
+sidhe boy~
+A sidhe boy~
+A young sidhe boy is sleeping peacefully.
+~
+A young sidhe sleeps peacefully on a small little hammock lowered from
+the ceiling.  His light blonde hair is cropped short, straight across his
+temples.  Small pointed ears poke out from under a little green cap.  Broad
+lightly colored wings sweep out from his back.  A long toga made from a
+glossy light green material covers his small form.  Quiet mumbles emanate
+from his tiny torso as he sleeps peacefully.  
+~
+1000 0 0 sidhe~
+10 5d8+151 2d4+2 0 100 pound
+0 0 0 0
+sleeping male none
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT NOCTURNAL
+#4127
+sidhe man~
+A sidhe man~
+A slim man snores softly while sleeping.
+~
+A tall slender man snores softly while he sleeps.  His long blonde hair
+flows freely over his pillow covering it completely.  He has a long slim
+face that is punctuated with a sharp nose.  
+~
+1000 0 0 sidhe~
+34 17d8+1760 4d7+13 0 100 pound
+0 0 0 0
+sleeping male none
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT NOCTURNAL
+#4128
+sidhe woman~
+A sidhe woman~
+A young woman sleeps quietly.
+~
+A small woman quietly sleeps.  Her face is small and dainty with the
+exception of a long sharply pointed nose with a small hook on the end.  A
+thin circlet of wood positioned firmly on the top of her head keeps her long
+hair firmly in place.  
+~
+1000 0 0 sidhe~
+29 14d8+1273 2d12+8 0 100 pound
+0 0 0 0
+sleeping female none
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT NOCTURNAL
+#4129
+sidhe healer woman~
+The healer~
+A healer is standing here smiling.
+~
+A tall imposing figure stands stiffly eyeing all that enter the chamber. 
+Her face has a contradictory softness to her posture.  Her dusty brown hair
+is cropped close to her scalp with a small patch covering the top and the
+sides shaved.  Although her demeanor is extremely rigid, her face depicts an
+internal kindness and caring.  She smiles briefly and nods at all who pass
+near.  
+~
+1000 0 0 sidhe~
+55 27d8+5267 10d4+36 0 100 pound
+0 0 0 0
+standing female none
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT CLERIC
+ACT INTELLIGENT
+ACT HEALER
+AFF SANCTUARY
+AFF PROTECTION
+IMM SUMMON
+IMM CHARM
+IMM SLEEP
+A 'resist heat' (null)
+A 'resist acid' (null)
+A 'resist cold' (null)
+A 'resist lightning' (null)
+A 'resist negative' (null)
+A 'resist mental' (null)
+C 'heal'
+C 'rejuvenate'
+#4130
+woman human server waitress~
+A waitress~
+A thin beautiful human dances from table to table.
+~
+A tall well-muscled woman slouches near the long bar.  Long flowing brown
+hair falls loosely around her head.  Small wisps of her bangs keep getting
+into her eyes, and she swiftly tugs them around her ears.  She stands with
+one elbow propped on the bar constantly looking around the room for anyone
+that has an empty mug.  As soon as a mug is near emptiness, she is there
+swiftly with a refill.  
+~
+0 0 0 human~
+20 10d8+604 2d6+6 0 100 pound
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+SHOPKEEPER OPEN 16 CLOSE 16 EXIT west
+#4131
+councilor man sidhe~
+A loud councilor~
+An expensively dressed councilor is speaking loudly.
+~
+A councilor hovers around in sharp quick movements, bouncing back and
+forth.  Is face is a light shade of red and small spattering of spittle
+flies from his quickly moving mouth.  He constantly ignores others and
+raises his voice above theirs to ensure that all that are present will hear
+him.  
+~
+1000 0 0 sidhe~
+50 25d8+4066 5d8+30 0 100 pound
+0 0 0 0
+standing male affluent
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT MAGE
+ACT INTELLIGENT
+AFF DETECT_INVIS
+AFF PROTECTION
+IMM SUMMON
+IMM CHARM
+#4132
+old sidhe councilor~
+An old councilor~
+An old councilor quietly hovers here.
+~
+An old man dressed in very expensive clothing of the finest silks hovers
+here.  His hair has dulled to a soft white matching the fine feathers on his
+wings.  He barely seems to work at all to maintain the same control of his
+flight as the others.  He shows little intrest in the conversation that
+surrounds him, speaking swiftly and decisively as the others look towards
+him for advice.  
+~
+1000 0 0 sidhe~
+51 25d8+4274 5d8+32 0 100 pound
+0 0 0 0
+standing male affluent
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT MAGE
+ACT INTELLIGENT
+AFF DETECT_INVIS
+AFF PROTECTION
+IMM SUMMON
+IMM CHARM
+A 'cloak of mist' (null)
+C 'rust'
+C 'prismatic spray'
+C 'prismatic spray'
+#4133
+sidhe watch man~
+A sidhe man~
+A short man hovers slightly above the platform.
+~
+A short, thin man covered in dark green clothing hovers slightly above
+the platform.  His attention is dedicated solely to the vast expanse below. 
+His light blonde hair is cut close to his scalp.  Striking cobalt eyes
+constantly scan the valley below.  Slight openings in the back of the cloak
+run down from the shoulders to mid leg.  Large white wings protrude through
+the openings.  
+~
+1000 0 0 sidhe~
+35 17d8+1867 4d7+14 0 100 pound
+0 0 0 0
+standing male moderate
+0 P medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+#4134
+celestial titan man Ardaryk~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 celestial~
+45 22d8+3177 8d4+22 0 100 pound
+0 0 0 0
+sleeping male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT NOCTURNAL
+ACT LAW
+#0
+
+
+
+#OBJS
+#4100
+clear pool water fountain~
+a clear pool of water~
+A clear pool of water fed from a crevice in the cliffside.~
+fountain
+water~
+99999 99999 'water' 0 0
+1 10000 1 P
+ITEM BLESS
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+NOTES ~
+
+#4101
+bed frame~
+a bed~
+A simple wooden frame with a thick mattress.~
+furniture
+hardwood~
+1 1000 HL 20 20
+1 10000 0 P
+LIMIT 0
+VERB none
+TIMER 0
+E bed~
+A simple wooden frame made of a deep cherry hardwood and polished to a
+healthy glow.  The head of the bed is curved to fit snugly against the
+eastern wall of the room.  The frame has four posts carved into great paws
+similar in shape to a great lion.  Thin elegant sheets with embroidery cover
+a thick mattress filled with feathers.  
+~
+
+#4102
+desk table~
+a circular desk.~
+A large round desk placed near the curving wall.~
+furniture
+hardwood~
+0 0 0 0 0
+1 -31072 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E desk~
+A large circular desk stands adjacent to the curved walls of this
+chamber.  The desk is made from a deep cherry hardwood, engraved with crests
+and highly polished.  
+~
+
+#4103
+chair~
+a grand straight backed chair.~
+A comfortable looking straight backed chair.~
+furniture
+hardwood~
+1 350 BEH 0 0
+1 37 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E lion chair~
+A high backed chair made from a deep cherry hardwood.  The chair is
+cushioned and covered with a soft velvety gold cover on the seat and back. 
+The legs are carved into great lion paws.  
+~
+
+#4104
+fountain basin water~
+a large wooden basin.~
+A large wooden basin, nearly full of a clear liquid.~
+fountain
+hardwood~
+99999 99999 'water' 0 0
+1 10000 0 P
+ITEM GLOW
+ITEM MAGIC
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#4105
+vine bracer~
+a woven vine bracer~
+A thick piece of a dark green vine lies here.~
+armor
+hemp~
+2 2 2 4 0
+30 1 225 P
+WEAR TAKE
+WEAR WRIST
+APPLY MANA 15
+APPLY HITROLL 2
+APPLY HP 20
+LIMIT 26
+TIMER 0
+E vine bracer~
+A single vine has been warped and shaped to fit over someone's forearms. 
+A thick vine wraps around itself forms a complete circle on either end. 
+Another thick vine snakes around the forearm to join the two ends.  
+~
+
+#4106
+green toga~
+a sheer green toga~
+A sheer light green material, crumpled in a pile.~
+armor
+cloth~
+3 3 3 3 0
+5 3 50 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+TIMER 0
+E green toga~
+Glossy light green material tailored into a loose fitting toga.  It wraps
+around the full torso, loosely hanging from a single shoulder.  A thin
+string holds the material up from the opposite shoulder.  It grants the
+wearer much freedom with their legs.  
+~
+
+#4107
+green cap hat~
+a light green cap~
+A small bundle of green cloth lies here.~
+armor
+cloth~
+2 3 2 2 0
+10 1 75 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+TIMER 0
+E green cap~
+Light green felt cut into a tight fitting skullcap.  
+~
+
+#4108
+wash basket vine~
+a light basket~
+Roots and vines are woven into a small basket.~
+container
+hemp~
+10 0 0 10 1
+1 7 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E vine basket~
+Dark brown roots and green vines are woven together to make a light
+weight basket.  
+~
+
+#4109
+circlet wood~
+a thin circlet of wood ~
+A thin piece of wood carved into a large circle lies here.~
+armor
+softwood~
+3 5 3 4 0
+32 3 530 P
+WEAR TAKE
+WEAR HEAD
+APPLY MANA 15
+LIMIT 17
+TIMER 0
+E circlet wood~
+A thick piece of wood carved into an inch wide circlet.  The back of the
+circlet is broken apart.  Three small vertical holes on each end near the
+break is threaded with a small piece of leather rope, tying the two ends
+together.  
+~
+
+#4110
+green cloak~
+a dark green cloak~
+A bulky pile of dark green cloth lies here.~
+armor
+cloth~
+6 5 6 8 0
+40 12 750 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+APPLY MANA 10
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 10
+TIMER 0
+E green cloak~
+A heavy cloak made from a tough dark green cloth.  It fits over the
+shoulders loosely hanging down to mid calf.  Folds of cloth barely reach
+over the arms, granting great freedom.  
+~
+
+#4111
+black leather thong~
+a black leather thong~
+A small strip of hardened leather lies here.~
+armor
+hard leather~
+0 0 0 10 0
+45 2 1100 P
+WEAR TAKE
+WEAR HEAD
+ITEM MAGIC
+APPLY MANA 50
+LIMIT 5
+TIMER 0
+E black leather thong~
+A thick band of hard black leather loosely tied into a circle.  
+~
+
+#4112
+leather apron~
+a leather apron~
+A thick piece of leather hide, crumpled into a large pile.~
+armor
+hard leather~
+7 3 7 0 0
+1 15 676 P
+WEAR TAKE
+WEAR BODY
+LIMIT 15
+TIMER 0
+E leather apron~
+A dark brown leather hide, tanned and cut to cover the front of person. 
+A short string loops at the top offering a small hole to insert a head and
+dangle the hide from a neck.  Two long strings attached to the wide middle
+sections.  
+~
+
+#4113
+wood cudgel mace~
+a wooden cudgel~
+A large stick made from a deep cherry hardwood lies here.~
+weapon
+hardwood~
+mace 5 6 pound 0
+30 17 640 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+E wood cudgel~
+A large piece of a deep cherry hardwood smoothed and polished to a high
+finish.  A thin layer of hardened steel encircles the wide end.  
+~
+
+#4114
+circlet bone~
+a circlet of bone~
+A large circular piece of bone broken on one end lies here.~
+armor
+bone~
+5 5 5 8 0
+40 8 1200 P
+WEAR TAKE
+WEAR HEAD
+ITEM MAGIC
+APPLY STR 1
+APPLY DEX 1
+APPLY DAMROLL 2
+LIMIT 10
+TIMER 0
+E bone circlet~
+A thick piece of bone carved into an inch wide circlet.  The back of the
+circlet is broken apart.  A small piece of leather rope threads through
+three small vertical holes on each end near the break, tying the two ends
+together.  Small carvings of griffons in different poses of flight and
+combat cover the outside.  
+~
+
+#4115
+yellow potion flight fly~
+a bright yellow potion~
+A small glass tube filled with a bright yellow liquid lies here.~
+potion
+glass~
+35 'fly' 'reserved' 'reserved' 'reserved'
+20 2 3000 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4116
+council robe~
+a flowing white robe~
+A large bulky white robe, trimmed in strange letters lies here.~
+armor
+cloth~
+6 6 6 8 0
+50 10 1500 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM MAGIC
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY SAVES -4
+APPLY MANA 30
+LIMIT 5
+TIMER 0
+E council robe~
+A large bulky white robe, trimmed with thin bands of light green lace. 
+Embroidered within the lace are arcane symbols and words.  Surrounding the
+collar is a supple velvet material that is very soft to the touch.  
+~
+
+#4117
+white ivory breastplate plate~
+a brilliant white breastplate~
+A large ivory breastplate is on the ground.~
+armor
+ivory~
+8 8 8 8 0
+45 45 2000 P
+WEAR TAKE
+WEAR BODY
+ITEM MAGIC
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY STR 2
+APPLY HITROLL -5
+APPLY HP 30
+LIMIT 1
+TIMER 0
+E white ivory plate~
+A highly polished ivory breastplate engraved with a golden orb surrounded
+by filigreed red and orange flames.  Thin white spears cross behind the orb.
+Thick strips of leather stained white end in large steel clasps at the back.
+Large padded openings allow comfortable movement of the arms.  
+~
+
+#4118
+ivory spear~
+an ivory-tipped wooden spear~
+An ivory headed spear lies here.~
+weapon
+ivory~
+spear 10 5 thrust DF
+48 13 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+APPLY DAMROLL 2
+LIMIT 1
+TIMER 0
+E ivory spear~
+A single piece of ironwood meticulously crafted to form the shaft of this
+powerful weapon.  The sturdy shaft ends with an viscously designed barbed
+tip of ivory.  
+~
+
+#4119
+steel longsword sword~
+a steel longsword~
+A longsword lies here undisturbed.~
+weapon
+steel~
+sword 9 5 slash 0
+42 23 950 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 10
+TIMER 0
+E steel longsword sword~
+A thick steel cross guard separates the large hilt of about two hands
+long from the eleven hands long blade.  The blade is perfectly balanced by
+holding the hilt near the cross guard.  The long blade sharpened on both
+edges ends in a fine point.  
+~
+
+#4120
+silver leggings~
+a pair of brilliant silver leggings~
+A pair of silvery leggings lies here.~
+armor
+silver~
+5 5 5 5 0
+40 12 1250 P
+WEAR TAKE
+WEAR LEGS
+APPLY DAMROLL 2
+LIMIT 3
+TIMER 0
+E silver leggings~
+Small pieces of silver overlap each other in an intricate crossing
+pattern covering a soft white leather backing.  Long thin strips of the same
+white leather sewn into the backing and hang loosely.  Small grooves worn
+into the silver plating fit the straps perfectly.  
+~
+
+#4121
+silver hammer~
+a large hammer inlayed with silver~
+A large hammer inlayed with silver lies here.~
+weapon
+silver~
+mace 9 5 smash 0
+40 25 1300 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 3
+APPLY HP 20
+LIMIT 5
+TIMER 0
+E silver hammer~
+A long metal handle curves slightly backwards at one end and juts into a
+large metal headpiece on the other.  The headpiece, made from a heavy metal,
+tapers into two blunt sections on either side.  Large pieces of silver are
+inlaid into the surface of the head.  
+~
+
+#4122
+dagger thorn~
+a long sharp pointed thorn~
+A slim thorn with a very sharp point lies here.~
+weapon
+hardwood~
+dagger 6 6 scratch 0
+30 3 250 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 28
+TIMER 0
+
+#4123
+bread~
+a small piece of bread~
+A small piece of fresh bread lies here.~
+food
+bread~
+100 3 0 0 0
+1 1 25 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4124
+bread loaf~
+a loaf of bread~
+A loaf of fresh bread lies here.~
+food
+bread~
+100 7 0 0 0
+1 2 35 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4125
+meat platter~
+a small platter of meat~
+A small platter heaped with sliced meat lies here.~
+food
+flesh~
+2 10 0 0 0
+1 3 10 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4126
+mug ale~
+a mug of ale~
+A heavy mug filled with dark ale is on the floor.~
+drink
+glass~
+2 2 'ale' 0 0
+1 1 15 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4127
+wine glass~
+a wine glass~
+A long stemmed crystal goblet filled with wine lies here.~
+drink
+crystal~
+1 1 'rose wine' 0 0
+1 1 47 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4128
+potion glass passdoor pass~
+a glass tube~
+A long glass tube filled with a clear liquid lies here.~
+potion
+unknown~
+30 'pass door' 'reserved' 'reserved' 'reserved'
+15 1 3500 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#4129
+potion red cure blind~
+a dark red potion~
+A small vial filled with a dark red liquid lies here.~
+potion
+unknown~
+25 'cure blindness' 'cure critical' 'reserved' 'reserved'
+18 1 5500 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4130
+staff ivory light~
+an ivory staff~
+A long staff made from a single piece of ivory lies here.~
+staff
+ivory~
+50 5 3 'incandescense' 0
+50 7 2700 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+LIMIT 3
+TIMER 0
+E staff ivory power~
+An exquisite staff made from a single piece of ivory measuring seven feet
+in length, its shaft straight and smooth.  The bottom of the staff is capped
+with a section of gold.  A glistening soft blue gem tops the other end of
+the staff.  
+~
+
+#4131
+staff healing ash white~
+a thick white ash staff~
+A long white ash staff, inlaid with silver runes lies here.~
+staff
+hardwood~
+51 5 5 'cleanse' 0
+50 12 3400 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+LIMIT 1
+TIMER 0
+E staff healing ash white~
+All the bark has been stripped from a long flawless piece of white ash. 
+The wood is darkened and polished by the application of a special berry
+mixture.  Two grips, towards the center of the staff are made from soft
+buckskin trimmed with white rabbit fur.  
+~
+
+#4132
+vine vines thick pattern~
+some vines~
+Vines are here, ready for the climbing!~
+trash
+plant~
+0 0 0 0 0
+1 0 0 P
+ITEM NOSHOW
+ITEM NOPURGE
+ITEM NOSAC
+LIMIT 0
+VERB climb
+TIMER 0
+E vines~
+Large thick vines envelope each other and merge with the tree, forming a
+surface that would be easy to climb.
+~
+E vine~
+Large thick vines envelope each other and merge with the tree, forming a
+surface that would be easy to climb.
+~
+E thick~
+Large thick vines envelope each other and merge with the tree, forming a
+surface that would be easy to climb.
+~
+E pattern~
+Large thick vines envelope each other and merge with the tree, forming a
+surface that would be easy to climb.
+~
+
+#0
+
+
+
+#ROOMS
+#4100
+Above the Forest Floor~
+Broad, flat limbs extend themselves from this massive tree in a rather
+neat spiral, virtually creating a winding staircase which runs into the
+forest canopy above, and to the floor far below.  The mottled trunk is
+impossibly wide, even at this height, and a host of forest creatures appear
+to reside in its dark nooks and furrows.  A short distance above, the trunk
+splits into two mighty halves.  Built into the tree near the split a large
+platform can be seen.  Large thick vines wind their way around the base of
+the tree crisscrossing in an interesting pattern.  
+~
+vertical
+D NORTH 0 0 0
+~
+The forest begins to dwindle below.  A great mountain range rises far to
+the north.  
+~
+D EAST 0 0 0
+~
+A thick trunk reaches far into the sky.  A thick rope ladder is attached
+to the trunk leading up into its limbs.  
+~
+D SOUTH 0 0 0
+~
+The forest begins to dwindle below.  The tops of trees pepper the
+landscape hiding most of the earth.  
+~
+D WEST 0 0 0
+~
+The forest begins to dwindle below.  The tops of trees pepper the
+landscape hiding most of the earth.  
+~
+D UP 4101 0 0
+~
+A platform can be seen higher up in the tree.
+~
+D DOWN 9023 0 0
+~
+The forest floor is visible far below.
+~
+OWNER none~
+#4101
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful hardwood
+laid upon crossbeams built into the side of the mammoth tree.  The immense
+trunk splits here, the two mighty halves reaching impossible heights into
+the canopy, which grows even thicker above.  In spite of its intricate
+construction, the platform is quite plain.  It's only ornamentation is a
+large railing around the perimeter, which is certainly a detail of function
+and not form.  The platform continues to the north and west, while large
+thick vines join with the tree, spiraling down.  
+~
+trail
+D NORTH 4104 0 0
+~
+The platform continues to the north.
+~
+D EAST 0 0 0
+~
+The platform is built directly into the broad trunk, merging with it
+seamlessly.  
+~
+D SOUTH 0 0 0
+~
+A thick beam of wood fused with the trunk to the south flows along the
+edge of the platform securely fastened with thin posts every three feet. 
+Peering out over the edge of the railing, a vast expanse of lush treetops
+appears far below.  
+~
+D WEST 4102 0 0
+~
+The platform continues to the west.
+~
+D UP 4180 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4100 0 0
+~
+Broad, flat limbs permit descent of the tree below.
+~
+E vine~
+Large thick vines envelope each other and merge with the tree, forming a
+surface that would be easy to climb.  
+~
+OWNER none~
+#4102
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful hardwood
+laid upon crossbeams built into the sides of the mammoth tree.  In spite of
+its intricate construction, the platform is quite plain.  It's only
+ornamentation is a large railing around the perimeter, which is certainly a
+detail of function and not form.  The platform continues here to the east
+and north.  
+~
+trail
+D NORTH 4103 0 0
+~
+The platform continues to the north.
+~
+D EAST 4101 0 0
+~
+The platform continues to the east.
+~
+D SOUTH 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D WEST 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D UP 4181 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4103
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful hardwood
+laid upon crossbeams built into the sides of the mammoth tree.  In spite of
+its intricate construction, the platform is quite plain.  It's only
+ornamentation is a large railing around the perimeter, which is certainly a
+detail of function and not form.  The platform continues here to the east
+and south.  
+~
+trail
+D NORTH 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D EAST 4104 0 0
+~
+The platform continues to the east.
+~
+D SOUTH 4102 0 0
+~
+The platform continues to the south.
+~
+D WEST 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D UP 4182 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4104
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful hardwood
+laid upon crossbeams built into the sides of the mammoth tree.  In spite of
+its intricate construction, the platform is quite plain.  It's only
+ornamentation is a large railing around the perimeter, which is certainly a
+detail of function and not form.  The platform continues here to the west
+and south.  To the north, a rope bridge sags out over the forest floor,
+connecting this platform with another.  
+~
+trail
+D NORTH 4105 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D EAST 0 0 0
+~
+The platform is built directly into the broad trunk, merging with it
+seamlessly.  
+~
+D SOUTH 4101 0 0
+~
+The platform continues to the south.
+~
+D WEST 4103 0 0
+~
+The platform continues to the west.
+~
+D UP 4183 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4105
+A Rope Bridge, High in the Trees~
+Long, knotted cords form the frame of this bridge, with crosswise boards
+providing a passable surface.  Other ropes provide a makeshift railing, but
+it seems they would do little to guard against an actual fall.  The forest
+floor can be seen below, man-sized bushes reduced to motes far beneath this
+arbor paradise.  The bridge continues to the north, where it can be seen to
+reach a platform a short distance ahead.  Another such platform lies more
+immediately to the south, nestled into the mighty trunk of an enormous tree.
+~
+trail
+D NORTH 4106 0 0
+~
+The rope bridge continues to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4104 0 0
+~
+A large platform lies just to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4184 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Wide thick boards of a bright yellow hardwood are carefully laced with a
+thick heavy woven vine.  The boards are placed every foot, leaving small
+gaps showing glimpses of the forest floor far below.  
+~
+OWNER none~
+#4106
+A Rope Bridge, High in the Trees~
+Long, knotted cords form the frame of this bridge, with crosswise boards
+providing a passable surface.  Other ropes provide a makeshift railing, but
+it seems they would do little to guard against an actual fall.  The forest
+floor can be seen below, man-sized bushes reduced to motes far beneath this
+arbor paradise.  The bridge connects to a small platform to the north, built
+into the side of a tree trunk.  A short distance to the south, a larger
+platform is built into the forking trunk of a colossal tree.  
+~
+trail
+D NORTH 4107 0 0
+~
+A wooden platform lies to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4105 0 0
+~
+The rope bridge continues to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4185 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Wide thick boards of a bright yellow hardwood are carefully laced with a
+thick heavy woven vine.  The boards are placed every foot, leaving small
+gaps showing glimpses of the forest floor far below.  
+~
+OWNER none~
+#4107
+A Platform, Before a Hollow Tree~
+This narrow platform is anchored on several thin tree trunks, the
+crossbeams overlaid with boards of sturdy hardwood.  A wooden railing to the
+north and west makes a cursory effort at preventing falls into the
+incredible emptiness below.  The platform runs to the east toward the
+hollowed-out trunk of a mammoth tree, where a large archway offers entrance.
+A rope bridge sags out over the forest to the south, where another platform
+can be seen in the distance.  
+~
+trail
+D NORTH 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D EAST 4108 0 0
+~
+An opening in a large hollow tree lies to the east.
+~
+D SOUTH 4106 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+D WEST 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D UP 4186 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a brilliant cherry hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4108
+Within a Hollow Tree~
+The trunk has been hollowed out into a large circular chamber.  The
+chamber is engulfed in a soft glowing light produced by small globes jutting
+from the walls.  The floor has been painstakingly polished to a high sheen,
+reflecting the light and indicating small scuff marks.  The scuffs lead from
+the archway to the staircase spiraling up from the center of the room.  It
+appears that the room was carved from this great tree leaving the stairs
+intact.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The great trunk sweeps in a broad arc just out of your reach.  The trunk
+has been smoothed and polished from the floor to where the stairs jut out. 
+The stairs increase in height from the floor as they navigate along the wall
+from right to left.  
+~
+D EAST 0 0 0
+~
+A great staircase is carved directly into the trunk, beginning from the
+floor and gracefully sweeping across the room as it rises.  
+~
+D SOUTH 0 0 0
+~
+The great trunk sweeps in a broad arc just out of your reach.  The trunk
+has been smoothed and polished from the floor to where the stairs jut out. 
+The stairs increase in height from the floor as they navigate along the wall
+from right to left.  
+~
+D WEST 4107 0 0
+~
+Through the opening in the tree lies a platform to the west.
+~
+D UP 4109 0 0
+~
+A winding staircase ascends the inner walls of the tree.
+~
+D DOWN 0 0 0
+~
+The floor is highly polished, reflecting the soft light.  A few scuffs
+mar the beautiful finish.  
+~
+E spiral staircase stair~
+The grand staircase begins in the center of the room and reaches towards
+the back of tree.  With each step it rises and swirls along the walls,
+rotating completely around the room before disappearing upwards.  There are
+no railings, however the steps are wide and one side is framed by the body
+of the great trunk itself.  
+~
+OWNER none~
+#4109
+Within a Hollow Tree~
+The chamber is bereft of any articles, and yet is elegant in its
+simpleness.  The walls and floor are polished to the extent that they glow. 
+The sweeping walls are only interrupted by a large archway to the east.  Not
+a single seam is distinguishable along the floor, nor where the walls merge
+with the floor.  A large opening is in the center, where the floor smoothly
+joins with a step leading to the room below.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D EAST 4110 0 0
+~
+A large archway leads out to a platform that has been built into the
+trees.  
+~
+D WEST 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D UP 0 0 0
+~
+Well above your head the tree begins to close in, making travel upwards
+inside the tree impossible.  
+~
+D DOWN 4108 0 0
+~
+A winding stair leads down into the tree.
+~
+OWNER none~
+#4110
+On a Wide Platform~
+Thick beams of a dark red and yellow hardwood are tiled together to make
+an intricate pattern.  The platform flares out fitting the closely packed
+trees perfectly.  The large trunk of a tree fits snuggly to the west with a
+large archway cut into it.  The trunk folds around to the south offering
+protection from the elements.  
+~
+trail
+D NORTH 4111 0 0
+~
+The platform continues to the north.
+~
+D EAST 4128 0 0
+~
+The platform continues to the east.
+~
+D SOUTH 0 0 0
+~
+The edge of the platform follows the arcing trunk perfectly.  The trunk
+rises well beyond your sight.  
+~
+D WEST 4109 0 0
+~
+A large archway offers access to a hollow tree to the west.
+~
+D UP 4187 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Red and yellow pieces of hardwood are intermixed to form a beautiful
+pattern of a glowing sun.  The center of the platform is a large circular
+yellow sun, with wisps of red streaking out.  
+~
+E intricate pattern~
+Red and yellow pieces of hardwood and intermixed to form a beautiful
+pattern of a glowing sun.  The center of the platform is a large circular
+yellow sun, with wisps of red streaking out.  
+~
+OWNER none~
+#4111
+On a Wide Platform~
+Sturdy pieces of hardwood are laid out in a crisscross pattern.  A thick
+railing flows from the southern trunk along the edge of the platform
+northward.  The railing sharply turns and runs along the northern side with
+a small section removed.  The anchors for a large rope bridge are securely
+fastened to the railing with an intricate knotting scheme covered in a hard
+transparent material.  
+~
+trail
+D NORTH 4112 0 0
+~
+A rope bridge reaches out over the forest to the north.
+~
+D EAST 4127 0 0
+~
+The platform continues to the east.
+~
+D SOUTH 4110 0 0
+~
+The platform continues to the south.
+~
+D WEST 0 0 0
+~
+A thick beam of wood fused with the trunk to the south flows along the
+edge of the platform securely fastened with thin posts every three feet. 
+Peering out over the edge of the railing, a vast expanse of lush treetops
+appears far below.  
+~
+D UP 4188 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a brilliant cherry hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4112
+On a Rope Bridge~
+Long braided vines woven with thick boards provide a large surface as
+wide as most city streets.  Other ropes provide a loose railing, but it
+seems they would do little to guard against an actual fall.  The bridge
+barely flexes under the weight of its occupants.  Large scratches in the
+wood follow along the center of the bridge indicating its constant use.  The
+bridge is secured to a large platform to the south and continues snaking its
+way to the north.  
+~
+trail
+D NORTH 4113 0 0
+~
+The bridge sways out over the forest to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4111 0 0
+~
+The bridge leads to a platform to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4189 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Wide thick boards of a bright yellow hardwood are carefully laced with a
+thick heavy woven vine.  The boards are placed every foot, leaving small
+gaps showing glimpses of the forest floor far below.  
+~
+OWNER none~
+#4113
+On a Rope Bridge~
+Long braided vines woven with thick boards provide a large surface as
+wide as most city streets.  Other ropes provide a loose railing, but it
+seems they would do little to guard against an actual fall.  The bridge
+barely flexes under the weight of its occupants.  Large scratches in the
+wood follow along the center of the bridge indicating its constant use.  The
+bridge is secured to a large platform to the north and continues snaking its
+way to the south.  
+~
+trail
+D NORTH 4114 0 0
+~
+A wide platform leads between some huts to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4112 0 0
+~
+The bridge sways out over the forest to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4190 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Wide thick boards of a bright yellow hardwood are carefully laced with a
+thick heavy woven vine.  The boards are placed every foot, leaving small
+gaps showing glimpses of the forest floor far below.  
+~
+OWNER none~
+#4114
+A Cliffside Platform~
+The platform is barely wider than the bridge attached to the south. 
+Small, thin pieces of wood, no bigger than a foot are tightly packed
+together jutting out from the edges of a cliff.  A large hut reaches back
+into the cliffside to the west directly across from a large wooden building
+built along the eastern edge of the platform.  The platform continues
+towards the northern cliffs.  
+~
+trail
+D NORTH 4117 0 0
+~
+The platform continues to the north.
+~
+D EAST 4116 0 0
+~
+A large hut is built on the platform to the east.
+~
+D SOUTH 4113 0 0
+~
+A rope bridge reaches out over the forest to the south.
+~
+D WEST 4115 0 0
+~
+A rather elaborate hut is constructed into the side of the cliff to the west.
+~
+D UP 4191 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in square patterns.  
+~
+OWNER none~
+#4115
+Inside an Octagonal Hut~
+An oddly shaped room, chiseled into the living rock.  The walls and floor
+are generally smooth, with some grooves left by the tool used to carve out
+the rock.  The room reaches back deeply into the mountain, each of the eight
+walls exactly eight feet long.  A deep pit has been excavated from the
+center of the floor.  The ceiling is roughly domed and raises from the walls
+smoothly to a flat section directly above the pit.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The granite walls have been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+D EAST 4114 0 0
+~
+A small entrance leads out to a platform to the east.
+~
+D SOUTH 0 0 0
+~
+The granite walls have been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+D WEST 0 0 0
+~
+The granite walls have been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+D UP 0 0 0
+~
+The ceiling rises smoothly in a broad arc to peak at a flat section in
+the center.  A small opening allows any smoke generated in the pit to escape
+without harming the inhabitants.  
+~
+D DOWN 0 0 0
+~
+A huge circular pit has been gouged out of the center of the room.  It
+appears to have a diameter of eight feet and filled half way with ash.  
+~
+E pit~
+A huge circular pit has been gouged out of the center of the room.  It
+appears to have a diameter of eight feet and filled with ash.  
+~
+OWNER none~
+#4116
+Inside a Hut~
+A large rectangular building built on the edge of the platform.  It is
+twice as long as it is wide.  Small windows are cut into the back wall,
+normally covered with thick wooden shutters that hang loosely open.  A small
+wooden table surrounded by four stools occupies a corner.  Wooden bowls and
+cups are jumbled in a large box, near the fire pit in the opposite corner.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D EAST 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  Half way from the floor to the ceiling small windows are
+cut through the logs, opening up the room to the elements.  
+~
+D SOUTH 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D WEST 4114 0 0
+~
+An arched opening leads to a platform to the west.
+~
+D UP 0 0 0
+~
+Wide wooden logs planed into rectangular pieces are tied together with
+thick vines to form a cover.  The edges of the planks are indented where the
+vines bind them making a flat surface.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in square patterns.  
+~
+OWNER none~
+#4117
+A Cliffside Platform~
+Small, thin pieces of wood, no bigger than a foot are tightly packed
+together jutting out from the edges of a cliff.  A small entrance pokes into
+the cliffside to the west directly across from a wooden building built along
+the eastern edge of the platform.  The platform is anchored to the rock
+face.  A natural path winds its way into the northern cliff face.
+~
+trail
+D NORTH 4120 0 0
+~
+A rocky trail leads north onto the mountainside.
+~
+D EAST 4119 0 0
+~
+A hut is built on the platform to the east.
+~
+D SOUTH 4114 0 0
+~
+The platform continues to the south.
+~
+D WEST 4118 0 0
+~
+A hut is built into the cliffside to the west.
+~
+D UP 4192 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in square patterns.  
+~
+OWNER none~
+#4118
+Inside a Hut~
+An oddly shaped room, chiseled into the living rock.  The walls and floor
+are generally smooth, with some grooves left by the tool used to carve out
+the rock.  The room has been formed into a large diamond shape, with wooden
+partitions erected to separate the room into four sections.  A small fire
+pit and neatly stacked cookware fill the first section.  The next section
+contains neatly stacked piles of cloth, furs and tanned skins.  A triangular
+table surrounded by five stools snugly fits into the far corner section.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The granite walls have been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+D EAST 4117 0 0
+~
+An opening leads out to a platform to the east.
+~
+D SOUTH 0 0 0
+~
+The granite walls have been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+D WEST 0 0 0
+~
+The granite walls have been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+D UP 0 0 0
+~
+The rock has been roughly hacked away leaving the ceiling jagged and dark
+with small crevices that the light can not penetrate.  
+~
+D DOWN 0 0 0
+~
+The granite floor has been chiseled away from the mountain with small
+tools leaving short strikes throughout.  It appears that the builder
+attempted to smooth out the surfaces but gave up from futility.  
+~
+OWNER none~
+#4119
+Inside a Hut~
+A large rectangular building built on the edge of the platform.  It is
+twice as long as its width.  Small windows are cut into the back wall,
+normally covered with thick wooden shutters that hang loosely open.  A small
+wooden table surrounded by four stools occupies a corner.  Wooden bowls and
+cups are jumbled in a large box, near the fire pit in the opposite corner.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D EAST 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  Half way from the floor to the ceiling small windows are
+cut through the logs, opening up the room to the elements.  
+~
+D SOUTH 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D WEST 4117 0 0
+~
+An opening leads out to a platform to the west.
+~
+D UP 0 0 0
+~
+Wide wooden logs planed into rectangular pieces are tied together with
+thick vines to form a cover.  The edges of the planks are indented where the
+vines bind them making a flat surface.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in square patterns.  
+~
+OWNER none~
+#4120
+A Rocky Trail on the Mountainside~
+The mountain slowly encroaches upon this small trail winding into its
+depths.  Sheer rock faces on both sides make climbing impossible.  The trail
+gradually closes into itself as it travels northward, to the point where a
+large titan would find it a tight squeeze.  The trail opens onto a wide
+platform towards the south.  
+~
+trail
+D NORTH 4121 0 0
+~
+The trail continues on the mountainside to the north.
+~
+D EAST 0 0 0
+~
+The mountain rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D SOUTH 4117 0 0
+~
+A wide platform leads out over the forest to the south.
+~
+D WEST 0 0 0
+~
+The mountain rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D UP 4193 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Dry compacted dirt makes a small trail that runs straight north and south.  
+~
+OWNER none~
+#4121
+A Small Junction on the Mountainside~
+A small naturally formed clearing nestled quietly within the looming
+walls of the mountains.  A small stream trickles from a crevice in the
+northern face forming a clear pool and slowly winding its way to the west
+alongside a rocky path.  The cliffs climb steeply on all sides with the
+peaks enshrouded by clouds.  A small gap in the southern face leads into a
+dark passage.  Leather hides similar to the light color of the surrounding
+rock forms a small structure off to the east.  
+~
+trail
+D NORTH 0 0 0
+~
+A steep granite cliff face looms up to the north, marred by a large
+jagged gap.  A light crystal clear stream steadily flows out of the crevice
+to form a small pool.  
+~
+D EAST 4122 AB 0
+~
+A rather elaborate lean-to is built into the mountainside to the east.
+~
+D SOUTH 4120 0 0
+~
+A rocky trail leads south toward the forest.
+~
+D WEST 4123 0 0
+~
+A rocky path leads off to the west, where it winds down along the cliffs.
+~
+D UP 4194 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+A small stream of water slowly gathers into a small pool of water before
+continuing its journey along the path to the west.  
+~
+OWNER none~
+#4122
+An Elaborate Lean-To~
+This tent is larger than it appears from the outside, with enough room to
+stand in the center.  Tanned leather hides laid in a crisscross pattern are
+neatly stitched together providing complete protection from the outside
+elements.  The rough ground has been covered by a soft black fur from a
+large animal.  In a corner is a small fire pit surrounded by loose rocks
+stacked upon each other in a haphazard manner.  A pile of furs are roughly
+laid out, close to the fire pit.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Patches of tanned leather are neatly stitched together to make a very
+robust tent.  The hides overlap thin wispy wooden poles at the corners.  
+~
+D EAST 0 0 0
+~
+The tent is built along the face of the cliff.  The rough rock has been
+smoothed to make a flat surface on which the rest of the tent is supported. 
+~
+D SOUTH 0 0 0
+~
+Patches of tanned leather are neatly stitched together to make a very
+robust tent.  The hides overlap thin wispy wooden poles at the corners.  
+~
+D WEST 4121 AB 0
+~
+A rocky trail runs along the mountainside to the west.
+~
+D UP 0 0 0
+~
+The poles running along the edges of the walls are bent upwards towards
+the top and tied together with a few strands of thick leather.  Another thin
+pole runs the length of the tent and the end poles are again bound with
+thick red leather.  
+~
+D DOWN 0 0 0
+~
+A large thick black fur completely covers the ground.  The fur is a dark
+black with wisps of red along the ends of the long hairs.  It is soft and
+supple to the touch, quickly flowing back into place covering up any
+indentations made.  
+~
+OWNER none~
+#4123
+A Rocky Path, Above a Cliff~
+A wide plateau of hard rock sparsely covered in light vegetation.  Loose
+stones of various sizes, from the size of an imp's fist to that of a titan's
+make walking difficult.  One wrong step could easily lead to a broken ankle.
+A thin path has been worn into the rough surface from a constant shuffling
+of feet.  The path continues along a steep slope that quickly drops down.  
+~
+trail
+D NORTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D EAST 4121 0 0
+~
+A rocky trail leads along the mountainside to the east.
+~
+D SOUTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D WEST 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D UP 4195 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4124 0 0
+~
+A steep slope runs along a cliff below.
+~
+OWNER none~
+#4124
+A Narrow Trail on a Cliff~
+The steep cliff swiftly descends onto a lower landing chiseled into the
+rock.  Vertical walls rise rapidly on all sides giving the feeling of
+imprisonment.  A narrow trail wanders towards the west following the
+contours of the surrounding rock.  
+~
+trail
+D NORTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D EAST 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D SOUTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D WEST 4125 0 0
+~
+The cliffside continues to the west.
+~
+D UP 4123 0 0
+~
+A rocky path ascends the cliff above.
+~
+D DOWN 0 0 0
+~
+Dry compacted dirt, covered with loose pebbles makes a small trail that
+runs towards the west.  
+~
+OWNER none~
+#4125
+A Narrow Trail on a Cliff~
+A thin path continues along a swiftly sloping cliff face.  Crushed rocks
+litter the ground making the path a little slippery.  Little vegetation
+sweeps out from the path over the cliff, leaving small pockets of green. 
+Small brightly colored flecks twinkle in the light just off the path to the
+north.  The cliff drops off sharply towards the south making travel
+impossible.  
+~
+trail
+D NORTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D EAST 4124 0 0
+~
+The cliffside continues to the east.
+~
+D SOUTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D WEST 4126 0 0
+~
+The cliffside continues to the west.
+~
+D DOWN 0 0 0
+~
+Dry compacted dirt, covered with loose pebbles makes a small trail that
+meanders from east to the west.  Just off the path to the north something
+sparkles, reflecting the light.  
+~
+OWNER none~
+#4126
+The End of a Cliffside Trail~
+A thin path continues along a swiftly sloping cliff face.  Crushed rocks
+litter the ground making the path a little slippery.  Little vegetation
+sweeps out from the path over the cliff, leaving small pockets of green. 
+The mountain surrounds this small opening from the north and south, leaving
+the trail as the only exit.  Towards the west, large rocks have crashed down
+from above blocking that direction.  
+~
+trail
+D NORTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D EAST 4125 0 0
+~
+The cliffside continues to the east.
+~
+D SOUTH 0 0 0
+~
+The mountains rise swiftly, just off the sides of the trail.  Sheer walls
+of granite loom down towards those that dare to enter.  
+~
+D WEST 0 0 0
+~
+Numerous large rocks have fallen from the cliff piling upon one another
+to completely block the path to the west.  
+~
+D DOWN 0 0 0
+~
+Dry compacted dirt, covered with loose pebbles makes a small trail that
+meanders from east stopping abruptly.  
+~
+OWNER none~
+#4127
+On a Wide Platform~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the northern
+edge of the platform.  The railing sharply turns and continues along the
+eastern side.  Large trunks rise up and twist off in the distance.  
+~
+trail
+D NORTH 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D EAST 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D SOUTH 4128 0 0
+~
+The platform continues to the south.
+~
+D WEST 4111 0 0
+~
+The platform continues to the west.
+~
+D UP 4199 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in an intricate
+pattern of crosses.  
+~
+OWNER none~
+#4128
+On a Wide Platform~
+Sturdy pieces of hardwood are laid out in a crisscross pattern creating
+an impregnable surface.  A thick railing flows along the southern edge of
+the platform.  The railing sharply turns and runs along the eastern side
+with a small section removed.  The anchors for a large rope bridge are
+securely fastened to the railing with an intricate knotting scheme covered
+in a hard transparent material.  
+~
+trail
+D NORTH 4127 0 0
+~
+The platform continues to the north.
+~
+D EAST 4129 0 0
+~
+A rope bridge sags out over the forest to the east.
+~
+D SOUTH 0 0 0
+~
+A thick beam of wood flows along the edge of the platform securely
+fastened with thin posts every three feet.  Peering out over the edge of the
+railing, a vast expanse of lush treetops appears far below.  
+~
+D WEST 4110 0 0
+~
+The platform continues to the west.
+~
+D UP 4200 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in an intricate
+pattern of crosses.  
+~
+OWNER none~
+#4129
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the wooden railing surrounding the
+platform to the west.  
+~
+trail
+D NORTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4130 0 0
+~
+The rope bridge sags out over the forest to the east.
+~
+D SOUTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4128 0 0
+~
+A platform is built into some trees to the west.
+~
+D UP 4201 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Wide thick boards of a bright yellow hardwood are carefully laced with a
+thick heavy woven vine.  The boards are placed every foot, leaving small
+gaps showing glimpses of the forest floor far below.  
+~
+OWNER none~
+#4130
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the wooden railing surrounding the
+platform to the east.  
+~
+trail
+D NORTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4131 0 0
+~
+A long wooden platform is built into some trees to the east.
+~
+D SOUTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4129 0 0
+~
+The rope bridge sags out over the forest to the west.
+~
+D UP 4202 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Wide thick boards of a bright yellow hardwood are carefully laced with a
+thick heavy woven vine.  The boards are placed every foot, leaving small
+gaps showing glimpses of the forest floor far below.  
+~
+OWNER none~
+#4131
+A Wide Boulevard of Planks~
+This huge platform is located in the center of the great tree.  Broad,
+thick planks of a deep red hardwood are closely packed together giving the
+impression that this platform is made of one solid piece.  Unlike the other
+platforms the heavy foot traffic has dulled the polished features of the
+hardwood.  The massive trunk bends in on itself to form a large natural
+surface before splitting off into numerous branches in all directions.  A
+thick railing surrounds the southern and western edges of the platform. 
+Cords of woven thick vine anchored in the center reach out to form the
+beginnings of foot bridges.  
+~
+trail
+D NORTH 4132 0 0
+~
+A small balcony overlooks the forest to the north.
+~
+D EAST 4133 0 0
+~
+The wide platform continues to the east.
+~
+D SOUTH 4151 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+D WEST 4130 0 0
+~
+A rope bridge sags out over the forest to the west.
+~
+D UP 4203 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4132
+A Platform Overlooking the Forest~
+The platform is a long extension of the boulevard and sticks
+conspicuously out in the open.  Every few feet a short pole sticks up
+straight from the floor with a thin circular loop on the top.  Through the
+loops is a loose woven vine drooping from support to support.  The view is
+completely unobstructed and shows a vast healthy forest far below.  
+~
+trail
+D NORTH 0 0 0
+~
+Far to the north past other branches of this enormous tree, the mountains
+fill the landscape.  
+~
+D EAST 0 0 0
+~
+More branches of this enormous tree reach out towards the sky, filled
+with platforms.  
+~
+D SOUTH 4131 0 0
+~
+A wooden platform lies to the south.
+~
+D WEST 0 0 0
+~
+More branches of this enormous tree reach out towards the sky, filled
+with platforms.  
+~
+D UP 4204 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4133
+A Wide Boulevard of Planks~
+This huge platform is located in the center of the great tree.  Broad,
+thick planks of a deep red hardwood are closely packed together giving the
+impression that this platform is made of one solid piece.  Unlike the other
+platforms the heavy foot traffic has dulled the polished features of the
+hardwood.  The massive trunk bends in on itself to form a large natural
+surface before splitting off into numerous branches in all directions.  
+~
+trail
+D NORTH 4135 0 0
+~
+A small door leads into a tidy hut to the north.
+~
+D EAST 4136 0 0
+~
+The long platform continues to the east.
+~
+D SOUTH 4134 0 0
+~
+A small door offers entrance to a tree-dwelling to the south.
+~
+D WEST 4131 0 0
+~
+The long platform continues to the west.
+~
+D UP 4211 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4134
+A Dwelling in a Hollow Tree~
+The tree branch has been hollowed out into a small chamber.  A small
+window is cut into the back wall, normally covered with thick wooden
+shutters that currently hang loosely open.  A small wooden table and a rough
+wooden chair fills one corner.  Empty wooden bowls and cups are neatly
+placed on the table.  
+~
+inside
+ROOM INDOORS
+D NORTH 4133 0 0
+~
+A small door leads onto a long platform to the north.
+~
+D EAST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D SOUTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  Half way up from
+the floor small windows are cut through the trunk, opening up the room to
+the elements.  
+~
+D WEST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of a soft dark fur are densely packed together in
+square patterns covering the entire floor.  
+~
+OWNER none~
+#4135
+Within a Tidy Hut~
+Small windows are cut into the back wall, normally covered with thick
+wooden shutters that hang loosely open.  A small wooden table surrounded by
+four stools occupies a corner.  Wooden bowls and cups are jumbled in a large
+box, near the fire pit in the opposite corner.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  Half way from the floor to the ceiling small windows are
+cut through the logs, opening up the room to the elements.  
+~
+D EAST 0 0 0
+~
+Wooden logs are stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D SOUTH 4133 0 0
+~
+A small door leads onto a long platform to the south.
+~
+D WEST 0 0 0
+~
+Wooden logs are stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D UP 0 0 0
+~
+Wide wooden logs planed into rectangular pieces are tied together with
+thick vines to form a cover.  The edges of the planks are indented where the
+vines bind them making a flat surface.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in square patterns.  
+~
+OWNER none~
+#4136
+A Wide Boulevard of Planks~
+This huge platform is located in the center of the great tree.  Broad,
+thick planks of a deep red hardwood are closely packed together giving the
+impression that this platform is made of one solid piece.  Unlike the other
+platforms the heavy foot traffic has dulled the polished features of the
+hardwood.  The massive trunk bends in on itself to form a large natural
+surface before splitting off into numerous branches in all directions. 
+Muffled sounds of laughter and singing escape from the doorway to the east. 
+Soft smells of freshly baked bread waft in from the south.  
+~
+trail
+D NORTH 4139 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D EAST 4138 0 0
+~
+A small tavern lies through a door to the east.
+~
+D SOUTH 4137 0 0
+~
+To the south, a door opens into the bakery.
+~
+D WEST 4133 0 0
+~
+The long platform continues to the west.
+~
+D UP 4210 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4137
+Rellah's Kitchen~
+The strong aroma of baked bread permeates everything in here.  A gigantic
+stone oven masks the entire back wall.  Man sized black iron doors cover the
+front of the oven locked in place.  A small counter sits in the corner away
+from the oven displaying the baker's latest creations.  
+~
+inside
+ROOM INDOORS
+D NORTH 4136 0 0
+~
+A door leads onto a wide platform to the north.
+~
+D EAST 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D SOUTH 0 0 0
+~
+Square chunks of a light grey rock are tiled on top of each other filling
+the entire length of the wall.  Huge cast iron doors cover the front of the
+oven glowing softly from the heat generated within.  
+~
+D WEST 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+The floor smoothly melds into the arching walls.  The floor is polished
+to a high sheen, reflecting the soft light.  
+~
+OWNER none~
+#4138
+A Cheery Tavern~
+A happy spot where the local denizens gather to relax and enjoy the
+company of friends.  A long bar runs along the entire length of the back
+wall, with stools located in front.  Small square tables are scattered
+throughout the room.  A large fireplace sits in the corner radiating a
+glowing heat.  Beautiful young girls are rushing back forth between the bar
+and tables gracefully carrying large steins and small elegant crystal
+goblets.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Small square tables are lined up against the wall and out toward the
+center of the room in a jagged pattern.  Little room is provided between the
+tables for the serving girls to rush by.  
+~
+D EAST 0 0 0
+~
+The entire wall is encompassed by a bar made of a dark oak.  Unlike the
+tables, the bar is mostly covered with heavy mugs brimming with foam. 
+Heavy, dark stains mar the once glossy finish of a beautiful wood.  
+~
+D SOUTH 0 0 0
+~
+Most of the small tables surround the fireplace built in the corner of
+the room.  Large booths are built into the walls on either side of the
+fireplace.  Delicate crystal goblets fill most of the tables with a few mugs
+scattered about.  
+~
+D WEST 4136 0 0
+~
+A doorway leads out to a platform to the west.
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+The floor smoothly melds into the arching walls.  The floor is covered
+with a fine mist of the local drink.  
+~
+OWNER none~
+#4139
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the wooden railing surrounding the
+platforms on either end.  
+~
+trail
+D NORTH 4140 0 0
+~
+A small, circular platform is built into the side of a tree to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4136 0 0
+~
+The rope bridge connects to a long platform to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4212 0 0
+~
+The open sky continues upwards.
+~
+OWNER none~
+#4140
+A Small, Circular Platform~
+Leaves cover the ground completely, scattering in the breeze but never
+revealing the platform below.  Fluttering slightly, a moth eaten deep green
+cloth loosely covers a small opening in the tree to the west.  
+~
+trail
+D NORTH 4143 0 0
+~
+A narrow plank leads precariously between two trees to the north.
+~
+D EAST 4142 0 0
+~
+To the east the platform dead-ends at a point overlooking the valley.
+~
+D SOUTH 4139 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+D WEST 4141 0 0
+~
+A ramshackle dwelling has been constructed among some trees to the west.
+~
+D UP 4213 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Brushing aside the loose leaves, a wooden floor is revealed.  The
+hardwood flooring has long ago lost its beauty from lack of care and
+attention.  Small chips of wood flake away at the slightest touch opening up
+the interior to the elements.  
+~
+OWNER none~
+#4141
+A Ramshackle Dwelling~
+This small room is kept much like the decaying covering on the entrance. 
+The tree that has been carved to make this dwelling is still healthy and
+alive, yet everything in the room appears to be in disrepair.  Leaves litter
+the floor untouched, and a thick layer of dust covers the entire room. 
+Small hidden insects buzz around your head, biting any exposed skin.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D EAST 4140 0 0
+~
+A small platform is accessable to the east.
+~
+D SOUTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D WEST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  Half way up from
+the floor a small window is cut through the trunk.  The shutters are clamped
+shut and show no indication that they have ever been opened.  
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  
+~
+D DOWN 0 0 0
+~
+Leaves cover the entire floor, piling up in the corners.  Small wax
+candles sit unlit in the corners of the room.  
+~
+OWNER none~
+#4142
+The Valley Overlook~
+A short and narrow extension, this platform pokes out past the large
+branches.  Every few feet a short pole sticks up straight from the floor
+with a thin circular loop on the top.  Through the loops is a loose woven
+vine drooping from support to support.  The view is completely unobstructed
+and shows a vast healthy forest far below.  
+~
+trail
+D NORTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  A short distance away the view is blocked by a
+thick branch reaching into the sky.  
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the east is completely
+unobstructed, exposing the entire valley below.  
+~
+D SOUTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  A short distance away the view is blocked by a
+thick branch reaching into the sky.  
+~
+D WEST 4140 0 0
+~
+A small platform is accessable to the west.
+~
+D UP 4214 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful red hardwood are carefully placed side
+by side, making a sturdy platform that should be able to weather anything.  
+~
+OWNER none~
+#4143
+On a Narrow Plank~
+A short plank has been carelessly placed to join two platforms.  The ends
+of the planks have been secured to the platforms with metal hooks.  There
+are no railings to prevent anything from falling over the edge.  
+~
+trail
+D NORTH 4144 0 0
+~
+The plank runs into the hollow of an immense and ancient tree to the north.
+~
+D EAST 0 0 0
+~
+As you approach the edge you can feel a strange energy pushing back,
+preventing you from falling over.  
+~
+D SOUTH 4140 0 0
+~
+A small, circular platform lies to the south.
+~
+D WEST 0 0 0
+~
+As you approach the edge you can feel a strange energy pushing back,
+preventing you from falling over.  
+~
+D UP 4215 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+A plain thick plank has casually been placed connecting two platforms. 
+The ends of the plank have been secured with metal hooks that run through
+the plank and dig into the platforms.  
+~
+OWNER none~
+#4144
+A Passage in a Hollow Tree~
+A tunnel has been cut directly through the trunk.  The walls rise upwards
+from the floor in a broad circular arc.  Small ion stones are placed halfway
+up the walls, glowing softly when someone approaches.  As you traverse the
+long tunnel the next ion stone begins to glow before the previous stone
+winks out.  Small doors set in the middle of the tunnel lead off to the east
+and west.  
+~
+inside
+ROOM INDOORS
+D NORTH 4147 0 0
+~
+To the north a rope bridge sags out over the forest.
+~
+D EAST 4146 AB 0
+~
+A small door leads into another part of the tree to the east.
+~
+D SOUTH 4143 0 0
+~
+A narrow plank runs south toward a small platform.
+~
+D WEST 4145 AB 0
+~
+A small door leads into another part of the tree to the west.
+~
+D UP 0 0 0
+~
+The walls reach up and arc high above.  The trunk has been smoothly
+excavated leaving healthy living wood.  
+~
+D DOWN 0 0 0
+~
+The flat surface is a little spongy and flexes with each footstep.  
+~
+OWNER none~
+#4145
+A Strange Laboratory, Within a Tree~
+A spacious room filled with tables and shelves to the extent that
+movement is difficult.  The tables are covered with crystals and glass
+containers filled with multi colored liquids.  The table covering the entire
+back wall has a small fire under a large cauldron, boiling the contents.  A
+light grey haze with a smell of sulphur wafts from the cauldron permeating
+the entire room.  Small containers of powder and insects are scattered
+around the cauldron filling up the rest of the table.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The room has been extended beyond the body of the trunk.  The first half
+of the room is obviously the same smooth wood of the trunk, while the back
+half of the room is made from thatched polished logs.  
+~
+D EAST 4144 AB 0
+~
+A small door leads east into the main body of the tree.
+~
+D SOUTH 0 0 0
+~
+The room has been extended beyond the body of the trunk.  The first half
+of the room is obviously the same smooth wood of the trunk, while the back
+half of the room is made from thatched polished logs.  
+~
+D WEST 0 0 0
+~
+Thatched polished logs planed into rectangular pieces seal off the
+extension from the elements.  
+~
+D UP 0 0 0
+~
+Wide wooden logs planed into rectangular pieces are tied together with
+thick vines to form a cover.  The edges of the planks are indented where the
+vines bind them making a flat surface.  
+~
+D DOWN 0 0 0
+~
+The floor is covered with colorful hardwood, placed into concentric
+circles.  A deep red circle is placed in the center of the room and
+alternating yellow, red circles surround it.  
+~
+OWNER none~
+#4146
+A Bedroom, Within a Tree~
+An elegant bed chamber, decorated with simple functional furniture.  A
+short wooden platform fills the far corner, topped with a thin mattress. 
+Wooden shutters cover a small window above the sleeping platform.  A table
+made from a dark oak and a stool occupies the other corner of the chamber. 
+A thick book filled with writings of a foreign language is propped open on
+the table.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Wooden logs are stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D EAST 0 0 0
+~
+Wooden logs stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  Half way from the floor to the ceiling small windows are
+cut through the logs, opening up the room to the elements.  
+~
+D SOUTH 0 0 0
+~
+Wooden logs are stacked upon each other.  An opaque substance has been
+smeared over the sections where the logs touch each other, plugging all gaps
+to the outside.  
+~
+D WEST 4144 AB 0
+~
+A small door to the west leads into the main body of the tree.
+~
+D UP 0 0 0
+~
+Wide wooden logs planed into rectangular pieces are tied together with
+thick vines to form a cover.  The edges of the planks are indented where the
+vines bind them making a flat surface.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of wood are densely packed together in square patterns.  
+~
+OWNER none~
+#4147
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the trunk of the great tree to the
+south.  
+~
+trail
+D NORTH 4148 0 0
+~
+The rope bridge continues toward a platform to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4144 0 0
+~
+To the south lies a gaping entrance to an immense, hollow tree.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4216 0 0
+~
+The open sky continues upwards.
+~
+OWNER none~
+#4148
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the trunk of the great tree to the
+north.  
+~
+trail
+D NORTH 4149 0 0
+~
+A small platform lies to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4147 0 0
+~
+The rope bridge continues toward a large tree to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4217 0 0
+~
+The open sky continues upwards.
+~
+OWNER none~
+#4149
+A Dark Hallway inside a Trunk~
+A long dark hallway runs deep into a trunk before turning sharply to the
+right.  The far reaching hallway is only interrupted by large archways to
+the south and east.  Not a single seam is distinguishable along the floor,
+nor where the walls merge with the floor.  The walls sweep upward arching
+high above.  
+~
+inside
+ROOM DARK
+D NORTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D EAST 4150 0 0
+~
+The dark hallway turns and opens into a large chamber.  
+~
+D SOUTH 4148 0 0
+~
+The trunk is hollowed out towards the south.  The ends of a rope bridge
+are attached to the sides of the entrance.  
+~
+D WEST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D UP 0 0 0
+~
+The walls reach up and arc high above.  The trunk has been smoothly
+excavated leaving healthy living wood.  
+~
+D DOWN 0 0 0
+~
+The flat surface is a little spongy and flexes with each footstep.  
+~
+OWNER none~
+#4150
+Inside a Great Trunk~
+A large archway opens into an enormous room.  The floor sweeps out
+unmarred to the far ends of the trunk, where it flows seamlessly with the
+trunk.  The room is perfectly circular, surrounded by smooth walls that
+climb upwards endlessly.  Towards the center is a fountain carved from the
+very trunk it rests in.  The wood is ancient but carefully maintained and
+polished.  
+~
+unused
+D NORTH 0 0 0
+~
+The walls of the trunk sweep around in a broad arc, rising swiftly
+towards the sky.  
+~
+D EAST 0 0 0
+~
+The walls of the trunk sweep around in a broad arc, rising swiftly
+towards the sky.  
+~
+D SOUTH 0 0 0
+~
+The walls of the trunk sweep around in a broad arc, rising swiftly
+towards the sky.  
+~
+D WEST 4149 0 0
+~
+Carvings surround a large archway that leads out of the trunk.  
+~
+D UP 0 0 0
+~
+The trunk rises swiftly upward, eventually opening to the sky above.  
+~
+D DOWN 0 0 0
+~
+The floor smoothly melds into the arching walls.  The floor is polished
+to a high sheen, reflecting the soft light.  
+~
+E fountain basin water~
+In the center of the room is a large basin of a lightly colored wood. 
+The room appears to have been magically excavated leaving this basin. 
+Rising three feet from the ground, it is filled two thirds with a crystal
+clear liquid.  Carvings of trees and small wildlife surround the basins
+edge.  
+~
+OWNER none~
+#4151
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the wooden railing surrounding the
+platform to the north.  
+~
+trail
+D NORTH 4131 0 0
+~
+A wide platform is just to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4152 0 0
+~
+The rope bridge sags out over the forest to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4205 0 0
+~
+The open sky continues upwards.
+~
+OWNER none~
+#4152
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the wooden railing surrounding the
+platform to the south.  
+~
+trail
+D NORTH 4151 0 0
+~
+The rope bridge sags out over the forest to the north.
+~
+D EAST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4153 0 0
+~
+A narrow platform winds among densely-packed trees to the south.
+~
+D WEST 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4206 0 0
+~
+The open sky continues upwards.
+~
+OWNER none~
+#4153
+An Overgrown Platform~
+This platform is completely covered in knee high vegetation left to grow
+unhindered as it advances.  All types of weeds and vines mix together making
+it a little difficult to walk around.  The platform nestles in a natural
+nook of a large branch, surrounding it.  The beginning of a rope bridge is
+anchored to the trunk overhanging the forest to the north.  Small
+archways in the trunk lead off to the east and west.  
+~
+trail
+D NORTH 4152 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D EAST 4154 0 0
+~
+A door has been built into a large tree to the east.
+~
+D SOUTH 4156 0 0
+~
+The overgrown platform continues to the south.
+~
+D WEST 4155 0 0
+~
+A door has been built into a large tree to the west.
+~
+D UP 4207 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Tall ugly weeds have invaded this platform.  Dried out grey and brown
+twigs grab at the feet of any who pass.  
+~
+OWNER none~
+#4154
+A Dwelling in a Hollow Tree~
+The tree branch has been hollowed out into a small chamber.  A small
+window is cut into the back wall, normally covered with thick wooden
+shutters that currently hang loosely open.  A small wooden table and a rough
+wooden chair occupy the far corner.  Empty wooden bowls and cups are neatly
+placed on the table.  A low wooden platform with a thin mattress is neatly
+covered with a dark black fur.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D EAST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  Half way up from
+the floor small windows are cut through the trunk, opening up the room to
+the elements.  
+~
+D SOUTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D WEST 4153 0 0
+~
+An overgrown platform lies to the west.
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of a soft dark fur are densely packed together in
+square patterns covering the entire floor.  
+~
+OWNER none~
+#4155
+A Dwelling in a Hollow Tree~
+The tree branch has been hollowed out into a small chamber.  A small
+window is cut into the back wall, normally covered with thick wooden
+shutters that currently hang loosely open.  A small wooden table and a rough
+wooden chair occupy the far corner.  Empty wooden bowls and cups are neatly
+placed on the table.  A low wooden platform with a thin mattress is neatly
+covered with a dark black fur.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D EAST 4153 0 0
+~
+An overgrown platform lies to the east.
+~
+D SOUTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D WEST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  Half way up from
+the floor small windows are cut through the trunk, opening up the room to
+the elements.  
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of a soft dark fur are densely packed together in
+square patterns covering the entire floor.  
+~
+OWNER none~
+#4156
+An Overgrown Platform~
+This platform is completely covered in knee high vegetation left to grow
+unhindered as it advances.  All types of weeds and vines mix together making
+it a little difficult to walk around.  The platform nestles in a natural
+nook of a large branch, surrounding it.  Archways lead off to rooms in the
+trunk towards the south and west.  Large bolts stick out of the platform,
+attached to a rope bridge leading off to another platform to the east.  
+~
+trail
+D NORTH 4153 0 0
+~
+~
+D EAST 4159 0 0
+~
+A rope bridge sags out over the forest to the east.
+~
+D SOUTH 4158 AB 0
+~
+A door has been built into a large tree to the south.
+~
+D WEST 4157 0 0
+~
+A door has been built into a large tree to the west.
+~
+D UP 4208 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Tall ugly weeds have invaded this platform.  Dried out grey and brown
+twigs grab at the feet of any who pass.  
+~
+OWNER none~
+#4157
+A Dwelling in a Hollow Tree~
+The tree branch has been hollowed out into a small chamber.  A small
+window is cut into the back wall, normally covered with thick wooden
+shutters that currently hang loosely open.  A small wooden table and a rough
+wooden chair occupy the far corner.  Empty wooden bowls and cups are neatly
+placed on the table.  A low wooden platform with a thin mattress is neatly
+covered with a dark black fur.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D EAST 4156 0 0
+~
+An overgrown platform lies to the east.
+~
+D SOUTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D WEST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  Half way up from
+the floor small windows are cut through the trunk, opening up the room to
+the elements.  
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of a soft dark fur are densely packed together in
+square patterns covering the entire floor.  
+~
+OWNER none~
+#4158
+A Dwelling in a Hollow Tree~
+The tree branch has been hollowed out into a small chamber.  A small
+window is cut into the back wall, normally covered with thick wooden
+shutters that currently hang loosely open.  A small wooden table and a rough
+wooden chair occupy the far corner.  Empty wooden bowls and cups are neatly
+placed on the table.  A low wooden platform with a thin mattress is neatly
+covered with a dark black fur.  
+~
+inside
+ROOM INDOORS
+D NORTH 4156 AB 0
+~
+An overgrown platform lies to the north.
+~
+D EAST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D SOUTH 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  Half way up from
+the floor small windows are cut through the trunk, opening up the room to
+the elements.  
+~
+D WEST 0 0 0
+~
+Perfectly smooth walls meld with the floor and ceiling.  
+~
+D UP 0 0 0
+~
+The only flaw in the smooth ceiling is a small crystal globe placed in
+the center.  The crystal glows softly subtly brightening the room.  
+~
+D DOWN 0 0 0
+~
+Small thin pieces of a soft dark fur are densely packed together in
+square patterns covering the entire floor.  
+~
+OWNER none~
+#4159
+On a Rope Bridge~
+Long braided vines woven with thick boards provide an unsteady footpath
+between platforms.  A second set of ropes loosely hangs at waist height
+along each side of the bridge providing a railing.  Movement is slow with
+the entire structure oscillating up and down and the railings swinging back
+and forth.  The ropes are anchored to the wooden railing surrounding the
+platforms on both ends.  
+~
+trail
+D NORTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4160 0 0
+~
+A platform to the east stands before an immense, gnarled oak.
+~
+D SOUTH 0 0 0
+~
+The loose rope railing slowly sways back and forth in the breeze.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4156 0 0
+~
+An overgrown platform lies to the west.
+~
+D UP 4209 0 0
+~
+The open sky continues upwards.
+~
+OWNER none~
+#4160
+A Platform, Before a Gnarled Oak~
+Sturdy pieces of hardwood are laid out in a crisscross pattern.  A thick
+railing flows from the eastern trunk along the southern edge of the
+platform.  The railing sharply turns and runs along the western side with a
+small section removed.  Finally the railing turns back towards the eastern
+trunk melding with it.  The anchors for a large rope bridge are securely
+fastened to the railing with an intricate knotting scheme covered in a hard
+transparent material.  A large archway opens into the eastern trunk.  
+~
+trail
+D NORTH 0 0 0
+~
+The hard wooden railing runs along the edge of the platform.  The forest
+floor can be seen below, man-sized bushes reduced to motes far beneath this
+arbor paradise.  A short distance away the view is blocked by a thick branch
+reaching into the sky.  
+~
+D EAST 4161 0 0
+~
+A door leads into the gnarled oak to the east.
+~
+D SOUTH 0 0 0
+~
+The hard wooden railing runs along the edge of the platform.  The forest
+floor can be seen below, man-sized bushes reduced to motes far beneath this
+arbor paradise.  The view to the south is completely unobstructed, exposing
+the entire valley below.  
+~
+D WEST 4159 0 0
+~
+A rope bridge sags out over the forest to the west.
+~
+D UP 0 0 0
+~
+The sky is blocked by another platform directly above this one.  Large
+thick beams are placed in a crosswise pattern offering support to the
+platform above.  The platform appears to completely surround the trunk to
+the east.  
+~
+D DOWN 0 0 0
+~
+Long thick boards of a brilliant cherry hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4161
+A Foyer, Within the Gnarled Oak~
+The trunk has been hollowed out into a large circular chamber.  The
+chamber is engulfed in a soft glowing light produced by small globes jutting
+from the walls.  The floor has been painstakingly polished to a high sheen,
+reflecting the light and indicating small scuff marks leading from the
+western archway to the staircase spiraling up from the center of the room. 
+It appears that the room was carved from this great tree leaving the stairs
+intact.  
+~
+inside
+ROOM INDOORS
+D NORTH 4169 0 0
+~
+A small doorway lies to the north.
+~
+D EAST 4170 0 0
+~
+A small doorway lies to the east.
+~
+D SOUTH 0 0 0
+~
+Polished oak curves around the floor seamlessly.  Carvings of beautiful
+young sidhe women fill the entire wall.  
+~
+D WEST 4160 0 0
+~
+A door leads out of the tree to the west.
+~
+D UP 4171 0 0
+~
+A stairway carved into the inside wall ascends to the second level.
+~
+D DOWN 0 0 0
+~
+The floor smoothly melds into the arching walls.  The floor is polished
+to a high sheen, reflecting the soft light.  A large staircase fills the
+center of the room, spiraling upon itself as it climbs upwards.  
+~
+E staircase spiral stair stairs~
+The grand staircase encompasses most of the center of the room.  With
+each step it rises and swirls around a six foot diameter.  For each rotation
+it swiftly rises six feet.  There are no railings, however the steps are
+wide and one side is framed by a shaft that rises through the center of the
+trunk.  
+~
+OWNER none~
+#4162
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D EAST 4165 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 4163 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D DOWN 4182 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4163
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4162 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4164 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+A large tree trunk blocks your way.  
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D DOWN 4181 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4164
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4165 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D WEST 4163 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4180 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4165
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4166 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D SOUTH 4164 0 0
+~
+The open sky continues to the south.
+~
+D WEST 4162 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4183 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4166
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4167 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4165 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4184 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4167
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4168 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4166 0 0
+~
+The open sky continues southward.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4185 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4168
+High Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+Far to the north, great mountains climb towards the heavens.  
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D SOUTH 4167 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4186 0 0
+~
+The open sky continues downward.
+~
+OWNER none~
+#4169
+A Library, Within the Gnarled Oak~
+The tree branch has been hollowed out into a large chamber.  A small
+window is cut into the back wall, normally covered with thick wooden
+shutters that currently hang loosely open.  The walls are covered with
+bookshelves from the floor to the ceiling, stacked to the point of exploding
+with books of all colors.  A large globe fills the center of the ceiling
+emitting a soft light.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Bookcases cover the entire wall, with the exception of a small section in
+the center that surrounds a small window.  Through the window, a short
+distance away another branch with a window can be seen.  
+~
+D EAST 0 0 0
+~
+Bookcases cover the entire wall from floor to ceiling.  Various strange
+texts are packed throughout in some oblique order.  
+~
+D SOUTH 4161 0 0
+~
+A small doorway leads south into the foyer.
+~
+D WEST 0 0 0
+~
+Bookcases cover the entire wall from floor to ceiling.  Various strange
+texts are packed throughout in some oblique order.  
+~
+D UP 0 0 0
+~
+A large globe fills the center of the ceiling.  Small woven baskets hang
+from the ceiling filled with documents and books.  
+~
+D DOWN 0 0 0
+~
+The floor smoothly melds into the arching walls.  The floor is polished
+to a high sheen, reflecting the soft light.  
+~
+OWNER none~
+#4170
+A Bedroom, Within the Gnarled Oak~
+A large section of the trunk has been excavated into a simple bedroom. 
+The entire room is circular, following the outline of the trunk.  All
+surfaces have been painstakingly polished to a glossy finish.  A simple
+wooden frame of a deep cherry hardwood fills a side of the chamber.  A table
+and comfortable full backed chair made with the same hardwood are in the
+opposite corner.  A huge crystal globe rests comfortably in the ceiling,
+basking the entire chamber in a soft glow.  An archway towards the west
+leads out to the foyer.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The room arches outwards to follow the outline of the trunk that encases
+it.  The wall is smooth and polished so that it reflects the soft light.  
+~
+D EAST 0 0 0
+~
+The room arches outward to follow the outline of the trunk that encases
+it.  The wall is smooth and polished so that it reflects the soft light.  A
+large comfortable bed fills most of the wall.  
+~
+D SOUTH 0 0 0
+~
+The room arches outwards to follow the outline of the trunk that encases
+it.  The wall is smooth and polished so that it reflects the soft light.  
+~
+D WEST 4161 0 0
+~
+A small doorway leads west into the foyer.
+~
+D UP 0 0 0
+~
+A large crystal globe hangs down from the ceiling, glowing softly.  
+~
+D DOWN 0 0 0
+~
+The floor is covered with yellow and red hardwood in an intricate
+pattern.  A large yellow circle covers the center of the floor with wisps of
+red reaching out in a stylized pattern around the circle.  
+~
+E bed frame~
+A simple wooden frame made of a deep cherry hardwood and polished to a
+healthy glow.  The head of the bed is curved to fit snugly against the
+eastern wall of the room.  The frame has four posts carved into great paws
+similar in shape to a great lion.  Thin elegant sheets with embroidery cover
+a thick mattress filled with feathers.  
+~
+E chair~
+A high backed chair made from a deep cherry hardwood.  The chair is
+cushioned and covered with a soft velvety gold cover on the seat and back. 
+The legs are carved into great lion paws.  
+~
+E desk circular~
+A large circular desk stands adjacent to the curved walls of this
+chamber.  The desk is made from a deep cherry hardwood, engraved with crests
+and highly polished.  
+~
+OWNER none~
+#4171
+A Landing, Within the Gnarled Oak~
+The chamber is bereft of any articles, and yet is elegant in its
+simpleness.  The walls and floor are polished to the extent that they glow. 
+The sweeping walls are only interrupted by a small archway to the east.  Not
+a single seam is distinguishable along the floor, nor where the walls merge
+with the floor.  A large opening is in the center, where the floor smoothly
+joins with a step leading to the room below.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D EAST 4172 0 0
+~
+An archway leads east onto a balcony.
+~
+D SOUTH 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D WEST 0 0 0
+~
+The floor smoothly melds into the arching walls.  The walls are polished
+to a high sheen reflecting much of the light.  
+~
+D UP 0 0 0
+~
+Well above your head the tree begins to close in, making travel upwards
+inside the tree impossible.  
+~
+D DOWN 4161 0 0
+~
+A stairway carved into the inside wall leads down into the foyer.
+~
+OWNER none~
+#4172
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the eastern
+edge of the platform.  A grand archway is cut into the huge trunk to the
+west.  
+~
+trail
+D NORTH 4173 0 0
+~
+The balcony continues to the north.
+~
+D EAST 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the east is completely
+unobstructed, exposing the entire valley below.  
+~
+D SOUTH 4179 0 0
+~
+The balcony continues to the south.
+~
+D WEST 4171 0 0
+~
+An archway leads into the tree to the west.
+~
+D UP 4196 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4173
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the eastern
+edge of the platform.  The railing sharply turns and continues along the
+northern side.  Large trunks rise up and twist off in the distance.  
+~
+trail
+D NORTH 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the north is completely
+unobstructed, exposing the entire valley below and great mountains far in
+the distance.  
+~
+D EAST 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the east is completely
+unobstructed, exposing the entire valley below.  
+~
+D SOUTH 4172 0 0
+~
+The balcony continues to the south.
+~
+D WEST 4174 0 0
+~
+The balcony continues to the west.
+~
+D UP 4218 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4174
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the northern
+edge of the platform.  The southern side of the platform is completely
+protected by a large trunk.  
+~
+trail
+D NORTH 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  A short distance away another branch reaches
+upwards towards the heavens.  
+~
+D EAST 4173 0 0
+~
+The balcony continues to the east.
+~
+D SOUTH 0 0 0
+~
+A platform flows into the great trunk.  The surface of the trunk is
+marred by bumps and cracks showing some indication of the age of this great
+tree.  
+~
+D WEST 4175 0 0
+~
+The balcony continues to the west.
+~
+D UP 4219 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4175
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the northern
+edge of the platform.  The railing sharply turns and continues along the
+western side.  Large trunks rise up and twist off in the distance.  
+~
+trail
+D NORTH 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  A short distance away another branch reaches
+upwards towards the heavens blocking the view.  
+~
+D EAST 4174 0 0
+~
+The balcony continues to the east.
+~
+D SOUTH 4176 0 0
+~
+The balcony continues to the south.
+~
+D WEST 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  A short distance away another branch reaches
+upwards towards the heavens blocking the view.  
+~
+D UP 4220 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4176
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the western
+edge of the platform.  The eastern side of the platform is completely
+protected by a large trunk.  
+~
+trail
+D NORTH 4175 0 0
+~
+The balcony continues to the north.
+~
+D EAST 0 0 0
+~
+A platform flows into the great trunk.  The surface of the trunk is
+marred by bumps and cracks showing some indication of the age of this great
+tree.  
+~
+D SOUTH 4177 0 0
+~
+The balcony continues to the south.
+~
+D WEST 4209 0 0
+~
+A short four foot wall follows the edge of the platform closely.  A short
+distance below another platform joins with the trunk and connects to a
+sprawling rope bridge network.  
+~
+D UP 4221 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4177
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the western
+edge of the platform.  The railing sharply turns and continues along the
+southern side.  Large trunks rise up and twist off in the distance.  
+~
+trail
+D NORTH 4176 0 0
+~
+The balcony continues to the north.
+~
+D EAST 4178 0 0
+~
+The balcony continues to the east.
+~
+D SOUTH 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the south is completely
+unobstructed, exposing the entire valley below.  
+~
+D WEST 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  A short
+distance below another platform joins with the trunk and connects to a
+sprawling city of platforms and rope bridges.  
+~
+D UP 4222 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4178
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the southern
+edge of the platform.  The northern side of the platform is completely
+protected by a large trunk.  
+~
+trail
+D NORTH 0 0 0
+~
+A platform flows into the great trunk.  The surface of the trunk is
+marred by bumps and cracks showing some indication of the age of this great
+tree.  
+~
+D EAST 4179 0 0
+~
+The balcony continues to the east.
+~
+D SOUTH 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the south is completely
+unobstructed, exposing the entire valley below.  
+~
+D WEST 4177 0 0
+~
+The balcony continues to the west.
+~
+D UP 4223 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4179
+A Balcony on the Gnarled Oak~
+Sturdy pieces of a thick hardwood are laid out in a crisscross pattern
+creating an impregnable surface.  A thick railing flows along the southern
+edge of the platform.  The railing sharply turns and continues along the
+eastern side.  The view to the south of the valley far below is
+breathtaking.  
+~
+trail
+D NORTH 4172 0 0
+~
+The balcony continues to the north.
+~
+D EAST 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the east is completely
+unobstructed, exposing the entire valley below.  
+~
+D SOUTH 0 0 0
+~
+A short four foot wall follows the edge of the platform closely.  The
+forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  The view to the south is completely
+unobstructed, exposing the entire valley below.  
+~
+D WEST 4178 0 0
+~
+The balcony continues to the west.
+~
+D UP 4224 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 0 0 0
+~
+Long thick boards of a beautiful yellow hardwood are carefully placed
+side by side, making a sturdy platform that should be able to weather
+anything.  
+~
+OWNER none~
+#4180
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4183 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.
+~
+D WEST 4181 0 0
+~
+The open sky continues to the west.
+~
+D UP 4164 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4101 0 0
+~
+A small platform dwindles from view below.
+~
+OWNER none~
+#4181
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4182 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4180 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4163 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4102 0 0
+~
+A small platform dwindles from view below.
+~
+OWNER none~
+#4182
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4183 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 4181 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4162 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4103 0 0
+~
+A small platform dwindles from view below.
+~
+OWNER none~
+#4183
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4184 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D SOUTH 4180 0 0
+~
+The open sky continues to the south.
+~
+D WEST 4182 0 0
+~
+The open sky continues to the west.
+~
+D UP 4165 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4104 0 0
+~
+A small platform dwindles from view below.
+~
+OWNER none~
+#4184
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4185 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4183 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+ ~
+D UP 4166 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4105 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4185
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4186 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4184 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4167 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4106 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4186
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+ ~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D SOUTH 4185 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D UP 4168 0 0
+~
+The open sky continues upwards.
+~
+D DOWN 4107 0 0
+~
+A small platform dwindles from view below.
+~
+OWNER none~
+#4187
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4188 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4200 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D DOWN 4110 0 0
+~
+A wide platform dwindles from view below.
+~
+OWNER none~
+#4188
+Above a Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4189 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4199 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 4187 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4111 0 0
+~
+A wide platform dwindles from view below.
+~
+OWNER none~
+#4189
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4190 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4188 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4112 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4190
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4191 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4189 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4113 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4191
+Above a Cliffside Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4192 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A flat roof is made from solid pieces of oak.  A large nest rests near
+the corner, hiding some happily chirping birds.  
+~
+D SOUTH 4190 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D DOWN 4114 0 0
+~
+A cliffside platform dwindles from view below.
+~
+OWNER none~
+#4192
+Above a Cliffside Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4193 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A flat roof is made from solid pieces of oak.  
+~
+D SOUTH 4191 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D DOWN 4117 0 0
+~
+A cliffside platform dwindles from view below.
+~
+OWNER none~
+#4193
+Above a Rocky Trail on the Mountainside~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4194 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D SOUTH 4192 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D DOWN 4120 0 0
+~
+A rocky trail dwindles from view below.
+~
+OWNER none~
+#4194
+Above a Small Junction on the Mountainside~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D EAST 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  Below is the peak of a large tent
+made from animal skins.  
+~
+D SOUTH 4193 0 0
+~
+The open sky continues to the south.
+~
+D WEST 4195 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4121 0 0
+~
+A small pool dwindles from view below.
+~
+OWNER none~
+#4195
+Above a Rocky Path~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D EAST 4194 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D WEST 0 0 0
+~
+A steep cliff rises swiftly towards the heavens.  There is no visible
+path through the solid surface of rock.  
+~
+D DOWN 4123 0 0
+~
+A rocky path dwindles from view below.
+~
+OWNER none~
+#4196
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4218 0 0
+~
+The open sky continues northward.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4224 0 0
+~
+The open sky continues southward.
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D DOWN 4172 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#4199
+Above a Wide Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4200 0 0
+~
+The open sky continues to the south.
+~
+D WEST 4188 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4127 0 0
+~
+A wide platform dwindles from view below.
+~
+OWNER none~
+#4200
+Above a Wide Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4199 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4201 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4187 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4128 0 0
+~
+A wide platform dwindles from view below.
+~
+OWNER none~
+#4201
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4202 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4200 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4129 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4202
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4203 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4201 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4130 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4203
+Above a Wide Boulevard of Planks~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4204 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4211 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 4205 0 0
+~
+The open sky continues to the east.
+~
+D WEST 4202 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4131 0 0
+~
+A wide boulevard dwindles from view below.
+~
+OWNER none~
+#4204
+Above a Platform Overlooking the Forest~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D SOUTH 4203 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4132 0 0
+~
+A platform dwindles from view below.
+~
+OWNER none~
+#4205
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4203 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D SOUTH 4206 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4151 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4206
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4205 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4207 0 0
+~
+The open sky continues southward.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4152 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4207
+Above an Overgrown Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4206 0 0
+~
+The open sky continues northward.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D SOUTH 4208 0 0
+~
+The open sky continues southward.
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D DOWN 4153 0 0
+~
+An platform dwindles from view below.
+~
+OWNER none~
+#4208
+Above an Overgrown Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4207 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4209 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D DOWN 4156 0 0
+~
+An overgrown platform dwindles from view below.
+~
+OWNER none~
+#4209
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D EAST 4176 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4208 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4159 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4210
+Above a Wide Boulevard of Planks~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4212 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D WEST 4211 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4136 0 0
+~
+A wide boulevard dwindles from view below.
+~
+OWNER none~
+#4211
+Above a Wide Boulevard of Planks~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.
+~
+D EAST 4210 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.
+~
+D WEST 4203 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4133 0 0
+~
+A wide boulevard dwindles from view below.
+~
+OWNER none~
+#4212
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4213 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4210 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.
+~
+D DOWN 4139 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4213
+Above a Small Platform~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4215 0 0
+~
+The open sky continues to the north.
+~
+D EAST 4214 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 4212 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D DOWN 4140 0 0
+~
+A small platform dwindles from view below.
+~
+OWNER none~
+#4214
+Above the Valley Overlook~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The entire valley can be seen far below.    
+~
+D EAST 0 0 0
+~
+The entire valley can be seen far below.    
+~
+D SOUTH 0 0 0
+~
+The entire valley can be seen far below.    
+~
+D WEST 4213 0 0
+~
+~
+D DOWN 4142 0 0
+~
+~
+OWNER none~
+#4215
+Above a Narrow Plank~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4213 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4143 0 0
+~
+A narrow plank dwindles from view below.
+~
+OWNER none~
+#4216
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4217 0 0
+~
+The open sky coninues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  Little specks
+glow deep within small crevices within the bark.  
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4147 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4217
+Above a Rope Bridge~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4216 0 0
+~
+The open sky coninues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4148 0 0
+~
+A rope bridge dwindles from view below.
+~
+OWNER none~
+#4218
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 4196 0 0
+~
+The open sky continues to the south.
+~
+D WEST 4219 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4173 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#4219
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4218 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D WEST 4220 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4174 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#4220
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D EAST 4219 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 4221 0 0
+~
+The open sky continues southward.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4175 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#4221
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4220 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D SOUTH 4222 0 0
+~
+The open sky continues to the south.
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4176 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#4222
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4221 0 0
+~
+The open sky continues northward.
+~
+D EAST 4223 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D DOWN 4177 0 0
+~
+A Balcony dwindles from view below.
+~
+OWNER none~
+#4223
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 0 0 0
+~
+A large gnarled tree trunk covered with light green moss.  
+~
+D EAST 4224 0 0
+~
+The open sky continues to the east.
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4222 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4178 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#4224
+Above a Balcony~
+The surroundings are empty and open to the elements with the sky fully
+visible.  Through the branches you catch glimpses of people moving around
+the settlement beneath you and the ground far below.  Cooler than within the
+settlement the air here is thin and the mountains along with the forests in
+the distance are remarkably clear.  
+~
+air
+D NORTH 4196 0 0
+~
+The open sky continues to the north.
+~
+D EAST 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D SOUTH 0 0 0
+~
+The forest floor can be seen below, man-sized bushes reduced to motes far
+beneath this arbor paradise.  
+~
+D WEST 4223 0 0
+~
+The open sky continues to the west.
+~
+D DOWN 4179 0 0
+~
+A balcony dwindles from view below.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+OBJECT 4132 TO 4100
+OBJECT 4132 TO 4101
+MOB 4101 TO 4103 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+MOB 4105 TO 4104 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4107 HEAD
+MOB 4101 TO 4107 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+MOB 4106 TO 4110 GLIMIT 2 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4107 HEAD
+MOB 4108 TO 4110 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4122 WIELD
+MOB 4102 TO 4114 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+MOB 4105 TO 4114 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4107 HEAD
+MOB 4119 TO 4115 GLIMIT 1 LLIMIT 1
+EQUIP 4119 WIELD
+EQUIP 4114 HEAD
+EQUIP 4120 LEGS
+EQUIP 4121 WIELD
+MOB 4118 TO 4115 GLIMIT 1 LLIMIT 1
+EQUIP 4117 BODY
+EQUIP 4118 WIELD
+FOLLOW 4119 4118
+MOB 4108 TO 4116 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4122 WIELD
+MOB 4127 TO 4116 GLIMIT 5 LLIMIT 1
+MOB 4109 TO 4118 GLIMIT 4 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4109 HEAD
+MOB 4125 TO 4118 GLIMIT 6 LLIMIT 1
+MOB 4126 TO 4118 GLIMIT 5 LLIMIT 1
+MOB 4125 TO 4119 GLIMIT 6 LLIMIT 1
+MOB 4126 TO 4119 GLIMIT 5 LLIMIT 1
+MOB 4128 TO 4119 GLIMIT 4 LLIMIT 1
+DOOR 4121 east CLOSED
+OBJECT 4100 TO 4121
+MOB 4107 TO 4121 GLIMIT 1 LLIMIT 1
+GIVE 4108
+EQUIP 4106 ABOUT
+DOOR 4122 west CLOSED
+MOB 4114 TO 4122 GLIMIT 1 LLIMIT 1
+EQUIP 4119 WIELD
+EQUIP 4110 ABOUT
+MOB 4109 TO 4128 GLIMIT 4 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4109 HEAD
+MOB 4105 TO 4129 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4107 HEAD
+MOB 4101 TO 4133 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+MOB 4125 TO 4134 GLIMIT 6 LLIMIT 1
+MOB 4127 TO 4134 GLIMIT 5 LLIMIT 1
+MOB 4125 TO 4135 GLIMIT 6 LLIMIT 1
+MOB 4126 TO 4135 GLIMIT 5 LLIMIT 1
+MOB 4127 TO 4135 GLIMIT 5 LLIMIT 1
+MOB 4128 TO 4135 GLIMIT 4 LLIMIT 1
+MOB 4115 TO 4137 GLIMIT 1 LLIMIT 1
+GIVE 4123
+GIVE 4124
+MOB 4112 TO 4138 GLIMIT 1 LLIMIT 1
+EQUIP 4112 BODY
+EQUIP 4113 WIELD
+MOB 4113 TO 4138 GLIMIT 1 LLIMIT 1
+GIVE 4125
+GIVE 4126
+GIVE 4127
+MOB 4130 TO 4138 GLIMIT 1 LLIMIT 1
+GIVE 4125
+GIVE 4126
+GIVE 4127
+MOB 4102 TO 4140 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+MOB 4111 TO 4141 GLIMIT 2 LLIMIT 1
+EQUIP 4105 WRISTONE
+EQUIP 4110 ABOUT
+EQUIP 4111 HEAD
+EQUIP 4122 WIELD
+MOB 4133 TO 4142 GLIMIT 1 LLIMIT 1
+EQUIP 4122 WIELD
+DOOR 4144 west CLOSED
+DOOR 4144 east CLOSED
+DOOR 4145 east CLOSED
+MOB 4103 TO 4145 GLIMIT 1 LLIMIT 1
+GIVE 4115
+GIVE 4128
+GIVE 4129
+DOOR 4146 west CLOSED
+MOB 4110 TO 4146 GLIMIT 3 LLIMIT 1
+EQUIP 4105 WRISTTWO
+EQUIP 4110 ABOUT
+OBJECT 4104 TO 4150
+MOB 4129 TO 4150 GLIMIT 1 LLIMIT 1
+EQUIP 4116 ABOUT
+EQUIP 4131 HOLD
+MOB 4108 TO 4151 GLIMIT 3 LLIMIT 1
+MOB 4102 TO 4153 GLIMIT 3 LLIMIT 1
+EQUIP 4106 ABOUT
+MOB 4125 TO 4154 GLIMIT 6 LLIMIT 1
+MOB 4126 TO 4154 GLIMIT 5 LLIMIT 1
+MOB 4127 TO 4154 GLIMIT 5 LLIMIT 1
+MOB 4109 TO 4155 GLIMIT 4 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4109 HEAD
+MOB 4125 TO 4155 GLIMIT 6 LLIMIT 1
+MOB 4128 TO 4155 GLIMIT 4 LLIMIT 1
+DOOR 4156 south CLOSED
+MOB 4109 TO 4157 GLIMIT 4 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4109 HEAD
+MOB 4126 TO 4157 GLIMIT 5 LLIMIT 1
+MOB 4128 TO 4157 GLIMIT 4 LLIMIT 1
+MOB 4127 TO 4157 GLIMIT 5 LLIMIT 1
+DOOR 4158 north CLOSED
+MOB 4110 TO 4158 GLIMIT 3 LLIMIT 1
+EQUIP 4105 WRISTTWO
+EQUIP 4110 ABOUT
+EQUIP 4122 WIELD
+MOB 4111 TO 4158 GLIMIT 2 LLIMIT 1
+EQUIP 4105 WRISTONE
+EQUIP 4110 ABOUT
+EQUIP 4111 HEAD
+EQUIP 4122 WIELD
+MOB 4106 TO 4160 GLIMIT 2 LLIMIT 1
+EQUIP 4106 ABOUT
+EQUIP 4107 HEAD
+MOB 4100 TO 4162 GLIMIT 7 LLIMIT 1
+MOB 4104 TO 4162 GLIMIT 5 LLIMIT 1
+MOB 4100 TO 4163 GLIMIT 7 LLIMIT 1
+MOB 4104 TO 4166 GLIMIT 5 LLIMIT 1
+MOB 4100 TO 4168 GLIMIT 7 LLIMIT 1
+MOB 4116 TO 4170 GLIMIT 1 LLIMIT 1
+EQUIP 4116 ABOUT
+EQUIP 4105 WRISTTWO
+EQUIP 4105 WRISTONE
+EQUIP 4114 HEAD
+EQUIP 4130 HOLD
+MOB 4123 TO 4170 GLIMIT 1 LLIMIT 1
+MOB 4124 TO 4173 GLIMIT 4 LLIMIT 1
+MOB 4117 TO 4173 GLIMIT 6 LLIMIT 1
+MOB 4117 TO 4175 GLIMIT 6 LLIMIT 1
+MOB 4131 TO 4175 GLIMIT 3 LLIMIT 1
+MOB 4132 TO 4176 GLIMIT 2 LLIMIT 1
+EQUIP 4116 ABOUT
+MOB 4124 TO 4176 GLIMIT 4 LLIMIT 1
+MOB 4117 TO 4176 GLIMIT 6 LLIMIT 1
+MOB 4117 TO 4178 GLIMIT 6 LLIMIT 2
+MOB 4131 TO 4178 GLIMIT 3 LLIMIT 1
+MOB 4132 TO 4179 GLIMIT 2 LLIMIT 1
+EQUIP 4116 ABOUT
+MOB 4124 TO 4179 GLIMIT 4 LLIMIT 2
+MOB 4131 TO 4179 GLIMIT 3 LLIMIT 1
+MOB 4117 TO 4179 GLIMIT 6 LLIMIT 1
+MOB 4104 TO 4182 GLIMIT 5 LLIMIT 1
+MOB 4104 TO 4185 GLIMIT 5 LLIMIT 1
+MOB 4100 TO 4199 GLIMIT 7 LLIMIT 1
+MOB 4104 TO 4201 GLIMIT 5 LLIMIT 1
+MOB 4100 TO 4203 GLIMIT 7 LLIMIT 1
+MOB 4100 TO 4208 GLIMIT 7 LLIMIT 1
+MOB 4100 TO 4214 GLIMIT 7 LLIMIT 1
+S
+
+#IMPROGS
+M 4114 greet_prog greet_prog_profteacher
+R 4123 entry_prog entry_prog_sidhe_ankle
+I 4132 verb_prog verb_prog_sidhe_climb_vine
+END
+#SPECS
+END
+#$

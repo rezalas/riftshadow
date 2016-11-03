@@ -1,0 +1,2811 @@
+#AREA
+drowcity.are~
+Khin'Ehstrun, the Drow City~
+Jenavia~
+0 0
+29200 29375
+unopened
+none
+0
+1
+Jenavia~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#29371
+a suit of Khin'Ehstrun battle armor~
+a suit of Khin'Ehstrun battle armor~
+A scarred suit of Khin'Ehstrun battle armor~
+armor
+bone~
+98 101 97 103 0
+55 0 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM DARK
+APPLY AC 348
+APPLY DAMROLL 35
+APPLY HITROLL 32
+APPLY HP 368
+APPLY MANA 452
+LIMIT 0
+TIMER 0
+
+#29372
+the battle flail called 'Sacrifice'~
+the battle flail called 'Sacrifice'~
+A dark and sinister flail lies here~
+weapon
+iron~
+flail 12 14 defilement C
+1 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+APPLY HITROLL 24
+APPLY DAMROLL 31
+APPLY SAVES -26
+APPLY MANA 568
+LIMIT 0
+TIMER 0
+NOTES done
+ 
+ 
+~
+
+#29373
+the Talisman of the Spider Dragon~
+the Talisman of the Spider Dragon~
+A dark and powerful talisman~
+jewelry
+unknown~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM HUM
+ITEM DARK
+ITEM INVIS
+ITEM BLESS
+APPLY DAMROLL 21
+APPLY AC 46
+APPLY MANA 145
+APPLY SAVES -53
+LIMIT 0
+TIMER 0
+
+#29374
+the Signet Ring of the House of Khin'Ehstrun~
+the Signet Ring of the House of Khin'Ehstrun~
+A powerful ring of beauty and fear~
+jewelry
+adamantite~
+0 0 0 0 0
+55 0 0 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM DARK
+ITEM BLESS
+APPLY HP 46
+APPLY AC 14
+APPLY DAMROLL 15
+APPLY HITROLL 23
+APPLY MANA 124
+APPLY MOVE 245
+APPLY NONE -34
+LIMIT 0
+TIMER 0
+
+#29375
+the barbed whip called 'Scourge of the Drow'~
+the barbed whip called 'Scourge of the Drow'~
+A long, bloody whip~
+weapon
+bone~
+whip 8 10 acbite H
+55 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM EVIL
+ITEM NODROP
+ITEM NODISARM
+ITEM NOUNCURSE
+APPLY DAMROLL 40
+APPLY HITROLL 52
+APPLY MANA 435
+APPLY HP 219
+APPLY NONE -59
+APPLY AC 246
+LIMIT 0
+VERB none
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#29200
+Darkness~
+Pitch blackness envelops everything here.  Your eyes adjust slightly but
+not good enough to see details.  You feel some loose pebbles on the ground. 
+There are a couple of large slabs of broken stone lying about.  Besides that
+there's just blackness.  You can make your way north or south of here.  
+~
+city
+ROOM INDOORS
+ROOM LAW
+D NORTH 0 0 0
+door~
+Nothing but darkness.  You might as well be blind.  You get an uneasy
+feeling looking this way though.  
+~
+D EAST 0 0 0
+door~
+Darkness.
+~
+D SOUTH 29201 0 0
+door~
+There appears to be a trail in this direction.  
+~
+D WEST 0 0 0
+door~
+If you squint you can just make out some slabs of stone on the ground.  
+~
+D UP 0 0 0
+door~
+You must have fallen a long distance because you can't see ledge.  There
+is only blackness.  
+~
+D DOWN 0 0 0
+door~
+The stone ground is scattered with small pebbles save a narrow path
+running north-south.  There are a few broken stone slabs to west.  
+~
+E stone~
+This area written by Mynhra.  For use on Rift Shadow only.  
+~
+OWNER none~
+#29201
+A Path Leading to Khin'Ehstrun~
+There seems to be a bit more light here though it is still quite dark. 
+Stalagmites rise up from the ground.  Along the west and south they are
+quite dense making passage in these directions impossible.  The air is thick
+and smells of earth and minerals.  Occasionally, off in the distance, the
+sound of dripping water can be heard.  The path continues north into
+darkness or to the east.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29200 0 0
+door~
+Darkness.
+~
+D EAST 29202 0 0
+door~
+The trail leads this way.  There seems to be some kind of structure just
+north of the trail but it is hard to make out.  
+~
+D SOUTH 0 0 0
+door~
+You can see the top of the stalagmite wall here but you cannot reach it. 
+It is relatively smooth from endless centuries of water erosion and would be
+impossible to climb.  Beyond the wall and to the west you can make out some
+kind of structure.  You can't really tell what it is but it is high in the
+air.  
+~
+D WEST 0 0 0
+door~
+The natural earthen wall rises up as far as you can see... or feel for
+that matter.  It is relatively smooth from water erosion and would be
+impossible to climb.  
+~
+D UP 0 0 0
+door~
+Darkness.
+~
+D DOWN 0 0 0
+door~
+The ground is worn smooth save a few loose stones.  
+~
+OWNER none~
+#29202
+A Junction~
+There is a three-way junction here.  The air is damp and musky.  Light
+comes in from the east though it is unclear from what.  Stalagmites are
+scattered about to the north.  None of them are very tall but they are sharp
+and covered with slimy water making travel in this direction impossible. 
+Both east and west are clear exits and a lesser traveled path leaves to the
+south.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+When you look to the east a bit you can see a tall structure resembling a
+tower of some kind.  
+~
+D EAST 29208 0 0
+door~
+There is more light coming from this direction but it is still very dim. 
+Just north of the trail you see a tower.  
+~
+D SOUTH 29203 0 0
+door~
+Barely noticeable there is a small path leading in this direction.  
+~
+D WEST 29201 0 0
+door~
+You can just make out a trail in this direction.  Off in the distance and
+to the south you can see a tall structure of some kind.  
+~
+D UP 0 0 0
+door~
+Darkness.
+~
+D DOWN 0 0 0
+door~
+Judging by the lack of any rocks or debris you get the impression you are
+not the first to walk here.  
+~
+OWNER none~
+#29203
+A Path Leading to the Guard Tower~
+The path here bends to the north and west.  To the east mountainous
+stalagmites rise up into the darkness.  Though not quite as dense to the
+south passage in this direction is impossible.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29202 0 0
+door~
+You can make out a trail in this direction.
+~
+D EAST 0 0 0
+door~
+Stalagmites rise up from the stone here.
+~
+D SOUTH 0 0 0
+door~
+Stalagmites rise up from the stone ground here.  
+~
+D WEST 29204 0 0
+door~
+A trail leads in the direction.  In the distance you can see a tower.
+~
+D UP 0 0 0
+door~
+Darkness.
+~
+D DOWN 0 0 0
+door~
+The path is narrow but clear of any debris save a few loose stones.  
+~
+OWNER none~
+#29204
+Just Before a Guard Tower~
+The trail continues east and west here.  Unlike most of the natural
+stalagmite walls here the wall to the north seems to have been constructed. 
+Though it looks ancient and eroded' by time it is still quite solid. 
+Stalagmites of various sizes are scattered to the south making travel here
+impossible but a low roar can be heard if you listen closely.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+There is a stone wall here.  You can see the top but you can't reach it. 
+It is quite smooth and would be impossible to climb.  
+~
+D EAST 29203 0 0
+door~
+You can make out a trail in this direction.
+~
+D SOUTH 0 0 0
+door~
+Several stalagmites rise from the ground here.  In the distance off to
+the east you can make out a tower of some kind.  
+~
+D WEST 29205 0 0
+door~
+You see a trail in this direction.  There is a large tower constructed here.
+~
+D UP 0 0 0
+door~
+Darkness.
+~
+D DOWN 0 0 0
+door~
+There are a few scattered stones about but nothing of interest.  
+~
+OWNER none~
+#29205
+Lower Level of the South-Entrance Guard Tower~
+A huge tower is constructed here.  This room is circular and the stone
+walls fully enclose the area except for the exit to the east.  The second
+level is visable from here but it is too dark to see any farther.  Upon
+closer inspection you see a hole in the second level floor.  There are no
+steps or ladders of any kind.  There is, however, movement on the second
+level so there must be a way up.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29204 0 0
+door~
+~
+D UP 29206 0 0
+door~
+Far above the floor is the second level.  There is a hole in the floor
+above.  But how do you get to it?  
+~
+OWNER none~
+#29206
+Second Level of the South-Entrance Guard Tower~
+This level is farther up than it appears from the bottom.  Guards are stationed here at all times to watch for intruders.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D UP 29207 0 0
+door~
+~
+D DOWN 29205 0 0
+door~
+~
+OWNER none~
+#29207
+Top of the South-Entrance Guard Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D DOWN 29206 0 0
+door~
+~
+OWNER none~
+#29208
+A Junction~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29209 0 0
+door~
+~
+D EAST 29213 0 0
+door~
+~
+D WEST 29202 0 0
+door~
+~
+OWNER none~
+#29209
+Just Before a Guard Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29210 0 0
+door~
+~
+D SOUTH 29208 0 0
+door~
+~
+OWNER none~
+#29210
+Bottom of the West-Entrance Guard Tower~
+A huge tower is constructed here.  This room is circular and the stone
+walls fully enclose the area except for the exit to the south.  The second
+level is visable from here but it is too dark to see any farther.  Upon
+closer inspection you see a hole in the second level floor.  There are no
+steps or ladders of any kind.  There is, however, movement on the second
+level so there must be a way up.  
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29209 0 0
+door~
+~
+D UP 29211 0 0
+door~
+~
+OWNER none~
+#29211
+Second Level of the West-Entrance Guard Tower~
+~
+unused
+D UP 29212 0 0
+door~
+~
+D DOWN 29210 0 0
+door~
+~
+OWNER none~
+#29212
+Top of the West-Entrance Guard Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D DOWN 29211 0 0
+door~
+~
+OWNER none~
+#29213
+Outside the Gates of Khin'Ehstrun~
+~
+unused
+D EAST 29214 AC 0
+door~
+~
+D WEST 29208 0 0
+door~
+~
+OWNER none~
+#29214
+Inside the Gates of Khin'Ehstrun~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29215 0 0
+door~
+~
+D EAST 29217 0 0
+door~
+~
+D SOUTH 29216 0 0
+door~
+~
+D WEST 29213 AC 0
+door~
+~
+OWNER none~
+#29215
+Guard Station~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29214 0 0
+door~
+~
+OWNER none~
+#29216
+Guard Station~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29214 0 0
+door~
+~
+OWNER none~
+#29217
+A Turn in the Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29218 0 0
+door~
+~
+D WEST 29214 0 0
+door~
+~
+OWNER none~
+#29218
+A Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29217 0 0
+door~
+~
+D SOUTH 29219 0 0
+door~
+~
+OWNER none~
+#29219
+A Turn in the Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29218 0 0
+door~
+~
+D EAST 29220 0 0
+door~
+~
+OWNER none~
+#29220
+A Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29221 0 0
+door~
+~
+D WEST 29219 0 0
+door~
+~
+OWNER none~
+#29221
+A Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29222 0 0
+door~
+~
+D WEST 29220 0 0
+door~
+~
+OWNER none~
+#29222
+A Turn in the Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29223 0 0
+door~
+~
+D WEST 29221 0 0
+door~
+~
+OWNER none~
+#29223
+A Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29222 0 0
+door~
+~
+D SOUTH 29224 0 0
+door~
+~
+OWNER none~
+#29224
+A Junction in the Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29223 0 0
+door~
+~
+D EAST 29270 0 0
+door~
+~
+D SOUTH 29225 0 0
+door~
+~
+OWNER none~
+#29225
+A Junction in the Broken Stone Path~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29224 0 0
+door~
+~
+D WEST 29226 0 0
+door~
+~
+OWNER none~
+#29226
+A Gravel Trail~
+~
+city
+D EAST 29225 0 0
+door~
+~
+D WEST 29227 0 0
+door~
+~
+OWNER none~
+#29227
+A Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29228 A 0
+door~
+~
+D EAST 29226 0 0
+door~
+~
+D WEST 29232 0 0
+door~
+~
+OWNER none~
+#29228
+The Slavemaster's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29231 0 0
+door~
+~
+D EAST 29229 0 0
+door~
+~
+D SOUTH 29227 0 0
+door~
+~
+OWNER none~
+#29229
+Dining Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29230 0 0
+door~
+~
+D WEST 29228 0 0
+door~
+~
+OWNER none~
+#29230
+Bedroom~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29229 0 0
+door~
+~
+OWNER none~
+#29231
+Storage Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29228 0 0
+door~
+~
+OWNER none~
+#29232
+A Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29227 0 0
+door~
+~
+D WEST 29233 0 0
+door~
+~
+OWNER none~
+#29233
+A Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29232 0 0
+door~
+~
+D WEST 29234 0 0
+door~
+~
+OWNER none~
+#29234
+A Fork in the Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29235 0 0
+door~
+~
+D EAST 29233 0 0
+door~
+~
+D SOUTH 29240 0 0
+door~
+~
+OWNER none~
+#29235
+A Bend in the Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29234 0 0
+door~
+~
+D WEST 29236 0 0
+door~
+~
+OWNER none~
+#29236
+Just Before a Watch Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29235 0 0
+door~
+~
+D WEST 29237 0 0
+door~
+~
+OWNER none~
+#29237
+Lower Level of a Watch Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29236 0 0
+door~
+~
+D UP 29238 0 0
+door~
+~
+OWNER none~
+#29238
+Second Level of a Watch Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D UP 29239 0 0
+door~
+~
+D DOWN 29237 0 0
+door~
+~
+OWNER none~
+#29239
+Top of a Watch Tower~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D DOWN 29238 0 0
+door~
+~
+OWNER none~
+#29240
+A Bend in the Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29234 0 0
+door~
+~
+D WEST 29241 0 0
+door~
+~
+OWNER none~
+#29241
+A Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29242 0 0
+door~
+~
+D EAST 29240 0 0
+door~
+~
+D SOUTH 29243 0 0
+door~
+~
+D WEST 29244 0 0
+door~
+~
+OWNER none~
+#29242
+A Guard Post~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29241 0 0
+door~
+~
+OWNER none~
+#29243
+A Guard Post~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29241 0 0
+door~
+~
+OWNER none~
+#29244
+A Gravel Trail~
+~
+city
+ROOM INDOORS
+ROOM NO_SUMMON_FROM
+D EAST 29241 0 0
+door~
+~
+D WEST 29245 0 0
+door~
+~
+OWNER none~
+#29245
+Outside the Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29244 0 0
+door~
+~
+D SOUTH 29246 0 0
+door~
+~
+D WEST 29248 0 0
+door~
+~
+OWNER none~
+#29246
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29245 0 0
+door~
+~
+D SOUTH 29247 0 0
+door~
+~
+D WEST 29249 0 0
+door~
+~
+OWNER none~
+#29247
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29246 0 0
+door~
+~
+OWNER none~
+#29248
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29252 0 0
+door~
+~
+D EAST 29245 0 0
+door~
+~
+D SOUTH 29249 0 0
+door~
+~
+D WEST 29254 0 0
+door~
+~
+OWNER none~
+#29249
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29248 0 0
+door~
+~
+D EAST 29246 0 0
+door~
+~
+D SOUTH 29250 0 0
+door~
+~
+D WEST 29255 0 0
+door~
+~
+OWNER none~
+#29250
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29249 0 0
+door~
+~
+D SOUTH 29251 0 0
+door~
+~
+D WEST 29256 0 0
+door~
+~
+OWNER none~
+#29251
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29250 0 0
+door~
+~
+OWNER none~
+#29252
+Orc Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29253 0 0
+door~
+~
+D SOUTH 29248 0 0
+door~
+~
+D WEST 29258 0 0
+door~
+~
+OWNER none~
+#29253
+Orc Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29252 0 0
+door~
+~
+OWNER none~
+#29254
+Amidst the Slave Grounds~
+~
+unused
+D NORTH 29258 0 0
+door~
+~
+D EAST 29248 0 0
+door~
+~
+D SOUTH 29255 0 0
+door~
+~
+D WEST 29261 0 0
+door~
+~
+OWNER none~
+#29255
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29254 0 0
+door~
+~
+D EAST 29249 0 0
+door~
+~
+D SOUTH 29256 0 0
+door~
+~
+D WEST 29262 0 0
+door~
+~
+OWNER none~
+#29256
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29255 0 0
+door~
+~
+D EAST 29250 0 0
+door~
+~
+D SOUTH 29257 0 0
+door~
+~
+D WEST 29263 0 0
+door~
+~
+OWNER none~
+#29257
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29256 0 0
+door~
+~
+D WEST 29264 0 0
+door~
+~
+OWNER none~
+#29258
+Orc Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29259 0 0
+door~
+~
+D EAST 29252 0 0
+door~
+~
+D SOUTH 29254 0 0
+door~
+~
+D WEST 29260 0 0
+door~
+~
+OWNER none~
+#29259
+Orc Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29258 0 0
+door~
+~
+OWNER none~
+#29260
+Orc Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29258 0 0
+door~
+~
+OWNER none~
+#29261
+Duergar Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29254 0 0
+door~
+~
+D SOUTH 29262 0 0
+door~
+~
+D WEST 29266 0 0
+door~
+~
+OWNER none~
+#29262
+Duergar Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29261 0 0
+door~
+~
+D EAST 29255 0 0
+door~
+~
+D SOUTH 29263 0 0
+door~
+~
+D WEST 29267 0 0
+door~
+~
+OWNER none~
+#29263
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29262 0 0
+door~
+~
+D EAST 29256 0 0
+door~
+~
+D SOUTH 29264 0 0
+door~
+~
+D WEST 29268 0 0
+door~
+~
+OWNER none~
+#29264
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29263 0 0
+door~
+~
+D EAST 29257 0 0
+door~
+~
+D SOUTH 29265 0 0
+door~
+~
+OWNER none~
+#29265
+Drow Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29264 0 0
+door~
+~
+OWNER none~
+#29266
+Duergar Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29261 0 0
+door~
+~
+OWNER none~
+#29267
+Duergar Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29262 0 0
+door~
+~
+D SOUTH 29268 0 0
+door~
+~
+D WEST 29269 0 0
+door~
+~
+OWNER none~
+#29268
+Duergar Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29267 0 0
+door~
+~
+D EAST 29263 0 0
+door~
+~
+OWNER none~
+#29269
+Duergar Slave Grounds~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29267 0 0
+door~
+~
+OWNER none~
+#29270
+Academy Walk~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29271 0 0
+door~
+~
+D WEST 29224 0 0
+door~
+~
+OWNER none~
+#29271
+Academy Walk~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29272 0 0
+door~
+~
+D WEST 29270 0 0
+door~
+~
+OWNER none~
+#29272
+Academy Walk~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29273 0 0
+door~
+~
+D WEST 29271 0 0
+door~
+~
+OWNER none~
+#29273
+Amidst the Great Academy Pillars~
+~
+unused
+D NORTH 29274 0 0
+door~
+~
+D EAST 29276 0 0
+door~
+~
+D SOUTH 29275 0 0
+door~
+~
+D WEST 29272 0 0
+door~
+~
+OWNER none~
+#29274
+Pillar of Battle~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29273 0 0
+door~
+~
+OWNER none~
+#29275
+Pillar of Worship~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29273 0 0
+door~
+~
+OWNER none~
+#29276
+Pillar of Sorcery~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D WEST 29273 0 0
+door~
+~
+D UP 29277 0 0
+door~
+~
+OWNER none~
+#29277
+Steps Leading the to Academy~
+~
+unused
+D EAST 29278 0 0
+door~
+~
+D DOWN 29276 0 0
+door~
+~
+OWNER none~
+#29278
+Steps Leading the to Academy~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D WEST 29277 0 0
+door~
+~
+D UP 29279 0 0
+door~
+~
+OWNER none~
+#29279
+Before the Great Academy Hall~
+~
+city
+D EAST 29280 0 0
+door~
+~
+D DOWN 29278 0 0
+door~
+~
+OWNER none~
+#29280
+Entrance of the Academy Hall~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29281 0 0
+door~
+~
+D EAST 29283 0 0
+door~
+~
+D SOUTH 29285 0 0
+door~
+~
+D WEST 29279 0 0
+door~
+~
+OWNER none~
+#29281
+The North-Western Hall~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29282 0 0
+door~
+~
+D SOUTH 29280 0 0
+door~
+~
+OWNER none~
+#29282
+The North-Eastern Hall~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29283 0 0
+door~
+~
+D WEST 29281 0 0
+door~
+~
+OWNER none~
+#29283
+The Great Academy Hall~
+~
+unused
+D NORTH 29282 0 0
+door~
+~
+D EAST 29286 0 0
+door~
+~
+D SOUTH 29284 0 0
+door~
+~
+D WEST 29280 0 0
+door~
+~
+OWNER none~
+#29284
+The South-Eastern Hall~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29283 0 0
+door~
+~
+D WEST 29285 0 0
+door~
+~
+OWNER none~
+#29285
+The South-Western Hall~
+~
+unused
+D NORTH 29280 0 0
+door~
+~
+D EAST 29284 0 0
+door~
+~
+OWNER none~
+#29286
+Academy Walk~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29287 0 0
+door~
+~
+D WEST 29283 0 0
+door~
+~
+OWNER none~
+#29287
+Academy Crossing~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29288 0 0
+door~
+~
+D WEST 29286 0 0
+door~
+~
+OWNER none~
+#29288
+Approaching Blaendis, Academy of Warriors~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29289 0 0
+door~
+~
+D SOUTH 29287 0 0
+door~
+~
+OWNER none~
+#29289
+Entrance to Blaendis, Warrior Academy~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29290 0 0
+door~
+~
+D SOUTH 29288 AB 0
+door~
+~
+OWNER none~
+#29290
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29299 0 0
+door~
+~
+D EAST 29293 0 0
+door~
+~
+D SOUTH 29289 0 0
+door~
+~
+D WEST 29291 0 0
+door~
+~
+OWNER none~
+#29291
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29300 0 0
+door~
+~
+D EAST 29290 0 0
+door~
+~
+D WEST 29292 0 0
+door~
+~
+OWNER none~
+#29292
+South-Western Corner of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29301 0 0
+door~
+~
+D EAST 29291 0 0
+door~
+~
+OWNER none~
+#29293
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29298 0 0
+door~
+~
+D EAST 29294 0 0
+door~
+~
+D WEST 29290 0 0
+door~
+~
+OWNER none~
+#29294
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29297 0 0
+door~
+~
+D EAST 29295 0 0
+door~
+~
+D WEST 29293 0 0
+door~
+~
+OWNER none~
+#29295
+South-Eastern Corner of the Hall of Combat~
+~
+unused
+D NORTH 29296 0 0
+door~
+~
+D WEST 29294 0 0
+door~
+~
+OWNER none~
+#29296
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29307 0 0
+door~
+~
+D SOUTH 29295 0 0
+door~
+~
+D WEST 29297 0 0
+door~
+~
+OWNER none~
+#29297
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29306 0 0
+door~
+~
+D EAST 29296 0 0
+door~
+~
+D SOUTH 29294 0 0
+door~
+~
+D WEST 29298 0 0
+door~
+~
+OWNER none~
+#29298
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29305 0 0
+door~
+~
+D EAST 29297 0 0
+door~
+~
+D SOUTH 29293 0 0
+door~
+~
+D WEST 29299 0 0
+door~
+~
+OWNER none~
+#29299
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29304 0 0
+door~
+~
+D EAST 29298 0 0
+door~
+~
+D SOUTH 29290 0 0
+door~
+~
+D WEST 29300 0 0
+door~
+~
+OWNER none~
+#29300
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29303 0 0
+door~
+~
+D EAST 29299 0 0
+door~
+~
+D SOUTH 29291 0 0
+door~
+~
+D WEST 29301 0 0
+door~
+~
+OWNER none~
+#29301
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29302 0 0
+door~
+~
+D EAST 29300 0 0
+door~
+~
+D SOUTH 29292 0 0
+door~
+~
+OWNER none~
+#29302
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29313 0 0
+door~
+~
+D EAST 29303 0 0
+door~
+~
+D SOUTH 29301 0 0
+door~
+~
+OWNER none~
+#29303
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29312 0 0
+door~
+~
+D EAST 29304 0 0
+door~
+~
+D SOUTH 29300 0 0
+door~
+~
+D WEST 29302 0 0
+door~
+~
+OWNER none~
+#29304
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29311 0 0
+door~
+~
+D EAST 29305 0 0
+door~
+~
+D SOUTH 29299 0 0
+door~
+~
+D WEST 29303 0 0
+door~
+~
+OWNER none~
+#29305
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29310 0 0
+door~
+~
+D EAST 29306 0 0
+door~
+~
+D SOUTH 29298 0 0
+door~
+~
+D WEST 29304 0 0
+door~
+~
+OWNER none~
+#29306
+Center of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29309 0 0
+door~
+~
+D EAST 29307 0 0
+door~
+~
+D SOUTH 29297 0 0
+door~
+~
+D WEST 29305 0 0
+door~
+~
+OWNER none~
+#29307
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29308 0 0
+door~
+~
+D EAST 29338 0 0
+door~
+~
+D SOUTH 29296 0 0
+door~
+~
+D WEST 29306 0 0
+door~
+~
+OWNER none~
+#29308
+North-Eastern Corner of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29307 0 0
+door~
+~
+D WEST 29309 0 0
+door~
+~
+D UP 29314 0 0
+door~
+~
+OWNER none~
+#29309
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29308 0 0
+door~
+~
+D SOUTH 29306 0 0
+door~
+~
+D WEST 29310 0 0
+door~
+~
+OWNER none~
+#29310
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29309 0 0
+door~
+~
+D SOUTH 29305 0 0
+door~
+~
+D WEST 29311 0 0
+door~
+~
+OWNER none~
+#29311
+Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29310 0 0
+door~
+~
+D SOUTH 29304 0 0
+door~
+~
+D WEST 29312 0 0
+door~
+~
+OWNER none~
+#29312
+Hall of Combat~
+~
+city
+D EAST 29311 0 0
+door~
+~
+D SOUTH 29303 0 0
+door~
+~
+D WEST 29313 0 0
+door~
+~
+OWNER none~
+#29313
+North-Western Corner of the Hall of Combat~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29312 0 0
+door~
+~
+D SOUTH 29302 0 0
+door~
+~
+OWNER none~
+#29314
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29315 0 0
+door~
+~
+D DOWN 29308 0 0
+door~
+~
+OWNER none~
+#29315
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29314 0 0
+door~
+~
+D SOUTH 29329 0 0
+door~
+~
+D WEST 29316 0 0
+door~
+~
+OWNER none~
+#29316
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29317 AB 0
+door~
+~
+D EAST 29315 0 0
+door~
+~
+D SOUTH 29318 AB 0
+door~
+~
+D WEST 29319 0 0
+door~
+~
+OWNER none~
+#29317
+Instructor's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29316 0 0
+door~
+~
+OWNER none~
+#29318
+Instructor's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29316 0 0
+door~
+~
+OWNER none~
+#29319
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29320 0 0
+door~
+~
+D EAST 29316 0 0
+door~
+~
+D WEST 29321 0 0
+door~
+~
+OWNER none~
+#29320
+Mess~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29319 0 0
+door~
+~
+OWNER none~
+#29321
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29322 AB 0
+door~
+~
+D EAST 29319 0 0
+door~
+~
+D SOUTH 29323 AB 0
+door~
+~
+D WEST 29324 0 0
+door~
+~
+OWNER none~
+#29322
+Instructor's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29321 0 0
+door~
+~
+OWNER none~
+#29323
+Instructor's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29321 0 0
+door~
+~
+OWNER none~
+#29324
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29325 AB 0
+door~
+~
+D EAST 29321 0 0
+door~
+~
+D SOUTH 29326 AB 0
+door~
+~
+D WEST 29327 AB 0
+door~
+~
+OWNER none~
+#29325
+Instructor's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29324 0 0
+door~
+~
+OWNER none~
+#29326
+Storage Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29324 0 0
+door~
+~
+OWNER none~
+#29327
+Weapons Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29328 0 0
+door~
+~
+D EAST 29324 0 0
+door~
+~
+OWNER none~
+#29328
+Crafting Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29327 0 0
+door~
+~
+OWNER none~
+#29329
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29315 0 0
+door~
+~
+D SOUTH 29330 0 0
+door~
+~
+OWNER none~
+#29330
+A Turn in the Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29329 0 0
+door~
+~
+D WEST 29331 0 0
+door~
+~
+OWNER none~
+#29331
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29330 0 0
+door~
+~
+D WEST 29332 0 0
+door~
+~
+OWNER none~
+#29332
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29333 AB 0
+door~
+~
+D EAST 29331 0 0
+door~
+~
+D WEST 29334 0 0
+door~
+~
+OWNER none~
+#29333
+Second in Command's Quarters~
+~
+unused
+D SOUTH 29332 0 0
+door~
+~
+OWNER none~
+#29334
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29332 0 0
+door~
+~
+D WEST 29335 0 0
+door~
+~
+OWNER none~
+#29335
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D EAST 29334 0 0
+door~
+~
+D WEST 29336 AB 0
+door~
+~
+OWNER none~
+#29336
+Commander's Quarters~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29337 0 0
+door~
+~
+D EAST 29335 0 0
+door~
+~
+OWNER none~
+#29337
+Commander's Study~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29336 0 0
+door~
+~
+OWNER none~
+#29338
+Stairwell~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D WEST 29307 0 0
+door~
+~
+D DOWN 29339 0 0
+door~
+~
+OWNER none~
+#29339
+Stairwell~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D WEST 29340 0 0
+door~
+~
+D UP 29338 0 0
+door~
+~
+OWNER none~
+#29340
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29341 0 0
+door~
+~
+D EAST 29339 0 0
+door~
+~
+D SOUTH 29342 0 0
+door~
+~
+D WEST 29357 0 0
+door~
+~
+OWNER none~
+#29341
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29340 0 0
+door~
+~
+OWNER none~
+#29342
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29340 0 0
+door~
+~
+D EAST 29343 0 0
+door~
+~
+D SOUTH 29344 0 0
+door~
+~
+OWNER none~
+#29343
+Mess Hall~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D WEST 29342 0 0
+door~
+~
+OWNER none~
+#29344
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29342 0 0
+door~
+~
+D EAST 29345 AB 0
+door~
+~
+D SOUTH 29346 0 0
+door~
+~
+OWNER none~
+#29345
+Storage Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D WEST 29344 0 0
+door~
+~
+OWNER none~
+#29346
+A Turn in the Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29344 0 0
+door~
+~
+D WEST 29347 0 0
+door~
+~
+OWNER none~
+#29347
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29348 0 0
+door~
+~
+D EAST 29346 0 0
+door~
+~
+D WEST 29349 0 0
+door~
+~
+OWNER none~
+#29348
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29347 0 0
+door~
+~
+OWNER none~
+#29349
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29350 0 0
+door~
+~
+D EAST 29347 0 0
+door~
+~
+D WEST 29351 0 0
+door~
+~
+OWNER none~
+#29350
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29349 0 0
+door~
+~
+OWNER none~
+#29351
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29352 0 0
+door~
+~
+D EAST 29349 0 0
+door~
+~
+D WEST 29353 0 0
+door~
+~
+OWNER none~
+#29352
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29351 0 0
+door~
+~
+OWNER none~
+#29353
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29354 0 0
+door~
+~
+D EAST 29351 0 0
+door~
+~
+D WEST 29355 0 0
+door~
+~
+OWNER none~
+#29354
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29353 0 0
+door~
+~
+OWNER none~
+#29355
+End of the Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29356 0 0
+door~
+~
+D EAST 29353 0 0
+door~
+~
+OWNER none~
+#29356
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29355 0 0
+door~
+~
+OWNER none~
+#29357
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29358 0 0
+door~
+~
+D EAST 29340 0 0
+door~
+~
+D SOUTH 29359 0 0
+door~
+~
+D WEST 29360 0 0
+door~
+~
+OWNER none~
+#29358
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29357 0 0
+door~
+~
+OWNER none~
+#29359
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29357 0 0
+door~
+~
+OWNER none~
+#29360
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29361 0 0
+door~
+~
+D EAST 29357 0 0
+door~
+~
+D SOUTH 29362 0 0
+door~
+~
+D WEST 29363 0 0
+door~
+~
+OWNER none~
+#29361
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29360 0 0
+door~
+~
+OWNER none~
+#29362
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29360 0 0
+door~
+~
+OWNER none~
+#29363
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29364 0 0
+door~
+~
+D EAST 29360 0 0
+door~
+~
+D SOUTH 29365 0 0
+door~
+~
+D WEST 29366 0 0
+door~
+~
+OWNER none~
+#29364
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29363 0 0
+door~
+~
+OWNER none~
+#29365
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29363 0 0
+door~
+~
+OWNER none~
+#29366
+Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29367 0 0
+door~
+~
+D EAST 29363 0 0
+door~
+~
+D SOUTH 29368 0 0
+door~
+~
+D WEST 29369 0 0
+door~
+~
+OWNER none~
+#29367
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29366 0 0
+door~
+~
+OWNER none~
+#29368
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29366 0 0
+door~
+~
+OWNER none~
+#29369
+End of the Hallway~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29370 0 0
+door~
+~
+D EAST 29366 0 0
+door~
+~
+D SOUTH 29371 0 0
+door~
+~
+OWNER none~
+#29370
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D SOUTH 29369 0 0
+door~
+~
+OWNER none~
+#29371
+Student's Room~
+~
+city
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_SUMMON_FROM
+D NORTH 29369 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+I 29373 fight_prog fight_prog_drow_talisman
+END
+#SPECS
+END
+#$

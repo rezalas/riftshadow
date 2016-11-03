@@ -1,0 +1,53 @@
+#AREA
+cetandet.are~
+Temple of Cetan'Det~
+Kolaius~
+1 15
+1900 1999
+unopened
+subtropical
+0
+1
+Xanthian Kolaius~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#1900
+obsidian breastplate~
+dummy object~
+~
+armor
+Mithril~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR BODY
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#1900
+Entrance~
+~
+unused
+ROOM NO_MOB
+ROOM LAW
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

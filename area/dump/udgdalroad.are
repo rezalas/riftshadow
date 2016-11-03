@@ -1,0 +1,174 @@
+#AREA
+udgdalroad.are~
+Udgaard-Dale Road~
+RS~
+1 51
+24500 24512
+normal
+temperate
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24500
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24501 0 0
+~
+~
+D WEST 11670 0 0
+~
+~
+#24501
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24502 0 0
+~
+~
+D WEST 24500 0 0
+~
+~
+#24502
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24503 0 0
+~
+~
+D WEST 24501 0 0
+~
+~
+#24503
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24504 0 0
+~
+~
+D WEST 24502 0 0
+~
+~
+#24504
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D NORTH 24505 0 0
+~
+~
+D WEST 24503 0 0
+~
+~
+#24505
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D NORTH 24506 0 0
+~
+~
+D SOUTH 24504 0 0
+~
+~
+#24506
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24507 0 0
+~
+~
+D SOUTH 24505 0 0
+~
+~
+#24507
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24508 0 0
+~
+~
+D WEST 24506 0 0
+~
+~
+#24508
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24509 0 0
+~
+~
+D WEST 24507 0 0
+~
+~
+#24509
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D EAST 24510 0 0
+~
+~
+D WEST 24508 0 0
+~
+~
+#24510
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D NORTH 24511 0 0
+~
+~
+D WEST 24509 0 0
+~
+~
+#24511
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D NORTH 24512 0 0
+~
+~
+D SOUTH 24510 0 0
+~
+~
+#24512
+On the Road~
+The road from Udgaard to the Dale   
+~
+road
+D SOUTH 24511 0 0
+~
+~
+D WEST 13500 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

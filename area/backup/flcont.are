@@ -1,0 +1,1883 @@
+#AREA
+flcont.are~
+Floating Continent~
+Zethus~
+40 51
+7500 7599
+unopened
+subtropical
+0
+3
+Zethus Karsus Jathruk~
+
+#MOBS
+#7500
+wind imp blue creature~
+a wind imp~
+A tiny blue creature with large, white feathered wings flaps about violently.
+~
+~
+-1000 0 0 imp~
+43 21d8+2875 3d10+43 45 100 shbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT INTELLIGENT
+ACT OUTDOORS
+ACT DIURNAL
+OFF BERSERK
+OFF DODGE
+OFF FAST
+AFF SNEAK
+AFF PASS_DOOR
+IMM SUMMON
+RES LIGHTNING
+VUL NEGATIVE
+A 'airshield' (null)
+C 'disruption'
+#7501
+sylph~
+a sylph~
+A sylph flutters about on sparkling wings.
+~
+~
+0 26656 0 sidhe~
+40 20d8+2464 3d8+30 60 100 magic
+0 0 0 0
+standing female none
+0 P medium
+ACT NPC
+ACT WIMPY
+OFF DODGE
+OFF FAST
+AFF INVISIBLE
+AFF HASTE
+IMM SUMMON
+A 'cloak of mist' (null)
+#7502
+waterfall ward mob~
+The constant roaring and rumbling of the waterfall echoes through the deep, dark crevice below.~
+Waterfall echo mob
+~
+~
+0 0 0 human~
+300 150d8+-32768 0d0+0 0 100 none
+7568 7570 0 23
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+#7503
+waterfall ward mob~
+Soft tendrils of mist caress the great structure behind the unnatural waterfall.~
+Waterfall ward mob
+~
+~
+0 0 0 human~
+450 3d3+3 0d0+0 0 100 none
+7569 7569 0 23
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+#7504
+sleek figure sky devil~
+a sky devil~
+A sleek figure dances through the night air, tendrils of darkness swirling about its frame.
+~
+~
+-1000 0 0 demon~
+51 25d8+4800 4d12+60 60 100 chill
+60 60 60 60
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT OUTDOORS
+ACT NOCTURNAL
+OFF BERSERK
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF PROTECTION
+AFF SNEAK
+AFF FLYING
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+IMM COLD
+VUL LIGHTNING
+VUL HOLY
+C 'weaken'
+C 'chill'
+#7505
+aerial horror cloud churning ash blood~
+an aerial horror~
+A churning cloud of ash and blood fills the air with the stench of death.
+~
+~
+-1000 25968 0 unique~
+51 25d8+7000 10d10+85 90 100 asphyxiation
+0 0 0 0
+standing male none
+d 0 large
+ACT NPC
+ACT SENTINEL
+ACT NOCTURNAL
+OFF FAST
+OFF SPAM_MURDER
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM COLD
+IMM MENTAL
+IMM DISEASE
+IMM DROWNING
+IMM SLEEP
+RES WEAPON
+RES NEGATIVE
+VUL LIGHTNING
+C 'smother'
+C 'asphyxiate'
+C 'blindness'
+C 'cyclone'
+#7506
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#7500
+shining metallic ball~
+a shining metallic ball~
+A flawless ball made out of some sort of shining metal rests here.~
+treasure
+platinum~
+0 0 0 0 0
+60 3 40000 P
+WEAR TAKE
+WEAR HOLD
+ITEM VISDEATH
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#7501
+wooden stand container~
+a strange wooden stand~
+A small wooden stand with a bowl-shaped head rests upon the center of the log-bridge.~
+container
+wood~
+3 0 0 1 0
+1 100 0 P
+ITEM NOSHOW
+ITEM MAGIC
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#7500
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the east and west, and windswept plains spread out to the
+north.  
+~
+field
+D NORTH 7540 0 0
+~
+~
+D EAST 7504 0 0
+~
+~
+D WEST 7501 0 0
+~
+~
+OWNER none~
+#7501
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the east and north.  
+~
+field
+D NORTH 7502 0 0
+~
+~
+D EAST 7500 0 0
+~
+~
+OWNER none~
+#7502
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the south and west while the plains spread out to the north. 
+The grass underfoot here seems different.  
+~
+field
+D NORTH 7519 0 0
+~
+~
+D EAST 7540 0 0
+~
+~
+D SOUTH 7501 0 0
+~
+~
+D WEST 7503 0 0
+~
+A boxed-in outcropping of dead grass and filthy air awaits you.
+~
+E grass~
+The grass seems unhealthy and brown, as if the soil here is unhealthy. 
+It seems to get worse toward the west.  
+~
+OWNER none~
+#7503
+A Patch of Dead Grass Near the Cliff~
+The southwestern edge of the mountain rises up above you to the north,
+blocking any possible travel in that direction.  To the west and south, the
+cliff drops straight down to the ground of Shalar, nearly a thousand meters
+below.  The grass here is dead and slowly rotting.  A few impish corpses
+litter the ground, and they have long since begun to decay as well.  The end
+result of this leaves the air being quite foul here, despite the constant
+breeze.  Something seems to have infected this area.  
+~
+field
+D EAST 7502 0 0
+~
+~
+OWNER none~
+#7504
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the west and north.  
+~
+field
+D NORTH 7505 0 0
+~
+~
+D WEST 7500 0 0
+~
+~
+OWNER none~
+#7505
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the south and east, while to the north and west, the windswept
+plains spread out.  
+~
+field
+D NORTH 7546 0 0
+~
+~
+D EAST 7506 0 0
+~
+~
+D SOUTH 7504 0 0
+~
+~
+D WEST 7540 0 0
+~
+~
+OWNER none~
+#7506
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the east and west, and the windswept plains spread out to the
+north.  
+~
+field
+D NORTH 7548 0 0
+~
+~
+D EAST 7507 0 0
+~
+~
+D WEST 7505 0 0
+~
+~
+OWNER none~
+#7507
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the north and west.  
+~
+field
+D NORTH 7508 0 0
+~
+~
+D WEST 7506 0 0
+~
+~
+OWNER none~
+#7508
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the south and east, while the windswept plains spread out to
+the north and west.  
+~
+field
+D NORTH 7552 0 0
+~
+~
+D EAST 7509 0 0
+~
+~
+D SOUTH 7507 0 0
+~
+~
+D WEST 7548 0 0
+~
+~
+OWNER none~
+#7509
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the east and west, while the windswept plains spread out to the
+north.  
+~
+field
+D NORTH 7555 0 0
+~
+~
+D EAST 7510 0 0
+~
+~
+D WEST 7508 0 0
+~
+~
+OWNER none~
+#7510
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the east and west, while the windswept plains spread out to the
+north.  
+~
+field
+D NORTH 7557 0 0
+~
+~
+D EAST 7511 0 0
+~
+~
+D WEST 7509 0 0
+~
+~
+OWNER none~
+#7511
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the north and west.  
+~
+field
+D NORTH 7512 0 0
+~
+~
+D WEST 7510 0 0
+~
+~
+OWNER none~
+#7512
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the south and east, while the windswept plains spread out to
+the north and west.  
+~
+field
+D NORTH 7558 0 0
+~
+~
+D EAST 7513 0 0
+~
+~
+D SOUTH 7511 0 0
+~
+~
+D WEST 7557 0 0
+~
+~
+OWNER none~
+#7513
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the south and west, the edge dropping dangerously off the side
+of the island to the southwest.  To the north and east, the mountains seem
+to curve around, coming closer to the edge.  
+~
+field
+D NORTH 7560 0 0
+~
+~
+D EAST 7516 0 0
+~
+~
+D SOUTH 7514 0 0
+~
+~
+D WEST 7512 0 0
+~
+~
+OWNER none~
+#7514
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the north and east, the windswept plains spreading away from
+the edge further to the north.  
+~
+unused
+D NORTH 7513 0 0
+~
+~
+D EAST 7515 0 0
+~
+~
+OWNER none~
+#7515
+Along a Grassy Cliff~
+Thick tufts of grey-green grass cover the hard soil of the ground beneath
+you.  This grass covers the ground all the way up to the mountains, which
+lie to the north, and to the edge of the cliff, where it looks out over
+empty air at the earth far below this floating chunk of rock.  A slight
+breeze is almost always present, sometimes graduating to hard gusts of wind.
+The terrain shows the beating that it's taken over the years.  The cliff
+continues to the north and east, the windswept plains spreading away from
+the edge further to the north.
+~
+unused
+D NORTH 7516 0 0
+~
+~
+D WEST 7514 0 0
+~
+~
+OWNER none~
+#7516
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+field
+D NORTH 7539 0 0
+~
+~
+D EAST 7517 0 0
+~
+~
+D SOUTH 7515 0 0
+~
+~
+D WEST 7513 0 0
+~
+~
+OWNER none~
+#7517
+Along a Rocky Cliff~
+~
+hills
+D NORTH 7518 0 0
+~
+~
+D WEST 7516 0 0
+~
+~
+OWNER none~
+#7518
+At the Base of a Mountain~
+~
+hills
+D NORTH 7538 0 0
+~
+~
+D SOUTH 7517 0 0
+~
+~
+D WEST 7539 0 0
+~
+~
+OWNER none~
+#7519
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7520 0 0
+~
+~
+D EAST 7541 0 0
+~
+~
+D SOUTH 7502 0 0
+~
+~
+OWNER none~
+#7520
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+hills
+D NORTH 7521 0 0
+~
+~
+D EAST 7542 0 0
+~
+~
+D SOUTH 7519 0 0
+~
+~
+OWNER none~
+#7521
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+unused
+D NORTH 7522 0 0
+~
+~
+D EAST 7543 0 0
+~
+~
+D SOUTH 7520 0 0
+~
+~
+OWNER none~
+#7522
+Along the Base of a Mountain~
+~
+unused
+D EAST 7523 0 0
+~
+~
+D SOUTH 7521 0 0
+~
+~
+OWNER none~
+#7523
+Along the Base of a Mountain~
+~
+unused
+D NORTH 7524 0 0
+~
+~
+D EAST 7544 0 0
+~
+~
+D SOUTH 7543 0 0
+~
+~
+D WEST 7522 0 0
+~
+~
+OWNER none~
+#7524
+Along the Base of a Mountain~
+~
+unused
+D EAST 7525 0 0
+~
+~
+D SOUTH 7523 0 0
+~
+~
+OWNER none~
+#7525
+A Rocky Slope~
+~
+unused
+D NORTH 7561 0 0
+~
+~
+D EAST 7526 0 0
+~
+~
+D SOUTH 7544 0 0
+~
+~
+D WEST 7524 0 0
+~
+~
+OWNER none~
+#7526
+A Rocky Slope~
+~
+unused
+D NORTH 7562 0 0
+~
+~
+D SOUTH 7527 0 0
+~
+~
+D WEST 7525 0 0
+~
+~
+OWNER none~
+#7527
+A Rocky Slope~
+~
+hills
+D NORTH 7526 0 0
+~
+~
+D EAST 7528 0 0
+~
+~
+D SOUTH 7550 0 0
+~
+~
+D WEST 7544 0 0
+~
+~
+OWNER none~
+#7528
+Along the Base of a Mountain~
+~
+hills
+D NORTH 7529 0 0
+~
+~
+D EAST 7553 0 0
+~
+~
+D SOUTH 7551 0 0
+~
+~
+D WEST 7527 0 0
+~
+~
+OWNER none~
+#7529
+A Damp Earthen Cave~
+Soft but firm soil lines the ground and ceiling of this cave, and
+moss-like projections, perhaps roots, willow down from above.  The distant
+rumbling of the seemingly out of place waterfall shakes the ground slightly,
+filling the air with the thick scent of wet dirt.  
+~
+unused
+D EAST 7530 0 0
+~
+~
+D SOUTH 7528 0 0
+~
+~
+OWNER none~
+#7530
+A Damp Earthen Cave~
+Soft but firm soil lines the ground and ceiling of this cave, and
+moss-like projections, perhaps roots, willow down from above.  The distant
+rumbling of the seemingly out of place waterfall shakes the ground slightly,
+filling the air with the thick scent of wet dirt.  To the north, an almost
+perfect square has been carved into the cave's wall, leading into a small
+room.  
+~
+unused
+D NORTH 7531 0 0
+~
+~
+D EAST 7532 0 0
+~
+~
+D SOUTH 7553 0 0
+~
+~
+D WEST 7529 0 0
+~
+~
+OWNER none~
+#7531
+A Plain Stone Room~
+The walls of this room are relatively smooth, and though they aren't
+polished and maintained, it remains obvious that this is no natural
+formation.  A chipped carving is set into the ground here, worn away to the
+point of unrecognizability.  It looks almost like two faces, and one has
+wavy lines radiating out from it, but not much more can be told about the
+once elaborate carving.  A thin black line runs up and down the northern
+wall, but nothing else of note catches your eye.  
+~
+inside
+ROOM INDOORS
+D NORTH 7600 0 0
+~
+~
+D SOUTH 7530 0 0
+~
+~
+OWNER none~
+#7532
+A Damp Earthen Cave~
+Soft but firm soil lines the ground and ceiling of this cave, and
+moss-like projections, perhaps roots, willow down from above.  The distant
+rumbling of the seemingly out of place waterfall shakes the ground slightly,
+filling the air with the thick scent of wet dirt.  
+~
+unused
+D SOUTH 7533 0 0
+~
+~
+D WEST 7530 0 0
+~
+~
+OWNER none~
+#7533
+Along the Base of a Mountain~
+~
+hills
+D NORTH 7532 0 0
+~
+~
+D EAST 7534 0 0
+~
+~
+D SOUTH 7556 0 0
+~
+~
+D WEST 7553 0 0
+~
+~
+OWNER none~
+#7534
+Along the Base of a Mountain~
+~
+hills
+D EAST 7535 0 0
+~
+~
+D SOUTH 7558 0 0
+~
+~
+D WEST 7533 0 0
+~
+~
+OWNER none~
+#7535
+Along the Base of a Mountain~
+~
+hills
+D EAST 7537 0 0
+~
+~
+D SOUTH 7560 0 0
+~
+~
+D WEST 7534 0 0
+~
+~
+OWNER none~
+#7536
+A Steep Slope of Soft Dirt~
+~
+hills
+D NORTH 7571 0 0
+~
+~
+D SOUTH 7537 0 0
+~
+~
+OWNER none~
+#7537
+Along the Base of a Mountain~
+~
+hills
+D NORTH 7536 0 0
+~
+~
+D EAST 7538 0 0
+~
+~
+D SOUTH 7539 0 0
+~
+~
+D WEST 7535 0 0
+~
+~
+OWNER none~
+#7538
+Along the Base of a Mountain~
+~
+hills
+D SOUTH 7518 0 0
+~
+~
+D WEST 7537 0 0
+~
+~
+OWNER none~
+#7539
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+unused
+D NORTH 7537 0 0
+~
+~
+D EAST 7518 0 0
+~
+~
+D SOUTH 7516 0 0
+~
+~
+D WEST 7560 0 0
+~
+~
+OWNER none~
+#7540
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7541 0 0
+~
+~
+D EAST 7505 0 0
+~
+~
+D SOUTH 7500 0 0
+~
+~
+D WEST 7502 0 0
+~
+~
+OWNER none~
+#7541
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7542 0 0
+~
+~
+D EAST 7546 0 0
+~
+~
+D SOUTH 7540 0 0
+~
+~
+D WEST 7519 0 0
+~
+~
+OWNER none~
+#7542
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7543 0 0
+~
+~
+D EAST 7547 0 0
+~
+~
+D SOUTH 7541 0 0
+~
+~
+D WEST 7520 0 0
+~
+~
+OWNER none~
+#7543
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+hills
+D NORTH 7523 0 0
+~
+~
+D EAST 7545 0 0
+~
+~
+D SOUTH 7542 0 0
+~
+~
+D WEST 7521 0 0
+~
+~
+OWNER none~
+#7544
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.  
+~
+hills
+D NORTH 7525 0 0
+~
+~
+D EAST 7527 0 0
+~
+~
+D SOUTH 7545 0 0
+~
+~
+D WEST 7523 0 0
+~
+~
+OWNER none~
+#7545
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7544 0 0
+~
+~
+D EAST 7550 0 0
+~
+~
+D SOUTH 7547 0 0
+~
+~
+D WEST 7543 0 0
+~
+~
+OWNER none~
+#7546
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7547 0 0
+~
+~
+D EAST 7548 0 0
+~
+~
+D SOUTH 7505 0 0
+~
+~
+D WEST 7541 0 0
+~
+~
+OWNER none~
+#7547
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+unused
+D NORTH 7545 0 0
+~
+~
+D EAST 7549 0 0
+~
+~
+D SOUTH 7546 0 0
+~
+~
+D WEST 7542 0 0
+~
+~
+OWNER none~
+#7548
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7549 0 0
+~
+~
+D EAST 7508 0 0
+~
+~
+D SOUTH 7506 0 0
+~
+~
+D WEST 7546 0 0
+~
+~
+OWNER none~
+#7549
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+unused
+D NORTH 7550 0 0
+~
+~
+D EAST 7552 0 0
+~
+~
+D SOUTH 7548 0 0
+~
+~
+D WEST 7547 0 0
+~
+~
+OWNER none~
+#7550
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+unused
+D NORTH 7527 0 0
+~
+~
+D EAST 7551 0 0
+~
+~
+D SOUTH 7549 0 0
+~
+~
+D WEST 7545 0 0
+~
+~
+OWNER none~
+#7551
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+unused
+D NORTH 7528 0 0
+~
+~
+D EAST 7554 0 0
+~
+~
+D SOUTH 7552 0 0
+~
+~
+D WEST 7550 0 0
+~
+~
+OWNER none~
+#7552
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.
+~
+unused
+D NORTH 7551 0 0
+~
+~
+D EAST 7555 0 0
+~
+~
+D SOUTH 7508 0 0
+~
+~
+D WEST 7549 0 0
+~
+~
+OWNER none~
+#7553
+Along the Base of a Mountain~
+~
+hills
+D NORTH 7530 0 0
+~
+~
+D EAST 7533 0 0
+~
+~
+D SOUTH 7554 0 0
+~
+~
+D WEST 7528 0 0
+~
+~
+OWNER none~
+#7554
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.  
+~
+hills
+D NORTH 7553 0 0
+~
+~
+D EAST 7556 0 0
+~
+~
+D SOUTH 7555 0 0
+~
+~
+D WEST 7551 0 0
+~
+~
+OWNER none~
+#7555
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7554 0 0
+~
+~
+D EAST 7557 0 0
+~
+~
+D SOUTH 7509 0 0
+~
+~
+D WEST 7552 0 0
+~
+~
+OWNER none~
+#7556
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+hills
+D NORTH 7533 0 0
+~
+~
+D EAST 7558 0 0
+~
+~
+D SOUTH 7557 0 0
+~
+~
+D WEST 7554 0 0
+~
+~
+OWNER none~
+#7557
+A Plain of Windswept Grass~
+Moist soil rarely peeks out from beneath the thick tufts of grey-green
+grass that seems to cover a great deal of this land.  A breeze is constantly
+blowing, often times bringing a bit of moisture and the scent of wet earth
+with it from the waterfall to the north.  Every now and then, a gust of wind
+blows fiercely, causing the grass beneath you to ripple in the direction of
+the wind.  A large mountain rests up to the north, and strangely enough,
+some sort of waterfall roars away in the distance.  Its source and
+destination aren't clear.  
+~
+field
+D NORTH 7556 0 0
+~
+~
+D EAST 7512 0 0
+~
+~
+D SOUTH 7510 0 0
+~
+~
+D WEST 7555 0 0
+~
+~
+OWNER none~
+#7558
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+hills
+D NORTH 7534 0 0
+~
+~
+D EAST 7560 0 0
+~
+~
+D SOUTH 7512 0 0
+~
+~
+D WEST 7556 0 0
+~
+~
+OWNER none~
+#7559
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#7560
+Grassy Foothills~
+The ground slopes upward toward the mountain, the terrain here more
+rugged than the plains to the south.  Moist soil rarely peeks out from
+beneath the thick tufts of grey-green grass that seems to cover a great deal
+of this land.  A breeze is constantly blowing, often times bringing a bit of
+moisture and the scent of wet earth with it from the mysterious waterfall to
+the north.
+~
+hills
+D NORTH 7535 0 0
+~
+~
+D EAST 7539 0 0
+~
+~
+D SOUTH 7513 0 0
+~
+~
+D WEST 7558 0 0
+~
+~
+OWNER none~
+#7561
+A Steep, Rocky Slope~
+~
+unused
+D EAST 7562 0 0
+~
+~
+D SOUTH 7525 0 0
+~
+~
+OWNER none~
+#7562
+A Steep, Rocky Slope~
+~
+unused
+D NORTH 7563 0 0
+~
+~
+D SOUTH 7526 0 0
+~
+~
+D WEST 7561 0 0
+~
+~
+OWNER none~
+#7563
+A Steep, Rocky Slope~
+~
+unused
+D SOUTH 7562 0 0
+~
+~
+D UP 7564 0 0
+~
+~
+OWNER none~
+#7564
+An Overgrown Ledge~
+~
+mountains
+D EAST 7565 0 0
+~
+~
+D DOWN 7563 0 0
+~
+~
+OWNER none~
+#7565
+An Overgrown Ledge~
+~
+mountains
+D NORTH 7566 0 0
+~
+~
+D WEST 7564 0 0
+~
+~
+OWNER none~
+#7566
+A Ledge of Crumbling Dirt~
+~
+mountains
+D EAST 7567 0 0
+~
+~
+D SOUTH 7565 0 0
+~
+~
+OWNER none~
+#7567
+A Ledge of Crumbling Dirt~
+~
+mountains
+D SOUTH 7568 0 0
+~
+~
+D WEST 7566 0 0
+~
+~
+OWNER none~
+#7568
+A Moss-Covered Ledge Before a Waterfall~
+~
+forest
+D NORTH 7567 0 0
+~
+~
+D EAST 7569 0 0
+~
+~
+OWNER none~
+#7569
+A Mossy Log Bridge, Overlooking a Great Structure~
+~
+trail
+D EAST 7570 0 0
+~
+~
+D WEST 7568 0 0
+~
+~
+OWNER none~
+#7570
+A Moss-Covered Ledge Before a Waterfall~
+~
+forest
+D NORTH 7575 0 0
+~
+~
+D WEST 7569 0 0
+~
+~
+OWNER none~
+#7571
+A Steep Slope of Soft Dirt~
+~
+hills
+D SOUTH 7536 0 0
+~
+~
+D UP 7572 0 0
+~
+~
+OWNER none~
+#7572
+A Narrow Ledge of Soft Soil~
+~
+mountains
+D SOUTH 7573 0 0
+~
+~
+D DOWN 7571 0 0
+~
+~
+OWNER none~
+#7573
+A Narrow Ledge of Soft Soil~
+~
+mountains
+D NORTH 7572 0 0
+~
+~
+D WEST 7574 0 0
+~
+~
+OWNER none~
+#7574
+A Narrow Ledge of Soft Soil~
+~
+mountains
+D EAST 7573 0 0
+~
+~
+D WEST 7575 0 0
+~
+~
+OWNER none~
+#7575
+A Narrow Ledge of Soft Soil~
+~
+mountains
+D EAST 7574 0 0
+~
+~
+D SOUTH 7570 0 0
+~
+~
+OWNER none~
+#7576
+A Ledge on the Side of the Mountain~
+~
+mountains
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 7578 0 0
+~
+~
+D SOUTH 7668 0 0
+~
+~
+OWNER none~
+#7577
+On the Side of the Mountain~
+~
+mountains
+D NORTH 7593 0 0
+~
+~
+D SOUTH 7667 0 0
+~
+~
+OWNER none~
+#7578
+A Steep Trail~
+~
+mountains
+D EAST 7579 0 0
+~
+~
+D WEST 7576 0 0
+~
+~
+OWNER none~
+#7579
+A Steep Trail~
+~
+mountains
+D WEST 7578 0 0
+~
+~
+D DOWN 7580 0 0
+~
+~
+OWNER none~
+#7580
+A Steep Trail~
+~
+mountains
+D EAST 7581 0 0
+~
+~
+D UP 7579 0 0
+~
+~
+OWNER none~
+#7581
+A Steep Trail Near a Waterfall~
+~
+mountains
+D SOUTH 7582 0 0
+~
+~
+D WEST 7580 0 0
+~
+~
+OWNER none~
+#7582
+A Steep Trail Near a Waterfall~
+~
+mountains
+D NORTH 7581 0 0
+~
+~
+D DOWN 7583 0 0
+~
+~
+OWNER none~
+#7583
+A Sharp Decline~
+~
+vertical
+D UP 7582 0 0
+~
+~
+D DOWN 7584 0 0
+~
+~
+OWNER none~
+#7584
+On Wet, Rocky Ground~
+~
+mountains
+D WEST 7585 0 0
+~
+~
+D UP 7583 0 0
+~
+~
+OWNER none~
+#7585
+At the Bottom of the Falls~
+~
+mountains
+D NORTH 7587 I 0
+~
+~
+D EAST 7584 0 0
+~
+~
+D WEST 7586 0 0
+~
+~
+OWNER none~
+#7586
+At the Bottom of the Falls~
+~
+mountains
+D EAST 7585 0 0
+~
+~
+D WEST 7592 0 0
+~
+~
+D DOWN 7588 0 0
+~
+~
+OWNER none~
+#7587
+A Tiny Cavern~
+~
+cave
+ROOM NOWHERE
+D SOUTH 7585 0 0
+~
+~
+OWNER none~
+#7588
+Beneath the Falls~
+~
+underwater
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 7590 0 0
+~
+~
+D SOUTH 7591 I 0
+~
+~
+D WEST 7589 0 0
+~
+~
+D UP 7586 0 0
+~
+~
+OWNER none~
+#7589
+Beneath the Falls~
+~
+underwater
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 7588 0 0
+~
+~
+D UP 7592 0 0
+~
+~
+OWNER none~
+#7590
+Beneath the Falls~
+~
+underwater
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 7588 0 0
+~
+~
+OWNER none~
+#7591
+An Underwater Cavern~
+~
+underwater
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 7588 0 0
+~
+~
+OWNER none~
+#7592
+At the Bottom of the Falls~
+~
+unused
+D EAST 7586 0 0
+~
+~
+D DOWN 7589 0 0
+~
+~
+OWNER none~
+#7593
+A Trail Through Thickly Forested Mountains~
+~
+unused
+D SOUTH 7577 0 0
+~
+~
+D UP 7594 0 0
+~
+~
+OWNER none~
+#7594
+A Trail Through Thickly Forested Mountains~
+~
+unused
+D EAST 7595 0 0
+~
+~
+D DOWN 7593 0 0
+~
+~
+OWNER none~
+#7595
+A Trail Through Thickly Forested Mountains~
+~
+unused
+D WEST 7594 0 0
+~
+~
+D UP 7596 0 0
+~
+~
+OWNER none~
+#7596
+The Edge of a Thick Forest~
+~
+unused
+D SOUTH 7597 0 0
+~
+~
+D DOWN 7595 0 0
+~
+~
+OWNER none~
+#7597
+A Natural Bridge~
+~
+unused
+D NORTH 7596 0 0
+~
+~
+D SOUTH 7669 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 7500 TO 7500 GLIMIT 5 LLIMIT 1
+MOB 7505 TO 7503 GLIMIT 1 LLIMIT 1
+GIVE 7500
+MOB 7500 TO 7507 GLIMIT 5 LLIMIT 1
+MOB 7501 TO 7532 GLIMIT 2 LLIMIT 1
+MOB 7504 TO 7534 GLIMIT 3 LLIMIT 1
+MOB 7500 TO 7535 GLIMIT 5 LLIMIT 1
+MOB 7504 TO 7540 GLIMIT 3 LLIMIT 1
+MOB 7500 TO 7542 GLIMIT 5 LLIMIT 1
+MOB 7500 TO 7548 GLIMIT 5 LLIMIT 1
+MOB 7504 TO 7550 GLIMIT 3 LLIMIT 1
+MOB 7501 TO 7568 GLIMIT 2 LLIMIT 1
+OBJECT 7501 TO 7569
+MOB 7502 TO 7569 GLIMIT 1 LLIMIT 1
+MOB 7503 TO 7569 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 7502 pulse_prog pulse_prog_area_echo_ward
+M 7503 pulse_prog pulse_prog_area_echo_ward
+END
+#$

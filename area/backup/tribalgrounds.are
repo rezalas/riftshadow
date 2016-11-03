@@ -1,0 +1,767 @@
+#AREA
+tribalgrounds.are~
+The Tribal Grounds~
+Tymari~
+10 25
+4800 4899
+unopened
+none
+0
+1
+Tymari~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#4800
+wooden chest~
+a dusty wooden chest~
+A dusty wooden chest with a lock sits here.~
+container
+hardwood~
+1000 ACD 4801 0 0
+26912 0 0 P
+LIMIT 0
+TIMER 0
+
+#4801
+chest key~
+a raucous key~
+A raucous key~
+key
+hardwood~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+VERB none
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#4800
+Path~
+~
+unused
+ROOM NO_MOB
+D NORTH 4801 0 0
+~
+~
+OWNER none~
+#4801
+Dummy Room~
+~
+unused
+D NORTH 4802 0 0
+~
+~
+D EAST 4803 0 0
+~
+~
+D SOUTH 4800 0 0
+~
+~
+D WEST 4804 0 0
+~
+~
+OWNER none~
+#4802
+Dummy Room~
+~
+unused
+D NORTH 4823 0 0
+~
+~
+D SOUTH 4801 0 0
+~
+~
+OWNER none~
+#4803
+Dummy Room~
+~
+unused
+D WEST 4801 0 0
+~
+~
+OWNER none~
+#4804
+Dummy Room~
+~
+unused
+D EAST 4801 0 0
+~
+~
+OWNER none~
+#4805
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4806
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4807
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4808
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4809
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4810
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4811
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4812
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4813
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4814
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4815
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4816
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4817
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4818
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4819
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4820
+Dummy Room~
+~
+unused
+D NORTH 4821 0 0
+~
+~
+D EAST 4822 0 0
+~
+~
+OWNER none~
+#4821
+Dummy Room~
+~
+unused
+D SOUTH 4820 0 0
+~
+~
+D WEST 4831 0 0
+~
+~
+OWNER none~
+#4822
+Dummy Room~
+~
+unused
+D EAST 4823 0 0
+~
+~
+D WEST 4820 0 0
+~
+~
+OWNER none~
+#4823
+Dummy Room~
+~
+unused
+D NORTH 4826 0 0
+~
+~
+D EAST 4824 0 0
+~
+~
+D SOUTH 4802 0 0
+~
+~
+D WEST 4822 0 0
+~
+~
+OWNER none~
+#4824
+Dummy Room~
+~
+unused
+D EAST 4825 0 0
+~
+~
+D WEST 4823 0 0
+~
+~
+OWNER none~
+#4825
+Dummy Room~
+~
+unused
+D WEST 4824 0 0
+~
+~
+OWNER none~
+#4826
+Dummy Room~
+~
+unused
+D NORTH 4827 0 0
+~
+~
+D SOUTH 4823 0 0
+~
+~
+OWNER none~
+#4827
+Dummy Room~
+~
+unused
+D NORTH 4830 0 0
+~
+~
+D EAST 4829 0 0
+~
+~
+D SOUTH 4826 0 0
+~
+~
+D WEST 4828 0 0
+~
+~
+OWNER none~
+#4828
+Dummy Room~
+~
+unused
+D EAST 4827 0 0
+~
+~
+OWNER none~
+#4829
+Dummy Room~
+~
+unused
+D WEST 4827 0 0
+~
+~
+OWNER none~
+#4830
+Dummy Room~
+~
+unused
+D NORTH 4835 0 0
+~
+~
+D SOUTH 4827 0 0
+~
+~
+D WEST 4832 0 0
+~
+~
+OWNER none~
+#4831
+Dummy Room~
+~
+unused
+D NORTH 4834 0 0
+~
+~
+D EAST 4821 0 0
+~
+~
+OWNER none~
+#4832
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4830 0 0
+~
+~
+D WEST 4833 0 0
+~
+~
+OWNER none~
+#4833
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4832 0 0
+~
+~
+D WEST 4834 0 0
+~
+~
+OWNER none~
+#4834
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4833 0 0
+~
+~
+D SOUTH 4831 0 0
+~
+~
+OWNER none~
+#4835
+Overgrown Intersection~
+~
+unused
+ROOM NO_MOB
+D NORTH 4836 0 0
+~
+~
+D EAST 4857 0 0
+~
+~
+D SOUTH 4830 0 0
+~
+~
+OWNER none~
+#4836
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4855 0 0
+~
+~
+D EAST 4851 0 0
+~
+~
+D SOUTH 4835 0 0
+~
+~
+D WEST 4837 0 0
+~
+~
+OWNER none~
+#4837
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4854 0 0
+~
+~
+D EAST 4836 0 0
+~
+~
+D WEST 4838 0 0
+~
+~
+OWNER none~
+#4838
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4839 0 0
+~
+~
+D EAST 4837 0 0
+~
+~
+OWNER none~
+#4839
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4852 0 0
+~
+~
+D EAST 4854 0 0
+~
+~
+D SOUTH 4838 0 0
+~
+~
+D WEST 4840 0 0
+~
+~
+OWNER none~
+#4840
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4841 0 0
+~
+~
+D EAST 4839 0 0
+~
+~
+OWNER none~
+#4841
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4842 0 0
+~
+~
+D EAST 4852 0 0
+~
+~
+D SOUTH 4840 0 0
+~
+~
+OWNER none~
+#4842
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4843 0 0
+~
+~
+D SOUTH 4841 0 0
+~
+~
+OWNER none~
+#4843
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4844 0 0
+~
+~
+D SOUTH 4852 0 0
+~
+~
+D WEST 4842 0 0
+~
+~
+OWNER none~
+#4844
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4845 0 0
+~
+~
+D SOUTH 4853 0 0
+~
+~
+D WEST 4843 0 0
+~
+~
+OWNER none~
+#4845
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4846 0 0
+~
+~
+D SOUTH 4844 0 0
+~
+~
+OWNER none~
+#4846
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D SOUTH 4847 0 0
+~
+~
+D WEST 4845 0 0
+~
+~
+OWNER none~
+#4847
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4846 0 0
+~
+~
+D SOUTH 4848 0 0
+~
+~
+OWNER none~
+#4848
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4847 0 0
+~
+~
+D EAST 4849 0 0
+~
+~
+D WEST 4856 0 0
+~
+~
+OWNER none~
+#4849
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D SOUTH 4850 0 0
+~
+~
+D WEST 4848 0 0
+~
+~
+OWNER none~
+#4850
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4849 0 0
+~
+~
+D SOUTH 4851 0 0
+~
+~
+D WEST 4855 0 0
+~
+~
+OWNER none~
+#4851
+Burial Grounds~
+~
+unused
+ROOM NO_MOB
+D NORTH 4850 0 0
+~
+~
+D WEST 4836 0 0
+~
+~
+OWNER none~
+#4852
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4843 0 0
+~
+~
+D EAST 4853 0 0
+~
+~
+D SOUTH 4839 0 0
+~
+~
+D WEST 4841 0 0
+~
+~
+OWNER none~
+#4853
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4844 0 0
+~
+~
+D EAST 4856 0 0
+~
+~
+D SOUTH 4854 0 0
+~
+~
+D WEST 4852 0 0
+~
+~
+OWNER none~
+#4854
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4853 0 0
+~
+~
+D EAST 4855 0 0
+~
+~
+D SOUTH 4837 0 0
+~
+~
+D WEST 4839 0 0
+~
+~
+OWNER none~
+#4855
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 4856 0 0
+~
+~
+D EAST 4850 0 0
+~
+~
+D SOUTH 4836 0 0
+~
+~
+D WEST 4854 0 0
+~
+~
+OWNER none~
+#4856
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D EAST 4848 0 0
+~
+~
+D SOUTH 4855 0 0
+~
+~
+D WEST 4853 0 0
+~
+~
+OWNER none~
+#4857
+Path~
+~
+unused
+ROOM NO_MOB
+D EAST 4858 0 0
+~
+~
+D WEST 4835 0 0
+~
+~
+OWNER none~
+#4858
+Entrance to a Hut~
+~
+unused
+ROOM NO_MOB
+D EAST 4859 0 0
+~
+~
+D WEST 4857 0 0
+~
+~
+OWNER none~
+#4859
+Inside a Hut~
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+D EAST 4860 AB 0
+deerskin~
+You see an outstreched deerskin covering an entryway.
+~
+D WEST 4858 0 0
+~
+~
+OWNER none~
+#4860
+Dummy Room~
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+D WEST 4859 AB 0
+deerskin~
+You see an outstreched deerskin covering an entryway.
+~
+OWNER none~
+#4861
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4862
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#4863
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+DOOR 4859 east CLOSED
+DOOR 4860 west CLOSED
+OBJECT 4800 TO 4860
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,364 @@
+#AREA
+kotudgroad.are~
+Koteras-Udgaard Road~
+RS~
+1 51
+24400 24429
+normal
+temperate
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24400
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24401 0 0
+~
+~
+D SOUTH 11854 0 0
+~
+~
+#24401
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24402 0 0
+~
+~
+D SOUTH 24400 0 0
+~
+~
+#24402
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24403 0 0
+~
+~
+D SOUTH 24401 0 0
+~
+~
+#24403
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24404 0 0
+~
+~
+D SOUTH 24402 0 0
+~
+~
+#24404
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24405 0 0
+~
+~
+D WEST 24403 0 0
+~
+~
+#24405
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24406 0 0
+~
+~
+D WEST 24404 0 0
+~
+~
+#24406
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24407 0 0
+~
+~
+D WEST 24405 0 0
+~
+~
+#24407
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24408 0 0
+~
+~
+D WEST 24406 0 0
+~
+~
+#24408
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24409 0 0
+~
+~
+D WEST 24407 0 0
+~
+~
+#24409
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24410 0 0
+~
+~
+D WEST 24408 0 0
+~
+~
+#24410
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24411 0 0
+~
+~
+D WEST 24409 0 0
+~
+~
+#24411
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24412 0 0
+~
+~
+D SOUTH 24410 0 0
+~
+~
+#24412
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24413 0 0
+~
+~
+D SOUTH 24411 0 0
+~
+~
+#24413
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24414 0 0
+~
+~
+D SOUTH 24412 0 0
+~
+~
+#24414
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24415 0 0
+~
+~
+D SOUTH 24413 0 0
+~
+~
+#24415
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24416 0 0
+~
+~
+D SOUTH 24414 0 0
+~
+~
+#24416
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24417 0 0
+~
+~
+D WEST 24415 0 0
+~
+~
+#24417
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24418 0 0
+~
+~
+D WEST 24416 0 0
+~
+~
+#24418
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24419 0 0
+~
+~
+D WEST 24417 0 0
+~
+~
+#24419
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24420 0 0
+~
+~
+D WEST 24418 0 0
+~
+~
+#24420
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24421 0 0
+~
+~
+D WEST 24419 0 0
+~
+~
+#24421
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24422 0 0
+~
+~
+D WEST 24420 0 0
+~
+~
+#24422
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24423 0 0
+~
+~
+D SOUTH 24421 0 0
+~
+~
+#24423
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24424 0 0
+~
+~
+D SOUTH 24422 0 0
+~
+~
+#24424
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D EAST 24425 0 0
+~
+~
+D SOUTH 24423 0 0
+~
+~
+#24425
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24426 0 0
+~
+~
+D WEST 24424 0 0
+~
+~
+#24426
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24427 0 0
+~
+~
+D EAST 24449 0 0
+~
+~
+D SOUTH 24425 0 0
+~
+~
+#24427
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24428 0 0
+~
+~
+D SOUTH 24426 0 0
+~
+~
+#24428
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 24429 0 0
+~
+~
+D SOUTH 24427 0 0
+~
+~
+#24429
+On the Road~
+The road from Koteras to Udgaard   
+~
+road
+D NORTH 11653 0 0
+~
+~
+D SOUTH 24428 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

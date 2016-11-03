@@ -1,0 +1,555 @@
+#AREA
+kotudgroad.are~
+Koteras-Udgaard Road~
+Tiernus~
+1 51
+24400 24429
+normal
+temperate
+0
+1
+RS Tyner Tiernus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24400
+On a Wide Road~
+The road here is a wide dirt track, running on a beeline to the north
+amid the rolling pastures that extend to the east and west.  In the distance
+to the north, fields turn to foothills and the foothills then give way to
+towering mountain peaks.  To the south, the verdant fields seem to stretch
+endlessly into the distance.  Their beauty is marred somwhat, however, by
+the road that widens to the south and the hint of civilization beyond.  
+~
+road
+D NORTH 24401 0 0
+~
+A road winds through the foothills to the north.
+~
+D SOUTH 11854 0 0
+~
+A large road makes its way to the south.
+~
+#24401
+On a Wide Road~
+The road here is a wide dirt track, running on a beeline to the north
+amid the rolling pastures that extend to the east and west.  In the distance
+to the north, fields turn to foothills and the foothills then give way to
+towering mountain peaks.  To the south, the verdant fields seem to stretch
+endlessly into the distance.  Their beauty is marred somwhat, however, by
+the road that widens to the south and the hint of civilization beyond.  
+~
+road
+D NORTH 24402 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24400 0 0
+~
+The road continues to the south.
+~
+#24402
+On a Wide Road~
+The road here is a wide dirt track, running on a beeline to the north
+amid the rolling pastures that extend to the east and west.  In the distance
+to the north, fields turn to foothills and the foothills then give way to
+towering mountain peaks.  To the south, the verdant fields seem to stretch
+endlessly into the distance.  Their beauty is marred somwhat, however, by
+the road that widens to the south and the hint of civilization beyond.  
+~
+road
+D NORTH 24403 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24401 0 0
+~
+The road continues to the south.
+~
+#24403
+A Bend in the Road~
+The wide dirt track loops here, tracing its way through the rolling green
+pastures to the south and east.  In the distance to the north, fields turn
+to foothills and the foothills then give way to towering mountain peaks. 
+The road runs off into the distance to the east, disappearing from sight. 
+To the south, faint hints of civilization can be detected along the road.  
+~
+road
+D EAST 24404 0 0
+~
+The road continues to the east.
+~
+D SOUTH 24402 0 0
+~
+The road continues to the south.
+~
+#24404
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road disappears off into the distance to the east, and reaches a looping
+bend to the west, where it leads back toward civilization.  
+~
+road
+D EAST 24405 0 0
+~
+The road continues to the east.
+~
+D WEST 24403 0 0
+~
+The road continues to the west.
+~
+#24405
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24406 0 0
+~
+The road continues to the east.
+~
+D WEST 24404 0 0
+~
+The road continues to the west.
+~
+#24406
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24407 0 0
+~
+The road continues to the east.
+~
+D WEST 24405 0 0
+~
+The road continues to the west.
+~
+#24407
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24408 0 0
+~
+The road continues to the east.
+~
+D WEST 24406 0 0
+~
+The road continues to the west.
+~
+#24408
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24409 0 0
+~
+The road continues to the east.
+~
+D WEST 24407 0 0
+~
+The road continues to the west.
+~
+#24409
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24410 0 0
+~
+The road continues to the east.
+~
+D WEST 24408 0 0
+~
+The road continues to the west.
+~
+#24410
+A Bend in the Road~
+This wide dirt track reaches a bend here, tracing its way to the north
+and west through rolling green pastures that extend far to the south.  In
+the distance to the north, fields turn to foothills and the foothills then
+give way to towering mountain peaks.  The road sweeping to the north and
+west looks relatively well-traveled considering the pristine beauty of the
+untouched surroundings.  
+~
+road
+D NORTH 24411 0 0
+~
+The road continues to the north.
+~
+D WEST 24409 0 0
+~
+The road continues to the west.
+~
+#24411
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the north and south, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D NORTH 24412 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24410 0 0
+~
+The road continues to the south.
+~
+#24412
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the north and south, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D NORTH 24413 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24411 0 0
+~
+The road continues to the south.
+~
+#24413
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the north and south, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D NORTH 24414 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24412 0 0
+~
+The road continues to the south.
+~
+#24414
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the north and south, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D NORTH 24415 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24413 0 0
+~
+The road continues to the south.
+~
+#24415
+A Bend in the Road~
+This wide dirt track reaches a bend here, tracing its way to the south
+and east through rolling green pastures that extend far to the south.  In
+the distance to the north, fields turn to foothills and the foothills then
+give way to towering mountain peaks.  The road sweeping to the south and
+east looks relatively well-traveled considering the pristine beauty of the
+untouched surroundings.  
+~
+road
+D EAST 24416 0 0
+~
+The road continues to the east.
+~
+D SOUTH 24414 0 0
+~
+The road continues to the south.
+~
+#24416
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24417 0 0
+~
+The road continues to the east.
+~
+D WEST 24415 0 0
+~
+The road continues to the west.
+~
+#24417
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24418 0 0
+~
+The road continues to the east.
+~
+D WEST 24416 0 0
+~
+The road continues to the west.
+~
+#24418
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24419 0 0
+~
+The road continues to the east.
+~
+D WEST 24417 0 0
+~
+The road continues to the west.
+~
+#24419
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24420 0 0
+~
+The road continues to the east.
+~
+D WEST 24418 0 0
+~
+The road continues to the west.
+~
+#24420
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the east and west, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D EAST 24421 0 0
+~
+The road continues to the east.
+~
+D WEST 24419 0 0
+~
+The road continues to the west.
+~
+#24421
+A Bend in the Road~
+This wide dirt track reaches a bend here, tracing its way to the north
+and west through rolling green pastures that extend far to the south.  In
+the distance to the north, fields turn to foothills and the foothills then
+give way to towering mountain peaks.  The road sweeping to the west and
+north looks relatively well-traveled considering the pristine beauty of the
+untouched surroundings.  
+~
+road
+D NORTH 24422 0 0
+~
+The road continues to the north.
+~
+D WEST 24420 0 0
+~
+The road continues to the west.
+~
+#24422
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the north and south, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D NORTH 24423 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24421 0 0
+~
+The road continues to the south.
+~
+#24423
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road stretches off to the north and south, looking relatively well-traveled
+considering the pristine beauty of the untouched surroundings.  
+~
+road
+D NORTH 24424 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24422 0 0
+~
+The road continues to the south.
+~
+#24424
+A Bend in the Road~
+This wide dirt track reaches a bend here, tracing its way to the south
+and east through rolling green pastures that extend far to the south.  In
+the distance to the north, fields turn to foothills and the foothills then
+give way to towering mountain peaks.  The road bends sharply here, twisting
+around corners to the south and east.  
+~
+road
+D EAST 24425 0 0
+~
+The road continues to the east.
+~
+D SOUTH 24423 0 0
+~
+The road continues to the south.
+~
+#24425
+A Bend in the Road~
+This wide dirt track reaches a bend here, tracing its way to the north
+and west through rolling green pastures that extend far to the south.  In
+the distance to the north, fields turn to foothills and the foothills then
+give way to towering mountain peaks.  The road twist around a corner to the
+west, and widens at a small intersection to the north.  Black city walls are
+barely visible far to the north.  
+~
+road
+D NORTH 24426 0 0
+~
+The road continues to the north.
+~
+D WEST 24424 0 0
+~
+The road continues to the west.
+~
+#24426
+An Intersection of Roads~
+The dirt track grows even a bit wider here, this intersection an
+elliptical blemish amid the rolling green pastures that extend into the
+southern horizon.  In the distance to the north, fields turn to foothills
+and the foothills then give way to towering mountain peaks.  The road twists
+around a corner to the south, and a smaller dirt road continues to the east.
+In the distance to the north, dark city walls lie in the shadow of the
+mountains.  
+~
+road
+D NORTH 24427 0 0
+~
+The road continues to the north.
+~
+D EAST 24449 0 0
+~
+A slightly less traveled road leads off to the east.
+~
+D SOUTH 24425 0 0
+~
+The road continues to the south.
+~
+#24427
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road widens to the south as it reaches a small intersection.  Dark city
+walls are visible in the shadow of the mountains to the north.  
+~
+road
+D NORTH 24428 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24426 0 0
+~
+The road continues to the south.
+~
+#24428
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road continues to the south, and dark city walls rise up in the distance to
+the north.  
+~
+road
+D NORTH 24429 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24427 0 0
+~
+The road continues to the south.
+~
+#24429
+On a Wide Road~
+This wide dirt track traces its way through rolling green pastures that
+stretch out far to the south.  In the distance to the north, fields turn to
+foothills and the foothills then give way to towering mountain peaks.  The
+road continues to the south, and the gated entrance to a city lies to the
+north.  
+~
+road
+D NORTH 3800 0 0
+~
+~
+D SOUTH 24428 0 0
+~
+The road continues to the south.
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

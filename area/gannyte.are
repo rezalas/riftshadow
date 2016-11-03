@@ -1,0 +1,5432 @@
+#AREA
+gannyte.are~
+Gannyte Shoals~
+Trevelyan~
+1 30
+10000 10199
+normal
+temperate
+0
+1
+Trevelyan~
+
+#MOBS
+#10000
+sour old man~
+a sour old man~
+A wine-soaked old man mutters bitter imprecations beneath his breath.
+~
+The sour, vinegary smell of clothes soaked in cheap wine and old urine
+rolls off the wrinkled wreck of a man in fetid waves.  He sprawls out in
+languid disregard of your presence, finding comfort in a bed not changed in
+years.  Though he is carved in the soft, flaccid flesh of lethargy and ease,
+his skin hints at a different life long past. His skin is still weathered by
+years spent in the sun and sea, his hands still callused, and his long,
+sprawling legs still corded with the remnants of muscle.  What might have
+once been an industrious fisherman now simply soaks up wine and whispers with
+little energy but much bitterness of the old and better days.
+~
+-1000 10000 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+resting male poor
+G 0 medium
+ACT NPC
+ACT SENTINEL
+#10001
+elven elf lady missionary~
+an elf missionary~
+A pristine elven lady preaches the virtues of chastity and industry.
+~
+Her long, full white skirts are cut slightly out of fashion, hemmed up to
+the ankle in order to avoid the inches of human waste and filth that carpet
+the floors of these shacks.  A small, tart mouth barks out a vehement sermon
+against the scene of debauchery before her, but her eyes keep a hungry watch
+on every move.  Her delicate pointed ears perk up at every groan. With a
+white silk journal tucked beneath one arm and soft, uncalloused hands
+gesticulating emphatically, she urges her heedless audience to find salvation
+through hard work and purity of mind.
+~
+1000 10001 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+standing female affluent
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10002
+whore woman~
+a whore~
+A woman in thin red silk writhes seductively on the bed.
+~
+Her clothes and demeanor advertise her profession as openly as a written
+proclamation.  The diaphanous scarlet gown is cut to reveal both the round
+spheres of her breasts and the long, pale lines of her legs.  The red silk is
+thin and cheaply made, designed more for taking off than for wearing.
+Faintly offensive stains mark the fabric.  As she lies on the filthy bed with
+the dirty dress pulled up above her waist, moaning and writhing like a woman
+in the deepest throes of sensual delight, only her eyes reveal a mournful
+story of boredom and self-loathing.
+~
+-1000 10002 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+resting female poor
+G 0 medium
+ACT NPC
+ACT SENTINEL
+#10003
+duergar dwarf customer~
+a harlot's customer~
+A dark dwarf lies here grunting with lascivious delight.
+~
+Not bothering to remove his shoes or shirt, only unbuttoning his pants for
+access, he rubs dark, hairy hands rudely and aggressively over the woman's
+body.  One ruddy paw reaches in clumsily to reveal her nipple, while the
+other keeps an unwavering vigil over his wallet.  Judging by the dust on his
+clothes and assorted belongings, he is only a visitor in Gannyte Shoals,
+finding pleasure in the debauchery of the town.  The elevated pitch of the
+missionary's voice only brings a lustful grin to his lecherous face as he
+motions the prim elven woman to join in their pleasure.
+~
+-1000 10003 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+resting male moderate
+G 0 medium
+ACT NPC
+ACT SENTINEL
+#10004
+imp lascivious~
+a lascivious imp~
+A sniggering imp lifts the elven missionary's skirts to get a peek beneath.
+~
+A long, thin smile wrinkling his face to ghoulish proportions, he slips a
+little hand under the prim lady's skirts and pokes his head beneath to get a
+better look.  His dusky grey-brown wings flutter with amusement as he
+struggles to suppress mischievous laughter.
+~
+-1000 10004 100 unique~
+23 5d10+550 4d4+6 0 100 punch
+0 0 0 0
+resting male poor
+G 0 small
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+#10005
+man missionary leader~
+the mission leader~
+A stout man in highly decorated robes surveys the town smugly.
+~
+Standing with two imperialistic feet spread slightly, he surveys the rancid
+little village with a baffling air of accomplishment.  The sprawling panorama
+of ruined lives and unmitigated decadence seems to miss him, twisted into
+some religious vision of happy converts and reforming sinners.  Though he
+wears the simple white silk garment worn by all the missionaries, the
+pristine surface is almost entirely obscured by rich, gold adornments.
+Festooned with enough jewels to fund a nation, with his ample belly
+challenging the confines of his costly robe, he has come to extol the virtues
+of the simple, honest working life.
+~
+1000 10005 100 unique~
+30 6d12+1053 4d6+8 0 100 punch
+0 0 0 0
+standing male affluent
+H 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF ASSIST_ALIGN
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#10006
+elf clerk elven lad~
+an elven clerk~
+A handsome elven lad is absorbed in a deskful of paperwork.
+~
+With his lovely, aquiline nose buried in a book of accounts, little can be
+seen of his exquisitely carved face.  Above his thick spectacles, however,
+one can see a tall, cream-skinned forehead and a mass of wavy hair as rich
+and sparkling as fine-spun gold.  With eyes a blue clear and dazzling enough
+to pierce any young lady's heart, he devours the quotidian details of the
+mission.  With a long, muscled body strong with vigorous health and youth, he
+hunches over books and ledgers, completely oblivious to the real drama and
+futility of the mission, unmoved by the beauty of the young lass across the
+room.
+~
+1000 10006 100 unique~
+23 5d10+550 4d4+6 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+AFF DETECT_INVIS
+#10007
+half-elf lass girl missionary half-elven~
+a half-elven missionary~
+A pretty young half-elven lass stands twisting her skirts and smiling girlishly.
+~
+Shyly waiting to make her monthly report to the mission leader, she stands in
+the small room, casting longing glances at the elven clerk across the room.
+The color in her pretty cheeks is high, a rose blush on pale skin that gives
+away her excitement.  With her pink lips slightly parted as though to speak,
+she hangs there without a word, struggling with a powerful and obvious desire
+to capture the young man's attention.  Oblivious to the success or failure of
+her moral mission, she is simply a young girl with a personal mission looming
+much larger in her mind.
+~
+1000 10001 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+standing female affluent
+H 0 medium
+ACT NPC
+ACT SENTINEL
+AFF DETECT_INVIS
+#10008
+frail woman missionary spinster~
+a spinster missionary~
+A frail bird-like woman roams the village in search of children to chastise.
+~
+Though tall and thin, none could describe this shriveled prune as willowy or
+lithe.  Her narrow face comes to a point in a nose sharp and long enough to
+technically constitute a beak.  Neither in childhood nor in youth has this
+face ever known beauty, nor this body a sensual caress.  The clean white silk
+robes of a missionary cover her bony body from chin to ankle.  She walks the
+streets briskly, with a wry look of contempt upon her face, toting a stout
+cudgel with which to instruct the wayward young villagers.
+~
+1000 10001 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+standing female affluent
+H 0 medium
+ACT NPC
+#10009
+man jeris counter~
+Jeris the Counter~
+A jocund man in bright colors rubs his hands greedily.
+~
+Not so much a man as a jiggling sphere, the man smoothly works his hands
+against each other.  His hair is dark with grease, his stub legs bitten by
+parasites and spotted with disease.  None would imagine him a man wealthy
+enough to afford better accomodations.  Yet before him lies a stash of gold
+obviously his, judging by his delight in counting it, and by the whispers of
+the village he is the owner of the most profitable gambling establishment in
+the town.  His name is an oft-mentioned one in Gannyte Shoals, called "the
+Counter" for both counting the cards while playing and counting his loot
+afterward.  With a grin he hitches his pants of haphazardly assorted shades
+and begins his count anew.
+~
+-1000 10009 100 unique~
+26 5d10+800 3d7+7 0 100 punch
+0 0 0 0
+resting male affluent
+H 0 medium
+ACT NPC
+OFF DODGE
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#10010
+sailor~
+a lecherous sailor~
+A visiting sailor holds his cards in one hand and a whore in the other.
+~
+With olive skin and a foreign mode of dress that readily identify him as a
+stranger from far-distant lands, he spends his leave in Gannyte Shoals rather
+than the city itself both for convenience and pleasure.  The lawless little
+village leaves his whoring and brawling unchecked by moral instruction or
+official control.  Full of cheap mead, he spreads his hand of cards out
+boldly, confident in his next move and oblivious to the trickery of the
+harlot at his side.
+~
+-1000 10010 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+#10011
+young whore~
+a young whore~
+A brassy young whore signals across the table to the gambler.
+~
+She could not have seen more than twelve or thirteen naming days, this sad
+girl-child.  If any missionary with compassion could see her, they might cry
+for her fate and might well convert her with their sympathy.  But no one
+pities the voluptuous little red-haired girl.  She is neither pretty enough
+to be tragic nor sufficiently soft-mannered to ingratiate.  With signals more
+bold than sly, she gives away the hand of the sailor at her side, working for
+a cut of the gambler's winnings.
+~
+-1000 10011 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+resting female poor
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10012
+gambler~
+a gambler~
+A lean gambler slouches as he awaits the sailor's move.
+~
+His features are sharp and hungry, yet unconcerned.  Working with the whore,
+he knows his opponent's moves and thus requires no skill at his game.
+Slipping the girl a sly wink every now and then, he promises her a cut he
+will never deliver.  His black silk garments are costly but not conspicuously
+so, cut loose to hide an extra ace or two.  As he slips a snake-like tongue
+over his lips, he contemplates another risk-free profit and the indulgence it
+will buy him.
+~
+-1000 10012 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10013
+man young angry~
+a wrathful young man~
+An angry young man stands over the body without remorse.
+~
+Removing the murderer's knife from his father's body and neatly licking the
+blood from the blade, he shows no signs of remorse.  With one hand he sheaths
+the blade while with the other he searches for the ring that was the source
+of the altercation.  His crazed black hair is matted with blood, both old and
+new.  A mad little smile writhes its way across a face void of compassion,
+love, or regret.
+~
+-1000 10013 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10014
+imp wretched~
+a wretched imp~
+A wretched little imp glares up with envy.
+~
+Stamping his crooked little feet and glaring about with petulant anger, he
+fumes at the boastful man standing above him.  Before the titan's arrival, he
+was the prince of the young prostitutes in the town, known for his
+mischievous humour and relative generosity.  Now with the rugged, wealthy man
+arrived, he is forgotten.  Furious with his own impotence to garner any
+notice whatsoever, he flings his tiny fists of fury in the air and threatens
+the titan's knee most ominously.
+~
+-1000 10014 100 unique~
+23 5d10+550 4d4+6 0 100 punch
+0 0 0 0
+resting male poor
+G 0 small
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+#10015
+rugged titan abyssal noich~
+a boastful titan~
+A tall rugged titan yells his boastful blather to the room.
+~
+Full of his own bombosity, he bellows out a raunchy song, bragging of his
+sexual prowess.  With long, muscle-wrapped arms and legs as thick as tree
+trunks, he makes a fine specimen of virility, a fact not lost on the young
+ladies of the room.  His clothes are carefully chosen to set off his ashen
+skin and inky locks.  Tall boots of exotic leather glitter faintly in the
+lamplight, covering his legs to the knee.  With a full pouch of gold and
+enough mead to fill a river, his bravado is unlimited.
+~
+-1000 10015 100 unique~
+25 5d10+850 3d7+7 0 100 punch
+0 0 0 0
+standing male moderate
+H 0 large
+ACT NPC
+ACT SENTINEL
+#10016
+man thief brawny~
+a brawny thief~
+A brawny man in dark clothes stands quietly holding a small club.
+~
+Looking with some measure of satisfaction at his victim, the large man
+nudges his companion to sift through the halfling's coin purse.  More than
+twice as tall as the halfling and corded with intimidating muscle, he no
+doubt downed the drunken tourist with ease.  He is a seasoned veteran in
+crime, perhaps even a former mercenary judging by his military stance.  In
+his retirement from battle he has washed up upon this filthy shore, to pursue
+easy game in a lawless village.
+~
+-1000 10016 100 unique~
+25 5d10+950 2d6+9 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10017
+thief man~
+a thief~
+A pinch-faced young man rummages quickly through the victim's belongings.
+~
+Bending over the unconscious halfling with deft hands made skillful with
+experience, he collects every item of possible value.  Though he grins with
+satisfaction, he keeps wary eyes darting to and fro, not out of fear or
+reprisal for his crime but, rather, in search of his next victim.  Unlike his
+bullish companion, this thief seems born to his shadowy profession, quick of
+hand, slender, and cunning.
+~
+-1000 10017 100 unique~
+25 5d10+550 2d6+6 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF FAST
+#10018
+halfling~
+a beaten halfling~
+A chubby little halfling lies unconscious in the mud.
+~
+With his bulbous little nose buried in the mud and filth of the swampy
+ground, his heavy exhalations, throwing up tiny bubbles in the ooze, are the
+only indication that he yet lives.  A lump is beginning to swell on the back
+of his head.  Wearing the neat, bright colors of a foreigner, he came to
+Gannyte Shoals for the drunkenness, gambling, and whoring for which the
+village is famous.  Unfortunately for him, he fell victim to the footpads,
+for which the village is equally renown.
+~
+0 10018 100 unique~
+20 3d9+333 2d6+3 0 100 slap
+0 0 0 0
+sleeping male moderate
+H 0 small
+ACT NPC
+ACT SENTINEL
+#10019
+wench~
+a serving wench~
+Sore-footed and red-eyed, a serving wench pauses to admire the titan.
+~
+Her hair was once lovely, no doubt.  Though as dirty with sweat and muck as
+an old dishrag, it still shows an occasional glimmer of fine, pure gold
+beneath the kerchief.  Her face is young, made older than it should be by
+exhaustion and heavy work every day of her life, but not every seed of hope
+and laughter has been extinguished.  The hot blood of youth still stubbornly
+clinging to her tired soul makes her stop and admire the titan, leaving her
+eyes to linger no more on his gold pouch than on his thick, strong arms.
+With a heavy tray in one hand, she puts the other to her back in an
+inquisitive, wondering pose.
+~
+-1000 10019 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+standing female poor
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10020
+harlot~
+a harlot~
+A half-clad harlot lets out a raucous laugh.
+~
+Dressed in only enough cheap fabric to constitute a dress in the loosest
+sense of the term, she splays her wares openly.  Jiggling her ample bosom and
+spreading her curving thighs with each bellow of laughter, she tries to
+entice the titan.  Leaning over the table with breasts squeezed tightly
+together, she takes another gulp of mead, only to spill it all over herself
+as laughter, sharp and desperate, comes bubbling out of her.  Though her body
+is appealing, her face is as beaten and scarred as an old anvil.  If any
+man's eyes ever traveled that far up, she might have difficulty in her
+profession.
+~
+-1000 10020 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+resting female poor
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10021
+hawker sly old~
+a sly hawker~
+Drifting through the waterways of the village, a sly old hawker cries his wares.
+~
+Yelling in a high, cracked voice he advertises his business to the whole
+village. Floating through the rancid waters on a little raft, he is laden
+with cheap jewelry and stale meats and breads.  Though his wares seem
+innocent enough, with a sly wink he hints and more exotic services he can
+render.
+~
+-1000 10021 100 unique~
+25 5d10+950 2d6+9 0 100 punch
+0 0 0 0
+standing male moderate
+H 0 medium
+ACT NPC
+SHOPKEEPER OPEN 0 CLOSE 0 EXIT north
+#10022
+mother woman sloth map~
+a dazed woman~
+A pale flabby woman lies in a bed of her own filth.
+~
+Apparently oblivious to the real world, caught up in a haze of opium or
+perhaps sheer madness, she lays in her filthy bed oblivious to the cries of
+her children in the next room.  Piles of rubbish surround her bed, bones from
+meats long devoured, empty cups that once contained mead.  Whither her
+husband has gone, none may know, but his absence has left her unable or
+unwilling to move from this bed and here she will remain until sheer apathy
+takes her mind.  Her muscles are long since turned to water and her empty
+flesh hangs in a puddle around her body.  As you enter a mad little giggle
+escapes her lips.
+~
+-1000 10022 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+resting female poor
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10023
+boy child~
+a neglected child~
+An emaciated little boy plays pathetically in the dirt.
+~
+Sitting in a room without fire or furniture, he is perhaps the most pathetic
+sight you have ever witnessed.  Eyes too big with hunger stare out of his
+face, boring into you with pleading, not so much for food and clothing
+(though he plainly requires those necessities) as for your time and
+attention.  Playing a game of dirt and pebbles with his sister, no laughter
+ever crosses his lips.
+~
+0 10023 100 unique~
+10 2d7+96 1d7+2 0 100 none
+0 0 0 0
+resting male poor
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10024
+girl child~
+a neglected child~
+An emaciated little girl plays pathetically in the dirt.
+~
+Sitting in a room without fire or furniture, she is perhaps the most pathetic
+sight you have ever witnessed.  Eyes too big with hunger stare out of her
+face, boring into you with pleading, not so much for food and clothing
+(though she plainly requires those necessities) as for your time and
+attention.  Playing a game of dirt and pebbles with her brother, no laughter
+ever crosses her lips.
+~
+0 10024 100 unique~
+10 2d7+96 1d7+2 0 100 none
+0 0 0 0
+resting female poor
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10025
+young missionary~
+a young missionary~
+A young missionary in a plain white dress struggles to remember her sermon.
+~
+Trying her best to deliver only the pious words from her instructional
+manual, she cannot help but be moved by the pathetic condition of the
+children before her.  Her eyes are wet with tears as she utters each harsh,
+judgmental word.  Though the mission leader gives his followers the strictest
+instructions not to be "soft" with these sinners, not to feel pity or indulge
+their weaknesses, her heart is young and yet malleable.  These neglected
+children have made an impression upon it.
+~
+1000 10025 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+standing female affluent
+H 0 medium
+ACT NPC
+#10026
+fisherman old man~
+an old fisherman~
+An old man heads out toward the ocean in a rickety boat.
+~
+The grizzled, fish-smelling man in the decrepit boat is the last of a dying
+breed in Gannyte Shoals.  Born in the small village, raised here, he
+remembers the far-distant days when it was a thrifty, industrious fishing
+village.  With the expansion of the city and the influx of tourists and
+sailors, everyone changed but him.  Stubbornly clinging to his nets and
+fishing pole, he stares seaward, ignoring the decadence and decay around him.
+~
+1000 10026 100 unique~
+25 5d10+1100 2d6+13 0 100 punch
+0 0 0 0
+standing male poor
+H 0 medium
+ACT NPC
+ACT WANDER
+#10027
+shaman man~
+the village shaman~
+An enormous man in vibrant colors and animal skins fills the room.
+~
+Though the room is large, something about the strange, virile presence of
+this man makes the room seem crowded.  His shoulders are broad, presiding
+over a large, arrogant belly.  Exaggerated lines of frequent laughter mark
+his face into winding furrows.  The tiny bells and headless charms that hang
+from his motley garb jingle with the motions of his giant belly laugh.  The
+sound is hearty and genuine but somehow more chilling than the hiss of a
+viper.  If the dissipation and heartbreak of this little village has a
+source, it is here.  From his decaying lshack, the big man weaves a spell of
+lust and greed, selling a religion of hedonism to a willing audience.
+~
+-1000 10027 100 unique~
+32 10d10+1200 6d4+13 0 100 punch
+0 0 0 0
+standing male affluent
+H 0 medium
+ACT NPC
+#10028
+creature imp~
+a scavenging imp~
+A little muck-covered creature sifts through the watery mire.
+~
+So covered in the mysterious brown sludge of the swampy floor that his little
+wings are scarcely visible, he leaves a little trail of filth everywhere he
+goes.  He hops from one spot to another, dipping scrawny fingers into the
+water in search of treasure.  The drunken sailors and tourists who come to
+the city are careless with their belongings in their stupor and his efforts
+are not fruitless.
+~
+-1000 10028 100 unique~
+23 5d10+550 4d4+6 0 100 punch
+0 0 0 0
+standing male poor
+G 0 small
+ACT NPC
+ACT WANDER
+OFF DODGE
+#10029
+sailor~
+a drunken sailor~
+A drunken sailor wanders the village waterways, bellowing curses.
+~
+He shakes his tiny raft with his laughter and antics until it teeters
+dangerously close to spilling him into the filth of the village.  Beating his
+chest madly and snickering between words, he sputters out every foul phrase
+his travels have taught him.  Reaching up with lanky arms, he tries to grab
+the swinging walkways above and topple the pedestrians.  Dancing with glee at
+his mischief, he roars with laughter, then again with profanity.
+~
+-1000 10029 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+standing male moderate
+H 0 medium
+ACT NPC
+ACT WANDER
+#10030
+girl ardneala~
+a little girl~
+A sweet-looking little girl sits in the mud with big tears rolling down her cheeks.
+~
+Dressed in a dirty white frock, she seems sad and forgotten.  No doubt she
+moves most tourists to sobs of pity.  Her cheeks are unwashed and tiny
+rivulets of tears make pathways through the dirt.  Most who pass her move
+close to comfort her but a careful eye will notice a quick hand ready to
+delve into pocket or purse and steal the treasure within.
+~
+-1000 10030 100 unique~
+18 3d9+333 1d7+2 0 100 slap
+0 0 0 0
+resting female poor
+H 0 medium
+ACT NPC
+ACT WANDER
+#10031
+man missionary~
+an elderly missionary~
+A gaunt man in simple white robes cries out a sermon of redemption to the village.
+~
+One of the few missionaries here in Gannyte Shoals who seems truly intent on
+his message and true to his doctrine of self-denial, this lean man preaches
+his sermon with the fire of a zealot in his eyes.  Gesticulating fiercely,
+desperate to catch the attention of any one of the villagers, his perch upon
+the walkway teeters, almost pitching him into the water below, but he pays no
+mind to the danger.
+~
+1000 10031 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+standing male moderate
+H 0 medium
+ACT NPC
+#10032
+man enaj~
+a corpulent man~
+A corpulent man sits at the table, devouring dish after dish.
+~
+Snorting and guzzling like a pig at his trough, this thing is scarecely
+recognizable as human.  Smatters of grease and sauce cover his face and mead
+stains dribble down his white apron, the only piece of clothing large enough
+to cover him. Rolls of fat cover him from chin to knee, and begin again in
+smaller waves down to his feet.   Though the city's grain dole to the village
+is more than generous, he quickly consumes the allotment and pursues richer
+feed.  Laziness and gluttony have motivated him to force his daughter into
+prostitution, that his unending hunger might be sated.
+~
+-1000 10032 100 unique~
+25 5d10+750 2d6+6 0 100 punch
+0 0 0 0
+resting male moderate
+H 0 medium
+ACT NPC
+ACT SENTINEL
+#10033
+girl young slattern mishrak~
+a desperate girl~
+A slatternly young girl roams the village in search of a man, any man.
+~
+Doing her best to appear attractive to the passing young men, she is
+nonetheless one of the plainest and ugliest of girls. Her chest is as flat as
+a boy's and her matted red locks reek of vomit and drunken nights.  She
+frequently resorts to shows of helplessness to gain attention, but no one man
+takes her home for more than one night's pleasure.  Her vapid eyes show no
+spark of intelligence, not even the simple cunning of a whore.
+~
+-1000 10033 100 unique~
+20 3d9+200 2d7+4 0 100 slap
+0 0 0 0
+standing female poor
+H 0 medium
+ACT NPC
+ACT WANDER
+#10034
+toad slimy~
+a slimy toad~
+A slick-backed toad finds a pleasant home in the muck.
+~
+Slipping his rubber legs through the water, the grey-green little creature
+squelches happily in the slime.  Yellow splotches of what appears to be
+parasitic growth but might just be a natural camoflauge in this rancid swamp
+spread in concentric circles across his back.  Unconcerned, he croaks twice
+and plops down into the mire once more.
+~
+0 10034 100 unique~
+6 2d7+71 1d7+1 0 100 bite
+0 0 0 0
+standing male none
+Ga 0 tiny
+ACT NPC
+#10035
+leech creature~
+a blood-sucking leech~
+A small worm-like creature approaches you hungrily.
+~
+It squirms mindlessly toward the sensation of warm blood beneath flesh,
+toward you.  Grey-green sludge covers the slippery body, making the leech
+hard to spot in the swampy waters.  Though repulsive to see or touch, the
+disgusting creature has both cullinary and medicinal value in the village.
+~
+0 10035 100 unique~
+4 2d7+46 1d5+1 0 100 suction
+0 0 0 0
+standing male none
+GRa 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+#10036
+catfish~
+a catfish~
+A long-finned catfish feeds on the bottom sludge.
+~
+Sucking lazily along the bottom of the swampy waterbed, this large catfish
+has an ample food supply and little risk of predation.  Larger fish cannot
+swim in these shallow waters and the village fisherman have long since
+abandoned their trade, leaving the swamp to parasites and bottom-dwellers.
+~
+0 10036 100 unique~
+6 2d7+71 1d7+1 0 100 bite
+0 0 0 0
+standing male none
+Ga 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+#10037
+mosquito giant~
+a mosquito~
+A giant mosquito thrums the humid air.
+~
+Beating transparent, veined wings in air thick enough to wade through, the
+blood-sucking insect flits about in search of a meal.  He is unusually large
+for a mosquito, nearly the size of a human fist with his long, spindly legs
+extended.  Dozens, perhaps hundreds, like him fly through the air, though
+most not nearly so large or noticeable.
+~
+0 10037 100 unique~
+4 2d7+46 1d5+1 0 100 bite
+0 0 0 0
+standing male none
+GOa 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+#10038
+tadpole tiny~
+a tiny tadpole~
+A tiny tadpole flips through the murky water.
+~
+Flipping its tiny tail back and forth furiously, the little creature weaves
+its way through the swampwater.  Little nubs of legs are beginning to appear
+already beneath his slimy grey-brown skin.  Not many creatures can survive
+the rancid pollution of this water, so he swims with little fear of
+predation.
+~
+0 10038 100 unique~
+4 2d7+46 1d5+1 0 100 bite
+0 0 0 0
+standing male none
+Ga 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+#0
+
+
+
+#OBJS
+#10000
+green bottle wine~
+a tall green bottle of red wine~
+A scuffed glass bottle lies here leaking a dark red liquid.~
+drink
+glass~
+10 9 'water' 0 0
+8 2 7 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E green bottle wine~
+Cheap, chipped green glass holds a tart vintage not for the weak-stomached.
+The scuffed exterior and hanging bubbles of spittle at the opening imply this
+bottle has been used many times before.
+~
+
+#10001
+white silk journal book~
+a small white silk journal~
+A pristine silk-clad book lies open on the ground.~
+trash
+vellum~
+0 0 0 0 0
+10 2 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E white silk journal book~
+With its covers slightly ajar to reveal the creamy vellum within, you can see
+no harm in casually glancing at its pages.  Besides, the pure white silk and
+little-girl lace on the cover do not lead you to expect anything but the
+purest of communications.  The handwriting inside is exceedingly fine, with
+the loose, organic flow of elven script.  Coming to the middle, however, you
+notice a section with words sharply slanted and haphazardly arranged as
+though the writer were in a fit of passion...
+~
+E middle words slanted section~
+Though messy, you can discern the words:
+
+...leaping and writhing on a bed of sex-soaked sheets.  The painted harlot's
+cries reach up to heaven as she enjoys each pounding, driving, delicious
+thrust.  The sinner moans with his whore, lost in the ecstasy of his immoral
+act.  He tangles a dirty paw in her dark chestnut hair and she giggles at the
+pain.  May the heavens strike them dead for their sins!  It is only for the
+sake of the mission that I would sit and watch this wicked display.  I suffer
+that others will not have to....
+~
+
+#10002
+drawing sketch~
+a rude sketch of a naked woman~
+A small drawing lies smudged and forgotten on the ground.~
+trash
+paper~
+0 0 0 0 0
+1 1 1 P
+WEAR TAKE
+LIMIT 0
+E rude sketch woman porn~
+Though the sketch is poorly done and smudged from frequent use, you can make
+out the voluptuous figure of a woman.  Her breasts flow almost off the page
+and her thighs echo the curve of her bosom, blossoming out from an impossibly
+small waist.  With large lips puckered in a pouty kiss, the buxom woman
+beckons you to pleasure.
+~
+
+#10003
+gold insignia garish~
+a garish gold insignia~
+Gleaming with more pride than good taste, a large ornament lies on the ground.~
+armor
+gold~
+2 0 0 5 0
+25 1 500 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+APPLY HITROLL 2
+APPLY DAMROLL 1
+APPLY STR 1
+LIMIT 0
+E gold insignia garish~
+The intricate, ornate interlacement of pure gold winds out from the center to
+form an ornament larger than a man's hand.  Smallish diamonds and emeralds
+adorn the goldwork like stars in a gilded sky.  In the center is a flame
+carved out in a giant garnet and an inscription beneath.
+~
+E flame inscription~
+Picked out in small sapphires beneath the burning garnet fire it reads:
+
+A fire to purge the sinner's blight.  A flame so pure it kills the night.
+~
+
+#10004
+sash silk swath~
+a varicolored silk sash~
+A long swath of many-hued silk lies at your feet.~
+armor
+satin~
+0 0 0 9 0
+25 1 100 P
+WEAR TAKE
+WEAR WAIST
+APPLY MANA 20
+APPLY HP 10
+LIMIT 0
+E sash silk swath~
+Bands of indigo and violet swirl to form arcs of purest gold, sparks of red,
+blooms of sapphire.  The long swath of purest silk is brilliantly colored by
+an expert maker.  Wide enough to cover the entire torso and long enough to
+wrap around most men twice, it must cost many times its weight in gold.
+~
+
+#10005
+spectacles circles dark-rimmed bone~
+heavy dark-rimmed spectacles~
+Thick circles of dark-polished bone form clumsy eye-wear.~
+armor
+bone~
+0 0 0 0 0
+12 1 15 P
+WEAR TAKE
+WEAR HEAD
+APPLY HITROLL -2
+APPLY MANA 10
+APPLY INT 3
+APPLY WIS 1
+LIMIT 0
+E spectacles circles dark-rimmed bone~
+The curved glass within the circular frames refracts the light into dancing
+rainbows.  The rough make of the spectacles suggests they were never forged
+with an eye for beauty, but a rough, masculine build for sheer utility.
+Though in examining the tiny figures of a ledger or account book they would
+be perfect, in traveling and fighting, the visual distortion might be a
+considerable hindrance.
+~
+
+#10006
+wood length stout cudgel~
+a stout cudgel~
+A thick length of knotty wood promises a good thumping.~
+weapon
+wood~
+mace 4 8 thwack 0
+15 6 3 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 3
+LIMIT 0
+E wood length stout cudgel~
+Well-worn wood has been carved into a serviceable weapon.  Bumpy knots up and
+down the length of the stick only serve to enhance its destructive potential.
+~
+
+#10007
+pot clay treasure~
+a treasure pot~
+A large clay pot with stout handles lies discarded.~
+container
+clay~
+10 C 0 10 1
+5 5 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E pot clay treasure~
+The pottery is shoddily formed, with no attention to detail or aesthetics.
+Jagged shards have been chipped from the mouth, but the rounded walls of the
+pot are still thick and sturdy.  A large, curving handle has been fashioned
+on either side of the pot, to make it easy to clutch tightly.
+~
+
+#10008
+ragged pants material pile cloth~
+ragged multi-hued pants~
+A moth-eaten pile of colorful cloth slowly decays.~
+armor
+cloth~
+1 0 0 0 0
+10 2 0 P
+WEAR TAKE
+WEAR LEGS
+APPLY DEX 2
+APPLY HITROLL 1
+LIMIT 0
+E ragged pants material pile cloth~
+This long unwashed garment plays host to an near infinite variety of vermin.
+Worm holes and unpatched tears riddle the fabric.  Though the colors are
+faded with time and wear, they yet remain vibrant with virulent shades of
+yellow, puce, and a deep, glowing red.  Though they will lend little to a
+wearer's protection and even less to his personal appeal, they soft material
+makes movements swift and easy.
+~
+
+#10009
+reflection flash silver hand-mirror mirror~
+a large silver hand-mirror~
+A flash of your own reflection catches your eye.~
+treasure
+silver~
+0 0 0 0 0
+14 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E hand-mirror mirror silver~
+With stylized lightning bolts engraved on the handle and ornate sunbursts
+decorating the back, the mirror is a thing of considerable vanity in and of
+itself.  Faint hints of gilding accent the edges and a large opalescent gem
+crowns the top.  Holding the mirror up to your face, you see your own
+reflection.
+~
+E reflection middle~
+You look better than you thought you would.
+~
+
+#10010
+boots snakeskin exotic~
+tall boots of exotic snakeskin~
+Tight boots of glittering snakeskin have been left here.~
+armor
+snakeskin~
+6 2 6 8 0
+20 5 100 P
+WEAR TAKE
+WEAR FEET
+RESTRICT TITAN_ONLY
+APPLY STR 1
+APPLY DEX 1
+APPLY DAMROLL 1
+LIMIT 0
+E boots snakeskin snake skin exotic~
+Fashioned to show off the muscular titan leg to perfection, these boots are
+exquisitely made.  The skin is oiled to a sharp gleam, tough enough to turn
+away a blow yet supple enough to mold precisely to your leg, provided you are
+of the titan build.  Each scale of the snake skin glitters maliciously in
+bands of inky black and blazing orange.
+~
+
+#10011
+cask mead~
+a stoppered cask of mead~
+A small earthenware cask has been toppled and lies forgotten on its side.~
+drink
+pottery~
+50 49 'mead' 0 0
+5 1 2 P
+WEAR TAKE
+LIMIT 0
+E cask mead~
+Made of plain, unadorned pottery, it has become chipped and battered with
+time and usage.  The small cork stopper still fits tightly, however, and
+keeps the sweet, strong mead within from spilling.
+~
+
+#10012
+cross bun round sweetbread~
+a hot cross bun~
+A round sweetbread tempts you with dripping butter and icing.~
+food
+food~
+25 30 0 0 0
+1 1 6 P
+WEAR TAKE
+LIMIT 0
+E cross bun sweetbread round~
+Though icing forms a cross that marks it as day-old bread, the bun is still
+fairly soft and the dense, sweet meal is quite filling.  Butter has been
+spread generously on top and drips in sticky drops onto your fingers.
+~
+
+#10013
+handful meat sweetmeats pile meats~
+a handful of stale sweetmeats~
+An unpromising pile of brown and pinkish meats emits a faint odor.~
+food
+food~
+25 30 0 0 0
+1 1 10 P
+WEAR TAKE
+LIMIT 0
+E handful meat sweetmeats pile meats~
+Though the odor is somewhat frigtening and the thin-sliced meat is tinged
+with green, it might actually provide sustenance without killing you.
+~
+
+#10014
+gem red ruby~
+a flashy red ruby~
+A large red gem flashes rays of tinted light.~
+treasure
+glass~
+0 0 0 0 0
+5 1 9 P
+WEAR TAKE
+LIMIT 0
+E gem red ruby~
+Upon closer inspection you notice the gem is too transparent to be a ruby and
+inconsistent in hue, not a precious stone at all but a cheap piece of glass.
+~
+
+#10015
+linen pile unwashed bedsheets~
+filthy unwashed bedsheets~
+The putrid smell of waste and disease rises from a crumpled pile of dirty linen.~
+trash
+linen~
+0 0 0 0 0
+1 3 0 P
+WEAR TAKE
+LIMIT 0
+E linen pile unwashed bedsheets~
+It is hard to imagine the bleached, spotless color these sheets must once
+have been.  The color has grown darker and darker over years of use without
+cleaning until it reached its present hue, a dingy shade of brown.  Putrid
+stains of human waste, blood, and pus coat the fabric until it is stiff and
+rough to the touch.  You wonder what excess of laziness could motivate
+someone to leave their linen unwashed for so long.
+~
+
+#10016
+wooden boat rickety~
+a rickety boat~
+A small wooden boat offers you transportation.~
+boat
+wood~
+0 0 0 0 0
+5 10 4 P
+WEAR TAKE
+LIMIT 0
+E wooden boat rickety~
+Though it is old, battered, and oft-repaired, it is serviceable.  Remarkably
+small and light, it is clearly designed for only one passenger.  It is coated
+with scattered fish scales and reeks of fish guts.
+~
+
+#10017
+riot peacock feathers feather headdress~
+a peacock feather headdress~
+A sparkling riot of peacock feathers sits upright on the ground.~
+armor
+feathers~
+5 0 0 10 0
+30 2 30 P
+WEAR TAKE
+WEAR HEAD
+APPLY MANA 20
+APPLY HP 10
+LIMIT 0
+E peacock feathers feather headdress~
+The flashiest, most iridescent feathers of a peacock's tail have been plucked
+to for a large, sparkling headdress.  Tiny beads and gems have been sewn
+between each long, rainbow feather to form a kind of tinkling lace.  Attached
+to a strange animal pelt at the bottom, the headdress is designed to curve
+along the crown of the head and then fall in iridescent waves down the back.
+~
+
+#10018
+set beaded bracelets chain~
+a set of beaded bracelets~
+A long chain of glittering multi-hued bracelets reflects the light.~
+armor
+gold~
+5 5 0 5 0
+25 1 100 P
+WEAR TAKE
+WEAR WRIST
+APPLY DAMROLL 1
+APPLY HP 15
+LIMIT 0
+E set beaded bracelets~
+Though each individual bracelet is thin enough only to cover the wrist, there
+are over a dozen of these lovely, glinting charms, woven together with fine
+gold wire.  With tinkling bells and tiny shards of gleaming glass and gem,
+the ornament is distracting as well as dangerous.
+~
+
+#10019
+robe violet indigo~
+a loose robe of violet and indigo~
+A motley robe of swirling colors attracts your eye.~
+container
+cloth~
+60 0 0 60 1
+20 4 40 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MANA 30
+APPLY HITROLL 2
+LIMIT 0
+E robe violet indigo~
+Though the garment is put together from haphazardly chosen materials and
+colors, there is something mesmerizing about the vibrant colors and swirling
+designs.  Charms hang off the robe at seemingly random spots, some carved
+from animal bone, some tinkling with tiny bells.  It has ample room for
+concealment in the deep pockets within.
+~
+
+#10020
+charm ring dragon envy~
+a green-eyed dragon charm~
+A small charm has been attached to a thin gold wire.~
+armor
+gold~
+0 0 0 0 0
+10 1 30 P
+WEAR TAKE
+WEAR FINGER
+ITEM EVIL
+APPLY HP 6
+LIMIT 0
+E charm ring dragon envy~
+A small gold carving of a curled, emerald-eyed dragon has been hastily
+attached to a twisted piece of wire to form a ring.  The dragon carving is
+remarkably precise, with great attention to the large, smoking eyes.  Sharp
+gold horns extend from the head and run in a ridge along the back.  The
+figure brings to mind the legends of green-eyed dragons who incite
+covetousness in all who encounter them.
+~
+
+#10021
+rack lamb~
+succulent rack of lamb~
+A juicy rack of tender lamb makes your mouth water.~
+food
+food~
+60 80 0 0 0
+1 2 0 P
+WEAR TAKE
+LIMIT 0
+E rack lamb~
+The tender, greasy meat still clings to the bone.  Soaked in animal fat and
+roasted for hours over an open spit, it promises a succulent meal.
+~
+
+#10022
+corpse man~
+a bloody corpse~
+A man recently murdered lies in a spreading pool of his own blood.~
+trash
+flesh~
+0 0 0 0 0
+10 2 0 P
+LIMIT 0
+E corpse man~
+The features of his face are lost in wide, violent gashes and spurting blood.
+Whoever took his life, acted out of mindless, uncontrollable rage.  Glancing
+over his body you see more jagged stab wounds than you can count, more of
+them torn and twisted as though the murderer sought to inflict as much harm
+as possible upon the victim.
+~
+
+#10023
+knife stained~
+a stained knife~
+A meat knife marked with indelible blood stains lies here.~
+weapon
+steel~
+dagger 5 5 stab 0
+20 4 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E knife stained~
+Once just an ordinary kitchen knife used for cutting meat or other such
+quotidian activities, the blade is now marked with vivid red lines.  The
+blood of a murder victim has somehow seeped into the metal itself, leaving an
+indelible stain.
+~
+
+#10024
+key white~
+a pristine white key~
+A perfect white key lies here forgotten.~
+key
+steel~
+0 0 0 0 0
+10 0 0 P
+WEAR TAKE
+LIMIT 0
+E key white~
+Without a scratch, scuff, or stain the key seems as pristine as the day the
+blacksmith made it.  No engraving or etching mars the perfectly smooth
+surface.
+~
+
+#0
+
+
+
+#ROOMS
+#10000
+An abandoned shack~
+A wind fragrant with the round, gassy smell of human decadence shakes this
+little one-room shack.  The shambling home sways on the tall, rotten stilts
+that hold it up above the waterline.  The wood is warped with damp.  Each
+board bulges away from its neighbor to leave gaping holes in the wall and
+floor.  Though the sprawling decay does not in any way distinguish this shack
+from any other in the village, it is clear that none have lived here for some
+time.  Shards of glass and broken pottery cover the floor.  The thresholds to
+the south and east hang empty, the doors long since stolen.  The one tiny
+window in the northern wall hangs open, ringed with jagged teeth of broken
+glass.  A slick layer of mold still clings to the floor from the last time
+the waters rose to flood level and soaked the small house.  No foot has left
+a mark in the filth nor hand moved to clear the clutter in many years.
+~
+inside
+ROOM INDOORS
+D EAST 10009 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D SOUTH 10001 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+E floor~
+Layers of debris nearly obscure the warped floorboards.  Directly beneath
+you, however, the floor gives way to a small hole, through which you can see
+the stagnant waters below.
+~
+E window~
+A crudely-cut hole in the northern wall serves as the only light source in
+this abandoned home.  There was once glass to cover the whole and serve as a
+barrier against the infested swamp outside, but now all that remains of the
+window pane is the set of ominous glass shards hungrily guarding the opening.
+Looking through the window, you see the waters recede to the north, giving
+way to an impenetrable forest.
+~
+#10001
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  Southward lies the
+relative shelter of another sprawling shack, while the home to the north
+looks dark and uninhabited.
+~
+trail
+D NORTH 10000 0 0
+~
+An abandoned shack lies to the north.
+~
+D SOUTH 10002 0 0
+~
+A larger, more prosperous shack lies to the south.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather like a festive
+banner, celebrating decay and neglect.  The rope is old and not repaired for
+many years.  It creaks with the burden of your weight and the soft
+encouragement of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10002
+A sprawling shack~
+Larger than most homes in the village, this shack, though easily as
+decrepit as the others, is blessed with two rooms rather than one and
+actually contains some meager furnishings.  Three tables with mismatched
+chairs fill the room, each heavy with empty mugs and the remnants of a card
+game.  The floor is smooth and relatively clean, kept from mold and rot by
+the frequent passage of feet in and out of this shack.  A crude tapestry
+hangs on the southern wall, to cover the gaping, glassless window.  Though
+the room is dirty and infested with the smell of decay, there is something
+prosperous and busy about it.  To the west lies a smaller room, from which
+you can hear the faint clinking of gold being counted.  In every other
+direction, a roughly cut doorway allows access to the outside world.
+~
+inside
+ROOM INDOORS
+D NORTH 10001 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D EAST 10010 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D SOUTH 10004 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10003 0 0
+~
+A smaller door leads to a windowless room.
+~
+E tables~
+Round wooden tables of differing hues and stages of decay nearly fill the
+room.  The largest seems the most recently used, still crowded with full
+flagons of mead and recent evidence of a meal. Stray cards are scattered on
+all three tables, seeming to indicate that this is a gambling establishment.
+~
+E tapestry~
+Hiding a lopsided window and thus obscuring the room from prying eyes, a
+long, ratty tapestry hangs on the southern wall.  Though the color is faded
+and the weave snagged, the subject seems to be a slender, naked woman with
+dice in one hand and a golden wheel in the other.
+~
+#10003
+The back room~
+Smaller than the adjacent room, the tiny office is nearly filled with a
+large wooden desk and the small, lice-infested cot next to it.  The desktop
+is obscured beneath piles of papers, ledger books, and dirty trinkets and
+charms of the most worthless variety.  Moth-eaten velvet bags, presumably
+containing more of the same, fill the space beneath the desk.  A chair much
+too large to suit the desk is placed behind it.  A curious black board hangs
+on the northern wall, covered in an indecipherable scrawl.  Though as dirty
+and unpleasant as any other room in the village, there is in this small
+office the air of possession, the dirty sense of ownership to be found in a
+rat's lair.
+~
+inside
+ROOM INDOORS
+D EAST 10002 0 0
+~
+A small doorway leads to a larger, busier room to the east.
+~
+D WEST 10007 AB 0
+~
+A rough exit to the outside world.
+~
+D DOWN 10040 AB 0
+trapdoor~
+A small, rough trapdoor leads down to the water.
+~
+E blackboard board black~
+Taking up most of the width of the northern wall is an unframed blackboard,
+covered with a chalky scrawl.  Though the print is at first indecipherable,
+you eventually make out names of certain villagers with checks for payment or
+ominous x-marks indicating the need for retribution.
+~
+#10004
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the north and
+south lie the relative shelter of another sprawling shack.
+~
+trail
+D NORTH 10002 0 0
+~
+A large, more prosperous shack lies to the north.
+~
+D SOUTH 10005 0 0
+~
+The smell of food and sound of laughter come from the shack to the south.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather like a festive
+banner, celebrating decay and neglect.  The rope is old and not repaired for
+many years.  It creaks with the burden of your weight and the soft
+encouragement of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10005
+A decaying tavern~
+Reeking of stale beer and roasting sweetmeats, this sprawling shack seems
+to be a place of drinking and merrymaking.  The warped floorboards bulge to
+reveal the water beneath but hold your weight without complaint, seemingly
+accustomed to the stamping burden of drunken dancing as well as fierce
+brawls.  Broken chairs lie piled up in the corners while more functional ones
+gather around four assorted tables.  Broken pottery and remnants of food have
+been dropped to the floor but swept to the corners for the sake of
+convenience.  There is no hour of day or night when this slovenly place does
+not echo with raucous laughter or the grating screech of violence.
+~
+inside
+ROOM INDOORS
+D NORTH 10004 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D EAST 10011 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10006 0 0
+~
+A smaller door leads to a windowless room.
+~
+#10006
+The kitchen~
+A rough stone hearth on the northern wall serves as the oven, though no
+fire burns in it now.  A small chopping block still bloody with butchered
+beef bears a meal of cheeses and sweetmeats to be served to the waiting
+patrons.  The cabinets are mostly bare save for a few stale rinds of bread
+and the salted hams and sides of beef hanging in the meat closet.  Insects
+buzz lazily about the room and the scurrying footfalls of rats reach your
+ears.  If the drunken patrons of the tavern could see the conditions in this
+kitchen, perhaps they might lose their appetite for their meal.  Then again,
+perhaps not.
+~
+inside
+ROOM INDOORS
+D EAST 10005 0 0
+~
+The sound of laughter and clinking glasses comes from the room to the east.
+~
+D DOWN 10042 0 0
+~
+A short wooden ladder leads down to the water.
+~
+#10007
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lie the relative shelter of another sprawling shack.
+~
+trail
+D EAST 10003 AB 0
+~
+A two-room shack lies to the east.
+~
+D WEST 10008 0 0
+~
+A smaller home lies to the west.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather, celebrating
+decay and neglect.  The rope is old and not repaired for many years.  It
+creaks with the burden of your weight and the soft encouragement of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10008
+A greasy little shack~
+The air here is rife with the scent of food, that long eaten and that
+freshly served.  The lingering memory of every kind of gustatory indulgence
+can be traced here; scents sweet and salty, meats and fruits and buttery
+breads.  The four walls are closely set, the scant floorspace taken up with a
+dining table and a single chair.  Bones litter the floor and sauces of every
+variety stain the walls as well as the table.  Grease dripped from roasted
+meats makes passage through the shack somewhat slippery.  It is odd to find
+such evidence of gluttony in a home so poor and so ill-tended.  The warped
+wooden boards in the wall let in the elements and the floor creaks with age.
+Whoever inhabits this home has a very peculiar set of priorities.
+~
+inside
+ROOM INDOORS
+D EAST 10007 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D DOWN 10037 0 0
+~
+A small wooden ladder leads down to the water.
+~
+#10009
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lie the relative shelter of other sprawling shacks.
+~
+trail
+D EAST 10012 0 0
+~
+The faint scent of blood comes from the shack to the east.
+~
+D WEST 10000 0 0
+~
+An abandoned home lies to the west.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather like a festive
+banner, celebrating decay and neglect.  The rope is old and not repaired for
+many years.  It creaks with the burden of your weight and the soft
+encouragement of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10010
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lie the relative shelter of other sprawling shacks.
+~
+trail
+D EAST 10014 0 0
+~
+An ominous home lies at the heart of the village.
+~
+D WEST 10002 0 0
+~
+A prosperous home lies to the west.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10011
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lie the relative shelter of another sprawling shack.
+~
+trail
+D EAST 10015 0 0
+~
+A filthy shack lies to the east.
+~
+D WEST 10005 0 0
+~
+The sound of laughter and merriment comes from the west.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian into the stagnant waters below.
+~
+#10012
+A blood-stained room~
+The details of the room are at first lost on you, overwhelmed by the smell
+and sight of carnage that drips from the walls and gathers in pools on the
+floor.  Handprints in bright red claw the warped floorboards and trail off
+helplessly to the corner of the room.  The sparse furniture seems
+incongruously mundane in such a spectacularly bloody room.  A simple redwood
+table with matching chairs would be perfectly at place in a sun-lit kitchen
+or homely family room if not for the light sprinkling of blood dotting the
+tabletop.  A threadbare rug on the floor was once white but now stained
+maroon.  Strangely not all the stains are fresh.  Though the floor is wet
+with newly shed blood, there are also old brown marks in amorphous
+configurations.  Scuffs from past fights are carved into the walls,
+accompanied by stains scrubbed but not erased.  A guttural moan rises to fill
+the room and you shudder, uncertain if the sound comes from your throat or
+another or simply arises from the faint wind slipping through the rotten
+walls.
+~
+inside
+ROOM INDOORS
+D EAST 10016 0 0
+~
+A small bedroom lies to the east.
+~
+D SOUTH 10013 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10009 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+#10013
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the north and
+south lie the relative shelter of other sprawling shacks.
+~
+trail
+D NORTH 10012 0 0
+~
+The faint smell of carnage comes from the house to the north.
+~
+D SOUTH 10014 0 0
+~
+An ominous home lies to the south.
+~
+D DOWN 10059 0 0
+~
+A narrow ladder leads down to the water.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian into the stagnant waters below.
+~
+#10014
+A torch-lit room~
+No daylight reaches this large room.  The windows are covered by thick
+tapestries and the holes in the wall and floorboards are plugged with mud and
+moss.  In the flickering light of scattered torches the place seems exotic
+and faintly threatening.  Shapes and shadows appear and disappear, dancing on
+the edges of your perception.  Heavy animal pelts hang on every wall, though
+from what animal they were taken you could not say.  The musk of wild
+animals, however, clings to the room.  A shelf on the western wall contains
+row upon row of jars and earthenware filled with mysterious concoctions.  A
+large seat stands against the southern wall, made of earth and bone, looking
+rather like a throne.  A throaty hum of prayer or curse fills the room,
+coming from no particular direction.
+~
+inside
+ROOM INDOORS
+D NORTH 10013 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D EAST 10017 AB 0
+curtain~
+Through a swaying curtain of beads lies an even darker room.
+~
+D WEST 10010 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+E tapestries~
+Long, richly woven tapestries depicting scenes of murder and sacrifice adorn
+the walls.  Their thick fabric keeps out all light of sun or moon.
+~
+E torches~
+Placed without apparent pattern throughout the room, the torches lend a
+smokey illumination to the room.  The fire jumps and starts though no wind
+moves through the room that you can sense.  Their fitful light serves only to
+make the shadows more ominous.
+~
+E pelts animal~
+Thickly furred coats from strange animals hang upon the walls.  The one to
+the north is twice, perhaps three times, the size of a man and heavy with
+grey and black fur.  The creature might have been a bear save for the long
+line of spikes that adorn the spine.
+~
+E shelf western jars earthenware~
+A tall shelf of rotting blackwood stands against the western wall.  It is
+richly carved and was once probably quite elegant.  It looks out of place in
+this strangely rustic room.  Each shelf holds an assortment of bizarre
+concoctions.  A large earthenware bowl holds what appear to be pig's feet
+soaking in a red liquid of some sort.  Numerous stoppered clay pots and glass
+jars line the shelves, but no amount of imagination or discernment can
+suggest what they might hold.
+~
+E throne seat southern~
+Spindly animal horns outline the large seat standing against the southern
+wall.  A black and white striped pelt covers the cushion and carved bits of
+bone serve as an ornament at the head.
+~
+#10015
+A filthy shack~
+The stench of dirt, rot, and human waste rises from every corner of this
+tiny room to assault your nostrils.  The air is thick with filth and heavy
+with a sense of sadness and lethargy.  Neither floor nor walls nor the tiny
+window to the south have been washed in many years.  A layer of dust and
+rubbish covers the floor, interrupted only by a line of tiny, childlike
+footprints that tiptoe from the door into the next room to the bed against
+the southern wall.  No other furniture remains besides the bed, though
+markings on the floor and wall seem to indicate that this was once a
+relatively well-furnished room.  The wood is wet and rotten and will soon
+give way, depositing the unfortunate inhabitants of this home into the
+malarial swamp below.
+~
+inside
+ROOM INDOORS
+D EAST 10018 0 0
+~
+Through the crumbling doorway you hear the muffled voices of children.
+~
+D WEST 10011 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+#10016
+A small bedroom~
+The room is remarkably small, too tiny to serve as anything except perhaps
+a child's bedroom.  Yet what a morbid place to keep a child.  No bed but a
+small pile of moss in one corner.  No light to chase a way the terrors of a
+child's fancy.  Only the makeshift bed and a large iron ring in the western
+wall, the sort used to chain animals in a menagerie or prisoners in a
+dungeon.  Dark brown and maroon blotches stain both floor and walls, the
+indelible legacy of some poor victim's blood shed.
+~
+inside
+ROOM INDOORS
+D EAST 10019 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10012 0 0
+~
+A blood-stained room lies to the west.
+~
+#10017
+A dark altar~
+The shadow-dancing darkness encroaches upon you, pressing the meagre glow
+of your light into an ever-smaller circle of illumination.  The only source
+of light in the room is a circle of flickering candles surrounding a pile of
+bone and animal pelts standing in the center of the room.  The room is humid
+with a strange, heavy scent, an exotic mix of animal blood and the sweaty
+smell of human desperation.  A hairy touch upon the nape of your neck draws
+your eyes toward the ceiling.  Rope-suspended figurines dangle from a roof
+lost in smoky shadows, most carved in human shapes.
+~
+inside
+ROOM INDOORS
+D EAST 10020 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10014 AB 0
+curtain~
+A torch-lit room lies to the west.
+~
+E circle candles pile bone center~
+A circle of mismatched candles surrounds a strange, crude altar.  Bones of
+all sizes and shapes pile up within the circle, some of them suspiciously
+humanoid.
+~
+E ceiling figurines roof~
+Tiny dolls made of bone or clay hang stretch-necked from the ceiling.  They
+were all crafted with a crude attention to detail, meant to depict
+individuals and thus marked with distinctive features.  As you move about the
+room, they rattle against each other, disturbed by your passing.
+~
+#10018
+A filthy shack~
+The stench of dirt, rot, and human waste rises from every corner of this
+tiny room to assault your nostrils.  The air is thick with filth and heavy
+with a sense of sadness and lethargy.  Neither floor nor walls nor the tiny
+window to the south have been washed in many years.  A layer of dust and
+rubbish covers the floor, interrupted only by a line of tiny, childlike
+footprints.  Two tiny piles of grass and dirt lying in the eastern corner
+might serve as beds, yet the thought of people actually inhabiting this hole
+is disturbing to even the hardiest of souls.
+~
+inside
+ROOM INDOORS
+D EAST 10021 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10015 0 0
+~
+Childlike footprints lead into another room.
+~
+#10019
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lies the relative shelter of other sprawling shacks.
+~
+trail
+D EAST 10022 0 0
+~
+An abandoned home lies to the east.
+~
+D WEST 10016 0 0
+~
+The faint scent of blood comes from the shack to the west.
+~
+D DOWN 10072 0 0
+~
+A narrow ladder leads down to the water.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10020
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lies the relative shelter of other sprawling shacks.
+~
+trail
+D EAST 10024 0 0
+~
+A bald, offensive smell comes to you from the east, accompanied by low
+moaning.
+~
+D WEST 10017 0 0
+~
+A dark room solemn with danger lies to the west.
+~
+D DOWN 10074 0 0
+~
+A narrow ladder leads down to the water.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather like a festive
+banner, celebrating decay and neglect.  The rope is old and not repaired for
+many years.  It creaks with the burden of your weight and the soft
+encouragement of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10021
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  To the east and
+west lies the relative shelter of other sprawling shacks.
+~
+trail
+D EAST 10026 ABC 10024
+~
+A busy, official-looking shack lies to the east.
+~
+D WEST 10018 0 0
+~
+A filthy shack lies to the west.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather like a festive
+banner, celebrating decay and neglect.  The rope is old and not repaired for
+many years.  It creaks with the burden of your weight and the soft
+encouragement of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10022
+An abandoned shack~
+A wind fragrant with the round, gassy smell of human decadence shakes this
+little one-room shack.  The shambling home sways on the tall, rotten stilts
+that hold it up above the waterline.  The wood is warped with damp.  Each
+board bulges away from its neighbor to leave gaping holes in the wall and
+floor.  Though the sprawling decay does not in any way distinguish this shack
+from any other in the village, it is clear that none have lived here for some
+time.  Shards of glass and broken pottery cover the floor.  The thresholds to
+the south and west hang empty, the doors long since stolen.  The one tiny
+window in the northern wall hangs open, ringed with jagged teeth of broken
+glass.  A slick layer of mold still clings to the floor from the last time
+the waters rose to flood level and soaked the small house.  No foot has left
+a mark in the filth nor hand moved to clear the clutter in many years.
+~
+inside
+ROOM INDOORS
+D SOUTH 10023 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10019 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+E floor~
+Layers of debris nearly obscure the warped floorboards.  Directly beneath
+you, however, the floor gives way to a small hole, through which you can see
+the stagnant waters below.
+~
+E window~
+A crudely-cut hole in the northern wall serves as the only light source in
+this abandoned home.  There was once glass to cover the whole and serve as a
+barrier against the infested swamp outside, but now all that remains of the
+window pane is the set of ominous glass shards hungrily guarding the opening.
+Looking through the window, you see the waters recede to the north, giving
+way to an impenetrable forest.
+~
+#10023
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  The relative
+shelter of sprawling shacks lies to the north and south.
+~
+trail
+D NORTH 10022 0 0
+~
+An abandoned shack lies to the north.
+~
+D SOUTH 10024 0 0
+~
+A bald, offensive smell comes to you from the south, accompanied by low
+moaning.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10024
+A one-room shack~
+Unlike the sparse, dilapidated furnishings of most of the shacks in the
+village, the furniture in this home is ornate and colorful, if cheaply made.
+Thick, velvety fabrics hang from all four walls.  Slightly faded but still
+bright red carpets cover the floor.  Taking up the majority of the room, an
+ornately carved blackwood canopy bed stands against the northern wall, hung
+with filmy violet drapery.  Though the tracks worn into the thick carpet from
+door to bed would suggest frequent traffic into and out of this room, you see
+no sign of kitchen or bar that might invite customers.  Though someone has
+burned musky incense in an effort to cover the smell, the one-room shack
+still reeks of sweat and wickedness.
+~
+inside
+ROOM INDOORS
+D NORTH 10023 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D EAST 10027 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D SOUTH 10025 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D WEST 10020 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+#10025
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  The relative
+shelter of sprawling shacks lies to the north and south.
+~
+trail
+D NORTH 10024 0 0
+~
+A bald, offensive smell comes to you from the north, accompanied by low
+moaning.
+~
+D SOUTH 10026 ABC 10024
+~
+A busy, official-looking shack lies to the south.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10026
+The mission center~
+Cloaked in white silk or satin drapery from ceiling to floor, the purity of
+this large room is almost blinding after the dingy sights of the village.
+The thick carpets must be frequently replaced, since despite the bustling
+presence of men and women in white garments you can spy no thin or frayed
+patches.  Though spare of trinkets or clutter, the walls are adorned with a
+few excellent portraits of hawk-faced men and women.  A large, organically
+carved desk stands against the eastern wall, bearing neat piles of parchments
+and leather-bound books.  Strangely, despite the obvious wickedness and
+decadence of the villagers and the shocking state of poverty prevalent in the
+town, the air in this, the heart of the mission to convert Gannyte Shoals, is
+brisk with optimism and a sense of purpose.
+~
+inside
+ROOM INDOORS
+D NORTH 10025 ABC 10024
+~
+A sturdy door opens out to a swinging rope bridge.
+~
+D EAST 10028 AB 0
+~
+A sturdy door opens into a room bustling with activity.
+~
+D WEST 10021 ABC 10024
+~
+A sturdy door opens out to a swinging rope bridge.
+~
+#10027
+A decaying footbridge~
+A narrow little rope bridge joins two adjacent shacks, its rotten boards
+unevenly placed.  The faint breeze, lazy as it is, shakes you as you stand,
+exciting a chorus of creaks from the old ropes.  The village has designed its
+own peculiar architecture in order to survive the malarial waters below and
+the incoming tide to the south.  Each ramshackle house is up on long, wobbly
+stilts and passage between them gained by short bridges such as this one.
+Though this design is clever enough and might have once encouraged a close-
+knit society within the village, now each bridge is precariously rotten,
+dripping with parasitic moss, the damp boards wormeaten.  The relative
+shelter of sprawling shacks lies to the east and west.
+~
+trail
+D EAST 10029 0 0
+~
+A pitiful one-room shack lies to the east, fragrant with the smell of sour
+beer and old whiskey.
+~
+D WEST 10024 0 0
+~
+Shaking with activity and loud with moans of pleasure, the shack to the west
+entices you.
+~
+E rope~
+Hung with dark banners of black moss, the rope looks rather festive,
+celebrating decay and neglect.  The rope is old and not repaired for many
+years.  It creaks with the burden of your weight and the soft encouragement
+of the wind.
+~
+E boards wood~
+Riddled with the tiny homes of worms and other parasites, the boards beneath
+you look unreliable.  In fact, several have broken through, no doubt
+depositing some poor pedestrian in the stagnant waters below.
+~
+#10028
+A large white room~
+The large bedroom in this satin-cloaked shack is a shocking contrast to
+every other home in the village.  Though no serious effort has been put into
+permanently repairing the house, wall-length white satin banners cover the
+disfigured wooden boards and flowered silk carpets cover the gaps and bumps
+in the old floor.  Pleasant oil paintings hang from the white-silk walls.
+Rich furnishings stand about the room: a bedstand, a writing desk with
+matching chair, and a large, comfortable bed.  A large window in the southern
+wall looks out onto the beach and the ocean beyond.  A shallow balcony in the
+northwest corner of the room juts out from the building, giving a nearly
+complete view of the messy, sprawling village, such a marked contrast to this
+tidy, clean abode.
+~
+inside
+ROOM INDOORS
+D WEST 10026 AB 0
+~
+Through a sturdy door lies a large bedroom.
+~
+#10029
+A dirty one-room shack~
+The home set precariously atop four sprawling poles is pathetically small,
+only the size of one room and that smaller than a rich man's closet.  Few
+furnishings or ornaments adorn the room, only a narrow, filthy bed in the
+corner.  Wine stains spread in maroon rings on the floor.  The air is rife
+with the scent of stale beer and spilled mead.  Glass bottles lie haphazardly
+around the room, some chipped, some shattered and lying dangerously jagged on
+the ground.  Vomit long since dried and hardened sits undisturbed on the
+floorboards.  Nor pictures, shelves, or even windows break the monotony of
+the rotting walls.
+~
+inside
+ROOM INDOORS
+D WEST 10027 0 0
+~
+An open doorway leads to a swinging footpath.
+~
+D DOWN 10092 0 0
+~
+A narrow rope ladder descends to the water.
+~
+#10030
+A marshy trail~
+A waterlogged path of trodden grasses and thick, squelching swamp mud winds
+its way toward the southeast, growing wetter with each step southward.  The
+air is thick with the buzzing of insects and lazy rustlings of animals
+underfoot.  The spot where you stand seems to be some sort of informal line
+of demarcation.  The grasses and trees to the south are substantially more
+overgrown and redolent with the smell of stagnation and rot, while northward
+the way grows clearer.  As though to confirm this intuitive sense of
+boundary, a broken piece of wood that might have once been a sign lies on the
+ground.  Sudden laughter cuts through the humid air, high-pitched, perhaps
+drunken, distant but clearly audible.  A sharp ear may catch the sandpaper
+brush of the waves against the beach far to the south, but not the faintest
+breath of fresh ocean air reaches this spot.
+~
+trail
+D SOUTH 10031 0 0
+~
+The waterlogged trail leads southward toward Gannyte Shoals.
+~
+E sign wood piece~
+The wood is rotten.  The white-lettered script is almost illegible.  But
+faintly you can read the proclamation written in a simple but neat hand:
+
+	Work and living and simple trade,
+	All in yonder village to be made.
+	But shiftless fools from hill or dale,
+	In Gannyte Shoals will ne'er do well.
+
+Smaller words border the bottom.
+~
+E smaller words border bottom~
+Gannyte Shoals was written by Trevelyan in March of 2001.  No use without
+permission of the author.
+~
+#10031
+A marshy trail~
+The sodden, marshy weeds give way to every-deepening water, part freshwater
+swamp and part the salty overflow from high tide.  The trail opens up here to
+reveal a rambling, rotten village to the southeast.  Curious looking little
+hovels stand several lengths above the water, elevated on thick but none-too-
+sturdy poles.  The poles are long and once probably quite strong but years of
+neglect have left them teetering and uneven, sprawling like the uncertain
+legs of a newborn colt.  Wicked indulgence wafts from the village itself; the
+brassy smell of lechery, the screeching sound of laughter and violence.  Like
+a symphony the scent and sound permeate the village, running up the hill to
+sing to you here with a kind of disfigured beauty.  Dark green, malarial
+waters cover every inch of land in this small town without road or earth,
+only greasy waterways and makeshift rafts to navigate them.
+~
+trail
+D EAST 10032 0 0
+~
+The waterlogged trail leads eastward toward Gannyte Shoals.
+~
+#10032
+A marshy trail~
+The sodden, marshy weeds give way to every-deepening water, part freshwater
+swamp and part the salty overflow from high tide.  The trail opens up here to
+reveal a rambling, rotten village to the southeast.  Curious looking little
+hovels stand several lengths above the water, elevated on thick but none-too-
+sturdy poles.  The poles are long and once probably quite strong but years of
+neglect have left them teetering and uneven, sprawling like the uncertain
+legs of a newborn colt.  Wicked indulgence wafts from the village itself; the
+brassy smell of lechery, the screeching sound of laughter and violence.  Like
+a symphony the scent and sound permeate the village, running up the hill to
+sing to you here with a kind of disfigured beauty.  Dark green, malarial
+waters cover every inch of land in this small town without road or earth,
+only greasy waterways and makeshift rafts to navigate them.
+~
+trail
+D SOUTH 10033 0 0
+~
+The little village of Gannyte Shoals opens up to the south.
+~
+#10033
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to the south and east, while the waterway continues all around you.
+~
+water
+D NORTH 10032 0 0
+~
+A marshy trail leads away from the village to the north.
+~
+D SOUTH 10034 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10038 0 0
+~
+The putrid waters continue toward a ramshackle home on tall stilts.
+~
+#10034
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to the south and east, while the waterway continues all around you.
+~
+water
+D NORTH 10033 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10039 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10035 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10088 0 0
+~
+The waters continue, gradually rising to firm land.
+~
+#10035
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10034 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10040 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10036 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10037 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D DOWN 10114 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10036
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  The land rises from the muck to the
+southwest, firmer footing but unfortunately impassable, blocked by tangled
+brush and twisted trees.
+~
+water
+D NORTH 10035 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10041 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10090 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10089 0 0
+~
+The land gradually rises from the muck to the west.
+~
+D DOWN 10115 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10037
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The sounds of smacking and slobbering, chomping and
+grunting come to you, the unmistakable music of a meal being ravenously
+devoured.  The delicious aroma of roasting meats mingles with the rancid
+stench of the stagnant water to make a powerfully repulsive scent linger in
+this spot.
+~
+water
+D NORTH 10088 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10035 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10089 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10091 0 0
+~
+The land gradually rises from the muck to the west.
+~
+D DOWN 10113 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10038
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.   To the north, the land rises from the
+muck, passage blocked by thick undergrowth.
+~
+water
+D EAST 10044 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D SOUTH 10039 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10033 0 0
+~
+The waters continue, gradually rising to firm land.
+~
+D DOWN 10093 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10039
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10038 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10045 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10040 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10034 0 0
+~
+The waters continue, gradually rising to firm land.
+~
+D DOWN 10099 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10040
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The screech of heathen laughter combined with the
+tempting clinking of gold coins comes to you from those cracks, drawing your
+attention to the home above.
+~
+water
+D NORTH 10039 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10046 0 0
+~
+The putrid waters continue beneath this two-room home.
+~
+D SOUTH 10041 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10035 0 0
+~
+The land gradually rises from the muck to the west.
+~
+D UP 10003 AB 0
+~
+A rotting rope ladder leads up into the shack overhead.
+~
+D DOWN 10105 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10041
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10040 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10047 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10042 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10036 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10116 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10042
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor. Through the cracks, a booming titan voice reaches you,
+thick with drink and glowing with self-importance.  A faintly feminine giggle
+replies, drawing your eyes to the home overhead.   The land rises from the
+muck to the south but passage is blocked by thick underbrush.
+~
+water
+D NORTH 10041 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10048 0 0
+~
+The putrid waters continue beneath this two-room home.
+~
+D WEST 10090 0 0
+~
+The land gradually rises from the muck to the west.
+~
+D UP 10006 0 0
+~
+A rotting rope ladder leads up into the shack overhead.
+~
+D DOWN 10123 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10043
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south, while the land rises from the muck to form an impenetrable
+forest to the north.
+~
+water
+D NORTH 19328 0 0
+door~
+~
+D EAST 10050 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10044 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+#10044
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.   Not the faintest sign of life is visible through those
+cracks, nor do the shuffling sounds of inhabitation come to you from the
+shack.
+~
+water
+D NORTH 10043 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10051 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10038 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10094 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10045
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10044 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10052 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10046 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10039 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10100 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10046
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The screech of heathen laughter combined with the
+tempting clinking of gold coins comes to you from those cracks, drawing your
+attention to the home above.
+~
+water
+D NORTH 10045 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10053 0 0
+~
+The putrid waters continue beneath this two-room home.
+~
+D SOUTH 10047 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10040 0 0
+~
+The land gradually rises from the muck to the west.
+~
+D DOWN 10106 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10047
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10046 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10054 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10048 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10041 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10117 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10048
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor. Through the cracks, a booming titan voice reaches you,
+thick with drink and glowing with self-importance.  A faintly feminine giggle
+replies, drawing your eyes to the home overhead.   The land rises from the
+muck to the south, forming a sandy beach that greets the ocean.
+~
+water
+D NORTH 10047 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10055 0 0
+~
+The putrid waters continue beneath this two-room home.
+~
+D SOUTH 10049 0 0
+~
+The land rises to form a beach to the south.
+~
+D WEST 10042 0 0
+~
+The land gradually rises from the muck to the west.
+~
+D DOWN 10124 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10049
+Sandy docks~
+The land here is remarkably dry, compared to the sunken swampland to the
+north.  The beating of the waves has washed up sand and debris to form a kind
+of embankment, upon which the villagers have built a long wooden dock that
+runs nearly the length of the village.  The vast, clean expanse of ocean to
+the south only serves to further emphasize the crowded, malarial filth of the
+village.  Houses held above the water on long, sprawling stilts stand gape-
+windowed in various stages of decay.  The wretched cries of children mingle
+with the screeching of whores and revelers to make a sad, decadent music.
+~
+trail
+D NORTH 10048 0 0
+~
+The beach is subsumed beneath stagnant water to the north, passing beneath a
+sprawling shack.
+~
+D EAST 10056 0 0
+~
+The beach continues to the east.
+~
+#10050
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south, while the land rises from the muck to form an impenetrable
+forest to the north.
+~
+water
+D EAST 10057 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10051 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10043 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10051
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10050 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10058 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10052 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10044 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D DOWN 10095 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10052
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  The channel continues in every
+direction here, weaving between the wobbly legs of the homes.
+~
+water
+D NORTH 10051 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10059 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10053 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10045 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10101 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10053
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10052 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10060 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10054 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10046 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D DOWN 10107 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10054
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  The channel continues in every
+direction here, weaving between the wobbly legs of the homes.
+~
+water
+D NORTH 10053 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10061 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10055 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10047 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10118 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10055
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10054 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10062 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10056 0 0
+~
+The land rises to form a sandy beach to the south.
+~
+D WEST 10048 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D DOWN 10125 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10056
+Sandy docks~
+The land here is remarkably dry, compared to the sunken swampland to the
+north.  The beating of the waves has washed up sand and debris to form a kind
+of embankment, upon which the villagers have built a long wooden dock that
+runs nearly the length of the village.  The vast, clean expanse of ocean to
+the south only serves to further emphasize the crowded, malarial filth of the
+village.  Houses held above the water on long, sprawling stilts stand gape-
+windowed in various stages of decay.  The wretched cries of children mingle
+with the screeching of whores and revelers to make a sad, decadent music.
+~
+trail
+D NORTH 10055 0 0
+~
+The beach is subsumed beneath stagnant water to the north, passing beneath
+a sprawling shack.
+~
+D EAST 10063 0 0
+~
+The beach continues to the east.
+~
+D WEST 10049 0 0
+~
+The beach continues to the west.
+~
+#10057
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south, while the land rises from the muck to form an impenetrable
+forest to the north.
+~
+water
+D EAST 10064 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10058 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10050 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10058
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  Dark, coagulated blood drips slowly from the cracks,
+falling to the swampy waters to give them a faint red tinge.  The rancid
+waters of the channel lie all around you.
+~
+water
+D NORTH 10057 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10065 0 0
+~
+The water continues beneath this two-room shack.
+~
+D SOUTH 10059 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10051 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10096 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10059
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10058 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10066 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10060 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10052 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D UP 10013 0 0
+~
+A narrow rope ladder leads to the rope-bridge overhead.
+~
+D DOWN 10102 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10060
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The sound of low, evil chanting drips through those
+cracks, along with the eerie light of flickering torches.
+~
+water
+D NORTH 10059 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10067 0 0
+~
+The water continues beneath this two-room shack.
+~
+D SOUTH 10061 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10053 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10108 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10061
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10060 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10068 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10062 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10054 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10119 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10062
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The pathetic mewling of little children comes to you
+from above, high-pitched with the desperate whine of hunger and neglect.
+~
+water
+D NORTH 10061 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10069 0 0
+~
+The water continues beneath this two-room shack.
+~
+D SOUTH 10063 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10055 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10126 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10063
+Sandy docks~
+The land here is remarkably dry, compared to the sunken swampland to the
+north.  The beating of the waves has washed up sand and debris to form a kind
+of embankment, upon which the villagers have built a long wooden dock that
+runs nearly the length of the village.  The vast, clean expanse of ocean to
+the south only serves to further emphasize the crowded, malarial filth of the
+village.  Houses held above the water on long, sprawling stilts stand gape-
+windowed in various stages of decay.  The wretched cries of children mingle
+with the screeching of whores and revelers to make a sad, decadent music.
+~
+trail
+D NORTH 10062 0 0
+~
+The beach is subsumed beneath stagnant water to the north, passing beneath a
+sprawling shack.
+~
+D EAST 10070 0 0
+~
+The beach continues to the east.
+~
+D WEST 10056 0 0
+~
+The beach continues to the west.
+~
+#10064
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south, while the land rises from the muck to form an impenetrable
+forest to the north.
+~
+water
+D EAST 10071 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10065 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10057 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10065
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  Dark, coagulated blood drips slowly from the cracks,
+falling to the swampy waters to give them a faint red tinge.  The rancid
+waters of the channel lie all around you.
+~
+water
+D NORTH 10064 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10072 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10066 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10058 0 0
+~
+The water continues beneath this two-room shack.
+~
+D DOWN 10097 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10066
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10065 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10073 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10067 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10059 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10103 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10067
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The sound of low, evil chanting drips through those
+cracks, along with the eerie light of flickering torches.
+~
+water
+D NORTH 10066 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10074 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10068 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10060 0 0
+~
+The water continues beneath this two-room shack.
+~
+D DOWN 10109 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10068
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10067 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10075 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10069 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10061 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10120 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10069
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  The pathetic mewling of little children comes to you
+from above, high-pitched with the desperate whine of hunger and neglect.
+~
+water
+D NORTH 10068 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10076 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10070 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10062 0 0
+~
+The water continues beneath this two-room shack.
+~
+D DOWN 10127 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10070
+Sandy docks~
+The land here is remarkably dry, compared to the sunken swampland to the
+north.  The beating of the waves has washed up sand and debris to form a kind
+of embankment, upon which the villagers have built a long wooden dock that
+runs nearly the length of the village.  The vast, clean expanse of ocean to
+the south only serves to further emphasize the crowded, malarial filth of the
+village.  Houses held above the water on long, sprawling stilts stand gape-
+windowed in various stages of decay.  The wretched cries of children mingle
+with the screeching of whores and revelers to make a sad, decadent music.
+~
+trail
+D NORTH 10069 0 0
+~
+The beach is subsumed beneath stagnant water to the north, passing beneath
+a sprawling shack.
+~
+D EAST 10077 0 0
+~
+The beach continues to the east.
+~
+D WEST 10063 0 0
+~
+The beach continues to the west.
+~
+#10071
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south, while the land rises from the muck to form an impenetrable
+forest to the north and east.
+~
+water
+D NORTH 0 0 0
+door~
+~
+D SOUTH 10072 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10064 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10072
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10071 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10078 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10073 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10065 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D UP 10019 0 0
+~
+A narrow rope ladder has been lowered from the rope bridge overhead.
+~
+D DOWN 10098 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10073
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  The channel continues in every
+direction here, weaving between the wobbly legs of the homes.
+~
+water
+D NORTH 10072 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10079 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10074 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10066 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10104 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10074
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10073 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10080 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10075 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10067 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D UP 10020 0 0
+~
+A narrow rope ladder has been lowered from the rope bridge overhead.
+~
+D DOWN 10110 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10075
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  The channel continues in every
+direction here, weaving between the wobbly legs of the homes.
+~
+water
+D NORTH 10074 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10086 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10076 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10068 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10121 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10076
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10075 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10086 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10077 0 0
+~
+The waters recede, yielding to a long, sandy beach.
+~
+D WEST 10069 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D DOWN 10128 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10077
+Sandy docks~
+The land here is remarkably dry, compared to the sunken swampland to the
+north.  The beating of the waves has washed up sand and debris to form a kind
+of embankment, upon which the villagers have built a long wooden dock that
+runs nearly the length of the village.  The vast, clean expanse of ocean to
+the south only serves to further emphasize the crowded, malarial filth of the
+village.  Houses held above the water on long, sprawling stilts stand gape-
+windowed in various stages of decay.  The wretched cries of children mingle
+with the screeching of whores and revelers to make a sad, decadent music.
+~
+trail
+D NORTH 10076 0 0
+~
+The beach is subsumed beneath stagnant water to the north, passing beneath a
+sprawling shack.
+~
+D WEST 10070 0 0
+~
+The beach continues to the west.
+~
+#10078
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  Not the faintest sign of life is visible through those
+cracks, nor do the shuffling sounds of inhabitation come to you from the
+shack.  To the north, the land rises up out of the muck into an impenetrable
+forest.
+~
+water
+D EAST 10083 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10079 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10072 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10079
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10078 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10084 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10080 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10073 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10080
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  Though you can see nothing directly through the cracks,
+the floorboards strain with rhythmic thrusting, accompanied with pleasured
+moans.
+~
+water
+D NORTH 10079 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10082 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10081 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10074 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10111 0 0
+~
+The brave and strong of stomach may dive beneath the brackish waters.
+~
+#10081
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south and north, while the waterway continues all around you.
+~
+water
+D NORTH 10080 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10085 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10086 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D WEST 10075 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D DOWN 10122 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10082
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  Broken-down houses stand well above the
+water to either side of the channel here, leaning precariously from the west
+and east.
+~
+water
+D NORTH 10084 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10092 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D SOUTH 10085 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10080 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+D DOWN 10112 0 0
+~
+The brave and strong of stomach may dive beneath the brackish water.
+~
+#10083
+A corner of the village~
+The land rises slightly, emerging to form a dense forest to the north and
+east.  From this vantage point, you can see most of the village.  From afar
+the picture of debauchery loses all its wicked glamour, merging into a hazy
+picture of sadness. Desperate lives scatter back and forth across the
+teetering walkways.  Pathetic tragedy plunges into the mold-green waters.
+Little fishing boats would once have bustled to and fro in this village,
+going out to sea for a day's work and returning with a hearty catch.  Now
+worm-eaten fragments of these boats float the waterways.  A sense of the
+profound loss washes over you.
+~
+water
+D SOUTH 10084 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10078 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+#10084
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never as a permanent home.  Broken-down houses stand well above the water
+to the south, while the land rises from the muck to form an impenetrable
+forest to the east.
+~
+water
+D NORTH 10083 0 0
+~
+A corner of the village lies northward.
+~
+D EAST 19397 0 0
+door~
+~
+D SOUTH 10082 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10079 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10085
+A corner of the village~
+The land rises slightly, emerging to form a dense forest to the south and
+east.  From this vantage point, you can see most of the village.  From afar
+the picture of debauchery loses all its wicked glamour, merging into a hazy
+picture of sadness. Desperate lives scatter back and forth across the
+teetering walkways.  Pathetic tragedy plunges into the mold-green waters.
+Little fishing boats would once have bustled to and fro in this village,
+going out to sea for a day's work and returning with a hearty catch.  Now
+worm-eaten fragments of these boats float the waterways.  A sense of the
+profound loss washes over you.
+~
+water
+D NORTH 10082 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10081 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10086
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.  Though the sounds from above suggest bustling activity,
+you can see nothing.  Every crack or crevice is covered in white silk
+tapestry, barring prying eyes.
+~
+water
+D NORTH 10081 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D WEST 10076 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10088
+A corner of the village~
+The land rises slightly, emerging to form a dense forest to the north and
+west.  From this vantage point, you can see most of the village.  From afar
+the picture of debauchery loses all its wicked glamour, merging into a hazy
+picture of sadness. Desperate lives scatter back and forth across the
+teetering walkways.  Pathetic tragedy plunges into the mold-green waters.
+Little fishing boats would once have bustled to and fro in this village,
+going out to sea for a day's work and returning with a hearty catch.  Now
+worm-eaten fragments of these boats float the waterways.  A sense of the
+profound loss washes over you.
+~
+water
+D EAST 10034 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D SOUTH 10037 0 0
+~
+The putrid waters continue below a leaning shack.
+~
+#10089
+A corner of the village~
+The land rises slightly, emerging to form a dense forest to the south and
+west.  From this vantage point, you can see most of the village.  From afar
+the picture of debauchery loses all its wicked glamour, merging into a hazy
+picture of sadness. Desperate lives scatter back and forth across the
+teetering walkways.  Pathetic tragedy plunges into the mold-green waters.
+Little fishing boats would once have bustled to and fro in this village,
+going out to sea for a day's work and returning with a hearty catch.  Now
+worm-eaten fragments of these boats float the waterways.  A sense of the
+profound loss washes over you.
+~
+water
+D NORTH 10037 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+D EAST 10036 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+#10090
+A putrid waterway~
+In place of ordinary streets or roads, this marshy village has only small,
+poorly-tended channels that run between the rows of slant-legged houses.
+Damaged boats and makeshift rafts clog the waterway in spots, abandoned by
+their passengers upon a whim.  The air is thick with the busy hum of insects
+and the waters beneath you writhe with vermin.  A bed of smooth-polished
+rocks once marked the boundaries of the channel, but all that remains is the
+occasional mold-slick marker.  Men and women, many of them from distant lands
+and most crazed with drink, float through the village on teetering rafts.
+What might once have been a prim, sleepy little village became a major port
+with the explosion of the city to the north.  Now Gannyte Shoals is the haunt
+of the decadent and rotten, a painted whore of a village, used for pleasure
+but never taken as a permanent home.  The land rises from the muck to the
+south and west, the way blocked by impenetrable underbrush.
+~
+water
+D NORTH 10036 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D EAST 10042 0 0
+~
+The water continues beneath the wobbly legs of a home raised above the water.
+~
+#10091
+A corner of the village~
+The land rises slightly, emerging to form a dense forest to the south,
+north, and west.  From this vantage point, you can see most of the village.
+From afar the picture of debauchery loses all its wicked glamour, merging
+into a hazy picture of sadness. Desperate lives scatter back and forth across
+the teetering walkways.  Pathetic tragedy plunges into the mold-green waters.
+Little fishing boats would once have bustled to and fro in this village,
+going out to sea for a day's work and returning with a hearty catch.  Now
+worm-eaten fragments of these boats float the waterways.  A sense of the
+profound loss washes over you.
+~
+water
+D EAST 10037 0 0
+~
+The putrid waters continue beneath a leaning shack.
+~
+#10092
+Beneath a leaning shack~
+The slowly rotting shack above you leaves a small square of shade in which
+to huddle on a sweltering day.  Hiding from the sun and open air, all manner
+of parasitic growth hangs from the shack floor and coats the long, sprawling
+legs upon which the home stands.  Filmy ribbons of algae sway back and forth
+as the water bobs slightly up and down.  Looking overhead you notice cracks
+in the shack floor.   Only the stench of old liquor and the stentorian roar
+of a man's snoring come to you through those cracks.  The land rises around
+you to the north, east, and south.  To the west lies the stagnant waters of
+the village.
+~
+water
+D WEST 10082 0 0
+~
+The putrid waters continue in a narrow channel.
+~
+D UP 10029 0 0
+~
+A narrow rope ladder leads up to the shack above.
+~
+#10093
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north and west, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D EAST 10094 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10099 0 0
+~
+The murky waters continue.
+~
+D UP 10038 0 0
+~
+Above lies the relatively fresh air.
+~
+#10094
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D EAST 10095 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10100 0 0
+~
+The murky waters continue.
+~
+D WEST 10093 0 0
+~
+The murky waters continue.
+~
+D UP 10044 0 0
+~
+Above lies the relatively fresh air.
+~
+#10095
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D EAST 10096 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10101 0 0
+~
+The murky waters continue.
+~
+D WEST 10094 0 0
+~
+The murky waters continue.
+~
+D UP 10051 0 0
+~
+Above lies the relatively fresh air.
+~
+#10096
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D EAST 10097 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10102 0 0
+~
+The murky waters continue.
+~
+D WEST 10095 0 0
+~
+The murky waters continue.
+~
+D UP 10058 0 0
+~
+Above lies the relatively fresh air.
+~
+#10097
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D EAST 10098 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10103 0 0
+~
+The murky waters continue.
+~
+D WEST 10096 0 0
+~
+The murky waters continue.
+~
+D UP 10065 0 0
+~
+Above lies the relatively fresh air.
+~
+#10098
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north and east, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D SOUTH 10104 0 0
+~
+The murky waters continue.
+~
+D WEST 10097 0 0
+~
+The murky waters continue.
+~
+D UP 10072 0 0
+~
+Above lies the relatively fresh air.
+~
+#10099
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the west, yielding to soggy land.
+~
+underwater
+ROOM DARK
+D NORTH 10093 0 0
+~
+The murky waters continue.
+~
+D EAST 10100 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10105 0 0
+~
+The murky waters continue.
+~
+D UP 10039 0 0
+~
+Above lies the relatively fresh air.
+~
+#10100
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10094 0 0
+~
+The murky waters continue.
+~
+D EAST 10101 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10106 0 0
+~
+The murky waters continue.
+~
+D WEST 10099 0 0
+~
+The murky waters continue.
+~
+D UP 10045 0 0
+~
+Above lies the relatively fresh air.
+~
+#10101
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10095 0 0
+~
+The murky waters continue.
+~
+D EAST 10102 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10107 0 0
+~
+The murky waters continue.
+~
+D WEST 10100 0 0
+~
+The murky waters continue.
+~
+D UP 10052 0 0
+~
+Above lies the relatively fresh air.
+~
+#10102
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10096 0 0
+~
+The murky waters continue.
+~
+D EAST 10103 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10108 0 0
+~
+The murky waters continue.
+~
+D WEST 10101 0 0
+~
+The murky waters continue.
+~
+D UP 10059 0 0
+~
+Above lies the relatively fresh air.
+~
+#10103
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10097 0 0
+~
+The murky waters continue.
+~
+D EAST 10104 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10109 0 0
+~
+The murky waters continue.
+~
+D WEST 10102 0 0
+~
+The murky waters continue.
+~
+D UP 10066 0 0
+~
+Above lies the relatively fresh air.
+~
+#10104
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the east, giving way to soggy land.
+~
+underwater
+ROOM DARK
+D NORTH 10098 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10110 0 0
+~
+The murky waters continue.
+~
+D WEST 10103 0 0
+~
+The murky waters continue.
+~
+D UP 10073 0 0
+~
+Above lies the relatively fresh air.
+~
+#10105
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10099 0 0
+~
+The murky waters continue.
+~
+D EAST 10106 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10116 0 0
+~
+The murky waters continue.
+~
+D WEST 10114 0 0
+~
+The murky waters continue.
+~
+D UP 10040 0 0
+~
+Above lies the relatively fresh air.
+~
+#10106
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10100 0 0
+~
+The murky waters continue.
+~
+D EAST 10107 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10117 0 0
+~
+The murky waters continue.
+~
+D WEST 10105 0 0
+~
+The murky waters continue.
+~
+D UP 10046 0 0
+~
+Above lies the relatively fresh air.
+~
+#10107
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10101 0 0
+~
+The murky waters continue.
+~
+D EAST 10108 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10118 0 0
+~
+The murky waters continue.
+~
+D WEST 10106 0 0
+~
+The murky waters continue.
+~
+D UP 10053 0 0
+~
+Above lies the relatively fresh air.
+~
+#10108
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10102 0 0
+~
+The murky waters continue.
+~
+D EAST 10109 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10119 0 0
+~
+The murky waters continue.
+~
+D WEST 10107 0 0
+~
+The murky waters continue.
+~
+D UP 10060 0 0
+~
+Above lies the relatively fresh air.
+~
+#10109
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10103 0 0
+~
+The murky waters continue.
+~
+D EAST 10110 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10120 0 0
+~
+The murky waters continue.
+~
+D WEST 10108 0 0
+~
+The murky waters continue.
+~
+D UP 10067 0 0
+~
+Above lies the relatively fresh air.
+~
+#10110
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10104 0 0
+~
+The murky waters continue.
+~
+D EAST 10111 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10121 0 0
+~
+The murky waters continue.
+~
+D WEST 10109 0 0
+~
+The murky waters continue.
+~
+D UP 10074 0 0
+~
+Above lies the relatively fresh air.
+~
+#10111
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, giving way to soggy ground.
+~
+underwater
+ROOM DARK
+D EAST 10112 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10122 0 0
+~
+The murky waters continue.
+~
+D WEST 10110 0 0
+~
+The murky waters continue.
+~
+D UP 10080 0 0
+~
+Above lies the relatively fresh air.
+~
+#10112
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north and east and south, giving way to
+soggy ground.
+~
+underwater
+ROOM DARK
+D WEST 10111 0 0
+~
+The murky waters continue.
+~
+D UP 10082 0 0
+~
+Above lies the relatively fresh air.
+~
+#10113
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, south, and west, giving way to soggy
+ground.
+~
+underwater
+ROOM DARK
+D EAST 10114 0 0
+~
+The murky waters continue.
+~
+D UP 10037 0 0
+~
+Above lies the relatively fresh air.
+~
+#10114
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the north, giving way to soggy ground.
+~
+underwater
+ROOM DARK
+D EAST 10105 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10115 0 0
+~
+The murky waters continue.
+~
+D WEST 10113 0 0
+~
+The murky waters continue.
+~
+D UP 10035 0 0
+~
+Above lies the relatively fresh air.
+~
+#10115
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water recedes to the south and west, giving way to soggy ground.
+~
+underwater
+ROOM DARK
+D EAST 10116 0 0
+~
+The murky waters continue.
+~
+D UP 10036 0 0
+~
+Above lies the relatively fresh air.
+~
+#10116
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10105 0 0
+~
+The murky waters continue.
+~
+D EAST 10117 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10123 0 0
+~
+The murky waters continue.
+~
+D WEST 10115 0 0
+~
+The murky waters continue.
+~
+D UP 10041 0 0
+~
+Above lies the relatively fresh air.
+~
+#10117
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10106 0 0
+~
+The murky waters continue.
+~
+D EAST 10118 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10124 0 0
+~
+The murky waters continue.
+~
+D WEST 10116 0 0
+~
+The murky waters continue.
+~
+D UP 10047 0 0
+~
+Above lies the relatively fresh air.
+~
+#10118
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10107 0 0
+~
+The murky waters continue.
+~
+D EAST 10119 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10125 0 0
+~
+The murky waters continue.
+~
+D WEST 10117 0 0
+~
+The murky waters continue.
+~
+D UP 10054 0 0
+~
+Above lies the relatively fresh air.
+~
+#10119
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10108 0 0
+~
+The murky waters continue.
+~
+D EAST 10120 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10126 0 0
+~
+The murky waters continue.
+~
+D WEST 10118 0 0
+~
+The murky waters continue.
+~
+D UP 10061 0 0
+~
+Above lies the relatively fresh air.
+~
+#10120
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10109 0 0
+~
+The murky waters continue.
+~
+D EAST 10121 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10127 0 0
+~
+The murky waters continue.
+~
+D WEST 10119 0 0
+~
+The murky waters continue.
+~
+D UP 10068 0 0
+~
+Above lies the relatively fresh air.
+~
+#10121
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10110 0 0
+~
+The murky waters continue.
+~
+D EAST 10122 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10128 0 0
+~
+The murky waters continue.
+~
+D WEST 10120 0 0
+~
+The murky waters continue.
+~
+D UP 10075 0 0
+~
+Above lies the relatively fresh air.
+~
+#10122
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The water continues in every direction.
+~
+underwater
+ROOM DARK
+D NORTH 10111 0 0
+~
+The murky waters continue.
+~
+D EAST 10123 0 0
+~
+The murky waters continue.
+~
+D SOUTH 10128 0 0
+~
+The murky waters continue.
+~
+D WEST 10121 0 0
+~
+The murky waters continue.
+~
+D UP 10081 0 0
+~
+Above lies the relatively fresh air.
+~
+#10123
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above.  The land rises to form a sandy beach to the south and west.
+~
+underwater
+ROOM DARK
+D NORTH 10116 0 0
+~
+The murky waters continue.
+~
+D EAST 10124 0 0
+~
+The murky waters continue.
+~
+D UP 10042 0 0
+~
+Above lies the relatively fresh air.
+~
+#10124
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above. The land rises to form a sandy beach to the south.
+~
+underwater
+ROOM DARK
+D NORTH 10117 0 0
+~
+The murky waters continue.
+~
+D EAST 10125 0 0
+~
+The murky waters continue.
+~
+D WEST 10123 0 0
+~
+The murky waters continue.
+~
+D UP 10048 0 0
+~
+Above lies the relatively fresh air.
+~
+#10125
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above. The land rises to form a sandy beach to the south.
+~
+underwater
+ROOM DARK
+D NORTH 10118 0 0
+~
+The murky waters continue.
+~
+D EAST 10126 0 0
+~
+The murky waters continue.
+~
+D WEST 10124 0 0
+~
+The murky waters continue.
+~
+D UP 10055 0 0
+~
+Above lies the relatively fresh air.
+~
+#10126
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above. The land rises to form a sandy beach to the south.
+~
+underwater
+ROOM DARK
+D NORTH 10119 0 0
+~
+The murky waters continue.
+~
+D EAST 10127 0 0
+~
+The murky waters continue.
+~
+D WEST 10125 0 0
+~
+The murky waters continue.
+~
+D UP 10062 0 0
+~
+Above lies the relatively fresh air.
+~
+#10127
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above. The land rises to form a sandy beach to the south.
+~
+underwater
+ROOM DARK
+D NORTH 10120 0 0
+~
+The murky waters continue.
+~
+D EAST 10128 0 0
+~
+The murky waters continue.
+~
+D WEST 10126 0 0
+~
+The murky waters continue.
+~
+D UP 10069 0 0
+~
+Above lies the relatively fresh air.
+~
+#10128
+In murky water~
+Beneath the greasy surface of the water, beneath floating debris and filmy
+sheets of algae, the swamp waters of the village surround you.  Refuse of all
+kinds rest on the murky bottom, covered with sludge, few things identifiable.
+The filthy pollution of broken bottles, decaying wood, and human waste dumped
+from the shacks above makes for dark waters. Looking around to the distance,
+you notice the monotony of darkness and waterlogged trash broken by the
+occasional wooden pole, driven deep into the ground to support the shacks
+above. The land rises to form a sandy beach to the south and east.
+~
+underwater
+ROOM DARK
+D NORTH 10121 0 0
+~
+The murky waters continue.
+~
+D WEST 10127 0 0
+~
+The murky waters continue.
+~
+D UP 10076 0 0
+~
+Above lies the relatively fresh air.
+~
+#0
+
+
+
+#RESETS
+MOB 10010 TO 10002 GLIMIT 1 LLIMIT 1
+MOB 10011 TO 10002 GLIMIT 1 LLIMIT 1
+MOB 10012 TO 10002 GLIMIT 1 LLIMIT 1
+MOB 10009 TO 10003 GLIMIT 1 LLIMIT 1
+EQUIP 10007 HOLD
+EQUIP 10008 LEGS
+DOOR 10003 down CLOSED
+DOOR 10003 west CLOSED
+MOB 10014 TO 10005 GLIMIT 1 LLIMIT 1
+EQUIP 10020 LFINGER
+MOB 10015 TO 10005 GLIMIT 1 LLIMIT 1
+GIVE 10009
+EQUIP 10010 FEET
+MOB 10019 TO 10005 GLIMIT 1 LLIMIT 1
+MOB 10020 TO 10005 GLIMIT 1 LLIMIT 1
+MOB 10037 TO 10007 GLIMIT 20 LLIMIT 1
+DOOR 10007 east CLOSED
+MOB 10032 TO 10008 GLIMIT 1 LLIMIT 1
+GIVE 10021
+MOB 10008 TO 10009 GLIMIT 1 LLIMIT 1
+EQUIP 10006 WIELD
+GIVE 10024
+MOB 10033 TO 10009 GLIMIT 2 LLIMIT 1
+MOB 10013 TO 10012 GLIMIT 1 LLIMIT 1
+EQUIP 10023 WIELD
+OBJECT 10022 TO 10012
+MOB 10027 TO 10014 GLIMIT 1 LLIMIT 1
+EQUIP 10017 HEAD
+EQUIP 10018 WRISTONE
+EQUIP 10019 BODY
+DOOR 10014 east CLOSED
+MOB 10022 TO 10015 GLIMIT 1 LLIMIT 1
+EQUIP 10015 HOLD
+DOOR 10017 west CLOSED
+MOB 10023 TO 10018 GLIMIT 1 LLIMIT 1
+MOB 10024 TO 10018 GLIMIT 1 LLIMIT 1
+MOB 10025 TO 10018 GLIMIT 1 LLIMIT 1
+GIVE 10024
+MOB 10037 TO 10019 GLIMIT 20 LLIMIT 1
+MOB 10031 TO 10020 GLIMIT 1 LLIMIT 1
+GIVE 10024
+DOOR 10021 east LOCKED
+MOB 10001 TO 10024 GLIMIT 1 LLIMIT 1
+EQUIP 10001 HOLD
+GIVE 10024
+MOB 10002 TO 10024 GLIMIT 1 LLIMIT 1
+MOB 10003 TO 10024 GLIMIT 1 LLIMIT 1
+GIVE 10002
+MOB 10004 TO 10024 GLIMIT 1 LLIMIT 1
+MOB 10037 TO 10025 GLIMIT 20 LLIMIT 1
+DOOR 10025 south LOCKED
+MOB 10006 TO 10026 GLIMIT 1 LLIMIT 1
+EQUIP 10005 HEAD
+GIVE 10024
+MOB 10007 TO 10026 GLIMIT 1 LLIMIT 1
+GIVE 10024
+DOOR 10026 north LOCKED
+DOOR 10026 east CLOSED
+DOOR 10026 west LOCKED
+MOB 10005 TO 10028 GLIMIT 1 LLIMIT 1
+EQUIP 10003 NECKONE
+EQUIP 10004 WAIST
+DOOR 10028 west CLOSED
+MOB 10000 TO 10029 GLIMIT 1 LLIMIT 1
+GIVE 10000
+MOB 10037 TO 10030 GLIMIT 20 LLIMIT 1
+MOB 10030 TO 10032 GLIMIT 3 LLIMIT 1
+MOB 10034 TO 10032 GLIMIT 10 LLIMIT 1
+MOB 10037 TO 10032 GLIMIT 20 LLIMIT 1
+MOB 10028 TO 10036 GLIMIT 7 LLIMIT 1
+MOB 10034 TO 10038 GLIMIT 10 LLIMIT 1
+MOB 10033 TO 10039 GLIMIT 2 LLIMIT 1
+DOOR 10040 up CLOSED
+MOB 10026 TO 10041 GLIMIT 1 LLIMIT 1
+GIVE 10016
+MOB 10034 TO 10041 GLIMIT 10 LLIMIT 1
+MOB 10035 TO 10041 GLIMIT 10 LLIMIT 1
+MOB 10037 TO 10041 GLIMIT 20 LLIMIT 1
+MOB 10035 TO 10043 GLIMIT 10 LLIMIT 1
+MOB 10037 TO 10044 GLIMIT 20 LLIMIT 1
+MOB 10029 TO 10045 GLIMIT 8 LLIMIT 1
+MOB 10037 TO 10046 GLIMIT 20 LLIMIT 1
+MOB 10037 TO 10048 GLIMIT 20 LLIMIT 1
+MOB 10029 TO 10051 GLIMIT 8 LLIMIT 1
+MOB 10035 TO 10052 GLIMIT 10 LLIMIT 1
+MOB 10021 TO 10053 GLIMIT 1 LLIMIT 1
+GIVE 10011
+GIVE 10012
+GIVE 10013
+GIVE 10014
+MOB 10037 TO 10053 GLIMIT 20 LLIMIT 1
+MOB 10035 TO 10054 GLIMIT 10 LLIMIT 1
+MOB 10030 TO 10056 GLIMIT 3 LLIMIT 1
+MOB 10034 TO 10056 GLIMIT 10 LLIMIT 1
+MOB 10029 TO 10057 GLIMIT 8 LLIMIT 1
+MOB 10034 TO 10057 GLIMIT 10 LLIMIT 1
+MOB 10037 TO 10059 GLIMIT 20 LLIMIT 1
+MOB 10037 TO 10061 GLIMIT 20 LLIMIT 1
+MOB 10037 TO 10063 GLIMIT 20 LLIMIT 1
+MOB 10035 TO 10064 GLIMIT 10 LLIMIT 1
+MOB 10035 TO 10066 GLIMIT 10 LLIMIT 1
+MOB 10034 TO 10067 GLIMIT 10 LLIMIT 1
+MOB 10028 TO 10068 GLIMIT 7 LLIMIT 1
+MOB 10029 TO 10075 GLIMIT 8 LLIMIT 1
+MOB 10034 TO 10075 GLIMIT 10 LLIMIT 1
+MOB 10016 TO 10077 GLIMIT 1 LLIMIT 1
+MOB 10017 TO 10077 GLIMIT 1 LLIMIT 1
+MOB 10018 TO 10077 GLIMIT 1 LLIMIT 1
+MOB 10037 TO 10077 GLIMIT 20 LLIMIT 1
+MOB 10037 TO 10078 GLIMIT 20 LLIMIT 1
+MOB 10028 TO 10079 GLIMIT 7 LLIMIT 1
+MOB 10035 TO 10080 GLIMIT 10 LLIMIT 1
+MOB 10034 TO 10082 GLIMIT 10 LLIMIT 1
+MOB 10037 TO 10082 GLIMIT 20 LLIMIT 1
+MOB 10030 TO 10085 GLIMIT 3 LLIMIT 1
+MOB 10037 TO 10089 GLIMIT 20 LLIMIT 1
+MOB 10037 TO 10091 GLIMIT 20 LLIMIT 1
+MOB 10028 TO 10092 GLIMIT 7 LLIMIT 1
+MOB 10037 TO 10092 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10093 GLIMIT 14 LLIMIT 1
+MOB 10036 TO 10095 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10096 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10097 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10098 GLIMIT 20 LLIMIT 1
+MOB 10038 TO 10099 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10100 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10101 GLIMIT 20 LLIMIT 1
+MOB 10035 TO 10102 GLIMIT 10 LLIMIT 1
+MOB 10036 TO 10103 GLIMIT 14 LLIMIT 1
+MOB 10035 TO 10105 GLIMIT 10 LLIMIT 1
+MOB 10036 TO 10106 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10107 GLIMIT 20 LLIMIT 1
+MOB 10035 TO 10109 GLIMIT 10 LLIMIT 1
+MOB 10038 TO 10111 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10112 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10113 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10114 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10115 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10116 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10118 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10120 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10123 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10124 GLIMIT 14 LLIMIT 1
+MOB 10036 TO 10125 GLIMIT 14 LLIMIT 1
+MOB 10038 TO 10127 GLIMIT 20 LLIMIT 1
+MOB 10036 TO 10128 GLIMIT 14 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

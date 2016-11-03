@@ -1,0 +1,6321 @@
+#AREA
+tahlu.are~
+Tahluir'rethan~
+Eluviel~
+45 51
+1600 1699
+normal
+none
+A
+
+#MOBS
+#1600
+grimalkin servant~
+a grimalkin servant~
+A furry servant of the palace is here, happily aiding the mages.     
+~
+Patchy brown fur struggles to free itself from the green robe that's wrapped     
+around this grimalkin servant.  The claws on his hands are filed down slightly     
+to better accommodate and manage the daily chores of the castle.  On his feet     
+are a pair of short leather boots.  Contrary to popular belief, he seems quite     
+content to be living and working within a stronghold of magic.     
+~
+1000 1600 100 grimalkin~
+47 25d1+2900 6d6+25 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+IMM CHARM
+#1601
+grimalkin servant scrawny~
+a grimalkin servant~
+A scrawny grimalkin servant is here, dusting off the wall hangings.     
+~
+Stripped grey fur and bright yellow eyes stare at every inch in front of him,     
+as he passes through the castle.  He wears a dark green robe and some short,     
+soft leather boots, and carries a small, dirty rag in his hand.  Almost frantic     
+is his dusting, and the occasional sneeze can be heard as he continues his work     
+through the castle.     
+~
+1000 1601 100 grimalkin~
+47 25d10+2900 6d6+25 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+IMM CHARM
+#1602
+grimalkin servant~
+a grimalkin servant~
+A grimalkin servant is here, cleaning up after the students.     
+~
+Looking extremely tired and frustrated, this grimalkin is rushing around, trying     
+to put some order back into the lives of the students.  He doesn't have much     
+in the way of fur, but what there is of it is black and unkempt.  Like the     
+other servants, he wears a robe of dark green and short boots of white leather.     
+~
+1000 1602 100 grimalkin~
+47 25d10+2900 6d6+25 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+IMM CHARM
+#1603
+grimalkin servant~
+a grimalkin servant~
+A grimalkin servant is here, carrying a stack of books.     
+~
+Five heavy books stacked one on top of the other burden this slightly built     
+grimalkin.  Her fur is a deep chocolate color and her blue eyes peer out from     
+behind a pair of wire-rimmed spectacles.  Despite her size she seems fairly     
+capable of carrying all the books, and then some.  Like the other servants,     
+she wears a green robe tied at the waist.     
+~
+1000 1603 100 grimalkin~
+47 25d10+2900 6d6+25 0 100 claw
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+IMM CHARM
+#1604
+grimalkin white servant nalla~
+Nalla~
+A small, white grimalkin is here doing some cleaning.     
+~
+Tiny compared to the rest of the staff, Nalla doesn't pay any attention     
+to the things going on around her.  Pale blue eyes and a small smile make     
+her endearing, and the way her green robe hangs loosely over her frame is     
+reminiscent of a child in her father's clothing.  Her feet are bare, as the     
+oversized boots would hinder more than help her.     
+~
+1000 1612 100 grimalkin~
+47 25d10+2900 6d6+25 0 100 claw
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+IMM CHARM
+#1605
+young elf Ilearil~
+Ilearil~
+A young elf is here, studying a book on transmutation.     
+~
+Curly blond hair is all that can be seen of the head of Ilearil, his face     
+buried deep in his book.  He is tall and slender like most elves, and his     
+clothing is light and colorful.  Yellow breeches meet with the high black     
+deerskin boots that lace up close to his knees, and a loose white shirt     
+hangs open at the neck.  As he wanders through, he manages to keep from     
+walking into anything, even though it's apparent he's not watching where     
+he's going.     
+~
+1000 1605 100 elf~
+51 50d10+3250 5d8+32 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+AFF CURSE
+AFF FLYING
+IMM CHARM
+#1606
+mage magician youthful Letheuna~
+Letheuna~
+A quiet, youthful magician is here taking some notes.     
+~
+The deep brown, slightly almond-shaped eyes, and delicate, pointed ears are     
+all that marks Letheuna as born of both elven and human parents.  Long, sandy     
+brown hair hangs loosely against the pale blue gown she adorns.  A dark silk     
+scarf is tied around her neck, and satin slippers of a similar color cover     
+her small feet.  She holds an engraved silver pen in one hand.     
+~
+1000 1606 100 elf~
+51 50d10+3250 5d8+32 0 100 punch
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+AFF CURSE
+AFF FLYING
+IMM CHARM
+#1607
+apprentice tahente~
+Tahente~
+An apprentice is here, attempting to clean off his desk.     
+~
+Short black hair springs wildly from Tahente's head.  His manner     
+and frantic cleaning making him seem more disheveled as opposed to the     
+apparently neatness he's trying to achieve.  Warm fur-lined slippers     
+and a wrinkled black robe are all he's managed to clothe himself with     
+so far.  By the look of his face, he hasn't been awake for very long.     
+~
+1000 1607 100 human~
+51 50d10+3250 5d8+32 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+IMM CHARM
+#1608
+mage avian apprentice rhiath~
+Rhiath~
+A winged mage apprentice is here, copying text from a tattered book.     
+~
+Black beaked and eyed, Rhiath is carefully copying the words from a book     
+to some unused paper.  He is dressed in a simple white robe and gold belt,     
+pushing up the sleeves as needed to continue his work.  Page by page, the     
+small pile of finished copies grows a little larger.  He stops now and then,     
+setting his pen down and flexing out his hand.     
+~
+1000 1608 100 avian~
+51 50d10+3250 5d8+32 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_INVIS
+AFF PASS_DOOR
+IMM CHARM
+#1609
+apprentice kathaine~
+Kathaine~
+An apprentice is diligently practicing her magics here.     
+~
+Lines furrow on the brow of Kathaine's high forehead, and beads of sweat     
+slowly make their way down her plump cheeks.  Short black hair is smoothed     
+back against her head, and tied tightly behind her head with a small piece     
+of string.  She wears a long gown of dark green silk, and a light green sash     
+tied around her hefty waist.  Her feet are also covered with slippers, green     
+to match the dress.     
+~
+1000 1609 100 human~
+51 50d10+3250 5d8+32 0 100 punch
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+IMM CHARM
+#1610
+mage apprentice ghalle~
+Ghalle~
+An mage apprentice is here, attempting to bind an elemental.     
+~
+Mouth formed into a grimace of frustration, Ghalle weaves his hands through     
+the air, trying to tame the elemental before him.  Spiky blond hair gives     
+him a humorous look, along with the slightly pointed ears.  His nose is long     
+and thin, making it seem as though he looks down at everything.  His clothing     
+is nothing fancy, only a short robe and leggings, and a plain brown belt.     
+~
+1000 1610 100 elf~
+51 50d10+3250 5d8+32 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+AFF CURSE
+AFF FLYING
+AFF SLOW
+IMM CHARM
+#1611
+grimalkin tough guard laodrin~
+Laodrin~
+A tough looking grimalkin stands next to the gate, watching you closely.     
+~
+Laodrin looks relatively stonefaced today, and probably does every other day     
+that passes.  For a guard, he doesn't wear much in the way of protective armor,     
+only a simple robe with sleeves only as far as the elbow, tied at the waist.     
+The light coating of fur on his forearms is a deep gray, and as he grips the     
+sharp-looking spear in hand, the muscles in his face twitch and flex, eyes     
+keeping the watch over this place.     
+~
+1000 1611 100 grimalkin~
+54 50d10+3400 7d6+34 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+AFF FLYING
+IMM CHARM
+CLASS warrior none none 
+#1612
+woman Alshida~
+Alshida~
+Deep in trance, a woman draws runes in the air with her fingertips.     
+~
+Bright violet eyes stare out from the soft features of her porcelain     
+skinned face in myriad curiosity at her surroundings, and absently she     
+brushes back a lock of her long black hair.  A tiny silver necklace     
+nestles at the base of her throat, set with some kind of stone.  A     
+long gray gown of fine silk covers her slight frame, and about her     
+shoulders sets a heavy woolen cloak held by a small silver clasp.     
+About each wrist are what looks like bracelets, but may be nothing     
+more than birthmarks or scars.     
+~
+1000 1612 100 human~
+60 50d10+5400 8d6+48 0 100 punch
+0 0 0 0
+standing female affluent
+0 0 medium
+ACT STAY_AREA
+AFF INVISIBLE
+IMM CHARM
+#1613
+solemn half-elf half salhaquin~
+Salhaquin~
+A quiet and solemn looking half-elf is here, watching over the fortress.     
+~
+Light brown hair, short and thick, covers Salhaquin's head, and a light     
+beard hides his face.  The only sign that he's a half breed is his very     
+slight build.  Deep brown eyes stare out in earnest, seemingly searching     
+for something.  A black embroidered robe is tied about him, and a few     
+rings adorn his hands.  As he paces back and forth, his hands rearrange     
+their grip of the dark wooden staff in his hands.     
+~
+1000 1613 100 elf~
+60 50d10+5400 8d6+48 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+AFF SANCTUARY
+AFF CURSE
+AFF FLYING
+AFF PASS_DOOR
+AFF HASTE
+IMM CHARM
+#1614
+tall slender lady laslindril~
+Laslindril~
+A tall and slender lady meanders through here.     
+~
+Tall and slender like most elves, Laslindril seems to enjoy her home away     
+from home.  Her blond hair is tucked behind her pointed ears and pinned     
+up with something shiny.  A few bracelets rattle against each other on her     
+wrists, and though she doesn't look strong enough to carry an axe, she has     
+one, hefted up on her shoulder.  Tan leather boots cover her up to her knees,     
+the rest by dark green leggings and a loose, cream colored shirt.     
+~
+1000 1614 100 elf~
+60 50d10+5400 8d6+48 0 100 punch
+0 0 0 0
+standing female affluent
+0 0 medium
+ACT STAY_AREA
+AFF INVISIBLE
+AFF SANCTUARY
+AFF CURSE
+AFF FLYING
+IMM CHARM
+#1615
+grimalkin tough guard tirremus~
+Tirremus~
+A tough looking grimalkin stands next to the gate, watching you closely.     
+~
+Tirremus looks a little more relaxed than his companion, though not by much.     
+His clothing is very simple, a short robe tied at the waist.  His fur is a     
+bit thicker and of an auburn hue.   His eyelids are shut halfway, as if he     
+was drowsing, but something about him gives away a sense of complete and     
+total awareness.  Each second of time passes by with the sound of his clear,     
+crystal spear, passing from hand to hand in an almost absent manner.     
+~
+1000 1615 100 grimalkin~
+54 50d10+3400 7d6+34 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+AFF FLYING
+IMM CHARM
+CLASS warrior none none 
+#1616
+mist cloud~
+a mist cloud~
+A cloud of vapor rises up from the floor and envelopes the room.     
+~
+Swirling around and folding onto itself, the mist weaves its fingers around     
+the room, looking for something to wrap itself around.  The mist appears to     
+be odorless, and as it comes closer, it gets thicker and thicker.     
+~
+0 1616 100 unique~
+40 15d10+1929 4d8+18 0 100 asphyxiation
+0 0 0 0
+standing male none
+0 0 large
+ACT STAY_AREA
+OFF DODGE
+IMM CHARM
+#1617
+dragon crystal ice~
+an ice dragon~
+A dragon formed from ice crystals stares at you with frosty eyes.     
+~
+Before you stands a gigantic creature of draconic proportions.  It appears      
+to be a dragon in every aspect, from its size, to the reptilian head, to      
+the scales which coat its body, to its massive wings, footlong razor-sharp      
+talons, or its serpentine spiked tail.  All aspects, that is, save for its      
+color and compostion, for this dragon is formed of nothing but pure ice      
+crystals.  At a glance it might seem nothing more than an elaborate ice      
+sculpture, but with one fluid motion, that notion is dispelled, for this      
+creature is very much alive and mobile.  Its eyes are large and bluish-     
+white in color, with a slight rim of frost around the edge.  It regards you      
+with an unblinking gaze, the weight of might well be enough to chill the      
+soul of even the bravest man.     
+~
+0 1617 100 unique~
+48 25d10+2750 6d6+26 0 100 frbite
+0 0 0 0
+standing male affluent
+Z Z giant
+#1618
+ward mob~
+a ward mob~
+Ward mob is here.     
+~
+I'm a ward mob.     
+~
+0 1618 100 human~
+52 25d10+2750 6d6+26 0 100 frbite
+0 0 0 0
+standing male none
+0 0 medium
+#0
+
+
+
+#OBJS
+#1600
+glass key~
+a glass key~
+A clear and delicate key is resting on the ground.~
+key
+glass~
+0 0 0 0 0
+52 1 100 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E glass key~
+Made from clear glass, the key has a long, thin shape and looks like     
+it would break easily.  It has no decoration, likely due to fragility.     
+~
+
+#1601
+dark iron key~
+a dark iron key~
+A key of dark metal is on the ground here.~
+key
+iron~
+0 0 0 0 0
+52 1 100 P
+WEAR TAKE
+LIMIT 0
+E dark iron key~
+Though the key has been cleaned and well taken care of, age and the     
+passing through of many hands has taken its toll it.  It looks like     
+it was decorated with engravings, but they have since been worn away.     
+~
+
+#1602
+plain band silver choker~
+a plain silver choker~
+A plain band of silver is resting on the ground.~
+armor
+silver~
+10 0 10 10 10
+45 2 300 P
+WEAR TAKE
+WEAR NECK
+APPLY HP 20
+APPLY WIS 2
+APPLY INT 2
+LIMIT 40
+E plain band silver choker~
+Fashioned from a solid piece of metal, the design of the necklace is     
+a smooth, curved band.  No decorative engravings or set stones, its     
+finish is classic and reflective.  The choker is open-backed, making     
+it adjustable for any size neck.     
+~
+
+#1603
+dark velvet robe embroidered~
+an embroidered velvet robe~
+A pile of dark velvet is crumpled on the ground.~
+armor
+cloth~
+8 5 8 5 8
+50 10 500 P
+WEAR TAKE
+WEAR ABOUT
+ITEM DARK
+APPLY SVSPELL -8
+APPLY HP 35
+APPLY MANA 40
+APPLY INT 1
+APPLY DEX -1
+LIMIT 10
+E dark velvet robe embroidered~
+The black colored velvet the robe is made of looks extremely soft.     
+The robe is rather long, fitting down to the ankles on most.  Around     
+the ends of the sleeves and lapels are detailed leaves, embroidered     
+with silver thread, giving it a contrasting yet stunning addition to     
+what would otherwise be a plain robe.     
+~
+
+#1604
+bracelet sinew woven hoop~
+a bracelet of woven sinew~
+A hoop of rough, woven fibers is resting on the ground.~
+armor
+flesh~
+5 0 5 10 5
+52 1 50 P
+WEAR TAKE
+WEAR WRIST
+ITEM MAGIC
+APPLY SVSPELL -5
+APPLY HP 40
+APPLY CON 2
+APPLY STR 2
+LIMIT 8
+MSG WEAR Pain streaks up from your wrist as $p meshes with your skin.~
+~
+MSG REMOVE Blood weeps from your skin as you peel $p off your wrist.~
+~
+E bracelet sinew woven hoop~
+Partially dried tissues weave in around each other to make the tiny     
+hoop.  Due to some amount of moisture magically trapped in the fleshy     
+material, the bracelet remains flexible.  Thankfully, that same magic     
+keeps it from rotting and emitting foul odors.     
+~
+
+#1605
+blue cloak wool~
+a long hooded cloak of blue wool~
+A deep blue cloak of wool lies on the ground.~
+armor
+cloth~
+10 10 10 8 10
+51 10 200 P
+WEAR TAKE
+WEAR NECK
+ITEM BLESS
+APPLY SVSPELL -7
+APPLY HP 25
+APPLY MANA 35
+APPLY DEX -1
+LIMIT 20
+E blue cloak wool~
+The dark blue cloak cloak is full-bodied, plain but classic.  It looks     
+like it would be a nuisance to carry, due much to its weight and coarse     
+texture.  Despite this, it looks to be extremely warm.  Two strings fall     
+from near the hood, used to keep the cloak in place.     
+~
+
+#1606
+amber medallion silver~
+an amber medallion set in pure silver~
+A stone set on a long silver chain lies on the ground.~
+armor
+silver~
+5 0 5 10 5
+52 3 1000 P
+WEAR TAKE
+WEAR NECK
+RESTRICT FEMALE_ONLY
+ITEM MAGIC
+ITEM BLESS
+APPLY SVSPELL -8
+APPLY HP 30
+APPLY WIS 2
+LIMIT 3
+MSG WEAR $p glows briefly as you fasten it around your neck.~
+$p glows briefly as $n fastens it on.~
+E amber medallion silver~
+The silver chain is thin and very delicate, but is somehow strong enough     
+to bear the weight of the decently sized amber stone.  Engravings can be     
+seen along the very sides of the silver setting, in the shape of the moon     
+and stars.  The amber stone in the middle glows every now and again, and     
+given the theme of the etchings on the metal, it seems to be representative     
+of the sun.     
+~
+
+#1607
+desk desks~
+a wooden desk~
+~
+container
+wood~
+10 AC 0 0 0
+1 1 1 P
+LIMIT 0
+E a desk wooden desks~
+Made from a heavy, dark red wood, the desk look extremely sturdy, and it's     
+likely a good thing.  Books, robes, and an assortment of other goodies are     
+piled over it, making it hardly visible as a desk at all.     
+~
+
+#1608
+cupcake chocolate~
+a chocolate cupcake~
+A cupcake with chocolate frosting is on the ground here.~
+food
+food~
+32 716 0 0 0
+51 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E cupcake chocolate~
+This moist, round little cake with dark chocolate frosting looks extremely     
+delicious.  Attached to the paper wrapping around the base is a small tag     
+with the words, 'eat me' written on it.     
+~
+
+#1609
+hilt golden broken sword~
+the hilt of a broken sword~
+A golden sword hilt is lying here.~
+trash
+gold~
+0 0 0 0 0
+52 6 100 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E sword hilt broken~
+The golden hilt looks old and unkept, and most of the stone settings     
+along it are empty or so dirty it's hard to tell either way.  The blade     
+was broken off only a few inches from the hilt, and still looks to be     
+extremely sharp.     
+~
+
+#1610
+broken adamantite blade~
+a broken adamantite blade~
+A broken blade from a sword is lying here.~
+trash
+adamantite~
+0 0 0 0 0
+52 6 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E broken adamantite blade~
+Rust spots discolor the dull, broken blade in its entirety.  It's hard     
+to tell, but along the flat sides of the blade, there are a few faint     
+engravings, but they are too faint to decipher.     
+~
+
+#1611
+green robe cloth~
+a green robe~
+A pile of green cloth is lying here.~
+armor
+cloth~
+13 13 13 0 13
+45 5 1000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY STR 1
+APPLY DEX 1
+LIMIT 0
+E green robe cloth~
+The cloth of the robe looks durable, and the emerald color has been     
+resistant to fading, despite the many scrubbings it has encountered.     
+A belt made of the same material is sewn onto the robe.     
+~
+
+#1612
+short leather boots~
+a pair of short leather boots~
+A comfortable pair of leather boots are lying here.~
+armor
+leather~
+10 10 10 0 10
+45 5 1000 P
+WEAR TAKE
+WEAR FEET
+APPLY DEX 1
+APPLY MOVE 50
+LIMIT 0
+E short leather boots~
+Made from soft, tanned leather, these boots don't look like they'd be     
+durable enough for the outside world.  They aren't very tall, coming     
+up just past the ankle heighth.     
+~
+
+#1613
+white leather boots~
+a pair of white leather boots~
+A comfortable pair of leather boots are lying here.~
+armor
+leather~
+10 10 10 0 10
+45 5 1000 P
+WEAR TAKE
+WEAR FEET
+APPLY DEX 1
+APPLY MOVE 50
+LIMIT 0
+E white leather boots~
+Made from soft, white leather, these boots don't look like they'd be     
+durable enough for the outside world.  They aren't very tall, coming     
+up just past the ankle heighth.     
+~
+
+#1614
+dirty rag cloth~
+a dirty rag~
+A dirty cloth is lying here.~
+trash
+cloth~
+0 0 0 0 0
+45 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E dirty rag cloth~
+This tiny cloth is so completely soiled with dirt and dust, you can't     
+discern its original coloring.     
+~
+
+#1615
+wire glasses rimmed~
+a pair of wire-rimmed glasses~
+A pair of fragile-looking glasses have been carelessly tossed aside here.~
+armor
+glass~
+0 0 0 0 0
+45 1 1000 P
+WEAR TAKE
+WEAR HEAD
+APPLY INT 2
+LIMIT 0
+E wire glasses rimmed~
+This pair of glasses appears to be fairly fragile.  A thin line of grey     
+mental traces its way around the edge of each of the two thin glass lenses,     
+and extends back from the far side of each lens, ending in a semicircular     
+hook.  In between the two lenses, a bridge of similar metal arcs to join     
+them together.  Below that, a pair of small pads extend from the inside of     
+each lense frame, where the glasses would rest upon the nose of the wearer.     
+~
+
+#1616
+books stack~
+a stack of books~
+A stack of books is on the floor, here.~
+book
+parchment~
+0 0 0 0 0
+45 20 10000 P
+WEAR TAKE
+WEAR HOLD
+APPLY WIS 1
+LIMIT 0
+E books stack~
+Four thickly bound books balance precariously on top of each other.  Three     
+of the books are in good condition, their leather binding is smooth and shiny.     
+The fourth book looks as though it could fall apart at any moment.  There is     
+some faded gold print found on its binding, but it is unreadable.  The other     
+three books are unmarked.     
+~
+
+#1617
+yellow breeches cloth~
+some bright yellow breeches~
+A pile of blindingly yellow cloth is lying on the floor.~
+armor
+cloth~
+12 12 12 7 12
+45 5 100 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E yellow breeches cloth~
+These breeches look like they are made from some kind of soft material.     
+Their length is about mid-calf, and a drawstring is tied at the waistline     
+to ensure they stay fitted.  The coloring of the pants themselves is close     
+to blinding.     
+~
+
+#1618
+black riding boots~
+some black riding boots~
+A pair of black boots are lying here.~
+armor
+leather~
+8 8 8 0 8
+45 5 100 P
+WEAR TAKE
+WEAR FEET
+APPLY HITROLL 2
+APPLY MOVE 25
+APPLY DEX 2
+LIMIT 0
+E black riding boots~
+Well taken care of, these boots shine as if brand new.  Laces run from the     
+top of the shoe to all the way to the top of the boot, just below the knee.     
+The leather is durable, yet maintains a feel of softness.     
+~
+
+#1619
+book leather bound~
+a leather-bound book~
+A book bound with leather is lying on the ground.~
+book
+leather~
+0 0 0 0 0
+45 3 100 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E book leather bound~
+Bound in fine, black leather, this is appears to be a freshly made copy     
+of one of the many books on transmutation found in the library.  There     
+are several chapters emphasizing both the magicks of shapeshifting and     
+arcane, but is mostly material that is well known.     
+~
+
+#1620
+shirt white silk~
+a shirt of white silk~
+A shirt of soft white silk is lying here.~
+armor
+cloth~
+5 5 5 0 5
+45 2 100 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E shirt white silk~
+Made from silk, this shirt is extremely soft to the touch.  The sleeves     
+are long, but the last person to have worn this had them rolled up to     
+about elbow length.  The neck of the shirt is open, but can be laced up     
+from the front.     
+~
+
+#1621
+silk scarf~
+a dark blue silk scarf~
+A small scarf is lying here.~
+armor
+cloth~
+0 0 0 0 0
+45 1 1000 P
+WEAR TAKE
+WEAR NECK
+LIMIT 0
+E silk scarf~
+The scarf is oblong in shape, and despite the material, it feels a bit     
+on the rough side.  A deep navy in color, when held up to your face you     
+can just see through it.  It doesn't offer much in the way of protection     
+for the neck. but it doesn't look like that was its original purpose.     
+~
+
+#1622
+gown blue starlight~
+a gown of shimmering starlight~
+A gown made from blue cloth is lying here.~
+armor
+cloth~
+7 7 7 3 7
+45 7 1000 P
+WEAR TAKE
+WEAR BODY
+RESTRICT FEMALE_ONLY
+APPLY SVSPELL -5
+APPLY HP 25
+APPLY MANA 25
+APPLY DEX -2
+LIMIT 20
+E gown blue starlight~
+Made from something slightly heavier than silk, this gown looks comfortable,     
+as far as dresses are concerned.  The color is reminiscent of a clear night     
+sky, stars illuminating it with their twinkle.  The skirt of the gown is      
+full length, ending just below the ankle, and the bodice of it is sleeveless     
+with a high neckline.  Decoration on the gown is minimal, only a few small      
+designs embroidered on the collar.     
+~
+
+#1623
+satin slippers shiny~
+a pair of blue satin slippers~
+A pair of shiny slippers are on the floor here.~
+armor
+cloth~
+5 5 5 0 5
+45 1 1000 P
+WEAR TAKE
+WEAR FEET
+APPLY LUCK 2
+APPLY MANA 10
+APPLY DEX -1
+LIMIT 0
+E satin slippers shiny~
+The shiny blue material of these slippers make them seem fancy, but they are     
+in actuality, very plain.  They are backless to ensure ease in the wearing     
+and removing of them, and the toes are rounded, to make them more comfortable.     
+~
+
+#1624
+silver pen engraved~
+an engraved silver pen~
+An engraved pen is lying here, unused.~
+pen
+silver~
+5 0 0 0 0
+45 1 5000 P
+WEAR TAKE
+WEAR HOLD
+APPLY INT 2
+LIMIT 0
+E silver pen engraved~
+The pen, being made from pure silver, is heavier than most.  Tiny thorned vines     
+are etched along the six inch piece, each leaf detailed with veins and stained     
+markings.  Whoever created this spent a lot of time with the decoration of this     
+pen.     
+~
+
+#1625
+fur slippers lined~
+some fur-lined slippers~
+A pair of fur-lined slippers are lying here.~
+armor
+fur~
+6 6 6 0 6
+45 2 1000 P
+WEAR TAKE
+WEAR FEET
+APPLY CON 1
+APPLY MOVE 15
+APPLY DEX 1
+LIMIT 0
+E fur slippers lined~
+These slippers look very warm.  The outer portion of the slipper is made from     
+leather and bound together with sinew, and the speckled fur inside looks like     
+it's from some breed of rabbit.     
+~
+
+#1626
+black wrinkled robe cloth~
+a wrinkled black robe~
+A pile of wrinkled cloth is crumpled on the ground.~
+armor
+silk~
+12 12 12 7 12
+45 5 1000 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+E black wrinkled robe cloth~
+There are so many wrinkles on this robe, it must've been tossed aside and     
+forgotten about for a long time.  By the feel of it, and the ease in which     
+it wrinkled, you would guess to be made from something similar to linen.     
+~
+
+#1627
+cloth simple white robe~
+a simple white robe~
+A pile of crumpled white cloth is on the ground.~
+armor
+cloth~
+9 9 9 7 9
+45 5 1000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY HP 20
+APPLY DEX 1
+APPLY STR 2
+LIMIT 50
+E cloth simple white robe~
+The sleeves of the robe come down about mid-forearm, and the length of the     
+robe itself comes to about mid-calf.  Though the cloth shows some signs of     
+wear, there isn't a single stain to be seen against the pristine white.     
+~
+
+#1628
+gold thin belt~
+a belt of thin golden chains~
+A pile of gold chains is lying here.~
+armor
+gold~
+5 5 5 0 5
+45 4 3500 P
+WEAR TAKE
+WEAR WAIST
+APPLY HITROLL 2
+APPLY MANA 20
+LIMIT 0
+E gold thin belt~
+Thin links of gold come together with a clasp to make this belt adjustable.     
+The links lay flat and snuggly connected to each other, ensuring a tight     
+fit.     
+~
+
+#1629
+pen thin golden~
+a thin golden pen~
+A thin pen made from gold is lying here.~
+pen
+gold~
+5 0 0 0 0
+45 1 5000 P
+WEAR TAKE
+WEAR HOLD
+APPLY MANA 10
+APPLY INT 1
+LIMIT 0
+E pen thin golden~
+The solid gold this pen is made from makes it heavier than most pens, but     
+it maintains a decent balance.  A few carefully etched leaves decorate the     
+piece.     
+~
+
+#1630
+green silk gown~
+a fitted gown of emerald silk~
+A pile of green silk is lying here.~
+armor
+cloth~
+7 7 7 10 7
+45 2 1000 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 10
+APPLY WIS 1
+LIMIT 0
+E green silk gown~
+This sleeveless dress is of a color pleasing to the eye.  The cloth is     
+smooth and very soft, and the cut looks like it would be flattering on     
+almost any figure.  Some carefully embroidered designs made with a pale     
+green thread decorate the hem.     
+~
+
+#1631
+sash pale green~
+a pale green sash~
+A sash of pale cloth is lying here.~
+armor
+cloth~
+5 5 5 0 5
+45 1 100 P
+WEAR TAKE
+WEAR WAIST
+APPLY HP 5
+LIMIT 0
+E sash pale green~
+The rich green color of the sash reminds you of new leaves in spring     
+splendor.  The cloth is a thick, wool-like material, giving it a rough     
+feeling texture.     
+~
+
+#1632
+emerald green slippers~
+a pair of emerald slippers~
+A pair of green slippers are on the floor here.~
+armor
+cloth~
+5 5 5 0 5
+45 1 1000 P
+WEAR TAKE
+WEAR FEET
+LIMIT 0
+E emerald green slippers~
+The green cloth that covers these slippers looks like velvet.  A small     
+button is sewn onto the side of each slipper, and a strap to secure the     
+foot into the shoe attached.  A few small stitches form a design on the     
+buttoned strap, but aside from that, there is no decoration.     
+~
+
+#1633
+robe cloth~
+a short robe~
+A pile of cloth is lying here.~
+armor
+cloth~
+8 8 8 0 8
+45 3 100 P
+WEAR TAKE
+WEAR ABOUT
+APPLY CON 1
+APPLY DEX 2
+LIMIT 0
+E robe cloth~
+The robe is a dark tan color, and made from a light weight linen type     
+of cloth.  The hem of the robe only extends about two feet below the     
+waistline.  The sleeves are also shortened, only about a foot and a     
+half in length.     
+~
+
+#1634
+leggings plain leather~
+plain leather leggings~
+A pair of plain leggings are lying on the ground.~
+armor
+leather~
+8 8 8 0 8
+45 3 100 P
+WEAR TAKE
+WEAR LEGS
+APPLY DAMROLL 1
+APPLY HITROLL 2
+LIMIT 0
+E leggings plain leather~
+These leggings appear to be made from a heavy weight cloth, dark brown     
+in color.  Several patches are sewn onto the leggings, showing signs of     
+wear.     
+~
+
+#1635
+belt brown plain~
+a plain brown belt~
+A plain belt is lying on the ground.~
+armor
+cloth~
+5 5 5 0 5
+45 1 100 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+E belt brown plain~
+The belt is made from extremely plain colored cloth, and feels plain     
+as well.     
+~
+
+#1636
+robe cloth simple~
+a simple robe~
+A pile of cloth is lying here.~
+armor
+cloth~
+8 8 8 0 8
+45 3 100 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DAMROLL 2
+APPLY DEX 2
+APPLY STR 1
+LIMIT 0
+E robe simple cloth~
+The robe is a dark tan color, and made from a light weight linen     
+type of cloth.  The hem of the robe only extends about two feet     
+below the waistline.  The sleeves are also shortened, only about     
+a foot and a half in length.     
+~
+
+#1637
+iron spear dark~
+a dark iron spear~
+A spear of dark metal is lying here.~
+weapon
+iron~
+spear 8 6 pierce 0
+47 17 1000 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 20
+E iron spear dark~
+The spear is made completely from a dark iron metal.  The color looks     
+like something that has been set in a fire for a long period of time,     
+but that idea is ridiculous, since metal doesn't burn.  The tip of the     
+spear is jagged, and it pains you to even think about touching it.     
+~
+
+#1638
+mace ancient fury~
+an ancient mace named 'Heaven's Fury'~
+A mace engraved with moons and stars is lying here, untouched.~
+weapon
+heartstone~
+mace 8 6 divine 0
+52 10 25000 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+ITEM BLESS
+APPLY HP 35
+APPLY MANA 40
+LIMIT 10
+E mace ancient fury~
+This mace feels like it has been around for all of eternity, but its     
+surface shows no signs of wear.  Its appearance is not what startles     
+you about this weapon, but instead, the sense of raw power that can     
+be felt bottled within.     
+~
+
+#1639
+band ivory silver entwined~
+an ivory band entwined with silver~
+A band of ivory and silver is on the ground here.~
+armor
+ivory~
+5 5 5 10 5
+49 1 10000 P
+WEAR TAKE
+WEAR FINGER
+APPLY HP 30
+APPLY MANA 15
+LIMIT 20
+E band ivory silver entwined~
+The ivory band is thick and yellowed in color.  There are a few small     
+marks along the surface, but you can't decipher what they are.  A very     
+thin band of silver is twisted around the ivory, giving it an exotic     
+look.     
+~
+
+#1640
+silver ring plain~
+a plain silver ring~
+A plain ring of silver is lying here.~
+armor
+silver~
+4 4 4 0 4
+45 1 1000 P
+WEAR TAKE
+WEAR FINGER
+APPLY HP 15
+APPLY MANA 35
+LIMIT 20
+E silver ring plain~
+This thin band of pure silver forms a perfect circle.  Its surface     
+is completely smooth, without etching or decoration, causing it to     
+be very reflective of any light.     
+~
+
+#1641
+staff wooden wrapped~
+a wrapped wooden staff~
+A staff wrapped with cloth is lying here.~
+weapon
+wood~
+staff 11 4 acbite F
+45 17 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+APPLY HITROLL 3
+APPLY HP 25
+APPLY MANA 35
+LIMIT 4
+E staff wooden wrapped~
+The staff is made from thick, sturdy wood, and oddly, is wrapped with     
+white cloths.  From the ends of the staff, you can see something oozing     
+out.  Judging by the wrappings, you assume this is something you don't     
+want to touch.     
+~
+
+#1642
+whip harnessed lightning~
+a whip of harnessed lightning~
+A whip of lightning is lying here, sparks flying off of it.~
+weapon
+energy~
+weapon 8 6 none 0
+51 12 10000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+APPLY HITROLL 4
+APPLY MANA 30
+LIMIT 10
+E whip harnessed lightning~
+Magic keeps three bolts of lighting from dissipating into the air, and     
+harnessed to a smooth grip.  Its handle is made from beautifully varnished      
+ironwood, and wrapped in soft brown leather.  Numerous mystic runes have      
+been branded into the handle of the whip.  The runes seem to hum with power,     
+and sparks seem to leap quickly from run to run, and off into the nearby      
+air, at a frantic pace.     
+~
+
+#1643
+dark green leggings~
+some dark green leggings~
+Some leggings are lying crumpled on the ground.~
+armor
+cloth~
+12 12 12 6 12
+45 4 100 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E dark green leggings~
+These leggings made from a soft, yet durable kind of cloth.  There is     
+a thin drawstring at the waist, to tighten as needed.  The rich color     
+reminds you of emeralds.     
+~
+
+#1644
+shirt tied loosely cloth~
+a loosely tied shirt~
+A pile of cloth is lying here.~
+armor
+cloth~
+12 12 12 7 12
+45 2 100 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E shirt tied loosely cloth~
+Strings are loosely laced at the top of this plain, white shirt.  The     
+body of the shirt is baggy, and the sleeves are as well.     
+~
+
+#1645
+emerald hairpin~
+a hairpin set with emeralds~
+A glittering hairpin has been left here.~
+armor
+gem~
+0 0 0 5 0
+45 1 10000 P
+WEAR TAKE
+WEAR HEAD
+APPLY LUCK 1
+APPLY MANA 20
+LIMIT 0
+E emerald hairpin~
+Three mid-sized emeralds are set in the reflective silver of the hair     
+clasp.  The emerald in the middle is slightly larger than the two that     
+are fixed along side it, but it is barely noticeable from anywhere but     
+close up.     
+~
+
+#1646
+crystal spear~
+a crystal spear~
+A spear of clear crystal is lying here.~
+weapon
+glass~
+spear 8 6 pierce 0
+47 17 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+LIMIT 20
+E crystal spear~
+Made entirely from crystal, this weapon is a piece of awe-inspiring work,     
+beautiful as well as deadly.  Crystal would normally be extremely fragile,     
+but the spear seems to be imbued with magical strength, making it harder     
+to destroy.     
+~
+
+#1647
+dull black leather journal~
+a journal bound in dull, black leather~
+An old journal is here, gathering dust.~
+book
+leather~
+0 0 0 0 0
+52 2 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E dull black leather journal~
+Entry 1:     
+Things seem to be going alright up here.  I still contain some amount     
+of bitterness toward the Scions I was formerly in league with, but     
+I can understand their trepidation in welcoming me in this state.  At     
+least they have allowed me complete charge of Tahluir'rethan, as I've     
+no place else to go, currently.     
+     
+Entry 2:     
+Today was slow, looking for a spot where I can place this "castle" for     
+awhile... and it's lonely.  Living my life out like this wasn't how I     
+had imagined it.  My efforts to remove this illusion trapping me have     
+continually failed.  I can only make the best of this, as hard as it     
+is to do.     
+     
+Entry 3:     
+It occurred to me, finally, that I could do something other than spend     
+my life alone, wasting away.  I will use my magics to its best ability,     
+and teach others in the ways of it, and train the young.  I will leave     
+this place for a little while, and search for those willing to learn.     
+     
+Entry 4:     
+Things are looking up, at last!  I've returned bringing several eager     
+grimalkin, hoping to learn more of their heritage and its connection to     
+magic.  Still, the company is so welcome!  We will do well up here, I     
+think.  Perhaps when we are more accustomed to each other, I will share     
+my true nature with them.     
+     
+Entry 5:     
+We recruited two young students today, of my own human descent.  They     
+are bright and willing, but I think their studies will suffer due to     
+the tiny babe they have brought with them.  Still, I feel the magic     
+strongly in the form of little Alshida.  But it is good to have students,     
+and in some ways, the remind me of what I sacrificed for the security     
+of the White Tower, and all of Shalar.     
+     
+Entry 6:     
+Eleven students now!  I can barely believe what this is becoming.  I am     
+grateful to have something to keep me busy, something to create and share     
+with the others.  The grimalkin are doing so well, though Nalla's birth     
+was a scare for all of us.  It was a pure miracle that she survived at all,     
+but at the loss of her mother... it's so very sad.  But we are all of one     
+family here, and we will raise her together.     
+     
+Entry 7:     
+Alshida was orphaned today... her parents traveled down to Sailing Stone in     
+search of prospects.  I should've known they weren't ready!  I shouldn't     
+have let this happen.  I have never felt the violence of the magic haters     
+so strongly as I do now.  There is no love of anything in their stony hearts,     
+no thoughts within their thick skulled heads.  Hopefully we can do her justice.     
+Her age is close to Nalla's, perhaps it will make things easier.     
+~
+
+#1648
+aged deerskin diary~
+a diary bound in aged deerskin~
+A diary bound in deerskin is lying here.~
+armor
+leather~
+0 0 0 0 0
+52 2 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E aged deerskin diary~
+Entry 1:     
+Today was my first day of planning.  Bless the magics for     
+this moment. Though the illusion I have built around myself     
+is uncomfortable, it is what I must do to protect my studies     
+and those of others.  The mannerisms of men are so easily     
+portrayed, but hard to truly understand.  I need to be     
+convincing.  Now, to find some way to impress upon the others...     
+     
+Entry 2:     
+Life has been busy, and I've had few moments since my arrival     
+here in Cimar to collect my thoughts.  I've managed to gain      
+quite a reputation amongst the elite of society here.  Their      
+pleasantries and false sincerity are appalling, I can only imagine      
+how much worse it would be if they found out what I really was.       
+I can see the greed, the pure evil in their eyes, while their      
+smiles swell with deceptive warmth.  Something will come from      
+all of this, I am certain.     
+     
+Entry 3:     
+Today it has happened!  My struggles have paid off, and I will     
+prove myself worthy of the sickening court here.  The King     
+himself (though I do still despise his kind) has bestowed me     
+with a grand task, one I am not even sure I can accomplish.     
+His desire to devour the entire other continent is unnerving,     
+and I suspect that is what he wishes this flying creation to     
+be used for.  Our original suspicions are turning to reality,     
+and his violent desires will surely be the death of him, someday.     
+     
+Entry 4:     
+It is finished!  At last!  I cannot even begin to express my happiness     
+and pride here on this paper.  It has been a tough seven years, building     
+this magnificent thing.  My Tahluir'rethan, Gate of the Heavens.  And     
+now, my espionage work is almost through... I will return to the freedoms     
+of my own body, and of the world.  How I miss those places.     
+     
+Entry 5:     
+From the library I watch as the troops travel one by one through the     
+gate, on their way to what they think will be the greatest victory of     
+their lifetimes.  Not so.  I have forewarned the White Tower, and these     
+poor zombies called soldiers will learn their King's mistakes the     
+difficult way.  And so, I hope, will the King.  It will take them     
+several more hours to get everyone aboard.  I need to rest my mind.     
+Controlling the wind is so draining.     
+     
+Entry 6:     
+My mind is so weary.  I can barely see what goes on outside the window     
+of this tower, but I can hear the muffled sounds of battle down below     
+me.  It is done, now.  The King, his army, they are finished.  And     
+I am tired.. so tired.  I must find a safe place for Tahluir'rethan to     
+be.  Must return the illusions back to their true form...     
+~
+
+#1649
+desk wooden small~
+a small wooden desk~
+~
+container
+wood~
+5 AC 0 0 0
+1 1 1 P
+LIMIT 0
+E small wooden desk~
+A small wooden desk is here, covered in dust.     
+~
+
+#1650
+crystal statue dragon~
+a small statue of a crystal dragon~
+A small statue made of crystal has been placed here with care.~
+treasure
+glass~
+0 0 0 0 0
+52 2 50000 P
+WEAR TAKE
+WEAR HOLD
+APPLY SBREATH -10
+APPLY HP 15
+APPLY MANA 15
+LIMIT 1
+E crystal statue dragon~
+This statue is just shy of one foot in height, and is sculpted from solid     
+crystal.  The crystal is of near perfect clarity, and is tinged with the     
+slightest hint of blue, giving an almost icy look to it.  The statue has     
+been carved into the shape of a dragon about to take flight, wings half-     
+way extended out to either side.  Each facet of the crystal has been     
+painstakingly cut and polished, so that the statue virtually shines in     
+the light.  The eyes of the statue in particular almost seem to glow with     
+an internal light all their own.     
+~
+
+#1651
+desk wooden small~
+a small wooden desk~
+~
+container
+wood~
+5 AC 0 0 0
+1 1 1 P
+WEAR TAKE
+LIMIT 0
+
+#1652
+desk wooden small~
+a small wooden desk~
+~
+container
+wood~
+5 AC 0 0 0
+1 1 1 P
+LIMIT 0
+
+#1653
+desk wooden small~
+a small wooden desk~
+~
+container
+wood~
+5 AC 0 0 0
+1 1 1 P
+LIMIT 0
+
+#1654
+desk wooden small~
+a small wooden desk~
+~
+container
+wood~
+5 AC 0 0 0
+1 1 1 P
+LIMIT 0
+
+#1655
+stone key large~
+a large stone key~
+A large stone key lies on the ground here.~
+key
+stone~
+0 0 0 0 0
+52 5 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E stone key large~
+This key is formed out of stone, yet is of fairly intricate design.  It seems     
+to have been fit to a fairly complex lock, if the teeth of the key are any     
+indication.  The stone is of a bland grey rock, yet seems quite sturdy and     
+solid.  Upon closer examination, it almost appears as if the key were formed     
+perfectly in this shape, as there are no visible nicks or chisel marks at any     
+point along the key.     
+~
+
+#1656
+corpse preserved~
+a well preserved corpse~
+A strangely preserved corpse lies here.~
+container
+flesh~
+5 0 0 0 0
+1 1 1 P
+LIMIT 0
+E corpse preserved~
+The corpse here doesn't even appear normal from a distance.  A distinct aura     
+of magic swirls over its surface, moving in and out of the nostrils and ears.     
+Despite the masculine clothing it still wears, the corpse takes on a feminine     
+shape.  Yet the aura of magic seems to flicker occasionally, the appearance of     
+the corpse shifting to something more masculine, and vaguely familiar.     
+~
+
+#0
+
+
+
+#ROOMS
+#1600
+Before the gates~
+Grand gates of some unknown material tower over you at the entrance to this     
+lair.  A large white structure can be seen back behind the gates, looming its     
+ominous presence for all it's worth.  Looking around yourself, you notice that     
+you are not truly on solid ground: your feet seem covered in some hazy clouds,     
+solidifying here and there, but not enough to hold you above without any aid of     
+flight.  A small scroll hovers in the air near the gates, an aura of energy     
+swirling around it.     
+~
+air
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1601 ABCD 1600
+gate~
+Large gates block your path.     
+~
+D EAST 0 0 0
+~
+Clouds and sky fill your vision.     
+~
+D SOUTH 0 0 0
+~
+Clouds and sky fill your vision.     
+~
+D WEST 0 0 0
+~
+Clouds and sky fill your vision.     
+~
+D UP 0 0 0
+~
+Clouds and sky fill your vision.     
+~
+D DOWN 0 0 0
+~
+You see a hole through the clouds.     
+~
+E scroll small~
+Tahluir'rethan, written by Athael and may not be used without permission of     
+the author.     
+~
+E gates~
+The gates before you appear to be made of some kind of crystalized material,     
+magically molded with swirling designs.     
+~
+#1601
+A courtyard path~
+A small path leading from the gates up to the doorway ahead seems to shimmer     
+slightly with every step.  Looking to either side of you, the ground seems to     
+waver, allowing an intermitten view of the sky on which this place hovers.  The     
+decoration upon the large structure in front of you is rather lacking: nothing     
+but shades of white and a few transparent places.     
+~
+city
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1602 0 0
+~
+You see an arched doorway to the castle.     
+~
+D EAST 0 0 0
+~
+You see a garden of strange looking plants and flowers.     
+~
+D SOUTH 1600 ABCD 1600
+gate~
+Large gates block your path.     
+~
+D WEST 0 0 0
+~
+You see a garden of strange looking plants and flowers.     
+~
+D UP 0 0 0
+~
+Clouds and sky fill your vision.     
+~
+D DOWN 0 0 0
+~
+A path of cobblestoned ivory lies beneath your feet.     
+~
+#1602
+Through an arched doorway~
+This doorway is large, sizing about five humans wide, standing shoulder to     
+shoulder.  The archway shimmers much like the path that led you to it, singing     
+of pure ivory.  The doors protecting this lair look heavy, and shimmer as well.     
+Its surface is bare of any design, but as you look away to examine the rest of     
+your surroundings, you swear you see something etched across it, staring out of     
+the corner of your eye.  Well lit hallways cross paths here, running both east     
+and west, a gallery of sorts lies to the north, and fresh air beckons to you     
+from the south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1628 0 0
+~
+You see a room filled with art.     
+~
+D EAST 1603 0 0
+~
+A well lit hallway runs to the east.     
+~
+D SOUTH 1601 0 0
+~
+You see a small courtyard.     
+~
+D WEST 1626 0 0
+~
+A well lit hallway runs to the west.     
+~
+D UP 0 0 0
+~
+You see a tall archway, made of ivory.     
+~
+D DOWN 0 0 0
+~
+A path of cobblestoned ivory lies beneath your feet.     
+~
+E door doors~
+Made of some sort of heavy material you've never seen before, the doors seem     
+to shimmer and sparkle, creating strange patterns that only come alive when     
+you aren't looking directly at them.     
+~
+#1603
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, and a framed piece of     
+parchment hangs on the wall, catching your attention.  The ground below your     
+feet is most peculiar: it's misty, fuzzy appearance becomes solid as your foot     
+comes down upon it.  You run a hand along the walls, and they seem to do the     
+same.  The ceiling, however, clearly is not solid, as waves of mist, cloud and     
+even snow float down.  The hallway continues to the east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1604 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1602 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E framed parchment piece~
+A frame made from solid wood delicately holds a well kept piece of parchment     
+in tact.  Though the ink can clearly been seen to form words on the paper, its     
+language is unfamiliar.  Near the bottom, you see two signitures.     
+~
+#1604
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.     
+The ground below your feet is most peculiar: it's misty, fuzzy appearance     
+becomes solid as your foot comes down upon it.  You run a hand along the walls,     
+and they seem to do the same.  The ceiling, however, clearly is not solid, as     
+waves of mist, cloud and even snow float down.  The hallway continues to the     
+east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1605 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1603 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1605
+A bend in the hallway~
+The hallway comes to a sharp turn here, and before you pass straight through     
+the fuzzy walls, they solidify and bounce you gently back on track.  Bright     
+spheres of light seem to hop up before you as you make your way down this     
+corridor.  Misty walls lean in and out occasionally, while the ground below     
+your feet is most peculiar: it's misty, fuzzy appearance becomes solid as your     
+foot comes down upon it.  Near the floor, you see a small ceramic vase.  You run     
+a hand along the walls, and they seem to do the same.  The ceiling, however,     
+clearly is not solid, as waves of mist, cloud and even snow float down.  The     
+hallway continues both to the north and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1607 0 0
+~
+The hallway continues.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1604 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E vase ceramic~
+A glossy vase, painted light blue, is nestled on a small counter space in     
+the corner of the hallway.  The air surrounding the fragile container bends     
+and weaves to form white-pedalled, transparent flowers.     
+~
+#1606
+Stables~
+This part of the palace seems to be an add on compared with the rest: sturdy     
+walls made from logs, lanterns hung at various points on the ceiling.  Horse     
+stalls line the eastern wall, empty and smelling of disuse.  Along the western     
+wall are shelves littered with assorted combs, blankets and harnesses.  Below     
+the shelves are saddles, stacked on top of each other and blanketed in dust. In     
+the south wall of the stable, a small window is set.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1608 0 0
+~
+You see another more of the stable.     
+~
+D EAST 0 0 0
+~
+Vacant horse stalls and rotting wooden logs fill your vision.     
+~
+D SOUTH 0 0 0
+~
+A small window is set in this wall of the stable.     
+~
+D WEST 0 0 0
+~
+Shelves line the walls here, covered with blankets and harnesses.     
+~
+D UP 0 0 0
+~
+Dark logs lean over your head, forming an unreliable ceiling.     
+~
+D DOWN 0 0 0
+~
+The floor appears to be made of hardpacked dirt.     
+~
+E window~
+The window here doesn't serve as much of a window at all, it is so dusty and     
+dirty.  On the left side there are hinges, and though it may have been able to     
+open and close at one point in them, rust keeps the window firmly in place.     
+~
+E shelf shelves~
+Stout shelves made of dark wood line along the wall.  Soft patterned blankets     
+are neatly folded in piles, taking up all the space that the shelf provides.     
+Farther above, plain leather harnesses hang from perfectly placed nails in     
+the wall.     
+~
+#1607
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, giving off an eerie     
+and dizzying effect.  The ground below your feet is most peculiar: it's misty,     
+fuzzy appearance becomes solid as your foot comes down upon it.  You run a hand     
+along the walls, and they seem to do the same.  The ceiling, however, clearly     
+is not solid, as waves of mist, cloud and even snow float down.  The hallway     
+continues to the north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1609 0 0
+~
+The hallway continues.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 1605 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1608
+Stables~
+This part of the palace seems to be an add on compared with the rest: sturdy     
+walls made from logs, lanterns hung at various points on the ceiling.  Horse     
+stalls line the eastern wall, empty and smelling of disuse.  Along the western     
+wall are shelves littered with assorted combs, blankets and harnesses.  Below     
+the shelves are saddles, stacked on top of each other and blanketed in dust.     
+You see a wooden door in the northern wall, leading back into the barracks.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1610 ABG 0
+wooden door~
+You see a doorway.     
+~
+D EAST 0 0 0
+~
+Vacant horse stalls and rotting wooden logs fill your vision.     
+~
+D SOUTH 1606 0 0
+~
+You see another more of the stable.     
+~
+D WEST 0 0 0
+~
+Shelves line the walls here, covered with blankets and harnesses.     
+~
+D UP 0 0 0
+~
+Dark logs lean over your head, forming an unreliable ceiling.     
+~
+D DOWN 0 0 0
+~
+The floor appears to be made of hardpacked dirt.     
+~
+E shelf shelves~
+Stout shelves made of dark wood line along the wall.  Soft patterned blankets     
+are neatly folded in piles, taking up all the space that the shelf provides.     
+Farther above, plain leather harnesses hang from perfectly placed nails in     
+the wall.     
+~
+#1609
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it.  You run a hand along the walls, and     
+they seem to do the same.  The ceiling, however, clearly is not solid, as waves     
+of mist, cloud and even snow float down.  The hallway continues to the north     
+and south, and a large iron door is set in the eastern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1611 0 0
+~
+The hallway continues.     
+~
+D EAST 1610 ABCDH 1655
+iron door~
+You see a large iron door.     
+~
+D SOUTH 1607 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1610
+Some empty barracks~
+A heavy sense of disdain overwhelms you upon entering into this part of the     
+palace.  Cobwebs cover much of what can be seen through the dark room; cots     
+lined opposite along two walls, swords, axes, and other weaponry rest against     
+the wooden walls.  Racks made from wood stand next to each cot, donning battle     
+armor, bearing what appears to be an ancient symbol of the house of Cimar.       
+Despite the apparent difference between this part of the palace and the rest     
+of it, there is a strong sense of magic here.  A wooden door sets in the     
+south wall and a large iron one sets to the west.  To the north the barracks     
+continue.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1612 0 0
+~
+You see more of the barracks.     
+~
+D EAST 0 0 0
+~
+The walls appear to be made of dark pine logs.     
+~
+D SOUTH 1608 ABGH 0
+wooden door~
+You see a wooden door.     
+~
+D WEST 1609 ABCDH 1655
+iron door~
+You see a large iron door.     
+~
+D UP 0 0 0
+~
+Dark logs lean over your head, forming an unreliable ceiling.     
+~
+D DOWN 0 0 0
+~
+The floor appears to be made of hardpacked dirt.     
+~
+E rack racks~
+The wooden racks standing along each cot seem to be in much better shape than     
+the cots themselves. The armor that rests on the racks are dented and tarnished,     
+giving the impression that whenever they were last used, they were not taken     
+care of in the proper way.  According to legend, into each breastplate, an     
+ancient symbol of Cimar is etched.     
+~
+E cot cots~
+Made from a dark wood and covered with canvas, these cots look like they     
+could've withstood almost any weight or pressure, at one point in time.     
+Now that disuse and deterioration have taken their toll, it looks like it     
+would take more than a soft summer breeze to turn them into dust.     
+~
+#1611
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, and the ground below     
+your feet is most peculiar: it's misty, fuzzy appearance becomes solid as your     
+foot comes down upon it.  A small and unsturdy table is set to the side, its     
+flat surface polished to shine.  You run a hand along the walls, and they seem     
+to do the same.  The ceiling, however, clearly is not solid, as waves of mist,     
+cloud and even snow float down.  The hallway continues to the north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1613 0 0
+~
+The hallway continues.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 1609 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E small unsturdy table~
+A polished wooden table makes its home along the western wall of the hallway.     
+Its legs are spindly, carved with delicate swirls and waves.  Each "foot" of     
+the ends in three arched claws fashioned from marble, balancing on the sharp     
+points of each.     
+~
+#1612
+Some empty barracks~
+A heavy sense of disdain overwhelms you upon entering into this part of the     
+palace.  Cobwebs cover much of what can be seen through the dark room; cots     
+lined opposite along two walls, swords, axes, and other weaponry rest against     
+the wooden walls.  Racks made from wood stand next to each cot, donning battle     
+armor, bearing what appears to be an ancient symbol of the house of Cimar     
+Modan.  Despite the apparent difference between this part of the palace and the     
+rest of it, there is a strong sense of magic here.  The barracks continue off     
+to the north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1614 0 0
+~
+You see more barracks.     
+~
+D EAST 0 0 0
+~
+The walls appear to be made of dark pine logs.     
+~
+D SOUTH 1610 0 0
+~
+You see more barracks.     
+~
+D WEST 0 0 0
+~
+The walls appear to be made of dark pine logs.     
+~
+D UP 0 0 0
+~
+Dark logs lean over your head, forming an unreliable ceiling.     
+~
+D DOWN 0 0 0
+~
+The floor appears to be made of hardpacked dirt.     
+~
+E rack racks~
+The wooden racks standing along each cot seem to be in much better shape than     
+the cots themselves. The armor that rests on the racks are dented and tarnished,     
+giving the impression that whenever they were last used, they were not taken     
+care of in the proper way.  According to legend, into each breastplate, an     
+ancient symbol of Cimar is etched.     
+~
+E cot cots~
+Made from a dark wood and covered with canvas, these cots look like they     
+could've withstood almost any weight or pressure, at one point in time.     
+Now that disuse and deterioration have taken their toll, it looks like it     
+would take more than a soft summer breeze to turn them into dust.     
+~
+#1613
+A bend in the hallway~
+The hallway comes to a sharp turn here, and before you pass straight through     
+the fuzzy walls, they solidify and bounce you gently back on track.  Bright     
+spheres of light seem to hop up before you as you make your way down this     
+corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.     
+The ground below your feet is most peculiar: it's misty, fuzzy appearance     
+becomes solid as your foot comes down upon it.  Near the floor, you see a     
+small ceramic vase.  You run a hand along the walls, and they seem to do the     
+same.  The ceiling, however, clearly is not solid, as waves of mist, cloud and     
+even snow float down.  The hallway continues to the south and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 1611 0 0
+~
+The hallway continues.     
+~
+D WEST 1620 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E small ceramic vase~
+A glossy vase, painted a deep red, is nestled on a small counter space in     
+the corner of the hallway.  The air surrounding the fragile container bends     
+and weaves to form white-pedalled, transparent flowers.     
+~
+#1614
+Some empty barracks~
+A heavy sense of disdain overwhelms you upon entering into this part of the     
+palace.  Cobwebs cover much of what can be seen through the dark room; cots     
+lined opposite along two walls, swords, axes, and other weaponry rest against     
+the wooden walls.  Racks made from wood stand next to each cot, donning battle     
+armor, bearing what appears to be an ancient symbol of the house of Cimar.       
+Despite the apparent difference between this part of the palace and the rest     
+of it, there is a strong sense of magic here. The rest of the barracks lie     
+back to the south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The walls appear to be made of dark pine logs.     
+~
+D EAST 0 0 0
+~
+The walls appear to be made of dark pine logs.     
+~
+D SOUTH 1612 0 0
+~
+You see the rest of the barracks.     
+~
+D WEST 0 0 0
+~
+The walls appear to be made of dark pine logs.     
+~
+D UP 0 0 0
+~
+Dark logs lean over your head, forming an unreliable ceiling.     
+~
+D DOWN 0 0 0
+~
+The floor appears to be made of hardpacked dirt.     
+~
+E rack racks~
+The wooden racks standing along each cot seem to be in much better shape than     
+the cots themselves. The armor that rests on the racks are dented and tarnished,     
+giving the impression that whenever they were last used, they were not taken     
+care of in the proper way.  According to legend, into each breastplate, an     
+ancient symbol of Cimar is etched.     
+~
+E cot cots~
+Made from a dark wood and covered with canvas, these cots look like they     
+could've withstood almost any weight or pressure, at one point in time.     
+Now that disuse and deterioration have taken their toll, it looks like it     
+would take more than a soft summer breeze to turn them into dust.     
+~
+#1615
+A bend in the hallway~
+The hallway comes to a sharp turn here, and before you pass straight through     
+the fuzzy walls, they solidify and bounce you gently back on track.  Bright     
+spheres of light seem to hop up before you as you make your way down this     
+corridor.  Misty walls lean in and out occasionally, while the ground below     
+your feet is most peculiar: it's misty, fuzzy appearance becomes solid as your     
+foot comes down upon it.  Near the floor, you see a small ceramic vase.  You     
+run a hand along the walls, and they seem to do the same.  The ceiling, however,     
+clearly is not solid, as waves of mist, cloud and even snow float down. The     
+hallway continues east and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1616 0 0
+~
+The hallway continues.     
+~
+D SOUTH 1621 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E small ceramic vase~
+A glossy vase, painted light green, is nestled on a small counter space in     
+the corner of the hallway.  The air surrounding the fragile container bends     
+and weaves to form white-pedalled, transparent flowers.     
+~
+#1616
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it. You run a hand along the walls, and they     
+seem to do the same.  The ceiling, however, clearly is not solid, as waves of     
+mist, cloud and even snow float down.  The hallway continues to the east and     
+west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 AB 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1617 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1615 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1617
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, and a decorative     
+painting hangs there, demanding attention.  The ground below your feet is most     
+peculiar: it's misty, fuzzy appearance becomes solid as your foot comes down     
+upon it.  You run a hand along the walls, and they seem to do the same.  The     
+ceiling, however, clearly is not solid, as waves of mist, cloud and even snow     
+float down.  The hallway continues to the east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1618 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1616 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E painting decorative~
+The frameless painting that hangs here depicts a treasured moment for any of     
+the magical persuasion.  The tiny and articulated brushstrokes create a young     
+mage, mousy brown hair stuck to his brow with sweat.  His clothing seems most     
+real, an oversized robe of dark blue, and you can imagine this boy and his     
+constant struggle to keep his sleeves above his hands.  A large open book sets     
+on a pedestal before him, and his eyes and smile lighten his face at his new     
+mastered spell.     
+~
+#1618
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  The ground below your feet is most peculiar: it's misty, fuzzy     
+appearance becomes solid as your foot comes down upon it.  You run a hand along     
+the walls, and they seem to do the same.  The ceiling, however, clearly is not     
+solid, as waves of mist, cloud and even snow float down.  The hallway continues     
+to run east and west.  To the south you see a doorway, and to the north, a     
+crystalline archway leading into a tower.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1637 0 0
+~
+You see the inside of a tower.     
+~
+D EAST 1619 0 0
+~
+The hallway continues.     
+~
+D SOUTH 1634 0 0
+~
+You see a room filled with art.     
+~
+D WEST 1617 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1619
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, and a small detailed     
+sketch hangs by a piece of twine.  The ground below your feet is most peculiar:     
+it's misty, fuzzy appearance becomes solid as your foot comes down upon it.     
+You run a hand along the walls, and they seem to do the same.  The ceiling,     
+however, clearly is not solid, as waves of mist, cloud and even snow float down.     
+The hallway continues to the east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1620 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1618 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E small detailed sketch~
+This small sketch looks as if it was put upon the wall as an afterthought.     
+It depicts the ability of shapeshifting in five stages: the first sketch,     
+a normal mortal body, the second, some slight changes in the outer most     
+points of the limbs.  The changes traveling further inward in the third     
+sketch, and in the fourth, almost all changes in form have become visible.     
+The final sketch is that of a great lion, eyes twinkling with intelligence.     
+~
+#1620
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it.  You run a hand along the walls, and they     
+seem to do the same.  The ceiling, however, clearly is not solid, as waves of     
+mist, cloud and even snow float down.  The hallway continues to the east and     
+west.     
+~
+inside
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1613 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1619 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1621
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it.  You run a hand along the walls, and they     
+seem to do the same.  The ceiling, however, clearly is not solid, as waves of     
+mist, cloud and even snow float down.  The hallway continues to the north and     
+south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1615 0 0
+~
+The hallway continues.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 1622 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1622
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, showing off a large,     
+red-backed tapestry.  The ground below your feet is most peculiar: it's misty,     
+fuzzy appearance becomes solid as your foot comes down upon it.  You run a hand     
+along the walls, and they seem to do the same.  The ceiling, however, clearly     
+is not solid, as waves of mist, cloud and even snow float down.  The hallway     
+continues to the north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1621 0 0
+~
+The hallway continues.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 1623 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E large red-backed red backed tapestry~
+A small tapestry hangs here, it's background woven with bright red cloth.     
+Several waves of blue and green entwine to form a great flame, centered     
+on the cloth.  Upon closer inspection, small faces and figures of silver     
+colored thread stand out of the blue flames, and the same made of gold     
+thread in the green flames.  Some of the expressions are angered, some in     
+uncontrolled weeping.  It is certain, however, that these sides are at odds     
+with each other.     
+~
+#1623
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it.  You run a hand along the walls, and they     
+seem to do the same.  The ceiling, however, clearly is not solid, as waves of     
+mist, cloud and even snow float down.  The hallway continues to the north and     
+south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1622 0 0
+~
+The hallway continues.     
+~
+D EAST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D SOUTH 1624 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1624
+A bend in the hallway~
+The hallway comes to a sharp turn here, and before you pass straight through     
+the fuzzy walls, they solidify and bounce you gently back on track.  Bright     
+spheres of light seem to hop up before you as you make your way down this     
+corridor.  Misty walls lean in and out occasionally, decorative paintings and     
+historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it.  Near the floor, you see a small ceramic     
+vase.  You run a hand along the walls, and they seem to do the same.  The     
+ceiling, however, clearly is not solid, as waves of mist, cloud and even snow     
+float down.  The hallway continues to the east and north.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1623 0 0
+~
+The hallway continues.     
+~
+D EAST 1625 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E small ceramic vase~
+A glossy vase, painted black, is nestled on a small counter space in the     
+corner of the hallway.  The air surrounding the fragile container bends     
+and weaves to form white-pedalled, transparent flowers.     
+~
+#1625
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, decorative paintings     
+and historical artifacts placed in the nooks and crannies scattered about.  The     
+ground below your feet is most peculiar: it's misty, fuzzy appearance becomes     
+solid as your foot comes down upon it.  You run a hand along the walls, and they     
+seem to do the same.  The ceiling, however, clearly is not solid, as waves of     
+mist, cloud and even snow float down.  The hallway continues to the east and     
+west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1626 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1624 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+#1626
+A hallway made of clouds~
+Bright spheres of light seem to hop up before you as you make your way down     
+this corridor.  Misty walls lean in and out occasionally, making the metallic     
+disk decorating this portion of the hallway stand out.  The ground below your     
+feet is most peculiar: it's misty, fuzzy appearance becomes solid as your foot     
+comes down upon it.  You run a hand along the walls, and they seem to do the     
+same.  The ceiling, however, clearly is not solid, as waves of mist, cloud and     
+even snow float down.  The hallway continues to the east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D EAST 1602 0 0
+~
+The hallway continues.     
+~
+D SOUTH 0 0 0
+~
+The misty walls seem to reach out toward you.     
+~
+D WEST 1625 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E metallic disk~
+The round, flat disk that decorates this portion of the hallway is made of     
+bronze. The edges are etched with patterned geometrical designs, and the     
+center portion of it is bare of any decoration, leaving it smooth.     
+~
+#1627
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls, though only one     
+large painting takes up the majority of the wall in this part of the gallery.     
+The room is circular in nature, making the glowing spheres cast shadows full     
+of color and odd angles.  Blues, greens, yellows make the room look full of     
+life, yet there is something eerie that lingers. The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a giant     
+pillar, more than ten feet in diameter.  The gallery continues to the north and     
+west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1630 0 0
+~
+The gallery continues.     
+~
+D EAST 1628 0 0
+~
+The gallery continues.     
+~
+D SOUTH 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D WEST 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E large painting~
+White on white seems to be all this painting is of, but a more careful eye     
+shows differently.  Hidden in a raging storm of wind and snow is a pale and     
+scruffy looking man.  His eyes are barely visible beneath his white eyebrows,     
+and his hair and long beard are ragged and similar in color.  His robes are     
+also white, and bundled tightly around him.  A look of deep concentration     
+covers his face, as he attempts to control the storm around him.  The frame     
+of this picture is made of a white crystal, etched in the shape of snowflakes.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1628
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  The gallery continues to     
+the east and west, and to the south you see an intersection of hallways.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A large pillar of marble blocks your view.     
+~
+D EAST 1629 0 0
+~
+The gallery continues.     
+~
+D SOUTH 1602 0 0
+~
+You see a well traveled intersection.     
+~
+D WEST 1627 0 0
+~
+The gallery continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1629
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  A large and detailed statue     
+is displayed in this part of the gallery.  The gallery continues to the north     
+and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1632 0 0
+~
+The gallery continues.     
+~
+D EAST 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D SOUTH 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D WEST 1628 0 0
+~
+The gallery continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E plaque~
+A small inscription reads: Alhak Shareev'm Tasaia, Lord of Tahluir'rethan.     
+~
+E large detailed statue~
+Carved by means that must surely be magical, the stone figure is frozen in     
+a moment, mouth opened wide in a scream of anger or hatred, likely both.  His     
+attire is simple, only the toe of his boots peek out from under a full length     
+robe.  An arm is stretched out toward the center of the room, the carefully     
+carved sleeve pushed up to the elbow.  His palm is faced outward, and a few     
+rings are engraved into the stone fingers.  The facial features of this man     
+are simple stunning, his hair is much the same, long and unbound around the     
+shoulders.  Mounted on the wall next to the statue is a plaque.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1630
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  A tapestry covers the wall     
+here.  The gallery continues to the north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1633 0 0
+~
+The gallery continues.     
+~
+D EAST 0 0 0
+~
+A large pillar of marble blocks your view.     
+~
+D SOUTH 1627 0 0
+~
+The gallery continues.     
+~
+D WEST 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E small plaque~
+The tragedy of Alhak Shareev'm Tasaia.     
+~
+E tapestry~
+While this woven article is certainly big, it's not all that interesting.     
+The background is different shades of green and blue, and dozens of strange     
+symbols and letters in yellow cover the majority of it.  The only clue to     
+what it could possibly mean is the small plaque hanging next to it.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1631
+A small circular room~
+Here you are within the center of the very structure, the giant pillar caught     
+your eye as you explored the palace.  The walls that surround you are extremely     
+smooth to the touch, made of fine white marble.  A small wooden desk sits      
+against one wall, gathering dust.  Warmth seems to emit from the very walls      
+in invisible waves, wrapping around you, rendering you silent.  A throb of      
+energy fills the room, making the walls look alive. The noise grows louder and      
+louder, echoing into your sensitized ears.  The throbbing suddenly lessens in      
+its intensity, leaving you with a sense of awe.  You think you see a tiny      
+spiralling stairway tucked away to one side.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM SILENCE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D EAST 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D SOUTH 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D WEST 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D UP 1660 0 0
+~
+A cloud of magic keeps you from seeing anything.     
+~
+D DOWN 0 0 0
+~
+Strangely, the floor here is made from hardpacked dirt.     
+~
+#1632
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  A wooden framed portrait     
+hangs on the wall here.  The gallery continues to the north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1635 0 0
+~
+The gallery continues.     
+~
+D EAST 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D SOUTH 1629 0 0
+~
+The gallery continues.     
+~
+D WEST 0 0 0
+~
+A large pillar of marble blocks your view.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E wooden framed portrait~
+A dark skinned woman is the focus of this piece.  Her hair is a short, brown     
+color, as are her narrowed eyes.  She adorns a white, fur-lined robe and a     
+small pendant hangs around her neck.  Her face sharp with angles, her nose     
+and chin too pointed, cheeks too hollow, giving her a grim look.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1633
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  A huge throne sits in this     
+part of the room.  The gallery continues to the east and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D EAST 1634 0 0
+~
+The gallery continues.     
+~
+D SOUTH 1630 0 0
+~
+The gallery continues.     
+~
+D WEST 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E huge throne~
+Carved entirely from ice, it's a wonder it itself that this large block     
+hasn't melted yet, or shown any signs that it will in the future.  The     
+arms and back are chiseled into elaborate curves and angles, reflecting     
+light around the room.  It looks horribly uncomfortable.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1634
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  The gallery continues to     
+the east and west, and to the north you see an intersection of hallways.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1618 0 0
+~
+You see a well traveled intersection.     
+~
+D EAST 1635 0 0
+~
+The gallery continues.     
+~
+D SOUTH 0 0 0
+~
+A large pillar of marble blocks your view.     
+~
+D WEST 1633 0 0
+~
+The gallery continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1635
+The gallery~
+Artifacts and prized scribblings mount the fuzzy white walls.  The room is     
+circular in nature, making the glowing spheres cast shadows full of color     
+and odd angles.  Blues, greens, yellows make the room look full of life,     
+yet there is something eerie that lingers.  The air stirs through, though     
+you see no visible windows or vents.  In the center of the room stands a     
+giant pillar, more than ten feet in diameter.  A grand oval shaped mirror     
+hangs on the wall.  The gallery continues to the south and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D EAST 0 0 0
+~
+You see fuzzy walls covered with fantastic art.     
+~
+D SOUTH 1632 0 0
+~
+The gallery continues.     
+~
+D WEST 1634 0 0
+~
+The gallery continues.     
+~
+D UP 0 0 0
+~
+Snow falls softly from a misty and changeable ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid path.     
+~
+E grand oval shaped mirror~
+Though on first glance it appeared to be a mirror, it's now difficult to tell.     
+Looking closer, small ripples make its way across the silver framed oval every     
+so often, marring the reflecting view.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1636
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the north and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1639 0 0
+~
+You see more of the tower.     
+~
+D EAST 1637 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling looks to be made from a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor looks to be made from a solid piece of crystal.     
+~
+#1637
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are. You see more of the     
+tower to the north, east and west.  To the south you see a meeting of hallways.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1640 0 0
+~
+You see more of the tower.     
+~
+D EAST 1638 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 1618 0 0
+~
+You see a well traveled intersection.     
+~
+D WEST 1636 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling looks to be made from a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor looks to be made from a solid piece of crystal.     
+~
+#1638
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the west, and to the north, a spiral stairway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1641 0 0
+~
+You see a set of stairs.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 1637 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling looks to be made from a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor looks to be made from a solid piece of crystal.     
+~
+#1639
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the south and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 1640 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 1636 0 0
+~
+You see more of the tower.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling looks to be made from a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor looks to be made from a solid piece of crystal.     
+~
+#1640
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the south and west, and to the east, a spiral stairway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 1641 0 0
+~
+You see a set of stairs.     
+~
+D SOUTH 1637 0 0
+~
+You see more of the tower.     
+~
+D WEST 1639 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling looks to be made from a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor looks to be made from a solid piece of crystal.     
+~
+#1641
+A spiraling stairway of clouds~
+The stairs here are once again made of the cloudlike substance that you found     
+beneath your feet earlier.  In a manner that makes you uneasy, it seems to only     
+solidify with every step you make upon this stairway.  The stairs themselves     
+are rather narrow, as if made for those with much smaller feet than the average     
+human.  The stairway itself is tight wound, not allowing for much movement other     
+than following the stairs up or down.  More of the tower spreads to the west and     
+south from here.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 1638 0 0
+~
+You see more of the tower.     
+~
+D WEST 1640 0 0
+~
+You see more of the tower.     
+~
+D UP 1644 0 0
+~
+You see a narrow stairway.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1642
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  The tower continues     
+to the south and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 1643 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 1645 0 0
+~
+You see more of the tower.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1643
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the south and west, and to the east, a spiral stairway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 1644 0 0
+~
+You see a set of stairs.     
+~
+D SOUTH 1646 0 0
+~
+You see more of the tower.     
+~
+D WEST 1642 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1644
+A spiraling stairway of clouds~
+The stairs here are once again made of the cloudlike substance that you found     
+beneath your feet earlier.  In a manner that makes you uneasy, it seems to only     
+solidify with every step you make upon this stairway.  The stairs themselves     
+are rather narrow, as if made for those with much smaller feet than the average     
+human.  Looking further up, you can see that the stairway itself is tight, not     
+allowing for much movement other than following the stairs up.  You see the rest     
+of the tower to the south and west, and the insubstantial stairway leads up and     
+down.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 1647 0 0
+~
+You see more of the tower.     
+~
+D WEST 1643 0 0
+~
+You see more of the tower.     
+~
+D UP 1674 0 0
+~
+You see a narrow stairway.     
+~
+D DOWN 1641 0 0
+~
+You see a narrow stairway.     
+~
+#1645
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  The tower continues     
+to the north and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1642 0 0
+~
+You see more of the tower.     
+~
+D EAST 1646 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1646
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  The tower continues     
+to the east, west and north, and to the south you see a small hallway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1643 0 0
+~
+You see more of the tower.     
+~
+D EAST 1647 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 1650 0 0
+~
+You see the beginnings of a small hallway.     
+~
+D WEST 1645 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1647
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  To the west the tower     
+continues, and to the north you see a spiral stairway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1644 0 0
+~
+You see a set of stairs.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 1646 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1648
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the south and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D EAST 1649 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 1653 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1649
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the south and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D EAST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D SOUTH 1654 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 1648 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1650
+A short hallway~
+The hallway looks similar to that of the downstairs halls, walls fuzzily waver     
+between solidity and a cotton texture.  The decor of this portion of the exotic     
+mansion is drab, nothing more than necessary, as it is mainly for the use of     
+students and other regular visitors.  A few modest paintings make the walls seem     
+a little less bare, and a rough and practical rug runs down the middle of the     
+floor.  The hallway continues to the south, while the tower entrance is back to     
+the north.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1646 0 0
+~
+You see an entrance to the tower.     
+~
+D EAST 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D SOUTH 1655 0 0
+~
+The hallway continues.     
+~
+D WEST 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor, covered by a blandly colored rug.     
+~
+#1651
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the south and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D EAST 1652 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 1656 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1652
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the south and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D EAST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D SOUTH 1657 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 1651 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1653
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the north and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1648 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 1654 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D WEST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1654
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  A large wooden door, bare of decoration, is in the east     
+wall, and a small wooden door is set in the southern wall.  The rest of the     
+bedroom sprawls out to the north and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1649 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 1655 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D SOUTH 1659 AB 0
+wooden door~
+A small wooden door has been set into the wall here.     
+~
+D WEST 1653 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1655
+A short hallway~
+The hallway looks similar to that of the downstairs halls, walls fuzzily waver     
+between solidity and a cotton texture.  The decor of this portion of the exotic     
+mansion is drab, nothing more than necessary, as it is mainly for the use of     
+students and other regular visitors.  A few modest paintings make the walls seem     
+a little less bare, and a rough and practical rug runs down the middle of the     
+floor. Two large wooden doors, bearing little more decoration than a single iron     
+knocker, flank the hallway to the east and west.  Other than that, it appears to     
+be a dead end.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1650 0 0
+~
+A small hallway continues.     
+~
+D EAST 1656 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D SOUTH 0 0 0
+~
+You see the dead end of the hallway.     
+~
+D WEST 1654 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor, covered by a blandly colored rug.     
+~
+#1656
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  A large wooden door, bare of decoration, leads back out to     
+the hallway to the west.  The rest of the bedroom sprawls to the north and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1651 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 1657 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D WEST 1655 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1657
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  A small door can be seen to the south, while the bedroom     
+sprawls out to the north and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1652 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D SOUTH 1661 AB 0
+wooden door~
+A small wooden door is set in the wall here.     
+~
+D WEST 1656 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1658
+A short hallway~
+The hallway looks similar to that of the downstairs halls, walls fuzzily waver     
+between solidity and a cotton texture.  The decor of this portion of the exotic     
+mansion is drab, nothing more than necessary, as it is mainly for the use of     
+students and other regular visitors.  A few modest paintings make the walls seem     
+a little less bare, and a rough and practical rug runs down the middle of the     
+floor.  The hallway continues to the east, and a small door is set in the     
+southern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D EAST 1659 0 0
+~
+The hallway continues.     
+~
+D SOUTH 1662 AB 0
+wooden door~
+A small wooden door has been set into the wall here.     
+~
+D WEST 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor, covered by a blandly colored rug.     
+~
+#1659
+A short hallway~
+The hallway looks similar to that of the downstairs halls, walls fuzzily waver     
+between solidity and a cotton texture.  The decor of this portion of the exotic     
+mansion is drab, nothing more than necessary, as it is mainly for the use of     
+students and other regular visitors.  A few modest paintings make the walls seem     
+a little less bare, and a rough and practical rug runs down the middle of the     
+floor.  The hallway continues to the west, and you see a small door set in the     
+northern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1654 AB 0
+wooden door~
+A small wooden door has been set into the wall here.     
+~
+D EAST 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D SOUTH 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D WEST 1658 0 0
+~
+The hallway continues.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor, covered by a blandly colored rug.     
+~
+#1660
+A small circular room~
+Here you are within the center of the very structure, the giant pillar caught     
+your eye as you explored the palace.  The walls that surround you are extremely     
+smooth to the touch, made of fine white marble. Warmth seems to emit from the     
+very walls in invisible waves, wrapping around you, rendering you silent.  A     
+throb of energy fills the room, making the walls look alive.  The noise grows     
+louder and louder, echoing into your sensitized ears.  The throbbing suddenly     
+lessens in intensity, leaving you with a sense of awe.  You think you see a     
+tiny spiralling stairway tucked away to one side.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM SILENCE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D EAST 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D SOUTH 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D WEST 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D UP 1689 0 0
+~
+A cloud of magic keeps you from seeing anything.     
+~
+D DOWN 1631 0 0
+~
+A cloud of magic keeps you from seeing anything.     
+~
+#1661
+A short hallway~
+The hallway looks similar to that of the downstairs halls, walls fuzzily waver     
+between solidity and a cotton texture.  The decor of this portion of the exotic     
+mansion is drab, nothing more than necessary, as it is mainly for the use of     
+students and other regular visitors.  A few modest paintings make the walls seem     
+a little less bare, and a rough and practical rug runs down the middle of the     
+floor.  Doors can be seen set in both the north and south ends of the hallway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM SILENCE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1657 AB 0
+wooden door~
+A small wooden door has been set into the wall here.     
+~
+D EAST 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D SOUTH 1666 AB 0
+wooden door~
+A small wooden door has been set into the wall here.     
+~
+D WEST 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor, covered by a blandly colored rug.     
+~
+#1662
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the east and south, and a small     
+door is set in the northern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1658 AB 0
+wooden door~
+A small wooden door has been set into the wall here.     
+~
+D EAST 1663 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 1667 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1663
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the south and west, and a large     
+wooden door sets in the eastern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D EAST 1664 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D SOUTH 1668 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 1662 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1664
+A short hallway~
+The hallway looks similar to that of the downstairs halls, walls fuzzily waver     
+between solidity and a cotton texture.  The decor of this portion of the exotic     
+mansion is drab, nothing more than necessary, as it is mainly for the use of     
+students and other regular visitors.  A few modest paintings make the walls seem     
+a little less bare, and a rough and practical rug runs down the middle of the     
+floor.  Large wooden doors flank the hallway to the east and west, and a door     
+to a small storage closet can be seen to the south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see a plain cottonlike wall, covered with a few modest paintings.     
+~
+D EAST 1665 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D SOUTH 1669 AB 0
+closet door~
+The door to a small storage closet is set in the wall here.     
+~
+D WEST 1663 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor, covered by a blandly colored rug.     
+~
+#1665
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the east and south, and a large     
+wooden door is set in the western wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D EAST 1666 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 1670 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 1664 AB 0
+wooden door~
+A large wooden door is set into the wall here.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1666
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the east and south, and a small     
+door is set into the northern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1661 AB 0
+wooden door~
+A small wooden door is set into the wall here.     
+~
+D EAST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D SOUTH 1671 0 0
+~
+You see another part of the bedroom.     
+~
+D WEST 1665 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1667
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.  The bedroom sprawls out to the north and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1662 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 1668 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D WEST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1668
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic. The bedroom sprawls out to the north and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1663 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D SOUTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D WEST 1667 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1669
+A storage closet~
+A small closet filled with various cleaning agents and accessories occupies     
+this space, tucked away between the two bedrooms.  The wooden door appears to     
+be made of pine, and in taking a deep breathe you can still smell the sticky     
+sap that made it's home there.  Brooms, soap, scrubbing brushes are all set     
+neatly onto their shelves and stands.  There doesn't seem to be any apparent     
+dust on any of the objects within, giving you the impression that the mages     
+who live here keep their quarters tidy.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1664 AB 0
+closet door~
+The door leading out of a small storage closet is here.     
+~
+D EAST 0 0 0
+~
+You see shelves of soaps and scrub brushes.     
+~
+D SOUTH 0 0 0
+~
+Brooms set in stands against this end of the closet.     
+~
+D WEST 0 0 0
+~
+Blankets and extra pillows fill the shelves here.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+#1670
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1665 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 1671 0 0
+~
+You see another part of the bedroom.     
+~
+D SOUTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D WEST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1671
+A large bedroom~
+Brightly colored rugs made of woven canvas and cloth lay scattered upon the     
+sturdy looking floor of the large sleeping quarters.  Magical lights send some     
+colorful patterns against the relatively plain cloudy walls.  Numerous beds     
+line the walls, covered in soft blankets filled with down, and fluffy pillows.     
+Stacks of thickly bound books are piled near just about every bed, and a few     
+are lined upon the sparse bookshelves along one wall.  Three or four desks have     
+made their home in this room as well, beckoning you to sit down and study the     
+art that is Magic.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1666 0 0
+~
+You see another part of the bedroom.     
+~
+D EAST 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D SOUTH 0 0 0
+~
+The fuzzy walls are covered with patterns of magical light.     
+~
+D WEST 1670 0 0
+~
+You see another part of the bedroom.     
+~
+D UP 0 0 0
+~
+Clouds weave together to form a solid ceiling.     
+~
+D DOWN 0 0 0
+~
+Clouds weave together to form a solid floor.     
+~
+E bed beds~
+The bed, with its heavy blankets of down feather and fur looks extremely     
+inviting.     
+~
+#1672
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the south and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 1673 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 1675 0 0
+~
+You see more of the tower.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1673
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the south and west, and to the east, a spiral stairway.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 1674 0 0
+~
+You see a set of stairs.     
+~
+D SOUTH 1676 0 0
+~
+You see more of the tower.     
+~
+D WEST 1672 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1674
+A spiraling stairway of clouds~
+The stairs here are once again made of the cloudlike substance that you found     
+beneath your feet earlier.  In a manner that makes you uneasy, it seems to only     
+solidify with every step you make upon this stairway.  The stairs themselves     
+are rather narrow, as if made for those with much smaller feet than the average     
+human.  Looking further up, you can see that the stairway itself is tight, not     
+allowing for much movement other than following the stairs up.  You see the rest     
+of the tower to the south and west, and the insubstantial stairway leads up and     
+down.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 1677 0 0
+~
+You see more of the tower.     
+~
+D WEST 1673 0 0
+~
+You see more of the tower.     
+~
+D UP 1697 0 0
+~
+You see a narrow stairway.     
+~
+D DOWN 1644 0 0
+~
+You see a narrow stairway.     
+~
+#1675
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the north and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1672 0 0
+~
+You see more of the tower.     
+~
+D EAST 1676 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1676
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the north, east and west, and to the south you see the entrance to a     
+grand library.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1673 0 0
+~
+You see more of the tower.     
+~
+D EAST 1677 0 0
+~
+You see more of the tower.     
+~
+D SOUTH 1680 0 0
+~
+You see the entrance to a library.     
+~
+D WEST 1675 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1677
+A crystalline tower~
+The ground beneath your feet and the structure of the entire tower, looks to     
+be made from solid ice.  The walls look to be made from blocks of the frosty     
+stuff, yet they show no signs of melting despite the relative warmth of the     
+air in here.  As you walk through the tower, you notice that the floor is not     
+slippery as one might expect, but you are able to keep your steps firmly on     
+the ground without a problem.  A few windows look out upon the surrounding sky     
+and clouds, reminding you just how far up you really are.  You see more of the     
+tower to the west, and a set of stairs to the north.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1674 0 0
+~
+You see a set of stairs.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 1676 0 0
+~
+You see more of the tower.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 0 0 0
+~
+The floor seems to be made of a solid piece of crystal.     
+~
+#1678
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  You see the massive library to the east     
+and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see books everywhere.     
+~
+D EAST 1679 0 0
+~
+You see more of the library.     
+~
+D SOUTH 1683 0 0
+~
+You see more of the library.     
+~
+D WEST 0 0 0
+~
+You see books everywhere.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1679
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  You see more of the massive library to     
+the east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see books everywhere.     
+~
+D EAST 1680 0 0
+~
+You see more of the library.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 1678 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1680
+Entrance to a grand library~
+A large archway made of marble leads into an expansive library.  Large oaken     
+doors are swung inward, their surface smooth with the exception of the vast     
+decorative carvings made into them.  Books fill your vision from as far as you     
+can see, and air smelling strongly of old papers and book bindings fills your     
+nostrils.  A strong urge to grab a book and consume as much knowledge as you     
+can overwhelms you, and it takes a moment to bring yourself back to reality.     
+A fine, plush rug lays before the door, soothing the soles of your feet. You     
+see the library branch off to the east and west, and a tower to the north.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1676 0 0
+~
+You see a crystalline tower.     
+~
+D EAST 1681 0 0
+~
+You see more of the library.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 1679 0 0
+~
+You see more of the library     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+#1681
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  A large door is set in the south wall,     
+and the massive library continues to the east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see books everywhere.     
+~
+D EAST 1682 0 0
+~
+You see more of the library.     
+~
+D SOUTH 1685 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D WEST 1680 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1682
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library spreads out to the     
+south and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see books everywhere.     
+~
+D EAST 0 0 0
+~
+You see books everywhere.     
+~
+D SOUTH 1686 0 0
+~
+You see more of the library.     
+~
+D WEST 1681 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1683
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library spreads out to the     
+north and south, and a door is set in the eastern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1678 0 0
+~
+You see more of the library.     
+~
+D EAST 1684 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D SOUTH 1687 0 0
+~
+You see more of the library.     
+~
+D WEST 0 0 0
+~
+You see books everywhere.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1684
+A small workroom~
+The walls of this room seem to be made of some stony looking material, gray     
+and brown in color.  The texture of these stones are smooth in some places,     
+yet rigid in others, and bringing your hand closer, you can feel the heat     
+emitting off of them, and bouncing around the room.  As like all the other     
+parts of the strange building, the room is lit with a multitude of glowing     
+spheres of light, varying in color.  The door leading back to the library is     
+set in the western wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D EAST 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D SOUTH 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D WEST 1683 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D UP 0 0 0
+~
+You see the stony material of the workroom ceiling.     
+~
+D DOWN 0 0 0
+~
+You see the stony material of the workroom floor.     
+~
+#1685
+A small workroom~
+The walls of this room seem to be made of some stony looking material, gray     
+and brown in color.  The texture of these stones are smooth in some places,     
+yet rigid in others, and bringing your hand closer, you can feel the heat     
+emitting off of them, and bouncing around the room.  As like all the other     
+parts of the strange building, the room is lit with a multitude of glowing     
+spheres of light, varying in color.  A door leading back out to the library     
+is set in the northern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1681 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D EAST 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D SOUTH 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D WEST 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D UP 0 0 0
+~
+You see the stony material of the workroom ceiling.     
+~
+D DOWN 0 0 0
+~
+You see the stony material of the workroom floor.     
+~
+#1686
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library spreads out to the     
+north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1682 0 0
+~
+You see more of the library.     
+~
+D EAST 0 0 0
+~
+You see books everywhere.     
+~
+D SOUTH 1691 0 0
+~
+You see more of the library.     
+~
+D WEST 0 0 0
+~
+You see books everywhere.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1687
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library spreads out to the     
+north and south.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1683 0 0
+~
+You see more of the library.     
+~
+D EAST 0 0 0
+~
+You see books everywhere.     
+~
+D SOUTH 1692 0 0
+~
+You see more of the library.     
+~
+D WEST 0 0 0
+~
+You see books everywhere.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1688
+A small workroom~
+The walls of this room seem to be made of some stony looking material, gray     
+and brown in color.  The texture of these stones are smooth in some places,     
+yet rigid in others, and bringing your hand closer, you can feel the heat     
+emitting off of them, and bouncing around the room.  As like all the other     
+parts of the strange building, the room is lit with a multitude of glowing     
+spheres of light, varying in color.  A door leading back to the library is     
+set in the south wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D EAST 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D SOUTH 1693 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D WEST 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D UP 0 0 0
+~
+You see the stony material of the workroom ceiling.     
+~
+D DOWN 0 0 0
+~
+You see the stony material of the workroom floor.     
+~
+#1689
+A small circular room~
+Here you are within the center of the very structure, the giant pillar caught     
+your eye as you explored the palace.  The walls that surround you are extremely     
+smooth to the touch, made of fine white marble.  Warmth seems to emit from the     
+very walls in invisible waves, wrapping around you, rendering you silent.  A     
+throb of energy fills the room, making the walls look alive. The noise grows     
+louder and louder, echoing into your sensitized ears.  The throbbing suddenly     
+lessens in intensity, leaving you with a sense of awe.  You think you see a     
+tiny spiralling stairway tucked away to one side.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D EAST 1690 ABCDEHI 1601
+ancient door~
+You think you see the outline of a door.     
+~
+D SOUTH 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D WEST 0 0 0
+~
+You see the smooth curves of white marble.     
+~
+D UP 0 0 0
+~
+A cloud of magic keeps you from seeing anything.     
+~
+D DOWN 1660 0 0
+~
+A cloud of magic keeps you from seeing anything.     
+~
+#1690
+A small workroom~
+The walls of this room seem to be made of some stony looking material, gray     
+and brown in color.  The texture of these stones are smooth in some places,     
+yet rigid in others, and bringing your hand closer, you can feel the heat     
+emitting off of them, and bouncing around the room.  As like all the other     
+parts of the strange building, the room is lit with a multitude of glowing     
+spheres of light, varying in color.  A door leading back to the library is     
+set in the eastern wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D EAST 1691 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D SOUTH 0 0 0
+~
+You see the stony material of the workroom walls.     
+~
+D WEST 1689 ABCDEHI 1601
+ancient door~
+You think you see the outline of a door.     
+~
+D UP 0 0 0
+~
+You see the stony material of the workroom ceiling.     
+~
+D DOWN 0 0 0
+~
+You see the stony material of the workroom floor.     
+~
+#1691
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library spreads out to the     
+north and south, and a door is set in the western wall.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1686 0 0
+~
+You see more of the library.     
+~
+D EAST 0 0 0
+~
+You see books everywhere.     
+~
+D SOUTH 1696 0 0
+~
+You see more of the library.     
+~
+D WEST 1690 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1692
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library sprawls out to the     
+north and east.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1687 0 0
+~
+You see more of the library.     
+~
+D EAST 1693 0 0
+~
+You see more of the library.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 0 0 0
+~
+You see books everywhere.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1693
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library sprawls out to the     
+east and west, and a door is set in the north wall.     
+~
+inside
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1688 ABH 0
+stone door~
+A heavy stone door is set in the wall here.     
+~
+D EAST 1694 0 0
+~
+You see more of the library.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 1692 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1694
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library sprawls out to the     
+east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see books everywhere.     
+~
+D EAST 1695 0 0
+~
+You see more of the library.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 1693 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1695
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library continues to the     
+east and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You see books everywhere.     
+~
+D EAST 1696 0 0
+~
+You see more of the library.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 1694 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1696
+The library~
+Glowing spheres of multicolored light dance high within the towering painted     
+ceilings of this vast library.  Books cover the walls from floor to ceiling,     
+some newly printed out, some fragile and tattered.  Rugs lie scattered about     
+the library, worn and threadbare from the constant patter of feet.  Tables,     
+desks and chairs are positioned about the room, covered in scrolls, pens and     
+other writing tools.  It would seem that this place is not only for research,     
+but for restoration as well, as you see copied sheets of paper lying next to     
+many of the older books on the tables.  The giant pillar stands quiet and     
+looming in the center of the library.  The massive library continues to the     
+north and west.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 1691 0 0
+~
+You see more of the library.     
+~
+D EAST 0 0 0
+~
+You see books everywhere.     
+~
+D SOUTH 0 0 0
+~
+You see books everywhere.     
+~
+D WEST 1695 0 0
+~
+You see more of the library.     
+~
+D UP 0 0 0
+~
+You see the towering ceiling of the library, covered with paintings.     
+~
+D DOWN 0 0 0
+~
+The floor is covered with threadbare rugs.     
+~
+E painted ceilings ceiling paintings~
+A mural of action, grace, pain and joy overwhelm the ceiling in its entirety.     
+Mage fights mage in a mess of blood and blasting flame, corpses of previous     
+victims strewn at their feet, surrounding any chance of flight by physical     
+means.  Elsewhere a woman kneels over in pain, dust falling from her hands,     
+and tears from her eyes.  A large beast beside her, lion headed and winged,     
+nuzzles her shoulder in a comforting manner.  In another painting up on the     
+ceiling, a grey furred grimalkin dressed in livery holds a flag proudly in the     
+air, and a purple robed man, dark of hair and bearded, opens his mouth in a     
+wide grin.     
+~
+E pillar~
+The surface is smooth like marble, but when you put your hand to it, you know     
+it isn't something natural.  It is cold to the touch, so much that it feels as     
+though it is burning.  Some sort of unseen force seems to throb from this huge     
+fixture, almost as if it breathes, lives.  The lights the room seem to throb     
+with it, and you wonder at what strange power resides in this place.     
+~
+#1697
+A spiraling stairway of clouds~
+The cloudlike substance beneath your feet seems to solidify with every step     
+you make upon this stairway.  The stairs themselves are rather narrow, as if     
+made for those with much smaller feet than the average human.  The stairway     
+itself is tight wound, not allowing for much movement other than following     
+the stairs up or down.     
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 1698 0 0
+~
+You see a narrow stairway.     
+~
+D DOWN 1674 0 0
+~
+You see a narrow stairway.     
+~
+#1698
+The ivory tower observatory~
+The top of this spired tower gives a splendid view over all of Shalar.  Clouds     
+move slowly through the sky, and on a given night, the stars shine with clarity     
+and brilliance.  A small desk used for note taking is here, as well as a cot.     
+A few smaller spheres glow dimly near some torn papers tacked to the wall.     
+~
+inside
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D EAST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D SOUTH 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D WEST 0 0 0
+~
+Blocks of magically cut crystal fit precisely to form a wall.     
+~
+D UP 0 0 0
+~
+The ceiling seems to be made of a solid piece of crystal.     
+~
+D DOWN 1697 0 0
+~
+You see a narrow stairway.     
+~
+E papers paper~
+The vellum looks tattered and worn, and you can barely make out the word     
+'valnian' scrawled in faded black ink.     
+~
+E desk~
+A few papers flutter lightly in the breeze on the desk, held down by a small     
+stone weight.     
+~
+#0
+
+
+
+#RESETS
+MOB 1611 TO 1600 GLIMIT 1 LLIMIT 1
+GIVE 1600
+EQUIP 1636 ABOUT
+EQUIP 1637 WIELD
+MOB 1615 TO 1600 GLIMIT 1 LLIMIT 1
+GIVE 1600
+EQUIP 1636 ABOUT
+EQUIP 1646 WIELD
+DOOR 1600 north LOCKED
+MOB 1618 TO 1601 GLIMIT 1 LLIMIT 1
+DOOR 1601 south LOCKED
+DOOR 1609 east LOCKED
+DOOR 1610 west LOCKED
+DOOR 1616 north CLOSED
+MOB 1600 TO 1617 GLIMIT 1 LLIMIT 1
+EQUIP 1611 ABOUT
+EQUIP 1612 FEET
+MOB 1614 TO 1622 GLIMIT 1 LLIMIT 1
+EQUIP 1642 WIELD
+EQUIP 1643 LEGS
+EQUIP 1644 BODY
+EQUIP 1645 HEAD
+MOB 1601 TO 1630 GLIMIT 1 LLIMIT 1
+EQUIP 1614 HOLD
+EQUIP 1611 ABOUT
+EQUIP 1612 FEET
+OBJECT 1649 TO 1631
+PUT 1647 IN 1649 COUNT 1
+PUT 1648 IN 1649 COUNT 1
+OBJECT 1656 TO 1631
+PUT 1650 IN 1656 COUNT 1
+MOB 1605 TO 1648 GLIMIT 1 LLIMIT 1
+EQUIP 1617 LEGS
+EQUIP 1618 FEET
+EQUIP 1619 HOLD
+EQUIP 1620 BODY
+OBJECT 1651 TO 1648
+PUT 1608 IN 1651 COUNT 1
+MOB 1608 TO 1651 GLIMIT 1 LLIMIT 1
+EQUIP 1627 ABOUT
+EQUIP 1628 WAIST
+EQUIP 1629 HOLD
+OBJECT 1652 TO 1652
+PUT 1608 IN 1652 COUNT 1
+DOOR 1654 east CLOSED
+DOOR 1654 south CLOSED
+DOOR 1655 east CLOSED
+DOOR 1655 west CLOSED
+DOOR 1656 west CLOSED
+DOOR 1657 south CLOSED
+DOOR 1658 south CLOSED
+DOOR 1659 north CLOSED
+DOOR 1661 north CLOSED
+DOOR 1661 south CLOSED
+DOOR 1662 north CLOSED
+DOOR 1663 east CLOSED
+MOB 1602 TO 1664 GLIMIT 1 LLIMIT 1
+EQUIP 1611 ABOUT
+EQUIP 1613 FEET
+DOOR 1664 east CLOSED
+DOOR 1664 south CLOSED
+DOOR 1664 west CLOSED
+DOOR 1665 west CLOSED
+DOOR 1666 north CLOSED
+MOB 1607 TO 1667 GLIMIT 1 LLIMIT 1
+EQUIP 1625 FEET
+EQUIP 1626 ABOUT
+OBJECT 1653 TO 1667
+PUT 1608 IN 1653 COUNT 1
+MOB 1606 TO 1671 GLIMIT 1 LLIMIT 1
+EQUIP 1621 NECKONE
+EQUIP 1622 BODY
+EQUIP 1623 FEET
+EQUIP 1624 HOLD
+OBJECT 1654 TO 1671
+PUT 1608 IN 1654 COUNT 1
+MOB 1613 TO 1675 GLIMIT 1 LLIMIT 1
+GIVE 1655
+EQUIP 1603 ABOUT
+EQUIP 1639 RFINGER
+EQUIP 1640 LFINGER
+EQUIP 1641 WIELD
+DOOR 1681 south CLOSED
+MOB 1612 TO 1682 GLIMIT 1 LLIMIT 1
+GIVE 1601
+EQUIP 1604 WRISTONE
+EQUIP 1604 WRISTTWO
+EQUIP 1605 NECKONE
+EQUIP 1606 NECKTWO
+EQUIP 1638 WIELD
+MOB 1604 TO 1682 GLIMIT 1 LLIMIT 1
+EQUIP 1602 NECKONE
+EQUIP 1611 ABOUT
+DOOR 1683 east CLOSED
+MOB 1609 TO 1684 GLIMIT 1 LLIMIT 1
+EQUIP 1630 BODY
+EQUIP 1631 WAIST
+EQUIP 1632 FEET
+DOOR 1684 west CLOSED
+DOOR 1685 north CLOSED
+DOOR 1688 south CLOSED
+DOOR 1689 east LOCKED
+MOB 1610 TO 1690 GLIMIT 1 LLIMIT 1
+EQUIP 1633 ABOUT
+EQUIP 1634 LEGS
+EQUIP 1635 WAIST
+DOOR 1690 east CLOSED
+DOOR 1690 west LOCKED
+DOOR 1691 west CLOSED
+DOOR 1693 north CLOSED
+MOB 1603 TO 1696 GLIMIT 1 LLIMIT 1
+EQUIP 1611 ABOUT
+EQUIP 1612 FEET
+EQUIP 1615 HEAD
+EQUIP 1616 HOLD
+S
+
+#IMPROGS
+M 1618 pulse_prog pulse_prog_tahlu_mist_ward
+I 1606 fight_prog fight_prog_amber_medallion
+I 1650 speech_prog speech_prog_ice_dragon_statue
+END
+#$

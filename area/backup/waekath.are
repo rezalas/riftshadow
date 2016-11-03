@@ -1,0 +1,39 @@
+#AREA
+waekath.are~
+The Shrine of Waekath~
+Waekath~
+1 51
+155 179
+unopened
+none
+0
+1
+Waekath~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#155
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

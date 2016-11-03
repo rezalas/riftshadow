@@ -1,0 +1,2182 @@
+#AREA
+valley.are~
+Valley of the Elves~
+Hatchet~
+5 20
+7800 7899
+unopened
+temperate
+0
+1
+Hatchet~
+
+#MOBS
+#7800
+dog cooshee~
+a cooshee~
+A rather large dog is here, wandering the valley.
+~
+A beast is the size of the largest common dog.  It has a greenish coat with
+brown spots.  Its shape, along with its colors, make this cooshee almost
+undetectable as it moves.
+~
+0 0 100 dog~
+5 2d6+60 1d6+1 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF TRIP
+OFF ASSIST_RACE
+AFF SNEAK
+#7801
+elf valley~
+a valley elf~
+A valley elf wanders here, cautious of your intrusion.
+~
+This elf is almost as tall as you are, but much slimmer and agile.  You see
+hatred in his eyes, and you try to avoid his stare.  His tense body looks ready
+to spring upon you, like a mountain lion stalking its prey.  He sees you
+noticing him, and quietly disappears.
+~
+0 0 100 elf~
+8 2d7+96 1d7+2 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+RES DROWNING
+#7802
+elf valley~
+a valley elf~
+A female valley elf wanders here, skirting between the tall grasses.
+~
+This elf is almost as tall as you are, but much slimmer and more agile.
+She glares at you, then quickly disappears before you see more of her.
+~
+0 0 100 elf~
+8 2d7+96 1d7+2 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+RES DROWNING
+#7803
+elf sentry valley~
+a valley elf sentry~
+A valley elf sentry stands here, then noticing you, attacks quickly!
+~
+This elf is almost as tall as you are, but much slimmer and more agile.
+He glares at your intrusion and attacks with menace.
+~
+0 0 100 elf~
+7 2d6+85 1d8+1 0 100 slice
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+RES DROWNING
+#7804
+elf sentry valley~
+a valley elf sentry~
+A valley elf sentry stands here, then noticing you, attacks quickly!
+~
+This elf is almost as tall as you are, but much slimmer and more agile.
+She glares at your intrusion and attacks with menace.
+~
+0 0 100 elf~
+7 2d6+85 1d8+1 0 100 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+RES DROWNING
+#7805
+elf scout valley~
+a valley elf scout~
+A valley elf scout wanders the valley, searching for intruders like you!
+~
+The elf notices your intrusion and attacks with determination.
+~
+0 0 100 elf~
+6 2d7+71 1d7+1 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+RES DROWNING
+#7806
+elf valley~
+a valley elf~
+A valley elf is here, doing her duties.
+~
+She is currently doing some menial chores, and ignores your intrusion except
+when you are in her way.
+~
+0 0 100 elf~
+6 2d7+71 1d7+1 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+RES DROWNING
+#7807
+elf elder valley~
+a valley elf elder~
+A valley elf elder is here, studying.  He notices you.
+A valley elf elder shouts 'You have intruded wrongly.  Be prepared to die!'
+~
+This elf looks quite old, probably twenty or more times your age.  He looks
+quite potent, though.
+~
+0 0 100 elf~
+15 3d9+208 2d5+3 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT CLERIC
+OFF DISARM
+OFF KICK
+OFF PARRY
+OFF ASSIST_RACE
+AFF SANCTUARY
+AFF PROTECTION
+AFF SLEEP
+RES DROWNING
+#7808
+elf elder valley~
+a valley elf elder~
+A valley elf elder is here, studying.  She notices you.
+A valley elf elder says 'Your arrogance will be your end, human.'
+~
+This elf looks quite old, probably twenty or more times your age.  She looks
+quite potent, though.
+~
+0 0 100 elf~
+15 2d10+190 1d10+3 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT MAGE
+OFF DODGE
+OFF ASSIST_RACE
+AFF PROTECTION
+AFF SLEEP
+RES DROWNING
+#7809
+pyrohydra pyro hydra~
+the pyrohydra~
+A big beast with many heads, each breathing fire, stares at you with malice.
+~
+This big beast looks like a small red dragon, but has many more heads than a
+regular dragon, too.  It doesn't look happy.
+~
+0 0 100 human~
+20 3d9+333 2d8+5 0 100 flbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_VNUM
+#7810
+hermit man old~
+an old hermit~
+An old hermit sits here, smoking a pipe.
+~
+He looks old and feeble.
+~
+0 0 100 human~
+3 2d6+35 1d6+0 0 100 smash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_VNUM
+#7811
+talemon wizard mage~
+Talemon~
+An old mage busies himself with some chemicals.
+~
+Talemon looks harmless, but the fireballs he throws at you don't.
+~
+0 0 100 human~
+25 5d10+500 4d4+6 0 100 flbite
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT MAGE
+OFF DODGE
+OFF ASSIST_VNUM
+#7812
+guardian daemon~
+the guardian daemon~
+A huge guardian daemon is here, watching the treasure.
+~
+This daemon is unhappy with its summoned job, and is willing to take out it's
+anger at you!
+~
+-500 0 100 human~
+25 5d10+550 2d10+7 0 100 frbite
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_VNUM
+#7813
+wolf~
+a wolf~
+A wolf is here, looking for small prey.
+~
+The wolf is covered with brown hair.  It looks at you with fright.
+~
+0 0 100 wolf~
+4 2d7+46 1d5+1 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT WIMPY
+OFF DISARM
+OFF KICK
+OFF DIRT_KICK
+OFF TRIP
+OFF ASSIST_RACE
+#7814
+antelope~
+an antelope~
+An antelope is here, peacefully munching on grass.
+~
+With horns and spots over coarse, brown hair, this beast is the spit and
+image of ... an antelope.
+~
+0 0 100 human~
+6 2d7+71 1d7+1 0 100 pierce
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_VNUM
+#0
+
+
+
+#OBJS
+#7800
+chainmail elven chain mail~
+elven chainmail~
+A shiny metallic shirt is on the floor.~
+armor
+hard leather~
+4 4 4 2 0
+5 3 1080 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#7801
+boots elven~
+elven boots~
+Some soft boots are on the floor.~
+armor
+hard leather~
+3 3 3 0 0
+7 3 390 P
+WEAR TAKE
+WEAR FEET
+APPLY MOVE 5
+LIMIT 0
+TIMER 0
+
+#7802
+longsword elven sword long~
+an elven longsword~
+A shiny blade is on the floor.~
+weapon
+hard leather~
+sword 3 3 slash 0
+7 3 670 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#7803
+cloak brown~
+a brown cloak~
+A pile of brown cloth is on the floor.~
+armor
+hard leather~
+3 3 3 0 0
+7 3 900 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#7804
+key~
+a key~
+A shiny key is on the floor.~
+key
+hard leather~
+7846 0 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#7805
+key~
+a key~
+A shiny key is on the floor.~
+key
+hard leather~
+7880 0 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#7806
+ring gold~
+a gold ring~
+A shiny ring is on the floor.~
+jewelry
+hard leather~
+0 0 0 0 0
+5 1 110 P
+WEAR TAKE
+WEAR FINGER
+ITEM MAGIC
+APPLY MANA 10
+LIMIT 0
+TIMER 0
+
+#7807
+quarterstaff staff two-handed~
+a quarterstaff~
+A quarterstaff is on the floor.~
+weapon
+hard leather~
+staff 4 5 pound F
+21 5 670 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#7808
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'armor' 'invisibility' 'reserved' 'reserved'
+0 1 200 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7809
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'reserved' 'reserved' 'reserved' 'reserved'
+8 1 580 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7810
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'detect hidden' 'detect magic' 'reserved' 'reserved'
+4 1 290 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7811
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+50 'dispel magic' 'dispel magic' 'dispel magic' 'reserved'
+6 1 1380 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7812
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'refresh' 'reserved' 'reserved' 'reserved'
+2 1 240 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7813
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'sleep' 'reserved' 'reserved' 'reserved'
+1 1 250 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7814
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'bless' 'reserved' 'reserved' 'reserved'
+1 1 220 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7815
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+10 'cure critical' 'reserved' 'reserved' 'reserved'
+5 1 330 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7816
+potion~
+a potion~
+A potion is on the floor.~
+potion
+hard leather~
+14 'reserved' 'reserved' 'reserved' 'reserved'
+6 1 420 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7817
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+10 'cure critical' 'reserved' 'reserved' 'reserved'
+5 1 660 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7818
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+16 'reserved' 'reserved' 'reserved' 'reserved'
+8 1 1090 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7819
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+10 'detect evil' 'reserved' 'reserved' 'reserved'
+0 1 400 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7820
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+10 'create water' 'reserved' 'reserved' 'reserved'
+0 1 400 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7821
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+10 'magic missile' 'reserved' 'reserved' 'reserved'
+0 1 400 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7822
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+10 'reserved' 'reserved' 'reserved' 'reserved'
+0 1 400 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7823
+scroll~
+a scroll~
+A scroll is on the floor.~
+scroll
+hard leather~
+10 'heal' 'reserved' 'reserved' 'reserved'
+11 1 1360 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#7824
+rod light~
+the Rod of Neutrality~
+A dull iron shaft is on the floor.~
+light
+hard leather~
+0 0 -1 0 0
+20 1 1150 P
+WEAR TAKE
+ITEM MAGIC
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#7825
+quarterstaff staff two-handed~
+a quarterstaff~
+A quarterstaff is on the floor.~
+weapon
+hard leather~
+staff 3 5 pound F
+14 5 310 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#7800
+A Path from the Plains~
+You are on a path away from the Plains of Ofcol.  The path doesn't look well
+tread, but it is relatively well kept.  To the south are the Plains of Ofcol,
+while this path leads north.
+~
+field
+D NORTH 7801 0 0
+~
+The path continues north.
+~
+#7801
+Along the Path~
+You are on the path away from the Plains of Ofcol.  The main path leads north
+to an overlook and south back toward the Plains of Ofcol.  Western and eastern
+side paths can be seen, probably deer trails by the width of them.
+~
+field
+D NORTH 7804 0 0
+~
+You see the overlook.
+~
+D EAST 7803 0 0
+~
+You see the small trail.
+~
+D SOUTH 7800 0 0
+~
+You see the path back toward Ofcol.
+~
+D WEST 7802 0 0
+~
+You see the small trail.
+~
+#7802
+A Small Trail~
+This small deer trail leads north and east.
+~
+field
+D NORTH 7867 0 0
+~
+The trail continues north.
+~
+D EAST 7801 0 0
+~
+The main path is to the east.
+~
+#7803
+A Small Trail~
+This small deer trail leads north and west.
+~
+field
+D NORTH 7849 0 0
+~
+The trail continues north.
+~
+D WEST 7801 0 0
+~
+The main path is to the west.
+~
+#7804
+The Overlook~
+You are above a large valley.  Below you, you see humanoid forms wandering
+around the valley.  Rich green grass covers the valley, with some small trees
+dotting the landscape.  To the south is the trail back toward Ofcol.
+~
+field
+D NORTH 0 0 0
+~
+~
+D SOUTH 7801 0 0
+~
+You see the path back toward Ofcol.
+~
+D DOWN 7805 0 0
+~
+You see the entrance to the valley.
+~
+#7805
+The Entrance to the Valley of the Elves~
+You are at the entrance to the Valley of the Elves.  Elves stare at your
+intrusion, but most are too busy to bother with you.  The valley spreads to
+the north, while enlarging toward the east and west.
+~
+field
+D NORTH 7810 0 0
+~
+The valley continues north.
+~
+D EAST 7807 0 0
+~
+The valley continues east.
+~
+D WEST 7806 0 0
+~
+The valley continues west.
+~
+D UP 7804 0 0
+~
+The overlook is above you.
+~
+#7806
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues north and east.
+~
+field
+D NORTH 7809 0 0
+~
+The valley continues north.
+~
+D EAST 7805 0 0
+~
+The entrance to the valley is to the east.
+~
+#7807
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues north and west.
+~
+field
+D NORTH 7811 0 0
+~
+The valley continues north.
+~
+D WEST 7805 0 0
+~
+The entrance to the valley is to the west.
+~
+#7808
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues north and east.
+~
+field
+D NORTH 7813 0 0
+~
+The valley continues north.
+~
+D EAST 7809 0 0
+~
+The valley continues east.
+~
+#7809
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7814 0 0
+~
+The valley continues north.
+~
+D EAST 7810 0 0
+~
+The valley continues east.
+~
+D SOUTH 7806 0 0
+~
+The valley continues south.
+~
+D WEST 7808 0 0
+~
+The valley continues west.
+~
+#7810
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+The entrance to the valley is towards the south.
+~
+field
+D NORTH 7815 0 0
+~
+The valley continues north.
+~
+D EAST 7811 0 0
+~
+The valley continues east.
+~
+D SOUTH 7805 0 0
+~
+You see the entrance to the valley.
+~
+D WEST 7809 0 0
+~
+The valley continues west.
+~
+#7811
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7816 0 0
+~
+The valley continues north.
+~
+D EAST 7812 0 0
+~
+The valley continues east.
+~
+D SOUTH 7807 0 0
+~
+The valley continues south.
+~
+D WEST 7810 0 0
+~
+The valley continues west.
+~
+#7812
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues north and west.
+~
+field
+D NORTH 7817 0 0
+~
+The valley continues north.
+~
+D WEST 7811 0 0
+~
+The valley continues west.
+~
+#7813
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  A steep trail leads up toward
+the deer trail circling the valley.  The valley continues north, south, and
+east.
+~
+field
+D NORTH 7818 0 0
+~
+The valley continues north.
+~
+D EAST 7814 0 0
+~
+The valley continues east.
+~
+D SOUTH 7808 0 0
+~
+The valley continues south.
+~
+#7814
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7819 0 0
+~
+The valley continues north.
+~
+D EAST 7815 0 0
+~
+The valley continues east.
+~
+D SOUTH 7809 0 0
+~
+The valley continues south.
+~
+D WEST 7813 0 0
+~
+The valley continues west.
+~
+#7815
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7820 0 0
+~
+The valley continues north.
+~
+D EAST 7816 0 0
+~
+The valley continues east.
+~
+D SOUTH 7810 0 0
+~
+The valley continues south.
+~
+D WEST 7814 0 0
+~
+The valley continues west.
+~
+#7816
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7821 0 0
+~
+The valley continues north.
+~
+D EAST 7817 0 0
+~
+The valley continues east.
+~
+D SOUTH 7811 0 0
+~
+The valley continues south.
+~
+D WEST 7815 0 0
+~
+The valley continues west.
+~
+#7817
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  A steep trail leads up toward
+the deer trail circling the valley.  The valley continues north, south, and
+west.
+~
+field
+D NORTH 7822 0 0
+~
+The valley continues north.
+~
+D SOUTH 7812 0 0
+~
+The valley continues south.
+~
+D WEST 7816 0 0
+~
+The valley continues west.
+~
+D UP 7853 0 0
+~
+The steep trail leads up.
+~
+#7818
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a
+small trail circling the entire valley.  The valley continues south and east.
+~
+field
+D EAST 7819 0 0
+~
+The valley continues east.
+~
+D SOUTH 7813 0 0
+~
+The valley continues south.
+~
+#7819
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7823 0 0
+~
+The valley continues north.
+~
+D EAST 7820 0 0
+~
+The valley continues east.
+~
+D SOUTH 7814 0 0
+~
+The valley continues south.
+~
+D WEST 7818 0 0
+~
+The valley continues west.
+~
+#7820
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7824 0 0
+~
+The valley continues north.
+~
+D EAST 7821 0 0
+~
+The valley continues east.
+~
+D SOUTH 7815 0 0
+~
+The valley continues south.
+~
+D WEST 7819 0 0
+~
+The valley continues west.
+~
+#7821
+The Valley of the Elves~
+You are in the Valley of the Elves.  The valley continues in all directions.
+~
+field
+D NORTH 7825 0 0
+~
+The valley continues north.
+~
+D EAST 7822 0 0
+~
+The valley continues east.
+~
+D SOUTH 7816 0 0
+~
+The valley continues south.
+~
+D WEST 7820 0 0
+~
+The valley continues west.
+~
+#7822
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues south and west.
+~
+field
+D SOUTH 7817 0 0
+~
+The valley continues south.
+~
+D WEST 7821 0 0
+~
+The valley continues west.
+~
+#7823
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues south and east.
+~
+field
+D EAST 7824 0 0
+~
+The valley continues east.
+~
+D SOUTH 7819 0 0
+~
+The valley continues south
+~
+#7824
+The Edge of the Valley~
+You are in the Valley of the Elves.  The valley continues in all directions.
+To the north, a small, narrow trail leads away from the valley.
+~
+field
+D NORTH 7826 0 0
+~
+A small trail leads away from the valley.
+~
+D EAST 7825 0 0
+~
+The valley continues east.
+~
+D SOUTH 7820 0 0
+~
+The valley continues south.
+~
+D WEST 7823 0 0
+~
+The valley continues west.
+~
+#7825
+The Edge of the Valley~
+You are at the edge of the Valley of the Elves.  High above you, you see a small
+trail circling the entire valley.  The valley continues south and west.
+~
+field
+D SOUTH 7821 0 0
+~
+The valley continues south.
+~
+D WEST 7824 0 0
+~
+The valley continues west.
+~
+#7826
+A Trail Leading from the Valley~
+You are on a narrow trail leading away from the Valley of the Elves.  This
+trail leads north and south.  A rope ladder leads up to a rope bridge.
+~
+field
+D NORTH 7827 0 0
+~
+The trail continues north.
+~
+D SOUTH 7824 0 0
+~
+The trail leads back to the valley.
+~
+D UP 7858 0 0
+~
+You see the rope bridge above you.
+~
+#7827
+Along the Trail~
+You are on the trail away from the Valley of the Elves.  The hills around you
+keep this trail narrow.  The trail continues east, south, and west.
+~
+field
+D EAST 7828 0 0
+~
+The trail continues east.
+~
+D SOUTH 7826 0 0
+~
+The trail continues south back toward the valley.
+~
+D WEST 7868 0 0
+~
+The trail continues west.
+~
+#7828
+A Bend in the Trail~
+You are on the trail away from the Valley of the Elves.  The hills around you
+keep this trail narrow.  The trail continues north and back west.
+~
+field
+D NORTH 7829 0 0
+~
+You see a small valley north.
+~
+D WEST 7827 0 0
+~
+The trail goes back to the west.
+~
+#7829
+A Smaller Valley~
+You are in another valley within these hills. To the north, you can see a
+building, and to the south you see the trail away from this valley.  The
+west and east paths surround this building.
+~
+field
+D NORTH 7834 AB -1
+door~
+You see the building.
+~
+D EAST 7831 0 0
+~
+You see the trail around the building.
+~
+D SOUTH 7828 0 0
+~
+You see the trail leading away from this valley.
+~
+D WEST 7830 0 0
+~
+You see the trail around the building.
+~
+#7830
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads north and
+east.  To the north-east is a building.
+~
+field
+D NORTH 7832 0 0
+~
+You see the trail.
+~
+D EAST 7829 0 0
+~
+You see the trail.
+~
+#7831
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads west and
+east.  To the north is a building.
+~
+field
+D EAST 7833 0 0
+~
+You see the trail.
+~
+D WEST 7829 0 0
+~
+You see the trail.
+~
+#7832
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads north and
+south.  To the east is a building.
+~
+field
+D NORTH 7837 0 0
+~
+You see the trail.
+~
+D SOUTH 7830 0 0
+~
+You see the trail.
+~
+#7833
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads north and
+west.  To the north-west is a building.
+~
+field
+D NORTH 7836 0 0
+~
+You see the trail.
+~
+D WEST 7831 0 0
+~
+You see the trail.
+~
+#7834
+The Elf Home~
+You are in the home of the valley elves.  The building continues to the north
+and the east, and the exit is to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 7838 0 0
+~
+The building continues to the north.
+~
+D EAST 7835 0 0
+~
+The building continues to the east.
+~
+D SOUTH 7829 AB -1
+door~
+The exit is to the south.
+~
+#7835
+The Kitchen~
+You are in a community kitchen for this valley elven home.  Pots and pans line
+the walls, along with shelves filled with many foodstuffs.  A big oven is to one
+side, and you can smell elfcakes being baked.
+There is a doorway to the north and one to the west.
+~
+inside
+ROOM INDOORS
+D NORTH 7839 0 0
+~
+The building continues to the north.
+~
+D WEST 7834 0 0
+~
+The building continues to the west.
+~
+#7836
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads north and
+south.  To the west is a building.
+~
+field
+D NORTH 7840 0 0
+~
+You see the trail.
+~
+D SOUTH 7833 0 0
+~
+You see the trail.
+~
+#7837
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads north and
+south.  To the east is a building.
+~
+field
+D NORTH 7841 0 0
+~
+You see the trail.
+~
+D SOUTH 7832 0 0
+~
+You see the trail.
+~
+#7838
+The Living Room~
+You are in the living room of the elven home.  Mats cover the floor, and a
+on a table is a bowl full of fruits.  Through the window you can see the
+valley, with its wild flowers and tall, green grasses.
+~
+inside
+ROOM INDOORS
+D EAST 7839 0 0
+~
+The building continues to the east.
+~
+D SOUTH 7834 0 0
+~
+The entrance is to the south.
+~
+#7839
+The Storage Room~
+You are in the storage room of the elven home.  Sacks of flour cover one side,
+and cleaning accessories cover the other side.  You find nothing of use here.
+A staircase leads up.
+~
+inside
+ROOM INDOORS
+D SOUTH 7835 0 0
+~
+The building continues to the south.
+~
+D WEST 7838 0 0
+~
+The building continues to the west.
+~
+D UP 7848 0 0
+~
+You see the second floor.
+~
+#7840
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads north and
+south.  To the west is a building.
+~
+field
+D NORTH 7844 0 0
+~
+You see the trail.
+~
+D SOUTH 7836 0 0
+~
+You see the trail.
+~
+#7841
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads south and
+east.  To the south-east is a building.
+~
+field
+D EAST 7842 0 0
+~
+You see the trail.
+~
+D SOUTH 7837 0 0
+~
+You see the trail.
+~
+#7842
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads west and
+east.  To the south is a building.
+~
+field
+D EAST 7843 0 0
+~
+You see the trail.
+~
+D WEST 7841 0 0
+~
+You see the trail.
+~
+#7843
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads east and
+west.  To the south is a building.
+~
+field
+D EAST 7844 0 0
+~
+You see the trail.
+~
+D WEST 7842 0 0
+~
+You see the trail.
+~
+#7844
+A Trail in the Valley~
+You are on the trail in the Valley of the Elves.  This trail leads south and
+west.  To the south-west is a building.
+~
+field
+D SOUTH 7840 0 0
+~
+You see the trail.
+~
+D WEST 7843 0 0
+~
+You see the trail.
+~
+#7845
+The Elders' Room~
+You are in the room of the valley elf elders.  Books written in strange
+languages line the numerous shelves, and scrolls cover a table.  There is a
+smooth spheric object in the center of the room.
+~
+inside
+ROOM INDOORS
+D NORTH 7847 AB -1
+door~
+You see another room.
+~
+D EAST 7846 ABC 7804
+door~
+You see another room.
+~
+#7846
+The Storage Room~
+You are in a storage room.  Many useless (to you) items fill this room.
+~
+inside
+ROOM INDOORS
+D NORTH 7848 ABC 7804
+door~
+You see another room.
+~
+D WEST 7845 ABC 7804
+door~
+You see another room.
+~
+#7847
+The Sleeping Quarters~
+You are in the sleeping quarters of the valley elves.  Cots line the floor,
+with two windows showing a view of the valley.  Books in strange languages
+line the shelves, but nothing of interest is here.
+~
+inside
+ROOM INDOORS
+D EAST 7848 AB -1
+door~
+You see another room.
+~
+D SOUTH 7845 AB -1
+door~
+You see another room.
+~
+#7848
+Study~
+You are in the study room of the valley elves.  Comfortable mats are on the
+floor, and musical instruments are neatly stacked on shelves.  Books in
+strange languages line some other elves.  A stairway leads down to the
+first floor.
+~
+inside
+ROOM INDOORS
+D SOUTH 7846 ABC 7804
+door~
+You see another room.
+~
+D WEST 7847 AB -1
+door~
+You see another room.
+~
+D DOWN 7839 0 0
+~
+You see the first floor.
+~
+#7849
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D EAST 7850 0 0
+~
+~
+D SOUTH 7803 0 0
+~
+~
+#7850
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D NORTH 7851 0 0
+~
+~
+D WEST 7849 0 0
+~
+~
+#7851
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D EAST 7852 0 0
+~
+~
+D SOUTH 7850 0 0
+~
+~
+#7852
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D NORTH 7853 0 0
+~
+~
+D WEST 7851 0 0
+~
+~
+D DOWN 7883 0 0
+~
+The trail down doesn't look safe to travel on at all.
+~
+#7853
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+A safe trail leads down into the valley.
+~
+field
+D NORTH 7854 0 0
+~
+~
+D SOUTH 7852 0 0
+~
+~
+D DOWN 7817 0 0
+~
+The trail down looks safe.
+~
+#7854
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D SOUTH 7853 0 0
+~
+~
+D WEST 7855 0 0
+~
+~
+#7855
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D NORTH 7856 0 0
+~
+~
+D EAST 7854 0 0
+~
+~
+#7856
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D SOUTH 7855 0 0
+~
+~
+D WEST 7857 0 0
+~
+~
+#7857
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D EAST 7856 0 0
+~
+~
+D WEST 7858 0 0
+~
+You see a rope bridge~
+#7858
+On the Rope Bridge~
+You are on the rope bridge.  From here, you can see the whole Valley of the
+Elves.  To the south, you see the main valley.  To the north-east, you see a
+smaller valley with a building in the center of it.  To the north-west, you
+can see a very small valley with a shack in it's center.  A rope ladder
+leads down into a trail.
+~
+field
+D EAST 7857 0 0
+~
+~
+D WEST 7859 0 0
+~
+~
+D DOWN 7826 0 0
+~
+You see the trail.
+~
+#7859
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D EAST 7858 0 0
+~
+You see a rope bridge.
+~
+D WEST 7860 0 0
+~
+~
+#7860
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D EAST 7859 0 0
+~
+~
+D SOUTH 7861 0 0
+~
+~
+#7861
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D NORTH 7860 0 0
+~
+~
+D WEST 7862 0 0
+~
+~
+#7862
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D EAST 7861 0 0
+~
+~
+D SOUTH 7863 0 0
+~
+~
+#7863
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+A safe trail leads down into the valley.
+~
+field
+D NORTH 7862 0 0
+~
+~
+D SOUTH 7864 0 0
+~
+~
+#7864
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D NORTH 7863 0 0
+~
+~
+D EAST 7865 0 0
+~
+~
+#7865
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D SOUTH 7866 0 0
+~
+~
+D WEST 7864 0 0
+~
+~
+#7866
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D NORTH 7865 0 0
+~
+~
+D EAST 7867 0 0
+~
+~
+#7867
+Along a Windy Trail on the Rim of the Valley~
+You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
+you can see the valley, filled with wild flowers and tall, green grasses.
+~
+field
+D SOUTH 7802 0 0
+~
+~
+D WEST 7866 0 0
+~
+~
+#7868
+A Bend in the Trail~
+You are on a bend in the trail leading from the main valley.  The hills around
+you make this trail quite narrow.
+~
+field
+D NORTH 7869 0 0
+~
+The trail continues north.
+~
+D EAST 7827 0 0
+~
+The trail continues east.
+~
+#7869
+A Bend in the Trail~
+You are on a bend in the trail leading from the main valley.  The hills around
+you make this trail quite narrow.  To the west, you can see an even smaller
+valley, with looks like a small shack in the center of it.
+~
+field
+D SOUTH 7868 0 0
+~
+The trail continues south.
+~
+D WEST 7870 0 0
+~
+The entrance to the small valley is to the west.
+~
+#7870
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  The exit from this valley is to the east, and
+the entrance to the shack is to the west.
+~
+field
+D NORTH 7871 0 0
+~
+The valley continues to the north.
+~
+D EAST 7869 0 0
+~
+The exit from this small valley is to the east.
+~
+D SOUTH 7872 0 0
+~
+The valley continues to the south.
+~
+D WEST 7878 AB -1
+door~
+You see the small shack.
+~
+#7871
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the south-west is a small shack.
+~
+field
+D SOUTH 7870 0 0
+~
+The valley continues to the south.
+~
+D WEST 7873 0 0
+~
+The valley continues to the west.
+~
+#7872
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the north-west is a small shack.
+~
+field
+D NORTH 7870 0 0
+~
+The valley continues to the north.
+~
+D WEST 7877 0 0
+~
+The valley continues to the west.
+~
+#7873
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the south is a small shack.
+~
+field
+D EAST 7871 0 0
+~
+The valley continues to the east.
+~
+D WEST 7874 0 0
+~
+The valley continues to the west.
+~
+#7874
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the south-east is a small shack.
+~
+field
+D EAST 7873 0 0
+~
+The valley continues to the east.
+~
+D SOUTH 7875 0 0
+~
+The valley continues to the south.
+~
+D WEST 0 0 0
+~
+You see a trail.
+~
+#7875
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the east is a small shack.
+~
+field
+D NORTH 7874 0 0
+~
+The valley continues to the north.
+~
+D SOUTH 7876 0 0
+~
+The valley continues to the south.
+~
+#7876
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the north-east is a small shack.
+~
+field
+D NORTH 7875 0 0
+~
+The valley continues to the north.
+~
+D EAST 7877 0 0
+~
+The valley continues to the east.
+~
+#7877
+The Small Valley~
+You are in the small valley.  Strangely, tall trees grow here, almost as if some
+magic was used to help them grow.  To the north is a small shack.
+~
+field
+D EAST 7872 0 0
+~
+The valley continues to the east.
+~
+D WEST 7876 0 0
+~
+The valley continues to the west.
+~
+#7878
+Inside the Small Shack~
+You are inside the small shack.  A small stove is on the side, with soup
+cooking over it.  You see nothing valuable.
+~
+inside
+ROOM INDOORS
+D EAST 7870 AB -1
+door~
+You see the valley outside.
+~
+D DOWN 7879 AB -1
+trap door~
+You see a trap door!
+~
+#7879
+Beneath the Small Shack~
+You are beneath the small shack, in a tunnel that leads south.  It feels
+quite warm down here.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 7880 0 0
+~
+The room looks reddish down there.
+~
+D UP 7878 AB -1
+trap door~
+Back to known territory!
+~
+#7880
+The Den of the Pyrohydra~
+You are in the den of the pyrohydra.  All the walls are charred, and this
+room is filled with a smell close to that of burning tar.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 7879 0 0
+~
+You see the relative safety to the north.
+~
+D EAST 7882 ABC 7805
+secret~
+You see breaks in the charred rock to the east.
+~
+D WEST 7881 ABC 7805
+door~
+You see a door to the west.
+~
+#7881
+The Workroom~
+This room looks like it is used for magical studies.  Potions bubble over
+burners, and the whole room spells of herbs and dead animal flesh.  A furnace
+to the side casts a bright light in this room.  The whole room radiates with
+a magical aura.
+~
+inside
+ROOM INDOORS
+D EAST 7880 ABC 7805
+door~
+~
+#7882
+The Storage Room~
+This room is used to store scrolls, potions, and other magical items.  The
+whole room radiates with a magical aura.
+~
+inside
+ROOM INDOORS
+D WEST 7880 ABC 7805
+secret door~
+~
+#7883
+WAY Far Down into the Valley~
+You have fallen trying to go down this steep hill.  Maybe that wasn't that
+good an idea, huh?
+
+
+You've fallen, and you can't get up!
+~
+inside
+ROOM NO_MOB
+#0
+
+
+
+#RESETS
+MOB 7801 TO 7805 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7800 TO 7806 GLIMIT 6 LLIMIT 1
+MOB 7800 TO 7807 GLIMIT 6 LLIMIT 1
+MOB 7802 TO 7811 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7814 TO 7815 GLIMIT 3 LLIMIT 1
+MOB 7801 TO 7816 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7801 TO 7818 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7813 TO 7818 GLIMIT 3 LLIMIT 1
+MOB 7801 TO 7820 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7802 TO 7820 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7800 TO 7823 GLIMIT 6 LLIMIT 1
+MOB 7814 TO 7825 GLIMIT 3 LLIMIT 1
+MOB 7805 TO 7827 GLIMIT 5 LLIMIT 1
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+DOOR 7829 north CLOSED
+MOB 7813 TO 7830 GLIMIT 3 LLIMIT 1
+MOB 7800 TO 7833 GLIMIT 6 LLIMIT 1
+DOOR 7834 south CLOSED
+MOB 7806 TO 7835 GLIMIT 5 LLIMIT 1
+MOB 7800 TO 7837 GLIMIT 6 LLIMIT 1
+MOB 7806 TO 7838 GLIMIT 5 LLIMIT 1
+MOB 7806 TO 7839 GLIMIT 5 LLIMIT 1
+MOB 7802 TO 7842 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7805 TO 7842 GLIMIT 5 LLIMIT 1
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7801 TO 7844 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+DOOR 7845 east LOCKED
+DOOR 7845 north CLOSED
+MOB 7807 TO 7845 GLIMIT 1 LLIMIT 1
+GIVE 7804
+EQUIP 7806 LFINGER
+EQUIP 7825 WIELD
+MOB 7808 TO 7845 GLIMIT 1 LLIMIT 1
+EQUIP 7806 LFINGER
+EQUIP 7825 WIELD
+DOOR 7846 west LOCKED
+DOOR 7846 north LOCKED
+OBJECT 7809 TO 7846
+OBJECT 7823 TO 7846
+OBJECT 7820 TO 7846
+OBJECT 7817 TO 7846
+OBJECT 7815 TO 7846
+OBJECT 7816 TO 7846
+OBJECT 7819 TO 7846
+DOOR 7847 east CLOSED
+DOOR 7847 south CLOSED
+MOB 7806 TO 7847 GLIMIT 5 LLIMIT 2
+MOB 7806 TO 7847 GLIMIT 5 LLIMIT 2
+DOOR 7848 south LOCKED
+DOOR 7848 west CLOSED
+MOB 7803 TO 7848 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7804 TO 7848 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7804 TO 7850 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7805 TO 7852 GLIMIT 5 LLIMIT 1
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7814 TO 7852 GLIMIT 3 LLIMIT 1
+MOB 7803 TO 7853 GLIMIT 1 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7802 TO 7854 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7804 TO 7856 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7803 TO 7860 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7813 TO 7860 GLIMIT 3 LLIMIT 1
+MOB 7805 TO 7862 GLIMIT 5 LLIMIT 1
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7804 TO 7863 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7802 TO 7865 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+MOB 7803 TO 7866 GLIMIT 4 LLIMIT 1
+EQUIP 7800 BODY
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7802 TO 7868 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+DOOR 7870 west CLOSED
+MOB 7800 TO 7873 GLIMIT 6 LLIMIT 1
+MOB 7805 TO 7876 GLIMIT 5 LLIMIT 1
+EQUIP 7801 FEET
+EQUIP 7802 WIELD
+EQUIP 7803 NECKONE
+MOB 7801 TO 7877 GLIMIT 6 LLIMIT 1
+EQUIP 7802 WIELD
+DOOR 7878 east CLOSED
+DOOR 7878 down CLOSED
+MOB 7810 TO 7878 GLIMIT 1 LLIMIT 1
+DOOR 7879 up CLOSED
+DOOR 7880 east LOCKED
+DOOR 7880 west LOCKED
+MOB 7809 TO 7880 GLIMIT 1 LLIMIT 1
+GIVE 7805
+DOOR 7881 east LOCKED
+MOB 7811 TO 7881 GLIMIT 1 LLIMIT 1
+EQUIP 7806 LFINGER
+EQUIP 7807 WIELD
+EQUIP 7824 LIGHT
+DOOR 7882 west LOCKED
+OBJECT 7808 TO 7882
+OBJECT 7822 TO 7882
+OBJECT 7821 TO 7882
+OBJECT 7810 TO 7882
+OBJECT 7812 TO 7882
+OBJECT 7811 TO 7882
+OBJECT 7820 TO 7882
+OBJECT 7815 TO 7882
+OBJECT 7818 TO 7882
+OBJECT 7814 TO 7882
+OBJECT 7813 TO 7882
+OBJECT 7823 TO 7882
+MOB 7812 TO 7882 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

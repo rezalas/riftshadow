@@ -1,0 +1,1041 @@
+#AREA
+scionenclave.are~
+The Scion Enclave~
+Zethus~
+1 51
+23650 23666
+normal
+none
+0
+1
+Zethus~
+
+#MOBS
+#23650
+charmed enslaved planar titan juggernaut~
+an enslaved titan juggernaut~
+An imposing armor-clad titan stands his ground on the landing.
+~
+Finely crafted and well polished dark armor covers the massive body of
+this titan. Spikes of various sizes and expensive, colorful jewels are
+set into the massive armor in many places. His movements are somewhat
+awkward and jerky, as if he were under the control of some other force.
+It is clear, however, that he will be able to swing the giant blade
+clutched in his gauntleted hand with considerable force and accuracy.
+~
+0 0 100 planar~
+30 1d1+7499 1d1+35 0 90 cleave
+0 0 0 0
+standing male none
+0 0 huge
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CABAL scion
+B cabal EQUALTO 2 23651 EMOTE silently bars the way into the enclave.~
+#23651
+tahvarel tah'varel tah varel dark human scion~
+the Tah'varel~
+A dark-skinned human stands here, cool, calm and ready.
+~
+The esteemed and powerful guardian of the innermost secrets of the
+Scions of Knowledge, the Tah'varel is a tall human man with very dark
+skin. His pale gray eyes contrast greatly his skin. The glare of his
+small pupils seem all the more intense when paired with his already
+exotic and strong facial features, which are even further enhanced
+with a series of dark tattoos. He wears no armor, dressed only in
+loose patterned robes of white and violet, and has but a single,
+simple weapon, an ivory staff.
+~
+0 0 100 human~
+45 1d1+14999 1d1+35 0 70 blast
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INNER_GUARDIAN
+ACT NOPURGE
+OFF AREA_ATTACK
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CABAL scion
+C 'heat metal'
+C 'scathing wind'
+C 'weaken'
+C 'poison'
+C 'vampiric touch'
+C 'disruption'
+#23652
+old dahvel shopkeeper man~
+Dahvel, the Scribe~
+A wizened old man works quietly behind the counter.
+~
+Simple white robes loosely cover the frame of this quiet old man. His long,
+white beard reaches his mid-torso and his thick white eyebrows are forever
+surrounded by thought-wrinkles. Various sorts of inks are splotched on his
+otherwise pale hands.
+~
+0 0 100 human~
+60 1d1+29999 1d1+65 0 20 mental
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT west
+#23653
+young girl czaeila scion librarian~
+Czaeila, the Librarian~
+A strange young girl sits here quietly, staring up at you.
+~
+This young girl's large green eyes are deeper than most can ever hope to
+comprehend. Her braided hair and otherwise innocent and youthful appearance
+is almost disturbingly contradicted by her serious composure. Her face,
+although it is usually without expression, oddly enough somehow implies
+a sort of wry smile...
+~
+0 0 100 elf~
+60 1d1+2000 1d1+65 0 20 magic
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#23654
+old scion healer mystic~
+an old mystic~
+An old man stands quietly behind the platform.
+~
+~
+0 0 100 human~
+60 1d1+8999 1d1+29 0 80 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT HEALER
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+#23655
+vehzrel drow necromancer woman~
+Vehzrel~
+A drow woman dressed in robes of black and brown reads quietly.
+~
+This strangely attractive drow's dark, almond-shaped eyes quietly peruse
+a book.  Her silver hair is braided into a series of a hundred thin, tight
+braids and her lips somehow seem small on her face, though not thin.  Light
+silken robes of brown and black with a fur trim are draped about her, a
+surprisingly small amount of blood stains can be seen upon them.  From time
+to time, she glances up at a necromantic creation and either nods or closes
+her eyes and shakes her head, then returns to reading her book.  Her
+students take her judgements seriously, as she is the Scion's Theorist of
+Necromancy, as appointed by the Gods.  
+~
+0 0 100 drow~
+60 400d2+1900 3d8+20 0 20 magic
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+#23656
+sorcerer taellius man~
+Taellius~
+A tall man stares thoughtfully into a thick tome.
+~
+A long and thick brown and gray beard covers the face of this human, who
+stares into a huge tome containing all of the known elemental magics. 
+Students come to glance over his shoulder constantly, and he either points
+out interesting articles within the book, or shouts at them to leave him be.
+His robes are of fine make, and his body is beginning to show the signs of
+not being physically active enough.  
+~
+0 0 100 human~
+60 1d1+2900 1d1+65 0 20 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+#23657
+shapeshifter halfling bethgo~
+Bethgo~
+An old halfling stands here holding a cane, smiling as he watches his students.
+~
+~
+0 0 100 halfling~
+60 1d1+2900 1d1+65 0 20 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+#23658
+chronomancer deryl woman~
+Deryl~
+A woman in runed robes teaches students the finer points of chronomancy.
+~
+~
+0 0 100 elf~
+60 1d1+2900 1d1+65 0 20 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+#0
+
+
+
+#OBJS
+#23650
+staff ivory silver tah'varel~
+a staff of carved silver and ivory~
+The Tah'varel's staff is here.~
+weapon
+energy~
+staff 4 4 blast 0
+40 30 10000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT SCION_ONLY
+ITEM ROTDEATH
+ITEM NODISARM
+APPLY HITROLL 4
+APPLY DAMROLL 3
+LIMIT 1
+TIMER 0
+
+#23651
+crystal book case shelves bookshelves bookcase~
+a crystal bookcase~
+Books line the shelves of a crystal bookcase that covers the walls.~
+treasure
+crystal~
+0 0 0 0 0
+60 10000 0 P
+LIMIT 0
+TIMER 0
+E crystal bookcase shelves bookshelves book case~
+A number of books cover the shelves of the bookcase. The more notable books
+are: The History of the Glass Tower, In Order to Learn, Of Knowledge and
+Ignorance, The Beginning of The Scions of Knowledge, The Gods of The
+Scions of Knowledge and Types of Magic.
+~
+E scions scion beginning~
+The Scions of Knowledge were not always as they now are. Originally a
+reclusive conclave of magi bent on the gathering of information of all
+sorts only for the bettering of themselves, the Scions were begun by a
+philosopher-mage named Kreousili upon the completion of the city of Kost.
+
+Peaceful in nature and few in number, the mages were recorded as taking
+but one violent action, which was their taking of the Glass Tower.
+~
+E gods god~
+~
+E history glass tower~
+"The History of the Glass Tower"
+An excerpt from "The Beginnings of Melcene"
+- Scribed in 368 SB by Dalgrivos Mel'nur, First Historian of Melcene
+  Translated into common in 906 SB by Celirell Derechum
+
+   Our beloved yet feared monolith of glass which has been far before the
+recollection of the eldest of elves, or their fathers. It was of the few
+structures to survive the Great War, and the means by which it was crafted
+continues to confound the most masterful carpenters and artisians. So I
+attempt here, in these pages, to answer the question that has been asked
+by so many: From where does the Glass Tower come, and what is the reason
+for its existence?
+
+It is known that the Tower existed long before the Great War. The glass
+shows no scratch nor does it show any mark, so that by simply viewing it
+with one's own eyes one cannot glean any knowledge about its age. The
+Tower's walls flow with magic that is powerful, subtle and likely to not
+be understood in full for generations upon generations, if it all. It is
+also believed that the Tower is crafted out of a single piece of glass.
+
+The glass itself is not normal in any sense. The precision in which it
+has been molded or cut or otherwise crafted is impossible to imagine if
+one has not seen the Tower with his own eyes, yet the color of the glass
+is uneven; it is almost black in some places with traces of metallic
+colors, in others, the color is more chromatic. In most, however, it is
+perfectly clear, or almost perfectly clear. From the outside, it is mostly
+black.
+
+The inhabitants of the Glass Tower may have been many. Legends abound as to
+who they were, or may have been. Some would argue that they were a band
+of thieves who used it as a hideout or a clan of invading barbarians
+hiding from the combat in Kost. It is known for a fact, however, that the
+inhabitants were not magicians. The Scions of Knowledge, upon their
+emergence, seized the Tower with little trouble on the first day of the
+year 1200 AB. Two archmagi of the conclave arrived at the Tower's barred
+gates to destroy those who wereinside in order to take the Tower as their
+own. When the gates buckled to a mighty spell, the inside of the Tower was
+revealed, yet not a soul dwelled within. There are two rumors as to what
+may have happened to the former inhabitants. One, being more mundane and
+less popular amongst the common people, is that they heard word of powerful
+magi coming to kill them and fled. The second and more awe-inspiring rumor
+is that the Tower itself actually "ate" them once the Scions arrived, being
+that the mages were somehow destined to be there.
+
+The History of the Glass Tower is an enigmatic one. Every answer raises
+another question, and it will be some time until anything of real
+substance will be known, and even that much is not certain. It is certain
+however, that I will not be alive -- at least in this incarnation, to know
+it.
+~
+E order learn~
+An excerpt from the work "In Order to Learn" by Kreousili, Founder of the
+original Scions of Knowledge, 1520 AB.
+
+   "In order to more clearly define what knowledge is, a wise man must first
+attempt to discover the nature of ignorance. Ignorance is far more than
+the lack of knowledge, just as knowledge is far more than a scab to cover
+ignorance.
+
+   "It has been said that knowledge is power. If this is true, then the
+relationship between knowledge and ignorance is not unlike a watermill that
+generates power. A man who does not know is a dry watermill; he may have a
+revelation. A man who does not want to know is a watermill built far from a
+river. It will take much to convince him of his ignorance. A man that believes
+he knows is a watermill built atop a mountain, for he places himself far above
+the aspirations of knowledge. This is the most dangerous type of ignorance, and
+the most difficult to cure.
+
+   "A necessary component of life is learning, and those who do not accept knowledge
+do not accept life. One may be unlearned yet not be considered ignorant, as his
+mind is still opened and free just as one can be learned and ignorant by not
+being able to generalize and interpret the knowledge wasted upon him. A head
+full of knowledge may still be locked; its only key is creativity. Creativity
+is what allows new knowledge to be discovered, and old knowledge to become
+renewed.
+
+   "Using the dual tools of knowledge and creativity allows the wielder to
+extrapolate information and apply it to situations that one will find himself
+in over the course of a life. One who walks the path of knowledge knows and
+recognizes what can be done in a situation, and never wastes so much as a breath
+on what is futile. There is but one reality, but no two perceptions are alike.
+It is important for one to concentrate on the reality in addition to his
+perceptions to avoid ignorance, for ignorance is the state of being oblivious
+to the world around himself, and can spread among the masses as a plague..."
+~
+E ignorance knowledge~
+Excerpt from the analysis of "In Order to Learn" by Veszhas Meldaeus, its
+publishing in 99 SB marked the beginning of the renaissence of the Scions,
+entitled "Of Knowledge and Ignorance."
+
+   "As the Great Kreousili wrote before me, ignorance is a plague that has infected
+the masses, and a difficult one to cure. Our predecessors enlightened themselves,
+but failed to make an impact on the world and the sickness that we call ignorance.
+It is a necessity that we right this wrong by giving this ancient cause a second
+attempt.
+
+   "Quoting my beloved and ancient mentor, "...Those who do not accept knowledge do not
+accept life." Kreousili saw then in his wisdom what few are able to see now: those
+that are ignorant are not worthy of the gift of life. Ignorance is life without
+living. The enlightened must cure this ignorance by any means possible. It is to
+be remembered that those who are incapable of understanding and creativity are
+not to be allowed to live; their ignorance cannot be cured but only spread. What
+we must do is burn them until they are but dust so that no remainants of their
+foolishness can be found.
+
+   "This hour the Scions of Knowledge are reborn, and our cause has become clearer
+than ever. Let the dark ages end and the new ages begin through use of our precious
+tools of knowledge and creativity! The best of the old renewed through use of
+the innovations of the new, we shall see our golden age."
+~
+E types magic~
+~
+
+#23652
+antemundane relic~
+the Antemundane Relic~
+A small, delicate device encased in a thick glass orb lies here.~
+treasure
+energy~
+0 0 0 0 0
+51 0 100000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+ITEM NOPURGE
+LIMIT 1
+CABAL SCION
+TIMER 0
+
+#23653
+vellum blank scroll~
+a blank piece of vellum~
+You see a blank sheet of vellum.~
+trash
+parchment~
+0 0 0 0 0
+25 1 1250 P
+WEAR TAKE
+RESTRICT SCION_ONLY
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23654
+silver donation box~
+a simple silver box~
+A plain silver box sits in the center of the platform.~
+container
+silver~
+9999 0 0 9999 1
+52 1000 0 P
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23655
+no name~
+dummy object~
+dummy desc~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#23657
+no name~
+dummy object~
+dummy desc~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#23650
+A Broad Landing~
+Upon stepping onto this landing, the noise from the lower levels of the
+tower suddenly ceases.  The red carpet on the floor continues up the
+staircase, into the top level of the tower. A window on the western wall looks
+out over the city of Melcene, allowing a bit of natural light to shine onto
+the spiral staircase. The red carpet on the floor continues up the stairs,
+into the top level of the tower.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The round staircase has bars enclosing the stairway, as to keep people
+from falling off the sides.
+~
+D EAST 0 0 0
+~
+The round staircase has bars enclosing the stairway, as to keep people
+from falling off the sides.
+~
+D SOUTH 0 0 0
+~
+The round staircase has bars enclosing the stairway, as to keep people
+from falling off the sides.
+~
+D WEST 0 0 0
+~
+A window shines light onto the staircase, the bars on the sides casting
+shadows over the carpeted stairs.
+A window shines light onto the staircase, the bars on the sides casting
+shadows over the carpeted stairs.
+~
+D UP 23651 0 0
+~
+The staircase continues up into a small, well-lit chamber.
+~
+D DOWN 23868 0 0
+~
+The staircase continues down into the lower levels of the Glass Tower.
+~
+CABAL scion
+#23651
+A Small Antechamber~
+The light in this room emanates from a pair of large, slender glass
+candles, each lit with a magical flame.  Portraits of the more famous mages
+of the Scions of Knowledge line the walls.  A thin red carpet covers the
+marble floor, leading from the top of the spiral staircase below you to the
+door set into the north wall and a wide set of heavy double-doors are set
+into the southern wall, behind the staircase.  
+~
+inside
+ROOM INDOORS
+D NORTH 23652 AEH 0
+carved door~
+A wooden door to the north has a carving of a candle, straight lines
+radiating from the flames, depicting light.
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23665 A 0
+heavy doors~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 23650 0 0
+~
+A spiral staircase winds down to a broad landing below you.
+~
+CABAL scion
+#23652
+The Grand Hall of Magic~
+A golden domed ceiling looms over the tiled floor, shedding its own light
+into the room below. The sounds of quiet voices, shuffling papers and the
+invocation of minor magical items fill the Grand Hall, and the acoustic
+quality of the room allows for much of it to be heard quite clearly. Two large
+and ornate glass pillars are on either side of the archway to the north, which
+leads into a broad hallway, while to the west lies another smaller hallway. To
+the east lies an archway that has been blocked off...
+~
+inside
+ROOM INDOORS
+D NORTH 23653 0 0
+~
+A broad hallway leads to a set of double doors to the north.
+~
+D EAST 0 0 0
+~
+A large archway has been blocked off to the east by a sheer wall of milky glass.
+~
+D SOUTH 23651 A 0
+~
+A small room is to the south.
+~
+D WEST 23661 0 0
+~
+The Hall of Elemental Energies is to the west.
+~
+CABAL scion
+#23653
+A Broad Hallway~
+A thin red carpet trimmed with gold is perfectly centered between the
+walls of this broad hallway; the standard grey marble tiles make up the rest
+of the floor.  Oddly-shaped, twisted lamps supporting glowing orbs line the
+walls, providing bright light to the hall.  Doors are set into the eastern
+and western walls, and to the north, the hall ends in double doors and a
+spiral staircase.  
+~
+inside
+ROOM INDOORS
+D NORTH 23654 0 0
+~
+You can see a spiral staircase to the north.
+~
+D EAST 23656 AEH 0
+magic shop door~
+A small plaque with a simple picture of a wand and scroll is
+on the door set into the eastern wall.
+~
+D SOUTH 23652 0 0
+~
+Through an archway to the south lies the Grand Hall of Magic.
+~
+D WEST 23657 AEH 0
+library door~
+A small plaque with a simple picture of an opened book is on
+the door set into the western wall.
+~
+CABAL scion
+#23654
+At the End of The Hallway~
+The hallway ends here in walls to the east and west, and a set of glass
+double-doors to the north, leading out to a balcony.  In the center of the
+hallway, about eight feet away from the doors to the north is the beginning
+of a spiral staircase leading up into a very bright room.  
+~
+inside
+ROOM INDOORS
+D NORTH 23666 ABE 0
+double-doors~
+The clear doors to the north lead out to a small balcony.
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23653 0 0
+~
+A broad hallway is to the south, leading to the Grand Hall of Magic.
+~
+D WEST 0 0 0
+~
+~
+D UP 23655 0 0
+~
+A spiral staircase leads up to the minaret of the tower.
+~
+CABAL scion
+#23655
+Within the Crystalline Minaret~
+From the outside, this glasslike minaret is a combination of colors,
+ranging from blue-green to dark copper.  From the inside, however, the
+minaret is perfectly clear, allowing for an incredible view of Melcene, the
+surrounding lands, and the massive sky.  The minaret itself is quite large,
+and during the day, the light is completely natural, while during the night,
+a single bright beacon light on the minaret's pinnacle illuminates its
+inside as well as its outside.  The floor is made up of pure silver covered
+by thick tiles of clear glass.  A raised platform stands in the exact center
+of the minaret, and in the exact center of the platform lies a simple silver
+box.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The sky surrounds you, and far below, the streets of Melcene seem tiny
+and silent. From here, you can see everything from the Crimson Sea to
+Mount Cim to many of the other numerous forests and plains and cities
+that make up Shalar...
+~
+D EAST 0 0 0
+~
+The sky surrounds you, and far below, the streets of Melcene seem tiny
+and silent. From here, you can see everything from the Crimson Sea to
+Mount Cim to many of the other numerous forests and plains and cities
+that make up Shalar...
+~
+D SOUTH 0 0 0
+~
+The sky surrounds you, and far below, the streets of Melcene seem tiny
+and silent. From here, you can see everything from the Crimson Sea to
+Mount Cim to many of the other numerous forests and plains and cities
+that make up Shalar...
+~
+D WEST 0 0 0
+~
+The sky surrounds you, and far below, the streets of Melcene seem tiny
+and silent. From here, you can see everything from the Crimson Sea to
+Mount Cim to many of the other numerous forests and plains and cities
+that make up Shalar...
+~
+D DOWN 23654 0 0
+~
+The glass-covered silver floor is remarkably clean and unscratched. A
+staircase leads down into a broad hallway a level below you.
+~
+CABAL scion
+#23656
+The Store of Greater Magic~
+The room itself is small, and halved by a thick ivory counter just to the
+north of the door.  Behind the counter, against the northern wall are dark
+wooden shelves with various materials such as sheets of paper, inks wands,
+powders, potions and books.  There is also an open door in the north wall,
+leading into a very small room, hardly large enough for the shopkeeper to
+fit into, containing spare and defective supplies.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23653 A 0
+door~
+A broad hallway is to the west.
+~
+CABAL scion
+#23657
+The Library of The Ancients~
+The walls of this room are off-white and dim.  Rectangular windows are
+set into the top of the western wall, allowing for light to enter the
+library, making the crystalline bookcases that line the walls sparkle
+brilliantly at the right time of day.  The ceiling has interesting patterns
+carved into it, still not confirmed to be the work of any race or culture. 
+A door to the east leads back into the hallway.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23653 A 0
+door~
+A broad hallway is to the east.
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+CABAL scion
+#23658
+Hall of Space and Time~
+Scholars shuffle back and forth between the rooms to the north and south and
+the Grand Hall to the west, books and papers in hand. From time to time,
+you can hear a shout or an explosion coming from the room to the north,
+and from the south, it is common to hear strange grunts, whistles, and more
+unearthly noises. To the north, a door covered with runes leads into a small
+chamber, while to the south, a door that continually changes colors leads
+into another small chamber.
+~
+inside
+ROOM INDOORS
+D NORTH 23659 ABEH 0
+door covered with runes~
+A door covered with glowing runes leads into a room to the north.
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23660 ABEH 0
+color changing door~
+A strange, color-changing door has been set into the southern wall.
+~
+D WEST 23652 0 0
+~
+The Grand Hall of Magic is to the west.
+~
+CABAL scion
+#23659
+Chronomancer's Study~
+Clocks of all different shapes and sizes cover the walls of this study.
+Oddly enough, they all are timed perfectly so that all of the ticks and
+tocks occur simultaneously. A glass cube hovers in midair over the center
+of the room, rotating slowly. A number of books containing the results of
+various experiments and other sorts of lore sit in bookshelves, constantly
+being browsed by students and teachers alike, in hopes of proving magical
+theories or writing papers on the subject of Chronomancy.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23658 ABEH 0
+rune covered door~
+The Hall of Space and Time.
+~
+D WEST 0 0 0
+~
+~
+D DOWN 0 0 0
+~
+The darkness of the practice chamber...
+~
+CABAL scion
+#23660
+A Narrow Balcony~
+The city of Melcene is spread out below this tiny balcony at the top of
+this unbelievably high tower. From here, you can also see much of the lands to
+the west. Above you, the famous minaret of the Glass Tower stands out against
+the expanse of sky. The balcony continues to the east and west, and a heavy
+glass door lies to the north.
+~
+city
+D NORTH 23664 A 0
+heavy glass door~
+A door leads into the practice chamber.
+~
+D EAST 23666 0 0
+~
+The balcony continues to the east.
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23666 0 0
+~
+The balcony continues to the west.
+~
+D DOWN 0 0 0
+~
+~
+CABAL scion
+#23661
+Hall of Elemental Energies~
+Scholars shuffle back and forth between the rooms to the north and south
+and the Grand Hall to the west, books and papers in hand.  Unnatural groans
+and scraping echo into this hall from the south, and the raw scents and
+sounds of the elements waft in from the north.  The door to the south is
+incredibly heavy and comprised of pure granite, while the door to the north
+is pure steel, its handle covered with rubber.  
+~
+inside
+ROOM INDOORS
+D NORTH 23662 AEH 0
+thick steel door~
+A large study room is to the north through a steel door.
+~
+D EAST 23652 0 0
+~
+The Grand Hall of Magic is to the east.
+~
+D SOUTH 23663 AEH 0
+heavy granite door~
+A stench wafts in from the room to the south.
+~
+D WEST 0 0 0
+~
+~
+CABAL scion
+#23662
+Sorcerer's Study~
+A mural spans across all of the walls, depicting all of the elements and
+para-elements in their natural states.  A number of books containing the
+results of various experiments and elemental lore sit in bookshelves,
+constantly being browsed by students and teachers alike, in hopes of proving
+magical theories or writing papers on the subject of Sorcery.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23661 AEH 0
+thick steel door~
+The Hall of Elemental Energies.
+~
+D WEST 0 0 0
+~
+~
+CABAL scion
+#23663
+Necromancer's Study~
+Body parts, bones, blood and chunks of flesh are strewn about the floor
+in this room.  Unearthly constructs shamble around, groaning and snorting at
+everything in their paths.  A number of books containing the results of
+various experiments, anatomical and spiritual lore sit in bookshelves,
+constantly being browsed by students and teachers alike, in hopes of proving
+magical theories or writing papers on the subject of Necromancy.  
+~
+inside
+ROOM INDOORS
+D NORTH 23661 AEH 0
+heavy granite door~
+The Hall of Elemental Energies.
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 0 0 0
+~
+~
+CABAL scion
+#23664
+Chamber of Practice~
+This entire room is made up of completely sheer, smooth and solid glass.
+Orbs of light float through the air, providing light to the room, and runes
+of warding cover the walls and the doorway, preventing magical energy from
+escaping.  To the south lies the balcony.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23660 AEH 0
+heavy glass door~
+~
+D WEST 0 0 0
+~
+~
+D UP 0 0 0
+~
+~
+D DOWN 0 0 0
+~
+~
+CABAL scion
+#23665
+The Chamber of Crystals~
+This massive, round room is crafted of pure crystal.  Light flows down
+from the ceiling and reflects from the silver tiles in the floor and the
+crystal that makes the room up causing the entire structure to glow
+brilliantly.  In the center of the floor is a circle of lead that is about 9
+feet wide.  The ground within the circle is scorched and scratched.  Four
+crystals form a square around the circle, each atop a pedestal, and each a
+different color.  The large doors to the north are heavily warded.  
+~
+inside
+ROOM INDOORS
+D NORTH 23651 A 0
+heavy doors~
+~
+D EAST 0 0 0
+~
+Smooth, sparkling and rounded crystal walls surround you.
+~
+D SOUTH 0 0 0
+~
+Smooth, sparkling and rounded crystal walls surround you.
+~
+D WEST 0 0 0
+~
+Smooth, sparkling and rounded crystal walls surround you.
+~
+D UP 0 0 0
+~
+Beams of light drift down from an unidentifiable source.
+~
+D DOWN 0 0 0
+~
+The tiles in the floor are all glass coated silver, like those in the rest of the
+Tower, but in the center, interrupting this pattern lies a large circle of solid
+lead.
+~
+CABAL scion
+#23666
+A Narrow Balcony~
+The city of Melcene is spread out below this tiny balcony at the top of
+this unbelievably high tower. From here, you can also see much of the lands to
+the west. Above you, the famous minaret of the Glass Tower stands out against
+the expanse of sky.
+~
+city
+D NORTH 0 0 0
+~
+~
+D EAST 23660 0 0
+~
+The balcony continues
+~
+D SOUTH 23654 AEH 0
+double-doors~
+Double doors lead back into the Tower.
+~
+D WEST 23660 0 0
+~
+The balcony continues.
+~
+CABAL scion
+#0
+
+
+
+#RESETS
+MOB 23650 TO 23650 GLIMIT 1 LLIMIT 1
+DOOR 23654 north CLOSED
+MOB 23651 TO 23655 GLIMIT 1 LLIMIT 1
+EQUIP 23650 WIELD
+MOB 23654 TO 23655 GLIMIT 1 LLIMIT 1
+OBJECT 23654 TO 23655
+MOB 23652 TO 23656 GLIMIT 1 LLIMIT 1
+GIVE 23653
+MOB 23653 TO 23657 GLIMIT 1 LLIMIT 1
+OBJECT 23651 TO 23657
+MOB 23656 TO 23662 GLIMIT 1 LLIMIT 1
+MOB 23655 TO 23663 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+A sun_prog sun_prog_glasstower
+M 23650 greet_prog greet_prog_outer_guardian
+M 23650 death_prog death_prog_outer_guardian
+M 23650 attack_prog attack_prog_outer_guardian
+M 23651 greet_prog greet_prog_inner_guardian
+M 23651 death_prog death_prog_inner_guardian
+I 23652 give_prog give_prog_cabal_item
+END
+#$

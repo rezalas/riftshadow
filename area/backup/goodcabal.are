@@ -1,0 +1,182 @@
+#AREA
+goodcabal.are~
+The Sun Temple~
+None~
+0 0
+23876 23889
+unopened
+none
+0
+1
+None~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#23876
+Before an Ancient Sandstone Temple~
+~
+city
+D SOUTH 23888 0 0
+~
+~
+OWNER none~
+#23877
+The Foyer of The Great Sun Temple~
+~
+inside
+ROOM INDOORS
+D NORTH 23888 0 0
+~
+~
+D EAST 23882 0 0
+~
+~
+D WEST 23878 0 0
+~
+~
+D UP 23885 0 0
+~
+~
+OWNER none~
+#23878
+The Wing of Fire~
+~
+inside
+ROOM INDOORS
+D EAST 23877 0 0
+~
+~
+D WEST 23879 0 0
+~
+~
+OWNER none~
+#23879
+The Wing of Fire~
+~
+inside
+ROOM INDOORS
+D NORTH 23881 0 0
+~
+~
+D EAST 23878 0 0
+~
+~
+D WEST 23880 0 0
+~
+~
+OWNER none~
+#23880
+The Wing of Fire~
+~
+inside
+ROOM INDOORS
+D EAST 23879 0 0
+~
+~
+OWNER none~
+#23881
+A Meditation Chamber~
+~
+inside
+ROOM INDOORS
+D SOUTH 23879 0 0
+~
+~
+OWNER none~
+#23882
+The Wing of Nourishment~
+~
+inside
+ROOM INDOORS
+D EAST 23883 0 0
+~
+~
+D WEST 23877 0 0
+~
+~
+OWNER none~
+#23883
+The Wing of Nourishment~
+~
+inside
+ROOM INDOORS
+D NORTH 23887 0 0
+~
+~
+D EAST 23884 0 0
+~
+~
+D WEST 23882 0 0
+~
+~
+OWNER none~
+#23884
+The Wing of Nourishment~
+~
+inside
+ROOM INDOORS
+D WEST 23883 0 0
+~
+~
+OWNER none~
+#23885
+Atop a Stone Staircase~
+~
+inside
+ROOM INDOORS
+D NORTH 23886 0 0
+~
+~
+D DOWN 23877 0 0
+~
+~
+OWNER none~
+#23886
+The Altar of the Sun~
+~
+inside
+ROOM INDOORS
+D SOUTH 23885 0 0
+~
+~
+OWNER none~
+#23887
+A Meditation Chamber~
+~
+inside
+ROOM INDOORS
+D SOUTH 23883 0 0
+~
+~
+OWNER none~
+#23888
+A Short Hallway Within the Temple~
+~
+inside
+ROOM INDOORS
+D NORTH 23876 0 0
+~
+~
+D SOUTH 23877 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

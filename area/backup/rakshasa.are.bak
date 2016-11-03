@@ -1,0 +1,1929 @@
+#AREA
+rakshasa.are~
+Rakshasa Tower~
+Ceran~
+30 51
+13900 13999
+normal
+none
+0
+1
+Ceran~
+
+#MOBS
+#13900
+black rakshasa~
+a black rakshasa~
+A tiger headed creature with pure black fur is here.
+~
+The sleek black fur on this creature strongly suggests a night hunting
+predator, and the cold hard eyes that stare at you chill you to the bone.
+Unlike other rakshasa that live to hoard treasure, the black one lives to
+kill, and it surrenders the noble part of it's mind to the tiger in it.
+~
+-1000 13901 100 human~
+45 25d50+5000 6d6+20 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+OFF ASSIST_VNUM
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+CLASS warrior none none 
+#13901
+red rakshasa~
+a red rakshasa~
+A tiger headed creature with blood red fur is here.
+~
+The red blood coloured fur on the rakshasa indicates it's royal lineage,
+althugh it has been a long time since any rakshasa dynasty ruled on the
+mortal planes. Now this proud beast is reduced to the life of a scavanger
+in the ruins of the ancient cities.
+~
+-1000 13901 100 human~
+42 25d50+4000 5d6+17 0 100 claw
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+OFF ASSIST_VNUM
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+CLASS warrior none none 
+#13902
+brown rakshasa~
+a brown rakshasa~
+A tiger headed creature dark brown fur is here.
+~
+One of the most common rakshasa, the brown caste represent the majority of
+the deadly race. Thie ones within the ruins are some of the last remaining
+ones on the mortal planes, and they are weary of this life, no longer as
+powerful as they once were.
+~
+-1000 13901 100 human~
+38 25d50+3500 5d6+16 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+OFF ASSIST_VNUM
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+CLASS warrior none none 
+#13903
+rakshasa lich~
+the lich rakshasa~
+A horribly disfigured rakshasa with burning red eyes is here.
+~
+This undead creature is the remains of the ancient rakshasa priest who served
+among the great rakshasa dynasty. Now, with the rakshasa kingdom gone, it lives
+here in the last of the dying domains of the rakshasa race. Eventually it will
+abandon even these last rakshasa and seek it's immortal destiny among the outer
+planes.
+~
+-1000 13900 100 human~
+57 50d10+5500 10d4+23 0 100 wrath
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT UNDEAD
+ACT CLERIC
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+RES MAGIC
+VUL HOLY
+CLASS warrior none none 
+#13904
+rakshasa prince~
+Daedalus, the rakshasa prince~
+A regal looking rakshasa stands here dictating over his domain.
+~
+Although nominally just the next in line to rule the rakshasa's remaining
+domain here in the ruins, Daedalus actually exerts the true control. His father
+the king has already succumbed to despair and rules only by tradition.
+~
+-1000 13900 100 human~
+60 50d10+7500 8d6+28 0 100 claw
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+RES MAGIC
+VUL HOLY
+CLASS warrior none none 
+#13905
+twoheaded twohead two-headed two rakshasa~
+a two-headed rakshasa~
+A two-headed rakshasa is here dripping blood from it's kills.
+~
+This abomination is the semi-successful experiment of the rakshasa high priest
+in his attempts to make a more powerful solider for the rakshasa's. In the war
+against the drow and beholder they are no longer able to hold their own, and
+have fallen back to the despicable magics of necromancy and transformation.
+~
+-1000 0 100 human~
+55 50d10+7000 10d4+25 0 100 bite
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+VUL HOLY
+CLASS warrior none none 
+#13906
+zombie drow~
+the zombie of a dark-elven warrior~
+The zombie of a dark-elf is standing here.
+~
+This is one of the uses of drows killed in the current war between the rakshasa
+and the drows and beholders of Myth Drannor. Rather than waste the corpses the
+high priest has used them as personal slaves.
+~
+-1000 13900 100 human~
+50 50d10+4500 5d8+19 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+VUL HOLY
+CLASS warrior none none 
+#13907
+rakshasa king~
+the rakshasa king~
+The royal rakshasa king stands here pacing and growling.
+~
+Majestic-looking rakshasa growling at your presence. His golden mitre flash
+brightly and crown of pure gold on his head looks like symbol of might. It's
+a rakshasa king who rule his fallen kingdom and prepare self for the raid
+against his enemies.
+~
+-1000 13900 100 human~
+59 50d10+7000 8d6+26 0 100 claw
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+RES MAGIC
+VUL HOLY
+CLASS warrior none none 
+#13908
+tiger~
+a massive tiger~
+The royal rakshasa tiger pet is here prowling in agitation.
+~
+It is one of the largest creatures you have ever seen, almost the size of
+a small dragon, and certainly the largest tiger you have ever heard of.
+~
+-1000 13900 100 human~
+59 50d10+7000 8d6+26 0 100 claw
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+RES CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#13900
+parchment red seal~
+a red tinted seal~
+A piece of parchment with red tinted writing is here.~
+trash
+paper~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#13902
+claw black rakshasa~
+claws of a black rakshasa~
+A large set of black claws is here.~
+weapon
+bone~
+weapon 12 3 claw 0
+40 12 12000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 5
+APPLY HITROLL 2
+LIMIT 7
+TIMER 0
+
+#13903
+claws red rakshasa~
+the claws of a red rakshasa~
+A set of red rakshasa claws are on the ground.~
+armor
+bone~
+15 14 16 0 0
+40 9 16000 P
+WEAR TAKE
+WEAR HANDS
+APPLY DAMROLL 3
+APPLY HP 15
+LIMIT 4
+TIMER 0
+
+#13904
+claws brown rakshasa~
+a pair of brown rakshasa claws~
+A pair of brown claws are lying on the floor.~
+armor
+bone~
+17 15 15 0 0
+36 10 14000 P
+WEAR TAKE
+WEAR FEET
+APPLY SBREATH 4
+APPLY DAMROLL 3
+APPLY MANA 15
+LIMIT 4
+TIMER 0
+
+#13905
+sceptre gold~
+a sceptre of gold~
+A sceptre made of pure gold lies on the ground.~
+trash
+gold~
+0 0 0 0 0
+50 9 25400 P
+WEAR TAKE
+WEAR HOLD
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+ITEM ANTIGOOD
+APPLY WIS 2
+APPLY DEX 2
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 3
+TIMER 0
+
+#13906
+serpent twined ring~
+a serpent twined ring~
+A ring in the form of an entwined serpent is here.~
+armor
+steel~
+4 3 4 12 12
+45 1 21000 P
+WEAR TAKE
+WEAR FINGER
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+ITEM MAGIC
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+APPLY HITROLL 1
+APPLY HP 20
+APPLY MANA 20
+APPLY SBREATH -5
+LIMIT 6
+TIMER 0
+
+#13907
+black coat fur rakshasa~
+a coat of black rakshasa fur~
+A large pile of black fur is on the ground.~
+armor
+cloth~
+18 20 19 0 0
+47 8 23500 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM ANTIGOOD
+APPLY HP 15
+LIMIT 2
+TIMER 0
+
+#13908
+dual dual-bladed axe beholderkin slayer~
+a dual-bladed axe named 'Beholderkin Slayer~
+A huge axe with two sharp sides is lying on the ground.~
+weapon
+steel~
+axe 5 7 slice 0
+50 20 23400 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+ITEM NODROP
+APPLY SBREATH -8
+APPLY DAMROLL 4
+APPLY HITROLL -2
+LIMIT 2
+TIMER 0
+
+#13912
+blood collar~
+a blood-soaked collar~
+A collar covered in sticky blood is on the ground.~
+armor
+steel~
+4 3 5 10 10
+40 2 13000 P
+WEAR TAKE
+WEAR NECK
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY HP 10
+APPLY SBREATH -3
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 6
+TIMER 0
+
+#13913
+red ioun stone~
+a red ioun stone~
+A deep red stone hums softly as it hovers in the air.~
+trash
+stone~
+0 0 0 0 0
+35 0 9999 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+LIMIT 10
+TIMER 0
+E red ioun stone~
+It seems to be humming and just floating, doing nothing...
+~
+
+#13914
+signet ring royal rakshasa~
+a royal rakshasa signet ring~
+A large distinct ring with royal markings is on the ground.~
+armor
+steel~
+6 4 5 5 5
+40 1 19000 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM MAGIC
+ITEM BLESS
+APPLY HP 10
+APPLY MANA 10
+APPLY DAMROLL 2
+APPLY HITROLL 3
+LIMIT 4
+TIMER 0
+
+#13916
+golden crown gold~
+a crown of gold~
+A golden crown has been left sitting on the floor.~
+treasure
+gold~
+0 0 0 0 0
+50 7 11999 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+ITEM MAGIC
+ITEM BLESS
+APPLY SBREATH -5
+APPLY DAMROLL 3
+APPLY WIS 2
+APPLY DEX 1
+APPLY STR 1
+LIMIT 2
+TIMER 0
+
+#13917
+necklace diamond~
+a diamond studded necklace~
+A string of sparkling diamonds is here.~
+treasure
+diamond~
+0 0 0 0 0
+45 1 12099 P
+WEAR TAKE
+WEAR NECK
+APPLY SBREATH -2
+APPLY HP 10
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 3
+TIMER 0
+
+#13920
+steel shield emblem rakshasa pride~
+an emblem of rakshasa pride~
+A large plate of steel bearing the mark of the rakshasa is here.~
+armor
+steel~
+4 3 4 15 15
+50 15 26099 P
+WEAR TAKE
+WEAR SHIELD
+ITEM HUM
+ITEM MAGIC
+APPLY SBREATH -2
+APPLY DEX 1
+APPLY STR 2
+APPLY DAMROLL 4
+APPLY HITROLL 1
+LIMIT 2
+TIMER 0
+
+#13921
+claw tiger~
+the claw of a massive tiger~
+A huge, deadly looking tiger claw is lying here.~
+weapon
+bone~
+weapon 9 5 claw 0
+48 28 28600 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+ITEM BLESS
+APPLY DAMROLL 7
+APPLY HITROLL -4
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#13901
+Before the Rakshasa Tower~
+You are standing before a massive tower seemingly carved from a single piece
+of solid granite.  Black as night, the stone appears to absorb all light that
+comes near, and the closer you get, the less light your lanterns seem to
+radiate.  At the base of the tower is a pair of huge doors, apparently leading
+inside.  Up ahead you see a guard post, manned by some large tigers which seem
+to be standing on two feet. To the south there is an open door way leading
+out to the ruins.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13903 0 -1
+~
+You see a guard post up ahead.
+~
+D SOUTH 13807 0 0
+~
+~
+#13902
+Guard Post Outside the Tower~
+This area teems with activity, many rakshasa and drow coming and going from
+the tower up ahead.  There are guards stationed here, observing those coming
+and going, and questioning those who they deem not to belong.  As you watch,
+one of the guards stops a young drow man, asks him a few questions, and
+seeming dissatisfied, proceeds to beat the young man, sending him fleeing
+back the way he came.  You may enter the tower to the north, or return to the
+west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13906 0 -1
+~
+You may enter the tower in this direction.
+~
+D EAST 13903 0 -1
+~
+The guard post continues in this direction.
+~
+#13903
+Guard Post Outside the Tower~
+This area teems with activity, many rakshasa and drow coming and going from
+the tower up ahead.  There are guards stationed here, observing those coming
+and going, and questioning those who they deem not to belong.  As you watch,
+one of the guards stops a young drow man, asks him a few questions, and
+seeming dissatisfied, proceeds to beat the young man, sending him fleeing
+back the way he came.  You may continue east or west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13904 0 -1
+~
+The guard post continues in this direction.
+~
+D SOUTH 13901 0 -1
+~
+You can leave the guard post in this direction.
+~
+D WEST 13902 0 -1
+~
+The guard post continues in this direction.
+~
+#13904
+Guard Post Outside the Tower~
+This area teems with activity, many rakshasa and drow coming and going from
+the tower up ahead.  There are guards stationed here, observing those coming
+and going, and questioning those who they deem not to belong.  As you watch,
+one of the guards stops a young drow man, asks him a few questions, and
+seeming dissatisfied, proceeds to beat the young man, sending him fleeing
+back the way he came.  You may continue east or west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13908 0 -1
+~
+You may enter the tower in this direction.
+~
+D WEST 13903 0 -1
+~
+The guard post continues in this direction.
+~
+#13905
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13913 0 -1
+~
+You may continue into the darkness this way.
+~
+D EAST 13906 0 -1
+~
+You see a faint light in this direction.
+~
+#13906
+Inside the Tower~
+You are standing inside the left gate of the tower.  Light spills in through
+the cracks around the gate, but is obscured by light wisps of steam seeming
+coming from nowhere.  There is a sort of opressive darkness here, boding of
+great evil somewhere within these walls.  Perhaps you should turn back now?
+You may continue into the tower to the east and west, or leave to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13907 0 -1
+~
+You may head farther into the tower this way.
+~
+D SOUTH 13902 0 -1
+~
+You see a guard post this way.
+~
+D WEST 13905 0 -1
+~
+You may head farther into the tower this way.
+~
+#13907
+Entrance to the Dark Temple~
+Before you lies a sight like nothing you have ever seen.  Tall guards stand
+inside the entrance to what appears to be a temple.  The doorway is in the
+shape of a gigantic skull, with torches lit in the eye sockets for
+illumination.  From inside you can hear a deep, resonant chanting, and
+occasionally a scream.  You may head back into the the darkness to the east
+and west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13915 0 -1
+~
+You see a dark temple this way.
+~
+D EAST 13908 0 -1
+~
+You may head farther into the tower this way.
+~
+D WEST 13906 0 -1
+~
+You may head farther into the tower this way.
+~
+#13908
+Inside the Tower~
+You are standing inside the left gate of the tower.  Light spills in through
+the cracks around the gate, but is obscured by light wisps of steam seeming
+coming from nowhere.  There is a sort of opressive darkness here, boding of
+great evil somewhere within these walls.  Perhaps you should turn back now?
+You may continue into the tower to the east and west, or leave to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13909 0 -1
+~
+You may head farther into the tower this way.
+~
+D SOUTH 13904 0 -1
+~
+You see a guard post this way.
+~
+D WEST 13907 0 -1
+~
+You may head farther into the tower this way.
+~
+#13909
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13917 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13908 0 -1
+~
+You see a faint light in this direction.
+~
+#13910
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the north.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13922 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13911
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the north.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13923 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13912
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13924 0 -1
+~
+You may continue into the darkness this way.
+~
+D EAST 13913 0 -1
+~
+You may continue into the darkness this way.
+~
+#13913
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the west
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13905 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13912 0 -1
+~
+You may continue into the darkness this way.
+~
+#13914
+Inside the Lich Temple~
+You are standing in the southwestern corner of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  The temple continues north and east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13926 0 -1
+~
+The temple continues this way.
+~
+D EAST 13915 0 -1
+~
+You see the temple entrance this way.
+~
+#13915
+Entrance to the Lich Temple~
+As you enter this temple, you are filled with a feeling of dread and fear.
+Evil fills the air, the chants of rakshasa sing tales of doom and dread, and
+rising up before you is one of the most hideous things you have ever seen.  A
+massive pile of bones and carrion forms an altar of worship to the Lich, a
+revered and respected religious head in rakshasa lore.  It is a testament to
+the sincerity of the rakshasa's hold on this land that one such as this would
+be here.  The temple continues east and west, or you can leave to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13916 0 -1
+~
+The temple continues this way.
+~
+D SOUTH 13907 0 -1
+~
+You may leave the temple in this direction.
+~
+D WEST 13914 0 -1
+~
+The temple continues this way.
+~
+#13916
+Inside the Lich Temple~
+You are standing in the southeastern corner of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  The temple continues north and east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13928 0 -1
+~
+The temple continues this way.
+~
+D WEST 13915 0 -1
+~
+You see the temple entrance this way.
+~
+#13917
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the east
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13918 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13909 0 -1
+~
+You may continue into the darkness this way.
+~
+#13918
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13930 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13917 0 -1
+~
+You may continue into the darkness this way.
+~
+#13919
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the north.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13931 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13920
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the north.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13932 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13921
+Officer's Quarters~
+This room is different to the normal barracks.  The beds are single, not bunks,
+and next to each is a small writing desk, obviously for filling out forms and
+such.  The trappings on the bunks are more plush than those in the regular
+barracks, and the footlockers are larger, but equally as uninteresting.  You
+may return to the barracks to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13922 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13922
+Corridor in the Barracks~
+You are standing in a spartan corridor in what appears to be a soldier's
+barracks.  There are schedules for guard changes on the walls, and lists of
+names indicating merit or lack thereof.  You notice three different lists, each
+of which being a different color, black, red or brown, indicating status in the
+King's guard.  You see small alcoves to the north and south, a door to the
+west, or you can return to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13934 0 -1
+~
+You see a small alcove this way.
+~
+D EAST 13923 0 -1
+~
+You see a long torchlit corridor this way.
+~
+D SOUTH 13910 0 -1
+~
+You see a small alcove this way.
+~
+D WEST 13921 0 -1
+~
+You see a small room this way.
+~
+#13923
+Corridor in the Barracks~
+You are standing in a spartan corridor in what appears to be a soldier's
+barracks.  There are schedules for guard changes on the walls, and lists of
+names indicating merit or lack thereof.  You notice three different lists, each
+of which being a different color, black, red or brown, indicating status in the
+King's guard.  You see small alcoves to the north and south,  or you can return
+to the east.  The barracks continue to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13935 0 -1
+~
+You see a small alcove this way.
+~
+D EAST 13924 0 -1
+~
+You may head back into the darkness this way.
+~
+D SOUTH 13911 0 -1
+~
+You see a small alcove this way.
+~
+D WEST 13922 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13924
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the south.  You see light coming from a corridor to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13936 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13912 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13923 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13925
+Alcove in the Temple~
+You are standing in a small alcove off the main temple.  Squat wooden benches
+lined with furs sit here in rows.  Worshippers wait here before paying their
+respects to the Lich, although it appears to be rather quiet at the moment.  In
+the north wall you see the faint outline of a door.  You can enter the temple
+to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13937 0 -1
+~
+You may continue into the darkness this way.
+~
+D EAST 13926 0 -1
+~
+You can return to the temple in this direction.
+~
+#13926
+Inside the Lich Temple~
+You are standing on the western side of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  The temple continues north and south.  You see
+a small alcove to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13938 0 -1
+~
+You can continue into the temple this way.
+~
+D SOUTH 13914 0 -1
+~
+You can continue into the temple this way.
+~
+D WEST 13925 0 -1
+~
+You see a small alcove in this direction.
+~
+#13927
+Atop the Tower of Carrion~
+You are currently standing atop the tower of carrion, before the Altar of the
+Lich.  The floor here is made up of femurs of humans and elves, slick with
+thick blood of recent sacrifices.  There is an altar of human skulls standing
+in the centre of the tower where the sacrifices to the Dark Lord are made.
+Behind this altar is the throne of the Lich himself.  The only way out of here
+is back down the tower.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D DOWN 13939 0 -1
+~
+You can head back down the bone steps in this direction.
+~
+#13928
+Inside the Lich Temple~
+You are standing on the eastern side of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  The temple continues north and south.  You see
+a small alcove to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13940 0 -1
+~
+You can continue into the temple this way.
+~
+D EAST 13929 0 -1
+~
+You see a small alcove in this direction.
+~
+D SOUTH 13916 0 -1
+~
+You can continue into the temple this way.
+~
+#13929
+Alcove in the Temple~
+You are standing in a small alcove off the main temple.  Squat wooden benches
+lined with furs sit here in rows.  Worshippers wait here before paying their
+respects to the Lich, although it appears to be rather quiet at the moment.  In
+the north wall you see the faint outline of a door.  You can enter the temple
+to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13941 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13928 0 -1
+~
+You can return to the temple in this direction.
+~
+#13930
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the south.  You see light coming from a corridor to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13942 0 -1
+~
+You may continue into the darkness this way.
+~
+D EAST 13931 0 -1
+~
+You see a long torchlit corridor this way.
+~
+D SOUTH 13918 0 -1
+~
+You may continue into the darkness this way.
+~
+#13931
+Corridor in the Barracks~
+You are standing in a spartan corridor in what appears to be a soldier's
+barracks.  There are schedules for guard changes on the walls, and lists of
+names indicating merit or lack thereof.  You notice three different lists, each
+of which being a different color, black, red or brown, indicating status in the
+King's guard.  You see small alcoves to the north and south,  or you can return
+to the west.  The barracks continue to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13943 0 -1
+~
+You see a small alcove this way.
+~
+D EAST 13932 0 -1
+~
+You see a long torchlit corridor this way.
+~
+D SOUTH 13919 0 -1
+~
+You see a small alcove this way.
+~
+D WEST 13930 0 -1
+~
+You may continue into the darkness this way.
+~
+#13932
+Corridor in the Barracks~
+You are standing in a spartan corridor in what appears to be a soldier's
+barracks.  There are schedules for guard changes on the walls, and lists of
+names indicating merit or lack thereof.  You notice three different lists, each
+of which being a different color, black, red or brown, indicating status in the
+King's guard.  You see small alcoves to the north and south, a door to the
+east, or you can return to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13944 0 -1
+~
+You see a small alcove this way.
+~
+D EAST 13933 0 -1
+~
+You see a small room this way.
+~
+D SOUTH 13920 0 -1
+~
+You see a small alcove this way.
+~
+D WEST 13931 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13933
+Officer's Quarters~
+This room is different to the normal barracks.  The beds are single, not bunks,
+and next to each is a small writing desk, obviously for filling out forms and
+such.  The trappings on the bunks are more plush than those in the regular
+barracks, and the footlockers are larger, but equally as uninteresting.  You
+may return to the barracks to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D WEST 13932 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13934
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13922 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13935
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13923 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13936
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the east
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13937 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13924 0 -1
+~
+You may continue into the darkness this way.
+~
+#13937
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the west.  You see the faint outline of a door to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13945 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13925 0 -1
+~
+You see a small alcove in this direction.
+~
+D WEST 13936 0 -1
+~
+You may continue into the darkness this way.
+~
+#13938
+Inside the Lich Temple~
+You are standing on the northwestern corner of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  The temple continues east and south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13939 0 -1
+~
+You can continue into the temple this way.
+~
+D SOUTH 13926 0 -1
+~
+You can continue into the temple this way.
+~
+#13939
+Inside the Lich Temple~
+You are standing on the northern side of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  From here you can see a staircase of bones,
+slick with blood, leading up to the top of the tower of carrion.  The temple
+continues east and west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13940 0 0
+~
+~
+D WEST 13938 0 0
+~
+~
+D UP 13927 0 -1
+~
+You can head up the bony stairs this way.
+~
+#13940
+Inside the Lich Temple~
+You are standing on the northwestern corner of a Temple of the Lich.  Rakshasa
+come here to worship the lich priest and pay their respects to their God.
+Towering above you is a pile of bones, many of them human and elven, which form
+the Lich's altar of sacrifice.  The temple continues east and south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13928 0 -1
+~
+You can continue into the temple this way.
+~
+D WEST 13939 0 -1
+~
+You can continue into the temple this way.
+~
+#13941
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the east.  You see the faint outline of a door to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13949 0 -1
+~
+You may continue into the darkness this way.
+~
+D EAST 13942 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13929 0 -1
+~
+You see a small alcove in this direction.
+~
+#13942
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the west
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13930 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13941 0 -1
+~
+You may continue into the darkness this way.
+~
+#13943
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13931 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13944
+Barracks~
+Rows of bunks line the walls in this small alcove.  Plush furs adorn the bunks,
+obviously used by the rakshasa guards at night.  At the base of each bunk is a
+small footlocker, which upon examination contains little of value.  The room
+is lit by a single lantern suspended from the ceiling.  You may exit this part
+of the barracks to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13932 0 -1
+~
+You see a long torchlit corridor this way.
+~
+#13945
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the east
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13946 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13937 0 -1
+~
+You may continue into the darkness this way.
+~
+#13946
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the west.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13950 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13945 0 -1
+~
+You may continue into the darkness this way.
+~
+#13947
+Antechamber~
+This small room is furnished with some of the finest furs and wall hangings
+that you have seen yet.  Along the walls are several plush chairs and small
+tables containing various refreshments.  Guests wait here before going in to
+see the King, but this doesn't mean they shouldn't be comfortable.  You can
+exit the antechamber to the north.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13951 0 -1
+~
+You see a well lit room in this direction.
+~
+#13948
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the north
+or return to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13952 0 -1
+~
+You may continue into the darkness this way.
+~
+D EAST 13949 0 -1
+~
+You may continue into the darkness this way.
+~
+#13949
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can continue into the darkness to the west
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13941 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13948 0 -1
+~
+You may continue into the darkness this way.
+~
+#13950
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can see a brightly lit room to the east,
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13951 0 -1
+~
+You see a well lit room in this direction.
+~
+D SOUTH 13946 0 -1
+~
+You may continue into the darkness this way.
+~
+#13951
+Before the Throne room~
+Standing here you know majesty.  This room is lit by large sconces on the walls
+adorned with precious stones of all descriptions.  The floor is of polished
+granite overlaid with fine rugs and pelts.  In the centre of the room is a
+large crystal chandelier lit by over 50 candles which throws sparkling light
+over everything in the room.  Tall golden doors fill the north wall, and you
+can see a smaller alcove to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13953 0 -1
+~
+You may enter the throne room this way.
+~
+D EAST 13952 0 -1
+~
+You may continue into the darkness this way.
+~
+D SOUTH 13947 0 -1
+~
+You see an antechamber in this direction.
+~
+D WEST 13950 0 -1
+~
+You may continue into the darkness this way.
+~
+#13952
+A Corridor in the Tower~
+Dark, steamy, and quiet.  Too quiet.  Long shadows creep up and down the walls
+in the flickering torchlight, occasionally obscured by the steam whisping along
+the floor.  The flagstones here are slick with moisture, and the roof is
+slightly too low for comfort.  You can see a brightly lit room to the west,
+or return to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13948 0 -1
+~
+You may continue into the darkness this way.
+~
+D WEST 13951 0 -1
+~
+You may continue into the darkness this way.
+~
+#13953
+Entrance of the Throne Room~
+You are standing in the entrance area of the King's throne room.  Valuable furs
+and gold leaf are everywhere, opulence seeming to be a part of life for the
+King and his family.  The vaulted ceilings are so high that you can't see all
+of them, and the walls are made of black granite with gold flecks.  This huge
+room extends far to the north, or you can exit through the double doors to the
+south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13958 0 -1
+~
+The throne room extends as far as the eye can see this way.
+~
+D SOUTH 13951 0 -1
+~
+You see a well lit room in this direction.
+~
+#13954
+King's Chambers~
+You are standing in a small side-room of the King's chambers, which appears to
+be used for nothing more than closet space.  There are racks of clothing here
+covering three out of four walls, and dozens of pairs of furry slippers on the
+floor.  You can return to the main chambers to the north.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13960 0 -1
+~
+You can return to the King's chambers this way.
+~
+#13955
+Prince's Chambers~
+You are standing in the bedchamber of the rakshasa Prince.  There is a large
+fur covered bed sitting in the centre of the room, and a tall changing screen
+in one corner, obviously for the benefit of his mistresses.  There are lurid
+tapestries on the wall showing all types of erotic scenes, the centrepiece
+being one showing the Prince himself.  You may exit to the east.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13956 0 -1
+~
+You can head back into the main chamber this way.
+~
+#13956
+Prince's Chambers~
+This is the main chamber in the Prince's quarters.  It has 3 plush couches
+along the walls for guests to relax on, and a pair of smaller tables containing
+refreshments.  There is a large, decorative rug on the granite floor and a
+chandelier hung from the ceiling.  You can continue into the Prince's chambers
+to the west, or leave through the door in the east wall.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13957 0 -1
+~
+You see a small alcove in this direction.
+~
+D WEST 13955 0 -1
+~
+You can continue into the Prince's chambers this way.
+~
+#13957
+West Alcove of the Throne Room~
+This is a small alcove off the west side of the throne room.  It is lit by a
+pair of flaming torches, one on each wall.  On the west wall is a pair of
+curtains covering a heavy wooden door.  There is also a pair of curtains on
+the eastern entrance to hide this alcove from the throne room proper.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13958 0 -1
+~
+The throne room extends as far as the eye can see this way.
+~
+D WEST 13956 0 -1
+~
+You can head into the Prince's quarters this way.
+~
+#13958
+The Throne Room~
+Stupendous, opulent beyond belief, you stand in the throne room of the rakshasa
+King.  Polished granite highlighted with carved gold inlays are features of
+this enormous room, but the massive crystal chandelier lit by magical globes
+is possibly the single most marvellous thing you have ever seen.  Furs, rugs,
+tapestries, fine metals, gemstones all are in abundance here, fixed into the
+furnishings here.  There are piles of soft cushions for dignitaries to rest
+upon whilst talking to the king, and tables filled with every delicacy
+imaginable lining the edges of the room.  Just to the north is the King's
+throne, and you can see curtains east and west covering small alcoves.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13962 0 -1
+~
+You can see the King's throne in this direction.
+~
+D EAST 13959 0 -1
+~
+You see a small alcove in this direction.
+~
+D SOUTH 13953 0 -1
+~
+You can head back out of the throne room this way.
+~
+D WEST 13957 0 -1
+~
+You see a small alcove in this direction.
+~
+#13959
+West Alcove of the Throne Room~
+This is a small alcove off the west side of the throne room.  It is lit by a
+pair of flaming torches, one on each wall.  On the east wall is a pair of
+curtains covering a heavy wooden door.  There is also a pair of curtains on
+the western entrance to hide this alcove from the throne room proper.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D EAST 13960 0 -1
+~
+You can head into the King's quarters this way.
+~
+D WEST 13958 0 -1
+~
+The throne room extends as far as the eye can see this way.
+~
+#13960
+King's Chambers~
+You are standing in the centre of the King's private chambers.  There is a
+small desk and chair here, and a small but comfortable sofa.  On the walls
+there are several ceremonial swords and shields, made of various precious
+metals, and as such unsuitable for battle.  The room is very much different
+from the throne room outside, having almost no luxuries, but instead being
+quite spartan and neat.  The throne room continues north and south.  On the
+east wall you see a very large reinforced door.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D NORTH 13963 0 -1
+~
+The King's chambers continue in this direction.
+~
+D EAST 13961 0 -1
+~
+You see a small room in this direction.
+~
+D SOUTH 13954 0 -1
+~
+The King's chambers continue in this direction.
+~
+D WEST 13959 0 -1
+~
+You see a small alcove in this direction.
+~
+#13961
+King's Treasure Chamber~
+This is a small, fortified room with a steel-lined door, and a large chest
+bolted to the floor.  The walls aren't finished smoothly like the rest of the
+tower, but instead have been left rough, you don't know why.  You can, however,
+see various stains on the walls which appear to be the blood of former
+pilferers...
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D WEST 13960 0 -1
+~
+You can return to the King's chambers this way.
+~
+#13962
+Before the King's Throne~
+You are standing before the King's throne.  Finely crafted from rare woods,
+gold and cut rubies, you are duly impressed by this throne.  It stands on
+a pedestal of polished black granite and is upholstered in fine velvet.
+Behind the throne is a rack for the King to store his sword and shield
+handy for any emergency.  You can return to the throne room to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13958 0 -1
+~
+The throne room extends as far as the eye can see this way.
+~
+#13963
+King's Chambers~
+You are now in the King's private bedchamber.  Along one wall is a large
+but relatively plain single bed.  On the walls are two tapestries, both
+depicting scenes of war and bloodshed.  The floor is polished granite,
+but there are no rugs to warm the floor, only cold hard stone.  It seems
+the King doesn't wish to become soft in his reign.  You can return to the
+main part of the chambers to the south.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_FROM
+D SOUTH 13960 0 -1
+~
+You can return to the King's chambers this way.
+~
+#0
+
+
+
+#RESETS
+MOB 13902 TO 13902 GLIMIT 10 LLIMIT 2
+EQUIP 13904 FEET
+MOB 13902 TO 13902 GLIMIT 10 LLIMIT 2
+EQUIP 13904 FEET
+MOB 13902 TO 13904 GLIMIT 10 LLIMIT 2
+EQUIP 13904 FEET
+MOB 13902 TO 13904 GLIMIT 10 LLIMIT 2
+EQUIP 13904 FEET
+MOB 13902 TO 13905 GLIMIT 10 LLIMIT 1
+EQUIP 13904 FEET
+MOB 13902 TO 13906 GLIMIT 10 LLIMIT 1
+EQUIP 13904 FEET
+MOB 13902 TO 13908 GLIMIT 10 LLIMIT 1
+EQUIP 13904 FEET
+MOB 13901 TO 13910 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13911 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13912 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13902 TO 13912 GLIMIT 10 LLIMIT 1
+EQUIP 13904 FEET
+MOB 13902 TO 13917 GLIMIT 10 LLIMIT 1
+EQUIP 13904 FEET
+MOB 13901 TO 13920 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13905 TO 13921 GLIMIT 1 LLIMIT 1
+EQUIP 13912 NECKONE
+MOB 13901 TO 13923 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13903 TO 13927 GLIMIT 1 LLIMIT 1
+EQUIP 13907 BODY
+EQUIP 13905 HOLD
+MOB 13906 TO 13927 GLIMIT 2 LLIMIT 2
+MOB 13906 TO 13927 GLIMIT 2 LLIMIT 2
+MOB 13902 TO 13930 GLIMIT 10 LLIMIT 1
+EQUIP 13904 FEET
+MOB 13901 TO 13931 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13933 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13937 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13939 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13942 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13901 TO 13944 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13900 TO 13948 GLIMIT 5 LLIMIT 1
+EQUIP 13902 WIELD
+MOB 13901 TO 13949 GLIMIT 12 LLIMIT 1
+EQUIP 13903 HANDS
+MOB 13900 TO 13951 GLIMIT 5 LLIMIT 1
+EQUIP 13902 WIELD
+MOB 13900 TO 13953 GLIMIT 5 LLIMIT 1
+EQUIP 13902 WIELD
+MOB 13904 TO 13956 GLIMIT 1 LLIMIT 1
+EQUIP 13908 WIELD
+GIVE 13900
+EQUIP 13920 SHIELD
+EQUIP 13914 LFINGER
+MOB 13900 TO 13957 GLIMIT 5 LLIMIT 1
+EQUIP 13902 WIELD
+MOB 13900 TO 13959 GLIMIT 5 LLIMIT 1
+EQUIP 13902 WIELD
+MOB 13908 TO 13961 GLIMIT 1 LLIMIT 1
+EQUIP 13921 WIELD
+MOB 13907 TO 13962 GLIMIT 1 LLIMIT 1
+EQUIP 13913 HOLD
+EQUIP 13916 HEAD
+EQUIP 13914 LFINGER
+EQUIP 13917 NECKONE
+S
+
+#IMPROGS
+END
+#$

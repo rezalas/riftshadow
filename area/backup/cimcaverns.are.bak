@@ -1,0 +1,1874 @@
+#AREA
+cimcaverns.are~
+Cim Caverns~
+Waekath~
+10 20
+3200 3299
+unopened
+none
+0
+1
+Waekath~
+
+#MOBS
+#3200
+formian larva~
+a formian larva~
+A large, bloated mass of moving flesh lies here, waiting to be fed.
+~
+Writhing in mucas, dirt, and only the gods know what else, the larvae of
+the Formian are both well protected and well tended. They are the future of
+the Formian, the power that will bring the chaotic world into control.
+Believing that, and seeing this fleshy worm are two things on opposite
+poles.
+~
+0 0 0 human~
+10 5d8+151 2d4+2 3 100 bite
+0 0 0 0
+standing either none
+R 0 small
+ACT NPC
+VUL FIRE
+NOTES ~
+#3201
+formian pupa~
+a formian pupa~
+.
+~
+~
+0 0 0 human~
+13 6d8+255 1d10+3 4 100 bite
+0 0 0 0
+standing either none
+O 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+AFF DARK_VISION
+NOTES ~
+#3202
+formian worker~
+a formian worker~
+An abnormally large ant stands here, digging furiously at the walls.
+~
+Standing to roughly the size of a small dog, this formian worker works
+continuously without complaint. Deep red tinted armor protects it more
+from the environment than from attacks, it still could hinder blade and
+similiar strikes as well. Its front claws look more as though they are
+more evolved to dig, rather than fight. Raised from larvae, this giant
+insect has no hope of becoming anything else, and will live its life as
+only a mere worker.
+~
+0 28704 0 unique~
+7 3d8+74 0d0+0 2 100 none
+0 0 0 0
+standing male none
+AHMV AHMV medium
+ACT NPC
+ACT SMARTTRACK
+#3203
+formian warrior~
+a formian warrior~
+A human-sized ant patrols the caverns, seeking both intruders and slaves.
+~
+Standing as tall as almost five feet in height, this giant insect looks to
+be a cross between a centaur and giant ant. A dark red exoskeleton protects
+this warrior from intruder attacks as easily as most versions of
+platemail. Large pincer-like hands look ready to render the flesh from
+bone easily, or could be used to minuplate other weapons just as well; a 
+set of large mandibles protrude from the insects mouth, easily used as a 
+weapon as well.
+~
+0 28704 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3204
+a formian taskmaster~
+a formian taskmaster~
+A large, human sized ant stands here, directing the slaves to work.
+~
+Armed with a mean temper and an even meaner weapon, this large Formian has
+been left in charge of the slaves. A dark red exoskeleton protects this
+formian from intruder attacks as easily as most versions of platemail.
+Large pincer-like hands look ready to render the flesh from bone easily, 
+or could be used to minuplate other weapons just as well Oddly, this 
+particular type of Formian has no mandibles, nor any mouth at all.
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3205
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3206
+formian queen guardsman~
+a formian queen guardsman~
+~
+~
+0 0 0 human~
+26 13d8+1022 3d7+7 0 100 none
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+AFF DARK_VISION
+#3207
+formian queen~
+the formian queen~
+A large bloated mass rests here, moving only to deposit yet another egg.
+~
+Bloated beyond comprehension, this large mass of flesh and mucas looks 
+horrifying to the extreme. Her legs look as though they have not been used 
+ever, and occasionally twitch at random. Her bloated form never moving 
+from the royal chambers renders her vunerable, as she is more commanding
+orientated than fighting.
+~
+0 0 0 human~
+28 14d8+1187 2d6+6 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+VUL BASH
+VUL PIERCE
+VUL SLASH
+NOTES ~
+#3208
+goblin captive~
+a goblin captive~
+Working on the tunnel, this smelly little goblin performs only half-heartedly.
+~
+Looking very unkept, even by goblin standards, this particular goblin
+seems to have lost pretty much all will. Tattered rags barely covers its
+very bruised flesh, though it is very hard to distinguish through the dirt
+and sweat. Its glazed over eyes give the impression of resignation,
+something the goblinoid races have been known to do quite quickly.
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3209
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3210
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3211
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3212
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3213
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3214
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3215
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#3200
+shovel~
+a small rusted shovel~
+An old, rusted shovel protrudes from the dirt here, looking ready to dig.~
+weapon
+metal~
+mace 1 10 pound 0
+5 12 35 P
+WEAR WIELD
+WEAR BRAND
+LIMIT 0
+TIMER 0
+
+#3201
+pointy stick~
+a pointy stick~
+A small stick with a sharp end lies here.~
+weapon
+wood~
+dagger 1 8 none 0
+2 7 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY CON 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#3202
+crude leather armor~
+some crude leather armor~
+A large hunk of rotting leather lies here, reaking of age.~
+armor
+leather~
+1 1 1 1 0
+5 6 0 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#3203
+cheap necklace~
+a cheap necklace~
+A cheap, circular piece of ceramic lies here, collecting even more dust.~
+armor
+ceramic~
+1 1 1 1 0
+6 3 2 P
+WEAR TAKE
+WEAR NECK
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+E cheap~
+Made of a fairly cheap ceramic, this necklace looks to be old and worn. A
+jewelless pendant drapes down heavly, the gem socket long since abandoned
+by any precious stone.
+~
+E socket~
+The tiny braces set within the socket seem sturdy, waiting for a stone to
+be inserted into it so that the necklace might finally, or once again, be
+complete.
+~
+E necklace~
+Made of a fairly cheap ceramic, this necklace looks to be old and worn. A
+jewelless pendant drapes down heavly, the gem socket long since abandoned
+by any precious stone.
+~
+
+#3204
+shoddy dagger~
+a shoddy rusted dagger~
+dummy desc~
+weapon
+iron~
+dagger 2 3 slash 0
+5 3 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#3205
+half leather shield~
+half of a leather shield~
+dummy desc~
+armor
+leather~
+1 1 0 0 0
+5 3 0 P
+WEAR TAKE
+WEAR SHIELD
+LIMIT 0
+TIMER 0
+
+#3206
+orange cloth cloak~
+a rotting orange cloak~
+A pile of rotting, bright orange cloth lies here.~
+armor
+cloth~
+0 0 0 0 0
+7 0 0 P
+WEAR TAKE
+WEAR ABOUT
+APPLY CON 2
+LIMIT 0
+TIMER 0
+
+#3207
+leather skullcap~
+an old leather skullcap~
+An old skullcap seeing its last days lies here, awaiting its final master.~
+armor
+leather~
+1 1 1 1 0
+5 5 0 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+TIMER 0
+
+#3208
+studded leather armor~
+some studded leather armor~
+An upper torso piece of studded leather lies here, needing oiled somewhat.~
+armor
+leather~
+1 2 2 1 0
+0 10 0 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#3209
+rusted rusty sword~
+a rusted sword~
+A piece of old iron has rusted away, but still somewhat resembles a weapon.~
+weapon
+iron~
+weapon 0 0 none 0
+5 0 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#3210
+skeleton~
+the skeleton of a slave~
+The skeletal remains of an unfortunate victim lies here, screaming quietly.~
+container
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#3211
+weathered map parchment cavern caverns~
+a weathered map~
+A piece of old parchment lies here, slightly spattered with dried blood.~
+trash
+parchment~
+0 0 0 0 0
+0 1 5 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E map~
+**************************************************************************
+*                                                                        *
+*         /-----\     -------                                            *
+*         |     |     |     |     This is a map I have devised thus far  *
+*         |     \-----/     |     in my exploration of these caverns.    *
+*                  |                                                     *
+*                  |              Things of note: A few places in the    *
+*                  |              tunnels have been caved in, whether    *
+*               /---              on purpose or not. This has limited    *
+*               |                 my abilities to fully explore all of   *
+*               |                 the passage ways.                      *
+*               |                                                        *
+*               | -Mouth of the              Ulendad a'Astirewyr         *
+*               |    Caverns                                             *
+*                                                                        *
+**************************************************************************
+~
+
+#3212
+small orange formian egg~
+a small, orange tinted egg~
+A small egg with a strange orange tint lies here, doing what eggs do best.~
+food
+meat~
+5 10 0 0 0
+5 2 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+NOTES Will turn into formian worker
+~
+
+#3213
+medium yellow formian egg~
+a medium-sized, yellow egg~
+A decent sized, yellow shelled egg rests here, waiting to hatch patiently.~
+food
+meat~
+7 13 0 0 0
+7 4 1000 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3214
+large green egg~
+a large, green egg~
+A fairly large green egg quietly sits here, moving slightly every so often.~
+food
+meat~
+9 15 0 0 0
+8 0 1500 P
+WEAR TAKE
+LIMIT 0
+MSG WEAR ~
+~
+TIMER 0
+NOTES ~
+
+#3215
+large blue formian egg~
+a large, blue spotted egg~
+A blue egg the size of a cat lies here, looking ready to hatch at any time.~
+food
+meat~
+12 15 0 0 0
+10 5 2000 P
+WEAR TAKE
+LIMIT 0
+MSG WEAR ~
+~
+TIMER 0
+NOTES ~
+
+#3216
+vegitation~
+some rotting vegitation~
+A pile of rotting vegitation lies here.~
+container
+unknown~
+0 0 0 10 0
+0 0 0 P
+ITEM NOSHOW
+LIMIT 0
+MSG WEAR ~
+~
+TIMER 0
+NOTES ~
+
+#3217
+tarnished brass ring~
+a tarnished brass ring~
+A brass ring lies here, tarnishing even more the longer it rests here.~
+armor
+brass~
+1 1 1 1 0
+1 2 5 P
+WEAR TAKE
+WEAR FINGER
+LIMIT 0
+TIMER 0
+E tarnished~
+The brass hoop looks to be in dire need of cleaning, and even that may not
+save the beauty that it once could have been. An empty socket rests at the
+top of the ring, strangely missing any ornimental stones.
+~
+E brass~
+The brass hoop looks to be in dire need of cleaning, and even that may not
+save the beauty that it once could have been. An empty socket rests at the
+top of the ring, strangely missing any ornimental stones.
+~
+E ring~
+The brass hoop looks to be in dire need of cleaning, and even that may not
+save the beauty that it once could have been. An empty socket rests at the
+top of the ring, strangely missing any ornimental stones.
+~
+E socket~
+The tiny braces set within the socket seem sturdy, waiting for a stone to
+be inserted into it so that the ring might finally, or once again, be
+complete.
+~
+
+#3220
+red jasper stone~
+a dark red stone~
+A dark red stone glints softly in the light.~
+treasure
+stone~
+0 0 0 0 0
+7 2 10 P
+WEAR TAKE
+WEAR HOLD
+APPLY STR 2
+LIMIT 0
+TIMER 0
+
+#3221
+blue agate stone~
+a light blue stone~
+A chunk of light blue stone has carelessly tossed to where it finally lies.~
+treasure
+stone~
+0 0 0 0 0
+7 2 10 P
+WEAR TAKE
+WEAR HOLD
+APPLY CON 2
+LIMIT 0
+TIMER 0
+
+#3299
+cavern map~
+map of Cim Caverns: IMM USE ONLY~
+An old parchment lies here, revealing its secrets.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E map~
+LEVEL 1                               LEVEL 2             
+                         D                                              
+                         |                                              
+                         +--+                           +--+            
+                            |                           |  |            
+                +--+--+     +                           +  +--+         
+                |     |     |                           |     |         
+ +--+--+     +--+--+  +--+--+                     +--+--+  +  +--+--+   
+ |     |     |     |        |                     /        |  |         
+ +     +--+--+--+  +        +--+               +-++--+--+--+  +--+      
+          |     |           |  |               |  \  |        |  |      
+          +--+  +--+        +--+         +--+--+  +  +--+--+  +  +--+   
+          |  |     |           |         |        |  |     |        |   
+       +--+  +  +--+  +--+     +         +     +--+--+     +--+--+  +   
+       |     |  |     |  |     |         |     |  |        |     |  |   
+       +  +--+--+--+--+  +  +--+         +--+--+--+        +     +--+   
+       |   inside        |  |                  |  |                     
+       +   ===========   +--+            +--+--+  U                     
+       |   outside                                                      
+       +                                                                
+       |                                                                
+~
+
+#0
+
+
+
+#ROOMS
+#3200
+Connecting room~
+This room is going to be used to connect the cavern entrance to side of Mt Cim
+~
+mountains
+ROOM SAFE
+ROOM LAW
+D NORTH 3201 0 0
+~
+~
+OWNER none~
+#3201
+Entrance to the Depths~
+Digging deeply into the side of the massive mountain, a large hole tunnels
+its way inward towards the heart of the ancient stone monolith. Cool air
+wafts from the interior of the caverns, leaving a musty smell in its wake.
+North lies the cavern entrance, while south leads back towards the plains.
+East and west are blocked by the walls of the mountain cleft.
+~
+mountains
+D NORTH 3208 0 0
+~
+~
+D SOUTH 3200 0 0
+~
+~
+OWNER none~
+#3202
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3214 0 0
+~
+~
+D EAST 3203 0 0
+~
+~
+OWNER none~
+#3203
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3215 0 0
+~
+~
+D WEST 3202 0 0
+~
+~
+OWNER none~
+#3204
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3205 0 0
+~
+~
+OWNER none~
+#3205
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3206 0 0
+~
+~
+D WEST 3204 0 0
+~
+~
+OWNER none~
+#3206
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3219 0 0
+~
+~
+D WEST 3205 0 0
+~
+~
+OWNER none~
+#3207
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3220 0 0
+~
+~
+D UP 3299 0 0
+~
+~
+OWNER none~
+#3208
+Inside the Cave Mouth~
+Breaching the side of the mountain, a cool crisp breeze rushes at you. In
+its wake, it leaves a mixture of smells that remind you of unwashed bodies
+and mold. The air in the immediate area seems to be reaching a stable,
+cool temperature as well. Even this short distance into the mountain, you
+already have the sense of thousands of tons of stone, rock and dirt
+overhead. Southward, a faint light glimmers and you can almost hear the
+birds chirp, while eastward the tunnel continues it's ancient trek inward.
+~
+inside
+ROOM INDOORS
+D NORTH 3224 0 0
+~
+~
+D SOUTH 3201 0 0
+~
+~
+OWNER none~
+#3209
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3210 0 0
+~
+~
+OWNER none~
+#3210
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3226 0 0
+~
+~
+D EAST 3211 0 0
+~
+~
+D WEST 3209 0 0
+~
+~
+OWNER none~
+#3211
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3227 0 0
+~
+~
+D EAST 3212 0 0
+~
+~
+D WEST 3210 0 0
+~
+~
+OWNER none~
+#3212
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3213 0 0
+~
+~
+D WEST 3211 0 0
+~
+~
+OWNER none~
+#3213
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3229 0 0
+~
+~
+D WEST 3212 0 0
+~
+~
+OWNER none~
+#3214
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3230 0 0
+~
+~
+D SOUTH 3202 0 0
+~
+~
+OWNER none~
+#3215
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3216 0 0
+~
+~
+D SOUTH 3203 0 0
+~
+~
+OWNER none~
+#3216
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3231 0 0
+~
+~
+D WEST 3215 0 0
+~
+~
+OWNER none~
+#3217
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3232 0 0
+~
+~
+D EAST 3218 0 0
+~
+~
+OWNER none~
+#3218
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3219 0 0
+~
+~
+D WEST 3217 0 0
+~
+~
+OWNER none~
+#3219
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3233 0 0
+~
+~
+D EAST 3220 0 0
+~
+~
+D SOUTH 3206 0 0
+~
+~
+D WEST 3218 0 0
+~
+~
+OWNER none~
+#3220
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3234 0 0
+~
+~
+D SOUTH 3207 0 0
+~
+~
+D WEST 3219 0 0
+~
+~
+OWNER none~
+#3221
+The Hatchery~
+This is a dummy room.
+~
+unused
+D NORTH 3236 0 0
+~
+~
+OWNER none~
+#3222
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3238 0 0
+~
+~
+D EAST 3223 0 0
+~
+~
+OWNER none~
+#3223
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3239 0 0
+~
+~
+D WEST 3222 0 0
+~
+~
+OWNER none~
+#3224
+A Bend in the Tunnel~
+Following the path intently, you come across a sharp turn. South, the air
+seems to be a bit fresher, if only a little. East, the darkness consumes
+the area completly.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 3225 0 0
+~
+~
+D SOUTH 3208 0 0
+~
+~
+OWNER none~
+#3225
+Inside the Caverns~
+The atmosphere has reached a cool, consistant temperature here. The dark
+has completly engulfed everything, save the glimmer of the west. as well.
+The tunnel is big enough for two to three titans standing abreast, leaving
+enough space for plenty of elbow room. To the north, the tunnel slowly
+continues its journey inward under the mountain.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 3240 0 0
+~
+~
+D WEST 3224 0 0
+~
+~
+OWNER none~
+#3226
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3241 0 0
+~
+~
+D SOUTH 3210 0 0
+~
+~
+OWNER none~
+#3227
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3228 0 0
+~
+~
+D SOUTH 3211 0 0
+~
+~
+OWNER none~
+#3228
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3243 0 0
+~
+~
+D WEST 3227 0 0
+~
+~
+OWNER none~
+#3229
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3230 0 0
+~
+~
+D SOUTH 3213 0 0
+~
+~
+OWNER none~
+#3230
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3214 0 0
+~
+~
+D WEST 3229 0 0
+~
+~
+OWNER none~
+#3231
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3245 0 0
+~
+~
+D SOUTH 3216 0 0
+~
+~
+OWNER none~
+#3232
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3246 0 0
+~
+~
+D SOUTH 3217 0 0
+~
+~
+OWNER none~
+#3233
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3234 0 0
+~
+~
+D SOUTH 3219 0 0
+~
+~
+OWNER none~
+#3234
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3249 0 0
+~
+~
+D EAST 3235 0 0
+~
+~
+D SOUTH 3220 0 0
+~
+~
+D WEST 3233 0 0
+~
+~
+OWNER none~
+#3235
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3250 0 0
+~
+~
+D WEST 3234 0 0
+~
+~
+OWNER none~
+#3236
+The Hatchery~
+This is a dummy room.
+~
+unused
+D NORTH 3252 0 0
+~
+~
+D EAST 3237 0 0
+~
+~
+D SOUTH 3221 0 0
+~
+~
+OWNER none~
+#3237
+The Queen's Quarters~
+This is a dummy room.
+~
+unused
+D EAST 3238 0 0
+~
+~
+D WEST 3236 0 0
+~
+~
+OWNER none~
+#3238
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3222 0 0
+~
+~
+D WEST 3237 0 0
+~
+~
+OWNER none~
+#3239
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3255 0 0
+~
+~
+D SOUTH 3223 0 0
+~
+~
+OWNER none~
+#3240
+A branch in the tunnel~
+The cavern walls in this area seem smooth, and worn with erosion. Various
+vegetation has been strung about, places where animals deemed that this was
+an appropriate spot for their den. A light scraping noise can be heard from
+the echoes from both the north and east of here, while the south holds a
+faint trace of fresh air.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 3258 0 0
+~
+~
+D EAST 3241 0 0
+~
+~
+D SOUTH 3225 0 0
+~
+~
+OWNER none~
+#3241
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3226 0 0
+~
+~
+D WEST 3240 0 0
+~
+~
+OWNER none~
+#3242
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3260 0 0
+~
+~
+D EAST 3243 0 0
+~
+~
+OWNER none~
+#3243
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3228 0 0
+~
+~
+D WEST 3242 0 0
+~
+~
+OWNER none~
+#3244
+An underground lake~
+This is a dummy room.
+~
+water
+D NORTH 3262 0 0
+~
+~
+D EAST 3245 0 0
+~
+~
+OWNER none~
+#3245
+An underground lake~
+This is a dummy room.
+~
+water
+D NORTH 3263 0 0
+~
+~
+D SOUTH 3231 0 0
+~
+~
+D WEST 3244 0 0
+~
+~
+OWNER none~
+#3246
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3247 0 0
+~
+~
+D SOUTH 3232 0 0
+~
+~
+OWNER none~
+#3247
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3248 0 0
+~
+~
+D WEST 3246 0 0
+~
+~
+OWNER none~
+#3248
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3264 0 0
+~
+~
+D WEST 3247 0 0
+~
+~
+OWNER none~
+#3249
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3265 0 0
+~
+~
+D SOUTH 3234 0 0
+~
+~
+OWNER none~
+#3250
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3267 0 0
+~
+~
+D SOUTH 3235 0 0
+~
+~
+OWNER none~
+#3251
+The Hatchery~
+This is a dummy room.
+~
+unused
+D EAST 3252 0 0
+~
+~
+OWNER none~
+#3252
+The Hatchery~
+This is a dummy room.
+~
+unused
+D SOUTH 3236 0 0
+~
+~
+D WEST 3251 0 0
+~
+~
+OWNER none~
+#3253
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3287 0 0
+~
+~
+D WEST 3271 0 0
+~
+~
+OWNER none~
+#3254
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3271 0 0
+~
+~
+D EAST 3255 0 0
+~
+~
+OWNER none~
+#3255
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3239 0 0
+~
+~
+D WEST 3254 0 0
+~
+~
+OWNER none~
+#3256
+A dead end in the tunnel~
+This is a dummy room.
+~
+unused
+D NORTH 3272 0 0
+~
+~
+OWNER none~
+#3257
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3274 0 0
+~
+~
+D EAST 3258 0 0
+~
+~
+OWNER none~
+#3258
+A T-intersection~
+Completely engulfed by mountainous rock, the small cavern has left all 
+traces of the outside world behind. The feeling of thousands of tons of 
+rock all around gives off the feeling of clostrophobia. The rock is smooth 
+and worn to the east and south, while to the west it seems a bit more 
+rougher than natural erosion. A heavily treaded path runs east and western 
+in direction, a few fresh tracks showing strange prints in the dust.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 3259 0 0
+~
+~
+D SOUTH 3240 0 0
+~
+~
+D WEST 3257 0 0
+~
+~
+OWNER none~
+#3259
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3275 0 0
+~
+~
+D EAST 3260 0 0
+~
+~
+D WEST 3258 0 0
+~
+~
+OWNER none~
+#3260
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3242 0 0
+~
+~
+D WEST 3259 0 0
+~
+~
+OWNER none~
+#3261
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3277 0 0
+~
+~
+OWNER none~
+#3262
+An underground lake~
+This is a dummy room.
+~
+water
+D NORTH 3280 0 0
+~
+~
+D EAST 3263 0 0
+~
+~
+D SOUTH 3244 0 0
+~
+~
+OWNER none~
+#3263
+An underground lake~
+This is a dummy room.
+~
+water
+D SOUTH 3245 0 0
+~
+~
+D WEST 3262 0 0
+~
+~
+OWNER none~
+#3264
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3266 0 0
+~
+~
+D SOUTH 3248 0 0
+~
+~
+OWNER none~
+#3265
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3281 0 0
+~
+~
+D SOUTH 3249 0 0
+~
+~
+OWNER none~
+#3266
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3267 0 0
+~
+~
+D WEST 3264 0 0
+~
+~
+OWNER none~
+#3267
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3250 0 0
+~
+~
+D WEST 3266 0 0
+~
+~
+OWNER none~
+#3270
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3285 0 0
+~
+~
+D EAST 3271 0 0
+~
+~
+OWNER none~
+#3271
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3253 0 0
+~
+~
+D SOUTH 3254 0 0
+~
+~
+D WEST 3270 0 0
+~
+~
+OWNER none~
+#3272
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3273 0 0
+~
+~
+D SOUTH 3256 0 0
+~
+~
+OWNER none~
+#3273
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3274 0 0
+~
+~
+D WEST 3272 0 0
+~
+~
+OWNER none~
+#3274
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3257 0 0
+~
+~
+D WEST 3273 0 0
+~
+~
+OWNER none~
+#3275
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3276 0 0
+~
+~
+D SOUTH 3259 0 0
+~
+~
+OWNER none~
+#3276
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3288 0 0
+~
+~
+D EAST 3277 0 0
+~
+~
+D WEST 3275 0 0
+~
+~
+OWNER none~
+#3277
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3261 0 0
+~
+~
+D WEST 3276 0 0
+~
+~
+OWNER none~
+#3278
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3290 0 0
+~
+~
+D EAST 3279 0 0
+~
+~
+OWNER none~
+#3279
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3280 0 0
+~
+~
+D WEST 3278 0 0
+~
+~
+OWNER none~
+#3280
+Dummy Room~
+This is a dummy room.
+This is a dummy room.
+~
+unused
+D NORTH 3291 0 0
+~
+~
+D SOUTH 3262 0 0
+~
+~
+D WEST 3279 0 0
+~
+~
+OWNER none~
+#3281
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3282 0 0
+~
+~
+D SOUTH 3265 0 0
+~
+~
+OWNER none~
+#3282
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3283 0 0
+~
+~
+D WEST 3281 0 0
+~
+~
+OWNER none~
+#3283
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3292 0 0
+~
+~
+D WEST 3282 0 0
+~
+~
+OWNER none~
+#3285
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3294 0 0
+~
+~
+D EAST 3286 0 0
+~
+~
+D SOUTH 3270 0 0
+~
+~
+OWNER none~
+#3286
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3287 0 0
+~
+~
+D WEST 3285 0 0
+~
+~
+OWNER none~
+#3287
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3253 0 0
+~
+~
+D WEST 3286 0 0
+~
+~
+OWNER none~
+#3288
+Dummy Room~
+This is a dummy room.
+This is a dummy room.
+~
+unused
+D EAST 3289 0 0
+~
+~
+D SOUTH 3276 0 0
+~
+~
+OWNER none~
+#3289
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3290 0 0
+~
+~
+D WEST 3288 0 0
+~
+~
+OWNER none~
+#3290
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3278 0 0
+~
+~
+D WEST 3289 0 0
+~
+~
+OWNER none~
+#3291
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3296 0 0
+~
+~
+D SOUTH 3280 0 0
+~
+~
+OWNER none~
+#3292
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3297 0 0
+~
+~
+D SOUTH 3283 0 0
+~
+~
+OWNER none~
+#3293
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3298 0 0
+~
+~
+D EAST 3294 0 0
+~
+~
+OWNER none~
+#3294
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3285 0 0
+~
+~
+D WEST 3293 0 0
+~
+~
+OWNER none~
+#3295
+Dummy Room~
+This is a dummy room.
+~
+unused
+D NORTH 3299 0 0
+~
+~
+D EAST 3296 0 0
+~
+~
+OWNER none~
+#3296
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3291 0 0
+~
+~
+D WEST 3295 0 0
+~
+~
+OWNER none~
+#3297
+Dummy Room~
+This is a dummy room.
+~
+unused
+D EAST 3298 0 0
+~
+~
+D SOUTH 3292 0 0
+~
+~
+OWNER none~
+#3298
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3293 0 0
+~
+~
+D WEST 3297 0 0
+~
+~
+OWNER none~
+#3299
+Dummy Room~
+This is a dummy room.
+~
+unused
+D SOUTH 3295 0 0
+~
+~
+D DOWN 3207 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+OBJECT 3210 TO 3201
+PUT 3211 IN 3210 COUNT 1
+OBJECT 3212 TO 3221
+OBJECT 3213 TO 3236
+MOB 3207 TO 3237 GLIMIT 1 LLIMIT 1
+OBJECT 3216 TO 3240
+PUT 3201 IN 3216 COUNT 1
+OBJECT 3215 TO 3251
+OBJECT 3214 TO 3252
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

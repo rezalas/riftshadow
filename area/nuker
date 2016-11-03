@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+
+($file) = @ARGV;
+
+open(GDATA, "$file");
+  @tempdata = <GDATA>;
+close(GDATA);
+$data = join("", @tempdata);
+
+$data =~ s/\r//g;
+
+open(PDATA, ">$file");
+print PDATA $data;
+close(PDATA);

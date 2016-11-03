@@ -1,0 +1,38 @@
+#AREA
+tyner.are~
+Tyner's Area~
+Tyner~
+0 0
+9500 9599
+normal
+none
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#9500
+Dummy Room~
+This is the example description.  
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

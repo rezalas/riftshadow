@@ -1,0 +1,144 @@
+#AREA
+aetplaroad.are~
+Aetullan-Plains Road~
+RS~
+1 51
+24450 24459
+normal
+temperate
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24450
+On the Road~
+The road from Aetullan to the Plains   
+~
+road
+D EAST 24451 0 0
+~
+~
+D WEST 24436 0 0
+~
+~
+#24451
+On the Road~
+The road from Aetullan to the Plains   
+~
+road
+D EAST 24452 0 0
+~
+~
+D WEST 24450 0 0
+~
+~
+#24452
+On the Road~
+The road from Aetullan to the Plains   
+~
+road
+D NORTH 24453 0 0
+~
+~
+D WEST 24451 0 0
+~
+~
+#24453
+On the Road~
+The road from Aetullan to the Plains   
+~
+road
+D EAST 24454 0 0
+~
+~
+D SOUTH 24452 0 0
+~
+~
+#24454
+On the Road~
+The road from Aetullan to the Plains   
+~
+road
+D EAST 24455 0 0
+~
+~
+D WEST 24453 0 0
+~
+~
+#24455
+On the Road~
+The road from Aetullan to the Plains   
+~
+road
+D NORTH 300 0 0
+~
+~
+D EAST 24456 0 0
+~
+~
+D WEST 24454 0 0
+~
+~
+#24456
+On the Road~
+The road from the Plains to Emerald Forest   
+~
+road
+D EAST 24457 0 0
+~
+~
+D WEST 24455 0 0
+~
+~
+#24457
+On the Road~
+The road from the Plains to Emerald Forest   
+~
+road
+D EAST 24458 0 0
+~
+~
+D WEST 24456 0 0
+~
+~
+#24458
+On the Road~
+The road from the Plains to Emerald Forest   
+~
+road
+D EAST 24459 0 0
+~
+~
+D WEST 24457 0 0
+~
+~
+#24459
+On the Road~
+The road from the Plains to Emerald Forest   
+~
+road
+D EAST 19214 0 0
+~
+~
+D WEST 24458 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

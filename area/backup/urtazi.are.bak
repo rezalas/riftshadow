@@ -1,0 +1,2039 @@
+#AREA
+urtazi.are~
+Urtazi~
+Rudem~
+40 51
+3300 3399
+unopened
+none
+0
+1
+Rudem Lyntress~
+
+#MOBS
+#3300
+lynchre titan abyss~
+Lynchre~
+A giant abyss stands here hammering weapons into place.
+~
+A massive red skinned colasses with sulfuric breath, black eyes, and a
+slick black mane.  He wears snugg fitting armor on his body, and has a
+massive bloody axe hung at his waist.  His hand rests on the axe, ready to
+pull it out and massacre any threat that comes his way.  
+~
+-1000 0 0 abyss~
+53 26d8+5500 10d8+90 100 100 punch
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+ACT AGGRESSIVE
+ACT INTELLIGENT
+ACT NOPURGE
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+CLASS warrior Gladiator Barbarian 
+#3301
+Larnest beast spectre specter ghost~
+Larnest~
+A spectre floats here, waiting to attack its next victim.
+~
+Larnest is a medium sized dark spectre.  He seems to draw in light and
+engulf it in the darkness that surrounds him.  He has eyes of red and they
+are glaring malevolently at you.  
+~
+-1000 0 0 spectre~
+49 24d8+3869 4d10+28 0 100 chaotic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT INTELLIGENT
+ACT NOPURGE
+OFF AREA_ATTACK
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF SPAM_MURDER
+AFF PROTECTION
+AFF DARKSANC
+B size EQUALTO 10 3325 EMOTE moves to block $n's path.~
+#3302
+ghost~
+a ghost~
+The ghost of an abyss titan wanders here.
+~
+This is the ghost of an abyss titan.  He was slain here and refuses to
+leave.  He wanders the halls here forever in search of the person who killed
+him to take out his revenge. 
+~
+-1000 0 0 spectre~
+40 20d8+2464 4d8+18 0 100 chill
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT SMARTTRACK
+ACT INTELLIGENT
+ACT FAST_TRACK
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+AFF INFRARED
+IMM BASH
+IMM PIERCE
+IMM SLASH
+LIMIT 3319 3323
+#3303
+fire beast~
+a fire beast~
+A fire beast waits patiently for it's next victim.
+~
+Lynchre's pet fire beast is glaring at you for intruding his master's home.
+His firey red skin seems to glow a brighter red as he bares his bloody teeth
+at you. His eyes are a pure black, it feels like you are being pulled into
+the darkness as you look into them.
+~
+-1000 0 0 demon~
+45 22d8+3177 8d4+22 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT INTELLIGENT
+ACT FAST_TRACK
+ACT FASTWANDER
+OFF PARRY
+AFF DARKSANC
+VUL COLD
+VUL HOLY
+LIMIT 3300 3317
+#3304
+imp~
+an imp~
+A dirty little imp is poking you with a stick.
+~
+This imp is the servant of the fire beasts here. He is contantly trying to 
+make sure the beasts are well fed and happy. He is currently looking for his
+next beast to please, so as not to make Lynchre unhappy with hi
+~
+-1000 8224 8224 imp~
+42 21d8+2733 6d6+25 0 100 stab
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF PARRY
+LIMIT 3312 3317
+#3305
+mimsa ghost~
+Mimsa~
+Mimsa is here haunting the halls.
+~
+Mimsa fell to the harsh hand of Lynchre ages ago. This elven ghost haunts
+Lynchre to make his living as unpleasant as possible. She is always watching
+and waiting for him to come to his demise so she can come to peace with her 
+life.
+~
+-1000 0 8307 spectre~
+42 21d8+2733 3d12+20 0 100 chill
+0 0 0 0
+standing female none
+HMV HMV medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT SMARTTRACK
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF PARRY
+LIMIT 3300 3320
+#3306
+jaqueth ghost~
+Jaqueth~
+Jaqueth is roaming the halls in his ghostly form.
+~
+A halfling of great stature in his community haunts here in his unrest.
+Slain by the powerful Lynchre, he does all he can to make it a pain for
+Lynchre to live in the mortal world while Jaqueth and his companions
+are forced to be in the world of the undead.
+~
+-1000 0 0 spectre~
+42 21d8+2733 3d12+20 0 100 chill
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT SMARTTRACK
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF PARRY
+LIMIT 3300 3320
+#3307
+ganisha ghost~
+Ganisha~
+Ganisha terries here before moving on to haunt his captor.
+~
+Ganisha, a slain dwarf, haunts this cave not because of riches or mining,
+but because he was slain here. Ganisha will wait until the end of time
+to see his death avenged and see Lynchre beg for mercy as he grasps to
+the last breaths of his life.
+~
+0 0 0 spectre~
+42 21d8+2733 3d12+20 0 100 chill
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT SMARTTRACK
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF PARRY
+LIMIT 3300 3320
+#3308
+ghost centra~
+Centra~
+Centra noisily wanders the halls.
+~
+Centra is constantly banging around and tryng to create a loathsome
+environment for Lynchre to live in.  She is a slain celestial titan and
+waits for her vengence like the others.  
+~
+1000 0 0 spectre~
+43 21d8+2875 3d12+22 0 100 chill
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT SMARTTRACK
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF PARRY
+LIMIT 3300 3320
+#3309
+ghost Hamil~
+Hamil~
+Hamil is glaring at his surroundings.
+~
+Hamil is displeased with being in this rotten cave, but will not leave
+until his death is avenged.  He was once a handsome sidhe with an important
+job and family, but is now a worthless ghost.  
+~
+1000 0 0 spectre~
+43 21d8+2875 3d12+22 0 100 chill
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT SMARTTRACK
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF PARRY
+LIMIT 3300 3320
+#3310
+wizened old cleric~
+a wizened cleric~
+A wizened old man sits in prayer, face wrinkled with concentration.
+~
+This old cleric wears his wrinkles and scars as marks of pride.  He seems
+glad to be as old as he is, still devoutly in prayer.  Clerical robes marked
+with the insignia of a long dead religious order hang loosely from his body.
+Torn patches and dirt adorn the robes with as much fervor as the religious
+symbol.  
+~
+1000 0 0 human~
+30 30d8+1364 20d5+100 0 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT HEALER
+AFF SANCTUARY
+IMM MAGIC
+IMM WEAPON
+IMM FIRE
+IMM COLD
+IMM LIGHTNING
+IMM POISON
+IMM DISEASE
+IMM DROWNING
+#3311
+man paladin knight holy~
+a pious paladin~
+A tall human in full plate armor stands surveying his surroundings.
+~
+A statuesque, muscular man regards you with cool, icy blue eyes. 
+Emblazoned on his armor is a searing blade, the sigil of Rygath.  His
+sculpted, beautiful face speaks of his aristocratic upbringing.  He acts
+like he is deep in prayer, but the look in his eyes tells that he wonders
+what he's doing here.  
+~
+1000 0 0 human~
+25 25d8+944 6d5+5 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+AFF PROTECTION
+IMM HOLY
+#3312
+dark ranger human man~
+a shadowy ranger~
+Perfectly still, a human seems to blend in with his surroundings.
+~
+Mud caked over scarred, calloused skin greets you in this face of this
+woodlands man.  Leaves and other natural materials make up his clothing,
+protecting much of his body from the elements.  A tattooed forehead signals
+his dark allegiances.  His eyes seem far away, unconcerned, and his hair
+looks as if it's been hacked with a crude axe.  
+~
+-1000 0 0 human~
+15 15d8+339 4d7+4 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+AFF CAMOUFLAGE
+#3313
+traveler poor man~
+a poor traveler~
+A journey-stained traveler sleeps here fitfully.
+~
+This poor individual has nothing but a patch of floor and the clothes on
+their back to call their own.  They look as if they could use some bathing
+and a real bed.  A motley assortment of clothing adorns their tired body.  
+~
+0 0 0 human~
+15 15d8+339 2d3+5 0 100 punch
+0 0 0 0
+sleeping either none
+0 0 medium
+ACT NPC
+#3314
+abyss titan slaver slave driver~
+a haughty slaver~
+A massive abyss titan slaver has taken over this corner, using his slave as a stool.
+~
+Black skin bearing scars as marks of prides hangs tightly to the face of
+this muscular titan.  Huge red eyes stare down at anyone who dares look at
+him.  Heavy armor rests over fine silks, the titan's affluence obvious.  A
+slave-driving whip hangs from his belt, and brass knuckles adorn his hands. 
+~
+-1000 0 0 abyss~
+30 30d8+1364 10d3+15 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+CLASS warrior Barbarian none 
+NOTES ~
+#3315
+slave poor beaten minotaur~
+a minotaur slave~
+A badly beaten minotaur struggles here under the bulk of his titan captor.
+~
+Cuts and filth cover the mass of this minotaur.  His back has a large
+bend in it from constantly supporting the weight of his titan captor. 
+Infected wounds and open sores adorn his fur, which appears to once have
+been brown, but now is the rusty color of blood.  Some strange padded armor
+tips his horns, keeping them from inflicting pain.  
+~
+0 0 0 minotaur~
+20 20d8+604 3d1+4 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3316
+sly imp~
+a treacherous imp~
+A mischievous looking imp flutters about, trying to get ahead in line.
+~
+Flitting about the room seemingly in a hurry, this imp looks to be up to
+no good.  Imps are famous for being mischievous and tricksters, and this one
+is no exception.  He struggles and vies for a better place in line, much to
+the annoyance of the others looking to use the stove.  
+~
+-1000 0 0 imp~
+20 20d8+604 3d5+8 0 100 punch
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+#3317
+dwarf man miner~
+a dwarven miner~
+A short, rotund man grumbles as he waits for food.
+~
+An enormous beard, black from the soot that covers it, greets you from
+the chin of this dwarf.  Immensely rotund, he must have quite some trouble
+fitting in the mines, much less working them.  Still, he leans on his mining
+axe, looking fervently proud.  A shining suit of armor, making him ever more
+cumbersome, guards his body.  
+~
+0 0 0 dwarf~
+20 20d8+604 4d5+10 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#3318
+elf woman sage~
+an elven sage~
+A woman dressed in a flowing gown of white rests in the corner.
+~
+Fair skin surrounds golden eyes that seem to amplify the light in the
+room.  A white gown, frilled and adorned with lace, rests on the elven
+sage's slender body.  Golden hair, running down to her waist, contrasts with
+the pure white of her skin and dress.  She calmly regards all around her
+with eyes that speak of the philanthropy in her.  
+~
+1000 0 0 elf~
+22 22d8+731 5d5+2 0 100 punch
+0 0 0 0
+resting female none
+0 0 medium
+ACT NPC
+#3319
+cook fat rotund man halfling~
+a halfling cook~
+A grossly fat, short man, stirs a bowl angrily.
+~
+Coming up to barely three feet in height, this halfling easily exceeds
+that in his girth.  An annoyed expression seems interminable on his face,
+excepting the moments when he eats, which seem closer to ecstasy.  A stained
+apron attempts to stretch itself over his belly.  
+~
+0 0 0 halfling~
+18 18d8+489 5d3+2 0 100 punch
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+SHOPKEEPER OPEN 10 CLOSE 10 EXIT up
+#3320
+merchant traveling~
+a traveling merchant~
+A wandering merchant wanders around the hostel, searching for something.
+~
+Finely dressed, this slender man seems to have made his money through
+hard work.  His features indicate that he's not from an area anywhere near
+here, and considerable wear shows on his boots.  Even now, he doesn't stop
+to rest but continues wandering the hostel.  
+~
+0 0 0 human~
+15 15d8+339 3d3+5 0 100 none
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT FASTWANDER
+LIMIT 3340 3349
+#0
+
+
+
+#OBJS
+#3300
+blood ore torso armor~
+blood ore armor~
+A piece of bloody armor sits here untouched.~
+armor
+ore~
+14 14 14 14 0
+49 60 0 P
+WEAR TAKE
+WEAR BODY
+RESTRICT TITAN_ONLY
+ITEM DARK
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY HP 60
+APPLY CON 1
+APPLY DAMROLL 4
+APPLY HITROLL 4
+LIMIT 3
+TIMER 0
+
+#3301
+blood ore helmet helm metal~
+blood ore helmet~
+A piece of blood covered metal lies here.~
+armor
+ore~
+2 2 2 12 0
+49 30 0 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT TITAN_ONLY
+ITEM DARK
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY MANA 50
+APPLY HP 25
+APPLY SVSPELL -10
+APPLY INT 5
+APPLY WIS 5
+LIMIT 10
+TIMER 0
+
+#3302
+blood ore spear metal~
+blood ore spear~
+A long piece of thin metal lays here covered in blood.~
+weapon
+ore~
+spear 8 6 pierce 0
+49 25 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+ITEM NODISARM
+ITEM NOUNCURSE
+APPLY HP 50
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 10
+TIMER 0
+
+#3303
+blood ore axe metal~
+blood ore axe~
+A large piece of metal with a wooden handle lays here in fresh blood.~
+weapon
+ore~
+axe 7 8 chop 0
+49 45 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+ITEM NODISARM
+ITEM NOUNCURSE
+APPLY STR 3
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 10
+TIMER 0
+NOTES ~
+
+#3304
+Justice~
+justice~
+Justice lays here in the dirt.~
+weapon
+power~
+dagger 29 5 divine 0
+52 8 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT ELF_ONLY
+RESTRICT SORCERER_ONLY
+RESTRICT FEMALE_ONLY
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM NOREMOVE
+ITEM NODISARM
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+
+#3305
+chain~
+desc a chain~
+A chain lays here forgotten.~
+trash
+metal~
+0 0 0 0 0
+43 30 250 P
+WEAR TAKE
+WEAR HOLD
+ITEM ANTIEVIL
+LIMIT 0
+TIMER 0
+
+#3306
+fire collar~
+a collar of fire~
+A circle of fire lys here.~
+armor
+energy~
+6 6 6 6 0
+42 15 400 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#3307
+leash~
+a leash~
+A leash lays here unused.~
+trash
+leather~
+0 0 0 0 0
+42 20 100 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3308
+bracer thin chain~
+a thin chainmail bracer~
+A flimsy piece of mesh metal rests here.~
+armor
+chain~
+2 1 1 1 0
+20 3 100 P
+WEAR TAKE
+WEAR WRIST
+ITEM ANTIEVIL
+APPLY HITROLL 2
+APPLY HP 3
+LIMIT 0
+TIMER 0
+
+#3309
+plate mail platemail rygath~
+platemail armor bearing a searing blade~
+A large piece of metal, emblazoned with a sword, reflects the light here.~
+armor
+steel~
+5 5 5 5 0
+20 10 250 P
+WEAR TAKE
+WEAR BODY
+ITEM ANTIEVIL
+APPLY HP 10
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#3310
+heartstone hammer~
+a heartstone hammer~
+A strangely shaped rock sits on the ground.~
+weapon
+heartstone~
+mace 6 5 crush 0
+20 17 200 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIEVIL
+LIMIT 0
+TIMER 0
+
+#3311
+ring twined vines~
+a ring made of vines~
+A small circle of vine has been left here.~
+armor
+vine~
+0 0 1 0 0
+17 1 0 P
+WEAR TAKE
+WEAR FINGER
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#3312
+belt gourds~
+a belt strung with dried gourds~
+A pile of gourds sits lumped up.~
+armor
+plant~
+1 0 1 1 0
+15 4 0 P
+WEAR TAKE
+WEAR WAIST
+APPLY HP 7
+APPLY SVSPELL -3
+LIMIT 0
+TIMER 0
+
+#3313
+worn boots soft leather~
+a pair of worn leather boots~
+Beaten and scarred, worn leather boots wait to be worn.~
+armor
+leather~
+0 0 1 0 0
+15 5 0 P
+WEAR TAKE
+WEAR FEET
+APPLY NONE 50
+APPLY HP 5
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#3314
+belt snakeskin snake skin~
+a crude snakeskin belt~
+An old, tatty snake lies dead here.~
+armor
+skin~
+1 1 1 1 0
+18 3 100 P
+WEAR TAKE
+WEAR WAIST
+APPLY DEX 1
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#3315
+whip slave bone~
+a whip strung with flecks of bone~
+A long strip of leather lies amongst a pile of bones.~
+weapon
+leather~
+whip 8 4 bite 0
+30 4 400 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+LIMIT 0
+TIMER 0
+
+#3316
+knuckles brass~
+a pair of brass knuckles~
+Spiked brass rings lie in a heap.~
+armor
+brass~
+0 0 0 0 0
+25 10 0 P
+WEAR TAKE
+WEAR HANDS
+APPLY HITROLL -1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#3317
+pole arm polearm spikes~
+a polearm covered in spikes~
+A spiky piece of metal lies here.~
+weapon
+steel~
+polearm 6 5 pierce 0
+30 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NOREMOVE
+ITEM NOUNCURSE
+LIMIT 0
+TIMER 0
+
+#3318
+padded horn caps~
+a pair of padded horn caps~
+Two piles of padding joined by a chain lie here unused.~
+armor
+cloth~
+1 1 1 1 0
+20 5 50 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT MINOTAUR_ONLY
+APPLY HP 15
+APPLY DAMROLL -2
+LIMIT 0
+TIMER 0
+
+#3319
+black leather gloves~
+a pair of smooth black leather gloves~
+Bits of leather, worn smooth and sewn into gloves, sit on the floor.~
+armor
+leather~
+2 1 1 2 0
+20 0 500 P
+WEAR TAKE
+WEAR HANDS
+APPLY DEX 2
+LIMIT 0
+TIMER 0
+
+#3320
+shining mithril wrap~
+a shining mithril wrap~
+A gleaming pile of light metal lies on the ground.~
+armor
+mithril~
+3 3 3 3 0
+20 10 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+APPLY STR 1
+APPLY DAMROLL 2
+APPLY DEX -1
+LIMIT 0
+TIMER 0
+
+#3321
+flowing gown white lace~
+a gown of white lace~
+A large pile of white lace rests in a pile.~
+armor
+lace~
+1 1 0 1 0
+21 7 1000 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY WIS 1
+APPLY INT 2
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#3322
+circlet plain silver~
+a circlet of plain silver~
+A shining circlet of unadorned silver lies cast aside.~
+armor
+silver~
+0 0 0 5 0
+23 3 1200 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+APPLY MANA 20
+APPLY WIS 3
+LIMIT 0
+TIMER 0
+
+#3323
+bowl stew carrots~
+a bowl of stew filled with carrots~
+A steaming bowl of carrots sits here.~
+food
+food~
+5 7 0 0 0
+5 2 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3324
+thin jerky~
+some thin strips of salty jerky~
+Strips of a leathery material lie on the ground.~
+food
+beef~
+3 4 0 0 0
+2 0 5 P
+LIMIT 0
+TIMER 0
+
+#3325
+pot plain iron~
+a plain iron pot~
+A large iron pot rusts here quietly.~
+container
+iron~
+8 0 0 4 2
+10 6 50 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3326
+ring thick brass~
+a thick brass ring~
+A large hoop of brass rolls along.~
+treasure
+brass~
+0 0 0 0 0
+18 0 350 P
+APPLY CON 3
+APPLY HP 5
+LIMIT 0
+TIMER 0
+
+#3330
+grave stone gravestone rock~
+a gravestone~
+A smooth, flat rock rests on the ground.~
+trash
+stone~
+0 0 0 0 0
+25 0 0 P
+LIMIT 0
+TIMER 0
+E 'rock grave stone gravestone'~
+An ancient stone lies here, apparently marking the mortal remains of a
+long dead man.  The stone seems completely smooth, except for some strange
+wear on the sides.  
+~
+E rock grave stone gravestone~
+An ancient stone lies here, apparently marking the mortal remains of a
+long dead man.  The stone seems completely smooth, except for some strange
+wear on the sides.  
+~
+
+#3336
+key small filth~
+a small, filth-covered key.~
+A dirty piece of twisted metal lies here.~
+key
+steel~
+0 0 0 0 0
+1 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3337
+glimmer can steel~
+a glimmer is here, glimmering.~
+A small steel can rusts among the filth.~
+container
+steel~
+100 0 0 4 4
+1 5 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#3399
+map ur'tazi caves~
+a old map not for mortals~
+A old map is here, better sacrifice it~
+trash
+unknown~
+0 0 0 0 0
+52 0 0 P
+WEAR TAKE
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+E map~
+#       
+                                                  |       
+                                         #        #       
+                                         |        |       
+                                         #--#--#--#       
+                                                  |       
+                                                  #       
+                                                  |       
+                                                  #       
+                                                  |       
+                                                  #       
+                                                  |       
+                                            #--#--#--#    
+                                            |        |    
+                                            #     #--#--# 
+                                            |     |  |  | 
+                                            #     #--#--# 
+                                            |             
+                                      #--#--#             
+                                      |                   
+                                      #                   
+                                      |                   
+                                      #                   
+                                                            
+~
+
+#0
+
+
+
+#ROOMS
+#3300
+Before a massive cave, on the mountainside~
+Barely managing to climb the enormous mountainside, you seem to stumble
+on to a large creation, set in cold stone.  Before you is a magnificent
+sight, a massive hole has been torn into the rockface of this mountain,
+forming a dark cave.  The foliage which surrounds the mountain seems to be
+parted and destroyed around the cave, giving it an eerie, bare appereance.
+~
+inside
+ROOM NORECALL
+ROOM LAW
+D NORTH 3301 0 0
+~
+~
+D UP 3329 0 0
+door~
+~
+OWNER none~
+#3301
+Within a slightly-lit cave~
+Small rays of sunlight beam in from the south, shedding light to a small
+portion of the cave.  The rocks here range from a smooth gray to a slightly
+dusted black color.  Though not a single drop of moisture can be seen along
+the walls.  The ground below your feet is rather rough, it is quite obvious
+that few, if any men, have passed through here recently.  The tunnel
+continues to the north, and exits to the south.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3302 0 0
+~
+~
+D SOUTH 3300 0 0
+~
+~
+OWNER none~
+#3302
+Within a dark cave~
+It's pitch-black in here, and the only faint bit of light you can see,
+shines from the south.  The rocks are almost undetectable, but carry the
+same texture and color, a smooth pale gray, to a dusted almost coal color. 
+Not a drop of moisture can be seen as these tunnels look very bare.  The
+tunnel continues to the north and south.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3303 0 0
+~
+~
+D SOUTH 3301 0 0
+~
+~
+OWNER none~
+#3303
+Before a small intersection, within a dark cave~
+Not a strand of light is here, though you begin to feel as though you
+are being watched in the cold, dark cave.  At times, you seem to hear a
+whisper or chuckle, though it all sounds so faint, that it seems like your
+mind is playing tricks on you.  The rocks around here are a bit darker in
+shade then the one's seen before the entrance of the cave.  As you feel the
+cold, rock surface, you seem to spot a small marking on the wall of the rock
+face, it's small in design, below it point two arrows, one to the east, and
+the other to the west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D EAST 3304 0 0
+~
+~
+D SOUTH 3302 0 0
+~
+~
+OWNER none~
+#3304
+Along a thin tunnel, within a dark cave~
+This tunnel is extremely thin, though much like the rest of the cave,
+it's very high, the size of at least three adult human males.  The ground
+below you is a little smoother, leading you to believe that someone has been
+through here recently.  Twisted, jagged rocks protrude from the walls, it's
+as through something is warning you, to pass no further.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D EAST 3305 0 0
+~
+~
+D WEST 3303 0 0
+~
+~
+OWNER none~
+#3305
+Along a thin tunnel, within a dark cave~
+This tunnel is extremely thin, though much like the rest of the cave,
+it's very high, the size of at least three adult human males.  The ground
+below you is a little smoother, leading you to believe that someone has been
+through here recently.  The thin tunnel twists into a sudden curve, you may
+go north deeper into the tunnel, or back west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3306 0 0
+~
+~
+D WEST 3304 0 0
+~
+~
+OWNER none~
+#3306
+Along an odd tunnel, within a dark cave~
+You stand along an odd tunnel, it's a complete semi-circle to every
+extent.  You can only imagine that some form of sorcery was used to shape
+it.  Dark rocks, all around you, seem to be taking on a reddish-hue.  The
+air around you seems quite humid.  The tunnel continues to the north.  To
+the south, the tunnel begins to grow thinner.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3307 0 0
+~
+~
+D SOUTH 3305 0 0
+~
+~
+OWNER none~
+#3307
+Along an odd tunnel, within a cave~
+You stand along an odd tunnel, it's a complete semi-circle to every
+extent.  You can only imagine that some form of sorcery was used to shape
+it.  Dark rocks, all around you, seem to be taking on a reddish-hue.  The
+air around you seems quite humid.  The tunnel continues to the north and
+south.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3308 0 0
+~
+~
+D SOUTH 3306 0 0
+~
+~
+OWNER none~
+#3308
+Before a sharp turn, in the dark cave~
+You stand before a sharp turn in the tunnel.  A large, jagged wall is
+before you, it's entire surface marked with etchings of odd designs and
+runes.  The rocks here seem to take on a reddish hue, emitting the warm air
+around you.  Something eerie is about. You feel as though you are being
+watched again.  The tunnel twists to the east and heads back south.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D EAST 3309 0 0
+~
+~
+D SOUTH 3307 0 0
+~
+~
+OWNER none~
+#3309
+Along a very small tunnel, in the dark cave~
+Fit for only the smallest of creatures, this room forces anything taller
+than an imp or sidhe to duck or crawl.  Unlike the majority of the rocks
+seen at the entrance of the cave, the rocks here emit a faint orange glow. 
+The tunnel streches to the east and west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D EAST 3310 0 0
+~
+~
+D WEST 3308 0 0
+~
+~
+OWNER none~
+#3310
+Along a very small tunnel, in the dark cave~
+This tunnel is fit for only the smallest of creatures, anything taller
+than an imp or sidhe will be forced to duck or crawl.  Unlike the majority of
+rocks seen atthe entrance of the cave, here they emit a faint orange glow. 
+To the northern wall of the tunnel, some rocks seem to be broken, chipped
+and missing, leading you to believe that their may be something beyond the
+obvious.  The faint sound of water dripping, echoes from the east.  The
+tunnel continues to the east and west. 
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3319 AI 0
+~
+~
+D EAST 3311 0 0
+~
+~
+D WEST 3309 0 0
+~
+~
+OWNER none~
+#3311
+A dark pool of water, before an enormous cavern~
+A small stream of fresh, mountain water, trickles into a pool that has
+been freshly dug into the eastern side of the wall.  As the cold, fresh
+water touches the pool it turns ebony.  The walls of the cave are a deep,
+warm, ebony... they are set in a intricate pattern along the southern
+portion of the tunnel, circling around a massive hole, which leads into some
+hideous cavern.  Towards the south the faint sound of chuckling and laughter
+can be heard.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D SOUTH 3312 0 0
+~
+~
+D WEST 3310 0 0
+~
+~
+OWNER none~
+#3312
+Within a cavern~
+Small, almost devilish creatures swarm about you, everywhere, they seem
+to be quite unkempt... rags and trash, litter the ground.  They seem to live
+here with delight, painting strange, yet horrific images on the walls, some
+of which depicting cities, being ravaged, which you recognize.  These small
+creatures seem to thrive in this cavern.  The cavern continues to the east,
+west, and south, though exits through the north.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3311 0 0
+~
+~
+D EAST 3317 0 0
+~
+~
+D SOUTH 3315 0 0
+~
+~
+D WEST 3313 0 0
+~
+~
+OWNER none~
+#3313
+Within a cavern~
+This cavern is filthy, and littered with rags and trash.  Something odd
+catches your eye, towards the north-western edge of the wall hangs a
+deceased sidhe, tormented and skinned, set up for some sort of game
+involving darts.  These devilish creature's are all about you, but they only
+seem to eye you curiously, as though they hold back, in fear, to strike at
+you for entering their home.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D EAST 3312 0 0
+~
+~
+D SOUTH 3314 0 0
+~
+~
+OWNER none~
+#3314
+Within a cavern~
+Creeping further into the hideous cavern, you notice that the imps seem
+to have no care in all of Shadar about their appearance.  Filthy, smug grins
+seem to be permanently plastered to their small, petite faces.  Though, they
+obviously lack the morale, and spirit to do anything about you invading
+their privacy.  The cavern continues to the north and east.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3313 0 0
+~
+~
+D EAST 3315 0 0
+~
+~
+OWNER none~
+#3315
+Within a cavern~
+These small, hideous creatures pester you as a rodent would, following
+your every movement.  Gathering in packs, watching you move about, studying
+each footstep carefully.  Garbage piled to your ankles is all about, but
+imps just don't seem to care, indulging in this disgusting sight, they
+thrive in this waste.  The cavern continues to the east, west and north.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3312 0 0
+~
+~
+D EAST 3316 0 0
+~
+~
+D WEST 3314 0 0
+~
+~
+OWNER none~
+#3316
+Within a cavern~
+These small, hideous creatures pester you as a rodent would, following
+your every movement.  Gathering in packs, watching you move about, studying
+each footstep carefully.  Garbage piled to your ankles is all about, but
+imps just don't seem to care, indulging in this disgusting sight, they
+thrive in this waste.  The cavern continues to the north and west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3317 0 0
+~
+~
+D WEST 3315 0 0
+~
+~
+OWNER none~
+#3317
+Within a cavern~
+A small part of the imps culture can be seen here, strange paintings
+adorn the east wall, paintings of a small city, being invaded underground,
+through what seem to be the sewers.  Though still, the same disgusting
+scene, of trash tossed about can be seen here, like every other portion of
+the cavern.  To the south and west, the cavern continues.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D SOUTH 3316 0 0
+~
+~
+D WEST 3312 0 0
+~
+~
+OWNER none~
+#3319
+A hidden passage, in the dark cave~
+Stumbling through the rocks in the wall, you manage to find yourself
+before a dark passage, in the caves.  Obviousley man-made, the ground is
+paved well, stretching north, for atleast a few leagues.  The rocks around
+here, are squared and well-kempt, carrying a smooth texture, and a lovely,
+granite color.  The faint sound of footsteps can be heard all around you. 
+The passage continues to the north.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3320 0 0
+~
+~
+D SOUTH 3310 AI 0
+~
+~
+OWNER none~
+#3320
+A hidden passage, in the dark cave~
+The passage streches as far as the eye can see, snaking it's way to the
+north, obviousley fashioned by some, well-experienced race.  It seems to
+slope downward just a bit, with each footstep, it's as though this passage
+takes you, below the surface of Shadar.  The faint sound of footsteps grows
+louder to the north, it's as though something very large is here.  The
+passage continues to the north and south.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3321 0 0
+~
+~
+D SOUTH 3319 0 0
+~
+~
+OWNER none~
+#3321
+A small clearing, along the hidden passage, in the dark cave~
+You seem to have stumbeled unto a small clearing, along the hidden
+passage.  Dark ebony stones have been set along the walls, though as you
+peer ahead, the passage seems to grow darker and darker.  The air is humid,
+and the faint sound of footsteps can be heard all around you, you feel quite
+certain, that something very large lurk's in this part of the cave.  The
+passage continues to the north and south.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+D NORTH 3322 0 0
+~
+~
+D SOUTH 3320 0 0
+~
+~
+OWNER none~
+#3322
+Deep within a hidden passage, in the dark cave~
+Rather thin compared to the majority of tunnels found in this cave, this
+part of the passage seems to twist on and on.  Though just as you begin to
+walk through, taking little notice of your surroundings, you manage to spot
+something strange on the rockface.  It seems that a few stones on the
+western side of the passage are broken and cracked.  Humidity is very fierce
+around this part of the passage.  The passage continues to the north, and
+leads to a small clearing, towards the south.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM LAW
+D NORTH 3327 0 0
+~
+~
+D SOUTH 3321 0 0
+~
+~
+D WEST 3323 I 0
+~
+~
+OWNER none~
+#3323
+Along a secret passage, in the dark cave~
+You seem to have found a secret passage in the dark cave.  Bits of broken
+stone litter the ground, though unlike the dark stones seen earlier, these
+one emit a gentle, orange light.  Taking in a deep breath of air, your lungs
+begin to burn, the air around you is disgustingly humid.  Towards the west,
+you hear the echo of metal being smashed against metal, as though someone or
+something is hard at work.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+D EAST 3322 0 0
+~
+~
+D WEST 3324 0 0
+~
+~
+OWNER none~
+#3324
+Before a fiery cavern, in the dark cave~
+You stand before an enormous cavern, filled with fire.  The towering
+pillars of flame, seen inside, seem to light this part of the passage.  The
+stones around you are unlike any other's you have seen before, they range
+from a dark emerald, to a majestic crimson in color.  The sound of metal
+being smashed against metal resonates all around you.  The passage continues
+to the east, and enter's a colossal cavern towards the west.  
+~
+inside
+ROOM NORECALL
+D EAST 3323 0 0
+~
+~
+D WEST 3325 0 0
+~
+~
+OWNER none~
+#3325
+Inside a fiery cavern, in the dark cave~
+The cavern is simply amazing... crimson stalactites hang from the ceiling
+of the cavern, while set at all corners are enormous, pillars of flame.  The
+cavern is well lit, and seems to be the home of some enormous titan. 
+Massive hammers, thrice the size of an ordinary one you've seen hang along
+the walls, towards the north, you can hear the sound of metal, crashing
+against metal, grow louder and louder.  
+~
+inside
+ROOM NORECALL
+D NORTH 3326 0 0
+~
+~
+D EAST 3324 0 0
+~
+~
+OWNER none~
+#3326
+The Forge of Ur'Tazi~
+An anvil, crafted from a smooth, ebony metal is before you.  Standing
+just behind it, is a massive titan, twice the size of any titan you have
+ever seen in Shadar.  Along the walls of this cavern, hang assorted tools,
+used by a blacksmith.  Each tool, being at least thrice the size of any
+ordinary tool a blacksmith would use.  Assorted weapon's and armor hang
+along the walls of the forge, though they each are so large, that only a
+titan could hope to use them.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 3325 0 0
+~
+~
+TRAP 'fireball' 5 5 10
+You hear a faint audible click.~
+A fireball comes bursting forth from the anvil aimed at $n!~
+OWNER none~
+#3327
+Along a secret passage, in the dark cave~
+The atmosphere around you, suddenly grows darker... a cold wind begins to
+sweep through the tunnel.  The rocks here are jagged, twisted, and
+deformed... ebony stalactites hang from the ceiling of the passage.  Sloping
+further and further down, you can only hope that this passage takes you to
+some place of safety.  The passage continues to the north and south.  
+~
+inside
+ROOM NORECALL
+D NORTH 3328 0 0
+~
+~
+D SOUTH 3322 0 0
+~
+~
+OWNER none~
+#3328
+Along a secret passage, in the dark cave~
+The air around you is cold... yet not a drop of moisture can be seen
+along the rough, jagged walls of the passage.  Ebony stalactites hang from
+the ceiling, their sharp points, hanging by little more then a thread.  The
+passage seems to be curving towards the north, leading deeper and deeper
+into the cave.  Down and down the passage etches, taking you deeper and
+deeper, below the surface of Shalar.  The passage continues to the north and
+south.  
+~
+inside
+ROOM NORECALL
+ROOM LAW
+D SOUTH 3327 0 0
+~
+~
+OWNER none~
+#3329
+Passing Through Decrepit Earth~
+~
+unused
+D UP 3330 0 0
+door~
+~
+D DOWN 3300 0 0
+door~
+~
+OWNER none~
+#3330
+A Single Gravestone~
+The trees thin, leaving a small clearing devoid of all living matter. 
+The road itself seems to degenerate as it passes this spot.  Rocks covered
+in a thick, slimy moss litter the ground, making passage difficult.  A
+single, flat, gravestone rests in the center of the clearing.  The
+inscriptions on it are either weathered by time, or never existed, as the
+stone is completely smooth.  To the east, a small mountain is visible.  
+~
+road
+D NORTH 3331 0 0
+door~
+~
+D WEST 3334 0 0
+door~
+~
+D DOWN 3329 ABI 0
+grave gravestone trapdoor~
+~
+OWNER none~
+#3331
+A Tree-Lined Path~
+Well made and kept, the path here seems to lead towards civilization. 
+Flowers border the edge of the road, basking in the shade afforded by the
+trees.  Hooves and feet have left many a mark in the dirt here, showing the
+popularity of this route.  To the west, the trees open up into a small
+forested spot.  In the distance to the north, a building is visible.  
+~
+road
+D NORTH 3339 0 0
+door~
+~
+D SOUTH 3330 0 0
+door~
+~
+D WEST 3332 0 0
+door~
+~
+OWNER none~
+#3332
+Among the Trees~
+Strange grey trees rise all around.  They stretch far up into the sky and
+seem to have a gleam in the light.  Most of the trees appear very old, tall,
+and thick, some reaching eight feet in diameter.  Visibility in this small
+forest is poor as the trees and bits of underbrush obscure almost
+everything.  The strange gleam gets into your eyes, making it even harder to
+see.  The relative familiarity of the path lies back to the north and south.
+~
+forest
+D EAST 3331 0 0
+door~
+~
+D SOUTH 3334 0 0
+door~
+~
+OWNER none~
+#3333
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#3334
+A Tree-Lined Path~
+Well made and kept, the path here seems to lead towards civilization. 
+Flowers border the edge of the road, basking in the shade afforded by the
+trees.  Hooves and feet have left many a mark in the dirt here, showing the
+popularity of this route.  A broken down wagon rests on the side of the
+road, while a strange opening to the north leads off into the trees.  
+~
+road
+D NORTH 3332 0 0
+door~
+~
+D EAST 3330 0 0
+door~
+~
+D WEST 3335 0 0
+door~
+~
+OWNER none~
+#3335
+A Tree-Lined Path~
+A faint odor lingers in the air on this tree-lined pathway.  Well made
+and kept, the path here seems to lead towards civilization.  Flowers border
+the edge of the road, basking in the shade afforded by the trees.  Hooves
+and feet have left many a mark in the dirt here, showing the popularity of
+this route.  
+~
+road
+D EAST 3334 0 0
+door~
+~
+D WEST 3336 0 0
+door~
+~
+OWNER none~
+#3336
+Before the Outhouse~
+The mud suddenly dries as the cover of trees drops away.  A dried dirt
+path begins here, obviously man-made.  The stumps of the greyish trees lie
+torn from the ground next to the road.  Broken axes and other tools lie near
+the trees, discarded.  The stench rising from the south assaults the nose
+with rot, decay, and waste.  It arises from a small, wooden structure,
+barely more than a shack.  Red paint splotches indicate the color that was
+intended before the painter got sick of the smell.  The road continues to
+the east, and the daring can enter the shack to the south.  
+~
+road
+D NORTH 3338 0 0
+door~
+~
+D EAST 3335 0 0
+door~
+~
+D SOUTH 3337 AB 0
+old wooden door~
+~
+OWNER none~
+#3337
+Inside the Outhouse~
+The lack of light and sound in this room only amplifies the blow
+delivered by the stench.  A vast mix of smells rises to your nose, invading
+your nostrils despite your best attempts to stop it.  The room seems fairly
+big, its dimensions increased to the eye by the near total darkness.  A
+slight glimmer of something shines in the shadows.  Escape lies through the
+door to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 3336 AB 0
+old~
+~
+OWNER none~
+#3338
+Amongst the Dirt and Mud~
+Dirt and mud cakes into ridges and hills along the ground.  A few trees
+line the sides of this clearing.  They stretch up into the sky and extend
+the cover of their leaves over the mud.  The bark is strangely grey and
+seems to be very hard.  Because of the trees blocking the sunlight, the mud
+remains somewhat moist and sticky.  A terrible smell emanates from the
+south.  
+~
+swamp
+D SOUTH 3336 0 0
+door~
+~
+OWNER none~
+#3339
+A Tree-Lined Path~
+Well made and kept, the path here seems to lead towards civilization. 
+Flowers border the edge of the road, basking in the shade afforded by the
+trees.  Hooves and feet have left many a mark in the dirt here, showing the
+popularity of this route.  A building is clearly visible to the north, while
+to the southwest grey trees loom over you.  
+~
+road
+D NORTH 3340 0 0
+door~
+~
+D SOUTH 3331 0 0
+door~
+~
+OWNER none~
+#3340
+Entrance to a Small Hostel~
+The path terminates in a small brick building.  A painted sign indicates
+that this is some sort of inexpensive traveler's hostel.  The red bricks
+seem new, weather yet to have an effect on them, but dirty.  The oaken door
+has a small peephole to provide a measure of security, and is equally dirty.
+The smell of sweat and travel flutters to your nose from inside.  
+~
+unused
+D NORTH 3341 AB 0
+oaken door~
+~
+D SOUTH 3339 0 0
+door~
+~
+OWNER none~
+#3341
+Inside the Hostel~
+Much bigger than it appeared from the outside, this grand room expands
+out before you in all directions.  People are everywhere, with not much care
+for where they eat, sit, sleep, or take care of the other functions of life.
+Every now and then among the hordes of poor is a rich traveler who seems to
+wonder why they're here.  A potpourri of smells, few of them pleasant, find
+their way to you.  
+~
+inside
+ROOM INDOORS
+D NORTH 3344 0 0
+door~
+~
+D EAST 3343 0 0
+door~
+~
+D SOUTH 3340 AB 0
+door~
+~
+D WEST 3342 0 0
+door~
+~
+OWNER none~
+#3342
+A Corner~
+The corner appears to be the most popular spot, as those holed up in it
+have made it seem like a small fort.  A slight scuffle over space is
+constantly taking place.  Blankets and pillows piled against the junction of
+the two walls make for the most comfortable bed in the house.  A small
+candle on a holder jutting from the wall provides light for the area.  
+~
+inside
+ROOM INDOORS
+D NORTH 3345 0 0
+door~
+~
+D EAST 3341 0 0
+door~
+~
+OWNER none~
+#3343
+A Corner~
+The corner appears to be the most popular spot, as those holed up in it
+have made it seem like a small fort.  A slight scuffle over space is
+constantly taking place.  Blankets and pillows piled against the junction of
+the two walls make for the most comfortable bed in the house.  A small
+candle on a holder jutting from the wall provides light for the area.  
+~
+inside
+ROOM INDOORS
+D NORTH 3346 0 0
+door~
+~
+D WEST 3341 0 0
+door~
+~
+OWNER none~
+#3344
+Inside the Hostel~
+Much bigger than it appeared from the outside, this grand room expands
+out before you in all directions.  People are everywhere, with not much care
+for where they eat, sit, sleep, or take care of the other functions of life.
+Every now and then among the hordes of poor is a rich traveler who seems to
+wonder why they're here.  A potpourri of smells, few of them pleasant, find
+their way to you.
+~
+inside
+ROOM INDOORS
+D NORTH 3348 0 0
+door~
+~
+D EAST 3346 0 0
+door~
+~
+D SOUTH 3341 0 0
+door~
+~
+D WEST 3345 0 0
+door~
+~
+OWNER none~
+#3345
+Inside the Hostel~
+Much bigger than it appeared from the outside, this grand room expands
+out before you in all directions.  People are everywhere, with not much care
+for where they eat, sit, sleep, or take care of the other functions of life.
+Every now and then among the hordes of poor is a rich traveler who seems to
+wonder why they're here.  A potpourri of smells, few of them pleasant, find
+their way to you.  
+~
+inside
+ROOM INDOORS
+D NORTH 3347 0 0
+door~
+~
+D EAST 3344 0 0
+door~
+~
+D SOUTH 3342 0 0
+door~
+~
+D WEST 3350 0 0
+door~
+~
+OWNER none~
+#3346
+Inside the Hostel~
+Much bigger than it appeared from the outside, this grand room expands
+out before you in all directions.  People are everywhere, with not much care
+for where they eat, sit, sleep, or take care of the other functions of life.
+Every now and then among the hordes of poor is a rich traveler who seems to
+wonder why they're here.  A potpourri of smells, few of them pleasant, find
+their way to you.  
+~
+inside
+ROOM INDOORS
+D NORTH 3349 0 0
+door~
+~
+D SOUTH 3343 0 0
+door~
+~
+D WEST 3344 0 0
+door~
+~
+OWNER none~
+#3347
+A Corner~
+The corner appears to be the most popular spot, as those holed up in it
+have made it seem like a small fort.  A slight scuffle over space is
+constantly taking place.  Blankets and pillows piled against the junction of
+the two walls make for the most comfortable bed in the house.  A small
+candle on a holder jutting from the wall provides light for the area.  
+~
+inside
+ROOM INDOORS
+D EAST 3348 0 0
+door~
+~
+D SOUTH 3345 0 0
+door~
+~
+OWNER none~
+#3348
+By the Back Wall~
+The back wall draws a crowd because of the large stove dominating the
+room.  The large, bulbous object exudes heat from the open wire door area. 
+Lines of people wait to cook their meal or simply gather the heat.  A large
+grass-weave mat lies under the stove, in perhaps not the wisest choice to
+ward off fire.  Above the stove, a list of instructions now blackened by the
+smoke are universally ignored.  
+~
+inside
+ROOM INDOORS
+D EAST 3349 0 0
+door~
+~
+D SOUTH 3344 0 0
+door~
+~
+D WEST 3347 0 0
+door~
+~
+OWNER none~
+#3349
+A Corner~
+The corner appears to be the most popular spot, as those holed up in it
+have made it seem like a small fort.  A slight scuffle over space is
+constantly taking place.  Blankets and pillows piled against the junction of
+the two walls make for the most comfortable bed in the house.  A small
+candle on a holder jutting from the wall provides light for the area.  
+~
+inside
+ROOM INDOORS
+D SOUTH 3346 0 0
+door~
+~
+D WEST 3348 0 0
+door~
+~
+OWNER none~
+#3350
+A Small Altar~
+This small alcove sits in darkness, with not a candle to illuminate it. 
+A short table, no more than two feet off the ground, serves as an altar. 
+Two graven images face each on the altar table, one representing the gods of
+travel and another the gods of light.  A stained glass window, very out of
+place in the hostel, resides in the western wall.  Wisely, a board on the
+outside covers it.  
+~
+inside
+ROOM INDOORS
+ROOM SAFE
+D EAST 3345 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 3307 TO 3300 GLIMIT 1 LLIMIT 1
+MOB 3309 TO 3301 GLIMIT 1 LLIMIT 1
+MOB 3308 TO 3305 GLIMIT 1 LLIMIT 1
+EQUIP 3305 HOLD
+MOB 3306 TO 3306 GLIMIT 1 LLIMIT 1
+MOB 3305 TO 3308 GLIMIT 1 LLIMIT 1
+MOB 3304 TO 3312 GLIMIT 5 LLIMIT 1
+EQUIP 3307 HOLD
+MOB 3304 TO 3313 GLIMIT 5 LLIMIT 1
+EQUIP 3307 HOLD
+MOB 3303 TO 3314 GLIMIT 10 LLIMIT 1
+EQUIP 3306 NECKONE
+MOB 3304 TO 3315 GLIMIT 5 LLIMIT 1
+EQUIP 3307 HOLD
+MOB 3303 TO 3316 GLIMIT 10 LLIMIT 1
+EQUIP 3306 NECKONE
+MOB 3304 TO 3317 GLIMIT 5 LLIMIT 1
+EQUIP 3307 HOLD
+MOB 3303 TO 3317 GLIMIT 10 LLIMIT 1
+EQUIP 3306 NECKONE
+MOB 3302 TO 3319 GLIMIT 1 LLIMIT 1
+MOB 3301 TO 3324 GLIMIT 1 LLIMIT 1
+MOB 3300 TO 3326 GLIMIT 1 LLIMIT 1
+EQUIP 3300 BODY
+EQUIP 3301 HEAD
+EQUIP 3303 WIELD
+OBJECT 3330 TO 3330
+MOB 3312 TO 3332 GLIMIT 1 LLIMIT 1
+EQUIP 3311 LFINGER
+EQUIP 3312 WAIST
+OBJECT 3337 TO 3337
+PUT 3336 IN 3337 COUNT 1
+MOB 3313 TO 3341 GLIMIT 5 LLIMIT 1
+EQUIP 3313 FEET
+MOB 3320 TO 3342 GLIMIT 6 LLIMIT 1
+MOB 3313 TO 3343 GLIMIT 5 LLIMIT 1
+MOB 3320 TO 3343 GLIMIT 6 LLIMIT 1
+EQUIP 3314 WAIST
+MOB 3313 TO 3344 GLIMIT 5 LLIMIT 1
+MOB 3320 TO 3345 GLIMIT 6 LLIMIT 1
+MOB 3313 TO 3345 GLIMIT 5 LLIMIT 1
+MOB 3313 TO 3346 GLIMIT 5 LLIMIT 1
+MOB 3320 TO 3346 GLIMIT 6 LLIMIT 1
+MOB 3313 TO 3347 GLIMIT 5 LLIMIT 1
+MOB 3318 TO 3347 GLIMIT 1 LLIMIT 1
+EQUIP 3321 BODY
+EQUIP 3322 HEAD
+MOB 3320 TO 3347 GLIMIT 6 LLIMIT 1
+MOB 3313 TO 3348 GLIMIT 5 LLIMIT 1
+MOB 3316 TO 3348 GLIMIT 1 LLIMIT 1
+EQUIP 3319 HANDS
+MOB 3317 TO 3348 GLIMIT 1 LLIMIT 1
+EQUIP 3320 BODY
+MOB 3319 TO 3348 GLIMIT 1 LLIMIT 1
+GIVE 3325
+GIVE 3324
+GIVE 3323
+MOB 3314 TO 3349 GLIMIT 1 LLIMIT 1
+GIVE 3315
+EQUIP 3316 HANDS
+EQUIP 3317 WIELD
+MOB 3315 TO 3349 GLIMIT 1 LLIMIT 1
+EQUIP 3318 HEAD
+MOB 3310 TO 3350 GLIMIT 1 LLIMIT 1
+MOB 3311 TO 3350 GLIMIT 1 LLIMIT 1
+EQUIP 3309 BODY
+EQUIP 3308 WRISTONE
+EQUIP 3310 WIELD
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

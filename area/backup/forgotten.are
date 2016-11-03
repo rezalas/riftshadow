@@ -1,0 +1,1325 @@
+#AREA
+forgotten.are~
+Forgotten Hills~
+Rhuann~
+10 0
+4300 4399
+unopened
+temperate
+0
+1
+Rhuann Calenduil~
+
+#MOBS
+#4300
+monstrosity humongous lump~
+a monstrosity~
+A humongous monstrosity lurks in the rockchamber.
+~
+A humongous lump of armored flesh, the monstrosity nearly fills the small
+chamber.  Large, black plates are scaled one over the other, covering an
+huge oval body.  More to the front, nearby the tentacles the plates separate
+and reveal a single eyeball, more then three feet across.  All across the
+caves lie the crushed remains of skeletons and broken weaponary of previous
+adventurers, all victims of its eternal hunger.  
+~
+-1000 0 0 unique~
+55 27d8+5268 10d4+36 10 100 ooze
+150 150 150 100
+resting male rich
+AGHNc AGHNc huge
+ACT NPC
+ACT AGGRESSIVE
+OFF AREA_ATTACK
+OFF DODGE
+OFF CRUSH
+OFF NO_TRACK
+#4301
+tentacle monstrous~
+a monstrous tentacle~
+A monstrous tentacle flails about the water.
+~
+At first glance this monstrous tentacle could have easily been mistaken
+for a huge snake, writhing over the cavefloor.  Yet its flailing behaviour
+quickly betrays it as the tentacle of some kind of monstrosity.  Its skin is
+covered with small jagged scales, it lacks head or eyes, and it seems to
+originate from one of the deeper recesses in the cavern.  
+~
+-1000 0 0 unique~
+55 27d8+5268 8d4+36 10 100 crush
+30 30 30 30
+standing male none
+ANcd ANcd huge
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF DISARM
+OFF DODGE
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF WATERBREATH
+#4302
+tentacle monstrous~
+a monstrous tentacle~
+The immense tentacle is crushing the air out of your lungs!
+~
+Held by a gigantous tentacle, you are hauled through the water at high
+velocity.  While time slowly deludes into nothingness, you find time to
+study your captor.  The large slimy tentacle is covered with small jagged
+fishscales, their tips ending in barbed hooks.  Your thoughts divert and you
+ponder briefly on where the tentacle is taking you.  
+~
+0 0 0 unique~
+55 27d8+5268 4d12+25 0 100 crush
+30 30 30 30
+standing male none
+ANcd ANcd huge
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF DISARM
+OFF DODGE
+OFF CRUSH
+AFF NOSHOW
+#4303
+monstrosity humongous lump~
+a monstrosity~
+The monstrosities' stomach bulges and flexes, oozing its saliva all over you!
+~
+Everything around you bulges and convexes, mangled by gigantous muscles
+in the stomach of the tentacled beast.  Various acid juices pour out of
+glands, their sharp and dizzying fumes mixing with the putrid odour of the
+half-digested carrion residing here.  You realize that unless you find a way
+out of here quickly, either by blade or magic, your future might be black
+indeed.  
+~
+0 0 0 human~
+55 27d8+5268 4d12+25 10 100 digestion
+10 10 10 10
+standing male rich
+GNcd 0 huge
+ACT NPC
+OFF AREA_ATTACK
+OFF DODGE
+OFF CRUSH
+OFF NO_TRACK
+AFF NOSHOW
+#4304
+anemone~
+a large anemone~
+A large anemone waves its arms gently in the currents.
+~
+Mindless as it is, this plant-like creature has done well, and has grown
+to an impressive size.  Hundreds of purple tentacles that softly waver in
+the current are searching for anything they might be able to devour.  
+~
+0 0 0 unique~
+15 7d8+339 1d1+1 0 100 ptouch
+0 0 0 0
+standing male none
+ABN ABN medium
+ACT NPC
+ACT SMARTTRACK
+NOTES ~
+#4305
+no name~
+a tiny squid~
+A school of tiny luminiscent squids darts away into the darkness.
+~
+A hundred squids dart through the darkness, each smaller then a child's
+hand.  Their translucent bodies are lined with luminiscent dots flashing in
+bright colors, and their thin tentacles drag through the water behind them
+as they launch themselves onwards.  
+~
+0 0 0 unique~
+20 10d8+604 0d0+0 5 100 sting
+0 0 0 0
+standing male none
+AN AN medium
+ACT NPC
+ACT SMARTTRACK
+#4306
+brightly colored snail~
+a snail~
+A brightly colored snail is gently grazing the algae.
+~
+~
+0 0 0 unique~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+BNc BNc medium
+ACT NPC
+#4307
+carnivorous whelk~
+a carnivorous whelk~
+Probing left and right, a carnivorous whelk is searching for a meal.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4308
+fish school~
+a silvery fish~
+A school of silvery fish skim under the lake's surface.
+~
+~
+0 27936 3338 fish~
+0 0d0+0 0d0+8224 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4309
+woman shaman uthiera~
+Uthiera~
+An old woman shambles through the cove, mumbling gibberish.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4310
+man guard~
+a guard~
+A tall man stands guard within the alcove.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4311
+small child~
+a child~
+A small child sleeps quietly beneath one of the woolly trundles.
+~
+Exhausted from running around the village all day, the little brat has
+finally collapsed onto his trundle.  He is wrapped in a woolly hide,
+safeguarding him from the cold nights.  A small pile of clothes and a
+primitive slingshot lie besides him.  
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+#4312
+woman~
+a woman~
+A woman is squatted nearby the fire, keeping it alive.
+~
+The young woman is bestowed with the task of keeping the fire alive,
+feeding the racks enough warmth to turn the meat into dried strips for
+storage.  A small pile of wood is stacked besides her, from which she
+occasionally takes a branch to fuel the fire with.  
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT DIURNAL
+#4313
+woman~
+a woman~
+A woman sits besides the fire, carefully sewing a hide.
+~
+The wrinkled old woman sits close to the fire, hunched over a tanned
+hide.  A long sinew cord lies besides her, tied to a thin bone needle.  She
+is piercing the hide along one of the edges, using a small iron dagger.  A
+few other sewing tools rest in her lap.  
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT DIURNAL
+#4314
+sick child~
+a sick child~
+A child lies here feverishly, tossing and turning within his trundle.
+~
+Maybe eight summers old, this child has caught a violent fewer, causing
+her to toss and twist between her covers.  Pearls of sweat dribble from his
+forehead as he moans in pain.  You notice a string of festering wounds on
+the girl's leg, as if she was lashed by a fist-thick whip.  
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4315
+mother~
+a mother~
+A mother is here, tending her sick child.
+~
+Resting besides the childs bedtrundle, she whispers comforting words to
+the little girl while she rinses the festering wound with a piece of
+clothing.  By the look of her, she is near exhaustion herself as well.  Her
+hair droops in raggish strands, and her skin matches her clothing: both are
+covered with dust.  
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4316
+man hunter guard~
+a hunter~
+A hunter rest quietly against the cave wall, keeping guard.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+#4317
+large wolf hound wolfhound~
+a wolfhound~
+A large wolfhound snoozes besides the hunter.
+~
+~
+0 0 0 dog~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+#4318
+dog bozer scruffy~
+Bozer~
+A scruffy old dog lies here amidst the rubble.
+~
+Lying quietly in a small hollow at the cave-end, Bozer is one sorry
+looking dog.  His flea-ridden pelt barely manages to contain the jutting
+bones, and soft whines escape his mouth ever so often.  
+~
+0 0 0 dog~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4319
+old blind man~
+a blind old man~
+An old man rests against the rockwall, staring blindly in front of him.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT DIURNAL
+#4320
+old deaf man~
+an old man~
+An old man is waving his horn around menacingly.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4321
+priestess woman~
+a priestess~
+A priestess stands naked in front of the altar, chanting to the moon.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+#4322
+large smithy man rhynr~
+Rhynr~
+A large man is pounding on a glowing piece of iron here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4323
+young boy~
+a young boy~
+A young boy dragging a heavy branch towards the firepit.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4324
+Karazz watcher man~
+Karazz~
+A rotund man is squinting at the pillar vigorously.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#4325
+spearfisher~
+a spearfisher~
+A spearfisher stares into the lake motionless.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT DIURNAL
+#4326
+child~
+a child~
+A child stares transfixed at the water, hiding behind his father's leg.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT DIURNAL
+#4327
+young boy~
+a young boy~
+A young boy sleeps amidst some hides.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+#4328
+large man Rhynr~
+Rhynr~
+A large man is quietly carving a wooden branch.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+#0
+
+
+
+#OBJS
+#4300
+scythe silver~
+the Scythe of Ill Fortune~
+Forget out of old silver, this scythe was sharpened on elven skulls.~
+weapon
+silver~
+weapon 10 4 infinite ABCDEFGH
+51 3 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM INVENTORY
+ITEM NODISARM
+APPLY SVSPELL -30
+APPLY HITROLL 200
+APPLY DAMROLL 400
+LIMIT 0
+VERB swing
+TIMER 0
+
+#4301
+Orb travel~
+an orb of Traveling.~
+This magical orb returns the owner to Cimar.~
+treasure
+energy~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+FLAG AFF 'word of recall' none SHOW
+
+#0
+
+
+
+#ROOMS
+#4300
+Within a large cave~
+Just a single fire burns here, and one or two moulded bedtrundles lie
+scattered about.  A few raggish pelts are still nailed to the walls, yet
+this part of the cave seems to have fallen in disuse.  Several collapsed
+firepits line the floor, as well as various pieces of broken furniture.  The
+end of the cave seems to have collapsed, a number of large boulders blocking
+any passage deeper into the mountain.  Some rude sketches can still be
+discerned on one of the larger boulders.  
+~
+cave
+ROOM INDOORS
+ROOM LAW
+D SOUTH 4301 0 0
+~
+~
+OWNER none~
+#4301
+Within a large cave~
+Some large, painted pelts are spanned across the walls with beneath them
+a few woolly trundles, serving as beds.  Leather loops woven into the pelts
+serve as hooks for the storage of various instruments.  Thin strips of meat
+dry over a large wooden rack placed over three firepits, filling the cavern
+with their odour.  To the east the cave entrance is visible, with outside
+the northern part of the plateau.  Deeper into the mountain the cavern seems
+to come to an abrupt end.  
+~
+cave
+ROOM INDOORS
+D NORTH 4300 0 0
+~
+~
+D EAST 4302 0 0
+~
+~
+OWNER none~
+#4302
+A large cave~
+The cave's entrance is sheltered from the outside by the tanned hides
+that are draped across it.  Some large, painted pelts are spanned across the
+walls with beneath them a few woolly trundles, serving as beds.  Leather
+loops woven into the pelts serve as hooks for the storage of various
+instruments.  Several firepits are burning and primitive tanning tools are
+scattered across the floor.  Deeper into the cavern a large foodrack is used
+to dry some meat above a few fires.  
+ ~
+cave
+ROOM INDOORS
+D EAST 4303 0 0
+~
+~
+D WEST 4301 0 0
+~
+~
+OWNER none~
+#4303
+Northern edge of the plateau~
+The hidden plateau spreads out majestically to the south, displaying a
+small village, isolated from the world outside.  People are milling about
+the caves hewn into the mountain itself, and a few have gathered around the
+triangular lake that lies in the centre of the valley.  To the north and
+further away to the east, a massive ridge encloses the plateau.  A large
+cave entrance lies to the west.  
+~
+field
+D EAST 4304 0 0
+~
+~
+D SOUTH 4308 0 0
+~
+~
+D WEST 4302 0 0
+~
+~
+OWNER none~
+#4304
+Northern edge of the plateau~
+The hidden plateau spreads out majestically to the south, displaying a
+small village, isolated from the world outside.  People are milling about
+the caves hewn into the mountain itself, and a few have gathered around the
+triangular lake that lies in the centre of the valley.  One of the smaller
+caves is hewn into the northern ridge, while the plateau floor rises
+somewhat to adjoin the boundary to the east.  
+~
+field
+D NORTH 4305 0 0
+~
+~
+D EAST 4306 0 0
+~
+~
+D SOUTH 4325 0 0
+~
+~
+D WEST 4303 0 0
+~
+~
+OWNER none~
+#4305
+A small cove~
+The cove is barely three yards deep, and seems to serve as a storeroom. 
+Weaponracks are placed along the sides, containing a variety of spears and
+tridents, and a small fireplace is set in the entrance.  From here, the
+whole plateau can be overseen, from the eastern boundary to the mountain
+face in the south and west.  The lake's surface seems peculiarly placid from
+up here, with not a single disturbing wavelet.  
+~
+cave
+ROOM INDOORS
+D SOUTH 4304 0 0
+~
+~
+OWNER none~
+#4306
+Northern edge of the plateau~
+The hidden plateau spreads out majestically to the south and west,
+displaying a small village isolated from the world outside.  People are
+milling about the caves hewn into the mountain itself, and a few have
+gathered around the triangular lake that lies in the centre of the valley. 
+A layer of fog clouds a narrow passage to the north, hiding anything within
+the ridge-breach from sight.  
+~
+field
+D NORTH 4322 0 0
+~
+~
+D SOUTH 4307 0 0
+~
+~
+D WEST 4304 0 0
+~
+~
+OWNER none~
+#4307
+Eastern edge of the plateau~
+The hidden plateau spreads out majestically to the west, displaying a
+small village isolated from the world outside.  People are milling about the
+caves hewn into the mountain itself, and a few have gathered around the
+triangular lake that lies in the centre of the valley.  To the east, the
+boundary forbids all passage, although it is becoming more gradual to the
+south.  Further north a breach in the northern ridge can be discerned.  
+~
+field
+D NORTH 4306 0 0
+~
+~
+D SOUTH 4311 0 0
+~
+~
+D WEST 4325 0 0
+~
+~
+OWNER none~
+#4308
+The center of the plateau~
+The hidden plateau spreads out majestically to the north, south and east,
+while in the west the mountains rise steeply.  People are milling about the
+caves hewn into the mountain itself, and a few have gathered around the
+triangular lake that lies in the centre of the valley.  To the southwest, a
+steep path can be spotted, swirling its way up into the mountain.  A large
+obsidian pillar stands here, its surface chiselled with various symbols.  
+~
+unused
+D NORTH 4303 0 0
+~
+~
+D EAST 4325 0 0
+~
+~
+D SOUTH 4327 0 0
+~
+~
+D WEST 4309 0 0
+~
+~
+OWNER none~
+#4309
+The center of the plateau~
+The hidden plateau spreads out majestically to the north, south and east,
+while in the west the mountains rise steeply.  People are milling about
+caves that are hewn into the mountain itself, and a few have gathered around
+the triangular lake that lies in the centre of the valley.  To the
+southwest, a thin fissure leads its way up the mountain.  The large obsidian
+pillar east of here seems to be an object of reverence for the villager.  
+~
+unused
+D EAST 4308 0 0
+~
+~
+D SOUTH 4310 0 0
+~
+~
+OWNER none~
+#4310
+The center of the plateau~
+The hidden plateau spreads out majestically to the north and east, while
+an elongated slope from the western mountainside obstructs direct passage to
+the southern part of the plateau.  People are milling about caves that are
+hewn into the mountain itself, and a few have gathered around the triangular
+lake that lies in the centre of the valley.  To the west, a thin fissure
+leads its way up the mountain.  The large obsidian pillar northeast of here
+seems to be an object of reverence for the villager.  
+~
+unused
+D NORTH 4309 0 0
+~
+~
+D EAST 4327 0 0
+~
+~
+D WEST 4318 I 0
+~
+~
+OWNER none~
+#4311
+Eastern edge of the plateau~
+The hidden plateau spreads out majestically to the west, displaying a
+small village isolated from the world outside.  People are milling about
+caves that are hewn into the mountain itself, and a few have gathered around
+the triangular lake that lies in the centre of the valley.  The boundary to
+the northeast gradually declines and becomes passable, providing a way into
+the foothills.  
+~
+field
+D NORTH 4307 0 0
+~
+~
+D WEST 4326 0 0
+~
+~
+OWNER none~
+#4312
+Southeastern corner of the plateau~
+The hidden plateau spreads out majestically to the north and west,
+displaying a small village isolated from the world outside.  People are
+milling about caves that are hewn into the mountain itself, and a few have
+gathered around the triangular lake that lies in the centre of the valley. 
+A small path leads east, passing between an immense boulder and the mountain
+itself.  
+~
+field
+D NORTH 4314 0 0
+~
+~
+D EAST 4323 0 0
+~
+~
+OWNER none~
+#4313
+Within an inhabited cave~
+Some large, painted pelts are spanned across the walls with beneath them
+a few skins, serving as beds.  All sorts of metal instruments are strung
+along the walls, and a large stone serves as a primitive anvil.  Wood is
+stacked in the back of the cave, serving as fuel for the fire burning in the
+eastern wall.  A barrel in the corner provides the neccesary water to cool
+down the white-hot iron.  
+~
+cave
+ROOM INDOORS
+D NORTH 4315 0 0
+~
+~
+OWNER none~
+#4314
+Southern edge of the plateau~
+The hidden plateau spreads out majestically to the north, displaying a
+small village isolated from the world outside.  People are milling about
+caves that are hewn into the mountain itself, and a few have gathered around
+the triangular lake that lies in the centre of the valley.  A small path
+leads south, passing between an immense boulder and the mountain itself.  
+~
+field
+D NORTH 4326 0 0
+~
+~
+D SOUTH 4312 0 0
+~
+~
+D WEST 4315 0 0
+~
+~
+OWNER none~
+#4315
+Southern edge of the plateau~
+The hidden plateau spreads out majestically to the north, displaying a
+small village isolated from the world outside.  People are milling about
+caves that are hewn into the mountain itself, and a few have gathered around
+the triangular lake that lies in the centre of the valley.  One of the caves
+is hewn into the southern mountainslope.  West, an elongated slope separates
+a small part of the plateau from the main village.  
+~
+field
+D NORTH 4327 0 0
+~
+~
+D EAST 4314 0 0
+~
+~
+D SOUTH 4313 0 0
+~
+~
+D WEST 4316 0 0
+~
+~
+OWNER none~
+#4316
+Southern edge of the plateau~
+This part of the plateau is squeezed between the southern mountainside
+and an elongated slope from the western side.  With so little sun ever
+reaching this part of the plateau, the walls are covered with moist and
+algae.  To the south a small cave entrance is heavily draped with a curtain
+of red-flowered vines.  While the normal villagelife bustled to the east,
+people seem to avoid this part of the plateau.  
+~
+field
+D EAST 4315 0 0
+~
+~
+D SOUTH 4317 0 0
+~
+~
+D WEST 4319 I 0
+~
+~
+OWNER none~
+#4317
+A shamanic cove~
+The cove is cramped, as in every nook and cranny all sorts of jawbones,
+jugals, teeth and skulls are stashed.  Most are decorated with henna
+drawings, while others are tied to various herbs with pieces of strings.  In
+the midst of this all is a bare patch on the ground where a large pentagram
+is drawn into the floor.  A curtain of red-flowered vines separates the cave
+entrance from the world outside.  
+~
+cave
+ROOM INDOORS
+D NORTH 4316 0 0
+~
+~
+OWNER none~
+#4318
+An ascending path~
+The steps of this stairway are hewed in this once-natural fissure.  The
+walls have been chiseled and polished with care.  The erratic twists and
+turn limit your view to only half a dozen yards.  To the south, the fissure
+provides passage to the plateau, while north it ascends higher up the
+mountainslope.  
+~
+mountains
+D EAST 4310 0 0
+~
+~
+D SOUTH 4319 0 0
+~
+~
+OWNER none~
+#4319
+A junction of paths~
+The fissure here splits in two, one descending north, one descending onto
+the southern part of the plateau.  The steps of this stairway are
+meticulously hewed and the walls have been chiseled and polished with care. 
+The erratic twists and turn limit your view to only half a dozen yards.  As
+the fissure narrows to the west, it becomes even steeper, and the individual
+steps are barely large enough for an abyss' foot.  
+~
+mountains
+D NORTH 4318 0 0
+~
+~
+D EAST 4316 0 0
+~
+~
+D UP 4320 0 0
+~
+~
+OWNER none~
+#4320
+A hidden terrace~
+The fissure gives way for a small terrace , nearly a hundred foot above
+the plateau itself.  Not only does it show a magnificient view of the
+plateau itself, but it also shows the hill landscape that lies beyond the
+ridge enfolding the village.  To the west, an altar of some sort can be
+discerned.  The steps of the path leading down are meticulously hewed and
+the walls have been chiseled and polished with care.  
+~
+mountains
+D WEST 4321 0 0
+~
+~
+D DOWN 4319 0 0
+~
+~
+OWNER none~
+#4321
+A hidden terrace~
+The mountain makes way for a small terrace , nearly a hundred foot above
+the plateau itself.  Not only does it show a magnificient view of the
+plateau itself, but it also shows the hill landscape that lies beyond the
+ridge.  A gruesome altar has been crafted out of a large block of obsidian
+granite, depicting a young child entangled by four monstrous tentacles.  The
+steps of the path leading down are meticulously hewed and the walls have
+been chiseled and polished with care.  
+~
+mountains
+D EAST 4320 0 0
+~
+~
+OWNER none~
+#4322
+Northern pass~
+The slopes of the ridge confine the pass to a narrow trail.  The slippery
+remains of a rockslide do not ease travelling and the fog that limits the
+view to the north obscures any details that might be discerned of the
+plateau to the south.  
+~
+trail
+D SOUTH 4306 0 0
+~
+~
+OWNER none~
+#4323
+Southeastern corner of the plateau~
+The hidden plateau spreads out majestically to the north and west,
+displaying a small village isolated from the world outside.  People are
+milling about caves that are hewn into the mountain itself, and a few have
+gathered around the triangular lake that lies in the centre of the valley. 
+A massive boulder towers above you, easily as large as a palace.  The
+surface of the boulder suggests that it once was part of the mountain
+itself, but that it broke away hundreds of years ago.  Now a small pass has
+formed between the mountain and the boulder, winding its way down.  
+~
+field
+D SOUTH 4324 0 0
+~
+~
+D WEST 4312 0 0
+~
+~
+OWNER none~
+#4324
+Southern pass~
+The slopes of the ridge confine the pass to a narrow trail.  The
+shattered remains of a rockslide are sprayed throughout the pass.  A thick
+layer of fog limits the view to only a few feet.  The pass continues to the
+north and east.  
+~
+trail
+D NORTH 4323 0 0
+~
+~
+OWNER none~
+#4325
+At the shores of a lake~
+The lake lies in the centre of the plateau.  Overshadowed by the mountain
+peeks, it is dark and still, not a ripple caresses its surface.  All around
+you, the plateau stretches to the unforgiving rock walls that enclose it. 
+In several directions villagers are milling about, fulfilling their tasks. 
+Lining the lake are some clay cauldrons, used by the savages to store their
+catches.  
+~
+water
+D NORTH 4304 0 0
+~
+~
+D EAST 4307 0 0
+~
+~
+D SOUTH 4326 0 0
+~
+~
+D WEST 4308 0 0
+~
+~
+D DOWN 4328 0 0
+~
+~
+OWNER none~
+#4326
+At the shores of a lake~
+The lake lies in the centre of the plateau.  Overshadowed by the mountain
+peeks, it is dark and still, not a ripple caresses its surface.  All around
+you, the plateau stretches to the unforgiving rock walls that enclose it. 
+In several directions villagers are milling about, fulfilling their tasks. 
+Lining the lake are some clay cauldrons, used by the savages to store their
+catches.  
+~
+water
+D NORTH 4325 0 0
+~
+~
+D EAST 4311 0 0
+~
+~
+D SOUTH 4314 0 0
+~
+~
+D WEST 4327 0 0
+~
+~
+D DOWN 4329 0 0
+~
+~
+OWNER none~
+#4327
+At the shores of a lake~
+The lake lies in the centre of the plateau.  Overshadowed by the mountain
+peeks, it is dark and still, not a ripple caresses its surface.  All around
+you, the plateau stretches to the unforgiving rock walls that enclose it. 
+In several directions villagers are milling about, fulfilling their tasks. 
+Lining the lake are some clay cauldrons, used by the savages to store their
+catches.  
+~
+water
+D NORTH 4308 0 0
+~
+~
+D EAST 4326 0 0
+~
+~
+D SOUTH 4315 0 0
+~
+~
+D WEST 4310 0 0
+~
+~
+D DOWN 4330 0 0
+~
+~
+OWNER none~
+#4328
+Within a lake~
+A few yards below the surface the world exists only in shades of black. 
+The rough walls of the lake are covered with algae, and small schools of
+fish rush through their world, fading in and out of sight.  Further down,
+the lake narrows, giving it the shape of a giant funnel.  Strange currents
+whirl and threathen to carry you away into the deep.  Underwater, the
+gibberish of the savages has dimmed beyond hearing and an eerie silence is
+all that is left behind.  
+~
+underwater
+D SOUTH 4329 0 0
+~
+~
+D UP 4325 0 0
+~
+~
+D DOWN 4331 0 0
+~
+~
+OWNER none~
+#4329
+Within a lake~
+A few yards below the surface the world exists only in shades of black. 
+The rough walls of the lake are covered with algae, and small schools of
+fish rush through their world, fading in and out of sight.  Further down,
+the lake narrows, giving it the shape of a giant funnel.  Strange currents
+whirl and threathen to carry you away into the deep.  Underwater, the
+gibberish of the savages has dimmed beyond hearing and an eerie silence is
+all that is left behind.  
+ ~
+underwater
+D NORTH 4328 0 0
+~
+~
+D WEST 4330 0 0
+~
+~
+D UP 4326 0 0
+~
+~
+D DOWN 4331 0 0
+~
+~
+OWNER none~
+#4330
+Within a lake~
+A few yards below the surface the world exists only in shades of black. 
+The rough walls of the lake are covered with algae, and small schools of
+fish rush through their world, fading in and out of sight.  Further down,
+the lake narrows, giving it the shape of a giant funnel.  Strange currents
+whirl and threathen to carry you away into the deep.  Underwater, the
+gibberish of the savages has dimmed beyond hearing and an eerie silence is
+all that is left behind.  
+~
+underwater
+D EAST 4329 0 0
+~
+~
+D UP 4327 0 0
+~
+~
+D DOWN 4331 0 0
+~
+~
+OWNER none~
+#4331
+Deep within a lake~
+No surface light comes this deep, and the giant funnel's walls are smooth
+and slimy with algae.  Strong currents whirl the water around.  Life becomes
+rare here, and only far above school of fish can be still be seen flashing
+by.  A few brightly coloured snails cling to the rock walls, grazing the
+luminiscent algae.  Some whelks are actively preying on the grazing snails,
+their feelers blindly searching for flesh to devour.  
+~
+underwater
+D UP 4329 0 0
+~
+~
+D DOWN 4332 0 0
+~
+~
+OWNER none~
+#4332
+Before an underwater lair~
+The currents seem to originate from an jagged cavemouth to the west. 
+With the very little light that penetrates these depths, the weak
+luminescence originating from deeper within the cave acts like a beacon. 
+The hard rockbed on the bottom of the floor of the lake is covered with a
+thick layer of mucus.  Several small stones are slowly sliding deeper into
+the lair, dragged in by the strong currents.  
+~
+underwater
+D WEST 4333 0 0
+~
+~
+D UP 4331 0 0
+~
+~
+OWNER none~
+#4333
+An underwater aisle~
+The walls of the aisle are covered with a thick layer of mucus, aglow
+with the luminiscence of small algae.  Large anemones wave their tentacles,
+filtering the water for any edible remains.  East, the darkness of the
+lake's water looms, while to the west a faint glow reveals that the aisle
+widens into a large cavern.  The currents pull you towards it, in an
+insistent, nearly conscious way.  
+~
+underwater
+D EAST 4332 0 0
+~
+~
+D WEST 4334 0 0
+~
+~
+OWNER none~
+#4334
+An enormous underwater cavern~
+Monumental in size, this underwater chamber stretches out to the north,
+south and west.  All along the cavern walls glimmering algae and plants
+illuminate the scene.  Darting through them little squids, nearly
+translucent in colour, their arms grabbing at invisible prey.  Overhead, the
+light breaks and plays through the small ripples of an unknown water
+surface.  To the east, a small aisle offers a way out of the cavern.  
+~
+underwater
+D NORTH 4335 0 0
+~
+~
+D EAST 4333 0 0
+~
+~
+D SOUTH 4336 0 0
+~
+~
+D WEST 4337 0 0
+~
+~
+D UP 4338 0 0
+~
+~
+OWNER none~
+#4335
+An enormous underwater cavern~
+Monumental in size, this underwater chamber stretches out to the south
+and west.  All along the cavern walls glimmering algae and plants illuminate
+the scene.  Darting through them little squids, nearly translucent in
+colour, their arms grabbing at invisible prey.  Overhead, the light breaks
+and plays through the small ripples of an unknown water surface.  To the
+east, a small aisle offers a way out of the cavern.  
+~
+underwater
+D SOUTH 4334 0 0
+~
+~
+D WEST 4337 0 0
+~
+~
+OWNER none~
+#4336
+An enormous underwater cavern~
+Monumental in size, this underground chamber stretches out to the north
+and west.  All along the cavern walls glimmering algae and plants illuminate
+the scene.  Darting through them little squids, nearly translucent in
+colour, their arms grabbing at invisible prey.  Overhead, the light breaks
+and plays through the small ripples of an unknown water surface.  To the
+east, a small aisle offers a way out of the cavern.  
+~
+underwater
+D NORTH 4334 0 0
+~
+~
+D WEST 4337 0 0
+~
+~
+OWNER none~
+#4337
+An enormous underwater cavern~
+Monumental in size, this underground chamber stretches out to the north,
+south and east.  All along the cavern walls glimmering algae and plants
+illuminate the scene.  Darting through them little squids, nearly
+translucent in colour, their arms grabbing at invisible prey.  Overhead, the
+light breaks and plays through the small ripples of an unknown water
+surface.  To the east, a small aisle offers a way out of the cavern.  
+~
+underwater
+D NORTH 4335 0 0
+~
+~
+D EAST 4334 0 0
+~
+~
+D SOUTH 4336 0 0
+~
+~
+D WEST 4339 0 0
+~
+~
+D UP 4338 0 0
+~
+~
+OWNER none~
+#4338
+A small air bubble~
+A stale and moist air bubble is captured in the ceiling of the cavern. 
+The rocks are still wet enough to host some luminescent algae, and a few
+polyps cling to the stone just above the water surface.  The algae's light
+is shattered upon the rippling waves, making it impossible to see what lies
+beneath the watersurface.  
+~
+water
+D DOWN 4337 0 0
+~
+~
+OWNER none~
+#4339
+A grotto chamber~
+A small, oval shaped chamber has formed in the rockwand.  The walls lack
+the algae seen in other parts of the cavern and is covered with a black acid
+secration.  A large pile of cadavers and bones and all sorts of armament lie
+scattered across its surface.  To the east, the grotto opens into a cavern. 
+~
+underwater
+D EAST 4337 0 0
+~
+~
+OWNER none~
+#4340
+Inside a monstrous abdomen~
+Everything around you bulges and convexes, mangled by gigantous muscles
+in the stomach of the tentacled beast.  Various acid juices pour out of
+glands, their sharp and dizzying fumes mixing with the putrid odour of the
+half-digested carrion residing here.  You realize that unless you find a way
+out of here quickly, either by blade or magic, your future might be black
+indeed.  
+~
+inside
+ROOM DARK
+ROOM NO_MOB
+OWNER none~
+#4341
+Entrapped by a monstrous tentacle~
+Held by a gigantous tentacle, you are hauled through the water at high
+velocity.  While time slowly deludes into nothingness, you find time to
+study your captor.  The large slimy tentacle is covered with small jagged
+fishscales, their tips ending in barbed hooks.  Your thoughts divert and you
+ponder briefly on where the tentacle is taking you.  
+~
+underwater
+ROOM DARK
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 4318 TO 4300 GLIMIT 1 LLIMIT 1
+MOB 4315 TO 4301 GLIMIT 1 LLIMIT 1
+MOB 4314 TO 4301 GLIMIT 1 LLIMIT 1
+MOB 4311 TO 4301 GLIMIT 2 LLIMIT 1
+MOB 4312 TO 4301 GLIMIT 1 LLIMIT 1
+MOB 4311 TO 4302 GLIMIT 2 LLIMIT 1
+MOB 4313 TO 4302 GLIMIT 1 LLIMIT 1
+MOB 4317 TO 4302 GLIMIT 1 LLIMIT 1
+MOB 4316 TO 4302 GLIMIT 1 LLIMIT 1
+MOB 4310 TO 4305 GLIMIT 1 LLIMIT 1
+MOB 4325 TO 4307 GLIMIT 3 LLIMIT 1
+MOB 4324 TO 4308 GLIMIT 1 LLIMIT 1
+MOB 4319 TO 4309 GLIMIT 1 LLIMIT 1
+MOB 4320 TO 4309 GLIMIT 1 LLIMIT 1
+MOB 4325 TO 4310 GLIMIT 3 LLIMIT 1
+MOB 4328 TO 4313 GLIMIT 1 LLIMIT 1
+MOB 4327 TO 4313 GLIMIT 1 LLIMIT 1
+MOB 4323 TO 4313 GLIMIT 1 LLIMIT 1
+MOB 4322 TO 4313 GLIMIT 1 LLIMIT 1
+MOB 4325 TO 4314 GLIMIT 3 LLIMIT 1
+MOB 4326 TO 4314 GLIMIT 1 LLIMIT 1
+MOB 4309 TO 4317 GLIMIT 1 LLIMIT 1
+MOB 4321 TO 4321 GLIMIT 1 LLIMIT 1
+MOB 4308 TO 4328 GLIMIT 1 LLIMIT 2
+MOB 4308 TO 4329 GLIMIT 1 LLIMIT 2
+MOB 4308 TO 4330 GLIMIT 1 LLIMIT 2
+MOB 4306 TO 4331 GLIMIT 1 LLIMIT 3
+MOB 4307 TO 4331 GLIMIT 1 LLIMIT 1
+MOB 4306 TO 4332 GLIMIT 3 LLIMIT 1
+MOB 4304 TO 4333 GLIMIT 1 LLIMIT 1
+MOB 4305 TO 4334 GLIMIT 1 LLIMIT 3
+MOB 4301 TO 4337 GLIMIT 2 LLIMIT 2
+MOB 4301 TO 4337 GLIMIT 2 LLIMIT 2
+MOB 4300 TO 4339 GLIMIT 1 LLIMIT 1
+MOB 4303 TO 4340 GLIMIT 1 LLIMIT 1
+MOB 4302 TO 4341 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

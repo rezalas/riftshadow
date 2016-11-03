@@ -1,0 +1,1140 @@
+#AREA
+minotaur.are~
+Iseldheim~
+Zethus~
+0 0
+3800 3899
+normal
+alpine
+0
+1
+
+#MOBS
+#3800
+male minotaur citizen~
+a male minotaur citizen~
+A tall minotaur lumbers about the streets, wearing rough furs and clothes. 
+~
+~
+0 0 0 minotaur~
+16 3d10+400 4d8+2 24 100 charge
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF BERSERK
+OFF KICK
+OFF PARRY
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+#3801
+minotaur barbarian~
+a minotaur barbarian~
+A huge, filthy minotaur clad in smelly skins walks through the city. 
+~
+~
+-100 0 0 minotaur~
+36 4d40+890 3d10+40 40 100 cleave
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF FAST
+OFF KICK
+IMM SUMMON
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+A 'reserved' blind
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#3800
+The Southern Gate~
+This is the example description.     
+~
+city
+ROOM LAW
+D NORTH 3801 0 0
+~
+~
+OWNER none~
+#3801
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D NORTH 3802 0 0
+~
+~
+D SOUTH 3800 0 0
+~
+~
+OWNER none~
+#3802
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D NORTH 3803 0 0
+~
+~
+D SOUTH 3801 0 0
+~
+~
+D WEST 3850 0 0
+~
+~
+OWNER none~
+#3803
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D NORTH 3804 0 0
+~
+~
+D EAST 3869 AB 0
+~
+~
+D SOUTH 3802 0 0
+~
+~
+OWNER none~
+#3804
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D EAST 3805 0 0
+~
+~
+D SOUTH 3803 0 0
+~
+~
+OWNER none~
+#3805
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D EAST 3806 0 0
+~
+~
+D WEST 3804 0 0
+~
+~
+OWNER none~
+#3806
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D EAST 3807 0 0
+~
+~
+D WEST 3805 0 0
+~
+~
+OWNER none~
+#3807
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D NORTH 3808 0 0
+~
+~
+D WEST 3806 0 0
+~
+~
+OWNER none~
+#3808
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D NORTH 3809 0 0
+~
+~
+D EAST 3818 0 0
+~
+~
+D SOUTH 3807 0 0
+~
+~
+OWNER none~
+#3809
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D NORTH 3810 0 0
+~
+~
+D SOUTH 3808 0 0
+~
+~
+OWNER none~
+#3810
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D SOUTH 3809 0 0
+~
+~
+D WEST 3811 0 0
+~
+~
+OWNER none~
+#3811
+A worn pathway through the village~
+This is the example description.    
+~
+city
+D EAST 3810 0 0
+~
+~
+D WEST 3812 0 0
+~
+~
+OWNER none~
+#3812
+Tarvhaalik's Square~
+This is the example description.    
+~
+city
+D NORTH 3823 0 0
+~
+~
+D EAST 3811 0 0
+~
+~
+D SOUTH 3871 0 0
+~
+~
+D WEST 3813 0 0
+~
+~
+OWNER none~
+#3813
+Upon a wide wooden walkway~
+This is the example description.    
+~
+city
+D EAST 3812 0 0
+~
+~
+D WEST 3814 0 0
+~
+~
+OWNER none~
+#3814
+Upon a wide wooden walkway~
+This is the example description.    
+~
+city
+D EAST 3813 0 0
+~
+~
+D SOUTH 3815 0 0
+~
+~
+OWNER none~
+#3815
+Upon a wide wooden walkway~
+This is the example description.    
+~
+city
+D NORTH 3814 0 0
+~
+~
+D DOWN 3816 0 0
+~
+~
+OWNER none~
+#3816
+A well-paved street~
+This is the example description.    
+~
+city
+D NORTH 3829 0 0
+~
+~
+D WEST 3817 0 0
+~
+~
+D UP 3815 0 0
+~
+~
+OWNER none~
+#3817
+The Western Gate~
+This is the example description.    
+~
+city
+D EAST 3816 0 0
+~
+~
+OWNER none~
+#3818
+Upon a wooden walkway~
+This is the example description.    
+~
+city
+D EAST 3819 0 0
+~
+~
+D WEST 3808 0 0
+~
+~
+OWNER none~
+#3819
+Upon a wooden walkway~
+This is the example description.    
+~
+city
+D EAST 3820 0 0
+~
+~
+D SOUTH 3846 0 0
+~
+~
+D WEST 3818 0 0
+~
+~
+OWNER none~
+#3820
+At the bottom of a wide staircase~
+This is the example description.    
+~
+city
+D WEST 3819 0 0
+~
+~
+D UP 3821 0 0
+~
+~
+OWNER none~
+#3821
+Overlooking the City of Iseldheim~
+This is the example description.    
+~
+city
+D EAST 3822 0 0
+~
+~
+D DOWN 3820 0 0
+~
+~
+OWNER none~
+#3822
+The Eastern Gate~
+This is the example description.    
+~
+city
+D WEST 3821 0 0
+~
+~
+OWNER none~
+#3823
+Upon a narrow walkway~
+This is the example description.    
+~
+city
+D NORTH 3824 0 0
+~
+~
+D SOUTH 3812 0 0
+~
+~
+OWNER none~
+#3824
+At the top of a narrow staircase~
+This is the example description.    
+~
+city
+D SOUTH 3823 0 0
+~
+~
+D DOWN 3825 0 0
+~
+~
+OWNER none~
+#3825
+A well-paved street~
+This is the example description.    
+~
+city
+D NORTH 3831 0 0
+~
+~
+D SOUTH 3826 0 0
+~
+~
+D UP 3824 0 0
+~
+~
+OWNER none~
+#3826
+A well-paved street~
+This is the example description.    
+~
+city
+D NORTH 3825 0 0
+~
+~
+D SOUTH 3827 0 0
+~
+~
+OWNER none~
+#3827
+A well-paved street~
+This is the example description.    
+~
+city
+D NORTH 3826 0 0
+~
+~
+D WEST 3828 0 0
+~
+~
+OWNER none~
+#3828
+A well-paved street~
+This is the example description.    
+~
+city
+D EAST 3827 0 0
+~
+~
+D WEST 3829 0 0
+~
+~
+OWNER none~
+#3829
+A well-paved street~
+This is the example description.    
+~
+city
+D EAST 3828 0 0
+~
+~
+D SOUTH 3816 0 0
+~
+~
+OWNER none~
+#3830
+Dummy Room~
+This is the example description.    
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#3831
+A well-paved street~
+This is the example description.    
+~
+unused
+D NORTH 3832 0 0
+~
+~
+D SOUTH 3825 0 0
+~
+~
+OWNER none~
+#3832
+A well-paved street~
+This is the example description.    
+~
+unused
+D NORTH 3833 0 0
+~
+~
+D SOUTH 3831 0 0
+~
+~
+OWNER none~
+#3833
+A well-paved street~
+This is the example description.    
+~
+unused
+D NORTH 3834 0 0
+~
+~
+D SOUTH 3832 0 0
+~
+~
+OWNER none~
+#3834
+A well-paved street~
+This is the example description.    
+~
+unused
+D NORTH 3835 0 0
+~
+~
+D SOUTH 3833 0 0
+~
+~
+OWNER none~
+#3835
+A well-paved street~
+This is the example description.    
+~
+unused
+D NORTH 3836 0 0
+~
+~
+D EAST 3838 0 0
+~
+~
+D SOUTH 3834 0 0
+~
+~
+D WEST 3842 0 0
+~
+~
+OWNER none~
+#3836
+A well-paved street~
+This is the example description.    
+~
+unused
+D NORTH 3837 0 0
+~
+~
+D SOUTH 3835 0 0
+~
+~
+OWNER none~
+#3837
+A rough road~
+This is the example description.    
+~
+unused
+D NORTH 3845 0 0
+~
+~
+D SOUTH 3836 0 0
+~
+~
+OWNER none~
+#3838
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D NORTH 3881 AB 0
+~
+~
+D EAST 3839 0 0
+~
+~
+D WEST 3835 0 0
+~
+~
+OWNER none~
+#3839
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D EAST 3840 0 0
+~
+~
+D SOUTH 3880 AB 0
+~
+~
+D WEST 3838 0 0
+~
+~
+OWNER none~
+#3840
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D EAST 3841 0 0
+~
+~
+D WEST 3839 0 0
+~
+~
+OWNER none~
+#3841
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D WEST 3840 0 0
+~
+~
+OWNER none~
+#3842
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D EAST 3835 0 0
+~
+~
+D SOUTH 3882 AB 0
+~
+~
+D WEST 3843 0 0
+~
+~
+OWNER none~
+#3843
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D NORTH 3884 AB 0
+~
+~
+D EAST 3842 0 0
+~
+~
+D WEST 3844 0 0
+~
+~
+OWNER none~
+#3844
+A snow-covered side street~
+This is the example description.    
+~
+unused
+D EAST 3843 0 0
+~
+~
+OWNER none~
+#3845
+The entrance to the silver mines~
+This is the example description.    
+~
+unused
+D SOUTH 3837 0 0
+~
+~
+OWNER none~
+#3846
+A wide wooden landing~
+This is the example description.    
+~
+city
+D NORTH 3819 0 0
+~
+~
+D WEST 3849 0 0
+~
+~
+OWNER none~
+#3847
+A worn ledge~
+This is the example description.    
+~
+city
+D NORTH 3848 AB 0
+~
+~
+D EAST 3849 0 0
+~
+~
+OWNER none~
+#3848
+The weaponsmith~
+This is the example description.    
+~
+inside
+D SOUTH 3847 AB 0
+~
+~
+OWNER none~
+#3849
+A wooden bridge leading to a ledge~
+This is the example description.    
+~
+city
+D EAST 3846 0 0
+~
+~
+D WEST 3847 0 0
+~
+~
+OWNER none~
+#3850
+A frigid cobblestone alley~
+This is the example description.    
+~
+unused
+D EAST 3802 0 0
+~
+~
+D SOUTH 3853 AB 0
+~
+~
+D WEST 3851 0 0
+~
+~
+OWNER none~
+#3851
+A frigid cobblestone alley~
+This is the example description.    
+~
+unused
+D NORTH 3855 AB 0
+~
+~
+D EAST 3850 0 0
+~
+~
+D WEST 3852 0 0
+~
+~
+OWNER none~
+#3852
+The end of a frigid cobblestone alley~
+This is the example description.    
+~
+unused
+D EAST 3851 0 0
+~
+~
+OWNER none~
+#3853
+The anteroom of the armory~
+This is the example description.    
+~
+inside
+D NORTH 3850 AB 0
+~
+~
+D WEST 3854 0 0
+~
+~
+OWNER none~
+#3854
+The counter of the armory~
+This is the example description.    
+~
+inside
+D EAST 3853 0 0
+~
+~
+OWNER none~
+#3855
+The entrance to the inn~
+This is the example description.    
+~
+inside
+D EAST 3856 0 0
+~
+~
+D SOUTH 3851 AB 0
+~
+~
+D WEST 3857 0 0
+~
+~
+OWNER none~
+#3856
+A sitting room within the inn~
+This is the example description.    
+~
+inside
+D WEST 3855 0 0
+~
+~
+OWNER none~
+#3857
+The lobby of the inn~
+This is the example description.    
+~
+inside
+D NORTH 3858 0 0
+~
+~
+D EAST 3855 0 0
+~
+~
+OWNER none~
+#3858
+The front desk~
+This is the example description.    
+~
+inside
+D SOUTH 3857 0 0
+~
+~
+D WEST 3860 0 0
+~
+~
+D UP 3859 0 0
+~
+~
+OWNER none~
+#3859
+A hallway within the inn~
+This is the example description.    
+~
+inside
+D SOUTH 3861 0 0
+~
+~
+D DOWN 3858 0 0
+~
+~
+OWNER none~
+#3860
+A small tavern within the inn~
+This is the example description.    
+~
+inside
+D EAST 3858 0 0
+~
+~
+OWNER none~
+#3861
+A hallway within the inn~
+This is the example description.    
+~
+inside
+D NORTH 3859 0 0
+~
+~
+D EAST 3862 0 0
+~
+~
+D SOUTH 3864 0 0
+~
+~
+D WEST 3863 0 0
+~
+~
+OWNER none~
+#3862
+A hallway within the inn~
+This is the example description.    
+~
+inside
+D NORTH 3867 AB 0
+~
+~
+D SOUTH 3868 AB 0
+~
+~
+D WEST 3861 0 0
+~
+~
+OWNER none~
+#3863
+A hallway within the inn~
+This is the example description.    
+~
+inside
+D NORTH 3865 AB 0
+~
+~
+D EAST 3861 0 0
+~
+~
+D SOUTH 3866 AB 0
+~
+~
+OWNER none~
+#3864
+A room in the inn~
+This is the example description.    
+~
+unused
+D NORTH 3861 0 0
+~
+~
+OWNER none~
+#3865
+A room in the inn~
+This is the example description.    
+~
+unused
+D SOUTH 3863 AB 0
+~
+~
+OWNER none~
+#3866
+A room in the inn~
+This is the example description.    
+~
+inside
+D NORTH 3863 AB 0
+~
+~
+OWNER none~
+#3867
+A room in the inn~
+This is the example description.    
+~
+unused
+D SOUTH 3862 AB 0
+~
+~
+OWNER none~
+#3868
+A room in the inn~
+This is the example description.    
+~
+inside
+D NORTH 3862 AB 0
+~
+~
+OWNER none~
+#3869
+The silversmith's shop~
+This is the example description.    
+~
+inside
+D EAST 3870 0 0
+~
+~
+D WEST 3803 AB 0
+~
+~
+OWNER none~
+#3870
+The silversmith's shop~
+This is the example description.    
+~
+inside
+D WEST 3869 0 0
+~
+~
+OWNER none~
+#3871
+The the bottom of a tall, granite staircase~
+This is the example description.    
+~
+city
+D NORTH 3812 0 0
+~
+~
+D UP 3872 0 0
+~
+~
+OWNER none~
+#3872
+A broad landing~
+This is the example description.    
+~
+city
+D SOUTH 3886 0 0
+~
+~
+D DOWN 3871 0 0
+~
+~
+OWNER none~
+#3873
+At the top of the staircase, before the Temple of Iseldheim~
+This is the example description.    
+~
+city
+D SOUTH 3874 0 0
+~
+~
+D DOWN 3886 0 0
+~
+~
+OWNER none~
+#3874
+The main chamber of the Temple of Iseldheim~
+This is the example description.    
+~
+inside
+D NORTH 3873 0 0
+~
+~
+D EAST 3876 0 0
+~
+~
+D SOUTH 3875 0 0
+~
+~
+D WEST 3878 0 0
+~
+~
+OWNER none~
+#3875
+At the Altar of the High Shaman of Iseldheim~
+This is the example description.    
+~
+unused
+D NORTH 3874 0 0
+~
+~
+OWNER none~
+#3876
+Entrance to the Paladin's guild~
+This is the example description.    
+~
+inside
+D NORTH 3877 0 0
+~
+~
+D WEST 3874 0 0
+~
+~
+OWNER none~
+#3877
+Paladin's guild~
+This is the example description.    
+~
+inside
+D SOUTH 3876 0 0
+~
+~
+OWNER none~
+#3878
+Entrance to the Paladin's guild~
+This is the example description.    
+~
+inside
+D EAST 3874 0 0
+~
+~
+D SOUTH 3879 0 0
+~
+~
+OWNER none~
+#3879
+Zealot's guild~
+This is the example description.    
+~
+inside
+D NORTH 3878 0 0
+~
+~
+OWNER none~
+#3880
+The furrier~
+This is the example description.    
+~
+inside
+D NORTH 3839 AB 0
+~
+~
+OWNER none~
+#3881
+The herbalist~
+This is the example description.    
+~
+inside
+D SOUTH 3838 AB 0
+~
+~
+OWNER none~
+#3882
+General store~
+This is the example description.    
+~
+inside
+D NORTH 3842 AB 0
+~
+~
+D WEST 3883 0 0
+~
+~
+OWNER none~
+#3883
+General store~
+This is the example description.    
+~
+inside
+D EAST 3882 0 0
+~
+~
+OWNER none~
+#3884
+Behrum's Ward Shop~
+This is the example description.    
+~
+inside
+D SOUTH 3843 AB 0
+~
+~
+D WEST 3885 0 0
+~
+~
+OWNER none~
+#3885
+Behrum's Ward Shop~
+This is the example description.    
+~
+inside
+D EAST 3884 0 0
+~
+~
+OWNER none~
+#3886
+A broad landing~
+This is the example description.    
+~
+unused
+D NORTH 3872 0 0
+~
+~
+D UP 3873 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 3800 TO 3802 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3805 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3812 GLIMIT 10 LLIMIT 1
+MOB 3801 TO 3817 GLIMIT 1 LLIMIT 1
+MOB 3800 TO 3820 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3828 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3831 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3839 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3849 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3851 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3872 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,2133 @@
+#AREA
+varggin.are~
+Varggin Shih~
+Barsak~
+40 51
+22000 22099
+normal
+temperate
+0
+1
+Barsak~
+
+#MOBS
+#22000
+disgusting troll warrior~
+a disgusting troll warrior~
+A large troll sniffs the air, preparing to attack his enemies!
+~
+Well-muscled and smelly like any other troll. An inhabitant of the
+dark town of Varggin Shih, he trains as a warrior in their small community.
+~
+-1000 0 100 troll~
+50 50d10+5850 10d5+22 0 100 pound
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF CRUSH
+AFF REGENERATION
+RES BASH
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL MENTAL
+CLASS warrior none none 
+#22001
+strong troll archer~
+a strong troll archer~
+A large troll looks up at you and readies his bow!
+~
+He is one of the great archers of Varggin Shih. His muscles glisten as he
+readies his bow for a battle, glaring at you with hatred.
+~
+-1000 0 100 troll~
+55 50d10+6000 10d5+28 0 100 crush
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF REGENERATION
+RES BASH
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL HOLY
+VUL MENTAL
+CLASS warrior none none 
+#22002
+strong troll guard~
+a elite troll guard~
+A large troll sneers at you, guarding the king's lair with his life.
+~
+He is one of the few trolls who have trained their whole life to be
+guardian of the king and protector of his life. His muscles are large
+and his skin is tough. Perhaps you should rethink your plans...
+~
+-1000 0 100 troll~
+58 50d10+8000 10d6+27 0 100 pierce
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF KICK
+OFF PARRY
+OFF CRUSH
+OFF SPAM_MURDER
+AFF REGENERATION
+RES BASH
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL HOLY
+VUL MENTAL
+CLASS warrior none none 
+#22003
+troll king~
+the King of Varggin Shih~
+A huge troll growls and spits at you for interupting him!
+~
+He is the king of this very dark and evil town. Having fought through the
+hardships of the troll plague so long ago, he began choosing the finest of
+troll fighters to join him in a village of luxury. No worries, no problems
+and no intruders. Now that the mountain pass that leads here has been found,
+though, his trolls have taken offense to the infidels.
+~
+-1000 0 100 troll~
+55 1d1+13499 10d10+20 0 100 slash
+0 0 0 0
+standing male rich
+0 0 huge
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF KICK
+OFF PARRY
+OFF CRUSH
+OFF NO_TRACK
+OFF SPAM_MURDER
+AFF SANCTUARY
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+IMM BASH
+RES BASH
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL HOLY
+VUL MENTAL
+CLASS warrior none none 
+#22004
+troll citizen~
+the troll citizen~
+A medium sized troll walks the streets of Varggin Shih here.
+~
+He is large, well-muscled and ugly.
+~
+-1000 0 100 troll~
+45 1d1+3899 9d6+16 0 100 crush
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF CRUSH
+AFF REGENERATION
+RES BASH
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL HOLY
+CLASS warrior none none 
+#22005
+troll ranger~
+a large troll ranger~
+A large troll ranger looks up at your entrance and attacks!
+~
+He is one of the trolls who has dedicated his life to the woods and all
+that it has to offer. Crude, disgusting plants sit around his home with
+their vines climbing up and down the walls. He prepares to defend his home
+against the intruders.
+~
+-1000 0 100 troll~
+53 1d1+7399 10d4+25 0 100 pound
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF BASH
+OFF BERSERK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF REGENERATION
+RES BASH
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL HOLY
+VUL MENTAL
+CLASS warrior none none 
+#22006
+troll shaman Haggin~
+the shaman of Varggin Shih~
+A large shaman stands here chanting spells at any who oppose him.
+~
+He is one of the darkest looking trolls you have ever seen. Fur that is
+black as midnight and a demonic glare in his eyes that sends chills up
+your spine. Haggin the shaman has known the king of this town for most
+of his adult life, having joined him in a crusade against a village or
+two they live in luxury.
+~
+-1000 0 100 troll~
+54 1d1+8999 10d7+30 0 100 wrath
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT UNDEAD
+OFF AREA_ATTACK
+OFF BERSERK
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+OFF SPAM_MURDER
+AFF SANCTUARY
+AFF FLYING
+AFF PASS_DOOR
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES PIERCE
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+VUL HOLY
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#22000
+blood-covered blood axe~
+a blood-covered axe~
+A blood-covered axe is here.~
+weapon
+iron~
+axe 4 11 slice 0
+40 20 600 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY DAMROLL 3
+LIMIT 9
+TIMER 0
+
+#22001
+deadly bow~
+a deadly bow~
+A deadly bow rests here in a pool of blood.~
+weapon
+wood~
+weapon 5 4 thwack 0
+45 18 9000 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+LIMIT 7
+TIMER 0
+
+#22002
+signet ring~
+a Varggin Shih signet ring~
+A silver ring is here, the signet of Varggin Shih adorns it.~
+armor
+silver~
+1 1 1 1 0
+50 3 9000 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM EVIL
+APPLY SBREATH -5
+APPLY CON 2
+APPLY DAMROLL 2
+APPLY HP 15
+APPLY MANA 15
+LIMIT 4
+TIMER 0
+
+#22003
+crude iron belt~
+a crude iron belt~
+A crude-looking iron belt is here.~
+armor
+iron~
+6 8 7 6 0
+50 5 9000 P
+WEAR TAKE
+WEAR WAIST
+ITEM GLOW
+ITEM HUM
+ITEM EVIL
+APPLY SPETRI -10
+APPLY DAMROLL 3
+LIMIT 5
+TIMER 0
+
+#22004
+helm furs black~
+the helm of blackened furs~
+A dirty helm of blackened furs is here.~
+armor
+fur~
+8 8 8 8 0
+50 4 9000 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT TITAN_ONLY
+ITEM HUM
+APPLY DEX -3
+APPLY DAMROLL 4
+LIMIT 2
+TIMER 0
+
+#22005
+centaur hoof~
+a centaur hoof~
+A large hoof of a centaur is here.~
+armor
+bone~
+8 8 8 8 0
+50 2 9000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+APPLY CON 3
+APPLY MOVE 100
+LIMIT 4
+TIMER 0
+
+#22006
+blood-covered bloody battlearmor armor battle~
+some blood-covered battlearmor~
+Some blood-covered battle armor is here.~
+armor
+onyx~
+10 10 10 10 0
+50 75 9000 P
+WEAR TAKE
+WEAR BODY
+ITEM HUM
+APPLY HITROLL 5
+APPLY STR 3
+APPLY DAMROLL 3
+LIMIT 4
+TIMER 0
+
+#22007
+potion smelly strange~
+a strange smelly potion~
+A strange smelly potion is here.~
+potion
+glass~
+55 'fireball' 'fireball' 'fireball' 'word of recall'
+55 1 9000 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 1
+TIMER 0
+
+#22008
+wicked iron longsword~
+the wicked iron longsword~
+A wicked iron longsword is here.~
+weapon
+iron~
+sword 5 9 slice F
+50 35 9000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+ITEM GLOW
+ITEM HUM
+APPLY DAMROLL 4
+LIMIT 1
+TIMER 0
+
+#22009
+staff zargg troll~
+the staff of Zargg Nihl~
+A large staff is here.~
+weapon
+iron~
+staff 2 24 digestion F
+45 21 9000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+APPLY DEX 2
+LIMIT 10
+TIMER 0
+
+#22010
+potion strange black~
+a strange black potion~
+A strange black potion is here.~
+potion
+glass~
+50 'heal' 'heal' 'reserved' 'reserved'
+50 1 900 P
+WEAR TAKE
+ITEM GLOW
+ITEM MAGIC
+LIMIT 1
+TIMER 0
+
+#22011
+bone bones plate breastplate~
+a bone breastplate~
+A pile of bones is here.~
+armor
+bone~
+8 8 8 8 0
+50 12 900 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+APPLY DEX -1
+APPLY DAMROLL 3
+LIMIT 10
+TIMER 0
+
+#22012
+bone bones leggings~
+a pair of bone leggings~
+A pile of bones is here.~
+armor
+bone~
+8 8 8 8 0
+50 5 900 P
+WEAR TAKE
+WEAR LEGS
+ITEM GLOW
+APPLY DEX -1
+APPLY DAMROLL 3
+LIMIT 10
+TIMER 0
+
+#22013
+bone bones boots~
+a pair of bone boots~
+A pile of bones is here.~
+armor
+bone~
+8 8 8 8 0
+50 2 900 P
+WEAR TAKE
+WEAR FEET
+ITEM GLOW
+APPLY DEX -2
+APPLY DAMROLL 3
+LIMIT 10
+TIMER 0
+
+#22014
+bone bones shield~
+a bone shield~
+A pile of bones is here.~
+armor
+bone~
+9 9 9 9 0
+50 9 900 P
+WEAR TAKE
+WEAR SHIELD
+ITEM HUM
+APPLY DEX -2
+APPLY DAMROLL 3
+LIMIT 10
+TIMER 0
+
+#22015
+robe pain black~
+the robe of Pain~
+A black robe is here.~
+armor
+cloth~
+5 5 5 5 0
+50 8 900 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM HUM
+APPLY MANA 200
+APPLY HP -200
+LIMIT 2
+TIMER 0
+
+#22016
+bracelet suffering~
+the bracelet of suffering~
+A large iron bracelet is here.~
+armor
+iron~
+9 9 9 9 0
+51 2 900 P
+WEAR TAKE
+WEAR WRIST
+RESTRICT ZEALOT_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY HP 10
+APPLY DAMROLL 3
+LIMIT 2
+TIMER 0
+
+#22017
+skull cracked~
+the cracked skull of the shaman of Varggin Shih~
+A cracked skull of the shaman of Varggin Shih is here.~
+armor
+bone~
+3 3 3 3 0
+50 6 900 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM ANTIGOOD
+ITEM NOREMOVE
+APPLY MANA 25
+APPLY DAMROLL 3
+APPLY SBREATH -10
+APPLY WIS 6
+LIMIT 2
+TIMER 0
+
+#22018
+strange bone~
+the strange bone~
+A strange looking bone is humming here.~
+armor
+bone~
+1 1 1 1 0
+60 1 9000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+APPLY STR -25
+LIMIT 30
+TIMER 0
+
+#22019
+fur leggings~
+some tough fur leggings~
+A pile of tough-looking fur is here.~
+armor
+fur~
+7 7 7 7 0
+40 13 900 P
+WEAR TAKE
+WEAR LEGS
+ITEM HUM
+APPLY HP 25
+APPLY STR 2
+LIMIT 18
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#22000
+A dark trail~
+The trees all around you howl as you walk on this dark and lonely trail.
+Leaves swirl in tornadoes and the wind tears at your clothing, making you
+want badly to rest on a nearby tree stump. High above dark clouds thunder
+and lightning crackles. You notice further to the north that the trail
+begins to ascend into the mountains.
+~
+forest
+ROOM DARK
+D NORTH 22001 0 0
+~
+~
+D SOUTH 24824 0 0
+~
+~
+#22001
+A dark trail~
+The forest that once surrounded this trail seems less dense in this part.
+Rocks and boulders rest around you and loose dirts slides down the path
+leading up the mountain. Large howls from mountain wolves can be heard in
+the distance, though no direction can be guessed which way it actually
+originated from. To the south the trail continues while you may climb up
+the mountain here.
+~
+forest
+ROOM DARK
+D SOUTH 22000 0 0
+~
+~
+D UP 22002 0 0
+~
+~
+#22002
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D EAST 22003 0 0
+~
+~
+D WEST 22020 0 0
+~
+~
+D DOWN 22001 0 0
+~
+~
+#22003
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D WEST 22002 0 0
+~
+~
+D UP 22004 0 0
+~
+~
+#22004
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22005 0 0
+~
+~
+D DOWN 22003 0 0
+~
+~
+#22005
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D SOUTH 22004 0 0
+~
+~
+D UP 22006 0 0
+~
+~
+#22006
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22007 0 0
+~
+~
+D DOWN 22005 0 0
+~
+~
+#22007
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22008 0 0
+~
+~
+D SOUTH 22006 0 0
+~
+~
+#22008
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D SOUTH 22007 0 0
+~
+~
+D WEST 22009 0 0
+~
+~
+#22009
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D EAST 22008 0 0
+~
+~
+D DOWN 22010 0 0
+~
+~
+#22010
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22011 0 0
+~
+~
+D UP 22009 0 0
+~
+~
+#22011
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness. You notice the trail leads down to
+a large clearing.
+~
+mountains
+ROOM DARK
+D SOUTH 22010 0 0
+~
+~
+D DOWN 22021 0 0
+~
+~
+#22012
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness. You notice the trail leads down to
+a large clearing.
+~
+mountains
+ROOM DARK
+D SOUTH 22013 0 0
+~
+~
+D DOWN 22021 0 0
+~
+~
+#22013
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22012 0 0
+~
+~
+D UP 22014 0 0
+~
+~
+#22014
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D WEST 22015 0 0
+~
+~
+D DOWN 22013 0 0
+~
+~
+#22015
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D EAST 22014 0 0
+~
+~
+D SOUTH 22016 0 0
+~
+~
+#22016
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22015 0 0
+~
+~
+D SOUTH 22017 0 0
+~
+~
+#22017
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22016 0 0
+~
+~
+D DOWN 22018 0 0
+~
+~
+#22018
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D SOUTH 22019 0 0
+~
+~
+D UP 22017 0 0
+~
+~
+#22019
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D NORTH 22018 0 0
+~
+~
+D DOWN 22020 0 0
+~
+~
+#22020
+The mountain trail~
+The trail that leads around this mountain is very rocky and the loose dirt
+makes it increasingly difficult to walk. Few trees surround this trail and
+speckle the landscape below. Mostly pine, you notice that none have grown
+very well. The dark clouds above may be the reason, although you wonder what
+could be causing the constant darkness.
+~
+mountains
+ROOM DARK
+D EAST 22002 0 0
+~
+~
+D UP 22019 0 0
+~
+~
+#22021
+The clearing~
+Like the mountain above, the rocks here are scattered about the area. The
+clearing seems to look almost like the beginnings of a road leading north,
+where you notice a large town surrounded by an iron wall. You notice the
+weather above and around the town is just as it was leading here: cloudy
+and dark, although the mountains seem to look more inviting.
+~
+field
+ROOM DARK
+D NORTH 22022 0 0
+~
+~
+D UP 22011 0 0
+~
+~
+#22022
+The south gate~
+At the gate of Varggin Shih you can already see the despair and darkness
+present in this city. An awful smell wafts in with the wind, making you
+gasp for fresh air. Heeps of dirty furs litter the inside of the gate, most
+likely for trade (although you aren't sure who would by such filthy things).
+The gate and the walls surrounding the city tower at a height close to around
+20 feet.
+~
+inside
+ROOM DARK
+D NORTH 22023 0 0
+~
+~
+D SOUTH 22021 0 0
+~
+~
+#22023
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22080 0 0
+~
+~
+D EAST 22024 0 0
+~
+~
+D SOUTH 22022 0 0
+~
+~
+D WEST 22056 0 0
+~
+~
+#22024
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22025 0 0
+~
+~
+D SOUTH 22059 0 0
+~
+~
+D WEST 22023 0 0
+~
+~
+#22025
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22026 0 0
+~
+~
+D SOUTH 22060 0 0
+~
+~
+D WEST 22024 0 0
+~
+~
+#22026
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22027 0 0
+~
+~
+D SOUTH 22061 0 0
+~
+~
+D WEST 22025 0 0
+~
+~
+#22027
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22028 0 0
+~
+~
+D SOUTH 22062 0 0
+~
+~
+D WEST 22026 0 0
+~
+~
+#22028
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22029 0 0
+~
+~
+D WEST 22027 0 0
+~
+~
+#22029
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22030 0 0
+~
+~
+D SOUTH 22028 0 0
+~
+~
+#22030
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22031 0 0
+~
+~
+D SOUTH 22029 0 0
+~
+~
+D WEST 22063 0 0
+~
+~
+#22031
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22032 0 0
+~
+~
+D SOUTH 22030 0 0
+~
+~
+#22032
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22033 0 0
+~
+~
+D EAST 22065 0 0
+~
+~
+D SOUTH 22031 0 0
+~
+~
+D WEST 22064 0 0
+~
+~
+#22033
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22034 0 0
+~
+~
+D SOUTH 22032 0 0
+~
+~
+#22034
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22035 0 0
+~
+~
+D EAST 22067 0 0
+~
+~
+D SOUTH 22033 0 0
+~
+~
+D WEST 22066 0 0
+~
+~
+#22035
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22036 0 0
+~
+~
+D SOUTH 22034 0 0
+~
+~
+#22036
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22037 0 0
+~
+~
+D SOUTH 22035 0 0
+~
+~
+D WEST 22068 0 0
+~
+~
+#22037
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22038 0 0
+~
+~
+D SOUTH 22036 0 0
+~
+~
+#22038
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D SOUTH 22037 0 0
+~
+~
+D WEST 22039 0 0
+~
+~
+#22039
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22038 0 0
+~
+~
+D WEST 22040 0 0
+~
+~
+#22040
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22069 0 0
+~
+~
+D EAST 22039 0 0
+~
+~
+D WEST 22041 0 0
+~
+~
+#22041
+The northern gate of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.  Here, the road opens up into a large gate to the north, and a
+road trails off into a barren wasteland.
+~
+inside
+ROOM DARK
+D NORTH 18000 0 0
+~
+~
+D EAST 22040 0 0
+~
+~
+D SOUTH 22070 0 0
+~
+~
+D WEST 22042 0 0
+~
+~
+#22042
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22071 0 0
+~
+~
+D EAST 22041 0 0
+~
+~
+D WEST 22043 0 0
+~
+~
+#22043
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22042 0 0
+~
+~
+D SOUTH 22072 0 0
+~
+~
+D WEST 22044 0 0
+~
+~
+#22044
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22073 0 0
+~
+~
+D EAST 22043 0 0
+~
+~
+D WEST 22045 0 0
+~
+~
+#22045
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22044 0 0
+~
+~
+D SOUTH 22046 0 0
+~
+~
+#22046
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22045 0 0
+~
+~
+D SOUTH 22047 0 0
+~
+~
+#22047
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22046 0 0
+~
+~
+D EAST 22074 0 0
+~
+~
+D SOUTH 22048 0 0
+~
+~
+#22048
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22047 0 0
+~
+~
+D SOUTH 22049 0 0
+~
+~
+#22049
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22048 0 0
+~
+~
+D EAST 22075 0 0
+~
+~
+D SOUTH 22050 0 0
+~
+~
+D WEST 22076 0 0
+~
+~
+#22050
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22049 0 0
+~
+~
+D SOUTH 22051 0 0
+~
+~
+#22051
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22050 0 0
+~
+~
+D EAST 22078 0 0
+~
+~
+D SOUTH 22052 0 0
+~
+~
+D WEST 22077 0 0
+~
+~
+#22052
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22051 0 0
+~
+~
+D EAST 22079 0 0
+~
+~
+D SOUTH 22053 0 0
+~
+~
+#22053
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22052 0 0
+~
+~
+D SOUTH 22054 0 0
+~
+~
+#22054
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22053 0 0
+~
+~
+D EAST 22055 0 0
+~
+~
+#22055
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22056 0 0
+~
+~
+D SOUTH 22057 0 0
+~
+~
+D WEST 22054 0 0
+~
+~
+#22056
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22023 0 0
+~
+~
+D SOUTH 22058 0 0
+~
+~
+D WEST 22055 0 0
+~
+~
+#22057
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large hole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22055 0 0
+~
+~
+#22058
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22056 0 0
+~
+~
+#22059
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22024 0 0
+~
+~
+#22060
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22025 0 0
+~
+~
+#22061
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22026 0 0
+~
+~
+#22062
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22027 0 0
+~
+~
+#22063
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D EAST 22030 0 0
+~
+~
+#22064
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D EAST 22032 0 0
+~
+~
+#22065
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D WEST 22032 0 0
+~
+~
+#22066
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D EAST 22034 0 0
+~
+~
+#22067
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D WEST 22034 0 0
+~
+~
+#22068
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D EAST 22036 0 0
+~
+~
+#22069
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D SOUTH 22040 0 0
+~
+~
+#22070
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22041 0 0
+~
+~
+#22071
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D SOUTH 22042 0 0
+~
+~
+#22072
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22043 0 0
+~
+~
+#22073
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D SOUTH 22044 0 0
+~
+~
+#22074
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D WEST 22047 0 0
+~
+~
+#22075
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22085 0 0
+~
+~
+D WEST 22049 0 0
+~
+~
+#22076
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D EAST 22049 0 0
+~
+~
+#22077
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D EAST 22051 0 0
+~
+~
+#22078
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D WEST 22051 0 0
+~
+~
+#22079
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D WEST 22052 0 0
+~
+~
+#22080
+Entrance to a Palace~
+Gold glitters around you and you feel out of place in this glorious foyer
+to the palace of the Varggin Shih. Paintings and murals depicting the
+history of this city hang in the hall, leaving you in awe and feeling
+almost out of place from the dark and lonely streets to the south. Torches
+hang in jewel-hilted hangers lightning the palace with a warm glow.
+~
+inside
+D NORTH 22081 0 0
+~
+~
+D SOUTH 22023 0 0
+~
+~
+#22081
+The Hallway~
+The palace is in much better condition than the rest of the city and you
+wonder how the citizens put up with the king. To the south the entrance glows
+with radiance and you almost question the fact that a troll lives here. To
+the east a strange smell emits from the darkness.
+~
+inside
+ROOM NORECALL
+D NORTH 22083 0 0
+~
+~
+D EAST 22082 0 0
+~
+~
+D SOUTH 22080 0 0
+~
+~
+#22082
+The Shaman's Room~
+This room is very dark and cold, lit only by a single torch that emits no
+heat. The walls are so black that it is difficult to discern exactly where
+they are. You can hear a low, moaning wind echoing from somewhere, carrying
+with it the faint whimpers much like that of a dying child, but the air here
+is dead, stale and lifeless, and there is no breeze to be felt.
+~
+inside
+ROOM DARK
+D WEST 22081 0 0
+~
+~
+#22083
+The Hallway~
+No torches line this hallway and the glow from the south seems not as
+bright as it was. Large paintings of the king and some of his victorious
+battles adorn the walls, which are made of the blackest of onyx. To the north
+there is a large throne room where the king resides. To the south the palace
+extends.
+~
+inside
+ROOM DARK
+D NORTH 22084 0 0
+~
+~
+D SOUTH 22081 0 0
+~
+~
+#22084
+The Throne Room~
+A raised dias occupies the center of this dismal place, and on the dias
+is a throne, constructed from countless humanoid bones and upholstered
+with human skin that still drips blood, creating small crimson pools on the
+smooth black marble floor that drain into a series of grates surrounding the
+throne.
+~
+inside
+ROOM DARK
+D SOUTH 22083 0 0
+~
+~
+#22085
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22086 0 0
+~
+~
+D WEST 22075 0 0
+~
+~
+#22086
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22087 0 0
+~
+~
+D EAST 22088 0 0
+~
+~
+D WEST 22085 0 0
+~
+~
+#22087
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D SOUTH 22086 0 0
+~
+~
+#22088
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D EAST 22089 0 0
+~
+~
+D SOUTH 22090 0 0
+~
+~
+D WEST 22086 0 0
+~
+~
+#22089
+The street of Varggin Shih~
+The street, like anything you see around you, smells. A dim glow illuminates
+the area from an unknown source. Various grunts and howls can be heard coming
+from the many homes that you see lining the street. You notice that there
+was some fur tossed to the side of the road, most likely the source of the
+horid smell.
+~
+inside
+ROOM DARK
+D NORTH 22091 0 0
+~
+~
+D WEST 22088 0 0
+~
+~
+#22090
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D NORTH 22088 0 0
+~
+~
+#22091
+A Small Home~
+This small home is large enough for one, maybe two trolls at most. It is
+pretty basic in it's furnishing: a bed, a kitchen/dining room "area" where
+a large table is, and a large whole in the floor where you assume the trolls
+throw waste and other things. Other than the blood stains covering the walls
+and carpet, this is exactly what an every-day troll would love.
+~
+inside
+ROOM DARK
+D SOUTH 22089 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 22004 TO 22025 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22027 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22031 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22034 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22041 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22043 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22054 GLIMIT 8 LLIMIT 1
+MOB 22004 TO 22056 GLIMIT 8 LLIMIT 1
+MOB 22000 TO 22057 GLIMIT 5 LLIMIT 1
+MOB 22000 TO 22058 GLIMIT 5 LLIMIT 1
+MOB 22000 TO 22060 GLIMIT 5 LLIMIT 1
+MOB 22000 TO 22062 GLIMIT 5 LLIMIT 1
+EQUIP 22000 WIELD
+MOB 22000 TO 22063 GLIMIT 5 LLIMIT 1
+MOB 22001 TO 22064 GLIMIT 6 LLIMIT 1
+MOB 22001 TO 22065 GLIMIT 6 LLIMIT 1
+EQUIP 22001 WIELD
+MOB 22001 TO 22067 GLIMIT 6 LLIMIT 1
+MOB 22005 TO 22068 GLIMIT 8 LLIMIT 1
+MOB 22005 TO 22069 GLIMIT 8 LLIMIT 1
+MOB 22005 TO 22070 GLIMIT 8 LLIMIT 1
+MOB 22005 TO 22071 GLIMIT 8 LLIMIT 1
+EQUIP 22011 BODY
+EQUIP 22012 LEGS
+EQUIP 22013 FEET
+EQUIP 22014 SHIELD
+EQUIP 22009 WIELD
+MOB 22005 TO 22072 GLIMIT 8 LLIMIT 1
+MOB 22005 TO 22073 GLIMIT 8 LLIMIT 1
+MOB 22005 TO 22074 GLIMIT 8 LLIMIT 1
+MOB 22001 TO 22076 GLIMIT 6 LLIMIT 1
+MOB 22001 TO 22078 GLIMIT 6 LLIMIT 1
+MOB 22006 TO 22082 GLIMIT 1 LLIMIT 1
+EQUIP 22015 ABOUT
+EQUIP 22016 WRISTTWO
+EQUIP 22017 HEAD
+GIVE 22018
+EQUIP 22019 LEGS
+MOB 22002 TO 22083 GLIMIT 1 LLIMIT 1
+MOB 22003 TO 22084 GLIMIT 1 LLIMIT 1
+EQUIP 22002 RFINGER
+EQUIP 22003 WAIST
+EQUIP 22004 HEAD
+GIVE 22005
+EQUIP 22006 BODY
+EQUIP 22008 WIELD
+MOB 22001 TO 22087 GLIMIT 6 LLIMIT 1
+MOB 22005 TO 22091 GLIMIT 8 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

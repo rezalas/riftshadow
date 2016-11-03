@@ -1,0 +1,18 @@
+<?
+	if("$_COOKIE[user]"=="" || "$_COOKIE[password]"=="")
+	{
+?>		
+		<form action=login.phtml method=post>
+			User: <input type=text name=user><br>
+			Password: <input type=password name=password><br>
+			<input type=submit value=Login>
+		</form>
+<?
+	}
+	else
+	{
+		include("header.inc");
+		echo "Test";
+		include("footer.inc");
+	}		
+?>

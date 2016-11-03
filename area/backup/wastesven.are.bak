@@ -1,0 +1,1277 @@
+#AREA
+wastesven.are~
+Wastes of Ven~
+Kreyastae~
+0 0
+16000 16099
+unopened
+none
+0
+1
+Kreyastae~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#16000
+cold cold-forged sword longsword adamantite hunter~
+the cold-forged adamantite longsword named 'Hunter'~
+A perfectly crafted long sword lies here, radiating icy cold.~
+weapon
+adamantite~
+sword 10 20 frbite 0
+1 9 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM EVIL
+ITEM MAGIC
+ITEM NODISARM
+ITEM NOLOCATE
+APPLY DAMROLL 10
+APPLY HITROLL 10
+LIMIT 0
+TIMER 0
+
+#16001
+black black-bladed sword longsword adamantite shadow~
+the black-bladed adamantite longsword named 'Shadow'~
+A longsword with a black blade rests here, pulsing with unholy power.~
+weapon
+adamantite~
+sword 10 20 defilement 0
+1 7 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODISARM
+ITEM NOLOCATE
+APPLY HITROLL 10
+APPLY DAMROLL 10
+LIMIT 0
+TIMER 0
+
+#16002
+shard fragment evil~
+a shard of Pure Evil~
+A small glowing black fragment lies here.~
+weapon
+energy~
+dagger 10 20 terror 0
+1 1 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM EVIL
+ITEM NODISARM
+ITEM NOLOCATE
+APPLY HITROLL 10
+APPLY DAMROLL 10
+LIMIT 0
+TIMER 0
+
+#16003
+cloak piwafwi black silk crimson web~
+a black spidersilk piwafwi worked with an unmoving crimson web~
+A pile of black silk adorned with a crimson web lies here.~
+armor
+silk~
+20 20 20 20 0
+1 1 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM EVIL
+ITEM MAGIC
+ITEM NOLOCATE
+APPLY SAVES -100
+LIMIT 0
+TIMER 0
+
+#16004
+white band catch silk spidersilk~
+a white spidersilk hair catch~
+A small band of white silk lies here.~
+armor
+silk~
+20 20 20 20 0
+1 1 0 P
+WEAR TAKE
+WEAR HEAD
+ITEM NOLOCATE
+APPLY INT 10
+APPLY WIS 10
+LIMIT 0
+TIMER 0
+
+#16005
+boots drowish~
+a pair of shin-high soft drowish boots~
+A pair of nice-looking leather boots sit here, neatly side by side.~
+armor
+leather~
+20 20 20 20 0
+1 1 0 P
+WEAR TAKE
+WEAR FEET
+ITEM NOLOCATE
+APPLY MOVE 1000
+LIMIT 0
+TIMER 0
+
+#16006
+adamantite chain leggings~
+some stealthy-looking adamantite chain leggings~
+A pile of black chainmail lies here in a heap.~
+armor
+adamantite~
+20 20 20 20 0
+1 10 0 P
+WEAR TAKE
+WEAR LEGS
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NOLOCATE
+APPLY DEX 10
+LIMIT 0
+TIMER 0
+
+#16007
+chain chainmail adamantite suit~
+a form-fitting suit of tiny adamantite chain links~
+A suit of black adamantite chainmail lies here.~
+armor
+adamantite~
+20 20 20 20 0
+1 10 0 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NOLOCATE
+APPLY STR 10
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#16000
+The beginning of a rocky path~
+~
+unused
+D EAST 16199 0 0
+door~
+~
+D SOUTH 16001 0 0
+door~
+~
+OWNER none~
+#16001
+On a rocky path~
+~
+unused
+D NORTH 16000 0 0
+door~
+~
+D SOUTH 16002 0 0
+door~
+~
+OWNER none~
+#16002
+A turn in the rocky path~
+~
+unused
+D NORTH 16001 0 0
+door~
+~
+D WEST 16003 0 0
+door~
+~
+OWNER none~
+#16003
+On a rocky path~
+~
+unused
+D NORTH 16096 0 0
+door~
+~
+D EAST 16002 0 0
+door~
+~
+D SOUTH 16068 0 0
+door~
+~
+D WEST 16004 0 0
+door~
+~
+OWNER none~
+#16004
+On a rocky path~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16003 0 0
+door~
+~
+D SOUTH 16069 0 0
+door~
+~
+D WEST 16005 0 0
+door~
+~
+OWNER none~
+#16005
+A turn in the rocky path~
+~
+unused
+D NORTH 16098 0 0
+door~
+~
+D EAST 16004 0 0
+door~
+~
+D SOUTH 16006 0 0
+door~
+~
+D WEST 16099 0 0
+door~
+~
+OWNER none~
+#16006
+A turn in the rocky trail~
+~
+unused
+D NORTH 16005 0 0
+door~
+~
+D EAST 16070 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16007 0 0
+door~
+~
+OWNER none~
+#16007
+On a rocky trail~
+~
+unused
+D NORTH 16096 0 0
+door~
+~
+D EAST 16006 0 0
+door~
+~
+D SOUTH 16068 0 0
+door~
+~
+D WEST 16008 0 0
+door~
+~
+OWNER none~
+#16008
+On a rocky trail~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16007 0 0
+door~
+~
+D SOUTH 16069 0 0
+door~
+~
+D WEST 16009 0 0
+door~
+~
+OWNER none~
+#16009
+On a rocky trail~
+~
+unused
+D NORTH 16098 0 0
+door~
+~
+D EAST 16008 0 0
+door~
+~
+D SOUTH 16070 0 0
+door~
+~
+D WEST 16010 0 0
+door~
+~
+OWNER none~
+#16010
+On a rocky trail~
+~
+unused
+D NORTH 16099 0 0
+door~
+~
+D EAST 16009 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16011 0 0
+door~
+~
+OWNER none~
+#16011
+A junction in the rocky trail~
+~
+unused
+D NORTH 16096 0 0
+door~
+~
+D EAST 16010 0 0
+door~
+~
+D SOUTH 16012 0 0
+door~
+~
+D WEST 16020 0 0
+door~
+~
+OWNER none~
+#16012
+On a rocky trail~
+~
+unused
+D NORTH 16011 0 0
+door~
+~
+D EAST 16068 0 0
+door~
+~
+D SOUTH 16013 0 0
+door~
+~
+D WEST 16098 0 0
+door~
+~
+OWNER none~
+#16013
+On a rocky trail~
+~
+unused
+D NORTH 16012 0 0
+door~
+~
+D EAST 16069 0 0
+door~
+~
+D SOUTH 16014 0 0
+door~
+~
+D WEST 16099 0 0
+door~
+~
+OWNER none~
+#16014
+On a rocky trail~
+~
+unused
+D NORTH 16013 0 0
+door~
+~
+D EAST 16070 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16015 0 0
+door~
+~
+OWNER none~
+#16015
+On a rocky trail~
+~
+unused
+D NORTH 16096 0 0
+door~
+~
+D EAST 16014 0 0
+door~
+~
+D SOUTH 16068 0 0
+door~
+~
+D WEST 16016 0 0
+door~
+~
+OWNER none~
+#16016
+On a rocky trail~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16015 0 0
+door~
+~
+D SOUTH 16069 0 0
+door~
+~
+D WEST 16017 0 0
+door~
+~
+OWNER none~
+#16017
+On a rocky trail~
+~
+unused
+D NORTH 16098 0 0
+door~
+~
+D EAST 16016 0 0
+door~
+~
+D SOUTH 16070 0 0
+door~
+~
+D WEST 16018 0 0
+door~
+~
+OWNER none~
+#16018
+Approaching the end of a rocky trail~
+~
+unused
+D NORTH 16099 0 0
+door~
+~
+D EAST 16017 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16019 0 0
+door~
+~
+OWNER none~
+#16019
+The end of a rocky trail~
+~
+unused
+D EAST 16018 0 0
+door~
+~
+OWNER none~
+#16020
+A sandy path~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16011 0 0
+door~
+~
+D SOUTH 16096 0 0
+door~
+~
+D WEST 16021 0 0
+door~
+~
+OWNER none~
+#16021
+A sandy path~
+~
+unused
+D NORTH 16098 0 0
+door~
+~
+D EAST 16020 0 0
+door~
+~
+D SOUTH 16097 0 0
+door~
+~
+D WEST 16022 0 0
+door~
+~
+OWNER none~
+#16022
+A bend in the sandy path~
+~
+unused
+D NORTH 16023 0 0
+door~
+~
+D EAST 16021 0 0
+door~
+~
+D SOUTH 16098 0 0
+door~
+~
+D WEST 16099 0 0
+door~
+~
+OWNER none~
+#16023
+A sandy path~
+~
+unused
+D NORTH 16024 0 0
+door~
+~
+D EAST 16096 0 0
+door~
+~
+D SOUTH 16022 0 0
+door~
+~
+D WEST 16097 0 0
+door~
+~
+OWNER none~
+#16024
+A sandy path~
+~
+unused
+D NORTH 16025 0 0
+door~
+~
+D EAST 16098 0 0
+door~
+~
+D SOUTH 16023 0 0
+door~
+~
+D WEST 16099 0 0
+door~
+~
+OWNER none~
+#16025
+Before a large sand pit~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16096 0 0
+door~
+~
+D SOUTH 16024 0 0
+door~
+~
+D WEST 16042 0 0
+door~
+~
+OWNER none~
+#16026
+On A Sandy, Ancient Footpath~
+~
+unused
+D EAST 16096 0 0
+door~
+~
+D SOUTH 16027 0 0
+door~
+~
+D WEST 16099 0 0
+door~
+~
+OWNER none~
+#16027
+On A Sandy, Ancient Footpath~
+~
+unused
+ROOM NO_MOB
+D NORTH 16026 0 0
+door~
+~
+D EAST 16098 0 0
+door~
+~
+D SOUTH 16097 0 0
+door~
+~
+D WEST 16096 0 0
+door~
+~
+OWNER none~
+#16034
+The north-west corner of the sand pit~
+~
+unused
+D EAST 16035 0 0
+door~
+~
+D SOUTH 16037 0 0
+door~
+~
+OWNER none~
+#16035
+The northern end of the sand pit~
+~
+unused
+D EAST 16036 0 0
+door~
+~
+D SOUTH 16038 0 0
+door~
+~
+D WEST 16034 0 0
+door~
+~
+OWNER none~
+#16036
+The north-east corner of the sand pit~
+~
+unused
+D SOUTH 16039 0 0
+door~
+~
+D WEST 16035 0 0
+door~
+~
+OWNER none~
+#16037
+The western end of the sand pit~
+~
+unused
+D NORTH 16034 0 0
+door~
+~
+D EAST 16038 0 0
+door~
+~
+D SOUTH 16040 0 0
+door~
+~
+OWNER none~
+#16038
+The center of the sand pit~
+~
+unused
+D NORTH 16035 0 0
+door~
+~
+D EAST 16039 0 0
+door~
+~
+D SOUTH 16041 0 0
+door~
+~
+D WEST 16037 0 0
+door~
+~
+OWNER none~
+#16039
+The eastern end of the sand pit~
+~
+unused
+D NORTH 16036 0 0
+door~
+~
+D SOUTH 16042 0 0
+door~
+~
+D WEST 16038 0 0
+door~
+~
+OWNER none~
+#16040
+The south-west corner of the sand pit~
+~
+unused
+D NORTH 16037 0 0
+door~
+~
+D EAST 16041 0 0
+door~
+~
+OWNER none~
+#16041
+The southern end of the sand pit~
+~
+unused
+D NORTH 16038 0 0
+door~
+~
+D EAST 16042 0 0
+door~
+~
+D WEST 16040 0 0
+door~
+~
+OWNER none~
+#16042
+The south-east corner of the sand pit~
+~
+unused
+D NORTH 16039 0 0
+door~
+~
+D EAST 16025 0 0
+door~
+~
+D WEST 16041 0 0
+door~
+~
+OWNER none~
+#16068
+Within The Southern Wastes~
+~
+unused
+D NORTH 16071 0 0
+door~
+~
+D EAST 16072 0 0
+door~
+~
+D SOUTH 16077 0 0
+door~
+~
+D WEST 16082 0 0
+door~
+~
+OWNER none~
+#16069
+Within The Southern Wastes~
+~
+unused
+D NORTH 16073 0 0
+door~
+~
+D EAST 16078 0 0
+door~
+~
+D SOUTH 16083 0 0
+door~
+~
+D WEST 16071 0 0
+door~
+~
+OWNER none~
+#16070
+Within The Southern Wastes~
+~
+unused
+D NORTH 16079 0 0
+door~
+~
+D EAST 16080 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16074 0 0
+door~
+~
+OWNER none~
+#16071
+Within The Southern Wastes~
+~
+unused
+D NORTH 16081 0 0
+door~
+~
+D EAST 16070 0 0
+door~
+~
+D SOUTH 16075 0 0
+door~
+~
+D WEST 16076 0 0
+door~
+~
+OWNER none~
+#16072
+Within The Southern Wastes~
+~
+unused
+D NORTH 16075 0 0
+door~
+~
+D EAST 16076 0 0
+door~
+~
+D SOUTH 16081 0 0
+door~
+~
+D WEST 16070 0 0
+door~
+~
+OWNER none~
+#16073
+Within The Southern Wastes~
+~
+unused
+D NORTH 16077 0 0
+door~
+~
+D EAST 16082 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16072 0 0
+door~
+~
+OWNER none~
+#16074
+Within The Southern Wastes~
+~
+unused
+D NORTH 16083 0 0
+door~
+~
+D SOUTH 16073 0 0
+door~
+~
+D WEST 16078 0 0
+door~
+~
+OWNER none~
+#16075
+Within The Southern Wastes~
+~
+unused
+D NORTH 16069 0 0
+door~
+~
+D EAST 16074 0 0
+door~
+~
+D SOUTH 16079 0 0
+door~
+~
+OWNER none~
+#16076
+Within The Southern Wastes~
+~
+unused
+D EAST 16080 0 0
+door~
+~
+D SOUTH 16069 0 0
+door~
+~
+D WEST 16074 0 0
+door~
+~
+OWNER none~
+#16077
+Within The Southern Wastes~
+~
+unused
+D NORTH 16081 0 0
+door~
+~
+D EAST 16070 0 0
+door~
+~
+D SOUTH 16075 0 0
+door~
+~
+D WEST 16076 0 0
+door~
+~
+OWNER none~
+#16078
+Within The Southern Wastes~
+~
+unused
+D NORTH 16071 0 0
+door~
+~
+D EAST 16072 0 0
+door~
+~
+D SOUTH 16077 0 0
+door~
+~
+D WEST 16082 0 0
+door~
+~
+OWNER none~
+#16079
+Within The Southern Wastes~
+~
+unused
+D NORTH 16073 0 0
+door~
+~
+D EAST 16078 0 0
+door~
+~
+D WEST 16068 0 0
+door~
+~
+OWNER none~
+#16080
+Within The Southern Wastes~
+~
+unused
+D NORTH 16083 0 0
+door~
+~
+D EAST 16068 0 0
+door~
+~
+D SOUTH 16073 0 0
+door~
+~
+D WEST 16078 0 0
+door~
+~
+OWNER none~
+#16081
+Within The Southern Wastes~
+~
+unused
+D NORTH 16069 0 0
+door~
+~
+D EAST 16074 0 0
+door~
+~
+D SOUTH 16079 0 0
+door~
+~
+D WEST 16080 0 0
+door~
+~
+OWNER none~
+#16082
+Within The Southern Wastes~
+~
+unused
+D NORTH 16075 0 0
+door~
+~
+D EAST 16076 0 0
+door~
+~
+D SOUTH 16081 0 0
+door~
+~
+D WEST 16070 0 0
+door~
+~
+OWNER none~
+#16083
+Within The Southern Wastes~
+~
+unused
+D NORTH 16077 0 0
+door~
+~
+D EAST 16082 0 0
+door~
+~
+D SOUTH 16071 0 0
+door~
+~
+D WEST 16072 0 0
+door~
+~
+OWNER none~
+#16084
+Within The Northern Wastes~
+~
+unused
+D NORTH 16087 0 0
+door~
+~
+D EAST 16013 0 0
+door~
+~
+D SOUTH 16093 0 0
+door~
+~
+D WEST 16098 0 0
+door~
+~
+OWNER none~
+#16085
+Within The Northern Wastes~
+~
+unused
+D NORTH 16089 0 0
+door~
+~
+D EAST 16091 0 0
+door~
+~
+D SOUTH 16099 0 0
+door~
+~
+D WEST 16084 0 0
+door~
+~
+OWNER none~
+#16086
+Within The Northern Wastes~
+~
+unused
+D NORTH 16095 0 0
+door~
+~
+D EAST 16096 0 0
+door~
+~
+D SOUTH 16085 0 0
+door~
+~
+D WEST 16090 0 0
+door~
+~
+OWNER none~
+#16087
+Within The Northern Wastes~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16086 0 0
+door~
+~
+D SOUTH 16091 0 0
+door~
+~
+D WEST 16092 0 0
+door~
+~
+OWNER none~
+#16088
+Within The Northern Wastes~
+~
+unused
+D NORTH 16091 0 0
+door~
+~
+D EAST 16092 0 0
+door~
+~
+D SOUTH 16097 0 0
+door~
+~
+D WEST 16086 0 0
+door~
+~
+OWNER none~
+#16089
+Within The Northern Wastes~
+~
+unused
+D NORTH 16093 0 0
+door~
+~
+D EAST 16098 0 0
+door~
+~
+D SOUTH 16087 0 0
+door~
+~
+D WEST 16088 0 0
+door~
+~
+OWNER none~
+#16090
+Within The Northern Wastes~
+~
+unused
+D NORTH 16099 0 0
+door~
+~
+D EAST 16084 0 0
+door~
+~
+D SOUTH 16089 0 0
+door~
+~
+D WEST 16094 0 0
+door~
+~
+OWNER none~
+#16091
+Within The Northern Wastes~
+~
+unused
+D NORTH 16085 0 0
+door~
+~
+D EAST 16090 0 0
+door~
+~
+D SOUTH 16095 0 0
+door~
+~
+D WEST 16096 0 0
+door~
+~
+OWNER none~
+#16092
+Within The Northern Wastes~
+~
+unused
+D NORTH 16095 0 0
+door~
+~
+D EAST 16096 0 0
+door~
+~
+D SOUTH 16085 0 0
+door~
+~
+D WEST 16090 0 0
+door~
+~
+OWNER none~
+#16093
+Within The Northern Wastes~
+~
+unused
+D NORTH 16097 0 0
+door~
+~
+D EAST 16086 0 0
+door~
+~
+D SOUTH 16091 0 0
+door~
+~
+D WEST 16092 0 0
+door~
+~
+OWNER none~
+#16094
+Within The Northern Wastes~
+~
+unused
+D NORTH 16087 0 0
+door~
+~
+D EAST 16088 0 0
+door~
+~
+D SOUTH 16093 0 0
+door~
+~
+D WEST 16098 0 0
+door~
+~
+OWNER none~
+#16095
+Within The Northern Wastes~
+~
+unused
+D NORTH 16027 0 0
+door~
+~
+D EAST 16094 0 0
+door~
+~
+D SOUTH 16099 0 0
+door~
+~
+D WEST 16084 0 0
+door~
+~
+OWNER none~
+#16096
+Within The Northern Wastes~
+~
+unused
+D NORTH 16099 0 0
+door~
+~
+D EAST 16084 0 0
+door~
+~
+D SOUTH 16089 0 0
+door~
+~
+D WEST 16094 0 0
+door~
+~
+OWNER none~
+#16097
+Within The Northern Wastes~
+~
+unused
+D NORTH 16085 0 0
+door~
+~
+D EAST 16090 0 0
+door~
+~
+D SOUTH 16095 0 0
+door~
+~
+D WEST 16096 0 0
+door~
+~
+OWNER none~
+#16098
+Within The Northern Wastes~
+~
+unused
+D NORTH 16091 0 0
+door~
+~
+D EAST 16092 0 0
+door~
+~
+D SOUTH 16009 0 0
+door~
+~
+D WEST 16086 0 0
+door~
+~
+OWNER none~
+#16099
+Within The Northern Wastes~
+~
+unused
+D NORTH 16093 0 0
+door~
+~
+D EAST 16098 0 0
+door~
+~
+D SOUTH 16097 0 0
+door~
+~
+D WEST 16088 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

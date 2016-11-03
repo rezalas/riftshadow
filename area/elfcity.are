@@ -1,0 +1,665 @@
+#AREA
+elfcity.are~
+Elf City~
+argos~
+0 0
+29500 29599
+unopened
+tropical
+0
+1
+Argos~
+
+#MOBS
+#29500
+keywords paladin~
+Paladin guard~
+A paladin guard stands here.
+~
+~
+1 0 0 elf~
+30 30d8+1364 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+AFF SANCTUARY
+AFF PROTECTION
+#0
+
+
+
+#OBJS
+#29500
+bow~
+dark Seraph~
+A bow with curved ends and a string made from hair lies here.~
+weapon
+Bone~
+weapon 6 10 none 0
+51 6 0 P
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM BLESS
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#29500
+Before a Great Waterfall~
+Standing before this massive waterfall is almost awe-inspiring.  The loud
+roar of the crashing water seems to drown out anything and everything else
+almost so loud that you feel your ears may burst.  The cool droplets of
+water spraying from the crashing water pelt you stinging slightly though
+feeling slightly refreshing.  
+~
+forest
+ROOM SILENCE
+D EAST 29501 I 0
+door~
+There seems to be a path behind the waterfall here.  
+~
+OWNER none~
+#29501
+Behind a Great Waterfall~
+The roar of the waterfall is still quite loud and almost echoing within
+this cave.  The floor is lined with puddles and water seems to be dripping
+from the ceiling and everything is damp from the spraying water of the
+waterfall.  
+~
+cave
+ROOM SILENCE
+D EAST 29502 0 0
+door~
+The cave continues onward.  
+~
+D WEST 29500 0 0
+door~
+A great waterfall can be seen.  
+~
+OWNER none~
+#29502
+Within a Small Cave~
+The roar of the waterfall can still be heard though not nearly as loud as
+before.  The sound seems to come from every direction however.  Water drips
+from the ceiling in such a fashion that when they hit the puddles they have
+made they seem to make music.  
+~
+cave
+D EAST 29503 0 0
+door~
+The cave continues onward.  
+~
+D WEST 29501 0 0
+door~
+The cave continues onward.  
+~
+OWNER none~
+#29503
+Small ledge behind a waterfall~
+Directly to the east is a waterfall that continues falling down past the
+small outstretch of land sticking out of the side of this mountain.  The
+ledge seems to extend out far enough to stand on and continue around the
+side of the mountain to the south.  
+~
+cave
+D SOUTH 29504 0 0
+door~
+A small shelf off of the mountain lies here.  
+~
+D WEST 29502 0 0
+door~
+The cave continues onward.  
+~
+OWNER none~
+#29504
+A ledge overlooking Lorithia~
+Standing on the side of this mountain you can see Lorithia the Elven
+Capital off to the east.  There isn't much room to move on this ledge and
+falling looks unfortunate at best.  On the south most side of this ledge is
+a ladder leading down the mountain.  
+~
+unused
+D NORTH 29503 0 0
+door~
+A small ledge behind a waterfall can be seen.  
+~
+D DOWN 29505 0 0
+door~
+You see a ladder leading downward.  
+~
+OWNER none~
+#29505
+On the side of the mountain~
+There is a ledge here to rest on the path down the ladder.  Off to the
+east and down a ways is a rope bridge and the gates to enter Lorithia.  The
+ladder continues down the mountain looking none too safe as the ladder is
+begining to look worn and weathered.  
+~
+unused
+D UP 29504 0 0
+door~
+You see a ladder leading upward.  
+~
+D DOWN 29506 0 0
+door~
+An unstable ladder leads downward.  
+~
+OWNER none~
+#29506
+At the foot of a mountain~
+Standing at the base of this relatively short mountain you see a trail
+off to the east leading to the gates of Lorithia.  A rope bridge is all that
+lies between here and the gates fortunatly the bridge looks in much better
+than the ladder leading up the mountain.  
+~
+unused
+D EAST 29507 0 0
+door~
+A rope bridge can be seen.  
+~
+D UP 29505 0 0
+door~
+An unstable ladder leads upward.  
+~
+OWNER none~
+#29507
+A sturdy rope bridge~
+This rope bridge seems like it would support a great deal of weight as
+the strong wind blowing in this canyon is not even budging it.  The wooden
+planks don't look worn or weathered nor do the ropes used to hold as you
+cross it.  It is in such good condition it would seem that it was just
+built.  
+~
+unused
+D EAST 29508 0 0
+door~
+The gates to Lorithia can be seen.  
+~
+D WEST 29506 0 0
+door~
+The foot of a mountain is in this direction.  
+~
+OWNER none~
+#29508
+Before the gates to Lorithia~
+There is a pair of elaborately designed gates that open up to Lorithia to
+the east.  The gates have a sign on the right side stating that the gates
+close at nightfall and do not open till day.  The ground is paved in white
+marble which is also what the gate is made of.  
+~
+city
+D EAST 29509 A 0
+door~
+The entrance to Lorithia is in this direction.  
+~
+D WEST 29507 0 0
+door~
+A sturdy bridge is just ahead in this direction.  
+~
+OWNER none~
+#29509
+The begining of Lorithia~
+The ground here is very slick as the city you stand before sets atop many
+waterfalls and the area is under a constant mist.  The city seems to be
+considerable in size the road beneath you is well kept and very nice.  
+~
+city
+ROOM SAFE
+ROOM LAW
+D EAST 29510 0 0
+door~
+The street widens with buildings on each side in this direction.  
+~
+D WEST 29508 0 0
+door~
+The entrance to Lorithia lies in this direction.  
+~
+OWNER none~
+#29510
+Fae Street~
+This street seems to be one of the main streets of the city and well kept
+at that.  The mist seems to be thick in this part of the city as there is a
+waterfall no further than a block south on the other side of one of the
+buildings.  There is a form of canal guiding the water around the sides of
+the building and off of the cliff to the southwest.  
+~
+city
+ROOM LAW
+D NORTH 29511 0 0
+door~
+A building with a sign labled "Milana Embave" is just north of here.  
+~
+D EAST 29527 0 0
+door~
+Fae street continues in this direction.  
+~
+D SOUTH 0 0 0
+door~
+Off in this direction you can see a waterfall crashing behind the
+building.  
+~
+D WEST 29509 0 0
+door~
+Not far in this direction is the entrance to Lorithia.  
+~
+OWNER none~
+#29511
+The lobby~
+Off in the northeastern corner is a desk with a sign in sheet for the
+inn.  The floor has an elegant looking carpet and the walls are painted a
+light blue.  There are oil lamps in each of the corners on small tables and
+an oil lamp sits on the desk.  
+~
+inside
+ROOM LAW
+D NORTH 29522 0 0
+door~
+A small hallway is in this direction.  
+~
+D EAST 29517 0 0
+door~
+A small hallway is in this direction.  
+~
+D SOUTH 29510 0 0
+door~
+The door to the street is here.  
+~
+D WEST 29512 0 0
+door~
+A small hallway is in this direction.  
+~
+OWNER none~
+#29512
+A small hallway~
+A thin yet elegant carpet lines the floor and to the west is a small
+table holding an oil lamp.  The walls to the north and south each hold a
+door with a number on it.  
+~
+inside
+ROOM LAW
+D NORTH 29513 0 0
+door~
+A door with the number one on a small metal plate is here.  
+~
+D EAST 29511 0 0
+door~
+The lobby lies to the east.  
+~
+D SOUTH 29515 0 0
+door~
+A door with the number two on a small metal plate is here.  
+~
+OWNER none~
+#29513
+Room one~
+A small yet beautiful room.  Along the eastern wall is a very nice
+looking bed with nearly two feet worth of cushion.  Two small tables each
+bearing small oil lamps lie on either side of the bed.  Along the western
+wall is a small dresser.  
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 29514 0 0
+door~
+A sliding glass door behind a curtain is here.  
+~
+D SOUTH 29512 0 0
+door~
+The door to the hallway lies here.  
+~
+OWNER none~
+#29514
+A balcony~
+Quite the beautiful scene from here.  There is no ground on the sides of
+the balcony it literally hangs off of the side of the inn.  In fact there
+seems to be water running off of the sides to the east and west.  To the
+northeast you can see another part of the inn that is connected to the
+ground with a single window on the side.  
+~
+city
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+D SOUTH 29513 0 0
+door~
+A glass door into the room is here.  
+~
+OWNER none~
+#29515
+Room two~
+A small yet beautiful room.  Along the eastern wall is a very nice
+looking bed with nearly two feet worth of cushion.  Two small tables each
+bearing small oil lamps lie on either side of the bed.  Along the southern
+wall is a small dresser.  
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 29512 0 0
+door~
+The door to the hallway lies here.  
+~
+D WEST 29516 0 0
+door~
+A glass door behind a curtain is here.  
+~
+OWNER none~
+#29516
+A balcony~
+Quite the beautiful scene from here.  There is no ground on the sides of
+the balcony it literally hangs off of the side of the inn.  In fact there
+seems to be water running off of the sides to the north and south.  To the
+south you can see the entrance to Lorithia.  
+~
+city
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+D EAST 29515 0 0
+door~
+A glass door leading into the room is here.  
+~
+OWNER none~
+#29517
+A small hallway~
+A thin yet elegant carpet lines the floor and to the east is a small
+table holding an oil lamp.  The walls to the north and south each hold a
+door with a number on it.  
+~
+inside
+ROOM LAW
+D NORTH 29518 0 0
+door~
+A door with the number three on a small metal plate is here.  
+~
+D SOUTH 29520 0 0
+door~
+A door with the number three on a small metal plate is here.  
+~
+D WEST 29511 0 0
+door~
+The lobby lies to the west.  
+~
+OWNER none~
+#29518
+Room three~
+A small yet beautiful room.  Along the western wall is a very nice
+looking bed with nearly two feet worth of cushion.  Two small tables each
+bearing small oil lamps lie on either side of the bed.  Along the eastern
+wall is a small dresser.  
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 29519 0 0
+door~
+A glass door behind some curtains is here.  
+~
+D SOUTH 29517 0 0
+door~
+The door to the hallway is here.  
+~
+OWNER none~
+#29519
+A balcony~
+Quite the beautiful scene from here.  There is no ground on the sides of
+the balcony it literally hangs off of the side of the inn.  In fact there
+seems to be water running off of the sides to the east and west.  To the
+northwest you can see another part of the inn that is connected to the
+ground with a single window on the side.  To the east a street can be seen. 
+~
+city
+ROOM LAW
+ROOM NO_SUMMON_TO
+D SOUTH 29518 0 0
+door~
+A glass door leading into the room is here.  
+~
+OWNER none~
+#29520
+Room four~
+A small yet beautiful room.  Along the western wall is a very nice
+looking bed with nearly two feet worth of cushion.  Two small tables each
+bearing small oil lamps lie on either side of the bed.  Along the southern
+wall is a dresser.  
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 29517 0 0
+door~
+The door to the hallway lies here.  
+~
+D EAST 29521 0 0
+door~
+A glass door behind a curtain is here.  
+~
+OWNER none~
+#29521
+A balcony~
+Quite the beautiful scene from here.  There is no ground on the sides of
+the balcony it literally hangs off of the side of the inn.  In fact there
+seems to be water running off of the sides to the north and south.  To the
+south and the east streets can be seen yet there is no ground between you
+and them.  
+~
+city
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+D WEST 29520 0 0
+door~
+A glass door leading into the bedroom is here.  
+~
+OWNER none~
+#29522
+A small hallway~
+A thin yet elegant carpet lines the floor and to the north is a small
+table holding an oil lamp.  The walls to the east and west each hold a door
+with a number on it.  
+~
+inside
+ROOM LAW
+D EAST 29525 0 0
+door~
+A door with the number six on a small metal plate is here.  
+~
+D SOUTH 29511 0 0
+door~
+The lobby lies to the south.  
+~
+D WEST 29523 0 0
+door~
+A door with the number five on a small metal plate is here.  
+~
+OWNER none~
+#29523
+Room five~
+A small yet beautiful room.  Along the western wall is a very nice
+looking bed with nearly two feet worth of cushion.  Two small tables each
+bearing small oil lamps lie on either side of the bed.  Along the southern
+wall is a small dresser.  
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 29524 0 0
+door~
+A glass door behind a curtain is here.  
+~
+D EAST 29522 0 0
+door~
+The door leading to the hallway is here.  
+~
+OWNER none~
+#29524
+A balcony~
+Quite the beautiful scene from here.  There is no ground on the sides of
+the balcony it literally hangs off of the side of the inn.  In fact there
+seems to be water running off of the sides to the east and west.  Further to
+the east another balcony can be seen.  
+~
+city
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+D SOUTH 29523 0 0
+door~
+A glass door leading into the bedroom is here.  
+~
+OWNER none~
+#29525
+Room six~
+A small yet beautiful room.  Along the eastern wall is a very nice
+looking bed with nearly two feet worth of cushion.  Two small tables each
+bearing small oil lamps lie on either side of the bed.  Along the southern
+wall is a small dresser.  
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 29526 0 0
+door~
+A glass door behind a curtain is here.  
+~
+D WEST 29522 0 0
+door~
+The door to the hallway lies here.  
+~
+OWNER none~
+#29526
+A balcony~
+Quite the beautiful scene from here.  There is no ground on the sides of
+the balcony it literally hangs off of the side of the inn.  In fact there
+seems to be water running off of the sides to the east and west.  Further to
+the west another balcony can be seen.  To the east a street can be seen.  
+~
+city
+ROOM SAFE
+ROOM LAW
+ROOM NO_SUMMON_TO
+D SOUTH 29525 0 0
+door~
+A glass door leading into the bedroom is here.  
+~
+OWNER none~
+#29527
+Fae street~
+This street seems to be one of the main streets of the city and well kept
+at that.  The mist seems to be thick in this part of the city as there is a
+water no further than a block south on the other side of one of the
+buildings.  There is a form of canal guiding the water around the back of
+the buildings one heading east off the side of a cliff and one trailing off
+to the west behind more buildings.  
+~
+city
+ROOM LAW
+D EAST 29528 0 0
+door~
+Fae street bridge is just to the east.  
+~
+D WEST 29510 0 0
+door~
+Fae street continues in this direction.  
+~
+OWNER none~
+#29528
+Fae street bridge~
+This bridge is well constructed made out of marble and crosses from one
+of the cliffs over to another where more of the city is contained.  To the
+south water from the canals is pouring off the side creating yet another
+waterfall.  
+~
+city
+ROOM LAW
+D EAST 29529 0 0
+door~
+Fae street continues further into the city from here.  
+~
+D WEST 29527 0 0
+door~
+Fae street continues in this direction.  
+~
+OWNER none~
+#29529
+Fae street~
+This well kept street seems to continue to the east and west for some
+time lined with buildings and the occational intersection of streets.  Also
+the street seems to have canals built beneath it allowing the water from the
+waterfalls flow with ease to the edges of the nearest cliffs without
+prohibiting the use of the roads.  
+~
+city
+ROOM LAW
+D EAST 29530 0 0
+door~
+Fae street continues further into the city from here.  
+~
+D WEST 29528 0 0
+door~
+Fae street bridge is just a bit further in this direction.  
+~
+OWNER none~
+#29530
+Fae street~
+This well kept street seems to continue to the east and west for some
+time lined with buildings and the occational intersection of streets.  Also
+the street seems to have canals built beneath it allowing the water from the
+waterfalls to flow with ease to the edges of the nearest cliffs without
+prohibiting the use of the roads.  
+~
+city
+ROOM LAW
+D EAST 29531 0 0
+door~
+Fae street continues in this direction.  
+~
+D WEST 29529 0 0
+door~
+Fae street continues further into the city from here.  
+~
+OWNER none~
+#29531
+Intersection of Fae and Siagna~
+~
+city
+ROOM LAW
+D WEST 29530 0 0
+door~
+Fae street continues in this direction.  
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 29500 TO 29508 GLIMIT 1 LLIMIT 1
+MOB 29500 TO 29508 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

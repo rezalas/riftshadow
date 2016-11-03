@@ -1,0 +1,847 @@
+#AREA
+hollows.are~
+The Barren Hollows~
+Zethus~
+0 0
+18200 18299
+unopened
+none
+0
+1
+Zethus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#18200
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18201 0 0
+~
+~
+OWNER none~
+#18201
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18202 0 0
+~
+~
+D WEST 18200 0 0
+~
+~
+OWNER none~
+#18202
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18203 0 0
+~
+~
+D WEST 18201 0 0
+~
+~
+OWNER none~
+#18203
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18202 0 0
+~
+~
+D EAST 18204 0 0
+~
+~
+OWNER none~
+#18204
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18205 0 0
+~
+~
+D WEST 18203 0 0
+~
+~
+OWNER none~
+#18205
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18206 0 0
+~
+~
+D WEST 18204 0 0
+~
+~
+OWNER none~
+#18206
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18207 0 0
+~
+~
+D SOUTH 18205 0 0
+~
+~
+OWNER none~
+#18207
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18208 0 0
+~
+~
+D SOUTH 18206 0 0
+~
+~
+OWNER none~
+#18208
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18209 0 0
+~
+~
+D SOUTH 18207 0 0
+~
+~
+OWNER none~
+#18209
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18225 0 0
+~
+~
+D EAST 18210 0 0
+~
+~
+D SOUTH 18208 0 0
+~
+~
+OWNER none~
+#18210
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18211 0 0
+~
+~
+D WEST 18209 0 0
+~
+~
+OWNER none~
+#18211
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18212 0 0
+~
+~
+D WEST 18210 0 0
+~
+~
+OWNER none~
+#18212
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18211 0 0
+~
+~
+D WEST 18213 0 0
+~
+~
+OWNER none~
+#18213
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18212 0 0
+~
+~
+D SOUTH 18214 0 0
+~
+~
+OWNER none~
+#18214
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18213 0 0
+~
+~
+D EAST 18215 0 0
+~
+~
+OWNER none~
+#18215
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18216 0 0
+~
+~
+D WEST 18214 0 0
+~
+~
+OWNER none~
+#18216
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18217 0 0
+~
+~
+D WEST 18215 0 0
+~
+~
+OWNER none~
+#18217
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18218 0 0
+~
+~
+D WEST 18216 0 0
+~
+~
+OWNER none~
+#18218
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18219 0 0
+~
+~
+D WEST 18217 0 0
+~
+~
+OWNER none~
+#18219
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18220 0 0
+~
+~
+D WEST 18218 0 0
+~
+~
+OWNER none~
+#18220
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18221 0 0
+~
+~
+D SOUTH 18219 0 0
+~
+~
+OWNER none~
+#18221
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18222 0 0
+~
+~
+D WEST 18220 0 0
+~
+~
+OWNER none~
+#18222
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18223 0 0
+~
+~
+D WEST 18221 0 0
+~
+~
+OWNER none~
+#18223
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18239 0 0
+~
+~
+D WEST 18222 0 0
+~
+~
+OWNER none~
+#18224
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18226 0 0
+~
+~
+D EAST 18225 0 0
+~
+~
+OWNER none~
+#18225
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18209 0 0
+~
+~
+D WEST 18224 0 0
+~
+~
+OWNER none~
+#18226
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18227 0 0
+~
+~
+D SOUTH 18224 0 0
+~
+~
+OWNER none~
+#18227
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18228 0 0
+~
+~
+D SOUTH 18226 0 0
+~
+~
+OWNER none~
+#18228
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18227 0 0
+~
+~
+D WEST 18229 0 0
+~
+~
+OWNER none~
+#18229
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18230 0 0
+~
+~
+D EAST 18228 0 0
+~
+~
+OWNER none~
+#18230
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18229 0 0
+~
+~
+D DOWN 18231 0 0
+~
+~
+OWNER none~
+#18231
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18232 0 0
+~
+~
+D UP 18230 0 0
+~
+~
+OWNER none~
+#18232
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18233 0 0
+~
+~
+D SOUTH 18231 0 0
+~
+~
+OWNER none~
+#18233
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18234 0 0
+~
+~
+D SOUTH 18232 0 0
+~
+~
+OWNER none~
+#18234
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D WEST 18233 0 0
+~
+~
+D UP 18235 0 0
+~
+~
+OWNER none~
+#18235
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18236 0 0
+~
+~
+D DOWN 18234 0 0
+~
+~
+OWNER none~
+#18236
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18235 0 0
+~
+~
+D UP 18237 0 0
+~
+~
+OWNER none~
+#18237
+A Cavernous Chasm~
+~
+cave
+ROOM INDOORS
+D UP 18238 0 0
+~
+~
+D DOWN 18236 0 0
+~
+~
+OWNER none~
+#18238
+A Gaping Black Maw~
+~
+cave
+ROOM INDOORS
+D UP 276 0 0
+~
+~
+D DOWN 18237 0 0
+~
+~
+OWNER none~
+#18239
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18223 0 0
+~
+~
+D SOUTH 18240 0 0
+~
+~
+OWNER none~
+#18240
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18239 0 0
+~
+~
+D SOUTH 18241 0 0
+~
+~
+OWNER none~
+#18241
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18240 0 0
+~
+~
+D SOUTH 18242 0 0
+~
+~
+OWNER none~
+#18242
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18241 0 0
+~
+~
+D EAST 18243 0 0
+~
+~
+D WEST 18245 0 0
+~
+~
+OWNER none~
+#18243
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18244 0 0
+~
+~
+D WEST 18242 0 0
+~
+~
+OWNER none~
+#18244
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18243 0 0
+~
+~
+OWNER none~
+#18245
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18242 0 0
+~
+~
+D SOUTH 18246 0 0
+~
+~
+OWNER none~
+#18246
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18245 0 0
+~
+~
+D SOUTH 18247 0 0
+~
+~
+OWNER none~
+#18247
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18246 0 0
+~
+~
+D SOUTH 18248 0 0
+~
+~
+OWNER none~
+#18248
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18247 0 0
+~
+~
+D WEST 18249 0 0
+~
+~
+OWNER none~
+#18249
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18250 0 0
+~
+~
+D EAST 18248 0 0
+~
+~
+OWNER none~
+#18250
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 18249 0 0
+~
+~
+D WEST 18251 0 0
+~
+~
+OWNER none~
+#18251
+Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18250 0 0
+~
+~
+D DOWN 18252 0 0
+~
+~
+OWNER none~
+#18252
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18253 0 0
+~
+~
+D UP 18251 0 0
+~
+~
+OWNER none~
+#18253
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18254 0 0
+~
+~
+D WEST 18252 0 0
+~
+~
+OWNER none~
+#18254
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18255 0 0
+~
+~
+D WEST 18253 0 0
+~
+~
+OWNER none~
+#18255
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18256 0 0
+~
+~
+D SOUTH 18254 0 0
+~
+~
+OWNER none~
+#18256
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18257 0 0
+~
+~
+D WEST 18255 0 0
+~
+~
+OWNER none~
+#18257
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18258 0 0
+~
+~
+D WEST 18256 0 0
+~
+~
+OWNER none~
+#18258
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 18259 0 0
+~
+~
+D WEST 18257 0 0
+~
+~
+OWNER none~
+#18259
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18260 0 0
+~
+~
+D SOUTH 18258 0 0
+~
+~
+OWNER none~
+#18260
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18261 0 0
+~
+~
+D WEST 18259 0 0
+~
+~
+OWNER none~
+#18261
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 18262 0 0
+~
+~
+D WEST 18260 0 0
+~
+~
+OWNER none~
+#18262
+Deep Within the Barren Hollows~
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D WEST 18261 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

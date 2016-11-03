@@ -1,0 +1,3032 @@
+#AREA
+eastroad.are~
+The Great Shalaran Road~
+Riftshadow~
+1 51
+3500 3699
+road_river
+temperate
+0
+1
+Eladrian Tyner Karsus Zethus~
+
+#MOBS
+#3576
+water pixie soma~
+a water pixie~
+A water pixie hovers here above the spring.
+~
+This tiny water pixie seems to hover just above the spring here, tiny
+wings bluring awaya keeping absolute balance at all times.  
+~
+0 0 0 spirit~
+5 2d8+1000 1d5+5 0 100 none
+0 0 0 0
+standing female none
+C 0 tiny
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF PARRY
+AFF INFRARED
+AFF CAMOUFLAGE
+AFF SNEAK
+AFF REGENERATION
+RES MAGIC
+#0
+
+
+
+#OBJS
+#3576
+spring~
+a water spring~
+Spring, fountain.~
+fountain
+stone~
+1000000 999999 'water' 0 0
+0 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#3500
+Before the Gates of Cimar~
+The massive Eastern Arch of Cimar towers before you, a monument to mortal
+ingenuity and testament to the wealth of glorious Cimar.  Reaching well over
+forty feet towards the skies, the arch supports massive blocks of granite
+that reach even higher.  Beyond the equally massive wooden gates to the
+west, stretches a broad thoroughfare that runs through the heart of Cimar. 
+The clamor of restless activity emanates from the west, rolling out across
+the worn cobblestone roads of the city.  To the east, the road runs between
+two narrow walls before widening and disappearing into the horizon.  
+~
+road
+D NORTH 0 0 0
+~
+A barricaded guard tower looms to the north.
+~
+D EAST 3501 0 0
+~
+The gleaming cobblestone highway runs between walls to the east.
+~
+D SOUTH 0 0 0
+~
+A barricaded guard tower looms to the south.
+~
+D WEST 2405 0 0
+~
+The walls of Cimar tower to the west, with an arch offering entry to the city.
+~
+D UP 0 0 0
+~
+The massive Eastern Arch of Cimar towers over you.
+~
+D DOWN 0 0 0
+~
+The cobblestones beneath you are well-worn, but not cracked or uneven.
+~
+E gate gates~
+The gates, while inherently less impressive than the Eastern Arch itself,
+are still quite an impressive site.  Finding trees the size of these
+massive beams would be a task in itself, let alone assembling them.
+~
+E eastern arch~
+You can scarcely believe such a thing has been built... but yet, there it
+is.  Taller than most buildings in the city, this unsupported arch somehow
+sustains not only its own massive weight, but that of the portion of the
+wall which stretches above it.
+~
+#3501
+A Narrow-Walled Avenue~
+The path is narrow here, cramped between the walls of massive guard
+towers that loom to the north and south.  Armored silhouettes patrol the
+ramparts above, and an occasional glint of steel is visible through one of
+the myriad arrowslits that line the side of each tower.  The walls of Cimar
+and the great Eastern Arch loom to the west, while the road narrows
+considerable and stretches eastward toward the horizon, flanked by rows of
+trees on either side.  
+~
+road
+D NORTH 0 0 0
+~
+A barricaded guard tower looms to the north.
+~
+D EAST 3503 0 0
+~
+The road broadens to the east, bordered by forest on both sides.
+~
+D SOUTH 0 0 0
+~
+A barricaded guard tower looms to the south.
+~
+D WEST 3500 0 0
+~
+The towering gates of Cimar loom down the paved road to the west.
+~
+D UP 0 0 0
+~
+A narrow strip of sky is visible between the two guard towers.
+~
+D DOWN 0 0 0
+~
+The cobblestones beneath you are well-worn, but not cracked or uneven.
+~
+#3502
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  Though the woods become impenetrably dense to the north and west,
+the forest stretches eastward, and through breaks in the trees to the south,
+you can clearly make out the beginning of the Cimarrite Causeway.  Amazing,
+how nature can be so lush and vibrant mere feet away from the stamp of
+civilization.  
+~
+forest
+D NORTH 0 0 0
+~
+The trees to the north become impenetrably dense, barring further passage.
+~
+D EAST 3507 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3503 0 0
+~
+Through a break in the trees you see the paved road to the south.
+~
+D WEST 0 0 0
+~
+The trees to the west become impenetrably dense, though you think you can make out the granite walls of Cimar through the foliage.
+~
+D UP 0 0 0
+~
+Peering up between the tall trees, you find that the sky is where you left it.
+~
+D DOWN 0 0 0
+~
+The earth beneath you is soft and rife with forest life and death.
+~
+#3503
+Approaching the Walls of Cimar~
+The road here is broad, leading westward toward the towering walls of
+Cimar, where the path narrows and runs between two guard towers.  Eastward,
+the road stretches on well into the distance, widening further as it carves
+a clean swath from the surrounding forests.  Evenly-spaced rows of trees
+line the road on the northern and southern sides here, the gaps revealing a
+surprisingly lush verdant sprawl.  Weeds and assorted other small brush peek
+through the odd space between the cobblestones here, serving as a reminder
+of the limits of mortal encroachment upon nature.  
+~
+road
+D NORTH 3502 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3506 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3504 0 0
+~
+A row of trees lines the road on the southern side.
+~
+D WEST 3501 0 0
+~
+The road runs between towering walls to the west, approaching Cimar.
+~
+D UP 0 0 0
+~
+The open sky sprawls above you, precisely as expected.
+~
+D DOWN 0 0 0
+~
+Description: The cobblestones beneath you are well-worn, but not cracked or uneven.
+~
+#3504
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  Though the woods become impenetrably dense to the west, the forest
+stretches to the east and south, and through breaks in the trees to the
+north, you can clearly make out the beginning of the Cimarrite Causeway. 
+South of here, another road is somewhat visible.  
+~
+forest
+D NORTH 3503 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3505 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 500 0 0
+~
+~
+#3505
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the south, east, and west, and through
+breaks in the trees to the north, you can clearly make out the beginning of
+the Cimarrite Causeway.  Amazing, how nature can be so lush and vibrant mere
+feet away from the stamp of civilization.  
+~
+forest
+D NORTH 3506 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3512 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 501 0 0
+~
+~
+D WEST 3504 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3506
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs straight east and west here, between the
+trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3507 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3511 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3505 0 0
+~
+A row of trees lines the road on the southern side.
+~
+D WEST 3503 0 0
+~
+The well-paved road stretches westward toward Cimar.
+~
+#3507
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the north, east, and west, and through
+breaks in the trees to the south, you can clearly make out the beginning of
+the Cimarrite Causeway.  Amazing, how nature can be so lush and vibrant mere
+feet away from the stamp of civilization.  
+~
+forest
+D NORTH 3508 0 0
+~
+The forest darkens to the north beneath looming oaks.
+~
+D EAST 3510 0 0
+~
+~
+D SOUTH 3506 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3502 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+D UP 0 0 0
+~
+Peering up between the tall trees, you find that the sky is where you left it.
+~
+D DOWN 0 0 0
+~
+The earth beneath you is soft and rife with forest life and death.
+~
+#3508
+Within a Dark Forest~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches southward, and through the trees to the east,
+you can make out a trail cut through the foliage.  
+~
+forest
+D NORTH 0 0 0
+~
+The trees to the north become impenetrably dense, barring further passage.
+~
+D EAST 3509 0 0
+~
+~
+D SOUTH 3507 0 0
+~
+The forest thins to the south, and you can make out the road in the distance.
+~
+D WEST 0 0 0
+~
+The trees to the west become impenetrably dense, barring further passage.
+~
+D UP 0 0 0
+~
+Peering up between the tall trees, you find that the sky is where you left it.
+~
+D DOWN 0 0 0
+~
+The earth beneath you is soft and rife with forest life and death.
+~
+#3509
+A Path Through the Forest~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  A small trail here widens out somewhat to the north, where the
+general mood and hue of the forest is much darker.  
+~
+field
+D NORTH 1896 0 0
+~
+The path winds northward through the towering trees.
+~
+D EAST 3516 0 0
+~
+A dense forest of oaks looms to the east.
+~
+D SOUTH 3510 0 0
+~
+The path winds southward towards the road.
+~
+D WEST 3508 0 0
+~
+~
+#3510
+A Path Through the Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  A small trail here continues off to the north, where the general
+mood and hue of the forest is much darker.  
+~
+field
+D NORTH 3509 0 0
+~
+The path winds northward through the towering trees.
+~
+D EAST 3515 0 0
+~
+The foliage thickens to the east.
+~
+D SOUTH 3511 0 0
+~
+The path leads onto the wide road to the south.
+~
+D WEST 3507 0 0
+~
+~
+#3511
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs straight east and west here, between the
+trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3510 0 0
+~
+A narrow path through the foliage splits off the road to the north.
+~
+D EAST 3514 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3512 0 0
+~
+A row of trees lines the road on the southern side.
+~
+D WEST 3506 0 0
+~
+The well-paved road stretches westward, the walls of Cimar in the distance.
+~
+#3512
+A Trail Through the Trees~
+Framed to the east and west by very dense foliage, this worn trail leads
+between the Cimarrite Causeway to the north and the Old Southern Road in the
+opposite direction.  The dirt trail itself, tamped into hard earth by many
+passing feet, lets up very little dust as you pass.  The shade offered by
+the huge, leafy branches above you is most welcome during the heat of the
+day, and yet casts an almost eerie pallor over the area during the moonlit
+night.  Cobble beckons to the north and south, deep forest to the east and
+west.  
+~
+forest
+D NORTH 3511 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3513 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 502 0 0
+~
+~
+D WEST 3505 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3513
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the south, east, and west, and through
+breaks in the trees to the north, you can clearly make out the beginning of
+the Cimarrite Causeway.  Amazing, how nature can be so lush and vibrant mere
+feet away from the stamp of civilization.  
+~
+forest
+D NORTH 3514 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3519 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 503 0 0
+~
+~
+D WEST 3512 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3514
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs straight east and west here, between the
+trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3515 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3518 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.
+~
+D SOUTH 3513 0 0
+~
+A row of trees lines the road on the southern side.
+~
+D WEST 3511 0 0
+~
+The well-paved road stretches westward, the walls of Cimar in the distance.
+~
+#3515
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the north, east, and west, and through
+breaks in the trees to the south, you can clearly make out the Cimarrite
+Causeway.  Amazing, how nature can be so lush and vibrant mere feet away
+from the stamp of civilization.  
+~
+forest
+D NORTH 3516 0 0
+~
+The forest darkens to the north beneath looming oaks.
+~
+D EAST 3517 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3514 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3510 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3516
+Within a Dark Forest~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches southward, and through the trees to the west,
+you can make out a trail cut through the foliage.  
+~
+forest
+D SOUTH 3515 0 0
+~
+The forest thins to the south, and you can make out the road in the distance.
+~
+D WEST 3509 0 0
+~
+You can make out a narrow trail running through the trees to the west.
+~
+#3517
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the east and west, but the trees to the
+north grow too closely for you to pass between them.  Through breaks in the
+trees to the south, you can clearly make out the Cimarrite Causeway.  
+~
+forest
+D EAST 3524 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3518 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3515 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3518
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs straight east and west here, between the
+trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3517 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3523 0 0
+~
+The well-paved road comes to a bend to the east.
+~
+D SOUTH 3519 0 0
+~
+A row of trees lines the road on the southern side.
+~
+D WEST 3514 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3519
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the south and west, and through breaks in
+the trees to the north and east, you can clearly make out the beginning of
+the Cimarrite Causeway.  Amazing, how nature can be so lush and vibrant mere
+feet away from the stamp of civilization.  
+~
+forest
+D NORTH 3518 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3522 0 0
+~
+Through a break in the trees, you see the paved road to the east.
+~
+D SOUTH 3520 0 0
+~
+The trees thin somewhat and the ground becomes damper to the south.
+~
+D WEST 3513 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3520
+At the Edge of a Swamp~
+The ground here has become rather wet and soggy, drowning most of the
+shorter varieties of grass that grow nearby.  A few dark, moss-covered trees
+spring up here and there, all emanating a mildewy stench.  Many more spring
+up to the south, where a humid haze settles about the area.  To the north
+lies the relative safety and comfort of the Great Shalaran Road.  
+~
+forest
+D NORTH 3519 0 0
+~
+The woods become thicker to the north, and the ground more solid.
+~
+D EAST 3521 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+#3521
+At the Edge of a Swamp~
+The ground here has become rather wet and soggy, drowning most of the
+shorter varieties of grass that grow nearby.  A few dark, moss-covered trees
+spring up here and there, all emanating a mildewy stench.  Many more spring
+up to the south, where a humid haze settles about the area.  To the north
+lies the relative safety and comfort of the Great Shalaran Road.  
+~
+forest
+D NORTH 3522 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3527 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+D SOUTH 497 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.
+~
+D WEST 3520 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3522
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and curves to the north here,
+stretching between the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3523 0 0
+~
+The well-paved road takes a bend to the north.
+~
+D EAST 3526 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3521 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3519 0 0
+~
+A row of trees lines the road on the western side.
+~
+#3523
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and east, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs west here, and curves to the south,
+stretching between the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3524 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3525 0 0
+~
+A row of trees lines the road on the eastern side.
+~
+D SOUTH 3522 0 0
+~
+The well-paved road takes a bend to the south.
+~
+D WEST 3518 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3524
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  To the north and east, trees grow too close together for you to
+pass; but the passable forest stretches to the west, and through breaks in
+the trees to the south, you can clearly make out the Cimarrite Causeway.  
+~
+forest
+D SOUTH 3523 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3517 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3525
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the east, but the trees to the north grow
+too closely for you to pass between them.  Through breaks in the trees to
+the south and west, you can clearly make out the Cimarrite Causeway.  
+~
+forest
+D EAST 3530 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3526 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3523 0 0
+~
+Through a break in the trees, you see the paved road to the west.
+~
+#3526
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, between the trade
+centers of Cimar and Melcene.  
+~
+road
+D NORTH 3525 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3529 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3527 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3522 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.
+~
+#3527
+At the Edge of a Swamp~
+The ground here has become rather wet and soggy, drowning most of the
+shorter varieties of grass that grow nearby.  A few dark, moss-covered trees
+spring up here and there, all emanating a mildewy stench.  Many more spring
+up to the south, where a humid haze settles about the area.  To the north
+lies the relative safety and comfort of the Great Shalaran Road.  
+~
+forest
+D NORTH 3526 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3528 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+D SOUTH 498 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.
+~
+D WEST 3521 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3528
+At the Edge of a Swamp~
+The ground here has become rather wet and soggy, drowning most of the
+shorter varieties of grass that grow nearby.  A few dark, moss-covered trees
+spring up here and there, all emanating a mildewy stench.  Many more spring
+up to the south, where a humid haze settles about the area.  To the north
+lies the relative safety and comfort of the Great Shalaran Road.  
+~
+forest
+D NORTH 3529 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3534 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+D SOUTH 404 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.
+~
+D WEST 3527 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3529
+Along the Cimarrite Causeway~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, between the trade
+centers of Cimar and Melcene.  
+~
+road
+D NORTH 3530 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3533 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3528 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3526 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.
+~
+#3530
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the east and west, but the trees to the
+north grow too closely for you to pass between them.  Through breaks in the
+trees to the south, you can clearly make out the Cimarrite Causeway.  
+~
+forest
+D EAST 3532 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3529 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3525 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3531
+At a Traveler's Camp~
+A small lean-to constructed of a large burlap sheet draped over the low
+branch of a pine tree occupies the northern edge of this tiny clearing.  A
+crackling fire at the center of the area pops and fizzles, sending glowing
+sparks upward in a dancing spiral.  The leafy branches wave and sway in the
+rising heat and smoke from the campfire, resulting in an almost dreamlike
+ocean-wave effect... you fight off the urge to lie back and stare at the
+sky.  To all sides but the south, trees grow very closely together, and you
+cannot see what lies beyond.  South of here, some dense foliage grows at the
+edge of the Great Shalaran Road.  
+~
+field
+D SOUTH 3532 0 0
+~
+The narrow trail winds back through the trees to the south.
+~
+#3532
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the east and west, but the trees to the
+north grow too closely for you to pass between them.  Through breaks in the
+trees to the south, you can clearly make out the Great Shalaran Road.  From
+the north, a few wisps of campfire smoke drift in on the breeze.  
+~
+forest
+D NORTH 3531 0 0
+~
+Footsteps lead northward, through the densely-packed trees.
+~
+D EAST 3537 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3533 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3530 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3533
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, between the trade
+centers of Cimar and Melcene.  
+~
+road
+D NORTH 3532 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3536 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3534 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3529 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3534
+At the Edge of a Swamp~
+The ground here has become rather wet and soggy, drowning most of the
+shorter varieties of grass that grow nearby.  A few dark, moss-covered trees
+spring up here and there, all emanating a mildewy stench.  Many more spring
+up to the south, where a humid haze settles about the area.  To the north
+lies the relative safety and comfort of the Great Shalaran Road.  
+~
+forest
+D NORTH 3533 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3535 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+D SOUTH 404 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.
+~
+D WEST 3528 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3535
+At the Edge of a Swamp~
+The ground here has become rather wet and soggy, drowning most of the
+shorter varieties of grass that grow nearby.  A few dark, moss-covered trees
+spring up here and there, all emanating a mildewy stench.  Many more spring
+up to the south, where a humid haze settles about the area.  To the north
+lies the relative safety and comfort of the Great Shalaran Road.  
+~
+forest
+D NORTH 3536 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3540 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+D WEST 3534 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3536
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, between the trade
+centers of Cimar and Melcene.  
+~
+road
+D NORTH 3537 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3539 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.
+~
+D SOUTH 3535 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3533 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3537
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the east and west, but the trees to the
+north grow too closely for you to pass between them.  Through breaks in the
+trees to the south, you can clearly make out the Great Shalaran Road.  
+~
+forest
+D EAST 3538 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3536 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3532 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3538
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the east and west, but the trees to the
+north grow too closely for you to pass between them.  Through breaks in the
+trees to the south, you can clearly make out the Great Shalaran Road.  
+~
+forest
+D EAST 3545 0 0
+~
+You can move eastward through the foliage, parallel to the road.
+~
+D SOUTH 3539 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3537 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3539
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, between the trade
+centers of Cimar and Melcene.  
+~
+road
+D NORTH 3538 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3544 0 0
+~
+The well-paved road comes to a bend to the east.
+~
+D SOUTH 3540 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3536 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3540
+On Marshy Ground~
+Thick mud sloshes beneath you, little creatures languishing in its sloppy
+filth.  Trees jut out of the ground here and there, thin vines hanging down,
+nearly touching the stubborn and scummy grayish-brown mud.  To the north,
+you can see a road, while to the west the marshy ground begins to turn into
+a full-fledged swamp.  
+~
+field
+D NORTH 3539 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3543 0 0
+~
+Through a break in the trees, you see the paved road to the east.
+~
+D SOUTH 3541 0 0
+~
+The marshy terrain extends to the south.
+~
+D WEST 3535 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3541
+On Marshy Ground~
+Thick mud sloshes beneath you, little creatures languishing in its sloppy
+filth.  Trees jut out of the ground here and there, thin vines hanging down,
+nearly touching the stubborn and scummy grayish-brown mud.  To the north and
+to the east, the marshy ground continues.  
+~
+field
+D NORTH 3540 0 0
+~
+The marshy terrain extends to the north.
+~
+D EAST 3542 0 0
+~
+The swampy terrain extends eastward, parallel to the road.
+~
+#3542
+On Marshy Ground~
+Thick mud sloshes beneath you, little creatures languishing in its sloppy
+filth.  Trees jut out of the ground here and there, thin vines hanging down,
+nearly touching the stubborn and scummy grayish-brown mud.  The trees here
+begin to become thicker, and the ground a bit less marshy... It's still a
+marsh though.  To the north, you can make out the Great Shalaran Road, while
+to the east the short, gnarled trees become even thicker.  
+~
+field
+D NORTH 3543 0 0
+~
+Through a break in the trees, you see the paved road to the north.
+~
+D EAST 3548 0 0
+~
+The ground hardens to the east, where twisted trees emerge from the earth.
+~
+D WEST 3541 0 0
+~
+The swampy terrain extends westward, parallel to the road.
+~
+#3543
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+south and west, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and curves to the north here,
+stretching between the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3544 0 0
+~
+The well-paved road takes a bend to the north.
+~
+D EAST 3547 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3542 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.
+~
+D WEST 3540 0 0
+~
+Swampy terrain spotted with trees lines the road to the west.
+~
+#3544
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and east, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs west and curves to the south here,
+stretching between the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3545 0 0
+~
+A row of trees lines the road on the northern side.
+~
+D EAST 3546 0 0
+~
+Dense brush lines the road on the eastern side.
+~
+D SOUTH 3543 0 0
+~
+The well-paved road takes a bend to the south.
+~
+D WEST 3539 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3545
+Within the Dense Foliage~
+The forest around you is remarkably dense here, with rows of trees
+reaching up to blot out all but tiny slivers of sky.  The presence of
+wildlife surrounds you, from the faint chirping of crickets, to the mossy
+earth beneath your feet, to the blurs of motion at the edge of your field of
+vision.  The forest stretches to the west, but the trees to the north and
+east grow too closely for you to pass between them.  Through breaks in the
+trees to the south, you can clearly make out the Great Shalaran Road.  
+~
+forest
+D NORTH 3699 I 0
+~
+~
+D SOUTH 3544 0 0
+~
+Through a break in the trees, you see the paved road to the south.
+~
+D WEST 3538 0 0
+~
+You can move westward through the foliage, parallel to the road.
+~
+#3546
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3551 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3547 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3544 0 0
+~
+The dense brush gives way to looming trees to the west.
+~
+#3547
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3546 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3550 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3548 0 0
+~
+Twisted trees burst jagged from the earth to the south.
+~
+D WEST 3543 0 0
+~
+The well-paved road comes to a bend to the west.
+~
+#3548
+At the Edge of a Stunted Forest~
+The ground here is damp and soft, providing poor footing for the tiny
+pine trees that grow out from the ground here.  A number of these trees are
+leaning in one direction or another, due to this.  This area is surprisingly
+quiet for one of such an untamed nature.  
+~
+forest
+D NORTH 3547 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.
+~
+D EAST 3549 0 0
+~
+The gauntlet of twisted trees extends eastward, parallel to the road.
+~
+D WEST 3542 0 0
+~
+Trees stand erect upon damp ground to the west.
+~
+#3549
+At the Edge of a Stunted Forest~
+Stunted and twisted trees are scattered about the wild ground here.  A
+strange silence fills the air, unbroken by the traffic that traverses the
+Great Shalaran Road that abruptly interrupts this forest to the north.  The
+forest continues to the east and west.  
+~
+forest
+D NORTH 3550 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.
+~
+D EAST 3554 0 0
+~
+A winding path through the twisted trees lies to the east.
+~
+D WEST 3548 0 0
+~
+The gauntlet of twisted trees extends westward, parallel to the road.
+~
+#3550
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3551 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3553 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3549 0 0
+~
+Twisted trees burst jagged from the earth to the south.
+~
+D WEST 3547 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.
+~
+#3551
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3552 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3550 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3546 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3552
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3557 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3553 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3551 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3553
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3552 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3556 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3554 0 0
+~
+A winding trail through the stunted trees winds southward.
+~
+D WEST 3550 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3554
+A Trail Leading Into a Stunted Forest~
+Stunted and twisted trees are scattered about the wild ground here.  A
+strange silence fills the air, unbroken by the traffic that traverses the
+Great Shalaran Road that abruptly interrupts this forest to the north.  A
+trail leads deeper into this strange, stunted forest to the south.  
+~
+field
+D NORTH 3553 0 0
+~
+The trail intersects with the vast paved road to the north.
+~
+D EAST 3555 0 0
+~
+A gauntlet of twisted trees extends eastward.
+~
+D SOUTH 5261 0 0
+~
+The trail winds its way to the south, through myriad dwarf trees.
+~
+D WEST 3549 0 0
+~
+A gauntlet of twisted trees extends westward.
+~
+#3555
+At the Edge of a Stunted Forest~
+Stunted and twisted trees are scattered about the wild ground here.  A
+strange silence fills the air, unbroken by the traffic that traverses the
+Great Shalaran Road that abruptly interrupts this forest to the north.  The
+forest continues to the east and west.
+~
+forest
+D NORTH 3556 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.
+~
+D EAST 3560 0 0
+~
+The gauntlet of twisted trees extends eastward, parallel to the road.
+~
+D WEST 3554 0 0
+~
+A winding path through the twisted trees lies to the west.
+~
+#3556
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3557 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3559 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3555 0 0
+~
+Twisted trees burst jagged from the earth to the south.
+~
+D WEST 3553 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3557
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3558 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3556 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3552 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3558
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3563 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3559 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3557 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3559
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3558 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3562 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3560 0 0
+~
+Twisted trees burst jagged from the earth to the south.
+~
+D WEST 3556 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3560
+At the Edge of a Stunted Forest~
+Stunted and twisted trees are scattered about the wild ground here.  A
+strange silence fills the air, unbroken by the traffic that traverses the
+Great Shalaran Road that abruptly interrupts this forest to the north.  The
+forest continues to the east and west.  
+~
+forest
+D NORTH 3559 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.
+~
+D EAST 3561 0 0
+~
+The gauntlet of twisted trees extends eastward, parallel to the road.
+~
+D WEST 3555 0 0
+~
+The gauntlet of twisted trees extends westward, parallel to the road.
+~
+#3561
+At the Edge of a Stunted Forest~
+Stunted and twisted trees are scattered about the wild ground here.  A
+strange silence fills the air, unbroken by the traffic that traverses the
+Great Shalaran Road that abruptly interrupts this forest to the north.  The
+forest continues to the east and west.  
+~
+forest
+D NORTH 3562 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.
+~
+D EAST 3566 0 0
+~
+The landscape begins to give way to looming black trees to the east.
+~
+D WEST 3560 0 0
+~
+The gauntlet of twisted trees extends westward, parallel to the road.
+~
+#3562
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3563 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3565 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3561 0 0
+~
+Twisted trees burst jagged from the earth to the south.
+~
+D WEST 3559 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3563
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3564 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3562 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3558 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3564
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D EAST 3574 0 0
+~
+The dense brush continues eastward, parallel to the road.
+~
+D SOUTH 3565 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3563 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3565
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3564 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3573 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.
+~
+D SOUTH 3566 0 0
+~
+A row of towering blackened trees lines the road to the south.
+~
+D WEST 3562 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3566
+At the Edge of a Darken Wood~
+This area of the forest is dry compared to the marshy, swamp-like ground
+to the west.  South of the road, it must somehow get less light than other
+places in this region... for this entire area is covered in pitch darkness. 
+The trees are black, the ground is scorched dark brown, and even the leaves
+above you are such a deep shade of green that they seem to swallow light. 
+Very little animal activity rises up in this area, and the surroundings are
+very still and quiet.  To the north, you see the light of the Great Shalaran
+Road between the trees, and to the east and west, the forest continues.  
+~
+forest
+D NORTH 3565 0 0
+~
+You see the wide road through a break in the trees to the north.
+~
+D EAST 3572 0 0
+~
+The array of looming blackened trees stretches to the east.
+~
+D WEST 3561 0 0
+~
+The massive trees surrounding you give way to twisted trees to the west.
+~
+#3567
+A Trampled Path~
+This path is fairly narrow, held in place by two walls of solid
+vegetation to the east and west.  The floor of the forest here is full of
+vegetation, but has been trampled and stomped completely flat.  Broken plant
+stalks and random petals strewn about season the ground with a mix of
+detritus.  To the north, the path winds back toward the darkened woods near
+the Great Shalaran Road.  South of here, the path curves around into deep
+places within the forest which you cannot see.  
+~
+field
+D NORTH 3572 0 0
+~
+The path winds back to the north, through the break in the trees.
+~
+D SOUTH 3568 0 0
+~
+Cracked branches and crushed leaves line the path winding southward.
+~
+#3568
+A Trampled Path~
+This path is fairly narrow, held in place by two walls of solid
+vegetation to the east and west.  The floor of the forest here is full of
+vegetation, but has been trampled and stomped completely flat.  Broken plant
+stalks and random petals strewn about season the ground with a mix of
+detritus.  To the north, the path winds back toward the darkened woods near
+the Great Shalaran Road.  South of here, the path curves around into deep
+places within the forest which you cannot see.  
+~
+field
+D NORTH 3567 0 0
+~
+Cracked branches and crushed leaves line the path winding northward.
+~
+D SOUTH 3569 0 0
+~
+Cracked branches and crushed leaves line the path winding southward.
+~
+#3569
+A Trampled Path~
+This path is fairly narrow, held in place by two walls of solid
+vegetation to the east and west.  The floor of the forest here is full of
+vegetation, but has been trampled and stomped completely flat.  Broken plant
+stalks and random petals strewn about season the ground with a mix of
+detritus.  To the north, the path winds back toward the darkened woods near
+the Great Shalaran Road.  East of here, the path curves around into deep
+places within the forest which you cannot see.  
+~
+field
+D NORTH 3568 0 0
+~
+Cracked branches and crushed leaves line the path winding northward.
+~
+D EAST 3570 0 0
+~
+Cracked branches and crushed leaves line the path winding eastward.
+~
+#3570
+A Trampled Path~
+This path is fairly narrow, held in place by two walls of solid
+vegetation to the east and west.  The floor of the forest here is full of
+vegetation, but has been trampled and stomped completely flat.  Broken plant
+stalks and random petals strewn about season the ground with a mix of
+detritus.  To the west, the path winds back toward the darkened woods near
+the Great Shalaran Road.  South of here, the path leads into a small,
+hastily-abandoned campsite.  
+~
+field
+D SOUTH 3571 0 0
+~
+The trampled path comes to and end to the south, reaching a clearing.
+~
+D WEST 3569 0 0
+~
+Cracked branches and crushed leaves line the path winding westward.
+~
+#3571
+An Abandoned Camp~
+The firepit here has been kicked over and drowned beneath a tiny lake of
+water.  A swath of glowing embers to one side indicates that this campsite
+has not been in its current state for very long.  Through the smoke and soot
+in the air, the light from above stabs downward, patterning itself after the
+canopy of vegetation overhead.  A twig snaps, a leaf rustles, and suddenly
+every sound around you is reminiscent of an approaching bandit.  Back to the
+north, the worn and flattened path of dead vegetation leads toward the open
+road, and safety.  
+~
+field
+D NORTH 3570 0 0
+~
+The trampled path leads back to the north, away from the abandoned camp.
+~
+#3572
+At the Edge of a Darken Wood~
+This area of the forest is dry compared to the marshy, swamp-like ground
+to the west.  South of the road, it must somehow get less light than other
+places in this region... for this entire area is covered in pitch darkness. 
+The trees are black, the ground is scorched dark brown, and even the leaves
+above you are such a deep shade of green that they seem to swallow light. 
+Very little animal activity rises up in this area, and the surroundings are
+very still and quiet.  To the north, you see the light of the Great Shalaran
+Road between the trees, and to the east and west, the forest continues.  
+~
+forest
+D NORTH 3573 0 0
+~
+You see the wide road through a break in the trees to the north.
+~
+D EAST 3582 0 0
+~
+The array of looming blackened trees stretches to the east.
+~
+D SOUTH 3567 I 0
+~
+Upon closer inspection, you can make out a trampled path through the trees
+to the south, obscured by broken branches and crushed foliage.
+~
+D WEST 3566 0 0
+~
+The array of looming blackened trees stretches to the west.
+~
+#3573
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and south, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and west here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3574 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3581 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.
+~
+D SOUTH 3572 0 0
+~
+A row of towering blackened trees lines the road to the south.
+~
+D WEST 3565 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3574
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D NORTH 3575 0 0
+~
+The dense brush continues to the north, alongside the bending road.
+~
+D EAST 3580 0 0
+~
+The wide road lies to the east beyond the copse.
+~
+D SOUTH 3573 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3564 0 0
+~
+The dense brush continues westward, parallel to the road.
+~
+#3575
+Amidst a Copse~
+Thick shrubs and small trees grow up to about fifteen feet here, there is
+the occasional breeze that rustles the branches and leaves, the rich smell
+of foliage fills your nose and carries a slight scent of pollen.  At the
+base of all the shrubs and small trees are small animal paths, about three
+to four feet high and well used.  The ground is covered with dead material
+fallen from the surrounding plant life, in some areas where the trails are
+often used the ground is worn bare to the compacted dirt underneath.  
+~
+forest
+D NORTH 3576 0 0
+~
+The dense brush yields to a glade to the north.
+~
+D EAST 3579 0 0
+~
+The wide road lies to the east beyond the copse.
+~
+D SOUTH 3574 0 0
+~
+The dense brush continues to the south, alongside the bending road.
+~
+#3576
+Before a Shaded Spring~
+The thick, gnarled tangles have parted, revealing a small clearing; some
+larger trees have found root here and managed to survive.  The air is more
+moist here, and the quiet yet soothing noises from the spring come to your
+ears, along with the occasional bird call.  Around the edge of the spring is
+a line of large rocks which holds back the water making the spring deeper. 
+Over time, the gaps in between the rocks have been filled with soil and
+plants have taken hold.  A weird assortment of long grasses sprout outward
+over the edges of the spring.  
+~
+forest
+ROOM LAW
+D NORTH 0 0 0
+~
+The large trees around the glade offer to much support to the gnarled
+tangles making movement to the north inpossible.  
+~
+D EAST 3578 0 0
+~
+A gnarled thicket borders the glade to the east.
+~
+D SOUTH 3575 0 0
+~
+A thick copse borders the glade to the south.
+~
+D WEST 0 0 0
+~
+The large trees around the glade offer to much support to the gnarled
+tangles making movement to the west inpossible.  
+~
+D UP 0 0 0
+~
+You peer upward through the few trees that have managed to sink firm
+roots and high above you the sky expands in all directions.  
+~
+D DOWN 0 0 0
+~
+Looking downward your vision is dragged towards the spring that is in the
+center of the small clearing, rocks line the spring and many plants seem to
+thrive unaturaly in its presence.  
+~
+E spring~
+Stepping up on the rocks lining the spring you peer into its deep
+shimmering waters.  The deep waters seem to twinkle back at you with a deep
+vivid blue colour.  The water seems to almost eminate a moist atomosphere
+around the spring, everything close by thriving in the harsh inviroment.  
+~
+E atomosphere~
+Kneeling at the side of the spring you can make out a soft shimmering
+sparkling mist that is almost invisible to the eye but clearly seems to be
+eminating from the waters surface.  A brief inhalation brings a soothing
+feeling deep down into your lungs.  
+~
+#3577
+Deep Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  You stand now so
+deep within the knotted thicket that the sky and road are no longer visible.
+~
+forest
+D EAST 3591 0 0
+~
+The dense thicket remains passable to the east.
+~
+D SOUTH 3578 0 0
+~
+The thicket thins slightly to the south.
+~
+#3578
+Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  
+~
+forest
+D NORTH 3577 0 0
+~
+A dense thicket stretches to the north.
+~
+D EAST 3590 0 0
+~
+The gnarled thicket stretches eastward.
+~
+D SOUTH 3579 0 0
+~
+The wide road lies to the south beyond the copse.
+~
+D WEST 3576 0 0
+~
+The dense brush yields to a glade to the west.
+~
+#3579
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+north and west, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs east and bends south here, stretching
+between the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3578 0 0
+~
+Dense brush lines the road on the northern side.
+~
+D EAST 3589 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3580 0 0
+~
+The well-paved road takes a bend to the south.
+~
+D WEST 3575 0 0
+~
+Dense brush lines the road on the western side.
+~
+#3580
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+east and west, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs north and south here, stretching between
+the trade centers of Cimar and Melcene.  
+~
+road
+D NORTH 3579 0 0
+~
+The well-paved road takes a bend to the north.
+~
+D EAST 3588 0 0
+~
+A gnarled thicket lines the road on the eastern side.
+~
+D SOUTH 3581 0 0
+~
+The well-paved road takes a bend to the north.
+~
+D WEST 3574 0 0
+~
+Dense brush lines the road on the western side.
+~
+#3581
+Along the Great Shalaran Road~
+This broad cobblestone road, known far and wide as the Great Shalaran
+Road, has been paved and re-paved many times through the centuries.  To the
+south and east, the sizeable forests of the region grow wild, deciduous and
+evergreen trees both intermingling and creating a field of patchwork green. 
+The road upon which you stand runs west and curves to the north here,
+stretching between the trade centers of Cimar and Melcene.  To the east, an
+overgrown road continues on toward a tiny inn.  
+~
+road
+D NORTH 3580 0 0
+~
+The well-paved road takes a bend to the north.
+~
+D EAST 3587 0 0
+~
+An overgrown trail winds through the dense foliage to the east.
+~
+D SOUTH 3582 0 0
+~
+A row of towering blackened trees lines the road to the south.
+~
+D WEST 3573 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3582
+At the Edge of a Darken Wood~
+This area of the forest is dry compared to the marshy, swamp-like ground
+to the west.  South of the road, it must somehow get less light than other
+places in this region... for this entire area is covered in pitch darkness. 
+The trees are black, the ground is scorched dark brown, and even the leaves
+above you are such a deep shade of green that they seem to swallow light. 
+Very little animal activity rises up in this area, and the surroundings are
+very still and quiet.  To the north, you see the light of the Great Shalaran
+Road between the trees, and to the east and west, the forest continues.  
+~
+forest
+D NORTH 3581 0 0
+~
+You see the wide road through a break in the trees to the north.
+~
+D EAST 3583 0 0
+~
+The array of looming blackened trees stretches to the east.
+~
+D WEST 3572 0 0
+~
+The array of looming blackened trees stretches to the west.
+~
+#3583
+At the Edge of a Darken Wood~
+This area of the forest is dry compared to the marshy, swamp-like ground
+to the west.  South of the road, it must somehow get less light than other
+places in this region... for this entire area is covered in pitch darkness. 
+The trees are black, the ground is scorched dark brown, and even the leaves
+above you are such a deep shade of green that they seem to swallow light. 
+Very little animal activity rises up in this area, and the surroundings are
+very still and quiet.  To the north, you see an overgrown road between the
+trees, and to the east and west, the forest continues.  
+~
+forest
+D NORTH 3587 0 0
+~
+An overgrown trail peeks through the trees to the north.
+~
+D EAST 3584 0 0
+~
+The array of looming blackened trees stretches to the east.
+~
+D WEST 3582 0 0
+~
+The array of looming blackened trees stretches to the west.
+~
+#3584
+At the Edge of a Darken Wood~
+This area of the forest is dry compared to the marshy, swamp-like ground
+to the west.  South of the road, it must somehow get less light than other
+places in this region... for this entire area is covered in pitch darkness. 
+The trees are black, the ground is scorched dark brown, and even the leaves
+above you are such a deep shade of green that they seem to swallow light. 
+Very little animal activity rises up in this area, and the surroundings are
+very still and quiet.  To the north, you see an overgrown road between the
+trees, and to the west, the forest continues.  
+~
+forest
+D NORTH 3585 0 0
+~
+An overgrown trail peeks through the trees to the north.
+~
+D WEST 3583 0 0
+~
+The array of looming blackened trees stretches to the west.
+~
+#3585
+On an Overgrown Trail~
+The path beneath you is barely visible through the vines and wild grass
+which have grown to cover it.  To the north, a wild thicket grows, through
+which you can just barely make out the gleaming Melcene Way.  West of here,
+the Great Shalaran Road stretches off toward Cimar.  To your south, the
+woods grow dark and foreboding, and barely any light escapes to tell your
+eyes the tale.  This road, mostly overgrown as it is, continues to the east
+toward a tiny inn.  All around you, the sounds of wild birds fluttering
+through the air and singing to one another crackle through the still air
+like a bolt of lightning.  
+~
+field
+D EAST 3586 0 0
+~
+The trail approaches some sort of dilapidated structure to the east.
+~
+D SOUTH 3584 0 0
+~
+A row of massive blackened trees looms to the south.
+~
+D WEST 3587 0 0
+~
+The overgrown trail winds to the west through the dense foliage.
+~
+#3586
+Before an Abandoned Inn~
+As you might have suspected, approaching it via the horribly overgrown
+path to the west, this inn is utterly abandoned.  Cracked windows and
+shattered furniture are well-lit due to the mostly missing roof.  The bar
+remains in an almost religious pristine condition, however, and a few of the
+bottles behind it have somehow not been broken.  All around you, clear as
+day is the evidence of vandalizing thieves stashing loot beneath the floor,
+trampling wayward beasts confused at the lack of a path or even trees, and
+many thousand wild birds unceremoniously leaving offerings before departing.
+~
+field
+D WEST 3585 0 0
+~
+The overgrown trail winds back through the foliage to the west.
+~
+#3587
+On an Overgrown Trail~
+The path beneath you is barely visible through the vines and wild grass
+which have grown to cover it.  To the north, a wild thicket grows, through
+which you can just barely make out the gleaming Melcene Way.  West of here,
+the Great Shalaran Road stretches off toward Cimar.  To your south, the
+woods grow dark and foreboding, and barely any light escapes to tell your
+eyes the tale.  This road, mostly overgrown as it is, continues to the east
+toward a tiny inn.  All around you, the sounds of wild birds fluttering
+through the air and singing to one another crackle through the still air
+like a bolt of lightning.  
+~
+field
+D NORTH 3588 0 0
+~
+A gnarled thicket lines the northern edge of the trail.
+~
+D EAST 3585 0 0
+~
+The overgrown trail winds to the east through the dense foliage.
+~
+D SOUTH 3583 0 0
+~
+A row of massive blackened trees looms to the south.
+~
+D WEST 3581 0 0
+~
+The overgrown trail merges with the main road to the west.
+~
+#3588
+Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  
+~
+forest
+D NORTH 3589 0 0
+~
+The wide road lies to the north, beyond the thicket.
+~
+D EAST 3595 0 0
+~
+The gnarled thicket stretches eastward.
+~
+D SOUTH 3587 0 0
+~
+An overgrown trail winds its way through the foliage to the south.
+~
+D WEST 3580 0 0
+~
+The wide road lies to the west, beyond the thicket.
+~
+#3589
+Along the Melcene Way~
+Far off in the distance, the top of the Glass Tower is just a bit more
+than an uneven speck to the northeast.  All around this bend in the road are
+even rows of short trees, though very few animals can be seen in their
+brances or on the ground beneath them.  The cobblestones underfoot that make
+up this road continue to the east and west.  
+~
+road
+D NORTH 3590 0 0
+~
+A gnarled thicket lines the road on the northern side.
+~
+D EAST 3594 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3588 0 0
+~
+A gnarled thicket lines the road on the southern side.
+~
+D WEST 3579 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.
+~
+#3590
+Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  
+~
+forest
+D NORTH 3591 0 0
+~
+The thicket grows denser to the north, though it remains passable.
+~
+D EAST 3593 0 0
+~
+The gnarled thicket stretches eastward.
+~
+D SOUTH 3589 0 0
+~
+The wide road lies to the south, beyond the thicket.
+~
+D WEST 3578 0 0
+~
+The gnarled thicket stretches westward.
+~
+#3591
+Deep Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  You stand now so
+deep within the knotted thicket that the sky and road are no longer visible.
+~
+forest
+D EAST 3592 0 0
+~
+The dense thicket remains passable to the east.
+~
+D SOUTH 3590 0 0
+~
+The thicket thins slightly to the south.
+~
+D WEST 3577 0 0
+~
+The dense thicket remains passable to the west.
+~
+#3592
+Deep Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  You stand now so
+deep within the knotted thicket that the sky and road are no longer visible.
+~
+forest
+D SOUTH 3593 0 0
+~
+The thicket thins slightly to the south.
+~
+D WEST 3591 0 0
+~
+The dense thicket remains passable to the west.
+~
+#3593
+Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  
+~
+forest
+D NORTH 3592 0 0
+~
+The thicket grows denser to the north, though it remains passable.
+~
+D EAST 3598 0 0
+~
+The gnarled thicket gives way to a a row of manicured trees to the east.
+~
+D SOUTH 3594 0 0
+~
+The wide road lies to the south, beyond the thicket.
+~
+D WEST 3590 0 0
+~
+The gnarled thicket stretches westward.
+~
+#3594
+Along the Melcene Way~
+Far off in the distance, the top of the Glass Tower is just a bit more
+than an uneven speck to the northeast.  All around this bend in the road are
+even rows of short trees, though very few animals can be seen in their
+brances or on the ground beneath them.  The cobblestones underfoot that make
+up this road continue to the east and west.  
+~
+road
+D NORTH 3593 0 0
+~
+A gnarled thicket lines the road on the northern side.
+~
+D EAST 3597 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3595 0 0
+~
+A gnarled thicket lines the road on the southern side.
+~
+D WEST 3589 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.
+~
+#3595
+Within a Thicket~
+Thick, gnarled tangles twist and climb out of the ground, which is not
+even visible now, due to the amount of wild plant growth.  Thick yet wispy
+spider webs connect in many places in the tangle, the new permanent home to
+many bugs native to the microcosm that is this thicket.  
+~
+forest
+D NORTH 3594 0 0
+~
+The wide road lies to the north, beyond the thicket.
+~
+D EAST 3596 0 0
+~
+The gnarled thicket gives way to a a row of manicured trees to the east.
+~
+D WEST 3588 0 0
+~
+The gnarled thicket stretches westward.
+~
+#3596
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the north, the Great Shalaran Road can be made out.  
+~
+forest
+D NORTH 3597 0 0
+~
+The wide road runs past the row of trees to the north.
+~
+D EAST 3602 0 0
+~
+The neatly-trimmed row of trees continues eastward.
+~
+D WEST 3595 0 0
+~
+The neatly-trimmed row of trees fades into a gnarled thicket to the west.
+~
+#3597
+Along the Melcene Way~
+Far off in the distance, the top of the Glass Tower is just a bit more
+than an uneven speck to the northeast.  All around this bend in the road are
+even rows of short trees, though very few animals can be seen in their
+brances or on the ground beneath them.  The cobblestones underfoot that make
+up this road continue to the east and west.
+~
+road
+D NORTH 3598 0 0
+~
+A well-manicured row of trees lines the road to the north.
+~
+D EAST 3601 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.
+~
+D SOUTH 3596 0 0
+~
+A well-manicured row of trees lines the road to the south.
+~
+D WEST 3594 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3598
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.  
+~
+forest
+D EAST 3600 0 0
+~
+The neatly-trimmed row of trees continues eastward.
+~
+D SOUTH 3597 0 0
+~
+The wide road runs past the row of trees to the south.
+~
+D WEST 3593 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3599
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.  
+~
+road
+D EAST 3606 0 0
+~
+The neatly-trimmed row of trees continues eastward.
+~
+D SOUTH 3600 0 0
+~
+The neatly-trimmed row of trees continues southward.
+~
+#3600
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the east and south, the Great Shalaran Road can be made out.  
+~
+forest
+D NORTH 3599 0 0
+~
+The neatly-trimmed row of trees continues northward.
+~
+D EAST 3605 0 0
+~
+The wide road runs past the row of trees to the east.
+~
+D SOUTH 3601 0 0
+~
+The wide road runs past the row of trees to the south.
+~
+D WEST 3598 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3601
+Along the Melcene Way~
+Far off in the distance, the top of the Glass Tower is just a bit more
+than an uneven speck to the northeast.  All around this bend in the road are
+even rows of short trees, though very few animals can be seen in their
+brances or on the ground beneath them.  The cobblestones underfoot that make
+up this road continue to the east and west.
+~
+road
+D NORTH 3600 0 0
+~
+A well-manicured row of trees lines the road to the north.
+~
+D EAST 3604 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.
+~
+D SOUTH 3602 0 0
+~
+A well-manicured row of trees lines the road to the south.
+~
+D WEST 3597 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3602
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.  
+~
+forest
+D NORTH 3601 0 0
+~
+The wide road runs past the row of trees to the north.
+~
+D EAST 3603 0 0
+~
+~
+D WEST 3596 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3603
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.
+~
+forest
+D NORTH 3604 0 0
+~
+The wide road runs past the row of trees to the north.
+~
+D EAST 3610 0 0
+~
+The neatly-trimmed row of trees continues eastward.
+~
+D WEST 3602 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3604
+Along the Melcene Way~
+Far off in the distance, the top of the Glass Tower is just a bit more
+than an uneven speck to the northeast.  All around this bend in the road are
+even rows of short trees, though very few animals can be seen in their
+brances or on the ground beneath them.  The cobblestones underfoot that make
+up this road continue to the north and west.  Off to the north, you can see
+that the road bends again to the east.  
+~
+road
+D NORTH 3605 0 0
+~
+The well-paved road bends to the north.
+~
+D EAST 3609 0 0
+~
+A well-manicured row of trees lines the road to the east.
+~
+D SOUTH 3603 0 0
+~
+A well-manicured row of trees lines the road to the south.
+~
+D WEST 3601 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3605
+Along the Melcene Way~
+This road is very heavily traveled.  Small tufts of trampled grass grope
+for nourishment and sunlight on the side of the road, but do not find the
+success that their taller relatives do further north and south.  In the
+distance, Melcene can be made out.  Its large stone walls and the great
+tower that it was built around stand proudly against the horizon.  
+~
+road
+D NORTH 3606 0 0
+~
+A well-manicured row of trees lines the road to the north.
+~
+D EAST 3608 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3604 0 0
+~
+The well-paved road bends to the south.
+~
+D WEST 3600 0 0
+~
+A well-manicured row of trees lines the road to the west.
+~
+#3606
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.  
+~
+forest
+D EAST 3607 0 0
+~
+The neatly-trimmed row of trees continues eastward.
+~
+D SOUTH 3608 0 0
+~
+The wide road runs past the row of trees to the south.
+~
+D WEST 3599 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3607
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.  
+~
+forest
+D EAST 3613 0 0
+~
+The row of trees comes to an end, and a grassy strip extends to the east.
+~
+D SOUTH 3608 0 0
+~
+The wide road runs past the row of trees to the south.
+~
+D WEST 3606 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3608
+Along the Melcene Way~
+This road is very heavily traveled.  Small tufts of trampled grass grope
+for nourishment and sunlight on the side of the road, but do not find the
+success that their taller relatives do further north and south.  In the
+distance, Melcene can be made out.  Its large stone walls and the great
+tower that it was built around stand proudly against the horizon.  
+~
+road
+D NORTH 3607 0 0
+~
+A well-manicured row of trees lines the road to the north.
+~
+D EAST 3612 0 0
+~
+The well-paved road stretches eastward toward the horizon.
+~
+D SOUTH 3609 0 0
+~
+A well-manicured row of trees lines the road to the south.
+~
+D WEST 3605 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.
+~
+#3609
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.  
+~
+forest
+D NORTH 3608 0 0
+~
+The wide road runs past the row of trees to the north.
+~
+D EAST 3611 0 0
+~
+The row of trees comes to an end, and a grassy strip extends to the east.
+~
+D SOUTH 3610 0 0
+~
+The neatly-trimmed row of trees continues southward.
+~
+D WEST 3604 0 0
+~
+The wide road runs past the row of trees to the west.
+~
+#3610
+Within a Tamed Wood~
+Short, neat rows of trees have obviously been planted here.  Though they
+aren't meticulously upkept, they are far from the chaotic tangles that most
+natural forests are... Too far.  Leaves and needles litter the ground, and
+to the south, the Great Shalaran Road can be made out.
+~
+forest
+D NORTH 3609 0 0
+~
+The neatly-trimmed row of trees continues northward.
+~
+D WEST 3603 0 0
+~
+The neatly-trimmed row of trees continues westward.
+~
+#3611
+In a Narrow Field~
+This small strip of field between the Great Shalaran Road and the
+Southern Forests seems almost out of place.  To the northeast, the Glass
+Tower can be made out, a black shape sitting upon the horizon.  Trees line
+the southern and western edge of this field, though the ones to the west
+seem to be less thick.  
+~
+field
+D NORTH 3612 0 0
+~
+The wide road is to the north, running parallel to the narrow field.
+~
+D EAST 3616 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.
+~
+D SOUTH 740 0 0
+~
+~
+D WEST 3609 0 0
+~
+A neatly-manicured row of trees extends westward.
+~
+#3612
+Along the Melcene Way~
+This road is very heavily traveled.  Small tufts of trampled grass grope
+for nourishment and sunlight on the side of the road, but do not find the
+success that their taller relatives do further north and south.  In the
+distance, Melcene can be made out.  Its large stone walls and the great
+tower that it was built around stand proudly against the horizon.  
+~
+road
+D NORTH 3613 0 0
+~
+A narrow strip of grass lines the wide road on the northern side.
+~
+D EAST 3615 0 0
+~
+The well-paved road extends eastward, with towering walls looming from afar.
+~
+D SOUTH 3611 0 0
+~
+A narrow strip of grass lines the wide road on the southern side.
+~
+D WEST 3608 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3613
+In a Narrow Field~
+This narrow strip of field sits between the Great Shalaran Road and a
+dense wall of trees and thick foliage.  The great city of Melcene and the
+Glass Tower are visible in the distance.  To the west, a thin forest of
+somewhat stunted trees interrupts the fields.  
+~
+field
+D EAST 3614 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.
+~
+D SOUTH 3612 0 0
+~
+The wide road is to the south, running parallel to the narrow field.
+~
+D WEST 3607 0 0
+~
+~
+#3614
+In a Narrow Field~
+This narrow strip of field sits between the Great Shalaran Road and a
+dense wall of trees and thick foliage.  The great city of Melcene and the
+Glass Tower are visible in the distance.  To the east, a road is visible,
+past the tall grass but before Melcene.  
+~
+field
+D EAST 3619 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.
+~
+D SOUTH 3615 0 0
+~
+The wide road is to the south, running parallel to the narrow field.
+~
+D WEST 3613 0 0
+~
+The strip of grass stretches westward, running parallel to the road.
+~
+#3615
+Approaching Melcene~
+The cobblestone road underfoot continues to the east and west.  To the
+east, the strangely-marked gates of Melcene lie open for merchants and
+travelers, the darkly colored and almost ominous Glass Tower looming high
+over the city.  A smaller trail leads around the city to the north and the
+south, while to the west, the Great Shalaran Road leads back toward Cimar,
+another pillar of civilization.  
+~
+road
+D NORTH 3614 0 0
+~
+A narrow strip of grass lines the wide road on the northern side.
+~
+D EAST 3618 0 0
+~
+The walls of a luminous city rise to the east at the end of the road.
+~
+D SOUTH 3616 0 0
+~
+A narrow strip of grass lines the wide road on the southern side.
+~
+D WEST 3612 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3616
+In a Narrow Field~
+This small strip of field between the Great Shalaran Road and the
+Southern Forests seems almost out of place.  To the northeast, the Glass
+Tower can be made out, a black shape sitting upon the horizon.  Trees line
+the southern edge of this field, and to the east and west, it continues.  
+~
+field
+D NORTH 3615 0 0
+~
+The wide road is to the north, running parallel to the narrow field.
+~
+D EAST 3617 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.
+~
+D SOUTH 755 0 0
+~
+~
+D WEST 3611 0 0
+~
+The strip of grass stretches westward, running parallel to the road.
+~
+#3617
+In a Narrow Field~
+This small strip of field between the Great Shalaran Road and the
+Southern Forests seems almost out of place.  To the northeast, the Glass
+Tower can be made out, a black shape sitting upon the horizon.  Trees line
+the southern edge of this field, and to the west, it continues.  
+~
+field
+D NORTH 3618 0 0
+~
+The wide road is to the north, running parallel to the narrow field.
+~
+D EAST 3621 0 0
+~
+East of here, the road which runs along Melcene's walls stretches south.
+~
+D SOUTH 769 0 0
+~
+~
+D WEST 3616 0 0
+~
+The strip of grass stretches westward, running parallel to the road.
+~
+#3618
+Approaching Melcene~
+The cobblestone road underfoot continues to the east and west.  To the
+east, the strangely-marked gates of Melcene lie open for merchants and
+travelers, the darkly colored and almost ominous Glass Tower looming high
+over the city.  A smaller trail leads around the city to the north and the
+south, while to the west, the Great Shalaran Road leads back toward Cimar,
+another pillar of civilization.  
+~
+road
+D NORTH 3619 0 0
+~
+A narrow strip of grass lines the wide road on the northern side.
+~
+D EAST 3620 0 0
+~
+The gated city of Melcene looms to the east, at the end of the road.
+~
+D SOUTH 3617 0 0
+~
+A narrow strip of grass lines the wide road on the southern side.
+~
+D WEST 3615 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3619
+In a Narrow Field~
+This narrow strip of field sits between the Great Shalaran Road and a
+dense wall of trees and thick foliage.  The great city of Melcene and the
+Glass Tower are visible in the distance.  To the east, a road is visible,
+past the tall grass but before Melcene.  
+~
+field
+D EAST 24430 0 0
+~
+East of here, the road which runs along Melcene's walls stretches north.
+~
+D SOUTH 3618 0 0
+~
+The wide road is to the south, running parallel to the narrow field.
+~
+D WEST 3614 0 0
+~
+The strip of grass stretches westward, running parallel to the road.
+~
+#3620
+Before the Gates of Melcene~
+The cobblestone road underfoot continues to the east and west.  To the
+east, the strangely-marked gates of Melcene lie open for merchants and
+travelers, the darkly colored and almost ominous Glass Tower looming high
+over the city.  A smaller trail leads around the city to the north and the
+south, while to the west, the Great Shalaran Road leads back toward Cimar,
+another pillar of civilization.  
+~
+road
+D NORTH 24430 0 0
+~
+To the north, a road stretches around Melcene's walls.
+~
+D EAST 1120 0 0
+~
+Through the gates to the east lies the grand city of Melcene in all its glory.
+~
+D SOUTH 3621 0 0
+~
+South of here, a thin road curves to the southwest.
+~
+D WEST 3618 0 0
+~
+The well-paved road stretches westward toward the horizon.
+~
+#3621
+The Beginnings of an Old Road~
+The ground here is torn up and hardened by great amounts of travel, lack
+of care and weather.  Curls of dust wisp over the paved road forming into
+dry puddles.  Two deep trakc run down each side of the road from the heavy
+carts that use it, grass and weeds striving for a footing sprout out in all
+directions, indicating that the road has not seen regular use in some time. 
+On the edge of the road, the grass thrives and grows almost two feet, long
+blades hang over the road.  
+~
+road
+D NORTH 3620 0 0
+~
+~
+D SOUTH 777 0 0
+~
+~
+D WEST 3617 0 0
+~
+~
+#3699
+A Torch-Lit Circle of Granite~
+The air here is thick, humid and musty, as if it has been abandoned by
+all fauna and man for centuries.  Strangely, an ancient granite circle is
+set into the ground, lined with eternally burning torches, runes and wards
+of protection.  The dense foliage and plantlife leans over the circle, but
+does not encroach its bounds, forming a shelter of sorts.  To the south, the
+foliage thins, allowing passage.  
+~
+city
+D SOUTH 3545 I 0
+~
+~
+CABAL phalanx
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 3576 TO 3576 GLIMIT 1 LLIMIT 1
+OBJECT 3576 TO 3576
+S
+
+#IMPROGS
+END
+#$

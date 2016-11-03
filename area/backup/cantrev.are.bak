@@ -1,0 +1,7132 @@
+#AREA
+cantrev.are~
+The Valley Cantrevs~
+Metaphiusen~
+1 51
+11900 12099
+normal
+temperate
+0
+1
+Metaphiusen~
+
+#MOBS
+#11900
+worker field peasant serf harvester~
+a peasant field worker~
+An able peasant toils away at the fields, making furrows and weeding.
+~
+The peasant before you works handily to create a growing environment
+for the Lord  that they serve.  Dressed in the common wool robes of the
+region, the worker is dripping sweat and flushed from long hours of
+great exertion.
+~
+0 11900 100 human~
+12 300d2+100 6d3+5 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF DIRT_KICK
+IMM SUMMON
+#11901
+harvester peasant serf~
+a peasant harvester~
+A weary peasant works the fields here, harvesting grain.
+~
+This peasant is working under the careful eye of the
+overseers, and is quickly plucking grain kernels from
+the stalks of wheat and barley.  The sweat runs down
+into the serf's robes, making the wool that much more
+uncomfortable, but the worker continues on.
+~
+0 11901 100 human~
+12 300d2+100 5d3+4 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF DIRT_KICK
+IMM SUMMON
+#11902
+harvester peasant serf~
+a peasant harvester~
+A peasant walks the endless rows of corn, plucking ripe ears.
+~
+The peasants that trudge the cornfields are at least granted woolen
+robes with sleeves to ease the burns and scratches from the corn
+plant leaves and husks.  The serf's face is weary and blank, and
+sweat runs down their brow to drip into the field's rich soil.
+~
+0 11902 100 human~
+12 300d2+100 5d3+4 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF DIRT_KICK
+IMM SUMMON
+#11903
+harvester peasant serf~
+a peasant harvester~
+A tired serf stalks through the vineyard, collecting ripe grapes.
+~
+The peasants chosen to work the vineyard are robust as the
+others, but chosen for gentleness and coordination, to handle
+the grapes with care, in order not to spill their valuable juices
+before they reach the winery.  The dull, grey woolen robes that
+are the dress of the poor hang like a shroud about the
+worker's frame.
+~
+0 11903 100 human~
+12 300d2+100 4d3+4 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF DIRT_KICK
+IMM SUMMON
+#11904
+harvester peasant serf~
+a peasant harvester~
+A peasant walks slowly through the orchard, collecting apples.
+~
+The serf before you walks in relative comfort through the
+well-shaded orchard, much to the envy of the others.  The
+orchard is the favored duty by all the commoners, and is
+ given to the first ones to show up each morning.  Thus,
+the easiest task, but the longest hours.
+~
+0 11904 100 human~
+12 300d2+100 4d3+4 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF DIRT_KICK
+IMM SUMMON
+#11905
+overseer slave master soldier man~
+a slave overseer~
+A stocky man walks the fields, shouting and whipping the peasants.
+~
+The soldiers appointed to duties in the field overseeing slaves are
+usually the least swift, the least exemplary in battle, but who still
+show a heart for cruelty and production.  The man before you
+scowls and curses at the serfs, drawing every ounce
+of effort from their weary bodies.
+~
+-300 11905 100 human~
+30 1000d3+1000 7d6+8 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DISARM
+OFF KICK
+IMM SUMMON
+#11906
+overseer soldier man field leader~
+a field leader~
+A field leader of the peasants shouts directions, warily pacing.
+~
+The overseers of the southern "free" lands are no less productive
+in their duties than their counterparts in the north, yet seem to
+take a less offensive posture.  The man before you is dressed
+somewhat as a field ranger, and carries no instrument of torture.
+~
+0 11906 100 human~
+30 1200d2+800 7d6+8 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF TRIP
+IMM SUMMON
+CLASS warrior none none 
+#11907
+lark bird tufted~
+a tufted lark~
+A singing lark bearing wild blue tufts of feathers glides about here.
+~
+The wildlife of the valley is largely untouched by the workings
+of the humans, though the field mice and other pests are perhaps
+a bit fatter than they should be.  The avian population also feeds
+well, on the insects that infest the crops and gardens.  This small
+bird dips and whirls like an overexcited child, playing on the breeze.
+~
+0 11907 100 unique~
+6 100d2+50 3d3+2 0 100 peck
+0 0 0 0
+standing either none
+d 0 tiny
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+ACT INDOORS
+#11908
+owl screech small grey~
+a screech owl~
+A small grey owl perches here, emitting a horrific shrieking.
+~
+This small nocturnal resident of the valley lets out a terrible
+screeching noise, to frighten predators as well as to find a mate.
+A small mouse carcass decorates its terrible claws,  evidence of
+the easy life in the farm-rich valley.  It bears grey feathers
+and a small, hooked beak, and its wings are silent as the night
+wind itself.
+~
+0 11908 100 bat~
+6 100d2+50 3d3+2 0 100 claw
+0 0 0 0
+standing either none
+Wd 0 small
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+ACT INDOORS
+#11909
+heron great blue bird large~
+a great blue heron~
+A large, long-billed bird with an expansive wingspan hunts the river.
+~
+The great blue heron, while rare in this part of the world,
+takes quite well to the protected valley and its supply of fish and
+pests upon which to feed.  It flies heavily along the river, scanning
+the water for prey to scoop up with its long, sharp beak.  It is
+a deep, though light blue color, and its wings measure nearly ten
+feet across.
+~
+0 11909 100 unique~
+7 200d2+50 4d3+3 0 100 stab
+0 0 0 0
+standing either none
+d 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF KICK
+#11910
+mallard duck green white~
+a green mallard duck~
+A small duck floats along the river here, white and brilliant green.
+~
+The mallard is common to the rivers and waterways in the
+temperate climate found here, and the green mallard is no exception.
+It bears a soft white coloring and almost shiny green feathers along
+its head and back.  Its orange bill is quite adept at nabbing
+passing fish, and even the occasional water insect to keep itself
+well sustained.
+~
+0 11910 100 unique~
+6 100d2+50 3d3+3 0 100 bite
+0 0 0 0
+standing either none
+d 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+#11911
+trout rainbow fish silvery~
+a rainbow trout~
+A silvery-scaled fish reflects a myriad of colors in the water.
+~
+The rainbow trout that are the dominant species in the river
+are aptly named- their scales act as a natural sort of prism,
+sending color and light back through the water.
+A natural defense mechanism, it makes it harder for flying
+or swimming predators to focus on the exact location of the
+fish while it is in mid-stream.  Unfortunately, to get
+the tasty water insects which comprise its diet, it occasionally
+must jump from the stream and expose itself to the air
+and danger.
+~
+0 11911 100 fish~
+6 100d2+20 3d2+2 0 100 suction
+0 0 0 0
+standing either none
+d d tiny
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+IMM SUMMON
+#11912
+harvester peasant serf~
+a peasant harvester~
+A weary peasant stumbles along, pushing a wheelbarrow.
+~
+The peasants who display the strongest ability for manual
+labor and the ability to walk for hours without fainting
+from exhaustion are the unlucky who gather the sacks of
+produce from the other harvesters and cart it back to their
+Lord for sale or consumption.  They wear the same itchy,
+uncomfortable woolen robes as all their compatriots.
+~
+0 11912 100 human~
+14 300d2+200 3d3+8 0 100 beating
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+OFF KICK
+IMM SUMMON
+#11913
+sentry gate soldier guard man~
+a gate sentry~
+A soldier stands guard at the gate here, rigidly at attention.
+~
+The soldiers under Lord Avarast are well-trained, and if
+lacking in any area, certainly not in discipline.  This soldier
+keeps his weapon readied, his eyes on the trails for signs of
+trouble, and a stern, self-important look on his face.  He carries
+himself and his gear with utmost pride, for only the strong
+survive in his Lord's service.
+~
+-300 11913 100 human~
+35 1200d3+500 8d6+8 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11914
+horse chestnut mare stable~
+a stable horse~
+A chestnut mare stamps the ground here, bearing marks of farm-work.
+~
+The horses, though rare in the valley, can be imported from Cimar's
+stables or from merchants who come across the sea to purchase and
+sell slaves.  The mare you see is a fine specimen for farming and
+labor, though not much to think of for battle.
+~
+0 11914 100 pig~
+17 500d3+100 6d5+3 0 100 charge
+0 0 0 0
+standing female none
+d 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOALIGN
+OFF KICK
+IMM SUMMON
+#11915
+charger stallion black~
+the Lord's charger~
+A powerful black stallion anxiously paws at the earth and rears up.
+~
+This magnificent animal, brought by merchants over the sea, is
+far and away a better horse than can be found in this part of the world.
+Its coat is glossy black, its mane long and flowing, and its hooves
+the very picture of obsidian, sharp and well-cared for.
+~
+0 11915 100 pig~
+20 700d3+200 8d5+12 0 100 charge
+0 0 0 0
+standing male none
+d 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOALIGN
+OFF KICK
+IMM SUMMON
+#11916
+stablehand young man~
+a stablehand~
+A young stablehand wanders about, checking on the steeds.
+~
+This young man, barely more than a boy, has taken on a
+period of servitude in the Lord's keep to care for the equines
+contained therein rather than spend his youthful years beside
+his family in the harsh fields.  He is dressed simply but not
+poorly, and his honest face is grimly set as he turns to brush
+down a new mount.
+~
+0 11916 100 human~
+20 500d3+200 5d5+8 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF TRIP
+IMM SUMMON
+#11917
+merchant travelling man~
+a travelling merchant~
+A dark-skinned man wanders the markets here, seeking goods.
+~
+The trade and commerce of Cimar draws many of its customers
+to outside the borders, to the cheaper markets of lone communities.
+This man is dressed strangely, and speaks very little, haltingly, in
+the trade tongue.  His eyes appraise all the goods to be had, and
+a heavy purse jingles at his belt.
+~
+0 11917 100 human~
+40 1200d3+600 6d6+12 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DIRT_KICK
+IMM SUMMON
+CLASS warrior none none 
+#11918
+chamberlain man stern cruel~
+the lord chamberlain~
+A tall noble stands here, a twisted, cruel look on his stern visage.
+~
+The lord chamberlain is a man of obvious noble blood, and he carries himself
+with the arrogance of a king.  His angular features and close-cut white hair
+make him seem a grandfatherly figure, yet his face seems contorted in at once
+a vision of cruelty and anguish.  His knuckles are white about his staff of
+office at your approach.
+~
+-500 11918 100 human~
+53 4000d3+3000 20d6+10 0 70 crush
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DISARM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF HASTE
+AFF DARK_VISION
+AFF REGENERATION
+CLASS warrior none none 
+#11919
+soldier knife man guard off-duty~
+an off-duty soldier~
+An off-duty soldier relaxes here, idly throwing knives.
+~
+The soldiers of the cantrev are long on shifts, yet when
+they are released for rest, they often will practice with
+weapons or find other activities to hone their skills.  A
+place in Lord Avarast's army lasts just as long as one's
+usefulness in battle.  The man before you is still
+in his armor, and plays a fiercely competitive game
+with his fellows.
+~
+-400 11919 100 human~
+35 1200d3+700 6d6+12 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+AFF HASTE
+IMM SUMMON
+CLASS warrior none none 
+#11920
+soldier off-duty sleeping man~
+an off-duty soldier~
+A soldier takes a rare period of sleep to rest himself here.
+~
+This soldier is fully removed from duty, having shed his
+armor and weapons in lieu of a simple white tunic.  The
+bunks aren't comfortable, but then they really aren't supposed
+to be. The soldier snores blissfully away, enjoying a relaxing
+time before his next stretch of service.
+~
+0 11920 100 human~
+35 1200d3+1000 6d6+12 0 100 crush
+0 0 0 0
+sleeping male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+AFF DARK_VISION
+IMM SUMMON
+CLASS warrior none none 
+#11921
+cook fat greasy unshaven man~
+the cook~
+A fat, unshaven man roams the hall, wiping up spilled food and ale.
+~
+This unkempt monstrosity is, quite obviously, the barracks cook.
+He is dressed in no less disgusting clothes, and carries a rag in
+one meaty hand.  He gathers dishes and spilled or abandoned
+food, more often than not stopping to cram the latter into his
+heavy-jowled mouth. He then continues about his work, chewing
+noisily and humming to himself.
+~
+-300 11921 100 human~
+35 1200d3+1000 6d4+10 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF BASH
+AFF REGENERATION
+IMM SUMMON
+RES BASH
+#11922
+guard soldier garrison man keep~
+a soldier of the keep~
+A soldier of the keep's large garrison watches you carefully.
+~
+The soldiers who are assigned to the garrison are competent
+warriors, entrusted to withstand the effects of a long battle,
+and also to venture forth to defend the Lord's honor or
+gather the Lord new slaves.  They are battle-hardened and
+largely without conscience,  judging from the tales that
+circulate the nearby communities.
+~
+-400 11922 100 human~
+40 2000d4+1000 8d6+12 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF KICK
+AFF HASTE
+IMM SUMMON
+CLASS warrior none none 
+#11923
+avarast lord northern man~
+Lord Avarast~
+The Master of the northern fief sits here with a dour look on his face.
+~
+Avarast, sixth of the name and master of his cantrev, is instrumental
+in the continued success of the commerce of the region.  His
+propensity to simply use slaves and destroy  them when they age
+rather than feed a useless body has garnered him quite the profit.
+His noble face is free of guilt, but bears a constant scowl, and his
+fierce black beard juts out from a jawline that could have once
+been fair and respectable.  He is dressed richly,  though less so
+than many of his courtiers. He, like his chamberlain, seems gripped
+by some unseen malaise.
+Shadows seem to dance all about him, seen and yet not visible to the eye.
+~
+-700 11923 100 human~
+55 10d10+8500 12d10+12 0 100 wrath
+0 0 0 0
+sitting male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+IMM SLEEP
+VUL SILVER
+CLASS warrior none none 
+#11924
+guard dungeon hooded man burly~
+a hooded dungeon guard~
+A burly man with a black hood stands guard in the darkness.
+~
+The soldiers given duty in the Lord's subterranean palace
+of terror are the most impressionable, most vile, conscience-less
+guards to be found in the northern garrison.  The man before
+you is stocky and well-muscled, and carries implements of torture
+to assist the executioner in his grisly tasks.
+~
+-500 11924 100 human~
+40 2000d3+1200 8d8+4 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BASH
+OFF DISARM
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+RES NEGATIVE
+VUL LIGHTNING
+CLASS warrior none none 
+#11925
+executioner large man hooded~
+the hooded executioner~
+A large, muscled humanoid shrouded in darkness stands before you.
+~
+The executioner in Avarast's employ shows no distinguishing
+characteristics of race, demeanor, or mood.  The rumors abound in
+the court, however, and most whisper that he is half-ogre, an
+unwholesome product of an ogre raid and subsequent rape of its
+inhabitants. He is tall and broad-shouldered, and corded muscles
+ripple subtly as he moves.  The fiend drags a wickedly bladed axe
+behind him, its shrieking, grating noise a psychological torture
+to the miserable prisoners entombed in the darkness.
+~
+-600 11925 100 human~
+48 1750d3+2500 9d7+6 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DIRT_KICK
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+VUL LIGHTNING
+VUL MENTAL
+CLASS warrior none none 
+#11926
+prisoner human wretched miserable~
+a wretched prisoner~
+A human prisoner lies here, sobbing quietly in the darkness.
+~
+This wretched human must have done something to anger
+the Lord of the cantrev, or is a captured soldier from the south,
+or even a soldier from Avarast's own army who has outlived
+his usefulness.  The dress of the prisoners is simple and
+uncomfortable, much like that of the peasants.
+~
+0 11926 100 human~
+30 1000d3+800 4d6+10 0 110 scratch
+0 0 0 0
+sitting either none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF NO_TRACK
+AFF BLIND
+AFF HASTE
+IMM SUMMON
+VUL LIGHTNING
+#11927
+merchant slave master man bearded~
+a slave merchant~
+A bearded man marches about here, buying humanoid slaves.
+~
+The paunch and beard of this man brings to mind barbarians
+of the tundra, though this particular specimen shows no signs
+of their fitness or fortitude.  He is dressed and kept as quite the
+urban prowler, seeking children to take and raise as slaves and
+making quite a good living at doing it.  He wears gaudy jewelry,
+most of it fake, and expensive robes.
+~
+0 11927 100 human~
+40 1000d2+2000 10d5+12 0 85 beating
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+#11928
+bridgekeeper bridge keeper man guard~
+the bridgekeeper~
+A well-armed soldier stands guard over the toll bridge here.
+~
+The soldiers assigned to field duty, or to overseeing the
+peasants, have a fairly active life. Not so for these men,
+who stand guard over bridges in the river valley.  Tolls are
+required of the Lord and his court, to help pay for the
+exorbitant salaries of the free rangers that Rothael keeps
+on.  This soldier is armored and armed, and almost looks
+hopeful at the approach of a possible enemy.
+~
+0 11928 100 human~
+40 3000d2+2000 10d4+12 0 90 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF KICK
+AFF DETECT_CAMO
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+CLASS warrior none none 
+#11929
+sentry gate soldier guard man~
+a gate sentry~
+A stout guard waits alertly here for signs of trouble.
+~
+This guard is well armed and armored, ready to withstand
+the charge of an invading force.  He keeps watch over the
+gates and all traffic coming in or out, and occasionally turns
+away the suspicious traveller for fear of spies entering the
+house of his Lord.
+~
+0 11929 100 human~
+40 1500d2+2000 11d4+9 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DIRT_KICK
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+IMM SUMMON
+CLASS warrior none none 
+#11930
+soldier field pikeman man~
+a field soldier~
+A pikeman field soldier watches over this part of the valley.
+~
+This man, a representative of the northern cantrev, keeps a
+wary eye on the sparse copses of trees and watches for signs
+of unrest among the serfs.  Should they turn on their overseers,
+the field watchman's duty is to slay as many of them as
+possible.  His face seems to reflect a wistfulness and strange
+sort of cruelty.
+~
+-400 11930 100 human~
+40 1500d2+2000 11d4+8 0 90 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_CAMO
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11931
+free ranger field soldier~
+a free ranger~
+A tall man steps quietly through the brush, hand on sword hilt.
+~
+The free rangers of the southern valley cantrev are not
+indigenous- the man before you has strangely pale skin
+and chestnut-brown hair, rare features for this part of the world.
+He is dressed in leather clothes and armor, and handles a
+blade with uncanny ease.  Feathers of many sizes and colors
+line his belt, evidence of the rangers' ongoing competition to stalk
+rare and unusual game.
+~
+0 11931 100 human~
+40 1500d2+2000 12d5+12 0 90 charge
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_CAMO
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11932
+tradesman dwarf travelling merchant~
+a dwarven tradesman~
+A travelling dwarven noble wanders about here, seeking trade.
+~
+This dwarf bears the marks of a vicious road journey- his
+boots are worn at the heels and the soles, his beard is plaited
+for traveling and tucked into his belt, and scars and fresh minor
+wounds dot his stocky frame.  He carries himself with both the
+confidence of an experienced warrior and  the eagerness
+of a greedy salesman.
+~
+0 11932 100 dwarf~
+40 1500d2+1500 12d5+12 0 80 smash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF DISARM
+OFF DIRT_KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+VUL DROWNING
+CLASS warrior none none 
+#11933
+archer guard soldier man~
+a castle archer~
+A lithe soldier waits here to repel a coming assault with his longbow.
+~
+These soldiers are trained heavily in archery and small-arms fighting,
+and bear light armor to compensate.  This man is visibly relaxed,
+as though he expects no oncoming enemy within the near future.  He
+leans back and flexes his hands, his bow strung and at the ready.
+~
+0 11933 100 human~
+40 1500d2+1500 12d4+12 0 90 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11934
+lord man Rothael tall~
+the Lord Rothael~
+Rothael, master of the southern fief, sits heavily upon his simple throne.
+~
+The man before you has a noble face, yet it seems creased with worry,
+his prematurely grey hair framing a picture of anxiety.  Treasuries
+certainly are finite, and the aid of the free rangers is nothing
+if not expensive.  His clothing is fairly simple, and he bears
+scars along the right side of his jaw.  The lines and crows'
+feet on his honest face belie the powerfully corded muscles that
+guide his movements, the product of hearty discipline and
+the immense motivation of subtle paranoia.
+~
+0 11934 100 human~
+55 1d1+7999 14d8+12 0 75 wrath
+0 0 0 0
+sitting male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF HASTE
+AFF DARK_VISION
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#11935
+steward castle keeper man guard~
+the castle steward~
+The castle steward stands near his Lord, glaring wildly with his good eye.
+~
+A former pirate of the inland bays, the steward reputedly met his Lord
+in battle long ago, and was granted mercy by Rothael himself when a stray
+quarrel took his eye and nearly killed him outright.  Since then, the
+wiry elf before you has sworn allegiance and protected his master for
+the long years.  He still bears the tattoos and markings of his clan,
+however, and his heritage is impossible to hide, a rare elf among the
+humans of the valley.
+~
+0 11935 100 elf~
+53 2000d3+2500 15d5+12 0 90 slice
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+OFF ASSIST_ALL
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+IMM SLEEP
+CLASS warrior none none 
+#11936
+courtier noble~
+a courtier~
+A noble stands idly by, whispering rumors and looking nervous.
+~
+The members of the court of Lord Avarast hold their position at his
+whim and by the value of their own scheming and production within
+the fields.  They dress themselves richly and wear gaudy, fake jewelry
+to draw attention from their Lord and seek his favor.
+~
+-300 11936 100 human~
+40 2000d3+1500 9d6+11 0 100 beating
+0 0 0 0
+standing either affluent
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT OUTDOORS
+OFF DODGE
+OFF DIRT_KICK
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+VUL SILVER
+CLASS warrior none none 
+#11937
+paladin knight southern man~
+a fearsome knight~
+A crusading knight of the southern reaches kneels here in quiet prayer.
+~
+The great man before you is Rothael's trump card, a man drawn to the
+struggle against his counterpart in the north by the stench of darkness
+that looms from the marshy vineyard all the way past the forest.  He
+is a holy warrior, and in abhorrence of slavery, though the protection
+of the innocent outweighs political concerns.  Prayers are etched into
+his armor and the crest on his shield, and his face shines with purity
+and devotion.
+~
+600 11937 100 human~
+53 2000d3+2500 8d14+8 0 90 wrath
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT TRAIN
+OFF AREA_ATTACK
+OFF BASH
+OFF KICK
+OFF PARRY
+OFF ASSIST_ALIGN
+OFF STATIC_TRACK
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM HOLY
+RES NEGATIVE
+VUL ACID
+CLASS paladin 
+#11938
+council member southern man~
+a wary councilman~
+A wary councilman ambles through the keep, muttering to himself.
+~
+The council kept for the preservation and prosperity of the cantrev meets
+on every full moon to draw together plans for the coordinated use of
+their land and to maximize their efficiency.  The man before you seems
+more than a simple mathematician, however.  He is lightly armored, and
+carries his weapons with graceful ease.
+~
+0 11938 100 human~
+40 3000d2+2000 12d4+15 0 80 beating
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT OUTDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SNEAK
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11939
+hawk red tailed~
+a red-tailed hawk~
+A swift white hawk with red coloring glides through the valley.
+~
+This fearsome predator finds ample hunting in the lush,
+fertile fields that the humans keep in this part of the valley.  The
+field mice and rodents are plentiful, and hawk meat is not a delicacy
+most humans prefer.  Its compact body and wicked talons serve very well,
+and its eyes can spot the tiniest movement from nearly half a mile in
+the air.
+~
+0 11939 100 unique~
+10 300d3+50 3d6+2 0 100 peck
+0 0 0 0
+standing either none
+d 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+ACT INDOORS
+#11940
+mouse field small grey~
+a field mouse~
+A flicker of movement betrays a tiny field mouse scurrying for cover.
+~
+Small rodents prove quite the irritation to the peasant workers and
+their overseers, nibbling at the crops during the night and reducing
+the profits to the cantrev Lords.  The specimen before you is barely a
+halfling handsbreadth long, and darts about nervously, bright black
+eyes flashing.
+~
+0 11940 100 pig~
+3 100d1+1 2d2+1 0 120 bite
+0 0 0 0
+standing either none
+d 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+ACT INDOORS
+OFF FAST
+#11941
+peasant winery trampling~
+a peasant worker~
+A peasant worker tramples grapes in a huge vat here.
+~
+This peasant has one striking difference from all the field
+workers- the feet of this serf are clean and well-maintained
+by the castle soldiers.  The winery workers are given special
+quarters inside the keep alongside the warriors, and given
+soldiers' rations rather than fend for themselves in the village
+or in the wilderness.  Other than that, this worker appears
+as do all the rest.
+~
+0 11941 100 human~
+12 200d3+50 3d3+4 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF TRIP
+AFF SLOW
+#0
+
+
+
+#OBJS
+#11900
+robes dirty woolen~
+dirty woolen robes~
+A long, dirty set of uncomfortable woolen robes lie here on the ground.~
+armor
+wool~
+1 1 1 1 0
+10 2 10 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+MSG WEAR Your skin immediately starts itching horribly as you don $p.~
+~
+E dirt robes~
+The dirt on the robes is lush, fertile soil smeared into the fabric.
+~
+
+#11901
+rake wooden carved~
+a carved wooden rake~
+A long rake carved of willow wood lies on the ground here.~
+weapon
+softwood~
+polearm 3 3 scratch F
+5 6 10 P
+WEAR TAKE
+WEAR WIELD
+WEAR HOLD
+LIMIT 0
+MSG WEAR A wooden rake is cracked and poorly out of balance.~
+~
+
+#11902
+scythe wood rusted iron~
+a rusted iron scythe~
+A wood-handled scythe with a blade of rusted iron lies here.~
+weapon
+iron~
+polearm 4 3 slice F
+5 11 10 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+
+#11903
+grain sack burlap~
+a burlap sack of grain~
+A burlap sack, filled with wheat and barley grains, lies here.~
+food
+food~
+2 5 0 0 0
+2 8 150 P
+WEAR TAKE
+LIMIT 0
+
+#11904
+corn sack burlap large~
+a large burlap sack~
+A large burlap sack, leaking a few kernels of corn, lies here.~
+container
+canvas~
+80 0 0 4 75
+5 2 20 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11905
+basket wicker large~
+a large wicker basket~
+A large basket of woven wicker lies here on the ground.~
+container
+bamboo~
+50 0 0 4 80
+5 2 40 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11906
+grapes handful red ripe juicy~
+a handful of ripe red grapes~
+A ripe handful of juicy red grapes lies here on the ground.~
+food
+food~
+1 3 0 0 0
+5 1 30 P
+WEAR TAKE
+LIMIT 0
+
+#11907
+corn ear golden~
+an ear of golden corn~
+A fresh ear of golden sweet corn lies here, awaiting consumption.~
+food
+food~
+1 4 0 0 0
+3 1 6 P
+WEAR TAKE
+LIMIT 0
+
+#11908
+apple sack burlap~
+a large burlap sack~
+A large burlap sack smelling of apples has been left here.~
+container
+canvas~
+60 0 0 3 80
+5 2 30 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11909
+apple ripe red~
+a red apple~
+A ripe red apple lies on the ground here, collecting dust.~
+food
+food~
+1 3 0 0 0
+3 1 5 P
+WEAR TAKE
+LIMIT 0
+
+#11910
+jerkin bullhide leather tough~
+a tough bullhide jerkin~
+A jerkin of tough bullhide leather lies on the ground here.~
+armor
+soft leather~
+4 4 4 2 0
+25 11 500 P
+WEAR TAKE
+WEAR BODY
+APPLY STR 2
+LIMIT 0
+
+#11911
+whip rawhide twined leather~
+a whip of twined rawhide~
+A long, sinuous whip crafted of twined rawhide strands lies here.~
+weapon
+soft leather~
+whip 6 5 whip 0
+30 8 400 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX 2
+APPLY HITROLL 2
+LIMIT 30
+
+#11912
+steel short sword shortsword keen~
+a steel shortsword~
+A shortsword of keen-edged steel lies here in the dirt.~
+weapon
+steel~
+sword 3 11 sting 0
+30 6 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX 1
+APPLY DAMROLL 3
+LIMIT 25
+
+#11913
+hard leather armor breastplate~
+a breastplate of hard leather~
+A hardened leather breastplate lies on the ground here.~
+armor
+hard leather~
+4 4 4 4 0
+30 12 1200 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 30
+LIMIT 20
+
+#11914
+helm hardened leather~
+a helm of hardened leather~
+A stout helm of hardened leather lies on the ground here.~
+armor
+hard leather~
+3 3 3 3 0
+30 6 200 P
+WEAR TAKE
+WEAR HEAD
+APPLY HP 20
+LIMIT 15
+
+#11915
+meat duck raw~
+a cut of raw duck meat~
+A bloodied lump of raw duck meat lies here, attracting flies.~
+food
+food~
+2 4 0 0 0
+1 2 5 P
+WEAR TAKE
+LIMIT 0
+
+#11916
+fish raw headless~
+a raw fish~
+A headless, uncooked fish lies on the ground, smelling horribly.~
+food
+food~
+1 3 0 0 0
+1 2 5 P
+WEAR TAKE
+LIMIT 0
+
+#11917
+wheel barrow wheelbarrow wooden~
+a wooden wheelbarrow~
+A stout wooden wheelbarrow rests here.~
+container
+hardwood~
+120 0 0 14 100
+5 30 100 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11918
+hauberk chain heavy~
+a heavy chain hauberk~
+A hauberk of heavy steel chain links lies on the ground here.~
+armor
+steel~
+7 6 9 6 0
+40 30 800 P
+WEAR TAKE
+WEAR BODY
+APPLY STR 2
+LIMIT 0
+
+#11919
+halberd long steel~
+a long steel halberd~
+A long-shafted halberd with a blade of steel lies here.~
+weapon
+hardwood~
+polearm 11 3 cleave F
+40 18 800 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+LIMIT 25
+
+#11920
+saddle leather brown~
+a brown leather saddle~
+A brown saddle crafted of tough leather lies on the ground here.~
+armor
+soft leather~
+1 0 1 0 0
+1 14 150 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+
+#11921
+harness bridle black leather~
+a black leather harness and bridle~
+A glossy black leather harness and bridle lies here gleaming softly.~
+treasure
+snakeskin~
+0 0 0 0 0
+20 16 7500 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+
+#11922
+brown tunic simple~
+a simple brown tunic~
+A plain, simple brown tunic lies on the ground here.~
+armor
+cloth~
+0 0 0 1 0
+1 3 20 P
+WEAR TAKE
+WEAR BODY
+APPLY WIS 1
+LIMIT 0
+
+#11923
+brush coarse wooden~
+a coarse-bristled wooden brush~
+A wooden brush with hundreds of coarse bristles lies here.~
+trash
+hardwood~
+0 0 0 0 0
+1 2 20 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11924
+purse coin skin~
+a skin coin purse~
+A coin purse crafted from the skin of some unknown animal lies here.~
+container
+flesh~
+50 0 0 2 70
+20 5 350 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11925
+silken robe orange~
+an orange silk robe~
+A pile of smooth, orange colored silk lies here on the ground.~
+armor
+silk~
+0 0 0 5 0
+40 2 3000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MANA 20
+LIMIT 20
+
+#11926
+turban white wrapped silk~
+a white turban~
+A turban of carefully wrapped white silk lies here on the ground.~
+armor
+silk~
+0 0 0 2 0
+40 1 900 P
+WEAR TAKE
+WEAR HEAD
+APPLY MANA 10
+LIMIT 30
+
+#11927
+mantle rich black fur~
+a mantle of rich black fur~
+A voluminous mantle of thick, soft black fur lies here in a pile.~
+armor
+fur~
+1 1 3 5 0
+50 11 5000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM EVIL
+ITEM MAGIC
+APPLY SVSPELL -11
+LIMIT 1
+MSG WEAR A coil of pure darkness erupts through your spine.~
+~
+FLAG RES HOLY
+E mantle fur~
+Upon closer inspection, you realize that no creature native to this plane
+would bear fur of such... translucent nature.  It almost seems to writhe
+and twist upon itself endlessly.
+~
+
+#11928
+staff ebony carved sigils~
+a staff of ebony~
+A carved ebony wood staff bearing strange sigils lies here on the ground.~
+staff
+ebony~
+50 1 1 'vacuum' 0
+45 8 2000 P
+WEAR TAKE
+WEAR HOLD
+APPLY MANA 40
+LIMIT 3
+E lettering demonic~
+The script is unreadable, but simply glancing at it brings howls of agony to
+your ears, and a cold feeling into the pit of your stomach.
+~
+E sigils carvings staff~
+Strange, demonic lettering seems to twist and writhe upon the smooth wood
+surface.
+~
+
+#11929
+dagger weighted throwing iron~
+a weighted throwing dagger~
+A dagger of iron weighted for throwing lies on the ground here.~
+weapon
+iron~
+dagger 8 4 stab 0
+35 3 300 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 4
+APPLY DEX 1
+LIMIT 0
+
+#11930
+white tunic soft~
+a soft white tunic~
+A simple tunic of soft white cloth lies crumpled here in a heap.~
+armor
+cloth~
+0 0 0 0 0
+10 3 30 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+
+#11931
+apron greasy white~
+a greasy apron~
+An apron of once-white canvas, now spattered with grease, lies here.~
+armor
+canvas~
+0 0 1 0 0
+10 3 40 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+
+#11932
+rag cloth grimy dirty~
+a grimy cloth rag~
+A rag of cloth lies on the ground here, covered with film and grease.~
+trash
+cloth~
+0 0 0 0 0
+1 1 1 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11933
+broad sword broadsword steel~
+a heavy broadsword~
+A plain-bound broadsword of heavy solid steel lies on the ground here.~
+weapon
+steel~
+sword 12 3 slash 0
+40 14 600 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 6
+APPLY MOVE -20
+LIMIT 35
+
+#11934
+helm open steel~
+an open-faced steel helm~
+A helm of steel with no guard or visor lies here on the ground.~
+armor
+steel~
+2 4 4 2 0
+40 8 200 P
+WEAR TAKE
+WEAR HEAD
+APPLY DEX 1
+LIMIT 0
+
+#11935
+mantle silver embroidered full~
+an embroidered silver mantle~
+A mantle of silver embroidered with a strange crest lies here in a heap.~
+armor
+silver~
+2 1 2 9 0
+52 11 12000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM EVIL
+ITEM MAGIC
+APPLY MANA 60
+APPLY CON 2
+APPLY INT 2
+LIMIT 2
+E crest mantle embroidery~
+A coat-of-arms depicting a fierce eagle with its talons
+gripping a black lance is carefully
+woven into the threads of silver.
+~
+
+#11936
+circlet steel silver~
+a circlet of silver and steel~
+A kingly circlet of woven steel twined with shining silver rests here.~
+armor
+steel~
+1 1 1 5 0
+52 8 10000 P
+WEAR TAKE
+WEAR HEAD
+ITEM EVIL
+ITEM MAGIC
+APPLY MANA 25
+LIMIT 4
+
+#11937
+splint mail steel jointed~
+a suit of jointed steel splint mail~
+A suit of heavy steel splint mail with flexible joints lies here.~
+armor
+steel~
+8 6 7 6 0
+40 30 4000 P
+WEAR TAKE
+WEAR BODY
+ITEM NODROP
+ITEM NOREMOVE
+APPLY DAMROLL 2
+APPLY SVSPELL -4
+LIMIT 20
+
+#11938
+scourge iron wicked barbed~
+a barbed iron scourge~
+A wicked scourge, barbed and formed of heavy iron links, lies here.~
+weapon
+iron~
+flail 10 4 wrath 0
+40 16 2000 P
+WEAR TAKE
+WEAR WIELD
+ITEM NODROP
+ITEM NOREMOVE
+APPLY HP -20
+APPLY DAMROLL 6
+LIMIT 20
+
+#11939
+belt wide leather studded~
+a wide studded leather belt~
+A wide belt of hard crafted leathers, studded with bronze, lies here.~
+armor
+hard leather~
+1 1 2 1 0
+49 7 700 P
+WEAR TAKE
+WEAR WAIST
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+APPLY HP 30
+APPLY CON 2
+LIMIT 10
+
+#11940
+hood black velvet~
+a black velvet hood~
+A deep black hood of soft velvet lies here on the ground.~
+armor
+velvet~
+0 0 0 2 0
+49 4 1000 P
+WEAR TAKE
+WEAR HEAD
+ITEM EVIL
+ITEM NODROP
+APPLY DAMROLL 2
+APPLY DEX -2
+LIMIT 10
+
+#11941
+axe hook-bladed wicked hook bladed~
+a large hook-bladed axe~
+A large, wicked-looking axe with a hooked blade lies here on the ground.~
+weapon
+steel~
+axe 10 4 slash 0
+49 22 4000 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM NODROP
+APPLY DAMROLL 4
+LIMIT 5
+
+#11942
+loincloth rotting~
+a rotting loincloth~
+A miserably tattered grey loincloth, rotting at every seam, lies here.~
+armor
+cloth~
+0 0 0 0 0
+10 5 1 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+
+#11943
+manacles shackles iron heavy~
+heavy iron manacles~
+A set of heavy iron manacles lie here, crusted with skin and blood.~
+armor
+iron~
+0 0 0 0 0
+5 11 50 P
+WEAR TAKE
+WEAR WRIST
+LIMIT 0
+FLAG AFF 'slow' slow NOSHOW
+
+#11944
+earrings golden intricate~
+a pair of golden earrings~
+A pair of fine golden earrings lies here on the ground.~
+armor
+gold~
+0 0 0 2 0
+45 1 6000 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+
+#11945
+robes satin aqua aquamarine~
+aquamarine robes of satin~
+A fine set of satiny robes the color of the sea lie here in a pile.~
+armor
+satin~
+0 0 2 2 0
+45 3 4000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DEX 4
+LIMIT 25
+
+#11946
+bracelet copper engraved lion~
+an engraved copper bracelet~
+A bracelet of copper, engraved with a lion, lies here.~
+armor
+copper~
+0 0 0 1 0
+45 2 2000 P
+WEAR TAKE
+WEAR WRIST
+APPLY HITROLL 4
+LIMIT 20
+
+#11947
+bardiche bronze~
+a bronze bardiche~
+A short bardiche with a blade of keen bronze lies on the ground here.~
+weapon
+bronze~
+polearm 7 5 slice F
+45 26 2000 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR 2
+LIMIT 40
+
+#11948
+ringmail ring mail iron shirt~
+a shirt of iron ringmail~
+A leather shirt covered in heavy iron rings lies here on the ground.~
+armor
+iron~
+3 6 9 4 0
+45 30 1500 P
+WEAR TAKE
+WEAR BODY
+APPLY SVSPELL -3
+APPLY STR 3
+LIMIT 30
+
+#11949
+leather purse coin~
+a leather coin purse~
+A large coin-purse crafted of stout leather lies here on the ground.~
+container
+hard leather~
+30 0 0 3 75
+45 6 150 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11950
+pike long steel~
+a long steel pike~
+A very long steel pike rests here on the ground.~
+weapon
+hardwood~
+spear 6 6 thrust F
+40 20 800 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+APPLY MOVE -30
+LIMIT 40
+
+#11951
+longbow long bow ash wood ashen ashwood~
+an ashwood longbow~
+A fine longbow carved of stout ashwood lies here on the ground.~
+weapon
+hardwood~
+weapon 6 6 pierce F
+40 9 1400 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX 3
+APPLY HITROLL 5
+LIMIT 30
+
+#11952
+fence iron black~
+a black iron fence~
+A blackened iron fence with jagged tips on its crest stands south.~
+furniture
+iron~
+6 900 A 75 125
+52 1500 800 P
+LIMIT 1
+
+#11953
+handaxe hand axe mithril~
+a mithril hand-axe~
+A weighty hand-axe with a blade of mithril lies on the ground here.~
+weapon
+mithril~
+axe 15 2 slash 0
+45 14 8000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+APPLY HITROLL 1
+LIMIT 30
+
+#11954
+plated leather hauberk~
+a steel-plated leather hauberk~
+A leather hauberk embedded with steel plates lies here in a heap.~
+armor
+hard leather~
+6 4 6 5 0
+45 28 3000 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+APPLY HP 20
+LIMIT 30
+
+#11955
+mithril ore block sack~
+a sack of mithril ore~
+A block of shiny ore peeks out one end of a leather sack here.~
+treasure
+mithril~
+0 0 0 0 0
+45 30 20000 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11956
+spear ebony mithril headed~
+a mithril-headed ebony spear~
+A spear of dark wood with a razored mithril head lies here.~
+weapon
+ebony~
+spear 11 4 pierce F
+53 22 12000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM MAGIC
+ITEM NODROP
+ITEM BLESS
+ITEM NOREMOVE
+APPLY DAMROLL 4
+APPLY HITROLL 4
+LIMIT 1
+MSG WEAR A spirit of great solitude, weariness and paranoia overtakes you as your hands grasp the spear.~
+$n seems to accept an invisible burden at the touch of $p.~
+FLAG AFF 'detect evil' detect_evil NOSHOW
+FLAG AFF 'detect good' detect_good NOSHOW
+
+#11957
+platemail plate mail steel~
+a suit of fine steel platemail~
+A suit of hammered steel platemail lies here in a jumbled heap.~
+armor
+steel~
+8 10 10 7 0
+55 55 15000 P
+WEAR TAKE
+WEAR BODY
+ITEM MAGIC
+APPLY HP 40
+APPLY STR 2
+LIMIT 5
+
+#11958
+eyepatch eye patch black felt~
+a black eyepatch~
+A black eyepatch made of felt lies here on its rawhide thread.~
+armor
+felt~
+0 0 0 0 0
+53 1 750 P
+WEAR TAKE
+WEAR HEAD
+APPLY MOVE 60
+APPLY HITROLL -1
+LIMIT 12
+
+#11959
+mantle grey cloth~
+a grey cloth mantle~
+A large mantle of featureless grey cloth lies here in a heap.~
+armor
+cloth~
+1 1 2 4 0
+45 6 1200 P
+WEAR TAKE
+WEAR ABOUT
+APPLY SVSPELL -8
+LIMIT 20
+
+#11960
+scimitar steel granite hilted~
+a granite-hilted scimitar~
+A scimitar with a hilt of granite lies here in its scabbard.~
+weapon
+steel~
+sword 4 9 slash 0
+40 10 3000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX 1
+APPLY HITROLL 3
+LIMIT 15
+
+#11961
+shield embossed gold gyrfalcon~
+a gold-embossed shield~
+A shield embossed with the golden image of a gyrfalcon lies here.~
+armor
+steel~
+3 4 3 3 0
+52 14 5000 P
+WEAR TAKE
+WEAR SHIELD
+ITEM GLOW
+ITEM MAGIC
+APPLY SAVES -12
+LIMIT 3
+
+#11962
+mace flanged deadly~
+a deadly flanged mace~
+A mace of steel with sharp flanges erupting from its head lies here.~
+weapon
+steel~
+mace 11 4 divine 0
+51 22 12000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM MAGIC
+APPLY DAMROLL 3
+LIMIT 2
+
+#11963
+armor hide tough~
+a suit of tough hide armor~
+A well-crafted suit of tough hide armor lies on the ground here.~
+armor
+snakeskin~
+3 4 4 5 0
+45 9 1100 P
+WEAR TAKE
+WEAR BODY
+APPLY MOVE 40
+APPLY DEX 3
+LIMIT 12
+
+#11964
+staff light steel hollow~
+a hollow staff of light steel~
+A light staff of hollow steel make lies here on the ground.~
+weapon
+steel~
+staff 7 6 smash F
+45 11 3000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 4
+LIMIT 12
+
+#11965
+well granite wooden~
+a granite well~
+A granite formation has been hollowed into a well to serve the keep.~
+drink
+granite~
+100000 100000 'water' 0 0
+52 -25536 1 P
+LIMIT 1
+
+#11966
+small stone well~
+a small stone well~
+A stone well has been constructed in the corner of the courtyard.~
+drink
+stone~
+100000 100000 'water' 0 0
+52 30000 1 P
+LIMIT 1
+
+#11967
+oak ancient tree~
+an ancient oak tree~
+An ancient oak tree towers above you, branches gnarled with age.~
+trash
+hardwood~
+0 0 0 0 0
+52 30000 1 P
+LIMIT 1
+
+#11968
+maple tree~
+a large maple tree~
+A large maple tree dominates the path before you.~
+trash
+hardwood~
+0 0 0 0 0
+52 30000 1 P
+LIMIT 1
+
+#11969
+vines grape grapevines~
+some long, sinuous grapevines~
+A long, sinuous grapevine stretches over the field here, bearing fruit.~
+container
+softwood~
+110 0 0 1 30
+52 600 1 P
+LIMIT 3
+
+#11970
+tree apple large~
+a large apple tree~
+A large apple tree stands here, bearing ripe fruit for the taking.~
+container
+hardwood~
+120 0 0 3 20
+52 12000 1 P
+LIMIT 3
+
+#11971
+stalks corn cornstalks~
+a row of cornstalks~
+Endless rows of cornstalks spread out before you in the fields.~
+container
+gut~
+300 0 0 3 10
+52 12000 1 P
+LIMIT 3
+
+#11972
+scattered rocks gravel~
+scattered rocks and gravel~
+A trail of scattered rocks and gravel leads through the trees here.~
+trash
+stone~
+0 0 0 0 0
+1 4000 1 P
+LIMIT 1
+
+#11973
+wooden stable large~
+the stable~
+The walls of the large wooden stable rise up around you.~
+trash
+hardwood~
+0 0 0 0 0
+1 5400 1 P
+LIMIT 1
+
+#11974
+throne granite ruby~
+the Avarast Throne~
+The Throne, a granite monstrosity inlaid with rubies, sits proudly here.~
+furniture
+granite~
+1 1200 EHK 75 200
+55 -25536 20000 P
+LIMIT 1
+
+#11975
+throne simple oak wood~
+a simple throne~
+A simple, handcarved throne of polished oakwood rests here.~
+furniture
+hardwood~
+1 800 EHK 125 100
+55 4000 2000 P
+LIMIT 1
+
+#11976
+altar small carved ivory~
+a small ivory altar~
+A small altar of purest ivory rests here, radiating warmth.~
+trash
+bone~
+0 0 0 0 0
+50 250 12000 P
+LIMIT 1
+
+#11977
+stall cart vendor~
+a vendor's stall~
+A small vendor's stall sits here, though it is empty.~
+trash
+hardwood~
+0 0 0 0 0
+52 125 200 P
+LIMIT 1
+
+#11978
+platform wooden dais~
+the market platform~
+A wooden platform rests here for auctioning merchants to stand upon.~
+furniture
+hardwood~
+3 1200 B 100 100
+1 3000 1 P
+LIMIT 1
+
+#11979
+drawbridge wooden bridge~
+the castle drawbridge~
+The castle's huge drawbridge extends over a point in the river here.~
+trash
+hardwood~
+0 0 0 0 0
+52 4000 1 P
+LIMIT 1
+
+#11980
+trellis wooden wood vineyard~
+a vineyard trellis~
+A rickety wooden trellis provides a framework for the mass of vines.~
+trash
+hardwood~
+0 0 0 0 0
+52 300 1 P
+LIMIT 1
+
+#11981
+boulder granite huge immense~
+an immense granite boulder~
+A huge granite boulder rests here among the wilderness.~
+furniture
+granite~
+3 100000 EHK 125 100
+52 -25536 1 P
+LIMIT 1
+E boulder granite~
+This monstrosity takes up the whole path,
+its surface smoothed by years of weathering.
+It is a dull reddish color, and is warmed by the
+sun.  Quite a nice place to relax.
+~
+
+#11982
+leg irons chains manacles wall~
+some wall manacles and leg irons~
+Wall manacles and leg irons are set into the dank stone wall here.~
+trash
+metal~
+0 0 0 0 0
+52 3000 1 P
+LIMIT 4
+E manacles leg irons~
+The imprisoning instruments before you are
+caked in dried blood and forged in the tears
+of a hundred innocent victims.  Their edges,
+not dulled in the least, still have bits of skin and
+hair clinging to them, a grisly monument to past struggles.
+~
+
+#11983
+rack the winch~
+the rack~
+The feared rack takes up the center of this horrifying room.~
+trash
+hardwood~
+0 0 0 0 0
+52 3000 1 P
+LIMIT 1
+E rack winch~
+The rack, one of the best known instruments
+of torture, plays host to many of Lord Avarast's
+courtiers and serfs who fall out of his favor, or
+are simply taken, rumor has it, to appease the
+Lord's strange chamberlain.
+~
+
+#11984
+vat winery huge wooden~
+the winery vat~
+A huge vat dominates this room, filled with grapes for trampling.~
+trash
+hardwood~
+0 0 0 0 0
+52 3000 1 P
+LIMIT 1
+E vat winery~
+The giant vat is used for serfs who trample
+the grapes and let the valuable juices flow into
+a large drain in the middle.  They are then collected
+and bottled in the Lord's private stock, or sent to
+nearby cities and villages for trade.
+~
+
+#11985
+bunks bunk beds cots~
+barracks bunks~
+Bunk beds and cots line the walls of the room, for off-duty soldiers.~
+trash
+hardwood~
+0 0 0 0 0
+52 4000 1 P
+LIMIT 1
+
+#0
+
+
+
+#ROOMS
+#11900
+A steep dirt road~
+A road of loose dirt wends its way east and west here, running
+steeply down to the east, occasionally dotted with patches of
+strange white ground.  Loose chunks of centuries-worn rubble
+sparsely mark the sides of the trail, and trees and brush begin
+to line the trail.
+~
+road
+ROOM NO_SUMMON_TO
+D EAST 11901 0 0
+0
+~
+The steep dirt road leads further into the valley.
+~
+D WEST 11894 0 0
+0
+~
+The dirt road leads upward toward a cluster of buildings.
+~
+#11901
+A steep dirt road~
+A road of loose dirt wends its way east and west here, running
+steeply down to the east, occasionally dotted with patches of
+strange white ground.  The trail becomes rougher here,
+and trees and brush close in with more regularity on all sides.
+~
+road
+ROOM NO_SUMMON_TO
+D EAST 11902 0 0
+0
+~
+The steep dirt road leads further down, into the valley forest.
+~
+D WEST 11900 0 0
+0
+~
+The dirt road leads up the steep side of the hill.
+~
+#11902
+A steep dirt road~
+A road of loose dirt runs down into the valley, becoming
+somewhat less steep than the trail's beginning to the west.
+The rubble noticed before has disappeared, and the ground
+remains of unbroken, dark soil, rich in texture and fertility.
+Maple and oak trees crowd about the trail here,
+and bushes and grass reach over the sides of the trail.
+~
+road
+ROOM DARK
+D EAST 11903 0 0
+0
+~
+The dirt road evens out, and bends northward up ahead.
+~
+D WEST 11901 0 0
+0
+~
+The dirt road leads steeply upward, toward a far-off tower.
+~
+#11903
+A small dirt trail~
+This trail is composed of loose, rich brown earth, and is
+lined with tall prairie grasses, bushes, and tall trees of every
+variety.  Yellow rockroses dot the sides at the bases of the trees, and
+their shade canopy makes the weather much more bearable.
+~
+road
+D NORTH 11904 0 0
+0
+~
+The trail bends to the north, leading into a thick, vibrant forest.
+~
+D WEST 11902 0 0
+0
+~
+The trail opens up to the west, leading upward in a steep grade.
+~
+#11904
+A small dirt trail~
+The trail is composed of loose, rich brown earth, and is
+lined with tall prairie grasses, bushes, and tall trees of every
+variety.  Yellow rockroses dot the sides of the trail at the bases
+of the larger trees, and their shade canopy makes the weather much
+more bearable.
+~
+road
+D NORTH 11905 0 0
+0
+~
+The dirt trail leads further into the thick forest.
+~
+D SOUTH 11903 0 0
+0
+~
+The trail leads south and widens, bending to the west.
+~
+#11905
+A small dirt trail~
+The trail is composed of loose, rich brown earth, and is
+lined with tall prairie grasses, bushes, and tall trees of every
+variety.  Yellow rockroses dot the sides of the trail at the bases of the
+larger trees, and their shade canopy makes the weather much more bearable.
+~
+road
+D NORTH 11906 0 0
+0
+~
+The trail thins further into a small game trail, leading into the forest.
+~
+D SOUTH 11904 0 0
+0
+~
+The dirt trail widens a small amount through the woods.
+~
+#11906
+At the edge of a wide clearing~
+The small game trail twists around a couple bends before reaching
+the edge of a wide clearing floored with tall, soft prairie grasses.  In
+the partial shade of the clearing's edge, honeysuckle vines hang down
+from the oaks and maples.  A small covering of moss covers the huge,
+root-entwined base of a nearby silver maple tree.
+~
+forest
+D NORTH 11907 0 0
+0
+~
+The edge of a wide clearing opens up before you.
+~
+D SOUTH 11905 0 0
+0
+~
+The game trail leads into a thick band of forest to the south.
+~
+E moss base maple~
+The strange patch of brownish-green moss lies
+heavily on the base of the tree, but reveals
+nothing unusual.
+~
+#11907
+A large, grassy clearing~
+Here, waist-high prairie grasses dominate the floor of the clearing,
+and tall wildflowers,  jade thistles, and young willow saplings rise
+from its thick mass.  Trees fully encircle the wide meadow, and the
+valley's depth prevents seeing beyond their crests.
+~
+field
+D NORTH 11910 0 0
+0
+~
+The clearing extends to the north and ends against a wall of solid trees.
+~
+D SOUTH 11906 0 0
+0
+~
+The edge of the clearing thins to a small game trail.
+~
+D WEST 11908 0 0
+0
+~
+The clearing extends to the west and ends against a huge granite boulder.
+~
+#11908
+A large, grassy clearing~
+You stand in the midst of a wide, tall-grassed meadow populated
+by wildflowers, jade thistles, and young willow saplings rising
+sparsely from its ground.  Trees encircle the wide meadow, and the
+valley's depth prevents seeing beyond their crests.  A wide
+depression lies on the western edge of the clearing.
+~
+field
+D NORTH 11909 0 0
+0
+~
+The clearing leads to the north, and you see a small hole in the forest.
+~
+D EAST 11907 0 0
+0
+~
+The clearing extends to the east and meets a wall of solid trees.
+~
+#11909
+A large, grassy clearing~
+You stand in the midst of a wide, tall-grassed meadow populated by
+wildflowers, jade thistles, and young willow saplings rising sparsely
+from its ground.  Trees encircle the wide meadow, and the valley's
+depth prevents seeing beyond their crests.  The trees seem to thin
+to the north, and the mass of tall grasses thins out somewhat.
+~
+field
+D NORTH 11911 0 0
+0
+~
+The edge of the wide meadow lies in that direction, enshrouded by trees.
+~
+D EAST 11910 0 0
+0
+~
+The meadow extends to the east to a solid wall of trees.
+~
+D SOUTH 11908 0 0
+0
+~
+The clearing extends to the south, to a solid wall of trees.
+~
+#11910
+A large, grassy clearing~
+You stand in the midst of a wide, tall-grassed meadow populated by
+wildflowers, jade thistles, and young willow saplings rising sparsely
+from its ground.  Trees encircle the wide meadow, and the valley's
+depth prevents seeing beyond their crests.  Thick, tangled
+trees and vines prevent passage to the north and east.
+~
+field
+D SOUTH 11907 0 0
+0~
+The clearing extends to the south, and you can see hole in the forest.
+~
+D WEST 11909 0 0
+0
+~
+The clearing extends to the west, and ends against a wall of foliage.
+~
+#11911
+A small dirt trail~
+The trail is composed of loose, rich brown earth, and is lined with tall
+prairie grasses, bushes, and tall trees of every variety.  Yellow
+rockroses dot the sides of the trail at the bases of the larger trees,
+and the shade canopy makes the weather much more bearable.
+~
+road
+D NORTH 11912 0 0
+0
+~
+The trail continues on to the north and bends to the east.
+~
+D SOUTH 11909 0 0
+0
+~
+A wide clearing opens up into a meadow to the south.
+~
+#11912
+A small dirt trail~
+The trail is composed of loose, rich brown earth, and is lined with tall
+prairie grasses, bushes, and tall trees of every variety.  Yellow
+rockroses dot the sides of the trail at the bases of the larger
+trees, and the shade canopy makes the weather much more bearable.
+~
+road
+D EAST 11913 0 0
+0
+~
+The trail winds its way on to the east.
+~
+D SOUTH 11911 0 0
+0
+~
+The trail continues on to the south toward a large, open space.
+~
+#11913
+A small dirt trail~
+The trail is composed of loose, rich brown earth, and is lined with tall
+prairie grasses, bushes, and tall trees of every variety.  Yellow
+rockroses dot the sides of the trail at the bases of the larger trees,
+and the shade canopy makes the weather much more bearable.
+~
+road
+D EAST 11914 0 0
+0
+~
+The trail winds on to the east and appears to reach a small junction.
+~
+D WEST 11912 0 0
+0
+~
+The trail continues on to the west, disappearing into the thick forest.
+~
+#11914
+A cleared trail junction~
+Here, the trail opens up into a small, contained dirt clearing.  A
+small trail leads west into the thickest part of the forest.  A
+wider trail of blackened earth leads off to the north, and a small
+path leads off eastward toward a groomed lawn populated with rows of
+well-cared for trees.  A wooden post is sunken into the ground, and
+bears carved wooden plates branching out in each trail direction.
+~
+road
+D NORTH 11915 0 0
+0
+~
+A wide trail of razed, scorched ground leads northward.
+~
+D EAST 12006 0 0
+0
+~
+A small path leads toward a large orchard.
+~
+D WEST 11913 0 0
+0
+~
+A small dirt trail leads into the thickest part of the forest.
+~
+E post wooden sign plates~
+The post is adorned with wooden plates.
+A plate reading "Rothael" points eastward,
+A plate reading "Avarast" points northward, and
+a worn plate, mostly cracked and splintered,
+points to the west, bearing only "Ko.#t#.".
+~
+#11915
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely about
+the path, and the scent of charred earth reaches far beyond the trail
+itself.
+~
+road
+D NORTH 11916 0 0
+0
+~
+The trail of blackened earth leads further north.
+~
+D SOUTH 11914 0 0
+0
+~
+A small dirt clearing lies to the south.
+~
+#11916
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond the
+trail itself.
+~
+road
+D NORTH 11917 0 0
+0
+~
+The trail of blackened earth leads further north.
+~
+D SOUTH 11915 0 0
+0
+~
+The trail of blackened earth leads southward.
+~
+#11917
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond the
+trail itself.
+~
+road
+D NORTH 11918 0 0
+0
+~
+The trail of blackened earth leads north and bends to the east.
+~
+D SOUTH 11916 0 0
+0
+~
+The trail of blackened earth leads southward.
+~
+#11918
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond the
+trail itself.
+~
+road
+D EAST 11919 0 0
+0
+~
+The trail bends to the east and leads further into the hazy forest.
+~
+D SOUTH 11917 0 0
+0
+~
+The trail of blackened earth leads southward.
+~
+#11919
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely about
+the path, and the scent of charred earth reaches far beyond the
+trail itself.
+~
+road
+D EAST 11920 0 0
+0
+~
+The trail of blackened earth leads on to the east.
+~
+D WEST 11918 0 0
+0
+~
+The trail of blackened earth leads westward and bends to the south.
+~
+#11920
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond
+the trail itself.
+~
+road
+D EAST 11921 0 0
+0
+~
+The trail of blackened earth leads further on to the east.
+~
+D WEST 11919 0 0
+0
+~
+The trail of blackened earth leads on to the west.
+~
+#11921
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond
+the trail itself.
+~
+road
+D EAST 11922 0 0
+0
+~
+The trail leads into a scorched, enclosed bog.
+~
+D SOUTH 11923 0 0
+0
+~
+The trail of blackened earth leads southward.
+~
+D WEST 11920 0 0
+0
+~
+The trail of blackened earth leads westward.
+~
+#11922
+An enclosed bog~
+The trail of scorched ground ends abruptly in a small, cleared
+space around a murky black swamp pool.  The trees here are blackened
+as though a fire was let out of control here, and the ground is
+composed of soft mud and ash.  The pall of smoke and haze hangs
+more heavily here.
+~
+forest
+D WEST 11921 0 0
+0
+~
+The trail of blackened earth leads off to the west.
+~
+#11923
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond
+the trail itself.
+~
+road
+D NORTH 11921 0 0
+0
+~
+The trail of blackened earth leads north, bending to the east and west.
+~
+D SOUTH 11924 0 0
+0
+~
+The trail of blackened earth leads southward, and bends to the east.
+~
+#11924
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond the
+trail itself.
+~
+road
+D NORTH 11923 0 0
+0
+~
+The trail leads northward.
+~
+D EAST 11925 0 0
+0
+~
+The trail of blackened earth leads off eastward.
+~
+#11925
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far beyond
+the trail itself.
+~
+road
+D EAST 11927 0 0
+0
+~
+The trail of blackened earth leads eastward.
+~
+D SOUTH 11926 0 0
+~
+~
+D WEST 11924 0 0
+0
+~
+The trail of blackened earth leads westward.
+~
+#11926
+An enclosed bog~
+The trail of scorched ground ends abruptly in a small, cleared
+space around a murky black swamp pool.  As you enter the bog, the
+ground gives way into a deep, sucking mud, holding you fast, and
+the trees near the narrow entrance groan with protest as their
+limbs bend toward the ground, making passage impossible.  Vines
+snake out from within the brush, entwining the wiry limbs and
+holding them fast.
+From within the swamp come chittering noises and shrill howls.
+~
+forest
+ROOM NO_MOB
+D NORTH 11925 0 0
+~
+~
+#11927
+A wide trail of blackened earth~
+This trail is of hard packed earth, devoid of vegetation and bearing the
+marks of controlled burning.  Overhanging tree limbs have been slashed
+and cut away, as well as most of the surrounding brush and grasses.
+Though no fire remains, a thick pall of smoke and ash hangs closely
+about the path, and the scent of charred earth reaches far
+beyond the trail itself.
+~
+road
+D EAST 11928 0 0
+0
+~
+The trail leads to a cleared area atop a steep slope.
+~
+D WEST 11925 0 0
+0
+~
+The trail leads westward through the forest.
+~
+#11928
+Atop a steep slope~
+Here, a trail of scorched, blackened earth leads westward into
+the deep, looming forest to the west.  In the opposite direction,
+however, a small rocky path leads down to a ledge, and beyond that,
+a grass-floored deeper part of the river valley.  Here the vegetation
+is sparse and sickly, and only the hearty stick-brush of swamps and
+wastelands appears with any frequency.
+~
+mountains
+D WEST 11927 0 0
+0
+~
+The trail of blackened earth leads westward into a thick forest.
+~
+D DOWN 11929 0 0
+0
+~
+The rocky path leads down further into the valley.
+~
+#11929
+On a rocky ledge~
+You now stand on a flat rock ledge jutting out from the valley's
+wall.  Several small boulders rest on the ledge, evidence of past
+rockslides and erosion.  The ledge affords no protection from the
+wind and weather, but does grant a wonderful view of the grassy
+valley below.  To the northeast, you glimpse
+a waving field of grain crop.
+~
+mountains
+D EAST 11930 0 0
+0
+~
+The rocky ledge extends out further before dropping away.
+~
+D UP 11928 0 0
+0
+~
+A rocky path leads up to the side of the valley wall.
+~
+#11930
+On a rocky ledge~
+You now stand on a flat rock ledge jutting out from the valley's
+wall.  Several small boulders rest on the ledge, evidence of past
+rockslides and erosion.  The ledge affords no protection from the
+wind and weather, but does grant a wonderful view of the grassy
+valley below.  To the northeast, you glimpse a waving field of
+grain crop.
+~
+mountains
+D EAST 11931 0 0
+0
+~
+The rocky ledge extends out further before dropping sharply away.
+~
+D WEST 11929 0 0
+0
+~
+The ledge meets the valley wall and a rocky trail leads upward there.
+~
+#11931
+On a rocky ledge~
+You now stand on a flat rock ledge jutting out from the valley's
+wall.  Several small boulders rest on the ledge, evidence of
+past rockslides and erosion.  The ledge affords no protection
+from the wind and weather, but does grant a wonderful view of the
+grassy valley below.  To the northeast, you glimpse a
+waving field of grain crop.
+~
+mountains
+D SOUTH 11932 0 0
+0
+~
+The ledge bends southward toward another path down the valley wall.
+~
+D WEST 11930 0 0
+0
+~
+The ledge continues on toward the face of the valley wall.
+~
+#11932
+On a rocky ledge~
+You now stand on a flat rock ledge jutting out from the valley's
+wall.  Several small boulders rest on the ledge, evidence of past
+rockslides and erosion.  The ledge affords no protection from the
+wind and weather, but does grant a wonderful view of the grassy
+valley below.  To the northeast, you glimpse
+a waving field of grain crop.
+~
+mountains
+D NORTH 11931 0 0
+0
+~
+The rocky ledge continues on to the north.
+~
+D DOWN 11933 0 0
+0
+~
+A steep, rocky trail leads down to the grassy floor of the valley.
+~
+#11933
+A forested trail along the valley floor~
+Here, the grassy earthen floor of the valley comes up against a
+rocky slope that extends upward and to the west.  The flora of
+the valley is resplendently obvious here, with tall, soft green
+grasses, and wildflowers growing at the base of the tall oak trees
+that dominate the area.
+~
+forest
+D EAST 11934 0 0
+0
+~
+The forested trail leads on deeper into the woods.
+~
+D UP 11932 0 0
+0
+~
+A rocky trail leads along the wall of the river valley to a broad ledge.
+~
+#11934
+A forested trail~
+This trail winds along the floor of the valley through a pleasantly
+lush deciduous forest.  Tall green grasses and wildflowers grow in
+abundance along the sides of the path.  The path itself is of loose,
+rich brown earth, and very sparsely decorated with small rocks.
+~
+forest
+D EAST 11935 0 0
+0
+~
+The trail continues on through the forest.
+~
+D WEST 11933 0 0
+0
+~
+The trail leads up against a rock slope.
+~
+#11935
+A forested trail~
+This trail winds along the floor of the valley through a pleasantly
+lush deciduous forest.  Tall green grasses and wildflowers grow in
+abundance along the sides of the path.  The path itself
+is of loose, rich brown earth, and very sparsely decorated with
+small rocks.
+~
+forest
+D EAST 11936 0 0
+0
+~
+The trail leads east through the woods.
+~
+D WEST 11934 0 0
+0
+~
+The trail leads through the forest.
+~
+#11936
+A forested trail~
+This trail winds along the floor of the valley through a pleasantly
+lush deciduous forest.  Tall green grasses and wildflowers grow in
+abundance along the sides of the path.  The path itself is of loose, rich
+brown earth, and very sparsely decorated with small rocks.  The path
+diverges here, one leading northward toward a large open field, the
+other climbing a short but steep rise to the east.
+~
+forest
+D NORTH 11937 0 0
+0
+~
+The forested trail leads north toward a large, open field.
+~
+D EAST 12092 0 0
+0
+~
+The trail leads to the base of a short, steep rise.
+~
+D WEST 11935 0 0
+0
+~
+The trail leads through the deep woods.
+~
+#11937
+A forested trail~
+This trail winds along the floor of the valley through a pleasantly
+lush deciduous forest.  Tall green grasses and wildflowers grow in
+abundance along the sides of the path.  The path itself
+is of loose, rich brown earth, and very sparsely decorated with
+small rocks.
+~
+forest
+D NORTH 11938 0 0
+0
+~
+The trail opens up into a wide field of waving grain stalks.
+~
+D SOUTH 11936 0 0
+0
+~
+The trail winds south and bends against a solid wall of trees.
+~
+#11938
+In a field of barley~
+You stand in a vast field populated with masses of stalks of barley
+grain, waving in the gentle wind.  The field is huge, and shows signs
+of recent care and watering.  In every direction the field continues,
+but eventually reaches a border of tall trees.
+~
+field
+D NORTH 11939 0 0
+0
+~
+The field continues on.
+~
+D SOUTH 11937 0 0
+0
+~
+A small trail leads off into the forest.
+~
+D WEST 11941 0 0
+0
+~
+The field continues on.
+~
+#11939
+In a field of barley~
+You stand in a vast field populated with masses of stalks of
+barley grain, waving in the gentle wind.  The field is huge, and
+shows signs of recent care and watering.  In every direction the
+field continues, but eventually reaches a border of tall trees.
+~
+field
+D SOUTH 11938 0 0
+0
+~
+The field continues on.
+~
+D WEST 11940 0 0
+0
+~
+The field continues on.
+~
+#11940
+In a field of barley~
+You stand in a vast field populated with masses of stalks of barley grain,
+waving in the gentle wind.  The field is huge, and shows signs of recent
+care and watering.  In every direction the field continues, but eventually
+reaches a border of tall trees.
+~
+field
+D EAST 11939 0 0
+0
+~
+The field continues on.
+~
+D SOUTH 11941 0 0
+0
+~
+The field continues on.
+~
+D WEST 11942 0 0
+0
+~
+The field continues on.
+~
+#11941
+In a field of barley~
+You stand in a vast field populated with masses of stalks of barley grain,
+waving in the gentle wind.  The field is huge, and shows signs of recent
+care and watering.  In every direction the field continues, but eventually
+reaches a border of tall trees.
+~
+field
+D NORTH 11940 0 0
+0
+~
+The field continues on.
+~
+D EAST 11938 0 0
+0
+~
+The field continues on.
+~
+D WEST 11943 0 0
+0
+~
+The field continues on.
+~
+#11942
+In a field of barley~
+You stand in a vast field populated with masses of stalks of barley grain,
+waving in the gentle wind.  The field is huge, and shows signs of recent
+care and watering.  In every direction the field continues, but eventually
+reaches a border of tall trees.
+~
+field
+D NORTH 11944 0 0
+0
+~
+A trail through a break in the trees, to another open field of grain.
+~
+D EAST 11940 0 0
+0
+~
+The field continues on.
+~
+D SOUTH 11943 0 0
+0
+~
+The field continues on.
+~
+#11943
+In a field of barley~
+You stand in a vast field populated with masses of stalks of
+barley grain, waving in the gentle wind.  The field is huge,
+and shows signs of recent care and watering.  In every direction
+the field continues, but eventually reaches a border of tall trees.
+~
+field
+D NORTH 11942 0 0
+0
+~
+The field continues on.
+~
+D EAST 11941 0 0
+0
+~
+The field continues on.
+~
+#11944
+A small wooded trail~
+This small trail leads through a break in the band of forest
+separating the crop fields of the northern lands.  It is a small
+break in the fields, but provides a small respite from the weather.  The
+grass here is cut short, and the wildflowers so common to the river
+valley are much fewer here.
+~
+forest
+D NORTH 11945 0 0
+0
+~
+A vast field of grain crop opens up before you there.
+~
+D SOUTH 11942 0 0
+0
+~
+A wide field of grain opens up in that direction.
+~
+#11945
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but
+rather small burnt paths that lead through its bulk.  In each direction,
+you can faintly see the distant shades of the treeline, but the
+field itself could feed an army for a year.
+~
+field
+D NORTH 11950 0 0
+0
+~
+The wheat field continues on.
+~
+D EAST 11946 0 0
+0
+~
+The wheat field continues on.
+~
+D SOUTH 11944 0 0
+0
+~
+A small wooded trail leads into another huge field of grain.
+~
+#11946
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the
+staple food of the valley's inhabitants. There are no organized
+rows, but rather small burnt paths that lead through its bulk.  In
+each direction, you can faintly see the distant shades of the
+treeline, but the field itself could feed an army for a year.
+~
+field
+D NORTH 11949 0 0
+0
+~
+The wheat field continues on.
+~
+D EAST 11947 0 0
+0
+~
+The wheat field continues on.
+~
+D WEST 11945 0 0
+0
+~
+The wheat field continues on.
+~
+#11947
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field itself
+could feed an army for a year.
+~
+field
+D NORTH 11948 0 0
+0
+~
+The wheat field continues on.
+~
+D WEST 11946 0 0
+0
+~
+The wheat field continues on.
+~
+#11948
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field itself
+could feed an army for a year.
+~
+field
+D NORTH 11951 0 0
+0
+~
+The wheat field continues on.
+~
+D SOUTH 11947 0 0
+0
+~
+The wheat field continues on.
+~
+D WEST 11949 0 0
+0
+~
+The wheat field continues on.
+~
+#11949
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field itself
+could feed an army for a year.
+~
+field
+D NORTH 11952 0 0
+0
+~
+The wheat field continues on.
+~
+D EAST 11948 0 0
+0
+~
+The wheat field continues on.
+~
+D SOUTH 11946 0 0
+0
+~
+The wheat field continues on.
+~
+D WEST 11950 0 0
+0
+~
+The wheat field continues on.
+~
+#11950
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field itself
+could feed an army for a year.
+~
+field
+D NORTH 11953 0 0
+0
+~
+The wheat field continues on.
+~
+D EAST 11949 0 0
+0
+~
+The wheat field continues on.
+~
+D SOUTH 11945 0 0
+0
+~
+The wheat field continues on.
+~
+#11951
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field
+itself could feed an army for a year.
+~
+field
+D SOUTH 11948 0 0
+0
+~
+The wheat field continues on.
+~
+D WEST 11952 0 0
+0
+~
+The wheat field continues on.
+~
+#11952
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field
+itself could feed an army for a year.
+~
+field
+D NORTH 11954 0 0
+0
+~
+A wide trail leads into the deep forest there.
+~
+D EAST 11951 0 0
+0
+~
+The wheat field continues on.
+~
+D SOUTH 11949 0 0
+0
+~
+The wheat field continues on.
+~
+D WEST 11953 0 0
+0
+~
+The wheat field continues on.
+~
+#11953
+A large field of wheat~
+You stand in a huge field of waving stalks of wheat grain, the staple
+food of the valley's inhabitants. There are no organized rows, but rather
+small burnt paths that lead through its bulk.  In each direction, you can
+faintly see the distant shades of the treeline, but the field
+itself could feed an army for a year.
+~
+field
+D EAST 11952 0 0
+0
+~
+The wheat field continues on.
+~
+D SOUTH 11950 0 0
+0
+~
+The wheat field continues on.
+~
+#11954
+A wide forested trail~
+The path you stand upon is dominated on all sides by tall trees of
+every imaginable species.  Tall prairie grasses grow on the sides of
+the trail, though the dirt of the path itself has been scorched and burnt
+to prevent any further growth.  The shade canopy provides relief from
+the wind and weather.
+~
+forest
+D EAST 11955 0 0
+0
+~
+The forested trail leads to the east.
+~
+D SOUTH 11952 0 0
+0
+~
+A wide field of waving stalks of wheat opens up before you there.
+~
+#11955
+A wide forested trail~
+The path you stand upon is dominated on all sides by tall trees of
+every imaginable species.  Tall prairie grasses grow on the sides on
+ the trail, though the dirt of the path itself has been scorched and burnt
+to prevent any further growth.  The shade canopy provides relief from
+the wind and weather.
+~
+forest
+D NORTH 11956 0 0
+0
+~
+The trail continues on.
+~
+D WEST 11954 0 0
+0
+~
+The trail leads west and seems to break south sharply.
+~
+#11956
+A wide forested trail~
+The path you stand upon is dominated on all sides by tall trees of
+every imaginable species.  Tall prairie grasses grow on the sides of
+the trail, though the dirt of the path itself has been scorched and burnt
+to prevent any further growth.  The shade canopy provides relief from
+the wind and weather.
+~
+forest
+D NORTH 11957 0 0
+0
+~
+The trail continues forward, coming to a treeline.
+~
+D EAST 11958 0 0
+0
+~
+A separate trail leads east toward a large, hilly field.
+~
+D SOUTH 11955 0 0
+0
+~
+The forest trail leads southward.
+~
+#11957
+A wide forested trail~
+The path you stand upon is dominated on all sides by tall trees of
+every imaginable species.  Tall prairie grasses grow on the sides of
+the trail, though the dirt of the path itself has been scorched and burnt
+to prevent any further growth.  The shade canopy provides relief from
+the wind and weather.
+~
+forest
+D NORTH 11967 0 0
+0
+~
+The trail leads onward to the edge of the forest.
+~
+D SOUTH 11956 0 0
+0
+~
+The trail leads southward, and a smaller trail breaks off to the east.
+~
+#11958
+A wide forested trail~
+The path you stand upon is dominated on all sides by tall trees of
+every imaginable species.  Tall prairie grasses grow on the sides of
+the trail, though the dirt of the path itself has been scorched and burnt
+to prevent any further growth.  The shade canopy provides relief from
+the wind and weather.
+~
+forest
+D EAST 11959 0 0
+0
+~
+The trail opens up into a hilly field covered in sinuous vines.
+~
+D WEST 11956 0 0
+0
+~
+The trail leads off to an intersection in the deep woods.
+~
+#11959
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills present
+in the huge vineyard.  Grapes of many colors are tended to and harvested
+here for the making of strong, sweet wines for the Lords or to be sold
+in the nearby village.  The vines themselves are at times twenty feet
+long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D EAST 11962 0 0
+0
+~
+The vineyard continues on.
+~
+D SOUTH 11960 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11958 0 0
+0
+~
+A wide, wooded trail leads into the forest there.
+~
+#11960
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills present
+in the huge vineyard.  Grapes of many colors are tended to and
+harvested here for the making of strong, sweet wines for the Lords or
+to be sold in the nearby village.  The vines themselves are at times
+twenty feet long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D NORTH 11959 0 0
+0
+~
+The vineyard continues on.
+~
+D EAST 11961 0 0
+0
+~
+The vineyard continues on.
+~
+#11961
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills present
+in the huge vineyard.  Grapes of many colors are tended to and
+harvested here for the making of strong, sweet wines for the Lords or
+to be sold in the nearby village.  The vines themselves are at times
+twenty feet long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D NORTH 11962 0 0
+0
+~
+The vineyard continues on.
+~
+D EAST 11964 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11960 0 0
+0
+~
+The vineyard continues on.
+~
+#11962
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills present
+in the huge vineyard.  Grapes of many colors are tended to and harvested
+here for the making of strong, sweet wines for the Lords or to be sold in
+the nearby village.  The vines themselves are at times twenty feet long,
+and hang heavy with ripe, near-bursting fruit.
+~
+field
+D EAST 11963 0 0
+0
+~
+The vineyard continues on.
+~
+D SOUTH 11961 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11959 0 0
+0
+~
+The vineyard continues on.
+~
+#11963
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills
+present in the huge vineyard.  Grapes of many colors are tended
+to and harvested here for the making of strong, sweet wines for the
+Lords or to be sold in the nearby village.  The vines themselves are
+at times twenty feet long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D EAST 11966 0 0
+0
+~
+The vineyard continues on.
+~
+D SOUTH 11964 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11962 0 0
+0
+~
+The vineyard continues on.
+~
+#11964
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills
+present in the huge vineyard.  Grapes of many colors are tended
+to and harvested here for the making of strong, sweet wines for the
+Lords or to be sold in the nearby village.  The vines themselves are at
+times twenty feet long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D NORTH 11963 0 0
+0
+~
+The vineyard continues on.
+~
+D EAST 11965 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11961 0 0
+0
+~
+The vineyard continues on.
+~
+#11965
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills
+present in the huge vineyard.  Grapes of many colors are tended
+to and harvested here for the making of strong, sweet wines for the
+Lords or to be sold in the nearby village.  The vines themselves are at
+times twenty feet long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D NORTH 11966 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11964 0 0
+0
+~
+The vineyard continues on.
+~
+#11966
+Within a large vineyard~
+You stand on the gentle slope of one of the many low hills
+present in the huge vineyard.  Grapes of many colors are tended
+to and harvested here for the making of strong, sweet wines for the
+Lords or to be sold in the nearby village.  The vines themselves are at
+times twenty feet long, and hang heavy with ripe, near-bursting fruit.
+~
+field
+D SOUTH 11965 0 0
+0
+~
+The vineyard continues on.
+~
+D WEST 11963 0 0
+0
+~
+The vineyard continues on.
+~
+#11967
+At the edge of the forest~
+You stand just within the treeline of the valley's large deciduous
+forest.  Its myriad of maples, oaks and elms looms over you, and
+tall prairie grass and wildflowers form a beautiful carpet upon which
+to tread.  To the north of you, an impressive castle rises up to meet
+your gaze.
+~
+field
+D SOUTH 11957 0 0
+0
+~
+The trail leads into the deep forest.
+~
+D WEST 11968 0 0
+0
+~
+The edge of the treeline continues.
+~
+#11968
+At the edge of the forest~
+You stand just within the treeline of the valley's large deciduous
+forest.  Its myriad of maples, oaks and elms looms over you, and tall
+prairie grass and wildflowers form a beautiful carpet upon which to
+tread.  To the north of you, an impressive castle rises up to meet
+your gaze.
+~
+field
+D NORTH 11969 0 0
+0
+~
+A wide, shallow dirt causeway leads up to the castle gates.
+~
+D EAST 11967 0 0
+0
+~
+The treeline extends east to a small path leading into the forest.
+~
+#11969
+Before the castle gates~
+You stand in front of the huge iron gates of an imposing castle.  The
+gates themselves are, oddly enough, not reinforced or buttressed, but
+bear chain mesh over the iron latticework that makes up the structure.
+This ingenious design allows the defending forces to see out the gates
+while being protected from arrow strikes, although the structural
+integrity of the gates is somewhat lowered.
+~
+city
+D NORTH 11970 AB 0
+gates iron gate mesh
+~
+The massive iron and chain gates rise up before you.
+~
+D SOUTH 11968 0 0
+0
+~
+The treeline awaits in that direction.
+~
+#11970
+In the castle courtyard~
+You stand just inside the gates of the keep of Lord Avarast, as
+all who enter are given to know by copper rune-lettering inscribed
+on the gates.  Here, you find the small community housed within
+the stone walls to be a bustling, dour place.  The ground is hard packed
+earth, mostly covered with straw, and merchants come and go freely,
+bringing new slaves to serfdom and carrying away valuable goods, or
+such a transaction in reverse.
+~
+city
+D NORTH 11971 0 0
+0
+~
+The castle's main well stands up ahead.
+~
+D EAST 11975 0 0
+0
+~
+A side road leads off toward a large, squat building there.
+~
+D SOUTH 11969 A 0
+gates iron gate mesh
+~
+The massive iron and chain gates lead out into the valley.
+~
+D WEST 11978 0 0
+0
+~
+A low-roofed stable lies in that direction.
+~
+E copper lettering rune runes~
+Scribed in the trade tongue, it reads:
+"The House of Avarast"
+A smaller inscription below it reads:
+"Enter ye, a curse upon my foes who cross the threshold."
+~
+#11971
+The center of the courtyard~
+You stand in the center of the large courtyard inside the keep.  Here,
+merchants and common peasants mill about, the latter awaiting their
+turn in the fields or being given to the keep guards for torture or
+execution.  A grim, dour place, the ground is hard packed earth, littered
+here and there with straw and the occasional piece of trash.  For the most
+part, the peasants assigned to the keep maintain the grounds fairly well.
+~
+city
+D NORTH 11972 0 0
+0
+~
+The inner bailey rises up before you in that direction.
+~
+D EAST 11974 0 0
+0
+~
+The eastern end of the courtyard is there.
+~
+D SOUTH 11970 0 0
+0
+~
+The massive gates of the keep await you there.
+~
+D WEST 11977 0 0
+0
+~
+The western courtyard lies open, and beyond, the marketplace.
+~
+#11972
+The northern end of the courtyard~
+You stand at the northern end of the large courtyard that dominates the
+keep's interior.  The inner bailey of the keep rises up before you, and
+great double doors of carved stone rest upon the face of the building.
+Arrow slits can be seen along the wall's face, and a pair of guards walk
+unobtrusively atop the keep walls.
+~
+city
+D NORTH 11988 AB 0
+doors double stone carved
+~
+The massive double doors lead into the inner bailey.
+~
+D EAST 11973 0 0
+0
+~
+The courtyard extends toward a small path along a corrugated iron fence.
+~
+D SOUTH 11971 0 0
+0
+~
+The center of the courtyard lies in that direction.
+~
+#11973
+The northeastern end of the courtyard~
+You stand in the courtyard of the keep, along the wall of the
+inner bailey. Here, you can see the iron fence running out before
+the bailey wall that protects the entrance to the barracks.  Otherwise,
+where you stand is as unremarkable as the rest of the bleak, dreary place.
+~
+city
+D EAST 11982 0 0
+0
+~
+A wide path leads along a wicked iron fence to the barracks entrance.
+~
+D SOUTH 11974 0 0
+0
+~
+The eastern end of the courtyard lies in that direction.
+~
+D WEST 11972 0 0
+0
+~
+The inner keep's massive doors lie to the north of the courtyard there.
+~
+#11974
+The eastern end of the courtyard~
+You stand on the hard-packed earth of the keep's courtyard, where
+listless peasants wander about picking up trash and keeping their
+eyes to the ground- to look a superior in the eye can bring swift
+and brutal punishment from the keep guardsmen.  To look a noble in
+the eye generally brings swift, painful death.  To the north of you,
+you can see the inner bailey's wall rising menacingly above you.
+~
+city
+D NORTH 11973 0 0
+0
+~
+The northeastern end of the courtyard lies in that direction.
+~
+D WEST 11971 0 0
+0
+~
+The center of the courtyard lies in that direction.
+~
+#11975
+A wide dirt path~
+You stand on a wide dirt side-road that runs east and west just
+inside the keep's stone wall.  The bustle of the courtyard is left
+far behind you, and up ahead, a large, squat building looms heavily
+before you.  You hear guardsmen walking faintly atop the outer wall,
+but the high parapet denies any clear view.
+~
+city
+D EAST 11976 0 0
+0
+~
+The wide dirt road continues on.
+~
+D WEST 11970 0 0
+0
+~
+The southern end of the courtyard awaits you there.
+~
+#11976
+Before the keep winery~
+You stand on a wide dirt road just inside the keep's high, southern stone
+wall.  To the east of you rises a low stone building with a hanging wooden
+sign bearing the image of ripened grapes upon its face.  A small stone
+step leads up to the oaken door of the winery.
+~
+city
+D EAST 11993 AB 0
+door oaken
+~
+The winery's oaken door leads inward there.
+~
+D WEST 11975 0 0
+0
+~
+The wide dirt road leads west toward a courtyard.
+~
+#11977
+The western end of the courtyard~
+Here you stand upon the hard packed earth of the keep's floor
+amidst bustling merchants and peasants frantically trying to keep
+out of the way of the flow of traffic.  To your southwest, a low-
+roofed open building stands, and the keep's marketplace opens up
+to the west.
+~
+city
+D EAST 11971 0 0
+0
+~
+The center of the courtyard lies in that direction.
+~
+D SOUTH 11978 0 0
+0
+~
+You see the opening of the stables in that direction.
+~
+D WEST 11980 0 0
+0
+~
+The yard leads on toward the marketplace.
+~
+#11978
+Outside the stables~
+The southwestern end of the courtyard is more littered than the rest
+with clumps and patches of straw, and smells rather like a barn.  The
+hard earth of the keep's floor leads north and east,
+while a low-roofed wooden building stands open to your west.
+~
+city
+D NORTH 11977 0 0
+0
+~
+The western end of the courtyard lies in that direction.
+~
+D EAST 11970 0 0
+0
+~
+The southern end of the courtyard lies in that direction.
+~
+D WEST 11979 0 0
+0
+~
+The inside of the stables beckons from there.
+~
+#11979
+In the stables~
+You stand inside a low-roofed wooden building built with several stalls
+in its back wall that are secured with small wooden gates.  On the north
+wall, pieces of tack and harness hang with several leather saddles,
+brushes, and bits.  The floor is entirely covered with straw, and
+horseshoes are piled in a corner.
+~
+inside
+D EAST 11978 0 0
+0
+~
+You can exit the stables to the east, back into the courtyard.
+~
+#11980
+Amidst a wide marketplace~
+You stand in the western end of the keep's commons, where
+vendor stalls and booths are set up and lined shoulder to shoulder
+in the wide yard.  Sellers of many goods take up shop here during
+different parts of the season- most notably during the harvest, though
+many upscale merchants avoid the place because of the heavy taxes
+levied on their goods by the keep lord.
+~
+city
+D EAST 11977 0 0
+0
+~
+The courtyard of the keep lies in that direction.
+~
+D WEST 11981 0 0
+0
+~
+The marketplace continues on.
+~
+#11981
+Amidst a wide marketplace~
+You stand in the western end of the keep's commons, where vendor
+stalls and booths are set up and lined shoulder to shoulder in the
+wide yard.  Sellers of many goods take up shop here during different
+parts of the season- most notably during the harvest, though many upscale
+merchants avoid the place because of the heavy taxes levied on their
+goods by the keep lord.
+~
+city
+D EAST 11980 0 0
+0
+~
+The marketplace continues in that direction.
+~
+D WEST 0 0 0
+0
+~
+The keep's stone wall prevents any further passage.
+~
+#11982
+Outside the keep~
+Here, a dirt trail leads from this dead end toward the open courtyard
+of the keep.  To the north, however, an iron-bound door of oak leads into
+the inner bailey of the keep.  A crest of crossed axes surmounts
+the portal to your north, and a wide, wickedly pointed black iron fence
+lies to your south.
+~
+city
+D NORTH 11983 AB 0
+door iron bound
+~
+An iron-bound door leads into the inner bailey there.
+~
+D WEST 11973 0 0
+0
+~
+The dirt trail leads back toward the open courtyard.
+~
+#11983
+A wide barracks hall~
+You stand in the inner bailey of Lord Avarast's keep, in a wide
+hall used by off-duty soldiers as their primary home.  There are
+tables for gaming, tables for dining, and several vaguely man-shaped
+targets painted on the wooden walls for the knife-throwing amusements
+and contests that the soldiers so enjoy.  The floor is of hard wood,
+and the walls of stone.
+~
+inside
+D NORTH 11985 AB 0
+door wooden small
+~
+A small, wooden door leads further into the keep.
+~
+D EAST 11984 AB 0
+door wooden small
+~
+A small, wooden door leads further into the keep.
+~
+D SOUTH 11982 AB 0
+door iron bound
+~
+An iron-bound door of oak leads outside the bailey.
+~
+D WEST 11986 AB 0
+door oaken grand tall
+~
+A grand oaken door, nine feet in height, leads westward through the keep.
+~
+E targets man-shaped~
+The targets are stained darker than the wood
+around them, and have countless nicks, cuts,
+and puncture marks from the rather accurately
+thrown knives of the soldiers.
+~
+#11984
+A sleeping bay~
+This room of the keep is somewhat hard to maneuver in, as strong wooden
+bunks line the walls and are placed in even though tight rows in the
+middle of the room.  The bay is otherwise unremarkable, having no
+furniture, no bookshelves, not even a small altar for the soldiers to
+recount their sins upon.  It would follow that Avarast does not condone
+learning or religious pursuits much.
+~
+inside
+ROOM NO_SUMMON_TO
+D WEST 11983 AB 0
+door wooden small
+~
+The small wooden door leads back into the barracks proper.
+~
+#11985
+In the mess hall~
+Here you stand in a long kitchen flush with the barracks, where pots and
+pans filled with water, gravy, and other unrecognizable substances sit
+on stoves, countertops, and generally tossed about wherever there is free
+space.  Greasy rags and aprons lie in a corner, and various
+pieces of cutlery lie on the counter.
+~
+inside
+ROOM NO_SUMMON_TO
+D SOUTH 11983 AB 0
+door wooden small
+~
+The small wooden door leads back into the barracks proper.
+~
+#11986
+The grand hall of the keep~
+You stand in a vast, opulently decorated hall that dominates the center
+of the entire keep. Large tapestries hang from every corner, the floor is
+of polished marble, and a lilting melody plays from an unknown source.
+Torches line the walls, casting soft, golden light upon the
+hall itself, and immense oak double doors of intricate carvings stand to
+the north of the hall.
+~
+inside
+D EAST 11983 AB 0
+door oaken grand
+~
+A grand oak door, nine feet in height, dominates the eastern wall.
+~
+D SOUTH 11987 0 0
+0
+~
+The grand hall continues to the south.
+~
+D WEST 11991 0 0
+0
+~
+The center of the grand hall and its huge doors lie in that direction.
+~
+#11987
+The grand hall of the keep~
+You stand in a vast, opulently decorated hall that dominates the center
+of the entire keep.  Large tapestries hang from every corner, the floor
+is of polished marble, and a lilting melody plays from an unknown source.
+Torches line the walls, casting soft, golden light upon the hall itself,
+and immense oak double doors of intricate carvings stand to the north of
+the hall.
+~
+inside
+D NORTH 11986 0 0
+0
+~
+The grand hall continues to the north.
+~
+D WEST 11988 0 0
+0
+~
+The grand hall continues to the west.
+~
+#11988
+The grand hall of the keep~
+You stand in a vast, opulently decorated hall that dominates the center
+of the entire keep.  Large tapestries hang from every corner, the floor
+is of polished marble, and a lilting melody plays from an unknown source.
+Torches line the walls, casting soft, golden light upon the hall itself,
+and immense oak double doors of intricate carvings stand to the north
+of the hall.
+~
+inside
+D NORTH 11991 0 0
+0
+~
+The grand hall leads on to the north.
+~
+D EAST 11987 0 0
+0
+~
+The grand hall continues to the east.
+~
+D SOUTH 11972 A 0
+doors massive double stone
+~
+The massive, stone double doors lead out into the keep's commons.
+~
+D WEST 11989 0 0
+0
+~
+The grand hall continues to the west.
+~
+#11989
+The grand hall of the keep~
+You stand in a vast, opulently decorated hall that dominates the center
+of the entire keep.  Large tapestries hang from every corner, the floor
+is of polished marble, and a lilting melody plays from an unknown source.
+Torches line the walls, casting soft, golden light upon the hall itself,
+and immense oak double doors of intricate carvings stand to the north
+of the hall.
+~
+inside
+D NORTH 11990 0 0
+0
+~
+The grand hall continues to the north.
+~
+D EAST 11988 0 0
+0
+~
+The grand hall continues on to the east.
+~
+#11990
+The grand hall of the keep~
+You stand in a vast, opulently decorated hall that dominates the center
+of the entire keep.  Large tapestries hang from every corner, the floor
+is of polished marble, and a lilting melody plays from an unknown source.
+Torches line the walls, casting soft, golden light upon the hall itself,
+and immense oak double doors of intricate carvings stand to the north
+of the hall.
+~
+inside
+D EAST 11991 0 0
+0
+~
+The grand hall leads on to the east.
+~
+D SOUTH 11989 0 0
+0
+~
+The grand hall continues to the south.
+~
+D WEST 11995 AB 0
+door iron
+~
+An iron door leads westward through the keep.
+~
+#11991
+The grand hall of the keep~
+You stand in a vast, opulently decorated hall that dominates the center
+of the entire keep.  Large tapestries hang from every corner, the floor
+is of polished marble, and a lilting melody plays from an unknown source.
+Torches line the walls, casting soft, golden light upon the hall itself,
+and immense oak double doors of intricate carvings stand to the north
+of the hall.
+~
+inside
+D NORTH 11992 AB 0
+double doors immense
+~
+The immense wooden double doors lead into the throne room of the keep.
+~
+D EAST 11986 0 0
+0
+~
+The grand hall continues to the east.
+~
+D SOUTH 11988 0 0
+0
+~
+The grand hall continues to the west.
+~
+D WEST 11990 0 0
+0
+~
+The grand hall continues to the west.
+~
+#11992
+The Throne of the Lord Avarast~
+In this wide chamber, adornments of every shape, size, and variety
+line the walls on delicate wooden shelves.  The carpeting over the
+hardwood floor is of rich, crushed red velvet, and is trimmed with
+golden thread.  Portraits of the Lord's ancestors are carved into the
+stone walls in a strange, hollow reverse-bust fashion.  In each such
+effigy, a pair of diamonds gleam out from the eyesockets of the
+fallen lord, gazing with cold indifference upon their successor from
+the House of the Dead.
+~
+inside
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 11991 A 0
+massive double doors~
+The huge double doors lead back into the grand hall of the keep.
+~
+#11993
+In the keep winery~
+You stand in a large, squat wooden hall dominated by a voluminous
+vat in the center of the building.  On high wooden shelves all around
+the vat, bottles of many vintages are kept and stored for later use.
+Workmen can walk around the vat with barely five feet to spare between
+the vat and the walls, and overseers' whips can barely reach down far
+enough to hit the slaves.  Of course, when the serfs are slow, their
+drips of blood merely flavour the wine and give it Avarast's
+special touch.
+~
+inside
+D WEST 11976 AB 0
+door oaken
+~
+The oaken door leads back into the keep proper.
+~
+D DOWN 11994 0 0
+0
+~
+A small set of stairs lead down into the huge winery vat.
+~
+#11994
+Inside the vat~
+You stand inside the huge, treated wooden vat the workers use to
+trample the products of the Lord's vineyards.  A small drain in the
+center of the vat lets the succulent juices flow down to destinations
+unknown, presumably to be bottled after a short aging process.  The high
+wooden walls of the vat prevent you from seeing anything other than the
+low roof of the building.
+~
+inside
+D UP 11993 0 0
+0
+~
+Small stairs lead back up into the winery building.
+~
+#11995
+A small antechamber~
+This room is dressed with tables of dishes and cutlery, and looks
+to be where the nobles take their meals.  Along the south wall, cushions,
+chairs, and sofas are arranged for the meetings of the nobility to discuss
+matters of council and how to best avoid the Lord's wrath.  A fire-place
+is set in the north wall, and the room is somewhat warmer than the
+rest of the keep.
+~
+inside
+D EAST 11990 AB 0
+door iron
+~
+An iron door leads into the grand hall of the keep.
+~
+D WEST 11996 AB 0
+door iron
+~
+An iron door leads to the west end of the keep.
+~
+#11996
+A meeting hall~
+A large room, dominated by a circular wooden table, greets your eyes
+here.  There is plush carpeting over the hardwood floor, and you see a
+fireplace set into the north wall.  On the floor before the fireplace,
+a large rug bearing the Avarast family crest, an eagle gripping a black
+lance in its talons, lies.  Its seams are woven with silver thread, and
+it is strangely not set back from the fireplace to avoid catching.
+~
+inside
+D EAST 11995 AB 0
+door iron
+~
+An iron door leads eastward through the keep.
+~
+D DOWN 11997 ABEGI 0
+rug crest
+~
+You see the floor and the rug with the family crest.
+~
+#11997
+A dank hallway in the lower keep~
+The musty darkness greets you with the scent of blood and foulness
+such as you cannot describe, not that you would wish to try.  The
+black stones of this underpassage are scratched and tightly mortared,
+though iron sconces line the walls, evidence that light once touched
+this unholy place of pain.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 11998 0 0
+0
+~
+The dark, dank hallway continues.
+~
+D UP 11996 ABEGI 0
+boards ceiling
+~
+The floorboards of the top level are hinged for exit.
+~
+#11998
+A dank hallway in the lower keep~
+The musty darkness greets you with the scent of blood and foulness
+such as you cannot describe, not that you would wish to try.  The
+black stones of this underpassage are scratched and tightly mortared,
+though iron sconces line the walls, evidence that light once touched
+this unholy place of pain.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12000 AB 0
+jail iron door
+~
+The iron jail door leads into darkness.
+~
+D EAST 11997 0 0
+0
+~
+The hallway leads on toward a set of stone steps.
+~
+D SOUTH 11999 AB 0
+jail iron door
+~
+The iron jail door leads into darkness.
+~
+D WEST 12001 0 0
+0
+~
+The hallway leads further into the dark dungeon.
+~
+#11999
+A grisly dungeon cell~
+Here, the evidence of suffering is complete and graphic.  The
+corpses still chained to the wall provide proof of the contempt
+Avarast shows his "guests", and the ghastly leavings of torture
+decorate the floor of the cell.  Scratches in the stone leave a
+shudder coursing through your spine as it becomes apparent that the
+marks are of fingernails' causing.  Here, in the still darkness, moans
+and soft, whispered prayers echo through this monument to hell on earth.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 11998 AB 0
+jail iron door
+~
+The iron jail door leads out into the hallway.
+~
+#12000
+A grisly dungeon cell~
+Here, the evidence of suffering is complete and graphic.  The
+corpses still chained to the wall provide proof of the contempt
+Avarast shows his "guests", and the ghastly leavings of torture
+decorate the floor of the cell.  Scratches in the stone leave a
+shudder coursing through your spine as it becomes apparent that the
+marks are of fingernails' causing.  Here, in the still darkness,
+moans and soft, whispered prayers echo through this monument to
+hell on earth.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 11998 AB 0
+jail iron door
+~
+The iron jail door leads back into the hallway.
+~
+#12001
+A dank hallway in the lower keep~
+The musty darkness greets you with the scent of blood and foulness
+such as you cannot describe, not that you would wish to try.  The
+black stones of this underpassage are scratched and tightly mortared,
+though iron sconces line the walls, evidence that light once touched
+this unholy place of pain.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12002 AB 0
+jail iron door
+~
+The iron jail door leads into darkness.
+~
+D EAST 11998 0 0
+0
+~
+The musty hallway continues.
+~
+D SOUTH 12003 AB 0
+jail iron door
+~
+The iron jail door leads into darkness.
+~
+D WEST 12004 0 0
+0
+~
+The musty hallway continues on.
+~
+#12002
+A grisly dungeon cell~
+Here, the evidence of suffering is complete and graphic.  The corpses
+still chained to the wall provide proof of the contempt Avarast shows
+his "guests", and the ghastly leavings of torture decorate the floor
+of the cell.  Scratches in the stone leave a shudder coursing through
+your spine as it becomes apparent that the marks are of fingernails'
+causing.  Here, in the still darkness, moans and soft, whispered
+prayers echo through this monument to hell on earth.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12001 AB 0
+jail iron door
+~
+The iron jail door leads back out to the hallway.
+~
+#12003
+A grisly dungeon cell~
+Here, the evidence of suffering is complete and graphic.  The corpses
+still chained to the wall provide proof of the contempt Avarast shows
+his "guests", and the ghastly leavings of torture decorate the floor
+of the cell.  Scratches in the stone leave a shudder coursing through
+your spine as it becomes apparent that the marks are of fingernails'
+causing.  Here, in the still darkness, moans and soft, whispered
+prayers echo through this monument to hell on earth.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12001 AB 0
+jail iron door
+~
+The iron jail door leads back out to the hallway.
+~
+#12004
+The end of the hallway~
+The dank, musty hallway of black stone ends abruptly here against
+a wide, solid door of black metal.  Upon its face is a simple design,
+a circle quartered by a cross, with a small sigil in each quarter.  The
+sigils are somewhat convoluted and are etched delicately into the
+imposing structure.  The slow moaning and whispers of pain echo louder
+here, and the pervasive atmosphere seems to thicken.
+~
+inside
+ROOM DARK
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12001 0 0
+0
+~
+The dank, musty hallway leads off into the darkness.
+~
+D WEST 12005 ABE 0
+door black metal
+~
+The menacing black door occupies the hallway exit.
+~
+#12005
+The chamber of endless suffering~
+You stand in a vision from the seeds of nightmarish fury, the darkest
+side of humanity ever brought to light.  Implements of torture stand
+and hang in every conceivable place, gobbets of raw humanoid flesh dot
+the floor, and blood courses almost constantly in wide rivulets along
+the walls and floor.  Here, answers are gained and punishment is
+inflicted.  Here, the innocent and guilty alike are broken in body and
+spirit, weeping as children, crying wildly for mercy or death.  The
+only god here is Pain, and his worship is found in the tears of the
+helpless and the blood of the condemned.
+~
+inside
+ROOM DARK
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12004 ABE 0
+door black metal
+~
+The huge door of black metal leads out into the hallway.
+~
+#12006
+A grassy trail~
+You stand on a wide trail covered in short, trimmed grass.  It has
+wagon wheel- and wheelbarrow ruts in its surface, but it is otherwise
+well maintained.  The tree cover is somewhat light here, but yellow
+rockroses and dogwood grow wildly about the trail edges in the improved
+sunlight.
+~
+field
+D EAST 12007 0 0
+0
+~
+A large orchard opens up in that direction.
+~
+D WEST 11914 0 0
+0
+~
+A wide trail junction can be seen a distance down the trail.
+~
+#12007
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well
+as selecting the ripe fruit that still hangs from the trees.
+~
+field
+D EAST 12010 0 0
+0
+~
+The orchard continues.
+~
+D SOUTH 12008 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12006 0 0
+0
+~
+A long, grassy trail can be seen in that direction.
+~
+#12008
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12007 0 0
+0
+~
+The orchard continues.
+~
+D EAST 12009 0 0
+0
+~
+The orchard continues.
+~
+#12009
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12010 0 0
+0
+~
+The orchard continues.
+~
+D EAST 12012 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12008 0 0
+0
+~
+The orchard continues.
+~
+#12010
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D EAST 12011 0 0
+0
+~
+The orchard continues.
+~
+D SOUTH 12009 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12007 0 0
+0
+~
+The orchard continues.
+~
+#12011
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D SOUTH 12012 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12010 0 0
+0
+~
+The orchard continues.
+~
+#12012
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12011 0 0
+0
+~
+The orchard continues.
+~
+D SOUTH 12013 0 0
+0
+~
+A grassy trail leads south toward a path further into the valley.
+~
+D WEST 12009 0 0
+0
+~
+The orchard continues.
+~
+#12013
+A grassy trail~
+This trail leads along the edge of a steep, earthen drop that
+surmounts a lower plain of the river valley.  The prairie grass here
+is green and lush, and wildflowers and weeds, as well as small bushes
+and shrubbery, grow in abundance here, though the trees are somewhat
+fewer.
+~
+forest
+D NORTH 12012 0 0
+0
+~
+A wide apple orchard opens up in that direction.
+~
+D SOUTH 12014 0 0
+0
+~
+The trail leads south and seems to bend sharply east and down.
+~
+#12014
+A steep trail~
+The grassy trail leading northward takes a turn for the worse here,
+as it runs up and down the side of the earthen ridge.  The grass here
+is worn away by countless feet, wagons, and wheelbarrows.  The trees
+on the side of the hill grow in small clumps, though none so dense
+as to be called a forest, or even a copse.
+~
+field
+D NORTH 12013 0 0
+0
+~
+A grassy trail leads northward.
+~
+D DOWN 12015 0 0
+0
+~
+The trail leads down into another orchard.
+~
+#12015
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12016 0 0
+0
+~
+The orchard continues.
+~
+D EAST 12018 0 0
+0
+~
+The orchard continues.
+~
+D SOUTH 12019 0 0
+0
+~
+The orchard continues.
+~
+D UP 12014 0 0
+0
+~
+A steep, grassy trail leads up the ridge.
+~
+#12016
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D EAST 12017 0 0
+0
+~
+The orchard continues.
+~
+D SOUTH 12015 0 0
+0
+~
+The orchard continues.
+~
+#12017
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D SOUTH 12018 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12016 0 0
+0
+~
+The orchard continues.
+~
+#12018
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12017 0 0
+0
+~
+The orchard continues.
+~
+D EAST 12021 0 0
+0
+~
+The orchard ends abruptly against a vast cornfield.
+~
+D SOUTH 12020 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12015 0 0
+0
+~
+The orchard continues.
+~
+#12019
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12015 0 0
+0
+~
+The orchard continues.
+~
+D EAST 12020 0 0
+0
+~
+The orchard continues.
+~
+#12020
+A large orchard~
+This field has had its grass trimmed and cut extremely short, and all
+semblance of flowers or weeds evaporates within its borders.  However,
+countless trees blooming and laden with ripe apples dominate the field
+in long, neat rows.  The grass is cut short that the peasants may walk
+about the orchard gathering the fallen fruit before it rots, as well as
+selecting the ripe fruit that still hangs from the trees.
+~
+field
+D NORTH 12018 0 0
+0
+~
+The orchard continues.
+~
+D WEST 12019 0 0
+0
+~
+The orchard continues.
+~
+#12021
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for, and
+the only weeds visible are the ones already uprooted and laying between
+the plants.  The loose, rich brown earth of the river valley is even
+darker and thicker here, more apparent in lieu of the prairie grass
+that covers so much of the entire area.
+~
+field
+D NORTH 12025 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D EAST 12022 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D SOUTH 12027 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D WEST 12018 0 0
+0
+~
+A small break in the rows reveals a wooded field.
+~
+#12022
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for, and
+the only weeds visible are the ones already uprooted and laying between
+the plants.  The loose, rich brown earth of the river valley is even
+darker and thicker here, more apparent in lieu of the prairie grass that
+covers so much of the entire valley.
+~
+field
+D NORTH 12024 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D EAST 12023 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D SOUTH 12028 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D WEST 12021 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12023
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for, and
+the only weeds visible are the ones already uprooted and laying between
+the plants.  The loose, rich brown earth of the river valley is even
+darker and thicker here, more apparent in lieu of the prairie grass
+that covers so much of the entire area.
+~
+field
+D NORTH 12026 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D SOUTH 12029 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D WEST 12022 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12024
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for, and
+the only weeds visible are the ones already uprooted and laying between
+the plants.  The loose, rich brown earth of the river valley is even
+darker and thicker here, more apparent in lieu of the prairie grass
+that covers so much of the entire area.
+~
+field
+D EAST 12026 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D SOUTH 12022 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D WEST 12025 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12025
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for,
+and the only weeds visible are the ones already uprooted and laying
+between the plants.  The loose, rich brown earth of the river valley
+is even darker and thicker here, more apparent in lieu of the prairie
+grass that covers so much of the entire area.
+~
+field
+D EAST 12024 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D SOUTH 12021 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12026
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for,
+and the only weeds visible are the ones already uprooted and laying
+between the plants.  The loose, rich brown earth of the river valley
+is even darker and thicker here, more apparent in lieu of the prairie
+grass that covers so much of the entire area.
+~
+field
+D SOUTH 12023 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D WEST 12024 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12027
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for,
+and the only weeds visible are the ones already uprooted and laying
+between the plants.  The loose, rich brown earth of the river valley
+is even darker and thicker here, more apparent in lieu of the prairie
+grass that covers so much of the entire area.
+~
+field
+D NORTH 12021 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D EAST 12028 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12028
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for,
+and the only weeds visible are the ones already uprooted and laying
+between the plants.  The loose, rich brown earth of the river valley
+is even darker and thicker here, more apparent in lieu of the prairie
+grass that covers so much of the entire area.
+~
+field
+D NORTH 12022 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D EAST 12029 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D WEST 12027 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12029
+A vast cornfield~
+You stand amidst endless, towering rows of healthy cornstalks, as far
+as the eye can see. The rows are neatly planted and well cared for, and
+the only weeds visible are the ones already uprooted and laying between
+the plants.  The loose, rich brown earth of the river valley is even
+darker and thicker here, more apparent in lieu of the prairie grass
+that covers so much of the entire area.
+~
+field
+D NORTH 12023 0 0
+0
+~
+The endless rows of corn reach on.
+~
+D SOUTH 12030 0 0
+0
+~
+A thickly wooded trail leads out southward from the field.
+~
+D WEST 12028 0 0
+0
+~
+The endless rows of corn reach on.
+~
+#12030
+A thickly wooded trail~
+You stand on a path cutting through a forest that defies the convention
+of the word "dense". Its tall oaks, ancient elms, and proud maples
+weave together in a canopy of covering foliage. Here in the shaded part
+of the valley, many types of fungi grow on rotting vegetation and
+fallen trees, as well as other varieties of wildflowers- bluehorns,
+seryptin vine roses, and many others.  The path winds through this
+temperate jungle, seemingly meandering.
+~
+forest
+D NORTH 12029 0 0
+0
+~
+A huge field of cornstalks opens up in that direction.
+~
+D EAST 12031 0 0
+0
+~
+The path continues through the woods.
+~
+#12031
+A thickly wooded trail~
+You stand on a path cutting through a forest that defies the convention
+of the word "dense". Its tall oaks, ancient elms, and proud maples
+weave together in a canopy of covering foliage. Here in the shaded part
+of the valley, many types of fungi grow on rotting vegetation and fallen
+trees, as well as other varieties of wildflowers- bluehorns, seryptin
+vine roses, and many others.  The path winds through this temperate
+jungle, seemingly meandering.
+~
+forest
+D SOUTH 12032 0 0
+0
+~
+The forest trail continues.
+~
+D WEST 12030 0 0
+0
+~
+The path grows somewhat lighter in that direction.
+~
+#12032
+A thickly wooded trail~
+You stand on a path cutting through a forest that defies the convention
+of the word "dense".  Its tall oaks, ancient elms, and proud maples
+weave together in a canopy of covering foliage.  Here in the shaded
+part of the valley, many types of fungi grow on rotting vegetation and
+fallen trees, as well as other varieties of wildflowers- bluehorns,
+seryptin vine roses, and many others.  The path winds through this
+temperate jungle, seemingly meandering.
+~
+forest
+D NORTH 12031 0 0
+0
+~
+The forest path continues.
+~
+D SOUTH 12033 0 0
+0
+~
+The forest path continues.
+~
+#12033
+A sharp bend in the trail~
+You stand on a path cutting through a forest that defies the convention
+of the word "dense". Its tall oaks, ancient elms, and proud maples
+weave together in a canopy of covering foliage.  Here in the shaded
+part of the valley, many types of fungi grow on rotting vegetation and
+fallen trees, as well as other varieties of wildflowers- bluehorns,
+seryptin vine roses, and many others.  The path winds through this
+temperate jungle, seemingly meandering.  From here, you can hear
+the rushing of water immediately to your east through the trees.
+~
+forest
+D NORTH 12032 0 0
+0
+~
+The forest path continues.
+~
+D EAST 12088 I 0
+0
+~
+A steep bank allows one to directly enter the river.
+~
+D WEST 12034 0 0
+0
+~
+The forest path continues.
+~
+#12034
+A thickly wooded trail~
+You stand on a path cutting through a forest that defies the convention
+of the word "dense".  Its tall oaks, ancient elms, and proud maples
+weave together in a canopy of covering foliage.  Here in the shaded
+part of the valley, many types of fungi grow on rotting vegetation and
+fallen trees, as well as other varieties of wildflowers- bluehorns,
+seryptin vine roses, and many others.  The path winds through this
+temperate jungle, seemingly meandering.
+~
+forest
+D NORTH 12027 I 0
+0
+~
+A steep drop over a tangle of fallen trees leads toward a cornfield.
+~
+D EAST 12033 0 0
+0
+~
+The forest path continues.
+~
+D WEST 12035 0 0
+0
+~
+The forest path continues.
+~
+#12035
+A thickly wooded trail~
+You stand on a path cutting through a forest that defies the convention
+of the word "dense".  Its tall oaks, ancient elms, and proud maples
+weave together in a canopy of covering foliage.  Here in the shaded
+part of the valley, many types of fungi grow on rotting vegetation and
+fallen trees, as well as other varieties of wildflowers- bluehorns,
+seryptin vine roses, and many others.  The path winds through this
+temperate jungle, seemingly meandering.
+~
+forest
+D EAST 12034 0 0
+0
+~
+The forest path continues.
+~
+D WEST 12036 0 0
+0
+~
+The forest path continues.
+~
+#12036
+A clearing in the woods~
+Here, a small forest path cuts its way east and west through the
+densely wooded floor of the river valley.  However, another, wider
+trail branches out to the south, and appears to be quite well used.
+Some of the trees have been cut down here, especially those nearer to the
+southern edge of the clearing.  To the west, you can see the strangely
+jagged silhouette of a building rising atop a small, steep hill.
+~
+forest
+D EAST 12035 0 0
+0
+~
+The forest path leads into dense woods.
+~
+D SOUTH 12037 0 0
+0
+~
+A wide path leads toward a river and a bridge.
+~
+D WEST 12038 0 0
+0
+~
+A small but very steep wooded hill rises up there.
+~
+#12037
+A well-used trail~
+This trail carries the marks of heavy traffic, and appears to be
+maintained with some efficiency.  Its wide, grassy lane runs south
+and north, with no trees dotting either side as you near the
+river to the south.  Far to the south, you can see the dark shape of
+stone walls rising up to meet the sky.  To your north, all is dense,
+deciduous forestland.
+~
+road
+D NORTH 12036 0 0
+0
+~
+There is a small clearing just at the edge of the woods.
+~
+D SOUTH 12042 0 0
+0
+~
+The wide dirt road continues on toward the river.
+~
+#12038
+A path at the base of a hill~
+You stand on a path cutting through a forest that defies the
+convention of the word "dense".  Its tall oaks, ancient elms, and
+proud maples weave together in a canopy of covering foliage.  Here in
+the shaded part of the valley, many types of fungi grow on rotting
+vegetation and fallen trees, as well as other varieties of wildflowers-
+bluehorns, seryptin vine roses, and many others.  The path winds
+through this temperate jungle, seemingly meandering.
+~
+forest
+D EAST 12036 0 0
+0
+~
+The trail leads east toward a clearing.
+~
+D UP 12039 0 0
+0
+~
+The trail leads up the small, steep hill toward what appears to be a chapel.
+~
+#12039
+Before a ruined chapel~
+Here, once stood a fine, towering chapel, of dark red brick and stained
+glass windows.  Now, it appears the back of the building has collapsed
+in on itself, though from disasters natural, man-made, or simply the
+wear of time, you cannot tell.  The high archway grants entrance to
+anyone, its doors long since rotted away.  A badly tarnished silver
+plaque above the arch is mounted in the brick.
+~
+forest
+D WEST 12040 0 0
+0
+~
+The archway stands open to receive all who seek shelter.
+~
+D DOWN 12038 0 0
+0
+~
+The trail winds back down the hill toward a clearing.
+~
+E plaque silver tarnished~
+Through the corrosion you can read:
+"........ded...ted this day by Dravs...n Taur"
+"Last kn..ht of Murvain Reach for the .... "
+"...and ci..y of K..t........Pra.se Be..................."
+~
+#12040
+Within a ruined chapel~
+You stand in the east end of what must have been a rather large
+nave.  Some of the hall's wooden pews still stand, though most are
+eaten away or rotted to dust by time's withering hand.  Bits of iron
+lay strewn about, and a small pair of candleholders jut out from some of
+the rubble.  Burn marks mar the surface of the brickwork inside, and
+large holes decorate the floor.  The one solid mark of the place is
+a grand wooden staircase that appears to still be functional.
+~
+inside
+D EAST 12039 0 0
+0
+~
+The safety of the forest lies out the arch in that direction.
+~
+D UP 12041 0 0
+0
+~
+The wooden staircase seems to be fairly sturdy.....
+~
+#12041
+Atop a ruined chapel~
+The staircase leads you out of the darkness and out on to the roof
+of the remnants of the chapel.  Here, the fresh air of the outside
+assaults you, relieving the musty dimness of the inner chapel and
+its ruined nave.  The forest falls away in every direction before you,
+and you can glimpse a large castle to the south, fields to the
+northeast, and a similar tower to the one you stand on, far to the
+west.  The edges of the tower seem to be crumbling, but you notice
+that where you now stand looks to have been a place of private
+worship, perhaps a gathering room for the priesthood.
+~
+city
+ROOM NO_MAGIC
+D DOWN 12040 0 0
+0
+~
+The wooden staircase leads back down into darkness.
+~
+#12042
+A well-used trail~
+This trail carries the marks of heavy traffic, and appears to be
+maintained with some efficiency.  Its wide, grassy lane runs south
+and north, with no trees dotting either side as you near the
+river to the south.  Far to the south, you can see a dark shape of
+stone walls rising up to meet the sky.  To your north, all is
+dense, deciduous forestland.
+~
+road
+D NORTH 12037 0 0
+0
+~
+The trail leads north toward a densely wooded area.
+~
+D SOUTH 12043 0 0
+0
+~
+To the south you can spy a large, manned bridge over the river.
+~
+#12043
+A wide bridge of stone~
+You stand on the most immediate defense of the southern keep.  Here,
+a bridge of mortared stone spans the river rushing darkly below.  The
+bridge is manned by soldiers and is well maintained, though any fool
+can see that keystones placed on each side of the bridge are rigged to
+allow the defenders to collapse it.  The vegetation has thinned out
+considerably here, which makes life easy for any archers standing
+guard over the bridge.
+~
+road
+D NORTH 12042 0 0
+0
+~
+A well-used wide trail of earth leads northward.
+~
+D SOUTH 12044 0 0
+0
+~
+The gates of a large stone castle lie in that direction.
+~
+#12044
+Before the gates~
+You stand just outside the large, imposing castle that dominates the
+southern end of this fertile valley.  Towers rise up on either side,
+and perforate the walls every seventy yards or so down the wall, though
+they look to be more for structural reasons that strategic.  The tight
+area you now stand in is certainly a good way for the keep's soldiers
+to view incoming travellers, as well as a perfect bottleneck for archers
+to pick apart an invading force.  The heavy wooden gates stand to the
+south, the stone bridge to the north.
+~
+road
+D NORTH 12043 0 0
+a heavy wooden gate~
+A bridge of wide, mortared stone lies in that direction.
+~
+D SOUTH 12045 AB 0
+heavy wooden gate~
+The heavy wooden gates of the castle lie in that direction.
+~
+#12045
+Within the southern castle~
+You stand just within the walls of the southern keep, barely south
+of the massive wooden gates.  Here, you are afforded a view of the
+sprawling courtyard and veritable farm that the Lord of this place
+allows within his walls.  Small gardens of individual courtiers, serfs
+and soldiers alike dot the open space.  Wooden longhouses dominate
+the immediate interior of the walls, though none reach farther in
+than a grand hall, lying to the east.
+~
+city
+D NORTH 12044 A 0
+gate wooden heavy wood
+~
+The heavy wooden gates of the castle lie in that direction.
+~
+D SOUTH 12046 0 0
+0
+~
+The wide courtyard of the castle continues.
+~
+#12046
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry,
+soldiers, and nobles of the keep.  They provide extra income, sustenance,
+and work for any industrious enough soul to care for the
+grounds, as well as pay the taxes imposed on each gardener's plot.
+All around you, in the immediate interior of the walls, solid wooden
+longhouses also stand.  To the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12045 0 0
+0
+~
+The castle gates lie in that direction.
+~
+D EAST 12047 0 0
+0
+~
+The castle courtyard continues.
+~
+D SOUTH 12048 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12049 0 0
+0
+~
+The castle courtyard continues.
+~
+#12047
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry,
+soldiers, and nobles of the keep.  They provide extra income, sustenance,
+and work for any industrious enough soul to care for the grounds, as
+well as pay the taxes imposed on each gardener's plot.  All around you,
+in the immediate interior of the walls, solid wooden longhouses also
+stand.  To the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12052 AB 0
+wooden door~
+A stout wooden door leads into a longhouse flush against the north wall.
+~
+D EAST 12062 0 0
+0
+~
+The castle courtyard continues.
+~
+D SOUTH 12050 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12046 0 0
+0
+~
+The castle courtyard continues.
+~
+#12048
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and
+work for any industrious enough soul to care for the grounds, as
+well as pay the taxes imposed on each gardener's plot.  All around you,
+in the immediate interior of the walls, solid wooden longhouses also
+stand.  To the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12046 0 0
+0
+~
+The castle courtyard continues.
+~
+D EAST 12050 0 0
+0
+~
+The castle courtyard continues.
+~
+D SOUTH 12054 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12051 0 0
+0
+~
+The castle courtyard continues.
+~
+#12049
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry,
+soldiers, and nobles of the keep.  They provide extra income,
+sustenance, and work for any industrious enough soul to care for the
+grounds, as well as pay the taxes imposed on each gardener's plot.
+All around you, in the immediate interior of the walls, solid wooden
+longhouses also stand.  To the east, a walled stone enclosure looms.
+~
+city
+D EAST 12046 0 0
+0
+~
+The castle courtyard continues.
+~
+D SOUTH 12051 0 0
+0
+~
+The castle courtyard runs south along the wooden wall.
+~
+D WEST 12056 AB 0
+door wooden stout
+~
+A stout wooden door crested by a carven spear lies there.
+~
+#12050
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and work
+for any industrious enough soul to care for the grounds, as well as pay
+the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12047 0 0
+0
+~
+The castle courtyard continues.
+~
+D EAST 12058 0 0
+0
+~
+The castle courtyard's traffic diminishes in that direction.
+~
+D SOUTH 12055 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12048 0 0
+0
+~
+The castle courtyard continues.
+~
+#12051
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and work
+for any industrious enough soul to care for the grounds, as well as pay
+the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12049 0 0
+0
+~
+The castle courtyard ends against the stone northern wall there.
+~
+D EAST 12048 0 0
+0
+~
+The castle courtyard continues.
+~
+D SOUTH 12053 0 0
+0
+~
+The southern wall and the castle's main well lie in that direction.
+~
+#12052
+A large barracks hall~
+Here you stand in a high-roofed longhouse that is flush against the
+castle's northern wall, for reasons that become immediately apparent.
+On the north wall of the barracks, over thirty arrow slits are carved
+through wood and stone to allow defending soldiers the luxury of picking
+off enemy forerunners.  The windows not currently in use are covered with
+heavy canvas sheets to keep out wind and weather, and a large fireplace
+warms the hall.
+~
+inside
+D SOUTH 12047 AB 0
+door wooden
+~
+A stout wooden door leads out into the castle proper.
+~
+#12053
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and work
+for any industrious enough soul to care for the grounds, as well as pay
+the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12051 0 0
+0
+~
+The castle courtyard runs further along the western barracks.
+~
+D EAST 12054 0 0
+0
+~
+The castle courtyard runs along the southern wall toward a longhouse.
+~
+#12054
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and
+work for any industrious enough soul to care for the grounds, as well as
+pay the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12048 0 0
+0
+~
+The castle courtyard continues.
+~
+D EAST 12055 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12053 0 0
+0
+~
+The courtyard leads into the southwest corner.
+~
+#12055
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and work
+for any industrious enough soul to care for the grounds, as well as pay
+the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12050 0 0
+0
+~
+The castle courtyard continues.
+~
+D EAST 12059 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12054 0 0
+0
+~
+The castle courtyard continues.
+~
+#12056
+Inside the castle barracks~
+You stand in one of the large, stout wooden longhouses that stretch
+along the keep's inner stone walls.  Here, there is a large bay for
+soldiers to roam about in, tables for personal entertainment or study,
+and bunk beds line the walls two rows deep.  The planking and
+oil lanterns make it seem actually very warm and homely.
+~
+inside
+D EAST 12049 A 0
+door wooden stout
+~
+A stout wooden door leads out into the castle proper.
+~
+D SOUTH 12057 0 0
+0
+~
+The barracks bay continues to the south.
+~
+#12057
+Inside the castle barracks~
+You stand in one of the large, stout wooden longhouses that stretch
+along the keep's inner stone walls.  Here there is a large bay for
+soldiers to roam about in, though the tables are less here in the
+southern bay and the bunk beds lining the walls are three rows deep on
+each side.  Nonetheless, the barracks feels much like a well-respected
+inn.
+~
+inside
+D NORTH 12056 0 0
+0
+~
+The entry hall and main bay of the barracks lies in that direction.
+~
+#12058
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and
+work for any industrious enough soul to care for the grounds, as well as
+pay the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12062 0 0
+0
+~
+The castle courtyard's northeastern end lies there.
+~
+D EAST 12063 0 0
+0
+~
+A large stone building lies in that direction.
+~
+D SOUTH 12059 0 0
+0
+~
+The castle courtyard leads off toward an impressive wooden longhouse.
+~
+D WEST 12050 0 0
+0
+~
+The castle courtyard continues.
+~
+#12059
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and work
+for any industrious enough soul to care for the grounds, as well as pay
+the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D NORTH 12058 0 0
+0
+~
+The castle courtyard continues.
+~
+D SOUTH 12060 AB 0
+wooden door~
+A stout wooden door grants entrance to the castle's council hall.
+~
+D WEST 12055 0 0
+0
+~
+The castle courtyard continues.
+~
+#12060
+The council hall~
+You stand inside perhaps the most impressive of the castle's wooden
+structures, a longhouse engineered and buttressed from inside to
+withstand siege.  Its walls are braced and bound with thick iron
+strips, and no windows allow a view either in or out.  Aside from
+its fairly defensive posture, the hall itself looks quite comfortable.
+A large rug dominates the floor of the hall, stretching from this end
+to the west, where a large fireplace burns cheerily.  In the center, a
+long, darkly stained wooden table is surrounded by twelve chairs.
+~
+inside
+D NORTH 12059 A 0
+door wooden stout
+~
+A stout wooden door leads out into the castle proper.
+~
+D WEST 12061 0 0
+0
+~
+The council hall's west end lies there.
+~
+#12061
+The council hall~
+You stand in the western end of the council hall.  The defensive posturing
+of the engineers who built this hall is such that it might withstand as
+much attack as the castle's walls of stone.  Whoever ordered such
+construction obviously takes no chances, or is somewhat paranoid.
+However, the chamber itself is comfortable.  Around the darkly stained
+wooden table, twelve cushioned chairs sit, and a large fireplace warms
+the building.  No windows allow sunshine or prying eyes within or
+without, however.
+~
+inside
+D EAST 12060 0 0
+0
+~
+The council chamber entrance and east end lie in that direction.
+~
+#12062
+In the castle courtyard~
+Here you stand within the wide, sprawling courtyard of the castle.  All
+about you are small, tended gardens belonging to the citizenry, soldiers,
+and nobles of the keep.  They provide extra income, sustenance, and work
+for any industrious enough soul to care for the grounds, as well as pay
+the taxes imposed on each gardener's plot.  All around you, in the
+immediate interior of the walls, solid wooden longhouses also stand.  To
+the east, a walled stone enclosure looms.
+~
+city
+D SOUTH 12058 0 0
+0
+~
+The castle courtyard continues.
+~
+D WEST 12047 0 0
+0
+~
+The castle courtyard continues.
+~
+#12063
+Outside the inner keep~
+Here you stand in a narrow street branching from the courtyard's east
+end toward an imposingly built stone structure.  Arrow slits can be
+seen on either side, and its heavy double doors appear to be of hung
+petrified wood.  Here, the traffic of the normal castle life and
+everyday business is much less and much quieter.
+~
+city
+D EAST 12064 ABEH 0
+doors of petrified wood~
+The huge double doors of petrified wood lie there.
+~
+D WEST 12058 0 0
+0
+~
+The eastern end of the castle's courtyard lies in that direction.
+~
+#12064
+The grand hall~
+You stand inside the huge main chamber of Rothael's proud castle, a
+sparsely decorated chamber that seems to resonate with simplicity in
+the best way.  A few tapestries adorn the walls, and stone carvings
+in each corner of the room represent the former guardians of the
+valley.  The one luxury is a thickly woven rug that covers nearly the
+entirety of the floor.  Its patterns of black and burgundy thread make
+long, winding designs and give the hall a very warm feel.  Though the
+keep doors are of solid petrified wood, the walls are of mortared
+grey stone.
+~
+inside
+D NORTH 12065 0 0
+0
+~
+The grand hall extends to the north.
+~
+D EAST 12068 0 0
+0
+~
+The grand hall leads up toward the lord's audience chamber.
+~
+D SOUTH 12066 0 0
+0
+~
+The grand hall extends to the south.
+~
+D WEST 12063 AEH 0
+door doors double petrified wood
+~
+The huge double doors of petrified wood lead out into the main yard.
+~
+#12065
+The grand hall~
+You stand inside the huge main chamber of Rothael's proud castle, a
+sparsely decorated chamber that seems to resonate with simplicity
+in the best way.  A few tapestries adorn the walls, and stone carvings
+in each corner of the room represent the former guardians of the valley.
+The one luxury is a thickly woven rug that covers nearly the entirety of
+the floor.  Its patterns of black and burgundy thread make long,
+winding designs and give the hall a very warm feel.  Though the keep
+doors are of solid petrified wood, the walls are of mortared
+grey stone.
+~
+inside
+D EAST 12067 0 0
+0
+~
+The grand hall extends to the east.
+~
+D SOUTH 12064 0 0
+0
+~
+The hall's main entrance lies to the west of that part of the hall.
+~
+#12066
+The grand hall~
+You stand inside the huge main chamber of Rothael's proud castle, a
+sparsely decorated chamber that seems to resonate with simplicity in
+the best way.  A few tapestries adorn the walls, and stone carvings
+in each corner of the room represent the former guardians of the valley.
+The one luxury is a thickly woven rug that covers nearly the entirety
+of the floor.  Its patterns of black and burgundy thread make long,
+winding designs and give the hall a very warm feel.  Though the keep
+doors are of solid petrified wood, the walls are of mortared
+grey stone.
+~
+inside
+D NORTH 12064 0 0
+0
+~
+The grand hall's main entrance lies to the west of there.
+~
+D EAST 12069 0 0
+0
+~
+The grand hall continues to the east.
+~
+#12067
+The grand hall~
+You stand inside the huge main chamber of Rothael's proud castle, a
+sparsely decorated chamber that seems to resonate with simplicity in
+the best way.  A few tapestries adorn the walls, and stone carvings
+in each corner of the room represent the former guardians of the valley.
+The one luxury is a thickly woven rug that covers nearly the entirety
+of the floor.  Its patterns of black and burgundy thread make long,
+winding designs and give the hall a very warm feel.  Though the keep
+doors are of solid petrified wood, the walls are of mortared grey stone.
+~
+inside
+D SOUTH 12068 0 0
+0
+~
+The central dais of the hall is there.
+~
+D WEST 12065 0 0
+0
+~
+The grand hall extends to the west.
+~
+#12068
+Upon a raised dais in the grand hall~
+Here you stand upon a raised portion of the stone floor, atop three
+steps that continue around all sides of the dais.  A thin red carpet
+decorates the top of the dais, and a small podium rests at its front.
+This chamber is most often used for Lord Rothael to address the
+courtiers as well as the assembled commoners when time and circumstance
+allow.  After recent assassination attempts, however, the Lord generally
+keeps to himself, hence the infrequent usage of the hall.
+~
+inside
+D NORTH 12067 0 0
+0
+~
+The grand hall extends to the north.
+~
+D EAST 12070 AB 0
+doors double wooden
+~
+A set of well-carved wooden double doors leads inward.
+~
+D SOUTH 12069 0 0
+0
+~
+The grand hall extends to the south.
+~
+D WEST 12064 0 0
+0
+~
+The main entrance of the hall lies in that direction.
+~
+#12069
+The grand hall~
+You stand inside the huge main chamber of Rothael's proud castle, a
+sparsely decorated chamber that seems to resonate with simplicity in
+the best way.  A few tapestries adorn the walls, and stone carvings in
+each corner of the room represent the former guardians of the valley.
+The one luxury is a thickly woven rug that covers nearly the entirety
+of the floor.  Its patterns of black and burgundy thread make long,
+winding designs and give the hall a very warm feel.  Though the keep
+doors are of solid petrified wood, the walls are of mortared grey stone.
+~
+inside
+D NORTH 12068 0 0
+0
+~
+The central dais of the grand hall lies in that direction.
+~
+D WEST 12066 0 0
+0
+~
+The grand hall extends to the west.
+~
+#12070
+A simple audience chamber~
+You stand inside a large, well-kept yet simple hall, augmented by a
+heavy wooden throne decorated with silver trimming.  The hardwood floor
+is bare, though the dais upon which the throne sits is of smooth marble.
+The walls are mostly bare, save a few paintings on the north and south
+walls.
+~
+inside
+D EAST 12071 AB 0
+doors double wooden
+~
+A set of wooden double-doors leads eastward behind the throne.
+~
+D WEST 12068 AB 0
+doors double wooden
+~
+A set of wooden double-doors leads out into the grand hall.
+~
+E paintings~
+The paintings, four all told, are landscape scenes of the valley
+at different times of the day, sunrise, sunset, midday, and the
+last at night during a full moon.
+~
+#12071
+A hall behind the throne room~
+Here, an elongated hall is built behind the throne room of Lord
+Rothael.  You stand in the center of the hall, an elegant dining
+chamber set with a mahogany table, oaken chairs, and a white silk
+tablecloth.  The table stands empty save for a simple vase with
+yellow rockroses in its mouth.  An open archway leads to the north,
+another leads to the south.
+~
+inside
+D NORTH 12072 0 0
+0
+~
+A large archway leads north through the open hall.
+~
+D SOUTH 12073 0 0
+0
+~
+A large archway leads south through the open hall.
+~
+D WEST 12070 AB 0
+doors double wooden
+~
+A set of wooden double-doors lead into the audience chamber of the Lord.
+~
+#12072
+The Lord's bedchamber~
+This room serves the Lord and his family, should he have one,
+although the current patriarch does not.  A large bed rises against
+the northern wall, removed from the rest of the chamber by thick,
+gauzy curtains.  Pillows lie in heaps around the bed, and it
+appears to be the only spot of comfort in the otherwise spartan keep.
+~
+inside
+D SOUTH 12071 0 0
+0
+~
+A large archway leads south into the center of the hall.
+~
+#12073
+A comfortable study~
+You stand in the southern end of the keep's living hall for the Lord.
+Here, a polished oaken desk stands against the southern wall, fronted
+by a cushioned chair.  A large woven rug lies in the center of the
+room, and a contained firepit of granite sits against the eastern stone
+wall.  A large window of stained glass dominates the western wall,
+covered with a heavy steel grate.
+~
+inside
+D NORTH 12071 0 0
+0
+~
+A large archway leads north into the center of the elongated hall.
+~
+E parchment scrolls~
+Most of the documents relate to matters of finance and mercenary
+payments to the rangers and the garrison of the keep.
+~
+E desk oak oaken polished~
+The desk is literally covered with stacks of parchment and scrolls,
+and bears an inkwell in one corner, though no quill protrudes from it.
+~
+E window glass stained~
+The large window is well-made and depicts a lone archer, arrow drawn,
+facing a scintillating darkness hovering amidst a twilit horizon.
+~
+#12074
+The Talis River~
+The crystal waters of this river, from the far northern mountains, are
+as clear and gelid as any in Shalar.  The waters here flow through the
+grassy banks at the southern end of the wide valley, and slip through
+the bars of an iron portcullis, entering a grand walled city.
+~
+water
+D NORTH 12075 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 2422 0 0
+0
+~
+Beneath or through the portcullis, the river enters the city.
+~
+#12075
+The Talis River~
+You move along the waters of the Talis River as it flows southward from
+its source in the far mountains.  Its waters are clear and clean, though
+swiftly flowing.  Along the riverbed you can see rocks and plants, though
+the absence of significant silt or erosion leaves its color pure.  The
+cold waters support the life of the entire valley spread out before you.
+~
+water
+D NORTH 12076 0 0
+0
+~
+The river flows swiftly from the north.
+~
+D SOUTH 12074 0 0
+0
+~
+The river flows southward toward a walled city.
+~
+#12076
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12077 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12075 0 0
+0
+~
+The river flows southward.
+~
+#12077
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12078 0 0
+0
+~
+The river bends and flows from the north again.
+~
+D SOUTH 12076 0 0
+0
+~
+The river flows southward.
+~
+#12078
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12079 0 0
+0
+~
+The river flows from the north.
+~
+D WEST 12077 0 0
+0
+~
+The river flows west and bends to the south.
+~
+#12079
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12080 0 0
+0
+~
+The river flows from the east.
+~
+D SOUTH 12078 0 0
+0
+~
+The river flows southward.
+~
+#12080
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12081 0 0
+0
+~
+The river flows from the east.
+~
+D WEST 12079 0 0
+0
+~
+The river flows westward.
+~
+#12081
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12082 0 0
+0
+~
+The river flows swiftly from the east.
+~
+D WEST 12080 0 0
+0
+~
+The river flows westward.
+~
+#12082
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and
+clean, though swiftly flowing.  Along the riverbed you can see rocks
+and plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12083 0 0
+0
+~
+The swiftly moving river flows out from under a wide bridge there.
+~
+D WEST 12081 0 0
+0
+~
+The river flows westward.
+~
+#12083
+Underneath a bridge~
+A wide wooden bridge shades this portion of the swiftly moving Talis
+river.  The waters swirl in eddies about the steep banks, and about
+the large rocks that lie along the bottom of the riverbed.  Moss grows
+in abundance along the bridge's wooden support beams, though the
+vegetation is somewhat lessened out of the sun's life-giving reach.
+~
+water
+D EAST 12084 0 0
+0
+~
+The river flows from the east.
+~
+D WEST 12082 0 0
+~
+The river flows swiftly westward.
+~
+#12084
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12085 0 0
+0
+~
+The river flows from the east.
+~
+D WEST 12083 0 0
+0
+~
+The river flows westward underneath a bridge.
+~
+#12085
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12086 0 0
+0
+~
+The river flows from the east.
+~
+D WEST 12084 0 0
+0
+~
+The river flows swiftly westward.
+~
+#12086
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D EAST 12087 0 0
+0
+~
+The river flows from the east.
+~
+D WEST 12085 0 0
+0
+~
+The river flows swiftly westward.
+~
+#12087
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12088 0 0
+0
+~
+The river bends to the north.
+~
+D WEST 12086 0 0
+0
+~
+The river bends and flows swiftly westward.
+~
+#12088
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12089 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12087 0 0
+0
+~
+The river flows swiftly southward.
+~
+D WEST 12033 I 0
+0
+~
+A small cut in the riverbank leads into a mass of thick brush there.
+~
+#12089
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12090 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12088 0 0
+0
+~
+The river flows swiftly southward.
+~
+#12090
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12091 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12089 0 0
+0
+~
+The crystal waters of the river flow swiftly southward.
+~
+#12091
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12094 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12090 0 0
+0
+~
+The river flows swiftly southward.
+~
+#12092
+A small game trail~
+This narrow, almost imperceptible swath amidst the trees leads
+through thick bushes and winds its way up a steep rise to the east.
+Layers of rotting vegetation crunch under your feet, and the feculent,
+murky depths of the forest lay all around.  The canopy of tall
+trees thickens here, providing even more shade than usual.
+~
+forest
+D WEST 11936 I 0
+0
+~
+The trail narrows and opens abruptly toward a cleared road.
+~
+D UP 12093 0 0
+0
+~
+The narrow trail leads up a steep rise through the brush.
+~
+#12093
+Atop the riverbank~
+You stand at the edge of the swiftly moving Talis river, its waters
+swirling downstream with deceptively peaceful grace.  Here, the steep
+mud bank rises up to meet the grassline at an almost vertical angle,
+and the idea of climbing up the return path seems next to
+insurmountable.
+~
+field
+D WEST 12092 0 0
+0
+~
+A tiny, narrow trail leads down the rise through the thick brush.
+~
+D DOWN 12094 0 0
+0
+~
+The river's surface lies beneath you.
+~
+#12094
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12095 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12093 0 0
+0
+~
+The crystal waters of the river flow swiftly southward.
+~
+#12095
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12096 0 0
+0
+~
+The river flows from the north.
+~
+D SOUTH 12094 0 0
+0
+~
+The river flows swiftly southward through a wide river valley.
+~
+#12096
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12097 0 0
+0
+~
+The Talis River flows from the north.
+~
+D SOUTH 12095 0 0
+0
+~
+The river flows southward through the valley.
+~
+#12097
+A bend in the river~
+The Talis river flows swiftly southward from its source in the
+mountains far to the north.  Its waters are clear and clean, over
+the rocks that line its surface.  Along the riverbed, the banks of
+the river rise steeply up to meet the tall grassline at a more
+than vertical angle.
+~
+water
+D EAST 12098 0 0
+0
+~
+The river bends and flows from the north.
+~
+D SOUTH 12096 0 0
+0
+~
+The river flows swiftly southward.
+~
+#12098
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D NORTH 12099 0 0
+0
+~
+The river flows from the north.
+~
+D WEST 12097 0 0
+0
+~
+The river flows swiftly west and bends southward.
+~
+#12099
+The Talis River~
+You move along the waters of the Talis River as it flows southward
+from its source in the far mountains.  Its waters are clear and clean,
+though swiftly flowing.  Along the riverbed you can see rocks and
+plants, though the absence of significant silt or erosion leaves its
+color pure.  The cold waters support the life of the entire valley
+spread out before you.
+~
+water
+D SOUTH 12098 0 0
+0
+~
+The river flows swiftly southward.
+~
+#0
+
+
+
+#RESETS
+OBJECT 11981 TO 11908
+OBJECT 11967 TO 11914
+MOB 11908 TO 11926 GLIMIT 6 LLIMIT 1
+MOB 11907 TO 11927 GLIMIT 10 LLIMIT 1
+MOB 11908 TO 11930 GLIMIT 6 LLIMIT 1
+MOB 11930 TO 11934 GLIMIT 8 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11950 WIELD
+MOB 11930 TO 11937 GLIMIT 8 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11950 WIELD
+MOB 11901 TO 11939 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11900 TO 11941 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11905 TO 11941 GLIMIT 5 LLIMIT 1
+EQUIP 11910 BODY
+EQUIP 11911 WIELD
+GIVE 11912
+MOB 11900 TO 11942 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11901 TO 11942 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11939 TO 11942 GLIMIT 4 LLIMIT 1
+MOB 11901 TO 11943 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11912 TO 11944 GLIMIT 12 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11917 HOLD
+MOB 11930 TO 11944 GLIMIT 8 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11950 WIELD
+MOB 11900 TO 11946 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11901 TO 11946 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11901 TO 11948 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11901 TO 11949 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11905 TO 11949 GLIMIT 5 LLIMIT 1
+EQUIP 11910 BODY
+EQUIP 11911 WIELD
+GIVE 11912
+MOB 11940 TO 11949 GLIMIT 4 LLIMIT 1
+MOB 11900 TO 11951 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11900 TO 11953 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11901 TO 11953 GLIMIT 20 LLIMIT 2
+EQUIP 11900 ABOUT
+EQUIP 11902 WIELD
+GIVE 11903
+MOB 11912 TO 11955 GLIMIT 12 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11917 HOLD
+MOB 11930 TO 11955 GLIMIT 8 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11950 WIELD
+OBJECT 11969 TO 11959
+PUT 11906 IN 11969 COUNT 1
+MOB 11900 TO 11960 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11903 TO 11960 GLIMIT 8 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11905
+PUT 11906 IN 11905 COUNT 3
+OBJECT 11969 TO 11960
+PUT 11906 IN 11969 COUNT 1
+MOB 11905 TO 11961 GLIMIT 5 LLIMIT 1
+EQUIP 11910 BODY
+EQUIP 11911 WIELD
+GIVE 11912
+OBJECT 11969 TO 11961
+PUT 11906 IN 11969 COUNT 1
+MOB 11903 TO 11962 GLIMIT 8 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11905
+PUT 11906 IN 11905 COUNT 3
+OBJECT 11969 TO 11962
+PUT 11906 IN 11969 COUNT 1
+OBJECT 11980 TO 11962
+MOB 11900 TO 11963 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+OBJECT 11969 TO 11963
+PUT 11906 IN 11969 COUNT 1
+MOB 11903 TO 11964 GLIMIT 8 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11905
+PUT 11906 IN 11905 COUNT 3
+OBJECT 11969 TO 11964
+PUT 11906 IN 11969 COUNT 1
+OBJECT 11969 TO 11965
+PUT 11906 IN 11969 COUNT 1
+MOB 11903 TO 11966 GLIMIT 8 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11905
+PUT 11906 IN 11905 COUNT 3
+MOB 11913 TO 11969 GLIMIT 2 LLIMIT 2
+EQUIP 11918 BODY
+EQUIP 11919 WIELD
+MOB 11913 TO 11969 GLIMIT 2 LLIMIT 2
+EQUIP 11918 BODY
+EQUIP 11919 WIELD
+DOOR 11969 north CLOSED
+MOB 11922 TO 11971 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+OBJECT 11965 TO 11971
+MOB 11922 TO 11972 GLIMIT 12 LLIMIT 2
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+DOOR 11972 north CLOSED
+MOB 11922 TO 11976 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+DOOR 11976 east CLOSED
+MOB 11922 TO 11977 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+MOB 11914 TO 11979 GLIMIT 2 LLIMIT 2
+EQUIP 11920 BODY
+MOB 11915 TO 11979 GLIMIT 1 LLIMIT 1
+EQUIP 11921 HEAD
+MOB 11916 TO 11979 GLIMIT 1 LLIMIT 1
+EQUIP 11922 BODY
+EQUIP 11923 HOLD
+OBJECT 11973 TO 11979
+MOB 11917 TO 11981 GLIMIT 1 LLIMIT 1
+GIVE 11924
+EQUIP 11925 ABOUT
+EQUIP 11926 HEAD
+MOB 11927 TO 11981 GLIMIT 1 LLIMIT 1
+EQUIP 11944 HEAD
+EQUIP 11945 ABOUT
+EQUIP 11946 WRISTONE
+OBJECT 11977 TO 11981
+OBJECT 11978 TO 11981
+MOB 11922 TO 11982 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+OBJECT 11952 TO 11982
+MOB 11919 TO 11983 GLIMIT 2 LLIMIT 2
+EQUIP 11918 BODY
+EQUIP 11929 WIELD
+MOB 11919 TO 11983 GLIMIT 2 LLIMIT 2
+EQUIP 11918 BODY
+EQUIP 11929 WIELD
+DOOR 11983 north CLOSED
+DOOR 11983 east CLOSED
+DOOR 11983 south CLOSED
+MOB 11920 TO 11984 GLIMIT 3 LLIMIT 3
+EQUIP 11930 ABOUT
+MOB 11920 TO 11984 GLIMIT 3 LLIMIT 3
+EQUIP 11930 ABOUT
+MOB 11920 TO 11984 GLIMIT 3 LLIMIT 3
+EQUIP 11930 ABOUT
+OBJECT 11985 TO 11984
+MOB 11921 TO 11985 GLIMIT 1 LLIMIT 1
+EQUIP 11931 ABOUT
+EQUIP 11932 HOLD
+MOB 11922 TO 11986 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+DOOR 11986 east CLOSED
+MOB 11936 TO 11989 GLIMIT 4 LLIMIT 1
+EQUIP 11959 ABOUT
+EQUIP 11960 WIELD
+MOB 11922 TO 11990 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+DOOR 11990 west CLOSED
+DOOR 11991 north CLOSED
+MOB 11918 TO 11992 GLIMIT 1 LLIMIT 1
+EQUIP 11927 ABOUT
+EQUIP 11928 HOLD
+MOB 11923 TO 11992 GLIMIT 1 LLIMIT 1
+EQUIP 11935 ABOUT
+EQUIP 11936 HEAD
+OBJECT 11974 TO 11992
+OBJECT 11984 TO 11993
+MOB 11941 TO 11994 GLIMIT 2 LLIMIT 2
+EQUIP 11900 ABOUT
+MOB 11941 TO 11994 GLIMIT 2 LLIMIT 2
+EQUIP 11900 ABOUT
+DOOR 11995 west CLOSED
+MOB 11922 TO 11996 GLIMIT 12 LLIMIT 1
+EQUIP 11918 BODY
+EQUIP 11933 WIELD
+EQUIP 11934 HEAD
+MOB 11936 TO 11996 GLIMIT 4 LLIMIT 2
+EQUIP 11959 ABOUT
+EQUIP 11960 WIELD
+MOB 11936 TO 11996 GLIMIT 4 LLIMIT 2
+EQUIP 11959 ABOUT
+EQUIP 11960 WIELD
+DOOR 11996 down CLOSED
+MOB 11924 TO 11998 GLIMIT 6 LLIMIT 1
+EQUIP 11937 BODY
+EQUIP 11938 WIELD
+EQUIP 11940 HEAD
+MOB 11926 TO 11999 GLIMIT 4 LLIMIT 1
+EQUIP 11942 BODY
+EQUIP 11943 WRISTONE
+OBJECT 11982 TO 11999
+DOOR 11999 north CLOSED
+MOB 11926 TO 12000 GLIMIT 4 LLIMIT 1
+EQUIP 11942 BODY
+EQUIP 11943 WRISTONE
+OBJECT 11982 TO 12000
+DOOR 12000 south CLOSED
+MOB 11924 TO 12001 GLIMIT 6 LLIMIT 1
+EQUIP 11937 BODY
+EQUIP 11938 WIELD
+EQUIP 11940 HEAD
+OBJECT 11982 TO 12001
+MOB 11926 TO 12002 GLIMIT 4 LLIMIT 1
+EQUIP 11942 BODY
+EQUIP 11943 WRISTONE
+OBJECT 11982 TO 12002
+DOOR 12002 south CLOSED
+MOB 11926 TO 12003 GLIMIT 4 LLIMIT 1
+EQUIP 11942 BODY
+EQUIP 11943 WRISTONE
+OBJECT 11982 TO 12003
+DOOR 12003 north CLOSED
+MOB 11924 TO 12004 GLIMIT 6 LLIMIT 1
+EQUIP 11937 BODY
+EQUIP 11938 WIELD
+EQUIP 11940 HEAD
+DOOR 12004 west CLOSED
+MOB 11925 TO 12005 GLIMIT 1 LLIMIT 1
+EQUIP 11939 WAIST
+EQUIP 11940 HEAD
+EQUIP 11941 WIELD
+OBJECT 11983 TO 12005
+OBJECT 11970 TO 12007
+PUT 11909 IN 11970 COUNT 1
+MOB 11900 TO 12008 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11904 TO 12008 GLIMIT 15 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11908
+PUT 11909 IN 11908 COUNT 3
+OBJECT 11970 TO 12008
+PUT 11909 IN 11970 COUNT 1
+MOB 11900 TO 12009 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+OBJECT 11970 TO 12009
+PUT 11909 IN 11970 COUNT 1
+MOB 11904 TO 12010 GLIMIT 15 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11908
+PUT 11909 IN 11908 COUNT 3
+MOB 11906 TO 12010 GLIMIT 7 LLIMIT 1
+EQUIP 11913 BODY
+EQUIP 11964 WIELD
+EQUIP 11914 HEAD
+OBJECT 11970 TO 12010
+PUT 11909 IN 11970 COUNT 1
+MOB 11900 TO 12011 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11904 TO 12011 GLIMIT 15 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11908
+PUT 11909 IN 11908 COUNT 3
+OBJECT 11970 TO 12011
+PUT 11909 IN 11970 COUNT 1
+OBJECT 11970 TO 12012
+PUT 11909 IN 11970 COUNT 1
+MOB 11907 TO 12013 GLIMIT 10 LLIMIT 1
+MOB 11931 TO 12013 GLIMIT 8 LLIMIT 1
+EQUIP 11948 BODY
+EQUIP 11912 WIELD
+MOB 11904 TO 12015 GLIMIT 15 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11908
+PUT 11909 IN 11908 COUNT 3
+MOB 11906 TO 12015 GLIMIT 7 LLIMIT 1
+EQUIP 11913 BODY
+EQUIP 11964 WIELD
+EQUIP 11914 HEAD
+MOB 11940 TO 12015 GLIMIT 4 LLIMIT 1
+OBJECT 11970 TO 12015
+PUT 11909 IN 11970 COUNT 1
+OBJECT 11970 TO 12016
+PUT 11909 IN 11970 COUNT 1
+MOB 11900 TO 12017 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11904 TO 12017 GLIMIT 15 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11908
+PUT 11909 IN 11908 COUNT 3
+OBJECT 11970 TO 12017
+PUT 11909 IN 11970 COUNT 1
+MOB 11912 TO 12018 GLIMIT 12 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11917 HOLD
+OBJECT 11970 TO 12018
+PUT 11909 IN 11970 COUNT 1
+MOB 11900 TO 12019 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11904 TO 12019 GLIMIT 15 LLIMIT 1
+EQUIP 11900 ABOUT
+GIVE 11908
+PUT 11909 IN 11908 COUNT 3
+OBJECT 11970 TO 12019
+PUT 11909 IN 11970 COUNT 1
+OBJECT 11970 TO 12020
+PUT 11909 IN 11970 COUNT 1
+OBJECT 11971 TO 12021
+PUT 11907 IN 11971 COUNT 1
+MOB 11900 TO 12022 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11902 TO 12022 GLIMIT 10 LLIMIT 2
+EQUIP 11900 ABOUT
+GIVE 11904
+PUT 11907 IN 11904 COUNT 2
+OBJECT 11971 TO 12022
+PUT 11907 IN 11971 COUNT 1
+MOB 11940 TO 12023 GLIMIT 4 LLIMIT 1
+OBJECT 11971 TO 12023
+PUT 11907 IN 11971 COUNT 1
+MOB 11900 TO 12024 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11902 TO 12024 GLIMIT 10 LLIMIT 2
+EQUIP 11900 ABOUT
+GIVE 11904
+PUT 11907 IN 11904 COUNT 2
+OBJECT 11971 TO 12024
+PUT 11907 IN 11971 COUNT 1
+MOB 11900 TO 12025 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11902 TO 12025 GLIMIT 10 LLIMIT 2
+EQUIP 11900 ABOUT
+GIVE 11904
+PUT 11907 IN 11904 COUNT 2
+OBJECT 11971 TO 12025
+PUT 11907 IN 11971 COUNT 1
+MOB 11902 TO 12026 GLIMIT 10 LLIMIT 2
+EQUIP 11900 ABOUT
+GIVE 11904
+PUT 11907 IN 11904 COUNT 2
+MOB 11939 TO 12026 GLIMIT 4 LLIMIT 1
+OBJECT 11971 TO 12026
+PUT 11907 IN 11971 COUNT 1
+MOB 11900 TO 12027 GLIMIT 20 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11901 HOLD
+MOB 11902 TO 12027 GLIMIT 10 LLIMIT 2
+EQUIP 11900 ABOUT
+GIVE 11904
+PUT 11907 IN 11904 COUNT 2
+OBJECT 11971 TO 12027
+PUT 11907 IN 11971 COUNT 1
+MOB 11906 TO 12028 GLIMIT 7 LLIMIT 1
+EQUIP 11913 BODY
+EQUIP 11964 WIELD
+EQUIP 11914 HEAD
+OBJECT 11971 TO 12028
+PUT 11907 IN 11971 COUNT 1
+OBJECT 11971 TO 12029
+PUT 11907 IN 11971 COUNT 1
+MOB 11912 TO 12030 GLIMIT 12 LLIMIT 1
+EQUIP 11900 ABOUT
+EQUIP 11917 HOLD
+MOB 11931 TO 12030 GLIMIT 8 LLIMIT 1
+EQUIP 11948 BODY
+EQUIP 11912 WIELD
+MOB 11907 TO 12031 GLIMIT 10 LLIMIT 1
+MOB 11931 TO 12033 GLIMIT 8 LLIMIT 1
+EQUIP 11948 BODY
+EQUIP 11912 WIELD
+OBJECT 11968 TO 12035
+MOB 11907 TO 12036 GLIMIT 10 LLIMIT 1
+MOB 11908 TO 12038 GLIMIT 6 LLIMIT 1
+OBJECT 11972 TO 12038
+MOB 11937 TO 12041 GLIMIT 1 LLIMIT 1
+EQUIP 11957 BODY
+EQUIP 11961 SHIELD
+EQUIP 11962 WIELD
+OBJECT 11976 TO 12041
+MOB 11931 TO 12042 GLIMIT 8 LLIMIT 1
+EQUIP 11948 BODY
+EQUIP 11912 WIELD
+MOB 11928 TO 12043 GLIMIT 1 LLIMIT 1
+EQUIP 11947 WIELD
+EQUIP 11948 BODY
+GIVE 11949
+OBJECT 11979 TO 12043
+MOB 11929 TO 12044 GLIMIT 4 LLIMIT 2
+EQUIP 11948 BODY
+EQUIP 11947 WIELD
+MOB 11929 TO 12044 GLIMIT 4 LLIMIT 2
+EQUIP 11948 BODY
+EQUIP 11947 WIELD
+DOOR 12044 south CLOSED
+MOB 11929 TO 12045 GLIMIT 4 LLIMIT 2
+EQUIP 11948 BODY
+EQUIP 11947 WIELD
+MOB 11929 TO 12045 GLIMIT 4 LLIMIT 2
+EQUIP 11948 BODY
+EQUIP 11947 WIELD
+DOOR 12047 north CLOSED
+DOOR 12049 west CLOSED
+MOB 11933 TO 12052 GLIMIT 2 LLIMIT 2
+EQUIP 11913 BODY
+EQUIP 11951 WIELD
+MOB 11933 TO 12052 GLIMIT 2 LLIMIT 2
+EQUIP 11913 BODY
+EQUIP 11951 WIELD
+MOB 11932 TO 12053 GLIMIT 1 LLIMIT 1
+EQUIP 11953 WIELD
+EQUIP 11954 BODY
+GIVE 11955
+OBJECT 11966 TO 12053
+OBJECT 11985 TO 12056
+OBJECT 11985 TO 12057
+DOOR 12059 south CLOSED
+MOB 11938 TO 12061 GLIMIT 3 LLIMIT 2
+EQUIP 11963 BODY
+EQUIP 11964 WIELD
+MOB 11938 TO 12061 GLIMIT 3 LLIMIT 2
+EQUIP 11963 BODY
+EQUIP 11964 WIELD
+DOOR 12063 east CLOSED
+MOB 11938 TO 12064 GLIMIT 3 LLIMIT 1
+EQUIP 11963 BODY
+EQUIP 11964 WIELD
+DOOR 12068 east CLOSED
+MOB 11934 TO 12070 GLIMIT 1 LLIMIT 1
+EQUIP 11956 WIELD
+EQUIP 11957 BODY
+OBJECT 11975 TO 12070
+DOOR 12070 east CLOSED
+MOB 11935 TO 12071 GLIMIT 1 LLIMIT 1
+EQUIP 11958 HEAD
+EQUIP 11933 WIELD
+MOB 11911 TO 12076 GLIMIT 5 LLIMIT 1
+GIVE 11916
+MOB 11909 TO 12078 GLIMIT 4 LLIMIT 1
+MOB 11910 TO 12080 GLIMIT 4 LLIMIT 1
+GIVE 11915
+MOB 11911 TO 12081 GLIMIT 5 LLIMIT 1
+GIVE 11916
+MOB 11910 TO 12084 GLIMIT 4 LLIMIT 1
+GIVE 11915
+MOB 11909 TO 12088 GLIMIT 4 LLIMIT 1
+MOB 11910 TO 12090 GLIMIT 4 LLIMIT 1
+GIVE 11915
+MOB 11939 TO 12093 GLIMIT 4 LLIMIT 1
+MOB 11911 TO 12095 GLIMIT 5 LLIMIT 1
+GIVE 11916
+S
+
+#IMPROGS
+END
+#$

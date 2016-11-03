@@ -1,0 +1,282 @@
+#AREA
+tiernus.are~
+Jathruk's Sanctuary~
+Jathruk~
+1 51
+180 184
+shrine
+temperate
+0
+1
+Jathruk~
+
+#MOBS
+#180
+figure white robed white-robed~
+the white-robed figure~
+A white-robed figure stands motionless in the center of the room.
+~
+~
+0 0 0 human~
+54 27d8+4990 0d0+0 0 100 divine
+0 0 0 0
+resting male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INTELLIGENT
+ACT HEALER
+OFF PARRY
+AFF DARK_VISION
+IMM SUMMON
+#0
+
+
+
+#OBJS
+#180
+bench iron wrought-iron~
+a wrought-iron bench~
+A bench made from intricately wrought iron sits on the balcony.~
+portal
+iron~
+0 257 0 183 0
+0 400 0 P
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#181
+mark slavering jackal~
+the mark of a slavering jackal~
+The mark of a slavering jackal~
+trash
+ink~
+0 0 0 0 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+ITEM BRAND
+APPLY SAVES -5
+LIMIT 0
+TIMER 0
+
+#182
+rugged worn altar jathruk slavering jackal~
+an altar to Jathruk~
+A rugged, worn altar sits at the far end of the cave.~
+altar
+unknown~
+0 0 0 0 0
+54 0 0 P
+LIMIT 0
+TIMER 0
+E worn~
+This small, unobtrusive altar sits in a small alcove in the northern wall
+of the cavern.  Ancient, and obviously untended in centuries, it seems to be
+little more than a relic from a bygone age.  As you look closely at the
+relief, you can barely make out an image of a jackal, facing a larger
+predator.  As you watch, the scene seems come to life until you pull your
+but sense an immense power emanating from the altar, making you wonder if
+perhaps this altar isn't as abandoned as it seems.
+~
+E altar~
+This small, unobtrusive altar sits in a small alcove in the northern wall
+of the cavern.  Ancient, and obviously untended in centuries, it seems to be
+little more than a relic from a bygone age.  As you look closely at the
+relief, you can barely make out an image of a jackal, facing a larger
+predator.  As you watch, the scene seems come to life until you pull your
+but sense an immense power emanating from the altar, making you wonder if
+perhaps this altar isn't as abandoned as it seems.
+~
+E rugged~
+This small, unobtrusive altar sits in a small alcove in the northern wall
+of the cavern.  Ancient, and obviously untended in centuries, it seems to be
+little more than a relic from a bygone age.  As you look closely at the
+relief, you can barely make out an image of a jackal, facing a larger
+predator.  As you watch, the scene seems come to life until you pull your
+but sense an immense power emanating from the altar, making you wonder if
+perhaps this altar isn't as abandoned as it seems.  
+~
+
+#0
+
+
+
+#ROOMS
+#180
+A Sheltered Copse~
+Stumbling across a sudden turn in the trail, you find yourself within a
+hidden copse of trees.  Above you, the trees sway calmly in the wind, but
+down within the grove itself, an odd stillness prevails.  A few small
+animals scurry about, but even their movements hardly rustle the foliage. 
+As you survey your surroundings, a dark area beyond the eastern edge of the
+grove catches your attention.  
+~
+forest
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Growing tightly together, the foliage is too dense to pass.
+~
+D EAST 181 I 0
+~
+Peering through the foliage, you see the entrance of a dark cave.
+~
+D SOUTH 0 0 0
+~
+Growing tightly together, the foliage is too dense to pass.
+~
+D WEST 242 0 0
+~
+You can follow the small trail back towards the main path upon the mountain.
+~
+D UP 0 0 0
+~
+The foliage of the tree-tops sway slightly in the wind, markedly
+contrasting with the stillness within the grove.  
+~
+D DOWN 0 0 0
+~
+The ground beneath you is little different than upon the rest of the mountain.
+~
+OWNER none~
+#181
+Within a Small Cave~
+As your eyes adjust to the darkness of the cave, you find yourself
+feeling somewhat uneasy, though you cannot place why.  The silence of the
+grove is somehow increased here, and even the sounds of your footsteps are
+quickly hushed.  In the darkness, it is difficult to see beyond a few feet,
+forcing you to look with painstaking detail as you try to proceed.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+ROOM NO_GATE
+ROOM SILENCE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 182 I 0
+~
+Barely visible, you see a narrow passage that appears to provide further
+access to the cave.  
+~
+D EAST 0 0 0
+~
+The solid, rough rock of the cave provides no passage.
+~
+D SOUTH 0 0 0
+~
+The solid, rough rock of the cave provide no routes of passage.
+~
+D WEST 180 0 0
+~
+From inside the cave, the opening to the grove is clearly visible.
+~
+D UP 0 0 0
+~
+Numerous small stalagtites hang from the ceiling, as drops of water
+slowly drip off, to fall with muffled quiet to the floor.  
+~
+D DOWN 0 0 0
+~
+A few small puddles of water pool upon the rough, uneven rock beneath
+your feet.
+~
+OWNER none~
+#182
+Before a Worn Shrine~
+By the far wall of the cave, you see a ancient, worn altar, looking
+untended for centuries.  The walls of the cave, however, glow with a dim
+light, allowing you to see unaided.  Near the far wall, you notice a worn,
+ancient altar that looks untended for centuries.  Under the light of the odd
+glow, you see little else within the cavern.
+~
+cave
+ROOM NO_MOB
+ROOM INDOORS
+ROOM NO_GATE
+ROOM SILENCE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 0 0 0
+~
+The rough cave walls glow with a dim luminesence, barely providing enough
+light to see by.
+~
+D SOUTH 181 0 0
+~
+A narrow passage leads back towards the entrance of the cave.
+~
+D WEST 0 0 0
+~
+The rough cave walls glow with a dim luminesence, barely providing enough
+light to see by.
+~
+D UP 0 0 0
+~
+Ancient stalagtites hang from the cave ceiling, though water no longer
+drips down their structures.  
+~
+D DOWN 0 0 0
+~
+The solid rock beneath your feet is rough and uneven.
+~
+OWNER Jathruk~
+#183
+Deep Within the Mountain~
+Within a small, dark cave, deep within Mount Cim, you can't help but feel
+somewhat claustrophobic.  The rough, rugged walls of the cave make it
+obvious that this is some sort of natural cavern, though the nearby cavern
+seems somewhat odd...
+~
+cave
+ROOM DARK
+ROOM NO_MOB
+ROOM INDOORS
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 184 0 0
+~
+~
+OWNER none~
+#184
+The Sanctuary of Jathruk~
+A dim glow emanating from the walls of the cavern give this entire cavern
+an eerie, unnatural glow, just bright enough to let you see.  The cavern
+itself is quite large, and though the walls bear no signs of ever being
+worked, they are perfectly smooth, and give the feeling they were somehow
+designed to be this way.  
+~
+cave
+ROOM NO_MOB
+ROOM INDOORS
+ROOM LAW
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 183 0 0
+~
+~
+OWNER jathruk~
+#0
+
+
+
+#RESETS
+OBJECT 182 TO 182
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

@@ -1,0 +1,10 @@
+<?
+	$target_level = 52;
+	include("../check_trust.inc");
+	$conn  = mysql_connect("localhost", "rift", "rift123");
+	$nhelpdata = addslashes($_POST[helpdata]);
+	$ntitle = addslashes($_POST[title]);
+	@mysql_db_query("rift","insert into helpfiles(title,skill,minlevel,helpdata, author) values('$ntitle','$_POST[skill]',$_POST[minlevel],'$nhelpdata','$_COOKIE[user]')",$conn);
+	$id = mysql_insert_id($conn);
+	Header("Location: http://admin.riftshadow.org/help/edit.phtml?id=$id&added=1");
+?>

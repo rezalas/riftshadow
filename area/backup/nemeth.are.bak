@@ -1,0 +1,1341 @@
+#AREA
+nemeth.are~
+South of Cimar~
+Nemeth~
+1 51
+28900 28999
+unopened
+temperate
+0
+1
+Nemeth~
+
+#MOBS
+#28916
+A sandpiper.~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#28918
+seagull sea gull bird~
+a seagull~
+A seagull is here, floating on the wind.
+~
+This gulls's plumage is a mottled grey, with white accents about its
+throat.  Its wingspan is nearly twice the length of its body, allowing it to
+soar on the strong sea breeze confidently and gracefully.  
+~
+0 0 0 water fowl~
+3 1d8+13 1d4+1 0 100 none
+0 0 0 0
+standing either none
+HMV HMV tiny
+ACT NPC
+VUL LIGHTNING
+VUL DROWNING
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#28900
+Dummy Room~
+~
+unused
+D NORTH 28901 0 0
+~
+~
+D EAST 28909 0 0
+~
+~
+D SOUTH 28929 0 0
+~
+~
+D WEST 28923 0 0
+~
+~
+OWNER none~
+#28901
+Dummy Room~
+~
+unused
+D EAST 28902 0 0
+~
+~
+D SOUTH 28900 0 0
+~
+~
+D WEST 28910 0 0
+~
+~
+OWNER none~
+#28902
+Dummy Room~
+~
+unused
+D EAST 28903 0 0
+~
+~
+D SOUTH 28909 0 0
+~
+~
+D WEST 28901 0 0
+~
+~
+OWNER none~
+#28903
+Dummy Room~
+~
+unused
+D EAST 28904 0 0
+~
+~
+D SOUTH 28908 0 0
+~
+~
+D WEST 28902 0 0
+~
+~
+OWNER none~
+#28904
+Dummy Room~
+~
+unused
+D EAST 28905 0 0
+~
+~
+D SOUTH 28907 0 0
+~
+~
+D WEST 28903 0 0
+~
+~
+OWNER none~
+#28905
+Dummy Room~
+~
+unused
+D SOUTH 28906 0 0
+~
+~
+D WEST 28904 0 0
+~
+~
+OWNER none~
+#28906
+Dummy Room~
+~
+unused
+D NORTH 28905 0 0
+~
+~
+D SOUTH 28933 0 0
+~
+~
+D WEST 28907 0 0
+~
+~
+OWNER none~
+#28907
+Dummy Room~
+~
+unused
+D NORTH 28904 0 0
+~
+~
+D EAST 28906 0 0
+~
+~
+D SOUTH 28932 0 0
+~
+~
+D WEST 28908 0 0
+~
+~
+OWNER none~
+#28908
+Dummy Room~
+~
+unused
+D NORTH 28903 0 0
+~
+~
+D EAST 28907 0 0
+~
+~
+D SOUTH 28931 0 0
+~
+~
+D WEST 28909 0 0
+~
+~
+OWNER none~
+#28909
+Dummy Room~
+~
+unused
+D NORTH 28902 0 0
+~
+~
+D EAST 28908 0 0
+~
+~
+D SOUTH 28930 0 0
+~
+~
+D WEST 28900 0 0
+~
+~
+OWNER none~
+#28910
+Dummy Room~
+~
+unused
+D EAST 28901 0 0
+~
+~
+D SOUTH 28923 0 0
+~
+~
+D WEST 28911 0 0
+~
+~
+OWNER none~
+#28911
+Dummy Room~
+~
+unused
+D EAST 28910 0 0
+~
+~
+D SOUTH 28922 0 0
+~
+~
+D WEST 28912 0 0
+~
+~
+OWNER none~
+#28912
+Dummy Room~
+~
+unused
+D EAST 28911 0 0
+~
+~
+D SOUTH 28921 0 0
+~
+~
+D WEST 28913 0 0
+~
+~
+OWNER none~
+#28913
+Dummy Room~
+~
+unused
+D EAST 28912 0 0
+~
+~
+D SOUTH 28920 0 0
+~
+~
+D WEST 28914 0 0
+~
+~
+OWNER none~
+#28914
+..~
+~
+unused
+D EAST 28913 0 0
+~
+~
+D SOUTH 28919 0 0
+~
+~
+D WEST 28915 0 0
+~
+~
+OWNER none~
+#28915
+Some Rocky Cliffs by the Sea~
+Rocky cliffs, hewn of light tan sandstone endure the constant pounding of
+the surf here.  Sparse scrub grows right up to the lips of the cliffs,
+hanging thin tendrils and stalks fifty feet above the turbulent waters
+below.  The occasional seabird circling above voices a plaintive cry in the
+wind, and occasionally you can see one dive into the water, and rise back to
+the sky, its beak laden with a struggling fish.  Far to the north you can
+see the majestic white walls of Cimar rising from the plains.  A thin forest
+begins to overtake the scrub to the east.  
+~
+unused
+D EAST 28914 0 0
+~
+To the east is the begining of a light forest.
+~
+D SOUTH 28918 0 0
+~
+To the south, the cliffs continue.
+~
+D WEST 0 0 0
+~
+The sea stretches out below you to the west.
+~
+D DOWN 0 0 0
+~
+Below you is the sandstone cliff face.
+~
+OWNER none~
+#28916
+Some Rocky Cliffs by the Sea~
+Rocky cliffs, hewn of light tan sandstone endure the constant pounding of
+the surf here.  Sparse scrub grows right up to the lips of the cliffs,
+hanging thin tendrils and stalks fifty feet above the turbulent waters
+below.  The occasional seabird circling above voices a plaintive cry in the
+wind, and occasionally you can see one dive into the water, and rise back to
+the sky, its beak laden with a struggling fish.  Far to the north you can
+see the majestic white walls of Cimar rising from the plains.  A thin forest
+begins to overtake the scrub to the east.  
+~
+unused
+D SOUTH 28917 0 0
+~
+~
+OWNER none~
+#28917
+Some Sand Stone Cliffs By The Sea~
+Fifty feet below you the sea rages against the sand stone cliffs, which
+begin to slope gently down to the southeast.  The forest reaches out slender
+fingers to the edge of the cliffs here, with some small saplings' roots
+poking out through the stone, and some how taking hold despite the heavy
+wind that blows from the sea.  A salty tang assails your nose when ever a
+wave pounds below, breaking so heavily that a fine mist reaches you even
+this high above.  The cliffs continue to the north and southeast.  
+~
+unused
+D NORTH 28916 0 0
+~
+~
+OWNER none~
+#28918
+Some Sand Stone Cliffs By The Sea~
+Fifty feet below you the sea rages against the sand stone cliffs, which
+begin to slope gently down to the southeast.  The forest reaches out slender
+fingers to the edge of the cliffs here, with some small saplings' roots
+poking out through the stone, and some how taking hold despite the heavy
+wind that blows from the sea.  A salty tang assails your nose when ever a
+wave pounds below, breaking so heavily that a fine mist reaches you even
+this high above.  The cliffs continue to the north and southeast.  
+~
+unused
+D NORTH 28915 0 0
+~
+The cliffs continue to the north.
+~
+D EAST 28919 0 0
+~
+To the east, you see a light forest.
+~
+D SOUTH 0 0 0
+~
+To the south you can see the sea streching out, and the cliffs continuing slightly eastwards.
+~
+D WEST 0 0 0
+~
+To the west, you can see the ocean roiling furiously.
+~
+D DOWN 0 0 0
+~
+Below you is the sandstone cliff face.
+~
+OWNER none~
+#28919
+On Some Cliffs~
+The cliffs are lower here than they are to the north, and the rock that
+they are cut from seems a bit darker.  The sea pounds out a restless beat
+below you, and the sea spray prevents any plant life beyond a few scraggly
+looking strands of scrub to grow here.  An old log, whitened by the sun and
+wind and rain is half buried here, the other end sticking precariously out
+over the ocean.  
+~
+unused
+D NORTH 28914 0 0
+~
+To the north, you see the begining of a light forest.
+~
+D EAST 28920 0 0
+~
+A light forests edge lies to the east.
+~
+D SOUTH 28924 0 0
+~
+To the south the cliffs continue, and the ocean stretches out like a blue
+plain.  Some sort of statue is barely discernable in cliff face a bit
+further.  
+~
+D WEST 28918 0 0
+~
+To the west, the ocean stretches to the horizon.
+~
+D DOWN 0 0 0
+~
+The cliff stretches down to the ocean.
+~
+OWNER none~
+#28920
+Dummy Room~
+~
+unused
+D NORTH 28913 0 0
+~
+~
+D EAST 28921 0 0
+~
+~
+D SOUTH 28925 0 0
+~
+~
+D WEST 28919 0 0
+~
+~
+OWNER none~
+#28921
+Dummy Room~
+~
+unused
+D NORTH 28912 0 0
+~
+~
+D EAST 28922 0 0
+~
+~
+D SOUTH 28926 0 0
+~
+~
+D WEST 28920 0 0
+~
+~
+OWNER none~
+#28922
+Dummy Room~
+~
+unused
+D NORTH 28911 0 0
+~
+~
+D EAST 28923 0 0
+~
+~
+D SOUTH 28927 0 0
+~
+~
+D WEST 28921 0 0
+~
+~
+OWNER none~
+#28923
+Dummy Room~
+~
+unused
+D NORTH 28910 0 0
+~
+~
+D EAST 28900 0 0
+~
+~
+D SOUTH 28928 0 0
+~
+~
+D WEST 28922 0 0
+~
+~
+OWNER none~
+#28924
+Some Cliffs Above the Ocean~
+Rocky cliffs, hewn of tan sandstone endure the constant pounding of the
+surf here.  Sparse scrub grows right up to the lips of the cliffs, hanging
+thin tendrils and stalks fifty feet above the turbulent waters below.  Sea
+birds float out over the ocean, and the scraggly bushes at your feet
+occasionally rustle with the movement of some small animal.  
+~
+unused
+D NORTH 28919 0 0
+~
+~
+D EAST 28925 0 0
+~
+~
+OWNER none~
+#28925
+At the Top of Some Cliffs, Near a Huge Carving~
+You are at the top of some sandstone cliffs overlooking the ocean.  A few
+stunted, sage colored bushes dot the ground near you, and when the wind
+blows, sand whips past your face, out over the ocean.  
+~
+unused
+D NORTH 28920 0 0
+~
+To the north, you see the edge of a light forest.
+~
+D EAST 28926 0 0
+~
+To the east is the edge of a light forest.
+~
+D SOUTH 28942 0 0
+~
+South of here you can see a huge face carved in to the cliff.
+~
+D WEST 28924 0 0
+~
+Directly west, the ocean stretches for miles, and to the northwest, the cliffs continue.
+~
+OWNER none~
+#28926
+Dummy Room~
+~
+unused
+D NORTH 28921 0 0
+~
+~
+D EAST 28927 0 0
+~
+~
+D SOUTH 28941 0 0
+~
+~
+D WEST 28925 0 0
+~
+~
+OWNER none~
+#28927
+Dummy Room~
+~
+unused
+D NORTH 28922 0 0
+~
+~
+D EAST 28928 0 0
+~
+~
+D SOUTH 28940 0 0
+~
+~
+D WEST 28926 0 0
+~
+~
+OWNER none~
+#28928
+Dummy Room~
+~
+unused
+D NORTH 28923 0 0
+~
+~
+D EAST 28929 0 0
+~
+~
+D SOUTH 28939 0 0
+~
+~
+D WEST 28927 0 0
+~
+~
+OWNER none~
+#28929
+Dummy Room~
+~
+unused
+D NORTH 28900 0 0
+~
+~
+D EAST 28930 0 0
+~
+~
+D SOUTH 28938 0 0
+~
+~
+D WEST 28928 0 0
+~
+~
+D DOWN 28975 0 0
+~
+~
+OWNER none~
+#28930
+Dummy Room~
+~
+unused
+D NORTH 28909 0 0
+~
+~
+D EAST 28931 0 0
+~
+~
+D SOUTH 28937 0 0
+~
+~
+D WEST 28929 0 0
+~
+~
+OWNER none~
+#28931
+Dummy Room~
+~
+unused
+D NORTH 28908 0 0
+~
+~
+D EAST 28932 0 0
+~
+~
+D SOUTH 28936 0 0
+~
+~
+D WEST 28930 0 0
+~
+~
+OWNER none~
+#28932
+Dummy Room~
+~
+unused
+D NORTH 28907 0 0
+~
+~
+D EAST 28933 0 0
+~
+~
+D SOUTH 28935 0 0
+~
+~
+D WEST 28931 0 0
+~
+~
+OWNER none~
+#28933
+Dummy Room~
+~
+unused
+D NORTH 28906 0 0
+~
+~
+D SOUTH 28934 0 0
+~
+~
+D WEST 28932 0 0
+~
+~
+OWNER none~
+#28934
+Dummy Room~
+~
+unused
+D NORTH 28933 0 0
+~
+~
+D SOUTH 28953 0 0
+~
+~
+D WEST 28935 0 0
+~
+~
+OWNER none~
+#28935
+Dummy Room~
+~
+unused
+D NORTH 28932 0 0
+~
+~
+D EAST 28934 0 0
+~
+~
+D SOUTH 28952 0 0
+~
+~
+D WEST 28936 0 0
+~
+~
+OWNER none~
+#28936
+Dummy Room~
+~
+unused
+D NORTH 28931 0 0
+~
+~
+D EAST 28935 0 0
+~
+~
+D SOUTH 28951 0 0
+~
+~
+D WEST 28937 0 0
+~
+~
+OWNER none~
+#28937
+Dummy Room~
+~
+unused
+D NORTH 28930 0 0
+~
+~
+D EAST 28936 0 0
+~
+~
+D SOUTH 28950 0 0
+~
+~
+D WEST 28938 0 0
+~
+~
+OWNER none~
+#28938
+Dummy Room~
+~
+unused
+D NORTH 28929 0 0
+~
+~
+D EAST 28937 0 0
+~
+~
+D SOUTH 28949 0 0
+~
+~
+D WEST 28939 0 0
+~
+~
+OWNER none~
+#28939
+Dummy Room~
+~
+unused
+D NORTH 28928 0 0
+~
+~
+D EAST 28938 0 0
+~
+~
+D SOUTH 28948 0 0
+~
+~
+D WEST 28940 0 0
+~
+~
+OWNER none~
+#28940
+Dummy Room~
+~
+unused
+D NORTH 28927 0 0
+~
+~
+D EAST 28939 0 0
+~
+~
+D SOUTH 28947 0 0
+~
+~
+D WEST 28941 0 0
+~
+~
+OWNER none~
+#28941
+Dummy Room~
+~
+unused
+D NORTH 28926 0 0
+~
+~
+D EAST 28940 0 0
+~
+~
+D SOUTH 28946 0 0
+~
+~
+D WEST 28942 0 0
+~
+~
+OWNER none~
+#28942
+The Top of a Giant Carving in the Cliffs~
+Here, the cliffs come to a point in a single massive chunk of sandstone. 
+The stone was carved to look like a man's head, about thirty feet tall.  The
+face points to the southwest, and you are standing above its right ear. 
+Though the face's features are still discernable, eons of wear and tear by
+the harsh wind and sea spray have taken their toll, and the once majestic
+carving has assumed a rather haggard look.  
+~
+unused
+D NORTH 28925 0 0
+~
+North, the cliffs continue.
+~
+D EAST 28941 0 0
+~
+To the east you can see some sandy scrub land, and beyond it, some ruins.  
+~
+D SOUTH 28945 0 0
+~
+The huge carving continues to the south.
+~
+D WEST 0 0 0
+~
+To the west, the sea stretches out below.
+~
+D DOWN 0 0 0
+~
+Downwards, you can see a huge ear carved in to the sandstone. 
+~
+OWNER none~
+#28943
+In an Ancient Tunnel.~
+The tunnel here is worn smooth with age, and you can feel a relatively
+strong wind that has undoubtedly contributed to the wear on the walls.  The
+ground is slightly moist, and the walls are covered in a thin film of sea
+salt, crusted here after years of exposure to sea spray-laden air.  
+~
+unused
+D NORTH 0 0 0
+~
+The northern wall of the tunnel is covered with a thin film of salt.  
+~
+D EAST 28944 0 0
+~
+To the east, the tunnel continues in to darkness.  
+~
+D SOUTH 0 0 0
+~
+The southern wall of the tunnel is covered with a thin film of salt.  
+~
+D WEST 28971 0 0
+~
+To the west, the tunnel expands into a small room, and you can see the
+outside air clearly through it.  
+~
+D UP 0 0 0
+~
+The rounded ceiling of the tunnel is hewn roughly from sandstone.  
+~
+D DOWN 0 0 0
+~
+The floor of the tunnel is slightly damp.  
+~
+OWNER none~
+#28944
+A Turn in a Dark Tunnel.~
+~
+unused
+D NORTH 28972 0 0
+~
+~
+D WEST 28943 0 0
+~
+~
+OWNER none~
+#28945
+Above a Giant Face Carved into the Cliffs~
+Here, the cliffs come to a point in a single massive chunk of sandstone. 
+The stone was carved to look like a mans head, about thirty feet tall.  The
+face points to the southwest, and you are standing above the center of its
+forehead.  Though the face's features are still discernable, eons of wear
+and tear by the harsh wind and sea spray have taken their toll, and the once
+majestic carving has assumed a rather haggard look.  The face's nose seems
+carved such that it might be possible to climb down it.  
+~
+unused
+D NORTH 28942 0 0
+~
+To the north, the carving ends.
+~
+D EAST 28946 0 0
+~
+To the east, there is some sandy scrubland and beyond it, you can make out some ruins.
+~
+D SOUTH 0 0 0
+~
+To the south, the sea stretches seemingly for ever.
+~
+D WEST 0 0 0
+~
+To the west, the sea stretches seemingly for ever.
+~
+D DOWN 28971 I 0
+~
+Looking down, you see the arch of the face's nose. Maybe you could climb down it...
+~
+OWNER none~
+#28946
+The Top of a Giant Carving in the Cliffs~
+Here, the cliffs come to a point in a single massive chunk of sandstone. 
+The stone was carved to look like a man's head, about thirty feet tall.  The
+face points to the southwest, and you are standing above its left ear. 
+Though the face's features are still discernable, eons of wear and tear by
+the harsh wind and sea spray have taken their toll, and the once majestic
+carving has assumed a rather haggard look.  
+~
+unused
+D NORTH 28941 0 0
+~
+To the north, you see the edge of a light forrest.
+~
+D EAST 28947 0 0
+~
+To the east, you can see the beginings of a sand beach.
+~
+D SOUTH 0 0 0
+~
+To the south, the sea stretches for miles.
+~
+D WEST 28945 0 0
+~
+To the west, the carving continues.
+~
+D DOWN 0 0 0
+~
+Looking down, you see a huge ear carved into the sandstone.
+~
+OWNER none~
+#28947
+The End of the Cliffs~
+~
+unused
+D NORTH 28940 0 0
+~
+~
+D EAST 28948 0 0
+~
+~
+D SOUTH 28960 0 0
+~
+~
+D WEST 28946 0 0
+~
+~
+OWNER none~
+#28948
+Dummy Room~
+~
+unused
+D NORTH 28939 0 0
+~
+~
+D EAST 28949 0 0
+~
+~
+D SOUTH 28959 0 0
+~
+~
+D WEST 28947 0 0
+~
+~
+OWNER none~
+#28949
+Dummy Room~
+~
+unused
+D NORTH 28938 0 0
+~
+~
+D EAST 28950 0 0
+~
+~
+D SOUTH 28958 0 0
+~
+~
+D WEST 28948 0 0
+~
+~
+OWNER none~
+#28950
+Dummy Room~
+~
+unused
+D NORTH 28937 0 0
+~
+~
+D EAST 28951 0 0
+~
+~
+D SOUTH 28957 0 0
+~
+~
+D WEST 28949 0 0
+~
+~
+OWNER none~
+#28951
+Dummy Room~
+~
+unused
+D NORTH 28936 0 0
+~
+~
+D EAST 28952 0 0
+~
+~
+D SOUTH 28956 0 0
+~
+~
+D WEST 28950 0 0
+~
+~
+OWNER none~
+#28952
+Dummy Room~
+~
+unused
+D NORTH 28935 0 0
+~
+~
+D EAST 28953 0 0
+~
+~
+D SOUTH 28955 0 0
+~
+~
+D WEST 28951 0 0
+~
+~
+OWNER none~
+#28953
+Dummy Room~
+~
+unused
+D NORTH 28934 0 0
+~
+~
+D SOUTH 28954 0 0
+~
+~
+D WEST 28952 0 0
+~
+~
+OWNER none~
+#28954
+Dummy Room~
+~
+unused
+D NORTH 28953 0 0
+~
+~
+D WEST 28955 0 0
+~
+~
+OWNER none~
+#28955
+Dummy Room~
+~
+unused
+D NORTH 28952 0 0
+~
+~
+D EAST 28954 0 0
+~
+~
+D WEST 28956 0 0
+~
+~
+OWNER none~
+#28956
+Dummy Room~
+~
+unused
+D NORTH 28951 0 0
+~
+~
+D EAST 28955 0 0
+~
+~
+D SOUTH 28965 0 0
+~
+~
+D WEST 28957 0 0
+~
+~
+OWNER none~
+#28957
+Dummy Room~
+~
+unused
+D NORTH 28950 0 0
+~
+~
+D EAST 28956 0 0
+~
+~
+D SOUTH 28964 0 0
+~
+~
+D WEST 28958 0 0
+~
+~
+OWNER none~
+#28958
+Dummy Room~
+~
+unused
+D NORTH 28949 0 0
+~
+~
+D EAST 28957 0 0
+~
+~
+D SOUTH 28963 0 0
+~
+~
+D WEST 28959 0 0
+~
+~
+OWNER none~
+#28959
+Dummy Room~
+~
+unused
+D NORTH 28948 0 0
+~
+~
+D EAST 28958 0 0
+~
+~
+D SOUTH 28962 0 0
+~
+~
+D WEST 28960 0 0
+~
+~
+OWNER none~
+#28960
+Dummy Room~
+~
+unused
+D NORTH 28947 0 0
+~
+~
+D EAST 28959 0 0
+~
+~
+OWNER none~
+#28961
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#28962
+Dummy Room~
+~
+unused
+D NORTH 28959 0 0
+~
+~
+D EAST 28963 0 0
+~
+~
+OWNER none~
+#28963
+Dummy Room~
+~
+unused
+D NORTH 28958 0 0
+~
+~
+D EAST 28964 0 0
+~
+~
+D SOUTH 28967 0 0
+~
+~
+D WEST 28962 0 0
+~
+~
+OWNER none~
+#28964
+Dummy Room~
+~
+unused
+D NORTH 28957 0 0
+~
+~
+D EAST 28965 0 0
+~
+~
+D SOUTH 28966 0 0
+~
+~
+D WEST 28963 0 0
+~
+~
+OWNER none~
+#28965
+Dummy Room~
+~
+unused
+D NORTH 28956 0 0
+~
+~
+D WEST 28964 0 0
+~
+~
+OWNER none~
+#28966
+Dummy Room~
+~
+unused
+D NORTH 28964 0 0
+~
+~
+D SOUTH 28968 0 0
+~
+~
+D WEST 28967 0 0
+~
+~
+OWNER none~
+#28967
+Dummy Room~
+~
+unused
+D NORTH 28963 0 0
+~
+~
+D EAST 28966 0 0
+~
+~
+OWNER none~
+#28968
+Dummy Room~
+~
+unused
+D NORTH 28966 0 0
+~
+~
+D SOUTH 28969 0 0
+~
+~
+OWNER none~
+#28969
+Dummy Room~
+~
+unused
+D NORTH 28968 0 0
+~
+~
+D SOUTH 28970 0 0
+~
+~
+OWNER none~
+#28970
+Dummy Room~
+~
+unused
+D NORTH 28969 0 0
+~
+~
+OWNER none~
+#28971
+In the Mouth of a Giant Sandstone Face~
+You are standing in the mouth of a huge face carved into a sheer
+sandstone cliff.  The floor of the cavern is rough hewn sandstone, and there
+are some small shelves carved onto the walls.  Looking out over the ocean,
+you gaze past the face's teeth, which are well rounded from the strong,
+constant wind which blows inward.  Obvious care and effort were taken in the
+making of this relic, but its magesty is has been tarnished by the ravages
+of time.  A rather thick layer of crusted salt covers everything, brought in
+by the heavy seay below.  Through this crust, some writing is barely
+noticable on the wall.  It might be possible to climb up and out of here,
+though it looks perilous.
+~
+unused
+D NORTH 0 0 0
+~
+North of here, the age worn sandstone is covered with a film of sea salt.  
+~
+D EAST 28943 0 0
+~
+A small tunnel stretches into darkness to the east.
+~
+D SOUTH 0 0 0
+~
+The sea stretches out, below you and to the south.
+~
+D WEST 0 0 0
+~
+The sea stretches out, below you and to the west.
+~
+D UP 28945 I 0
+~
+~
+E writing~
+Janest and Rheegar, in love.  Day of Toil, Month of Triumph, 1561.  
+~
+OWNER none~
+#28972
+Dummy Room~
+~
+unused
+D EAST 28973 0 0
+~
+~
+D SOUTH 28944 0 0
+~
+~
+OWNER none~
+#28973
+Dummy Room~
+~
+unused
+D NORTH 28974 0 0
+~
+~
+D WEST 28972 0 0
+~
+~
+OWNER none~
+#28974
+Dummy Room~
+~
+unused
+D EAST 28975 0 0
+~
+~
+D SOUTH 28973 0 0
+~
+~
+OWNER none~
+#28975
+Dummy Room~
+~
+unused
+D WEST 28974 0 0
+~
+~
+D UP 28929 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 28918 TO 28918 GLIMIT 30 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

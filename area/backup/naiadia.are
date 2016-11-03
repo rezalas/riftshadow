@@ -1,0 +1,5899 @@
+#AREA
+naiadia.are~
+Naiadia~
+Kyriss~
+1 25
+20400 20599
+normal
+temperate
+0
+1
+Kyriss~
+
+#MOBS
+#20400
+cat gray~
+a grey tabby cat~
+A medium, gray tabby cat is happily chasing a butterfly.
+~
+Beloved pet of the Gods, this medium sized, gray tabby spends his
+days napping or playing with his best buddy.
+~
+-300 0 100 cat~
+1 1d1+20 1d3+0 0 100 claw
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+ACT STAY_AREA
+OFF DIRT_KICK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF WATERBREATH
+IMM MAGIC
+IMM WEAPON
+#20401
+guildmaster~
+the guildmaster~
+Your guildmaster offers his expert knowledge in the magical arts.
+~
+Dressed in long, flowing robes, he paces back and forth in near
+agitation, mumbling distractedly to himself.  You strain to catch what he's
+saying, but can't make heads or tails of it.  Suddenly he stops, utters a
+few words causing something strange to happen, and then continues on with
+his pacing.
+~
+400 0 100 human~
+40 1d1+30000 5d8+5 0 100 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+ACT MAGE
+ACT NOPURGE
+ACT GAIN
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#20402
+guildmaster~
+the guildmaster~
+Your guildmaster offers his expert knowledge in the tactical arts.
+~
+Dressed in tight fitting clothes to allow for easy movement during
+training exercises, he is of a moderate build, well muscled and extremely
+agile.  His every movement is concise and to the point, for he does
+not believe in wasting energies that could be better spent on his
+studies and teachings.
+~
+0 0 100 human~
+40 1d1+30000 5d8+5 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+ACT NOPURGE
+ACT GAIN
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+CLASS warrior none none 
+#20404
+guard mermaid guildguard~
+a mermaid guardian~
+A tall mermaid standing here, protecting the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20405
+channeler elementalist guard guildguard~
+the Channler's & Elementalist's Guild Guard~
+The Channler's & Elementalist's Guild Guard stands guard over the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20406
+necromancer guildguard guard~
+the Necromancer's Guildguard~
+The Necromancer's Guildguard stands guard over the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20409
+warrior guildguard guard~
+the Warrior's Guildguard~
+The Warrior's Guildguard stands guard over the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20410
+ranger guildguard guard~
+the Ranger's Guildguard~
+A powerful looking man in camouflage green guards the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20411
+guildguard guard merman~
+a raven-haired merman~
+A raven haired merman is here, protecting the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20414
+guardsman guard gate~
+the gate's guardsman~
+The gate's guardsman stands here watching the gate.
+~
+Charged with protecting the gates of Naiadia, this guard carefully
+watches all who enter, ever prepared to defend against any who show
+agression toward the inhabitants of the city.
+~
+0 0 100 human~
+20 3d9+333 2d8+5 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOALIGN
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF KICK
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#20425
+guildguard guard~
+a white-haired merman~
+A white haired merman standing here, protecting the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20426
+elite guardsman guard~
+an elite guardsman~
+An elite guardsman patrols the city.
+~
+Militant in posture - head high, shoulders back and stomach in, known
+to all as the absolute best of the best, this guard stands tall and
+proud, ready to defend Naiadia at all costs.
+~
+0 0 100 human~
+30 10d10+1000 4d6+9 0 100 pound
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT NOALIGN
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF KICK
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#20427
+chief guardsman guard~
+the chief of the guardsman~
+The chief of the guardsman busies himself taking care of paperwork.
+~
+A very busy man, he is second in command of the town.  He enforces
+the laws with an iron fist, yet rarely has to pull his weight as
+Naiadia is almost completely violence and crime-free.  With
+incredible astuteness, he handpicks all his guardsman, assuring
+that only the best of the best uphold the laws of this peaceful town.
+~
+0 0 100 human~
+45 10d111+5200 5d8+25 0 100 crush
+0 0 0 0
+sitting male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOALIGN
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF KICK
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#20428
+mayor mermaid~
+a mermaid mayor~
+A mermaid wearing the royal signet greets you with a warm smile.
+~
+Lustrous, raven black hair flows down her back, gently framing her
+heart-shaped face.  She watches you with a gentle compassion shining in her
+midnight blue eyes.  A born learder, she is the perfect Mayor for this fair
+town, ever ready to lend a hand and make any changes necessary for
+the betterment of the lives of those who gladly make their home here.
+~
+0 0 100 human~
+20 3d9+633 2d8+5 0 100 slap
+0 0 0 0
+standing female affluent
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+#20433
+waitress mermaid~
+a mermaid waitress~
+The waitress smiles broadly at you and asks you for your order.
+~
+She smiles flirtatiously and tosses her long, golden hair over her
+shoulder in a teasing manner.  With a slightly pronounced swing to her hips,
+she sashays between the the tables, taking orders and serving meals.
+~
+0 0 100 human~
+20 5d10+450 3d6+6 0 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+#20435
+armorer merman~
+a merman armourer~
+The armorer waits for you to make your selection.
+~
+He spends his days trying on the new armor, making sure there are no
+flaws or defects.  Although there is very little call for armor in Naiadia,
+he is extremely proud of his shop.  Most of his business comes from
+travelers passing through the area, which is perfectly allright with him.
+~
+0 0 100 human~
+23 5d10+850 3d6+6 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+#20437
+guildguard guard~
+a guild guard~
+A guildguard stands here defending the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20438
+guardsman guard~
+a guardsman~
+A guardsman strolls around the city looking for signs of trouble.
+~
+Entrusted with the general protection of Naiadia, this guard assists
+newcomers in finding their way; defends citizens against the rare, unwanted
+intrusions of passers through; and routinely patrol the city for trouble.
+~
+0 0 100 human~
+10 2d8+134 2d4+2 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF KICK
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#20440
+banker eli~
+Eli, the Naidian banker~
+The banker waits to help you with your transactions.
+~
+Thin and pale, he has spent his entire life indoors, studying and
+formulating mathematical equations and keeping the accounts of the bank.
+His only hobby is counting, which he loves more than anything else,
+especially when it's other people's money.
+~
+0 0 100 human~
+23 5d10+450 3d6+6 0 100 smash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#20446
+trainer~
+the trainer~
+The trainer stands ready to train you for your future adventures.
+~
+Well disciplined in both magic and tactics, he has spent his entire life,
+from early childhood on up, studying to become a master.  It has always been
+his desire to train others and he takes great pride in his work.
+~
+0 0 100 human~
+40 1d1+30000 5d8+5 0 100 smash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT MAGE
+ACT NOPURGE
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+CLASS warrior none none 
+#20447
+weapon smith merman~
+a merman weaponsmith~
+The weapon's smith shows you his wide assortment of armaments.
+~
+Barbarically dressed, he is all muscle and brawn.  His love of warfare is
+only exceeded by his love of his wife, Xuria.  For her, he has given up that
+life, if not the mode of dress, to take on the position as the town's
+weapon's smith; although he is still prone to fits of wild antics.  The only
+adornment he wears is a beautifully engraved wedding band signifying their
+eternal love for one another.
+~
+0 0 100 human~
+52 5d10+7450 6d6+40 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#20454
+naiadian woman~
+a Naiadian woman~
+A Naiadian woman greets you warmly.
+~
+A gentle woman by nature, she would never even consider leaving
+Naiadia for parts known or unknown.  Life for her is simple and
+joyous, loving and happy.  She takes great pride in the town in
+which she lives and the family she has raised.
+~
+0 0 100 human~
+10 2d10+150 1d10+3 0 100 slap
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF KICK
+#20462
+naiadian man~
+a Naiadian man~
+A Naiadian man gallantly tips his hat to you.
+~
+A scholar by nature and by lack of need to be anything else, he lives
+an easy, comfortable life here in his native land.  He makes his
+living by the sea, easily supporting his family with plenty left
+over for any guests that drop by expectedly or unexpectedly.
+~
+0 0 100 human~
+15 3d9+270 2d6+3 0 100 pound
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF DIRT_KICK
+OFF TRIP
+#20463
+healer~
+the Naiadian healer~
+The Healer of Naiadia is happy to sell you a cure.
+~
+He is a simple man who enjoys leading a simple life.  Although not
+from Naiadia, he has gladly made his home within its beautiful walls.
+With a natural flare for the healing arts, he makes his living
+selling cures to any who seek him out.
+~
+0 0 100 human~
+80 50d10+14500 6d6+30 0 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT HEALER
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#20464
+naiadian child~
+a Naiadian child~
+A Naiadian child smiles happily.
+~
+Happy and carefree, this native born child has not a worry in the
+world, as Naiadia has almost no crime or violence.
+~
+0 0 100 human~
+5 2d7+71 1d7+1 0 100 none
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+#20472
+janitor~
+a janitor~
+The janitor strolls about the town, picking up the rare pieces of litter.
+~
+Extremely proud of the town in which he was born and raised, he has
+dedicated his life to keeping it beautiful, as is very obvious by the lack
+of debris anywhere in the city.
+~
+0 0 100 human~
+1 2d6+13 1d5+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+OFF TRIP
+#20479
+sailor~
+a sailor~
+A sailor carefully refinishes a damaged boat.
+~
+A shock of white hair offsets cornflower blue eyes lined liberally
+with laugh lines.  His hands, badly caloused from years of manual
+labor, move knowledgeably over the pieces of wood he is preparing
+to use to make a new boat, as he happily whistles a jaunty little
+tune to himself.
+~
+0 0 100 human~
+23 5d10+750 3d6+6 0 100 crush
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+#20480
+merchant magic~
+a magic merchant~
+The magic's merchant proudly shows you her wares.
+~
+Born and raised here in Naiadia, she thoroughly enjoys collecting
+rare and unusual magical items for her shop.  For those who don't
+know her, her utterly contented smile seems a bit strange, but she
+is so much in love with her husband, Sulfur, that the world is
+simply perfect to her.  She wears a single piece of jewelry, a
+beautifully engraved wedding ring that symbolizes their eternal
+love for one another.
+~
+0 0 100 human~
+53 5d10+7450 7d7+35 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#20486
+shopkeeper~
+a shopkeeper~
+The shopkeeper smiles at you as she stocks the shelf.
+~
+Lustrous black hair flows down to her waist, gently framing her
+sinuous body.  Dark, violet eyes smile up at you in greeting as
+she moves from shelf to shelf, straightening any items she finds
+out of place as she restocks the shelves.
+~
+0 0 100 human~
+53 5d10+7450 7d7+35 0 100 punch
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#20487
+antique's dealer~
+an antique dealer~
+The antique's dealer bustles about dusting off her treasures.
+~
+Salt and pepper hair has been severely pulled back in a bun to avoid
+getting entangled in some of the more intricate antiques as she dusts and
+polishes them.  Despite this, her face is warm and welcoming and she loves
+to tell customers the stories behind the items they show an interest
+in.
+~
+0 0 100 human~
+53 5d10+7450 7d7+35 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#20491
+petshop girl~
+a small mermaid~
+A young girl moves from tank to tank, feeding the fish.
+~
+Gentle and kind, she loves all animals and can never resist aiding one in
+distress.  When the Pet Store opened, she jumped at the chance to make her
+living doing what she loved the most and to care for such unusual animals.
+~
+0 0 100 human~
+23 5d10+450 3d6+6 0 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#20492
+salesclerk clerk merman~
+a merman saleclerk~
+The salesclerk offers to show you the latest styles.
+~
+With the skilled hands of a surgeon, he can tan a hide in record time.
+He worked for many years in arctic climates, then decided he could do the
+same job in warmer climates where he could catch some sun in between
+treatments, instead of shivering before a tiny fire.
+~
+0 0 100 human~
+53 5d10+7450 7d7+35 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#20493
+merchant merman~
+a merman merchant ~
+The owner busies himself making up a seaweed salad.
+~
+Born and raised here in Naiadia, he was never a child who had to be
+pushed to eat his veggies.  On the contrary, his parents had the
+hardest time getting him to eat meat.  When he reached adulthood,
+he decided to open a restuarant where all they served was foods
+grown from the earth, and some grown underwater, for other people
+like himself.
+~
+0 0 100 human~
+53 5d10+7450 7d7+35 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+#20497
+waitress~
+a mermaid waitress~
+A waiter moves silently from table to table, serving his native food.
+~
+Small of stature, she moves unobstrusively about the room, blending almost
+perfectly into the background.  She comes from a far off, overpopulated land
+and has happily settled here, serving the people of Naiadia his native food.
+~
+0 0 100 human~
+23 5d10+450 3d6+6 0 100 punch
+0 0 0 0
+standing female moderate
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+#20498
+bartender merman~
+a golden-haired merman bartender~
+The bartender waits to take your order.
+~
+Old and weathered, his skin is like toughened rawhide from a life
+spent at sea.  Retired now, he's content to kick back and relax
+when he's not serving drinks.  His favorite pasttime is telling
+stories of his younger, wilder days to anyone who enjoys a good tale.
+~
+0 0 100 human~
+23 5d10+450 3d6+6 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+#20499
+jeweler merman~
+a merman jeweller~
+The jeweler carefully sets a diamond in an engagement ring.
+~
+Skin wrinkled with age, he squints blissfully at the world through
+his favorite jewelers loupe.  Known the world over, he is renowned
+for his ability to cut stones to their maximum potential, creating
+masterpieces of rare and exceptional beauty.
+~
+0 0 100 human~
+60 5d10+9450 7d7+25 0 100 punch
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF TRIP
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+#20516
+antipaladin guildguard guard~
+The Anti-Paladin's Guildguard~
+The Anti-Paladin's Guildguard stands here defending the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20517
+guildguard guard paladin~
+the Paladin's Guildguard~
+The Paladin's Guildguard is here watching over the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20518
+cleric monk guildguard guard~
+the Cleric's & Monk's Guildguard~
+The Cleric's & Monk's Guildguard stands here defending the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20522
+guildguard guard~
+Eldrad~
+A guildguard stands here defending the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20523
+assassin guildguard guard~
+the Assassin's Guildguard~
+The Assassin's Guildguard stands guard over the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20524
+thief guildguard guard~
+a Thieves' Guildguard~
+The Thieves's Guildguard stands guard over the guild.
+~
+Tall and proud, he stands sentinel before the guild, making sure no
+unwanted guests enter.  He thoroughly enjoys his job and takes his duties
+very seriously.  He would as soon be slain on the spot as be caught slacking
+off.
+~
+0 0 100 unique~
+28 25d10+4000 4d4+30 0 100 none
+0 0 0 0
+standing male moderate
+A A giant
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM DISEASE
+CLASS warrior none none 
+#20526
+guildmaster~
+the guildmaster~
+Your guildmaster offers her expert knowledge in the magical arts.
+~
+Dressed in long, flowing robes, she paces back and forth in near
+agitation, mumbling distractedly to herself.  You strain to catch what she's
+saying, but can't make heads or tails of it.  Suddenly she stops, utters a
+few words causing something strange to happen, and then continues on with
+her pacing.
+~
+0 0 100 human~
+40 1d1+30000 5d8+5 0 100 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+ACT MAGE
+ACT NOPURGE
+ACT GAIN
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#20529
+field mouse~
+a field mouse~
+A field mouse scurries admist the sunflower stalks.
+~
+Forever in seach of food, this tiny, brown mouse scurries about,
+collecting sunflower seeds and any crumbs dropped by passersby.
+~
+0 0 100 dog~
+3 1d6+24 1d3+2 0 100 bite
+0 0 0 0
+standing male none
+0 Q tiny
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+#20530
+guildmaster~
+the guildmaster~
+Your guildmaster offers her expert knowledge in the tactical arts.
+~
+Dressed in tight fitting clothes to allow for easy movement during
+training exercises, she is of a moderate build, well toned and
+extremely agile.  Her every movement is concise and to the point,
+for she does not believe in wasting energies that could be better
+spent on her studies and teachings.
+~
+0 0 100 human~
+40 1d1+30000 5d8+5 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+ACT NOPURGE
+ACT GAIN
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+CLASS warrior none none 
+#20532
+gardener~
+a merman gardener~
+The gardener carefully tends the flowers, keeping the weeds at bay.
+~
+She truly has a green thumb; everything she touches grows, almost as
+if by magic.  With loving hands, she tends to the gardens like a
+mother tending to her children.
+~
+0 0 100 human~
+20 3d9+333 2d8+5 0 100 beating
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF TRIP
+#20540
+albatross pet~
+an albatross~
+An albatross glides overhead, waiting to serve its master.
+~
+Wings spread ten feet wide, it soars gracefully overhead.  It listens
+aptly, careful not to miss its master's call.
+~
+0 0 100 water fowl~
+20 4d9+325 4d4+5 0 100 peckb
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF BERSERK
+OFF FADE
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+AFF SLOW
+RES MAGIC
+RES LIGHTNING
+#20541
+seagull~
+a seagull~
+A seagull flies over your head, waiting to serve its master.
+~
+Its shrill cries can be heard a great distance off as is searches for
+food, waiting for its master's call.
+~
+0 0 100 water fowl~
+12 2d5+3 6d10+0 0 100 peck
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF FADE
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+AFF SLOW
+RES MAGIC
+RES LIGHTNING
+#20542
+sea otter~
+a sea otter~
+A sea otter looks for something to play with while it waits to serve its master.
+~
+As playful as a small child, everything movable and within its reach is a
+toy to it.  It rolls around, playing with a small object, while it awaits
+its master's command.
+~
+0 0 100 human~
+15 4d9+205 2d8+3 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF DODGE
+OFF FAST
+OFF TAIL
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DARK_VISION
+AFF WATERBREATH
+RES MAGIC
+#20543
+seal~
+a seal~
+A sleek looking seal waits to do its master's bidding.
+~
+Sleek black skin glistens in the light as its sinuous body moves with
+amazing grace.  It stands beside its master, ever ready to do whatever is
+needed of it.
+~
+0 0 100 human~
+30 10d61+416 5d6+15 0 100 charge
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF BERSERK
+OFF DODGE
+OFF TAIL
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DARK_VISION
+AFF WATERBREATH
+RES MAGIC
+#20544
+walrus~
+a walrus~
+A walrus stands sentinel, guarding its master.
+~
+Covered in prickly whiskers, with tusks nearly grazing the ground, it
+stands sentinel by its master, awaiting its next order.
+~
+0 0 100 human~
+45 10d144+800 5d9+22 0 100 crush
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF TAIL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DARK_VISION
+AFF WATERBREATH
+RES MAGIC
+#20545
+sandpiper~
+a sandpiper~
+A sandpiper skitters about, awaiting its masters command.
+~
+It darts all about, with skillful grace, avoiding passersby, yet
+somehow managing to never stray far from its master.
+~
+0 0 100 water fowl~
+5 1d17+42 2d3+2 0 100 peck
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF FADE
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+AFF SLOW
+RES MAGIC
+RES LIGHTNING
+#20548
+lady sea ranger~
+a lady sea-ranger~
+A beautiful lady in sea-blue clothing is meditating here.
+~
+This woman regards you with silent consideration, neither judging nor
+caring about your presence.  She is prefectly in harmony with her
+surroundings, here on the small island in the middle of the vast sea.
+~
+0 0 100 human~
+57 50d10+6500 8d7+75 0 100 nature
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#20599
+cat orange~
+a large orange cat~
+A large, orange tabby is ready to cause some mischief.
+~
+Beloved pet of the Gods, this large, orange tabby spends his days napping
+or playing with his best buddy.
+~
+0 0 100 cat~
+1 1d1+100 1d3+0 0 100 claw
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+ACT STAY_AREA
+OFF DIRT_KICK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF WATERBREATH
+IMM MAGIC
+IMM WEAPON
+#0
+
+
+
+#OBJS
+#20400
+key respite~
+a Key of Respite~
+A Key of Respite rests on the ground.~
+key
+iron~
+0 0 0 0 0
+99 0 1000000 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20401
+helm helmet coral~
+an openfaced coral helm~
+A helm of glistening white coral sits here.~
+armor
+coral~
+6 5 5 6 0
+30 5 9000 P
+WEAR TAKE
+WEAR HEAD
+ITEM ROTDEATH
+APPLY HP 20
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#20402
+pearl bracer~
+a pearl bracer~
+A bracer made from a single pearl is here.~
+armor
+pearl~
+5 5 5 5 0
+15 1 790 P
+WEAR TAKE
+WEAR WRIST
+ITEM ROTDEATH
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#20403
+shield oyster~
+an oyster shell shield~
+The top half of a large oyster has been fashioned into a shield.~
+armor
+oyster~
+4 4 5 4 0
+14 4 2575 P
+WEAR TAKE
+WEAR SHIELD
+ITEM ROTDEATH
+APPLY CON 2
+LIMIT 0
+TIMER 0
+
+#20404
+gauntlets ivory~
+a pair of ivory gauntlets~
+Thick gloves fashioned from the tusks of walruses lay here.~
+armor
+ivory~
+4 3 3 4 0
+15 5 415 P
+WEAR TAKE
+WEAR HANDS
+ITEM ROTDEATH
+APPLY INT 1
+APPLY SAVES -3
+LIMIT 0
+TIMER 0
+
+#20405
+breast breastplate armor plate chain chainmail scale serpent~
+a sea serpent scale chainmail breastplate~
+A cuirass fashioned from the scales of a sea serpent hangs here.~
+armor
+sea serpent scale~
+11 10 11 10 0
+20 20 18000 P
+WEAR TAKE
+WEAR BODY
+ITEM ROTDEATH
+APPLY HP 14
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#20406
+steamed lobster~
+steamed lobster~
+A steamed lobster is here.~
+food
+lobster~
+25 45 0 0 0
+0 2 32 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20407
+king crab legs~
+king crab legs~
+A platter of king crab legs is here.~
+food
+crab~
+25 38 0 0 0
+0 3 23 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20408
+popcorn shrimp~
+popcorn shrimp~
+A bowl of popcorn shrimp is here.~
+food
+shrimp~
+25 26 0 0 0
+0 1 12 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20409
+raw oysters~
+raw oysters~
+A dozen raw oysters is here.~
+food
+oysters~
+25 32 0 0 0
+0 1 18 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20410
+silver scimitar~
+a silver scimitar~
+A silver scimitar lays forgotten on the ground.~
+weapon
+silver~
+sword 2 9 slice 0
+10 10 490 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#20411
+silver shield~
+a silver shield~
+A silver shield lays on the ground, half covered in dirt.~
+armor
+silver~
+5 5 5 2 0
+10 8 710 P
+WEAR TAKE
+WEAR SHIELD
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#20412
+suit silver chainmail~
+a suit of silver chainmail~
+A suit of silver chainmail lays haphazardly on the ground.~
+armor
+silver~
+6 6 6 3 0
+10 5 1280 P
+WEAR TAKE
+WEAR BODY
+APPLY HITROLL -1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#20413
+golden scimitar bejewelled hilt~
+a golden scimitar with a bejewelled hilt~
+A golden scimitar with a bejewelled hilt glitters brightly on the ground.~
+weapon
+gold~
+sword 5 6 slice 0
+30 10 5000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#20414
+golden shield naiadian crest~
+a golden shield bearing the Naiadian crest~
+A golden shield bearing the Naiadian crest lays on the ground.~
+armor
+gold~
+8 8 8 4 0
+30 8 6000 P
+WEAR TAKE
+WEAR SHIELD
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#20415
+suit golden chainmail naiadian crest~
+a suit of golden chainmail bearing the Naiadian crest~
+A suit of golden chainmail bearing the Naiadian crest lays in a shiny heap.~
+armor
+gold~
+9 9 9 5 0
+30 5 7000 P
+WEAR TAKE
+WEAR BODY
+APPLY HITROLL -2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#20416
+gardening shears~
+a pair of gardening shears~
+A pair of gardening shears lays unattended in the dirt.~
+weapon
+iron~
+weapon 3 8 smash 0
+20 8 2500 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+LIMIT 0
+TIMER 0
+
+#20417
+janitor's broom~
+a janitor's broom~
+A janitor's broom waits to be used.~
+weapon
+wood~
+weapon 3 2 none 0
+1 5 250 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#20418
+mayor's raille's ring~
+the mayor's ring~
+Raille's ring is laying in the dirt.~
+armor
+platinum~
+2 2 2 0 0
+20 1 2500 P
+WEAR TAKE
+WEAR FINGER
+APPLY INT 1
+APPLY DEX 1
+APPLY MANA 15
+LIMIT 0
+TIMER 0
+
+#20419
+ceremonial scimitar~
+a platinum scimitar encrusted with emeralds~
+A beautifully crafted scimitar of ceremonies rests in the dirt.~
+weapon
+platinum~
+weapon 7 6 slice CD
+40 25 10000 P
+WEAR TAKE
+WEAR WIELD
+ITEM NODROP
+ITEM NOREMOVE
+APPLY HITROLL 3
+APPLY DAMROLL 3
+LIMIT 6
+TIMER 0
+
+#20420
+ceremonial helm~
+a platinum helm encrusted with emeralds~
+A ceremonial helm bearing the Naiadian crest lays forgotten in the dirt.~
+armor
+platinum~
+10 10 10 10 0
+40 14 12000 P
+WEAR TAKE
+WEAR HEAD
+APPLY MANA 25
+APPLY HP 25
+APPLY CON 1
+LIMIT 10
+TIMER 0
+
+#20421
+cookie chocolate chip~
+a large, chocolate chip cookie~
+A large, chocolate chip cookie is still hot from the oven.~
+food
+dough~
+25 100 0 0 0
+1 0 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20422
+shovel~
+a large shovel for HE who needs to get HIMSELF out of the doghouse~
+A large shovel is here for HE who needs to get HIMSELF out of the doghouse.~
+weapon
+iron~
+weapon 20 20 suction A
+100 10 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+LIMIT 0
+TIMER 0
+
+#20423
+plaque honor~
+a Plaque of Honor~
+A beautifully engraved plaque has been carved into the tree, honoring Drachnor.~
+treasure
+wood~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E speechless~
+Let it be known to one and all that on the Day of the Bull, 29th
+Month
+of Battle, Drachnor Durkan made Zane Morin Tedronai speechless.  Xara
+Whitestaff and Dargon Westmyer bore witness to this amazing event.
+~
+
+#20424
+white robe~
+a flowing white robe~
+A flowing white robe shimmers with the light of goodness.~
+armor
+goodness~
+500 500 500 500 0
+99 0 1000000 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY DAMROLL 25
+APPLY HITROLL 25
+LIMIT 0
+TIMER 0
+
+#20425
+shovel~
+a large shovel for SHE who needs to get HERSELF out of the doghouse~
+A large shovel is here for SHE who needs to get HERSELF out of the doghouse~
+weapon
+iron~
+weapon 20 20 suction A
+100 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+LIMIT 0
+TIMER 0
+
+#20426
+Vol's Shadow Sword Deathbringer~
+'Deathbringer'~
+Vol's Shadow Sword, Deathbringer is here.~
+weapon
+diamond steel~
+sword 7 6 slash A
+40 0 500 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+APPLY DAMROLL 3
+APPLY HITROLL 3
+LIMIT 0
+TIMER 0
+
+#20427
+desk~
+a large, teakwood desk~
+A large, teakwood desk sits in the center of the room.~
+furniture
+teakwood~
+1 200 AD 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20428
+mayor's desk~
+the Mayor's desk~
+Papers and legal document are carefully stacked on the Mayor's desk
+.~
+container
+wood~
+100 AC 0 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20429
+a reflecting pool~
+a reflecting pool~
+A tranquil reflecting pool.~
+portal
+unknown~
+1000000 0 0 9345 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E pool~
+This shallow looking pool sits tranquil in the midst of the gardens.  Its
+undisturbed waters reflect better than any mirror yet invented.
+Oddly
+enough, you cannot see the bottom of the pool.
+~
+
+#20433
+table benches~
+a long, wooden table~
+A wooden table with a bench on each side is badly scarred from over use.~
+furniture
+wood~
+6 2500 DG 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20434
+marker monument stone~
+a stone marker~
+A beautiful monument stands here listing the ships lost at sea.~
+treasure
+stone~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20440
+couch~
+a small, plush couch~
+A small, plush couch rests against the east wall.~
+furniture
+cotton~
+3 500 EH 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20447
+barrels~
+barrels~
+Large barrels filled with weapons are scattered around the store.~
+trash
+wood~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20453
+wrought iron bench~
+a wrought iron bench~
+A wrought iron bench characterizes life under the sea.~
+furniture
+iron~
+5 1000 EH 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20463
+magnolia tree~
+a magnolia tree~
+A magnolia tree tickles your senses with its delicate fragrance.~
+treasure
+cellulose~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20464
+healing scroll~
+a healing scroll~
+A healing scroll is here.~
+scroll
+paper~
+30 'cure serious' 'reserved' 'reserved' 'reserved'
+20 1 4200 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20469
+vegetarian pizza~
+vegetarian pizza~
+A vegetarian pizza is here.~
+food
+vegetables~
+25 45 0 0 0
+0 2 125 P
+WEAR TAKE
+WEAR HOLD
+ITEM INVENTORY
+LIMIT 0
+TIMER 0
+
+#20472
+pit~
+a pit~
+A substantial sized pit awaits your generosity.~
+container
+brick~
+10000 0 0 1000 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20473
+breastplate plate omniscience~
+the Breastplate of Omniscience~
+The Breastplate of Omniscience shimmers with power.~
+armor
+omniscience~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20474
+ring intuition~
+the Ring of Intuition~
+The Ring of Intuition dazzles the eye.~
+armor
+intuition~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20475
+crown cognizance~
+the Crown of Cognizance~
+The Crown of Cognizance has been carefully set here.~
+armor
+cognizance~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20476
+slippers wisdom~
+the Slippers of Wisdom~
+The Slippers of Wisdom are lying here.~
+armor
+wisdom~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR FEET
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20477
+bracelet insight~
+the Bracelet of Insight~
+The Bracelet of Insight glitters brightly.~
+armor
+insight~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR WRIST
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20478
+dagger learned~
+the Dagger of the Learned~
+The Dagger of the Learned is ready to impart some wisdom.~
+weapon
+knowledge~
+dagger 0 0 drain G
+0 1 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20479
+ancient tome~
+"Bonds of Malevolence"~
+Volume II of an ancient tome, "Bonds of Malevolence" is laying here~
+treasure
+paper~
+0 0 0 0 0
+0 2 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E bonds~
+In the Age of Malice while the Lord of Hate's strength increased, another
+force, more powerful took root and began to grow.  Through the eyes of
+a
+child the mind of a man saw the misery of the world.  Growing and maturing
+in that cheerless time he was impressed into the dark order of knights that
+conquered every inch of land they could see.  He fought valiantly for the
+knighthood but refused to impose the suffering and torture on those he cut
+down as his brothers were wont to do.  Believing in letting death give them
+safety from the harshness of the world so they may be at final peace.  As
+the people continued to suffer at the hands of Hate, through his knights and
+demons, the young mans empathy for the fallen increased.  Believing death to
+be a release, a blessed gift, to be reserved for those in pain and suffering
+or as a reward for a long life, he revolted at the slaughter of the young
+and innocent.  Love, through his gifts to the people, drew this man
+in
+giving him the courage and hope to stand against the evil that swept
+the
+land.  Facing Hate in single combat he forced the God to his knees.  As he
+drew to take the final killing blow he stopped.  Feeling the
+omnipotent
+being was unworthy of such a precious boon the young mortal imprisoned him
+in his dark home below the earth.  The man mortally wounded in his
+trial
+expired shortly after.  Love in his gratitude gave him immortal life giving
+him reign over the powers that he used with such care.  Hate sat in
+the
+depths of oblivion simmering and fuming at his defeat.  Constantly fighting
+his bonds he manages to escape from time to time to wreak havoc on
+the
+mortal land and the immortals that seek to imprison him.  Always
+seeking
+revenge on the last face he sees before being forced to return to the abyss.
+~
+
+#20480
+ancient tome~
+"To Suffer Loss"~
+Volume III of an ancient tome, "To Suffer Loss" is laying here.~
+treasure
+paper~
+0 0 0 0 0
+0 2 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E suffer~
+Peace befell the mortal world after the imprisonment of Hate.  Love
+watched his children grow prosperous turning to him less and less as they
+became self sufficiant.  There came a time when they resolved
+disputes
+without turning to thier father.  Love was both pleased and saddened
+by
+thier independence.  In his devotion decided to leave the men and elves to
+thier own devices, so that they may make thier own futures and use his gifts
+by thier own choosing.  Bidding farewell to his father and his children he
+fell into an eternal sleep and returned to the void that created him.  Chaos
+was saddened by the departure of his golden child.  Wandering the lands his
+tears salted the earth, and were carried on the winds to the seas, giving
+them life.  The elemental powers pitied the Lord and tried thier mightiest
+to ease his burden.  A young sylph, fragile and beautiful, made from
+the
+delicate summer breezes, consoled Chaos reminding him of the gifts that Love
+left behind.  The lands and the seas and all they contain, all to please his
+eye and his heart, reminding him that his son was still there in his
+children Chaos, his spirits raised thought deeply on the words of the maid.
+Slowly in his mind a shadow emerged a swirl of light and dark.  Allowing the
+shadow to take form Chaos brought forth Knowledge making him the imbodiment
+of both of his eldest sons, enlightened by the powers of the dark and the
+light.  Knowledge above all things sought to learn, dismissing involvement
+in the mortal world other than to silently observe.  He found solace in his
+books and scrolls and was constantly in search of new thoughts and ideas.
+The god took a single human to chronicle the events of the mortal world and
+then locked himself away leavin his aide on his own, confidant in his
+abilities.  Disappointed by the lack of interest in his brothers creations
+Chaos turned from his son leaving him to his solitary pursuits.  And so ends
+the Age of Malice when the worlds dreams begin to awaken.
+~
+
+#20481
+ancient tome~
+"Pitfalls of Knowledge"~
+Volume IV of an ancient tome, "Pitfalls of Knowledge" is laying
+here.~
+treasure
+paper~
+0 0 0 0 0
+0 2 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E pitfalls~
+The Age of Dreams floated into existance on the winds of a summer breeze.
+The Keeper of Knowledge looked over the lands of his brother finding little
+that interested him.  Turning to his books and spending long hours in deep
+thought the time passed by him quickly.  Slowly the stories and legends of
+the lands fell upon his ears.  The jumble of words and voices distracted and
+annoyed him for he noticed himself listening in hope of gaining the smallest
+bit of new information.  Finding himself drawn to the mortal world once too
+often to hang on a story told in the small pubs littering the landscape.
+While on one of his excursions he observed a young man frantically
+scribbling in a corner of the bar while an elderly gentleman told stories to
+the children.  Intrigued he peered over the youngsters shoulder and
+was
+amazed to see him writing down the mans words as soon as he spoke.  Struck
+by an idea he took the youth to his temple hidden just below the surface of
+the earth.  Knowledge gave him a magical pen and a blank tome.  In exchange
+the stripling was to write down all he heard, the bargin struck the
+god
+again turned from the world to silently horde the information After
+many
+years the young man began to realize that fewer and fewer stories and
+legends were being told and the people were no longer learning new things.
+Worried, the disciple turned to his mentor who simply brushed him off as he
+placed the latest manuscript in the huge vault occupying his temple
+and
+returned to his studies.  Realizing that the Lord was taking the
+peoples
+will to create and discover for his own selfish needs the adept opened the
+vault determined to return learning to the world.  Throwing open the door he
+was blinded by the power that lied within a churning mixture of the light
+and dark.  As the power escaped it hit the boy swirled around him and found
+safety in his heart.  Knowledge stripped of his possesions fell into
+his
+greed and was consumed by it.  Emerging changed and devoured by his desires
+the immortal settled on aquiring, hording, and protecting all he could.
+>From the smallest trinket to the souls of men.
+~
+
+#20482
+wedding band~
+a beautifully engraved wedding band~
+A beautifully engraved wedding band sparkles with the love it stands for.~
+armor
+platinum~
+7 7 7 7 0
+20 1 0 P
+WEAR TAKE
+WEAR FINGER
+ITEM MAGIC
+ITEM BLESS
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY MANA 25
+APPLY HP 25
+APPLY MOVE 25
+LIMIT 0
+TIMER 0
+
+#20483
+baby~
+a tiny baby wrapped in silken blankets~
+A tiny baby wrapped in silken blankets is sleeping peacefully.~
+treasure
+flesh~
+0 0 0 0 0
+20 5 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20491
+tanks cages~
+an assortment of tanks and cages~
+An assortment of tanks and cages line the walls.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20492
+racks~
+racks, filled with skins~
+Numerouss racks, filled with skins, have been artfully laid out around the store.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20493
+table chairs~
+a table and chairs~
+A wrought iron table surrounded by hand worked chairs sits near the window.~
+furniture
+unknown~
+4 10000 DG 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20497
+california rolls~
+california rolls with flying fish eggs~
+A plate of california rolls with flying fish eggs is here.~
+food
+fish~
+25 35 0 0 0
+0 2 15 P
+WEAR TAKE
+WEAR HOLD
+ITEM INVENTORY
+LIMIT 0
+TIMER 0
+
+#20498
+bar~
+a hand carved, teakwood bar~
+A teakwood bar stretches from one end of the saloon to the other.~
+trash
+teakwood~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20499
+glass cases~
+glass cases~
+Several glass cases are eyecatchingly placed throughout the store.~
+trash
+glass~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20532
+fountain~
+an exquisitely sculpted fountain~
+An exquisitely sculpted fountain graces the center of the gardens.~
+fountain
+unknown~
+1000000 1000000 'water' 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20537
+tiny pool~
+a tiny pool~
+A tiny pool gurgles softly in the quiet of the glade.~
+fountain
+water~
+1000000 1000000 'water' 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20538
+blue stream~
+a clear, blue stream~
+A clear, blue stream winds its way through the woods.~
+fountain
+water~
+1000000 1000000 'water' 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20539
+wooden bench~
+a beautifully carved, wooden bench~
+A beautifully carved, wooden bench sits nestled amidst the
+wildflowers.~
+furniture
+wood~
+2 300 EH 100 100
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#20540
+giant sunflower~
+a giant sunflower~
+A giant sunflower brightens the room.~
+treasure
+cellulose~
+0 0 0 0 0
+0 3 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20541
+water lily~
+a virginal white water lily~
+A virginal white water lily is just starting to blossom.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20542
+tiger lily~
+an orange and black tiger lily~
+An orange and black tiger lily dances in the breeze.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20543
+blood red rose~
+a blood red rose~
+A blood red rose tries to catch your eye.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20544
+pure white rose~
+a pure white rose~
+A pure white rose sparkles with dew.~
+trash
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20545
+salmon rose~
+a salmon colored rose~
+A salmon colored rose vies for your attention.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20546
+canary yellow rose~
+a canary yellow rose~
+A canary yellow rose reaches toward the sun.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20547
+magenta orchid~
+a magenta colored orchid~
+A magenta colored orchid catches your eye.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20548
+indigo orchid~
+an indigo orchid~
+An indigo orchid dances in the breeze.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20549
+coral orchid~
+a coral colored orchid~
+A coral colored orchid glistens with moisture.~
+treasure
+cellulose~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM INVENTORY
+LIMIT 0
+TIMER 0
+
+#20550
+sushi deluxe~
+sushi~
+A plate of sushi is here.~
+food
+fish~
+25 40 0 0 0
+0 3 25 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20551
+sashimi deluxe~
+sashimi~
+A plate of sashimi is here.~
+food
+fish~
+25 45 0 0 0
+0 3 30 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20552
+sticky rice~
+sticky rice~
+A bowl of sticky rice is here.~
+food
+rice~
+25 30 0 0 0
+0 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20553
+miso soup~
+miso soup~
+A bowl of miso soup is here.~
+food
+broth~
+25 25 0 0 0
+0 1 5 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20554
+sharkskin jacket~
+a sharkskin jacket~
+A sharkskin jacket is here.~
+armor
+sharkskin~
+6 4 5 4 0
+27 7 125 P
+WEAR TAKE
+WEAR ABOUT
+ITEM ROTDEATH
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#20555
+sharkskin trousers~
+a pair of sharkskin trousers~
+A pair of sharkskin trousers is here.~
+armor
+sharkskin~
+4 5 4 5 0
+25 4 115 P
+WEAR TAKE
+WEAR LEGS
+ITEM ROTDEATH
+APPLY HITROLL 2
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#20556
+electric eelskin belt~
+an electric eelskin belt~
+An electric eelskin belt is here.~
+armor
+eelskin~
+3 3 4 3 0
+21 1 80 P
+WEAR TAKE
+WEAR WAIST
+ITEM ROTDEATH
+APPLY SAVES -5
+APPLY CON 1
+LIMIT 0
+TIMER 0
+
+#20557
+whaleskin boots~
+a pair of whaleskin boots~
+A pair of whaleskin boots is here.~
+armor
+whaleskin~
+3 4 3 4 0
+23 5 95 P
+WEAR TAKE
+WEAR FEET
+ITEM ROTDEATH
+APPLY MOVE 30
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#20558
+sea green diamon engagement ring~
+a sea green diamond engagement ring~
+A sea green diamond engagement ring sparkles brilliantly.~
+armor
+platinum~
+7 7 7 7 0
+35 0 17650 P
+WEAR TAKE
+WEAR FINGER
+ITEM ROTDEATH
+APPLY SAVES -2
+APPLY HITROLL 1
+APPLY DAMROLL 2
+APPLY WIS 1
+LIMIT 0
+TIMER 0
+
+#20559
+gold bracelet sea serpent~
+a gold bracelet carved into a sea serpent~
+A gold bracelet carved into a sea serpent is here.~
+armor
+platinum~
+5 4 4 5 0
+25 2 6125 P
+WEAR TAKE
+WEAR WRIST
+ITEM ROTDEATH
+APPLY MANA 20
+APPLY INT 1
+LIMIT 0
+TIMER 0
+
+#20560
+gold medallion emeralds~
+a gold medallion studded with emeralds~
+A gold medallion studded with emeralds is here.~
+armor
+gold~
+3 5 3 3 0
+20 1 7877 P
+WEAR TAKE
+WEAR NECK
+ITEM ROTDEATH
+APPLY HP 17
+LIMIT 0
+TIMER 0
+
+#20561
+tiara black pearls~
+a tiara inset with black pearls~
+A tiara inset with black pearls is here.~
+armor
+gold~
+4 4 4 5 0
+22 0 25498 P
+WEAR TAKE
+WEAR HEAD
+ITEM ROTDEATH
+APPLY HP 15
+APPLY MANA 15
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#20562
+wand fireballs~
+a wand of fireballs~
+A wand of fireballs is here.~
+wand
+wood~
+30 9 9 'fireball' 0
+25 0 4200 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20563
+potion return~
+a potion of return~
+A potion of return is here.~
+potion
+burlap~
+1 'word of recall' 'reserved' 'reserved' 'reserved'
+11 1 3900 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20564
+staff protection~
+a staff of protection~
+A staff of shield is here.~
+staff
+wood~
+20 3 3 'shield' 0
+25 3 4000 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20565
+wet scroll~
+a wet scroll~
+A wet, damp scroll is here.~
+scroll
+paper~
+11 'create spring' 'reserved' 'reserved' 'reserved'
+0 1 300 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20566
+seaweed salad~
+seaweed salad~
+A seaweed salad is here.~
+food
+seaweed~
+25 35 0 0 0
+0 2 15 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20567
+spinach quiche~
+spinach quiche~
+A spinach quiche is here.~
+food
+spinach~
+25 40 0 0 0
+0 2 20 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20568
+fruit cup~
+fruit cup~
+A fruit cup is here.~
+food
+fruit~
+25 30 0 0 0
+0 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20569
+teddy seashells~
+a teddy made of seashells~
+A teddy made of seashells leaves little to the imagination.~
+armor
+sea shells~
+7 7 7 7 0
+30 3 150 P
+WEAR TAKE
+WEAR BODY
+ITEM ROTDEATH
+APPLY DAMROLL 1
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#20570
+rowboat~
+a rowboat~
+A rowboat is here.~
+boat
+wood~
+0 0 0 0 0
+10 15 100 P
+WEAR TAKE
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20571
+raft~
+a raft~
+A raft is here.~
+boat
+wood~
+0 0 0 0 0
+0 20 50 P
+WEAR TAKE
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20572
+skiff~
+a skiff~
+A skiff is here.~
+boat
+wood~
+0 0 0 0 0
+30 5 200 P
+WEAR TAKE
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20573
+canoe~
+a canoe~
+A canoe is here.~
+trash
+wood~
+0 0 0 0 0
+20 10 150 P
+WEAR TAKE
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20574
+canteen~
+a canteen~
+A canteen is here.~
+drink
+metal~
+180 180 'water' 0 0
+0 3 25 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20575
+duffel bag~
+a duffel bag~
+A duffel bag is here.~
+container
+nylon~
+200 A 0 100 100
+0 1 45 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+TIMER 0
+
+#20576
+sleeping bag~
+a sleeping bag~
+A sleeping bag is here.~
+furniture
+nylon~
+2 300 EHK 150 150
+40 10 200 P
+WEAR TAKE
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#20577
+lantern~
+a lantern~
+A lantern is here.~
+light
+metal~
+0 0 5000 0 0
+0 3 50 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#20578
+sunflower seeds~
+sunflower seeds~
+Some sunflower seeds are here.~
+food
+sunflower seeds~
+25 25 0 0 0
+0 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20579
+mug mead~
+a mug~
+An ice cold glass of mead is here.~
+drink
+glass~
+40 40 'mead' 0 0
+0 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20580
+bottle green rum~
+a green bottle~
+A green bottle filled with rum is here.~
+drink
+glass~
+24 24 'rum' 0 0
+0 2 25 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20581
+decanter crystal sherry~
+a crystal decanter~
+A crystal decanter filled with sherry is here.~
+drink
+crystal~
+60 60 'sherry' 0 0
+0 2 30 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20582
+keg dark ale~
+a keg~
+A wooden keg filled with dark ale is here.~
+drink
+wood~
+288 288 'dark ale' 0 0
+0 4 55 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20583
+elegant carafe rose wine~
+an elegant carafe~
+An elegant carafe filled with rose wine is here.~
+drink
+glass~
+60 60 'rose wine' 0 0
+0 2 27 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#20584
+sextant gold~
+a solid gold sextant~
+A solid gold sextant is here.~
+treasure
+gold~
+0 0 0 0 0
+10 2 3000 P
+WEAR TAKE
+WEAR HOLD
+ITEM ROTDEATH
+APPLY HP 50
+LIMIT 0
+TIMER 0
+
+#20585
+compass stones~
+a compass inlaid with precious stones~
+A compass inlaid with precious stones is here.~
+treasure
+gold~
+0 0 0 0 0
+10 1 1000 P
+WEAR TAKE
+WEAR HOLD
+ITEM ROTDEATH
+APPLY MANA 50
+LIMIT 0
+TIMER 0
+
+#20586
+gold doubloon~
+a gold doubloon~
+A gold doubloon is here.~
+treasure
+gold~
+0 0 0 0 0
+10 1 250 P
+WEAR TAKE
+WEAR HOLD
+ITEM ROTDEATH
+APPLY MOVE 25
+LIMIT 0
+TIMER 0
+
+#20587
+trident~
+a trident~
+A three-pronged spear rests lightly against the wall.~
+weapon
+unknown~
+spear 6 6 pierce 0
+40 5 25000 P
+WEAR TAKE
+WEAR WIELD
+ITEM ROTDEATH
+APPLY HITROLL -2
+APPLY DAMROLL 5
+LIMIT 0
+TIMER 0
+
+#20588
+hook~
+a hook~
+A cargo hook is stuck in the wall here.~
+weapon
+unknown~
+weapon 5 4 slash 0
+10 2 4250 P
+WEAR TAKE
+WEAR WIELD
+ITEM ROTDEATH
+APPLY DAMROLL 1
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#20589
+knife~
+a diving knife~
+The weapon of the pearl divers, this knife is very sharp.~
+weapon
+unknown~
+dagger 5 6 pierce 0
+27 2 19000 P
+WEAR TAKE
+WEAR WIELD
+ITEM ROTDEATH
+APPLY DAMROLL 3
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#20590
+cutlass sword~
+a cutlass~
+A thick-bladed, slightly curved sword rests here.~
+weapon
+unknown~
+sword 4 7 chop 0
+25 6 11790 P
+WEAR TAKE
+WEAR WIELD
+ITEM ROTDEATH
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#20591
+marlinspike club spike~
+a marlinspike~
+The short club of a longshoreman lays here on the ground.~
+weapon
+unknown~
+mace 4 6 pound 0
+20 1 7625 P
+WEAR TAKE
+WEAR WIELD
+ITEM ROTDEATH
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#20592
+wedding gown~
+a silken wedding gown~
+An enchanted wedding gown is carefully folded here.~
+armor
+satin~
+8 8 8 5 1
+24 6 0 P
+WEAR TAKE
+WEAR BODY
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#20593
+leggings seashell~
+a pair of leggings made from seashells~
+A pair of nice looking leggigs rests here.~
+armor
+seashell~
+6 6 6 6 0
+21 1 1000 P
+WEAR TAKE
+WEAR LEGS
+ITEM GLOW
+ITEM MAGIC
+APPLY MANA 40
+APPLY INT 2
+LIMIT 25
+TIMER 0
+
+#20594
+crown scaled serpent~
+a Crown of serpent scales~
+A crown made from scales of strange creature rests on the ground.~
+armor
+serpent scale~
+12 12 12 12 9
+24 10 10000 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+ITEM MAGIC
+APPLY HP 15
+APPLY DAMROLL 2
+APPLY HITROLL 4
+LIMIT 3
+TIMER 0
+
+#20595
+ring sea serpent~
+a ring of entwinted sea serpent~
+A ring carved from the scales of sea serpent lies here, humming
+softly.~
+armor
+serpent scale~
+10 10 10 10 6
+25 1 10000 P
+WEAR TAKE
+WEAR FINGER
+APPLY HP 10
+APPLY MANA 10
+APPLY SBREATH -5
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 5
+TIMER 0
+
+#20596
+bracelet stone~
+a bracelet carved from stone~
+A bracelet of stone rests here, humms dimly.~
+armor
+stone~
+5 5 5 5 5
+33 4 10000 P
+WEAR TAKE
+WEAR WRIST
+APPLY DAMROLL 4
+LIMIT 4
+TIMER 0
+
+#20597
+gown ocean-blue blue~
+an ocean-blue gown~
+A gown of mesmerising ocean-blue lies here.~
+armor
+energy~
+12 12 12 12 7
+50 4 10000 P
+WEAR TAKE
+WEAR BODY
+APPLY DEX 2
+APPLY MANA 30
+APPLY HP 30
+LIMIT 5
+TIMER 0
+
+#20598
+sign~
+a sign~
+A large post with a sign is resting on the beach.~
+trash
+paper~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E sign~
+The sign reads:
+
+To board the boat to Palanthas and the mainland, type 'board' and wait for
+the boat to take you to Palanthas.
+
+If you are a visitor to the island of Naiadia, enjoy your stay.
+~
+
+#20599
+sign bank~
+a sign on the wall~
+A sign has been posted to the wall.~
+trash
+paper~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E sign bank~
+The sign reads:
+Welcome to the Naiadian Royal bank. You may:
+
+Balance: Check you current bank balance.
+Withdraw: Withdraw money from your account.
+Deposit: Deposit money into your account.
+~
+
+#0
+
+
+
+#ROOMS
+#20480
+The Source of Magic~
+This small shop is crammed full of magical things, although
+everything is very orderly and well seperated.  There are
+potions, scrolls, artifacts, components, and other items too
+numerous to mention.  A beautiful woman, with gentle brown
+eyes, offers you foci and implements of magical origins.  She
+has quite a collection of some of the most fascinating treasures
+you have ever seen.  The doorway to the north leads back out
+into town.
+~
+inside
+ROOM INDOORS
+D NORTH 20469 0 0
+~
+~
+#20481
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  The road continues
+to the north and east.
+~
+city
+D NORTH 20470 0 0
+~
+~
+D EAST 20482 0 0
+~
+~
+#20482
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the east is
+the South gate and the road continues to the south and west.
+~
+city
+D EAST 20483 0 0
+~
+~
+D SOUTH 20494 0 0
+~
+~
+D WEST 20481 0 0
+~
+~
+#20483
+South Gate~
+Ivy, carefully pruned back so as not to overwhelm the flowers growing
+nearby, creeps up the brick colonnades and onto the gates themselves.
+Painted white to offset the gracefully climbing vines, the gates are
+handworked wrought iron, specially treated to avoid rust in the corrosive
+sea air.  This gate is never closed, as many couples, yearning for a
+few minutes alone, and townsfolk, seeking some exercise, enjoy taking
+moonlit strolls through the beautiful gardens to the south.  North
+leads to the Center Square, east leads to the SouthEast Quadrant and
+west leads to the SouthWest Quadrant.
+~
+city
+D NORTH 20472 0 0
+~
+~
+D EAST 20484 0 0
+~
+~
+D SOUTH 20495 A 0
+gate~
+~
+D WEST 20482 0 0
+~
+~
+#20484
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the west is the South Gate and the road continues to the
+south and east.
+~
+city
+D EAST 20485 0 0
+~
+~
+D SOUTH 20496 0 0
+~
+~
+D WEST 20483 0 0
+~
+~
+#20485
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  The road continues to the north and west.
+~
+city
+D NORTH 20474 0 0
+~
+~
+D WEST 20484 0 0
+~
+~
+#20486
+The General Store~
+Bins of various supplies fill this store.  Adventuring needs,
+household provisions and more are available to suit any purpose.
+The items have been thoughtfully grouped together by type of
+need to make shopping easier.  The shopkeeper stands behind a
+counter, smiling a friendly, welcoming smile as you enter the
+room.  The doorway to the north leads back out to the street.
+~
+inside
+ROOM INDOORS
+D NORTH 20475 0 0
+~
+~
+#20487
+Antiques and Collectibles~
+At first, the clutter in this room seems to be just junk and refuse
+of the worst possible sort.  But, after consideration, you notice
+that these items are retrieved salvage from nearby shipwrecks.  Each
+individual piece has its own unique history.  Entering this room is
+like stepping back in time to when these pieces belonged to others.
+A matronly woman bustles up and begins telling you tales about each
+piece that you seem interested in.  The doorway to the east leads
+back to the normal flow of things.
+~
+inside
+ROOM INDOORS
+D EAST 20488 0 0
+~
+~
+#20488
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the west is Antiques and Collectibles and the road continues
+to the north and south.
+~
+city
+D NORTH 20477 0 0
+~
+~
+D SOUTH 20500 0 0
+~
+~
+D WEST 20487 0 0
+~
+~
+#20490
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the east is
+Aquatic Pets and the road continues to the north and south.
+~
+city
+D NORTH 20478 0 0
+~
+~
+D EAST 20491 0 0
+~
+~
+D SOUTH 20503 0 0
+~
+~
+#20491
+Aquatic Pets~
+This classy little shop contains an assortment of playful animals.
+Just like everything else on the island, there is a little bit of
+a maritime air about the place.  There are large fishtanks with
+beautiful exotic species of fish swimming inside.  There are also
+island lizards, a few species of bird, and even a few seals.  A
+friendly young lady walks up and ask to assist you in any way she
+can.  The street continues to the west.
+~
+inside
+ROOM INDOORS
+ROOM PET_SHOP
+D WEST 20490 0 0
+~
+~
+#20492
+The Storeroom~
+The pets are kept here.
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+#20493
+The Vegetarian's Delight~
+A tempting variety of fruits and vegetables fill the shelves of this cozy
+cafe.  Everything from seaweed to fresh fruits of many varieties are offered
+here.  The owner smiles pleasantly at you as he points out the specials he
+is offering today.  The street continues to the east.
+~
+inside
+ROOM INDOORS
+D EAST 20494 0 0
+~
+~
+#20494
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the west is the
+Vegetarian's Delight and the road continues to the north and south.
+~
+city
+D NORTH 20482 0 0
+~
+~
+D SOUTH 20507 0 0
+~
+~
+D WEST 20493 0 0
+~
+~
+#20495
+Path to the Gardens~
+Half sand, half dirt, this small path is extremely well traversed.
+Rows of multicolored pansies and petunias, patterened in the shapes of the
+surrounding sealife, line both sides of the walkway, giving passerbys
+a small preview of the elegantly laid out gardens they lead to.  The
+path leads north to town and south to the gardens.
+~
+city
+D NORTH 20483 A 0
+gate~
+~
+D SOUTH 20508 0 0
+~
+~
+#20496
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the east is the Sushi Bar and the road continues to the
+north and south.
+~
+city
+D NORTH 20484 0 0
+~
+~
+D EAST 20497 0 0
+~
+~
+D SOUTH 20509 0 0
+~
+~
+#20497
+The Sushi Bar~
+Several intimate tables have been spaciously scattered throughout the
+restuarant.  Vases, artistically decorated with deep blue orchids, grace the
+center of each table.  Candlelight casts soft shadows across the room, as
+waiters move discretely from table to table, serving meals with the utmost
+effeciency and decorum.  The road is to the west.
+~
+inside
+ROOM INDOORS
+D WEST 20496 0 0
+~
+~
+#20498
+Ye Olde Salt Saloon~
+Walking the streets of this island paradise can sure work up a thirst.
+Luckily, an old sailor noticed the lack of quality drinking establishments
+in the city.  Opening this tavern turned out to be the finest decision of
+his life.  People fill this room constantly.  There is always a line at the
+door waiting to get in.  Waitresses walk by carrying trays laden with fine
+beverages.  A large bouncer sits at one end of a long teakwood and mahoganey
+bar, while the bartender rushes to keep up with all the orders.  The doorway
+to the south leads out to the street.
+~
+inside
+ROOM INDOORS
+D SOUTH 20511 0 0
+~
+~
+#20499
+Gemstones~
+Long glass cases containing red velvet settings fill this chamber.
+The jewelry and baubles here would impress anyone.  There are rare
+black pearls and fascinating amethysts and sapphires.  Diamonds,
+emeralds, and rubies abound as well.  All of the fittings appear
+to be either platinum or gold of the highest quality.  Necklaces
+that seem to be worth a king's ransom lie beside some of the most
+exquisite rings you have ever seen.  A leathery old man with a
+jeweller's loupe in his eye looks up as you enter and offers to
+help you make your selection.  The doorway to the east returns to
+the street.
+~
+inside
+ROOM INDOORS
+D EAST 20500 0 0
+~
+~
+#20500
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the west is Gemstones and the road continues to the north
+and south.
+~
+city
+D NORTH 20488 0 0
+~
+~
+D SOUTH 20513 0 0
+~
+~
+D WEST 20499 0 0
+~
+~
+#20503
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  The road continues
+to the north and east.
+~
+city
+D NORTH 20490 0 0
+~
+~
+D EAST 20504 0 0
+~
+~
+#20504
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the south is the
+Anti-Paladin's Guild and the road continues to the east and west.
+~
+city
+D EAST 20505 0 0
+~
+~
+D SOUTH 20516 0 0
+~
+~
+D WEST 20503 0 0
+~
+~
+#20505
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the north is
+Skins 'R' Us, to the south is the Paladin's Guild and the road continues
+to the east and west.
+~
+city
+D NORTH 20540 0 0
+~
+~
+D EAST 20506 0 0
+~
+~
+D SOUTH 20517 0 0
+~
+~
+D WEST 20504 0 0
+~
+~
+#20506
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the south is
+the Cleric's Guild and the road continues to the east and west.
+~
+city
+D EAST 20507 0 0
+~
+~
+D SOUTH 20518 0 0
+~
+~
+D WEST 20505 0 0
+~
+~
+#20507
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  The road continues
+to the north and west.
+~
+city
+D NORTH 20494 0 0
+~
+~
+D WEST 20506 0 0
+~
+~
+#20508
+Path to the Gardens~
+Half sand, half dirt, this small path is extremely well traversed.
+Rows of multicolored pansies and petunias, patterened in the shapes
+of the surrounding sealife, line both sides of the walkway, giving
+passerbys a small preview of the elegantly laid out gardens they
+lead to.  The path leads north to town and south to the gardens.
+~
+city
+D NORTH 20495 0 0
+~
+~
+D SOUTH 20520 0 0
+~
+~
+#20509
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  The road continues to the north and east.
+~
+city
+D NORTH 20496 0 0
+~
+~
+D EAST 20510 0 0
+~
+~
+#20510
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  The road continues to the east and west.
+~
+city
+D EAST 20511 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 20509 0 0
+~
+~
+#20511
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the north is Ye Olde Salt Saloon, to the south is the
+Assassin's Guild and the road continues to the east and west.
+~
+city
+D NORTH 20498 0 0
+~
+~
+D EAST 20512 0 0
+~
+~
+D SOUTH 20523 0 0
+~
+~
+D WEST 20510 0 0
+~
+~
+#20512
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the south is the Thieves' Guild and the road continues to
+the east and west.
+~
+city
+D EAST 20513 0 0
+~
+~
+D SOUTH 20524 0 0
+~
+~
+D WEST 20511 0 0
+~
+~
+#20513
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  The road continues to the north and west.
+~
+city
+D NORTH 20500 0 0
+~
+~
+D WEST 20512 0 0
+~
+~
+#20515
+The Anti-Paladin's Guild~
+You are in a dark, cold room filled with devices of torture and
+unholy symbols dedicated to the dark Gods. Men and women of all
+races study to better themselves at the arts of harming the realm
+and its' inhabitants.  The only exit is east to the buildings
+entrance.
+~
+inside
+ROOM INDOORS
+D EAST 20516 0 0
+~
+~
+#20516
+Entrance to the Anti-Paladin's~
+The building erected here is dark and forboding.  Unlike the
+rest of the city this guild appears almost to be relegated to
+the backstreets as some kind of foul parasitic presence.  The
+road lies to the north.
+~
+city
+D NORTH 20504 0 0
+~
+~
+D WEST 20515 0 0
+~
+~
+#20517
+Entrance to the Paladin's Guild~
+A small plot of undeveloped land is here.  There are various plants
+growing upon it that, although naturally occurring in this environment,
+don't really fit in with the general aesthetic beauty of the rest of
+the town.  The street continues to the north or you can go further into
+the plot to the south.
+~
+city
+D NORTH 20505 0 0
+~
+~
+D SOUTH 20526 0 0
+~
+~
+#20518
+Entrance to the Cleric's & Monk's Guild~
+A small wayside temple is to the east.  Non-descript and completely
+unadorned, you barely glance at it once and then continue on your way.
+The road continues to the north.
+~
+city
+D NORTH 20506 0 0
+~
+~
+D EAST 20519 0 0
+~
+~
+#20519
+The Cleric's & Monk's Guild~
+This temple is much grander than it appeared from the outside.
+There are many men and women here, some are involved in hand
+to hand and light weapons combat training, while others sit in
+contemplative study.  A woman with a broad smile on her face
+walks toward you and offers her services.  The doorway to the
+west leads outside.
+~
+inside
+ROOM INDOORS
+D WEST 20518 0 0
+~
+~
+#20520
+Path to the Gardens~
+Half sand, half dirt, this small path is extremely well traversed.
+Rows of multicolored pansies and petunias, patterened in the shapes
+of the surrounding sealife, line both sides of the walkway, giving
+passerbys  a small preview of the elegantly laid out gardens they
+lead to.  The path leads north to town and south to the gardens.
+~
+city
+D NORTH 20508 0 0
+~
+~
+D SOUTH 20528 0 0
+~
+~
+#20523
+Entrance to the Assassin's Guild~
+A beautiful Zan rock garden is open here beside the street.  Every
+individual stone seems to have its own place in the greater whole.
+The mastery of this garden shows that someone or more than likely
+a group of someones has dedicated years to making this garden perfect.
+A small pagoda-style building stands to the south or you may continue
+along the road to the north.
+~
+city
+D NORTH 20511 0 0
+~
+~
+D SOUTH 20530 0 0
+~
+~
+#20524
+Entrance to the Thieves' Guild~
+A warehouse sits here, abutting the city wall.  This is more than
+likely the storage location for most of the merchants in this area.
+The door into the offices leads to the east, and the street lies
+back to the north.
+~
+city
+D NORTH 20512 0 0
+~
+~
+D EAST 20525 0 0
+~
+~
+#20525
+The Thieves' Guild~
+With surprise, you realize just how much of those merchant's wealth
+comes here.  There are piles of every conceivable type of valuable
+merchandise from everywhere in the town.  The thieves in this town
+must use this as a centralized clearing house.  From the look of
+things, the local law enforcement officials are woefully overpaid.
+A short, nondescript man looks up as you enter.  He quietly asks
+you to state your business.  The doorway to the west returns you
+to the warehouse.
+~
+inside
+ROOM INDOORS
+D WEST 20524 0 0
+~
+~
+#20526
+The Paladin's Guild~
+The back half of the plot contains a magnificent altar.  An elegant
+man intones words of praise to the Gods of good.  Wave after wave of
+peace washes over you as the beauty of this holy place eases your
+fears and worries.  The elegant looking man turns toward you and offers
+you a comfortable place to rest before asking what assistance you might
+have need of.  The street is farther back to the north.
+~
+inside
+ROOM INDOORS
+D NORTH 20517 0 0
+~
+~
+#20527
+The Orchid Garden~
+Graceful and delicate, orchids of every imaginable color and size
+fill one corner of the garden.  Every available space is taken up
+by these beautiful buds, barely leaving enough room for people to
+stroll through.  Here and there, a hummingbird can be seen flitting
+from flower to flower, looking for nectar.  The path leads south
+and east.
+~
+city
+D EAST 20528 0 0
+~
+~
+D SOUTH 20531 0 0
+~
+~
+#20528
+A Path in the Garden~
+Rows of rare and exotic flowers line the carpeted pathway.  The fusion of
+colors is perfectly coordinated to create a magnificent feast for the eyes.
+Lovingly tended and perfectly manicured, the gardens are treasured by all
+who call Naiadia home.  The path leads north to town and south, east
+and west through the gardens.
+~
+city
+D NORTH 20520 0 0
+~
+~
+D EAST 20529 0 0
+~
+~
+D SOUTH 20532 0 0
+~
+~
+D WEST 20527 0 0
+~
+~
+#20529
+The Sunflower Garden~
+Sunflowers, bright as the midday sun, create a haven for frogs, mice
+and other small creatures that thrive within their gentle shade.
+Standing as tall as a the tallest man, they lend a lively, cheerful
+air to their corner of the gardens.  The path leads south and west.
+~
+city
+D SOUTH 20533 0 0
+~
+~
+D WEST 20528 0 0
+~
+~
+#20530
+The Assassin's Guild~
+This pagoda contains the local branch of the brotherhood of assassins,
+a closeknit group of people whose worldwide network of guilds allow
+them the ultimate in information gathering.  These people do not kill
+for spite or whim.  They serve any who will meet their price, merely
+doing their job in a slick and businesslike manner.  An aged man bows
+as you enter and offers his service in training you in the ways of
+your path.  The garden lies back to the north.
+~
+inside
+ROOM INDOORS
+D NORTH 20523 0 0
+~
+~
+#20531
+A Path in the Garden~
+Rows of rare and exotic flowers line the carpeted pathway.  The fusion of
+colors is perfectly coordinated to create a magnificent feast for the eyes.
+Lovingly tended and perfectly manicured, the gardens are treasured by all
+who call Naiadia home.  The path leads north, south and east.
+~
+city
+D NORTH 20527 0 0
+~
+~
+D EAST 20532 0 0
+~
+~
+D SOUTH 20534 0 0
+~
+~
+#20532
+The Fountain~
+Four beautiful mermaids, contentedly sunning themselves on an
+outcropping of rocks, graces this finely detailed and exquisitely
+sculpted fountain.  Each mermaid, lovingly fashioned by a true
+master of his craft, is such a rare and stunning beauty that you
+find yourself completely mesmerized, wondering if such perfection
+of form and face could truly exist.  A small rainbow archs
+gracefully over the fountain, shimmering with a magical aura.
+The path leads north, south, east and west.
+~
+city
+D NORTH 20528 0 0
+~
+~
+D EAST 20533 0 0
+~
+~
+D SOUTH 20535 0 0
+~
+~
+D WEST 20531 0 0
+~
+~
+D UP 20400 ABCDEH 20400
+~
+~
+#20533
+A Path in the Garden~
+Rows of rare and exotic flowers line the carpeted pathway.  The fusion of
+colors is perfectly coordinated to create a magnificent feast for the eyes.
+Lovingly tended and perfectly manicured, the gardens are treasured by all
+who call Naiadia home.  The path leads north, south and west.
+~
+city
+D NORTH 20529 0 0
+~
+~
+D SOUTH 20536 0 0
+~
+~
+D WEST 20532 0 0
+~
+~
+#20534
+The Lily Garden~
+Virginal white water lilies fill the small pond in this quiet
+corner of the gardens.  Here and there, a goldfish can be
+swimming amongst the flowers, its golden scales reflecting the
+light, while dragonflies whiz about, causing tiny ripples along
+the waters surface.  A multitudes of tiger lilies surround the
+pond on three sides, lending a tropical air to this serene
+setting.  The path leads north and east.
+~
+city
+D NORTH 20531 0 0
+~
+~
+D EAST 20535 0 0
+~
+~
+#20535
+A Path in the Garden~
+Rows of rare and exotic flowers line the carpeted pathway.  The fusion of
+colors is perfectly coordinated to create a magnificent feast for the eyes.
+Lovingly tended and perfectly manicured, the gardens are treasured by all
+who call Naiadia home.  The path leads north, south, east and west.
+~
+city
+D NORTH 20532 0 0
+~
+~
+D EAST 20536 0 0
+~
+~
+D SOUTH 20538 0 0
+~
+~
+D WEST 20534 0 0
+~
+~
+#20536
+The Rose Garden~
+Tall and proud, a multitude of rose bushes vie for dominance in this
+corner of the garden, their riotous colours sparkling brilliantly with dew.
+Even in the heat of midday, the bushes are so dense and healthy that the sun
+cannot burn off the water.  Their distinct, yet delicate fragrances swirl
+together to create an intoxicating aphrodesiac that stimulates the senses.
+The path leads north and west.
+~
+city
+D NORTH 20533 0 0
+~
+~
+D WEST 20535 0 0
+~
+~
+#20537
+The Lover's Nest~
+The only spot in the gardens where trees can be found, this tiny paradise
+is almost completely hidden away, making it a perfect spot for clandestine
+meetings.  Flowering vines, nurtured by the tiny pool in the center of the
+glade, wind their way up the tree trunks, as they lightly scent the air with
+their intoxicating fragrance.  A small path leads east.
+~
+city
+D EAST 20538 0 0
+~
+~
+#20538
+A Path in the Garden~
+Rows of rare and exotic flowers line the carpeted pathway.  The fusion of
+colors is perfectly coordinated to create a magnificent feast for the eyes.
+Lovingly tended and perfectly manicured, the gardens are treasured by all
+who call Naiadia home.  The path leads north, east and west.
+~
+city
+D NORTH 20535 0 0
+~
+~
+D EAST 20539 0 0
+~
+~
+D WEST 20537 0 0
+~
+~
+#20539
+A Cozy Nook~
+Nestled admist the wildflowers is a beautifully carved, wooden bench
+for two.  Barely discernible from the path, many lovers seek it as
+a refuge from the rest of the world.  The muted sounds of bird calls
+fill the air, lending to the tranquil quality of this tiny hide-a-way.
+A small path leads west.
+~
+city
+D WEST 20538 0 0
+~
+~
+#20540
+Skins 'R' Us~
+This quaint little boutique contains a nice selection of various
+articles of clothing made from the local sealife.  Everything
+from a genuine sharkskin suit to a naughty little teddy made of
+seashells.  Trained salesclerks wander through the store assisting
+the customers.  The doorway to the south leads back to the street.
+~
+inside
+ROOM INDOORS
+D SOUTH 20505 0 0
+~
+~
+#20400
+The Respite~
+A cool pond of crystal clear water lies in the middle of a small
+clearing.  Flowers of various colors surround the pond, and birds
+frolic through the air singing happy songs.  The peaceful sensation
+urges you to sit down, rest, have a drink of fresh water, and take
+a relaxing break from the toils the forest has to offer.
+~
+inside
+ROOM INDOORS
+ROOM PRIVATE
+D DOWN 20532 ABCDEH 20400
+~
+~
+#20401
+The Channeler's & Elementalist's Guild~
+Upon entering this room, you are amazed at how tidy it actually is.
+It goes against everything you have ever heard of about a wizard's
+workshop.  There are orderly bookshelves along all of the walls,
+containing treatises on magic and magic theory.  Tables are spaced
+evenly throughout the room, allowing contemplative study and thought.
+The guildmaster sits at his desk, patiently leafing through a
+spellbook, waiting to answer any questions you may have for him.
+The doorway to the south leads outside.
+~
+inside
+ROOM INDOORS
+D SOUTH 20405 0 0
+~
+~
+#20402
+The Ranger's Guild~
+This peaceful appearing glade contains several people tending to a
+wide variety of wild animals or working on an assortment of wooded
+projects.  The fluid grace with which they go about their tasks
+belies their deadly combative skills.  The guildmaster queitly
+approaches and offers her services.  Civilization starts to the
+south.
+~
+forest
+ROOM INDOORS
+D SOUTH 20410 0 0
+~
+~
+#20405
+Entrance to the Channeler's & Elementalist's Guild~
+A nice footpath leads to an elegant house set back off the street,
+overlooking the ocean.  A crisp breeze ruffles your hair as you walk
+up to the door.  The front door of the residence is to the north and
+the street continues to the south.
+~
+city
+D NORTH 20401 0 0
+~
+~
+D SOUTH 20416 0 0
+~
+~
+#20406
+Entrance to the Necromancer's Guild~
+A wizard's tower stands before you.  Tendrils of smoke seem to waft
+from the windows as you approach.  The door appears to be to the
+east, while the street continues to the south.
+~
+city
+D EAST 20407 0 0
+~
+~
+D SOUTH 20417 0 0
+~
+~
+#20407
+The Necromancer's Guild~
+The prototypical wizard's laboratory.  Beakers and vials of every
+shape and size clutter the workbenches lining the walls of this
+room.  Corpses in every state of decay are strewn throughout the
+room.  A wizened old woman stands by one of the tables and offers
+her assistance in training you.  The doorway to the west leads out.
+~
+inside
+ROOM INDOORS
+D WEST 20406 0 0
+~
+~
+#20408
+The Warrior's Guild~
+A large training field and parade ground are here.  Scores of young
+people are paired off to train defensive and offensive skills with
+each other, both hand to hand and weapon's training.  A very large
+man is efficiently aiding any and all who seek to learn from his
+great wisdom in all the tactical disciplines.  A doorway leads to
+the east.
+~
+inside
+ROOM INDOORS
+D EAST 20409 0 0
+~
+~
+#20409
+Entrance to the Warrior's Guild~
+A large tent-like structure sits right off the roadway here.  It
+has a weapons rack and an armor rack leaned against opposite walls.
+Through the doorway to the west, sounds of clashing arms can be
+heard.  The street continues to the south.
+~
+city
+D SOUTH 20420 0 0
+~
+~
+D WEST 20408 0 0
+~
+~
+#20410
+Entrance to the Ranger's Guild~
+A small glade is here.  It appears very peaceful and quiet.  A sense
+of serenity passes over you as you hear a large variety of birds
+singing.  A trail leads further north through the glade while the
+street is to the south.
+~
+city
+D NORTH 20402 0 0
+~
+~
+D SOUTH 20421 0 0
+~
+~
+#20414
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  The road continues to
+the south and east.
+~
+city
+D EAST 20415 0 0
+~
+~
+D SOUTH 20426 0 0
+~
+~
+#20415
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  The road continues to
+the east and west.
+~
+city
+D NORTH 0 0 0
+~
+~
+D EAST 20416 0 0
+~
+~
+D WEST 20414 0 0
+~
+~
+#20416
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the north is the
+Channeler's & Elementalist's Guild, to the south is the Mayor's
+Office and the road continues to the east and west.
+~
+city
+D NORTH 20405 0 0
+~
+~
+D EAST 20417 0 0
+~
+~
+D SOUTH 20428 0 0
+~
+~
+D WEST 20415 0 0
+~
+~
+#20417
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the north is the
+Necromancer's Guild and the road continues to the east and west.
+~
+city
+D NORTH 20406 0 0
+~
+~
+D EAST 20418 0 0
+~
+~
+D WEST 20416 0 0
+~
+~
+#20418
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  The road continues
+to the south and west.
+~
+city
+D SOUTH 20430 0 0
+~
+~
+D WEST 20417 0 0
+~
+~
+#20419
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The road continues to the south and east.
+~
+city
+D EAST 20420 0 0
+~
+~
+D SOUTH 20432 0 0
+~
+~
+#20420
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The the north lies the Warrior's Guild and the road
+continues to the east and the west.
+~
+city
+D NORTH 20409 0 0
+~
+~
+D EAST 20421 0 0
+~
+~
+D WEST 20419 0 0
+~
+~
+#20421
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the north is the Ranger's Guild, to the south is
+the Memorial and the road continues to the east and west.
+~
+city
+D NORTH 20410 0 0
+~
+~
+D EAST 20422 0 0
+~
+~
+D SOUTH 20434 0 0
+~
+~
+D WEST 20420 0 0
+~
+~
+#20422
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The road continues to the east and west.
+~
+city
+D EAST 20423 0 0
+~
+~
+D WEST 20421 0 0
+~
+~
+#20423
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The road continues to the south and west.
+~
+city
+D SOUTH 20436 0 0
+~
+~
+D WEST 20422 0 0
+~
+~
+#20426
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the east is the
+Naiadian Guardsmen's Headquarters and the road continues to the
+north and south.
+~
+city
+D NORTH 20414 0 0
+~
+~
+D EAST 20427 0 0
+~
+~
+D SOUTH 20438 0 0
+~
+~
+#20427
+The Naiadian Guardsmen's Headquarters~
+This obsidian building stands out like a rose among briars in
+this lovely city, but it has a beauty of a subtly different
+nature, making it fit in easily.  The shield and symbol of the
+Naiadian Guardsmen adorn the walls to either side of the doorway.
+The business offices are functional, but slightly enchanting as
+well.  The guardsmen come here to receive their orders for the
+day and to unwind after their shifts.  The place seems to be alive
+with a constant bustle, but no one seems to be rushed.  The lack of
+serious crime on this island is apparent in the easy manner of the
+guards; however, they do handle their weapons in a professional
+manner.  The training facilities are state of the art and the
+instructors are firm taskmasters.  Clearly this professional force
+can handle any amount of trouble if the need were ever to arise.
+The street continues to the west.
+~
+inside
+ROOM INDOORS
+D WEST 20426 0 0
+~
+~
+#20428
+The Mayor's Office~
+This is the place where it all begins, the office of the lady in
+charge.  Here is where legislation from the town council is signed
+into law.  The mayor is a happy woman, and it shows in the way
+she runs things.  People from near and far come to Naiadia to study
+the day to day operation of this government, for it is truly a
+marvel of the known world.  The street continues to the north.
+~
+inside
+ROOM INDOORS
+D NORTH 20416 0 0
+~
+~
+#20429
+The Naiadian Townhall~
+This is the building in which the Naiadian Council meets to pass the
+laws governing this fair city.  All meetings are open to any who wish
+to view them, but only the council members may vote.  No meeting is
+currently going on, but people wander through the building, admiring
+the works of art and talking.  The street continues to the east.
+~
+inside
+ROOM INDOORS
+D EAST 20430 0 0
+~
+~
+#20430
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the west is the
+Naiadian Townhall and the road continues to the north and south.
+~
+city
+D NORTH 20418 0 0
+~
+~
+D SOUTH 20442 0 0
+~
+~
+D WEST 20429 0 0
+~
+~
+#20431
+A Sandy Path~
+This lovely, palm tree lined path is covered in fine beach sand, polished
+by the wind and waves for so long that it is nearly white.  It reflects back
+both the sunlight by day and the moonlight by night in an almost hypnotic
+fashion.  The North Gate is to the south and the beach is to the
+north.
+~
+field
+D NORTH 15874 0 -1
+~
+~
+D SOUTH 20443 A 0
+gate~
+~
+#20432
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the east is the Lobster Pot and the road continues
+to the north and south.
+~
+city
+D NORTH 20419 0 0
+~
+~
+D EAST 20433 0 0
+~
+~
+D SOUTH 20444 0 0
+~
+~
+#20433
+The Lobster Pot~
+This small cozy restaurant has a decided nautical cast to its decor.
+There are lifebuoys, life preservers, sailor's outfits, and other seagoing
+items lining the walls.  The aroma of boiled lobster wafts from the kitchen,
+making your mouth water as you wait for the first taste of the exquisitely
+prepared food.  The doorway to the west leads back outside.
+~
+inside
+ROOM INDOORS
+D WEST 20432 0 0
+~
+~
+#20434
+The Memorial~
+As you enter this room, a wave of reverence fills your entire body.  This
+shrine is dedicated to all of the ships that have been lost at sea over the
+years.  The people of this fine city have placed a marker here commemorating
+all the sailors lost in this region.
+~
+inside
+ROOM INDOORS
+D NORTH 20421 0 0
+~
+~
+#20435
+The Armory~
+This small store is filled with an unbelievable assortment of armor
+and protective devices.  There is a slight nautical cast to the
+selection, as is to be expected in the middle of the sea, but there
+are more common items as well.  The shopkeeper smiles a winning
+smile as you enter the door and proudly shows you his wares.  The
+street continues to the east.
+~
+inside
+ROOM INDOORS
+D EAST 20436 0 0
+~
+~
+#20436
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the west is the Armory and the road continues to
+the north and south.
+~
+city
+D NORTH 20423 0 0
+~
+~
+D SOUTH 20448 0 0
+~
+~
+D WEST 20435 0 0
+~
+~
+#20438
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the east is the
+Naiadian Jail and the road continues to the north and south.
+~
+city
+D NORTH 20426 0 0
+~
+~
+D EAST 20439 0 0
+~
+~
+D SOUTH 20449 0 0
+~
+~
+#20439
+The Naiadian Jail~
+Even the detention center for this community is aesthetically pleasing.
+Troublemakers are kept in orderly rooms, furnished adequate food, and
+treated with respect even though they broke the law.  The windows are
+numerous and filled with a magical construct of glassteel, utterly
+unbreakable but transparent as a still pond.  The walls are of thick marble,
+but they are in pastel shades to match the ever present flora of the city.
+The doorway to the west leads back to the street.
+~
+inside
+ROOM INDOORS
+D WEST 20438 0 0
+~
+~
+#20440
+First Bank of Naiadia~
+Tastefully decorated in an ocean motif, the First Bank of Naiadia
+happily caters to the townsfolk and all the seafarers just passing
+through.  A small, plush couch has been placed along one wall for
+the comfort of those waiting their turn in line.  Beautifully hand
+embroidered, it depicts a scene of a coral reef.  The road is to
+the south.
+~
+inside
+ROOM INDOORS
+D SOUTH 20451 0 0
+~
+~
+#20441
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  The road continues
+to the south and east.
+~
+city
+D EAST 20442 0 0
+~
+~
+D SOUTH 20452 0 0
+~
+~
+#20442
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the east is the
+North Gate and the road continues to the north and west.
+~
+city
+D NORTH 20430 0 0
+~
+~
+D EAST 20443 0 0
+~
+~
+D WEST 20441 0 0
+~
+~
+#20443
+North Gate~
+Ivy, carefully pruned back so as not to overwhelm the flowers
+growing nearby, creeps up the brick colonnades and onto the
+gates themselves.  Painted white to offset the gracefully
+climbing vines, the gates are handworked wrought iron, specially
+treated to avoid rust in the corrosive sea air.  Although
+closed at night, the gates are never locked, for the people of
+Naiadia have always led an untroubled, worry-free existance.
+North leads to the sea, south leads to the Center Square, east
+leads to the NorthEast Quadrant and west leads to the NorthWest
+Quadrant.
+~
+city
+D NORTH 20431 A 0
+gate~
+~
+D EAST 20444 0 0
+~
+~
+D SOUTH 20454 0 0
+~
+~
+D WEST 20442 0 0
+~
+~
+#20444
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the west is the North Gate and the road continues
+to the north and east.
+~
+city
+D NORTH 20432 0 0
+~
+~
+D EAST 20445 0 0
+~
+~
+D WEST 20443 0 0
+~
+~
+#20445
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The road continues to the south and west.
+~
+city
+D SOUTH 20456 0 0
+~
+~
+D WEST 20444 0 0
+~
+~
+#20446
+The Training Yard~
+People from all walks of life come to this place to enrich
+themselves, physically and mentally.  There are knowledgeable
+instructors on hand to show you how to properly work out to
+increase your physical and mental attributes.  As you enter,
+a genial, young man walks up to you and offers his services.
+The street continues to the south.
+~
+inside
+ROOM INDOORS
+D SOUTH 20457 0 0
+~
+~
+#20447
+The Weapon's Emporium~
+This small shop contains the finest in weaponry, both exotic and
+commonplace.  There is a large variety to choose from and the salesman is
+quite knowledgeable about their origins.  With a knowing eye he appraises
+your weapons and offers you the assortment that seems to be what you are in
+need of.  The doorway to the east leads back out to the street.
+~
+inside
+ROOM INDOORS
+D EAST 20448 0 0
+~
+~
+#20448
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the west is the Weapon's Emporium and the road
+continues to the north and south.
+~
+city
+D NORTH 20436 0 0
+~
+~
+D SOUTH 20459 0 0
+~
+~
+D WEST 20447 0 0
+~
+~
+#20449
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  The road continues to
+the north and east.
+~
+city
+D NORTH 20438 0 0
+~
+~
+D EAST 20450 0 0
+~
+~
+#20450
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  The road continues to
+the east and west.
+~
+city
+D EAST 20451 0 0
+~
+~
+D WEST 20449 0 0
+~
+~
+#20451
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the north is the
+First Bank of Naiadia and the road continues to the east and west.
+~
+city
+D NORTH 20440 0 0
+~
+~
+D EAST 20452 0 0
+~
+~
+D WEST 20450 0 0
+~
+~
+#20452
+Road in the NorthWest Quadrant~
+Varicolored peonies, of every imaginable tint, create a winsome,
+lighthearted atmostphere along the street leading around the
+NorthWest Quadrant.  Carefully laid out and lovingly tended, they
+form the shapes of the exotic, and sometimes dangerous, fish that
+grace the sea surrounding the town.  The street itself is paved
+in brick, imported from some faraway land.  To the south is the
+West Gate and the road continues to the north and west.
+~
+city
+D NORTH 20441 0 0
+~
+~
+D SOUTH 20461 0 0
+~
+~
+D WEST 20451 0 0
+~
+~
+#20453
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  The walkway continues
+to the south and east.
+~
+inside
+D EAST 20454 0 0
+~
+~
+D SOUTH 20462 0 0
+~
+~
+#20454
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  To the north is the
+North Gate, to the south is the Center Square and the walkway
+continues to the east and west.
+~
+inside
+D NORTH 20443 0 0
+~
+~
+D EAST 20455 0 0
+~
+~
+D SOUTH 20463 0 0
+~
+~
+D WEST 20453 0 0
+~
+~
+#20455
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  The walkway continues
+to the south and west.
+~
+inside
+D SOUTH 20464 0 0
+~
+~
+D WEST 20454 0 0
+~
+~
+#20456
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the south is the East Gate and the road continues
+to the north and east.
+~
+city
+D NORTH 20445 0 0
+~
+~
+D EAST 20457 0 0
+~
+~
+D SOUTH 20465 0 0
+~
+~
+#20457
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  To the north is the Practice Yard and the road
+continues to the east and west.
+~
+city
+D NORTH 20446 0 0
+~
+~
+D EAST 20458 0 0
+~
+~
+D WEST 20456 0 0
+~
+~
+#20458
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The road continues to the east and west.
+~
+city
+D EAST 20459 0 0
+~
+~
+D WEST 20457 0 0
+~
+~
+#20459
+Road in the NorthEast Quadrant~
+Violets, ranging from the lightest mauves to the deepest midnight
+blues, cheerfully decorate the street leading around the NorthEast
+Quadrant.  Carefully laid out and lovingly tended, they form the
+shapes of the various seashells that wash up on the beaches outside
+of town.  The street itself is paved in brick, imported from some
+faraway land.  The road continues to the north and west.
+~
+city
+D NORTH 20448 0 0
+~
+~
+D WEST 20458 0 0
+~
+~
+#20460
+A Sandy Path~
+This lovely, palm tree lined path is covered in fine beach sand, polished
+by the wind and waves for so long that it is nearly white.  It reflects back
+both the sunlight by day and the moonlight by night in an almost hypnotic
+fashion.  The West Gate is to the east and the beach is to the north.
+~
+inside
+D NORTH 15840 0 -1
+~
+~
+D EAST 20461 A 0
+gate~
+~
+D WEST 15840 0 0
+~
+~
+#20461
+West Gate~
+Ivy, carefully pruned back so as not to overwhelm the flowers
+growing nearby, creeps up the brick colonnades and onto the
+gates themselves.  Painted white to offset the gracefully
+climbing vines, the gates are handworked wrought iron, specially
+treated to avoid rust in the corrosive sea air.  Although closed
+at night, the gates are never locked, for the people of Naiadia
+have always led an untroubled, worry-free existance.  North leads
+to the NorthWest Quadrant, south leads to the SouthWest Quadrant,
+east leads to the Center Square and west leads to the sea.
+~
+city
+D NORTH 20452 0 0
+~
+~
+D EAST 20462 0 0
+~
+~
+D SOUTH 20470 0 0
+~
+~
+D WEST 20460 A 0
+gate~
+~
+#20462
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  To the east is the
+Center Square, to the west is the West Gate and the walkway
+continues to the north and south.
+~
+inside
+D NORTH 20453 0 0
+~
+~
+D EAST 20463 0 0
+~
+~
+D SOUTH 20471 0 0
+~
+~
+D WEST 20461 0 0
+~
+~
+#20463
+Center Square~
+A giant magnolia tree, its heady fragrance intoxicating the senses,
+stands in the heart of Naiadia casting soft shadows all across the Center
+Square.  It's branches sway back and forth in the gentle breeze drifting in
+off the ocean, gently rocking the small swing someone attached to it.  When
+the healer is free from his regular duties, he gladly pushes any small child
+who wants a ride.  Despite the fact that all meeting and gatherings are held
+here, the grass is always perfectly manicured and not a speck of litter can
+be found anywhere.  The Square leads north, south, east and west to
+the Central Walkway.
+~
+inside
+D NORTH 20454 0 0
+~
+~
+D EAST 20464 0 0
+~
+~
+D SOUTH 20472 0 0
+~
+~
+D WEST 20462 0 0
+~
+~
+D DOWN 0 0 0
+~
+~
+#20464
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  To the east is the
+East Gate, to the west is the Center Square and the walkway
+continues to the north and south.
+~
+inside
+D NORTH 20455 0 0
+~
+~
+D EAST 20465 0 0
+~
+~
+D SOUTH 20473 0 0
+~
+~
+D WEST 20463 0 0
+~
+~
+#20465
+East Gate~
+Ivy, carefully pruned back so as not to overwhelm the flowers
+growing nearby, creeps up the brick colonnades and onto the
+gates themselves.  Painted white to offset the gracefully climbing
+vines, the gates are handworked wrought iron, specially treated
+to avoid rust in the corrosive sea air.  Although closed at night,
+the gates are never locked, for the people of Naiadia have always
+led an untroubled, worry-free existance.  North leads to the
+NorthEast Quadrant, south leads to the SouthEast Quadrant, east
+leads to the sea and west leads to the Center Square.
+~
+city
+D NORTH 20456 0 0
+~
+~
+D EAST 20466 A 0
+gate~
+~
+D SOUTH 20474 0 0
+~
+~
+D WEST 20464 0 0
+~
+~
+#20466
+A Sandy Path~
+This lovely, palm tree lined path is covered in fine beach sand, polished
+by the wind and waves for so long that it is nearly white.  It reflects back
+both the sunlight by day and the moonlight by night in an almost hypnotic
+fashion.  The East Gate is to the west and the beach is to the east.
+~
+inside
+D EAST 15849 0 0
+~
+~
+D WEST 20465 A 0
+gate~
+~
+#20467
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  The road continues
+to the south and east.
+~
+city
+D EAST 20468 0 0
+~
+~
+D SOUTH 20478 0 0
+~
+~
+#20468
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  The road continues
+to the east and west.
+~
+city
+D EAST 20469 0 0
+~
+~
+D WEST 20467 0 0
+~
+~
+#20469
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the south is
+the Source of Magic and the road continues to the east and west.
+~
+city
+D EAST 20470 0 0
+~
+~
+D SOUTH 20480 0 0
+~
+~
+D WEST 20468 0 0
+~
+~
+#20470
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the north is
+the West Gate and the road continues to the south and west.
+~
+city
+D NORTH 20461 0 0
+~
+~
+D SOUTH 20481 0 0
+~
+~
+D WEST 20469 0 0
+~
+~
+#20471
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  The walkway continues
+to the north and east.
+~
+inside
+D NORTH 20462 0 0
+~
+~
+D EAST 20472 0 0
+~
+~
+#20472
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  To the north is the
+Center Square, to the South is the South Gate and the walkway
+continues to the east and west.
+~
+inside
+D NORTH 20463 0 0
+~
+~
+D EAST 20473 0 0
+~
+~
+D SOUTH 20483 0 0
+~
+~
+D WEST 20471 0 0
+~
+~
+#20473
+The Central Walkway~
+The busiest section of Naiadia, many townsfolk stroll around
+the walkway, stopping almost constantly to chat with neighbors
+and friends.  Wrought iron benches, painted white and handworked
+to depict life under the sea, have been thoughfully laid out at
+intervals so that those wishing to stay and talk for a while can
+make themselves comfortable.  Tulips of various shading and hues
+have been lovingly planted on either side of the benches to
+further enhance the cozy atmosphere.  The gentle fragrance of
+magnolias drifts past from a nearby tree.  The walkway continues
+to the north and west.
+~
+inside
+D NORTH 20464 0 0
+~
+~
+D WEST 20472 0 0
+~
+~
+#20474
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the north is the East Gate and the road continues to the
+south and east.
+~
+city
+D NORTH 20465 0 0
+~
+~
+D EAST 20475 0 0
+~
+~
+D SOUTH 20485 0 0
+~
+~
+#20475
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  To the south is the General Store and the road continues to
+the east and west.
+~
+city
+D EAST 20476 0 0
+~
+~
+D SOUTH 20486 0 0
+~
+~
+D WEST 20474 0 0
+~
+~
+#20476
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  The road continues to the east and west.
+~
+city
+D EAST 20477 0 0
+~
+~
+D WEST 20475 0 0
+~
+~
+#20477
+Road in the SouthEast Quadrant~
+Multicolored crocus, of every conceivable hue and shade, stylishly
+enchace the street leading around the SouthEast Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the wild and
+deadly sea serpents that plague those who travel across the Naiadian
+Sea.  The street itself is paved in brick, imported from some faraway
+land.  The road continues to the south and west.
+~
+city
+D SOUTH 20488 0 0
+~
+~
+D WEST 20476 0 0
+~
+~
+#20478
+Road in the SouthWest Quadrant~
+Anemonies, ranging in various shades of white, red and purple, lend a
+lively air to the street leading around the SouthWest Quadrant.  Carefully
+laid out and lovingly tended, they form the shapes of the beautiful mermaids
+and handsome mermen for which the town was named.  The street itself
+is paved in brick, imported from some faraway land.  To the east is the
+Land Lubber's Boat Shop and the road continues to the north and south.
+~
+city
+D NORTH 20467 0 0
+~
+~
+D EAST 20479 0 0
+~
+~
+D SOUTH 20490 0 0
+~
+~
+#20479
+The Land Lubber's Boat Shop~
+This bungalow contains rafts and boats of all types.  All of the
+selections are in pristine order, as if the proprietor had just finished the
+final coat of paint.  A smiling sailor welcomes you and offers his wares.
+The steet continues to the west.
+~
+inside
+ROOM INDOORS
+D WEST 20478 0 0
+~
+~
+#0
+
+
+
+#RESETS
+DOOR 20400 down LOCKED
+OBJECT 20539 TO 20400
+OBJECT 20538 TO 20400
+MOB 20400 TO 20400 GLIMIT 1 LLIMIT 1
+MOB 20599 TO 20400 GLIMIT 1 LLIMIT 1
+MOB 20401 TO 20401 GLIMIT 8 LLIMIT 1
+MOB 20530 TO 20402 GLIMIT 8 LLIMIT 1
+MOB 20405 TO 20405 GLIMIT 1 LLIMIT 1
+MOB 20406 TO 20406 GLIMIT 1 LLIMIT 1
+MOB 20526 TO 20407 GLIMIT 8 LLIMIT 1
+MOB 20402 TO 20408 GLIMIT 8 LLIMIT 1
+MOB 20409 TO 20409 GLIMIT 1 LLIMIT 1
+MOB 20410 TO 20410 GLIMIT 1 LLIMIT 1
+MOB 20464 TO 20414 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20414 GLIMIT 18 LLIMIT 1
+EQUIP 20410 WIELD
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+MOB 20426 TO 20414 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+MOB 20454 TO 20415 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20415 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20417 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20417 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20418 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20418 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20464 TO 20419 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20419 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20454 TO 20420 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20420 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20422 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20422 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20423 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20423 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20426 TO 20423 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+MOB 20427 TO 20427 GLIMIT 1 LLIMIT 1
+EQUIP 20420 HEAD
+EQUIP 20419 WIELD
+OBJECT 20427 TO 20427
+OBJECT 20428 TO 20428
+PUT 20479 IN 20428 COUNT 1
+PUT 20480 IN 20428 COUNT 1
+PUT 20481 IN 20428 COUNT 1
+MOB 20428 TO 20428 GLIMIT 1 LLIMIT 1
+EQUIP 20418 RFINGER
+OBJECT 20433 TO 20433
+MOB 20433 TO 20433 GLIMIT 1 LLIMIT 1
+GIVE 20409
+GIVE 20408
+GIVE 20407
+GIVE 20406
+OBJECT 20434 TO 20434
+MOB 20435 TO 20435 GLIMIT 1 LLIMIT 1
+GIVE 20401
+GIVE 20405
+GIVE 20404
+GIVE 20403
+GIVE 20402
+OBJECT 20599 TO 20440
+MOB 20440 TO 20440 GLIMIT 1 LLIMIT 1
+OBJECT 20440 TO 20440
+MOB 20438 TO 20441 GLIMIT 18 LLIMIT 1
+EQUIP 20410 WIELD
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+MOB 20414 TO 20443 GLIMIT 8 LLIMIT 2
+MOB 20438 TO 20445 GLIMIT 18 LLIMIT 1
+EQUIP 20410 WIELD
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+MOB 20446 TO 20446 GLIMIT 1 LLIMIT 1
+OBJECT 20447 TO 20447
+MOB 20447 TO 20447 GLIMIT 1 LLIMIT 1
+GIVE 20587
+GIVE 20591
+GIVE 20590
+GIVE 20589
+GIVE 20588
+MOB 20464 TO 20449 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20449 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20454 TO 20450 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20450 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20451 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20451 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20452 GLIMIT 20 LLIMIT 1
+MOB 20426 TO 20453 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+OBJECT 20453 TO 20453
+OBJECT 20453 TO 20454
+MOB 20426 TO 20455 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+OBJECT 20453 TO 20455
+MOB 20464 TO 20456 GLIMIT 20 LLIMIT 1
+MOB 20454 TO 20457 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20457 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20458 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20458 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20459 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20459 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20414 TO 20461 GLIMIT 8 LLIMIT 2
+OBJECT 20453 TO 20462
+OBJECT 20472 TO 20463
+OBJECT 20463 TO 20463
+MOB 20463 TO 20463 GLIMIT 1 LLIMIT 1
+OBJECT 20453 TO 20464
+MOB 20414 TO 20465 GLIMIT 8 LLIMIT 2
+MOB 20464 TO 20467 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20467 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20454 TO 20468 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20468 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20469 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20469 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20470 GLIMIT 20 LLIMIT 1
+MOB 20426 TO 20471 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+OBJECT 20453 TO 20471
+OBJECT 20453 TO 20472
+MOB 20472 TO 20472 GLIMIT 1 LLIMIT 1
+EQUIP 20417 WIELD
+MOB 20548 TO 20473 GLIMIT 1 LLIMIT 1
+EQUIP 20593 LEGS
+EQUIP 20594 HEAD
+EQUIP 20595 LFINGER
+EQUIP 20596 WRISTTWO
+EQUIP 20597 BODY
+MOB 20426 TO 20473 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+OBJECT 20453 TO 20473
+MOB 20464 TO 20474 GLIMIT 20 LLIMIT 1
+MOB 20454 TO 20475 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20475 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20476 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20476 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20477 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20477 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20479 TO 20479 GLIMIT 1 LLIMIT 1
+GIVE 20570
+GIVE 20572
+GIVE 20571
+GIVE 20573
+MOB 20480 TO 20480 GLIMIT 1 LLIMIT 1
+GIVE 20565
+GIVE 20562
+GIVE 20563
+GIVE 20564
+GIVE 20464
+MOB 20438 TO 20481 GLIMIT 18 LLIMIT 1
+EQUIP 20410 WIELD
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+MOB 20414 TO 20483 GLIMIT 8 LLIMIT 2
+MOB 20438 TO 20485 GLIMIT 18 LLIMIT 1
+EQUIP 20410 WIELD
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+MOB 20486 TO 20486 GLIMIT 1 LLIMIT 1
+GIVE 20575
+GIVE 20574
+GIVE 20576
+GIVE 20577
+GIVE 20578
+MOB 20487 TO 20487 GLIMIT 1 LLIMIT 1
+GIVE 20586
+GIVE 20585
+GIVE 20584
+OBJECT 20491 TO 20491
+MOB 20491 TO 20491 GLIMIT 1 LLIMIT 1
+MOB 20544 TO 20492 GLIMIT 1 LLIMIT 1
+MOB 20545 TO 20492 GLIMIT 1 LLIMIT 1
+MOB 20543 TO 20492 GLIMIT 1 LLIMIT 1
+MOB 20542 TO 20492 GLIMIT 1 LLIMIT 1
+MOB 20540 TO 20492 GLIMIT 1 LLIMIT 1
+MOB 20541 TO 20492 GLIMIT 1 LLIMIT 1
+OBJECT 20493 TO 20493
+MOB 20493 TO 20493 GLIMIT 1 LLIMIT 1
+GIVE 20566
+GIVE 20567
+GIVE 20568
+GIVE 20469
+MOB 20497 TO 20497 GLIMIT 1 LLIMIT 1
+GIVE 20497
+GIVE 20550
+GIVE 20551
+GIVE 20553
+GIVE 20552
+OBJECT 20498 TO 20498
+MOB 20498 TO 20498 GLIMIT 1 LLIMIT 1
+GIVE 20579
+GIVE 20583
+GIVE 20580
+GIVE 20581
+GIVE 20582
+OBJECT 20499 TO 20499
+MOB 20499 TO 20499 GLIMIT 1 LLIMIT 1
+GIVE 20558
+GIVE 20559
+GIVE 20560
+GIVE 20561
+MOB 20464 TO 20503 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20503 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20426 TO 20503 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+MOB 20454 TO 20504 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20504 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20506 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20506 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20507 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20507 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20464 TO 20509 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20509 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20454 TO 20510 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20510 GLIMIT 14 LLIMIT 1
+MOB 20454 TO 20512 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20512 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20513 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20513 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+MOB 20426 TO 20513 GLIMIT 8 LLIMIT 1
+EQUIP 20415 BODY
+EQUIP 20414 SHIELD
+EQUIP 20413 WIELD
+MOB 20526 TO 20515 GLIMIT 8 LLIMIT 1
+MOB 20516 TO 20516 GLIMIT 1 LLIMIT 1
+MOB 20517 TO 20517 GLIMIT 1 LLIMIT 1
+MOB 20518 TO 20518 GLIMIT 1 LLIMIT 1
+MOB 20526 TO 20519 GLIMIT 8 LLIMIT 1
+MOB 20523 TO 20523 GLIMIT 1 LLIMIT 1
+MOB 20524 TO 20524 GLIMIT 1 LLIMIT 1
+MOB 20402 TO 20525 GLIMIT 8 LLIMIT 1
+MOB 20401 TO 20526 GLIMIT 8 LLIMIT 1
+MOB 20464 TO 20527 GLIMIT 20 LLIMIT 1
+OBJECT 20549 TO 20527
+OBJECT 20548 TO 20527
+OBJECT 20547 TO 20527
+MOB 20454 TO 20528 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20528 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20529 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20529 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+OBJECT 20540 TO 20529
+MOB 20529 TO 20529 GLIMIT 1 LLIMIT 1
+MOB 20402 TO 20530 GLIMIT 8 LLIMIT 1
+DOOR 20532 up LOCKED
+MOB 20532 TO 20532 GLIMIT 1 LLIMIT 1
+EQUIP 20416 WIELD
+OBJECT 20532 TO 20532
+MOB 20464 TO 20534 GLIMIT 20 LLIMIT 1
+MOB 20438 TO 20534 GLIMIT 18 LLIMIT 1
+EQUIP 20412 BODY
+EQUIP 20411 SHIELD
+EQUIP 20410 WIELD
+OBJECT 20541 TO 20534
+OBJECT 20542 TO 20534
+MOB 20454 TO 20535 GLIMIT 14 LLIMIT 1
+MOB 20462 TO 20535 GLIMIT 14 LLIMIT 1
+MOB 20464 TO 20536 GLIMIT 20 LLIMIT 1
+OBJECT 20546 TO 20536
+OBJECT 20545 TO 20536
+OBJECT 20544 TO 20536
+OBJECT 20543 TO 20536
+OBJECT 20537 TO 20537
+OBJECT 20539 TO 20539
+OBJECT 20492 TO 20540
+MOB 20492 TO 20540 GLIMIT 1 LLIMIT 1
+GIVE 20554
+GIVE 20557
+GIVE 20555
+GIVE 20556
+GIVE 20569
+S
+
+#IMPROGS
+END
+#$

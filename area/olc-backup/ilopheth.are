@@ -1,0 +1,3644 @@
+#AREA
+ilopheth.are~
+Valley of Ilopheth~
+Tyner~
+8 40
+9000 9199
+unopened
+temperate
+0
+1
+
+#MOBS
+#9000
+statue white stone man ancient druid~
+a statue of an ancient druid~
+A statue of a bearded man is carved from white stone.         
+~
+Standing behind the altar with arms uplifted, this statue is done         
+in exquisite detail.  Rendered in a smooth white stone, the man's         
+solemn expression is beautifully cast, as he apparently conducts         
+some sort of druidic rite.  The clothing he wears is remarkable,         
+seeming to be made of real cloth.  A long beard is visible above his          
+flowing robes, adding to the impression that this man is both         
+ancient, and wise.         
+~
+0 9000 100 human~
+60 50d10+5400 8d6+48 10 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+OFF DODGE
+#9001
+wiry wiry-haired mowgrum~
+a wiry-haired mowgrum~
+A wiry-haired mowgrum forages on the forest floor.         
+~
+This creature seems to be a type of oversized rodent, several feet         
+high at the shoulder with huge ears and a protruding snout. Its          
+coarse hair and foul smell make it a very unpleasant thing, and its         
+bestial grin reveals small, but malevolent teeth of razor sharpness.         
+~
+-1000 9001 100 kobold~
+15 3d9+243 2d6+3 10 100 bite
+0 0 0 0
+standing either none
+0 0 small
+ACT NPC
+#9002
+enormous cave bear~
+a cave bear~
+An enormous cave bear rests in the corner.         
+~
+This bear's bristling brown coat increases his already incredible size         
+to strictly frightening.  Nearly five feet tall at the shoulder, with         
+powerful haunches, this bear appears both agile and strong.  With a          
+menacing growl and bared teeth, it appears to be quite mean as well.         
+~
+0 9002 100 bear~
+28 6d12+903 2d12+8 10 100 bite
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+#9003
+woman enthralled maenad half-naked half~
+an enthralled maenad~
+A half-naked woman dances here, with a look of enthralled possession.         
+~
+With only a few thin, wet rags covering her, this woman dances wildly         
+in spite of the filth and wetness that would seemingly make her         
+uncomfortable.  She ignores you as she gyrates her body furiously,         
+her eyes gazing blankly into the distance.         
+~
+-1000 9003 100 human~
+26 5d10+800 3d7+7 10 100 claw
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#9004
+hag marsh marsh-hag wild-eyed ancient woman~
+the marsh-hag~
+An ancient woman glares at you, wild-eyed.         
+~
+Her thin, gray hair is almost entirely fallen out, and as she screeches         
+you can't help but notice the gaps where her teeth have done the same.           
+The teeth she does have left are a putrid shade of green, and you notice         
+a similar color beneath her long, sharpened fingernails.  She is          
+covered in some sort of cloth robe, though it is nearly invisible beneath         
+the strange talismans and jewelry that she wears in abundance.         
+~
+-1000 9004 100 human~
+40 20d10+1920 4d8+19 10 100 claw
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+#9005
+druid elder man bearded elderly~
+the druid elder~
+A bearded old man reads a manuscript intently.         
+~
+His long, grey beard hangs well down the front of his plain brown robe.         
+Wrinkles around his eyes, and on his forehead, seem to stand out as he         
+intently reviews a codex bound in weathered vellum.  His expression is         
+a serious one, though his intensity seems to be one of peace, rather          
+than anger.         
+~
+0 9005 100 human~
+40 20d10+1850 4d7+19 10 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#9006
+satyr grinning reveler~
+a grinning satyr~
+A grinning satyr dances about in revelry.         
+~
+Dark-skinned and with fine features, this being's face would be most          
+handsome among men.  Jutting from atop his head, however, are a set of         
+furry goat's ears.  His legs are equine, terminating in large cloven hooves.         
+Clad only in a brightly colored tunic, he dances furiously in orgiastic         
+delight.         
+~
+0 9006 100 human~
+28 6d12+978 2d12+8 10 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#9007
+viper marsh snake marsh-viper~
+a marsh-viper~
+A small black snake lies coiled among the reeds.         
+~
+Although this snake is small, its bright colors give notice of its         
+dangerous nature.  Its wide head is colored with a metallic golden         
+diamond, the golden color shimmering down its back in a braided set         
+of stripes.         
+~
+0 9007 100 snake~
+16 3d9+265 2d6+5 10 100 bite
+0 0 0 0
+standing either none
+V 0 small
+ACT NPC
+ACT AGGRESSIVE
+AFF CAMOUFLAGE
+#9008
+druid solemn young~
+a solemn druid~
+A young druid solemnly stands guard.         
+~
+This young man wears long brown robes, his hood drawn back revealing         
+a striking yet solemn appearance.  His skin is smooth, but his eyes         
+are lined as though with great worry.  His build is not intimidating,         
+but still sturdy.  His gaze is contemplative, and strangely sorrowful.         
+~
+0 9008 100 human~
+24 5d10+700 2d10+6 10 100 pound
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#9009
+turkey wild bird~
+a wild turkey~
+A large, multicolored bird pokes around the forest floor.         
+~
+With a large, oblong torso and a long, skinny neck this bird does not         
+appear well-suited to flight.  Its large feathers are arranged          
+carefully, their colors dark but widely varied in hue.  It walks about         
+on rather long legs, inspecting the forest floor carefully for food.         
+~
+0 9009 100 unique~
+4 2d7+46 1d5+1 10 100 pierce
+0 0 0 0
+standing either none
+V 0 small
+ACT NPC
+#9010
+man weathered old strange~
+a weathered old man~
+A strange old man in weatherbeaten clothing sits on a rock.         
+~
+Although his skin sags slightly on his lined face and his posture is          
+thwarted by crooked shoulders, this man appears to be in good health         
+and spirits.  He wears a floppy cloth hat with a wide brim, and a         
+worn brown poncho that bags out in large folds to his knees.  His         
+expression is serious but not foreboding, and a twinkle of mischief         
+is evident in his squinty grey eyes.         
+~
+0 9010 100 human~
+48 25d10+2750 6d6+26 10 100 punch
+0 0 0 0
+sitting male none
+0 0 medium
+ACT NPC
+#9011
+vicious piranha~
+a vicious piranha~
+A vicious piranha swims just beneath the water's surface.         
+~
+This fish is rather plain looking, oblong in shape and grey in color.           
+What is amazing, is that about half of its body weight seems to be          
+in its head.  Huge jutting teeth hang well outside its gaping maw, and         
+coupled with its insatiable appetite they could be quite dangerous.         
+~
+0 9011 100 fish~
+12 2d10+170 2d10+7 10 100 chomp
+0 0 0 0
+standing either none
+V 0 tiny
+ACT NPC
+OFF SPAM_MURDER
+#9012
+warthog~
+a warthog~
+A warthog roots around noisily at the base of a tree.         
+~
+Rather like a large pig, this beast stands abour three feet tall at the         
+shoulder with coarse, white hairs sprouting out from its mottled black         
+hide.  Blunted tusks jut out from beneath its hoglike snout, which          
+emits a furious combination of snorts and grunts as it roots around in         
+the earth.         
+~
+0 9012 100 pig~
+14 2d10+205 1d12+3 10 100 charge
+0 0 0 0
+standing either none
+0 0 small
+ACT NPC
+#9013
+wizened satyr old~
+the satyr wizard~
+A wizened satyr rests contemplatively on the knoll.         
+~
+His face is dark-skinned, and though evidently once handsome it is now         
+blemished with the lines and furrows of age.  His long, grey hair is         
+tied back neatly, exceeded in length by his soft, tufted beard.  Sitting         
+solemnly in his dark robes he seems to have put aside the revelry of his         
+youth to the quiet contemplation of old age.         
+~
+0 9013 100 human~
+39 10d10+1840 5d6+17 10 100 magic
+0 0 0 0
+sitting male none
+0 0 medium
+ACT NPC
+#9014
+hermit Pelamon~
+Pelamon~
+A haggard and unkempt hermit in tattered robes stands here, hunched over.       
+~
+~
+0 0 0 human~
+45 100d100+100 0d0+0 0 0 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#9001
+bracelet teeth human hoop~
+a bracelet of human teeth~
+Some human teeth are strung in a hoop here.~
+armor
+hemp~
+6 6 6 10 0
+40 1 10000 P
+WEAR TAKE
+WEAR WRIST
+ITEM HUM
+ITEM EVIL
+APPLY HITROLL 2
+APPLY HP 20
+APPLY MANA 20
+LIMIT 50
+E bracelet hoop teeth human~
+Several rotten human teeth are strung together with a sturdy piece         
+of rope.  In addition to the natural rattling this bracelet produces,         
+an odd supernatural humming can be heard when you hold it near your         
+ear.         
+~
+
+#9002
+carved sanded exquisitely wooden staff~
+an exquisitely carved staff~
+An exquisitely carved and sanded wooden staff lies here.~
+weapon
+wood~
+staff 7 4 pound 0
+40 12 12000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HP 50
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 50
+E carved sanded exquisitely wooden staff~
+Beginning at its slender point, this staff is intricately carved with         
+a series of grotesque faces, stunning combinations of human and          
+animal shape.  The staff grows wider nearer the top, ending with a         
+bulbous elephant's head at its crown.         
+~
+
+#9003
+tree smooth broad broad-limbed~
+A broad-limbed tree~
+An enormous tree with broad, flat limbs rises into the air.~
+trash
+wood~
+0 0 0 0 0
+60 1000 0 P
+ITEM NOPURGE
+ITEM NOLOCATE
+LIMIT 0
+VERB climb
+E tree smooth broad broad-limbed~
+This particular tree is considerably thicker than the rest.  It too         
+stands at an inestimable height, its smooth brown trunk extending         
+out of sight in the thick canopy far overhead.  Its limbs are          
+strangely broad, and descend almost all the way to the ground in         
+a sort of spiral pattern around the trunk.  It certainly seems         
+climbable, almost like a winding staircase.         
+~
+
+#9004
+flute reed reed-flute~
+a well-crafted reed flute~
+A thick, hollow reed seems to have been crafted into an instrument.~
+treasure
+wood~
+0 0 0 0 0
+24 2 2400 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E flute reed reed-flute~
+Hollowed out from a sturdy reed, this flute is only finger-thick.           
+Holes have been carved out regularly down the shaft of the          
+instrument, which is played through a mouthpiece carefully shaped         
+on one end.         
+~
+
+#9005
+thyrsus wooden thin~
+a thin wooden thyrsus~
+A long wooden shaft topped with a bulbous pinecone is here.~
+staff
+wood~
+25 6 6 'frenzy' 0
+25 3 3800 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E thyrsis wooden thin~
+This wooden shaft, several feet in length is topped with a rather         
+enormous and well-preserved pinecone.  While somewhat fragile,         
+it possesses a certain aura of power.         
+~
+
+#9006
+robe crimson shimmering~
+a robe of shimmering crimson~
+A pile of crimson shimmers slightly on the floor.~
+armor
+silk~
+3 3 3 10 0
+35 6 5500 P
+WEAR TAKE
+WEAR ABOUT
+APPLY SVSPELL -5
+APPLY MANA 40
+LIMIT 100
+E robe crimson shimmering~
+The deep crimson color of this robe is offset by some sort of film         
+that gives it its odd reflective quality and shimmer.  Carefully         
+sewn overtop of the original fabric, the effect of the additional         
+layer is quite impressive.         
+~
+
+#9007
+book leather volume bound leather-bound~
+a leather-bound volume~
+A thick volume bound in leather is here.~
+map
+leather~
+0 0 0 0 0
+1 3 0 P
+WEAR TAKE
+LIMIT 0
+E book leather volume bound leather-bound~
+This book appears about half-full not of manuscript but of countless         
+finely detailed drawings and diagrams.  Some appear to depict the          
+sun and the moon, others seem to be seasonal calendars.  There are         
+several diagrams that are of circular shape, turned at various         
+angles.  Of particular interest is a depiction of a humanoid shape         
+passing through some sort of archway.  Numerous astrological symbols         
+surround the drawing.         
+~
+
+#9008
+portal gateway gate shimmering opalescent~
+an opalescent gateway~
+A shimmering gateway rises out of the ground.~
+portal
+energy~
+-1 0 1 9100 0
+1 0 0 P
+LIMIT 0
+E portal gateway gate shimmering opalescent~
+It is not possible to see what lies on the other side of this gateway,         
+it is merely an opalescent convolution of tiny beads of light that         
+swim about wildly in various pastel colors.  About man-height, the         
+edges seem firm and linear even if the interior of the gate is          
+chaotic.         
+~
+
+#9009
+portal gateway gate energy mass~
+a rapidly fluctuating portal~
+A strange mass of energy flexes and twists wildly in the air.~
+portal
+energy~
+-1 0 16 9001 0
+1 0 0 P
+LIMIT 0
+E portal gateway gate energy mass~
+The mass of energy seems vaguely rectangular in shape, yet its corners          
+and edges flex and twist wildly, stretching the thin plane into countless         
+odd shapes and sizes.  In addition, its color fluctuates constantly,          
+shifting between various pastel shades of blue, pink, yellow, and green.         
+Its chaotic flickering cast an eerie glow about this strange clearing.         
+At times, when its transformations take it closer to a rectangular shape,         
+there is a shadow of an image visible on the other side - as though you         
+might be able to walk through it.         
+~
+
+#9010
+altar white stone~
+a white stone altar~
+An altar carved from white stone stands in the middle of the clearing.~
+container
+marble~
+100 E 0 100 1
+1 500 0 P
+LIMIT 0
+E stone altar white~
+Unevenly carved white stone of supernatural smoothness has been made         
+into an altar here.  Its surface appears unblemished in spite of its          
+exposure to the elements.  Its legs seem to have been absorbed by         
+the soft turf over time, and in combination with its well-worn         
+smoothness give the impression that it has been here for quite some         
+time.         
+~
+
+#9011
+rod slender cedar~
+a slender cedar rod~
+A slender rod carved from fragrant wood is here.~
+wand
+softwood~
+0 0 0 'reserved' 0
+51 1 0 P
+WEAR TAKE
+LIMIT 0
+E rod slender cedar~
+This wand is just about finger thick, made from a fine reddish cedar         
+with notches cut into it in a regular pattern.  In spite of its         
+size, it appears nearly unbreakable, and its surface is polished         
+to a remarkable smoothness.         
+~
+
+#9012
+braided silver circlet~
+a circlet of braided silver~
+A circlet woven from innumerable tiny silver strands is here.~
+armor
+silver~
+10 10 10 10 0
+52 3 0 P
+WEAR TAKE
+WEAR HEAD
+APPLY DAMROLL 2
+APPLY HITROLL 2
+APPLY MANA 75
+APPLY WIS 4
+LIMIT 8
+E braided silver circlet~
+This thin circlet is shiny and smooth to the touch, made up of         
+innumerable tiny strands of silver woven tightly together into         
+a rigid band.  Energy seems to radiate from the circlet, adding         
+a glow to the shimmer the silver already possesses.         
+~
+
+#9013
+lunar talisman power metal spherical metal~
+a lunar talisman of power~
+A spherical lump of metal hangs from a silver chain.~
+armor
+electrum~
+12 12 12 12 0
+52 3 0 P
+WEAR TAKE
+WEAR NECK
+ITEM HUM
+APPLY DAMROLL 5
+APPLY CON 5
+APPLY STR 5
+LIMIT 8
+E lunar talisman power metal spherical metal~
+Suspended from a silver chain of finely crafted links, this          
+spherical lump of metal radiates with power and electricity.           
+Sparks seem to leap from within, traverse its surface, and          
+disappear into the depths of the talisman.  Engraved on the          
+surface of the otherwise plain-looking metal are numerous         
+symbols, presumably of astrological origin.         
+~
+
+#9014
+robe silver woven~
+a robe of woven silver~
+Fine silver threads have been woven into a robe here.~
+armor
+silver~
+15 15 15 15 0
+52 8 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM HUM
+APPLY SVSPELL -10
+APPLY HITROLL 5
+APPLY INT 5
+APPLY DEX 5
+LIMIT 8
+E robe silver woven~
+Spun of fine silver, the threads that comprise this robe are         
+innumerable.  Woven into a sturdy, flexible fabric, the threads         
+hum and pulsate with power.  The robe shimmers eerily, catching         
+the light and reflecting it with a spectacular effect.         
+~
+
+#9015
+pedestal white marble~
+a white marble pedestal~
+A smooth white pedestal is rooted in the center of the circle.~
+container
+marble~
+100 E 0 100 1
+60 600 0 P
+LIMIT 0
+E marble white pedestal~
+Sitting in the center of the circle of stones, this pedestal         
+is crafted of the finest white marble, and has been worn either         
+by time or craftsmanship to an incredibly smooth and polished         
+finish.         
+~
+
+#9016
+crystal multifaceted opaque~
+an opaque crystal sphere~
+A fist-sized sphere of oddly opaque crystal is here.~
+staff
+crystal~
+40 5 5 'prismatic spray' 0
+40 3 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E crystal multifaceted opaque~
+The crystal is spherical in shape, and is quite heavy for its         
+size.  The frosting on the exterior makes it extremely difficult         
+to see within.         
+~
+
+#0
+
+
+
+#ROOMS
+#9000
+An Altar in the Forest~
+An immense ring of hedges surrounds this pristine clearing, effectively         
+separating this area from the rest of the forest.  Neatly trimmed grasses         
+grow, soft and thick, carpeting the area.  Tiny wisps of light seem to          
+appear, coalesce, and vanish all around the strange clearing.  The strange         
+lights do not seem menacing, instead their soothing pastel colors seem          
+to lend an enchanted peace to this strange place.  There is a strange         
+texture to the hedges on the western side, as though it might be possible         
+to push through them.         
+~
+forest
+ROOM NO_MOB
+#9001
+A Steep Path in the Forest~
+The path here appears well-used, and descends sharply into the valley         
+below.  Enormous trees spring up all about, and while only several          
+feet thick, rise to an astounding height.  The canopy, far above, allows         
+only a little light to filter through, leaving this path dimly-lit at         
+best.  The underbrush is sparse here, and only a fine bed of leaves         
+covers the forest floor.  The leaves, fallen from far above, provide         
+an excellent environment for small foraging animals, and a faint         
+rustling seems to come from all directions.         
+~
+forest
+D NORTH 9002 0 0
+~
+The path descends to the north.         
+~
+D SOUTH 21572 0 0
+~
+The path ascends to the north, where the forest lightens.         
+~
+#9002
+A Steep Path in the Forest~
+The well-used path continues here, descending sharply into the valley         
+below.  Enormous trees spring up all about, and while only several         
+feet thick, rise to an astounding height.  The canopy, far above, allows         
+only a little light to filter through, leaving this path dimly-lit at         
+best.  The underbrush is sparse here, and only a fine bed of leaves          
+covers the forest floor.  To the north the path seems to reach level         
+ground, while to the south the path continues its sharp ascent.         
+~
+forest
+D NORTH 9003 0 0
+~
+The path reaches the floor of the valley to the north.         
+~
+D SOUTH 9001 0 0
+~
+The path ascends sharply to the south.         
+~
+#9003
+A Clearing on the Valley Floor~
+The slightest bit of light penetrates the canopy high above, bathing this         
+clearing with eerie, flickering light.  The forest floor here seems         
+well-worn, with only some stubby grasses poking through the earth here and         
+there.  To the north and east the clearing continues, growing a bit darker         
+with increasing vegetation.  A small trail darts through the massive trees         
+to the west, and a steep path leads out of the valley to the south.         
+~
+forest
+D NORTH 9033 0 0
+~
+The clearing continues to the north.         
+~
+D EAST 9005 0 0
+~
+The clearing continues to the east.         
+~
+D SOUTH 9002 0 0
+~
+A path ascends sharply to the south.         
+~
+D WEST 9004 0 0
+~
+A small trail heads directly west.         
+~
+#9004
+A Thin Trail Between the Trees~
+The forest floor is well-worn here, as a thin trail weaves its way among         
+the trees.  The height of the surrounding trees is astounding, and with         
+their foliage blotting out the light far above this trail has the         
+feeling of a large cavern.  Chittering and rustling can be heard all         
+around, however, as the residents of this forest forage among the leaves         
+that cover the ground.  The trail widens into a small clearing to the          
+east, and continues among some even larger trees to the west.         
+~
+forest
+D EAST 9003 0 0
+~
+A small clearing can be seen to the east.         
+~
+D WEST 9013 0 0
+~
+The thin trail continues to the west.         
+~
+#9005
+A Clearing on the Valley Floor~
+The slightest bit of light penetrates the canopy high above, bathing this         
+clearing with eerie, flickering light.  The forest floor here seems         
+well-worn, with only some stubby grasses poking through the earth here and         
+there.  The clearing continues to the west, and darkens slightly to the         
+north with increasing vegetation.  Considerable underbrush lies to the         
+east, where a dark path snakes between some bushes, and out of sight.         
+~
+forest
+D NORTH 9034 0 0
+~
+The clearing continues to the north.         
+~
+D EAST 9006 0 0
+~
+A dark path leads through some underbrush to the east.         
+~
+D WEST 9003 0 0
+~
+The clearing continues to the west.         
+~
+#9006
+A Dark Path Through the Underbrush~
+The foliage is quite dense in this part of the forest, not allowing even a         
+hint of light to penetrate the canopy high above.  Thick brambles grow on         
+either side of the path, at times even stretching menacingly across it.  In         
+such darkness, the scurrying and warbling of the forest life is reassuring.         
+The dark path continues to the east, and the forest lightens into a clearing         
+to the west.         
+~
+forest
+D EAST 9007 0 0
+~
+The path leads deeper into the forest to the east.         
+~
+D WEST 9005 0 0
+~
+A clearing can be seen to the west.         
+~
+#9007
+A Dark Path Through the Underbrush~
+The foliage is quite dense in this part of the forest, not allowing even a         
+hint of light to penetrate the canopy high above.  Thick brambles grow on         
+either side of the path, at times even stretching menacingly across it.  In         
+such darkness, the scurrying and warbling of the forest life is reassuring.         
+The dark path continues to the west, and seems to come to a bend to the east.         
+~
+forest
+D EAST 9009 0 0
+~
+The dark path comes to a bend to the east.         
+~
+D WEST 9006 0 0
+~
+The dark path continues to the west.         
+~
+#9008
+A Serene Woodland Trail~
+Sunlight filters peacefully through the trees here, and even the din of the         
+wilderness seems to lessen a bit.  The wide path consists mostly of thick,         
+tufted grasses.  Several grey stones jut out of the ground haphazardly,         
+worn smooth with time and covered with deep green mosses.  To the east, the         
+path appears to come to a lighter junction.  The woodland trail continues         
+to the north.         
+~
+forest
+D NORTH 9049 0 0
+~
+The serene trail continues to the north.         
+~
+D EAST 9010 0 0
+~
+To the east lies a junction of trails.         
+~
+#9009
+A Bend in the Dark Path~
+The foliage is quite dense in this part of the forest, not allowing even a         
+hint of light to penetrate the canopy high above.  Thick brambles grow on         
+either side of the path, at times even stretching menacingly across it.  In         
+such darkness, the scurrying and warbling of the forest life is reassuring.         
+The dark path continues to the west, while to the north the underbrush          
+suddenly gives way to a trail junction.         
+~
+forest
+D NORTH 9010 0 0
+~
+To the north lies a junction of trails.         
+~
+D WEST 9007 0 0
+~
+To the west the dark path continues.         
+~
+#9010
+A Small Junction in the Forest~
+This intersection lightens a bit due to a gap in the canopy above, and         
+the ground appears dry and well-traveled.  A gap in the underbrush          
+reveals a dark path leading off to the south, while the path to the west         
+appears to be a bit lighter and wider.  To the east, shaded a path slopes         
+gradually downward toward the river.         
+~
+forest
+D EAST 9011 0 0
+~
+A shaded path meanders downward to the east.         
+~
+D SOUTH 9009 0 0
+~
+A dark path makes its way through some underbrush to the south.         
+~
+D WEST 9008 0 0
+~
+A serene path snakes off to the west.         
+~
+#9011
+A Descending Path in the Forest~
+The trees grow shorter and the undergrowth becomes thicker in this eastern         
+section of the forest.  The path is fairly well-traveled, the soft grasses         
+worn smooth near its center.  The air seems thick here, as the path winds         
+slowly downward into a depression in the forest floor.  A light breeze          
+accompanies the faint sounds of moving water from the east.  The path         
+winds northward, while a small intersection stands to the west.         
+~
+forest
+D NORTH 9012 0 0
+~
+The shaded path continues its descent to the north.         
+~
+D WEST 9010 0 0
+~
+A small junction of trails lies to the west.         
+~
+#9012
+A Descending Path in the Forest~
+The trees grow shorter and the undergrowth becomes thicker in this eastern         
+section of the forest.  The path is fairly well-traveled, the soft grasses         
+worn smooth near its center.  The air seems thick here, as the path winds         
+slowly downward into a depression in the forest floor.  A light breeze          
+accompanies the faint sounds of moving water from the east, where the         
+path continues its descent.           
+~
+forest
+D EAST 9031 0 0
+~
+The path continues its descent to the east.         
+~
+D SOUTH 9011 0 0
+~
+The path inclines slightly to the south.         
+~
+#9013
+A Thin Trail Between the Trees~
+The forest floor is well-worn here, as a thin trail weaves its way among         
+the trees.  The height of the surrounding trees is astounding, and with         
+their foliage blotting out the light far above this trail has the         
+feeling of a large cavern.  Chittering and rustling can be heard all         
+around, however, as the residents of this forest forage among the leaves         
+that cover the ground.  To the east, the trail continues between some          
+slightly smaller trees.  To the west, the trail opens into a grove of         
+the incredibly large trees.         
+~
+forest
+D EAST 9004 0 0
+~
+The thin trail continues to the east.         
+~
+D WEST 9014 0 0
+~
+The path dissipates into a large grove to the west.         
+~
+#9014
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  A thin trail         
+runs through some slightly smaller trees to the east, and the grove continues         
+to the north and west.         
+~
+forest
+D NORTH 9019 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9013 0 0
+~
+A thin trail leads to the east.         
+~
+D WEST 9015 0 0
+~
+The grove continues to the west.         
+~
+#9015
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the north, east, and west.         
+~
+forest
+D NORTH 9018 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9014 0 0
+~
+The grove continues to the east.         
+~
+D WEST 9016 0 0
+~
+The grove continues to the west.         
+~
+#9016
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the north and east.         
+~
+forest
+D NORTH 9017 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9015 0 0
+~
+The grove continues to the east.         
+~
+#9017
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the north, south, and east.         
+~
+forest
+D NORTH 9020 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9018 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9016 0 0
+~
+The grove continues to the south.         
+~
+#9018
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+in the four cardinal directions around you.         
+~
+forest
+D NORTH 9021 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9019 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9015 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9017 0 0
+~
+The grove continues to the west.         
+~
+#9019
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the north, south, and west.         
+~
+forest
+D NORTH 9022 0 0
+~
+The grove continues to the north.         
+~
+D SOUTH 9014 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9018 0 0
+~
+The grove continues to the west.         
+~
+#9020
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the north, south, and east.         
+~
+forest
+D NORTH 9023 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9021 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9017 0 0
+~
+The grove continues to the south.         
+~
+#9021
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+in the four cardinal directions around you.         
+~
+forest
+D NORTH 9024 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9022 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9018 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9020 0 0
+~
+The grove continues to the west.         
+~
+#9022
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues          
+to the north, south, and west.         
+~
+forest
+D NORTH 9025 0 0
+~
+The grove continues to the north.         
+~
+D SOUTH 9019 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9021 0 0
+~
+The grove continues to the west.         
+~
+#9023
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the east and south.         
+~
+forest
+D EAST 9024 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9020 0 0
+~
+The grove continues to the south.         
+~
+#9024
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+in the four cardinal directions around you.         
+~
+forest
+D NORTH 9026 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9025 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9021 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9023 0 0
+~
+The grove continues to the west.         
+~
+#9025
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+in the four cardinal directions around you.         
+~
+forest
+D NORTH 9027 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9028 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9022 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9024 0 0
+~
+The grove continues to the west.         
+~
+#9026
+A Tangled Corner of the Quiet Grove~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  Tangled bushes and vines grow out of a large rock face         
+to the west.  The wild growths extend to the trunks of some of the trees,         
+snaking across the forest floor to reach them.  The grove continues to         
+the east and south.         
+~
+forest
+D EAST 9027 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9024 0 0
+~
+The grove continues to the south.         
+~
+#9027
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the east, west, and south, while a rocky path leads north near the base         
+of some mountains.         
+~
+forest
+D NORTH 9127 0 0
+~
+A rocky path leads north near some mountains.         
+~
+D EAST 9029 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9025 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9026 0 0
+~
+The grove continues to the west, into a tangled corner.         
+~
+#9028
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the north and west.         
+~
+forest
+D NORTH 9029 0 0
+~
+The grove continues to the north.         
+~
+D WEST 9025 0 0
+~
+The grove continues to the west.         
+~
+#9029
+A Quiet Grove of Towering Trees~
+This does not seem to be so much a grove of trees as a grove of enormous         
+wooden shafts, jutting impossibly into the sky.  The actual foliage lies         
+far above, where an indiscernible, but thick canopy blots out much of the         
+incoming light.  The warbling and chittering heard in other parts of the         
+forest is almost nonexistent here, and the only sounds are of smaller         
+creatures scuttling about the leaf-covered forest floor.  The grove continues         
+to the west, and the trees give way to a grassy meadow to the east.         
+~
+forest
+D EAST 9030 0 0
+~
+To the east, the towering trees thin out into a large meadow.         
+~
+D SOUTH 9028 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9027 0 0
+~
+The grove continues to the west.         
+~
+#9030
+A Forest Meadow~
+The constricting undergrowth of the forest gives way here to a rather large,         
+grassy meadow.  Although they stand several feet high, the grasses are still          
+easily navigable.  The scuttling sounds of the forest are replaced by the          
+high-pitched whining and chirping of insects, and the stale forest air gives         
+way to a refreshing breeze.  The meadow continues to the north and east, while         
+you can enter a grove of colossal trees just to the west.         
+~
+field
+D NORTH 9035 0 0
+~
+The meadow stretches out to the north.         
+~
+D EAST 9082 0 0
+~
+The meadow stretches out to the east.         
+~
+D WEST 9029 0 0
+~
+A grove of towering trees stands west of here.         
+~
+#9031
+A Descending Path in the Forest~
+The trees are rather stunted here, and the undergrowth is wildly entangled.         
+The path, however, is fairly well-traveled, the soft grasses worn smooth near          
+its center.  The air seems thick here, as the path winds slowly downward into          
+a depression in the forest floor.  A light breeze and a faint, swampy odor          
+accompany the sound of rushing water from the east.          
+~
+forest
+D EAST 9032 0 0
+~
+The path continues its descent to the east.         
+~
+D WEST 9012 0 0
+~
+The path inclines slightly to the west.         
+~
+#9032
+A Bend in the Descending Path~
+The path bends sharply downward to the north here, and continues its incline         
+to the west.  The trees are rather stunted here, and the undergrowth is wildly          
+entangled. The path, however, is fairly well-traveled, the soft grasses worn          
+smooth near its center.  The air seems thick here, as the path winds slowly          
+downward into a depression in the forest floor.  A light breeze and a faint,          
+swampy odor accompany the sound of rushing water from the east.          
+~
+forest
+D NORTH 9036 0 0
+~
+The path continues its descent to the north.         
+~
+D WEST 9031 0 0
+~
+The path inclines slightly to the west.         
+~
+#9033
+A Clearing on the Valley Floor~
+The slightest bit of light penetrates the canopy high above, bathing this         
+clearing with eerie, flickering light.  The forest floor here seems         
+well-worn, with only some stubby grasses poking through the earth here and         
+there.  Dense underbrush bars passage to the north and west, while the         
+clearing continues to the south and east.         
+~
+forest
+D EAST 9034 0 0
+~
+The clearing continues to the east.         
+~
+D SOUTH 9003 0 0
+~
+The clearing continues to the south.~
+#9034
+A Clearing on the Valley Floor~
+The slightest bit of light penetrates the canopy high above, bathing this         
+clearing with eerie, flickering light.  The forest floor here seems         
+well-worn, with only some stubby grasses poking through the earth here and         
+there.  Dense underbrush bars passage to the east while the clearing          
+continues to the west, and lightens slightly to the south.  A thin trail         
+leads north between some trees, sloping sharply downward.         
+~
+forest
+D NORTH 9046 0 0
+~
+A small trail slopes sharply down to the north.         
+~
+D SOUTH 9005 0 0
+~
+The clearing continues to the south.         
+~
+D WEST 9033 0 0
+~
+The clearing continues to the west.         
+~
+#9035
+A Forest Meadow~
+The constricting undergrowth of the forest gives way here to a rather large,         
+grassy meadow.  Although they stand several feet high, the grasses are still          
+easily navigable.  The scuttling sounds of the forest are replaced by the          
+high-pitched whining and chirping of insects, and the stale forest air gives         
+way to a refreshing breeze.  The meadow continues to the south and east,         
+while a worn, dusty trail winds between some trees to the north.         
+~
+field
+D NORTH 9101 0 0
+~
+A worn trail leads north through some trees.         
+~
+D EAST 9105 0 0
+~
+The meadow continues to the east.         
+~
+D SOUTH 9030 0 0
+~
+The meadow continues to the south.         
+~
+#9036
+A Descending Path in the Forest~
+The trees are rather stunted here, and the undergrowth is wildly entangled.         
+The path, however, is fairly well-traveled, the soft grasses worn smooth near          
+its center.  The air seems thick here, as the path winds slowly downward into          
+a depression in the forest floor.  A light breeze and a faint, swampy odor          
+accompany the sound of rushing water from the east. The path continues a sharp         
+descent to the north, and inclines toward a bend to the south.         
+~
+forest
+D NORTH 9037 0 0
+~
+The trail continues its descent to the south.         
+~
+D SOUTH 9032 0 0
+~
+The trail inclines slightly to the south.         
+~
+#9037
+A Bend in the Descending Path~
+The path here bends sharply downward to the east, and continues its ascent         
+north toward the valley floor. The trees are rather stunted here, and the          
+undergrowth is wildly entangled. The path, however, is fairly well-traveled,          
+the soft grasses worn smooth near its center.  The air seems thick here, as          
+the path winds slowly downward into a depression in the forest floor.  A          
+light breeze and a strong swampy odor accompany the sound of rushing water          
+from the east.  There appears to be a marshy clearing to the east.          
+~
+forest
+D EAST 9038 0 0
+~
+To the east there appears to a marshy clearing.         
+~
+D SOUTH 9036 0 0
+~
+The trail inclines slightly to the south.         
+~
+#9038
+A Junction Near the Marsh~
+The undergrowth is thick here, and the ground is uneven and muddy.  From the         
+north the odor of marsh gases drift in on a stale breeze.  The rustling of          
+reeds can be heard all around you, and to the east you detect the sound of         
+moving water.  Some reeds have been trampled down to the north, creating         
+a hint of a path into the marshland.  The ground drops away to the east,          
+making a sharp and rocky descent toward the river.         
+~
+field
+D NORTH 9040 0 0
+~
+A small path is barely visible through some reeds to the north.         
+~
+D EAST 9039 0 0
+~
+A narrow path makes a sharp descent to the east.         
+~
+D WEST 9037 0 0
+~
+A trail ascends through some trees to the west.         
+~
+#9039
+A Narrow Path Near the River~
+Stunted bushes and brambles grow close together as this narrow path turns         
+sharply downward toward the river to the east.  The odor of the marsh         
+is still faintly detectable here, but as you near the river there is a         
+distinct, fresh breeze.  The river bank slops sharply down to the east,         
+while to the west the air stagnates near a masrhy clearing.         
+~
+field
+D EAST 9043 0 0
+~
+To the east the path approaches a steep bank.         
+~
+D WEST 9038 0 0
+~
+To the west there appears to be a marshy clearing.         
+~
+#9040
+Among Some Reeds, Near the Marsh~
+The reeds have been trampled down here, creating the slightest hint of a          
+path through the marshland.  The odor is strong, seeming to emanate from          
+the dark, sticky ground beneath.  Reeds well taller than the average          
+human tower with incredible thickness all around.  The only navigable         
+directions are to the north, where the path continues, or to the south,          
+where a small junction widens out.         
+~
+field
+D NORTH 9041 0 0
+~
+Marshland stretches out to the north.         
+~
+D SOUTH 9038 0 0
+~
+To the south there appears to be a marshy clearing.         
+~
+#9041
+Some Sodden Marshland~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  The thickest lies to the south, where a path is         
+barely visible.  The marshes continue to the north and west.         
+~
+field
+D NORTH 9136 0 0
+~
+The marsh stretches out to the north.         
+~
+D SOUTH 9040 0 0
+~
+A small path is barely visible through some reeds to the south.         
+~
+D WEST 9042 0 0
+~
+The marsh stretches out to the west.         
+~
+#9042
+Some Sodden Marshland~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  Vertical embankments halt progress to the west and         
+south, while the marsh continues to the east and north.         
+~
+field
+D NORTH 9044 0 0
+~
+The marsh stretches out to the north.         
+~
+D EAST 9041 0 0
+~
+The marsh stretches out to the east.         
+~
+#9043
+A Steep Bank Near a River~
+Scrub bushes and other small plants grow out of this sharply sloping bank.         
+The ground is littered with rocks, large and small, and it is clear that         
+the river at one point rose nearly to the top of this small gorge.  A fresh         
+breeze blows from the north, where the river finds its source.  The river         
+continues its steady flow to the south, while a sharply ascending path to         
+the west leads into the wilderness.         
+~
+field
+D EAST 9053 0 0
+~
+A wide river flows east of here.         
+~
+D WEST 9039 0 0
+~
+A narrow path makes a sharp ascent to the west.         
+~
+#9044
+Some Marshland, Near a Murky Stream~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  A stream of dark, slow-moving water glides along         
+to your west, while the marsh continues to the north, south, and east.         
+~
+forest
+D NORTH 9045 0 0
+~
+The marsh continues to the north.         
+~
+D EAST 9136 0 0
+~
+The marsh continues to the east.         
+~
+D SOUTH 9042 0 0
+~
+The marsh continues to the south.         
+~
+D WEST 9076 0 0
+~
+A murky stream flows west of here.         
+~
+#9045
+Some Marshland, Near a Murky Stream~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  A dark, slow-moving stream winds its way around to         
+your north and west, while the marshes continue to the east and south.         
+~
+field
+D NORTH 9073 0 0
+~
+A murky stream flows north of here.         
+~
+D EAST 9138 0 0
+~
+The marsh continues to the east.         
+~
+D SOUTH 9044 0 0
+~
+The marsh continues to the south.         
+~
+D WEST 9075 0 0
+~
+A murky stream flows west of here.         
+~
+#9046
+A Thin, Sloping Trail~
+This trail is narrow and steep, and its navigation is made difficult by         
+the many small rocks that interfere with the footing.  The trees here are         
+a bit smaller, perhaps stunted a bit by the severity of the slope.           
+Rustling sounds can be heard through the underbrush, with bushes growing         
+in thick clusters along the edges of the trail.  The slope levels off         
+into a clearing to the south, and descends into a muddy section to the north.         
+~
+forest
+D NORTH 9047 0 0
+~
+A wide, muddy area lies just to the north.         
+~
+D SOUTH 9034 0 0
+~
+A wide clearing in the valley floor lies to the south.         
+~
+#9047
+A Muddy Forest Intersection~
+This large, muddy section of the forest seems more like a small crater than          
+a typical forest intersection.  Large puddles of dark water are strewn         
+haphazardly among the muck.  Thick lichen covers the black rocks that emerge         
+from the saturated forest floor.  Even the trees seem to rot away at the trunk,         
+with craggy limbs twisted in helpless protest.  A thin trail winds upward to         
+the south, while the muck continues to the north and east.         
+~
+forest
+D NORTH 9081 0 0
+~
+The muddy intersection continues to the north.         
+~
+D EAST 9048 0 0
+~
+The muddy intersection continues to the east.         
+~
+D SOUTH 9046 0 0
+~
+A path slopes sharply upward to the south.         
+~
+#9048
+A Muddy Forest Intersection~
+This large, muddy section of the forest seems more like a small crater than          
+a typical forest intersection.  Large puddles of dark water are strewn         
+haphazardly among the muck.  Thick lichen covers the black rocks that emerge         
+from the saturated forest floor.  Even the trees seem to rot away at the trunk,         
+with craggy limbs twisted in helpless protest.  The muddy ground subsides as a         
+trail leads east, but this murky intersection continues to the north and west.         
+~
+forest
+D NORTH 9051 0 0
+~
+The muddy intersection continues to the north.         
+~
+D EAST 9050 0 0
+~
+A shaded trail leads east through some trees.         
+~
+D WEST 9047 0 0
+~
+The muddy intersection continues to the west.         
+~
+#9049
+A Serene Woodland Trail~
+Sunlight filters peacefully through the trees here, and even the din of the         
+wilderness seems to lessen a bit.  The wide path consists mostly of thick,         
+tufted grasses.  Several grey stones jut out of the ground haphazardly,         
+worn smooth with time and covered with deep green mosses.  The woodland trail         
+continues to the north and south.         
+~
+forest
+D NORTH 9050 0 0
+~
+The woodland trail continues to the north.         
+~
+D SOUTH 9008 0 0
+~
+The woodland trail continues to the south.         
+~
+#9050
+A Serene Woodland Trail~
+Sunlight filters peacefully through the trees here, and even the din of the         
+wilderness seems to lessen a bit.  The wide path consists mostly of thick,         
+tufted grasses.  Several grey stones jut out of the ground haphazardly,         
+worn smooth with time and covered with deep green mosses.  To the west the         
+path seems to lead down into a large, muddy depression in the forest floor.         
+The woodland trail continues to the south.         
+~
+forest
+D SOUTH 9049 0 0
+~
+The woodland trail continues to the south.         
+~
+D WEST 9048 0 0
+~
+A muddy forest intersection lies to the west.         
+~
+#9051
+A Muddy Forest Intersection~
+This large, muddy section of the forest seems more like a small crater than          
+a typical forest intersection.  Large puddles of dark water are strewn         
+haphazardly among the muck.  Thick lichen covers the black rocks that emerge         
+from the saturated forest floor.  Even the trees seem to rot away at the trunk,         
+with craggy limbs twisted in helpless protest.  The muddy intersection continues         
+to the west and south, while a small, damp trail leads through some         
+underbrush to the north.         
+~
+forest
+D NORTH 9052 0 0
+~
+A muddy path leads north through the underbrush.         
+~
+D SOUTH 9048 0 0
+~
+The muddy intersection continues to the south.         
+~
+D WEST 9081 0 0
+~
+The muddy intersection continues to the west.         
+~
+#9052
+A Muddy Forest Path~
+This path continues through a depression in the forest floor, making the         
+ground both wet and sticky.  Deciduous trees of middling height rise up         
+out of the muck on either side of the path, sprouting out from among         
+the tangled underbrush that bars passage to the east and west.  The path         
+continues deeper into the dark forest to the north, and extends into         
+a muddy intersection to the south.         
+~
+forest
+D NORTH 9085 0 0
+~
+The muddy path continues to the north.         
+~
+D SOUTH 9051 0 0
+~
+A muddy intersection in the forest lies to the south.         
+~
+#9053
+On a Wide River~
+A wide river flows rapidly south, bordered by steep banks on the eastern          
+and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.  On the western shore         
+there is a rocky hollow where it appears you could scramble up the bank.         
+~
+water
+D NORTH 9054 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9057 0 0
+~
+The river continues to the south.         
+~
+D WEST 9043 0 0
+~
+A steep bank rises up to the west.         
+~
+#9054
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9055 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9053 0 0
+~
+The river continues to the south.         
+~
+#9055
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9056 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9054 0 0
+~
+The river continues to the south.         
+~
+#9056
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9061 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9055 0 0
+~
+The river continues to the south.         
+~
+#9057
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9053 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9058 0 0
+~
+The river continues to the south.         
+~
+#9058
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9057 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9059 0 0
+~
+The river continues to the south.         
+~
+#9059
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9058 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9060 0 0
+~
+The river continues to the south.         
+~
+#9060
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river flows          
+onward to the south, and continues to the north where you can see the          
+mountains of its origin rising up in the distance.         
+~
+water
+D NORTH 9059 0 0
+~
+The river continues to the north.         
+~
+#9061
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river continues         
+on its way to the south, while to the north the water appears more agitated.         
+~
+water
+D NORTH 9062 0 0
+~
+The river seems more agitated to the north.         
+~
+D SOUTH 9056 0 0
+~
+The river continues to the south.         
+~
+#9062
+The Wide River Rapids~
+The steep embankments on either side of the river are closer together here,         
+and the water flows quickly to the south in this small, narrow canyon.           
+The water is fairly deep, and its speed coupled with the sharp rocks that         
+jut out from the river bottom make this a very dangerous part of the river.         
+The river widens a bit to the south and becomes calmer, while the rapids         
+continue to the north.         
+~
+water
+D NORTH 9063 0 0
+~
+The rapids continue to the north.         
+~
+D SOUTH 9061 0 0
+~
+The river seems calmer to the south.         
+~
+#9063
+The Wide River Rapids~
+The steep embankments on either side of the river are closer together here,         
+and the water flows quickly to the south in this small, narrow canyon.           
+The water is fairly deep, and its speed coupled with the sharp rocks that         
+jut out from the river bottom make this a very dangerous part of the river.         
+The whitewater continues to the south, and to the north the river widens          
+and becomes calm.         
+~
+water
+D NORTH 9064 0 0
+~
+The river appears to widen slightly to the north.         
+~
+D SOUTH 9062 0 0
+~
+The rapids continue to the south.         
+~
+#9064
+Some Shallows on the Wide River~
+The river here is rocky, with worn, flat boulders jutting out of the river         
+bottom to rise above the shallow water.  The water swirls about the rocks,         
+collecting sometimes in deeper pools, sometimes receding entirely to reveal         
+small patches of the sandy river bottom.  To the west, a gap in the river         
+bank allows a small stream to run off toward the forest.  The river continues         
+to the north, and seems to grow agitated to the south.         
+~
+water
+D NORTH 9065 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9063 0 0
+~
+The river appears more agitated to the south.         
+~
+D WEST 9068 0 0
+~
+A small stream runs off to the west.         
+~
+#9065
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river continues         
+flow through this small canyon to the north, and widens a bit to the south         
+as the water grows shallower.         
+~
+water
+D NORTH 9066 0 0
+~
+The river continues to the north.         
+~
+D SOUTH 9064 0 0
+~
+The river appears to widen a bit to the south.         
+~
+#9066
+On a Wide River~
+A wide river flows rapidly south, bordered by impassable, steep banks on the         
+eastern and western shores.  The sandy river bottom is visible some distance         
+below the water, which is crystal clear and quite cold.  The river continues          
+its flow through this small canyon to the south.  From the north comes a         
+terrific rushing sound, where the river's source flows down powerfully from         
+the mountains.         
+~
+water
+D NORTH 9067 0 0
+~
+To the north, water seems to pour forth from the sky with a rushing sound.         
+~
+D SOUTH 9065 0 0
+~
+The river continues to the south.         
+~
+#9067
+The Luminous Cascade~
+The river here seems to enter a nook in the mountain range, as steep, jagged         
+rocks wall you in on three sides, to the north, east, and west.  Large trees,         
+extending from the bluffs high above, come together across the narrow canyon         
+to form a thick canopy, sending shadows sprawling across both the river and          
+its rocky walls.  The walls themselves channel running water through well-worn         
+hollows, and the roar is deafening as water cascades from the mountains above         
+to fall all around.  The falling water seems to be imbued with a pale yellow         
+glow which dissipates as it settles into the river below.  The flickering         
+glow along with the shade of the trees high above lends an eerie yellowish         
+cast to everything around.  The river itself continues to the south.         
+~
+water
+D SOUTH 9066 0 0
+~
+The river continues to the south.         
+~
+#9068
+A Fast-Moving Stream~
+Cool, clear water flows swiftly through this narrow trench, passing          
+between slightly elevated banks to the north and south.  The brambles that          
+grow on either side of the stream make it impossible to travel on land here.         
+A faint, marshy smell of decomposition seems to hang to the west, where the         
+stream continues into the wilderness.  To the east the stream finds its          
+source, a wide river that flows from the mountains to the north.         
+~
+water
+D EAST 9064 0 0
+~
+The stream meets a wide river to the east.         
+~
+D WEST 9069 0 0
+~
+The stream continues to the east.         
+~
+#9069
+A Fast-Moving Stream~
+Cool, clear water flows swiftly through this narrow trench, passing          
+between slightly elevated banks to the north and south.  The brambles that          
+grow on either side of the stream make it impossible to travel on land here.         
+A faint, marshy smell of decomposition seems to hang to the west, where the         
+stream continues into the wilderness.  The stream continues toward its source         
+to the east.         
+~
+water
+D EAST 9068 0 0
+~
+The stream continues to the east.         
+~
+D WEST 9070 0 0
+~
+A bend in the stream lies to the west.         
+~
+#9070
+A Bend in the Stream~
+The odor of the marsh is strong as you come to this bend in the stream, the         
+pungent smell of decoposing matter hanging in the stagnant air.  The water         
+grows dark here as the stream bends to the south into the heart of the marsh.         
+Tangled underbrush grows up all around, making passage onto land impossible.         
+The stream runs back toward its source to the east.         
+~
+water
+D EAST 9069 0 0
+~
+The stream continues to the east.         
+~
+D SOUTH 9071 0 0
+~
+The stream grows murkier to the south.         
+~
+#9071
+A Tranquil Stream~
+The odor of the marsh is strong here, the pungent smell of decomposing matter         
+hanging in the stagnant air.  The water is dark here as the stream flows slowly         
+to the southwest into the heart of the marsh.  Tangled underbrush springs up         
+to the east and west, making passage onto land impossible.  The stream winds         
+on to the north and south, bending and twisting in either direction.         
+~
+water
+D NORTH 9070 0 0
+~
+The stream comes to a bend to the north.         
+~
+D SOUTH 9072 0 0
+~
+The stream comes to a bend to the south.         
+~
+#9072
+A Bend in the Stream~
+The odor of the marsh is strong as you come to this bend in the stream, the         
+pungent smell of decoposing matter hanging in the stagnant air.  The water is         
+dark here as the stream continues to the southwest toward the heart of the         
+marsh.  Tangled underbrush springs up to the east, making passage impossible.         
+The stream continues to the north and west, while an area of muddy ground         
+lies to the south.         
+~
+water
+D NORTH 9071 0 0
+~
+The stream continues to the north.         
+~
+D SOUTH 9138 0 0
+~
+Some marshy land lies just to the south.         
+~
+D WEST 9073 0 0
+~
+The stream grows murkier to the west.         
+~
+#9073
+A Murky Stream~
+Dark water flows slowly through this narrow trench that navigates through         
+the heart of this marshy land.  Tall reeds spring up in clusters all around,         
+and the sounds of birds and insects can be heard in every direction.  Some          
+tangled underbrush makes passage impossible to the north, while a muddy          
+patch of land seems passable to the south.  The stream winds through here,         
+approaching bends to the east and west.         
+~
+water
+D EAST 9072 0 0
+~
+The stream comes to a bend to the east.         
+~
+D SOUTH 9045 0 0
+~
+Some marshy land lies just to the south.         
+~
+D WEST 9074 0 0
+~
+The stream comes to a bend to the west.         
+~
+#9074
+A Bend in the Murky Stream~
+Dark water flows slowly through this narrow trench that navigates through         
+the heart of this marshy land.  Tall reeds spring up in clusters all around,         
+and the sounds of birds and insects can be heard in every direction.  Tangled         
+underbrush makes passage impossible to the west and north, while the stream         
+winds through the heart of the marsh to the east and south.         
+~
+water
+D EAST 9073 0 0
+~
+The murky stream continues to the east.         
+~
+D SOUTH 9075 0 0
+~
+The murky stream continues to the south.         
+~
+#9075
+A Murky Stream~
+Dark water flows slowly through this narrow trench that navigates through         
+the heart of this marshy land.  Tall reeds spring up in clusters all around,         
+and the sounds of birds and insects can be heard in every direction.  Tangled         
+underbrush makes passage to the west impossible, while a muddy patch of land         
+seems passable to the east.  The stream winds through the marsh here, bending         
+to the north and south.         
+~
+water
+D NORTH 9074 0 0
+~
+The stream comes to a bend to the north.         
+~
+D EAST 9045 0 0
+~
+Some marshy land lies just to the east.         
+~
+D SOUTH 9076 0 0
+~
+The stream comes to a bend to the south.         
+~
+#9076
+A Murky Stream, Near a Pond~
+The dark waters flow slowly here, trickling to the west where a fairly large,         
+stagnant pond opens up in the heart of the marsh.  Reeds rise up all around         
+the pond's edge, and green patches can be seen on its surface where simple         
+organisms thrive on the stagnant water.  A patch of muddy land seems navigable         
+to the east, and the stream runs away from the pond to the north.  The         
+pond itself can be accessed just to the west.         
+~
+water
+D NORTH 9075 0 0
+~
+The murky stream continues to the north.         
+~
+D EAST 9044 0 0
+~
+Some marshy land lies just to the east.         
+~
+D WEST 9077 0 0
+~
+The stream widens into a stagnant pond to the west.         
+~
+#9077
+On a Stagnant Pond~
+The water here is brackish and its surface is covered here and there by         
+floating green plants, which glide slowly around with the breeze.  It is         
+impossible to see anywhere near the bottom, but strange bubbles which         
+rise up and burst every now and then seem to indicate some sort of life         
+beneath the dark surface.  The pond continues to the west and south,         
+while to the east a narrow, murky stream filters slowly into the stagnant         
+water.         
+~
+water
+D EAST 9076 0 0
+~
+A murky stream runs out of the pond to the east.         
+~
+D SOUTH 9078 0 0
+~
+The pond continues to the south.         
+~
+D WEST 9080 0 0
+~
+The pond continues to the west.         
+~
+#9078
+On a Stagnant Pond~
+The water here is brackish and its surface is covered here and there by         
+floating green plants, which glide slowly around with the breeze.  It is         
+impossible to see anywhere near the bottom, but strange bubbles which         
+rise up and burst every now and then seem to indicate some sort of life         
+beneath the dark surface.  The pond continues to the north and west, while         
+a narrow, rocky beach lies to the south.         
+~
+water
+D NORTH 9077 0 0
+~
+The pond continues to the north.         
+~
+D SOUTH 9093 0 0
+~
+A rocky beach lies to the south.         
+~
+D WEST 9079 0 0
+~
+The pond continues to the west.         
+~
+#9079
+On a Stagnant Pond~
+The water here is brackish and its surface is covered here and there by         
+floating green plants, which glide slowly around with the breeze.  It is         
+impossible to see anywhere near the bottom, but strange bubbles which         
+rise up and burst every now and then seem to indicate some sort of life         
+beneath the dark surface.  The pond continues to the north, west, and east         
+while a rocky beach leads the way southward.         
+~
+water
+D NORTH 9080 0 0
+~
+The pond continues to the north.         
+~
+D EAST 9078 0 0
+~
+The pond continues to the east.         
+~
+D SOUTH 9092 0 0
+~
+A rocky beach lies to the south.         
+~
+D WEST 9083 0 0
+~
+The pond continues to the west.         
+~
+#9080
+On a Stagnant Pond~
+The water here is brackish and its surface is covered here and there by         
+floating green plants, which glide slowly around with the breeze.  It is         
+impossible to see anywhere near the bottom, but strange bubbles which         
+rise up and burst every now and then seem to indicate some sort of life         
+beneath the dark surface.  A sloping bank leads north through the underbrush,         
+while the pond continues to the south, east, and west.         
+~
+water
+D NORTH 9090 0 0
+~
+A sloping bank leads north to a path.         
+~
+D EAST 9077 0 0
+~
+The pond continues to the east.         
+~
+D SOUTH 9079 0 0
+~
+The pond continues to the south.         
+~
+D WEST 9084 0 0
+~
+The pond continues to the west.         
+~
+#9081
+A Muddy Forest Intersection~
+This large, muddy section of the forest seems more like a small crater than          
+a typical forest intersection.  Large puddles of dark water are strewn         
+haphazardly among the muck.  Thick lichen covers the black rocks that emerge         
+from the saturated forest floor.  Even the trees seem to rot away at the trunk,         
+with craggy limbs twisted in helpless protest.  The ground dries up to the west,         
+giving way to a grassy meadow.  The sodden, muddy intersection continues to         
+the east and south.         
+~
+forest
+D EAST 9051 0 0
+~
+The muddy intersection continues to the east.         
+~
+D SOUTH 9047 0 0
+~
+The muddy intersection continues to the south.         
+~
+D WEST 9082 0 0
+~
+To the west the mud gives way to a large meadow.         
+~
+#9082
+A Forest Meadow~
+The constricting undergrowth of the forest gives way here to a rather large,         
+grassy meadow.  Although they stand several feet high, the grasses are still          
+easily navigable.  The scuttling sounds of the forest are replaced by the          
+high-pitched whining and chirping of insects, and the stale forest air gives         
+way to a refreshing breeze.  The meadow continues to the north and west,          
+while there is a muddy depression in the forest floor to the east.           
+~
+forest
+D NORTH 9105 0 0
+~
+The meadow continues to the north.         
+~
+D EAST 9081 0 0
+~
+The ground becomes muddy to the east.         
+~
+D WEST 9030 0 0
+~
+The meadow continues to the west.         
+~
+#9083
+On a Stagnant Pond~
+The water here is brackish and its surface is covered here and there by         
+floating green plants, which glide slowly around with the breeze.  It is         
+impossible to see anywhere near the bottom, but strange bubbles which         
+rise up and burst every now and then seem to indicate some sort of life         
+beneath the dark surface. The pond continues to the north and east.         
+~
+water
+D NORTH 9084 0 0
+~
+The pond continues to the north.         
+~
+D EAST 9079 0 0
+~
+The pond continues to the east.         
+~
+#9084
+On a Stagnant Pond~
+The water here is brackish and its surface is covered here and there by         
+floating green plants, which glide slowly around with the breeze.  It is         
+impossible to see anywhere near the bottom, but strange bubbles which         
+rise up and burst every now and then seem to indicate some sort of life         
+beneath the dark surface. The pond continues to the east and south.         
+~
+water
+D EAST 9080 0 0
+~
+The pond continues to the east.         
+~
+D SOUTH 9083 0 0
+~
+The pond continues to the south.         
+~
+#9085
+A Muddy Forest Path~
+This path continues through a depression in the forest floor, making the         
+ground both wet and sticky.  Deciduous trees of middling height rise up         
+out of the muck on either side of the path, sprouting out from among         
+the tangled underbrush that bars passage to the east and west.  The path         
+runs deeper into the forest to the north, and lightens just a bit to the         
+south.         
+~
+forest
+D NORTH 9086 0 0
+~
+The muddy path continues to the north.         
+~
+D SOUTH 9052 0 0
+~
+The muddy path continues to the south.         
+~
+#9086
+A Muddy Forest Path~
+This path continues through a depression in the forest floor, making the         
+ground both wet and sticky.  Deciduous trees of middling height rise up         
+out of the muck on either side of the path, sprouting out from among         
+the tangled underbrush that bars passage to the east and west.  The path         
+continues deeper into the forest to the north, and lightens just a bit to         
+the south.         
+~
+forest
+D NORTH 9087 0 0
+~
+The muddy path continues to the north.         
+~
+D SOUTH 9085 0 0
+~
+The muddy path continues to the south.         
+~
+#9087
+A Muddy Forest Path~
+This path continues through a depression in the forest floor, making the         
+ground both wet and sticky.  Deciduous trees of middling height rise up         
+out of the muck on either side of the path, sprouting out from among         
+the tangled underbrush that bars passage to the east and west.  The path         
+leads north toward a dark intersection, and lightens just a bit as it         
+continues to the south.         
+~
+forest
+D NORTH 9088 0 0
+~
+A dark intersection lies to the north.         
+~
+D SOUTH 9086 0 0
+~
+The muddy path continues to the south.         
+~
+#9088
+A Muddy Intersection, Deep in the Forest~
+Almost no light can penetrate the thick canopy at this three-way junction         
+deep in the forest.  The ground is wet and sticky, and puddles have formed         
+in depressions in the forest floor.  As deep in the wilderness as this          
+intersection lies, it is strangely silent.  Thick underbrush and dark,          
+gnarled trees bar passage to the west.  A muddy path runs south toward the         
+lighter forest, and to the east a narrow path runs atop a steep embankment.         
+The canopy recedes a bit to the north, where the forest grows lighter.         
+~
+forest
+D NORTH 9099 0 0
+~
+The forest lightens a bit to the north.         
+~
+D EAST 9089 0 0
+~
+A narrow trail runs east, along a steep bank.         
+~
+D SOUTH 9087 0 0
+~
+A muddy path leads off to the south.         
+~
+#9089
+A Narrow Trail Above a Pond~
+This narrow, dirt trail runs atop a steep embankment overlooking a murky         
+pond below to the south.  From this vantage point a rocky beach is just         
+visible at the south end of the pond, and marshland can be seen spreading         
+out in the distance to the southeast.  Dark, gnarled trees and thick          
+underbrush block passage to the north.  The narrow trail leads west toward          
+a dark intersection, and drops down slightly to the east.         
+~
+forest
+D EAST 9090 0 0
+~
+The path drops down a bit to the east.         
+~
+D WEST 9088 0 0
+~
+A dark intersection lies to the west.         
+~
+#9090
+A Narrow Trail, North of a Pond~
+The narrow, dirt trail runs just above an embankment overlooking a murky         
+pond to the south.  From this point the southern edge of the pond is just         
+visible, which ends in a rocky beach.  The faint, marshy odor of decomposition         
+is evident here, drifting in from the swampy area that spreads out to the         
+southeast.  The short bank to the south is navigable, leading onto the         
+surface of a stagnant pond.  The narrow trail continues toward a bend         
+to the east, and slopes steadily upward to the west.         
+~
+forest
+D EAST 9091 0 0
+~
+The trail comes to a bend to the east.         
+~
+D SOUTH 9080 0 0
+~
+A short bank allows access to the pond to the south.         
+~
+D WEST 9089 0 0
+~
+The narrow trail slopes upward to the west.         
+~
+#9091
+A Bend in the Narrow Trail~
+The forest is dark here, as this narrow dirt trail runs between gnarled          
+trees and tangled underbrush to the east and south.  Sweeping around in         
+a wide arc, the trail bends gradually to the west and north.  To the west,         
+the forest becomes a bit lighter as the trail ascends steadily.  To the         
+north the dark trail continues deeper into the forest.         
+         
+~
+forest
+D NORTH 9097 0 0
+~
+The narrow trail continues to the north.         
+~
+D WEST 9090 0 0
+~
+The narrow trail continues to the west.         
+~
+#9092
+A Rocky Beach~
+This narrow beach consists of jagged bits of stone and broken bits of          
+shells.  Dark green plants, once denizens of the pond surface, now sit         
+sun-dried atop the rocky surface.  The stagnant pond laps occasionally          
+on the rocks when a breeze blows from the north.  The beach gives way         
+to a round, grassy hill to the south.         
+~
+desert
+D NORTH 9079 0 0
+~
+A stagnant pond lies to the north.         
+~
+D EAST 9093 0 0
+~
+The beach continues to the east.         
+~
+D SOUTH 9094 0 0
+~
+A grassy knoll lies to the south.         
+~
+#9093
+A Rocky Beach~
+This narrow beach consists of jagged bits of stone and broken bits of          
+shells.  Dark green plants, once denizens of the pond surface, now sit         
+sun-dried atop the rocky surface.  The stagnant pond laps occasionally          
+on the rocks when a breeze blows from the north.  The beach gives way          
+to a fairly large grassy clearing to the south.         
+~
+desert
+D NORTH 9078 0 0
+~
+A stagnant pond lies to the north.         
+~
+D SOUTH 9095 0 0
+~
+A grassy clearing lies to the south.         
+~
+D WEST 9092 0 0
+~
+The beach continues to the west.         
+~
+#9094
+A Grassy Knoll~
+The immaculately kept grasses stretch across the clearing to the east to         
+this small, round hill that overlooks it.  To the west and south impossibly         
+tall hedges rise up, masking steep embankments that make travel impossible.         
+To the north, the knoll slopes down toward a rocky beach, beyond which a          
+small pond is visible.  To the east the lawn becomes a flat clearing.         
+~
+field
+D NORTH 9092 0 0
+~
+The ground becomes rocky to the north.         
+~
+D EAST 9095 0 0
+~
+The ground levels out to the east.         
+~
+#9095
+A Grassy Clearing~
+You stand on a neat lawn of immaculately kept grasses.  Fairly large and         
+square, it is bordered  to the south by a row of impossibly tall hedges         
+which seem to mask a steep embankment.  There is a small opening in the         
+hedges to the east, where another smaller grassy patch can be seen.  To          
+the west the grasses continue onto a small, round hill, while to the north         
+a small beach of pale rocks leads back toward the pond.         
+~
+field
+D NORTH 9093 0 0
+~
+The ground becomes rocky to the north.         
+~
+D EAST 9096 0 0
+~
+A strange stone formation lies to the east.         
+~
+D WEST 9094 0 0
+~
+The ground rises slightly to the west.         
+~
+#9096
+A Circle of Stones~
+Set a bit apart from the grassy clearing is another flat stretch of grasses         
+surrounded on three sides by a semicircle of impossibly tall hedges.  At the         
+center of this strange arena is an equally mysterious ring of sun-bleached          
+stones.  These man-sized rocks are partially embedded in the ground, and         
+point into the air haphazardly, without any apparent purpose or pattern.  In         
+the center of the circle, the grass has been worn away, leaving a smooth         
+dirt surface in which many odd tracks can be seen.  You can return to the         
+larger clearing to the west.         
+~
+field
+D WEST 9095 0 0
+~
+A grassy clearing lies to the west.         
+~
+#9097
+A Narrow Trail, Deep in the Forest~
+This narrow, dirt trail is bordered on the east and west by dark, gnarled          
+trees and tangled underbrush that makes passage impossible.  The canopy         
+overhead is thick, almost giving the impression that this is a cavern rather         
+than a forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  The narrow trail runs directly to the north,         
+and sweeps toward a bend to the south.         
+~
+forest
+D NORTH 9098 0 0
+~
+The trail continues to the north.         
+~
+D SOUTH 9091 0 0
+~
+The trail reaches a bend to the south.         
+~
+#9098
+A Narrow Trail, Deep in the Forest~
+This narrow, dirt trail is bordered on the east and west by dark, gnarled          
+trees and tangled underbrush that makes passage impossible.  The canopy         
+overhead is thick, almost giving the impression that this is a cavern rather         
+than a forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  The trail runs directly to the south, and         
+approaches a bend to the north.         
+~
+forest
+D NORTH 9109 0 0
+~
+The trail reaches a bend to the north.         
+~
+D SOUTH 9097 0 0
+~
+The trail continues to the south.         
+~
+#9099
+A Light Forest Junction~
+The thick forest canopy breaks slightly here, allowing light to filter through         
+the leaves high above.  Dark, gnarled trees still sprout up all around, and         
+thick underbrush makes travel difficult.  There is silence in this wilderness,         
+permeated only by the occasional buzzing and humming of insects.  To the south,         
+the ground appears to be rather muddy.  A narrow trail runs among some dark         
+trees to the north, and a wider, well-worn trail runs off to the west.         
+~
+forest
+D NORTH 9100 0 0
+~
+A narrow trail runs through the forest to the north.         
+~
+D SOUTH 9088 0 0
+~
+The ground becomes muddier to the south.         
+~
+D WEST 9108 0 0
+~
+A worn trail runs through some trees to the west.         
+~
+#9100
+A Narrow Trail, Deep in the Forest~
+This narrow, dirt trail is bordered on the north and west by dark, gnarled          
+trees and tangled underbrush that makes passage impossible.  The canopy         
+overhead is thick, almost giving the impression that this is a cavern rather         
+than a forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  The trail bends here, winding to the east.         
+The canopy recedes slightly to the south, where the forest lightens a bit.         
+~
+forest
+D EAST 9111 0 0
+~
+The trail turns here to the east.         
+~
+D SOUTH 9099 0 0
+~
+The forest lightens a bit to the south.         
+~
+#9101
+A Worn Forest Trail~
+This trail is wide and dusty, the grasses that once covered the forest floor          
+worn down with use.  The trail is bordered by rather large deciduous trees         
+that extend a thick canopy of leaves high above.  Thick underbrush bars          
+passage to the east and west, where rustling sounds can occasionally be          
+heard in the wilderness.  This trail continues deeper into the forest to         
+the north, and opens up into a wide, grassy meadow to the south.         
+~
+forest
+D NORTH 9102 0 0
+~
+The trail continues to the north.         
+~
+D SOUTH 9035 0 0
+~
+A forest clearing opens up to the south.         
+~
+#9102
+A Worn Forest Trail~
+This trail is wide and dusty, the grasses that once covered the forest floor          
+worn down with use.  The trail is bordered by rather large deciduous trees         
+that extend a thick canopy of leaves high above.  Thick underbrush bars          
+passage to the east and west, where rustling sounds can occasionally be          
+heard in the wilderness.  This trail continues deeper into the forest to         
+the north, and grows a bit lighter to the south.         
+~
+forest
+D NORTH 9103 0 0
+~
+The trail continues to the north.         
+~
+D SOUTH 9101 0 0
+~
+The trail continues to the south.         
+~
+#9103
+A Worn Forest Trail~
+This trail is wide and dusty, the grasses that once covered the forest floor          
+worn down with use.  The trail is bordered by rather large deciduous trees         
+that extend a thick canopy of leaves high above.  Thick underbrush bars          
+passage to the east and west, where rustling sounds can occasionally be          
+heard in the wilderness.  This trail continues deeper into the forest to         
+the north, and grows a bit lighter to the south.         
+~
+forest
+D NORTH 9104 0 0
+~
+The trail reaches a bend to the north.         
+~
+D SOUTH 9102 0 0
+~
+The trail continues to the south.         
+~
+#9104
+A Bend in the Worn Trail~
+The trail becomes rather windy in this section of the forest, sweeping      
+around to circle large boulders that block the path and avoid thick clusters      
+of brambles that lurk among the dark trees.  The canopy high above allows      
+little light to filter through, just barely illuminating the dusty path.       
+The worn track continues here to the east and south, while you can attempt      
+to navigate some tangled undergrowth to the west.        
+~
+forest
+D EAST 9106 0 0
+~
+The trail continues to bend to the east.         
+~
+D SOUTH 9103 0 0
+~
+The trail continues to the south.         
+~
+D WEST 9147 0 0
+~
+Thick brambles sprout up to the west.      
+~
+#9105
+A Forest Meadow~
+The constricting undergrowth of the forest gives way here to a rather large,         
+grassy meadow.  Although they stand several feet high, the grasses are still         
+easily navigable.  The scuttling sounds of the forest are replaced by the          
+high-pitched whining and chirping of insects, and the stale forest air gives         
+way to a refreshing breeze.   The meadow continues to the west and south.         
+~
+field
+D SOUTH 9082 0 0
+~
+The meadow continues to the south.         
+~
+D WEST 9035 0 0
+~
+The meadow continues to the west.         
+~
+#9106
+A Bend in the Worn Trail~
+The trail becomes rather windy in this section of the forest, sweeping          
+around to circle large boulders that block the path and avoid thick         
+clusters of brambles that lurk among the dark trees.  The canopy high          
+above allows little light to filter through, just barely illuminating         
+the dusty path.  The worn track continues here to the west and north.         
+~
+forest
+D NORTH 9107 0 0
+~
+The trail continues to bend to the north.         
+~
+D WEST 9104 0 0
+~
+The trail continues to bend to the west.         
+~
+#9107
+A Bend in the Worn Trail~
+The trail becomes rather windy in this section of the forest, sweeping          
+around to circle large boulders that block the path and avoid thick         
+clusters of brambles that lurk among the dark trees.  The canopy high          
+above allows little light to filter through, just barely illuminating         
+the dusty path.  The worn track continues here to the east and south.         
+~
+forest
+D EAST 9108 0 0
+~
+The trail continues to the east.         
+~
+D SOUTH 9106 0 0
+~
+The trail continues to bend to the south.         
+~
+#9108
+A Worn Forest Trail~
+This trail is wide and dusty, the grasses that once covered the forest floor          
+worn down with use.  The trail is bordered by rather large deciduous trees         
+that extend a thick canopy of leaves high above.  Thick underbrush bars          
+passage to the east and west, where rustling sounds can occasionally be          
+heard in the wilderness.  The trail grows darker as it reaches a bend to         
+the west, and lightens as the canopy recedes to the east.         
+~
+forest
+D EAST 9099 0 0
+~
+The forest becomes lighter to the east.         
+~
+D WEST 9107 0 0
+~
+The trail reaches a bend to the west.         
+~
+#9109
+A Bend in the Narrow Trail~
+This narrow, dirt trail is bordered on the north and east by dark, gnarled          
+trees and tangled underbrush that makes passage impossible.  The canopy         
+overhead is thick, almost giving the impression that this is a cavern rather         
+than a forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  The trail bends sharply here, and runs         
+to the south and west.         
+~
+forest
+D SOUTH 9098 0 0
+~
+The narrow trail continues to the south.         
+~
+D WEST 9110 0 0
+~
+The narrow trail continues to the west.         
+~
+#9110
+A Narrow Trail, Deep in the Forest~
+This narrow, dirt trail is bordered on the south by dark, gnarled trees and          
+tangled underbrush that makes passage impossible.  The canopy overhead is          
+thick, almost giving the impression that this is a cavern rather than a          
+forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  A small gap in a thicket to the north          
+seems to be just barely passable.  The narrow trail continues its course to         
+the east and west.         
+~
+forest
+D NORTH 9113 0 0
+~
+There is a small gap in the underbrush to the north.         
+~
+D EAST 9109 0 0
+~
+A narrow trail continues to the east.         
+~
+D WEST 9112 0 0
+~
+A narrow trail continues to the west.         
+~
+#9111
+A Narrow Trail, Deep in the Forest~
+This narrow, dirt trail is bordered on the east and south by dark, gnarled          
+trees and tangled underbrush that makes passage impossible.  The canopy         
+overhead is thick, almost giving the impression that this is a cavern rather         
+than a forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  The trail bends here, winding to the west          
+and north.         
+~
+forest
+D NORTH 9112 0 0
+~
+The narrow trail bends to the north.         
+~
+D WEST 9100 0 0
+~
+The narrow trail bends to the west.         
+~
+#9112
+A Narrow Trail, Deep in the Forest~
+This narrow, dirt trail is bordered on the north and west by dark, gnarled          
+trees and tangled underbrush that makes passage impossible.  The canopy         
+overhead is thick, almost giving the impression that this is a cavern rather         
+than a forest.  The wilderness is still and quiet here, and only the occasional         
+buzzing of insects can be heard.  The trail bends here, winding to the east         
+and south.         
+~
+forest
+D EAST 9110 0 0
+~
+The narrow trail continues to the east.         
+~
+D SOUTH 9111 0 0
+~
+The narrow trail bends to the south.         
+~
+#9113
+A Gap in the Underbrush~
+Twisted branches and wild thorns seem to come from all directions in the         
+tangled underbrush here.  The gap is barely wide enough to squeeze         
+through, and not without the occasional tearing of clothing and skin.         
+Safety lies to the south, where a narrow trail runs toward the heart         
+of the forest.  An odd clearing lies to the north, where a strange         
+pastel flickering is visible.         
+~
+forest
+ROOM PRIVATE
+D NORTH 9114 0 0
+~
+A strange pink haze glimmers from a clearing to the north.         
+~
+D SOUTH 9110 0 0
+~
+A narrow trail lies to the south.         
+~
+#9114
+A Strange Clearing, Deep in the Forest~
+Of immediate notice upon entering this place is an opalescent shimmer         
+directly in the center of the circular clearing.  It appears that the         
+very air is experiencing some sort of disturbance.  The light cast by         
+this seething mass of energy casts the entire area in an odd, flickering         
+glow. A path ascends slightly to the west, while a small gap in the         
+underbrush provides egress to the south.  A peaceful grove of trees          
+stands just to the east.         
+~
+forest
+D EAST 9115 0 0
+~
+A quiet grove lies to the east.         
+~
+D SOUTH 9113 0 0
+~
+There is a small gap in the underbrush to the south.         
+~
+D WEST 9122 0 0
+~
+A rocky path leads west toward the mountains.         
+~
+#9115
+A Silent Grove, Deep in the Forest~
+This grove harbors a variety of deciduous trees that tower above most         
+other species in this forest.  The leaves high above sway gently in the         
+steady breeze, allowing a scant bit of light to flicker down onto the         
+grassy forest floor.  No sound of bird or beast is audible here, only          
+the faint rustling of the canopy high above.  The grove continues to         
+the east and north, while an odd intersection of paths lies to the west.         
+~
+forest
+D NORTH 9116 0 0
+~
+The grove continues to the north.         
+~
+D EAST 9118 0 0
+~
+The grove continues to the east.         
+~
+D WEST 9114 0 0
+~
+A strange clearing lies to the west, where a faint pink light glimmers.         
+~
+#9116
+A Silent Grove, Deep in the Forest~
+This grove harbors a variety of deciduous trees that tower above most         
+other species in this forest.  The leaves high above sway gently in the         
+steady breeze, allowing a scant bit of light to flicker down onto the         
+grassy forest floor.  No sound of bird or beast is audible here, only          
+the faint rustling of the canopy high above.  The grove continues to         
+the east and south.         
+~
+forest
+D EAST 9117 0 0
+~
+The grove continues to the east.         
+~
+D SOUTH 9115 0 0
+~
+The grove continues to the south.         
+~
+#9117
+A Silent Grove, Deep in the Forest~
+This grove harbors a variety of deciduous trees that tower above most         
+other species in this forest.  The leaves high above sway gently in the         
+steady breeze, allowing a scant bit of light to flicker down onto the         
+grassy forest floor.  No sound of bird or beast is audible here, only          
+the faint rustling of the canopy high above.  The grove continues to          
+the west and south, while a light path heads east out of the grove.         
+~
+forest
+D EAST 9119 0 0
+~
+A light path leads through the trees to the east.         
+~
+D SOUTH 9118 0 0
+~
+The grove continues to the south.         
+~
+D WEST 9116 0 0
+~
+The grove continues to the west.         
+~
+#9118
+A Silent Grove, Deep in the Forest~
+This grove harbors a variety of deciduous trees that tower above most         
+other species in this forest.  The leaves high above sway gently in the         
+steady breeze, allowing a scant bit of light to flicker down onto the         
+grassy forest floor.  No sound of bird or beast is audible here, only          
+the faint rustling of the canopy high above.  The grove continues to         
+the north and west.         
+~
+forest
+D NORTH 9117 0 0
+~
+The grove continues to the north.         
+~
+D WEST 9115 0 0
+~
+The grove continues to the west.         
+~
+#9119
+A Light Path, Near the Mountains~
+Although the trees are still fairly dense and the undergrowth is thick,         
+the canopy seems to recede slightly here revealing a sizable chunk of          
+sky. The opening in the trees allows for a view of the towering mountains          
+that border the forest to the north.  This path leads east toward some         
+sort of intersection, and to the west it gives way to the grassy floor         
+of a deep forest grove.           
+~
+forest
+D EAST 9120 0 0
+~
+A fork in the path lies to the east.         
+~
+D WEST 9117 0 0
+~
+A silent grove of trees lies to the west.         
+~
+#9120
+A Fork in the Path, Near the Mountains~
+The trees thin out a bit here, and the undergrowth does not seem nearly         
+as menacing.  A dirt path extends to the west, where the forest grows         
+thicker and more imposing.  The path comes to a fork here, bending at         
+right angles to the north and south.  The southern path seems well         
+traveled, while to the north the path leads toward the mountains that         
+border the forest.         
+~
+forest
+D NORTH 9121 0 0
+~
+An enormous mountain rises up to the north.         
+~
+D SOUTH 9301 0 0
+~
+A dirt path runs directly to the south.         
+~
+D WEST 9119 0 0
+~
+A light path leads through the trees to the west.         
+~
+#9121
+At the Base of a Large Cliff~
+The trees grow stunted here, as the trampled dirt path becomes a clearing         
+of soft, thin grasses.  A cliff rises almost vertically to the north, its         
+jagged surface eventually leveling off several hundred feet above.  From         
+here you can see the mountain range extending into the distance to the          
+east and west, though there is no pass visible from here.  The forest is         
+silent here, the steep cliff shielding the clearing from the windy north.         
+To the south a path seems to come to a junction.         
+~
+field
+D SOUTH 9120 0 0
+~
+A fork in the light path lies to the south.         
+~
+#9122
+A Stony Path, Near the Mountains~
+This narrow path runs between a sharp rock face which rises up to the north,         
+and a band of impossibly tangled undergrowth that creeps in from the south.           
+The path is littered with large stones which jut from the ground at odd         
+angles, making travel slightly cumbersome.  The stony path continues into          
+the foothills to the west, while an oddly silent clearing lies to the east.         
+~
+forest
+D EAST 9114 0 0
+~
+A strange clearing lies to the east, an odd pink haze glimmering slightly.         
+~
+D WEST 9123 0 0
+~
+The stony path continues to the west.         
+~
+#9123
+A Stony Path, Near the Mountains~
+This narrow path runs between a sharp rock face which rises up to the north,         
+and a band of impossibly tangled undergrowth that creeps in from the south.           
+The path is littered with large stones which jut from the ground at odd         
+angles, making travel slightly cumbersome.  The stony path continues heading         
+into the foothills to the west, and you can head back toward the forest to          
+the east.         
+~
+forest
+D EAST 9122 0 0
+~
+The stony path continues to the east.         
+~
+D WEST 9124 0 0
+~
+The stony path reaches a bend to to the west.         
+~
+#9124
+A Bend in the Stony Path~
+This narrow path runs between a sharp rock face which rises up to the north,         
+and a band of impossibly tangled undergrowth that creeps in from the south.           
+The path is littered with large stones which jut from the ground at odd         
+angles, making travel slightly cumbersome.  The path takes a bend here toward         
+the north, where you detect some signs of habitation.  The stony path leads         
+back toward the forest to the east.         
+~
+forest
+D NORTH 9125 0 0
+~
+There seems to be a small encampment to the north.         
+~
+D EAST 9123 0 0
+~
+The stony path continues to the east.         
+~
+#9125
+A Small Encampment, Near the Mountains~
+The path continues, climbing into the foothills beneath two towering peaks         
+that are visible far above.  Two sharp rock faces rise up on either side,         
+ensuring that this narrow canyon is both well-hidden and easily defensible.         
+A small fire pit has been dug out near the rock wall, but now sits unused.         
+Aside from the fire pit, the only indication that this place might have been         
+lived in is a rather nondescript lean-to, which lies just to the west against         
+a cliff face.  A path littered by many large stones leads to the south.         
+~
+field
+D SOUTH 9124 0 0
+~
+A stony path bends around to the south.         
+~
+D WEST 9126 0 0
+~
+A lean-to is built up against the cliff to the west.         
+~
+#9126
+A Lean-To at the Bottom of a Cliff~
+Some thick branches have been lashed together here, and are supported by         
+a steep rock wall to the west and some sturdy wooden poles staked into the         
+ground.  The wind does not penetrate this narrow canyon, and this small         
+camp seems both comfortable and defensible.  Several small bundles lie         
+in the corner, and several worn books and quills lie atop a flat stone that         
+seems to have been converted into a writing desk.  You can get out from          
+beneath the roof to the encampment to the east.         
+~
+inside
+D EAST 9125 0 0
+~
+A small encampment lies to the east.         
+~
+#9127
+A Rocky Path Beneath a Cliff~
+This path runs on a slight ascent to the north, bordered on the west by a         
+nearly vertical cliff and on the east by an impassible jungle of tangled         
+undergrowth.  The path itself is a bed of smaller rocks, presumably fallen         
+from the mountains far above.  The air here has a slight chill to it, the          
+climate being more like that of the mountains than the forest.  You can         
+descend into a grove of colossal trees to the south, and continue climbing         
+the rocky path to the north.         
+~
+forest
+D NORTH 9128 0 0
+~
+The rocky path continues to the north.         
+~
+D SOUTH 9027 0 0
+~
+A grove of enormous trees lies to the south.         
+~
+#9128
+A Rocky Path Beneath a Cliff~
+This path runs on a slight ascent to the north, bordered on the west by a         
+nearly vertical cliff and on the east by an impassible jungle of tangled         
+undergrowth.  The path itself is a bed of smaller rocks, presumably fallen         
+from the mountains far above.  The air here has a slight chill to it, the          
+climate being more like that of the mountains than the forest.  The path         
+descends toward the forest floor to the south, and levels off in a secluded         
+mountain grove to the north.         
+~
+forest
+D NORTH 9129 0 0
+~
+A mountain grove extends to the north.         
+~
+D SOUTH 9127 0 0
+~
+The rocky path continues to the south.         
+~
+#9129
+A Secluded Mountain Grove~
+This grove consists of a flat, grassy stretch of land that sits nestled          
+between two mountains that loom many thousands of feet overhead.  Surrounded         
+on three sides by nearly vertical cliffs, this grove is home to a rather         
+wide variety of stunted coniferous trees.  Although the trees grow together         
+in places, there still exists plenty of open space making travel within         
+the grove a simple matter.  You can continue through the trees to the north         
+and west, while a rocky path makes a gradual descent to the south.         
+~
+forest
+D NORTH 9134 0 0
+~
+The mountain grove continues to the north.         
+~
+D SOUTH 9128 0 0
+~
+A rocky path leads south, near the mountains.         
+~
+D WEST 9130 0 0
+~
+The mountain grove continues to the west.         
+~
+#9130
+A Secluded Mountain Grove~
+This grove consists of a flat, grassy stretch of land that sits nestled          
+between two mountains that loom many thousands of feet overhead.  Surrounded         
+on three sides by nearly vertical cliffs, this grove is home to a rather         
+wide variety of stunted coniferous trees.  Although the trees grow together         
+in places, there still exists plenty of open space making travel within         
+the grove a simple matter.  You can continue through the trees to the north,         
+east, and west.         
+~
+forest
+D NORTH 9133 0 0
+~
+The mountain grove continues to the north.         
+~
+D EAST 9129 0 0
+~
+The mountain grove continues to the east.         
+~
+D WEST 9131 0 0
+~
+The mountain grove continues to the west.         
+~
+#9131
+A Secluded Mountain Grove~
+This grove consists of a flat, grassy stretch of land that sits nestled          
+between two mountains that loom many thousands of feet overhead.  Surrounded         
+on three sides by nearly vertical cliffs, this grove is home to a rather         
+wide variety of stunted coniferous trees.  Although the trees grow together         
+in places, there still exists plenty of open space making travel within         
+the grove a simple matter.  You can continue through the trees to the north         
+and east.         
+~
+forest
+D NORTH 9132 0 0
+~
+The mountain grove continues to the north.         
+~
+D EAST 9130 0 0
+~
+The mountain grove continues to the east.         
+~
+#9132
+A Secluded Mountain Grove~
+This grove consists of a flat, grassy stretch of land that sits nestled          
+between two mountains that loom many thousands of feet overhead.  Surrounded         
+on three sides by nearly vertical cliffs, this grove is home to a rather         
+wide variety of stunted coniferous trees.  Although the trees grow together         
+in places, there still exists plenty of open space making travel within         
+the grove a simple matter.  You can continue through the trees to the south         
+and east.         
+~
+forest
+D EAST 9133 0 0
+~
+The mountain grove continues to the east.         
+~
+D SOUTH 9131 0 0
+~
+The mountain grove continues to the south.         
+~
+#9133
+A Secluded Mountain Grove~
+This grove consists of a flat, grassy stretch of land that sits nestled          
+between two mountains that loom many thousands of feet overhead.  Surrounded         
+on three sides by nearly vertical cliffs, this grove is home to a rather         
+wide variety of stunted coniferous trees.  Although the trees grow together         
+in places, there still exists plenty of open space making travel within         
+the grove a simple matter.  You can continue through the trees to the south,          
+east, and west, while a narrow opening in the cliff face seems passable to         
+the north.         
+~
+forest
+D NORTH 9135 0 0
+~
+A large cave opening is directly to the north.         
+~
+D EAST 9134 0 0
+~
+The mountain grove continues to the east.         
+~
+D SOUTH 9130 0 0
+~
+The mountain grove continues to the south.         
+~
+D WEST 9132 0 0
+~
+The mountain grove continues to the west.         
+~
+#9134
+A Secluded Mountain Grove~
+This grove consists of a flat, grassy stretch of land that sits nestled          
+between two mountains that loom many thousands of feet overhead.  Surrounded         
+on three sides by nearly vertical cliffs, this grove is home to a rather         
+wide variety of stunted coniferous trees.  Although the trees grow together         
+in places, there still exists plenty of open space making travel within         
+the grove a simple matter.  You can continue through the trees to the south         
+and west.         
+~
+forest
+D SOUTH 9129 0 0
+~
+The mountain grove continues to the south.         
+~
+D WEST 9133 0 0
+~
+The mountain grove continues to the west.         
+~
+#9135
+Within a Dark Cave~
+The narrow opening gives way to a cave that feels spacious in spite of the         
+oppressive darkness.  The air is quite stale, but every now and then the          
+fetid odor of decomposition can be detected.  There seems to be nothing         
+overly unusual about this hollow in the mountainside, but whether by some         
+acoustic trick or by some bestial presence the sound of heavy breathing         
+is barely audible.  You can return to the mountain grove to the south.         
+~
+unused
+D SOUTH 9133 0 0
+~
+The mountain grove lies back to the south.         
+~
+#9136
+Some Sodden Marshland~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  The marshland continues in all directions around         
+you.         
+~
+field
+D NORTH 9138 0 0
+~
+The marshes continue to the north.         
+~
+D EAST 9137 0 0
+~
+The marshes continue to the east. ~
+D SOUTH 9041 0 0
+~
+The marshes continue to the south.         
+~
+D WEST 9044 0 0
+~
+The marshes continue to the west.         
+~
+#9137
+Some Sodden Marshland~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  The marshland continues to the west and north.         
+~
+field
+D NORTH 9139 0 0
+~
+The marshes continue to the north.         
+~
+D WEST 9136 0 0
+~
+The marshes continue to the west.         
+~
+#9138
+Some Marshland, Near a Murky Stream~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  A dark, slow-moving stream glides by to the north,         
+while the marshes continue to the east, west, and south.         
+~
+field
+D NORTH 9072 0 0
+~
+A murky stream flows along north of here.         
+~
+D EAST 9139 0 0
+~
+The marshes continue to the east.         
+~
+D SOUTH 9136 0 0
+~
+The marshes continue to the south.         
+~
+D WEST 9045 0 0
+~
+The marshes continue to the west.         
+~
+#9139
+Some Sodden Marshland, Near a Hut~
+The ground here consists of dark, sticky soil that sits lumped in uneven         
+piles where either time or some strange creature has left it.  There is         
+a strong odor of decomposition all around, likely plant and animal both.         
+Small pools of water sit here and there, and biting insects seem to hover         
+around them in clusters.  In places, enormous reeds can be seen sprouting         
+up in thick clusters.  The marshland continues to the south and west, while         
+an odd thatched hut sits on a slightly raised platform to the north.         
+~
+field
+D NORTH 9140 0 0
+~
+A strange thatched hut lies to the north.         
+~
+D SOUTH 9137 0 0
+~
+The marshes continue to the south.         
+~
+D WEST 9138 0 0
+~
+The marshes continue to the west.         
+~
+#9140
+Within the Hut of the Marsh-Hag~
+The bamboo walls of this hut are almost invisible, completely obscured         
+by strange shamanistic carvings and totems that hang everywhere.  A         
+pile of straw in one corner seems to serve as a bed, and the only other         
+furnishing of note is a crude iron cauldron sitting, cold, in the center         
+of the room.  The thatched roof seems to be strong enough to keep out          
+any inclement weather, but its intricate weave and flawless attachments          
+might indicate that the owner of this hut had some magical assistance in         
+its contruction.  You can return to the marshes to the south.         
+~
+unused
+D SOUTH 9139 0 0
+~
+The marshes lie just to the south.         
+~
+#9141
+Below the Surface of the Pond~
+Large green masses of algae sit caked into bundles, hanging still in the         
+stagnant water.  Although it is repulsive, this pond seems to contain a         
+thriving ecosystem.  Large fish, small fish, and various other forms of         
+marine life swim all about.  The bottom of the pond is dark and ominous,         
+likely consisting of some sort of clay.  You can continue beneath the          
+water to the north and west, or simply return to the water's surface.         
+~
+underwater
+D NORTH 9146 0 0
+~
+The murky waters continue to the north.         
+~
+D WEST 9142 0 0
+~
+The murky waters continue to the west.         
+~
+D UP 9078 0 0
+~
+The surface of the water lies just above you.         
+~
+#9142
+Below the Surface of the Pond~
+Large green masses of algae sit caked into bundles, hanging still in the         
+stagnant water.  Although it is repulsive, this pond seems to contain a         
+thriving ecosystem.  Large fish, small fish, and various other forms of         
+marine life swim all about.  The bottom of the pond is dark and ominous,         
+likely consisting of some sort of clay.  You can continue beneath the          
+water to the north, east, and west, or simply return to the water's surface.         
+~
+underwater
+D NORTH 9145 0 0
+~
+The murky waters continue to the north.         
+~
+D EAST 9141 0 0
+~
+The murky waters continue to the east.         
+~
+D WEST 9143 0 0
+~
+The murky waters continue to the west.         
+~
+D UP 9079 0 0
+~
+The surface of the water lies just above you.         
+~
+#9143
+Below the Surface of the Pond~
+Large green masses of algae sit caked into bundles, hanging still in the         
+stagnant water.  Although it is repulsive, this pond seems to contain a         
+thriving ecosystem.  Large fish, small fish, and various other forms of         
+marine life swim all about.  The bottom of the pond is dark and ominous,         
+likely consisting of some sort of clay.  You can continue beneath the          
+water to the north and east, or simply return to the water's surface.         
+~
+underwater
+D NORTH 9144 0 0
+~
+The murky waters continue to the north.         
+~
+D EAST 9142 0 0
+~
+The murky waters continue to the east.         
+~
+D UP 9083 0 0
+~
+The surface of the water lies just above you.         
+~
+#9144
+Below the Surface of the Pond~
+Large green masses of algae sit caked into bundles, hanging still in the         
+stagnant water.  Although it is repulsive, this pond seems to contain a         
+thriving ecosystem.  Large fish, small fish, and various other forms of         
+marine life swim all about.  The bottom of the pond is dark and ominous,         
+likely consisting of some sort of clay.  You can continue beneath the         
+water to the south and east, or simply return to the water's surface.         
+~
+underwater
+D EAST 9145 0 0
+~
+The murky waters continue to the east.         
+~
+D SOUTH 9143 0 0
+~
+The murky waters continue to the south.         
+~
+D UP 9084 0 0
+~
+The surface of the water lies just above you.         
+~
+#9145
+Below the Surface of the Pond~
+Large green masses of algae sit caked into bundles, hanging still in the         
+stagnant water.  Although it is repulsive, this pond seems to contain a         
+thriving ecosystem.  Large fish, small fish, and various other forms of         
+marine life swim all about.  The bottom of the pond is dark and ominous,         
+likely consisting of some sort of clay.  You can continue beneath the          
+water to the west, east, and south, or simply return to the water's surface.         
+~
+underwater
+D EAST 9146 0 0
+~
+The murky waters continue to the east.         
+~
+D SOUTH 9142 0 0
+~
+The murky waters continue to the south.         
+~
+D WEST 9144 0 0
+~
+The murky waters continue to the west.         
+~
+D UP 9080 0 0
+~
+The water's surface lies just above you.         
+~
+#9146
+Below the Surface of the Pond~
+Large green masses of algae sit caked into bundles, hanging still in the         
+stagnant water.  Although it is repulsive, this pond seems to contain a         
+thriving ecosystem.  Large fish, small fish, and various other forms of         
+marine life swim all about.  The bottom of the pond is dark and ominous,         
+likely consisting of some sort of clay.  You can continue beneath the         
+water to the south and west, or simply return to the water's surface.         
+~
+underwater
+D SOUTH 9141 0 0
+~
+The murky waters continue to the south.         
+~
+D WEST 9145 0 0
+~
+The murky waters continue to the west.         
+~
+D UP 9077 0 0
+~
+The water's surface lies just above you.         
+~
+#9147
+Tangled Undergrowth, Before a Shack~
+Thick brambles grow in clumps on the forest floor here, only receding in      
+places to allow passage.  The sharp thorns rend flesh and cloth alike, and      
+the vines seem to have an affinity for coiling around limbs.  Although the      
+undergrowth chokes off any new growth, the trees that rise up here appear      
+ancient, with thick, gnarled trunks.  Even their canopy is oppressive,      
+branches hanging a short distance overhead, blotting out the sky.  To the      
+west, some rotting boards seem thrown together to form some sort of      
+dwelling.  To the east, a worn trail seems much more hospitable.        
+~
+forest
+D EAST 9104 0 0
+~
+A worn trail to the east seems more easily navigable than these brambles.      
+~
+D WEST 9148 ABCDEH 0
+~
+One of the rotting boards seems to resemble a door, but you aren't sure.      
+~
+#9148
+Inside a Shack~
+~
+unused
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 9147 ABCDEH 1
+~
+~
+#0
+
+
+
+#RESETS
+MOB 9000 TO 9000 GLIMIT 1 LLIMIT 1
+EQUIP 9012 HEAD
+EQUIP 9013 NECKONE
+EQUIP 9014 ABOUT
+OBJECT 9010 TO 9000
+PUT 9011 IN 9010 COUNT 1
+MOB 9009 TO 9001 GLIMIT 4 LLIMIT 4
+MOB 9009 TO 9010 GLIMIT 4 LLIMIT 4
+MOB 9001 TO 9014 GLIMIT 20 LLIMIT 14
+MOB 9009 TO 9014 GLIMIT 4 LLIMIT 4
+MOB 9001 TO 9015 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9017 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9019 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9019 GLIMIT 20 LLIMIT 14
+MOB 9009 TO 9021 GLIMIT 4 LLIMIT 4
+MOB 9001 TO 9023 GLIMIT 20 LLIMIT 14
+OBJECT 9003 TO 9023
+MOB 9001 TO 9025 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9026 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9026 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9026 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9028 GLIMIT 20 LLIMIT 14
+MOB 9001 TO 9033 GLIMIT 20 LLIMIT 14
+MOB 9007 TO 9044 GLIMIT 5 LLIMIT 3
+MOB 9013 TO 9094 GLIMIT 1 LLIMIT 1
+EQUIP 9016 HOLD
+EQUIP 9006 ABOUT
+MOB 9006 TO 9096 GLIMIT 8 LLIMIT 4
+MOB 9003 TO 9096 GLIMIT 5 LLIMIT 3
+EQUIP 9005 HOLD
+MOB 9006 TO 9096 GLIMIT 8 LLIMIT 4
+MOB 9003 TO 9096 GLIMIT 5 LLIMIT 3
+MOB 9003 TO 9096 GLIMIT 5 LLIMIT 3
+MOB 9006 TO 9096 GLIMIT 8 LLIMIT 4
+MOB 9006 TO 9096 GLIMIT 8 LLIMIT 4
+OBJECT 9015 TO 9096
+MOB 9012 TO 9104 GLIMIT 2 LLIMIT 1
+MOB 9001 TO 9105 GLIMIT 20 LLIMIT 14
+OBJECT 9009 TO 9114
+MOB 9001 TO 9120 GLIMIT 20 LLIMIT 14
+MOB 9010 TO 9121 GLIMIT 1 LLIMIT 1
+EQUIP 9004 HOLD
+MOB 9008 TO 9125 GLIMIT 2 LLIMIT 2
+MOB 9008 TO 9125 GLIMIT 2 LLIMIT 2
+MOB 9005 TO 9126 GLIMIT 1 LLIMIT 1
+EQUIP 9002 WIELD
+MOB 9002 TO 9135 GLIMIT 1 LLIMIT 1
+MOB 9007 TO 9137 GLIMIT 5 LLIMIT 3
+MOB 9007 TO 9138 GLIMIT 5 LLIMIT 3
+MOB 9004 TO 9140 GLIMIT 1 LLIMIT 1
+EQUIP 9001 WRISTONE
+MOB 9011 TO 9141 GLIMIT 5 LLIMIT 5
+MOB 9011 TO 9142 GLIMIT 5 LLIMIT 5
+MOB 9011 TO 9143 GLIMIT 5 LLIMIT 5
+MOB 9011 TO 9144 GLIMIT 5 LLIMIT 5
+MOB 9011 TO 9145 GLIMIT 5 LLIMIT 5
+MOB 9011 TO 9146 GLIMIT 5 LLIMIT 5
+DOOR 9147 west CLOSED
+DOOR 9147 west LOCKED
+MOB 9014 TO 9148 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 9014 give_prog give_prog_ilopheth_hermit
+M 9014 pulse_prog pulse_prog_ilopheth_hermit
+M 9014 speech_prog speech_prog_ilopheth_hermit
+M 9014 aggress_prog aggress_prog_ilopheth_hermit
+END
+#$

@@ -1,0 +1,1602 @@
+Mon Oct 16 15:05:05 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 15:06:43 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net new player.
+Mon Oct 16 15:09:39 2000 :: Dev has quit the game. (4 minutes played)
+Mon Oct 16 15:09:44 2000 :: Quinthen has quit the game. (3 minutes played)
+Mon Oct 16 15:21:36 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 15:22:47 2000 :: Daedelex@adsl-63-244-217.mia.bellsouth.net new player.
+Mon Oct 16 15:28:19 2000 :: Sylok@dhcp92-42.pittsburgh.resnet.pitt.edu new player.
+Mon Oct 16 15:28:34 2000 :: Dev has quit the game. (6 minutes played)
+Mon Oct 16 15:28:45 2000 :: Daedelex has quit the game. (6 minutes played)
+Mon Oct 16 15:29:30 2000 :: Sylok has quit the game. (1 minutes played)
+Mon Oct 16 16:01:54 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 16:02:03 2000 :: Dev has quit the game. (0 minutes played)
+Mon Oct 16 16:08:10 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 16:11:00 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 16:17:10 2000 :: Phelan@node2.unix.Virginia.EDU new player.
+Mon Oct 16 16:18:43 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 16:18:45 2000 :: Phelan@node2.unix.Virginia.EDU has connected.
+Mon Oct 16 16:20:28 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 16:20:40 2000 :: Phelan@node2.unix.Virginia.EDU has connected.
+Mon Oct 16 16:30:48 2000 :: Phelan has autoquit the game. (10 minutes played)
+Mon Oct 16 16:31:37 2000 :: Phelan@node12.unix.Virginia.EDU has connected.
+Mon Oct 16 16:31:49 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 17:55:21 2000 :: Gabe@localhost.localdomain new player.
+Mon Oct 16 18:01:52 2000 :: Gabe has quit the game. (6 minutes played)
+Mon Oct 16 18:30:35 2000 :: Phelan@node2.unix.Virginia.EDU has connected.
+Mon Oct 16 18:40:30 2000 :: Phelan has autoquit the game. (9 minutes played)
+Mon Oct 16 18:49:54 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 19:00:10 2000 :: Viscrinth@pool-63.53.46.121.irvn.grid.net new player.
+Mon Oct 16 19:02:17 2000 :: Dev has quit the game. (12 minutes played)
+Mon Oct 16 19:02:22 2000 :: Viscrinth has quit the game. (3 minutes played)
+Mon Oct 16 19:15:27 2000 :: Phelan@node12.unix.Virginia.EDU has connected.
+Mon Oct 16 19:16:07 2000 :: Phelan has quit the game. (0 minutes played)
+Mon Oct 16 19:25:13 2000 :: Dioxide@sdsl-216-36-64-220.dsl.sjc.megapath.net new player.
+Mon Oct 16 19:26:11 2000 :: Dioxide has quit the game. (1 minutes played)
+Mon Oct 16 19:44:09 2000 :: Phelan@node12.unix.Virginia.EDU has connected.
+Mon Oct 16 19:45:45 2000 :: Dev@localhost.localdomain has connected.
+Mon Oct 16 19:45:53 2000 :: Dev has quit the game. (0 minutes played)
+Mon Oct 16 20:06:22 2000 :: Phelan has quit the game. (22 minutes played)
+Mon Oct 16 20:36:42 2000 :: Gabe@dialin1-30.rush.cnz.com has connected.
+Mon Oct 16 20:46:40 2000 :: Gabe has autoquit the game. (9 minutes played)
+Mon Oct 16 20:46:55 2000 :: Gabe@dialin1-30.rush.cnz.com has connected.
+Mon Oct 16 20:49:56 2000 :: Gabe has quit the game. (3 minutes played)
+Mon Oct 16 21:25:57 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 21:27:13 2000 :: Macheath@24-216-67-154.hsacorp.net new player.
+Mon Oct 16 21:45:45 2000 :: Macheath has autoquit the game. (19 minutes played)
+Mon Oct 16 21:45:58 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 22:02:05 2000 :: Macheath has autoquit the game. (16 minutes played)
+Mon Oct 16 22:02:23 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 22:07:10 2000 :: Dev has quit the game. (41 minutes played)
+Mon Oct 16 22:11:21 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 22:12:11 2000 :: Macheath has autoquit the game. (9 minutes played)
+Mon Oct 16 22:12:25 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 22:15:08 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 22:15:12 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 22:28:29 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 22:28:42 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 22:28:54 2000 :: Dev has quit the game. (13 minutes played)
+Mon Oct 16 22:29:03 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 22:41:52 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 22:42:05 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 22:46:04 2000 :: Dev has autoquit the game. (17 minutes played)
+Mon Oct 16 22:55:16 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 22:55:30 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 23:08:40 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 23:08:53 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 23:22:03 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 23:22:19 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 23:29:44 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Mon Oct 16 23:35:28 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 23:35:42 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 23:48:52 2000 :: Macheath has quit the game. (13 minutes played)
+Mon Oct 16 23:49:06 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 23:50:10 2000 :: Macheath@24-216-67-154.hsacorp.net has connected.
+Mon Oct 16 23:51:02 2000 :: Dev@adsl-141-151-136-65.bellatlantic.net has connected.
+Tue Oct 17 00:02:07 2000 :: Viscrinth@pool-63.53.66.221.irvn.grid.net has connected.
+Tue Oct 17 01:02:48 2000 :: Viscrinth has quit the game. (62 minutes played)
+Tue Oct 17 01:36:17 2000 :: Macheath has quit the game. (106 minutes played)
+Tue Oct 17 01:47:33 2000 :: Dev has autoquit the game. (116 minutes played)
+Tue Oct 17 01:50:23 2000 :: Sylok@dhcp92-42.pittsburgh.resnet.pitt.edu has connected.
+Tue Oct 17 01:50:40 2000 :: Sylok has quit the game. (0 minutes played)
+Tue Oct 17 11:05:38 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 11:05:44 2000 :: Gabe has quit the game. (0 minutes played)
+Tue Oct 17 11:50:57 2000 :: Phelan@node2.unix.Virginia.EDU has connected.
+Tue Oct 17 11:55:32 2000 :: Phelan has quit the game. (4 minutes played)
+Tue Oct 17 12:20:01 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 12:52:27 2000 :: Dev has autoquit the game. (32 minutes played)
+Tue Oct 17 13:58:06 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 13:59:49 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 17 14:31:27 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 14:47:09 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 15:04:50 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 15:11:50 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 15:16:11 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 17 15:20:23 2000 :: Gabe has autoquit the game. (15 minutes played)
+Tue Oct 17 15:30:26 2000 :: Daedelex has autoquit the game. (18 minutes played)
+Tue Oct 17 15:38:44 2000 :: Anewbie@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 15:40:03 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 15:42:10 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 15:42:12 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 15:42:25 2000 :: Anewbie@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 15:44:18 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 15:44:54 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 15:45:05 2000 :: Newguy@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 15:46:09 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 15:46:11 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 15:46:20 2000 :: Anewguy@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 15:52:49 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 15:52:54 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 15:53:06 2000 :: Newguy@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 15:55:43 2000 :: Anewguy@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 15:58:58 2000 :: Dennl@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 16:09:26 2000 :: Anewb@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 16:10:35 2000 :: Newb@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 16:11:32 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 16:12:11 2000 :: Fewgwg@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 16:14:21 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 16:14:24 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 16:14:36 2000 :: Devtest@adsl-141-151-142-48.bellatlantic.net new player.
+Tue Oct 17 16:17:12 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 16:17:44 2000 :: Test@localhost.localdomain new player.
+Tue Oct 17 16:19:24 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 16:21:06 2000 :: Test@localhost.localdomain new player. (MULTI-CHAR?)
+Tue Oct 17 16:23:13 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 16:23:27 2000 :: Test@localhost.localdomain new player.
+Tue Oct 17 16:27:05 2000 :: Gabe@localhost.localdomain has connected. (MULTI-CHAR?)
+Tue Oct 17 16:29:20 2000 :: Test has autoquit the game. (6 minutes played)
+Tue Oct 17 16:35:13 2000 :: Gabe has autoquit the game. (8 minutes played)
+Tue Oct 17 16:44:27 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 17:15:19 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 17:19:12 2000 :: Gabe has autoquit the game. (3 minutes played)
+Tue Oct 17 17:19:28 2000 :: Gabe@localhost.localdomain new player.
+Tue Oct 17 17:41:06 2000 :: Gabe has quit the game. (21 minutes played)
+Tue Oct 17 17:44:45 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 18:11:25 2000 :: Berand@c949997-a.elnsng1.mi.home.com new player.
+Tue Oct 17 18:18:47 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 18:19:34 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 18:20:02 2000 :: Lamo@24-216-127-214.hsacorp.net new player. (MULTI-CHAR?)
+Tue Oct 17 18:21:52 2000 :: Lamo has autoquit the game. (2 minutes played)
+Tue Oct 17 18:41:06 2000 :: Gabe has autoquit the game. (22 minutes played)
+Tue Oct 17 18:45:44 2000 :: Graelik@z2-48.grove.net new player.
+Tue Oct 17 19:21:07 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 19:21:14 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 19:21:15 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 19:54:55 2000 :: Gabe@localhost.localdomain has connected.
+Tue Oct 17 20:09:16 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 17 20:39:55 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Tue Oct 17 20:58:05 2000 :: Gabe has autoquit the game. (63 minutes played)
+Tue Oct 17 21:04:09 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 21:04:11 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Tue Oct 17 21:04:43 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:05:11 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 21:15:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Tue Oct 17 21:15:08 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 21:15:22 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 21:15:29 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:16:33 2000 :: Dev has quit the game. (1 minutes played)
+Tue Oct 17 21:16:37 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:16:46 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 21:16:50 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:17:13 2000 :: Daedelex has quit the game. (1 minutes played)
+Tue Oct 17 21:17:13 2000 :: Macheath has quit the game. (2 minutes played)
+Tue Oct 17 21:17:18 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 21:17:20 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 21:17:58 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:18:21 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 21:36:06 2000 :: Dev has quit the game. (18 minutes played)
+Tue Oct 17 21:36:08 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:40:02 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 17 21:40:52 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net new player. (MULTI-CHAR?)
+Tue Oct 17 21:47:05 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:48:08 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:48:22 2000 :: Dev has quit the game. (0 minutes played)
+Tue Oct 17 21:48:27 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:51:19 2000 :: Phelan@node9.unix.Virginia.EDU has connected.
+Tue Oct 17 21:56:08 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Tue Oct 17 21:56:08 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 21:56:10 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 21:56:12 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 21:57:13 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 17 21:57:21 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Tue Oct 17 22:50:06 2000 :: Daedtester@adsl-63-235-101.mia.bellsouth.net new player. (MULTI-CHAR?)
+Tue Oct 17 22:50:14 2000 :: Subatai@client-141-150-197-194.bellatlantic.net new player. (MULTI-CHAR?)
+Tue Oct 17 22:50:57 2000 :: Chump@node9.unix.Virginia.EDU new player.
+Tue Oct 17 22:51:03 2000 :: Daedtester has autoquit the game. (1 minutes played)
+Tue Oct 17 22:56:20 2000 :: Chump has autoquit the game. (6 minutes played)
+Tue Oct 17 22:59:29 2000 :: Quinthen has quit the game. (62 minutes played)
+Tue Oct 17 23:19:40 2000 :: Subatai has autoquit the game. (29 minutes played)
+Tue Oct 17 23:31:37 2000 :: Viscrinth@pool-63.53.46.220.irvn.grid.net has connected.
+Tue Oct 17 23:58:10 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Tue Oct 17 23:58:12 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Tue Oct 17 23:58:16 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Tue Oct 17 23:58:21 2000 :: Viscrinth@pool-63.53.46.220.irvn.grid.net has connected.
+Tue Oct 17 23:58:26 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Tue Oct 17 23:58:26 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 00:05:40 2000 :: Gabe@dialin1-45.rush.cnz.com has connected.
+Wed Oct 18 00:25:16 2000 :: Dioxide has quit the game. (26 minutes played)
+Wed Oct 18 00:26:18 2000 :: Daedelex has quit the game. (28 minutes played)
+Wed Oct 18 00:45:16 2000 :: Gabe has autoquit the game. (39 minutes played)
+Wed Oct 18 00:53:37 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 01:15:15 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 01:15:15 2000 :: Macheath@24-216-127-214.hsacorp.net has connected.
+Wed Oct 18 01:15:20 2000 :: Viscrinth@pool-63.53.46.220.irvn.grid.net has connected.
+Wed Oct 18 01:15:21 2000 :: Dev@adsl-141-151-142-48.bellatlantic.net has connected.
+Wed Oct 18 01:16:39 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Wed Oct 18 01:22:58 2000 :: Dioxide has quit the game. (7 minutes played)
+Wed Oct 18 01:23:00 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 01:23:15 2000 :: Dioxide has quit the game. (0 minutes played)
+Wed Oct 18 01:23:17 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 01:39:37 2000 :: Macheath has quit the game. (24 minutes played)
+Wed Oct 18 01:39:40 2000 :: Phelan has quit the game. (23 minutes played)
+Wed Oct 18 01:40:35 2000 :: Dioxide has quit the game. (17 minutes played)
+Wed Oct 18 01:54:14 2000 :: Viscrinth has autoquit the game. (38 minutes played)
+Wed Oct 18 02:14:26 2000 :: Dev has autoquit the game. (59 minutes played)
+Wed Oct 18 04:46:23 2000 :: Sylok@dhcp92-42.pittsburgh.resnet.pitt.edu has connected.
+Wed Oct 18 04:46:46 2000 :: Sylok has quit the game. (0 minutes played)
+Wed Oct 18 06:28:01 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 06:30:14 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 06:31:59 2000 :: Daedelex has quit the game. (1 minutes played)
+Wed Oct 18 09:03:42 2000 :: Phelan@node13.unix.Virginia.EDU has connected.
+Wed Oct 18 09:04:39 2000 :: Phelan has quit the game. (0 minutes played)
+Wed Oct 18 09:51:27 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Wed Oct 18 10:07:55 2000 :: Quinthen has quit the game. (16 minutes played)
+Wed Oct 18 10:29:24 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Wed Oct 18 10:42:00 2000 :: Quinthen has quit the game. (12 minutes played)
+Wed Oct 18 10:50:59 2000 :: Gabe@localhost.localdomain has connected.
+Wed Oct 18 10:51:03 2000 :: Gabe has quit the game. (0 minutes played)
+Wed Oct 18 11:21:19 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 11:22:50 2000 :: Phelan@node9.unix.Virginia.EDU has connected.
+Wed Oct 18 11:58:57 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Wed Oct 18 12:03:14 2000 :: Anecro@adsl-141-151-143-239.bellatlantic.net new player. (MULTI-CHAR?)
+Wed Oct 18 12:38:13 2000 :: Anecro has autoquit the game. (35 minutes played)
+Wed Oct 18 12:38:53 2000 :: Anecr@adsl-141-151-143-239.bellatlantic.net new player. (MULTI-CHAR?)
+Wed Oct 18 12:40:58 2000 :: Anecr has autoquit the game. (2 minutes played)
+Wed Oct 18 12:53:45 2000 :: Graelik@z3-46.grove.net has connected.
+Wed Oct 18 13:13:40 2000 :: Phelan has autoquit the game. (110 minutes played)
+Wed Oct 18 13:23:18 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Wed Oct 18 13:38:10 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Wed Oct 18 14:54:14 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 15:22:42 2000 :: Phelan has autoquit the game. (104 minutes played)
+Wed Oct 18 15:23:20 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Wed Oct 18 15:26:09 2000 :: Phelan has quit the game. (2 minutes played)
+Wed Oct 18 15:27:38 2000 :: Quinthen has quit the game. (124 minutes played)
+Wed Oct 18 16:14:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Wed Oct 18 16:14:15 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 16:14:30 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 16:44:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Wed Oct 18 16:44:19 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 16:45:24 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 16:50:09 2000 :: Macheath has quit the game. (6 minutes played)
+Wed Oct 18 17:26:31 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 17:54:48 2000 :: Viscrinth@pool-63.53.46.102.irvn.grid.net has connected.
+Wed Oct 18 18:59:08 2000 :: Viscrinth has autoquit the game. (64 minutes played)
+Wed Oct 18 19:10:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 19:10:09 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 19:10:30 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:11:16 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:11:18 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 19:11:33 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 19:11:41 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:18:32 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:40:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 19:40:10 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 19:40:10 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:42:05 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 19:42:11 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:42:21 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 19:47:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 19:47:12 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:47:18 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 19:50:05 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 19:50:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 19:51:25 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 20:01:07 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 20:01:12 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 20:07:09 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 18 20:07:12 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Wed Oct 18 20:26:54 2000 :: Challen@roam181-38.student.harvard.edu new player.
+Wed Oct 18 20:42:12 2000 :: Phelan@node15.unix.Virginia.EDU has connected.
+Wed Oct 18 20:52:06 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Wed Oct 18 21:34:06 2000 :: Phelan has quit the game. (51 minutes played)
+Wed Oct 18 21:37:10 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Wed Oct 18 21:38:39 2000 :: Graelik@z3-10.grove.net has connected.
+Wed Oct 18 22:20:42 2000 :: Graelik has autoquit the game. (42 minutes played)
+Wed Oct 18 22:28:00 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Wed Oct 18 23:06:31 2000 :: Daedelex has quit the game. (134 minutes played)
+Wed Oct 18 23:06:58 2000 :: Challen has quit the game. (160 minutes played)
+Wed Oct 18 23:17:36 2000 :: Gabe@dialin1-41.rush.cnz.com has connected.
+Wed Oct 18 23:17:57 2000 :: Gabe has quit the game. (0 minutes played)
+Thu Oct 19 00:18:21 2000 :: Dioxide has quit the game. (251 minutes played)
+Thu Oct 19 00:23:43 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:23:52 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:38:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:38:10 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:38:20 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:40:07 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:40:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:40:22 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:41:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:41:08 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:42:10 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:43:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:43:07 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:43:18 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:45:13 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:45:14 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:45:48 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:46:18 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:53:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:53:16 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:53:33 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 00:56:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 00:56:09 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:56:28 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 00:56:52 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 01:02:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 01:02:28 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 01:03:05 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 01:05:08 2000 :: Viscrinth@pool-63.53.48.200.irvn.grid.net has connected.
+Thu Oct 19 01:05:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 01:05:09 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 01:05:31 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 01:09:31 2000 :: Viscrinth has quit the game. (4 minutes played)
+Thu Oct 19 01:13:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 01:13:10 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 01:17:14 2000 :: Macheath has quit the game. (4 minutes played)
+Thu Oct 19 01:27:18 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 01:41:20 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 01:46:59 2000 :: Dev@adsl-141-151-143-239.bellatlantic.net has connected.
+Thu Oct 19 03:05:47 2000 :: Dev has autoquit the game. (78 minutes played)
+Thu Oct 19 11:57:36 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 12:57:25 2000 :: Gabe@localhost.localdomain has connected.
+Thu Oct 19 13:18:52 2000 :: Gabe has quit the game. (21 minutes played)
+Thu Oct 19 13:19:23 2000 :: Gabe@63.147.230.241 has connected.
+Thu Oct 19 13:19:39 2000 :: Xanthian@63.147.230.246 new player.
+Thu Oct 19 13:24:10 2000 :: Xanthian has quit the game. (4 minutes played)
+Thu Oct 19 13:24:16 2000 :: Xanthian@63.147.230.246 has connected.
+Thu Oct 19 13:40:24 2000 :: Xanthian has autoquit the game. (16 minutes played)
+Thu Oct 19 13:40:52 2000 :: Xanthian@63.147.230.246 new player.
+Thu Oct 19 13:48:52 2000 :: Xanthian has quit the game. (8 minutes played)
+Thu Oct 19 13:48:58 2000 :: Xanthian@63.147.230.246 has connected.
+Thu Oct 19 14:10:57 2000 :: Xanthian has quit the game. (22 minutes played)
+Thu Oct 19 14:11:00 2000 :: Xanthian@63.147.230.246 has connected.
+Thu Oct 19 14:17:30 2000 :: Macheath has quit the game. (139 minutes played)
+Thu Oct 19 14:17:59 2000 :: Xanthian has quit the game. (6 minutes played)
+Thu Oct 19 14:18:01 2000 :: Xanthian@63.147.230.245 has connected.
+Thu Oct 19 14:41:27 2000 :: Xanthian has quit the game. (23 minutes played)
+Thu Oct 19 14:41:29 2000 :: Xanthian@63.147.230.245 has connected.
+Thu Oct 19 15:08:04 2000 :: Gabe has autoquit the game. (108 minutes played)
+Thu Oct 19 15:10:18 2000 :: Xanthian has quit the game. (28 minutes played)
+Thu Oct 19 17:17:32 2000 :: Gabe@localhost.localdomain has connected.
+Thu Oct 19 17:21:10 2000 :: Gabe has quit the game. (3 minutes played)
+Thu Oct 19 17:23:46 2000 :: Xanthian@63.147.230.245 has connected.
+Thu Oct 19 17:23:52 2000 :: Xanthian has quit the game. (0 minutes played)
+Thu Oct 19 17:24:31 2000 :: Xanthian@63.147.230.245 has connected.
+Thu Oct 19 17:24:31 2000 :: Gabe@63.147.230.241 has connected.
+Thu Oct 19 17:28:23 2000 :: Xanthian has quit the game. (3 minutes played)
+Thu Oct 19 17:28:24 2000 :: Xanthian@63.147.230.245 has connected.
+Thu Oct 19 17:33:22 2000 :: Xanthian has autoquit the game. (4 minutes played)
+Thu Oct 19 17:33:45 2000 :: Morglum@63.147.230.241 new player. (MULTI-CHAR?)
+Thu Oct 19 17:34:45 2000 :: Irudai@63.147.230.245 new player.
+Thu Oct 19 17:36:02 2000 :: Irudai@63.147.230.245 new player.
+Thu Oct 19 17:39:44 2000 :: Irudai has autoquit the game. (4 minutes played)
+Thu Oct 19 17:40:00 2000 :: Irudai@63.147.230.245 new player.
+Thu Oct 19 17:43:01 2000 :: Morglum has quit the game. (9 minutes played)
+Thu Oct 19 17:43:06 2000 :: Morglum@63.147.230.241 has connected. (MULTI-CHAR?)
+Thu Oct 19 17:47:02 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Thu Oct 19 17:47:33 2000 :: Irudai has quit the game. (7 minutes played)
+Thu Oct 19 17:47:35 2000 :: Irudai@63.147.230.245 has connected.
+Thu Oct 19 17:48:58 2000 :: Gabe has quit the game. (24 minutes played)
+Thu Oct 19 17:53:07 2000 :: Irudai has quit the game. (5 minutes played)
+Thu Oct 19 17:53:09 2000 :: Irudai@63.147.230.245 has connected.
+Thu Oct 19 17:54:31 2000 :: Irudai has autoquit the game. (1 minutes played)
+Thu Oct 19 17:54:49 2000 :: Irudai@63.147.230.245 new player.
+Thu Oct 19 17:55:23 2000 :: Irudai@63.147.230.245 new player.
+Thu Oct 19 18:00:39 2000 :: Irudai has quit the game. (5 minutes played)
+Thu Oct 19 18:00:47 2000 :: Irudai@63.147.230.245 has connected.
+Thu Oct 19 18:00:56 2000 :: Viscrinth@pool-63.53.66.41.irvn.grid.net has connected.
+Thu Oct 19 18:01:39 2000 :: Viscrinth has quit the game. (0 minutes played)
+Thu Oct 19 18:02:10 2000 :: Dendraal@pool-63.53.66.41.irvn.grid.net new player.
+Thu Oct 19 18:04:23 2000 :: Dendraal has quit the game. (2 minutes played)
+Thu Oct 19 18:05:13 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 18:10:06 2000 :: Irudai has quit the game. (9 minutes played)
+Thu Oct 19 18:10:14 2000 :: Irudai@63.147.230.245 has connected.
+Thu Oct 19 18:14:05 2000 :: Snarf@63.147.230.246 new player.
+Thu Oct 19 18:14:28 2000 :: Snarf@63.147.230.246 new player.
+Thu Oct 19 18:14:35 2000 :: Gabe@63.147.230.241 has connected. (MULTI-CHAR?)
+Thu Oct 19 18:15:16 2000 :: Morglum has autoquit the game. (32 minutes played)
+Thu Oct 19 18:15:47 2000 :: Snarf has autoquit the game. (1 minutes played)
+Thu Oct 19 18:16:06 2000 :: Snarf@63.147.230.246 new player.
+Thu Oct 19 18:18:22 2000 :: Irudai has quit the game. (8 minutes played)
+Thu Oct 19 18:18:31 2000 :: Irudai@63.147.230.245 has connected.
+Thu Oct 19 18:20:57 2000 :: Snarf has quit the game. (5 minutes played)
+Thu Oct 19 18:22:03 2000 :: Snarf@63.147.230.246 has connected.
+Thu Oct 19 18:24:33 2000 :: Gabe has quit the game. (10 minutes played)
+Thu Oct 19 18:24:36 2000 :: Gabe@63.147.230.241 has connected.
+Thu Oct 19 18:29:30 2000 :: Viscrinth@pool-63.53.66.41.irvn.grid.net has connected.
+Thu Oct 19 18:29:57 2000 :: Quinthen has quit the game. (42 minutes played)
+Thu Oct 19 18:30:27 2000 :: Jugs@client-141-150-197-194.bellatlantic.net new player.
+Thu Oct 19 18:33:28 2000 :: Jugs has autoquit the game. (3 minutes played)
+Thu Oct 19 18:33:36 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Thu Oct 19 18:39:21 2000 :: Irudai has quit the game. (20 minutes played)
+Thu Oct 19 18:39:25 2000 :: Irudai@63.147.230.245 has connected.
+Thu Oct 19 18:56:31 2000 :: Snarf has autoquit the game. (34 minutes played)
+Thu Oct 19 18:56:45 2000 :: Snarf@63.147.230.246 new player.
+Thu Oct 19 19:03:16 2000 :: Vartal@63.147.230.241 new player.
+Thu Oct 19 19:06:05 2000 :: Quinthen has quit the game. (32 minutes played)
+Thu Oct 19 19:06:28 2000 :: Vartal has quit the game. (3 minutes played)
+Thu Oct 19 19:06:33 2000 :: Vartal@63.147.230.241 has connected.
+Thu Oct 19 19:09:49 2000 :: Syrik@63.147.230.245 new player.
+Thu Oct 19 19:10:17 2000 :: Vartal has autoquit the game. (3 minutes played)
+Thu Oct 19 19:10:46 2000 :: Vartal@63.147.230.241 new player.
+Thu Oct 19 19:11:16 2000 :: Snarf has quit the game. (14 minutes played)
+Thu Oct 19 19:11:21 2000 :: Snarf@63.147.230.246 has connected.
+Thu Oct 19 19:14:34 2000 :: Vartal has autoquit the game. (3 minutes played)
+Thu Oct 19 19:14:48 2000 :: Vartal@63.147.230.241 new player.
+Thu Oct 19 19:16:44 2000 :: Vartal has quit the game. (2 minutes played)
+Thu Oct 19 19:16:46 2000 :: Vartal@63.147.230.241 has connected.
+Thu Oct 19 19:27:11 2000 :: Viscrinth has quit the game. (57 minutes played)
+Thu Oct 19 19:27:19 2000 :: Gabe has autoquit the game. (62 minutes played)
+Thu Oct 19 19:30:00 2000 :: Syrik@63.147.230.245 new player.
+Thu Oct 19 19:34:05 2000 :: Irudai has autoquit the game. (54 minutes played)
+Thu Oct 19 19:36:18 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Thu Oct 19 19:38:58 2000 :: Biz@24-240-82-9.hsacorp.net new player. (MULTI-CHAR?)
+Thu Oct 19 19:49:52 2000 :: Sylok@dhcp92-42.pittsburgh.resnet.pitt.edu has connected.
+Thu Oct 19 19:51:04 2000 :: Sylok has quit the game. (1 minutes played)
+Thu Oct 19 19:55:44 2000 :: Syrik has quit the game. (26 minutes played)
+Thu Oct 19 19:55:55 2000 :: Syrik@63.147.230.245 has connected.
+Thu Oct 19 20:08:10 2000 :: Vartal has quit the game. (51 minutes played)
+Thu Oct 19 20:08:10 2000 :: Biz has autoquit the game. (29 minutes played)
+Thu Oct 19 20:08:11 2000 :: Vartal@63.147.230.241 has connected.
+Thu Oct 19 20:08:22 2000 :: Syrik has quit the game. (12 minutes played)
+Thu Oct 19 20:08:30 2000 :: Syrik@63.147.230.245 has connected.
+Thu Oct 19 20:17:54 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Thu Oct 19 20:19:51 2000 :: Phelan has quit the game. (43 minutes played)
+Thu Oct 19 20:21:51 2000 :: Vartal has quit the game. (13 minutes played)
+Thu Oct 19 20:21:53 2000 :: Vartal@63.147.230.241 has connected.
+Thu Oct 19 20:43:25 2000 :: Syrik has quit the game. (34 minutes played)
+Thu Oct 19 20:43:32 2000 :: Syrik@63.147.230.245 has connected.
+Thu Oct 19 20:50:28 2000 :: Syrik has quit the game. (6 minutes played)
+Thu Oct 19 20:50:32 2000 :: Syrik@63.147.230.245 has connected.
+Thu Oct 19 20:54:43 2000 :: Vartal@63.147.230.241 has connected.
+Thu Oct 19 20:54:44 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 19 20:54:56 2000 :: Syrik@63.147.230.245 has connected.
+Thu Oct 19 20:55:20 2000 :: Snarf@63.147.230.246 has connected.
+Thu Oct 19 20:55:33 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Thu Oct 19 21:02:00 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Thu Oct 19 21:06:14 2000 :: Rhalyn@adsl-63-235-101.mia.bellsouth.net new player. (MULTI-CHAR?)
+Thu Oct 19 21:10:43 2000 :: Harrek@24-240-82-9.hsacorp.net new player. (MULTI-CHAR?)
+Thu Oct 19 21:12:50 2000 :: Syrik has quit the game. (17 minutes played)
+Thu Oct 19 21:12:55 2000 :: Syrik@63.147.230.245 has connected.
+Thu Oct 19 21:13:45 2000 :: Snarf has quit the game. (18 minutes played)
+Thu Oct 19 21:13:48 2000 :: Syrik has quit the game. (0 minutes played)
+Thu Oct 19 21:23:30 2000 :: Harrek has quit the game. (13 minutes played)
+Thu Oct 19 21:24:16 2000 :: Harrek@24-240-82-9.hsacorp.net has connected. (MULTI-CHAR?)
+Thu Oct 19 21:24:47 2000 :: Harrek has quit the game. (0 minutes played)
+Thu Oct 19 21:34:39 2000 :: Vartal has autoquit the game. (39 minutes played)
+Thu Oct 19 22:00:20 2000 :: Rhalyn has autoquit the game. (55 minutes played)
+Thu Oct 19 22:12:20 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 19 22:38:23 2000 :: Daedelex has quit the game. (102 minutes played)
+Thu Oct 19 22:59:47 2000 :: Phelan has quit the game. (117 minutes played)
+Thu Oct 19 23:28:46 2000 :: Dioxide has quit the game. (76 minutes played)
+Thu Oct 19 23:45:03 2000 :: Macheath has quit the game. (170 minutes played)
+Fri Oct 20 01:02:05 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 01:31:48 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 02:38:33 2000 :: Macheath has quit the game. (66 minutes played)
+Fri Oct 20 03:17:02 2000 :: Challen has quit the game. (134 minutes played)
+Fri Oct 20 09:23:56 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Fri Oct 20 09:32:39 2000 :: Quinthen has quit the game. (8 minutes played)
+Fri Oct 20 12:05:21 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Fri Oct 20 12:06:41 2000 :: Quinthen has quit the game. (1 minutes played)
+Fri Oct 20 13:23:17 2000 :: Phelan@node4.unix.Virginia.EDU has connected.
+Fri Oct 20 13:50:21 2000 :: Phelan has autoquit the game. (27 minutes played)
+Fri Oct 20 14:40:49 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 15:05:45 2000 :: Gabe@localhost.localdomain has connected.
+Fri Oct 20 15:10:26 2000 :: Gabe has quit the game. (4 minutes played)
+Fri Oct 20 15:44:39 2000 :: Phelan@node12.unix.Virginia.EDU has connected.
+Fri Oct 20 15:57:01 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 16:30:49 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 16:49:33 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 16:59:27 2000 :: Phelan has quit the game. (74 minutes played)
+Fri Oct 20 18:02:02 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Fri Oct 20 19:03:23 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Fri Oct 20 19:39:51 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 19:43:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Fri Oct 20 19:43:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 19:43:12 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 19:43:19 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 19:45:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 19:49:09 2000 :: Daedelex has quit the game. (5 minutes played)
+Fri Oct 20 20:20:40 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 20:29:05 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Fri Oct 20 20:29:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 20:29:07 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 20:29:24 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 20:29:36 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 20:31:56 2000 :: Dioxide has quit the game. (2 minutes played)
+Fri Oct 20 20:36:42 2000 :: Gabe@63.147.230.241 has connected.
+Fri Oct 20 20:44:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 20:44:14 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 20:44:14 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 20:44:24 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:02:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 21:02:13 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 21:02:15 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:02:32 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 21:03:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 21:03:18 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:04:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 21:04:10 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:04:28 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 21:04:41 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:04:57 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 21:07:02 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:11:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 21:11:14 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Fri Oct 20 21:11:15 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 21:15:58 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 21:30:25 2000 :: Harrek@24-240-82-9.hsacorp.net has connected. (MULTI-CHAR?)
+Fri Oct 20 21:39:23 2000 :: Harrek has quit the game. (8 minutes played)
+Fri Oct 20 22:13:06 2000 :: Phelan@node16.unix.Virginia.EDU has connected.
+Fri Oct 20 22:19:07 2000 :: Daedelex has quit the game. (67 minutes played)
+Fri Oct 20 23:10:29 2000 :: Phelan has autoquit the game. (57 minutes played)
+Fri Oct 20 23:41:58 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 23:42:22 2000 :: Dev has quit the game. (0 minutes played)
+Fri Oct 20 23:48:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 20 23:48:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 20 23:48:33 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 23:50:13 2000 :: Dev has quit the game. (1 minutes played)
+Fri Oct 20 23:50:19 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Fri Oct 20 23:55:35 2000 :: Dev has quit the game. (5 minutes played)
+Fri Oct 20 23:59:16 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:00:23 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:01:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 00:01:35 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:02:57 2000 :: Dev has quit the game. (1 minutes played)
+Sat Oct 21 00:02:59 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:06:35 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 00:10:04 2000 :: Dev has quit the game. (7 minutes played)
+Sat Oct 21 00:10:07 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:20:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 00:20:15 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:20:26 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 00:22:27 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:25:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 00:25:22 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 00:25:30 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:32:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 00:32:23 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 00:32:35 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 00:36:07 2000 :: Dev has quit the game. (3 minutes played)
+Sat Oct 21 00:36:10 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 01:31:26 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sat Oct 21 01:45:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 01:45:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sat Oct 21 01:45:18 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 01:45:58 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 01:59:25 2000 :: Dioxide has quit the game. (14 minutes played)
+Sat Oct 21 02:01:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 02:01:33 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 02:02:06 2000 :: Dev@adsl-151-201-232-33.bellatlantic.net has connected.
+Sat Oct 21 02:13:25 2000 :: Sadahk@206-96-185-157.ipeg.com new player.
+Sat Oct 21 03:03:04 2000 :: Sadahk has autoquit the game. (49 minutes played)
+Sat Oct 21 03:05:33 2000 :: Dev has autoquit the game. (63 minutes played)
+Sat Oct 21 04:41:57 2000 :: Macheath has quit the game. (160 minutes played)
+Sat Oct 21 10:22:26 2000 :: Snarf@63.147.230.247 has connected.
+Sat Oct 21 10:31:38 2000 :: Daedelex@adsl-63-235-101.mia.bellsouth.net has connected.
+Sat Oct 21 10:44:13 2000 :: Rhalyn@adsl-63-234-86.mia.bellsouth.net has connected. (MULTI-CHAR?)
+Sat Oct 21 11:06:02 2000 :: Daedelex has quit the game. (34 minutes played)
+Sat Oct 21 11:15:38 2000 :: Rhalyn has autoquit the game. (31 minutes played)
+Sat Oct 21 11:19:08 2000 :: Snarf has quit the game. (56 minutes played)
+Sat Oct 21 11:41:19 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 13:05:18 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sat Oct 21 13:43:32 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 13:50:24 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sat Oct 21 15:11:22 2000 :: Dioxide has quit the game. (126 minutes played)
+Sat Oct 21 15:46:31 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 15:46:32 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 15:46:36 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 15:47:10 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sat Oct 21 15:58:34 2000 :: Snarf@63.147.230.246 has connected.
+Sat Oct 21 16:04:40 2000 :: Xanthian@63.147.230.245 new player.
+Sat Oct 21 16:05:12 2000 :: Xanthian@63.147.230.245 new player.
+Sat Oct 21 16:05:55 2000 :: Xanthian@63.147.230.245 new player.
+Sat Oct 21 16:10:06 2000 :: Vartal@63.147.230.241 has connected.
+Sat Oct 21 16:13:35 2000 :: Rhalyn@adsl-63-234-86.mia.bellsouth.net has connected. (MULTI-CHAR?)
+Sat Oct 21 16:15:59 2000 :: Harrek@24-240-82-9.hsacorp.net has connected. (MULTI-CHAR?)
+Sat Oct 21 16:25:58 2000 :: Rhalyn has quit the game. (12 minutes played)
+Sat Oct 21 16:28:26 2000 :: Harrek has autoquit the game. (12 minutes played)
+Sat Oct 21 16:35:13 2000 :: Snarf has quit the game. (36 minutes played)
+Sat Oct 21 16:55:00 2000 :: Alrin@206-96-185-150.ipeg.com new player.
+Sat Oct 21 16:58:05 2000 :: Vartal has autoquit the game. (47 minutes played)
+Sat Oct 21 17:00:51 2000 :: Xanthian has autoquit the game. (55 minutes played)
+Sat Oct 21 17:05:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sat Oct 21 17:36:01 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Sat Oct 21 17:41:53 2000 :: Viscrinth@pool-63.53.46.204.irvn.grid.net has connected.
+Sat Oct 21 17:57:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sat Oct 21 17:57:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 17:57:25 2000 :: Viscrinth@pool-63.53.46.204.irvn.grid.net has connected.
+Sat Oct 21 17:57:26 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 17:57:38 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 18:03:11 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Sat Oct 21 18:21:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sat Oct 21 18:21:09 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 18:21:38 2000 :: Viscrinth@pool-63.53.46.204.irvn.grid.net has connected.
+Sat Oct 21 18:50:06 2000 :: Sycho@dhcp92-42.pittsburgh.resnet.pitt.edu new player.
+Sat Oct 21 18:52:38 2000 :: Sycho has autoquit the game. (2 minutes played)
+Sat Oct 21 18:52:59 2000 :: Sycho@dhcp92-42.pittsburgh.resnet.pitt.edu new player.
+Sat Oct 21 18:54:06 2000 :: Sycho@dhcp92-42.pittsburgh.resnet.pitt.edu new player.
+Sat Oct 21 18:54:22 2000 :: Sycho@dhcp92-42.pittsburgh.resnet.pitt.edu new player.
+Sat Oct 21 18:54:34 2000 :: Sycho@dhcp92-42.pittsburgh.resnet.pitt.edu new player.
+Sat Oct 21 18:54:44 2000 :: Sylok@dhcp92-42.pittsburgh.resnet.pitt.edu has connected.
+Sat Oct 21 19:10:39 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sat Oct 21 19:25:57 2000 :: Sylok has autoquit the game. (31 minutes played)
+Sat Oct 21 19:43:21 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Sat Oct 21 19:54:15 2000 :: Thinhallen@cs16260-41.houston.rr.com new player.
+Sat Oct 21 20:03:59 2000 :: Snarf@63.147.230.245 has connected.
+Sat Oct 21 20:31:49 2000 :: Snarf has quit the game. (27 minutes played)
+Sat Oct 21 21:25:17 2000 :: Thinhallen has autoquit the game. (91 minutes played)
+Sat Oct 21 21:52:49 2000 :: Viscrinth has quit the game. (211 minutes played)
+Sat Oct 21 22:05:01 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 22:06:35 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sat Oct 21 22:08:36 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 22:10:27 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 22:11:37 2000 :: Dev@adsl-141-151-142-126.bellatlantic.net has connected.
+Sat Oct 21 22:28:02 2000 :: Phelan@node10.unix.Virginia.EDU has connected.
+Sun Oct 22 00:02:49 2000 :: Shaiton@24-240-82-9.hsacorp.net new player. (MULTI-CHAR?)
+Sun Oct 22 00:06:52 2000 :: Turannos@24-240-82-9.hsacorp.net new player. (MULTI-CHAR?)
+Sun Oct 22 00:08:40 2000 :: Turannos has quit the game. (1 minutes played)
+Sun Oct 22 00:12:47 2000 :: Shaiton has autoquit the game. (10 minutes played)
+Sun Oct 22 00:14:11 2000 :: Gabe@dialin1-23.rush.cnz.com has connected.
+Sun Oct 22 00:37:54 2000 :: Turannos@cable152-201.remote.uwec.edu has connected.
+Sun Oct 22 00:40:47 2000 :: Viscrinth@pool-63.53.66.206.irvn.grid.net has connected.
+Sun Oct 22 00:54:02 2000 :: Phelan has quit the game. (146 minutes played)
+Sun Oct 22 00:56:55 2000 :: Alrin has quit the game. (313 minutes played)
+Sun Oct 22 01:04:48 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Sun Oct 22 01:12:42 2000 :: Gabe@dialin1-23.rush.cnz.com has connected.
+Sun Oct 22 01:18:16 2000 :: Gabe has quit the game. (5 minutes played)
+Sun Oct 22 01:18:26 2000 :: Vartal@dialin1-23.rush.cnz.com has connected.
+Sun Oct 22 01:20:53 2000 :: Vartal@dialin1-23.rush.cnz.com has connected.
+Sun Oct 22 01:24:18 2000 :: Vartal@dialin1-23.rush.cnz.com has connected.
+Sun Oct 22 01:28:40 2000 :: Vartal@dialin1-23.rush.cnz.com has connected.
+Sun Oct 22 01:41:15 2000 :: Turannos has quit the game. (63 minutes played)
+Sun Oct 22 01:43:42 2000 :: Alrin has quit the game. (38 minutes played)
+Sun Oct 22 01:47:34 2000 :: Gabe has quit the game. (93 minutes played)
+Sun Oct 22 03:27:22 2000 :: Macheath has quit the game. (546 minutes played)
+Sun Oct 22 03:28:14 2000 :: Dev has autoquit the game. (547 minutes played)
+Sun Oct 22 04:05:48 2000 :: Daedelex has quit the game. (359 minutes played)
+Sun Oct 22 04:05:51 2000 :: Viscrinth has quit the game. (205 minutes played)
+Sun Oct 22 10:26:34 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 10:57:09 2000 :: Gabe@dialin1-5.rush.cnz.com has connected.
+Sun Oct 22 11:21:33 2000 :: Gabe@dialin1-5.rush.cnz.com has connected.
+Sun Oct 22 11:23:12 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Sun Oct 22 11:36:21 2000 :: Alrin@206-96-185-156.ipeg.com has connected.
+Sun Oct 22 11:56:49 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 12:00:20 2000 :: Alrin@206-96-185-156.ipeg.com has connected.
+Sun Oct 22 12:04:48 2000 :: Phelan@node8.unix.Virginia.EDU has connected.
+Sun Oct 22 12:52:25 2000 :: Phelan has quit the game. (47 minutes played)
+Sun Oct 22 13:10:50 2000 :: Alrin has quit the game. (70 minutes played)
+Sun Oct 22 13:13:58 2000 :: Turannos@cable152-201.remote.uwec.edu has connected.
+Sun Oct 22 13:24:03 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 13:59:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 14:20:40 2000 :: Alrin@206-96-185-156.ipeg.com has connected.
+Sun Oct 22 14:28:59 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Sun Oct 22 15:00:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 15:00:16 2000 :: Alrin@206-96-185-156.ipeg.com has connected.
+Sun Oct 22 15:00:19 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 15:00:46 2000 :: Turannos@cable152-201.remote.uwec.edu has connected.
+Sun Oct 22 15:09:51 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 15:10:00 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 15:10:33 2000 :: Turannos@cable152-201.remote.uwec.edu has connected.
+Sun Oct 22 15:13:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 15:13:10 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 15:15:35 2000 :: Alrin@206-96-185-156.ipeg.com has connected.
+Sun Oct 22 15:38:30 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 15:42:33 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 15:43:22 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Sun Oct 22 15:46:34 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 15:47:46 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 15:49:46 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 15:50:34 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 15:54:13 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 15:55:41 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:05:21 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:06:50 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:08:25 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:10:13 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:10:38 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 16:11:37 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:13:51 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:17:42 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:18:36 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:19:46 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:21:13 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:22:10 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:23:36 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:25:40 2000 :: Gabe@63.147.230.241 has connected.
+Sun Oct 22 16:27:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 16:35:57 2000 :: Graelik@z3-52.grove.net has connected.
+Sun Oct 22 16:48:35 2000 :: Phelan has quit the game. (65 minutes played)
+Sun Oct 22 16:52:36 2000 :: Snarf@63.147.230.247 has connected.
+Sun Oct 22 16:54:17 2000 :: Alrin has autoquit the game. (98 minutes played)
+Sun Oct 22 17:00:01 2000 :: Snarf has quit the game. (7 minutes played)
+Sun Oct 22 17:05:41 2000 :: Gabe has autoquit the game. (40 minutes played)
+Sun Oct 22 17:08:03 2000 :: Joshu@213.237.43.172 new player.
+Sun Oct 22 17:15:42 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 17:23:02 2000 :: Graelik has autoquit the game. (47 minutes played)
+Sun Oct 22 17:35:53 2000 :: Joshu has autoquit the game. (28 minutes played)
+Sun Oct 22 17:37:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 17:39:11 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 17:42:18 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 17:43:28 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 17:46:48 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:02:35 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:09:53 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:14:12 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:14:55 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:17:38 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:19:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 18:23:06 2000 :: Alrin@206-96-185-172.ipeg.com has connected.
+Sun Oct 22 18:36:31 2000 :: Alrin has quit the game. (13 minutes played)
+Sun Oct 22 19:05:17 2000 :: Alrin@206-96-185-172.ipeg.com has connected.
+Sun Oct 22 19:39:19 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 19:44:02 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 19:47:46 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 19:52:14 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 19:53:30 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:19:33 2000 :: Thinhallen@cs16260-41.houston.rr.com has connected.
+Sun Oct 22 20:21:48 2000 :: Phelan@node3.unix.Virginia.EDU has connected.
+Sun Oct 22 20:22:29 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:23:26 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:25:10 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:26:44 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Sun Oct 22 20:33:45 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:36:50 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:39:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:41:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 20:41:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 20:41:09 2000 :: Alrin@206-96-185-172.ipeg.com has connected.
+Sun Oct 22 20:41:10 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 20:41:18 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 20:41:27 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 20:41:36 2000 :: Thinhallen@cs16260-41.houston.rr.com has connected.
+Sun Oct 22 20:43:47 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Sun Oct 22 21:05:00 2000 :: Thinhallen has autoquit the game. (23 minutes played)
+Sun Oct 22 21:06:11 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 21:06:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 21:06:15 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 21:06:15 2000 :: Alrin@206-96-185-172.ipeg.com has connected.
+Sun Oct 22 21:06:16 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 21:06:18 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Sun Oct 22 21:06:46 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 21:18:47 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Sun Oct 22 21:23:58 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Sun Oct 22 21:23:59 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 21:24:00 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 21:24:02 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 21:24:03 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 21:24:07 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 21:24:12 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 21:25:07 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Sun Oct 22 21:25:09 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 21:25:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 21:25:09 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 21:25:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 21:25:18 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 21:25:30 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 21:31:09 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 21:31:11 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 21:31:12 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 21:31:14 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Sun Oct 22 21:31:17 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 21:31:25 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 21:31:33 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 21:52:12 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 21:52:14 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 21:52:16 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 21:52:29 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 21:52:33 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 21:52:41 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Sun Oct 22 21:52:47 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 21:54:40 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 21:54:41 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 21:54:41 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 21:54:42 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 21:54:46 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 21:55:24 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 22:03:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 22:03:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 22:03:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 22:03:15 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Sun Oct 22 22:03:21 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:06:00 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 22:14:23 2000 :: Dioxide has quit the game. (11 minutes played)
+Sun Oct 22 22:16:35 2000 :: Daedelex has quit the game. (13 minutes played)
+Sun Oct 22 22:23:09 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 22:23:16 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 22:23:18 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 22:23:18 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:24:10 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 22:24:11 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 22:24:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 22:24:24 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:24:42 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:26:09 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 22:26:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 22:26:13 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:26:19 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 22:27:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 22:27:12 2000 :: Alrin@206-96-185-159.ipeg.com has connected.
+Sun Oct 22 22:27:20 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 22:27:28 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:28:07 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:30:55 2000 :: Alrin has quit the game. (3 minutes played)
+Sun Oct 22 22:32:07 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:34:17 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:41:57 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:50:31 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:51:29 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 22:55:20 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:00:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:00:20 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 23:00:33 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:05:50 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:09:51 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:12:17 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:13:26 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:13:53 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:22:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:22:35 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 23:22:35 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:23:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:23:19 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:23:31 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:23:53 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:23:54 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:24:33 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 23:30:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:30:20 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 23:32:31 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:36:21 2000 :: Gabe@dialin1-32.rush.cnz.com has connected.
+Sun Oct 22 23:46:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:46:12 2000 :: Gabe@dialin1-32.rush.cnz.com has connected.
+Sun Oct 22 23:46:16 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 23:46:49 2000 :: Gabe@dialin1-32.rush.cnz.com has connected.
+Sun Oct 22 23:46:52 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:48:33 2000 :: Gabe@dialin1-32.rush.cnz.com has connected.
+Sun Oct 22 23:48:37 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:48:42 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:48:44 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Sun Oct 22 23:49:46 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 23:52:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Sun Oct 22 23:52:13 2000 :: Gabe@dialin1-32.rush.cnz.com has connected.
+Sun Oct 22 23:52:24 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Sun Oct 22 23:52:32 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Sun Oct 22 23:52:51 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:06:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:06:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:06:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:07:16 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 00:13:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:13:13 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 00:13:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:13:28 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:13:41 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 00:13:50 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:13:53 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:24:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:24:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:24:09 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 00:24:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:37:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:37:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:37:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:38:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:38:13 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 00:38:20 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:38:27 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:44:04 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:44:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:44:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:44:11 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 00:46:55 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 00:46:56 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 00:47:04 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 00:47:30 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:05:48 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 01:05:55 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 01:07:19 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 01:07:23 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 01:07:28 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:08:26 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 01:11:13 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 01:11:19 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 01:11:34 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 01:12:35 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:13:24 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 01:13:25 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 01:13:30 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:13:36 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 01:22:57 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 01:23:03 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 01:23:03 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 01:23:09 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:28:29 2000 :: Dioxide has quit the game. (5 minutes played)
+Mon Oct 23 01:29:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 01:29:14 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:29:22 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 01:29:55 2000 :: Dioxide@localhost.localdomain has connected.
+Mon Oct 23 01:30:15 2000 :: Dioxide has quit the game. (0 minutes played)
+Mon Oct 23 01:38:59 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 01:43:34 2000 :: Dioxide has quit the game. (4 minutes played)
+Mon Oct 23 01:47:06 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:52:39 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:57:11 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 01:59:41 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:00:58 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:03:10 2000 :: Macheath has quit the game. (34 minutes played)
+Mon Oct 23 02:08:08 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:08:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 02:14:11 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:14:16 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 02:14:33 2000 :: Challen has quit the game. (0 minutes played)
+Mon Oct 23 02:14:36 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 02:17:16 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:27:11 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:27:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 02:46:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 02:46:25 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:47:18 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:47:21 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 02:47:56 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:49:32 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:51:46 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:52:34 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 02:55:34 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 03:24:00 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 03:25:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 03:25:17 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 03:25:41 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 03:30:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 03:30:09 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 03:30:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 03:46:12 2000 :: Dioxide has quit the game. (16 minutes played)
+Mon Oct 23 03:46:14 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 03:47:16 2000 :: Dioxide has quit the game. (1 minutes played)
+Mon Oct 23 03:47:28 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:11:11 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:11:14 2000 :: ChalleN@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:12:42 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:12:44 2000 :: Challen has quit the game. (1 minutes played)
+Mon Oct 23 04:12:53 2000 :: ChAlLeN@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:15:16 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:16:09 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:16:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:16:50 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:16:58 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:17:10 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:20:01 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:20:01 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:20:27 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:23:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:23:17 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:29:46 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:34:28 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:34:35 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:34:46 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:37:12 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:37:12 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:38:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:38:14 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:38:25 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:40:10 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:40:20 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:40:34 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:49:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:49:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:50:21 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:51:14 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:51:18 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:51:34 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:53:09 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 04:53:44 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:54:32 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 04:55:05 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 04:56:48 2000 :: Dev@adsl-141-151-139-201.bellatlantic.net has connected.
+Mon Oct 23 05:03:02 2000 :: Challen has quit the game. (7 minutes played)
+Mon Oct 23 05:14:40 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 05:36:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 05:45:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 05:54:16 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 06:07:29 2000 :: Daedelex has quit the game. (13 minutes played)
+Mon Oct 23 06:34:07 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 08:02:54 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 08:07:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 08:08:00 2000 :: Challen has quit the game. (0 minutes played)
+Mon Oct 23 08:08:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 08:10:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 08:14:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 08:38:06 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 09:19:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 09:19:36 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 09:31:50 2000 :: Phelan@node12.unix.Virginia.EDU has connected.
+Mon Oct 23 10:21:40 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 10:55:40 2000 :: Quinthen has quit the game. (96 minutes played)
+Mon Oct 23 11:00:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 11:00:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 11:04:10 2000 :: Phelan@node12.unix.Virginia.EDU has connected.
+Mon Oct 23 11:08:26 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 11:40:13 2000 :: Phelan has quit the game. (36 minutes played)
+Mon Oct 23 12:14:04 2000 :: Phelan@node3.unix.Virginia.EDU has connected.
+Mon Oct 23 12:17:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 12:17:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 12:17:16 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 12:43:39 2000 :: Quinthen has quit the game. (26 minutes played)
+Mon Oct 23 13:05:59 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 13:20:35 2000 :: Macheath has autoquit the game. (63 minutes played)
+Mon Oct 23 13:20:48 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 13:25:25 2000 :: Quinthen has quit the game. (19 minutes played)
+Mon Oct 23 13:32:31 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 13:38:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 13:38:17 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 13:38:30 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 13:42:58 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 13:43:33 2000 :: Quinthen has quit the game. (0 minutes played)
+Mon Oct 23 13:43:51 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 13:57:17 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 13:57:18 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 13:57:23 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 13:59:14 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 13:59:31 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 14:09:52 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 14:09:52 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:09:54 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 14:09:59 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 14:13:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 14:13:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 14:13:12 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:13:46 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 14:24:21 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:24:32 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 14:25:55 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 14:25:59 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:28:09 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 14:29:20 2000 :: Rhalyn@adsl-63-234-86.mia.bellsouth.net has connected. (MULTI-CHAR?)
+Mon Oct 23 14:30:35 2000 :: Rhalyn has quit the game. (1 minutes played)
+Mon Oct 23 14:30:54 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 14:30:58 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:38:13 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 14:38:14 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 14:38:22 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:38:29 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 14:40:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 14:40:12 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:40:17 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 14:40:18 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 14:42:05 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 14:45:31 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:53:14 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 14:57:22 2000 :: Phelan@node3.unix.Virginia.EDU has connected.
+Mon Oct 23 14:57:42 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 15:00:49 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 15:03:40 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 15:05:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 15:05:38 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 15:08:08 2000 :: Challen has quit the game. (2 minutes played)
+Mon Oct 23 15:08:14 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 15:09:01 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 15:10:29 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 15:17:22 2000 :: Phelan@node3.unix.Virginia.EDU has connected.
+Mon Oct 23 15:25:34 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 15:29:51 2000 :: Phelan has quit the game. (12 minutes played)
+Mon Oct 23 15:38:42 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 15:38:47 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 15:38:48 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 15:38:54 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 15:48:11 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 15:48:11 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 15:48:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 15:48:14 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 15:51:17 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 15:51:19 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 15:51:23 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 15:51:26 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:03:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 16:03:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 16:03:11 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:03:25 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 16:03:26 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 16:03:35 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:03:42 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 16:08:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 16:08:11 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 16:08:21 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 16:08:43 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:09:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 16:09:11 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 16:09:35 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:09:44 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 16:17:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 16:17:20 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 16:18:24 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:20:07 2000 :: Phelan@node15.unix.Virginia.EDU has connected.
+Mon Oct 23 16:20:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 16:20:11 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 16:21:34 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 16:32:49 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 17:07:05 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 17:22:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 17:22:08 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 17:22:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 17:22:37 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 17:25:38 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 17:30:48 2000 :: Phelan@node15.unix.Virginia.EDU has connected.
+Mon Oct 23 17:32:09 2000 :: Phelan has quit the game. (1 minutes played)
+Mon Oct 23 17:41:56 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 17:50:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 17:50:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 17:50:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 17:50:39 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 17:51:08 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 17:53:51 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 17:54:42 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 17:54:43 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 17:54:44 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 17:54:47 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 17:54:54 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 17:58:05 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 18:03:27 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 18:03:28 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 18:03:30 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 18:03:30 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 18:03:32 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 18:03:42 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 18:06:17 2000 :: Dioxide has quit the game. (2 minutes played)
+Mon Oct 23 18:06:19 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 18:10:40 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 18:12:27 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 18:12:30 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 18:12:31 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 18:13:05 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 18:13:06 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 18:13:07 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 18:13:15 2000 :: Dioxide has quit the game. (0 minutes played)
+Mon Oct 23 18:13:20 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 18:13:20 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 18:13:46 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 18:13:46 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 18:27:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 18:27:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 18:27:10 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 18:27:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 18:31:07 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 18:31:28 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 18:33:56 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 18:35:39 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 18:40:23 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 19:17:01 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 19:17:02 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 19:17:03 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 19:17:08 2000 :: Daedelex@adsl-63-234-86.mia.bellsouth.net has connected.
+Mon Oct 23 19:17:22 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 19:17:43 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net new player. (MULTI-CHAR?)
+Mon Oct 23 19:19:34 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 19:37:31 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 19:40:18 2000 :: Testguy has autoquit the game. (22 minutes played)
+Mon Oct 23 19:56:45 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 20:07:17 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:07:18 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 20:07:18 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 20:07:20 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:07:22 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 20:07:29 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 20:08:11 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 20:08:51 2000 :: Daedelex@adsl-63-246-178.mia.bellsouth.net has connected.
+Mon Oct 23 20:09:39 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 20:09:40 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 20:09:45 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:09:45 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:10:29 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 20:10:35 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:10:36 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:10:36 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 20:10:47 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 20:10:51 2000 :: Daedelex@adsl-63-246-178.mia.bellsouth.net has connected.
+Mon Oct 23 20:11:46 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 20:11:47 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:11:49 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:12:01 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 20:14:05 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 20:14:40 2000 :: Dioxide@localhost.localdomain has connected.
+Mon Oct 23 20:16:48 2000 :: Dioxide@localhost.localdomain has connected.
+Mon Oct 23 20:16:55 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 20:22:11 2000 :: Dioxide@localhost.localdomain has connected.
+Mon Oct 23 20:27:13 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 20:33:55 2000 :: Dioxide@localhost.localdomain has connected.
+Mon Oct 23 20:47:14 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 20:47:17 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:47:17 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:47:24 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 20:49:55 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 20:50:24 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 20:50:25 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 20:50:27 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:50:28 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:51:03 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 20:51:29 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 20:54:32 2000 :: Dioxide has quit the game. (4 minutes played)
+Mon Oct 23 20:55:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 20:55:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 20:55:21 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 20:55:56 2000 :: Alrin@206-96-185-68.ipeg.com has connected.
+Mon Oct 23 21:00:42 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Mon Oct 23 21:03:34 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 21:03:36 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Mon Oct 23 21:10:17 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Mon Oct 23 21:47:38 2000 :: Phelan has autoquit the game. (46 minutes played)
+Mon Oct 23 21:52:40 2000 :: Alrin has autoquit the game. (56 minutes played)
+Mon Oct 23 22:03:46 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 22:05:09 2000 :: Quinthen has quit the game. (61 minutes played)
+Mon Oct 23 22:07:07 2000 :: Phelan@node2.unix.Virginia.EDU has connected.
+Mon Oct 23 22:07:07 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:11:14 2000 :: Testguy has autoquit the game. (4 minutes played)
+Mon Oct 23 22:11:16 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:24:58 2000 :: Phelan has autoquit the game. (17 minutes played)
+Mon Oct 23 22:34:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 22:34:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 22:34:38 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 22:34:39 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Mon Oct 23 22:36:08 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 22:36:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 22:36:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 22:36:18 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:38:08 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:38:08 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:38:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 22:38:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 22:40:50 2000 :: Viscrinth@pool-63.53.49.162.irvn.grid.net has connected.
+Mon Oct 23 22:42:08 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:42:08 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:42:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 22:42:19 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 22:46:13 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 22:48:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Mon Oct 23 22:48:14 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Mon Oct 23 22:48:16 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Mon Oct 23 22:48:22 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Mon Oct 23 22:48:32 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Mon Oct 23 22:54:44 2000 :: Testguy has quit the game. (6 minutes played)
+Mon Oct 23 23:49:17 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Tue Oct 24 00:26:41 2000 :: Dioxide has quit the game. (98 minutes played)
+Tue Oct 24 00:51:21 2000 :: Berand has quit the game. (62 minutes played)
+Tue Oct 24 02:10:47 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Tue Oct 24 02:12:51 2000 :: Dev@adsl-141-151-144-9.bellatlantic.net has connected.
+Tue Oct 24 02:30:21 2000 :: Macheath has quit the game. (222 minutes played)
+Tue Oct 24 04:52:19 2000 :: Dev has autoquit the game. (363 minutes played)
+Tue Oct 24 06:16:26 2000 :: Challen has quit the game. (448 minutes played)
+Tue Oct 24 07:38:08 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 07:38:21 2000 :: Challen has quit the game. (0 minutes played)
+Tue Oct 24 07:38:25 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 07:38:51 2000 :: Challen has quit the game. (0 minutes played)
+Tue Oct 24 07:56:14 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 08:32:43 2000 :: Phelan@node8.unix.Virginia.EDU has connected.
+Tue Oct 24 10:02:53 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 24 11:03:04 2000 :: Quinthen has autoquit the game. (60 minutes played)
+Tue Oct 24 11:14:26 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 24 13:29:52 2000 :: Quinthen has quit the game. (135 minutes played)
+Tue Oct 24 13:35:38 2000 :: Phelan has autoquit the game. (302 minutes played)
+Tue Oct 24 13:35:38 2000 :: Challen has autoquit the game. (339 minutes played)
+Tue Oct 24 13:35:53 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 13:43:31 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 14:08:38 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 24 14:26:47 2000 :: Macheath@lab-p219-14.uwec.edu has connected.
+Tue Oct 24 14:42:44 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 14:45:30 2000 :: Thinhallen@cs16260-41.houston.rr.com has connected.
+Tue Oct 24 15:05:08 2000 :: Quinthen has quit the game. (56 minutes played)
+Tue Oct 24 15:15:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 15:15:14 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 15:15:14 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 15:19:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 15:19:19 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 15:29:59 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 16:01:29 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 16:01:35 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 16:19:51 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 16:30:22 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 16:33:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 16:33:11 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 16:33:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 16:33:41 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 16:41:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 16:41:15 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 16:41:50 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 16:42:26 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 16:57:29 2000 :: Phelan@node8.unix.Virginia.EDU has connected.
+Tue Oct 24 17:00:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 17:00:17 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 17:00:24 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 17:00:26 2000 :: Phelan@node8.unix.Virginia.EDU has connected.
+Tue Oct 24 17:00:53 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 17:06:18 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 17:33:05 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Tue Oct 24 17:40:46 2000 :: Dioxide has quit the game. (7 minutes played)
+Tue Oct 24 17:43:08 2000 :: Phelan@node8.unix.Virginia.EDU has connected.
+Tue Oct 24 17:43:09 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 17:43:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 17:43:15 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 17:47:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 17:47:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 17:47:15 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 17:51:54 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 17:54:57 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Tue Oct 24 18:06:57 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 18:17:02 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 18:19:41 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 18:22:20 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 18:28:09 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 18:28:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 18:28:24 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 18:35:39 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 24 18:42:54 2000 :: Phelan@node1.unix.Virginia.EDU has connected.
+Tue Oct 24 19:35:59 2000 :: Quinthen has quit the game. (60 minutes played)
+Tue Oct 24 20:26:02 2000 :: Viscrinth@pool-63.53.66.240.irvn.grid.net has connected.
+Tue Oct 24 20:43:19 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 20:56:07 2000 :: Viscrinth@pool-63.53.66.240.irvn.grid.net has connected.
+Tue Oct 24 20:56:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Tue Oct 24 20:56:13 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Tue Oct 24 20:56:54 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Tue Oct 24 20:58:04 2000 :: Phelan@node8.unix.Virginia.EDU has connected.
+Tue Oct 24 21:20:38 2000 :: Alrin@206-96-185-152.ipeg.com has connected.
+Tue Oct 24 21:32:19 2000 :: Graelik@z2-2.grove.net has connected.
+Tue Oct 24 21:45:18 2000 :: Viscrinth has quit the game. (49 minutes played)
+Tue Oct 24 21:53:30 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Tue Oct 24 21:58:21 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Tue Oct 24 22:41:02 2000 :: Graelik has autoquit the game. (68 minutes played)
+Tue Oct 24 22:43:26 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Tue Oct 24 23:07:55 2000 :: Alrin has autoquit the game. (107 minutes played)
+Tue Oct 24 23:21:55 2000 :: Alrin@206-96-185-152.ipeg.com has connected.
+Wed Oct 25 00:04:52 2000 :: Alrin has quit the game. (42 minutes played)
+Wed Oct 25 00:23:42 2000 :: Viscrinth@pool-63.53.50.12.irvn.grid.net has connected.
+Wed Oct 25 00:57:25 2000 :: Dioxide has quit the game. (179 minutes played)
+Wed Oct 25 01:03:27 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 25 01:07:47 2000 :: Phelan has quit the game. (249 minutes played)
+Wed Oct 25 01:31:44 2000 :: Viscrinth has quit the game. (68 minutes played)
+Wed Oct 25 01:32:48 2000 :: Quinthen has quit the game. (219 minutes played)
+Wed Oct 25 01:32:57 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Wed Oct 25 01:52:18 2000 :: Dioxide has quit the game. (48 minutes played)
+Wed Oct 25 01:52:58 2000 :: Macheath has autoquit the game. (189 minutes played)
+Wed Oct 25 02:27:40 2000 :: Berand has quit the game. (54 minutes played)
+Wed Oct 25 03:07:53 2000 :: Khiravn@roam181-38.student.harvard.edu new player. (MULTI-CHAR?)
+Wed Oct 25 03:08:34 2000 :: Khiravn has quit the game. (0 minutes played)
+Wed Oct 25 03:29:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 03:29:18 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 03:32:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 03:33:05 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 03:53:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 03:54:35 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 03:58:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 03:58:50 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 04:15:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 04:15:36 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 04:18:22 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 04:20:15 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 04:22:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 04:22:56 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 04:40:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 04:40:24 2000 :: Dev@adsl-141-151-140-250.bellatlantic.net has connected.
+Wed Oct 25 05:08:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 05:28:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 07:43:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 08:03:28 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Wed Oct 25 08:31:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 08:31:31 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Wed Oct 25 08:38:08 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Wed Oct 25 08:38:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 08:49:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 08:51:07 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Wed Oct 25 08:51:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 08:55:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 09:02:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 09:04:41 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 09:05:18 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Wed Oct 25 09:10:16 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 09:10:32 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Wed Oct 25 09:49:02 2000 :: Phelan has quit the game. (38 minutes played)
+Wed Oct 25 10:12:05 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Wed Oct 25 10:44:11 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Wed Oct 25 10:44:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Wed Oct 25 11:01:13 2000 :: Phelan@node10.unix.Virginia.EDU has connected.
+Wed Oct 25 11:15:32 2000 :: Phelan has quit the game. (14 minutes played)
+Wed Oct 25 11:15:37 2000 :: Phelan@node10.unix.Virginia.EDU has connected.
+Wed Oct 25 12:00:26 2000 :: Phelan has quit the game. (44 minutes played)
+Wed Oct 25 13:28:07 2000 :: Dev@adsl-141-151-136-2.bellatlantic.net has connected.
+Wed Oct 25 14:03:49 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Wed Oct 25 14:08:30 2000 :: Alrin@206-96-185-142.ipeg.com has connected.
+Wed Oct 25 15:02:29 2000 :: Quinthen has quit the game. (58 minutes played)
+Wed Oct 25 15:42:58 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Wed Oct 25 17:04:45 2000 :: Dev has quit the game. (216 minutes played)
+Wed Oct 25 17:04:49 2000 :: Dev@adsl-141-151-136-2.bellatlantic.net has connected.
+Wed Oct 25 17:13:33 2000 :: Phelan@node10.unix.Virginia.EDU has connected.
+Wed Oct 25 17:26:55 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 25 17:51:12 2000 :: Viscrinth@pool-63.53.46.101.irvn.grid.net has connected.
+Wed Oct 25 18:06:27 2000 :: Phelan has quit the game. (52 minutes played)
+Wed Oct 25 18:41:07 2000 :: Phelan@node10.unix.Virginia.EDU has connected.
+Wed Oct 25 19:05:19 2000 :: Phelan has quit the game. (24 minutes played)
+Wed Oct 25 19:28:23 2000 :: Dioxide has quit the game. (121 minutes played)
+Wed Oct 25 20:32:15 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 25 20:51:20 2000 :: Dioxide has quit the game. (19 minutes played)
+Wed Oct 25 21:01:40 2000 :: Phelan@node15.unix.Virginia.EDU has connected.
+Wed Oct 25 21:42:44 2000 :: Daedelex has autoquit the game. (359 minutes played)
+Wed Oct 25 22:21:49 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 25 23:25:14 2000 :: Phelan has autoquit the game. (143 minutes played)
+Wed Oct 25 23:28:44 2000 :: Alrin has autoquit the game. (560 minutes played)
+Wed Oct 25 23:30:55 2000 :: Nesam@nic-164-c235-14.new.rr.com new player.
+Wed Oct 25 23:31:26 2000 :: Kitratik@d13.as7.oshk0.wi.voyager.net new player.
+Wed Oct 25 23:43:37 2000 :: Dioxide has quit the game. (81 minutes played)
+Wed Oct 25 23:44:59 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Wed Oct 25 23:47:32 2000 :: Dioxide has quit the game. (2 minutes played)
+Wed Oct 25 23:48:08 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 00:02:13 2000 :: Viscrinth has quit the game. (371 minutes played)
+Thu Oct 26 00:12:34 2000 :: Dioxide has quit the game. (24 minutes played)
+Thu Oct 26 00:33:42 2000 :: Nesam has autoquit the game. (63 minutes played)
+Thu Oct 26 00:52:16 2000 :: Kitratik has autoquit the game. (81 minutes played)
+Thu Oct 26 01:07:40 2000 :: Macheath has quit the game. (863 minutes played)
+Thu Oct 26 01:14:34 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Thu Oct 26 02:27:40 2000 :: Khiravn@roam181-38.student.harvard.edu has connected. (MULTI-CHAR?)
+Thu Oct 26 02:29:21 2000 :: Testachar@roam181-38.student.harvard.edu new player. (MULTI-CHAR?)
+Thu Oct 26 02:30:26 2000 :: Testachar has quit the game. (1 minutes played)
+Thu Oct 26 02:30:35 2000 :: Khiravn has quit the game. (2 minutes played)
+Thu Oct 26 03:31:26 2000 :: Dev has autoquit the game. (626 minutes played)
+Thu Oct 26 04:18:29 2000 :: Berand has autoquit the game. (183 minutes played)
+Thu Oct 26 13:45:45 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 13:45:56 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 13:47:15 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 13:49:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 13:49:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 13:49:39 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 13:50:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 13:50:12 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 13:51:19 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 13:52:11 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 13:52:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 13:52:48 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 13:54:10 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 15:02:57 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 16:02:44 2000 :: Kitratik@143.235.18.207 has connected.
+Thu Oct 26 16:05:04 2000 :: Nesam@143.235.18.41 has connected.
+Thu Oct 26 16:14:00 2000 :: Phelan@node15.unix.Virginia.EDU has connected.
+Thu Oct 26 16:26:10 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 16:26:12 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 16:26:32 2000 :: Nesam@143.235.18.41 has connected.
+Thu Oct 26 16:26:39 2000 :: Kitratik@143.235.18.207 has connected.
+Thu Oct 26 16:43:38 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 17:15:30 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 17:44:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 17:44:10 2000 :: Nesam@143.235.18.41 has connected.
+Thu Oct 26 17:44:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 17:44:13 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 17:44:37 2000 :: Kitratik@143.235.18.207 has connected.
+Thu Oct 26 17:45:21 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 17:46:57 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 17:46:58 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 17:47:00 2000 :: Nesam@143.235.18.41 has connected.
+Thu Oct 26 17:47:04 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 17:47:09 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 17:49:49 2000 :: Kitratik@143.235.18.207 has connected.
+Thu Oct 26 17:53:09 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 17:53:11 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 17:53:18 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 17:54:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 17:54:10 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 17:54:13 2000 :: Kitratik@143.235.18.207 has connected.
+Thu Oct 26 17:54:19 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 17:54:22 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 17:54:39 2000 :: Nesam@143.235.18.41 has connected.
+Thu Oct 26 18:11:53 2000 :: Daedelex has quit the game. (17 minutes played)
+Thu Oct 26 18:14:47 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Thu Oct 26 18:18:30 2000 :: Nesam has autoquit the game. (23 minutes played)
+Thu Oct 26 18:18:30 2000 :: Kitratik has autoquit the game. (24 minutes played)
+Thu Oct 26 18:21:04 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 18:32:26 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Thu Oct 26 18:54:52 2000 :: Dioxide has quit the game. (33 minutes played)
+Thu Oct 26 19:17:20 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:23:19 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:42:27 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:42:52 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:44:24 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:44:39 2000 :: Dev has quit the game. (0 minutes played)
+Thu Oct 26 19:45:16 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:51:26 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 19:54:18 2000 :: Thinhallen@cs16260-41.houston.rr.com has connected.
+Thu Oct 26 20:02:44 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Thu Oct 26 20:02:44 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 20:02:46 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Thu Oct 26 20:02:48 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 20:02:50 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 20:03:35 2000 :: Thinhallen@cs16260-41.houston.rr.com has connected.
+Thu Oct 26 20:18:13 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 20:27:03 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 20:37:52 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 20:45:28 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 20:47:26 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 20:53:48 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 20:54:31 2000 :: Testguy@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected. (MULTI-CHAR?)
+Thu Oct 26 20:55:14 2000 :: Dioxide has quit the game. (37 minutes played)
+Thu Oct 26 20:58:27 2000 :: Thinhallen has quit the game. (55 minutes played)
+Thu Oct 26 21:13:50 2000 :: Alrin has autoquit the game. (71 minutes played)
+Thu Oct 26 21:43:25 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 21:44:38 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 21:50:15 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Thu Oct 26 21:52:39 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 21:57:11 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 21:58:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 21:58:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 21:58:11 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Thu Oct 26 21:58:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 21:58:14 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Thu Oct 26 21:58:28 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Thu Oct 26 21:58:40 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 22:13:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 22:13:07 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 22:13:09 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 22:13:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 22:13:12 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Thu Oct 26 22:13:24 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Thu Oct 26 22:16:11 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Thu Oct 26 22:16:12 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Thu Oct 26 22:16:13 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Thu Oct 26 22:16:13 2000 :: Alrin@206-96-185-150.ipeg.com has connected.
+Thu Oct 26 22:16:14 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Thu Oct 26 22:16:21 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 22:16:30 2000 :: Dioxide has quit the game. (0 minutes played)
+Thu Oct 26 22:33:59 2000 :: Alrin has quit the game. (17 minutes played)
+Thu Oct 26 22:57:33 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:05:36 2000 :: Phelan has quit the game. (49 minutes played)
+Thu Oct 26 23:43:07 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:43:44 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:45:27 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:49:48 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:51:24 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:54:08 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Thu Oct 26 23:59:37 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:01:36 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:03:17 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Fri Oct 27 00:19:06 2000 :: Dioxide@adsl-63-198-113-166.dsl.snfc21.pacbell.net has connected.
+Fri Oct 27 00:19:07 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 27 00:19:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 00:19:20 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:23:22 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 00:31:26 2000 :: Macheath has quit the game. (12 minutes played)
+Fri Oct 27 00:35:58 2000 :: Dioxide has quit the game. (16 minutes played)
+Fri Oct 27 00:40:22 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:40:28 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 00:42:11 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 00:42:12 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:45:57 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 00:46:00 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:47:08 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:47:17 2000 :: Dev has quit the game. (0 minutes played)
+Fri Oct 27 00:47:21 2000 :: Dev@adsl-141-151-143-86.bellatlantic.net has connected.
+Fri Oct 27 00:47:31 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 01:32:38 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Fri Oct 27 03:33:05 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 03:55:06 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 07:47:16 2000 :: Phelan@node15.unix.Virginia.EDU has connected.
+Fri Oct 27 09:07:59 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Fri Oct 27 10:13:03 2000 :: Phelan has quit the game. (145 minutes played)
+Fri Oct 27 10:29:14 2000 :: Quinthen has quit the game. (81 minutes played)
+Fri Oct 27 10:43:55 2000 :: Quinthen@client-141-150-197-194.bellatlantic.net has connected.
+Fri Oct 27 11:08:21 2000 :: Quinthen has quit the game. (24 minutes played)
+Fri Oct 27 11:19:22 2000 :: Phelan@node14.unix.Virginia.EDU has connected.
+Fri Oct 27 12:50:20 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 13:33:04 2000 :: Viscrinth@pool-63.53.46.184.irvn.grid.net has connected.
+Fri Oct 27 14:14:32 2000 :: Nesam@nic-164-c235-14.new.rr.com has connected.
+Fri Oct 27 14:27:38 2000 :: Phelan has quit the game. (188 minutes played)
+Fri Oct 27 14:48:20 2000 :: Berand@c949997-a.elnsng1.mi.home.com has connected.
+Fri Oct 27 15:02:14 2000 :: Daedelex@adsl-63-234-251.mia.bellsouth.net has connected.
+Fri Oct 27 15:27:02 2000 :: Challen has autoquit the game. (691 minutes played)
+Fri Oct 27 15:28:46 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 15:32:28 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 27 16:09:17 2000 :: Berand has autoquit the game. (80 minutes played)
+Fri Oct 27 16:13:00 2000 :: Nesam has autoquit the game. (118 minutes played)
+Fri Oct 27 16:14:41 2000 :: Nesam@d32.as7.oshk0.wi.voyager.net has connected.
+Fri Oct 27 16:43:10 2000 :: Nesam has autoquit the game. (28 minutes played)
+Fri Oct 27 16:46:09 2000 :: Nesam@d32.as7.oshk0.wi.voyager.net has connected.
+Fri Oct 27 16:56:08 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 16:57:54 2000 :: Idielots@roam181-38.student.harvard.edu new player.
+Fri Oct 27 17:01:39 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 17:02:13 2000 :: Idielots@roam181-38.student.harvard.edu new player.
+Fri Oct 27 17:06:20 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Fri Oct 27 17:08:05 2000 :: Challen@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 17:08:08 2000 :: Macheath@24-240-82-9.hsacorp.net has connected.
+Fri Oct 27 17:08:08 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 17:08:20 2000 :: Phelan@node6.unix.Virginia.EDU has connected.
+Fri Oct 27 17:09:19 2000 :: Nesam@d32.as7.oshk0.wi.voyager.net has connected.
+Fri Oct 27 17:10:07 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 17:11:23 2000 :: Newg@adsl-141-151-142-162.bellatlantic.net new player. (MULTI-CHAR?)
+Fri Oct 27 17:13:42 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 17:15:00 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 17:16:15 2000 :: Idielots@roam181-38.student.harvard.edu has connected.
+Fri Oct 27 17:39:48 2000 :: Alrin@206-96-185-171.ipeg.com has connected.
+Fri Oct 27 17:49:22 2000 :: Dev@adsl-141-151-142-162.bellatlantic.net has connected.
+Fri Oct 27 17:57:54 2000 :: Nesam has autoquit the game. (48 minutes played)

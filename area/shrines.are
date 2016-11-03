@@ -1,0 +1,832 @@
+#AREA
+shrines.are~
+Shrines~
+RiftShadow~
+0 0
+30000 30100
+shrine
+none
+0
+1
+Jathruk Fyndin Anria Erifdel~
+
+#MOBS
+#30050
+A scarred elven warrior~
+A scarred elven warrior~
+An elven warrior stands before you at ease, though scarred from past endeavors.
+~
+~
+0 0 0 elf~
+53 53d8+5183 2d12+25 0 100 punch
+45 45 45 45
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#0
+
+
+
+#OBJS
+#30000
+tattoo jathruk jackal slavering~
+a slavering jackal~
+The mark of Jathruk is here.~
+armor
+flesh~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+APPLY SAVES -10
+APPLY AC 10
+LIMIT 0
+TIMER 0
+
+#30017
+altar diamond obelisk~
+a diamond obelisk~
+A diamond obelisk stands in the middle of the room.~
+altar
+diamond~
+0 0 0 0 0
+54 0 0 P
+ITEM BURNPROOF
+ITEM NOSAC
+LIMIT 1
+TIMER 0
+E altar diamond obelisk~
+An obelisk of pure, unmarked diamond stands nearly twelve feet tall.  It
+sparkles whether light is cast upon it or not.  When light touches this
+beautiful monolith, it casts breath taking rainbow fragments of light
+throughout the room.  
+~
+
+#30018
+diamond tattoo~
+the Multi-Faceted Diamond~
+A multi-faceted diamond is embedded into the skin of your upper arm.~
+trash
+diamond~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOREMOVE
+APPLY HP 50
+LIMIT 0
+TIMER 0
+
+#30028
+sparkling fountain crystal water~
+a sparkling fountain filled with crystal clear water~
+A sparkling fountain filled with crystal clear water is in the middle of the garden.~
+fountain
+unknown~
+1000 1000 'water' 0 0
+1 0 0 P
+ITEM FIXED
+LIMIT 0
+TIMER 0
+
+#30030
+altar open hand fyndin~
+a altar marked with a open hand~
+A altar marked with a open hand is here in the center of the room.~
+altar
+silver~
+0 0 0 0 0
+1 0 0 P
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#30050
+tattoo mark veiled skull~
+the Veiled Skull~
+A torn piece of flesh lies here.~
+armor
+Magic~
+10 10 10 10 0
+51 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOSHOW
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOLOCATE
+ITEM NOUNCURSE
+APPLY HP 25
+LIMIT 0
+TIMER 0
+
+#30051
+altar bone Erifdel~
+the ebony altar of Erifdel~
+A malefic altar stands upon the dais, devoid of any living substance or quality.~
+altar
+Bone~
+0 0 0 0 0
+1 200 0 P
+ITEM NOLOCATE
+LIMIT 1
+TIMER 0
+E altar~
+A myriad of bones form the completion of this altar.  Bones of all shape
+and sizes construct its oppressive appearance, yet each one has an ebony hue
+from age and decay in common with each other.  A single skull sits upon the
+very apex of this altar, tilted back with its jaw dislocated and gaping
+open... 
+~
+
+#30052
+ancient statue~
+an ancient statue~
+An ancient statue stands here, covered with dust and nearly indistinguishable features.~
+trash
+Stone~
+0 0 0 0 0
+51 200 0 P
+ITEM NOPURGE
+ITEM NOLOCATE
+ITEM NOSAC
+LIMIT 1
+TIMER 0
+E statue~
+From what is visible underneath the layer of dust, this statue depicts
+the existance of a human garbed in what can only be called a flowing robe
+that bears a hood and a floor long length.  From within the stone hood, the
+face is only vaguely apparant, but it doesn't resemble a human's complexion.
+The face within the stone hood seems more skeletal if anything else.  
+~
+
+#0
+
+
+
+#ROOMS
+#30000
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#30006
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#30010
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#30011
+An Elaborate Entrance~
+30011 to 30020
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 30012 0 0
+door~
+~
+OWNER none~
+#30012
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 30013 0 0
+door~
+~
+D WEST 30011 0 0
+door~
+~
+OWNER none~
+#30013
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 30014 0 0
+door~
+~
+D WEST 30012 0 0
+door~
+~
+OWNER none~
+#30014
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30013 0 0
+door~
+~
+D EAST 30015 0 0
+door~
+~
+OWNER none~
+#30015
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30016 0 0
+door~
+~
+D WEST 30014 0 0
+door~
+~
+OWNER none~
+#30016
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 30017 0 0
+door~
+~
+D SOUTH 30015 0 0
+door~
+~
+OWNER none~
+#30017
+The Vain Altar~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 30016 0 0
+door~
+~
+OWNER none~
+#30018
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#30019
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#30020
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#30021
+The Entrance to a Large Mansion~
+The doorway opens into a large foyer of an even larger mansion.  The
+walls are a dark yet soothing brown wood and the panels seem to accent it
+with a white colored wood.  The person who lives here is obviously rich and
+powerful.  The wood of the mansion is so well taken care of that it seems to
+be untouched by age.  The mansion hallway continues north while the foyer
+opens up into a garden to the west.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30022 0 0
+door~
+~
+D WEST 30028 AB 0
+door~
+~
+OWNER none~
+#30022
+The Music Room~
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 30023 0 0
+door~
+~
+D SOUTH 30021 0 0
+door~
+~
+OWNER none~
+#30023
+The Art Gallery~
+The hallway opens up into a large gallery of stands that would hold many
+paintings on them.  As of yet, they are empty but they look ready to be
+filled.  On the east wall is a large picture of a open hand facing outward
+towards the one who looks at it.  The gallery moves further into the mansion
+through the hallway to the north while the room opens up into a large music
+room to the west.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30024 0 0
+door~
+~
+D WEST 30022 0 0
+door~
+~
+OWNER none~
+#30024
+A Small Hallway Through the Mansion~
+The dark brown wooden hallway is lined with lamps along the walls. 
+Pictures are hung above the lamps, pictures of a elven face with bright
+blue-green eyes and light golden hair.  On the bottom of the picture is a
+symbol of a hand opened towards the person looking at it.  The hallway leads
+further to the east while a gallery is off to the south.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 30023 0 0
+door~
+~
+D WEST 30025 0 0
+door~
+~
+OWNER none~
+#30025
+A Small Hallway Through the Mansion~
+The dark brown wooden hallway is lined with lamps along the walls. 
+Pictures are hung above the lamps, pictures of a elven face with bright
+blue-green eyes and light golden hair.  On the bottom of the picture is a
+symbol of a hand opened towards the person looking at it.  The hallway leads
+further to the east, west, and north.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30029 0 0
+door~
+~
+D EAST 30024 0 0
+door~
+~
+D WEST 30026 0 0
+door~
+~
+OWNER none~
+#30026
+A Small Hallway Through the Mansion~
+The dark brown wooden hallway is lined with lamps along the walls. 
+Pictures are hung above the lamps, pictures of a elven face with bright
+blue-green eyes and light golden hair.  On the bottom of the picture is a
+symbol of a hand opened towards the person looking at it.  The hallway leads
+further to the east while the parlor is off to the south.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 30025 0 0
+door~
+~
+D SOUTH 30027 0 0
+door~
+~
+OWNER none~
+#30027
+A Parlor Overlooking a Small Garden~
+The parlor is made of the same dark wood that the rest of the mansion has
+been made of.  The parlor is furnished with bright colored couches and
+chairs as well as the east wall is lined with books.  The hallway leads
+further into the mansion to the north while the garden opens back up to the
+south through the doorway.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30026 0 0
+door~
+~
+D SOUTH 30028 AB 0
+door~
+~
+OWNER none~
+#30028
+Walking Through a Small Garden~
+The garden is bright and lively with the many types of plants that have
+grown up along the mansion walls and grounds.  Bright flowers line the
+plants along the walls, giving the wall a brightly painted look.  Trees
+shades parts of the garden and the grass is well kept.  A large crystal
+fountain sits in the middle of the garden, its water seeming to come from
+nowhere as it fills.  The garden opens up into the mansion parlor to the
+north while the foyer opens up to the east.  
+~
+park
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30027 AB 0
+door~
+~
+D EAST 30021 AB 0
+door~
+~
+OWNER none~
+#30029
+A Small Hallway Through the Mansion~
+The dark brown wooden hallway is lined with lamps along the walls. 
+Pictures are hung above the lamps, pictures of a elven face with bright
+blue-green eyes and light golden hair.  On the bottom of the picture is a
+symbol of a hand opened towards the person looking at it.  The hallway leads
+further to the south while a small altar can barely be seen to the north.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30030 0 0
+door~
+~
+D SOUTH 30025 0 0
+door~
+~
+OWNER none~
+#30030
+At an Altar Within the Mansion~
+The hallway gets brighter as it opens up into a small room.  In the
+middle of the room is a glowing object, what looks to be an altar.  Upon the
+altar is the mark of the Open Hand.  The altar emits a glow that envelops
+the whole room.  The hallway opens back into the mansion to the south.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 30029 0 0
+door~
+~
+OWNER none~
+#30050
+A Pit of Watery Ooze~
+The walls glimmer with most ooze that flows downwards and upwards in an
+mealstrom of movement.  Nothing appears to feed its watery state, and their
+remains little to be seen of anything else except for the constant suction
+sounds of the ooze's presence.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+Deep brown ooze flows in a myriad of directions.
+~
+D EAST 0 0 0
+door~
+Deep brown ooze flows in a myriad of directions.
+~
+D SOUTH 0 0 0
+door~
+Deep brown ooze flows in a myriad of directions.
+~
+D WEST 0 0 0
+door~
+Deep brown ooze flows in a myriad of directions.
+~
+D UP 24629 0 0
+door~
+A strange layer of magic covers the upper portion of this ooze filled pit, but the cavern above remains visible still.
+~
+D DOWN 30051 I 0
+door~
+~
+TRAP 'concealed pit' 10 10 2
+The watery ooze below your feet emits a loud slurping sound.~
+Ooze bubbles wildly and latches to you with tendrils of its sticky substance, pulling you downwards!~
+OWNER none~
+#30051
+A Chute of Ancient Stone~
+This verticle chute is formed from aged stone that remains slightly rough
+from its years of existance.  Cobwebs and long dead fungus line the walls as
+well, adding to the dry and dusty air of this deep passage.  
+~
+vertical
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+Rough stones are covered with dead fungus and ancient webs.
+~
+D EAST 0 0 0
+door~
+Rough stones are covered with dead fungus and ancient webs.
+~
+D SOUTH 0 0 0
+door~
+Rough stones are covered with dead fungus and ancient webs.
+~
+D WEST 0 0 0
+door~
+Rough stones are covered with dead fungus and ancient webs.
+~
+D UP 24629 0 0
+door~
+~
+D DOWN 30052 0 0
+door~
+An unseen breeze and darker shadows seem to originate further downwards.
+~
+OWNER none~
+#30052
+The Far End of an Ancient Crypt~
+The air is dry and the dust threatens to choke any living person.  The
+floor consists of ancient stone, but carry layers upon layers of dirt and
+dust.  Cobwebs decorate each visible corner, though where ever the stone
+walls are not visible, darkness is abundant.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30053 0 0
+door~
+Stone steps lead upwards and into more darkness.
+~
+D EAST 0 0 0
+door~
+The bricking style of these ancient walls remain slightly visible amidst the dirt and darkness.
+~
+D SOUTH 0 0 0
+door~
+The bricking style of these ancient walls remain slightly visible amidst the dirt and darkness.
+~
+D WEST 0 0 0
+door~
+The bricking style of these ancient walls remain slightly visible amidst the dirt and darkness.
+~
+D UP 30051 0 0
+door~
+A chute of darkness leads upwards, though cobwebs dangle from its opening.
+~
+D DOWN 0 0 0
+door~
+Dust that has remained undisturbed for years collects here.
+~
+OWNER none~
+#30053
+A Crumbling Foyer~
+The apex of this chamber glows with an unseen light, casting onerous
+shadows that dance along the sides of visibility.  Stone benches sit in the
+center of this foyer, constructed at the time of the crypt's birth. 
+Surrounded by the benches is an ancient statue who's features are nearly
+intangible from the layers of dust and cobwebs.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 30054 0 0
+door~
+A lack of dust and cobwebs is apparent in this direction, however, the
+darkness seems to writhe as if it was alive.  
+~
+D EAST 30055 0 0
+door~
+An alcove filled with darkness sits within this wall.
+~
+D SOUTH 30052 0 0
+door~
+Stone steps lead downwards and into more darkness.
+~
+D WEST 30056 0 0
+door~
+An alcove filled with darkness sits within this wall.
+~
+D UP 0 0 0
+door~
+The light above does not appear to have any source of origin, but beyond
+that the foyers build seems to be more of a circular make than a square one.
+~
+D DOWN 0 0 0
+door~
+The stone bricks that make up the floor of this foyer are strangely discolored.
+~
+E bench benches~
+Solid stone benches are constructed here.  Four in total, each on one
+side of the ancient statue to form a square shaped design.  
+~
+OWNER none~
+#30054
+An Archaic and Desiccated Dais~
+The dais is fashioned from solid blocks of onyx stone and sits ominously
+high compared to the southern foyer.  Upon its center is a strange altar of
+bones, its mere presence casting an imposing air about the room.  Shadows
+dance and hang as the strange lights of this crypt fluctuate in their unseen
+origin and distant screams resonate from the core of the altar, forming a
+macabre chorus of death.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+The walls of this chamber remain shrouded in writhing shadows.
+~
+D EAST 0 0 0
+door~
+The walls of this chamber remain shrouded in writhing shadows.
+~
+D SOUTH 30053 0 0
+door~
+An odd glow of illumination emits from this direction, though fluctuating
+with the amount of glow.  
+~
+D WEST 0 0 0
+door~
+The walls of this chamber remain shrouded in writhing shadows.
+~
+D UP 0 0 0
+door~
+An endless abyss of blackness is above you.
+~
+D DOWN 0 0 0
+door~
+The stone dais is as dark as the impenetrable shadows that are cast upon this chamber.
+~
+OWNER Erifdel~
+#30055
+A Dilapidated Alcove~
+The shadows within this alcove are musty and thick, yet nothing appears
+to be present.  The walls are ominously dark and the cobwebs more than
+shroud any distinguishable features.  The stone floor of this alcove appears
+to be absent however.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+The walls are featureless yet the bricks seem to be darker in color.
+~
+D EAST 0 0 0
+door~
+The walls are featureless yet the bricks seem to be darker in color.
+~
+D SOUTH 0 0 0
+door~
+The walls are featureless yet the bricks seem to be darker in color.
+~
+D WEST 30053 0 0
+door~
+~
+D UP 0 0 0
+door~
+The ceiling of this alcove is constructed of dark and smooth mason work.
+~
+D DOWN 0 0 0
+door~
+The floor of this alcove is comprised of loose but thin dirt.
+~
+OWNER none~
+#30056
+A Dilapidated Alcove~
+The shadows within this alcove are musty and thick, yet nothing appears
+to be present.  The walls are ominously dark and the cobwebs more than
+shroud any distinguishable features.  The stone floor of this alcove appears
+to be absent however.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+door~
+The walls are featureless yet the bricks seem to be darker in color.
+~
+D EAST 30053 0 0
+door~
+~
+D SOUTH 0 0 0
+door~
+The walls are featureless yet the bricks seem to be darker in color.
+~
+D WEST 0 0 0
+door~
+The walls are featureless yet the bricks seem to be darker in color.
+~
+D UP 0 0 0
+door~
+The ceiling of this alcove is constructed of dark and smooth mason work.
+~
+D DOWN 0 0 0
+door~
+The floor of this alcove is comprised of loose but thin dirt.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+OBJECT 30000 TO 30000
+OBJECT 30017 TO 30017
+OBJECT 30030 TO 30030
+OBJECT 30052 TO 30053
+OBJECT 30051 TO 30054
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

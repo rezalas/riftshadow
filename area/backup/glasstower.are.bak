@@ -1,0 +1,2685 @@
+#AREA
+glasstower.are~
+The Glass Tower~
+Zethus~
+1 51
+23800 23875
+normal
+none
+0
+1
+Zethus~
+
+#MOBS
+#23800
+woman~
+a visiting woman~
+A woman in a shawl and exotic dress stands here quietly.
+~
+A smile of amazement unconsciously set upon her face, this woman seems to
+be in a state of shock.  Her multi-colored dress drags across the smooth
+floor, narrowly avoiding being stepped upon by others in the lobby.
+~
+0 0 0 human~
+12 2d6+100 1d6+1 10 100 punch
+0 0 0 0
+standing female poor
+0 M medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#23801
+commoner human~
+a human commoner~
+A commoner clad in rough linens wanders around the Tower.
+~
+Mouth hanging slightly open in amazement, this commoner slowly meanders
+about.  Clad in simple, rough linens typical of Melcene and the surrounding
+areas, he continually utters comments to himself about the splendor of the
+Tower.
+~
+0 0 0 human~
+12 2d6+100 1d6+1 10 100 punch
+0 0 0 0
+standing male poor
+0 M medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+IMM SUMMON
+#23802
+novice mage woman~
+a novice mage~
+A novice mage slowly walks about the library, looking through books.
+~
+Though young in age, this novice seems to have spent a fair amount of
+time within the Glass Tower.  The awe of the Tower long since gone, the
+novice heads off to his task at hand.  The novice's robes seem to be made of
+a tough woolen weave.
+~
+0 0 0 human~
+16 2d6+200 4d2+2 12 100 punch
+0 0 0 0
+standing male poor
+0 M medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+#23803
+initiate mage~
+an initiate mage~
+A weary mage struggles to stay awake during a study session.
+~
+Though obviously youthful, this initiate mage's eyes bear the burden of
+years of study.  In fact, the initiate's dark, baggy eyes are intently
+focused upon the pages of a thick book at this moment.  It is doubtful that
+they even perceived your entry.
+~
+0 0 0 human~
+22 5d10+650 2d10+7 20 100 pierce
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+#23804
+apprentice mage~
+an apprentice~
+An apprentice stands here uttering arcane words and contemplating.
+~
+Sponsored by a master, this apprentice mage strives to complete some sort
+of a series of tasks that is commonly assigned by masters.  Robes bearing
+the insignia of her master and her eyes bearing the stare of intense
+concentration, this drow apprentice takes her assignment seriously.
+~
+-500 0 0 drow~
+27 5d10+950 2d10+7 20 100 punch
+0 0 0 0
+standing female none
+0 M medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+OFF DODGE
+AFF HASTE
+#23805
+apprentice mage~
+an apprentice mage~
+An apprentice rests in his cot with saggy dark circles beneath his eyes.
+~
+Sponsored by a master, this apprentice mage strives to complete some sort
+of a series of tasks that is commonly assigned by masters.  At this time,
+however, this apprentice seems to have been physically and mentally exerted.
+Long since having fallen asleep, this apprentice still clutches papers in
+his hands as he snores.
+~
+0 0 0 human~
+27 5d10+1000 2d10+7 40 100 none
+0 0 0 0
+standing male poor
+0 M medium
+ACT NPC
+#23806
+graduate mage~
+a graduate mage~
+A mage dressed in fine robes studies from a thick tome.
+~
+Having already been through an insane amount of grueling study, this
+graduate has decided to continue his studies in an attempt to become a
+master of his craft.  An air of discipline emanates from his posture as he
+studies advanced magical theory from a huge tome in front of him.
+~
+0 0 0 human~
+35 10d10+1500 4d7+20 40 100 magic
+0 0 0 0
+standing male poor
+0 M medium
+ACT NPC
+ACT STAY_AREA
+ACT MAGE
+#23807
+master mage~
+a master mage~
+A distinguished mage sits at his desk writing on a blank page.
+~
+Sitting quietly at his desk and writing, this mage does not seem to
+outwardly acknowledge your presence, but does seem to notice it.  His robes
+are of quality fit for a king, and a rich one at that.  An aura of magic
+flickers about him, yet he does not seem to have to concentrate much to
+upkeep its magic.
+~
+0 0 0 human~
+50 50d3+3000 10d4+30 99 100 magic
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+A 'sphere of plasma' (null)
+A 'cloak of mist' (null)
+A 'corona' (null)
+C 'acid stream'
+C 'talismanic aura'
+C 'prismatic spray'
+C 'heat metal'
+C 'scathing wind'
+#23808
+librarian woman~
+a quiet librarian~
+A tall, thin woman stands here sorting books.
+~
+This librarian's pale, wispy frame is covered by a loose white shirt,
+causing her to look even thinner and taller than she already is.  A small
+pair of glasses are set upon her face, which stares down into a book from
+time to time while she is in the process of sorting them.
+~
+0 0 0 human~
+35 50d10+700 10d4+3 40 100 magic
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+#23809
+alchemist old man~
+the alchemist~
+A hunch-backed old man wearing a turban dashes about his lab.
+~
+This strange old man is hunched over and moves alot faster than seems
+possible.  His turban of dark magenta cloth looks as if it is about to
+unravel, but never does.  As he shambles around behind the counter grabbing
+vials and herbs, he continually glances over his shoulder toward you,
+grumbling and seeming somehow annoyed with your presence.
+~
+0 0 0 human~
+45 30d10+1000 30d2+24 40 100 crush
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+SHOPKEEPER OPEN 1 CLOSE 1 EXIT north
+#23810
+elven elf enchantress~
+dummy mob~
+This is the description for a dummy mob.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#23811
+drow scribe~
+the drow scribe~
+A disinterested drow sits quietly behind a desk, occupied with other matters.
+~
+This drow seems to be unimpressed by your presence and makes no moves to
+start conversation.  Every few moments, he glances up at you, seeming to be
+notably more annoyed and distracted with your presence than he is delighted.
+The already dark skin upon his hands and arms is stained an even darker
+color from the ink in the inkwell upon the desk behind the counter.
+~
+-1000 0 0 drow~
+45 30d10+1000 30d2+24 50 100 magic
+0 0 0 0
+standing male moderate
+0 M medium
+ACT NPC
+AFF PROTECTION
+AFF HASTE
+AFF REGENERATION
+SHOPKEEPER OPEN 1 CLOSE 1 EXIT south
+#23812
+graduate mage~
+a graduate mage~
+An elven mage stands here staring into a book and chanting.
+~
+This elven graduate mage is practicing a minor ritualistic chant, as has
+been required of her to become receive the honor of becoming a master mage
+of the Glass Tower and, perhaps, a Scion.
+~
+300 0 0 elf~
+35 10d10+1500 4d7+4 40 100 magic
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+OFF DODGE
+AFF PASS_DOOR
+#23813
+master mage delia~
+Delia~
+A beautiful, haughty drow mage eyes you thoughtfully.
+~
+A smug, arrogant expression lies across this drow's face as she sorts
+papers in her room.  She glances over at you as you glance at her and
+smirks, then continues sorting things as she had been before.  Her robes are
+those of a master mage, finely embroidered and powerfully enchanted.
+~
+-500 0 0 drow~
+50 50d10+4000 10d4+36 80 100 magic
+0 0 0 0
+standing female affluent
+0 M medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+AFF PASS_DOOR
+AFF HASTE
+A 'sanguine ward' (null)
+A 'fly' flying
+C 'vampiric touch'
+C 'blindness'
+C 'plague'
+C 'energy drain'
+C 'talismanic aura'
+TEACHES ancient languages~
+TEACHES forgotten lore~
+#23814
+applicant mage~
+a mage applicant~
+A thin, robed young man nervously paces the lobby.
+~
+This young applicant seems incredibly nervous and incredibly lost as he
+wanders around the lobby of the tower in which he hopes to study.  His
+greased hair, neatly ironed robes and numerous shaving cuts suggest that he
+had spent quite some time composing himself for this day.
+~
+0 0 0 human~
+6 3d3+20 2d2+2 3 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+#23815
+novice mage~
+a novice mage~
+A woman walks through the tower, her hands full of books.
+~
+Her hair in tangles, this young woman has about 4 thick books in her
+arms, causing her to have to struggle to walk around the tower.  Her eyes
+have dark circles beneath them, a common characteristics of mages who study
+here.  Her robes are standard-issue to the newly accepted mages of the Glass
+Tower, and though made of a modest material, are in fact of high quality.
+~
+0 0 0 human~
+16 2d6+200 4d2+2 12 100 punch
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+#23816
+elven elf enchantress~
+the elven enchantress~
+A tall, radiant elven woman sorts charms behind the counter.
+~
+A bright smile spread across her pretty face, this elven woman glances up
+happily at all customers who enter her store.  A series of different minor
+reagents and tools are stuffed in pouches all about her robe, which she
+rummages through constantly.  Her thin elvish hands are constantly moving,
+unpacking charms, carving them and gesturing to cast spells of enchantment.
+~
+500 0 0 elf~
+45 30d10+1000 30d2+24 70 100 magic
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+AFF HASTE
+IMM SUMMON
+SHOPKEEPER OPEN 1 CLOSE 1 EXIT north
+#0
+
+
+
+#OBJS
+#23800
+black white marble ring~
+a black and white marble ring~
+A small, shiny ring of a polished black and white stone lies here.~
+armor
+stone~
+0 0 0 0 0
+35 1 100 P
+WEAR TAKE
+WEAR FINGER
+APPLY MANA 30
+APPLY HP 10
+LIMIT 0
+
+#23801
+engraved silver walking staff~
+an engraved silver walking staff~
+A long, slender walking staff has been dropped here.~
+treasure
+steel~
+0 0 0 0 0
+25 1 100 P
+WEAR TAKE
+WEAR HOLD
+APPLY MANA 30
+APPLY DEX 1
+LIMIT 4
+
+#23802
+red linen robes~
+some red linen robes~
+A pile of red cloth lies here in a heap.~
+armor
+cloth~
+1 1 2 2 0
+25 2 30 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT MAGE_ONLY
+ITEM GLOW
+ITEM MAGIC
+APPLY HP 8
+APPLY MANA 10
+LIMIT 0
+
+#23803
+white silken silk robes~
+some white silken robes~
+A pile of white silk lies here in a heap.~
+armor
+cloth~
+1 1 2 2 0
+35 3 530 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+APPLY MANA 20
+APPLY HP 15
+LIMIT 0
+
+#23804
+red silken robes~
+some red silken robes~
+A pile of red silk lies here in a heap.~
+armor
+cloth~
+1 1 2 2 0
+45 2 30 P
+WEAR TAKE
+WEAR BODY
+RESTRICT MAGE_ONLY
+ITEM GLOW
+ITEM MAGIC
+APPLY HP 30
+APPLY MANA 40
+APPLY SVSPELL -5
+LIMIT 10
+
+#23805
+royal blue robes archmage~
+the royal blue robes of an archmage~
+A pile of royal blue material has been left here.~
+armor
+cloth~
+0 0 0 0 0
+15 2 30 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MANA 50
+APPLY HP 50
+APPLY DEX -2
+LIMIT 2
+
+#23806
+brass wand~
+a brass wand~
+A brass wand has been left here.~
+wand
+parchment~
+30 3 3 'cure critical' 0
+30 3 500 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+LIMIT 0
+
+#23807
+statue silver drow~
+a statue of Zethus~
+A silver statue of a tall, robed drow towers above you.~
+treasure
+platinum~
+0 0 0 0 0
+25 1 100 P
+LIMIT 0
+TIMER 0
+
+#23808
+statue platinum elf~
+a statue of Eladrian~
+A platinum statue of an elf with an outstretched arm has been set here.~
+treasure
+platinum~
+0 0 0 0 0
+25 1 100 P
+LIMIT 0
+TIMER 0
+
+#23809
+scroll sight~
+a scroll of sight~
+A piece of parchment has been left on the ground here.~
+scroll
+paper~
+30 'infravision' 'detect magic' 'reserved' 'reserved'
+10 0 200 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23810
+parchment scroll reveal~
+a scroll of revealing~
+A piece of parchment has been left on the ground here.~
+scroll
+unknown~
+30 'faerie fog' 'reserved' 'reserved' 'reserved'
+20 0 400 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23811
+scroll elegant~
+an elegant scroll~
+An elegantly scribed scroll has been left here.~
+scroll
+unknown~
+30 'dispel magic' 'sap endurance' 'reserved' 'reserved'
+40 0 900 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23812
+parchment scroll voiding~
+a scroll of voiding~
+A piece of parchment has been left here.~
+scroll
+unknown~
+35 'cancellation' 'cancellation' 'cancellation' 'reserved'
+40 0 700 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23813
+stave staff snake scaled~
+a staff covered with snake scales~
+A stave covered with multi-colored reptilian scales has been left here.~
+staff
+wood~
+30 10 10 'poison' 0
+30 5 700 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23814
+wand ash grey~
+an ash grey wand~
+A wand of grey glass has been left on the ground.~
+wand
+glass~
+30 3 3 'fireball' 0
+30 3 1000 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23815
+twisted glass wand~
+a twisted glass wand~
+A twisted glass wand has been left on the ground here.~
+wand
+unknown~
+30 5 5 'incandescense' 0
+20 0 600 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23816
+glass talisman pendant~
+a tiny glass talisman~
+A glass pendant has been left on the ground here.~
+treasure
+glass~
+0 0 0 0 0
+30 1 1200 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+TIMER 20
+FLAG RES NEGATIVE
+NOTES ~
+
+#23817
+vial purplish black dark liquid~
+a vial of purplish black liquid~
+A vial of dark liquid lies here.~
+potion
+glass~
+30 'armor' 'giant strength' 'reserved' 'reserved'
+25 2 500 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23818
+opaque glass flask~
+an opaque glass flask~
+A white flask of glass has been left here.~
+potion
+glass~
+35 'cure poison' 'cure poison' 'reserved' 'reserved'
+35 1 400 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23819
+chunky red potion~
+a potion filled with chunks of red seaweed~
+A red potion filled with reddish chunks has been left here.~
+potion
+unknown~
+40 'water breathing' 'reserved' 'reserved' 'reserved'
+20 2 400 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#23820
+silk robes embroidered shimmering insignias~
+some silk robes embroidered with shimmering insignias~
+A pile of shimmering cloth lies on the ground here.~
+armor
+cloth~
+3 3 3 3 0
+51 3 2 P
+WEAR TAKE
+WEAR BODY
+RESTRICT MAGE_ONLY
+ITEM GLOW
+ITEM MAGIC
+APPLY SVSPELL -10
+APPLY MANA 50
+APPLY HP 30
+LIMIT 3
+TIMER 0
+
+#23821
+initiate robes~
+some initiate's robes~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#23875
+embossed scroll~
+an embossed scroll~
+A scroll embossed with a translucent seal has been left here.~
+treasure
+unknown~
+0 0 0 0 0
+0 1 0 P
+ITEM GLOW
+ITEM MAGIC
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#23800
+The Western Arch~
+A large, gleaming glass arch rises above you, completely devoid of any
+sort of designs or markings.  Through the arch, you can see the lobby of the
+Glass Tower, a mecca of magic that is as famous as it is ancient.  There are
+few inhabitants of Melcene anywhere nearby, save a commoner or two who has
+come to gawk at the Tower's splendor.  A way off to the west, you can see
+the buzzing streets of Melcene, seeming almost muted from here.  A tiny
+inscription has been written on a stone in the ground.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A side of the arch rises above you to the north.
+~
+D EAST 23802 0 0
+~
+The lobby of the Glass Tower begins to the east.
+~
+D SOUTH 0 0 0
+~
+A side of the arch rises above you to the south.
+~
+D WEST 1022 0 0
+~
+The city streets lie back to the west.
+~
+D DOWN 0 0 0
+~
+Strange, magical energies seem to flow beneath a glass-like surface.
+~
+E inscription~
+Area created by Zethus solely for Riftshadow MUD.
+ 
+Ask author for permission to use on another MUD.
+ 
+~
+#23801
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality. To the north,
+a door leads into a library. To the east, the lobby continues, while to the
+south you can see the base of the western staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 23817 0 0
+~
+The lobby continues.
+~
+D EAST 23804 0 0
+~
+The lobby continues.
+~
+D SOUTH 23802 0 0
+~
+The lobby continues.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23802
+At the Bottom of the Western Staircase~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch.  Though much of it is clear, some are made opaque by the
+colors that they are stained, ranging from red to copper to blue to a milky
+white.  Jutting up from the opaque glass floor in such a way that it is
+apparent that the glass was never cut, and was simply molded, is a spiral
+staircase that leads up into a higher level of the tower.  The lobby
+continues in all directions around you.  
+~
+inside
+ROOM INDOORS
+D NORTH 23801 0 0
+~
+The lobby continues.
+~
+D EAST 23805 0 0
+~
+The lobby continues.
+~
+D SOUTH 23803 0 0
+~
+The lobby continues.
+~
+D WEST 23800 0 0
+~
+The lobby continues.
+~
+D UP 23819 0 0
+~
+The western staircase rises up into a large circular hole in the ceiling.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23803
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality. To the south,
+a door leads into a magic shop. To the north, you can see the bottom of the
+western staircase, while to the east, the lobby continues.
+~
+inside
+ROOM INDOORS
+D NORTH 23802 0 0
+~
+You can see a staircase to the north.
+~
+D EAST 23806 0 0
+~
+The lobby continues.
+~
+D SOUTH 23815 A 0
+~
+A door leads into a magic shop to the south.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23804
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 23807 0 0
+~
+The lobby continues.
+~
+D SOUTH 23805 0 0
+~
+The lobby continues.
+~
+D WEST 23801 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23805
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality.
+~
+inside
+ROOM INDOORS
+D NORTH 23804 0 0
+~
+The lobby continues.
+~
+D EAST 23808 0 0
+~
+The lobby continues.
+~
+D SOUTH 23806 0 0
+~
+The lobby continues.
+~
+D WEST 23802 0 0
+~
+You can see a staircase to the north.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23806
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality.
+~
+inside
+ROOM INDOORS
+D NORTH 23805 0 0
+~
+The lobby continues.
+~
+D EAST 23809 0 0
+~
+The lobby continues.
+~
+D SOUTH 0 0 0
+~
+The lobby continues.
+~
+D WEST 23803 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23807
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D EAST 23810 0 0
+~
+The lobby continues.
+~
+D SOUTH 23808 0 0
+~
+The lobby continues.
+~
+D WEST 23804 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23808
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality. The lobby
+continues in all directions, and you can see the eastern staircase just over
+to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 23807 0 0
+~
+The lobby continues.
+~
+D EAST 23811 0 0
+~
+You can see a staircase to the east.
+~
+D SOUTH 23809 0 0
+~
+The lobby continues.
+~
+D WEST 23805 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23809
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality.
+~
+inside
+ROOM INDOORS
+D NORTH 23808 0 0
+~
+The lobby continues.
+~
+D EAST 23812 0 0
+~
+The lobby continues.
+~
+D SOUTH 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D WEST 23806 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23810
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality. To the north,
+a door leads into a shop of some sort, while to the south, you can see the
+bottom of the eastern staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 23814 0 0
+~
+The lobby continues.
+~
+D EAST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D SOUTH 23811 0 0
+~
+You can see a staircase to the south.
+~
+D WEST 23807 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23811
+At the Bottom of the Eastern Staircase~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+Jutting up from the opaque glass floor in such a way that it is apparent that
+the glass was never cut, and was simply molded, is a spiral staircase
+that leads up into a higher level of the tower. The lobby continues in all
+directions around you.
+~
+inside
+ROOM INDOORS
+D NORTH 23810 0 0
+~
+The lobby continues.
+~
+D EAST 23813 0 0
+~
+The lobby continues.
+~
+D SOUTH 23812 0 0
+~
+The lobby continues.
+~
+D WEST 23808 0 0
+~
+The lobby continues.
+~
+D UP 23826 0 0
+~
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23812
+The Glass Tower, Lobby Level~
+Everything around you is made of glass, but none of it bears so much as a
+tiny scratch. Though much of it is clear, some are made opaque by the colors
+that they are stained, ranging from red to copper to blue to a milky white.
+The shuffling feet of scholars echo off of the crystalline walls, which give
+the resounding sounds a strange, otherworldly quality. To the south,
+a door leads into a small room, while to the north, you can see the bottom of
+the eastern staircase. To the west, the lobby continues.
+~
+inside
+ROOM INDOORS
+D NORTH 23811 0 0
+~
+You can see a staircase to the north.
+~
+D EAST 0 0 0
+~
+A wall of multi-colored glass lies to the east.
+~
+D SOUTH 23816 0 0
+~
+The lobby continues.
+~
+D WEST 23809 0 0
+~
+The lobby continues.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23813
+The Eastern Arch~
+A large, gleaming glass arch rises above you, completely devoid of any
+sort of designs or markings.  Through the arch, you can see the lobby of the
+Glass Tower, a mecca of magic that is as famous as it is ancient.  There are
+few inhabitants of Melcene anywhere nearby, save a commoner or two who has
+come to gawk at the Tower's splendor.  A way off to the west, you can see
+the buzzing streets of Melcene, seeming almost muted from here.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 1026 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23811 0 0
+~
+~
+D DOWN 0 0 0
+~
+Strange, magical energies seem to flow beneath a glass-like surface.
+~
+#23814
+The Scribe's Shop~
+Different kinds of magical inks, papers and quills line shelves all around
+the room. A glass case set into the counter displays a number of scrolls, each
+carefully placed on red velvet stands, leaning back, so that the scrolls face
+the customers. Each scroll has a silver plaque underneath it inscribed with
+the magics that it contains. To the south, a door leads back out into the
+lobby.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+A wall of multi-colored glass lies to the east.
+~
+D SOUTH 23810 0 0
+~
+The lobby lies out the door.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23815
+The Alchemist's Shop~
+The pungent odors of herbs, chemicals and metals being brewed combine to make
+an overpowering stench that easily drives out those that do not have a
+need to be here. A hunch-backed old man wearing a turban of dark magenta
+shambles around behind the counter at an alarming speed, grabbing reagents
+and various mixing, measuring and pulverizing instruments and putting them
+to use. A doorway lies to the north, leading back out into the lobby.
+~
+inside
+ROOM INDOORS
+D NORTH 23803 A 0
+~
+The lobby lies through the door to the north.
+~
+D EAST 0 0 0
+~
+A wall of multi-colored glass lies to the east.
+~
+D SOUTH 0 0 0
+~
+A wall of multi-colored glass lies to the south.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23816
+The Enchantress' Shop~
+Hundreds of tiny charms hang from the ceiling, each seemingly very fragile
+and delicate and of various colors and materials. A light incense burns
+behind the counter, where the enchantress stands. Curtains cover up the
+storage area behind her, in which boxes are barely visible in the
+darkness. A doorway leads to the north into the lobby.
+~
+inside
+ROOM INDOORS
+D NORTH 23812 0 0
+~
+The lobby lies through the door to the north.
+~
+D EAST 0 0 0
+~
+A wall of multi-colored glass lies to the east.
+~
+D SOUTH 0 0 0
+~
+A wall of multi-colored glass lies to the south.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23817
+Guest Library~
+This room is massive. Ornate carpets are placed neatly in certain spots about
+the floor, covering the silver and glass tiles. An unidentifiable source of
+light shines down upon the room from the ceiling, reflecting and refracting
+from multiple places about the room. Large bookshelves have been set into the
+walls, housing some important works.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 0 0 0
+~
+A wall of multi-colored glass lies to the east.
+~
+D SOUTH 23801 0 0
+~
+The lobby lies to the south.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+D DOWN 0 0 0
+~
+The floor of the Tower is made up of square-cut clear glass over silver tiles.
+~
+#23818
+The Second Floor of the Glass Tower~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 23819 0 0
+~
+The hallway continues to the east.
+~
+D SOUTH 0 0 0
+~
+A wall of multi-colored glass lies to the south.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+#23819
+Western Staircase of the Second Level~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east and
+west. A door lies to the south. In the center of the hallway, there is a wide,
+round glass tube with a gaping arched entrance; the western staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 23821 0 0
+~
+The hallway continues to the east.
+~
+D SOUTH 23833 A 0
+door~
+A door leads into a smaller room to the south.
+~
+D WEST 23818 0 0
+~
+The hallway continues to the west.
+~
+D UP 23835 0 0
+~
+A spiral staircase leads up into the next level of the tower.
+~
+D DOWN 23802 0 0
+~
+A spiral staircase leads back down into the lobby.
+~
+#23820
+A Small Hallway~
+The glass has taken on a softer and simpler appearance in this small
+hallway. The powerful elegance of the Tower, however, is not lacking here. The
+simple hallway continues to the east into the main hallway, and to the south,
+into a smaller room.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 23822 A 0
+door~
+The main hallway lies back to the east.
+~
+D SOUTH 23832 A 0
+door~
+A door leads into a smaller room to the south.
+~
+D WEST 0 0 0
+~
+A wall of multi-colored glass lies to the west.
+~
+#23821
+The Second Floor of the Glass Tower~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 23823 0 0
+~
+The hallway continues to the east.
+~
+D SOUTH 0 0 0
+~
+A wall of multi-colored glass lies to the south.
+~
+D WEST 23819 0 0
+~
+The hallway continues to the west.
+~
+#23822
+The Second Floor of the Glass Tower~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A wall of multi-colored glass lies to the north.
+~
+D EAST 23828 A 0
+door~
+A door leads into a smaller room to the east.
+~
+D SOUTH 23823 0 0
+~
+The hallway continues to the south.
+~
+D WEST 23820 A 0
+door~
+A door leads into a smaller room to the west.
+~
+#23823
+The Second Floor of the Glass Tower~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 23822 0 0
+~
+~
+D EAST 23825 0 0
+~
+~
+D SOUTH 23824 A 0
+~
+~
+D WEST 23821 0 0
+~
+~
+#23824
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23823 A 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23825
+The Second Floor of the Glass Tower~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23826 0 0
+~
+~
+D SOUTH 23829 A 0
+~
+~
+D WEST 23823 0 0
+~
+~
+#23826
+Eastern Staircase of the Second Level~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east and
+west. A door lies to the south. In the center of the hallway, there is a wide,
+round glass tube with a gaping arched entrance; the western staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23827 0 0
+~
+~
+D SOUTH 23830 A 0
+~
+~
+D WEST 23825 0 0
+~
+~
+D UP 23842 0 0
+~
+~
+D DOWN 23811 0 0
+~
+~
+#23827
+The Second Floor of the Glass Tower~
+The glass surrounding you seems to be slightly different than the glass in
+the Tower's lobby. Very thin, seemingly frail columns of the luminescent yet
+opaque material sporadically rise up from the ground near the walls and meld
+into the ceiling, seeming to be more for decoration than support. A single
+line of mahogany marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23831 A 0
+door~
+~
+D WEST 23826 0 0
+~
+~
+#23828
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23822 A 0
+door~
+~
+#23829
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23825 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23830
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23826 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23831
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23827 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23832
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 23820 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23833
+A Small Room~
+Very thin, seemingly frail columns of the luminescent yet opaque material
+sporadically rise up from the ground near the walls and meld into the ceiling,
+seeming to be more for decoration than for support. Small shelves line the
+walls, and a mahogany cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23819 A 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23834
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23835 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23835
+Third Level Western Staircase~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the east and west.
+In the center of the hallway, there is a wide, round glass tube with a gaping
+arched entrance; the western staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23837 0 0
+~
+~
+D SOUTH 23849 A 0
+door~
+~
+D WEST 23834 0 0
+~
+~
+D UP 23851 0 0
+~
+~
+D DOWN 23819 0 0
+~
+~
+#23836
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23838 A 0
+door~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23837
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the east and west.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23839 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23835 0 0
+~
+~
+#23838
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the south, doors leading into
+smaller rooms to the east and west.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23844 A 0
+door~
+~
+D SOUTH 23839 0 0
+~
+~
+D WEST 23836 A 0
+door~
+~
+#23839
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the east and west, smaller
+hallways heading to the north and south.
+~
+inside
+ROOM INDOORS
+D NORTH 23838 0 0
+~
+~
+D EAST 23841 0 0
+~
+~
+D SOUTH 23840 0 0
+~
+~
+D WEST 23837 0 0
+~
+~
+#23840
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the west. A door is set into
+the northern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23839 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23848 A 0
+door~
+~
+#23841
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the east and west. A door is
+set into the southern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23842 0 0
+~
+~
+D SOUTH 23845 A 0
+door~
+~
+D WEST 23839 0 0
+~
+~
+#23842
+Third Level Eastern Staircase~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the east and west.  In the
+center of the hallway, there is a wide, round glass tube with a gaping arched
+entrance; the eastern staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23843 0 0
+~
+~
+D SOUTH 23846 A 0
+~
+~
+D WEST 23841 0 0
+~
+~
+D UP 23858 0 0
+~
+~
+D DOWN 23826 0 0
+~
+~
+#23843
+The Third Floor of the Glass Tower~
+Thick pillars of glass line both sides of the hall, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. A single line of ebon
+marble bisects the hallway, which continues to the west. A door is set into
+the southern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23847 A 0
+door~
+~
+D WEST 23842 0 0
+~
+~
+#23844
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23838 A 0
+door~
+~
+#23845
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23841 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23846
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23842 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23847
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23843 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23848
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+~
+D EAST 23840 A 0
+door~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23849
+A Small Room~
+Thick pillars of glass line both sides of the room, each casting a
+shimmering glow that is reflected and refracted by the unnaturally flawless
+crystal that makes up the Tower. Quiet whispers can be heard from time to
+time; ethereal echoes chilled by the walls of glass. Small shelves line the
+walls, and an ebon cabinet stands up against the southern wall, along with
+a desk and a cot that lies perpendicular to the cabinet against the eastern
+wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23835 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23850
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the
+east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23851 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23851
+Fourth Level Western Staircase~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the
+east. In the center of the hallway, there is a wide, round glass tube with a
+gaping arched entrance; the western staircase.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23853 0 0
+~
+~
+D SOUTH 23865 A 0
+door~
+~
+D WEST 23850 0 0
+~
+~
+D UP 23867 0 0
+~
+~
+D DOWN 23835 0 0
+~
+~
+#23852
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23854 A 0
+door~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23853
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the east
+and west.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23855 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23851 0 0
+~
+~
+#23854
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which lies to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23860 A 0
+~
+~
+D SOUTH 23855 0 0
+~
+~
+D WEST 23852 A 0
+~
+~
+#23855
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the east
+and west.  Smaller hallways lie off to the north and south.
+~
+inside
+ROOM INDOORS
+D NORTH 23854 0 0
+~
+~
+D EAST 23857 0 0
+~
+~
+D SOUTH 23856 0 0
+~
+~
+D WEST 23853 0 0
+~
+~
+#23856
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor.
+A door lies to the west, and the main hallway is back to the north.
+~
+inside
+ROOM INDOORS
+D NORTH 23855 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23864 A 0
+~
+~
+#23857
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the east
+and west.  A doorway lies to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23858 0 0
+~
+~
+D SOUTH 23861 A 0
+~
+~
+D WEST 23855 0 0
+~
+~
+#23858
+Fourth Level Eastern Staircase~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the east
+and west.  In the center of the hallway, there is a wide, round glass tube
+with a gaping arched entrance; the eastern staircase.  A door lies to the
+south.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23859 0 0
+~
+~
+D SOUTH 23862 A 0
+~
+~
+D WEST 23857 0 0
+~
+~
+D UP 23870 0 0
+~
+~
+D DOWN 23842 0 0
+~
+~
+#23859
+The Fourth Floor of the Glass Tower~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air, and the scholars that
+happen to be passing through these halls seem to be in a state of perpetual
+panic and anxiety. There is little, if any audible whispering here, but
+strange chanting by unseen denizens of the tower echo throughout this floor. A
+single line of crimson marble bisects the hallway, which continues to the
+west. A door lies to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23863 A 0
+door~
+~
+D WEST 23858 0 0
+~
+~
+#23860
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23854 A 0
+door~
+~
+#23861
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23857 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23862
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23858 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23863
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23859 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23864
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+~
+D EAST 23856 A 0
+door~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23865
+A Small Room~
+The glass on this floor is completely opaque, and ranges in color from
+obsidian to cyan and copper, much of it looking as if it were stained by some
+exotic oil. A strange chemical scent fills the air. There is little, if any
+audible whispering here, but strange chanting by unseen denizens of the tower
+echo throughout this floor. Small shelves line the walls, and a crimson cabinet
+stands up against the southern wall, along with a desk and a cot that lies
+perpendicular to the cabinet against the eastern wall.
+~
+inside
+ROOM INDOORS
+D NORTH 23851 A 0
+door~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#23866
+The Fifth Floor of the Glass Tower~
+The most striking feature of this particular floor is not the beautiful
+prismatic glass that makes it up, nor is it the strange windchime-like sound
+that mingles with the faint chanting from the floor below, but the complete
+and utter absence of scholars or scholar's quarters. The entire hallway
+brightens and dims slowly, as if it should somehow be connected with the
+beating heart of the Tower, if the Tower were to have such a thing. This
+brightening and dimming would be more likened to the sun passing behind
+a field of sporadically placed clouds than an intense exhibition of magical
+power, though it is rather obvious that it is the latter.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23868 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23867 0 0
+~
+~
+#23867
+The Top of the Western Staircase~
+The most striking feature of this particular floor is not the beautiful
+prismatic glass that makes it up, nor is it the strange windchime-like sound
+that mingles with the faint chanting from the floor below, but the complete
+and utter absence of scholars or scholar's quarters. The entire hallway
+brightens and dims slowly, as if it should somehow be connected with the
+beating heart of the Tower, if the Tower were to have such a thing. This
+brightening and dimming would be more likened to the sun passing behind
+a field of sporadically placed clouds than an intense exhibition of magical
+power, though it is rather obvious that it is the latter. The staircase
+reaches its pinnacle here, the glass tube which contains it rising exactly
+half-way up to the ceiling. Below you, the swirling structure rigidly descends
+into its crystalline tomb.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23866 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D DOWN 23851 0 0
+~
+~
+#23868
+The Bottom of a Spiral Staircase~
+The most striking feature of this particular floor is not the beautiful
+prismatic glass that makes it up, nor is it the strange windchime-like sound
+that mingles with the faint chanting from the floor below, but the complete
+and utter absence of scholars or scholar's quarters. The entire hallway
+brightens and dims slowly, as if it should somehow be connected with the
+beating heart of the Tower, if the Tower were to have such a thing. This
+brightening and dimming would be more likened to the sun passing behind
+a field of sporadically placed clouds than an intense exhibition of magical
+power, though it is rather obvious that it is the latter. Another larger
+spiral staircase ascends to someplace with a dim, flickering light.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23869 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23866 0 0
+~
+~
+D UP 23650 0 0
+~
+~
+#23869
+The Fifth Floor of the Glass Tower~
+The most striking feature of this particular floor is not the beautiful
+prismatic glass that makes it up, nor is it the strange windchime-like sound
+that mingles with the faint chanting from the floor below, but the complete
+and utter absence of scholars or scholar's quarters. The entire hallway
+brightens and dims slowly, as if it should somehow be connected with the
+beating heart of the Tower, if the Tower were to have such a thing. This
+brightening and dimming would be more likened to the sun passing behind
+a field of sporadically placed clouds than an intense exhibition of magical
+power, though it is rather obvious that it is the latter.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 23870 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23868 0 0
+~
+~
+#23870
+The Top of the Eastern Staircase~
+The most striking feature of this particular floor is not the beautiful
+prismatic glass that makes it up, nor is it the strange windchime-like sound
+that mingles with the faint chanting from the floor below, but the complete
+and utter absence of scholars or scholar's quarters. The entire hallway
+brightens and dims slowly, as if it should somehow be connected with the
+beating heart of the Tower, if the Tower were to have such a thing. This
+brightening and dimming would be more likened to the sun passing behind
+a field of sporadically placed clouds than an intense exhibition of magical
+power, though it is rather obvious that it is the latter. The staircase
+reaches its pinnacle here, the glass tube which contains it rising exactly
+half-way up to the ceiling. Below you, the swirling structure rigidly descends
+into its crystalline tomb.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 23869 0 0
+~
+~
+D DOWN 23858 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 23801 TO 23801 GLIMIT 3 LLIMIT 1
+MOB 23801 TO 23803 GLIMIT 3 LLIMIT 1
+EQUIP 23820 BODY
+MOB 23815 TO 23804 GLIMIT 4 LLIMIT 1
+MOB 23800 TO 23805 GLIMIT 2 LLIMIT 1
+OBJECT 23807 TO 23805
+MOB 23814 TO 23806 GLIMIT 1 LLIMIT 1
+MOB 23801 TO 23807 GLIMIT 3 LLIMIT 1
+OBJECT 23808 TO 23808
+MOB 23815 TO 23808 GLIMIT 4 LLIMIT 1
+MOB 23815 TO 23809 GLIMIT 4 LLIMIT 1
+MOB 23800 TO 23812 GLIMIT 2 LLIMIT 1
+MOB 23811 TO 23814 GLIMIT 1 LLIMIT 1
+GIVE 23809
+GIVE 23810
+GIVE 23811
+GIVE 23812
+MOB 23809 TO 23815 GLIMIT 1 LLIMIT 1
+GIVE 23817
+GIVE 23818
+GIVE 23819
+MOB 23816 TO 23816 GLIMIT 1 LLIMIT 1
+GIVE 23813
+GIVE 23814
+GIVE 23815
+GIVE 23816
+GIVE 23806
+MOB 23808 TO 23817 GLIMIT 1 LLIMIT 1
+MOB 23802 TO 23817 GLIMIT 1 LLIMIT 1
+MOB 23803 TO 23824 GLIMIT 6 LLIMIT 1
+EQUIP 23802 BODY
+MOB 23803 TO 23828 GLIMIT 6 LLIMIT 1
+EQUIP 23802 BODY
+MOB 23803 TO 23829 GLIMIT 6 LLIMIT 1
+EQUIP 23802 BODY
+MOB 23803 TO 23830 GLIMIT 6 LLIMIT 1
+EQUIP 23802 BODY
+MOB 23803 TO 23831 GLIMIT 6 LLIMIT 1
+EQUIP 23802 BODY
+MOB 23807 TO 23832 GLIMIT 2 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23820 BODY
+MOB 23803 TO 23833 GLIMIT 6 LLIMIT 1
+EQUIP 23802 BODY
+MOB 23805 TO 23836 GLIMIT 4 LLIMIT 1
+EQUIP 23803 BODY
+MOB 23804 TO 23844 GLIMIT 2 LLIMIT 1
+EQUIP 23803 BODY
+MOB 23805 TO 23845 GLIMIT 4 LLIMIT 1
+EQUIP 23803 BODY
+MOB 23805 TO 23846 GLIMIT 4 LLIMIT 1
+EQUIP 23803 BODY
+MOB 23804 TO 23847 GLIMIT 2 LLIMIT 1
+EQUIP 23803 BODY
+MOB 23813 TO 23848 GLIMIT 1 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23820 BODY
+MOB 23805 TO 23849 GLIMIT 4 LLIMIT 1
+EQUIP 23803 BODY
+MOB 23812 TO 23852 GLIMIT 3 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23804 BODY
+MOB 23815 TO 23853 GLIMIT 4 LLIMIT 1
+MOB 23812 TO 23860 GLIMIT 3 LLIMIT 1
+EQUIP 23804 BODY
+MOB 23812 TO 23861 GLIMIT 3 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23804 BODY
+MOB 23806 TO 23862 GLIMIT 3 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23804 BODY
+MOB 23806 TO 23863 GLIMIT 3 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23804 BODY
+MOB 23807 TO 23864 GLIMIT 2 LLIMIT 1
+EQUIP 23801 HOLD
+EQUIP 23800 LFINGER
+EQUIP 23820 BODY
+MOB 23806 TO 23865 GLIMIT 3 LLIMIT 1
+EQUIP 23800 LFINGER
+EQUIP 23804 BODY
+S
+
+#IMPROGS
+A sun_prog sun_prog_glasstower
+M 23809 greet_prog greet_prog_tower_shopkeeper
+M 23811 greet_prog greet_prog_drow_scribe
+M 23811 give_prog give_prog_drow_scribe
+M 23811 speech_prog speech_prog_drow_scribe
+M 23813 greet_prog greet_prog_profteacher
+END
+#SPECS
+END
+#$

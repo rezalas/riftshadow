@@ -1,0 +1,3496 @@
+#AREA
+iceland1.are~
+Arwitha~
+Gawinn~
+15 45
+28800 28899
+normal
+alpine
+0
+1
+Kloshen~
+
+#MOBS
+#28800
+frost troll~
+a lumbering frost troll~
+A massive frost troll lumbers through the wastes.
+~
+A miserable troll stands before you.  Torn leather armor covers the
+majority of the beasts body.  His skin is a dull gray stoney pallor, with
+tiny crystals of ice clinging in spots.  
+~
+-1000 0 0 wolf~
+40 40d8+2464 4d8+23 0 100 slash
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF PARRY
+IMM DROWNING
+RES BASH
+RES SLASH
+RES COLD
+VUL MAGIC
+VUL FIRE
+LIMIT 28800 28899
+NOTES ~
+#28801
+magi troll frost~
+a frost troll magi~
+A repugnant frost troll wanders through the area in search of reagents.
+~
+A repugnant troll stands before you.  Leather armor covers most of his
+body.  You notice a leather belt around his waste with drying reagents
+hanging from it.  
+~
+-1000 0 0 wolf~
+45 45d8+3177 4d8+10 0 100 claw
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT MAGE
+IMM DROWNING
+RES COLD
+VUL FIRE
+C 'icelance'
+#28802
+arctice fox white~
+an arctic fox~
+A small white fox moves nimbly through the rocks.
+~
+A small fox with a thick white coat of fur is before you.  You notice its
+sharp fangs peaking out from its upper lip.  Its legs are thin and nimble
+and his eyes are a crystal blue.  
+~
+-1000 0 0 wolf~
+19 9d8+544 2d7+5 0 100 bite
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT STAY_AREA
+ACT NOCTURNAL
+ACT FASTWANDER
+RES COLD
+VUL FIRE
+#28803
+barbarian man stocky~
+a stocky barbarian~
+A stocky man clothed in various types of furs crouches here.
+~
+A stocky fellow covered nearly head to two in a mismatch of furs.  His
+face is smudged with dirt and rugged.  He's a sturdy looking man with a
+determined look in his eye.  
+~
+0 0 0 human~
+35 35d8+1867 8d7+33 0 100 smash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF KICK
+OFF PARRY
+#28804
+barbarian slender man~
+a slender barbarian~
+A slender barbarian leans agains the rock here, muttering something to himself.
+~
+A slender looking man with a noticable scar running down the side of his
+face.  He appears to be wearing a permanant look of disgust upon his face. 
+He is clothed head to toe in charcoal grey fur with a hide belt sinched
+about his waste.  
+~
+0 0 0 human~
+35 35d8+1867 8d7+33 0 100 crush
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF KICK
+#28805
+lord barbarian sturdy~
+Lutfing the Barbarian Lord~
+A sturdy looking man stands here proudly wearing an iron crown.
+~
+A sturdy looking man with a gruff face and a square jaw is before you. 
+He is clothed in worn white fur with several studded straps around his
+chest.  A simple iron crown sits regally upon his head.  
+~
+0 0 0 human~
+45 45d8+3177 5d8+30 5 100 punch
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DODGE
+OFF PARRY
+#28806
+rugged barbarian~
+a rugged barbarian~
+A rugged looking barbarian stands here attending to his post.
+~
+A common looking barbarian stands here clothed in brownish furs.  His
+face is worn and rugged from the harsh elements of the out of doors.  
+~
+0 0 0 human~
+35 35d8+1867 8d8+20 0 100 chop
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF ASSIST_VNUM
+#28807
+snow leopard~
+a snow leopard~
+A sleek white leopard sits here surveying the area.
+~
+A thick white coat with small dark spots covers this sleek leopard.  It's
+muscles ripple beneath is thick coat, and you notice its sharp claws
+protruding from its feet.  
+~
+0 0 0 wolf~
+37 37d8+2093 8d8+10 0 100 bite
+0 0 0 0
+sitting female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SMARTTRACK
+RES COLD
+#28808
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#28800
+club gnarled wooden wood~
+a gnarled wooden club~
+A gnarled piece of wood lies here on the ground.~
+weapon
+wood~
+mace 5 8 crush 0
+30 12 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+VERB none
+TIMER 0
+
+#28801
+fur cloak pile~
+a dirty fur robe~
+A large pile of fur and skin lies here.~
+armor
+fur~
+3 4 3 1 0
+20 15 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM DARK
+APPLY HP 10
+APPLY HITROLL 2
+APPLY DAMROLL 3
+LIMIT 5
+TIMER 0
+NOTES ~
+
+#28802
+fire~
+a small fire~
+A small fire crackles here in the middle of the cave.~
+trash
+fire~
+0 0 0 0 0
+1 0 0 P
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#28803
+flail leather barbed~
+a barbed leather flail~
+A mass of barbed leather straps lies here attached to a battered wooden handle.~
+weapon
+leather~
+flail 5 8 thwack 0
+35 10 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#28804
+halberd wrought iron~
+a wrought iron halberd~
+A long wooden pole with a blade of wrought iron lies on the ground here.~
+weapon
+iron~
+polearm 5 8 chop 0
+35 16 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#28805
+arwithan battle axe~
+an arwithan battle axe~
+A beautifully crafted battle axe glimmers on the ground here.~
+weapon
+steel~
+axe 6 8 slice 0
+45 14 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 3
+LIMIT 5
+TIMER 0
+
+#28806
+pelt snow leopard fur~
+a snow leopard's pelt~
+A heap of white fur lies on the ground here.~
+armor
+fur~
+3 6 5 7 0
+37 5 0 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DAMROLL 2
+LIMIT 14
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#28800
+A Snowy Plain~
+A vast open plain covered in fluffy white snow as far as the eye can see.
+Animal tracks can be seen far out into the plains in all directions, mostly
+converging towards the south.  Snow covered cliffs rise up swiftly towards
+the north, east and west leaving a single exit.  A densely packed trail
+matted down by a mix of humanoid footprints and animal tracks leads to the
+south.  
+~
+snow
+ROOM NO_MOB
+D NORTH 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D EAST 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.  
+~
+D SOUTH 28801 0 0
+~
+A small trail of densely packed snow.
+~
+D WEST 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D DOWN 0 0 0
+door~
+Footprints of all sorts overlap each other packing the snow.  
+~
+OWNER none~
+#28801
+A Snowy Plain~
+A vast open plain covered in fluffy white snow as far as the eye can see.
+Animal tracks can be seen far out into the plains in all directions, mostly
+converging towards the north.  Snow covered cliffs rise up swiftly towards
+the east opening onto a large plateau reaching out towards the west.  A
+densely packed trail matted down by a mix of humanoid footprints and animal
+tracks leads from the north.  
+~
+snow
+D NORTH 28800 0 0
+~
+A thin trail of densely packed snow.
+~
+D EAST 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D SOUTH 28803 0 0
+~
+The snowy ground is covered with a thin surface of ice.  
+~
+D WEST 28802 0 0
+~
+A wide open plain covered in loose snow.  
+~
+D DOWN 0 0 0
+door~
+Footprints of all sorts overlap each other packing the snow.  
+~
+OWNER none~
+#28802
+A Snowy Plain~
+A vast open plain covered in fluffy white snow as far as the eye can see.
+Animal tracks can be seen far out into the plains in all directions, mostly
+converging towards the east.  Snow covered cliffs rise up swiftly towards
+the north, east and south leaving a single exit.  A densely packed trail
+matted down by a mix of humanoid footprints and animal tracks leads to the
+east.  
+~
+snow
+D NORTH 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D EAST 28801 0 0
+~
+~
+D SOUTH 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D WEST 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D DOWN 0 0 0
+door~
+Footprints of all sorts overlap each other packing the snow.  
+~
+OWNER none~
+#28803
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the east and
+west.  Chunks of ice are missing sporadically, gouged out in a semi-circular
+four pointed pattern.  A slight incline can be felt towards the east, making
+travel in that direction a little difficult on the slippery surface.  A
+large thick wall of ice rises swiftly towards the south blocking it
+completely off.  
+~
+ice
+D NORTH 28801 0 0
+~
+Snow covers a large plateau.
+~
+D EAST 28804 0 0
+~
+An ice covered path continues towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 28810 0 0
+~
+An ice covered path continues towards the west.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.
+~
+OWNER none~
+#28804
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the south and
+west.  Chunks of ice are missing sporadically, gouged out in a semi-circular
+four pointed pattern.  A slight incline can be felt towards the south,
+making travel in that direction a little difficult on the slippery surface. 
+A large thick wall of ice rises swiftly towards the north and east blocking
+it completely off.  
+~
+ice
+D NORTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 28805 0 0
+~
+An ice covered path rises slightly towards the south.  
+~
+D WEST 28803 0 0
+~
+An ice covered path continues towards the west.  
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.  
+~
+OWNER none~
+#28805
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the north and
+east.  Chunks of ice are missing sporadically, gouged out in a semi-circular
+four pointed pattern.  A slight incline can be felt towards the east, making
+travel in that direction a little difficult on the slippery surface.  A
+large thick wall of ice rises swiftly towards the south and west blocking it
+completely off.  
+~
+ice
+D NORTH 28804 0 0
+~
+An ice covered path declines slightly towards the north.
+~
+D EAST 28806 0 0
+~
+An ice covered path rises slightly towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.
+~
+OWNER none~
+#28806
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the north and
+west.  Chunks of ice are missing sporadically, gouged out in a semi-circular
+four pointed pattern.  A slight incline can be felt towards the north,
+making travel in that direction a little difficult on the slippery surface. 
+A large thick wall of ice rises swiftly towards the south and east blocking
+it completely off.  
+~
+ice
+D NORTH 28807 0 0
+~
+An ice covered path rises slightly towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 28805 0 0
+~
+An ice covered path declines slightly towards the west.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.
+~
+OWNER none~
+#28807
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the north and
+south.  Chunks of ice are missing sporadically, gouged out in a
+semi-circular four pointed pattern.  A slight incline can be felt towards
+the north, making travel in that direction a little difficult on the
+slippery surface.  A large thick wall of ice rises swiftly towards the west
+and east blocking it completely off.  
+~
+ice
+D NORTH 28808 0 0
+~
+An ice covered path rises slightly towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 28806 0 0
+~
+An ice covered path declines slightly towards the south.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.  
+~
+OWNER none~
+#28808
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the east and
+south.  Chunks of ice are missing sporadically, gouged out in a
+semi-circular four pointed pattern.  A steep incline can be felt towards the
+east, making travel in that direction difficult on the slippery surface.  A
+large thick wall of ice rises swiftly towards the west and north blocking it
+completely off.  
+~
+ice
+D NORTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D EAST 28809 0 0
+~
+An ice covered path rises towards the east.
+~
+D SOUTH 28807 0 0
+~
+An ice covered path declines slightly towards the south.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.  
+~
+OWNER none~
+#28809
+An Icy Cave~
+A large naturally formed crevice made from thick flows of ice.  The walls
+and floor are made from thick ropey flows of ice.  The flow of the ice
+follows the sloped surface of the floor to the west.  Large thick icicles
+hang down from the ceiling, some reaching the floor to make thick pillars. 
+The ice is pristine allowing you to see completely through the pillars with
+little blurring.  
+~
+ice
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A thick surface of transparent ice.
+~
+D EAST 0 0 0
+door~
+A thick surface of transparent ice.
+~
+D SOUTH 0 0 0
+door~
+A thick surface of transparent ice.
+~
+D WEST 28808 0 0
+~
+An ice covered path falls quickly towards the west.
+~
+D UP 0 0 0
+door~
+Large icicles pepper the entire ceiling.
+~
+D DOWN 0 0 0
+door~
+A thick surface of transparent ice steeply sloped towards the west.  
+~
+OWNER none~
+#28810
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the east and
+west.  Chunks of ice are missing sporadically, gouged out in a semi-circular
+four pointed pattern.  A slight incline can be felt towards the east, making
+travel in that direction a little difficult on the slippery surface.  Large
+thick walls of ice rise swiftly in the north and south.  
+~
+ice
+D NORTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D EAST 28803 0 0
+~
+An ice covered path rises slightly towards the east.  
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 28811 0 0
+~
+An ice covered path continues towards the west.  
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.  
+~
+OWNER none~
+#28811
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the north and
+south.  Chunks of ice are missing sporadically, gouged out in a
+semi-circular four pointed pattern.  A slight incline can be felt towards
+the east, making travel in that direction a little difficult on the slippery
+surface.  A large thick wall of ice rises swiftly towards the south blocking
+it completely off.  
+~
+ice
+D NORTH 28812 0 0
+~
+Snow covers a large plateau.
+~
+D EAST 28810 0 0
+~
+An ice covered path rises slightly towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 28813 0 0
+~
+An ice covered path declines slightly towards the west.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.  
+~
+OWNER none~
+#28812
+A Snowy Plain~
+A vast open plain covered in fluffy white snow as far as the eye can see.
+Animal tracks can be seen far out into the plains in all directions, mostly
+converging towards the south.  Snow covered cliffs rise up swiftly towards
+the north, east and west leaving a single exit.  A densely packed trail
+matted down by a mix of humanoid footprints and animal tracks leads to the
+south.  
+~
+snow
+D NORTH 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D EAST 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D SOUTH 28811 0 0
+~
+The snow is densely packed into a small trail.
+~
+D WEST 0 0 0
+door~
+A snow covered cliff rises swiftly blocking any travel.
+~
+D DOWN 0 0 0
+door~
+Footprints of all sorts overlap each other packing the snow.  
+~
+OWNER none~
+#28813
+An Icy Stretch~
+Hard exposed granite is covered with a thick layer of clear ice.  Small
+scratches mar the surface of the ice in twisted lines from the north and
+south.  Chunks of ice are missing sporadically, gouged out in a
+semi-circular four pointed pattern.  A slight incline can be felt towards
+the east, making travel in that direction a little difficult on the slippery
+surface.  A large thick wall of ice rises swiftly towards the north and west
+blocking it completely off.  
+~
+ice
+D NORTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D EAST 28811 0 0
+~
+An ice covered path rises slightly towards the east.
+~
+D SOUTH 28814 0 0
+~
+Snow covers a path to the south.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A thick layer of ice completely covers the exposed granite.
+~
+OWNER none~
+#28814
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  The snow turns to thick ice towards the north.
+~
+snow
+D NORTH 28813 0 0
+~
+An ice covered path rises slightly towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 28815 0 0
+~
+Snow covers a path to the west.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the ground.
+~
+OWNER none~
+#28815
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  The snow becomes scarcer towards the south,
+exposing the hard packed soil underneath.  
+~
+snow
+D NORTH 28816 0 0
+~
+Snow covers a path to the north.
+~
+D EAST 28814 0 0
+~
+Snow covers a path to the east.
+~
+D SOUTH 28823 0 0
+~
+The path continues out of the snow to the south.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the ground.
+~
+OWNER none~
+#28816
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A sheer wall of thick ice rises swiftly to the
+east and curves around to the north.  A large crevice penetrates the wall of
+ice to the north.  
+~
+snow
+D NORTH 28817 0 0
+~
+A large crevice mars the surface of a large wall of ice.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 28815 0 0
+~
+The path continues to the south.
+~
+D WEST 28818 0 0
+~
+The path continues to the west.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the ground.
+~
+OWNER none~
+#28817
+An Icy Cave~
+A large naturally formed crevice made from thick flows of ice.  The walls
+and floor are made from thick ropey flows of ice.  The flow of the ice
+follows the sloped surface of the floor to the west.  Large thick icicles
+hang down from the ceiling, some reaching the floor to make thick pillars. 
+The ice is pristine allowing you to see completely through the pillars with
+little blurring.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A thick surface of transparent ice blocks any travel.
+~
+D EAST 0 0 0
+door~
+A thick surface of transparent ice blocks any travel.
+~
+D SOUTH 28816 0 0
+~
+~
+D WEST 0 0 0
+door~
+A thick surface of transparent ice blocks any travel.
+~
+D UP 0 0 0
+door~
+Large icicles pepper the entire ceiling.
+~
+D DOWN 0 0 0
+door~
+Rivulets of frozen water run along the barren rock.  
+~
+OWNER none~
+#28818
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A rough surface of thick ice slowly flows from
+the north attempting to swallow the path.  
+~
+snow
+D NORTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D EAST 28816 0 0
+~
+A snow covered path continues towards the east.
+~
+D SOUTH 28819 0 0
+~
+Snow covers a small plateau.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the ground.
+~
+OWNER none~
+#28819
+A Snowy Plateau~
+The hard frozen ground is lightly covered with a thin layer of fluffy
+snow.  Peppered throughout, small wisps of vegetation poke up from the snow.
+Frost boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A rough surface of thick ice blocks any travel
+towards the east.  
+~
+snow
+D NORTH 28818 0 0
+~
+Snow covers a small path leading towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 28824 0 0
+~
+A rocky path leads off towards the south.
+~
+D WEST 28820 0 0
+~
+Snow covered ground continues towards the west.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the hard rock.
+~
+OWNER none~
+#28820
+A Snowy Path~
+The hard frozen ground is lightly covered with a thin layer of fluffy
+snow.  Peppered throughout, small wisps of vegetation poke up from the snow.
+Frost boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  Large thick sheets of ice flow from the south
+towards the west blocking any travel.  
+~
+snow
+D NORTH 28821 0 0
+~
+A snow covered path continues towards the north.
+~
+D EAST 28819 0 0
+~
+A snow covered path continues towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the ground.
+~
+OWNER none~
+#28821
+A Snowy Path~
+The hard frozen ground is lightly covered with a thin layer of fluffy
+snow.  Peppered throughout, small wisps of vegetation poke up from the snow.
+Frost boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  Large thick sheets of ice flow along the
+eastern and western sides creating the feeling of being funneled towards
+something.  
+~
+snow
+D NORTH 28822 0 0
+~
+A large crevice cuts into the wall of ice.
+~
+D EAST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D SOUTH 28820 0 0
+~
+A snow covered path continues towards the south.
+~
+D WEST 0 0 0
+door~
+A sheer wall of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A light layer of snow covers the ground.
+~
+OWNER none~
+#28822
+An Icy Cave~
+A large naturally formed crevice made from thick flows of ice.  The walls
+and floor are made from thick ropey flows of ice.  The flow of the ice
+follows the sloped surface of the floor to the west.  Large thick icicles
+hang down from the ceiling, some reaching the floor to make thick pillars. 
+The ice is pristine allowing you to see completely through the pillars with
+little blurring.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A thick surface of transparent ice blocks any travel.
+~
+D EAST 0 0 0
+door~
+A thick surface of transparent ice blocks any travel.
+~
+D SOUTH 28821 0 0
+~
+A large crevice cuts through the wall of ice.
+~
+D WEST 0 0 0
+door~
+A thick surface of transparent ice blocks any travel.
+~
+D UP 0 0 0
+door~
+Large icicles pepper the entire ceiling.
+~
+D DOWN 0 0 0
+door~
+Rivulets of frozen water run along the barren rock.
+~
+OWNER none~
+#28823
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running north
+south.  The rock itself is a non-descript dull grey spotted throughout with
+black flecks and little crystals that twinkle in the light.  A sheer cliff
+face rises swiftly to the east with the same deep grooves marring the
+surface.  
+~
+mountains
+D NORTH 28815 0 0
+~
+Snow lightly covers the path towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28824 0 0
+~
+The path continues on towards the west.
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28824
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running north
+south.  The rock itself is a non-descript dull grey spotted throughout with
+black flecks and little crystals that twinkle in the light.  A sheer cliff
+face rises swiftly to the east with the same deep grooves marring the
+surface.  
+~
+mountains
+D NORTH 28819 0 0
+~
+Snow lightly covers the path towards the north.
+~
+D EAST 28823 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 28825 0 0
+~
+A refreshing breeze flows in from a pool of water.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28825
+A Windswept Crossroads~
+The ground is hard-packed and frozen here, riddled with cracks produced
+from years of wear.  Bleach-white bones can be seen sticking half way out of
+the ground, suggesting the crossroads is perhaps less than harmless.  Paths
+lead off in all directions, into the grayish haze of the wastes.  
+~
+mountains
+D NORTH 28824 0 0
+~
+The path continues on towards the north.
+~
+D EAST 28897 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 28829 0 0
+~
+The path continues on towards the south.
+~
+D WEST 28826 0 0
+~
+The path continues on towards the west.
+ 
+~
+D DOWN 0 0 0
+door~
+Hard packed dirt and rock form a smooth surface at the crossroads.
+~
+OWNER none~
+#28826
+A Small Trail~
+The thin trail carves through the cliffs winding its way from the west
+towards the east.  Small patches of a soft scaly green splash the surface of
+the rock in a haphazard pattern.  As the trail progresses towards the east
+the green patches increase in size and density, to the point that both the
+northern and southern walls are entirely covered.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer cliff covered in patches of scaly green vegetation.  
+~
+D EAST 28825 0 0
+~
+The cliffs open up towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer cliff covered in patches of scaly green vegetation.
+~
+D WEST 28827 0 0
+~
+The trail winds its way towards the west, the cliffs closing in on the
+trail.  
+~
+D DOWN 0 0 0
+door~
+Patches of scaly green material cling tenaciously to the rocky ground.  
+~
+OWNER none~
+#28827
+A Small Trail~
+The thin trail carves through the cliffs winding its way from the north
+towards the east.  Small patches of a soft scaly green splash the surface of
+the rock in a haphazard pattern.  As the trail progresses towards the east
+the green patches increase in size and density.  The rock itself is a dull
+grey with small black flecks peppered throughout, and uninteresting.  
+~
+trail
+D NORTH 28828 0 0
+~
+The trail winds its way towards the north, the cliffs closing in on the
+trail.  
+~
+D EAST 28826 0 0
+~
+The cliffs open up towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly green vegetation.  
+~
+D WEST 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly green vegetation.  
+~
+D DOWN 0 0 0
+door~
+Patches of scaly green material cling tenaciously to the rocky ground.  
+~
+OWNER none~
+#28828
+A Bend in the Trail~
+The trail thins here, and cliffs being to rise up on either side.  The
+underbrush becomes more sparse, giving way to soft scaly green moss.  The
+ammount of bare rocks increases, strewn about the area in a haphazard
+manner.  The rock itself is a dull grey with small black flecks peppered
+throughout.  
+~
+trail
+D NORTH 0 0 0
+door~
+Sheer rock blocks any passage to the north.
+~
+D EAST 0 0 0
+door~
+Cliffs rise up sharply in this direction.
+~
+D SOUTH 28827 0 0
+~
+The trail continues in this direction.
+~
+D WEST 24810 0 0
+door~
+The trail widens in this direction.
+~
+D DOWN 0 0 0
+door~
+Dark, cracked rock lies crumbling across the ground here.
+~
+OWNER none~
+#28829
+A Moss Covered Path~
+The thin trail carves through the cliffs winding its way from the north
+towards the east.  Small patches of a soft scaly green splash the surface of
+the rock in a haphazard pattern.  As the trail progresses towards the east
+the green patches increase in size and density.  The rock itself is a dull
+grey with small black flecks peppered throughout, and uninteresting.  
+~
+trail
+D NORTH 28825 0 0
+~
+The rocky ground leads to a large pool of water.
+~
+D EAST 28830 0 0
+~
+The rough path continues to the east.
+~
+D SOUTH 0 0 0
+door~
+A large rocky outcrop lies across a deep crevice.  
+~
+D WEST 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly green vegetation.  
+~
+D DOWN 0 0 0
+door~
+Patches of scaly green material cling tenaciously to the rocky ground.  
+~
+OWNER none~
+#28830
+A Moss Covered Path~
+The thin trail carves through the cliffs winding its way from the west
+towards the south.  Small patches of a soft scaly green splash the surface
+of the rock in a haphazard pattern.  As the trail progresses towards the
+south the green patches increase in size and density.  The rock itself is a
+dull grey with small black flecks peppered throughout, and uninteresting.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly green vegetation.  
+~
+D EAST 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly green vegetation.  
+~
+D SOUTH 28831 0 0
+~
+The cliffs open up towards the south.
+~
+D WEST 28829 0 0
+~
+The trail winds its way towards the west, the cliffs closing in on the
+trail.  
+~
+D DOWN 0 0 0
+door~
+Patches of scaly green material cling tenaciously to the rocky ground.  
+~
+OWNER none~
+#28831
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open in all directions and you can see
+around you for vast distances, save towards the south where a large jutting
+rock reaches towards the heavens.  
+~
+mountains
+D NORTH 28830 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D EAST 28840 0 0
+~
+The open ground continues, the moss appears to have been stopped by an
+invisible wall.  
+~
+D SOUTH 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly green moss.  
+~
+D WEST 28832 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven grey rock press against each other in a gigantic
+struggle.  
+~
+OWNER none~
+#28832
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open in all directions and you can see
+around you for vast distances, save towards the north where a large jutting
+rock reaches towards the heavens.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly green moss.  
+~
+D EAST 28831 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D SOUTH 28834 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D WEST 28833 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven grey rock press against each other in a gigantic
+struggle.  
+~
+OWNER none~
+#28833
+A Moss Covered Canyon~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The cliffs surround this small canyon, in a slow
+attempt to swallow it completely.  The rock rising around you appears to be
+vibrating with power.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A large slab of rock juts upwards, covered in scaly green moss.  The rock
+vibrates slightly to the touch.  
+~
+D EAST 28832 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D SOUTH 0 0 0
+door~
+A large slab of rock juts upwards, covered in scaly green moss.  
+~
+D WEST 0 0 0
+door~
+A large slab of rock juts upwards, covered in scaly green moss.  The rock
+vibrates slightly to the touch.  
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven grey rock press against each other in a gigantic
+struggle.  
+~
+OWNER none~
+#28834
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open in all directions and you can see
+around you for vast distances, save towards the south where a large jutting
+rock reaches towards the heavens.  
+~
+mountains
+D NORTH 28832 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D EAST 28836 0 0
+~
+The open ground continues, the moss appears to have been stopped by an
+invisible wall.  
+~
+D SOUTH 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly green moss.  
+~
+D WEST 28835 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven grey rock press against each other in a gigantic
+struggle.  
+~
+OWNER none~
+#28835
+A Peaceful Canyon~
+Lush green grass grows thickly, covering the ground in a thick velvety
+carpet.  Steeply rising cliffs surround this small paradise on all sides,
+save the east.  Thick ropey vines climb high among the cliffs, dangling in
+the breeze reaching towards the ground.  The grass is matted in the far
+north west corner in a large circular shape.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A large slab of rock juts upwards, covered in scaly green moss.  The rock
+vibrates slightly to the touch.  
+~
+D EAST 28834 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D SOUTH 0 0 0
+door~
+A large slab of rock juts upwards, covered in scaly green moss.  
+~
+D WEST 0 0 0
+door~
+A large slab of rock juts upwards, covered in scaly green moss.  The rock
+vibrates slightly to the touch.  
+~
+D DOWN 0 0 0
+door~
+Lush green grass grows thickly, softening each step.  
+~
+OWNER none~
+#28836
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running east west.
+The rock itself is a non-descript dull grey spotted throughout with black
+flecks and little crystals that twinkle in the light.  Not a single piece of
+vegetation even attempts to grow on this desolate rock.  A sheer cliff face
+rises swiftly to the north with the same deep grooves marring the surface.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28841 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 28837 0 0
+~
+The path continues on towards the south.
+~
+D WEST 28834 0 0
+~
+Small flecks of scaly green pepper the path.
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28837
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running east west.
+The rock itself is a non-descript dull grey spotted throughout with black
+flecks and little crystals that twinkle in the light.  Not a single piece of
+vegetation even attempts to grow on this desolate rock.  A sheer cliff face
+rises swiftly to the east and west with the same deep grooves marring the
+surface.  
+~
+trail
+D NORTH 28836 0 0
+~
+The path continues on towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 28838 0 0
+~
+The path continues on towards the south.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28838
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running east west.
+The rock itself is a non-descript dull grey spotted throughout with black
+flecks and little crystals that twinkle in the light.  Not a single piece of
+vegetation even attempts to grow on this desolate rock.  A sheer cliff face
+rises swiftly to the south and west with the same deep grooves marring the
+surface.  
+~
+trail
+D NORTH 28837 0 0
+~
+The path continues on towards the north.
+~
+D EAST 28839 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28839
+A Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The great grooves stop abrutly near the entrance to the cave.  The rock
+itself is non-descript dull grey, and spotted throughout with black flecks
+and little crystals that twinkle in the almost nonexisitent light.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The dark, cold walls of the cave.
+~
+D EAST 0 0 0
+door~
+The dark, cold walls of the cave.
+~
+D SOUTH 0 0 0
+door~
+The dark, cold walls of the cave.
+~
+D WEST 28838 0 0
+~
+Light can be seen in this direction, towards the mouth of the cave.
+~
+D UP 0 0 0
+door~
+Dark jagged rocks hang down from the ceiling of the cave.
+~
+D DOWN 0 0 0
+door~
+Dark jagged rock covers the floor of the cave.
+~
+OWNER none~
+#28840
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running east west.
+The rock itself is a non-descript dull grey spotted throughout with black
+flecks and little crystals that twinkle in the light.  Not a single piece of
+vegetation even attempts to grow on this desolate rock.  A sheer cliff face
+rises swiftly to the north and east with the same deep grooves marring the
+surface.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 28841 0 0
+~
+The path continues on towards the south.
+~
+D WEST 28831 0 0
+~
+A path covered in scaly green moss continues towards the west.  
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28841
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running east west.
+The rock itself is a non-descript dull grey spotted throughout with black
+flecks and little crystals that twinkle in the light.  Not a single piece of
+vegetation even attempts to grow on this desolate rock.  A sheer cliff face
+rises swiftly to the south with the same deep grooves marring the surface.  
+~
+trail
+D NORTH 28840 0 0
+~
+The path continues on towards the north.
+~
+D EAST 28842 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28836 0 0
+~
+The path continues on towards the west.
+~
+D DOWN 0 0 0
+door~
+A flat surface of dull grey rock.  Little flashes twinkle about the
+ground.  
+~
+OWNER none~
+#28842
+A Barren Outcrop~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28852 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 28843 0 0
+~
+The path continues on towards the south.
+~
+D WEST 28841 0 0
+~
+The path continues on towards the west.
+~
+D DOWN 0 0 0
+door~
+The ground is split in two, with the grey rock from the north buckling
+into itself.  
+~
+OWNER none~
+#28843
+A Barren Outcrop~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+mountains
+D NORTH 28842 0 0
+~
+The path continues on towards the north.
+~
+D EAST 28845 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 28844 0 0
+~
+The path continues on towards the south.
+~
+D WEST 0 0 0
+door~
+A solid wall of rock blocks the way west.
+~
+D DOWN 0 0 0
+door~
+Sundered rock of two types form the rough terrain here.
+~
+OWNER none~
+#28844
+A Small Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 28843 0 0
+~
+Light can be seen in the direction of the cave's mouth.
+~
+D EAST 0 0 0
+door~
+Dark, cold rock forms the walls of the cave.
+~
+D SOUTH 0 0 0
+door~
+Dark, cold rock forms the walls of the cave.
+~
+D WEST 0 0 0
+door~
+Dark, cold rock forms the walls of the cave.
+~
+D UP 0 0 0
+door~
+Dark, jagged rocks hang from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+Dark, moist rock covers the floor of the cave.
+~
+OWNER none~
+#28845
+A Moss Covered Path~
+The thin trail carves through the cliffs winding its way from the west
+towards the south.  Small patches of a soft scaly yellow splash the surface
+of the rock in a haphazard pattern.  As the trail progresses towards the
+east, the yellow patches increase in size and density.  The rock itself is a
+deep red with small black flecks peppered throughout, and uninteresting.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly yellow vegetation.  
+~
+D EAST 28846 0 0
+~
+The trail winds its way towards the east, the cliffs closing in on the
+trail.  
+~
+D SOUTH 0 0 0
+door~
+A sheer cliff spotted with small patches of scaly yellow vegetation.  
+~
+D WEST 28843 0 0
+~
+The trail winds its way towards the west, the cliffs closing in on the
+trail.  
+~
+D DOWN 0 0 0
+door~
+Patches of scaly yellow material cling tenaciously to the rocky ground.  
+~
+OWNER none~
+#28846
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards the south.  The rock face
+towards the north sweeps along, gently sloping down along the east towards
+the south.  A small, dark crevice stabs deeply into the eastern wall.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly yellow moss.  
+~
+D EAST 28849 0 0
+~
+A small dark crevice opens into the rock face.  The moss stops abruptly
+by the crevice.  
+~
+D SOUTH 28847 0 0
+~
+A large slab of rock jutting upwards, covered in scaly yellow moss.  
+~
+D WEST 28845 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven red rock press against each other in a gigantic
+struggle.  
+~
+OWNER none~
+#28847
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards the north.  The rock face
+towards the east sweeps along, gently sloping down along the south and
+finally curving back towards the north.  A dark crevice stabs deeply into
+the western wall.  
+~
+mountains
+D NORTH 28846 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D EAST 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly yellow moss.  
+~
+D SOUTH 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly yellow moss.  
+~
+D WEST 28848 0 0
+~
+A small dark crevice opens into the rock face.  The moss stops abruptly
+by the crevice.  
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven red rock press against each other in a gigantic
+struggle.  
+~
+OWNER none~
+#28848
+A Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Dark, cold rock makes of the walls of the cave here.
+~
+D EAST 28847 0 0
+~
+The mouth of the cave can be seen in this direction.
+~
+D SOUTH 0 0 0
+door~
+Dark, cold rock makes of the walls of the cave here.
+~
+D WEST 0 0 0
+door~
+Dark, cold rock makes of the walls of the cave here.
+~
+D UP 0 0 0
+door~
+Dark, jagged rock hangs from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+Moist rock shimmers on the cave floor here.
+~
+OWNER none~
+#28849
+Entrance to a Large Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light. 
+Ominous sounds echo off the cold dead stone, reverberating through the damp
+air of the cave.  The dim light of the outside world can be seen off to the
+west.  
+~
+mountains
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D EAST 28850 0 0
+~
+The cave continues deeper in this direction.
+~
+D SOUTH 28851 0 0
+~
+The cave continues deeper in this direction.
+~
+D WEST 28846 0 0
+~
+The mouth of the cave can be seen in this direction.
+~
+D DOWN 0 0 0
+door~
+Dark, moist rock glistens on the cave floor.
+~
+OWNER none~
+#28850
+A Large Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light. 
+Ominous sounds echo off the cold dead stone, reverberating through the damp
+air of the cave.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D EAST 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D SOUTH 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D WEST 28849 0 0
+~
+The cave continues in this direction.
+~
+D DOWN 0 0 0
+door~
+Dark, moist rock glistens on the cave floor.
+~
+OWNER none~
+#28851
+A Large Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light. 
+Ominous sounds echo off the cold dead stone, reverberating through the damp
+air of the cave.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 28849 0 0
+~
+The cave continues in this direction.
+~
+D EAST 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D SOUTH 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D WEST 0 0 0
+door~
+Dark, cool rock forms the walls of the caves.
+~
+D DOWN 0 0 0
+door~
+Dark, moist rock glistens on the cave floor.
+~
+OWNER none~
+#28852
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 28883 0 0
+~
+The path continues on towards the north.
+~
+D EAST 28853 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28842 0 0
+~
+The path continues on towards the west.
+~
+D DOWN 0 0 0
+door~
+The ground is split in two, with the grey rock from the north buckling
+into itself.  
+~
+OWNER none~
+#28853
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  Haggard cliffs rise to the
+north and south made from the same rock as the ground.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28854 0 0
+~
+The path continues on towards the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28852 0 0
+~
+The path continues on towards the west.
+~
+D DOWN 0 0 0
+door~
+The ground is split in two, with the grey rock from the north buckling
+into itself.  
+~
+OWNER none~
+#28854
+A Rocky Outcrop~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+mountains
+D NORTH 28855 0 0
+~
+The path continues on towards the north.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28853 0 0
+~
+The path continues on towards the west.
+~
+D DOWN 0 0 0
+door~
+The ground is split in two, with the grey rock from the north buckling
+into itself.  
+~
+OWNER none~
+#28855
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards the east and south, and
+you can see around you for vast distances.  Towards the north and west large
+jutting rocks reach toward the heavens blocking travel.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly yellow moss.  
+~
+D EAST 28856 0 0
+~
+The open ground continues, covered in the same colorful moss.  
+~
+D SOUTH 28854 0 0
+~
+The path continues towards the south.
+~
+D WEST 0 0 0
+door~
+A large slab of rock jutting upwards, covered in scaly yellow moss.  
+~
+D DOWN 0 0 0
+door~
+Large sections of uneven red rock press against each other in a gigantic
+struggle, covered in a light yellow moss.  
+~
+OWNER none~
+#28856
+A Moss Covered Junction~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards all directions save the
+east.  The rock face towards the north sweeps along, gently sloping down
+along the east towards the south.  A sheer wall of rock rises up sharply to
+the east.  
+~
+mountains
+D NORTH 28863 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D EAST 0 0 0
+door~
+A wall of solid rock rises up in this direction.
+~
+D SOUTH 28857 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D WEST 28855 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D DOWN 0 0 0
+door~
+The rock here is jagged and covered in several colors of rough moss.
+~
+OWNER none~
+#28857
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards the south.  The rock face
+towards the north sweeps along, gently sloping down along the east towards
+the south.  A small, dark crevice stabs deeply into the eastern wall.  
+~
+mountains
+D NORTH 28856 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D EAST 28858 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D SOUTH 0 0 0
+door~
+A wall of solid rock rises up in this direction.
+~
+D WEST 0 0 0
+door~
+A wall of solid rock rises up in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is jagged here and covered with rough moss.
+~
+OWNER none~
+#28858
+A Narrow Cavern~
+The way is narrow here with dark hewn rock on either side of the passage.
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light. 
+The ground is damp and slick with the echo of dropping water reverberating
+against the cold damp stone.  The cave splits off in three directions here,
+lighter to the west, and darkness to the east and west.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The walls of the cave are made of dark, cold rock.
+~
+D EAST 28860 0 0
+~
+The cavern continues in this direction.
+~
+D SOUTH 28859 0 0
+~
+A small alcove can be seen off to the south.
+~
+D WEST 28857 0 0
+~
+Light can be seen comming from the entrance to the cavern.
+~
+D UP 0 0 0
+door~
+Dark, jagged rock hangs from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is made of a dark rock, glistening from the water which drips from the ceiling above.
+~
+OWNER none~
+#28859
+A Small Alcove~
+The way is narrow here with dark hewn rock on either side of the passage.
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light. 
+The ground is damp and slick with the echo of dropping water reverberating
+against the cold damp stone.  The path ends here with the only exit back to
+the north.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 28858 0 0
+~
+~
+D EAST 0 0 0
+door~
+Dark, cold rock covers the walls of the cave here.
+~
+D SOUTH 0 0 0
+door~
+Dark, cold rock covers the walls of the cave here.
+~
+D WEST 0 0 0
+door~
+Dark, cold rock covers the walls of the cave here.
+~
+D UP 0 0 0
+door~
+Dark, jagged rock hangs from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is made of a dark rock, glistening from the water which drips from the ceiling above.
+~
+OWNER none~
+#28860
+A Narrow Cavern~
+The way is narrow here with dark hewn rock on either side of the passage.
+The rock itself is non-descript dull grey, and spotted throughout with black
+flecks and little crystals that twinkle in the almost nonexisitent light. 
+The ground is damp and slick with the echo of dropping water reverberating
+against the cold damp stone.  The path continues off into darkness in either
+direction.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 28861 0 0
+~
+The cavern continues in this direction.
+~
+D EAST 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D SOUTH 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D WEST 28858 0 0
+~
+The cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+Dark, jagged rock hangs from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is made of a dark rock, glistening from the water which drips from the ceiling above.
+~
+OWNER none~
+#28861
+A Large Cavern~
+The way opens up here to a much larger cavern with noticable cracks upon
+the ceiling.  The rock itself is non-descript dull grey, and spotted
+throughout with black flecks and little crystals that twinkle in the almost
+nonexisitent light.  The ground is damp and slick with the echo of dropping
+water reverberating against the cold damp stone.  The way becomes narrower
+off to the south and continues east into darkness.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D EAST 28862 0 0
+~
+The cavern continues in this direction.
+~
+D SOUTH 28860 0 0
+~
+The cavern continues in this direction.
+~
+D WEST 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D UP 0 0 0
+door~
+Dark, jagged rock hangs from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is made of a dark rock, glistening from the water which drips from the ceiling above.
+~
+OWNER none~
+#28862
+A Large Cavern~
+The way opens up here to a much larger cavern with noticable cracks upon
+the ceiling.  The rock itself is non-descript dull grey, and spotted
+throughout with black flecks and little crystals that twinkle in the almost
+nonexisitent light.  The ground is damp and slick with the echo of dropping
+water reverberating against the cold damp stone.  The cave ends in a large
+circular room with the only exit back to the west.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D EAST 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D SOUTH 0 0 0
+door~
+Dark, cold rock covers the walls of the cavern here.
+~
+D WEST 28861 0 0
+~
+The cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+Dark, jagged rock hangs from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is made of a dark rock, glistening from the water which drips from the ceiling above.
+~
+OWNER none~
+#28863
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards the south.  The rock face
+towards the north sweeps along, gently sloping down along the east towards
+the south.  A sheer wall of rock rises up sharply to the northwest.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A sheer rock face rises up to the north here.
+~
+D EAST 28864 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D SOUTH 28856 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D WEST 0 0 0
+door~
+A sheer rock face rises up to the west here.
+~
+D DOWN 0 0 0
+door~
+The rock here is jagged and covered in several colors of rough moss.
+~
+OWNER none~
+#28864
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards all directions save east. 
+The rock face towards the north sweeps along, gently sloping down along the
+east towards the south.  A sheer wall of rock rises up sharply to the east. 
+~
+mountains
+D NORTH 28866 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D EAST 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D SOUTH 28865 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D WEST 28863 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D DOWN 0 0 0
+door~
+The rock here is jagged and covered in several colors of rough moss.
+~
+OWNER none~
+#28865
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The rock face towards the south sweeps along, gently
+encircling the area leaving the only exit, north.  
+~
+mountains
+D NORTH 28864 0 0
+~
+The open ground continues, covered in the same colorful moss.
+~
+D EAST 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D WEST 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D DOWN 0 0 0
+door~
+The rock here is jagged and covered in several colors of rough moss.
+~
+OWNER none~
+#28866
+A Moss Covered Outcrop~
+A vast uneven surface made of large slabs of rock snuggly fitting
+together.  An unwary travel would find it easy to trip over the butting
+edges of rock.  The ground is covered in scaly yellow moss making it slick
+to the treading foot.  The ground is open towards the southwest.  The rock
+face towards the north sweeps along, gently sloping down along the east
+towards the south.  The path leads uphill a bit to the east.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D EAST 28867 0 0
+~
+The open ground continues, covered in the same colorful moss. 
+~
+D SOUTH 28864 0 0
+~
+The open ground continues, covered in the same colorful moss. 
+~
+D WEST 28874 0 0
+~
+The open ground continues, covered in the same colorful moss. 
+~
+D DOWN 0 0 0
+door~
+The rock here is jagged and covered in several colors of rough moss.
+~
+OWNER none~
+#28867
+A Moss Covered Path~
+A carpet of stone-gray moss covers nearly every inch of the path here. 
+Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing down the path with a sound much like
+a distant scream.  The path continues here in two directions on its way
+through the grayish haze.  
+~
+trail
+D NORTH 28868 0 0
+~
+The open ground continues, covered in the same colorful moss. 
+~
+D EAST 0 0 0
+door~
+A sheer wall of rock rises up to the east.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of rock rises up to the south.
+~
+D WEST 28866 0 0
+~
+The open ground continues, covered in the same colorful moss. 
+~
+D DOWN 0 0 0
+door~
+The rock here is jagged and covered in several colors of rough moss.
+~
+OWNER none~
+#28868
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 28871 0 0
+~
+The path continues in this direction.
+A cave mouth formed out of sheer ice, lies to the north.
+~
+D EAST 28872 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 28867 0 0
+~
+The path continues in this direction.
+~
+D WEST 28869 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The rock is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28869
+A Snowy Plateau~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A sheer wall of thick ice rises swiftly to the
+east and curves around to the north.  A large crevice penetrates the wall of
+ice to the north.  
+~
+snow
+D NORTH 28870 0 0
+~
+A cave mouth formed out of sheer ice, lies to the north.
+~
+D EAST 28868 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of ice blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer surface of ice blocks any travel.
+~
+D DOWN 0 0 0
+door~
+A light dusting of snow covers the rock of the plateau.
+~
+OWNER none~
+#28870
+An Icy Cave~
+A large naturally formed crevice made from thick flows of ice.  The walls
+and floor are made from thick ropey flows of ice.  The flow of the ice
+follows the sloped surface of the floor to the west.  Large thick icicles
+hang down from the ceiling, some reaching the floor to make thick pillars. 
+The ice is pristine allowing you to see completely through the pillars with
+little blurring.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The walls of the cave are formed of thick flows of ice.
+~
+D EAST 0 0 0
+door~
+The walls of the cave are formed of thick flows of ice.
+~
+D SOUTH 28869 0 0
+~
+The mouth of the cave lies in this direction.
+~
+D WEST 0 0 0
+door~
+The walls of the cave are formed of thick flows of ice.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is formed of thick ropey ice.
+~
+OWNER none~
+#28871
+An Icy Cave~
+A large naturally formed crevice made from thick flows of ice.  The walls
+and floor are made from thick ropey flows of ice.  The flow of the ice
+follows the sloped surface of the floor to the west.  Large thick icicles
+hang down from the ceiling, some reaching the floor to make thick pillars. 
+The ice is pristine allowing you to see completely through the pillars with
+little blurring.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The walls of the cave are formed of thick flows of ice.
+~
+D EAST 0 0 0
+door~
+The walls of the cave are formed of thick flows of ice.
+~
+D SOUTH 28868 0 0
+~
+The mouth of the cave lies in this direction.
+~
+D WEST 0 0 0
+door~
+The walls of the cave are formed of thick flows of ice.
+~
+D DOWN 0 0 0
+door~
+The floor of the cave is formed of thick ropey ice.
+~
+OWNER none~
+#28872
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D EAST 28873 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D WEST 28868 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The rock is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28873
+Before a Wall of Dark Rock~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  To the east the rock appears
+uncharacteristically darker than the rest of the surrounding rock.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D EAST 0 0 0
+door~
+Dark rock rises up, blocking any passage.
+~
+D SOUTH 0 0 0
+door~
+A sheer wall of rock rises up in this direction.
+~
+D WEST 28872 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The rock is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28874
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 28875 0 0
+~
+The path continues on in this direction.
+~
+D EAST 28866 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28877 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28875
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A rough surface of thick ice slowly flows from
+the north attempting to swallow the path.  
+~
+snow
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 28874 0 0
+~
+The path continues on in this direction.
+~
+D WEST 28876 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+A light dusting of snow covers the rock ground beneath.
+~
+OWNER none~
+#28876
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A rough surface of thick ice slowly flows from
+the north attempting to swallow the path.  
+~
+snow
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28875 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 28877 0 0
+~
+The path continues on in this direction.
+~
+D WEST 28879 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+A light dusting of snow covers the rock ground beneath.
+~
+OWNER none~
+#28877
+A Barren Plateau~
+A vast plateau spreads out before you here, nearly completely void of
+life, save various tufts of dry grass.  The ground is uneven and difficult
+to traverse, as the naturally formed rock fights with itself.  Slabs of
+solid grey rock push from the north against the deep red stone from the
+south.  A small rift runs east west where the two materials join, buckling
+the grey rock into itself.  The ground reverberates occasionally with a
+hidden strength as the battle between the two materials slowly progresses.  
+~
+mountains
+D NORTH 28876 0 0
+~
+The path continues on in this direction.
+~
+D EAST 28874 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 28878 0 0
+~
+The path continues on in this direction.
+~
+D WEST 28880 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28878
+A Rocky Plateau~
+A vast plateau spreads out before you here, nearly completely void of
+life, save various tufts of dry grass.  The ground is uneven and difficult
+to traverse, as the naturally formed rock fights with itself.  Slabs of
+solid grey rock push from the north against the deep red stone from the
+south.  A small rift runs east west where the two materials join, buckling
+the grey rock into itself.  The ground reverberates occasionally with a
+hidden strength as the battle between the two materials slowly progresses.  
+~
+mountains
+D NORTH 28877 0 0
+~
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28879
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed fields at a distance but look more like
+mops upon closer inspection.  A rough surface of thick ice slowly flows from
+the north attempting to swallow the path.
+~
+snow
+D NORTH 28885 0 0
+~
+The path continues on in this direction.
+~
+D EAST 28876 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 28880 0 0
+~
+The path continues on in this direction.
+~
+D WEST 28886 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+A light dusting of snow covers the rock ground beneath.
+~
+OWNER none~
+#28880
+A Barren Plateau~
+A vast plateau spreads out before you here, nearly completely void of
+life, save various tufts of dry grass.  The ground is uneven and difficult
+to traverse, as the naturally formed rock fights with itself.  Slabs of
+solid grey rock push from the north against the deep red stone from the
+south.  A small rift runs east west where the two materials join, buckling
+the grey rock into itself.  The ground reverberates occasionally with a
+hidden strength as the battle between the two materials slowly progresses.  
+~
+mountains
+D NORTH 28879 0 0
+~
+The path continues on in this direction.
+~
+D EAST 28877 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 28881 0 0
+~
+The path continues on in this direction.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28881
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 28880 0 0
+~
+The path continues on in this direction.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 28882 0 0
+~
+The path continues on in this direction.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28882
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 28881 0 0
+~
+The path continues on in this direction.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28883 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28883
+A Rocky Path~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28882 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 28852 0 0
+~
+The path continues on in this direction.
+~
+D WEST 28884 0 0
+~
+The path continues on in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28884
+A Barren Plateau~
+The ground is uneven and difficult to traverse, as the naturally formed
+rock fights with itself.  Slabs of solid grey rock push from the north
+against the deep red stone from the south.  A small rift runs east west
+where the two materials join, buckling the grey rock into itself.  The
+ground reverberates occasionally with a hidden strength as the battle
+between the two materials slowly progresses.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28883 0 0
+~
+The path continues on in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+The ground here is split in two, with the grey rock from the north buckling into itself.
+~
+OWNER none~
+#28885
+A Snowy Path~
+Hard frozen ground is lightly covered with a thin layer of fluffy snow. 
+Peppered throughout, small wisps of vegetation poke up from the snow.  Frost
+boils appear on the ground like a giant's footprints.  Tussocks of
+frost-heaved soil resemble plowed firleds at a distance but look more like
+mops upon closer inspection.  A rouge surface of thick ice slowly flows from
+the north attempting to swallow the path.  
+~
+snow
+D NORTH 0 0 0
+door~
+A sheer rock surface blocks any travel.
+~
+D EAST 0 0 0
+door~
+A sheer rock surface blocks any travel.
+~
+D SOUTH 28879 0 0
+~
+The path continues in this direction.
+~
+D WEST 28887 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+A light dusting of snow covers the rock ground beneath.
+~
+OWNER none~
+#28886
+A Moss Covered Path~
+A carpet of stone-gray moss covers nearly every inch of the path here. 
+Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing down the path with a sound much like
+a distant scream.  The path continues north and east here, on its way
+through the grayish haze.  
+~
+trail
+D NORTH 28887 0 0
+~
+The path continues in this direction.
+~
+D EAST 28879 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28887
+A Moss Covered Path~
+A carpet of stone-gray moss covers nearly every inch of the path here. 
+Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing down the path with a sound much like
+a distant scream.  The path splits here in three directions on its way
+through the grayish haze.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28885 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 28886 0 0
+~
+The path continues in this direction.
+~
+D WEST 28888 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28888
+A Moss Covered Plateau~
+A carpet of stone-gray moss covers nearly every inch of the jagged
+plateau.  Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing through the rocky plateau with a
+sound much like a distant scream.  The edges of the plateau end in a mirky
+haze which flows downward into the unknown.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28887 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 28889 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28889
+A Moss Covered Plateau~
+A carpet of stone-gray moss covers nearly every inch of the jagged
+plateau.  Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing through the rocky plateau with a
+sound much like a distant scream.  The edges of the plateau end in a mirky
+haze which flows downward into the unknown.  
+~
+mountains
+D NORTH 28888 0 0
+~
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 28891 0 0
+~
+The path continues in this direction.
+~
+D WEST 28890 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28890
+A Moss Covered Plateau~
+A carpet of stone-gray moss covers nearly every inch of the jagged
+plateau.  Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing through the rocky plateau with a
+sound much like a distant scream.  The edges of the plateau end in a mirky
+haze which flows downward into the unknown.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28889 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 28892 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28891
+A Moss Covered Plateau~
+A carpet of stone-gray moss covers nearly every inch of the jagged
+plateau.  Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing through the rocky plateau with a
+sound much like a distant scream.  The edges of the plateau end in a mirky
+haze which flows downward into the unknown.  
+~
+mountains
+D NORTH 28889 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28892 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28892
+A Moss Covered Plateau~
+A carpet of stone-gray moss covers nearly every inch of the jagged
+plateau.  Small glimpses of the dark rock can be see upon the tips of sharp
+outcroppings which appear to have been worn off.  A chill damp wind whips
+through the area, swirling and dancing through the rocky plateau with a
+sound much like a distant scream.  The edges of the plateau end in a mirky
+haze which flows downward into the unknown.  
+~
+mountains
+D NORTH 28890 0 0
+~
+The path continues in this direction.
+~
+D EAST 28891 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 28893 0 0
+~
+The path continues in this direction.
+~
+D WEST 28897 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+Stone-gray moss covers the jagged ground here.
+~
+OWNER none~
+#28893
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running north
+south.  The rock itself is a non-descript dull grey spotted throughout with
+black flecks and little crystals that twinkle in the light.  A sheer cliff
+face rises swiftly to the east with the same deep grooves marring the
+surface.  
+~
+trail
+D NORTH 28892 0 0
+~
+The path continues in this direction.
+~
+D EAST 28894 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D DOWN 0 0 0
+door~
+The ground is split here, with the grey rock from the north buckling against itself.
+~
+OWNER none~
+#28894
+A Rocky Path~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running north
+south.  The rock itself is a non-descript dull grey spotted throughout with
+black flecks and little crystals that twinkle in the light.  A sheer cliff
+face rises swiftly to the east with the same deep grooves marring the
+surface.  
+~
+trail
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28895 0 0
+~
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28893 0 0
+~
+~
+D DOWN 0 0 0
+door~
+The ground is split here, with the grey rock from the north buckling against itself.
+~
+OWNER none~
+#28895
+A Rocky Plateau~
+A smooth and somewhat level surface is sheared off the surface of the
+dark rock.  Great grooves scratch deeply into the surface running north
+south.  The rock itself is a non-descript dull grey spotted throughout with
+black flecks and little crystals that twinkle in the light.  A sheer cliff
+drops off at the edges of the plateau here leading down to the gray haze
+below.  A cragged and darkened cave sits ominously to the north.  
+~
+mountains
+D NORTH 28896 0 0
+~
+A dark cave opens up in this direction.
+~
+D EAST 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28894 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is split here, with the grey rock from the north buckling against itself.
+~
+OWNER none~
+#28896
+A Cave~
+All is quiet save the repetitive drops water falling from the moist
+ceiling of the cave.  The rock here is pitted as if corroded unnaturally. 
+The great grooves stop abrutly near the entrance to the cave.  The rock
+itself is non-descript dull grey, and spotted throughout with black flecks
+and little crystals that twinkle in the almost nonexisitent light.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Dark, cold rock makes up the walls of the cave.
+~
+D EAST 0 0 0
+door~
+Dark, cold rock makes up the walls of the cave.
+~
+D SOUTH 28895 0 0
+~
+Light can be seen in this direction, towards the mouth of the cave.
+~
+D WEST 0 0 0
+door~
+Dark, cold rock makes up the walls of the cave.
+~
+D UP 0 0 0
+door~
+Dark, jagged rocks hang from the ceiling above.
+~
+D DOWN 0 0 0
+door~
+The rock here is cool, and moist making it quite slippery.
+~
+OWNER none~
+#28897
+A Rocky Path~
+A smooth and somwhat level surface is sheared off the surface of the dark
+rock.  Great grooves scratch deeply into the surface running north south. 
+The rock itself is a non-descript dull grey spooted throughout with black
+flecks and little crystals that twinkle in the light.  A sheer cliff face
+rises swiftly to the east with the same deep grooves marring the surface.  
+~
+mountains
+D NORTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D EAST 28892 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A sheer surface of rock blocks any travel.
+~
+D WEST 28825 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is split here, with the grey rock from the north buckling against itself.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 28801 TO 28800 GLIMIT 10 LLIMIT 1
+MOB 28802 TO 28803 GLIMIT 5 LLIMIT 1
+MOB 28801 TO 28803 GLIMIT 10 LLIMIT 1
+MOB 28802 TO 28808 GLIMIT 5 LLIMIT 1
+MOB 28801 TO 28811 GLIMIT 10 LLIMIT 1
+MOB 28800 TO 28812 GLIMIT 10 LLIMIT 3
+EQUIP 28800 WIELD
+MOB 28801 TO 28817 GLIMIT 1 LLIMIT 28817
+EQUIP 28801 NECKONE
+MOB 28801 TO 28819 GLIMIT 10 LLIMIT 1
+MOB 28801 TO 28822 GLIMIT 10 LLIMIT 1
+MOB 28802 TO 28824 GLIMIT 5 LLIMIT 1
+MOB 28800 TO 28824 GLIMIT 20 LLIMIT 1
+MOB 28802 TO 28829 GLIMIT 5 LLIMIT 1
+MOB 28802 TO 28831 GLIMIT 5 LLIMIT 1
+MOB 28806 TO 28839 GLIMIT 4 LLIMIT 1
+MOB 28803 TO 28844 GLIMIT 1 LLIMIT 1
+EQUIP 28800 WIELD
+MOB 28806 TO 28848 GLIMIT 4 LLIMIT 1
+MOB 28804 TO 28851 GLIMIT 1 LLIMIT 1
+EQUIP 28803 WIELD
+MOB 28806 TO 28861 GLIMIT 4 LLIMIT 2
+EQUIP 28804 WIELD
+MOB 28806 TO 28861 GLIMIT 4 LLIMIT 2
+EQUIP 28804 WIELD
+MOB 28805 TO 28862 GLIMIT 1 LLIMIT 1
+EQUIP 28805 WIELD
+EQUIP 28801 ABOUT
+OBJECT 28802 TO 28862
+MOB 28807 TO 28870 GLIMIT 2 LLIMIT 1
+EQUIP 28806 ABOUT
+MOB 28807 TO 28871 GLIMIT 2 LLIMIT 1
+EQUIP 28806 ABOUT
+MOB 28801 TO 28889 GLIMIT 10 LLIMIT 1
+MOB 28801 TO 28892 GLIMIT 10 LLIMIT 1
+MOB 28801 TO 28897 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

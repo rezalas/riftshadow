@@ -1,0 +1,6524 @@
+#AREA
+cohtram2.are~
+The Maurding Prairie~
+Cohtram~
+0 0
+16200 16599
+unopened
+none
+0
+1
+Cohtram~
+
+#MOBS
+#16201
+cloud wraith figure~
+a cloud wraith~
+A tattered cloaked figure lingers here, a malevolent blue aura surrounds it.
+~
+~
+-1000 0 0 spectre~
+40 40d8+2464 4d6+30 10 100 drain
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+OFF DODGE
+OFF ASSIST_ALIGN
+C 'chill'
+C 'lightning bolt'
+#16202
+mounfune beast animal~
+a hairy mounfune~
+A shaggy mounfune grazes here, its horns glimmer in the colors of the rainbow.
+~
+~
+0 0 0 bear~
+30 30d8+1364 4d6+35 24 100 pierce
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+RES PIERCE
+RES SLASH
+C 'prismatic spray'
+#16203
+sintofee animal creature~
+a graceful sintofee~
+An elegant long-legged sintofee stands here grazing.
+~
+~
+0 0 0 fido~
+25 25d8+944 8d3+15 20 100 charge
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+OFF DODGE
+#16204
+shadow spider creature arachnid~
+a shadow spider~
+A large arachnid stands very still here, its black orbed eyes watching you.
+~
+~
+-1000 0 0 centipede~
+27 27d8+1102 3d6+23 26 100 disease
+0 0 0 0
+standing male none
+d d small
+ACT NPC
+ACT AGGRESSIVE
+ACT NOCTURNAL
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF TRIP
+AFF DETECT_HIDDEN
+AFF SNEAK
+AFF PASS_DOOR
+AFF REGENERATION
+RES POISON
+VUL FIRE
+C 'stability'
+#16205
+earth hound wolf creature~
+an earth hound~
+A sleek hound made of dirt and rock stands here, roughly the size of a wolf.
+~
+~
+0 0 0 unique~
+25 25d8+944 2d7+18 18 100 pound
+0 0 0 0
+standing male none
+DEJ DEJ medium
+ACT NPC
+ACT AGGRESSIVE
+ACT OUTDOORS
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF TAIL
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF DARK_VISION
+RES BASH
+RES PIERCE
+RES SLASH
+RES FIRE
+VUL MENTAL
+VUL DROWNING
+#16206
+earth hound wolf creature~
+a large earth hound~
+A sleek hound made of dirt and rock stands here, the size of a horse.
+~
+~
+0 0 0 unique~
+30 30d8+1364 4d6+22 23 100 crush
+0 0 0 0
+standing male none
+DEJ DEJ large
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT OUTDOORS
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF TAIL
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF DARK_VISION
+RES BASH
+RES PIERCE
+RES SLASH
+RES FIRE
+VUL MENTAL
+VUL DROWNING
+#16207
+vulture bird surae~
+a surae vulture~
+A long shadow glides silently across the ground, its owner lazily circling above.
+~
+~
+0 0 0 avian~
+20 20d8+604 3d5+16 34 100 peck
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF INTIMIDATED
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#16384
+Mhenfut Byway~
+~
+unused
+D NORTH 16364 0 0
+door~
+~
+D EAST 16385 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16404 0 0
+door~
+~
+D WEST 16383 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16385
+Mhenfut Byway~
+~
+unused
+D NORTH 16365 0 0
+door~
+~
+D EAST 16386 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16405 0 0
+door~
+~
+D WEST 16384 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16386
+Mhenfut Byway~
+~
+unused
+D NORTH 16366 0 0
+door~
+~
+D EAST 16387 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16406 0 0
+door~
+~
+D WEST 16385 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16387
+Mhenfut Byway~
+~
+unused
+D NORTH 16367 0 0
+door~
+~
+D EAST 16388 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16407 0 0
+door~
+~
+D WEST 16386 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16388
+Mhenfut Byway~
+~
+unused
+D NORTH 16368 0 0
+door~
+~
+D EAST 16389 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16408 0 0
+door~
+~
+D WEST 16387 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16389
+Mhenfut Byway~
+~
+unused
+D NORTH 16369 0 0
+door~
+~
+D EAST 16390 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16409 0 0
+door~
+~
+D WEST 16388 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16390
+Mhenfut Byway~
+~
+unused
+D NORTH 16370 0 0
+door~
+~
+D EAST 16391 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16410 0 0
+door~
+~
+D WEST 16389 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16391
+Mhenfut Byway~
+~
+unused
+D NORTH 16371 0 0
+door~
+~
+D EAST 16392 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16411 0 0
+door~
+~
+D WEST 16390 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16392
+Mhenfut Byway~
+~
+unused
+D NORTH 16372 0 0
+door~
+~
+D EAST 16393 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16412 0 0
+door~
+~
+D WEST 16391 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16393
+Mhenfut Byway~
+~
+unused
+D NORTH 16373 0 0
+door~
+~
+D EAST 16394 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16413 0 0
+door~
+~
+D WEST 16392 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16394
+Mhenfut Byway~
+~
+unused
+D NORTH 16374 0 0
+door~
+The path continues on through the prairie.
+~
+D EAST 16395 0 0
+door~
+~
+D SOUTH 16414 0 0
+door~
+~
+D WEST 16393 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16395
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16375 0 0
+door~
+~
+D EAST 16396 0 0
+door~
+~
+D SOUTH 16415 0 0
+door~
+~
+D WEST 16394 0 0
+door~
+~
+OWNER none~
+#16396
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16376 0 0
+door~
+~
+D EAST 16397 0 0
+door~
+~
+D SOUTH 16416 0 0
+door~
+~
+D WEST 16395 0 0
+door~
+~
+OWNER none~
+#16397
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16377 0 0
+door~
+~
+D EAST 16398 0 0
+door~
+~
+D SOUTH 16417 0 0
+door~
+~
+D WEST 16396 0 0
+door~
+~
+OWNER none~
+#16398
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16378 0 0
+door~
+~
+D EAST 16399 0 0
+door~
+~
+D SOUTH 16418 0 0
+door~
+~
+D WEST 16397 0 0
+door~
+~
+OWNER none~
+#16399
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16379 0 0
+door~
+~
+D SOUTH 16419 0 0
+door~
+~
+D WEST 16398 0 0
+door~
+~
+OWNER none~
+#16400
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16380 0 0
+door~
+~
+D EAST 16401 0 0
+door~
+~
+D SOUTH 16421 0 0
+door~
+~
+OWNER none~
+#16401
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16381 0 0
+door~
+~
+D EAST 16402 0 0
+door~
+~
+D SOUTH 16422 0 0
+door~
+~
+D WEST 16400 0 0
+door~
+~
+OWNER none~
+#16402
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16382 0 0
+door~
+~
+D EAST 16403 0 0
+door~
+~
+D SOUTH 16423 0 0
+door~
+~
+D WEST 16401 0 0
+door~
+~
+OWNER none~
+#16403
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16383 0 0
+door~
+~
+D EAST 16404 0 0
+door~
+~
+D SOUTH 16424 0 0
+door~
+~
+D WEST 16402 0 0
+door~
+~
+OWNER none~
+#16404
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16384 0 0
+door~
+~
+D EAST 16405 0 0
+door~
+~
+D SOUTH 16425 0 0
+door~
+~
+D WEST 16403 0 0
+door~
+~
+OWNER none~
+#16405
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16385 0 0
+door~
+~
+D EAST 16406 0 0
+door~
+~
+D SOUTH 16426 0 0
+door~
+~
+D WEST 16404 0 0
+door~
+~
+OWNER none~
+#16406
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16386 0 0
+door~
+~
+D EAST 16407 0 0
+door~
+~
+D SOUTH 16427 0 0
+door~
+~
+D WEST 16405 0 0
+door~
+~
+OWNER none~
+#16407
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16387 0 0
+door~
+~
+D EAST 16408 0 0
+door~
+~
+D SOUTH 16428 0 0
+door~
+~
+D WEST 16406 0 0
+door~
+~
+OWNER none~
+#16408
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16388 0 0
+door~
+~
+D EAST 16409 0 0
+door~
+~
+D SOUTH 16429 0 0
+door~
+~
+D WEST 16407 0 0
+door~
+~
+OWNER none~
+#16409
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16389 0 0
+door~
+~
+D EAST 16410 0 0
+door~
+~
+D SOUTH 16430 0 0
+door~
+~
+D WEST 16408 0 0
+door~
+~
+OWNER none~
+#16410
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16390 0 0
+door~
+~
+D EAST 16411 0 0
+door~
+~
+D SOUTH 16431 0 0
+door~
+~
+D WEST 16409 0 0
+door~
+~
+OWNER none~
+#16411
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16391 0 0
+door~
+~
+D EAST 16412 0 0
+door~
+~
+D SOUTH 16432 0 0
+door~
+~
+D WEST 16410 0 0
+door~
+~
+OWNER none~
+#16412
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16392 0 0
+door~
+~
+D EAST 16413 0 0
+door~
+~
+D SOUTH 16433 0 0
+door~
+~
+D WEST 16411 0 0
+door~
+~
+OWNER none~
+#16413
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16393 0 0
+door~
+~
+D EAST 16414 0 0
+door~
+~
+D SOUTH 16434 0 0
+door~
+~
+D WEST 16412 0 0
+door~
+~
+OWNER none~
+#16414
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16394 0 0
+door~
+~
+D EAST 16415 0 0
+door~
+~
+D SOUTH 16435 0 0
+door~
+~
+D WEST 16413 0 0
+door~
+~
+OWNER none~
+#16415
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16395 0 0
+door~
+~
+D EAST 16416 0 0
+door~
+~
+D SOUTH 16436 0 0
+door~
+~
+D WEST 16414 0 0
+door~
+~
+OWNER none~
+#16416
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16396 0 0
+door~
+~
+D EAST 16417 0 0
+door~
+~
+D SOUTH 16437 0 0
+door~
+~
+D WEST 16415 0 0
+door~
+~
+OWNER none~
+#16417
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16397 0 0
+door~
+~
+D EAST 16418 0 0
+door~
+~
+D SOUTH 16438 0 0
+door~
+~
+D WEST 16416 0 0
+door~
+~
+OWNER none~
+#16418
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16398 0 0
+door~
+~
+D EAST 16419 0 0
+door~
+~
+D SOUTH 16439 0 0
+door~
+~
+D WEST 16417 0 0
+door~
+~
+OWNER none~
+#16419
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16399 0 0
+door~
+~
+D EAST 16420 0 0
+door~
+~
+D SOUTH 16440 0 0
+door~
+~
+D WEST 16418 0 0
+door~
+~
+OWNER none~
+#16420
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D SOUTH 16441 0 0
+door~
+~
+D WEST 16419 0 0
+door~
+~
+OWNER none~
+#16421
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16400 0 0
+door~
+~
+D EAST 16422 0 0
+door~
+~
+D SOUTH 16443 0 0
+door~
+~
+OWNER none~
+#16422
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16401 0 0
+door~
+~
+D EAST 16423 0 0
+door~
+~
+D SOUTH 16444 0 0
+door~
+~
+D WEST 16421 0 0
+door~
+~
+OWNER none~
+#16423
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16402 0 0
+door~
+~
+D EAST 16424 0 0
+door~
+~
+D SOUTH 16445 0 0
+door~
+~
+D WEST 16422 0 0
+door~
+~
+OWNER none~
+#16424
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16403 0 0
+door~
+~
+D EAST 16425 0 0
+door~
+~
+D SOUTH 16446 0 0
+door~
+~
+D WEST 16423 0 0
+door~
+~
+OWNER none~
+#16425
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16404 0 0
+door~
+~
+D EAST 16426 0 0
+door~
+~
+D SOUTH 16447 0 0
+door~
+~
+D WEST 16424 0 0
+door~
+~
+OWNER none~
+#16426
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16405 0 0
+door~
+~
+D EAST 16427 0 0
+door~
+~
+D SOUTH 16448 0 0
+door~
+~
+D WEST 16425 0 0
+door~
+~
+OWNER none~
+#16427
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16406 0 0
+door~
+~
+D EAST 16428 0 0
+door~
+~
+D SOUTH 16449 0 0
+door~
+~
+D WEST 16426 0 0
+door~
+~
+OWNER none~
+#16428
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16407 0 0
+door~
+~
+D EAST 16429 0 0
+door~
+~
+D SOUTH 16450 0 0
+door~
+~
+D WEST 16427 0 0
+door~
+~
+OWNER none~
+#16429
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16408 0 0
+door~
+~
+D EAST 16430 0 0
+door~
+~
+D SOUTH 16451 0 0
+door~
+~
+D WEST 16428 0 0
+door~
+~
+OWNER none~
+#16430
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16409 0 0
+door~
+~
+D EAST 16431 0 0
+door~
+~
+D SOUTH 16452 0 0
+door~
+~
+D WEST 16429 0 0
+door~
+~
+OWNER none~
+#16431
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16410 0 0
+door~
+~
+D EAST 16432 0 0
+door~
+~
+D SOUTH 16453 0 0
+door~
+~
+D WEST 16430 0 0
+door~
+~
+OWNER none~
+#16432
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16411 0 0
+door~
+~
+D EAST 16433 0 0
+door~
+~
+D SOUTH 16454 0 0
+door~
+~
+D WEST 16431 0 0
+door~
+~
+OWNER none~
+#16433
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16412 0 0
+door~
+~
+D EAST 16434 0 0
+door~
+~
+D SOUTH 16455 0 0
+door~
+~
+D WEST 16432 0 0
+door~
+~
+OWNER none~
+#16434
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16413 0 0
+door~
+~
+D EAST 16435 0 0
+door~
+~
+D SOUTH 16456 0 0
+door~
+~
+D WEST 16433 0 0
+door~
+~
+OWNER none~
+#16435
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16414 0 0
+door~
+~
+D EAST 16436 0 0
+door~
+~
+D SOUTH 16457 0 0
+door~
+~
+D WEST 16434 0 0
+door~
+~
+OWNER none~
+#16436
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16415 0 0
+door~
+~
+D EAST 16437 0 0
+door~
+~
+D SOUTH 16458 0 0
+door~
+~
+D WEST 16435 0 0
+door~
+~
+OWNER none~
+#16437
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16416 0 0
+door~
+~
+D EAST 16438 0 0
+door~
+~
+D SOUTH 16459 0 0
+door~
+~
+D WEST 16436 0 0
+door~
+~
+OWNER none~
+#16438
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16417 0 0
+door~
+~
+D EAST 16439 0 0
+door~
+~
+D SOUTH 16460 0 0
+door~
+~
+D WEST 16437 0 0
+door~
+~
+OWNER none~
+#16439
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16418 0 0
+door~
+~
+D EAST 16440 0 0
+door~
+~
+D SOUTH 16461 0 0
+door~
+~
+D WEST 16438 0 0
+door~
+~
+OWNER none~
+#16440
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16419 0 0
+door~
+~
+D EAST 16441 0 0
+door~
+~
+D SOUTH 16462 0 0
+door~
+~
+D WEST 16439 0 0
+door~
+~
+OWNER none~
+#16441
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16420 0 0
+door~
+~
+D EAST 16442 0 0
+door~
+~
+D SOUTH 16463 0 0
+door~
+~
+D WEST 16440 0 0
+door~
+~
+OWNER none~
+#16442
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D SOUTH 16464 0 0
+door~
+~
+D WEST 16441 0 0
+door~
+~
+OWNER none~
+#16443
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16421 0 0
+door~
+~
+D EAST 16444 0 0
+door~
+~
+OWNER none~
+#16444
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16422 0 0
+door~
+~
+D EAST 16445 0 0
+door~
+~
+D SOUTH 16465 0 0
+door~
+~
+D WEST 16443 0 0
+door~
+~
+OWNER none~
+#16445
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16423 0 0
+door~
+~
+D EAST 16446 0 0
+door~
+~
+D SOUTH 16466 0 0
+door~
+~
+D WEST 16444 0 0
+door~
+~
+OWNER none~
+#16446
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16424 0 0
+door~
+~
+D EAST 16447 0 0
+door~
+~
+D SOUTH 16467 0 0
+door~
+~
+D WEST 16445 0 0
+door~
+~
+OWNER none~
+#16447
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16425 0 0
+door~
+~
+D EAST 16448 0 0
+door~
+~
+D SOUTH 16468 0 0
+door~
+~
+D WEST 16446 0 0
+door~
+~
+OWNER none~
+#16448
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16426 0 0
+door~
+~
+D EAST 16449 0 0
+door~
+~
+D SOUTH 16469 0 0
+door~
+~
+D WEST 16447 0 0
+door~
+~
+OWNER none~
+#16449
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16427 0 0
+door~
+~
+D EAST 16450 0 0
+door~
+~
+D SOUTH 16470 0 0
+door~
+~
+D WEST 16448 0 0
+door~
+~
+OWNER none~
+#16450
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16428 0 0
+door~
+~
+D EAST 16451 0 0
+door~
+~
+D SOUTH 16471 0 0
+door~
+~
+D WEST 16449 0 0
+door~
+~
+OWNER none~
+#16451
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16429 0 0
+door~
+~
+D EAST 16452 0 0
+door~
+~
+D SOUTH 16472 0 0
+door~
+~
+D WEST 16450 0 0
+door~
+~
+OWNER none~
+#16452
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16430 0 0
+door~
+~
+D EAST 16453 0 0
+door~
+~
+D SOUTH 16473 0 0
+door~
+~
+D WEST 16451 0 0
+door~
+~
+OWNER none~
+#16453
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16431 0 0
+door~
+~
+D EAST 16454 0 0
+door~
+~
+D SOUTH 16474 0 0
+door~
+~
+D WEST 16452 0 0
+door~
+~
+OWNER none~
+#16454
+Plains of The Maurding Prairie(Tower Entrance room)~
+~
+unused
+D NORTH 16432 0 0
+door~
+~
+D EAST 16574 0 0
+door~
+~
+D SOUTH 16475 0 0
+door~
+~
+D WEST 16453 0 0
+door~
+~
+OWNER none~
+#16455
+Plains of The Maurding Prairie(illusion among keep)~
+~
+unused
+D NORTH 16433 0 0
+door~
+~
+D EAST 16456 0 0
+door~
+~
+D SOUTH 16476 0 0
+door~
+~
+D WEST 16454 0 0
+door~
+~
+OWNER none~
+#16456
+Plains of The Maurding Prairie(illusion among keep)~
+~
+unused
+D NORTH 16434 0 0
+door~
+~
+D EAST 16457 0 0
+door~
+~
+D SOUTH 16477 0 0
+door~
+~
+D WEST 16455 0 0
+door~
+~
+OWNER none~
+#16457
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16435 0 0
+door~
+~
+D EAST 16458 0 0
+door~
+~
+D SOUTH 16478 0 0
+door~
+~
+D WEST 16456 0 0
+door~
+~
+OWNER none~
+#16458
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16436 0 0
+door~
+~
+D EAST 16459 0 0
+door~
+~
+D SOUTH 16479 0 0
+door~
+~
+D WEST 16457 0 0
+door~
+~
+OWNER none~
+#16459
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16437 0 0
+door~
+~
+D EAST 16461 0 0
+door~
+~
+D SOUTH 16480 0 0
+door~
+~
+D WEST 16458 0 0
+door~
+~
+OWNER none~
+#16460
+Dummy Room~
+~
+unused
+D NORTH 16438 0 0
+door~
+~
+D SOUTH 16481 0 0
+door~
+~
+OWNER none~
+#16461
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16439 0 0
+door~
+~
+D EAST 16462 0 0
+door~
+~
+D SOUTH 16482 0 0
+door~
+~
+D WEST 16459 0 0
+door~
+~
+OWNER none~
+#16462
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16440 0 0
+door~
+~
+D EAST 16463 0 0
+door~
+~
+D SOUTH 16483 0 0
+door~
+~
+D WEST 16461 0 0
+door~
+~
+OWNER none~
+#16463
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16441 0 0
+door~
+~
+D EAST 16464 0 0
+door~
+~
+D SOUTH 16484 0 0
+door~
+~
+D WEST 16462 0 0
+door~
+~
+OWNER none~
+#16464
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16442 0 0
+door~
+~
+D WEST 16463 0 0
+door~
+~
+OWNER none~
+#16465
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16444 0 0
+door~
+~
+D EAST 16466 0 0
+door~
+~
+OWNER none~
+#16466
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16445 0 0
+door~
+~
+D EAST 16467 0 0
+door~
+~
+D SOUTH 16485 0 0
+door~
+~
+D WEST 16465 0 0
+door~
+~
+OWNER none~
+#16467
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16446 0 0
+door~
+~
+D EAST 16468 0 0
+door~
+~
+D SOUTH 16486 0 0
+door~
+~
+D WEST 16466 0 0
+door~
+~
+OWNER none~
+#16468
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16447 0 0
+door~
+~
+D EAST 16469 0 0
+door~
+~
+D SOUTH 16487 0 0
+door~
+~
+D WEST 16467 0 0
+door~
+~
+OWNER none~
+#16469
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16448 0 0
+door~
+~
+D EAST 16470 0 0
+door~
+~
+D SOUTH 16488 0 0
+door~
+~
+D WEST 16468 0 0
+door~
+~
+OWNER none~
+#16470
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16449 0 0
+door~
+~
+D EAST 16471 0 0
+door~
+~
+D SOUTH 16489 0 0
+door~
+~
+D WEST 16469 0 0
+door~
+~
+OWNER none~
+#16471
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16450 0 0
+door~
+~
+D EAST 16472 0 0
+door~
+~
+D SOUTH 16490 0 0
+door~
+~
+D WEST 16470 0 0
+door~
+~
+OWNER none~
+#16472
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16451 0 0
+door~
+~
+D EAST 16473 0 0
+door~
+~
+D SOUTH 16491 0 0
+door~
+~
+D WEST 16471 0 0
+door~
+~
+OWNER none~
+#16473
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16452 0 0
+door~
+~
+D EAST 16474 0 0
+door~
+~
+D SOUTH 16492 0 0
+door~
+~
+D WEST 16472 0 0
+door~
+~
+OWNER none~
+#16474
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16453 0 0
+door~
+~
+D EAST 16475 0 0
+door~
+~
+D SOUTH 16493 0 0
+door~
+~
+D WEST 16473 0 0
+door~
+~
+OWNER none~
+#16475
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16454 0 0
+door~
+~
+D EAST 16476 0 0
+door~
+~
+D SOUTH 16494 0 0
+door~
+~
+D WEST 16474 0 0
+door~
+~
+OWNER none~
+#16476
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16455 0 0
+door~
+~
+D EAST 16477 0 0
+door~
+~
+D SOUTH 16495 0 0
+door~
+~
+D WEST 16475 0 0
+door~
+~
+OWNER none~
+#16477
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16456 0 0
+door~
+~
+D EAST 16478 0 0
+door~
+~
+D SOUTH 16496 0 0
+door~
+~
+D WEST 16476 0 0
+door~
+~
+OWNER none~
+#16478
+Plains of The Maurding Prairie(Glimps of keep)~
+~
+unused
+D NORTH 16457 0 0
+door~
+~
+D EAST 16479 0 0
+door~
+~
+D SOUTH 16497 0 0
+door~
+~
+D WEST 16477 0 0
+door~
+~
+OWNER none~
+#16479
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16458 0 0
+door~
+~
+D EAST 16480 0 0
+door~
+~
+D SOUTH 16498 0 0
+door~
+~
+D WEST 16478 0 0
+door~
+~
+OWNER none~
+#16480
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16459 0 0
+door~
+~
+D EAST 16481 0 0
+door~
+~
+D SOUTH 16499 0 0
+door~
+~
+D WEST 16479 0 0
+door~
+~
+OWNER none~
+#16481
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16460 0 0
+door~
+~
+D EAST 16482 0 0
+door~
+~
+D SOUTH 16500 0 0
+door~
+~
+D WEST 16480 0 0
+door~
+~
+OWNER none~
+#16482
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16461 0 0
+door~
+~
+D EAST 16483 0 0
+door~
+~
+D SOUTH 16501 0 0
+door~
+~
+D WEST 16481 0 0
+door~
+~
+OWNER none~
+#16483
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16462 0 0
+door~
+~
+D EAST 16484 0 0
+door~
+~
+D SOUTH 16502 0 0
+door~
+~
+D WEST 16482 0 0
+door~
+~
+OWNER none~
+#16484
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16463 0 0
+door~
+~
+D SOUTH 16503 0 0
+door~
+~
+D WEST 16483 0 0
+door~
+~
+OWNER none~
+#16485
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16466 0 0
+door~
+~
+D EAST 16486 0 0
+door~
+~
+OWNER none~
+#16486
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16467 0 0
+door~
+~
+D EAST 16487 0 0
+door~
+~
+D SOUTH 16504 0 0
+door~
+~
+D WEST 16485 0 0
+door~
+~
+OWNER none~
+#16487
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16468 0 0
+door~
+~
+D EAST 16488 0 0
+door~
+~
+D SOUTH 16505 0 0
+door~
+~
+D WEST 16486 0 0
+door~
+~
+OWNER none~
+#16488
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16469 0 0
+door~
+~
+D EAST 16489 0 0
+door~
+~
+D SOUTH 16506 0 0
+door~
+~
+D WEST 16487 0 0
+door~
+~
+OWNER none~
+#16489
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16470 0 0
+door~
+~
+D EAST 16490 0 0
+door~
+~
+D SOUTH 16507 0 0
+door~
+~
+D WEST 16488 0 0
+door~
+~
+OWNER none~
+#16490
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16471 0 0
+door~
+~
+D EAST 16491 0 0
+door~
+~
+D SOUTH 16508 0 0
+door~
+~
+D WEST 16489 0 0
+door~
+~
+OWNER none~
+#16491
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16472 0 0
+door~
+~
+D EAST 16492 0 0
+door~
+~
+D SOUTH 16509 0 0
+door~
+~
+D WEST 16490 0 0
+door~
+~
+OWNER none~
+#16492
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16473 0 0
+door~
+~
+D EAST 16493 0 0
+door~
+~
+D SOUTH 16510 0 0
+door~
+~
+D WEST 16491 0 0
+door~
+~
+OWNER none~
+#16493
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16474 0 0
+door~
+~
+D EAST 16494 0 0
+door~
+~
+D SOUTH 16511 0 0
+door~
+~
+D WEST 16492 0 0
+door~
+~
+OWNER none~
+#16494
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16475 0 0
+door~
+~
+D EAST 16495 0 0
+door~
+~
+D SOUTH 16512 0 0
+door~
+~
+D WEST 16493 0 0
+door~
+~
+OWNER none~
+#16495
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16476 0 0
+door~
+~
+D EAST 16496 0 0
+door~
+~
+D SOUTH 16513 0 0
+door~
+~
+D WEST 16494 0 0
+door~
+~
+OWNER none~
+#16496
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16477 0 0
+door~
+~
+D EAST 16497 0 0
+door~
+~
+D SOUTH 16514 0 0
+door~
+~
+D WEST 16495 0 0
+door~
+~
+OWNER none~
+#16497
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16478 0 0
+door~
+~
+D EAST 16498 0 0
+door~
+~
+D SOUTH 16515 0 0
+door~
+~
+D WEST 16496 0 0
+door~
+~
+OWNER none~
+#16498
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16479 0 0
+door~
+~
+D EAST 16499 0 0
+door~
+~
+D SOUTH 16516 0 0
+door~
+~
+D WEST 16497 0 0
+door~
+~
+OWNER none~
+#16499
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16480 0 0
+door~
+~
+D EAST 16500 0 0
+door~
+~
+D SOUTH 16517 0 0
+door~
+~
+D WEST 16498 0 0
+door~
+~
+OWNER none~
+#16500
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16481 0 0
+door~
+~
+D EAST 16501 0 0
+door~
+~
+D SOUTH 16518 0 0
+door~
+~
+D WEST 16499 0 0
+door~
+~
+OWNER none~
+#16501
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16482 0 0
+door~
+~
+D EAST 16502 0 0
+door~
+~
+D SOUTH 16519 0 0
+door~
+~
+D WEST 16500 0 0
+door~
+~
+OWNER none~
+#16502
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16483 0 0
+door~
+~
+D EAST 16503 0 0
+door~
+~
+D SOUTH 16520 0 0
+door~
+~
+D WEST 16501 0 0
+door~
+~
+OWNER none~
+#16503
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16484 0 0
+door~
+~
+D SOUTH 16521 0 0
+door~
+~
+D WEST 16502 0 0
+door~
+~
+OWNER none~
+#16504
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16486 0 0
+door~
+~
+D EAST 16505 0 0
+door~
+~
+OWNER none~
+#16505
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16487 0 0
+door~
+~
+D EAST 16506 0 0
+door~
+~
+D SOUTH 16522 0 0
+door~
+~
+D WEST 16504 0 0
+door~
+~
+OWNER none~
+#16506
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16488 0 0
+door~
+~
+D EAST 16507 0 0
+door~
+~
+D SOUTH 16523 0 0
+door~
+~
+D WEST 16505 0 0
+door~
+~
+OWNER none~
+#16507
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16489 0 0
+door~
+~
+D EAST 16508 0 0
+door~
+~
+D SOUTH 16524 0 0
+door~
+~
+D WEST 16506 0 0
+door~
+~
+OWNER none~
+#16508
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16490 0 0
+door~
+~
+D EAST 16509 0 0
+door~
+~
+D SOUTH 16525 0 0
+door~
+~
+D WEST 16507 0 0
+door~
+~
+OWNER none~
+#16509
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16491 0 0
+door~
+~
+D EAST 16510 0 0
+door~
+~
+D SOUTH 16526 0 0
+door~
+~
+D WEST 16508 0 0
+door~
+~
+OWNER none~
+#16510
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16492 0 0
+door~
+~
+D EAST 16511 0 0
+door~
+~
+D SOUTH 16527 0 0
+door~
+~
+D WEST 16509 0 0
+door~
+~
+OWNER none~
+#16511
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16493 0 0
+door~
+~
+D EAST 16512 0 0
+door~
+~
+D SOUTH 16528 0 0
+door~
+~
+D WEST 16510 0 0
+door~
+~
+OWNER none~
+#16512
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16494 0 0
+door~
+~
+D EAST 16513 0 0
+door~
+~
+D SOUTH 16529 0 0
+door~
+~
+D WEST 16511 0 0
+door~
+~
+OWNER none~
+#16513
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16495 0 0
+door~
+~
+D EAST 16514 0 0
+door~
+~
+D SOUTH 16530 0 0
+door~
+~
+D WEST 16512 0 0
+door~
+~
+OWNER none~
+#16514
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16496 0 0
+door~
+~
+D EAST 16515 0 0
+door~
+~
+D SOUTH 16531 0 0
+door~
+~
+D WEST 16513 0 0
+door~
+~
+OWNER none~
+#16515
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16497 0 0
+door~
+~
+D EAST 16516 0 0
+door~
+~
+D SOUTH 16532 0 0
+door~
+~
+D WEST 16514 0 0
+door~
+~
+OWNER none~
+#16516
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16498 0 0
+door~
+~
+D EAST 16517 0 0
+door~
+~
+D SOUTH 16533 0 0
+door~
+~
+D WEST 16515 0 0
+door~
+~
+OWNER none~
+#16517
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16499 0 0
+door~
+~
+D EAST 16518 0 0
+door~
+~
+D WEST 16516 0 0
+door~
+~
+OWNER none~
+#16518
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16500 0 0
+door~
+~
+D EAST 16519 0 0
+door~
+~
+D SOUTH 16534 0 0
+door~
+~
+D WEST 16517 0 0
+door~
+~
+OWNER none~
+#16519
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16501 0 0
+door~
+~
+D EAST 16520 0 0
+door~
+~
+D SOUTH 16535 0 0
+door~
+~
+D WEST 16518 0 0
+door~
+~
+OWNER none~
+#16520
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16502 0 0
+door~
+~
+D EAST 16521 0 0
+door~
+~
+D SOUTH 16536 0 0
+door~
+~
+D WEST 16519 0 0
+door~
+~
+OWNER none~
+#16521
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16503 0 0
+door~
+~
+D SOUTH 16537 0 0
+door~
+~
+D WEST 16520 0 0
+door~
+~
+OWNER none~
+#16522
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16505 0 0
+door~
+~
+D EAST 16523 0 0
+door~
+~
+OWNER none~
+#16523
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16506 0 0
+door~
+~
+D EAST 16524 0 0
+door~
+~
+D WEST 16522 0 0
+door~
+~
+OWNER none~
+#16524
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16507 0 0
+door~
+~
+D EAST 16525 0 0
+door~
+~
+D WEST 16523 0 0
+door~
+~
+OWNER none~
+#16525
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16508 0 0
+door~
+~
+D EAST 16526 0 0
+door~
+~
+D WEST 16524 0 0
+door~
+~
+OWNER none~
+#16526
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16509 0 0
+door~
+~
+D EAST 16527 0 0
+door~
+~
+D SOUTH 16538 0 0
+door~
+~
+D WEST 16525 0 0
+door~
+~
+OWNER none~
+#16527
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16510 0 0
+door~
+~
+D EAST 16528 0 0
+door~
+~
+D SOUTH 16539 0 0
+door~
+~
+D WEST 16526 0 0
+door~
+~
+OWNER none~
+#16528
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16511 0 0
+door~
+~
+D EAST 16529 0 0
+door~
+~
+D SOUTH 16540 0 0
+door~
+~
+D WEST 16527 0 0
+door~
+~
+OWNER none~
+#16529
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16512 0 0
+door~
+~
+D EAST 16530 0 0
+door~
+~
+D SOUTH 16541 0 0
+door~
+~
+D WEST 16528 0 0
+door~
+~
+OWNER none~
+#16530
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16513 0 0
+door~
+~
+D EAST 16531 0 0
+door~
+~
+D WEST 16529 0 0
+door~
+~
+OWNER none~
+#16531
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16514 0 0
+door~
+~
+D EAST 16532 0 0
+door~
+~
+D WEST 16530 0 0
+door~
+~
+OWNER none~
+#16532
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16515 0 0
+door~
+~
+D EAST 16533 0 0
+door~
+~
+D WEST 16531 0 0
+door~
+~
+OWNER none~
+#16533
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16516 0 0
+door~
+~
+D WEST 16532 0 0
+door~
+~
+OWNER none~
+#16534
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16518 0 0
+door~
+~
+D EAST 16535 0 0
+door~
+~
+OWNER none~
+#16535
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16519 0 0
+door~
+~
+D EAST 16536 0 0
+door~
+~
+D SOUTH 16542 0 0
+door~
+~
+D WEST 16534 0 0
+door~
+~
+OWNER none~
+#16536
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16520 0 0
+door~
+~
+D EAST 16537 0 0
+door~
+~
+D SOUTH 16543 0 0
+door~
+~
+D WEST 16535 0 0
+door~
+~
+OWNER none~
+#16537
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16521 0 0
+door~
+~
+D WEST 16536 0 0
+door~
+~
+OWNER none~
+#16538
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16526 0 0
+door~
+~
+D EAST 16539 0 0
+door~
+~
+D SOUTH 16544 0 0
+door~
+~
+OWNER none~
+#16539
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16527 0 0
+door~
+~
+D EAST 16540 0 0
+door~
+~
+D SOUTH 16545 0 0
+door~
+~
+D WEST 16538 0 0
+door~
+~
+OWNER none~
+#16540
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16528 0 0
+door~
+~
+D EAST 16541 0 0
+door~
+~
+D SOUTH 16546 0 0
+door~
+~
+D WEST 16539 0 0
+door~
+~
+OWNER none~
+#16541
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16529 0 0
+door~
+~
+D SOUTH 16547 0 0
+door~
+~
+D WEST 16540 0 0
+door~
+~
+OWNER none~
+#16542
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16535 0 0
+door~
+~
+D EAST 16543 0 0
+door~
+~
+OWNER none~
+#16543
+Plains of The Maurding Prairie(near mountains CAVE)~
+~
+unused
+D NORTH 16536 0 0
+door~
+~
+D WEST 16542 0 0
+door~
+~
+D UP 16548 0 0
+door~
+~
+OWNER none~
+#16544
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16538 0 0
+door~
+~
+D EAST 16545 0 0
+door~
+~
+OWNER none~
+#16545
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16539 0 0
+door~
+~
+D EAST 16546 0 0
+door~
+~
+D WEST 16544 0 0
+door~
+~
+OWNER none~
+#16546
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16540 0 0
+door~
+~
+D EAST 16547 0 0
+door~
+~
+D WEST 16545 0 0
+door~
+~
+OWNER none~
+#16547
+Plains of The Maurding Prairie(Alcove)~
+~
+unused
+D NORTH 16541 0 0
+door~
+~
+D WEST 16546 0 0
+door~
+~
+OWNER none~
+#16548
+The Mouth of a Cool, Breezy Cave~
+~
+cave
+D SOUTH 16549 0 0
+door~
+~
+D DOWN 16543 0 0
+door~
+~
+OWNER none~
+#16549
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16548 0 0
+door~
+~
+D SOUTH 16552 0 0
+door~
+~
+OWNER none~
+#16550
+Inside a Cool, Breezy Cave~
+~
+cave
+D EAST 16551 0 0
+door~
+~
+D SOUTH 16553 0 0
+door~
+~
+OWNER none~
+#16551
+Inside a Cool, Breezy Cave~
+~
+cave
+D EAST 16552 0 0
+door~
+~
+D SOUTH 16554 0 0
+door~
+~
+D WEST 16550 0 0
+door~
+~
+OWNER none~
+#16552
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16549 0 0
+door~
+~
+D SOUTH 16555 0 0
+door~
+~
+D WEST 16551 0 0
+door~
+~
+OWNER none~
+#16553
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16550 0 0
+door~
+~
+D EAST 16554 0 0
+door~
+~
+D SOUTH 16556 0 0
+door~
+~
+OWNER none~
+#16554
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16551 0 0
+door~
+~
+D EAST 16555 0 0
+door~
+~
+D SOUTH 16557 0 0
+door~
+~
+D WEST 16553 0 0
+door~
+~
+OWNER none~
+#16555
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16552 0 0
+door~
+~
+D SOUTH 16558 0 0
+door~
+~
+D WEST 16554 0 0
+door~
+~
+OWNER none~
+#16556
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16553 0 0
+door~
+~
+D EAST 16557 0 0
+door~
+~
+OWNER none~
+#16557
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16554 0 0
+door~
+~
+D EAST 16558 0 0
+door~
+~
+D WEST 16556 0 0
+door~
+~
+OWNER none~
+#16558
+Inside a Cool, Breezy Cave~
+~
+cave
+D NORTH 16555 0 0
+door~
+~
+D WEST 16557 0 0
+door~
+~
+OWNER none~
+#16559
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16302 0 0
+door~
+~
+D EAST 16323 0 0
+door~
+~
+D SOUTH 16342 0 0
+door~
+~
+D WEST 16322 0 0
+door~
+~
+OWNER none~
+#16560
+Before a Large Granite Keep~
+~
+unused
+D EAST 16561 0 0
+door~
+~
+D SOUTH 16575 0 0
+door~
+~
+OWNER none~
+#16561
+Before a Large Granite Keep~
+~
+unused
+D EAST 16562 0 0
+door~
+~
+D WEST 16560 0 0
+door~
+~
+OWNER none~
+#16562
+Before a Large Granite Keep~
+~
+unused
+D EAST 16563 0 0
+door~
+~
+D WEST 16561 0 0
+door~
+~
+OWNER none~
+#16563
+Before a Large Granite Keep~
+~
+unused
+D EAST 16564 0 0
+door~
+~
+D WEST 16562 0 0
+door~
+~
+OWNER none~
+#16564
+Before a Large Granite Keep~
+~
+unused
+D SOUTH 16565 0 0
+door~
+~
+D WEST 16563 0 0
+door~
+~
+OWNER none~
+#16565
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16564 0 0
+door~
+~
+D SOUTH 16566 0 0
+door~
+~
+OWNER none~
+#16566
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16565 0 0
+door~
+~
+D SOUTH 16567 0 0
+door~
+~
+OWNER none~
+#16567
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16566 0 0
+door~
+~
+D SOUTH 16568 0 0
+door~
+~
+OWNER none~
+#16568
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16567 0 0
+door~
+~
+D WEST 16569 0 0
+door~
+~
+OWNER none~
+#16569
+Before a Large Granite Keep~
+~
+unused
+D EAST 16568 0 0
+door~
+~
+D WEST 16570 0 0
+door~
+~
+OWNER none~
+#16570
+Before a Large Granite Keep~
+~
+unused
+D EAST 16569 0 0
+door~
+~
+D WEST 16571 0 0
+door~
+~
+OWNER none~
+#16571
+Before a Large Granite Keep~
+~
+unused
+D EAST 16570 0 0
+door~
+~
+D WEST 16572 0 0
+door~
+~
+OWNER none~
+#16572
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16573 0 0
+door~
+~
+D EAST 16571 0 0
+door~
+~
+OWNER none~
+#16573
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16574 0 0
+door~
+~
+D SOUTH 16572 0 0
+door~
+~
+OWNER none~
+#16574
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16575 0 0
+door~
+~
+D SOUTH 16573 0 0
+door~
+~
+D WEST 16454 0 0
+door~
+~
+OWNER none~
+#16575
+Before a Large Granite Keep~
+~
+unused
+D NORTH 16560 0 0
+door~
+~
+D SOUTH 16574 0 0
+door~
+~
+OWNER none~
+#16588
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#16200
+Outside the Gates of Mhenfutansep~
+~
+road
+ROOM NO_MOB
+D NORTH 0 0 0
+door~
+Gates of a large city stands before you.
+~
+D EAST 0 0 0
+door~
+Large stone walls stretch this way.
+~
+D SOUTH 16202 0 0
+door~
+A cobblestone path continues on though the prairies.
+~
+D WEST 0 0 0
+door~
+Large stone walls stretch this way.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16201
+Plains of the Maurding Prairie~
+~
+field
+D NORTH 0 0 0
+door~
+Tall walls of a big city block this way.
+~
+D EAST 16202 0 0
+door~
+~
+D SOUTH 16206 0 0
+door~
+~
+D WEST 16201 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+OWNER none~
+#16202
+Tounecian Route~
+~
+road
+D NORTH 16200 0 0
+door~
+A cobblestone path continues on though the prairies.
+~
+D EAST 16203 0 0
+door~
+A cobblestone path continues on though the prairies.
+~
+D SOUTH 16207 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16201 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16203
+Tounecian Route~
+~
+road
+D NORTH 0 0 0
+door~
+Tall walls of a big city block this way.
+~
+D EAST 16204 0 0
+door~
+~
+D SOUTH 16208 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16202 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16204
+Plains of the Maurding Prairie~
+~
+field
+D NORTH 0 0 0
+door~
+Tall walls of a big city block this way.
+~
+D EAST 16205 0 0
+door~
+~
+D SOUTH 16209 0 0
+door~
+~
+D WEST 16203 0 0
+door~
+~
+OWNER none~
+#16205
+Plains of the Maurding Prairie~
+~
+field
+D NORTH 16205 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+D EAST 16205 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+D SOUTH 16210 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+D WEST 16204 0 0
+door~
+~
+OWNER none~
+#16206
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16201 0 0
+door~
+~
+D EAST 16207 0 0
+door~
+~
+D SOUTH 16213 0 0
+door~
+~
+D WEST 16206 0 0
+door~
+~
+OWNER none~
+#16207
+Tounecian Route~
+~
+road
+D NORTH 16202 0 0
+door~
+~
+D EAST 16208 0 0
+door~
+~
+D SOUTH 16214 0 0
+door~
+~
+D WEST 16206 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16208
+Tounecian Route~
+~
+road
+D NORTH 16203 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16209 0 0
+door~
+~
+D SOUTH 16215 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16207 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16209
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16204 0 0
+door~
+~
+D EAST 16210 0 0
+door~
+~
+D SOUTH 16216 0 0
+door~
+~
+D WEST 16208 0 0
+door~
+~
+OWNER none~
+#16210
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16205 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+D EAST 16211 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+D SOUTH 16217 0 0
+door~
+~
+D WEST 16209 0 0
+door~
+Plains stretch as far as the eye can see.
+~
+OWNER none~
+#16211
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16211 0 0
+door~
+~
+D EAST 16211 0 0
+door~
+~
+D SOUTH 16218 0 0
+door~
+~
+D WEST 16210 0 0
+door~
+~
+OWNER none~
+#16212
+A Field of Corn Rows~
+~
+field
+D EAST 16213 0 0
+door~
+~
+D SOUTH 16221 0 0
+door~
+~
+D WEST 16212 0 0
+door~
+~
+OWNER none~
+#16213
+A Field of Corn Rows~
+~
+field
+D NORTH 16206 0 0
+door~
+~
+D EAST 16214 0 0
+door~
+~
+D SOUTH 16222 0 0
+door~
+~
+D WEST 16212 0 0
+door~
+~
+OWNER none~
+#16214
+Tounecian Route~
+~
+road
+D NORTH 16207 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16215 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16223 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16213 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16215
+Tounecian Route~
+~
+road
+D NORTH 16208 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16216 0 0
+door~
+~
+D SOUTH 16224 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16214 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16216
+A Field of Corn Rows~
+~
+field
+D NORTH 16209 0 0
+door~
+~
+D EAST 16217 0 0
+door~
+~
+D SOUTH 16225 0 0
+door~
+~
+D WEST 16215 0 0
+door~
+~
+OWNER none~
+#16217
+A Field of Corn Rows~
+~
+field
+D NORTH 16210 0 0
+door~
+~
+D EAST 16218 0 0
+door~
+~
+D SOUTH 16226 0 0
+door~
+~
+D WEST 16216 0 0
+door~
+~
+OWNER none~
+#16218
+A Field of Corn Rows~
+~
+field
+D NORTH 16211 0 0
+door~
+~
+D EAST 16219 0 0
+door~
+~
+D SOUTH 16227 0 0
+door~
+~
+D WEST 16217 0 0
+door~
+~
+OWNER none~
+#16219
+Plains of The Maurding Prairie(Near Forest)~
+~
+field
+D NORTH 16219 0 0
+door~
+~
+D SOUTH 16228 0 0
+door~
+~
+D WEST 16218 0 0
+door~
+~
+OWNER none~
+#16220
+A Field of Corn Rows~
+~
+field
+D NORTH 16220 0 0
+door~
+~
+D EAST 16221 0 0
+door~
+~
+D SOUTH 16231 0 0
+door~
+~
+D WEST 16220 0 0
+door~
+~
+OWNER none~
+#16221
+A Field of Corn Rows~
+~
+field
+D NORTH 16212 0 0
+door~
+~
+D EAST 16222 0 0
+door~
+~
+D SOUTH 16232 0 0
+door~
+~
+D WEST 16220 0 0
+door~
+~
+OWNER none~
+#16222
+A Field of Corn Rows~
+~
+field
+D NORTH 16213 0 0
+door~
+~
+D EAST 16223 0 0
+door~
+~
+D SOUTH 16233 0 0
+door~
+~
+D WEST 16221 0 0
+door~
+~
+OWNER none~
+#16223
+Tounecian Route~
+~
+road
+D NORTH 16214 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16224 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16234 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16222 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16224
+Tounecian Route~
+~
+road
+D NORTH 16215 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16225 0 0
+door~
+~
+D SOUTH 16235 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16223 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16225
+A Field of Corn Rows~
+~
+field
+D NORTH 16216 0 0
+door~
+~
+D EAST 16226 0 0
+door~
+~
+D SOUTH 16236 0 0
+door~
+~
+D WEST 16224 0 0
+door~
+~
+OWNER none~
+#16226
+A Field of Corn Rows~
+~
+field
+D NORTH 16217 0 0
+door~
+~
+D EAST 16227 0 0
+door~
+~
+D SOUTH 16237 0 0
+door~
+~
+D WEST 16225 0 0
+door~
+~
+OWNER none~
+#16227
+A Field of Corn Rows~
+~
+field
+D NORTH 16218 0 0
+door~
+~
+D EAST 16228 0 0
+door~
+~
+D SOUTH 16238 0 0
+door~
+~
+D WEST 16226 0 0
+door~
+~
+OWNER none~
+#16228
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16219 0 0
+door~
+~
+D EAST 16229 0 0
+door~
+~
+D SOUTH 16239 0 0
+door~
+~
+D WEST 16227 0 0
+door~
+~
+OWNER none~
+#16229
+Plains of The Maurding Prairie(Near Forest)~
+~
+field
+D SOUTH 16240 0 0
+door~
+~
+D WEST 16228 0 0
+door~
+~
+OWNER none~
+#16230
+A Field of Corn Rows~
+~
+field
+D NORTH 16230 0 0
+door~
+~
+D EAST 16231 0 0
+door~
+~
+D SOUTH 16247 0 0
+door~
+~
+D WEST 16230 0 0
+door~
+~
+OWNER none~
+#16231
+A Field of Corn Rows~
+~
+field
+D NORTH 16220 0 0
+door~
+~
+D EAST 16232 0 0
+door~
+~
+D SOUTH 16248 0 0
+door~
+~
+D WEST 16230 0 0
+door~
+~
+OWNER none~
+#16232
+A Field of Corn Rows~
+~
+field
+D NORTH 16221 0 0
+door~
+~
+D EAST 16233 0 0
+door~
+~
+D SOUTH 16249 0 0
+door~
+~
+D WEST 16231 0 0
+door~
+~
+OWNER none~
+#16233
+A Field of Corn Rows~
+~
+field
+D NORTH 16222 0 0
+door~
+~
+D EAST 16234 0 0
+door~
+~
+D SOUTH 16250 0 0
+door~
+~
+D WEST 16232 0 0
+door~
+~
+OWNER none~
+#16234
+Tounecian Route~
+~
+road
+D NORTH 16223 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16235 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16251 0 0
+door~
+~
+D WEST 16233 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16235
+Tounecian Route~
+~
+road
+D NORTH 16224 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16236 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16252 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16234 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16236
+Tounecian Route~
+~
+road
+D NORTH 16225 0 0
+door~
+~
+D EAST 16237 0 0
+door~
+~
+D SOUTH 16253 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16235 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16237
+A Field of Corn Rows~
+~
+field
+D NORTH 16226 0 0
+door~
+~
+D EAST 16238 0 0
+door~
+~
+D SOUTH 16254 0 0
+door~
+~
+D WEST 16236 0 0
+door~
+~
+OWNER none~
+#16238
+A Field of Corn Rows~
+~
+field
+D NORTH 16227 0 0
+door~
+~
+D EAST 16239 0 0
+door~
+~
+D SOUTH 16255 0 0
+door~
+~
+D WEST 16237 0 0
+door~
+~
+OWNER none~
+#16239
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16228 0 0
+door~
+~
+D EAST 16240 0 0
+door~
+~
+D SOUTH 16256 0 0
+door~
+~
+D WEST 16238 0 0
+door~
+~
+OWNER none~
+#16240
+Plains of The Maurding Prairie(Near Forest)~
+~
+field
+D NORTH 16229 0 0
+door~
+~
+D SOUTH 16257 0 0
+door~
+~
+D WEST 16239 0 0
+door~
+~
+OWNER none~
+#16241
+A Large Wheat Field~
+~
+field
+D NORTH 16241 0 0
+door~
+~
+D EAST 16242 0 0
+door~
+~
+D SOUTH 16262 0 0
+door~
+~
+OWNER none~
+#16242
+A Large Wheat Field~
+~
+field
+D NORTH 16242 0 0
+door~
+~
+D EAST 16243 0 0
+door~
+~
+D SOUTH 16263 0 0
+door~
+~
+D WEST 16241 0 0
+door~
+~
+OWNER none~
+#16243
+A Large Wheat Field~
+~
+field
+D NORTH 16243 0 0
+door~
+~
+D EAST 16244 0 0
+door~
+~
+D SOUTH 16264 0 0
+door~
+~
+D WEST 16242 0 0
+door~
+~
+OWNER none~
+#16244
+A Large Wheat Field~
+~
+field
+D NORTH 16244 0 0
+door~
+~
+D EAST 16245 0 0
+door~
+~
+D SOUTH 16265 0 0
+door~
+~
+D WEST 16243 0 0
+door~
+~
+OWNER none~
+#16245
+A Large Wheat Field~
+~
+field
+D NORTH 16245 0 0
+door~
+~
+D EAST 16246 0 0
+door~
+~
+D SOUTH 16266 0 0
+door~
+~
+D WEST 16244 0 0
+door~
+~
+OWNER none~
+#16246
+A Turn in the Path through the Fields~
+~
+trail
+D EAST 16247 0 0
+door~
+~
+D SOUTH 16267 0 0
+door~
+~
+D WEST 16245 0 0
+door~
+~
+OWNER none~
+#16247
+A Path through the Fields~
+~
+trail
+D NORTH 16230 0 0
+door~
+~
+D EAST 16248 0 0
+door~
+~
+D SOUTH 16268 0 0
+door~
+~
+D WEST 16246 0 0
+door~
+~
+OWNER none~
+#16248
+A Path through the Fields~
+~
+trail
+D NORTH 16231 0 0
+door~
+~
+D EAST 16249 0 0
+door~
+~
+D SOUTH 16269 0 0
+door~
+~
+D WEST 16247 0 0
+door~
+~
+OWNER none~
+#16249
+A Path through the Fields~
+~
+trail
+D NORTH 16232 0 0
+door~
+~
+D EAST 16250 0 0
+door~
+~
+D SOUTH 16270 0 0
+door~
+~
+D WEST 16248 0 0
+door~
+~
+OWNER none~
+#16250
+A Path through the Fields~
+~
+trail
+D NORTH 16233 0 0
+door~
+~
+D EAST 16251 0 0
+door~
+~
+D SOUTH 16271 0 0
+door~
+~
+D WEST 16249 0 0
+door~
+~
+OWNER none~
+#16251
+A Path through the Fields~
+~
+trail
+D NORTH 16234 0 0
+door~
+~
+D EAST 16252 0 0
+door~
+~
+D SOUTH 16272 0 0
+door~
+~
+D WEST 16250 0 0
+door~
+~
+OWNER none~
+#16252
+Tounecian Route~
+~
+road
+D NORTH 16235 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16253 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16273 0 0
+door~
+~
+D WEST 16251 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16253
+Tounecian Route~
+~
+road
+D NORTH 16236 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16254 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16274 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16252 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16254
+Tounecian Route~
+~
+road
+D NORTH 16237 0 0
+door~
+~
+D EAST 16255 0 0
+door~
+~
+D SOUTH 16275 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16253 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16255
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16238 0 0
+door~
+~
+D EAST 16256 0 0
+door~
+~
+D SOUTH 16276 0 0
+door~
+~
+D WEST 16254 0 0
+door~
+~
+OWNER none~
+#16256
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16239 0 0
+door~
+~
+D EAST 16257 0 0
+door~
+~
+D SOUTH 16277 0 0
+door~
+~
+D WEST 16255 0 0
+door~
+~
+OWNER none~
+#16257
+Plains of The Maurding Prairie(Near Forest)~
+~
+unused
+D NORTH 16240 0 0
+door~
+~
+D SOUTH 16278 0 0
+door~
+~
+D WEST 16256 0 0
+door~
+~
+OWNER none~
+#16258
+Plains of The Maurding Prairie(w/water)~
+~
+field
+D EAST 16259 0 0
+door~
+~
+D SOUTH 16280 0 0
+door~
+~
+OWNER none~
+#16259
+Plains of The Maurding Prairie(w/water)~
+~
+field
+D EAST 16260 0 0
+door~
+~
+D SOUTH 16281 0 0
+door~
+~
+D WEST 16258 0 0
+door~
+~
+OWNER none~
+#16260
+Plains of The Maurding Prairie(w/water)~
+~
+field
+D EAST 16261 0 0
+door~
+~
+D SOUTH 16282 0 0
+door~
+~
+D WEST 16259 0 0
+door~
+~
+OWNER none~
+#16261
+A Large Wheat Field~
+~
+field
+D EAST 16262 0 0
+door~
+~
+D SOUTH 16283 0 0
+door~
+~
+D WEST 16260 0 0
+door~
+~
+OWNER none~
+#16262
+A Large Wheat Field~
+~
+field
+D NORTH 16241 0 0
+door~
+~
+D EAST 16263 0 0
+door~
+~
+D SOUTH 16284 0 0
+door~
+~
+D WEST 16261 0 0
+door~
+~
+OWNER none~
+#16263
+A Large Wheat Field~
+~
+field
+D NORTH 16242 0 0
+door~
+~
+D EAST 16264 0 0
+door~
+~
+D SOUTH 16285 0 0
+door~
+~
+D WEST 16262 0 0
+door~
+~
+OWNER none~
+#16264
+A Large Wheat Field~
+~
+field
+D NORTH 16243 0 0
+door~
+~
+D EAST 16265 0 0
+door~
+~
+D SOUTH 16286 0 0
+door~
+~
+D WEST 16263 0 0
+door~
+~
+OWNER none~
+#16265
+A Large Wheat Field~
+~
+field
+D NORTH 16244 0 0
+door~
+~
+D EAST 16266 0 0
+door~
+~
+D SOUTH 16287 0 0
+door~
+~
+D WEST 16264 0 0
+door~
+~
+OWNER none~
+#16266
+A Large Wheat Field~
+~
+field
+D NORTH 16245 0 0
+door~
+~
+D EAST 16267 0 0
+door~
+~
+D SOUTH 16288 0 0
+door~
+~
+D WEST 16265 0 0
+door~
+~
+OWNER none~
+#16267
+A Path through the Fields~
+~
+trail
+D NORTH 16246 0 0
+door~
+~
+D EAST 16268 0 0
+door~
+~
+D SOUTH 16289 0 0
+door~
+~
+D WEST 16266 0 0
+door~
+~
+OWNER none~
+#16268
+Among the Cotton Fields~
+~
+field
+D NORTH 16247 0 0
+door~
+~
+D EAST 16269 0 0
+door~
+~
+D SOUTH 16290 0 0
+door~
+~
+D WEST 16267 0 0
+door~
+~
+OWNER none~
+#16269
+Among the Cotton Fields~
+~
+field
+D NORTH 16248 0 0
+door~
+~
+D EAST 16270 0 0
+door~
+~
+D SOUTH 16291 0 0
+door~
+~
+D WEST 16268 0 0
+door~
+~
+OWNER none~
+#16270
+Among the Cotton Fields~
+~
+field
+D NORTH 16249 0 0
+door~
+~
+D EAST 16271 0 0
+door~
+~
+D SOUTH 16292 0 0
+door~
+~
+D WEST 16269 0 0
+door~
+~
+OWNER none~
+#16271
+Among the Cotton Fields~
+~
+field
+D NORTH 16250 0 0
+door~
+~
+D EAST 16272 0 0
+door~
+~
+D SOUTH 16293 0 0
+door~
+~
+D WEST 16270 0 0
+door~
+~
+OWNER none~
+#16272
+Among the Cotton Fields~
+~
+field
+D NORTH 16251 0 0
+door~
+~
+D EAST 16273 0 0
+door~
+~
+D SOUTH 16294 0 0
+door~
+~
+D WEST 16271 0 0
+door~
+~
+OWNER none~
+#16273
+Among the Cotton Fields~
+~
+field
+D NORTH 16252 0 0
+door~
+~
+D EAST 16274 0 0
+door~
+~
+D SOUTH 16295 0 0
+door~
+~
+D WEST 16272 0 0
+door~
+~
+OWNER none~
+#16274
+Tounecian Route~
+~
+road
+D NORTH 16253 0 0
+door~
+~
+D EAST 16275 0 0
+door~
+~
+D SOUTH 16296 0 0
+door~
+~
+D WEST 16273 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16275
+Tounecian Route~
+~
+road
+D NORTH 16254 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16276 0 0
+door~
+~
+D SOUTH 16297 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16274 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16276
+Among the Cotton Fields~
+~
+field
+D NORTH 16255 0 0
+door~
+~
+D EAST 16277 0 0
+door~
+~
+D SOUTH 16298 0 0
+door~
+~
+D WEST 16275 0 0
+door~
+~
+OWNER none~
+#16277
+Among the Cotton Fields~
+~
+field
+D NORTH 16256 0 0
+door~
+~
+D EAST 16278 0 0
+door~
+~
+D SOUTH 16299 0 0
+door~
+~
+D WEST 16276 0 0
+door~
+~
+OWNER none~
+#16278
+Plains of The Maurding Prairie(Near Forest)~
+~
+field
+D NORTH 16257 0 0
+door~
+~
+D EAST 16278 0 0
+door~
+~
+D SOUTH 16278 0 0
+door~
+~
+D WEST 16277 0 0
+door~
+~
+OWNER none~
+#16279
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D EAST 16280 0 0
+door~
+~
+D SOUTH 16300 0 0
+door~
+~
+OWNER none~
+#16280
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16258 0 0
+door~
+~
+D EAST 16281 0 0
+door~
+~
+D SOUTH 16301 0 0
+door~
+~
+D WEST 16279 0 0
+door~
+~
+OWNER none~
+#16281
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16259 0 0
+door~
+~
+D EAST 16282 0 0
+door~
+~
+D SOUTH 16302 0 0
+door~
+~
+D WEST 16280 0 0
+door~
+~
+OWNER none~
+#16282
+Plains of The Maurding Prairie~
+~
+field
+D NORTH 16260 0 0
+door~
+~
+D EAST 16283 0 0
+door~
+~
+D SOUTH 16303 0 0
+door~
+~
+D WEST 16281 0 0
+door~
+~
+OWNER none~
+#16283
+A Large Wheat Field~
+~
+field
+D NORTH 16261 0 0
+door~
+~
+D EAST 16284 0 0
+door~
+~
+D SOUTH 16304 0 0
+door~
+~
+D WEST 16282 0 0
+door~
+~
+OWNER none~
+#16284
+A Large Wheat Field~
+~
+field
+D NORTH 16262 0 0
+door~
+~
+D EAST 16285 0 0
+door~
+~
+D SOUTH 16305 0 0
+door~
+~
+D WEST 16283 0 0
+door~
+~
+OWNER none~
+#16285
+A Large Wheat Field~
+~
+field
+D NORTH 16263 0 0
+door~
+~
+D EAST 16286 0 0
+door~
+~
+D SOUTH 16306 0 0
+door~
+~
+D WEST 16284 0 0
+door~
+~
+OWNER none~
+#16286
+A Large Wheat Field~
+~
+field
+D NORTH 16264 0 0
+door~
+~
+D EAST 16287 0 0
+door~
+~
+D SOUTH 16307 0 0
+door~
+~
+D WEST 16285 0 0
+door~
+~
+OWNER none~
+#16287
+A Large Wheat Field~
+~
+field
+D NORTH 16265 0 0
+door~
+~
+D EAST 16288 0 0
+door~
+~
+D SOUTH 16308 0 0
+door~
+~
+D WEST 16286 0 0
+door~
+~
+OWNER none~
+#16288
+A Large Wheat Field~
+~
+field
+D NORTH 16266 0 0
+door~
+~
+D EAST 16289 0 0
+door~
+~
+D SOUTH 16309 0 0
+door~
+~
+D WEST 16287 0 0
+door~
+~
+OWNER none~
+#16289
+A Path through the Fields~
+~
+trail
+D NORTH 16267 0 0
+door~
+~
+D EAST 16290 0 0
+door~
+~
+D SOUTH 16310 0 0
+door~
+~
+D WEST 16288 0 0
+door~
+~
+OWNER none~
+#16290
+Among the Cotton Fields~
+~
+field
+D NORTH 16268 0 0
+door~
+~
+D EAST 16291 0 0
+door~
+~
+D SOUTH 16311 0 0
+door~
+~
+D WEST 16289 0 0
+door~
+~
+OWNER none~
+#16291
+Among the Cotton Fields~
+~
+field
+D NORTH 16269 0 0
+door~
+~
+D EAST 16292 0 0
+door~
+~
+D SOUTH 16312 0 0
+door~
+~
+D WEST 16290 0 0
+door~
+~
+OWNER none~
+#16292
+Among the Cotton Fields~
+~
+field
+D NORTH 16270 0 0
+door~
+~
+D EAST 16293 0 0
+door~
+~
+D SOUTH 16313 0 0
+door~
+~
+D WEST 16291 0 0
+door~
+~
+OWNER none~
+#16293
+Among the Cotton Fields~
+~
+field
+D NORTH 16271 0 0
+door~
+~
+D EAST 16294 0 0
+door~
+~
+D SOUTH 16314 0 0
+door~
+~
+D WEST 16292 0 0
+door~
+~
+OWNER none~
+#16294
+Among the Cotton Fields~
+~
+field
+D NORTH 16272 0 0
+door~
+~
+D EAST 16295 0 0
+door~
+~
+D SOUTH 16315 0 0
+door~
+~
+D WEST 16293 0 0
+door~
+~
+OWNER none~
+#16295
+Among the Cotton Fields~
+~
+field
+D NORTH 16273 0 0
+door~
+~
+D EAST 16296 0 0
+door~
+~
+D SOUTH 16316 0 0
+door~
+~
+D WEST 16294 0 0
+door~
+~
+OWNER none~
+#16296
+Tounecian Route~
+~
+road
+D NORTH 16274 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16297 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16317 0 0
+door~
+~
+D WEST 16295 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16297
+Tounecian Route~
+~
+road
+D NORTH 16275 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16298 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16318 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16296 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16298
+Tounecian Route~
+~
+road
+D NORTH 16276 0 0
+door~
+~
+D EAST 16299 0 0
+door~
+~
+D SOUTH 16319 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16297 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16299
+Among the Cotton Fields~
+~
+field
+D NORTH 16277 0 0
+door~
+~
+D EAST 16299 0 0
+door~
+~
+D SOUTH 16320 0 0
+door~
+~
+D WEST 16298 0 0
+door~
+~
+OWNER none~
+#16300
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16279 0 0
+door~
+~
+D EAST 16301 0 0
+door~
+~
+D SOUTH 16321 0 0
+door~
+~
+OWNER none~
+#16301
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16280 0 0
+door~
+~
+D EAST 16302 0 0
+door~
+~
+D SOUTH 16322 0 0
+door~
+~
+D WEST 16300 0 0
+door~
+~
+OWNER none~
+#16302
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16281 0 0
+door~
+~
+D EAST 16303 0 0
+door~
+~
+D SOUTH 16559 0 0
+door~
+~
+D WEST 16301 0 0
+door~
+~
+OWNER none~
+#16303
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16282 0 0
+door~
+~
+D EAST 16304 0 0
+door~
+~
+D SOUTH 16323 0 0
+door~
+~
+D WEST 16302 0 0
+door~
+~
+OWNER none~
+#16304
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16283 0 0
+door~
+~
+D EAST 16305 0 0
+door~
+~
+D SOUTH 16324 0 0
+door~
+~
+D WEST 16303 0 0
+door~
+~
+OWNER none~
+#16305
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16284 0 0
+door~
+~
+D EAST 16306 0 0
+door~
+~
+D SOUTH 16325 0 0
+door~
+~
+D WEST 16304 0 0
+door~
+~
+OWNER none~
+#16306
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16285 0 0
+door~
+~
+D EAST 16307 0 0
+door~
+~
+D SOUTH 16326 0 0
+door~
+~
+D WEST 16305 0 0
+door~
+~
+OWNER none~
+#16307
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16286 0 0
+door~
+~
+D EAST 16308 0 0
+door~
+~
+D SOUTH 16327 0 0
+door~
+~
+D WEST 16306 0 0
+door~
+~
+OWNER none~
+#16308
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16287 0 0
+door~
+~
+D EAST 16309 0 0
+door~
+~
+D SOUTH 16328 0 0
+door~
+~
+D WEST 16307 0 0
+door~
+~
+OWNER none~
+#16309
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16288 0 0
+door~
+~
+D EAST 16310 0 0
+door~
+~
+D SOUTH 16329 0 0
+door~
+~
+D WEST 16308 0 0
+door~
+~
+OWNER none~
+#16310
+A Turn in the Path through the Fields~
+~
+unused
+D NORTH 16289 0 0
+door~
+~
+D EAST 16311 0 0
+door~
+~
+D SOUTH 16330 0 0
+door~
+~
+D WEST 16309 0 0
+door~
+~
+OWNER none~
+#16311
+A Path through the Fields~
+~
+unused
+D NORTH 16290 0 0
+door~
+~
+D EAST 16312 0 0
+door~
+~
+D SOUTH 16331 0 0
+door~
+~
+D WEST 16310 0 0
+door~
+~
+OWNER none~
+#16312
+A Path through the Fields~
+~
+unused
+D NORTH 16291 0 0
+door~
+~
+D EAST 16313 0 0
+door~
+~
+D SOUTH 16332 0 0
+door~
+~
+D WEST 16311 0 0
+door~
+~
+OWNER none~
+#16313
+A Path through the Fields~
+~
+unused
+D NORTH 16292 0 0
+door~
+~
+D EAST 16314 0 0
+door~
+~
+D SOUTH 16333 0 0
+door~
+~
+D WEST 16312 0 0
+door~
+~
+OWNER none~
+#16314
+A Path through the Fields~
+~
+unused
+D NORTH 16293 0 0
+door~
+~
+D EAST 16315 0 0
+door~
+~
+D SOUTH 16334 0 0
+door~
+~
+D WEST 16313 0 0
+door~
+~
+OWNER none~
+#16315
+A Path through the Fields~
+~
+unused
+D NORTH 16294 0 0
+door~
+~
+D EAST 16316 0 0
+door~
+~
+D SOUTH 16335 0 0
+door~
+~
+D WEST 16314 0 0
+door~
+~
+OWNER none~
+#16316
+A Path through the Fields~
+~
+unused
+D NORTH 16295 0 0
+door~
+~
+D EAST 16317 0 0
+door~
+~
+D SOUTH 16336 0 0
+door~
+~
+D WEST 16315 0 0
+door~
+~
+OWNER none~
+#16317
+A Path through the Fields~
+~
+unused
+D NORTH 16296 0 0
+door~
+~
+D EAST 16318 0 0
+door~
+~
+D SOUTH 16337 0 0
+door~
+~
+D WEST 16316 0 0
+door~
+~
+OWNER none~
+#16318
+Tounecian Route~
+~
+unused
+D NORTH 16297 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16319 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16338 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16317 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16319
+Tounecian Route~
+~
+unused
+D NORTH 16298 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16320 0 0
+door~
+~
+D SOUTH 16339 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16318 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16320
+Plains of The Maurding Prairie(near forest)~
+~
+unused
+D NORTH 16299 0 0
+door~
+~
+D WEST 16319 0 0
+door~
+~
+OWNER none~
+#16321
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16300 0 0
+door~
+~
+D EAST 16322 0 0
+door~
+~
+D SOUTH 16340 0 0
+door~
+~
+OWNER none~
+#16322
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16301 0 0
+door~
+~
+D EAST 16559 0 0
+door~
+~
+D SOUTH 16341 0 0
+door~
+~
+D WEST 16321 0 0
+door~
+~
+OWNER none~
+#16323
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16303 0 0
+door~
+~
+D EAST 16324 0 0
+door~
+~
+D SOUTH 16343 0 0
+door~
+~
+D WEST 16559 0 0
+door~
+~
+OWNER none~
+#16324
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16304 0 0
+door~
+~
+D EAST 16325 0 0
+door~
+~
+D SOUTH 16344 0 0
+door~
+~
+D WEST 16323 0 0
+door~
+~
+OWNER none~
+#16325
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16305 0 0
+door~
+~
+D EAST 16326 0 0
+door~
+~
+D SOUTH 16345 0 0
+door~
+~
+D WEST 16324 0 0
+door~
+~
+OWNER none~
+#16326
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16306 0 0
+door~
+~
+D EAST 16327 0 0
+door~
+~
+D SOUTH 16346 0 0
+door~
+~
+D WEST 16325 0 0
+door~
+~
+OWNER none~
+#16327
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16307 0 0
+door~
+~
+D EAST 16328 0 0
+door~
+~
+D SOUTH 16347 0 0
+door~
+~
+D WEST 16326 0 0
+door~
+~
+OWNER none~
+#16328
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16308 0 0
+door~
+~
+D EAST 16329 0 0
+door~
+~
+D SOUTH 16348 0 0
+door~
+~
+D WEST 16327 0 0
+door~
+~
+OWNER none~
+#16329
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16309 0 0
+door~
+~
+D EAST 16330 0 0
+door~
+~
+D SOUTH 16349 0 0
+door~
+~
+D WEST 16328 0 0
+door~
+~
+OWNER none~
+#16330
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16310 0 0
+door~
+~
+D EAST 16331 0 0
+door~
+~
+D SOUTH 16350 0 0
+door~
+~
+D WEST 16329 0 0
+door~
+~
+OWNER none~
+#16331
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16311 0 0
+door~
+~
+D EAST 16332 0 0
+door~
+~
+D SOUTH 16351 0 0
+door~
+~
+D WEST 16330 0 0
+door~
+~
+OWNER none~
+#16332
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16312 0 0
+door~
+~
+D EAST 16333 0 0
+door~
+~
+D SOUTH 16352 0 0
+door~
+~
+D WEST 16331 0 0
+door~
+~
+OWNER none~
+#16333
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16313 0 0
+door~
+~
+D EAST 16334 0 0
+door~
+~
+D SOUTH 16353 0 0
+door~
+~
+D WEST 16332 0 0
+door~
+~
+OWNER none~
+#16334
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16314 0 0
+door~
+~
+D EAST 16335 0 0
+door~
+~
+D SOUTH 16354 0 0
+door~
+~
+D WEST 16333 0 0
+door~
+~
+OWNER none~
+#16335
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16315 0 0
+door~
+~
+D EAST 16336 0 0
+door~
+~
+D SOUTH 16355 0 0
+door~
+~
+D WEST 16334 0 0
+door~
+~
+OWNER none~
+#16336
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16316 0 0
+door~
+~
+D EAST 16337 0 0
+door~
+~
+D SOUTH 16356 0 0
+door~
+~
+D WEST 16335 0 0
+door~
+~
+OWNER none~
+#16337
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16317 0 0
+door~
+~
+D EAST 16338 0 0
+door~
+~
+D SOUTH 16357 0 0
+door~
+~
+D WEST 16336 0 0
+door~
+~
+OWNER none~
+#16338
+Tounecian Route~
+~
+unused
+D NORTH 16318 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D EAST 16339 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16358 0 0
+door~
+~
+D WEST 16337 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16339
+Tounecian Route~
+~
+unused
+D NORTH 16319 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16359 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D WEST 16338 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16340
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16321 0 0
+door~
+~
+D EAST 16341 0 0
+door~
+~
+D SOUTH 16360 0 0
+door~
+~
+OWNER none~
+#16341
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16322 0 0
+door~
+~
+D EAST 16342 0 0
+door~
+~
+D SOUTH 16361 0 0
+door~
+~
+D WEST 16340 0 0
+door~
+~
+OWNER none~
+#16342
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16559 0 0
+door~
+~
+D EAST 16343 0 0
+door~
+~
+D SOUTH 16362 0 0
+door~
+~
+D WEST 16341 0 0
+door~
+~
+OWNER none~
+#16343
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16323 0 0
+door~
+~
+D EAST 16344 0 0
+door~
+~
+D SOUTH 16363 0 0
+door~
+~
+D WEST 16342 0 0
+door~
+~
+OWNER none~
+#16344
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16324 0 0
+door~
+~
+D EAST 16345 0 0
+door~
+~
+D SOUTH 16364 0 0
+door~
+~
+D WEST 16343 0 0
+door~
+~
+OWNER none~
+#16345
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16325 0 0
+door~
+~
+D EAST 16346 0 0
+door~
+~
+D SOUTH 16365 0 0
+door~
+~
+D WEST 16344 0 0
+door~
+~
+OWNER none~
+#16346
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16326 0 0
+door~
+~
+D EAST 16347 0 0
+door~
+~
+D SOUTH 16366 0 0
+door~
+~
+D WEST 16345 0 0
+door~
+~
+OWNER none~
+#16347
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16327 0 0
+door~
+~
+D EAST 16348 0 0
+door~
+~
+D SOUTH 16367 0 0
+door~
+~
+D WEST 16346 0 0
+door~
+~
+OWNER none~
+#16348
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16328 0 0
+door~
+~
+D EAST 16349 0 0
+door~
+~
+D SOUTH 16368 0 0
+door~
+~
+D WEST 16347 0 0
+door~
+~
+OWNER none~
+#16349
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16329 0 0
+door~
+~
+D EAST 16350 0 0
+door~
+~
+D SOUTH 16369 0 0
+door~
+~
+D WEST 16348 0 0
+door~
+~
+OWNER none~
+#16350
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16330 0 0
+door~
+~
+D EAST 16351 0 0
+door~
+~
+D SOUTH 16370 0 0
+door~
+~
+D WEST 16349 0 0
+door~
+~
+OWNER none~
+#16351
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16331 0 0
+door~
+~
+D EAST 16352 0 0
+door~
+~
+D SOUTH 16371 0 0
+door~
+~
+D WEST 16350 0 0
+door~
+~
+OWNER none~
+#16352
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16332 0 0
+door~
+~
+D EAST 16353 0 0
+door~
+~
+D SOUTH 16372 0 0
+door~
+~
+D WEST 16351 0 0
+door~
+~
+OWNER none~
+#16353
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16333 0 0
+door~
+~
+D EAST 16354 0 0
+door~
+~
+D SOUTH 16373 0 0
+door~
+~
+D WEST 16352 0 0
+door~
+~
+OWNER none~
+#16354
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16334 0 0
+door~
+~
+D EAST 16355 0 0
+door~
+~
+D SOUTH 16374 0 0
+door~
+~
+D WEST 16353 0 0
+door~
+~
+OWNER none~
+#16355
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16335 0 0
+door~
+~
+D EAST 16356 0 0
+door~
+~
+D SOUTH 16375 0 0
+door~
+~
+D WEST 16354 0 0
+door~
+~
+OWNER none~
+#16356
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16336 0 0
+door~
+~
+D EAST 16357 0 0
+door~
+~
+D SOUTH 16376 0 0
+door~
+~
+D WEST 16355 0 0
+door~
+~
+OWNER none~
+#16357
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16337 0 0
+door~
+~
+D EAST 16358 0 0
+door~
+~
+D SOUTH 16377 0 0
+door~
+~
+D WEST 16356 0 0
+door~
+~
+OWNER none~
+#16358
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16338 0 0
+door~
+~
+D EAST 16359 0 0
+door~
+~
+D SOUTH 16378 0 0
+door~
+~
+D WEST 16357 0 0
+door~
+~
+OWNER none~
+#16359
+Tounecian Route~
+~
+unused
+D NORTH 16339 0 0
+door~
+A cobblestone path continues on through the prairie.
+~
+D SOUTH 16379 0 0
+door~
+The cobblestone pathway ends in a junction ahead.
+~
+D WEST 16358 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Cobblestones spread out here, not only time has worn them.
+~
+OWNER none~
+#16360
+Plains of The Maurding Prairie(near mountains)~
+~
+unused
+D NORTH 16340 0 0
+door~
+~
+D EAST 16361 0 0
+door~
+~
+D SOUTH 16380 0 0
+door~
+~
+OWNER none~
+#16361
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16341 0 0
+door~
+~
+D EAST 16362 0 0
+door~
+~
+D SOUTH 16381 0 0
+door~
+~
+D WEST 16360 0 0
+door~
+~
+OWNER none~
+#16362
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16342 0 0
+door~
+~
+D EAST 16363 0 0
+door~
+~
+D SOUTH 16382 0 0
+door~
+~
+D WEST 16361 0 0
+door~
+~
+OWNER none~
+#16363
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16343 0 0
+door~
+~
+D EAST 16364 0 0
+door~
+~
+D SOUTH 16383 0 0
+door~
+~
+D WEST 16362 0 0
+door~
+~
+OWNER none~
+#16364
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16344 0 0
+door~
+~
+D EAST 16365 0 0
+door~
+~
+D SOUTH 16384 0 0
+door~
+~
+D WEST 16363 0 0
+door~
+~
+OWNER none~
+#16365
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16345 0 0
+door~
+~
+D EAST 16366 0 0
+door~
+~
+D SOUTH 16385 0 0
+door~
+~
+D WEST 16364 0 0
+door~
+~
+OWNER none~
+#16366
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16346 0 0
+door~
+~
+D EAST 16367 0 0
+door~
+~
+D SOUTH 16386 0 0
+door~
+~
+D WEST 16365 0 0
+door~
+~
+OWNER none~
+#16367
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16347 0 0
+door~
+~
+D EAST 16368 0 0
+door~
+~
+D SOUTH 16387 0 0
+door~
+~
+D WEST 16366 0 0
+door~
+~
+OWNER none~
+#16368
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16348 0 0
+door~
+~
+D EAST 16369 0 0
+door~
+~
+D SOUTH 16388 0 0
+door~
+~
+D WEST 16367 0 0
+door~
+~
+OWNER none~
+#16369
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16349 0 0
+door~
+~
+D EAST 16370 0 0
+door~
+~
+D SOUTH 16389 0 0
+door~
+~
+D WEST 16368 0 0
+door~
+~
+OWNER none~
+#16370
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16350 0 0
+door~
+~
+D EAST 16371 0 0
+door~
+~
+D SOUTH 16390 0 0
+door~
+~
+D WEST 16369 0 0
+door~
+~
+OWNER none~
+#16371
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16351 0 0
+door~
+~
+D EAST 16372 0 0
+door~
+~
+D SOUTH 16391 0 0
+door~
+~
+D WEST 16370 0 0
+door~
+~
+OWNER none~
+#16372
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16352 0 0
+door~
+~
+D EAST 16373 0 0
+door~
+~
+D SOUTH 16392 0 0
+door~
+~
+D WEST 16371 0 0
+door~
+~
+OWNER none~
+#16373
+Plains of The Maurding Prairie~
+~
+unused
+D NORTH 16353 0 0
+door~
+~
+D EAST 16374 0 0
+door~
+~
+D SOUTH 16393 0 0
+door~
+~
+D WEST 16372 0 0
+door~
+~
+OWNER none~
+#16374
+Mhenfut Byway~
+~
+unused
+D NORTH 16354 0 0
+door~
+~
+D EAST 16375 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16394 0 0
+door~
+The path continues on through the prairie.
+~
+D WEST 16373 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16375
+Mhenfut Byway~
+~
+unused
+D NORTH 16355 0 0
+door~
+~
+D EAST 16376 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16395 0 0
+door~
+~
+D WEST 16374 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16376
+Mhenfut Byway~
+~
+unused
+D NORTH 16356 0 0
+door~
+~
+D EAST 16377 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16396 0 0
+door~
+~
+D WEST 16375 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16377
+Mhenfut Byway~
+~
+unused
+D NORTH 16357 0 0
+door~
+~
+D EAST 16378 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16397 0 0
+door~
+~
+D WEST 16376 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16378
+Mhenfut Byway~
+~
+unused
+D NORTH 16358 0 0
+door~
+~
+D EAST 16379 0 0
+door~
+The path comes to a junction ahead.
+~
+D SOUTH 16398 0 0
+door~
+~
+D WEST 16377 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16379
+A Large Crossroads in the Prairie~
+~
+unused
+D NORTH 16359 0 0
+door~
+A path that leads back to town.
+~
+D SOUTH 16399 0 0
+door~
+~
+D WEST 16378 0 0
+door~
+The path that leads through the prairie.
+~
+OWNER none~
+#16380
+Mhenfut Byway~
+~
+unused
+D NORTH 16360 0 0
+door~
+~
+D EAST 16381 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16400 0 0
+door~
+~
+D WEST 0 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16381
+Mhenfut Byway~
+~
+unused
+D NORTH 16361 0 0
+door~
+~
+D EAST 16383 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16401 0 0
+door~
+~
+D WEST 16380 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#16382
+Dummy Room~
+~
+unused
+D NORTH 16362 0 0
+door~
+~
+D EAST 16383 0 0
+door~
+~
+D SOUTH 16402 0 0
+door~
+~
+OWNER none~
+#16383
+Mhenfut Byway~
+~
+unused
+D NORTH 16363 0 0
+door~
+~
+D EAST 16384 0 0
+door~
+The path continues on through the prairie.
+~
+D SOUTH 16403 0 0
+door~
+~
+D WEST 16381 0 0
+door~
+The path continues on through the prairie.
+~
+D DOWN 0 0 0
+door~
+A worn dirt path through the prairie.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 16201 TO 16550 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16551 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16552 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16553 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16554 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16555 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16556 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16557 GLIMIT 9 LLIMIT 1
+MOB 16201 TO 16558 GLIMIT 9 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

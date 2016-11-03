@@ -1,0 +1,526 @@
+#AREA
+tribalcaves.are~
+The Tribal Caves~
+Zethus~
+20 40
+29000 29099
+normal
+temperate
+0
+1
+Zethus~
+
+#MOBS
+#29000
+whelp minotaur child undead~
+a rotting minotaur whelp~
+A small child with the head of a large bull clumsily hobbles through the cavern.
+~
+It could be sad, if it weren't so horrifyingly disgusting.  Dry flesh
+raggedly droops from a large skull with tiny horns.  This small skeleton
+seems as if it is being pulled around by some unseen force.  
+~
+0 0 0 unique~
+28 10d6+120 3d4+5 1 100 grasp
+0 0 0 0
+standing male none
+AHMV AHMV small
+ACT NPC
+ACT STAY_AREA
+ACT SMARTTRACK
+ACT UNDEAD
+AFF SLOW
+IMM SUMMON
+RES WEAPON
+VUL MAGIC
+VUL FIRE
+VUL COLD
+VUL ACID
+VUL NEGATIVE
+VUL HOLY
+C 'weaken'
+#29001
+skeletal decorated minotaur warrior corpse~
+a decorated warrior corpse~
+A skeletal minotaur adorned with gems shuffles about, dragging a broken leg behind it.
+~
+A series of gems are set into the skull of this minotaur, but they are
+covered in a film of dried blood and liquefied flesh.  Torn clothes hang
+from the frame of the skeletal minotaur, shredded from its escape from the
+earth.  One of its legs is broken at the shin, but it doesn't seem to feel
+it.  It walks on the jagged bone, the remainder of the hooved leg dragged
+along by a dried tendon and some cloth.  
+~
+0 0 0 unique~
+35 10d6+400 4d6+6 4 100 grasp
+0 0 0 0
+standing male none
+AHMV AHMV medium
+ACT NPC
+ACT STAY_AREA
+ACT SMARTTRACK
+ACT UNDEAD
+OFF DIRT_KICK
+IMM SUMMON
+RES WEAPON
+VUL MAGIC
+VUL FIRE
+VUL COLD
+VUL HOLY
+#29002
+undead minotaur high shaman~
+the Outcast High Shaman of Iseldheim~
+A mummified minotaur raises his hollow voice in abominable hexes.
+~
+~
+-1000 0 0 minotaur~
+52 26d8+3000 10d8+20 30 100 drain
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT UNDEAD
+AFF SANCTUARY
+AFF SNEAK
+IMM SUMMON
+IMM NEGATIVE
+VUL HOLY
+#29003
+mummified zealot minotaur religious corpse~
+a mummified zealot~
+A preserved minotaur corpse wrapped in a religious shroud wanders the cave.
+~
+The death shroud depicting the emblem of an unknown god or demon is
+draped over the preserved flesh of this creature.  Acrid embalming fluid is
+thickly layered on its ancient skin.  The mummy lurches forward, seemingly
+unaware of your presence.  
+~
+0 0 0 unique~
+45 10d6+600 10d10+12 15 100 slash
+0 0 0 0
+standing male none
+AHMV AHMV medium
+ACT NPC
+ACT SMARTTRACK
+ACT UNDEAD
+IMM SUMMON
+RES WEAPON
+VUL MAGIC
+VUL BASH
+VUL FIRE
+VUL COLD
+VUL ACID
+VUL HOLY
+C 'weaken'
+C 'infidels weight'
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#29000
+A Grassy Path~
+The path takes on a less traveled appearance here as it heads toward
+rather uninhabitable and unfavorable terrain.  The trees loom overhead,
+suffocating, dark and threatening.  Their tangled roots make travel
+difficult, and the thickness of the grass underfoot doesn't help.  To the
+north, the path ends at a rock wall.  
+~
+forest
+D NORTH 29001 0 0
+door~
+~
+D SOUTH 13500 0 0
+door~
+~
+OWNER none~
+#29001
+The Overgrown Mouth of a Cave~
+The crude "path" ends here at a rock wall that scales the side of the
+mountain to the north.  The trees loom overhead, suffocating, dark and
+threatening.  Their tangled roots make travel difficult, and the thickness
+of the grass underfoot doesn't help.  A cave opens its dark maw at the foot
+of the rock wall.  
+~
+forest
+D SOUTH 29000 0 0
+door~
+~
+D DOWN 29002 0 0
+door~
+~
+OWNER none~
+#29002
+A Dripping Cavern~
+No light can penetrate the foliage above the cave's mouth.  It is already
+pitch black.  Water drips from the sides and ceiling of the cave, echoing
+through whatever lies beyond, to the north.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29003 0 0
+door~
+~
+D UP 29001 0 0
+door~
+~
+OWNER none~
+#29003
+The Painted Caves~
+The rough walls are covered with paintings of minotaur warriors fighting
+and hunting.  There really is not a whole lot of variety, just a lot of
+killing.  The ground is littered with shards of pottery, broken arrowheads
+and pebbles.  A hollow shrieking fills the caves, but you can sense no wind.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29004 0 0
+door~
+~
+D EAST 29006 0 0
+door~
+~
+D SOUTH 29002 0 0
+door~
+~
+OWNER none~
+#29004
+The Painted Caves~
+The rough walls are covered with paintings of minotaur warriors fighting
+and hunting.  There really is not a whole lot of variety, just a lot of
+killing.  The ground is littered with shards of pottery, broken arrowheads
+and pebbles.  A hollow shrieking fills the caves, but you can sense no wind.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29009 0 0
+door~
+~
+D SOUTH 29003 0 0
+door~
+~
+D WEST 29005 0 0
+door~
+~
+OWNER none~
+#29005
+A Smoothed Room~
+The walls are smooth and etched with symbols of a language long since
+dead.  The walls and floor are empty and barren, only bits and pieces of
+pottery adorn this cave.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 29004 0 0
+door~
+~
+OWNER none~
+#29006
+The Painted Caves~
+The rough walls are covered with paintings of minotaur warriors fighting
+and hunting.  There really is not a whole lot of variety, just a lot of
+killing.  The ground is littered with shards of pottery, broken arrowheads
+and pebbles.  A hollow shrieking fills the caves, but you can sense no wind.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 29007 0 0
+door~
+~
+D WEST 29003 0 0
+door~
+~
+OWNER none~
+#29007
+A Smoothed Corridor~
+The walls are smooth and etched with symbols of a language long since
+dead.  The walls and floor are empty and barren, only bits and pieces of
+pottery adorn this cave.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29008 0 0
+door~
+~
+D WEST 29006 0 0
+door~
+~
+OWNER none~
+#29008
+A Smoothed Room~
+The walls are smooth and etched with symbols of a language long since
+dead.  The walls and floor are empty and barren, only bits and pieces of
+pottery adorn this cave.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 29007 0 0
+door~
+~
+OWNER none~
+#29009
+The Painted Caves~
+The rough walls are covered with paintings of minotaur warriors fighting
+and hunting.  There really is not a whole lot of variety, just a lot of
+killing.  The ground is littered with shards of pottery, broken arrowheads
+and pebbles.  A hollow shrieking fills the caves, but you can sense no wind.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29010 0 0
+door~
+~
+D SOUTH 29004 0 0
+door~
+~
+OWNER none~
+#29010
+The Weeping Cavern~
+The cave opened up into a massive cavern.  Salty water drips from the
+ceiling, which is evidently rich in the mineral.  Thin rivulets of water
+follow the slant of the ground, toward the east.  A hollow shrieking fills
+the cavern, but you can sense no wind.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29013 0 0
+door~
+~
+D EAST 29011 0 0
+door~
+~
+D SOUTH 29009 0 0
+door~
+~
+D WEST 29015 0 0
+door~
+~
+OWNER none~
+#29011
+The Weeping Cavern~
+The cave opened up into a massive cavern.  Salty water drips from the
+ceiling, which is evidently rich in the mineral.  Thin rivulets of water
+follow the slant of the ground, toward the east.  A hollow shrieking fills
+the cavern, but you can sense no wind.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29012 0 0
+door~
+~
+D EAST 29016 0 0
+door~
+~
+D WEST 29010 0 0
+door~
+~
+OWNER none~
+#29012
+The Weeping Cavern~
+The cave opened up into a massive cavern.  Salty water drips from the
+ceiling, which is evidently rich in the mineral.  Thin rivulets of water
+follow the slant of the ground, toward the east.  A hollow shrieking fills
+the cavern, but you can sense no wind.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D SOUTH 29011 0 0
+door~
+~
+D WEST 29013 0 0
+door~
+~
+OWNER none~
+#29013
+The Weeping Cavern~
+The cave opened up into a massive cavern.  Salty water drips from the
+ceiling, which is evidently rich in the mineral.  Thin rivulets of water
+follow the slant of the ground, toward the east.  A hollow shrieking fills
+the cavern, but you can sense no wind.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 29012 0 0
+door~
+~
+D SOUTH 29010 0 0
+door~
+~
+D WEST 29014 0 0
+door~
+~
+OWNER none~
+#29014
+The Weeping Cavern~
+The cave opened up into a massive cavern.  Salty water drips from the
+ceiling, which is evidently rich in the mineral.  Thin rivulets of water
+follow the slant of the ground, toward the east.  A hollow shrieking fills
+the cavern, but you can sense no wind.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 29013 0 0
+door~
+~
+D SOUTH 29015 0 0
+door~
+~
+OWNER none~
+#29015
+The Weeping Cavern~
+The cave opened up into a massive cavern.  Salty water drips from the
+ceiling, which is evidently rich in the mineral.  Thin rivulets of water
+follow the slant of the ground, toward the east.  A hollow shrieking fills
+the cavern, but you can sense no wind.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 29014 0 0
+door~
+~
+D EAST 29010 0 0
+door~
+~
+OWNER none~
+#29016
+A Smooth Corridor~
+The walls are smooth and etched with symbols of a language long since
+dead.  The floor is clear and empty, but a thin stream of water has worn a
+crevice in the southern side as it runs from the cavern to the west into the
+darkness to the east.  
+~
+inside
+ROOM INDOORS
+D EAST 29017 0 0
+door~
+~
+D WEST 29011 0 0
+door~
+~
+OWNER none~
+#29017
+A Smooth Corridor~
+The walls are smooth and etched with symbols of a language long since
+dead.  The floor is clear and empty, but a thin stream of water has worn a
+crevice in the southern side as it runs from the cavern to the west into the
+darkness to the north.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 29018 0 0
+door~
+~
+D WEST 29016 0 0
+door~
+~
+OWNER none~
+#29018
+A Smooth Corridor~
+The walls are smooth and etched with symbols of a language long since
+dead.  The floor is clear and empty, but a thin stream of water has worn a
+crevice in the southern side as it runs from the cavern to the south into
+the darkness to the west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 29017 0 0
+door~
+~
+D WEST 29019 0 0
+door~
+~
+OWNER none~
+#29019
+A Smooth Room~
+The walls are smooth and etched with symbols of a language long since
+dead.  The floor is clear and empty, but a thin stream of water has worn a
+crevice in the southern side as it runs from the cavern to the east into the
+darkness to the north.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 29020 ABCDEHI 0
+door~
+~
+D EAST 29018 0 0
+door~
+~
+OWNER none~
+#29020
+The Pool of Endless Horrors~
+A short, thin strip of salt rock is the only solid ground here.  A deep
+pool of salt water covers the rest of the ground.  Jagged, ugly runes appear
+glowing sporadically in the darkness, only to fade away.  The pool is filled
+with carnage, but the smell of salt both masks it and complements its stink.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 29019 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 29000 TO 29003 GLIMIT 6 LLIMIT 1
+MOB 29000 TO 29005 GLIMIT 6 LLIMIT 1
+MOB 29000 TO 29006 GLIMIT 6 LLIMIT 1
+MOB 29000 TO 29007 GLIMIT 6 LLIMIT 1
+MOB 29000 TO 29008 GLIMIT 6 LLIMIT 1
+MOB 29000 TO 29009 GLIMIT 6 LLIMIT 1
+MOB 29001 TO 29010 GLIMIT 10 LLIMIT 1
+MOB 29001 TO 29011 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29011 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29012 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29012 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29013 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29013 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29014 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29014 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29015 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29015 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29016 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29016 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29017 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29017 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29018 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29018 GLIMIT 8 LLIMIT 1
+MOB 29001 TO 29019 GLIMIT 10 LLIMIT 1
+MOB 29003 TO 29019 GLIMIT 8 LLIMIT 1
+MOB 29002 TO 29020 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+M 29000 mspec_minotaur_zombie
+M 29001 mspec_minotaur_zombie
+M 29002 mspec_minotaur_zombie
+M 29003 mspec_minotaur_zombie
+END
+#$

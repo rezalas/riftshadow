@@ -1,0 +1,54 @@
+Total pfiles: 1217
+Race Analysis
+------------------
+Arial: 12.65% (154 / 1217)
+Cloud: 7.15% (87 / 1217)
+Dark-Elf: 13.56% (165 / 1217)
+Draconian: 10.19% (124 / 1217)
+Duergar: 4.60% (56 / 1217)
+Dwarf: 3.86% (47 / 1217)
+Elf: 9.29% (113 / 1217)
+Ethereal: 12.74% (155 / 1217)
+Fire: 5.75% (70 / 1217)
+Human: 11.26% (137 / 1217)
+Lich: 0.08% (1 / 1217)
+Storm: 8.87% (108 / 1217)
+
+Class Analysis
+------------------
+Anti-Paladin: 8.71% (106 / 1217)
+Assassin: 10.85% (132 / 1217)
+Channeler: 7.72% (94 / 1217)
+Cleric: 9.29% (113 / 1217)
+Elementalist: 8.38% (102 / 1217)
+Necromancer: 9.37% (114 / 1217)
+Paladin: 7.40% (90 / 1217)
+Ranger: 7.07% (86 / 1217)
+Thief: 8.79% (107 / 1217)
+Warrior: 22.35% (272 / 1217)
+
+Cabal Analysis
+------------------
+Ancient: 3.94% (48 / 1217)
+Arcana: 2.30% (28 / 1217)
+Empire: 6.49% (79 / 1217)
+Enforcer: 1.07% (13 / 1217)
+Knight: 1.48% (18 / 1217)
+Outlaw: 5.75% (70 / 1217)
+Rager: 5.42% (66 / 1217)
+Uncaballed: 73.54% (895 / 1217)
+
+Sex Analysis
+------------------
+Male: 92.77% (1129 / 1217)
+Female: 7.23% (88 / 1217)
+
+Alignment Analysis
+------------------
+Evil: 46.59% (567 / 1217)
+Neutral: 24.32% (296 / 1217)
+Good: 29.09% (354 / 1217)
+
+Other Analysis
+------------------
+Average Hours Played: 10.12 (12313 Total Character Hours / 1217)

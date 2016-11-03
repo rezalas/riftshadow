@@ -1,0 +1,6149 @@
+#AREA
+caverns.are~
+Caverns of Thargeld~
+Karsus~
+35 45
+22600 22699
+normal
+none
+0
+1
+Karsus~
+
+#MOBS
+#22600
+hobgoblin~
+a hobgoblin~
+A heavily armored hobgoblin advances slowly with its weapon brandished.
+~
+Standing before you is a large creature with a twisted history. Years
+worth of poor breading has come up with this monster, disliked by many
+of the humanoids and other superior races these seem to be merely the
+brute force of a band of mercenaries.
+~
+-1000 22600 110 hobgoblin~
+35 10d10+1700 4d7+14 0 100 punch
+50 50 50 50
+standing either none
+M 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#22601
+goblin~
+a goblin~
+A goblin surveying the situation, barks orders at your presence.
+~
+Goblins truely are gruesome if they manage to live long enough to grow
+to full size. Not as stupid as in their youth these goblins seem well
+organized, and the kill all mentality isnt its first choice as it sizes
+you up considering your possible threat.
+~
+-1000 22601 110 goblin~
+38 10d10+1700 4d7+14 0 100 punch
+50 50 50 50
+standing either none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#22602
+twisted deformed hobgoblin~
+a twisted hobgoblin~
+A heavily deformed hobgolin lurches towards you.
+~
+Twisted and deformed into a more deadly version of their allready sick
+and demented species. This hobgoblins limbs seems to have a hardened
+scale covering them, their fingers have been turned into large claws
+and protruding from their mouth is two large teeth.
+~
+-1000 22602 110 hobgoblin~
+43 15d10+1900 4d8+18 0 100 claw
+75 75 75 75
+standing either none
+M 0 large
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#22603
+goblin mage chaosmage chaos~
+a goblin chaos mage~
+Dressed in what looks to be mage garb is a goblin.
+~
+Sharp eyes look straight at you as you look at this goblin. Intelligence
+sparkles in this goblins eyes. He holds your stare as his hands start
+moving with fluid and precise rhythms conjuring a spell of some sort.
+~
+-1000 22603 100 goblin~
+44 15d10+1800 4d8+18 0 100 magic
+50 50 50 50
+standing either none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+C 'acid stream'
+C 'blind'
+C 'slow'
+C 'faerie fire'
+C 'fireball'
+C 'iceball'
+#22604
+mutated flectomantis insect~
+a mutated flectomantis~
+A heavily scaled insect is here assaulting all those nearby.
+~
+Mutated from a insect that is probably about the side of your hand this
+insect has undergone a massive transformation. What was once the king of
+the insect world in the mulched grounds of a forrest now stands almost
+four foot tall and eight foot long. Layers of heavily armorer scales
+cover its body, its six legs support it's weight as its forward two legs
+rip through armor and flesh spattering the room with blood and gore.
+~
+-1000 22604 100 insect~
+40 15d10+1900 4d8+18 0 100 cleave
+200 200 200 200
+standing either none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF CRUSH
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+AFF REGENERATION
+#22605
+beast burden trellic~
+a trellic~
+A large bulky beast of burden is here straped to a slide cart.
+~
+Thick rubbery flesh covers this beast, tiny eye's sit at the front of
+it's rounded head. A bridal strap is fed through its maw and tied to
+a slide cart that sits behind it. Unlike the other beasts that are
+about this trellic indeed looks tame.
+~
+-1000 22605 100 unique~
+45 25d10+2450 8d4+22 0 100 chomp
+25 25 25 25
+standing either none
+M 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#22606
+duergar mercenary~
+a duergar mercenary~
+A grizzled duergar adorned in armor glares at his surroundings.
+~
+This duergar seems almost glad that it has seen you. Steping towards you
+as you stare in awe, heavily adorned in armors and holding a weapon in
+hand, it lets out a hearty chuckle as it moves in for the kill.
+~
+-1000 22606 110 duergar~
+45 25d10+2450 8d5+22 0 100 punch
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#22607
+duergar bladesman~
+a duergar bladesman~
+A duergar dualing two fine looking mithril swords turns to face you.
+~
+Unlike the cocky duergar mercenaries you have encountered these bladesmen
+hold a experienced demeaner about themself. They make no step to attack,
+nor do they make any attempt to retreat, panic is that last thing you
+would see on their face.
+~
+-1000 22607 120 duergar~
+45 25d10+2650 8d3+22 0 90 punch
+75 75 75 75
+standing either none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+AFF HASTE
+#22608
+duergar trader merchant~
+a duergar merchant~
+Dressed in weird fancy clothes is a rich duergar merchant
+~
+Dressed in weird fancy clothes that are probably extremly valuable in some
+remote duergar city, this merchant doesnt seem to be happy that his trade
+cart is under attack from goblins and hobgoblins. He looks to be wondering
+if the hired help will be good enough to save him and his goods.
+~
+-1000 22608 100 duergar~
+45 25d10+2450 8d3+22 0 100 punch
+0 0 0 0
+standing either moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#22609
+beast burden giant mole~
+a giant mole~
+A giant mole is straped to a large wheeled cart here.
+~
+Hair as thick as a fine rapiers blade covers this beast, tiny black eyes
+seem to be unfussed by the large comotion that is going on about it. It
+feels little threat to any of those about it, or it assumes those fighting
+know that it posses no threat.
+~
+-1000 22609 100 unique~
+45 25d10+2450 8d4+22 0 100 claw
+25 25 25 25
+standing either none
+M 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INFRARED
+#0
+
+
+
+#OBJS
+#22600
+wide razor bracer armor~
+a wide razor bracer~
+A wide razor bracer has been left on the ground here.~
+armor
+steel~
+1 1 1 1 0
+1 10 100 P
+WEAR TAKE
+WEAR WRIST
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+
+#22601
+scalp trophy poncho armor~
+a poncho covered with scalps~
+A scalp trophy poncho has been left on the ground here.~
+armor
+flesh~
+3 3 3 3 0
+1 25 100 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+
+#22602
+plate belt armor~
+a plate belt~
+A plate belt has been left on the ground here.~
+armor
+iron~
+7 7 7 7 0
+1 30 100 P
+WEAR TAKE
+WEAR WAIST
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+
+#22603
+spiked full plate gauntlets armor~
+some spiked full plate gauntlets~
+Some spiked full plate gauntlets have been left on the ground here.~
+armor
+steel~
+10 10 10 10 0
+1 50 900 P
+WEAR TAKE
+WEAR HANDS
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 0
+
+#22604
+rusted plate boots armor~
+a pair of rusted plate boots~
+A pair of rusted plate boots have been left on the ground here.~
+armor
+iron~
+7 7 7 7 0
+1 40 100 P
+WEAR TAKE
+WEAR FEET
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+
+#22605
+steel spiked shoulder pauldron armor~
+a steel spiked shoulder pauldron~
+A steel spiked shoulder pauldron has been left on the ground here.~
+armor
+steel~
+10 10 10 10 0
+1 20 100 P
+WEAR TAKE
+WEAR NECK
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+
+#22606
+iron thigh plates armor~
+a pair of iron thighplates~
+A pair of iron thigh plates have been left on the ground here.~
+armor
+iron~
+9 9 9 7 0
+1 40 300 P
+WEAR TAKE
+WEAR LEGS
+APPLY DAMROLL 2
+APPLY HITROLL 0
+LIMIT 0
+
+#22607
+steel breastplate armor~
+a steel breastplate~
+A steel breastplate has been left on the ground here.~
+armor
+steel~
+9 9 9 7 0
+1 55 900 P
+WEAR TAKE
+WEAR BODY
+APPLY DAMROLL 2
+APPLY HITROLL 0
+LIMIT 0
+
+#22608
+full chain mail poncho armor~
+a full chain mail poncho~
+A full chain mail poncho has been left on the ground here.~
+armor
+steel~
+5 5 5 3 0
+1 25 100 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+
+#22609
+full chain mail sleeves armor~
+some full chain mail sleeves~
+Full chain mail sleeves have been left on the ground here.~
+armor
+steel~
+5 5 5 3 0
+1 35 100 P
+WEAR TAKE
+WEAR ARMS
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+
+#22610
+full chain mail mantle armor~
+a full chain mail mantle~
+Full chain mail mantle have been left on the ground here.~
+armor
+steel~
+5 5 5 3 0
+1 20 100 P
+WEAR TAKE
+WEAR HEAD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+
+#22611
+full chain mail shirt armor~
+a full chain mail shirt~
+Full chain mail shirt have been left on the ground here.~
+armor
+steel~
+5 5 5 3 0
+1 45 100 P
+WEAR TAKE
+WEAR BODY
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+
+#22612
+massive steel tower shield armor~
+a massive steel tower shield~
+A massive steel tower shield has been left on the ground here.~
+armor
+steel~
+10 10 10 10 0
+1 50 100 P
+WEAR TAKE
+WEAR SHIELD
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+
+#22613
+flail two handed war massive maul~
+a massive steel war maul~
+A massive steel war maul is on the ground.~
+weapon
+steel~
+mace 8 4 smash F
+28 24 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 5
+APPLY HITROLL 0
+LIMIT 0
+
+#22614
+whip balled~
+a steel balled whip~
+A steel balled whip is on the ground.~
+weapon
+steel~
+whip 7 3 slash 0
+13 12 300 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 2
+APPLY HITROLL 3
+LIMIT 0
+
+#22615
+sword claymore~
+a steel claymore~
+A steel claymore is on the ground.~
+weapon
+steel~
+sword 6 5 cleave F
+28 22 900 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 5
+APPLY HITROLL 0
+LIMIT 0
+
+#22616
+two battle axe~
+a steel two handed battle axe~
+A steel two handed battle axe is on the ground.~
+weapon
+steel~
+axe 6 5 cleave F
+26 34 600 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 5
+APPLY HITROLL 0
+LIMIT 0
+
+#22617
+full forged polearm halberd~
+a steel full forged halberd~
+A steel full forged halberd is on the ground.~
+weapon
+steel~
+polearm 7 5 cleave F
+28 40 900 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 7
+APPLY HITROLL -1
+LIMIT 0
+
+#22618
+spear long~
+a long iron spear~
+A burly innkeeper is here taking orders for food and drink.~
+weapon
+iron~
+spear 8 3 stab F
+16 18 300 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 2
+APPLY HITROLL 4
+LIMIT 0
+
+#22619
+double stitched mage robes armor~
+some double-stitched mage robes~
+Double stitched mage robes have been left on the ground here.~
+armor
+leather~
+3 3 3 3 0
+1 15 100 P
+WEAR TAKE
+WEAR BODY
+RESTRICT MAGE_ONLY
+APPLY MANA 20
+APPLY HP 20
+LIMIT 0
+
+#22620
+double stitched floppy hat armor~
+a double-stitched floppy hat~
+A double stitched floppy hat has been left on the ground here.~
+armor
+leather~
+3 3 3 3 0
+1 10 100 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT MAGE_ONLY
+APPLY MANA 10
+APPLY HP 10
+LIMIT 0
+
+#22621
+double stitched baggy sleeves armor~
+some double-stitched baggy sleeves~
+Double stitched baggy sleeves have been left on the ground here.~
+armor
+leather ~
+3 3 3 3 0
+1 10 100 P
+WEAR TAKE
+WEAR ARMS
+RESTRICT MAGE_ONLY
+APPLY SPARA 10
+APPLY HP 10
+LIMIT 0
+
+#22622
+double stitched baggy pants armor~
+a pair of double-stitched baggy pants~
+Double stitched baggy pants have been left on the ground here.~
+armor
+leather~
+3 3 3 3 0
+1 10 100 P
+WEAR TAKE
+WEAR LEGS
+RESTRICT MAGE_ONLY
+APPLY HP 10
+LIMIT 0
+
+#22623
+double stitched long boots armor~
+a pair of double-stitched long boots~
+Double stitched long boots have been left on the ground here.~
+armor
+leather~
+3 3 3 3 0
+1 10 100 P
+WEAR TAKE
+WEAR FEET
+RESTRICT MAGE_ONLY
+APPLY HP 10
+LIMIT 0
+
+#22624
+double stitched fine gloves armor~
+a pair of double-stitched fine gloves~
+Double stitched fine gloves have been left on the ground here.~
+armor
+leather~
+3 3 3 3 0
+1 5 100 P
+WEAR TAKE
+WEAR HANDS
+RESTRICT MAGE_ONLY
+APPLY MANA 10
+APPLY HP 10
+LIMIT 0
+
+#22625
+double stitched mage cloak armor~
+a double-stitched mage cloak~
+A double stitched mage cloak has been left on the ground here.~
+armor
+leather~
+3 3 3 3 0
+1 10 100 P
+WEAR TAKE
+WEAR NECK
+RESTRICT MAGE_ONLY
+APPLY HP 10
+LIMIT 0
+
+#22626
+hanging stringy moss~
+some hanging stringy moss~
+Strands of stringy moss dangle from the rocks here.~
+trash
+trash~
+0 0 0 0 0
+51 100 0 P
+LIMIT 0
+E moss~
+The moss is moist to the touch and seems to be gathering the moisture
+from the air as it slowly blows past. Its survival in such a hostile
+invoriment surprises you.
+~
+
+#22627
+glowing algae~
+some glowing algae~
+Growing on the rocks here is a luminous algae of some sort.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+ITEM GLOW
+LIMIT 0
+E glowing algae~
+As you stare at this algae and breathe over it, it seems to thrive on
+the carbon dioxide that you breathe out. Each breath radiates more light
+from the algae.
+~
+
+#22628
+hard bristled moss~
+some hardened bristled moss~
+A very coarse moss growns on the rocks here.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E moss bristled hardened~
+Unlike the other mosses this moss is extremly dry and hard. Abrassive to
+the touch you ponder on what sustains it, perhaps you better just accept
+it as another abnormality of this bizare location.
+~
+
+#22629
+boulder moved shifted~
+a large moved boulder~
+A large boulder part filling the room.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E large shifted boulder~
+This boulder would have taken a beast of burden to move, the gouge marks
+still clearly present in the floor from where it has been draged or
+perhaps pushed indicate that it has been moved recently.
+~
+
+#22630
+rocks pile small~
+some piles of small rocks~
+Piles of small rocks line the edges of the walls.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E pile small~
+These piles have been pushed to the side of the room to enable a easier
+and safer walk through this area.
+~
+
+#22631
+decapitated head~
+decapitated head~
+A bloody smashed head still encased in its helm.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E bloody head~
+The neck bone protruceds from the base of a helmet that is splattered in
+blood. You roll the head over to identify who or what the creature was
+but fail to gain any knowledge due to the smashed in face.
+~
+
+#22632
+corpse body duergar~
+duergar body corpse~
+The corpse of a duergar lays here its entrails partly spilled.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E corpse body~
+This was no natural death, a large cleaving gash from collar bone to
+pelvis has spilled opens this duergars guts. A large puddle of blood
+and entrails is on the ground next to it.
+~
+
+#22633
+severed legs and waist~
+severed lower body~
+The severed lower body of a duergar is sprawled on the ground here.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E severed lower legs~
+Torn and tattered flesh muscle and sinue extend like limp tendrils from
+the lower section of what looks to be a duergar. Legs limp in a unatural
+position and a gore covered spinal bone protruding from the waist, the
+duergar must have suffered a painful death.
+~
+
+#22634
+severed upper torso~
+severed upper body~
+The severed upper body of a duergar is sprawled on the ground here.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E upper body~
+The upper half of a duergars body lays here, the face frozen in a endless
+scream of sheer pain. Fingers of both hands displayed in claw like fashion
+dictate that the mind blowing pain suffered from the blow wasnt enough to
+kill the duergar from shock.
+~
+
+#22635
+puddle of blood~
+puddle of blood~
+A enourmous ammount of blood seeks the lowest level of this room.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E blood puddle~
+You could not have imagined that so much blood could come from one
+creature, let alone that it could all come out.
+~
+
+#22636
+pile of entrails~
+pile of entrails~
+Twisted like a sausage and bathed in a gore a pile of entrails is here~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E sausage entrails pile~
+You stare down into the pile of entrails and take note of the detail.
+Membrane flesh encases consumed food, cuts and slashes that mark the
+spilled entrails have also exposed its contents, a thick balmic stew of
+meat and vegies combined with the occasional unrecognizable blob of
+something your mind cannot identify.
+~
+
+#22637
+corpse goblin~
+corpse goblin~
+A lifeless corpse of a hacked up goblin lies here.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E hacked corpse~
+The hacked corpse took a massive blow to the collar bone that managed to
+almost cleave it in two. The cut stopping at the spinal cord would have
+been a spectacular sight to behold.
+~
+
+#22638
+corpse splattered~
+splattered corpse~
+Splattered to the side is a corpse that is folded and bent unaturally.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E splattered bent folded corpse~
+This corpse looks like a large doll, all limbs and body folded and bent
+in impossible directions, protrusions of bone and buckled armor indicate
+that the force appiled must have been explosive. Near by is a large blood
+splattered impact site which has gathered some flesh and bone fragments.
+~
+
+#22639
+slide cart~
+slide cart~
+A large cart designed to slide sits here empty.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E cart~
+This is a poorly designed cart that is designed to slide, the wood looks
+to be fresh and the ropes hardly worn. A large leather bridal strap is
+attached to the front side.
+~
+
+#22640
+wheel cart~
+wheel cart~
+A massive four wheel goods cart burdened with armors and weapons.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E massive cart~
+Designed to carry massive weight this cart is about ten feet long and four
+wide. Four large wheels as high as the cart and steel caped provide
+protection from attack and also ease of mobility.
+~
+
+#22641
+overturned barrels and boxes~
+overturned goods~
+Barrels boxes and crates have been made into a makeshift blockade here.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E blockade~
+This blockade is very primative but looks to have served its purpose. A
+couple goblin corpses lay strew before and over it, their blood spilling
+over what looks to be flour and sugar in a box.
+~
+
+#22642
+broken crossbow~
+broken crossbow~
+A broken crossbow lays here bolt still loaded.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+E broken crossbow~
+The user of this crossbow must have been angered that it failed, the blood
+on it though indicates that he wont have the chance to get even with the
+retailer who sold it.
+~
+
+#22643
+small rock pool~
+a small rock pool~
+A small rock pool.~
+fountain
+stone~
+100000 99999 'water' 0 0
+51 100 100 P
+LIMIT 0
+
+#22644
+moss food~
+a piece of moss~
+A growth of moss.~
+food
+food~
+15 15 0 0 0
+1 1 1 P
+WEAR TAKE
+LIMIT 0
+
+#22645
+fungi food~
+a piece of fungi~
+A growth of fungi.~
+food
+food~
+15 15 0 0 0
+1 1 1 P
+WEAR TAKE
+LIMIT 0
+
+#22646
+grate contraption spindle wheel~
+a spindle wheel locked grate~
+A weird contraption with a wheel is attached to the cavern wall here.~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+VERB turn
+E wheel contraption grate spindle~
+A large spindle wheel is attached to the wall of the cavern.  This rusted
+iron device has a thick chain running from it all the way up into the darkness
+of the vaulted ceiling of the cavern.
+~
+
+#0
+
+
+
+#ROOMS
+#22600
+Entrance to the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22601 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 2277 ABCD 0
+~
+A large circular hole is in the ceiling, with a makeshift ladder leading
+upwards to a rusted grating.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22601
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.  There is a strange smell coming from the alcove to your west.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22602 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22600 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 130 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22602
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22603 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22601 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22603
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22604 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22602 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22604
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22605 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22603 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22605
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22608 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22609 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22604 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22606 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22606
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22607 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22605 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22607
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22608 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22606 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22608
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22605 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22607 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22609
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22610 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22605 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22610
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22611 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22609 0 0
+~
+The darkness continues on to the WEST.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22611
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22612 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22610 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22612
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22613 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22611 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22613
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22614 0 0
+~
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22612 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22614
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22615 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22613 0 0
+~
+~
+D WEST 22617 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22615
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22616 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22614 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22618 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22616
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 22615 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22619 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22617
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22618 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22614 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22618
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22619 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22615 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22617 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22619
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22620 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22616 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22618 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22622 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22620
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22619 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22623 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22621
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22622 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22618 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22622
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22623 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22619 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22621 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22624 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22623
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22620 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22622 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22625 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22624
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22625 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22622 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22625
+Above a small shaft~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22623 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 22626 0 0
+~
+The darkness continues on downward.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22626
+Below a small shaft~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22627 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 22625 0 0
+~
+The darkness continues on upwards.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22627
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22626 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22628 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22628
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22629 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22627 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22629
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22630 0 0
+~
+~
+D SOUTH 22628 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22630
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22631 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22629 0 0
+~
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22631
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22632 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22630 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22638 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22632
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22635 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22633 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22631 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22637 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22633
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22634 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22632 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22634
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22633 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22635 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22635
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22634 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22632 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22636 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22636
+Within the caverns of Thargeld~
+Blood covers the ground and rocks all about you, in the corner of this
+room is a group of duergars defending the merchant from what looks to be
+a large gobling and hobgoblin assult. Noises of battle can be heard to the
+southwest and the occasional mortal scream echos through the caverns.
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22635 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22637 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22637
+Within the caverns of Thargeld~
+This looks to have been where the merchant and his caravan were jumped,
+there are tiped supplies - boxes barrels and crates strewn about. A
+make-shift baracade has been made which looks have have proved a winning
+tactic for the battle.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22636 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22632 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22638 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22640 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22638
+Within the caverns of Thargeld~
+The battlefield is covered with blood splatters and littered with corpses
+some still alive and groaning others well dead. A multitude of creatures
+fighting each other makeing it almost impossible not to get yourself
+noticed.
+~
+field
+ROOM INDOORS
+D NORTH 22637 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22631 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22639 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22639
+Within the caverns of Thargeld~
+The battlefield is covered with blood splatters and littered with corpses
+some still alive and groaning others well dead. A multitude of creatures
+fighting each other makeing it almost impossible not to get yourself
+noticed.
+~
+field
+ROOM INDOORS
+D NORTH 22640 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22638 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22646 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22642 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22640
+Within the caverns of Thargeld~
+The battlefield is covered with blood splatters and littered with corpses
+some still alive and groaning others well dead. A multitude of creatures
+fighting each other makeing it almost impossible not to get yourself
+noticed.
+~
+field
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22637 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22639 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22641 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22641
+Within the caverns of Thargeld~
+The battlefield is covered with blood splatters and littered with corpses
+some still alive and groaning others well dead. A multitude of creatures
+fighting each other makeing it almost impossible not to get yourself
+noticed.
+~
+field
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22640 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22642 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22642
+Within the caverns of Thargeld~
+The battlefield is covered with blood splatters and littered with corpses
+some still alive and groaning others well dead. A multitude of creatures
+fighting each other makeing it almost impossible not to get yourself
+noticed.
+~
+field
+ROOM INDOORS
+D NORTH 22641 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22639 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22645 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22643 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22643
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22642 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22644 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22644
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22643 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22645 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22650 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22645
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22642 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22646 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22647 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22644 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22646
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22639 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22645 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22647
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22645 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22648 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22650 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22648
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22647 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22649 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22649
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22650 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22648 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22652 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22650
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22644 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22647 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22651 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22651
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22650 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22652 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22652
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22651 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22649 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22653 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22653
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22652 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22654 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22654
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22653 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22655 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22655
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22656 0 0
+~
+The darkness continues on to the south.
+
+~
+D WEST 22654 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22656
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22655 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 22657 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22658 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22657
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22656 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22659 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22658
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22656 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22659 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22659
+Above a large shaft~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22658 0 0
+~
+The darkness continues on to the .
+~
+D EAST 22657 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 22660 0 0
+~
+The darkness continues on downwards.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22660
+Below a large shaft~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22661 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 22659 0 0
+~
+The darkness continues on upwards.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22661
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22678 0 0
+~
+The darkness continues on to the .
+~
+D EAST 22662 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22660 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22662
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22663 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22661 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22663
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22664 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22662 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22664
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22665 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22663 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22665
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22666 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22664 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22666
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22667 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22665 0 0
+~
+The darkness continues on to the .
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22667
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22668 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22666 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22668
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22669 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22667 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22669
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22670 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22668 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22670
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22671 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22669 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22671
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22670 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22672 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22672
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22673 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22671 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22675 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22673
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 22672 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22674 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22674
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22673 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22675 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22677 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22675
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22674 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22672 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22676 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22676
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22677 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22675 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22677
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22692 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22674 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22676 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22690 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22678
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 22661 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22679 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22679
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22680 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22678 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22680
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22681 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22679 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22681
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22684 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22682 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22680 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22682
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22683 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22681 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22683
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22687 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22685 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22682 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22684 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22684
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22683 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22681 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22685
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22686 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 22683 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22686
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22690 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 22685 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22687 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22687
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22689 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22686 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22683 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22688 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22688
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22687 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22689
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22690 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22687 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22690
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22691 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 22677 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22686 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22689 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22691
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22692 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22690 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22692
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22693 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 22677 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22691 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22693
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22694 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22692 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Small sparkles of light reflect what little luminous light is about
+indicating the presence of a crystalline structure to some sections of
+this wall.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22694
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+It is hard to tell if the wall has been dug away or if this is a natural
+edge of a fault line or a pressure crack. Running your hand along the
+coarse stone brings a surprise of warmth from the rocks. The air in
+comparison is a shivering cold.
+~
+D EAST 22695 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22693 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22695
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 22697 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 22696 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 22694 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22696
+Within the caverns of Thargeld~
+Deep underground the warmth of the surface greatly lacks as a shiver runs
+down your spine. The lack of light heightens your awareness for both smell
+and noise. The drip of a fluid, the pitt-patta of some small insectacoid.
+The cold yet slightly moist smell that travels on the consistent but weak
+breeze holds a unnatural bite to it. Something in the back of your mind
+sparks a warning that at this depth within the earth such things shouldn't
+be, this environment should be inhospitable. A small rock pool gathers water
+here.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22695 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+The moisture seeping from the rocks here is almost enough to drink from.
+Being porous in form the liquid of life flows through it straining what
+might have toxic and reducing it to a pure form.
+~
+D SOUTH 0 0 0
+~
+Not unlike many ceilings of these caverns this wall is covered with a
+solid yet soft looking sedimentary rock formed and layered over many
+years.
+~
+D WEST 0 0 0
+~
+A larger than normal centipede has hundreds of its legs firmly fixed upon
+a the rough surface of the walls face. A large growth of husk coarse moss,
+that looks to have been here for quiet some years, strives to gain
+dominance over the rock.
+~
+D UP 0 0 0
+~
+Looking upward all you can see is a rather high ceiling that is far out
+of your reach. The ceiling seems to be a crack in process, a couple
+hundred years more and it might gain a foot or two in height.
+~
+D DOWN 0 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#22697
+Within the caverns of Thargeld~
+Your mind starts to play tricks on you as you gaze about in the darkness
+staring at where you assume the walls are. Your perception of depth
+almost lost, you raise your hands grasping for the touch of a surface.
+Reassured that you have not in fact tumbled into the abyss of darkness you
+regain your composure and pay more attention to what you can hear and
+smell.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Darkness swallows this wall, you cannot tell how far away it is for the
+light is swallowed in its direction. Steeping towards it you raise your
+hand and stub your fingers on the wall of solid black rock.
+~
+D EAST 22698 0 0
+~
+The darkness continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Large sections of rock have broken from this wall and lay crushed at the
+floor of the wall. Sounds of movement from within the sections of fallen
+rock echo about you as now your ears start to play tricks upon you.
+~
+D WEST 22695 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 0 0 0
+~
+The floor here hasn't been as worn as some other sections, the crunching
+of small pebble sized rocks echo through the cavern. Patches of dirt have
+started to creep their way in, but the small rocks still hold dominance.
+~
+E rocks rock~
+The rocks here are both interesting and scary. A rock that absorbs light
+at any distance and holds impossible strength yet remains a lot colder
+than the surrounding stone. Black rock being a truly appropriate name
+for such a substance.
+~
+#22698
+Within the caverns of Thargeld~
+Solid pitch black rock that doesn't reflect light but instead absorbs it
+sends a shiver down your spine in realization that vision isn't a means
+of navigation in these hostile conditions. You wonder why you have not
+encountered any of this substance upon the surface, surely its properties
+would be valuable in some form or another.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 22699 0 0
+~
+The darkness continues on to the north.
+~
+D EAST 0 0 0
+~
+A small crevice crack large enough to slip your hand inside runs down
+the rock in a crooked lightning bolt slash that is barely two feet long.
+~
+D SOUTH 0 0 0
+~
+Inspecting this wall you discover a fine vein of what looks to be gold.
+Due to the size and its location you decide that removing the gold
+would most likely be a very bad idea. The earth's pressures at this depth
+must be amazing to cause fissures and cracks large enough to walk through.
+~
+D WEST 22677 0 0
+~
+The darkness continues on to the west.
+~
+D UP 0 0 0
+~
+Stringy moss dangles from the ceiling gathering moisture from the air as
+it slowly passes by. Its extremities moist to the touch indicate that
+its adaptivness to these harsh conditions have proven fruitful.
+~
+D DOWN 0 0 0
+~
+The ground here is partly covered with small rocks and fine dirt. Years
+worth of attrition and compaction has almost leveled it flat. To the
+side near the walls small stalagmites reach upward to their corresponding
+stalactites.
+~
+E rocks rock~
+Porous rocks that carry water into the depths of the earth breach the
+surface of the rocks. Bleeding away the valuable fluid before it reaches
+is destination.
+~
+#22699
+Within the caverns of Thargeld~
+A endless maze of rocky tunnels and caverns continue onward. Stumbling your
+way bumping into the walls and other unseen objects you occasionaly scare
+a creature of some sort causing it to scatter away from you. The soft
+breeze that normally blows through these caverns and tunnels seems to be a
+bit stronger here. With the stronger breeze comes a heavier smell of dank.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+A large growth of blue luminous fungi grows here shedding enough light
+for sanity to seek back into your mind. Your eyes transfixed on the source
+of light you slowly raise your hand to gain depth perception and the
+assurance of movement within your field of vision.
+~
+D EAST 0 0 0
+~
+The rock on this wall has a small luminous fungi starting to form upon
+the rough contours. The light given off barely visible due to its small
+quantities. Larger protrusions of rock have been broken off and sit at
+the base of the wall.
+~
+D SOUTH 22698 0 0
+~
+The darkness continues on to the south.
+~
+D WEST 0 0 0
+~
+Black rock swallows up a large section of this wall, melding with what
+looks to be a iron ore composite. Raising your hand to the surface of
+the black rock the cold and smoothness of it makes you think that it is
+not natural in origin.
+~
+D UP 0 0 0
+~
+Looking upward you discover small stalactites solid in origin but with a
+soft depositional construction, as if mud dripping from the room was
+suddenly solidified in a instance. The presence of these stalactites
+indicates the previous presence of water seeping through from the above
+ground.
+~
+D DOWN 21800 0 0
+~
+The ground here has been traveled upon often. larger rocks the size of a
+large cat have been moved to the side giving a wider walkway. The hard
+compacted dirt also another clear indication.
+~
+E rocks rock~
+The rocks in this section are indeed different from the rocks you have
+seen on the surface. These seem to be more ore based than sedimentary.
+~
+#0
+
+
+
+#RESETS
+OBJECT 22646 TO 22600
+DOOR 22600 up CLOSED
+DOOR 22600 up LOCKED
+OBJECT 22627 TO 22602
+OBJECT 22630 TO 22604
+OBJECT 22628 TO 22605
+OBJECT 22626 TO 22607
+OBJECT 22628 TO 22613
+OBJECT 22628 TO 22620
+OBJECT 22627 TO 22621
+OBJECT 22630 TO 22622
+OBJECT 22626 TO 22624
+OBJECT 22627 TO 22625
+OBJECT 22630 TO 22626
+OBJECT 22628 TO 22627
+OBJECT 22632 TO 22630
+MOB 22606 TO 22631 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22612 SHIELD
+EQUIP 22613 WIELD
+OBJECT 22634 TO 22631
+OBJECT 22635 TO 22631
+MOB 22606 TO 22632 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22617 WIELD
+OBJECT 22630 TO 22632
+OBJECT 22632 TO 22632
+OBJECT 22635 TO 22632
+MOB 22606 TO 22633 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22617 WIELD
+OBJECT 22632 TO 22633
+OBJECT 22635 TO 22633
+MOB 22606 TO 22634 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22617 WIELD
+MOB 22606 TO 22635 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22617 WIELD
+MOB 22606 TO 22636 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22617 WIELD
+MOB 22607 TO 22636 GLIMIT 3 LLIMIT 2
+EQUIP 22602 WAIST
+EQUIP 22603 HANDS
+EQUIP 22606 LEGS
+EQUIP 22605 NECKONE
+EQUIP 22610 HEAD
+EQUIP 22600 WRISTONE
+EQUIP 22600 WRISTTWO
+EQUIP 22607 BODY
+EQUIP 22616 WIELD
+EQUIP 22612 SHIELD
+MOB 22607 TO 22636 GLIMIT 3 LLIMIT 2
+EQUIP 22602 WAIST
+EQUIP 22603 HANDS
+EQUIP 22606 LEGS
+EQUIP 22605 NECKONE
+EQUIP 22610 HEAD
+EQUIP 22600 WRISTONE
+EQUIP 22600 WRISTTWO
+EQUIP 22607 BODY
+EQUIP 22616 WIELD
+EQUIP 22612 SHIELD
+MOB 22608 TO 22636 GLIMIT 1 LLIMIT 1
+EQUIP 22614 WIELD
+EQUIP 22607 BODY
+MOB 22609 TO 22636 GLIMIT 1 LLIMIT 1
+OBJECT 22636 TO 22636
+OBJECT 22637 TO 22636
+OBJECT 22640 TO 22636
+OBJECT 22642 TO 22636
+MOB 22606 TO 22637 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22617 WIELD
+MOB 22607 TO 22637 GLIMIT 3 LLIMIT 1
+EQUIP 22602 WAIST
+EQUIP 22603 HANDS
+EQUIP 22606 LEGS
+EQUIP 22605 NECKONE
+EQUIP 22610 HEAD
+EQUIP 22600 WRISTONE
+EQUIP 22600 WRISTTWO
+EQUIP 22607 BODY
+EQUIP 22616 WIELD
+EQUIP 22612 SHIELD
+OBJECT 22632 TO 22637
+OBJECT 22635 TO 22637
+OBJECT 22637 TO 22637
+OBJECT 22637 TO 22637
+OBJECT 22641 TO 22637
+OBJECT 22642 TO 22637
+OBJECT 22642 TO 22637
+MOB 22600 TO 22638 GLIMIT 10 LLIMIT 2
+EQUIP 22601 ABOUT
+EQUIP 22602 WAIST
+EQUIP 22604 FEET
+EQUIP 22616 WIELD
+MOB 22604 TO 22638 GLIMIT 2 LLIMIT 1
+OBJECT 22629 TO 22638
+OBJECT 22633 TO 22638
+OBJECT 22635 TO 22638
+OBJECT 22636 TO 22638
+OBJECT 22637 TO 22638
+MOB 22600 TO 22639 GLIMIT 10 LLIMIT 2
+EQUIP 22601 ABOUT
+EQUIP 22602 WAIST
+EQUIP 22604 FEET
+EQUIP 22616 WIELD
+MOB 22601 TO 22639 GLIMIT 5 LLIMIT 1
+EQUIP 22608 ABOUT
+EQUIP 22609 ARMS
+EQUIP 22602 WAIST
+EQUIP 22611 BODY
+EQUIP 22618 WIELD
+MOB 22606 TO 22639 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22612 SHIELD
+EQUIP 22613 WIELD
+OBJECT 22629 TO 22639
+OBJECT 22635 TO 22639
+OBJECT 22636 TO 22639
+MOB 22600 TO 22640 GLIMIT 10 LLIMIT 2
+EQUIP 22601 ABOUT
+EQUIP 22602 WAIST
+EQUIP 22604 FEET
+EQUIP 22615 WIELD
+MOB 22601 TO 22640 GLIMIT 5 LLIMIT 1
+EQUIP 22608 ABOUT
+EQUIP 22609 ARMS
+EQUIP 22602 WAIST
+EQUIP 22611 BODY
+EQUIP 22618 WIELD
+MOB 22606 TO 22640 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22612 SHIELD
+EQUIP 22613 WIELD
+OBJECT 22635 TO 22640
+OBJECT 22637 TO 22640
+OBJECT 22638 TO 22640
+MOB 22600 TO 22641 GLIMIT 10 LLIMIT 2
+EQUIP 22601 ABOUT
+EQUIP 22602 WAIST
+EQUIP 22604 FEET
+EQUIP 22618 WIELD
+OBJECT 22635 TO 22641
+OBJECT 22636 TO 22641
+OBJECT 22637 TO 22641
+MOB 22600 TO 22642 GLIMIT 10 LLIMIT 2
+EQUIP 22601 ABOUT
+EQUIP 22602 WAIST
+EQUIP 22604 FEET
+EQUIP 22612 SHIELD
+EQUIP 22613 WIELD
+MOB 22601 TO 22642 GLIMIT 5 LLIMIT 1
+EQUIP 22608 ABOUT
+EQUIP 22609 ARMS
+EQUIP 22602 WAIST
+EQUIP 22611 BODY
+EQUIP 22618 WIELD
+MOB 22602 TO 22642 GLIMIT 3 LLIMIT 1
+EQUIP 22611 BODY
+OBJECT 22635 TO 22642
+OBJECT 22636 TO 22642
+OBJECT 22637 TO 22642
+MOB 22601 TO 22643 GLIMIT 5 LLIMIT 1
+EQUIP 22608 ABOUT
+EQUIP 22609 ARMS
+EQUIP 22602 WAIST
+EQUIP 22611 BODY
+EQUIP 22618 WIELD
+MOB 22606 TO 22643 GLIMIT 10 LLIMIT 1
+EQUIP 22600 WRISTONE
+EQUIP 22605 NECKONE
+EQUIP 22606 LEGS
+EQUIP 22611 BODY
+EQUIP 22612 SHIELD
+EQUIP 22613 WIELD
+MOB 22601 TO 22644 GLIMIT 5 LLIMIT 1
+EQUIP 22608 ABOUT
+EQUIP 22609 ARMS
+EQUIP 22602 WAIST
+EQUIP 22611 BODY
+EQUIP 22618 WIELD
+MOB 22602 TO 22644 GLIMIT 3 LLIMIT 1
+EQUIP 22611 BODY
+MOB 22603 TO 22644 GLIMIT 1 LLIMIT 1
+EQUIP 22619 BODY
+EQUIP 22620 HEAD
+EQUIP 22621 ARMS
+EQUIP 22622 LEGS
+EQUIP 22623 FEET
+EQUIP 22624 HANDS
+EQUIP 22625 ABOUT
+EQUIP 22614 WIELD
+MOB 22605 TO 22644 GLIMIT 1 LLIMIT 1
+OBJECT 22639 TO 22644
+MOB 22602 TO 22645 GLIMIT 3 LLIMIT 1
+EQUIP 22611 BODY
+MOB 22604 TO 22646 GLIMIT 2 LLIMIT 1
+OBJECT 22629 TO 22646
+OBJECT 22631 TO 22646
+OBJECT 22632 TO 22646
+OBJECT 22628 TO 22648
+OBJECT 22629 TO 22648
+OBJECT 22630 TO 22649
+OBJECT 22626 TO 22653
+OBJECT 22630 TO 22653
+OBJECT 22627 TO 22654
+OBJECT 22628 TO 22659
+OBJECT 22630 TO 22665
+OBJECT 22628 TO 22666
+OBJECT 22627 TO 22668
+OBJECT 22626 TO 22669
+OBJECT 22628 TO 22671
+OBJECT 22626 TO 22673
+OBJECT 22627 TO 22673
+OBJECT 22630 TO 22674
+OBJECT 22629 TO 22677
+OBJECT 22630 TO 22677
+OBJECT 22629 TO 22678
+OBJECT 22627 TO 22681
+OBJECT 22629 TO 22681
+OBJECT 22630 TO 22683
+OBJECT 22626 TO 22684
+OBJECT 22628 TO 22688
+OBJECT 22627 TO 22692
+OBJECT 22630 TO 22692
+OBJECT 22630 TO 22695
+OBJECT 22643 TO 22696
+OBJECT 22644 TO 22696
+OBJECT 22645 TO 22696
+OBJECT 22628 TO 22697
+OBJECT 22630 TO 22698
+S
+
+#IMPROGS
+I 22646 verb_prog verb_prog_turn_spindle
+END
+#SPECS
+END
+#$

@@ -1,0 +1,4536 @@
+#AREA
+duergarmines.are~
+Duergar Mines~
+Berand~
+45 51
+12200 12299
+normal
+none
+0
+1
+
+#MOBS
+#12200
+vesur gnome~
+Vesur~
+A balding gnome dressed in plain gray robes stands here.    
+~
+This small, gray robed figure stands perhaps three and a half feet in height.    
+His robes appear well made, though far from extravagant, with a subtle silver    
+wave embroidered down the cowling and sides.  His hood is thrown back around    
+his shoulders, revealing a very bald scalp and a piercing green eyes in a    
+pale, age-lined face.  On a thin silver chain around his neck hangs the    
+traditional scales of justice, the symbol of lawmen from all across Thera.  A    
+retired Arbiter, Vesur, once known as the Sage of the Western Plains, spends    
+his elder years exploring the face of Thera with near as much vigor as in his    
+youth, though without the duties of an Arbiter to restrict his curiosity.  He    
+crosses his arms over his chest and turns his hard gaze to the surrounding    
+caves.    
+~
+0 12200 100 unique~
+59 50d10+4900 8d6+48 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT MAGE
+OFF DODGE
+OFF PARRY
+#12201
+brimon felar~
+Brimon~
+A dark-furred felar leans heavily on a staff as he limps through here.    
+~
+This proud looking felar limps cautiously through the caves, with the aid of    
+a thin wooden staff which he clutches in one paw-like hand.  His fur was once    
+a rich brown color, but has largely gone to gray in his advanced years.  His    
+robes are of plain coarse wool, though you notice a spot of red embroidery    
+over his left breast in the shape of the Fasces, the symbol of the Arbiters    
+of Law.  His long career as a lawman ended many years ago during a mishap with    
+the Empire, after which he entered retirement, occasionally following his    
+gnomish companion on one escapade or another.  Despite his obvious age,    
+Brimon's cat-like eyes survey the caves alertly, and he holds his staff with    
+the skill that only one who has spent a lifetime studying such a weapon can    
+attain.  You also notice several small bandages on his arms and chest, and you    
+think you hear him mutter something about porcupines under his breath.    
+~
+1000 12201 100 unique~
+59 50d10+4900 8d6+48 0 100 claw
+0 0 0 0
+standing male moderate
+M 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#12202
+dragon spirit trel'aran~
+the spirit of Trel'aran~
+A huge clouded form solidifies into the shape of an ancient dragon.    
+~
+A shapeless cloud hovers before you, fingers of mist streaming off into the air    
+as it swirls around itself.  As you watch the mist begins to solidify, slowly    
+taking the shape of a translucent dragon.  The huge beast turns its head in    
+your direction, as it moves you realize that you can see the stone walls behind    
+it through its swirling skin.  A wave of evil and terror washes over you as,    
+for a heartbeat, the spirit dragon becomes completely corporeal, revealing    
+gleaming, solid black scales and a maw filled with flawless ivory teeth, large    
+enough to swallow most giants whole.  It turns its gaze upon you, showing two    
+empty sockets where its eyes once were.  The beast throws its head back in a    
+silent roar, before fading back into an insubstantial misty cloud.    
+~
+-1000 12202 100 dragon~
+68 50d10+15000 9d7+80 0 100 claw
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT SENTINEL
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF PARRY
+AFF REGENERATION
+IMM ACID
+IMM POISON
+IMM NEGATIVE
+IMM DISEASE
+RES MAGIC
+RES WEAPON
+RES ACID
+RES DROWNING
+#12203
+duergar miner~
+a duergar miner~
+A stocky duergar walks through here with a miner's pickaxe over his shoulder.    
+~
+This duergar looks typical of his race, no more than four and a half feet in    
+height, and nearly as wide.  A long bushy beard dominates his face, which    
+appears to be poorly kept judging by its frayed appearance.  A studded mithril    
+vest covers his muscular torso, and a dented mithril hard hat provides some    
+head A 'protection' none, standard issue for the miners.  He mutters quietly to    
+himself as he swings a heavy pickaxe up over one shoulder and wanders off down    
+the cave.    
+~
+-1000 12203 100 duergar~
+55 50d10+3600 10d4+36 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#12204
+duergar miner filthy~
+a duergar miner~
+A filthy duergar loads blocks of un-cut mithril into an ore cart.    
+~
+A cloud of rock dust rises into the air around this duergar as he loads large    
+blocks of raw mithril into an ore cart.  He is dressed in the standard-issue    
+miners gear, consisting of a studded mithril vest and a dented hard hat along    
+with a heavy pickaxe resting in a loop on his belt.  He runs his stubby, filthy    
+fingers through his equally filthy beard, and reaches for another block of    
+mithril.    
+~
+-1000 12204 100 duergar~
+55 50d10+3600 10d4+36 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#12205
+duergar miner~
+a duergar miner~
+A duergar miner stands here swinging a pickaxe, pieces of rock flying with each    
+blow.    
+~
+A shower of small stones and dust fill the air as this duergar miner swings his    
+pickaxe mightily, chipping through the rock as he works around a vein of    
+mithril.  As the dust settles slightly you notice his miners garb, a studded    
+mithril vest and a dented mithril hard hat.  The duergar pauses to wipe his    
+filthy sleeve over his forehead, then grunts loudly and swings his pickaxe    
+back behind his head.    
+~
+-1000 12205 100 duergar~
+55 50d10+3600 10d4+36 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#12206
+duergar miner burly~
+a duergar miner~
+A burly duergar dressed in miners garb pauses his work to glance at you.    
+~
+This duergar is unusually short for his kind, appearing to stand no more than    
+four feet or so in height.  His width, however, far more than makes up for any    
+lack of mass.  You estimate this miner outweighs most of his companions by    
+half again as much.  His studded mithril vest strains mightily over his chest,    
+barely managing to cover him at all.  His dented hard hat is tilted backwards,    
+revealing a bald head streaked with sweat and dirt.  He rests his pickaxe    
+against the wall and coughs loudly, before glancing in your direction.    
+~
+-1000 12206 100 duergar~
+55 50d10+3600 10d4+36 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#12207
+duergar guard~
+a duergar guard~
+An armored duergar stands here, absently stroking his beard.    
+~
+This slightly over-weight duergar is dressed in heavy mithril armor, leaving    
+very little of his skin visible.  Much of his armor appears worn and dented,    
+as if its owner had been through heavy fighting.  A pair of matching adamantite    
+hammers hang from loops on his belt, which strikes you as odd since the    
+majority of the duergar seem to favor mithril weapons.  He stifles a yawn as    
+he glances about the caves, and absently strokes his heavy beard.    
+~
+-1000 12207 100 duergar~
+56 50d10+3900 10d4+39 0 10 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+#12208
+duergar guard~
+a duergar guard~
+A large duergar guard leans against the wall, polishing his weapon on his tunic.    
+~
+A muscular duergar paces the length of the cave, peering into the darkness    
+intently.  He casually spins a mithril short sword as he walks, handling it with    
+obvious skill.  The duergar is covered in a suit of mithril plate armor, though    
+you can not tell for certain if the mithril is a darkened tint itself, or if    
+the duergar is just really dirty, which is a definite possibility in the mines.    
+~
+-1000 12208 100 duergar~
+56 50d10+3900 10d4+39 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#12209
+duergar guard lieutenant~
+the duergar lieutenant~
+A guard lieutenant stands here with his arms crossed, muttering under his    
+breath.    
+~
+This older duergar is obviously in charge of the other duergar in the mines, as    
+he shouts out brisk orders in between mutterings.  His beard is streaked with    
+gray, and his dark face is beginning to show some wrinkles of age.  The    
+lieutenant's armor is of higher quality than the other guards, with ornate    
+engraving along the edges and across his chest.  Like many of the duergar, he    
+seems to favor the axe as his weapon of choice.  His, however, does not appear    
+to be the standard short-hafted mithril weapon that predominates the other    
+guards.  Instead, sheathed in a baldric on his back is a pitch-black axe lined    
+with gleaming silver engravings in an unfamiliar language.  He crosses his    
+arms as he glances down the tunnels, and resumes muttering to himself.    
+~
+-1000 12209 100 duergar~
+57 50d10+4200 6d8+44 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#12210
+dwarf warrior dangerous~
+a dwarven warrior~
+A dwarf spits noisily as he wipes blood and gore off the head of his hammer.    
+~
+Standing roughly four feet in height, this burly dwarf likely outweighs anyone    
+half again as tall.  He grips a huge two-headed hammer in both hands and    
+swings it up in front of him, pulling out a dirty cloth to wipe the remnants    
+of duergar brains off.  He wears a suit of heavy, slightly-worn dwarven    
+platemail emblazoned with the mark of Mortorn on the chest.  Around his neck    
+hangs a small amulet in the shape of an axe and a hammer crossed over a shield.    
+~
+0 12210 100 dwarf~
+57 50d10+4200 6d8+44 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#12211
+dwarf warrior~
+a dwarven warrior~
+A dwarven warrior hefts a pair of swords as he scans the caves eagerly.    
+~
+A tall dwarf stands here, peering out into the darkness eagerly.  He appears    
+extremely thin for a dwarf, with little sign of the burly chest and broad    
+shoulders typical of most of dwarven kind.  Unlike the others, this dwarf wears    
+a suit of light chainmail as opposed to the heavy plate armor.  Around his neck    
+hangs a small amulet in the shape of an axe and a hammer crossed over a shield.    
+A pair of short swords rest lightly in his hands as he pauses to glance at the    
+other dwarves.    
+~
+0 12211 100 dwarf~
+57 50d10+4200 6d8+44 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#12212
+dwarf warrior wild filthy berserker~
+the dwarven berserker~
+A filthy dwarf in spiked armor twitches violently, a wild look in his eyes.    
+~
+A big ball of hair and spikes paces through the room, never coming close to    
+sitting still for even a second.  A huge beard nearly covers this dwarf's     
+entire face, aside from two wide, blood-shot eyes that never seem to come to    
+rest on any one thing for more than a second or two.  His armor is a ragged     
+assortment of iron and mithril, with spikes protruding in every direction.      
+Many of the spikes look to have been added to an existing piece of spike-less    
+armor with nails, among other things.  In contrast to the rest of his attire,    
+you notice a small amulet around his neck in the shape of an axe and a hammer    
+crossed over a shield.  The berserker takes a deep swallow from a dented     
+silver flask, then belches loudly and continues twitching.    
+~
+0 12212 100 dwarf~
+57 50d10+4200 6d8+44 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#12213
+dwarf old cleric shaman captain gronholm~
+Captain Gronholm~
+An old dwarf dressed in heavy robes surveys the caves carefully.    
+~
+A large barrel of a dwarf stands here, examining his surroundings carefully.    
+Unlike the other dwarves he is dressed in heavy robes, though when he moves you    
+hear the rustle of chainmail beneath.  His robes are held by a simple sash tied    
+around his waist, and a baldric on his back.  In one hand he holds a heavy axe    
+which he rests over his shoulder.  A glowing amulet hangs around his neck,    
+similar to the plain one seen on the dwarves with him.  The dwarf wraps one    
+hand around the amulet as if drawing strength from it, then turns around and    
+bellows an order to the dwarves following him and gestures towards the tunnels.    
+~
+0 12213 100 dwarf~
+60 50d10+5400 8d6+48 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF PARRY
+#12214
+gnome slave~
+a gnomish slave~
+A small dirty gnome leans against the wall here, an exhausted look on his face.    
+~
+This gnome stands perhaps three feet in height, and is wearing a dirty and torn    
+robe designed for slaves in the duergar mines.  Unlike the other slaves, he has    
+no pickaxe, though you can not determine what other job he might have down in    
+the caves.  He has a dejected look on his face as he slouches against the wall,    
+grabbing a moment of rest before the duergar guards force him back to work.    
+~
+0 12214 100 unique~
+35 10d10+1500 4d7+14 0 100 punch
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT WIMPY
+OFF BERSERK
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF NO_TRACK
+#12215
+half-elf elf half slave~
+a half-elven slave~
+A filthy half-elf dressed in slaves robes hefts a pickaxe.    
+~
+This elven figure is easily identifiable as a half breed by the substantial    
+growth of facial hair.  He appears large even for one of his kind, and in    
+between swings of his pickaxe, you notice him eyeing his captors carefully.  As    
+he turns his head you catch sight of a tattoo on his cheek marking him as a    
+ranger from the Vale of Arendyl.  The half-elf pauses to wipe sweat off his    
+forehead with his slaves robe, then goes back to work.    
+~
+0 12215 100 unique~
+35 10d10+1500 4d7+14 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WIMPY
+OFF BERSERK
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF NO_TRACK
+#12216
+svirf svirfnebli slave~
+a svirfnebli slave~
+A dirty svirfnebli in a torn slaves robe walks by, carrying a load of ore.    
+~
+This short, ragged svirfnebli staggers through the caves, a blank look on    
+his face.  His kin seem to be a favorite of the duergar for slaves, likely    
+those captured in skirmishes between the two races through out the tunnels of    
+the Underdark.  This svirfnebli carries a load of mithril ore, as he heads for    
+a nearby ore cart.    
+~
+0 12216 100 unique~
+35 10d10+1500 4d7+14 0 100 punch
+0 0 0 0
+standing male none
+M 0 small
+ACT NPC
+ACT WIMPY
+OFF BASH
+OFF BERSERK
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF NO_TRACK
+#12217
+displacer beast shadow shadowy~
+a shadowy displacer beast~
+A large feline form glides smoothly through the darkness, its eyes glowing faintly.    
+~
+The outline of this creature seems to shimmer and fade partially as you     
+examine it.  Standing almost six feet at the shoulder, this is one of the    
+largest cats you have ever encountered.  Obviously magical in nature, the    
+creature has six legs, and a pair of long tentacles growing off its back,     
+each one ending in a flat disk studded with small spikey protrusions.  It    
+seems to vanish into the darkness in a heartbeat, and you suddenly hear a     
+vicious growl from behind you.    
+~
+-1000 12217 100 cat~
+56 50d10+3900 10d4+39 0 100 claw
+0 0 0 0
+standing male none
+M 0 large
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF FADE
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+RES POISON
+RES NEGATIVE
+RES DISEASE
+#12218
+elemental water~
+a towering water elemental~
+A huge geyser of water rises up before you, moving with obvious intelligence.    
+~
+This towering creature seems to be formed completely from the flowing waters    
+it emerged from.  It is vaguely humanoid in shape, a ten-foot pillar of water    
+forming its body, with what appears to be two arms weaving from side to side.    
+It also appears to have a head-like formation at times, though it often melds    
+in with the rest of its flowing body.  With the deafening roar of a waterfall,    
+the creatures lashes out towards you.    
+~
+0 12218 100 unique~
+56 50d10+3900 10d4+39 0 100 drowning
+0 0 0 0
+standing male none
+M 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF AREA_ATTACK
+OFF DODGE
+IMM SUMMON
+IMM CHARM
+IMM WEAPON
+IMM POISON
+IMM DISEASE
+IMM DROWNING
+#12219
+porcupine vesur~
+a porcupine~
+A spiked porcupine looks up from near the ground where he trundles along.    
+~
+Tiny eyes peek out from behind row upon row of needle sharp spikes.  This    
+little creature doesn't look like something you want to pick up and    
+cuddle.  He seems harmless enough, as a matter of fact he seems to be    
+ignoring you completely and just waddling around on his own without a    
+care in the world.    
+~
+0 12219 100 unique~
+59 50d10+4900 8d6+48 0 100 stab
+0 0 0 0
+standing male none
+M 0 tiny
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF PARRY
+#12220
+dark elf dark-elf drow patroller~
+a dark-elf patroller~
+A haggard looking dark-elf leans against the wall here, clutching the hilt    
+of a broken longsword.    
+~
+This dark-elf appears to have been wounded in some sort of battle, though    
+oddly enough, he also appears half drowned, as his white hair hangs about    
+his shoulders in a soggy tangle, dripping on the floor where he stands.    
+His once fine chainmail is shredded off his left shoulder, and his left    
+arm dangles limply.  In his right he clutches the hilt of a broken off    
+longsword, although upon closer inspection, the blade appears to have been    
+pitted and melted off with acid, rather than broken.  The dark-elf squeezes    
+his eyes together tightly, as if fighting off unconciousness as he leans     
+heavily against the stone wall.    
+~
+-1000 12220 100 drow~
+35 10d10+1500 4d7+14 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+#0
+
+
+
+#OBJS
+#12200
+gray robe~
+a gray robe with faint silver embroidery~
+A pile of gray cloth with faint silver embroidery lies here.~
+armor
+silk~
+40 0 0 0 0
+45 2 1000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+APPLY HP 30
+APPLY SVSPELL -10
+LIMIT 0
+E gray robe~
+This gray robe is woven from fine silk, with a subtle silver wave embroidered    
+down the cowling and sides.  Upon closer examination, the thread appears to be    
+actual strings of delicate silver metal interwoven with the silk.  Woven from    
+the same silver thread above the left breast is the traditional Scales of    
+Justice.  When you hold the robe up, it appears to be perfectly fitted for a    
+gnomish sized person.    
+~
+
+#12201
+thin wooden staff~
+a thin wooden staff with silver etchings~
+A long, thin wooden staff lies here.~
+weapon
+wood~
+staff 7 7 pound 0
+51 3 5000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+APPLY HITROLL 5
+APPLY DAMROLL 3
+LIMIT 0
+E thin wooden staff~
+This staff appears very ordinary at first glance, made of a long solid piece of    
+wood, capped at the ends with blunt silver balls.  At two points in the middle    
+of the shaft, about where one wielding the staff would place their hands, you    
+see an ornate pattern carved into the wood, and filled with silver.  When you    
+grip the staff, it almost feels like it begins to hum and vibrate slightly.    
+~
+
+#12202
+coarse robe woolen~
+a coarse woolen robe~
+A pile of coarse wool lies here.~
+armor
+cloth~
+4 4 4 0 4
+30 2 500 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E coarse robe woolen~
+This garment appears to be something a farmer or peasant from a colder region    
+of Thera would wear.  The wool is of high quality, but is woven together    
+roughly, and with no decoration.    
+~
+
+#12203
+scales justice badge silver~
+the scales of Justice~
+A small silver badge lies here.~
+armor
+silver~
+1 1 1 1 1
+50 5 10000 P
+WEAR TAKE
+WEAR NECK
+ITEM HUM
+ITEM BLESS
+APPLY HP 60
+LIMIT 0
+E scales justice badge silver~
+This small badge is molded from silver, with a few golden accents.  It forms a    
+large pair of measuring scales, the traditional symbol of lawmen and women from    
+across Thera.    
+~
+
+#12204
+heavy adamantite pickaxe axe~
+a heavy adamantite pickaxe~
+A adamantite pickaxe lies here.~
+weapon
+adamantite~
+axe 5 6 pierce 0
+25 17 3000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+E heavy adamantite pickaxe axe~
+This heavy pickaxe is forged from adamantite, and looks to be designed for more    
+utility use than as a weapon.  It is heavily worn and dented from pounding away    
+at solid rock.    
+~
+
+#12205
+mithril hat helmet~
+a mithril hard hat~
+A round mithril helmet lies here.~
+armor
+mithril~
+5 5 5 0 1
+25 4 200 P
+WEAR TAKE
+WEAR HEAD
+ITEM DARK
+ITEM EVIL
+LIMIT 0
+E mithril hat helmet~
+This simple miners hard hat is crudely forged from mithril, as if the smithy    
+was turning them out en-mass, and paying little attention to individual quality.    
+It offers slight protection to the top of the head, protecting from rock falling    
+from above and such, but little to no protection anywhere else.  You also notice    
+that the mithril has lost its sheen and appears a dull black in color, as if it    
+had been tainted or dyed.    
+~
+
+#12206
+studded mithril vest~
+a studded mithril vest~
+A vest covered with mithril plates lies in a heap here.~
+armor
+mithril~
+9 9 9 1 5
+25 7 300 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+APPLY AC 7
+LIMIT 0
+E studded mithril vest~
+A simple shirt of some type of heavy cloth, with mithril plates evenly spaced    
+along its surface, providing some form of light protection to the wearer.  The    
+mithril plates appear to be darkened somehow, and have lost their shine.    
+~
+
+#12207
+adamantite warhammer hammer~
+an adamantite warhammer~
+A large hammer forged from adamantite lies here.~
+weapon
+adamantite~
+mace 5 7 crush 0
+30 18 7000 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR -1
+APPLY HITROLL 4
+APPLY DAMROLL 5
+LIMIT 0
+E adamantite warhammer hammer~
+This heavy hammer is forged from one piece of solid adamantite.  The head is    
+a square block with some slight engraving along the edges, while the handle is    
+one long shaft with a flat hilt for pounding.    
+~
+
+#12208
+sword mithril~
+a mithril short sword~
+A heavy short sword forged from mithril lies here.~
+weapon
+mithril~
+sword 5 7 slash 0
+35 8 5000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+APPLY HITROLL 4
+APPLY DAMROLL 4
+LIMIT 0
+E sword mithril~
+This plain sword is forged of highest quality mithril from the depths of the    
+Underdark.  The short, thick blade is specifically designed for fighting in    
+close quarters, such as small caves.  Extra weight has been added to the tip    
+of the blade to allow for more power in a short, compact swing.  The mithril    
+no longer shines, however, as if some taint from the Underdark has stained the    
+very material.    
+~
+
+#12209
+mithril buckler~
+a round mithril buckler~
+A round mithril buckler lies here.~
+armor
+mithril~
+10 10 10 5 0
+30 5 4000 P
+WEAR TAKE
+WEAR SHIELD
+ITEM DARK
+ITEM EVIL
+APPLY AC 5
+LIMIT 0
+E mithril buckler~
+This small, round buckler is designed more for deflecting a blow than blocking    
+it.  The high quality mithril appears to have lost its shine, as if some taint    
+from the Underdark has stained the very material.    
+~
+
+#12210
+shirt chain chainmail mithril~
+a chainmail shirt made of darkened mithril~
+A pile of dull mithril chain lies here.~
+armor
+mithril~
+15 15 15 5 15
+45 17 5000 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+APPLY DAMROLL 2
+APPLY HP 10
+APPLY SVSPELL -5
+LIMIT 0
+E chainmail shirt chain mithril~
+These fine mithril links have been carefully joined together, providing decent    
+protection against many weapons.  The mithril appears dulled and darkened, as    
+if something has tainted the material.    
+~
+
+#12211
+helm mithril~
+a darkened mithril helm~
+A helm of made of darkened mithril lies here.~
+armor
+mithril~
+10 10 10 2 10
+40 8 3000 P
+WEAR TAKE
+WEAR HEAD
+ITEM DARK
+ITEM EVIL
+APPLY HP 10
+LIMIT 0
+E helm mithril~
+This helm is shaped like a cylinder, tapering to a point at the top.  The    
+mithril appears dulled and darkened, as if something has tainted the material.    
+~
+
+#12212
+sleeves mithril~
+a pair of darkened mithril sleeves~
+Some sleeves made of darkened mithril are lying here.~
+armor
+mithril~
+12 12 12 6 12
+40 12 3000 P
+WEAR TAKE
+WEAR ARMS
+ITEM DARK
+ITEM EVIL
+APPLY HP 10
+APPLY SVSPELL -5
+LIMIT 0
+E sleeves mithril~
+These sleeves are skillfully forged from mithril dug from the depths of the    
+Underdark.  The metal, however, appears dulled and darkened, as if something    
+has tainted the material.    
+~
+
+#12213
+leggings mithril~
+a pair of darkened mithril leggings~
+A pair of leggings made from darkened mithril are lying here.~
+armor
+mithril~
+10 10 10 5 10
+40 9 3000 P
+WEAR TAKE
+WEAR LEGS
+ITEM DARK
+ITEM EVIL
+APPLY HP 25
+LIMIT 0
+E leggings mithril~
+These leggings are skillfully forged from mithril dug from the depths of the    
+Underdark.  The metal, however, appears dulled and darkened, as if something    
+has tainted the material.    
+~
+
+#12214
+breastplate plate mithril black dragon~
+a darkened mithril breastplate engraved with a black dragon~
+A large mithril breastplate lies here, engraved with a black dragon.~
+armor
+mithril~
+20 20 20 8 15
+50 20 6000 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY SVSPELL -10
+LIMIT 0
+E breastplate plate mithril black dragon~
+This breastplate has been skillfully forged from the finest mithril taken    
+from the Underdark mines.  The front of the plate has been skillfully    
+engraved with a large black dragon, the symbol of duergar kings.  The    
+mithril appears dulled and darkened, as if something has tainted the material.    
+~
+
+#12215
+helm mithril ornate~
+an ornate helm of darkened mithril~
+An ornate helm of made of darkened mithril lies here.~
+armor
+mithril~
+10 10 10 2 10
+50 8 3000 P
+WEAR TAKE
+WEAR HEAD
+ITEM DARK
+ITEM EVIL
+APPLY HP 10
+APPLY SVSPELL -5
+LIMIT 0
+E helm mithril ornate~
+This helm is shaped like a cylinder, tapering to a point at the top.  Unlike    
+the more common helms you have seen, this one bears intricate engraving along    
+the edges and around the pointed top.  The mithril appears dulled and darkened,    
+as if something has tainted the material.    
+~
+
+#12216
+sleeves mithril ornate~
+a pair of ornate darkened mithril sleeves~
+Some ornate sleeves made of darkened mithril are lying here.~
+armor
+mithril~
+12 12 12 6 12
+50 13 5000 P
+WEAR TAKE
+WEAR ARMS
+ITEM DARK
+ITEM EVIL
+APPLY DEX -1
+APPLY HP 20
+APPLY SVSPELL -7
+LIMIT 0
+E sleeves mithril ornate~
+These sleeves are skillfully forged from mithril dug from the depths of the    
+Underdark.  The edges of these sleeves flare out slightly, and are heavily    
+engraved.  The metal, however, appears dulled and darkened, as if something    
+has tainted the material.    
+~
+
+#12217
+leggings mithril etched~
+a pair of etched darkened mithril leggings~
+A pair of etched leggings made from darkened mithril are lying here.~
+armor
+mithril~
+10 10 10 5 10
+40 9 3000 P
+WEAR TAKE
+WEAR LEGS
+ITEM DARK
+ITEM EVIL
+APPLY HP 25
+LIMIT 0
+E leggings mithril etched~
+These leggings are skillfully forged from mithril dug from the depths of the    
+Underdark.  The surface of these leggings is dominated by intricate etchings,    
+the largest of which appears to be a dragon wrapped around itself.  The metal,    
+however, appears dulled and darkened, as if something has tainted the material.    
+~
+
+#12218
+black pitch axe~
+a pitch black axe with silver engravings~
+A thin silver-engraved black axe lies here.~
+weapon
+7 6 cleave 0
+
+steel~
+axe 7 6 cleave 0
+51 11 50000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM NODROP
+ITEM NOREMOVE
+APPLY HITROLL 3
+APPLY DAMROLL 7
+LIMIT 0
+E black pitch axe~
+This thin axe looks quite different from the other weapons you've seen about.    
+From hilt to razor-sharp edge, it is solid black, as if it were forged from    
+coal despite its cool metal feel.  The flat side of the blade and part of the    
+shaft are covered in intricate silver engravings, in sharp contrast to the sold    
+black of the rest of the axe.    
+~
+
+#12219
+robe ragged tattered slaves~
+a tattered slaves robe~
+A ragged slaves robe lies in a heap on the ground.~
+armor
+cloth~
+5 5 5 5 5
+20 2 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM DARK
+LIMIT 0
+E robe ragged tattered slaves~
+This dirty, tattered piece of cloth serves as a robe for the duergars' slaves.    
+~
+
+#12220
+holy mark amulet dwarven crusader~
+holy mark of the dwarven crusader~
+An amulet lies here, carved in the shape of an axe and a hammer crossed over a    
+shield.~
+armor
+iron~
+0 0 0 0 0
+52 3 50000 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM HUM
+ITEM BLESS
+ITEM NOREMOVE
+APPLY AC 10
+APPLY SVSPELL -30
+LIMIT 0
+E holy mark amulet dwarven crusader~
+A holy symbol of the dwarven gods, this amulet shows a templar-style shield,    
+crossed over by a hammer and an axe.  Holy symbols such as these are blessed by    
+a high dwarven priest, and given to one who sets off on a crusade or mission,    
+vowing to return successful or die trying.    
+~
+
+#12221
+heavy dwarven breastplate plate~
+a heavy dwarven breastplate~
+A large mithril breastplate lies here.~
+armor
+mithril~
+15 15 15 6 15
+45 21 10000 P
+WEAR TAKE
+WEAR BODY
+APPLY STR 1
+APPLY CON 2
+APPLY AC 7
+LIMIT 0
+E heavy dwarven breastplate plate~
+This heavy breastplate is forged for a dwarven frame with expert skill from    
+pure mithril.  The edges are marked with dwarven runes and prayers, imbuing the    
+metal with strength to protect its wearer.    
+~
+
+#12222
+heavy dwarven chain chainmail~
+heavy dwarven chainmail~
+A pile of heavy chainmail lies here.~
+armor
+mithril~
+11 11 11 6 11
+45 17 9000 P
+WEAR TAKE
+WEAR BODY
+APPLY STR 1
+APPLY CON 1
+APPLY AC 5
+LIMIT 0
+E heavy dwarven chain chainmail~
+This shirt of chainmail is expertly assembled from rings of pure mithril,    
+creating a heavy suit and providing decent protection from physical damage.  A    
+solid plate in the middle is engraved with dwarven runes and prayers, imbuing    
+the metal with strength to protect its dwarven wearer.    
+~
+
+#12223
+massive hammer~
+a massive two-headed dwarven hammer~
+A large two-handed hammer lies here.~
+weapon
+adamantite~
+mace 7 6 crush F
+50 20 6500 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 0
+E massive hammer~
+This finely crafted dwarven hammer was obviously designed for use in two hands,    
+by dwarven specifications at least.  The head is solid adamantite and carved    
+with dwarven runes of protection, and ends in the back in a sharp slightly-    
+curved point.    
+~
+
+#12224
+sword shortsword short engraved~
+a mithril shortsword engraved with magical runes~
+A thin mithril sword lies here, humming slightly.~
+weapon
+mithril~
+sword 6 8 slice 0
+50 4 10000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+APPLY DEX 2
+APPLY HITROLL 2
+APPLY DAMROLL 8
+LIMIT 0
+E sword shortsword short engraved~
+This sword is obviously not of dwarven make, though you can not tell anything    
+beyond that.  Unfamiliar runes are carved along the length of the blade, which    
+seems to hum slightly in your hand.  The blade is very thin, which is apparent    
+in the lightness of the weapon.  Its a wonder that the sword can survive a    
+blow against a suit of armor.    
+~
+
+#12225
+heavy sword shortsword short~
+a heavy dwarven shortsword~
+A thick dwarven shortsword lies here.~
+weapon
+adamantite~
+sword 6 6 slash 0
+45 9 6000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+E heavy sword shortsword short~
+This short sword is obviously of dwarven make.  The blade is twice as thick as    
+any other sword you've ever seen, and it is extremely heavy for its short    
+length.  The area around the hilt is carved with dwarven runes and prayers, to    
+grant strength to the metal.    
+~
+
+#12226
+rough rough-cut mithril ore block~
+a rough-cut block of mithril ore~
+A large, rough-cut block of mithril ore lies here.~
+trash
+mithril~
+0 0 0 0 0
+10 24 10000 P
+WEAR TAKE
+LIMIT 0
+
+#12227
+loose pile mithril ore~
+a pile of pure mithril ore~
+A loose pile of pure mithril ore lies here, coated in dust and dirt.~
+trash
+mithril~
+0 0 0 0 0
+10 18 4000 P
+WEAR TAKE
+LIMIT 0
+
+#12228
+huge pile mithril ore~
+a large pile of mithril ore~
+A large pile of mithril ore fills this cart nearly to over-flowing.~
+trash
+mithril~
+0 0 0 0 0
+10 10000 1 P
+LIMIT 0
+
+#12229
+gemstone gem stone~
+an un-cut gemstone~
+A small gemstone lies here, coated in rock and dirt.~
+gem
+gem~
+0 0 0 0 0
+10 1 15000 P
+WEAR TAKE
+LIMIT 0
+E gemstone gem stone~
+This fist-sized gemstone appears to be more rock than gem at first, but as    
+you chip away at the thin coating of stone, an un-cut gem of amazing    
+quality gleams back at you.    
+~
+
+#12230
+pile rough gem gems stones gemstones~
+a pile of rough gemstones~
+A large pile of assorted gemstones mixed with rock and dirt fills the cart.~
+gem
+gem~
+0 0 0 0 0
+10 10000 1 P
+WEAR TAKE
+LIMIT 0
+
+#12231
+ore cart~
+a heavy iron ore cart~
+A huge ore cart sits on the tracks here, partially filled with mithril.~
+trash
+iron~
+10000 0 0 0 0
+10 500 1 P
+WEAR TAKE
+LIMIT 0
+
+#12232
+ore cart~
+a heavy iron ore cart~
+A heavy iron ore cart rests on the tracks here.~
+trash
+iron~
+5000 0 0 0 0
+10 500 1 P
+WEAR TAKE
+LIMIT 0
+
+#12233
+ore cart~
+a heavy iron ore cart~
+A smaller ore cart sits here, filled with un-cut gemstones.~
+trash
+iron~
+1000 0 0 0 0
+10 500 1 P
+WEAR TAKE
+LIMIT 0
+
+#12234
+treasure gold silver gems valuables piles~
+a pile of treasure~
+A mass of gold, silver, gems and other valuables lies scattered in gigantic piles across the room.~
+treasure
+gold~
+0 0 0 0 0
+1 10 10 P
+LIMIT 0
+E treasure gold silver gems valuables piles~
+The dragons horde of gold, silver and gems is scattered about, nearly filling    
+the cavern.  Just at a glance you see enough riches here to last someone ten    
+lifetimes, at least.  Mixed in with the coins and gems are assorted weapons,    
+armors and jewelry, much of it gaudy and of no practical use.    
+~
+
+#12235
+long two two-handed blade sword katana bal'talon~
+a long, curving katana named 'Bal'Talon'~
+A two-handed katana with a long slightly curving blade lies here.~
+weapon
+steel~
+sword 7 8 slice F
+52 4 900000 P
+WEAR TAKE
+WEAR WIELD
+ITEM BLESS
+APPLY HITROLL 8
+APPLY DAMROLL 8
+LIMIT 0
+E long two two-handed blade sword katana bal'talon~
+The weapon you hold in your hands is obviously of exceptional craftsmanship.    
+The blade is long and no thicker than your finger, with a very slight upward    
+curve along its length.  The sword appears to be designed only for two-    
+handed use judging by its extremely long hilt, which allows the wielder to    
+space his or her hands far apart for excellent control of the blade.  The     
+hilt itself is solid silver and gold, forged in the shape of a silver-winged    
+phoenix, its wings spread wide forming the cross braces and its gaping maw     
+flowing gracefully into the blade.  The light gleams brilliantly off the     
+unmarred, highly-polished surface as you turn the sword in your hands, and     
+highlights an ornate inscription at the base of the blade.  You suddenly     
+realize this weapon possesses a power far, far beyond that of any ordinary     
+weapon, even one as expertly forged as this.    
+~
+E inscription~
+In what appears to be an ancient Arial script, you see the words:    
+    
+    Skyborn, Tora do Tara'rroga, Tora do Light,     
+    Tora do Bal, Og'o'an Vagra Kral Ana!    
+    
+~
+
+#12236
+altar pitch-black black marble~
+an altar~
+A pitch-black marble altar sits here, apparently designed to hold a sword.~
+container
+marble~
+100 0 0 0 0
+1 500 1 P
+LIMIT 0
+E altar pitch-black black marble~
+Carved from a solid block of pitch-black marble, the surface of this altar is    
+largely plain, un-adorned stone.  The top edges are inlaid with a thin layer     
+of silver, forming an arcane language completely alien to you.  A silver stand    
+rises from the smooth surface, designed for a sword to be mounted on display.    
+~
+
+#12237
+ornate gleaming suit plate platemail mail dwarven spiked~
+an ornate suit of spiked dwarven platemail~
+A gleaming suit of vicious dwarven platemail lies here.~
+armor
+mithril~
+17 17 17 22 16
+50 14 15000 P
+WEAR TAKE
+WEAR BODY
+ITEM HUM
+ITEM BLESS
+APPLY DAMROLL 5
+APPLY SVSPELL -10
+APPLY HITROLL -1
+LIMIT 0
+E ornate gleaming suit plate platemail mail dwarven spiked~
+An perfect example of dwarven craftsmanship, this gleaming mithril     
+breastplate embodies the talent of dwarven smiths.  The chest area is a     
+smooth mithril surface, with a hammer and an axe engraved in the center,    
+the symbol of one of the dwarven gods.  The edges are set with gleaming    
+spikes, all of them curving slightly inward, making it extremely deadly    
+for an opponent to be pulled in close to the dwarf wearing this suit.    
+It also looks exceedingly awkward to move in, especially in a fight.  On     
+the inside of the chest plate, carved in extremely crude dwarven, you    
+see the words:  To me bes' student, my yer rage make yer enemies bleed ta'    
+death!  - T. Pwent    
+~
+
+#12238
+helm bowl spike spiked~
+a helm set with a huge spike~
+A metal bowl sits here, with a large spike crudely affixed to the top.~
+armor
+iron~
+10 10 10 2 10
+50 8 200 P
+WEAR TAKE
+WEAR HEAD
+APPLY DEX -2
+APPLY DAMROLL 4
+LIMIT 0
+E helm bowl spike spiked~
+This appears to have actually been an iron bowl once, though it has almost    
+completely rusted away now.  A large bent spike has been pounded up through    
+the top.  It looks like it would be extremely uncomfortable to actually wear    
+this on your head.    
+~
+
+#12239
+pair shoulder plates spikes spiked~
+a pair of shoulder plates set with tiny metal spikes~
+A pair of shoulder plates lies here, numerous small spikes glued to its surface.~
+armor
+iron~
+5 5 5 1 4
+50 13 200 P
+WEAR TAKE
+WEAR NECK
+APPLY DEX -2
+APPLY DAMROLL 4
+LIMIT 0
+E pair shoulder plates spikes spiked~
+These rusted iron plates have been linked by a chain in the front and back,    
+allowing one to hang them around their neck and strap them to their     
+shoulders.  Several small pieces of sharpened metal have been driven through    
+the brittle, rusted surface to protrude upwards.    
+~
+
+#12240
+set leg plates crude spikes spiked~
+some leg plates set with crude spikes~
+A set of leg armor lies here, crude spikes protruding in every direction.~
+armor
+iron~
+4 4 4 0 4
+40 9 100 P
+WEAR TAKE
+WEAR LEGS
+APPLY DEX -1
+APPLY DAMROLL 4
+LIMIT 0
+E set leg plates crude spikes spiked~
+These rough-cut pieces of iron look to have been snatched up from a scrap    
+yard, judging by their jagged edges and random odd shapes.  Each of them has    
+several holes punched through the edges, allowing pieces of chain and rope    
+to be strung through them and tied together.  Here and there, sharpened    
+metal pieces stick up off the surface where the owner hammered them in.    
+~
+
+#12241
+flask silver~
+a dented silver flask engraved with dwarven runes~
+A dented and tarnished silver flask lies here, engraved with dwarven runes.~
+drink
+silver~
+30 25 'water' 0 0
+10 1 20 P
+WEAR TAKE
+LIMIT 0
+
+#12242
+corpse body duergar patroller~
+a duergar corpse~
+The body of a duergar lies here, brains splattered over the nearby stones.~
+container
+flesh~
+80 0 0 0 0
+15 185 1 P
+LIMIT 0
+E corpse body duergar patroller~
+This duergar seems to have been part of a patrol into the caves, judging by    
+his weapons and armor.  He seems to have been through hard times though,    
+as you notice his brains have largely been emptied onto the stone floor    
+by what looks like a huge blow from a hammer or mace.    
+~
+
+#12243
+helm crushed mithril smashed~
+a mithril helm, smashed in from behind~
+A helm made of darkened mithril lies here, caved in on one side.~
+armor
+mithril~
+1 1 1 0 1
+40 8 100 P
+WEAR TAKE
+WEAR HEAD
+ITEM DARK
+ITEM EVIL
+APPLY HITROLL -1
+LIMIT 0
+E helm crushed mithril~
+This helm was originally shaped like a cylinder, tapering to a point at the     
+top.  The entire right side of it however, has been smashed inwards, leaving    
+the helm little more than a piece of scrap.  You highly doubt the person    
+wearing this helm at the time fared very well.    
+~
+
+#12244
+pile red robes heavy dwarven~
+heavy dwarven robes~
+A pile of heavy red cloth lies here, covered in dwarven inscriptions.~
+armor
+cloth~
+20 0 0 0 0
+45 3 150 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 25
+APPLY SVSPELL -10
+LIMIT 0
+E pile red robes heavy dwarven~
+These dark red robes are made from a heavy, coarse material, and do not look    
+very comfortable.  The edges, sleeves and cowl are embroidered in silver    
+thread with dwarven runes.  Patting the robe down, you find several hidden    
+pockets sewen inside.    
+~
+
+#12245
+axe heavy dwarven~
+a heavy axe engraved with dwarven runes~
+A heavy axe lies here, covered in dwarven runes.~
+weapon
+adamantite~
+axe 6 8 cleave 0
+51 22 50000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 8
+LIMIT 0
+E axe heavy dwarven~
+This hefty axe is constructed from two pieces of solid adamantite.  The    
+handle is wrapped in thick steel wire along the entire length, granting the    
+wielder a secure grip even when the handle becomes slick with blood or    
+sweat.  The blade is thick in the middle, tapering off in each direction to    
+form two razor-sharp edges.  Every surface of this double-bladed axe is    
+covered in dwarven runes and sigils, many depicting prayers or war chants.    
+~
+
+#12246
+holy mark amulet dwarven crusader~
+the holy mark of the dwarven crusader~
+An amulet lies here, carved in the shape of an axe and a hammer crossed over a shield.~
+armor
+iron~
+0 0 0 0 0
+40 3 50000 P
+WEAR TAKE
+WEAR NECK
+ITEM BLESS
+APPLY AC 10
+APPLY SVSPELL -10
+LIMIT 0
+E holy mark amulet dwarven crusader~
+A holy symbol of the dwarven gods, this amulet shows a templar-style shield,    
+crossed over by a hammer and an axe.  Holy symbols such as these are blessed by    
+a high dwarven priest, and given to one who sets off on a crusade or mission,    
+vowing to return successful or die trying.    
+~
+
+#12247
+flask silver~
+a dented silver flask engraved with dwarven runes~
+A dented and tarnished silver flask lies here, engraved with dwarven runes.~
+drink
+silver~
+30 0 'water' 0 0
+10 1 20 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#12248
+dagger ornate~
+an ornate jewel-encrusted dagger~
+An unbelievably ornate dagger lies here, covered in gold and jewels.~
+weapon
+gold~
+dagger 5 5 pierce 0
+51 5 25000 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM NODROP
+ITEM NOREMOVE
+APPLY DAMROLL 1
+LIMIT 0
+E dagger ornate gold~
+This dagger has a long, slim blade, etched with ornate runes along the    
+sides.  The hilt is set with numerous gems and woven with gold.  You also    
+notice the tip of the blade appears to be stained a permanant red color.    
+~
+
+#12249
+sceptre golden~
+a massive golden sceptre set with an emerald~
+An ornate golden sceptre lies here, set with a huge emerald on the end.~
+treasure
+gold~
+0 0 0 0 0
+51 10 25000 P
+WEAR TAKE
+WEAR HOLD
+ITEM BLESS
+APPLY STR 1
+APPLY INT 1
+APPLY CON 1
+LIMIT 0
+E sceptre golden~
+This massive sceptre appears to be constructed from solid gold, and is adorned    
+with enough gems and engraving for a king.  A huge brilliant green emerald on    
+the tip catches your eye in particular, you imagine it would be extremely    
+valuable all by itself.    
+~
+
+#12250
+ruby~
+a brilliant ruby~
+A gleaming ruby the size of a hens egg lies here.~
+gem
+gem~
+0 0 0 0 0
+51 10 30000 P
+WEAR TAKE
+LIMIT 0
+E ruby~
+This blood-red ruby is huge as far as rubies go, atleast the size of a    
+humans fist.  Its many facets catch the light, tantalizing you.    
+~
+
+#12251
+diamond~
+a large perfectly-shaped diamond~
+A large diamond lies here, its many faces gleaming in the light.~
+gem
+gem~
+0 0 0 0 0
+51 10 35000 P
+WEAR TAKE
+LIMIT 0
+E diamond~
+This large diamond appears to be uncut, though its natural quality is    
+immediately obvious, as you stare at the light glinting off its surface.    
+~
+
+#12252
+bracelet platinum onyx~
+a sleek platinum and onyx bracelet~
+A sleek looking platinum and onyx bracelet lies here, collecting dust.~
+armor
+platinum~
+0 0 0 5 0
+51 1 25000 P
+WEAR TAKE
+WEAR WRIST
+ITEM MAGIC
+APPLY SVSPELL -5
+LIMIT 0
+E platinum bracelet onyx~
+This slim platinum band is intricately carved with runes and inscriptions,    
+and has a band of solid black onyx inlaid down the middle.    
+~
+
+#12253
+swirling black orb essence~
+a swirling black orb~
+A black orb lies here, its insides swirling slowly, making it look almost alive.~
+wand
+energy~
+51 1 1 'acid blast' 0
+51 5 10000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+APPLY CON -2
+APPLY MANA 50
+APPLY HP 50
+LIMIT 0
+E swirling black orb essence~
+This large sphere appears to be constructed from glass, but is not in the    
+least bit fragile.  A dark smokey substance fills the insides, swirling    
+slowly as you stare into its depths.  Your mind keeps trying to form some    
+sort of shape in the mist, but if there is any shape hidden inside, it    
+eludes you.    
+~
+
+#12254
+ring platinum gold band~
+a thick platinum ring edged with gold~
+A thick platinum band lies here, lined with gold on each edge.~
+armor
+platinum~
+0 0 0 0 0
+51 1 5000 P
+WEAR TAKE
+WEAR FINGER
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+E ring platinum gold band~
+This thick platinum band appears plain, although well crafted.  A thin    
+strip of gold runs along each edge, the rings only decoration.  As you    
+turn it around in your hands, you suddenly feel extremely thirsty, and    
+you think you hear your stomach growl.    
+~
+
+#12255
+journal notebook book~
+a heavily worn notebook bound with leather~
+A small notebook bound with leather lies here.~
+trash
+paper~
+0 0 0 0 0
+20 5 100 P
+WEAR TAKE
+LIMIT 0
+E journal notebook book~
+There are pages upon pages of hand-written notes in this little journal,    
+many obviously written in a form of shorthand, rending them nearly    
+impossible to read by any besides the author.  One of the pages, marked    
+with a small red tassel, appears to have been written in a different hand,    
+weather by another person, or just more carefully by the same person, you    
+can not tell.  The part that catches your attention reads:    
+    
+  You'll know it by the inscription on the blade in ancient    
+  arial.  Its an extremely tedious language to translate,    
+  but its hard to mistake identifying it.  The only thing    
+  I've been able to figure out for certain is that they    
+  refer to the phoenix as the 'fire-spirit', which is a    
+  literal translation from the word 'Tara'rroga'.      
+    
+Notations have been scribbled in the margins in several places, all in    
+the hand of the first writer.  You can read a few of them:      
+     
+  'Bal' appears to be the word for 'Light' as it refers to    
+  goodness and such.  Og'o'an = blood?  'Tora' seems to     
+  mean 'Lord'... although I can not discern if it refers    
+  to a specific lord or person, or just as a generic     
+  position or honorary.  The whole thing appears to     
+  translate as some sort of war cry, I think.    
+    
+The rest of it is either illegible, or completely unrelated.  No where    
+can you find the phrase the writer seems to be trying to translate.    
+~
+
+#12256
+sword broken longsword hilt~
+the hilt of a longsword, its blade melted away~
+The hilt of a longsword lies here, its blade seemingly melted off just    
+before the hilt.~
+weapon
+adamantite~
+sword 3 3 slash 0
+35 2 10 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+APPLY HITROLL -1
+APPLY DAMROLL -1
+LIMIT 0
+E sword broken longsword hilt~
+This longsword was obviously of extremely fine craftsmanship, and judging    
+by the markings on the hilt, of dark-elven make.  The blade, however, has    
+been broken off an inch or so above the cross brace.  As you inspect it    
+closely, it looks to have actually been melted off with acid, as the    
+remaining portion is pitted and melted.    
+~
+
+#0
+
+
+
+#ROOMS
+#12200
+Below the mine shaft~
+This portion of the cave appears to have once been a dead end of solid    
+stone, now it is dominated by a large contraption of gears and pulleys that    
+make up the lift.  A huge counterweight hangs from a large length of chain    
+which leads up to the city above, where it is operated by one of the duergar    
+miners.  As you look up the darkness of the shaft, you catch a brief glimpse    
+of movement around the edges of the lift.  A rusted iron plaque has been    
+bolted to the far wall.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12201 0 0
+~
+You see only darkness beyond.    
+~
+D UP 21911 0 0
+~
+You catch a slight glimpse of movement through the darkness far above.    
+~
+E plaque~
+This area is the property of Jeff Levy, 2000.  It is not to be used for any    
+purposes without the express permission of the author.    
+~
+#12201
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, forming a Y here,    
+leading to the east, west and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12205 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12200 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12202 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12202
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+south and east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12201 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12203 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12203
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12202 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12204 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12204
+The mining tunnels~
+The roughly carved tunnel comes to an abrupt end as you round the corner.    
+From the marks on the stone in front of you, it appears as though this tunnel    
+is in the process of being extended, as veins of mithril and other precious    
+metals lead the miners further into the bowels of Thera.  An iron support has    
+been partially erected here, and supplies lie against one wall, apparently for    
+the continuation of the tracks to allow the ore carts can reach the newer    
+mining areas.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12203 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12205
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12206 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12201 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12206
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, forming a Y here,    
+branching to the north, south and east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12207 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12221 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12205 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12207
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+west and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12206 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12208 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12208
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12209 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12207 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12209
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, forming a T here,    
+branching to the north, south and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12214 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12208 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12210 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12210
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+east and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12209 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12211 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12211
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+south and east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12210 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12212 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12212
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12211 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12213 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12213
+The mining tunnels~
+This tunnel ends in what appears to be a small cave-in.  Debris clutters the    
+area, forcing you to watch your step as you walk.  Upon further inspection, the    
+walls here seem to be solid rock, devoid of the faint gleam that would indicate    
+any source of mithril near by.  You also notice no sign of effort to continue    
+with the expansion here, suggesting that this cave was abandoned by the duergar.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12212 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12214
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12216 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12209 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12215
+The mining tunnels~
+This short branch off the main tunnel appears to have been naturally formed,    
+rather than something dug by the miners.  The ceiling is unsupported, and hovers    
+just inches above your head.  The walls show none of the usual signs of mining    
+work, and the ground is covered with a fine, undisturbed coating of rock and    
+gravel.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 12216 0 0
+~
+You see only darkness beyond.    
+~
+#12216
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and south.  A smaller tunnel has been opened to the east, though the iron    
+tracks do not head in that direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12217 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12215 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12214 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12217
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+west and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12216 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12218 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12218
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+east and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12217 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12219 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12219
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+north and east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12220 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12218 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12220
+The mining tunnels~
+This part of the tunnel appears to have started as a mining project, judging    
+by the iron ceiling supports and the beginning of tracks for the ore carts    
+running along the floor.  Work here seems to have been interrupted however, as    
+the far wall is a mass of collapsed rubble and loose rocks.  A few tools lie    
+scattered about, seemingly abandoned by their users.  A closer inspection of    
+the far wall shows signs that the tunnel continued through here at one point,    
+though the cave-in has completely blocked any passage now.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12219 0 0
+~
+You see only darkness beyond.    
+~
+E tools~
+An assortment of worn pickaxes, chisels, and hammers lie scattered about,    
+partially covered in a layer of dirt.  They obviously have not been    
+disturbed in some time, you would guess since this tunnel was abandoned    
+to the cave-in up ahead.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+E n no nor nort north wall cave-in~
+The tunnel appears to have continued to the north at one point, but a    
+recent cave-in seems to have completely sealed it off.  Several large     
+boulders block the way, while masses of smaller rubble and debris assure    
+that no one will be able to slip through anywhere.    
+~
+#12221
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Rusted iron tracks run the length of the tunnels, extending to the    
+east and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12222 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12206 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12222
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  The rusted iron tracks begin to turn into the tunnel to the north,    
+though it seems construction has not yet been completed.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12223 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12225 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12221 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12223
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  The rusted iron tracks lead into this part of the tunnel and begin    
+to turn to the west, where it appears they are still under construction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12222 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12224 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+#12224
+The mining tunnels~
+It is hard to tell if these tunnels began as natural formations or were     
+created by mortal hands, but it is clear they have been extensively mined    
+since.  The ground has been worn smooth and cleared of debris, while the walls    
+and ceiling are roughly cut, though definitely square in shape.  Crude iron    
+frames have been erected to help support the ceiling at even intervals along    
+the cave.  Something about the far wall catches your eye, and as you wander    
+closer you see the glint of rough, uncut gemstones embedded in the rock.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12223 0 0
+~
+You see only darkness beyond.    
+~
+E iron tracks frames supports ceiling u up d do dow down~
+The tracks and ceiling supports in these caves are constructed of very low-    
+quality iron, much of it heavily rusted and pitted.  It would appear the    
+duergar only use the pure mithril to construct more valuable items, rather    
+than wasting it on things like these.  The tracks are spaced several feet    
+apart, designed for an ore cart to travel down, while the ceiling supports    
+appear sturdy enough to at least, you hope, hold the caves together.    
+~
+E gem gems gemstones~
+While rough and uncut, these natural gemstones gleam a brilliant green as you    
+examine them, barely hinting at their extraordinary value.    
+~
+#12225
+Leaving the mining tunnels~
+As you pass beneath the last of the iron ceiling supports erected by the    
+duergar, the sounds of their mining begins to fade to faint, rhythmic echoes.    
+The jagged walls begin to narrow, and the footing becomes precarious as you    
+enter the solid blackness of the deep, untamed tunnels.  A slight chill seems    
+to pass through you, as the realization sets in that you have passed beyond the    
+duergar territory, and into the Underdark.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12226 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12222 0 0
+~
+You see only darkness beyond.    
+~
+#12226
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+In particular, the faint rhythmic sound of metal striking rock sounds from    
+somewhere to the north.  The endless tunnels of rock extend to the north and    
+south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12225 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12227 0 0
+~
+You see only darkness beyond.    
+~
+#12227
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+In particular, the faint rhythmic sound of metal striking rock sounds from    
+somewhere to the north.  The endless tunnels of rock extend to the north and    
+east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12226 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12228 0 0
+~
+You see only darkness beyond.    
+~
+#12228
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+In particular, the faint rhythmic sound of metal striking rock sounds from    
+somewhere to the west.  The endless tunnels of rock extend to the east    
+and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12229 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12227 0 0
+~
+You see only darkness beyond.    
+~
+#12229
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the east, west and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12231 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12230 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12228 0 0
+~
+You see only darkness beyond.    
+~
+#12230
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+This small branch of the tunnels extends roughly twenty feet to the south,    
+before halting at a jagged stone wall.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12229 0 0
+~
+You see only darkness beyond.    
+~
+#12231
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the north and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12232 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12229 0 0
+~
+You see only darkness beyond.    
+~
+#12232
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the north and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12233 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12231 0 0
+~
+You see only darkness beyond.    
+~
+#12233
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the east and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12234 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12232 0 0
+~
+You see only darkness beyond.    
+~
+#12234
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the north and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12235 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12233 0 0
+~
+You see only darkness beyond.    
+~
+#12235
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12240 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12234 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12236 0 0
+~
+You see only darkness beyond.    
+~
+#12236
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12239 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12235 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12237 0 0
+~
+You see only darkness beyond.    
+~
+#12237
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12238 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12236 0 0
+~
+You see only darkness beyond.    
+~
+#12238
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12243 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12239 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12237 0 0
+~
+You see only darkness beyond.    
+~
+#12239
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12242 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12240 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12236 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12238 0 0
+~
+You see only darkness beyond.    
+~
+#12240
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12241 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12244 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12235 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12239 0 0
+~
+You see only darkness beyond.    
+~
+#12241
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12240 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12242 0 0
+~
+You see only darkness beyond.    
+~
+#12242
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12248 0 0
+~
+You see only darkness beyond.    
+~
+D EAST 12241 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12239 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12243 0 0
+~
+You see only darkness beyond.    
+~
+#12243
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock seem to continue on forever, confusing your sense    
+of direction.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12242 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12238 0 0
+~
+You see only darkness beyond.    
+~
+#12244
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the east and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12245 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12240 0 0
+~
+You see only darkness beyond.    
+~
+#12245
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the west and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12246 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12244 0 0
+~
+You see only darkness beyond.    
+~
+#12246
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the north and south, though it feels    
+like it sloaps upwards slightly to the south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12245 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12247 0 0
+~
+You see only darkness beyond.    
+~
+#12247
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The tunnel seems to narrow here, and you're almost certain this section has    
+an upward slope to it.  While the stones almost completely block the way,    
+you think you can slip through an opening to the west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12246 0 0
+~
+The wall has collapsed slightly, leaving what appears to be an opening.    
+~
+D WEST 12247 0 0
+~
+You see only darkness beyond.    
+~
+#12248
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the north, south and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12250 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12242 0 0
+~
+You see only darkness beyond.    
+~
+D WEST 12249 0 0
+~
+You see only darkness beyond.    
+~
+#12249
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+The endless tunnels of rock extend to the east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12248 0 0
+~
+You see only darkness beyond.    
+~
+#12250
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+You think you can make out a dull roaring sound coming from somewhere to the    
+east.  The endless tunnels of rock extend to the east and south.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12251 0 0
+~
+You see only darkness beyond.    
+~
+D SOUTH 12248 0 0
+~
+You see only darkness beyond.    
+~
+#12251
+The Underdark~
+What you can see of the caves looks jagged and uneven, apparently crafted by    
+nature.  The air is motionless and stale, contributing to the oppressive    
+feeling of tons of rock and earth surrounding you.  The smallest sounds echo    
+madly through the caves, assaulting your ears from every direction at once.    
+You think you can make out a dull roaring sound coming from somewhere to the    
+north.  The endless tunnels of rock extend to the north and west.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12252 0 0
+~
+A faint shimmering to the north suggests the presence of water.    
+~
+D WEST 12250 0 0
+~
+You see only darkness beyond.    
+~
+#12252
+A wet, misty cavern~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  The stones    
+beneath your feet are slick from the fungus and the settling fog, leaving your    
+footing precarious.  You shiver slightly as the wetness sets into your clothing    
+and armor.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12253 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12255 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12251 0 0
+~
+You see only darkness beyond.    
+~
+E fungus d down u up n north s south~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12253
+A wet, misty cavern~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  The stones    
+beneath your feet are slick from the fungus and the settling fog, leaving your    
+footing precarious.  You shiver slightly as the wetness sets into your clothing    
+and armor.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12254 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12256 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12252 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+E fungus d down u up n north s south~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12254
+A wet, misty cavern~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  The stones    
+beneath your feet are slick from the fungus and the settling fog, leaving your    
+footing precarious.  You shiver slightly as the wetness sets into your clothing    
+and armor.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12257 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12253 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+E fungus d down u up n north s south~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12255
+On the shores of an underground lake~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  You    
+realize your feet are cold, and notice that the stone floor has given way to a    
+shoreline, the water rising up and lapping at your ankles.  The water deepens    
+to the east.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12256 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12261 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D WEST 12252 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12256
+On the shores of an underground lake~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  You    
+realize your feet are cold, and notice that the stone floor has given way to a    
+shoreline, the water rising up and lapping at your ankles.  The water deepens    
+to the east.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12257 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12260 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12255 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D WEST 12253 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12257
+On the shores of an underground lake~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  You    
+realize your feet are cold, and notice that the stone floor has given way to a    
+shoreline, the water rising up and lapping at your ankles.  The water deepens    
+to the north and east.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12258 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12259 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12256 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D WEST 12254 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12258
+In a small pool~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  A calm    
+pool has formed here, sheltered from the currents created by the water fall    
+by several rock outcroppings.  It looks like the water tapers off to the north,    
+leading to solid ground.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12283 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12257 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12259
+An underground lake~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  You now    
+find yourself wading as the bottom drops off suddenly, leaving you swimming in    
+a churning white froth, stirred up by the waterfall which lies immediately to    
+your east.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12264 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12260 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D WEST 12257 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D DOWN 12265 0 0
+~
+You can make out nothing below the surface of the water.    
+~
+E fungus~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12260
+An underground lake~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  You now    
+find yourself wading as the bottom drops off suddenly, leaving you swimming in    
+a churning white froth, stirred up by the waterfall which lies immediately to    
+your east.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12259 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12263 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D SOUTH 12261 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D WEST 12256 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D DOWN 12268 0 0
+~
+You can make out nothing below the surface of the water.    
+~
+E fungus~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12261
+An underground lake~
+The entire cavern is filled with a heavy gray mist, originating from a huge    
+waterfall somewhere to the east which you can hear clearly as a thunderous    
+roaring sound.  A faint greenish light fills the room, apparently due to a    
+slick fungus that grows over every single surface of rock near you.  You now    
+find yourself wading as the bottom drops off suddenly, leaving you swimming in    
+a churning white froth, stirred up by the waterfall which lies immediately to    
+your east.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12260 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D EAST 12262 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D WEST 12255 0 0
+~
+The heavy gray mist obscures your vision.    
+~
+D DOWN 12271 0 0
+~
+You can make out nothing below the surface of the water.    
+~
+E fungus~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12262
+Beneath a waterfall~
+You duck your head as you immerse yourself completely beneath the deluge of    
+the waterfall.  Your breath catches in your chest as the water surrounds you    
+with the cold of the grave.  You find by angling your head right, you can still    
+suck in gasps of air without drowning yourself.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12263 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D EAST 12271 AI 0
+none~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D WEST 12261 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D DOWN 12272 0 0
+~
+You can make out nothing below the surface of the water.    
+~
+#12263
+Beneath a waterfall~
+You duck your head as you immerse yourself completely beneath the deluge of    
+the waterfall.  Your breath catches in your chest as the water surrounds you    
+with the cold of the grave.  You find by angling your head right, you can still    
+suck in gasps of air without drowning yourself.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12264 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D EAST 12274 AI 0
+none~
+A thin wall of water and foam only partially blocks the way east.    
+~
+D SOUTH 12262 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D WEST 12260 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D DOWN 12269 0 0
+~
+You can make out nothing below the surface of the water.    
+~
+#12264
+Beneath a waterfall~
+You duck your head as you immerse yourself completely beneath the deluge of    
+the waterfall.  Your breath catches in your chest as the water surrounds you    
+with the cold of the grave.  You find by angling your head right, you can still    
+suck in gasps of air without drowning yourself.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12267 AI 0
+none~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D SOUTH 12263 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D WEST 12259 0 0
+~
+The spray from the waterfall prevents you from seeing very far.    
+~
+D DOWN 12266 0 0
+~
+You can make out nothing below the surface of the water.    
+~
+#12265
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12266 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12268 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12259 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12266
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12267 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12265 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12264 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12267
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12274 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12270 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12266 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12268
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12265 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12271 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12260 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12269
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12266 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12270 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12272 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12268 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12263 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12270
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12267 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12273 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12271
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12268 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12272 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12261 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12272
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12273 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12271 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12262 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12273 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12273
+In an underground lake~
+You find yourself completely disoriented as you dive below the surface of the    
+underground lake.  You are surrounded completely in clouded water, beaten to a    
+froth by the nearby waterfall, leaving you unable to see even your hand in front    
+of your face.  You just hope you can tell which direction is up.    
+~
+underwater
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12270 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D EAST 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D SOUTH 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D WEST 12272 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D UP 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+D DOWN 12269 0 0
+~
+The water is too clouded from the waterfall to see far.    
+~
+#12274
+Behind the waterfall~
+The water washes up against a small stone ledge behind and somewhat below the    
+waterfall.  A tremendous roaring sound fills this small cavern, as the noise of    
+the huge waterfall echoes through the stones.  The walls, ceiling and floor all    
+glow a faint green from some sort of fungus that seems to thrive in the dark,    
+wet environment.  As you take a step, however, you realize that the fungus    
+makes everything extremely slick.  Walking carefully, you can head down the    
+cave to the east, or back into the water to the west.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12275 0 0
+~
+A faint glow comes from somewhere in the cave.    
+~
+D WEST 12263 0 0
+~
+The back of the waterfall forms a solid sheet of water to the west.    
+~
+E fungus d down u up n north s south~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12275
+In a wet, faintly glowing cave~
+A tremendous roaring sound fills this small cavern, as the noise of the huge    
+waterfall echoes through the stones.  The walls, ceiling and floor all glow a    
+faint green from some sort of fungus that seems to thrive in the dark, wet    
+environment.  As you take a step, however, you realize that the fungus makes    
+everything extremely slick.  The dank, misty cave leads to the east and west.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12276 0 0
+~
+A faint glow comes from somewhere in the cave.    
+~
+D WEST 12274 0 0
+~
+Faint light shimmers through the waterfall to the west.    
+~
+E fungus d down u up n north s south~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12276
+In a wet, faintly glowing cave~
+A tremendous roaring sound fills this small cavern, as the noise of the huge    
+waterfall echoes through the stones.  The walls, ceiling and floor all glow a    
+faint green from some sort of fungus that seems to thrive in the dark, wet    
+environment.  As you take a step, however, you realize that the fungus makes    
+everything extremely slick.  The dank, misty cave leads to the east and west.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12277 0 0
+~
+A faint glow comes from somewhere in the cave.    
+~
+D WEST 12275 0 0
+~
+Faint light shimmers through the waterfall to the west.    
+~
+E fungus d down u up n north s south~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12277
+In a large, musty cavern~
+A persistent dripping sound fills your ears over the dull roar from the    
+distant waterfall.  The large cavern is dimly illuminated by the now-familiar    
+green fungus growing over every surface.  The ceiling of this cavern rises    
+perhaps twenty feet above you, disappearing into a swirling gray haze.  The    
+cave leads back west, to the waterfall.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12280 0 0
+~
+The cavern continues to the east.    
+~
+D SOUTH 12278 0 0
+~
+The cavern continues to the south.    
+~
+D WEST 12276 0 0
+~
+The cavern continues to the west.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12278
+In a large, musty cavern~
+A persistent dripping sound fills your ears over the dull roar from the    
+distant waterfall.  The large cavern is dimly illuminated by the now-familiar    
+green fungus growing over every surface.  The ceiling of this cavern rises    
+perhaps twenty feet above you, disappearing into a swirling gray haze.  The    
+ground is cluttered with boulders and crumbled stones, apparently fallen from    
+the walls and ceiling as moisture has eroded away the surfaces.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12277 0 0
+~
+The cavern continues to the north.    
+~
+D EAST 12279 0 0
+~
+The cavern continues to the east.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12279
+In a large, musty cavern~
+A persistent dripping sound fills your ears over the dull roar from the    
+distant waterfall.  The large cavern is dimly illuminated by the now-familiar    
+green fungus growing over every surface.  The ceiling of this cavern rises    
+perhaps twenty feet above you, disappearing into a swirling gray haze.  The    
+ground is cluttered with boulders and crumbled stones, apparently fallen from    
+the walls and ceiling as moisture has eroded away the surfaces.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12280 0 0
+~
+The cavern continues to the north.    
+~
+D EAST 12281 AI 0
+none~
+The rocks to the east appear normal, but as you turn your head away they seem    
+to shimmer briefly.    
+~
+D WEST 12278 0 0
+~
+The cavern continues to the west.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12280
+In a large, musty cavern~
+A persistent dripping sound fills your ears over the dull roar from the    
+distant waterfall.  The large cavern is dimly illuminated by the now-familiar    
+green fungus growing over every surface.  The ceiling of this cavern rises    
+perhaps twenty feet above you, disappearing into a swirling gray haze.  The    
+ground is cluttered with boulders and crumbled stones, apparently fallen from    
+the walls and ceiling as moisture has eroded away the surfaces.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12279 0 0
+~
+The cavern continues to the south.    
+~
+D WEST 12277 0 0
+~
+The cavern continues to the west.    
+~
+E fungus d do dow down~
+The stones are coated with a thin layer of what appears to be fungus.  It    
+glows faintly, casting a greenish light on everything nearby.  As you run a    
+finger over the stone the fungus stays largely undisturbed, resisting even    
+light scraping, but leaves a slimy coating on your skin.    
+~
+#12281
+An ancient dragon's lair~
+This branch of the caves is completely dry, and any sounds from the distant    
+waterfall were blocked out upon entering.  The area here is huge, and an even    
+larger alcove appears to have been roughly carved out to the south.  As you    
+examine the alcove closer, you notice the stones on the floor, walls and    
+ceiling are all heavily scratched, as if a rough material had been rubbed over    
+everything repeatedly.  In one corner, partially concealed by dust and fallen    
+debris, you find a dull black shield-shaped disk, brittle with age and rough    
+around the edges.  The false wall to the west shimmers a magical dull gray    
+color, while light comes from the cave to the north.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 12282 0 0
+~
+The tunnel leads north.    
+~
+D WEST 12279 AI 0
+none~
+A solid gray barrier shimmers to the west.    
+~
+E black shield disk scale shield-shaped shield~
+You brush a bit of the dust off and feel the leathery material.  Almost a    
+foot across, the disk looks like a miniature shield.  As you turn it about in    
+your hands, you suddenly recognize it for what it is; an ancient black dragon    
+scale, brittle and worn with age.    
+~
+E wall w west~
+The wall to the west is a blank gray surface, which swirls slightly as you     
+stare at it.  Obviously magical in nature, it appears the illusion was    
+designed to hide the opening from the other direction, not from this way.    
+As you run your hand against the surface you feel barely a tingle, then your    
+fingers pass through the magical barrier.    
+~
+#12282
+A large circular room~
+The cave opens up to an obviously unnatural room, perfectly circular in    
+shape.  Bronze torches are mounted on the walls every few feet, blazing with    
+a steady, magical flame.  To your amazement the room is filled with treasure;    
+gold, gems, pieces of gilded armor, and many heavily decorated weapons.  A    
+large stone dais dominates the middle of the room, rising twenty feet in the    
+air with steps carved all the way up its side.  You see what looks like an    
+altar on the top, but can not make out anything else from here.    
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 12281 0 0
+~
+A tunnel leads south.    
+~
+D UP 12286 0 0
+~
+A set of dust-covered stairs leads up the stone dais.    
+~
+E bronze torch torches flame flames~
+The bronze torch holders are heavily engraved with ornate patterns across    
+the entire surface.  One wooden torch is mounted in each holder, and while it    
+appears to burn with a normal flame, they does not seem to consume any fuel,     
+nor do they produce any smoke.    
+~
+E dais~
+The dais dominates the center of the room.  It is solid, plain stone, with     
+narrow steps carved up far side.    
+~
+E altar~
+The altar appears to be constructed of a solid black material, but you can    
+not make out details from this far below it.  It looks like the stairs up    
+the side of the dais will lead right to it.    
+~
+#12283
+On a stone ledge~
+An outcropping of stone forms this small ledge, wide enough for several     
+people to pull themselves out of the frigid waters.  The mist is extremely    
+thick this close to the waterfall, barely allowing you to see a dozen feet    
+in any direction.  The glowing green fungus again coats every stone     
+surface, leaving your footing precarious.  You can make your way back into    
+the water, or head towards the cliff face to the east.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 12258 0 0
+~
+A heavy gray mist hovers to the west.    
+~
+D UP 12284 0 0
+~
+It appears you can climb your way up the cliff face.    
+~
+#12284
+Above the underground waterfall~
+The cliff face drops off at your feet, in what looks like an extremely    
+precarious climb.  Your entire view to the south-west is dominated by the    
+billowing cloud of gray mist rising from the lake below.  The stone ceiling    
+rises no more than a few feet above your head, causing you to walk slightly    
+crouched.  Next to you, the underground river rushes past towards its    
+hundred-foot plummet to the lake below.  It looks like you can pick your way    
+carefully to the east, along the rivers edge, or take the steep route down    
+the cliff face.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 12285 0 0
+~
+You can pick your way along the edge of the river to the east.    
+~
+D DOWN 12283 0 0
+~
+You can climb back down the cliff face, into the billowing gray mist.    
+~
+#12285
+The edge of the underground river~
+The ceiling begins to decline rapidly here, closing off to un-passable within    
+the next fifty feet.  The slippery stone shore provides for poor footing, and    
+the underground river rushing by several feet away makes you slightly    
+uncomfortable.  You attempt to look further up the rivers path, but can barely    
+see beyond the water shooting out of the rapidly-narrowing crevice in the    
+stone, leaving you no clue as to where the river originated from.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 12284 0 0
+~
+You can pick your way along the edge of the river to the west.    
+~
+#12286
+The top of a huge stone dais~
+The steps lead more than twenty feet up the stone, overlooking the large    
+circular treasure room.  The surface is round in shape, roughly twenty feet    
+in diameter, and coated thickly with dust and cobwebs.  The edges drop off    
+suddenly, straight down to the cavern below.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D DOWN 12282 0 0
+~
+A set of dust-covered stone stairs leads down into the faint torch light.    
+~
+#0
+
+
+
+#RESETS
+MOB 12201 TO 12200 GLIMIT 1 LLIMIT 1
+EQUIP 12201 WIELD
+EQUIP 12202 ABOUT
+EQUIP 12254 LFINGER
+EQUIP 12203 NECKONE
+OBJECT 12232 TO 12200
+MOB 12203 TO 12202 GLIMIT 3 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12216 TO 12202 GLIMIT 2 LLIMIT 1
+EQUIP 12219 ABOUT
+EQUIP 12226 HOLD
+OBJECT 12227 TO 12203
+MOB 12204 TO 12204 GLIMIT 3 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+GIVE 12226
+MOB 12205 TO 12204 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+OBJECT 12231 TO 12204
+PUT 12228 IN 12231 COUNT 1
+MOB 12205 TO 12205 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12204 TO 12209 GLIMIT 3 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+GIVE 12226
+OBJECT 12232 TO 12209
+MOB 12203 TO 12210 GLIMIT 3 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12215 TO 12210 GLIMIT 2 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12219 ABOUT
+MOB 12204 TO 12213 GLIMIT 3 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+GIVE 12226
+MOB 12206 TO 12213 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12212 TO 12213 GLIMIT 1 LLIMIT 1
+EQUIP 12246 NECKONE
+EQUIP 12237 BODY
+EQUIP 12238 HEAD
+EQUIP 12239 ARMS
+EQUIP 12240 LEGS
+EQUIP 12241 HOLD
+MOB 12211 TO 12213 GLIMIT 1 LLIMIT 1
+EQUIP 12246 NECKONE
+EQUIP 12222 BODY
+EQUIP 12225 WIELD
+EQUIP 12224 DUALWIELD
+MOB 12210 TO 12213 GLIMIT 1 LLIMIT 1
+EQUIP 12246 NECKONE
+EQUIP 12221 BODY
+EQUIP 12223 WIELD
+OBJECT 12231 TO 12213
+PUT 12228 IN 12231 COUNT 1
+OBJECT 12227 TO 12213
+OBJECT 12227 TO 12215
+MOB 12203 TO 12216 GLIMIT 3 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12215 TO 12216 GLIMIT 2 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12219 ABOUT
+MOB 12216 TO 12216 GLIMIT 2 LLIMIT 1
+EQUIP 12219 ABOUT
+EQUIP 12226 HOLD
+OBJECT 12232 TO 12216
+MOB 12206 TO 12217 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12207 TO 12218 GLIMIT 1 LLIMIT 1
+EQUIP 12207 WIELD
+EQUIP 12207 DUALWIELD
+EQUIP 12210 BODY
+EQUIP 12211 HEAD
+EQUIP 12212 ARMS
+EQUIP 12213 LEGS
+MOB 12208 TO 12218 GLIMIT 1 LLIMIT 1
+EQUIP 12208 WIELD
+EQUIP 12209 SHIELD
+EQUIP 12210 BODY
+EQUIP 12211 HEAD
+EQUIP 12212 ARMS
+EQUIP 12213 LEGS
+MOB 12209 TO 12218 GLIMIT 1 LLIMIT 1
+EQUIP 12214 BODY
+EQUIP 12215 HEAD
+EQUIP 12216 ARMS
+EQUIP 12217 LEGS
+EQUIP 12218 WIELD
+MOB 12205 TO 12219 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+OBJECT 12232 TO 12219
+MOB 12206 TO 12221 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+OBJECT 12231 TO 12221
+PUT 12228 IN 12231 COUNT 1
+MOB 12206 TO 12222 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+OBJECT 12233 TO 12223
+PUT 12230 IN 12233 COUNT 1
+MOB 12205 TO 12224 GLIMIT 4 LLIMIT 1
+EQUIP 12204 WIELD
+EQUIP 12205 HEAD
+EQUIP 12206 BODY
+MOB 12214 TO 12224 GLIMIT 1 LLIMIT 1
+EQUIP 12219 ABOUT
+EQUIP 12229 HOLD
+MOB 12213 TO 12230 GLIMIT 1 LLIMIT 1
+EQUIP 12245 WIELD
+EQUIP 12244 ABOUT
+EQUIP 12220 NECKONE
+OBJECT 12242 TO 12230
+PUT 12208 IN 12242 COUNT 1
+PUT 12209 IN 12242 COUNT 1
+PUT 12210 IN 12242 COUNT 1
+PUT 12243 IN 12242 COUNT 1
+PUT 12212 IN 12242 COUNT 1
+PUT 12213 IN 12242 COUNT 1
+MOB 12200 TO 12238 GLIMIT 1 LLIMIT 1
+EQUIP 12200 ABOUT
+EQUIP 12203 NECKONE
+EQUIP 12255 HOLD
+MOB 12220 TO 12249 GLIMIT 1 LLIMIT 1
+EQUIP 12256 WIELD
+MOB 12202 TO 12281 GLIMIT 1 LLIMIT 1
+GIVE 12253
+OBJECT 12234 TO 12282
+OBJECT 12236 TO 12286
+PUT 12235 IN 12236 COUNT 1
+S
+
+#IMPROGS
+END
+#$

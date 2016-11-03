@@ -1,0 +1,337 @@
+#AREA
+nightwalker.are~
+Nightwalker Caves~
+Karsus~
+20 35
+2800 2899
+unopened
+none
+0
+1
+Karsus~
+
+#MOBS
+#2890
+green mist beholder~
+A massive ancient beholder~
+A massive beholder levitates here.
+~
+This massive beholder is nothing like you have seen before, its skin is
+aged and grey with hundreds of folds and ripples.  Spread evenly over the
+whole sphere of flesh are little eyestalks with big bolbus eyeballs that
+swivil around looking in all directions.  In the center of this levitating
+orb of eyestalk covered sphere of flesh is a massive central eye, lining the
+edge of the eye is a massive eyelid folded up.  The corners of the eye ooze
+what looks like green mist.  Underneath the massive Central eye is a large
+gaping maw, large teeth that have been worn down over the ages line the
+edges like a saw blade.  As this unique creatue exhales you can see a slight
+green tinge to its breath and the air seems to twinkle and sparkle a litte,
+the arcane smell of cast magic issues forth.  
+~
+0 25960 0 beholder~
+70 35d8+17617 0d0+13 0 100 chomp
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF PASS_DOOR
+AFF HASTE
+AFF WATERBREATH
+AFF REGENERATION
+RES MAGIC
+#0
+
+
+
+#OBJS
+#2886
+sabre zulz'oran sword~
+a dual bladed sabre called 'Zulz'Oran'~
+A finely acid etched serated sabre of obsidian has been left here.~
+weapon
+obsidian~
+sword 8 6 cleave 0
+40 9 200000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT DROW_ONLY
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM NODISARM
+APPLY HITROLL 8
+APPLY DAMROLL 8
+APPLY AC 20
+LIMIT 1
+TIMER 0
+E zulz'oran~
+This sabre has a fancy hilt that seems almost one with the blade.  The
+hilt is spun with fine threads of obsidian, apon grasping the hilt the
+threads seem to tighten around your hand.  The tight grasp bringing the
+blade into perfect balance with your hand, enabling the blade to become a
+extention of your body.  
+~
+E sword~
+This sword was once wielded by Zulz'oran a famous sword fighter.  
+~
+E sabre~
+This sword was once wielded by Zulz'oran a famous sword fighter.  
+~
+
+#2887
+dragon sword~
+a serrated bastard sword named "Telkoran"~
+A long bastard sword made of dragon bone lays here, a dark shadow ever covering it.~
+weapon
+dragonbone~
+sword 8 5 digestion 0
+40 5 15000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT DROW_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NOREMOVE
+APPLY DEX 2
+APPLY HITROLL 6
+APPLY DAMROLL 6
+LIMIT 1
+TIMER 0
+E sword~
+This sword is far from normal, it is made up of what looks to be
+dragonbone, the only part that isnt dragonbone is the hilt.  
+~
+E hilt~
+The hilt of this sword is weird, it has a small spike that seems to sit
+in the center of where your palm would rest when gripping the sword.  
+~
+E dragon~
+This is the famous sword of Telkoran, it is constructed from the jawbone
+of a realm feared black dragon.  The blade is honed from the jawbone and the
+remenants of the teeth have been left in the formation of a jaggered
+seration down it's length.  The hilt has been forged of the ever durable
+adamantite, providing the blade with perfect balance, some wielders have even
+commented that it has improved their deftness.
+~
+
+#2888
+tattered black leather~
+some tattered black leather~
+A pile of tattered black folds are haped on the ground here.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR LEGS
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2889
+tattered black leather~
+some tattered black folds of leather~
+A pile of tattered black folds are haped on the ground here.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR ARMS
+ITEM BURNPROOF
+APPLY HP 400
+LIMIT 1
+TIMER 0
+
+#2890
+tattoo scales~
+a pair of scales~
+The mark of karsus is branded apon you here.~
+armor
+magic~
+0 0 0 0 0
+55 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+ITEM NOREMOVE
+ITEM NOPURGE
+ITEM FIXED
+ITEM BURNPROOF
+ITEM NOUNCURSE
+ITEM BRAND
+ITEM NOSAC
+APPLY HP 35
+APPLY MANA 35
+APPLY NONE 35
+APPLY AC 20
+LIMIT 0
+TIMER 0
+
+#2891
+sphere~
+sphere of Manipulation~
+A sphere sits here on the ground pulsating with energy.~
+light
+magic~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+ITEM NOREMOVE
+ITEM BURNPROOF
+LIMIT 0
+TIMER 0
+
+#2892
+bracer eye stalks~
+five living beholder eye stalks~
+Five eye stalks sit writhing on the ground here.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR WRIST
+ITEM GLOW
+ITEM BURNPROOF
+APPLY MANA 500
+LIMIT 2
+TIMER 0
+
+#2893
+green mist cloak~
+luminant green mists~
+A puddle of luminant green mists stirs here slowly.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM BURNPROOF
+APPLY SVSPELL -200
+LIMIT 1
+TIMER 0
+NOTES ~
+
+#2894
+belt runed siggiled balance~
+runed and sigiled belt of balance~
+A cirlce of glowing and humming runes and sigils has been left here on the ground.~
+armor
+magic~
+20 20 20 20 0
+55 1 0 P
+WEAR TAKE
+WEAR WAIST
+ITEM GLOW
+ITEM HUM
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2895
+gloves spectral~
+spectral gloves of spell weaving~
+A pair of fleshy spectral gloves has been left here.~
+armor
+flesh~
+20 20 20 20 0
+55 1 0 P
+WEAR TAKE
+WEAR HANDS
+ITEM INVIS
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2896
+straped leather boots~
+black straped leather boots~
+A pair of tattered leather staped boots have been left here.~
+armor
+magic~
+50 50 50 50 0
+55 1 0 P
+WEAR TAKE
+WEAR FEET
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2897
+cowl black leather~
+tattered black cowl~
+A old cowl of black leather has been left here on the ground.~
+armor
+magic~
+25 25 25 25 0
+55 0 0 P
+WEAR TAKE
+WEAR HEAD
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2898
+tattered black leather~
+black folds of leather~
+A pile of tattered black folds are heaped on the ground here.~
+armor
+magic~
+25 25 25 25 0
+55 1 0 P
+WEAR TAKE
+WEAR NECK
+ITEM BURNPROOF
+LIMIT 4
+TIMER 0
+
+#2899
+robes tattered shroud ancients~
+tattered shroud of the ancients~
+A pile of tattered leather is heaped here on the ground.~
+armor
+magic~
+100 100 100 100 0
+55 1 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#2800
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,2304 @@
+Wed Sep 13 20:28:30 2000 :: l|ÿ¿ü	@Ì{ÿ¿áß°|ÿ¿±	@
+Wed Sep 13 20:53:37 2000 :: l|ÿ¿ü	@Ì{ÿ¿áß°|ÿ¿q[	@
+Wed Sep 13 20:55:39 2000 :: ¬{ÿ¿ãd	@|ÿ¿}ÿ¿}ÿÃ
+Wed Sep 13 21:04:57 2000 :: ì{ÿ¿úW	@
+Wed Sep 13 21:20:27 2000 :: ì{ÿ¿úW	@
+Wed Sep 13 21:42:45 2000 :: l|ÿ¿ü	@Ì{ÿ¿áß°|ÿ¿±	@
+Wed Sep 13 21:44:32 2000 :: Mirauk collects the 500 gold bounty on Deborah.
+Wed Sep 13 22:16:21 2000 :: Dioxide places a bounty of 100000 gold on the life of Jarlaxle.
+Wed Sep 13 22:20:38 2000 :: Dioxide places a bounty of 10000 gold on the life of Dioxide.
+Wed Sep 13 22:27:08 2000 :: Dioxide places a bounty of 600 gold on the life of Dioxide.
+Wed Sep 13 22:27:09 2000 :: Slim places a bounty of 1000 gold on the life of Alysa.
+Wed Sep 13 22:27:15 2000 :: Dioxide places a bounty of 700 gold on the life of Dioxide.
+Wed Sep 13 22:29:14 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:29:20 2000 :: Rhuzhe places a bounty of 1500 gold on the life of Sycho.
+Wed Sep 13 22:31:08 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:32:45 2000 :: Dioxide places a bounty of 2400 gold on the life of Dioxide.
+Wed Sep 13 22:33:50 2000 :: Dioxide places a bounty of 600 gold on the life of Dioxide.
+Wed Sep 13 22:34:01 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:35:13 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:35:17 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:35:23 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:35:29 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:37:08 2000 :: Slim places a bounty of 1000 gold on the life of Sycho.
+Wed Sep 13 22:37:29 2000 :: Dioxide places a bounty of 1200 gold on the life of Dioxide.
+Wed Sep 13 22:37:35 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:41:16 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:41:26 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Wed Sep 13 22:43:22 2000 :: Dioxide places a bounty of 1200 gold on the life of Dev.
+Wed Sep 13 22:43:31 2000 :: Dioxide places a bounty of 1000 gold on the life of Dev.
+Wed Sep 13 22:43:35 2000 :: Dioxide places a bounty of 1000 gold on the life of Dev.
+Wed Sep 13 23:23:03 2000 :: Alojzy places a bounty of 500 gold on the life of Grumm.
+Wed Sep 13 23:23:20 2000 :: Zarex places a bounty of 500 gold on the life of Grumm.
+Wed Sep 13 23:28:03 2000 :: Grumm places a bounty of 900 gold on the life of Zarex.
+Thu Sep 14 01:09:35 2000 :: Dev places a bounty of 2000 gold on the life of Elihelan.
+Thu Sep 14 01:25:20 2000 :: Elihelan places a bounty of 2000 gold on the life of Dev.
+Thu Sep 14 01:42:44 2000 :: cloaked figure places a bounty of 500 gold on the life of Jarlaxle.
+Thu Sep 14 01:57:37 2000 :: cloaked figure places a bounty of 500 gold on the life of Vohusin.
+Thu Sep 14 02:03:33 2000 :: cloaked figure places a bounty of 500 gold on the life of Vohusin.
+Thu Sep 14 05:35:05 2000 :: Vryllen places a bounty of 1000 gold on the life of Malrubius.
+Thu Sep 14 05:48:59 2000 :: Malrubius places a bounty of 501 gold on the life of Kargoth.
+Thu Sep 14 06:54:59 2000 :: Kithsara places a bounty of 1000 gold on the life of Pibb.
+Thu Sep 14 06:58:23 2000 :: Pibb places a bounty of 1010 gold on the life of Kithsara.
+Thu Sep 14 07:45:00 2000 :: Iola places a bounty of 500 gold on the life of Kraich.
+Thu Sep 14 07:56:25 2000 :: Iola places a bounty of 500 gold on the life of Matrien.
+Thu Sep 14 08:15:25 2000 :: Kargoth collects the 1000 gold bounty on Chanter.
+Thu Sep 14 08:33:13 2000 :: Kraich places a bounty of 500 gold on the life of Iola.
+Thu Sep 14 10:01:19 2000 :: Kargoth collects the 500 gold bounty on Kraich.
+Thu Sep 14 10:10:23 2000 :: Padan places a bounty of 1000 gold on the life of cloaked figure.
+Thu Sep 14 10:41:13 2000 :: Whatever places a bounty of 1000 gold on the life of Baleeze.
+Thu Sep 14 10:43:30 2000 :: Kargoth collects the 1000 gold bounty on cloaked figure.
+Thu Sep 14 11:09:04 2000 :: cloaked figure collects the 1001 gold bounty on Kargoth.
+Thu Sep 14 11:25:14 2000 :: Kargoth collects the 1010 gold bounty on Kithsara.
+Thu Sep 14 11:57:25 2000 :: Shane places a bounty of 500 gold on the life of Shane.
+Thu Sep 14 11:57:48 2000 :: Shane places a bounty of 9000 gold on the life of Shane.
+Thu Sep 14 12:27:18 2000 :: Kargoth collects the 500 gold bounty on Matrien.
+Thu Sep 14 13:01:51 2000 :: Logahm places a bounty of 500 gold on the life of Nurok.
+Thu Sep 14 13:07:08 2000 :: Darsh places a bounty of 3000 gold on the life of Matrien.
+Thu Sep 14 13:07:20 2000 :: Moli places a bounty of 500 gold on the life of Logahm.
+Thu Sep 14 13:07:55 2000 :: Nurok places a bounty of 700 gold on the life of Kargoth.
+Thu Sep 14 13:31:48 2000 :: Logahm places a bounty of 3500 gold on the life of Padan.
+Thu Sep 14 13:34:56 2000 :: Kargoth collects the 3000 gold bounty on Matrien.
+Thu Sep 14 13:54:25 2000 :: Mirauk collects the 1000 gold bounty on Vohusin.
+Thu Sep 14 13:56:16 2000 :: Dev places a bounty of 1000 gold on the life of Sycho.
+Thu Sep 14 13:56:40 2000 :: Dev places a bounty of 500 gold on the life of Sycho.
+Thu Sep 14 14:10:01 2000 :: Kargoth collects the 1000 gold bounty on Grumm.
+Thu Sep 14 14:13:19 2000 :: Kargoth collects the 500 gold bounty on Logahm.
+Thu Sep 14 14:39:12 2000 :: Shane places a bounty of 1001 gold on the life of Detlef.
+Thu Sep 14 14:51:17 2000 :: Mirauk collects the 1000 gold bounty on Nirgal.
+Thu Sep 14 14:52:48 2000 :: Ilien places a bounty of 500 gold on the life of Killmee.
+Thu Sep 14 15:01:36 2000 :: Nirgal places a bounty of 4000 gold on the life of Killmee.
+Thu Sep 14 15:02:26 2000 :: Ilien places a bounty of 934 gold on the life of Killmee.
+Thu Sep 14 15:03:26 2000 :: Dev places a bounty of 500 gold on the life of Ilien.
+Thu Sep 14 15:11:48 2000 :: Coasty places a bounty of 2237 gold on the life of Glacius.
+Thu Sep 14 15:19:55 2000 :: Nirgal places a bounty of 1219 gold on the life of Glacius.
+Thu Sep 14 15:21:13 2000 :: Nirgal places a bounty of 2100 gold on the life of Glacius.
+Thu Sep 14 15:23:29 2000 :: Coasty places a bounty of 600 gold on the life of Glacius.
+Thu Sep 14 15:56:43 2000 :: Grinton places a bounty of 600 gold on the life of Cervante.
+Thu Sep 14 16:14:50 2000 :: Coasty places a bounty of 770 gold on the life of Glacius.
+Thu Sep 14 16:31:59 2000 :: Dev places a bounty of 2050 gold on the life of Arkaine.
+Thu Sep 14 16:33:20 2000 :: Fenster places a bounty of 500 gold on the life of Kragerth.
+Thu Sep 14 16:37:49 2000 :: Kargoth collects the 600 gold bounty on Cervante.
+Thu Sep 14 17:42:22 2000 :: Jarrdan places a bounty of 500 gold on the life of Malebolgia.
+Thu Sep 14 18:27:41 2000 :: Mirauk collects the 500 gold bounty on Nurok.
+Thu Sep 14 18:30:27 2000 :: Kithsara places a bounty of 1000 gold on the life of Pibb.
+Thu Sep 14 19:02:31 2000 :: Dev places a bounty of 10000 gold on the life of Dioxide.
+Thu Sep 14 20:10:25 2000 :: Coasty places a bounty of 1425 gold on the life of Tolant.
+Thu Sep 14 20:17:20 2000 :: Arkaine places a bounty of 500 gold on the life of Mirauk.
+Thu Sep 14 21:12:39 2000 :: Coasty places a bounty of 903 gold on the life of Salome.
+Fri Sep 15 00:05:46 2000 :: cloaked figure places a bounty of 500 gold on the life of Vryllen.
+Fri Sep 15 10:35:26 2000 :: Kazz places a bounty of 500 gold on the life of Liber.
+Fri Sep 15 10:36:51 2000 :: Grumm places a bounty of 1000 gold on the life of Politherin.
+Fri Sep 15 15:24:31 2000 :: Nurok places a bounty of 10000 gold on the life of Ilien.
+Fri Sep 15 16:34:59 2000 :: Coasty places a bounty of 2000 gold on the life of Ilien.
+Fri Sep 15 17:37:52 2000 :: Fenster places a bounty of 1300 gold on the life of Ganderia.
+Fri Sep 15 20:23:05 2000 :: Fenster places a bounty of 1200 gold on the life of Randord.
+Sat Sep 16 06:22:15 2000 :: Logahm places a bounty of 500 gold on the life of Hudsun.
+Sat Sep 16 06:22:33 2000 :: Logahm places a bounty of 1000 gold on the life of Hudsun.
+Sat Sep 16 06:23:58 2000 :: Logahm places a bounty of 1000 gold on the life of Hudsun.
+Sat Sep 16 06:36:38 2000 :: Logahm places a bounty of 800 gold on the life of Xqxwaryl.
+Sat Sep 16 06:37:07 2000 :: Logahm places a bounty of 700 gold on the life of Xqxwaryl.
+Sat Sep 16 06:45:10 2000 :: Kargoth collects the 1500 gold bounty on Xqxwaryl.
+Sat Sep 16 07:02:12 2000 :: Luspher places a bounty of 500 gold on the life of Logahm.
+Sat Sep 16 07:02:22 2000 :: Luspher places a bounty of 500 gold on the life of Ryomis.
+Sat Sep 16 07:13:53 2000 :: Logahm places a bounty of 2000 gold on the life of Tumock.
+Sat Sep 16 10:59:30 2000 :: Coasty places a bounty of 880 gold on the life of Ilien.
+Sat Sep 16 11:17:25 2000 :: Mirauk collects the 1200 gold bounty on Randord.
+Sat Sep 16 11:21:24 2000 :: Coasty places a bounty of 1122 gold on the life of Ilien.
+Sat Sep 16 11:21:41 2000 :: Coasty places a bounty of 500 gold on the life of Ilien.
+Sat Sep 16 11:36:56 2000 :: Coasty places a bounty of 500 gold on the life of Alojzy.
+Sat Sep 16 12:49:39 2000 :: Jarrdan places a bounty of 500 gold on the life of Kragerth.
+Sat Sep 16 13:08:40 2000 :: Dioxide places a bounty of 500 gold on the life of Dioxide.
+Sat Sep 16 13:35:32 2000 :: Jarrdan places a bounty of 500 gold on the life of Azheri.
+Sat Sep 16 15:59:32 2000 :: Mirauk collects the 3500 gold bounty on Padan.
+Sat Sep 16 16:05:19 2000 :: Dioxide places a bounty of 100000 gold on the life of Seracuz.
+Sat Sep 16 16:05:25 2000 :: Seracuz places a bounty of 1398 gold on the life of Dioxide.
+Sat Sep 16 17:02:59 2000 :: Minacour places a bounty of 500 gold on the life of Xorgo.
+Sat Sep 16 17:46:44 2000 :: Bryan places a bounty of 700 gold on the life of Kellen.
+Sat Sep 16 21:33:07 2000 :: Zedekiah collects the 500 gold bounty on Alojzy.
+Sat Sep 16 22:10:51 2000 :: Dioxide places a bounty of 600 gold on the life of Kauyor.
+Sat Sep 16 22:25:38 2000 :: Dioxide places a bounty of 1000 gold on the life of Ulrich.
+Sat Sep 16 22:31:29 2000 :: Obin places a bounty of 500 gold on the life of Meurtre.
+Sat Sep 16 22:31:30 2000 :: Dioxide places a bounty of 500 gold on the life of Meurtre.
+Sat Sep 16 22:33:40 2000 :: Obin places a bounty of 500 gold on the life of Durgoth.
+Sat Sep 16 22:42:11 2000 :: Mirauk collects the 1000 gold bounty on Ulrich.
+Sat Sep 16 23:26:05 2000 :: Ulrich places a bounty of 500 gold on the life of Sadrien.
+Sat Sep 16 23:30:05 2000 :: Ulrich places a bounty of 500 gold on the life of cloaked figure.
+Sat Sep 16 23:30:12 2000 :: Ulrich places a bounty of 500 gold on the life of cloaked figure.
+Sat Sep 16 23:34:46 2000 :: Mirauk collects the 1000 gold bounty on Alysa.
+Sun Sep 17 00:16:47 2000 :: Mirauk collects the 500 gold bounty on Liber.
+Sun Sep 17 01:22:50 2000 :: Mirauk collects the 500 gold bounty on Xorgo.
+Sun Sep 17 02:30:44 2000 :: Arkaine places a bounty of 2051 gold on the life of Mektlair.
+Sun Sep 17 10:34:05 2000 :: Ilien places a bounty of 500 gold on the life of Kurgan.
+Sun Sep 17 11:01:19 2000 :: Arkaine places a bounty of 5000 gold on the life of Alojzy.
+Sun Sep 17 19:35:16 2000 :: Dioxide places a bounty of 2000 gold on the life of Durgoth.
+Sun Sep 17 19:35:42 2000 :: Dioxide places a bounty of 5000 gold on the life of Chanter.
+Sun Sep 17 19:35:56 2000 :: Dioxide places a bounty of 500 gold on the life of Khalin.
+Sun Sep 17 19:36:05 2000 :: Dioxide places a bounty of 2500 gold on the life of Sycho.
+Sun Sep 17 19:36:12 2000 :: Dioxide places a bounty of 4495 gold on the life of Arkaine.
+Sun Sep 17 19:40:34 2000 :: Sycho places a bounty of 1000 gold on the life of Azheri.
+Sun Sep 17 21:15:15 2000 :: Pibb places a bounty of 500 gold on the life of Faunus.
+Sun Sep 17 21:54:13 2000 :: Faunus places a bounty of 1200 gold on the life of Yhaln.
+Sun Sep 17 21:55:38 2000 :: Yhaln places a bounty of 1200 gold on the life of Alojzy.
+Sun Sep 17 22:06:21 2000 :: Alojzy places a bounty of 1000 gold on the life of Faunus.
+Mon Sep 18 10:39:25 2000 :: Mirkon places a bounty of 500 gold on the life of Archaon.
+Mon Sep 18 13:15:17 2000 :: Kraich places a bounty of 500 gold on the life of Inarius.
+Mon Sep 18 16:23:35 2000 :: Mirauk collects the 1500 gold bounty on Azheri.
+Mon Sep 18 16:35:13 2000 :: Mirauk collects the 2051 gold bounty on Mektlair.
+Mon Sep 18 16:55:26 2000 :: Chichiri places a bounty of 1000 gold on the life of Shurven.
+Mon Sep 18 16:55:43 2000 :: Chichiri places a bounty of 500 gold on the life of Kevin.
+Mon Sep 18 17:16:12 2000 :: Mirauk collects the 500 gold bounty on Kevin.
+Mon Sep 18 17:29:25 2000 :: Kargoth collects the 500 gold bounty on Mirauk.
+Mon Sep 18 17:32:33 2000 :: Mirauk collects the 700 gold bounty on Kargoth.
+Mon Sep 18 18:15:05 2000 :: Chichiri places a bounty of 500 gold on the life of Kellen.
+Mon Sep 18 18:18:51 2000 :: Chichiri places a bounty of 500 gold on the life of Lunkow.
+Mon Sep 18 18:23:02 2000 :: Kargoth collects the 2300 gold bounty on Kellen.
+Mon Sep 18 18:32:14 2000 :: Kellen places a bounty of 1500 gold on the life of Ilien.
+Mon Sep 18 19:57:50 2000 :: Detri places a bounty of 500 gold on the life of Grinton.
+Mon Sep 18 19:59:08 2000 :: Sycho places a bounty of 500 gold on the life of Mirauk.
+Mon Sep 18 19:59:15 2000 :: Mirauk collects the 500 gold bounty on Grinton.
+Mon Sep 18 20:02:08 2000 :: Mirauk collects the 500 gold bounty on Grinton.
+Mon Sep 18 20:40:28 2000 :: Mirauk collects the 1000 gold bounty on Shurven.
+Mon Sep 18 22:13:42 2000 :: Obin places a bounty of 500 gold on the life of Kevin.
+Mon Sep 18 22:15:17 2000 :: Mirauk collects the 500 gold bounty on Kevin.
+Mon Sep 18 22:24:17 2000 :: Beau places a bounty of 1000 gold on the life of Kevin.
+Mon Sep 18 22:29:17 2000 :: Mirauk collects the 1000 gold bounty on Kevin.
+Mon Sep 18 22:37:37 2000 :: Beau places a bounty of 1000 gold on the life of Fenster.
+Mon Sep 18 22:42:24 2000 :: Mirauk collects the 1000 gold bounty on Fenster.
+Tue Sep 19 10:25:31 2000 :: Mirkon places a bounty of 1000 gold on the life of Nirgal.
+Tue Sep 19 12:17:32 2000 :: Nirgal places a bounty of 900 gold on the life of Maximus.
+Tue Sep 19 12:29:01 2000 :: Jakythrin collects the 500 gold bounty on Inarius.
+Tue Sep 19 15:18:29 2000 :: Parunga places a bounty of 1000 gold on the life of Logahm.
+Tue Sep 19 16:29:14 2000 :: Kragerth places a bounty of 500 gold on the life of Improbar.
+Tue Sep 19 16:57:18 2000 :: Alintinor collects the 500 gold bounty on Improbar.
+Tue Sep 19 18:21:28 2000 :: Beau places a bounty of 500 gold on the life of Merandaa.
+Tue Sep 19 18:39:29 2000 :: Mirauk collects the 500 gold bounty on Lunkow.
+Tue Sep 19 20:20:27 2000 :: Alintinor collects the 6200 gold bounty on Alojzy.
+Tue Sep 19 20:33:11 2000 :: Kragerth places a bounty of 500 gold on the life of Gorbash.
+Wed Sep 20 00:09:17 2000 :: Pibb places a bounty of 500 gold on the life of Sukonis.
+Wed Sep 20 06:32:15 2000 :: Malrubius places a bounty of 1500 gold on the life of Moli.
+Wed Sep 20 06:34:28 2000 :: Kraich places a bounty of 1500 gold on the life of Kargoth.
+Wed Sep 20 06:35:06 2000 :: Malrubius places a bounty of 2500 gold on the life of Moli.
+Wed Sep 20 06:36:59 2000 :: Malrubius places a bounty of 500 gold on the life of Kargoth.
+Wed Sep 20 07:16:38 2000 :: Malrubius places a bounty of 2500 gold on the life of Zanroth.
+Wed Sep 20 07:17:20 2000 :: Alintinor collects the 2500 gold bounty on Zanroth.
+Wed Sep 20 07:27:28 2000 :: Malrubius places a bounty of 2000 gold on the life of Randord.
+Wed Sep 20 07:59:44 2000 :: Zanroth places a bounty of 500 gold on the life of Kraich.
+Wed Sep 20 07:59:53 2000 :: Kraich places a bounty of 500 gold on the life of Alintinor.
+Wed Sep 20 08:00:05 2000 :: Kraich places a bounty of 500 gold on the life of Zanroth.
+Wed Sep 20 08:18:40 2000 :: Vryllen places a bounty of 500 gold on the life of Kraich.
+Wed Sep 20 08:21:15 2000 :: Kraich places a bounty of 1000 gold on the life of Zanroth.
+Wed Sep 20 08:33:28 2000 :: Alintinor collects the 1500 gold bounty on Zanroth.
+Wed Sep 20 08:35:24 2000 :: Kargoth collects the 500 gold bounty on Alintinor.
+Wed Sep 20 08:51:52 2000 :: Zanroth places a bounty of 1000 gold on the life of Alintinor.
+Wed Sep 20 09:35:13 2000 :: Archaon places a bounty of 500 gold on the life of Nocturen.
+Wed Sep 20 09:39:26 2000 :: Kargoth collects the 500 gold bounty on Gorbash.
+Wed Sep 20 09:52:03 2000 :: Archaon places a bounty of 500 gold on the life of Nocturen.
+Wed Sep 20 10:05:35 2000 :: Kargoth collects the 1000 gold bounty on Nocturen.
+Wed Sep 20 10:15:24 2000 :: Kargoth collects the 4000 gold bounty on Moli.
+Wed Sep 20 10:29:51 2000 :: Kargoth collects the 500 gold bounty on Archaon.
+Wed Sep 20 10:36:38 2000 :: Kargoth collects the 500 gold bounty on Vryllen.
+Wed Sep 20 11:19:11 2000 :: Kargoth collects the 1000 gold bounty on Kraich.
+Wed Sep 20 11:21:42 2000 :: Kargoth collects the 2000 gold bounty on Randord.
+Wed Sep 20 11:30:06 2000 :: Kargoth collects the 6500 gold bounty on Sycho.
+Wed Sep 20 11:43:57 2000 :: cloaked figure places a bounty of 500 gold on the life of Sycho.
+Wed Sep 20 11:52:06 2000 :: cloaked figure places a bounty of 500 gold on the life of Sycho.
+Wed Sep 20 11:54:54 2000 :: Kargoth collects the 1500 gold bounty on Sycho.
+Wed Sep 20 11:55:49 2000 :: Vryllen places a bounty of 797 gold on the life of cloaked figure.
+Wed Sep 20 12:47:21 2000 :: Kargoth collects the 1500 gold bounty on Logahm.
+Wed Sep 20 13:25:45 2000 :: cloaked figure places a bounty of 1000 gold on the life of Sycho.
+Wed Sep 20 13:33:19 2000 :: cloaked figure places a bounty of 500 gold on the life of Inarius.
+Wed Sep 20 13:33:23 2000 :: cloaked figure places a bounty of 500 gold on the life of Warvoran.
+Wed Sep 20 13:48:56 2000 :: Kargoth collects the 500 gold bounty on Khalin.
+Wed Sep 20 14:05:10 2000 :: Kargoth collects the 500 gold bounty on Zestar.
+Wed Sep 20 14:05:45 2000 :: cloaked figure places a bounty of 1000 gold on the life of Sycho.
+Wed Sep 20 14:08:07 2000 :: Inarius places a bounty of 600 gold on the life of Warvoran.
+Wed Sep 20 15:31:44 2000 :: Kragerth places a bounty of 1000 gold on the life of Alojzy.
+Wed Sep 20 17:18:28 2000 :: cloaked figure places a bounty of 500 gold on the life of Kragerth.
+Wed Sep 20 17:18:54 2000 :: cloaked figure places a bounty of 500 gold on the life of Saccran.
+Wed Sep 20 17:19:01 2000 :: cloaked figure places a bounty of 500 gold on the life of Harman.
+Wed Sep 20 17:19:19 2000 :: cloaked figure places a bounty of 500 gold on the life of Logahm.
+Wed Sep 20 17:19:28 2000 :: cloaked figure places a bounty of 500 gold on the life of Lunkow.
+Wed Sep 20 17:19:31 2000 :: cloaked figure places a bounty of 500 gold on the life of Romius.
+Wed Sep 20 17:19:35 2000 :: cloaked figure places a bounty of 500 gold on the life of Moli.
+Wed Sep 20 17:38:04 2000 :: Jakythrin collects the 16502 gold bounty on Ilien.
+Wed Sep 20 17:38:40 2000 :: Jakythrin collects the 500 gold bounty on Saccran.
+Wed Sep 20 18:00:42 2000 :: Jakythrin collects the 500 gold bounty on Tilcahtihl.
+Wed Sep 20 18:02:14 2000 :: Jakythrin collects the 500 gold bounty on Harman.
+Wed Sep 20 20:09:40 2000 :: Dioxide places a bounty of 5000 gold on the life of cloaked figure.
+Thu Sep 21 00:18:04 2000 :: cloaked figure places a bounty of 5000 gold on the life of Brawly.
+Thu Sep 21 00:18:12 2000 :: cloaked figure places a bounty of 5000 gold on the life of Poelja.
+Thu Sep 21 00:52:36 2000 :: Dioxide places a bounty of 100000 gold on the life of Nurok.
+Thu Sep 21 01:28:30 2000 :: cloaked figure places a bounty of 5000 gold on the life of Padan.
+Thu Sep 21 13:10:31 2000 :: Kargoth collects the 1000 gold bounty on Alintinor.
+Thu Sep 21 17:32:39 2000 :: Jakythrin collects the 2000 gold bounty on Tumock.
+Thu Sep 21 17:33:35 2000 :: cloaked figure places a bounty of 5000 gold on the life of Marlin.
+Thu Sep 21 17:33:45 2000 :: cloaked figure places a bounty of 5000 gold on the life of Tumock.
+Thu Sep 21 17:42:25 2000 :: Jakythrin collects the 5000 gold bounty on Tumock.
+Fri Sep 22 13:00:11 2000 :: Mirkon places a bounty of 5000 gold on the life of Coasty.
+Fri Sep 22 17:24:40 2000 :: Jakythrin collects the 500 gold bounty on Kiltipzezum.
+Fri Sep 22 17:25:10 2000 :: Jakythrin collects the 500 gold bounty on Bumpy.
+Fri Sep 22 17:51:42 2000 :: Mirauk collects the 500 gold bounty on Kazz.
+Fri Sep 22 23:21:13 2000 :: cloaked figure places a bounty of 8000 gold on the life of Pibb.
+Sat Sep 23 00:50:32 2000 :: Jakythrin collects the 500 gold bounty on Grinton.
+Sat Sep 23 01:27:04 2000 :: cloaked figure places a bounty of 5000 gold on the life of Shurven.
+Sat Sep 23 01:36:19 2000 :: Jakythrin collects the 5500 gold bounty on Shurven.
+Sat Sep 23 15:31:16 2000 :: Bryan places a bounty of 5000 gold on the life of Coasty.
+Sat Sep 23 15:56:55 2000 :: Faunus places a bounty of 5000 gold on the life of Coasty.
+Sat Sep 23 16:05:58 2000 :: Bryan collects the 15000 gold bounty on Coasty.
+Sat Sep 23 16:39:23 2000 :: Kargoth collects the 600 gold bounty on Kauyor.
+Sat Sep 23 16:51:47 2000 :: Darsh collects the 2000 gold bounty on Kargoth.
+Sat Sep 23 16:54:26 2000 :: Bryan collects the 500 gold bounty on Zestar.
+Sun Sep 24 10:13:45 2000 :: Sareteleth collects the 2200 gold bounty on Yhaln.
+Sun Sep 24 14:24:01 2000 :: Kenshin places a bounty of 5000 gold on the life of Bryan.
+Mon Sep 25 00:05:29 2000 :: Dev places a bounty of 10000 gold on the life of Sycho.
+Mon Sep 25 09:41:37 2000 :: Kargoth collects the 500 gold bounty on Tilcahtihl.
+Mon Sep 25 10:22:10 2000 :: Kargoth collects the 500 gold bounty on Jakythrin.
+Mon Sep 25 12:31:10 2000 :: Sycho places a bounty of 1000 gold on the life of Gorbash.
+Mon Sep 25 13:27:01 2000 :: Sycho places a bounty of 5000 gold on the life of Gorbash.
+Mon Sep 25 13:28:21 2000 :: Sycho places a bounty of 5000 gold on the life of Nirgal.
+Mon Sep 25 13:40:07 2000 :: Chichiri places a bounty of 1000 gold on the life of Nirgal.
+Mon Sep 25 13:49:38 2000 :: Kargoth collects the 500 gold bounty on Narcys.
+Mon Sep 25 17:21:01 2000 :: Grinton collects the 1000 gold bounty on Alojzy.
+Tue Sep 26 18:37:36 2000 :: Ragadon places a bounty of 5000 gold on the life of Kenshin.
+Tue Sep 26 18:38:53 2000 :: Dioxide places a bounty of 4000 gold on the life of Kiltipzezum.
+Wed Sep 27 08:20:48 2000 :: Zoran places a bounty of 2000 gold on the life of Arafel.
+Wed Sep 27 13:28:04 2000 :: Polhn collects the 500 gold bounty on Telnoth.
+Wed Sep 27 13:31:22 2000 :: Conchita collects the 500 gold bounty on Tilcahtihl.
+Wed Sep 27 13:33:56 2000 :: Polhn collects the 500 gold bounty on Telnoth.
+Wed Sep 27 18:10:01 2000 :: Dioxide places a bounty of 1000 gold on the life of Rashashana.
+Wed Sep 27 18:10:03 2000 :: Dioxide places a bounty of 1000 gold on the life of Randord.
+Wed Sep 27 18:10:07 2000 :: Dioxide places a bounty of 1000 gold on the life of Avhorisham.
+Wed Sep 27 18:24:08 2000 :: Kargoth collects the 1000 gold bounty on Randord.
+Wed Sep 27 18:44:14 2000 :: Avhorisham places a bounty of 1000 gold on the life of Tilthos.
+Thu Sep 28 15:21:11 2000 :: Ragadon places a bounty of 1000 gold on the life of Denglod.
+Thu Sep 28 15:21:27 2000 :: Ragadon places a bounty of 5000 gold on the life of Denglod.
+Thu Sep 28 15:21:44 2000 :: Ragadon places a bounty of 1000 gold on the life of Denglod.
+Thu Sep 28 15:21:45 2000 :: Ragadon places a bounty of 1000 gold on the life of Denglod.
+Thu Sep 28 15:21:46 2000 :: Ragadon places a bounty of 1000 gold on the life of Denglod.
+Thu Sep 28 15:21:47 2000 :: Ragadon places a bounty of 1000 gold on the life of Denglod.
+Thu Sep 28 15:22:03 2000 :: Ragadon places a bounty of 1000 gold on the life of Denglod.
+Thu Sep 28 17:16:39 2000 :: Meurtre collects the 1000 gold bounty on Avhorisham.
+Thu Sep 28 17:31:52 2000 :: Meurtre collects the 5000 gold bounty on Yuvien.
+Thu Sep 28 17:33:50 2000 :: Meurtre collects the 500 gold bounty on Alycia.
+Thu Sep 28 17:36:43 2000 :: Kiltipzezum places a bounty of 1000 gold on the life of Avhorisham.
+Thu Sep 28 17:45:46 2000 :: Dioxide places a bounty of 10000 gold on the life of Jirain.
+Thu Sep 28 17:54:22 2000 :: Meurtre collects the 10500 gold bounty on Jirain.
+Thu Sep 28 18:01:26 2000 :: Meurtre collects the 1000 gold bounty on Avhorisham.
+Fri Sep 29 10:13:12 2000 :: Kargoth collects the 500 gold bounty on Grinton.
+Fri Sep 29 10:13:20 2000 :: Raoln places a bounty of 1000 gold on the life of Jakythrin.
+Fri Sep 29 10:18:16 2000 :: Kargoth collects the 1000 gold bounty on Jakythrin.
+Fri Sep 29 10:22:39 2000 :: Grinton collects the 5000 gold bounty on Poelja.
+Fri Sep 29 11:01:41 2000 :: Kargoth collects the 500 gold bounty on Randord.
+Fri Sep 29 11:09:18 2000 :: Jakythrin collects the 500 gold bounty on Moli.
+Fri Sep 29 11:11:05 2000 :: Randord places a bounty of 1000 gold on the life of Akronius.
+Fri Sep 29 13:32:20 2000 :: Dulak places a bounty of 1000 gold on the life of Derick.
+Fri Sep 29 13:35:10 2000 :: Kargoth collects the 1000 gold bounty on Derick.
+Fri Sep 29 13:43:02 2000 :: Kargoth collects the 1000 gold bounty on Rashashana.
+Fri Sep 29 13:44:39 2000 :: Kargoth collects the 500 gold bounty on Astirev.
+Fri Sep 29 13:50:27 2000 :: Kargoth collects the 500 gold bounty on Polhn.
+Fri Sep 29 13:52:32 2000 :: Kargoth collects the 500 gold bounty on Derick.
+Fri Sep 29 13:59:46 2000 :: Kargoth advances to Veteran Hunter.
+Fri Sep 29 13:59:46 2000 :: Kargoth collects the 500 gold bounty on Derick.
+Fri Sep 29 14:05:30 2000 :: Kargoth collects the 500 gold bounty on Derick.
+Fri Sep 29 16:20:28 2000 :: Kargoth collects the 500 gold bounty on Mektlair.
+Fri Sep 29 16:42:24 2000 :: Dioxide places a bounty of 3000 gold on the life of Goreateh.
+Fri Sep 29 17:38:38 2000 :: cloaked figure places a bounty of 10000 gold on the life of Astirev.
+Fri Sep 29 17:44:20 2000 :: Kargoth collects the 10000 gold bounty on Astirev.
+Fri Sep 29 18:40:50 2000 :: Thermin places a bounty of 1000 gold on the life of Shane.
+Fri Sep 29 19:32:47 2000 :: Kargoth collects the 500 gold bounty on Yuvien.
+Sat Sep 30 13:39:17 2000 :: Dulak collects the 500 gold bounty on Randord.
+Sat Sep 30 13:51:41 2000 :: Dulak collects the 11000 gold bounty on Denglod.
+Sat Sep 30 13:54:32 2000 :: Dulak collects the 500 gold bounty on Saccran.
+Sat Sep 30 15:03:17 2000 :: Pleiot places a bounty of 1000 gold on the life of Yuvien.
+Sat Sep 30 16:27:02 2000 :: Dulak collects the 500 gold bounty on Cervante.
+Sat Sep 30 16:32:25 2000 :: Cervante places a bounty of 1000 gold on the life of Pleiot.
+Sat Sep 30 16:32:32 2000 :: Cervante places a bounty of 1000 gold on the life of Coasty.
+Sat Sep 30 16:33:20 2000 :: Dulak collects the 1000 gold bounty on Yuvien.
+Sat Sep 30 16:34:10 2000 :: Dulak collects the 1000 gold bounty on Pleiot.
+Sat Sep 30 16:38:48 2000 :: Dulak collects the 1000 gold bounty on Coasty.
+Sat Sep 30 16:41:40 2000 :: Pleiot places a bounty of 1000 gold on the life of Tilthos.
+Sat Sep 30 17:02:23 2000 :: Pleiot places a bounty of 1000 gold on the life of Cervante.
+Sat Sep 30 17:03:45 2000 :: Dulak collects the 1000 gold bounty on Cervante.
+Sat Sep 30 17:15:38 2000 :: Dulak collects the 1000 gold bounty on Tilthos.
+Sat Sep 30 18:14:06 2000 :: Dioxide places a bounty of 4000 gold on the life of Kiltipzezum.
+Sun Oct  1 09:02:30 2000 :: Pleiot places a bounty of 2000 gold on the life of Coasty.
+Sun Oct  1 09:04:11 2000 :: Pleiot places a bounty of 1000 gold on the life of Randord.
+Sun Oct  1 09:06:45 2000 :: Dulak collects the 1000 gold bounty on Randord.
+Sun Oct  1 09:13:49 2000 :: Pleiot places a bounty of 1000 gold on the life of Zanroth.
+Sun Oct  1 09:14:56 2000 :: Dulak collects the 1000 gold bounty on Zanroth.
+Sun Oct  1 09:17:21 2000 :: Pleiot places a bounty of 1000 gold on the life of Blaison.
+Sun Oct  1 09:18:03 2000 :: Pleiot places a bounty of 1000 gold on the life of Johnson.
+Sun Oct  1 09:18:11 2000 :: Pleiot places a bounty of 1000 gold on the life of Zanroth.
+Sun Oct  1 09:20:12 2000 :: Dulak collects the 900 gold bounty on Zarex.
+Sun Oct  1 09:52:00 2000 :: Randord collects the 1000 gold bounty on Johnson.
+Sun Oct  1 11:08:52 2000 :: Pleiot places a bounty of 1000 gold on the life of Kvionius.
+Sun Oct  1 11:08:59 2000 :: Pleiot places a bounty of 1000 gold on the life of Jemerah.
+Sun Oct  1 11:13:09 2000 :: Dulak collects the 1000 gold bounty on Jemerah.
+Sun Oct  1 11:22:31 2000 :: Pleiot places a bounty of 1000 gold on the life of Luspher.
+Sun Oct  1 11:26:39 2000 :: Pleiot places a bounty of 1000 gold on the life of Poelja.
+Sun Oct  1 11:28:03 2000 :: Dulak collects the 1000 gold bounty on Blaison.
+Sun Oct  1 11:43:37 2000 :: Dulak collects the 2000 gold bounty on Coasty.
+Sun Oct  1 11:44:25 2000 :: Pleiot places a bounty of 1000 gold on the life of Tristan.
+Sun Oct  1 11:47:50 2000 :: Dulak collects the 1000 gold bounty on Tristan.
+Sun Oct  1 11:57:12 2000 :: Dulak collects the 5000 gold bounty on Brawly.
+Sun Oct  1 12:06:41 2000 :: Dulak collects the 1000 gold bounty on Poelja.
+Sun Oct  1 12:06:46 2000 :: Lochnar places a bounty of 1000 gold on the life of Tristan.
+Sun Oct  1 12:08:02 2000 :: Pleiot places a bounty of 1000 gold on the life of Tristan.
+Sun Oct  1 12:23:08 2000 :: Pleiot places a bounty of 1000 gold on the life of Poelja.
+Sun Oct  1 12:35:24 2000 :: Randord collects the 2000 gold bounty on Tristan.
+Sun Oct  1 12:45:28 2000 :: Mirauk collects the 500 gold bounty on Tristan.
+Sun Oct  1 12:54:56 2000 :: Langly places a bounty of 1000 gold on the life of Tristan.
+Sun Oct  1 12:55:53 2000 :: Mirauk collects the 1000 gold bounty on Tristan.
+Sun Oct  1 12:58:17 2000 :: Langly places a bounty of 1000 gold on the life of Tristan.
+Sun Oct  1 12:58:39 2000 :: Mirauk collects the 1000 gold bounty on Tristan.
+Sun Oct  1 13:13:28 2000 :: Dioxide places a bounty of 5000 gold on the life of Goreateh.
+Sun Oct  1 13:40:21 2000 :: Mirauk collects the 500 gold bounty on Alexia.
+Sun Oct  1 13:51:52 2000 :: Nirgal places a bounty of 4500 gold on the life of Mirauk.
+Sun Oct  1 13:54:32 2000 :: Bryan collects the 7000 gold bounty on Nirgal.
+Sun Oct  1 13:55:21 2000 :: Nirgal places a bounty of 1000 gold on the life of Bryan.
+Sun Oct  1 13:58:20 2000 :: Bryan collects the 5000 gold bounty on Mirauk.
+Sun Oct  1 14:01:23 2000 :: Mirauk collects the 6000 gold bounty on Bryan.
+Sun Oct  1 14:08:55 2000 :: Nirgal places a bounty of 1000 gold on the life of Mirauk.
+Sun Oct  1 14:11:47 2000 :: Nirgal places a bounty of 1000 gold on the life of Bryan.
+Sun Oct  1 14:12:40 2000 :: Bryan collects the 1500 gold bounty on Faunus.
+Sun Oct  1 15:26:57 2000 :: Ragadon places a bounty of 1000 gold on the life of Kinesty.
+Sun Oct  1 17:18:25 2000 :: Dulak collects the 10900 gold bounty on Maximus.
+Sun Oct  1 19:01:29 2000 :: Pleiot collects the 500 gold bounty on Itzinzu.
+Sun Oct  1 19:05:17 2000 :: Pleiot collects the 500 gold bounty on Randord.
+Sun Oct  1 19:08:59 2000 :: Pleiot collects the 500 gold bounty on Coasty.
+Sun Oct  1 19:17:24 2000 :: Pleiot collects the 500 gold bounty on Nirgal.
+Sun Oct  1 19:17:40 2000 :: Pleiot collects the 500 gold bounty on Randord.
+Sun Oct  1 19:18:33 2000 :: Pleiot collects the 500 gold bounty on Ragadon.
+Sun Oct  1 20:54:30 2000 :: Jerun places a bounty of 1000 gold on the life of Felanx.
+Sun Oct  1 21:01:53 2000 :: Mirauk collects the 1000 gold bounty on Felanx.
+Mon Oct  2 11:45:45 2000 :: Tumock places a bounty of 1000 gold on the life of Tamara.
+Mon Oct  2 11:48:22 2000 :: Kargoth collects the 1000 gold bounty on Poelja.
+Mon Oct  2 13:38:25 2000 :: Phure places a bounty of 1000 gold on the life of Nocturen.
+Mon Oct  2 13:42:36 2000 :: Nocturen places a bounty of 1000 gold on the life of Pleiot.
+Mon Oct  2 14:23:42 2000 :: Dulak collects the 500 gold bounty on Inarius.
+Mon Oct  2 14:33:06 2000 :: Grinton collects the 1500 gold bounty on Pleiot.
+Mon Oct  2 14:45:49 2000 :: Dulak collects the 10000 gold bounty on Astirev.
+Mon Oct  2 14:50:41 2000 :: Xeonauz places a bounty of 1000 gold on the life of Jerun.
+Mon Oct  2 14:51:15 2000 :: Dulak collects the 2500 gold bounty on Hudsun.
+Mon Oct  2 15:02:10 2000 :: Jargonis places a bounty of 1000 gold on the life of Xeonauz.
+Mon Oct  2 15:07:57 2000 :: Pleiot collects the 1000 gold bounty on Xeonauz.
+Mon Oct  2 15:13:59 2000 :: Dulak collects the 1000 gold bounty on Jerun.
+Mon Oct  2 15:32:08 2000 :: Raran places a bounty of 1000 gold on the life of Jacyn.
+Mon Oct  2 15:32:13 2000 :: Raran places a bounty of 1000 gold on the life of Faunus.
+Mon Oct  2 15:36:16 2000 :: Dulak collects the 1000 gold bounty on Jacyn.
+Mon Oct  2 15:37:07 2000 :: Raran places a bounty of 1000 gold on the life of Jerun.
+Mon Oct  2 15:40:56 2000 :: Pleiot collects the 1000 gold bounty on Jerun.
+Mon Oct  2 15:46:00 2000 :: Pleiot collects the 500 gold bounty on Khalin.
+Mon Oct  2 15:47:25 2000 :: Pleiot collects the 1000 gold bounty on Nocturen.
+Mon Oct  2 15:50:27 2000 :: Phure places a bounty of 1000 gold on the life of Jacyn.
+Mon Oct  2 15:50:33 2000 :: Phure places a bounty of 1000 gold on the life of Khalin.
+Mon Oct  2 15:52:44 2000 :: Methuselah places a bounty of 1201 gold on the life of Phure.
+Mon Oct  2 16:10:46 2000 :: Chargobis places a bounty of 1000 gold on the life of Denglod.
+Mon Oct  2 16:52:03 2000 :: Tamara places a bounty of 1000 gold on the life of Sibald.
+Mon Oct  2 16:52:29 2000 :: Dulak collects the 1000 gold bounty on Sibald.
+Mon Oct  2 16:56:11 2000 :: Dulak collects the 8500 gold bounty on Goreateh.
+Mon Oct  2 17:10:30 2000 :: Dulak collects the 1000 gold bounty on Khalin.
+Mon Oct  2 17:56:19 2000 :: Pleiot collects the 1000 gold bounty on Denglod.
+Mon Oct  2 18:12:29 2000 :: Raran places a bounty of 1000 gold on the life of Amberstasia.
+Mon Oct  2 18:13:43 2000 :: Pleiot collects the 1000 gold bounty on Amberstasia.
+Mon Oct  2 18:15:45 2000 :: Raran places a bounty of 1000 gold on the life of Denglod.
+Mon Oct  2 18:16:58 2000 :: Raran places a bounty of 1000 gold on the life of Denglod.
+Mon Oct  2 18:18:17 2000 :: Raran places a bounty of 2000 gold on the life of Greayun.
+Mon Oct  2 18:20:29 2000 :: Raran places a bounty of 1000 gold on the life of Amberstasia.
+Mon Oct  2 18:21:17 2000 :: Mirauk collects the 500 gold bounty on Itzinzu.
+Mon Oct  2 18:24:17 2000 :: Mirauk collects the 2000 gold bounty on Greayun.
+Mon Oct  2 18:24:25 2000 :: Raran places a bounty of 1000 gold on the life of Greayun.
+Mon Oct  2 18:26:00 2000 :: Raran places a bounty of 1000 gold on the life of Blaison.
+Mon Oct  2 18:28:30 2000 :: Pleiot collects the 1000 gold bounty on Blaison.
+Mon Oct  2 18:33:33 2000 :: Raran places a bounty of 2000 gold on the life of Blaison.
+Mon Oct  2 18:41:28 2000 :: Pleiot collects the 1000 gold bounty on Bryan.
+Mon Oct  2 18:49:39 2000 :: Blaison places a bounty of 3855 gold on the life of Mirauk.
+Mon Oct  2 18:50:37 2000 :: Mirauk collects the 2000 gold bounty on Blaison.
+Mon Oct  2 18:52:14 2000 :: Pleiot collects the 500 gold bounty on Merandaa.
+Mon Oct  2 19:04:05 2000 :: Pleiot collects the 500 gold bounty on Mektlair.
+Mon Oct  2 19:23:37 2000 :: Pleiot collects the 1000 gold bounty on Kinesty.
+Mon Oct  2 19:46:23 2000 :: Blaison places a bounty of 1851 gold on the life of Sycho.
+Mon Oct  2 19:53:33 2000 :: Blaison places a bounty of 1000 gold on the life of Sycho.
+Tue Oct  3 14:46:11 2000 :: Taerk places a bounty of 1000 gold on the life of Khalin.
+Tue Oct  3 14:47:31 2000 :: Dulak collects the 500 gold bounty on Yuvien.
+Tue Oct  3 14:58:12 2000 :: Dulak collects the 500 gold bounty on Adrien.
+Tue Oct  3 15:55:41 2000 :: Methuselah places a bounty of 1000 gold on the life of Pleiot.
+Tue Oct  3 15:58:27 2000 :: Gaige places a bounty of 1000 gold on the life of Arvad.
+Tue Oct  3 15:58:48 2000 :: cloaked figure places a bounty of 1000 gold on the life of Periclez.
+Tue Oct  3 15:59:07 2000 :: Nocturen places a bounty of 1000 gold on the life of Pleiot.
+Tue Oct  3 15:59:32 2000 :: Pleiot collects the 1000 gold bounty on Periclez.
+Tue Oct  3 16:22:40 2000 :: Elbrith places a bounty of 1000 gold on the life of cloaked figure.
+Tue Oct  3 16:27:32 2000 :: Pleiot collects the 1000 gold bounty on cloaked figure.
+Tue Oct  3 16:34:57 2000 :: Elbrith places a bounty of 1000 gold on the life of Kinesty.
+Tue Oct  3 16:35:09 2000 :: Elbrith places a bounty of 1000 gold on the life of Adrien.
+Tue Oct  3 16:42:30 2000 :: Pleiot collects the 1000 gold bounty on Adrien.
+Tue Oct  3 16:45:26 2000 :: Alexia places a bounty of 1500 gold on the life of Andrew.
+Tue Oct  3 16:46:14 2000 :: Alexia places a bounty of 1500 gold on the life of Elbrith.
+Tue Oct  3 16:47:30 2000 :: Pleiot collects the 1500 gold bounty on Andrew.
+Tue Oct  3 16:53:09 2000 :: Alexia places a bounty of 1000 gold on the life of Nirgal.
+Tue Oct  3 16:54:46 2000 :: Pleiot collects the 1000 gold bounty on Khalin.
+Tue Oct  3 16:56:25 2000 :: Phure places a bounty of 1000 gold on the life of Khalin.
+Tue Oct  3 16:57:02 2000 :: Phure places a bounty of 1000 gold on the life of Alexia.
+Tue Oct  3 16:57:29 2000 :: Phure places a bounty of 1000 gold on the life of Bumpy.
+Tue Oct  3 16:59:39 2000 :: Pleiot collects the 1000 gold bounty on Khalin.
+Tue Oct  3 17:11:10 2000 :: Pleiot collects the 1201 gold bounty on Phure.
+Tue Oct  3 17:19:27 2000 :: Pleiot collects the 1000 gold bounty on Bumpy.
+Tue Oct  3 17:31:08 2000 :: Phure places a bounty of 1000 gold on the life of Zangiff.
+Tue Oct  3 17:34:36 2000 :: Pleiot collects the 500 gold bounty on Yuvien.
+Tue Oct  3 17:37:34 2000 :: Pleiot collects the 1000 gold bounty on Zangiff.
+Wed Oct  4 07:21:08 2000 :: Kargoth collects the 5000 gold bounty on Chanter.
+Wed Oct  4 07:28:43 2000 :: Kargoth collects the 6000 gold bounty on Gorbash.
+Wed Oct  4 07:33:04 2000 :: Raoln places a bounty of 1000 gold on the life of Randord.
+Wed Oct  4 07:45:59 2000 :: Kargoth collects the 500 gold bounty on Astirev.
+Wed Oct  4 07:53:35 2000 :: Sycho places a bounty of 1000 gold on the life of Moli.
+Wed Oct  4 07:53:40 2000 :: Sycho places a bounty of 1000 gold on the life of Gorbash.
+Wed Oct  4 08:21:13 2000 :: Sycho places a bounty of 1000 gold on the life of Zitrus.
+Wed Oct  4 13:08:44 2000 :: Nocturen places a bounty of 1000 gold on the life of Pleiot.
+Wed Oct  4 13:41:30 2000 :: Kargoth collects the 500 gold bounty on Raoln.
+Wed Oct  4 13:45:03 2000 :: Kargoth collects the 500 gold bounty on cloaked figure.
+Wed Oct  4 14:20:50 2000 :: Pleiot collects the 500 gold bounty on Nocturen.
+Wed Oct  4 14:39:27 2000 :: Pleiot collects the 1000 gold bounty on Kinesty.
+Wed Oct  4 14:39:56 2000 :: Pleiot collects the 500 gold bounty on Tantras.
+Wed Oct  4 14:45:16 2000 :: Pleiot collects the 500 gold bounty on Kinesty.
+Wed Oct  4 14:50:57 2000 :: Pleiot collects the 4855 gold bounty on Mirauk.
+Wed Oct  4 14:55:45 2000 :: Matrien places a bounty of 1000 gold on the life of Gambermine.
+Wed Oct  4 15:02:02 2000 :: Mirauk collects the 3500 gold bounty on Pleiot.
+Wed Oct  4 15:11:34 2000 :: Tilcahtihl places a bounty of 1000 gold on the life of Kinesty.
+Wed Oct  4 15:12:58 2000 :: Grinton collects the 1000 gold bounty on Kinesty.
+Wed Oct  4 15:21:39 2000 :: Aliandra places a bounty of 1000 gold on the life of Kinesty.
+Wed Oct  4 15:22:03 2000 :: Pleiot collects the 1000 gold bounty on Kinesty.
+Wed Oct  4 15:23:27 2000 :: Grinton collects the 1000 gold bounty on Gorbash.
+Wed Oct  4 15:42:15 2000 :: Pleiot collects the 500 gold bounty on Nocturen.
+Wed Oct  4 16:15:33 2000 :: Tilthos places a bounty of 1000 gold on the life of Gorbash.
+Wed Oct  4 16:15:47 2000 :: Tilthos places a bounty of 2000 gold on the life of Matrien.
+Wed Oct  4 16:26:33 2000 :: Dulak collects the 2000 gold bounty on Matrien.
+Wed Oct  4 16:29:25 2000 :: Tilthos places a bounty of 1000 gold on the life of Yuvien.
+Wed Oct  4 16:38:42 2000 :: Grinton collects the 1000 gold bounty on Gorbash.
+Wed Oct  4 17:52:00 2000 :: Dukot places a bounty of 1000 gold on the life of Merandaa.
+Wed Oct  4 18:10:29 2000 :: Lentus places a bounty of 1121 gold on the life of Merandaa.
+Wed Oct  4 18:12:26 2000 :: Lentus places a bounty of 1000 gold on the life of Jerun.
+Wed Oct  4 18:28:02 2000 :: Pleiot collects the 1297 gold bounty on cloaked figure.
+Wed Oct  4 18:44:43 2000 :: Pleiot collects the 500 gold bounty on Swanson.
+Wed Oct  4 19:00:20 2000 :: Zangiff places a bounty of 1000 gold on the life of Jerun.
+Wed Oct  4 19:10:54 2000 :: Zangiff places a bounty of 1000 gold on the life of cloaked figure.
+Wed Oct  4 20:12:23 2000 :: Greil places a bounty of 1150 gold on the life of Pibb.
+Thu Oct  5 11:21:27 2000 :: Kargoth collects the 500 gold bounty on Avhorisham.
+Thu Oct  5 11:28:20 2000 :: Kargoth collects the 1000 gold bounty on Luspher.
+Thu Oct  5 11:41:19 2000 :: Kargoth collects the 1000 gold bounty on Randord.
+Thu Oct  5 11:44:22 2000 :: Kargoth collects the 500 gold bounty on Avhorisham.
+Thu Oct  5 11:47:13 2000 :: Kargoth collects the 500 gold bounty on Avhorisham.
+Thu Oct  5 12:55:29 2000 :: cloaked figure places a bounty of 10000 gold on the life of Rashashana.
+Thu Oct  5 12:57:42 2000 :: cloaked figure places a bounty of 1000 gold on the life of Matrien.
+Thu Oct  5 13:08:34 2000 :: cloaked figure places a bounty of 1000 gold on the life of Hudsun.
+Thu Oct  5 13:13:40 2000 :: cloaked figure places a bounty of 2000 gold on the life of Rashashana.
+Thu Oct  5 13:19:05 2000 :: Pleiot collects the 1500 gold bounty on Matrien.
+Thu Oct  5 13:22:02 2000 :: cloaked figure places a bounty of 2000 gold on the life of Hudsun.
+Thu Oct  5 13:35:30 2000 :: Pleiot collects the 500 gold bounty on Korian.
+Thu Oct  5 13:36:16 2000 :: Pleiot collects the 2500 gold bounty on Durgoth.
+Thu Oct  5 13:46:11 2000 :: Dulak collects the 500 gold bounty on Durgoth.
+Thu Oct  5 13:46:27 2000 :: Pleiot collects the 500 gold bounty on Korian.
+Thu Oct  5 13:47:09 2000 :: cloaked figure places a bounty of 1000 gold on the life of Rashashana.
+Thu Oct  5 13:47:21 2000 :: Pleiot collects the 500 gold bounty on Korian.
+Thu Oct  5 13:51:59 2000 :: Dulak collects the 1000 gold bounty on Gambermine.
+Thu Oct  5 15:18:55 2000 :: Dulak collects the 500 gold bounty on Shurven.
+Thu Oct  5 17:15:21 2000 :: Grinton collects the 500 gold bounty on Greil.
+Thu Oct  5 18:29:43 2000 :: Duerin places a bounty of 1000 gold on the life of Aymer.
+Thu Oct  5 19:08:44 2000 :: Dormungurd places a bounty of 1000 gold on the life of Lograhm.
+Thu Oct  5 19:09:12 2000 :: Pleiot collects the 1000 gold bounty on Lograhm.
+Thu Oct  5 19:09:31 2000 :: Dormungurd places a bounty of 1000 gold on the life of Duerin.
+Thu Oct  5 19:18:33 2000 :: Pleiot collects the 1000 gold bounty on Duerin.
+Thu Oct  5 19:39:27 2000 :: Aersado places a bounty of 10000 gold on the life of Hashish.
+Thu Oct  5 19:39:42 2000 :: Pleiot collects the 10000 gold bounty on Hashish.
+Fri Oct  6 10:19:00 2000 :: Kargoth collects the 1000 gold bounty on cloaked figure.
+Fri Oct  6 10:47:27 2000 :: cloaked figure places a bounty of 2500 gold on the life of Gorbash.
+Fri Oct  6 11:02:10 2000 :: cloaked figure places a bounty of 1000 gold on the life of Gorbash.
+Fri Oct  6 11:05:15 2000 :: Gorbash places a bounty of 5000 gold on the life of cloaked figure.
+Fri Oct  6 11:14:53 2000 :: cloaked figure places a bounty of 1500 gold on the life of Gorbash.
+Fri Oct  6 11:38:42 2000 :: Gorbash places a bounty of 9500 gold on the life of Kargoth.
+Fri Oct  6 11:41:54 2000 :: Gorbash places a bounty of 5352 gold on the life of Kargoth.
+Fri Oct  6 12:39:32 2000 :: cloaked figure places a bounty of 1000 gold on the life of Phineas.
+Fri Oct  6 12:40:13 2000 :: Dulak collects the 1000 gold bounty on Phineas.
+Fri Oct  6 13:37:24 2000 :: Dormungurd places a bounty of 1000 gold on the life of Gambermine.
+Fri Oct  6 14:30:31 2000 :: Quezphiel places a bounty of 1000 gold on the life of Disara.
+Fri Oct  6 17:03:56 2000 :: Trabajad places a bounty of 1000 gold on the life of Nocturen.
+Fri Oct  6 17:28:45 2000 :: cloaked figure places a bounty of 1000 gold on the life of Coasty.
+Fri Oct  6 19:07:49 2000 :: Tilcahtihl places a bounty of 1000 gold on the life of Trabajad.
+Fri Oct  6 22:39:37 2000 :: Bordbarik places a bounty of 2000 gold on the life of Sadrien.
+Fri Oct  6 23:19:14 2000 :: Grinton collects the 1000 gold bounty on Jacyn.
+Sat Oct  7 05:39:46 2000 :: Phure places a bounty of 1000 gold on the life of Torlenaus.
+Sat Oct  7 05:57:19 2000 :: Trabajad collects the 1000 gold bounty on Torlenaus.
+Sat Oct  7 08:15:03 2000 :: Dulak collects the 5000 gold bounty on Gorbash.
+Sat Oct  7 08:30:53 2000 :: Gorbash places a bounty of 1000 gold on the life of Dulak.
+Sat Oct  7 08:33:57 2000 :: Dulak collects the 500 gold bounty on Randord.
+Sat Oct  7 09:27:35 2000 :: Kozinzki places a bounty of 1000 gold on the life of Greayun.
+Sat Oct  7 09:30:32 2000 :: Kozinzki places a bounty of 1000 gold on the life of Nirgal.
+Sat Oct  7 09:35:11 2000 :: cloaked figure places a bounty of 1000 gold on the life of Nirgal.
+Sat Oct  7 10:53:08 2000 :: Kurgan places a bounty of 1000 gold on the life of Jiscile.
+Sat Oct  7 11:11:19 2000 :: cloaked figure places a bounty of 1500 gold on the life of Antari.
+Sat Oct  7 11:12:14 2000 :: cloaked figure places a bounty of 1000 gold on the life of Zaeem.
+Sat Oct  7 11:22:21 2000 :: Trabajad collects the 1000 gold bounty on Jiscile.
+Sat Oct  7 12:09:09 2000 :: cloaked figure places a bounty of 2000 gold on the life of Poelja.
+Sat Oct  7 12:10:54 2000 :: Trabajad collects the 2000 gold bounty on Poelja.
+Sat Oct  7 12:51:37 2000 :: Monica places a bounty of 2000 gold on the life of Adam.
+Sat Oct  7 12:52:20 2000 :: Swanson places a bounty of 1000 gold on the life of Therick.
+Sat Oct  7 12:54:32 2000 :: Trabajad collects the 2000 gold bounty on Adam.
+Sat Oct  7 12:55:32 2000 :: Dev gives 10000 gold to Macheath.
+Sat Oct  7 12:59:42 2000 :: Adam places a bounty of 1000 gold on the life of Swanson.
+Sat Oct  7 13:00:30 2000 :: Trabajad collects the 1000 gold bounty on Swanson.
+Sat Oct  7 14:42:16 2000 :: Dulak collects the 2000 gold bounty on Katja.
+Sat Oct  7 15:00:53 2000 :: Kargoth collects the 500 gold bounty on Nicole.
+Sat Oct  7 15:36:14 2000 :: cloaked figure places a bounty of 1000 gold on the life of Chanter.
+Sat Oct  7 16:55:04 2000 :: cloaked figure places a bounty of 1000 gold on the life of Nicole.
+Sat Oct  7 17:02:15 2000 :: cloaked figure places a bounty of 1000 gold on the life of Poelja.
+Sat Oct  7 17:02:21 2000 :: Dulak collects the 1000 gold bounty on Nicole.
+Sat Oct  7 17:09:17 2000 :: Dulak collects the 1000 gold bounty on Chanter.
+Sat Oct  7 17:21:41 2000 :: Dulak collects the 500 gold bounty on cloaked figure.
+Sat Oct  7 17:24:33 2000 :: Dulak collects the 500 gold bounty on cloaked figure.
+Sat Oct  7 17:38:54 2000 :: Dulak collects the 500 gold bounty on cloaked figure.
+Sat Oct  7 18:45:42 2000 :: Conchita collects the 3000 gold bounty on Hudsun.
+Sat Oct  7 18:50:55 2000 :: Trabajad collects the 500 gold bounty on Conchita.
+Sun Oct  8 09:19:29 2000 :: Trabajad collects the 1000 gold bounty on Zaeem.
+Sun Oct  8 09:38:34 2000 :: cloaked figure places a bounty of 1000 gold on the life of Nicole.
+Sun Oct  8 09:41:45 2000 :: Dulak collects the 1000 gold bounty on Nicole.
+Sun Oct  8 09:52:49 2000 :: Nicole places a bounty of 1000 gold on the life of Jacyn.
+Sun Oct  8 10:18:58 2000 :: Dulak collects the 1000 gold bounty on Jacyn.
+Sun Oct  8 10:33:45 2000 :: Dulak collects the 500 gold bounty on Zangiff.
+Sun Oct  8 10:36:15 2000 :: Trabajad collects the 1500 gold bounty on Antari.
+Sun Oct  8 11:25:03 2000 :: Chanter places a bounty of 2000 gold on the life of Moli.
+Sun Oct  8 11:38:54 2000 :: Chanter places a bounty of 1000 gold on the life of Gorbash.
+Sun Oct  8 12:19:14 2000 :: Feldwarkis places a bounty of 1000 gold on the life of Gorbash.
+Sun Oct  8 12:59:15 2000 :: Trabajad collects the 2500 gold bounty on Gorbash.
+Sun Oct  8 13:01:25 2000 :: Trabajad collects the 500 gold bounty on Gorbash.
+Sun Oct  8 13:09:27 2000 :: Trabajad collects the 500 gold bounty on Zangiff.
+Sun Oct  8 13:59:29 2000 :: Trabajad collects the 3000 gold bounty on Moli.
+Sun Oct  8 14:33:26 2000 :: Zaruman places a bounty of 1000 gold on the life of Gorbash.
+Sun Oct  8 14:43:41 2000 :: Trabajad collects the 1000 gold bounty on Gorbash.
+Sun Oct  8 15:19:01 2000 :: Trabajad collects the 500 gold bounty on Zaruman.
+Sun Oct  8 15:41:46 2000 :: Jacyn places a bounty of 1000 gold on the life of Rashashana.
+Sun Oct  8 16:21:10 2000 :: Trabajad collects the 1000 gold bounty on Gambermine.
+Sun Oct  8 16:25:01 2000 :: Trabajad gives 1000 gold to cloaked figure.
+Sun Oct  8 16:31:09 2000 :: Trabajad gives 5000 gold to cloaked figure.
+Sun Oct  8 16:37:55 2000 :: cloaked figure places a bounty of 1000 gold on the life of Nicole.
+Sun Oct  8 16:45:50 2000 :: Trabajad collects the 1000 gold bounty on Nicole.
+Sun Oct  8 16:47:50 2000 :: cloaked figure places a bounty of 1000 gold on the life of Tilthos.
+Sun Oct  8 17:01:51 2000 :: Tilthos places a bounty of 1000 gold on the life of Chanter.
+Sun Oct  8 17:01:58 2000 :: Tilthos places a bounty of 2000 gold on the life of cloaked figure.
+Sun Oct  8 17:01:59 2000 :: Tilthos places a bounty of 2000 gold on the life of cloaked figure.
+Sun Oct  8 17:39:57 2000 :: Duerin places a bounty of 1000 gold on the life of Lograhm.
+Sun Oct  8 17:46:04 2000 :: Lograhm places a bounty of 1000 gold on the life of Duerin.
+Sun Oct  8 17:46:31 2000 :: Trabajad collects the 1000 gold bounty on Duerin.
+Sun Oct  8 17:51:48 2000 :: Trabajad collects the 1000 gold bounty on Chanter.
+Sun Oct  8 18:36:44 2000 :: Trabajad collects the 4000 gold bounty on Gaige.
+Sun Oct  8 18:55:18 2000 :: Tilcahtihl places a bounty of 1000 gold on the life of Zangiff.
+Sun Oct  8 19:21:19 2000 :: Trabajad collects the 1500 gold bounty on Lograhm.
+Mon Oct  9 11:12:12 2000 :: Kiera places a bounty of 1000 gold on the life of Maelvishan.
+Mon Oct  9 11:12:21 2000 :: Kiera places a bounty of 1000 gold on the life of Harwulf.
+Mon Oct  9 11:12:24 2000 :: Kiera places a bounty of 1000 gold on the life of Moli.
+Mon Oct  9 12:41:16 2000 :: Aymer places a bounty of 1000 gold on the life of cloaked figure.
+Mon Oct  9 13:48:08 2000 :: Trabajad collects the 500 gold bounty on Astirev.
+Mon Oct  9 13:51:42 2000 :: Trabajad collects the 3500 gold bounty on Nirgal.
+Mon Oct  9 14:09:44 2000 :: Sadrien places a bounty of 1000 gold on the life of Quezphiel.
+Mon Oct  9 15:44:12 2000 :: Trabajad collects the 1100 gold bounty on Warvoran.
+Mon Oct  9 15:50:06 2000 :: Myntulli places a bounty of 1000 gold on the life of Warvoran.
+Mon Oct  9 15:50:15 2000 :: Myntulli places a bounty of 1000 gold on the life of Warvoran.
+Mon Oct  9 16:10:34 2000 :: Dev places a bounty of 5000 gold on the life of Rashashana.
+Mon Oct  9 17:04:05 2000 :: Duerin places a bounty of 1000 gold on the life of Rashashana.
+Mon Oct  9 17:04:20 2000 :: Duerin places a bounty of 1000 gold on the life of Shurven.
+Mon Oct  9 18:43:04 2000 :: Tilthos places a bounty of 4000 gold on the life of Lograhm.
+Mon Oct  9 18:43:17 2000 :: Tilthos places a bounty of 4000 gold on the life of Kurgan.
+Mon Oct  9 18:46:01 2000 :: Tilthos places a bounty of 1000 gold on the life of Yhaln.
+Mon Oct  9 18:46:24 2000 :: Grinton collects the 1000 gold bounty on Yhaln.
+Mon Oct  9 19:03:22 2000 :: Grinton collects the 4000 gold bounty on Kurgan.
+Mon Oct  9 19:20:59 2000 :: Trabajad collects the 1000 gold bounty on Zangiff.
+Mon Oct  9 21:38:06 2000 :: Tilthos places a bounty of 1000 gold on the life of Grinton.
+Tue Oct 10 00:14:10 2000 :: Nocturen places a bounty of 10540 gold on the life of Kiera.
+Tue Oct 10 00:34:54 2000 :: Elbrith places a bounty of 1000 gold on the life of Gulicud.
+Tue Oct 10 00:43:35 2000 :: Kiera collects the 1000 gold bounty on Gulicud.
+Tue Oct 10 08:25:45 2000 :: Harwulf places a bounty of 1700 gold on the life of Gylith.
+Tue Oct 10 08:31:36 2000 :: Dulak collects the 1700 gold bounty on Gylith.
+Tue Oct 10 09:41:24 2000 :: Lograhm places a bounty of 1000 gold on the life of Jaken.
+Tue Oct 10 09:43:01 2000 :: Lograhm places a bounty of 1000 gold on the life of Zaeem.
+Tue Oct 10 10:05:53 2000 :: Dulak collects the 1000 gold bounty on Jaken.
+Tue Oct 10 10:20:23 2000 :: Moli places a bounty of 1000 gold on the life of Gylith.
+Tue Oct 10 12:10:54 2000 :: Macheath places a bounty of 10025 gold on the life of Macheath.
+Tue Oct 10 13:14:49 2000 :: Trabajad collects the 10540 gold bounty on Kiera.
+Tue Oct 10 13:23:21 2000 :: Trabajad collects the 1000 gold bounty on Coasty.
+Tue Oct 10 13:41:37 2000 :: Coasty places a bounty of 1147 gold on the life of Lograhm.
+Tue Oct 10 13:48:17 2000 :: cloaked figure places a bounty of 1103 gold on the life of Lograhm.
+Tue Oct 10 13:50:39 2000 :: Trabajad collects the 15352 gold bounty on Kargoth.
+Tue Oct 10 13:50:43 2000 :: cloaked figure places a bounty of 1148 gold on the life of Kargoth.
+Tue Oct 10 14:00:28 2000 :: Trabajad collects the 1148 gold bounty on Kargoth.
+Tue Oct 10 14:01:28 2000 :: Trabajad collects the 1000 gold bounty on Gylith.
+Tue Oct 10 14:29:54 2000 :: cloaked figure places a bounty of 1000 gold on the life of Gorbash.
+Tue Oct 10 14:30:49 2000 :: cloaked figure places a bounty of 1000 gold on the life of Gorbash.
+Tue Oct 10 15:56:38 2000 :: Phure places a bounty of 2000 gold on the life of Greil.
+Tue Oct 10 15:57:32 2000 :: Trabajad collects the 2000 gold bounty on Greil.
+Tue Oct 10 16:00:43 2000 :: Tilthos places a bounty of 3000 gold on the life of Trupal.
+Tue Oct 10 16:03:48 2000 :: Dormungurd collects the 1000 gold bounty on Tilthos.
+Tue Oct 10 16:05:42 2000 :: Tilthos places a bounty of 2000 gold on the life of Greil.
+Tue Oct 10 16:06:03 2000 :: Tilthos places a bounty of 1000 gold on the life of Greil.
+Tue Oct 10 16:06:39 2000 :: Tilthos places a bounty of 1000 gold on the life of Phure.
+Tue Oct 10 16:10:10 2000 :: Trabajad collects the 3000 gold bounty on Trupal.
+Tue Oct 10 16:46:53 2000 :: Maelvishan places a bounty of 1500 gold on the life of Tilthos.
+Tue Oct 10 16:47:00 2000 :: Maelvishan places a bounty of 1500 gold on the life of Malachia.
+Tue Oct 10 16:55:52 2000 :: Jiscile places a bounty of 1000 gold on the life of cloaked figure.
+Tue Oct 10 16:56:00 2000 :: Jiscile places a bounty of 1000 gold on the life of Birkdeesh.
+Tue Oct 10 17:03:41 2000 :: Kargoth collects the 1500 gold bounty on Tilthos.
+Tue Oct 10 17:06:40 2000 :: Jiscile places a bounty of 10000 gold on the life of Vir.
+Tue Oct 10 17:08:30 2000 :: Tilthos collects the 1000 gold bounty on Birkdeesh.
+Tue Oct 10 17:18:34 2000 :: Kargoth collects the 1500 gold bounty on Malachia.
+Tue Oct 10 17:42:13 2000 :: Jiscile places a bounty of 1000 gold on the life of Nicole.
+Tue Oct 10 17:43:40 2000 :: Kargoth collects the 1000 gold bounty on Nicole.
+Tue Oct 10 17:49:31 2000 :: Kargoth collects the 1500 gold bounty on Elbrith.
+Tue Oct 10 17:59:16 2000 :: Adam places a bounty of 1000 gold on the life of Morpheus.
+Tue Oct 10 18:03:26 2000 :: Aymer places a bounty of 1000 gold on the life of Nicole.
+Tue Oct 10 18:09:20 2000 :: Kargoth collects the 1000 gold bounty on Aymer.
+Tue Oct 10 18:16:13 2000 :: Kargoth collects the 1000 gold bounty on Morpheus.
+Tue Oct 10 18:28:27 2000 :: Gurd places a bounty of 1000 gold on the life of Elbrith.
+Tue Oct 10 18:28:52 2000 :: Zangiff places a bounty of 1000 gold on the life of Morpheus.
+Tue Oct 10 22:10:58 2000 :: Yuvien places a bounty of 19501 gold on the life of Gharik.
+Wed Oct 11 08:26:44 2000 :: Harwulf places a bounty of 1400 gold on the life of Durgoth.
+Wed Oct 11 14:22:21 2000 :: Conchita collects the 1000 gold bounty on Faunus.
+Wed Oct 11 15:07:59 2000 :: Grinton collects the 2000 gold bounty on Gorbash.
+Wed Oct 11 17:27:24 2000 :: Trabajad collects the 2500 gold bounty on Sadrien.
+Wed Oct 11 17:47:18 2000 :: Trabajad collects the 1000 gold bounty on Elbrith.
+Wed Oct 11 22:13:14 2000 :: Tilthos collects the 1000 gold bounty on Grinton.
+Wed Oct 11 22:25:36 2000 :: Belar places a bounty of 3000 gold on the life of Tilthos.
+Wed Oct 11 22:29:24 2000 :: Belar places a bounty of 5000 gold on the life of Tilthos.
+Thu Oct 12 09:32:15 2000 :: Harwulf places a bounty of 1000 gold on the life of Zesean.
+Thu Oct 12 11:02:30 2000 :: Zomlos places a bounty of 2000 gold on the life of Gorbash.
+Thu Oct 12 12:24:41 2000 :: Tilthos collects the 1425 gold bounty on Tolant.
+Thu Oct 12 12:45:21 2000 :: Trabajad collects the 1000 gold bounty on Nicole.
+Thu Oct 12 12:47:00 2000 :: Gorbash places a bounty of 1000 gold on the life of Tolant.
+Thu Oct 12 14:19:26 2000 :: Kargoth collects the 8000 gold bounty on Tilthos.
+Thu Oct 12 14:34:06 2000 :: Zomlos places a bounty of 1000 gold on the life of Jiscile.
+Thu Oct 12 14:40:46 2000 :: Trabajad collects the 1500 gold bounty on Yuvien.
+Thu Oct 12 14:44:33 2000 :: Blaison places a bounty of 2000 gold on the life of Jaken.
+Thu Oct 12 14:48:22 2000 :: Trabajad collects the 1000 gold bounty on Nocturen.
+Thu Oct 12 18:01:48 2000 :: Gharik places a bounty of 1000 gold on the life of Kargoth.
+Thu Oct 12 18:02:17 2000 :: Gharik places a bounty of 1000 gold on the life of Sadrien.
+Thu Oct 12 18:30:45 2000 :: Kargoth collects the 1500 gold bounty on Phure.
+Thu Oct 12 19:59:36 2000 :: Dulak collects the 1000 gold bounty on Moli.
+Thu Oct 12 20:11:40 2000 :: Dulak collects the 500 gold bounty on Mephistis.
+Thu Oct 12 20:46:05 2000 :: Moli places a bounty of 1000 gold on the life of Reno.
+Fri Oct 13 06:14:07 2000 :: Dulak collects the 1000 gold bounty on Zanroth.
+Fri Oct 13 08:40:25 2000 :: Lograhm places a bounty of 1000 gold on the life of Hudsun.
+Fri Oct 13 09:32:00 2000 :: Dulak collects the 1400 gold bounty on Durgoth.
+Fri Oct 13 10:39:37 2000 :: Lograhm places a bounty of 4000 gold on the life of Kievera.
+Fri Oct 13 10:46:28 2000 :: Kievera collects the 1000 gold bounty on Kargoth.
+Fri Oct 13 10:57:40 2000 :: Kargoth collects the 4000 gold bounty on Kievera.
+Fri Oct 13 11:14:21 2000 :: Brihlan places a bounty of 1500 gold on the life of Raal.
+Fri Oct 13 11:16:41 2000 :: Dulak collects the 1500 gold bounty on Raal.
+Fri Oct 13 11:36:29 2000 :: Trabajad collects the 1000 gold bounty on Dulak.
+Fri Oct 13 11:39:51 2000 :: Trabajad gives 1000 gold to (null).
+Fri Oct 13 11:41:31 2000 :: Dulak collects the 1000 gold bounty on Trabajad.
+Fri Oct 13 11:58:23 2000 :: Kargoth collects the 1000 gold bounty on Reno.
+Fri Oct 13 12:00:30 2000 :: Nirgal places a bounty of 1000 gold on the life of Astirev.
+Fri Oct 13 12:11:42 2000 :: Chanter places a bounty of 1000 gold on the life of Trabajad.
+Fri Oct 13 12:18:11 2000 :: Kargoth collects the 1000 gold bounty on Jiscile.
+Fri Oct 13 12:18:23 2000 :: Chanter places a bounty of 1000 gold on the life of Borenz.
+Fri Oct 13 12:24:46 2000 :: Kargoth collects the 1000 gold bounty on Hudsun.
+Fri Oct 13 12:49:08 2000 :: Kievera collects the 1000 gold bounty on Borenz.
+Fri Oct 13 13:06:54 2000 :: Jiscile places a bounty of 1000 gold on the life of Reno.
+Fri Oct 13 13:10:45 2000 :: Nirgal places a bounty of 5000 gold on the life of Deraluk.
+Fri Oct 13 13:10:49 2000 :: Nirgal places a bounty of 5000 gold on the life of Reno.
+Fri Oct 13 13:11:05 2000 :: Nirgal places a bounty of 5000 gold on the life of Nocturen.
+Fri Oct 13 13:12:38 2000 :: Nirgal places a bounty of 5000 gold on the life of Lograhm.
+Fri Oct 13 13:12:44 2000 :: Nirgal places a bounty of 5000 gold on the life of Nocturen.
+Fri Oct 13 13:13:58 2000 :: Nirgal places a bounty of 5000 gold on the life of Mektlair.
+Fri Oct 13 13:14:06 2000 :: Nirgal places a bounty of 5000 gold on the life of Conairis.
+Fri Oct 13 13:17:32 2000 :: Nirgal places a bounty of 5000 gold on the life of Kargoth.
+Fri Oct 13 13:22:28 2000 :: Nirgal places a bounty of 5000 gold on the life of Borenz.
+Fri Oct 13 13:23:30 2000 :: Kievera collects the 5000 gold bounty on Conairis.
+Fri Oct 13 13:31:52 2000 :: Nirgal places a bounty of 4000 gold on the life of Trabajad.
+Fri Oct 13 13:33:09 2000 :: Trabajad collects the 5000 gold bounty on Borenz.
+Fri Oct 13 13:36:44 2000 :: Nirgal places a bounty of 5000 gold on the life of Kievera.
+Fri Oct 13 13:52:30 2000 :: Trabajad collects the 5000 gold bounty on Mektlair.
+Fri Oct 13 14:45:29 2000 :: Kargoth collects the 500 gold bounty on Pinto.
+Fri Oct 13 15:08:29 2000 :: Yuvien places a bounty of 20000 gold on the life of Kargoth.
+Fri Oct 13 15:27:29 2000 :: Yuvien places a bounty of 1000 gold on the life of Larent.
+Fri Oct 13 15:49:47 2000 :: Kargoth collects the 1000 gold bounty on Astirev.
+Sat Oct 14 02:32:53 2000 :: Liselle gives 8000 gold to Kievera.
+Sat Oct 14 04:08:19 2000 :: Kievera collects the 5000 gold bounty on Padan.
+Sat Oct 14 07:30:41 2000 :: Dulak collects the 1500 gold bounty on Zesean.
+Sat Oct 14 11:25:07 2000 :: Jiscile places a bounty of 1000 gold on the life of Monica.
+Sat Oct 14 12:20:31 2000 :: Dulak advances to Veteran Hunter.
+Sat Oct 14 12:20:31 2000 :: Dulak collects the 2000 gold bounty on Gorbash.
+Sat Oct 14 12:25:52 2000 :: Liselle collects the 1000 gold bounty on Monica.
+Sat Oct 14 14:36:47 2000 :: Monica places a bounty of 1000 gold on the life of Faunus.
+Sat Oct 14 14:44:58 2000 :: Faunus places a bounty of 1000 gold on the life of Astirev.
+Sat Oct 14 14:50:45 2000 :: Dulak collects the 1000 gold bounty on Astirev.
+Sat Oct 14 15:07:30 2000 :: Faunus places a bounty of 1000 gold on the life of Yuvien.
+Sat Oct 14 16:16:19 2000 :: Yuvien places a bounty of 9499 gold on the life of Gharik.
+Sat Oct 14 23:28:10 2000 :: Maelvishan places a bounty of 6000 gold on the life of Tolant.
+Sun Oct 15 00:27:23 2000 :: Harwulf places a bounty of 1000 gold on the life of Astirev.
+Sun Oct 15 00:27:33 2000 :: Harwulf places a bounty of 1000 gold on the life of Jacyn.
+Sun Oct 15 01:30:40 2000 :: Kievera collects the 1000 gold bounty on Harwulf.
+Sun Oct 15 07:10:31 2000 :: Dulak collects the 500 gold bounty on Zestar.
+Sun Oct 15 09:29:39 2000 :: Merrak places a bounty of 1000 gold on the life of Myntulli.
+Sun Oct 15 09:36:11 2000 :: Myntulli places a bounty of 1000 gold on the life of Yhaln.
+Sun Oct 15 09:40:21 2000 :: Myntulli places a bounty of 1000 gold on the life of Merrak.
+Sun Oct 15 09:50:54 2000 :: Dulak collects the 1000 gold bounty on Merrak.
+Sun Oct 15 12:58:18 2000 :: Yuvien places a bounty of 2000 gold on the life of Gorbash.
+Sun Oct 15 13:00:12 2000 :: Yuvien places a bounty of 2000 gold on the life of Hudsun.
+Sun Oct 15 13:11:29 2000 :: Maelvishan places a bounty of 4000 gold on the life of Yuvien.
+Sun Oct 15 13:16:54 2000 :: Liselle collects the 2000 gold bounty on Gorbash.
+Sun Oct 15 13:17:24 2000 :: Conchita collects the 2000 gold bounty on Hudsun.
+Sun Oct 15 13:18:11 2000 :: Liselle collects the 1000 gold bounty on Faunus.
+Sun Oct 15 13:27:50 2000 :: Yuvien places a bounty of 5000 gold on the life of Faunus.
+Sun Oct 15 13:27:52 2000 :: Yuvien places a bounty of 5000 gold on the life of Gorbash.
+Sun Oct 15 13:27:55 2000 :: Yuvien places a bounty of 5000 gold on the life of Hudsun.
+Sun Oct 15 13:36:39 2000 :: Lamos places a bounty of 1000 gold on the life of Liselle.
+Sun Oct 15 13:38:47 2000 :: Lamos places a bounty of 1000 gold on the life of Conchita.
+Sun Oct 15 13:38:57 2000 :: Liselle collects the 1000 gold bounty on Conchita.
+Sun Oct 15 13:51:12 2000 :: Liselle collects the 2000 gold bounty on Jaken.
+Thu Dec 28 02:23:14 2000 :: Daedelex places a bounty of 50000 gold on the life of Challen.
+Sun Feb  4 00:48:37 2001 :: Rygath places a bounty of 10000 gold on the life of Metaphiusen.
+Wed Feb 28 22:39:11 2001 :: Pastorius places a bounty of 1000 gold on the life of Vornak.
+Thu May 17 01:25:15 2001 :: Waekath places a bounty of 10000 gold on the life of Morglum.
+Wed May 23 02:11:04 2001 :: Jhyrbian places a bounty of 1000 gold on the life of Arolin.
+Wed May 23 23:40:38 2001 :: Eladrian places a bounty of 10000 gold on the life of Seikilos.
+Wed May 23 23:48:30 2001 :: Eladrian places a bounty of 10000 gold on the life of Seikilos.
+Wed May 23 23:54:53 2001 :: Gonsalves places a bounty of 5000 gold on the life of Arolin.
+Wed May 23 23:55:39 2001 :: Gonsalves places a bounty of 50000 gold on the life of Arolin.
+Wed May 23 23:56:35 2001 :: Gonsalves places a bounty of 50000 gold on the life of Jhyrbian.
+Wed May 23 23:57:15 2001 :: Jhyrbian collects the 56000 gold bounty on Arolin.
+Wed May 23 23:59:09 2001 :: Seikilos places a bounty of 5000000 gold on the life of Arolin.
+Wed May 23 23:59:14 2001 :: Seikilos places a bounty of 5000000 gold on the life of Jhyrbian.
+Thu May 24 00:00:14 2001 :: Eladrian collects the 5000000 gold bounty on Arolin.
+Thu May 24 00:00:17 2001 :: Eladrian collects the 5050000 gold bounty on Jhyrbian.
+Thu May 24 00:01:12 2001 :: Seikilos places a bounty of 150000 gold on the life of Jhyrbian.
+Thu May 24 00:01:15 2001 :: Seikilos places a bounty of 150000 gold on the life of Arolin.
+Thu May 24 00:04:27 2001 :: Arolin collects the 150000 gold bounty on Jhyrbian.
+Thu May 24 00:06:11 2001 :: Jhyrbian collects the 150000 gold bounty on Arolin.
+Thu May 24 00:14:19 2001 :: Seikilos places a bounty of 10000 gold on the life of Kithsadonia.
+Thu May 24 00:15:45 2001 :: Jhyrbian collects the 10000 gold bounty on Kithsadonia.
+Thu May 24 00:26:54 2001 :: Jhyrbian gives 100000 gold to Arolin.
+Thu May 24 00:32:30 2001 :: Eladrian places a bounty of 5000 gold on the life of Kithsadonia.
+Thu May 24 03:37:59 2001 :: Eladrian places a bounty of 10000 gold on the life of Smeg.
+Thu May 24 09:23:56 2001 :: Gonsalves places a bounty of 3000 gold on the life of Verrucchio.
+Thu May 24 09:29:28 2001 :: Gonsalves places a bounty of 1000 gold on the life of Prithe.
+Thu May 24 09:29:42 2001 :: Arolin gives 20000 gold to Gonsalves.
+Thu May 24 09:29:58 2001 :: Gonsalves places a bounty of 1000 gold on the life of Verrucchio.
+Thu May 24 09:33:56 2001 :: Gonsalves places a bounty of 1000 gold on the life of Prithe.
+Thu May 24 09:41:15 2001 :: Gonsalves places a bounty of 1000 gold on the life of Prithe.
+Thu May 24 10:02:33 2001 :: Gonsalves places a bounty of 1000 gold on the life of Baadal.
+Thu May 24 10:09:45 2001 :: Arolin collects the 1000 gold bounty on Baadal.
+Thu May 24 10:10:41 2001 :: Arolin gives 2000 gold to Gonsalves.
+Thu May 24 10:12:08 2001 :: Gonsalves places a bounty of 2000 gold on the life of Baadal.
+Thu May 24 10:36:45 2001 :: Taithin places a bounty of 1000 gold on the life of Behtar.
+Thu May 24 11:07:04 2001 :: Behtar places a bounty of 1000 gold on the life of Taithin.
+Thu May 24 11:10:41 2001 :: Taithin collects the 1000 gold bounty on Behtar.
+Thu May 24 13:47:21 2001 :: Karsus places a bounty of 1000 gold on the life of Taithin.
+Thu May 24 13:47:25 2001 :: Karsus places a bounty of 1000 gold on the life of Baadal.
+Thu May 24 13:47:35 2001 :: Karsus places a bounty of 1000 gold on the life of Kithsadonia.
+Thu May 24 13:47:58 2001 :: Karsus places a bounty of 1000 gold on the life of Kalzar.
+Thu May 24 13:48:01 2001 :: Karsus places a bounty of 1000 gold on the life of Smeg.
+Thu May 24 13:48:08 2001 :: Karsus places a bounty of 10000 gold on the life of Tyner.
+Thu May 24 13:48:27 2001 :: Karsus places a bounty of 8000 gold on the life of Karsus.
+Thu May 24 13:52:42 2001 :: Taithin collects the 3000 gold bounty on Baadal.
+Thu May 24 18:16:04 2001 :: Klendathu places a bounty of 1000 gold on the life of Xanth.
+Thu May 24 19:07:29 2001 :: Klendathu places a bounty of 10000 gold on the life of Taithin.
+Thu May 24 19:07:41 2001 :: Klendathu places a bounty of 10000 gold on the life of Soreth.
+Thu May 24 19:56:17 2001 :: Taithin gives 11000 gold to Klendathu.
+Thu May 24 20:24:58 2001 :: Taithin gives 3988 gold to Rendsin.
+Thu May 24 20:33:00 2001 :: Soreth places a bounty of 1000 gold on the life of Klendathu.
+Thu May 24 20:33:38 2001 :: Taithin collects the 1000 gold bounty on Klendathu.
+Thu May 24 22:10:08 2001 :: Arolin collects the 10000 gold bounty on Soreth.
+Fri May 25 04:30:21 2001 :: Verrucchio gives 1000 gold to Zarlak.
+Fri May 25 04:30:48 2001 :: Zarlak places a bounty of 1000 gold on the life of Smeg.
+Fri May 25 04:59:09 2001 :: Verrucchio collects the 12000 gold bounty on Smeg.
+Fri May 25 05:23:12 2001 :: Verrucchio gives 5000 gold to Zarlak.
+Fri May 25 05:23:19 2001 :: Zarlak places a bounty of 5000 gold on the life of Smeg.
+Fri May 25 05:27:13 2001 :: Verrucchio collects the 5000 gold bounty on Smeg.
+Fri May 25 06:01:55 2001 :: Aberbaby places a bounty of 1000 gold on the life of Smeg.
+Fri May 25 06:05:52 2001 :: Verrucchio collects the 1000 gold bounty on Smeg.
+Fri May 25 10:10:00 2001 :: Kalzar places a bounty of 1000 gold on the life of Nog.
+Fri May 25 16:11:43 2001 :: Baadal collects the 1000 gold bounty on Nog.
+Fri May 25 16:14:11 2001 :: Manshon places a bounty of 1000 gold on the life of Baadal.
+Fri May 25 16:14:47 2001 :: Manshon places a bounty of 1000 gold on the life of Byvarn.
+Fri May 25 16:17:10 2001 :: Manshon places a bounty of 7000 gold on the life of Cyreus.
+Fri May 25 16:36:45 2001 :: Byvarn collects the 7000 gold bounty on Cyreus.
+Fri May 25 17:37:25 2001 :: Taithin collects the 1000 gold bounty on Baadal.
+Fri May 25 17:47:36 2001 :: Rendsin places a bounty of 1000 gold on the life of Ramisiv.
+Fri May 25 17:47:49 2001 :: Rendsin places a bounty of 3000 gold on the life of Baadal.
+Fri May 25 17:48:27 2001 :: Ramisiv places a bounty of 5000 gold on the life of Rendsin.
+Fri May 25 17:48:28 2001 :: Rendsin places a bounty of 1000 gold on the life of Phargo.
+Fri May 25 17:50:03 2001 :: Taithin collects the 3000 gold bounty on Baadal.
+Fri May 25 18:04:08 2001 :: Eladrian places a bounty of 50000 gold on the life of Taithin.
+Fri May 25 18:05:18 2001 :: Taithin gives 2500 gold to Baadal.
+Fri May 25 19:48:44 2001 :: Eladrian places a bounty of 50000 gold on the life of Taithin.
+Fri May 25 19:55:25 2001 :: Arolin collects the 62000 gold bounty on Taithin.
+Fri May 25 19:56:11 2001 :: Klendathu places a bounty of 1000 gold on the life of Arolin.
+Fri May 25 20:20:32 2001 :: Taithin collects the 1000 gold bounty on Arolin.
+Sat May 26 17:50:15 2001 :: Manshon collects the 6000 gold bounty on Kithsadonia.
+Sat May 26 18:13:22 2001 :: Kithsadonia places a bounty of 10000 gold on the life of Manshon.
+Sat May 26 20:55:54 2001 :: Eladrian places a bounty of 10000 gold on the life of Kundali.
+Sat May 26 21:47:43 2001 :: Kundali places a bounty of 73017 gold on the life of Manshon.
+Sat May 26 21:48:56 2001 :: Manshon collects the 10000 gold bounty on Kundali.
+Sat May 26 21:49:33 2001 :: Manshon gives 5000 gold to Kundali.
+Sat May 26 21:59:56 2001 :: Kundali places a bounty of 1000 gold on the life of Garet.
+Sat May 26 22:00:16 2001 :: Kundali places a bounty of 1000 gold on the life of Phargo.
+Sat May 26 22:00:21 2001 :: Kundali places a bounty of 1000 gold on the life of Caedes.
+Sun May 27 02:50:43 2001 :: Nog places a bounty of 1000 gold on the life of Laotzu.
+Sun May 27 09:09:54 2001 :: Arolin collects the 83017 gold bounty on Manshon.
+Sun May 27 09:10:07 2001 :: Arolin gives 70000 gold to Manshon.
+Sun May 27 09:35:36 2001 :: Jhyrbian collects the 500 gold bounty on Dokrn.
+Sun May 27 16:56:09 2001 :: Nog places a bounty of 1000 gold on the life of Phargo.
+Sun May 27 23:59:14 2001 :: Carantoc places a bounty of 1000 gold on the life of Ramisiv.
+Mon May 28 05:38:06 2001 :: Jhyrbian gives 36000 gold to Dokrn.
+Mon May 28 09:37:32 2001 :: Ilien places a bounty of 3565 gold on the life of Kalzar.
+Mon May 28 11:18:10 2001 :: Ilien places a bounty of 20000 gold on the life of Abobo.
+Mon May 28 11:18:32 2001 :: Dokrn places a bounty of 4000 gold on the life of Abobo.
+Mon May 28 12:08:25 2001 :: Abobo collects the 3000 gold bounty on Prithe.
+Mon May 28 13:25:35 2001 :: Eladrian places a bounty of 5000 gold on the life of Aberass.
+Mon May 28 13:35:19 2001 :: Caedes collects the 3565 gold bounty on Kalzar.
+Mon May 28 13:44:59 2001 :: Kalzar places a bounty of 2500 gold on the life of Caedes.
+Mon May 28 15:10:29 2001 :: Zethus places a bounty of 1000 gold on the life of Talinso.
+Mon May 28 17:58:19 2001 :: Laotzu gives 10000 gold to Excelsior.
+Mon May 28 18:19:32 2001 :: Nog places a bounty of 1000 gold on the life of Klendathu.
+Mon May 28 18:19:46 2001 :: Abobo gives 30000 gold to Nog.
+Mon May 28 18:20:06 2001 :: Nog places a bounty of 30000 gold on the life of Klendathu.
+Mon May 28 18:32:57 2001 :: Abobo collects the 31000 gold bounty on Klendathu.
+Mon May 28 18:33:25 2001 :: Abobo gives 45000 gold to Nog.
+Mon May 28 18:33:39 2001 :: Nog places a bounty of 45000 gold on the life of Mendakarian.
+Mon May 28 18:34:25 2001 :: Abobo collects the 45000 gold bounty on Mendakarian.
+Mon May 28 18:35:26 2001 :: Abobo gives 45000 gold to Nog.
+Mon May 28 18:37:00 2001 :: Nog places a bounty of 45000 gold on the life of Klendathu.
+Mon May 28 18:37:22 2001 :: Rygath places a bounty of 10000 gold on the life of Mendakarian.
+Mon May 28 18:37:26 2001 :: Abobo collects the 45000 gold bounty on Klendathu.
+Mon May 28 18:37:38 2001 :: Rygath places a bounty of 10000 gold on the life of Pheon.
+Mon May 28 18:38:45 2001 :: Abobo gives 45000 gold to Nog.
+Mon May 28 18:39:25 2001 :: Nog places a bounty of 45000 gold on the life of Mendakarian.
+Mon May 28 18:43:08 2001 :: Caedes collects the 10000 gold bounty on Pheon.
+Mon May 28 18:43:12 2001 :: Nog places a bounty of 2000 gold on the life of Klendathu.
+Mon May 28 18:44:17 2001 :: Abobo collects the 2000 gold bounty on Klendathu.
+Mon May 28 18:59:37 2001 :: Rygath places a bounty of 20000 gold on the life of Abobo.
+Mon May 28 18:59:58 2001 :: Nog places a bounty of 63000 gold on the life of Caedes.
+Mon May 28 19:00:42 2001 :: Abobo collects the 67000 gold bounty on Caedes.
+Mon May 28 19:01:12 2001 :: Rygath places a bounty of 20000 gold on the life of Abobo.
+Mon May 28 19:31:34 2001 :: Mendakarian places a bounty of 9000 gold on the life of Klendathu.
+Mon May 28 19:35:13 2001 :: Abobo collects the 9000 gold bounty on Klendathu.
+Mon May 28 19:40:21 2001 :: Abobo gives 30000 gold to Shalkron.
+Mon May 28 19:40:39 2001 :: Shalkron places a bounty of 30000 gold on the life of Delania.
+Mon May 28 19:40:45 2001 :: Abobo gives 40000 gold to Shalkron.
+Mon May 28 19:46:45 2001 :: Abobo collects the 30000 gold bounty on Delania.
+Tue May 29 08:40:20 2001 :: Abobo collects the 4000 gold bounty on Verrucchio.
+Tue May 29 08:47:08 2001 :: Abobo gives 4000 gold to Verrucchio.
+Tue May 29 09:19:20 2001 :: Abobo collects the 500 gold bounty on Nog.
+Tue May 29 09:26:50 2001 :: Nog places a bounty of 20000 gold on the life of Verrucchio.
+Tue May 29 09:27:25 2001 :: Nog places a bounty of 50000 gold on the life of Verrucchio.
+Tue May 29 09:27:36 2001 :: Eladrian places a bounty of 50000 gold on the life of Nog.
+Tue May 29 09:28:52 2001 :: Abobo collects the 70000 gold bounty on Verrucchio.
+Tue May 29 09:36:41 2001 :: Abobo collects the 50000 gold bounty on Nog.
+Tue May 29 09:37:54 2001 :: Abobo gives 50000 gold to Nog.
+Tue May 29 09:37:59 2001 :: Nog places a bounty of 50000 gold on the life of Abobo.
+Tue May 29 09:39:53 2001 :: Abobo gives 50000 gold to Nog.
+Tue May 29 09:40:04 2001 :: Nog places a bounty of 50000 gold on the life of Abobo.
+Tue May 29 15:47:08 2001 :: Aberbaby collects the 5000 gold bounty on Rendsin.
+Tue May 29 15:50:41 2001 :: Nog places a bounty of 10000 gold on the life of Taithin.
+Tue May 29 15:51:25 2001 :: Abobo collects the 10000 gold bounty on Taithin.
+Tue May 29 15:51:38 2001 :: Abobo gives 10000 gold to Nog.
+Tue May 29 15:51:41 2001 :: Nog places a bounty of 10000 gold on the life of Rendsin.
+Tue May 29 15:52:19 2001 :: Abobo collects the 10000 gold bounty on Rendsin.
+Tue May 29 16:05:18 2001 :: Aberbaby collects the 164000 gold bounty on Abobo.
+Tue May 29 16:06:26 2001 :: Aberbaby gives 10000 gold to Diesel.
+Tue May 29 16:06:32 2001 :: Aberbaby gives 10000 gold to Taithin.
+Tue May 29 16:06:41 2001 :: Taithin gives 1000 gold to Rendsin.
+Tue May 29 16:06:47 2001 :: Rendsin places a bounty of 1000 gold on the life of Nog.
+Tue May 29 16:16:12 2001 :: Diesel collects the 1000 gold bounty on Nog.
+Tue May 29 16:16:38 2001 :: Abobo gives 10000 gold to Nog.
+Tue May 29 16:17:01 2001 :: Nog places a bounty of 10000 gold on the life of Diesel.
+Tue May 29 16:17:05 2001 :: Nog places a bounty of 10000 gold on the life of Aberbaby.
+Tue May 29 16:19:23 2001 :: Nog places a bounty of 10000 gold on the life of Kaervek.
+Tue May 29 16:19:33 2001 :: Nog places a bounty of 10000 gold on the life of Brogg.
+Tue May 29 16:19:48 2001 :: Nog places a bounty of 10000 gold on the life of Rendsin.
+Tue May 29 16:27:28 2001 :: Abobo collects the 10000 gold bounty on Kaervek.
+Tue May 29 16:28:10 2001 :: Abobo gives 10000 gold to Nog.
+Tue May 29 16:28:13 2001 :: Rendsin places a bounty of 1000 gold on the life of Abobo.
+Tue May 29 16:30:45 2001 :: Rendsin places a bounty of 1000 gold on the life of Nog.
+Tue May 29 16:32:07 2001 :: Abobo collects the 10000 gold bounty on Aberbaby.
+Tue May 29 16:55:46 2001 :: Aberbaby collects the 10000 gold bounty on Brogg.
+Tue May 29 19:40:55 2001 :: Taithin collects the 10000 gold bounty on Mendakarian.
+Tue May 29 19:42:14 2001 :: Kalzar places a bounty of 1000 gold on the life of Taithin.
+Tue May 29 19:42:42 2001 :: Eladrian places a bounty of 49000 gold on the life of Taithin.
+Tue May 29 19:42:46 2001 :: Abobo collects the 50000 gold bounty on Taithin.
+Tue May 29 19:43:23 2001 :: Carantoc places a bounty of 100000 gold on the life of Carantoc.
+Tue May 29 20:17:23 2001 :: Abobo collects the 500 gold bounty on Kithsadonia.
+Tue May 29 20:21:12 2001 :: Nog places a bounty of 1000 gold on the life of Klendathu.
+Tue May 29 20:24:16 2001 :: Abobo collects the 1000 gold bounty on Klendathu.
+Tue May 29 20:35:21 2001 :: Abobo gives 40000 gold to Nog.
+Tue May 29 20:35:23 2001 :: Nog places a bounty of 30000 gold on the life of Mendakarian.
+Tue May 29 20:38:00 2001 :: Carantoc places a bounty of 15000 gold on the life of Nog.
+Tue May 29 20:40:03 2001 :: Abobo collects the 16000 gold bounty on Nog.
+Tue May 29 21:22:10 2001 :: Abobo gives 40000 gold to Nog.
+Wed May 30 00:58:56 2001 :: Seikilos places a bounty of 1000 gold on the life of Kyoran.
+Wed May 30 00:58:56 2001 :: Seikilos places a bounty of 1000 gold on the life of Mowgli.
+Wed May 30 02:01:47 2001 :: Ajax collects the 1000 gold bounty on Mowgli.
+Wed May 30 09:28:35 2001 :: Abobo collects the 10000 gold bounty on Rendsin.
+Wed May 30 09:47:35 2001 :: Abobo gives 60000 gold to Rendsin.
+Wed May 30 10:10:35 2001 :: Eladrian places a bounty of 10000 gold on the life of Kaervek.
+Wed May 30 10:31:09 2001 :: Abobo collects the 10000 gold bounty on Kaervek.
+Wed May 30 10:42:43 2001 :: Zarlak places a bounty of 2500 gold on the life of Kaervek.
+Wed May 30 10:51:14 2001 :: Kaervek places a bounty of 35000 gold on the life of Abobo.
+Wed May 30 10:59:03 2001 :: Aberbaby collects the 2500 gold bounty on Kaervek.
+Wed May 30 11:00:20 2001 :: Kaervek places a bounty of 25000 gold on the life of Aberbaby.
+Wed May 30 11:02:54 2001 :: Abobo collects the 25000 gold bounty on Aberbaby.
+Wed May 30 11:15:40 2001 :: Aberbaby collects the 200000 gold bounty on Abobo.
+Wed May 30 11:19:27 2001 :: Aberbaby gives 200000 gold to Zarlak.
+Wed May 30 11:20:01 2001 :: Zarlak places a bounty of 100000 gold on the life of Kaervek.
+Wed May 30 11:20:22 2001 :: Zarlak places a bounty of 100000 gold on the life of Rendsin.
+Wed May 30 11:29:57 2001 :: Kaervek places a bounty of 2500 gold on the life of Zarlak.
+Wed May 30 11:29:59 2001 :: Abobo gives 2400 gold to Aberbaby.
+Wed May 30 11:33:43 2001 :: Aberbaby collects the 100000 gold bounty on Kaervek.
+Wed May 30 11:57:19 2001 :: Aberbaby collects the 2500 gold bounty on Zarlak.
+Wed May 30 15:38:34 2001 :: Diesel collects the 100000 gold bounty on Rendsin.
+Wed May 30 15:38:51 2001 :: Diesel gives 50000 gold to Rendsin.
+Wed May 30 16:26:35 2001 :: Aberbaby collects the 10000 gold bounty on Diesel.
+Wed May 30 16:39:45 2001 :: Zethus places a bounty of 1000 gold on the life of Kaervek.
+Wed May 30 16:39:58 2001 :: Zethus places a bounty of 3000 gold on the life of Rendsin.
+Wed May 30 16:40:24 2001 :: Zethus places a bounty of 1000 gold on the life of Brogg.
+Wed May 30 16:41:54 2001 :: Rendsin places a bounty of 1000 gold on the life of Diesel.
+Wed May 30 16:42:02 2001 :: Rendsin places a bounty of 1000 gold on the life of Diesel.
+Wed May 30 18:14:43 2001 :: Abobo collects the 1000 gold bounty on Brogg.
+Wed May 30 18:16:19 2001 :: Abobo gives 100000 gold to Brogg.
+Wed May 30 18:16:58 2001 :: Brogg places a bounty of 1501 gold on the life of Abobo.
+Wed May 30 22:44:56 2001 :: Caedes collects the 3000 gold bounty on Rendsin.
+Wed May 30 23:57:05 2001 :: Karsus places a bounty of 14000 gold on the life of Talinso.
+Thu May 31 07:50:51 2001 :: Kaervek places a bounty of 16001 gold on the life of Talinso.
+Thu May 31 08:39:20 2001 :: Kaervek places a bounty of 1000 gold on the life of Shiakar.
+Thu May 31 14:45:41 2001 :: Brogg places a bounty of 1001 gold on the life of Aberbaby.
+Thu May 31 15:16:00 2001 :: Aberbaby advances to Veteran Hunter.
+Thu May 31 15:16:00 2001 :: Aberbaby collects the 2000 gold bounty on Diesel.
+Thu May 31 15:36:50 2001 :: Aberbaby advances to Veteran Hunter.
+Thu May 31 15:36:50 2001 :: Aberbaby collects the 2000 gold bounty on Diesel.
+Thu May 31 15:59:15 2001 :: Kaervek places a bounty of 8999 gold on the life of Aberbaby.
+Thu May 31 16:39:30 2001 :: Diesel collects the 30500 gold bounty on Mendakarian.
+Thu May 31 16:41:13 2001 :: Diesel gives 1000 gold to Mendakarian.
+Thu May 31 16:41:27 2001 :: Mendakarian places a bounty of 1000 gold on the life of Klendathu.
+Thu May 31 16:43:05 2001 :: Diesel collects the 1000 gold bounty on Klendathu.
+Thu May 31 17:01:47 2001 :: Aberbaby collects the 1501 gold bounty on Abobo.
+Thu May 31 17:02:39 2001 :: Seikilos places a bounty of 10000 gold on the life of Rendsin.
+Thu May 31 17:02:52 2001 :: Seikilos places a bounty of 40000 gold on the life of Rendsin.
+Thu May 31 17:11:13 2001 :: Abobo collects the 10000 gold bounty on Aberbaby.
+Thu May 31 19:31:52 2001 :: Abobo gives 50000 gold to Mausum.
+Thu May 31 19:32:15 2001 :: Mausum places a bounty of 50000 gold on the life of Caedes.
+Thu May 31 19:33:37 2001 :: Rygath places a bounty of 10000 gold on the life of Abobo.
+Thu May 31 19:43:10 2001 :: Abobo advances to Veteran Hunter.
+Thu May 31 19:43:10 2001 :: Abobo collects the 50000 gold bounty on Caedes.
+Thu May 31 23:15:42 2001 :: Zethus places a bounty of 1000 gold on the life of Ajax.
+Fri Jun  1 01:54:20 2001 :: Lancroft places a bounty of 2500 gold on the life of Ajax.
+Fri Jun  1 01:56:47 2001 :: Lancroft places a bounty of 2500 gold on the life of Ajax.
+Fri Jun  1 02:39:00 2001 :: Morglum places a bounty of 1000000 gold on the life of Talinso.
+Fri Jun  1 02:39:50 2001 :: Morglum collects the 1030501 gold bounty on Talinso.
+Fri Jun  1 11:25:59 2001 :: Baadal gives 5000 gold to Kaervek.
+Fri Jun  1 11:27:22 2001 :: Baadal gives 10000 gold to Kaervek.
+Sat Jun  2 01:23:34 2001 :: Karsus places a bounty of 10000 gold on the life of Lancroft.
+Sat Jun  2 01:23:49 2001 :: Karsus places a bounty of 10000 gold on the life of Graezil.
+Sat Jun  2 01:24:03 2001 :: Karsus places a bounty of 10000 gold on the life of Xivirin.
+Sat Jun  2 01:30:34 2001 :: Karsus places a bounty of 50000 gold on the life of Klendathu.
+Sat Jun  2 01:31:03 2001 :: Karsus places a bounty of 20000 gold on the life of Draklin.
+Sat Jun  2 01:59:29 2001 :: Draklin collects the 50000 gold bounty on Klendathu.
+Sat Jun  2 12:36:09 2001 :: Wodah places a bounty of 1000 gold on the life of Graezil.
+Sat Jun  2 12:36:23 2001 :: Wodah places a bounty of 1000 gold on the life of Treonithag.
+Sat Jun  2 12:36:36 2001 :: Wodah places a bounty of 1000 gold on the life of Lancroft.
+Sat Jun  2 12:48:33 2001 :: Wodah places a bounty of 1000 gold on the life of Hyetlin.
+Sat Jun  2 12:50:24 2001 :: Lancroft places a bounty of 1000 gold on the life of Abobo.
+Sat Jun  2 14:55:23 2001 :: Ajax collects the 1000 gold bounty on Treonithag.
+Sat Jun  2 15:19:30 2001 :: Treonithag places a bounty of 1000 gold on the life of Ajax.
+Sat Jun  2 15:40:02 2001 :: Abobo collects the 7000 gold bounty on Ajax.
+Sat Jun  2 15:57:21 2001 :: Ajax collects the 11000 gold bounty on Abobo.
+Sat Jun  2 18:38:20 2001 :: Tyner places a bounty of 9000 gold on the life of Lancroft.
+Sat Jun  2 21:34:44 2001 :: Tyner places a bounty of 3000 gold on the life of Ranto.
+Sun Jun  3 12:34:30 2001 :: Aberdaddy places a bounty of 1000 gold on the life of Boxfresh.
+Sun Jun  3 12:34:38 2001 :: Aberdaddy places a bounty of 1000 gold on the life of Dansar.
+Sun Jun  3 21:04:56 2001 :: Toth places a bounty of 1000 gold on the life of Klendathu.
+Sun Jun  3 21:09:12 2001 :: Hyetlin collects the 1000 gold bounty on Klendathu.
+Sun Jun  3 21:17:40 2001 :: Hyetlin gives 1000 gold to Klendathu.
+Sun Jun  3 21:17:53 2001 :: Klendathu places a bounty of 1000 gold on the life of Darinamin.
+Sun Jun  3 21:19:16 2001 :: Hyetlin collects the 1000 gold bounty on Darinamin.
+Sun Jun  3 23:57:07 2001 :: Byvarn gives 1500 gold to Ajax.
+Mon Jun  4 00:45:42 2001 :: Ajax collects the 11000 gold bounty on Graezil.
+Mon Jun  4 16:29:30 2001 :: Sarenth places a bounty of 10000 gold on the life of Hyetlin.
+Mon Jun  4 16:30:18 2001 :: Hyetlin gives 1000 gold to Alarn.
+Mon Jun  4 16:36:32 2001 :: Caliphano places a bounty of 5000 gold on the life of Alarn.
+Mon Jun  4 16:37:50 2001 :: Hyetlin collects the 5000 gold bounty on Alarn.
+Mon Jun  4 17:22:51 2001 :: Alarn places a bounty of 13000 gold on the life of Hyetlin.
+Mon Jun  4 17:31:09 2001 :: Baadal gives 2000 gold to Taithin.
+Mon Jun  4 17:35:24 2001 :: Taithin collects the 24000 gold bounty on Hyetlin.
+Mon Jun  4 17:37:53 2001 :: Alarn places a bounty of 3000 gold on the life of Hyetlin.
+Mon Jun  4 17:38:12 2001 :: Taithin gives 10000 gold to Baadal.
+Tue Jun  5 01:27:39 2001 :: Alarn places a bounty of 5000 gold on the life of Zoverax.
+Tue Jun  5 01:27:51 2001 :: Alarn places a bounty of 5000 gold on the life of Mordeth.
+Tue Jun  5 15:22:29 2001 :: Taithin gives 1000 gold to Klendathu.
+Tue Jun  5 17:49:47 2001 :: Taithin gives 1000 gold to Treonithag.
+Tue Jun  5 17:50:08 2001 :: Treonithag places a bounty of 1000 gold on the life of Klendathu.
+Tue Jun  5 18:27:15 2001 :: Taithin gives 1000 gold to Treonithag.
+Tue Jun  5 18:28:04 2001 :: Taithin gives 50000 gold to Treonithag.
+Wed Jun  6 18:36:57 2001 :: Shalkron gives 1000 gold to Sakyen.
+Wed Jun  6 18:37:30 2001 :: Shalkron gives 5000 gold to Sakyen.
+Wed Jun  6 18:39:01 2001 :: Sakyen places a bounty of 1001 gold on the life of Hyetlin.
+Wed Jun  6 18:54:40 2001 :: Karsus places a bounty of 100000 gold on the life of Treonithag.
+Wed Jun  6 18:55:00 2001 :: Karsus places a bounty of 100000 gold on the life of Hyetlin.
+Wed Jun  6 19:14:10 2001 :: Hyetlin collects the 100000 gold bounty on Treonithag.
+Thu Jun  7 01:28:02 2001 :: Ajax collects the 5000 gold bounty on Mordeth.
+Thu Jun  7 12:15:21 2001 :: Sakyen places a bounty of 5000 gold on the life of Dru.
+Thu Jun  7 12:15:35 2001 :: Sakyen places a bounty of 5000 gold on the life of Klendathu.
+Thu Jun  7 12:15:40 2001 :: Sakyen places a bounty of 5000 gold on the life of Darinamin.
+Thu Jun  7 12:20:59 2001 :: Taithin collects the 6000 gold bounty on Klendathu.
+Fri Jun  8 00:48:03 2001 :: Carantoc places a bounty of 19000 gold on the life of Ajax.
+Fri Jun  8 00:48:29 2001 :: Carantoc places a bounty of 19500 gold on the life of Hyetlin.
+Fri Jun  8 01:09:20 2001 :: Grebeg places a bounty of 3000 gold on the life of Hyetlin.
+Fri Jun  8 01:16:05 2001 :: Ajax collects the 107001 gold bounty on Hyetlin.
+Fri Jun  8 14:53:27 2001 :: Abobo collects the 5000 gold bounty on Dru.
+Fri Jun  8 16:13:52 2001 :: Grebeg places a bounty of 15000 gold on the life of Hyetlin.
+Fri Jun  8 16:14:20 2001 :: Hyetlin collects the 5000 gold bounty on Darinamin.
+Sat Jun  9 17:17:01 2001 :: Tyner places a bounty of 2500 gold on the life of Shiakar.
+Sat Jun  9 23:17:28 2001 :: Empar places a bounty of 3000 gold on the life of Icthorsus.
+Sat Jun  9 23:18:23 2001 :: Preonater collects the 3000 gold bounty on Icthorsus.
+Sat Jun  9 23:32:37 2001 :: Preonater gives 10000 gold to Empar.
+Sat Jun  9 23:32:52 2001 :: Preonater gives 10000 gold to Sirianthin.
+Mon Jun 11 08:49:52 2001 :: Abobo collects the 3000 gold bounty on Ranto.
+Wed Jul 25 13:22:10 2001 :: Taithin gives 8997 gold to Tyner.
+Wed Jul 25 13:22:40 2001 :: Tyner places a bounty of 8000 gold on the life of Taithin.
+Wed Jul 25 13:23:00 2001 :: Tyner places a bounty of 4000 gold on the life of Taithin.
+Tue Aug  7 23:10:35 2001 :: Seikilos places a bounty of 100000 gold on the life of Carantoc.
+Tue Aug  7 23:10:45 2001 :: Seikilos places a bounty of 1000 gold on the life of Carantoc.
+Thu Aug  9 12:41:05 2001 :: Morglum places a bounty of 100000 gold on the life of Morglum.
+Sat Aug 11 16:35:19 2001 :: Sosticen places a bounty of 1000 gold on the life of Mazza.
+Sun Aug 12 02:15:57 2001 :: Mazza gives 1154 gold to Shellie.
+Sun Aug 12 02:58:55 2001 :: Amarellis places a bounty of 1000 gold on the life of Jaiso.
+Sun Aug 12 02:59:01 2001 :: Amarellis places a bounty of 1000 gold on the life of Shellie.
+Sun Aug 12 02:59:12 2001 :: Amarellis places a bounty of 1000 gold on the life of Rykh.
+Sun Aug 12 03:00:44 2001 :: Mazza collects the 1000 gold bounty on Shellie.
+Sun Aug 12 03:05:06 2001 :: Shellie places a bounty of 1000 gold on the life of Mordain.
+Sun Aug 12 04:18:29 2001 :: Amarellis collects the 1000 gold bounty on Mordain.
+Sun Aug 12 05:45:27 2001 :: Sosticen places a bounty of 1000 gold on the life of Amarellis.
+Sun Aug 12 05:45:33 2001 :: Shellie places a bounty of 1000 gold on the life of Amarellis.
+Sun Aug 12 05:45:34 2001 :: Shellie places a bounty of 1000 gold on the life of Ipsindrag.
+Sun Aug 12 05:45:47 2001 :: Mazza gives 1000 gold to Sosticen.
+Sun Aug 12 05:46:02 2001 :: Sosticen places a bounty of 1000 gold on the life of Ipsindrag.
+Sun Aug 12 05:47:38 2001 :: Amarellis gives 2000 gold to Mordain.
+Sun Aug 12 05:47:51 2001 :: Mordain places a bounty of 1000 gold on the life of Sosticen.
+Sun Aug 12 05:47:58 2001 :: Mordain places a bounty of 1000 gold on the life of Shellie.
+Sun Aug 12 05:50:18 2001 :: Dervix places a bounty of 1473 gold on the life of Mazza.
+Sun Aug 12 06:34:00 2001 :: Mazza collects the 1000 gold bounty on Sosticen.
+Sun Aug 12 06:36:43 2001 :: Mazza collects the 1000 gold bounty on Shellie.
+Sun Aug 12 15:38:25 2001 :: Vorlan places a bounty of 4000 gold on the life of Jeroawyth.
+Sun Aug 12 16:24:33 2001 :: Amarellis collects the 2473 gold bounty on Mazza.
+Sun Aug 12 17:01:47 2001 :: Mazza collects the 2000 gold bounty on Amarellis.
+Sun Aug 12 17:08:00 2001 :: Hrundel places a bounty of 1000 gold on the life of Mazza.
+Sun Aug 12 17:09:55 2001 :: Jaiso places a bounty of 1000 gold on the life of Mazza.
+Sun Aug 12 17:11:05 2001 :: Mazza gives 1000 gold to Amragir.
+Sun Aug 12 17:12:00 2001 :: Amragir places a bounty of 1000 gold on the life of Amarellis.
+Sun Aug 12 17:16:19 2001 :: Morin places a bounty of 1000 gold on the life of Joxor.
+Sun Aug 12 17:24:34 2001 :: Jaiso places a bounty of 4000 gold on the life of Mazza.
+Sun Aug 12 17:38:57 2001 :: Mazza collects the 1000 gold bounty on Amarellis.
+Sun Aug 12 18:18:36 2001 :: Mazza collects the 1000 gold bounty on Joxor.
+Sun Aug 12 18:23:12 2001 :: Joxor places a bounty of 1000 gold on the life of Amarellis.
+Sun Aug 12 18:23:30 2001 :: Rudem places a bounty of 3000 gold on the life of Amarellis.
+Sun Aug 12 18:23:48 2001 :: Mazza collects the 4000 gold bounty on Amarellis.
+Sun Aug 12 18:26:54 2001 :: Rudem places a bounty of 1000 gold on the life of Amarellis.
+Sun Aug 12 18:30:38 2001 :: Amarellis collects the 6000 gold bounty on Mazza.
+Sun Aug 12 18:36:28 2001 :: Gorthax places a bounty of 1000 gold on the life of Mazza.
+Sun Aug 12 18:43:21 2001 :: Joxor places a bounty of 1000 gold on the life of Gorthax.
+Sun Aug 12 20:02:35 2001 :: Morglum places a bounty of 4000 gold on the life of Morglum.
+Sun Aug 12 23:18:10 2001 :: Erifdel places a bounty of 1000 gold on the life of Khazhar.
+Mon Aug 13 02:13:10 2001 :: Jaiso places a bounty of 5000 gold on the life of Arolin.
+Mon Aug 13 02:17:18 2001 :: Arolin places a bounty of 2000 gold on the life of Jaiso.
+Mon Aug 13 02:38:47 2001 :: Mazza collects the 5000 gold bounty on Arolin.
+Mon Aug 13 05:43:35 2001 :: Mazza collects the 1000 gold bounty on Amarellis.
+Mon Aug 13 16:59:19 2001 :: Ilinir places a bounty of 1000 gold on the life of Hrundel.
+Mon Aug 13 17:02:20 2001 :: Kraevek places a bounty of 4000 gold on the life of Jaiso.
+Mon Aug 13 17:02:36 2001 :: Kraevek places a bounty of 2000 gold on the life of Hrundel.
+Mon Aug 13 17:09:56 2001 :: Jaiso places a bounty of 2500 gold on the life of Hrundel.
+Mon Aug 13 17:10:05 2001 :: Jaiso places a bounty of 2500 gold on the life of Kraevek.
+Mon Aug 13 17:53:53 2001 :: Mazza collects the 2500 gold bounty on Kraevek.
+Mon Aug 13 21:06:57 2001 :: Jaiso places a bounty of 4000 gold on the life of Arolin.
+Mon Aug 13 21:12:32 2001 :: Arolin places a bounty of 1000 gold on the life of Jaiso.
+Mon Aug 13 21:12:37 2001 :: Arolin places a bounty of 1000 gold on the life of Kraevek.
+Mon Aug 13 21:12:44 2001 :: Arolin places a bounty of 1000 gold on the life of Shracum.
+Mon Aug 13 21:22:05 2001 :: Morglum places a bounty of 30000 gold on the life of Jathruk.
+Mon Aug 13 22:04:11 2001 :: Ilinir places a bounty of 1000 gold on the life of Kryil.
+Mon Aug 13 22:04:52 2001 :: Ilinir places a bounty of 1000 gold on the life of Kryil.
+Mon Aug 13 22:04:54 2001 :: Ilinir places a bounty of 1000 gold on the life of Kryil.
+Mon Aug 13 22:04:55 2001 :: Ilinir places a bounty of 1000 gold on the life of Kryil.
+Mon Aug 13 22:04:56 2001 :: Ilinir places a bounty of 1000 gold on the life of Kryil.
+Mon Aug 13 22:04:57 2001 :: Ilinir places a bounty of 1000 gold on the life of Kryil.
+Tue Aug 14 09:55:00 2001 :: Tiernus collects the 30000 gold bounty on Jathruk.
+Wed Aug 15 16:42:01 2001 :: Karth places a bounty of 5000 gold on the life of Zichlych.
+Wed Aug 15 18:20:45 2001 :: Umndor places a bounty of 2000 gold on the life of Ilinir.
+Wed Aug 15 18:25:46 2001 :: Umndor places a bounty of 2000 gold on the life of Alivaan.
+Wed Aug 15 18:25:54 2001 :: Umndor places a bounty of 1000 gold on the life of Ulrik.
+Thu Aug 16 03:24:25 2001 :: Umndor places a bounty of 1000 gold on the life of Ysnar.
+Thu Aug 16 03:29:52 2001 :: Umndor places a bounty of 1000 gold on the life of Orin.
+Thu Aug 16 05:03:31 2001 :: Enterk places a bounty of 1000 gold on the life of Zeijar.
+Thu Aug 16 07:35:34 2001 :: Hrundel places a bounty of 10000 gold on the life of Gibbli.
+Thu Aug 16 07:39:57 2001 :: Hrundel places a bounty of 20000 gold on the life of Gibbli.
+Thu Aug 16 08:19:38 2001 :: Hrundel places a bounty of 30000 gold on the life of Gibbli.
+Thu Aug 16 08:32:53 2001 :: Mutabor collects the 60000 gold bounty on Gibbli.
+Thu Aug 16 08:33:45 2001 :: Mutabor gives 30000 gold to Parcellyn.
+Thu Aug 16 08:41:18 2001 :: Gibbli places a bounty of 1000 gold on the life of Parcellyn.
+Thu Aug 16 09:03:24 2001 :: Hrundel places a bounty of 10000 gold on the life of Mutabor.
+Thu Aug 16 14:28:52 2001 :: Ilinir places a bounty of 4000 gold on the life of Fernard.
+Thu Aug 16 14:39:19 2001 :: Laearrist collects the 4000 gold bounty on Fernard.
+Thu Aug 16 23:33:11 2001 :: Seikilos places a bounty of 1000 gold on the life of Fagface.
+Thu Aug 16 23:34:26 2001 :: Seikilos places a bounty of 5000 gold on the life of Fagface.
+Thu Aug 16 23:36:33 2001 :: Tiernus collects the 6000 gold bounty on Fagface.
+Fri Aug 17 01:11:36 2001 :: Alivaan places a bounty of 5000 gold on the life of Laearrist.
+Fri Aug 17 01:13:00 2001 :: Alivaan places a bounty of 5000 gold on the life of Laearrist.
+Fri Aug 17 18:39:44 2001 :: Enterk places a bounty of 1000 gold on the life of Ivaides.
+Fri Aug 17 18:40:42 2001 :: Thunk places a bounty of 1000 gold on the life of Hinderbohk.
+Fri Aug 17 19:52:39 2001 :: Hinderbohk collects the 1000 gold bounty on Ivaides.
+Fri Aug 17 19:54:38 2001 :: Enterk places a bounty of 1000 gold on the life of Baltch.
+Fri Aug 17 19:54:45 2001 :: Enterk places a bounty of 1000 gold on the life of Zrialynith.
+Fri Aug 17 19:58:02 2001 :: Baltch places a bounty of 1000 gold on the life of Enterk.
+Fri Aug 17 20:08:16 2001 :: Calenduil places a bounty of 5000 gold on the life of Jathruk.
+Fri Aug 17 20:11:30 2001 :: Calenduil places a bounty of 5000 gold on the life of Jathruk.
+Fri Aug 17 20:11:41 2001 :: Calenduil collects the 10000 gold bounty on Jathruk.
+Fri Aug 17 20:14:34 2001 :: Calenduil places a bounty of 5000 gold on the life of Jathruk.
+Fri Aug 17 20:15:04 2001 :: Calenduil collects the 5000 gold bounty on Jathruk.
+Fri Aug 17 20:18:49 2001 :: Calenduil places a bounty of 5000 gold on the life of Jathruk.
+Fri Aug 17 20:19:02 2001 :: Calenduil collects the 5000 gold bounty on Jathruk.
+Fri Aug 17 20:21:43 2001 :: Calenduil places a bounty of 5000 gold on the life of Jathruk.
+Fri Aug 17 20:24:07 2001 :: Calenduil places a bounty of 2000 gold on the life of Jathruk.
+Fri Aug 17 20:24:14 2001 :: Calenduil places a bounty of 10000 gold on the life of Jathruk.
+Fri Aug 17 20:24:35 2001 :: Calenduil collects the 17000 gold bounty on Jathruk.
+Fri Aug 17 21:25:56 2001 :: Tiernus collects the 5000 gold bounty on Jathruk.
+Fri Aug 17 22:28:06 2001 :: Alivaan places a bounty of 20000 gold on the life of Rhedrijar.
+Fri Aug 17 23:08:13 2001 :: Alivaan places a bounty of 10000 gold on the life of Rhedrijar.
+Sat Aug 18 01:37:18 2001 :: Alivaan places a bounty of 50000 gold on the life of Dharash.
+Sat Aug 18 10:11:31 2001 :: Laearrist collects the 1000 gold bounty on Baltch.
+Sat Aug 18 11:38:17 2001 :: Laearrist collects the 1000 gold bounty on Zrialynith.
+Sat Aug 18 11:59:38 2001 :: Ingurath places a bounty of 20000 gold on the life of Baltch.
+Sat Aug 18 12:07:49 2001 :: Ingurath places a bounty of 20000 gold on the life of Zrialynith.
+Sat Aug 18 12:53:16 2001 :: Laearrist collects the 20000 gold bounty on Zrialynith.
+Sat Aug 18 13:22:19 2001 :: Zrialynith places a bounty of 1000 gold on the life of Barrach.
+Sat Aug 18 17:13:49 2001 :: Ingurath places a bounty of 34003 gold on the life of Talia.
+Sat Aug 18 17:20:32 2001 :: Talia places a bounty of 5000 gold on the life of Laearrist.
+Sat Aug 18 17:20:39 2001 :: Talia places a bounty of 5000 gold on the life of Vorelion.
+Sat Aug 18 17:20:44 2001 :: Talia places a bounty of 5000 gold on the life of Rhedrijar.
+Sat Aug 18 17:20:50 2001 :: Talia places a bounty of 5000 gold on the life of Keleran.
+Sat Aug 18 17:20:57 2001 :: Talia places a bounty of 5000 gold on the life of Epainetos.
+Sat Aug 18 17:21:01 2001 :: Talia places a bounty of 5000 gold on the life of Enterk.
+Sat Aug 18 17:21:06 2001 :: Talia places a bounty of 5000 gold on the life of Ingurath.
+Sat Aug 18 17:23:27 2001 :: Talia places a bounty of 1000 gold on the life of Javany.
+Sat Aug 18 17:24:04 2001 :: Ilinir places a bounty of 3000 gold on the life of Laearrist.
+Sat Aug 18 17:24:52 2001 :: Ilinir places a bounty of 2000 gold on the life of Ingurath.
+Sat Aug 18 17:32:37 2001 :: Ingurath places a bounty of 30000 gold on the life of Ilinir.
+Sat Aug 18 18:00:52 2001 :: Talia places a bounty of 1000 gold on the life of Briztin.
+Sat Aug 18 18:00:56 2001 :: Talia places a bounty of 1000 gold on the life of Barrach.
+Sat Aug 18 18:01:01 2001 :: Talia places a bounty of 1000 gold on the life of Maddyn.
+Sat Aug 18 18:01:06 2001 :: Talia places a bounty of 1000 gold on the life of Ingurath.
+Sat Aug 18 20:59:39 2001 :: Zrialynith places a bounty of 7000 gold on the life of Ashur.
+Sat Aug 18 21:01:01 2001 :: Ashur places a bounty of 100000 gold on the life of Zrialynith.
+Sat Aug 18 21:04:48 2001 :: Talia places a bounty of 10000 gold on the life of Dirvada.
+Sat Aug 18 21:08:19 2001 :: Zichlych collects the 100000 gold bounty on Zrialynith.
+Sat Aug 18 21:09:51 2001 :: Talia places a bounty of 10000 gold on the life of Hrundel.
+Sat Aug 18 21:18:46 2001 :: Talia places a bounty of 100000 gold on the life of Lancroft.
+Sat Aug 18 21:25:54 2001 :: Renshaki places a bounty of 150000 gold on the life of Talia.
+Sat Aug 18 23:08:03 2001 :: Renshaki places a bounty of 5000 gold on the life of Alcaledies.
+Sat Aug 18 23:14:26 2001 :: Alcaledies places a bounty of 7000 gold on the life of Kanchelsis.
+Sun Aug 19 01:58:03 2001 :: Braedavinash places a bounty of 10000 gold on the life of Lotranios.
+Sun Aug 19 01:58:41 2001 :: Braedavinash places a bounty of 5000 gold on the life of Varata.
+Sun Aug 19 02:05:47 2001 :: Kanchelsis collects the 10000 gold bounty on Lotranios.
+Sun Aug 19 02:31:36 2001 :: Kanchelsis collects the 5000 gold bounty on Varata.
+Sun Aug 19 02:40:09 2001 :: Lotranios places a bounty of 10000 gold on the life of Kanchelsis.
+Sun Aug 19 02:42:41 2001 :: Alivaan places a bounty of 1000 gold on the life of Kanchelsis.
+Sun Aug 19 03:17:28 2001 :: Ingurath places a bounty of 20000 gold on the life of Losfer.
+Sun Aug 19 03:17:35 2001 :: Ingurath places a bounty of 20000 gold on the life of Zichlych.
+Sun Aug 19 03:18:14 2001 :: Zichlych collects the 20000 gold bounty on Losfer.
+Sun Aug 19 03:59:32 2001 :: Talia places a bounty of 10000 gold on the life of Braedavinash.
+Sun Aug 19 04:09:35 2001 :: Ingurath places a bounty of 10000 gold on the life of Barrach.
+Sun Aug 19 04:55:12 2001 :: Talia places a bounty of 30000 gold on the life of Braedavinash.
+Sun Aug 19 04:58:22 2001 :: Zichlych collects the 40000 gold bounty on Braedavinash.
+Sun Aug 19 05:00:54 2001 :: Talia places a bounty of 40000 gold on the life of Ingurath.
+Sun Aug 19 05:01:37 2001 :: Zichlych collects the 48000 gold bounty on Ingurath.
+Sun Aug 19 05:53:07 2001 :: Talia places a bounty of 150000 gold on the life of Kanchelsis.
+Sun Aug 19 05:53:25 2001 :: Talia places a bounty of 50000 gold on the life of Ingurath.
+Sun Aug 19 05:59:11 2001 :: Talia places a bounty of 5000 gold on the life of Zichlych.
+Sun Aug 19 05:59:17 2001 :: Talia places a bounty of 50000 gold on the life of Kanchelsis.
+Sun Aug 19 06:03:18 2001 :: Talia places a bounty of 70000 gold on the life of Kanchelsis.
+Sun Aug 19 06:06:03 2001 :: Kanchelsis collects the 50000 gold bounty on Ingurath.
+Sun Aug 19 06:09:23 2001 :: Talia places a bounty of 100000 gold on the life of Kanchelsis.
+Sun Aug 19 06:12:23 2001 :: Ingurath places a bounty of 10000 gold on the life of Talia.
+Sun Aug 19 06:15:48 2001 :: Talia places a bounty of 50000 gold on the life of Kanchelsis.
+Sun Aug 19 06:15:55 2001 :: Talia places a bounty of 5000 gold on the life of Zichlych.
+Sun Aug 19 06:25:46 2001 :: Talia places a bounty of 10000 gold on the life of Zichlych.
+Sun Aug 19 06:26:04 2001 :: Talia places a bounty of 100000 gold on the life of Kanchelsis.
+Sun Aug 19 06:30:03 2001 :: Zichlych advances to Hunter.
+Sun Aug 19 06:30:03 2001 :: Zichlych collects the 538000 gold bounty on Kanchelsis.
+Sun Aug 19 06:30:24 2001 :: Talia places a bounty of 50000 gold on the life of Zichlych.
+Sun Aug 19 16:29:53 2001 :: Infren places a bounty of 1000 gold on the life of Kalzar.
+Sun Aug 19 18:21:20 2001 :: Valius places a bounty of 100000 gold on the life of Alivaan.
+Mon Aug 20 00:58:52 2001 :: Talia places a bounty of 50000 gold on the life of Zichlych.
+Mon Aug 20 00:58:57 2001 :: Talia places a bounty of 50000 gold on the life of Orin.
+Mon Aug 20 00:59:04 2001 :: Talia places a bounty of 50000 gold on the life of Lotranios.
+Mon Aug 20 01:05:49 2001 :: Talia places a bounty of 50000 gold on the life of Lancroft.
+Mon Aug 20 01:06:06 2001 :: Talia places a bounty of 50000 gold on the life of Zaekava.
+Mon Aug 20 01:14:30 2001 :: Zichlych collects the 150000 gold bounty on Lancroft.
+Mon Aug 20 03:51:13 2001 :: Alivaan places a bounty of 10000 gold on the life of Valius.
+Mon Aug 20 03:51:17 2001 :: Alivaan places a bounty of 10000 gold on the life of Talia.
+Mon Aug 20 12:28:11 2001 :: Valius places a bounty of 100000 gold on the life of Seiji.
+Mon Aug 20 12:28:20 2001 :: Valius places a bounty of 100000 gold on the life of Winsprent.
+Mon Aug 20 12:48:03 2001 :: Laearrist collects the 100000 gold bounty on Seiji.
+Mon Aug 20 12:49:33 2001 :: Laearrist collects the 100000 gold bounty on Winsprent.
+Mon Aug 20 13:50:15 2001 :: Laearrist collects the 50000 gold bounty on Lotranios.
+Mon Aug 20 14:15:49 2001 :: Aichros places a bounty of 15000 gold on the life of Ingurath.
+Mon Aug 20 14:28:34 2001 :: Aichros places a bounty of 15000 gold on the life of Laearrist.
+Mon Aug 20 14:40:13 2001 :: Thermain collects the 15000 gold bounty on Ingurath.
+Mon Aug 20 14:41:03 2001 :: Ingurath places a bounty of 3000 gold on the life of Lotranios.
+Mon Aug 20 15:00:08 2001 :: Ilinir places a bounty of 1000 gold on the life of Shracum.
+Tue Aug 21 00:43:10 2001 :: Laearrist advances to Bounty Hunter.
+Tue Aug 21 00:43:10 2001 :: Laearrist collects the 51000 gold bounty on Orin.
+Tue Aug 21 12:46:06 2001 :: Winsprent places a bounty of 15000 gold on the life of Ryrinir.
+Tue Aug 21 12:47:34 2001 :: Laearrist collects the 6000 gold bounty on Enterk.
+Tue Aug 21 14:02:47 2001 :: Enterk places a bounty of 20000 gold on the life of Baltch.
+Tue Aug 21 14:41:28 2001 :: Baltch places a bounty of 5000 gold on the life of Laearrist.
+Tue Aug 21 14:43:30 2001 :: Erifdel places a bounty of 1000 gold on the life of Laearrist.
+Tue Aug 21 20:13:27 2001 :: Nahctagala places a bounty of 1000 gold on the life of Shracum.
+Wed Aug 22 05:41:43 2001 :: Zaekava places a bounty of 1000 gold on the life of Talia.
+Wed Aug 22 07:30:48 2001 :: Zichlych collects the 10000 gold bounty on Mutabor.
+Wed Aug 22 07:35:28 2001 :: Zichlych gives 20000 gold to Mutabor.
+Thu Aug 23 20:31:20 2001 :: Deplenok places a bounty of 30000 gold on the life of Pyzondar.
+Thu Aug 23 20:36:47 2001 :: Deplenok places a bounty of 20000 gold on the life of Hila.
+Fri Aug 24 15:39:13 2001 :: Deplenok places a bounty of 38316 gold on the life of Ilinir.
+Sat Aug 25 14:33:57 2001 :: Impyragon places a bounty of 5000 gold on the life of Zrialynith.
+Sat Aug 25 15:02:59 2001 :: Morlonok places a bounty of 20000 gold on the life of Keviatalon.
+Sun Aug 26 03:35:43 2001 :: Mutabor gives 1000 gold to Kern.
+Sun Aug 26 03:36:19 2001 :: Mutabor gives 3000 gold to Kern.
+Sun Aug 26 03:37:39 2001 :: Mutabor gives 1000 gold to Kern.
+Sun Aug 26 12:26:14 2001 :: Sylar places a bounty of 10000 gold on the life of Impyragon.
+Sun Aug 26 12:57:02 2001 :: Deplenok places a bounty of 10000 gold on the life of Zrialynith.
+Mon Aug 27 02:40:46 2001 :: Zaekava places a bounty of 100000 gold on the life of Astarua.
+Mon Aug 27 02:42:39 2001 :: Keviatalon collects the 100000 gold bounty on Astarua.
+Tue Aug 28 03:25:46 2001 :: Karsus places a bounty of 15000 gold on the life of Saik.
+Tue Aug 28 04:14:34 2001 :: Keviatalon advances to Bounty Hunter.
+Tue Aug 28 04:14:34 2001 :: Keviatalon collects the 205003 gold bounty on Talia.
+Tue Aug 28 17:12:09 2001 :: Impyragon places a bounty of 10000 gold on the life of Braxan.
+Tue Aug 28 17:48:42 2001 :: Impyragon places a bounty of 10000 gold on the life of Keviatalon.
+Tue Aug 28 17:53:37 2001 :: Keviatalon collects the 15000 gold bounty on Zrialynith.
+Tue Aug 28 17:58:51 2001 :: Impyragon places a bounty of 10000 gold on the life of Braxan.
+Tue Aug 28 18:01:09 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Aug 28 18:01:10 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Aug 28 18:01:12 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Aug 28 18:01:13 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Aug 28 18:01:14 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Aug 28 18:01:31 2001 :: Impyragon places a bounty of 4000 gold on the life of Reginald.
+Tue Aug 28 18:01:57 2001 :: Impyragon places a bounty of 5000 gold on the life of Tefahnis.
+Tue Aug 28 18:17:17 2001 :: Impyragon places a bounty of 10000 gold on the life of Ryrinir.
+Wed Aug 29 02:09:50 2001 :: Braxan places a bounty of 15000 gold on the life of Zaekava.
+Wed Aug 29 02:10:09 2001 :: Lalaliina places a bounty of 27000 gold on the life of Zaekava.
+Wed Aug 29 02:27:51 2001 :: Braxan places a bounty of 5000 gold on the life of Greglekzer.
+Wed Aug 29 03:03:08 2001 :: Braxan places a bounty of 10000 gold on the life of Israh.
+Wed Aug 29 03:03:15 2001 :: Braxan places a bounty of 10000 gold on the life of Doobak.
+Wed Aug 29 03:04:56 2001 :: Braxan places a bounty of 5000 gold on the life of Zaekava.
+Wed Aug 29 03:16:21 2001 :: Keviatalon collects the 10000 gold bounty on Israh.
+Wed Aug 29 04:33:10 2001 :: Yarrik places a bounty of 10000 gold on the life of Mazun.
+Wed Aug 29 04:33:55 2001 :: Yarrik places a bounty of 10000 gold on the life of Mycroft.
+Wed Aug 29 04:38:54 2001 :: Yarrik places a bounty of 20000 gold on the life of Greglekzer.
+Wed Aug 29 09:11:11 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:12 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:13 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:13 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:13 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:14 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:14 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:14 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:14 2001 :: Impyragon places a bounty of 1000 gold on the life of Mutabor.
+Wed Aug 29 09:11:46 2001 :: Impyragon places a bounty of 6000 gold on the life of Doobak.
+Wed Aug 29 09:11:55 2001 :: Impyragon places a bounty of 5000 gold on the life of Chantung.
+Wed Aug 29 10:28:55 2001 :: Yarrik places a bounty of 10000 gold on the life of Chantung.
+Wed Aug 29 14:29:35 2001 :: Braxan places a bounty of 10000 gold on the life of Maddyn.
+Wed Aug 29 14:42:10 2001 :: Braxan places a bounty of 5000 gold on the life of Tsai.
+Wed Aug 29 23:53:40 2001 :: Impyragon places a bounty of 20000 gold on the life of Braxan.
+Wed Aug 29 23:57:48 2001 :: Impyragon places a bounty of 20000 gold on the life of Braxan.
+Wed Aug 29 23:57:52 2001 :: Impyragon places a bounty of 10000 gold on the life of Lalaliina.
+Thu Aug 30 01:06:51 2001 :: Keviatalon collects the 10000 gold bounty on Mycroft.
+Thu Aug 30 03:26:10 2001 :: Zaekava places a bounty of 1000 gold on the life of Keviatalon.
+Thu Aug 30 03:26:19 2001 :: Zaekava places a bounty of 100000 gold on the life of Keviatalon.
+Thu Aug 30 04:12:33 2001 :: Doobak places a bounty of 30000 gold on the life of Keviatalon.
+Thu Aug 30 13:15:55 2001 :: Anzanayre places a bounty of 60000 gold on the life of Braxan.
+Thu Aug 30 14:21:48 2001 :: Ksotos places a bounty of 10000 gold on the life of Grilonin.
+Thu Aug 30 14:25:37 2001 :: Grilonin places a bounty of 20000 gold on the life of Ryrinir.
+Thu Aug 30 14:25:48 2001 :: Grilonin places a bounty of 5000 gold on the life of Ryrinir.
+Thu Aug 30 14:27:23 2001 :: Grilonin places a bounty of 6000 gold on the life of Chantung.
+Thu Aug 30 14:29:17 2001 :: Mutabor collects the 10000 gold bounty on Grilonin.
+Thu Aug 30 14:49:33 2001 :: Tsai places a bounty of 100000 gold on the life of Ryrinir.
+Thu Aug 30 14:52:57 2001 :: Mutabor collects the 125000 gold bounty on Ryrinir.
+Fri Aug 31 01:35:59 2001 :: Zaekava places a bounty of 20000 gold on the life of Greglekzer.
+Fri Aug 31 01:52:12 2001 :: Braxan places a bounty of 15000 gold on the life of Greglekzer.
+Fri Aug 31 01:53:14 2001 :: Keviatalon collects the 60000 gold bounty on Greglekzer.
+Fri Aug 31 02:33:58 2001 :: Zaekava places a bounty of 20000 gold on the life of Greglekzer.
+Fri Aug 31 02:39:41 2001 :: Greglekzer places a bounty of 40000 gold on the life of Ingurath.
+Fri Aug 31 02:39:52 2001 :: Greglekzer places a bounty of 40000 gold on the life of Tsai.
+Fri Aug 31 02:43:34 2001 :: Braxan places a bounty of 2000 gold on the life of Greglekzer.
+Fri Aug 31 03:03:15 2001 :: Zaekava places a bounty of 10000 gold on the life of Ingurath.
+Fri Aug 31 03:19:24 2001 :: Greglekzer places a bounty of 50000 gold on the life of Grubbin.
+Sat Sep  1 15:28:46 2001 :: Lalaliina places a bounty of 45000 gold on the life of Ingurath.
+Sun Sep  2 04:42:12 2001 :: Orndrahm places a bounty of 10000 gold on the life of Ohnar.
+Sun Sep  2 14:12:43 2001 :: Ingurath places a bounty of 30000 gold on the life of Yueim.
+Mon Sep  3 02:19:37 2001 :: Mordain places a bounty of 80000 gold on the life of Keviatalon.
+Mon Sep  3 12:51:53 2001 :: Anzanayre places a bounty of 10000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:25 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:25 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:26 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:26 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:26 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:26 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:27 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:27 2001 :: Impyragon places a bounty of 1000 gold on the life of Keviatalon.
+Tue Sep  4 16:43:31 2001 :: Impyragon places a bounty of 1000 gold on the life of Shracum.
+Tue Sep  4 16:43:31 2001 :: Impyragon places a bounty of 1000 gold on the life of Shracum.
+Tue Sep  4 16:43:32 2001 :: Impyragon places a bounty of 1000 gold on the life of Shracum.
+Tue Sep  4 16:43:32 2001 :: Impyragon places a bounty of 1000 gold on the life of Shracum.
+Tue Sep  4 16:43:32 2001 :: Impyragon places a bounty of 1000 gold on the life of Shracum.
+Tue Sep  4 16:43:32 2001 :: Impyragon places a bounty of 1000 gold on the life of Shracum.
+Tue Sep  4 17:02:15 2001 :: Keviatalon collects the 95000 gold bounty on Ingurath.
+Tue Sep  4 22:10:37 2001 :: Keviatalon collects the 10500 gold bounty on Lalaliina.
+Wed Sep  5 00:42:10 2001 :: Sylar places a bounty of 20000 gold on the life of Lalaliina.
+Wed Sep  5 00:49:46 2001 :: Lalaliina places a bounty of 100000 gold on the life of Sylar.
+Wed Sep  5 00:52:11 2001 :: Sylar places a bounty of 20000 gold on the life of Lalaliina.
+Wed Sep  5 00:54:42 2001 :: Sylar places a bounty of 10000 gold on the life of Lalaliina.
+Wed Sep  5 01:19:07 2001 :: Keviatalon collects the 120000 gold bounty on Braxan.
+Wed Sep  5 12:35:55 2001 :: Keviatalon collects the 50000 gold bounty on Grubbin.
+Wed Sep  5 14:52:11 2001 :: Asthimus places a bounty of 5000 gold on the life of Evgueni.
+Wed Sep  5 14:52:41 2001 :: Telmir places a bounty of 20000 gold on the life of Asthimus.
+Wed Sep  5 15:02:37 2001 :: Mutabor collects the 20000 gold bounty on Asthimus.
+Wed Sep  5 18:21:11 2001 :: Asthimus places a bounty of 2811 gold on the life of Lalaliina.
+Wed Sep  5 19:27:31 2001 :: Asthimus places a bounty of 14915 gold on the life of Braxan.
+Wed Sep  5 19:56:33 2001 :: Asthimus places a bounty of 12263 gold on the life of Braxan.
+Wed Sep  5 20:43:04 2001 :: Asthimus places a bounty of 2362 gold on the life of Lalaliina.
+Wed Sep  5 21:55:56 2001 :: Keviatalon collects the 27178 gold bounty on Braxan.
+Thu Sep  6 00:07:15 2001 :: Keviatalon collects the 55173 gold bounty on Lalaliina.
+Thu Sep  6 08:11:41 2001 :: Telmir places a bounty of 40000 gold on the life of Saen.
+Thu Sep  6 13:29:38 2001 :: Keviatalon collects the 9000 gold bounty on Mutabor.
+Thu Sep  6 14:27:28 2001 :: Evgueni places a bounty of 50000 gold on the life of Braxan.
+Thu Sep  6 15:22:31 2001 :: Braxan places a bounty of 10000 gold on the life of Gridebcid.
+Thu Sep  6 18:19:15 2001 :: Telmir places a bounty of 50000 gold on the life of Braxan.
+Thu Sep  6 20:20:46 2001 :: Keviatalon collects the 100000 gold bounty on Braxan.
+Fri Sep  7 01:34:58 2001 :: Braxan places a bounty of 1000 gold on the life of Saen.
+Fri Sep  7 03:02:36 2001 :: Telmir places a bounty of 20000 gold on the life of Braxan.
+Fri Sep  7 13:36:12 2001 :: Keviatalon collects the 45000 gold bounty on Tsai.
+Fri Sep  7 13:37:44 2001 :: Braxan places a bounty of 1000 gold on the life of Greglekzer.
+Fri Sep  7 13:37:54 2001 :: Braxan places a bounty of 10000 gold on the life of Keviatalon.
+Fri Sep  7 13:48:41 2001 :: Braxan places a bounty of 10000 gold on the life of Greglekzer.
+Fri Sep  7 13:49:22 2001 :: Braxan places a bounty of 5000 gold on the life of Mutabor.
+Fri Sep  7 13:51:34 2001 :: Braxan places a bounty of 1000 gold on the life of Greglekzer.
+Fri Sep  7 13:57:17 2001 :: Keviatalon collects the 20000 gold bounty on Braxan.
+Fri Sep  7 13:59:15 2001 :: Keviatalon collects the 34000 gold bounty on Greglekzer.
+Fri Sep  7 14:55:23 2001 :: Braxan places a bounty of 1000 gold on the life of Mutabor.
+Fri Sep  7 14:55:36 2001 :: Braxan places a bounty of 1000 gold on the life of Evgueni.
+Fri Sep  7 15:06:33 2001 :: Mutabor collects the 6000 gold bounty on Evgueni.
+Fri Sep  7 15:27:47 2001 :: Evgueni collects the 6000 gold bounty on Mutabor.
+Fri Sep  7 21:11:40 2001 :: Anzanayre places a bounty of 20000 gold on the life of Pondo.
+Sat Sep  8 12:46:36 2001 :: Mutabor collects the 20000 gold bounty on Pondo.
+Sun Sep  9 17:02:41 2001 :: Telmir places a bounty of 2000 gold on the life of Pondo.
+Thu Sep 13 12:34:06 2001 :: Braxan places a bounty of 1000 gold on the life of Keviatalon.
+Thu Sep 13 13:24:32 2001 :: Winsprent places a bounty of 20000 gold on the life of Eowilaelith.
+Thu Sep 13 13:52:31 2001 :: Winsprent places a bounty of 5000 gold on the life of Eowilaelith.
+Thu Sep 13 14:37:08 2001 :: Xthutrak places a bounty of 2000 gold on the life of Aler.
+Sat Sep 15 16:07:34 2001 :: Khzarr places a bounty of 8000 gold on the life of Helos.
+Mon Sep 17 13:55:42 2001 :: Winsprent places a bounty of 30000 gold on the life of Eowilaelith.
+Tue Sep 18 00:20:28 2001 :: Xzluies places a bounty of 6000 gold on the life of Asthimus.
+Tue Sep 18 00:42:28 2001 :: Learienthel collects the 6000 gold bounty on Asthimus.
+Tue Sep 18 01:01:02 2001 :: Xzluies places a bounty of 3000 gold on the life of Zeralin.
+Wed Sep 19 14:44:54 2001 :: Mutabor gives 3000 gold to Jyrius.
+Wed Sep 19 14:50:42 2001 :: Mutabor collects the 500 gold bounty on Jyrius.
+Fri Sep 21 03:16:57 2001 :: Telmir places a bounty of 10000 gold on the life of Zeralin.
+Fri Sep 21 03:22:46 2001 :: Learienthel collects the 13000 gold bounty on Zeralin.
+Sun Sep 23 03:06:50 2001 :: Learienthel collects the 500 gold bounty on Jyrius.
+Sun Sep 23 10:31:18 2001 :: Mutabor gives 4000 gold to Ingurath.
+Sun Sep 23 12:44:21 2001 :: Ingurath places a bounty of 2000 gold on the life of Learienthel.
+Sun Sep 23 17:51:01 2001 :: Anzanayre places a bounty of 5000 gold on the life of Renshaki.
+Sun Sep 23 17:53:40 2001 :: Renshaki places a bounty of 5000 gold on the life of Ingurath.
+Sun Sep 23 17:53:57 2001 :: Renshaki places a bounty of 5000 gold on the life of Anzanayre.
+Sun Sep 23 17:58:53 2001 :: Learienthel collects the 5000 gold bounty on Anzanayre.
+Wed Oct  3 23:37:33 2001 :: (null) places a bounty of 8000 gold on the life of Melant.
+Thu Oct  4 20:23:11 2001 :: Azanulnar places a bounty of 1000 gold on the life of Faweah.
+Thu Oct  4 21:42:45 2001 :: Azanulnar places a bounty of 1000 gold on the life of Faweah.
+Thu Oct  4 21:42:48 2001 :: Azanulnar places a bounty of 1000 gold on the life of Jyrius.
+Thu Oct  4 21:53:36 2001 :: Pilino collects the 2000 gold bounty on Faweah.
+Fri Oct  5 00:57:09 2001 :: Azanulnar places a bounty of 1000 gold on the life of Telmir.
+Fri Oct  5 00:57:12 2001 :: Azanulnar places a bounty of 1000 gold on the life of Jyrius.
+Fri Oct  5 18:14:53 2001 :: Azanulnar places a bounty of 5000 gold on the life of Kedim.
+Fri Oct  5 18:19:39 2001 :: Pilino collects the 5000 gold bounty on Kedim.
+Fri Oct  5 18:29:10 2001 :: Pilino gives 5000 gold to Azanulnar.
+Fri Oct  5 18:54:32 2001 :: Azanulnar places a bounty of 5000 gold on the life of Faweah.
+Fri Oct  5 19:06:48 2001 :: Faweah places a bounty of 10000 gold on the life of Logar.
+Fri Oct  5 19:07:21 2001 :: Faweah places a bounty of 5000 gold on the life of Azanulnar.
+Sun Oct  7 01:17:11 2001 :: Pilino collects the 5000 gold bounty on Azanulnar.
+Sun Oct  7 13:02:47 2001 :: Azanulnar places a bounty of 10000 gold on the life of Toroud.
+Sun Oct  7 18:21:25 2001 :: Anzanayre places a bounty of 10000 gold on the life of Satyagraha.
+Sun Oct  7 19:17:00 2001 :: Faweah places a bounty of 8000 gold on the life of Azanulnar.
+Sun Oct  7 19:31:34 2001 :: Pilino collects the 5000 gold bounty on Faweah.
+Sun Oct  7 19:33:13 2001 :: Pilino gives 20000 gold to Azanulnar.
+Sun Oct  7 19:34:10 2001 :: Azanulnar places a bounty of 5000 gold on the life of Elethar.
+Sun Oct  7 21:51:18 2001 :: Azanulnar places a bounty of 6000 gold on the life of Tefahnis.
+Sun Oct  7 22:09:59 2001 :: Azanulnar places a bounty of 10000 gold on the life of Saik.
+Sun Oct  7 22:58:09 2001 :: Pilino collects the 25000 gold bounty on Saik.
+Sun Oct  7 23:08:14 2001 :: Pilino gives 5000 gold to Azanulnar.
+Sun Oct  7 23:55:58 2001 :: Pilino gives 20000 gold to Azanulnar.
+Sun Oct  7 23:56:07 2001 :: Azanulnar places a bounty of 10000 gold on the life of Learienthel.
+Sun Oct  7 23:56:10 2001 :: Azanulnar places a bounty of 10000 gold on the life of Learienthel.
+Sun Oct  7 23:58:07 2001 :: Pilino gives 4000 gold to Azanulnar.
+Sun Oct  7 23:58:22 2001 :: Azanulnar places a bounty of 10000 gold on the life of Telmir.
+Mon Oct  8 00:12:36 2001 :: Azanulnar places a bounty of 4000 gold on the life of Telmir.
+Mon Oct  8 01:27:31 2001 :: Azanulnar places a bounty of 20000 gold on the life of Learienthel.
+Mon Oct  8 01:39:14 2001 :: Learienthel collects the 8000 gold bounty on Azanulnar.
+Tue Oct  9 21:18:13 2001 :: Anzanayre places a bounty of 5000 gold on the life of Jyrius.
+Wed Oct 10 13:02:46 2001 :: Azanulnar places a bounty of 10000 gold on the life of Therin.
+Wed Oct 10 22:55:03 2001 :: Azanulnar gives 25000 gold to Anzanayre.
+Wed Oct 10 22:57:21 2001 :: Anzanayre places a bounty of 5000 gold on the life of Gasaguin.
+Wed Oct 10 22:57:42 2001 :: Anzanayre places a bounty of 5000 gold on the life of Gasaguin.
+Wed Oct 10 22:57:42 2001 :: Anzanayre places a bounty of 5000 gold on the life of Gasaguin.
+Wed Oct 10 22:57:42 2001 :: Anzanayre places a bounty of 5000 gold on the life of Gasaguin.
+Wed Oct 10 22:57:43 2001 :: Anzanayre places a bounty of 5000 gold on the life of Gasaguin.
+Wed Oct 10 23:22:49 2001 :: Anzanayre places a bounty of 5000 gold on the life of Talia.
+Thu Oct 11 00:09:23 2001 :: Therin places a bounty of 1000 gold on the life of Talia.
+Thu Oct 11 13:23:33 2001 :: Azanulnar collects the 25000 gold bounty on Gasaguin.
+Thu Oct 11 20:19:02 2001 :: Pilino gives 15000 gold to Azanulnar.
+Thu Oct 11 22:44:36 2001 :: Pilino gives 14000 gold to Anzanayre.
+Thu Oct 11 22:44:50 2001 :: Azanulnar gives 13000 gold to Anzanayre.
+Thu Oct 11 22:45:05 2001 :: Anzanayre places a bounty of 35000 gold on the life of Talia.
+Thu Oct 11 22:47:09 2001 :: Azanulnar collects the 41000 gold bounty on Talia.
+Thu Oct 11 22:51:57 2001 :: Azanulnar gives 40000 gold to Anzanayre.
+Fri Oct 12 17:39:28 2001 :: Azanulnar gives 30000 gold to Elethar.
+Fri Oct 12 17:39:46 2001 :: Elethar places a bounty of 36000 gold on the life of Faweah.
+Fri Oct 12 19:20:30 2001 :: Azanulnar collects the 7000 gold bounty on Jyrius.
+Fri Oct 12 21:06:52 2001 :: Anzanayre places a bounty of 4000 gold on the life of Jeana.
+Fri Oct 12 22:18:59 2001 :: Pilino gives 2300 gold to Hooleof.
+Sat Oct 13 01:31:14 2001 :: Azanulnar gives 27000 gold to Pilino.
+Sat Oct 13 19:29:25 2001 :: Therin places a bounty of 1000 gold on the life of Cadamir.
+Sat Oct 13 19:51:02 2001 :: Pilino gives 5000 gold to Hooleof.
+Sat Oct 13 19:51:06 2001 :: Hooleof places a bounty of 5000 gold on the life of Ferhe.
+Sat Oct 13 20:25:12 2001 :: Anzanayre places a bounty of 8000 gold on the life of Hooleof.
+Sat Oct 13 20:45:27 2001 :: Cadamir places a bounty of 20000 gold on the life of Anzanayre.
+Sat Oct 13 20:51:51 2001 :: Anzanayre places a bounty of 60000 gold on the life of Hooleof.
+Sat Oct 13 20:59:57 2001 :: Pilino collects the 20000 gold bounty on Anzanayre.
+Sun Oct 14 01:46:25 2001 :: Pilino gives 25000 gold to Tauniiko.
+Sun Oct 14 19:27:43 2001 :: Pilino gives 20000 gold to Tauniiko.
+Sun Oct 14 19:28:16 2001 :: Tauniiko places a bounty of 20000 gold on the life of Sordith.
+Sun Oct 14 20:42:19 2001 :: Cadamir places a bounty of 10000 gold on the life of Aler.
+Sun Oct 14 22:16:13 2001 :: Hooleof places a bounty of 5000 gold on the life of Telmir.
+Sun Oct 14 23:28:55 2001 :: Azanulnar collects the 20000 gold bounty on Telmir.
+Mon Oct 15 00:04:58 2001 :: Azanulnar collects the 5000 gold bounty on Elethar.
+Mon Oct 15 14:13:03 2001 :: Kravus places a bounty of 5000 gold on the life of Baltorak.
+Mon Oct 15 14:58:58 2001 :: Gasaguin places a bounty of 3000 gold on the life of Aler.
+Mon Oct 15 15:00:11 2001 :: Pilino gives 15000 gold to Gasaguin.
+Mon Oct 15 15:00:27 2001 :: Gasaguin places a bounty of 15000 gold on the life of Aler.
+Mon Oct 15 15:03:51 2001 :: Azanulnar gives 50000 gold to Pilino.
+Mon Oct 15 15:09:23 2001 :: Pilino gives 50000 gold to Cadamir.
+Mon Oct 15 15:09:35 2001 :: Cadamir places a bounty of 50000 gold on the life of Aler.
+Mon Oct 15 15:09:40 2001 :: Azanulnar gives 10000 gold to Cadamir.
+Mon Oct 15 15:09:47 2001 :: Cadamir places a bounty of 10000 gold on the life of Aler.
+Mon Oct 15 15:38:24 2001 :: Azanulnar gives 10000 gold to Gasaguin.
+Mon Oct 15 16:56:48 2001 :: Azanulnar gives 20000 gold to Gasaguin.
+Mon Oct 15 16:57:04 2001 :: Gasaguin places a bounty of 20000 gold on the life of Toroud.
+Mon Oct 15 17:11:57 2001 :: Azanulnar collects the 30000 gold bounty on Toroud.
+Tue Oct 16 12:56:41 2001 :: Azanulnar gives 120000 gold to Gasaguin.
+Tue Oct 16 13:09:32 2001 :: Azanulnar gives 20000 gold to Gasaguin.
+Tue Oct 16 14:56:42 2001 :: Azanulnar gives 115000 gold to Marquis.
+Tue Oct 16 14:57:00 2001 :: Marquis places a bounty of 115000 gold on the life of Gasaguin.
+Tue Oct 16 15:02:16 2001 :: Azanulnar advances to Bounty Hunter.
+Tue Oct 16 15:02:16 2001 :: Azanulnar collects the 115000 gold bounty on Gasaguin.
+Tue Oct 16 15:02:57 2001 :: Azanulnar gives 40000 gold to Gasaguin.
+Tue Oct 16 17:17:11 2001 :: Azanulnar gives 60000 gold to Cadamir.
+Tue Oct 16 17:17:45 2001 :: Cadamir places a bounty of 60000 gold on the life of Aler.
+Tue Oct 16 17:18:04 2001 :: Azanulnar gives 30000 gold to Cadamir.
+Tue Oct 16 17:18:12 2001 :: Cadamir places a bounty of 30000 gold on the life of Aler.
+Tue Oct 16 19:14:08 2001 :: Azanulnar gives 90000 gold to Anzanayre.
+Tue Oct 16 19:14:21 2001 :: Anzanayre places a bounty of 90000 gold on the life of Hooleof.
+Tue Oct 16 19:42:10 2001 :: Anzanayre places a bounty of 10000 gold on the life of Hooleof.
+Tue Oct 16 20:19:59 2001 :: Azanulnar gives 20000 gold to Anzanayre.
+Tue Oct 16 20:20:24 2001 :: Anzanayre places a bounty of 30000 gold on the life of Hooleof.
+Tue Oct 16 20:27:23 2001 :: Azanulnar gives 15000 gold to Liselle.
+Wed Oct 17 15:03:37 2001 :: Azanulnar collects the 36000 gold bounty on Faweah.
+Wed Oct 17 20:05:13 2001 :: Azanulnar gives 150000 gold to Anzanayre.
+Wed Oct 17 20:05:47 2001 :: Anzanayre places a bounty of 100000 gold on the life of Kiana.
+Wed Oct 17 20:06:42 2001 :: Anzanayre places a bounty of 50000 gold on the life of Kiana.
+Thu Oct 18 15:37:29 2001 :: Azanulnar gives 100000 gold to Ferhe.
+Thu Oct 18 15:38:12 2001 :: Ferhe places a bounty of 100000 gold on the life of Shracum.
+Thu Oct 18 17:04:35 2001 :: Azanulnar gives 40000 gold to Ferhe.
+Thu Oct 18 17:25:17 2001 :: Azanulnar gives 59000 gold to Ferhe.
+Thu Oct 18 17:26:42 2001 :: Azanulnar gives 71000 gold to Ferhe.
+Thu Oct 18 17:52:30 2001 :: Azanulnar gives 85000 gold to Enterk.
+Thu Oct 18 17:52:43 2001 :: Enterk places a bounty of 80000 gold on the life of Horatio.
+Thu Oct 18 17:54:35 2001 :: Enterk places a bounty of 20000 gold on the life of Horatio.
+Thu Oct 18 18:04:37 2001 :: Azanulnar collects the 100000 gold bounty on Horatio.
+Thu Oct 18 18:10:43 2001 :: Azanulnar gives 50000 gold to Enterk.
+Thu Oct 18 18:28:53 2001 :: Enterk places a bounty of 50000 gold on the life of Satyagraha.
+Thu Oct 18 18:35:19 2001 :: Azanulnar gives 84000 gold to Enterk.
+Thu Oct 18 18:35:40 2001 :: Enterk places a bounty of 85000 gold on the life of Satyagraha.
+Thu Oct 18 18:47:15 2001 :: Azanulnar collects the 145000 gold bounty on Satyagraha.
+Thu Oct 18 18:47:29 2001 :: Azanulnar gives 40000 gold to Ferhe.
+Thu Oct 18 18:49:06 2001 :: Azanulnar gives 107000 gold to Anzanayre.
+Thu Oct 18 18:49:20 2001 :: Anzanayre places a bounty of 110000 gold on the life of Shracum.
+Thu Oct 18 18:49:57 2001 :: Azanulnar collects the 219000 gold bounty on Shracum.
+Thu Oct 18 18:51:51 2001 :: Azanulnar gives 100000 gold to Anzanayre.
+Thu Oct 18 18:52:39 2001 :: Azanulnar gives 60000 gold to Ferhe.
+Thu Oct 18 19:04:18 2001 :: Azanulnar gives 11506 gold to Larinha.
+Thu Oct 18 19:19:56 2001 :: Anzanayre places a bounty of 5000 gold on the life of Shracum.
+Thu Oct 18 19:21:44 2001 :: Azanulnar gives 102000 gold to Anzanayre.
+Thu Oct 18 19:21:57 2001 :: Anzanayre places a bounty of 102000 gold on the life of Shracum.
+Thu Oct 18 19:34:00 2001 :: Azanulnar collects the 107000 gold bounty on Shracum.
+Thu Oct 18 19:55:51 2001 :: Anzanayre places a bounty of 50000 gold on the life of Cadamir.
+Thu Oct 18 19:56:07 2001 :: Azanulnar gives 134000 gold to Anzanayre.
+Thu Oct 18 19:56:19 2001 :: Anzanayre places a bounty of 50000 gold on the life of Cadamir.
+Thu Oct 18 19:56:20 2001 :: Anzanayre places a bounty of 50000 gold on the life of Cadamir.
+Thu Oct 18 19:56:21 2001 :: Anzanayre places a bounty of 50000 gold on the life of Cadamir.
+Thu Oct 18 19:56:23 2001 :: Anzanayre places a bounty of 50000 gold on the life of Cadamir.
+Thu Oct 18 19:56:24 2001 :: Anzanayre places a bounty of 50000 gold on the life of Cadamir.
+Thu Oct 18 19:56:33 2001 :: Anzanayre places a bounty of 20000 gold on the life of Cadamir.
+Thu Oct 18 20:19:59 2001 :: Azanulnar collects the 321000 gold bounty on Cadamir.
+Thu Oct 18 21:13:08 2001 :: Azanulnar gives 270000 gold to Kravus.
+Thu Oct 18 21:13:32 2001 :: Kravus places a bounty of 250000 gold on the life of Horatio.
+Thu Oct 18 21:17:30 2001 :: Azanulnar advances to Veteran Hunter.
+Thu Oct 18 21:17:30 2001 :: Azanulnar collects the 250000 gold bounty on Horatio.
+Thu Oct 18 21:18:06 2001 :: Azanulnar gives 100000 gold to Horatio.
+Fri Oct 19 15:02:23 2001 :: Azanulnar gives 296000 gold to Teryx.
+Fri Oct 19 15:03:19 2001 :: Teryx places a bounty of 300000 gold on the life of Larinha.
+Fri Oct 19 19:42:18 2001 :: Azanulnar gives 145000 gold to Anzanayre.
+Fri Oct 19 19:42:33 2001 :: Anzanayre places a bounty of 150000 gold on the life of Shracum.
+Fri Oct 19 22:03:17 2001 :: Kiana collects the 10000 gold bounty on Logar.
+Fri Oct 19 23:24:43 2001 :: Azanulnar gives 185000 gold to Arzul.
+Fri Oct 19 23:25:07 2001 :: Arzul places a bounty of 180000 gold on the life of Ethan.
+Fri Oct 19 23:29:02 2001 :: Azanulnar collects the 180500 gold bounty on Ethan.
+Fri Oct 19 23:37:40 2001 :: Azanulnar gives 219000 gold to Arzul.
+Fri Oct 19 23:37:59 2001 :: Arzul places a bounty of 219000 gold on the life of Ethan.
+Sat Oct 20 00:05:29 2001 :: Azanulnar collects the 219000 gold bounty on Ethan.
+Sat Oct 20 01:54:33 2001 :: Azanulnar gives 30000 gold to Arzul.
+Sat Oct 20 09:20:09 2001 :: Teryx places a bounty of 2000 gold on the life of Baltorak.
+Sat Oct 20 09:21:06 2001 :: Teryx places a bounty of 10000 gold on the life of Baltorak.
+Sat Oct 20 09:23:51 2001 :: Kiana collects the 17000 gold bounty on Baltorak.
+Sat Oct 20 09:32:45 2001 :: Kiana gives 5000 gold to Baltorak.
+Sat Oct 20 13:56:08 2001 :: Azanulnar gives 148381 gold to Naedi.
+Sat Oct 20 13:56:49 2001 :: Naedi places a bounty of 138481 gold on the life of Hooleof.
+Sat Oct 20 13:57:19 2001 :: Naedi places a bounty of 33977 gold on the life of Hooleof.
+Sat Oct 20 14:18:12 2001 :: Azanulnar collects the 336481 gold bounty on Hooleof.
+Sat Oct 20 14:25:58 2001 :: Azanulnar gives 100000 gold to Naedi.
+Sat Oct 20 15:57:44 2001 :: Karsus places a bounty of 10000 gold on the life of Ehluana.
+Sat Oct 20 16:31:58 2001 :: Anzanayre places a bounty of 10000 gold on the life of Liselle.
+Sat Oct 20 16:32:04 2001 :: Anzanayre places a bounty of 10000 gold on the life of Naedi.
+Sat Oct 20 17:56:52 2001 :: Liselle gives 20000 gold to Azanulnar.
+Sun Oct 21 19:29:04 2001 :: Nathan places a bounty of 6240 gold on the life of Karvul.
+Sun Oct 21 20:37:04 2001 :: Azanulnar gives 93489 gold to Anzanayre.
+Sun Oct 21 20:37:35 2001 :: Anzanayre places a bounty of 100000 gold on the life of Shracum.
+Mon Oct 22 12:02:14 2001 :: Liselle collects the 10000 gold bounty on Naedi.
+Wed Oct 24 14:35:26 2001 :: Kiana collects the 11000 gold bounty on Tefahnis.
+Wed Oct 24 15:45:34 2001 :: Azanulnar gives 298000 gold to Cadamir.
+Wed Oct 24 15:48:45 2001 :: Azanulnar gives 300000 gold to Cadamir.
+Wed Oct 31 22:52:32 2001 :: Cadamir places a bounty of 16000 gold on the life of Avinash.
+Wed Oct 31 22:56:15 2001 :: Kiana collects the 16000 gold bounty on Avinash.
+Thu Nov  1 20:23:27 2001 :: Rawinth places a bounty of 10000 gold on the life of Azanulnar.
+Thu Nov  1 20:37:42 2001 :: Kiana collects the 10000 gold bounty on Azanulnar.
+Thu Nov  1 22:41:18 2001 :: Kiana gives 3555 gold to Cadamir.
+Thu Nov  1 22:58:08 2001 :: Cadamir places a bounty of 140000 gold on the life of Avinash.
+Thu Nov  1 23:01:15 2001 :: Kiana collects the 140000 gold bounty on Avinash.
+Sun Nov  4 13:48:07 2001 :: Matrika places a bounty of 40000 gold on the life of Kiana.
+Wed Nov  7 23:18:54 2001 :: Elreek places a bounty of 130000 gold on the life of Anzanayre.
+Wed Nov  7 23:24:21 2001 :: Kiana advances to Bounty Hunter.
+Wed Nov  7 23:24:21 2001 :: Kiana collects the 130000 gold bounty on Anzanayre.
+Mon Nov 12 20:29:56 2001 :: Azanulnar gives 208032 gold to Larinha.
+Mon Nov 12 20:31:46 2001 :: Larinha places a bounty of 208032 gold on the life of Ethan.
+Mon Nov 12 20:43:52 2001 :: Azanulnar collects the 208032 gold bounty on Ethan.
+Thu Nov 22 14:43:09 2001 :: Ajirkahn places a bounty of 12000 gold on the life of Naedi.
+Thu Nov 22 14:46:26 2001 :: Kiana collects the 12000 gold bounty on Naedi.
+Sun Nov 25 20:20:27 2001 :: Naedi gives 40000 gold to Xanos.
+Sun Nov 25 20:23:42 2001 :: Xanos places a bounty of 40000 gold on the life of Kithsadonia.
+Sun Nov 25 20:31:22 2001 :: Naedi collects the 40000 gold bounty on Kithsadonia.
+Tue Nov 27 22:02:46 2001 :: Thurnskegg places a bounty of 50000 gold on the life of Naedi.
+Tue Nov 27 22:04:31 2001 :: Xanos places a bounty of 10000 gold on the life of Naedi.
+Tue Nov 27 22:09:35 2001 :: Kiana collects the 60000 gold bounty on Naedi.
+Fri Dec 28 22:21:24 2001 :: Caerahe places a bounty of 5000 gold on the life of Boru.
+Fri Dec 28 22:21:30 2001 :: Caerahe places a bounty of 5000 gold on the life of Goladrial.
+Fri Dec 28 22:31:17 2001 :: Rhaokor places a bounty of 9000 gold on the life of Boru.
+Fri Dec 28 22:40:29 2001 :: Goladrial places a bounty of 15000 gold on the life of Caerahe.
+Fri Dec 28 22:47:17 2001 :: Goladrial places a bounty of 10000 gold on the life of Caerahe.
+Fri Dec 28 22:56:49 2001 :: Mimble collects the 5000 gold bounty on Goladrial.
+Fri Dec 28 23:10:19 2001 :: Goladrial places a bounty of 5000 gold on the life of Caerahe.
+Fri Dec 28 23:11:32 2001 :: Mimble gives 5000 gold to Goladrial.
+Fri Dec 28 23:11:48 2001 :: Goladrial places a bounty of 5000 gold on the life of Caerahe.
+Fri Dec 28 23:50:24 2001 :: Mimble gives 7000 gold to Celandel.
+Sun Dec 30 21:04:44 2001 :: Caerahe places a bounty of 5000 gold on the life of Mimble.
+Sun Dec 30 21:04:52 2001 :: Caerahe places a bounty of 5000 gold on the life of Naedi.
+Wed Jan  2 14:15:16 2002 :: Shaenara places a bounty of 2000 gold on the life of Caerahe.
+Wed Jan  2 14:15:18 2002 :: Caerahe places a bounty of 5000 gold on the life of Celandel.
+Wed Jan  2 17:22:18 2002 :: Naedi collects the 14000 gold bounty on Boru.
+Wed Jan  2 17:53:23 2002 :: Naedi collects the 5000 gold bounty on Mimble.
+Mon Jan  7 21:57:07 2002 :: Caerahe places a bounty of 2000 gold on the life of Finnius.
+Mon Jan  7 21:58:54 2002 :: Lothara places a bounty of 5000 gold on the life of Caerahe.
+Mon Jan  7 22:07:47 2002 :: Eldrinor places a bounty of 49129 gold on the life of Caerahe.
+Mon Jan  7 22:28:47 2002 :: Caerahe places a bounty of 5000 gold on the life of Dethcra.
+Mon Jan  7 23:40:31 2002 :: Gefahrten gives 3373 gold to Celandel.
+Tue Jan  8 20:44:19 2002 :: Celandel places a bounty of 5935 gold on the life of Dethcra.
+Tue Jan  8 20:48:40 2002 :: Dethcra collects the 5000 gold bounty on Celandel.
+Tue Jan  8 20:49:31 2002 :: Gefahrten collects the 10935 gold bounty on Dethcra.
+Wed Jan  9 23:48:55 2002 :: Celandel places a bounty of 5000 gold on the life of Lothara.
+Thu Jan 10 18:15:32 2002 :: Gefahrten gives 10000 gold to Celandel.
+Sat Jan 12 16:19:02 2002 :: Celandel places a bounty of 9114 gold on the life of Caerahe.
+Fri Feb  8 17:37:11 2002 :: Kresl places a bounty of 3000 gold on the life of Siktar.
+Sun Feb 10 02:36:37 2002 :: Goladrial places a bounty of 2000 gold on the life of Laetias.
+Sun Feb 10 03:37:02 2002 :: Goladrial places a bounty of 2000 gold on the life of Laetias.
+Sun Feb 10 04:22:26 2002 :: Piental collects the 4000 gold bounty on Laetias.
+Sun Feb 10 04:46:20 2002 :: Goladrial places a bounty of 2000 gold on the life of Korrek.
+Sun Feb 10 04:49:27 2002 :: Laetias collects the 2000 gold bounty on Korrek.
+Sun Feb 10 04:50:30 2002 :: Goladrial places a bounty of 2000 gold on the life of Vinzal.
+Sun Feb 10 15:33:26 2002 :: Piental gives 20000 gold to Greigary.
+Sun Feb 10 16:44:01 2002 :: Laetias gives 50000 gold to Piental.
+Mon Feb 11 03:13:10 2002 :: Laetias gives 5000 gold to Quinafin.
+Mon Feb 11 03:13:10 2002 :: Piental gives 4947 gold to Quinafin.
+Mon Feb 11 03:30:22 2002 :: Laetias gives 5000 gold to Araxanelamus.
+Mon Feb 11 03:31:28 2002 :: Araxanelamus places a bounty of 25000 gold on the life of Piental.
+Mon Feb 11 03:46:40 2002 :: Laetias collects the 25000 gold bounty on Piental.
+Mon Feb 11 03:49:33 2002 :: Laetias gives 10000 gold to Piental.
+Mon Feb 11 15:36:10 2002 :: Kiger places a bounty of 10000 gold on the life of Raynon.
+Mon Feb 11 19:33:18 2002 :: Piental collects the 3000 gold bounty on Siktar.
+Mon Feb 11 19:34:06 2002 :: Piental gives 1500 gold to Quinafin.
+Thu Feb 14 18:53:08 2002 :: Chaphin places a bounty of 10000 gold on the life of Sithe.
+Thu Feb 14 18:53:19 2002 :: Chaphin places a bounty of 10000 gold on the life of Aram.
+Thu Feb 14 18:56:42 2002 :: Kloshen collects the 10000 gold bounty on Aram.
+Fri Feb 15 00:44:43 2002 :: Tharn places a bounty of 10000 gold on the life of Goladrial.
+Fri Feb 15 02:05:31 2002 :: Goladrial places a bounty of 2000 gold on the life of Kloshen.
+Fri Feb 15 02:06:08 2002 :: Goladrial places a bounty of 2000 gold on the life of Laetias.
+Fri Feb 15 02:40:08 2002 :: Laetias collects the 2000 gold bounty on Kloshen.
+Fri Feb 15 16:10:50 2002 :: Kloshen gives 20000 gold to Laetias.
+Fri Feb 15 16:11:35 2002 :: Kloshen gives 3000 gold to Siktar.
+Fri Feb 15 16:11:55 2002 :: Kloshen gives 1000 gold to Siktar.
+Fri Feb 15 16:13:50 2002 :: Laetias gives 4000 gold to Siktar.
+Fri Feb 15 16:14:18 2002 :: Kloshen gives 1000 gold to Siktar.
+Fri Feb 15 18:45:01 2002 :: Nritfa places a bounty of 10000 gold on the life of Sithe.
+Sat Feb 16 02:40:56 2002 :: Piental collects the 2000 gold bounty on Laetias.
+Sat Feb 16 03:54:15 2002 :: Piental gives 9465 gold to Laetias.
+Sat Feb 16 05:48:11 2002 :: Siktar places a bounty of 1000 gold on the life of Chaphin.
+Sat Feb 16 05:50:51 2002 :: Chaphin places a bounty of 5000 gold on the life of Siktar.
+Sat Feb 16 12:53:13 2002 :: Siktar places a bounty of 1000 gold on the life of Goladrial.
+Sat Feb 16 17:52:40 2002 :: Kloshen collects the 20000 gold bounty on Sithe.
+Sun Feb 17 23:03:30 2002 :: Siktar places a bounty of 1000 gold on the life of Cadamir.
+Mon Feb 18 00:12:24 2002 :: Laetias gives 8000 gold to Siktar.
+Mon Feb 18 00:30:01 2002 :: Laetias collects the 5000 gold bounty on Siktar.
+Mon Feb 18 15:46:39 2002 :: Tharn places a bounty of 5000 gold on the life of Canaks.
+Mon Feb 18 16:33:08 2002 :: Tharn places a bounty of 5000 gold on the life of Chogual.
+Mon Feb 18 16:34:22 2002 :: Tharn places a bounty of 3000 gold on the life of Aram.
+Mon Feb 18 17:01:59 2002 :: Laetias collects the 3000 gold bounty on Aram.
+Mon Feb 18 17:02:28 2002 :: Laetias gives 40000 gold to Siktar.
+Mon Feb 18 19:51:11 2002 :: Kloshen collects the 5000 gold bounty on Chogual.
+Mon Feb 18 20:08:35 2002 :: Kloshen gives 3000 gold to Chogual.
+Mon Feb 18 21:52:00 2002 :: Piental collects the 5000 gold bounty on Naedi.
+Mon Feb 18 21:55:01 2002 :: Canaks places a bounty of 30000 gold on the life of Quinafin.
+Mon Feb 18 21:57:34 2002 :: Kloshen collects the 30000 gold bounty on Quinafin.
+Mon Feb 18 22:07:00 2002 :: Finnius places a bounty of 100000 gold on the life of Laetias.
+Mon Feb 18 23:47:04 2002 :: Piental collects the 100000 gold bounty on Laetias.
+Mon Feb 18 23:48:31 2002 :: Piental gives 50000 gold to Laetias.
+Tue Feb 19 03:34:44 2002 :: Kloshen gives 50000 gold to Laetias.
+Tue Feb 19 04:03:09 2002 :: Laetias gives 140000 gold to Kiger.
+Tue Feb 19 04:03:25 2002 :: Kiger places a bounty of 140000 gold on the life of Jenobe.
+Tue Feb 19 04:04:16 2002 :: Laetias collects the 140000 gold bounty on Jenobe.
+Tue Feb 19 04:05:17 2002 :: Laetias gives 140000 gold to Kiger.
+Tue Feb 19 04:09:37 2002 :: Kiger places a bounty of 5000 gold on the life of Jenobe.
+Tue Feb 19 04:09:48 2002 :: Kiger places a bounty of 135000 gold on the life of Jenobe.
+Tue Feb 19 04:10:14 2002 :: Laetias advances to Bounty Hunter.
+Tue Feb 19 04:10:14 2002 :: Laetias collects the 140000 gold bounty on Jenobe.
+Tue Feb 19 04:12:24 2002 :: Laetias gives 140000 gold to Jenobe.
+Tue Feb 19 04:12:49 2002 :: Jenobe places a bounty of 140000 gold on the life of Kiger.
+Tue Feb 19 04:13:57 2002 :: Laetias collects the 140000 gold bounty on Kiger.
+Tue Feb 19 04:18:18 2002 :: Laetias gives 150000 gold to Kiger.
+Tue Feb 19 04:18:20 2002 :: Kiger places a bounty of 150000 gold on the life of Jenobe.
+Tue Feb 19 04:23:46 2002 :: Laetias collects the 150000 gold bounty on Jenobe.
+Tue Feb 19 04:24:22 2002 :: Laetias gives 150000 gold to Jenobe.
+Tue Feb 19 04:28:09 2002 :: Jenobe places a bounty of 150000 gold on the life of Kiger.
+Tue Feb 19 04:28:24 2002 :: Laetias collects the 150000 gold bounty on Kiger.
+Tue Feb 19 04:29:42 2002 :: Laetias gives 150000 gold to Kiger.
+Tue Feb 19 04:30:00 2002 :: Kiger places a bounty of 150000 gold on the life of Jenobe.
+Tue Feb 19 04:30:41 2002 :: Laetias collects the 150000 gold bounty on Jenobe.
+Tue Feb 19 04:34:04 2002 :: Laetias gives 150000 gold to Jenobe.
+Tue Feb 19 04:37:06 2002 :: Jenobe places a bounty of 150000 gold on the life of Kiger.
+Tue Feb 19 04:37:23 2002 :: Laetias collects the 150000 gold bounty on Kiger.
+Tue Feb 19 04:39:02 2002 :: Laetias gives 150000 gold to Kiger.
+Tue Feb 19 04:39:15 2002 :: Kiger places a bounty of 150000 gold on the life of Jenobe.
+Tue Feb 19 04:40:35 2002 :: Laetias collects the 150000 gold bounty on Jenobe.
+Tue Feb 19 04:41:27 2002 :: Laetias gives 150000 gold to Jenobe.
+Tue Feb 19 04:41:53 2002 :: Jenobe places a bounty of 150000 gold on the life of Kiger.
+Tue Feb 19 04:42:32 2002 :: Laetias advances to Veteran Hunter.
+Tue Feb 19 04:42:32 2002 :: Laetias collects the 150000 gold bounty on Kiger.
+Tue Feb 19 17:34:35 2002 :: Nilaz places a bounty of 50000 gold on the life of Canaks.
+Tue Feb 19 17:43:07 2002 :: Laetias gives 10000 gold to Refael.
+Wed Feb 20 16:13:30 2002 :: Canaks places a bounty of 50000 gold on the life of Laetias.
+Wed Feb 20 17:33:31 2002 :: Laetias collects the 55000 gold bounty on Canaks.
+Thu Feb 21 15:30:28 2002 :: Canaks places a bounty of 15000 gold on the life of Chogual.
+Sat Feb 23 00:19:55 2002 :: Karsus places a bounty of 200000 gold on the life of Laetias.
+Sat Feb 23 00:23:42 2002 :: Piental advances to Bounty Hunter.
+Sat Feb 23 00:23:42 2002 :: Piental collects the 250000 gold bounty on Laetias.
+Sat Feb 23 14:06:13 2002 :: Albrook places a bounty of 57604 gold on the life of Cellon.
+Sat Feb 23 20:31:46 2002 :: Raidana places a bounty of 2000 gold on the life of Cellon.
+Sun Feb 24 01:11:10 2002 :: Azanulnar collects the 59604 gold bounty on Cellon.
+Sun Feb 24 01:20:44 2002 :: Ajirkahn places a bounty of 15000 gold on the life of Azanulnar.
+Sun Feb 24 01:30:19 2002 :: Azanulnar collects the 1000 gold bounty on Cadamir.
+Mon Feb 25 23:15:51 2002 :: Kloshen gives 150000 gold to Piental.
+Fri Mar  8 23:02:23 2002 :: Laetias gives 20000 gold to Xthutrak.
+Sun Mar 10 22:41:54 2002 :: Raidana places a bounty of 1000 gold on the life of Santon.
+Sun Mar 10 22:45:13 2002 :: Raidana places a bounty of 5000 gold on the life of Santon.
+Mon Mar 11 01:40:55 2002 :: Kloshen gives 5000 gold to Xthutrak.
+Tue Mar 12 03:26:50 2002 :: Karsus places a bounty of 100000 gold on the life of Trewn.
+Tue Mar 12 03:27:01 2002 :: Karsus places a bounty of 100000 gold on the life of Belcen.
+Tue Mar 12 03:27:06 2002 :: Karsus places a bounty of 100000 gold on the life of Loisa.
+Fri Mar 15 19:10:06 2002 :: Kloshen gives 5000 gold to Piental.
+Sat Mar 16 05:26:58 2002 :: Kloshen gives 20000 gold to Aracombe.
+Sat Mar 16 06:56:26 2002 :: Kloshen gives 7000 gold to Aracombe.
+Mon Mar 18 20:21:34 2002 :: a merchant gives 1000 gold to Piental.
+Tue Mar 19 01:42:40 2002 :: Jathruk gives 250000 gold to Lyntress.
+Tue Mar 19 03:53:32 2002 :: Siktar places a bounty of 1000 gold on the life of Keran.
+Tue Mar 19 15:08:47 2002 :: Aram places a bounty of 100000 gold on the life of Xthutrak.
+Tue Mar 19 21:31:20 2002 :: Gefahrten gives 1000 gold to Cellon.
+Tue Mar 19 21:58:31 2002 :: Gefahrten gives 4000 gold to Eldrinor.
+Fri Mar 22 01:43:49 2002 :: Celandel places a bounty of 18950 gold on the life of Bryndin.
+Tue Mar 26 17:53:29 2002 :: Kresl places a bounty of 1000 gold on the life of Canaks.
+Wed Mar 27 22:52:52 2002 :: Lyntress places a bounty of 2000 gold on the life of Xthutrak.
+Wed Mar 27 22:54:02 2002 :: Carantoc places a bounty of 16000 gold on the life of Lyntress.
+Thu Mar 28 17:31:13 2002 :: Ustephiel places a bounty of 1000 gold on the life of Renalia.
+Thu Mar 28 17:31:28 2002 :: Ustephiel places a bounty of 1000 gold on the life of Ustephiel.
+Thu Mar 28 17:36:12 2002 :: Kloshen collects the 1000 gold bounty on Renalia.
+Mon Apr  1 05:37:16 2002 :: Naedi gives 10000 gold to Gaerak.
+Thu Apr  4 15:45:50 2002 :: Kloshen advances to Bounty Hunter.
+Thu Apr  4 15:45:50 2002 :: Kloshen collects the 102000 gold bounty on Xthutrak.
+Thu Apr  4 15:47:51 2002 :: Kloshen gives 10000 gold to Zemnier.
+Thu Apr  4 23:06:46 2002 :: Piental gives 10000 gold to Kloshen.
+Fri Apr  5 12:12:14 2002 :: Kloshen gives 10000 gold to Meraconn.
+Fri Apr  5 13:37:54 2002 :: Hitral places a bounty of 1000 gold on the life of Meraconn.
+Fri Apr  5 21:32:22 2002 :: Kibopaet places a bounty of 35000 gold on the life of Dorjinian.
+Fri Apr  5 21:33:51 2002 :: Kibopaet places a bounty of 1000 gold on the life of Yaeth.
+Fri Apr  5 21:34:00 2002 :: Kibopaet places a bounty of 1000 gold on the life of Svaen.
+Fri Apr  5 21:43:08 2002 :: Kibopaet places a bounty of 2000 gold on the life of Yaeth.
+Sat Apr  6 01:06:06 2002 :: Kibopaet places a bounty of 30000 gold on the life of Sierra.
+Sat Apr  6 01:06:47 2002 :: Kibopaet places a bounty of 20000 gold on the life of Sierra.
+Sat Apr  6 01:10:30 2002 :: Kibopaet places a bounty of 5000 gold on the life of Dorjinian.
+Sat Apr  6 01:11:32 2002 :: Kibopaet places a bounty of 1000 gold on the life of Katheryne.
+Sat Apr  6 01:16:45 2002 :: Dorjinian places a bounty of 35000 gold on the life of Kibopaet.
+Sat Apr  6 01:21:23 2002 :: Piental collects the 35000 gold bounty on Kibopaet.
+Sat Apr  6 01:37:17 2002 :: Kibopaet collects the 40000 gold bounty on Dorjinian.
+Sat Apr  6 02:09:29 2002 :: Kibopaet collects the 1000 gold bounty on Meraconn.
+Sat Apr  6 16:07:32 2002 :: Brarki places a bounty of 5000 gold on the life of Hitral.
+Sat Apr  6 22:40:22 2002 :: Lisel places a bounty of 5000 gold on the life of Brarki.
+Sat Apr  6 22:47:56 2002 :: Lisel places a bounty of 1000 gold on the life of Meraconn.
+Sat Apr  6 22:50:01 2002 :: Lisel places a bounty of 1000 gold on the life of Dorjinian.
+Sat Apr  6 22:50:30 2002 :: Lisel places a bounty of 1500 gold on the life of Meraconn.
+Sat Apr  6 22:50:35 2002 :: Lisel places a bounty of 1500 gold on the life of Dorjinian.
+Sat Apr  6 23:28:58 2002 :: Meraconn gives 10000 gold to Dorjinian.
+Sat Apr  6 23:37:16 2002 :: Valick places a bounty of 7000 gold on the life of Xthutrak.
+Sat Apr  6 23:46:47 2002 :: Lisel places a bounty of 3500 gold on the life of Xthutrak.
+Sat Apr  6 23:48:02 2002 :: Lisel places a bounty of 3500 gold on the life of Xthutrak.
+Sat Apr  6 23:48:42 2002 :: Lisel places a bounty of 3900 gold on the life of Xthutrak.
+Sat Apr  6 23:49:29 2002 :: Lisel places a bounty of 3966 gold on the life of Xthutrak.
+Sat Apr  6 23:49:58 2002 :: Lisel places a bounty of 1820 gold on the life of Xthutrak.
+Sat Apr  6 23:51:22 2002 :: Lisel places a bounty of 4637 gold on the life of Xthutrak.
+Sat Apr  6 23:52:35 2002 :: Lisel places a bounty of 3073 gold on the life of Xthutrak.
+Sat Apr  6 23:54:14 2002 :: Lisel places a bounty of 3500 gold on the life of Xthutrak.
+Sun Apr  7 00:29:44 2002 :: Lisel places a bounty of 15000 gold on the life of Kibopaet.
+Sun Apr  7 00:38:48 2002 :: Lisel places a bounty of 1000 gold on the life of Meraconn.
+Sun Apr  7 00:39:34 2002 :: Lisel places a bounty of 2000 gold on the life of Meraconn.
+Sun Apr  7 00:40:03 2002 :: Lisel places a bounty of 2000 gold on the life of Meraconn.
+Sun Apr  7 00:40:13 2002 :: Lisel places a bounty of 2000 gold on the life of Meraconn.
+Sun Apr  7 00:40:33 2002 :: Lisel places a bounty of 2000 gold on the life of Meraconn.
+Sun Apr  7 00:40:54 2002 :: Lisel places a bounty of 2000 gold on the life of Meraconn.
+Sun Apr  7 00:53:25 2002 :: Lisel places a bounty of 20000 gold on the life of Kresl.
+Sun Apr  7 00:59:41 2002 :: Lisel places a bounty of 20000 gold on the life of Ethan.
+Sun Apr  7 01:00:40 2002 :: Kibopaet gives 47000 gold to Kresl.
+Sun Apr  7 01:01:04 2002 :: Kresl places a bounty of 45000 gold on the life of Ethan.
+Sun Apr  7 01:25:42 2002 :: Lisel places a bounty of 25000 gold on the life of Meraconn.
+Sun Apr  7 01:37:23 2002 :: Lisel places a bounty of 5000 gold on the life of Kibopaet.
+Sun Apr  7 02:19:19 2002 :: Kresl places a bounty of 5000 gold on the life of Ajirkahn.
+Sun Apr  7 02:30:01 2002 :: Kresl places a bounty of 1000 gold on the life of Angellica.
+Sun Apr  7 02:52:02 2002 :: Kibopaet collects the 5000 gold bounty on Hitral.
+Sun Apr  7 15:53:34 2002 :: Zurkell places a bounty of 16000 gold on the life of Paontauz.
+Sun Apr  7 16:35:17 2002 :: Nerrok places a bounty of 18455 gold on the life of Kloshen.
+Sun Apr  7 18:27:51 2002 :: Zurkell places a bounty of 2000 gold on the life of Hanz.
+Sun Apr  7 18:37:50 2002 :: Zurkell places a bounty of 7000 gold on the life of Lilly.
+Sun Apr  7 20:05:11 2002 :: Zarethon places a bounty of 7000 gold on the life of Renalia.
+Sun Apr  7 21:12:25 2002 :: Valick places a bounty of 100305 gold on the life of Xthutrak.
+Sun Apr  7 21:49:48 2002 :: Kloshen gives 6000 gold to Meraconn.
+Sun Apr  7 22:34:23 2002 :: Zurkell places a bounty of 10000 gold on the life of Xthutrak.
+Sun Apr  7 22:42:36 2002 :: Zurkell places a bounty of 4400 gold on the life of Xthutrak.
+Sun Apr  7 22:53:51 2002 :: Lilly collects the 38500 gold bounty on Meraconn.
+Sun Apr  7 23:05:25 2002 :: Zurkell places a bounty of 6000 gold on the life of Paontauz.
+Mon Apr  8 02:01:21 2002 :: Renalia collects the 7000 gold bounty on Lilly.
+Mon Apr  8 02:14:35 2002 :: Lilly collects the 7000 gold bounty on Renalia.
+Mon Apr  8 16:06:59 2002 :: Zarethon places a bounty of 10000 gold on the life of Takonus.
+Mon Apr  8 17:51:41 2002 :: Zarethon gives 10000 gold to Lusk.
+Mon Apr  8 18:13:38 2002 :: Zarethon gives 10000 gold to Lusk.
+Mon Apr  8 19:33:08 2002 :: Piental gives 100000 gold to Lusk.
+Mon Apr  8 19:33:36 2002 :: Lusk places a bounty of 100000 gold on the life of Paontauz.
+Tue Apr  9 01:12:34 2002 :: Lilly collects the 1000 gold bounty on Angellica.
+Tue Apr  9 01:39:21 2002 :: Zurkell places a bounty of 4000 gold on the life of Lilly.
+Tue Apr  9 23:44:23 2002 :: Krosan places a bounty of 10000 gold on the life of Angellica.
+Fri Apr 12 12:03:27 2002 :: Kloshen collects the 122000 gold bounty on Paontauz.
+Fri Apr 12 15:20:29 2002 :: Kloshen gives 10000 gold to Piental.
+Fri Apr 12 15:55:33 2002 :: Piental collects the 18455 gold bounty on Kloshen.
+Sat Apr 13 16:46:19 2002 :: Piental gives 2000 gold to Kloshen.
+Mon Apr 15 02:06:42 2002 :: Kloshen collects the 10000 gold bounty on Angellica.
+Mon Apr 15 18:49:55 2002 :: Piental collects the 10000 gold bounty on Takonus.
+Tue Apr 16 22:10:36 2002 :: Kloshen collects the 3000 gold bounty on Yaeth.
+Fri Apr 19 22:15:17 2002 :: Kalessin places a bounty of 59673 gold on the life of Arkasi.
+Sun Apr 21 08:44:48 2002 :: Kalessin places a bounty of 153935 gold on the life of Arkasi.
+Sun Apr 21 08:45:24 2002 :: Vierna places a bounty of 48795 gold on the life of Arkasi.
+Sun Apr 21 09:11:18 2002 :: Kalessin places a bounty of 9082 gold on the life of Siaradus.
+Sun Apr 21 12:45:56 2002 :: Vierna places a bounty of 45519 gold on the life of Hitral.
+Sun Apr 21 12:59:18 2002 :: Valick places a bounty of 103255 gold on the life of Hitral.
+Sun Apr 21 13:03:02 2002 :: Laerteus places a bounty of 78332 gold on the life of Hitral.
+Mon Apr 22 16:22:44 2002 :: Siktar places a bounty of 153290 gold on the life of Syrwit.
+Tue Apr 23 18:11:38 2002 :: Kloshen advances to Veteran Hunter.
+Tue Apr 23 18:11:38 2002 :: Kloshen collects the 227104 gold bounty on Hitral.
+Tue Apr 23 18:21:47 2002 :: Meraconn gives 40000 gold to Chilengarr.
+Tue Apr 23 18:27:57 2002 :: Kloshen gives 80000 gold to Meraconn.
+Tue Apr 23 21:27:49 2002 :: Calenduil places a bounty of 3124 gold on the life of Carantoc.
+Tue Apr 23 21:29:18 2002 :: Calenduil places a bounty of 322 gold on the life of Calenduil.
+Wed Apr 24 17:14:33 2002 :: Piental gives 50000 gold to Kloshen.
+Wed Apr 24 17:19:35 2002 :: Kloshen gives 100000 gold to Draqaar.
+Wed Apr 24 19:37:22 2002 :: Kalessin places a bounty of 4690 gold on the life of Angellica.
+Wed Apr 24 19:54:02 2002 :: Kalessin places a bounty of 4657 gold on the life of Angellica.
+Wed Apr 24 20:00:28 2002 :: Kalessin places a bounty of 14007 gold on the life of Arkasi.
+Wed Apr 24 22:48:43 2002 :: Devarin places a bounty of 468 gold on the life of Kronove.
+Wed Apr 24 22:57:57 2002 :: Draqaar collects the 467 gold bounty on Kronove.
+Thu Apr 25 00:44:16 2002 :: Draqaar collects the 2000 gold bounty on Vinzal.
+Thu Apr 25 01:00:57 2002 :: Kalessin places a bounty of 11728 gold on the life of Arkasi.
+Thu Apr 25 01:05:17 2002 :: Kalessin places a bounty of 2809 gold on the life of Arkasi.
+Thu Apr 25 01:18:17 2002 :: Kalessin places a bounty of 6961 gold on the life of Arkasi.
+Thu Apr 25 01:19:11 2002 :: Kalessin places a bounty of 4642 gold on the life of Arkasi.
+Thu Apr 25 15:17:22 2002 :: Piental collects the 9347 gold bounty on Angellica.
+Fri Apr 26 03:28:51 2002 :: Piental gives 25000 gold to Kloshen.
+Fri Apr 26 03:31:27 2002 :: Piental gives 10000 gold to Kloshen.
+Sat Apr 27 18:44:17 2002 :: Kloshen collects the 302547 gold bounty on Arkasi.
+Sat Apr 27 18:52:06 2002 :: Kloshen gives 150000 gold to Piental.
+Sat Apr 27 19:01:14 2002 :: Anthraties places a bounty of 2657 gold on the life of Arkasi.
+Sat Apr 27 22:08:13 2002 :: Piental gives 50000 gold to Anthraties.
+Sun Apr 28 14:55:34 2002 :: Zurkell places a bounty of 7180 gold on the life of Nodik.
+Sun Apr 28 19:17:53 2002 :: Eberynill places a bounty of 708 gold on the life of Aelhor.
+Sun Apr 28 19:19:13 2002 :: Eberynill places a bounty of 708 gold on the life of Aelhor.
+Sun Apr 28 23:10:52 2002 :: Kloshen collects the 149601 gold bounty on Xthutrak.
+Sun Apr 28 23:12:45 2002 :: Kloshen gives 75000 gold to Piental.
+Mon Apr 29 22:16:05 2002 :: Takonus collects the 1414 gold bounty on Aelhor.
+Thu May  2 01:15:54 2002 :: Kloshen collects the 2657 gold bounty on Arkasi.
+Thu May  2 09:55:46 2002 :: Vierna places a bounty of 732 gold on the life of Krelkn.
+Thu May  2 10:09:21 2002 :: Kloshen gives 1000 gold to Vierna.
+Thu May  2 19:15:27 2002 :: Streptor places a bounty of 1839 gold on the life of Yaeth.
+Fri May  3 18:12:45 2002 :: Vierna places a bounty of 1121 gold on the life of Delasentry.
+Sat May  4 14:40:59 2002 :: Zurkell places a bounty of 4371 gold on the life of Cordango.
+Sat May  4 15:10:46 2002 :: Norklan places a bounty of 752 gold on the life of Zurkell.
+Sat May  4 22:34:37 2002 :: Raadchek places a bounty of 1918 gold on the life of Jacuzao.
+Sat May  4 22:34:45 2002 :: Raadchek places a bounty of 1918 gold on the life of Relik.
+Sat May  4 22:38:29 2002 :: Raadchek places a bounty of 1923 gold on the life of Jacuzao.
+Sat May  4 22:39:42 2002 :: Raadchek places a bounty of 3852 gold on the life of Takonus.
+Sat May  4 22:40:19 2002 :: Raadchek places a bounty of 6549 gold on the life of Mausa.
+Sat May  4 23:31:28 2002 :: Piental collects the 3852 gold bounty on Takonus.
+Sat May  4 23:51:47 2002 :: Takonus collects the 4370 gold bounty on Cordango.
+Tue May  7 18:35:08 2002 :: Kalessin places a bounty of 10185 gold on the life of Hanz.
+Tue May 14 12:28:37 2002 :: Kloshen collects the 1838 gold bounty on Yaeth.
+Thu May 16 23:53:06 2002 :: Soutou places a bounty of 1613 gold on the life of Yurcryn.
+Fri May 17 02:16:06 2002 :: Orgrek places a bounty of 403 gold on the life of Relik.
+Fri May 17 02:16:16 2002 :: Orgrek places a bounty of 403 gold on the life of Kiriel.
+Fri May 17 23:37:53 2002 :: Soutou places a bounty of 3978 gold on the life of Xthutrak.
+Sun May 19 19:31:11 2002 :: Rygath places a bounty of 395 gold on the life of Xthutrak.
+Wed May 22 21:07:25 2002 :: Daureala places a bounty of 789 gold on the life of Takonus.
+Fri May 24 16:22:03 2002 :: Daureala places a bounty of 1931 gold on the life of Yurcryn.
+Mon May 27 20:59:08 2002 :: Takonus collects the 4371 gold bounty on Xthutrak.
+Mon May 27 21:58:18 2002 :: Takonus gives 7000 gold to Kloshen.
+Mon May 27 22:02:15 2002 :: Daureala places a bounty of 775 gold on the life of Kloshen.
+Mon May 27 22:05:44 2002 :: Kloshen gives 20000 gold to Takonus.
+Mon May 27 22:06:16 2002 :: Kloshen collects the 789 gold bounty on Takonus.
+Mon May 27 22:10:10 2002 :: Kloshen gives 60000 gold to Takonus.
+Wed May 29 22:32:14 2002 :: Yanthaera places a bounty of 1396 gold on the life of Xthutrak.
+Thu May 30 00:00:57 2002 :: Yanthaera places a bounty of 1000 gold on the life of Thammuz.
+Fri May 31 00:42:47 2002 :: Relik gives 7519 gold to Vierna.
+Fri May 31 00:54:14 2002 :: Vierna collects the 2320 gold bounty on Relik.
+Sat Jun  1 02:04:15 2002 :: Yanthaera places a bounty of 387 gold on the life of Justus.
+Sat Jul 19 01:39:59 2003 :: Zethus places a bounty of 488 gold on the life of Marcolyn.
+Sat Jul 19 01:56:52 2003 :: Sorinoth places a bounty of 4870 gold on the life of Jenobe.
+Sat Jul 19 13:28:48 2003 :: Aremi places a bounty of 4688 gold on the life of Takonus.
+Tue Jul 22 17:49:45 2003 :: Erifdel places a bounty of 4543 gold on the life of Zornath.
+Tue Jul 22 21:09:46 2003 :: Zethus places a bounty of 465 gold on the life of Arankar.
+Tue Jul 22 21:10:00 2003 :: Zethus places a bounty of 2790 gold on the life of Arankar.
+Tue Jul 22 21:10:05 2003 :: Zethus places a bounty of 9302 gold on the life of Arankar.
+Tue Jul 22 21:10:19 2003 :: Zethus collects the 12556 gold bounty on Arankar.
+Thu Jul 24 13:10:34 2003 :: Erifdel places a bounty of 4384 gold on the life of Kalorian.
+Fri Jul 25 16:10:59 2003 :: Sparget places a bounty of 4378 gold on the life of Delium.
+Fri Jul 25 16:11:19 2003 :: Sparget places a bounty of 876 gold on the life of Delium.
+Sat Jul 26 03:01:15 2003 :: Sparget gives 10000 gold to Nathorien.
+Sat Jul 26 03:01:41 2003 :: Nathorien places a bounty of 4289 gold on the life of Ordaclax.
+Sat Jul 26 03:10:57 2003 :: Sparget gives 7000 gold to Nathorien.
+Sat Jul 26 03:12:56 2003 :: Nathorien places a bounty of 2367 gold on the life of Ordaclax.
+Sun Jul 27 03:03:15 2003 :: Nathorien places a bounty of 650 gold on the life of Verdinand.
+Mon Jul 28 01:18:33 2003 :: Undeadninja places a bounty of 1510593 gold on the life of Carantoc.
+Mon Jul 28 01:26:15 2003 :: Undeadninja advances to Bounty Hunter.
+Mon Jul 28 01:26:15 2003 :: Undeadninja collects the 1510593 gold bounty on Carantoc.
+Tue Jul 29 00:46:11 2003 :: Corithel places a bounty of 6379 gold on the life of Dargrum.
+Wed Jul 30 17:23:17 2003 :: Ogriban places a bounty of 13256 gold on the life of Marcus.
+Thu Jul 31 15:54:56 2003 :: Corithel places a bounty of 21844 gold on the life of Toryl.
+Thu Jul 31 15:58:51 2003 :: Sparget gives 42000 gold to Corithel.
+Thu Jul 31 15:59:11 2003 :: Corithel places a bounty of 19842 gold on the life of Toryl.
+Thu Jul 31 16:01:16 2003 :: Sparget collects the 41685 gold bounty on Toryl.
+Thu Jul 31 16:01:33 2003 :: Sparget gives 42000 gold to Corithel.
+Thu Jul 31 16:02:11 2003 :: Corithel places a bounty of 18731 gold on the life of Draci.
+Thu Jul 31 16:09:10 2003 :: Sparget gives 57000 gold to Corithel.
+Thu Jul 31 16:09:26 2003 :: Corithel places a bounty of 25142 gold on the life of Keertana.
+Thu Jul 31 17:05:07 2003 :: Erifdel places a bounty of 8910 gold on the life of Corithel.
+Thu Jul 31 17:30:20 2003 :: Erifdel places a bounty of 4470 gold on the life of Corithel.
+Mon Aug  4 11:12:15 2003 :: Uzaruk places a bounty of 4397 gold on the life of Keertana.
+Mon Aug  4 15:42:05 2003 :: Erifdel places a bounty of 17374 gold on the life of Kaa.
+Tue Aug  5 17:35:41 2003 :: Rygath places a bounty of 3342 gold on the life of Erifdel.
+Tue Aug  5 18:01:14 2003 :: Erifdel places a bounty of 14488 gold on the life of Splchion.
+Tue Aug  5 18:02:24 2003 :: Mikhail collects the 14488 gold bounty on Splchion.
+Tue Aug  5 18:16:31 2003 :: Erifdel places a bounty of 489 gold on the life of Splchion.
+Tue Aug  5 18:22:02 2003 :: Erifdel places a bounty of 489 gold on the life of Thorivel.
+Tue Aug  5 18:22:21 2003 :: Erifdel places a bounty of 489 gold on the life of Thorivel.
+Tue Aug  5 18:22:55 2003 :: Mikhail collects the 488 gold bounty on Splchion.
+Tue Aug  5 18:29:50 2003 :: Mikhail gives 10000 gold to Erifdel.
+Tue Aug  5 18:42:43 2003 :: Mikhail collects the 976 gold bounty on Thorivel.
+Tue Aug  5 21:58:28 2003 :: Mikhail gives 30000 gold to Erifdel.
+Tue Aug  5 22:20:04 2003 :: Erifdel places a bounty of 13645 gold on the life of Celandel.
+Tue Aug  5 22:24:06 2003 :: Mikhail collects the 13644 gold bounty on Celandel.
+Thu Aug  7 20:49:05 2003 :: Mikhail gives 14100 gold to Erifdel.
+Thu Aug  7 20:50:14 2003 :: Erifdel places a bounty of 10686 gold on the life of Tetra.
+Thu Aug  7 20:52:05 2003 :: Erifdel places a bounty of 5445 gold on the life of Tetra.
+Thu Aug  7 20:54:17 2003 :: Mikhail collects the 16130 gold bounty on Tetra.
+Thu Aug  7 21:02:44 2003 :: Mikhail gives 15000 gold to Erifdel.
+Thu Aug  7 21:55:28 2003 :: Mikhail gives 50000 gold to Erifdel.
+Thu Aug  7 22:05:04 2003 :: Erifdel places a bounty of 34672 gold on the life of Aremi.
+Thu Aug  7 22:09:00 2003 :: Mikhail collects the 34672 gold bounty on Aremi.
+Thu Aug  7 22:12:40 2003 :: Mikhail gives 35000 gold to Erifdel.
+Sat Aug  9 15:08:27 2003 :: Erifdel places a bounty of 27075 gold on the life of Denglod.
+Sat Aug  9 15:08:53 2003 :: Mikhail collects the 27075 gold bounty on Denglod.
+Sat Aug  9 15:25:06 2003 :: Mikhail gives 25000 gold to Erifdel.
+Sat Aug  9 15:28:47 2003 :: Erifdel places a bounty of 13809 gold on the life of Desante.
+Sat Aug  9 15:35:08 2003 :: Mikhail collects the 13808 gold bounty on Desante.
+Sat Aug  9 15:59:12 2003 :: Mikhail gives 22000 gold to Erifdel.
+Fri Aug 15 15:52:36 2003 :: Erifdel places a bounty of 4837 gold on the life of Piton.
+Fri Aug 15 15:58:12 2003 :: Marcus collects the 4836 gold bounty on Piton.
+Fri Aug 15 16:36:39 2003 :: Erifdel places a bounty of 4844 gold on the life of Marcus.
+Sat Aug 16 23:07:41 2003 :: Erifdel places a bounty of 14825 gold on the life of Milac.
+Sat Aug 16 23:31:51 2003 :: Mikhail collects the 14825 gold bounty on Milac.
+Sat Aug 16 23:36:20 2003 :: Mikhail gives 20000 gold to Erifdel.
+Sat Aug 16 23:39:35 2003 :: Erifdel places a bounty of 19515 gold on the life of Xulithane.
+Sat Aug 16 23:46:21 2003 :: Mikhail collects the 19515 gold bounty on Xulithane.
+Sat Aug 16 23:50:20 2003 :: Erifdel places a bounty of 9765 gold on the life of Suelaun.
+Sat Aug 16 23:51:20 2003 :: Mikhail gives 19000 gold to Erifdel.
+Sat Aug 16 23:52:18 2003 :: Erifdel places a bounty of 4946 gold on the life of Suelaun.
+Sun Aug 17 00:01:48 2003 :: Mikhail advances to Bounty Hunter.
+Sun Aug 17 00:01:48 2003 :: Mikhail collects the 14710 gold bounty on Suelaun.
+Tue Aug 19 19:53:50 2003 :: Suelaun places a bounty of 1085 gold on the life of Uri.
+Fri Aug 22 13:04:27 2003 :: Erifdel places a bounty of 5245 gold on the life of Cailyn.
+Fri Aug 22 13:12:32 2003 :: Kosin collects the 5244 gold bounty on Cailyn.
+Fri Aug 22 16:17:27 2003 :: Calenduil places a bounty of 15993 gold on the life of Erifdel.
+Fri Aug 22 18:00:43 2003 :: Xallengack places a bounty of 5399 gold on the life of Benakk.
+Fri Aug 22 18:20:25 2003 :: Kosin gives 5000 gold to Xallengack.
+Fri Aug 22 23:33:12 2003 :: Kosin collects the 5398 gold bounty on Benakk.
+Sat Aug 23 00:18:35 2003 :: Kosin collects the 1084 gold bounty on Uri.
+Sat Aug 23 02:31:11 2003 :: Aepheoeus places a bounty of 24005 gold on the life of Sparget.
+Sat Aug 23 04:31:19 2003 :: Raxx places a bounty of 1613 gold on the life of Azkahl.
+Sat Aug 23 04:32:02 2003 :: Streptor places a bounty of 3924 gold on the life of Azkahl.
+Sat Aug 23 06:49:45 2003 :: Erifdel places a bounty of 11056 gold on the life of Streptor.
+Sun Aug 24 13:24:51 2003 :: Kosin gives 5000 gold to Xallengack.
+Sun Aug 24 13:25:06 2003 :: Kosin gives 5000 gold to Xallengack.
+Sun Aug 24 17:13:59 2003 :: Raxx places a bounty of 11700 gold on the life of Erifdel.
+Sun Aug 24 19:57:05 2003 :: Erifdel places a bounty of 10503 gold on the life of Throach.
+Sun Aug 24 20:21:27 2003 :: Erifdel places a bounty of 5306 gold on the life of Throach.
+Sun Aug 24 20:51:34 2003 :: Erifdel places a bounty of 2645 gold on the life of Throach.
+Sun Aug 24 22:10:32 2003 :: Erifdel places a bounty of 5278 gold on the life of Karchic.
+Mon Aug 25 03:22:56 2003 :: Argos collects the 4869 gold bounty on Jenobe.
+Mon Aug 25 18:48:55 2003 :: Kalessin places a bounty of 5145 gold on the life of Mikhail.
+Mon Aug 25 22:21:40 2003 :: Aepheoeus places a bounty of 19150 gold on the life of Kosin.
+Wed Aug 27 15:57:33 2003 :: Erifdel places a bounty of 21121 gold on the life of Vudish.
+Wed Aug 27 16:03:05 2003 :: Erifdel places a bounty of 10804 gold on the life of Uri.
+Wed Aug 27 16:58:03 2003 :: Mikhail collects the 10804 gold bounty on Uri.
+Wed Aug 27 17:54:12 2003 :: Mikhail gives 12000 gold to Erifdel.
+Wed Aug 27 18:23:22 2003 :: Mikhail gives 8000 gold to Erifdel.
+Wed Aug 27 18:32:11 2003 :: Erifdel places a bounty of 16211 gold on the life of Uri.
+Wed Aug 27 18:58:21 2003 :: Mikhail collects the 16211 gold bounty on Uri.
+Wed Aug 27 19:03:41 2003 :: Mikhail collects the 21120 gold bounty on Vudish.
+Fri Aug 29 15:07:56 2003 :: Morgren gives 7000 gold to Xajelgrak.
+Fri Aug 29 17:10:13 2003 :: Avernell places a bounty of 2058 gold on the life of Xajelgrak.
+Fri Aug 29 17:14:52 2003 :: Ogriban places a bounty of 10300 gold on the life of Kouga.
+Fri Aug 29 17:17:16 2003 :: Morgren collects the 2058 gold bounty on Xajelgrak.
+Fri Aug 29 17:49:38 2003 :: Vudish places a bounty of 7884 gold on the life of Argos.
+Fri Aug 29 17:52:37 2003 :: Xajelgrak places a bounty of 5278 gold on the life of Vudish.
+Fri Aug 29 17:53:10 2003 :: Argos collects the 10300 gold bounty on Kouga.
+Fri Aug 29 18:15:43 2003 :: Ogriban places a bounty of 10406 gold on the life of Ezamah.
+Fri Aug 29 19:22:54 2003 :: Mikhail gives 10000 gold to Argos.
+Fri Aug 29 19:22:54 2003 :: Morgren gives 2773 gold to Argos.
+Fri Aug 29 19:22:55 2003 :: Mikhail gives 10000 gold to Argos.
+Fri Aug 29 19:23:25 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:25 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:26 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:26 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:26 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:27 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:27 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:27 2003 :: Mikhail gives 1000 gold to Argos.
+Fri Aug 29 19:23:27 2003 :: Mikhail gives 1000 gold to Argos.
+Sun Aug 31 21:28:51 2003 :: Piragan places a bounty of 2326 gold on the life of Xajelgrak.
+Sun Aug 31 21:36:21 2003 :: Morgren collects the 2325 gold bounty on Xajelgrak.
+Mon Sep  1 17:51:47 2003 :: Kosin gives 3000 gold to Ickrabahi.
+Mon Sep  1 20:23:29 2003 :: Kalessin places a bounty of 8160 gold on the life of Mikhail.
+Mon Sep  1 21:06:45 2003 :: Ickrabahi places a bounty of 11906 gold on the life of Mikhail.
+Tue Sep  2 18:40:13 2003 :: Rhaokor places a bounty of 6030 gold on the life of Mikhail.
+Wed Sep  3 10:53:34 2003 :: Tkacli places a bounty of 2888 gold on the life of Celioldor.
+Wed Sep  3 12:09:43 2003 :: Xajelgrak places a bounty of 14496 gold on the life of Uri.
+Wed Sep  3 12:35:38 2003 :: Avernell collects the 14496 gold bounty on Uri.
+Wed Sep  3 13:00:59 2003 :: Uri places a bounty of 1465 gold on the life of Xajelgrak.
+Wed Sep  3 23:10:25 2003 :: Celioldor places a bounty of 11926 gold on the life of Xallengack.
+Fri Sep  5 15:43:26 2003 :: Avernell collects the 11925 gold bounty on Xallengack.
+Sat Sep  6 19:24:25 2003 :: Araenai places a bounty of 14726 gold on the life of Uri.
+Sat Sep  6 23:27:40 2003 :: Roiyan places a bounty of 3191 gold on the life of Araenai.
+Sun Sep  7 21:11:02 2003 :: Mikhail collects the 14725 gold bounty on Uri.
+Tue Sep  9 14:20:28 2003 :: Ghedes places a bounty of 20586 gold on the life of Giac.
+Wed Sep 10 13:07:10 2003 :: Vocier places a bounty of 1003 gold on the life of Giac.
+Wed Sep 10 13:31:16 2003 :: Vocier places a bounty of 1500 gold on the life of Gaerak.
+Wed Sep 17 22:01:17 2003 :: Vaerzlithar places a bounty of 967 gold on the life of Isteben.
+Wed Sep 17 22:02:44 2003 :: Dunkaza places a bounty of 17416 gold on the life of Gaerak.
+Thu Sep 18 20:38:50 2003 :: Dunkaza places a bounty of 11185 gold on the life of Vaerzlithar.
+Sat Sep 20 12:49:08 2003 :: Dunkaza places a bounty of 19028 gold on the life of Gaerak.
+Tue Sep 23 16:34:45 2003 :: Gawinn places a bounty of 498 gold on the life of Luel.
+Tue Sep 23 17:05:02 2003 :: Rygath places a bounty of 14867 gold on the life of Celioldor.
+Tue Sep 23 17:05:35 2003 :: Rygath places a bounty of 7433 gold on the life of Gaerak.
+Tue Sep 23 17:06:13 2003 :: Fyndin places a bounty of 1784 gold on the life of Celioldor.
+Tue Sep 23 19:18:54 2003 :: Vocier places a bounty of 9592 gold on the life of Juzequol.
+Wed Sep 24 16:26:02 2003 :: Raxx places a bounty of 2419 gold on the life of Luel.
+Wed Sep 24 16:29:19 2003 :: Luel places a bounty of 19360 gold on the life of Celioldor.
+Wed Sep 24 17:17:26 2003 :: Dunkaza places a bounty of 18249 gold on the life of Dagracel.
+Wed Sep 24 17:21:55 2003 :: Mikhail collects the 18248 gold bounty on Dagracel.
+Sat Sep 27 22:23:23 2003 :: Dagracel collects the 45377 gold bounty on Gaerak.
+Sat Sep 27 22:26:38 2003 :: Mikhail collects the 45377 gold bounty on Gaerak.
+Tue Sep 30 14:09:56 2003 :: Vaerzlithar places a bounty of 5198 gold on the life of Juzequol.
+Wed Oct  1 12:29:03 2003 :: Gaerak places a bounty of 477 gold on the life of Dagracel.
+Fri Oct  3 16:12:02 2003 :: Thoikor places a bounty of 2207 gold on the life of Solien.
+Fri Oct  3 16:12:06 2003 :: Thoikor places a bounty of 2207 gold on the life of Zargen.
+Fri Oct  3 16:32:00 2003 :: Mikhail collects the 2206 gold bounty on Solien.
+Fri Oct  3 17:10:43 2003 :: Mikhail gives 5000 gold to Nantuke.
+Mon Oct  6 15:15:10 2003 :: Luel places a bounty of 89285 gold on the life of Ulthur.
+Mon Oct  6 15:30:35 2003 :: Dagracel collects the 89285 gold bounty on Ulthur.
+Thu Oct 16 20:20:27 2003 :: Glandaho places a bounty of 467 gold on the life of Ordith.
+Thu Oct 16 20:20:40 2003 :: Glandaho places a bounty of 467 gold on the life of Galodus.
+Thu Oct 16 20:20:54 2003 :: Glandaho places a bounty of 467 gold on the life of Strughaja.
+Thu Oct 16 20:23:54 2003 :: Glandaho places a bounty of 7009 gold on the life of Ordith.
+Sat Oct 18 17:54:25 2003 :: Tehhozo places a bounty of 12948 gold on the life of Eralim.
+Mon Dec  8 15:23:47 2003 :: Gralfion places a bounty of 37418 gold on the life of Vir.
+Mon Dec  8 15:27:18 2003 :: Thelulan collects the 37418 gold bounty on Vir.
+Mon Dec  8 17:35:22 2003 :: Thelulan gives 20000 gold to Dyhenik.
+Mon Dec  8 19:18:39 2003 :: Gaerak places a bounty of 4477 gold on the life of Thelulan.
+Mon Dec 22 18:15:14 2003 :: Thelulan gives 33127 gold to Xajliemar.
+Mon Dec 22 18:15:22 2003 :: Xajliemar places a bounty of 29381 gold on the life of Gaerak.
+Mon Dec 22 18:18:04 2003 :: Gaerak places a bounty of 5752 gold on the life of Xajliemar.
+Mon Dec 22 18:18:13 2003 :: Gaerak places a bounty of 5752 gold on the life of Thelulan.
+Mon Dec 22 18:25:26 2003 :: Gaerak places a bounty of 5752 gold on the life of Thelulan.
+Mon Dec 22 18:25:36 2003 :: Gaerak places a bounty of 5752 gold on the life of Xajliemar.
+Mon Dec 22 18:34:39 2003 :: Kouga collects the 29380 gold bounty on Gaerak.
+Tue Dec 23 09:08:13 2003 :: Kouga collects the 11504 gold bounty on Xajliemar.
+Tue Dec 23 13:55:22 2003 :: Xajliemar places a bounty of 6586 gold on the life of Vir.
+Tue Dec 23 14:22:14 2003 :: Thelulan gives 19388 gold to Xajliemar.
+Tue Dec 23 15:45:55 2003 :: Tyrth places a bounty of 68672 gold on the life of Kouga.
+Tue Dec 23 15:56:12 2003 :: Xajliemar places a bounty of 14216 gold on the life of Tyrth.
+Tue Dec 23 16:22:02 2003 :: Kouga collects the 14215 gold bounty on Tyrth.
+Tue Dec 23 16:43:31 2003 :: Kouga collects the 6586 gold bounty on Vir.
+Tue Dec 23 16:45:30 2003 :: Kouga collects the 15981 gold bounty on Thelulan.
+Wed Dec 24 11:30:06 2003 :: Thelulan collects the 2916 gold bounty on Luel.
+Wed Dec 24 11:30:55 2003 :: Luel places a bounty of 82390 gold on the life of Thelulan.
+Mon Dec 29 19:33:09 2003 :: Dalfiecal gives 15288 gold to Thelulan.
+Mon Dec 29 19:43:44 2003 :: Thelulan advances to Bounty Hunter.
+Mon Dec 29 19:43:44 2003 :: Thelulan collects the 68671 gold bounty on Kouga.
+Mon Dec 29 19:53:49 2003 :: Kouga advances to Bounty Hunter.
+Mon Dec 29 19:53:49 2003 :: Kouga collects the 82390 gold bounty on Thelulan.
+Tue Dec 30 12:52:43 2003 :: Kouga gives 100000 gold to Xajliemar.
+Tue Dec 30 22:27:59 2003 :: Avernell places a bounty of 1102 gold on the life of Aurion.
+Wed Dec 31 14:41:08 2003 :: Thelulan collects the 1101 gold bounty on Aurion.
+Wed Dec 31 14:59:39 2003 :: Thelulan gives 5000 gold to Avernell.
+Wed Dec 31 15:11:46 2003 :: Thelulan gives 5000 gold to Avernell.
+Wed Dec 31 15:12:38 2003 :: Freznith places a bounty of 1489 gold on the life of Avernell.
+Wed Dec 31 15:14:53 2003 :: Thelulan collects the 1488 gold bounty on Avernell.
+Fri Jan  2 11:42:39 2004 :: Zegralfiec places a bounty of 5933 gold on the life of Aurion.
+Fri Jan  2 11:49:22 2004 :: Thelulan collects the 5932 gold bounty on Aurion.
+Fri Jan  2 18:42:28 2004 :: Arthalu places a bounty of 755 gold on the life of Allysia.
+Fri Jan  2 19:17:59 2004 :: Dalfiecal collects the 755 gold bounty on Allysia.
+Fri Jan  2 19:24:59 2004 :: Freznith places a bounty of 316 gold on the life of Thelulan.
+Fri Jan  2 19:25:04 2004 :: Freznith places a bounty of 316 gold on the life of Kouga.
+Fri Jan  2 20:27:08 2004 :: Freznith places a bounty of 317 gold on the life of Ulthur.
+Mon Jan  5 19:07:40 2004 :: Koignar places a bounty of 2875 gold on the life of Ulthur.
+Mon Jan  5 19:32:13 2004 :: Koignar places a bounty of 1720 gold on the life of Ulthur.
+Mon Jan  5 19:33:18 2004 :: Koignar places a bounty of 1216 gold on the life of Ulthur.
+Mon Jan  5 19:35:42 2004 :: Xallengack places a bounty of 9311 gold on the life of Ulthur.
+Tue Jan  6 18:16:29 2004 :: Vrourk places a bounty of 11536 gold on the life of Avernell.
+Tue Jan  6 18:16:35 2004 :: Vrourk places a bounty of 1601 gold on the life of Avernell.
+Tue Jan  6 18:43:02 2004 :: Thelulan collects the 13137 gold bounty on Avernell.
+Tue Jan  6 19:37:21 2004 :: Gaerak places a bounty of 586 gold on the life of Avernell.
+Tue Jan  6 19:40:40 2004 :: Avernell places a bounty of 11136 gold on the life of Gaerak.
+Wed Jan  7 18:51:23 2004 :: Freznith places a bounty of 636 gold on the life of Gaerak.
+Wed Jan  7 18:58:17 2004 :: Thelulan collects the 11771 gold bounty on Gaerak.
+Wed Jan  7 19:18:53 2004 :: Thelulan collects the 11771 gold bounty on Gaerak.
+Fri Jan  9 15:10:28 2004 :: Fyndin places a bounty of 12673 gold on the life of Vrourk.
+Sun Jan 11 05:05:33 2004 :: Avernell places a bounty of 25911 gold on the life of Dellyna.
+Thu Jan 15 20:46:33 2004 :: Kloshen collects the 586 gold bounty on Avernell.
+Wed Feb 11 15:56:07 2004 :: Ghrethnore places a bounty of 15199 gold on the life of Mumei.
+Wed Feb 11 17:19:53 2004 :: Ghrethnore places a bounty of 18570 gold on the life of Zod.
+Wed Feb 11 19:01:03 2004 :: Ghrethnore collects the 18569 gold bounty on Zod.
+Fri Feb 13 16:39:08 2004 :: Nydohar places a bounty of 6327 gold on the life of Vocier.
+Fri Feb 13 16:46:19 2004 :: Ghrethnore collects the 6327 gold bounty on Vocier.
+Wed Feb 18 19:01:05 2004 :: Dolmgrir places a bounty of 6434 gold on the life of Guillot.
+Wed Feb 18 19:22:43 2004 :: Dolmgrir places a bounty of 7070 gold on the life of Cern.
+Wed Feb 18 22:16:30 2004 :: Ghrethnore collects the 7070 gold bounty on Cern.
+Tue Mar  2 19:21:02 2004 :: Gaerzlithar places a bounty of 10711 gold on the life of Cern.
+Wed Mar  3 16:11:12 2004 :: Gaerzlithar places a bounty of 5347 gold on the life of Hotahio.
+Wed Mar  3 19:09:01 2004 :: Gaerzlithar places a bounty of 5391 gold on the life of Hotahio.
+Sat Mar  6 15:18:37 2004 :: Fyndin places a bounty of 520 gold on the life of Cohtram.
+Mon Mar  8 19:05:00 2004 :: Gaerzlithar places a bounty of 8900 gold on the life of Guillot.
+Mon Mar  8 19:13:52 2004 :: Gaerzlithar places a bounty of 4798 gold on the life of Lotranios.
+Sun Mar 21 23:42:31 2004 :: Kreyastae gives 100000 gold to Fyndin.
+Mon Mar 22 11:35:56 2004 :: Trennom places a bounty of 3620 gold on the life of Blodden.
+Mon Mar 22 20:04:11 2004 :: Trennom places a bounty of 4405 gold on the life of Gurd.
+Mon Mar 22 20:33:21 2004 :: Vizherai places a bounty of 7859 gold on the life of Gurd.
+Mon Mar 22 20:34:13 2004 :: Vizherai places a bounty of 1572 gold on the life of Xajliemar.
+Wed Mar 24 17:26:25 2004 :: Donnae places a bounty of 47400 gold on the life of Krogan.
+Wed Mar 24 17:29:05 2004 :: Donnae places a bounty of 15552 gold on the life of Takimen.
+Wed Mar 24 19:31:09 2004 :: Brudish places a bounty of 14175 gold on the life of Nydohar.
+Fri Mar 26 18:04:42 2004 :: Meranwan places a bounty of 16061 gold on the life of Kjaelis.
+Sat Mar 27 16:11:27 2004 :: Takimen gives 77870 gold to Bekosn.
+Sat Mar 27 16:15:59 2004 :: Bekosn places a bounty of 36622 gold on the life of Guillot.
+Sat Mar 27 16:17:48 2004 :: Bekosn places a bounty of 5699 gold on the life of Guillot.
+Sat Mar 27 16:22:56 2004 :: Takimen collects the 57653 gold bounty on Guillot.
+Thu Apr  1 09:41:31 2004 :: Takimen gives 149711 gold to Bekosn.
+Thu Apr  1 09:42:00 2004 :: Bekosn places a bounty of 80416 gold on the life of Guillot.
+Fri Apr  2 02:06:06 2004 :: Takimen advances to Bounty Hunter.
+Fri Apr  2 02:06:06 2004 :: Takimen collects the 80415 gold bounty on Guillot.
+Fri Apr  2 02:27:17 2004 :: Guillot places a bounty of 554 gold on the life of Jnanny.
+Sun Apr  4 02:18:06 2004 :: Tynlop places a bounty of 4804 gold on the life of Guillot.
+Sun Apr  4 02:19:26 2004 :: Tynlop places a bounty of 115437 gold on the life of Guillot.
+Sun Apr  4 02:20:18 2004 :: Takimen collects the 120240 gold bounty on Guillot.
+Tue Apr  6 15:28:32 2004 :: Poanst gives 15000 gold to Bekosn.
+Tue Apr  6 17:56:02 2004 :: Poanst gives 17000 gold to Moserikon.
+Tue Apr  6 17:56:19 2004 :: Moserikon places a bounty of 8994 gold on the life of Dyne.
+Tue Apr  6 18:04:24 2004 :: Felephen gives 5086 gold to Moserikon.
+Tue Apr  6 18:04:34 2004 :: Poanst gives 2500 gold to Moserikon.
+Tue Apr  6 18:04:45 2004 :: Moserikon places a bounty of 5632 gold on the life of Dyne.
+Tue Apr  6 18:10:16 2004 :: Poanst collects the 14624 gold bounty on Dyne.
+Wed Apr  7 09:04:01 2004 :: Pondue places a bounty of 5103 gold on the life of Naezia.
+Wed Apr  7 10:46:40 2004 :: Pondue places a bounty of 5095 gold on the life of Flarg.
+Wed Apr  7 14:51:48 2004 :: Tenebryl places a bounty of 6129 gold on the life of Poanst.
+Wed Apr  7 14:59:04 2004 :: Felephen collects the 6128 gold bounty on Poanst.
+Wed Apr  7 19:18:57 2004 :: Pondue places a bounty of 5050 gold on the life of Kahdo.
+Wed Apr  7 19:19:00 2004 :: Pondue places a bounty of 5050 gold on the life of Javen.
+Wed Apr  7 20:10:45 2004 :: Pondue places a bounty of 5077 gold on the life of Vizherai.
+Wed Apr  7 20:44:25 2004 :: Pondue places a bounty of 5098 gold on the life of Takimen.
+Wed Apr  7 21:02:18 2004 :: Pondue places a bounty of 5025 gold on the life of Treland.
+Wed Apr  7 21:08:03 2004 :: Pondue places a bounty of 5047 gold on the life of Dyne.
+Wed Apr  7 21:50:24 2004 :: Takimen collects the 5025 gold bounty on Treland.
+Wed Apr  7 21:53:44 2004 :: Takimen collects the 5046 gold bounty on Dyne.
+Sun Apr 11 18:42:58 2004 :: Volanthar gives 20000 gold to Gilin.
+Sun Apr 11 23:11:48 2004 :: Pondue places a bounty of 4939 gold on the life of Dragonis.
+Sun Apr 11 23:11:51 2004 :: Pondue places a bounty of 4939 gold on the life of Dlayeth.
+Sun Apr 11 23:11:55 2004 :: Pondue places a bounty of 4939 gold on the life of Toiist.
+Sun Apr 11 23:12:01 2004 :: Pondue places a bounty of 4998 gold on the life of Bekosn.
+Sun Apr 11 23:12:06 2004 :: Pondue places a bounty of 4998 gold on the life of Relostias.
+Sun Apr 11 23:12:11 2004 :: Pondue places a bounty of 4998 gold on the life of Naezia.
+Sun Apr 11 23:24:41 2004 :: Pondue places a bounty of 10100 gold on the life of Naezia.
+Mon Apr 12 09:27:03 2004 :: Pondue places a bounty of 5122 gold on the life of Poanst.
+Mon Apr 12 19:51:38 2004 :: Takimen collects the 14175 gold bounty on Nydohar.
+Tue Apr 13 16:01:09 2004 :: Naezia places a bounty of 26753 gold on the life of Poanst.
+Tue Apr 13 16:08:00 2004 :: Felephen collects the 31874 gold bounty on Poanst.
+Wed Apr 14 14:22:24 2004 :: Naezia places a bounty of 19523 gold on the life of Volanthar.
+Wed Apr 14 14:34:45 2004 :: Takimen advances to Veteran Hunter.
+Wed Apr 14 14:34:45 2004 :: Takimen collects the 19522 gold bounty on Volanthar.
+Wed Apr 14 14:45:07 2004 :: Volanthar collects the 20649 gold bounty on Takimen.
+Wed Apr 14 16:08:48 2004 :: Volanthar collects the 20200 gold bounty on Naezia.
+Wed Apr 14 20:46:30 2004 :: Volanthar advances to Bounty Hunter.
+Wed Apr 14 20:46:30 2004 :: Volanthar collects the 47399 gold bounty on Krogan.
+Mon Apr 19 19:29:30 2004 :: Fyndin places a bounty of 475 gold on the life of Kreyastae.
+Mon Apr 19 22:29:42 2004 :: Phares places a bounty of 3357 gold on the life of Naezia.
+Mon Apr 19 22:41:24 2004 :: Phares places a bounty of 4092 gold on the life of Takimen.
+Tue Apr 20 21:57:10 2004 :: Fyndin collects the 475 gold bounty on Kreyastae.
+Tue Apr 20 21:57:19 2004 :: Fyndin collects the 520 gold bounty on Cohtram.
+Wed Apr 21 22:28:41 2004 :: Naezia places a bounty of 16409 gold on the life of Brudish.
+Thu Apr 22 00:16:39 2004 :: Kitrio gives 10000 gold to Takimen.
+Thu Apr 22 11:06:20 2004 :: Fyndin places a bounty of 6818 gold on the life of Pinast.
+Thu Apr 22 11:41:07 2004 :: Takimen collects the 6818 gold bounty on Pinast.
+Thu Apr 22 14:56:13 2004 :: Elatha places a bounty of 2218 gold on the life of Ranim.
+Fri Apr 23 11:54:38 2004 :: Fyndin places a bounty of 139567 gold on the life of Gurd.
+Fri Apr 23 15:49:48 2004 :: Urbanski places a bounty of 929 gold on the life of Kitrio.
+Sun Apr 25 16:23:15 2004 :: Urbanski places a bounty of 4071 gold on the life of Darath.
+Sun Apr 25 16:23:36 2004 :: Urbanski places a bounty of 4071 gold on the life of Darath.
+Wed Apr 28 16:09:32 2004 :: Takimen gives 5000 gold to Spectrin.
+Wed Apr 28 20:37:34 2004 :: Verdival places a bounty of 2794 gold on the life of Takimen.
+Wed Apr 28 21:00:59 2004 :: Verdival places a bounty of 2480 gold on the life of Takimen.
+Fri Apr 30 14:42:03 2004 :: Verdival places a bounty of 6340 gold on the life of Rogis.
+Fri Apr 30 23:34:37 2004 :: Kitrio gives 1500 gold to Ranim.
+Sat May  1 15:14:44 2004 :: Kahdo places a bounty of 464 gold on the life of Kitrio.
+Sat May  1 15:34:08 2004 :: Kitrio collects the 5049 gold bounty on Kahdo.
+Sun May  2 22:22:58 2004 :: Kitrio collects the 4998 gold bounty on Bekosn.
+Tue May  4 14:06:09 2004 :: Delgrevs places a bounty of 5375 gold on the life of Gilin.
+Tue May  4 14:08:24 2004 :: Fyndin places a bounty of 26971 gold on the life of Sanandar.
+Tue May  4 14:08:45 2004 :: Fyndin places a bounty of 26971 gold on the life of Rogis.
+Tue May  4 14:08:58 2004 :: Fyndin places a bounty of 17415 gold on the life of Gilin.
+Tue May  4 15:53:12 2004 :: Takimen collects the 26971 gold bounty on Rogis.
+Tue May  4 16:22:18 2004 :: Takimen collects the 26971 gold bounty on Sanandar.
+Wed May  5 14:29:00 2004 :: Volanthar gives 5000 gold to (null).
+Wed May  5 15:10:49 2004 :: Takimen collects the 22788 gold bounty on Gilin.
+Wed May  5 15:42:00 2004 :: Takimen gives 15000 gold to Volanthar.
+Thu May  6 18:03:55 2004 :: Kahdo places a bounty of 4846 gold on the life of Takimen.
+Thu May  6 20:59:04 2004 :: Fyndin places a bounty of 78083 gold on the life of Nydohar.
+Thu May  6 20:59:57 2004 :: Kitrio advances to Bounty Hunter.
+Thu May  6 20:59:57 2004 :: Kitrio collects the 78083 gold bounty on Nydohar.
+Thu May  6 22:24:10 2004 :: Volanthar gives 250000 gold to Takimen.
+Thu May  6 22:24:38 2004 :: Volanthar gives 100000 gold to Takimen.
+Thu May  6 22:43:56 2004 :: Takimen gives 10000 gold to Volanthar.
+Thu May  6 22:44:05 2004 :: Takimen gives 10000 gold to Volanthar.
+Thu May  6 23:33:37 2004 :: Takimen gives 50000 gold to Volanthar.
+Fri May  7 14:03:24 2004 :: Fyndin places a bounty of 73013 gold on the life of Volanthar.
+Sat May  8 18:47:32 2004 :: Fyndin places a bounty of 46088 gold on the life of Volanthar.
+Mon May 10 15:13:12 2004 :: Fyndin places a bounty of 7007 gold on the life of Nyxll.
+Mon May 10 15:24:33 2004 :: Fyndin places a bounty of 73500 gold on the life of Gilin.
+Mon May 10 15:24:54 2004 :: Fyndin places a bounty of 47137 gold on the life of Nyxll.
+Mon May 10 15:59:21 2004 :: Zeglifin gives 50000 gold to Kitrio.
+Mon May 10 16:24:24 2004 :: Zeglifin gives 50000 gold to Kitrio.
+Mon May 10 19:41:47 2004 :: Takimen collects the 73499 gold bounty on Gilin.
+Tue May 11 15:27:13 2004 :: Brutus places a bounty of 7943 gold on the life of Gilin.
+Tue May 11 15:56:52 2004 :: Kitrio collects the 119100 gold bounty on Volanthar.
+Wed May 12 23:18:19 2004 :: Volanthar collects the 14210 gold bounty on Takimen.
+Thu May 13 22:22:16 2004 :: Ravelos places a bounty of 18306 gold on the life of Gurd.
+Thu May 13 23:00:52 2004 :: Fyndin places a bounty of 98059 gold on the life of Ciryatan.
+Thu May 13 23:07:21 2004 :: Kitrio advances to Veteran Hunter.
+Thu May 13 23:07:21 2004 :: Kitrio collects the 98059 gold bounty on Ciryatan.
+Sun May 16 20:25:54 2004 :: Fyndin places a bounty of 84818 gold on the life of Zorthane.
+Mon May 17 04:07:07 2004 :: Volanthar gives 3000 gold to (null).
+Mon May 17 04:07:29 2004 :: Volanthar gives 1500 gold to Lorythyn.
+Mon May 17 04:07:47 2004 :: Volanthar gives 3000 gold to Lorythyn.
+Mon May 17 17:27:20 2004 :: Kahdo places a bounty of 484 gold on the life of Tathinhdyn.
+Mon May 17 17:27:28 2004 :: Kahdo places a bounty of 484 gold on the life of Kaliach.
+Mon May 17 17:27:37 2004 :: Kahdo places a bounty of 484 gold on the life of Rasenstier.
+Tue May 18 13:59:46 2004 :: Fyndin places a bounty of 73301 gold on the life of Grathnik.
+Wed May 19 08:39:49 2004 :: Fyndin places a bounty of 73015 gold on the life of Volanthar.
+Wed May 19 15:46:44 2004 :: Fyndin places a bounty of 94166 gold on the life of Huvtolien.
+Thu May 20 20:24:48 2004 :: Takimen advances to Elder Hunter.
+Thu May 20 20:24:48 2004 :: Takimen collects the 94166 gold bounty on Huvtolien.
+Thu May 20 22:20:20 2004 :: Takimen collects the 84818 gold bounty on Zorthane.
+Thu May 20 22:25:43 2004 :: Fyndin places a bounty of 68520 gold on the life of Takimen.
+Fri May 21 22:57:35 2004 :: Zorthane places a bounty of 446 gold on the life of Takimen.
+Sat May 22 13:44:33 2004 :: Fyndin places a bounty of 60984 gold on the life of Huvtolien.
+Tue May 25 20:24:52 2004 :: Alorymn places a bounty of 6563 gold on the life of Kitrio.
+Fri May 28 16:19:44 2004 :: Fyndin places a bounty of 72793 gold on the life of Brudish.
+Fri May 28 16:21:22 2004 :: Takimen collects the 89200 gold bounty on Brudish.
+Sun May 30 18:33:54 2004 :: Huvtolien places a bounty of 92884 gold on the life of Kitrio.
+Sun May 30 18:51:42 2004 :: Kitrio collects the 60983 gold bounty on Huvtolien.
+Wed Jun  2 21:38:05 2004 :: Huvtolien places a bounty of 71975 gold on the life of Brudish.
+Wed Jun  2 21:42:10 2004 :: Huvtolien places a bounty of 37030 gold on the life of Brudish.
+Wed Jun  2 22:01:15 2004 :: Takimen collects the 109004 gold bounty on Brudish.
+Sat Jun  5 21:57:14 2004 :: Fyndin places a bounty of 81887 gold on the life of Loronoth.
+Sat Jun  5 22:26:25 2004 :: Kitrio advances to Elder Hunter.
+Sat Jun  5 22:26:25 2004 :: Kitrio collects the 81887 gold bounty on Loronoth.
+Mon Jun  7 20:55:47 2004 :: Takimen advances to Master Hunter.
+Mon Jun  7 20:55:47 2004 :: Takimen collects the 100839 gold bounty on Kitrio.
+Tue Jun  8 20:58:34 2004 :: Flarg places a bounty of 6965 gold on the life of Ikrialol.
+Thu Jun 10 17:34:06 2004 :: Fyndin places a bounty of 63100 gold on the life of Huvtolien.
+Thu Jun 10 22:04:26 2004 :: Takimen collects the 73015 gold bounty on Volanthar.
+Fri Jun 11 22:08:43 2004 :: Huvtolien places a bounty of 508 gold on the life of Takimen.
+Fri Jun 11 22:10:52 2004 :: Huvtolien places a bounty of 509 gold on the life of Takimen.
+Fri Jun 11 22:10:53 2004 :: Huvtolien places a bounty of 509 gold on the life of Takimen.
+Sun Jun 13 18:28:29 2004 :: Ikrialol places a bounty of 11750 gold on the life of Lotranios.
+Sun Jun 13 21:54:05 2004 :: Ikrialol places a bounty of 38577 gold on the life of Sadonia.
+Mon Jun 21 10:27:26 2004 :: Brizzia places a bounty of 32044 gold on the life of Huvtolien.
+Sun Jul 18 18:47:33 2004 :: Takimen collects the 16547 gold bounty on Lotranios.

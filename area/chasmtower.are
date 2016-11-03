@@ -1,0 +1,1265 @@
+#AREA
+chasmtower.are~
+Chasm Tower~
+Gatog~
+20 51
+3100 3199
+unopened
+english
+0
+1
+Gatog~
+
+#MOBS
+#3100
+drow mercenary~
+a drow mercenary~
+A drow mercenary is here sitting along the cavern wall.
+~
+~
+-1000 0 0 drow~
+24 12d8+870 3d6+8 8 100 punch
+0 0 0 0
+sitting male poor
+0 0 medium
+ACT NPC
+OFF DISARM
+OFF KICK
+OFF DIRT_KICK
+OFF TRIP
+#3101
+drow slave~
+a drow slave~
+A drow slave lies here catching a few winks sleep.
+~
+~
+-1000 0 0 drow~
+20 10d8+604 3d4+2 0 100 punch
+0 0 0 0
+sleeping male none
+0 0 medium
+ACT NPC
+OFF DIRT_KICK
+OFF TRIP
+#3102
+drow mercenary~
+a drow mercenary~
+A drow mercenary kneels here holding his meat laden skewer over the fire.
+~
+~
+0 0 0 drow~
+20 10d8+604 3d5+5 0 100 punch
+0 0 0 0
+sitting male poor
+0 0 medium
+ACT NPC
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF TRIP
+#3103
+drow guard~
+a drow guard~
+A drow guard stands here eyeing you cautiously.
+~
+~
+1 0 0 drow~
+20 10d8+604 4d6+6 10 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+OFF NO_TRACK
+YELL ~
+#3104
+drow warrior student~
+a drow warrior~
+A drow student is here working his skills.
+~
+~
+-1000 0 0 drow~
+30 15d8+1364 4d6+10 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+#3105
+drow warrior instructor~
+a drill instructor~
+A drill instructor stands here observing his students.
+~
+~
+-1000 0 0 drow~
+45 22d8+3177 4d6+10 10 100 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF HASTE
+#3107
+drow mercenary~
+a drow mercenary~
+A drow mercenary squats here filling a cup of water.
+~
+~
+1 0 0 drow~
+20 10d8+604 3d6+6 5 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF DIRT_KICK
+OFF TRIP
+#3113
+undead zombie~
+a zombie~
+A zombie is here wandering around aimlessly.
+~
+~
+1 0 0 zombie~
+20 10d8+604 3d6+5 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+NOTES ~
+#0
+
+
+
+#OBJS
+#3100
+hammer warhammer silver~
+a spiked silver warhammer~
+A spiked silver warhammer lies here.~
+weapon
+silver~
+mace 12 12 searing 0
+52 30 100000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT PALADIN_ONLY
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM NODISARM
+APPLY STR 3
+APPLY DEX 3
+APPLY HP 50
+APPLY DAMROLL 20
+APPLY HITROLL 20
+LIMIT 0
+TIMER 0
+
+#3101
+silver breastplate plate~
+a silver breastplate emblazoned with a spiked warhammer~
+A silver breastplate shines brightly.~
+armor
+silver~
+50 50 50 50 0
+52 60 100000 P
+WEAR TAKE
+WEAR BODY
+RESTRICT PALADIN_ONLY
+ITEM GLOW
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY STR 3
+APPLY CON 3
+APPLY DEX 3
+APPLY HP 100
+APPLY MANA 100
+APPLY DAMROLL 20
+APPLY HITROLL 20
+LIMIT 0
+TIMER 0
+
+#3102
+shovel~
+a shovel~
+A rusted shovel lays here.~
+weapon
+unknown~
+mace 2 6 pound 0
+10 6 20 P
+WEAR TAKE
+WEAR WIELD
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3103
+iron sword~
+a thin iron sword~
+A thin bladed sword of iron lays here.~
+weapon
+iron~
+sword 4 5 slash 0
+15 9 300 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#3104
+silver shield~
+a spiked silver shield~
+A spiked shield rests here.~
+armor
+silver~
+20 20 20 20 0
+52 20 100000 P
+WEAR TAKE
+WEAR SHIELD
+RESTRICT PALADIN_ONLY
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY STR 3
+APPLY CON 3
+APPLY DEX 3
+APPLY HP 50
+APPLY DAMROLL 20
+APPLY HITROLL 20
+LIMIT 0
+TIMER 0
+
+#3105
+pit fire campfire~
+a campfire~
+A campfire burns brightly.~
+container
+wood~
+20 0 0 5 1
+1 5 0 P
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#3106
+crumbling fountain~
+a crumbling fountain~
+A crumbling fountain spews water.~
+fountain
+stone~
+-1 5 'water' 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#3107
+cup stone~
+a stone cup~
+A cup carved from stone lays here.~
+drink
+stone~
+3 5 'water' 0 0
+1 4 50 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3108
+skewer~
+a skewer~
+A charred skewer lies here.~
+weapon
+steel~
+dagger 2 5 pierce 0
+15 1 10 P
+WEAR TAKE
+WEAR WIELD
+WEAR HOLD
+ITEM BURNPROOF
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#3109
+pool water~
+a pool of water~
+A small pool of water has formed here.~
+fountain
+unknown~
+-1 1 'water' 0 0
+1 1 1 P
+LIMIT 0
+TIMER 0
+
+#3110
+dull steel sword~
+a dull steel sword~
+dummy desc~
+weapon
+steel~
+sword 4 7 slash 0
+24 12 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#3111
+fine adamantite blade~
+a fine adamantite blade~
+A well made adamantite blade.~
+weapon
+adamantite~
+sword 7 5 slice 0
+40 10 3000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#3112
+iron bracer~
+a well crafted iron bracer~
+dummy desc~
+armor
+iron~
+3 3 3 0 0
+13360 6 1000 P
+WEAR TAKE
+WEAR WRIST
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#3100
+Entrance to the Tunnels~
+~
+unused
+ROOM LAW
+D NORTH 3101 0 0
+~
+~
+OWNER none~
+#3101
+A Dank Tunnel~
+~
+inside
+D NORTH 3102 0 0
+~
+~
+D SOUTH 3100 0 0
+~
+~
+OWNER none~
+#3102
+A Dank Tunnel~
+~
+inside
+D NORTH 3103 0 0
+~
+~
+D SOUTH 3101 0 0
+~
+~
+OWNER none~
+#3103
+The Guard Post~
+~
+inside
+D NORTH 3108 0 0
+~
+~
+D EAST 3104 0 0
+~
+~
+D SOUTH 3102 0 0
+~
+~
+OWNER none~
+#3104
+A Dank Tunnel~
+~
+inside
+D NORTH 3105 0 0
+~
+~
+D WEST 3103 0 0
+~
+~
+OWNER none~
+#3105
+A Dank Tunnel~
+~
+inside
+D EAST 3106 0 0
+~
+~
+D SOUTH 3104 0 0
+~
+~
+OWNER none~
+#3106
+A Dank Tunnel~
+~
+inside
+D EAST 3107 0 0
+~
+~
+D WEST 3105 0 0
+~
+~
+OWNER none~
+#3107
+The End of the Tunnel~
+~
+inside
+D WEST 3106 0 0
+~
+~
+OWNER none~
+#3108
+An Intersection of Tunnels~
+~
+inside
+D NORTH 3109 0 0
+~
+~
+D SOUTH 3103 0 0
+~
+~
+D WEST 3111 0 0
+~
+~
+OWNER none~
+#3109
+A Dank Tunnel~
+~
+inside
+D EAST 3110 0 0
+~
+~
+D SOUTH 3108 0 0
+~
+~
+OWNER none~
+#3110
+A Large Outcropping of Rocks~
+~
+inside
+D WEST 3109 0 0
+~
+~
+TRAP 'boulder' 3 3 3
+A few small pebbles trickle down from above.~
+A large mass of rocks tumble down from above.~
+OWNER none~
+#3111
+A Dank Tunnel~
+~
+inside
+D NORTH 3114 0 0
+~
+~
+D EAST 3108 0 0
+~
+~
+D WEST 3112 0 0
+~
+~
+OWNER none~
+#3112
+A Dank Tunnel~
+~
+inside
+D EAST 3111 0 0
+~
+~
+D WEST 3113 0 0
+~
+~
+OWNER none~
+#3113
+The End of the Tunnel~
+~
+inside
+D EAST 3112 0 0
+~
+~
+OWNER none~
+#3114
+Tunnel Leading Upwards~
+~
+unused
+D SOUTH 3111 0 0
+~
+~
+D UP 3115 0 0
+~
+~
+OWNER none~
+#3115
+Entering A Cavern~
+~
+inside
+D NORTH 3116 0 0
+~
+~
+D EAST 3124 0 0
+~
+~
+D DOWN 3114 0 0
+~
+~
+OWNER none~
+#3116
+The Western Edge of the Cavern~
+~
+inside
+D NORTH 3117 0 0
+~
+~
+D EAST 3122 0 0
+~
+~
+D SOUTH 3115 0 0
+~
+~
+OWNER none~
+#3117
+The Northwestern Edge of the Cavern~
+~
+inside
+D NORTH 3118 0 0
+~
+~
+D EAST 3120 0 0
+~
+~
+D SOUTH 3116 0 0
+~
+~
+OWNER none~
+#3118
+A Dank Tunnel~
+~
+inside
+D SOUTH 3117 0 0
+~
+~
+D UP 3119 0 0
+~
+~
+OWNER none~
+#3119
+Wrong Dig Site~
+~
+inside
+D DOWN 3118 0 0
+~
+~
+OWNER none~
+#3120
+The Northern Edge of the Cavern~
+~
+inside
+D EAST 3121 0 0
+~
+~
+D SOUTH 3122 0 0
+~
+~
+D WEST 3117 0 0
+~
+~
+OWNER none~
+#3121
+A Hole Leading Up~
+~
+inside
+D WEST 3120 0 0
+~
+~
+D UP 3126 0 0
+~
+~
+OWNER none~
+#3122
+The Center of the Cavern~
+~
+inside
+D NORTH 3120 0 0
+~
+~
+D EAST 3123 0 0
+~
+~
+D SOUTH 3124 0 0
+~
+~
+D WEST 3116 0 0
+~
+~
+OWNER none~
+#3123
+A Small Niche~
+~
+inside
+D WEST 3122 0 0
+~
+~
+OWNER none~
+#3124
+The Southern Edge of the Cavern~
+~
+inside
+D NORTH 3122 0 0
+~
+~
+D EAST 3125 0 0
+~
+~
+D WEST 3115 0 0
+~
+~
+OWNER none~
+#3125
+A Large Gaping Hole~
+~
+hills
+D WEST 3124 0 0
+~
+~
+OWNER none~
+#3126
+Courtyard~
+~
+inside
+D NORTH 3134 0 0
+~
+~
+D EAST 3127 0 0
+~
+~
+D SOUTH 3130 0 0
+~
+~
+D WEST 3132 0 0
+~
+~
+D DOWN 3121 0 0
+~
+~
+OWNER none~
+#3127
+Eastern Edge of the Courtyard~
+~
+inside
+D NORTH 3135 0 0
+~
+~
+D EAST 3128 0 0
+~
+~
+D SOUTH 3129 0 0
+~
+~
+D WEST 3126 0 0
+~
+~
+OWNER none~
+#3128
+Eastern Staircase~
+~
+inside
+D WEST 3127 0 0
+~
+~
+D UP 3138 0 0
+~
+~
+OWNER none~
+#3129
+Southeast Corner of the Courtyard~
+~
+inside
+D NORTH 3127 0 0
+~
+~
+D WEST 3130 0 0
+~
+~
+OWNER none~
+#3130
+Southern Edge of the Courtyard~
+~
+inside
+D NORTH 3126 0 0
+~
+~
+D EAST 3129 0 0
+~
+~
+D WEST 3131 0 0
+~
+~
+OWNER none~
+#3131
+Southwest Corner of the Courtyard~
+~
+inside
+D NORTH 3132 0 0
+~
+~
+D EAST 3130 0 0
+~
+~
+OWNER none~
+#3132
+Western Edge of the Courtyard~
+~
+inside
+D NORTH 3133 0 0
+~
+~
+D EAST 3126 0 0
+~
+~
+D SOUTH 3131 0 0
+~
+~
+D WEST 3136 0 0
+~
+~
+OWNER none~
+#3133
+Northwest Corner of the Courtyard~
+~
+inside
+D EAST 3134 0 0
+~
+~
+D SOUTH 3132 0 0
+~
+~
+D WEST 3137 AB 0
+~
+~
+OWNER none~
+#3134
+Northern Edge of the Courtyard~
+~
+inside
+D EAST 3135 0 0
+~
+~
+D SOUTH 3126 0 0
+~
+~
+D WEST 3133 0 0
+~
+~
+OWNER none~
+#3135
+Northeast Corner of the Courtyard~
+~
+inside
+D SOUTH 3127 0 0
+~
+~
+D WEST 3134 0 0
+~
+~
+OWNER none~
+#3136
+Western Staircase~
+~
+inside
+D EAST 3132 0 0
+~
+~
+D UP 3139 0 0
+~
+~
+OWNER none~
+#3137
+A Storage Closet~
+~
+inside
+D EAST 3133 A 0
+~
+~
+OWNER none~
+#3138
+Second Floor Staircase~
+~
+unused
+D WEST 3147 0 0
+~
+~
+D UP 3151 0 0
+~
+~
+D DOWN 3128 0 0
+~
+~
+OWNER none~
+#3139
+Second Floor Staircase~
+~
+inside
+D EAST 3140 0 0
+~
+~
+D UP 3152 0 0
+~
+~
+D DOWN 3136 0 0
+~
+~
+OWNER none~
+#3140
+An Intersection of Hallways~
+~
+inside
+D NORTH 3144 0 0
+~
+~
+D EAST 3141 0 0
+~
+~
+D SOUTH 3142 0 0
+~
+~
+D WEST 3139 0 0
+~
+~
+OWNER none~
+#3141
+A Training Room~
+~
+inside
+D WEST 3140 0 0
+~
+~
+OWNER none~
+#3142
+A Well Lit Hallway~
+~
+inside
+D NORTH 3140 0 0
+~
+~
+D EAST 3143 0 0
+~
+~
+OWNER none~
+#3143
+A Training Room~
+~
+inside
+D WEST 3142 0 0
+~
+~
+OWNER none~
+#3144
+A Bend in the Hallway~
+~
+inside
+D EAST 3145 0 0
+~
+~
+D SOUTH 3140 0 0
+~
+~
+OWNER none~
+#3145
+A Well Lit Hallway~
+~
+unused
+D EAST 3146 0 0
+~
+~
+D WEST 3144 0 0
+~
+~
+OWNER none~
+#3146
+A Bend in the Hallway~
+~
+inside
+D SOUTH 3147 0 0
+~
+~
+D WEST 3145 0 0
+~
+~
+OWNER none~
+#3147
+An Intersection of Hallways~
+~
+inside
+D NORTH 3146 0 0
+~
+~
+D EAST 3138 0 0
+~
+~
+D SOUTH 3148 0 0
+~
+~
+D WEST 3150 0 0
+~
+~
+OWNER none~
+#3148
+A Well Lit Hallway~
+~
+unused
+D NORTH 3147 0 0
+~
+~
+D WEST 3149 0 0
+~
+~
+OWNER none~
+#3149
+A Training Room~
+~
+inside
+D EAST 3148 0 0
+~
+~
+OWNER none~
+#3150
+A Training Room~
+~
+inside
+D EAST 3147 0 0
+~
+~
+OWNER none~
+#3151
+Third Floor Staircase~
+~
+unused
+D WEST 3153 0 0
+~
+~
+D DOWN 3138 0 0
+~
+~
+OWNER none~
+#3152
+Third Floor Staircase~
+~
+inside
+D EAST 3160 0 0
+~
+~
+D DOWN 3139 0 0
+~
+~
+OWNER none~
+#3153
+An Intersection of Hallways~
+~
+inside
+D NORTH 3157 0 0
+~
+~
+D EAST 3151 0 0
+~
+~
+D SOUTH 3154 0 0
+~
+~
+D WEST 3156 0 0
+~
+~
+OWNER none~
+#3154
+A Well lit Hallway~
+~
+inside
+D NORTH 3153 0 0
+~
+~
+D WEST 3155 0 0
+~
+~
+OWNER none~
+#3155
+A Makeshift Laboratory~
+~
+inside
+D EAST 3154 0 0
+~
+~
+OWNER none~
+#3156
+Dummy Room~
+~
+inside
+D EAST 3153 0 0
+~
+~
+D WEST 3164 A 0
+~
+~
+OWNER none~
+#3157
+A Bend in the Hallway~
+~
+inside
+D SOUTH 3153 0 0
+~
+~
+D WEST 3158 0 0
+~
+~
+OWNER none~
+#3158
+A Well Lit Hallway~
+~
+inside
+D EAST 3157 0 0
+~
+~
+D WEST 3159 0 0
+~
+~
+OWNER none~
+#3159
+A Bend in the Hallway~
+~
+inside
+D EAST 3158 0 0
+~
+~
+D SOUTH 3160 0 0
+~
+~
+OWNER none~
+#3160
+An Intersection of Hallways~
+~
+inside
+D NORTH 3159 0 0
+~
+~
+D EAST 3161 0 0
+~
+~
+D SOUTH 3162 0 0
+~
+~
+D WEST 3152 0 0
+~
+~
+OWNER none~
+#3161
+A Makeshift Laboratory~
+~
+inside
+D WEST 3160 0 0
+~
+~
+OWNER none~
+#3162
+A Well Lit Hallway~
+~
+inside
+D NORTH 3160 0 0
+~
+~
+D EAST 3163 0 0
+~
+~
+OWNER none~
+#3163
+A Makeshift Laboratory~
+~
+inside
+D WEST 3162 0 0
+~
+~
+OWNER none~
+#3164
+A Small Hallway~
+~
+inside
+D EAST 3156 A 0
+~
+~
+D SOUTH 3165 0 0
+~
+~
+OWNER none~
+#3165
+A Staircase Leading Up~
+~
+inside
+D NORTH 3164 0 0
+~
+~
+D UP 3166 0 0
+~
+~
+OWNER none~
+#3166
+Fourth Floor Landing~
+~
+inside
+D NORTH 3167 0 0
+~
+~
+D DOWN 3165 0 0
+~
+~
+OWNER none~
+#3167
+The Antechamber~
+~
+inside
+D NORTH 3169 0 0
+~
+~
+D EAST 3168 0 0
+~
+~
+D SOUTH 3166 0 0
+~
+~
+D WEST 3170 0 0
+~
+~
+OWNER none~
+#3168
+A Large Study~
+~
+inside
+D WEST 3167 0 0
+~
+~
+OWNER none~
+#3169
+A Large Altar~
+~
+inside
+D SOUTH 3167 0 0
+~
+~
+OWNER none~
+#3170
+The Center of A Meeting Hall~
+~
+inside
+D NORTH 3171 0 0
+~
+~
+D EAST 3167 0 0
+~
+~
+D SOUTH 3172 0 0
+~
+~
+OWNER none~
+#3171
+The North Meeting Area~
+~
+inside
+D SOUTH 3170 0 0
+~
+~
+OWNER none~
+#3172
+The Southern Meeting Area~
+~
+inside
+D NORTH 3170 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 3103 TO 3103 GLIMIT 2 LLIMIT 2
+EQUIP 3103 WIELD
+MOB 3113 TO 3104 GLIMIT 5 LLIMIT 1
+MOB 3113 TO 3106 GLIMIT 5 LLIMIT 1
+MOB 3107 TO 3107 GLIMIT 1 LLIMIT 1
+EQUIP 3107 HOLD
+OBJECT 3109 TO 3107
+MOB 3113 TO 3109 GLIMIT 5 LLIMIT 1
+MOB 3113 TO 3111 GLIMIT 1 LLIMIT 1
+MOB 3113 TO 3111 GLIMIT 5 LLIMIT 1
+MOB 3113 TO 3113 GLIMIT 5 LLIMIT 1
+MOB 3100 TO 3116 GLIMIT 10 LLIMIT 2
+EQUIP 3103 WIELD
+MOB 3100 TO 3118 GLIMIT 1 LLIMIT 1
+EQUIP 3103 WIELD
+EQUIP 3102 HOLD
+MOB 3101 TO 3119 GLIMIT 4 LLIMIT 4
+EQUIP 3102 HOLD
+MOB 3100 TO 3120 GLIMIT 10 LLIMIT 2
+EQUIP 3103 WIELD
+OBJECT 3105 TO 3122
+MOB 3102 TO 3122 GLIMIT 1 LLIMIT 1
+EQUIP 3108 HOLD
+MOB 3100 TO 3123 GLIMIT 10 LLIMIT 3
+EQUIP 3103 WIELD
+MOB 3100 TO 3124 GLIMIT 10 LLIMIT 2
+EQUIP 3103 WIELD
+OBJECT 3106 TO 3126
+MOB 3104 TO 3141 GLIMIT 8 LLIMIT 2
+MOB 3105 TO 3141 GLIMIT 4 LLIMIT 1
+EQUIP 3110 WIELD
+EQUIP 3111 WIELD
+MOB 3104 TO 3143 GLIMIT 8 LLIMIT 2
+MOB 3105 TO 3143 GLIMIT 4 LLIMIT 1
+EQUIP 3110 WIELD
+EQUIP 3111 WIELD
+MOB 3104 TO 3149 GLIMIT 8 LLIMIT 2
+MOB 3105 TO 3149 GLIMIT 4 LLIMIT 1
+EQUIP 3110 WIELD
+EQUIP 3111 WIELD
+MOB 3104 TO 3150 GLIMIT 8 LLIMIT 2
+MOB 3105 TO 3150 GLIMIT 4 LLIMIT 1
+EQUIP 3110 WIELD
+EQUIP 3111 WIELD
+S
+
+#IMPROGS
+END
+#$

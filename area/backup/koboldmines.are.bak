@@ -1,0 +1,7303 @@
+#AREA
+koboldmines.are~
+Kobold Mines~
+Skrije~
+10 30
+24600 24799
+normal
+arid
+0
+1
+Skrije~
+
+#MOBS
+#24601
+goblin child~
+a goblin child~
+A goblin youth stares around herself curiously.
+~
+A small goblin child meanders about the caves, looking curiously at the
+older goblins as they move to and fro.  Dreaming of the day she will be
+allowed to start working in the mines, she tries to learn as much about
+mining as possible.  
+~
+0 0 0 goblin~
+14 7d8+220 2d3+8 20 100 punch
+0 0 0 0
+standing female poor
+0 0 small
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+RES WEAPON
+RES LIGHTNING
+VUL POISON
+VUL DISEASE
+#24602
+Young goblin miner~
+a young miner~
+A young goblin miner stands here with a gleam in his eye.
+~
+A few short years ago, he was dreaming of becoming a true miner.  Now,
+this wish had come to be.  Bursting with enthusiasm, he is prepared to chip
+away in the mines for long hours on end.  His endurence will likely match
+his determination, for he appears sturdy enough for the harsh mining life.  
+~
+700 0 0 goblin~
+18 9d8+370 3d4+10 0 100 grep
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#24603
+Old goblin~
+an old goblin~
+An old goblin rests here, remembering the days long gone by.
+~
+Years of hard mining have left this old goblin in poor health.  Thin
+limbs extend from the small frame, with very little strength left in them. 
+His eyes tell a story of hardships overcome, and he speaks the words of
+wisdom, passing on the knowledge of the caves and mines to the younger
+goblins.  
+~
+0 0 0 goblin~
+20 10d8+440 2d7+10 0 100 thwack
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT INTELLIGENT
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+#24604
+Loud goblin miner~
+a raucous miner~
+Very noisy goblin miner stands here, shouting at the rest of his kin.
+~
+Overly enthusiastic about mining, or merely a nuissance by nature, a
+goblin miner yells obscenities at the rest of the miners.  His voice is
+extremelly annoying and quite strong, due to his massive complexion.  His
+arms are all knotted muscles, however the rest of him is less muscular.  His
+legs are quite scrawny and his belly is of gargantuan proportions, for a
+goblin.  
+ ~
+0 0 0 goblin~
+22 11d8+520 4d4+8 5 100 thwack
+0 0 0 0
+sleeping male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#24605
+goblin rogue~
+a goblin rogue~
+A goblin rogue stands here motionless, observing the shadows around himself.
+~
+A fellow quite unlike most goblins in these caves, this one is quiet and
+composed.  His interest seems to be anything and everything that passes
+through the gates of the goblin mines.  More tall then the most, he none the
+less appears weaker than others of his kin.  
+~
+-400 0 0 goblin~
+20 10d8+404 2d6+8 0 100 peckb
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT SMARTTRACK
+ACT INTELLIGENT
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+OFF SPAM_MURDER
+#24606
+Tired goblin miner~
+a tired miner~
+A tired miner has decided to rest here briefly.
+~
+After a long day of work, a goblin before you had decided to rest
+briefly.  A brief rest turned into a nap and now he is resting himself
+within the caves.  Lying on the hard cave floor seems to have little ill
+effect on him, though.  
+~
+0 0 0 goblin~
+23 11d8+533 3d5+10 5 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+OFF BASH
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+NOTES ~
+#24610
+sturdy goblin miner~
+a sturdy miner~
+A sturdy goblin miner swings his pick-axe confidently.
+~
+Sturdy and stout, this goblin represents more determined of his race. 
+His physical prowess had enabled him to put himself above others and earn
+the exclusive right to mine here.  His skin, already grayish, is covered in
+fine dust, result of constant mining.  
+~
+700 0 0 goblin~
+25 5d10+780 7d3+4 0 100 peckb
+0 0 0 0
+standing male moderate
+0 0 small
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT INTELLIGENT
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+AFF DETECT_INVIS
+AFF INFRARED
+RES POISON
+NOTES ~
+#24620
+old goblin miner~
+an old miner~
+An old goblin miner looks up at you wearily.
+~
+Years of hard toil had left this miner blessed with strength and
+sturdiness.  He moves about his site with brisk, controlled movements. 
+Unable to compete with the younger generations, he is working on this
+excavation in hopes of discovering a new vein of crystal.  
+~
+500 0 0 goblin~
+24 12d8+580 4d7+0 10 100 grep
+0 0 0 0
+resting male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF ASSIST_RACE
+#24622
+massive kobold miner~
+a massive miner~
+A massive kobold miner inspects the rock critically.
+~
+Brownish mound that you gazed over appears to be alive and not just a
+rubble of rock, as you had previously thought.  
+~
+200 0 0 kobold~
+30 15d8+906 4d10+2 10 100 slash
+-100 -100 -100 -100
+sleeping male moderate
+0 0 large
+ACT NPC
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF SANCTUARY
+#24630
+strong goblin miner~
+a strong miner~
+One strong looking goblin hacks the stone here.
+~
+Very busy and very stout, this goblin directs all of his attention
+towards mining more crystal.  Rippling muscles underneath his shirt move in
+unison as he swings his pickaxe at the rock.  His brow is drenched with
+sweat, but he does not pause to wipe it off.  He appears very resilient and
+well-used to hardships.  
+~
+600 0 0 goblin~
+27 5d8+900 4d8+3 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BASH
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+OFF ASSIST_GROUP
+AFF DETECT_INVIS
+AFF REGENERATION
+#24631
+mining leader~
+a mining leader~
+A goblin roams the caves, observing the rock around him
+~
+The leader of the goblin miners cuts an imposing figure, by goblin
+standards.  As big as a small troll, he stands firmly at his feet, prepared
+for whatever challenges the fate throws at him.  His duty is to oversee his
+workers, protect them from harm and carefully guide them towards the rich
+deposits of the crystal.  Glancing over him, you can tell that he is firmly
+devoted to that cause.  
+~
+400 0 0 goblin~
+33 16d8+1656 6d4+10 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT INTELLIGENT
+OFF BASH
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF DETECT_GOOD
+AFF INFRARED
+AFF PROTECTION
+AFF CALM
+CLASS warrior Duelist none 
+#24660
+Cave rat~
+a rat~
+A cave rat scurries across the cave floor.
+~
+Small rodent moves across the cave floor hastily.  Commonly found
+wherever goblins are, rats thrive on their presence, due to large amounts of
+waste that goblins live in.  Because they are so used to goblin presence,
+these rats are more bold than their surface counterparts.  You notice they
+pay you little heed.  
+~
+0 0 0 rat~
+10 5d8+120 2d2+5 0 100 bite
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+#24661
+Large cave rat~
+a large rat~
+A large rat moves through the darkness slowly.
+~
+This rat is roughly double the size of commonly found rats in the goblin
+mines.  This is due to the fact that he had thrived on goblins' waste for a
+number of years.  The long life-span had let it grow to a size humongous for
+its kind.  You have a feeling it would put up a fierce fight if forced into
+a corner.  
+~
+0 0 0 rat~
+14 7d8+220 2d2+9 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#24662
+Cave bat~
+a bat~
+A cave bat glides across the cavern soundlessly.
+~
+Small shape, almost unnoticable in the cavern darkness, glides
+efortlessly through the air.  Cave bat, a species that has been in these
+caves as long as the goblins, is very well adopted to life in this
+environment.  Preying on insects, a bat's only concern is to stay out of the
+way of larger species, such as goblins.  
+~
+0 0 0 bat~
+13 6d8+190 2d2+8 0 100 slap
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+#24663
+Massive cave bat~
+a massive bat~
+A massive bat glides soundlessly through the caves.
+~
+This bat is very massive.  Clearly, the specimen before you must be old
+for a bat, and unusual, for they rarely grow to this size.  Leathery wings
+span almost a metre in length, and look very sturdy.  Its head is the size
+of a goblin's fist and you can spot the fangs protruding from its mouth.  
+~
+0 0 0 bat~
+15 7d8+339 2d2+10 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24664
+Heavily Plated Bug~
+a massive bug~
+A huge bug crawls slowly across the cave floor.
+~
+Very slow and very large, this insect has adopted to a rough cavern
+environment by evolving to a bug with extremely thick chitin.  This thick
+armour, however, had made its owner slower than most of other cave dwellers.
+The bug does not seem to mind, as it slowly continues to crawl across the
+floor.  
+~
+0 0 0 insect~
+18 9d8+600 0d0+0 0 100 crush
+10 10 10 10
+standing male none
+0 0 medium
+ACT NPC
+OFF BASH
+OFF BERSERK
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+AFF INFRARED
+AFF PROTECTION
+AFF DARK_VISION
+AFF SLOW
+#24665
+Cave Worm~
+a cave worm~
+A worm pulses rhythmically on the cave floor.
+~
+Long, fat cave worm covered in slime rhytmically pulses here.  Many rings
+forming its body contract and contort, as it moves across the cave floor. 
+You wonder how could something this slow and apparently this unprotected
+survive in the caves.  
+~
+0 0 0 lizard~
+16 8d8+386 2d6+4 0 100 digestion
+0 0 0 0
+standing male none
+HMV HMV medium
+ACT NPC
+ACT WANDER
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF POISON
+VUL MITHRIL
+#24670
+Fire Plant~
+a fire plant~
+A plant basking in soft light flails its tentacles here.
+~
+A plant that seems to be illuminated from the inside occupies the section
+of a cave floor.  Long vines, each one graced with countless little thorns,
+seem to move with the will of their own.  
+~
+-500 0 0 human~
+30 15d8+1500 4d6+10 0 100 nature
+0 0 0 0
+standing male moderate
+0 MNW medium
+ACT NPC
+ACT AGGRESSIVE
+OFF BASH
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+RES FIRE
+VUL SLASH
+VUL COLD
+VUL DROWNING
+#24671
+Frost Plant~
+a frost plant~
+A plant encased in ice persists here.
+~
+Thin layer of frost seems to cover this plant.  Its colour might have
+been green, were it to grow under the sun, but as it is, it appears to be a
+sickly shade of white.  Its vines are short and plump, and it is covered in
+few leaves.  
+~
+-500 0 0 human~
+30 15d8+1364 4d6+10 0 100 nature
+0 0 0 0
+standing male moderate
+0 MNW medium
+ACT NPC
+ACT AGGRESSIVE
+OFF BASH
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+RES COLD
+VUL SLASH
+VUL FIRE
+#24672
+Thin Plant~
+a thin plant~
+A thin plant with whip-like tentacles moves of its own accord.
+~
+Whip-like vines flail madly all around the cavern floor.  The plant,
+though, seems to be nothing else but the collection of these tentacles.  You
+cannot notice any conceivable trunk, nor root.  If this abomination has such
+a thing, it is likely very small and hidden beneath the mass of tentacles.  
+~
+-500 0 0 human~
+29 14d8+1274 4d6+10 0 100 whip
+0 0 0 0
+standing male moderate
+0 MNW small
+ACT NPC
+ACT AGGRESSIVE
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+RES WEAPON
+VUL MAGIC
+VUL LIGHTNING
+VUL ACID
+#24673
+Gargantuan Plant~
+a gargantuan plant~
+A gargantuan plant covers half the cave.
+~
+Immense plant grows here, completely occupying the cavern.  It is at
+least 10 feet tall, with massive flail-like vines.  Driven by ancient hatred
+and evolved to prey upon the weak, it seizes the change it sees and attacks.
+~
+-500 0 0 human~
+32 16d8+1600 0d0+0 0 100 crush
+0 0 0 0
+standing male moderate
+0 MNW large
+ACT NPC
+ACT AGGRESSIVE
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+RES WEAPON
+VUL MAGIC
+VUL ACID
+VUL ENERGY
+#24700
+hobgoblin guard~
+a hobgoblin guard~
+A hobgoblin guard stands at attention here.
+~
+Lanky humanoid, this hobgoblin had underwent basic training in the art of
+weaponry.  He had been assigned to patrol the premises of the stronghold and
+enforce the will of Chieftain.  
+~
+-300 0 0 hobgoblin~
+23 11d8+533 3d7+5 10 100 scratch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT INTELLIGENT
+ACT UPDATE_ALWAYS
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+CLASS warrior Dragoon none 
+#24701
+Scrawny Goblin Soldier~
+a scrawny soldier~
+A small, scrawny soldier glares about angrily.
+~
+An average looking goblin stands here.  Small and weak, he was not
+blessed with what it takes to make a cruel, cunning warlord.  All his life,
+he wanted to be one.  Now, realizing that this dream will not come true, he
+is bitter and disappointed.  
+~
+-350 0 0 goblin~
+23 11d8+799 4d4+7 0 100 punch
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT INTELLIGENT
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+#24702
+Bulky Goblin Soldier~
+a bulky soldier~
+A goblin with a fat belly stands here, barking orders.
+~
+A goblin larger than the average specimen of his species stands here. 
+Stronger than most, he is not particularly agile, though.  This would be due
+to a massive torso with a huge belly he posseses.  It gives him the strength
+to bully the weaker goblins about, but he appears not to be particularly
+smart.  
+~
+-400 0 0 goblin~
+26 13d8+1022 3d7+7 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT INTELLIGENT
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+#24703
+Goblin Commander~
+a goblin commander~
+One important looking goblin stands here with a serious look on his face.
+~
+This goblin has risen through the ranks of the horde by cunning,
+treachery and brute strength.  He is noticably larger than most of the
+goblins, though his form is still mishappen: stick thin limbs, massive
+torso, and a small, thick skull.  Perhaps most striking, there is an air of
+evil intelligence around this one.  He is used to manipulating the others.  
+~
+-500 0 0 goblin~
+30 15d8+1364 4d6+10 0 100 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT INTELLIGENT
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF PROTECTION
+CLASS warrior Skirmisher Tactician 
+#24704
+Goblin Warlord~
+a goblin warlord~
+A huge goblin stands here, brandishing his club.
+~
+Brutish goblin towers here over the rest of his kin.  Truly a
+magnificient specimen, and one of his kind, he was able to dominate all the
+rest and raise to the ranks of second in command within the goblin horde. 
+Thick limbs on a massive frame bear witness to the physical prowess of the
+humanoid.  
+~
+-700 0 0 hobgoblin~
+33 16d8+1656 6d4+11 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT WIMPY
+ACT SMARTTRACK
+ACT INTELLIGENT
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+AFF SANCTUARY
+AFF INFRARED
+CLASS warrior Barbarian Dragoon 
+#24705
+Goblin Shaman~
+a goblin shaman~
+A goblin in tattered robes stands here, motionless.
+~
+Unusual for a goblin, this one has managed to tap into a flow of Life and
+Death and reach the attention of a God or Gods.  This has enabled him to
+rise through the ranks, despite not being as strong as the rest of the
+goblin horde.  Held in high esteem by the chieftain, shaman has little to
+worry about.  
+~
+-800 0 0 goblin~
+33 16d8+1656 6d4+10 0 100 infinite
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT CLERIC
+ACT INTELLIGENT
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF SANCTUARY
+AFF PROTECTION
+#24706
+Goblin Chieftain~
+a goblin chieftain~
+One very important looking goblin oversees the area around him.
+~
+This is the strongest, most brutal and most cunning of all the
+underground goblins.  The long years of dominating others have left him
+completely corrupted.  His physique is astonishing, for a goblin.  His arms
+are muscular almost as those of a small-sized troll.  The distinguishing
+feature on this goblin is his stomach, swollen and massive.  He only lusts
+for satisfying his primal needs and revels in chaos that is his stronghold. 
+~
+-500 0 0 hobgoblin~
+35 17d8+1867 4d7+14 0 100 none
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT INTELLIGENT
+ACT DETECT_SPECIAL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF CRUSH
+AFF SANCTUARY
+AFF INFRARED
+CLASS warrior Gladiator Barbarian 
+#24707
+Turret guard~
+a turret guard~
+An observant goblin stands here.
+~
+Chosen for the position of a turret guard, this goblin has taken his duty
+seriously.  Seemingly constantly alert, he is scanning the area about him
+for the slightest sign of alert.  Larger than most of the common soldiers,
+this goblin looks like he could put up a fight more fierce than the rest, as
+well.  
+~
+-300 0 0 goblin~
+28 14d8+1187 2d12+7 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT INTELLIGENT
+OFF BASH
+OFF BERSERK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+CLASS warrior Barbarian Duelist 
+#0
+
+
+
+#OBJS
+#24601
+massive mithril hammer~
+mithril hammer~
+Massive mithril hammer glows with the light of its own.~
+weapon
+unknown~
+weapon 0 0 none 0
+0 20 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM BLESS
+ITEM ANTIEVIL
+LIMIT 0
+TIMER 0
+
+#24610
+shiny mining pickaxe pick axe~
+a shiny pickaxe~
+One sharp mining pickaxe shines on the floor.~
+weapon
+iron~
+axe 4 7 chop 0
+23 15 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+APPLY DAMROLL 2
+APPLY HITROLL 1
+APPLY DEX 1
+APPLY STR 1
+LIMIT 10
+TIMER 0
+
+#24620
+granite mining hammer~
+a granite mining hammer~
+A sturdy granite hammer lays abandoned here.~
+weapon
+granite~
+mace 4 8 thwack 0
+20 15 1800 P
+WEAR TAKE
+WEAR WIELD
+ITEM BURNPROOF
+APPLY SAVES -7
+APPLY DAMROLL 1
+APPLY WIS 1
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#24621
+sharp spike mining chisel~
+a sharp chisel~
+A long, thin metal spike with sharpened top lays here.~
+weapon
+iron~
+dagger 4 7 peck 0
+20 5 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM BURNPROOF
+APPLY HP 10
+APPLY HITROLL 2
+APPLY DEX 1
+APPLY MANA 10
+LIMIT 0
+TIMER 0
+
+#24630
+leather cap~
+a leather cap~
+A small piece of leather lays crumpled on the floor.~
+armor
+leather~
+1 1 1 1 0
+15 3 100 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+TIMER 0
+
+#24631
+leather pouch~
+a leather pouch~
+A leather pouch lays here.~
+container
+leather~
+15 AC 0 30 90
+0 5 20 P
+WEAR TAKE
+WEAR WAIST
+APPLY AC 1
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#24632
+torn shirt~
+a torn shirt~
+A tattered and torn piece of cloth lays neglected here.~
+armor
+cloth~
+1 1 1 1 0
+16 4 40 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#24635
+torn cape~
+a torn cape~
+A torn cape lays here.~
+armor
+leather~
+2 2 2 2 0
+19 7 400 P
+WEAR TAKE
+WEAR BODY
+WEAR ABOUT
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24636
+used boots~
+a pair of used boots~
+A pair of used boots is thrown here.~
+armor
+leather~
+1 1 1 1 0
+19 6 900 P
+WEAR TAKE
+WEAR FEET
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24637
+crutch wood wooden~
+a wooden crutch~
+An old crutch lays here.~
+weapon
+wood~
+staff 6 5 smash F
+20 15 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24640
+light dagger~
+a light dagger~
+A light dagger is stuck in the ground.~
+weapon
+steel~
+dagger 6 4 stab 0
+22 2 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#24641
+whiskey jar~
+a whiskey jar~
+A small, foul-smelling jar is here.~
+drink
+unknown~
+5 5 'whisky' 0 0
+5 5 500 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#24642
+worn gloves~
+a pair of worn gloves~
+A pair of worn gloves is discarded here.~
+armor
+leather~
+2 2 2 2 0
+20 5 400 P
+WEAR TAKE
+WEAR HANDS
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24645
+granite dagger dirk~
+a granite dirk~
+A slender, pointed piece of granite lays on the ground.~
+weapon
+granite~
+dagger 4 7 pierce D
+20 10 500 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24646
+light cloak~
+a light cloak~
+A light piece of cloth is crumpled here.~
+armor
+cloth~
+1 1 1 1 0
+20 2 1000 P
+WEAR TAKE
+WEAR NECK
+WEAR ABOUT
+ITEM MAGIC
+APPLY DEX 1
+APPLY AC 2
+LIMIT 0
+TIMER 0
+
+#24647
+light hood~
+a light hood~
+A light hood is tossed here.~
+armor
+leather~
+2 2 2 2 0
+19 2 900 P
+WEAR TAKE
+WEAR HEAD
+APPLY HITROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24648
+dark leather belt~
+a dark leather belt~
+A strip of leather is coiled here.~
+armor
+leather~
+3 3 3 3 0
+20 5 500 P
+WEAR TAKE
+WEAR WAIST
+APPLY SAVES -5
+LIMIT 0
+TIMER 0
+E dark leather belt~
+A leather stripe has seen some use.  It appears much older than a usual
+leather belt.  Various signs tell you this, from the cracks in the leather
+to the care with which this belt was maintained.  
+~
+
+#24650
+hardened leather coat~
+a hardened leather coat~
+A large piece of hardened leather is here.~
+armor
+unknown~
+3 3 3 3 0
+22 11 900 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24651
+strong leather pants~
+some strong leather pants~
+Some strong pants made of leather lay here.~
+armor
+unknown~
+3 3 3 3 0
+23 9 900 P
+WEAR TAKE
+WEAR LEGS
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#24652
+strong leather hat~
+a strong leather hat~
+A small hat crafted from leather is tossed here.~
+armor
+leather~
+2 2 2 2 0
+22 9 900 P
+WEAR TAKE
+WEAR HEAD
+APPLY HP 10
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#24653
+light mining hammer~
+a light mining hammer~
+A light mining hammer lies here where it was dropped.~
+weapon
+iron~
+mace 5 5 smash 0
+22 15 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24655
+backpack back pack~
+a leather backpack~
+A large leathar backpack collects the dust here.~
+container
+leather~
+50 A 0 50 80
+20 20 1000 P
+LIMIT 0
+TIMER 0
+
+#24656
+thick chain necklace~
+a thick chain~
+A thick coiled chain lays in the dirt here.~
+armor
+silver~
+1 1 1 1 0
+25 10 1200 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM MAGIC
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY SAVES -5
+APPLY AC 4
+LIMIT 0
+TIMER 0
+E thick chain necklace~
+This chain seems to glow with the light of its own.  Although it is
+heavily worn, it is in fairly good condition.  It seems that it is the
+artifact of the old, likely passed through time as a family value.  
+~
+
+#24657
+sturdy leather boots~
+a pair of sturdy leather boots~
+A pair of sturdy boots lays here.~
+armor
+leather~
+2 2 2 2 0
+25 10 1200 P
+WEAR TAKE
+WEAR FEET
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#24700
+small helmet~
+a small helmet~
+A small, light helmet rests on the ground.~
+armor
+copper~
+2 2 2 2 0
+20 7 200 P
+WEAR TAKE
+WEAR HEAD
+APPLY HP 5
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24701
+leather cuirass armour armor~
+a leather cuirass~
+A leather armour covered in small metal plates lays here.~
+armor
+leather~
+3 3 3 3 0
+20 20 300 P
+WEAR TAKE
+WEAR BODY
+APPLY AC 3
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24702
+pair crude gloves~
+a pair of gloves~
+A pair of old leather gloves has been carelessly left here.~
+armor
+hide~
+2 2 2 2 0
+20 5 300 P
+WEAR TAKE
+WEAR HANDS
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#24703
+crude stone polearm~
+a stone polearm~
+A long staff with a dull axe-blade lays here.~
+weapon
+granite~
+polearm 5 7 crush 0
+20 25 300 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR 1
+APPLY DAMROLL 2
+APPLY AC 5
+LIMIT 0
+TIMER 0
+
+#24704
+dark leather cape~
+a dark leather cape~
+A dark piece of leather is crumpled here.~
+armor
+leather~
+2 2 2 2 0
+28 10 1000 P
+WEAR TAKE
+WEAR BODY
+WEAR ABOUT
+APPLY SPARA -5
+APPLY SPETRI -5
+APPLY HP 10
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24705
+dark leather gloves~
+a pair of dark leather gloves~
+A pair of gloves made of dark leather lays here.~
+armor
+leather~
+2 2 2 2 0
+28 2 600 P
+WEAR TAKE
+WEAR HANDS
+APPLY DEX 1
+APPLY HITROLL 2
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24706
+dark leather cloak~
+a dark leather cloak~
+A large piece of dark leather covers the ground here.~
+armor
+leather~
+2 2 2 2 0
+28 5 1000 P
+WEAR TAKE
+WEAR NECK
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY HP 5
+LIMIT 0
+TIMER 0
+
+#24707
+long granite spear~
+a long granite spear~
+A long granite shaft lays heavily on the ground.~
+weapon
+unknown~
+spear 4 9 stab F
+28 22 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#24708
+curved scimitar~
+a curved scimitar~
+A sword with a curved blade rests on the ground.~
+weapon
+bronze~
+sword 4 8 slash 0
+28 15 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24709
+dark leather shield~
+a dark leather shield~
+A shield made from dark leather rests here.~
+armor
+leather~
+3 3 3 3 0
+27 10 900 P
+WEAR TAKE
+WEAR SHIELD
+APPLY HITROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24710
+short javelin~
+a short javelin~
+A short stick with a pointed end rests here.~
+weapon
+wood~
+spear 5 7 pierce F
+22 10 400 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24711
+old leather leggings~
+a pair of old leggings~
+An old piece of leather lays here, creaked.~
+armor
+leather~
+1 1 1 1 0
+20 3 400 P
+WEAR TAKE
+WEAR LEGS
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24712
+old leather sleeves~
+a pair of old leather sleeves~
+An old piece of leather lays here, worn and used.~
+armor
+leather~
+1 1 1 1 0
+22 3 400 P
+WEAR TAKE
+WEAR ARMS
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24713
+short curved sword~
+a short curved blade~
+A short blade, viciously curved lays here.~
+weapon
+bronze~
+sword 4 7 slash 0
+21 10 500 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24714
+short curved dagger~
+a short curved dagger~
+A small dagger lays here, its blade curved.~
+weapon
+bronze~
+dagger 4 7 stab 0
+20 5 400 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24715
+long wooden staff~
+a long wooden staff~
+A long wooden pole rests here.~
+weapon
+wood~
+staff 5 7 smash F
+25 10 200 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24716
+dull battleaxe axe~
+a dull battle-axe~
+A large axe with a dull blade rests here.~
+weapon
+unknown~
+axe 6 6 smash 0
+25 20 400 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 2
+APPLY HITROLL -1
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#24717
+small granite shield~
+a small granite shield~
+A small block of granite lays on the floor.~
+armor
+unknown~
+5 5 5 5 0
+25 20 1000 P
+WEAR TAKE
+WEAR SHIELD
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24718
+brown leather belt~
+a brown leather belt~
+A small piece of brown leather lays here.~
+armor
+leather~
+1 1 1 1 0
+25 3 400 P
+WEAR TAKE
+WEAR WAIST
+APPLY HP 10
+APPLY SAVES -2
+LIMIT 0
+TIMER 0
+
+#24719
+brown leather boots~
+a pair of brown leather boots~
+A pair of brown boots lays here, discarded.~
+armor
+leather~
+2 2 2 2 0
+25 3 400 P
+WEAR TAKE
+WEAR FEET
+APPLY HITROLL 2
+APPLY MOVE 30
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#24720
+long dirty cloak~
+a dirty cloak~
+Long piece of cloth with numerous stains is left here.~
+armor
+cloth~
+2 2 2 2 0
+28 3 800 P
+WEAR TAKE
+WEAR NECK
+APPLY HP 10
+APPLY HITROLL 2
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#24721
+Small lead ring~
+a small lead ring~
+Small ring of crude craftmanship glints here.~
+armor
+lead~
+0 0 0 0 0
+25 3 700 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM MAGIC
+APPLY DAMROLL 1
+APPLY HITROLL 2
+APPLY AC 3
+LIMIT 0
+TIMER 0
+
+#24722
+crude hide boots~
+a crude hide boots~
+A pair of boots from creaked, crude hide are here.~
+armor
+hide~
+3 3 3 3 0
+25 5 600 P
+WEAR TAKE
+WEAR FEET
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24723
+small basalt shield~
+a small basalt shield~
+A small piece of basalt has hardened here.~
+armor
+basalt~
+7 7 7 7 0
+25 15 1000 P
+WEAR TAKE
+WEAR SHIELD
+APPLY DAMROLL 1
+APPLY HITROLL 2
+LIMIT 15
+TIMER 0
+
+#24724
+curved scimitar~
+a curved scimitar~
+A curved blade glints dully on the ground.~
+weapon
+bronze~
+sword 4 8 slash 0
+26 10 1100 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+APPLY DEX 1
+APPLY DAMROLL 2
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24730
+tattered dark robe~
+a tattered dark robe~
+A long, dark robe is crumpled on the floor.~
+armor
+ash~
+1 1 1 1 0
+30 5 4000 P
+WEAR TAKE
+WEAR BODY
+WEAR ABOUT
+ITEM DARK
+ITEM MAGIC
+APPLY SAVES -5
+APPLY DEX 2
+APPLY INT 2
+APPLY MANA 30
+APPLY AC 5
+APPLY STR -2
+LIMIT 10
+TIMER 0
+
+#24731
+small stone mace~
+a small mace~
+A short, light stone mace rests here.~
+weapon
+stone~
+mace 5 7 crush 0
+0 15 3000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY WIS 1
+APPLY MANA 10
+LIMIT 0
+TIMER 0
+
+#24732
+black pearl necklace~
+a black pearl necklace~
+Several black pearls are stringed together in the form of the necklace.~
+armor
+pearl~
+0 0 0 0 0
+30 2 4000 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM MAGIC
+ITEM BLESS
+APPLY INT 2
+APPLY MANA 40
+APPLY SAVES -7
+APPLY SVSPELL -10
+APPLY AC 5
+LIMIT 10
+TIMER 0
+
+#24733
+studded leather buckler~
+a studded leather buckler~
+A small leather shield with several pieces of metal embedded in it rests here.~
+armor
+leather~
+3 3 3 3 0
+30 15 1000 P
+WEAR TAKE
+WEAR SHIELD
+APPLY HP 20
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#24740
+war belt~
+a massive war belt~
+A thick, sturdy belt designed for maximal protection lays here.~
+armor
+leather~
+4 4 4 4 0
+30 10 2000 P
+WEAR TAKE
+WEAR WAIST
+ITEM HUM
+APPLY STR 2
+APPLY CON 2
+APPLY DAMROLL 3
+APPLY HITROLL 2
+APPLY MANA -30
+APPLY INT -2
+APPLY WIS -2
+LIMIT 10
+TIMER 0
+
+#24741
+granite bracer~
+a granite bracer~
+A massive, heavy hoop of stone rests here.~
+armor
+granite~
+2 2 2 2 0
+31 10 2000 P
+WEAR TAKE
+WEAR WRIST
+APPLY DAMROLL 3
+APPLY HITROLL -1
+APPLY STR 1
+LIMIT 15
+TIMER 0
+
+#24742
+spiked stone club~
+a spiked club~
+A massive club made of stone rests here.~
+weapon
+unknown~
+mace 4 9 crush 0
+32 20 2000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX -1
+APPLY STR 1
+APPLY DAMROLL 2
+LIMIT 10
+TIMER 0
+
+#24743
+crude stone axe~
+a crude axe~
+A large stone axe rests heavily on the ground.~
+weapon
+stone~
+axe 3 12 chop 0
+0 20 2000 P
+WEAR TAKE
+WEAR WIELD
+ITEM BURNPROOF
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#24750
+sceptre goblin king~
+a sceptre of the Goblin King~
+A primite sceptre of goblin made is tossed here.~
+weapon
+granite~
+mace 4 10 beating 0
+33 35 3000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+APPLY DAMROLL 3
+APPLY STR 1
+APPLY HITROLL -1
+LIMIT 20
+TIMER 0
+
+#24751
+small granite crown~
+a small crown made from granite~
+A block of granite has been crudely hacked away to resemble a crown.~
+armor
+granite~
+4 4 4 4 0
+33 15 2500 P
+WEAR TAKE
+WEAR HEAD
+APPLY INT 1
+APPLY WIS 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#24752
+crude granite knuckles~
+a pair of granite knuckles~
+A pair of small granite plates has been formed into knuckles.~
+armor
+granite~
+3 3 3 3 0
+31 10 1200 P
+WEAR TAKE
+WEAR HANDS
+APPLY STR 1
+APPLY SAVES -7
+APPLY HITROLL -1
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#24753
+crude hide cape~
+a hide cape~
+A thick hide lays discarded here.~
+armor
+hide~
+3 3 3 3 0
+31 15 1700 P
+WEAR TAKE
+WEAR NECK
+WEAR ABOUT
+APPLY HP 20
+APPLY DEX -1
+LIMIT 0
+TIMER 0
+
+#24754
+goblin signet ring~
+a goblin signet ring~
+A ring with a crude symbol of Goblin rests here.~
+armor
+bronze~
+0 0 0 0 0
+32 3 3000 P
+WEAR TAKE
+WEAR FINGER
+ITEM MAGIC
+APPLY DAMROLL 2
+APPLY HITROLL 2
+APPLY STR 1
+APPLY DEX 2
+LIMIT 12
+TIMER 0
+
+#24755
+large basalt shield~
+a large basalt shield~
+A large piece of basalt serving as a shield covers the ground here.~
+armor
+basalt~
+7 7 7 7 0
+32 22 0 P
+WEAR TAKE
+WEAR SHIELD
+ITEM GLOW
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY STR 1
+APPLY DEX -2
+LIMIT 10
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#24600
+Within a Dark Crevice~
+Breaking off of the desolate trail, you enter a dark crevice.  Beneath
+you, the crevice opens deeper into the ground, into darkness.  Ancient rock
+surrounds you on other sides, but it seems possible to descend safely down
+the crevice.  
+~
+inside
+D SOUTH 24823 0 0
+door~
+The desolate road lies to the south.
+~
+D DOWN 24601 0 0
+~
+The darkness greets you.
+~
+OWNER none~
+#24601
+Under the Crevice~
+You find yourself in a wide maw within the earth.  Patches of sky can
+still be seen from this point, should one gaze upward.  However, this is not
+recommended since the terrain is treacherous and treading should be done
+with the utmost care.  The terrain looks particularly slippery on the ravine
+leading down.  Looking around you, you notice nothing but foreboding
+darkness.  
+~
+inside
+D EAST 24602 0 0
+~
+The cavern tunnel extends into the gloom.
+~
+D WEST 24603 0 0
+~
+The cavern tunnel extends into the gloom.
+~
+D UP 24600 0 0
+~
+The patches of light shine through the darkness.
+~
+D DOWN 24604 0 0
+~
+You can sense no air coming from this direction.
+~
+OWNER none~
+#24602
+Under the Crevice~
+A rare patch of brighter darkness pierces the darkness all around you. 
+After a moment of confusion, you realize this is the light that still comes
+in this place from the world outside.  The atmosphere of the rift is
+oppresive and dank, heralding what lays ahead, should you venture deeper
+into the caves.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D WEST 24601 0 0
+~
+The cavern tunnel extends into the gloom.
+~
+D DOWN 24606 0 0
+~
+A sharp incline leads the tunnel down.
+~
+OWNER none~
+#24603
+Under the Crevice~
+A rare patch of brighter darkness pierces the darkness all around you. 
+After a moment of confusion, you realize this is the light that still comes
+in this place from the world outside.  The atmosphere of the rift is
+oppresive and dank, heralding what lays ahead, should you venture deeper
+into the caves.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 24601 0 0
+~
+The cavern tunnel extends into the gloom.
+~
+D DOWN 24605 0 0
+~
+A sharp incline leads the tunnel down.
+~
+OWNER none~
+#24604
+Pile of Rubble~
+Jagged rocks fill this cold cave.  Aeons have worked their course,
+forming impossibly sharp and long stalagmites on the cave floor.  The cave
+is cold, and judging by the bones lying scattered among the rocks, many a
+creature had met its demize here.  Fortunately for you, the fall had merely
+stunned you.  You begin contemplating on your way back.  
+~
+vertical
+ROOM DARK
+ROOM INDOORS
+D UP 24601 0 0
+~
+~
+TRAP 'concealed pit' 1 10 2
+What seemed like a secure footing betrays you and you lose your balance.~
+Tumbling through the air, you fall heavily onto the rocks!~
+OWNER none~
+#24605
+A Rough-Hewn Cavern Trail~
+The trail ends abruptly here, at the base of a steep rise leading upwards
+to the surface world.  Generations of Goblin miners have formed a haphazard
+trail, whose primary purpose is to carry the crystal from the depths of
+their mines to the dwellers under the skies.  The trails extends northwards
+into the warm darkness, the pebbles ground into the dust beneath your feet. 
+~
+road
+ROOM DARK
+ROOM INDOORS
+D NORTH 24609 0 0
+~
+The tunnel extends northwards.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D UP 24603 0 0
+~
+A tunnel leads sharply upwards.
+~
+OWNER none~
+#24606
+A Rough-Hewn Cavern Trail~
+The trail ends abruptly here, at the base of a steep rise leading upwards
+to the surface world.  Generations of Goblin miners have formed a haphazard
+trail, whose primary purpose is to carry the crystal from the depths of
+their mines to the dwellers under the skies.  The trail extends northwards
+into the warm darkness, the pebbles ground into the dust beneath your feet. 
+~
+road
+ROOM DARK
+ROOM INDOORS
+D NORTH 24607 0 0
+~
+The tunnel extends northwards.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D UP 24602 0 0
+~
+A tunnel leads sharply upwards.
+~
+OWNER none~
+#24607
+At The Turn In The Trail~
+The trail is bent at an angle at this point, carved through the less
+resistant rock.  It appears that a large block of iron oxide had blocked the
+natural path and not even the stalwart goblin miners could dig through it. 
+The path leads further towards the centre of the caves to the west, or
+towards the surface world, to the south.  
+~
+road
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24606 0 0
+~
+The tunnel extends southwards.
+~
+D WEST 24608 0 0
+~
+The intersection of two tunnels lays westwards.
+~
+OWNER none~
+#24608
+The Intersection of the Trails~
+Trails leading eastward and westward meet at this cavern.  Somewhat
+spacious, it is connecting the trails with the main complex of caves lying
+to the north.  Seeing more traffic than either of the two trails, this
+section looks considerably cleaner as well.  
+~
+road
+ROOM DARK
+ROOM INDOORS
+D NORTH 24610 0 0
+~
+A large, well travelled tunnel leads northwards.
+~
+D EAST 24607 0 0
+~
+The tunnel trails off to the darkness.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24609 0 0
+~
+The tunnel trails off to the darkness.
+~
+OWNER none~
+#24609
+At The Turn In The Trail~
+The trail is bent at an angle at this point, carved through the less
+resistant rock.  It appears that a large block of iron oxide had blocked the
+natural path and not even the stalwart goblin miners could dig through it. 
+The path leads further towards the centre of the caves to the east, or
+towards the surface world, to the south.  
+~
+road
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24608 0 0
+~
+The intersection of two tunnels lays eastwards.
+~
+D SOUTH 24605 0 0
+~
+The tunnel extends southwards.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24610
+Before the Massive Stone Gate~
+Huge bile of rock meets here, forming a natural chasm.  Between walls
+ridden with minerals, goblins had built a massive protective stone gate. 
+Carved from the most resilient of stone, it divides the inner goblin caves
+from the rest of the world.  In the days long gone, it may have served a
+defensive purpose, but nowadays, goblins leave it open as it lays on the
+trade route.  Several torches are placed to the either side of the gate, so
+as to allow more adventurous surface dwellers to prepare to brave the depths
+lying north with greater ease.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 24611 AB 0
+massive stone gate~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24608 0 0
+~
+The intersection of two tunnels lays southwards.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E massive~
+This gate is surprisingly large for a product of a race this small and
+frail.  Doubtlessly, it is moved by an intricate mechanism that is
+controlled from inside the complex.  It is a whole foot thick, and made of
+pure granite.
+~
+E torch torches~
+Small sources of light, these torches help the surface dwellers move at
+least a little bit easier within the caves.  They have been provided by
+goblins, since they help the trade.  Like most things of goblin origin, they
+are crude, yet effective.  
+~
+OWNER none~
+#24611
+At the Beginning of a Cavern~
+The first contact with the goblin kingdom makes you realize that these
+caves are not a mere mine excavation expoited by savages.  There seems to be
+some sort of a pattern to the myriad of routes that goblin have created and
+utilized.  The fervour of the creatures and the buzz of work and
+conversation flows through the air from all around you.  
+~
+inside
+ROOM INDOORS
+D NORTH 24615 0 0
+~
+The massive cavern opens northwards.
+~
+D EAST 24613 0 0
+~
+The quiet, dark cavern cloaked in deep shades is here.
+~
+D SOUTH 24610 AB 0
+massive stone gate~
+The massive stone gate lays to the south of you.
+~
+D WEST 24612 0 0
+~
+The quiet, dark cavern cloaked in deep shades is here.
+~
+E massive stone gate~
+This gate is surprisingly large for a product of a race this small and
+frail.  Doubtlessly, it is moved by an intricate mechanism that is
+controlled from inside the complex.  It is a whole foot thick, and made of
+pure granite.  
+~
+OWNER none~
+#24612
+In the Shades~
+The darker shadows this place is immersed in seem unnatural.  So close to
+the busy, massive stone gate, yet few goblins roam here.  The darkness is
+augmented by the absence of the torches, which adorn the gate.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24616 0 0
+~
+The brighter, more populated cavern extends in this direction.
+~
+D EAST 24611 0 0
+~
+The brighter, more populated cavern extends in this direction.
+~
+D SOUTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D WEST 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+OWNER none~
+#24613
+In the Shades~
+The darker shadows this place is immersed in seem unnatural.  So close to
+the busy, massive stone gate, yet few goblins roam here.  The darkness is
+augmented by the absence of the torches, which adorn the gate.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24614 0 0
+~
+The brighter, more populated cavern extends in this direction.
+~
+D EAST 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D SOUTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D WEST 24611 0 0
+~
+The brighter, more populated cavern extends in this direction.
+~
+OWNER none~
+#24614
+An Expansive Cavern~
+Sheer magnitude of this cave speaks volumes of the effort put in by
+generations of Goblins working the earth.  Ceiling is lost at over 100 feet
+of height and echoes of incessant Goblin chatter are multiplied under it. 
+At either side of you, there is nothing but massive emptiness, telling you
+that the cave expands further on.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24619 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D EAST 24621 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24613 0 0
+~
+The quiet, dark cavern cloaked in deep shades is here.
+~
+D WEST 24615 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24615
+An Expansive Cavern~
+Sheer magnitude of this cave speaks volumes of the effort put in by
+generations of Goblins working the earth.  Ceiling is lost at over 100 feet
+of height and echoes of incessant Goblin chatter are multiplied under it. 
+At either side of you, there is nothing but massive emptiness, telling you
+that the cave expands further on.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24618 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D EAST 24614 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24611 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D WEST 24616 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24616
+An Expansive Cavern~
+Sheer magnitude of this cave speaks volumes of the effort put in by
+generations of Goblins working the earth.  Ceiling is lost at over 100 feet
+of height and echoes of incessant Goblin chatter are multiplied under it. 
+At either side of you, there is nothing but massive emptiness, telling you
+that the cave expands further on.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24617 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D EAST 24615 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24612 0 0
+~
+The quiet, dark cavern cloaked in deep shades is here.
+~
+D WEST 24620 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24617
+The Spacious Cave~
+The true beginning of the rough miners' cave system, this spacious cave
+has walls that have recent scars embedded in them, along with the ancient
+ones.  It seems that miners make it a habit to chip at the wall as they pass
+on north-east deeper into the caves.  Quite possibly, this is for good luck.
+The draft of breeze cools your face from the south, and you realize that
+huge expanse of a cave lies in that direction.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D EAST 24618 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24616 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D WEST 24622 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24618
+The Spacious Cave~
+The true beginning of the rough miners' cave system, this spacious cave
+has walls that have recent scars embedded in them, along with the ancient
+ones.  It seems that miners make it a habit to chip at the wall as they pass
+on north-east deeper into the caves.  Quite possibly, this is for good luck.
+The draft of breeze cools your face from the south, and you realize that
+huge expanse of a cave lies in that direction.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D EAST 24619 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24615 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D WEST 24617 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24619
+The Spacious Cave~
+The true beginning of the rough miners' cave system, this spacious cave
+has walls that have recent scars embedded in them, along with the ancient
+ones.  It seems that miners make it a habit to chip at the wall as they pass
+on north-east deeper into the caves.  Quite possibly, this is for good luck.
+The draft of breeze cools your face from the south, and you realize that
+huge expanse of a cave lies in that direction.  Another air stream caresses
+your skin from the opposite direction.  The path north leads further into
+the mines.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24624 0 0
+~
+The darker hallway leads away from the buzz of the main caverns.
+~
+D EAST 24623 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24614 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D WEST 24618 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24620
+Along the Western Wall of An Expansive Cavern~
+The cave finally ends here, and this only because of the impenetrable
+rock that forms its western wall.  The seam between the ceiling swooping
+from the dizzying heights and the wall is not artificial, but the work of
+nature.  It seems that the goblins have realized that this rock they cannot
+conquer and they had simply made the most of it.  The chatter of the
+workplace seems a bit less loud here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24622 0 0
+~
+The cavern extends northwards, following the line of the wall.
+~
+D EAST 24616 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D WEST 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+OWNER none~
+#24621
+Along the Eastern Wall of An Expansive Cavern~
+The cave finally ends here, and this only because of the impenetrable
+rock that forms its eastern wall.  The seam between the ceiling swooping
+from the dizzying heights and the wall is not artificial, but the work of
+nature.  It seems that the goblins have realized that this rock they cannot
+conquer and they had simply made the most of it.  The chatter of the
+workplace seems a bit less loud here.  The air seems cooler here and there
+are some small holes in the eastern wall.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24623 0 0
+~
+The cavern extends into the darkness, following the line of the wall.
+~
+D EAST 0 0 0
+~
+Looking at the surface of the wall, you notice a little hole there.
+~
+D SOUTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D WEST 24614 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+E hole~
+This hole uses the naturally cold stone to keep some meal wraps and water
+skin cold.  The miners often come by and leave their supplies so that they
+can enjoy in them after a night's hard work.  
+~
+OWNER none~
+#24622
+The Corner of the Spacious Cave~
+The true beginning of the rough miners' cave system, this spacious cave
+has walls that have recent scars embedded in them, along with the ancient
+ones.  It seems that miners make it a habit to chip at the wall as they move
+deeper into the caves.  Quite possibly, this is for good luck.  A slab of
+rock with fewer than usual chips attracts your attention.  The oppresive
+walls encircle you to the north and west, forcing you to move east or south.
+~
+vertical
+ROOM DARK
+ROOM INDOORS
+D NORTH 24628 ABI 0
+slab of rock~
+The curious looking slab of rock prevents you from moving in this direction.
+~
+D EAST 24617 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+D SOUTH 24620 0 0
+~
+The cavern extends southwards, following the line of the wall.
+~
+D WEST 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+E slab rock~
+The slab of thick rock at a first glance seems a part of the rest of the
+wall.  However, you notice a draft of air carrying pungent odours from
+something...  Beyond.  
+~
+OWNER none~
+#24623
+The Corner of the Spacious Cave~
+The true beginning of the rough miners' cave system, this spacious cave
+has walls that have recent scars embedded in them, along with the ancient
+ones.  It seems that miners make it a habit to chip at the wall as they pass
+on north-east deeper into the caves.  Quite possibly, this is for good luck.
+The draft of breeze cools your face from the south, and you realize that
+huge expanse of a cave lies in that direction.  The oppressive walls
+encircle you north and east, cutting you off.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D EAST 0 0 0
+~
+The grazed wall blocks the further exploration in this direction.
+~
+D SOUTH 24621 0 0
+~
+The cavern extends into the darkness, following the line of the wall.
+~
+D WEST 24619 0 0
+~
+The expanse of caverns is echoing with the buzz of activity.
+~
+OWNER none~
+#24624
+Beginning of a Dark, Busy Hallway~
+This is hallway is one of the first mining sites in this complex.  Signs
+of busy activity are all around you: shouts of miners as they call each
+other, singing of pickaxes as they strike in unison and an occasional curse.
+The rock through which the hallway has been carved is rich in crystal, with
+biles glimmering against the light.  Thick, stout wooden beams support the
+cave ceiling safely.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24625 0 0
+~
+The hallway lays in this direction, with the silence gradually growing.
+~
+D EAST 0 0 0
+~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24619 0 0
+~
+The large cavern expands southwards, buzzing with the activity.
+~
+D WEST 0 0 0
+~
+The ancient rock prevents you from moving in this direction.
+~
+E crystal bile~
+What looks like a vein in an impossibly large organism glimmers softly in
+front of you.  Warm, orange glow captivates your attention entirely, for a
+few fleeting seconds.  Leaning in closer, you notice small speckles of red
+within the light orange crystal.  
+~
+E thick stout wooden beams~
+Very wide, very heavy and very stout, these wooden beams are covered in
+thin layer of finest black dust, accumulated from all the rock pounding. 
+They look very supportive and secure.  You have no reason to fear any of the
+sudden cave-ins.  
+~
+OWNER none~
+#24625
+In a Dark, Busy Hallway~
+The hallway rich with crystal bile is perpetually busy.  As one shift of
+miners leaves, the other one instantly takes their place.  The walls of the
+hallway are heavily chipped, as pickaxes and hammers constantly batter them,
+in search of more crystal.  Thick, stout supporting wooden beams look
+stable, as they support a low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24626 0 0
+~
+The hallway lays in this direction, with the silence gradually growing.
+~
+D SOUTH 24624 0 0
+~
+You can hear the buzz of the many goblins in this direction.
+~
+D WEST 0 0 0
+~
+The ancient rock prevents you from moving in this direction.
+~
+E crystal bile~
+What looks like a vein in an impossibly large organism glimmers softly in
+front of you.  Warm, orange glow captivates your attention entirely, for a
+few fleeting seconds.  Leaning in closer, you notice small speckles of red
+within the light orange crystal.  
+~
+E thick stout wooden beams~
+Very wide, very heavy and very stout, these wooden beams are covered in
+thin layer of finest black dust, accumulated from all the rock pounding. 
+They look very supportive and secure.  You have no reason to fear any of the
+sudden cave-ins.  
+~
+OWNER none~
+#24626
+In a Dark, Busy Hallway~
+The hallway rich with crystal bile is perpetually busy.  As one shift of
+miners leaves, the other one instantly takes their place.  The walls of the
+hallway are heavily chipped, as pickaxes and hammers constantly batter them,
+in search of more crystal.  Thick, stout supporting wooden beams look
+stable, as they support a low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24646 0 0
+~
+The hallway lays in this direction, with the silence gradually growing.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24625 0 0
+~
+The hallway lays in this direction, with the silence gradually growing.
+~
+E crystal bile~
+What looks like a vein in an impossibly large organism glimmers softly in
+front of you.  Warm, orange glow captivates your attention entirely, for a
+few fleeting seconds.  Leaning in closer, you notice small speckles of red
+within the light orange crystal.  
+~
+E thick stout wooden beams~
+Very wide, very heavy and very stout, these wooden beams are covered in
+thin layer of finest black dust, accumulated from all the rock pounding. 
+They look very supportive and secure.  You have no reason to fear any of the
+sudden cave-ins.  
+~
+OWNER none~
+#24627
+The End of Dark, Busy Hallway~
+This is the end of the central hallway that leads through the mines.  The
+reason the miners had stopped here is the thinning of the crystal biles. 
+Apparently, natural formation of softer rocks gave way to granite here and
+the bile had moved elsewhere.  A well-beaten path leads towards the more
+civilized section of mines leads south.  Deeper into the mines, a steep
+slope leads down.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D WEST 24647 0 0
+~
+~
+E e east s south n north~
+The ancient rock prevents you from moving in this direction.
+~
+E w west~
+The hallway that lead you to this dead end extends here.
+~
+OWNER none~
+#24628
+At the Top of a Desolated Ravine~
+The air in this corridor is dank and oppresive.  Humidity lingers around
+you in the form of mist, carrying heavy scent from the pits beneath you. 
+You could swear you hear restless rustling of leaves coming from the same
+direction.  Your attention is captivated by an unnaturally smooth stone
+wall.  
+~
+vertical
+ROOM DARK
+ROOM NO_MOB
+D NORTH 0 0 0
+~
+The dark rock walls prevent the movement in this direction.
+~
+D EAST 0 0 0
+~
+The dark rock walls prevent the movement in this direction.
+~
+D SOUTH 24622 AB 0
+~
+The path leads to the main caverns.
+~
+D WEST 0 0 0
+~
+The dark rock walls prevent the movement in this direction.
+~
+D DOWN 24629 0 0
+~
+The foreboding darkness is puncutated by strange, rustling noise.
+~
+TRAP 'poison dart' 2 3 5
+As the ancient slab of rock opens with an eerie creek, a tiny click is heard.~
+The mechanism springs into the action, and a small, sinew dart flies out of the wall!~
+E smooth stone wall~
+The wall is very smooth, which betrays its artificial origin: a thing
+like this is not found in nature.  Upon further examination, you seem to
+notice wispy, thin etchings carved into it.  
+~
+E wispy thin etchings~
+The etchings are a hand-writing, badly damaged with the passage of time. 
+It states:
+ 
+D . n g . r !
+ 
+H o . r . r  
+l i e .
+B e n . a t . !!!
+ 
+~
+OWNER none~
+#24629
+In the Middle of Rancid Clearing~
+An unexpected sight greets you: impossible combination of rusted, ancient
+armour, bones of various creatures and what appears to be rotting, dead
+plants lay scattered about.  The smell of decay is so strong that you feel
+momentarily overwhelmed and pause to rest.  The way out of this insanity
+leads up the steep cliff, while all around you the rustling grows louder... 
+Anxious, it would seem.  
+~
+vertical
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24632 0 0
+~
+~
+D EAST 24631 0 0
+~
+~
+D SOUTH 24633 0 0
+~
+~
+D WEST 24630 0 0
+~
+~
+D UP 24628 0 0
+~
+~
+E s south~
+A chilling freeze caresses your face as you turn southwards.
+~
+E n north~
+A warm glow basks the tunnel leading northwards.
+~
+E e east~
+A strong stench comes from this direction.
+~
+E w west~
+The rustling seems especially strong in this direction.
+~
+E w west n north e east s south~
+Both rustling and the darkness grow stronger in this direction.
+~
+E u up~
+The tunnel in this direction leads towards the main goblin caverns.
+~
+OWNER none~
+#24630
+In the Pungent, Rough Corridor~
+The scattered debris had spilled over from the central room to the east
+here.  Not even a tight corridor had kept it at bay.  The corridor itself is
+clearly not a work of any mortal hand.  Erratic in its flow, its shadows are
+deceptive and unnatural.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 24629 0 0
+~
+~
+D WEST 24634 0 0
+~
+~
+TRAP 'poison gas' 3 2 10
+A hissing noise echoes around you.~
+The hiss grows louder as a yellowish gas pours from the rocks all around you.~
+E e east~
+The intersection of the tunnels lays eastwards.
+~
+E w west~
+The chamber westwards appears to be rather small.
+~
+OWNER none~
+#24631
+In the Pungent, Rough Corridor~
+The scattered debris had spilled over from the central room to the west
+here.  Not even a tight corridor had kept it at bay.  The corridor itself is
+clearly not a work of any mortal hand.  Erratic in its flow, its shadows are
+deceptive and unnatural.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 24643 0 0
+~
+~
+D WEST 24629 0 0
+~
+~
+TRAP 'sleep gas' 3 2 10
+Mists lay low in this corridor, wrapping around your feet as you pass by.~
+The mist ascends around you very slowly, and you suddenly feel lightheaded.~
+E e east~
+You cannot gauge the size of the chamber extending to the east, but the stench in it appears to be overpowering.
+~
+E e east~
+A strong stench comes from this direction.
+~
+E w west~
+The intersection of the tunnels lays westwards.
+~
+OWNER none~
+#24632
+In the Pungent, Rough Corridor~
+The scattered debris had spilled over from the central room to the south
+here.  Not even a tight corridor had kept it at bay.  The corridor itself is
+clearly not a work of any mortal hand.  Erratic in its flow, its shadows are
+deceptive and unnatural.  The temperature within this corridor is
+considerably higher than in the rest of the caves.  You begin to sweat.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24637 0 0
+~
+~
+D SOUTH 24629 0 0
+~
+~
+TRAP 'fireball' 3 20 10
+A barely audible whoop attracts your attention.~
+The area suddenly explodes in a massive fireball, engulfing you!~
+E n north~
+The warm glow grows stronger northwards, revealing a vast chamber.
+~
+E s south~
+The intersection of the tunnels lays southwards.
+~
+OWNER none~
+#24633
+In the Pungent, Rough Corridor~
+The scattered debris had spilled over from the central room to the north
+here.  Not even a tight corridor had kept it at bay.  The corridor itself is
+clearly not a work of any mortal hand.  Erratic in its flow, its shadows are
+deceptive and unnatural.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24629 0 0
+~
+~
+D SOUTH 24640 0 0
+~
+~
+TRAP 'boulder' 3 2 10
+A low rumbling sound ripples through the air.~
+The ceiling collapses suddenly and large boulders pummel you!~
+E s south~
+The darkness lays southwards, punctuated by a cold wind biting you mercilessly.
+~
+E n north~
+The intersection of the tunnels lays northwards.
+~
+OWNER none~
+#24634
+In the Western Forgotten Caven~
+A surprisingly small chamber unravels before you.  The ceiling lays low,
+with the walls oppressively propelling it.  The floor is uneven, covered in
+scattered debris, small rocks and an occasional bone protruding upwards. 
+The air is dank, stale and perpetually caressed by a sweet, smelly musk.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24635 0 0
+~
+~
+D EAST 24630 0 0
+~
+~
+D SOUTH 24636 0 0
+~
+~
+E n north s south~
+An adjoining chamber lays in this direction.
+~
+E e east~
+The tunnel leading away from chamber lays in this direction.
+~
+OWNER none~
+#24635
+North End of Western Forgotten Cave~
+A surprisingly small chamber unravels before you.  The ceiling lays low,
+with the walls oppressively propelling it.  The floor is uneven, covered in
+scattered debris, small rocks and an occasional bone protruding upwards. 
+The air is dank, stale and perpetually caressed by a sweet, smelly musk.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 24634 0 0
+~
+~
+E s south~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24636
+South End of Western Forgotten Cave~
+A surprisingly small chamber unravels before you.  The ceiling lays low,
+with the walls oppressively propelling it.  The floor is uneven, covered in
+scattered debris, small rocks and an occasional bone protruding upwards. 
+The air is dank, stale and perpetually caressed by a sweet, smelly musk.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24634 0 0
+~
+~
+E n north~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24637
+In the Northern Forgotten Cave~
+The warm phosphorous glow illuminates these small caverns.  It seems that
+the glow comes from the plants themselves, as you are deeply entrenched
+within earth.  However, although the glow is warm, the shadows it casts over
+pitch-black granite are menacing.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 24639 0 0
+~
+~
+D SOUTH 24632 0 0
+~
+~
+D WEST 24638 0 0
+~
+~
+E w west e east~
+An adjoining chamber lays in this direction.
+~
+E s south~
+The tunnel leading away from chamber lays in this direction.
+~
+OWNER none~
+#24638
+West End of Northern Forgotten Cave~
+The warm phosphorous glow illuminates these small caverns.  It seems that
+the glow comes from the plants themselves, as you are deeply entrenched
+within earth.  However, although the glow is warm, the shadows it casts over
+pitch-black granite are menacing.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 24637 0 0
+~
+~
+E e east~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24639
+East End of Northern Forgotten Cave~
+The warm phosphorous glow illuminates these small caverns.  It seems that
+the glow comes from the plants themselves, as you are deeply entrenched
+within earth.  However, although the glow is warm, the shadows it casts over
+pitch-black granite are menacing.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 24637 0 0
+~
+~
+E w west~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24640
+In the Southern Forgotten Cave~
+Chillingly cold, the air in this cavern system forces you to puff out
+small clouds from your lungs.  It seems that the plants here have rather
+peculiar metabolism, that forces them to release frost into their
+environment.  The white coating all around walls, floor and ceiling is a
+thin layer of solid ice, glazed over pure white marble.  
+~
+ice
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24633 0 0
+~
+~
+D EAST 24642 0 0
+~
+~
+D WEST 24641 0 0
+~
+~
+E w west e east~
+An adjoining chamber lays in this direction.
+~
+E n north~
+The tunnel leading away from chamber lays in this direction.
+~
+OWNER none~
+#24641
+West End of Southern Forgotten Cave~
+Chillingly cold, the air in this cavern system forces you to puff out
+small clouds from your lungs.  It seems that the plants here have rather
+peculiar metabolism, that forces them to release frost into their
+environment.  The white coating all around walls, floor and ceiling is a
+thin layer of solid ice, glazed over pure white marble.  
+~
+ice
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 24640 0 0
+~
+~
+E e east~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24642
+East End of Northern Forgotten Cave~
+Chillingly cold, the air in this cavern system forces you to puff out
+small clouds from your lungs.  It seems that the plants here have rather
+peculiar metabolism, that forces them to release frost into their
+environment.  The white coating all around walls, floor and ceiling is a
+thin layer of solid ice, glazed over pure white marble.  
+~
+ice
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 24640 0 0
+~
+~
+E w west~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24643
+In the Eastern Forgotten Cave~
+You find yourself in the lair of gargantuan proportions, inhabited by
+thin, agile plants.  The walls, if there are any, are covered in thick
+lime-coloured slime -- no doubt, a vile excretion of the plants themselves. 
+The source of the scent that was ever so pervasive throughout this Gods
+forsaken complex of caves is finally before your eyes: the rotting, pulsing
+and flailing arms of the plants themselves.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24644 0 0
+~
+~
+D SOUTH 24645 0 0
+~
+~
+D WEST 24631 0 0
+~
+~
+E n north s south~
+An adjoining chamber lays in this direction.
+~
+E w west~
+The tunnel leading away from chamber lays in this direction.
+~
+OWNER none~
+#24644
+North End of Eastern Forgotten Cave~
+You find yourself in the lair of gargantuan proportions, inhabited by
+thin, agile plants.  The walls, if there are any, are covered in thick
+lime-coloured slime -- no doubt, a vile excretion of the plants themselves. 
+The source of the scent that was ever so pervasive throughout this Gods
+forsaken complex of caves is finally before your eyes: the rotting, pulsing
+and flailing arms of the plants themselves.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 24643 0 0
+~
+~
+E s south~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24645
+South End of Eastern Forgotten Cave~
+You find yourself in the lair of gargantuan proportions, inhabited by
+thin, agile plants.  The walls, if there are any, are covered in thick
+lime-coloured slime -- no doubt, a vile excretion of the plants themselves. 
+The source of the scent that was ever so pervasive throughout this Gods
+forsaken complex of caves is finally before your eyes: the rotting, pulsing
+and flailing arms of the plants themselves.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 24643 0 0
+~
+~
+E n north~
+The main chamber lays in this direction.
+~
+OWNER none~
+#24646
+At the Corner of a Dark, Busy Hallway~
+The hallway rich with crystal bile is perpetually busy.  As one shift of
+miners leaves, the other one instantly takes their place.  The walls of the
+hallway are heavily chipped, as pickaxes and hammers constantly batter them,
+in search of more crystal.  Thick, stout supporting wooden beams look
+stable, as they support a low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24647 0 0
+~
+The tunnel silently extends in this direction, leading deeper into the mines.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24626 0 0
+~
+The straight hallways leads towards the main area of the caverns.
+~
+E crystal bile~
+What looks like a vein in an impossibly large organism glimmers softly in
+front of you.  Warm, orange glow captivates your attention entirely, for a
+few fleeting seconds.  Leaning in closer, you notice small speckles of red
+within the light orange crystal.  
+~
+E thick stout wooden beams~
+Very wide, very heavy and very stout, these wooden beams are covered in
+thin layer of finest black dust, accumulated from all the rock pounding. 
+They look very supportive and secure.  You have no reason to fear any of the
+sudden cave-ins.  
+~
+OWNER none~
+#24647
+In a Dark, Busy Hallway~
+The hallway rich with crystal bile is perpetually busy.  As one shift of
+miners leaves, the other one instantly takes their place.  The walls of the
+hallway are heavily chipped, as pickaxes and hammers constantly batter them,
+in search of more crystal.  Thick, stout supporting wooden beams look
+stable, as they support a low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24648 0 0
+~
+~
+D EAST 24627 0 0
+~
+The hallway lays in this direction, with the silence gradually growing.
+~
+D SOUTH 24646 0 0
+~
+The hallways leading to the main area of the caves extends here.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E crystal bile~
+What looks like a vein in an impossibly large organism glimmers softly in
+front of you.  Warm, orange glow captivates your attention entirely, for a
+few fleeting seconds.  Leaning in closer, you notice small speckles of red
+within the light orange crystal.  
+~
+E thick stout wooden beams~
+Very wide, very heavy and very stout, these wooden beams are covered in
+thin layer of finest black dust, accumulated from all the rock pounding. 
+They look very supportive and secure.  You have no reason to fear any of the
+sudden cave-ins.  
+~
+OWNER none~
+#24648
+The End of Dark, Busy Hallway~
+This is the end of the central hallway that leads through the mines.  The
+reason the miners had stopped here is the thinning of the crystal biles. 
+Apparently, natural formation of softer rocks gave way to granite here and
+the bile had moved elsewhere.  A well-beaten path leads towards the more
+civilized section of mines leads south.  Deeper into the mines, a steep
+slope leads down.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24647 0 0
+~
+The hallway that leads to the main goblin cavern complex extends in this
+direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D DOWN 24649 0 0
+~
+A steep ravine leads you deeper into the unknown.
+~
+OWNER none~
+#24649
+A Busy Intersection~
+The steep ravine before you leads up, to the common area of the mines. 
+All around you, there is nothing but darkness.  Although you cannot feel the
+walls around you, you still feel entrapped.  This is due to the low ceiling
+and the fact that in deep caves, such as there, there is no wind and the air
+is dank and stale.  All around you, you hear busy chatter of a mine
+production in full swing.  
+~
+cave
+D NORTH 24650 0 0
+~
+The hallway leads deeper into the mines.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24660 0 0
+~
+The hallway leads deeper into the mines.
+~
+D WEST 24681 0 0
+~
+The hallway leads deeper into the mines.
+~
+D UP 24648 0 0
+~
+A steep ravine offers you a chance to climb to the higher level of mines.
+~
+OWNER none~
+#24650
+North of the Busy Intersection~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24651 0 0
+~
+The tunnel seems to end northwards.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24649 0 0
+~
+The main intersection lays in this direction.
+~
+D WEST 24657 0 0
+~
+A dusty mine-shaft branches off westwards.
+~
+OWNER none~
+#24651
+A Dead End of a Mine-Shaft~
+The crystal bile exhausted, this section of the mine had been shut off. 
+Only dark walls of soft rock, grazed by numerous empty channals bear witness
+to one-time expansion of the mines.  The rock walls encircle you entirely
+and the only way to leave this particular casement is the same way you
+walked in.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24650 0 0
+~
+The path leading back from this dead end lays in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24652
+Within a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24679 0 0
+~
+~
+D EAST 24681 0 0
+~
+~
+D SOUTH 24680 0 0
+~
+~
+D WEST 24653 0 0
+~
+~
+E w west~
+A mining tunnel extends in this direction.
+~
+E e east~
+A chamber leading towards the intersection lays here.
+~
+E n north s south~
+A small mining casement is laid out in this direction.
+~
+OWNER none~
+#24653
+Within a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24677 0 0
+~
+~
+D EAST 24652 0 0
+~
+~
+D SOUTH 24678 0 0
+~
+~
+D WEST 24654 0 0
+~
+~
+E w west e east~
+A mining tunnel extends in this direction.
+~
+E n north s south~
+A small mining casement is laid out in this direction.
+~
+OWNER none~
+#24654
+At the Turn in a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24655 0 0
+~
+~
+D EAST 24653 0 0
+~
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+A small intersection of the tunnels can be seen northwards.
+~
+OWNER none~
+#24655
+A Three-Way Intersection in a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  The rock in the south-western part of the cave seems
+impenetrable and very resilient.  The tunnel bends around it.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24684 0 0
+~
+~
+D EAST 24676 0 0
+~
+~
+D SOUTH 24654 0 0
+~
+~
+D WEST 24656 0 0
+~
+~
+E s south~
+A mining tunnel leads southwards.
+~
+E n north e east~
+A small mining casement is laid out in this direction.
+~
+E impenetrable resilient rock~
+Massive slab of hard granite had resisted all the attempts of miners to
+dig through it.  
+~
+OWNER none~
+#24656
+Within a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24674 0 0
+~
+~
+D EAST 24655 0 0
+~
+~
+D SOUTH 24675 0 0
+~
+~
+D WEST 24664 0 0
+~
+~
+E e east~
+A small intersection of tunnels lays in this direction.
+~
+E w west~
+The new mining tunnel begins westward.
+~
+E n north s south~
+A small mining casement is laid out in this direction.
+~
+OWNER none~
+#24657
+At the Turn in a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24658 0 0
+~
+The dusty mine shaft extends in this direction.
+~
+D EAST 24650 0 0
+~
+One of the main tunnels lays eastwards.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24658
+Within a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24659 0 0
+~
+The mine-shaft appears to come to a sudden end northwards.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24657 0 0
+~
+The dusty mine shaft extends in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24659
+The End of a Dusty Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24658 0 0
+~
+The main part of the mine-shaft lays southwards.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24660
+At The Turn in The Tunnel~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24649 0 0
+~
+~
+D EAST 24661 0 0
+~
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E e east~
+An old shaft leads eastwards.
+~
+E n north~
+The main intersection lays in this direction.
+~
+OWNER none~
+#24661
+In the Old Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24695 0 0
+~
+~
+D EAST 24662 0 0
+~
+~
+D SOUTH 24696 0 0
+~
+~
+D WEST 24660 0 0
+~
+~
+E w west e east~
+An old shaft extends in this direction.
+~
+E n north s south~
+An old excavation lays in this direction.
+~
+OWNER none~
+#24662
+In the Old Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24697 0 0
+~
+~
+D EAST 24698 0 0
+~
+~
+D SOUTH 24663 0 0
+~
+~
+D WEST 24661 0 0
+~
+~
+E s south~
+A tunnel veers into a sharp turn southwards.
+~
+E w west~
+An old shaft extends in this direction.
+~
+E w west~
+~
+E e east n north~
+An old excavation lays in this direction.
+~
+OWNER none~
+#24663
+At the Turn in the Old Mine-Shaft~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24662 0 0
+~
+~
+D EAST 24690 0 0
+~
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E e east~
+The eastern tunnel leads deeper into the old mine-shaft.
+~
+E n north~
+The northern tunnel leads to a part of an old mine-shaft.
+~
+OWNER none~
+#24664
+The Beginning of a New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  The tunnel turns
+here, wrapping around indestructible rock.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24656 0 0
+~
+~
+D SOUTH 24665 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E e east s south~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E indestructible rock~
+Massive slab of hard granite had resisted all the attempts of miners to
+dig through it.  
+~
+OWNER none~
+#24665
+At the Turn near the Entrance to the New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  The tunnel turns
+here, wrapping around indestructible rock.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24664 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24669 0 0
+~
+~
+E w west n north~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E indestructible rock~
+Massive slab of hard granite had resisted all the attempts of miners to
+dig through it.  
+~
+OWNER none~
+#24666
+The End of a New Mine-Shaft~
+The crystal is as strongly present in this cave as it is through the rest
+of the region.  The only reason the miners did not expand here is because
+they are too busy exploiting the shafts to the east of here.  The rock is
+particularly soft here and it looks as if this spot will be very promising
+indeed.  North and south, you notice expansive emptiness, with strange
+sounds echoing through it.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24668 0 0
+~
+~
+D EAST 24673 0 0
+~
+~
+D SOUTH 24667 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E e east~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E s south~
+A large underground grotto expands southwards.
+~
+E n north~
+A cave appears to lay in this direction.
+~
+OWNER none~
+#24667
+Underground Grotto~
+You enter a small, dark cavern, with water dripping from the ceiling. 
+The crystal veins are apparantly non-existant here, with only the soft rock
+making up the walls.  The strange echoing of this cavern is strong here,
+making you uneasy.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24666 0 0
+~
+The mine-shaft lies to the north.
+~
+D EAST 0 0 0
+door~
+Water drips down the ancient rock.
+~
+D SOUTH 0 0 0
+door~
+Water drips down the ancient rock.
+~
+D WEST 0 0 0
+door~
+Water drips down the ancient rock.
+~
+OWNER none~
+#24668
+Rough Natural Cavern~
+The quantity of crystal here is amazing, as even the most miniscule
+amount of light is reflected ten-fold among the crystals.  The rock here is
+still quite soft, making this cavern an amazing find.  Sound echoes oddly
+here, however, giving this cavern an eerie feel, almost unnatural.  
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The cavern walls are covered in crystal.
+~
+D EAST 0 0 0
+door~
+The cavern walls are covered in crystal.
+~
+D SOUTH 24666 0 0
+~
+The mine-shaft lies to the south.
+~
+D WEST 0 0 0
+door~
+The cavern walls are covered in crystal.
+~
+D UP 0 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+The cavern floor is covered with chipped crystal.  
+~
+OWNER none~
+#24669
+A New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24682 0 0
+~
+~
+D EAST 24665 0 0
+~
+~
+D SOUTH 24683 0 0
+~
+~
+D WEST 24670 0 0
+~
+~
+E w west e east~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E n north s south~
+A small mining casement is laid out in this direction.
+~
+OWNER none~
+#24670
+A New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24685 0 0
+~
+~
+D EAST 24669 0 0
+~
+~
+D SOUTH 24671 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south e east~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E s south e east~
+~
+E n north~
+A small mining casement is laid out in this direction.
+~
+OWNER none~
+#24671
+At The Turn in the New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24670 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24672 0 0
+~
+~
+E w west n north~
+The main tunnel of the mine-shaft extends in this direction.
+~
+OWNER none~
+#24672
+A New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24686 0 0
+~
+~
+D EAST 24671 0 0
+~
+~
+D SOUTH 24687 0 0
+~
+~
+D WEST 24673 0 0
+~
+~
+E w west e east~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E n north s south~
+A small mining casement is laid out in this direction.
+~
+E n north s south~
+~
+OWNER none~
+#24673
+A New Mine-Shaft~
+Particularly rich finding of crystal lode mining is the reason this
+tunnel has been recently cut.  Somewhat more tidy than the exploited
+sections, there are relatively few scraps in the rock and few excavations. 
+However, judging by the amount of work here, this will quickly change.  Only
+the most sturdiest and strongest of the miners work here, because they were
+able to surpress the weaker ones and keep them at bay.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24688 0 0
+~
+~
+D EAST 24672 0 0
+~
+~
+D SOUTH 24689 0 0
+~
+~
+D WEST 24666 0 0
+~
+~
+E e east~
+The main tunnel of the mine-shaft extends in this direction.
+~
+E w west~
+A shaft comes to an end westwards.
+~
+E n north s south~
+A small mining casement is laid out in this direction.
+~
+OWNER none~
+#24674
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24656 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24675
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24656 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24676
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24655 0 0
+~
+~
+E w west~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24677
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24653 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24678
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24653 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24679
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24652 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24680
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24652 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24681
+West of the Busy Intersection~
+Rough rock with jagged edges surrounds you.  Crystal bile can be seen
+embedded in it, and the miners are busily digging away, amassing their
+wealth.  Fine layer of dust lingers all throughout these caves, as specks of
+dust cannot escape on any wind.  All around you, the sound of many pick-axes
+can be heard.  
+s.
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24649 0 0
+~
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24652 0 0
+~
+~
+E w west~
+A dusty mine-shaft branches off westwards.
+~
+E e east~
+The main intersection lays in this direction.
+~
+OWNER none~
+#24682
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24669 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24683
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24669 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+TRAP 'boulder' 2 2 10
+Creaking noise startles you for a moment.~
+With a sudden crash, part of the wall detaches itself!~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24684
+A New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24655 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24685
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24670 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24686
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24672 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24687
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24672 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24688
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24673 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24689
+In the New Casement~
+This particular casement within the rock has just recently been opened. 
+Dark grey rock is speckled with the crystal throughout.  It seems that every
+swing of a pick-axe would bring one a hefty amount of coins.  The miners who
+work here certainly agree, as they furiously work on the site, bent over
+under the low ceiling.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24673 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24690
+A Dry Tunnel~
+This tunnel has seen better days: some time ago, while there was enough
+crystal to attract the scores of best miners, this sector of caves was
+bursting with activity.  Nowadays, second-tier miners have taken over,
+scraping the remains, while the best of the miners had moved to the western
+complex of caves.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24699 0 0
+~
+~
+D EAST 24691 0 0
+~
+~
+D SOUTH 24700 0 0
+~
+~
+D WEST 24663 0 0
+~
+~
+E e east~
+The eastern shaft leads to a sharp turn.
+~
+E e east~
+An old shaft extends in this direction.
+~
+E w west~
+The western tunnel leads to a sharp turn.
+~
+E n north s south~
+An old excavation lays in this direction.
+~
+OWNER none~
+#24691
+A Turn in the Dry Tunnel~
+This tunnel has seen better days: some time ago, while there was enough
+crystal to attract the scores of best miners, this sector of caves was
+bursting with activity.  Nowadays, second-tier miners have taken over,
+scraping the remains, while the best of the miners had moved to the western
+complex of caves.  The tunnel wiggles around the rock, passing it to the
+north and west.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24692 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24690 0 0
+~
+~
+E n north~
+A tunnel ends in a sharp turn northwards.
+~
+E w west~
+An old shaft extends westwards.
+~
+OWNER none~
+#24692
+A Dry Tunnel~
+This tunnel has seen better days: some time ago, while there was enough
+crystal to attract the scores of best miners, this sector of caves was
+bursting with activity.  Nowadays, second-tier miners have taken over,
+scraping the remains, while the best of the miners had moved to the western
+complex of caves.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24693 0 0
+~
+~
+D SOUTH 24691 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E e east~
+A dry tunnel seems to come to a stop.
+~
+E s south~
+A tunnel ends in a sharp turn southwards.
+~
+OWNER none~
+#24693
+The End of a Dry Tunnel~
+The tunnel comes to an end here.  There is no crystal to be seen at all,
+yet the tunnel is in good shape.  Even the debris that can be spotted
+everywhere where miners are involved is not present here.  It seems as if
+some care was taken to keep this tunnel in good shape.  You notice footsteps
+in the dust in front of you.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24702 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24692 0 0
+~
+~
+E n north~
+A wide cavern expands northwards.
+~
+E w west~
+A dry tunnel turns sharply in this direction.
+~
+E dust footsteps~
+Smaller than human steps, the footsteps heading both northward and
+southward are imprinted on the tunnel floor.  Even the debris that can be
+spotted everywhere where miners are involved is not present here.  It seems
+as if some care has been taken to keep this tunnel in good shape.  
+~
+OWNER none~
+#24694
+At the Entrance of the Crude Stronghold~
+Natural underground cliffs block your passage to the east and west. 
+Abrupt wall rises in front of you, blocking the path to the north.  It seems
+that it is partially natural, though you can clearly spot unsophisticated,
+rough fortifications that were built atop the ridge.  In the centre of the
+northern wall stands iron portcullis, barring the entrance beyond.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24716 0 0
+~
+A crude portcullis seems to be to the north.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24702 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+A wide grotto opens southwards.
+~
+OWNER none~
+#24695
+Inside an Old, Exploited Excavation~
+Piles of debris and broken mining equipment are strewn across the uneven
+floor of this excavation.  Where once there was a plethora of crystal, now
+only little veins remain.  Just as the excavation has lost its glamour, so
+did the miners that work it now: old and sturdy, they none the less lack the
+strength of the younger miners.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24661 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24696
+Inside an Old, Exploited Excavation~
+Piles of debris and broken mining equipment are strewn across the uneven
+floor of this excavation.  Where once there was a plethora of crystal, now
+only little veins remain.  Just as the excavation has lost its glamour, so
+did the miners that work it now: old and sturdy, they none the less lack the
+strength of the younger miners.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24661 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24697
+Inside an Old, Exploited Excavation~
+Piles of debris and broken mining equipment are strewn across the uneven
+floor of this excavation.  Where once there was a plethora of crystal, now
+only little veins remain.  Just as the excavation has lost its glamour, so
+did the miners that work it now: old and sturdy, they none the less lack the
+strength of the younger miners.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24662 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24698
+Inside an Old, Exploited Excavation~
+Piles of debris and broken mining equipment are strewn across the uneven
+floor of this excavation.  Where once there was a plethora of crystal, now
+only little veins remain.  Just as the excavation has lost its glamour, so
+did the miners that work it now: old and sturdy, they none the less lack the
+strength of the younger miners.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24662 0 0
+~
+~
+E w west~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24699
+Inside an Old, Exploited Excavation~
+Piles of debris and broken mining equipment are strewn across the uneven
+floor of this excavation.  Where once there was a plethora of crystal, now
+only little veins remain.  Just as the excavation has lost its glamour, so
+did the miners that work it now: old and sturdy, they none the less lack the
+strength of the younger miners.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24690 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E s south~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24700
+Inside an Old, Exploited Excavation~
+Piles of debris and broken mining equipment are strewn across the uneven
+floor of this excavation.  Where once there was a plethora of crystal, now
+only little veins remain.  Just as the excavation has lost its glamour, so
+did the miners that work it now: old and sturdy, they none the less lack the
+strength of the younger miners.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24690 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The main tunnel lays in this direction.
+~
+OWNER none~
+#24701
+Atop the Portcullis~
+The quality of the air is somewhat better here.  This is likely due to
+the fact that this point dominates the rest of the cave system visible to
+you by its height.  Still, odours from below you drift up slowly of their
+own accord, and you are soon reminded of the filth beneath you.  You can
+continue to walk along the fortified wall either east or west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 24717 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24703 0 0
+~
+The fortified wall continues to the west.
+~
+D DOWN 24716 0 0
+~
+~
+OWNER none~
+#24702
+Within a Wide Grotto~
+The tall walls of grotto disappear into the darkness above you.  An
+unexpected ending to the miners' tunnel, there is an uneasy feeling about
+this place that you just can't quite name yet.  Crude voices can be heard
+clamoring to the north.  
+~
+cave
+ROOM DARK
+ROOM NO_MOB
+ROOM INDOORS
+D NORTH 24694 0 0
+~
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24693 0 0
+~
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+E n north~
+The cavern walls crack open, leading to what appears to be a gate of some sort.
+~
+E s south~
+A narrow tunnel leads southwards.
+~
+OWNER none~
+#24703
+Along the Southern Wall~
+This is the southern wall surrounding the natural valley extending
+northwards.  The wall is crude, tall and wide enough for a little group to
+traverse easily.  It appears to have been created when a lava eruption from
+times gone by finally solidified.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 24701 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24704 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24704
+Along the Southern Wall~
+This is the southern wall surrounding the natural valley extending
+northwards.  The wall is crude, tall and wide enough for a little group to
+traverse easily.  It appears to have been created when a lava eruption from
+times gone by finally solidified.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 24703 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24705 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24705
+At the South-Western Turret~
+One of the sites that have seen the most of construction, this turret is
+nothing more than a few rough wooden beams put together to support a few
+guards as they oversee the cave.  The view from this point is rather good,
+and the ugliness of a hobgoblin dwelling reveals itself in all of its
+pitifulness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24706 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 24704 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24706
+At the South-Western Turret~
+One of the sites that have seen the most of construction, this turret is
+nothing more than a few rough wooden beams put together to support a few
+guards as they oversee the cave.  The view from this point is rather good,
+and the ugliness of a hobgoblin dwelling reveals itself in all of its
+pitifulness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D SOUTH 24705 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 24707 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24707
+At the South-Western Turren~
+One of the sites that have seen the most of construction, this turret is
+nothing more than a few rough wooden beams put together to support a few
+guards as they oversee the cave.  The view from this point is rather good,
+and the ugliness of a hobgoblin dwelling reveals itself in all of its
+pitifulness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24708 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 24706 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24708
+Along the Western Wall~
+You are standing at the western side of a natural wall surrounding a
+valley to the west.  You can spot a commotion all across valley, as it
+hobgoblins move about in scores.  To your west, there is nothing but
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24709 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D SOUTH 24707 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24709
+Along the Western Wall~
+You are standing at the western side of a natural wall surrounding a
+valley to the west.  You can spot a commotion all across valley, as it
+hobgoblins move about in scores.  To your west, there is nothing but
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24710 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D SOUTH 24708 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24710
+At the North-Western Turret~
+Unlike the southern turrets, this one is constructed from a few
+rough-hewn blocks of stone, joined together by mortar.  The reason for this
+is the scarcitiy of the wood underground.  Never the less, there is enough
+room for two guards to comfortably observe the activites at the valley
+floor.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24711 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 24709 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24711
+At the North-Western Turret~
+Unlike the southern turrets, this one is constructed from a few
+rough-hewn blocks of stone, joined together by mortar.  The reason for this
+is the scarcitiy of the wood underground.  Never the less, there is enough
+room for two guards to comfortably observe the activites at the valley
+floor.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24712 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 24710 0 0
+~
+OBOBThe fortified wall continues to the west.
+~
+OWNER none~
+#24712
+At the North-Western Turret~
+Unlike the southern turrets, this one is constructed from a few
+rough-hewn blocks of stone, joined together by mortar.  The reason for this
+is the scarcitiy of the wood underground.  Never the less, there is enough
+room for two guards to comfortably observe the activites at the valley
+floor.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24713 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 24711 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+OWNER none~
+#24713
+Where the Wall Meets the Ridge~
+All the attempts of hobgoblins at further constructing the battlements on
+the wall stop here.  Ill-executed masonary creations have been battered,
+likely in frustration.  However, they had little reason to worry: nothing
+can climb the ridge extending eastwards from you without being noticed by
+guards.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24714 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 24712 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24714
+Along the Northern Ridge~
+Secure in the natural defenses of the northern ridge, this section of the
+wall is untouched by the goblins.  The northern ridge here is immense, and
+in full view of the entire stronghold.  To your north is only darkness
+beyond the ridge, and you can continue along the wall to the east and west.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24715 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 24713 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24715
+Along the Northern Ridge~
+Secure in the natural defenses of the northern ridge, this section of the
+wall is untouched by the goblins.  The northern ridge here is immense, and
+in full view of the entire stronghold.  To your north is only darkness
+beyond the ridge, and you can continue along the wall to the east and west.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24729 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 24714 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24716
+Inside the Portcullis~
+Massive iron portcullis is behind you to the south.  You can feel the
+pungent odor of urine around you.  It is augmented by the warm, moist
+atmosphere of the caves, making you quite nauseous.  The chamber itself
+looks dank and oppresive, with pieces of garbage strewn across the uneven
+floor.  You spot a narrow staircase which leads upwards.  Before you,
+towards the north, a small dweling sprawls in the natural valley.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24730 0 0
+~
+A large, cavernous space opens to the north.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24694 0 0
+~
+The mine tunnels lead off towards the south.
+~
+D WEST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D UP 24701 0 0
+~
+It seems possible to ascend to some sort of crude battlements above.  
+~
+OWNER none~
+#24717
+Along the Southern Wall~
+This is the southern wall surrounding the natural valley extending
+northwards.  The wall is crude, tall and wide enough for a little group to
+traverse easily.  It appears to have been created when a lava eruption from
+times gone by finally solidified.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 24718 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24701 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24718
+Along the Southern Wall~
+This is the southern wall surrounding the natural valley extending
+northwards.  The wall is crude, tall and wide enough for a little group to
+traverse easily.  It appears to have been created when a lava eruption from
+times gone by finally solidified.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 24719 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24717 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24719
+At the South-Eastern Turret~
+One of the sites that have seen the most of construction, this turret is
+nothing more than a few rough wooden beams put together to support a few
+guards as they oversee the cave.  The view from this point is rather good,
+and the ugliness of a hobgoblin dwelling reveals itself in all of its
+pitifulness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24720 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24718 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24720
+At the South-Eastern Turret~
+One of the sites that have seen the most of construction, this turret is
+nothing more than a few rough wooden beams put together to support a few
+guards as they oversee the cave.  The view from this point is rather good,
+and the ugliness of a hobgoblin dwelling reveals itself in all of its
+pitifulness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D EAST 24721 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 24719 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+OWNER none~
+#24721
+At the South-Eastern Turret~
+One of the sites that have seen the most of construction, this turret is
+nothing more than a few rough wooden beams put together to support a few
+guards as they oversee the cave.  The view from this point is rather good,
+and the ugliness of a hobgoblin dwelling reveals itself in all of its
+pitifulness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24722 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D WEST 24720 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24722
+Along the Eastern Wall~
+You are standing at the eastern side of a natural wall surrounding a
+valley to the west.  You can spot a commotion all across valley, as it
+hobgoblins move about in scores.  To your east, there is nothing but
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24723 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24721 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+OWNER none~
+#24723
+Along the Eastern Wall~
+You are standing at the eastern side of a natural wall surrounding a
+valley to the west.  You can spot a commotion all across valley, as it
+hobgoblins move about in scores.  To your east, there is nothing but
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24724 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24722 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+OWNER none~
+#24724
+At the North-Eastern Turret~
+Unlike the southern turrets, this one is constructed from a few
+rough-hewn blocks of stone, joined together by mortar.  The reason for this
+is the scarcitiy of the wood underground.  Never the less, there is enough
+room for two guards to comfortably observe the activites at the valley
+floor.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24723 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 24725 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24725
+At the North-Eastern Turret~
+Unlike the southern turrets, this one is constructed from a few
+rough-hewn blocks of stone, joined together by mortar.  The reason for this
+is the scarcitiy of the wood underground.  Never the less, there is enough
+room for two guards to comfortably observe the activites at the valley
+floor.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24726 0 0
+~
+The fortified wall continues to the north.
+~
+D EAST 24724 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+OWNER none~
+#24726
+At the North-Eastern Turret~
+Unlike the southern turrets, this one is constructed from a few
+rough-hewn blocks of stone, joined together by mortar.  The reason for this
+is the scarcitiy of the wood underground.  Never the less, there is enough
+room for two guards to comfortably observe the activites at the valley
+floor.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D SOUTH 24725 0 0
+~
+The fortified wall continues to the south.
+~
+D WEST 24727 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24727
+Where the Wall Meets the Ridge~
+All the attempts of hobgoblins at further constructing the battlements on
+the wall stop here.  Ill-executed masonary creations have been battered,
+likely in frustration.  However, they had little reason to worry: nothing
+can climb the ridge extending westwards from you without being noticed by
+guards.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24726 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 24729 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24728
+The Main Chamber of the Hut~
+The most opulent room in the entire mine system, the goblin who resides
+here must obviously be the local king.  Every possible space is covered in
+goblin treasure, and some of it actually has some real value.  Cluttered
+beyond belief, both the appearance and the stench make it obvious the king
+has little care to have this room cleaned.  As you take this in, you realize
+the owner of these valuables is probably rather jealous of his possessions,
+and would not leave them for long.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 24758 0 0
+~
+~
+OWNER none~
+#24729
+Along the Northern Ridge~
+Secure in the natural defenses of the northern ridge, this section of the
+wall is untouched by the goblins.  The northern ridge here is immense, and
+in full view of the entire stronghold.  To your north is only darkness
+beyond the ridge, and you can continue along the wall to the east and west. 
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The ancient rock prevents you from moving in this direction.
+~
+D EAST 24727 0 0
+~
+The fortified wall continues to the east.
+~
+D SOUTH 0 0 0
+door~
+Beyond the wall, you see goblinkin scurrying about the cavern floor.
+~
+D WEST 24715 0 0
+~
+The fortified wall continues to the west.
+~
+OWNER none~
+#24730
+On the Main Path through the Stronghold~
+The scattered debris lays all around you.  Heaps and heaps of the
+discarded necessities of the life: torn, dried skins, broken weapons and
+piles of excretements are all around you.  It is obvious that the denizens
+of this stronghold did not attribute too much importance to the hygiene. 
+However, one thing that makes this region stand out from the rest of the
+fortress is that the debris has been pushed aside, so as to make a clear
+path.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24731 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24748 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24716 0 0
+~
+A crude porticullus appears to be to the south.
+~
+D WEST 24734 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24731
+On the Main Path through the Stronghold~
+The scattered debris lays all around you.  Heaps and heaps of the
+discarded necessities of the life: torn, dried skins, broken weapons and
+piles of excretements are all around you.  It is obvious that the denizens
+of this stronghold did not attribute too much importance to the hygiene. 
+However, one thing that makes this region stand out from the rest of the
+fortress is that the debris has been pushed aside, so as to make a clear
+path.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24768 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24751 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24730 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24737 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24732
+The End of the Main Path through Stronghold~
+The piles of debris stocked up against either side of the path cease to
+exist here.  Rather, the chaotic arrangement of the garbage form a uniform
+mass once again before your eyes.  The stench of the garbage is accentuated
+by the strong scent of unwashed goblin bodies.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24733 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24755 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24768 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24741 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24733
+Under the Northern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24759 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24732 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24745 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24734
+Under the Southern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24737 0 0
+~
+~
+D EAST 24730 0 0
+~
+The stronghold continues to the east.
+~
+D WEST 24735 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24735
+Under the Southern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24738 0 0
+~
+~
+D EAST 24734 0 0
+~
+The stronghold continues to the east.
+~
+D WEST 24736 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24736
+Under the South-Western Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24739 0 0
+~
+~
+D EAST 24735 0 0
+~
+The stronghold continues to the east.
+~
+OWNER none~
+#24737
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24767 0 0
+~
+~
+D EAST 24731 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24734 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24738 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24738
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24766 0 0
+~
+~
+D EAST 24737 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24735 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24739 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24739
+Under the South-Western Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24765 0 0
+~
+~
+D EAST 24738 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24736 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24740 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24740
+Under the South-Western Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24764 0 0
+~
+~
+D EAST 24739 0 0
+~
+The stronghold continues to the east.
+~
+OWNER none~
+#24741
+Under the Raised Hut~
+The distinguishing feature of this locale is the hut that raises above
+the flat, natural floor of the stronghold.  The hut is obscured by the
+darkness, the only clearly visible part of it being numerous strong stone
+pillars that support it.  A rough and primitive stone ladder has been carved
+into one of the pillars.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24745 0 0
+~
+~
+D EAST 24732 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24767 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24742 0 0
+~
+The stronghold continues to the west.
+~
+D UP 24763 0 0
+~
+~
+E rough primitive ladder~
+This ladder is not the product of rafined craftmanship.  Rather, it
+appears that someone has crudely hacked the stone with a chisel, or even an
+axe.  The ladder seems to be able to support even a titan's weight.  
+~
+OWNER none~
+#24742
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24746 0 0
+~
+~
+D EAST 24741 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24766 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24743 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24743
+Under the North-Western Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24747 0 0
+~
+~
+D EAST 24742 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24765 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24744 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24744
+Under the North-Western Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24743 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24764 0 0
+~
+The stronghold continues to the south.
+~
+OWNER none~
+#24745
+Under the Northern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24733 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24741 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24746 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24746
+Under the Northern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24745 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24742 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24747 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24747
+Under the North-Western Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24746 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24743 0 0
+~
+The stronghold continues to the south.
+~
+OWNER none~
+#24748
+Under the Southern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24751 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24749 0 0
+~
+The stronghold continues to the east.
+~
+D WEST 24730 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24749
+Under the Southern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24752 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24750 0 0
+~
+The stronghold continues to the east.
+~
+D WEST 24748 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24750
+Under the South-Eastern Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24753 0 0
+~
+The stronghold continues to the north.
+~
+D WEST 24749 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24751
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24769 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24752 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24748 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24731 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24752
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24770 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24753 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24749 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24751 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24753
+Under the South-Eastern Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24771 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24754 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24750 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24752 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24754
+Under the South-Eastern Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24772 0 0
+~
+The stronghold continues to the north.
+~
+D WEST 24753 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24755
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24759 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24756 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24769 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24732 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24756
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24760 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24757 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24770 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24755 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24757
+Under the North-Eastern Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24761 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24762 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24771 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24756 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24758
+The Forechamber of the Hut~
+The first chamber of the hut is as opulent, by goblin standards, as the
+entrance.  This is the central intersection of the hut, with the doorways
+leading west and north.  The walls are decorated with crude pictures, while
+the floor has a few dark stains across it.  There only air that comes in or
+out of the chamber comes from the entrance to the south of you.  Thus it is
+not surprising that the stench is rather strong.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24728 0 0
+~
+~
+D SOUTH 24763 0 0
+~
+~
+D WEST 24773 0 0
+~
+~
+E dark stain stains~
+A few dark stains are smeared across the rough floor.  At this point, it
+is impossible to say whether the stains were the result of dried blood,
+urine or excreta.  
+~
+OWNER none~
+#24759
+Under the Northern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24760 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24755 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24733 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24760
+Under the Northern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24761 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24756 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24759 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24761
+Under the North-Eastern Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 24757 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24760 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24762
+Under the North-Eastern Turret~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  Above you, several goblins can be heard chittering in the
+darkness.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D SOUTH 24772 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24757 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24763
+At the Entrance of the Raised Hut~
+The true magnitude of the hut is revealed only here.  Massive walls are
+decorated with what must be the only traces of Art within the goblin tribes
+miles around.  The pictures are crude and they portray the horde of goblins
+devouring another, smaller group of goblins.  The wall ornament is
+interrupted by gaping door.  Further through the door, the stench of goblin
+is strong.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 24758 0 0
+~
+~
+D DOWN 24741 0 0
+~
+~
+OWNER none~
+#24764
+Under the Western Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24744 0 0
+~
+~
+D EAST 24765 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24740 0 0
+~
+The stronghold continues to the south.
+~
+OWNER none~
+#24765
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24743 0 0
+~
+~
+D EAST 24766 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24739 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24764 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24766
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24742 0 0
+~
+~
+D EAST 24767 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24738 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24765 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24767
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24741 0 0
+~
+~
+D EAST 24768 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24737 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24766 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24768
+On the Main Path through the Stronghold~
+The scattered debris lays all around you.  Heaps and heaps of the
+discarded necessities of the life: torn, dried skins, broken weapons and
+piles of excretements are all around you.  It is obvious that the denizens
+of this stronghold did not attribute too much importance to the hygiene. 
+However, one thing that makes this region stand out from the rest of the
+fortress is that the debris has been pushed aside, so as to make a clear
+path.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24732 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24769 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24731 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24767 0 0
+~
+The stronghold continue- to the west.
+~
+OWNER none~
+#24769
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24755 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24770 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24751 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24768 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24770
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24756 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24771 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24752 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24769 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24771
+In the Stronghold~
+The visible signs of rampant carelesness are laid out in front of your
+eyes.  Piles of debris have been chaotically formed all over the perimiter
+of the stronghold.  Where there is no debris, the stone has been charred by
+what must have been a considerable fire.  The stench of goblin horde hovers
+in the air, as the stronghold stretches all around you.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24757 0 0
+~
+The stronghold continues to the north.
+~
+D EAST 24772 0 0
+~
+The stronghold continues to the east.
+~
+D SOUTH 24753 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24770 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24772
+Under the Eastern Wall~
+The oppresive, black wall rises before your eyes, disappearing in the
+darkness of the caverns high above.  Upon closer inspection, it becomes
+apparent that the wall is not the product of the goblins.  Rather, they seem
+to have taken advantage of the natural formation of the rocks that already
+existed here.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 24762 0 0
+~
+The stronghold continues to the north.
+~
+D SOUTH 24754 0 0
+~
+The stronghold continues to the south.
+~
+D WEST 24771 0 0
+~
+The stronghold continues to the west.
+~
+OWNER none~
+#24773
+The Chamber of Fire~
+Small chamber that branches off from the forechamber of the hut is
+strangely devoid of any excessive ornaments which grace the rest of this
+hut.  Ascetic and minimalistic, it seems that someone has taken a great deal
+of effort to keep the place uncluttered by trinkets.  The ceiling of this
+chamber is lower than the rest of the hut.  You notice that it is covered in
+soot, as well as all the walls of the chamber.  
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D EAST 24758 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 24601 TO 24609 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24610 GLIMIT 100 LLIMIT 3
+DOOR 24610 north CLOSED
+DOOR 24611 south CLOSED
+MOB 24601 TO 24616 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24618 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24622 GLIMIT 100 LLIMIT 3
+DOOR 24622 north CLOSED
+MOB 24601 TO 24623 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24625 GLIMIT 100 LLIMIT 3
+DOOR 24628 south CLOSED
+MOB 24601 TO 24647 GLIMIT 100 LLIMIT 3
+MOB 24661 TO 24649 GLIMIT 100 LLIMIT 1
+MOB 24660 TO 24649 GLIMIT 100 LLIMIT 3
+MOB 24660 TO 24649 GLIMIT 100 LLIMIT 3
+MOB 24660 TO 24649 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24652 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24655 GLIMIT 100 LLIMIT 3
+MOB 24601 TO 24660 GLIMIT 100 LLIMIT 3
+MOB 24661 TO 24662 GLIMIT 100 LLIMIT 1
+MOB 24661 TO 24662 GLIMIT 100 LLIMIT 1
+MOB 24661 TO 24663 GLIMIT 100 LLIMIT 1
+MOB 24660 TO 24663 GLIMIT 100 LLIMIT 1
+MOB 24622 TO 24666 GLIMIT 5 LLIMIT 1
+EQUIP 24610 WIELD
+MOB 24610 TO 24674 GLIMIT 100 LLIMIT 2
+MOB 24610 TO 24675 GLIMIT 100 LLIMIT 2
+MOB 24610 TO 24676 GLIMIT 100 LLIMIT 2
+MOB 24661 TO 24679 GLIMIT 100 LLIMIT 2
+MOB 24661 TO 24679 GLIMIT 100 LLIMIT 2
+MOB 24601 TO 24682 GLIMIT 100 LLIMIT 3
+MOB 24630 TO 24682 GLIMIT 100 LLIMIT 2
+MOB 24610 TO 24683 GLIMIT 100 LLIMIT 2
+MOB 24610 TO 24684 GLIMIT 100 LLIMIT 2
+MOB 24630 TO 24686 GLIMIT 100 LLIMIT 2
+MOB 24630 TO 24687 GLIMIT 100 LLIMIT 2
+MOB 24630 TO 24688 GLIMIT 100 LLIMIT 2
+MOB 24630 TO 24689 GLIMIT 100 LLIMIT 2
+MOB 24700 TO 24694 GLIMIT 50 LLIMIT 2
+EQUIP 24700 HEAD
+EQUIP 24701 BODY
+EQUIP 24702 HANDS
+EQUIP 24703 WIELD
+MOB 24700 TO 24694 GLIMIT 5 LLIMIT 2
+EQUIP 24700 HEAD
+EQUIP 24701 BODY
+EQUIP 24702 HANDS
+EQUIP 24703 WIELD
+MOB 24620 TO 24695 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+EQUIP 24620 WIELD
+MOB 24620 TO 24695 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+EQUIP 24620 WIELD
+MOB 24620 TO 24696 GLIMIT 100 LLIMIT 2
+EQUIP 24620 WIELD
+EQUIP 24621 WIELD
+MOB 24620 TO 24696 GLIMIT 100 LLIMIT 2
+EQUIP 24620 WIELD
+EQUIP 24621 WIELD
+MOB 24661 TO 24697 GLIMIT 100 LLIMIT 1
+MOB 24660 TO 24697 GLIMIT 100 LLIMIT 1
+MOB 24620 TO 24697 GLIMIT 100 LLIMIT 2
+EQUIP 24620 WIELD
+EQUIP 24621 WIELD
+MOB 24620 TO 24697 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+EQUIP 24620 WIELD
+MOB 24620 TO 24698 GLIMIT 100 LLIMIT 2
+EQUIP 24620 WIELD
+EQUIP 24621 WIELD
+MOB 24620 TO 24698 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+EQUIP 24620 WIELD
+MOB 24661 TO 24699 GLIMIT 100 LLIMIT 1
+MOB 24660 TO 24699 GLIMIT 100 LLIMIT 1
+MOB 24620 TO 24699 GLIMIT 100 LLIMIT 2
+EQUIP 24620 WIELD
+EQUIP 24621 WIELD
+MOB 24620 TO 24699 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+EQUIP 24620 WIELD
+MOB 24620 TO 24700 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+MOB 24620 TO 24700 GLIMIT 100 LLIMIT 2
+EQUIP 24621 WIELD
+MOB 24702 TO 24704 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24704 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24707 TO 24705 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24705 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24706 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24706 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24707 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24707 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24702 TO 24709 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24709 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24707 TO 24710 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24710 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24702 TO 24710 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24710 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24703 TO 24710 GLIMIT 5 LLIMIT 1
+EQUIP 24720 NECKONE
+EQUIP 24721 RFINGER
+EQUIP 24722 FEET
+EQUIP 24723 SHIELD
+EQUIP 24724 WIELD
+MOB 24707 TO 24711 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24711 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24712 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24712 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24702 TO 24716 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24716 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24718 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24718 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24707 TO 24719 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24719 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24720 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24720 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24721 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24721 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24702 TO 24723 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24723 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24707 TO 24724 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24724 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24703 TO 24724 GLIMIT 5 LLIMIT 1
+EQUIP 24720 NECKONE
+EQUIP 24721 RFINGER
+EQUIP 24722 FEET
+EQUIP 24723 SHIELD
+EQUIP 24724 WIELD
+MOB 24707 TO 24725 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24725 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24726 GLIMIT 24 LLIMIT 2
+EQUIP 24709 SHIELD
+EQUIP 24708 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24707 TO 24726 GLIMIT 24 LLIMIT 2
+EQUIP 24707 WIELD
+EQUIP 24706 NECKONE
+EQUIP 24705 HANDS
+EQUIP 24704 ABOUT
+MOB 24706 TO 24728 GLIMIT 1 LLIMIT 1
+EQUIP 24750 WIELD
+EQUIP 24751 HEAD
+EQUIP 24753 ABOUT
+EQUIP 24755 SHIELD
+EQUIP 24754 RFINGER
+EQUIP 24752 HANDS
+MOB 24702 TO 24731 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24731 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24732 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24732 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24733 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24733 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24703 TO 24733 GLIMIT 5 LLIMIT 1
+EQUIP 24700 NECKONE
+EQUIP 24721 RFINGER
+EQUIP 24722 FEET
+EQUIP 24723 SHIELD
+EQUIP 24724 WIELD
+MOB 24702 TO 24734 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24734 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24735 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24735 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24701 TO 24736 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24736 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24737 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24737 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24702 TO 24738 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24738 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24701 TO 24739 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24739 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24703 TO 24739 GLIMIT 5 LLIMIT 1
+EQUIP 24720 NECKONE
+EQUIP 24721 RFINGER
+EQUIP 24722 FEET
+EQUIP 24723 SHIELD
+EQUIP 24724 WIELD
+MOB 24701 TO 24741 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24741 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24742 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24742 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24702 TO 24746 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24746 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24701 TO 24747 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24747 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24749 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24749 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24750 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24750 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24751 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24751 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24703 TO 24753 GLIMIT 5 LLIMIT 1
+EQUIP 24720 NECKONE
+EQUIP 24721 RFINGER
+EQUIP 24722 FEET
+EQUIP 24723 SHIELD
+EQUIP 24724 WIELD
+MOB 24702 TO 24754 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24754 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24701 TO 24756 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24756 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24702 TO 24757 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24757 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24704 TO 24758 GLIMIT 1 LLIMIT 1
+EQUIP 24740 WAIST
+EQUIP 24741 WRISTONE
+EQUIP 24742 WIELD
+EQUIP 24743 WIELD
+MOB 24702 TO 24760 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24760 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24700 TO 24763 GLIMIT 100 LLIMIT 2
+EQUIP 24700 HEAD
+EQUIP 24701 BODY
+EQUIP 24702 HANDS
+EQUIP 24703 WIELD
+MOB 24700 TO 24763 GLIMIT 100 LLIMIT 2
+EQUIP 24700 HEAD
+EQUIP 24701 BODY
+EQUIP 24702 HANDS
+EQUIP 24703 WIELD
+MOB 24701 TO 24764 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24764 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24701 TO 24766 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24766 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24702 TO 24767 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24767 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24701 TO 24768 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24768 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24702 TO 24771 GLIMIT 60 LLIMIT 2
+EQUIP 24717 SHIELD
+EQUIP 24716 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24702 TO 24771 GLIMIT 60 LLIMIT 2
+EQUIP 24715 WIELD
+EQUIP 24719 FEET
+EQUIP 24718 WAIST
+MOB 24701 TO 24772 GLIMIT 60 LLIMIT 2
+EQUIP 24714 WIELD
+EQUIP 24713 WIELD
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+MOB 24701 TO 24772 GLIMIT 60 LLIMIT 2
+EQUIP 24712 ARMS
+EQUIP 24711 LEGS
+EQUIP 24710 WIELD
+MOB 24705 TO 24773 GLIMIT 1 LLIMIT 1
+EQUIP 24730 BODY
+EQUIP 24731 WIELD
+EQUIP 24732 NECKONE
+EQUIP 24733 SHIELD
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

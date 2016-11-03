@@ -1,0 +1,225 @@
+[  866] Eladrian: FUX0R
+[13612] Rosolino: manuevering is spelled maneuvering on the skills list..
+[ 1893] Ferguson: Extra \n in wolfskin pelt and deerskin boots description
+[13957] Ferguson: Deadalus' axe 'Beholderkin Slayer - closing "'" missing
+[ 3054] Candoli: Exploit:  When used on me "You stagger as Rosolino's sword strikes his exposed leg! Rosolino's acidic bite *** DEVASTATES *** you!"
+[23204] Mingus: Sun Feb 25 17:45:58 2001: a carrage return is needed after a where when your blind.
+[13056] Mulligan: Mon Feb 26 18:33:47 2001: "A weeping elf" in the castle dungeon of the obsidian fortress, says "blood and swet" and should obviously be sweat.
+[13058] Mulligan: Mon Feb 26 18:35:11 2001: also in the dungeon cells of the obsidian fortress, the C in cold should be lower case at the end, unless this is done for some affect?
+[13081] Mulligan: Mon Feb 26 18:38:01 2001: "The torturer" in the obsidian fortress has a desc that says "Burning elves live or beating..." should probably be alive, or while alive, or burning live elves.
+[22080] Duke: Thu Mar  1 16:53:18 2001: Extra CR in sanguine ward echo?
+[ 2222] Jenito: Sat May 19 19:19:16 2001: An alcove within the sewers, look box, should be too clean not to clean
+[ 2222] Jenito: Sat May 19 19:20:26 2001: same alcove, look west, stretching, not streatching
+[19235] Eseig: Sat May 19 22:25:00 2001: You lash a lady ranger's legs, sending him crashing to the ground.
+[ 3714] Firgen: Sun May 20 01:29:06 2001: "competant" in help on stealth should be "competent," I think
+[ 3714] Firgen: Sun May 20 01:29:42 2001: And, hehe, "Thera" in the stealth helpfile
+[19247] Eseig: Sun May 20 11:23:59 2001: warcry echo should be "blood-freezing" instead of "blood freezing"
+[20121] Eseig: Sun May 20 12:01:20 2001: on the driftwood boats in Cimar, how about "drift" and "wood" for additional keywords?
+[ 2512] Paracack: Sun May 20 21:42:37 2001: A gleaming short-bladed sword with a lies here without an owner. on 'a shining elven falchion'
+[ 2510] Smeg: Sun May 20 22:54:32 2001: modifies hitroll by 3 for 4 and a half hours.
+[20428] Bosephus: Mon May 21 01:07:58 2001: The mermaid mayor in Naiadian is referred to as the 'major' in his short desc.
+[ 3751] Pyzondar: Mon May 21 12:49:01 2001: Helpfile for drow says they can have 20 wis. I have 21 as drow.
+[ 1089] Tyner: Tue May 22 12:42:28 2001: Room 1089 is missing a desc.
+[ 2512] Taithin: Tue May 22 13:15:15 2001: I get to take you on next, Smeg :P
+[ 3701] Ilcahnius: Tue May 22 19:24:23 2001: Not sure if you're keeping the mudschool...but there is a typo in Morglum Acolytes desc.
+[ 3759] Achebe: Tue May 22 20:12:25 2001: in prac list: "maneuvering"  help file named "manuevering." note "e" and "u."  too lazy to look up correct spelling :)
+[19276] Prithe: Wed May 23 14:49:58 2001: Lady rangers gender is male
+[ 6222] Sorebwyn: Wed May 23 17:16:25 2001: "Ignoring the dark spectre's onslaught, you close the ground between you and strike!" Shouldn't it be "you close ground and strike!"
+[23704] Klendathu: Wed May 23 21:29:39 2001: When the skill 'Burning Touch' is used without a target, it says 'Touch who?'  I'm pretty sure it should be 'Touch whom?'
+[ 3722] Lancroft: Thu May 24 15:35:56 2001: when a fashioned crystal is examined it shows THis be crystal that hold the big mana.
+[ 2253] Soreth: Fri May 25 19:12:53 2001: cocoon not cucoon
+[ 2255] Soreth: Fri May 25 19:14:47 2001: says the air is quiet clean. should be quite.
+[21932] Soreth: Sun May 27 07:36:10 2001: first like on the papers. should be lose not loose
+[ 2384] Landruum: Mon May 28 03:48:05 2001: an extremely long time
+[ 2384] Landruum: Mon May 28 03:48:23 2001: l grave .. something's wrong, probably missign time
+[ 2538] Excelsior: Mon May 28 16:32:01 2001: there is a typo in the detonation spell helpfile.  "in" appears twice in a row in line four.
+[ 2546] Brogg: Mon May 28 17:25:32 2001: Two help files exist for planar titans, 137 and 364
+[15859] Mowgli: Wed May 30 12:42:08 2001: Weapon type is spear/staff., identify is saying this for spear class weapons, it could be a bit confusing for people that don't know
+[15881] Mowgli: Thu May 31 14:08:02 2001: newline missing at the end of burden message when you cast it on somone that is already affected
+[ 7285] Hyetlin: Thu May 31 18:14:32 2001: The glinting silver ring is made out of "silvere", whatever that is
+[13905] Caliphano: Fri Jun  1 14:01:30 2001: A tiger headed creature dark brown fur is here. (should be with dark brown fur)
+[ 3742] Narev: Sat Jun  2 18:52:05 2001: 'help tactician' help dueliest' 'help dragoon' or 'help gladiator'.  (From help warrior)
+[24322] Caliphano: Sun Jun  3 05:29:37 2001: Metagar in dying forrest, mockey should be mockery.
+[24310] Boxfresh: Sun Jun  3 11:39:41 2001: anti-rangers don't have keyword ranger
+[24310] Boxfresh: Sun Jun  3 11:40:02 2001: naga's don't have keyword snake or serpent
+[ 2367] Darinamin: Sun Jun  3 17:52:29 2001: No biggie but in the crypt past the sewers of cimar all the 'within the burial' room descs say 10 feet long and 5 foot long...not sure if you are looking for stuff this picky or not.
+[22631] Hyetlin: Mon Jun  4 01:03:39 2001: A pair of 'iron thigh plates armor' equipment has this affect: Affects hitroll by 0.
+[21865] Ajax: Mon Jun  4 01:27:01 2001: "date" rather than "gate" in aran'gird
+[21865] Hyetlin: Mon Jun  4 01:27:14 2001: the gate in aran'gild'whatever should not be called a "date"
+[ 2538] Bremm: Tue Jun  5 20:52:26 2001: I see this under affects: Timer  : unholy communion | modifies unknown for 39 hours.
+[23656] Bremm: Tue Jun  5 21:15:46 2001: 595hp 676m 235mv That isn't a spell you can scribe!You have become better at scribe!
+[ 2542] Hyetlin: Fri Jun  8 00:05:23 2001: The socials list lists a "run" social, but typing run only attempts to create runes.
+[ 2602] Jaehiko: Mon Jun 11 12:39:58 2001: shield cleave: "You must be wielding an axe of sword to shield cleave." 'of' should be 'or'.
+[ 2510] Jaehiko: Mon Jun 11 20:10:02 2001: HELP IMP - double "resist" in the last sentence.
+[ 3712] Hadin: Tue Jun 12 11:21:53 2001: Thief skill drag, when successful: "You grapple the big creature, and TRIES to drag her to the south!"
+[24525] Kravidian: Sat Aug 11 12:10:13 2001: During char creation process, said alignment determined by race, when should be class (I'm a necro)
+[24525] Aliandra: Sun Aug 12 08:14:30 2001: The help file for "Plasma Cube" has a typo: I assume it should read "a giant cube of interlaced plasma" or somesuch.
+[24525] Aliandra: Sun Aug 12 08:20:55 2001: The "sense vibrations" spell has a typo: I assume it should read "This spell allows the caster to detect"...
+[24525] Aliandra: Sun Aug 12 08:24:32 2001: There is no help file for magic missile.
+[24525] Aliandra: Sun Aug 12 08:24:55 2001: The stone skin spell is listed as "stoneskin" but the help file only appears under "stone skin"
+[24525] Lilandraya: Sun Aug 12 08:59:26 2001: There is no help file for "integrate style"
+[  213] Zekain: Sun Aug 12 20:07:53 2001: We got a merchant here wearing a sword on his wrist
+[24525] Fazrnal: Mon Aug 13 06:10:16 2001: There is no help file to the "airshield" spell.
+[24525] Asalisth: Mon Aug 13 06:23:15 2001: There is no help file for the spell of "frost glaze"
+[24525] Graloran: Mon Aug 13 15:48:10 2001: There is no help file for the spell of "cooling mist".
+[24525] Yualinoff: Mon Aug 13 16:04:38 2001: There is no help file for the spell of "boreal wind".
+[15800] Lilandraya: Mon Aug 13 17:46:07 2001: There is no help file for the skill: "dodge"
+[15800] Lilandraya: Mon Aug 13 17:46:18 2001: There is no help file for the skill: "parry"
+[ 2400] Lilandraya: Mon Aug 13 20:48:30 2001: There is no help file for the duelist skill "Manuever"
+[ 2400] Lilandraya: Mon Aug 13 20:48:48 2001: Under "Help Warrior", duelist has an extra "i".
+[ 2566] Lilandraya: Mon Aug 13 22:39:04 2001: There is no help file for the skill: "retreat".
+[11703] Zekain: Tue Aug 14 03:03:20 2001: The guildmaster here is wearing the wakizashi as a shield.
+[24528] Xian: Tue Aug 14 13:25:55 2001: 'discomfit' in the room: A Hidden Chamber
+[11813] Lilandraya: Tue Aug 14 16:06:20 2001: There is no help file for the skill of "berserk".
+[23606] Hinderbohk: Fri Aug 17 19:56:46 2001: Dargor says 'Alivaan has 2000 gold on it head.'
+[22653] Ingurath: Fri Aug 17 21:32:30 2001: look moss - invoriment (environment?)
+[20405] Ingurath: Sat Aug 18 10:19:42 2001: ? Channler's instead of Channelers (guildguard Nadaia)
+[ 2627] Ingurath: Sat Aug 18 10:34:29 2001: Disruption helpfile - greivous instead of grievous
+[  262] Keleran: Sat Aug 18 14:15:36 2001: Racoon is spelled raccoon.
+[19233] Keleran: Sat Aug 18 16:29:06 2001: Lady ranger should be female.
+[23698] Javany: Tue Aug 21 18:08:41 2001: Looking south from the southeast room on the second floor of the Common Guild HQ, there can be seen a typo. ^_^
+[ 2381] Javany: Tue Aug 21 18:24:08 2001: In the roon in the crypt just under the temple (You pull the book to open a passage down to it) there's the line 'This seems to be apex of the crypt a small crystal...' etc etc.
+[  496] Abarix: Sat Aug 25 02:07:27 2001: somewhere in a crumbling tower south of a swamp
+[23703] Shracum: Sat Aug 25 19:15:05 2001: the Regal Theatre chessboard has flaws in the first two rows 
+[ 2489] Lalaliina: Mon Aug 27 00:13:25 2001: When you consider the sorcerer guildmaster in Cimar it says nothing about his alignment just fascination with death and about the same size.
+[ 5270] Lalaliina: Mon Aug 27 00:35:21 2001: Okay this is bizarre I can open a direction, just can't go that way.
+[ 2065] Lalaliina: Mon Aug 27 00:52:46 2001: I can see the weather in the catacombs under Udgaard with no line of site to the surface.
+[13617] Lalaliina: Mon Aug 27 01:05:40 2001: The dale watchman does not show an alignment, just that he is about the same size, and considers death for me at the moment.
+[22677] Ingurath: Mon Aug 27 15:57:48 2001: look boulder - where it has been draged (dragged)
+[22666] Ingurath: Mon Aug 27 16:00:43 2001: look west  - sentence unfinished
+[ 2287] Shracum: Mon Aug 27 17:04:36 2001: In a hidden cache ... Cimar sewers...Exits    A stack of small cargo creates are here.
+[ 2287] Shracum: Mon Aug 27 17:04:52 2001: In a hidden cache ... Cimar sewers...0    A stack of small cargo creates are here.
+[ 2287] Shracum: Mon Aug 27 17:05:02 2001: In a hidden cache ... Cimar sewers...Exits- (east)    A stack of small cargo creates are here.
+[24334] Saik: Tue Aug 28 00:00:05 2001: greater forest naga in Dying Forest in description: adpated instead of adapted.
+[24314] Ceni: Thu Aug 30 23:36:56 2001: 4076 224(32%)hp 300m 514mv sit | You cannot sleep while in a berserker rage!
+[  340] Artaquoatlix: Sat Sep  1 01:33:38 2001: in the dark smelly tunnels of Gharne there is one branch going south, in that branch it says the tunnel to the north turns East - it actually turns West
+[12061] Ingurath: Sat Sep  1 04:31:09 2001: Whatever castle I'm in now. A wary councilman doesn't respond to 'wary' or 'councilman' does respond to 'man'
+[11992] Ingurath: Sat Sep  1 04:41:54 2001: Lord Avarast (The Master...) doesn't respond to look master
+[21526] Ingurath: Sat Sep  1 05:04:06 2001: Mayor dagdan has two bands (tanis and talis.) they're bracelets while I wear them as rings.
+[23655] Ingurath: Sat Sep  1 05:28:55 2001: Your the severed tail of an electric eel glows blue.
+[13628] Kiledvin: Sat Sep  1 17:34:40 2001: the innkeeper in the Dale inn (room title Within the Dale inn) is an inkeeper not innkeeper
+[18031] Ingurath: Sun Sep  2 11:04:57 2001: Some storm giants left whereever I'm standing now (northeast of trollcity)
+[13803] Lalaliina: Sun Sep  2 21:00:06 2001: Your rock imps in the ruined city have no descriptions.
+[  126] Ingurath: Mon Sep  3 17:12:36 2001: the curcular symbol maks yet (makes)
+[20473] Ingurath: Tue Sep  4 06:26:18 2001: Leggings from the sea-ranger lady are spelled leggigs
+[23699] Hrulfgar: Fri Sep  7 21:21:48 2001: The desc of the dwarven cook in the Common HQ has several errors.
+[ 2222] Senn: Sun Sep  9 10:19:41 2001: look east, recnetly recently.
+[ 2611] Senn: Sun Sep  9 14:40:25 2001: serrated broad braodsword sword (from zombie sewer part) - broadsword
+[20168] Braxan: Mon Sep 10 00:21:47 2001: eep silt that swirls into the air as the water
+[ 2341] Senn: Thu Sep 13 08:51:02 2001: lumps of dead flesh don't have keyword 'lump'
+[ 2365] Pondo: Thu Sep 13 14:07:38 2001: in the crypts (this seems to be apex of the crypt)
+[ 2365] Pondo: Thu Sep 13 14:07:50 2001: should be THE apex
+[  496] Senn: Fri Sep 14 09:01:00 2001: there's a > at the start of the desc in The Top of a Stone Tower.
+[ 2517] Senn: Fri Sep 14 14:41:00 2001: citugard (A small grove of Trees, Cimar)
+[ 2538] Philios: Wed Sep 19 21:15:56 2001: Extremely on the Duergar Merchants.  Its spelt extremly.
+[  305] Tefahnis: Fri Sep 21 16:13:26 2001: This room refers to Midgaard when it probably means Melcene...Look south
+[ 6000] Xzluies: Fri Sep 21 20:23:08 2001: Drow mercenary has no desc.
+[22639] Ingurath: Sun Sep 23 07:57:15 2001: pile of enrtails - entrails
+[22642] Ingurath: Sun Sep 23 07:57:48 2001: ammount - amount of blood - multiple rooms
+[22648] Ingurath: Sun Sep 23 08:01:20 2001: boulder draged -dragged
+[22678] Ingurath: Sun Sep 23 08:07:33 2001: draged boulder (dragged)
+[14284] Thyirr: Mon Sep 24 04:44:47 2001: blue serpent helmet doesn't have keyword 'helmet'
+[  711] Pilino: Mon Sep 24 22:45:29 2001: A room "Deep within the thick forest" [Exits: east south] looking north - The forest has "growen to" instead of "grown too" and yet you can go north.
+[ 3865] Thyirr: Thu Sep 27 07:35:24 2001: human merchant doesn't have keywords human or merchant
+[13613] Thyirr: Fri Sep 28 17:28:40 2001: Dale fisherman has no desc
+[ 2377] Thyirr: Sat Sep 29 04:52:06 2001: an ancient looking gold throne eminating authroity authority.
+[ 2377] Alindria: Sat Sep 29 04:52:10 2001: A ancient looking gold throne eminating authroity.
+[12302] Thyirr: Sun Sep 30 08:52:10 2001: komodo dragons don't fly.
+[ 2380] Vhlinia: Mon Oct  8 14:24:32 2001: The helpfile for endure is missing.
+[ 2342] Therin: Tue Oct  9 03:16:51 2001: "You grapple Argother, and tries to drag her to the east!"
+[  930] Vhlinia: Wed Oct 10 14:54:17 2001: Please put in the help files for assassins.
+[11849] Horatio: Fri Oct 12 17:58:27 2001: The northern corssroads. Theres a sign in the desc, cant read it.
+[23603] Azanulnar: Sat Oct 13 03:39:01 2001: A pair of nice looking leggigs rests hear.  Seashell leggings from Mermaid Ranger
+[ 3879] Pilino: Mon Oct 15 22:59:36 2001: The High Zealot of Iseldheim is without a description.
+[ 2538] Treste: Fri Oct 19 19:15:40 2001: Under help races/race the Also see:HELP CLASSES is misleading help classes is not active yet.
+[ 2538] Treste: Fri Oct 19 19:16:35 2001: No help file for silent movement available.
+[ 2538] Treste: Fri Oct 19 19:20:15 2001: No help for demonfire.
+[ 2538] Treste: Fri Oct 19 19:20:26 2001: No help for atrophy.
+[ 2538] Treste: Fri Oct 19 19:20:49 2001: No helpfile for fatigue.
+[ 2538] Treste: Fri Oct 19 19:21:05 2001: No helpfile for holy word.
+[24263] Ehluana: Sat Oct 20 13:58:05 2001: No help file found when doing a "help wimpy"
+[13520] Ehluana: Sat Oct 20 20:00:45 2001: Ring in Dale, prefectly smooth.. should be perfectly smooth I think.
+[  341] Arzul: Sat Oct 20 20:05:31 2001: Dead end of tunnel - "North of here the tunnel makes a turn east."  Should be "a turn west."
+[24525] Testre: Sun Oct 21 20:45:20 2001: help religion does not give a result.
+[24525] Testre: Sun Oct 21 21:01:43 2001: Waekath a patron of the Common guild is not in the wizlist.
+[24525] Testre: Sun Oct 21 21:03:19 2001: Jathruk who is a patron of Bounty is not in the wizlist.
+[24525] Testre: Sun Oct 21 21:23:38 2001: No help file found for economy.
+[24525] Testre: Sun Oct 21 21:26:37 2001: No helpfile(s) for strength, dexterity, intelligence etc etc.
+[23602] Azanulnar: Mon Oct 22 01:13:45 2001: You drop a dragonbone sabre./     An exquisitely carved saber of dragon bone is stuck in the ground./get sabre
+[ 2538] Ipko: Mon Oct 22 10:18:10 2001: No helpfile for demonfire
+[24534] Ipko: Mon Oct 22 13:41:11 2001: No helpfile for dispel good.
+[24534] Ipko: Mon Oct 22 13:41:23 2001: No helpfile for pass door
+[24534] Ipko: Mon Oct 22 13:41:33 2001: No helpfile for holy word.
+[24534] Ipko: Mon Oct 22 13:41:51 2001: No helpfile fatigue.
+[24534] Ipko: Mon Oct 22 13:43:13 2001: No helpfile atrophy.
+[  424] Destre: Wed Oct 24 00:17:15 2001: In swamp south of Great Shalaran road: High in the Willow Tree, room desc.
+[24534] Kzranz: Wed Oct 24 02:40:37 2001: Maybe remove moon from social list? A bit too forward I think :P
+[10051] Ildraenai: Fri Oct 26 00:50:30 2001: No helpfile for silent movement.
+[ 2489] Ildraenai: Mon Oct 29 02:17:14 2001: You need a help wimpy file and to mention it under help newbie.
+[ 1084] Arafelis: Thu Nov 15 21:18:10 2001: In the join files, it tells you to 'help dueliest'...
+[24213] Arafelis: Sat Nov 17 16:27:13 2001: In the "Help Duelist" file, Maneuver is spelled manuever, which makes it difficult for gud speelars lik me to find it.
+[ 4607] Afrling: Fri Nov 30 23:25:10 2001: in the elf stronghold A Hallway Outside of the Grand Hall lanterns is misspelled when I look n or s (walls)
+[ 2540] Eswael: Sat Dec  1 23:28:50 2001: Voice of Damnation help.. Anyone able to his his gods words are hurt with sonice damage.
+[ 4641] Afrling: Sat Dec  8 21:13:31 2001: the room with the minotaur in the elven stronghold the description for the west wall (look west) has an extra n desc line.
+[22653] Zandramas: Sun Dec 16 20:41:26 2001: exam moss in thargeld caverns...invoriment...
+[  326] Zandramas: Tue Dec 18 11:15:01 2001: Pool is mentioned in desc and title of room... no water here
+[11922] Zandramas: Tue Dec 18 11:18:16 2001: Bog mentioned but no water... no watermeld
+[11926] Zandramas: Tue Dec 18 11:18:55 2001: Bog mentioned but no water... no watermeld
+[ 2538] Celandel: Fri Dec 21 10:24:13 2001: You bonk Goladrial on the head for being such a moron.  How stupid can he get!.... goladrial is a female
+[ 2400] Daslagar: Sat Jan 12 20:24:55 2002: when I practice integrate style the response is....the warrior guildmaster demonstrates the casting of integrate style, you gain new insight into the spell.
+[ 9039] Dunneur: Sun Jan 13 10:53:19 2002: MARSHY
+[13556] Celandel: Tue Jan 15 19:45:49 2002: l woman = You see nothing special about him. (HIM?)
+[19248] Tameer: Wed Jan 30 06:02:25 2002: "Your body beings to solidify."
+[ 2538] Azanulnar: Sun Feb 24 14:19:07 2002: a iron long spear appears as A iron long is on the ground.
+[13628] Aracombe: Tue Mar  5 10:09:58 2002: The innkeeper in the Dale Inn is an "inkeeper"
+[22521] Nemeth: Thu Mar  7 14:55:42 2002: In the forrest outside Myth Drannor, if you scan and see one of the forresters it says "A man forrest armor is..."
+[22521] Nemeth: Thu Mar  7 14:55:53 2002: Not the best grammar methinks.
+[  345] Nemeth: Sun Mar 10 16:21:33 2002: Something wrong with the way this rooms slip and fall thingy works.
+[ 2538] Ffynarill: Sat Mar 23 10:06:41 2002: Format your help newbie file into more readable chunks.
+[ 1200] Zethus: Sat Mar 23 19:03:54 2002: ryg
+[24538] Nodik: Thu Apr  4 20:55:45 2002: mostly nitpicking, but i'm not wearing any armor. yet the blood/brains/etc of my enemies still splatter on it:P
+[24539] Nodik: Fri Apr  5 11:04:18 2002: in help imps, there is a typo. eq. They are vulnerable to lightning, but naturally resist resist all other forms of magic
+[23701] Gerrund: Wed Apr 10 13:29:45 2002: at the entrance tot he theatre if i look south it says The wooden doors is closed.
+[23708] Gerrund: Wed Apr 10 13:36:12 2002: same wooden doors is open problem elsewhere in the regal theatre
+[24231] Sobleiso: Wed Apr 10 17:19:22 2002: completely is spelled incorrectly in the "help charge" file
+[  161] Gawinn: Fri Apr 12 01:02:28 2002: 171
+[ 3621] Arkasi: Fri Apr 12 01:03:34 2002: room "The Beginnings of an Old Road" near Melcene trakc should be track.
+[ 3819] Crimthann: Sun Apr 14 16:46:56 2002: he
+[23886] Arkasi: Mon Apr 15 01:19:25 2002: The mithril girth when on the ground views as "A large iron girth lies at your feet."
+[24224] Norkivo: Wed Apr 17 01:18:47 2002: but naturally resist resist all other forms of magic. (double resist, imp helpfile)
+[24525] Soriluth: Wed Apr 17 17:01:32 2002: Check out the plasma cube helpfile, seems to have a bit of grammer mistakes
+[24531] Eilis: Thu Apr 18 02:19:38 2002: This sign should be updated.
+[24814] Crimthann: Thu Apr 18 18:37:10 2002: desolate
+[24814] Crimthann: Thu Apr 18 18:37:43 2002: to (last sentence)
+[24816] Crimthann: Thu Apr 18 18:38:34 2002: desolate
+[24817] Crimthann: Thu Apr 18 18:39:07 2002: desolate
+[24818] Crimthann: Thu Apr 18 18:39:49 2002: desolate
+[24819] Crimthann: Thu Apr 18 18:40:41 2002: desolate
+[24820] Crimthann: Thu Apr 18 18:40:49 2002: desolate
+[24821] Crimthann: Thu Apr 18 18:40:55 2002: desolate
+[24822] Crimthann: Thu Apr 18 18:41:07 2002: desolate
+[24823] Crimthann: Thu Apr 18 18:41:15 2002: desolate
+[24824] Crimthann: Thu Apr 18 18:41:23 2002: desolate
+[22022] Crimthann: Thu Apr 18 18:47:41 2002: buy
+[ 4635] Arkasi: Mon Apr 22 07:24:45 2002: When you look at a description and see Elven, regal and man... Elf should be a keyword, regal as well.
+[21846] Arkasi: Tue Apr 23 12:47:48 2002: In the Duergar Mines aka Thargeld most of the directions are blank when looked at.
+[23680] Ealangal: Tue Apr 23 23:59:54 2002: the sidhe barmaid in the old common guild does not consider as good
+[  182] Nodik: Sat Apr 27 10:14:49 2002: in Jackal's altar. there is a small typo. (The scene seems to come to life, untill you pull your but sense an immense power emanating from altar)
+[ 2534] Aelhor: Thu May  2 20:46:44 2002: Looking west in the Guard room enw of the throne shows the north wall.
+[  488] Aelhor: Thu May  2 21:44:19 2002: Room called 'The Top of a Stone Tower' in the small marsh, the first line has a > symbol.
+[  488] Aelhor: Thu May  2 21:44:29 2002: Room called 'The Top of a Stone Tower' in the Antava Swamp, the first line has a > symbol.
+[ 2400] Aelhor: Thu May  2 22:49:46 2002: "As the warrior guildmaster demonstrates the casting of integrate style, you gain new insight into the --spell--."
+[  436] Gerrund: Mon May 13 11:31:05 2002: some small red berries in the marsh.. there's a space in the word feeding in it's desc.
+[23683] Harhed: Fri May 17 16:33:14 2002: in the common room. there is a gulping down his drink, this "halfing" boy pipes in his part of the talking
+[13536] Gevadan: Wed May 29 13:10:12 2002: in greendale market there's a well at the center but it can only be used by calling it a fountain, not a well
+[21860] Valis: Thu May 30 02:41:52 2002: the Massive Girdle of Celstial Strength should be spelled Celestial
+[24257] Talinos: Fri Jul 25 19:36:15 2003: Your an elemental rod of earthquake explodes into fragments.
+[ 2408] Toryl: Wed Aug  6 05:52:09 2003: An ugly sorceress staggers and clutches his head as your sword crashes into his temple! ( Should Sorceress be a she instead ;) )
+[ 2400] Trylartin: Wed Aug  6 19:11:13 2003: You examine a rich girl closely, using your keen eye to assess his weaknesses. (A she being a he????)
+[  424] Ahrydhran: Sat Aug 16 05:13:05 2003: High in the Willow Tree (swamp south of road between Cimar / Melcene) has '>From' as first word.
+[11849] Ahrydhran: Sun Aug 17 07:27:12 2003: A large wooden sign doesn't have anything on it (The northern Crossroads, north of Cimar)
+[22536] Ahrydhran: Thu Aug 21 14:01:06 2003: A small camp in Myth Drannor - roomdesc hasn't been formatted.
+[ 4720] Xorxthis: Mon Sep 15 13:01:48 2003: North of the spectral dragon, look at east wall, duplicate east description.
+[ 9394] Vir: Thu Nov 20 15:41:48 2003: forest of pine instead of Forest of Pine.
+[ 9477] Vir: Thu Nov 20 21:34:03 2003: These markings appear to be ancient runes and sigils that have perhaps
+[ 9477] Vir: Thu Nov 20 21:34:22 2003: been here since the beginning of its birth,--->  What does this sentence mean?

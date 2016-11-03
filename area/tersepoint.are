@@ -1,0 +1,2572 @@
+#AREA
+tersepoint.are~
+Terse Point~
+Rhalinar~
+0 0
+17000 17199
+unopened
+desert
+0
+1
+Rhalinar~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#17000
+West Gate~
+The hard packed ground ends abruptly in a thick wooden gate.  The outer
+walls begin to funnel inwards pressing towards the gate, quickly going from
+the width of three wagons to that of a single large wagon.  The wooden gate
+is made from a dark cherry hardened wood and is banded together with strips
+of metal to give it strength.  No mechanisms or latches can be seen that
+would set the gate in motion to open.  
+~
+city
+D NORTH 0 0 0
+door~
+The outerwalls of the settlement are made from large rocks stacked upon
+each other.  The seams are filled with a mortar that has hardened to the
+strength of steel.  This wall slopes steeply inward, encroaching upon the
+road as it seamlessly joins with the gate in the western wall.  
+~
+D EAST 17001 0 0
+door~
+A hard packed road continues away from the gatehouse.  
+~
+D SOUTH 0 0 0
+door~
+The outerwalls of the settlement are made from large rocks stacked upon
+each other.  The seams are filled with a mortar that has hardened to the
+strength of steel.  This wall slopes steeply inward, encroaching upon the
+road as it seamlessly joins with the gate in the western wall.  
+~
+D WEST 0 0 0
+door~
+A large wooden gate banded with straps of steel blocks your way.  
+~
+OWNER none~
+#17001
+Nanbor Way~
+~
+city
+D EAST 17002 0 0
+door~
+~
+D WEST 17000 0 0
+door~
+~
+OWNER none~
+#17002
+Nanbor Way~
+~
+city
+D NORTH 17011 0 0
+door~
+~
+D EAST 17003 0 0
+door~
+~
+D SOUTH 17034 0 0
+door~
+~
+D WEST 17001 0 0
+door~
+~
+OWNER none~
+#17003
+Nanbor Way~
+~
+city
+D NORTH 17012 0 0
+door~
+~
+D EAST 17004 0 0
+door~
+~
+D SOUTH 17035 0 0
+door~
+~
+D WEST 17002 0 0
+door~
+~
+OWNER none~
+#17004
+Nanbor Way~
+~
+city
+D NORTH 17013 0 0
+door~
+~
+D EAST 17005 0 0
+door~
+~
+D SOUTH 17036 0 0
+door~
+~
+D WEST 17003 0 0
+door~
+~
+OWNER none~
+#17005
+Nanbor Way~
+~
+city
+D NORTH 17014 0 0
+door~
+~
+D EAST 17006 0 0
+door~
+~
+D WEST 17004 0 0
+door~
+~
+OWNER none~
+#17006
+Nanbor Way~
+~
+city
+D NORTH 17015 0 0
+door~
+~
+D EAST 17007 0 0
+door~
+~
+D SOUTH 17062 0 0
+door~
+~
+D WEST 17005 0 0
+door~
+~
+OWNER none~
+#17007
+Nanbor Way~
+~
+city
+D NORTH 17016 0 0
+door~
+~
+D EAST 17008 0 0
+door~
+~
+D SOUTH 17063 0 0
+door~
+~
+D WEST 17006 0 0
+door~
+~
+OWNER none~
+#17008
+Nanbor Way~
+~
+city
+D NORTH 17017 0 0
+door~
+~
+D EAST 17009 0 0
+door~
+~
+D SOUTH 17064 0 0
+door~
+~
+D WEST 17007 0 0
+door~
+~
+OWNER none~
+#17009
+Nanbor Way~
+~
+city
+D NORTH 17018 0 0
+door~
+~
+D EAST 17010 0 0
+door~
+~
+D WEST 17008 0 0
+door~
+~
+OWNER none~
+#17010
+Nanbor Way~
+~
+city
+D NORTH 17019 0 0
+door~
+~
+D EAST 17083 0 0
+door~
+~
+D WEST 17009 0 0
+door~
+~
+OWNER none~
+#17011
+Iareth's Goods~
+A large tent has been erected nestling into the corner of the city walls.
+Metal stakes have been hammered into the hard road surface to provide sturdy
+connections to the thick ropes used to hold the tent up.  The southern and
+eastern faces of the tent are pulled widely open and tied back giving the
+impression of permanence.  A wooden counter runs across the center, dividing
+the tent into two.  Behind the counter are crates stacked upon each other
+reaching to the high ceiling.  
+~
+city
+ROOM INDOORS
+D EAST 17012 0 0
+door~
+~
+D SOUTH 17002 0 0
+door~
+~
+OWNER none~
+#17012
+Dummy Room~
+~
+city
+D NORTH 17020 0 0
+door~
+~
+D EAST 17013 0 0
+door~
+~
+D SOUTH 17003 0 0
+door~
+~
+D WEST 17011 0 0
+door~
+~
+OWNER none~
+#17013
+Dummy Room~
+~
+city
+D EAST 17014 0 0
+door~
+~
+D SOUTH 17004 0 0
+door~
+~
+D WEST 17012 0 0
+door~
+~
+OWNER none~
+#17014
+Dummy Room~
+~
+city
+D EAST 17015 0 0
+door~
+~
+D SOUTH 17005 0 0
+door~
+~
+D WEST 17013 0 0
+door~
+~
+OWNER none~
+#17015
+Dummy Room~
+~
+city
+D NORTH 17053 0 0
+door~
+~
+D EAST 17016 0 0
+door~
+~
+D SOUTH 17006 0 0
+door~
+~
+D WEST 17014 0 0
+door~
+~
+OWNER none~
+#17016
+Dummy Room~
+~
+city
+D NORTH 17058 0 0
+door~
+~
+D EAST 17017 0 0
+door~
+~
+D SOUTH 17007 0 0
+door~
+~
+D WEST 17015 0 0
+door~
+~
+OWNER none~
+#17017
+Dummy Room~
+~
+city
+D NORTH 17059 0 0
+door~
+~
+D EAST 17018 0 0
+door~
+~
+D SOUTH 17008 0 0
+door~
+~
+D WEST 17016 0 0
+door~
+~
+OWNER none~
+#17018
+Dummy Room~
+~
+city
+D EAST 17019 0 0
+door~
+~
+D SOUTH 17009 0 0
+door~
+~
+D WEST 17017 0 0
+door~
+~
+OWNER none~
+#17019
+Dummy Room~
+~
+city
+D EAST 17082 0 0
+door~
+~
+D SOUTH 17010 0 0
+door~
+~
+D WEST 17018 0 0
+door~
+~
+OWNER none~
+#17020
+Manor Lane~
+~
+city
+D NORTH 17021 0 0
+door~
+~
+D SOUTH 17012 0 0
+door~
+~
+OWNER none~
+#17021
+Manor Lane~
+~
+city
+D NORTH 17022 0 0
+door~
+~
+D SOUTH 17020 0 0
+door~
+~
+OWNER none~
+#17022
+Manor Lane~
+~
+city
+D NORTH 17023 0 0
+door~
+~
+D SOUTH 17021 0 0
+door~
+~
+OWNER none~
+#17023
+Manor Lane~
+~
+city
+D SOUTH 17022 0 0
+door~
+~
+D WEST 17024 0 0
+door~
+~
+OWNER none~
+#17024
+Manor Lane~
+~
+city
+D EAST 17023 0 0
+door~
+~
+D WEST 17025 0 0
+door~
+~
+OWNER none~
+#17025
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17026 0 0
+door~
+~
+D EAST 17024 0 0
+door~
+~
+OWNER none~
+#17026
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17029 0 0
+door~
+~
+D SOUTH 17025 0 0
+door~
+~
+OWNER none~
+#17027
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17028 AB 0
+door~
+~
+OWNER none~
+#17028
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17074 0 0
+door~
+~
+D EAST 17031 AB 0
+door~
+~
+D SOUTH 17029 0 0
+door~
+~
+D WEST 17027 AB 0
+door~
+~
+OWNER none~
+#17029
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17028 0 0
+door~
+~
+D WEST 17026 0 0
+door~
+~
+OWNER none~
+#17030
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17031 AB 0
+door~
+~
+D EAST 17071 ABI 0
+door~
+~
+OWNER none~
+#17031
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D SOUTH 17030 AB 0
+door~
+~
+D WEST 17028 AB 0
+door~
+~
+OWNER none~
+#17032
+Bedchamber~
+~
+unused
+ROOM INDOORS
+D WEST 17073 AB 0
+door~
+~
+OWNER none~
+#17033
+Kitchen~
+~
+unused
+ROOM INDOORS
+D EAST 17074 AB 0
+door~
+~
+OWNER none~
+#17034
+Armory~
+~
+unused
+ROOM INDOORS
+D NORTH 17002 0 0
+door~
+~
+D SOUTH 17043 0 0
+door~
+~
+OWNER none~
+#17035
+Smithy~
+~
+unused
+ROOM INDOORS
+D NORTH 17003 0 0
+door~
+~
+D EAST 17036 0 0
+door~
+~
+D SOUTH 17044 0 0
+door~
+~
+OWNER none~
+#17036
+Dummy Room~
+~
+unused
+D NORTH 17004 0 0
+door~
+~
+D SOUTH 17045 0 0
+door~
+~
+D WEST 17035 0 0
+door~
+~
+OWNER none~
+#17037
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17196 0 0
+door~
+~
+OWNER none~
+#17038
+Dummy Room~
+~
+city
+ROOM INDOORS
+D SOUTH 17182 0 0
+door~
+~
+OWNER none~
+#17039
+Dummy Room~
+~
+city
+ROOM INDOORS
+D SOUTH 17186 0 0
+door~
+~
+OWNER none~
+#17040
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17192 0 0
+door~
+~
+OWNER none~
+#17041
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17198 0 0
+door~
+~
+OWNER none~
+#17042
+Dummy Room~
+~
+city
+ROOM INDOORS
+D SOUTH 17193 0 0
+door~
+~
+OWNER none~
+#17043
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17034 0 0
+door~
+~
+OWNER none~
+#17044
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17035 0 0
+door~
+~
+OWNER none~
+#17045
+Dummy Room~
+~
+unused
+D NORTH 17036 0 0
+door~
+~
+D SOUTH 17046 0 0
+door~
+~
+OWNER none~
+#17046
+Dummy Room~
+~
+unused
+D NORTH 17045 0 0
+door~
+~
+D SOUTH 17047 0 0
+door~
+~
+OWNER none~
+#17047
+Dummy Room~
+~
+unused
+D NORTH 17046 0 0
+door~
+~
+D SOUTH 17048 0 0
+door~
+~
+OWNER none~
+#17048
+Dummy Room~
+~
+unused
+D NORTH 17047 0 0
+door~
+~
+D EAST 17076 0 0
+door~
+~
+D SOUTH 17049 0 0
+door~
+~
+D WEST 17052 0 0
+door~
+~
+OWNER none~
+#17049
+Dummy Room~
+~
+unused
+D NORTH 17048 0 0
+door~
+~
+D SOUTH 17050 0 0
+door~
+~
+OWNER none~
+#17050
+Dummy Room~
+~
+unused
+D NORTH 17049 0 0
+door~
+~
+D WEST 17051 0 0
+door~
+~
+OWNER none~
+#17051
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17050 0 0
+door~
+~
+OWNER none~
+#17052
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17048 0 0
+door~
+~
+OWNER none~
+#17053
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17054 0 0
+door~
+~
+D EAST 17058 0 0
+door~
+~
+D SOUTH 17015 0 0
+door~
+~
+OWNER none~
+#17054
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17055 0 0
+door~
+~
+D EAST 17057 0 0
+door~
+~
+D SOUTH 17053 0 0
+door~
+~
+OWNER none~
+#17055
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D SOUTH 17054 0 0
+door~
+~
+OWNER none~
+#17056
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D SOUTH 17057 0 0
+door~
+~
+OWNER none~
+#17057
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17056 0 0
+door~
+~
+D EAST 17060 0 0
+door~
+~
+D SOUTH 17058 0 0
+door~
+~
+D WEST 17054 0 0
+door~
+~
+OWNER none~
+#17058
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17057 0 0
+door~
+~
+D EAST 17059 0 0
+door~
+~
+D SOUTH 17016 0 0
+door~
+~
+D WEST 17053 0 0
+door~
+~
+OWNER none~
+#17059
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17060 0 0
+door~
+~
+D SOUTH 17017 0 0
+door~
+~
+D WEST 17058 0 0
+door~
+~
+OWNER none~
+#17060
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17061 0 0
+door~
+~
+D SOUTH 17059 0 0
+door~
+~
+D WEST 17057 0 0
+door~
+~
+OWNER none~
+#17061
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D SOUTH 17060 0 0
+door~
+~
+OWNER none~
+#17062
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17006 0 0
+door~
+~
+D EAST 17063 0 0
+door~
+~
+D SOUTH 17067 0 0
+door~
+~
+OWNER none~
+#17063
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17007 0 0
+door~
+~
+D EAST 17064 0 0
+door~
+~
+D SOUTH 17066 0 0
+door~
+~
+D WEST 17062 0 0
+door~
+~
+OWNER none~
+#17064
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17008 0 0
+door~
+~
+D SOUTH 17065 0 0
+door~
+~
+D WEST 17063 0 0
+door~
+~
+OWNER none~
+#17065
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17064 0 0
+door~
+~
+D SOUTH 17070 0 0
+door~
+~
+D WEST 17066 0 0
+door~
+~
+OWNER none~
+#17066
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17063 0 0
+door~
+~
+D EAST 17065 0 0
+door~
+~
+D SOUTH 17069 0 0
+door~
+~
+D WEST 17067 0 0
+door~
+~
+OWNER none~
+#17067
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17062 0 0
+door~
+~
+D EAST 17066 0 0
+door~
+~
+D SOUTH 17068 0 0
+door~
+~
+OWNER none~
+#17068
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17067 0 0
+door~
+~
+D EAST 17069 0 0
+door~
+~
+OWNER none~
+#17069
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17066 0 0
+door~
+~
+D EAST 17070 0 0
+door~
+~
+D WEST 17068 0 0
+door~
+~
+OWNER none~
+#17070
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17065 0 0
+door~
+~
+D WEST 17069 0 0
+door~
+~
+OWNER none~
+#17071
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17072 AB 0
+door~
+~
+D WEST 17030 AB 0
+door~
+~
+OWNER none~
+#17072
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D NORTH 17073 AB 0
+door~
+~
+D SOUTH 17071 ABI 0
+door~
+~
+OWNER none~
+#17073
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17032 AB 0
+door~
+~
+D SOUTH 17072 AB 0
+door~
+~
+D WEST 17075 AB 0
+door~
+~
+OWNER none~
+#17074
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17075 0 0
+door~
+~
+D SOUTH 17028 0 0
+door~
+~
+D WEST 17033 AB 0
+door~
+~
+OWNER none~
+#17075
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D EAST 17073 AB 0
+door~
+~
+D WEST 17074 0 0
+door~
+~
+OWNER none~
+#17076
+Dummy Room~
+~
+unused
+ROOM INDOORS
+D WEST 17048 0 0
+door~
+~
+OWNER none~
+#17077
+Dummy Room~
+~
+city
+D SOUTH 17078 0 0
+door~
+~
+OWNER none~
+#17078
+Dummy Room~
+~
+city
+D NORTH 17077 0 0
+door~
+~
+D SOUTH 17079 0 0
+door~
+~
+OWNER none~
+#17079
+Dummy Room~
+~
+city
+D NORTH 17078 0 0
+door~
+~
+D SOUTH 17080 0 0
+door~
+~
+OWNER none~
+#17080
+Dummy Room~
+~
+city
+D NORTH 17079 0 0
+door~
+~
+D SOUTH 17081 0 0
+door~
+~
+OWNER none~
+#17081
+Dummy Room~
+~
+city
+D NORTH 17080 0 0
+door~
+~
+D SOUTH 17082 0 0
+door~
+~
+OWNER none~
+#17082
+Dummy Room~
+~
+city
+D NORTH 17081 0 0
+door~
+~
+D SOUTH 17083 0 0
+door~
+~
+D WEST 17019 0 0
+door~
+~
+OWNER none~
+#17083
+Dummy Room~
+~
+city
+D NORTH 17082 0 0
+door~
+~
+D SOUTH 17084 0 0
+door~
+~
+D WEST 17010 0 0
+door~
+~
+OWNER none~
+#17084
+Dummy Room~
+~
+city
+D NORTH 17083 0 0
+door~
+~
+D SOUTH 17085 0 0
+door~
+~
+OWNER none~
+#17085
+Dummy Room~
+~
+city
+D NORTH 17084 0 0
+door~
+~
+D SOUTH 17086 0 0
+door~
+~
+OWNER none~
+#17086
+Dummy Room~
+~
+city
+D NORTH 17085 0 0
+door~
+~
+D SOUTH 17087 0 0
+door~
+~
+OWNER none~
+#17087
+Dummy Room~
+~
+city
+D NORTH 17086 0 0
+door~
+~
+D SOUTH 17088 0 0
+door~
+~
+OWNER none~
+#17088
+Dummy Room~
+~
+city
+D NORTH 17087 0 0
+door~
+~
+D SOUTH 17089 0 0
+door~
+~
+OWNER none~
+#17089
+Dummy Room~
+~
+city
+D NORTH 17088 0 0
+door~
+~
+D EAST 17148 0 0
+door~
+~
+D SOUTH 17090 0 0
+door~
+~
+D WEST 17149 0 0
+door~
+~
+OWNER none~
+#17090
+Dummy Room~
+~
+city
+D NORTH 17089 0 0
+door~
+~
+D SOUTH 17091 0 0
+door~
+~
+OWNER none~
+#17091
+Dummy Room~
+~
+city
+D NORTH 17090 0 0
+door~
+~
+D SOUTH 17092 0 0
+door~
+~
+OWNER none~
+#17092
+Dummy Room~
+~
+city
+D NORTH 17091 0 0
+door~
+~
+D SOUTH 17093 0 0
+door~
+~
+OWNER none~
+#17093
+Dummy Room~
+~
+city
+D NORTH 17092 0 0
+door~
+~
+D SOUTH 17098 0 0
+door~
+~
+D WEST 17094 0 0
+door~
+~
+OWNER none~
+#17094
+Dummy Room~
+~
+city
+D EAST 17093 0 0
+door~
+~
+D SOUTH 17097 0 0
+door~
+~
+D WEST 17095 0 0
+door~
+~
+OWNER none~
+#17095
+Dummy Room~
+~
+city
+D EAST 17094 0 0
+door~
+~
+D SOUTH 17096 0 0
+door~
+~
+OWNER none~
+#17096
+Dummy Room~
+~
+city
+D NORTH 17095 0 0
+door~
+~
+D EAST 17097 0 0
+door~
+~
+D SOUTH 17105 0 0
+door~
+~
+OWNER none~
+#17097
+Dummy Room~
+~
+city
+D NORTH 17094 0 0
+door~
+~
+D EAST 17098 0 0
+door~
+~
+D SOUTH 17104 0 0
+door~
+~
+D WEST 17096 0 0
+door~
+~
+OWNER none~
+#17098
+Dummy Room~
+~
+city
+D NORTH 17093 0 0
+door~
+~
+D EAST 17099 0 0
+door~
+~
+D SOUTH 17103 0 0
+door~
+~
+D WEST 17097 0 0
+door~
+~
+OWNER none~
+#17099
+Dummy Room~
+~
+city
+D EAST 17100 0 0
+door~
+~
+D SOUTH 17102 0 0
+door~
+~
+D WEST 17098 0 0
+door~
+~
+OWNER none~
+#17100
+Dummy Room~
+~
+city
+D SOUTH 17101 0 0
+door~
+~
+D WEST 17099 0 0
+door~
+~
+OWNER none~
+#17101
+Dummy Room~
+~
+city
+D NORTH 17100 0 0
+door~
+~
+D SOUTH 17110 0 0
+door~
+~
+D WEST 17102 0 0
+door~
+~
+OWNER none~
+#17102
+Dummy Room~
+~
+city
+D NORTH 17099 0 0
+door~
+~
+D EAST 17101 0 0
+door~
+~
+D SOUTH 17109 0 0
+door~
+~
+D WEST 17103 0 0
+door~
+~
+OWNER none~
+#17103
+Dummy Room~
+~
+city
+D NORTH 17098 0 0
+door~
+~
+D EAST 17102 0 0
+door~
+~
+D SOUTH 17108 0 0
+door~
+~
+D WEST 17104 0 0
+door~
+~
+OWNER none~
+#17104
+Dummy Room~
+~
+city
+D NORTH 17097 0 0
+door~
+~
+D EAST 17103 0 0
+door~
+~
+D SOUTH 17107 0 0
+door~
+~
+D WEST 17105 0 0
+door~
+~
+OWNER none~
+#17105
+Dummy Room~
+~
+city
+D NORTH 17096 0 0
+door~
+~
+D EAST 17104 0 0
+door~
+~
+D SOUTH 17106 0 0
+door~
+~
+OWNER none~
+#17106
+Dummy Room~
+~
+city
+D NORTH 17105 0 0
+door~
+~
+D EAST 17107 0 0
+door~
+~
+D SOUTH 17115 0 0
+door~
+~
+D WEST 17176 0 0
+door~
+~
+OWNER none~
+#17107
+Dummy Room~
+~
+city
+D NORTH 17104 0 0
+door~
+~
+D EAST 17108 0 0
+door~
+~
+D SOUTH 17114 0 0
+door~
+~
+D WEST 17106 0 0
+door~
+~
+OWNER none~
+#17108
+Dummy Room~
+~
+unused
+D NORTH 17103 0 0
+door~
+~
+D EAST 17109 0 0
+door~
+~
+D SOUTH 17113 0 0
+door~
+~
+D WEST 17107 0 0
+door~
+~
+OWNER none~
+#17109
+Dummy Room~
+~
+city
+D NORTH 17102 0 0
+door~
+~
+D EAST 17110 0 0
+door~
+~
+D SOUTH 17112 0 0
+door~
+~
+D WEST 17108 0 0
+door~
+~
+OWNER none~
+#17110
+Dummy Room~
+~
+city
+D NORTH 17101 0 0
+door~
+~
+D EAST 17171 0 0
+door~
+~
+D SOUTH 17111 0 0
+door~
+~
+D WEST 17109 0 0
+door~
+~
+OWNER none~
+#17111
+Dummy Room~
+~
+city
+D NORTH 17110 0 0
+door~
+~
+D SOUTH 17120 0 0
+door~
+~
+D WEST 17112 0 0
+door~
+~
+OWNER none~
+#17112
+Dummy Room~
+~
+city
+D NORTH 17109 0 0
+door~
+~
+D EAST 17111 0 0
+door~
+~
+D SOUTH 17119 0 0
+door~
+~
+D WEST 17113 0 0
+door~
+~
+OWNER none~
+#17113
+Dummy Room~
+~
+city
+D NORTH 17108 0 0
+door~
+~
+D EAST 17112 0 0
+door~
+~
+D SOUTH 17118 0 0
+door~
+~
+D WEST 17114 0 0
+door~
+~
+OWNER none~
+#17114
+Dummy Room~
+~
+city
+D NORTH 17107 0 0
+door~
+~
+D EAST 17113 0 0
+door~
+~
+D SOUTH 17117 0 0
+door~
+~
+D WEST 17115 0 0
+door~
+~
+OWNER none~
+#17115
+Dummy Room~
+~
+city
+D NORTH 17106 0 0
+door~
+~
+D EAST 17114 0 0
+door~
+~
+D SOUTH 17116 0 0
+door~
+~
+OWNER none~
+#17116
+Dummy Room~
+~
+city
+D NORTH 17115 0 0
+door~
+~
+D EAST 17117 0 0
+door~
+~
+OWNER none~
+#17117
+Dummy Room~
+~
+city
+D NORTH 17114 0 0
+door~
+~
+D EAST 17118 0 0
+door~
+~
+D WEST 17116 0 0
+door~
+~
+OWNER none~
+#17118
+Dummy Room~
+~
+city
+D NORTH 17113 0 0
+door~
+~
+D EAST 17119 0 0
+door~
+~
+D SOUTH 17121 0 0
+door~
+~
+D WEST 17117 0 0
+door~
+~
+OWNER none~
+#17119
+Dummy Room~
+~
+city
+D NORTH 17112 0 0
+door~
+~
+D EAST 17120 0 0
+door~
+~
+D WEST 17118 0 0
+door~
+~
+OWNER none~
+#17120
+Dummy Room~
+~
+city
+D NORTH 17111 0 0
+door~
+~
+D WEST 17119 0 0
+door~
+~
+OWNER none~
+#17121
+Dummy Room~
+~
+city
+D NORTH 17118 0 0
+door~
+~
+D SOUTH 17122 0 0
+door~
+~
+OWNER none~
+#17122
+Dummy Room~
+~
+city
+D NORTH 17121 0 0
+door~
+~
+D SOUTH 17123 0 0
+door~
+~
+OWNER none~
+#17123
+Dummy Room~
+~
+city
+D NORTH 17122 0 0
+door~
+~
+D SOUTH 17124 0 0
+door~
+~
+OWNER none~
+#17124
+Dummy Room~
+~
+city
+D NORTH 17123 0 0
+door~
+~
+D EAST 17127 0 0
+door~
+~
+D SOUTH 17125 0 0
+door~
+~
+D WEST 17170 0 0
+door~
+~
+OWNER none~
+#17125
+Dummy Room~
+~
+city
+D NORTH 17124 0 0
+door~
+~
+D SOUTH 17126 0 0
+door~
+~
+OWNER none~
+#17126
+Dummy Room~
+~
+city
+D NORTH 17125 0 0
+door~
+~
+OWNER none~
+#17127
+Dummy Room~
+~
+city
+D EAST 17128 0 0
+door~
+~
+D WEST 17124 0 0
+door~
+~
+OWNER none~
+#17128
+Dummy Room~
+~
+city
+D EAST 17129 0 0
+door~
+~
+D WEST 17127 0 0
+door~
+~
+OWNER none~
+#17129
+Dummy Room~
+~
+city
+D EAST 17130 0 0
+door~
+~
+D SOUTH 17184 0 0
+door~
+~
+D WEST 17128 0 0
+door~
+~
+OWNER none~
+#17130
+Dummy Room~
+~
+city
+D EAST 17131 0 0
+door~
+~
+D WEST 17129 0 0
+door~
+~
+OWNER none~
+#17131
+Dummy Room~
+~
+city
+D NORTH 17132 0 0
+door~
+~
+D WEST 17130 0 0
+door~
+~
+OWNER none~
+#17132
+Dummy Room~
+~
+city
+D NORTH 17133 0 0
+door~
+~
+D SOUTH 17131 0 0
+door~
+~
+D WEST 17185 0 0
+door~
+~
+OWNER none~
+#17133
+Dummy Room~
+~
+city
+D NORTH 17134 0 0
+door~
+~
+D SOUTH 17132 0 0
+door~
+~
+OWNER none~
+#17134
+Dummy Room~
+~
+city
+D NORTH 17135 0 0
+door~
+~
+D SOUTH 17133 0 0
+door~
+~
+OWNER none~
+#17135
+Dummy Room~
+~
+city
+D NORTH 17136 0 0
+door~
+~
+D SOUTH 17134 0 0
+door~
+~
+OWNER none~
+#17136
+Dummy Room~
+~
+city
+D NORTH 17137 0 0
+door~
+~
+D SOUTH 17135 0 0
+door~
+~
+D WEST 17187 0 0
+door~
+~
+OWNER none~
+#17137
+Dummy Room~
+~
+city
+D NORTH 17138 0 0
+door~
+~
+D EAST 17173 0 0
+door~
+~
+D SOUTH 17136 0 0
+door~
+~
+D WEST 17172 0 0
+door~
+~
+OWNER none~
+#17138
+Dummy Room~
+~
+city
+D NORTH 17139 0 0
+door~
+~
+D SOUTH 17137 0 0
+door~
+~
+OWNER none~
+#17139
+Dummy Room~
+~
+city
+D NORTH 17140 0 0
+door~
+~
+D SOUTH 17138 0 0
+door~
+~
+OWNER none~
+#17140
+Dummy Room~
+~
+city
+D NORTH 17141 0 0
+door~
+~
+D SOUTH 17139 0 0
+door~
+~
+OWNER none~
+#17141
+Dummy Room~
+~
+city
+D NORTH 17142 0 0
+door~
+~
+D SOUTH 17140 0 0
+door~
+~
+D WEST 17189 0 0
+door~
+~
+OWNER none~
+#17142
+Dummy Room~
+~
+city
+D NORTH 17143 0 0
+door~
+~
+D SOUTH 17141 0 0
+door~
+~
+OWNER none~
+#17143
+Dummy Room~
+~
+city
+D NORTH 17144 0 0
+door~
+~
+D SOUTH 17142 0 0
+door~
+~
+OWNER none~
+#17144
+Dummy Room~
+~
+city
+D SOUTH 17143 0 0
+door~
+~
+D WEST 17145 0 0
+door~
+~
+OWNER none~
+#17145
+Dummy Room~
+~
+city
+D EAST 17144 0 0
+door~
+~
+D WEST 17146 0 0
+door~
+~
+OWNER none~
+#17146
+Dummy Room~
+~
+city
+D EAST 17145 0 0
+door~
+~
+D SOUTH 17191 0 0
+door~
+~
+D WEST 17147 0 0
+door~
+~
+OWNER none~
+#17147
+Dummy Room~
+~
+city
+D EAST 17146 0 0
+door~
+~
+D WEST 17148 0 0
+door~
+~
+OWNER none~
+#17148
+Dummy Room~
+~
+city
+D EAST 17147 0 0
+door~
+~
+D WEST 17089 0 0
+door~
+~
+OWNER none~
+#17149
+Dummy Room~
+~
+city
+D EAST 17089 0 0
+door~
+~
+D WEST 17150 0 0
+door~
+~
+OWNER none~
+#17150
+Dummy Room~
+~
+city
+D EAST 17149 0 0
+door~
+~
+D WEST 17151 0 0
+door~
+~
+OWNER none~
+#17151
+Dummy Room~
+~
+city
+D NORTH 17194 0 0
+door~
+~
+D EAST 17150 0 0
+door~
+~
+D WEST 17152 0 0
+door~
+~
+OWNER none~
+#17152
+Dummy Room~
+~
+city
+D EAST 17151 0 0
+door~
+~
+D WEST 17153 0 0
+door~
+~
+OWNER none~
+#17153
+Dummy Room~
+~
+city
+D EAST 17152 0 0
+door~
+~
+D SOUTH 17154 0 0
+door~
+~
+OWNER none~
+#17154
+Dummy Room~
+~
+city
+D NORTH 17153 0 0
+door~
+~
+D SOUTH 17155 0 0
+door~
+~
+OWNER none~
+#17155
+Dummy Room~
+~
+city
+D NORTH 17154 0 0
+door~
+~
+D EAST 17195 0 0
+door~
+~
+D SOUTH 17156 0 0
+door~
+~
+OWNER none~
+#17156
+Dummy Room~
+~
+city
+D NORTH 17155 0 0
+door~
+~
+D SOUTH 17157 0 0
+door~
+~
+OWNER none~
+#17157
+Dummy Room~
+~
+city
+D NORTH 17156 0 0
+door~
+~
+D SOUTH 17158 0 0
+door~
+~
+D WEST 17197 0 0
+door~
+~
+OWNER none~
+#17158
+Dummy Room~
+~
+city
+D NORTH 17157 0 0
+door~
+~
+D SOUTH 17159 0 0
+door~
+~
+OWNER none~
+#17159
+Dummy Room~
+~
+city
+D NORTH 17158 0 0
+door~
+~
+D SOUTH 17160 0 0
+door~
+~
+OWNER none~
+#17160
+Dummy Room~
+~
+city
+D NORTH 17159 0 0
+door~
+~
+D EAST 17177 0 0
+door~
+~
+D SOUTH 17161 0 0
+door~
+~
+D WEST 17178 0 0
+door~
+~
+OWNER none~
+#17161
+Dummy Room~
+~
+city
+D NORTH 17160 0 0
+door~
+~
+D SOUTH 17162 0 0
+door~
+~
+OWNER none~
+#17162
+Dummy Room~
+~
+city
+D NORTH 17161 0 0
+door~
+~
+D SOUTH 17163 0 0
+door~
+~
+OWNER none~
+#17163
+Dummy Room~
+~
+city
+D NORTH 17162 0 0
+door~
+~
+D SOUTH 17164 0 0
+door~
+~
+OWNER none~
+#17164
+Dummy Room~
+~
+city
+D NORTH 17163 0 0
+door~
+~
+D SOUTH 17165 0 0
+door~
+~
+OWNER none~
+#17165
+Dummy Room~
+~
+city
+D NORTH 17164 0 0
+door~
+~
+D SOUTH 17166 0 0
+door~
+~
+OWNER none~
+#17166
+Dummy Room~
+~
+city
+D NORTH 17165 0 0
+door~
+~
+D EAST 17167 0 0
+door~
+~
+OWNER none~
+#17167
+Dummy Room~
+~
+city
+D EAST 17168 0 0
+door~
+~
+D WEST 17166 0 0
+door~
+~
+OWNER none~
+#17168
+Dummy Room~
+~
+city
+D NORTH 17181 0 0
+door~
+~
+D EAST 17169 0 0
+door~
+~
+D WEST 17167 0 0
+door~
+~
+OWNER none~
+#17169
+Dummy Room~
+~
+city
+D EAST 17170 0 0
+door~
+~
+D WEST 17168 0 0
+door~
+~
+OWNER none~
+#17170
+Dummy Room~
+~
+city
+D EAST 17124 0 0
+door~
+~
+D WEST 17169 0 0
+door~
+~
+OWNER none~
+#17171
+Dummy Room~
+~
+city
+D EAST 17172 0 0
+door~
+~
+D WEST 17110 0 0
+door~
+~
+OWNER none~
+#17172
+Dummy Room~
+~
+city
+D EAST 17137 0 0
+door~
+~
+D WEST 17171 0 0
+door~
+~
+OWNER none~
+#17173
+Dummy Room~
+~
+city
+D EAST 17174 0 0
+door~
+~
+D WEST 17137 0 0
+door~
+~
+OWNER none~
+#17174
+Dummy Room~
+~
+unused
+D EAST 17175 0 0
+door~
+~
+D WEST 17173 0 0
+door~
+~
+OWNER none~
+#17175
+Dummy Room~
+~
+unused
+D WEST 17174 0 0
+door~
+~
+OWNER none~
+#17176
+Dummy Room~
+~
+unused
+D EAST 17106 0 0
+door~
+~
+D WEST 17177 0 0
+door~
+~
+OWNER none~
+#17177
+Dummy Room~
+~
+unused
+D EAST 17176 0 0
+door~
+~
+D WEST 17160 0 0
+door~
+~
+OWNER none~
+#17178
+Dummy Room~
+~
+unused
+D EAST 17160 0 0
+door~
+~
+D WEST 17179 0 0
+door~
+~
+OWNER none~
+#17179
+Dummy Room~
+~
+unused
+D EAST 17178 0 0
+door~
+~
+D WEST 17180 0 0
+door~
+~
+OWNER none~
+#17180
+Dummy Room~
+~
+unused
+D EAST 17179 0 0
+door~
+~
+OWNER none~
+#17181
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17182 0 0
+door~
+~
+D SOUTH 17168 0 0
+door~
+~
+OWNER none~
+#17182
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17038 0 0
+door~
+~
+D WEST 17181 0 0
+door~
+~
+OWNER none~
+#17183
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17184 0 0
+door~
+~
+OWNER none~
+#17184
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17129 0 0
+door~
+~
+D WEST 17183 0 0
+door~
+~
+OWNER none~
+#17185
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17132 0 0
+door~
+~
+D WEST 17186 0 0
+door~
+~
+OWNER none~
+#17186
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17039 0 0
+door~
+~
+D EAST 17185 0 0
+door~
+~
+OWNER none~
+#17187
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17136 0 0
+door~
+~
+D UP 17188 0 0
+door~
+~
+OWNER none~
+#17188
+Dummy Room~
+~
+city
+ROOM INDOORS
+D DOWN 17187 0 0
+door~
+~
+OWNER none~
+#17189
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17141 0 0
+door~
+~
+D UP 17190 0 0
+door~
+~
+OWNER none~
+#17190
+Dummy Room~
+~
+city
+ROOM INDOORS
+D DOWN 17189 0 0
+door~
+~
+OWNER none~
+#17191
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17146 0 0
+door~
+~
+D WEST 17192 0 0
+door~
+~
+OWNER none~
+#17192
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17191 0 0
+door~
+~
+D SOUTH 17040 0 0
+door~
+~
+OWNER none~
+#17193
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17042 0 0
+door~
+~
+D WEST 17194 0 0
+door~
+~
+OWNER none~
+#17194
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17193 0 0
+door~
+~
+D SOUTH 17151 0 0
+door~
+~
+OWNER none~
+#17195
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17196 0 0
+door~
+~
+D WEST 17155 0 0
+door~
+~
+OWNER none~
+#17196
+Dummy Room~
+~
+city
+ROOM INDOORS
+D SOUTH 17037 0 0
+door~
+~
+D WEST 17195 0 0
+door~
+~
+OWNER none~
+#17197
+Dummy Room~
+~
+city
+ROOM INDOORS
+D EAST 17157 0 0
+door~
+~
+D SOUTH 17198 0 0
+door~
+~
+OWNER none~
+#17198
+Dummy Room~
+~
+city
+ROOM INDOORS
+D NORTH 17197 0 0
+door~
+~
+D WEST 17041 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

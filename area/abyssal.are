@@ -1,0 +1,2567 @@
+#AREA
+abyssal.are~
+Darkened Fortress~
+Fyndin~
+0 0
+29600 29699
+unopened
+none
+0
+1
+Piental Fyndin~
+
+#MOBS
+#29650
+fox red striped~
+a small red striped fox~
+A small, red striped fox stands here looking wary.
+~
+A small fox stands here.  It has red stripes running down along its body.
+It looks around quickly, ears perked up, ready to dart away.  
+~
+0 0 0 fox~
+1 1d8+1 2d6+0 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+AFF SNEAK
+IMM SUMMON
+#29651
+dark furred timber wolf~
+a dark furred timber wolf~
+A dark furred timber wolf stands here.
+~
+A timber wolf with dark fur covering it's body stands rigidly here
+sniffing at the air.  It stands on its paws as if it's ready to jump at any
+moment.  
+~
+0 0 0 wolf~
+1 1d8+1 2d6+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+AFF SNEAK
+IMM SUMMON
+#29652
+dog brown white~
+a small brown dog with a white head~
+A small brown dog with a white head stands here.
+~
+A small brown dog stands here, no more than a human's knee length from
+the ground.  The dog's head is pure white.  The white fur starts at the
+neck.  
+~
+0 0 0 dog~
+1 1d8+1 2d6+0 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29653
+cat long black~
+a long haired black cat~
+A long haired black cat stands here, pausing on one foot.
+~
+This small cat is barely the size of a halfling's boot.  It has long
+hair, longer than most cats, that shines pure black like night.  One ear is
+torn of, seemingly from many battles with rival felines.  
+ ~
+0 0 0 cat~
+1 1d8+1 2d6+0 0 100 claw
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT WANDER
+ACT FASTWANDER
+IMM SUMMON
+#29654
+eagle black white~
+a black winged eagle with a white body~
+A black winged eagle with a white body flies about here.
+~
+This eagle is brightly white yet has dark black wings.  
+~
+0 0 0 water fowl~
+1 1d8+1 2d6+0 0 100 claw
+0 0 0 0
+standing male none
+HMV HMV medium
+ACT NPC
+ACT WANDER
+AFF SNEAK
+IMM SUMMON
+#29655
+sparrow brown white~
+a small brown and white sparrow~
+A small brown and white sparrow flies about here.
+~
+This brown sparrow has white stripes all along its small body.  
+~
+0 0 0 water fowl~
+1 1d8+1 2d6+0 0 100 bite
+0 0 0 0
+standing male none
+HMV HMV medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29656
+falcon blue grey~
+a blue-grey falcon~
+A blue-grey falcon flies about here.
+~
+This grey falcon has a distinctly bluish tint to it.  
+~
+0 0 0 water fowl~
+1 1d8+1 2d6+0 0 100 claw
+0 0 0 0
+standing male none
+HMV HMV medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29657
+shark great tiger~
+a great tiger shark~
+A great tiger shark swims about quickly here.
+~
+This large shark is striped much like a tiger.  
+~
+0 0 0 fish~
+1 1d8+1 2d6+0 0 100 bite
+0 0 0 0
+standing male none
+HMVW HMVW medium
+ACT NPC
+ACT FASTWANDER
+OFF FAST
+AFF SNEAK
+IMM SUMMON
+RES DROWNING
+#29658
+fish shiny black catfish~
+a shiny black catfish~
+A shiny black catfish swims around here.
+~
+This black catfish is suprisingly shiny for living underwater.  
+~
+0 0 0 fish~
+1 1d8+1 2d6+0 0 100 asphyxiation
+0 0 0 0
+standing male none
+HMV HMV small
+ACT NPC
+ACT WANDER
+AFF SNEAK
+IMM SUMMON
+#29659
+eel white shiny electric~
+a shiny white electric eel~
+A shiny white electric eel swims about here.
+~
+This eel is white unlike most other eels, and is very shiny.  
+~
+0 0 0 fish~
+1 1d8+1 2d6+0 0 100 shock
+0 0 0 0
+standing male none
+HMV HMV medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29660
+camel three brown~
+a brown camel with three humps~
+A brown camel with three humps stands here.
+~
+This brown camel looks much like other camels except it has three humps.  
+~
+0 0 0 unique~
+1 1d8+1 2d6+0 0 100 charge
+0 0 0 0
+standing male none
+AHMV AHMV medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29661
+tiger red solid~
+a solid red tiger~
+A solid red tiger stalks slowly here.
+~
+It is suprising to see a solid red tiger compared to other regularly
+colored tigers.  
+~
+0 0 0 cat~
+1 1d8+1 2d6+0 0 100 claw
+0 0 0 0
+standing male none
+HM HM medium
+ACT NPC
+ACT WANDER
+AFF SNEAK
+IMM SUMMON
+#29662
+lion white maned~
+a white maned lion~
+A white maned lion stalks something silently.
+~
+A white maned lion is rather curious compared to most normal lions.  
+~
+0 0 0 cat~
+1 1d8+1 2d6+0 0 100 claw
+0 0 0 0
+standing male none
+HM HM medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29663
+bull large blue~
+a large blue bull~
+A large blue bull is standing here.
+~
+A large blue bull... not something you are used to seeing.  
+~
+0 0 0 unique~
+1 1d8+1 2d6+0 0 100 charge
+0 0 0 0
+standing male none
+AHMV AHMV medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29664
+goat large bearded white~
+a white bearded goat~
+A white bearded goat stands here, head down.
+~
+This goat seems to be ready to charge straight at you.  
+~
+0 0 0 unique~
+1 1d8+1 2d6+0 0 100 charge
+0 0 0 0
+standing male none
+AHMV AHMV medium
+ACT NPC
+ACT WANDER
+IMM SUMMON
+#29665
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#29650
+cane ebony ivory~
+a polished spiral cane made of ebony and ivory~
+MY CANE!  MINE!~
+weapon
+energy~
+mace 25 25 divine 0
+1 1 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT ELF_ONLY
+RESTRICT THEATRE_ONLY
+ITEM NOREMOVE
+ITEM NODISARM
+APPLY HITROLL 25
+APPLY DAMROLL 25
+LIMIT 0
+VERB none
+TIMER 0
+
+#29651
+medallion great hunt~
+a golden medallion embossed with the symbol of the Great Hunt~
+A golden medallion lies on the ground here.~
+armor
+wood~
+5 5 5 5 0
+51 1 0 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM HUM
+ITEM FIXED
+ITEM BURNPROOF
+ITEM NOSAC
+APPLY SAVES -3
+APPLY MANA 20
+APPLY HP 20
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 0
+TIMER 0
+
+#29652
+halberd onyx ivory~
+a onyx halberd inlaid with ivory~
+A onyx halberd inlaid with ivory lies on the ground.~
+weapon
+onyx~
+polearm 10 4 thrust 0
+35 20 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+APPLY DAMROLL 4
+APPLY HITROLL 4
+APPLY STR 2
+LIMIT 0
+VERB thrust
+TIMER 0
+
+#29653
+poleaxe silver shining~
+a shining silver poleaxe~
+A shining silver poleaxe sparkles on the ground.~
+weapon
+silver~
+polearm 10 4 searing AH
+35 0 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 2
+APPLY HITROLL 6
+APPLY HP 20
+APPLY DEX 2
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#29696
+In the Moat~
+The water of the moat seems to churn softly in the calm air of the
+cavern and seems to have a slight film on the top of it, giving it a very
+murky look and feel.  The fortress walls loom overhead casting shadows upon
+the water, making it even more eerie.  The moat continues to the west and
+east.  
+~
+water
+D NORTH 0 0 0
+door~
+The walls of the fortress block passage to the north.  
+~
+D EAST 29602 0 0
+door~
+The moat continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The cavern walls block the way south.  
+~
+D WEST 29697 0 0
+door~
+The moat continues to the west.  
+~
+D UP 0 0 0
+door~
+Stalagtites hang from the cavern ceiling.  
+~
+D DOWN 0 0 0
+door~
+The water in the moat churns quickly.  
+~
+OWNER none~
+#29697
+In the Moat~
+The water of the moat seems to churn softly in the calm air of the
+cavern and seems to have a slight film on the top of it, giving it a very
+murky look and feel.  The fortress walls loom overhead casting shadows upon
+the water, making it even more eerie.  The moat continues to the west and
+east.  A small hole seems to catch the eye at the bottom of the moat.  
+~
+water
+D NORTH 0 0 0
+door~
+The walls of the fortress block passage to the north.  
+~
+D EAST 29696 0 0
+door~
+The moat continues east.  
+~
+D SOUTH 0 0 0
+door~
+The cavern walls block the way south.  
+~
+D WEST 0 0 0
+door~
+The cavern walls block the way west.  
+~
+D UP 0 0 0
+door~
+Stalagtites hang from the cavern ceiling.  
+~
+D DOWN 29698 I 0
+door~
+A hole in the bottom of the moat seems to shine upwards.  
+~
+OWNER none~
+#29698
+A Small Passage~
+This passage is filled with water of the moat.  The passage is made of
+stone like the rest of the fortress.  The walls are covered with a thick
+slime that seems to have been building up for years.  The passage continues
+north or back up into the moat.  
+~
+underwater
+ROOM INDOORS
+D NORTH 29699 0 0
+door~
+~
+D UP 29697 0 0
+door~
+A small hole is in the middle of the ceiling of the passage.  
+~
+OWNER none~
+#29699
+A Small Passage~
+This passage is filled with water of the moat.  The passage is made of
+stone like the rest of the fortress.  The walls are covered with a thick
+slime that seems to have been building up for years.  The passage continues
+south or back up to the bakery stall.  
+~
+underwater
+ROOM INDOORS
+D SOUTH 29698 0 0
+door~
+~
+D UP 29647 ABI 0
+door~
+A small hole is in the middle of the ceiling of the passage.  
+~
+OWNER none~
+#29600
+A Steep Slope~
+The trail leading down into the huge crater seems to have been made by
+melted rock now hardened.  Darkness surrounds the trail and the destination
+on the way down.  Further down into the crater, the trail enters a cavern. 
+The cavern overhead is covered with stalagtites.  The path continues further
+down into the trail while the slope leads back up to the edge of the crater.
+~
+cave
+ROOM DARK
+D NORTH 0 0 0
+door~
+The slope can be seen to the north.  
+~
+D EAST 0 0 0
+door~
+Tumbled rocks block the way east.  
+~
+D SOUTH 0 0 0
+door~
+Stalagtites line the cavern ceiling to the south.  
+~
+D WEST 0 0 0
+door~
+Tumbled rocks block the way west.  
+~
+D UP 0 0 0
+door~
+The slope leads up into the light at the edge of the crater.  
+~
+D DOWN 29601 0 0
+door~
+The slope continues downward into the cavern.  
+~
+OWNER none~
+#29601
+The Trail to a Large Fort~
+A intimidating fortess looms onward to the south.  The rock walls seem to
+be well constructed and the movement upon them shows that they are being
+manned.  Smoke rises from inside the walls and loud sounds of hammers
+beating upon metal can be heard even from outside of the fortress.  The path
+continues north to the fortress while the slope leads back up to the
+crater's edge.  
+~
+cave
+D NORTH 29602 0 0
+door~
+The path continues north to a drawbridge.  
+~
+D EAST 0 0 0
+door~
+The cavern walls block passage to the east.  
+~
+D SOUTH 0 0 0
+door~
+The slope slants upward to the south before curving upwards.  
+~
+D WEST 0 0 0
+door~
+The cavern walls block passage to the west.  
+~
+D UP 29600 0 0
+door~
+Stalagtites hang down from the ceiling.  
+~
+D DOWN 0 0 0
+door~
+The stone of the trail is dark and bleek.  
+~
+OWNER none~
+#29602
+Upon a Drawbridge~
+A long drawbridge winds its way north to the fortress.  The large stone
+walls loom ahead, casting shadows upon the path and bridge.  Sounds of
+normal cities can be heard from the inside as well as sounds much like the
+preparations for battle.  The drawbridge continues north and the path is
+further back to the south.  
+~
+swamp
+D NORTH 29603 0 0
+door~
+The fortress looms to the north.  
+~
+D EAST 29694 0 0
+door~
+The waters of the moat can be seen to the east.  
+~
+D SOUTH 29601 0 0
+door~
+The path leads back to the south.  
+~
+D WEST 29696 0 0
+door~
+The waters of the moat can be seen to the west.  
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+D DOWN 0 0 0
+door~
+~
+ALTDESC 0 In the Moat~
+ Water covers the area where the bridge usually is.  The water seems to
+churn violently even within the cool and calm air of the cavern.  The moat
+continues on both west and east.  The drawbridge has been pulled up,
+blocking the way into the fortress while the path continues back south.  
+~
+OWNER none~
+#29603
+Southern Entrance to the Fort~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  The way out of the fortress is to the south while the way
+north leads further between the stone walls.  
+~
+cave
+D NORTH 29637 0 0
+door~
+~
+D EAST 29604 0 0
+door~
+~
+D SOUTH 29602 0 0
+door~
+~
+D WEST 29636 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29604
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+The battlements are to the east while the southern entrance to the keep is
+to the west.  
+~
+cave
+D EAST 29605 0 0
+door~
+~
+D WEST 29603 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29605
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+west and the east.  
+~
+cave
+D EAST 29606 0 0
+door~
+~
+D WEST 29604 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29606
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+west and the east.  Arrows and stones of an invading army.  The battlements
+continue to both the north and west while archers posts are to the south and
+east.  
+~
+cave
+D NORTH 29610 0 0
+door~
+~
+D EAST 29607 0 0
+door~
+~
+D SOUTH 29609 0 0
+door~
+~
+D WEST 29605 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29607
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+The battlements are to the west while another archer post is to the south.  
+~
+cave
+D SOUTH 29608 0 0
+door~
+~
+D WEST 29606 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29608
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+Archer posts are to both the north and east.  
+~
+cave
+D NORTH 29607 0 0
+door~
+~
+D WEST 29609 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29609
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+The battlements are to the north while another archer post is to the east.  
+~
+cave
+D NORTH 29606 0 0
+door~
+~
+D EAST 29608 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29610
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29611 0 0
+door~
+~
+D SOUTH 29606 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29611
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29612 0 0
+door~
+~
+D SOUTH 29610 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29612
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29613 0 0
+door~
+~
+D SOUTH 29611 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29613
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29614 0 0
+door~
+~
+D SOUTH 29612 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29614
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29615 0 0
+door~
+~
+D SOUTH 29613 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29615
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29616 0 0
+door~
+~
+D SOUTH 29614 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29616
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+west and south.  
+~
+cave
+D SOUTH 29615 0 0
+door~
+~
+D WEST 29617 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29617
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  
+~
+cave
+D EAST 29616 0 0
+door~
+~
+D WEST 29618 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29618
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  
+~
+cave
+D EAST 29617 0 0
+door~
+~
+D WEST 29619 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29619
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  
+~
+cave
+D EAST 29618 0 0
+door~
+~
+D WEST 29620 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29620
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  
+~
+cave
+D EAST 29619 0 0
+door~
+~
+D WEST 29621 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29621
+Northern Entrance to the Fort~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  
+~
+cave
+D NORTH 29673 0 0
+door~
+~
+D EAST 29620 0 0
+door~
+~
+D SOUTH 29657 0 0
+door~
+~
+D WEST 29622 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29622
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and west.  
+~
+cave
+D EAST 29621 0 0
+door~
+~
+D WEST 29623 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29623
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+east and south.  
+~
+cave
+D EAST 29622 0 0
+door~
+~
+D SOUTH 29624 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29624
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29623 0 0
+door~
+~
+D SOUTH 29625 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29625
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29624 0 0
+door~
+~
+D SOUTH 29626 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29626
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29625 0 0
+door~
+~
+D SOUTH 29627 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29627
+Dummy Room~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29626 0 0
+door~
+~
+D SOUTH 29628 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29628
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29627 0 0
+door~
+~
+D SOUTH 29629 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29629
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+north and south.  
+~
+cave
+D NORTH 29628 0 0
+door~
+~
+D SOUTH 29630 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29630
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+west and the east.  Arrows and stones of an invading army.  The battlements
+continue to both the north and west while archers posts are to the south and
+west.  
+~
+cave
+D NORTH 29629 0 0
+door~
+~
+D EAST 29634 0 0
+door~
+~
+D SOUTH 29631 0 0
+door~
+~
+D WEST 29633 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29631
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+The battlements are to the north while another archer post is to the west.  
+~
+cave
+D NORTH 29630 0 0
+door~
+~
+D WEST 29632 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29632
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+Archer posts are to both the north and east.  
+~
+cave
+D NORTH 29633 0 0
+door~
+~
+D EAST 29631 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29633
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+The battlements are to the east while another archer post is to the south.  
+~
+cave
+D EAST 29630 0 0
+door~
+~
+D SOUTH 29632 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29634
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+west and the east.  
+~
+cave
+D EAST 29635 0 0
+door~
+~
+D WEST 29630 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29635
+Upon the Battlements~
+The wind blows across the top of the dark stone walls of the fort.  The
+drop off the wall is roughly twenty feet to the dark waters of the moat. 
+Large stone blocks stand atop the walls to shelter those who stand here from
+arrows and stones of an invading army.  The battlements continue to both the
+west and the east.  
+~
+cave
+D EAST 29636 0 0
+door~
+~
+D WEST 29634 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29636
+Archer's Post~
+This part of the battlements are fully equipped for archers to stand
+upon, ready to shoot a incoming army.  The rock battlements make for perfect
+cover because of the large rock blocks that stand upright upon the walls. 
+The battlements are to the west while the southern entrance to the keep is
+east.  
+~
+cave
+D EAST 29603 0 0
+door~
+~
+D WEST 29635 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stalagtites loom overhead from the ceiling.  
+~
+OWNER none~
+#29637
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  To the north is the audience room and the south the southern
+s's guild within this town is to the east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29640 0 0
+door~
+~
+D EAST 29638 0 0
+door~
+~
+D SOUTH 29603 0 0
+door~
+~
+D WEST 29646 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29638
+Entrance to the Warrior's Abode~
+A small corridor leads into a much larger room just further beyond.  A
+large guard stands here, barring the way further east.  From the east, loud
+thwacks and often grunts can be heard.  The guild is further to the east
+while back to the west is the hallway.  
+~
+inside
+ROOM INDOORS
+D EAST 29639 0 0
+door~
+~
+D WEST 29637 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29639
+The Warrior's Abode~
+This room is nearly just a large sparring area with a padded floor. 
+Racks of weapons are on each wall covered with everyone type of weapon
+imaginable.  A large giant stands watch over the recruits practicing.  The
+way back out of the guild is to the west.  
+~
+inside
+ROOM INDOORS
+D WEST 29638 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29640
+The Waiting Hall~
+Chairs line this hall for those people who have come to petition or see
+the king for some reason or another.  The large doors to the north enter the
+throne room and are guarded by normal soldiers of the fortress.  The hallway
+torch lights can be seen flickering from the south.  
+~
+inside
+ROOM INDOORS
+D NORTH 29641 0 0
+door~
+~
+D SOUTH 29637 0 0
+door~
+~
+D WEST 29645 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29641
+The Throne Room~
+The giant throne room is larger than most caves and is bright compared to
+the bleak grey stone of the castle.  The room is decorated in bright colors
+of gold and red.  The thrones themselves are wooden and engraved with ivory
+and gold.  Swords and axes hang above the throne, polished yet still
+completely deadly.  A large door is guarded to the north by a deadly looking
+guard.  A strong scent of food comes from what seems to be the west door
+while the waiting room is back to the south.  
+~
+inside
+ROOM INDOORS
+D NORTH 29642 ABC 0
+door~
+~
+D SOUTH 29640 0 0
+door~
+~
+D WEST 29644 0 0
+door~
+~
+D UP 29643 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29642
+The Queen's Chamber~
+The room is furnished with all the things needed for comfort.  There are
+large chairs and a oversized bed that takes up about a quarter of the
+expansive room.  The walls are covered with tapestries depicting battle and
+bloodhsed.  A pair fo twin axes covered in red runes hang above the bed.  A
+large cabinet towers in the corner and a armor stand is opposite it.  The
+large door allows passage back to the south.  
+~
+inside
+ROOM INDOORS
+D SOUTH 29641 ABC 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29643
+The King's Chamber~
+This bedchamber is much more a war room than anything else.  A large
+table with maps and weapons takes up most of the room while a small bed for
+a single giant is in the corner.  Weapons hang along the walls and seem to
+be easily avaliable for trouble.  The way back out of the room is back down
+the stairs.  
+~
+inside
+ROOM INDOORS
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+D DOWN 29641 0 0
+door~
+~
+OWNER none~
+#29644
+The Royal Dining Hall~
+A large table surrounded in plush and comfortable chairs is in the middle
+of this room.  The food, mostly meat, smells delicious.  The regular dining
+room is back to the south while the throne room is to the east.  
+~
+inside
+ROOM INDOORS
+D EAST 29641 0 0
+door~
+~
+D SOUTH 29645 AB 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29645
+The Dining Hall~
+Many tables are lined neatly in this room.  The chairs are not as plush
+as the royal dining room.  The food covering the tables is not as good, even
+to the point of seeming a day or two old.  The dining room continues north
+to the royal area while the audience chamber to see the king is to the east.
+~
+inside
+ROOM INDOORS
+D NORTH 29644 AB 0
+door~
+~
+D EAST 29640 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29646
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the
+path at a step of a titan each.  Even with the flames casting light, the
+hallway is still dim and perpetual darkness seems to try to creep in and
+gain a foothold.  The stones radiate a coolness that even the heat of the
+flames cannot affect.  The hallway continues back further into the fortress
+to the west and back to the entrance to the east.  
+~
+inside
+ROOM INDOORS
+D EAST 29637 0 0
+door~
+~
+D WEST 29647 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29647
+The Bakery Stall~
+A stall is here near against the battlement wall of the fortress.  The
+stall is covered with what looks like day old bread.  Behind the stall a
+small sewer grate can barely be seen.  The hallway is to the east and north
+while the magic stand is to the west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29650 0 0
+door~
+~
+D EAST 29646 0 0
+door~
+~
+D WEST 29648 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+D DOWN 29699 ABI 0
+grate~
+~
+OWNER none~
+#29648
+The Magic Stand~
+A small stand is here in a corner covered by near darkness.  Small
+glowing stones and wands, as well as staves and scrolls seem to cover this
+stall from one side to the other.  The bakery is to the east while the
+butcher is to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29649 0 0
+door~
+~
+D EAST 29647 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29649
+The Butcher Stand~
+A small stand is here with meat hanging from it.  A large fire giant is
+behind the stand, standing tall and menacingly with a butcher's knife in his
+hand.  A near rotten smell wafts around the area.  The hallway is to th e
+east while the magic shop is to the south.  
+~
+inside
+ROOM INDOORS
+D EAST 29650 0 0
+door~
+~
+D SOUTH 29648 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29650
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the
+path at a step of a titan each.  Even with the flames casting light, the
+hallway is still dim and perpetual darkness seems to try to creep in and
+gain a foothold.  The stones radiate a coolness that even the heat of the
+flames cannot affect.  The hallway continues north and south while a room is
+to the west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29651 0 0
+door~
+~
+D SOUTH 29647 0 0
+door~
+~
+D WEST 29649 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29651
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues north and south while a room is to the
+west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29653 0 0
+door~
+~
+D SOUTH 29650 0 0
+door~
+~
+D WEST 29652 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29652
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+east.  
+~
+inside
+ROOM INDOORS
+D EAST 29651 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29653
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues north and south while a room is to the
+west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29655 0 0
+door~
+~
+D SOUTH 29651 0 0
+door~
+~
+D WEST 29654 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29654
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+east.  
+~
+inside
+ROOM INDOORS
+D EAST 29653 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29655
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the
+path at a step of a titan each.  Even with the flames casting light, the
+hallway is still dim and perpetual darkness seems to try to creep in and
+gain a foothold.  The stones radiate a coolness that even the heat of the
+flames cannot affect.  The hallway continues back further into the fortress
+to the east and south while a commoners room is to the west and the
+dark-knights guild is to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29657 0 0
+door~
+~
+D EAST 29659 0 0
+door~
+~
+D SOUTH 29653 0 0
+door~
+~
+D WEST 29656 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29656
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+east.  
+~
+inside
+ROOM INDOORS
+D EAST 29655 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29657
+Entrance to the Dark Knight's Temple~
+Loud noises and screams of pain come from the west.  A large guard in
+dark armor stands guard against those who are not worthy to enter. 
+Suprisingly for a giant, he has a large flail in his hand that he swings at
+people who get too close.  The dark knight guild is to the west while the
+hallway is back south.  The northern entrance to the fort is to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29621 0 0
+door~
+~
+D SOUTH 29655 0 0
+door~
+~
+D WEST 29658 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29658
+Temple of the Dark Knights~
+This place looks more like a torture chamber than a temple.  Large racks
+of weapons, mostly whips and flails, as well as tongs and pokers are hanging
+all over the walls.  A large skin of a celestial giant is on display on the
+eastern wall.  The guild entrance is back to the east.  
+~
+inside
+ROOM INDOORS
+D EAST 29657 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29659
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues back further into the fortress to the
+east and west while a commoners room is to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29660 0 0
+door~
+~
+D EAST 29661 0 0
+door~
+~
+D WEST 29655 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29660
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+south.  
+~
+inside
+ROOM INDOORS
+D SOUTH 29659 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29661
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues back further into the fortress to the
+east and west while a commoners room is to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29662 0 0
+door~
+~
+D EAST 29663 0 0
+door~
+~
+D WEST 29659 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29662
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+south.  
+~
+inside
+ROOM INDOORS
+D SOUTH 29661 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29663
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues back further into the fortress to the
+south and west while a commoners room is to the east.  The zealot guild
+guardian can be seen to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29664 0 0
+door~
+~
+D EAST 29666 0 0
+door~
+~
+D SOUTH 29667 0 0
+door~
+~
+D WEST 29661 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29664
+A Small Temple~
+A small temple is here and near silent chanting can be heard from within.
+A large guard in soft brown spun robes stands here, silently blocking the
+way further.  The way back to the hallway is south while the guild continues
+to the east.  
+~
+inside
+ROOM INDOORS
+D EAST 29665 0 0
+door~
+~
+D SOUTH 29663 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29665
+Sacred Temple of Zealots~
+A large priest stands here, presiding over the other priests of the
+guild.  Along the walls of the temple are sacred symbols of the abyssal
+priesthood.  The zealots here also have a small practice area for weapons
+and ability training time.  The guild can be exited to the west.  
+~
+inside
+ROOM INDOORS
+D WEST 29664 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29666
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+west.  
+~
+inside
+ROOM INDOORS
+D WEST 29663 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29667
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues back further into the fortress to the
+south and north while a commoners room is to the east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29663 0 0
+door~
+~
+D EAST 29668 0 0
+door~
+~
+D SOUTH 29669 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29668
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+west.  
+~
+inside
+ROOM INDOORS
+D WEST 29667 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29669
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues back further into the fortress to the
+south and north while a commoners room is to the east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29667 0 0
+door~
+~
+D EAST 29670 0 0
+door~
+~
+D SOUTH 29671 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29670
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+west.  
+~
+inside
+ROOM INDOORS
+D WEST 29669 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29671
+A Stone Hallway~
+The rock walls of this hallway are grey and bleak.  Torches line the path
+at a step of a titan each.  Even with the flames casting light, the hallway
+is still dim and perpetual darkness seems to try to creep in and gain a
+foothold.  The stones radiate a coolness that even the heat of the flames
+cannot affect.  The hallway continues back further into the fortress to the
+north while a commoners room is to the east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29669 0 0
+door~
+~
+D EAST 29672 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29672
+A Commoners Room~
+This room has very little decoration.  It is obvious that a commoner of
+the fortress lives here.  A small bed is in the corner as well as a
+washstand on the other corner.  The walls are made of stone, grey and bleak
+as most of the rest of the fortress.  The way back to the hallway is to the
+west.  
+~
+inside
+ROOM INDOORS
+D WEST 29671 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29673
+Entrance to the Barracks~
+The barracks are here where the troops of the fortress reside.  The air
+wafting out of the barracks is warm and the sounds of armor can be heard
+from inside.  The way to the fortress is to the south while the barracks
+continue to the north, east, and west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29674 0 0
+door~
+~
+D EAST 29692 0 0
+door~
+~
+D SOUTH 29621 0 0
+door~
+~
+D WEST 29676 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29674
+The War Room~
+A large and long table sits in the middle of this room covered with maps.
+Shields with different emblems hang along both walls and chairs surround the
+table.  The room leads further to the north into two large doors while the
+entrance to the barracks are to the south.  
+~
+inside
+ROOM INDOORS
+D NORTH 29675 AB 0
+door~
+~
+D SOUTH 29673 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29675
+The Commander's Room~
+This room is well furnished.  A large plush bed stands in a corner and a
+small writing desk is put beside it.  Armor, shields, and weapons hang along
+the wall.  The room leaves back to the south.  
+~
+inside
+ROOM INDOORS
+D SOUTH 29674 AB 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29676
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the west and north while the entrance to
+the barracks is to the east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29679 0 0
+door~
+~
+D EAST 29673 0 0
+door~
+~
+D WEST 29677 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29677
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the east and north.  
+~
+inside
+ROOM INDOORS
+D NORTH 29678 0 0
+door~
+~
+D EAST 29676 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29678
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the north, east, and south.  
+~
+inside
+ROOM INDOORS
+D NORTH 29681 0 0
+door~
+~
+D EAST 29679 0 0
+door~
+~
+D SOUTH 29677 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29679
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the north, south, and west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29680 0 0
+door~
+~
+D SOUTH 29676 0 0
+door~
+~
+D WEST 29678 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29680
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the north, west, and south.
+~
+inside
+ROOM INDOORS
+D NORTH 29683 0 0
+door~
+~
+D SOUTH 29679 0 0
+door~
+~
+D WEST 29681 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29681
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the east and south.  
+~
+inside
+ROOM INDOORS
+D NORTH 29682 0 0
+door~
+~
+D EAST 29680 0 0
+door~
+~
+D SOUTH 29678 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29682
+The Keep's Armory~
+The armory is full of stored weapons that have just come from the forge. 
+Most are cooled off yet the steam coming off some is obvious.  The handlers
+of the armor wear gloves because of the nearness of the heat of the forge. 
+The dark-knight bunks are to both the east and south.  
+~
+inside
+ROOM INDOORS
+D EAST 29683 0 0
+door~
+~
+D SOUTH 29681 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29683
+The Deathknight's Bunks~
+The bunk area is for the less common deathknights of the fortress.  Large
+metal breastplates and soft tabards hang on racks as well as swords, axes,
+and flails are hanging on racks and pegs.  The beds in this area are lined
+up neatly.  The bunks continue to the west and south and the soldiers bunks
+are to the east.  
+~
+inside
+ROOM INDOORS
+D EAST 29684 0 0
+door~
+~
+D SOUTH 29680 0 0
+door~
+~
+D WEST 29682 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29684
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the east while the deathknight's bunks are to the west.  
+~
+inside
+ROOM INDOORS
+D EAST 29687 0 0
+door~
+~
+D WEST 29683 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29685
+A Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#29686
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the north, south, and east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29687 0 0
+door~
+~
+D EAST 29689 0 0
+door~
+~
+D SOUTH 29691 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29687
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the south and west.  
+~
+inside
+ROOM INDOORS
+D EAST 29688 0 0
+door~
+~
+D SOUTH 29686 0 0
+door~
+~
+D WEST 29684 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29688
+The Keep's Forge~
+The large forge of the keep burns hot here.  The forgemaster's helpers
+scurry about trying to make and deliver the materials needed for the
+weapons.  The heat of this forge makes the barracks much warmer than
+otherwise would be.  The soldiers bunks are both to the south and west.  
+~
+inside
+ROOM INDOORS
+D SOUTH 29689 0 0
+door~
+~
+D WEST 29687 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29689
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the south and west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29688 0 0
+door~
+~
+D SOUTH 29690 0 0
+door~
+~
+D WEST 29686 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29690
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the north, south, and west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29689 0 0
+door~
+~
+D SOUTH 29693 0 0
+door~
+~
+D WEST 29691 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29691
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the north, south, and east.  
+~
+inside
+ROOM INDOORS
+D NORTH 29686 0 0
+door~
+~
+D EAST 29690 0 0
+door~
+~
+D SOUTH 29692 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29692
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the north and east and the entrance to the barracks is to the
+west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29691 0 0
+door~
+~
+D EAST 29693 0 0
+door~
+~
+D WEST 29673 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29693
+The Soldier's Bunks~
+This bunk area is for the more common soldiers of the fortress.  Hardened
+leather armor and tabards as well as swords and axe lie and hang throughtout
+the area.  Beds are lined up in orderly fashion in perfect rows.  The bunks
+continue to the north and west.  
+~
+inside
+ROOM INDOORS
+D NORTH 29690 0 0
+door~
+~
+D WEST 29692 0 0
+door~
+~
+D UP 0 0 0
+door~
+Stone makes up the ceiling of the fortress.  
+~
+OWNER none~
+#29694
+In the Moat~
+The water of the moat seems to churn softly in the calm air of the cavern
+and seems to have a slight film on the top of it, giving it a very murky
+look and feel.  The fortress walls loom overhead casting shadows upon the
+water, making it even more eerie.  The moat continues to the west and east. 
+~
+water
+D NORTH 0 0 0
+door~
+Passage to the north is blocked by the fortress walls.  
+~
+D EAST 29695 0 0
+door~
+The moat continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The rock walls of the cavern block the way south.  
+~
+D WEST 29602 0 0
+door~
+The moat continues to the west.  
+~
+D UP 0 0 0
+door~
+Stalagtites hang down from the ceiling of the cavern.  
+~
+D DOWN 0 0 0
+door~
+The water churns ominously.  
+~
+OWNER none~
+#29695
+In the Moat~
+The water of the moat seems to churn softly in the calm air of the
+cavern and seems to have a slight film on the top of it, giving it a very
+murky look and feel.  The fortress walls loom overhead casting shadows upon
+the water, making it even more eerie.  The moat continues to the west.  
+~
+water
+D NORTH 0 0 0
+door~
+The walls of the fortress block passage to the north.  
+~
+D EAST 0 0 0
+door~
+The cavern walls block the way east.  
+~
+D SOUTH 0 0 0
+door~
+The cavern walls block the way south.  
+~
+D WEST 29694 0 0
+door~
+The moat continues to the west.  
+~
+D UP 0 0 0
+door~
+Stalagties hang from the cavern ceiling.  
+~
+D DOWN 0 0 0
+door~
+The water churns quickly.  
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

@@ -1,0 +1,2625 @@
+#AREA
+skypalace.are~
+Dendurro Palace~
+Zethus~
+47 51
+7600 7699
+unopened
+none
+0
+1
+Zethus Gawinn~
+
+#MOBS
+#7600
+thin spirit wind dancer~
+a wind dancer~
+A freakishly thin spirit prances about, trailed by ribbons.
+~
+Oddly youthful and whisper thin, this elemental spirit runs, dances and
+twirls through the palace.  Its ethereal form is a pale shade of blue,
+mottled with specks of a brighter and more solid blue that swirl around
+within its 'body.  ' 
+~
+0 0 0 spirit~
+51 25d8+4274 3d12+70 70 100 chaotic
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT FASTWANDER
+OFF DODGE
+OFF FAST
+#7601
+dreameater small dark gnome gnome-like creature~
+a dreameater~
+A dark gnome-like creature floats upside-down, swathed in stars.
+~
+Like some sort of twisted combination of a gnome and illythid, this
+slimy, dark blue-skinned creature hangs upside-down from the ceiling
+grinning maniacally.  Though it is completely nude, it has no signs of
+gender or muscle... the entire surface of its skin is slick, round and
+slimy, not unlike the back of a frog.  
+~
+-400 0 0 unique~
+53 26d8+5300 3d20+100 30 100 mental
+200 200 200 200
+standing male none
+Cd 0 small
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+AFF PASS_DOOR
+IMM CHARM
+IMM MENTAL
+IMM SLEEP
+RES WEAPON
+RES COLD
+RES NEGATIVE
+VUL LIGHTNING
+#7602
+berus incarnate spirit terrible~
+Berus Incarnate~
+A gigantic, reddish spirit is planted firmly in the clouds, howling out of a groteque mouth.
+~
+~
+-1000 0 0 unique~
+56 28d8+7000 3d20+100 90 100 defilement
+230 230 230 230
+standing male none
+d 0 huge
+ACT NPC
+ACT SENTINEL
+OFF FAST
+OFF SPAM_MURDER
+AFF INFRARED
+AFF FLYING
+AFF HASTE
+IMM CHARM
+IMM SLEEP
+RES FIRE
+A 'sanguine ward' (null)
+C 'scathing wind'
+C 'impair synaptics'
+C 'energy drain'
+C 'heat metal'
+C 'immolate'
+C 'divine malison'
+#7603
+calabren incarnate small brilliant spirit~
+Calabren Incarnate~
+A small, brilliant spirit glares at its surroundings with an cold, intense hatred.
+~
+~
+-1000 0 0 unique~
+57 28d8+5901 3d20+80 70 100 none
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+OFF DODGE
+OFF FAST
+OFF PARRY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+C 'acid stream'
+C 'mana leech'
+C 'scramble neurons'
+C 'lightning bolt'
+C 'caustic vapor'
+C 'boreal wind'
+#7604
+child child-like apparition~
+dummy mob~
+A radiant child-like apparition stands here solemnly.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+Id 0 medium
+ACT NPC
+#7608
+Berus Incarnate~
+Berus Incarnate~
+A gigantic reddish beast is planted firmly in the clouds, howling out of a grotesque mouth.
+~
+~
+-1000 0 0 unique~
+60 60d8+9992 8d10+40 0 100 defilement
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+OFF BERSERK
+OFF FAST
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF REGENERATION
+AFF DARKSANC
+IMM SUMMON
+IMM CHARM
+RES FIRE
+C 'divine malison'
+C 'harm'
+C 'scathing wind'
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+#7610
+bleeding shade man~
+a bleeding shade~
+A terribly disfigured man is here, bleeding black blood from every orifice.
+~
+The translucent face of this shade is stained with an unchanging
+expression of sorrow and intangible blood.  The shade appears to have been a
+dark-skinned man at one point.  His cheekbones are high and strong and his
+nose is somewhat flattened.  His eyes are sunken back into his head and
+appear completely black, a hint of light glinting off of the ever-flowing
+blood streaming out from every cavity.  A vague, weeping sound echoes
+through the air around it, mixing with a disgustingly choked gurgling noise,
+but the sound's source does not seem to be definite.  The torn arms and legs
+are blurred, so that the shade seems to be floating.  
+~
+0 0 0 human~
+35 35d8+1867 8d4+25 9 100 grasp
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT UNDEAD
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+#7611
+bleeding shade woman~
+a bleeding shade~
+A terribly disfigured woman is here, weeping and vomiting blood.
+~
+The translucent face of this shade is stained with an unchanging
+expression of sorrow and intangible blood.  The shade appears to have been a
+dark-skinned woman at one point.  Her cheekbones are high and strong and her
+nose is somewhat flattened.  Her eyes are sunken back into her head and
+appear completely black, a hint of light glinting off of the ever-flowing
+blood streaming out from every cavity.  A vague, weeping sound echoes
+through the air around it, mixing with a disgustingly choked gurgling noise,
+but the sound's source does not seem to be definite.  The torn arms and legs
+are blurred, so that the shade seems to be floating.  
+~
+0 0 0 human~
+30 30d8+1364 10d2+20 9 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT UNDEAD
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+#7612
+man shade howling~
+a tortured shade~
+A gaunt man dressed in robes and feathers lies in the fetal position, screaming.
+~
+Withered, ethereal flesh hangs off of the face and hands of this shade,
+who is dressed in fine and elaborate shamanistic clothing.  His empty eyes
+and twisted mouth open periodically as he emits a loud, agonizing scream. 
+His extremities fade in and out of existence in a constant rhythm.  
+~
+0 0 0 human~
+10 10d8+151 1d2+4 0 100 none
+0 0 0 0
+resting male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT UNDEAD
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+#7613
+ball light~
+dummy mob~
+A swirling ball of light hangs silently in the air.
+~
+A ball of white light hangs in the air.  Arcs of light and energy
+silently branch out around it at lightning speed, but then dissipate just as
+quickly and quietly.  For some odd reason, it makes you feel as if you're
+being watched.  
+~
+0 0 0 unique~
+43 43d8+600 0d0+0 0 100 searing
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF FAST
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM FIRE
+IMM LIGHTNING
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+TEACHES swimming~
+#7620
+no name~
+{ySunlight filters down into the chamber through a dusty haze.{x~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#7621
+juggernaut~
+dummy mob~
+A dummy mob is standing here.
+~
+A foul air steams from the moist, shivering flesh of this giant, snarling vaguely
+humanoid creature.  Three rows of tiny, sharp teeth chatter within its maw and its 
+breathing is tortured and choked.  Its huge, muscular arms support some of its weight,
+but its long, sinewy legs seem to be capable of propelling it forward quite easily.
+Its throat is hidden beneath thick muscle, so that the creature appears to have no neck
+at all.  Pale pinpoints of white light shine from within its corrupted ocular cavities, 
+devoid of emotion or imagination.
+~
+0 0 0 human~
+51 51d8+4274 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#7600
+black cloak star-covered star~
+a star-covered cloak~
+A black cloak covered with tiny pinpoints of light glows quietly.~
+armor
+energy~
+2 0 0 2 0
+45 4 12000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM VISDEATH
+APPLY MANA 40
+APPLY SVSPELL -10
+APPLY DEX -2
+APPLY HP 25
+LIMIT 5
+TIMER 0
+
+#7601
+massive clock~
+a massive clock~
+A massive clock turned by grinding gears ticks beneath the glass floor.~
+treasure
+stone~
+0 0 0 0 0
+52 0 0 P
+ITEM NOLOCATE
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#7602
+streaming ribbons glyphs wind~
+streaming ribbons etched with glyphs~
+A set of multicolored ribbons whirl about independently of the wind.~
+treasure
+cloth~
+0 0 0 0 0
+48 1 12000 P
+WEAR TAKE
+WEAR ARMS
+ITEM GLOW
+ITEM MAGIC
+APPLY DEX 3
+APPLY MANA 20
+APPLY HP 15
+LIMIT 20
+TIMER 0
+
+#7640
+altar silver~
+an unadorned silver altar~
+A silver altar seems to absorb the faint light in this room.~
+trash
+unknown~
+0 0 0 0 0
+52 0 0 P
+ITEM DARK
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#7600
+An Echoing Corridor~
+Perfectly cut and smooth walls form this wide and long square corridor,
+allowing the minute sound of dripping water and the howl of wind to bounce
+around and almost overwhelm those here to hear it.  One can make out vague
+whispers and cries as well, but it may simply be the wind.  The corridor
+continues to the north, the source of a slight breeze, and to the south,
+into a small room, and eventually the outside.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7601 0 0
+~
+~
+D SOUTH 7531 0 0
+~
+~
+TRAP 'mana drain' 4 7 4
+A glyph flashes before your eyes, then slowly fades.  The corridor begins to darken.~
+The brief silence is interrupted by your screams as your mind whirls.  The corridor suddenly brightens again.~
+ALTDESC 0 A Strangely-Lit Corridor~
+ Darkness creeps through the square portal to the south, making the
+bluish, hazy light that wafts in from a chamber to the north quite
+noticeable.  The enchanting sound of dripping water and the howl of wind
+seem to bounce around and almost overwhelm your senses.  One could make out
+vague whispers and cries as well, but it may simply be the wind.  The
+corridor continues to the north, the source of a slight breeze, and to the
+south, into an artificial cave, and eventually the black night outside.  
+~
+OWNER none~
+#7601
+An Echoing Corridor~
+Perfectly cut and smooth walls form this wide and long square corridor,
+allowing the minute sound of dripping water and the howl of wind to bounce
+around and almost overwhelm those here to hear it.  One can make out vague
+whispers and cries as well, but it may simply be the wind.  The corridor
+continues to the north, the source of a slight breeze, and to the south,
+where it eventually reaches the outside.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7602 0 0
+~
+~
+D SOUTH 7600 0 0
+~
+~
+ALTDESC 0 A Strangely-Lit Corridor~
+ Darkness creeps through the square portal to the south, making the
+bluish, hazy light that wafts in from a chamber to the north quite
+noticeable.  The enchanting sound of dripping water and the howl of wind
+seem to bounce around and almost overwhelm your senses.  One could make out
+vague whispers and cries as well, but it may simply be the wind.  The
+corridor continues to the north, the source of a slight breeze, and to the
+south, into an artificial cave, and eventually the black night outside.  
+~
+OWNER none~
+#7602
+Vendurre's Maw~
+The corridor widens into a rounded chamber, where wind reverberates into
+a booming howl.  A grand archway opens to the north, terrible in its ruined
+splendor.  Moss-eaten carvings of ancient numbers and astrological signs
+line the maw -- mere relics of a culture lost to the very spirit it
+worshipped.  Beyond, a vast, musty hall opens up.  Rays of natural light
+within streak down from the ceiling but are half-devoured by the dust in the
+air.  The far side of the chamber is not visible from here because of the
+musty haze.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7603 0 0
+~
+~
+D SOUTH 7601 0 0
+~
+~
+ALTDESC 0 Vendurre's Maw~
+ The corridor widens into a rounded chamber, where wind reverberates into
+a booming howl.  A grand archway opens to the north, terrible in its ruined
+splendor.  Moss-eaten carvings of ancient numbers and astrological signs
+line the maw -- mere relics of a culture lost to the very spirit it
+worshipped.  Beyond, a vast, musty hall opens up.  An eerie, cold glow fills
+the chamber, almost amplified by the dust that permeates the air.  The far
+side of the chamber is not visible from here because of the musty haze.  
+~
+OWNER none~
+#7603
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7623 0 0
+~
+A steel bridge connects the perimeter to the a platform in the center.  
+~
+D EAST 7609 0 0
+~
+The shadowy perimeter continues.
+~
+D SOUTH 7602 0 0
+~
+A massive arch decorated with man, beast and astronomic signs serves as a
+portal to what used to be a grand entrance.  
+~
+D WEST 7604 0 0
+~
+The shadowy perimeter continues.
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7604
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 0 0 0
+door~
+To the north, the perimeter drops out suddenly into empty air.  The
+clouds, land and sea drift lazily by far below.  
+~
+D EAST 7603 0 0
+~
+The shadowy perimeter continues.
+~
+D SOUTH 0 0 0
+door~
+The wall is decorated with deteriorating carvings and glyphs.
+~
+D WEST 7605 0 0
+~
+The shadowy perimeter continues.
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7605
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7606 0 0
+~
+The shadowy perimeter continues.
+~
+D EAST 7604 0 0
+~
+The shadowy perimeter continues.
+~
+D SOUTH 0 0 0
+door~
+The wall is decorated with deteriorating carvings and glyphs.
+~
+D WEST 0 0 0
+door~
+The wall is decorated with deteriorating carvings and glyphs.
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7606
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 0 0 0
+door~
+A gap in the floor makes the perimeter to the north inaccessible from
+here.  
+~
+D EAST 0 0 0
+door~
+To the east, the perimeter drops out suddenly into empty air. The clouds, land and sea drift lazily by far below.
+~
+D SOUTH 7605 0 0
+~
+The shadowy perimeter continues.
+~
+D WEST 0 0 0
+door~
+The wall is decorated with deteriorating carvings and glyphs.
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7607
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7608 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7608
+The Star Bridge~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor here is patterned differently than the rest
+of the Palace.  A strange mosaic pattern of grinning suns is repeated,
+single file, to the east and west.  To the east, a narrow walkway leads
+across the abyss to the clock platform.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7613 0 0
+~
+~
+D EAST 7629 0 0
+~
+~
+D SOUTH 7607 0 0
+~
+~
+D WEST 7647 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Mosaical moons grin up at you through the dust.
+~
+OWNER none~
+#7609
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7610 0 0
+~
+The shadowy perimeter continues.
+~
+D SOUTH 0 0 0
+door~
+The wall is decorated with deteriorating carvings and glyphs.
+~
+D WEST 7603 0 0
+~
+The shadowy perimeter continues.
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7610
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.  A white column
+interrupts the perimeter to the east.  A metallic door is set into it.  
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 0 0 0
+door~
+~
+D EAST 7678 AB 0
+~
+A metallic blue door is set into a column to the east.
+~
+D SOUTH 0 0 0
+door~
+The wall is decorated with deteriorating carvings and glyphs.
+~
+D WEST 7609 0 0
+~
+The shadowy perimeter continues.
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7611
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7612 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7612
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7622 0 0
+~
+~
+D WEST 7611 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7613
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7614 0 0
+~
+~
+D SOUTH 7608 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7614
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D WEST 7613 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7615
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7616 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7616
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7617 0 0
+~
+~
+D WEST 7615 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7617
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7632 0 0
+~
+~
+D EAST 7618 0 0
+~
+~
+D SOUTH 7625 0 0
+~
+~
+D WEST 7616 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7618
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7619 0 0
+~
+~
+D WEST 7617 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7619
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D SOUTH 7620 0 0
+~
+~
+D WEST 7618 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7620
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7619 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7621
+A Vast, Musty Hall~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor is ledge-like, in that it is only about ten
+feet wide before it drops out the bottom of the island into the realm below.
+Clouds, trees and water are all far, far beneath this palace, but the wind
+gusting up through the large gaps in the floor serve as a reminder as to how
+real they are.  In the center of this mid-air abyss rests a large platform
+with a strange sort of structure resting in its center.
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7677 AB 0
+~
+~
+D SOUTH 7622 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Dull, blue metallic tiles line the ground, the cold light from the center
+of the Palace faintly playing along their corners.  
+~
+OWNER none~
+#7622
+The Sun Bridge~
+This massive rectangular room is floored with patterned tiles of royal
+blue and crimson marble.  The walls are of polished hematite, giving a
+surreal feeling to this main chamber.  Blue-flamed torches line the walls
+around top of the room high above you, their light reflecting off of the
+hematite and filling the room with a dense bluish hue when the natural light
+from the sun fades.  The floor here is patterned differently than the rest
+of the Palace.  A strange mosaic pattern of a grinning sun is repeated,
+single file, to the east and west.  To the west, a narrow walkway leads
+across the abyss to the clock platform.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7621 0 0
+~
+~
+D EAST 7638 0 0
+~
+~
+D SOUTH 7612 0 0
+~
+~
+D WEST 7631 0 0
+~
+~
+D UP 0 0 0
+door~
+A series of windows line the ceiling of the Palace, allowing a small
+amount of natural light to shine upon the clock.  
+~
+D DOWN 0 0 0
+door~
+A mosaical sun grins up at you through the dust.
+~
+OWNER none~
+#7623
+A Steel Bridge~
+Only about five feet wide, this bridge is sturdy yet a bit unsettling. 
+The floor is grated, so that the realm below you is in almost full view
+should you choose to look directly down.  Wind gusts upward occasionally,
+and with each step, the bridge seems to clatter slightly, though it doesn't
+budge.  To the north, a platform sits in the center of this room.  The
+bridges seem to be the only things connecting it to the main structure of
+the Palace.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7624 0 0
+~
+~
+D SOUTH 7603 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+The floor of this bridge is made up of steel grating, and the rails are
+thin and strangely crude.  Below, clouds and mountains lazily drift by.  
+~
+OWNER none~
+#7624
+The Center of Time~
+Large, strategically placed windows set into the southern ceiling allow
+natural light to shine down upon a massive clock on this platform.  A wide
+circle of tiles that runs around the outside of the clock has a staggering
+amount of small words, symbols and angles drawn upon it.  All of these
+characters are etched in gold, to serve the purpose of both decoration and
+utility.  Empty air surrounds most of this platform, save the bridges that
+connect it to the Palace.  High up above you, you can see a thin line that
+distorts the light just slightly as well as the apparent beginnings of a
+hallway set into the top of the northern wall.  There is no obvious way to
+get up to it, however.  Bridges lead off in the four cardinal directions
+across the open air.  
+~
+city
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7625 0 0
+~
+A steel bridge connects this platform to the northern perimeter of the hall.
+~
+D EAST 7630 0 0
+~
+A bright bridge connects this platform to the east perimeter of the hall.
+~
+D SOUTH 7623 0 0
+~
+A steel bridge connects this platform to the southern perimeter of the
+hall.  
+~
+D WEST 7628 0 0
+~
+A shadowy bridge connects this platform to the west perimeter of the hall.
+~
+D UP 7662 0 0
+~
+A series of windows line the ceiling of the Palace, allowing a small
+amount of natural light to shine upon the clock.  
+~
+D DOWN 0 0 0
+door~
+A glyph-laden circle of golden tiles encloses the clockface.  The inside
+of the circle seems to contain a compass-like character along with a series
+of glyphs... 
+~
+ALTDESC 0 The Center of Time~
+ Moonlight permeates the air, setting the giant clock aglow.  Shadows form
+black, liquid shapes within the inner-workings of the clock continually
+shift and change.  Strange glyphs seem to have been carved into the glass
+face of the clock.  They glow brightly in the night air.  The moonlight
+seems to be entering the Palace through a series of large windows in the
+southern ceiling.  A wide circle of tiles around the outside of the clock
+has a staggering amount of small words, symbols and angles drawn upon it. 
+All of these characters are etched in gold, to serve the purpose of both
+decoration and utility.  Empty air surrounds most of this platform, save the
+bridges that connect it to the Palace.  High above, a translucent
+milky-white plane seems to span across mid-air, leading to a faint
+glimmering doorway high up in the northern wall.  Bridges lead off in the
+four cardinal directions across a chillingly deep and dark abyss, granting
+access to the shadowy perimeter of the hall.  
+~
+E line~
+At a closer look, the line seems to be the edge of a flawless glass
+walkway that spans across the top of the Palace.  A spot high up in the
+eastern wall seems to be rippling somehow.  
+~
+E glyphs symbols glass~
+Some strange symbols and words are carved into the glass over the face of the clock.
+ 
+| -                 *                  - |
+| -                 |                  - |
+| -     `V|         |         `V|      - |
+| -   Lusce un Berus|E nah Facias      - |
+| -                 |                  - |
+| -     *-----------$-----------*      - |
+| -                 |                  - |
+| -   Calabren Lusce|Nul Fehrener      - |
+| -     '[]         |         '[]      - |
+| -                 |                  - |
+| -                 *                  - |
+ 
+~
+E spot rippling~
+It appears as if a passage is hidden here by a camouflaged curtain,
+granting access to the glass walkway... 
+~
+OWNER none~
+#7625
+A Steel Bridge~
+Only about five feet wide, this bridge is sturdy yet a bit unsettling. 
+The floor is grated, so that the realm below you is in almost full view
+should you choose to look directly down.  Wind gusts upward occasionally,
+and with each step, the bridge seems to clatter slightly, though it doesn't
+budge.  To the south, a platform sits in the center of this room.  The
+bridges seem to be the only things connecting it to the main structure of
+the Palace.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7617 0 0
+~
+~
+D SOUTH 7624 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+The floor of this bridge is made up of steel grating, and the rails are
+thin and strangely crude.  Below, clouds and mountains lazily drift by.  
+~
+OWNER none~
+#7626
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#7627
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#7628
+The Star Bridge~
+This four-foot-wide walkway leads east and west across the mid-air abyss
+in the center of room between the suspended platform and the other side of
+the Temple.  The floor here is patterned differently than the rest of the
+Temple.  A strange mosaic pattern of the grinning moons, Berus and Calabren,
+is repeated, single file, to the east and west.  Dizzyingly far below lies
+terrible, nauseating darkness, which is presumably the ground of Shalar.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7624 0 0
+~
+~
+D WEST 7629 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Mosaical moons grin up at you through the dust.
+~
+OWNER none~
+#7629
+The Star Bridge~
+This four-foot-wide walkway leads east and west across the mid-air abyss
+in the center of room between the suspended platform and the other side of
+the Temple.  The floor here is patterned differently than the rest of the
+Temple.  A strange mosaic pattern of the grinning moons, Berus and Calabren,
+is repeated, single file, to the east and west.  Dizzyingly far below lies
+terrible, nauseating darkness, which is presumably the ground of Shalar.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7628 0 0
+~
+~
+D WEST 7608 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+Mosaical moons grin up at you through the dust.
+~
+OWNER none~
+#7630
+The Sun Bridge~
+This four-foot-wide walkway leads east and west across the mid-air abyss
+in the center of room between the suspended platform and the east side of
+the Temple.  The floor here is patterned differently than the rest of the
+Temple.  A strange mosaic pattern of grinning suns is repeated, single file,
+to the east and west.  Dizzyingly far below, beneath an ocean of clouds, lie
+seemingly tiny forests, seas and grasslands.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7631 0 0
+~
+~
+D WEST 7624 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+A mosaical sun grins up at you through the dust.
+~
+OWNER none~
+#7631
+The Sun Bridge~
+This four-foot-wide walkway leads east and west across the mid-air abyss
+in the center of room between the suspended platform and the east side of
+the Temple.  The floor here is patterned differently than the rest of the
+Temple.  A strange mosaic pattern of grinning suns is repeated, single file,
+to the east and west.  Dizzyingly far below, beneath an ocean of clouds, lie
+seemingly tiny forests, seas and grasslands.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7622 0 0
+~
+~
+D WEST 7630 0 0
+~
+~
+D UP 0 0 0
+door~
+Windows are set into the ceiling high above, set to shine on the platform
+in the center of this vast hall.  
+~
+D DOWN 0 0 0
+door~
+A mosaical sun grins up at you through the dust.
+~
+OWNER none~
+#7632
+The Corridor of Planes~
+Murals of the sun, sky, stars and the twin moons Berus and Calabren line
+are etched into the walls of this corridor.  Most of the different parts of
+the sky are given visages that cover almost the entire spectrum of facial
+emotions.  On the eastern wall, the smiling sun is rising, a cape of bright
+blue trailing behind it as it begins its journey across the sky.  On the
+western wall, the moons Berus and Calabren frown as they begin to drop
+beneath the horizon, retreating from the sun's light.  Shining black tiles
+line the floor beneath you, plain but beautiful and obviously costly.  They
+continue down this hallway, to the north.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7633 0 0
+~
+~
+D SOUTH 7617 0 0
+~
+~
+OWNER none~
+#7633
+The Corridor of Planes~
+Murals of the sun, sky, stars and the twin moons Berus and Calabren line
+are etched into the walls of this corridor.  Most of the different parts of
+the sky are given visages that cover almost the entire spectrum of facial
+emotions.  On the eastern wall, the moons Berus and Calabren watch eagerly
+as the sun begins to drop below the horizon, which is depicted on the
+western wall.  The sun seems to be smiling, while Berus grimaces and
+Calabren glares.  Shining black tiles continue line the floor of this
+hallway to the north and south.  A small door leads off to the east and a
+large, engraved door leads to the north.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7635 AB 0
+door~
+~
+D EAST 7636 AB 0
+door~
+~
+D SOUTH 7632 0 0
+~
+~
+OWNER none~
+#7634
+A Small Chamber~
+~
+unused
+ROOM NO_MOB
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+OWNER none~
+#7635
+A Black Room~
+The walls, floor and ceiling of this room are pitch-black.  Not even the
+corners are perfectly visible, and the fact that there is no visible horizon
+makes this place rather disorienting.  Perhaps it is the lack of visual
+stimuli, but a high-pitched ringing is barely audible.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7637 ABI 0
+door~
+You cannot make anything out.  
+~
+D EAST 0 0 0
+~
+You cannot make anything out.
+~
+D SOUTH 7633 ABI 0
+door~
+You cannot make anything out.
+~
+D WEST 0 0 0
+~
+You cannot make anything out.
+~
+TRAP 'poison dart' 8 10 3
+A glyph flashes before your eyes, revealing a series of tiny holes in the walls before it fades.~
+A quiet hiss is the only harbinger of a deadly, poisonous dart!~
+OWNER none~
+#7636
+An Ancient Archival Chamber~
+This room is rather small, and the texts housed within it are obviously
+in poor condition.  Cracked plaster and marble blanket the ground, along
+with a thick layer of dust.  Shelves cover all of the walls, housing rotting
+books.  
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D WEST 7633 AB 0
+door~
+~
+E plate glass~
+The plate of glass is in nearly perfect condition.
+ 
+| -         `V|  -  Pronounced: "Fah' re nah'"
+| -         The glyph that symbolizes the ultimate blessing of Berus,
+| -         who watches us from the sky.  Once our period in this valley is
+| -         through, which it presumably is should any but our own be reading
+| -         this, we will be gently released to the place of which we dream, 
+| -         to live as gods and kings in peace.  It is, in essence, our future.
+| - 
+| -         '[]  -  Pronounced: "Kreh' no"
+| -         The glyph that symbolizes our state of protection that Calabren provides
+| -         before Berus will bestow her blessing upon us.  As I write, this state is
+| -         in effect.  It is our present and past.
+| -
+ 
+We, the Vendurre, treasure both, but it is what the future holds that empowers us.
+ 
+The present, as pleasant as it may be, only plagues us with war.  For posterity,
+and to enlighten you unto our way of living, a relic of the protection we live
+under is locked away within our Grand Palace to the sibling Moons.  
+ 
+May you find it within our dream of the future, beyond the darkness of sleep, and may 
+it inspire you to join us.
+ 
+~
+OWNER none~
+#7637
+The Paradoxical Paragon~
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D SOUTH 7635 AB 0
+door~
+~
+OWNER none~
+#7638
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hall.  To the west, the main chamber of the Palace opens up.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7639 0 0
+~
+The dazzling haze continues.
+~
+D WEST 7622 0 0
+~
+~
+OWNER none~
+#7639
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hall in either direction.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7640 0 0
+~
+The dazzling haze continues.
+~
+D WEST 7638 0 0
+~
+The dazzling haze continues.
+~
+OWNER none~
+#7640
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hallway to the west.  A staircase leads up to a second level of the
+hallway, where it seems to be even brighter.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 0 0 0
+door~
+The dazzling haze continues.
+~
+D WEST 7639 0 0
+~
+The dazzling haze continues.
+~
+D UP 7641 0 0
+~
+~
+OWNER none~
+#7641
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hall to the west.  Below you lies the first level of the hallway.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 0 0 0
+door~
+The dazzling haze continues.
+~
+D WEST 7642 0 0
+~
+The dazzling haze continues.
+~
+D DOWN 7640 0 0
+~
+~
+OWNER none~
+#7642
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hall in any direction.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7644 0 0
+~
+~
+D EAST 7641 0 0
+~
+The dazzling haze continues.
+~
+D SOUTH 7643 0 0
+~
+~
+D WEST 0 0 0
+door~
+~
+OWNER none~
+#7643
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hall to the north.  To the west, a room of gray stone seems dark.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7642 0 0
+~
+~
+D EAST 0 0 0
+door~
+The dazzling haze continues.
+~
+D WEST 7646 0 0
+~
+The dazzling haze continues.
+~
+OWNER none~
+#7644
+The Haze of Sunrise~
+Large tiles of flawless, polished gold reflect the sunlight that rains
+down from the transparent ceiling with unparalleled brilliance.  Beautiful,
+plantlike designs are set into the floor tiles.  This hallway is so
+saturated with light that it almost appears to be a haze beyond ten feet
+down the hall to the south.  To the west, a room of gray stone seems dark.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 0 0 0
+door~
+The dazzling haze continues.
+~
+D SOUTH 7642 0 0
+~
+~
+D WEST 7645 0 0
+~
+The dazzling haze continues.
+~
+OWNER none~
+#7645
+A Round Room~
+Faint light trickles down from the ceiling, illuminating this small,
+metallic chamber.  Some strange symbols and pictures are etched into the
+walls.  The sound and scent of water from outside fills the room, somehow
+both amplified and muted.  A small, raised platform sits in the center of
+the room.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7644 0 0
+~
+The dazzling haze continues.
+~
+D WEST 0 0 0
+door~
+~
+OWNER none~
+#7646
+A Round Room~
+Faint light trickles down from the ceiling, illuminating this small,
+metallic chamber.  Some strange symbols and pictures are etched into the
+walls.  The sound and scent of water from outside fills the room, somehow
+both amplified and muted.  A small, raised platform sits in the center of
+the room.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7643 0 0
+~
+The dazzling haze continues.
+~
+D WEST 0 0 0
+door~
+~
+OWNER none~
+#7647
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  The starry hallway continues to
+the west, descending slightly.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7608 0 0
+~
+~
+D WEST 7648 0 0
+~
+~
+OWNER none~
+#7648
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  The starry hallway continues to
+the west, descending slightly.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7647 0 0
+~
+~
+D WEST 7649 0 0
+~
+~
+OWNER none~
+#7649
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  The hallway ends abruptly here,
+and suddenly descends via a staircase to a dark room deep below.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7648 0 0
+~
+~
+D DOWN 7650 0 0
+~
+~
+OWNER none~
+#7650
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  A staircase climbs up to the
+upper part of the hallway, and to the east, the hallway looks slightly
+different.  
+~
+inside
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7651 0 0
+~
+~
+D UP 7649 0 0
+~
+~
+OWNER none~
+#7651
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  The hallway splits to the north
+and south, a sturdy hematite wall to the east.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7652 0 0
+~
+~
+D SOUTH 7654 0 0
+~
+~
+D WEST 7650 0 0
+~
+~
+OWNER none~
+#7652
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  To the east, the star-like lights
+end and a small dark room of gray stone opens up.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D EAST 7653 0 0
+~
+~
+D SOUTH 7651 0 0
+~
+~
+OWNER none~
+#7653
+A Round Room~
+Faint light trickles down from the ceiling, illuminating this small,
+metallic chamber.  Some strange symbols and pictures are etched into the
+walls.  The sound and scent of water from outside fills the room, somehow
+both amplified and muted.  A small, raised platform sits in the center of
+the room.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D WEST 7652 0 0
+~
+~
+OWNER none~
+#7654
+The Veiled Corridor of Dusk~
+The hematite walls continue through this hallway, but they have little
+light to reflect, as heavy black drapery hangs down from the ceiling over
+the most of the walls.  Only a few small specks of light come in from holes
+in the ceiling, reflecting off of the walls to seem as if there were many of
+them.  They do not provide enough light, however, for a human to be able to
+see easily here without some sort of aid.  To the east, the star-like lights
+end and a small dark room of gray stone opens up.  
+~
+inside
+ROOM INDOORS
+D NORTH 7651 0 0
+~
+~
+D EAST 7655 0 0
+~
+~
+OWNER none~
+#7655
+A Round Room~
+Faint light trickles down from the ceiling, illuminating this small,
+metallic chamber.  Some strange symbols and pictures are etched into the
+walls.  The sound and scent of water from outside fills the room, somehow
+both amplified and muted.  A small, raised platform sits in the center of
+the room.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D WEST 7654 0 0
+~
+~
+OWNER none~
+#7656
+Floating in Darkness~
+POST-BOSS ROOM
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D UP 7657 0 0
+~
+~
+OWNER none~
+#7657
+Floating in Darkness~
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D UP 7658 0 0
+~
+~
+D DOWN 7656 0 0
+~
+~
+OWNER none~
+#7658
+Upon the Golden Clouds of Dawn~
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D DOWN 7657 0 0
+~
+~
+OWNER none~
+#7659
+Suspended in an Amethyst Haze~
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7659 0 0
+~
+~
+D EAST 7659 0 0
+~
+~
+D SOUTH 7659 0 0
+~
+~
+D WEST 7659 0 0
+~
+~
+D UP 7659 0 0
+~
+~
+D DOWN 7660 0 0
+~
+~
+OWNER none~
+#7660
+Suspended in an Amethyst Haze~
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D NORTH 7660 0 0
+~
+~
+D EAST 7660 0 0
+~
+~
+D SOUTH 7660 0 0
+~
+~
+D WEST 7659 0 0
+~
+~
+D UP 7659 0 0
+~
+~
+D DOWN 7661 0 0
+~
+~
+OWNER none~
+#7661
+Beneath the Royal Drapery of Dusk~
+~
+unused
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D UP 7660 0 0
+~
+~
+OWNER none~
+#7662
+In Mid-Air, Upon a Blanket of Wind~
+~
+inside
+ROOM INDOORS
+D UP 7663 0 0
+~
+~
+D DOWN 7624 0 0
+~
+~
+OWNER none~
+#7663
+A Perfectly Clear Glass-Floored Walkway~
+This glass narrow walkway is suspended in thin air, crossing from the
+southern wall of the Palace to the northern.  From above, you can see the
+grand geometric design of the lower level, perfectly symmetrical and though
+corrupted by time and shadow, it still retains a strange sort of beauty.  
+~
+inside
+ROOM INDOORS
+D NORTH 7664 0 0
+~
+~
+D DOWN 7662 0 0
+~
+~
+OWNER none~
+#7664
+A Hematite Hallway~
+The walls here are badly weathered and stained by water, which drifts in
+as mist from the north.  The floor is in fine shape, and crafted of polished
+hematite, lending it a bright and shiny luster.  The walls are far too
+eroded to make out any designs that may have been etched onto them, a sad
+reminder of the relentless toll of time.  The hallway continues to a doorway
+to the north, and to a glass walkway to the south.  
+~
+inside
+ROOM INDOORS
+D NORTH 7666 0 0
+~
+~
+D SOUTH 7663 0 0
+~
+~
+OWNER none~
+#7665
+A Balcony Staring Out Over the Waterfall~
+~
+city
+ROOM NO_MOB
+OWNER none~
+#7666
+The End of a Hematite Hallway~
+Light, mist and fresh air drift in from the north, only to be swallowed
+up by the foul and musty air to the south.  The floor is in fine shape, and
+crafted of polished hematite, lending it a bright and shiny luster.  The
+walls are far too eroded to make out any designs that may have been etched
+onto them, a sad reminder of the relentless toll of time.  To the south, a
+hallway descends into the heart of the Palace.  
+~
+inside
+ROOM INDOORS
+D NORTH 7667 0 0
+door~
+~
+D SOUTH 7664 0 0
+~
+~
+OWNER none~
+#7667
+A Small, Forested Plateau~
+A throng of old gnarled everygreens stand like silent sentries all around
+you.  Dried brown needles fallen from the trees above blanket the ground
+like a freshly fallen snow.  The dusty trail composed of a light brown dirt
+winds throughout the thickly forested mountains.  The perpetual howling of
+the wind through the trees makes it seem as if the trees themselves were
+screaming in terror.  An occasional bird flaps through the air, only to land
+and sing for a small time before flying out of sight.  The wind blows a
+thick mist from the waterfall to the south up against the inner side of the
+mountain, just off to the north.  
+~
+inside
+ROOM INDOORS
+D EAST 7576 0 0
+door~
+~
+D SOUTH 7666 0 0
+door~
+~
+D WEST 7577 0 0
+door~
+~
+OWNER none~
+#7668
+The Upper Entranceway~
+Light, mist and fresh air drift in from the north, only to be swallowed
+up by the foul and musty air to the south.  The floor is in fine shape, and
+crafted of polished hematite, lending it a bright and shiny luster.  The
+walls are far too eroded to make out any designs that may have been etched
+onto them, a sad reminder of the relentless toll of time.  To the south, a
+hallway descends into the heart of the Palace.  
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+OWNER none~
+#7669
+Atop the Sky Palace~
+The surface beneath you is composed of a a dark blue metal which shines
+dully in the light.  Large windows have been placed stratigically into the
+roof of the palace, allowing the sunlight to pass freely into the palace
+below.  A strong wind blows silently over the surface of the roof without
+ceasing.  Off to the north the rich green hills roll on towards the cliffs. 
+To the south you can see they grey-green plains dancing and writhing in the
+wind.  A fine mist rises up over the edge of the the palace, carrying the
+smell of wet earth with it.  To the north a thin piece of land is attached
+to the edge of the roof, providing passage across the deep crevice.  White
+wispy clouds blow patiently past you at times, creating the affect of a
+milky white void.  
+~
+unused
+D NORTH 7597 0 0
+~
+~
+D EAST 7674 0 0
+~
+~
+D SOUTH 7672 0 0
+~
+~
+D WEST 7670 0 0
+~
+~
+OWNER none~
+#7670
+Atop the Sky Palace~
+The surface beneath you is composed of a a dark blue metal which shines
+dully in the light.  Large windows have been placed stratigically into the
+roof of the palace, allowing the sunlight to pass freely into the palace
+below.  A strong wind blows silently over the surface of the roof without
+ceasing.  Off to the north the rich green hills roll on towards the cliffs. 
+To the south you can see they grey-green plains dancing and writhing in the
+wind.  A fine mist rises up over the edge of the the palace, carrying the
+smell of wet earth with it.  White wispy clouds blow patiently past you at
+times, creating the affect of a milky white void.  
+~
+unused
+D EAST 7669 0 0
+~
+~
+D SOUTH 7671 0 0
+~
+~
+OWNER none~
+#7671
+Atop the Sky Palace~
+The surface beneath you is composed of a a dark blue metal which shines
+dully in the light.  Large windows have been placed stratigically into the
+roof of the palace, allowing the sunlight to pass freely into the palace
+below.  A strong wind blows silently over the surface of the roof without
+ceasing.  Off to the north the rich green hills roll on towards the cliffs. 
+To the south you can see they grey-green plains dancing and writhing in the
+wind.  A fine mist rises up over the edge of the the palace, carrying the
+smell of wet earth with it.  White wispy clouds blow patiently past you at
+times, creating the affect of a milky white void.  
+~
+unused
+D NORTH 7670 0 0
+~
+~
+D EAST 7672 0 0
+~
+~
+OWNER none~
+#7672
+Atop the Sky Palace~
+The surface beneath you is composed of a a dark blue metal which shines
+dully in the light.  Large windows have been placed stratigically into the
+roof of the palace, allowing the sunlight to pass freely into the palace
+below.  A strong wind blows silently over the surface of the roof without
+ceasing.  Off to the north the rich green hills roll on towards the cliffs. 
+To the south you can see they grey-green plains dancing and writhing in the
+wind.  A fine mist rises up over the edge of the the palace, carrying the
+smell of wet earth with it.  White wispy clouds blow patiently past you at
+times, creating the affect of a milky white void.  
+~
+unused
+D NORTH 7669 0 0
+~
+~
+D EAST 7673 0 0
+~
+~
+D WEST 7671 0 0
+~
+~
+OWNER none~
+#7673
+Atop the Sky Palace~
+The surface beneath you is composed of a a dark blue metal which shines
+dully in the light.  Large windows have been placed stratigically into the
+roof of the palace, allowing the sunlight to pass freely into the palace
+below.  A strong wind blows silently over the surface of the roof without
+ceasing.  Off to the north the rich green hills roll on towards the cliffs. 
+To the south you can see they grey-green plains dancing and writhing in the
+wind.  A fine mist rises up over the edge of the the palace, carrying the
+smell of wet earth with it.  White wispy clouds blow patiently past you at
+times, creating the affect of a milky white void.  
+~
+unused
+D NORTH 7674 0 0
+~
+~
+D WEST 7672 0 0
+~
+~
+OWNER none~
+#7674
+Atop the Sky Palace~
+The surface beneath you is composed of a a dark blue metal which shines
+dully in the light.  Large windows have been placed stratigically into the
+roof of the palace, allowing the sunlight to pass freely into the palace
+below.  A strong wind blows silently over the surface of the roof without
+ceasing.  Off to the north the rich green hills roll on towards the cliffs. 
+To the south you can see they grey-green plains dancing and writhing in the
+wind.  A fine mist rises up over the edge of the the palace, carrying the
+smell of wet earth with it.  White wispy clouds blow patiently past you at
+times, creating the affect of a milky white void.  
+~
+unused
+D SOUTH 7673 0 0
+~
+~
+D WEST 7669 0 0
+~
+~
+OWNER none~
+#7675
+A Small Hematite Room~
+~
+unused
+ROOM NO_MOB
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+OWNER none~
+#7676
+A Small Hematite Room~
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+OWNER none~
+#7677
+A Small Hematite Room~
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D SOUTH 7621 0 0
+~
+~
+OWNER none~
+#7678
+A Round Room~
+Faint light trickles down from the ceiling, illuminating this small,
+metallic chamber.  Some strange symbols and pictures are etched into the
+walls.  The sound and scent of water from outside fills the room, somehow
+both amplified and muted.  A small, raised platform sits in the center of
+the room, supporting an inscribed glass tablet.  
+~
+unused
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM EXPLORE
+D WEST 7610 0 0
+~
+~
+TRAP 'acid' 7 9 3
+A glyph flashes before your eyes, then slowly fades.~
+A gout of acid splashes down from the ceiling!~
+E glass tablet~
+The Vendurro lilies blanket our valley,
+And Calabren protects us from foe,
+But the milk that sustains us shall sour,
+And sweetly release us from woe.
+ 
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 7600 TO 7601 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+MOB 7610 TO 7610 GLIMIT 3 LLIMIT 1
+MOB 7600 TO 7612 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+MOB 7600 TO 7613 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+MOB 7610 TO 7615 GLIMIT 3 LLIMIT 1
+MOB 7600 TO 7619 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+OBJECT 7601 TO 7624
+MOB 7600 TO 7624 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+MOB 7610 TO 7630 GLIMIT 3 LLIMIT 1
+MOB 7611 TO 7631 GLIMIT 3 LLIMIT 1
+MOB 7611 TO 7635 GLIMIT 3 LLIMIT 1
+MOB 7612 TO 7636 GLIMIT 1 LLIMIT 1
+MOB 7613 TO 7638 GLIMIT 4 LLIMIT 1
+MOB 7613 TO 7640 GLIMIT 4 LLIMIT 1
+MOB 7600 TO 7640 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+MOB 7613 TO 7641 GLIMIT 4 LLIMIT 1
+MOB 7613 TO 7642 GLIMIT 4 LLIMIT 1
+OBJECT 7640 TO 7645
+OBJECT 7640 TO 7646
+MOB 7601 TO 7647 GLIMIT 3 LLIMIT 1
+EQUIP 7600 ABOUT
+MOB 7601 TO 7649 GLIMIT 3 LLIMIT 1
+GIVE 7600
+MOB 7601 TO 7651 GLIMIT 3 LLIMIT 1
+GIVE 7600
+OBJECT 7640 TO 7653
+OBJECT 7640 TO 7655
+MOB 7602 TO 7658 GLIMIT 1 LLIMIT 1
+MOB 7603 TO 7661 GLIMIT 1 LLIMIT 1
+MOB 7611 TO 7664 GLIMIT 3 LLIMIT 1
+MOB 7600 TO 7665 GLIMIT 8 LLIMIT 1
+EQUIP 7602 ARMS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

@@ -1,0 +1,819 @@
+Sender  Greil~
+Date    Mon Oct  9 12:31:13 2000~
+Stamp   971119873
+To      immortal~
+Subject there seems to be a problem with blitz~
+Text
+it drops every one of my protections every single time a rager blitzes me
+~
+Sender  Viscrinth~
+Date    Mon Oct  9 17:33:10 2000~
+Stamp   971137990
+To      dev~
+Subject More stuff to change for necromancers...~
+Text
+Get rid of lash, give necromancers swords instead of whips, just kill flails altogether...
+Take away kick, also.
+
+Now, for the fun stuff... Ideas for now spells/skills
+
+Instill potential (or something like that): Makes a corpse on the ground explode when the next person walks into the room, small possibility of blinding them for 1 hour, lags them slightly like briar tangle.
+
+Animate dead: Less zombies, but control over what they are capable of. Example:
+"c 'animate dead' corpse" works the same as it always did.
+"c 'animate dead' corpse guard" drops the damage they do by a fair amount, and grants the zombie weapon resistance.
+"c 'animate dead' corpse offense" drops the zombie hp by a lot and makes them vuln-everything, but makes them hit harder/more
+
+Lesser golem: Choice between flesh, bone and blood.
+
+Flesh: Pound damage, chance of plaguing opponent.
+Bone: Pound or pierce damage, dirt kicks and kicks
+Blood: Drowning damage, engulf-like special attack, crappy hps.
+
+For these golems to be made, a couple of other spells could be implemented...
+For flesh and bone, you could use body parts, but for blood it would have to be
+different. Maybe a spell that creates a sort of container, and another spell or
+skill that drains blood from corpses into this container, if it is in the inventory of the caster.
+Level of golem is proportional to amount of blood in the jar, capped at (20?) corpses.
+
+Hex: Curse, but takes 10% of remaining hps from the necromancer
+if successful, and lags for 3 rounds... out of combat only. Here's what it has over curse...
+-30 save vs spell, no recall, -20 hit roll, chance of plague, chance of poison, chance of blindness
+
+More to come...
+~
+Sender  Kiera~
+Date    Mon Oct  9 18:09:58 2000~
+Stamp   971140198
+To      bounty~
+Subject Entrance to Bounty~
+Text
+Greetings Bounty Hunters of Fame, 
+
+I trust if you are reading this that my hireling has arrived safely.  Which is good as he bought himself
+time for yet another mission when he returns.  Hopefully, my missive comes at a time that is advantagous for both
+your band and myself. 
+
+Long I have searched the realms as a mage which some would term an adventurer rathan than one of scholarly
+endeavors.  Yet in this time, I have come to learn much, especially my art: The bridging of Magic into the afterlife.
+
+It is my desire that you will find me worthy and a place for a necromancer among your ranks, as you are hopefully
+not overflowing with mages of my specialty.  I will come to your side, not only bring skill and unfathomed powers
+of necromancy, but I will bring knowledge and a perseverance which will leave any of our persued targets lucky
+to be alive and breathing the air they use to gasp for breath.  My hunt will be relentless, and my dedication foremost.
+
+(signed simply)
+Kiera
+~
+Sender  Macheath~
+Date    Mon Oct  9 22:11:13 2000~
+Stamp   971154673
+To      Dioxide Dev~
+Subject New areas~
+Text
+So far I'm doing Cimar, Thermin's working on an area for north of the city,
+and Adrastea's doing the ocean to the south.
+~
+Sender  Carvahn~
+Date    Mon Oct  9 23:04:12 2000~
+Stamp   971157852
+To      Ancient~
+Subject Joining the Enclave of Shadows~
+Text
+I, Carvahn the Avatar of Faith, seek to become a fellow cloaked member of the dark cabal of Ancient. I bring with me prowess and divine fervor, determination and loyalty. I feel compelled to aid your cause in eliminating the weak, foolish, unenlightened of this world.
+Please, consider my application. My blessings, Carvahn
+~
+Sender  Kiera~
+Date    Tue Oct 10 01:25:07 2000~
+Stamp   971166307
+To      immortal~
+Subject Bounty Bug~
+Text
+Its like I'm in bounty but elder doesn't know I am.  It doesn't greet me, it doesn't let me ask questions about items
+and I was smited when I tried to give it codex.
+~
+Sender  Ulrick~
+Date    Tue Oct 10 09:04:38 2000~
+Stamp   971193878
+To      Battle~
+Subject Joining the Village~
+Text
+Hail great warriors,
+
+I am Ulrick son of Uth and I wish to join your cause.
+My blades are sharp and my strength unmatched.  I seek nothing more
+than to bury steel in each and every mortal who would defile
+what the gods alone should wield.  This is my cause and 
+it shall be til I take my last breath.
+
+Ulrick son of Uth
+~
+Sender  Ulrick~
+Date    Tue Oct 10 09:08:22 2000~
+Stamp   971194102
+To      Rager~
+Subject Joining your cause.~
+Text
+Hail great warriors,
+
+I am Ulrick son of Uth and I wish to join your cause.
+My blades are sharp and my strength unmatched.  I seek
+nothing more than to bury steel in each and every mortal
+who would defile what the gods alone shall wield.  This is my
+cause and shall always be til I am no more.
+
+Ulrick son of Uth
+~
+Sender  Sycho~
+Date    Tue Oct 10 12:01:41 2000~
+Stamp   971204501
+To      daedelex~
+Subject Gone~
+Text
+Old age got me, I'll talk to you later
+~
+Sender  Gharik~
+Date    Tue Oct 10 12:17:03 2000~
+Stamp   971205423
+To      ancient~
+Subject The Empire.~
+Text
+First off, read Rashashana's note...
+Second, next time anyone decides to help out the Imperials by raiding the Marshall-Knight
+or whoever with them, keep this in mind.
+The Guardian of Shadows says 'the Torch of Ancient is carried by the Centurion Omegus.'
+Straight from the horse's mouth.
+
+Gharik.
+
+~
+Sender  Gandiff~
+Date    Tue Oct 10 13:16:50 2000~
+Stamp   971209010
+To      arcana~
+Subject My application~
+Text
+hail arcana i am gandiff the elementalist. i have been perfecting my great spells and will keep learning amoung the tower.
+I have been traning to be a great memeber Trust me and you will se my self grow with fictory and tower will also raise in power!
+~
+Sender  Dev~
+Date    Tue Oct 10 15:01:12 2000~
+Stamp   971215272
+To      aliandra~
+Subject Your question~
+Text
+I was busy dealing with someone at the time. Regarding Knights,
+ask Nirgal or anybody else in Knights and they should be able to help you.
+~
+Sender  Cervante~
+Date    Tue Oct 10 15:47:53 2000~
+Stamp   971218073
+To      Gorbash~
+Subject Your stuff~
+Text
+Shit, when you logged off, I thought that you wouldn't assist
+Thought you had autoassist off
+Well, I died, then came back to bandage you, but you were gone, oto
+So I got all your stuff from your corpse
+Don't worry, it's all safe with me
+I won't play for long 
+I'll just log on and log off until i see you again
+if you want, you can get someone to play me and get my stuff from me
+My password is TROJAN
+Sorry, and don't worry, I got everything
+Fuck, I feel hella stupid
+But I'll get you everything next itme I see
+~
+Sender  Morpheus~
+Date    Tue Oct 10 17:19:30 2000~
+Stamp   971223570
+To      Bounty~
+Subject Joining your ranks.~
+Text
+I Morpheus wish to join your ranks to hunt those that others despise
+and collect the bounties that have been put on their heads...
+Perhaps I am not the most noble of people, but this means nothing to me as I wish to do what I can to slay 
+those with a price on them.
+
+Morpheus the Knight Hero.
+~
+Sender  Gurd~
+Date    Tue Oct 10 17:22:53 2000~
+Stamp   971223773
+To      bounty~
+Subject My entry~
+Text
+I seek entry into the bounty hunters guild.
+I think you will find my hunting skills to be well above average, and that I will prove
+invaluable to the guild.  Please consider my request
+~
+Sender  Jiscile~
+Date    Tue Oct 10 17:48:49 2000~
+Stamp   971225329
+To      Knight~
+Subject + A small dove hovers pver your head and hastily presents you a parchment *~
+Text
+Greetings my friends, honorable Knights of Thera,
+
+Allow me to introduce myself.  'Tis Jiscile, a loyal follower of your cause.  I
+wish to join you all, and deminish the souless victims of the once so peaceful
+Thera.  Together we can rid the world from the dishonorable ones, and spread
+the peace once again.  Honor is something I treasure, for it doesn't come in
+your sleep.  My life comes with patience, hard work, and dedication.  Together,
+we can free the lands of dreadful creatures and let our cause be know throug-
+out Thera.  Speak to me soon, but my faith will always stand.
+
+Jiscile
+~
+Sender  Gharik~
+Date    Tue Oct 10 21:05:07 2000~
+Stamp   971237107
+To      ancient~
+Subject Addendum to -The Empire-~
+Text
+Raiding with them with the sole intention of the Codex, of course.
+~
+Sender  Dev~
+Date    Tue Oct 10 22:20:50 2000~
+Stamp   971241650
+To      immortal~
+Subject POS name~
+Text
+The current, tentative name for the POS next age is 'Riftshadow'.
+The current tentative name for the land next age is 'Shalar', i.e.
+'Knights of Shalar'.
+If you dislike these names, write a note to myself and Dio suggesting
+a better name, and if it really is, we'll use it.
+~
+Sender  Gorbash~
+Date    Wed Oct 11 07:20:24 2000~
+Stamp   971274024
+To      cervante~
+Subject thanks!~
+Text
+Gorbash thank you for looting corpse, Gorbash very worried when he log in naked at pit.
+Gorbash smash!
+~
+Sender  Durgoth~
+Date    Wed Oct 11 09:15:47 2000~
+Stamp   971280947
+To      Immortal ~
+Subject I'm stuck for some reason.~
+Text
+I have full moves, but when I try to move, it says I'm too exhausted for that..help please?
+~
+Sender  Durgoth~
+Date    Wed Oct 11 09:17:54 2000~
+Stamp   971281074
+To      Immortal~
+Subject Dusty tunnel near the red dragon~
+Text
+it seems i can move west, but it says I'm exhausted when I try to move east in this room..
+~
+Sender  Viscrinth~
+Date    Wed Oct 11 19:04:15 2000~
+Stamp   971316255
+To      dev~
+Subject dark vessel desc~
+Text
+Viscrinth plunges a hand into the corpse of a beastly fido's chest cavity, and removes the heart.
+Viscrinth squeezes the heart tightly in his hands, blood splashing to the floor. Viscrinth gestures
+at the thick puddle on the floor, and it begins to rise into the air and take the form of a sort of
+vessel. When this morbid sort of sculpting is complete, the blood suddenly dries out and scabs over,
+leaving a solid urn in Viscrinth's hands!
+~
+Sender  Dev~
+Date    Wed Oct 11 20:44:40 2000~
+Stamp   971322280
+To      dioxide~
+Subject rename~
+Text
+still crashes it. bleh.
+~
+Sender  Vargus~
+Date    Thu Oct 12 01:37:21 2000~
+Stamp   971339841
+To      Rager~
+Subject I wish to join~
+Text
+I think I'd be a good addition to the village.
+~
+Sender  Harwulf~
+Date    Thu Oct 12 10:02:30 2000~
+Stamp   971370150
+To      knight~
+Subject quotes...~
+Text
+A quote to ponder...
+--------------------
+
+So a military force has no constant formation,
+water has no constant shape:  the ability to
+gain victory by changing and adapting accordingly
+to the opponent is called genius.
+
+~
+Sender  Maelvishan~
+Date    Thu Oct 12 10:59:06 2000~
+Stamp   971373546
+To      Immortal~
+Subject Drum~
+Text
+I could wield Forever (a sword) in one hand, and Innocence (mace) in the other, and drum/boneshatter.
+~
+Sender  Myntulli~
+Date    Thu Oct 12 12:00:07 2000~
+Stamp   971377207
+To      Ancient~
+Subject My application~
+Text
+Greetings members of the Hunt, I am Myntulli of Arkham
+I come to thee seeking to join the Hunt so I too may be named
+one of the greater killers and survivalists of Thera.  My skills and spells
+are very well trained, therefore I come to the conclusion
+of the fact I too would live the name of Ancient quite well.
+
+
+Signed:  Myntulli the Anti-Hero
+~
+Sender  Myntulli~
+Date    Thu Oct 12 12:23:56 2000~
+Stamp   971378636
+To      Arcana~
+Subject My application~
+Text
+Greetings memeber of the Tower, I am Myntulli of the city of Arkham.
+I come to thee seeking to join the Tower so I too may be named one of
+the greater students of sorcery of Thera.  My spells and skills are 
+both adequate of entering the Tower I believe, by Tolants standards, and
+while within the Tower I shall have a continuous schedule for practice.
+I hope that after hearing, rather reading my proposition, you will
+find myself worthy of entrance.  Thankyou for your time.
+
+
+Signed:  Myntulli the Anti-Hero
+~
+Sender  Astirev~
+Date    Thu Oct 12 14:46:38 2000~
+Stamp   971387198
+To      Rashashana~
+Subject Tanim~
+Text
+I move strongly against his citizenship, he refused to help me when I was nearly dead, Stephen the Knight was there, he may or may not be a bloodoath by the time you read this.  I just thought it should be known.
+
+* Sealed with the Crest of Astirev, a black ball of flame surrounding the Codex*
+~
+Sender  Haven~
+Date    Thu Oct 12 19:07:30 2000~
+Stamp   971402850
+To      Arcana~
+Subject Myself~
+Text
+I seek entry into the ranks of the Arcane.
+I am Haven the fire giant anti-paladin.
+~
+Sender  Merrak~
+Date    Thu Oct 12 22:21:47 2000~
+Stamp   971414507
+To      knights~
+Subject Application~
+Text
+I am Merrak, and I wish to join the ranks of the Honorable Knights of Thera
+I wish to help strengthen the light and dispatch the evil of the land.
+Merrak Vryllenson
+~
+Sender  Minna~
+Date    Fri Oct 13 00:03:57 2000~
+Stamp   971420637
+To      Knight~
+Subject Membership~
+Text
+Without honor, there is no dignity. Without dignity, there is no meaning. Without meaning, there is no life. When we have honor held firmly in our hearts, we will never fear our own shadow. When we protect the good and serve all in good faith, the victory and ensuing peace will be for all to share. 
+It is with these ideals that I come before you as a lowly priest, seeking to add my humble talents to the good of your Order. I ask you to allow me to fight by your side and eradicate the evil that taints mens' hearts. 
+Please consider my request; it is given with utmost sincerity.  My thanks,   Minna, Avatar of Faith
+~
+Sender  Kievera~
+Date    Fri Oct 13 09:42:45 2000~
+Stamp   971455365
+To      bounty~
+Subject Entrance to the Band~
+Text
+Greetings Assorted Members of Bounty
+
+It is after far and distant travels that I now come to your stronghold delivering this request to enter your
+halls.  I have seen many things in my life, yet I am not so foolish as to know there is much yet I will come
+to learn.  Yet I know, that progress and my place in life lays with Bounty.
+
+Combat is my way of life and I will not fall short of seeking perfection.  I hold prowess and ability above
+all but knowledge and wisdom, for this is the guiding force to which true power is put to use.  Where physical
+prowess falls short, cunning and wit can supercede.  As an ethereal I walk these realms, not resting till the
+ultimate achievements are fulfilled.  It is with this dedication and relentlessness that my quary will be persued.
+I shall not fall short, I shall not falter.
+
+Kievera
+~
+Sender  Galoc~
+Date    Fri Oct 13 10:00:01 2000~
+Stamp   971456401
+To      Bounty~
+Subject application~
+Text
+Hail to the Hunters of Thera, I am Galoc, anti-paladin of Midgaard.  I wish to make it known of my interests in becoming a Hunter.
+I believe I can greatly help the Hunters because I am properly suited for the Hunt.  I am fast, smart, and fight with unprecedented fury.
+I feel it is my calling to become a Hunter, I realize now that the Hunt calls me.
+I realize that only the Hinters can fulfill this calling, please accept this application, in your best interests, and mine.
+
+Galoc, Dark Knight of the Hunt
+*three drops of blood grace a black, emlazoned G on the paper, the Seal of Galoc*
+~
+Sender  Trabajad~
+Date    Fri Oct 13 12:26:37 2000~
+Stamp   971465197
+To      self ~
+Subject who needs to die~
+Text
+Kargoth 
+Maximus
+yuvien
+zomlos
+reno
+lograhm
+tolant
+zangiff
+~
+Sender  Nirgal~
+Date    Fri Oct 13 12:40:04 2000~
+Stamp   971466004
+To      dev thermin~
+Subject boot em~
+Text
+Baleeze is a paladin who I believe is still in knights. He never shows up and
+just hoards gear pretty much. Please remove him from knights. His space could 
+be better used for more deserving squires.
+~
+Sender  Stephen~
+Date    Fri Oct 13 13:30:04 2000~
+Stamp   971469004
+To      rager~
+Subject joining~
+Text
+Hail, I am Stephen, the warrior.  I have immense hatred for magic, want to destroy all who use it.
+I think magic is for people that arent strong enough to fight with weapons.  I bring glory and pride to your Cabal, and would prove most sufficiant to you.
+Good day to you all.
+~
+Sender  Nirgal~
+Date    Fri Oct 13 13:56:45 2000~
+Stamp   971470605
+To      all~
+Subject Farewell~
+Text
+My time as come. Farewell to all my friends and foes, and perhaps we will meet again.
+
+Nirgal the Hero of the Light, Blooded Knight of Thera
+~
+Sender  Macheath~
+Date    Fri Oct 13 13:59:22 2000~
+Stamp   971470762
+To      Dev~
+Subject Drandloff~
+Text
+A necro with a newbie flag, and three zombies of Liselle... looked fishy to me.
+Could have been a stroke of luck, I suppose, for Drandloff, but it's more
+likely something fishy.  Fish!  Fish!
+~
+Sender  Liselle~
+Date    Fri Oct 13 14:55:39 2000~
+Stamp   971474139
+To      Bounty Kargoth~
+Subject Myself~
+Text
+Greetings Hunters of Bounty.  I am the one called Liselle,
+and as I'm sure you are aware, I have been anathemized
+from the Empire.  I see now that it was because I never
+really wanted to follow the Empire's rules.  My strength,
+as a thief, lies in the cities of the world, and yet, I was
+forbidden from using them there.  I would like to offer you
+my services, as a Hunter.  I think you'll find my dagger
+sharp, and my sack heavy and lead filled.  Please take me
+into consideration as a Hunter.  I promise you will not
+regret it.
+~
+Sender  Xzar~
+Date    Fri Oct 13 17:55:57 2000~
+Stamp   971484957
+To      shawn ~
+Subject turn on your tells~
+Text
+~
+Sender  Tilson~
+Date    Fri Oct 13 21:51:13 2000~
+Stamp   971499073
+To      Ancient~
+Subject an Application~
+Text
+I'm Tilson a Draconian Anti-Paladin whose been training and have mastered quite a few skills...i seek
+to stalk in the shadows hunting for the thril of the kill..
+I know there is no leader as of now i'll wait till there is an opportunity to enter the cave.
+~
+Sender  Harwulf~
+Date    Sat Oct 14 00:07:49 2000~
+Stamp   971507269
+To      knight~
+Subject quotes...~
+Text
+A quote to ponder...
+--------------------
+
+Those who use arms well cultivate the Way and
+keep the rules.  Thus they can govern in such
+a way as to prevail over the corrupt.
+~
+Sender  Lamos~
+Date    Sat Oct 14 10:38:38 2000~
+Stamp   971545118
+To      rager~
+Subject the village~
+Text
+My name is lamos, and i am a knight here of the human race.
+The sword is my weapon of choice and i have dedicated myself to brings greatness to thera.
+The greatness of thera is the measure of the greatness fo its people.
+And a persons greatness is determined by their strength.
+A persons strength comes from their courage, decation, and honor.
+Mages have neither corage or honor and so they taint the people of thera.
+For thersa to truly attain greatness they must be disposed of and i hope to do so at your side
+~
+Sender  Treathin~
+Date    Sat Oct 14 10:47:28 2000~
+Stamp   971545648
+To      Rager~
+Subject Aplercasion~
+Text
+I'm Treathin the brave!  Least I think so.
+I use my axes.  I kill mages.  I get drunk
+Those are me three favorite things to do.
+Bring me the booze, and I'll bring tha war!
+Aye, that 'ol hammersong thar.  So I'll see 
+you later, in the fields of battle...
+Or in the bar.
+haha!  
+~
+Sender  Bralith~
+Date    Sat Oct 14 15:48:21 2000~
+Stamp   971563701
+To      Ancient~
+Subject Joining Ancient~
+Text
+I seek to join those of the Ancient that I might hunt fools with true stealth.
+I am competent and well learned, and would provide well for the Ancients.
+I shall be available should you desire my time.  Hunt well.
+~
+Sender  Khaejdir~
+Date    Sat Oct 14 17:37:47 2000~
+Stamp   971570267
+To      Bounty~
+Subject Joining the guild.~
+Text
+I wish to join the ranks of the Bounty Hunters...my hunting and woodsman skills I feel would be a good asset
+to bring to the guild with me. My trapping and other skills I hope
+would allow me to collect many bounties and boost the income of the guild.
+
+Khaejdir the Ranger.
+~
+Sender  Daedelex~
+Date    Sat Oct 14 20:16:07 2000~
+Stamp   971579767
+To      dioxide~
+Subject Antari's Death~
+Text
+Antari died of old age...but he's nowhere near his death age according to finger.
+Only 199 hours.  Bug in age code?
+--Daedelex
+~
+Sender  Dioxide~
+Date    Sat Oct 14 21:08:16 2000~
+Stamp   971582896
+To      immortal~
+Subject Immortal Forum~
+Text
+http://pos.gameshadow.com/immforum/
+Ask Dev or Dioxide for a password.
+If you already have a password for the IMM flag on the forum, you can use that.
+~
+Sender  Harwulf~
+Date    Sun Oct 15 00:29:57 2000~
+Stamp   971594997
+To      knight~
+Subject quotes...~
+Text
+A quote to ponder...
+--------------------
+
+Whenever you want to attack an army, besiege a
+city, or kill a person, first you must know the
+identities of their defending generals, their
+associates, their visitors, their gatekeepers, 
+and their chamberlains, so have your spies
+find out.
+~
+Sender  Dulak~
+Date    Sun Oct 15 10:40:29 2000~
+Stamp   971631629
+To      kargoth~
+Subject Me~
+Text
+Hello. I will make this short and sweet. I have gained Veteran ranking.
+Now EVERYONE and their mother is asking me to induct them. Think you could write a
+little scroll to everyone explaining that Veteran Hunter does not mean leader?
+If you do thanks, if not, thanks for taking your time to read this scroll.
+
+Dulak, Veteran Hunter.
+~
+Sender  Gerithan~
+Date    Sun Oct 15 14:36:40 2000~
+Stamp   971645800
+To      rager~
+Subject application~
+Text
+Hail ragers of thera, I am gerithan The best healer in the west coast.
+I have been training my comunes for battle and been beating down them magi.
+I wish to heal you all to fictory i swear to never abuse my power to help a magi only to kill i will do whatever it is i can to join 
+~
+Sender  Dev~
+Date    Tue Oct 17 00:10:26 2000~
+Stamp   971759426
+To      immortal~
+Subject 3 Month Plan~
+Text
+We plan on going public on Jan 1, 2000. To this end, there are 3 goals, each roughly
+occupying one month on the road to opening.
+1) Conversion of General Code - This is where the changes like addition of hunger/thirst,
+changes to pk ranges, and new character generation go in.
+2) New Developments - This will mainly focus on the new races and classes that
+are being developed, and the coding therein.
+3) Documentation - This will involve help files for everything, as well as a detailed
+story and introduction to the game, as well as a tutorial for newbies.
+This is a rough coding plan only, and area development and insertion, and the coding
+therein will continue independantly.
+
+
+Dev
+~
+Sender  Snarf~
+Date    Sat Oct 21 11:11:23 2000~
+Stamp   972144683
+To      immortal~
+Subject Immortal Intervention (That spell or whatever it is)~
+Text
+Welp... Something's wrong with it, because I had it for
+a bit, and when it went away, I now have a base hp
+of about -510...
+
+Snarf
+~
+Sender  Challen~
+Date    Sun Oct 22 06:37:02 2000~
+Stamp   972214622
+To      immortal~
+Subject Me.~
+Text
+I am a crackhead.  I can't believe I stayed up until 7:30.
+
+BUT.... Earth spells are done!
+
+Gravity well 0wnZ j00.
+
+Good night.  Morning.  Whatever.  Ugh.
+
+PS: These are easily going to be the hardest to code so far.  I'm brilliant when I'm exhausted.
+~
+Sender  Challen~
+Date    Mon Oct 23 03:06:04 2000~
+Stamp   972288364
+To      dev~
+Subject reminder~
+Text
+Dev says 'I need to make all room affects people own get stripped when they quit'
+Dev says 'or it'll be crashy as all hell'
+~
+Sender  Challen~
+Date    Mon Oct 23 05:17:28 2000~
+Stamp   972296248
+To      dev~
+Subject funky mv bug~
+Text
+ICQ may have lost this, so I'll send it via note... here's my fix
+Lose the mv-multiplier on movement.  That simplifies it a lot and avoid a check every time you move, and prolly solves our problem.  Keep the mv-lag, as that works perfectly.  Instead, every time you get dragged, you lose 62/2^distance mv
+This has the desired effect, but is a simpler way of applying it than multiplying... and you don't have to worry about terrain modifiers and such
+~
+Sender  Challen~
+Date    Mon Oct 23 06:52:31 2000~
+Stamp   972301951
+To      immortal~
+Subject Gabe's voting code~
+Text
+Umm, seeing as it uses the list command, this renders shops unusable.  Duh.
+
+Votelist maybe?
+~
+Sender  Challen~
+Date    Wed Oct 25 05:11:29 2000~
+Stamp   972468689
+To      Immortal~
+Subject New login screen~
+Text
+Whaddya think?  I actually did about 1/8 of it myself (and not just the
+text :P)....
+
+Oh, and many thanks to Gabe for his voting code, enabling me to reboot RS at
+will to test my formatting changes.  *inno*
+
+(Hint: never type "vote <member of your cabal>")
+~
+Sender  Challen~
+Date    Sun Oct 29 11:34:39 2000~
+Stamp   972837279
+To      dev~
+Subject gwell extradesc~
+Text
+
+The lines ending with "dot" and "around it" are more than 80 chars, and break funny.
+~
+Sender  Macheath~
+Date    Tue Oct 31 21:21:40 2000~
+Stamp   973045300
+To      all~
+Subject A reminder~
+Text
+
+If you're working on an area... e-mail me a proposal before you proceed with writing.
+I'd like to approve these things before anyone comes to me with a completed area.
+So far, I've got Kitratik/Nesam on an approved area, and Viscrinth, Quinthen, and Jaldean
+all with area ideas in the works.  Just remember to make these proposals detailed - it'll
+make writing them easier.
+
+covib@uwec.edu   or   macheath77@hotmail.com
+
+Thanks.
+~
+Sender  Macheath~
+Date    Wed Nov  8 16:27:13 2000~
+Stamp   973718833
+To      Amber~
+Subject Before I forget~
+Text
+
+I spoke with Athael the night we were looking at that area.
+She had some interesting things to say... and I keep forgetting to e-mail you.
+Remind me!
+~
+Sender  Phelan~
+Date    Thu Nov  9 15:26:21 2000~
+Stamp   973801581
+To      challen~
+Subject Bleh.~
+Text
+Gimme the forum address.
+~
+Sender  Macheath~
+Date    Fri Nov 10 01:09:07 2000~
+Stamp   973836547
+To      phelan~
+Subject jesus christ~
+Text
+
+Every time I get back to my computer, I see that you've come and said something and then left again.  Damn you, bitchass!
+E-mail me, send me a note, look me up on ICQ, call me, do SOMETHING.  :P  I've been hard to get a hold of this week.
+~
+Sender  Macheath~
+Date    Sat Nov 11 03:08:09 2000~
+Stamp   973930089
+To      all~
+Subject Cimar Library~
+Text
+
+In case you don't read the forum much, check out the Cimar Library (temporarily
+stored at vnum 2799) and all the books contained therein.  #1, let me know what you
+think, #2, let me know of any mistakes/vagueness you find, and #3, let it inspire
+you to write your areas, if such a thing is possible.  :P
+~
+Sender  Viscrinth~
+Date    Sun Nov 12 15:41:17 2000~
+Stamp   974061677
+To      Quinthen~
+Subject How our areas will link up~
+Text
+
+Okay, I'm beginning to write Mount Cimar.
+Ran into some problems though. Question: Are you going to have the foothills near the mountain
+in your area, or will that be part of mine? I need to know where to start the area from.
+For now I'm just putting a sort of pass that touches the northwestern outskirts of cimar.
+~
+Sender  Quinthen~
+Date    Sun Nov 12 21:10:19 2000~
+Stamp   974081419
+To      viscrinth~
+Subject areas~
+Text
+Leading to your mountain, was going to be a path that got more
+and more hilly.  No full out mountains until your area is hit.
+~

@@ -1,0 +1,148 @@
+THE MOBS:
+
+Dragon/Hydra/Gryphon Troopers, all level 45.  Each serves a different purpose in 
+the group, and all three act in concert to take down any criminal through use of 
+tactics.  
+
+The Gryphon Trooper (2410) could be considered either a Duelist or a Tactician.  A 
+consummate and graceful warrior, he has 1500 hps, 8 hit 23 dam, 100 AC, and 90% 
+dam_mod.  The Gryphon dual wields swords and is the trio's tank, and ideally will 
+be the only one fighting.  Has all detects and is marked with multiple OFF/ACT/AFF 
+flags to make him as close to the perfect leader/tank as is possible.
+
+The Hydra Trooper (2409) is basically a "Light-Arms Dude" (or Skirmisher).  Very 
+small and light, quick and dextrous, he has 1000 hps, 4 hit 38 dam, 50 AC, and 
+100% dam_mod.  The Hydra wears a dagger and a lasso (lariat), and his duty is 
+generally to dart about tangling the feet of a target.  Will ideally do no direct 
+fighting.
+
+The Dragon Trooper (2408) might be considered a Dragoon -- very large and heavy, 
+having 2500 hps, 4 hit 158 dam, 600 AC, and 80% dam_mod.  The Dragon wields a 
+"chokerstaff," and his function is not to fight, but to basically knock the target 
+to the ground and subdue him, once he's been immobilized.
+
+THE FLAG:
+
+At the time of a PC-to-PC attack, the one who initiates combat (** causes an 
+autoyell **) is flagged as the "aggressor."  All cityguards and soldiers are aggro 
+to any so flagged.  Cityguards may be bribed beforehand to ignore an aggressor 
+(lasts for 12 ticks), but soldiers cannot be bribed at all.  The aggressor flag 
+remains active on the PC until he is killed or remains in hiding (out of the city) 
+for 12 ticks.
+
+THE ROUTE:
+
+I will define sectors in the city via lists of vnums, flagging rooms if necessary. 
+I will also plan and assemble routes for each group of soldiers to walk/run, from 
+which every room of the city is visible on a line-of-sight basis.  Whatever's 
+necessary to make the following possible.
+
+The groups will be positioned in several (8-12, perhaps, it hasn't been planned 
+out yet) places around the city, and will patrol their routes slowly (one room per 
+2-3 rounds).  When a PC autoyell is triggered, the trio which is based in the 
+sector where the attack has taken place begins to walk its route as quickly as 
+possible (without being instantaneous, i.e. "e;s;e;e;e;s;s") and scanning in each 
+direction.  If the "aggressor" moves to a different sector, then that sector's 
+group of soldiers becomes active and begins hunting.  When the group sees the 
+aggressor along one of these lines of sight, it makes a beeline and begins its 
+attack.  If the aggressor flees, the group takes up pursuit, tracking as per a 
+normal mob at an accelerated pace -- but never leaving its assigned sector.
+
+THE ATTACK:
+
+First, the Gryphon Trooper rescues the victim, ceasing combat between aggressor 
+and victim.  In the same move, the Gryphon Trooper uses the 'disrupt formation' 
+skill to open combat if there's a group present.
+
+Round 1:
+"A Gryphon Trooper shoulders (victim) aside and steps in front of (aggressor)!"
+"A Gryphon Trooper darts in to strike (aggressor), weaving around chaotically!"
+
+What happens from this point on varies depending upon the aggressor's race.
+
+-For sidhe, halflings, and imps:
+Round 2 (60% chance to be trapped by net while attempting to flee at this point):
+"A Dragon Trooper tosses a net over (aggressor) and pins the edges down with his 
+feet!"
+
+Round 3 (combat ceases):
+"Leaping upon (aggressor), a Hydra Trooper ties the net tightly, immobilizing $m."
+"A Gryphon Trooper snorts derisively."
+
+-For humans, elves, drow, dwarves and duergar:
+Round 2 (40% chance to have flee attempt blocked by Dragon Trooper):
+"Moving in from behind, a Dragon Trooper begins to position himself behind 
+(aggressor)."
+
+Round 3 (90% chance to fail flee attempt in Dragon Trooper's clutches):
+"A Dragon Trooper wraps his massive arms around (aggressor), holding $m tightly!"
+"Diving at (aggressor)'s legs, a Hydra Trooper attempts to catch $s flailing 
+legs!"
+
+Round 4 (combat ceases):
+"Tying off his lariat, a Hydra Trooper trips (aggressor) to the ground!"
+"A Gryphon Trooper smirks."
+
+-For titans and minotaurs:
+Round 2 (can still flee):
+"A Dragon Trooper slams the ring of his chokerstaff down around (aggressor)'s 
+head!"
+
+Round 3 (80% chance to be tripped up while attempting to flee at this point):
+"Darting in from the side, a Hydra Trooper weaves his lariat around (aggressor)'s 
+legs!"
+"A Dragon Trooper yanks his chokerstaff, pulling (aggressor) off balance!"
+
+Round 4 (can no longer flee):
+"The massive chokerstaff of a Dragon Trooper topples (aggressor) to the ground!"
+"A Gryphon Trooper leaps upon (aggressor), holding him down."
+
+Round 5 (combat ceases):
+"A Hydra Trooper finishes his bindings, tightening them to immobilize aggressor)."
+"A Dragon Trooper chuckles politely."
+
+THE REST:
+
+Obviously, the smaller you are, the less probability you have of successfully 
+escaping the three soldiers.  Once combat has ended and you're immobilized by 
+their bindings, you can't move, cast, or commune at all.  The aggressor's inert 
+form is dragged out the nearest gate:
+
+Personal echo:
+"You hear the wet sounds of impact against your skull, and everything goes black."
+Room echo:
+"(aggressor)'s inert form is dragged away toward the gates."
+
+Player goes to sleep and is transferred to some holding room for 2 ticks, and then 
+is transferred to one of Cimar's five gates, depending upon the sector he was 
+subdued in:
+
+Personal echo:
+"You are shaken awake by a fuzzy man, as seen through your own personal haze."
+Room echo:
+"(aggressor) is tossed out the gates of Cimar and lands rather roughly."
+
+The soldiers then send the aggressor a tell along the lines of, "And don't come 
+back, dirty little imp."  (Obligatory racial slurs for each race.)  The flag does 
+remain for 12 ticks, and the aggressor is warned not to return.
+
+If, while the soldiers are doing their business, the victim or one of the 
+aggressor's former groupmates initiates an attack (causes a yell), the soldiers 
+move to him once they finish with the original aggressor.  If someone else 
+initiates an attack in the same sector, the soldiers move over there once they're 
+done.  Only once all fighting has ceased do the soldiers resume their patrol.
+
+Should the Gryphon Trooper be killed, the remaining soldiers will jump the
+aggressor and attempt to kill him.
+
+Obviously, there's room for improvement, and a lot of details that could be added. 
+And I have a lot of echoes and such to write before this is fully fleshed out, but 
+there's plenty of other work to be done on this system before that's even an issue 
+(problems ironed out, creation of sectors and patrol paths, etc).  One thing I/we
+need to figure out is what to do in special cases such as aggressors who manage
+to kill their victims before being caught, assassins who kill silently right in
+front of the soldiers, and particularly what to do in the case of thievery.
+
+Not to mention repeat offenders.  This isn't deterrent as it stands... only an
+irritation of a barrier.  Repeatedly incurring an "aggressor" flag should
+eventually lead to deaths.

@@ -1,0 +1,15 @@
+.mad.wi.charter.com  60 BDF
+.dnvr.uswest.net     60 BDF
+.uslink.net          60 BDF
+.brunnet.net         60 BDF
+.nbnet.nb.ca         60 BDF
+.alltel.net          60 BDF
+.integrityonline12.com 60 BDF
+.daktel.com          60 DF
+.cmh.infinet.com     60 BDF
+.alter.net           60 BDF
+.102.81.7            60 BDF
+.gborocollege.edu    60 BDF
+.uah.edu             60 BDF
+hsv.bellsouth.net    60 BDF
+.compusmart.ab.ca    60 BDF

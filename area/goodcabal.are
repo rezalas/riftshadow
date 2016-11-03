@@ -1,0 +1,385 @@
+#AREA
+goodcabal.are~
+The Temple of Purity~
+Zethus~
+0 0
+23876 23889
+cabal
+none
+0
+1
+Didonath Indural~
+
+#MOBS
+#23876
+white cloaked man figure guardian~
+a cloaked guardian~
+A figure cloaked in white huddles here in the cold.
+~
+A large figure wrapped in several thick white woolden robes is before
+you.  A massive pelt of the white wolf is draped across his back, and
+clasped together with a beautiful golden brooch.  A wooly hood and and white
+scarf reveal only this mans eyes, which sparkle like sapphires.  You notice
+a massive sword slung across this figure back, and the sheath seems to be
+steaming, strangely enough.  
+~
+1000 0 0 human~
+30 1d2+7500 10d6+2 30 100 flbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF KICK
+OFF DIRT_KICK
+OFF NO_TRACK
+IMM SUMMON
+IMM CHARM
+IMM SLEEP
+CABAL phalanx
+B cabal EQUALTO 6 23888 EMOTE sternly blocks your path.~
+#23877
+high inquisitor stern man phalanx~
+the High Inquisitor~
+A stern-looking man in ornate robes vehemently chants and lectures.
+~
+The man before you is garbed in a robe the color of alabaster, interwoven
+with strands of silver and gold.  His visage is soft and kind, yet an air of
+determination emanates from him.  Long strands of silver hair cascade down
+from his head and drape upon his shoulders.  A shimmering belt of
+interlinking rings holds his tunic tightly against his waist.  
+~
+1000 0 0 human~
+35 1d2+15000 10d14+36 68 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INNER_GUARDIAN
+ACT CLERIC
+ACT NOPURGE
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+IMM CHARM
+CABAL phalanx
+C 'wrath'
+C 'fireball'
+C 'protection'
+C 'blinding orb'
+C 'voice of damnation'
+C 'spiritual hammer'
+C 'demonfire'
+#23878
+healer robed white man cleric~
+a white robed cleric~
+A stout man wearing a white hooded robe stands silently near the altar.
+~
+A sturdy looking man is before you.  He is clothed in a magnificent white
+robe accented with gold embroidery near the cuffs.  Two braids of blonde
+hair hand down upon his shoulders.  Little can be seen of his face as his
+hood hangs far over his features.  
+~
+1000 0 0 human~
+60 60d8+9992 1d1+38 0 100 crush
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT HEALER
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CABAL phalanx
+#0
+
+
+
+#OBJS
+#23876
+fiery altar~
+the Altar of Purity~
+An altar surrounded by flickering flames rests in the back of the room.~
+container
+silver~
+1000 0 0 20 0
+52 1000 0 P
+LIMIT 0
+TIMER 0
+
+#23877
+flame purity~
+the Flame of Purity~
+The Flames of Purity burn here.~
+trash
+fire~
+0 0 0 0 0
+51 1 0 P
+WEAR TAKE
+LIMIT 0
+CABAL PHALANX
+TIMER 0
+
+#23878
+pool spring crystalline water~
+a pool of crystalline water~
+A pool of crystalline water has formed from a natural spring.~
+fountain
+water~
+30000 30000 'water' 0 0
+1 10000 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#23876
+Before a Frost-Covered Temple~
+Frost and snow mottles the ground, the scent of cold, damp earth fills
+the air.  An archway has been carved into the dark stone of the mountain to
+the south, leading into a torch-lit passageway.  To the north, the forested
+trail continues to the east and west.  
+~
+city
+D NORTH 24804 0 0
+~
+The path leads out towards a forested trail.
+~
+D SOUTH 23888 0 0
+~
+You can enter the temple through a stone archway to the south.
+~
+CABAL phalanx
+OWNER none~
+#23877
+A Simple Foyer~
+Cold, earthy air swirls into this room, keeping the air fresh but rich. 
+Smooth beige tiles are set into the floor, contrasting with the rough, dark
+rock that makes up the rounded walls.  Flickering torches circle the foyer,
+which still seems dark despite the light they provide.  Passageways lead off
+to the east and west, and a staircase carved into the southern wall leads up
+into another room above.  
+~
+inside
+ROOM INDOORS
+D NORTH 23888 0 0
+~
+A tile passageway leads out of the foyer to the north.
+~
+D EAST 23882 0 0
+~
+~
+D WEST 23878 0 0
+~
+~
+D UP 23885 0 0
+~
+A stone staircase leads up to another floor.
+~
+CABAL phalanx
+OWNER none~
+#23878
+The Wing of Fire~
+Murals depicting holy troops finding victory in battle and burning
+witches cover the walls.  Holy symbols and implements of war line racks and
+shelves in this passage.  To the east lies the foyer, while to the west,
+this hallway continues.  
+~
+inside
+ROOM INDOORS
+D EAST 23877 0 0
+~
+The hallway leads towards a simple foyer to the east.
+~
+D WEST 23879 0 0
+~
+~
+CABAL phalanx
+OWNER none~
+#23879
+The Wing of Fire~
+Murals depicting holy troops finding victory in battle and burning
+witches cover the walls.  Holy symbols and implements of war line racks and
+shelves in this passage.  To the east this hallway continues, while to the
+north it leads into a smaller chamber.  
+~
+inside
+ROOM INDOORS
+D NORTH 23881 0 0
+~
+~
+D EAST 23878 0 0
+~
+~
+CABAL phalanx
+OWNER none~
+#23880
+The Wing of Fire~
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+OWNER none~
+#23881
+The Hall of Inquisition~
+A semicircle of high chairs have been arranged around a single podium. 
+Steel chains and manacles lie on the ground near the podium, which is
+presumably where those accused of evil stand to face the Inquisitors and
+meet their fate.  Paintings of the gods of Light, both contemporary and
+ancient, are placed here and there on the walls.  A marble tile mosaic
+depicting a orange and white flame is set into the northern wall.  
+~
+inside
+ROOM INDOORS
+D SOUTH 23879 0 0
+~
+~
+CABAL phalanx
+OWNER none~
+#23882
+The Wing of Nourishment~
+A general feeling of calmness and peace fills the air.  Sweet-smelling
+incense wafts through this wing of the temple.  The sound of trickling water
+is faintly audible to the east, where the wing continues.  To the west, the
+dimly-lit foyer is visible.  
+~
+inside
+ROOM INDOORS
+D EAST 23883 0 0
+~
+~
+D WEST 23877 0 0
+~
+The hallway leads towards a simple foyer to the west.
+~
+CABAL phalanx
+OWNER none~
+#23883
+The Wing of Nourishment~
+A general feeling of calmness and peace fills the air.  Sweet-smelling
+incense wafts through this wing of the temple.  The sound of trickling water
+resounds from a crystal clear natural spring that flows from the ground into
+a pool to the south.  Back to the west, the wing of nourishment continues
+back toward the foyer.  
+~
+inside
+ROOM INDOORS
+D NORTH 23887 0 0
+~
+~
+D WEST 23882 0 0
+~
+~
+CABAL phalanx
+OWNER none~
+#23884
+The Wing of Nourishment~
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+OWNER none~
+#23885
+Atop a Stone Staircase~
+A staircase in the center of the room leads down to the dimly-lit room
+below.  The walls here are made up of a beige tile, making this place look
+warm and inviting despite the chill in the air.  A dim glow emanates from
+the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 23886 0 0
+~
+A dim glow emanates from the room to the north.
+~
+D DOWN 23877 0 0
+~
+The stairway leads down towards a simple foyer.
+~
+CABAL phalanx
+OWNER none~
+#23886
+A Fiery Altar~
+Holy symbols and wards decorate this otherwise spartan chamber.  Gashes
+and stains cover the floors and walls, and the scent of blood, sweat and
+metal permeates the air.  In the center of the room, a plain altar flickers
+with faint flames, completely uncharred and unaffected by them.  To the
+south, an archway leads to a broad staircase.  
+~
+inside
+ROOM INDOORS
+D SOUTH 23885 0 0
+~
+The hallway to the south leads out to atop a stone staircase.
+~
+CABAL phalanx
+OWNER none~
+#23887
+A Meditation Chamber~
+The walls of this chamber are completely and utterly bare.  The ground is
+smooth, warm and clean... suitable for sitting on for long periods of time. 
+A simple doorway leads out to the south.  
+~
+inside
+ROOM INDOORS
+D SOUTH 23883 0 0
+~
+~
+CABAL phalanx
+OWNER none~
+#23888
+A Frigid Passageway~
+Smooth beige tiles are set into the floor, contrasting with the rough,
+dark rock that makes up the rounded walls.  Cold, earthy air swirls into
+this room, keeping the air fresh but rich.  Flickering torches circle the
+foyer, which still seems dark despite the light they provide.  The hallway
+leads further into the temple to the south, and the outside is visible not
+far off to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 23876 0 0
+~
+You can leave the temple through the stone archway to the north.
+~
+D SOUTH 23877 0 0
+~
+The passageway opens into a simple foyer to the south.
+~
+CABAL phalanx
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 23876 TO 23876 GLIMIT 1 LLIMIT 1
+OBJECT 23878 TO 23883
+MOB 23877 TO 23886 GLIMIT 1 LLIMIT 1
+MOB 23878 TO 23886 GLIMIT 1 LLIMIT 1
+OBJECT 23876 TO 23886
+S
+
+#IMPROGS
+M 23876 greet_prog greet_prog_outer_guardian
+M 23876 death_prog death_prog_outer_guardian
+M 23876 attack_prog attack_prog_outer_guardian
+M 23877 greet_prog greet_prog_inner_guardian
+M 23877 death_prog death_prog_inner_guardian
+I 23877 give_prog give_prog_cabal_item
+END
+#SPECS
+END
+#$

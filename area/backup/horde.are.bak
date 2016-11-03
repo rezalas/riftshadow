@@ -1,0 +1,1210 @@
+#AREA
+horde.are~
+The Horde Longhouse~
+Ktyvan~
+1 51
+23625 23649
+normal
+temperate
+0
+1
+Cohtram~
+
+#MOBS
+#23625
+cleric healer mead horde~
+the mead drunk healer~
+A healer stands here stinking of mead, and showing a toothy grin.
+~
+This healer is quite drunk but his state does not seem to take away from
+his ability to serve the Horde's purposes.  His services are well recieved
+and his payment is always generous, most of it paid in mead.  
+~
+0 23635 100 duergar~
+60 1d1+11999 10d10+10 0 100 slap
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT HEALER
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM SLEEP
+CABAL horde
+#23626
+wild eye eyed berserker giant~
+a wild-eyed berserker~
+A wild-eyed berserker scans the path for anyone trying to pass by him.
+~
+Before you stands a massive man, his eyes wide with rage and his senses
+keen to trespassers.  He would love to tear you apart and pillage your
+belongings,but fortunately for you he has been commanded to protect the
+pathway to the Horde longhouse.  He would definately be formidable in combat
+if you engaged him, and from the look on his face, he would certainly enjoy
+the test of might.  
+~
+0 23626 100 human~
+30 1d1+7499 10d6+30 0 100 cleave
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CABAL horde
+B cabal EQUALTO 3 23626 EMOTE growls and bars the entrance to the longhouse!~
+#23627
+shopkeeper keeper vault grevilous duergar~
+Grevilous, the Vault Keeper~
+A fat duergar stands here overseeing the Horde's vault.
+~
+A fat duergar stands before you overseeing the loading and the unloading
+of the Horde's pillaged goods.  He regards you with interest and shows you
+the most current acquisitions.  He quickly steps in front of you if you try
+to look at anything in the vault and easily guides your view back to the
+wares he has to sell you.  It is apparent that you are going to see nothing
+more than what he wants to show you.  
+~
+0 23627 100 duergar~
+52 1d1+8999 10d14+30 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOPURGE
+ACT OUTDOORS
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+SHOPKEEPER OPEN 0 CLOSE 24 EXIT north
+CABAL horde
+#23628
+pillager pillaging pillage lord guardian inner horde~
+the Lord Pillager~
+A ancient man of gargantuan stature guards the trophies of the Horde.
+~
+An ancient man of gargantuan stature looms over you as you examine him. 
+Scars and battle marks mar his massive form and his weapons show signs of
+warfare.  His fury and anger is only matched by his prowess in battle.  It
+is obvious from just looking upon him that he is among the elite of the
+Horde and will do anything to protect the glory the Horde has gathered in
+this place.  Your arrival brings delight to his eyes, as it means more glory
+for him and more trophies for the Horde.  
+~
+0 23627 100 unique~
+45 1d1+14999 10d16+30 0 100 cleave
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT INNER_GUARDIAN
+ACT INTELLIGENT
+ACT NOPURGE
+OFF AREA_ATTACK
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+CLASS warrior Gladiator Barbarian 
+CABAL horde
+#23629
+ward mob shrine horde~
+The horde shrine ward mob~
+The ward mob that bars entrance to the Horde shrine is here.
+~
+It's a ward mob.
+~
+0 23628 100 human~
+60 1d1+1 1d1+1 0 60 slash
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT WARD_MOB
+ACT NOPURGE
+#23630
+test animal~
+a test animal~
+This is a TEST ANIMAL.
+~
+This animal seems unusually massive for its species, and its eyes betray
+a glimmer of intelligence that catches you by surprise.  You feel a gentle
+tremor ripple through your body as you meet its gaze, and even as you see it
+streaking towards you in a blur, you stand in awe of this extraordinary
+beast.  
+~
+0 23630 100 unique~
+60 1d1+1 1d1+1 0 75 bite
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+OFF FAST
+AFF HASTE
+CLASS warrior none none 
+#23631
+gulgrah dwarf tanner~
+Gulgrah the Tanner~
+A round dwarf covered in blood stands behind the table.
+~
+This dwarf is using a butchering knife to carve the fresh meat
+that is on his table.  He seems to know exactly what he is doing,
+and is very efficient.  His eyes never really seem to leave his work.
+~
+0 0 0 dwarf~
+51 25d8+4274 5d9+60 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+CABAL horde
+#0
+
+
+
+#OBJS
+#23625
+silver flagon blood filled horde barbarian item~
+a blood-filled silver flagon~
+A monstrous silver flagon filled to the brim with crimson blood
+rests here daring you to drink.~
+drink
+silver~
+100 100 'blood' 1 0
+51 1 50000 P
+WEAR TAKE
+LIMIT 1
+CABAL HORDE
+
+#23626
+chipped bone axe~
+a chipped bone axe~
+An axe made from the legbone of some creature lies here.~
+weapon
+bone~
+axe 2 15 slash 0
+15 50 2000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM ROTDEATH
+APPLY DAMROLL 3
+APPLY HITROLL 3
+LIMIT 0
+
+#23627
+bulky hides skin armor~
+a set of bulky hides armor~
+A pile of hides lies here waiting to be worn.~
+armor
+flesh~
+10 10 10 5 0
+20 20 11000 P
+WEAR TAKE
+WEAR BODY
+RESTRICT HORDE_ONLY
+APPLY NONE -1
+APPLY HITROLL 1
+APPLY NONE 2
+LIMIT 0
+
+#23628
+long granite polearm~
+a long granite polearm~
+A very long piece of granite lies here sharpened on one end.~
+weapon
+stone~
+polearm 3 12 stab 0
+15 22 5000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HORDE_ONLY
+ITEM NODISARM
+APPLY HITROLL 2
+APPLY NONE 3
+LIMIT 0
+
+#23629
+skin goat intestines water~
+a water skin made of goat intestines~
+An elongated section of goat intestines crafted into a water skin
+lies here.~
+drink
+flesh~
+50 50 'water' 0 0
+1 3 150 P
+WEAR TAKE
+LIMIT 0
+
+#23630
+flesh leg roasted roast meat~
+a leg of roasted meat~
+A large roasted leg of some undisclosed meat lies abandoned here.~
+food
+flesh~
+0 4 0 0 0
+1 2 50 P
+WEAR TAKE
+LIMIT 0
+
+#23631
+ale fountain~
+an enchanted fountain~
+A stone fountain chiseled with primitive depictions of war and women froths with ale.~
+fountain
+stone~
+8000 8000 'ale' 0 0
+52 2000 100 P
+LIMIT 0
+
+#23632
+claymore sword stained red~
+a red-stained claymore~
+A large sword lies here stained a bloody red.~
+weapon
+steel~
+sword 2 18 cleave 0
+17 17 6000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HORDE_ONLY
+APPLY NONE -1
+APPLY NONE 2
+APPLY HITROLL 4
+APPLY NONE 2
+LIMIT 0
+
+#23633
+pelt hide glistening bull~
+the glistening hide of a mighty bull~
+The glistening hide of a mighty bull lies here.~
+armor
+soft leather~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt hide glistening bull~
+This hide has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  Near the bottom are the horns of this
+massive beast, hanging by what looks to be its tongue.  The dark, thick fur
+from the bull coats this hide and looks to shine dimly in the light.  
+~
+
+#23634
+pelt ferocious boar~
+the pelt of a ferocious boar~
+The pelt of a ferocious boar lies here.~
+armor
+fur~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt ferocious boar~
+This pelt has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  Near the boar's front legs, the
+creature's great tusks have been attached to the pelt, and the rough, coarse
+hair of the boar covers the pelt.  
+~
+
+#23635
+pelt massive bear~
+the pelt of a massive bear~
+The pelt of a massive bear lies here.~
+armor
+fur~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt massive bear~
+This pelt has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  Particular care must have been done in
+skinning this pelt near the head, as the face of the pelt has not been
+disfigured at all, allowing the wearer to use it as a hood, covering his
+entire body with this huge bear skin.  
+~
+
+#23636
+pelt hide fierce lion~
+the hide of a fierce lion~
+The hide of a fierce lion lies here.~
+armor
+soft leather~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt hide fierce lion~
+This hide has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  At the top of this golden hide, two
+strings of teeth have been hung on string attached to the hide, serving as
+something of a necklace as the hide is tied around the neck.  
+~
+
+#23637
+pelt hide savage panther~
+the hide of a savage panther~
+The hide of a savage panther lies here.~
+armor
+soft leather~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt hide savage panther~
+This hide has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  The pitch-black fur of this hide still
+has a savage beauty to it, even without the deadly grace of the animal it
+belonged to.  
+~
+
+#23638
+pelt hide majestic elk~
+the hide of a majestic elk~
+The hide of majestic elk lies here.~
+armor
+soft leather~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt hide majestic elk~
+This hide has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  Unsurprisingly, the great antlers have
+been saved and tied to the back of the pelt where they can be seen and
+admired, but are out of the way of the hide's wearer.  
+~
+
+#23639
+pelt hide spotted jackal~
+the hide of a spotted jackal~
+The hide of a spotted jackal lies here.~
+armor
+soft leather~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt hide spotted jackal~
+This hide has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  The forepaws and claws of the animal
+have been left attached to the hide when it was skinned.  The spotted
+pattern of the animal's hide almost seems to change as the light does.  
+~
+
+#23640
+pelt feral wolf~
+the pelt of a feral wolf~
+The pelt of a feral wolf lies here.~
+armor
+fur~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt feral wolf~
+This pelt has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  The smooth coat of fur along the
+animal's hide has been treated well, they grey fur still smooth and soft on
+this pelt.
+~
+
+#23641
+pelt poncho feathers hawk~
+a poncho woven with the feathers of a hawk~
+A pile of hawk feathers lies here.~
+armor
+fur~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt poncho feathers hawk~
+This poncho has obviously been created with great care by it's maker. 
+The base made from soft leather, with great numbers of hawk feathers
+carefully woven into the leather.  Not a single inch of the poncho has been
+overlooked, each feather tightly secured, yet each one flutters slightly in
+reponse to a breeze.  Secured by only a string around the collar, the poncho
+is a fragile thing by appearance, but with such care in it's making, one
+would guess it is much stronger than it's appearance.  
+~
+
+#23642
+pelt matted fox~
+a pelt of matted fox fur~
+A pelt of matted fox fur lies here.~
+armor
+fur~
+15 15 15 15 0
+1 0 0 P
+WEAR TAKE
+WEAR ABOUT
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E pelt matted fox~
+This pelt has obviously been created with great care by it's maker.  The
+hide itself has been skinned from it's previous owner, then treated with
+oils to make it supple yet strong.  The unfortunate animal who donated his
+skin for this pelt appears to be faring little better in death, as this pelt
+has become heavily matted and dirty.  The creature's tail, skinned with the
+rest of the pelt, seems to have escaped such poor treatment, however, as
+that portion of the pelt is clean, and the red fur shines brightly yet.  
+~
+
+#23643
+hide elf~
+the hide of an elf~
+You see the skin of what appears to be an elf.~
+armor
+hide~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+TIMER 0
+
+#23644
+thick spear destiny breaker~
+a thick spear named 'Destiny Breaker'~
+A leader's spear is here..I wouldn't touch it.~
+weapon
+mithril~
+spear 5 9 chop 0
+51 45 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NODROP
+ITEM FIXED
+APPLY DAMROLL 4
+APPLY HITROLL 3
+LIMIT 0
+CABAL HORDE
+TIMER 0
+
+#23645
+trophy belt horde scalps~
+a trophy belt~
+A horde trophy belt is here.~
+armor
+flesh~
+1 1 1 1 0
+1 0 0 P
+WEAR TAKE
+WEAR WAIST
+RESTRICT HORDE_ONLY
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+LIMIT 0
+E trophy belt horde scalps~
+This rugged leather belt is spotted with dried blood, but is entirely devoid of
+even minor nicks or scratches.  Fastened to the entire length of the belt are
+myriad metal hooks, used to hang trophy scalps taken from defeated foes.
+~
+
+#23646
+stone obelisk symbol~
+the mystical stone obelisk~
+The stone obelisk applicants need to touch is here.~
+trash
+stone~
+0 0 0 0 0
+1 0 0 P
+ITEM NOSHOW
+ITEM NOPURGE
+LIMIT 0
+VERB touch
+E obelisk stone~
+This giant piece of stone holds some kind of mystical power. Runes
+of strange origin are scribed all across the rock, and the prominent
+symbol of the Horde is etched along the upper most part.
+~
+
+#23647
+large bone polearm~
+a large polearm made of bone~
+A large bone with a flat end lies here.~
+weapon
+steel~
+polearm 4 8 slice 0
+51 50 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NOREMOVE
+ITEM ROTDEATH
+ITEM BURNPROOF
+APPLY HITROLL 6
+APPLY DAMROLL 6
+APPLY STR 2
+LIMIT 1
+CABAL HORDE
+TIMER 0
+
+#23649
+dagger crafted boar ivory tusk~
+an ivory dagger crafted from a boar tusk~
+A long tusk of a boar sharped at one end lies here waiting to be
+picked up.~
+weapon
+ivory~
+dagger 5 6 pierce 0
+10 7 1500 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HORDE_ONLY
+APPLY HITROLL -2
+APPLY DAMROLL 2
+APPLY DEX 1
+LIMIT 0
+
+#0
+
+
+
+#ROOMS
+#23625
+A long cobblestone path lined with torches~
+Shadows and smoke dance across this cobblestone path as it moves eastward
+toward a massive wooden structure.  The path is wide and roughly placed,
+with large conglomerate cobblestones creating the path.  Tall torches
+stained with blood maintain the light for this outdoor corridor while huge
+oak trees and heavy undergrowth keeps anyone from straying off the path.  It
+is obvious you have come across the home of some great force in the land.  
+~
+road
+ROOM INDOORS
+D NORTH 24312 0 0
+~
+The cobblestones fade away into a dying forest to the north.
+~
+D EAST 23626 0 0
+~
+You scan down the cobblestone path and view a large wooden structure
+dominating the end of the pat.
+~
+D SOUTH 23627 I 0
+~
+As you look closer, you believe if you had the strength, you could
+push through the underbrush here.
+~
+D WEST 0 0 0
+~
+A mass of briars tangles tightly, barring movement to the west.
+~
+D UP 0 0 0
+~
+The sky is almost blocked out by the overhanging branches and leaves.
+~
+D DOWN 0 0 0
+~
+The cobblestone path is covered in dried blood and formented mead.
+~
+E torch torches~
+The torch here is stained with blood and seem to burn without end.
+~
+CABAL horde
+#23626
+A Massive Oak Planked Longhouse~
+A huge building blankets you in shadows as you stand before it.  Large
+oaken planks the size of great trees line the front of the building.  The
+planks come to the edge of a massive rectangular archway that opens up in
+front of you like a mouth ready to swallow you whole.  Sounds of laughter,
+battle, and war spill from the opening and you sense that this place is not
+for the weak of heart or arm.  The archway itself is made up of rough cut
+stones and suspended in the mortar seems to be skulls of various humanoids. 
+The keystone of the archway has an etching inscribed into it, a huge silver
+flagon overfilled with blood, the symbol of the barbarian Horde.  The smell
+of meat draws your attention to the south.
+~
+road
+ROOM INDOORS
+D NORTH 0 0 0
+~
+You see nothing but thick underbrush comprised of briartangles and
+thicket, quite impassable.
+~
+D EAST 23629 0 0
+~
+You can barely make out a massive table contained sheltered in a huge
+hall.
+~
+D SOUTH 23634 0 0
+~
+You see nothing but thick underbrush comprised of briartangles and
+thicket, quite impassable.
+~
+D WEST 23625 0 0
+~
+The cobblestone path lit by torches continues to the west.
+~
+D UP 0 0 0
+~
+The branches of the trees lining the path continue to cover most of
+the sky and the shadow of the longhouse keeps you from seeing any
+daylight.
+~
+D DOWN 0 0 0
+~
+The cobblestone path looks more worn here but the stain of blood and
+the smell of formented mead is still strong.
+~
+E keystone symbol horde~
+You see a perfectly done inscription of a blood-filled silver
+flagon, the symbol of the inhabitants of this place.
+~
+E archway skulls skull~
+The archway is constructed of some kind of stone which has skulls of
+various humanoids infused within. This gives the archway and the
+building it adorns a strange and frightening visage.
+~
+CABAL horde
+#23627
+An overgrown path~
+Utilizing all your strength you push your way through the underbrush and
+fall upon a small path.  The dark woods surrounding you seem to come alive
+with activity.  The calls of many animals as well as the rustling of
+branches and leaves keeps you wary.  The path you have stumbled on to
+continues south into darkness where hanging vines and moss block your view
+of what is beyond.  To the north, the light of the cobblestone path can be
+seen through the thick underbrush.  
+~
+forest
+ROOM DARK
+ROOM NOWHERE
+D NORTH 23625 0 0
+~
+The light of the cobblestone path lit with torches can barely be seen
+through the thick undergrowth.
+~
+D EAST 0 0 0
+~
+The tangle of the underbrush seems to breath and looks as it would
+swallow you up if you attempted to go this direction.
+~
+D SOUTH 23628 0 0
+~
+The foliage and overgrowth blocks your view to the south.
+~
+D WEST 0 0 0
+~
+The tangle of the underbrush seems to breath and looks as if it would
+swallow you up if you attempted to go in this direction.
+~
+D UP 0 0 0
+~
+Any natural lighting provided by the sky is extinquished by the
+overhanging branches and leaves.
+~
+D DOWN 0 0 0
+~
+The path you stand on is narrow and looks hardly travelled.
+~
+CABAL horde
+#23628
+The Shrine of the Barbarian Horde~
+You struggle through the foliage when you happen upon a clearing enclosed
+by the surrounding trees and foliage.  A small opening in the canopy above
+allows only a small amount of light to filter in.  The light from above is
+just enough to reveal to you the contents of this strangely silent clearing.
+Lining the edge of the circular clearing are long wooden poles.  Each pole
+is adorned with the skull of a different animal.  You recognize some of the
+skulls as a bear, wolf, elk, lion, and jackal, while others are foreign to
+you.  The eyes of each skull ignore you and focus in on the slightly
+upraised granite platform in the center of the clearing.  The large stone
+obelisk stretches upward stopping barely short of the top of the canopy. 
+The obelisk itself has four sides, with each side covered in runes and
+strange markings.  Dominating the top portion of each side is the symbol of
+the Horde.  Below each of the symbols are lesser symbols of unknown origin. 
+You truly believe you are standing in a holy place.  The only way out is to
+return to the darkness of the path north.  
+~
+forest
+ROOM NOWHERE
+D NORTH 23627 0 0
+~
+You peer down the tiny path to the north to see what is in store, but
+unfortunately foliage and undergrowth blocks your view.
+~
+D EAST 0 0 0
+~
+You peer by a few poles holding the skulls of a boar, wolf, and bear and
+see nothing but foliage and undergrowth.
+~
+D SOUTH 0 0 0
+~
+You peer by a few poles holding the skulls of a hawk, lion, and elk and
+see nothing but foliage and undergrowth.
+~
+D WEST 0 0 0
+~
+You peer by a few poles holding the skulls of a jackal, fox, and bull
+and see nothing but foliage and undergrowth.
+~
+D UP 0 0 0
+~
+The massive obelisk blocks most of the sky from view, and what is not
+blocked by the obelisk is covered by the overhanging forest.
+~
+D DOWN 0 0 0
+~
+The ground here is slightly overgrown, showing little signs of humanoid
+visitors. The uplifted granite slab draws your attention.
+~
+E granite platform slab uplifted~
+A large granite slab seems unphased by the wear and tear of weather
+and time. A massive granite obelisk jets from the center and climbs
+toward the canopy.
+~
+E symbol~
+You see an etching of a giant flagon filled with some form of liquid,
+the symbol of the Barbarian Horde.
+~
+CABAL horde
+#23629
+The Clan Ale Hall~
+A huge table dominates this drinking hall.  You see chairs of every shape
+and size lining the circumference.  Some seem to be looted thrones from
+kingdoms long dominated while others seemed to have been constructed as
+needed from what was available.  Echoing out of the archway to the north are
+screams of the dominated and sounds of laughter.  The sounds of equipment
+being moved about and the clinking of gold and silver can be heard through
+the archway to the south.  The archway to the west returns you to open air
+while to the east brings you through an archway that heads farther into the
+halls of the Horde.  
+~
+inside
+ROOM INDOORS
+D NORTH 23631 0 0
+~
+This indoor archway opens up into a hall giving off an eerie
+reddish-orange light.
+~
+D EAST 23632 0 0
+~
+The indoor archway opens up into a brightly lit room full of artifacts
+and trophies.
+~
+D SOUTH 23630 0 0
+~
+You peer to the north and see a large hall dominated by a massive
+wrought iron door.
+~
+D WEST 23626 0 0
+~
+You peer to the west and see the cobblestone path lit by torches.
+~
+D UP 0 0 0
+~
+The wooden planks that make up the ceiling of this long house are
+colored by age and smoke created by the many years of the Horde
+inhabiting this place.
+~
+D DOWN 0 0 0
+~
+The wooden planks that make up the floor of this ale hall are moist to
+the touch and release a scent of formented mead and the acrid smell of
+dried blood.
+~
+E chair chairs~
+Chairs of every shape and kind can be seen. Some are beautiful thrones,
+others simple wooden creations, and even others are logs cut from
+massive trees. There are so many you constantly lose count of how
+many line this massive table.
+~
+E table~
+A single massive slab of oak makes up this table. It is at least ten
+feet wide and a hundred feet long. It would be a truly an impressive
+table if it was not stained by spilled drinks and marred by the idle
+hand of a warrior with a wish to carve.
+~
+CABAL horde
+#23630
+The Stores of the Horde~
+This part of the long house is dominated by a massive vault.  The wrought
+iron vault runs the entire length of the north wall.  The vault door is open
+slightly and you can see slaves of the dominated moving pillaged goods and
+gold into it.  In front of the vault is a monster of a man.  He keeps you
+from reaching any of the nice items and gold but will sell you any of the
+items that he deems fit.  The only way you can exit is to return to the main
+meeting hall to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 23629 0 0
+~
+As you peer through the archway to the north you see a massive table
+extending out of sight in both directions.
+~
+D EAST 0 0 0
+~
+The eastern wall is adorned by an everburning torch and expensive
+tapestries looted during a long forgotten raid.
+~
+D SOUTH 0 0 0
+~
+You peer south and see a massive wrought iron vault with the door
+hanging precariously open. You think you could almost read it if it
+was not for the fat duergar standing in front of you.
+~
+D WEST 0 0 0
+~
+The western wall is adorned by an everburning torch and has various
+paintings of excellent quality.
+~
+D UP 0 0 0
+~
+You glance upward and see large oak planks covering the ceiling.
+They are slightly discolored but seem to be in good shape none the
+less.
+~
+D DOWN 0 0 0
+~
+The wooden planks of the stores are slightly bowed downward,
+probably due to the extreme weight of some of the treasures that
+have been loaded in and out of the vault.
+~
+E painting paintings~
+Massive paintings spread across the whole west wall. All are of excellent
+quality and worth much on the open markets of Shalar if they could be
+taken from here. They depict beautiful women serving their masters'
+every need.
+~
+E tapestry tapestries~
+These massive tapestries are of masterful workmanship. They depict an
+organized army utterly destroying barbarians that spill from a forest.
+It is obvious that these tapestries are here to jest those conquered by
+the Horde.
+~
+E vault door~
+You examine the vault and door from afar and see it to be larger
+than two titans standing end to end. It is constructed of wrought
+iron and must hold an amazing amount of treasure, and when closed
+keep it very secure. You doubt if you could get past the guards to
+get at the treasure of the Horde.
+~
+CABAL horde
+#23631
+A massive firepit surrounded by heaps of furs~
+Dominating this part of the longhouse is a massive fire pit lined with
+hundreds of skulls.  Monstrous licks of flame spurt from the center of the
+pit, barely reaching the top of the long house.  A large opening above the
+fire allows smoke and soot to be expelled into the outside air, but still
+some of the smoke spills into the chamber causing a burnt oak smell to cross
+your nose.  Outside of the pit are many places to sit, relax and enjoy the
+spoils of war.  Server girls quickly scamper about performing whatever tasks
+the barbarians wish as meats of all kinds are constantly being cooked over
+the gigantic blaze.  Drawing your attention to the northern wall is a
+gargantuan animal trophy.  Its size is awe inspiring and the rest of the
+animal must have been majestic.  It is obvious this is a place of
+celebration and endulgement after a successful raid.  The only way you can
+go in this great hall is back south toward the main ale hall.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+An immense head of a wild animal dominates the northern wall. It
+seems to be a trophy of some kind and is here to be a focal point of
+the hall.
+~
+D EAST 0 0 0
+~
+The eastern wall is adorned with furs and skins of various animals.
+The pelts are all soft to the touch and are meant to keep in the
+heat of this place so that very little clothing is needed to stay warm.
+~
+D SOUTH 23629 0 0
+~
+As you peer through the archway to the south you see a massive table
+extending out of sight in both directions.
+~
+D WEST 0 0 0
+~
+The western wall is adorned with hanging furs and pelts of fallen
+animals. The pelts are soft to the touch and are hung in a way to
+keep the warmth from escaping this part of the longhouse.
+~
+D UP 0 0 0
+~
+The ceiling of this hall is charred black by the ever present flames
+of the roasting pit. Fortunately most of the damaging heat and licks of
+flame escape through a large hole suspended over the fire ringed
+with skulls.
+~
+D DOWN 0 0 0
+~
+The planks of this part of the longhouse are covered in pelts and
+skins of myriad game animals. This hall seems to be a place where much
+relaxation and celebration takes place and is oriented toward
+upmost comfort.
+~
+E plaque~
+You walk closer and examine the small plague that hangs directly
+underneath
+the massive boar head. It reads as folllows:
+"A hundred score fell to this mighty boar
+  before it was slain, ere its final roar.
+  We honor them here with trophy hung high
+  to warn this land the Horde's time comes nigh!"
+~
+E head immense trophy wild animal~
+This immense trophy is actually a giant boar's head. The head itself
+is severed at the thick neck and mounted directly upon the hall's
+southern wall. Its tusks extend almost a foot from its lower jaw
+and its face is held in an expression of unfathomable wrath. Below
+the head is a small plaque that is unreadable from this distance.
+~
+E fire pit skulls~
+This massive fire pit serves as not only a source of warmth for this
+hall but also a place to cook meals. Ringing the pit and keeping the
+flame contained are hundreds of skulls. Each is humanoid in some
+shape or form and the shadows that fall from the fire make the
+skulls look erie and strange.
+~
+CABAL horde
+#23632
+Horde Trophy Hall~
+This whole hall is filled with trophies of war.  Most do not seem to be
+worth anything monetary but they seem to hold great value to the Horde. 
+Lining the walls to the left and right are various trophies including
+scalps, wilted and dried heads, various bones and skulls, and decanters full
+of curdled blood from fallen generals of armies long past.  A monstrous
+chest sits high on the farthest most wall.  The size of the chest as well as
+the feeling you glean from it makes you certain that contained within is the
+most treasured trophy of the Horde.  The only way out of this hall is back
+west through the archway.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The southern wall is covered with shelves full of trophies and treasures.
+Necklaces of bone and ears lies lazily upon the shelves as we as valuable
+books now turned to icons of glory and speak of the domination of
+their previous owners.
+~
+D EAST 0 0 0
+~
+The eastern wall is adorned by a giant oak shelf. On top of that
+shelf is a massive iron bound chest containing those items of power
+pillaged from the enemies of the Horde as well as their own.
+~
+D SOUTH 0 0 0
+~
+The southern wall is covered with trophies of previous enemies of the
+Horde.Scalps, vials of blood, and weapons of long past generals are now
+held high to show the glory of the Horde.
+~
+D WEST 23629 0 0
+~
+The archway to the west opens up into a spacious hall with a giant table
+dominating most of the floor space.
+~
+D UP 0 0 0
+~
+The ceiling of the trophy hall is sealed and well kept. The oak planks
+are treated with some kind of animal fat that seals out moisture and
+maintains a comfortable temperature. It is obvious the Horde took a
+great amount of time to make sure their trophies were not harmed by
+the passage of time or the blasts of weather.
+~
+D DOWN 0 0 0
+~
+The floor planks bow gently downward from not only the weight of the
+numerous trophies kept here but also from the weight and passage of
+the Lord Pillager. Beyond that slight flaw, the wooden planks are
+polished smooth and seem to gleam in the light.
+~
+E chest iron bound massive~
+You examine the chest from afar and notice it is oak in material and
+large enough to contain a duergar or elf. A gigantic lock seals its shut
+and the key is held only by the Lord Pillager. It is rumored that
+contained within is the Horde's most prized possession, a silver
+flagon ever full of blood.
+~
+CABAL horde
+#23633
+A Grassy Meadow Surrounded by Trees~
+You shake your head, clearing the cobwebs from the bizarre battle
+sequence you have just witnessed, and survey your surroundings.  You are in
+a clearing of emerald-green grass hemmed in on all sides by ancient pines
+that seem to brush the sky with their branches.  A gentle breeze swirls
+around you, and the trees sway rhythmically with the motion of the air.  As
+you look up, a blur of motion streaks toward you!  
+~
+forest
+ROOM NO_MOB
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+D UP 0 0 0
+~
+~
+D DOWN 0 0 0
+~
+~
+CABAL horde
+#23634
+A small pelt-lined room~
+This small room is lined with pelts on every wall, many different types of
+animals have donated their skin to this room.  In the center of the room is
+a large solid wood cutting table.  The table is stacked with cut and prepared
+meat on the lefthand side, and fresh meat with clinging skin attached on the
+right.  You notice various barrels lining the back wall, and a large round
+dwarf standing behind the table.
+~
+inside
+D NORTH 23626 0 0
+door~
+~
+CABAL horde
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 23626 TO 23625 GLIMIT 1 LLIMIT 1
+MOB 23629 TO 23625 GLIMIT 1 LLIMIT 1
+OBJECT 23646 TO 23628
+MOB 23627 TO 23630 GLIMIT 1 LLIMIT 1
+GIVE 23626
+GIVE 23627
+GIVE 23628
+GIVE 23629
+GIVE 23630
+GIVE 23631
+GIVE 23631
+GIVE 23649
+GIVE 23632
+MOB 23625 TO 23632 GLIMIT 1 LLIMIT 1
+MOB 23628 TO 23632 GLIMIT 1 LLIMIT 1
+EQUIP 23647 WIELD
+MOB 23631 TO 23634 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 23626 greet_prog greet_prog_outer_guardian
+M 23626 death_prog death_prog_outer_guardian
+M 23626 attack_prog attack_prog_outer_guardian
+M 23628 greet_prog greet_prog_inner_guardian
+M 23628 death_prog death_prog_inner_guardian
+M 23629 move_prog move_prog_horde_shrine_ward
+I 23625 give_prog give_prog_cabal_item
+I 23633 fight_prog fight_prog_horde_bull
+I 23635 fight_prog fight_prog_horde_bear
+I 23636 fight_prog fight_prog_horde_lion
+I 23639 pulse_prog pulse_prog_horde_jackal
+I 23640 fight_prog fight_prog_horde_wolf
+I 23641 fight_prog fight_prog_horde_hawk
+I 23646 verb_prog verb_prog_touch_obelisk
+END
+#SPECS
+M 23631 mspec_horde_tanner
+END
+#$

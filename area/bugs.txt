@@ -1,0 +1,34 @@
+[ 2515] Fatfrumos: Sun Aug 10 17:20:57 2003: When I type " c 'magic missile' " I get "You don't know any spells of that name." But I do know a spell by that name.
+[ 3806] Njindh: Tue Aug 12 05:31:49 2003: When you unghost through fighting, you still go through the echoes of body soldifying, heat detecting, and 'you are no longer a ghost'
+[ 3898] Njindh: Tue Aug 12 05:32:40 2003: In front of the silver horn tavern (on the worn street through the city), exits shows 'south' to be too dark to tell, while inside is a stone fireplace crackling loudly, emanating warmth and light.
+[29001] Njindh: Tue Aug 12 05:58:52 2003: shouldn't infravision (I'm duergar) solve 'Too dark to tell' in the exits as well?
+[29014] Throach: Tue Aug 12 16:12:11 2003: There is no echo for when a weapon loses an enchantment.
+[ 1341] Uzaruk: Wed Aug 13 04:11:55 2003: in this room the window talks of midgaard and haon dor, both of which I dont think exist here
+[20157] Piton: Thu Aug 14 23:30:27 2003: Underwater: I could go underwater with out water breathe spell.
+[ 1035] Piton: Fri Aug 15 15:39:36 2003: Anti-paladin Guard in the city east of cimar: It lets you in even though you arent an AP.
+[19233] Soloegel: Fri Aug 15 23:09:40 2003: Nerve: When it fails out of combat, the opponent doesn't attack or stuff.
+[ 3851] Milac: Sun Aug 17 04:54:28 2003: a massive girdle of celestial strength: Giant str doesnt give str cause there's no spell in game called "giant str" and stuff :)
+[ 9202] Erifdel: Mon Aug 18 17:41:48 2003: I can use consume, albeit fail at it, but should it still allow me to try?
+[ 9202] Erifdel: Mon Aug 18 17:42:31 2003: Seems I can also taunt, and had some affect against a mountain climber mob =D
+[23650] Aepheoeus: Tue Aug 19 01:45:11 2003: You can not request items from Rasheeka and her brother... good aligned chars should not be slaying them for their gear.
+[ 2549] Ahrydhran: Tue Aug 19 10:43:58 2003: examine no longer works? need to use look in.
+[ 2549] Ahrydhran: Tue Aug 19 10:44:08 2003: examine bit probably a proficiency now :P
+[10098] Ahrydhran: Wed Aug 20 16:29:01 2003: got a bunch of mosquitos swimming underwater somewhere south of Sywilm woods (area with elf missionaries and hopeless girls)
+[29416] Ahrydhran: Thu Aug 21 13:26:20 2003: Mountains north of Cimar don't trigger mountaineering (apparently no lag as in Cim, or 'climb' echoes as with mountaineering)
+[ 2406] Zod: Thu Aug 21 20:04:34 2003: Exa(mine): command is broken.
+[15865] Tjkilya: Thu Aug 28 22:22:58 2003: albatross
+[ 2383] Zod: Sun Aug 31 22:22:11 2003: Firestart: When I type "firestart" in, I get "Huh?"
+[15859] Alctinco: Thu Sep  4 18:57:02 2003: As a sorcerer, I'm able to view the helpful for Visceral Divination, helpfile 109
+[  130] Gorthik: Thu Sep 11 11:43:26 2003: Sky echoes are given within Morglum's Shrine... figured a bug cause we're in the caverns.
+[ 7022] Xulthrin: Mon Sep 15 15:00:06 2003: If you give malaphar gold, he doesn't leave but does grant the skill steal.
+[18002] Erifdel: Tue Sep 23 14:00:58 2003: Can we make butcher only possible for NPC corpses... since it can be universal to any class, people can easily keep corpses from necromancers.
+[24308] Solien: Mon Sep 29 20:07:03 2003: Typing socials causes you to spam role or something weird
+[23886] Solien: Wed Oct  1 17:02:01 2003: When Phalanx power of fervor wears off detect evil no longer detects evil auras, this is with detect evil on before casting fervor
+[ 2538] Solien: Thu Oct  2 01:41:34 2003: You can gate into the newbie areas, ie 'zombie'
+[22067] Solien: Sat Oct  4 11:49:00 2003: Healing sleep on someone that is fighting ?
+[23888] Solien: Sat Oct  4 23:35:58 2003: When someone casts a spell on me it and I retaliate it considers it an aggresive and makes my shroud of light vanish
+[23888] Solien: Sat Oct  4 23:36:10 2003: Blade barrier makes shroud of light vanish also
+[ 2502] Xulthrin: Mon Oct 27 00:40:14 2003: Got the power bloodlust by completing a quest for the greater demon, was to kill a paladin.  Killed another paladin more recently and the demon consumed the corpse like I was just completing the quest for the first time, then bloodlust was back at 1%
+[ 9306] Krogan: Sat Apr  3 22:35:13 2004: You can impale yourself
+[20490] Dyne: Fri Apr 16 02:58:56 2004: "Knowing it is inflated, you argue the price down to 126720 coins." for a seagull that was listed as 1440.
+[23689] Krogan: Fri Apr 16 05:01:18 2004: Cook seems to do nothing

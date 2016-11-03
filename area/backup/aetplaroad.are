@@ -1,0 +1,208 @@
+#AREA
+aetplaroad.are~
+Melcene-Plains Road~
+Tiernus~
+1 51
+24450 24459
+normal
+temperate
+0
+1
+RS Tyner Tiernus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24450
+A Road Through the Fields~
+To the north and south extend huge fields, the long grasses rippling
+faintly with the passing breeze.  Beyond the fields to the north some
+rolling foothills sprout up in the distance.  Far to the south a walled city
+is barely visible.  This dirt track stretches out through the fields to the
+east, where the plains seem to become even more expansive.  An intersection
+of roads lies to the west.  
+~
+road
+D EAST 24451 0 0
+~
+The road continues to the east.
+~
+D WEST 24436 0 0
+~
+An intersection lies to the west.
+~
+#24451
+A Road Through the Fields~
+To the north and south extend huge fields, the long grasses rippling
+faintly with the passing breeze.  Beyond the fields to the north some
+rolling foothills sprout up in the distance.  Far to the south a walled city
+is barely visible.  This dirt track stretches out to the west, and to the
+east where the plains seem to become more expansive.  
+~
+road
+D EAST 24452 0 0
+~
+The road continues to the east.
+~
+D WEST 24450 0 0
+~
+The road continues to the west.
+~
+#24452
+A Bend in the Road~
+To the north and south extend huge fields, the long grasses rippling
+faintly with the passing breeze.  Beyond the fields to the north some
+rolling foothills sprout up in the distance.  Far to the south a walled city
+is barely visible.  This dirt track stretches out to the west, and bends to
+the north as it leads toward the plains.  
+~
+road
+D NORTH 24453 0 0
+~
+The road continues to the west.
+~
+D WEST 24451 0 0
+~
+The road continues to the west.
+~
+#24453
+A Bend in the Road~
+To the north and south extend huge fields, the long grasses rippling
+faintly with the passing breeze.  Beyond the fields to the north some
+rolling foothills sprout up in the distance.  Far to the south a walled city
+is barely visible.  This dirt track stretches out to the east as it leads
+toward the plains, and reaches a bend to the south.  
+~
+road
+D EAST 24454 0 0
+~
+The road continues to the east.
+~
+D SOUTH 24452 0 0
+~
+The road continues to the south.
+~
+#24454
+A Road Through the Fields~
+To the north and south extend huge fields, the long grasses rippling
+faintly with the passing breeze.  Beyond the fields to the north some
+rolling foothills sprout up in the distance.  The dirt track continues here,
+reaching a bend to the west and an intersection to the east.  In the
+distance to the east a forest rises up out of the plains.  
+~
+road
+D EAST 24455 0 0
+~
+The road continues to the east.
+~
+D WEST 24453 0 0
+~
+The road continues to the west.
+~
+#24455
+An Intersection in the Plains~
+This intersection is little more than an elliptical patch of dirt carved
+out among the fields of high grasses.  Off to the east, the road grows
+narrow as it makes its way into a forest which rises out of the plain.  The
+dirt track also continues to the west, and to the north the grasses have
+been trampled down to form a path leading through the plains.  
+~
+road
+D NORTH 300 0 0
+~
+A path runs through some plains to the north.
+~
+D EAST 24456 0 0
+~
+The road continues to the east.
+~
+D WEST 24454 0 0
+~
+The road continues to the west.
+~
+#24456
+A Road Near the Forest~
+The dirt track stretching through this area is narrow, but well-traveled.
+To the north and south, plains stretch out into the horizon, long grasses
+swaying gently in the breeze.  The road continues to the west here toward a
+small intersection, and runs also to the east where a small village sits in
+the shadow of a larger forest.  
+~
+road
+D EAST 24457 0 0
+~
+The road continues to the east.
+~
+D WEST 24455 0 0
+~
+An intersection lies to the west.
+~
+#24457
+A Road Near the Forest~
+The dirt track stretching through this area is narrow, but well-traveled.
+To the north and south, plains stretch out into the horizon, long grasses
+swaying gently in the breeze.  The road continues to the west through the
+plains, and runs to the east toward a small village which sits in the shadow
+of a larger forest.  
+~
+road
+D EAST 24458 0 0
+~
+The road continues to the east.
+~
+D WEST 24456 0 0
+~
+The road continues to the west.
+~
+#24458
+A Road Near the Forest~
+The dirt track stretching through this area is narrow, but well-traveled.
+To the north and south, plains stretch out into the horizon, long grasses
+swaying gently in the breeze.  The road continues to the west through the
+plains, and runs to the east toward a small village which sits in the shadow
+of a larger forest.  
+~
+road
+D EAST 24459 0 0
+~
+The road continues to the east.
+~
+D WEST 24457 0 0
+~
+The road continues to the west.
+~
+#24459
+A Road Near the Forest~
+The narrow dirt track is somewhat shaded here, as it approaches a small
+village to the east.  To the southeast a rather large forest looms above the
+village.  The dirt road runs to the west, where vast plains stretch out to
+the north and south.  Stretching into the horizon, the prospect of
+civilization seems more likely beyond the plains to the west.  
+~
+road
+D EAST 19214 0 0
+~
+A dirt track runs into the forest to the east.
+~
+D WEST 24458 0 0
+~
+The road continues to the west.
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

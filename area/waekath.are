@@ -1,0 +1,550 @@
+#AREA
+waekath.are~
+The Shrine of Gawinn~
+Gawinn~
+1 51
+155 179
+shrine
+arid
+0
+1
+Gawinn~
+
+#MOBS
+#155
+haggard old man~
+a haggard old man~
+A old, hunched over man clothed in dirty rags stands here.
+~
+Dark green moss grows on this old mans dingy clothing.  His face is
+wrinkled and weather by the years, but his eyes shine vibrantly beneath his
+bushy eyebrows.  A gnarled mess of silvery hair sits atop his head with
+small twigs and leaves tangled in it.  
+~
+1000 0 0 human~
+25 12d8+944 0d0+0 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#0
+
+
+
+#OBJS
+#155
+stone altar~
+a simple stone altar~
+A simple and weathered stone altar sits underneath the shade of the tree.~
+altar
+stone~
+0 0 0 0 0
+51 0 0 P
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+E altar~
+This simple stone altar stands firm against the ages it has endured. 
+Looking closer you can see an etching of an ironwood tree, much like the one
+which stands before you.  
+~
+E stone~
+This simple stone altar stands firm against the ages it has endured. 
+Looking closer you can see an etching of an ironwood tree, much like the one
+which stands before you.  
+~
+
+#157
+pod ironwood small~
+a small pod~
+A small pod lies on the ground here.~
+trash
+seed~
+0 0 0 0 0
+1 1 0 P
+WEAR TAKE
+ITEM HUM
+LIMIT 0
+TIMER 0
+
+#158
+small crack~
+a small crack in the ground~
+You see a small crack in the earth.~
+container
+unknown~
+10000 0 0 10000 100
+1 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#155
+A Thick Grove of Evergreen~
+Hundreds of old gnarled evergreens reach towards the sky above.  Thick
+roots creep along the ground, disappearing into the rich soil.  A soft
+blanket of dead pine needles covers the ground all round you.  To the east a
+massive rock face covered in moss and lichens rises up above the trees.  It
+appears that the rock faces has been sundered here, producing a dark
+crevice.  
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A wall of thick trunks makes the way path north impossible.
+~
+D EAST 156 I 0
+~
+A massive face of grey rock rises up in this direction.  A large fissure
+in the rock has formed over time, and you believe you may be able to squeeze
+through.  
+~
+D SOUTH 0 0 0
+~
+A wall of thick trunks makes the way path north impossible.
+~
+D WEST 795 0 0
+~
+The woods become much thicker in this direction.
+~
+D DOWN 0 0 0
+~
+A thick blanket of fallen pine needles covers the bare earth.
+~
+OWNER none~
+#156
+Within a Fissure~
+Imposing walls of rock rise solemnly overhead.  Spectacular veins of
+marble, granite, and crystal mingle together forming a natural tapestry. 
+Millions of tiny shards of rocks litter the ground here, accumulating from
+years of weathering.  Small shafts of light pierce through the darkness
+originating from the east and west.  
+~
+unused
+ROOM DARK
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A sheer wall of rock rises far overhead.
+~
+D EAST 157 0 0
+~
+A shaft of light pierces through the darkness of the fissure in this
+direction.  
+~
+D SOUTH 0 0 0
+~
+A sheer wall of rock rises far overhead.
+~
+D WEST 155 0 0
+~
+A shaft of light pierces through the darkness of the fissure in this
+direction.  
+~
+D UP 0 0 0
+~
+The two stone faces rise overhead blocking all view of the sky.
+~
+D DOWN 0 0 0
+~
+An incredible ammount of small rocks have fallen here, broken off from the rock walls.
+~
+OWNER none~
+#157
+On the Edge of a Tranquil Pond~
+Small tufts of grass stick up between the rocks on the shore here. 
+Crystal clear water laps up quietly against the smooth rocks of the shore
+here.  An occasional hawk can be seen soaring over the small pond.  To the
+west a massive rock face rises against the horizon.  A small wooden bridge
+can be seen arching across the pond towards a small island to the east.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A steep rock face slopes down to the edge of the pond here.
+~
+D EAST 160 0 0
+~
+A rickety wooden bridge can be seen arching over the water in this
+direction.  
+~
+D SOUTH 0 0 0
+~
+A steep rock face slopes down to the edge of the pond here.
+~
+D WEST 156 0 0
+~
+A massive grey face of rock rises up in this direction.  A dark fissure
+in the rock has formed over time, and you believe you may be able to squeeze
+through.  
+~
+D DOWN 0 0 0
+~
+The ground here is covered in rocks of various sizes and shapes.
+~
+OWNER none~
+#158
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep
+to its rocky bottom.  A small island protrudes from the waters, crowned with
+a blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D EAST 162 0 0
+~
+The glassy pond continues in this direction.
+~
+D SOUTH 160 0 0
+~
+The rugged wooden bridge crosses the pond up ahead.
+~
+D WEST 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#159
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep
+to its rocky bottom.  A small island protrudes from the waters, crowned with
+a blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 160 0 0
+~
+The rugged wooden bridge crosses the pond up ahead.
+~
+D EAST 166 0 0
+~
+The glassy pond continues in this direction.
+~
+D SOUTH 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D WEST 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#160
+Crossing a Small Wooden Bridge~
+Rugged wooden boards weathered by time make up this small bridge.  Thin
+wooden railings run the length and end in a scroll at either end.  The clear
+water of the pond lies nearly ten feet below the top of the bridge, giving a
+splendid view.  To the east the bridge leads over to a small island shaded
+by an immense tree.  To the west a massive rock face looms at the edge of
+the pond.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 158 0 0
+~
+The glassy pond lies peacefully in this direction, surrounded by the
+solemn rock faces which run down to the waters edge.  
+~
+D EAST 161 0 0
+~
+The bridge leads down to the banks of the small island.
+~
+D SOUTH 159 0 0
+~
+The glassy pond lies peacefully in this direction, surrounded by the
+solemn rock faces which run down to the waters edge.  
+~
+D WEST 157 0 0
+~
+You can see the stoney shore and the massive rock face in this direction.  
+~
+D DOWN 0 0 0
+~
+Rugged wooden boards fit tightly together lie beneath you.
+~
+OWNER none~
+#161
+The Shaded Sanctuary~
+An immense multi-trunked ironwood tree stands majestically in the center
+of this small island.  Lavender and pink blossoms are spread amongst the
+dense canopy.  Heavy dark-brown bark covers the two trunks.  Insects and
+birds abound within the ironwood complex which provides them shelter and
+protection.  The dense canopy provides protection from the harsh elements,
+allowing young scrubby plants and wildflowers to flourish.  The young plant
+growth and wildflowers cluster near the base of the ironwood, taking
+advantage of the rich soil it provides.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 162 0 0
+~
+The ground slopes down to the rocks that line the bank of the island.
+~
+D EAST 164 0 0
+~
+The ground slopes down to the rocks that line the bank of the island.
+~
+D SOUTH 166 0 0
+~
+The ground slopes down to the rocks that line the bank of the island.
+~
+D WEST 160 0 0
+~
+The island slopes down to the bank of the pond, and the bridge which
+leads across it.  
+~
+D DOWN 0 0 0
+~
+The ground here is scorched by the hot sun, besides the area directly
+beneath the ironwood tree which flourishes.  
+~
+OWNER Gawinn~
+#162
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep to
+its rocky bottom.  A small island protrudes from the waters, crowned with a
+blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D EAST 163 0 0
+~
+The glassy pond continues in this direction.
+~
+D SOUTH 161 0 0
+~
+The water meets the rocky edge of the small island in this direction.
+~
+D WEST 158 0 0
+~
+The glassy pond continues in this direction.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#163
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep
+to its rocky bottom.  A small island protrudes from the waters, crowned with
+a blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D EAST 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D SOUTH 164 0 0
+~
+The glassy pond continues in this direction.
+~
+D WEST 162 0 0
+~
+The glassy pond continues in this direction.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#164
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep
+to its rocky bottom.  A small island protrudes from the waters, crowned with
+a blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 163 0 0
+~
+The glassy pond continues in this direction.
+~
+D EAST 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D SOUTH 165 0 0
+~
+The glassy pond continues in this direction.
+~
+D WEST 161 0 0
+~
+The water meets the rocky edge of the small island in this direction.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#165
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep
+to its rocky bottom.  A small island protrudes from the waters, crowned with
+a blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 164 0 0
+~
+The glassy pond continues in this direction.
+~
+D EAST 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D SOUTH 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D WEST 166 0 0
+~
+The glassy pond continues in this direction.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#166
+On the Tranquil Pond~
+A glassy expanse of water surrounds you.  The only disturbance is the
+occasional ripple caused by a fish rising to the prospect of an insect. 
+Large dragonflies dart back and forth across the pond upon invisible wings. 
+A smooth rock wall slopes down to the edge of the water and then delves deep
+to its rocky bottom.  A small island protrudes from the waters, crowned with
+a blossoming tree.  
+~
+unused
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 161 0 0
+~
+The water meets the rocky edge of the small island in this direction.
+~
+D EAST 165 0 0
+~
+The glassy pond continues in this direction.
+~
+D SOUTH 0 0 0
+~
+A grey rock faces slopes steeply down to the edge of the water.
+~
+D WEST 159 0 0
+~
+The glassy pond continues in this direction.
+~
+D DOWN 0 0 0
+~
+Looking below you see can see many feet through the crystal clear water
+to the rocky bottom.  Fish can be seen swimming slowly through the water in
+search of food.  
+~
+OWNER none~
+#167
+On the Tranquil Pond~
+~
+unused
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER none~
+#0
+
+
+
+#RESETS
+OBJECT 155 TO 161
+OBJECT 158 TO 161
+PUT 157 IN 158 COUNT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

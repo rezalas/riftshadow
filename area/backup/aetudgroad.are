@@ -1,0 +1,379 @@
+#AREA
+aetudgroad.are~
+Melcene-Udgaard Road~
+Tiernus~
+1 51
+24430 24449
+normal
+temperate
+0
+1
+RS Tyner Tiernus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24430
+On a Wide Road~
+This wide dirt track runs to the north and south, carved out between
+fields of tall grass that extend to the east and west.  The road is
+well-traveled here, with city walls visible just to the southeast.  A narrow
+field is accessable to the west, while the gates of Melcene lie just to the
+south.  
+~
+road
+D NORTH 24431 0 0
+~
+~
+D SOUTH 3620 0 0
+~
+The gates of Melcene are visible to the south.
+~
+D WEST 3619 0 0
+~
+A field spreads out to the west.
+~
+#24431
+On a Wide Road~
+This wide dirt track runs on a beeline to the north and south, carved
+out between fields of tall grass that extend to the east and west.  The road
+is well-traveled here, with city walls visible in the distance to the south.
+The road continues to the north and south.  
+~
+road
+D NORTH 24432 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24430 0 0
+~
+The road continues to the south.
+~
+#24432
+On a Wide Road~
+This wide dirt track runs on a beeline to the north and south, carved
+out between fields of tall grass that extend to the east and west.  The road
+is well-traveled here, with city walls visible in the distance to the south.
+The road continues ot the north and south.  
+~
+road
+D NORTH 24433 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24431 0 0
+~
+The road continues to the south.
+~
+#24433
+On a Wide Road~
+This wide dirt track runs on a beeline to the north and south, carved
+out between fields of tall grass that extend to the east and west.  The road
+is well-traveled here, with city walls visible in the distance to the south.
+The road continues to the north and south.  
+~
+road
+D NORTH 24434 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24432 0 0
+~
+The road continues to the south.
+~
+#24434
+On a Wide Road~
+This wide dirt track runs on a beeline to the north and south, carved
+out between fields of tall grass that extend to the east and west.  The road
+is well-traveled here, with city walls visible in the distance to the south.
+The road continues to the north and south.  
+~
+road
+D NORTH 24435 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24433 0 0
+~
+The road continues to the south.
+~
+#24435
+On a Wide Road~
+This wide dirt track runs on a beeline to the north and south, carved out
+between fields of tall grass that extend to the east and west.  The road is
+well-traveled here, with city walls visible in the distance to the south. 
+To the north, the road widens into an intersection.  
+~
+road
+D NORTH 24436 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24434 0 0
+~
+The road continues to the south.
+~
+#24436
+An Intersection of Roads~
+The dirt track reaches a junction here, branching off in three
+directions.  To the west, the road winds itself through rolling plains that
+stretch off into the horizon.  To the east, the trail becomes narrower as it
+runs through narrow fields of tall grass.  To the south, the road grows a
+bit wider as it extends toward civilization in the distance.  
+~
+road
+D EAST 24450 0 0
+~
+A road winds through the plains to the east.
+~
+D SOUTH 24435 0 0
+~
+A wide road runs off to the south.
+~
+D WEST 24437 0 0
+~
+A well-traveled road runs off to the west.
+~
+#24437
+A Bend in the Road~
+The wide dirt track reaches a bend here, winding its way through rolling
+plains into the horizon to the northwest.  In the distance to the north,
+fields turn to foothills and foothills then give way to towering mountain
+peaks.  Occasionally, small clusters of trees break up the otherwise
+sprawling landscape.  The road continues to the north, and reaches an
+intersection to the east.  
+~
+road
+D NORTH 24438 0 0
+~
+The road continues to the north.
+~
+D EAST 24436 0 0
+~
+An intersection of roads lies to the east.
+~
+#24438
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24439 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24437 0 0
+~
+The road continues to the south.
+~
+#24439
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24440 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24438 0 0
+~
+The road continues to the south.
+~
+#24440
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24441 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24439 0 0
+~
+The road continues to the south.
+~
+#24441
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24442 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24440 0 0
+~
+The road continues to the south.
+~
+#24442
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24443 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24441 0 0
+~
+The road continues to the south.
+~
+#24443
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24444 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24442 0 0
+~
+The road continues to the south.
+~
+#24444
+A Bend in the Road~
+The wide dirt track reaches a bend here, winding its way through rolling
+plains into the horizon to the southeast.  In the distance to the north,
+fields turn to foothills and foothills then give way to towering mountain
+peaks.  Occasionally, small clusters of trees break up the otherwise
+sprawling landscape.  The road continues to the south, and twists around to
+the west.  
+~
+road
+D SOUTH 24443 0 0
+~
+The road continues to the south.
+~
+D WEST 24445 0 0
+~
+The road continues to the west.
+~
+#24445
+A Bend in the Road~
+The wide dirt track reaches a bend here, winding its way through rolling
+plains into the horizon to the southeast.  In the distance to the north,
+fields turn to foothills and foothills then give way to towering mountain
+peaks.  Occasionally, small clusters of trees break up the otherwise
+sprawling landscape.  The road continues to the north, and twists around to
+the east.  
+~
+road
+D NORTH 24446 0 0
+~
+The road continues to the north.
+~
+D EAST 24444 0 0
+~
+The road continues to the east.
+~
+#24446
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24447 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24445 0 0
+~
+The road continues to the south.
+~
+#24447
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24448 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24446 0 0
+~
+The road continues to the south.
+~
+#24448
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues here to the north and south.  
+~
+road
+D NORTH 24449 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24447 0 0
+~
+The road continues to the south.
+~
+#24449
+On a Wide Road~
+This wide dirt track winds its way through rolling plains into the
+horizon to the southeast.  In the distance to the north, fields turn to
+foothills and foothills then give way to towering mountain peaks. 
+Occasionally, small clusters of trees break up the otherwise sprawling
+landscape.  The road continues south here, and meets a wider intersection to
+the west.  
+~
+road
+D SOUTH 24448 0 0
+~
+The road continues to the south.
+~
+D WEST 24426 0 0
+~
+A wider intersection of roads lies to the west.
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

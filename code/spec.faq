@@ -1,0 +1,30 @@
+NEW RS SPEC SYSTEM v1.0
+By Cal
+
+The new system for specs is easy and powerful.  It is as follows:
+
+To make a new spec, do the following:
+ 1) add DECLARE_SPEC(spec_name) below all the other DECLARE_SPECs in the file
+	- note: spec names should be the first letter of the type followed by spec_
+		example: ispec_g_money is an item spec
+ 2) add a DEF_SPEC(spec_name, TRAP_FLAGS)
+	- trap flags are used to specify which events your spec is responding to.
+	  a list of these should be at the top of the file.
+	  multiple flags are separated with a |, e.g. TRAP_IWEAR | TRAP_IGET | TRAP_IGREET
+ 3) create your function body as follows:
+BEGIN_SPEC(spec_name)
+
+END_SPEC
+
+ 4) trap on desired events within function.
+	- EVENT_(name) begins an event trap block and END_EVENT ends it.
+    	  anything within this block will be executed when the event happens.  a list of valid
+	  variables to use in each should be at the top of the file.  example:
+BEGIN_SPEC(ispec_g_money)
+	EVENT_IWEAR
+		send_to_char("ur kewl\n\r",ch);
+		extract_obj(obj);
+	END_EVENT
+END_SPEC
+
+ 5) 

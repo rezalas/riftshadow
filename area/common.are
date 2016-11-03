@@ -1,0 +1,1875 @@
+#AREA
+common.are~
+The Common Guild~
+Riftshadow~
+1 51
+23675 23699
+normal
+none
+0
+1
+None~
+
+#MOBS
+#23675
+barmaid human~
+a human barmaid~
+A barmaid weaves in between the tables, dodging even the deft of hands.
+~
+This poor woman has to weave in between the tables, dodging generous hands
+and attempting to keep full mugs just that, full. A forced smile seems to
+keep itself firmly fixed on her well rounded face, while every so often a
+geniune one seems to creep in when her eyes meets the eyes of some lucky
+young customer.
+~
+0 23675 100 human~
+25 1d1+99 2d10+7 10 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+NOTES ~
+#23676
+sidhe barmaid~
+a sidhe barmaid~
+Smiling brightly, this young sidhe woman asks what you'll have to drink.
+~
+Grinning to each patron brightly, this beautiful specimen of the sidhe
+race occasionally flutters out of the way to avoid a more than friendly
+hand. 
+~
+0 0 0 sidhe~
+25 12d8+630 2d10+7 10 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+#23677
+elf elven barmaid~
+an elven barmaid~
+Weaving through the isles with amazing grace, the elven barmaid smiles.
+~
+Blessed with an amazing dexterity, this young elven specimen is graceful
+as well as beautiful. An amazing smile warms the hearts of its receivers,
+as well as perk up a few gloomy individuals. An inquisitive look to her
+eye can only mean one thing: What would you like to drink?
+~
+1000 0 0 elf~
+25 12d8+630 2d10+7 10 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+#23678
+dwarven dwarf barkeep barkeeper bartender ~
+the dwarven barkeep~
+A stout, balding dwarf stands here, testing his well made brew.
+~
+Standing almost as tall as he is wide, this red bearded dwarf washes out a
+few mugs with a towel. Lacking hair on the top of his head, he makes up in
+the size of his beard, which is now has some gray mingling in with the
+bright red. He never passes an opportunity to tell a story of his past,
+whether it be long or short, and possibly a little doctored to boot.
+~
+0 0 0 dwarf~
+40 15d10+1920 4d8+18 15 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+SHOPKEEPER OPEN 0 CLOSE 0 EXIT south
+NOTES ~
+#23679
+celestial titan guard~
+a celestial titan guard~
+Standing quietly, a celestial titan watches for trouble.
+~
+With shoulders the size of tree trunks, the titan peers around, watching
+for any sort of trouble so that he could quickly end it.  
+~
+750 0 0 celestial~
+25 12d8+630 2d10+7 17 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+IMM SUMMON
+#23680
+planar titan guard~
+a planar titan guard~
+A planar titan eyes the crowd for trouble.
+~
+Not participating in conversation, whether it be a joke or serious
+political talk, allows this young woman receive many more cold stares than
+she hands out. 
+~
+1000 0 0 planar~
+25 12d8+630 2d10+7 15 100 slice
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+AFF DARK_VISION
+IMM SUMMON
+RES POISON
+RES DISEASE
+#23681
+dwarf dwarven cook~
+the dwarven cook~
+Taking a taste test, the dwarven cook adds to her "special" soup.
+~
+This black bearded dwarven woman has a rageful passion about her cooking.
+She pours her heart and soul into a single kettle, as well as a bottle of
+stout ale, an undeterminable amount of vegitables and meats, and only the
+gods above know what else. Tasting it a few times, she adds in more
+ingrediants and still has time to bark orders to the underlings running
+about, dodging for cover.
+~
+0 0 0 dwarf~
+30 15d8+906 4d6+8 0 100 pound
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+SHOPKEEPER OPEN 6 CLOSE 20 EXIT south
+TEACHES cooking~
+TEACHES butchery~
+#23682
+human patron~
+a human patron~
+A young human man lounges about, enjoying the idle conversation.
+~
+Taking a break from his glorious adventure, this young man lounges about
+the inn, taking part in the idle conversation and enjoying the wonderful,
+freshly made ale produced by the barkeep.
+~
+0 0 0 human~
+20 10d8+404 2d6+6 10 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT INDOORS
+#23683
+dwarf dwarven patron~
+a dwarven patron~
+A grizzled dwarf wades through the crowd, grumbling to himself.
+~
+This stocky, red-bearded dwarf grumbles and shoves his way through the
+crowd of people within the guild.  Decorative stone beads mottle his greasy
+beard, along with beads of spittle.  
+~
+0 0 0 dwarf~
+27 13d8+734 5d4+7 13 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+#23684
+elven elf patron~
+an elven patron~
+Sipping her drink, this elven woman quietly partakes in the idle chatter.
+~
+Even drinking seems a graceful, smooth flowing action for this beautiful
+elven woman. Quietly conversing with her companions, she nods and chimes
+in with a crystal clear voice that seems almost unnatural. Her stunning
+beauty is only one weapon, as a sheathed dagger at her waist and an
+unstrung bow at her back makes her appear as deadly as she is graceful.
+~
+1000 0 0 elf~
+24 12d8+580 2d10+6 12 100 punch
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+#23685
+halfling boy traveler~
+a halfling traveler~
+Gulping down his drink, this halfing boy pipes in his part of the talking.
+~
+Barefooted and carefree, this young halfing tears ravenously at his meal,
+all the while trying to give his part of the conversation.  Mostly his own
+opinion, and sometimes something offensive.  His party members shrug it off
+with a combination of amusement and disgust.  
+~
+0 0 0 halfling~
+24 12d8+580 2d10+6 12 100 thwack
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#23686
+abyss abyssal titan patron~
+an abyssal patron~
+Growling under his breath, this red-skinned titan glowers about the room.
+~
+This titan appears to have a blazing temper and chilling stare.  His
+fingers play along a sword that is sheathed on his belt... until someone
+makes him mad.  
+~
+0 0 0 abyss~
+25 12d8+630 2d10+7 14 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT INDOORS
+#23687
+imp patron~
+an imp patron~
+A maniacal cackle erupts from a tiny imp.
+~
+More annoying that harmful, the small imp slowly walks from patron to
+patron, looking for a fat purse to cut open or a vulnerable area to prod
+with a sharp stick or finger.
+~
+-1000 0 0 imp~
+20 10d8+404 2d6+6 10 100 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+IMM SUMMON
+#23688
+minotaur patron~
+a minotaur patron~
+Taking a long swig of his ale, this bull-headed minotaur snorts at stares.
+~
+Being such an exotic beast, not many people have seen a minotaur and lived
+to tell about it. Being covered in a course, brown fur, the minotaur grins
+evilly as he displays a few patches of hair that do not match, as well as
+a great deal of random scars.
+~
+-500 0 0 minotaur~
+27 13d8+734 5d4+7 13 100 pound
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT INDOORS
+#23689
+duergar gambler~
+a duergar gambler~
+A duergar walks around, looking for something to be angry about.
+~
+This black-bearded duergar has axes slung across his back.  He seems
+half-nervous and half-angry as he looks through the crowd for a foe, new or
+old.  
+~
+-1000 0 0 duergar~
+25 12d8+944 2d10+6 13 100 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT STAY_AREA
+ACT INDOORS
+#23690
+drow dark-elf gambler~
+a drow gambler~
+Rolling a coin along his knuckles, this dark elven man places another bet.
+~
+Cool, calm and collected, this young man with skin that resembles a
+moonless night quietly counts his winnings, and debates with himself
+whether or not to take the rest of the money from these fools.
+~
+-1000 0 0 drow~
+27 13d8+1103 5d4+7 13 100 pierce
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+#23691
+young human man treasure-hunter jarek~
+Jarek~
+Grinning slyly, a young human man rests on the bed, examining trinkets.
+~
+Jarek, a reknown treasure-hunter, hardly lives up to his name in person. 
+His eyes are beady, his limbs are thin and wiry and he's scrawny.  His
+shaved head is covered with scars of nicks and cuts, and his teeth are
+rotting out of his mouth.  But he's holding a few golden trinkets, staring
+at them and giggling to himself like a little girl.  
+~
+0 0 0 human~
+28 14d8+1187 0d0+0 13 100 none
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+TEACHES appraising~
+TEACHES trap detecting~
+#23692
+imp gambler~
+an imp gambler~
+Not doing very well, this imp gambler tosses the dice and hopes to win big.
+~
+A throw of the dice loses more coins to this imp than most people see in
+the full of their lives. With the money flowing from his finger tips, a
+small village could have bought food for an entire year, and live
+luxuriously for quite some time. But all that is about to change soon, as
+he's quickly running out of money to gamble with.
+~
+0 0 0 imp~
+24 12d8+870 2d10+6 10 100 none
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT STAY_AREA
+ACT INDOORS
+#23693
+Adrohaseth man tanned~
+Adrohaseth~
+A tanned man in weather-beaten clothes sits patiently at a table.
+~
+He quietly sips his drink.  His eyes are both beautiful and cold, and
+they are scanning the crowd.  A hood is drawn over his head, hiding most of
+his long, scraggly hair.  A number of implements of survival and war are
+strapped to his body and belt.  His sun-ravaged skin is covered with runic
+tattoos.  He is Adrohaseth, one of the most experienced rangers known to
+city-dwellers.  
+~
+0 0 0 human~
+51 25d8+4274 5d10+47 0 100 none
+0 0 0 0
+resting male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+TEACHES mountaineering~
+TEACHES swimming~
+TEACHES bandaging~
+TEACHES firestarting~
+#23694
+human actor~
+a human actor~
+Spouting lines from memory, a young man enacts a short skit for the locals.
+~
+Dressed in theatrical makeup, this young man seems to be trying to portray
+a well dressed noble, if not a king of some lost empire. Flourishing
+movements and elaborate gestures allows him to embody the emotion of his
+character in order for the audience to experience as well.
+~
+0 0 0 human~
+20 10d8+604 2d10+7 14 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+#23695
+human actress~
+a human actress~
+Performing her part of the play, this young woman says her lines perfectly.
+~
+Dressed up as though she herself were a queen, this beautiful young
+actress has every movement done, no matter how difficult or troublesome
+they may look.
+~
+0 0 0 human~
+25 12d8+944 2d10+7 13 100 slap
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+#23696
+sidhe actor~
+a sidhe actor~
+Telling the a fantastic story, the sidhe actor spouts more to his tale.
+~
+This young actor has taken the audience to a distant land by concocting
+an elaborate scene through the use of only a mere few words. His beautiful
+descriptions takes the crowd to a time long forgotten by most, but
+performed by this small troupe now.
+~
+0 0 0 sidhe~
+25 12d8+944 2d10+7 14 100 slap
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+#23697
+elf elven actor~
+an elven actress~
+Delivering her lines eloquently, the elven actress awaits her next cue.
+~
+Dressed as though she were a beggar of some sort, this young actress
+unfolds her characters drama for all of the audience to bear witness to.
+~
+0 0 0 elf~
+25 12d8+944 0d0+0 13 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+#23698
+no name~
+dummy mob~
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#23699
+no name~
+dummy mob~
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#23675
+stout brown ale~
+a pint of stout brown ale~
+A pint of a dark brown liquid rests on the ground, waiting to be drank.~
+drink
+tin~
+5 5 'ale' 0 0
+0 1 3 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#23676
+shot whiskey~
+a shot of potent whiskey~
+A small glass of a foul smelling liquid sits here, waiting to be consumed.~
+drink
+glass~
+1 1 'whisky' 0 0
+0 0 5 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#23677
+mug beer~
+a mug of a foamy beer~
+A mug containing a light brown liquid with a thick foamy cap rests here.~
+drink
+glass~
+5 5 'beer' 0 0
+0 1 2 P
+WEAR TAKE
+WEAR HOLD
+ITEM NOANIMATE
+LIMIT 0
+TIMER 0
+
+#23678
+stein mead~
+a stein of strong mead~
+A stein of a strong mead sits here, giving off a potent odor.~
+drink
+tin~
+5 5 'mead' 0 0
+0 1 3 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#23679
+chicken leg~
+a cooked chicken leg~
+A cooked leg of some sort of foul lies here, getting dirty.~
+food
+unknown~
+5 5 0 0 0
+0 0 3 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#23680
+wheat bread~
+a loaf of wheat bread~
+A loaf of bread lies here, filling the area with its wonderful smell.~
+food
+bread~
+5 5 0 0 0
+0 1 2 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#23681
+special soup~
+a bowl of special soup~
+A bowl containing a strange mixture lies here, waiting to be consumed.~
+food
+unknown~
+10 10 0 0 0
+0 1 4 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#23682
+room key~
+a key to room 1~
+A small key with a "1" engraved in the side lies here.~
+key
+copper~
+0 0 0 0 0
+0 1 10 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#23683
+key room~
+a key to room 2~
+A small key with a "2" engraved in the side lies here.~
+key
+unknown~
+0 0 0 0 0
+0 1 10 P
+LIMIT 0
+TIMER 0
+
+#23684
+room key~
+a key to room 3~
+A small key with a "3" engraved in the side lies here.~
+key
+unknown~
+0 0 0 0 0
+0 1 10 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#23685
+key room 4~
+a key to room 4~
+A small key with a "4" engraved in the side lies here.~
+key
+unknown~
+0 0 0 0 0
+0 1 10 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#23686
+table~
+an old oaken table~
+An old, carved oaken table is covered with nicks and stains.~
+furniture
+wood~
+6 0 DG 10 10
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#23687
+comfortable bed~
+a large comfortable bed~
+Resting against the wall, this bed looks very comfortable.~
+furniture
+wood~
+2 0 HK 25 25
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#23688
+large chest~
+a large wooden chest~
+A large wooden chest rests in the corner, holding spare gear for younger adventurers.~
+container
+wood~
+1000 0 0 1000 0
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#23675
+A slightly paved path~
+Crossing a path inlaid with old worn stones, you come across a large door
+barring the way into a large, wooden building to the north. Raising to a
+full two stories, this structure seems to be the epitome of the local
+activity reguarding adventure. The flaking white paint is one of many
+obvious reasons why this establishment needs a few major repairs. Loud
+raucous laughter eminates from the large oak doors, fading every so often
+and rising again. A small, weather worn sign has been mostly hidden by a
+large patch of weeds, paint flecked and wood warped.
+~
+city
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23678 0 0
+~
+Two massive, oaken doors stand firmly in place, protection the inside from
+the harsh elements.
+~
+D EAST 0 0 0
+~
+A yard of weedpatched grass grows off to the east, where it has been
+abruptly halted by a small fence.
+~
+D SOUTH 2602 0 0
+~
+West Toller Road can be seen from your point of view, bustling with
+activity.
+~
+D WEST 0 0 0
+~
+A yard of weedpatched grass grows off to the west, where it has been
+abruptly halted by a small fence.
+~
+D UP 0 0 0
+~
+The height of the inn reaches a full two stories, with a very well patched
+roof of old tiles lying on the top.
+~
+D DOWN 0 0 0
+~
+A small cobblestone walkway meets West Toller as it winds it's way to the
+front porch of the Common Guild Inn, towards the north.
+~
+E sign~
++------------------------+
+|       Created by:      |
+|         Waekath        |
+|   in 2001 for use on   |
+|     Riftshadow MUD     |
++------------------------+
+~
+#23676
+A Dark Corner~
+Reaching the southwest corner of the large room, a dark gloom falls over
+the area. A few tables have been scattered about, some holding patrons,
+some waiting to be used. Directly to the north lies a staircase, while to
+the northeast rests the bar. Over the small wall directly to the east lies
+the doorway to this fine establishment, while further east shouts rise from
+a few of the more frequent customers.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23681 0 0
+~
+Between this dark secluded area and a squiky staircase in the northern
+corner, a small makeshift stage has been built to allow a few performers a
+chance to earn a few coins or drinks.
+~
+D EAST 23677 0 0
+~
+Beyond a few small tables and seats, a small wall climbs only halfway to
+the ceiling, leaving the upper portion bare.
+~
+D SOUTH 0 0 0
+~
+A smooth wall made completely of wood holds a few pictures, one standing
+out more than the others.
+~
+D WEST 0 0 0
+~
+A sturdy wall, made of a pine wood rests here, a few carvings and initials
+of all sorts etched in the polished wood.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+The floor holds the Gods know what. Trash has been tossed aside without a
+care where it lands. Bones of animals best not known lie carelessly about.
+~
+E picture painting~
+This is a very lovely painting. It is, trust me.
+~
+E initials marking markings~
+One set of markings in particular read "JM", while just below it read
+"Nick."
+~
+#23677
+Inside the Common Room~
+A few tables are scattered about, some moved in places never originally
+ment to be. Barmaids weave in and out between the tables, refilling cups
+where needed, bringing food where wanted. To the west, a small wall climbs
+half way between the floor and the ceiling, leaving the upper portion
+unobstructed.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23682 0 0
+~
+Towards the north, and a bit east, a bar can be seen through the haze of
+smoke.
+~
+D EAST 0 0 0
+~
+A small wall made from an old pine tree has been well kept, but shows signs
+of wear.
+~
+D SOUTH 0 0 0
+~
+A sturdy wall, made of a pine wood rests here, a few carvings and initials
+of all sorts etched in the polished wood.
+~
+D WEST 23676 0 0
+~
+A few more tables lie between these and the wall, some holding patrons,
+others not.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+The floor holds the Gods know what. Trash has been tossed aside without a
+care where it lands. Bones of animals best not known lie carelessly about.
+~
+#23678
+Inside the Common Room~
+Standing at the entrance of the building, aromas galore assault your
+nostrals. The smell of old sweat, ale, bread and the gods know what else
+seem to have seeped into the very wood itself. Laughter rolls off the
+tables from all directions, and a few yells can be heard when some
+unfortunate patron loses at whatever gambling they are involved in.
+Barmaids glide in and out of the tables, avoiding deft hands and managing
+to keep all of the mug contents in, rather than out of the mug itself. A
+set of pair of walls straddling the entrance way. They only climb half way
+to the ceiling, leaving the upper half free of obstruction and hindering
+any advancement to the eastern and western of the room.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23683 0 0
+~
+>From this distance, you can see a well tended bar a good ways to the north.
+~
+D EAST 0 0 0
+~
+A small wall made from an old pine tree has been well kept, but shows signs
+of wear.
+~
+D SOUTH 23675 0 0
+~
+A set of large oak doors prevent any of the harsh weather from outside
+invading in, unfortunatly as well as the good weather too.
+~
+D WEST 0 0 0
+~
+A small wall made from an old pine tree has been well kept, but shows signs
+of wear.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+Scuff marks from boots of a multitude of leathers sprinkle the floor, and
+it's hard to distinguish one from another.
+~
+#23679
+Inside the Common Room~
+A multitude of aroma's assult your sense of smell, ranging from the smoke
+of a pipe, to the wonderful smell of fresh baked bread, to the pungent odor
+of unwashed bodies. To the north, a visible bar can been seen, while a
+blocked off room to the northeast hides it's contents well. Yells of a few
+gambling men come from the east, while a small stage has been built for
+the new aspiring actors hired by the barkeep.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23684 0 0
+~
+The kitchen can be seen directly north a ways, blocked off by a few doors.
+~
+D EAST 23680 0 0
+~
+A few men have moved a few tables aside, making room for a few games of
+dice or cards, whatever the moment deems necessary.
+~
+D SOUTH 0 0 0
+~
+A sturdy wall, made of a pine wood rests here, a few carvings and initials
+of all sorts etched in the polished wood.
+~
+D WEST 0 0 0
+~
+A small wall made from an old pine tree has been well kept, but shows signs
+of wear.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+Scuff marks from boots of a multitude of leathers sprinkle the floor, and
+it's hard to distinguish one from another.
+~
+#23680
+Gamblers Corner~
+The tables have been cleared so that the men and women can gamble away
+their earned money, whether it be to a game of dice, a game of cards, or a
+complex game of chess. To the north, a closed off area of the room has been
+set aside for whoever's willing to for the privacy. To the west, a small
+wall abruptly cut off direct access to the door, while a stage can be
+barely seen on the far western wall. The bar, a commonly visited spot of
+the losing folk, can be seen towards the middle portion of the north wall.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23685 0 0
+~
+A small enclosure has been barracaded off, allowing the inhabitants a bit
+of privacy from the roughness of the Common Room.
+~
+D EAST 0 0 0
+~
+A worn wall, polished to a nice shine but covered in soot, dirt and ash
+blocks the elements from disturbing a good game of dice.
+~
+D SOUTH 0 0 0
+~
+A worn wall, polished to a nice shine but covered in soot, dirt and ash
+blocks the elements from disturbing a good game of dice.
+~
+D WEST 23679 0 0
+~
+Off in the distance, a few walls can be seen, but the only climb halfway up
+the room's full height. Between the two walls, lies the only visible
+entrance and exit to the room.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+Scuff marks from boots of a multitude of leathers sprinkle the floor, and
+it's hard to distinguish one from another.
+~
+#23681
+Before a Small Stage~
+A small, but respectable stage has been erected here, just large enough for
+a few props and an actor or two to perform comfortably. Towards the south,
+a darker corner houses a few small tables, while to the southeastern
+direction a few of the larger tables holds a few patrons. A few yells come
+from the east, while to the northeast a cozy bar rests.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23686 0 0
+~
+A staircase lies in this direction, squiking constantly under use of the
+noble patrons of the Guild.
+~
+D EAST 23682 0 0
+~
+In the far distance, past a great deal of tables and chairs, a group of men
+gamble their coins away, while in the immediate area, a few tables and
+chairs rest comfortably waiting for or already holding a few patrons of the
+bar.
+~
+D SOUTH 23676 0 0
+~
+A corner darker than the rest of the room lies south, the tables a bit more
+sparse than originally intended.
+~
+D WEST 0 0 0
+~
+A small makeshift stage made of new cut boards rests against the western
+wall.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+Scuff marks from boots of a multitude of leathers sprinkle the floor, and
+it's hard to distinguish one from another.
+~
+#23682
+Inside the Common Room~
+A few well made tables line the southern wall, as well as dot the immediate
+area. To the northwest, you can see a stairwell leading up to the second
+floor, while to the northeast is the bar. The faint aroma of warm bread and
+spiced wine waft here.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23687 0 0
+~
+To the northwest, a small staircase leads to the second level of the
+building, while the northeast is domain of the bar. Directly north
+~
+D EAST 23683 0 0
+~
+A multitude of tables are scattered about, while past those is the location
+the yells of men gambling originate from.
+~
+D SOUTH 23677 0 0
+~
+A quiet corner of the inn, if there is such a place that can be called that.
+A few tables have been set far enough apart to allow a quiet meal, but
+close enough that a single barmaid can take the orders of multiple tables
+with ease,
+~
+D WEST 23681 0 0
+~
+Directly west, you can see that a small makeshift stage has been built to
+allow a few performers a chance to earn a few coins or drinks.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+The floor holds the Gods know what. Trash has been tossed aside without a
+care where it lands. Bones of animals best not known lie carelessly about.
+~
+#23683
+In the Center of the Common Room~
+Standing at the center of the large room, you can see all of the bustling
+activity. Loud calls for a mug of ale to be refilled echo through this
+large room, but nothing matches the loud hollers of of the men gambling
+away their savings towards the east. A bit further north, you can see a
+well tended bar, while to the south is a set of doors that lead outside. To
+the west are a few tables to relax and enjoy a good drink from.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23688 0 0
+~
+Through the smoke and haze of countless pipes, you can see a few tables and
+the bar this way.
+~
+D EAST 23684 0 0
+~
+A few tables have been moved to clear out a small corner this direction,
+where many men yell in triumph, or to call out a cheater.
+~
+D SOUTH 23678 0 0
+~
+A few small walls that only reach halfway between the ceiling and floor
+rest this way, creating a hallway to the exit of this establishment.
+~
+D WEST 23682 0 0
+~
+A few tables littered with a couple of drunk patrons lie towards the west.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+The floor holds the Gods know what. Trash has been tossed aside without a
+care where it lands. Bones of animals best not known lie carelessly about.
+~
+#23684
+Inside the Common Room~
+A few tables littered with patrons have been strewn about, some in quiet
+conversation, others laughing and spilling their drinks. A few barmaids
+weave inbetween the tables, forcing a kind smile, and actually giving a
+heartfilled one on occasion. To the northeast, an enclosed area has been
+sealed off from the rest of the room, while directly east a few men yell of
+either winnings or losses of a dice or card game. To the south and lies a
+few more tables, while to the southwest lies the entrance to this fine
+establishment. Directly west, you can make out through the smoke a small
+makeshift stage in the distance.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23689 0 0
+~
+Off in the distance, a set of doors lead off to the north lies a section of
+the bar not allowed by anyone save the staff of the inn, while the
+immediate north a few of the barmaids rest aching feet and backs.
+~
+D EAST 23685 0 0
+~
+The eastern wall of the establishment lies on the otherside of a group of
+men gambling.
+~
+D SOUTH 23679 0 0
+~
+A few tables littered with a couple of drunk patrons lie towards the south.
+~
+D WEST 23683 0 0
+~
+The center of the entire bar lies west, hoarding tables and patrons both.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+The floor holds the Gods know what. Trash has been tossed aside without a
+care where it lands. Bones of animals best not known lie carelessly about.
+~
+#23685
+Inside the Common Room~
+The chairs and tables have been cleared out of this immediate area, and
+replaced with several men crouched about, playing at dice or a hand of
+cards, or some other form of gambling. The faint armoa of stale alcohol and
+sweaty bodies hangs in the air like a wet cloth, clinging to anything and
+everything. From this close distance, you can see that the men spread their
+gamblings to the south, while you can see many tables and chairs between
+here and the western most wall. A small enclosure to the north has been
+blocked off, as well.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23690 A 0
+~
+An enclosed area lies this way, blocked off by a thick wall of oak. A
+sturdy door is the only visible entrance of the fortified area from this
+position.
+~
+D EAST 0 0 0
+~
+A sturdy wall, made of a pine wood rests here, a few carvings and initials
+of all sorts etched in the polished wood.
+~
+D SOUTH 23680 0 0
+~
+The few tables the lie to the south have disappeared, replaced with men of
+all shapes and sizes gambling their savings away.
+~
+D WEST 23684 0 0
+~
+The room opens up, rendering all that is the Common Room Inn. Against the
+far wall, you can see something has been built, but cannot tell from this
+distance.
+~
+D UP 0 0 0
+~
+Stained from an untold amount of smoke, the ceiling looks like it could use
+a good polishing, and then some.
+~
+D DOWN 0 0 0
+~
+The floor holds the Gods know what. Trash has been tossed aside without a
+care where it lands. Bones of animals best not known lie carelessly about.
+~
+#23686
+A Creaky Staircase~
+A creaky old staircase climbs its way to the second floor. The old wooden
+stairs seem sturdy enough to support even the stockiest of dwarves, while
+accomodating the widest of minotaurs. A few chairs have been set about to
+the south, pointed to provide the best seating to view the rickity stage
+that has been set up. A bar older than the building itself lies to the east,
+a few patrons seated at or near it; barmaids visiting more often than the
+kitchen.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A sturdy wall, made of a pine wood rests here, markings of all kinds etched
+and stained into the polished wood.
+~
+D EAST 23687 0 0
+~
+The pride and joy of the inn, the bar lies off to the east.
+~
+D SOUTH 23681 0 0
+~
+A small stage has been built for the new aspiring actors hired by the
+barkeep.
+~
+D WEST 0 0 0
+~
+The old staircase has been built onto the wall for added support, leading
+upwards to the second floor.
+~
+D UP 23691 0 0
+~
+The creaky staircase leads upwards along the western wall, revealing the
+dimly lit second floor.
+~
+D DOWN 0 0 0
+~
+The floor in the immediate area has amazingly been kept clean.
+~
+#23687
+Inside the Common Room~
+Pinned between the bar and the staircase, the local area doesn't have much
+happening. A few patrons quietly sip their drinks, or eat a warm meal in
+silence, occasionaly piping up to call over a barmaid or speak to his or
+her companions. The staircase for the second floor lies west, resting
+against the wall, while in the opposing direction sits the old bar. More
+tables can be seen to the south, holding more customers than not.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A sturdy wall, made of a pine wood rests here, markings of all kinds etched
+and stained into the polished wood.
+~
+D EAST 23688 0 0
+~
+To the east, the pride and joy of the Inn, the bar rests here. The barkeep
+seems busy filling cups or glasses or some such.
+~
+D SOUTH 23682 0 0
+~
+The scene to the south seems calm, as opposed to the eastern part. A few
+tables are occupied by a few groups of adventurers and some individuals,
+all scattered about.
+~
+D WEST 23686 0 0
+~
+A creaky staircase climbs the distant western wall to the second floor,
+bearing passage to all who wish it.
+~
+D UP 0 0 0
+~
+The creaky staircase leads upwards along the western wall, revealing the
+dimly lit second floor.
+~
+D DOWN 0 0 0
+~
+The floor in the immediate area has amazingly been kept clean. Perhaps it's
+because it's so close to the bar.
+~
+#23688
+The Bar~
+A large wooden bar sits here, a few patrons seated nearby at tables or
+right up next to the bar on sturdy wooden stools. A few barmaids with trays
+walk up to the bar to gather a few things to fill their trays with, only to
+disperse back into the crowd. The pungent smell of ale and whiskey hangs in
+the air, giving the area it's own aromatic aura. Directly east of here lies
+a closed off portion, while to the west, a set of stairs lead to the second
+floor. Directly south is the entrance to the building.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A large mirror over looks the bar, peering between shelves of liquor of all
+types and flavors.
+~
+D EAST 23689 0 0
+~
+Surprisingly, there aren't any tables in this direction. There is, however,
+the entrance to the kitchen, while past that lies the private dining area.
+~
+D SOUTH 23683 0 0
+~
+The entrance to the place can be seen in the far south, while in between
+here and there a great amount of tables can be seen.
+~
+D WEST 23687 0 0
+~
+Off in the distance, you see the creaky staircase that gives the only
+public access to upstairs.
+~
+D UP 0 0 0
+~
+The creaky staircase leads upwards along the western wall, revealing the
+dimly lit second floor.
+~
+D DOWN 0 0 0
+~
+The floor in the immediate area has amazingly been kept clean.
+~
+#23689
+Inside the Common Room~
+From this vantage point of the room, you can almost see all of the bustling
+activity. Loud calls for a mug of ale to be refilled echo through this
+large room, but nothing matches the loud hollers of of the men gambling
+away their savings towards the east. A bit to the west, you can see a well
+tended bar, while to the southwest is a set of doors that lead outside. To
+the far west and slightly south are a few tables to relax and enjoy a good
+drink from, while past those a rickety stage has temporarily been put up
+for entertainment. Directly east of here, lies a enclosed area where a few
+patrons can go to enjoy a quiet meal or drink.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23699 0 0
+~
+The entrance to the kitchen lies here, though access is only allowed if
+you're either planning to serve the tables or tend to the bar.
+~
+D EAST 23690 A 0
+~
+A large, thick wall contains a door to the private dining room. The old
+wood seems older than the rest, though occassionaly a newer piece has
+replaced a portion that just couldn't stand up to the rough conditions.
+~
+D SOUTH 23684 0 0
+~
+A great deal of tables have been scattered about, some holding patrons of
+the inn, others waiting patiently for their turn.
+~
+D WEST 23688 0 0
+~
+The bar lies west of here,
+~
+D UP 0 0 0
+~
+The creaky staircase leads upwards along the western wall, revealing the
+dimly lit second floor.
+~
+D DOWN 0 0 0
+~
+The floor in the immediate area has amazingly been kept clean.
+~
+#23690
+Private dining area~
+A small enclosed area has been barred off from the rest of the main room,
+to allow the a few well paying customers a quiet area for a decent meal. A
+long oak table sits in the center of the room, surrounded by large, sturdy
+oaken chairs. Lining the walls are various pictures, pertaining to random
+outdoors scenes.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A wall of fine wood protects the interior from the harsh elements of nature,
+and makes a fine holding spot for a few lovely pictures depicting the
+beauty of the outdoors.
+~
+D EAST 0 0 0
+~
+A large stone fireplace rests against the wall, lit when the weather
+permits.
+~
+D SOUTH 23685 A 0
+door~
+A fairly thick oak door rests lodged in a frame of old wood, keeping the
+outer room seperate from this with great ease.
+~
+D WEST 23689 A 0
+door~
+A fairly thick oak door rests lodged in a frame of old wood, keeping the
+outer room seperate from this with great ease.
+~
+D UP 0 0 0
+~
+A fairly well polished ceiling reflects the light fairly well, allowing the
+room to illuminate more.
+~
+D DOWN 0 0 0
+~
+A large carpet covers the floor, showing a few exotic animals of some sort
+outlined by an almost hypnotic border.
+~
+E picture stream~
+This is a very well painted picture depicting a forest with a steam slicing
+through a few trees. You can almost smell the faint scent of pine from
+viewing this picture.
+~
+E picture forest~
+A serene picture of a lightly sparsed forest set during dusk, the greens of
+the trees blend very well with the oranges and pinks of the setting sun.
+~
+E picture mountain cim~
+This picture is of a calm setting of Mount Cim in a cool, crisp morning.
+~
+#23691
+Second Floor Stairwell~
+At the pinnacle of the stairwell, the creaky old staircase sprawls out to
+become the second floor, while the base releases to become the first floor.
+The narrow hallway leads to the south, stopping abruptly and veering east.
+A few pictures hang on the walls, decorating the bland walls as best as
+they can.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A few generic pictures hang about on the walls, trying to spice up a fairly
+dull setting.
+~
+D EAST 0 0 0
+~
+A few generic pictures hang about on the walls, trying to spice up a fairly
+dull setting.
+~
+D SOUTH 23692 0 0
+~
+The hallway continues on its path, but comes to an abrupt halt and veers
+eastward.
+~
+D WEST 0 0 0
+~
+A few generic pictures hang about on the walls, trying to spice up a fairly
+dull setting.
+~
+D UP 0 0 0
+~
+The wood looks to be original, mostly. In some spots a few pieces have been
+replaced, while a few places have seem a bit of water damage.
+~
+D DOWN 23686 0 0
+~
+The hypnotizing carpenting lines the floor, and continues its coverage
+along the hallway southward. A thin gold border with intricate designs
+outlines the portion of a dull purple in color.
+~
+#23692
+Second Floor Hallway~
+The narrow hallway stops its pathway south and turns eastward, revealing a
+much longer passageway. A few doors can be seen lining the walls to the
+north and south, while one on the far eastern wall where the hallway comes
+to another end. Towards the north, the stairway leading to the second floor
+can be noticed. A few pictures line the walls occasionally, overlaying some
+expensive looking wallpaper.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23691 0 0
+~
+A small opening in the floor a bit to the north reveals a staircase
+leading downwards.
+~
+D EAST 23694 0 0
+~
+The hallway slowly tredges onward towards the east, revealing a few doors
+to the available rooms of the inn. Far in the near distance, the hallway
+ends its journey.
+~
+D SOUTH 0 0 0
+~
+A shape of a rectangle of brighter wallpaper wall shows where a picture
+once hung on the wall.
+~
+D WEST 0 0 0
+~
+The wall seems fairly old, but sturdy. A small section of the wall has been
+boarded up where a window might have been.
+~
+D UP 0 0 0
+~
+The wood looks to be original, mostly. In some spots a few pieces have been
+replaced, while a few places have seem a bit of water damage.
+~
+D DOWN 0 0 0
+~
+The hypnotizing carpenting lines the floor, and continues its coverage
+along the hallway southward. A thin gold border with intricate designs
+outlines the portion of a dull purple in color.
+~
+#23693
+A cozy room~
+This cozy little room holds the basics of a normal inn room: a bed with a
+few blankets and a down pillow, a washstand and mirror, a small wooden
+chair and a few pegs to hang your cloak and other assorted items on. A
+small fireplace has been set into the eastern wall; a few fresh logs have
+been set both inside the fireplace and set in the woodrack nearby. A few
+small tapestries have been placed decoratively on the walls, depecting a
+few animals in a outdoors setting. The thick wooden door lies to the south,
+the only obvious exit.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A window overlooks the SOMETHING HERE BECAUSE I DON'T KNOW WHAT'S NEAR HERE.
+~
+D EAST 0 0 0
+~
+A small fireplace has been built into the eastern wall, very useful on cold
+nights. A small woodrack sits just next to it, holding a few logs for the
+fireplace.
+~
+D SOUTH 23694 ABC 23682
+~
+A sturdy door blocks the intrusion of people in the hallway. A small slit
+has been cut into the door, but covered with another piece of wood.
+~
+D WEST 0 0 0
+~
+A large tapestry resides above the bed, showing a few deer being stalked
+by a pack of wolves.
+~
+D UP 0 0 0
+~
+The ceiling looks in fair condition, though in some spots new boards have
+replaced the old.
+~
+D DOWN 0 0 0
+~
+A large carpet covers the entire floor, an intricate design being the
+border while in the middle multiple diamond shapes intertwine with each
+other to form a complex larger diamond.
+~
+#23694
+The Upstairs Hallway~
+Running both east and west, this hallway would be almost pitch black if it
+weren't for a pair of burning oil lamps straddling the wall every few feet.
+An almost hypnotic carpet design creeps along the floor, adding a dazzling
+brilliance to this otherwise dull passage. A pair of doors lie both to the
+north and to the south of the walkway, blocking passage to the respectable
+rooms of the inn. Off into the near east, another set of doors rest in the
+wall, as well as the ending of the hallway, while to the west the hall
+veers north and out of sight.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23693 ABC 23682
+door~
+A solid looking door bars entrance to the first room of the inn.
+~
+D EAST 23697 0 0
+~
+The long hallway continues it's journey, straddled with a door and lantern
+on both the north and south side, and comes to an end just east of here.
+~
+D SOUTH 23695 ABC 23683
+door~
+A solid looking door bars entrance to the second room of the inn.
+~
+D WEST 23692 0 0
+~
+The long hallway continues it's journey, and veers a north just west of
+here.
+~
+D UP 0 0 0
+~
+The wood looks to be original, mostly. In some spots a few pieces have been
+replaced, while a few places have seem a bit of water damage.
+~
+D DOWN 0 0 0
+~
+The hypnotizing carpenting lines the floor, and continues its coverage
+along the hallway both east and west. A thin gold border with intricate
+designs outlines the portion of a dull purple in color.
+~
+#23695
+A cozy room~
+This comfortable little room is supplied with everything needed for a
+decent nights stay. A small fireplace to fend off the brisk, cold mornings
+rests in the eastern wall. A few small logs can be found inside the
+fireplace, as well as a small wood rack off to the side, supplied by the
+inn free of charge. A small wash and mirror stand lies opposite of the
+fireplace, against the western wall. A few small pegs have been driven into
+the wall next to the doorway, an ample spot to hang a cloak for the night.
+A door lies in the northern wall, the only exit noticeable in the room.
+
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23694 ABC 23683
+door~
+A sturdy door blocks the intrusion of people in the hallway. A small slit
+has been cut into the door, but covered with another piece of wood.
+~
+D EAST 0 0 0
+~
+A small fireplace has been built into the eastern wall, very useful on cold
+nights. A small woodrack sits just next to it, holding a few logs for the
+fireplace.
+~
+D SOUTH 0 0 0
+~
+A window overlooks the SOMETHING HERE BECAUSE I DON'T KNOW WHAT'S NEAR HERE.
+~
+D WEST 0 0 0
+~
+A large tapestry resides above the bed, showing an young elven woman
+tending to an older man who's been badly burned and cut.
+~
+D UP 0 0 0
+~
+The ceiling looks in fair condition, though in some spots new boards have
+replaced the old.
+~
+D DOWN 0 0 0
+~
+A large carpet covers the entire floor, an intricate design being the
+border while in the middle multiple square shapes intertwine with each
+other to form a complex larger square.
+~
+#23696
+A cozy room~
+This cozy little room holds the basics of a normal inn room: a bed with a
+few blankets and a down pillow, a washstand and mirror, a small wooden
+chair and a few pegs to hang your cloak and other assorted items on. A few
+small tapestries have been placed decoratively on the walls, depecting a
+few animals in a outdoors setting. A small fireplace has been set into the
+western wall; a few fresh logs have been set both inside the fireplace and
+set in the woodrack nearby. The thick wooden door lies to the south, the
+only obvious exit
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A window overlooks the SOMETHING HERE BECAUSE I DON'T KNOW WHAT'S NEAR HERE.
+~
+D EAST 0 0 0
+~
+A small fireplace has been built into the eastern wall, very useful on cold
+nights. A small woodrack sits just next to it, holding a few logs for the
+fireplace.
+~
+D SOUTH 23697 ABC 23684
+door~
+A sturdy door blocks the intrusion of people in the hallway. A small slit
+has been cut into the door, but covered with another piece of wood.
+~
+D WEST 0 0 0
+~
+A large tapestry resides above the bed, displaying grand Mountain Cim on a
+cool brisk spring morning.
+~
+D UP 0 0 0
+~
+The ceiling looks in fair condition, though in some spots new boards have
+replaced the old.
+~
+D DOWN 0 0 0
+~
+A large carpet covers the entire floor, an intricate design being the
+border while in the middle multiple rectangle shapes intertwine with each
+other to form a complex larger rectangle.
+~
+#23697
+The Upstairs Hallway~
+Coming to a dead end, the hallway has completed it's task of supplying
+ample walkway to all of the available rooms of the Common Room Inn. The two
+remaining rooms lie to the north as well to the south, while a few more of
+the rooms rest along the western portion of the walkway. The carpeting has
+an almost hypnotic feel to the patterns woven into it; a very dedicated
+hand was used to make it, as well as well paid, of course. A few pictures
+line the walls inbetween the oil burning lamps, some seeming more valuable
+than the rest, but all securely bolted down.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23696 ABC 23684
+door~
+A solid looking door bars entrance to the third room of the inn.
+~
+D SOUTH 23698 ABC 23685
+door~
+A solid looking door bars entrance to the fourth room of the inn.
+~
+D WEST 23694 0 0
+~
+The long hallway continues it's journey, straddled with a door and lantern
+on both the north and south side. A bit further than the doors, the hall
+juts north and out of sight.
+~
+D UP 0 0 0
+~
+The wood looks to be original, mostly. In some spots a few pieces have been
+replaced, while a few places have seem a bit of water damage.
+~
+D DOWN 0 0 0
+~
+The hypnotizing carpenting lines the floor, and continues its coverage
+along the hallway both east and west. A thin gold border with intricate
+designs outlines the portion of a dull purple in color.
+~
+#23698
+A cozy room~
+This comfortable little room is supplied with everything needed for a
+decent nights stay. A small fireplace to fend off the brisk, cold mornings
+rests in the western wall. A few small logs can be found inside the
+fireplace, as well as a small wood rack off to the side, supplied by the
+inn free of charge. A small wash and mirror stand lies opposite of the
+fireplace, against the eastern wall. A few small pegs have been driven into
+the wall next to the doorway, an ample spot to hang a cloak for the night.
+A door lies in the northern wall, the only exit noticeable in the room.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23697 ABC 23685
+door~
+A sturdy door blocks the intrusion of people in the hallway. A small slit
+has been cut into the door, but covered with another piece of wood.
+~
+D EAST 0 0 0
+~
+A large tapestry resides above the bed, describing a large battle between
+dwarves and elves on a fairly open plain.
+~
+D SOUTH 0 0 0
+~
+A window overlooks the SOMETHING HERE BECAUSE I DON'T KNOW WHAT'S NEAR HERE.
+~
+D WEST 0 0 0
+~
+A small fireplace has been built into the western wall, very useful on cold
+nights. A small woodrack sits just next to it, holding a few logs for the
+fireplace.
+~
+D UP 0 0 0
+~
+The ceiling looks in fair condition, though in some spots new boards have
+replaced the old.
+~
+D DOWN 0 0 0
+~
+A large carpet covers the entire floor, an intricate design being the
+border while in the middle multiple triangle shapes intertwine with each
+other to form a complex larger triangle.
+~
+#23699
+The Kitchen~
+A harsh smell of cooking meats and breads fill the air with their unique
+aromas all about the area. The intense heat is caused by the lit cooking
+stoves lining the walls. Dishes of all assortments line the shelves, some
+waiting to be used, some already that already have been.
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 23689 0 0
+~
+~
+D UP 0 0 0
+~
+~
+D DOWN 0 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 23693 TO 23676 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23676
+OBJECT 23688 TO 23676
+OBJECT 23686 TO 23677
+MOB 23683 TO 23679 GLIMIT 1 LLIMIT 1
+MOB 23692 TO 23679 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23679
+MOB 23689 TO 23680 GLIMIT 1 LLIMIT 1
+MOB 23690 TO 23680 GLIMIT 1 LLIMIT 1
+MOB 23694 TO 23681 GLIMIT 1 LLIMIT 1
+MOB 23695 TO 23681 GLIMIT 1 LLIMIT 1
+MOB 23696 TO 23681 GLIMIT 1 LLIMIT 1
+MOB 23697 TO 23681 GLIMIT 1 LLIMIT 1
+MOB 23687 TO 23682 GLIMIT 1 LLIMIT 1
+MOB 23688 TO 23682 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23682
+MOB 23685 TO 23683 GLIMIT 1 LLIMIT 1
+MOB 23686 TO 23683 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23683
+MOB 23682 TO 23684 GLIMIT 1 LLIMIT 1
+MOB 23684 TO 23684 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23684
+MOB 23680 TO 23685 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23687
+MOB 23678 TO 23688 GLIMIT 1 LLIMIT 1
+GIVE 23678
+GIVE 23677
+GIVE 23676
+GIVE 23675
+MOB 23679 TO 23688 GLIMIT 1 LLIMIT 1
+MOB 23676 TO 23688 GLIMIT 1 LLIMIT 1
+MOB 23677 TO 23689 GLIMIT 1 LLIMIT 1
+OBJECT 23686 TO 23689
+OBJECT 23686 TO 23690
+OBJECT 23687 TO 23693
+OBJECT 23687 TO 23695
+MOB 23691 TO 23695 GLIMIT 1 LLIMIT 1
+OBJECT 23687 TO 23696
+OBJECT 23687 TO 23698
+MOB 23681 TO 23699 GLIMIT 1 LLIMIT 1
+GIVE 23679
+GIVE 23680
+GIVE 23681
+MOB 23675 TO 23699 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 23681 greet_prog greet_prog_profteacher
+M 23691 greet_prog greet_prog_profteacher
+M 23693 greet_prog greet_prog_profteacher
+END
+#SPECS
+END
+#$

@@ -1,0 +1,258 @@
+#AREA
+aetudgroad.are~
+Aetullan-Udgaard Road~
+RS~
+1 51
+24430 24449
+normal
+temperate
+0
+1
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24430
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24431 0 0
+~
+~
+D SOUTH 3620 0 0
+~
+~
+D WEST 3619 0 0
+~
+~
+#24431
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24432 0 0
+~
+~
+D SOUTH 24430 0 0
+~
+~
+#24432
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24433 0 0
+~
+~
+D SOUTH 24431 0 0
+~
+~
+#24433
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24434 0 0
+~
+~
+D SOUTH 24432 0 0
+~
+~
+#24434
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24435 0 0
+~
+~
+D SOUTH 24433 0 0
+~
+~
+#24435
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24436 0 0
+~
+~
+D SOUTH 24434 0 0
+~
+~
+#24436
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D EAST 24450 0 0
+~
+~
+D SOUTH 24435 0 0
+~
+~
+D WEST 24437 0 0
+~
+~
+#24437
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24438 0 0
+~
+~
+D EAST 24436 0 0
+~
+~
+#24438
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24439 0 0
+~
+~
+D SOUTH 24437 0 0
+~
+~
+#24439
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24440 0 0
+~
+~
+D SOUTH 24438 0 0
+~
+~
+#24440
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24441 0 0
+~
+~
+D SOUTH 24439 0 0
+~
+~
+#24441
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24442 0 0
+~
+~
+D SOUTH 24440 0 0
+~
+~
+#24442
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24443 0 0
+~
+~
+D SOUTH 24441 0 0
+~
+~
+#24443
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24444 0 0
+~
+~
+D SOUTH 24442 0 0
+~
+~
+#24444
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D SOUTH 24443 0 0
+~
+~
+D WEST 24445 0 0
+~
+~
+#24445
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24446 0 0
+~
+~
+D EAST 24444 0 0
+~
+~
+#24446
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24447 0 0
+~
+~
+D SOUTH 24445 0 0
+~
+~
+#24447
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24448 0 0
+~
+~
+D SOUTH 24446 0 0
+~
+~
+#24448
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D NORTH 24449 0 0
+~
+~
+D SOUTH 24447 0 0
+~
+~
+#24449
+On the Road~
+The road from Aetullan to Udgaard   
+~
+road
+D SOUTH 24448 0 0
+~
+~
+D WEST 24426 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

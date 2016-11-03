@@ -1,0 +1,476 @@
+#AREA
+eluvielshrine.are~
+Eluviel Shrine~
+Eluviel~
+1 51
+111 119
+unopened
+none
+0
+1
+Eluviel~
+
+#MOBS
+#111
+ward mob~
+a ward mob~
+Ward mob is here.
+~
+I'm a ward mob.
+~
+0 111 100 human~
+52 25d10+2750 1d1+99 45 100 frbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WARD_MOB
+B tattoo EQUALTO 112 114 ECHO The glass solidifies as you approach it.~
+The glass solidifies as $n approches it.~
+#112
+ward mob~
+a ward mob~
+Ward mob is here.
+~
+I'm a ward mob.
+~
+0 112 100 human~
+52 25d10+2750 1d1+99 45 100 frbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WARD_MOB
+#0
+
+
+
+#OBJS
+#111
+silver altar~
+a writhing silver altar~
+An altar of shifting metallic liquid crouches here, drawing your attention.~
+altar
+silver~
+0 0 0 0 0
+0 0 0 P
+LIMIT 1
+E silver altar~
+The writhing silver seems to move at a constant pace, never stopping to
+solidify at any point.  In some places it even bubbles as if the surface
+is so hot that it boils.
+~
+
+#112
+tattoo auburn oak leaf~
+bla~
+Blah~
+weapon
+flesh~
+flail 0 0 none 0
+53 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY DAMROLL 10
+APPLY NONE 10
+LIMIT 0
+E tattoo auburn oak leaf~
+The sceptre seems to swirl like liquid against your skin, sending
+chills up your spine.  It pulses occasionally as if to draw your
+attention.
+~
+
+#113
+pool still water~
+a pool of still water~
+A pool filled with motionless water beckons you to look inside.~
+fountain
+silver~
+100000 100000 'water' 0 0
+0 0 0 P
+LIMIT 1
+E pool still water~
+Staring into the clear, rippleless pool, you get lost in your own
+reflection.  You wonder if it's safe to drink.
+~
+
+#114
+throne silver ivory~
+a large silver throne~
+A large throne fashioned from silver and ivory looms here threateningly.~
+furniture
+silver~
+1 1000 Q 100 100
+0 0 0 P
+LIMIT 1
+E throne silver ivory~
+A few soft, velvet pillows have been tossed into the seat of this
+large throne.  The arms are padded with fur, making lounging in it
+much more comfortable.  The fur and pillows are of small comfort to
+you, however, as the towering object itself instills a sense of pure
+terror.
+~
+
+#115
+painted statue~
+a painted statue~
+A statue of the Goddess Ilanya looks down on you from atop its pedestal.~
+treasure
+glass~
+0 0 0 0 0
+0 0 0 P
+LIMIT 1
+E painted statue~
+The statue looks so lifelike, it's scary.  From head to toe, the statue
+is a perfect representation of the Goddess and if you didn't know better,
+you'd think it really was her.  The statue's eyes are the most disturbing
+part.
+~
+
+#119
+Pain Alyssa Robe~
+a robe soaked in the blood of a drow~
+A dark robe soaked in the blood of a drow~
+armor
+cloth~
+110 87 101 45 0
+55 0 0 P
+WEAR TAKE
+WEAR BODY
+RESTRICT DROW_ONLY
+ITEM GLOW
+APPLY AC 43
+APPLY MOVE 38
+APPLY HITROLL 16
+APPLY MANA 245
+APPLY DAMROLL 15
+APPLY HP 200
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#111
+A Quiet Path Along the River~
+Thick trunks and branches alive with brightly colored leaves make the
+river barely visible from the seclusion of the trail.  Between branches
+and leaves, a cloudy fall sky peers down, keeping a silent watch over
+its earthly children.  Now and then the dark, fierce water of the river
+can be spotted as it rushes on its chosen course.  The trail takes a
+slight incline before stopping at a break in the treeline.
+~
+forest
+ROOM LAW
+D NORTH 112 0 0
+~
+A few large rocks jut out into the dark waters of the river.
+~
+D EAST 113 0 0
+~
+The trail leads away from the river.
+~
+D SOUTH 0 0 0
+~
+The bright colors of autumn leave you with a sense of peace.
+~
+D WEST 0 0 0
+~
+The bright colors of autumn leave you with a sense of peace.
+~
+D UP 0 0 0
+~
+The bright colors of autumn leave you with a sense of peace.
+~
+D DOWN 0 0 0
+~
+A thick blanket of leaves covers the trail beneath.
+~
+OWNER Eluviel~
+#112
+On a Large Rock in the River~
+The smooth, granite rock has been beaten down by the eternal passage
+of the river, yet rises far enough above the water level to provide a
+place of meditation.  Though the dark waters course past with a fierce
+and angry passion, the river brings solace to those who come in search
+of answers.  A slight breeze brings the scent of autumn, chilled and
+refreshing.
+~
+forest
+ROOM NO_MOB
+ROOM LAW
+D NORTH 0 0 0
+~
+The river lashes out at all in its wake.
+~
+D EAST 0 0 0
+~
+The river lashes out at all in its wake.
+~
+D SOUTH 0 0 0
+~
+The autumn color of the shoreline beckons.
+~
+D WEST 0 0 0
+~
+The river lashes out at all in its wake.
+~
+D UP 0 0 0
+~
+A dispassionate grey sky watches silently overhead.
+~
+D DOWN 0 0 0
+~
+The smooth grey surface of the granite battles against the river.
+~
+OWNER Eluviel~
+#113
+A Path Through the Grove~
+Colorful leaves hiss in protest as the chilled fingers of the autumn
+wind plucks them from their homes in the treetops.  The sound of swiftly
+moving water dances on the breeze as well, as it winds around the trunks
+of the tower oak trees.  Crisp grass peeks through a blanket of orange,
+red and golden leaves, its own green color paled by the cooler weather.
+~
+forest
+ROOM LAW
+D NORTH 0 0 0
+~
+The bright colors of autumn leave you with a sense of peace.
+~
+D EAST 0 0 0
+~
+The bright colors of autumn leave you with a sense of peace.
+~
+D SOUTH 114 0 0
+~
+The heart of the timeless forest beckons.
+~
+D WEST 111 0 0
+~
+A quiet trail leads toward the river.
+~
+D UP 0 0 0
+~
+The ceiling is made from a solid stretch of silver.
+~
+D DOWN 0 0 0
+~
+Square, polished stones are fitted together into the floor.
+~
+OWNER Eluviel~
+#114
+A Forest of Eternal Autumn~
+A perfectly detailed, painted statue of the Goddess Ilanya stands on
+a pedestal in the center of the room.  The floor and ceiling take on a
+silvery liquid appearance but are completely solid to the touch.  No
+candles or torches shed light in this silver sanctuary yet the source
+must reside somewhere as you see actual beams being reflected from one
+surface to the next.  A slight, chilling breeze ruffles your clothing.
+~
+forest
+ROOM LAW
+D NORTH 113 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D EAST 117 0 0
+~
+You see an archway leading to a darkened room.
+~
+D SOUTH 116 0 0
+~
+The glass seems to shimmer, its surface not fully solid.
+~
+D WEST 115 0 0
+~
+You see a pool beyond the archway.
+~
+D UP 0 0 0
+~
+The ceiling is made from a solid stretch of silver.
+~
+D DOWN 0 0 0
+~
+The floor is made from a solid stretch of silver.
+~
+OWNER Eluviel~
+#115
+A Peaceful Clearing~
+Compared to the glaring brightness of the rest of the shrine, this
+place is a pit of blackness.  Try as you might, your eyes refuse to
+adjust to the surroundings.  By feeling along the walls you can find
+that the room is circular and empty with the exception a pit in the
+center.  The rim of the pit feels warm to the touch.
+~
+forest
+ROOM LAW
+D NORTH 0 0 0
+~
+You see nothing but darkness.
+~
+D EAST 114 0 0
+~
+You see nothing but darkness.
+~
+D SOUTH 0 0 0
+~
+You see nothing but darkness.
+~
+D WEST 0 0 0
+~
+It looks lighter in this direction.
+~
+D UP 0 0 0
+~
+You see nothing but darkness.
+~
+D DOWN 0 0 0
+~
+You see nothing but darkness.
+~
+OWNER Eluviel~
+#116
+Before a Great Oak Tree~
+A large, ornate throne made of silver and ivory looms down from a
+raised platform at the far end of this lengthy room.  A red velvet
+carpet runs from one end and stops at the foot of the throne.  Some
+soft pillows rest luxuriously in the throne itself.  A candelabra
+set with white candles burns on either side of the throne.
+~
+forest
+ROOM LAW
+D NORTH 114 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D EAST 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D SOUTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D WEST 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D UP 0 0 0
+~
+The ceiling is made from a solid stretch of silver.
+~
+D DOWN 0 0 0
+~
+A length of red carpeting covers the silvery floor.
+~
+OWNER Eluviel~
+#117
+A Lapse in Time~
+DESC
+~
+forest
+D NORTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D EAST 118 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D SOUTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D WEST 114 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D UP 0 0 0
+~
+The ceiling is made from a solid stretch of silver.
+~
+D DOWN 0 0 0
+~
+A length of red carpeting covers the silvery floor.
+~
+#118
+A Secluded Path~
+DESC
+~
+forest
+D NORTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D EAST 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D SOUTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D WEST 117 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D UP 0 0 0
+~
+The ceiling is made from a solid stretch of silver.
+~
+D DOWN 0 0 0
+~
+A length of red carpeting covers the silvery floor.
+~
+#119
+In the Sheltering Arms of a Great Oak Tree~
+DESC
+~
+forest
+ROOM NO_MOB
+D NORTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D EAST 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D SOUTH 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D WEST 0 0 0
+~
+You find yourself staring at your own reflected image.
+~
+D UP 0 0 0
+~
+The ceiling is made from a solid stretch of silver.
+~
+D DOWN 0 0 0
+~
+A length of red carpeting covers the silvery floor.
+~
+#0
+
+
+
+#RESETS
+OBJECT 111 TO 111
+OBJECT 113 TO 113
+OBJECT 115 TO 114
+OBJECT 114 TO 116
+S
+
+#IMPROGS
+M 112 pulse_prog pulse_prog_being_watched
+END
+#SPECS
+END
+#$

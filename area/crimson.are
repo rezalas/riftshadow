@@ -1,0 +1,3928 @@
+#AREA
+crimson.are~
+The Crimson Sea~
+Sheil~
+1 51
+14200 14299
+normal
+temperate
+0
+1
+Sheil Zethus Waekath~
+
+#MOBS
+#14200
+guardian chief~
+the Island Guardian~
+A savage Guardian is here wearing an elaborate headdress.
+~
+This is the guardian of this small island.  He is quite a large man.
+For the most part he is dressed in very simple clothing, except for the
+elaborate headdress he wears.  You aren't really sure why he wears it.
+Maybe it just makes him feel important.
+~
+0 14200 100 human~
+8 4d8+97 1d7+2 4 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+AFF SANCTUARY
+AFF INFRARED
+AFF DARK_VISION
+VUL MENTAL
+VUL DISEASE
+CLASS warrior none none 
+#14201
+tribal guard~
+a small tribal guard~
+A small guard stands here, protecting the island guardian.
+~
+The is man is watching the area with vigilance and, unlike many guardsmen,
+seems to actually be doing it with purpose. For this guard is here to
+protect the island guardian with his life.  That is what he does, and he
+will die for it.
+~
+0 14200 100 human~
+5 2d8+38 1d6+1 2 100 chop
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+AFF INFRARED
+AFF DARK_VISION
+VUL MENTAL
+CLASS warrior none none 
+#14202
+tribesman man~
+a small tribesman~
+A rather plain looking tribesman is standing here.
+~
+This is a simple man who inhabits this island.  He has very dark skin, as
+though he doesn't get much protection from the sun.  He is very slight and
+you can see several of his ribs.  He wears very little in the way of
+clothing.
+~
+0 0 100 human~
+2 1d8+6 1d5+0 1 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT STAY_AREA
+OFF DODGE
+AFF DARK_VISION
+VUL MENTAL
+VUL DISEASE
+#14203
+serpent blue sea~
+a large blue sea serpent~
+The blue sea serpent is here looking very dangerous.
+~
+This serpent's head is taller than you.  His large body sits coiled up on
+the ground.  His eyes dart back and forth, but then center on you.  He is
+annoyed at your disturbance, but realizing that you're no danger to him, he
+ignores you.
+~
+1000 0 100 dragon~
+30 15d8+1364 4d6+8 15 100 drowning
+0 0 0 0
+standing male none
+c c giant
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF FAST
+AFF DETECT_INVIS
+AFF SANCTUARY
+AFF CURSE
+AFF WATERBREATH
+IMM SUMMON
+RES WEAPON
+RES COLD
+VUL LIGHTNING
+#14204
+rabbit~
+a rabbit~
+A rabbit hops along, unaware of your presence.
+~
+This is a fairly small rabbit.  It looks to be very thin and under
+nourished.  Its fur is a light brown color with smaller patches
+of darker fur.  It has a small white tail and its ears are trying
+to stand up straight but they don't quite.  His ears twitch as you
+approach.  Might want to be quite before you scare it off.
+~
+0 0 100 rabbit~
+2 1d8+6 1d5+0 0 100 scratch
+0 0 0 0
+standing either none
+0 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14205
+duck~
+a duck~
+A duck is here, quacking happily.
+~
+It is rather odd to sea a duck sitting out in a large body of water
+like this.  It seems to be surviving well.  It occasionally tips up
+and goes underwater looking for food.  Its plumage is a rather drab
+brown color except at the tips of his wings, which have a slightly blue
+color.
+~
+0 0 100 unique~
+2 1d8+6 1d5+0 0 100 peck
+0 0 0 0
+sitting either none
+AGW 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14206
+mako shark~
+a mako shark~
+A slender, fast swimming shark swims for your leg!
+~
+This is not a large shark by any means.  Even so it is still a shark.
+This shark is swimming closer to the bottom of the sea darting back
+and forth around a small area of the sea floor.  Its body is a light
+gray-brown color and it has some darker strips running up its back.
+Occasionally the shark swims toward you and you are able to see its
+many rows of teeth.  Approach this shark carefully unless you don't
+like your limbs.
+~
+0 0 100 fish~
+20 10d8+604 2d6+6 10 100 bite
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14207
+gigantic catfish fish~
+a gigantic catfish~
+A gigantic catfish swims near the surface of the sea.
+~
+Black and slimy looking, this bottom feeding fish has come near the surface
+to investigate your passage.  Long, spike-like whiskers frame a wide mouth
+that is perfectly capable of swallowing pretty much anything you could
+drop.  One of the largest catfish you have ever seen, this monster looks
+tough enough to put up quite a fight should you decide to try for a fish
+dinner.
+~
+0 0 100 fish~
+15 7d8+339 2d6+3 8 100 suction
+0 0 0 0
+sitting either none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14208
+eel~
+an eel~
+An eel is here swimming in the currents.
+~
+It appears vulnerable in comparison to its harsh environment.  Ignoring the
+incredibly strong current, it seems to hover here in the water effortlessly
+by waving its body with a mesmerizing rhythm.  Its slimy skin is a dull
+green hue.  Two small black points lie where eyes should, you doubt these
+atrophied organs do the creature any good in this environment.  Long
+whisker-like feelers stretch out in front of it, constantly probing its
+dark world.
+~
+0 0 100 fish~
+15 7d8+339 2d6+3 8 100 suction
+0 0 0 0
+sitting either none
+XY 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14209
+grackle bird~
+a grackle~
+A shadowy grackle bobs here in the water.
+~
+One of the rarest of all Shalaran water-fowl, this grackle is supposedly
+quite a catch and considered a rare delicacy in Cimar.  Speckled red
+feathers cover its ungainly body completely, helping to make it nearly
+invisible as it dozes here in the sea.
+~
+0 0 100 unique~
+10 5d8+151 2d4+2 4 100 peck
+0 0 0 0
+sitting either none
+AGW 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14210
+otter~
+a small otter~
+A small otter is here, swimming in small circles.
+~
+Tiny ears plastered back against a narrow head churn the water as this
+sleek otter swims is circles.  His small paws serve to guide the course he
+makes along the waterway, with a large tail providing most of the
+propulsion.  Rich, dark fur covers his entire body, and his beady eyes look
+you over carefully from an intelligent face.  Gripped in one tiny claw is
+what appears to be the remains of a small fish, a leftover dinner perhaps.
+~
+0 0 100 fish~
+5 2d8+38 1d6+1 2 100 bite
+0 0 0 0
+sitting either none
+0 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#14211
+scorpion tiny~
+a tiny scorpion~
+A tiny scorpion crawls along the ground, snapping its claws.
+~
+Even though this scorpion is small, it is still dangerous.  It is a deep
+black color and it has a shiny outer shell.  Its claws are each almost
+the size of its body.  Its tail curves up to a sharp looking stinger.
+There is a drop of liquid forming on the tip or the stinger.  You don't
+want to go near this scorpion.
+~
+0 0 100 centipede~
+3 1d8+14 1d6+0 0 100 sting
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+RES POISON
+#0
+
+
+
+#OBJS
+#14200
+blue serpent scale torso~
+a blue serpent torso~
+A large blue scale lies here, it looks like you could wear it.~
+armor
+blue dragonscale~
+7 7 7 8 0
+47 40 1500 P
+WEAR TAKE
+WEAR BODY
+APPLY STR 2
+APPLY DAMROLL 1
+LIMIT 0
+E blue serpent scale torso~
+This appears to be the scale of a large creature.  What is amazing is its
+size.  It is nearly two feet tall.  It has a high polish and almost
+sparkles.  There are two small straps attached to the backside to allow
+someone to wear the scale.
+~
+
+#14201
+blue serpent scale armguards~
+some blue serpent armguards~
+A small pair of curved scales lie here.~
+armor
+blue dragonscale~
+8 8 8 8 0
+45 25 1100 P
+WEAR TAKE
+WEAR ARMS
+APPLY STR 2
+LIMIT 0
+E blue serpent scale armguards~
+These scales are small and curved.  There is a strap closing off the open
+end of each scale making it possible for the scales to stay on your arms.
+~
+
+#14202
+blue serpent scale claws~
+some blue serpent claws~
+A large set of blue serpent claws lie here.~
+armor
+blue dragonscale~
+7 8 8 7 0
+45 20 1000 P
+WEAR TAKE
+WEAR HANDS
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+E blue serpent scale claws~
+These claws are very, very large.  One claw will easily cover your whole
+hand.  Each claw comes out to a very sharp point about six inches from
+where your hand would end.
+~
+
+#14203
+blue serpent scale boots~
+some blue serpent boots~
+A set of blue serpent boots lie here.~
+armor
+blue dragonscale~
+8 8 8 8 0
+45 20 1000 P
+WEAR TAKE
+WEAR FEET
+APPLY DEX 1
+APPLY DAMROLL 1
+LIMIT 0
+E blue serpent scale boots~
+This is a very large set of blue boots.  They have been brought to a high
+shine and are slightly iridescent.
+~
+
+#14204
+blue serpent scale shield~
+a blue serpent shield~
+A very large blue scale is sitting here.~
+armor
+blue dragonscale~
+4 4 4 4 0
+46 25 1250 P
+WEAR TAKE
+WEAR SHIELD
+APPLY SBREATH -8
+APPLY DAMROLL 1
+LIMIT 0
+E blue serpent scale shield~
+This is one huge scale.  It is about six feet tall and curved on all of
+its edges.  It has been brought to a high polish.  On the back side it has
+a leather strap that you can slip your arm through.
+~
+
+#14205
+blue serpent scale leggings~
+some blue serpent leggings~
+A set of blue serpent scale leggings lie here.~
+armor
+blue dragonscale~
+9 8 8 9 0
+45 20 1000 P
+WEAR TAKE
+WEAR LEGS
+APPLY DAMROLL 1
+LIMIT 0
+E blue serpent scale leggings~
+Two small curved scales lie here.  They have leather straps crossing their
+back allowing you to wear them on your legs.
+~
+
+#14206
+blue serpent scale helm~
+a blue serpent helmet~
+A blue serpent scale helmet sits here.~
+armor
+blue dragonscale~
+7 7 7 7 0
+47 25 1250 P
+WEAR TAKE
+WEAR HEAD
+APPLY INT 1
+APPLY DAMROLL 1
+LIMIT 0
+E blue serpent scale helm~
+This helmet is very large.  It has thick walls and is rather heavy.  The
+front of the helmet is all cut out allowing you to see.
+~
+
+#14207
+bone headdress feathers~
+an elaborate feathered headdress~
+A large feathered bone headdress.~
+armor
+bone~
+9 9 9 9 0
+48 30 3000 P
+WEAR TAKE
+WEAR HEAD
+APPLY HITROLL 1
+LIMIT 0
+E bone headdress feathers~
+This is a very elaborate headdress.  It is made of the large skull of some
+unknown creature.  The skull has large fangs that would partially cover
+your face if you put it on.  It is decorated with several large colorful
+feathers.
+~
+
+#14208
+leather hardened vest~
+a hardened leather vest~
+A vest made of hardened leather lies here.~
+armor
+hard leather~
+4 4 4 4 0
+45 15 1500 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E leather hardened vest~
+This is a rather plain piece of armor.  Some rather tough leather has been
+hardened into a shape that would make it easy for you to wear.
+~
+
+#14209
+leather hardened leggings~
+some hardened leather leggings~
+A pair of hardened leather leggings.~
+armor
+hard leather~
+3 3 3 3 0
+45 10 1500 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E leather hardened leggings~
+These leggings are made of a dried piece of leather hardened over a form to
+make them fit around your legs.
+~
+
+#14210
+leather hardened armguards~
+some hardened leather armguards~
+Some hardened leather armguards.~
+armor
+hard leather~
+2 2 2 2 0
+45 10 1500 P
+WEAR TAKE
+WEAR ARMS
+LIMIT 0
+E leather hardened armguards~
+These armguards are made of a dried piece of leather hardened over a form
+to make them fit around your arms.
+~
+
+#14211
+leather hardened loincloth~
+a hardened leather loincloth~
+A hardened leather loincloth.~
+armor
+hard leather~
+2 2 2 2 0
+45 8 1200 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+E leather hardened loincloth~
+This is a simple loincloth made out of a piece of leather.  It has a strap
+on one end that you can wrap around your waist to keep it on.
+~
+
+#14212
+leather soft loincloth~
+a leather loincloth~
+A simple leather loincloth.~
+armor
+soft leather~
+2 2 2 2 0
+35 5 500 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+E leather soft loincloth~
+This is a simple loincloth made out of a piece of leather.  It has a strap
+on one end that you can wrap around your waist to keep it on.
+~
+
+#14213
+leather soft leggings~
+some soft leather leggings~
+A pair of soft leather leggings.~
+armor
+soft leather~
+2 2 2 2 0
+35 10 1000 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E leather soft leggings~
+These leggings are made of a dried piece of leather placed over a form to
+make them fit around your legs.
+~
+
+#14214
+stone club bone crusher mace~
+a stone club named 'Bone Crusher'~
+A huge lump of stone in the shape of a club lies here.~
+weapon
+stone~
+mace 7 7 crush 0
+48 30 2000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 3
+E stone club bone crusher mace~
+This is one large chunk of rock.  It is also a very solid piece of rock.
+Whatever you hit with this is going to get hurt.
+~
+
+#14215
+crude wooden wood spear~
+a crude wooden spear~
+A crude spear rests here.~
+weapon
+wood~
+spear 5 5 stab 0
+35 15 1500 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E crude wooden wood spear~
+This is a simple wooden staff.  It appears to be made out of a part of one
+of the small trees from this island.
+~
+
+#14216
+driftwood drift wood~
+a piece of drift wood~
+A piece of drift wood floats here harmlessly.~
+boat
+softwood~
+0 0 0 0 0
+5 5 0 P
+WEAR TAKE
+LIMIT 0
+E driftwood~
+A piece of drift wood floats here harmlessly.
+~
+
+#14217
+red seaweed~
+some red seaweed~
+Some seaweed floats around following the oceans currents.~
+pill
+plant~
+45 'water breathing' 'reserved' 'reserved' 'reserved'
+45 1 0 P
+WEAR TAKE
+LIMIT 0
+E red seaweed~
+Some seaweed floats around following the oceans currents.
+~
+
+#14218
+pouch small~
+a small pouch~
+A small pouch of dust is here.~
+container
+cloth~
+10 0 0 5 50
+1 2 115 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E pouch small~
+A small leather bag filled with dust... it is a deep red color and smells a
+bit odd.
+~
+
+#14219
+dust coral dust~
+some red coral dust~
+A small amount of red coral dust.~
+food
+coral~
+2 2 0 -1 0
+40 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+E dust coral~
+Ground-up red coral, a narcotic which most civilized areas won't tolerate,
+and which is believed in some circles to be a powerful aphrodisiac. It
+is common among many of the islanders of Shalar.
+~
+
+#14220
+leather soft headband~
+a leather headband~
+A headband made of soft leather is here.~
+armor
+soft leather~
+2 2 2 2 0
+34 5 500 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+E leather soft headband~
+This is a simple leather strap that can be worn around your head.
+~
+
+#14221
+bush reddish red~
+a dry, reddish bush~
+A dry yet fruit-laden bush with reddish leaves grows here.~
+container
+plant~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#14222
+white pulpy dark verem fruit~
+a verem fruit~
+A fruit with white skin and a dark, purplish pulp sits here.~
+food
+unknown~
+0 0 0 1 0
+0 0 0 P
+WEAR TAKE
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#14200
+Approaching the Cimar Harbor~
+Just when you wonder if you will ever see civilization again you spot the
+Cimar harbor.  Never in your life have you been so happy to see land.  As
+the harbor approaches you can see the citizens of Cimar busily working.
+You might just survive this journey.
+~
+water
+D NORTH 2652 0 0
+~
+You see the beginning of the Cimar harbor.
+~
+D EAST 14201 0 0
+~
+The Sea continues in this direction
+~
+D SOUTH 14204 0 0
+~
+The sea continues in this direction.
+~
+D WEST 2651 0 0
+~
+The beginning of the Cimar Harbor is seen in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14201
+Near the Shore~
+Large waves crash up against jagged rocks here.  The water swirls around
+as you come close to shore.  Some small pieces of debris float around in
+the water, perhaps from ships that have been smashed on the rocks.  A large
+rock here or there pokes up out of the water making this area very
+treacherous.  Better be careful or you won't make it to shore.
+~
+water
+D NORTH 0 0 0
+~
+The rough waters make passage to the north impossible.
+~
+D EAST 14202 0 0
+~
+The sea continues to the east.
+~
+D SOUTH 14205 0 0
+~
+The sea continues to the south.
+~
+D WEST 14200 0 0
+~
+The sea continues to the west.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14202
+Near the Shore~
+Large waves crash up against jagged rocks here.  The water swirls around
+as you come close to shore.  Some small pieces of debris float around in
+the water, perhaps from ships that have been smashed on the rocks.  A large
+rock here or there pokes up out of the water making this area very
+treacherous.  Better be careful or you won't make it to shore.
+~
+water
+D NORTH 0 0 0
+~
+The rough waves make passage to the north impossible.
+~
+D EAST 0 0 0
+~
+The rough waves make travel to the east impossible.
+~
+D SOUTH 14206 0 0
+~
+The sea continues to the south.
+~
+D WEST 14201 0 0
+~
+The sea continues in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14203
+Approaching the Cimar Harbor~
+Just when you wonder if you will ever see civilization again you spot the
+Cimar harbor.  Never in your life have you been so happy to see land.  As
+the harbor approaches you can see the citizens of Cimar busily working.
+You might just survive this journey.
+~
+water
+D NORTH 2651 0 0
+~
+The Cimar harbor is seen in this direction.
+~
+D EAST 14204 0 0
+~
+The raging crimson waters awaits you in this direction.
+~
+D SOUTH 14210 0 0
+~
+The raging sea awaits you to the south.
+~
+D WEST 2647 0 0
+~
+The harbor of Cimar is to the west of you
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14204
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14200 0 0
+~
+The sea continues to the north.
+~
+D EAST 14205 0 0
+~
+The sea continues in this direction.
+~
+D SOUTH 14211 0 0
+~
+The raging sea continues to the south
+~
+D WEST 14203 0 0
+~
+Off in the distance you see what looks to be land.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14205
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14201 0 0
+~
+The sea continues to swell in this direction
+~
+D EAST 14206 0 0
+~
+Sea ... nothing but sea.
+~
+D SOUTH 14212 0 0
+~
+The sea continues in this direction
+~
+D WEST 14204 0 0
+~
+Water is the only thing that you can see in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14206
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14202 0 0
+~
+You see rough surf crashing against large rocks.
+~
+D EAST 14207 0 0
+~
+Waves roll on in this direction.
+~
+D SOUTH 14213 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 14205 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14207
+Near the Shore~
+Large waves crash up against jagged rocks here.  The water swirls
+around as you come close to shore.  Some small pieces of debris float
+around in the water, perhaps from ships that have been smashed on the
+rocks.  A large rock here or there pokes up out of the water making
+this area very treacherous.  Better be careful or you won't make it to
+shore.
+~
+water
+D NORTH 0 0 0
+~
+The rough waters makes travel to the north impossible.
+~
+D EAST 14208 0 0
+~
+The waters continue on in this direction to the horizon.
+~
+D SOUTH 14214 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 14206 0 0
+~
+The sea continues on in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14208
+Near the Shore~
+Large waves crash up against jagged rocks here.  The water swirls
+around as you come close to shore.  Some small pieces of debris float
+around in the water, perhaps from ships that have been smashed on the
+rocks.  A large rock here or there pokes up out of the water making
+this area very treacherous.  Better be careful or you won't make it to
+shore.
+~
+water
+D NORTH 0 0 0
+~
+The rough waters make travel to the north impossible.
+~
+D EAST 0 0 0
+~
+The rough surf makes travel to the east impossible.
+~
+D SOUTH 14215 0 0
+~
+Swells stretch on for as far as you can see.
+~
+D WEST 14207 0 0
+~
+The sea continues on in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14209
+Approaching the Cimar Harbor~
+Just when you wonder if you will ever see civilization again you spot
+the Cimar harbor.  Never in your life have you been so happy to see
+land.  As the harbor approaches you can see the citizens of Cimar
+busily working.  You might just survive this journey.
+~
+water
+D NORTH 2647 0 0
+~
+To the north lies the harbor of Cimar.
+~
+D EAST 14210 0 0
+~
+The sea stretches out in this direction.
+~
+D SOUTH 14219 0 0
+~
+The sea continues in this direction.
+~
+D WEST 2646 0 0
+~
+The harbor of Cimar.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14210
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14203 0 0
+~
+Off in the distance you can see the start of the Cimar Harbor.
+~
+D EAST 14211 0 0
+~
+Waves roll on to the east.
+~
+D SOUTH 14220 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 14209 0 0
+~
+Off in the distance lies Cimar's harbor.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14211
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14204 0 0
+~
+Far off in the distance you can make out the beginning of the Cimar harbor.
+~
+D EAST 14212 0 0
+~
+The sea continues in this direction.
+~
+D SOUTH 14221 0 0
+~
+The sea rolls to the south.
+~
+D WEST 14210 0 0
+~
+Large waves fill your view in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14212
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14205 0 0
+~
+The sea stretches out before you.
+~
+D EAST 14213 0 0
+~
+The sea continues to the east.
+~
+D SOUTH 14222 0 0
+~
+Large waves swell as far as you can see.
+~
+D WEST 14211 0 0
+~
+The sea continues in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14213
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14206 0 0
+~
+The sea continues on in this direction.
+~
+D EAST 14214 0 0
+~
+Large waves roll in this direction.
+~
+D SOUTH 14223 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 14212 0 0
+~
+The water stretches out endlessly.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14214
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14207 0 0
+~
+Large waves crash against rocks in the distance.
+~
+D EAST 14215 0 0
+~
+You see rough seas to the east.
+~
+D SOUTH 14224 0 0
+~
+Far off to the south you think you see land.
+~
+D WEST 14213 0 0
+~
+The sea continues in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14215
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14208 0 0
+~
+Rough surf crashes against the rocks.
+~
+D EAST 0 0 0
+~
+The rough waters make travel in this direction impossible.
+~
+D SOUTH 14225 0 0
+~
+The sea continues in this direction.
+~
+D WEST 14214 0 0
+~
+You see the sea stretch out before you.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14216
+Just South of the Cimar Docks~
+Various small fishing craft can be seen as you leave the Cimar dock.
+Gulls and an assortment of finches circle overhead.  The strong smell
+of saltwater fills your nose as the surf breaks at your feet.  The
+ground and all of the earth around you is a dark shade of red.  You can
+only assume this is because of the massive iron deposits nearby.
+~
+water
+D NORTH 2638 0 0
+~
+The end of the Cimar docks lies in this direction.
+~
+D EAST 14217 0 0
+~
+The sea continues on in this direction.
+~
+D SOUTH 14228 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 0 0 0
+~
+The rough waters make travel in this direction impossible.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14217
+Before a Shipyard~
+As you continue near the shore you notice a great deal of ships to your
+north.  Obviously this docking area is important to the productivity of
+Cimar.  The water is rough and you find yourself wondering if you
+should just head back.  As you gaze off to the south you see nothing
+but sea.
+~
+water
+D NORTH 2639 0 0
+~
+You see a few large boats tied up to the docks.
+~
+D EAST 14218 0 0
+~
+The waves lessen in this direction.
+~
+D SOUTH 14229 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 14216 0 0
+~
+The sea continues on to the west.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14218
+Approaching the Cimar Harbor~
+Just when you wonder if you will ever see civilization again you spot
+the Cimar harbor.  Never in your life have you been so happy to see
+land.  As the harbor approaches you can see the citizens of Cimar
+busily working.  You might just survive this journey.
+~
+water
+D NORTH 2646 0 0
+~
+The harbor of Cimar lies to the north.
+~
+D EAST 14219 0 0
+~
+The sea continues on in this direction.
+~
+D SOUTH 14230 0 0
+~
+The sea continues on in this direction.
+~
+D WEST 14217 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14219
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14209 0 0
+~
+Off in the distance you can make out the Cimar harbor.
+~
+D EAST 14220 0 0
+~
+The sea stretches out endlessly before you.
+~
+D SOUTH 14231 0 0
+~
+Large waves roll in this direction.
+~
+D WEST 14218 0 0
+~
+The waters calm a bit in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14220
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14210 0 0
+~
+The sea continues in this direction.
+~
+D EAST 14221 0 0
+~
+The sea continues to the east.
+~
+D SOUTH 14232 0 0
+~
+Off in the distance you think that you can see land.
+~
+D WEST 14219 0 0
+~
+The sea continues endlessly before you.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14221
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14211 0 0
+~
+The sea continues on in this direction.
+~
+D EAST 14222 0 0
+~
+The stretches out as far as you can see.
+~
+D SOUTH 14233 0 0
+~
+Far off in the distance you think you can make out land.
+~
+D WEST 14220 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14222
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14212 0 0
+~
+The sea continues in this direction.
+~
+D EAST 14223 0 0
+~
+Rough waters lie in this direction.
+~
+D SOUTH 14234 0 0
+~
+Off in the distance you think you see land.
+~
+D WEST 14221 0 0
+~
+The sea continues this way.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14223
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14213 0 0
+~
+The red waters of the sea roll on in this direction.
+~
+D EAST 14224 0 0
+~
+The sea continues on here.
+~
+D SOUTH 14235 0 0
+~
+Off in the distance you think you can see land.
+~
+D WEST 14222 0 0
+~
+The sea stretches on endlessly.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14224
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14214 0 0
+~
+The sea continues on in this direction.
+~
+D EAST 14225 0 0
+~
+The sea stretches out in this direction.
+~
+D SOUTH 0 0 0
+~
+A large cliff fills your view, and the rough waters crashing against the rocks make it hard to get close to them.
+~
+D WEST 14223 0 0
+~
+The red waters of the sea roll past you.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14225
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14215 0 0
+~
+The sea heads toward the shore of Cimar.
+~
+D EAST 14226 0 0
+~
+The sea continues.
+~
+D SOUTH 14237 0 0
+~
+The sea continues on past a small island to the south-west.
+~
+D WEST 14224 0 0
+~
+The waves stretch out endlessly.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14226
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 0 0 0
+~
+The rough waters make it impossible to travel in this direction.
+~
+D EAST 14227 0 0
+~
+The waters start to get rougher in this direction.
+~
+D SOUTH 14238 0 0
+~
+The sea continues on.
+~
+D WEST 14225 0 0
+~
+The waters continue on far into the distance.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14227
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 0 0 0
+~
+The rough waters make travel in this direction impossible.
+~
+D EAST 0 0 0
+~
+The rough waters of the sea make traveling this way impossible.
+~
+D SOUTH 14239 0 0
+~
+The sea continues.
+~
+D WEST 14226 0 0
+~
+The waters of the sea roll by.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14228
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14216 0 0
+~
+Off in the distance you can see the beginning of the Cimar docks.
+~
+D EAST 14229 0 0
+~
+The sea continues.
+~
+D SOUTH 14240 0 0
+~
+The red waters of the sea continue.
+~
+D WEST 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14229
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14217 0 0
+~
+The sea continues.
+~
+D EAST 14230 0 0
+~
+All you can see is red water...
+~
+D SOUTH 14241 0 0
+~
+The waves roll by slowly.
+~
+D WEST 14228 0 0
+~
+The sea stretches out in front of you.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14230
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14218 0 0
+~
+Far to the north and west you can see the Cimar harbor and docks.
+~
+D EAST 14231 0 0
+~
+More waves rise and fall in this direction.
+~
+D SOUTH 14242 0 0
+~
+The sea stretches out to the horizon.
+~
+D WEST 14229 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14231
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14219 0 0
+~
+The red waves roll slowly past you.
+~
+D EAST 14232 0 0
+~
+The waves crest as they get close to shore.
+~
+D SOUTH 14243 0 0
+~
+The waters continue along the shore of a small island.
+~
+D WEST 14230 0 0
+~
+The sea continues on into the distance.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14232
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14220 0 0
+~
+The sea continues on.
+~
+D EAST 14233 0 0
+~
+The waves come near the shore of the island.
+~
+D SOUTH 14244 0 0
+~
+The waters crest onto the beach of a small island.
+~
+D WEST 14231 0 0
+~
+The water turns darker as it gets deeper.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14233
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14221 0 0
+~
+The sea stretches out in front of you.
+~
+D EAST 14234 0 0
+~
+The waters get a little rougher in this direction.
+~
+D SOUTH 14245 0 0
+~
+The shore of a small island is a welcome sight.
+~
+D WEST 14232 0 0
+~
+Waves crest toward the shore of a small island.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14234
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14222 0 0
+~
+The sea continues on.
+~
+D EAST 14235 0 0
+~
+You see a cliff in the distance.
+~
+D SOUTH 14246 0 0
+~
+The waters break onto the shores of the island.
+~
+D WEST 14233 0 0
+~
+The waters continue along the shore of the island.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14235
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14223 0 0
+~
+The sea continues.
+~
+D EAST 0 0 0
+~
+Large cliffs fill your view as the island rises high out of the water.
+~
+D SOUTH 14247 0 0
+~
+The shore of an island is a welcome sight.
+~
+D WEST 14234 0 0
+~
+The waters continue along the shore of the island.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14236
+The Island Guardian's Refuge~
+You are high on a cliff on the north-eastern part of the island.  There
+is a truly beautiful view of the entire sea from here.  You can see the
+cliffs marking the beginning of Cimar to the north, and the cities
+docksto the west.  You feel lost in the grandeur this great place.
+Waves crash against the rocks below the cliffs, spraying up to this
+height.  An enormous throne captures your attention.  The giant who
+rules from this mighty throne must truly be a powerful man.  To either
+side of the throne stands a large red banner with some strange markings
+written on them.  The cliffs around this place make it suicidal to go
+any direction but south.
+~
+hills
+D NORTH 0 0 0
+~
+Far off in the distance you can see the cliffs south of Cimar.
+~
+D EAST 0 0 0
+~
+All you can see is the vast expanse of the sea.
+~
+D SOUTH 14248 0 0
+~
+A trail leads south to more of the island.
+~
+D WEST 0 0 0
+~
+You can see the far end of the small island you are on, and off in the
+distance and slightly to the north you can see the Cimar docks.
+~
+D DOWN 0 0 0
+~
+You see sheer cliffs all around you leading to jagged rocks and crashing waves.
+~
+E banner writing red~
+The symbols written on these banners is nothing that you have ever seen
+before.  They seem very sloppy, like they were almost written with a
+broken stick.
+~
+E throne enormous mighty~
+This throne is gigantic.  Looking as thought it was carved directly out
+of the island itself.  It is very plain and cold looking.  The only
+distinguishing thing about it is that is ..... big.
+~
+#14237
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14225 0 0
+~
+The waters begin to get rough in this direction.
+~
+D EAST 14238 0 0
+~
+The sea continues.
+~
+D SOUTH 14249 0 0
+~
+Large rocks can be seen off in the distance.
+~
+D WEST 0 0 0
+~
+Large cliffs rise out of the sea and block your travel in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14238
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14226 0 0
+~
+The waters become rough in this direction.
+~
+D EAST 14239 0 0
+~
+The sea becomes noticeably rougher this way.
+~
+D SOUTH 14250 0 0
+~
+The red waters flow past you.
+~
+D WEST 14237 0 0
+~
+The sea continues toward a cliff.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14239
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14227 0 0
+~
+The sea becomes rough in this direction.
+~
+D EAST 0 0 0
+~
+Rough waters in this direction make travel impossible.
+~
+D SOUTH 14251 0 0
+~
+The waters continue.
+~
+D WEST 14238 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14240
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14228 0 0
+~
+The red waters of the sea continue in this direction.
+~
+D EAST 14241 0 0
+~
+The sea continues.
+~
+D SOUTH 14252 0 0
+~
+The waves roll by.
+~
+D WEST 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14241
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14229 0 0
+~
+The sea stretches on in front of you.
+~
+D EAST 14242 0 0
+~
+The sea continues on.
+~
+D SOUTH 14253 0 0
+~
+More water... it's red.
+~
+D WEST 14240 0 0
+~
+Waves roll on endlessly.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14242
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14230 0 0
+~
+The sea stretches out to the horizon.
+~
+D EAST 14243 0 0
+~
+The waters become lighter, the water must be getting shallow.
+~
+D SOUTH 14254 0 0
+~
+Waves roll on and on.
+~
+D WEST 14241 0 0
+~
+The red of the sea spills out in front of you like blood.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14243
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14231 0 0
+~
+The sea continues.
+~
+D EAST 14244 0 0
+~
+The waters break onto the shore of a small island.
+~
+D SOUTH 14255 0 0
+~
+The waters continue past the shore of the island.
+~
+D WEST 14242 0 0
+~
+The water gets darker as it becomes deeper.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14244
+The shore of a small island~
+Finally solid ground.  You are walking on the slightly red sands of a
+small island.  Many trees can be seen a little farther on shore, and
+there is tall grasses all around.  Everything seems to have taken on a
+slight red tint, like the water of the sea.  The noise of the raging
+waters of the sea seems to quiet here, and the sun seems to come
+through the clouds just a bit.  This island is a completely opposite of
+the sea that surrounds it.  It is like a calm in the middle of a raging
+storm.  A feeling of peace comes from this island.
+~
+field
+D NORTH 14232 0 0
+~
+The sands lead into the shallow waters next to the island.
+~
+D EAST 14245 0 0
+~
+The beach stretches out into the distance.
+~
+D SOUTH 14256 0 0
+~
+The red sands of the beach continue.
+~
+D WEST 14243 0 0
+~
+The shore disappears as you return to the sea.
+~
+#14245
+The shore of a small island~
+You are walking on the slightly red sands of a small island.  Behind
+you lies the rough waters of the sea.  Hopefully you won't need to
+return there soon.  Many trees can be seen a little farther on shore to
+the south, and there is tall grasses all around.  Everything seems to
+have taken on a slight red tint, like the water of the sea.  The noise
+of the raging waters of the sea seems to quiet here, and the sun seems
+to come through the clouds just a bit.  This island is a completely
+opposite of the sea that surrounds it.  It is like a calm in the middle
+of a raging storm.  A feeling of peace comes from this island.
+~
+field
+D NORTH 14233 0 0
+~
+The sea stretches out from the beach.
+~
+D EAST 14246 0 0
+~
+The shore of the island continues.
+~
+D SOUTH 14257 0 0
+~
+The island continues on, the foliage becoming much denser.
+~
+D WEST 14244 0 0
+~
+The red sand beach leads to more red sand beach.
+~
+#14246
+The shore of a small island~
+You are walking on the slightly red sands of a small island.  Behind
+you lies the rough waters of the sea.  Hopefully you won't need to
+return there soon.  Many trees can be seen a little farther on shore to
+the south, and there is tall grasses all around.  Everything seems to
+have taken on a slight red tint, like the water of the sea.  The noise
+of the raging waters of the sea seems to quiet here, and the sun seems
+to come through the clouds just a bit.  This island is a completely
+opposite of the sea that surrounds it.  It is like a calm in the middle
+of a raging storm.  A feeling of peace comes from this island.
+~
+field
+D NORTH 14234 0 0
+~
+The sands lead back into the sea.
+~
+D EAST 14247 0 0
+~
+The ground becomes slightly more rocky in this direction and the ground
+starts to slope upward.
+~
+D SOUTH 14258 0 0
+~
+The sands beach disappears into tall grasses and trees.
+~
+D WEST 14245 0 0
+~
+The shore continues.
+~
+#14247
+The shore of a small island~
+You are walking on the slightly red sands of a small island.  Behind
+you lies the rough waters of the sea.  Hopefully you won't need to
+return there soon.  Many trees can be seen a little farther on shore to
+the south, and there is tall grasses all around.  Everything seems to
+have taken on a slight ed tint, like the water of the sea.  The noise
+of the raging waters of the sea seems to quiet here, and the sun seems
+to come through the clouds just a it.  This island is a completely
+opposite of the sea that surrounds it.  It is like a calm in the middle
+of a raging storm.  A feeling of peace comes from this island.  Off to
+the north-east the island rises up above the sea around it, surrounded
+by cliffs.
+~
+field
+D NORTH 14235 0 0
+~
+Water is what is here.
+~
+D EAST 14248 0 0
+~
+The island slopes upward to rocky ground.
+~
+D SOUTH 14259 0 0
+~
+Rocky ground with a few large tufts of grass is all that is here.
+~
+D WEST 14246 0 0
+~
+The beach becomes less sandy as it comes up the hill.
+~
+#14248
+A cliff overlooking the sea~
+As you continue walking about the ground turns more rocky on this part
+of the island.  A few larger rocks lie about and the grasses are more
+sparse, finding few cracks in the rock to take root in.  A few trees
+are rooted into the rock making large cracks open up.  The rock is a
+deep red color, much darker that that of the sands or water of the sea.
+A small path has been worn into the rock leading to the north.  As you
+follow the path with your eyes you make out a large throne sitting in
+the middle of a clearing in that direction.  To the east the sheer
+cliff makes way to the ocean, though you wouldn't want to try and go
+that way because of the several large rocks that would hurt somewhat to
+land on.  The rocky ground leads off to more cliffs to the south.
+~
+hills
+D NORTH 14236 0 0
+~
+A path leads in this direction to a clearing.
+~
+D EAST 0 0 0
+~
+A large cliff lies in this direction... better be careful.
+~
+D SOUTH 14260 0 0
+~
+Rocky ground is all you can see.
+~
+D WEST 14247 0 0
+~
+The hill slopes down toward the beach.
+~
+#14249
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14237 0 0
+~
+The waters continue.
+~
+D EAST 14250 0 0
+~
+The waters continue.
+~
+D SOUTH 14261 0 0
+~
+The waves are rough to the south.
+~
+D WEST 0 0 0
+~
+A large sheer cliff rises out of the water, waves crash off it making
+dangerous waves.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14250
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14238 0 0
+~
+The red waters of the sea continue.
+~
+D EAST 14251 0 0
+~
+The waters get rough in this direction.
+~
+D SOUTH 14262 0 0
+~
+The sea stretches out in front of you.
+~
+D WEST 14249 0 0
+~
+The sea continues, in the distance is a large cliff.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14251
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14239 0 0
+~
+More water.... it's red.
+~
+D EAST 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D SOUTH 14263 0 0
+~
+The sea continues on to the horizon.
+~
+D WEST 14250 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14252
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14240 0 0
+~
+The sea continues on in this direction.
+~
+D EAST 14253 0 0
+~
+Red waves roll past.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible
+~
+D WEST 0 0 0
+~
+Huge waves make travel impossible in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14253
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14241 0 0
+~
+The sea continues on.
+~
+D EAST 14254 0 0
+~
+The red waves roll past.
+~
+D SOUTH 14264 0 0
+~
+Rougher waters lie in this direction.
+~
+D WEST 14252 0 0
+~
+The sea is here.... it is red.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14254
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14242 0 0
+~
+The sea continues.
+~
+D EAST 14255 0 0
+~
+The waters turn lighter.
+~
+D SOUTH 14265 0 0
+~
+The sea grows rough.
+~
+D WEST 14253 0 0
+~
+Large red waves roll on.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14255
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14243 0 0
+~
+The water continues along the shore of the island.
+~
+D EAST 14256 0 0
+~
+The shore of the island is a welcome sight.
+~
+D SOUTH 14267 0 0
+~
+The light red waters continue past the shore of the island.
+~
+D WEST 14254 0 0
+~
+The waters become darker as the sea deepens.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14256
+The shore of a small island~
+You are walking on the slightly red sands of a small island.  Behind
+you lies the rough waters of the sea.  Hopefully you won't need to
+return there soon.  Many trees can be seen a little farther on shore to
+the south, and there is tall grasses all around.  Everything seems to
+have taken on a slight red tint, like the water of the sea.  The noise
+of the raging waters of the sea seems to quiet here, and the sun seems
+to come through the clouds just a bit.  This island is a completely
+opposite of the sea that surrounds it.  It is like a calm in the middle
+of a raging storm.  A feeling of peace comes from this island.  To the
+east the trees seem to thicken somewhat and the grasses become more
+dense.  There is no discernible way to go into the foliage, so you
+might as well just push your way through.  The red sands of the beach
+continues to the north and south.
+~
+field
+D NORTH 14244 0 0
+~
+The red sands continue in this direction.
+~
+D EAST 14257 0 0
+~
+The island becomes more covered in foliage as the beach disappears.
+~
+D SOUTH 14267 0 0
+~
+You sea the beach curve around to the east.
+~
+D WEST 14255 0 0
+~
+The beach disappears into the red waters.
+~
+#14257
+On a small island~
+You are standing in the middle of what amounts to a small forest.  Many
+trees grow all around you and grass is growing everywhere that a tree
+is not.  All of the foliage has a bit of a red color to it, more-so
+than that of the plants along the beaches.  The ground is firmer here
+that that of the sand.  You can even see a patch of rock here or there
+in the grass.  You here the sounds of a small bird or two coming from
+somewhere in one of the trees.  Off the north-east you see a rise
+in the island that is rather barren looking.  In all directions that
+foliage starts to thin out and you can start to hear the sounds of the
+waves coming onto shore.
+~
+field
+D NORTH 14245 0 0
+~
+The foliage makes way to the beach.
+~
+D EAST 14258 0 0
+~
+The denser foliage continues this way.
+~
+D SOUTH 14268 0 0
+~
+The beach can be seen though the trees.
+~
+D WEST 14256 0 0
+~
+The red sands of the beach can be seen leading out of the trees.
+~
+#14258
+On a small island~
+You are standing in the middle of what amounts to a small forest.  Many
+trees grow all around you and grass is growing everywhere that a tree
+is not.  All of the foliage has a bit of a red color to it, more-so
+than that of the plants along the beaches.  The ground is firmer here
+that that of the sand.  You can even see a patch of rock here or there
+in the grass.  You here the sounds of a small bird or two coming from
+somewhere in one of the trees.  Off the north-east you see a rise
+in the island that is rather barren looking.  In all directions that
+foliage starts to thin out and you can start to hear the sounds of the
+waves coming onto shore.  The ground starts to lead up as you go to the
+east.  To the south-east the waters of the sea crash up on large rocks
+along the shore.
+~
+field
+D NORTH 14246 0 0
+~
+Red sands can be seen leading to the beach.
+~
+D EAST 14259 0 0
+~
+The ground turns slightly rocky as you climb the hill.
+~
+D SOUTH 14269 0 0
+~
+The beach is this way.
+~
+D WEST 14257 0 0
+~
+The denser foliage continues in this direction.
+~
+#14259
+On a cliff overlooking the sea~
+As you continue walking about the ground turns more rocky on this part
+of the island.  A few larger rocks lie about and the grasses are more
+sparse, finding few cracks in the rock to take root in.  A few trees
+are rooted into the rock making large cracks open up.  The rock is a
+deep red color, much darker that that of the sands or water of the sea.
+To the east the sheer cliff makes way to the ocean, though you wouldn't
+want to try and go that way because of the several large rocks that
+would hurt somewhat to land on.  The rocky ground leads off to more
+cliffs to the north and south.  To the west the ground starts to slope
+down toward the rest of the island.
+~
+hills
+D NORTH 14247 0 0
+~
+The island is slightly rocky in this direction.
+~
+D EAST 14260 0 0
+~
+The hill leads up to a rocky cliff.
+~
+D SOUTH 0 0 0
+~
+A small cliff starts to rise out of the water barring you from
+returning to the sea in this direction.
+~
+D WEST 14258 0 0
+~
+Down the hill is denser foliage.
+~
+D DOWN 0 0 0
+~
+A sheer drop down to the crashing waves... ouch.
+~
+#14260
+On a cliff overlooking the sea~
+As you continue walking about the ground turns more rocky on this part
+of the island.  A few larger rocks lie about and the grasses are more
+sparse, finding few cracks in the rock to take root in.  A few trees
+are rooted into the rock making large cracks open up.  The rock is a
+deep red color, much darker that that of the sands or water of the sea.
+To the east and south the sheer cliff makes way to the ocean, though
+you wouldn't want to try and go in those directions because of the
+several large rocks that would hurt somewhat to land on.  The rocky
+ground leads off to more cliffs to the north.  To the west the land
+slopes down to the rest of the island.
+~
+hills
+D NORTH 14248 0 0
+~
+The rocky ground makes way toward a clearing.
+~
+D EAST 0 0 0
+~
+The big cliff in your way makes travel a dangerous option.
+~
+D SOUTH 0 0 0
+~
+A large sheer cliff lies in this direction.
+~
+D WEST 14259 0 0
+~
+The hill leads back down toward the rest of the island.
+~
+D DOWN 0 0 0
+~
+Sheer cliffs in two directions make this a dangerous place to be.
+~
+#14261
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14249 0 0
+~
+The sea continues in this direction.
+~
+D EAST 14262 0 0
+~
+More red water.
+~
+D SOUTH 14272 0 0
+~
+The red waters of the sea go on in this direction.
+~
+D WEST 0 0 0
+~
+The waters crash up against a large cliff face.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14262
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same red
+color that the water has.  The chance of seeing other people seems slim.
+Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14250 0 0
+~
+The sea continues on in this direction.
+~
+D EAST 14263 0 0
+~
+The sea turns a little rougher in this direction.
+~
+D SOUTH 14273 0 0
+~
+Several large waves roll past.
+~
+D WEST 14261 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14263
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14251 0 0
+~
+The sea stretches out in front of you.
+~
+D EAST 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D SOUTH 14274 0 0
+~
+The sea continues.
+~
+D WEST 14262 0 0
+~
+The red waters of the sea go on.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14264
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14253 0 0
+~
+The waves roll on in this direction.
+~
+D EAST 14265 0 0
+~
+The waters continue.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D WEST 0 0 0
+~
+Large seas make travel unwise this way.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14265
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14254 0 0
+~
+The sea continues on this way ... it is still red.
+~
+D EAST 14266 0 0
+~
+The sea grows lighter in this direction.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel this way impossible.
+~
+D WEST 0 0 0
+~
+The rough waters make travel in this direction impossible.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14266
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14255 0 0
+~
+The waters continue along the shore of the island.
+~
+D EAST 14267 0 0
+~
+The shore of a small island appears out of the water.
+~
+D SOUTH 14275 0 0
+~
+The waters become a little rougher this way.
+~
+D WEST 14265 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14267
+On the shore of a small island~
+You are walking on the slightly red sands of a small island.  Many
+trees can be seen a little farther on shore, and there is tall grasses
+all around.  Everything seems to have taken on a slight red tint, like
+the water of the sea.  The noise of the raging waters of the sea seems
+to quiet here, and the sun seems to come through the clouds just a bit.
+This island is a completely opposite of the sea that surrounds it.  It
+is like a calm in the middle of a raging storm.  A feeling of peace
+comes from this island.  A small wooden sign is tied to a tree nearby.
+It looks to have something scratched onto it.
+~
+field
+D NORTH 14256 0 0
+~
+The shore of the island continues.
+~
+D EAST 14268 0 0
+~
+The beach stretches off in this direction.
+~
+D SOUTH 14276 0 0
+~
+The rolling waters of the sea lie just beyond the beach.
+~
+D WEST 14266 0 0
+~
+The beach leads to the rough, red waters of the sea.
+~
+E sign small wooden scratched~
+The Crimson Sea was created for RiftShadow by Sheil (2000).  It can 'a
+be used without permission from its authors or the implementors of
+RiftShadow.
+~
+#14268
+On the shore of a small island~
+You are walking on the slightly red sands of a small island.  Many
+trees can be seen a little farther on shore, and there is tall grasses
+all around.  Everything seems to have taken on a slight red tint, like
+the water of the sea.  The noise of the raging waters of the sea seems
+to quiet here, and the sun seems to come through the clouds just a bit.
+This island is a completely opposite of the sea that surrounds it.  It
+is like a calm in the middle of a raging storm.  A feeling of peace
+comes from this island.  The red sands of the beach continue to the
+north and east.
+~
+field
+D NORTH 14257 0 0
+~
+The foliage becomes more dense as you go inland.
+~
+D EAST 14269 0 0
+~
+The red beach stretches on.
+~
+D SOUTH 14277 0 0
+~
+The red sands of the beach give way to the sea once again.
+~
+D WEST 14267 0 0
+~
+The beach curves to the north in this direction.
+~
+#14269
+On the shore of a small island~
+You are walking on the slightly red sands of a small island.  Many
+trees can be seen a little farther on shore, and there is tall grasses
+all around.  Everything seems to have taken on a slight red tint, like
+the water of the sea.  The noise of the raging waters of the sea seems
+to quiet here, and the sun seems to come through the clouds just a bit.
+This island is a completely opposite of the sea that surrounds it.  It
+is like a calm in the middle of a raging storm.  A feeling of peace
+comes from this island.  The red sands of the beach continue to the
+east and west.  To the north lies denser foliage and less water.
+~
+field
+D NORTH 14258 0 0
+~
+The island starts to go uphill a bit.
+~
+D EAST 0 0 0
+~
+A small cliff in this direction prevent access to the sea.
+~
+D SOUTH 14278 0 0
+~
+The red waters of the sea await.
+~
+D WEST 14268 0 0
+~
+The beach continues on.
+~
+D DOWN 0 0 0
+~
+A small cliff drops off toward the sea to the east.
+~
+#14270
+Rough waters near some cliffs~
+The waters of the sea are very violent here.  On two sides there are
+huge rocks that the waves crash into mercilessly.  You should try and
+stay away from them or else you might get hurt.  You are almost
+defended by the nose of the water crashing about.  The water becomes
+slightly more calm to the south, but to the east it is just as bad.
+~
+water
+D NORTH 14299 0 0
+~
+A cliff rises out of the sea.
+~
+D EAST 14271 0 0
+~
+More red water... that is all you can see.
+~
+D SOUTH 14279 0 0
+~
+The sea continues on this way.
+~
+D WEST 0 0 0
+~
+The island rising out of the sea prevents you from reaching land.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14271
+Rough waters near some cliffs~
+The waters of the sea are very violent here.  On two sides there are
+huge rocks that the waves crash into mercilessly.  You should try and
+stay away from them or else you might get hurt.  You are almost
+defended by the nose of the water crashing about.  The water becomes
+slightly more calm to the south, but to the east and west it is just as
+bad.
+~
+water
+D NORTH 0 0 0
+~
+The large cliff in front of you should give an idea as to why you can't
+go this way.
+~
+D EAST 14272 0 0
+~
+The red waves roll on.
+~
+D SOUTH 14280 0 0
+~
+The sea continues.
+~
+D WEST 14270 0 0
+~
+The water becomes rough in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14272
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14261 0 0
+~
+The sea continues along a large cliff.
+~
+D EAST 14273 0 0
+~
+More water... it's red.
+~
+D SOUTH 14281 0 0
+~
+The sea goes on to the horizon.
+~
+D WEST 14271 0 0
+~
+The sea continues.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14273
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14262 0 0
+~
+The waters continue to be red in this direction.
+~
+D EAST 14274 0 0
+~
+Waves roll past slowly.
+~
+D SOUTH 14282 0 0
+~
+The sea continues on.
+~
+D WEST 14272 0 0
+~
+The red waters of the sea continue.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14274
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14263 0 0
+~
+The red water continues on as far as you can see.
+~
+D EAST 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D SOUTH 14283 0 0
+~
+The waters turn more turbulent this way.
+~
+D WEST 14273 0 0
+~
+The sea continues on.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14275
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14266 0 0
+~
+The sea continues on along the shore of an island.
+~
+D EAST 14276 0 0
+~
+The sea continues on, to the north-east you can see an island.
+~
+D SOUTH 0 0 0
+~
+Rough waters in this direction make travel impossible.
+~
+D WEST 0 0 0
+~
+Rough waters make travel impossible in this direction.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14276
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14267 0 0
+~
+The waters of the sea make way to a red sand beach.
+~
+D EAST 14277 0 0
+~
+The waves roll past.
+~
+D SOUTH 14284 0 0
+~
+The sea continues.
+~
+D WEST 14275 0 0
+~
+The sea stretches out as far as you can see.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14277
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14268 0 0
+~
+The shore of an island is a welcome sight.
+~
+D EAST 14278 0 0
+~
+The sea continues past the shore of an island.
+~
+D SOUTH 14285 0 0
+~
+The sea continues on.
+~
+D WEST 14276 0 0
+~
+The red water continues on.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14278
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14269 0 0
+~
+The shore of a small island breaks out of the water.
+~
+D EAST 14279 0 0
+~
+The sea continues.
+~
+D SOUTH 14286 0 0
+~
+The sea turns a little rougher this way.
+~
+D WEST 14277 0 0
+~
+The waters continue past the shore.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14279
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14270 0 0
+~
+Rough waters crash against large rocks.
+~
+D EAST 14280 0 0
+~
+Waves roll past.
+~
+D SOUTH 14287 0 0
+~
+The sea continues.
+~
+D WEST 14278 0 0
+~
+The red waters of the sea continue.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14280
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14271 0 0
+~
+Rough waters crash against a cliff.
+~
+D EAST 14281 0 0
+~
+More large red waves roll past you.
+~
+D SOUTH 14288 0 0
+~
+The sea continues.
+~
+D WEST 14279 0 0
+~
+The red waters stretch out before you.
+~
+D DOWN 14290 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14281
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14272 0 0
+~
+The sea continues on.
+~
+D EAST 14282 0 0
+~
+The red waters of the sea continue.
+~
+D SOUTH 14289 0 0
+~
+The waters are rougher this way.
+~
+D WEST 14280 0 0
+~
+More red waves.
+~
+D DOWN 14291 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14282
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14273 0 0
+~
+The red waters stretch out before you.
+~
+D EAST 14283 0 0
+~
+The sea continues.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D WEST 14281 0 0
+~
+Large red waves roll on.
+~
+D DOWN 14292 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14283
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14274 0 0
+~
+The sea continues.
+~
+D EAST 0 0 0
+~
+Rough waters in this direction make travel impossible.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel this way impossible.
+~
+D WEST 14282 0 0
+~
+The red waters of the sea continue.
+~
+D DOWN 0 0 0
+~
+The red water of the sea swells and bobs below you.  You can barely see
+more then a few feet down into the waters.
+~
+#14284
+The Western Sea~
+This area of the sea, while still rough, seems calmer than the rest of
+the raging body of water. Every now and then you see a giant turtle or
+some other sea creature sunning itself at the surface. This area seems
+to be much more shallow than the rest of the sea.  As you look down you
+can observe large boulders sitting on the sea floor.
+~
+water
+D NORTH 14276 0 0
+~
+The sea grows lighter in this direction.
+~
+D EAST 14285 0 0
+~
+The waters of the sea continue.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D WEST 0 0 0
+~
+Rough waters in this direction make travel impossible.
+~
+D DOWN 14293 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14285
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14277 0 0
+~
+The sea grows lighter in this direction.
+~
+D EAST 14286 0 0
+~
+The red waters of the sea continue.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D WEST 14284 0 0
+~
+The sea continues.
+~
+D DOWN 14294 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14286
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14278 0 0
+~
+The water seems to get lighter this way.
+~
+D EAST 14287 0 0
+~
+The sea continues.
+~
+D SOUTH 0 0 0
+~
+Rough waters in this direction make travel impossible.
+~
+D WEST 14285 0 0
+~
+Large red waves roll past.
+~
+D DOWN 14295 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14287
+On the Crimson Sea~
+You can no longer see shore as you continue along the rough water.  The
+swells must be nearly eight feet deep and the constant rocking leaves
+you feeling a bit ill.  The water stings as it hits your eyes. The only
+other life present is the occasional sea creature swimming near you or
+a bird circling overhead.
+~
+water
+D NORTH 14279 0 0
+~
+The sea grows lighter in this direction.
+~
+D EAST 14288 0 0
+~
+The sea continues.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D WEST 14286 0 0
+~
+The sea stretches out in front of you.
+~
+D DOWN 14296 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14288
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14280 0 0
+~
+The waters of the sea continue.
+~
+D EAST 14289 0 0
+~
+The waves roll past you.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel in this direction impossible.
+~
+D WEST 14287 0 0
+~
+The sea continues.
+~
+D DOWN 14297 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14289
+The Eastern Sea~
+The currents are very strong making navigation difficult.  In the
+distant west you can barely see some type of land structure.  The water
+around here is filled with weeds and they have all taken on the same
+red color that the water has.  The chance of seeing other people seems
+slim. Perhaps you will be lucky enough to run into a friendly ship.
+~
+water
+D NORTH 14281 0 0
+~
+The sea continues.
+~
+D EAST 0 0 0
+~
+The rough waters in this direction make travel impossible.
+~
+D SOUTH 0 0 0
+~
+Rough waters make travel this way impossible.
+~
+D WEST 14288 0 0
+~
+The red waters of the sea stretch out to the horizon.
+~
+D DOWN 14298 0 0
+~
+The red water of the sea swells and bobs below you.  The water seems a
+bit darker here as though it is getting deeper.
+~
+#14290
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 14291 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 14297 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D WEST 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D UP 14280 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14291
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 14292 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 14298 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D WEST 14290 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14281 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14292
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D SOUTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D WEST 14291 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14282 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14293
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 14294 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D WEST 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D UP 14284 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14294
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 14295 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 20100 0 0
+~
+A submerged trail leads south into a kelp forest.
+~
+D WEST 14293 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14285 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14295
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 14296 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D WEST 14294 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14286 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14296
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D EAST 14297 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D WEST 14295 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14287 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14297
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 14290 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D EAST 14298 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D SOUTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D WEST 14296 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14288 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14298
+Under the sea~
+You are now below the surface of the sea.  The red waters completely
+envelope you.  The water is quite cold against your skin and it seems
+to have a slight salty taste to it.  As you look up you can see the
+turbulent waves rolling past occasionally carrying various pieces
+of flotsam along.  The sun manages to break through the clouds now
+and then sending a ray of light down through the water.  The darkness
+of the water makes it hard to see more than a few feet in any
+direction.  From time to time you feel something against your leg.
+Though you can't be sure if it is seaweed or something more
+disagreeable.
+~
+underwater
+D NORTH 14291 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D EAST 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D SOUTH 0 0 0
+~
+The land rises up this way leading to shallow water.
+~
+D WEST 14297 0 0
+~
+The dark dirty waters make it hard to tell what lies this way.
+~
+D UP 14289 0 0
+~
+You see turbulent waters crashing above you. Thankfully the water is
+calm below its surface.
+~
+D DOWN 0 0 0
+~
+The water becomes darker below you to the point where you can't see
+any farther down.
+~
+#14299
+An alcove within the cliffs~
+Jagged rocks around you break the foamy crimson waves, sending the
+pungent scent of wet rock and sea water into the air.  The cliff rises above
+you on all sides, but in the western cliff wall, a dark opening echoes,
+returning the ocean's roar.  The open sea lies back to the south.  
+~
+unused
+D SOUTH 14270 0 0
+~
+~
+D WEST 120 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 14208 TO 14200 GLIMIT 7 LLIMIT 1
+OBJECT 14216 TO 14200
+OBJECT 14217 TO 14201
+MOB 14208 TO 14202 GLIMIT 10 LLIMIT 1
+MOB 14205 TO 14203 GLIMIT 10 LLIMIT 1
+MOB 14205 TO 14204 GLIMIT 10 LLIMIT 1
+MOB 14207 TO 14204 GLIMIT 7 LLIMIT 1
+MOB 14208 TO 14204 GLIMIT 7 LLIMIT 1
+MOB 14205 TO 14205 GLIMIT 10 LLIMIT 1
+OBJECT 14216 TO 14205
+MOB 14205 TO 14206 GLIMIT 10 LLIMIT 1
+MOB 14205 TO 14207 GLIMIT 10 LLIMIT 1
+MOB 14205 TO 14208 GLIMIT 10 LLIMIT 1
+MOB 14207 TO 14208 GLIMIT 7 LLIMIT 1
+MOB 14208 TO 14208 GLIMIT 7 LLIMIT 1
+OBJECT 14217 TO 14208
+MOB 14208 TO 14209 GLIMIT 10 LLIMIT 1
+OBJECT 14216 TO 14209
+MOB 14205 TO 14210 GLIMIT 10 LLIMIT 1
+OBJECT 14217 TO 14210
+MOB 14205 TO 14211 GLIMIT 10 LLIMIT 40
+MOB 14207 TO 14211 GLIMIT 7 LLIMIT 1
+MOB 14205 TO 14212 GLIMIT 10 LLIMIT 1
+MOB 14208 TO 14212 GLIMIT 7 LLIMIT 1
+MOB 14205 TO 14213 GLIMIT 10 LLIMIT 1
+MOB 14205 TO 14214 GLIMIT 10 LLIMIT 1
+MOB 14207 TO 14214 GLIMIT 7 LLIMIT 1
+MOB 14205 TO 14215 GLIMIT 10 LLIMIT 1
+OBJECT 14216 TO 14215
+MOB 14205 TO 14216 GLIMIT 10 LLIMIT 1
+OBJECT 14217 TO 14216
+MOB 14205 TO 14217 GLIMIT 10 LLIMIT 1
+MOB 14207 TO 14218 GLIMIT 7 LLIMIT 1
+OBJECT 14216 TO 14218
+MOB 14209 TO 14219 GLIMIT 7 LLIMIT 1
+MOB 14207 TO 14222 GLIMIT 7 LLIMIT 1
+MOB 14209 TO 14222 GLIMIT 7 LLIMIT 1
+MOB 14210 TO 14223 GLIMIT 7 LLIMIT 1
+OBJECT 14217 TO 14224
+MOB 14207 TO 14225 GLIMIT 7 LLIMIT 1
+MOB 14209 TO 14225 GLIMIT 7 LLIMIT 1
+MOB 14210 TO 14226 GLIMIT 15 LLIMIT 1
+MOB 14207 TO 14227 GLIMIT 40 LLIMIT 1
+MOB 14208 TO 14227 GLIMIT 40 LLIMIT 1
+OBJECT 14216 TO 14227
+MOB 14207 TO 14230 GLIMIT 15 LLIMIT 1
+MOB 14208 TO 14231 GLIMIT 3 LLIMIT 1
+MOB 14210 TO 14231 GLIMIT 10 LLIMIT 1
+MOB 14209 TO 14232 GLIMIT 20 LLIMIT 1
+MOB 14210 TO 14232 GLIMIT 15 LLIMIT 1
+OBJECT 14216 TO 14232
+MOB 14200 TO 14236 GLIMIT 1 LLIMIT 1
+EQUIP 14207 HEAD
+EQUIP 14208 BODY
+EQUIP 14209 LEGS
+EQUIP 14210 ARMS
+EQUIP 14211 WAIST
+EQUIP 14214 WIELD
+EQUIP 14218 HOLD
+MOB 14201 TO 14236 GLIMIT 2 LLIMIT 1
+EQUIP 14212 WAIST
+EQUIP 14213 LEGS
+EQUIP 14215 WIELD
+EQUIP 14220 HEAD
+MOB 14201 TO 14236 GLIMIT 2 LLIMIT 1
+EQUIP 14212 WAIST
+EQUIP 14213 LEGS
+EQUIP 14215 WIELD
+EQUIP 14220 HEAD
+MOB 14207 TO 14239 GLIMIT 10 LLIMIT 1
+MOB 14208 TO 14240 GLIMIT 10 LLIMIT 1
+OBJECT 14216 TO 14241
+MOB 14207 TO 14242 GLIMIT 7 LLIMIT 3
+MOB 14209 TO 14243 GLIMIT 7 LLIMIT 1
+MOB 14210 TO 14243 GLIMIT 10 LLIMIT 1
+OBJECT 14217 TO 14243
+MOB 14202 TO 14244 GLIMIT 10 LLIMIT 1
+EQUIP 14212 WAIST
+EQUIP 14220 HEAD
+MOB 14204 TO 14244 GLIMIT 8 LLIMIT 1
+MOB 14211 TO 14244 GLIMIT 10 LLIMIT 1
+MOB 14204 TO 14245 GLIMIT 8 LLIMIT 2
+MOB 14204 TO 14246 GLIMIT 8 LLIMIT 2
+MOB 14211 TO 14247 GLIMIT 10 LLIMIT 1
+MOB 14209 TO 14249 GLIMIT 8 LLIMIT 2
+MOB 14208 TO 14251 GLIMIT 8 LLIMIT 1
+OBJECT 14216 TO 14251
+MOB 14207 TO 14252 GLIMIT 8 LLIMIT 1
+OBJECT 14217 TO 14253
+MOB 14209 TO 14254 GLIMIT 10 LLIMIT 1
+MOB 14210 TO 14254 GLIMIT 10 LLIMIT 1
+MOB 14208 TO 14255 GLIMIT 8 LLIMIT 1
+MOB 14209 TO 14255 GLIMIT 8 LLIMIT 1
+MOB 14210 TO 14255 GLIMIT 8 LLIMIT 1
+MOB 14210 TO 14255 GLIMIT 8 LLIMIT 1
+MOB 14204 TO 14256 GLIMIT 8 LLIMIT 1
+MOB 14211 TO 14256 GLIMIT 8 LLIMIT 1
+MOB 14211 TO 14256 GLIMIT 8 LLIMIT 1
+OBJECT 14221 TO 14258
+PUT 14222 IN 14221 COUNT 1
+MOB 14211 TO 14258 GLIMIT 10 LLIMIT 1
+MOB 14202 TO 14260 GLIMIT 10 LLIMIT 1
+EQUIP 14212 WAIST
+EQUIP 14220 HEAD
+OBJECT 14217 TO 14261
+MOB 14209 TO 14262 GLIMIT 8 LLIMIT 1
+MOB 14207 TO 14263 GLIMIT 8 LLIMIT 1
+OBJECT 14216 TO 14265
+MOB 14210 TO 14266 GLIMIT 8 LLIMIT 1
+MOB 14210 TO 14266 GLIMIT 8 LLIMIT 1
+MOB 14202 TO 14268 GLIMIT 10 LLIMIT 1
+EQUIP 14212 WAIST
+EQUIP 14220 HEAD
+MOB 14211 TO 14268 GLIMIT 8 LLIMIT 1
+OBJECT 14216 TO 14270
+OBJECT 14217 TO 14270
+MOB 14208 TO 14272 GLIMIT 8 LLIMIT 1
+OBJECT 14216 TO 14274
+OBJECT 14217 TO 14275
+MOB 14207 TO 14277 GLIMIT 8 LLIMIT 1
+MOB 14209 TO 14277 GLIMIT 8 LLIMIT 1
+OBJECT 14216 TO 14277
+MOB 14207 TO 14278 GLIMIT 8 LLIMIT 1
+MOB 14208 TO 14278 GLIMIT 8 LLIMIT 1
+MOB 14208 TO 14278 GLIMIT 8 LLIMIT 1
+OBJECT 14216 TO 14281
+MOB 14207 TO 14283 GLIMIT 8 LLIMIT 1
+MOB 14207 TO 14285 GLIMIT 8 LLIMIT 1
+MOB 14207 TO 14286 GLIMIT 8 LLIMIT 1
+OBJECT 14217 TO 14287
+PUT 14217 IN 14218 COUNT 1
+OBJECT 14216 TO 14288
+MOB 14206 TO 14291 GLIMIT 10 LLIMIT 1
+MOB 14203 TO 14293 GLIMIT 1 LLIMIT 1
+GIVE 14200
+GIVE 14201
+GIVE 14202
+GIVE 14203
+GIVE 14204
+GIVE 14205
+GIVE 14206
+MOB 14206 TO 14295 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

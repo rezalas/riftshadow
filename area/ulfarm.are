@@ -1,0 +1,6853 @@
+#AREA
+ulfarm.are~
+Udgaard~
+Pet/Aeo~
+20 40
+11600 11799
+unopened
+temperate
+0
+1
+Pet/Aeo Jathruk Karsus Zethus Anria~
+
+#MOBS
+#11600
+Torden~
+Torden~
+Torden Ironoak stands here, watching his weapons.
+~
+Torden Ironoak is an old, dwarven warrior who has set up a weapons shop
+after retiring from mercenary work.  His legs are still thicker than the
+trees he is named after.  
+~
+-900 0 100 dwarf~
+50 1d500+4000 10d8+20 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+AFF SANCTUARY
+AFF CURSE
+IMM SUMMON
+IMM CHARM
+RES LIGHTNING
+CLASS warrior none none 
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11601
+auctioneer~
+the auctioneer~
+A slave auctioneer greedily calls out bids.
+~
+A large, sweating man grins at you through rotting teeth.  He bears the
+Black Manacles tattoo of the Slavemaster Guild.  As he glances over at you,
+you sense he is appraising your value.  
+~
+-1000 0 100 human~
+40 1d600+3000 6d8+20 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11602
+Afskyelige child priest~
+the Afskyelige priest~
+An Afskyelige child priest looks at you with a vacant stare.
+~
+Robed in black, the Afskyelige priest tends to the needs of the temple. 
+Abducted at birth, the Afskyelige are brought to the temple's inner sanctum,
+where they are not seen for years.  When they emerge, they appear seemingly
+devoid of thought and emotion, as the mindless keepers of the temple.  Upon
+reaching the ago of six, they return to the inner sanctum and are never seen
+again.  
+~
+-1000 0 100 human~
+20 1d200+400 6d4+7 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT CLERIC
+OFF BASH
+OFF DISARM
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF WATERBREATH
+#11603
+judge~
+the judge~
+A judge rests behind the bench, giving guilty verdicts.
+~
+One of the five puppet judges that Udgaard Loke has placed in charge of
+the law here, this judge is empowered to do little more than take orders. 
+He glares down at the criminals brought before him.  
+~
+-750 0 100 human~
+30 1d400+900 7d4+20 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+CLASS warrior none none 
+#11604
+jaette guard trainee~
+the trainee~
+A jaette guard trainee stands here directing traffic.
+~
+Your glance at him tells you that this guard is a fresh recruit.  
+~
+-500 0 100 human~
+6 1d30+40 2d5+5 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+OFF DIRT_KICK
+CLASS warrior none none 
+#11605
+guildmaster master~
+the guildmaster~
+Your guildmaster stands here.
+~
+An imposing figure dressed in red ceremonial garb, the guildmaster stands
+at the base of an immense alter.  He considers your progress since your last
+visit.  
+~
+-1000 0 100 human~
+36 1d1+1999 6d8+25 0 100 divine
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+ACT CLERIC
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF PARRY
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF DARK_VISION
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+#11606
+guildmaster master~
+the guildmaster~
+A somber guildmaster stands here.
+~
+Suddenly, this man is behind you.  You did not even realize he had moved.
+He is dressed in drab attire, like many of the beggars in the town, but his
+graceful movement belies intense training.  He asks you if you need
+instruction.  
+~
+-1000 0 100 human~
+45 1d1+2799 6d8+35 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF DARK_VISION
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+CLASS thief 
+#11607
+guildmaster master~
+the guildmaster~
+Your guildmaster is standing here.
+~
+A dwarf so large that he could easily be mistaken for a troll commands
+all the warriors in this room.  A disgusted grimace crosses his face as the
+novices blunder in front of him.  His back bears the scars of the whip,
+suggesting that he may once have been a slave.  
+~
+-500 0 100 dwarf~
+36 1d1+2499 6d8+30 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF CURSE
+AFF PROTECTION
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES LIGHTNING
+RES HOLY
+CLASS warrior none none 
+#11608
+guildmaster master~
+the guildmaster~
+Your guildmaster is standing here.
+~
+A man dressed in simple black robes rests in front of a circle within
+square design.  As you watch, images and faces flicker within the circle. 
+As your face appears, he turns and looks at you.  
+~
+-1000 0 100 human~
+36 1d1+1999 6d8+30 0 100 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+ACT MAGE
+OFF DODGE
+OFF FADE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF INFRARED
+AFF DARK_VISION
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+#11609
+guildmaster master~
+the guildmaster~
+Your guildmaster is standing here.
+~
+Aged well beyond the normal limits of men, your guildmaster slowly walks
+about the room.  Following him are several ninja masters, hoping he will
+give them a scrap of his seemingly infinite knowledge.  
+~
+-500 0 100 human~
+50 1d200+4000 6d8+35 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+OFF DISARM
+OFF DODGE
+OFF FADE
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF PROTECTION
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS assassin 
+#11610
+man shrouded black master guildmaster~
+The paladin guildmaster~
+A man shrouded in a black cloak wanders here.
+~
+Peering out of this cloak, soft eyes question you.  "I am willing to help
+you if you wish," a voice whispers.  Looking closer, you see the insignia of
+the paladins on his hand.  He must be the guildmaster of their banished
+guild.  
+~
+1000 0 100 human~
+36 1d1+2999 6d8+30 0 100 beating
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT PRACTICE
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF DIRT_KICK
+OFF PARRY
+OFF ASSIST_PLAYERS
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF PROTECTION
+AFF SNEAK
+AFF HASTE
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS paladin 
+#11611
+master guildmaster~
+Your guildmaster~
+The anti-paladin guildmaster walks about, disgusted with his men.
+~
+You look at this general of Legion hoping to learn from his example.
+Suddenly he turns his attention upon you.
+ 
+"You!" he yells, "You are the kind of scum this guild needs more of!!!"
+ 
+He just as suddenly turns and resumes to chastise the other anti-paladins
+in the room.
+~
+-1000 0 100 human~
+40 1d50+2500 6d8+33 0 100 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PRACTICE
+OFF BERSERK
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS anti-paladin 
+#11612
+man man-at-arms mounted~
+the man-at-arms~
+A man-at-arms is mounted here, guarding the gate.
+~
+One glance at this huge jaette and you know how there can be so little
+crime in such an evil town.  Staring at this law enforcer, you don't even
+notice his tadarth hissing at you.  The sight of him makes you reflect upon
+the wisdom of following the laws.  
+~
+-750 0 100 human~
+35 8d50+1500 6d8+20 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT UPDATE_ALWAYS
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11613
+man man-at-arms mounted~
+the man-at-arms~
+A man-at-arms is mounted here, protecting the town.
+~
+One glance at this huge jaette and you know how there can be so little
+crime in such an evil town.  Staring at this law enforcer, you don't even
+notice his tadarth hissing at you.  The sight of him makes you reflect upon
+the wisdom of following the laws.  
+~
+-750 0 100 human~
+45 16d50+3600 8d6+20 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT STAY_AREA
+ACT UPDATE_ALWAYS
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11614
+watcher~
+the watcher~
+A dark watcher stands before the gate.
+~
+Hooded beneath an enormous cloak, this demonic soul has been chained to
+the gate by a magic beyond you.  Massive talons are all that is visible of
+the beast within the shadow that surrounds it.  The creature sits watching
+the citizens wander in and out of the city.  As the creature glances at you,
+you feel a deep tearing of your soul.  It passes as the creature looks away.
+You shudder to think this is the destiny of any criminal caught within these
+walls.  
+~
+-1000 0 100 troll~
+45 1d1+3499 8d8+30 0 100 beating
+0 0 0 0
+standing male moderate
+BDI 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF ASSIST_GUARD
+AFF INVISIBLE
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF PROTECTION
+AFF HIDE
+IMM SUMMON
+IMM CHARM
+IMM FIRE
+IMM MENTAL
+RES LIGHTNING
+RES HOLY
+VUL LIGHTNING
+VUL NEGATIVE
+VUL HOLY
+VUL SILVER
+VUL IRON
+CLASS warrior none none 
+#11615
+bankguard~
+the bankguard~
+A bankguard stands here with folded arms.
+~
+This guard is here to make sure no funny business goes on inside the
+bank.  He looks bored.  
+~
+-500 0 100 human~
+17 1d100+400 5d4+7 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+CLASS warrior none none 
+#11616
+jorgen jeweller~
+jorgen~
+Jorgen the jeweler is here cutting a gem.
+~
+Jorgen sizes you up, then reveals a gold tooth as he smiles.  Putting an
+arm around you, he leads you into the store... 
+~
+-500 0 100 human~
+30 1d400+900 5d7+10 0 100 slash
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11617
+thorne weaponsmith~
+thorne~
+Thorne stares at you from under bushy eyebrows.
+~
+Dark circles underline this man's eyes.  It looks as though he has had
+one night at the shop too many.  Thorne is a celebrity in Udgaard, credited
+with the single-handed defeat of an invading OneHeart force.  Yet you
+somehow doubt if this tall stringy man could live up to this feat... 
+~
+-500 0 100 human~
+35 1d150+1299 6d8+5 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11618
+kron~
+kron~
+Kron tends to the spits here.
+~
+Dripping with sweat, the sight of Kron turns your stomach.  You wonder if
+this man could be actually be the creator of such wonderful food.  
+~
+-500 0 100 human~
+35 1d150+1299 6d8+5 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11619
+convict cleaner~
+the convict~
+A convict is here, trying to clean up after the jaettes.
+~
+He is one of the lucky few criminals to be allowed out of Udgaard Loke's
+jail.  Now he wanders, cleaning up the debris of the city.  
+~
+0 0 100 human~
+10 1d50+100 4d5+5 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WIMPY
+OFF BASH
+OFF DODGE
+CLASS thief 
+#11620
+sickly slave~
+the dwarven slave~
+A sickly dwarven slave is here.
+~
+This slave's spirit has been crushed.  Now he just follows orders.
+~
+0 0 100 dwarf~
+3 4d10+40 2d7+1 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WIMPY
+ACT PET
+ACT NOALIGN
+OFF PARRY
+RES LIGHTNING
+#11621
+dark dark-elf thief slave~
+the dark-elf slave~
+A enslaved thief lurks in the shadows here.
+~
+A small dark-elf convicted of theft, he now serves his master.
+~
+0 0 100 drow~
+10 3d10+150 4d4+3 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF DODGE
+OFF TRIP
+AFF SNEAK
+CLASS thief 
+#11622
+oneheart slave~
+the OneHeart slave~
+A OneHeart slave stands guard here.
+~
+Captured by the jaettes, this human warrior now serves his past foes.  
+~
+0 0 100 human~
+15 3d10+350 4d5+10 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF BASH
+OFF DISARM
+OFF PARRY
+OFF TRIP
+CLASS warrior none none 
+#11624
+enslaved minotaur lord~
+an enslaved minotaur lord~
+An enslaved minotaur lord stands here in chains.
+~
+His horns shorn, this once nomadic minotaur is now but a shadow of his
+former self.  
+~
+0 0 100 minotaur~
+18 1d40+480 4d5+14 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT PET
+ACT NOALIGN
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+CLASS warrior none none 
+#11625
+watchman~
+the watchman~
+An Udgaard watchman stands here.
+~
+The city patrolmen wanders about here, looking for signs of trouble.
+~
+-500 0 100 human~
+15 1d80+225 4d5+5 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT WIMPY
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+CLASS warrior none none 
+#11626
+greater watchman~
+the greater watchman~
+A greater Udgaard watchman patrols this area.
+~
+An elite warrior stands before you, scanning the crowd.  A permanent
+scowl rests over his features.  You think it would be best to act as
+peaceful as possible around him... 
+~
+-1000 0 100 human~
+29 1d150+840 5d5+6 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF WATERBREATH
+CLASS warrior none none 
+#11627
+tower attendant~
+the tower attendant~
+A tower attendant glances up at you as you enter.
+~
+This young ranger has been training since childhood to stand watch over
+the surrounding countryside.  He looks uncomfortable indoors.  
+~
+-500 0 100 human~
+20 1d105+400 4d5+5 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+CLASS warrior none none 
+#11628
+tower guard~
+the tower guard~
+A tower guard stands here, watching the countryside.
+~
+A large ranger keeps watch over the surrounding areas.  Penetrating eyes
+search you for a moment, then return to scanning the nearby forests.  
+~
+-1000 0 100 human~
+24 1d125+575 5d5+3 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#11629
+black anti-paladin knight~
+the black knight~
+A black knight is resting here, preaching to his dark lord.
+~
+Udgaard Loke allows these knights free reign over much of the city.  Now
+they continually search the streets hoping to catch a paladin unaware.  
+~
+-1000 0 100 human~
+23 1d120+600 5d6+5 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT MAGE
+OFF BASH
+OFF DISARM
+OFF PARRY
+AFF DETECT_INVIS
+AFF SANCTUARY
+CLASS anti-paladin 
+#11630
+small employee~
+the employee~
+A small Udgaard employee welcomes you to mud school.
+~
+Dressed in a robe of fine silk, this employee hopes to improve the
+schools fading image.  He welcomes you warmly.  
+~
+1000 0 100 human~
+3 1d20+9 2d4+3 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 small
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DODGE
+#11631
+dwarf dwarven soldier~
+the dwarven soldier~
+A dwarven soldier is here.
+~
+This dwarf sits heavily on a stool, hunched over a large helping of meat.
+He stares right back at you.  
+~
+0 0 100 dwarf~
+8 1d45+65 3d4+4 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+RES LIGHTNING
+CLASS warrior none none 
+#11632
+minotaur soldier~
+a minotaur soldier~
+A minotaur soldier is here.
+~
+Ravenously devouring all of the food around him, this minotaur soldier
+ignores the commotion of his surroundings.  He looks like he is enjoying his
+food.  
+~
+0 0 100 minotaur~
+8 1d45+65 3d4+4 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DODGE
+OFF KICK
+OFF TRIP
+OFF ASSIST_RACE
+CLASS warrior none none 
+#11633
+human soldier~
+the human soldier~
+A human soldier is asleep on a table.
+~
+Apparently this human has had too much to drink.  His head lies in a bowl
+of gruel.  
+~
+0 0 100 human~
+8 1d45+65 3d4+4 0 100 slash
+0 0 0 0
+sleeping male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+AFF SLEEP
+CLASS warrior none none 
+#11634
+giant planar soldier~
+the planar soldier~
+A planar soldier is here.
+~
+Sitting at a table by himself, this planar is surrounded by food.  He is
+managing to eat it all.  
+~
+0 0 100 planar~
+8 1d45+65 3d4+4 0 100 slash
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+CLASS warrior none none 
+#11635
+jaette soldier~
+the jaette warrior~
+A jaette warrior is here. He looks angry.
+~
+Unfed as of yet, this jaette is obviously put out by the lack of service.
+He looks about ready to take it out on anyone he can.  
+~
+0 0 100 human~
+10 1d55+100 4d4+4 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF BASH
+OFF KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_RACE
+CLASS warrior none none 
+#11636
+proprietor~
+the proprietor~
+The proprietor of the Circle Cafe smiles at you.
+~
+Grossly overweight, this enormous man is still quite happy with his shop.
+Yet, he doesn't look like he takes criticism of his pastries very well.  
+~
+-1000 0 100 human~
+29 3d100+900 6d5+10 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11637
+proprietor~
+the proprietor~
+The proprietor of the Bear Claw Cafe smiles at you.
+~
+Ghostly pale, this man looks like he hasn't been out of the kitchen in
+weeks.  He grimaces at you in an attempt to smile.  
+~
+-1000 0 100 unique~
+29 3d100+900 6d5+10 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11638
+stooped apothecary~
+the apothecary~
+A stooped apothecary grunts at your entrance.
+~
+A large hump on this man's back nearly bends him in half.  When you first
+glanced at him, this disguised his true size... You realize he would
+normally tower over you!  
+~
+-1000 0 100 human~
+40 3d100+2600 7d8+15 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT MAGE
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF SNEAK
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11639
+teller~
+the teller~
+A teller is here, helping customers.
+~
+A listless employee of the Tested Traveler wanders about the room.  He
+occasionally snickers to himself.  He looks extremely bored.  
+~
+-1000 0 100 dwarf~
+40 3d100+2600 6d7+16 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF SANCTUARY
+AFF CURSE
+IMM SUMMON
+IMM CHARM
+RES LIGHTNING
+#11640
+furniture salesman~
+the salesman~
+A plump furniture salesman is varnishing some chairs here.
+~
+Smelling like chemicals, this jaette quickly runs over to shake your
+hand.  Glancing down at his hand, it is too late when you realize it is
+covered with varnish.  
+~
+-1000 0 100 human~
+40 3d100+2600 6d7+12 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11641
+dark necromancer~
+the necromancer~
+The dark necromancer is here, ordering his servants.
+~
+A whisper thin figure rises from a heap of items.  A hooded robe hides
+his features, yet the chills running over your spine lets you know he is
+staring at you.  
+~
+-1000 0 100 human~
+45 3d100+2600 9d15+15 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WIMPY
+ACT MAGE
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF SNEAK
+IMM SUMMON
+IMM CHARM
+#11642
+zombie servant~
+the zombie servant~
+A zombie servant is moving boxes here.
+~
+This undead creature lurks about the room, taking orders from it's
+master.  It wanders up to you as you enter and grunts, 'No fighting'.  Then
+it wanders away.  
+~
+-1000 0 100 zombie~
+23 1d120+530 4d6+8 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF ASSIST_ALL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#11643
+mad chemist~
+the chemist~
+A mad chemist is busy brewing drinks.
+~
+Completely focused on a dark potion, this man takes no notice of you. 
+You wonder if you could just take the drinks from behind the bar... 
+~
+-1000 0 100 human~
+40 3d100+2600 6d8+15 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT MAGE
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF SNEAK
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11644
+blacksmith~
+the blacksmith~
+A dirty blacksmith is banging at the anvil.
+~
+Smudged with soot and dirt, it is obvious this man hasn't bathed in a
+long while.  You decide not do tell him after he pulls a steel vest apart
+with his bare hands.  
+~
+0 0 100 dwarf~
+40 3d100+2300 6d8+15 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF SANCTUARY
+AFF CURSE
+AFF PROTECTION
+IMM SUMMON
+IMM CHARM
+RES LIGHTNING
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11645
+slave~
+the blacksmith's slave~
+A burly slave helps the blacksmith.
+~
+One of the largest slaves you have seen holds some steel as the
+blacksmith hammers it.  You notice he is chained to the anvil.  
+~
+-1000 0 100 planar~
+23 1d120+530 4d6+8 0 100 slash
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BASH
+OFF DISARM
+OFF PARRY
+OFF TRIP
+OFF ASSIST_ALL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF CHARM
+#11646
+knight~
+the knight~
+A guild knight guards the entrance.
+~
+Practically asleep, this knight leans against a lamp pole.  He keeps a
+wandering eye on the door to the warrior's guild.  
+~
+-1000 0 100 dwarf~
+23 1d120+530 4d6+8 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF ASSIST_ALL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF CURSE
+RES LIGHTNING
+CLASS warrior none none 
+#11647
+Ivy shopkeeper~
+Ivy~
+Ivy is here, tending to the plants.
+~
+Almost camouflaged by the plants, this small minotaur walks around the
+room checking her garden.  You notice Ivy's skin is brown and slightly
+tough... 
+~
+-1000 0 100 minotaur~
+52 1d10+30000 5d200+50 0 100 punch
+0 0 0 0
+standing female moderate
+0 MV giant
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT NOPURGE
+OFF AREA_ATTACK
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF DARK_VISION
+AFF REGENERATION
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+RES LIGHTNING
+#11648
+pharmacist~
+the pharmacist~
+The pharmacist is here.
+~
+A dazed man sits behind the counter.  His eyes are unfocused, and he
+looks slightly disconnected from reality.  
+~
+-1000 0 100 human~
+40 3d100+2300 6d8+12 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT CLERIC
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF PROTECTION
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11649
+baker~
+the baker~
+A quick little baker runs around the room.
+~
+Flour and other ingredients powder this man's apron.  He obviously has a
+bad temper, as all his employees disappear whenever he enters the room.  
+~
+-1000 0 100 human~
+40 3d100+2700 6d8+12 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#11650
+librarian~
+the librarian~
+The misty figure of the librarian floats here.
+~
+As the librarian stands to greet you, a hush falls over the few others
+inside the library.  You can see little more of the librarian than a dark
+cloud, although reddish eyes are clearly visible.  You briefly wonder what
+the price is for the knowledge that she possesses.  
+~
+-1000 0 100 human~
+50 3d100+4000 6d9+22 0 100 slash
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT MAGE
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11651
+scarred dwarf~
+the old dwarf~
+A battle scarred dwarven veteran is here telling tales.
+~
+On first glance, you notice the huge frame of this once mighty warrior. 
+Yet, this warrior has given up his violent youth.  Now he contents himself
+with the relaxation available to him in this sanctuary, and earns a living
+off his knowledge of the mountains to the south.  
+~
+-1000 0 100 dwarf~
+40 4d100+2000 6d9+7 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF TRIP
+OFF ASSIST_ALL
+AFF DETECT_EVIL
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+RES LIGHTNING
+CLASS warrior none none 
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11652
+cobbler~
+the cobbler~
+A broken down cobbler rests on a stool.
+~
+Clothed in tattered rags, at least this man has some well made shoes... 
+~
+-1000 0 100 human~
+40 4d100+2700 6d8+14 0 100 slash
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+#11653
+school teacher~
+the teacher~
+A humble teacher is here.
+~
+Once the proud professor in the town's university, Udgaard Loke
+imprisoned this man for provoking revolt.  To escape death, this man agreed
+to train Udgaard Loke's army in mind and body.  
+~
+0 0 100 human~
+60 1d1+5999 8d10+34 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT GAIN
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+#11654
+sukuinage~
+the sukuinage~
+A sukuinage stands here, distributing equipment.
+~
+Appointed by the master of the Dojo, this man's word holds the weight of
+law here.  He distributes equipment to those students who have proved
+themselves worthy of the honor.  
+~
+-1000 0 100 human~
+33 3d100+1200 6d7+17 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT MAGE
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS assassin 
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT north
+#11655
+gate guard~
+the gate guard~
+A gate guard stands here.
+~
+A large guard stands here barring the gate.  He scans you briefly, then
+allows you to move on.  
+~
+-1000 0 100 human~
+22 1d60+1150 4d5+17 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF PARRY
+OFF TRIP
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11656
+healer~
+the Afskyelige healer~
+An Afskyelige child is healing those who come to worship evil.
+~
+The youngest of the priests of the temple, this healer looks barely two
+years old.  Yet, you sense that this child could destroy the greatest of
+warriors.  
+~
+-1000 0 100 human~
+50 10d200+3300 14d40+45 0 100 slash
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT CLERIC
+ACT HEALER
+ACT UPDATE_ALWAYS
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#11657
+man man-at-arms mounted~
+the man-at-arms~
+A man-at-arms is mounted here, guarding the gate.
+~
+One glance at this huge jaette and you know how there can be so little
+crime in such an evil town.  Staring at this law enforcer, you don't even
+notice his tadarth hissing at you.  The sight of him makes you reflect upon
+the wisdom of following the laws.  
+~
+-750 0 100 human~
+35 8d50+1500 6d8+20 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT UPDATE_ALWAYS
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11658
+man man-at-arms mounted~
+the man-at-arms~
+A man-at-arms is mounted here, guarding the gate.
+~
+One glance at this huge jaette and you know how there can be so little
+crime in such an evil town.  Staring at this law enforcer, you don't even
+notice his tadarth hissing at you.  The sight of him makes you reflect upon
+the wisdom of following the laws.  
+~
+-750 0 100 human~
+35 8d50+1500 6d8+20 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT UPDATE_ALWAYS
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11659
+man man-at-arms mounted~
+the man-at-arms~
+A man-at-arms is mounted here, guarding the gate.
+~
+One glance at this huge jaette and you know how there can be so little
+crime in such an evil town.  Staring at this law enforcer, you don't even
+notice his tadarth hissing at you.  The sight of him makes you reflect upon
+the wisdom of following the laws.  
+~
+-750 0 100 human~
+35 8d50+1500 6d8+20 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT UPDATE_ALWAYS
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11660
+gate guard~
+the gate guard~
+A gate guard stands here.
+~
+A large guard stands here barring the gate.  He scans you briefly, then
+allows you to move on.  
+~
+-1000 0 100 human~
+12 1d60+150 4d5+7 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11661
+gate guard~
+the gate guard~
+A gate guard stands here.
+~
+A large guard stands here barring the gate.  He scans you briefly, then
+allows you to move on.  
+~
+-1000 0 100 human~
+12 1d60+150 4d5+7 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11662
+gate guard~
+the gate guard~
+A gate guard stands here.
+~
+A large guard stands here barring the gate.  He scans you briefly, then
+allows you to move on.
+~
+-1000 0 100 human~
+12 1d60+150 4d5+7 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#11663
+tower attendant~
+the tower attendant~
+A tower attendant glances up at you as you enter.
+~
+This young ranger has been training since childhood to stand watch over
+the surrounding countryside.  He looks uncomfortable indoors.  
+~
+-500 0 100 human~
+20 1d105+400 4d5+5 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+CLASS warrior none none 
+#11664
+tower attendant~
+the tower attendant~
+A tower attendant glances up at you as you enter.
+~
+This young ranger has been training since childhood to stand watch over
+the surrounding countryside.  He looks uncomfortable indoors.
+~
+-500 0 100 human~
+20 1d105+400 4d5+5 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+CLASS warrior none none 
+#11665
+tower attendant~
+the tower attendant~
+A tower attendant glances up at you as you enter.
+~
+This young ranger has been training since childhood to stand watch over
+the surrounding countryside.  He looks uncomfortable indoors.
+~
+-500 0 100 human~
+20 1d105+400 4d5+5 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+CLASS warrior none none 
+#11666
+tower guard~
+the tower guard~
+A tower guard stands here, watching the countryside.
+~
+A large ranger keeps watch over the surrounding areas.  Penetrating eyes
+search you for a moment, then return to scanning the nearby forests.  
+~
+-1000 0 100 human~
+24 1d125+575 5d5+3 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#11667
+tower guard~
+the tower guard~
+A tower guard stands here, watching the countryside.
+~
+A large ranger keeps watch over the surrounding areas.  Penetrating eyes
+search you for a moment, then return to scanning the nearby forests.
+~
+-1000 0 100 human~
+24 1d125+575 5d5+3 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#11668
+tower guard~
+the tower guard~
+A tower guard stands here, watching the countryside.
+~
+A large ranger keeps watch over the surrounding areas.  Penetrating eyes
+search you for a moment, then return to scanning the nearby forests.
+~
+-1000 0 100 human~
+24 1d125+575 5d5+3 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_GUARD
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#11669
+jaette guard trainee~
+the trainee~
+A jaette guard trainee stands here directing traffic.
+~
+Your glance at him tells you that this guard is a fresh recruit.
+~
+-500 0 100 human~
+6 1d30+40 2d5+5 0 100 slash
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+OFF DIRT_KICK
+CLASS warrior none none 
+#11670
+jaette guard trainee~
+the trainee~
+A jaette guard trainee stands here directing traffic.
+~
+Your glance at him tells you that this guard is a fresh recruit.
+~
+-500 0 100 human~
+6 1d30+40 2d5+5 0 100 slash
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+OFF DIRT_KICK
+CLASS warrior none none 
+#11671
+jaette guard trainee~
+the trainee~
+A jaette guard trainee stands here directing traffic.
+~
+Your glance at him tells you that this guard is a fresh recruit.
+~
+-500 0 100 human~
+6 1d30+40 2d5+5 0 100 slash
+0 0 0 0
+standing male poor
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+OFF DIRT_KICK
+CLASS warrior none none 
+#11672
+healer protector~
+the healer~
+A healer is here, selling spells.
+~
+Although retired from adventuring, the healer still lends a hand.
+Type 'heal' to see a listing of spells.
+~
+1000 0 100 human~
+40 1d1+999 2d4+30 0 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT CLERIC
+ACT NOPURGE
+ACT HEALER
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM WEAPON
+#11673
+protector~
+The protector of Udgaard~
+The protector of Udgaard is watching for new citizens here.
+~
+An old wise looking man is watching you.
+~
+0 0 100 human~
+60 50d12+12000 10d6+35 0 100 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WANDER
+ACT STAY_AREA
+ACT TRAIN
+ACT MAGE
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+#0
+
+
+
+#OBJS
+#11600
+studded onyx flail~
+a flail studded with onyx~
+A wooden flail studded with onyx stones is lying on the floor.~
+weapon
+iron~
+flail 9 3 blast 0
+36 1 500 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY MANA 50
+LIMIT 0
+TIMER 0
+E flail~
+This flail looks well-made.
+~
+
+#11601
+double-bolted body armor~
+some double-bolted body armor~
+Some double-bolted body armor is lying on the ground.~
+armor
+iron~
+8 8 8 0 9
+35 50 800 P
+WEAR TAKE
+WEAR BODY
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY HP 20
+LIMIT 0
+TIMER 0
+E double-bolted body armor~
+On the armor is inscribed, "Made by Torden Ironoak."
+~
+
+#11602
+torden's battle axe~
+Torden's battle axe~
+A well made battle axe is lying on the ground.~
+weapon
+iron~
+axe 5 5 slash 0
+35 20 775 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 4
+LIMIT 0
+TIMER 0
+E torden's battle axe~
+On the axe is inscribed, "Made by Torden Ironoak."
+~
+
+#11603
+torden's dagger~
+Torden's dagger~
+A well made dagger is lying on the ground.~
+weapon
+iron~
+dagger 4 5 pierce 0
+32 7 650 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+LIMIT 0
+TIMER 0
+NOTES ~
+E torden's dagger~
+On the dagger is inscribed, "Made by Torden Ironoak."
+~
+
+#11604
+torden's battle whip~
+Torden's battle whip~
+A well made whip is coiled on the ground.~
+weapon
+iron~
+whip 3 8 whip 0
+32 14 650 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+E torden's whip~
+On the whip is inscribed, "Made by Torden Ironoak."
+~
+
+#11605
+double-bolted arm guards~
+some double-bolted arm guards~
+Some double-bolted arm guards are lying on the ground.~
+armor
+iron~
+7 7 7 0 6
+20 35 650 P
+WEAR TAKE
+WEAR ARMS
+APPLY DAMROLL 1
+APPLY STR 1
+LIMIT 0
+TIMER 0
+E double-bolted arm guards~
+On the armor is inscribed, "Made by Torden Ironoak."
+~
+
+#11606
+blue shield~
+a blue shield~
+A bright blue shield is lying on the ground.~
+armor
+iron~
+7 7 7 0 9
+35 35 675 P
+WEAR TAKE
+WEAR SHIELD
+APPLY HITROLL 2
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E blue shield~
+On the shield is inscribed, "Made by Torden Ironoak."
+~
+
+#11607
+parynthian boxing gloves~
+some Parynthian boxing gloves~
+Some odd-shaped boxing gloves are lying on the ground.~
+armor
+cloth~
+4 4 4 0 3
+35 50 1000 P
+WEAR TAKE
+WEAR HANDS
+APPLY HITROLL -20
+APPLY DAMROLL -30
+LIMIT 0
+TIMER 0
+E parynthian boxing gloves~
+Well padded, these odd gloves are very uncomfortable.  As you attempt to move
+them around, they resist your movements in every direction.  What possible use
+such gloves could serve is beyond you.
+~
+
+#11608
+judge's mallet~
+a judge's mallet~
+A large wooden mallet is lying on the ground.~
+weapon
+wood~
+mace 7 4 pound 0
+30 17 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E judge's mallet~
+Many people were sentenced to death with this gavel.  You suspect you could
+do a little "sentencing" of your own with it.
+~
+
+#11609
+fountain~
+the fountain~
+A large fountain is here, gushing forth water tainted red.~
+fountain
+marble~
+0 0 'water' 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E fountain~
+The water seems safe to drink.
+~
+
+#11610
+pit~
+the donation pit~
+The donation pit is here.~
+container
+marble~
+10000 0 0 1000 0
+0 0 0 P
+ITEM DONATION
+LIMIT 0
+TIMER 0
+E pit~
+This is where you put money and items to expand and promote the power of
+Udgaard Loke and his minions.
+~
+
+#11611
+slave collar~
+a slave collar~
+A plain round collar rests on the ground.~
+armor
+iron~
+3 3 3 0 2
+10 15 100 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+ITEM NOREMOVE
+LIMIT 0
+TIMER 0
+E slave collar~
+On the collar is inscribed "Slave".
+~
+
+#11612
+traffic whistle~
+a traffic whistle~
+The whistle of a traffic officer is lying on the ground.~
+armor
+steel~
+0 0 0 0 4
+6 1 100 P
+WEAR TAKE
+WEAR NECK
+LIMIT 0
+TIMER 0
+E traffic whistle~
+The whistle reads, "Blow here."
+~
+
+#11613
+guildmaster's dagger~
+the Guildmaster's dagger~
+A sharp dagger is lying on the ground.~
+weapon
+steel~
+dagger 8 4 pierce 0
+45 0 1500 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 5
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E guildmaster's dagger~
+This dagger is of the very finest quality.
+~
+
+#11614
+thin axe~
+a thin axe~
+The thin axe of the warriors' guildmaster is lying here.~
+weapon
+steel~
+axe 7 4 chop 0
+36 12 1500 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E thin axe~
+This axe is of the finest quality.
+~
+
+#11615
+alligator-skin alligator skin whip~
+an alligator-skin whip~
+A whip made of the hide of an alligator is lying here.~
+weapon
+leather~
+whip 6 6 whip 0
+36 1 30000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM MAGIC
+ITEM ANTIGOOD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY MANA 100
+LIMIT 0
+TIMER 0
+NOTES ~
+E alligator skin whip~
+This whip is made out of the hide of an alligator.  The craftsmanship is
+superb and the inscriptions on the side reveal it has magical aspects as
+well.
+~
+
+#11616
+sword ivory-hilted ivory hilted wakizashi~
+the ivory-hilted wakizashi~
+A small sword with an ivory hilt is lying here.~
+weapon
+ivory~
+sword 6 7 slash 0
+50 8 100000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+APPLY HITROLL 2
+APPLY DAMROLL 5
+APPLY STR -1
+LIMIT 5
+TIMER 0
+E sword ivory-hilted ivory hilted wakizashi~
+The short sword is perfectly balanced and has been folded a thousand times.
+~
+
+#11617
+mithril blade~
+a mithril blade~
+A mithril blade is lying here.~
+weapon
+mithril~
+sword 5 5 slice 0
+36 2 30000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM MAGIC
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E mithril blade~
+You see a finely carved blade of mithril.
+~
+
+#11618
+dark staff dragon's tooth~
+a dark staff tipped with a dragon's tooth~
+A dark staff tipped with a dragon's tooth is lying here.~
+weapon
+wood~
+flail 5 6 bite 0
+40 1 40000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+ITEM ANTIGOOD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY SPETRI -2
+LIMIT 0
+TIMER 0
+E dark staff dragon's tooth~
+It is a long black staff at the end of which is bound one of the front teeth
+of a dragon.
+~
+
+#11619
+udgaardian man-at-arm's halberd two-handed~
+an Udgaardian man-at-arms' halberd~
+The giant halberd of an Udgaardian man-at-arms is lying here.~
+weapon
+wood~
+polearm 10 4 cleave 0
+35 30 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+E udgaardian man-at-arm's halberd~
+You can't imagine anything resisting the weight alone of this mighty polearm,
+let alone its razor sharp blade.
+~
+
+#11620
+pitch-black pitch black belt~
+a pitch-black belt~
+A pitch-black belt is lying here.~
+armor
+leather~
+2 2 2 0 7
+35 3 250 P
+WEAR TAKE
+WEAR WAIST
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E pitch-black pitch black belt~
+It is so black that you can see nothing by looking at it.
+~
+
+#11621
+pitch-black pitch black ring~
+a pitch-black ring~
+A pitch-black ring is barely discernible in the dirt.~
+armor
+iron~
+0 0 0 0 0
+35 1 250 P
+WEAR TAKE
+WEAR FINGER
+ITEM ANTIGOOD
+APPLY CON 1
+APPLY MANA 20
+APPLY HP 20
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E pitch-black pitch black ring~
+It is so black that you can see nothing by looking at it.
+~
+
+#11622
+silver embossed ruby~
+a silver embossed ruby~
+A ruby embossed with silver, shines on the ground.~
+light
+ruby~
+0 0 999 0 0
+25 0 15000 P
+WEAR TAKE
+ITEM GLOW
+ITEM MAGIC
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+E silver embossed ruby~
+The light that hits this ruby it reflected in an odd array that makes it
+easier to discern the location of those around you.
+~
+
+#11623
+diamond tiara~
+a diamond tiara~
+A diamond tiara is glowing on the floor.~
+light
+diamond~
+0 0 999 0 0
+10 0 2000 P
+WEAR TAKE
+ITEM GLOW
+ITEM MAGIC
+APPLY WIS 1
+LIMIT 0
+TIMER 0
+E diamond tiara~
+As you put on the tiara, everything around you seems a little clearer.
+~
+
+#11624
+moonstone~
+a moonstone~
+A glowing moonstone lies on the floor.~
+light
+moonstone~
+0 0 999 0 0
+5 0 500 P
+WEAR TAKE
+ITEM GLOW
+ITEM MAGIC
+APPLY MOVE 50
+LIMIT 0
+TIMER 0
+E moonstone~
+This glowing moonstone seems to almost float in your hand.
+~
+
+#11625
+robe thorns~
+a robe of thorns~
+A piece of cloth covered in thorns is lying on the ground.~
+armor
+cloth~
+8 8 8 0 7
+35 1 40000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+APPLY DEX 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E robe thorns~
+Ouch!  This cloth is really hard to handle.
+~
+
+#11626
+brown dagger~
+a brown dagger~
+A brown dagger is lying on the ground.~
+weapon
+steel~
+dagger 3 3 pierce 0
+5 1 250 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+E brown dagger~
+It is very brown. On it is written, "Made by Thorne."
+~
+
+#11627
+brown sword~
+a brown sword~
+A brown sword is lying on the ground.~
+weapon
+steel~
+sword 3 3 slice 0
+5 1 250 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+E brown sword~
+It is very brown. On it is written, "Made by Thorne."
+~
+
+#11628
+brown spear~
+a brown spear~
+A brown spear is lying on the ground.~
+weapon
+steel~
+spear 3 3 pierce 0
+5 1 250 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+E brown spear~
+It is very brown. On it is written, "Made by Thorne."
+~
+
+#11629
+brown leggings~
+a pair of brown leggings~
+Brown leggings are lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+TIMER 0
+E brown leggings~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11630
+brown arm guards arm-guards~
+a pair of brown arm-guards~
+Brown arm-guards are lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR ARMS
+LIMIT 0
+TIMER 0
+E brown arm guards arm-guards~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11631
+brown helm~
+a brown helm~
+A brown helm are lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+TIMER 0
+E brown helm~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11632
+brown boots~
+some brown boots~
+Brown boots are lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR FEET
+LIMIT 0
+TIMER 0
+E brown boots~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11633
+brown gloves~
+a pair of brown gloves~
+Brown gloves are lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR HANDS
+LIMIT 0
+TIMER 0
+E brown gloves~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11634
+brown body armor~
+a suit of brown body armor~
+Brown body armor is lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+E brown body armor~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11635
+large meat cleaver~
+a large meat cleaver~
+A large bloodstained meat cleaver is lying on the ground.~
+weapon
+iron~
+sword 4 8 cleave 0
+30 1 25000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+APPLY HITROLL 1
+APPLY DAMROLL 5
+LIMIT 0
+TIMER 0
+E large meat cleaver~
+Sturdy, sharp, heavy, and easy to handle.  This cleaver is suitable for more
+than just cleaving dead meat.
+~
+
+#11636
+spicy chicken~
+some spicy chicken~
+A bucket full of spicy chicken is lying here.~
+food
+food~
+15 15 0 0 0
+0 0 16 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E spicy chicken~
+Wings, breasts, and thighs all covered in spicy sauce.  Yum.
+~
+
+#11637
+teriyaki beef~
+some teriyaki beef~
+A bowl of teriyaki beef is sitting here.~
+food
+food~
+20 20 0 0 0
+0 0 15 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E teriyaki beef~
+Scrumptious beef sitting on rice with a delicious teriyaki sauce.  Yum.
+~
+
+#11638
+barbecued spareribs ribs~
+some barbecued spareribs~
+A plate of barbecued spareribs is resting here.~
+food
+food~
+50 50 0 0 0
+0 0 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E barbecued spareribs ribs~
+Piles of ribs covered in barbecue sauce.  Yum.
+~
+
+#11639
+venison~
+some venison~
+A large steak of some venison is sitting here.~
+food
+food~
+10 10 0 0 0
+0 0 50 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E venison~
+Freshly killed wild deer, delicate and delicious.
+~
+
+#11640
+black halberd~
+a black halberd~
+A large black halberd is lying here.~
+weapon
+wood~
+polearm 4 5 cleave 0
+15 3 7000 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E black halberd~
+Black and deadly, this polearm looks very nice.
+~
+
+#11641
+pitch-black pitch black belt~
+a pitch-black belt~
+A pitch-black belt is lying here.~
+armor
+leather~
+2 2 2 0 5
+17 3 250 P
+WEAR TAKE
+WEAR WAIST
+ITEM ANTIGOOD
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+E pitch-black pitch black belt~
+It is so black that you can see nothing by looking at it.
+~
+
+#11642
+pitch-black pitch black ring~
+a pitch-black ring~
+A pitch-black ring is barely discernible in the dirt.~
+armor
+iron~
+0 0 0 0 4
+17 1 200 P
+WEAR TAKE
+WEAR FINGER
+ITEM ANTIGOOD
+APPLY CON 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+E pitch-black pitch black ring~
+It is so black that you can see nothing by looking at it.
+~
+
+#11643
+black halberd~
+a black halberd~
+A large black halberd is lying here.~
+weapon
+wood~
+polearm 7 4 cleave 0
+29 3 7000 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+ITEM ANTIGOOD
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E black halberd~
+Black and deadly, this polearm looks very nice.
+~
+
+#11644
+pitch-black pitch black belt~
+a pitch-black belt~
+A pitch-black belt is lying here.~
+armor
+leather~
+2 2 2 0 4
+20 3 200 P
+WEAR TAKE
+WEAR WAIST
+ITEM ANTIGOOD
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E pitch-black pitch black belt~
+It is so black that you can see nothing by looking at it.
+~
+
+#11645
+pitch-black pitch black ring~
+a pitch-black ring~
+A pitch-black ring is barely discernible in the dirt.~
+armor
+iron~
+0 0 0 0 3
+20 1 200 P
+WEAR TAKE
+WEAR FINGER
+ITEM ANTIGOOD
+APPLY CON 1
+APPLY HP 10
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E pitch-black pitch black ring~
+It is so black that you can see nothing by looking at it.
+~
+
+#11646
+leather gloves black inscriptions~
+some leather gloves with black inscriptions~
+Some leather gloves with writing on them are lying on the ground.~
+armor
+leather~
+7 7 7 7 6
+23 0 7000 P
+WEAR TAKE
+WEAR HANDS
+ITEM GLOW
+ITEM EVIL
+ITEM MAGIC
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY MANA 50
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E leather gloves black inscriptions~
+Along the fingers and the backs of these gloves are black inscriptions.
+~
+
+#11647
+side beef~
+a side of beef~
+A HUGE side of beef is lying here, waiting to be eaten.~
+food
+beef~
+10 10 0 0 0
+0 15 1 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E side beef~
+This beef looks great, and its here for the taking.
+~
+
+#11648
+glazed doughnut~
+a glazed doughnut~
+A glazed doughnut is lying here.~
+food
+food~
+5 5 0 0 0
+0 0 5 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E glazed doughnut~
+It looks very tasty.
+~
+
+#11649
+twist doughnut~
+a twist~
+A twist shaped doughnut is lying here.~
+food
+food~
+5 5 0 0 0
+0 0 5 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E twist doughnut~
+It looks very tasty.
+~
+
+#11650
+apple turnover doughnut~
+an apple turnover~
+An apple turnover is lying here.~
+food
+food~
+10 10 0 0 0
+0 0 10 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E apple turnover doughnut~
+It looks very tasty.
+~
+
+#11651
+jelly filled doughnut~
+a jelly filled doughnut~
+A jelly filled doughnut has been left here.~
+food
+food~
+10 10 0 1 0
+0 0 5 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E jelly filled doughnut~
+Good thing you look before you eat.  As you examine your food, you notice
+that the jelly is in fact some putrid green paste.  Those jaettes eat weird
+food.
+~
+
+#11652
+gray marble mortar~
+a gray marble mortar~
+A large gray, marble mortar is lying here, missing its pestle.~
+weapon
+marble~
+mace 6 6 crush 0
+40 2 50000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+APPLY INT 1
+APPLY HITROLL 1
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+E gray marble mortar~
+Well made, you suspect that this mortar could crush just about anything.
+~
+
+#11653
+pill health~
+a pill of health~
+A pill with "health" written on it is lying here.~
+pill
+pill~
+40 'cure disease' 'reserved' 'reserved' 'reserved'
+15 0 750 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E pill health~
+It is a brightly colored pill with the word "health" written on it.
+~
+
+#11654
+pill anti-toxin anti toxin~
+a pill of anti-toxin~
+A pill with "anti-toxin" written on it is lying here.~
+pill
+pill~
+40 'cure poison' 'reserved' 'reserved' 'reserved'
+15 0 150 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E pill anti-toxin anti toxin~
+It is a brightly colored pill with the words "anti-toxin" written on it.
+~
+
+#11655
+pill clear view clear-view~
+a pill of clear-view~
+A pill with "clear-view" written on it is lying here.~
+pill
+pill~
+40 'cure blindness' 'reserved' 'reserved' 'reserved'
+15 0 500 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E pill clear view clear-view~
+It is a brightly colored pill with the words "clear-view" written on it.
+~
+
+#11656
+pill chewable vitamins~
+some chewable vitamins~
+Some chewable vitamins are lying here.~
+pill
+pill~
+20 'refresh' 'reserved' 'reserved' 'reserved'
+15 0 100 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E pill chewable vitamins~
+The vitamins are orange, yellow, and purple and are shaped like lizards and
+men draped in the hides of beasts.
+~
+
+#11657
+pill madness~
+a pill of madness~
+A pill with "madness" written on it is lying here.~
+pill
+pill~
+27 'frenzy' 'reserved' 'reserved' 'reserved'
+15 0 500 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E pill madness~
+It is a brightly colored pill with the word "madness" written on it.
+~
+
+#11658
+slave master's whip~
+the slave master's whip~
+The whip of the slave master is coiled up here.~
+weapon
+leather~
+whip 4 11 beating 0
+40 0 50000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY MOVE 50
+APPLY HITROLL 4
+APPLY DAMROLL 6
+LIMIT 0
+TIMER 0
+E slave master's whip~
+As you look at this wicked weapon, you wonder just how many peoples' spirits
+were crushed by the beating of this whip.
+~
+
+#11659
+snake's tongue wand~
+a snake's tongue wand~
+A wand crafted from the tongue of a snake lies here.~
+wand
+flesh~
+42 10 10 'acid blast' 0
+33 0 6000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E snake's tongue wand~
+Crafted from the tongue of a snake, this wand is unpleasant to hold
+~
+
+#11660
+lightning rod~
+a lightning rod~
+A lightning rod is lying here.~
+staff
+iron~
+35 5 5 'lightning bolt' 0
+30 1 5000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E lightning rod~
+This rod looks like a good conducting agent.
+~
+
+#11661
+wand mass death powerful~
+a wand of mass death~
+A powerful wand lies here.~
+wand
+wood~
+45 3 3 'gas breath' 0
+45 0 50000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E wand mass death powerful~
+In some odd way, you know this wand is pure danger.
+~
+
+#11662
+staff bat's cry~
+a staff of bat's cry~
+A staff of bat's cry is lying on the ground.~
+staff
+wood~
+30 5 5 'faerie fog' 0
+15 1 1000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E staff bat's cry~
+As you carefully examine the staff, you notice a peculiar squeaking sound
+emanating from it.
+~
+
+#11663
+potion separation~
+a potion of separation~
+A potion of separation is resting here.~
+potion
+glass~
+35 'pass door' 'reserved' 'reserved' 'reserved'
+30 0 20000 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E potion separation~
+>From the neck of the potion hangs a tag with "separation" written on it.
+~
+
+#11664
+potion difference~
+a potion of difference~
+A potion of difference is resting here.~
+potion
+glass~
+50 'armor' 'reserved' 'reserved' 'reserved'
+5 0 2000 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E potion difference~
+>From the neck of the potion hangs a tag with "difference" written on it.
+~
+
+#11665
+potion lightness~
+a potion of lightness~
+A potion of lightness is resting here.~
+potion
+glass~
+20 'fly' 'reserved' 'reserved' 'reserved'
+5 0 2000 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E potion lightness~
+>From the neck of the potion hangs a tag with "lightness" written on it.
+~
+
+#11666
+bottle bastard brew~
+a bottle of bastard brew~
+A bottle of bastard brew is lying here.~
+drink
+glass~
+8 8 'ale' 0 0
+0 0 50 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E bottle bastard brew~
+It looks a hazy brown, you wonder was exactly "bastard brew" is.  Only one
+way to find out.
+~
+
+#11667
+tongs balcksmith's~
+the blacksmith's tongs~
+The blacksmith's tongs are lying here.~
+weapon
+iron~
+weapon 7 4 grep 0
+40 2 50000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E tongs blacksmith's~
+These large tongs are blackened from over use.
+~
+
+#11668
+hemlock~
+some hemlock~
+Some hemlock lies on the floor.~
+pill
+plant~
+40 'plague' 'reserved' 'poison' 'reserved'
+5 0 500 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E hemlock~
+These dangerous roots begin to crumble in your hand.
+~
+
+#11669
+black lotus~
+a black lotus~
+A black lotus is lying on the ground.~
+pill
+plant~
+40 'sleep' 'reserved' 'reserved' 'reserved'
+5 0 500 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E black lotus~
+The beautiful black plant emanates an enticing aroma.
+~
+
+#11670
+granite moss~
+some granite moss~
+Some granite moss is lying on the ground.~
+pill
+plant~
+55 'reserved' 'plague' 'plague' 'reserved'
+15 0 1000 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E granite moss~
+You wonder how such a frail plant could ever survive living in granite.
+~
+
+#11671
+root honey-dew honey dew~
+some root of honey-dew~
+Some honey-dew roots are lying on the ground.~
+pill
+plant~
+25 'cure serious' 'reserved' 'reserved' 'reserved'
+10 0 1000 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E root honey-dew honey dew~
+As you squeeze these roots, a sweet juice flows out of them.
+~
+
+#11672
+three grain bread~
+some three grain bread~
+Some three grain bread is lying on the ground.~
+food
+food~
+10 10 0 0 0
+0 0 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E three grain bread~
+Looking at this high fiber bread makes you wince.
+~
+
+#11673
+five grain bread~
+some five grain bread~
+Some five grain bread is lying on the ground.~
+food
+food~
+15 15 0 0 0
+0 0 25 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E five grain bread~
+Looking at this high fiber bread makes you wince.
+~
+
+#11674
+twelve grain bread~
+some twelve grain bread~
+Some twelve grain bread is lying on the ground.~
+food
+food~
+20 20 0 0 0
+0 0 30 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E twelve grain bread~
+Looking at this high fiber bread makes you wince.
+~
+
+#11675
+map udgaard loke's farm~
+a map of Udgaard Loke's Farm~
+A rolled up map is lying here.~
+map
+vellum~
+0 0 0 0 0
+0 0 50 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E map udgaard loke's farm~
+.
+
+                                  North Gate
+                                       |
+         -------------Opal Lane-----------------Opal Lane--------------
+         |  -------------------------------------------------------   |
+         |  |           Udgaard Loke's Palace (unopened)          |   |
+         |  |          _________________________________          |   |
+         |  |          |                               |          |   |
+         |  |          |    Anti-    Altar   Cleric's  |          |   |
+         |  |__________|  Paladin's (recall)  Guild    |__________|   |
+         |                  Guild                                     |
+     Turquoise                   \     |     /                      Marble
+       Lane                        ---------                         Lane
+         |                         |       |                          |
+  West__ |__West Street___________ courtyard____________East Street___|East
+  Gate   |                |    |   |       |        |                 |Gate
+         |                |    |   |       |        |                 |
+         |                |   Mess |       |Torden's|                 |
+         |       Stables__|---Hall-|_______|-Arms   |                 |
+         |                |        |   |   |        |    Necromancer's|
+         |                |      Court |  Mud      Jade      Delight  |
+     Turquoise            |      House | School    Lane          |  Marble
+       Lane           Obsidian         |            |            |   Lane
+         |-Baker's      Lane           |    Boiling_|__________Magic__|
+         |  Rise          |            |   Cauldron |          Arcade |
+         |                |   The      |            |             |   |
+         |         Ninja _|___Farmacy  |    Broken__|_Thieves  Liquid |
+         |         Dojo   |          South   Hilt   |  Guild    Gate  |
+         |                |          Street         |                 |
+         |-Cobbler        |  Thorne's  |            |         Dark    |
+         |                |    Sharps  |  Bank      |        Library--|
+         |           Ivy _|        \   |  /         |_Furniture       |
+         |          Patch |____Bloodstone_Lane______|   Store         |
+         |                  ||     |   |  |       ||                  |
+         | Jaette       Barracks Krons | Jorgen's  Barracks   Small   |
+         |- Bar                  Spits | Gems                 School--|
+         |                             |                              |
+         |                             |                              |
+         |        Burnt    Tested      |  Warrior's    Old Dwarf's    |
+         |      Building  Traveller    |   Guild          Home        |
+         |          |       |  |       |    |  |            |         |
+         --------------------------Onyx-Lane---------------------------
+                                       |
+                                     South
+                                      Gate
+
+~
+
+#11676
+scroll irresistable force seal~
+a scroll with a irresistable force shaped seal~
+A bound scroll is lying on the floor.~
+scroll
+vellum~
+43 'reserved' 'reserved' 'reserved' 'reserved'
+40 0 8000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E scroll irresistable force seal~
+On the scroll is written, "To make them hurt."
+~
+
+#11677
+scroll red ball seal~
+a scroll with a red ball seal~
+A bound scroll is lying on the floor.~
+scroll
+vellum~
+20 'fireball' 'fireball' 'fireball' 'reserved'
+32 0 10000 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E scroll red ball seal~
+On the scroll is written, "To make them burn."
+~
+
+#11678
+scroll eyeball seal~
+a scroll with an eyeball seal~
+A bound scroll is lying on the floor.~
+scroll
+vellum~
+50 'detect invis' 'bless' 'reserved' 'reserved'
+33 0 3300 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E scroll eyeball seal~
+On the scroll is written, "To see them all."
+~
+
+#11679
+map ancient dwarven caves~
+a map of the ancient dwarven caves~
+A rolled up map is lying here.~
+map
+vellum~
+0 0 0 0 0
+0 0 100 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E map ancient dwarven caves~
+The path through the ancient dwarven caves will save you time and trouble.
+To find the entrances, find the cry of the shrew.
+
+
+                             Udgaard
+                                |
+                                |
+                                |
+                            +---+---+
+                            |       |   The
+                            |       +---Nothern
+                        +---+       |   Enterance
+                        |         Danger   |
+                       The                 |
+                      Modern               |
+                       Path             Intersection---The Rock of
+                        |                  |           Tandar Oakcrest
+                        |                  |
+                        |             +-   |
+                        +----+        |    |
+                             |        |  The
+                             |        +--Southern
+                             |        |  Enterance
+                             +-----+--+
+                                   |
+                                   |
+                                 Midgaard
+~
+
+#11680
+cobbler's shoes~
+the cobbler's shoes~
+A pair of fine shoes sit on the floor.~
+armor
+leather~
+10 10 10 0 9
+40 1 50000 P
+WEAR TAKE
+WEAR FEET
+ITEM GLOW
+ITEM MAGIC
+APPLY CON 1
+APPLY HP 20
+LIMIT 0
+TIMER 0
+E cobbler's shoes~
+These shoes took generations of cobblers to perfect.  Now they are yours.
+~
+
+#11681
+ninja cowl~
+a ninja cowl~
+A black cowl is lying on the floor.~
+armor
+cloth~
+4 4 4 0 3
+3 0 100 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+TIMER 0
+E ninja cowl~
+This cowl was made for the ninja class.
+~
+
+#11682
+ninja garb~
+a ninja garb~
+A black garb is lying on the floor.~
+armor
+cloth~
+4 4 4 0 3
+3 0 200 P
+WEAR TAKE
+WEAR BODY
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+E ninja garb~
+This garb was made for the ninja class.
+~
+
+#11683
+ninja booties~
+some ninja booties~
+A pair of black booties are lying on the floor.~
+armor
+cloth~
+3 3 3 0 2
+1 0 100 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+TIMER 0
+E ninja booties~
+These booties were made for the ninja class.
+~
+
+#11684
+wakizashi sword~
+a wakizashi~
+A short sword is lying on the ground.~
+weapon
+steel~
+sword 3 3 slash 0
+25 1 40000 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR -1
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E wakizashi sword~
+It is a fine weapon for a ninja's shield bearing hand.
+~
+
+#11685
+spiked sandals~
+some spiked sandals~
+A pair of spiked sandals are lying on the ground.~
+armor
+leather~
+5 5 5 0 4
+18 0 20000 P
+WEAR TAKE
+WEAR FEET
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E spiked sandals~
+These sandals have spikes on their soles that could dig into just about
+anything.
+~
+
+#11686
+pepper bomb~
+a pepper bomb~
+A pepper bomb is resting on the floor.~
+potion
+glass~
+30 'blindness dust' 'reserved' 'reserved' 'reserved'
+40 0 6000 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E pepper bomb~
+The bomb looks very potent.
+~
+
+#11687
+white belt~
+a white belt~
+A white belt is resting on the floor.~
+armor
+cloth~
+3 3 3 3 3
+0 0 10 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+TIMER 0
+E white belt~
+This belt is made for all ninjas.
+~
+
+#11688
+black belt~
+a black belt~
+A black belt is resting on the floor.~
+armor
+cloth~
+6 6 6 6 6
+9 0 1000 P
+WEAR TAKE
+WEAR WAIST
+APPLY MANA 10
+LIMIT 0
+TIMER 0
+E black belt~
+This belt is made for ninjas level nine and above.
+~
+
+#11689
+black belt atemie waza~
+a black belt of Atemie Waza~
+A black belt is resting on the floor.~
+armor
+cloth~
+7 7 7 7 7
+21 0 10000 P
+WEAR TAKE
+WEAR WAIST
+APPLY MANA 40
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E black belt atemie waza~
+This belt is made for ninjas level twenty-one and above.
+~
+
+#11690
+black belt ukemi~
+a black belt of Ukemi~
+A black belt is resting on the floor.~
+armor
+cloth~
+8 8 8 8 8
+28 0 100000 P
+WEAR TAKE
+WEAR WAIST
+APPLY MANA 80
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E black belt ukemi~
+This belt is made for ninjas level twenty-eight and up.
+~
+
+#11691
+torch~
+a torch~
+A torch is lying on the ground.~
+light
+wood~
+0 0 100 0 0
+0 0 10 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E torch~
+To use torch, type "hold torch".
+~
+
+#11692
+canteen~
+a canteen~
+A canteen is lying on the ground.~
+drink
+steel~
+20 20 'water' 0 0
+0 0 30 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E canteen~
+To use canteen, type "drink canteen".
+~
+
+#11693
+pouched leggings~
+some pouched leggings~
+A pair of pouched leggings is lying on the floor.~
+container
+cloth~
+60 0 0 5 100
+0 1 100 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+TIMER 0
+E pouched leggings~
+The pockets in these leggings look roomy.
+~
+
+#11694
+crate~
+a crate~
+A large crate is resting here.~
+container
+wood~
+300 0 0 5 100
+0 10 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E crate~
+This crate is roomy and very heavy.
+~
+
+#11695
+portable barbecue~
+a portable barbecue~
+A three legged portable barbecue stands here, cooking some meat.~
+container
+steel~
+10 0 0 5 100
+0 5 100 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E portable barbecue~
+The coals in the barbecue glow red.
+~
+
+#11696
+white yacht~
+a ninety-foot yacht~
+A white yacht rests here.~
+boat
+wood~
+0 0 0 0 0
+0 1000 100000 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E white yacht~
+The sun glares off this blindingly white boat.  You can barely scale it's
+shiny, soft, curved, glistening, sweating, delicious... sides.  Welcome
+aboard!
+~
+
+#11697
+black rubber innertube~
+a black rubber innertube~
+A black rubber innertube rests here.~
+boat
+rubber~
+0 0 0 0 0
+0 1 2000 P
+WEAR TAKE
+WEAR WAIST
+ITEM GLOW
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+E black rubber innertube~
+This little black innertube is near bursting with air.
+~
+
+#11698
+brown shield~
+a brown shield~
+A brown shield is lying on the ground.~
+armor
+leather~
+4 4 4 0 3
+5 1 250 P
+WEAR TAKE
+WEAR SHIELD
+LIMIT 0
+TIMER 0
+E brown shield~
+It is very brown.  On it is written, "Made by Thorne."
+~
+
+#11699
+udgaardian man-at-arm's halberd two-handed~
+an Udgaardian man-at-arms' halberd~
+The giant halberd of an Udgaardian man-at-arms is lying here.~
+weapon
+wood~
+polearm 10 4 cleave 0
+45 30 75000 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY HITROLL 2
+APPLY DAMROLL 4
+LIMIT 0
+TIMER 0
+E udgaardian man-at-arm's halberd~
+You can't imagine anything resisting the weight alone of this mighty polearm,
+let alone its razor sharp blade.
+~
+
+#11701
+slave collar~
+a slave collar~
+A plain round collar rests on the ground.~
+armor
+iron~
+1 1 1 0 2
+3 15 100 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+ITEM NOREMOVE
+LIMIT 0
+TIMER 0
+E slave collar~
+On the collar is inscribed "Slave".
+~
+
+#11702
+black halberd~
+a black halberd~
+A large black halberd is lying here.~
+weapon
+wood~
+weapon 4 5 cleave 0
+24 20 600 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+E black halberd~
+Black and deadly, this polearm looks very nice.
+~
+
+#11703
+black halberd~
+a black halberd~
+A large black halberd is lying here.~
+weapon
+wood~
+polearm 7 4 cleave 0
+20 30 700 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+E black halberd~
+Black and deadly, this polearm looks very nice.
+~
+
+#11704
+altar~
+a silver altar~
+A silvery altar is here.~
+container
+silver~
+50 ABCD 11706 100 100
+60 100 0 P
+ITEM GLOW
+ITEM HUM
+ITEM NOPURGE
+ITEM FIXED
+LIMIT 0
+TIMER 0
+
+#11705
+power ~
+the power of Udgaard~
+The power of Udgaard is here.~
+none
+hard leather~
+0 0 0 0 0
+60 3 2200 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+ITEM BLESS
+ITEM NOPURGE
+APPLY CON -1
+APPLY WIS 2
+LIMIT 0
+TIMER 0
+
+#11706
+key~
+an important key~
+An important small key has been left here.~
+key
+bronze~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#11600
+Udgaard's Mud School Lobby~
+You stand in a posh lobby.  A ladder is leading down here.  Through a
+door to the north, you see the famous courtyard of Udgaard.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+ROOM NOWHERE
+D NORTH 11601 0 -1
+~
+You see the south east courtyard.
+~
+D DOWN 0 0 -1
+~
+You see the Entrance to Mud School.
+~
+E ladder~
+The magical gateway looks safe.
+~
+#11601
+The South East Corner of the Courtyard~
+You stand in the south east corner of the courtyard.  A young traveler
+walking south towards the mud school lobby kicks up a cloud of dirt.  A more
+seasoned traveller heads east into Torden's Arms.  
+~
+city
+ROOM LAW
+D NORTH 11602 0 -1
+~
+You see the eastern courtyard.
+~
+D EAST 11603 0 -1
+~
+You see Torden's Shop of Arms.
+~
+D SOUTH 11600 I -1
+~
+You see Udgaard's Mud School Lobby.
+~
+D WEST 11605 0 -1
+~
+You see the southern courtyard.
+~
+#11602
+The Eastern End of the Courtyard~
+You stand in the east courtyard entrance.  To the east lies East Street.
+To the north, south and west is more of the courtyard.  From the west you
+hear the sounds of slave trade.
+~
+city
+ROOM LAW
+D NORTH 11604 0 -1
+~
+You see the north east courtyard.
+~
+D EAST 11606 0 -1
+~
+You see the western end of East street.
+~
+D SOUTH 11601 0 -1
+~
+You see the south east courtyard.
+~
+D WEST 11607 0 -1
+~
+You see the center of the courtyard.
+~
+#11603
+Torden's Arms~
+Surrounding you are Torden's Creations.  The room is filled with both
+weapons and armor of extraordinary quality.  The only thing that impresses
+you more than the goods are their price tags.  A sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11601 0 -1
+~
+You see the south east courtyard.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11604
+The North East Corner of the Courtyard~
+You stand in the north east corner of the courtyard.  The Dark Temple of
+Udgaard lies to the north.  The great temple staircase leads into the Dark
+Clerics' Guild.  To the east is an entrance into Udgaard Loke's Palace.  To
+the west and south is more of the courtyard.  
+~
+city
+ROOM LAW
+D NORTH 11729 0 -1
+~
+You see the entrance to the Dark Clerics' Guild.
+~
+D SOUTH 11602 0 -1
+~
+You see the eastern courtyard.
+~
+D WEST 11609 0 -1
+~
+You see the northern courtyard.
+~
+#11605
+The Southern End of the Courtyard~
+As you enter the southern end of the courtyard, you are awestruck by the
+size of the Dark Temple to the north.  Even more overwhelming is the Palace
+of Udgaard Loke which towers above it.  To the north you hear the sounds of
+slave trade.  
+~
+city
+ROOM LAW
+D NORTH 11607 0 -1
+~
+You see the center of the courtyard.
+~
+D EAST 11601 0 -1
+~
+You see the south east corner of the courtyard.
+~
+D SOUTH 11610 0 -1
+~
+You see the northern end of South street.
+~
+D WEST 11611 0 -1
+~
+You see the south west corner of the courtyard.
+~
+#11606
+East Street~
+You walk along east street.  To the west is the courtyard.  To the east
+is the intersection of East street and Jade street.  Above you, to the
+north, looms Udgaard Loke's palace.  
+~
+city
+ROOM LAW
+D EAST 11612 0 -1
+~
+You see an intersection.
+~
+D WEST 11602 0 -1
+~
+You see the eastern edge of the courtyard.
+~
+#11607
+The Center of the Courtyard~
+An enormous black stone block rests in the center of the courtyard.  On
+the block stands the slave auctioneer, selling his wares.  Next to him,
+chained to the stone, kneel the slaves.  You look to one, but see only a
+humbled and broken individual.  All around you is the courtyard.  There is
+writing etched on the stone.  
+~
+city
+ROOM PET_SHOP
+ROOM LAW
+D NORTH 11609 0 -1
+~
+You see the northern courtyard.
+~
+D EAST 11602 0 -1
+~
+You see the eastern courtyard.
+~
+D SOUTH 11605 0 -1
+~
+You see the southern courtyard.
+~
+D WEST 11613 0 -1
+~
+You see the western courtyard.
+~
+E stone writing~
+On the stone is etched:
+
+List - Show which slaves are for sale.
+Buy  - Buy a slave.
+~
+#11608
+Slave Room~
+This is the room that all the slaves are kept in, it is vital that it
+is immediately after the slave shop.
+~
+city
+ROOM NO_MOB
+ROOM GOD_ONLY
+#11609
+The Northern End of the Courtyard~
+You stand in the Northern courtyard.  The great temple staircase leads
+north into the Dark Temple.  To the east and west continues the great
+staircase.  To the south you here the sounds of the slave trade.  
+~
+city
+ROOM LAW
+D NORTH 11614 0 -1
+~
+You see the entrance to the Dark Temple
+~
+D EAST 11604 0 0
+~
+You see the north east corner of the courtyard.
+~
+D SOUTH 11607 0 -1
+~
+You see the center of the courtyard.
+~
+D WEST 11615 0 -1
+~
+You see the north west corner of the courtyard.
+~
+#11610
+South Street~
+You are at the northern end of South Street.  To the north lies the famous
+courtyard of Udgaard Loke's Farm.  To the south lies the intersection of
+Bloodstone Lane and South Street.
+~
+city
+ROOM LAW
+D NORTH 11605 0 -1
+~
+You see the south end of the courtyard.
+~
+D SOUTH 11616 0 -1
+~
+You see an intersection.
+~
+#11611
+The South West Corner of the Courtyard~
+You stand in the south west corner of the courtyard.  The Justice members
+of the town gather here to discuss the law.  A pit has been dug in the
+courtyard for the sole purpose of settling disputes which the law cannot
+resolve.  To the south lies the town courthouse.  West of here is the town
+mess hall.  To the north and east is more of the courtyard.  
+~
+city
+ROOM LAW
+D NORTH 11613 0 -1
+~
+You see the west end of the courtyard.
+~
+D EAST 11605 0 -1
+~
+You see the south end of the courtyard.
+~
+D SOUTH 11617 0 -1
+~
+You see the town courthouse.
+~
+D WEST 11619 0 -1
+~
+You see the mess hall.
+~
+D DOWN 11618 0 -1
+~
+You see the challenge pit.
+~
+#11612
+The Intersection of East Street and Jade Lane~
+You stand at the three way intersection of East Street and Jade Lane. 
+Jade Lane leads south, while East Street continues east and west.  To the
+north Udgaard Loke's Palace looms above you.  
+~
+city
+ROOM LAW
+D EAST 11631 0 -1
+~
+You see the intersection of East Street and Marble Lane.
+~
+D SOUTH 11632 0 -1
+~
+You see Jade Lane.
+~
+D WEST 11606 0 -1
+~
+You see East Street.
+~
+#11613
+The Western End of the Courtyard~
+You stand in the west courtyard entrance.  To the west lies West Street. 
+To the north, south and east is more of the courtyard.  From the east you
+hear the sounds of slave trade.  
+~
+city
+ROOM LAW
+D NORTH 11615 0 -1
+~
+You see the north west courtyard.
+~
+D EAST 11607 0 -1
+~
+You see the center of the courtyard.
+~
+D SOUTH 11611 0 -1
+~
+You see the south west courtyard.
+~
+D WEST 11620 0 -1
+~
+You see the eastern end of West Street.
+~
+#11614
+The Dark Temple~
+You are in the Dark Temple of Udgaard.  Black marble columns line huge
+hallways leading west to the Anti-Paladins' Guild and east to the Dark
+Clerics' Guild.  The darkness of the room seems to creep upon you and the
+floor seems colder than it naturally should be.  The temple is attended by
+the Afskyelige, a cult of child priests.  You assume their altar is to the
+north, in the temple's inner sanctum.  You decide not to enter.... Some
+things are better left unseen.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11729 0 -1
+~
+You see the entrance to the Dark Clerics Guild.
+~
+D SOUTH 11609 0 -1
+~
+You see steps leading from the northern courtyard.
+~
+D WEST 11621 0 -1
+~
+You see the entrance to the Anti-Paladins' Guild.
+~
+D DOWN 24532 0 0
+~
+~
+#11615
+The North West Corner of the Courtyard~
+You stand in the north west corner of the courtyard.  The Dark Udgaard
+Temple lies to the north.  The great temple staircase leads into the
+Anti-Paladins' Guild.  To the west is an entrance into Udgaard Loke's
+Palace.  To the east and south is more of the courtyard.  
+~
+city
+ROOM LAW
+D NORTH 11621 0 -1
+~
+You see the entrance to the Anti-Paladins' Guild.
+~
+D EAST 11609 0 -1
+~
+You see the northern courtyard.
+~
+D SOUTH 11613 0 -1
+~
+You see the western courtyard.
+~
+#11616
+The Intersection of Bloodstone Lane and South Street~
+To the east and west runs Bloodstone Lane.  To the north and south runs
+South Street.  
+~
+city
+ROOM LAW
+D NORTH 11610 0 -1
+~
+You see the northern end of South Street.
+~
+D EAST 11622 0 -1
+~
+You see Bloodstone Lane.
+~
+D SOUTH 11623 0 -1
+~
+You see the intersection of Onyx Lane and South Street.
+~
+D WEST 11624 0 -1
+~
+You see Bloodstone Lane.
+~
+#11617
+The Town Courthouse~
+This is the judicial center of the law within this town.  Each judge sits
+behind his thick wooden bench hearing cases.  You notice that the trials are
+remarkably short and the sentences are remarkably long.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11611 0 -1
+~
+You see the south west courtyard.
+~
+#11618
+The Challenge Pit~
+Fingernails left in the walls tell the tale of the ultimate justice
+served here.  The remains of corpses still lie armed here.  A sign hangs
+from the side of the pit.... 
+~
+city
+ROOM LAW
+D UP 11611 0 -1
+~
+You see the south west courtyard.
+~
+E sign wall~
+The sign reads:
+
+LOOTING CORPSES IS PROHIBITED!!!
+Non-Combatants may be present by invitation ONLY!
+~
+#11619
+The Mess Hall~
+This area feeds the members of Udgaard Loke's army.  Long, heavy tables
+are filled with soldiers of every race and class.  Their only unifying
+feature is their alliance to evil.  To the east is the courtyard, while the
+messhall continues to the west.  To the south a Jaette guard watches a large
+wooden doorway.  Above the door a sign reads, "JAETTES ONLY!!"  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11611 0 -1
+~
+You see the south west courtyard.
+~
+D SOUTH 11625 AB -1
+large wooden doorway~
+You see the private Jaette Mess Hall.
+~
+D WEST 11626 0 -1
+~
+You see more of the mess hall.
+~
+#11620
+West Street~
+You walk along West Street.  To the west lies the intersection of West
+Street and Obsidian Lane and to the east lies the Eastern Courtyard.  North
+of you looms Udgaard Loke's Palace, while to the south lies the mess hall of
+his troops.  
+~
+city
+ROOM LAW
+D EAST 11613 0 -1
+~
+You see the eastern courtyard.
+~
+D SOUTH 11626 0 -1
+~
+You see the mess hall.
+~
+D WEST 11627 0 -1
+~
+You see the intersection of West Street and Obsidian Lane.
+~
+#11621
+The Anti-Paladin's Guild~
+You step into your guild house.  Several Knights of Legion are relaxing
+here.  They bear the ensignia of high rank within Udgaard Loke's army.  You
+ponder whether abiding by Loke's laws is worth the favor he gives
+Anti-Paladins in his army of evil.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11614 0 -1
+~
+You see the Dark Temple.
+~
+D SOUTH 11615 0 -1
+~
+You see steps leading from the north west courtyard.
+~
+#11622
+Bloodstone Lane~
+You walk along Bloodstone Lane.  To the north is the rich exterior of the
+Bank of Udgaard.  To the south, Jorgen's Gems awaits your business. 
+Bloodstone Lane continues east, while the intersection of Bloodstone Lane
+and South Street lies to the west.  
+~
+city
+ROOM LAW
+D NORTH 11628 0 -1
+~
+You see the entrance to the Bank of Udgaard.
+~
+D EAST 11629 0 -1
+~
+You see Bloodstone lane.
+~
+D SOUTH 11630 0 -1
+~
+You see the entrance to Jorgen's Gems.
+~
+D WEST 11616 0 -1
+~
+You see the intersection of South Street and Bloodstone Lane.
+~
+#11623
+The Intersection of South Street and Onyx Lane~
+You stand at the intersection of South Street and Onyx Lane.  South
+Street continues north, and to the south is the south gate.  Onyx Lane leads
+east and west.  A few lines of writing are buried under the dust here.  
+~
+city
+ROOM LAW
+D NORTH 11616 0 -1
+~
+You see the intersection of South Street and Bloodstone Lane.
+~
+D EAST 11633 0 -1
+~
+You see Onyx Lane.
+~
+D SOUTH 11634 0 -1
+~
+You see the south gate of.
+~
+D WEST 11635 0 -1
+~
+You see Onyx Lane.
+~
+E dust lines writing~
+You see what appears to be writing underneath the dusty footprints on the
+street.  Reading around people's steps and trash, you think it says:
+
+"Area written by Petris and Aeon.
+ Copyright 1994
+ Use allowed for any mud.
+ Enjoy!"
+~
+#11624
+Bloodstone Lane~
+To the north you see a busy shop called Thorne's Sharps.  From the south
+a delicious aroma from Kron's Spits invites your fancy.  Bloodstone lane
+continues east, and meets an intersection with South Street to the west.  
+~
+city
+ROOM LAW
+D NORTH 11636 0 -1
+~
+You see the entrance to Thorne's Sharps.
+~
+D EAST 11616 0 -1
+~
+You see the intersection of South Street and Bloodstone Lane.
+~
+D SOUTH 11637 0 -1
+~
+You see the entrance to Kron's Spits.
+~
+D WEST 11638 0 -1
+~
+You see Bloodstone Lane.
+~
+#11625
+The Private Jaette Mess Hall~
+You look around to see only Jaettes here.  Perhaps you have gone the
+wrong direction.  The Jaettes seem upset at your intrusion.  Better get out
+fast!  To the north is the large wooden doorway.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11619 AB -1
+large wooden doorway~
+You see the mess hall.
+~
+#11626
+The Mess Hall~
+This area feeds the members of Udgaard Loke's army.  Long, heavy tables
+are filled with soldiers of every race and class.  Their only unifying
+feature is their alliance to evil.  To the north is West Street.  To the
+west is Obsidian Lane, while the mess hall continues to the east.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11620 0 -1
+~
+You see West Street.
+~
+D EAST 11619 0 -1
+~
+You see the mess hall.
+~
+D WEST 11639 0 -1
+~
+You see Obsidian Lane.
+~
+#11627
+Intersection of West Street and Obsidian Lane~
+You stand at the three way intersection of West Street and Obsidian Lane.
+Obsidian Lane leads south, while West Street continues east and west.  To
+the north Udgaard Loke's Palace looms above you.  
+~
+city
+ROOM LAW
+D EAST 11620 0 -1
+~
+You see West Street.
+~
+D SOUTH 11639 0 -1
+~
+You see Obsidian Lane.
+~
+D WEST 11640 0 -1
+~
+You see the intersection of West Street and Turquoise Lane.
+~
+#11628
+The Bank of Udgaard~
+Rich tapestries hang from the walls of this wealthy establishment. 
+Mahogany desks are scattered about the room.  The pompous decadence suggests
+to you that things come to those who want.  A silver plaque hangs on the
+wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NOWHERE
+ROOM SILENCE
+D SOUTH 11622 0 -1
+~
+You see Bloodstone Lane.
+~
+E plaque silver wall~
+The plaque reads:
+
+Welcome to the First National Bank of Udgaard.
+
+To deposit, type "Deposit <amount>"
+To check your balance, type "Balance"
+To withdraw funds, type "Withdraw <amount>"
+
+Note: Withdrawals may be subject to a slight processing fee.
+~
+#11629
+Bloodstone Lane~
+You continue along Bloodstone Lane.  Too the north is the Circle Cafe. 
+To the south is a large guard post.  
+~
+city
+ROOM LAW
+D NORTH 11641 0 -1
+~
+You see the Circle Cafe.
+~
+D EAST 11642 0 -1
+~
+You see Bloodstone Lane.
+~
+D SOUTH 11643 0 -1
+~
+You see a guard post.
+~
+D WEST 11622 0 -1
+~
+You see Bloodstone Lane.
+~
+#11630
+Jorgen's Gems~
+Unlike most jewelers you have been to, the jewels here are not in glass
+cases.  Rather, they sit out upon the tables in the store.  Truly, this town
+respects the law.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11622 0 -1
+~
+You see Bloodstone Lane.
+~
+#11631
+The Intersection of East Street and Marble Lane~
+East Street leads to the west.  To the north and south runs Marble Lane. 
+To the east is the east gate.  
+~
+city
+ROOM LAW
+D NORTH 11644 0 -1
+~
+You see Marble Lane.
+~
+D EAST 11645 0 -1
+~
+You see the east gate.
+~
+D SOUTH 11646 0 -1
+~
+You see Marble Lane.
+~
+D WEST 11612 0 -1
+~
+You see East Street.
+~
+#11632
+Jade Lane~
+Mages walk all about this part of town.  To the west you see the Boiling
+Cauldron, a magic user's bar.  To the east is the Magic Arcade.  Jade lane
+continues to the north and south.  
+~
+city
+ROOM LAW
+D NORTH 11612 0 -1
+~
+You see the intersection of East Street and Jade Lane.
+~
+D EAST 11647 0 -1
+~
+You see the Magic Arcade.
+~
+D SOUTH 11648 0 -1
+~
+You see Jade Lane.
+~
+D WEST 11649 0 -1
+~
+You see the Boiling Cauldron.
+~
+#11633
+Onyx Lane~
+You walk along Onyx Lane.  You are flanked on the south by the thick
+spear wall surrounding Udgaard Loke's Farm, and on the north by the western
+warriors' guild.  
+~
+city
+ROOM LAW
+D NORTH 11650 0 -1
+~
+You see the western guildhouse of the warriors.
+~
+D EAST 11651 0 -1
+~
+You see Onyx Lane.
+~
+D WEST 11623 0 -1
+~
+You see the intersection of South Street and Onyx Lane.
+~
+#11634
+The South Gate of Udgaard Loke's Farm~
+Flanked by twin towers, an enormous stone gateway rises to protect the
+city.  A darkened steel portcullis here serves to close the gates when
+necessary.  Jutting out of the thick grating, huge spikes fend off would-be
+assailants.  Archer's slits look down into the gateway, to finish off any
+unfortunate attackers.  Behind the portcullis, studded metal doorways lead
+into the towers.  
+~
+city
+ROOM LAW
+D NORTH 11623 0 -1
+~
+You see the intersection of South Street and Onyx Lane.
+~
+D EAST 11652 A -1
+door tower~
+You see the entrance to a tower.
+~
+D SOUTH 11653 AB -1
+portcullis gate~
+You look outside of Udgaard Loke's farm.
+~
+D WEST 11654 A -1
+door tower~
+You see the entrance to a tower.
+~
+#11635
+Onyx Lane~
+You walk along Onyx Lane.  To the north you see the entrance to the
+Tested Traveller.  The thick spear wall which surrounds Udgaard Loke's Farm
+is to your south.  
+~
+city
+ROOM LAW
+D NORTH 11655 0 -1
+~
+You see the Tested Traveller.
+~
+D EAST 11623 0 -1
+~
+You see the intersection of South Street and Onyx Lane.
+~
+D WEST 11656 0 -1
+~
+You see Onyx Lane.
+~
+#11636
+Thorne's Sharps~
+Various weapons fill the racks hanging on the walls of this weapons shop.
+Battered straw dummies are scattered about the room.  At each dummy, a
+patron tests some of the store's wares.  A sign hangs from the wall here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11624 0 -1
+~
+You see Bloodstone Lane.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11637
+Kron's Spits~
+You almost choke as you enter this store.  Dense smoke billows from spits
+turning over numerous fires.  Geez, you'd think Kron would put in a chimney.
+Ahh, but the food looks good.... A sign hangs from the wall here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11624 0 -1
+~
+You see Bloodstone Lane.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11638
+Bloodstone Lane~
+Bloodstone Lane continues to the east and west.  To the north is the
+Bear's Claw Cafe.  To the south is a large guard post.  
+~
+city
+ROOM LAW
+D NORTH 11657 0 -1
+~
+You see the Bear's Claw Cafe.
+~
+D EAST 11624 0 -1
+~
+You see Bloodstone Lane.
+~
+D SOUTH 11658 0 -1
+~
+You see a guard post.
+~
+D WEST 11659 0 -1
+~
+You see Bloodstone Lane
+~
+#11639
+Obsidian Lane~
+You are on Obsidian Lane.  To the west are the town stables.  To the east
+is the town mess hall.  Obsidian lane continues to north and south.  
+~
+city
+ROOM LAW
+D NORTH 11627 0 -1
+~
+You see the intersection of West Street and Obsidian Lane
+~
+D EAST 11626 0 -1
+~
+You see the town mess hall.
+~
+D SOUTH 11660 0 -1
+~
+You see Obsidian Lane.
+~
+D WEST 11661 0 -1
+~
+You see the town stables.
+~
+#11640
+The Intersection of West Street and Turquoise Lane~
+West Street leads to the east.  To the north and south runs Turquoise
+Lane.  To the west is the west gate.  
+~
+city
+ROOM LAW
+D NORTH 11662 0 -1
+~
+You see Turquoise Lane.
+~
+D EAST 11627 0 -1
+~
+You see the west gate.
+~
+D SOUTH 11663 0 -1
+~
+You see Turquoise Lane.
+~
+D WEST 11664 0 -1
+~
+You see West Street.
+~
+#11641
+The Circle Cafe~
+So named for the shape of it's famous pastries, the Circle Cafe is know
+throughout Shalar.  It is especially known by the guards who come from the
+guardhouse across the street.  A long counter stretches across the cafe,
+with customers lined up on seats along it.  A small sign hangs from the
+wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11629 0 -1
+~
+You see Bloodstone Lane.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11642
+A Turn~
+You are at the turn between Bloodstone Lane and Jade Lane.  Bloodstone
+Lane continues west, while Jade Lane continues north.  A large guard house
+lies to the south, and a furniture shop lies to the east.  
+~
+city
+ROOM LAW
+D NORTH 11648 0 -1
+~
+You see Jade Lane.
+~
+D EAST 11666 0 -1
+~
+You see a furniture shop.
+~
+D SOUTH 11667 0 -1
+~
+You see a guard house.
+~
+D WEST 11629 0 -1
+~
+You see Bloodstone Lane.
+~
+#11643
+A Guard House~
+Similar in appearance to a barracks, this guardhouse is little more than
+a long hall of beds.  A Jaette Anti-Paladin keeps order here with suprising
+efficiency.  He glares at you for a moment, then realizes you are not a
+stray guard and dismisses you.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11629 0 -1
+~
+You see Bloodstone Lane.
+~
+D EAST 11667 0 -1
+~
+The guardhouse stretches further in this direction.
+~
+#11644
+Marble Lane~
+Marble Lane runs north and south of here, following the wall around the
+city.  A wall of foot-wide spears stands to the east, framing the city
+within it's dangerous ramparts.  To the west the battlements of Udgaard
+Loke's palace rise, towering above an entrance into the palace.  
+~
+city
+ROOM LAW
+D NORTH 11668 0 -1
+~
+You see Marble Lane.
+~
+D SOUTH 11631 0 -1
+~
+You see Marble Lane.
+~
+#11645
+The East Gate of Udgaard Loke's Farm~
+Flanked by twin towers, an enormous stone gateway rises to protect the
+city.  A darkened steel portcullis here serves to close the gates when
+necessary.  Jutting out of the thick grating, huge spikes fend off would-be
+assailants.  Archer's slits look down into the gateway, to finish off any
+unfortunate attackers.  Behind the portcullis, studded metal doorways lead
+into the towers.  
+~
+city
+ROOM LAW
+D NORTH 11669 A -1
+tower door~
+You see the entrance to a tower.
+~
+D EAST 11670 AB -1
+portcullis gate~
+You look outside of Udgaard Loke's farm.
+~
+D SOUTH 11671 A -1
+tower door~
+You see the entrance to a tower.
+~
+D WEST 11631 0 -1
+~
+You see the intersection of East Street and Marble Lane.
+~
+#11646
+Marble Lane~
+Marble Lane runs north and south of here, following the wall around the
+city.  A wall of foot-wide spears stands to the east, framing the city
+within it's dangerous ramparts.  To the west, the Magic Arcade welcomes you.
+~
+city
+ROOM LAW
+D NORTH 11631 0 -1
+~
+You see the intersection of East Street and Marble Lane.
+~
+D SOUTH 11672 0 -1
+~
+You see Marble lane.
+~
+D WEST 11647 0 -1
+~
+You see the Magic Arcade.
+~
+#11647
+The Magic Arcade~
+This broad hallway connects Marble Lane and Jade lane.  Two of the local
+mages have taken advantage of the continuous traffic between these streets
+to create their thriving businesses.  The Necromancer's Delight lies to the
+north, and The Liquid Gate lies to the south.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11673 0 -1
+~
+You see the Necromancer's Delight.
+~
+D EAST 11646 0 -1
+~
+You see Marble Lane.
+~
+D SOUTH 11674 0 -1
+~
+You see the Liquid Gate.
+~
+D WEST 11632 0 -1
+~
+You see Jade Lane.
+~
+#11648
+Jade Lane~
+Many mages wander in this area.  To the east, a worn building with
+cracked walls and shattered windows advertises, "Thieves' Guild". 
+Conversely, to the west a small sign swings over a prospering weapons repair
+shop.  Jade Lane continues north and south.  
+~
+city
+ROOM LAW
+D NORTH 11632 0 -1
+~
+You see Jade Lane.
+~
+D EAST 11676 0 -1
+~
+You see the Thieves' Guild.
+~
+D SOUTH 11642 0 -1
+~
+You see Jade Lane.
+~
+D WEST 11675 0 -1
+~
+You see The Broken Hilt Repair Shop.
+~
+E sign swings small~
+.
+
+              />
+ (           //----------------------------------/
+(*)OXOXOXOXO(*>=T=H=E= =B=R=O=K=E=N= =H=I=L=T----\
+ (           \\----------------------------------/
+               \>
+
+~
+#11649
+The Boiling Cauldron~
+True to it's name a huge cauldron of a dark liquid boils behind the
+counter.  As customers order, the bartender dips a skull ladle into the
+cauldron and fills their cups.  All types of mages congregate here,
+comparing notes and chatting with acquaintances.  There is a small sign on
+the wall here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11632 0 -1
+~
+You see Jade Lane.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11650
+The Western Warrior's Guild~
+The only brick buildings in town, the Warrior's guild is one of the most
+well kept establishments in the area.  A slate roof protects this guild from
+even the worst weather, and the members tirelessly keep this guild clean and
+safe.  Several large warriors stand outside the entrance, examining those
+who enter.  Many others sit inside on comfortable stools, swapping tales. 
+There is a rope ladder leading up to the Drilling Room.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11677 0 -1
+~
+You see the Eastern Warrior's Guild.
+~
+D SOUTH 11633 0 -1
+~
+You see Onyx Lane.
+~
+D UP 11678 0 -1
+~
+You see the entrance to the Drilling Room.
+~
+#11651
+Onyx Lane~
+You walk along Onyx Lane.  You are flanked on the south by the thick
+spear wall surrounding Udgaard Loke's Farm, and on the north by the eastern
+warriors' guild.  Onyx lane continues to the east and west.  
+~
+city
+ROOM LAW
+D NORTH 11677 0 -1
+~
+You see the entrance to the Eastern Warrior's guild.
+~
+D EAST 11679 0 -1
+~
+You see Onyx lane.
+~
+D SOUTH 11730 0 -1
+~
+To your south you see a guild of some sort.
+~
+D WEST 11633 0 -1
+~
+You see Onyx Lane.
+~
+#11652
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11634 0 -1
+~
+You see the Southern Gate.
+~
+D UP 11680 0 -1
+~
+You see the top of the tower.
+~
+#11653
+Outside the South Gate~
+A foreboding wall of spears expands east and west from an enormous stone
+gate to the north.  Guards patrolling the wall cry out to you to identify
+your business in Udgaard Loke's Farm.  In the distance, you see a wooden
+palace rise from within the city.  
+~
+city
+ROOM LAW
+D NORTH 11634 AB -1
+portcullis gate~
+You see the South Gate of Udgaard Loke's Farm.
+~
+#11654
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11634 A -1
+tower door~
+You see the Southern Gate.
+~
+D UP 11681 0 -1
+~
+You see the top of the tower.
+~
+#11655
+The Tested Traveller~
+This store caters to the needs of travelers within Udgaard.  All sorts of
+containers, light sources, and other general needs imported from the master
+craftsmen of Shalar are sold here.  The store leads west to a teller.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11682 0 -1
+~
+You see the western end of the general store.
+~
+#11656
+Onyx Lane~
+You walk along Onyx Lane.  The thick spear wall which surrounds Udgaard
+Loke's Farm is to your south.  To the north you see the exit from the Tested
+Traveller.  
+~
+city
+ROOM LAW
+D EAST 11635 0 -1
+~
+You see Onyx Lane.
+~
+D WEST 11683 0 -1
+~
+You see Onyx Lane.
+~
+#11657
+The Bear's Claw Cafe~
+So named for the shape of it's famous pastries, The Bear's Claw Cafe is
+know throughout Shalar.  It is especially known by the guards who come from
+the guardhouse across the street.  A long counter stretches across the cafe,
+with customers lined up on seats along it.  A small sign hangs from the
+wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11638 0 -1
+~
+You see Bloodstone Lane.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11658
+A Guard House~
+Similar in appearance to a barracks, this guardhouse is little more than
+a long hall of beds.  A Jaette Anti-Paladin keeps order here with suprising
+efficiency.  He glares at you for a moment, then realizes you are not a
+stray guard and dismisses you.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11638 0 -1
+~
+You see Bloodstone Lane.
+~
+D WEST 11684 0 -1
+~
+The guardhouse stretches further in this direction.
+~
+#11659
+A Turn~
+You are at the turn between Bloodstone Lane and Obsidian Lane. 
+Bloodstone Lane continues west, while Obsidian Lane continues north.  A
+large guard house lies to the south, and a flower shop lies to the west.  
+~
+city
+ROOM LAW
+D NORTH 11660 0 -1
+~
+You see Obsidian Lane.
+~
+D EAST 11638 0 -1
+~
+You see Bloodstone Lane.
+~
+D SOUTH 11684 0 -1
+~
+You see a large guard house.
+~
+D WEST 11686 0 -1
+~
+You see The Ivy Patch flower shop.
+~
+#11660
+Obsidian Lane~
+You stand on Obsidian Lane.  To the west, a rich private home sits, and
+to the east is the town pharmacy.  Obsidian Lane continues north and south. 
+~
+inside
+ROOM LAW
+D NORTH 11639 0 -1
+~
+You see Obsidian Lane.
+~
+D EAST 11687 0 -1
+~
+You see the town pharmacy.
+~
+D SOUTH 11659 0 -1
+~
+You see Obsidian Lane.
+~
+D WEST 11685 A -1
+home door private~
+You see a rich private home.
+~
+#11661
+The City Stables~
+Mounds of hay and weeds sit scattered about the room.  Mixed in with the
+horses, several Tadarth move restlessly about.  The Tadarth are a type of
+carnivorous lizards that the Jaette have domesticated as steeds.  They look
+at you hungrily.  A small sign hangs here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11639 0 -1
+~
+You see Obsidian Lane.
+~
+E small sign~
+A small sign blows in the wind.  It reads:
+
+Closed until further notice...
+~
+#11662
+Turquoise Lane~
+Turquoise Lane runs north and south of here, following the wall around
+the city.  A wall of foot-wide spears stands to the west, framing the city
+within it's dangerous ramparts.  To the east the battlements of Udgaard
+Loke's palace rise, towering above an entrance into the palace.  
+~
+city
+ROOM LAW
+D NORTH 11688 0 -1
+~
+You see Turquoise Lane.
+~
+D SOUTH 11640 0 -1
+~
+You see the intersection of West Street and Turquoise Lane.
+~
+#11663
+Turquoise Lane~
+Turquoise Lane runs north and south of here, following the wall around
+the city.  A wall of foot-wide spears stands to the west, framing the city
+within it's dangerous ramparts.  To the east, the smell of fresh baked bread
+makes your stomach growl.  
+~
+city
+ROOM LAW
+D NORTH 11640 0 -1
+~
+You see the intersection of West Street and Turquoise Lane.
+~
+D EAST 11689 0 -1
+~
+You see the Baker's Rise.
+~
+D SOUTH 11690 0 -1
+~
+You see Turquoise Street.
+~
+#11664
+The West Gate of Udgaard Loke's Farm~
+Flanked by twin towers, an enormous stone gateway rises to protect the
+city.  A darkened steel portcullis here serves to close the gates when
+necessary.  Jutting out of the thick grating, huge spikes fend off would-be
+assailants.  Archer's slits look down into the gateway, to finish off any
+unfortunate attackers.  Behind the portcullis, studded metal doorways lead
+into the towers.  
+~
+city
+ROOM LAW
+D NORTH 11691 A -1
+door tower~
+You see the entrance to a tower.
+~
+D EAST 11640 0 -1
+~
+You see the intersection of West Street and Turquoise Lane.
+~
+D SOUTH 11692 A -1
+door tower~
+You see the entrance to a tower.
+~
+D WEST 11693 AB -1
+portcullis gate~
+You look outside of Udgaard Loke's farm.
+~
+#11666
+The Furniture Shop~
+This shop looks more like a warehouse than a business.  Huge stacks of
+chairs, tables, and other furnishings rise stacked to the ceiling.  A small
+section of the store is devoted to ships and smaller vessels.  A small sign
+hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11642 0 -1
+~
+You see a turn in the road.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11667
+A Guard House~
+You are in a guard house.  Everything is well scrubbed and clean. 
+Several lower level officers stand here barking orders to their charges.  A
+guard looks up wondering why you are here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11642 0 -1
+~
+You see a turn in the road.
+~
+D WEST 11643 0 -1
+~
+The guard house stretches further in this direction.
+~
+#11668
+Marble Lane~
+Marble Lane runs north and south of here, following the wall around the
+city.  A wall of foot-wide spears stands to the east, framing the city
+within it's dangerous ramparts.  To the west the battlements of Udgaard
+Loke's palace rise.  
+~
+city
+ROOM LAW
+D NORTH 11694 0 -1
+~
+You see a turn in the road.
+~
+D SOUTH 11644 0 -1
+~
+You see Marble Lane.
+~
+#11669
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11645 A -1
+tower door~
+You see the Eastern Gate.
+~
+D UP 11695 0 -1
+~
+You see the top of the tower.
+~
+#11670
+Outside the East Gate~
+A foreboding wall of spears expands north and south from an enormous
+stone gate to the west.  Guards patrolling the wall cry out to you to
+identify your business in Udgaard Loke's Farm.  In the distance, you see a
+wooden palace rise from within the city.  Many of the travellers going to
+and from Greenleaf Dale come through these gates.  
+~
+city
+ROOM LAW
+D WEST 11645 AB -1
+portcullis gate~
+You see the East Gate of Udgaard Loke's Farm.
+~
+#11671
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11645 A -1
+tower door~
+You see the Eastern Gate.
+~
+D UP 11696 0 -1
+~
+You see the top of the tower.
+~
+#11672
+Marble Lane~
+Marble Lane runs north and south of here, following the wall around the
+city.  A wall of foot-wide spears stands to the east, framing the city
+within it's dangerous ramparts.  To the west, a black edifice pierces the
+sky.  A strange symbol rests over its entrance.  
+~
+city
+ROOM LAW
+D NORTH 11646 0 -1
+~
+You see Marble Lane.
+~
+D SOUTH 11697 0 -1
+~
+You see Marble Lane.
+~
+D WEST 11698 0 -1
+~
+You see a black edifice.
+~
+E strange symbol~
+This symbol pulsates with a white light.  A few lines of an ancient writing
+are written within it, but you can not concentrate enough to read them.
+Below the symbol, a plain script advertises:
+.
+                          The Black Library
+~
+#11673
+The Necromancer's Delight~
+A slight haze hangs in the air here, making it difficult to see the items
+for sale.  Slow moving men with glazed eyes restock items on the shelves. 
+There is an unholy reek in the air.  A low doorway is visible leading north.
+A small sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11702 0 -1
+~
+You see the Mage's Guild.
+~
+D SOUTH 11647 0 -1
+~
+You see the Magic Arcade.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11674
+The Liquid Gate~
+Thick glass tubes wind along the walls.  Colored liquids mix and flow
+through the pipes.  The tubes end at brass faucets behind a counter, where
+an apprentice fills opaque flasks.  A small sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11647 0 -1
+~
+You see the Magic Arcade.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11675
+The Broken Hilt~
+A prospering business, The Broken Hilt services those items which "chip,
+flake, or break" during combat.  A large anvil takes up much of the center
+of the store.  Other blacksmith items lie scattered about.  Soot rises from
+the furnace on the southern wall, while a slave repairs items for customers.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11648 0 -1
+~
+You see Jade Lane.
+~
+E furnace wall~
+Your eyes water as the heat of the furnace hits you.  Better get back
+quick before your clothes catch on fire!!
+~
+#11676
+The Thieves' Guild~
+Although still operating, the Thieves' Guild is in poor shape.  Frequent
+raids have moved most of this guild's members to Udgaard Loke's Prisons. 
+Inside, a single table lies surrounded by broken chairs.  The trapdoor that
+used to lead to the guildmaster's secret yard has been smashed, as has the
+room beyond.  Now, the guild must operate in this single chamber.  It is
+deserted save for a guard posted here.  As you enter, he scribbles something
+on a small pad of paper.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11648 0 -1
+~
+You see Jade Lane.
+~
+#11677
+The Eastern Warriors' Guild~
+The only brick buildings in town, the Warrior's guild is one of the most
+well kept establishments in the area.  A slate roof protects this guild from
+even the worst weather, and the members tirelessly keep this guild clean and
+safe.  Often, the Eastern Warriors' Guild will house a member of a visiting
+clergy.  In return, these priests consecrate the warriors for battle, and
+tend to the seriously wounded.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11651 0 -1
+~
+You see Onyx Lane.
+~
+D WEST 11650 0 -1
+~
+You see the Western Warriors' Guild.
+~
+#11678
+The Drilling Room~
+In this room, practicing warriors duel with each other to learn their
+skills.  As they fight, a circle of grizzled warriors led by the guildmaster
+evaluates their techniques and gives instruction.  Eventually, when a
+warrior has mastered a skill, he is welcomed into the circle to instruct
+others.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D DOWN 11650 0 -1
+~
+You see the Western Warriors' Guild.
+~
+#11679
+Onyx Lane~
+You walk along Onyx Lane.  You are flanked on the south by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the north a small private
+home is nestled among the larger buildings.  Onyx lane continues to the east
+and west.  
+~
+city
+ROOM LAW
+D NORTH 11699 0 -1
+~
+You see a small dwarf's home.
+~
+D EAST 11700 0 -1
+~
+You see a turn in the road.
+~
+D WEST 11651 0 -1
+~
+You see Onyx Lane.
+~
+#11680
+The Top of a South Gate Tower~
+The guards posted on these towers huddle beneath cloaks as a continuous
+wind howls through the battlements.  Heavy black cauldrons are settled
+amongst the merlons, and archer slits angle onto the plains below.  A small
+wooden ladder leads down into the base of the tower.  
+~
+city
+ROOM LAW
+D DOWN 11652 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11681
+The Top of a South Gate Tower~
+A lone sentry stands looking south from the remains of this tower. 
+Obviously, something very large has attacked this area.  The entire
+battlement is in rubble, and men struggle to repair the damage.  Long, deep
+claw marks scar the floor.  A small wooden ladder leads down to the base of
+the tower.  
+~
+city
+ROOM LAW
+D DOWN 11654 0 -1
+~
+You see the base of the tower.
+~
+#11682
+The Tested Traveller~
+A short line of customers waits for a teller to sum up their purchases. 
+Boxes of inventory are being stacked behind the counter, waiting to be
+packed onto the shelves.  Rows of goods stretch to the east, and Onyx Lane
+lies to the south.  A small sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11655 0 -1
+~
+You see the eastern end of the Tested Traveller.
+~
+D SOUTH 11656 0 -1
+~
+You see Onyx Lane.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11683
+Onyx Lane~
+You walk along Onyx Lane.  You are flanked on the south by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the north are the burnt out
+remnants of a building.  Onyx lane continues to the east and west.  A
+crooked sign hangs by a single chain here.  
+~
+city
+ROOM LAW
+D NORTH 11701 0 -1
+~
+You see a burnt out building.
+~
+D EAST 11656 0 -1
+~
+You see Onyx Lane.
+~
+D WEST 11710 0 -1
+~
+You see a turn in the road.
+~
+E crooked sign~
+A crooked sign hangs here. It reads:
+.
+                                P l  ns'  uild
+
+~
+#11684
+A Guard House~
+You are in a guard house.  Everything is well scrubbed and clean. 
+Several lower level officers stand here barking orders to their charges.  A
+guard looks up wondering why you are here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11659 0 -1
+~
+You see a turn in the road.
+~
+D EAST 11658 0 -1
+~
+The guard house stretches further in this direction.
+~
+#11685
+A private home~
+Rich candelabras light this house with a soft glow.  Stained glass lets
+in light during the day, and carpeting muffles the sound of heavy boots.  A
+portrait of the owner hangs above a fireplace, and a bookcase leans against
+the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11660 0 -1
+~
+You see Obsidian Lane.
+~
+D SOUTH 11703 AB -1
+bookcase book case~
+The bookcase has scratches as though previously pried from the wall.
+~
+E picture portrait~
+You wonder why a Jaette would ever have a portrait of himself.  A trollish
+face stares stupidly back at you through squinting eyes.
+~
+#11686
+The Ivy Patch~
+Unlike any flower shop you have previously seen, this building is more
+like a maze of bushes and weeds.  Out of the corner of your eye you catch a
+sharp movement.  As you turn to look, you see a plant bend back into the
+shadows.  A small sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11659 0 -1
+~
+You see a turn in the road.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11687
+The Farmacy~
+A slave stands beside a large pill dispenser.  Vials and pillboxes are
+sold near the door, and aisles of pharmaceuticals run the length of the
+store.  Several mortar and pestles rest on counters in the rear of the
+building.  A small sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11660 0 -1
+~
+You see Obsidian Lane.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11688
+Turquoise Lane~
+Turquoise Lane runs north and south of here, following the wall around
+the city.  A wall of foot-wide spears stands to the west, framing the city
+within it's dangerous ramparts.  To the east the battlements of Udgaard
+Loke's palace rise.  
+~
+city
+ROOM LAW
+D NORTH 11704 0 -1
+~
+You see Turquoise Lane.
+~
+D SOUTH 11662 0 -1
+~
+You see Turquoise Lane.
+~
+#11689
+The Baker's Rise~
+All the food here is freshly made, and the smells waft out along the
+street outside.  Great metal ovens warm this store, releasing bursts of
+flame as the workers check their contents.  A delicate glass counter
+contains many of breads sold here.  A small sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11663 0 -1
+~
+You see Turquoise Lane.
+~
+E small sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Shopkeeper will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11690
+Turquoise Lane~
+Turquoise Lane runs north and south of here, following the wall around
+the city.  A wall of foot-wide spears stands to the west, framing the city
+within it's dangerous ramparts.  To the east a wooden shack stands empty.  
+~
+city
+ROOM LAW
+D NORTH 11663 0 -1
+~
+You see Turquoise Lane.
+~
+D EAST 11705 0 -1
+~
+You see the cobbler's shack.
+~
+D SOUTH 11706 0 -1
+~
+You see Turquoise Lane.
+~
+#11691
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11664 A -1
+tower door~
+You see the Western Gate.
+~
+D UP 11707 0 -1
+~
+You see the top of the tower.
+~
+#11692
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11664 A -1
+tower door~
+You see the Southern Gate.
+~
+D UP 11708 0 -1
+~
+You see the top of the tower.
+~
+#11693
+Outside the West Gate~
+A foreboding wall of spears expands north and south from an enormous
+stone gate to the east.  Guards patrolling the wall cry out to you to
+identify your business in Udgaard Loke's Farm.  In the distance, you see a
+wooden palace rise from within the city.  You notice that this is by far the
+most heavily guarded of the gates, as Udgaard Loke is constantly vigilant
+against OneHeart Warrior attacks from their cities west of here.  
+~
+city
+ROOM LAW
+D EAST 11664 AB -1
+portcullis gate~
+You see the West Gate of Udgaard Loke's Farm.
+~
+#11694
+Marble Lane~
+Marble Lane runs north and south of here, following the wall around the
+city.  A wall of foot-wide spears stands to the east, framing the city
+within it's dangerous ramparts.  To the west the battlements of Udgaard
+Loke's palace rise, towering above an entrance into the palace.  
+~
+city
+ROOM LAW
+D NORTH 11715 0 -1
+~
+You see a turn in the road.
+~
+D SOUTH 11668 0 -1
+~
+You see Marble Lane.
+~
+#11695
+The Top of an East Gate Tower~
+The guards posted on these towers huddle beneath cloaks as a continuous
+wind howls through the battlements.  Heavy black cauldrons are settled
+amongst the merlons, and archer slits angle onto the plains below.  A small
+wooden ladder leads down into the base of the tower.  
+~
+city
+ROOM LAW
+D DOWN 11669 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11696
+The Top of a South Gate Tower~
+The guards posted on these towers huddle around the remains of a long
+dead fire.  The embers barely glow as the wind continues to blow.  Heavy
+black cauldrons are settled amongst the merlons, and archer slits angle onto
+the plains below.  A small wooden ladder leads down into the base of the
+tower.  
+~
+city
+ROOM LAW
+D DOWN 11671 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11697
+Marble Lane~
+Marble Lane runs north and south of here, following the wall around the
+city.  A wall of foot-wide spears stands to the east, framing the city
+within it's dangerous ramparts.  To the west is the campus of a small
+school.  
+~
+city
+ROOM LAW
+D NORTH 11672 0 -1
+~
+You see Marble Lane.
+~
+D SOUTH 11700 0 -1
+~
+You see a turn in the road.
+~
+D WEST 11709 0 -1
+~
+You see a green lawn in front of a small building.
+~
+#11698
+The Dark Library~
+It is easy to become lost within the thousands of scrolls and tomes here.
+Small study rooms branch off a main corridor which leads to the circular
+desk of the librarian.  For a price, she can help you find much of the
+hidden knowledge within this building.  It has been whispered that the
+workers of this place no longer carry the concerns of the living.  A small
+sign hangs on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11672 0 -1
+~
+You see Marble Lane.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - Librarian will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11699
+The Old Dwarf's Home~
+An old dwarf of the Horde has built himself a safe haven here.  Within
+his house, a small man-made pond surrounds an atrium.  You see Coy fish
+lazily swimming within the pond.  This whole area gives a welcome feeling of
+relaxation compared to the activity outside.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM LAW
+ROOM NO_GATE
+D SOUTH 11679 0 -1
+~
+You see Onyx Lane.
+~
+#11700
+A Turn~
+You stand at the turn in the road of the cities southeast corner.  A wall
+of foot-wide spears stands to the south and east, framing the city within
+it's dangerous ramparts.  Marble Lane continues north to the mage's quarter,
+and Onyx Lane continues west to the South Gate.  
+~
+city
+ROOM LAW
+D NORTH 11697 0 -1
+~
+You see Marble Lane.
+~
+D WEST 11679 0 -1
+~
+You see Onyx Lane.
+~
+#11701
+The Burned Guildhouse~
+The charred ruins of a guildhouse fill this ravaged lot.  A raging fire
+has gutted this building, leaving nothing save some frayed splotches of
+carpeting.  A silver cross lies imbedded in a cracked altar, melted almost
+beyond recognition.  Several headless statues of the gods have been toppled
+to the ground.  
+~
+city
+ROOM LAW
+D SOUTH 11683 0 -1
+~
+You see Onyx Lane.
+~
+#11702
+The Mages' Guild~
+Etched upon the walls of this chamber, symbols flicker with energy.  The
+room itself seems to groan under the strain of the symbols written upon it. 
+A strange pentagram begins to glow upon the north wall as you enter. 
+Suddenly, a writhing mist clouds the center of the symbol, and you find you
+can see beyond the wall... 
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11711 0 -1
+~
+You see The Chamber of the Mind.
+~
+D SOUTH 11673 0 -1
+~
+You see the Necromancer's Delight.
+~
+#11703
+The Ninja Study~
+Little physical training goes on in this arena.  The focus of this Dojo
+is mastery through mental discipline.  Small rugs are available for
+meditation, and incense burns sweetly in the corners of the room.  A few
+combatants are scattered about practicing the more physical aspects of their
+skills.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11685 AB -1
+~
+The bookcase has scratches as though previously pried from the wall.
+~
+D WEST 11712 0 -1
+~
+You see the Supply Room.
+~
+#11704
+Turquoise Lane~
+Turquoise Lane runs north and south of here, following the wall around
+the city.  A wall of foot-wide spears stands to the west, framing the city
+within it's dangerous ramparts.  To the east the battlements of Udgaard
+Loke's palace rise, towering above an entrance into the palace.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 11713 0 -1
+~
+You see a turn in the road.
+~
+D SOUTH 11688 0 -1
+~
+You see Turquoise Lane.
+~
+#11705
+The Cobbler's Shack~
+A run down shack barely stands here.  Its wooden walls lean against the
+surrounding buildings for support, and you worry about your safety as you
+enter.  A makeshift counter is here, formed out of crates and a thin slice
+of birch wood.  Although poor, the cobbler has a good reputation for fine
+work within this city.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11690 0 -1
+~
+You see Turquoise Lane.
+~
+#11706
+Turquoise Lane~
+Turquoise Lane runs north and south of here, following the wall around
+the city.  A wall of foot-wide spears stands to the west, framing the city
+within it's dangerous ramparts.  To the east, a dingy bar is the hangout of
+the off-duty Jaettes.  
+~
+city
+ROOM LAW
+D NORTH 11690 0 -1
+~
+You see Turquoise Lane.
+~
+D EAST 11714 0 -1
+~
+You see a dingy bar.
+~
+D SOUTH 11710 0 -1
+~
+You see a turn.
+~
+#11707
+The Top of a West Gate Tower~
+You notice that there are many more guards on the western towers than on
+the other towers surrounding the city.  The guards posted on these towers
+grimace at your arrival, hoping you are a replacement.  The wind is strong
+here, and the guards have constructed a temporary shelter which does nothing
+more than channel the wind away from them.  Heavy black cauldrons are
+settled amongst the merlons, and archer slits angle onto the plains below. 
+A small wooden ladder leads down into the base of the tower.  
+~
+city
+ROOM LAW
+D DOWN 11691 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11708
+The Top of a West Gate Tower~
+You notice that there are many more guards on the western towers than on
+the other towers surrounding the city.  The guards posted on these towers
+grimace at your arrival, hoping you are a replacement.  Heavy black
+cauldrons are settled amongst the merlons, and archer slits angle onto the
+plains below.  A small wooden ladder leads down into the base of the tower. 
+~
+city
+ROOM LAW
+D DOWN 11692 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11709
+The Small School~
+A small school was constructed here during more peaceful times.  Now it
+is used by the army as an area to train their troops.  Usually, it is
+possible to convince one of the unemployed teachers to train you if you ask.
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11697 0 -1
+~
+You see Marble Lane.
+~
+#11710
+A Turn~
+You are at a bend in the road.  A wall of foot-wide spears stands to the
+west and south, framing the city within it's dangerous ramparts.  Turquoise
+Lane leads north to the West Gate, and Onyx Lane leads east to the South
+Gate.  
+~
+city
+ROOM LAW
+D NORTH 11706 0 -1
+~
+You see Turquoise Lane.
+~
+D EAST 11683 0 -1
+~
+You see Onyx Lane.
+~
+#11711
+The Chamber of the Mind~
+You step through the portal into a room of indescribable proportions. 
+This area would not fit within the entire city walls of Udgaard.  Briefly
+you wonder where you are.  Swirling colors and pulses of lightning fill the
+ceiling.  Far in the distance, mages practice the mystic arts.  You find
+yourself a spot and wait for an instructor.... 
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11702 0 -1
+~
+You see the gateway back to the Mages' Guild.
+~
+#11712
+The Supply Room~
+In this room, a Sukuinage distributes equipment of the ninja class. 
+Silently, the ninja points to an article nailed to his desk.... There is
+also a small sign hanging on the wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11703 0 -1
+~
+You see the Ninja Study.
+~
+E article nailed desk~
+The ancient script of this article bears the sign of your Guildmaster  It
+reads:
+
+     Recently, several warriors were seen wearing the sacred
+     equipment of the ninja class.  Upon purchasing these
+     items you assume the responsibility to keep these items
+     within the Ninja Brotherhood.  Take this responsibility
+     seriously.
+~
+E sign wall~
+The sign on the wall reads:
+
+List  - Show what items are for sale.
+Value - The Sukuinage will tell you how much he will pay for your item.
+Sell  - Sell an item.
+Buy   - Buy an item.
+~
+#11713
+A Turn~
+You are at a bend in the road.  A wall of foot-wide spears stands to the
+west and north, framing the city within it's dangerous ramparts.  Turquoise
+Lane leads south to the West Gate, and Opal Lane leads east to the North
+Gate.  
+~
+city
+ROOM LAW
+D EAST 11716 0 -1
+~
+You see Opal Lane.
+~
+D SOUTH 11704 0 -1
+~
+You see Turquoise Lane.
+~
+#11714
+The Jaette Bar~
+This broken down bar is a favorite of the local troops in Udgaard Loke's
+army.  The owner seems to accept the brawls which break out here every
+night, considering the Jaette business it brings in.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11706 0 -1
+~
+You see Turquoise Lane.
+~
+#11715
+A Turn~
+You stand at the turn in the road of the cities northeast corner.  A wall
+of foot-wide spears stands to the north and east, framing the city within
+it's dangerous ramparts.  Marble Lane continues south to the east gate, and
+Opal Lane continues west to the North Gate.  
+~
+city
+ROOM LAW
+D SOUTH 11694 0 -1
+~
+You see Marble Lane.
+~
+D WEST 11717 0 -1
+~
+You see Opal Lane.
+~
+#11716
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the North by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the South Udgaard Loke's
+Palace towers above you.  Opal lane continues to the east, and a turn in the
+road is west.  
+~
+city
+ROOM LAW
+D EAST 11718 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11713 0 -1
+~
+You see a turn in the road.
+~
+#11717
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the North by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the South Udgaard Loke's
+Palace towers above you.  Opal lane continues to the west, and a turn in the
+road is east.  
+~
+city
+ROOM LAW
+D EAST 11715 0 -1
+~
+You see a turn.
+~
+D WEST 11719 0 -1
+~
+You see Opal Lane.
+~
+#11718
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the North by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the South Udgaard Loke's
+Palace towers above you.  Opal lane continues to the east and west.  
+~
+city
+ROOM LAW
+D EAST 11720 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11716 0 -1
+~
+You see Opal Lane.
+~
+#11719
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the North by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the South Udgaard Loke's
+Palace towers above you.  Opal lane continues to the east and west.  
+~
+city
+ROOM LAW
+D EAST 11717 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11721 0 -1
+~
+You see Opal Lane.
+~
+#11720
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the North by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the South Udgaard Loke's
+Palace towers above you.  Opal lane continues to the east and west.  
+~
+city
+ROOM LAW
+D EAST 11722 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11718 0 -1
+~
+You see Opal Lane.
+~
+#11721
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the North by the thick
+spear wall surrounding Udgaard Loke's Farm.  To the South Udgaard Loke's
+Palace towers above you.  Opal lane continues to the east and west.  
+~
+city
+ROOM LAW
+D EAST 11719 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11722 0 -1
+~
+You see Opal Lane.
+~
+#11722
+Opal Lane~
+You walk along Opal Lane.  You are flanked on the north by the North Gate
+of Udgaard Loke's Farm.  To the South Udgaard Loke's Palace towers above
+you.  Opal lane continues to the east and west.  
+~
+city
+ROOM LAW
+D NORTH 11723 0 -1
+~
+You see the North Gate of Udgaard Loke's Farm.
+~
+D EAST 11721 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11720 0 -1
+~
+You see Opal Lane.
+~
+#11723
+The North Gate of Udgaard Loke's Farm~
+Flanked by twin towers, an enormous stone gateway rises to protect the
+city.  A darkened steel portcullis here serves to close the gates when
+necessary.  Jutting out of the thick grating, huge spikes fend off would-be
+assailants.  Archer's slits look down into the gateway, to finish off any
+unfortunate attackers.  Behind the portcullis, studded metal doorways lead
+into the towers.  
+~
+city
+ROOM LAW
+D NORTH 11724 AB -1
+portcullis gate~
+You look outside of Udgaard Loke's Farm.
+~
+D EAST 11725 A -1
+tower door~
+You see the entrance to a tower.
+~
+D SOUTH 11722 0 -1
+~
+You see Opal Lane.
+~
+D WEST 11726 A -1
+tower door~
+You see the entrance to a tower.
+~
+#11724
+Outside the North Gate~
+A foreboding wall of spears expands east and west from an enormous stone
+gate to the south.  Guards patrolling the wall cry out to you to identify
+your business in Udgaard Loke's Farm.  In the distance, you see a wooden
+palace rise from within the city.  
+~
+city
+ROOM LAW
+D NORTH 0 A -1
+~
+~
+D SOUTH 11723 AB -1
+portcullis gate~
+You see the North Gate of Udgaard Loke's Farm.
+~
+#11725
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 11723 A -1
+tower door~
+You see the northern Gate.
+~
+D UP 11727 0 -1
+~
+You see the top of the tower.
+~
+D DOWN 2001 A 0
+a trapdoor~
+A trapdoor in the tower leads down into the city's catacombs.
+~
+#11726
+Base of a Gate Tower~
+Cold and dark, these towers stand guard against Udgaard Loke's enemies. 
+Many a OneHeart Warrior has died while trying to storm their walls.  There
+is a wooden ladder leading up.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 11723 A -1
+tower door~
+You see the Northern Gate.
+~
+D UP 11728 0 -1
+~
+You see the top of the tower.
+~
+#11727
+The Top of a North Gate Tower~
+The guards posted on these towers huddle beneath cloaks as a continuous
+wind howls through the battlements.  Heavy black cauldrons are settled
+amongst the merlons, and archer slits angle onto the plains below.  A small
+wooden ladder leads down into the base of the tower.  
+~
+city
+ROOM LAW
+D DOWN 11725 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11728
+The Top of a North Gate Tower~
+The guards posted on these towers huddle beneath cloaks as a continuous
+wind howls through the battlements.  Heavy black cauldrons are settled
+amongst the merlons, and archer slits angle onto the plains below.  A small
+wooden ladder leads down into the base of the tower.  
+~
+city
+ROOM LAW
+D DOWN 11726 0 -1
+~
+You see the base of the tower.
+~
+E black cauldron~
+For the moment, these rest empty against the walls.  During a siege, boiling
+oil is dropped on the attackers from these cauldrons to aid in the defense of
+the town.  You think it best to leave them alone.
+~
+#11729
+The Dark Clerics' Guild~
+Scattered about the room you see bloodstained pentagrams, carved symbols
+of evil, and the drained corpses of tributes.  As you kneel to worship, you
+feel a corrupt power surge within you.  The Afskyelige wander about,
+prohibiting the entrance of non believers.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 11604 0 -1
+~
+You see steps leading from the north east courtyard.
+~
+D WEST 11614 0 -1
+~
+You see the center of the Dark Temple.
+~
+#11730
+The Monk's Guild~
+This guild is used by the fearsome monks that reside in these lands. 
+Strong and ferocious, they use their skill, strength and courage to do
+battle.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM LAW
+D NORTH 11651 0 -1
+~
+To your north you see Onyx Lane.
+~
+#0
+
+
+
+#RESETS
+MOB 11630 TO 11600 GLIMIT 1 LLIMIT 1
+MOB 11600 TO 11603 GLIMIT 1 LLIMIT 1
+GIVE 11601
+GIVE 11602
+GIVE 11603
+GIVE 11604
+GIVE 11605
+GIVE 11606
+GIVE 11607
+MOB 11619 TO 11606 GLIMIT 3 LLIMIT 1
+MOB 11601 TO 11607 GLIMIT 1 LLIMIT 1
+EQUIP 11658 WIELD
+MOB 11613 TO 11607 GLIMIT 3 LLIMIT 1
+EQUIP 11699 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+MOB 11620 TO 11608 GLIMIT 1 LLIMIT 1
+EQUIP 11701 NECKONE
+MOB 11621 TO 11608 GLIMIT 1 LLIMIT 1
+EQUIP 11611 NECKONE
+MOB 11622 TO 11608 GLIMIT 1 LLIMIT 1
+EQUIP 11611 NECKONE
+MOB 11624 TO 11608 GLIMIT 1 LLIMIT 1
+EQUIP 11611 NECKONE
+MOB 11604 TO 11612 GLIMIT 1 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11613 TO 11612 GLIMIT 4 LLIMIT 1
+EQUIP 11699 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+OBJECT 11610 TO 11614
+OBJECT 11609 TO 11614
+MOB 11602 TO 11614 GLIMIT 1 LLIMIT 1
+MOB 11602 TO 11614 GLIMIT 2 LLIMIT 1
+MOB 11656 TO 11614 GLIMIT 1 LLIMIT 1
+MOB 11672 TO 11614 GLIMIT 1 LLIMIT 1
+MOB 11669 TO 11616 GLIMIT 1 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11671 TO 11616 GLIMIT 1 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11613 TO 11616 GLIMIT 5 LLIMIT 1
+EQUIP 11699 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+MOB 11603 TO 11617 GLIMIT 1 LLIMIT 1
+EQUIP 11608 WIELD
+OBJECT 11647 TO 11619
+OBJECT 11647 TO 11619
+MOB 11631 TO 11619 GLIMIT 3 LLIMIT 3
+MOB 11632 TO 11619 GLIMIT 3 LLIMIT 3
+MOB 11633 TO 11619 GLIMIT 3 LLIMIT 3
+MOB 11634 TO 11619 GLIMIT 3 LLIMIT 3
+DOOR 11619 south CLOSED
+MOB 11619 TO 11620 GLIMIT 2 LLIMIT 1
+MOB 11602 TO 11621 GLIMIT 3 LLIMIT 1
+MOB 11611 TO 11621 GLIMIT 1 LLIMIT 1
+EQUIP 11618 WIELD
+MOB 11669 TO 11623 GLIMIT 2 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11619 TO 11623 GLIMIT 10 LLIMIT 1
+MOB 11625 TO 11623 GLIMIT 28 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11626 TO 11623 GLIMIT 20 LLIMIT 1
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11635 TO 11625 GLIMIT 8 LLIMIT 2
+MOB 11635 TO 11625 GLIMIT 8 LLIMIT 2
+DOOR 11625 north CLOSED
+OBJECT 11647 TO 11626
+OBJECT 11647 TO 11626
+MOB 11631 TO 11626 GLIMIT 6 LLIMIT 3
+MOB 11632 TO 11626 GLIMIT 6 LLIMIT 3
+MOB 11633 TO 11626 GLIMIT 6 LLIMIT 3
+MOB 11634 TO 11626 GLIMIT 6 LLIMIT 3
+MOB 11670 TO 11627 GLIMIT 1 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11613 TO 11627 GLIMIT 1 LLIMIT 1
+EQUIP 11699 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+MOB 11615 TO 11628 GLIMIT 2 LLIMIT 2
+MOB 11615 TO 11628 GLIMIT 2 LLIMIT 2
+MOB 11619 TO 11629 GLIMIT 7 LLIMIT 3
+MOB 11616 TO 11630 GLIMIT 1 LLIMIT 1
+GIVE 11622
+GIVE 11623
+GIVE 11624
+MOB 11604 TO 11631 GLIMIT 2 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11625 TO 11631 GLIMIT 32 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11626 TO 11631 GLIMIT 16 LLIMIT 1
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11612 TO 11634 GLIMIT 1 LLIMIT 1
+EQUIP 11619 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+DOOR 11634 south CLOSED
+MOB 11617 TO 11636 GLIMIT 1 LLIMIT 1
+EQUIP 11625 ABOUT
+GIVE 11626
+GIVE 11627
+GIVE 11628
+GIVE 11629
+GIVE 11630
+GIVE 11631
+GIVE 11632
+GIVE 11633
+GIVE 11634
+GIVE 11698
+MOB 11618 TO 11637 GLIMIT 1 LLIMIT 1
+EQUIP 11635 WIELD
+GIVE 11636
+GIVE 11637
+GIVE 11638
+GIVE 11639
+MOB 11619 TO 11638 GLIMIT 6 LLIMIT 3
+MOB 11670 TO 11640 GLIMIT 2 LLIMIT 1
+EQUIP 11612 NECKONE
+MOB 11625 TO 11640 GLIMIT 36 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11626 TO 11640 GLIMIT 18 LLIMIT 1
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11636 TO 11641 GLIMIT 1 LLIMIT 1
+GIVE 11648
+GIVE 11649
+GIVE 11650
+GIVE 11651
+MOB 11625 TO 11643 GLIMIT 4 LLIMIT 3
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11625 TO 11643 GLIMIT 8 LLIMIT 3
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11625 TO 11643 GLIMIT 12 LLIMIT 3
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11657 TO 11645 GLIMIT 1 LLIMIT 1
+EQUIP 11619 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+DOOR 11645 east CLOSED
+MOB 11643 TO 11649 GLIMIT 1 LLIMIT 1
+GIVE 11666
+MOB 11646 TO 11650 GLIMIT 1 LLIMIT 1
+MOB 11627 TO 11652 GLIMIT 4 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11655 TO 11653 GLIMIT 2 LLIMIT 2
+MOB 11655 TO 11653 GLIMIT 4 LLIMIT 2
+DOOR 11653 north CLOSED
+MOB 11627 TO 11654 GLIMIT 2 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11637 TO 11657 GLIMIT 1 LLIMIT 1
+GIVE 11648
+GIVE 11649
+GIVE 11650
+GIVE 11651
+MOB 11625 TO 11658 GLIMIT 16 LLIMIT 3
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11625 TO 11658 GLIMIT 20 LLIMIT 3
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11625 TO 11658 GLIMIT 24 LLIMIT 3
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11658 TO 11664 GLIMIT 1 LLIMIT 1
+EQUIP 11619 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+DOOR 11664 west CLOSED
+MOB 11640 TO 11666 GLIMIT 1 LLIMIT 1
+GIVE 11696
+GIVE 11697
+MOB 11626 TO 11667 GLIMIT 2 LLIMIT 3
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11626 TO 11667 GLIMIT 4 LLIMIT 3
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11626 TO 11667 GLIMIT 6 LLIMIT 3
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11663 TO 11669 GLIMIT 4 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11661 TO 11670 GLIMIT 2 LLIMIT 2
+MOB 11661 TO 11670 GLIMIT 4 LLIMIT 2
+DOOR 11670 west CLOSED
+MOB 11663 TO 11671 GLIMIT 2 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11641 TO 11673 GLIMIT 1 LLIMIT 1
+GIVE 11660
+GIVE 11659
+GIVE 11661
+GIVE 11662
+MOB 11642 TO 11673 GLIMIT 2 LLIMIT 1
+MOB 11638 TO 11674 GLIMIT 1 LLIMIT 1
+GIVE 11663
+GIVE 11664
+GIVE 11665
+MOB 11644 TO 11675 GLIMIT 1 LLIMIT 1
+EQUIP 11667 WIELD
+MOB 11645 TO 11675 GLIMIT 1 LLIMIT 1
+EQUIP 11611 NECKONE
+MOB 11606 TO 11676 GLIMIT 2 LLIMIT 1
+EQUIP 11613 WIELD
+MOB 11646 TO 11677 GLIMIT 2 LLIMIT 1
+MOB 11607 TO 11678 GLIMIT 1 LLIMIT 1
+EQUIP 11614 WIELD
+MOB 11628 TO 11680 GLIMIT 1 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11628 TO 11681 GLIMIT 2 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11639 TO 11682 GLIMIT 1 LLIMIT 1
+GIVE 11691
+GIVE 11692
+GIVE 11693
+GIVE 11694
+GIVE 11695
+MOB 11626 TO 11684 GLIMIT 8 LLIMIT 3
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11626 TO 11684 GLIMIT 10 LLIMIT 3
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11626 TO 11684 GLIMIT 12 LLIMIT 3
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+DOOR 11685 south CLOSED
+MOB 11647 TO 11686 GLIMIT 1 LLIMIT 1
+GIVE 11668
+GIVE 11669
+GIVE 11670
+GIVE 11671
+MOB 11648 TO 11687 GLIMIT 1 LLIMIT 1
+EQUIP 11652 WIELD
+GIVE 11653
+GIVE 11654
+GIVE 11655
+GIVE 11656
+GIVE 11657
+MOB 11649 TO 11689 GLIMIT 1 LLIMIT 1
+GIVE 11672
+GIVE 11673
+GIVE 11674
+MOB 11665 TO 11691 GLIMIT 2 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11665 TO 11692 GLIMIT 4 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11660 TO 11693 GLIMIT 2 LLIMIT 2
+MOB 11660 TO 11693 GLIMIT 4 LLIMIT 2
+DOOR 11693 east CLOSED
+MOB 11664 TO 11695 GLIMIT 1 LLIMIT 1
+EQUIP 11703 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11664 TO 11696 GLIMIT 2 LLIMIT 1
+EQUIP 11703 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11650 TO 11698 GLIMIT 1 LLIMIT 1
+GIVE 11675
+GIVE 2794
+GIVE 11677
+GIVE 11678
+GIVE 11676
+MOB 11651 TO 11699 GLIMIT 1 LLIMIT 1
+GIVE 11679
+MOB 11610 TO 11701 GLIMIT 1 LLIMIT 1
+EQUIP 11617 WIELD
+MOB 11609 TO 11703 GLIMIT 1 LLIMIT 1
+EQUIP 11616 SHIELD
+EQUIP 11690 WAIST
+DOOR 11703 north CLOSED
+MOB 11652 TO 11705 GLIMIT 1 LLIMIT 1
+EQUIP 11680 FEET
+MOB 11666 TO 11707 GLIMIT 2 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11666 TO 11708 GLIMIT 1 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11653 TO 11709 GLIMIT 1 LLIMIT 1
+MOB 11608 TO 11711 GLIMIT 1 LLIMIT 1
+EQUIP 11615 WIELD
+MOB 11654 TO 11712 GLIMIT 1 LLIMIT 1
+GIVE 11681
+GIVE 11682
+GIVE 11683
+GIVE 11684
+GIVE 11685
+GIVE 11686
+GIVE 11687
+GIVE 11688
+EQUIP 11689 WAIST
+MOB 11629 TO 11713 GLIMIT 2 LLIMIT 1
+EQUIP 11646 HANDS
+MOB 11625 TO 11722 GLIMIT 40 LLIMIT 1
+EQUIP 11640 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11626 TO 11722 GLIMIT 14 LLIMIT 1
+EQUIP 11643 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11659 TO 11723 GLIMIT 1 LLIMIT 1
+EQUIP 11619 WIELD
+EQUIP 11620 WAIST
+EQUIP 11621 LFINGER
+DOOR 11723 north CLOSED
+MOB 11662 TO 11724 GLIMIT 2 LLIMIT 2
+MOB 11662 TO 11724 GLIMIT 4 LLIMIT 2
+DOOR 11724 south CLOSED
+MOB 11667 TO 11725 GLIMIT 2 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11667 TO 11726 GLIMIT 4 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11641 WAIST
+EQUIP 11642 LFINGER
+MOB 11668 TO 11727 GLIMIT 1 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11668 TO 11728 GLIMIT 2 LLIMIT 1
+EQUIP 11702 WIELD
+EQUIP 11644 WAIST
+EQUIP 11645 LFINGER
+MOB 11629 TO 11728 GLIMIT 1 LLIMIT 1
+EQUIP 11646 HANDS
+MOB 11602 TO 11729 GLIMIT 4 LLIMIT 1
+MOB 11605 TO 11729 GLIMIT 1 LLIMIT 1
+MOB 11606 TO 11730 GLIMIT 2 LLIMIT 1
+S
+
+#IMPROGS
+M 11600 pulse_prog pulse_prog_shopkeeper
+M 11616 pulse_prog pulse_prog_shopkeeper
+M 11617 pulse_prog pulse_prog_shopkeeper
+M 11618 pulse_prog pulse_prog_shopkeeper
+END
+#SPECS
+END
+#$

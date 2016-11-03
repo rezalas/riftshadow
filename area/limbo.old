@@ -1,0 +1,416 @@
+#AREA
+limbo.are~
+Limbo~
+Rift~
+52 60
+51 99
+normal
+none
+0
+1
+Rift~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#52
+tattoo bloodstone spider~
+tattoo of the bloodstone spider~
+You are looking at the tattoo of Xanthrailles.~
+armor
+flesh~
+20 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY DAMROLL 3
+APPLY HITROLL 1
+APPLY HP 50
+APPLY MANA 50
+APPLY SBREATH -20
+LIMIT 0
+TIMER 0
+
+#53
+tattoo dragon flame~
+tattoo of the Dragon's flame~
+You are looking at the tattoo of Seracuz.~
+armor
+flesh~
+10 10 10 30 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+APPLY DAMROLL 4
+APPLY HITROLL 4
+APPLY MANA 75
+APPLY SPETRI -25
+APPLY SBREATH -25
+LIMIT 0
+TIMER 0
+
+#54
+tattoo valor pure valiant knight golden dev~
+tattoo of the valiant knight~
+A gallant knight stands tall, challenging all comers.~
+armor
+flesh~
+2 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+APPLY DAMROLL 8
+APPLY HP 150
+APPLY SBREATH -10
+LIMIT 0
+TIMER 0
+
+#56
+tattoo unholy sceptre daedelex~
+tattoo of the unholy sceptre~
+You are looking at the tattoo of Daedelex.~
+armor
+flesh~
+7 10 13 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY HP 50
+APPLY MANA 50
+LIMIT 0
+TIMER 0
+
+#57
+tattoo damned blunt~
+tattoo of the damned blunt~
+You are looking at the tattoo of Detlef.~
+armor
+flesh~
+15 15 15 15 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 0
+TIMER 0
+
+#58
+tattoo hand vengeance~
+tattoo of the Hand of Vengeance~
+You are looking at the tattoo of Iomahk.~
+armor
+flesh~
+20 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY DAMROLL 15
+APPLY HITROLL 15
+APPLY HP 30
+APPLY MANA 30
+APPLY SBREATH -10
+LIMIT 0
+TIMER 0
+
+#59
+tattoo gimp~
+tattoo of the gimpy ass~
+You are looking at the tattoo of Lestregus.~
+armor
+flesh~
+5 5 5 5 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM HUM
+ITEM NODROP
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY SBREATH -10
+LIMIT 0
+TIMER 0
+
+#60
+tattoo crimson caduceus~
+tattoo of a crimson caduceus~
+What the flaming hell is this thing~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM MAGIC
+APPLY SAVES -20
+LIMIT 0
+TIMER 0
+
+#61
+platinum pickaxe tattoo~
+mark of the platinum pickaxe~
+You are looking at the tattoo of Morglum.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM MAGIC
+APPLY HP 50
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 0
+TIMER 0
+
+#62
+impaled drow tattoo~
+tattoo of an impaled drow~
+You are looking at the tattoo of Gabe.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM MAGIC
+APPLY HP 20
+APPLY SBREATH -5
+LIMIT 0
+TIMER 0
+
+#63
+tattoo ginzu knife~
+a tattoo of a large ginzu knife~
+You are looking at the tattoo of Lichen.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY HITROLL 15
+APPLY DAMROLL 15
+LIMIT 0
+TIMER 0
+
+#64
+tattoo large boot~
+a tattoo of a large leather boot~
+You are looking at the tattoo of Deomanix.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+APPLY HITROLL 7
+APPLY DAMROLL 7
+APPLY HP 50
+LIMIT 0
+TIMER 0
+
+#68
+essence darkness corruptor j'dizel jdizel~
+J'dizel, the Corruptor of Souls~
+This weapon is very l33t.  Very, very l33t.~
+weapon
+nothingness~
+weapon 8 8 infinite 0
+52 0 1000000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY DAMROLL 10
+APPLY HITROLL 10
+APPLY HP -50
+APPLY MANA -50
+LIMIT 0
+TIMER 0
+FLAG RES HOLY
+FLAG AFF 'protection' protection NOSHOW
+
+#69
+essence light purifier iliath~
+Iliath, the Purifier of Souls~
+This weapon is very l33t.  Very, very l33t.~
+weapon
+energy~
+weapon 2 1 wrath 0
+52 0 1000000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY DAMROLL -10
+APPLY HITROLL 10
+APPLY SVSPELL -20
+APPLY HP 50
+APPLY MANA 50
+LIMIT 0
+TIMER 0
+FLAG RES NEGATIVE
+FLAG AFF 'detect evil' detect_evil NOSHOW
+FLAG AFF 'protection' protection NOSHOW
+
+#70
+dummy object~
+a dummy object~
+Dummy object si used for loading non-existent objects~
+trash
+flesh~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+
+#0
+
+
+
+#ROOMS
+#1
+The Void~
+You are floating in nothing.
+~
+city
+ROOM NO_MOB
+ROOM INDOORS
+#2
+Limbo~
+You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+~
+city
+ROOM NO_MOB
+ROOM INDOORS
+D UP 0 0 -1
+~
+~
+#3
+Death Row~
+Welcome to Death Row. You await judgment, and possibly punishment, by the
+Immortals. Keep quiet, and your punishment may be reduced.
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 3 0 -1
+~
+~
+D EAST 3 0 -1
+~
+~
+D SOUTH 3 0 -1
+~
+~
+D WEST 3 0 -1
+~
+~
+#4
+The Zombie Pen~
+This extremely strange-looking room seems to contain dozens of zombies and
+other charmed creatures penned up like livestock. Zombies of dead dragons
+stand mindlessly next to towering fire elementals. In one corner, you see a
+couple pigs in a pen that seem rather out of place. What a horrible, horrible
+place.
+~
+city
+ROOM NO_MOB
+ROOM INDOORS
+#5
+The Ward Room~
+Screw around here and die.~
+city
+ROOM NO_MOB
+ROOM INDOORS
+ROOM PRIVATE
+ROOM NORECALL
+ROOM IMP_ONLY
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+#6
+The Description Room~
+You are traped in a void of reflective nothingness, unable to move you
+start to panic as all you can see is yourself.  Rather the poor appearence
+of yourself.  Perhaps that your vision of what you look like could be
+improved.  As you start to think hard about what you look like you notice
+features of your body start to alter as you think more indepth about each
+part.  Clothes and armours weapons and equipment all start to blur as your
+mind races as to what you may wear.  Still traped in this void of reflective
+nothingness you wonder about HELP RULES and HELP DESCRIPTION.  At least now
+you are no longer struck with panic, once your heart has stopped beating so
+rapidly, perhaps praying for a way out might prove more fruitful.  
+~
+unused
+ROOM NO_MOB
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_MAGIC
+ROOM NO_COMMUNE
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+I 26 verb_prog verb_prog_kneel_guillotine
+I 29 death_prog death_prog_explosives
+I 29 entry_prog entry_prog_explosives
+I 29 invoke_prog invoke_prog_explosives
+I 49 invoke_prog invoke_prog_tattoo_jackass
+I 50 invoke_prog invoke_prog_tattoo_dioxide
+I 61 invoke_prog invoke_prog_tattoo_morglum
+I 68 fight_prog fight_prog_essence_darkness
+I 68 hit_prog hit_prog_essence_darkness
+I 69 hit_prog hit_prog_essence_light
+END
+#$

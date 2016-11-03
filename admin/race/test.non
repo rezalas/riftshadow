@@ -1,0 +1,10 @@
+<?
+	include("../header.inc");
+	$get_res = mysql_db_query("rift_core","select name,type,bit from bit_lookup",$core_conn);
+	for($count = 0; $row = mysql_fetch_array($get_res); $count++)
+	{
+		$var = log($row[bit]) / log(2);
+		@mysql_db_query("rift_core","update bit_lookup set num_bits=$var where name='$row[name]' and type='$row[type]'", $core_conn);
+	}
+	echo "<br>done.";
+?>

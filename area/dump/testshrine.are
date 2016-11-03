@@ -1,0 +1,54 @@
+#AREA
+testshrine.are~
+Test Shrine~
+None~
+1 51
+100 110
+shrine
+none
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#100
+stone altar~
+a circular stone altar made of granite~
+A small, circular stone altar made of granite dominates the center of the room.~
+altar
+granite~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+LIMIT 1
+
+#0
+
+
+
+#ROOMS
+#100
+Before A Large Altar~
+This poorly lit room is fairly plain, with a floor of smooth stone.  There is     
+but one thing of interest.      
+~
+inside
+ROOM NO_MOB
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+OWNER Eladrian~
+#0
+
+
+
+#RESETS
+OBJECT 100 TO 100
+S
+
+#IMPROGS
+END
+#$

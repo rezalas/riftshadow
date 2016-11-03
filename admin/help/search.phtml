@@ -1,0 +1,56 @@
+<?
+	include("../header.inc");
+	if(!$_REQUEST[step] || "$_REQUEST[step]"=="")
+		$step=1;
+	else
+		$step=$_REQUEST[step];
+
+	$search = $_REQUEST[search];
+
+
+	if($step == 1)
+	{
+?>
+<form action=search.phtml method=post>
+<input type=hidden name=step value=2>
+<table align=center width=60%>
+<tr><td align=right><? echo $def_font;?>Search:</td><td><input type=text name=search></td></tr>
+<tr><td colspan=2 align=center><input type=submit value=Search></td></tr>
+</table>
+</form>
+<?
+	}
+	else if($step == 2)
+	{
+		if(is_numeric($search))
+			$query = "select * from helpfiles where id=$search ORDER BY title";
+		else
+			$query = "select * from helpfiles where title RLIKE '$search' ORDER BY title";
+		$get_res = mysql_db_query("rift",$query, $conn);
+		echo "<table align=center width=60%>";
+		for($count=1; $row = mysql_fetch_array($get_res); $count++)
+		{
+			if($count > 1)
+				echo "<tr><td><hr></td></tr>";
+			echo "<tr><td>$def_font<font size=3><b>".$row[title]." $row[id] ";
+			if($trust >= 53)
+				echo "(<a href='edit.phtml?id=$row[id]'>Edit</a>) ";
+			if($trust >= 54)
+				echo "(<a href='delete.phtml?id=$row[id]'>Delete</a>)";
+			echo "</font>";
+			echo "</td></tr><tr><td>$def_font<font size=3><pre>".stripslashes($row[helpdata])."</td></tr>";
+		}
+		echo "</table>";
+?>
+<form action=search.phtml method=post>
+<input type=hidden name=step value=2>
+<table align=center width=60%>
+<tr><td align=right><? echo $def_font;?>Search:</td><td><input type=text name=search></td></tr>
+<tr><td colspan=2 align=center><input type=submit value=Search></td></tr>
+</table>
+<br>
+<?
+	}
+
+	include("../footer.inc");
+?>

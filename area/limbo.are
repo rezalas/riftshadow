@@ -1,0 +1,973 @@
+#AREA
+limbo.are~
+Limbo~
+Rift~
+52 60
+1 99
+unopened
+none
+0
+1
+Rift~
+
+#MOBS
+#1
+avatar darkness black cloud swirling~
+the Avatar of Darkness~
+A swirling black cloud towers here, absorbing light from all around it.
+~
+~
+-1000 0 0 human~
+70 50d50+15000 8d8+80 50 100 drain
+150 150 150 150
+standing male none
+0 0 huge
+ACT NPC
+ACT WANDER
+ACT NOPURGE
+OFF AREA_ATTACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF PROTECTION
+AFF PASS_DOOR
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM NEGATIVE
+IMM DISEASE
+RES WEAPON
+RES HOLY
+VUL LIGHTNING
+CLASS warrior none none 
+#2
+avatar light pillar~
+the Avatar of Light~
+A crackling pillar of niveous light fills the area with a radiant glow.
+~
+~
+1000 0 0 human~
+70 35d8+17617 8d8+80 50 100 divine
+0 0 0 0
+standing male none
+0 0 huge
+ACT NPC
+ACT WANDER
+ACT INTELLIGENT
+OFF AREA_ATTACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF DETECT_CAMO
+AFF PASS_DOOR
+AFF HASTE
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM LIGHTNING
+IMM POISON
+IMM HOLY
+IMM DISEASE
+RES NEGATIVE
+#60
+drow vehdrel~
+Vehdrel~
+A powerful drow stands here, glaring at you.
+~
+~
+-1000 25972 0 drow~
+55 27d8+5268 10d18+15 0 100 slash
+220 220 220 220
+standing male none
+0 0 medium
+ACT NPC
+AFF HASTE
+AFF REGENERATION
+IMM SLEEP
+RES MAGIC
+RES WEAPON
+#80
+academy pet~
+dummy mob~
+None
+~
+~
+0 0 0 avian~
+20 10d10+30 5d5+3 0 100 claw
+2 2 2 2
+standing male none
+0 0 small
+ACT NPC
+ACT PET
+ACT UPDATE_ALWAYS
+OFF TAIL
+OFF NO_TRACK
+AFF CHARM
+IMM SUMMON
+#0
+
+
+
+#OBJS
+#1
+coin silver gcash~
+a silver coin~
+One miserable silver coin.~
+money
+silver~
+1 0 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#2
+coin gold gcash~
+a gold coin~
+One valuable gold coin.~
+money
+gold~
+0 1 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3
+coins gold gcash~
+%d gold coins~
+A pile of gold coins.~
+money
+gold~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#4
+coins silver gcash~
+%d silver coins~
+A pile of silver coins.~
+money
+silver~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#5
+coins silver gold gcash~
+%d silver coins and %d gold coins~
+A pile of coins.~
+money
+gold~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#10
+corpse~
+the corpse of %s~
+The corpse of %s is lying here.~
+npc_corpse
+meat~
+0 0 0 1 0
+0 100 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#11
+corpse pccorpse~
+the corpse of %s~
+The corpse of %s is lying here.~
+pc_corpse
+meat~
+0 0 0 1 0
+0 100 0 P
+WEAR TAKE
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#12
+head~
+the head of %s~
+The severed head of %s is lying here.~
+trash
+meat~
+0 0 0 0 0
+0 5 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13
+heart~
+the heart of %s~
+The bloodied, torn-out heart of %s is lying here.~
+food
+meat~
+16 16 0 0 0
+0 2 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#14
+arm~
+the arm of %s~
+The disembodied arm of %s is lying here.~
+food
+meat~
+20 20 0 0 0
+0 5 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#15
+leg~
+the leg of %s~
+The chopped-off leg of %s is lying here.~
+food
+meat~
+20 20 0 0 0
+0 5 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#16
+guts entrails intestines~
+the guts of %s~
+A steaming pile of %s's intestines are lying here.~
+food
+meat~
+5 5 0 1 0
+0 2 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#17
+brains brain~
+the brains of %s~
+The splattered brains of %s are lying here.~
+food
+meat~
+10 10 0 0 0
+0 2 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#20
+mushroom~
+a Magic Mushroom~
+A delicious magic mushroom is here.~
+food
+food~
+8 8 0 0 0
+0 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#21
+ball light~
+a bright ball of light~
+A bright ball of light shimmers in the air.~
+light
+energy~
+0 0 -1 0 0
+0 0 0 P
+WEAR TAKE
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#22
+spring~
+a magical spring~
+A magical spring flows from the ground here.~
+fountain
+water~
+100000 100000 'water' 0 0
+0 0 0 P
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#23
+disc disk floating black~
+a floating disc~
+A floating black disc hangs in the air.~
+container
+energy~
+0 E 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR FLOAT
+ITEM MAGIC
+ITEM NOREMOVE
+ITEM ROTDEATH
+LIMIT 0
+TIMER 0
+
+#25
+gate portal~
+a shimmering gate~
+A shimmering black gate rises from the ground, leading to parts unknown.~
+portal
+shadow~
+0 0 0 0 0
+0 0 0 P
+ITEM MAGIC
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#26
+guillotine sharp~
+a massive guillotine~
+A razor-sharp guillotine is here, stained with the blood of unfortunate souls.~
+trash
+steel~
+0 0 0 0 0
+60 0 0 P
+LIMIT 0
+VERB kneel
+TIMER 0
+NOTES Use to slay cheaters... "force <cheater> kneel guillotine."  DON'T do
+this wantonly, or you get a beating.  Read HELP RULES and HELP PUNISHMENT
+to be sure you know what you're doing.~
+
+#27
+potato hot~
+the hot potato~
+A bright, yellow potato is here, it looks HOT!~
+trash
+trash~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM FIXED
+LIMIT 0
+TIMER 0
+
+#28
+coconut~
+a coconut~
+A coconut split into half is here dangling on a string.~
+trash
+trash~
+0 0 0 0 0
+6 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#29
+pack explosives bag~
+a small bag of explosives~
+A small bag of explosives lie here.~
+armor
+~
+15 15 15 15 0
+0 0 0 P
+WEAR TAKE
+WEAR STRAPPED
+ITEM HUM
+ITEM NOREMOVE
+APPLY DAMROLL 10
+APPLY DEX -5
+LIMIT 0
+TIMER 0
+
+#30
+vest resistant magic~
+magic resistant vest~
+A magic-resistant vest lies here.~
+armor
+~
+50 50 50 50 0
+5 0 0 P
+WEAR TAKE
+WEAR STRAPPED
+ITEM HUM
+ITEM NOREMOVE
+APPLY NONE 0
+APPLY SAVES -35
+LIMIT 0
+TIMER 0
+
+#31
+vacuum infinite space~
+a vacuum of infinite space~
+A vacuum sits here.~
+container
+energy~
+10000 A 0 100000 0
+60 0 0 P
+WEAR TAKE
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM NODISARM
+LIMIT -1
+TIMER 0
+
+#40
+cosmetic template~
+dummy cosmetic object~
+You see nothing special about it.~
+armor
+none~
+0 0 0 0 0
+52 0 0 P
+WEAR TAKE
+WEAR COSMETIC
+LIMIT 0
+TIMER 0
+
+#47
+tattoo searing blade~
+a searing blade~
+Intense with vivid flames, the searing blade of Rygath is branded on this flesh.~
+armor
+flesh~
+10 10 10 10 0
+51 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOUNCURSE
+APPLY STR 2
+APPLY CON 1
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#48
+open hand tattoo~
+an open hand~
+The small mark of a open hand is tattooed upon your wrist.~
+armor
+flesh~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOREMOVE
+ITEM BURNPROOF
+ITEM NOUNCURSE
+ITEM BRAND
+APPLY HP 10
+APPLY MANA 25
+LIMIT 0
+TIMER 0
+
+#49
+tattoo crimson jackass~
+tattoo of the crimson jackass~
+You are looking at the tattoo of nobody.~
+armor
+flesh~
+-50 -50 -50 -50 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY MANA -500
+APPLY HP -500
+APPLY HITROLL -50
+APPLY DAMROLL -50
+LIMIT 0
+TIMER 0
+
+#50
+tattoo adamantite hammer~
+tattoo of an adamantite hammer crushing a skull~
+You are looking at the tattoo of Dioxide.~
+armor
+flesh~
+20 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY SBREATH -10
+APPLY MANA 65
+APPLY HP 65
+APPLY HITROLL 7
+APPLY DAMROLL 7
+LIMIT 0
+TIMER 0
+
+#52
+tattoo bloodstone spider~
+tattoo of the bloodstone spider~
+You are looking at the tattoo of Xanthrailles.~
+armor
+flesh~
+20 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY SBREATH -20
+APPLY MANA 50
+APPLY HP 50
+APPLY HITROLL 1
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#53
+tattoo dragon flame~
+tattoo of the Dragon's flame~
+You are looking at the tattoo of Seracuz.~
+armor
+flesh~
+10 10 10 30 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+APPLY SBREATH -25
+APPLY SPETRI -25
+APPLY MANA 75
+APPLY HITROLL 4
+APPLY DAMROLL 4
+LIMIT 0
+TIMER 0
+
+#54
+tattoo valor pure valiant knight golden dev~
+tattoo of the valiant knight~
+A gallant knight stands tall, challenging all comers.~
+armor
+flesh~
+2 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+APPLY SBREATH -10
+APPLY HP 150
+APPLY DAMROLL 8
+LIMIT 0
+TIMER 0
+
+#56
+tattoo unholy sceptre daedelex~
+tattoo of the unholy sceptre~
+You are looking at the tattoo of Daedelex.~
+armor
+flesh~
+7 10 13 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY MANA 50
+APPLY HP 50
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#57
+tattoo damned blunt~
+tattoo of the damned blunt~
+You are looking at the tattoo of Detlef.~
+armor
+flesh~
+15 15 15 15 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY DAMROLL 5
+APPLY HITROLL 5
+LIMIT 0
+TIMER 0
+
+#58
+tattoo hand vengeance~
+tattoo of the Hand of Vengeance~
+You are looking at the tattoo of Iomahk.~
+armor
+flesh~
+20 20 20 20 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY SBREATH -10
+APPLY MANA 30
+APPLY HP 30
+APPLY HITROLL 15
+APPLY DAMROLL 15
+LIMIT 0
+TIMER 0
+
+#59
+tattoo gimp~
+tattoo of the gimpy ass~
+You are looking at the tattoo of Lestregus.~
+armor
+flesh~
+5 5 5 5 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM HUM
+ITEM NODROP
+APPLY SBREATH -10
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 0
+TIMER 0
+
+#60
+tattoo crimson caduceus~
+tattoo of a crimson caduceus~
+What the flaming hell is this thing~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM MAGIC
+APPLY SAVES -20
+LIMIT 0
+TIMER 0
+
+#61
+platinum pickaxe tattoo~
+mark of the platinum pickaxe~
+You are looking at the tattoo of Morglum.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM MAGIC
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY HP 50
+LIMIT 0
+TIMER 0
+
+#62
+impaled drow tattoo~
+tattoo of an impaled drow~
+You are looking at the tattoo of Gabe.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM MAGIC
+APPLY SBREATH -5
+APPLY HP 20
+LIMIT 0
+TIMER 0
+
+#63
+tattoo ginzu knife~
+a tattoo of a large ginzu knife~
+You are looking at the tattoo of Lichen.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+APPLY DAMROLL 15
+APPLY HITROLL 15
+LIMIT 0
+TIMER 0
+
+#64
+tattoo large boot~
+a tattoo of a large leather boot~
+You are looking at the tattoo of Deomanix.~
+armor
+flesh~
+10 10 10 10 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+APPLY HP 50
+APPLY DAMROLL 7
+APPLY HITROLL 7
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#65
+whip iron-tipped barbed~
+an iron-tipped barbed whip~
+A dangerous looking barbed whip, covered in what seems like old bloodstains.~
+weapon
+iron~
+whip 6 6 acbite H
+52 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NODROP
+ITEM FIXED
+ITEM NOUNCURSE
+APPLY HITROLL 4
+APPLY DAMROLL 4
+LIMIT 0
+
+#68
+essence darkness corruptor j'dizel jdizel~
+J'dizel, the Corruptor of Souls~
+This weapon is very l33t.  Very, very l33t.~
+weapon
+nothingness~
+weapon 8 8 infinite 0
+52 0 1000000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY MANA -50
+APPLY HP -50
+APPLY HITROLL 10
+APPLY DAMROLL 10
+LIMIT 0
+TIMER 0
+FLAG RES HOLY
+FLAG AFF 'protection' protection NOSHOW
+
+#69
+essence light purifier iliath~
+Iliath, the Purifier of Souls~
+This weapon is very l33t.  Very, very l33t.~
+weapon
+energy~
+weapon 2 1 wrath 0
+52 0 1000000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM NOUNCURSE
+APPLY MANA 50
+APPLY HP 50
+APPLY SVSPELL -20
+APPLY HITROLL 10
+APPLY DAMROLL -10
+LIMIT 0
+TIMER 0
+FLAG RES NEGATIVE
+FLAG AFF 'protection' protection NOSHOW
+FLAG AFF 'detect evil' detect_evil NOSHOW
+
+#70
+wifebeater~
+a beer-stained wifebeater t-shirt~
+Yee haw!~
+armor
+cloth~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR BODY
+WEAR COSMETIC
+ITEM UNDER_CLOTHES
+LIMIT 0
+NAMEOFLOC on man-boobs~
+
+#75
+meat chunks corpse~
+a sliced hunk of raw meat~
+Some sliced chunks of the corpse of some poor creature are here.~
+food
+meat~
+5 5 0 0 0
+1 3 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#76
+embers glowing campfire fire~
+a roaring campfire~
+Embers swirl into the air over a roaring campfire.~
+campfire
+wood~
+0 0 0 0 0
+1 50 0 P
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#1
+The Void~
+You are floating in nothing.
+~
+city
+ROOM NO_MOB
+ROOM INDOORS
+#2
+Limbo~
+You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness.
+~
+city
+ROOM NO_MOB
+ROOM INDOORS
+D UP 0 0 -1
+~
+~
+#3
+Death Row~
+Welcome to Death Row. You await judgment, and possibly punishment, by the
+Immortals. Keep quiet, and your punishment may be reduced.
+~
+inside
+ROOM NO_MOB
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 3 0 -1
+~
+~
+D EAST 3 0 -1
+~
+~
+D SOUTH 3 0 -1
+~
+~
+D WEST 3 0 -1
+~
+~
+#4
+The Zombie Pen~
+This extremely strange-looking room seems to contain dozens of zombies and
+other charmed creatures penned up like livestock. Zombies of dead dragons
+stand mindlessly next to towering fire elementals. In one corner, you see a
+couple pigs in a pen that seem rather out of place. What a horrible, horrible
+place.
+~
+city
+ROOM NO_MOB
+ROOM INDOORS
+#5
+The Ward Room~
+Screw around here and die.~
+city
+ROOM NO_MOB
+ROOM INDOORS
+ROOM PRIVATE
+ROOM NORECALL
+ROOM IMP_ONLY
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+#6
+Description Room~
+If you find yourself in this room it means the immortals have decided you
+have played long enough with out writing a description for your character.  
+~
+unused
+ROOM NO_MOB
+ROOM INDOORS
+ROOM SAFE
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_GATE
+ROOM NO_MAGIC
+ROOM NO_COMMUNE
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 1 TO 2 GLIMIT 1 LLIMIT 1
+EQUIP 68 WIELD
+MOB 2 TO 2 GLIMIT 1 LLIMIT 1
+EQUIP 69 WIELD
+OBJECT 26 TO 3
+S
+
+#IMPROGS
+I 26 verb_prog verb_prog_kneel_guillotine
+I 29 death_prog death_prog_explosives
+I 29 entry_prog entry_prog_explosives
+I 29 invoke_prog invoke_prog_explosives
+I 49 invoke_prog invoke_prog_tattoo_jackass
+I 50 invoke_prog invoke_prog_tattoo_dioxide
+I 61 invoke_prog invoke_prog_tattoo_morglum
+I 68 fight_prog fight_prog_essence_darkness
+I 68 hit_prog hit_prog_essence_darkness
+I 69 hit_prog hit_prog_essence_light
+END
+#SPECS
+I 65 ispec_qwhip
+M 80 mspec_academy_pet
+END
+#$

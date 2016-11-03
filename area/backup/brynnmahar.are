@@ -1,0 +1,3092 @@
+#AREA
+brynnmahar.are~
+Brynn Mahar~
+Amadioru~
+30 51
+28500 28799
+unopened
+temperate
+0
+1
+Amadioru~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#28672
+A noble's room~
+You are standing in a very nice room. It is not very large, but is clean
+and has all necessary accommodations. There is a large bed against the wall
+and a set of oak furnature is placed neatly throughout the room. This is
+where
+the nobles from visiting lands make thier stay.
+~
+inside
+D SOUTH 28671 AB 0
+door s~
+~
+#28673
+A noble's room~
+You are standing in a very nice room. It is not very large, but is clean
+and has all necessary accommodations. There is a large bed against the wall
+and a set of oak furnature is placed neatly throughout the room. This is
+where
+the nobles from visiting lands make thier stay.
+~
+inside
+D NORTH 28671 AB 0
+door n~
+~
+#28674
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28675 0 0
+~
+~
+D WEST 28671 0 0
+~
+~
+#28675
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. There is a large hall to the north.
+~
+inside
+D NORTH 28676 0 0
+~
+~
+D EAST 28680 0 0
+~
+~
+D WEST 28674 0 0
+~
+~
+#28676
+The Great Hall of Brynn Mahar~
+You are standing in hall of astounding size. It has a high cieling with
+wooden
+supports, and there are windows on the east and west sides that look into
+the
+courtyard's. Long tables line the room where the people sit to partake in
+the
+feasting, and the the Emperor's throne is seated near the north end.
+~
+inside
+D NORTH 28677 0 0
+~
+~
+D EAST 28679 0 0
+~
+~
+D SOUTH 28675 0 0
+~
+~
+#28677
+The Great Hall of Brynn Mahar~
+You are standing in hall of astounding size. It has a high cieling with
+wooden
+supports, and there are windows on the east and west sides that look into
+the
+courtyard's. Long tables line the room where the people sit to partake in
+the
+feasting, and the the Emperor's throne is seated near the north end.
+~
+inside
+D EAST 28678 0 0
+~
+~
+D SOUTH 28676 0 0
+~
+~
+#28678
+The Great Hall of Brynn Mahar~
+You are standing in hall of astounding size. It has a high cieling with
+wooden
+supports, and there are windows on the east and west sides that look into
+the
+courtyard's. Long tables line the room where the people sit to partake in
+the
+feasting, and the the Emperor's throne is seated near the north end.
+~
+inside
+D SOUTH 28679 0 0
+~
+~
+D WEST 28677 0 0
+~
+~
+#28679
+The Great Hall of Brynn Mahar~
+You are standing in hall of astounding size. It has a high cieling with
+wooden
+supports, and there are windows on the east and west sides that look into
+the
+courtyard's. Long tables line the room where the people sit to partake in
+the
+feasting, and the the Emperor's throne is seated near the north end.
+~
+inside
+D NORTH 28678 0 0
+~
+~
+D WEST 28676 0 0
+~
+~
+#28680
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28681 0 0
+~
+~
+D WEST 28675 0 0
+~
+~
+#28681
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28682 0 0
+~
+~
+D WEST 28680 0 0
+~
+~
+#28682
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28683 0 0
+~
+~
+D WEST 28681 0 0
+~
+~
+#28683
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28684 0 0
+~
+~
+D WEST 28682 0 0
+~
+~
+#28684
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28685 0 0
+~
+~
+D WEST 28683 0 0
+~
+~
+#28685
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. To the north is the Viceroy's room. To the south
+are the Royal Guard's barracks.
+~
+inside
+D NORTH 28686 AB 0
+door n~
+~
+D EAST 28692 0 0
+~
+~
+D SOUTH 28687 AB 0
+door s~
+~
+D WEST 28684 0 0
+~
+~
+#28686
+The Viceroy's room~
+You are standing in a very neat and well kept office. There is a
+bookshelf at the back wall. A desk in the middle of the room. There are
+large maps of the kingdom pasted to the walls with different sectors marked
+off. There are also several suits of armor against the west wall.
+~
+inside
+D SOUTH 28685 AB 0
+door s~
+~
+#28687
+The Barracks~
+This is where the Royal guard's sleep. The room smells of body oder, and
+of armor. The room is filled with bunk beds. There are chests neatly at the
+foot of each bed, where the guards keep thier personal belongings.
+~
+inside
+D NORTH 28685 AB 0
+door n~
+~
+D SOUTH 28688 0 0
+~
+~
+#28688
+The Barracks~
+This is where the Royal guard's sleep. The room smells of body oder, and
+of armor. The room is filled with bunk beds. There are chests neatly at the
+foot of each bed, where the guards keep thier personal belongings.
+~
+inside
+D NORTH 28687 0 0
+~
+~
+D SOUTH 28689 0 0
+~
+~
+#28689
+The Barracks~
+This is where the Royal guard's sleep. The room smells of body oder, and
+of armor. The room is filled with bunk beds. There are chests neatly at the
+foot of each bed, where the guards keep thier personal belongings.
+~
+inside
+D NORTH 28688 0 0
+~
+~
+D SOUTH 28690 0 0
+~
+~
+#28690
+The Barracks~
+This is where the Royal guard's sleep. The room smells of body oder, and
+of armor. The room is filled with bunk beds. There are chests neatly at the
+foot of each bed, where the guards keep thier personal belongings. There is
+a bookcase against the south wall here, with scrap marks near it.
+~
+inside
+D NORTH 28689 0 0
+~
+~
+D SOUTH 28691 ABI 0
+bookcase s~
+~
+#28691
+The secret room~
+You have come upon a small room with rounded gambling tables. Even the
+royal guards need to have thier fun. The walls are covered in paintings
+of naked women dancing about. Also the back corner is occupied by several
+kegs of the kingdom's finest ale.
+~
+inside
+D NORTH 28690 ABI 0
+bookcase n~
+~
+#28692
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28693 0 0
+~
+~
+D WEST 28685 0 0
+~
+~
+#28693
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28694 0 0
+~
+~
+D WEST 28692 0 0
+~
+~
+#28694
+End of The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. To the north is a steel door that has several
+jewels
+inlaid on it.
+~
+inside
+D NORTH 28695 AB 0
+steel inlaid door n~
+~
+D WEST 28693 0 0
+~
+~
+#28695
+A narrow hallway~
+You have entered a hallway lined with stain-glass windows. Along both sides
+of
+the wall the windows allow a miriad of colors to splash across the floor
+creating
+a beautiful sight. There are pastel curtains hanging down from the cieling
+that
+you must walk through to reach the end of the hall.
+~
+inside
+D NORTH 28696 0 0
+~
+~
+D SOUTH 28694 AB 0
+door s~
+~
+#28696
+A narrow hallway~
+You have entered a hallway lined with stain-glass windows. Along both sides
+of
+the wall the windows allow a miriad of colors to splash across the floor
+creating
+a beautiful sight. There are pastel curtains hanging down from the cieling
+that
+you must walk through to reach the end of the hall.
+~
+inside
+D NORTH 28697 0 0
+~
+~
+D SOUTH 28695 0 0
+~
+~
+#28697
+A narrow hallway~
+You have entered a hallway lined with stain-glass windows. Along both sides
+of
+the wall the windows allow a miriad of colors to splash across the floor
+creating
+a beautiful sight. There are pastel curtains hanging down from the cieling
+that
+you must walk through to reach the end of the hall.
+~
+inside
+D NORTH 28698 0 0
+~
+~
+D SOUTH 28696 0 0
+~
+~
+#28698
+Bottom of the staircase~
+You are standing at the end of the narrow hallway. A spiral staircase
+stands in front of you, that lead up into the eastern-most spire. The scent
+of
+perfume seems overbearing at this point.
+~
+inside
+D SOUTH 28697 0 0
+~
+~
+D UP 28702 0 0
+~
+~
+#28700
+The Empress's chamber~
+The room itself extremely feminine, pink is the dominant color in this
+chamber. There is a large bed with pillows stacked upon it, and also a
+large dresser with a mirror lined with precious gems. There is almost an
+inumberable amount of perfumes and other feminine things stacked upon the
+dresser. There is a large window open on the western wall and the drapes
+around
+it drift in the fresh breeze.
+~
+inside
+D EAST 28702 AB 0
+door e~
+~
+#28701
+Before a mighty Kingdom~
+You are standing before the massive outer wall of Brynn Mahar.
+There is a gigantic stone wall in front of you. You can see the
+grey stone of the castle rising above the walls before you.
+>From the three spires the symbol of Brynn Mahar sways in the breeze.
+Directly to the north lies a drawbridge leading to the castle gates.
+You can head down a well groomed path to the south.
+~
+road
+D NORTH 28500 0 0
+~
+A large drawbridge crosses the moat ahead.
+~
+D SOUTH 28703 0 0
+~
+A well groomed path stretches down this way.
+~
+#28702
+Door before the Empress's room~
+You are standing at the top of the staircase. To the west is
+a beautiful wooden door with the emblem of Brynn Mahar carefully carved
+into it. You can head back down the stairs to the hallway below.
+~
+inside
+D WEST 28700 AB 0
+door w~
+~
+D DOWN 28698 0 0
+~
+~
+#28703
+A well groomed path before a mighty kingdom~
+You are standing upon a cobblestone path leading to the Kingdom of Brynn
+Mahar.  On either side of the path tall trees rise up and form a canopy
+above you.  The songs of various bird envelop you in a perfect harmony. 
+Shafts of light make thier way through the shivering leaves overhead and
+collide into the ground below.  Further down the path two the north you can
+the great spires of Brynn Mahar piercing the sky.  
+~
+road
+D NORTH 28701 0 0
+~
+The castle of Brynn Mahar rises up ahead.
+~
+D SOUTH 0 0 0
+~
+~
+#28500
+Across the drawbridge~
+You are upon a strong wooden bridge. Below you is a swampy moat
+covered in a layer of green algae. Green vines creep along the
+stone edges of the moat walls. To the north lies the iron
+gates to the mighty city of Brynn Mahar. You can head back to
+path to the south.
+~
+road
+D NORTH 28501 0 0
+~
+You can see the gates of the Kingdom up ahead.
+~
+D SOUTH 28701 0 0
+~
+A well groomed path stretches off in this direction.
+~
+#28501
+Before the gates of the Kingdom~
+You are standing before the great iron gates of Brynn Mahar. Walls of grey
+stone tower on either side of the gate. There are several lookout towers
+spaced evenly along the top of the wall. Two guards stand posted here at
+all times. Through the iron gates the city streets can be seen. The
+drawbridge is off to the south.
+~
+road
+D NORTH 28502 AB 0
+gate iron gates~
+The large iron gates of the castle.
+~
+D SOUTH 0 0 0
+~
+You see the drawbridge back to the south.
+~
+#28502
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods.
+~
+city
+D NORTH 28503 0 0
+~
+The Market Square opens up in this direction
+~
+D SOUTH 28501 AB 0
+gate iron gates~
+The large iron gates of the castle.
+~
+#28503
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the north you can see the Market Square.
+~
+city
+D NORTH 28504 0 0
+~
+The Market Square opens up in this direction.
+~
+D SOUTH 28502 0 0
+~
+~
+#28504
+The Market Square~
+You are standing in the midst of the market square. There are people
+scurrying all about with different goods in thier hands. Carts line the
+edges of the square filled with food and different things. The vendors
+scream thier various sales pitches insessantly. The city streets lead
+off in all directions. Far off to the north lies the castle.
+~
+city
+D NORTH 28525 0 0
+~
+~
+D EAST 28518 0 0
+~
+~
+D SOUTH 28503 0 0
+~
+~
+D WEST 28505 0 0
+~
+~
+#28505
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods.  To the south you can see the guards headquarters,
+and to the north lies the magistrates home. To the east you can see the
+Market Square.
+~
+city
+D NORTH 28508 AB 0
+door n~
+You see the large home of the Magistrate
+~
+D EAST 28504 0 0
+~
+~
+D SOUTH 28506 AB 0
+wooden door s~
+You see the city guards headquarters
+~
+D WEST 28511 0 0
+~
+~
+#28506
+The guards headquarters~
+This is a sort of barracks where the guards take there breaks. A large
+wooden table is in the center of the room where the guards eat there meals.
+Against the back wall there are piles of weapons and armor that the guards
+have taken off while they eat and relax. To the south there is a wooden
+door.
+~
+inside
+D NORTH 28505 AB 0
+wooden door n~
+~
+D SOUTH 28507 AB 0
+wooden door s~
+~
+#28507
+The Captain's room~
+You are standing in a dank room with scatered papers lying here and
+there. The wall is pasted with wanted posters for the outlaws of the land.
+There is a old wooden desk near the back of the room, where the captain
+spends the majority of his day. There is also a large sword and shield
+hanging above the doorway.
+~
+inside
+D NORTH 28506 AB 0
+wooden door n~
+~
+#28508
+The Magistrate's abode~
+This building is quite lavish compared to the rest of the buildings on
+The city street. The floor is covered in fine rugs and there is nice
+furnature placed neatly throughout the room. There is a small staircase near
+the back of the room, and a small door at the west wall.
+~
+inside
+D SOUTH 28505 AB 0
+door s~
+~
+D WEST 28509 AB 0
+door w~
+~
+D UP 28510 0 0
+~
+~
+#28509
+The maids quarters~
+This is quite a desolate room. There is merely a cot in the corner and a
+small dresser against the wall.
+~
+inside
+D EAST 28508 AB 0
+door small e~
+~
+#28510
+The Magistrates bedroom~
+This is another beautiful room furnished from floor to cieling. A large bed
+is in the middle of the room, covered with pillows and red velvet blankets.
+There is a chair and desk on the south side of the room covered in legal
+pieces of paper.
+~
+inside
+D DOWN 28508 0 0
+~
+~
+#28511
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the east you can see the Market Square.
+~
+city
+D EAST 28505 0 0
+~
+~
+D WEST 28512 0 0
+~
+~
+#28512
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the north and south are houses. To the east
+you can see the Market Square.
+~
+city
+D NORTH 28514 0 0
+~
+~
+D EAST 28511 0 0
+~
+~
+D SOUTH 28513 0 0
+~
+~
+D WEST 28515 0 0
+~
+~
+#28513
+A small home~
+This is quite a humble dwelling place. Most likely whomever lives here has
+come with hopes of becomming a merchant, as this kingdown is known so well
+for its ammount of merchants. The room is quit dimly lit, with a single
+candle as the only light source.
+~
+inside
+D NORTH 28512 0 0
+~
+~
+#28514
+A small home~
+This is quite a humble dwelling place. Most likely whomever lives here has
+come with hopes of becomming a merchant, as this kingdown is known so well
+for its ammount of merchants. The room is quit dimly lit, with a single
+candle as the only light source.
+~
+inside
+D SOUTH 28512 0 0
+~
+~
+#28515
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the north you hear the sounds of music and
+laughter. There is a wooden sign hanging from the wall of the building.
+~
+city
+D NORTH 28516 0 0
+~
+~
+D EAST 28512 0 0
+~
+~
+D WEST 28517 0 0
+~
+~
+E sign wooden~
+This sign says "Iron Fist Tavern"
+~
+#28516
+Iron Fist tavern~
+A cloud of smoke seems to inhabit this merry place. Tables are scattered
+around and people are laughing and drinking together. This room has quite
+a high ceiling, and the woodwork is very beautiful. A few fellows are
+dancing in the corner as a few string player start up a lively tune.
+There is also a burly man behind the bar wiping it down.
+~
+inside
+D SOUTH 28515 0 0
+~
+~
+#28517
+End of the road~
+You have reached the end of this street. The massive walls of the Kingdom
+stand before you. This looks like the type of place where vandals hang
+out. The wall creates a large shadow and makes it difficult to see anything.
+~
+city
+ROOM DARK
+D EAST 28515 0 0
+~
+~
+#28518
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. North of here lies the butcher, and to the south is
+an apocathary. To the west you can see the Market Square.
+~
+city
+D NORTH 28519 0 0
+~
+~
+D EAST 28521 0 0
+~
+~
+D SOUTH 28520 0 0
+~
+~
+D WEST 28504 0 0
+~
+~
+#28519
+The Butcher~
+The stench in this room is quite pungent. Ribcages and other body parts
+line the walls hung on iron hooks. Old blood is crusted in lines down the
+wall, and several bloody butcher knifes hang from the ceiling.
+~
+inside
+D SOUTH 28518 0 0
+~
+~
+#28520
+The Apothecary~
+This room is a little bit misty. The walls are lined with shelves, that
+hold potions and vials of a all different colors, shapes, and sizes. The
+entire
+room seems to vibrate with energy.
+~
+inside
+D NORTH 28518 0 0
+~
+~
+#28521
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the west you can see the Market Square.
+~
+city
+D EAST 28522 0 0
+~
+~
+D WEST 28518 0 0
+~
+~
+#28522
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. North of here is the cobbler. To the west you can
+see the Market Square.
+~
+city
+D NORTH 28523 0 0
+~
+~
+D EAST 28524 0 0
+~
+~
+D WEST 28521 0 0
+~
+~
+#28523
+The Cobbler~
+This is a very simple building. There is a wooden counter across the
+front of the room where you came in. On the other side there is a man
+working at his bench. On the back wall there is a shelf with several
+shoes on it.
+~
+inside
+D SOUTH 28522 0 0
+~
+~
+#28524
+End of the road~
+You have reached the end of this street. The massive walls of the Kingdom
+stand before you. The city wall casts a large shadow across the area making
+it very difficult to see anything.
+~
+city
+ROOM DARK
+D WEST 28522 0 0
+~
+~
+#28525
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the south you can see the Market Square.
+~
+city
+D NORTH 28526 0 0
+~
+~
+D SOUTH 28504 0 0
+~
+~
+#28526
+The city streets~
+You are standing on a cobblestone road that travels througout the city
+streets of Brynn Mahar. Large brass stands rise several feet off the
+the ground and hold burning incense to cover up the smells of the city.
+Many of the townspeople walk past occupied with thier daily chores.
+Woman are often walking up and down the streets selling thier
+agriculteral goods. To the south you can see the Market Square.
+~
+city
+D NORTH 28527 0 0
+~
+~
+D SOUTH 28525 0 0
+~
+~
+#28527
+The common square~
+This square is not like the busy Market Square, it is quite
+peaceful. There are benches here and there, and a giant fountain in the
+middle.
+To the east and west lies Merchants row. South of here the Market Square can
+been seen. To the North lies the road to the castle.
+~
+city
+D NORTH 28553 0 0
+~
+~
+D EAST 28541 0 0
+~
+~
+D SOUTH 28526 0 0
+~
+~
+D WEST 28528 0 0
+~
+~
+#28528
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes.
+~
+city
+D NORTH 28529 0 0
+~
+~
+D EAST 28527 0 0
+~
+~
+D SOUTH 28530 0 0
+~
+~
+D WEST 28531 0 0
+~
+~
+#28529
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D SOUTH 28528 0 0
+~
+~
+#28530
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D NORTH 28528 0 0
+~
+~
+#28531
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes.
+~
+city
+D EAST 28528 0 0
+~
+~
+D WEST 28532 0 0
+~
+~
+#28532
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes. To the north and south are merchant's homes.
+~
+city
+D NORTH 28534 0 0
+~
+~
+D EAST 28531 0 0
+~
+~
+D SOUTH 28533 0 0
+~
+~
+D WEST 28535 0 0
+~
+~
+#28533
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D NORTH 28532 0 0
+~
+~
+#28534
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D SOUTH 28532 0 0
+~
+~
+#28535
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes.
+~
+city
+D EAST 28532 0 0
+~
+~
+D WEST 28536 0 0
+~
+~
+#28536
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes. To the north and south are merchant's homes.
+~
+city
+D NORTH 28538 0 0
+~
+~
+D EAST 28535 0 0
+~
+~
+D SOUTH 28537 0 0
+~
+~
+D WEST 28539 0 0
+~
+~
+#28537
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D NORTH 28536 0 0
+~
+~
+#28538
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D SOUTH 28536 0 0
+~
+~
+#28539
+End of the road~
+You have reached the end of this street. The city wall casts a
+large shadow across the area and makes it very difficult to see anything.
+~
+city
+D NORTH 28540 ABI 0
+wall hidden n~
+~
+D EAST 28536 0 0
+~
+~
+E n wall hidden entrance~
+You can see the slight outline of what seems to be a door.
+~
+#28540
+A hidden room~
+This very dark room, is illuminated by one candle in the center. Shadows
+dance across the wall. As you look around yourself you notice somthing
+reflecting the light near the back corner. Now and then you hear the sound
+of someone breathing.
+~
+inside
+ROOM DARK
+ROOM NOWHERE
+D SOUTH 28539 ABI 0
+wall hidden s~
+~
+#28541
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes. To the north and south are merchant's homes.
+~
+city
+D NORTH 28542 0 0
+~
+~
+D EAST 28544 0 0
+~
+~
+D SOUTH 28543 0 0
+~
+~
+D WEST 28527 0 0
+~
+~
+#28542
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D SOUTH 28541 0 0
+~
+~
+#28543
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D NORTH 28541 0 0
+~
+~
+#28544
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes.
+~
+inside
+D EAST 28545 0 0
+~
+~
+D WEST 28541 0 0
+~
+~
+#28545
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes. To the north and south are merchant's homes.
+~
+inside
+D NORTH 28546 0 0
+~
+~
+D EAST 28548 0 0
+~
+~
+D SOUTH 28547 0 0
+~
+~
+D WEST 28544 0 0
+~
+~
+#28546
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D SOUTH 28545 0 0
+~
+~
+#28547
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D NORTH 28545 0 0
+~
+~
+#28548
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes.
+~
+city
+D EAST 28549 0 0
+~
+~
+D WEST 28545 0 0
+~
+~
+#28549
+Merchant's row~
+These streets are quite a step up from the streets south of here. Every
+thing is
+perfectly clean and kept up. There are street lamps that are constantly lit
+shedding light upon the street. Larger homes line the street and are
+inhabited
+by the wealthy merchants of Brynn Mahar. To the north and south are
+merchant's
+homes. To the north and south are merchant's homes.
+~
+city
+D NORTH 28550 0 0
+~
+~
+D EAST 28552 0 0
+~
+~
+D SOUTH 28551 0 0
+~
+~
+D WEST 28548 0 0
+~
+~
+#28550
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D SOUTH 28549 0 0
+~
+~
+#28551
+A merchant's home~
+A very spacious and elegant home. The walls are covered in beautiful
+tapestrys. The room is very well furnished, and is quite neat. There are
+several lampstands that light the room, and incense burns on a table in the
+center of the room.
+~
+inside
+D NORTH 28549 0 0
+~
+~
+#28552
+End of the road~
+You have reached the end of this street. The city walls cast a large shadow
+across
+this area and makes it very difficult to see anything
+~
+city
+D WEST 28549 0 0
+~
+~
+#28553
+A road to the castle~
+This is a very well kept road. The sides of the road are lined with large
+boulders. And there have been flowers planted in front of them. The sweet
+aroma
+from the flowers has an intoxicating effect upon your senses.
+~
+city
+D NORTH 28554 0 0
+~
+~
+D SOUTH 28527 0 0
+~
+~
+#28554
+A road to the castle~
+This is a very well kept road. The sides of the road are lined with large
+boulders. And there have been flowers planted in front of them. The sweet
+aroma
+from the flowers has an intoxicating effect upon your senses.
+~
+city
+D NORTH 28555 0 0
+~
+~
+D SOUTH 28553 0 0
+~
+~
+#28555
+A road to the castle~
+This is a very well kept road. The sides of the road are lined with large
+boulders. And there have been flowers planted in front of them. The sweet
+aroma
+from the flowers has an intoxicating effect upon your senses.
+~
+city
+D NORTH 28556 0 0
+~
+~
+D SOUTH 28554 0 0
+~
+~
+#28556
+A road near the castle~
+This is a very well kept road. The sides of the road are lined with large
+boulders. And there have been flowers planted in front of them. The sweet
+aroma
+from the flowers has an intoxicating effect upon your senses. To the north
+you
+see the entrance to the castle.
+~
+city
+D NORTH 28557 0 0
+~
+~
+D SOUTH 28555 0 0
+~
+~
+#28557
+Before the castle gates~
+You are standing before the largest and most beautiful structure in the
+land; the castle of Brynn Mahar. The grey stone rises high above you, and
+it is quite a feat to look up towards the top most spires. Directly in front
+of you lies the large iron gates.
+~
+city
+D NORTH 28558 AB 0
+large iron gate gates~
+~
+D SOUTH 28556 0 0
+~
+~
+#28558
+Inside the castle gates~
+You are standing in the entrance to the castle. Behind you lies the first
+gates, and before you lies the secondary gate. To the east and west there
+are
+guard rooms.
+~
+inside
+D NORTH 28561 AB 0
+secondary gate gates n~
+~
+D EAST 28560 0 0
+~
+~
+D SOUTH 28557 AB 0
+s gate gates iron~
+~
+D WEST 28559 0 0
+~
+~
+#28559
+A guard room~
+This is a simple stone room. The guards may choose to interview people
+here before letting them into the castle. The only piece of furnature is
+a wooden chair.
+~
+inside
+D EAST 28558 0 0
+~
+~
+#28560
+A guard room~
+This is a simple stone room. The guards may choose to interview people
+here before letting them into the castle. The only piece of furnature is
+a wooden chair.
+~
+inside
+D WEST 28558 0 0
+~
+~
+#28561
+The Courtyard~
+This is a most beautiful sight. This very large courtyard contains
+beautiful trees, flowers, and a pond. There are stone benches here and
+there, with people sitting and talking. In the pond you notice
+there are many colorful fish swimming throughout it. More incense burns
+and waffs through the air. The courtyard continues in all directions.
+~
+city
+D NORTH 28568 0 0
+~
+~
+D EAST 28570 0 0
+~
+~
+D SOUTH 28558 AB 0
+gate s~
+~
+D WEST 28566 0 0
+~
+~
+#28566
+The Courtyard~
+This is a most beautiful sight. This very large courtyard contains
+beautiful trees, flowers, and a pond. There are stone benches here and
+there, with people sitting and talking. In the pond you notice
+there are many colorful fish swimming throughout it. More incense burns
+and waffs through the air. The courtyard continues in all directions.
+~
+city
+D NORTH 28567 0 0
+~
+~
+D EAST 28561 0 0
+~
+~
+D WEST 28571 0 0
+~
+~
+#28567
+The Courtyard~
+This is a most beautiful sight. This very large courtyard contains
+beautiful trees, flowers, and a pond. There are stone benches here and
+there, with people sitting and talking. In the pond you notice
+there are many colorful fish swimming throughout it. More incense burns
+and waffs through the air. The courtyard continues in all directions.
+~
+city
+D NORTH 28575 0 0
+~
+~
+D EAST 28568 0 0
+~
+~
+D SOUTH 28566 0 0
+~
+~
+D WEST 28572 0 0
+~
+~
+#28568
+The Courtyard~
+This is a most beautiful sight. This very large courtyard contains
+beautiful trees, flowers, and a pond. There are stone benches here and
+there, with people sitting and talking. In the pond you notice
+there are many colorful fish swimming throughout it. More incense burns
+and waffs through the air. The courtyard continues in all directions.
+~
+city
+D NORTH 28576 0 0
+~
+~
+D EAST 28569 0 0
+~
+~
+D SOUTH 28561 0 0
+~
+~
+D WEST 28567 0 0
+~
+~
+#28569
+The Courtyard~
+This is a most beautiful sight. This very large courtyard contains
+beautiful trees, flowers, and a pond. There are stone benches here and
+there, with people sitting and talking. In the pond you notice
+there are many colorful fish swimming throughout it. More incense burns
+and waffs through the air. The courtyard continues in all directions.
+~
+city
+D NORTH 0 0 0
+~
+~
+D EAST 28579 0 0
+~
+~
+D SOUTH 28570 0 0
+~
+~
+D WEST 28568 0 0
+~
+~
+#28570
+The Courtyard~
+This is a most beautiful sight. This very large courtyard contains
+beautiful trees, flowers, and a pond. There are stone benches here and
+there, with people sitting and talking. In the pond you notice
+there are many colorful fish swimming throughout it. More incense burns
+and waffs through the air. The courtyard continues in all directions.
+~
+city
+D NORTH 28569 0 0
+~
+~
+D EAST 28580 0 0
+~
+~
+D WEST 28561 0 0
+~
+~
+#28571
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you.
+~
+city
+D NORTH 28572 0 0
+~
+~
+D EAST 28566 0 0
+~
+~
+#28572
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you. To the
+west there is a large wooden door.
+~
+city
+D NORTH 28573 0 0
+~
+~
+D EAST 28567 0 0
+~
+~
+D SOUTH 28571 0 0
+~
+~
+D WEST 28581 AB 0
+large wooden w~
+~
+#28573
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you.
+~
+city
+D EAST 28574 0 0
+~
+~
+D SOUTH 28572 0 0
+~
+~
+#28574
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you.
+~
+city
+D EAST 28575 0 0
+~
+~
+D WEST 28573 0 0
+~
+~
+#28575
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you.
+~
+city
+D EAST 28576 0 0
+~
+~
+D SOUTH 28567 0 0
+~
+~
+D WEST 28574 0 0
+~
+~
+#28576
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you. There
+a
+iron bound door to north.
+~
+city
+D NORTH 28631 AB 0
+iron bound n~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 28569 0 0
+~
+~
+D WEST 28576 0 0
+~
+~
+E AST 28630 0 0
+~
+~
+#28579
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you. There
+are
+some double doors to the east.
+~
+city
+D NORTH 28630 0 0
+~
+~
+D EAST 28653 AB 0
+double door e~
+~
+D SOUTH 28580 0 0
+~
+~
+D WEST 28569 0 0
+~
+~
+#28580
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging down.
+You can see several wooden doors underneath the archway ahead of you.
+~
+city
+D NORTH 28579 0 0
+~
+~
+D WEST 28570 0 0
+~
+~
+#28581
+Entrance to the Regal wing~
+You are standing just inside the western wing of the castle. The hallway is
+lined with a green carpet that seems to go on forever. There are suits of
+armor lined against the walls, each embossed with the code of Brynn Mahar.
+Elegant brass torches light provide a light that seems to dance quietly.
+~
+inside
+D EAST 28572 AB 0
+wooden door e~
+~
+D WEST 28582 0 0
+~
+~
+#28582
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly. There are wooden doors to the north and south.
+~
+inside
+D NORTH 28583 AB 0
+wooden door n~
+~
+D EAST 28581 0 0
+~
+~
+D SOUTH 28584 AB 0
+wooden door s~
+~
+D WEST 28585 0 0
+~
+~
+#28583
+A guest's room~
+You are in the middle of a very plain but elegant room. There is a bed and
+a armoir. There seems to be just enough for a short stay. A door leads back
+out to the hall.
+~
+inside
+D SOUTH 28582 AB 0
+s door wooden~
+~
+#28584
+A guest's room~
+You are in the middle of a very plain but elegant room. There is a bed and
+a armoir. There seems to be just enough for a short stay. A door leads back
+out to the hall.
+~
+inside
+D NORTH 28582 AB 0
+n wooden door~
+~
+#28585
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly. The hall continues to the east and west.
+~
+inside
+D EAST 28582 0 0
+~
+~
+D WEST 28586 0 0
+~
+~
+#28586
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly. The hall continues to the east and west.
+~
+inside
+D EAST 28585 0 0
+~
+~
+D WEST 28587 0 0
+~
+~
+#28587
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly. The hall continues to the east and west. There
+is a darker hallway to the south.
+~
+inside
+D EAST 28586 0 0
+~
+~
+D SOUTH 28588 0 0
+~
+~
+D WEST 28623 0 0
+~
+~
+#28588
+A candle-lit hallway~
+This is quite an eerie hallway. It is very long, and the only thing
+illuminating the way are several candles mounted on the walls. As you walk
+down the hallyway the shadows dance here and there, making it very difficult
+to see.
+~
+inside
+D NORTH 28587 0 0
+~
+~
+D SOUTH 28589 0 0
+~
+~
+#28589
+A candle-lit hallway~
+This is quite an eerie hallway. It is very long, and the only thing
+illuminating the way are several candles mounted on the walls. As you walk
+down the hallyway the shadows dance here and there, making it very difficult
+to see.
+~
+inside
+D NORTH 28588 0 0
+~
+~
+D SOUTH 28590 0 0
+~
+~
+#28590
+A candle-lit hallway~
+This is quite an eerie hallway. It is very long, and the only thing
+illuminating the way are several candles mounted on the walls. As you walk
+down the hallyway the shadows dance here and there, making it very difficult
+to see.
+~
+inside
+D NORTH 28589 0 0
+~
+~
+D SOUTH 28591 0 0
+~
+~
+#28591
+A candle-lit hallway~
+This is quite an eerie hallway. It is very long, and the only thing
+illuminating the way are several candles mounted on the walls. As you walk
+down the hallyway the shadows dance here and there, making it very difficult
+to see.
+~
+inside
+D NORTH 28590 0 0
+~
+~
+D SOUTH 28592 0 0
+~
+~
+#28592
+A candle-lit hallway~
+This is quite an eerie hallway. It is very long, and the only thing
+illuminating the way are several candles mounted on the walls. As you walk
+down the hallyway the shadows dance here and there, making it very difficult
+to see.
+~
+inside
+D NORTH 28591 0 0
+~
+~
+D SOUTH 28593 0 0
+~
+~
+#28593
+A candle-lit hallway~
+This is quite an eerie hallway. It is very long, and the only thing
+illuminating the way are several candles mounted on the walls. As you walk
+down the hallyway the shadows dance here and there, making it very difficult
+to see. Directly to the south there is an iron bound door.
+~
+inside
+D NORTH 28592 0 0
+~
+~
+D SOUTH 28594 AB 0
+iron bound door s~
+~
+#28594
+Top of the spiral stairway~
+You are on stairs made of the same grey stone as the rest of the castle.
+Candles light the path downward. You can hear moanings of anguish and
+despair in the distance. The door back to the hallway is to the north.
+~
+inside
+ROOM DARK
+D NORTH 28593 AB 0
+iron bound door n~
+~
+D DOWN 28595 0 0
+~
+~
+#28595
+On a spiral stairway~
+You are on stairs made of the same grey stone as the rest of the castle.
+Candles light the path downward. You can hear moanings of anguish and
+despair in the distance.
+~
+inside
+ROOM DARK
+D UP 28594 0 0
+~
+~
+D DOWN 28596 0 0
+~
+~
+#28596
+On a sprial stairway~
+You are on stairs made of the same grey stone as the rest of the castle.
+Candles light the path downward. You can hear moanings of anguish and
+despair in the distance.
+~
+inside
+ROOM DARK
+D UP 28595 0 0
+~
+~
+D DOWN 28597 0 0
+~
+~
+#28597
+On a spiral stairway~
+You are on stairs made of the same grey stone as the rest of the castle.
+Candles light the path downward. You can hear moanings of anguish and
+despair in the distance.
+~
+inside
+ROOM DARK
+D UP 28596 0 0
+~
+~
+D DOWN 28598 0 0
+~
+~
+#28598
+Bottom of the sprial stairway~
+You have reached the bottom of the spiral stairway. In front of you is
+another iron bound doorway. The cries of anguish are much louder here. The
+stairway leads back up to the hall.
+~
+inside
+ROOM DARK
+D NORTH 28599 AB 0
+iron bound door n~
+~
+D UP 28597 0 0
+~
+~
+#28599
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the north.
+~
+inside
+ROOM DARK
+D NORTH 28600 0 0
+~
+~
+D SOUTH 28598 AB 0
+iron door s~
+~
+#28600
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the north. Imediatly to
+the west lies a wooden door with a piece of paper nailed to it.
+~
+inside
+ROOM DARK
+D NORTH 28602 0 0
+~
+~
+D SOUTH 28599 0 0
+~
+~
+D WEST 28601 AB 0
+wooden door w~
+~
+E paper piece~
+DO NOT DISTURB!
+~
+#28601
+The dungeon keeper's room~
+This room is covered in dirt and dust. There is only one desk in the room
+with a beat up chair behind it. There is a key hook with several keys on it
+on the wall.
+~
+inside
+D EAST 28600 AB 0
+door e~
+~
+#28602
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your
+bones.The hall through the dungeon continues to the
+north.
+~
+inside
+ROOM DARK
+D NORTH 28603 0 0
+~
+~
+D SOUTH 28600 0 0
+~
+~
+#28603
+In the dungeon~
+This is a dank pit of hell if you have ever seen one. The smell of human
+excretion permiates the air. The hall through the dungeon continues to the
+north. There are cells to the east and to the west.
+~
+inside
+ROOM DARK
+D NORTH 28606 0 0
+~
+~
+D EAST 28605 AB 0
+cell~
+~
+D SOUTH 28602 0 0
+~
+~
+D WEST 28604 AB 0
+cell~
+~
+#28604
+A cell~
+You are standing in a dark cell. A cot is the only piece of furnature in
+this room.
+~
+inside
+ROOM DARK
+D EAST 28603 AB 0
+cell~
+~
+#28605
+A cell~
+You are standing in a dark cell. A cot is the only piece of furnature in
+this room.
+~
+inside
+ROOM DARK
+D WEST 28603 AB 0
+cell~
+~
+#28606
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the north.
+~
+inside
+ROOM DARK
+D NORTH 28607 0 0
+~
+~
+D SOUTH 28603 0 0
+~
+~
+#28607
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the north. There are cells to the
+east and to the west.
+~
+inside
+ROOM DARK
+D NORTH 28610 0 0
+~
+~
+D EAST 28609 AB 0
+cell~
+~
+D SOUTH 28606 0 0
+~
+~
+D WEST 28608 AB 0
+cell~
+~
+#28608
+A cell~
+You are standing in a dark cell. A cot is the only piece of furnature in
+this room.
+~
+inside
+ROOM DARK
+D EAST 28607 AB 0
+cell~
+~
+#28609
+A cell~
+You are standing in a dark cell. A cot is the only piece of furnature in
+this room.
+~
+inside
+ROOM DARK
+D WEST 28607 AB 0
+cell~
+~
+#28610
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the north.
+~
+inside
+ROOM DARK
+D NORTH 28611 0 0
+~
+~
+D SOUTH 28607 0 0
+~
+~
+#28611
+A turn in the hallway~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the east.
+~
+inside
+ROOM DARK
+D EAST 28612 0 0
+~
+~
+D SOUTH 28610 0 0
+~
+~
+#28612
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the east. There is a strange door
+to the north, and there are marks on the floor here that look as though
+something was dragged through the room.
+~
+inside
+ROOM DARK
+D NORTH 28613 AB 0
+strange door n~
+~
+D EAST 28614 0 0
+~
+~
+D WEST 28611 0 0
+~
+~
+#28613
+A putrid room~
+You are standing before a pile of corpses. Bones are scatered around the
+room
+and large rats can be seen rummaging through the bodies.
+~
+inside
+ROOM DARK
+D SOUTH 28612 AB 0
+strange door s~
+~
+#28614
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the east. There are marks on the
+floor here that look as something was dragged through the room.
+~
+inside
+ROOM DARK
+D EAST 28615 0 0
+~
+~
+D WEST 28612 0 0
+~
+~
+#28615
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the east. There are cells to the
+north and south. There are marks on the floor here that look as something
+was dragged through the room.
+~
+inside
+ROOM DARK
+D NORTH 28616 AB 0
+cell~
+~
+D EAST 28618 0 0
+~
+~
+D SOUTH 28617 AB 0
+cell~
+~
+D WEST 28614 0 0
+~
+~
+#28616
+A cell~
+You are standing in a dark cell. A cot is the only piece of furnature in
+this room.
+~
+inside
+ROOM DARK
+D SOUTH 28615 AB 0
+cell~
+~
+#28617
+A cell~
+You are standing in a dark cell. A cot is the only piece of furnature in
+this room.
+~
+inside
+ROOM DARK
+D NORTH 28615 AB 0
+cell~
+~
+#28618
+In the dungeon~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the east. There are marks on the
+floor here that look as something was dragged through the room.
+~
+inside
+ROOM DARK
+D EAST 28619 0 0
+~
+~
+D WEST 28615 0 0
+~
+~
+#28619
+A turn in the hall~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon continues to the east. The hall turns south
+here.
+There are marks on the floor here that look as something was dragged through
+the room.
+~
+inside
+ROOM DARK
+D SOUTH 28620 0 0
+~
+~
+D WEST 28618 0 0
+~
+~
+#28620
+End of the hall~
+This is quite a dank pit, devoid of any comfort at all. The smell of human
+excretion permiates the air, and a deep chill seems to sink into your bones.
+The hall through the dungeon ends here. The marks on the floor seem to end
+here,however there seems to be something outlined in dust on the floor.
+~
+inside
+ROOM DARK
+D NORTH 28619 0 0
+~
+~
+D DOWN 28621 AB 0
+trap door d~
+~
+#28621
+Through the trap door~
+You have just crawled through a small trap door. To the north here there
+is a pitch black door. The marks on the floor seem to continue through the
+door.
+~
+inside
+ROOM DARK
+D NORTH 28622 AB 0
+black door~
+~
+D UP 28620 AB 0
+u door trap~
+~
+#28622
+A bloody room~
+You have entered a room soaked in blood. There are unidentifiable objects
+scattered about and a pile of maggots writhes on top of some piece of
+flesh in the corner. A black door to the south is the only exit.
+~
+inside
+ROOM DARK
+D SOUTH 28621 AB 0
+door s black~
+~
+#28623
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly.
+~
+inside
+ROOM NO_MOB
+D EAST 0 0 -1
+28587
+~
+~
+D WEST 0 0 -1
+28624
+~
+~
+#28624
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly.
+~
+inside
+ROOM NO_MOB
+D EAST 0 0 -1
+28623
+~
+~
+D WEST 0 0 -1
+28625
+~
+~
+#28625
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly.
+~
+inside
+D EAST 28624 0 0
+~
+~
+D WEST 28626 0 0
+~
+~
+#28626
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly. There are ornate double doors to the north.
+There is a golden plaque on the wall next to the door.
+~
+inside
+D NORTH 28627 AB 0
+ornate double door n~
+~
+D EAST 28625 0 0
+~
+~
+D WEST 28628 0 0
+~
+~
+E plaque golden~
+The War Room.
+~
+#28627
+The War Room~
+You are standing in the castle's war room. This is where the Emperor and his
+knights, contemplate thier different tactics in a war situation. There is a
+giant round table in the middle of the room, with the emblem of Brynn Mahar
+inlaid into it. There are great tapestrys hung from the walls, and a giant
+rug on the floor.
+~
+inside
+D SOUTH 28626 AB 0
+s door ornate double~
+~
+#28628
+The Regal wing~
+You are standing in an extremely long hall. The hall seems to go on
+farther than you can see. There a suits of armor lined against the walls,
+each embossed with the code of Brynn Mahar. A long green carpet stretches
+down the length of the hallway. Elegant brass torches light provide a light
+that seems to dance quietly.
+~
+inside
+D EAST 28626 0 0
+~
+~
+D WEST 28629 0 0
+~
+~
+#28629
+The bottom of a staircase~
+You are standing at the bottom of a large staircase. It is a quite plain
+stone structure, and leads upward to one of the castles spires.
+~
+inside
+D EAST 28628 0 0
+~
+~
+D UP 28654 0 0
+~
+~
+#28630
+A covered archway~
+You are standing underneath the covered archway that surrounds the
+courtyard.
+It is a high stone archway with beautiful crystal chaneliers hanging
+down.You
+can see several wooden doors underneath the archway ahead of you.
+~
+inside
+D SOUTH 28579 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+#28631
+Entrance to the Royal wing~
+You are standing in the entrance to the royal wing of the castle. Both the
+wall
+and the floor of this wing are made completely of black and white marble.
+Portraits of the emperors of Brynn Mahar line the walls, and several busts
+sit
+upon pedestals here and there. The hall stretches to the north and there is
+a
+golden rug running down as far as you can see.
+~
+inside
+D NORTH 28632 0 0
+~
+~
+D SOUTH 28576 AB 0
+door s~
+~
+#28632
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28633 0 0
+~
+~
+D SOUTH 28631 0 0
+~
+~
+#28633
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28634 0 0
+~
+~
+D SOUTH 28632 0 0
+~
+~
+#28634
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28635 0 0
+~
+~
+D SOUTH 28633 0 0
+~
+~
+#28635
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.  There is a large kitchen to the east.
+~
+inside
+D NORTH 28638 0 0
+~
+~
+D EAST 28636 0 0
+~
+~
+D SOUTH 28634 0 0
+~
+~
+#28636
+The Kitchen~
+You have just entered a very large kitchen. There are cooks and servants
+running around everywhere making sure the Emperor's food is satifactory.
+The immediate sections you are standing in the servants area where they
+prepare the food on plates. Farther back is where the cooks are working.
+~
+inside
+D EAST 28637 0 0
+~
+~
+D WEST 28635 0 0
+~
+~
+#28637
+The Kitchen~
+You are now in the midst of the great kitchen. In this section you see
+the cooks running back and forth sturring the soups, and making sure the
+meat doesnt burn.
+~
+inside
+D WEST 28636 0 0
+~
+~
+#28638
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28639 0 0
+~
+~
+D SOUTH 28635 0 0
+~
+~
+#28639
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28640 0 0
+~
+~
+D SOUTH 28638 0 0
+~
+~
+#28640
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there. There is a small hallway to the west here.
+~
+inside
+D NORTH 28645 0 0
+~
+~
+D SOUTH 28639 0 0
+~
+~
+D WEST 28641 0 0
+~
+~
+#28641
+A small hallway~
+This small hallway with three wooden doors. This entire hallway is very
+plain, besides several mirrors on the wall. The main hallway is off to the
+east.
+~
+inside
+D NORTH 28642 AB 0
+door n~
+~
+D EAST 28640 0 0
+~
+~
+D SOUTH 28644 AB 0
+door s~
+~
+D WEST 28643 AB 0
+door w~
+~
+#28642
+The Jester's room~
+This is the royal jester's quarters. Gags and things the jester uses to
+try and make the king laugh are laying all over the place. The only pieces
+of furnature in the room are a chair and a large wooden chest.
+~
+inside
+D SOUTH 28641 AB 0
+door s~
+~
+#28643
+The inner sanctum~
+As you step in this room your nose is assaulted by perfume. Pillows cover
+the floor and there is an abundance of silk drapery hanging about. Women
+lay about waiting for the Emperor to call them to his service.
+~
+inside
+D EAST 28641 AB 0
+door e~
+~
+#28644
+The Magician's quarters~
+This room is scattered with wand's of every shape and size. This is where
+the magician prepares illusions to ammuse the Emperor. There is a single
+chair
+in the middle of the room.
+~
+inside
+D NORTH 28641 AB 0
+door n~
+~
+#28645
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28646 0 0
+~
+~
+D SOUTH 28640 0 0
+~
+~
+#28646
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28647 0 0
+~
+~
+D SOUTH 28645 0 0
+~
+~
+#28647
+The Royal wing~
+This hall stretches off to the north. The cieling in this hall is
+rounded, and is covered with stensiled designs. Both the wall and the floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.
+~
+inside
+D NORTH 28648 0 0
+~
+~
+D SOUTH 28646 0 0
+~
+~
+#28648
+Before the Throne room~
+You are standing before two large golden doors. Upon the golden doors two
+large
+eagles can be seen sitting on top of a large cliff. The cieling in this hall
+is rounded, and is covered with stensiled designs. Both the wall and the
+floor
+of this wing are made completely of black and white marble. Portraits of the
+emperors of Brynn Mahar line the walls, and several busts sit upon pedestals
+here and there.  Beyond these doors is the Emperors throne and his personal
+chambers.
+~
+inside
+D NORTH 28649 AB 0
+large golden door n~
+~
+D SOUTH 28647 0 0
+~
+~
+#28649
+The Throne room~
+You are standing in a spectacular room. The whole room is guilded with gold
+and
+different scenes have been carved into the walls. There are large windows on
+either
+side of the room that look out into the emperor's private courtyard.
+Directly to the
+north lies the Emperors throne, which is formed by two lions for the arm
+rests, and
+a large eagle with wings outstretched for the back. It is inlaid with gems
+of
+every kind imaginable, and has a soft red cushion. Behind the throne there
+is a well guarded door.
+~
+inside
+D NORTH 28650 AB 0
+door n~
+~
+D SOUTH 28648 AB 0
+s door golden~
+~
+#28650
+Bottom of the staircase~
+You are standing at the bottom of the northern spire's staircase. Rugs hang
+from
+the stone walls up the stairs and golden torches burn constantly to light
+the way.
+~
+inside
+D SOUTH 28649 AB 0
+door s~
+~
+D UP 28651 0 0
+~
+~
+#28651
+A door before the Emperor's quarters~
+You are standing before the door to the Emperor's quarters. It is a heavy
+wooden door guilded with the golden symbol of the kingdom of Brynn Mahar.
+Rugs hang
+from the walls on the way down the stairway and golden torches line the way.
+~
+inside
+D SOUTH 28652 AB 0
+heavy guilded door s~
+~
+D DOWN 28650 0 0
+~
+~
+#28652
+The Emperor's Quarters~
+You are standing in the bedroom of the Emperor himself. This is the most
+lavish room you have ever seen. Precious jewels and metals are common place,
+and his bed is a masterpiece of carved wood. The Emperors dresser is on the
+west wall. Out the window on the south wall there is a breathtaking view
+of the whole Kingdom that the Emperor can survey.
+~
+inside
+D NORTH 28651 AB 0
+door n~
+~
+#28653
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28658 0 0
+~
+~
+D WEST 28579 AB 0
+door w~
+~
+#28654
+On the staircase~
+This staircase is completely plain there are only staggered slit windows
+on the way up the stairs. However, they provide a superb view of the city
+below.
+~
+inside
+D UP 28655 0 0
+~
+~
+D DOWN 28629 0 0
+~
+~
+#28655
+Top of the Western spire~
+At the top of this staircase there is a strong door made of a pearly
+material, and the door itself seems to hum softly. The stairs lead back down
+to the main floor.
+~
+inside
+D WEST 28656 AB 0
+door pearl w~
+~
+D DOWN 28654 0 0
+~
+~
+#28656
+An indescript library~
+The cieling in this room is cone shaped allowing for a beautiful mural
+to be painted upon it. A depiction of great works of magic and war
+is uncannily unfolded before your eyes. Four windows give way to a most
+spectacular view of the Kingdom. Between each window large bookcases rise
+up against the walls.
+~
+inside
+D NORTH 28657 ABI 0
+bookcase n~
+~
+D EAST 28655 AB 0
+door e~
+~
+#28657
+The hidden room~
+You have stumbled upon a most interesting room. It is quite small and
+contains only a small bookcase and a cot. There is only on circular window
+in the wall, and the floor is covered by a small rug.
+~
+inside
+D SOUTH 28656 ABI 0
+bookcase s~
+~
+#28658
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28659 0 0
+~
+~
+D WEST 28653 0 0
+~
+~
+#28659
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. There are doors to the north and south.
+~
+inside
+D NORTH 28660 AB 0
+door n~
+~
+D EAST 28662 0 0
+~
+~
+D SOUTH 28661 AB 0
+door s~
+~
+D WEST 28658 0 0
+~
+~
+#28660
+A noble's room~
+You are standing in a very nice room. It is not very large, but is clean
+and has all necessary accommodations. There is a large bed against the wall
+and a set of oak furnature is placed neatly throughout the room. This is
+where
+the nobles from visiting lands make thier stay.
+~
+inside
+D SOUTH 28659 AB 0
+door s~
+~
+#28661
+A noble's room~
+You are standing in a very nice room. It is not very large, but is clean
+and has all necessary accommodations. There is a large bed against the wall
+and a set of oak furnature is placed neatly throughout the room. This is
+where
+the nobles from visiting lands make thier stay.
+~
+inside
+D NORTH 28659 AB 0
+door n~
+~
+#28662
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. There are doors to the north and south.
+~
+inside
+D NORTH 28663 AB 0
+n door~
+~
+D EAST 28665 0 0
+~
+~
+D SOUTH 28664 AB 0
+door s~
+~
+D WEST 28659 0 0
+~
+~
+#28663
+A noble's room~
+You are standing in a very nice room. It is not very large, but is clean
+and has all necessary accommodations. There is a large bed against the wall
+and a set of oak furnature is placed neatly throughout the room. This is
+where
+the nobles from visiting lands make thier stay.
+~
+inside
+D SOUTH 28662 AB 0
+door s~
+~
+#28664
+A noble's room~
+You are standing in a very nice room. It is not very large, but is clean
+and has all necessary accommodations. There is a large bed against the wall
+and a set of oak furnature is placed neatly throughout the room. This is
+where
+the nobles from visiting lands make thier stay.
+~
+inside
+D NORTH 28662 AB 0
+door n~
+~
+#28665
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28666 0 0
+~
+~
+D WEST 28662 0 0
+~
+~
+#28666
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28667 0 0
+~
+~
+D WEST 28665 0 0
+~
+~
+#28667
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. There is a door to the north that is a bit larger
+than the others.
+~
+inside
+D NORTH 28668 AB 0
+door n~
+~
+D EAST 28669 0 0
+~
+~
+D WEST 28666 0 0
+~
+~
+#28668
+A noble's room~
+This room is much nicer than the other rooms. There is a large bed and
+dresser in the corner, and the floor is covered in a large fur rug. The
+ceiling is stensiled with a great forest scene, and there is incense
+burning in the corner. This room is reserved for only the most prestigious
+of guests.
+~
+inside
+D SOUTH 28667 AB 0
+door s~
+~
+#28669
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28670 0 0
+~
+~
+D WEST 28667 0 0
+~
+~
+#28670
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway.
+~
+inside
+D EAST 28671 0 0
+~
+~
+D WEST 28669 0 0
+~
+~
+#28671
+The Monarchal wing~
+This is the the Monarchal wing, or more commonly called the noble wing.
+This is the area provided for the visiting nobles from other Kingdoms.
+There is a red carpet running the length of the hall, and fine paintings and
+statues line the hallway. There are doors to the north and south.
+~
+inside
+D NORTH 28672 AB 0
+door n~
+~
+D EAST 28674 0 0
+~
+~
+D SOUTH 28673 AB 0
+door s~
+~
+D WEST 28670 0 0
+~
+~
+#0
+
+
+
+#RESETS
+DOOR 28501 north CLOSED
+DOOR 28502 south CLOSED
+DOOR 28505 north CLOSED
+DOOR 28505 south CLOSED
+DOOR 28506 north CLOSED
+DOOR 28506 south CLOSED
+DOOR 28507 north CLOSED
+DOOR 28508 south CLOSED
+DOOR 28508 west CLOSED
+DOOR 28509 east CLOSED
+DOOR 28539 north CLOSED
+DOOR 28540 south CLOSED
+DOOR 28557 north CLOSED
+DOOR 28558 north CLOSED
+DOOR 28558 south CLOSED
+DOOR 28561 south CLOSED
+DOOR 28572 west CLOSED
+DOOR 28576 north CLOSED
+DOOR 28579 east CLOSED
+DOOR 28581 east CLOSED
+DOOR 28582 north CLOSED
+DOOR 28582 south CLOSED
+DOOR 28583 south CLOSED
+DOOR 28584 north CLOSED
+DOOR 28593 south CLOSED
+DOOR 28594 north CLOSED
+DOOR 28598 north CLOSED
+DOOR 28599 south CLOSED
+DOOR 28600 west CLOSED
+DOOR 28601 east CLOSED
+DOOR 28612 north CLOSED
+DOOR 28613 south CLOSED
+DOOR 28620 down CLOSED
+DOOR 28621 up CLOSED
+DOOR 28621 north CLOSED
+DOOR 28622 south CLOSED
+DOOR 28626 north CLOSED
+DOOR 28627 south CLOSED
+DOOR 28631 south CLOSED
+DOOR 28641 south CLOSED
+DOOR 28641 west CLOSED
+DOOR 28641 north CLOSED
+DOOR 28642 south CLOSED
+DOOR 28643 east CLOSED
+DOOR 28644 north CLOSED
+DOOR 28648 north CLOSED
+DOOR 28649 north CLOSED
+DOOR 28649 south CLOSED
+DOOR 28650 south CLOSED
+DOOR 28651 south CLOSED
+DOOR 28652 north CLOSED
+DOOR 28653 west CLOSED
+DOOR 28655 west CLOSED
+DOOR 28656 east CLOSED
+DOOR 28656 north CLOSED
+DOOR 28657 south CLOSED
+DOOR 28685 north CLOSED
+DOOR 28685 south CLOSED
+DOOR 28686 south CLOSED
+DOOR 28687 north CLOSED
+DOOR 28690 south CLOSED
+DOOR 28691 north CLOSED
+DOOR 28694 north CLOSED
+DOOR 28695 south CLOSED
+DOOR 28700 east CLOSED
+DOOR 28702 west CLOSED
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,5004 @@
+#AREA
+dagdan.are~
+Dagdan~
+Macheath~
+1 51
+21500 21599
+unopened
+temperate
+0
+1
+
+#MOBS
+#21500
+stray cat~
+a stray cat~
+A stray cat meanders here.    
+~
+This feline appears to be on the very brink of starvation.  Its fur is    
+matted and coated with dust to the point that its original color can    
+no longer be discerned.  Though the life it leads would seem to be    
+disagreeable, you don't find yourself feeling sorrow for it... as it    
+bares its teeth and hisses directly at you.    
+~
+100 21500 100 cat~
+5 2d6+35 1d6+0 0 100 scratch
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT STAY_AREA
+#21501
+fat tomcat cat~
+a fat tomcat~
+A fat tomcat struts across your field of vision.    
+~
+Larger than most cats, this fellow is obviously used to quite a bit of    
+attention.  He boldly pads directly to your leg, and waddles around    
+it, rubbing and purring contentedly.  It's apparent he only wants a    
+handout.    
+~
+0 100 21501 unique~
+5 2d6+60 1d6+1 0 100 claw
+0 0 0 0
+standing male none
+G 0 small
+ACT NPC
+ACT STAY_AREA
+#21502
+dog~
+a dog~
+This dog seems to be looking for a cat to eat.    
+~
+Almost wiry enough for a wolf, this dog prowls the streets of Dagdan     
+snapping at everything he passes.  His fur is gray streaked with black    
+and even has a few white spots.  He's obviously a mutt, and has likely    
+lived the life of a wild animal.  Don't waste your time trying to    
+domesticate him.    
+~
+0 21502 100 dog~
+6 2d7+71 1d7+1 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+#21503
+dog hound~
+a hound~
+A well-bred hound walks here with its nose high in the air.    
+~
+Not QUITE fat, but well-fed nonetheless, this hound prances around    
+Dagdan with what it seems to think is a bit of style.  In reality, its    
+mannerisms would likely make any self-respecting dog gag on its own    
+tongue.    
+~
+0 21503 100 dog~
+7 2d6+85 1d8+1 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+#21504
+wild turkey bird~
+a wild turkey~
+A huge wild bird pecks at the ground looking for seeds.    
+~
+This bird is a turkey, a strange looking bird apparently indigenous to    
+the northwest part of the continent.  Its tall feathers and coverts     
+are tipped with white, and it is more elegantly colored that most    
+birds.  If it weren't so ugly, it might be beautiful.    
+~
+0 21504 100 unique~
+8 2d6+35 1d7+2 0 100 peck
+0 0 0 0
+standing male none
+G 0 small
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+#21505
+traveler man~
+a traveler~
+A traveler stands here smiling.    
+~
+This man is taking advantage of Dagdan's many shops, and interrupting    
+whatever long trip he might be making to buy supplies for what lies    
+ahead.    
+~
+0 21505 100 human~
+8 2d7+71 1d7+1 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+#21506
+customer man~
+a customer~
+One of the inn's customers stands here.    
+~
+Perhaps a traveler spending the night, perhaps simply a man who has     
+come to rest in Dagdan for some time, this gentleman stands chatting     
+with others who have also found a pleasant place to take a rest and    
+perhaps make a few purchases.    
+~
+0 21506 100 human~
+8 2d7+71 1d7+1 0 100 slash
+0 0 0 0
+standing male none
+G 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+#21507
+fire giant brawler man grakadak~
+a fire giant brawler~
+A giant black-skinned brawler strides through Dagdan.    
+~
+A vicious grin flashes across this fire giant's face when he sees you    
+approaching.  His skin is black as pitch, and his bright red hair     
+shines in the sun's light like a fire.  He has quite a few assorted     
+weapons strapped to his back, and several other implements of war     
+attached to his belt -- and yet he walks about barehanded, seeming to     
+prefer hand-to-hand combat.    
+~
+-1000 21507 100 unique~
+10 2d7+161 2d4+3 0 100 pound
+0 0 0 0
+standing male none
+G 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DODGE
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+#21508
+gnome invoker woman~
+a gnomish invoker~
+A gnome looks to purchase a few reagents for a shield potion.    
+~
+This tiny woman flits here and there around Dagdan, checking each shop    
+for herbs and oils she can use in her chemistry experimentation.  Her    
+garb is simple leather, and she seems unremarkable.  Except that her    
+eyes are currently crackling with electricity.  Her hands appear to be    
+stained permanently by herbs, and perhaps, by the passage of much    
+arcane power through their mortal tissue.  She has obviously not    
+focused her training on combat, as you see no weapons or trophies of    
+any kind on her person, and yet you feel you can safely assume she    
+would be able to defend herself rather adequately.    
+~
+0 21508 100 unique~
+10 2d7+151 2d4+2 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21509
+drow dark elf dark-elf thief man~
+a drow thief~
+A gray-skinned man silently slips from shop to shop.    
+~
+This drow is obviously up to something.  The way he sneaks around    
+Dagdan is as much a sign of his being a thief and up to no good as    
+a note pinned to his sleeve would be.  His red eyes shift quickly back    
+and forth across his field of vision, and his hand moves down to his    
+dagger every time someone approaches him.  His clothing is light, and    
+moves very freely so as not to make so much as a whisper as he moves.    
+~
+-1000 21509 100 unique~
+10 2d7+141 2d4+2 0 100 stab
+0 0 0 0
+standing male none
+M 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+CLASS thief 
+#21510
+ranger half elf half-elf man~
+a ranger~
+A grey-cloaked half-elf ranger stares at the clouds.    
+~
+Muttering at the lack of clouds, this half-elf has skin so dark, he    
+almost looks to be drow.  He lowers his gaze from the sky to meet your    
+own stare, and blinks at you.  His hands, both grasping a long staff,    
+appear to be covered with small scars, all long healed over.  His    
+leather and fur clothing has been finely stitched together with    
+catgut twine, and a belt over his shoulder contains pouches filled    
+with strong-smelling herbs.    
+~
+0 21510 100 unique~
+10 2d7+141 2d4+2 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#21511
+assassin human man~
+an assassin~
+A man in black clothing smiles at you.    
+~
+One of many in Dagdan who seem to be in the employ of the assassin    
+guild, this man's charisma is incapacitating.  It's very likely he's    
+used his unassuming appearance and charming personality to get close    
+to quite a few of his targets.  You can only discern his occupation    
+by his proximity to so many others who are less secretive about their    
+place in life.  Apparently this man isn't interested in stealth while    
+in Dagdan.    
+~
+0 21511 100 human~
+10 2d7+141 2d4+2 0 100 stab
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+#21512
+assassin human man dark figure~
+a dark figure~
+A dark figure lurks here.    
+~
+This man appears to be one of the incredible number of assassins in    
+Dagdan.  He seems to think very highly of his own reputation, and    
+slips around the town with an excess of sneakiness.  The sheer volume    
+of caution and readiness his demeanor exudes is the very thing that    
+makes his occupation readily apparent.  He probably won't want to    
+make conversation.    
+~
+-1000 21512 100 human~
+10 2d7+141 2d4+2 0 100 stab
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+IMM SUMMON
+#21513
+suspicious arial man~
+an arial assassin~
+A suspicious-looking arial is here, trying to look inconspicuous.    
+~
+It's difficult to fade into the shadows and disappear when one has    
+wings and a beak.  This poor fellow hasn't realized his plight yet,    
+and persists in nearly comical displays of attempted stealth.  Pretend    
+you don't notice this gargoyle-like creature (with a wingspan of over    
+ten feet), and perhaps he'll be satisfied.    
+~
+-1000 21513 100 unique~
+10 2d7+141 2d4+2 0 100 pierce
+0 0 0 0
+standing male none
+M 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+#21514
+weary traveler woman storm giant~
+a weary traveler~
+A weary traveler walks the street, looking for an Inn.    
+~
+A storm giant woman plods heavily across the cobblestones of Dagdan,    
+tired from a long journey.  She began within the Aryth Ocean, and now    
+travels to the oceans beyond the forest to the north to visit others    
+of her kind.  Perhaps because she is female, she is smaller than most     
+storm giants, and can ride a mount.  A HUGE mount.  Her clothing    
+appears to have been woven from kelp, and she has dozens of water    
+skins, insulated canteens, and jugs full of her favorite liquid    
+about her person... on a necklace, attached to her belt, and filling    
+her pack.  This woman loves water.    
+~
+1000 21514 100 unique~
+11 2d8+165 1d10+2 0 100 crush
+0 0 0 0
+standing male none
+M 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+IMM SUMMON
+#21515
+horse~
+a huge horse~
+One of the largest horses you've ever seen follows his master.    
+~
+A huge horse stands here, loyally following his master.  He's covered    
+in sweat, and you assume he's had a very long day of travel.  His    
+saddle is bare... his rider has taken mercy and begun leading him    
+after such a fatiguing ride.    
+~
+0 21515 100 unique~
+10 2d7+141 2d4+2 0 100 chomp
+0 0 0 0
+standing male none
+G 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF KICK
+IMM SUMMON
+#21516
+broken man~
+a broken man~
+A man is propped up against the wall here, half dead and mumbling.    
+~
+A sad sight indeed... both his legs broken and set at improper angles,    
+his arms tightly bound behind his back, this man is seated in a     
+perverse cross-legged style made possible only by his condition.  He    
+wears a blindfold, and once wore a gag, but it appears that siezures     
+have caused him to chew through it.  His mumbled words make no sense,     
+and you assume this pitiful wretch to have been driven insane by pain.    
+"The third... I was..." he trails off and falls into a fitful sleep.    
+~
+0 21516 100 human~
+1 2d6+10 1d4+0 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+IMM SUMMON
+#21517
+sleeping cityguard guard~
+a Dagdan cityguard~
+A cityguard is here snoring, his helmet half obscuring his face.    
+~
+This human's fitness regimen doesn't appear to be having much of an    
+effect on his physique, if he has a fitness regimen.  He barely fits    
+into what appears to be a standard-sized human uniform, his weapon is    
+improperly cared for, his armor is tarnished and seems to be in a    
+state of general disrepair, and his boots are several feet away in a    
+pile beneath a shrub.  He snores loudly, and his helmet has slipped    
+its way down over his eyes.  If he's ready for a fight, he isn't     
+showing it.    
+~
+0 21517 100 human~
+15 3d9+243 2d6+3 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#21518
+standing cityguard guard~
+a Dagdan cityguard~
+A cityguard in ill-fitting armor idly pokes at a dog with his spear.    
+~
+This guard has abandoned the traditional sword and shield most    
+cityguards wear, and donned a spear instead.  His face is lined with     
+wrinkles, worn crow's feet at the corners of his eyes show that he has     
+spent most of his life smiling.  Now, however, he's simply too bored     
+to do much but tease a dog and vapidly gaze up and down the road     
+leading from Dagdan.    
+~
+0 21518 100 human~
+15 3d9+243 2d6+3 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#21519
+mayor baram evir~
+Baram Evir~
+The mayor of Dagdan stands here smiling and greeting those who pass.    
+~
+Baram Evir, the mayor of Dagdan, shakes your hand as you pass.  He is    
+richly clothed, as you might expect.  The crest of Dagdan (though it    
+seems rather presumptuous for such a poor frontier town to have a    
+crest, let alone a mayor) is emblazoned upon his bright tunic.      
+Suddenly, he speaks in a deep and thickly accented voice:    
+    
+"As with any frontier settlement, we've experienced our share of     
+outlaw activity," he explains in a well-rehearsed speech.  "However,     
+as mayor, I've taken certain steps to assure that nothing like that     
+will rear its ugly head here again.  While in the town, you'll     
+doubtless see the criminal element being escorted beyond our city     
+limits."  Baram winks, points to a grumbling thief nearby, and moves     
+on to deliver the same speech to the next traveler coming into Dagdan.    
+~
+-1000 21519 100 human~
+30 6d12+1083 4d6+10 0 40 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF DODGE
+OFF PARRY
+AFF REGENERATION
+IMM SUMMON
+#21520
+bard musician leader~
+the musicians' leader~
+A musician is here, carrying a lute and leading his troupe.    
+~
+A tall arial stands here plucking at the strings of a small lute, and    
+glaring up from its contours occasionally to note that no one has    
+handed him any gold.  He makes this observation several times per    
+minute, and you wonder whether he is making it more for his own    
+benefit or for those who happen to pass by.  He frequently reaches     
+behind his neck to scratch himself, where a canvas collar seems to be     
+disrupting the finely-preened order of his feathers.    
+~
+0 21520 100 unique~
+20 3d9+455 2d8+5 0 100 stab
+0 0 0 0
+standing male none
+M 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21521
+bard musician flautist~
+a flautist~
+A flautist is here, tweeting away on his flute.    
+~
+Nothing could dissuade this jolly fat man from his tune, and he pipes    
+away with renewed vigor as he notices you listening.  He seems happy    
+simply to play his flute, as though nothing else in the world mattered    
+to him.  Perhaps nothing else does.  Swathed entirely in chrome     
+studded black leather, this large man looks almost like a starry     
+night...    
+~
+0 21521 100 human~
+20 3d9+455 2d8+5 0 100 slice
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21522
+bard musician drummer~
+a drummer~
+A drummer is here, tapping a drum.    
+~
+This cloud giant dwarfs his two companions, and his drum could conceal    
+both of them in its huge resonating cavity.  However, he seems to take    
+no note of his comparitively herculean proportions, and plays as     
+delicately and intricately as any elf upon his percussive instrument.    
+The patterns he beats remind you of war, then of the sound of a horse    
+galloping across an open plain, and then of the monotony of sea     
+travel.  There seems to be no end to this man's rhythmic vocabulary.    
+~
+0 21522 100 unique~
+20 3d9+455 2d8+5 0 100 punch
+0 0 0 0
+standing male none
+M 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21523
+sea captain sailor man seafaring~
+a sea captain~
+A seafaring man is here, drowning his sorrow.    
+~
+This man's tale of woe begins with a single beer, and ends with a very    
+large drink.  "THE drink," in fact--the ocean.  It seems he had a bit    
+too much grog in Arkham the morning his ship was to depart for New    
+Thalos by way of the Dragon Sea, and he navigated her directly onto    
+the rocks below the Cliffs of Insanity.  His beached ship was    
+abandoned, and shortly picked apart by scavenging pirates.  The only    
+bright point he can make is that his cargo was already in Arkham--and    
+he was returning to New Thalos for another load.  Stone, for building,    
+carved directly out of the Tahril mountains.  If he had been carrying    
+such a load at the time of his accident, his boat would have drawn a    
+much deeper trail through the sea, and would have beached much farther    
+out on the water.  His men would have drowned trying to reach shore,    
+or worse, been killed by raiding pirates.  Between hiccups and burps,    
+the captain relates this tale of what he considers to be "an unlucky    
+sort of luck," and then fades into a comatose state on the bar.    
+~
+0 21523 100 human~
+20 3d9+455 2d8+5 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21524
+nervous guard cityguard man~
+a Tar Valon cityguard~
+A nervous-looking guard huddles in the shadows here.    
+~
+This man has eluded capture for one week so far, he says.  He is    
+absent without leave from cityguard duty in Tar Valon, it seems.  His    
+nervous eyes blink far too often, and his shaking hands haven't calmed    
+in this last week of heavy drinking.  He still wears his cityguard    
+clothing--perhaps not indicative of a particularly bright AWOL     
+cityguard.    
+~
+0 21524 100 human~
+20 3d9+455 2d8+5 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21525
+guildguard thief~
+the thief guildguard~
+A thief stands here protecting his guild.    
+~
+A typical thief, wearing all gray and no one article of clothing    
+distinguishing him from any other in a crowd, this man knows his    
+business well enough to know he needs to avoid letting you into his    
+guild to learn all of his secrets if he wants to stay ahead in the    
+world.    
+~
+-1000 21525 100 human~
+30 6d12+1083 4d6+10 0 100 slice
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT GUILDGUARD
+OFF DISARM
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21526
+guildguard assassin~
+the assassin guildguard~
+An assassin stands here protecting his guild.    
+~
+This black-robed man stands firmly in front of the door to what     
+appears to be a guild.  You have no hope of passing in while he lives    
+if you aren't a member of his notorious profession.    
+~
+0 21526 100 human~
+30 6d12+1083 4d6+10 0 100 slice
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT GUILDGUARD
+OFF DISARM
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+#21527
+guildmaster thief~
+the thief guildmaster~
+The thief guildmaster stands here holding four wallets.    
+~
+"The tricks of the trade, the tricks of the trade... is that your    
+gold I smell, boy?" the guildmaster pokes at you, his nimble fingers    
+already nearer than you'd like.  You had best step to the far corner    
+of this room if you want to keep your pockets to yourself!    
+~
+-1000 21527 100 human~
+30 6d12+1083 4d6+10 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT TRAIN
+ACT PRACTICE
+ACT GAIN
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+#21528
+guildmaster assassin~
+the assassin guildmaster~
+The "Assassin's Assassin" has a practice dummy impaled on each sword.    
+~
+Sneering in some unknown rage, this man shreds every piece of cloth    
+set before him--and the occasional student, as well.  You have no    
+doubt that this man is one of the most lethal in Thera... in passing,    
+you wonder how many cities his head would catch a pretty price in.    
+Then, in passing, you decide not to try and find out.    
+~
+-1000 21528 100 human~
+30 6d12+1083 4d6+10 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT TRAIN
+ACT PRACTICE
+ACT GAIN
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+#21529
+large norman innkeeper man~
+Norman the Innkeeper~
+A large man is here handing out keys, filling mugs, and kicking out bums.    
+~
+Norman, Dagdan's proud innkeeper, has forearms the size of dwarven     
+drinking barrels.  Tattoos cover most of his exposed flesh, and you     
+would wager (correctly) that they cover most of his concealed flesh    
+as well.  He seems salty and bitter, yet somehow approachable, should    
+you need to talk.  He purchased this inn with money he earned on his    
+own, and he keeps it up with the constant business Dagdan's location    
+provides.  His vest is smudged with various food products and stained    
+with every variety of drink, and his black hair is a tangled mess atop    
+his square head.  If he were any less friendly, you could picture him    
+as a fearsome street fighter rather easily.    
+~
+0 21529 100 human~
+30 6d12+1083 4d6+10 0 100 crush
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#21530
+bela carver shopkeeper man human~
+Bela the butcher~
+A lanky human carves large pieces of meat into small ones in this shop.    
+~
+Bela looks up at you when you enter, and chuckles--an irritating,    
+high-pitched sound.  He pulls his hands away from the pig he's gutting    
+and reaches to shake one of yours.  As you recoil away from the blood     
+and intestine covering his glove, he chuckles again--you wish he'd     
+stop--and reaches for a towel to clean himself off.  Aside from a    
+tough white canvas apron, you can't tell what this man is wearing.    
+Not much is visible around the apron, and what is visible is covered    
+in more gore.  This man is not a careful butcher, and you shudder    
+at the prospect of watching him work.    
+~
+-1000 21530 100 human~
+30 6d12+1083 4d6+10 0 100 pierce
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+OFF DODGE
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 6 CLOSE 21 EXIT south
+#21531
+peddler shopkeeper man svirf svirfnebli~
+a svirf peddler~
+A svirf peddler shows his wares on the street.    
+~
+This deep gnome has skin of a pale white hue, and black eyes that    
+stand out like a sail against a dark stormy sea.  He moves quietly,    
+and speaks little while doing business.  He seems to be locked to    
+this spot on the street, as though years of testing have shown that    
+the amount of traffic there is better than elsewhere on the road.    
+When you examine his wares, an evil grin silently spreads across    
+the svirfnebli's face, and he winks evilly, nudging your arm.    
+~
+0 21531 100 unique~
+30 6d12+1083 4d6+10 0 100 slice
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 6 CLOSE 6 EXIT south
+#21532
+danellanor shopkeeper man elf~
+Danellanor~
+A kindly elven gentleman stands here.    
+~
+This jade-skinned elf immediately strikes you as an honest man.  His    
+shop surrounds both of you with foreign pleasing smells and exotic     
+colors and shapes, and a warm breeze squeezes its way between all the    
+plants and leaves to brush across your face and add to your level of    
+comfort.  This shop, the senses, and the shop's keeper all make you    
+feel that you've come home.  He exhibits the few food products he can    
+muster in Dagdan's hard soil with pride, and then shows you his     
+favorite items--the foliage from the Vale of Arendyl.  Herbs and     
+leaves, extracts and stems, whole plants potted in rich mountain soil.    
+Danellanor has found uses for uniquely elven plants which no other    
+botanist has yet conceived.    
+~
+1000 21532 100 elf~
+30 6d12+1083 4d6+10 0 100 slice
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 6 CLOSE 20 EXIT north
+#21533
+pzandra shopkeeper woman duergar~
+Pzandra~
+Pzandra, the duergar blacksmith, is here.    
+~
+Her beard would put Jullias himself to shame.  Her hairy chin waggles     
+as Pzandra gossips with other women in this shop, and her thick, oily     
+black beard juts directly out like a pike, waggling up and down with    
+it.  Pzandra seems remarkably friendly for a duergar... until one of    
+the Dagdan gossips mentions her neighbor Tarni.  Her eyes turn to pure    
+iron, and she stiffens suddenly.  A few acidic barbs are spat, and she    
+turns coldly to her forge to continue with the work she's been     
+avoiding.  The other women scatter from the shop, fleeing in terror    
+from this duergar woman's temper.    
+~
+-1000 21533 100 duergar~
+30 6d12+1083 4d6+10 0 100 pound
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 6 CLOSE 22 EXIT south
+#21534
+tarni shopkeeper woman dwarf~
+Tarni~
+Tarni, the dwarven mithril smith, is here.    
+~
+Tarni is hard at work on a large, flat piece of mithril.  What it is     
+destined to become isn't apparent yet, but the red hot slab of metal    
+is quickly taking shape and form, and with that, function and purpose.    
+She looks up and sees you entering, greets you warmly, and warns you     
+to avoid the puddle at the door (just in time).  As you gaze     
+around her shop, you hear someone screaming next door.  You turn your    
+face toward Tarni, with an expression of confusion, and she sighs    
+apologetically.  "Pzandra, an intensely emotional duergar," she     
+laughs.  "We have a healthy business relationship."  Tarni scratches    
+her beard, sniffs and shrugs, then goes back to work.    
+~
+0 21534 100 dwarf~
+30 6d12+1083 4d6+10 0 100 stab
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 6 CLOSE 22 EXIT south
+#0
+
+
+
+#OBJS
+#21500
+jewelled collar~
+a shining jewelled collar~
+A loop of leather set with shining gems and valuable stones is here.~
+armor
+leather~
+3 4 3 3 0
+5 2 125 P
+WEAR TAKE
+LIMIT 0
+E jewelled collar~
+This band of leather is well-worn and soft to the touch.  It smells    
+of the oily fur and dander of a canine.  Small gems are set around its    
+circumference, alternating between clear and shimmering blue in color.    
+A few gems are missing, but the leather itself remains entirely     
+intact.    
+~
+
+#21501
+turkey bird feather~
+a turkey feather~
+A long white-tipped feather tumbles in the breeze here.~
+trash
+cloth~
+0 0 0 0 0
+8 1 0 P
+WEAR TAKE
+LIMIT 0
+E turkey bird feather~
+Long, straight, and very stiff, this feather is dark brownish-gray in    
+color, with a white tip.  When you rub your hand along it from stem    
+to tip, it's very soft and forgiving... when you try and rub your hand    
+from tip to stem, it feels like a saw, and you ruin its fine edge.    
+~
+
+#21502
+war belt~
+a war belt~
+Made of tough leather, this belt bristles with sharp pieces of metal.~
+armor
+leather~
+5 6 6 5 0
+10 9 430 P
+WEAR TAKE
+WEAR WAIST
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY INT -2
+LIMIT 0
+E war belt~
+An interesting article of clothing indeed, this belt is thick and     
+wide, protecting quite a bit of a warrior's midsection.  It is tapered    
+in front and back to allow better range of movement, but bolstered on    
+each side to prevent wrenching the lower part of the spine in odd    
+directions.  It has half a dozen pockets and pouches trailing around    
+its outer face, and each of these holds something which is used to    
+inflict pain in a brawl.  Brass knuckles, iron spikes, a small sack     
+filled with a few lumps of lead...  On the inner face of this belt,    
+a long series of strange symbols is etched.    
+~
+E inner series symbols~
+Upon closer inspection, these "strange symbols" appear to be simply    
+the closest this belt's previous owner could come to scrawling his    
+name.  Written with a thick charcoal implement is the following    
+word:    
+    
+GRAKADAK    
+~
+
+#21503
+blue leaf~
+a blue leaf~
+A blue-tinted leaf lies here forgotten.~
+pill
+plant~
+10 'resist cold' 'reserved' 'reserved' 'reserved'
+7 1 0 P
+WEAR TAKE
+LIMIT 0
+E blue leaf~
+This leaf actually has a dusty-blue hue to it...  Its edges are rough,     
+like a saw's teeth, and its stem and thin, intricate vein system are    
+dark blue -- almost black.    
+~
+
+#21504
+red grass~
+some red grass~
+A small pile of reddish grass has collected here.~
+pill
+plant~
+10 'resist heat' 'reserved' 'reserved' 'reserved'
+7 1 0 P
+WEAR TAKE
+LIMIT 0
+E red grass~
+A pile of grass, perfectly normal, it could have been a tuft you'd     
+just reached down and torn from the soil yourself... were it not for    
+the fact that it's bright red.    
+~
+
+#21505
+violet whistling potion~
+a violet whistling potion~
+A violet potion rests here, emitting an odd whistling sound.~
+potion
+energy~
+10 'reserved' 'reserved' 'reserved' 'reserved'
+8 2 0 P
+WEAR TAKE
+ITEM HUM
+LIMIT 0
+E violet whistling potion~
+HERE's an odd potion... contained in a thin glass vial, this violet    
+liquid fizzes so violently that you fear the container will burst.      
+You actually feel it trembling in your hand, and though no air appears    
+to be escaping the corked top, it emits a high-pitched whistle from    
+the palm of your hand.  Perhaps it's the result of someone's chemical    
+experimentation.  It seems as though it would be rather dangerous    
+to drink something like this without more information.    
+~
+E cork corked top~
+Sure enough... it's about to pop right off and explode into your face!    
+~
+
+#21506
+soft leather strap pockets~
+a soft leather strap, lined with pockets~
+A long strap of soft leather lies here.~
+container
+leather~
+30 A 0 10 100
+10 5 340 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+E soft leather strap pockets~
+This long strap is made to be worn over the shoulder, and is     
+constructed with soft leather, bound with catgut twine.  It has    
+pockets sewn directly into it.    
+~
+
+#21507
+herbs~
+some herbs~
+Some dark green dried herbs are piled here.~
+pill
+plant~
+10 'cure disease' 'cure poison' 'cure blindness' 'reserved'
+8 5 0 P
+WEAR TAKE
+LIMIT 0
+E some herbs~
+A lump of dark green weedy substance... damp and heavy, it smells    
+incredibly potent.    
+~
+
+#21508
+vest~
+a simple vest sewn with catgut twine~
+A vest is on the ground.~
+armor
+leather~
+3 3 3 2 0
+10 4 110 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E vest~
+This vest is simple, no pockets, and made of only three large pieces    
+of leather bound together with catgut twine.    
+~
+
+#21509
+boots~
+a pair of durable deerskin boots~
+Some boots are paired here.~
+armor
+leather~
+4 3 3 2 0
+10 3 194 P
+WEAR TAKE
+WEAR FEET
+LIMIT 0
+E boots~
+This pair of boots is beautifully crafted from thick, durable     
+deerskin.    
+~
+
+#21510
+staff long~
+a long staff~
+A long staff is on the ground.~
+weapon
+wood~
+staff 4 4 smash 0
+10 14 80 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E staff long~
+A rod of light, hard wood, perhaps six feet in length and fashioned    
+into a staff for fighting.    
+~
+
+#21511
+leather hood~
+a simple leather hood sewn with catgut twine~
+A hood is on the ground.~
+armor
+leather~
+2 2 2 1 0
+10 3 172 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+E leather hood~
+This leather hood is made of two pieces of soft leather, sewn together    
+with catgut twine.    
+~
+
+#21512
+black shirt~
+a loose-fitting black shirt~
+A pile of black cloth lies here.~
+armor
+cloth~
+3 3 2 4 0
+10 2 42 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E black shirt~
+This black cloth is fashioned into a loosely fitting shirt, with a    
+drawstring at the front to tie it.    
+~
+
+#21513
+black pants~
+a pair of black pants~
+A pile of black cloth lies here.~
+armor
+cloth~
+2 2 4 4 0
+10 3 265 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E black pants~
+These black pants are made of fine cloth which moves very freely, and    
+lined with dark grey silk.  They seem far more valuable after a close    
+inspection.    
+~
+
+#21514
+woven kelp shirt seaweed~
+a shirt of woven kelp~
+A pile of what appears to be seaweed is here.~
+armor
+plant~
+2 3 4 3 0
+11 22 0 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E woven kelp shirt seaweed~
+A pile of seaweed is what it looks like, mostly dry but still a bit     
+damp... it's woven together in a very loose weave, and forms a large    
+shirt.    
+~
+
+#21515
+belt canteens~
+a belt with several canteens attached~
+Several canteens lie in a pile here.~
+drink
+burlap~
+25 25 'water' 0 0
+11 34 155 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+E belt canteens~
+Four metal canteens, insulated with fur, are strung on a wide burlap     
+belt.    
+~
+
+#21516
+necklace canteens~
+a leather necklace strung with a few canteens~
+A few canteens lie in a pile here.~
+drink
+leather~
+130 130 'water' 0 0
+11 32 135 P
+WEAR TAKE
+WEAR NECK
+LIMIT 0
+E necklace canteens~
+Three metal canteens, insulated with fur, are strung on a thin leather    
+necklace.    
+~
+
+#21517
+iron helmet~
+a well-forged iron helmet~
+An iron helmet lies here.~
+armor
+iron~
+2 2 3 4 0
+16 13 222 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+E iron helmet~
+This iron helmet is in a state of disrepair... it appears sound, but     
+its surface is tarnished and scratched.    
+~
+
+#21518
+iron body armor~
+a set of iron body armor~
+A set of iron body armor lies here.~
+armor
+iron~
+2 2 2 3 0
+16 23 412 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E iron body armor~
+This set of iron body armor is beginning to show very slight signs of    
+rust.    
+~
+
+#21519
+iron armplates~
+a pair of iron armplates~
+A pair of iron armplates lies here.~
+armor
+iron~
+2 3 3 3 0
+16 14 230 P
+WEAR TAKE
+WEAR ARMS
+LIMIT 0
+E iron armplates~
+These armplates are scratched and tarnished... the shine they once     
+held is all but gone.    
+~
+
+#21520
+iron legplates~
+a pair of iron legplates~
+A pair of iron legplates lies here.~
+armor
+iron~
+3 3 2 2 0
+16 14 230 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E iron legplates~
+These legplates are spattered with mud, and beginning to rust.    
+~
+
+#21521
+iron boots~
+a set of iron boots~
+A set of iron boots lies here.~
+armor
+iron~
+2 1 1 2 0
+16 12 211 P
+WEAR TAKE
+LIMIT 0
+E iron boots~
+These boots are covered with dry mud, and a large chunk of grassy sod    
+is dried to the sole of one of them.    
+~
+
+#21522
+iron gauntlets~
+a set of iron gauntlets~
+A set of iron gauntlets lies here.~
+armor
+iron~
+2 2 1 2 0
+16 12 211 P
+WEAR TAKE
+WEAR HANDS
+LIMIT 0
+E iron gauntlets~
+These gauntlets have a few spots of rust on the fingers, and the palms    
+are scratched and worn.    
+~
+
+#21523
+iron-tipped iron spear~
+an iron-tipped wooden spear~
+A long, iron-tipped spear lies here.~
+weapon
+wood~
+spear 4 6 pierce F
+16 16 286 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E iron-tipped iron spear~
+This long wooden spear is on the verge of snapping right in half...     
+its tip appears to be somewhat worn.    
+~
+E tip~
+The tip is indeed worn, but not from use in battle... it seems to have    
+been dulled by being dragged about, and has flaked away piece by tiny    
+piece until being rendered useless for real combat.    
+~
+
+#21524
+tunic bright~
+a bright tunic emblazoned with the crest of Dagdan~
+A brightly colored tunic is piled on the ground here.~
+armor
+cloth~
+3 3 3 7 0
+35 12 4500 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+APPLY INT 2
+LIMIT 0
+E tunic bright~
+This bright green tunic is made of the finest cloth that gold can buy.    
+It's actually woven from different shades of green, and the pattern     
+looks quite a bit like the hide of a green dragon.  It almost shimmers    
+in sunlight, and incredibly, the insignia of Dagdan reflects all light     
+with what seems to be amplification.    
+~
+E insignia crest~
+Dagdan's insignia appears to be the head of a God divided directly     
+down the center by a line.  One eye and half of the mouth appear to be    
+smiling gently, and the others are contorted into a cruel smirk.      
+Perhaps Dagdan's people believe in -- and must labor to appease --    
+this twisted figure.    
+~
+
+#21525
+cloak endurance~
+the Cloak of Endurance~
+A shimmering blue cloak is here.~
+armor
+cloth~
+8 10 10 9 0
+34 24 1163 P
+WEAR TAKE
+WEAR ABOUT
+APPLY CON 3
+APPLY HP 20
+APPLY DEX -3
+LIMIT 0
+E cloak endurance~
+A symbol for virility is embroidered on the back of this ankle-length    
+cloak.  Its blue fabric is some of the heaviest cloth that can be     
+found, and is layered for more warmth and protection.    
+~
+
+#21526
+golden band tanis~
+the golden band of Tanis~
+A golden band lies here.~
+armor
+gold~
+5 5 2 4 0
+35 17 9344 P
+WEAR TAKE
+WEAR FINGER
+ITEM BLESS
+LIMIT 0
+E golden band tanis~
+A simple golden bracelet, this wide hoop is engraved with the word,     
+"Tanis."    
+~
+
+#21527
+silver band talis~
+the silver band of Talis~
+A silver band lies here.~
+armor
+silver~
+5 5 2 4 0
+35 13 6341 P
+WEAR TAKE
+WEAR FINGER
+ITEM EVIL
+LIMIT 0
+E silver band talis~
+A simple silver bracelet, this wide hoop is engraved with the word,     
+"Talis."    
+~
+
+#21528
+two-bladed sword dagda~
+a two-bladed sword named 'Dagda'~
+An odd looking sword with two blades is on the ground.~
+weapon
+dragonbone~
+sword 6 8 cleave 0
+37 19 12934 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY HP 10
+LIMIT 0
+E two-bladed sword dagda~
+This is one of the most amazing works you've ever seen.  Five feet     
+long from the tip of the blade to the butt of the hilt, 'Dagda' is     
+made of some of the most precious materials available.  It has not one    
+blade, but two, reaching out from the wielder's hand in two parallel     
+lines, as though to cut a dual-swath of destruction through a foe.      
+The blades -- one made of purest heartstone, the other of blackest     
+obsidian -- are joined at the hilt, fused into a beautifully carved    
+cylinder of dragonbone.  Arcane symbols ornament all, hilt and blades,    
+on this magnificently artful weapon.    
+~
+
+#21529
+canvas collar~
+a canvas collar~
+A canvas collar is on the ground here.~
+armor
+canvas~
+1 1 1 1 0
+20 7 10 P
+WEAR TAKE
+WEAR NECK
+LIMIT 0
+E canvas collar~
+This collar doesn't appear to be terribly comfortable.    
+~
+
+#21530
+blue shirt~
+a tight blue shirt~
+A small pile of blue cloth lies here.~
+armor
+cloth~
+2 1 1 1 0
+20 4 15 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E blue shirt~
+Made originally of very cheap fabric, this shirt has been broken in     
+to the extent that it would pleasure even a king's sensitive skin.    
+~
+
+#21532
+black leather shirt~
+a chrome studded black leather shirt~
+A pile of black leather, covered with small chrome studs is here.~
+armor
+leather~
+3 1 2 2 0
+20 13 210 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E black leather shirt~
+A huge expanse of black leather, covered with gleaming chrome drops.    
+~
+
+#21535
+drumstick drum stick~
+a drum stick~
+A long stick lies here.~
+weapon
+wood~
+mace 7 4 beating 0
+20 3 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E drumstick drum stick~
+This is the largest drum stick you've ever seen.  Easily two feet     
+long, it might make a good drumming implement in the hands of a giant,    
+but for anything smaller, it would be more suited as a bludgeoning     
+weapon.    
+~
+
+#21536
+life buoy~
+a life buoy~
+A large piece of wood lies here.~
+boat
+wood~
+0 0 0 0 0
+24 1 0 P
+WEAR TAKE
+LIMIT 0
+E life buoy~
+This incredibly light piece of wood is nearly the length of your leg,     
+yet weighs roughly the same as a small dagger... it's coated in wax,    
+and has the faint smell of the sea about it.  You imagine it would be    
+easy to keep afloat with one of these... you likely wouldn't be able    
+to maneuver at all, however, and being at the mercy of the tides and    
+currents appeals very little to you.    
+~
+
+#21537
+pile stained vest~
+a stained vest~
+An incredibly dirty pile of cloth is here.~
+armor
+cloth~
+5 8 4 7 0
+29 4 10 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E stained vest~
+Wine, gravy, milk, butter, brine, beer, and blood are the identifiable    
+markings on this veritable feast of a vest.    
+~
+E stain~
+How disgusting...    
+~
+
+#21538
+bloody apron~
+a bloody apron~
+A pile of cloth lies in a pool of blood here.~
+armor
+cloth~
+5 6 3 3 0
+28 10 11 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E bloody apron~
+A full-length apron, covered in animal blood and gore.    
+~
+
+#21539
+steel sword~
+a steel long sword~
+A steel sword lies here.~
+weapon
+steel~
+sword 4 8 slash 0
+24 14 129 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E steel sword~
+The weapon of a Tar Valon cityguard.    
+~
+
+#21540
+steel shield~
+a shield of steel~
+A steel shield lies here.~
+armor
+steel~
+10 5 5 7 0
+26 17 173 P
+WEAR TAKE
+WEAR SHIELD
+LIMIT 0
+E steel shield~
+The shield of a Tar Valon cityguard.    
+~
+
+#21541
+steel shirt~
+a steel mail shirt~
+A shirt of steel lies here.~
+armor
+steel~
+8 9 9 3 0
+24 15 278 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E steel shirt~
+The armor of a Tar Valon cityguard.    
+~
+
+#21542
+vale blossom~
+a Vale Blossom~
+A potted plant is here.~
+trash
+plant~
+0 0 0 0 0
+1 6 80 P
+WEAR TAKE
+LIMIT 0
+E vale blossom~
+This flower is bright emerald green in color, and would likely fade    
+away against the foliage in the Vale of Arendyl... here in your hands,    
+however, its hues are brilliant.  The center of the blossom is very    
+bright yellow, and it fades to the slightly-less-bright green seen at    
+the edges of the petals.    
+~
+
+#21543
+organic concoction~
+an organic concoction~
+A small bottle filled with a brightly colored liquid is here.~
+pill
+plant~
+30 'calm' 'cancellation' 'reserved' 'reserved'
+20 1 1200 P
+WEAR TAKE
+LIMIT 0
+E organic concoction~
+Perhaps Danellanor's favorite product, created from the Vale's most    
+abundant resource -- flora.    
+~
+
+#21544
+bindeleaf~
+some bindeleaf~
+A large, leafy plant lies here.~
+food
+plant~
+1 0 0 0 0
+3 2 5 P
+WEAR TAKE
+LIMIT 0
+E bindeleaf~
+A delicate, leafy plant that grows near the Vale in almost terrible    
+abundance.  It tastes delicious, and is used to make elven salad in    
+Darsylon's finest homes.    
+~
+
+#21545
+slimy ribs~
+some slimy ribs~
+Some ribs have been here for a long time.~
+food
+meat~
+2 0 0 0 0
+5 5 50 P
+WEAR TAKE
+ITEM GLOW
+LIMIT 0
+E slimy ribs~
+Awful, awful... not appetizing in the least, these ribs have a slimy     
+film covering them, as though they've been sitting for a very, very     
+long time.  They even emit a slight phosphorescent glow in the dark.    
+~
+
+#21546
+green steak~
+a greenish steak~
+A green steak lies in the dirt.~
+food
+meat~
+1 0 0 1 0
+11 4 14 P
+WEAR TAKE
+LIMIT 0
+E green steak~
+You nearly retch, holding this abominable piece of meat in your hands.    
+To eat such an unnaturally pigmented steak would likely prove too much    
+for your constitution.    
+~
+
+#21547
+live turkey~
+a live turkey~
+A turkey gobbles and runs around here.~
+food
+meat~
+6 0 0 0 0
+12 6 56 P
+WEAR TAKE
+LIMIT 0
+E live turkey~
+This is a live turkey... perhaps the butcher simply wasn't creative     
+enough to figure out a way to carve it up.  You aren't going to eat    
+it like this, are you?    
+~
+
+#21548
+beer~
+Norman's beer~
+A bottle of Norman's beer is here.~
+drink
+glass~
+10 10 'beer' 0 0
+3 1 15 P
+WEAR TAKE
+LIMIT 0
+E beer~
+This is the only brand of beer Norman will ever sell.  Its amber color    
+shines like the sun in any light, and the label which covers the glass    
+bottle is a poorly illustrated, poorly stamped likeness of Norman     
+himself.    
+~
+
+#21549
+green gem~
+'a green gem'~
+A dagger is on the ground here.~
+weapon
+iron~
+dagger 1 5 stab 0
+1 4 55 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E green gem~
+A very plain dagger.    
+~
+
+#21550
+blue gem~
+'a blue gem'~
+A small metal object is shining from the ground.~
+trash
+steel~
+0 0 0 0 0
+1 3 70 P
+WEAR TAKE
+LIMIT 0
+E blue gem~
+A small metal circle with sharp protruding blades... presumably a type    
+of throwing dagger, resembling a star.    
+~
+
+#21551
+red gem~
+'a red gem'~
+A tiny feathered dart lies here.~
+trash
+cloth~
+0 0 0 0 0
+1 1 85 P
+WEAR TAKE
+LIMIT 0
+E red gem~
+A tiny, feathered, poison-tipped dart for throwing.    
+~
+
+#21552
+black gem~
+'a black gem'~
+A tiny pouch of dust is here.~
+trash
+leather~
+0 0 0 0 0
+1 2 115 P
+WEAR TAKE
+LIMIT 0
+E black gem~
+A small leather bag filled with dust... ground-up elf bones, a     
+narcotic which most civilized areas won't tolerate, and which is    
+believed in some circles to be a powerful aphrodisiac.    
+~
+
+#21553
+poorly-made sword~
+a poorly-made sword~
+A sword lies here.~
+weapon
+iron~
+sword 1 2 slash 0
+5 16 400 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -1
+LIMIT 0
+E poorly-made sword~
+The only item sold by Pzandra, this sword is obviously the result    
+of at least one minute's hard work.  It will break in two the moment    
+it's used in a fight.    
+~
+
+#21554
+mithril mail shirt~
+a mithril mail shirt~
+A mithril shirt is on the ground here.~
+armor
+mithril~
+9 9 9 9 0
+24 15 9575 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 5
+LIMIT 0
+E mithril mail shirt~
+This fine shirt is excellent work, weaved from the finest mithril     
+available to blacksmiths not employed by royalty.    
+~
+
+#21555
+mithril axe~
+a mithril axe~
+A mithril axe lies on the ground here.~
+weapon
+mithril~
+axe 4 8 chop 0
+25 12 8557 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+E mithril axe~
+This axe has a keen edge, and is constructed with the finest mithril    
+available to blacksmiths not employed by royalty.  The sturdy     
+craftsmanship is remarkable.    
+~
+
+#21556
+mithril helmet~
+a mithril helmet~
+A mithril helmet lies here.~
+armor
+mithril~
+9 9 9 9 0
+26 10 4633 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E mithril helmet~
+This helmet is smooth and reflects a distorted version of your face    
+perfectly as you gaze upon it.  The expertise required to forge such    
+a beautiful piece of armor from a lump of lifeless mithril boggles the     
+mind.    
+~
+
+#21557
+bubbling spring~
+a bubbling spring~
+A spring bubbles cheerfully here.~
+fountain
+stone~
+10000 10000 'water' 0 0
+33 2000 0 P
+LIMIT 0
+E bubbling spring~
+Welling noisily up through a large crack in the ground, this spring     
+appears to be very fresh, and very, very cold.    
+~
+
+#0
+
+
+
+#ROOMS
+#21504
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 21505 0 0
+~
+(desc)    
+~
+D EAST 0 0 0
+~
+(desc)    
+~
+D SOUTH 21503 0 0
+~
+(desc)    
+~
+D WEST 0 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21505
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 21506 0 0
+~
+(desc)    
+~
+D EAST 0 0 0
+~
+(desc)    
+~
+D SOUTH 21504 0 0
+~
+(desc)    
+~
+D WEST 0 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21506
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 21507 0 0
+~
+(desc)    
+~
+D EAST 23600 0 0
+~
+A dusty saloon lies to the east.    
+~
+D SOUTH 21505 0 0
+~
+(desc)    
+~
+D WEST 0 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21507
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 0 0 0
+~
+(desc)    
+~
+D EAST 0 0 0
+~
+(desc)    
+~
+D SOUTH 21506 0 0
+~
+(desc)    
+~
+D WEST 21514 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21514
+The Road to Dagdan~
+This is a wide dirt path made from moist, healthy soil.  It leads from    
+west to east, and is wide enough for ten men to walk abreast.  To the     
+south, the plains reach as far as the eye can see with no break save    
+for the West Dairein Road off to the east.  To the north, the dazzling    
+forest you've been gawking at is clear through the mist which seems    
+to envelop it.  The sound of strange birdcalls is audible, and you've    
+not heard their like anywhere else in the world...  To the northwest,     
+you can make out a cluster of buildings along the edge of the huge     
+forest.    
+~
+road
+D NORTH 0 0 0
+~
+A forest, made up of huge trees that dwarf most others you've seen,    
+lies only a couple of miles to the north.  A few buildings are nestled    
+on the edge of this forest.    
+~
+D EAST 21507 0 0
+~
+The road turns to the south up ahead.    
+~
+D SOUTH 0 0 0
+~
+Plains stretch on endlessly to the south.    
+~
+D WEST 21515 0 0
+~
+This wide path continues to the west.    
+~
+D DOWN 0 0 0
+~
+The soil here is remarkably soft.  It seems Dagdan's council has left    
+this road unpaved simply because of the fact that the springy turf is     
+a joy to walk on.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21515
+The Road to Dagdan~
+This is a wide dirt path made from moist, healthy soil.  It leads from    
+west to east, and is wide enough for ten men to walk abreast.  To the     
+south, the plains reach as far as the eye can see with no break save    
+for the West Dairein Road off to the east.  To the north, the dazzling    
+forest you've been gawking at is clear through the mist which seems    
+to envelop it.  The sound of strange birdcalls is audible, and you've    
+not heard their like anywhere else in the world...  To the northwest,     
+you can make out a cluster of buildings along the edge of the huge     
+forest.    
+~
+road
+D NORTH 0 0 0
+~
+A forest, made up of huge trees that dwarf most others you've seen,    
+lies only a couple of miles to the north.  A few buildings are nestled    
+on the edge of this forest.    
+~
+D EAST 21514 0 0
+~
+This wide path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Plains stretch on endlessly to the south.    
+~
+D WEST 21516 0 0
+~
+This wide path continues to the west.    
+~
+D DOWN 0 0 0
+~
+The soil here is remarkably soft.  It seems Dagdan's council has left    
+this road unpaved simply because of the fact that the springy turf is     
+a joy to walk on.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21516
+The Road to Dagdan~
+This is a wide dirt path made from moist, healthy soil.  It leads from    
+west to east, and is wide enough for ten men to walk abreast.  To the     
+south, the plains reach as far as the eye can see with no break save    
+for the West Dairein Road off to the east.  To the north, the dazzling    
+forest you've been gawking at is clear through the mist which seems    
+to envelop it.  The sound of strange birdcalls is audible, and you've    
+not heard their like anywhere else in the world...  To the northwest,     
+you can make out a cluster of buildings along the edge of the huge     
+forest.    
+~
+road
+D NORTH 0 0 0
+~
+A forest, made up of huge trees that dwarf most others you've seen,    
+lies only a couple of miles to the north.  A few buildings are nestled    
+on the edge of this forest.    
+~
+D EAST 21515 0 0
+~
+This wide path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Plains stretch on endlessly to the south.    
+~
+D WEST 21517 0 0
+~
+This wide path continues to the west.    
+~
+D DOWN 0 0 0
+~
+The soil here is remarkably soft.  It seems Dagdan's council has left    
+this road unpaved simply because of the fact that the springy turf is     
+a joy to walk on.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21517
+The Road to Dagdan~
+This is a wide dirt path made from moist, healthy soil.  It leads from    
+west to east, and is wide enough for ten men to walk abreast.  To the     
+south, the plains reach as far as the eye can see with no break save    
+for the West Dairein Road off to the east.  To the north, the dazzling    
+forest you've been gawking at is clear through the mist which seems    
+to envelop it.  The sound of strange birdcalls is audible, and you've    
+not heard their like anywhere else in the world...  To the northwest,     
+you can make out a cluster of buildings along the edge of the huge     
+forest.    
+~
+road
+D NORTH 0 0 0
+~
+A forest, made up of huge trees that dwarf most others you've seen,    
+lies only a couple of miles to the north.  A few buildings are nestled    
+on the edge of this forest.    
+~
+D EAST 21516 0 0
+~
+This wide path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Plains stretch on endlessly to the south.    
+~
+D WEST 21518 0 0
+~
+This wide path continues to the west.    
+~
+D DOWN 0 0 0
+~
+The soil here is remarkably soft.  It seems Dagdan's council has left    
+this road unpaved simply because of the fact that the springy turf is     
+a joy to walk on.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21518
+The Road to Dagdan~
+This is a wide dirt path made from moist, healthy soil.  It leads from    
+west to east, and is wide enough for ten men to walk abreast.  To the     
+south, the plains reach as far as the eye can see with no break save    
+for the West Dairein Road off to the east.  To the north, the dazzling    
+forest you've been gawking at is clear through the mist which seems    
+to envelop it.  The sound of strange birdcalls is audible, and you've    
+not heard their like anywhere else in the world...  To the northwest,     
+you can make out a cluster of buildings along the edge of the huge     
+forest.    
+~
+road
+ROOM NO_MOB
+D NORTH 0 0 0
+~
+A forest, made up of huge trees that dwarf most others you've seen,    
+lies only a couple of miles to the north.  A few buildings are nestled    
+on the edge of this forest.    
+~
+D EAST 21517 0 0
+~
+This wide path continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Plains stretch on endlessly to the south.    
+~
+D WEST 21519 0 0
+~
+The road turns north up ahead.    
+~
+D DOWN 0 0 0
+~
+The soil here is remarkably soft.  It seems Dagdan's council has left    
+this road unpaved simply because of the fact that the springy turf is     
+a joy to walk on.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21519
+A Turn~
+Here, the road to Dagdan bends from north to east and from east to     
+north.  This area is covered with cobblestones, and as you look to    
+the north, they continue on toward a cluster of buildings to that    
+direction -- presumably Dagdan itself.  The street ends here, and    
+to the south and west stretch endless plains.  Off in the east, you    
+see West Dairein Road, and beyond the city to the north is a vast    
+forest, nearly covering the horizon in that direction.  There's a    
+very strange warbling sound in the air all around you...    
+~
+road
+D NORTH 21520 0 0
+~
+The cobblestones continue to the north.    
+~
+D EAST 21518 0 0
+~
+A wide dirt path runs off into the east.    
+~
+D SOUTH 0 0 0
+~
+Plains stretch on endlessly to the south.    
+~
+D WEST 0 0 0
+~
+Plains stretch on endlessly to the west.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21520
+The Road to Dagdan~
+This fine cobblestone street leads north and south, through the heart    
+of the great plains of the northwest.  To the north, the amazing Giant     
+Forest becomes clearer and clearer in the distance through the mists     
+which enshroud it, and the tiny town it nearly encircles seems     
+friendly enough.  Certainly, it's a welcome place to rest your tired     
+feet.  To the south, spreading out in every direction, a sprawling     
+plain interrupted by only a tiny cobblestone avenue -- the one you're     
+on.    
+~
+road
+D NORTH 21521 0 0
+~
+The cobblestones continue to the north.    
+~
+D EAST 0 0 0
+~
+Plains stretch on endlessly to the east, along the edge of the forest     
+to the north.    
+~
+D SOUTH 21519 0 0
+~
+The cobblestones end south of here, and there is a bend in the path.    
+~
+D WEST 0 0 0
+~
+Plains stretch on endlessly to the west, along the edge of the forest    
+to the north.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21521
+The Road to Dagdan~
+This fine cobblestone street leads north and south, through the heart    
+of the great plains of the northwest.  To the north, the amazing Giant     
+Forest becomes clearer and clearer in the distance through the mists     
+which enshroud it, and the tiny town it nearly encircles seems     
+friendly enough.  Certainly, it's a welcome place to rest your tired     
+feet.  To the south, spreading out in every direction, a sprawling     
+plain interrupted by only a tiny cobblestone avenue -- the one you're     
+on.    
+~
+road
+D NORTH 21522 0 0
+~
+The cobblestones continue to the north.    
+~
+D EAST 0 0 0
+~
+Plains stretch on endlessly to the east, along the edge of the forest     
+to the north.    
+~
+D SOUTH 21520 0 0
+~
+The cobblestones continue to the south.    
+~
+D WEST 0 0 0
+~
+Plains stretch on endlessly to the west, along the edge of the forest    
+to the north.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21522
+The Road to Dagdan~
+This fine cobblestone street leads north and south, through the heart    
+of the great plains of the northwest.  To the north, the amazing Giant     
+Forest becomes clearer and clearer in the distance through the mists     
+which enshroud it, and the tiny town it nearly encircles seems     
+friendly enough.  Certainly, it's a welcome place to rest your tired     
+feet.  To the south, spreading out in every direction, a sprawling     
+plain interrupted by only a tiny cobblestone avenue -- the one you're     
+on.    
+~
+road
+D NORTH 21523 0 0
+~
+The cobblestones continue to the north.    
+~
+D EAST 0 0 0
+~
+Plains stretch on endlessly to the east, along the edge of the forest     
+to the north.    
+~
+D SOUTH 21521 0 0
+~
+The cobblestones continue to the south.    
+~
+D WEST 0 0 0
+~
+Plains stretch on endlessly to the west, along the edge of the forest    
+to the north.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21523
+The Road to Dagdan~
+This fine cobblestone street leads north and south, through the heart    
+of the great plains of the northwest.  To the north, the amazing Giant     
+Forest becomes clearer and clearer in the distance through the mists     
+which enshroud it, and the tiny town it nearly encircles seems     
+friendly enough.  Certainly, it's a welcome place to rest your tired     
+feet.  To the south, spreading out in every direction, a sprawling     
+plain interrupted by only a tiny cobblestone avenue -- the one you're     
+on.    
+~
+road
+D NORTH 21524 0 0
+~
+Just up ahead, a large painted sign stands next to the road.    
+~
+D EAST 0 0 0
+~
+Plains stretch on endlessly to the east, along the edge of the forest     
+to the north.    
+~
+D SOUTH 21522 0 0
+~
+The cobblestones continue to the south.    
+~
+D WEST 0 0 0
+~
+Plains stretch on endlessly to the west, along the edge of the forest    
+to the north.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E forest~
+The forest, shrouded mostly in mist, appears to be absolutely     
+breathtaking in sheer size, even from this distance.    
+~
+E buildings~
+A small cluster of buildings, all constructed from the same reddish-    
+colored wood, are huddled together in the shadow of the monstrous     
+forest to the north.    
+~
+#21524
+The Gate to the Great Northwest~
+On the very outskirts of Dagdan, you encounter a huge sign painted     
+in mostly gold and silver which reads:    
+    
+"Welcome to Dagdan, the Gate to the Great Northwest."    
+    
+Just down the street to the north, the tiny town of Dagdan sits,     
+nearly devoured by the Giant Forest beyond it.  The town is close     
+enough that you can make out every detail, and yet it is this forest    
+which dominates your field of view.  It towers above the town and     
+looms like a titanic predatory animal ready to descend and crush the    
+infinite plains to your south.  You are still well beyond its reach,    
+and yet it seems to curve through the air above you and soar so far    
+into the air directly above you, that you stumble backwards glimpsing    
+the tops of these impossibly tall trees.    
+~
+road
+ROOM NO_MOB
+D NORTH 21525 0 0
+~
+Dagdan itself is just beyond this sign, to the north.    
+~
+D EAST 21558 0 0
+~
+A small grassy path leads to the east from here.    
+~
+D SOUTH 21523 0 0
+~
+The cobblestones continue to the south.    
+~
+D WEST 0 0 0
+~
+Plains stretch on endlessly to the west, along the edge of the forest    
+to the north.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E sign~
+This sign is over ten feet high, and sprawls at least twenty feet     
+across... you sense that Dagdan is ridiculously proud of their being    
+the Gate to the Great Northwest.    
+~
+#21525
+Dagdan's South Gate~
+This collection of shops and streets forms a quaint little town, and     
+its setting is one of the most dramatic in Thera -- right on the brink     
+of the Giant Forest.  Those trees stand like sentinels over this tiny     
+settlement, and the trade done here all takes place within their     
+shadow.  If a traveler has just arrived, he's either come from the     
+forest to the north or the plains to the south, and in need of     
+significant rest.  If he's leaving, he's on his way to one of those,     
+and this tradepost of a city exists to provide him with supplies for    
+the long journey ahead.    
+~
+city
+D NORTH 21526 0 0
+~
+The cobblestones lead further into Dagdan.    
+~
+D EAST 0 0 0
+~
+The edge of this tiny town reaches to your east.    
+~
+D SOUTH 21524 0 0
+~
+The cobblestones lead out of Dagdan.    
+~
+D WEST 0 0 0
+~
+The edge of this tiny town reaches to your west.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21526
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.    
+~
+city
+D NORTH 21529 0 0
+~
+The cobblestones lead further into Dagdan.    
+~
+D EAST 21527 0 0
+~
+A small grassy area lies to the east.    
+~
+D SOUTH 21525 0 0
+~
+The cobblestones lead to the South Gate.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21527
+A Grassy Spot~
+This area holds many small plants and flowers, but is covered mainly     
+by beautifully maintained grass.  There must be someone in town with a     
+great love for plants, and knowledge enough to cause them to thrive in     
+a city setting.  This place would be ideal for rest, or for simple     
+contemplation.    
+~
+field
+D NORTH 21528 0 0
+~
+This grassy patch extends to the north.    
+~
+D WEST 21526 0 0
+~
+Tree Road is to the west.    
+~
+D UP 0 0 0
+~
+The grass below you is a lush green color, and smells like spring    
+year-round.  It looks as though it would be terribly comfortable    
+between your toes.    
+~
+D DOWN 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+E plants flowers~
+Quite a few plants and flowers line this entire area.    
+~
+#21528
+A Grassy Spot~
+This area holds many small plants and flowers, but is covered mainly     
+by beautifully maintained grass.  There must be someone in town with a     
+great love for plants, and knowledge enough to cause them to thrive in     
+a city setting.  This place would be ideal for rest, or for simple     
+contemplation.    
+~
+field
+D SOUTH 21527 0 0
+~
+This grassy patch extends to the south.    
+~
+D WEST 21529 0 0
+~
+Tree Road is to the west.    
+~
+D UP 0 0 0
+~
+The grass below you is a lush green color, and smells like spring    
+year-round.  You are suddenly seized by a childish desire to take your     
+shoes off and feel this grass on your feet for a while...    
+~
+D DOWN 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+E plants flowers~
+Quite a few plants and flowers line this entire area.    
+~
+#21529
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.    
+~
+city
+D NORTH 21531 0 0
+~
+The cobblestones lead further into Dagdan.    
+~
+D EAST 21528 0 0
+~
+A small grassy area lies to the east.    
+~
+D SOUTH 21526 0 0
+~
+The cobblestones lead south through town.    
+~
+D WEST 21530 0 0
+~
+A spring splashes noisily to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21530
+A Noisy Spring~
+The water streaming from a crack in the ground here is ice cold.      
+Rocks, stones, and pebbles of all sizes litter the ground, and all    
+have been worn completely smooth by centuries of uninterrupted passage    
+of water.  Animal tracks lead from this spot out into the plains to     
+the south, as though to occasional prairie animal -- made bold by    
+its need for water -- comes here to drink.    
+~
+field
+D NORTH 0 0 0
+~
+To the north, a small patch of shrubs lies between you and Dagdan.    
+~
+D EAST 21529 0 0
+~
+Tree Road is to the east.    
+~
+D SOUTH 0 0 0
+~
+South of here, the endless plains stretch on and on.    
+~
+D WEST 0 0 0
+~
+West of here, the endless plains stretch on and on along the south    
+edge of the Giant Forest.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21531
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  A     
+large ornate door is in a building to your west, and you stand in the     
+southwestern corner of a small square.    
+~
+city
+D NORTH 21533 0 0
+~
+The cobblestones lead further into Dagdan.    
+~
+D EAST 21526 0 0
+~
+The southeastern corner of Dagdan's main square lies east.    
+~
+D SOUTH 21529 0 0
+~
+The cobblestones lead south through town.    
+~
+D WEST 21532 AB 0
+a large ornate door~
+A large ornate door lies to the west, in a large ornate building.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+E a large ornate door~
+This door is forged from solid iron, and is nearly half a foot thick.    
+Engraved upon its outer surface is the crest of Dagdan.    
+~
+E crest~
+A large face, divided down the middle by a straight line.  One half is    
+twisted into an eternal smirk, while the other seems to be pleading    
+the viewer for something...    
+~
+#21532
+The Mayor's Home~
+This is Baram Evir's private dwelling, inhabited usually only during     
+the evenings.  When Baram isn't here, he's out greeting travelers and    
+seeing to the enforcement of his anti-outlaw plan.  Nearly everything    
+in this room is of the highest quality, constructed of the most     
+expensive materials imaginable.  Trade, and the constant flow of     
+business in travelers coming through, has obviously been good to     
+Dagdan and it's mayor.  The room consists of a desk in the center     
+with a large chair behind it.  Several bookshelves line each wall,     
+and a small bed is in the northwest corner next to a fireplace.    
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The huge obsidian fireplace looms to the north.    
+~
+D EAST 21531 AB 0
+a large ornate door~
+A large ornate door leads back out to Tree Road.    
+~
+D SOUTH 0 0 0
+~
+The south wall is covered by exotic paintings of rare beasts and    
+famous events.    
+~
+D WEST 0 0 0
+~
+The western wall of this room is home to the largest of the mayor's    
+bookshelves.    
+~
+D UP 0 0 0
+~
+A chandelier nearly half the size of the room dangles from a cathedral    
+ceiling.  The intricate system of crystals looks like a huge and     
+intensely complex snowflake.    
+~
+D DOWN 0 0 0
+~
+A rug of the sort woven overseas to the northwest covers the floor of    
+this room.  Its multi-hued surface is a deep plush weave, and soft    
+to the touch.    
+~
+E large ornate door~
+This door is forged from solid iron, and is nearly half a foot thick.    
+Engraved upon its inner surface is a face, divided in half by a     
+straight line.    
+~
+E desk~
+Baram's desk is kept neat and tidy, only a few papers and writing     
+implements litter its surface.    
+~
+E papers~
+The paper on top is a chart showing Dagdan's growth in trade, and the    
+status of its economy as more and more business moves through it.  One    
+of the papers you can make out beneath it suggests that Baram has     
+begun considering new business and other dealings in order to take     
+advantage of Dagdan's blossoming reputation while it still grows.    
+~
+E bookshelves bookshelf books~
+The mayor of Dagdan is apparently an avid reader.  Books on every     
+topic imaginable grace these shelves, ranging from Imperial propaganda    
+literature to outdoors survival tips.  A few books bound in green     
+catch your eye, entitled "The Volumes of the Talim."    
+~
+E volumes talim green~
+These green-bound books are very worn, as though they are handled and    
+perused fairly often... and yet, flipping through them, you see that     
+their pages are all blank.    
+~
+E bed~
+A spartan place to sleep, make no mistake.  The sheets cover a hard    
+wooden frame with little to no padding.    
+~
+E chair~
+This large chair is actually made of fine leather cushions.  Its     
+handiwork is marvelous, and should you dare to sit in it, it is also    
+one of the most comfortable chairs in the world for one of human size.    
+~
+E fireplace~
+Made of rock the color of obsidian, this huge fireplace is    
+monolithic and intimidating in its place in the room.    
+~
+#21533
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  You     
+stand in the northwest corner of a small marketplace, and the sound    
+of metal striking metal grates upon your ears, flying from the north.    
+~
+city
+ROOM NO_MOB
+D NORTH 21534 0 0
+~
+A blacksmith's shop lies north of you.    
+~
+D EAST 21537 0 0
+~
+The northeastern corner of Dagdan's main square lies east.    
+~
+D SOUTH 21531 0 0
+~
+The cobblestones lead south through town.    
+~
+D WEST 21559 0 0
+~
+The cobblestones lead west through town.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21534
+Tarni's Smithy~
+This humble shop houses some of the most beautifully rendered mithril    
+armor in Thera.  Its owner must be amazingly skilled in the art of    
+mithril smithing.  Lined against one wall are stacks and piles of     
+breastplates, shining in the sun which filters through the shop's     
+straw roof.  Against the opposite wall, helmets and gauntlets,     
+leggings and sleeves are all lovingly mounted and displayed.  As you    
+step through the center of the shop, you see a desk of sorts     
+separating the front of the shop from the back, and an open door     
+behind it leading into the work room.    
+~
+inside
+ROOM INDOORS
+D NORTH 21535 A 0
+a small door~
+A small door leads through to back room of Tarni's humble shop.    
+~
+D SOUTH 21533 0 0
+~
+Tree Road lies to the south.    
+~
+D DOWN 0 0 0
+~
+Parts of the floor creak violently as you walk through here.    
+~
+E stacks piles breastplates~
+Some small enough for a gnome, some large enough for a fire giant,     
+these breastplates are all beautifully smooth and sculpted, some even    
+engraved with intricate designs, and no two alike.    
+~
+E helmets gauntlets leggings sleeves~
+The faces of shining mithril helms stare back at you from this side of    
+the shop, displayed along with etched mithril gauntlets, leggings made    
+of several plates apiece, and sleeves which look as though they weigh    
+as much as a feather but would stop a steel sword in mid-swing.    
+~
+#21535
+The Back Room~
+This room is much, much warmer than the front of Tarni's shop.  The     
+main reason for that is likely the forge which burns merrily in a     
+corner.  Huge blocks of mithril litter the floor here, varying in size    
+and shape, and in eventual purpose.  Tools of all sorts for     
+manipulating the glowing heated mithril the forge produces daily are    
+hanging on the wall.  To the south, a door leads back into the main     
+shop.    
+~
+inside
+ROOM INDOORS
+D SOUTH 21534 A 0
+a small door~
+A small door leads back into Tarni's main room.    
+~
+E blocks mithril~
+Mithril, normally very shiny when used to construct anything, is     
+actually very dull in its natural state.  These blocks seem to absorb    
+the light in the room and almost glow softly, though they reflect     
+little without a fine polish.    
+~
+E forge~
+This massive iron is kept clean, and burning hot at all times of the     
+day.    
+~
+E tools~
+Hammers, pliers, large implements used to panel beat mithril into a     
+flat shape, brushes, rags, different creams and powders... all these     
+and more ornament the walls of this room.    
+~
+#21536
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  You     
+stand in the southeast corner of a small marketplace, and gentle     
+lilting music throbs and swells through the air, coming from the     
+east.    
+~
+city
+ROOM NO_MOB
+D NORTH 21540 0 0
+~
+The northeast corner of Dagdan's square lies in this direction.    
+~
+D EAST 21538 0 0
+~
+Music wafts in from this direction.    
+~
+D WEST 21531 0 0
+~
+The southwest corner of Dagdan's square lies in this direction.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21537
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  You     
+stand in the northeast corner of a small marketplace.  To the east,    
+you see a dark area of the street.    
+~
+city
+D EAST 21539 0 0
+~
+A dark corner is to the east.    
+~
+D SOUTH 21536 0 0
+~
+The southeast corner of Dagdan's square lies in this direction.    
+~
+D WEST 21533 0 0
+~
+The northwest corner of Dagdan's square lies in this direction.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21538
+The Wooden Porch~
+This is the front porch of Norman's Inn, a well-known establishment    
+in this part of the world for its beer, its hospitality, and for its    
+music and entertainment.  This wooden platform has housed performances     
+of nearly every recently popular tragedy, and the finest composers'     
+tunes all reach this stage eventually.  To the east, Norman's Inn     
+beckons, and to the west is Dagdan's marketplace.  North, you see a     
+darker part of the street.    
+~
+city
+D NORTH 21539 0 0
+~
+A dark corner is to the north.    
+~
+D EAST 21545 0 0
+~
+An inn lies to the east.    
+~
+D WEST 21536 0 0
+~
+The southeast corner of Dagdan's square lies in this direction.    
+~
+E porch wooden stage platform~
+This sturdily constructed platform is made of wood from the Giant     
+Forest.  It seems to have been put together rather recently, though    
+you're sure that's simply the quality of the wood causing it to last    
+beautifully.  It smells and looks fresh, though the scuff marks on its    
+surface tell of the enormous amount of traffic through here.    
+~
+#21539
+A Dark Corner~
+This is one place where Tree Road comes to an end.  Dark and     
+foreboding, the corner of this area of the city is likely where the     
+criminal element spends much of its time...  A distinctly cold breeze    
+rushes down through the leaves of the Giant Forest and along an     
+alleyway to the north.  By the time this air reaches you, it already     
+seems stale and lifeless.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21540 0 0
+~
+An even darker alley is visible in this direction...    
+~
+D SOUTH 21538 0 0
+~
+Music drifts in from the south.    
+~
+D WEST 21537 0 0
+~
+The northeast corner of Dagdan's square is in this direction.     
+~
+#21540
+A Dark Alley~
+The ground here is slick, like rocks on the shore of a stagnant     
+body of water.  A musty, damp smell that is altogether unpleasant    
+drifts through here, and you nearly gag as this odor assaults your    
+senses.  It is here of all places, a damp and dark hole of utter    
+displeasure, that a svirf peddler has chosen in which to show his    
+wares.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21565 0 0
+~
+The darkness continues into the alley.    
+~
+D SOUTH 21539 0 0
+~
+The slightly lighter dark corner lies to the south.    
+~
+D DOWN 0 0 0
+~
+Some of the stones in the road here seem loose, and clatter and grind    
+against each other as you walk about.  Shoddy worksmanship.    
+~
+#21541
+A Dark Junction~
+The ground here is slick, like rocks on the shore of a stagnant     
+body of water.  A musty, damp smell that is altogether unpleasant    
+drifts through here, and you nearly gag as this odor assaults your    
+senses.  The darkness is nearly overwhelming, and the only light you    
+can see is being reflected from the street by the slimy surface of the     
+cobblestones.  Here, the alley makes a T-intersection.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 21543 0 0
+~
+The darkness continues into the alley.    
+~
+D SOUTH 21565 0 0
+~
+The darkness continues into the alley.    
+~
+D WEST 21542 0 0
+~
+The darkness continues into the alley.    
+~
+#21542
+A Dark Alley~
+The ground here is slick, like rocks on the shore of a stagnant     
+body of water.  A musty, damp smell that is altogether unpleasant    
+drifts through here, and you nearly gag as this odor assaults your    
+senses.  The darkness is nearly overwhelming, and the only light you    
+can see is being reflected from the street by the slimy surface of the     
+cobblestones.  The alley ends abruptly here, and you don't doubt that    
+if you couldn't see by your own means, you would have met the wall to    
+the west rather bodily.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 21541 0 0
+~
+The darkness continues into the alley toward a T-crossing.    
+~
+#21543
+The Entrance to the Assassins' Guild~
+The darkness continues here, and the sounds of dripping water are the     
+only ones audible.  Peering to the east, you can barely distinguish a    
+few dark forms slipping back and forth.  To the west, the dark     
+alleyway.  A musty smell hangs in the air, and you feel as though     
+there is movement all around.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 21544 0 0
+~
+The assassin's guild lies to the east.    
+~
+D WEST 21541 0 0
+~
+The darkness continues into the alley.    
+~
+#21544
+The Dark Spot~
+Dark as the Devil's back pocket, this spot is rumored to be the place    
+where the most hated assassins, mercenaries, and bounty hunters     
+in the world congregate to compare winnings and to plot with and     
+against one another.  More schemes have been hatched here than     
+anywhere else.  The wall is lined with the sharp and exotic implements    
+of silent warfare.  In fact, the entire room seems to be bristling     
+with venomous blades... and yet, no one seems to worry.  The assassins    
+whispering their quiet way across the floor like ghosts pay no     
+attention to the blades, simply gracefully slipping from place to     
+place around and between the piles and stacks of deadly metals.    
+~
+inside
+ROOM INDOORS
+ROOM SAFE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 21543 0 0
+~
+Nothing but darkness lies out in the alley.    
+~
+#21545
+The Southern Commons~
+This is the southern end of a huge hall, the main room of Norman's     
+Inn.  Mounted on the wall is a large friendly sign.  Norman's     
+customers mill around like ants here, conversing with gratuitous     
+volume and examining the items they've purchased today in Dagdan's    
+many shops and markets.  Hanging from the ceiling, you see a large     
+wagon wheel studded with magical orbs of continually glowing light,    
+illuminating the room at all times of the day.  It appears that this    
+wheel can be turned, obscuring as many of the orbs as seems necessary    
+behind a wooden panel in order to dim the room's lighting.  A     
+fireplace crackles merrily at one end of the room, and paintings line     
+every possible vertical surface.    
+~
+inside
+ROOM INDOORS
+D NORTH 21546 0 0
+~
+The northern part of the common room is this way.    
+~
+D EAST 21550 0 0
+~
+The back room of the inn is to the east.    
+~
+D WEST 21538 0 0
+~
+Music drifts in from this direction.    
+~
+E sign~
+This sign is a large piece of driftwood with the following words     
+scorched into its surface by some sort of burning tool:    
+    
+-NORMAN'S INN-    
+~
+E fireplace~
+Made of grey and red stones mortared together with a black material,    
+this fireplace provides tremendous heat to the room.  Along the wall,    
+you see a system of long, perfectly constructed mithril piping (likely     
+provided by the town's mithril smith).  This fireplace must generate     
+heat for the entire inn.    
+~
+E paintings~
+Along the walls in this room are paintings of various events and     
+people.  One large one of the mayor of Dagdan hangs right over the    
+fireplace, and another, a landscape portrait of the Giant Forest,    
+is over the entrance to the Inn.  Most of the rest of the portraits    
+and paintings are unfamiliar to you.  Some of them include depictions     
+of a large battle in what appears to be New Thalos, a small greyish     
+man, and a large face divided down its center.    
+~
+#21546
+The Northern Commons~
+This is the northern end of a huge hall, the main room of Norman's     
+Inn.  Norman's customers mill around like ants here, conversing with     
+gratuitous volume and examining the items they've purchased today in     
+Dagdan's many shops and markets.  Hanging from the ceiling, you see a     
+large wagon wheel studded with magical orbs of continually glowing     
+light, illuminating the room at all times of the day.  It appears that     
+this wheel can be turned, obscuring as many of the orbs as seems     
+necessary behind a wooden panel in order to dim the room's lighting.    
+To the north, you can spot a man that could only be Norman himself.    
+~
+inside
+ROOM INDOORS
+D NORTH 21547 0 0
+~
+The innkeeper's bar is to the north.    
+~
+D SOUTH 21545 0 0
+~
+The southern part of the commons room is this way.    
+~
+#21547
+Norman's Bar~
+A bar larger than any you've seen graces the northwest area of this     
+room, obviously the centerpiece of this entire floor.  Fully thirty     
+feet long, its expansive surface seats as many as fifteen men or six    
+giants.  Behind, Norman stalks back and forth grinning evilly and     
+swapping evil jokes, and a cabinet -- also thirty feet long -- holds    
+the most amazing amount of liquor you've ever seen collected.  Loud    
+men drink and shout, and women scurry back and forth to serve those     
+patrons who have seated themselves in the common room.  Judging by    
+the food they carry, there must be a grill behind the bar as well, but    
+it is entirely obscured by either the drunkards, the immense liquor    
+cabinet, or Norman himself.    
+~
+inside
+ROOM INDOORS
+D EAST 21548 0 0
+~
+Some stairs are to the east.    
+~
+D SOUTH 21546 0 0
+~
+The northern commons lie this direction.    
+~
+D DOWN 0 0 0
+~
+Parts of the floor creak violently as you walk through here.    
+~
+E bar~
+This thirty foot long bar is made of finely polished red wood, and its    
+surface remains remarkably stain free.    
+~
+E cabinet liquor~
+The long, long cabinet behind the bar is covered with glass and bound    
+with an intricate mithril lock.  Norman keeps his liquor safe.    
+~
+#21548
+The Inn's Stairwell~
+A large wooden staircase leads up to the second level of Norman's Inn.    
+The entire Inn is made of beautiful timberframe construction, and     
+these stairs are an amazing example of that.  Reddish wood from the     
+Giant Forest to the north tightly panels the walls and the high     
+ceiling, and makes up the stairs and railings.  Support struts,     
+seemingly more for decoration than any structural purpose, add to the     
+strange beauty of this simple spiral stairwell.  The red wood has a    
+wonderful, sweet smell to it, and this smell permeates the whole Inn.    
+~
+inside
+ROOM INDOORS
+D WEST 21547 0 0
+~
+The bar is to the west.    
+~
+D UP 21549 0 0
+~
+The inn's second floor bedrooms lie up these stairs.    
+~
+#21549
+Upstairs Hall~
+A large wooden staircase leads down to the ground level of Norman's     
+Inn.  The entire Inn is made of beautiful timberframe construction,     
+and these stairs are an amazing example of that.  Reddish wood from     
+the Giant Forest to the north tightly panels the walls and the high     
+ceiling, and makes up the stairs and railings.  Support struts,     
+seemingly more for decoration than any structural purpose, add to the     
+strange beauty of this simple spiral stairwell.  The red wood has a    
+wonderful, sweet smell to it, and this smell permeates the whole Inn.    
+To the east and west, doors made of this scented wood lead to separate    
+private rooms.    
+~
+inside
+ROOM INDOORS
+D EAST 21594 AB 0
+a door~
+A private room lies in this direction.    
+~
+D WEST 21595 AB 0
+a door~
+A private room lies in this direction.    
+~
+D DOWN 21548 0 0
+~
+The stairs lead back down to the ground floor.    
+~
+#21550
+The Inn's Storage Room~
+This area of the Inn seems to be where Norman stores his extra beer     
+and other supplies.  A stack of chairs here, a pile of mugs there,     
+this room is a large jumble of the makings of an inn and could likely    
+furnish an entire separate inn, should Norman someday be inclined to    
+expand his operation.  There are no windows in this room, and the red    
+wooden walls smell like the Giant Forest.  Thera's largest beer keg     
+stands against the southern wall.    
+~
+inside
+ROOM INDOORS
+D SOUTH 21551 ABI 0
+the hidden door~
+A door is partially obscured behind Thera's largest beer keg.    
+~
+D WEST 21545 0 0
+~
+The southern part of the commons is this way.    
+~
+E thera's largest beer keg~
+This gigantic beer keg could hold the biggest, meanest fire giant in    
+Thera if it had to.  Made of the same red wood as the rest of this     
+inn, it stands at least twenty feet tall and its top scratches the    
+high ceiling.  You doubt Norman ever has a need to move it.  Working    
+your way around the edge of this virtual man-made ocean of beer, you    
+can make out a door on the far side, on the south wall of the room.    
+~
+#21551
+A Grassy Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  To the north, Norman's Inn beckons.  No fence stands     
+between you and the plains to the south and east -- simply the     
+buildings of Dagdan and a few trees on one side, endless plains on the     
+other.  Staring out at the plains, it's easy to feel very small and     
+lost...    
+~
+field
+ROOM NO_MOB
+D NORTH 21550 AB 0
+the door~
+A door leads into Norman's Inn.    
+~
+D EAST 0 0 0
+~
+The endless plains stretch east from Dagdan along the southern edge    
+of the forest to the north.    
+~
+D SOUTH 21552 0 0
+~
+The grassy trail continues to the south.    
+~
+D WEST 0 0 0
+~
+The backsides of a few buildings are to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21552
+A Grassy Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  No fence stands between you and the plains to the south     
+and east -- simply the buildings of Dagdan and a few trees on one     
+side, endless plains on the other.  Staring out at the plains, it's     
+easy to feel very small and lost...    
+~
+field
+D NORTH 21551 0 0
+~
+The grassy trail continues to the north.    
+~
+D EAST 0 0 0
+~
+The endless plains stretch east from Dagdan along the southern edge    
+of the forest to the north.    
+~
+D SOUTH 21553 0 0
+~
+The grassy trail continues to the south.    
+~
+D WEST 0 0 0
+~
+The backsides of a few buildings are to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21553
+A Grassy Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  No fence stands between you and the plains to the south     
+and east -- simply the buildings of Dagdan and a few trees on one     
+side, endless plains on the other.  Staring out at the plains, it's     
+easy to feel very small and lost...    
+~
+field
+D NORTH 21552 0 0
+~
+The grassy trail continues to the north.    
+~
+D EAST 0 0 0
+~
+The endless plains stretch east from Dagdan along the southern edge    
+of the forest to the north.    
+~
+D SOUTH 21554 0 0
+~
+The grassy trail continues to the south toward a corner.    
+~
+D WEST 0 0 0
+~
+The backsides of a few buildings are to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21554
+A Corner on the Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  No fence stands between you and the plains to the south     
+and east -- simply the buildings of Dagdan and a few trees on one     
+side, endless plains on the other.  Here, the trail runs west toward    
+the road and north toward the Inn.  Staring out at the plains, it's     
+easy to feel very small and lost...    
+~
+field
+D NORTH 21553 0 0
+~
+The grassy trail continues to the north.    
+~
+D EAST 0 0 0
+~
+The endless plains stretch east from Dagdan along the southern edge    
+of the forest to the north.    
+~
+D SOUTH 0 0 0
+~
+Endless plains stretch on to the south.    
+~
+D WEST 21555 0 0
+~
+The grassy trail continues to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the hanging     
+above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21555
+A Grassy Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  No fence stands between you and the plains to the south     
+and east -- simply the buildings of Dagdan and a few trees on one     
+side, endless plains on the other.  Staring out at the plains, it's     
+easy to feel very small and lost...    
+~
+field
+D NORTH 0 0 0
+~
+The few small buildings to the north seem insignificant in front of    
+the Giant Forest...    
+~
+D EAST 21554 0 0
+~
+The grassy trail continues to the east toward a corner.    
+~
+D SOUTH 0 0 0
+~
+Endless plains stretch on to the south.    
+~
+D WEST 21556 0 0
+~
+The grassy trail continues to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21556
+A Grassy Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  A small pile of brush lies here on the trail.  No fence     
+stands between you and the plains to the south and east -- simply the     
+buildings of Dagdan and a few trees on one side, endless plains on the     
+other.  Staring out at the plains, it's easy to feel very small and     
+lost...    
+~
+field
+D NORTH 21557 AB 0
+a pile of brush~
+A small pile of brush can be pushed aside...    
+~
+D EAST 21555 0 0
+~
+The grassy trail continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Endless plains stretch on to the south.    
+~
+D WEST 21558 0 0
+~
+The grassy trail continues to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21557
+Behind the Brush~
+A tiny clearing between a few trees north of a trail, this dark area    
+is buzzing with tiny gnats.  The earth is moist, and seems unusually    
+soft.  The smells of earth and sweet wood are almost overwhelming.    
+~
+field
+D SOUTH 21556 AB 0
+a pile of brush~
+Through the brush, a trail is visible to the south.    
+~
+#21558
+A Grassy Trail~
+Outside the city, this grassy trail leads through the serene outskirts     
+of Dagdan between Norman's Inn and the road outside town.  South     
+and east of here, the expansive plains of the northwest stretch on to     
+the horizon.  No fence stands between you and the plains to the south     
+and east -- simply the buildings of Dagdan and a few trees on one     
+side, endless plains on the other.  Staring out at the plains, it's     
+easy to feel very small and lost...    
+~
+field
+D NORTH 0 0 0
+~
+The few small buildings to the north seem insignificant in front of    
+the Giant Forest...    
+~
+D EAST 21556 0 0
+~
+The grassy trail continues to the east.    
+~
+D SOUTH 0 0 0
+~
+Endless plains stretch on to the south.    
+~
+D WEST 21524 0 0
+~
+A road lies to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+#21559
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  The     
+sound of chattering women nearly deafens you, charging from the north.    
+~
+city
+D NORTH 21560 0 0
+~
+The chattering women seem to be to the north.    
+~
+D EAST 21533 0 0
+~
+The cobblestones lead east through town.    
+~
+D WEST 21561 0 0
+~
+The cobblestones lead west through town.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21560
+Pzandra's Smithy~
+Dank and dreary, poor lighting dooms this shop to little business.    
+A few works of iron are scattered around the floor, and the small     
+forge in the corner sits cold and unused like a sleeping mammoth.      
+Examining the iron strewn about the shop, you realize what an ugly    
+metal it is... dusty and dull, poorly shaped and constructed,     
+Pzandra's items aren't worth real money.  The noise in this shop is    
+loud and obnoxious, but it isn't what you might expect -- the sound    
+of metal striking metal is mysteriously absent.  Instead, shrill     
+voices chatter and gossip late into the night every day...    
+~
+inside
+ROOM INDOORS
+D SOUTH 21559 0 0
+~
+Tree Road lies to the south.    
+~
+D DOWN 0 0 0
+~
+Parts of the floor creak violently as you walk through here.    
+~
+#21561
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  The    
+stench of death wafts in from the north, and the perfume of life from     
+the south.    
+~
+city
+D NORTH 21562 0 0
+~
+Something reeks horribly to the north.    
+~
+D EAST 21559 0 0
+~
+The cobblestones lead east through town.    
+~
+D SOUTH 21563 0 0
+~
+Something smells pleasant to the south.    
+~
+D WEST 21564 0 0
+~
+The cobblestones lead west through town.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21562
+The Butcher Shop~
+This establishment is not kept clean.  That much is evident as you     
+nearly slip and fall in a pool of animal blood near the door.  This    
+town's butcher is apparently an over-enthusiastic fellow... the walls    
+are spattered with blood, and in some places, even the ceiling is     
+spotted with the dried, dark red substance.  Despite the horrible    
+conditions, the cuts of meat seem well carved, and have been wrapped    
+to prevent flies from getting to them.  Enthusiasm is to be lauded,    
+at least...    
+~
+inside
+ROOM INDOORS
+D SOUTH 21561 0 0
+~
+Tree Road lies to the south.    
+~
+D DOWN 0 0 0
+~
+Parts of the floor creak violently as you walk through here.    
+~
+#21563
+The Little Vale~
+Plants and pots, dirt and water... these are the themes of this small    
+and simplistic shop.  Simple, yet perhaps the most wonderful in     
+Dagdan.  You see plants of types that are as common as grass, and more    
+which have no name in your mind.  There are scents you've never     
+imagined breezing about, riding through the store on a forest wind     
+from the north.  Leaves and vines flutter in this breeze, and flower    
+petals ride through the air along with the damp air.  This shop truly    
+does remind you of a miniature version of the beautiful Vale of     
+Arendyl.    
+~
+inside
+ROOM INDOORS
+D NORTH 21561 0 0
+~
+Tree Road lies to the north.    
+~
+D DOWN 0 0 0
+~
+The floor is comfortably solid in this shop.    
+~
+#21564
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  Here,    
+Tree Road branches off in three directions.    
+~
+city
+ROOM NO_MOB
+D NORTH 21566 0 0
+~
+The cobblestones lead north through town.    
+~
+D EAST 21561 0 0
+~
+The cobblestones lead east through town.    
+~
+D WEST 21573 0 0
+~
+The cobblestones lead west through town.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21565
+A Dark Alley~
+The ground here is slick, like rocks on the shore of a stagnant     
+body of water.  A musty, damp smell that is altogether unpleasant    
+drifts through here, and you nearly gag as this odor assaults your    
+senses.  The darkness is nearly overwhelming, and the only light you    
+can see is being reflected from the street by the slimy surface of the     
+cobblestones.    
+~
+inside
+ROOM DARK
+ROOM NO_MOB
+ROOM INDOORS
+D NORTH 21541 0 0
+~
+The darkness continues into the alley toward a T-crossing.    
+~
+D SOUTH 21540 0 0
+~
+The darkness continues into the alley.    
+~
+#21566
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.      
+~
+city
+D NORTH 21567 0 0
+~
+The cobblestones lead north out of town.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21564 0 0
+~
+The cobblestones lead south toward town.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21567
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.      
+~
+city
+D NORTH 21568 0 0
+~
+The cobblestones lead north out of town.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21566 0 0
+~
+The cobblestones lead south toward town.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21568
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.  To the    
+north, the Giant Forest looms very near.    
+~
+city
+ROOM NO_MOB
+D NORTH 21569 0 0
+~
+The cobblestones lead north out of town.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21567 0 0
+~
+The cobblestones lead south toward town.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21569
+The End of the Road~
+Staring toward the forest from here, you receive a sensation of     
+hurtling from the civilized world directly into the jaws of nature...    
+The trees may appear giant from the town to the south, but from this     
+vantage point, their monolithic size is disquieting.  All around you,    
+tree trunks the size of houses fire angrily upward from the soil at a     
+dizzying rate to slash the very surface of the celestial hemisphere     
+above.  If you keep your eyes to the ground, perhaps you will avoid    
+the overwhelming feeling of disorientation that comes with this     
+forest.  North, you can easily make out a clearing between several    
+massive trunks.  To the south, the tiny town of Dagdan breaks its    
+way free of the Giant Forest's clutches.    
+~
+city
+D NORTH 21570 0 0
+~
+The cobblestones end here, a dirt trail leads to the north.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21568 0 0
+~
+The cobblestones lead south toward town.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21570
+A Tiny Clearing~
+A bed of grass and the fine mulch of rotted leaves makes for very     
+comfortable footing here.  Any intake of breath nearly overwhelms you,     
+the amazingly sweet scent of the wood of this forest is pungent enough     
+to pierce any haze you may be experiencing mentally, and then create a     
+whole new one for you.  The light which filters down this far through     
+the tree cover above you is a deep green color, casting an eerie glow     
+upon all of your surroundings.  To the north, the Giant Forest dives     
+down the steep sides of a huge valley that's impossible to see from     
+outside the woods south of here...  You can actually peer between the     
+massive trunks to the immediate north, and above the treetops far off     
+in the distance.  The view from here, provided that you can find a     
+line of sight through the trees, is amazing.  A vast mountain range     
+strikes its way through the clouds in the northeast, and to the     
+northwest, this forest continues beyond the opposite edge of the deep     
+valley which neutralizes its towering height, and on to the horizon.    
+~
+field
+D NORTH 21571 0 0
+~
+A dirt trail leads north, into the forest.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21569 0 0
+~
+A cobblestone street is visible to the south.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Far, far above you, a tiny opening in the leaf cover is visible.      
+Birds of all sizes fly over it, and if you watch long enough, you can     
+identify several types.  Quite a lot of birds don't even bother flying    
+over the leaf cover... simply weaving their way between the massive     
+trunks of the Giant Forest, they fly at a more practical height.    
+~
+D DOWN 0 0 0
+~
+The mulch on the ground here is probably the best place to grow plants    
+in Thera... it's no wonder the Giant Forest is so... giant.    
+~
+#21571
+The Giant Forest~
+The edge of a monstrous valley, this part of the forest is on a fairly    
+steep incline.  The trail you are on leads north into the valley and     
+south out of it.  The leaf cover far above you almost entirely snuffs     
+out any light which might attempt to pierce it.  The forest around you     
+is not dark by any means, but its lighting is twilight-like at best,     
+perpetually.  An odd warbling sound fills the forest -- the call of     
+the wild turkey, an odd looking species of bird which is one of many     
+that are unique to this part of the continent.  To your north, the     
+valley continues toward what appears to be the edge of the world (but     
+what is likely simply the other side of this titanic valley).  South,     
+you can climb up to the edge of this side.    
+~
+field
+D NORTH 21572 0 0
+~
+A dirt trail leads north, farther down into the forest.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21570 0 0
+~
+A dirt trail leads to the south, up toward a small town.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Far, far above you, the leaf cover almost entirely obscures the sky.    
+Birds of all sizes fly over it, and if you watch long enough, you can     
+identify several types.  Quite a lot of birds don't even bother flying    
+over the leaf cover... simply weaving their way between the massive     
+trunks of the Giant Forest, they fly at a more practical height.    
+~
+D DOWN 0 0 0
+~
+The mulch on the ground here is probably the best place to grow plants    
+in Thera... it's no wonder the Giant Forest is so... giant.    
+~
+#21572
+The Giant Forest~
+The edge of a monstrous valley, this part of the forest is on a fairly    
+steep incline.  The trail you are on leads north into the valley and     
+south out of it.  The leaf cover far above you almost entirely snuffs     
+out any light which might attempt to pierce it.  The forest around you     
+is not dark by any means, but its lighting is twilight-like at best,     
+perpetually.  An odd warbling sound fills the forest -- the call of     
+the wild turkey, an odd looking species of bird which is one of many     
+that are unique to this part of the continent.  To your north, the     
+valley continues toward what appears to be the edge of the world (but     
+what is likely simply the other side of this titanic valley).  South,     
+you can climb up to the edge of this side.    
+~
+field
+D NORTH 0 0 0
+~
+The monolithic Giant Forest looms here, and stretches to the north.    
+~
+D EAST 0 0 0
+~
+You find yourself staring into the Giant Forest to the east.    
+~
+D SOUTH 21571 0 0
+~
+A dirt trail leads to the south, up toward a town.    
+~
+D WEST 0 0 0
+~
+You find yourself staring into the Giant Forest to the west.    
+~
+D UP 0 0 0
+~
+Far, far above you, the leaf cover almost entirely obscures the sky.    
+Birds of all sizes fly over it, and if you watch long enough, you can     
+identify several types.  Quite a lot of birds don't even bother flying    
+over the leaf cover... simply weaving their way between the massive     
+trunks of the Giant Forest, they fly at a more practical height.    
+~
+D DOWN 0 0 0
+~
+The mulch on the ground here is probably the best place to grow plants    
+in Thera... it's no wonder the Giant Forest is so... giant.    
+~
+#21573
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.    
+~
+city
+D EAST 21564 0 0
+~
+The cobblestones lead east toward an intersection.    
+~
+D WEST 21574 0 0
+~
+The cobblestones lead west through town.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21574
+Tree Road~
+While unimaginatively named by the inhabitants of Dagdan, this road     
+seems to be a well-kept one.  People wander the streets happily,     
+purchasing goods and looking for a place to rest.  A few animals are    
+even seen dashing about from place to place, as though they had     
+purpose.  As you glance upward, you are reminded of the Giant Forest,    
+and naming a piece of a town with something so mind-numbingly simple    
+as "Tree Road" seems as though it would be fairly easy to do.    
+~
+city
+D EAST 21573 0 0
+~
+The cobblestones lead east through town.    
+~
+D SOUTH 21576 0 0
+~
+A dark warehouse lies to the south.    
+~
+D WEST 21575 0 0
+~
+The cobblestones lead west through town.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21575
+A Dead End~
+Tree Road simply comes to an end here... you can see directly out the     
+end of Dagdan, along the edge of the Giant Forest and into the plains     
+to the west.  It's odd spots like this one that ruin the overall     
+impression of a comfortable little village that the rest of Dagdan     
+exudes, and make it feel more like an uncivilized frontier town.      
+This is likely one place where the Mayor plans to expand and continue     
+to build.    
+~
+city
+D EAST 21574 0 0
+~
+The cobblestones lead east through town.    
+~
+D WEST 0 0 0
+~
+To the west, the plains stretch along the southern edge of the Giant    
+Forest.    
+~
+D UP 0 0 0
+~
+Staring upward in utter amazement, the mindbending height of the     
+trees hanging above you causes you to become short of breath.  The     
+Giant Forest (as those in Dagdan call it) has other more majestic     
+names you've heard used, but couldn't hope to pronounce.    
+~
+D DOWN 0 0 0
+~
+The stones under your feet are a light tan color, and hardly weathered    
+at all.  They must have been laid down fairly recently.  Rain runs     
+down between them into the soil beneath, so they remain dry nearly all    
+of the time.    
+~
+#21576
+A Warehouse~
+This barren building is nearly empty, and entirely dark.  It's obvious     
+that this is where incoming and outgoing loads of material, goods, and     
+various other movable assets are stored, but right now seems to be a     
+bit of a lull in Dagdan's commercial activity.  Peering through the     
+dusty darkness, you can make out what few piles remain here underneath     
+sheets for protection and anonymity.  To the north, the brightness    
+outdoors causes spots to float in front of your eyes.  You can move     
+south and east through the warehouse.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21574 0 0
+~
+Tree Road lies to the north.    
+~
+D EAST 21577 0 0
+~
+The dark warehouse stretches to the east.    
+~
+D SOUTH 21578 0 0
+~
+The dark warehouse stretches to the south.    
+~
+#21577
+A Warehouse~
+This barren building is nearly empty, and entirely dark.  It's obvious     
+that this is where incoming and outgoing loads of material, goods, and     
+various other movable assets are stored, but right now seems to be a     
+bit of a lull in Dagdan's commercial activity.  A dusty cloth pile     
+here seems to cover the shape of a wagon.  You can move south and west     
+through the warehouse.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 21579 0 0
+~
+The dark warehouse stretches to the south.    
+~
+D WEST 21576 0 0
+~
+The dark warehouse stretches to the west.    
+~
+#21578
+A Warehouse~
+This barren building is nearly empty, and entirely dark.  It's obvious     
+that this is where incoming and outgoing loads of material, goods, and     
+various other movable assets are stored, but right now seems to be a     
+bit of a lull in Dagdan's commercial activity.  This part of the     
+warehouse seems as though it's devoted to empty beer kegs...  You can     
+move any direction but west from here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21576 0 0
+~
+The dark warehouse stretches to the north.    
+~
+D EAST 21579 0 0
+~
+The dark warehouse stretches to the east.    
+~
+D SOUTH 21580 0 0
+~
+The dark warehouse stretches to the south.    
+~
+#21579
+A Warehouse~
+This barren building is nearly empty, and entirely dark.  It's obvious     
+that this is where incoming and outgoing loads of material, goods, and     
+various other movable assets are stored, but right now seems to be a     
+bit of a lull in Dagdan's commercial activity.  Peering through the     
+dusty darkness, you can make out what few piles remain here underneath     
+sheets for protection and anonymity.  You can move any direction but     
+east from here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21577 0 0
+~
+The dark warehouse stretches to the north.    
+~
+D SOUTH 21581 0 0
+~
+The dark warehouse stretches to the south.    
+~
+D WEST 21578 0 0
+~
+The dark warehouse stretches to the west.    
+~
+#21580
+A Warehouse~
+This barren building is nearly empty, and entirely dark.  It's obvious     
+that this is where incoming and outgoing loads of material, goods, and     
+various other movable assets are stored, but right now seems to be a     
+bit of a lull in Dagdan's commercial activity.  Peering through the     
+dusty darkness, you can make out what few piles remain here underneath     
+sheets for protection and anonymity.  You can move north and east from     
+here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21578 0 0
+~
+The dark warehouse stretches to the north.    
+~
+D EAST 21581 0 0
+~
+The dark warehouse stretches to the east.    
+~
+#21581
+A Warehouse~
+This barren building is nearly empty, and entirely dark.  It's obvious     
+that this is where incoming and outgoing loads of material, goods, and     
+various other movable assets are stored, but right now seems to be a     
+bit of a lull in Dagdan's commercial activity.  Peering through the     
+dusty darkness, you can make out what few piles remain here underneath     
+sheets for protection and anonymity.  You can move north and west from     
+here, and a large pile of crates makes almost perfect stairs...    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21579 0 0
+~
+The dark warehouse stretches to the north.    
+~
+D EAST 21591 0 0
+~
+Two wooden boards in the wall here are spaced rather far apart.    
+~
+D WEST 21580 0 0
+~
+The dark warehouse stretches to the west.    
+~
+D UP 21582 0 0
+~
+A pile of empty crates is stacked up to the rafters here.    
+~
+#21582
+In the Rafters~
+The reason you climbed up here is a fact you've forgotten, and in its     
+place is a great deal of concern for your well-being.  The upper level     
+of this warehouse is extremely hot -- the prairie sun beats down on it     
+all day long, and the heat inside the rest of the warehouse all rises     
+to here.  Beyond the uncomfortable warmth, the only way to move around     
+is by edging along the rafters in any given direction.  The fact that     
+it's very dark up here doesn't help matters in that respect any,     
+either.  The sweet scent of the wood everything in Dagdan is     
+constructed with is baked by the sweltering heat, and its intensity is     
+nearly sickening up here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21584 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D WEST 21583 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D DOWN 21581 0 0
+~
+You can climb your way down a pile of crates to the ground floor.    
+~
+#21583
+In the Rafters~
+The reason you climbed up here is a fact you've forgotten, and in its     
+place is a great deal of concern for your well-being.  The upper level     
+of this warehouse is extremely hot -- the prairie sun beats down on it     
+all day long, and the heat inside the rest of the warehouse all rises     
+to here.  Beyond the uncomfortable warmth, the only way to move around     
+is by edging along the rafters in any given direction.  The fact that     
+it's very dark up here doesn't help matters in that respect any,     
+either.  The sweet scent of the wood everything in Dagdan is     
+constructed with is baked by the sweltering heat, and its intensity is     
+nearly sickening up here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21585 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D EAST 21582 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+#21584
+In the Rafters~
+The reason you climbed up here is a fact you've forgotten, and in its     
+place is a great deal of concern for your well-being.  The upper level     
+of this warehouse is extremely hot -- the prairie sun beats down on it     
+all day long, and the heat inside the rest of the warehouse all rises     
+to here.  Beyond the uncomfortable warmth, the only way to move around     
+is by edging along the rafters in any given direction.  The fact that     
+it's very dark up here doesn't help matters in that respect any,     
+either.  The sweet scent of the wood everything in Dagdan is     
+constructed with is baked by the sweltering heat, and its intensity is     
+nearly sickening up here.    
+~
+unused
+ROOM DARK
+ROOM INDOORS
+D NORTH 21586 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D SOUTH 21582 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D WEST 21585 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+#21585
+In the Rafters~
+The reason you climbed up here is a fact you've forgotten, and in its     
+place is a great deal of concern for your well-being.  The upper level     
+of this warehouse is extremely hot -- the prairie sun beats down on it     
+all day long, and the heat inside the rest of the warehouse all rises     
+to here.  Beyond the uncomfortable warmth, the only way to move around     
+is by edging along the rafters in any given direction.  The fact that     
+it's very dark up here doesn't help matters in that respect any,     
+either.  The sweet scent of the wood everything in Dagdan is     
+constructed with is baked by the sweltering heat, and its intensity is     
+nearly sickening up here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21587 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D EAST 21584 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D SOUTH 21583 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+#21586
+In the Rafters~
+The reason you climbed up here is a fact you've forgotten, and in its     
+place is a great deal of concern for your well-being.  The upper level     
+of this warehouse is extremely hot -- the prairie sun beats down on it     
+all day long, and the heat inside the rest of the warehouse all rises     
+to here.  Beyond the uncomfortable warmth, the only way to move around     
+is by edging along the rafters in any given direction.  The fact that     
+it's very dark up here doesn't help matters in that respect any,     
+either.  A strangely cool breeze is flowing through here... from     
+east to west, near your knees.  The sweet scent of the wood everything     
+in Dagdan is constructed with is baked by the sweltering heat, and its     
+intensity is nearly sickening up here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 21588 ABI 0
+wall~
+Upon further examination of this wall, a small hole is visible near     
+your feet.    
+~
+D SOUTH 21584 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D WEST 21587 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+#21587
+In the Rafters~
+The reason you climbed up here is a fact you've forgotten, and in its     
+place is a great deal of concern for your well-being.  The upper level     
+of this warehouse is extremely hot -- the prairie sun beats down on it     
+all day long, and the heat inside the rest of the warehouse all rises     
+to here.  Beyond the uncomfortable warmth, the only way to move around     
+is by edging along the rafters in any given direction.  The fact that     
+it's very dark up here doesn't help matters in that respect any,     
+either.  The sweet scent of the wood everything in Dagdan is     
+constructed with is baked by the sweltering heat, and its intensity is     
+nearly sickening up here.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 21586 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+D SOUTH 21585 0 0
+~
+You can carefully edge your way along the rafters in this direction.    
+~
+#21588
+Through the Hole~
+It's quite a lot cooler on this side of the wall than inside the     
+warehouse.  In fact, this small tunnel-like structure doesn't even     
+appear to be indoors... rather, roughly built upon the roof of a     
+building next to the warehouse, as though it were an afterthought     
+and not a part of the original design.  To the south, a few faint     
+whispers can be heard in the cool darkness.  To the west, you can     
+crawl through a hole and into the rafters of the warehouse next door.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 21589 0 0
+~
+A narrow hallway leads south.    
+~
+D WEST 21586 0 0
+~
+You can crawl through a hole near the floor here.    
+~
+#21589
+Entrance to the Thieves' Guild~
+This part of the impromptu tunnel widens somewhat, and a few quiet men    
+have gathered here to whisper.  Grey cloth is draped across the wooden     
+framework of the tunnel, in order to make it "lightproof."  The system    
+seems to work, as this area is pitch black.  To the south, a tiny     
+light source flickers gently off the walls, while to the north, utter    
+blackness consumes the tunnel once again.  The air is cool, and flows    
+gently back and forth as though it were just another whisperer in the     
+dark.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 21588 0 0
+~
+A narrow hallway leads north.    
+~
+D SOUTH 21590 0 0
+~
+The thieves' guild is to the south.    
+~
+#21590
+The Hidden Room~
+A tiny candle flickers from the center of a small table here,     
+illuminating what appears to be a friendly card game.  The men in this     
+room are all experienced thieves, and the card players intently watch     
+each other's hands to insure that no unauthorized thievery breaks out.      
+    
+It is here that some of the finest thieves in this region of Thera are     
+trained.  A few dummies with pockets of varying size have been stuffed     
+into a corner to collect dust -- this guild's master believes in     
+practice in the field.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM SAFE
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 21589 0 0
+~
+A dark hallway lies to the north.    
+~
+#21591
+Behind the Wall~
+This appears to be a very tight hallway which was actually built into     
+the structure, simply by placing a second wall at this edge of the     
+building.  West, the boards have been carelessly placed and allow     
+passage into a warehouse, while the hallway itself moves south.  The     
+floor here is littered with papers and bottles, as though it receives     
+quite a bit of traffic and no sanitary visitations.    
+~
+inside
+ROOM DARK
+ROOM NO_MOB
+ROOM INDOORS
+D SOUTH 21592 0 0
+~
+This odd space behind the wall of the warehouse continues south.    
+~
+D WEST 21581 0 0
+~
+Through a wide space in the boards of the wall, you can move west.    
+~
+#21592
+Behind the Wall~
+This appears to be a very tight hallway which was actually built into     
+the structure, simply by placing a second wall at this edge of the     
+building.  Here, the hallway moves north and south.  The floor here is     
+littered with papers and bottles, as though it receives quite a bit of     
+traffic and no sanitary visitations.  Several slightly muffled sounds     
+are made as you crunch your way across the dirty floor.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21591 0 0
+~
+This odd space behind the wall of the warehouse continues north.    
+~
+D SOUTH 21593 0 0
+~
+This odd space behind the wall of the warehouse continues south.    
+~
+#21593
+Behind the Wall~
+This appears to be a very tight hallway which was actually built into     
+the structure, simply by placing a second wall at this edge of the     
+building.  The floor here is littered with papers and bottles, as     
+though it receives quite a bit of traffic and no sanitary visitations.    
+The hall comes to an abrupt end here, with no apparent exit -- save     
+for the way back north.    
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 21592 0 0
+~
+This odd space behind the wall of the warehouse continues north.    
+~
+#21594
+A Private Room~
+Norman has spared no expense in furnishing these private rooms for     
+paying customers.  An evening's respite, a good night's sleep, and a     
+place to reflect upon the long journey behind you (or ahead of you)     
+are all provided perfectly by this comfortable room.  Glass statuettes     
+and pewter figurines decorate shelves along the walls, and the entire     
+place is the same orangish-reddish hue as the rest of the inn, made of     
+that same red wood from the Giant Forest.  Here, though, the wood has     
+been aged somewhat, and the sometimes sickeningly sweet smell is     
+slightly less intrusive.  A bed and a cabinet furnish one side of the     
+room (both made of red wood), and a small linen closet stands open at     
+the other side, ready for your belongings should you wish to stay and     
+sleep.    
+~
+inside
+ROOM INDOORS
+D WEST 21549 AB 0
+a door~
+The upper hall lies to the west.    
+~
+E statuettes figurines glass pewter~
+Tiny trinkets of all shapes ornament this room.  Norman must have been    
+collecting these sorts of things for a long time with his inn in mind.    
+~
+E bed~
+Stuffed with turkey down, this bed's mattress is perhaps the most     
+comfortable in Thera.  Once word of turkey down's exquisite feel     
+reaches Tar Valon, the entire world will likely be using it to pad     
+their bedding.    
+~
+E cabinet~
+A small night table next to the bed holds a lamp and a copy of a short    
+letter regarding Dagdan and its businesses.    
+~
+E linen closet~
+A seven foot tall closet against the south wall, with sliding doors     
+and full length mirrors in its back, is where you can keep your clothing     
+should you purchase this room for a night.    
+~
+#21595
+A Private Room~
+Norman has spared no expense in furnishing these private rooms for     
+paying customers.  An evening's respite, a good night's sleep, and a     
+place to reflect upon the long journey behind you (or ahead of you)     
+are all provided perfectly by this comfortable room.  Glass statuettes     
+and pewter figurines decorate shelves along the walls, and the entire     
+place is the same orangish-reddish hue as the rest of the inn, made of     
+that same red wood from the Giant Forest.  Here, though, the wood has     
+been aged somewhat, and the sometimes sickeningly sweet smell is     
+slightly less intrusive.  A bed and a cabinet furnish one side of the     
+room (both made of red wood), and a small linen closet stands open at     
+the other side, ready for your belongings should you wish to stay and     
+sleep.    
+~
+inside
+ROOM INDOORS
+D EAST 21549 AB 0
+a door~
+The upper hall lies to the east.    
+~
+E statuettes figurines glass pewter~
+Tiny trinkets of all shapes ornament this room.  Norman must have been    
+collecting these sorts of things for a long time with his inn in mind.    
+~
+E bed~
+Stuffed with turkey down, this bed's mattress is perhaps the most     
+comfortable in Thera.  Once word of turkey down's exquisite feel     
+reaches Tar Valon, the entire world will likely be using it to pad     
+their bedding.    
+~
+E cabinet~
+A small night table next to the bed holds a lamp and a copy of a short    
+letter regarding Dagdan and its businesses.    
+~
+E linen closet~
+A seven foot tall closet against the south wall, with sliding doors     
+and full length mirrors in its back, is where you can keep your clothing     
+should you purchase this room for a night.    
+~
+#21500
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 21501 0 0
+~
+(desc)    
+~
+D EAST 0 0 0
+~
+(desc)    
+~
+D SOUTH 11856 0 0
+~
+(desc)    
+~
+D WEST 0 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21501
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 21502 0 0
+~
+(desc)    
+~
+D EAST 0 0 0
+~
+(desc)    
+~
+D SOUTH 21500 0 0
+~
+(desc)    
+~
+D WEST 0 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21502
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 0 0 0
+~
+(desc)    
+~
+D EAST 0 0 0
+~
+(desc)    
+~
+D SOUTH 21501 0 0
+~
+(desc)    
+~
+D WEST 21503 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#21503
+On the Road~
+The road from Koteras to Dagdan   
+~
+road
+D NORTH 21504 0 0
+~
+(desc)    
+~
+D EAST 21502 0 0
+~
+(desc)    
+~
+D SOUTH 0 0 0
+~
+(desc)    
+~
+D WEST 0 0 0
+~
+(desc)    
+~
+D UP 0 0 0
+~
+(desc)    
+~
+D DOWN 0 0 0
+~
+(desc)    
+~
+#0
+
+
+
+#RESETS
+MOB 21504 TO 21515 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21504 TO 21515 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21504 TO 21515 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21504 TO 21515 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21500 TO 21520 GLIMIT 5 LLIMIT 1
+MOB 21501 TO 21521 GLIMIT 4 LLIMIT 1
+MOB 21504 TO 21521 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21504 TO 21521 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21500 TO 21522 GLIMIT 5 LLIMIT 1
+MOB 21504 TO 21523 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21514 TO 21525 GLIMIT 1 LLIMIT 1
+EQUIP 21514 BODY
+EQUIP 21515 WAIST
+EQUIP 21516 NECKONE
+MOB 21515 TO 21525 GLIMIT 1 LLIMIT 1
+MOB 21517 TO 21525 GLIMIT 1 LLIMIT 1
+EQUIP 21517 HEAD
+EQUIP 21518 BODY
+EQUIP 21519 ARMS
+EQUIP 21520 LEGS
+EQUIP 21522 HANDS
+MOB 21518 TO 21525 GLIMIT 1 LLIMIT 1
+EQUIP 21517 HEAD
+EQUIP 21518 BODY
+EQUIP 21519 ARMS
+EQUIP 21520 LEGS
+EQUIP 21521 FEET
+EQUIP 21522 HANDS
+EQUIP 21523 WIELD
+MOB 21519 TO 21526 GLIMIT 1 LLIMIT 1
+EQUIP 21524 BODY
+EQUIP 21525 ABOUT
+EQUIP 21526 WRISTONE
+EQUIP 21527 WRISTTWO
+EQUIP 21528 WIELD
+OBJECT 21557 TO 21530
+MOB 21500 TO 21531 GLIMIT 5 LLIMIT 1
+MOB 21502 TO 21531 GLIMIT 3 LLIMIT 1
+MOB 21503 TO 21531 GLIMIT 3 LLIMIT 1
+EQUIP 21500 NECKONE
+DOOR 21531 west CLOSED
+DOOR 21532 east CLOSED
+MOB 21505 TO 21534 GLIMIT 9 LLIMIT 1
+MOB 21513 TO 21534 GLIMIT 3 LLIMIT 1
+MOB 21534 TO 21534 GLIMIT 1 LLIMIT 1
+GIVE 21554
+GIVE 21555
+GIVE 21556
+DOOR 21534 north OPEN
+DOOR 21535 south OPEN
+MOB 21501 TO 21537 GLIMIT 4 LLIMIT 1
+MOB 21503 TO 21538 GLIMIT 3 LLIMIT 1
+EQUIP 21500 NECKONE
+MOB 21520 TO 21538 GLIMIT 1 LLIMIT 1
+EQUIP 21529 NECKONE
+EQUIP 21530 BODY
+MOB 21521 TO 21538 GLIMIT 1 LLIMIT 1
+EQUIP 21532 BODY
+MOB 21522 TO 21538 GLIMIT 1 LLIMIT 1
+EQUIP 21535 WIELD
+EQUIP 21535 DUALWIELD
+MOB 21500 TO 21539 GLIMIT 5 LLIMIT 1
+MOB 21502 TO 21539 GLIMIT 3 LLIMIT 1
+MOB 21511 TO 21539 GLIMIT 3 LLIMIT 1
+EQUIP 21512 BODY
+EQUIP 21513 LEGS
+MOB 21512 TO 21539 GLIMIT 3 LLIMIT 1
+MOB 21505 TO 21540 GLIMIT 9 LLIMIT 1
+MOB 21531 TO 21540 GLIMIT 1 LLIMIT 1
+GIVE 21549
+GIVE 21550
+GIVE 21551
+GIVE 21552
+MOB 21511 TO 21541 GLIMIT 3 LLIMIT 1
+EQUIP 21512 BODY
+EQUIP 21513 LEGS
+MOB 21512 TO 21541 GLIMIT 3 LLIMIT 1
+MOB 21509 TO 21542 GLIMIT 2 LLIMIT 1
+MOB 21526 TO 21543 GLIMIT 1 LLIMIT 1
+MOB 21528 TO 21544 GLIMIT 1 LLIMIT 1
+MOB 21505 TO 21545 GLIMIT 9 LLIMIT 1
+MOB 21513 TO 21545 GLIMIT 3 LLIMIT 1
+MOB 21501 TO 21546 GLIMIT 4 LLIMIT 1
+MOB 21505 TO 21546 GLIMIT 9 LLIMIT 1
+MOB 21506 TO 21546 GLIMIT 9 LLIMIT 1
+MOB 21512 TO 21546 GLIMIT 3 LLIMIT 1
+MOB 21524 TO 21546 GLIMIT 1 LLIMIT 1
+EQUIP 21539 WIELD
+EQUIP 21540 SHIELD
+EQUIP 21541 BODY
+MOB 21505 TO 21547 GLIMIT 9 LLIMIT 1
+MOB 21505 TO 21547 GLIMIT 9 LLIMIT 1
+MOB 21506 TO 21547 GLIMIT 9 LLIMIT 1
+MOB 21511 TO 21547 GLIMIT 3 LLIMIT 1
+EQUIP 21512 BODY
+EQUIP 21513 LEGS
+MOB 21523 TO 21547 GLIMIT 1 LLIMIT 1
+EQUIP 21536 HOLD
+MOB 21529 TO 21547 GLIMIT 1 LLIMIT 1
+EQUIP 21537 BODY
+GIVE 21548
+MOB 21505 TO 21548 GLIMIT 9 LLIMIT 1
+MOB 21506 TO 21548 GLIMIT 9 LLIMIT 1
+DOOR 21549 east CLOSED
+DOOR 21549 west CLOSED
+DOOR 21550 south CLOSED
+DOOR 21551 north CLOSED
+MOB 21504 TO 21554 GLIMIT 11 LLIMIT 1
+GIVE 21501
+DOOR 21556 north CLOSED
+DOOR 21557 south CLOSED
+MOB 21510 TO 21558 GLIMIT 1 LLIMIT 1
+EQUIP 21506 NECKONE
+EQUIP 21508 BODY
+EQUIP 21509 FEET
+EQUIP 21510 WIELD
+EQUIP 21511 HEAD
+MOB 21507 TO 21559 GLIMIT 9 LLIMIT 1
+EQUIP 21502 WAIST
+MOB 21505 TO 21560 GLIMIT 9 LLIMIT 1
+MOB 21533 TO 21560 GLIMIT 1 LLIMIT 1
+GIVE 21553
+MOB 21505 TO 21562 GLIMIT 9 LLIMIT 1
+MOB 21530 TO 21562 GLIMIT 1 LLIMIT 1
+EQUIP 21538 BODY
+GIVE 21545
+GIVE 21546
+GIVE 21547
+MOB 21501 TO 21563 GLIMIT 4 LLIMIT 1
+MOB 21508 TO 21563 GLIMIT 1 LLIMIT 1
+GIVE 21503
+GIVE 21504
+GIVE 21505
+MOB 21532 TO 21563 GLIMIT 1 LLIMIT 1
+GIVE 21542
+GIVE 21543
+GIVE 21544
+MOB 21504 TO 21566 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21504 TO 21570 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21504 TO 21570 GLIMIT 11 LLIMIT 1
+GIVE 21501
+MOB 21503 TO 21573 GLIMIT 3 LLIMIT 1
+EQUIP 21500 NECKONE
+MOB 21500 TO 21575 GLIMIT 5 LLIMIT 1
+MOB 21502 TO 21575 GLIMIT 3 LLIMIT 1
+MOB 21509 TO 21575 GLIMIT 2 LLIMIT 1
+MOB 21525 TO 21589 GLIMIT 1 LLIMIT 1
+MOB 21527 TO 21590 GLIMIT 1 LLIMIT 1
+MOB 21516 TO 21593 GLIMIT 1 LLIMIT 1
+DOOR 21594 west CLOSED
+DOOR 21595 east CLOSED
+S
+
+#IMPROGS
+M 21529 pulse_prog pulse_prog_shopkeeper
+M 21530 pulse_prog pulse_prog_shopkeeper
+M 21531 pulse_prog pulse_prog_shopkeeper
+M 21532 pulse_prog pulse_prog_shopkeeper
+M 21533 pulse_prog pulse_prog_shopkeeper
+M 21534 pulse_prog pulse_prog_shopkeeper
+END
+#$

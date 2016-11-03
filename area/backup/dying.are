@@ -1,0 +1,1873 @@
+#AREA
+dying.are~
+Dying Forest~
+Ceran~
+25 51
+24300 24399
+normal
+temperate
+0
+1
+Ceran Jathruk~
+
+#MOBS
+#24301
+centaur guardian~
+a centaur guardian~
+A large guardian centaur is here tending the dying foliage.
+~
+This centaur is busy repairing the damage inflicted by the anti-rangers and
+their creatures of the night.
+~
+1000 0 100 centaur~
+32 10d10+1140 6d4+10 0 100 pierce
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES SLASH
+CLASS warrior none none 
+#24302
+centaur ranger~
+a centaur ranger~
+A centaur ranger prepares itself for the fight against the anti-rangers.
+~
+This massive centaur is flexing it's muscles in preperation for the upcoming
+battle to drive back the anti-rangers and their darkfriends.
+~
+1000 0 100 centaur~
+44 25d10+3000 8d4+18 0 100 slash
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES SLASH
+CLASS warrior none none 
+#24303
+centaur captain~
+a centaur captain~
+A centaur captain is here overseeing the preperations of the centaurs.
+~
+This massive centaur is flexing it's muscles in preperation for the upcoming
+battle to drive back the anti-rangers and their darkfriends.
+~
+1000 0 100 centaur~
+50 50d10+4500 5d8+20 0 100 slash
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES SLASH
+CLASS warrior none none 
+#24304
+centaur leader~
+the Centaur Leader~
+A huge centaur gazes down at you in suspicion.
+~
+This massive centaur is flexing it's muscles in preperation for the upcoming
+battle to drive back the anti-rangers and their darkfriends.
+~
+1000 0 100 centaur~
+51 25d8+4274 12d6+28 0 100 slash
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES SLASH
+CLASS warrior none none 
+#24305
+anti anti-ranger~
+an anti-ranger~
+An anti-ranger is here preparing to destroy the forest.
+~
+Mean and pure evil, this ranger has fallen under the influence of the darkness.
+Rather than live and nuture the forest he has turned on it and now seeks only
+to destroy.
+~
+-1000 0 100 human~
+50 50d10+4500 5d8+20 0 100 pierce
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF DIRT_KICK
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF INFRARED
+#24306
+greater naga~
+a greater forest naga~
+A greater forest naga is here grinding it's way through the foliage.
+~
+This creature is one of the dark legion from the Abyss, a demonic Naga that
+preys upon mortal flesh. It has the body of a huge serpent, but the face of
+an old man. This particular naga has been adpated for the forests, but it
+doesn't seem much at ease.
+~
+-1000 0 100 human~
+40 15d10+1850 4d8+14 0 100 pound
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TAIL
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES MAGIC
+CLASS warrior none none 
+#24307
+rimlarker juggernaut stone~
+Rimlarker~
+A huge juggernaut of stone is slowly crushing trees with its body.
+~
+This thing is HUGE. It's all stone and it seems to be intent on crushing as
+much of the forest as it can.
+~
+-1000 0 100 unique~
+58 50d10+8600 5d10+29 0 100 crush
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF BERSERK
+IMM BASH
+CLASS warrior none none 
+#24308
+medagar tree~
+Medagar~
+A huge tree is here making some horrible hissing sounds.
+~
+This is the greater demon Medagar, one of the Abyss's nature demons. Wherever
+there is destruction of nature It will try to be there to feed off the death
+and destruction.
+~
+-1000 0 100 human~
+60 50d10+9500 8d6+29 0 100 slash
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF BERSERK
+CLASS warrior none none 
+#24309
+Belqark vines~
+Belqark~
+A seething mass of vines lies on the ground.
+~
+This is one of the demons of nature, sent to observe the death of this forest.
+It's mortal form is that of a mass of vines with a life of their own.
+~
+-1000 0 100 human~
+55 50d10+7000 10d4+24 0 100 beating
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES WEAPON
+CLASS warrior none none 
+#24310
+earth elemental Metagar~
+Metagar~
+A huge earth elemental is here smashing the forest.
+~
+This elemental is a mockey of true elementals. In realist it is the demon
+Metagar's mortal form as it seeks to destroy nature wherever it finds it.
+~
+-1000 0 100 unique~
+57 50d10+8000 5d10+25 0 100 smash
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF TRIP
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+CLASS warrior none none 
+#24311
+naga Lethrak~
+Lethrak~
+A massive naga is here surveying the dying forest.
+~
+Lethrak, Lord of the Forest Nagas, has come to oversee the final stages of
+the forest's death. For this demon the sight of nature being corrupted and
+ruined is the most satisfying thing imaginable.
+~
+-1000 0 100 dragon~
+59 50d10+9000 8d6+28 0 100 slice
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF HASTE
+RES SLASH
+RES LIGHTNING
+VUL ACID
+CLASS warrior none none 
+#24312
+centaur scout~
+a centaur scout~
+A centaur scout is here walking the dying forest.
+~
+This scout is wandering the forest in search of the evil that is destroying
+it.
+~
+1000 0 100 centaur~
+38 10d10+1600 5d6+14 0 100 none
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF CRUSH
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES SLASH
+CLASS warrior none none 
+#24313
+dryad~
+a dryad~
+A beautiful dryad looks upon the dying forest in despair.
+~
+This beautiful dryad can do nothing but watch in horror as the
+powerful evil creatures slowly ravage her home.
+~
+1000 0 100 human~
+20 3d9+340 2d8+6 0 100 slap
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+AFF INFRARED
+CLASS warrior none none 
+#24314
+centaur~
+a centaur~
+A centaur is here tending to the forest.
+~
+This is one of the lowly centaurs who helps maintain the forest. With
+the invasion of the evil creatures it's job has become far more involved.
+~
+1000 0 100 centaur~
+25 5d10+550 2d10+8 0 100 none
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+RES SLASH
+CLASS warrior none none 
+#24315
+dark stalker~
+a dark stalker~
+A grotesque dark stalker is walking here.
+~
+One of the more hideous creatures to have fallen upon this forest.
+The stalker resembles a giant with deformed limbs and razor sharp
+teeth.
+~
+-1000 0 100 human~
+35 10d10+1400 3d10+11 0 100 none
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF ASSIST_VNUM
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+CLASS warrior none none 
+#24316
+marauder troll~
+a marauder troll~
+A massive marauder troll turns angered eyes upon you.
+~
+This is one of the more corrupted and dark forms of trollkin. Right
+now it seeks food...
+~
+-1000 0 100 troll~
+30 6d12+1000 4d6+9 0 100 claw
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+OFF ASSIST_VNUM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+RES LIGHTNING
+RES HOLY
+VUL NEGATIVE
+#0
+
+
+
+#OBJS
+#24300
+centaur arm armguards armguard~
+a pair of centaur armguards~
+A set of centaur armguards have been left here.~
+armor
+steel~
+7 5 6 0 0
+32 10 800 P
+WEAR TAKE
+WEAR ARMS
+ITEM ANTIEVIL
+APPLY DAMROLL 2
+APPLY DEX -1
+LIMIT 0
+TIMER 0
+
+#24301
+centaur steel bracer~
+a steel centaur bracer~
+A steel bracer have been left here.~
+armor
+steel~
+5 4 5 0 0
+32 10 800 P
+WEAR TAKE
+WEAR WRIST
+ITEM ANTIEVIL
+APPLY DAMROLL 2
+APPLY DEX -1
+LIMIT 0
+TIMER 0
+
+#24302
+centaur helm~
+a centaur helm~
+A fine centaur helm has been left here.~
+armor
+steel~
+7 5 6 0 0
+32 10 800 P
+WEAR TAKE
+WEAR HEAD
+ITEM ANTIEVIL
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#24303
+centaur plate armor~
+a suit of centaur plate~
+A set of centaur plate has been dropped here.~
+armor
+steel~
+9 10 9 3 0
+35 16 800 P
+WEAR TAKE
+WEAR BODY
+ITEM ANTIEVIL
+APPLY DAMROLL 2
+APPLY DEX -1
+LIMIT 15
+TIMER 0
+
+#24305
+steel spear~
+a steel-tipped spear~
+A superbly crafted steel spear lies on the floor.~
+weapon
+steel~
+spear 13 3 pierce 0
+44 14 8800 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY HITROLL 2
+APPLY DAMROLL 5
+LIMIT 10
+TIMER 0
+
+#24306
+circlet centaur hair~
+a circlet of braided centaur hair~
+Some hair woven into a circlet has been left here.~
+armor
+hair~
+9 9 10 12 12
+50 1 25790 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+ITEM BLESS
+APPLY HITROLL 2
+APPLY DAMROLL 3
+LIMIT 4
+TIMER 0
+
+#24308
+black bastard sword~
+a blackened bastard sword~
+A charred and etched bastard sword lies here.~
+weapon
+steel~
+sword 6 6 slash 0
+32 16 4600 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY HITROLL 2
+APPLY DAMROLL 4
+LIMIT 20
+TIMER 0
+
+#24309
+fist earth metagon~
+the Fist of the Earth~
+A massive mallet of dark metal lies upon the ground.~
+weapon
+steel~
+weapon 7 7 crush 0
+51 30 21900 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM NODROP
+ITEM NOREMOVE
+APPLY HITROLL 3
+APPLY DAMROLL 3
+LIMIT 3
+TIMER 0
+
+#24312
+bark ebon ebonwood~
+a casing of ebonwood bark~
+A pile of darkened bark lies on the ground.~
+armor
+wood~
+8 6 7 0 0
+51 20 18000 P
+WEAR TAKE
+WEAR BODY
+ITEM DARK
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+APPLY HITROLL 3
+APPLY DAMROLL 3
+APPLY HP 35
+LIMIT 3
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#24300
+Entrance to the Dying Forest~
+The forest around you seems to be in the last stages of life. Everywhere you
+look there is decay and rot. There are sounds of normal wildlife, but they
+seem muted and scarce. Further to the west you can see the faint glow of
+orange that seems to be from fires.
+~
+forest
+ROOM DARK
+D NORTH 24265 0 0
+~
+~
+D WEST 24302 0 0
+~
+~
+#24302
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24300 0 0
+~
+~
+D WEST 24303 0 0
+~
+~
+#24303
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24302 0 0
+~
+~
+D WEST 24304 0 0
+~
+~
+#24304
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24305 0 0
+~
+~
+D EAST 24303 0 0
+~
+~
+D WEST 24312 0 0
+~
+~
+#24305
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24306 0 0
+~
+~
+D SOUTH 24304 0 0
+~
+~
+#24306
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24307 0 0
+~
+~
+D SOUTH 24305 0 0
+~
+~
+#24307
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24368 0 0
+~
+~
+D SOUTH 24306 0 0
+~
+~
+D WEST 24308 0 0
+~
+~
+#24308
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24307 0 0
+~
+~
+D WEST 24309 0 0
+~
+~
+#24309
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24308 0 0
+~
+~
+D SOUTH 24310 0 0
+~
+~
+D WEST 24323 0 0
+~
+~
+#24310
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24309 0 0
+~
+~
+D SOUTH 24311 0 0
+~
+~
+#24311
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24310 0 0
+~
+~
+D SOUTH 24313 0 0
+~
+~
+#24312
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.  A few cobblestones are scattered here, and lead vaguely south.
+~
+forest
+ROOM DARK
+D EAST 24304 0 0
+~
+~
+D SOUTH 23625 0 0
+~
+A cobblestone path starts off and heads through the dead trees to the south.
+~
+D WEST 24313 0 0
+~
+~
+#24313
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24311 0 0
+~
+~
+D EAST 24312 0 0
+~
+~
+D WEST 24314 0 0
+~
+~
+#24314
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24313 0 0
+~
+~
+D WEST 24315 0 0
+~
+~
+#24315
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24321 0 0
+~
+~
+D EAST 24314 0 0
+~
+~
+D WEST 24316 0 0
+~
+~
+#24316
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24315 0 0
+~
+~
+D WEST 24317 0 0
+~
+~
+#24317
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24328 0 0
+~
+~
+D EAST 24316 0 0
+~
+~
+D WEST 24318 0 0
+~
+~
+#24318
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24317 0 0
+~
+~
+D WEST 24319 0 0
+~
+~
+#24319
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24318 0 0
+~
+~
+D WEST 24320 0 0
+~
+~
+#24320
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand. To the south the forest seems much greener and full of life. In
+fact, you can now hear that most of the wildlife sounds are originating from
+that direction.
+~
+forest
+ROOM DARK
+D EAST 24319 0 0
+~
+~
+D SOUTH 24336 0 0
+~
+~
+#24321
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24322 0 0
+~
+~
+D SOUTH 24315 0 0
+~
+~
+#24322
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24324 0 0
+~
+~
+D SOUTH 24321 0 0
+~
+~
+#24323
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24329 0 0
+~
+~
+D EAST 24309 0 0
+~
+~
+D WEST 24324 0 0
+~
+~
+#24324
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24323 0 0
+~
+~
+D SOUTH 24322 0 0
+~
+~
+D WEST 24325 0 0
+~
+~
+#24325
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24331 0 0
+~
+~
+D EAST 24324 0 0
+~
+~
+D WEST 24326 0 0
+~
+~
+#24326
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24325 0 0
+~
+~
+D SOUTH 24327 0 0
+~
+~
+#24327
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24326 0 0
+~
+~
+D SOUTH 24328 0 0
+~
+~
+#24328
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24327 0 0
+~
+~
+D SOUTH 24317 0 0
+~
+~
+#24329
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D SOUTH 24323 0 0
+~
+~
+D WEST 24330 0 0
+~
+~
+#24330
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24332 0 0
+~
+~
+D EAST 24329 0 0
+~
+~
+D WEST 24331 0 0
+~
+~
+#24331
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24330 0 0
+~
+~
+D SOUTH 24325 0 0
+~
+~
+#24332
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24333 0 0
+~
+~
+D SOUTH 24330 0 0
+~
+~
+#24333
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24334 0 0
+~
+~
+D WEST 24332 0 0
+~
+~
+#24334
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D SOUTH 24335 0 0
+~
+~
+D WEST 24333 0 0
+~
+~
+#24335
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24334 0 0
+~
+~
+#24336
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures. It is almost as if the darker inhabitants avoid this
+section.
+~
+forest
+ROOM DARK
+D NORTH 24320 0 0
+~
+~
+D SOUTH 24337 0 0
+~
+~
+#24337
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures. It is almost as if the darker inhabitants avoid this
+section.
+~
+forest
+ROOM DARK
+D NORTH 24336 0 0
+~
+~
+D SOUTH 24338 0 0
+~
+~
+#24338
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures. It is almost as if the darker inhabitants avoid this
+section.
+~
+forest
+ROOM DARK
+D NORTH 24337 0 0
+~
+~
+D EAST 24339 0 0
+~
+~
+#24339
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D EAST 24340 0 0
+~
+~
+D WEST 24338 0 0
+~
+~
+#24340
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D EAST 24341 0 0
+~
+~
+D WEST 24339 0 0
+~
+~
+#24341
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D EAST 24342 0 0
+~
+~
+D WEST 24340 0 0
+~
+~
+#24342
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D EAST 24343 0 0
+~
+~
+D SOUTH 24345 0 0
+~
+~
+D WEST 24341 0 0
+~
+~
+#24343
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D EAST 24344 0 0
+~
+~
+D WEST 24342 0 0
+~
+~
+#24344
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D SOUTH 24349 0 0
+~
+~
+D WEST 24343 0 0
+~
+~
+#24345
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D NORTH 24342 0 0
+~
+~
+D SOUTH 24346 0 0
+~
+~
+#24346
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D NORTH 24345 0 0
+~
+~
+D EAST 24347 0 0
+~
+~
+#24347
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures. To the north there appears to be some sort of hut.
+~
+forest
+ROOM DARK
+D NORTH 24367 0 0
+~
+~
+D EAST 24348 0 0
+~
+~
+D WEST 24346 0 0
+~
+~
+#24348
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures.
+~
+forest
+ROOM DARK
+D NORTH 24349 0 0
+~
+~
+D WEST 24347 0 0
+~
+~
+#24349
+Within the Dying Forest~
+The forest here is well kept and seems more lush than the majority of the
+region. Plants bloom in several places and the sounds of small animals in the
+underbrush can be heard. Large hoof marks in the dirt are the only sign of any
+real large creatures. To the east there is a lot of noise, and you can see
+what looks like domesticated huts.
+~
+forest
+ROOM DARK
+D NORTH 24344 0 0
+~
+~
+D EAST 24350 0 0
+~
+~
+D SOUTH 24348 0 0
+~
+~
+#24350
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region. To the north is
+a small hut.
+~
+forest
+ROOM DARK
+D NORTH 24351 0 0
+~
+~
+D EAST 24352 0 0
+~
+~
+D WEST 24349 0 0
+~
+~
+#24351
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back south to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D SOUTH 24350 0 0
+~
+~
+#24352
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region. There are small
+huts to the north and south.
+~
+forest
+ROOM DARK
+D NORTH 24353 0 0
+~
+~
+D EAST 24355 0 0
+~
+~
+D SOUTH 24354 0 0
+~
+~
+D WEST 24350 0 0
+~
+~
+#24353
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back south to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D SOUTH 24352 0 0
+~
+~
+#24354
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back north to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D NORTH 24352 0 0
+~
+~
+#24355
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the
+rest of the region, almost like it was in a totally sperate region.
+~
+forest
+ROOM DARK
+D EAST 24356 0 0
+~
+~
+D SOUTH 24364 0 0
+~
+~
+D WEST 24352 0 0
+~
+~
+#24356
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region.
+~
+forest
+ROOM DARK
+D EAST 24357 0 0
+~
+~
+D WEST 24355 0 0
+~
+~
+#24357
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region.
+~
+forest
+ROOM DARK
+D SOUTH 24358 0 0
+~
+~
+D WEST 24356 0 0
+~
+~
+#24358
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region. A small hut
+lies east.
+~
+forest
+ROOM DARK
+D NORTH 24357 0 0
+~
+~
+D EAST 24359 0 0
+~
+~
+D SOUTH 24361 0 0
+~
+~
+#24359
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back west to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D WEST 24358 0 0
+~
+~
+#24360
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The exit
+appears back west to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D EAST 0 AB 0
+~
+~
+D WEST 24361 0 0
+~
+~
+#24361
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region. There is a
+small hut to the east.
+~
+forest
+ROOM DARK
+D NORTH 24358 0 0
+~
+~
+D EAST 24360 0 0
+~
+~
+D WEST 24362 0 0
+~
+~
+#24362
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region. To the north is
+a hut.
+~
+forest
+ROOM DARK
+D NORTH 24366 0 0
+~
+~
+D EAST 24361 0 0
+~
+~
+D WEST 24363 0 0
+~
+~
+#24363
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region. You can see a
+small hut to the west.
+~
+forest
+ROOM DARK
+D NORTH 24364 0 0
+~
+~
+D EAST 24362 0 0
+~
+~
+D WEST 24365 0 0
+~
+~
+#24364
+Within a Centaur Settlement~
+You stand on a small pathway through what appears to be a very hastily built
+settlement. Centaur hoof marks have dug up the ground all around you and
+small huts line the pathway. The forest here is much better kept than the rest
+of the region, almost like it was in a totally sperate region.
+~
+forest
+ROOM DARK
+D NORTH 24355 0 0
+~
+~
+D SOUTH 24363 0 0
+~
+~
+#24365
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back east to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D EAST 24363 0 0
+~
+~
+#24366
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back south to the settlment pathway.
+~
+inside
+ROOM INDOORS
+D SOUTH 24362 0 0
+~
+~
+#24367
+Within a Centaur Hut~
+You are within a small but well kept hut. A tiny fire has been built in the
+ground and the smell of recent cooking wafts through the air. The only exit
+appears back south.
+~
+inside
+ROOM INDOORS
+D SOUTH 24347 0 0
+~
+~
+#24368
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D EAST 24369 0 0
+~
+~
+D SOUTH 24307 0 0
+~
+~
+#24369
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24371 0 0
+~
+~
+D EAST 24370 0 0
+~
+~
+D WEST 24368 0 0
+~
+~
+#24370
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D SOUTH 24372 0 0
+~
+~
+D WEST 24369 0 0
+~
+~
+#24371
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D SOUTH 24369 0 0
+~
+~
+#24372
+Within the Dying Forest~
+The forest seems strangely subdued, as if in the last stages of life.
+Wildlife can be heard, but it is muted and scarce. Around you there are signs
+of small bushfires that have been started but somehow stopped before getting
+out of hand.
+~
+forest
+ROOM DARK
+D NORTH 24370 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 24313 TO 24302 GLIMIT 7 LLIMIT 2
+MOB 24313 TO 24304 GLIMIT 7 LLIMIT 2
+MOB 24306 TO 24305 GLIMIT 10 LLIMIT 1
+MOB 24315 TO 24305 GLIMIT 8 LLIMIT 3
+MOB 24316 TO 24305 GLIMIT 6 LLIMIT 3
+MOB 24305 TO 24306 GLIMIT 10 LLIMIT 2
+MOB 24315 TO 24307 GLIMIT 8 LLIMIT 3
+MOB 24305 TO 24308 GLIMIT 10 LLIMIT 2
+MOB 24315 TO 24308 GLIMIT 8 LLIMIT 3
+MOB 24305 TO 24310 GLIMIT 10 LLIMIT 2
+MOB 24309 TO 24310 GLIMIT 1 LLIMIT 1
+MOB 24315 TO 24310 GLIMIT 8 LLIMIT 3
+MOB 24306 TO 24311 GLIMIT 10 LLIMIT 1
+MOB 24312 TO 24314 GLIMIT 7 LLIMIT 2
+MOB 24312 TO 24314 GLIMIT 7 LLIMIT 2
+MOB 24316 TO 24314 GLIMIT 6 LLIMIT 3
+MOB 24313 TO 24315 GLIMIT 7 LLIMIT 2
+MOB 24313 TO 24315 GLIMIT 7 LLIMIT 2
+MOB 24312 TO 24316 GLIMIT 7 LLIMIT 2
+MOB 24301 TO 24317 GLIMIT 18 LLIMIT 4
+EQUIP 24302 HEAD
+MOB 24312 TO 24317 GLIMIT 7 LLIMIT 2
+MOB 24314 TO 24318 GLIMIT 12 LLIMIT 3
+MOB 24314 TO 24318 GLIMIT 12 LLIMIT 3
+MOB 24301 TO 24319 GLIMIT 18 LLIMIT 4
+EQUIP 24301 WRISTTWO
+EQUIP 24300 ARMS
+MOB 24301 TO 24319 GLIMIT 18 LLIMIT 4
+EQUIP 24301 WRISTTWO
+EQUIP 24300 ARMS
+MOB 24312 TO 24319 GLIMIT 7 LLIMIT 2
+MOB 24314 TO 24319 GLIMIT 12 LLIMIT 3
+MOB 24314 TO 24320 GLIMIT 12 LLIMIT 3
+MOB 24306 TO 24321 GLIMIT 10 LLIMIT 1
+MOB 24312 TO 24321 GLIMIT 7 LLIMIT 2
+MOB 24315 TO 24321 GLIMIT 8 LLIMIT 3
+MOB 24305 TO 24322 GLIMIT 10 LLIMIT 2
+MOB 24310 TO 24322 GLIMIT 1 LLIMIT 1
+EQUIP 24309 WIELD
+MOB 24305 TO 24323 GLIMIT 10 LLIMIT 2
+MOB 24311 TO 24323 GLIMIT 1 LLIMIT 1
+MOB 24315 TO 24323 GLIMIT 8 LLIMIT 3
+MOB 24316 TO 24324 GLIMIT 6 LLIMIT 3
+MOB 24305 TO 24325 GLIMIT 10 LLIMIT 2
+EQUIP 24308 WIELD
+MOB 24315 TO 24325 GLIMIT 8 LLIMIT 3
+MOB 24305 TO 24326 GLIMIT 10 LLIMIT 3
+MOB 24305 TO 24326 GLIMIT 10 LLIMIT 3
+MOB 24313 TO 24326 GLIMIT 7 LLIMIT 2
+MOB 24316 TO 24326 GLIMIT 6 LLIMIT 3
+MOB 24306 TO 24328 GLIMIT 10 LLIMIT 1
+MOB 24312 TO 24328 GLIMIT 7 LLIMIT 2
+MOB 24316 TO 24328 GLIMIT 6 LLIMIT 3
+MOB 24306 TO 24329 GLIMIT 10 LLIMIT 1
+MOB 24305 TO 24330 GLIMIT 10 LLIMIT 2
+MOB 24306 TO 24331 GLIMIT 10 LLIMIT 1
+MOB 24313 TO 24332 GLIMIT 7 LLIMIT 2
+MOB 24305 TO 24333 GLIMIT 10 LLIMIT 2
+MOB 24306 TO 24333 GLIMIT 10 LLIMIT 1
+MOB 24316 TO 24333 GLIMIT 6 LLIMIT 3
+MOB 24307 TO 24335 GLIMIT 1 LLIMIT 1
+MOB 24301 TO 24336 GLIMIT 18 LLIMIT 4
+EQUIP 24302 HEAD
+MOB 24314 TO 24336 GLIMIT 12 LLIMIT 3
+MOB 24314 TO 24336 GLIMIT 12 LLIMIT 3
+MOB 24301 TO 24337 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+EQUIP 24302 HEAD
+MOB 24301 TO 24337 GLIMIT 18 LLIMIT 4
+EQUIP 24302 HEAD
+MOB 24313 TO 24337 GLIMIT 7 LLIMIT 2
+MOB 24301 TO 24338 GLIMIT 18 LLIMIT 4
+EQUIP 24301 WRISTTWO
+EQUIP 24300 ARMS
+MOB 24314 TO 24338 GLIMIT 12 LLIMIT 3
+MOB 24301 TO 24339 GLIMIT 18 LLIMIT 4
+EQUIP 24301 WRISTTWO
+MOB 24314 TO 24339 GLIMIT 12 LLIMIT 3
+MOB 24301 TO 24341 GLIMIT 18 LLIMIT 4
+EQUIP 24302 HEAD
+MOB 24301 TO 24341 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+MOB 24301 TO 24342 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+EQUIP 24301 WRISTTWO
+EQUIP 24302 HEAD
+MOB 24314 TO 24342 GLIMIT 12 LLIMIT 3
+MOB 24301 TO 24344 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+MOB 24301 TO 24345 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+EQUIP 24302 HEAD
+MOB 24314 TO 24346 GLIMIT 12 LLIMIT 3
+MOB 24301 TO 24347 GLIMIT 18 LLIMIT 4
+EQUIP 24301 WRISTTWO
+MOB 24302 TO 24347 GLIMIT 9 LLIMIT 2
+MOB 24302 TO 24348 GLIMIT 9 LLIMIT 2
+MOB 24314 TO 24348 GLIMIT 12 LLIMIT 3
+MOB 24314 TO 24349 GLIMIT 12 LLIMIT 3
+MOB 24302 TO 24351 GLIMIT 9 LLIMIT 2
+MOB 24303 TO 24351 GLIMIT 5 LLIMIT 1
+MOB 24302 TO 24352 GLIMIT 9 LLIMIT 2
+MOB 24301 TO 24353 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+MOB 24302 TO 24353 GLIMIT 9 LLIMIT 2
+MOB 24302 TO 24355 GLIMIT 9 LLIMIT 2
+MOB 24301 TO 24356 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+MOB 24303 TO 24359 GLIMIT 5 LLIMIT 1
+DOOR 24360 east CLOSED
+MOB 24303 TO 24360 GLIMIT 5 LLIMIT 1
+MOB 24302 TO 24362 GLIMIT 9 LLIMIT 2
+MOB 24301 TO 24363 GLIMIT 18 LLIMIT 4
+EQUIP 24300 ARMS
+MOB 24302 TO 24364 GLIMIT 9 LLIMIT 2
+MOB 24303 TO 24365 GLIMIT 5 LLIMIT 1
+MOB 24304 TO 24366 GLIMIT 1 LLIMIT 1
+EQUIP 24305 WIELD
+EQUIP 24306 HEAD
+MOB 24301 TO 24367 GLIMIT 18 LLIMIT 4
+EQUIP 24302 HEAD
+MOB 24302 TO 24367 GLIMIT 9 LLIMIT 2
+MOB 24303 TO 24367 GLIMIT 5 LLIMIT 1
+MOB 24306 TO 24369 GLIMIT 10 LLIMIT 1
+MOB 24315 TO 24370 GLIMIT 8 LLIMIT 3
+MOB 24306 TO 24371 GLIMIT 10 LLIMIT 1
+MOB 24308 TO 24371 GLIMIT 1 LLIMIT 1
+EQUIP 24312 BODY
+MOB 24306 TO 24372 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+END
+#$

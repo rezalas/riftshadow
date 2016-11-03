@@ -1,0 +1,3750 @@
+#AREA
+antava.are~
+The Antava Marsh~
+Sekh~
+15 30
+400 499
+normal
+subtropical
+0
+1
+Sekh~
+
+#MOBS
+#400
+frail old man~
+an old man~
+A frail old man is sleeping on the bed.
+~
+Perhaps finding comfort in his hidden bungalow, this old man looks at
+peace as he sleeps comfortably on his bed. He wears very little
+clothing and is completely undisturbed by your entrance. You may never
+know why he chooses to live out his life here, but certainly he must
+have his reasons.
+~
+0 401 500 human~
+25 5d5+750 2d10+7 0 100 punch
+5 5 5 3
+sleeping male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT STAY_AREA
+OFF DODGE
+OFF DIRT_KICK
+OFF TRIP
+OFF NO_TRACK
+IMM SUMMON
+#401
+large bullfrog frog~
+a bullfrog~
+A large bullfrog wallows in the mud.
+~
+Big eyes bulge out from the top his slimy, rubbery skin, blinking every
+so often along with a load croak. It is hard to make out the bullfrog's
+true color because of the mud caked on his skin, thus you cannot be
+sure if this is the poisonous kind or not. His long legs look extremely
+powerful and you are sure they could aide him in making a hasty escape
+if you startle him.
+~
+0 402 500 unique~
+15 3d9+243 2d6+3 0 100 none
+5 5 5 3
+standing male none
+ABGacd ABGacd small
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF DODGE
+OFF KICK
+OFF PARRY
+OFF NO_TRACK
+AFF WATERBREATH
+RES POISON
+VUL COLD
+#402
+large crocodile croc~
+a crocodile~
+A large crocodile rests quietly, waiting for its next victim.
+~
+For being a vicious and tough looking animal, this crocodile sure
+doesn't have to move around a whole lot to prove it. It is easily ten
+feet long and a few feet across at its widest, with skin that is
+probably thicker than any leather. You do not feel in any immediate
+danger, but it would probably be best not to disturb it.
+~
+0 403 500 lizard~
+30 6d12+1053 4d6+8 0 100 chomp
+20 20 20 10
+standing either none
+d 0 large
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+OFF DODGE
+OFF TAIL
+OFF ASSIST_VNUM
+AFF WATERBREATH
+#403
+young crocodile~
+a young crocodile~
+A young crocodile rolls around, content in itself.
+~
+Maybe about 5 feet long from head to tail, this reptilian youngster
+scuttles along the mud in search of a cool enough resting spot. Its
+skin is a dark shade of green, allowing the croc to blend in with the
+flora. While not as big as some of the other reptiles here, it still
+looks dangerous enough.
+~
+0 403 500 lizard~
+25 5d10+750 2d10+7 0 100 bite
+15 15 15 10
+standing either none
+d 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF DODGE
+OFF TAIL
+AFF WATERBREATH
+#404
+amethystine python~
+an amethystine python~
+A large amethyst colored python is coiled around a branch.
+~
+Your best estimate of this snake is that its length is somewhere around
+fifteen feet. On its head are a few tortoise-like platelets probably
+for added protection. When you look at it from the right angle you
+notice a stunning amethyst shine coming from its skin.
+~
+0 404 500 snake~
+23 5d10+640 3d6+6 0 100 bite
+12 12 12 12
+standing either none
+d 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF DODGE
+AFF INFRARED
+#405
+green tree snake~
+a green tree snake~
+A small green snake hangs like a vine from a branch.
+~
+This arboreal snake hangs like any other vine or whip from the  branch
+of a tree. Its underbelly is a light yellowish color while its top
+layer of skin is a deep green, helping it to blend in with the real
+vines. It is about six feet in length and is probably more scared of
+you than you are of it.
+~
+0 405 500 snake~
+20 3d9+455 2d6+6 0 100 bite
+10 10 10 10
+standing either none
+d 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+#406
+young man~
+a young man~
+A young man studies the rubble, while looking in a small journal.
+~
+He obviously doesn't belong in this marsh, and appears to simply be
+visiting to learn something. He wears the proper clothing to protect
+him from the muggy climate, but looks incredibly uncomfortable in the
+process. What would drag him to this place?
+~
+400 406 500 human~
+26 5d10+800 3d7+7 0 100 punch
+5 5 5 5
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+CLASS warrior none none 
+#407
+exotic quetzal~
+a quetzal~
+An exotic quetzal is perched on a low branch.
+~
+This resplendent bird is truly a sight to behold. Most of its
+feathering is a light green color, while its belly is a deep hue of
+crimson. The feathers on its head flair up a little bit and give off a
+blue-green iridescent shine. It is a relatively small bird, maybe a
+foot in height, but its ornamental tail feathers are easily two feet in
+length, making the birds seem more long and graceful.
+~
+0 407 500 unique~
+20 3d9+455 2d6+6 0 100 scratch
+7 7 7 7
+standing either none
+d 0 tiny
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF ASSIST_VNUM
+#408
+scarlet macaw~
+a scarlet macaw~
+A large scarlet macaw flaps around happily.
+~
+This large bird has the most brilliant coloration in any bird that
+you've seen. Its deep scarlet feathers giving off a soft sheen rarely
+seen in birds. Near its big black beak the feathers lighten into a
+white making a stark contrast.
+~
+0 408 500 unique~
+22 5d10+570 4d4+6 0 100 claw
+8 8 8 8
+standing either none
+d 0 small
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF ASSIST_VNUM
+#409
+small parrot~
+a small parrot~
+A small green parrot picks at some berries growing on a shrub.
+~
+This social bird's coloring is a light pea green color, not the most
+beautiful but pleasant and fun nonetheless. It isn't very big, but has
+a nice stout bill with a sharp hooked tip probably used for opening
+nuts and fruits.
+~
+0 409 500 unique~
+20 3d9+455 2d6+6 0 100 scratch
+7 7 7 7
+standing either none
+d 0 tiny
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF ASSIST_VNUM
+#410
+sarus crane~
+a sarus crane~
+A red-headed sarus crane pokes amidst the ground for insects.
+~
+This tall bird is mostly white, with a great amount of red coloring on
+its neck and head. It has long thin legs that look a bit too unsturdy
+to hold up the body, but they find a way. Attached to its small head is
+a long slender beak used for digging into the ground for bugs and such.
+~
+0 410 500 unique~
+21 4d10+510 4d4+5 0 100 peck
+7 7 7 7
+standing either none
+d 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF ASSIST_VNUM
+#411
+paradise bird~
+a bird of paradise~
+A magnificent bird of paradise is splashing in the fountain.
+~
+This spectacular bird has fabulous plumage and coloration throughout
+its entirety. While its wings are mainly a drab brown color, on its
+back and tips of its tail and wings are feathers of bright pink. Closer
+to its neck and head the feathers turn yellow, making for a fabulous
+contrast of color. Below its head and the underside of his neck are
+right green feathers making this bird a sight to behold, truly.
+~
+0 411 500 unique~
+22 5d10+570 4d4+6 0 100 claw
+8 8 8 8
+standing either none
+d 0 small
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOALIGN
+OFF BERSERK
+#412
+large sloth~
+a two toed sloth~
+A large sloth hangs upside down from a tree.
+~
+This large furry thing hangs upside down from a tree using the long
+curved claws on his feet. Its skin and fur are coated with a thin layer
+of algae, probably because it cannot move fast enough to prevent that
+sort of thing. What's interesting is that its black fur also grows in
+the opposite direction of most mammals because it hangs upside down so
+often.
+~
+0 412 500 bear~
+24 5d10+700 2d10+6 0 100 slash
+10 10 10 10
+standing either none
+d 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT NOALIGN
+AFF SLOW
+#413
+tarantula bird-eating~
+a bird-eating tarantula~
+A large tarantula slowly crawls along the ground.
+~
+As big as a human head, this spider is perhaps one of the most deadly
+creatures in the marsh, if you are a small bird, that is. Its tough
+spider skin is coated nicely in a dark brown fur, giving it an enhanced
+sense of feel. It seems to ignore you because it, frankly, can't eat
+you and move on.
+~
+0 413 500 centipede~
+20 3d9+455 2d6+6 0 100 bite
+7 7 7 7
+standing either none
+Pd 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+#414
+small chameleon~
+a chameleon~
+Blended in with a shrub is a small chameleon.
+~
+This small lizard is notorious for adapting to its surroundings by
+changing the pigment in its skin. It has a long prehensile tail and
+modified toes, which enable it to grip onto branches. It has an
+extremely long tongue covered with a sticky mucus enabling it to
+catch its prey more easily. Its most noticeable feature, however, are
+its eyes. They seem to be able to rotate independent of one another,
+giving it excellent eyesight no doubt.
+~
+0 414 500 lizard~
+21 4d10+510 4d4+5 0 100 slime
+7 7 7 7
+standing either none
+d 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF ASSIST_VNUM
+AFF DETECT_CAMO
+AFF CAMOUFLAGE
+#415
+snapping turtle~
+a snapping turtle~
+A small turtle wades quietly in the muck.
+~
+This turtle is not incredibly big, but that doesn't appear to affect
+its outlook on things as it seems unphased by your presence. It has
+thin yellow stripes running through what parts of its skin you can see,
+which are a head, neck, legs, and a short tail. It has a nice set of
+claws at the ends of its feet and you notice that its mouth comes to a
+rather sharp point, like it must really be good at biting things.
+~
+0 415 500 unique~
+21 4d10+510 4d4+5 0 50 chomp
+40 40 40 20
+standing either none
+AGacd AGacd small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOALIGN
+#0
+
+
+
+#OBJS
+#400
+bed moss leaves~
+a bed of moss and leaves~
+A makeshift bed of moss and leaves is in the corner.~
+furniture
+plant~
+1 300 0 0 0
+20 2000 0 P
+ITEM NOPURGE
+ITEM NOLOCATE
+LIMIT 0
+E bed moss leaves~
+The bed is very low to the ground and is more like a pile of moss and
+leaves than a bed of it. There is no pillow for the bed, and although
+the moss makes it look very soft, you do not think that you would sleep
+well on it.
+~
+
+#401
+stone altar moss-covered~
+an altar covered with moss~
+A cracked stone altar coated in moss is here.~
+furniture
+stone~
+0 0 0 0 0
+20 2000 0 P
+ITEM NOPURGE
+ITEM NOLOCATE
+LIMIT 0
+E altar~
+This must have gone unused for an extreme amount of time in order to
+collect the carpet of moss that it has. A large crack runs through the
+middle of it, symbolizing something more than just a cracked altar.
+~
+
+#402
+small nymph fountain~
+an old stone fountain~
+An old stone fountain is here, being used as a birdbath.~
+fountain
+stone~
+10000 10000 'water' 0 0
+20 2000 0 P
+ITEM NOPURGE
+LIMIT 0
+E nymph statue~
+This playful and lush outdoor setting is epitomized in the beautifully
+carved statue of a nymph. The details are all there and if it were not
+made of stone, you would think it to be real.
+~
+E stone fountain~
+This small fountain is circular in shape, birds of all shapes and sizes
+come to play in its cool water, which is probably nothing more than
+collected rain water. A small statue of a nymph is the center of the
+fountain.
+~
+
+#403
+woman statue~
+A statue of a beautiful woman~
+A tall statue stands in the center of the garden, resisting its decay.~
+furniture
+stone~
+0 0 0 0 0
+20 2000 0 P
+ITEM NOPURGE
+ITEM NOLOCATE
+LIMIT 0
+E woman statue~
+Although some of the features of the statue have been chipped and rotted
+away, this statue does the woman it portrays complete justice.  It depicts a
+slender woman looking as dashing as coy as she ever must have.  Her hands
+reach out, as if waiting to be touched.  A small plaque is at the base of
+the statue, commemmorating it.  
+~
+
+#404
+small spring~
+A small spring~
+A small spring bubbles up from underneath some rocks here.~
+fountain
+water~
+10000 10000 'water' 0 0
+20 2000 0 P
+ITEM NOPURGE
+ITEM NOLOCATE
+LIMIT 0
+E small spring~
+The spring bubbles up from underneath a few rocks on the ground and
+starts the flow of a muddy that runs through the marsh.
+~
+
+#405
+odd mushroom~
+an odd-looking mushroom~
+An odd-looking mushroom grows here.~
+food
+food~
+1 0 0 1 0
+5 1 0 P
+WEAR TAKE
+LIMIT 0
+E odd mushroom odd-looking~
+It is a fairly large mushroom, white with brown speckles over most of
+it. It looks edible, but you can't be sure.
+~
+
+#406
+strange fungus~
+a strange-looking fungus~
+A very strange fungus grows on the wall.~
+pill
+slime~
+20 'sleep' 'reserved' 'reserved' 'reserved'
+5 1 0 P
+WEAR TAKE
+LIMIT 0
+E strange fungus~
+This fungus is very slimy to the touch like a slug had just been
+crawling all over it. Its coloring is very soft with light hues of reds
+and greens. Looking at it kind of makes you drowsy.
+~
+
+#407
+tooth tipped spear~
+a spear tipped with a crocodile tooth~
+A long spear is on the ground, tipped with a crocodile tooth.~
+weapon
+hardwood~
+spear 5 10 pierce 0
+25 6 100 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E tooth spear~
+The shaft of the spear is made from a long thin piece of hardwood. At
+the tip, a crocodile tooth about 5 inches long is lashed into the wood
+with a thin piece of vine.
+~
+
+#408
+snakeskin poncho~
+a snakeskin poncho~
+A pile of snake skins lay on the floor.~
+armor
+snakeskin~
+8 8 8 8 0
+20 4 100 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+E snakeskin poncho~
+It is actually many different snake skins sewn together with bits and
+pieces of makeshift twine. Some of the skins are thick and colorful,
+while others are dull and thin. It is obviously not worn to impress
+anyone.
+~
+
+#409
+leather loincloth~
+a small leather loincloth~
+A small piece of leather lies here.~
+armor
+soft leather~
+5 5 5 5 0
+20 2 100 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+E leather loincloth~
+Although it is very soft to the touch and would provide great comfort,
+it does not seem practical enough to wear. Plus it leaves all too
+little to the imagination.
+~
+
+#410
+small silver dagger~
+a small silver dagger~
+A fine dagger with a forged silver blade lies here.~
+weapon
+silver~
+dagger 4 11 pierce 0
+23 3 1000 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E silver dagger~
+This finely crafted dagger is fairly lightweight with a forged blade
+about six inches long. Its handle is wrapped in a soft black leather,
+but other than that, it seems like nothing spectacular.
+~
+
+#411
+silk shirt~
+a fine white silk shirt~
+A nice piece of silk is crumpled on the ground.~
+armor
+silk~
+3 3 3 3 0
+23 1 300 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+E silk shirt~
+It is everything you would want a silk shirt to be, white with fancy
+ruffles around the cuffs and collar. It has that marvelous dull sheen
+that silk is known to possess making it that much more of a luxury
+item.
+~
+
+#412
+thin wool pants~
+a pair of black wool pants~
+A thin pair of fine wool pants lies here.~
+armor
+wool~
+4 4 4 4 0
+23 1 300 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+E thin wool pants~
+Perfect for retaining needed body heat and wicking away unwanted
+moisture, this black pair of pants is just the item desired for such a
+time. And they look quite comfortable, too.
+~
+
+#413
+long green poncho~
+a long green poncho~
+A large piece of plastic with holes in it lies here.~
+armor
+plastic~
+4 4 4 4 0
+23 2 200 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+E long poncho~
+This large green thing is not the most durable item, but it can protect
+a person from rain and storms like few other item can. All it seems to
+be is an abnormally long piece of plastic with a holes for a head, body
+and arms.
+~
+
+#414
+thin leather belt~
+a thin leather belt~
+A thin strip of soft leather lies here.~
+armor
+soft leather~
+2 2 2 2 0
+23 1 100 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+E thin leather belt~
+This belt is nothing special at all. Fully adjustable by a small
+leather buckle and surely able to hold up any pair of pants or leggings
+you own.
+~
+
+#415
+webbing bug net~
+a bug net~
+A small pile of loose webbing lies here.~
+armor
+webbing~
+2 2 2 2 0
+23 1 200 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+E bug net~
+At first glance it looks just like a sturdy spider web, but it is not
+sticky and does not have the consistency of one. Instead it is a dome
+of mesh webbing worn on one's head to keep away those pesky insects.
+How convenient.
+~
+
+#416
+rubber boots~
+some rubber boots~
+Some black rubber boots are here, caked with mud.~
+armor
+rubber~
+7 7 7 7 0
+23 6 400 P
+WEAR TAKE
+WEAR FEET
+APPLY MOVE -10
+APPLY DEX -1
+LIMIT 0
+E rubber boots~
+They seem large and annoying, these black rubber boots. There is no way
+that anyone would be nearly as agile when wearing boots like these. If,
+however, you are going to be doing some exploring in a damp place,
+these may come in handy.
+~
+
+#417
+leather book journal~
+a small leather-bound journal~
+A small book with leather binding lies here.~
+trash
+paper~
+0 0 0 0 0
+23 2 100 P
+WEAR TAKE
+WEAR HOLD
+APPLY INT 1
+LIMIT 0
+E journal~
+Flipping casually through the pages, you come to the most recent entry:
+
+"...Over the course of the past week, I've determined that there was no
+struggle here. The people seem to have just up and vanished before the
+castle and area surrounding it were devastated. Therefore they must
+have known that it was going to happen, but why would someone destroy
+such a place if there were no one here to be hurt by the destruction.
+Tomorrow I'm going to try and find signs of any people who might have
+decided to stay. It is all unlikely...why wouldn't father just tell me
+what happened here?"
+~
+
+#418
+red berries~
+some small red berries~
+Some red berries grow on a tiny shrub.~
+food
+food~
+2 1 0 0 0
+10 1 0 P
+WEAR TAKE
+LIMIT 0
+E berries~
+There are about twenty or so berries in this particular patch. They look edible enough and you notice some animals have been feeding on them, so they cannot be that bad.
+~
+
+#499
+hand~
+the statue's hand~
+The statue's hand is here, waiting to be touched.~
+trash
+stone~
+0 0 0 0 0
+52 300 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 0
+VERB touch
+TIMER 0
+E hand~
+Decaying and littered with debris, the immortal woman's hand waits
+eternally in mid-air to be touched.  
+~
+E hand~
+The statue's weathered stone hand reaches out, seeming somehow soft in
+its crafting, waiting to be touched.  Cracked, mossy and mildewy, it seems
+as though it has gone untouched for quite some time.  
+~
+
+#0
+
+
+
+#ROOMS
+#400
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the
+trees continue to loom above you creating a nice canopy for shade.
+You hear the occasional bird chirp as well as odd, seemingly amphibian
+noise. Long vines hang from the trees and mosses and lichen grow an
+just about anything. The trees to the north and west are too thick to
+venture through, while a very damp path continues to the south and
+east.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D EAST 401 0 0
+~
+The swampy path continues.
+~
+D SOUTH 406 0 0
+~
+The swampy path continues.
+~
+D WEST 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+#401
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The trees to the north are too thick to traverse, but the
+damp path continues in most other directions.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D EAST 402 0 0
+~
+The swampy path continues.
+~
+D SOUTH 407 0 0
+~
+The swampy path continues.
+~
+D WEST 400 0 0
+~
+The swampy path continues.
+~
+#402
+A Turn in the Damp Path~
+The path makes a slight bend here to avoid the solid wall of marshy
+flora, which seems to surround you as well as coat everything in sight.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. Amidst the swampy grounds there are some oddly shape stone
+objects. The path is halted to the north and east while it continues to
+the south and west.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D EAST 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D SOUTH 408 0 0
+~
+The swampy path continues.
+~
+D WEST 401 0 0
+~
+The swampy path continues.
+~
+E stone objects~
+Somewhat buried in the mud are these stone objects, which seem almost
+identical in both their weathering and color. They resemble stones
+you've seen in some kinds of architecture.
+~
+#403
+A Small Opening in the Canopy~
+The sky above is now clearly visible through small gap in the natural
+awning. This causes for a nice breeze to circle around you. Long vines
+hang from the trees and mosses and lichen grow an just about anything.
+The marsh stretches on in most directions. To the north is the edge of
+the swamp.
+~
+swamp
+D NORTH 3528 0 0
+~
+The edge of a swamp lies to the north.
+~
+D EAST 404 0 0
+~
+The entrance of the marsh is in this direction.
+~
+D SOUTH 412 0 0
+~
+The swamp continues in this direction.
+~
+D WEST 498 0 0
+~
+The canopy of cypress trees extends to the west.
+~
+D UP 0 0 0
+~
+The sky above pours through an opening in the trees.
+~
+#404
+Under an Awning of Cypress Trees~
+The trunks of trees, sporadically coated with moss, spring up around
+you. Their massive branches reaching towards the sky much like the
+outstretched arms of religions fanatics. Random insects buzz around you
+and the occasional amphibian noise is heard from some rotted out
+hollow. The ground below your feet is damp and murky and the air is
+thick with humidity. The marsh continues to the west and south. To the
+north is the edge of the swamp.
+~
+swamp
+D NORTH 3534 0 0
+~
+The edge of the swamp lies to the north.
+~
+D EAST 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D SOUTH 413 0 0
+~
+A massive tree lies up ahead.
+~
+D WEST 403 0 0
+~
+The swamp continues in this direction.
+~
+#405
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The trees to the north and west are too thick to venture
+through, while a very damp path continues to the south and east.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D EAST 406 0 0
+~
+The swampy path continues.
+~
+D SOUTH 415 0 0
+~
+The swampy path continues.
+~
+D WEST 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+#406
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The murky path continues to the north, east and west. While
+the was south is blocked by a massive stone pillar.
+~
+swamp
+D NORTH 400 0 0
+~
+The swampy path continues.
+~
+D EAST 407 0 0
+~
+The swampy path continues.
+~
+D SOUTH 0 0 0
+~
+A massive pillar weathered by climate and time blocks the way.
+~
+D WEST 405 0 0
+~
+The swampy path continues.
+~
+E words etched side~
+Chiseled into the side of the pillar are the words,
+"Long Live Antava!"
+~
+E stone pillar~
+A large stone pillar stands here slightly sunken in the mud and
+blocking the way south. Most features on this stone monument are
+completely eroded away except for a few words etched into the side.
+~
+#407
+An Intersection in the Damp Path~
+Although still draped with mosses and vines, the trees here seem less
+frequent and spread apart. This is probably one of the places in the
+marsh that receives plenty of travel from the local wildlife. The sky
+is even a bit more visible here than in other parts of the dreary
+marsh. Long vines hang from the trees and mosses and lichen grow an
+just about anything.
+~
+swamp
+D NORTH 401 0 0
+~
+The swampy path continues.
+~
+D EAST 408 0 0
+~
+The swampy path continues.
+~
+D SOUTH 417 0 0
+~
+The swampy path continues.
+~
+D WEST 406 0 0
+~
+The swampy path continues.
+~
+#408
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines have draped themselves across the branches of trees and
+other local flora. The path continues to the north and east while the
+south and west seem blocked off by the numerous vines.
+~
+swamp
+D NORTH 402 0 0
+~
+The swampy path continues.
+~
+D EAST 409 ABI 0
+vines~
+The vines seem a bit thinner there.
+~
+D SOUTH 0 0 0
+~
+The vines seem too thick in this direction.
+~
+D WEST 407 0 0
+~
+The swampy path continues.
+~
+#409
+Inside a Cave of Vines~
+This small space is completely enclosed by vines, creating what must be
+a natural shelter from the weather or other disasters. The ground is
+not that damp here and it surely serves its purpose as a cover from
+harm. In the corner you see what appears to be a makeshift bed. The
+only way out is back through the vines.
+~
+swamp
+ROOM DARK
+ROOM INDOORS
+D WEST 408 AB 0
+vines~
+The door of vines is almost the perfect disguise for an entrance.
+~
+#410
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side as it leads to what appears to be a shallow pool in the
+marsh. A high-pitched buzz fills the air, emanating from a thin cloud
+of tiny insects making the experience that much more distracting. The
+trail continues to the east and the banks of a pool are to the south.
+~
+swamp
+D NORTH 0 0 0
+~
+The fen is too thick to cross.
+~
+D EAST 411 0 0
+~
+The boggy trail continues.
+~
+D SOUTH 420 0 0
+~
+The banks of a shallow pool lie ahead.
+~
+D WEST 0 0 0
+~
+The fen is too thick to cross.
+~
+#411
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side while the air seems to get more dense with humidity and
+insects. Long vines hang from the trees and mosses and lichen grow an
+just about anything. The trail continues to the west and south from
+here.
+~
+swamp
+D NORTH 0 0 0
+~
+The fen is too thick to cross.
+~
+D EAST 0 0 0
+~
+The fen is too thick to cross.
+~
+D SOUTH 421 0 0
+~
+The boggy trail continues.
+~
+D WEST 410 0 0
+~
+The boggy trail continues.
+~
+#412
+Under an Awning of Cypress Trees~
+The trunks of trees, sporadically coated with moss, spring up around
+you. Their massive branches reaching towards the sky much like the
+outstretched arms of religions fanatics. Long vines hang from the trees
+and mosses and lichen grow an just about anything. To the north you see
+a bit of a clearing while the marsh continues to the east and south.
+~
+swamp
+D NORTH 403 0 0
+~
+A small clearing lies ahead.
+~
+D EAST 413 0 0
+~
+A massive tree can be seen in the distance.
+~
+D SOUTH 423 0 0
+~
+The start of an interesting trail is up ahead.
+~
+D WEST 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+#413
+Underneath the Willow Tree~
+The awning you were previously under is dwarfed in shocking comparison
+to this weeping willow. Its long branches rain down, almost sweeping
+the floor of the marsh creating a very peaceful and serene setting to
+witness. The trunk is twice the width of a titan, and the dome-like
+awning the tree creates is larger than many houses. Rows of smaller
+cypress trees grow to the north, west and south, but you can get a
+better view of the marsh by climbing up into the willow tree.
+~
+swamp
+D NORTH 404 0 0
+~
+The entrance to the marsh lies ahead.
+~
+D EAST 0 0 0
+~
+A wall of cypress trees blocks the way.
+~
+D SOUTH 425 0 0
+~
+A swampy path is ahead.
+~
+D WEST 412 0 0
+~
+The swamp continues.
+~
+D UP 424 0 0
+~
+It is possible to ascend the tree.
+~
+E tree willow weeping~
+It is easily the largest tree in the marsh making it seem somewhat out
+of place. The majesty of this creation is only outdone by the sadness
+that the tree represents. What would a tree have to weep for, though?
+~
+#414
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the east and west, weaving through the
+slime and muck.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh there is too thick to cross.
+~
+D EAST 415 0 0
+~
+A split in the path lies ahead.
+~
+D SOUTH 0 0 0
+~
+The marsh there is too thick to cross.
+~
+D WEST 425 0 0
+~
+The damp path continues.
+~
+#415
+A Split in the Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+The trees here grow in a straight row to the south, as if they were
+planted instead of rising up on their own. Long vines drape down
+through the trees to the east, making the path in that direction seem a
+little less obvious than the thick, slimy mud you now travel on.
+~
+swamp
+D NORTH 405 0 0
+~
+The damp path continues.
+~
+D EAST 416 0 0
+~
+A thinner and more foreboding trail lies ahead.
+~
+D SOUTH 0 0 0
+~
+A solid line of trees blocks your way.
+~
+D WEST 414 0 0
+~
+The damp path continues.
+~
+#416
+On a Thin Path~
+The trees grow in straight lines on all sides of you. Their branches
+extend out above the path as it turns, covering the walkway with a
+natural arch and cutting off the light from above. Long vines stream
+down from the trees, swaying slightly in a light breeze, appearing like
+snakes hanging by their tails. The path opens up to the west, but gets
+more dismal and dark to the south.
+~
+swamp
+ROOM DARK
+D NORTH 0 0 0
+~
+A solid line of trees blocks the way.
+~
+D EAST 0 0 0
+~
+A solid line of trees blocks the way.
+~
+D SOUTH 426 0 0
+~
+A large stone structure rises out of the swamp.
+~
+D WEST 415 0 0
+~
+The path widens and splits to the west.
+~
+D UP 0 0 0
+~
+A natural arch of branches looms above.
+~
+#417
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the north and south, weaving amidst the
+slime and muck.
+~
+swamp
+D NORTH 407 0 0
+~
+The damp path continues.
+~
+D EAST 0 0 0
+~
+The swamp is too thick in this direction.
+~
+D SOUTH 427 0 0
+~
+The damp path continues.
+~
+D WEST 0 0 0
+~
+The swamp is too thick in this direction.
+~
+#418
+A Murky Pool~
+At what must be a low point in the marsh, the water has collected to
+form a shallow pool of standing water. With roots extended up out of
+the water, the trees still grow abundantly here. The water is coated
+with a thin film of scum, making it impossible to see far below the
+surface. To the north and west the pool continues, but the vines and
+trees are too dense to travel through.
+~
+water
+D NORTH 0 0 0
+~
+The shallow pool disappears into the swamp.
+~
+D EAST 419 0 0
+~
+The pool continues.
+~
+D SOUTH 432 0 0
+~
+The pool continues.
+~
+D WEST 0 0 0
+~
+The shallow pool disappears into the swamp.
+~
+#419
+A Murky Pool~
+At what must be a low point in the marsh, the water has collected to
+form a shallow pool of standing water. With roots extended up out of
+the water, the trees still grow abundantly here. The water is coated
+with a thin film of scum, making it impossible to see far below the
+surface. To the north the pool continues, but the vines and trees are
+too dense to travel through.
+~
+water
+D NORTH 0 0 0
+~
+The shallow pool disappears into the swamp.
+~
+D EAST 420 0 0
+~
+The banks of the pool lie to the east.
+~
+D SOUTH 433 0 0
+~
+The pool continues.
+~
+D WEST 418 0 0
+~
+The pool continues.
+~
+#420
+On the Banks of a Pool~
+The boggy trail widens as the mud becomes softer, much like a dirt
+soup. The ground slopes downward to the west towards a shallow pool in
+the marsh. Small streaks of light make it through the overhanging
+ferns, illuminating the moss covered area with a dull luster. A thick
+patch of reeds and ferns lay eastward. The bank continues to the south
+and the mud narrows to form a trail to the north.
+~
+swamp
+D NORTH 410 0 0
+~
+A boggy trail lies ahead.
+~
+D EAST 0 0 0
+~
+The reeds are too thick to travel through.
+~
+D SOUTH 434 0 0
+~
+The small shore continues.
+~
+D WEST 419 0 0
+~
+A shallow pool fills up the land to the west.
+~
+#421
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side as it leads to what appears to be a shallow pool in the
+marsh. A high-pitched buzz fills the air, emanating from a thin cloud
+of tiny insects making the experience that much more distracting. The
+trail continues to both the north and the east.
+~
+swamp
+D NORTH 411 0 0
+~
+The boggy trail continues.
+~
+D EAST 422 0 0
+~
+The boggy trail continues.
+~
+D SOUTH 0 0 0
+~
+The fen is too thick to cross.
+~
+D WEST 0 0 0
+~
+The fen is too thick to cross.
+~
+#422
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side as it leads to what appears to be a shallow pool in the
+marsh. A high-pitched buzz fills the air, emanating from a thin cloud
+of tiny insects making the experience that much more distracting. The
+trail continues to both the west and the east.
+~
+swamp
+D NORTH 0 0 0
+~
+The fen is too thick to cross.
+~
+D EAST 423 0 0
+~
+The boggy trail continues.
+~
+D SOUTH 0 0 0
+~
+The fen is too thick to cross.
+~
+D WEST 421 0 0
+~
+The boggy trail continues.
+~
+#423
+On the Boggy Trail~
+The canopy of ferns and trees closes in above you, making the area feel
+much smaller. Moss covered rocks lie sporadically in the mud, but they
+seem few and far between. Reeds have sprung up on either side of a thin
+and very wet trail that wanders off to the east while a smaller, darker
+trail winds to the south. The overhanging plants widen a bit to the
+north.
+~
+swamp
+D NORTH 412 0 0
+~
+The marsh opens up to the north.
+~
+D EAST 0 0 0
+~
+The fen is too thick to cross.
+~
+D SOUTH 436 0 0
+~
+A thin trail winds to the south.
+~
+D WEST 422 0 0
+~
+The boggy trail continues.
+~
+E rocks moss covered~
+Upon closer inspection, these rocks are not the typical round objects
+found in Shalar. Although they are mostly covered with moss it is still
+possible to tell that they have been polished, and look more like
+fragmented marble.
+~
+#424
+High in the Willow Tree~
+>From here you can see above most of the marsh while for once the air
+isn't thick with humidity and insects. A strong breeze blows and it is
+good to feel that fresh air against your skin. It is almost impossible
+to see back down into the marsh in any place, and in a few spots the
+tops of the trees interlock so well as to form what appears to be the
+ground itself. There are a few taller trees which extend above the
+canopy, but you still remain at the highest point in the marsh. Odd-
+looking stone structures rise up from the marsh in all directions. The
+most unique being a pair of matching towers to the south. Some words
+are etched into one of the branches.
+~
+swamp
+D NORTH 0 0 0
+~
+The trees thin to the north and you can slightly make out the adjoining
+area.
+~
+D EAST 0 0 0
+~
+Not far to the east is a small stone pillar rising out of the swamp. If
+that was just a pillar, you can only imagine the size of the object it
+was holding up.
+~
+D SOUTH 0 0 0
+~
+Far to the south you see a pair of matching stone towers rising out of
+the swamp. It is too hard to make out the details, but they look
+immense from where you are now.
+~
+D WEST 0 0 0
+~
+The sky seems a bit hazier in this direction as it gets tougher to make
+out the tree line.
+~
+D UP 0 0 0
+~
+The sky, you'd almost forgotten what it looked like.
+~
+D DOWN 413 0 0
+~
+It is possible to climb back down the tree.
+~
+E words etched~
+Welcome to the Antava Marsh.
+Conceived and created by Sekh
+for Riftshadow. © 2001
+~
+E tree weeping willow~
+It is easily the largest tree in the marsh making it seem somewhat out
+of place. The majesty of this creation is only outdone by the sadness
+that the tree represents. What would a tree have to weep for, though?
+~
+#425
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Rows of cypress trees and ferns line the sides of a muddy path which
+leads off into the marsh to the  east. A very large tree can be seen to
+the north.
+~
+swamp
+D NORTH 413 0 0
+~
+A large willow tree lies ahead.
+~
+D EAST 414 0 0
+~
+The damp path continues.
+~
+D SOUTH 0 0 0
+~
+A solid line of trees blocks the way.
+~
+D WEST 0 0 0
+~
+A solid line of trees blocks the way.
+~
+#426
+An Overgrown Shrine~
+The local flora sweeps around the area from the northern entrance
+forming a large circle of plants. The branches of the trees extend
+towards the middle of the circle almost unnaturally, making sure that
+little light enters this ground. Rising up in the center is a
+rectangular stone monument covered in moss and vines. The ground is no
+longer the damp mud, but an ancient stone walkway coated in various
+fungi and mosses. It leads up two wide steps to what looks like an
+altar of sorts. The only way out is back to the north.
+~
+swamp
+ROOM DARK
+D NORTH 416 0 0
+~
+The walkway ends as a trail leads back to the north.
+~
+D EAST 0 0 0
+~
+The circle of trees is almost impenetrable.
+~
+D SOUTH 0 0 0
+~
+The circle of trees is almost impenetrable.
+~
+D WEST 0 0 0
+~
+The circle of trees is almost impenetrable.
+~
+E monument~
+Covered in moss and slightly piercing the top of the tree line, this
+large piece of stone rising up from the marsh is the perfect backing
+for this secluded shrine.
+~
+#427
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the north and to the east, weaving amidst
+the slime and muck.
+~
+swamp
+D NORTH 417 0 0
+~
+The damp path continues.
+~
+D EAST 428 0 0
+~
+The damp path continues.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+#428
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the west and south, weaving amidst the
+slime and muck. A wall of pillars blocks the way to the east.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D SOUTH 439 0 0
+~
+The damp path continues.
+~
+D WEST 427 0 0
+~
+The damp path continues.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#429
+A Turn in the Line of Pillars~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to north and to the
+west. Small trees grow here, some blooming with fruit and flowers to
+serve as food for the many exotic birds that now make this place their
+home. A constant chirping and singing of the birds seems to emanate
+mainly from the southeast. A small path leads through the trees and
+lush animal paradise to the east and to the south.
+~
+forest
+D NORTH 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D EAST 430 0 0
+~
+A path around the fountain heads this way.
+~
+D SOUTH 440 0 0
+~
+An ancient entryway lies to the south.
+~
+D WEST 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#430
+The Northern Wall~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to north. Small trees
+grow here, some blooming with fruit and flowers to serve as food for
+the many exotic birds that now make this place their home. A constant
+ chirping and singing of the birds seems to emanate mainly from the
+south. A small path leads through the trees and lush animal paradise to
+the south, east and west.
+~
+forest
+D NORTH 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D EAST 431 0 0
+~
+A path around the fountain heads this way.
+~
+D SOUTH 441 0 0
+~
+An old fountain is ahead.
+~
+D WEST 429 0 0
+~
+A path around the fountain heads this way.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#431
+A Turn in the Line of Pillars~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to north and to the
+east. Small trees grow here, some blooming with fruit and flowers to
+serve as food for the many exotic birds that now make this place their
+home. A constant chirping and singing of the birds seems to emanate
+mainly from the southwest. A small path leads through the trees and
+lush animal paradise to the west and to the south.
+~
+forest
+D NORTH 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D EAST 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D SOUTH 442 0 0
+~
+A path around the fountain heads this way.
+~
+D WEST 430 0 0
+~
+A path around the fountain heads this way.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#432
+A Murky Pool~
+At what must be a low point in the marsh, the water has collected to
+form a shallow pool of standing water. With roots extended up out of
+the water, the trees still grow abundantly here. The water is coated
+with a thin film of scum, making it impossible to see far below the
+surface. To the west the pool continues, but the vines and trees are
+too dense to travel through. A small creek pours into the pool from the
+south.
+~
+water
+D NORTH 418 0 0
+~
+The pool continues.
+~
+D EAST 433 0 0
+~
+The pool continues.
+~
+D SOUTH 464 0 0
+~
+A small creek flows into the pool.
+~
+D WEST 0 0 0
+~
+The shallow pool disappears into the marsh.
+~
+#433
+A Murky Pool~
+At what must be a low point in the marsh, the water has collected to
+form a shallow pool of standing water. With roots extended up out of
+the water, the trees still grow abundantly here. The water is coated
+with a thin film of scum, making it impossible to see far below the
+surface. To the south the pool continues, but the vines and trees are
+too dense to travel through. The banks of the pool lie to the east.
+~
+water
+D NORTH 419 0 0
+~
+The pool continues.
+~
+D EAST 434 0 0
+~
+The banks of the pool lie to the east.
+~
+D SOUTH 0 0 0
+~
+The shallow pool disappears into the marsh.
+~
+D WEST 432 0 0
+~
+The pool continues.
+~
+#434
+On the Banks of a Pool~
+The boggy trail widens as the mud becomes softer, much like a dirt
+soup. The ground slopes downward to the west towards a shallow pool in
+the marsh. Small streaks of light make it through the overhanging
+ferns, illuminating the moss covered area with a dull luster. A thick
+patch of reeds and ferns lay eastward. The bank continues to the north
+and reeds and ferns block the ways to the south and east.
+~
+swamp
+D NORTH 420 0 0
+~
+The banks of the pool stretch to the north.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 433 0 0
+~
+A shallow pool fills up the land to the west.
+~
+#435
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side as it leads to what appears to be a shallow pool in the
+marsh. A high-pitched buzz fills the air, emanating from a thin cloud
+of tiny insects making the experience that much more distracting. The
+trail continues to both the south and the east.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 436 0 0
+~
+The boggy trail continues.
+~
+D SOUTH 443 0 0
+~
+The boggy trail continues.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+#436
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side as it leads to what appears to be a shallow pool in the
+marsh. A high-pitched buzz fills the air, emanating from a thin cloud
+of tiny insects making the experience that much more distracting. The
+trail continues to both the north and the west.
+~
+swamp
+D NORTH 423 0 0
+~
+The boggy trail continues.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 435 0 0
+~
+The boggy trail continues.
+~
+#437
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the east and to the south, weaving amidst
+the slime and muck.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 438 0 0
+~
+The damp path continues.
+~
+D SOUTH 447 0 0
+~
+The damp path continues.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+#438
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just
+about anything. The path winds to the east and to the west, weaving
+amidst the slime and muck.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 439 0 0
+~
+The damp path continues.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 437 0 0
+~
+The damp path continues.
+~
+#439
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the west, weaving amidst the slime and
+muck. To the east it leads underneath an old stone archway.
+~
+swamp
+D NORTH 428 0 0
+~
+The damp path continues.
+~
+D EAST 440 0 0
+~
+An ancient entryway is ahead.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 438 0 0
+~
+The damp path continues.
+~
+#440
+An Ancient Entryway~
+Two pillars on either side of you arch up to form an elegant archway
+above your head. The pillars themselves are somewhat smooth due to
+their lengthy stay in the marsh, but some of their carvings are still
+visible along their sides and tops. Once through the entryway you enter
+into a lush bird and animal paradise. Every fern and blade of grass
+seems a bit more tropical than the flora in the rest of the swamp. A
+constant chirping and singing emanates mainly from the east and a path
+through the sanctuary leads to the north, south and east.
+~
+forest
+D NORTH 429 0 0
+~
+A path around the fountain heads this way.
+~
+D EAST 441 0 0
+~
+An old fountain is ahead.
+~
+D SOUTH 448 0 0
+~
+A path around the fountain heads this way.
+~
+D WEST 439 0 0
+~
+A damp path leads away from the entryway.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars pillar~
+Each pillar has been made unique over time by natural processes. Some
+remain heavily detailed with fine grooves and carvings in their sides.
+Others have been worn smooth over time. And some of the pillars have
+stared to fall and are leaning against other pillars.
+~
+#441
+A Decrepit Stone Fountain~
+The paths throughout this sanctuary come together here to an old stone
+fountain now serving its purpose as a birdbath. The fountain is maybe
+fifteen feet in diameter and in its center is a small statue of a nymph
+frolicking. Exotic birds of all sorts don't even seem to notice you as
+they splash around the garden, singing to their heart's content. A few
+flowering plants grow around the fountain so the birds do not have to
+travel too far from their apparent happiness. A small plaque is here to
+commemorate the fountain.
+~
+forest
+D NORTH 430 0 0
+~
+A small path leads away from the fountain.
+~
+D EAST 442 0 0
+~
+A small path leads away from the fountain.
+~
+D SOUTH 449 0 0
+~
+A small path leads away from the fountain.
+~
+D WEST 440 0 0
+~
+A small path leads away from the fountain.
+~
+E plaque~
+It says,
+
+"Stay for a while to enjoy yourself
+and you shall be as free as those here."
+~
+#442
+The Eastern Wall~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to east. Small trees
+grow here, some blooming with fruit and flowers to serve as food for
+the many exotic birds that now make this place their home. A constant
+chirping and singing of the birds seems to emanate mainly from the
+west. A small path leads through the trees and lush animal paradise to
+the north, south and west.
+~
+forest
+D NORTH 431 0 0
+~
+A path around the fountain heads this way.
+~
+D EAST 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D SOUTH 450 0 0
+~
+A path around the fountain heads this way.
+~
+D WEST 441 0 0
+~
+An old fountain is ahead.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#443
+On the Boggy Trail~
+Although muddy and waterlogged as it is, a trail is clearly visible
+running through the middle of the muggy ground. Various reeds spring up
+on either side as it leads to what appears to be a shallow pool in the
+marsh. A high-pitched buzz fills the air, emanating from a thin cloud
+of tiny insects making the experience that much more distracting. The
+trail continues to the north, but widens into a large clearing to the
+east. The was south is blocked by a gigantic fallen tree.
+~
+swamp
+D NORTH 435 0 0
+~
+The boggy trail continues.
+~
+D EAST 444 0 0
+~
+The trail widens into a large clearing.
+~
+D SOUTH 0 0 0
+~
+A massive trunk of a fallen tree blocks the way south.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+E fallen tree trunk~
+Its diameter must be simply immense and it is easily taller than you
+are while it lays, fallen onto the ground. Judging from the looks of
+it, the tree was just too old to continue, and it finally started to
+rot and die, toppling without its strength.
+~
+#444
+A Large Clearing in the Marsh~
+Only a few trees grow here, and what ones that do seem a bit shorter
+than the average tree in the marsh. the ground is covered with some
+light grasses and ferns, much more like a field than a swamp. It still
+retains, however, a very damp and muddy composition. The sky is visible
+above gaping holes in the otherwise thick tree line and it is a
+refreshing sight in this dismal place. The clearing stretches on to the
+south and east, while a small trail goes back into the thickened marsh
+to the west.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 445 0 0
+~
+The clearing stretches to the east.
+~
+D SOUTH 453 0 0
+~
+The clearing stretches to the south.
+~
+D WEST 443 0 0
+~
+A boggy trail leads back into the marsh to the west.
+~
+#445
+A Large Clearing in the Marsh~
+Only a few trees grow here, and what ones that do seem a bit shorter
+than the average tree in the marsh. the ground is covered with some
+light grasses and ferns, much more like a field than a swamp. It still
+retains, however, a very damp and muddy composition. The sky is visible
+above gaping holes in the otherwise thick tree line and it is a
+refreshing sight in this dismal place. The clearing stretches on to the
+south, east and west.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 446 0 0
+~
+The clearing stretches to the east.
+~
+D SOUTH 454 0 0
+~
+The clearing stretches to the south.
+~
+D WEST 444 0 0
+~
+The clearing stretches to the west.
+~
+#446
+A Large Clearing in the Marsh~
+Only a few trees grow here, and what ones that do seem a bit shorter
+than the average tree in the marsh. the ground is covered with some
+light grasses and ferns, much more like a field than a swamp. It still
+retains, however, a very damp and muddy composition. The sky is visible
+above gaping holes in the otherwise thick tree line and it is a
+refreshing sight in this dismal place. The clearing stretches on to the
+south and west.
+~
+swamp
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 455 0 0
+~
+The clearing stretches to the south.
+~
+D WEST 445 0 0
+~
+The clearing stretches to the west.
+~
+#447
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the north and south, weaving amidst the
+slime and muck.
+~
+swamp
+D NORTH 437 0 0
+~
+The damp path continues.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 456 0 0
+~
+The damp path continues.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+#448
+A Turn in the Line of Pillars~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to south and to the
+west. Small trees grow here, some blooming with fruit and flowers to
+serve as food for the many exotic birds that now make this place their
+home. A constant chirping and singing of the birds seems to emanate
+mainly from the northeast. A small path leads through the trees and
+lush animal paradise to the east and to the north.
+~
+forest
+D NORTH 440 0 0
+~
+An ancient entryway lies to the north.
+~
+D EAST 449 0 0
+~
+A path around the fountain heads this way.
+~
+D SOUTH 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D WEST 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#449
+The Southern Wall~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to south. Small trees
+grow here, some blooming with fruit and flowers to serve as food for
+the many exotic birds that now make this place their home. A constant
+chirping and singing of the birds seems to emanate mainly from the
+north. A small path leads through the trees and lush animal paradise to
+the north, east and west.
+~
+forest
+D NORTH 441 0 0
+~
+An old fountain is ahead.
+~
+D EAST 450 0 0
+~
+A path around the fountain heads this way.
+~
+D SOUTH 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D WEST 448 0 0
+~
+A path around the fountain heads this way.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#450
+A Turn in the Line of Pillars~
+You stand in the corner of what appears less like a marsh and more like
+a bird sanctuary. A solid wall of pillars stands to south and to the
+east. Small trees grow here, some blooming with fruit and flowers to
+serve as food for the many exotic birds that now make this place their
+home. A constant chirping and singing of the birds seems to emanate
+mainly from the northwest. A small path leads through the trees and
+lush animal paradise to the west and to the north.
+~
+forest
+D NORTH 442 0 0
+~
+A path around the fountain heads this way.
+~
+D EAST 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D SOUTH 0 0 0
+~
+A wall of old pillars blocks the way.
+~
+D WEST 449 0 0
+~
+A path around the fountain heads this way.
+~
+E carvings~
+Most of them are of intricate floral designs, but their detail is
+certainly not appreciated as it probably once was.
+~
+E pillars wall~
+Each pillar in this wall has been made unique over time by natural
+processes. Some remain heavily detailed with fine grooves and carvings
+in their sides. Others have been worn smooth over time. And some of the
+pillars have stared to fall and are leaning against other pillars.
+~
+#451
+Deep Inside a Hollow Log~
+The inner workings of this log consist of various types of fungi and
+mosses, relying on the deep saturation of the wood for their existence.
+The wall of the trunk seems scratched and almost dug out, perhaps by
+some animal in search for shelter. It all seems so fragile, though,
+being rotten and waterlogged as it is. Moss that grows outside of the
+hollow log creeps inside creating a nice carpeting for whatever animal
+does abide here. They only way out is back to the east.
+~
+forest
+ROOM DARK
+D NORTH 0 0 0
+~
+The inner wall of the log has long since started to rot and is
+extremely soft and moist to the touch making it very fragile.
+~
+D EAST 452 0 0
+~
+The entrance into the hollow log lies to the east.
+~
+D SOUTH 0 0 0
+~
+The inner wall of the log has long since started to rot and is
+extremely soft and moist to the touch making it very fragile.
+~
+D WEST 0 0 0
+~
+It is impossible to go any further into the log.
+~
+D DOWN 0 0 0
+~
+The bottom of the log is coated nicely in a plush moss carpeting.
+~
+#452
+Inside a Hollow Log~
+The inner workings of this log consist of various types of fungi and
+mosses, relying on the deep saturation of the wood for their existence.
+The wall of the trunk seems scratched and almost dug out, perhaps by
+some animal in search for shelter. It all seems so fragile, though,
+being rotten and waterlogged as it is. Moss that grows outside of the
+hollow log creeps inside creating a nice carpeting for whatever animal
+does abide here. You can exit the log to the east or travel deeper
+inside to the west.
+~
+forest
+ROOM DARK
+D NORTH 0 0 0
+~
+The inner wall of the log has long since started to rot and is
+extremely soft and moist to the touch making it very fragile.
+~
+D EAST 453 0 0
+~
+A clearing created by the now fallen tree stretches to the east.
+~
+D SOUTH 0 0 0
+~
+The inner wall of the log has long since started to rot and is
+extremely soft and moist to the touch making it very fragile.
+~
+D WEST 451 0 0
+~
+The inner workings of the hollow log lie in wait.
+~
+D DOWN 0 0 0
+~
+The bottom of the log is coated nicely in a plush moss carpeting.
+~
+#453
+A Large Clearing in the Marsh~
+Only a few trees grow here, and what ones that do seem a bit shorter
+than the average tree in the marsh. the ground is covered with some
+light grasses and ferns, much more like a field than a swamp. It still
+retains, however, a very damp and muddy composition. The sky is visible
+above gaping holes in the otherwise thick tree line and it is a
+refreshing sight in this dismal place. The clearing stretches on to the
+north and east. A large, and now hollow, fallen tree is to the west.
+~
+swamp
+D NORTH 444 0 0
+~
+The clearing stretches to the north.
+~
+D EAST 454 0 0
+~
+The clearing stretches to the east.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 452 0 0
+~
+It is possible to step into the hollow log to the west.
+~
+E large hollow log tree~
+The size of this log is absolutely incredible, you wonder what type of
+tree it was to have grown so large, and what in Shalar would cause it
+to topple. The clearing you stand in now was, more than likely, created
+when this massive tree toppled to the ground.
+~
+#454
+A Large Clearing in the Marsh~
+Only a few trees grow here, and what ones that do seem a bit shorter
+than the average tree in the marsh. the ground is covered with some
+light grasses and ferns, much more like a field than a swamp. It still
+retains, however, a very damp and muddy composition. The sky is visible
+above gaping holes in the otherwise thick tree line and it is a
+refreshing sight in this dismal place. The clearing stretches on to the
+north, east and west, while a small stone path heads off underneath a
+natural awning to the south.
+~
+swamp
+D NORTH 445 0 0
+~
+The clearing stretches to the north.
+~
+D EAST 455 0 0
+~
+The clearing stretches to the east.
+~
+D SOUTH 457 0 0
+~
+A small stone path leads away from the clearing to the south.
+~
+D WEST 453 0 0
+~
+The clearing stretches to the west.
+~
+#455
+A Large Clearing in the Marsh~
+Only a few trees grow here, and what ones that do seem a bit shorter
+than the average tree in the marsh. the ground is covered with some
+light grasses and ferns, much more like a field than a swamp. It still
+retains, however, a very damp and muddy composition. The sky is visible
+above gaping holes in the otherwise thick tree line and it is a
+refreshing sight in this dismal place. The clearing stretches on to the
+north and west, while a small path goes back into the thickened marsh
+to the east.
+~
+swamp
+D NORTH 446 0 0
+~
+The clearing stretches to the north.
+~
+D EAST 456 0 0
+~
+A damp path leads back into the marsh to the east.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 454 0 0
+~
+The clearing stretches to the west.
+~
+#456
+On a Damp Path~
+Small insects buzz obnoxiously about your face and body while the trees
+continue to loom above you creating a nice canopy for shade. You hear
+the occasional bird chirp as well as odd, seemingly amphibian noise.
+Long vines hang from the trees and mosses and lichen grow an just about
+anything. The path winds to the north, weaving amidst the slime and
+muck. To the west the path opens up into a large clearing.
+~
+swamp
+D NORTH 447 0 0
+~
+The damp path continues.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 455 0 0
+~
+The path widens into a large clearing.
+~
+#457
+An Old Stone Path~
+A straight line of stones cuts the way north and south of here lined on
+both sides by short overhanging trees. The path is about ten feet
+across and the stones themselves are cracked and weathered allowing
+grasses and weeds to creep through to the surface of the walkway. To
+the south is a small rusted gate leading into a garden of some sort. To
+the north the path opens into a large clearing.
+~
+road
+D NORTH 454 0 0
+~
+A large clearing in the marsh is to the north.
+~
+D EAST 0 0 0
+~
+A solid line of trees blocks the way.
+~
+D SOUTH 459 ABJ 0
+rusted gate~
+A rusted gate is in way of the path.
+~
+D WEST 0 0 0
+~
+A solid line of trees blocks the way.
+~
+E rusted gate~
+This old piece of iron is rusted almost beyond recognition, but it
+still squeaks on its hinges as it opens the path into
+the garden.
+~
+#458
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way through this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the east and to the south. An old
+rusted fence surrounds the garden to the north and to the west.
+~
+swamp
+D NORTH 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D EAST 459 0 0
+~
+A small path leads through the garden.
+~
+D SOUTH 461 0 0
+~
+A small path leads through the garden.
+~
+D WEST 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+#459
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way into this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the south, east and west. An old
+rusted gate is to the north, leading onto a stone path.
+~
+swamp
+D NORTH 457 ABJ 0
+rusted gate~
+A rusted gate blocks the way back on to the stone path.
+~
+D EAST 460 0 0
+~
+A small path leads through the garden.
+~
+D SOUTH 462 0 0
+~
+A small path leads to the center of the garden.
+~
+D WEST 458 0 0
+~
+A small path leads through the garden.
+~
+E rusted gate~
+This old piece of iron is rusted almost beyond recognition, but it
+still squeaks on its hinges as it opens the path into the garden.
+~
+#460
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way through this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the west and to the south. An old
+rusted fence surrounds the garden to the north and to the east.
+~
+swamp
+D NORTH 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D EAST 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D SOUTH 463 0 0
+~
+A small path leads through the garden.
+~
+D WEST 459 0 0
+~
+A small path leads through the garden.
+~
+#461
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way through this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the north, east and south. An old
+rusted fence surrounds the garden to the west.
+~
+forest
+D NORTH 458 0 0
+~
+A small path leads through the garden.
+~
+D EAST 462 0 0
+~
+A small path leads to the center of the garden.
+~
+D SOUTH 467 0 0
+~
+A small path leads through the garden.
+~
+D WEST 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+#462
+The Center of the Decayed Garden~
+A path of light colored grasses circles around the center of this
+ancient garden. Dead plants and flowers fall off the edges of a small
+stone platform. In the very enter of it all is a large statue of woman
+that has seen better times. Instead of being an elegant natural
+treasure, all neat and orderly, this garden has transformed into a mass
+of rotten flowers and plants still in their rows, but spilling into the
+path in some places. The path through garden continues in most
+directions.
+~
+swamp
+D NORTH 459 0 0
+~
+A small path leads through the garden.
+~
+D EAST 463 0 0
+~
+A small path leads through the garden.
+~
+D SOUTH 468 0 0
+~
+A small path leads through the garden.
+~
+D WEST 461 0 0
+~
+A small path leads through the garden.
+~
+E plaque corroded~
+Although heavily worn down and corroded, you can still make out a few
+of the words commemorated on this old brass plaque...
+
+"To my lovely wife Alstea, may your memory never die..."
+
+After that the words are too blurred to make out.
+~
+#463
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way through this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the north, west and south. An old
+rusted fence surrounds the garden to the east.
+~
+swamp
+D NORTH 460 0 0
+~
+A small path leads through the garden.
+~
+D EAST 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D SOUTH 469 0 0
+~
+A small path leads through the garden.
+~
+D WEST 462 0 0
+~
+A small path leads to the center of the garden.
+~
+#464
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek widens
+and flows into a small pool to the north and a small trail is cut
+through the trees to the south leading to a small clearing.
+~
+swamp
+D NORTH 432 0 0
+~
+The flows into a small pool to the north.
+~
+D EAST 465 0 0
+~
+The creek continues.
+~
+D SOUTH 475 0 0
+~
+A small path cuts through the marsh tot he south.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#465
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the east and flows to the west.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D EAST 466 0 0
+~
+The creek continues.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 464 0 0
+~
+The creek continues.
+~
+#466
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the south and flows to the west.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 471 0 0
+~
+The creek continues.
+~
+D WEST 465 0 0
+~
+The creek continues.
+~
+#467
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way through this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the east and to the north. An old
+rusted fence surrounds the garden to the south and to the west.
+~
+swamp
+D NORTH 461 0 0
+~
+A small path leads through the garden.
+~
+D EAST 468 0 0
+~
+A small path leads through the garden.
+~
+D SOUTH 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D WEST 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+#468
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way into this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the north, east and west. An old
+rusted gate is to the south, leading onto a stone path.
+~
+swamp
+D NORTH 462 0 0
+~
+A small path leads to the center of the garden.
+~
+D EAST 469 0 0
+~
+A small path leads through the garden.
+~
+D SOUTH 472 AJ 0
+rusted gate~
+A rusted gate blocks the way back on to the stone path.
+~
+D WEST 467 0 0
+~
+A small path leads through the garden.
+~
+E rusted gate~
+This old piece of iron is rusted almost beyond recognition, but it
+still squeaks on its hinges as it opens the path into the garden.
+~
+#469
+An Overgrown and Decayed Garden~
+A path of light colored grasses leads the way through this old garden.
+Odd-looking, dead plants and flowers lay covered in weeds and ferns.
+Instead of being an elegant natural treasure, all neat and orderly,
+this garden has transformed into a mass of rotten flowers and plants
+still in their rows, but spilling into the path in some places. The
+path through the garden leads to the west and to the north. An old
+rusted fence surrounds the garden to the south and to the east.
+~
+swamp
+D NORTH 463 0 0
+~
+A small path leads through the garden.
+~
+D EAST 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D SOUTH 0 0 0
+~
+A rusty fence surrounds the garden, enclosing you within it.
+~
+D WEST 468 0 0
+~
+A small path leads through the garden.
+~
+#470
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the south and flows to the west.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 473 0 0
+~
+The creek continues.
+~
+D WEST 480 0 0
+~
+The creek continues.
+~
+#471
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the south and flows to the north.
+~
+swamp
+D NORTH 466 0 0
+~
+The creek continues.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 476 0 0
+~
+The creek continues.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#472
+An Old Stone Path~
+A straight line of stones cuts the way north and south of here lined on
+both sides by short overhanging trees. The path is about ten feet
+across and the stones themselves are cracked and weathered allowing
+grasses and weeds to creep through to the surface of the walkway. To
+the north is a small rusted gate leading into a garden of some sort. To
+the south the path leads to a small bridge over the muddy creek.
+~
+road
+D NORTH 468 AJ 0
+rusted gate~
+A rusted gate is in way of the path.
+~
+D EAST 0 0 0
+~
+A solid line of trees blocks the way.
+~
+D SOUTH 479 0 0
+~
+A bridge over a small creek is to the south.
+~
+D WEST 0 0 0
+~
+A solid line of trees blocks the way.
+~
+E rusted gate~
+This old piece of iron is rusted almost beyond recognition, but it
+still squeaks on its hinges as it opens the path into the garden.
+~
+#473
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the south and flows to the north.
+~
+swamp
+D NORTH 470 0 0
+~
+The creek continues.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 481 0 0
+~
+The creek continues.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#474
+A Small Clearing~
+The trees here seem a bit sparse and this small open space is quite
+different from the rest of the marsh. Light colored grasses grow upon
+ground that is a bit more firm than the muddy and moss-infested paths
+which weave throughout the swamp. A calm breeze circles around this
+clearing and even a couple of wildflowers are blooming along the base
+of one of the trees. A small path leads through some trees to the creek
+south of here.
+~
+forest
+D NORTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 486 0 0
+~
+A start of a small creek is to the south.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+#475
+A Small Clearing~
+The trees here seem a bit sparse and this small open space is quite
+different from the rest of the marsh. Light colored grasses grow upon
+ground that is a bit more firm than the muddy and moss-infested paths
+which weave throughout the swamp. A calm breeze circles around this
+clearing and even a couple of wildflowers are blooming along the base
+of one of the trees. A small path leads through some trees to the creek
+north of here.
+~
+forest
+D NORTH 464 0 0
+~
+A small creek lies to the north.
+~
+D EAST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D SOUTH 0 0 0
+~
+The marsh is too thick to cut through.
+~
+D WEST 0 0 0
+~
+The marsh is too thick to cut through.
+~
+#476
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the south and flows to the north.
+~
+swamp
+D NORTH 471 0 0
+~
+The creek continues.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 482 0 0
+~
+The creek continues.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#477
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the east and flows to the south.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D EAST 478 0 0
+~
+The creek continues.
+~
+D SOUTH 483 0 0
+~
+The creek continues.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#478
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek flows to
+the west and heads upstream to the east, traveling underneath a small
+bridge.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D EAST 479 0 0
+~
+A small bridge over the creek is to the east.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 477 0 0
+~
+The creek continues.
+~
+#479
+A Bridge over a Muddy Creek~
+The stone walkway from the north comes to a brief halt to make way for
+a small wooden bridge that crosses a creek running through the marsh.
+The wood of the bridge itself seems to be made up of nothing more than
+a few trunks of some fallen trees lashed together with some old vines.
+It is sturdy enough though and it looks as if it has been in place for
+many years. The stone path continues past the bridge to the south.
+~
+road
+D NORTH 472 0 0
+~
+The stone path continues.
+~
+D EAST 480 0 0
+~
+The creek continues.
+~
+D SOUTH 484 0 0
+~
+The stone path continues.
+~
+D WEST 478 0 0
+~
+The creek continues.
+~
+#480
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the east and flows to the west, traveling underneath a
+small bridge.
+~
+swamp
+D NORTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D EAST 470 0 0
+~
+The creek continues.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 479 0 0
+~
+A small bring over the creek is to the west.
+~
+#481
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek heads
+upstream to the south and flows to the north.
+~
+swamp
+D NORTH 473 0 0
+~
+The creek continues.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 485 0 0
+~
+The creek continues.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#482
+A Bend in the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek itself
+starts a slow bend here from the north, to the west and on.
+~
+swamp
+D NORTH 476 0 0
+~
+The creek continues.
+~
+D EAST 483 0 0
+~
+The creek continues.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#483
+A Bend in the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The creek
+continues its slow curve here from the east and back to the north.
+~
+swamp
+D NORTH 477 0 0
+~
+The creek continues.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 482 0 0
+~
+The creek continues.
+~
+#484
+A Magnificent Archway~
+This is what must have once been the gate to the large stone castle to
+the south. A line of pillars leads the way up to the walls of the
+archway, some fallen and some still in a decent condition. The edges of
+the wall are still somewhat smooth and intact. At its top the outline
+arcs up and comes to a sharp point. The gate itself must be at least
+thirty feet tall and half that size in width. Small hinges can be seen
+on the bottom corners of the arch from what must have been a drawbridge
+that fell over the creek to the north. Small weathered statues can be
+seen on the tops of the pillars. The main entryway lies to the south
+while a small bridge over an even smaller creek is to the north.
+~
+road
+D NORTH 479 0 0
+~
+A bridge over a small creek is to the north.
+~
+D EAST 0 0 0
+~
+Large stone pillars block the was to the east.
+~
+D SOUTH 487 0 0
+~
+The entryway into the castle is to the south.
+~
+D WEST 0 0 0
+~
+Large stone pillars block the way to the west.
+~
+E statue statues~
+You can make out wings on these beaten pieces of stone giving the
+appearance of gargoyles. Any significant details on the statues have
+been worn away over the years. Their mere presence suggests that the
+owners of this castle were not welcome to visitors.
+~
+#485
+On the Muddy Creek~
+A small stream of water cuts through the area. It is only a few feet
+across and not that deep, but the wide muddy banks running on either
+side of it suggest that the creek is not nearly as large as it used to
+be. A thick wall of ferns and trees line either side of the muddy
+banks, but they do not branch across and over the stream to form the
+natural canopy they do in other places in the marsh. The start of the
+stream is to the east while it flows onward to the north.
+~
+swamp
+D NORTH 481 0 0
+~
+The creek continues.
+~
+D EAST 486 0 0
+~
+The creek continues.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#486
+Start of the Muddy Creek~
+Bubbling up from the ground, a small natural spring creates the creek
+that flows through the marsh. Tall trees line the sides of this small
+stream, but they do not branch out across to one another forming a
+canopy like most places in the swamp. The creek itself is only a few
+feet wide and not deep at all. The muddy banks running along the sides
+of the water are much wider than the creek itself, suggesting that the
+creek used to be much wider than it is now. A creeks flows to the west
+and a small trail leads off through the trees to the north to a small
+clearing.
+~
+swamp
+D NORTH 474 0 0
+~
+A thin trail heads off into the marsh.
+~
+D EAST 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D SOUTH 0 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+D WEST 485 0 0
+~
+A wall of trees lines the edge of the creek.
+~
+#487
+A Toppling Entryway~
+Tall stone walls rise up on either side of this small corridor leading
+into the rest of the castle. At their top they come together in an
+archway, which for the most part, is still intact. The purpose of this
+space was as an extra defensive mechanism. Small windows are spaced up
+high in the walls where archers would shoot invaders who made it into
+the corridor. Since there is no gate to the north or to the south it is
+unlikely to be able to serve that purpose now. The main gate, or what's
+left of it, is to the north and a long east to west hallway is to the
+south.
+~
+inside
+D NORTH 484 0 0
+~
+A stone path leads away from the castle to the north.
+~
+D EAST 0 0 0
+~
+An immense wall rises up to the east, blocking the way.
+~
+D SOUTH 492 0 0
+~
+The main hallway of the castle lies ahead, in ruins.
+~
+D WEST 0 0 0
+~
+An immense wall rises up to the west, blocking the way.
+~
+#488
+The Top of a Stone Tower~
+>From the top of this tower you can overview the entirety of the marsh.
+So odd that the remnants of the castle that you peer from are a mere
+bit of what once must have been extreme grandeur. How this place simply
+gave in to the will of nature and drown in this marsh is a perplexing
+thought. You can see a large will tree off to the north and the twin
+tower to the east. Back down is the only was off this unsteady tower of
+stone.
+~
+inside
+D NORTH 0 0 0
+~
+The marsh stretched to the north and in the distance you see a large
+tree well above the rest of the tree line.
+~
+D EAST 0 0 0
+~
+You can make out the twin tower to the east.
+~
+D SOUTH 0 0 0
+~
+The castle ruins lie in a heap of stone and debris.
+~
+D WEST 0 0 0
+~
+The marsh and the castle ruin stretches to the west.
+~
+D DOWN 489 0 0
+~
+The stairs head back down to the base of the tower.
+~
+#489
+The Base of a Crumbling Tower~
+Some broken steps lie in a dusty heap beneath a stairway that seems
+anything but sturdy. For how old this castle must be, it is surprising
+to see that this tower has retained most of its circular shapes. The
+stone floor is considerably cracked and small plants seep through them.
+A long hallway extends back to east, while it is possible to make it up
+the battered staircase.
+~
+inside
+D NORTH 0 0 0
+~
+The tower wall blocks the way north.
+~
+D EAST 490 0 0
+~
+A long hallway stretches to the east.
+~
+D SOUTH 0 0 0
+~
+The tower wall blocks the way south.
+~
+D WEST 0 0 0
+~
+The tower wall blocks the way west.
+~
+D UP 488 0 0
+~
+A rugged stairway heads up tot he top of the tower.
+~
+#490
+Amidst the Castle Ruins~
+The long hallway is cracked to almost no end. A wall that surely must
+be toppling runs along the north of the hall, while the ceiling and
+everything to the south is completely unrecognizable as it looks just
+like a mass of fallen and broken rocks. this large pile of debris
+stretches far to the south and it is impossible to cross through it.
+~
+inside
+D NORTH 0 0 0
+~
+A wall that is surprisingly still intact blocks the way.
+~
+D EAST 491 0 0
+~
+The hallway stretches on.
+~
+D SOUTH 0 0 0
+~
+A large pile of rubble a debris blocks the way.
+~
+D WEST 489 0 0
+~
+The base of one of the towers lies ahead.
+~
+#491
+Amidst the Castle Ruins~
+The long hallway is cracked to almost no end. A wall that surely must
+be toppling runs along the north of the hall, while the ceiling and
+everything to the south is completely unrecognizable as it looks just
+like a mass of fallen and broken rocks. this large pile of debris
+stretches far to the south and it is impossible to cross through it.
+~
+inside
+D NORTH 0 0 0
+~
+A wall that is surprisingly still intact blocks the way.
+~
+D EAST 492 0 0
+~
+The hallway stretches on.
+~
+D SOUTH 0 0 0
+~
+A large pile of rubble a debris blocks the way.
+~
+D WEST 490 0 0
+~
+The hallway stretches on.
+~
+#492
+Amidst the Castle Ruins~
+You stand at the center of a long ruined hallway. The stones in the
+floor are severely cracked in many places allowing grasses and mosses
+to seep through. From the looks of it, the entryway to the north is
+lucky to still be standing and nothing to the south of you is. It all
+lies in a massive heap of rubble and stone. The tragedy that befell
+here certainly intended not to take any prisoners. The hallway heads to
+the east and west.
+~
+inside
+D NORTH 487 0 0
+~
+The entryway of the castle is to the north.
+~
+D EAST 493 0 0
+~
+The hallway stretches on.
+~
+D SOUTH 0 0 0
+~
+A large pile of rubble a debris blocks the way.
+~
+D WEST 491 0 0
+~
+The hallway stretches on.
+~
+#493
+Amidst the Castle Ruins~
+The long hallway is cracked to almost no end. A wall that surely must
+be toppling runs along the north of the hall, while the ceiling and
+everything to the south is completely unrecognizable as it looks just
+like a mass of fallen and broken rocks. this large pile of debris
+stretches far to the south and it is impossible to cross through it.
+~
+inside
+D NORTH 0 0 0
+~
+A wall that is surprisingly still intact blocks the way.
+~
+D EAST 494 0 0
+~
+The hallway stretches on.
+~
+D SOUTH 0 0 0
+~
+A large pile of rubble a debris blocks the way.
+~
+D WEST 492 0 0
+~
+The hallway stretches on.
+~
+#494
+Amidst the Castle Ruins~
+The long hallway is cracked to almost no end. A wall that surely must
+be toppling runs along the north of the hall, while the ceiling and
+everything to the south is completely unrecognizable as it looks just
+like a mass of fallen and broken rocks. this large pile of debris
+stretches far to the south and it is impossible to cross through it.
+~
+inside
+D NORTH 0 0 0
+~
+A wall that is surprisingly still intact blocks the way.
+~
+D EAST 495 0 0
+~
+The base of one of the towers lies ahead.
+~
+D SOUTH 0 0 0
+~
+A large pile of rubble a debris blocks the way.
+~
+D WEST 493 0 0
+~
+The hallway stretches on.
+~
+#495
+The Base of a Crumbling Tower~
+Some broken steps lie in a dusty heap beneath a stairway that seems
+anything but sturdy. For how old this castle must be, it is surprising
+to see that this tower has retained most of its circular shapes. The
+stone floor is considerably cracked and small plants seep through them.
+A long hallway extends back to west, while it is possible to make it up
+the battered staircase.
+~
+inside
+D NORTH 0 0 0
+~
+The tower wall blocks the way north.
+~
+D EAST 0 0 0
+~
+The tower wall blocks the way east.
+~
+D SOUTH 0 0 0
+~
+The tower wall blocks the way south.
+~
+D WEST 494 0 0
+~
+A long hallway stretches to the west.
+~
+D UP 496 0 0
+~
+A rugged stairway heads up tot he top of the tower.
+~
+#496
+The Top of a Stone Tower~
+>From the top of this tower you can overview the entirety of the marsh.
+So odd that the remnants of the castle that you peer from are a mere
+bit of what once must have been extreme grandeur. How this place simply
+gave in to the will of nature and drown in this marsh is a perplexing
+thought. You can see a large will tree off to the north and the twin
+tower to the west. Back down is the only was off this unsteady tower of
+stone.
+~
+inside
+D NORTH 0 0 0
+~
+The marsh stretched to the north and in the distance you see a large
+tree well above the rest of the tree line.
+~
+D EAST 0 0 0
+~
+The marsh and the castle ruin stretches to the east.
+~
+D SOUTH 0 0 0
+~
+The castle ruins lie in a heap of stone and debris.
+~
+D WEST 0 0 0
+~
+You can make out the twin tower to the west.
+~
+D DOWN 495 0 0
+~
+The stairs head back down to the base of the tower.
+~
+#497
+Under an Awning of Cypress Trees~
+The trunks of trees, sporadically coated with moss, spring up around
+you. Their massive branches reaching towards the sky much like the
+outstretched arms of religions fanatics. Random insects buzz around you
+and the occasional amphibian noise is heard from some rotted out
+hollow. The ground below your feet is damp and murky and the air is
+thick with humidity. The marsh continues to the east and south. To the
+north is the edge of the swamp.
+~
+swamp
+D NORTH 3521 0 0
+~
+The edge of the swamp lies to the north.
+~
+D EAST 498 0 0
+~
+The canopy of cypress trees extends to the east.
+~
+D SOUTH 411 0 0
+~
+A boggy trail is south of here.
+~
+D WEST 0 0 0
+~
+The fen is too thick to cut through.
+~
+#498
+Under an Awning of Cypress Trees~
+The trunks of trees, sporadically coated with moss, spring up around
+you. Their massive branches reaching towards the sky much like the
+outstretched arms of religions fanatics. Random insects buzz around you
+and the occasional amphibian noise is heard from some rotted out
+hollow. The ground below your feet is damp and murky and the air is
+thick with humidity. The marsh continues to the east and west. To the
+north is the edge of the swamp.
+~
+swamp
+D NORTH 3527 0 0
+~
+The edge of the swamp lies to the north.
+~
+D EAST 403 0 0
+~
+The small opening in the canopy is to the east.
+~
+D SOUTH 0 0 0
+~
+The fen is too thick to cut through.
+~
+D WEST 497 0 0
+~
+The canopy of cypress trees extends to the west.
+~
+#0
+
+
+
+#RESETS
+MOB 405 TO 400 GLIMIT 12 LLIMIT 1
+MOB 412 TO 400 GLIMIT 4 LLIMIT 1
+MOB 404 TO 402 GLIMIT 8 LLIMIT 1
+MOB 405 TO 405 GLIMIT 12 LLIMIT 1
+MOB 404 TO 406 GLIMIT 8 LLIMIT 1
+MOB 405 TO 408 GLIMIT 12 LLIMIT 2
+DOOR 408 east CLOSED
+MOB 400 TO 409 GLIMIT 1 LLIMIT 1
+EQUIP 407 WIELD
+EQUIP 408 ABOUT
+EQUIP 409 WAIST
+OBJECT 400 TO 409
+DOOR 409 west CLOSED
+MOB 401 TO 410 GLIMIT 10 LLIMIT 1
+MOB 403 TO 410 GLIMIT 9 LLIMIT 2
+MOB 402 TO 411 GLIMIT 7 LLIMIT 1
+MOB 414 TO 412 GLIMIT 10 LLIMIT 1
+MOB 404 TO 414 GLIMIT 8 LLIMIT 1
+MOB 405 TO 416 GLIMIT 12 LLIMIT 1
+MOB 404 TO 417 GLIMIT 8 LLIMIT 1
+MOB 412 TO 417 GLIMIT 4 LLIMIT 1
+MOB 414 TO 417 GLIMIT 10 LLIMIT 1
+MOB 402 TO 420 GLIMIT 7 LLIMIT 1
+MOB 402 TO 421 GLIMIT 7 LLIMIT 1
+MOB 403 TO 421 GLIMIT 9 LLIMIT 1
+MOB 405 TO 421 GLIMIT 12 LLIMIT 1
+MOB 414 TO 421 GLIMIT 10 LLIMIT 1
+MOB 401 TO 422 GLIMIT 10 LLIMIT 1
+MOB 403 TO 423 GLIMIT 9 LLIMIT 1
+MOB 404 TO 423 GLIMIT 8 LLIMIT 1
+MOB 405 TO 423 GLIMIT 12 LLIMIT 1
+OBJECT 401 TO 426
+MOB 405 TO 428 GLIMIT 12 LLIMIT 1
+MOB 407 TO 429 GLIMIT 3 LLIMIT 1
+OBJECT 418 TO 429
+MOB 408 TO 430 GLIMIT 4 LLIMIT 1
+MOB 408 TO 431 GLIMIT 4 LLIMIT 1
+MOB 409 TO 431 GLIMIT 6 LLIMIT 2
+OBJECT 418 TO 431
+MOB 401 TO 434 GLIMIT 10 LLIMIT 1
+MOB 402 TO 434 GLIMIT 7 LLIMIT 1
+MOB 413 TO 435 GLIMIT 4 LLIMIT 1
+MOB 401 TO 436 GLIMIT 10 LLIMIT 1
+MOB 404 TO 437 GLIMIT 8 LLIMIT 1
+MOB 414 TO 437 GLIMIT 10 LLIMIT 1
+MOB 405 TO 438 GLIMIT 12 LLIMIT 1
+MOB 412 TO 439 GLIMIT 4 LLIMIT 1
+MOB 409 TO 440 GLIMIT 6 LLIMIT 1
+MOB 407 TO 441 GLIMIT 3 LLIMIT 1
+MOB 408 TO 441 GLIMIT 4 LLIMIT 1
+MOB 409 TO 441 GLIMIT 6 LLIMIT 2
+MOB 410 TO 441 GLIMIT 6 LLIMIT 1
+MOB 411 TO 441 GLIMIT 1 LLIMIT 1
+OBJECT 402 TO 441
+OBJECT 418 TO 441
+MOB 410 TO 442 GLIMIT 6 LLIMIT 1
+MOB 401 TO 443 GLIMIT 10 LLIMIT 1
+MOB 403 TO 443 GLIMIT 9 LLIMIT 1
+MOB 404 TO 443 GLIMIT 8 LLIMIT 1
+MOB 414 TO 443 GLIMIT 10 LLIMIT 1
+OBJECT 418 TO 443
+MOB 413 TO 445 GLIMIT 4 LLIMIT 1
+MOB 410 TO 446 GLIMIT 6 LLIMIT 2
+MOB 404 TO 447 GLIMIT 8 LLIMIT 1
+MOB 405 TO 447 GLIMIT 12 LLIMIT 1
+MOB 408 TO 448 GLIMIT 4 LLIMIT 1
+OBJECT 418 TO 448
+MOB 409 TO 449 GLIMIT 6 LLIMIT 1
+MOB 407 TO 450 GLIMIT 3 LLIMIT 1
+OBJECT 418 TO 450
+OBJECT 405 TO 451
+MOB 413 TO 452 GLIMIT 4 LLIMIT 1
+OBJECT 406 TO 452
+OBJECT 418 TO 453
+MOB 410 TO 454 GLIMIT 6 LLIMIT 1
+MOB 410 TO 455 GLIMIT 6 LLIMIT 1
+MOB 413 TO 455 GLIMIT 4 LLIMIT 1
+MOB 414 TO 455 GLIMIT 10 LLIMIT 1
+MOB 412 TO 456 GLIMIT 4 LLIMIT 1
+MOB 414 TO 458 GLIMIT 10 LLIMIT 1
+MOB 414 TO 460 GLIMIT 10 LLIMIT 1
+MOB 414 TO 461 GLIMIT 10 LLIMIT 1
+OBJECT 403 TO 462
+OBJECT 499 TO 462
+MOB 405 TO 463 GLIMIT 12 LLIMIT 1
+MOB 402 TO 464 GLIMIT 7 LLIMIT 1
+MOB 415 TO 464 GLIMIT 8 LLIMIT 1
+MOB 401 TO 465 GLIMIT 10 LLIMIT 1
+MOB 403 TO 466 GLIMIT 9 LLIMIT 2
+MOB 415 TO 466 GLIMIT 8 LLIMIT 1
+MOB 405 TO 467 GLIMIT 12 LLIMIT 1
+MOB 414 TO 469 GLIMIT 10 LLIMIT 1
+MOB 415 TO 470 GLIMIT 8 LLIMIT 1
+MOB 401 TO 471 GLIMIT 10 LLIMIT 1
+MOB 402 TO 473 GLIMIT 7 LLIMIT 1
+MOB 403 TO 476 GLIMIT 9 LLIMIT 1
+MOB 415 TO 476 GLIMIT 8 LLIMIT 1
+MOB 401 TO 477 GLIMIT 10 LLIMIT 1
+MOB 415 TO 478 GLIMIT 8 LLIMIT 1
+MOB 403 TO 480 GLIMIT 9 LLIMIT 1
+MOB 401 TO 481 GLIMIT 10 LLIMIT 1
+MOB 415 TO 481 GLIMIT 8 LLIMIT 1
+MOB 402 TO 483 GLIMIT 7 LLIMIT 1
+MOB 415 TO 483 GLIMIT 8 LLIMIT 1
+MOB 401 TO 486 GLIMIT 10 LLIMIT 1
+MOB 415 TO 486 GLIMIT 8 LLIMIT 1
+OBJECT 404 TO 486
+MOB 406 TO 495 GLIMIT 1 LLIMIT 1
+EQUIP 410 WIELD
+EQUIP 411 BODY
+EQUIP 412 LEGS
+EQUIP 413 ABOUT
+EQUIP 414 WAIST
+EQUIP 415 HEAD
+EQUIP 416 FEET
+EQUIP 417 HOLD
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

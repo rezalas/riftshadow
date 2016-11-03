@@ -1,0 +1,286 @@
+Sat May  1 11:21:56 2004: SET- Calenduil is setting obj na.
+Sat May  1 11:22:00 2004: SET- Calenduil is setting obj sword .
+Sat May  1 11:22:27 2004: SET- Calenduil is setting obj lyntress v1 20.
+Sat May  1 11:22:33 2004: SET- Calenduil is setting obj lyntress v2 2.
+Sat May  1 11:23:58 2004: SET- Calenduil is setting char self class paladin.
+Sat May  1 11:24:01 2004: SET- Calenduil is setting char self align 1000.
+Sat May  1 11:25:51 2004: LOAD- Calenduil is loading obj.
+Sat May  1 11:25:54 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:25:59 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:26:00 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:26:00 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:26:01 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:26:01 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:26:01 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 11:28:55 2004: LOAD- Fyndin is loading obj 206.
+Sat May  1 11:29:26 2004: SET- Calenduil is setting char fyndin class paladin.
+Sat May  1 11:31:44 2004: SET- Calenduil is setting char.
+Sat May  1 11:31:56 2004: SET- Calenduil is setting prof calenduil appraising 2.
+Sat May  1 11:31:56 2004: SET- Calenduil is setting .
+Sat May  1 11:32:22 2004: SET- Calenduil is setting char calenduil prof appriaisng 1.
+Sat May  1 11:32:27 2004: SET- Calenduil is setting char calenduil prof appraising 1.
+Sat May  1 11:49:31 2004: LOAD- Calenduil is loading obj 22008.
+Sat May  1 11:49:45 2004: SET- Calenduil is setting char self prof forgotten 1.
+Sat May  1 11:49:54 2004: SET- Calenduil is setting char self prof "forgotten lore" 1.
+Sat May  1 12:00:54 2004: LOAD- Fyndin is loading obj 206.
+Sat May  1 12:05:02 2004: LOAD- Calenduil is loading mob 24204.
+Sat May  1 12:05:05 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:05 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:06 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:06 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:06 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:06 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:07 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:07 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:07 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:07 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:08 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:08 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:08 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:08 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 12:05:09 2004: LOAD- Calenduil is loading mob 24306.
+Sat May  1 14:36:04 2004: LOAD- Fyndin is loading obj 29650.
+Sat May  1 14:37:20 2004: LOAD- Fyndin is loading obj 29650.
+Sat May  1 14:38:02 2004: LOAD- Fyndin is loading obj 29650.
+Sat May  1 14:40:46 2004: LOAD- Fyndin is loading obj 16169.
+Sat May  1 14:41:01 2004: LOAD- Fyndin is loading obj 22615.
+Sat May  1 14:41:22 2004: LOAD- Fyndin is loading obj 19215.
+Sun May  2 16:39:41 2004: INDUCT- Fyndin is inducting Sanandar into Phalanx..
+Mon May  3 20:19:15 2004: INDUCT- Kreyastae is inducting Gilin into Bounty..
+Tue May  4 14:07:22 2004: LOAD- Fyndin is loading obj 29650.
+Tue May  4 23:33:39 2004: SET- Calenduil is setting char indural class warrior.
+Tue May  4 23:33:47 2004: SET- Calenduil is setting skill indural evasion 100.
+Tue May  4 23:33:53 2004: SET- Calenduil is setting char indural style .
+Tue May  4 23:34:01 2004: SET- Calenduil is setting style indural skirm.
+Tue May  4 23:34:01 2004: SET- Calenduil is setting .
+Tue May  4 23:34:10 2004: SET- Calenduil is setting char indural style .
+Tue May  4 23:36:26 2004: SET- Calenduil is setting char indural spec 5.
+Tue May  4 23:36:31 2004: SET- Calenduil is setting char indural spec 1.
+Tue May  4 23:40:35 2004: SET- Calenduil is setting skill indural evai.
+Tue May  4 23:40:37 2004: SET- Calenduil is setting skill in.
+Tue May  4 23:40:39 2004: SET- Calenduil is setting skill e.
+Tue May  4 23:40:43 2004: SET- Calenduil is setting skill indural evasion 0.
+Wed May  5 11:25:45 2004: SET- Gawinn is setting obj sign extra none.
+Wed May  5 11:25:52 2004: SET- Gawinn is setting obj sign extra.
+Wed May  5 11:26:09 2004: SET- Gawinn is setting obj sign 'extra' none.
+Wed May  5 11:26:17 2004: SET- Gawinn is setting obj sign e none.
+Wed May  5 11:26:21 2004: SET- Gawinn is setting obj sign x none.
+Wed May  5 11:41:39 2004: INDUCT- Gawinn is inducting Delgrevs into Phalanx..
+Wed May  5 16:43:07 2004: LOAD- Fyndin is loading obj 15807.
+Wed May  5 16:43:07 2004: LOAD- Fyndin is loading obj 15807.
+Thu May  6 17:07:08 2004: SET- Carantoc is setting ski carantoc all 100.
+Thu May  6 17:07:16 2004: SET- Carantoc is setting char carantoc shifter.
+Thu May  6 17:07:24 2004: SET- Carantoc is setting char carantoc class.
+Thu May  6 17:07:28 2004: SET- Carantoc is setting char carantoc class shape.
+Thu May  6 17:11:23 2004: SET- Carantoc is setting char carantoc class elemental.
+Thu May  6 17:11:34 2004: SET- Carantoc is setting char carantoc class ranger.
+Thu May  6 17:18:00 2004: SET- Carantoc is setting char carantoc class anti.
+Thu May  6 17:19:31 2004: SET- Carantoc is setting char carantoc beauty 8.
+Thu May  6 17:19:39 2004: SET- Carantoc is setting char carantoc beauty 10.
+Thu May  6 17:20:19 2004: SET- Carantoc is setting char carantoc beauty 1.
+Thu May  6 18:10:25 2004: LOAD- Carantoc is loading obj 13711.
+Thu May  6 18:12:18 2004: LOAD- Carantoc is loading obj 14003.
+Thu May  6 18:16:58 2004: LOAD- Carantoc is loading obj 13720.
+Thu May  6 18:17:03 2004: LOAD- Carantoc is loading obj 13716.
+Thu May  6 18:17:10 2004: SET- Carantoc is setting char carantoc race human.
+Thu May  6 18:18:26 2004: LOAD- Carantoc is loading obj 13717.
+Thu May  6 18:21:18 2004: LOAD- Carantoc is loading obj 21823.
+Thu May  6 18:21:41 2004: SET- Carantoc is setting char carantoc race duergar.
+Thu May  6 18:22:43 2004: LOAD- Carantoc is loading obj 21825.
+Thu May  6 18:24:34 2004: SET- Carantoc is setting char carantoc race mino.
+Fri May  7 14:24:25 2004: LOAD- Fyndin is loading obj 22506.
+Sun May  9 20:04:28 2004: INDUCT- Kreyastae is inducting Zeglifin into Bounty..
+Mon May 10 13:56:43 2004: TITLE- Fyndin is titling the Contract's Pen.
+Mon May 10 19:31:51 2004: LOAD- Fyndin is loading obj 204.
+Mon May 10 19:36:04 2004: LOAD- Fyndin is loading obj 11803.
+Mon May 10 19:47:06 2004: LOAD- Fyndin is loading obj 11808.
+Mon May 10 19:59:39 2004: TITLE- Fyndin is titling , He Who Preys on The Young.
+Wed May 12 14:31:22 2004: LOAD- Fyndin is loading obj 12235.
+Sun May 16 20:29:46 2004: INDUCT- Fyndin is inducting Zorthane into Phalanx..
+Mon May 17 13:02:31 2004: TITLE- Fyndin is titling the Slayer of Pillagers.
+Mon May 17 17:19:24 2004: SET- Carantoc is setting char indural class zealot.
+Mon May 31 12:42:36 2004: INDUCT- Fyndin is inducting Fyndin into Horde..
+Mon May 31 12:51:52 2004: INDUCT- Fyndin is inducting Fyndin into Theatre..
+Mon May 31 20:57:17 2004: INDUCT- Fyndin is inducting Loronoth into Phalanx..
+Tue Jun  1 17:12:51 2004: LOAD- Fyndin is loading obj 21525.
+Tue Jun  8 15:10:23 2004: INDUCT- Fyndin is inducting Delasden into Scion..
+Wed Jun  9 16:23:48 2004: LOAD- Fyndin is loading obj 11803.
+Thu Jun 10 14:46:13 2004: INDUCT- Fyndin is inducting Demiir into Scion..
+Tue Jun 15 14:01:48 2004: SET- Carantoc is setting char elrath beauty 1.
+Tue Jun 15 14:02:46 2004: TITLE- Carantoc is titling the Faceless Horror.
+Tue Jun 15 14:50:45 2004: SET- imp necromancer mage Xerthorx is setting char elrath align -1000.
+Tue Jun 15 14:50:52 2004: SET- imp necromancer mage Xerthorx is setting char elrath class necr.
+Tue Jun 15 14:51:19 2004: SET- imp necromancer mage Xerthorx is setting ski elrath 'animate dead' 0.
+Tue Jun 15 14:51:58 2004: SET- imp necromancer mage Xerthorx is setting ski elrath parry 0.
+Tue Jun 15 14:52:54 2004: SET- imp necromancer mage Xerthorx is setting ski elrath trance 0.
+Tue Jun 15 14:55:50 2004: TITLE- Carantoc is titling , Student of Darkness.
+Thu Jun 17 09:11:02 2004: INDUCT- Gawinn is inducting Huvtolien into Phalanx..
+Thu Jun 17 09:16:56 2004: TITLE- Gawinn is titling , Steadfast Defender of the Flame.
+Thu Jun 17 09:18:21 2004: TITLE- Gawinn is titling , Lord of the erethryn.
+Thu Jun 17 09:18:33 2004: TITLE- Gawinn is titling , Lord of the Erethryn.
+Fri Jun 18 12:01:21 2004: INDUCT- Fyndin is inducting Kargoth into Phalanx..
+Fri Jun 18 21:57:05 2004: INDUCT- Gravan is inducting Kraven into Phalanx..
+Sat Jun 19 12:17:45 2004: TITLE- Fyndin is titling Featherfoot.
+Sat Jun 19 13:44:09 2004: TITLE- Gravan is titling the Scarred Hunter.
+Sat Jun 19 20:41:48 2004: STRING- Calenduil is stringing mob grenlath long The duergar king is here, rallying his forces for an attack..
+Sat Jun 19 20:51:44 2004: LOAD- Calenduil is loading mob 14004.
+Sat Jun 19 20:51:56 2004: LOAD- Calenduil is loading mob 14004.
+Sat Jun 19 20:52:20 2004: LOAD- Calenduil is loading mob 14004.
+Sat Jun 19 20:52:32 2004: LOAD- Calenduil is loading mob 21808.
+Sat Jun 19 20:52:57 2004: STRING- Calenduil is stringing obj drow name drow warrior drekar.
+Sat Jun 19 20:53:00 2004: STRING- Calenduil is stringing mob drow name drow warrior drekar.
+Sat Jun 19 20:53:46 2004: STRING- Calenduil is stringing mob drekar short Drekar.
+Sat Jun 19 20:54:09 2004: STRING- Calenduil is stringing mob drekar A tall man, face obscured by a heavy hood, sits in a corner here..
+Sat Jun 19 20:54:09 2004: STRING- Calenduil is stringing .
+Sat Jun 19 20:54:13 2004: STRING- Calenduil is stringing mob drekar long A tall man, face obscured by a heavy hood, sits in a corner here..
+Sat Jun 19 20:54:51 2004: LOAD- Calenduil is loading mob 2219.
+Sat Jun 19 20:55:08 2004: STRING- Calenduil is stringing mob thelminac name drekar mage drow.
+Sat Jun 19 20:55:31 2004: STRING- Calenduil is stringing mob drekar long A tall man, face obscured by a heavy hood, sits in a corner here..
+Sat Jun 19 20:55:37 2004: STRING- Calenduil is stringing mob drekar short Drekar.
+Sat Jun 19 21:05:53 2004: LOAD- Calenduil is loading mob 11936.
+Sat Jun 19 21:08:29 2004: LOAD- Calenduil is loading obj 20584.
+Sat Jun 19 21:12:54 2004: SET- Calenduil is setting mob courtier hp 2000.
+Sat Jun 19 21:17:08 2004: LOAD- Calenduil is loading obj 20584.
+Sat Jun 19 21:17:12 2004: SET- Calenduil is setting obj sextant timer 0.
+Sat Jun 19 21:17:14 2004: SET- Calenduil is setting obj sextant timer 01.
+Sat Jun 19 21:17:15 2004: SET- Calenduil is setting obj sextant timer -1.
+Sat Jun 19 21:22:03 2004: SET- drekar mage drow is setting mob deggil level 1.
+Sat Jun 19 21:30:01 2004: SET- Calenduil is setting mob drekar hp 1.
+Sat Jun 19 21:31:12 2004: SET- Calenduil is setting char sadonia hunger 0.
+Sat Jun 19 21:53:09 2004: SET- Calenduil is setting .
+Sat Jun 19 21:53:12 2004: SET- Calenduil is setting char.
+Sat Jun 19 22:22:39 2004: SET- Calenduil is setting char balrand level 55.
+Sat Jun 19 23:08:30 2004: LOAD- Calenduil is loading mob 3404.
+Sat Jun 19 23:12:40 2004: SET- Calenduil is setting sk fyndin all 100.
+Sat Jun 19 23:13:19 2004: LOAD- Calenduil is loading mob 3404.
+Sat Jun 19 23:13:28 2004: LOAD- Calenduil is loading mob 12215.
+Sat Jun 19 23:33:42 2004: SET- Calenduil is setting char sadonia hunger 0.
+Sat Jun 19 23:33:48 2004: SET- Calenduil is setting char sadonia thirst 0.
+Sat Jun 19 23:58:28 2004: SET- Calenduil is setting char sadonia thirst 0.
+Sat Jun 19 23:58:31 2004: SET- Calenduil is setting char sadonia hunger 0.
+Sun Jun 20 00:20:01 2004: INDUCT- Calenduil is inducting Jathruk into Bounty..
+Sun Jun 20 00:20:08 2004: TITLE- Calenduil is titling   .
+Sun Jun 20 19:34:30 2004: SET- Calenduil is setting char jathruk security 2.
+Sun Jun 20 19:40:09 2004: TITLE- Fyndin is titling the Lord of the Lion Tribe.
+Sun Jun 20 21:59:29 2004: LOAD- Fyndin is loading obj 11803.
+Sun Jun 20 23:14:22 2004: TITLE- Gravan is titling , Misguided Wisher of Apocalypse.
+Mon Jun 21 09:17:22 2004: TITLE- Fyndin is titling the Raucous.
+Mon Jun 21 09:17:44 2004: TITLE- Fyndin is titling , Partriarch of Ruination.
+Mon Jun 21 12:25:49 2004: TITLE- Fyndin is titling , Patriarch of Ruination.
+Mon Jun 21 17:20:51 2004: INDUCT- Fyndin is inducting Nhuaer into Scion..
+Wed Jun 23 00:28:22 2004: INDUCT- Gravan is inducting Gravan into Scion..
+Wed Jun 23 00:59:53 2004: SET- Gravan is setting skill jathruk all 100.
+Wed Jun 23 01:05:22 2004: LOAD- Gravan is loading mob 19201.
+Wed Jun 23 01:05:22 2004: LOAD- Gravan is loading mob 19201.
+Wed Jun 23 01:05:23 2004: LOAD- Gravan is loading mob 19201.
+Wed Jun 23 01:05:23 2004: LOAD- Gravan is loading mob 19201.
+Wed Jun 23 01:11:41 2004: LOAD- Gravan is loading mob 19201.
+Wed Jun 23 01:12:38 2004: LOAD- Gravan is loading obj 19201.
+Wed Jun 23 01:12:46 2004: LOAD- Gravan is loading mob 19201.
+Wed Jun 23 01:15:13 2004: LOAD- Gravan is loading mob 21502.
+Wed Jun 23 01:43:13 2004: TITLE- Gravan is titling , Harbinger of Ale.
+Wed Jun 23 18:08:49 2004: LOAD- Calenduil is loading obj 13521.
+Wed Jun 23 19:30:16 2004: SET- Calenduil is setting char calenduil prof tracking 1.
+Wed Jun 23 20:45:08 2004: SET- Calenduil is setting char fyndin prof track 1.
+Wed Jun 23 20:45:11 2004: SET- Calenduil is setting char fyndin prof tracking 1.
+Wed Jun 23 21:08:03 2004: SET- Calenduil is setting char self race elf.
+Wed Jun 23 21:08:12 2004: SET- Calenduil is setting char self race human.
+Thu Jun 24 21:24:57 2004: INDUCT- Gravan is inducting Gravan into Bounty..
+Thu Jun 24 21:25:11 2004: TITLE- Gravan is titling  .
+Thu Jun 24 21:37:18 2004: TITLE- Gravan is titling the Bounty Guildmaster.
+Thu Jun 24 21:41:27 2004: SET- Gravan is setting char gravan class zealot.
+Thu Jun 24 21:41:56 2004: SET- Calenduil is setting char gravan prof tracking 1.
+Thu Jun 24 22:08:15 2004: LOAD- Calenduil is loading obj 15900.
+Thu Jun 24 22:11:19 2004: LOAD- Calenduil is loading obj 20166.
+Sun Jun 27 15:53:41 2004: LOAD- Fyndin is loading obj 16100.
+Tue Aug  3 11:57:43 2004: LOAD- Fyndin is loading obj 5237.
+Tue Aug  3 11:57:50 2004: LOAD- Fyndin is loading obj 5237.
+Sun Aug 15 20:33:27 2004: INDUCT- Fyndin is inducting Zhaigar into Bounty..
+Fri Mar 25 23:19:56 2005: SET- Calenduil is setting char jenavia hp 10000.
+Fri Mar 25 23:20:42 2005: SET- Calenduil is setting sk jenavia all 100.
+Fri Mar 25 23:20:48 2005: SET- Calenduil is setting char jenavia str 25.
+Fri Mar 25 23:20:51 2005: SET- Calenduil is setting char jenavia int 25.
+Fri Mar 25 23:20:53 2005: SET- Calenduil is setting char jenavia wis 25.
+Fri Mar 25 23:20:54 2005: SET- Calenduil is setting char jenavia dex 25.
+Fri Mar 25 23:20:56 2005: SET- Calenduil is setting char jenavia con 25.
+Fri Mar 25 23:49:06 2005: LOAD- Calenduil is loading obj 65.
+Fri Mar 25 23:52:20 2005: LOAD- Calenduil is loading obj 65.
+Fri Mar 25 23:59:56 2005: LOAD- Calenduil is loading obj 65.
+Sat Mar 26 00:00:07 2005: STRING- Calenduil is stringing obj whip short the barbed whip called 'Scourge of the Drow'.
+Sat Mar 26 00:00:20 2005: STRING- Calenduil is stringing obj whip name whip barbed scourge drow.
+Sat Mar 26 00:00:33 2005: STRING- Calenduil is stringing obj whip v1 9.
+Sat Mar 26 00:00:33 2005: STRING- Calenduil is stringing .
+Sat Mar 26 00:00:37 2005: SET- Calenduil is setting obj whip v1 9.
+Sat Mar 26 00:01:13 2005: SET- Calenduil is setting obj whip v2 8.
+Sat Mar 26 00:02:28 2005: SET- Calenduil is setting obj whip v3 31.
+Sat Mar 26 00:09:04 2005: LOAD- Calenduil is loading obj 12312.
+Sat Mar 26 00:09:21 2005: LOAD- Calenduil is loading obj 12254.
+Sat Mar 26 00:11:53 2005: LOAD- Calenduil is loading obj 16106.
+Sat Mar 26 00:12:08 2005: STRING- Calenduil is stringing obj ring name ring signet.
+Sat Mar 26 00:12:17 2005: STRING- Calenduil is stringing obj ring short a signet ring of the House of Khin'Ehstrun.
+Sat Mar 26 00:12:29 2005: STRING- Calenduil is stringing obj ring long A signet ring of the house of Khin'Ehstrun is here..
+Sat Mar 26 00:15:34 2005: LOAD- Calenduil is loading obj 21817.
+Sat Mar 26 00:15:48 2005: STRING- Calenduil is stringing obj suit short a suit of Khin'Ehstrun battle armor.
+Sat Mar 26 00:16:41 2005: STRING- Calenduil is stringing obj suit name suit battle armor.
+Sat Mar 26 00:16:59 2005: STRING- Calenduil is stringing obj suit A suit of Khin'Ehstrun battle armor is here..
+Sat Mar 26 00:16:59 2005: STRING- Calenduil is stringing .
+Sat Mar 26 00:17:17 2005: STRING- Calenduil is stringing obj suit long A suit of Khin'Ehstrun battle armor is here..
+Sat Mar 26 00:24:49 2005: STRING- Calenduil is stringing obj veil long You see nothing special about it..
+Sat Mar 26 00:37:29 2005: TITLE- Calenduil is titling the Dark Healer.
+Sat Mar 26 00:37:35 2005: TITLE- Calenduil is titling , Queen of Khin'Ehstrun.
+Sat Mar 26 00:50:27 2005: SET- Calenduil is setting char self class zeal.
+Sat Mar 26 01:27:29 2005: SET- Calenduil is setting char jenavia security 3.
+Sat Mar 26 02:04:59 2005: LOAD- Jenavia is loading 29375.
+Sat Mar 26 02:04:59 2005: LOAD- Jenavia is loading .
+Sat Mar 26 02:05:12 2005: LOAD- Jenavia is loading obj 29375.
+Sat Mar 26 02:06:15 2005: LOAD- Jenavia is loading 29375 55.
+Sat Mar 26 02:06:15 2005: LOAD- Jenavia is loading .
+Sat Mar 26 02:06:22 2005: LOAD- Jenavia is loading 29375.
+Sat Mar 26 02:06:22 2005: LOAD- Jenavia is loading .
+Sat Mar 26 02:08:05 2005: LOAD- Jenavia is loading 29375.
+Sat Mar 26 02:08:05 2005: LOAD- Jenavia is loading .
+Sat Mar 26 02:08:45 2005: LOAD- Jenavia is loading obj 29375.
+Sat Mar 26 02:10:13 2005: LOAD- Jenavia is loading obj 29375.
+Sat Mar 26 02:11:44 2005: LOAD- Jenavia is loading obj 29375.
+Sat Mar 26 02:16:18 2005: LOAD- Jenavia is loading obj 29375.
+Sat Mar 26 02:43:47 2005: LOAD- Jenavia is loading obj 29374.
+Sat Mar 26 02:44:21 2005: LOAD- Jenavia is loading obj 29374.
+Sat Mar 26 03:10:46 2005: LOAD- Jenavia is loading obj 29374.
+Sat Mar 26 03:25:10 2005: LOAD- Jenavia is loading obj 29372.
+Sat Mar 26 03:30:21 2005: LOAD- Jenavia is loading obj 29372.
+Sat Mar 26 03:33:39 2005: LOAD- Jenavia is loading obj 29372.
+Sat Mar 26 03:51:06 2005: LOAD- Jenavia is loading obj 29371.
+Sat Mar 26 04:03:50 2005: LOAD- Jenavia is loading obj 29372.
+Sat Mar 26 04:03:58 2005: LOAD- Jenavia is loading obj 29373.
+Sat Mar 26 04:17:15 2005: LOAD- Jenavia is loading obj 29373.
+Sat Mar 26 04:18:28 2005: LOAD- Jenavia is loading obj 29373.
+Sat Mar 26 04:42:16 2005: LOAD- Jenavia is loading obj 29372.
+Fri Apr  1 03:27:42 2005: INDUCT- Carantoc is inducting Katistrofik into Horde..
+Fri Apr  1 04:00:00 2005: SET- Carantoc is setting .
+Fri Apr  1 04:02:03 2005: LOAD- Carantoc is loading mob 11404.
+Fri Apr  1 04:02:42 2005: LOAD- Carantoc is loading obj 2930.
+Fri Apr  1 04:02:49 2005: SET- Carantoc is setting obj urn v3 99.
+Fri Apr  1 04:02:51 2005: SET- Carantoc is setting obj urn v4 99.
+Fri Apr  1 04:08:18 2005: SET- Carantoc is setting char self class nec.
+Fri Aug  5 16:13:13 2005: SET- Carantoc is setting char zurhnile security 10.
+Fri Aug  5 16:16:13 2005: INDUCT- Zurhnile is inducting Zurhnile into Phalanx..
+Fri Aug  5 16:17:39 2005: SET- Carantoc is setting ski self all 100.
+Fri Aug  5 16:17:51 2005: SET- Carantoc is setting ski zurhnile all 100.
+Fri Aug  5 16:37:17 2005: SET- Carantoc is setting char self prof.
+Fri Aug  5 16:37:23 2005: SET- Carantoc is setting char self prof ancient lore.
+Fri Aug  5 16:37:40 2005: SET- Carantoc is setting char self prof 'ancient lore' 100.
+Fri Aug  5 16:37:42 2005: SET- Carantoc is setting char self prof 'ancient lore' 10.
+Fri Aug  5 16:37:47 2005: SET- Carantoc is setting char self prof 'ancient lore' 1.
+Fri Aug  5 16:37:49 2005: SET- Carantoc is setting char self prof 'ancient lore' 4.
+Fri Aug  5 16:37:56 2005: SET- Carantoc is setting char self proficiency 'ancient lore' 4.
+Fri Aug  5 16:38:01 2005: SET- Carantoc is setting char self proficiency 'ancient lore'.
+Fri Aug  5 16:47:11 2005: LOAD- Carantoc is loading obj 19241.
+Fri Aug  5 16:47:28 2005: SET- Carantoc is setting ski zornath all 100.
+Fri Aug  5 21:07:10 2005: TITLE- Zurhnile is titling the Lord of Zealots.
+Thu Aug 11 17:36:12 2005: SET- Carantoc is setting char zurhnile security 10.
+Thu Aug 11 17:57:58 2005: STRING- Carantoc is stringing char jamesktester name JamesKTester.
+Fri Aug 12 13:37:41 2005: LOAD- Zurhnile is loading .
+Fri Aug 12 13:37:53 2005: LOAD- Zurhnile is loading obj 1296.
+Tue Feb 21 16:56:46 2006: SET- Gawinn is setting .
+Tue Feb 21 16:57:03 2006: SET- Gawinn is setting char anria lvl 55.
+Tue Feb 21 16:58:15 2006: SET- Gawinn is setting char anria level 55.

@@ -1,0 +1,735 @@
+#AREA
+zethshrine.are~
+Zethus's Palace~
+Zethus~
+1 51
+120 129
+unopened
+none
+0
+1
+Zethus~
+
+#MOBS
+#120
+daethropos shrine guardian keeper figure~
+Daethropos, The Keeper~
+Standing tall and still, a stern-faced figure regards you coldly.
+~
+A look of cold patience chiseled onto his face, the abyssal guardian of
+this palace stares at you, watching your every movement.  His greatcloak
+rustles as he moves, thick steel plate armor, along with unimaginable power
+beneath its folds.  
+~
+0 0 100 abyss~
+60 1000d9+19935 20d5+120 0 10 defilement
+0 0 0 0
+standing male none
+0 0 huge
+ACT NPC
+ACT SENTINEL
+OFF AREA_ATTACK
+OFF BASH
+OFF DISARM
+OFF FADE
+OFF FAST
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+IMM POISON
+IMM NEGATIVE
+IMM HOLY
+IMM DISEASE
+IMM SLEEP
+B tattoo EQUALTO 120 127 ECHO A quiet rustle emanates from the Keeper's robes as his arm darts across your chest, blocking your path.~
+A quiet rustle emanates from the Keeper's robes as his arm darts across $n's chest, blocking $s path.~
+#121
+altar shrine ward mob~
+Zethus's Altar Ward Mob~
+Zethus's Altar Ward Mob is here, spacing out.
+~
+He kinda looks like a dog, but not.
+~
+0 0 100 abyss~
+60 1000d9+19935 100d5+140 0 10 defilement
+0 0 0 0
+standing male none
+0 0 huge
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+B tattoo EQUALTO 120 128 ECHO blocks the way to the east.~
+blocks the way to the east.~
+#122
+shrine ward mob~
+Zethus's Shrine Guard Ward Mob~
+Zethus's Shrine Guard Ward Mob is here, spacing out.
+~
+He kinda looks like a dog, but not.       
+~
+0 0 100 abyss~
+60 1000d9+19935 100d5+140 0 10 defilement
+0 0 0 0
+standing male none
+0 0 huge
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+#123
+no name~
+dummy mob~
+~
+~
+0 0 0 demon~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#120
+tattoo mark black mandala~
+the black mandala~
+Zethus's tattoo is here, defying the laws of nature.~
+armor
+energy~
+0 0 0 0 0
+53 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM EVIL
+ITEM BLESS
+ITEM BRAND
+APPLY HP 35
+APPLY MANA 35
+LIMIT 0
+VERB energize
+NOTES ~
+E glyphs~
+The glyphs are those of Zethus' virtues of the shadow mandala:
+Strength, Wisdom, Independence, and Self-knowledge.
+~
+E tattoo mark shadow mandala~
+The flesh surrounding the tattoo is gray and calloused. The mandala
+itself is composed of three concentric circles with four glyphs along
+the segmented inside of the outermost circle. Within the center circle
+sits a large, open eye with a black iris and a small, red pupil.
+~
+
+#121
+shadow mandala corypheus skull~
+the mark of the Corypheus of the Shadow Mandala~
+Zethus' tattoo is here, defying the laws of nature.~
+armor
+energy~
+0 0 0 0 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM EVIL
+ITEM BLESS
+APPLY NONE 3
+APPLY DAMROLL 3
+APPLY HP 35
+APPLY MANA 35
+LIMIT 0
+FLAG RES HOLY
+E glyphs~
+The glyphs are those of Zethus' virtues of the Corypheus of the
+Shadow Mandala:
+Strength, Wisdom, Independence, Self-knowledge, and Dominance.
+~
+E tattoo mark shadow mandala corypheus skull~
+The flesh surrounding the tattoo is gray and calloused. The mandala
+itself is composed of three concentric circles with five glyphs along
+the segmented inside of the outermost circle. Within the center circle
+sits a large, open eye with a black iris and a small, red pupil, and
+around the outer edge of the mandala are black markings that resemble
+flames.
+~
+
+#122
+statue goat~
+a goat-headed statue~
+A statue of a goat-headed man crouches in the center of the room, a flame in each hand.~
+altar
+gold~
+0 0 0 0 0
+60 0 0 P
+ITEM EVIL
+ITEM BLESS
+ITEM NOPURGE
+LIMIT 0
+
+#123
+glass red wine~
+a glass of fine red wine~
+A glass of fine red wine has been placed here.~
+drink
+glass~
+3 3 'red wine' 0 0
+60 1 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM BLESS
+LIMIT 0
+
+#124
+piece cheese~
+a piece of gourmet cheese~
+A small chunk of gourmet cheese has been placed here.~
+food
+cheese~
+10 20 0 0 0
+60 1 0 P
+WEAR TAKE
+ITEM EVIL
+ITEM BLESS
+LIMIT 0
+TIMER 40
+
+#125
+table~
+a walnut table~
+A table of dark walnut wood sits by the couch, covered with delicacies.~
+container
+wood~
+100 E 10 100 0
+60 1 0 P
+ITEM EVIL
+ITEM BLESS
+LIMIT 1
+
+#126
+plush velvet pillow pillows~
+some plush velvet pillows~
+A pile of plush velvet pillows have been strewn out in front of the fireplace.~
+furniture
+cloth~
+100 10000 EHK 200 200
+0 0 0 P
+LIMIT 1
+
+#127
+elaborate embroidered couch~
+an elaborately embroidered couch~
+A couch embroidered with elaborate designs is here.~
+furniture
+cloth~
+100 10000 EHK 200 200
+0 0 0 P
+LIMIT 1
+
+#128
+blind eye gravan~
+the Blind Eye~
+The Blind Eye is burnt into your flesh.~
+armor
+energy~
+0 0 0 0 0
+59 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM DARK
+ITEM NOLOCATE
+APPLY MANA 20
+APPLY SAVES -10
+APPLY HP 20
+LIMIT 1
+FLAG RES CHARM
+
+#129
+flickering tendril~
+a flickering tendril of energy~
+Zethus's weapon is here.~
+weapon
+energy~
+whip 10 10 mental B
+55 200 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+ITEM NODISARM
+ITEM NOLOCATE
+APPLY HITROLL 200
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#120
+A Roaring Cavern~
+The sound of the ocean beating up against the rocky walls of this cavern
+echoes almost unbearably loudly into the depths.  A fine mist of salty water
+drifts through the cavern, covering the dark rock with a damp, granular
+film.  To the east, little other than darkness is visible, while back to the
+west, you can return to the sea.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The jagged black rocks that make up the cavern's walls are covered with
+a thin layer of salt.
+~
+D EAST 14299 0 0
+~
+The crimson sea awaits you.
+~
+D SOUTH 0 0 0
+~
+The jagged black rocks that make up the cavern's walls are covered with
+a thin layer of salt.
+~
+D WEST 121 0 0
+~
+Flickering torchlights are visible in the distance, where the cavern
+seems to open up.
+~
+OWNER Zethus~
+#121
+A Subterranean Courtyard~
+The roaring of the water is still incredibly loud here.  Flickering light
+emanates from two massive stone torches at the bottom of a stairwell of dark
+gray marble leading up to a large structure, filling this place with an
+almost warm glow.  A series of huge pillars hold up the roof of the
+building, of which's depth is impossible to discern, as it is set into the
+northern wall.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 122 0 0
+~
+Some concrete stairs lead up to the entrance of a dark temple.
+~
+D EAST 120 0 0
+~
+The cavern's entrance lies to the east.
+~
+D SOUTH 0 0 0
+~
+The jagged black rocks that make up the cavern's walls are covered with a
+thin layer of salt.
+~
+D WEST 0 0 0
+~
+The jagged black rocks that make up the cavern's walls are covered with a
+thin layer of salt.
+~
+OWNER Zethus~
+#122
+The Grand Foyer of the Palace~
+This foyer is absolutely huge.  Seven flickering chandeliers are hung
+from strategic points on the ceiling, so that the entire room is lit.  The
+floor is made up of the same dark marble that made up the outside of the
+building, however, in the center of the room is a large symbol composed of
+many different colors of marble.  Exits lead in all directions.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 123 0 0
+~
+A narrow hallway leads out from the foyer.
+~
+D EAST 128 0 0
+~
+You can only see darkness with faint, flickering lights beckoning from the
+other side.
+~
+D SOUTH 121 0 0
+~
+A staircase lies just outside the doorway to the south.
+~
+D WEST 127 0 0
+~
+You can only see darkness with faint, flickering lights beckoning from the
+other side.
+~
+D DOWN 0 0 0
+~
+The black marble mosaic on the floor takes the shape of a mandala: three
+concentric circles with an open eye in the exact center of the innermost
+one.  
+~
+E floor symbol~
+The black marble mosaic on the floor takes the shape of a mandala: three
+concentric circles with an open eye in the exact center of the innermost
+one.  
+~
+OWNER Zethus~
+#123
+A Narrow Hallway~
+The walls of this hallway are white, covered with decorative velvet
+drapes of deep purple.  Small walnut tables line the walls between the
+drapes, each with a silver candelabra stocked with white candles.  A
+tapestry covers the western wall.  To the north, the hallway leads into a
+dimly lit chamber, while to the south it opens back out into the foyer.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 124 0 0
+~
+A strange looking chamber opens up to the north.
+~
+D EAST 0 0 0
+~
+Tied-off decorative velvet drapes elegantly cover the eastern wall.
+~
+D SOUTH 122 0 0
+~
+You see the temple foyer.
+~
+D WEST 0 0 0
+~
+Tied-off decorative velvet drapes and a large tapestry elegantly cover the
+western wall.
+~
+E tapestry~
+This enormous tapestry is mainly composed of the colors of dark red, black
+and beige. It depicts Caelumaedan and its inhabitants standing proudly and
+looking down upon the lands of Shalar from the upper-left, while one figure,
+somehow darker and less defined than the others, stands alone, looking away
+toward the upper-right.
+~
+OWNER Zethus~
+#124
+A Circular Chamber~
+This room is a perfectly round circle.  It spirals down into darkness
+toward the center, which serves as a sort of staircase, shaped of concentric
+circles that slowly get lower.  A flickering light can be seen at the
+bottom.  A thick ledge along the wall leads around the abyss, allowing one
+to look at the various pictures, symbols and plaques that have been painted
+on the walls in a muralistic fashion, one fading gradually into another. 
+The circular wall has been segmented into four large murals, each with its
+own plaque.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The walls have been dedicated to the virtues of Strength, Wisdom,
+Independence, and Self-knowledge.
+~
+D EAST 0 0 0
+~
+The walls have been dedicated to the virtues of Strength, Wisdom,
+Independence, and Self-knowledge.
+~
+D SOUTH 123 0 0
+~
+An archway leads back into the narrow hallway.
+~
+D WEST 0 0 0
+~
+The walls have been dedicated to the virtues of Strength, Wisdom,
+Independence, and Self-knowledge.
+~
+D DOWN 125 0 0
+~
+The circular stairwell leads into darkness.
+~
+E self-knowledge knowledge self~
+This section of the mural is composed of a man staring into a
+mirror, an intense and dispassionate glimmer in his eyes.
+The glyph of strength is etched into a plaque below the painting,
+along with the words:
+
+THE SELF-KNOWLEDGE TO SEE THE QUALITIES AND POWER THAT YOU COMMAND
+WITHOUT THE AID OF THE GODS
+~
+E independence~
+This part of the wall contains a painting of a well-muscled man
+whose hands are bound with newly broken chains, still pulling his
+arms apart, shards of metal flying through the air around him.
+The glyph of strength is etched into a plaque below the painting,
+along with the words:
+
+THE WILL TO BECOME INDEPENDENT FROM THOSE THAT HAVE CLAIMED YOU AS
+THEIR OWN PROPERTY
+~
+E wisdom~
+The upper half of a man's face, eyes narrowed and the look of a
+righteous rage contorting his face with lines of anger and disgust
+is portrayed in this section of the mural.
+The glyph of wisdom is etched into a plaque below the painting,
+along with the words:
+
+THE WISDOM TO SEE AND UNDERSTAND THE LINES THAT HAVE BEEN CROSSED
+~
+E strength~
+This part of the mural contains a painting of a robed woman,
+standing alone on a cliffside, the night wind blowing at her
+back. Her robes seem to be whipping feverishly in the wind,
+while her face and posture remain unphased. In the dark,
+crystalline sky in the background, frowning, panicking
+heavenly faces, stare hopelessly at her.
+The glyph of strength is etched into a plaque below the painting,
+along with the words:
+
+THE STRENGTH TO SEVER THE TIES TO THE CAELUMAEDANI AND STAND ALONE
+AS THE MORTAL RACE
+~
+E murals~
+Four murals line the walls: One dedicated to the virtue Strength, one to
+Wisdom, one to Independence and one to Self-Knowledge.  
+~
+E mural~
+Four murals line the walls: One dedicated to the virtue Strength, one to
+Wisdom, one to Independence and one to Self-Knowledge.  
+~
+E plaque~
+Plaques rest at the bottom of each mural, engraved with small yet bold
+writing.  
+~
+OWNER Zethus~
+#125
+Before a Large Door~
+The walls are completely devoid of any markings, and the only source of
+light here is that of a two candelabras that have been attached to the
+pitch-black wall on either side of a door carved of dark walnut.  High
+above, you can barely see the dim lighting of the circular chamber that
+preceeded this one.  The only thing of note in this room is an open tome on
+a bookstand set into an alcove in the southern wall.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 126 AE 0
+carved walnut door~
+An ornately carved door of dark walnut has but a single pattern on
+it: In the exact center, there is a symbol of three concentric circles
+with an open eye in the center one, and glyphs around the inside of
+the outer circle.
+~
+D EAST 0 0 0
+~
+The walls are pitch-black and flawless.
+~
+D SOUTH 0 0 0
+~
+The southern wall has an alcove set into it with with a bookstand
+holding an ancient tome.
+~
+D WEST 0 0 0
+~
+The walls are pitch-black and flawless.
+~
+D UP 124 0 0
+~
+High above, you can barely see the dim lighting of the circular
+chamber that preceeded this one.
+~
+E ancient tome book bookstand~
+On the page that the tome is opened to, it reads:
+
+"On the very day that the Caelumaedani had decided to leave
+the heavens to turn the tides of the Great War, the intentions
+of the Gods were self-centered and true. On the very day that
+the Caelumaedani had decided to stay in the Mortal Realm of
+Shalar, however, they had broken the bounds that nature had
+set for both themselves and the mortals.
+
+Am I the only one that sees the profundity of the wrongness
+that the other Gods are happily taking part in?
+
+Am I the only one that is disgusted by the weakness and
+insecurity that the other Gods have in their nature which
+leads them to use the mortals for their own petty games?
+
+For their offenses, they shall suffer at the hands of the very
+mortals that they regard as playthings. They will watch as the
+underestimated mortals of Shalar display their true power: That
+of independence."
+
+A barrier of magic keeps you from touching the page to turn it.
+
+~
+OWNER Zethus~
+#126
+The Chamber of Enlightenment~
+This chamber of dark marble is cold, drafty and the scent of rock lingers
+in the air.  A bizarre statue of a goat-headed man on one knee leans toward
+the southern door, its snout pointing downward with its mouth slightly open
+and its arms out forward, each serving as a torch.  Dozens of candles
+surround it, and their warm, flickering light off of the dark gray, polished
+marble makes the room seem almost alive.  The circular symbol makes yet
+another appearance here on the floor beneath the statue.  
+~
+inside
+ROOM INDOORS
+ROOM NORECALL
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The altar stands on the northern side of the room, and close behind,
+the gilded goat-headed statue stares ahead lifelessly.
+~
+D EAST 0 0 0
+~
+Candles line the dark walls of the room, flickering slightly in the
+draft.
+~
+D SOUTH 125 A 0
+~
+A door leads back out to a darker room.
+~
+D WEST 0 0 0
+~
+Candles line the dark walls of the room, flickering slightly in the
+draft.
+~
+E goat statue~
+Crafted from tarnished gold, this bizarre, kneeling statue reflects the
+dancing light from the surrounding candles and the flames that it holds in
+its skyward palms, making it almost seem to move.  Its dead eyes stare
+blankly at the walls, and its open mouth displays small, almost human-like
+teeth and a tongue, curled and bulging, as if this statue was frozen in
+mid-convulsion.  Its build is muscular, yet its ribs seem to be bulging out,
+suggesting emaciation.  
+~
+OWNER Zethus~
+#127
+An Elegant Lounge~
+A fireplace has been set into the northern wall, and couches and pillows
+of plush materials have been arranged for use of guests of this shrine's
+Lord.  A temperate red carpet covers the floor, with a black mandala in the
+center of the room.  Ornate tables have been arranged with all sorts of
+drinks and gourmet foods, as gifts to his favored.  
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+A large fireplace burning with a magical flame emanates warmth.
+~
+D EAST 122 0 0
+~
+A doorway leads back out into the foyer.
+~
+D SOUTH 0 0 0
+~
+The white stone walls have been covered by red and gold drapery.
+~
+D WEST 0 0 0
+~
+The white stone walls have been covered by red and gold drapery.
+~
+OWNER Zethus~
+#128
+The Hall of Wrath~
+The white walls of this hall are covered with pictures and tapestries of
+slaughter and suffering, along with ancient weapons that are only useful as
+decorations now, but still retain their violent memories.  To the north lies
+a sealed door.
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 0 0 0
+~
+Weapons, tapestries and paintings of death and destruction cover
+the walls.
+~
+D SOUTH 0 0 0
+~
+Weapons, tapestries and paintings of death and destruction cover the walls.
+~
+D WEST 122 0 0
+~
+The foyer lies to the west.
+~
+OWNER Zethus~
+#129
+A Dark Clearing~
+Darkness fills the air.  Tendrils of violet mist and hazy light swirl
+through the air, a low rumbling noise echoing softly through the cavernous
+infinity that you've found yourself within.  A single tree stands alone,
+just in front of you, and tiny specks of sky-blue light waft out from the
+tree like so much dust as a warm breeze softly shakes its leaves.  There is
+no apparent way out.  As you step from where you've found yourself, the
+darkness becomes more and more palpable, almost crushing you should you try
+to wander too far.  
+~
+inside
+ROOM NO_MOB
+ROOM NOWHERE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+~
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+D WEST 0 0 0
+~
+The western wall is plain, a flawless white.
+
+~
+#0
+
+
+
+#RESETS
+MOB 120 TO 122 GLIMIT 1 LLIMIT 1
+EQUIP 120 TATTOOED
+MOB 121 TO 122 GLIMIT 1 LLIMIT 1
+OBJECT 122 TO 126
+OBJECT 125 TO 127
+OBJECT 126 TO 127
+OBJECT 127 TO 127
+PUT 123 IN 125 COUNT 6
+PUT 123 IN 125 COUNT 6
+PUT 123 IN 125 COUNT 6
+PUT 124 IN 125 COUNT 6
+PUT 124 IN 125 COUNT 6
+PUT 124 IN 125 COUNT 6
+PUT 124 IN 125 COUNT 6
+S
+
+#IMPROGS
+I 120 invoke_prog invoke_prog_tattoo_zethus
+I 120 verb_prog verb_prog_energize_tattoo
+I 129 fight_prog fight_prog_arms_light
+END
+#SPECS
+END
+#$

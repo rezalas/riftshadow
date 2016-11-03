@@ -1,0 +1,2846 @@
+#AREA
+shopping.are~
+Ilya Eru~
+Anria~
+1 51
+29700 29999
+unopened
+tropical
+0
+1
+Anria~
+
+#MOBS
+#29700
+high priest high-priest guildmaster~
+the High-Priest of Ilya Eru~
+The High-Priest of Ilya Eru shows you how to properly heal an injury.
+~
+An old man stands here, trying to teach his students the wonderous ways
+of the Gods.  He shows different techniques on healing and shielding to save
+others lives.  Pure white vestiments cover his old body, as if he is getting
+ready to deliver a sermon down in the sanctuary.  
+~
+0 0 0 human~
+60 60d8+9992 7d12+35 10 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+ACT DETECT_SPECIAL
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF INFRARED
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM HOLY
+VUL NEGATIVE
+NOTES ~
+#29701
+guildguard~
+the guildguard~
+The healer's guildguard stands here protecting the guild.
+~
+A scruffy man stands here eyeing you.  He doesn't look as if he's shaved
+in a few days or as if he's gone home to change either.  His clothes are
+disheveled, but he looks very alert and ready to pounce on any attackers.  
+~
+0 0 0 human~
+40 40d8+2464 5d10+15 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF INFRARED
+AFF DARK_VISION
+#29702
+elven man pet shoppe owner~
+the pet shoppe owner~
+An elven man stands here grooming one of his various animals.
+~
+A tall slender elven man stands here grooming one of his various animals.
+He is being kind and gentle to the animal, talking softly to it.  He seems
+to have a natural affinity with the animals around him.  
+~
+0 0 0 elf~
+60 60d8+9992 5d10+35 60 100 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT NOALIGN
+ACT INDOORS
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 6 CLOSE 10 EXIT south
+#29703
+fish bowl~
+a fish in a bowl~
+A bowl with a cute little fish sits here.
+~
+A round glass bowl sits here with an adorable little rainbow colored fish
+in it.  The fish is swimming about happily in its bowl, coming over to look
+at you every now and again.  
+~
+0 0 0 fish~
+5 5d8+38 2d3+2 5 100 drowning
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT PET
+VUL LIGHTNING
+#29704
+shopkeeper man~
+the shopkeeper~
+The shopkeeper stands here eyeing the customers.
+~
+~
+0 0 0 human~
+60 60d8+9992 5d20+150 30 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOALIGN
+OFF BACKSTAB
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF TRIP
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+SHOPKEEPER OPEN 0 CLOSE 24 EXIT south
+#29705
+guildmaster paladin trainer master~
+the Paladin Guildmaster~
+The Paladin Guildmaster is giving lessons to younger Paladins.
+~
+A massive female Celestial Titan stands here.  She is quite attractive
+with her thick long blonde hair pulled back in a braid and her blue eyes
+shining.  She wears a set of armor that is silver with gold trim and
+designs.  A lusterous polearm hovers near her, awaiting use.  
+~
+1000 0 0 celestial~
+60 60d8+9992 5d20+100 50 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+ACT DETECT_SPECIAL
+OFF BASH
+OFF DISARM
+OFF FAST
+OFF PARRY
+OFF CRUSH
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF INFRARED
+#29706
+guildguard guard~
+Paladin Guildguard~
+The Paladin Guildguard is here.
+~
+A suit of armor stands here guarding the entrance to the paladin guild. 
+You cannot determin who or what the person is beneath suit, or if there even
+is a person beneath it.  
+~
+1000 0 0 elf~
+51 51d8+4274 3d20+100 25 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF INFRARED
+#29707
+zealot trainer~
+Zealot Trainer~
+A master Zealot is here training students.
+~
+~
+0 0 0 drow~
+51 51d8+4274 4d20+100 30 100 punch
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+OFF DISARM
+OFF DODGE
+OFF FAST
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+AFF INFRARED
+#29708
+guildguard guild guard~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+51 51d8+4274 5d20+100 25 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT GUILDGUARD
+#0
+
+
+
+#OBJS
+#29700
+none~
+none~
+None~
+trash
+none~
+0 0 0 0 0
+54 0 0 P
+APPLY NONE 0
+APPLY NONE 0
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#29701
+pit sacrifice sacrifices~
+a pit of sacrifices~
+A shallow pit of sacrifices.~
+container
+Marble~
+1000000 0 0 1000000 1000000
+54 0 0 P
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 0
+VERB none
+TIMER 0
+
+#29702
+pulpit~
+a pulpit~
+A beautifully carved pulpit of white marble.~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+ITEM NOPURGE
+ITEM BURNPROOF
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#29703
+calenduil~
+a statue of Calenduil~
+A handsome human statue of pure gold stands here.~
+container
+unknown~
+10000 0 0 100 10000
+60 0 0 P
+ITEM NOSHOW
+ITEM NOSAC
+LIMIT 0
+TIMER 0
+
+#29704
+fountain~
+a large marble fountain~
+Gently cascading water flows from the grand rectangular fountain.~
+fountain
+unknown~
+-1 -1 'water' 0 0
+1 0 0 P
+ITEM BURNPROOF
+LIMIT 0
+TIMER 0
+
+#29705
+white marble staff~
+a staff carved of white marble~
+A staff of white marble is here.~
+weapon
+Marble~
+staff 5 20 wrath 0
+40 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NODISARM
+ITEM BURNPROOF
+LIMIT 2
+VERB none
+TIMER 0
+
+#29706
+merry-go-round merrygoround merry go round~
+a merry-go-round~
+A merry-go-round is here, enticing you to sit on it.~
+furniture
+Metal~
+5 100000 E 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#29707
+orbs of light~
+orbs of light~
+Orbs of light hover around the room.~
+light
+unknown~
+0 0 -1 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#29708
+none~
+none~
+None~
+trash
+Parchment~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#29709
+pile cloth cloak shadow shadows~
+a cloak of shadows~
+A pile of cloth sits here blending in with the shadows.~
+armor
+shadow~
+4 5 5 6 0
+10 1 5000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM INVIS
+ITEM ANTILAWFUL
+APPLY DEX 2
+LIMIT 0
+TIMER 0
+
+#29799
+sword~
+a jewel encrusted platinum sword~
+Anria's sword is here.~
+weapon
+unknown~
+weapon 99 20 slash E
+54 0 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NOSHOW
+ITEM NODISARM
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#29700
+The Temple of Ilya Eru~
+Carved of the purest white marble, the walls and ceiling stand nearly
+thirty feet above the gleaming white floor.  Each wall holds a width of at
+least fifteen feet.  Statues grace the walls, each holding the resemblance
+of one of the Caelumaedani Lords.  A shallow carved pit of sacrifices adorns
+the center of the room with a noticeable glint of gold shining from within. 
+A fountian, also carved of the lusterous white marble, stands in front of an
+open archway on the eastern wall.  The fountain has been carved into a
+perfect rectangle standing ten feet tall.  At the bottom of this huge slab
+of marble is a shallow hollowed out square of marble, catching the water
+falling from above.  
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_FROM
+D EAST 29701 0 0
+door~
+~
+D WEST 29710 0 0
+door~
+~
+E calenduil~
+A tall handsome human man is forever immortalized in this statue of pure
+gold.  In his hand it looks like there is a small gold coin.  
+~
+E statues~
+A statue of each God and Goddess of Caelumaedan resides here, each made
+of a different substance.  
+~
+E statue~
+A statue of each God and Goddess of Caelumaedan resides here, each made
+of a different substance.  
+~
+OWNER none~
+#29701
+The Sanctuary~
+This room is also carved out of the beautiful white marble.  On either
+side of the entrance are rows of marvelously carved pews that look as if
+they and the floor are one entity.  Further up the aisle created by the pews
+are three wide steps that lead up to a pulpit, also carved of marble. 
+Behind the pulpit is a massive stain-glass window, covering nearly the whole
+wall.  How it is ancored into the marble cannot be seen, but it does not
+look as if it could be moved with any kind of brute force.  When the sun
+rises and the light hits the window, the room is filled with unimaginably
+beautiful colors of the rainbow.  To the north an open archway graces the
+wall, leading to a small chamber, the south wall also has an open archway
+leading to a small chamber.  A set of free standing spiral stairs is in the
+northwest corner of the room, leading up to a small landing with another
+open archway with a room behind it as well.  
+~
+inside
+ROOM SAFE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+ROOM NO_MAGIC
+ROOM NO_COMMUNE
+D NORTH 29703 0 0
+door~
+~
+D SOUTH 29704 0 0
+door~
+~
+D WEST 29700 0 0
+door~
+~
+D UP 29705 0 0
+door~
+~
+OWNER none~
+#29702
+Temple Road~
+~
+unused
+OWNER none~
+#29703
+Entrance to the Paladin Guild~
+Depictions of Holy Crusades are woven into tapestries that hang on the
+walls.  Suits of full platemail stand in the corners, looking as if they
+might come alive should any intruders come along.  A large entryway is on
+the northern wall, a rather large suit of armor guarding the entrance to the
+Paladin guild hall to the right of it.  
+~
+inside
+D NORTH 29706 0 0
+door~
+~
+D SOUTH 29701 0 0
+door~
+~
+OWNER none~
+#29704
+Entrance to the Zealot Guild~
+Though rather plain, this room is still beautiful with its lusterous
+white marble walls.  An ornate rug covers most of the floor, depictions of
+historical scenes involving famous zealots are embroidered on it.  A large
+curio cabinet is on the eastern wall.  Various robes, paintings, books and
+jewelry are placed on display for visitors to see.  
+~
+inside
+D NORTH 29701 0 0
+door~
+~
+D SOUTH 29708 0 0
+door~
+~
+OWNER none~
+#29705
+A Small Landing~
+This small landing looks out over the entire sanctuary.  This is the best
+vantage point to see the spectacular morning show of colors.  The stairs and
+landing are as sturdy as if you were standing on the ground floor.  They
+look as if someone cleans and polishes them every day.  
+~
+inside
+ROOM SAFE
+D NORTH 29707 0 0
+door~
+~
+D DOWN 29701 0 0
+door~
+~
+OWNER none~
+#29706
+Paladin Guild~
+Racks of weapons and suits of armor take up almost all the space on the
+walls.  Larger weapons are mounted horizontally above the racks and suits in
+columns.  The suits are all different sizes, shapes, and colors.  Each suit
+has a plaque mounted on the bottom of its stand saying who the owner was. 
+In the center of the room is a practice dummy and a tall weathered man
+standing next to it instructing students.  
+~
+inside
+D SOUTH 29703 0 0
+door~
+~
+OWNER none~
+#29707
+Entrance to the Healer Guild~
+Two lanterns hang on either side of the door leading to the High-Priest's
+chambers.  This dimly lit room has little in it to make it look homely or
+welcoming.  It does have an old worn wooden chair sitting in the corner. 
+Though the rooms is made of the white marble like the rest of the building,
+it seems dingy, as though someone forgot to clean this room along with the
+rest.  
+~
+inside
+D NORTH 29709 0 0
+door~
+~
+D SOUTH 29705 0 0
+door~
+~
+OWNER none~
+#29708
+Zealot Guild~
+A large polished oak table sits in the center of the room, piled high
+with scrolls and books.  Beautiful embroidered robes hang on manequins
+placed throughout the room.  Paintings of famous zealots line the walls
+along with plaques naming the most accomplished zealots in Shalar.  A young
+looking drow woman stands near the oak table teaching zealots how to
+properly use their supplications.  
+~
+inside
+D NORTH 29704 0 0
+door~
+~
+OWNER none~
+#29709
+Healer Guild~
+A plethora of holy relics grace the walls of this room.  Memorabilia from
+the ancient wars, crosses of all shapes, sizes, and materials.  Vestements
+practically are bursting from the wardrobe on the northern wall.  A small
+desk pilled with papers sits on the eastern wall, with a plush apolstried
+wooden chair hastily push back.  A small unadorned cot sits on the west
+wall, with only a pillow and ragged blanket to cover it.  The floor has many
+different carpets from all over Shalar, making it look like a quilt.  
+~
+unused
+D SOUTH 29707 0 0
+door~
+~
+OWNER none~
+#29710
+Outside the Temple~
+A magnificent white marble temple makes all other beautiful things in the
+city pale in comparison.  This temple makes even the largest giant seem
+small.  Well cared for gardens lie on either side of the temple steps,
+filled with all the colors of the rainbow and then some.  Great pillars draw
+attention to the wide entry way.  A glint of gold and the shimmer of water
+can be seen from the street.  
+~
+unused
+D NORTH 29713 0 0
+door~
+~
+D EAST 29700 0 0
+door~
+~
+D SOUTH 29711 0 0
+door~
+~
+OWNER none~
+#29711
+Temple Road~
+~
+unused
+D NORTH 29710 0 0
+door~
+~
+D SOUTH 29712 0 0
+door~
+~
+OWNER none~
+#29712
+The South Gate~
+A high stone wall blocks all view of the land outside the city.  Two
+large stone doors hooked up a pully system for a gate to protect the city
+from both the sand and any intruders.  A bleary eyed guard is always at his
+post next to the gate to watch travelers for any suspiciousness and to open
+and close the gates at sunrise and sunset.  
+~
+unused
+D NORTH 29711 0 0
+door~
+~
+OWNER none~
+#29713
+Temple Road~
+~
+unused
+D NORTH 29715 0 0
+door~
+~
+D SOUTH 29710 0 0
+door~
+~
+OWNER none~
+#29714
+Temple Road~
+~
+unused
+OWNER none~
+#29715
+Temple Road~
+Named for the glorious temple seen from it, it is paved with tan and
+white stones which pale in comparison to the beauty of the white marble
+temple.  Though slightly dusty with sand from the surrounding area, a street
+sweeper can always been seen constantly sweeping it clean again.  The center
+of town can be viewed from this part of the road, bustling with people.  
+~
+unused
+D SOUTH 29713 0 0
+door~
+~
+D WEST 29716 0 0
+door~
+~
+OWNER none~
+#29716
+Temple Road~
+Named for the glorious temple seen from it, it is paved with tan and
+white stones which pale in comparison to the beauty of the white marble
+temple.  Though slightly dusty with sand from the surrounding area, a street
+sweeper can always been seen constantly sweeping it clean again.  The center
+of town can be viewed from this part of the road, bustling with people.  
+~
+unused
+D EAST 29715 0 0
+door~
+~
+D WEST 29717 0 0
+door~
+~
+OWNER none~
+#29717
+Junction Road~
+~
+unused
+D NORTH 29738 0 0
+door~
+~
+D EAST 29716 0 0
+door~
+~
+D WEST 29718 0 0
+door~
+~
+OWNER none~
+#29718
+High Avenue~
+~
+unused
+D EAST 29717 0 0
+door~
+~
+D WEST 29719 0 0
+door~
+~
+OWNER none~
+#29719
+High Avenue~
+~
+unused
+D EAST 29718 0 0
+door~
+~
+D SOUTH 29720 0 0
+door~
+~
+OWNER none~
+#29720
+High Avenue~
+~
+unused
+D NORTH 29719 0 0
+door~
+~
+D SOUTH 29722 0 0
+door~
+~
+D WEST 29721 0 0
+door~
+~
+OWNER none~
+#29721
+The Elvish Restaurant~
+~
+unused
+D EAST 29720 0 0
+door~
+~
+OWNER none~
+#29722
+High Avenue~
+~
+unused
+D NORTH 29720 0 0
+door~
+~
+D EAST 29724 0 0
+door~
+~
+OWNER none~
+#29723
+Hallway~
+~
+unused
+D NORTH 29728 0 0
+door~
+~
+D EAST 29729 0 0
+door~
+~
+D DOWN 29725 0 0
+door~
+~
+OWNER none~
+#29724
+Entrance to the Bar~
+~
+unused
+D EAST 29725 0 0
+door~
+~
+D WEST 29722 0 0
+door~
+~
+OWNER none~
+#29725
+The Bar~
+~
+unused
+D NORTH 29727 0 0
+door~
+~
+D EAST 29726 0 0
+door~
+~
+D WEST 29724 0 0
+door~
+~
+D UP 29723 0 0
+door~
+~
+OWNER none~
+#29726
+Kitchen~
+~
+unused
+D WEST 29725 0 0
+door~
+~
+OWNER none~
+#29727
+Game Room~
+~
+unused
+D SOUTH 29725 0 0
+door~
+~
+OWNER none~
+#29728
+Guest Room~
+~
+unused
+D SOUTH 29723 0 0
+door~
+~
+OWNER none~
+#29729
+Hallway~
+~
+unused
+D NORTH 29730 0 0
+door~
+~
+D WEST 29723 0 0
+door~
+~
+OWNER none~
+#29730
+Guest Room~
+~
+unused
+D SOUTH 29729 0 0
+door~
+~
+OWNER none~
+#29731
+Guest Room~
+~
+unused
+OWNER none~
+#29732
+Hallway~
+~
+unused
+OWNER none~
+#29733
+Guest Room~
+~
+unused
+OWNER none~
+#29734
+Hallway~
+~
+unused
+OWNER none~
+#29735
+Guest Room~
+~
+unused
+OWNER none~
+#29736
+Hallway~
+~
+unused
+OWNER none~
+#29737
+Guest Room~
+~
+unused
+OWNER none~
+#29738
+Junction Road~
+~
+unused
+D NORTH 29739 0 0
+door~
+~
+D SOUTH 29717 0 0
+door~
+~
+OWNER none~
+#29739
+Junction Road~
+~
+unused
+D NORTH 29740 0 0
+door~
+~
+D SOUTH 29738 0 0
+door~
+~
+OWNER none~
+#29740
+Junction Road~
+~
+unused
+D NORTH 29741 0 0
+door~
+~
+D EAST 29754 0 0
+door~
+~
+D SOUTH 29739 0 0
+door~
+~
+OWNER none~
+#29741
+Town Square~
+From here all the districts can be seen passing through the town center
+during some time of the day.  The cobblestone road is dusty with the sand
+that travelers track through the city.  Benches are in the four corners of
+the square waiting to be used.  
+~
+unused
+D NORTH 29742 0 0
+door~
+~
+D EAST 29750 0 0
+door~
+~
+D SOUTH 29740 0 0
+door~
+~
+D WEST 29746 0 0
+door~
+~
+OWNER none~
+#29742
+Junction Road~
+~
+unused
+D NORTH 29743 0 0
+door~
+~
+D SOUTH 29741 0 0
+door~
+~
+D WEST 29757 0 0
+door~
+~
+OWNER none~
+#29743
+Junction Road~
+~
+unused
+D NORTH 29744 0 0
+door~
+~
+D SOUTH 29742 0 0
+door~
+~
+OWNER none~
+#29744
+Junction Road~
+~
+unused
+D NORTH 29745 0 0
+door~
+~
+D SOUTH 29743 0 0
+door~
+~
+OWNER none~
+#29745
+Park Road~
+~
+unused
+D EAST 29799 0 0
+door~
+~
+D SOUTH 29744 0 0
+door~
+~
+D WEST 29803 0 0
+door~
+~
+OWNER none~
+#29746
+Junction Road~
+~
+unused
+D EAST 29741 0 0
+door~
+~
+D SOUTH 29756 0 0
+door~
+~
+D WEST 29747 0 0
+door~
+~
+OWNER none~
+#29747
+Junction Road~
+~
+unused
+D EAST 29746 0 0
+door~
+~
+D WEST 29748 0 0
+door~
+~
+OWNER none~
+#29748
+Junction Road~
+~
+unused
+D EAST 29747 0 0
+door~
+~
+D WEST 29749 0 0
+door~
+~
+OWNER none~
+#29749
+Junction Road~
+~
+unused
+D NORTH 29779 0 0
+door~
+~
+D EAST 29748 0 0
+door~
+~
+D SOUTH 29795 0 0
+door~
+~
+OWNER none~
+#29750
+Junction Road~
+~
+unused
+D NORTH 29755 0 0
+door~
+~
+D EAST 29751 0 0
+door~
+~
+D WEST 29741 0 0
+door~
+~
+OWNER none~
+#29751
+Junction Road~
+~
+unused
+D EAST 29752 0 0
+door~
+~
+D WEST 29750 0 0
+door~
+~
+OWNER none~
+#29752
+Junction Road~
+~
+unused
+D EAST 29753 0 0
+door~
+~
+D WEST 29751 0 0
+door~
+~
+OWNER none~
+#29753
+Junction Road~
+~
+unused
+D NORTH 29758 0 0
+door~
+~
+D SOUTH 29775 0 0
+door~
+~
+D WEST 29752 0 0
+door~
+~
+OWNER none~
+#29754
+General Store~
+~
+unused
+D WEST 29740 0 0
+door~
+~
+OWNER none~
+#29755
+Bank~
+~
+unused
+D SOUTH 29750 0 0
+door~
+~
+OWNER none~
+#29756
+Auction Block~
+~
+unused
+D NORTH 29746 0 0
+door~
+~
+OWNER none~
+#29757
+Book Store~
+~
+unused
+D EAST 29742 0 0
+door~
+~
+OWNER none~
+#29758
+Shadow District~
+~
+unused
+D EAST 29759 0 0
+door~
+~
+D SOUTH 29753 0 0
+door~
+~
+OWNER none~
+#29759
+Shadow District~
+~
+unused
+D NORTH 29761 0 0
+door~
+~
+D EAST 29760 0 0
+door~
+~
+D WEST 29758 0 0
+door~
+~
+OWNER none~
+#29760
+Shadow District~
+~
+unused
+D EAST 29763 0 0
+door~
+~
+D WEST 29759 0 0
+door~
+~
+OWNER none~
+#29761
+Warrior's Guild Entrance~
+~
+unused
+D NORTH 29762 0 0
+door~
+~
+D SOUTH 29759 0 0
+door~
+~
+OWNER none~
+#29762
+Warrior's Guild~
+~
+unused
+D SOUTH 29761 0 0
+door~
+~
+OWNER none~
+#29763
+Shadow District~
+~
+unused
+D SOUTH 29764 0 0
+door~
+~
+D WEST 29760 0 0
+door~
+~
+OWNER none~
+#29764
+Shadow District~
+~
+unused
+D NORTH 29763 0 0
+door~
+~
+D EAST 29766 0 0
+door~
+~
+D SOUTH 29765 0 0
+door~
+~
+OWNER none~
+#29765
+Shadow District~
+~
+unused
+D NORTH 29764 0 0
+door~
+~
+D SOUTH 29768 0 0
+door~
+~
+OWNER none~
+#29766
+Thief's Guild Entrance~
+~
+unused
+D EAST 29767 0 0
+door~
+~
+D WEST 29764 0 0
+door~
+~
+OWNER none~
+#29767
+Thief Guild~
+~
+unused
+D WEST 29766 0 0
+door~
+~
+OWNER none~
+#29768
+Shadow District~
+~
+unused
+D NORTH 29765 0 0
+door~
+~
+D WEST 29769 0 0
+door~
+~
+OWNER none~
+#29769
+Shadow District~
+~
+unused
+D EAST 29768 0 0
+door~
+~
+D WEST 29770 0 0
+door~
+~
+OWNER none~
+#29770
+Shadow District~
+~
+unused
+D EAST 29769 0 0
+door~
+~
+D WEST 29771 0 0
+door~
+~
+OWNER none~
+#29771
+Shadow District~
+~
+unused
+D EAST 29770 0 0
+door~
+~
+D SOUTH 29773 0 0
+door~
+~
+D WEST 29772 0 0
+door~
+~
+OWNER none~
+#29772
+Shadow District~
+~
+unused
+D NORTH 29775 0 0
+door~
+~
+D EAST 29771 0 0
+door~
+~
+OWNER none~
+#29773
+Entrance to the Assassin Guild~
+~
+unused
+D NORTH 29771 0 0
+door~
+~
+D SOUTH 29774 0 0
+door~
+~
+OWNER none~
+#29774
+Assassin Guild~
+~
+unused
+D NORTH 29773 0 0
+door~
+~
+OWNER none~
+#29775
+Shadow District~
+~
+unused
+D NORTH 29753 0 0
+door~
+~
+D EAST 29776 0 0
+door~
+~
+D SOUTH 29772 0 0
+door~
+~
+OWNER none~
+#29776
+A Dark Alley~
+~
+unused
+D EAST 29777 0 0
+door~
+~
+D WEST 29775 0 0
+door~
+~
+OWNER none~
+#29777
+A Dark Alley~
+~
+unused
+D NORTH 29778 0 0
+door~
+~
+D WEST 29776 0 0
+door~
+~
+OWNER none~
+#29778
+The Cloak & Dagger~
+~
+unused
+D SOUTH 29777 0 0
+door~
+~
+OWNER none~
+#29779
+Mage Block~
+~
+unused
+D SOUTH 29749 0 0
+door~
+~
+D WEST 29780 0 0
+door~
+~
+OWNER none~
+#29780
+Mage Block~
+~
+unused
+D NORTH 29782 0 0
+door~
+~
+D EAST 29779 0 0
+door~
+~
+D WEST 29781 0 0
+door~
+~
+OWNER none~
+#29781
+Mage Block~
+~
+unused
+D EAST 29780 0 0
+door~
+~
+D WEST 29783 0 0
+door~
+~
+OWNER none~
+#29782
+Potions, Pills, & Herbs~
+~
+unused
+D SOUTH 29780 0 0
+door~
+~
+OWNER none~
+#29783
+Mage Block~
+~
+unused
+D EAST 29781 0 0
+door~
+~
+D SOUTH 29784 0 0
+door~
+~
+D WEST 29785 0 0
+door~
+~
+OWNER none~
+#29784
+Mage Block~
+~
+unused
+D NORTH 29783 0 0
+door~
+~
+D EAST 29788 0 0
+door~
+~
+D SOUTH 29787 0 0
+door~
+~
+OWNER none~
+#29785
+The Sorcerer's Tower~
+~
+unused
+D EAST 29783 0 0
+door~
+~
+D UP 29786 0 0
+door~
+~
+OWNER none~
+#29786
+Sorcerer's Guild~
+~
+unused
+D DOWN 29785 0 0
+door~
+~
+OWNER none~
+#29787
+Mage Block~
+~
+unused
+D NORTH 29784 0 0
+door~
+~
+D SOUTH 29791 0 0
+door~
+~
+OWNER none~
+#29788
+A Dead Patch of Land~
+~
+unused
+D SOUTH 29789 0 0
+door~
+~
+D WEST 29784 0 0
+door~
+~
+OWNER none~
+#29789
+A Small Stone Building~
+~
+unused
+D NORTH 29788 0 0
+door~
+~
+D DOWN 29790 0 0
+door~
+~
+OWNER none~
+#29790
+Necromancer's Guild~
+~
+unused
+D UP 29789 0 0
+door~
+~
+OWNER none~
+#29791
+mage block~
+~
+unused
+D NORTH 29787 0 0
+door~
+~
+D EAST 29792 0 0
+door~
+~
+OWNER none~
+#29792
+Mage Block~
+~
+unused
+D EAST 29793 0 0
+door~
+~
+D WEST 29791 0 0
+door~
+~
+OWNER none~
+#29793
+Mage Block~
+~
+unused
+D EAST 29794 0 0
+door~
+~
+D WEST 29792 0 0
+door~
+~
+OWNER none~
+#29794
+Mage Block~
+~
+unused
+D NORTH 29795 0 0
+door~
+~
+D SOUTH 29796 0 0
+door~
+~
+D WEST 29793 0 0
+door~
+~
+OWNER none~
+#29795
+Mage Block~
+~
+unused
+D NORTH 29749 0 0
+door~
+~
+D EAST 29798 0 0
+door~
+~
+D SOUTH 29794 0 0
+door~
+~
+OWNER none~
+#29796
+Entrance to the Anti-Paladin's Guild~
+~
+unused
+D NORTH 29794 0 0
+door~
+~
+D SOUTH 29797 0 0
+door~
+~
+OWNER none~
+#29797
+Anti-Paladin's Guild~
+~
+unused
+D NORTH 29796 0 0
+door~
+~
+OWNER none~
+#29798
+Scrolls, Staves, & Wands~
+~
+unused
+D WEST 29795 0 0
+door~
+~
+OWNER none~
+#29799
+Park Road~
+~
+unused
+D EAST 29800 0 0
+door~
+~
+D WEST 29745 0 0
+door~
+~
+OWNER none~
+#29800
+Park Road~
+~
+unused
+D NORTH 29808 0 0
+door~
+~
+D EAST 29801 0 0
+door~
+~
+D WEST 29799 0 0
+door~
+~
+OWNER none~
+#29801
+Park Road~
+~
+unused
+D EAST 29802 0 0
+door~
+~
+D WEST 29800 0 0
+door~
+~
+OWNER none~
+#29802
+Park Road~
+~
+unused
+D NORTH 29861 0 0
+door~
+~
+D WEST 29801 0 0
+door~
+~
+OWNER none~
+#29803
+Park Road~
+~
+unused
+D EAST 29745 0 0
+door~
+~
+D WEST 29804 0 0
+door~
+~
+OWNER none~
+#29804
+Park Road~
+~
+unused
+D NORTH 29829 0 0
+door~
+~
+D EAST 29803 0 0
+door~
+~
+D WEST 29805 0 0
+door~
+~
+OWNER none~
+#29805
+Park Road~
+~
+unused
+D EAST 29804 0 0
+door~
+~
+D WEST 29806 0 0
+door~
+~
+OWNER none~
+#29806
+Park Road~
+~
+unused
+D EAST 29805 0 0
+door~
+~
+D WEST 29807 0 0
+door~
+~
+OWNER none~
+#29807
+Park Road~
+~
+unused
+D NORTH 29860 0 0
+door~
+~
+D EAST 29806 0 0
+door~
+~
+OWNER none~
+#29808
+Maeve Way~
+~
+unused
+D NORTH 29809 0 0
+door~
+~
+D EAST 29810 0 0
+door~
+~
+D SOUTH 29800 0 0
+door~
+~
+D WEST 29811 0 0
+door~
+~
+OWNER none~
+#29809
+Maeve Way~
+~
+unused
+D NORTH 29812 0 0
+door~
+~
+D EAST 29813 0 0
+door~
+~
+D SOUTH 29808 0 0
+door~
+~
+D WEST 29814 0 0
+door~
+~
+OWNER none~
+#29810
+Vegetable Stand~
+~
+unused
+D NORTH 29813 0 0
+door~
+~
+D WEST 29808 0 0
+door~
+~
+OWNER none~
+#29811
+Butcher~
+~
+unused
+D EAST 29808 0 0
+door~
+~
+OWNER none~
+#29812
+Maeve Way~
+~
+unused
+D NORTH 29815 0 0
+door~
+~
+D EAST 29816 0 0
+door~
+~
+D SOUTH 29809 0 0
+door~
+~
+D WEST 29817 0 0
+door~
+~
+OWNER none~
+#29813
+Fruit stand~
+~
+unused
+D SOUTH 29810 0 0
+door~
+~
+D WEST 29809 0 0
+door~
+~
+OWNER none~
+#29814
+Candy Shoppe~
+~
+unused
+D EAST 29809 0 0
+door~
+~
+OWNER none~
+#29815
+Alabaster Road~
+~
+unused
+D SOUTH 29812 0 0
+door~
+~
+D WEST 29818 0 0
+door~
+~
+OWNER none~
+#29816
+Baker~
+~
+unused
+D WEST 29812 0 0
+door~
+~
+OWNER none~
+#29817
+Winery~
+~
+unused
+D EAST 29812 0 0
+door~
+~
+OWNER none~
+#29818
+Alabaster Road~
+~
+unused
+D NORTH 29820 0 0
+door~
+~
+D EAST 29815 0 0
+door~
+~
+D WEST 29819 0 0
+door~
+~
+OWNER none~
+#29819
+Alabaster Road~
+~
+unused
+D NORTH 29898 0 0
+door~
+~
+D EAST 29818 0 0
+door~
+~
+D WEST 29821 0 0
+door~
+~
+OWNER none~
+#29820
+Cartographer~
+~
+unused
+D SOUTH 29818 0 0
+door~
+~
+OWNER none~
+#29821
+Alabaster Road~
+~
+unused
+D EAST 29819 0 0
+door~
+~
+D WEST 29823 0 0
+door~
+~
+OWNER none~
+#29822
+Under the Lake~
+~
+underwater
+D SOUTH 29894 0 0
+door~
+~
+D UP 29888 0 0
+door~
+~
+OWNER none~
+#29823
+Alabaster Road~
+~
+unused
+D EAST 29821 0 0
+door~
+~
+D SOUTH 29825 0 0
+door~
+~
+D WEST 29824 0 0
+door~
+~
+OWNER none~
+#29824
+Alabaster Road~
+~
+unused
+D NORTH 29835 0 0
+door~
+~
+D EAST 29823 0 0
+door~
+~
+D WEST 29834 0 0
+door~
+~
+OWNER none~
+#29825
+Pheobus Street~
+~
+unused
+D NORTH 29823 0 0
+door~
+~
+D EAST 29828 0 0
+door~
+~
+D SOUTH 29826 0 0
+door~
+~
+D WEST 29827 0 0
+door~
+~
+OWNER none~
+#29826
+Pheobus Street~
+~
+unused
+D NORTH 29825 0 0
+door~
+~
+D EAST 29830 0 0
+door~
+~
+D SOUTH 29829 0 0
+door~
+~
+D WEST 29831 0 0
+door~
+~
+OWNER none~
+#29827
+All Things Frilly~
+~
+unused
+D EAST 29825 0 0
+door~
+~
+OWNER none~
+#29828
+Men's Apparel~
+~
+unused
+D WEST 29825 0 0
+door~
+~
+OWNER none~
+#29829
+Pheobus Street~
+~
+unused
+D NORTH 29826 0 0
+door~
+~
+D EAST 29833 0 0
+door~
+~
+D SOUTH 29804 0 0
+door~
+~
+D WEST 29832 0 0
+door~
+~
+OWNER none~
+#29830
+Precious Stones~
+~
+unused
+D WEST 29826 0 0
+door~
+~
+OWNER none~
+#29831
+Lingerie Shoppe~
+~
+unused
+D EAST 29826 0 0
+door~
+~
+OWNER none~
+#29832
+Bridal Shoppe~
+~
+unused
+D EAST 29829 0 0
+door~
+~
+OWNER none~
+#29833
+Sage's Jewelry Emporium~
+~
+unused
+D WEST 29829 0 0
+door~
+~
+OWNER none~
+#29834
+Alabaster Road~
+~
+unused
+D EAST 29824 0 0
+door~
+~
+D WEST 29836 0 0
+door~
+~
+OWNER none~
+#29835
+Flower Shoppe~
+~
+unused
+D SOUTH 29824 0 0
+door~
+~
+OWNER none~
+#29836
+Alabaster Road~
+~
+unused
+D EAST 29834 0 0
+door~
+~
+D WEST 29837 0 0
+door~
+~
+OWNER none~
+#29837
+Forge Square~
+~
+unused
+D NORTH 29838 0 0
+door~
+~
+D EAST 29836 0 0
+door~
+~
+D SOUTH 29839 0 0
+door~
+~
+D WEST 29840 0 0
+door~
+~
+OWNER none~
+#29838
+Forge Road~
+~
+unused
+D NORTH 29841 0 0
+door~
+~
+D SOUTH 29837 0 0
+door~
+~
+OWNER none~
+#29839
+Forge Square~
+~
+unused
+D NORTH 29837 0 0
+door~
+~
+D SOUTH 29859 0 0
+door~
+~
+OWNER none~
+#29840
+Forge Square~
+~
+unused
+D NORTH 29844 0 0
+door~
+~
+D EAST 29837 0 0
+door~
+~
+D WEST 29843 0 0
+door~
+~
+OWNER none~
+#29841
+Forge Road~
+~
+unused
+D NORTH 29842 0 0
+door~
+~
+D SOUTH 29838 0 0
+door~
+~
+OWNER none~
+#29842
+North Gate~
+A high stone wall blocks all view of the land outside the city.  Two
+large stone doors hooked up a pully system for a gate to protect the city
+from both the sand and any intruders.  A bleary eyed guard is always at his
+post next to the gate to watch travelers for any suspiciousness and to open
+and close the gates at sunrise and sunset.  
+~
+unused
+D SOUTH 29841 0 0
+door~
+~
+OWNER none~
+#29843
+Forge Square~
+~
+unused
+D NORTH 29845 0 0
+door~
+~
+D EAST 29840 0 0
+door~
+~
+D WEST 29846 0 0
+door~
+~
+OWNER none~
+#29844
+Mace, Sword, & Dagger~
+~
+unused
+D SOUTH 29840 0 0
+door~
+~
+OWNER none~
+#29845
+Spear, Polearm, & Axe~
+~
+unused
+D SOUTH 29843 0 0
+door~
+~
+OWNER none~
+#29846
+Forge Square~
+~
+unused
+D NORTH 29848 0 0
+door~
+~
+D EAST 29843 0 0
+door~
+~
+D SOUTH 29847 0 0
+door~
+~
+OWNER none~
+#29847
+Forge Square~
+~
+unused
+D NORTH 29846 0 0
+door~
+~
+D SOUTH 29849 0 0
+door~
+~
+D WEST 29850 0 0
+door~
+~
+OWNER none~
+#29848
+Staff & Bow~
+~
+unused
+D SOUTH 29846 0 0
+door~
+~
+OWNER none~
+#29849
+Forge Square~
+~
+unused
+D NORTH 29847 0 0
+door~
+~
+D EAST 29852 0 0
+door~
+~
+D SOUTH 29851 0 0
+door~
+~
+OWNER none~
+#29850
+Leather Shoppe~
+~
+unused
+D EAST 29847 0 0
+door~
+~
+OWNER none~
+#29851
+Forge Square~
+~
+unused
+D NORTH 29849 0 0
+door~
+~
+D EAST 29853 0 0
+door~
+~
+D SOUTH 29854 0 0
+door~
+~
+OWNER none~
+#29852
+Mercenary House~
+~
+unused
+D WEST 29849 0 0
+door~
+~
+OWNER none~
+#29853
+Forge Square~
+~
+unused
+D EAST 29856 0 0
+door~
+~
+D SOUTH 29855 0 0
+door~
+~
+D WEST 29851 0 0
+door~
+~
+OWNER none~
+#29854
+Light Armor~
+~
+unused
+D NORTH 29851 0 0
+door~
+~
+OWNER none~
+#29855
+Medium Armor~
+~
+unused
+D NORTH 29853 0 0
+door~
+~
+OWNER none~
+#29856
+Forge Square~
+~
+unused
+D EAST 29858 0 0
+door~
+~
+D SOUTH 29857 0 0
+door~
+~
+D WEST 29853 0 0
+door~
+~
+OWNER none~
+#29857
+Heavy Armor~
+~
+unused
+D NORTH 29856 0 0
+door~
+~
+OWNER none~
+#29858
+Forge Square~
+~
+unused
+D NORTH 29859 0 0
+door~
+~
+D EAST 29860 0 0
+door~
+~
+D WEST 29856 0 0
+door~
+~
+OWNER none~
+#29859
+Forge Square~
+~
+unused
+D NORTH 29839 0 0
+door~
+~
+D SOUTH 29858 0 0
+door~
+~
+OWNER none~
+#29860
+Forge Road~
+~
+unused
+D SOUTH 29807 0 0
+door~
+~
+D WEST 29858 0 0
+door~
+~
+OWNER none~
+#29861
+Park Entrance~
+~
+unused
+D NORTH 29862 0 0
+door~
+~
+D EAST 29883 0 0
+door~
+~
+D SOUTH 29802 0 0
+door~
+~
+OWNER none~
+#29862
+A Grassy Area~
+~
+unused
+D NORTH 29863 0 0
+door~
+~
+D EAST 29882 0 0
+door~
+~
+D SOUTH 29861 0 0
+door~
+~
+OWNER none~
+#29863
+A Grassy Area~
+~
+unused
+D NORTH 29864 0 0
+door~
+~
+D SOUTH 29862 0 0
+door~
+~
+OWNER none~
+#29864
+A Resting Spot~
+~
+unused
+D EAST 29865 0 0
+door~
+~
+D SOUTH 29863 0 0
+door~
+~
+OWNER none~
+#29865
+A Grassy Area~
+~
+unused
+D EAST 29866 0 0
+door~
+~
+D WEST 29864 0 0
+door~
+~
+OWNER none~
+#29866
+A Grassy Area~
+~
+unused
+D EAST 29867 0 0
+door~
+~
+D SOUTH 29880 0 0
+door~
+~
+D WEST 29865 0 0
+door~
+~
+OWNER none~
+#29867
+A Small Sandy Shore~
+~
+unused
+D EAST 29868 0 0
+door~
+~
+D SOUTH 29879 0 0
+door~
+~
+D WEST 29866 0 0
+door~
+~
+OWNER none~
+#29868
+On the Lake~
+~
+unused
+D NORTH 29869 0 0
+door~
+~
+D EAST 29871 0 0
+door~
+~
+D SOUTH 29876 0 0
+door~
+~
+D WEST 29867 0 0
+door~
+~
+D DOWN 29890 0 0
+door~
+~
+OWNER none~
+#29869
+On the Lake~
+~
+unused
+D EAST 29870 0 0
+door~
+~
+D SOUTH 29868 0 0
+door~
+~
+D DOWN 29889 0 0
+door~
+~
+OWNER none~
+#29870
+On the Lake~
+~
+unused
+D NORTH 29888 0 0
+door~
+~
+D EAST 29872 0 0
+door~
+~
+D SOUTH 29871 0 0
+door~
+~
+D WEST 29869 0 0
+door~
+~
+D DOWN 29894 0 0
+door~
+~
+OWNER none~
+#29871
+On the Lake~
+~
+unused
+D NORTH 29870 0 0
+door~
+~
+D EAST 29873 0 0
+door~
+~
+D SOUTH 29875 0 0
+door~
+~
+D WEST 29868 0 0
+door~
+~
+D DOWN 29893 0 0
+door~
+~
+OWNER none~
+#29872
+On the Lake~
+~
+unused
+D SOUTH 29873 0 0
+door~
+~
+D WEST 29870 0 0
+door~
+~
+D DOWN 29895 0 0
+door~
+~
+OWNER none~
+#29873
+On the Lake~
+~
+unused
+D NORTH 29872 0 0
+door~
+~
+D SOUTH 29874 0 0
+door~
+~
+D WEST 29871 0 0
+door~
+~
+D DOWN 29896 0 0
+door~
+~
+OWNER none~
+#29874
+On the Lake~
+~
+unused
+D NORTH 29873 0 0
+door~
+~
+D WEST 29875 0 0
+door~
+~
+D DOWN 29897 0 0
+door~
+~
+OWNER none~
+#29875
+On the Lake~
+~
+unused
+D NORTH 29871 0 0
+door~
+~
+D EAST 29874 0 0
+door~
+~
+D WEST 29876 0 0
+door~
+~
+D DOWN 29892 0 0
+door~
+~
+OWNER none~
+#29876
+On the Lake~
+~
+unused
+D NORTH 29868 0 0
+door~
+~
+D EAST 29875 0 0
+door~
+~
+D SOUTH 29877 0 0
+door~
+~
+D WEST 29879 0 0
+door~
+~
+D DOWN 29891 0 0
+door~
+~
+OWNER none~
+#29877
+A Small Sandy Shore~
+~
+unused
+D NORTH 29876 0 0
+door~
+~
+D SOUTH 29878 0 0
+door~
+~
+OWNER none~
+#29878
+A Small Secluded Picnic Area~
+~
+unused
+D NORTH 29877 0 0
+door~
+~
+OWNER none~
+#29879
+A Small Sandy Shore~
+~
+unused
+D NORTH 29867 0 0
+door~
+~
+D EAST 29876 0 0
+door~
+~
+D SOUTH 29886 0 0
+door~
+~
+D WEST 29880 0 0
+door~
+~
+OWNER none~
+#29880
+A Path to the Lake~
+~
+unused
+D NORTH 29866 0 0
+door~
+~
+D EAST 29879 0 0
+door~
+~
+D SOUTH 29885 0 0
+door~
+~
+D WEST 29881 0 0
+door~
+~
+OWNER none~
+#29881
+Boat Rental~
+~
+unused
+D EAST 29880 0 0
+door~
+~
+D SOUTH 29882 0 0
+door~
+~
+OWNER none~
+#29882
+A Grassy Area~
+~
+unused
+D NORTH 29881 0 0
+door~
+~
+D EAST 29885 0 0
+door~
+~
+D SOUTH 29883 0 0
+door~
+~
+D WEST 29862 0 0
+door~
+~
+OWNER none~
+#29883
+A Grassy Area~
+~
+unused
+D NORTH 29882 0 0
+door~
+~
+D EAST 29884 0 0
+door~
+~
+D WEST 29861 0 0
+door~
+~
+OWNER none~
+#29884
+The Picnic Area~
+~
+unused
+D NORTH 29885 0 0
+door~
+~
+D EAST 29887 0 0
+door~
+~
+D WEST 29883 0 0
+door~
+~
+OWNER none~
+#29885
+The Picnic Area~
+~
+unused
+D NORTH 29880 0 0
+door~
+~
+D EAST 29886 0 0
+door~
+~
+D SOUTH 29884 0 0
+door~
+~
+D WEST 29882 0 0
+door~
+~
+OWNER none~
+#29886
+The Merry-Go-Round~
+~
+unused
+D NORTH 29879 0 0
+door~
+~
+D SOUTH 29887 0 0
+door~
+~
+D WEST 29885 0 0
+door~
+~
+OWNER none~
+#29887
+The Ancient Tree~
+~
+unused
+D NORTH 29886 0 0
+door~
+~
+D WEST 29884 0 0
+door~
+~
+OWNER none~
+#29888
+On the Lake~
+~
+unused
+D SOUTH 29870 0 0
+door~
+~
+D DOWN 29822 0 0
+door~
+~
+OWNER none~
+#29889
+Under the Lake~
+~
+unused
+D EAST 29894 0 0
+door~
+~
+D SOUTH 29890 0 0
+door~
+~
+D UP 29869 0 0
+door~
+~
+OWNER none~
+#29890
+Under the Lake~
+~
+unused
+D NORTH 29889 0 0
+door~
+~
+D EAST 29893 0 0
+door~
+~
+D SOUTH 29891 0 0
+door~
+~
+D UP 29868 0 0
+door~
+~
+OWNER none~
+#29891
+Under the Lake~
+~
+unused
+D NORTH 29890 0 0
+door~
+~
+D EAST 29892 0 0
+door~
+~
+D UP 29876 0 0
+door~
+~
+OWNER none~
+#29892
+Under the Lake~
+~
+unused
+D NORTH 29893 0 0
+door~
+~
+D EAST 29897 0 0
+door~
+~
+D WEST 29891 0 0
+door~
+~
+D UP 29875 0 0
+door~
+~
+OWNER none~
+#29893
+Under the Lake~
+~
+unused
+D NORTH 29894 0 0
+door~
+~
+D EAST 29896 0 0
+door~
+~
+D SOUTH 29892 0 0
+door~
+~
+D WEST 29890 0 0
+door~
+~
+D UP 29871 0 0
+door~
+~
+OWNER none~
+#29894
+Under the Lake~
+~
+unused
+D NORTH 29822 0 0
+door~
+~
+D EAST 29895 0 0
+door~
+~
+D SOUTH 29893 0 0
+door~
+~
+D WEST 29889 0 0
+door~
+~
+D UP 29870 0 0
+door~
+~
+OWNER none~
+#29895
+Under the Lake~
+~
+unused
+D SOUTH 29896 0 0
+door~
+~
+D WEST 29894 0 0
+door~
+~
+D UP 29872 0 0
+door~
+~
+OWNER none~
+#29896
+Under the Lake~
+~
+unused
+D NORTH 29895 0 0
+door~
+~
+D SOUTH 29897 0 0
+door~
+~
+D WEST 29893 0 0
+door~
+~
+D UP 29873 0 0
+door~
+~
+OWNER none~
+#29897
+Under the Lake~
+~
+unused
+D NORTH 29896 0 0
+door~
+~
+D WEST 29892 0 0
+door~
+~
+D UP 29874 0 0
+door~
+~
+OWNER none~
+#29898
+Pet Shoppe~
+~
+inside
+ROOM PET_SHOP
+D SOUTH 29819 0 0
+door~
+~
+OWNER none~
+#29899
+Pet Shop Storage Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#0
+
+
+
+#RESETS
+OBJECT 29701 TO 29700
+OBJECT 29703 TO 29700
+PUT 2 IN 29703 COUNT 1
+OBJECT 29704 TO 29700
+OBJECT 29702 TO 29701
+MOB 29706 TO 29703 GLIMIT 1 LLIMIT 1
+MOB 29705 TO 29706 GLIMIT 1 LLIMIT 1
+MOB 29701 TO 29707 GLIMIT 1 LLIMIT 1
+MOB 29707 TO 29708 GLIMIT 1 LLIMIT 1
+MOB 29700 TO 29709 GLIMIT 1 LLIMIT 1
+MOB 29704 TO 29778 GLIMIT 1 LLIMIT 1
+GIVE 29709
+OBJECT 29706 TO 29886
+MOB 29702 TO 29898 GLIMIT 1 LLIMIT 1
+MOB 29703 TO 29899 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

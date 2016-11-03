@@ -1,0 +1,515 @@
+#AREA
+silvermines.are~
+The Silver Mines~
+Erifdel~
+0 0
+16900 16999
+unopened
+none
+0
+1
+Erifdel~
+
+#MOBS
+#16900
+no name~
+dummy mob~
+A dummy mob is standing here.
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#16900
+Jagged Stone Entrance~
+Dark stone forms a jagged archway that leads further within the mines. 
+Flecks of silver and other minerals are vaguely visible and wooden beams
+line the walls in support of the weighted rock.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 16901 0 0
+door~
+Glints of light are visible from within the thick shadows.
+~
+D EAST 0 0 0
+door~
+Jagged black stone is solid before you.
+~
+D SOUTH 0 0 0
+door~
+A fresh breeze continues to blow strongly from this direction.
+~
+D WEST 0 0 0
+door~
+Jagged black stone is solid before you.
+~
+D UP 0 0 0
+door~
+Jagged stones make up the ceiling of this mine's entrance.
+~
+D DOWN 0 0 0
+door~
+Tracks from repetitive mining carts are visible.
+~
+OWNER none~
+#16901
+An Angled Tunnel~
+Jagged stone forms every feature of his strange tunnel from ceiling to
+floor.  Wooden beams appear to be erected in specific intervals and their
+smooth finish offers a welcomed contrast to remaining features of the mine. 
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The jagged stones of the ceiling curl down to form this northern decline.
+~
+D EAST 0 0 0
+door~
+Jagged black stone is solid before you.
+~
+D SOUTH 16900 0 0
+door~
+The mine's entrance remains slightly visible.
+~
+D WEST 0 0 0
+door~
+Jagged black stone is solid before you.
+~
+D DOWN 16902 0 0
+door~
+The floor of the mine consists of sharp stones wherever the mining tracks are not visible.
+~
+OWNER none~
+#16902
+Dummy Room~
+~
+unused
+D NORTH 16903 0 0
+door~
+~
+D UP 16901 0 0
+door~
+~
+OWNER none~
+#16903
+Dummy Room~
+~
+unused
+D NORTH 16904 0 0
+door~
+~
+D SOUTH 16902 0 0
+door~
+~
+OWNER none~
+#16904
+Dummy Room~
+~
+unused
+D SOUTH 16903 0 0
+door~
+~
+D DOWN 16905 0 0
+door~
+~
+OWNER none~
+#16905
+Dummy Room~
+~
+unused
+D NORTH 16906 0 0
+door~
+~
+D UP 16904 0 0
+door~
+~
+OWNER none~
+#16906
+Dummy Room~
+~
+unused
+D NORTH 16938 0 0
+door~
+~
+D EAST 16907 0 0
+door~
+~
+D SOUTH 16905 0 0
+door~
+~
+D WEST 16920 0 0
+door~
+~
+OWNER none~
+#16907
+Dummy Room~
+~
+unused
+D EAST 16908 0 0
+door~
+~
+D WEST 16906 0 0
+door~
+~
+OWNER none~
+#16908
+Dummy Room~
+~
+unused
+D NORTH 16909 0 0
+door~
+~
+D SOUTH 16912 0 0
+door~
+~
+D WEST 16907 0 0
+door~
+~
+OWNER none~
+#16909
+Dummy Room~
+~
+unused
+D SOUTH 16908 0 0
+door~
+~
+D WEST 16910 0 0
+door~
+~
+OWNER none~
+#16910
+Dummy Room~
+~
+unused
+D NORTH 16911 0 0
+door~
+~
+D EAST 16909 0 0
+door~
+~
+OWNER none~
+#16911
+Dummy Room~
+~
+unused
+D SOUTH 16910 0 0
+door~
+~
+OWNER none~
+#16912
+Dummy Room~
+~
+unused
+D NORTH 16908 0 0
+door~
+~
+D SOUTH 16913 0 0
+door~
+~
+OWNER none~
+#16913
+Dummy Room~
+~
+unused
+D NORTH 16912 0 0
+door~
+~
+D WEST 16914 0 0
+door~
+~
+OWNER none~
+#16914
+Dummy Room~
+~
+unused
+D EAST 16913 0 0
+door~
+~
+D SOUTH 16915 0 0
+door~
+~
+OWNER none~
+#16915
+Dummy Room~
+~
+unused
+D NORTH 16914 0 0
+door~
+~
+D WEST 16916 0 0
+door~
+~
+OWNER none~
+#16916
+Dummy Room~
+~
+unused
+D EAST 16915 0 0
+door~
+~
+D SOUTH 16917 0 0
+door~
+~
+OWNER none~
+#16917
+Dummy Room~
+~
+unused
+D NORTH 16916 0 0
+door~
+~
+D EAST 16918 0 0
+door~
+~
+D SOUTH 16919 0 0
+door~
+~
+OWNER none~
+#16918
+Dummy Room~
+~
+unused
+D WEST 16917 0 0
+door~
+~
+OWNER none~
+#16919
+Dummy Room~
+~
+unused
+D NORTH 16917 0 0
+door~
+~
+OWNER none~
+#16920
+Dummy Room~
+~
+unused
+D EAST 16906 0 0
+door~
+~
+D SOUTH 16921 0 0
+door~
+~
+OWNER none~
+#16921
+Dummy Room~
+~
+unused
+D NORTH 16920 0 0
+door~
+~
+D DOWN 16922 0 0
+door~
+~
+OWNER none~
+#16922
+Dummy Room~
+~
+unused
+D SOUTH 16923 0 0
+door~
+~
+D UP 16921 0 0
+door~
+~
+OWNER none~
+#16923
+Dummy Room~
+~
+unused
+D NORTH 16922 0 0
+door~
+~
+D EAST 16925 0 0
+door~
+~
+D WEST 16924 0 0
+door~
+~
+OWNER none~
+#16924
+Dummy Room~
+~
+unused
+D NORTH 16927 0 0
+door~
+~
+D EAST 16923 0 0
+door~
+~
+D SOUTH 16929 0 0
+door~
+~
+D WEST 16928 0 0
+door~
+~
+OWNER none~
+#16925
+Dummy Room~
+~
+unused
+D EAST 16926 0 0
+door~
+~
+D WEST 16923 0 0
+door~
+~
+OWNER none~
+#16926
+Dummy Room~
+~
+unused
+D NORTH 16930 0 0
+door~
+~
+D SOUTH 16931 0 0
+door~
+~
+D WEST 16925 0 0
+door~
+~
+OWNER none~
+#16927
+Dummy Room~
+~
+unused
+D SOUTH 16924 0 0
+door~
+~
+OWNER none~
+#16928
+Dummy Room~
+~
+unused
+D EAST 16924 0 0
+door~
+~
+OWNER none~
+#16929
+Dummy Room~
+~
+unused
+D NORTH 16924 0 0
+door~
+~
+OWNER none~
+#16930
+Dummy Room~
+~
+unused
+D SOUTH 16926 0 0
+door~
+~
+OWNER none~
+#16931
+Dummy Room~
+~
+unused
+D NORTH 16926 0 0
+door~
+~
+D SOUTH 16932 0 0
+door~
+~
+D WEST 16933 0 0
+door~
+~
+OWNER none~
+#16932
+Dummy Room~
+~
+unused
+D NORTH 16931 0 0
+door~
+~
+D EAST 16934 0 0
+door~
+~
+OWNER none~
+#16933
+Dummy Room~
+~
+unused
+D EAST 16931 0 0
+door~
+~
+OWNER none~
+#16934
+Dummy Room~
+~
+unused
+D EAST 16935 0 0
+door~
+~
+D WEST 16932 0 0
+door~
+~
+OWNER none~
+#16935
+Dummy Room~
+~
+unused
+D SOUTH 16936 0 0
+door~
+~
+D WEST 16934 0 0
+door~
+~
+OWNER none~
+#16936
+Dummy Room~
+~
+unused
+D NORTH 16935 0 0
+door~
+~
+D EAST 16937 0 0
+door~
+~
+OWNER none~
+#16937
+Dummy Room~
+~
+unused
+D WEST 16936 0 0
+door~
+~
+OWNER none~
+#16938
+Dummy Room~
+~
+unused
+D SOUTH 16906 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

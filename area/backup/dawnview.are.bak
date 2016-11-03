@@ -1,0 +1,1259 @@
+#AREA
+dawnview.are~
+Dawnview Monastery~
+Karsus~
+25 35
+2100 2199
+unopened
+subtropical
+0
+1
+Karsus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#2100
+Dummy Room~
+~
+unused
+D EAST 2101 AB 0
+~
+~
+OWNER none~
+#2101
+Dummy Room~
+~
+unused
+D EAST 2104 0 0
+~
+~
+D SOUTH 2102 0 0
+~
+~
+D WEST 2100 AB 0
+~
+~
+OWNER none~
+#2102
+Dummy Room~
+~
+unused
+D NORTH 2101 0 0
+~
+~
+D EAST 2103 0 0
+~
+~
+OWNER none~
+#2103
+Dummy Room~
+~
+unused
+D NORTH 2104 0 0
+~
+~
+D SOUTH 2105 0 0
+~
+~
+D WEST 2102 0 0
+~
+~
+OWNER none~
+#2104
+Dummy Room~
+~
+unused
+D SOUTH 2103 0 0
+~
+~
+D WEST 2101 0 0
+~
+~
+OWNER none~
+#2105
+Dummy Room~
+~
+unused
+D NORTH 2103 0 0
+~
+~
+D EAST 2106 ABC 0
+~
+~
+OWNER none~
+#2106
+Dummy Room~
+~
+unused
+D WEST 2105 ABC 0
+~
+~
+D UP 2107 0 0
+~
+~
+OWNER none~
+#2107
+Dummy Room~
+~
+unused
+D NORTH 2108 0 0
+~
+~
+D EAST 2110 0 0
+~
+~
+D SOUTH 2112 0 0
+~
+~
+D DOWN 2106 0 0
+~
+~
+OWNER none~
+#2108
+Dummy Room~
+~
+unused
+D EAST 2109 0 0
+~
+~
+D SOUTH 2107 0 0
+~
+~
+OWNER none~
+#2109
+Dummy Room~
+~
+unused
+D SOUTH 2110 0 0
+~
+~
+D WEST 2108 0 0
+~
+~
+OWNER none~
+#2110
+Dummy Room~
+~
+unused
+D NORTH 2109 0 0
+~
+~
+D SOUTH 2111 0 0
+~
+~
+D WEST 2107 0 0
+~
+~
+OWNER none~
+#2111
+Dummy Room~
+~
+unused
+D NORTH 2110 0 0
+~
+~
+D EAST 2115 0 0
+~
+~
+D SOUTH 2113 0 0
+~
+~
+D WEST 2112 0 0
+~
+~
+OWNER none~
+#2112
+Dummy Room~
+~
+unused
+D NORTH 2107 0 0
+~
+~
+D EAST 2111 0 0
+~
+~
+OWNER none~
+#2113
+Dummy Room~
+~
+unused
+D NORTH 2111 0 0
+~
+~
+D EAST 2114 0 0
+~
+~
+OWNER none~
+#2114
+Dummy Room~
+~
+unused
+D NORTH 2115 0 0
+~
+~
+D EAST 2117 0 0
+~
+~
+D WEST 2113 0 0
+~
+~
+OWNER none~
+#2115
+Dummy Room~
+~
+unused
+D EAST 2116 0 0
+~
+~
+D SOUTH 2114 0 0
+~
+~
+D WEST 2111 0 0
+~
+~
+D DOWN 2138 I 0
+~
+~
+OWNER none~
+#2116
+Dummy Room~
+~
+unused
+D NORTH 2120 AB 0
+~
+~
+D EAST 2119 0 0
+~
+~
+D SOUTH 2117 0 0
+~
+~
+D WEST 2115 0 0
+~
+~
+OWNER none~
+#2117
+Dummy Room~
+~
+unused
+D NORTH 2116 0 0
+~
+~
+D EAST 2118 0 0
+~
+~
+D WEST 2114 0 0
+~
+~
+OWNER none~
+#2118
+Dummy Room~
+~
+unused
+D WEST 2117 0 0
+~
+~
+OWNER none~
+#2119
+Dummy Room~
+~
+unused
+D WEST 2116 0 0
+~
+~
+OWNER none~
+#2120
+Dummy Room~
+~
+unused
+D NORTH 2124 0 0
+~
+~
+D EAST 2122 0 0
+~
+~
+D SOUTH 2116 AB 0
+~
+~
+D WEST 2121 0 0
+~
+~
+OWNER none~
+#2121
+Dummy Room~
+~
+unused
+D EAST 2120 0 0
+~
+~
+OWNER none~
+#2122
+Dummy Room~
+~
+unused
+D NORTH 2123 0 0
+~
+~
+D WEST 2120 0 0
+~
+~
+OWNER none~
+#2123
+Dummy Room~
+~
+unused
+D SOUTH 2122 0 0
+~
+~
+D WEST 2124 0 0
+~
+~
+OWNER none~
+#2124
+Dummy Room~
+~
+unused
+D EAST 2123 0 0
+~
+~
+D SOUTH 2120 0 0
+~
+~
+D WEST 2125 0 0
+~
+~
+OWNER none~
+#2125
+Dummy Room~
+~
+unused
+D EAST 2124 0 0
+~
+~
+D UP 2126 0 0
+~
+~
+OWNER none~
+#2126
+Dummy Room~
+~
+unused
+D SOUTH 2127 0 0
+~
+~
+D DOWN 2125 0 0
+~
+~
+OWNER none~
+#2127
+Dummy Room~
+~
+unused
+D NORTH 2126 0 0
+~
+~
+D EAST 2132 AB 0
+~
+~
+D WEST 2128 AB 0
+~
+~
+OWNER none~
+#2128
+Dummy Room~
+~
+unused
+D NORTH 2129 0 0
+~
+~
+D EAST 2127 AB 0
+~
+~
+D WEST 2131 0 0
+~
+~
+OWNER none~
+#2129
+Dummy Room~
+~
+unused
+D SOUTH 2128 0 0
+~
+~
+D WEST 2130 0 0
+~
+~
+OWNER none~
+#2130
+Dummy Room~
+~
+unused
+D EAST 2129 0 0
+~
+~
+D SOUTH 2131 0 0
+~
+~
+OWNER none~
+#2131
+Dummy Room~
+~
+unused
+D NORTH 2130 0 0
+~
+~
+D EAST 2128 0 0
+~
+~
+OWNER none~
+#2132
+Dummy Room~
+~
+unused
+D NORTH 2133 0 0
+~
+~
+D EAST 2135 0 0
+~
+~
+D SOUTH 2137 0 0
+~
+~
+D WEST 2127 AB 0
+~
+~
+OWNER none~
+#2133
+Dummy Room~
+~
+unused
+D EAST 2134 0 0
+~
+~
+D SOUTH 2132 0 0
+~
+~
+OWNER none~
+#2134
+Dummy Room~
+~
+unused
+D SOUTH 2135 0 0
+~
+~
+D WEST 2133 0 0
+~
+~
+OWNER none~
+#2135
+Dummy Room~
+~
+unused
+D NORTH 2134 0 0
+~
+~
+D SOUTH 2136 0 0
+~
+~
+D WEST 2132 0 0
+~
+~
+OWNER none~
+#2136
+Dummy Room~
+~
+unused
+D NORTH 2135 0 0
+~
+~
+D WEST 2137 0 0
+~
+~
+OWNER none~
+#2137
+Dummy Room~
+~
+unused
+D NORTH 2132 0 0
+~
+~
+D EAST 2136 0 0
+~
+~
+OWNER none~
+#2138
+Dummy Room~
+~
+unused
+D SOUTH 2139 ABCI 0
+~
+~
+D UP 2115 0 0
+~
+~
+OWNER none~
+#2139
+Dummy Room~
+~
+unused
+D NORTH 2138 ABC 0
+~
+~
+D EAST 2140 0 0
+~
+~
+OWNER none~
+#2140
+Dummy Room~
+~
+unused
+D NORTH 2141 0 0
+~
+~
+D WEST 2139 0 0
+~
+~
+OWNER none~
+#2141
+Dummy Room~
+~
+unused
+D NORTH 2143 ABCI 0
+~
+~
+D EAST 2142 ABCI 0
+~
+~
+D SOUTH 2140 0 0
+~
+~
+OWNER none~
+#2142
+Dummy Room~
+~
+unused
+D SOUTH 2149 0 0
+~
+~
+D WEST 2141 ABC 0
+~
+~
+OWNER none~
+#2143
+Dummy Room~
+~
+unused
+D EAST 2145 0 0
+~
+~
+D SOUTH 2141 ABC 0
+~
+~
+D WEST 2144 ABCI 0
+~
+~
+OWNER none~
+#2144
+Dummy Room~
+~
+unused
+D EAST 2143 ABC 0
+~
+~
+OWNER none~
+#2145
+Dummy Room~
+~
+unused
+D EAST 2146 0 0
+~
+~
+D WEST 2143 0 0
+~
+~
+OWNER none~
+#2146
+Dummy Room~
+~
+unused
+D SOUTH 2147 0 0
+~
+~
+D WEST 2145 0 0
+~
+~
+OWNER none~
+#2147
+Dummy Room~
+~
+unused
+D NORTH 2146 0 0
+~
+~
+D EAST 2148 0 0
+~
+~
+OWNER none~
+#2148
+Dummy Room~
+~
+unused
+D NORTH 2152 ABCI 0
+~
+~
+D SOUTH 2151 0 0
+~
+~
+D WEST 2147 0 0
+~
+~
+OWNER none~
+#2149
+Dummy Room~
+~
+unused
+D NORTH 2142 0 0
+~
+~
+D EAST 2150 0 0
+~
+~
+OWNER none~
+#2150
+Dummy Room~
+~
+unused
+D EAST 2151 0 0
+~
+~
+D WEST 2149 0 0
+~
+~
+OWNER none~
+#2151
+Dummy Room~
+~
+unused
+D NORTH 2148 0 0
+~
+~
+D WEST 2150 0 0
+~
+~
+OWNER none~
+#2152
+Dummy Room~
+~
+unused
+D EAST 2153 0 0
+~
+~
+D SOUTH 2148 ABCI 0
+~
+~
+OWNER none~
+#2153
+Dummy Room~
+~
+unused
+D EAST 2155 0 0
+~
+~
+D SOUTH 2154 ABC 0
+~
+~
+D WEST 2152 0 0
+~
+~
+OWNER none~
+#2154
+Dummy Room~
+~
+unused
+D NORTH 2153 ABC 0
+~
+~
+D SOUTH 2163 0 0
+~
+~
+OWNER none~
+#2155
+Dummy Room~
+~
+unused
+D EAST 2158 0 0
+~
+~
+D SOUTH 2156 0 0
+~
+~
+D WEST 2153 0 0
+~
+~
+OWNER none~
+#2156
+Dummy Room~
+~
+unused
+D NORTH 2155 0 0
+~
+~
+D EAST 2157 0 0
+~
+~
+OWNER none~
+#2157
+Dummy Room~
+~
+unused
+D NORTH 2158 0 0
+~
+~
+D WEST 2156 0 0
+~
+~
+OWNER none~
+#2158
+Dummy Room~
+~
+unused
+D EAST 2159 ABCI 0
+~
+~
+D SOUTH 2157 0 0
+~
+~
+D WEST 2155 0 0
+~
+~
+OWNER none~
+#2159
+Dummy Room~
+~
+unused
+D EAST 2162 0 0
+~
+~
+D SOUTH 2160 0 0
+~
+~
+D WEST 2158 ABCI 0
+~
+~
+OWNER none~
+#2160
+Dummy Room~
+~
+unused
+D NORTH 2159 0 0
+~
+~
+D EAST 2161 0 0
+~
+~
+OWNER none~
+#2161
+Dummy Room~
+~
+unused
+D NORTH 2162 0 0
+~
+~
+D WEST 2160 0 0
+~
+~
+OWNER none~
+#2162
+Dummy Room~
+~
+unused
+D SOUTH 2161 0 0
+~
+~
+D WEST 2159 0 0
+~
+~
+OWNER none~
+#2163
+Dummy Room~
+~
+unused
+D NORTH 2154 0 0
+~
+~
+D SOUTH 2164 0 0
+~
+~
+OWNER none~
+#2164
+Dummy Room~
+~
+unused
+D NORTH 2163 0 0
+~
+~
+D SOUTH 2165 0 0
+~
+~
+OWNER none~
+#2165
+Dummy Room~
+~
+unused
+D NORTH 2164 0 0
+~
+~
+D EAST 2166 0 0
+~
+~
+OWNER none~
+#2166
+Dummy Room~
+~
+unused
+D EAST 2167 0 0
+~
+~
+D WEST 2165 0 0
+~
+~
+OWNER none~
+#2167
+Dummy Room~
+~
+unused
+D WEST 2166 0 0
+~
+~
+D DOWN 2168 0 0
+~
+~
+OWNER none~
+#2168
+Dummy Room~
+~
+unused
+D UP 2167 0 0
+~
+~
+D DOWN 2169 0 0
+~
+~
+OWNER none~
+#2169
+Dummy Room~
+~
+unused
+D NORTH 2170 0 0
+~
+~
+D EAST 2178 0 0
+~
+~
+D SOUTH 2193 0 0
+~
+~
+D UP 2168 0 0
+~
+~
+OWNER none~
+#2170
+Dummy Room~
+~
+unused
+D NORTH 2171 0 0
+~
+~
+D EAST 2176 0 0
+~
+~
+D SOUTH 2169 0 0
+~
+~
+OWNER none~
+#2171
+Dummy Room~
+~
+unused
+D EAST 2172 0 0
+~
+~
+D SOUTH 2170 0 0
+~
+~
+OWNER none~
+#2172
+Dummy Room~
+~
+unused
+D NORTH 2173 0 0
+~
+~
+D EAST 2174 0 0
+~
+~
+D SOUTH 2176 0 0
+~
+~
+D WEST 2171 0 0
+~
+~
+OWNER none~
+#2173
+Dummy Room~
+~
+unused
+D SOUTH 2172 0 0
+~
+~
+OWNER none~
+#2174
+Dummy Room~
+~
+unused
+D SOUTH 2175 0 0
+~
+~
+D WEST 2172 0 0
+~
+~
+OWNER none~
+#2175
+Dummy Room~
+~
+unused
+D NORTH 2174 0 0
+~
+~
+D SOUTH 2177 0 0
+~
+~
+D WEST 2176 0 0
+~
+~
+OWNER none~
+#2176
+Dummy Room~
+~
+unused
+D NORTH 2172 0 0
+~
+~
+D EAST 2175 0 0
+~
+~
+D SOUTH 2178 0 0
+~
+~
+D WEST 2170 0 0
+~
+~
+D UP 2185 0 0
+~
+~
+OWNER none~
+#2177
+Dummy Room~
+~
+unused
+D NORTH 2175 0 0
+~
+~
+D SOUTH 2191 0 0
+~
+~
+D WEST 2178 0 0
+~
+~
+OWNER none~
+#2178
+Dummy Room~
+~
+unused
+D NORTH 2176 0 0
+~
+~
+D EAST 2177 0 0
+~
+~
+D SOUTH 2192 0 0
+~
+~
+D WEST 2169 0 0
+~
+~
+D UP 2188 0 0
+~
+~
+D DOWN 2179 AB 0
+~
+~
+OWNER none~
+#2179
+Dummy Room~
+~
+unused
+D NORTH 2184 ABC 0
+~
+~
+D EAST 2182 0 0
+~
+~
+D WEST 2180 0 0
+~
+~
+D UP 2178 AB 0
+~
+~
+OWNER none~
+#2180
+Dummy Room~
+~
+unused
+D EAST 2179 0 0
+~
+~
+D SOUTH 2181 ABC 0
+~
+~
+OWNER none~
+#2181
+Dummy Room~
+~
+unused
+D NORTH 2180 ABC 0
+~
+~
+OWNER none~
+#2182
+Dummy Room~
+~
+unused
+D SOUTH 2183 ABC 0
+~
+~
+D WEST 2179 0 0
+~
+~
+OWNER none~
+#2183
+Dummy Room~
+~
+unused
+D NORTH 2182 ABC 0
+~
+~
+OWNER none~
+#2184
+Dummy Room~
+~
+unused
+D SOUTH 2179 ABC 0
+~
+~
+OWNER none~
+#2185
+Dummy Room~
+~
+unused
+D UP 2186 0 0
+~
+~
+D DOWN 2176 0 0
+~
+~
+OWNER none~
+#2186
+Dummy Room~
+~
+unused
+D UP 2187 0 0
+~
+~
+D DOWN 2185 0 0
+~
+~
+OWNER none~
+#2187
+Dummy Room~
+~
+unused
+D DOWN 2186 0 0
+~
+~
+OWNER none~
+#2188
+Dummy Room~
+~
+unused
+D UP 2189 0 0
+~
+~
+D DOWN 2178 0 0
+~
+~
+OWNER none~
+#2189
+Dummy Room~
+~
+unused
+D UP 2190 0 0
+~
+~
+D DOWN 2188 0 0
+~
+~
+OWNER none~
+#2190
+Dummy Room~
+~
+unused
+D DOWN 2189 0 0
+~
+~
+OWNER none~
+#2191
+Dummy Room~
+~
+unused
+D NORTH 2177 0 0
+~
+~
+D SOUTH 2196 0 0
+~
+~
+D WEST 2192 0 0
+~
+~
+OWNER none~
+#2192
+Dummy Room~
+~
+unused
+D NORTH 2178 0 0
+~
+~
+D EAST 2191 0 0
+~
+~
+D SOUTH 2195 0 0
+~
+~
+D WEST 2193 0 0
+~
+~
+OWNER none~
+#2193
+Dummy Room~
+~
+unused
+D NORTH 2169 0 0
+~
+~
+D EAST 2192 0 0
+~
+~
+D SOUTH 2194 0 0
+~
+~
+OWNER none~
+#2194
+Dummy Room~
+~
+unused
+D NORTH 2193 0 0
+~
+~
+D EAST 2195 0 0
+~
+~
+D UP 2199 0 0
+~
+~
+OWNER none~
+#2195
+Dummy Room~
+~
+unused
+D NORTH 2192 0 0
+~
+~
+D EAST 2196 0 0
+~
+~
+D WEST 2194 0 0
+~
+~
+D UP 2198 0 0
+~
+~
+OWNER none~
+#2196
+Dummy Room~
+~
+unused
+D NORTH 2191 0 0
+~
+~
+D WEST 2195 0 0
+~
+~
+D UP 2197 0 0
+~
+~
+OWNER none~
+#2197
+Dummy Room~
+~
+unused
+D WEST 2198 0 0
+~
+~
+D DOWN 2196 0 0
+~
+~
+OWNER none~
+#2198
+Dummy Room~
+~
+unused
+D EAST 2197 0 0
+~
+~
+D WEST 2199 0 0
+~
+~
+D DOWN 2195 0 0
+~
+~
+OWNER none~
+#2199
+Dummy Room~
+~
+unused
+D EAST 2198 0 0
+~
+~
+D DOWN 2194 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,3490 @@
+#AREA
+academy.are~
+The Shalaran Academy~
+Seikilos~
+1 10
+24500 24599
+normal
+none
+0
+9
+Seikilos Jathruk Zethus Carantoc~
+
+#MOBS
+#24500
+blacksmith black smith man dwarf jormund~
+a dwarven blacksmith~
+A short, powerfully muscled dwarven blacksmith stands at his forge.
+~
+Powerful muscles ripple along this blacksmith's body, testament to his
+long years spent honing his craft.  Any facial expression he might be having
+is largely obscured by his massive, bushy beard.  While many might consider
+him short, he is above average height for a dwarf, and clearly he would be
+an opponent to reckon with.  
+~
+0 0 0 dwarf~
+55 1d1+4999 8d8+20 0 100 pound
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_CAMO
+IMM MAGIC
+IMM SLEEP
+#24501
+guard royal academy man~
+the Royal Academy Guard~
+The Royal Academy Guard is posted here, checking the papers of adventurers.
+~
+Covered from head to toe in the burnished armor of one of Cimar's elite
+royal guards, this capable warrior clearly seems bored with the menial task
+he has been assigned.  He idly watches the passersby, stopping them if they
+attempt to leave the Arch without permission.  Checking to ensure that
+anyone who seeks egress to the dangerous outfields of the Academy is capable
+of putting up a decent fight, only his diligence towards duty keeps him
+paying any attention at all.  
+~
+0 0 0 human~
+55 27d8+5267 50d5+10 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF DETECT_CAMO
+B level GREATERTHAN 3 24563 SAY Hold, $n.  We've had too many adventurers become zombie meat of late, and by order of the King of Cimar, you are too inexperienced for these parts.~
+#24505
+academy scribe~
+the Academy Scribe~
+The Academy Scribe sits at a desk, coldly sizing you up.
+~
+Dressed in clothing of adequate quality, this neat and proper-looking man
+seems to be making assessments of some of the newest recruits and sending
+them to wherever would benefit them the most.  
+~
+0 0 0 human~
+51 25d8+4274 3d8+9 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF NO_TRACK
+#24506
+happy ward mob~
+{gThe sound of snapping twigs surrounds you as unseen creatures make their way through the dark forest.{x~
+A dummy mob is standing here.
+~
+Happy!
+~
+0 0 0 human~
+200 100d8+-5536 0d0+0 0 100 none
+24563 24572 1 24
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+#24507
+bloody newbie mob~
+{RCries of rage and the clanging of metal echo throughout the meadow.  The scent of blood is thick in the air.{x~
+A dummy mob is standing here.
+~
+Yar
+~
+0 0 0 human~
+250 125d8+28214 0d0+0 0 100 none
+24574 24584 1 24
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+#24508
+spooky~
+{rHorrid whispering and gurgling noises cut through the dusty air, sending chills down your spine.{x~
+The spooky newbie mob is here, being spooky...  really spooky!
+~
+I am big.
+I am bad.
+I am spooky newbie ward mob.
+~
+0 0 0 human~
+250 125d8+28214 0d0+0 0 100 none
+24587 24599 0 24
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+#24530
+halfling recruit~
+a halfling recruit~
+A halfling recruit stands here greeting the "mattress fluffers."
+~
+Grinning at you with his tiny face, this halfling is the very first
+person to greet people coming in from the Caretaker's place of residence. 
+The tiny golden bauble dangling from his left ear swings and jingles as he
+turns his head.  When he laughs, he does so with the silver tones of an elf,
+high and clear and joyous.  
+~
+0 0 0 halfling~
+1 0d8+2 0d0+0 0 100 punch
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+#24532
+no name~
+dummy mob~
+~
+~
+0 0 0 human~
+0 0d0+0 0d0+0 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24534
+academy headmaster great man~
+the headmaster of the Shalaran Academy~
+At the center of the tumultuous melee, a great man stands undisturbed.
+~
+You cannot be certain of this man's grade or standing within any given
+guild, but you know merely by looking that he is of great importance here at
+the Academy.  All those nearby seem to defer to him, and he nods to each of
+them in turn as they speak to him in reverent tones.  As you approach, he
+turns his attention upon you, and his deep brown eyes bore directly to your
+soul's center... this man, the headmaster, has seen a great many things.  
+~
+0 0 0 human~
+40 20d8+1664 8d8+25 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+ACT GAIN
+#24535
+academy shopkeeper~
+the Academy shopkeeper~
+Staring at you through his window, a shopkeeper taps his teeth contemplatively.
+~
+Looking a trifle bored with his job, this shopkeeper could well be
+pondering the great mysteries of the universe, judging by the look on his
+face.  Then again, he might also be staring intently at a patch of moss on
+the wall opposite him.  As you approach, he springs to life and indicates
+the wares laid out before him.  
+~
+0 0 0 human~
+40 20d8+2464 4d6+10 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+SHOPKEEPER OPEN 12 CLOSE 12 EXIT east
+#24538
+gibberling~
+a gibberling~
+A gibberling thumps around on its bald legs.
+~
+Clammy golden skin and the lack of any hair whatsoever are what
+distinguish this beast in the eyes of its beholders.  Looking further, you
+note that its eyes seem to lack any iris; it's as though you are able to
+stare directly into the back of its head.  
+~
+0 0 200 dog~
+3 2d6+0 1d1+0 1 100 chomp
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+AFF SLOW
+VUL MAGIC
+#24539
+goblin~
+a goblin~
+An angry little goblin scrambles around the room in a frenzy.
+~
+Looking much like a greasy, scrawny halfling with a reddish tint to his
+skin and a distended belly, this goblin howls in fury, baring its tiny
+pointed teeth.  Eyes narrowed to slits still bare enough red to show you
+that this beast is very, very angry, and far from tame.  
+~
+0 0 300 goblin~
+5 1d8+20 2d2+0 3 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+OFF KICK
+OFF TRIP
+#24540
+mastiff~
+a mastiff~
+A huge black hound stands in the shadows, barely visible.
+~
+One of the mythical mastiffs of the far west, this beast looks like a
+dog... but it's so large, it could easily be mistaken for a lean bear.  Its
+overlarge head and muzzle are filled to the brim with razor sharp teeth, and
+its dull eyes sink into their sockets to the point that they can barely be
+made out.  Thin legs and huge paws, a slender waist and a massive ribcage,
+this animal is a study in contrasts.  
+~
+0 0 400 bear~
+7 1d8+35 3d3+1 5 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+#24541
+guard sentry~
+a guard sentry~
+A guard sentry stands here ushering recruits in and out of the Overrun Area.
+~
+A slight man in full body armor, this guard sentry sags somewhat under
+the bulk of his protection.  However, judging by the way he's constantly
+glancing over his shoulder into the dark and wet Overrun Area, he's
+doubtless grateful to have it.  Being stationed here means responsibility
+for any monsters who escape into the Academy -- and for any recruits who
+stray into the Overrun Area.  
+~
+0 0 0 human~
+40 20d8+2464 4d6+10 0 100 slice
+10 10 10 10
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#24542
+salamander lizard~
+a salamander~
+A smoking, steaming lizard walks about giving off occasional jets of flame.
+~
+This beast, commonly known as a salamander, is essentially a flaming
+lizard.  Its innards are aflame, and its skin emanates heat at all times. 
+This salamander in particular is one of those who have inhabited the Overrun
+Area; from the way it basks in the puddles of water and makes of point of
+standing beneath steady streams of drops, you suspect it's down here to gain
+a bit of relief.  It can still, however, spit fire when it chooses... 
+~
+0 0 400 lizard~
+3 5d2+13 1d2+1 0 100 flbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+OFF NO_TRACK
+IMM FIRE
+VUL MAGIC
+LIMIT 24542 24557
+#24546
+root snake rootsnake frightening snake-like thing~
+a rootsnake~
+A frightening, snake-like thing writhes around on the ground.
+~
+A hideous beast, this rootsnake's body is covered in some pungent film
+whose odor bites at your nose and open mouth.  This sheath slips off as it
+writhes around on the ground, revealing no skin or scales -- merely a highly
+elaborate and intricate system of muscles.  After having lived its whole
+life jumping from root to root, it sensed your proximity and jumped into
+open air.  It will die on the ground here, unable to re-enter a root, and it
+will do its best to take you down with it.  
+~
+0 0 400 snake~
+8 4d8+97 4d4+7 15 100 suction
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#24549
+fat imp starvin' pete~
+Pete~
+A fat imp covered in grease sits here licking his fingers.
+~
+This ugly little imp rolls around on the ground, trying to sit upright
+but failing most of the time due to his unwieldy bulk.  His big, teary orbs
+slide up to stare at you longingly as his lips tremble.  Loosing a
+mucus-laden sniff, he clutches at his distended stomach as it roars in
+hunger.  He howls sympathetically, creating a duet of sorts.  
+~
+-1000 0 0 imp~
+11 5d8+183 4d4+6 10 100 claw
+0 0 0 0
+standing male moderate
+0 0 small
+ACT NPC
+ACT SENTINEL
+OFF NO_TRACK
+AFF DARK_VISION
+#24550
+white warg swift~
+a sleek white warg~
+A sleek white warg prowls here, guarding his territory.
+~
+A sleek white wolf, appearing very well-fed and muscular, prowls here,
+ensuring his territory is pristine.  This wolf bears the scars of many
+battles.  He snarls, bearing fangs that seem capable of inflicting scars of
+their own.  
+~
+0 0 0 wolf~
+10 5d8+80 1d10+2 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+VUL MAGIC
+#24551
+soldier scared~
+a scared soldier~
+A tiny soldier is curled up here, face stained with tears.
+~
+This soldier appears to have deserted his fellows and run from the
+battle.  He hides here, curled in the fetal position, waiting for someone to
+rescue him.  He seems very young, perhaps no older than fourteen.  His armor
+is much too big for him and makes him seem even smaller.  
+~
+0 0 0 human~
+10 5d8+80 1d8+2 0 100 none
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+#24553
+wraith~
+a wraith~
+A gaunt wraith hovers between root systems almost invisibly.
+~
+Its face a pale, pulled surface, with an elongated chin and a high
+forehead, this wraith looks somber indeed.  Its sad eyes roll about slowly,
+as if searching for a meal of flesh.  Finally, it settles upon you.  Its
+ethereal form spreads out before you slowly, becoming larger and larger
+until you realize it is extending its brittle old wings.  
+~
+0 0 400 spectre~
+5 2d8+10 2d2+5 9 100 chill
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#24559
+mutant~
+a twisted mutant~
+A horrible twisted mutant stands here, rifling through a pile of garbage.
+~
+It must have once been human, or elf, or drow, this terrible thing.  Arms
+and legs of varying lengths swing through the air as the beast rushes to
+meet you, and its gait is wobbling at best.  Its face is twisted in such
+agony that it compels many to look away.  How it came to be down here, below
+the lowest of the low, is beyond you; all you know is that it is unhappy to
+see you here!  
+~
+0 0 500 human~
+13 6d8+255 5d5+4 10 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+VUL MAGIC
+#24563
+wolf warg black~
+a snarling warg~
+A snarling black warg defends her cubs ferociously.
+~
+Lips drawn back over her teeth in a vicious snarl, this wolf guards her
+home with deadly ferocity.  Her jet black coat makes her nearly invisible in
+the darkness of the cave, leaving only her golden eyes to glow in the
+darkness.  
+~
+0 0 0 wolf~
+6 3d8+45 1d6+1 0 100 bite
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT NOCTURNAL
+#24564
+raven large~
+a large raven~
+A large raven flaps its wings as it circles around.
+~
+A large, black raven flaps its wings as it flies around in circles.  The
+look in its eyes makes it seem hungry and willing to accept whatever food it
+can find.  
+~
+0 0 0 avian~
+5 2d8+38 1d6+1 0 100 peck
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+VUL MAGIC
+#24565
+warg starving~
+a starving warg~
+A thin grey wolf shambles around quickly.
+~
+This grey beast appears to have been starved for weeks.  His ribs are
+clearly visible through his skin and a hunger, slavering look dominates his
+face.  The beast looks around quickly and warily, searching for any sign of
+food.  
+~
+0 0 0 wolf~
+7 3d8+25 1d7+1 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SCAVENGER
+ACT AGGRESSIVE
+AFF CAMOUFLAGE
+VUL MAGIC
+#24566
+noble soldier general~
+the general~
+A noble soldier stands here, planning with her lieutenants.
+~
+A striking woman, she commands an aura of respect about her, and her
+soldiers follow her orders unquestioningly.  Conferring with her
+lieutenants, she goes over maps, determining how best to battle the rogues
+throughout the meadow.  Finally noticing your presence, she turns towards
+you, waiting to see what you want.  
+~
+1000 0 0 human~
+10 5d8+70 3d3+3 0 100 slash
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+#24567
+massive titan lieutenant~
+a lieutenant~
+A massive titan is here, planning tactics with his general.
+~
+Standing tall above the surroundings, this imposing celestial titan
+speaks with the general with great respect, all the while looking out for
+threats to her well-being.  Noticing your proximity, he glares at you,
+calmly placing a hand on his weapon.  
+~
+1000 0 0 celestial~
+9 4d8+50 3d3+2 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24568
+armored soldier~
+an armored soldier~
+An armored soldier battles the vile rogues in the meadow.
+~
+Dressed in light mail, this soldier wades into battle, going toe to toe
+with anyone foolish enough to get in the way.
+~
+1000 0 0 human~
+8 4d8+45 3d3+3 0 100 beating
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24569
+archer~
+an archer~
+An archer stands behind his comrades, using his arrows to aid the battle.
+~
+Bow in hand, this archer scans the meadow for any brigands he can shoot
+down, while trying to avoid getting into the main fighting himself. 
+Spotting you, he turns towards you briefly, raising his bow before halting,
+realizing you might be an ally.  
+~
+1000 0 0 human~
+8 4d8+40 3d3+1 0 100 pierce
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24570
+medic soldier~
+a medic~
+A medic is here, trying to heal the injured.
+~
+With prayer and poultrices to use, this medic searches the meadow for
+anyone soldiers who need aid.  
+~
+1000 0 0 human~
+7 3d8+65 0d0+0 0 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+LIMIT 24574 24583
+#24571
+injured soldier~
+an injured soldier~
+A soldier is here, trying to bandage his wound.
+~
+Holding a hand to her side, this soldier has already seen some combat,
+and taken a vicious slice for her pains.  Seeing your approach, she
+struggles to be ready to defend herself if need be, while hoping you might
+be coming to her aid.  
+~
+0 0 0 human~
+7 3d8+25 3d3+0 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+#24577
+injured rogue~
+an injured rogue~
+An injured rogue lies here, nursing a wounded shoulder.
+~
+Bleeding from a number of wounds, a particularly vicious gash lines one
+shoulder.  Futily trying to stop the bleeding, this rogue seems to be
+wondering about the sensibility of his choice of sides.  
+~
+-1000 0 0 human~
+7 3d8+25 3d3+0 0 100 none
+0 0 0 0
+resting male none
+0 0 medium
+ACT NPC
+#24578
+rogue assassin~
+a rogue assassin~
+A rogue moves about the edges of the meadow here, avoiding drawing attention.
+~
+Moving stealthily about the edges of the meadow, this rogue seems much
+more skilled than most of those fighting in the clearing.  As he watches the
+movements of the soldiers to the south, he obviously has some evil deed he
+wants to perform, and looking at the sharp dagger in his hand, you can
+easily guess why.  
+~
+-1000 0 0 human~
+9 4d8+50 3d3+2 0 100 stab
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24579
+stealthy rogue~
+a stealthy rogue~
+A stealthy rogue is here, striking whenever it appears safe.
+~
+Smarter than some of the other rogues, this brigand seems content to
+attack only enemies who are otherwise distracted.  Seeing the lack of
+injuries you see upon the rogue, and the amount of blood of others, it seems
+to be working.  
+~
+-1000 0 0 human~
+8 4d8+40 3d3+1 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24580
+brutish rogue~
+a brutish rogue~
+A brutish rogue is here, going toe to toe with the soldiers.
+~
+Obviously relying on his brute force rather than any semblence of
+intellegence to win his battles, this brutish human fights the soldiers with
+great zeal.  Probably expecting some great rewards for his service, or
+perhaps just enjoying the brawl.  
+~
+-1000 0 0 human~
+8 4d8+45 3d3+1 0 100 crush
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+#24581
+glaring duergar bodyguard~
+a duergar bodyguard~
+A glaring duergar stands in the shadows.
+~
+Filthy and dirty, this duergar stays close behind the massive brute
+leading the rogues, obviously acting as a bodyguard.  He lords over all the
+other rogues passing through, and glares at you suspiciously as you
+approach.  
+~
+-1000 0 0 duergar~
+9 4d8+65 3d3+2 0 100 none
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+#24582
+brigand intimidating rogue leader~
+the rogue leader~
+An intimidating brigand stands here, shouting orders.
+~
+Rather brutish, this brigand appears to be a bit more cunning than the
+rest, and obviously much more in command.  The other rogues shudder whenever
+his eyes pass over them, and his orders are carried out with due haste.  
+~
+-1000 0 0 human~
+10 5d8+75 3d3+3 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+NOTES ~
+#24583
+withered corpse zombie embalmed~
+an embalmed zombie~
+A withered corpse covered in a thick syrupy substance wanders the corridors.
+~
+Awkwardly staggering through the corridors of this awful place, this
+walking corpse is covered from head to toe in a thick, dried substance that
+seems to keep it intact.  
+~
+-1000 0 0 skeleton~
+10 5d8+100 3d4+7 0 100 claw
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+#24584
+lupine dog dog-like beast demon~
+a lupine demon~
+A wretched and bloody dog-like beast gurgles and yelps violently!
+~
+Completely bald, this wet, shivering beast snarls, yips and howls
+half-mournfully and half-angrily.  Blood seeps from every orifice of this
+beast, even in the absence of apparent wounds.  Large black eyes are set
+into its skull, and its claws are thick and long, attached to muscular arms
+and legs.  
+~
+-1000 0 0 demon~
+10 5d8+125 4d2+8 1 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+#24585
+spectral hand~
+a spectral hand~
+A shadowy hand reaches out of the wall, blindly groping for prey.
+~
+This strange spectral limb juts out of the solid wall, flailing about
+slowly.  As you near it, its movement seems to become much more violent.  
+~
+0 0 0 spectre~
+10 5d8+120 3d2+7 4 100 grasp
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+AFF INVISIBLE
+#24586
+skeleton skeletal mage~
+a skeletal mage~
+A bleached skeleton hovers here, glowing faintly.
+~
+Awkwardly angular, and completely white and flawless, this skeleton seems
+to course with arcane power.  Implements of a crude sort of necromancy are
+grasped in is bare knuckles.  It regards you indifferently through faint
+pinpoints of sickly light in place of its eyes.  
+~
+-1000 0 0 skeleton~
+13 6d8+150 3d1+6 0 100 magic
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+AFF DETECT_INVIS
+AFF FLYING
+AFF PASS_DOOR
+C 'chill touch'
+C 'armor'
+#24587
+paladin squire~
+a paladin squire~
+A paladin squire roams the corridors, testing his mettle.
+~
+Clad in standard-issue armor and the tabard of the Academy's Guild of
+Paladins, this young warrior does his best to rid these catacombs of the
+undead.  
+~
+1000 0 0 human~
+10 5d8+80 4d2+8 2 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+C 'armor'
+#0
+
+
+
+#OBJS
+#24500
+ingot brass component~
+a polished brass ingot~
+A gleaming, valuable block of brass lies here.~
+treasure
+brass~
+0 0 0 0 0
+10 10 0 P
+WEAR TAKE
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#24501
+mithril ingot component block~
+a burnished block of mithril~
+A valuable-looking ingot of mithril is here.~
+trash
+mithril~
+0 0 0 0 0
+1 10 100 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24502
+ingot component iron block ore~
+a block of unrefined iron hematite~
+A valuable block of iron hematite is here.~
+trash
+iron~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24503
+ingot component bar titanium~
+a gleaming bar of pure titanium~
+A perfectly shaped bar of pure titanium is here.~
+treasure
+titanium~
+0 0 0 0 0
+1 10 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24505
+corpse suspicious decaying body~
+a decaying corpse~
+A suspicious looking corpse is here, a bulge in its pockets.~
+container
+flesh~
+0 0 0 0 0
+1 250 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#24507
+warm copper ring~
+a warm copper ring~
+A glowing copper ring lies here, emanating warmth.~
+treasure
+copper~
+0 0 0 0 0
+1 1 35 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+APPLY HP 5
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#24510
+tomb~
+an opened tomb~
+A tomb on the wall has been opened.~
+container
+stone~
+3 0 0 1 0
+1 3000 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#24511
+iron ore~
+a piece of iron ore~
+A small piece of iron ore has been left on the ground.~
+treasure
+iron~
+0 0 0 0 0
+1 2 1000 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24525
+sign~
+a sign~
+A sign winks into existence before you. (Type 'look sign' to view it.)~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E glowing sign~
+Welcome to Riftshadow!  That was the Caretaker who just spoke.  He's a
+good guy.  A little old-fashioned at times, but a good guy nonetheless.  It
+was him that put signs all through this Academy to teach you how to
+function, to manipulate this world... and the first thing you need to learn
+is how to move!  As does the real world, Shalar has four cardinal
+directions: north, south, east, and west.  In order to move in one of these
+directions, you need only type "north," "south," and so on.  In fact, you
+can get by with merely "n," "s," "e," and "w."  You can also move in two
+other directions -- up and down.  This room has an exit down.  Type "down"
+(or "d") to move to the next room.  
+~
+
+#24526
+sign~
+a sign~
+Another sign winks into existence, beckoning you to look at it.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E sign~
+The next thing you need to learn is a little more about exits.  The first
+room you were in had one exit: down.  This room also has one exit: east. 
+What happened to the room above you?  Well, that's a one-way exit.  You'll
+run into those occasionally, and it takes a keen eye to identify them before
+you blunder straight through.  Keen eyes are thus fairly important... some
+one-way exits will trap you in a place you'd rather not be!  Now, as for the
+exit in this room... there's a door barring your way.  For most doors, you
+can simply type "open east" or "open north," and then walk through.  Some
+doors, however, are locked.  If you find one of those, you'll need the right
+key to get through.  First, if you have the key, you "unlock east."  Then,
+you "open east" and you're home free!  Give this door a shot.  
+~
+
+#24527
+sign~
+a sign~
+A sign slowly emerges from beneath a pile of canvas paintings.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+NOTES ~
+E sign~
+Every explorer needs to be observant.  You would do well to examine
+things at all times, and to read the descriptions you come across... who
+knows when some valuable bit of information might pop up?  Many rooms have
+extra descriptions hidden where you can't see them immediately.  As you read
+a room's description, things might jump out at you as likely targets to be
+examined; for example, if a description mentions a huge pile of red onions,
+you might "look pile" or "examine onions" for more information.  A lot of
+the time, it's the extra descriptions which provide clues as to how you
+might interact with objects in this world!  If an extra description mentions
+a dog who likes to be scratched, you might try the command "scratch dog." 
+Or, if you read about a bookshelf that looks as though it could be pushed,
+you could try to "push bookshelf."  There are things like this hidden all
+over the place, just waiting for you to find them.  Take this room, for
+example... 
+~
+
+#24528
+sign~
+a sign~
+A steel sign blends into the walls so well that you nearly miss it.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E steel sign~
+Many times, you'll encounter an object or a creature or a room that
+*seems* like it should have some greater purpose, but does not present one
+to you readily.  Much like the bust in the last room, a quick examination
+will often yield the results you need.  However, not all rooms feature such
+prominent and obvious targets for discovery and manipulation.  Take this
+rather featureless room, for example.... Another tool that you'll often want
+to use is directional descriptions.  You can look in a given direction and
+examine it more closely.  If you're on a road, and you type "look east" (or
+"l e") you might see that the road suddenly drops down a sharp decline a
+little ways in that direction.  Or if you're in a private residence and you
+type "look north," you might see a fireplace mantel with a candlestick
+holder that's a clue in some sort of murder mystery.  Try looking in each
+direction in this room.  
+~
+
+#24529
+sign~
+a sign~
+A strange green and purple sign stands before you.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E green purple sign~
+Well, I'd say you've now got a decent grasp of how to move about and
+examine your surroundings.  Remember to be observant, and above all recall
+that Shalar is a land of magic and mystery... things are often not what they
+seem, and the mundane is normally secondary to the extraordinary.  In this
+tiny crawlspace, you'll find a portal -- it will take you to the great
+Shalaran Academy, where you will be further versed in the ways of the world.
+But from the point you step through, there can be no more Caretaker!  You'll
+be on your own to discover things, to puzzle out the meaning in whatever you
+find, and to use the knowledge you gain to move ahead in your life.  The
+body you're in has just come of age within whatever society you've chosen,
+but it has a history attached to it -- and you're the one who writes it! 
+Were you a blacksmith?  Were you born to a king and queen in some far off
+land?  Have you never been to the deep, dark Barren Hollows, and do you fear
+them with every fibre of your being?  These are all things you'll have to
+determine for yourself, if you haven't already, and keep in mind as you move
+out into the world on your own.  No one else will do your thinking for you
+from here on out!  Now... as for the portal... you'll find them scattered
+about the realm, and you never know where they'll lead!  The command to
+enter one is "enter portal."  You know where this one will take you... so
+go, and good luck!  
+~
+
+#24531
+sizeable map large sign~
+a large sign~
+A large sign is posted on the wall here.~
+trash
+parchment~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E sizeable map large sign wall~
+/-------------------------------------------------------------------------\
+|                                                                         |
+|  Attention:  All New Recruits Should Take Note                          |
+|              Of 'HELP NEWBIE' Before Proceeding                         |
+|                                                                         |
+|6 - Entrance to the                                                      |
+|    Forest                         +--+--+  +                            |
+|                                      |  |  | \                          |
+|5 - Jormund's             5        +  +--+--+  \                         |
+|    Forge                 |        |  |         }- OFF LIMITS:           |
+|                       6--+--+--+--+--+--+--+  /   * ALL NEW ADVENTURERS |
+|4 - One-stop                 |     |  |  |  | /    * SHOULD STAY CLEAR   |
+|    supply shop              +     +--+  +--+      * OF THIS AREA!       |
+|                             |        |                                  |
+|3 - The mass                 4--3  +--+                                  |
+|    guildhall                   |  |                                     |
+|                                +--X--2                    N             |
+|2 - The "mattress"                 |                       ^             |
+|    entrance                       1                    W -|- E          |
+|                                                           |             |
+|1 - Exit to the        X - You are HERE                    S             |
+|    Temple of Cimar                                                      |
+\-------------------------------------------------------------------------/
+~
+
+#24533
+sign~
+a sign~
+A large sign on the wall displays two huge arrows.~
+trash
+wood~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E large sign two huge arrows~
+<----------
+,   The Cursed Wilds
+,
+,         The Overrun Area
+,                 ---------->
+~
+
+#24534
+map cimar~
+a map of Cimar~
+A map lies here showing every (important) nook and cranny in Cimar.~
+treasure
+paper~
+0 0 0 0 0
+1 0 1 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+E map cimar~
+,                   H
+             P    L |  Z  <-- The TEMPLE
+The PALACE    \   |/  /
+   U--+--U     +--T--+
+   |  |  |        |      HIGH CIMAR
++--+--+--+--+--+--+--+--+--+--+--+--+
+   |  |  |  |  |  |  |  |  |  |  |  |
+   U--+--U  +--+--+--+--+--+--+--+--+        +--+              W
+            |           |        |  |        |  |              |
+            + CGH +--+  +        +--+--+-----+--+--------+--+--+
+            |  |     |  |        |  |  |     |  |        |  |
+     ----+--+--+-T+-O+-L+-L+-E+-R+--+-R+-O--A--D+--------+--+--+--+--
+         |        |     |     |  |  |        |  |        |  |
+         +  +   Kiosk  REG A--+--+--+     +--+--+     +--+  +--+ <- N
+The -->  |  |     |           |  |  |     |  |        |  |  |       E
+ B  D    +--+--+--+  +--+--+  Th +--+  +--+--+<---<---Nc D  +--+    W
+ U  I    |  |  |  |     |        |     |  |              |  |
+ S  S    +  +  +  +--+-R+-A+-N+-T+-I--D+--+-R--O--A+-D+--+  +--+    C
+ I  T    |     |        |     |  |     |  |        |  |  |  |       I
+ N  R    +--+  +  R--R  +--+  +--+-----+--+--------+--+--+--+--+--  M
+ E  I    |     |  |  |        |       T|he|        |     |  |       A
+ S  C    +--+  +  R--+--+     D     +--+--+   +    +--+  +  +  + <- R 
+ S  T    |     |     |  |     |    T|al|lis   |    |  |  |  |  |
+    -->  +  +--+     +--+--+--+  +--+--+   +--+    +--+  +  +--+
+         |     |     |  |  |     |Ri|ver       \   |     |  |
+         +--+--+--+--+--+--+     +--+      So   +--+     +--+--+
+         |  |  |           |     |  |       \   |  |     |  |
+         +  +  +           +  +--+--+        +--+--+--+--+--+
+         |     |           |  |  |           |  |  |  |  |  |
+         +--+--+     +  +--+--+--+--------+--+--+--+--+--+--+--+
+         |  |        |  |     |  |           |  |  |  |  |  |  |
+         +  +     +--+--+--AP +--+        +--+--+--+--+--+--+--D
+         |                    |  |        |              |
+         +--+-----------+--+--+--+        +  ^       ^   +
+         |  |           |  |  |  |           NEW CIMAR
+         +--+-----------+--+--+--
+         |  |           |  |  |  The
+         +--+-----------+--+--   RED
+         |  |           |  |    HARBOR
+         +--+-----------+--
+         |  |           |
+Note:  see the 'key' on the back side for a legend.
+~
+E key back side legend~
+H: Healer guild       A: Assassin guild
+P: Paladin guild      Th: Thief guild
+Z: Zealot guild       W: Warrior guild
+L: Library            Nc: Necro guild
+T: Temple / Pit       So: Sorcerer guild
+AP: AP guild          CGH: Common Guild Headquarters
+REG: Regal Theatre    D: Down to sewers
+~
+
+#24535
+dried beef jerky~
+a piece of dried beef jerky~
+A thin strip of dried beef jerky lies here.~
+food
+meat~
+12 4 0 0 0
+1 1 3 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24536
+water canteen~
+a canteen~
+A canteen lies on the ground before you.~
+drink
+leather~
+100 100 'water' 0 0
+1 10 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24537
+small sack~
+a small sack~
+A small sack lies in the dirt.~
+container
+cloth~
+50 0 0 30 100
+1 4 50 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24538
+lever handle blue~
+a lever~
+A lever with a blue handle sticks out of the south wall.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+VERB pull
+TIMER 0
+
+#24539
+lever handle red~
+a lever~
+A lever with a red handle sticks out of the south wall.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+VERB pull
+TIMER 0
+
+#24540
+lever handle black~
+a lever~
+A lever with a black handle sticks out of the south wall.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+VERB pull
+TIMER 0
+
+#24546
+root dying~
+a dying root~
+A dying root dangles here, simultaneously rotting and drying out.~
+trash
+wood~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#24548
+wheel~
+a wheel~
+A wheel is here, waiting for you to tie a rope to it and then give it a turn.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+ITEM NOSHOW
+LIMIT 0
+VERB turn
+TIMER 0
+E strange wheel~
+Upon examining the strange wheel in the muddy earth, you notice the
+frayed remnants of a rope around it.  Some of the same rope fragments are
+tied around a metal loop in the plate on the ground, as well.  If you had a
+rope, you could tie it between the wheel and the metal plate, then turn the
+wheel to pull it up... 
+~
+
+#24549
+fat imp starvin' pete~
+starvin' Pete~
+A fat imp covered with grease sits here licking his fingers.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#24550
+iron pickaxe~
+an iron pickaxe~
+An iron pickaxe used for mining lies here.~
+weapon
+iron~
+axe 2 7 pierce 0
+8 14 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#24558
+corpse knight body~
+the body of a knight~
+The long-dead body of a knight lies here, nearly done decaying.~
+container
+flesh~
+2 0 0 1 100
+1 100 0 P
+LIMIT 0
+TIMER 0
+E corpse knight body~
+This poor fellow looks to have died several years ago.  No stench comes
+with the skeletal form of the former knight, for his flesh has mostly melted
+away over time.  What remains is very well preserved, in such a cool and dry
+place.  Lodged upon one bony finger, you see a tarnished gold ring.  
+~
+
+#24559
+stone tablet~
+a stone tablet~
+A stone tablet is here.~
+trash
+stone~
+0 0 0 0 0
+0 0 0 P
+ITEM NOSHOW
+LIMIT 0
+VERB roll
+TIMER 0
+
+#24560
+tarnished gold ring~
+a tarnished gold ring~
+A tiny ring of dull gold lies on the ground here.~
+armor
+gold~
+0 0 0 0 0
+10 2 10000 P
+WEAR TAKE
+WEAR FINGER
+LIMIT 0
+VERB twist
+TIMER 0
+E tarnished gold ring~
+This gold ring has been tarnished so badly on the outside that it
+reflects almost no light.  The inside surface, however, shines like the
+sun... it's so smooth, it seems almost as though every person who has ever
+worn it must have twisted it on his finger constantly.  
+~
+
+#24561
+large basin crystal clear water~
+a large basin~
+A large water basin is here.~
+fountain
+wood~
+-1 0 'water' 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#24563
+tree ancient carved carving carvings inscription~
+an ancient tree~
+The bark of this tree seems to be loose in several places.~
+container
+wood~
+20 0 0 20 0
+1 100 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#24564
+fallen tree log~
+a fallen tree~
+A fallen tree rots away here, home to hundreds of bugs.~
+trash
+unknown~
+0 0 0 0 0
+3 0 0 P
+LIMIT 0
+TIMER 0
+
+#24570
+mage torso~
+a mage's torso armor~
+A pile of mage's armor lies here.~
+armor
+wood~
+3 3 3 3 0
+10 10 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM MELTDROP
+LIMIT 0
+
+#24571
+warrior torso~
+a warrior's torso armor~
+A pile of warrior's armor lies here.~
+armor
+steel~
+3 3 3 3 0
+10 10 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM MELTDROP
+LIMIT 0
+
+#24572
+mage arm guards armguards~
+a mage's armguards~
+A pile of mage's armor lies here.~
+armor
+steel~
+1 1 1 1 0
+10 3 0 P
+WEAR TAKE
+WEAR ARMS
+ITEM MELTDROP
+LIMIT 0
+
+#24573
+warrior arm guards armguards~
+a warrior's armguards~
+A pile of warrior's armor lies here.~
+armor
+steel~
+1 1 1 1 0
+10 3 0 P
+WEAR TAKE
+WEAR ARMS
+ITEM MELTDROP
+LIMIT 0
+
+#24574
+mage leggings~
+a mage's leggings~
+A pile of mage's armor lies here.~
+armor
+steel~
+1 1 1 1 0
+10 5 0 P
+WEAR TAKE
+WEAR LEGS
+ITEM MELTDROP
+LIMIT 0
+
+#24575
+warrior leggings~
+a warrior's leggings~
+A pile of warrior's armor lies here.~
+armor
+steel~
+1 1 1 1 0
+10 5 0 P
+WEAR TAKE
+WEAR LEGS
+ITEM MELTDROP
+LIMIT 0
+
+#24576
+mage gloves~
+a mage's gloves~
+A pile of mage's armor lies here.~
+armor
+cloth~
+1 1 1 1 0
+10 2 0 P
+WEAR TAKE
+WEAR HANDS
+ITEM MELTDROP
+LIMIT 0
+
+#24577
+warrior gauntlets~
+a warrior's gauntlets~
+A pile of warrior's armor lies here.~
+armor
+steel~
+1 1 1 1 0
+10 2 0 P
+WEAR TAKE
+WEAR HANDS
+ITEM MELTDROP
+LIMIT 0
+
+#24578
+mage boots~
+a mage's boots~
+A pile of mage's armor lies here.~
+armor
+clay~
+2 2 2 2 0
+10 5 0 P
+WEAR TAKE
+WEAR FEET
+ITEM MELTDROP
+LIMIT 0
+
+#24579
+warrior boots~
+a warrior's boots~
+A pile of warrior's armor lies here.~
+armor
+stone~
+2 2 2 2 0
+10 5 0 P
+WEAR TAKE
+WEAR FEET
+ITEM MELTDROP
+LIMIT 0
+
+#24580
+official shalaran academy shield~
+an official Academy shield~
+An official Academy shield lies here.~
+armor
+cloth~
+4 4 4 4 0
+10 20 0 P
+WEAR TAKE
+WEAR SHIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24581
+steel flail~
+a steel flail~
+A flail lies here.~
+weapon
+steel~
+flail 6 4 smash 0
+10 8 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24582
+wooden staff~
+a wooden staff~
+A staff lies here.~
+weapon
+wood~
+staff 6 4 crush 0
+10 10 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24583
+wooden spear~
+a wooden spear~
+A spear lies here.~
+weapon
+wood~
+spear 6 4 slice 0
+10 10 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24584
+steel polearm~
+a steel polearm~
+A polearm lies here.~
+weapon
+steel~
+polearm 6 4 slash 0
+10 15 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24585
+heavy steel axe~
+a heavy steel axe~
+A large axe lies here.~
+weapon
+steel~
+axe 6 4 cleave 0
+10 20 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24586
+heavy steel mace~
+a heavy steel mace~
+A large mace lies here.~
+weapon
+steel~
+mace 6 4 beating 0
+10 15 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24587
+leather whip~
+a leather whip~
+A whip lies here.~
+weapon
+leather~
+whip 6 4 whip 0
+10 2 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24588
+steel dagger~
+a steel dagger~
+A dagger lies here.~
+weapon
+steel~
+dagger 6 4 slice 0
+10 3 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24589
+small steel sword~
+a small steel sword~
+A small sword lies here.~
+weapon
+steel~
+sword 6 4 slash 0
+10 9 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM MELTDROP
+LIMIT 0
+
+#24596
+tiny ivory key~
+a tiny ivory key~
+A tiny ivory key lies on the ground here.~
+key
+ivory~
+0 0 0 0 0
+1 1 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#24598
+vast shimmering portal~
+a vast shimmering portal~
+A vast shimmering portal towers over you, seeming to pull you inward.~
+portal
+unknown~
+-1 0 0 24530 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E vast shimmering portal~
+Standing twenty feet high and ten feet wide, you have no idea how this
+portal can fit into such a tiny space -- and yet, here it is!  Peering
+through it, you can barely make out moving forms practicing combat in what
+looks like an academy of some sort.  
+~
+
+#24599
+bust man spectacles mustache stone eyes statue~
+a bust~
+A bust is here.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+ITEM NOSHOW
+LIMIT 0
+VERB tilt
+TIMER 0
+E bust man spectacles mustache stone eyes statue~
+Judging by the scratch marks on the wall behind it, this statue looks as
+though it has been tilted many, many times.  
+~
+
+#0
+
+
+
+#ROOMS
+#24576
+Bloodhawk Meadow~
+The meadow opens to the north and west, while the dense forest blocks
+travel to the south and east.  You see a few people nearby, typically
+staggering in from the north, and as you watch, many are wounded.  As you
+listen carefully, you hear the sounds of combat and agony filtering in from
+the northern meadow.  
+~
+field
+D NORTH 24580 0 0
+~
+The meadow continues to the north.
+~
+D EAST 0 0 0
+~
+Dense forest blocks passage to the east.
+~
+D SOUTH 0 0 0
+~
+Dense forest blocks passage to the south.
+~
+D WEST 24574 0 0
+~
+The meadow continues to the west.
+~
+D DOWN 0 0 0
+~
+The tall grass at your feet sways peacefully in the wind.
+~
+OWNER none~
+#24577
+Bloodhawk Meadow~
+The meadow opens to the north and west, while the dense forest blocks
+travel to the south and west.  Though you can hear the sounds of combat
+elsewhere through the meadow, this is little bloodshed here.  You actually
+begin to relax some in this peaceful corner of the meadow, until a
+particularly loud cry of pain reminds you of the dangers in the area.  
+~
+field
+D NORTH 24578 0 0
+~
+The meadow continues to the north.
+~
+D EAST 24574 0 0
+~
+The meadow continues to the east.
+~
+D SOUTH 0 0 0
+~
+Dense forest blocks passage to the south.
+~
+D WEST 0 0 0
+~
+Dense forest blocks passage to the west.
+~
+D DOWN 0 0 0
+~
+The tall grass at your feet sways peacefully in the wind.
+~
+OWNER none~
+#24578
+Bloodhawk Meadow~
+Travelling through the meadow, you find yourself in the middle of a
+bloody battleground.  The area here is a little calmer than the rest of the
+fields, apparantly there is some sort of order to this area of the meadow,
+for though people are running back and forth, there is more of a sense of
+order.  Corpses are strewn all over, though one in particular seems oddly
+decayed.  
+~
+field
+D NORTH 24583 0 0
+~
+The meadow continues to the north.
+~
+D EAST 24579 0 0
+~
+The meadow continues east, to the middle of the battle.
+~
+D SOUTH 24577 0 0
+~
+The meadow continues to the south.
+~
+D WEST 0 0 0
+~
+Dense forest blocks passage to the west.
+~
+D DOWN 0 0 0
+~
+You see the tall meadow grass covering the ground.
+~
+OWNER none~
+#24579
+The Center of the Battlefield~
+You find yourself in the center of the meadow, though what is left here
+can hardly be called a meadow.  The ground has been torn up and stomped
+across so that all that is left is a battlefield.  Soldiers and rogues
+battle each other ferociously here, ambivilent to your presence.  
+~
+field
+D NORTH 24582 0 0
+~
+The meadow continues to the north.
+~
+D EAST 24580 0 0
+~
+The meadow continues to the east.
+~
+D SOUTH 24574 0 0
+~
+The meadow continues to the south.
+~
+D WEST 24578 0 0
+~
+The meadow continues to the west.
+~
+D DOWN 0 0 0
+~
+The ground here has been severely trampled and bloodied.
+~
+OWNER none~
+#24580
+Bloodhawk Meadow~
+The fighting is somewhat calmer here, than to the west where the main
+fighting rages, but some of it still spills over to this section of the
+meadow.  However, you see a few watching you, and even the injured point
+their weapons in your direction, wondering if you are friend or foe.  Though
+the forest blocks passage to the east, you can leave here in any other
+direction.
+~
+field
+D NORTH 24581 0 0
+~
+The meadow continues to the north.
+~
+D EAST 0 0 0
+~
+Dense forest blocks passage to the east.
+~
+D SOUTH 24576 0 0
+~
+The meadow continues to the south.
+~
+D WEST 24579 0 0
+~
+The meadow continues west, to the middle of the battle.
+~
+D DOWN 0 0 0
+~
+The tall grass of the meadow is heavily trampled here.
+~
+OWNER none~
+#24581
+Bloodhawk Meadow~
+Things are somewhat calmer here, at least in so much as there is less
+fighting.  It would appear this is thestrength of the rogues' position, as
+they strut about more confidently here.  Also, you see one towards the
+northeast corner of the meadow, giving orders with obvious command.  Looking
+around for an escape in case they descend upon you, you find a thin trail to
+the east, and clear passage back into the meadow, to the south and west.  
+~
+field
+D NORTH 0 0 0
+~
+Dense forest blocks passage to the north.
+~
+D EAST 24584 0 0
+~
+You see a trail leading off to the east.
+~
+D SOUTH 24580 0 0
+~
+The meadow continues to the south.
+~
+D WEST 24582 0 0
+~
+The meadow continues to the west.
+~
+D DOWN 0 0 0
+~
+You see the tall meadow grass covering the ground.
+~
+OWNER none~
+#24582
+Bloodhawk Meadow~
+The fighting is somewhat calmer here, than to the south where the main
+fighting rages, but some of it still spills over to this section of the
+meadow.  However, you see a few watching you, and even the injured point
+their weapons in your direction, wondering if you are friend or foe.  Though
+the forest blocks passage to the north, you can leave here in any other
+direction.  
+~
+field
+D NORTH 0 0 0
+~
+Dense forest blocks passage to the north.
+~
+D EAST 24581 0 0
+~
+The meadow continues to the east.
+~
+D SOUTH 24579 0 0
+~
+The meadow continues south, to the middle of the battle.
+~
+D WEST 24583 0 0
+~
+The meadow continues to the west.
+~
+D DOWN 0 0 0
+~
+The tall grass of the meadow is heavily trampled here.
+~
+OWNER none~
+#24583
+Bloodhawk Meadow~
+The meadow opens to the south and east, while the dense forest blocks
+travel to the north and west.  You see a few people here, but this is
+obviously not where the main fighting is going on, as they are primarily
+injured and trying to rest.  You notice one rogue, however, looking out of
+place here.  
+~
+field
+D NORTH 0 0 0
+~
+Dense forest blocks passage to the north.
+~
+D EAST 24582 0 0
+~
+The meadow continues to the east.
+~
+D SOUTH 24578 0 0
+~
+The meadow continues to the south.
+~
+D WEST 0 0 0
+~
+Dense forest blocks passage to the west.
+~
+D DOWN 0 0 0
+~
+The tall grass at your feet sways peacefully in the wind.
+~
+OWNER none~
+#24584
+A Thin Trail~
+Following the thin trail, you manage to find a certain respite from the
+bloody fighting to the west.  The forest closes in upon you here, leaving
+only a thin path heading east and west for you to travel on.  As the sounds
+of battle recede, you begin to think on where you are headed now, and wonder
+what lays ahead.  
+~
+trail
+D EAST 24585 0 0
+~
+The trail continues to the east, where it appears to turn.
+~
+D WEST 24581 0 0
+~
+The trail leads out to the bloody meadow to the west.
+~
+OWNER none~
+#24585
+North of an Abandoned Building~
+A few leafless trees surround an ancient stone structure to the south.  A
+general feeling of dread and sadness seems to emanate from your
+surroundings.  No animals are visible anywhere nearby.  To the west, a trail
+runs into a meadow, which is bustling with combat.  
+~
+trail
+ROOM NO_MOB
+D SOUTH 24586 0 0
+~
+~
+D WEST 24584 0 0
+~
+~
+OWNER none~
+#24586
+A Dusty Antechamber~
+A musty smell hangs in the air, almost as thick as the layer of dust on
+the floor.  The majority of this building is hidden in shadow, but it does
+not seem to be very large anyway.  No sound or wind disturbs the stillness
+in the air.  To the north, a doorway leads outside, while to the south, the
+building continues to an altar.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24585 0 0
+~
+~
+D SOUTH 24587 0 0
+~
+~
+OWNER none~
+#24587
+A Desecrated Altar~
+A musty smell hangs in the air, almost as thick as the layer of dust on
+the floor.  The majority of this building is hidden in shadow, but it does
+not seem to be very large anyway.  No wind disturbs the stillness in the
+air, but a scratching noise seems to be coming from deeper inside. 
+Something about the altar looks a bit odd.  To the north, you can leave this
+dreadful place.  
+~
+inside
+ROOM DARK
+ROOM NO_MOB
+ROOM INDOORS
+D NORTH 24586 0 0
+~
+~
+D DOWN 24588 AI 0
+false tile~
+You notice false tile behind the altar.
+~
+E altar~
+The altar is made of a polished stone of dark green.  In its shadow, you
+notice something very dark and square-shaped.  
+~
+E shadow~
+There seems to be a false tile here.  You could probably move it downwards.
+~
+OWNER none~
+#24588
+Beneath the Altar~
+This tunnel's ceiling seems rather clean, smooth and polished, but its
+walls are gouged and stained.  Strange sounds echo throughout the tunnel,
+perhaps from an underground well.  Awkward footprints seem to have disturbed
+the dust on the ground.  The tunnel continues to the east and west, where it
+seems to end rather suddenly.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24592 0 0
+~
+~
+D WEST 24589 0 0
+~
+~
+D UP 24587 A 0
+~
+~
+OWNER none~
+#24589
+Above a Deep Pit~
+The walls of this chamber are rounded, and descend down beyond the floor
+into a deep, dark pit.  Snarls, yips and howls faintly echo from this narrow
+abyss, hinting at the hellish horrors that lie beneath the curtain of
+shadow.  To the east, the corridor continues.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24588 0 0
+~
+~
+D DOWN 24590 0 0
+~
+~
+OWNER none~
+#24590
+A Narrow Pit~
+A cacaphony of sound whirls around you, dancing through the still, heavy
+air.  Blurs of imaginary movement streak through your vision, and horrid
+tendrils, both real and imaginary, graze you.  Screams and the scent of
+blood engulf you as the darkness continually thickens.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D UP 24589 0 0
+~
+~
+D DOWN 24591 0 0
+~
+~
+OWNER none~
+#24591
+The Bottom of the Pit~
+A cacaphony of sound whirls around you, dancing through the still, heavy
+air.  Blurs of imaginary movement streak through your vision, and horrid
+tendrils, both real and imaginary, graze you.  Screams and the scent of
+blood engulf you as the darkness continually thickens.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D UP 24590 0 0
+~
+~
+OWNER none~
+#24592
+Within the Catacombs~
+This tunnel's ceiling seems rather clean, smooth and polished, but its
+walls are gouged and stained.  Strange sounds echo throughout the tunnel,
+perhaps from an underground well.  Awkward footprints seem to have disturbed
+the dust on the ground.  The tunnel continues to the east and west, where it
+seems to end rather suddenly.  Puddles of stagnant water have gathered upon
+the ground here.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24593 0 0
+~
+~
+D WEST 24588 0 0
+~
+~
+OWNER none~
+#24593
+Within the Catacombs~
+This tunnel's ceiling seems rather clean, smooth and polished, but its
+walls are gouged and stained.  Strange sounds echo throughout the tunnel,
+perhaps from an underground well.  Awkward footprints seem to have disturbed
+the dust on the ground.  The tunnel continues to the north and west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24594 0 0
+~
+~
+D WEST 24592 0 0
+~
+~
+OWNER none~
+#24594
+Within the Catacombs~
+This tunnel's ceiling seems rather clean, smooth and polished, but its
+walls are gouged and stained.  Strange sounds echo throughout the tunnel,
+perhaps from an underground well.  Awkward footprints seem to have disturbed
+the dust on the ground.  Small puddles of water have gathered on the ground
+here.  The tunnel continues to the north and south, bending to the west in
+either direction.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24595 0 0
+~
+~
+D SOUTH 24593 0 0
+~
+~
+OWNER none~
+#24595
+Within the Catacombs~
+This tunnel's ceiling seems rather clean, smooth and polished, but its
+walls are gouged and stained.  Strange sounds echo throughout the tunnel,
+perhaps from an underground well.  Awkward footprints seem to have disturbed
+the dust on the ground.  Small puddles of water have gathered on the ground
+here.  The tunnel continues to the south and west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 24594 0 0
+~
+~
+D WEST 24596 0 0
+~
+~
+OWNER none~
+#24596
+Within the Catacombs~
+The tunnel seems to be falling apart here.  Dead, withered roots dig
+through the crumbling concrete, leaving bits of debris scattered about the
+floor.  The stench of embalming fluid and death fills this area of the
+tunnel.  Awkward footprints seem to have disturbed the dust on the ground. 
+Small puddles of water have gathered on the ground here.  The tunnel
+continues to the east and west.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24595 0 0
+~
+~
+D WEST 24597 0 0
+~
+~
+OWNER none~
+#24597
+Within the Catacombs~
+The tunnel seems to be falling apart here.  Dead, withered roots dig
+through the crumbling concrete, leaving bits of debris scattered about the
+floor.  The stench of embalming fluid and death fills this area of the
+tunnel.  Awkward footprints seem to have disturbed the dust on the ground. 
+Small puddles of water have gathered on the ground here.  The tunnel
+continues to the east.  A jagged opening is in the wall to the north,
+leading down into a dark chamber.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 24596 0 0
+~
+~
+D DOWN 24598 0 0
+~
+~
+OWNER none~
+#24598
+A Rotting Chamber~
+Cracked and mildewy pillars lie on their sides and in shambles here. 
+This room seems to have been held up by four pillars, but it is now only
+supported by one.  A section of the ceiling has collapsed into a heap of
+rubble in the southeastern corner.  To the north, the wide archway which
+seems to be giving this room the majority of its support opens up into
+another chamber.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 24599 A 0
+~
+~
+D UP 24597 0 0
+~
+~
+OWNER none~
+#24599
+A Crypt~
+The stench of embalming fluid is almost unbearable here.  Marble slabs
+cover a countless number of tombs, stacked into the walls namelessly.  Water
+drips from somewhere in this chamber, leaving the floor slightly damp and
+mildewy.  One tomb seems to have been opened recently.  To the south, an
+archway leads back into a ruined chamber.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D SOUTH 24598 A 0
+~
+~
+OWNER none~
+#24500
+The Archway of the Academy~
+Dominating this room is the massive stone archway to the west of the
+room.  Leading out into the unknown, you can dimly make out the sight of
+tall trees in the distance.  A sign next to the westward arch proclaims that
+only adventurers of sufficient might have the permission of the Crown to
+enter the hazardous territories.  Clearly this is being enforced by the
+guard who stands alert, checking each would-be departure for worthiness.  To
+the north there is a large, wooden door with steel beams reinforcing it. 
+You can hear the loud sounds of hammering and cursing emanating from it in a
+distinctly Dwarven tongue.  
+~
+inside
+ROOM INDOORS
+D NORTH 24501 0 0
+~
+Heat and light waft in from a giant forge to the north.
+~
+D EAST 24537 0 0
+door~
+~
+D WEST 24563 0 0
+~
+~
+OWNER none~
+#24501
+Jormund's Forge~
+The cramped room serving as Jormund's combination of store and forge is
+downright tiny.  The heat radiating from the forge borders on uncomfortable,
+and what little standing room there is is mostly covered in smithing tools
+and implements that force you to duck your head.  Dominating the center of
+the room, the huge forge sparks occasionally erupting from it in an
+impressive display of pyrotechnics as the squat dwarf hammers away at his
+crafts mercilessly.  It's easy to see how this room could inspire
+claustrophobia in human-sized onlookers, but Jormund, with his squat
+stature, apparently prefers it that way.  
+~
+inside
+ROOM INDOORS
+D SOUTH 24500 0 0
+~
+~
+OWNER none~
+#24525
+The Light of Creation~
+Slowly, your eyes open, admitting the warm light of this new world.  You
+find yourself awash in the sounds of the sea, as waves break against the
+shore and gulls fly overhead -- you turn to watch them, and see nothing but
+the light which surrounds you.  Subtly, the sound in the air shifts to
+rustling leaves and a crackling fire; the scent of burning wood reaches you,
+tickling you further toward consciousness.  As you become fully aware for
+the first time, a booming voice strikes out through the white void: "Welcome
+to Shalar, young pilgrim.  You have chosen to inhabit this vessel, and I
+commend you for your choice.  In the coming minutes, you will become
+accustomed to life here; I will guide you by placing signs with the
+information you need.  You may look at the very first sign here in this
+room.  Good luck -- I will be watching over you."  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D DOWN 24526 0 0
+~
+~
+OWNER none~
+#24526
+An Expansive Hall~
+Abruptly you find yourself plunged into pitch darkness.  Your eyes seem
+to widen of their own accord, struggling to take in your surroundings and
+adapt to the new level of light.  As they do so, you realize that the room
+you have entered is actually quite well-lit, with softly flickering candles
+lining each wall.  Numerous portraits and busts fill your field of vision
+and stretch off down corridors to the north, south, and west, as far as your
+eyes can see.  To the east is a large wooden door.  Glancing upward, you
+note that wherever you came from is no longer a viable travel destination.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 24527 ABC 24596
+wooden door~
+~
+OWNER none~
+#24527
+A Storage Room~
+Your explorations have landed you in what looks to be a closet of sorts. 
+Dozens of paintings and statues which seem as though they're in the same
+style as those you saw outside are irreverently piled on top of each other
+here.  A significant layer of dust covers most everything, and every
+movement you make kicks another cloud of it into the air.  The only clean
+thing in the room is a bust at the south end of the room, up atop a marble
+shelf.  The man depicted wears a tiny set of spectacles and has a
+well-trimmed mustache.  Despite the fact that he is carved from stone, you
+have the distinct impression that his cold eyes are watching you...  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 24528 ABCI 0
+~
+~
+OWNER none~
+#24528
+A Hidden Chamber~
+The way you have opened widens into a small, featureless chamber with
+flat steel walls all around.  Behind you, the hidden doorway is still
+visible, leading to the north.  But in every other direction, cursory
+glances reveal no other possible exits.  The sound of dripping water echoes
+into this metal tomb, resonating in such a way as to discomfit the
+listener... you receive the eerie sensation of being buried alive.  The dim
+light here is provided by sources through the door to the north, and it
+seems as though the temperature is dropping as you stand here.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 24527 AB 0
+~
+~
+D SOUTH 24529 I 0
+~
+~
+E s so sou sout south~
+This steel wall seems insubstantial...  Almost as though you could walk
+straight through it.  
+~
+E d do dow down~
+The floor beneath you is extremely solid, perfectly flat steel.
+~
+E u up~
+The ceiling in this room, though covered with shadow, appears to be the
+same flat, featureless steel as the walls.  
+~
+E n no nor nort north~
+Back to the north, the hidden doorway leads into the storage room.
+~
+E w we wes west~
+The featureless steel walls of this room provide you with no clues.
+~
+E e ea eas east~
+The featureless steel walls of this room provide you with no clues.
+~
+OWNER none~
+#24529
+Between the Walls~
+Whirling around, you see that the north wall of this tiny space is the
+same featureless steel as was prominent in the last room.  It appears as
+though whatever opening you passed through moments ago has closed up behind
+you; the wall ripples and shivers for an instant, however, indicating that
+you could probably push your way back through to the north if you wanted to.
+Turning your attention to the rest of the space you've entered, the design
+seems nonsensical until you realize that you are literally between the walls
+of whatever structure this is.  In the same instant as this realization, yet
+another sign shoots up from the ground, and a huge portal snaps into
+existence.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 24528 I 0
+~
+~
+OWNER none~
+#24530
+A Huge Mattress~
+From the way it's been beaten almost completely flat, it's apparent that
+this barely-padded floor serves as the entry point for people new to the
+Academy.  A slight shimmering in the ceiling indicates the direction from
+which those new to Shalar plummet.  The walls to the north, south, and east
+are covered with signs and posters, mostly written in languages you can't
+understand and pasted up on top of one another in such a manner as to make
+them mostly illegible.  To your west, you see an intersection of hallways.  
+~
+inside
+ROOM INDOORS
+ROOM SAFE
+ROOM NEWBIE_ONLY
+ROOM LAW
+D WEST 24531 0 0
+~
+~
+OWNER none~
+#24531
+A Junction of Hallways~
+Here, you are presented with two hallways down which you might travel; to
+the west, the sounds of many busy people waft in on a hot breeze... to the
+south, you can see daylight outside a large temple.  A sizeable map on the
+wall provides passersby with directions, though it seems largely
+unnecessary.  Above you, a timber-frame style of construction holds the
+ceiling up.  This Academy seems almost to be built within a mine shaft,
+though it is well lit and comfortable.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D EAST 24530 0 0
+~
+~
+D SOUTH 24532 0 0
+~
+~
+D WEST 24533 0 0
+~
+~
+D UP 1084 I 0
+~
+~
+OWNER none~
+#24532
+A Hallway in the Academy~
+This hallway has a bit of a claustrophobic feel to it.  The walls taper
+together here from both directions, reaching their closest point at a sort
+of bottleneck in this room.  Hot air from the Academy rushes by you toward
+the temple to the south in a constant, pressing wind.  You feel almost as if
+you are being pushed out into the world by some great, warm invisible hand. 
+Peering to the north, you can barely make out a junction of hallways to the
+north, and a large map on the wall.  South, the light of the High Temple of
+Cimar beckons you.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D NORTH 24531 0 0
+~
+~
+D SOUTH 2545 0 0
+~
+~
+OWNER none~
+#24533
+A Bend in the Hall~
+The winding, mineshaft-like hallway through the Academy bends here, and
+you can continue to the north or east.  One support beam has begun to buckle
+in from the rock ceiling's massive weight, but a closer examination shows
+that it has likely been broken and reinforced several times in the last
+century or so.  There are no lights in this section of the tunnel, but what
+comes in from both directions provides plenty to see by; ore deposits of
+some sort in the walls reflect the light and glitter like stars in the
+darkness.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D NORTH 24534 0 0
+~
+~
+D EAST 24531 0 0
+~
+~
+OWNER none~
+#24534
+A Large Guildhall~
+Torches line this massive hall, each adding to the chaos of flickering
+shadows cast about this room.  A twenty foot high fireplace of reddish stone
+roars on the north wall, casting incredible heat throughout the Academy. 
+The ceiling here is much higher than in the tunnels to either side; the weak
+firelight provides ample visibility on the floor, but strains to reach the
+top of the room.  Despite this, you can make out a huge, black, wrought-iron
+chandelier which is apparently in a state of disuse.  Behind each torch on
+the walls, crude paintings of famous Shalaran heroes to have come through
+here for training at some point early in their lives are proudly displayed. 
+Dozens of recruits mill through this vicinity, guided by several large men
+who look to be in charge; you must move in order to avoid being trampled by
+any of a number of herds.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D SOUTH 24533 0 0
+~
+~
+D WEST 24535 0 0
+~
+~
+OWNER none~
+#24535
+A Small Shop~
+This room, barely more than a wide spot in the Academy's hallway, has
+been set up as a shop for recruits.  Through a window in one rocky wall,
+between two huge wooden strut supports, a shopkeeper peers at you
+expectantly.  His wares are on display on a countertop of stone, set at
+eye-level for a sidhe, and a sign hangs prominently above it.  To the north,
+a hallway leads further into the Academy, and to the east, the huge, hot
+guildhall bustles energetically.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D NORTH 24536 0 0
+~
+~
+D EAST 24534 0 0
+~
+~
+E sign~
+Commands for a shop:
+ 
+LIST              lists the items for sale
+BUY [item name]   buys a given item
+~
+OWNER none~
+#24536
+A Short Hallway~
+This portion of the hallway which stretches through the Academy is fairly
+cool.  A breeze wafts in from the north and passes gently by, caressing your
+skin like a mother would her child's.  Brilliant, flaring torchlight
+reflected around the corner from the guildhall southeast of here is still
+plenty to illuminate this section of tunnel; as such there are no direct
+light sources here.  The result is a strange effect on the walls and ceiling
+-- long shadows cover large sections of the rock and vacillate slowly, as if
+there were huge black snakes all around you.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D NORTH 24537 0 0
+~
+~
+D SOUTH 24535 0 0
+~
+~
+OWNER none~
+#24537
+The Dispatch~
+A large sign on the wall in this room indicates, with a large arrow
+pointing to the left, that you may pass into the training cages to the west;
+with a smaller arrow pointing to the right, it shows you that you may enter
+the "Overrun Area" to the east.  Two small piles of stones here look to have
+been delicately arranged; noticing that each stone has a name inscribed upon
+it in tiny print, you receive a sudden impression that they signify the
+number of people who have died in either direction.  Furthermore, you notice
+that the pile on the right is significantly larger.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D EAST 24541 0 0
+~
+~
+D SOUTH 24536 0 0
+~
+~
+D WEST 24500 0 0
+door~
+~
+OWNER none~
+#24538
+The Gibberling Cage~
+The keening, whining wail of the gibberlings in this room is deafening. 
+Through a large barred door to the north, you see one of the beasts...
+hairless, toothless, and thumping about on all fours.  Behind it, another
+barred door conceals another gibberling.  On the south wall opposite this
+cage, a lever practically begs to be pulled.  It takes little imagination to
+conjure up an image of what precisely will happen once that takes place, of
+course.  To the east, the intersection of tunnels that leads into these
+training cages is visible.  West of here, the deeper cages present much more
+difficult challenges.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D WEST 24539 0 0
+~
+~
+OWNER none~
+#24539
+The Goblin Cage~
+Here, the cage is filled with goblins.  Wearing nothing but loincloths,
+the filthy little beast men lunge at the bars, straining to reach one
+another and you.  The goblin which is closest to you in the first cage
+breathes with the sound of a dying animal; his frenzied exertions seem to be
+tiring him out somewhat, but his beady red eyes remain locked on you
+relentlessly.  From the east, you can still hear the wailing gibberlings. 
+The sound from the west is far more chilling; a deep howling sound born in
+the depths of the Abyss rolls over you.  Another lever is in the wall behind
+you here.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D EAST 24538 0 0
+~
+~
+D WEST 24540 0 0
+~
+~
+OWNER none~
+#24540
+The Mastiff Pens~
+This, the deepest of the training cages, is the home of the hellish
+mastiffs of the west.  Such a far-ranging beast often roams over the
+mountains and into the areas surrounding Cimar... in that case, they are
+captured and brought here.  The huge animals farther back in the cage bay
+and howl incessantly, separated from each other by thick iron bars and
+impatient for a good hunt.  The one nearest you, however, remains calmly
+seated upon its haunches and stares directly at you, licking its lips
+occasionally.  Another lever is in the wall to the south, and east of here
+lie the rest of the cages.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D EAST 24539 0 0
+~
+~
+OWNER none~
+#24541
+The Outpost~
+This slick-sided tunnel is walled with panels of wood.  The ceiling and
+floor are wood as well, all of it dripping wet.  The sounds of water falling
+and flowing echo in from a dim cavern to the east.  It looks as though
+you're standing in the last remnant of the Academy's structure before what
+is commonly referred to as the Overrun Area... which seems to be a large
+natural cavern, punctured by huge root systems which form small caverns and
+pockets and tunnels of their own.  Strange, animal sounds creak and croak
+from the root-filled caverns, and you begin to sense why new recruits are
+gently dissuaded from heading in that direction.  
+~
+inside
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D EAST 24542 0 0
+~
+~
+D WEST 24537 0 0
+~
+~
+OWNER none~
+#24542
+The Entrance to the Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  West of here, you can make out the exit past a curtain of dangling
+roots.
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24553 0 0
+~
+~
+D EAST 24556 0 0
+~
+~
+D SOUTH 24543 0 0
+~
+~
+D WEST 24541 0 0
+~
+~
+OWNER none~
+#24543
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24542 0 0
+~
+~
+D EAST 24544 0 0
+~
+~
+OWNER none~
+#24544
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  To the south, you can feel more than see your way into a small side
+cave.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24556 0 0
+~
+~
+D SOUTH 24561 0 0
+~
+~
+D WEST 24543 0 0
+~
+~
+OWNER none~
+#24545
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24557 0 0
+~
+~
+D EAST 24546 0 0
+~
+~
+OWNER none~
+#24546
+The Southeast Corner of the Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24547 0 0
+~
+~
+D WEST 24545 0 0
+~
+~
+OWNER none~
+#24547
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D SOUTH 24546 0 0
+~
+~
+D WEST 24557 0 0
+~
+~
+OWNER none~
+#24548
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  On the floor here, a thick metal plate is sunk into a bed of mud, and
+a strange wheel sticks up beside it.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24549 0 0
+~
+~
+D WEST 24555 0 0
+~
+~
+D DOWN 24558 CEI 0
+~
+~
+OWNER none~
+#24549
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D SOUTH 24548 0 0
+~
+~
+OWNER none~
+#24550
+The North Edge of the Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D SOUTH 24555 0 0
+~
+~
+D WEST 24551 0 0
+~
+~
+OWNER none~
+#24551
+The North Edge of the Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D EAST 24550 0 0
+~
+~
+D SOUTH 24554 0 0
+~
+~
+D WEST 24552 0 0
+~
+~
+OWNER none~
+#24552
+The North Edge of the Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D EAST 24551 0 0
+~
+~
+OWNER none~
+#24553
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D SOUTH 24542 0 0
+~
+~
+OWNER none~
+#24554
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24551 0 0
+~
+~
+D EAST 24555 0 0
+~
+~
+D SOUTH 24556 0 0
+~
+~
+OWNER none~
+#24555
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24550 0 0
+~
+~
+D EAST 24548 0 0
+~
+~
+D WEST 24554 0 0
+~
+~
+OWNER none~
+#24556
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D NORTH 24554 0 0
+~
+~
+D EAST 24557 0 0
+~
+~
+D SOUTH 24544 0 0
+~
+~
+D WEST 24542 0 0
+~
+~
+OWNER none~
+#24557
+The Overrun Area~
+The air in this cavern is thick with moisture so cold and dense that it
+feels like a slap on the face every time you turn your head.  Horrible
+sounds drift all through the area; what sounds like a corpse being devoured
+messily is what sticks out most between sharp, punctuating animal calls. 
+The roots here are the size of century-old trees in some places, but dangle
+like thick, clammy hair in others.  It's difficult to find any trace of a
+trail or any sort of landmarks... one could very easily become very lost in
+here.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D EAST 24547 0 0
+~
+~
+D SOUTH 24545 0 0
+~
+~
+D WEST 24556 0 0
+~
+~
+OWNER none~
+#24558
+A Murky Hole~
+More of a wide crack in the floor of the cavern overhead than anything,
+this tunnel burrows beneath the root system above and delves deep into the
+earth.  Above you, roots dangle, dripping moisture onto your head; below
+you, the soft earth gives way as you pass, as though it has been a very long
+time since anyone has trodden here.  To the east, a soft glow indicates some
+sort of light source, but you cannot determine what it is, precisely.  To
+all other sides, you are surrounded by rancid earth and mossy rock.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D EAST 24559 0 0
+~
+~
+D UP 24548 0 0
+~
+~
+OWNER none~
+#24559
+The Lair of the Mutant~
+The walls, ceiling, and floor of this room are all covered by iridescent
+moss.  The ethereal yellowish glow generated by it is what lights this
+cavern, in a decidedly eerie fashion.  To your east, a small stone tablet
+rests against the moss-covered wall of the cavelike fissure, and to the
+west, the sound of trickling water emanates gently.  This room stinks of
+decay, and occasionally something rustles just out of sight.  Between the
+thick, stifling, scent-laden air and the closed quarters, this particular
+spot could make most anyone feel slightly claustrophobic.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D EAST 24560 ABCI 0
+~
+~
+D WEST 24558 0 0
+~
+~
+E stone tablet~
+The stone tablet has written upon it some sort of ancient writing, which
+appears to have mostly worn away.  It is plain that the tablet did not
+originate here; rather, that it was placed here.  It seems as though it has
+been put in place to cover something, and that it would roll to the side
+rather easily.  
+~
+OWNER none~
+#24560
+The Mutant's Hoard~
+This room was created by hands, dug from the loose earth of this fissure
+below the caverns.  It looks like huge clots of dirt were torn free and
+thrown to the west, as a large hump of tamped down earth narrows the
+entrance considerably.  Strewn around this space, various bits of string and
+colorful pieces of cloth are enshrined and lit by more garish yellow moss. 
+Stuffed into the ceiling, a broken lamp protrudes downward, crowding
+headroom.  A few tiles have been laid on the ground in a meticulous row, as
+if in an abortive attempt to create a civilized space.  
+~
+cave
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+D WEST 24559 0 0
+~
+~
+OWNER none~
+#24561
+The Watering Hole~
+This small cavern cracks its way from the Overrun Area to the north back
+toward sections of the Academy to the southwest.  It looks as though this
+area is free from the strange monsters inhabiting the caves to the north,
+though you cannot be certain why at first.  However, very soon you note the
+thick grease coating the walls and ceiling; the strange smell it gives off
+is highly acetic.  Perhaps the beasts simply prefer to avoid this viscous
+sludge.  At any rate, this room provides welcome respite, and is equipped
+with a large basin full of crystal clear water.  
+~
+unused
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D NORTH 24544 0 0
+~
+~
+D WEST 24562 0 0
+~
+~
+OWNER none~
+#24562
+A Steep Chute~
+Strangely, the southern half of this room has a steeply sloping metal
+plate for a floor.  It looks as though any southerly progress would be
+rather irretraceable.  From what you can tell, this chute leads back to the
+first area of the Academy; you see no way of returning here, however, short
+of coming back through the Overrun Area.  To the east, the water basin
+beckons you, but to the south, the warmth and light of the Academy are a
+welcome change from the wet darkness of these caverns.  
+~
+unused
+ROOM INDOORS
+ROOM NEWBIE_ONLY
+ROOM LAW
+D EAST 24561 0 0
+~
+~
+D SOUTH 24531 0 0
+~
+~
+OWNER none~
+#24563
+Entering a Thick Forest~
+Leaving the walls of the Academy, you find yourself in a thick forest. 
+The trees rise up as far as you can see, blocking out most of the sunlight. 
+The trees, mainly kinds of evergreens, are covered in thick pine needles. 
+Between the trees, yellow gleams briefly as you struggle to see what it is. 
+The sounds of wolves echo from deeper in the forest.  To the north, the
+forest continues, thicker than before.  
+~
+forest
+D NORTH 24564 0 0
+~
+~
+D EAST 24500 0 0
+~
+~
+OWNER none~
+#24564
+At a Fork in the Trail~
+Here the faint trail between the trees splits, heading to the east and
+west.  The forest looms over you as the light diminishes further.  The
+sounds of wolves are nearer now, echoing from the west.  A blackened patch
+of ground here shows where someone else made their campfire, but there is no
+other sign of them.  To the west, a dark cave's entrance appears.  The smell
+of filth and rotting flesh floats in from the west.  To the east, the faint
+trail continues deeper into the forest.  
+~
+trail
+D EAST 24566 0 0
+~
+~
+D SOUTH 24563 0 0
+~
+~
+D WEST 24565 0 0
+~
+~
+OWNER none~
+#24565
+A Pitch-Black Cave~
+Shadows play along the walls, hiding the true depth of this cave. 
+Littered on the floor, signs of nestings and bones of many different
+creatures hinder your passage.  Air wafts gently onto your face from the
+flapping of wings near the ceiling.  Faded markings on the walls indicate
+that this cave was once inhabited by sentient beings.  To the west, the cave
+ends in darkness.  The cave opens into in the dark forest to the east.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D EAST 24564 0 0
+~
+~
+OWNER none~
+#24566
+A Dark Forest~
+The forest looms over you, barely visible in the darkness.  The noises of
+the hunt and the screams of prey echo through the forest.  An owl watches
+you from above, hooting in the eternal night of this forest.  The grass here
+grows taller, rising up from the forest floor.  A large carving dominates
+the trunk of a particularly large tree.  The forest's light trail turns
+towards the north and west here.  
+~
+forest
+ROOM DARK
+D NORTH 24567 0 0
+~
+~
+D WEST 24564 0 0
+~
+~
+OWNER none~
+#24567
+A Clearing in the Dark Forest~
+The forest here opens into an artificially cleared circle.  The clearing
+extends for about twenty feet before the trees begin again.  Light streams
+in through the open space, providing exceptional lighting for the clearing. 
+The centerpiece of the circle is a roughly hewn stone altar, topped with a
+crystal sundial.  The clearing ends and the forest continues to the north
+and south.  
+~
+trail
+D NORTH 24568 0 0
+~
+~
+D SOUTH 24566 0 0
+~
+~
+OWNER none~
+#24568
+A Dark Forest~
+The forest begins to grow thinner here, though very little light
+penetrates the trees yet.  The trees loom high above your head, climbing up
+into sky.  A fallen tree lies rotting on the ground, home to hundreds of
+insects.  Large ravens pick at the bugs distractedly.  The forest grows
+darker to the east, while to the west the trees seem to continue thinning.  
+~
+forest
+ROOM DARK
+D EAST 24571 0 0
+~
+~
+D SOUTH 24567 0 0
+~
+~
+D WEST 24569 0 0
+~
+~
+OWNER none~
+#24569
+A Thinning Forest~
+The forest here begins to thin out considerably.  Light once again
+streams in among the trees, revealing the details of the forest.  The
+trees's leaves are a deep shade of green, spotted with a bloody shade of
+red.  The thick grass contains a black point at its tip, containing its
+seeds.  The wind carries ravens and other small birds as they soar around
+the tall trees.  The forest grows deeper and darker to the east.  To the
+north, it reaches a clearing.  
+~
+forest
+D NORTH 24570 0 0
+~
+~
+D EAST 24568 0 0
+~
+~
+OWNER none~
+#24570
+A Clearing~
+The forest turns to grasslands here.  The grass rises even higher than in
+the forest.  Ravens circle the plains, searching for food.  The faint smell
+of rot floats on the breeze to your nostrils.  Bright sunlight illuminates
+every corner of this glade.  
+~
+trail
+D NORTH 24573 0 0
+~
+~
+D EAST 24572 0 0
+~
+~
+D SOUTH 24569 0 0
+~
+~
+OWNER none~
+#24571
+A Dark Forest~
+The forest here grows thicker than before, engulfing the area in
+darkness.  The trees here grow so thick that your passage is hampered.  You
+can go no further to the east as the trees grow too close together.  The
+howling and baying of wolves can be heard nearby.  Insects swarm around the
+rotting remains of unlucky forest creatures.  The forest continues to the
+west.  
+~
+forest
+ROOM DARK
+D WEST 24568 0 0
+~
+~
+OWNER none~
+#24572
+A Rock Pile~
+Piles of rocks, large and small, litter this area.  It appears that this
+place once served as a quarry for stone and minerals.  Some ravens hobble
+and hop around, searching for food.  The quarry seems to have left a small
+cave behind.  To the west lies a glade, while you seem to be able to climb
+down to the cave below.  
+~
+hills
+D WEST 24570 0 0
+~
+~
+D DOWN 24575 0 0
+~
+~
+OWNER none~
+#24573
+A Hilltop Overlooking a Scene of War~
+From this hilltop, you can see a large battle in progress.  While the
+figures are too far off to make them out, you see a well equipped faction
+assaulting a more ragtag band.  The band seems to be defending a structure
+off in the distance.  The hill itself is covered in the same grass as the
+glade near it.  You can return to the glade to the south or climb down the
+hill to the battlefield.  
+~
+hills
+D SOUTH 24570 0 0
+~
+~
+D DOWN 24574 0 0
+~
+~
+OWNER none~
+#24574
+Bloodhawk Meadow~
+Exploring your surroundings, you come across a small meadow.  Grass grows
+up tall enough to brush against your legs, but not enough to impede travel. 
+As you walk about, you notice noises from the north; sounds of combat.  Then
+you realize that while the area you stand upon is relatively pristine, the
+surrounding meadow has been trampled down and bloodied.  It would seem
+caution might be a favorable option.
+~
+field
+D NORTH 24579 0 0
+~
+The meadow continues north, where it appears a heated battle is taking place.
+~
+D EAST 24576 0 0
+~
+The meadow continues to the east.
+~
+D SOUTH 0 0 0
+~
+Dense forest blocks passage to the south.
+~
+D WEST 24577 0 0
+~
+The meadow continues to the west.
+~
+D UP 24573 0 0
+~
+~
+D DOWN 0 0 0
+~
+The tall grass at your feet sways peacefully in the wind.
+~
+OWNER none~
+#24575
+A Dusty Cave~
+Holes dot the walls of this cave, the remnants of mining and magic.  A
+small shelter stands in one corner of the cave.  Various mining tools are
+strewn on the ground.  You see the faint glitter of gold as the dust floats
+through the air.  You can manage to climb your way out of this cave.  
+~
+cave
+ROOM DARK
+ROOM INDOORS
+D UP 24572 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 24501 TO 24500 GLIMIT 1 LLIMIT 1
+MOB 24500 TO 24501 GLIMIT 1 LLIMIT 1
+OBJECT 24525 TO 24525
+OBJECT 24526 TO 24526
+OBJECT 24527 TO 24527
+OBJECT 24599 TO 24527
+DOOR 24527 south LOCKED
+OBJECT 24528 TO 24528
+OBJECT 24598 TO 24529
+OBJECT 24529 TO 24529
+MOB 24530 TO 24530 GLIMIT 1 LLIMIT 1
+OBJECT 24531 TO 24531
+MOB 24534 TO 24534 GLIMIT 1 LLIMIT 1
+MOB 24535 TO 24535 GLIMIT 1 LLIMIT 1
+GIVE 24536
+GIVE 24535
+GIVE 24537
+GIVE 24534
+GIVE 24507
+MOB 24505 TO 24537 GLIMIT 1 LLIMIT 1
+OBJECT 24533 TO 24537
+OBJECT 24538 TO 24538
+OBJECT 24539 TO 24539
+OBJECT 24540 TO 24540
+MOB 24541 TO 24541 GLIMIT 1 LLIMIT 1
+MOB 24542 TO 24542 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24542 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24543 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24543 GLIMIT 20 LLIMIT 2
+MOB 24553 TO 24543 GLIMIT 12 LLIMIT 1
+MOB 24542 TO 24544 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24544 GLIMIT 20 LLIMIT 2
+MOB 24553 TO 24544 GLIMIT 12 LLIMIT 1
+OBJECT 24546 TO 24545
+MOB 24542 TO 24545 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24545 GLIMIT 20 LLIMIT 2
+MOB 24553 TO 24545 GLIMIT 12 LLIMIT 1
+OBJECT 24546 TO 24546
+MOB 24553 TO 24546 GLIMIT 12 LLIMIT 2
+MOB 24553 TO 24546 GLIMIT 12 LLIMIT 2
+OBJECT 24546 TO 24547
+MOB 24553 TO 24547 GLIMIT 12 LLIMIT 1
+OBJECT 24548 TO 24548
+MOB 24542 TO 24548 GLIMIT 20 LLIMIT 1
+MOB 24553 TO 24548 GLIMIT 12 LLIMIT 1
+MOB 24553 TO 24548 GLIMIT 1 LLIMIT 12
+MOB 24549 TO 24549 GLIMIT 1 LLIMIT 1
+MOB 24542 TO 24549 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24549 GLIMIT 20 LLIMIT 2
+MOB 24553 TO 24550 GLIMIT 12 LLIMIT 2
+MOB 24553 TO 24550 GLIMIT 12 LLIMIT 2
+MOB 24542 TO 24551 GLIMIT 20 LLIMIT 1
+MOB 24542 TO 24552 GLIMIT 20 LLIMIT 2
+MOB 24542 TO 24552 GLIMIT 20 LLIMIT 2
+MOB 24553 TO 24552 GLIMIT 12 LLIMIT 1
+MOB 24542 TO 24553 GLIMIT 20 LLIMIT 1
+MOB 24553 TO 24553 GLIMIT 12 LLIMIT 1
+MOB 24542 TO 24556 GLIMIT 20 LLIMIT 3
+MOB 24542 TO 24556 GLIMIT 20 LLIMIT 3
+MOB 24542 TO 24556 GLIMIT 20 LLIMIT 3
+MOB 24553 TO 24556 GLIMIT 12 LLIMIT 1
+MOB 24542 TO 24557 GLIMIT 20 LLIMIT 3
+MOB 24542 TO 24557 GLIMIT 20 LLIMIT 3
+MOB 24542 TO 24557 GLIMIT 20 LLIMIT 3
+MOB 24559 TO 24559 GLIMIT 1 LLIMIT 1
+OBJECT 24559 TO 24559
+DOOR 24559 east LOCKED
+OBJECT 24558 TO 24560
+PUT 24560 IN 24558 COUNT 1
+OBJECT 24561 TO 24561
+MOB 24506 TO 24563 GLIMIT 1 LLIMIT 1
+MOB 24563 TO 24565 GLIMIT 1 LLIMIT 1
+OBJECT 24563 TO 24566
+MOB 24564 TO 24566 GLIMIT 6 LLIMIT 1
+MOB 24565 TO 24566 GLIMIT 6 LLIMIT 1
+PUT 24500 IN 24563 COUNT 1
+MOB 24564 TO 24567 GLIMIT 6 LLIMIT 1
+MOB 24565 TO 24567 GLIMIT 6 LLIMIT 1
+OBJECT 24564 TO 24568
+MOB 24564 TO 24568 GLIMIT 6 LLIMIT 1
+MOB 24565 TO 24568 GLIMIT 6 LLIMIT 1
+MOB 24565 TO 24569 GLIMIT 6 LLIMIT 1
+MOB 24550 TO 24571 GLIMIT 1 LLIMIT 1
+MOB 24564 TO 24572 GLIMIT 6 LLIMIT 1
+MOB 24507 TO 24574 GLIMIT 1 LLIMIT 1
+OBJECT 24550 TO 24575
+MOB 24551 TO 24575 GLIMIT 1 LLIMIT 1
+MOB 24577 TO 24576 GLIMIT 5 LLIMIT 2
+MOB 24577 TO 24576 GLIMIT 5 LLIMIT 2
+MOB 24571 TO 24576 GLIMIT 5 LLIMIT 1
+MOB 24570 TO 24577 GLIMIT 2 LLIMIT 1
+MOB 24571 TO 24577 GLIMIT 5 LLIMIT 1
+OBJECT 24505 TO 24578
+MOB 24567 TO 24578 GLIMIT 2 LLIMIT 2
+MOB 24567 TO 24578 GLIMIT 2 LLIMIT 2
+MOB 24566 TO 24578 GLIMIT 1 LLIMIT 1
+PUT 24501 IN 24505 COUNT 1
+MOB 24569 TO 24579 GLIMIT 3 LLIMIT 1
+MOB 24568 TO 24579 GLIMIT 5 LLIMIT 2
+MOB 24579 TO 24579 GLIMIT 3 LLIMIT 1
+MOB 24580 TO 24579 GLIMIT 5 LLIMIT 2
+MOB 24580 TO 24579 GLIMIT 5 LLIMIT 2
+MOB 24579 TO 24580 GLIMIT 5 LLIMIT 1
+MOB 24580 TO 24580 GLIMIT 5 LLIMIT 1
+MOB 24569 TO 24580 GLIMIT 5 LLIMIT 1
+MOB 24581 TO 24581 GLIMIT 2 LLIMIT 2
+MOB 24581 TO 24581 GLIMIT 2 LLIMIT 2
+MOB 24582 TO 24581 GLIMIT 1 LLIMIT 1
+MOB 24569 TO 24582 GLIMIT 5 LLIMIT 1
+MOB 24580 TO 24582 GLIMIT 5 LLIMIT 1
+MOB 24568 TO 24582 GLIMIT 5 LLIMIT 1
+MOB 24571 TO 24583 GLIMIT 5 LLIMIT 1
+MOB 24578 TO 24583 GLIMIT 1 LLIMIT 1
+MOB 24508 TO 24586 GLIMIT 1 LLIMIT 1
+MOB 24587 TO 24586 GLIMIT 8 LLIMIT 1
+MOB 24587 TO 24588 GLIMIT 8 LLIMIT 1
+MOB 24583 TO 24588 GLIMIT 6 LLIMIT 1
+MOB 24587 TO 24589 GLIMIT 8 LLIMIT 1
+MOB 24585 TO 24590 GLIMIT 1 LLIMIT 1
+MOB 24584 TO 24591 GLIMIT 3 LLIMIT 3
+MOB 24584 TO 24591 GLIMIT 3 LLIMIT 3
+GIVE 24503
+MOB 24587 TO 24592 GLIMIT 8 LLIMIT 1
+MOB 24583 TO 24593 GLIMIT 6 LLIMIT 1
+MOB 24587 TO 24594 GLIMIT 8 LLIMIT 1
+MOB 24587 TO 24595 GLIMIT 8 LLIMIT 1
+MOB 24583 TO 24595 GLIMIT 6 LLIMIT 1
+MOB 24587 TO 24596 GLIMIT 8 LLIMIT 1
+MOB 24587 TO 24597 GLIMIT 8 LLIMIT 1
+MOB 24583 TO 24598 GLIMIT 6 LLIMIT 1
+MOB 24586 TO 24599 GLIMIT 1 LLIMIT 1
+OBJECT 24510 TO 24599
+MOB 24583 TO 24599 GLIMIT 6 LLIMIT 2
+MOB 24583 TO 24599 GLIMIT 6 LLIMIT 2
+PUT 24502 IN 24510 COUNT 1
+S
+
+#IMPROGS
+A tick_prog tick_prog_academy_reset
+M 24506 pulse_prog pulse_prog_area_echo_ward
+M 24507 pulse_prog pulse_prog_area_echo_ward
+M 24508 pulse_prog pulse_prog_area_echo_ward
+R 24526 move_prog move_prog_mudschool_key
+R 24526 open_prog open_prog_mudschool_key
+R 24527 move_prog move_prog_door_close
+M 24530 greet_prog greet_prog_opening_greet
+M 24534 greet_prog greet_prog_headmaster
+M 24541 greet_prog greet_prog_pay_char
+R 24547 pulse_prog pulse_prog_mudschool_snake
+M 24549 greet_prog greet_prog_starvin_pete
+M 24549 give_prog give_prog_starvin_pete
+R 24559 open_prog open_prog_nodoor
+R 24560 move_prog move_prog_stone_roll
+I 24599 verb_prog verb_prog_tilt_bust
+I 24538 verb_prog verb_prog_pull_lever
+I 24539 verb_prog verb_prog_pull_lever
+I 24540 verb_prog verb_prog_pull_lever
+I 24548 verb_prog verb_prog_turn_wheel
+I 24559 verb_prog verb_prog_roll_tablet
+I 24560 verb_prog verb_prog_twist_ring
+END
+#SPECS
+M 24500 mspec_academy_smith
+M 24505 mspec_academy_greeters
+M 24551 mspec_scared_soldier
+END
+#$

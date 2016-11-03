@@ -1,0 +1,3501 @@
+#AREA
+haondor2.are~
+Sywilm Woods~
+Gawinn~
+1 51
+19300 19399
+normal
+english
+0
+1
+Gawinn~
+
+#MOBS
+#19300
+ball will wisp orb light~
+a will-o'-the-wisp~
+A glowing ball of light floats silently through the night air.
+~
+A small orb gives off a beautiful spectrum of light as it hovers silently
+above the ground.  The orb twinkles and shimmers as it moves slowly with the
+breeze.  
+~
+0 0 0 unique~
+20 10d8+604 2d6+6 0 100 chill
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT NOCTURNAL
+OFF DODGE
+AFF FLYING
+AFF PASS_DOOR
+NOTES ~
+#19301
+rabbit small cotton tail~
+a small cotton-tail rabbit~
+A small cotton-tail rabbit hops along here.
+~
+A small gray rabbit with long ears and a bushy white tail is before you.  
+~
+0 0 0 rabbit~
+17 8d8+435 3d4+4 0 100 bite
+0 0 0 0
+standing male none
+0 0 tiny
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT DIURNAL
+#19302
+grizzled mountain goat~
+a grizzled mountain goat~
+A grizzled mountain goat moves nimbly amongst the rocks.
+~
+A gray mountain goat with short pointy horns stands before you.  Long
+matted hair hangs down over its cloved hooves.  
+~
+0 0 0 wolf~
+23 11d8+798 3d6+6 0 100 smash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#19303
+snake small brownish-green~
+a small brownish-green snake~
+A small brownish-green snake slithers slowly through the mud.
+~
+A small snake with brown and green markings slithers slowly across the
+ground.  
+~
+0 0 0 snake~
+19 9d8+544 2d7+5 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+#19304
+fox red small~
+a small red fox~
+A small fox stalks stealthily through the grass.
+~
+A small red fox with thick matted fur, and pointy ears is before you. 
+His grey eyes watch his surroundings keenly.  His black nose flares, taking
+in the smells around him.. 
+~
+0 0 0 fox~
+22 11d8+731 4d4+6 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+#19305
+red tailed hawk~
+a red-tailed hawk~
+A red-tailed hawk soars silently upon the wind.
+~
+This hawk has brown plumage with a bright red tail.  Hit beak is yellow
+and hooked, and his eyes watch his surroundings closely.  
+~
+0 0 0 avian~
+18 9d8+489 2d7+4 0 100 claw
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT DIURNAL
+OFF DODGE
+#19306
+wolf stone gray~
+a stone-gray wolf~
+A stone-gray wolf quietly prowls the area.
+~
+A large wolf with a healthy coat of stone-gray fur stands here.  His ears
+perk up at the slightest sounds, and you notice long fangs protruding from
+the sides of his mouth.  
+~
+0 0 0 wolf~
+23 11d8+798 3d6+6 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT NOCTURNAL
+#19307
+trout large ~
+a large trout~
+A large trout jumps up out of the water and comes back down with a splash.
+~
+A large grey trout with a green hue swims through the water here.
+~
+0 0 0 fish~
+21 10d8+665 4d4+5 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#19308
+thief cloaked drab man slender ragged~
+a ragged thief~
+A ragged, slender man wearing drab clothing sneaks through the area.
+~
+A gaunt human, ragged and weathered stands before you.  His drab clothing
+hangs losely from his firm body.  A small blade glistens from beneath his
+belt.  
+~
+-1000 0 0 human~
+25 12d8+944 2d10+7 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF SNEAK
+#19309
+ranger human man ~
+a tall, rugged ranger~
+A tall, rugged looking man crouches, surveying the ground here.
+~
+A tall rugged man wearing a deep green tunic is before you.  His visage
+is stern and weathered by the elements.  A long wooden staff is strapped to
+his back, and his leather boots are caked with mud.  
+~
+0 0 0 human~
+25 12d8+944 2d10+7 0 100 smash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF KICK
+OFF PARRY
+AFF SNEAK
+#0
+
+
+
+#OBJS
+#19300
+spring clear water~
+a crystal clear spring~
+A small pool of water bubbles up from between several rocks.~
+fountain
+rock~
+1000000 1000000 'water' 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#19301
+water river~
+the cool, clear river~
+Waters of the Sywilm.~
+fountain
+unknown~
+1000000 1000000 'water' 0 0
+1 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#19302
+drab wool woolen cloak pile~
+a drab, woolen cloak~
+A drab pile of wool lies in a heap on the ground.~
+armor
+wool~
+2 2 2 2 0
+25 2 1000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY HP 15
+LIMIT 0
+TIMER 0
+
+#19303
+bracer leather worn~
+a worn leather bracer~
+A worn piece of leather lies on the ground here.~
+armor
+leather~
+2 2 2 2 0
+25 1 500 P
+WEAR TAKE
+WEAR WRIST
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#19300
+Before the Gates of Cimar~
+The massive Western Arch of Cimar towers before you, a monument to mortal
+ingenuity and testament to the wealth of glorious Cimar.  Reaching well over
+forty feet towards the skies, the arch supports massive blocks of granite
+that reach even higher.  Beyond the equally massive wooden gates to the
+east, stretches a broad thoroughfare that runs through the heart of Cimar
+The clamor of restless activity emanates from the east, rolling out across
+the worn cobblestone roads of the city.  To the west, a dirt path leads out
+into the downs beyond.  
+~
+trail
+D NORTH 0 0 0
+~
+A barrivaded guard tower looms to the north.
+~
+D EAST 2604 0 0
+~
+The walls of Cimar tower to the east, and an archway offers entrance to the city.
+~
+D SOUTH 0 0 0
+~
+A barrivaded guard tower looms to the north.
+~
+D WEST 19301 0 0
+~
+The cobblestone path continues, sparsely lined with trees.
+~
+D UP 0 0 0
+~
+The western gate of Cimar towers over you.
+~
+D DOWN 0 0 0
+~
+The cobblestones beneath you are well-worn, but not cracked or uneven.
+~
+OWNER none~
+#19301
+On the Edge of the Downs~
+The sparse row of trees which surrounded Cimar comes to an end here.  To
+the west, rolling green hills of grass continue on till the edge of sight. 
+Back down the road to the east you notice the massive walls of Cimar looming
+over the treetops.  Scrubby foliage lies to either side of the path here,
+but ends abruptly at the edge of the downs.  The cobblestone path which
+leads from Cimar spreads out to the west, and then dissipates into a grassy
+path.  
+~
+trail
+D NORTH 19302 0 0
+~
+The scrubby foliage surrounding the walls of the Cimar continues in this direction.
+~
+D EAST 19300 0 0
+~
+The cobblestone path leads on to the massive gates of Cimar.
+~
+D SOUTH 19303 0 0
+~
+The scrubby foliage surrounding the walls of the Cimar continues in this direction.
+~
+D WEST 19306 0 0
+~
+A dirt path begins in this direction.
+~
+D DOWN 0 0 0
+~
+The cobblestones beneath you are well-worn, but not cracked or uneven.
+~
+OWNER none~
+#19302
+Upon the Grassy Hills of the Downs~
+The emerald expanse of grassy, rolling hills surround you.  The long green
+grass waves and dances, moved by the invisible wind.  Wisps of fog lie in
+the low spots, writhing and flowing with the slightest change in the breeze.
+The twin peaks of Mount Cim rise up in the north, and a vast forest can be
+seen off to the southwest.  
+~
+field
+D NORTH 0 0 0
+~
+Green rolling fields continue in this direction.
+~
+D EAST 0 0 0
+~
+Green rolling fields continue in this direction.
+~
+D SOUTH 19301 0 0
+~
+A cobblestone road can be seen in this direction.
+~
+D WEST 19304 0 0
+~
+A dirt path can be seen up ahead.
+~
+D DOWN 0 0 0
+~
+A thick blanket of lush green grass covers the ground.
+~
+OWNER none~
+#19303
+Upon the Grassy Hills of the Downs~
+The emerald expanse of grassy, rolling hills surround you.  The long green
+grass waves and dances, moved by the invisible wind.  Wisps of fog lie in
+the low spots, writhing and flowing with the slightest change in the breeze.
+The twin peaks of Mount Cim rise up in the north, and a vast forest can be
+seen off to the southwest.  
+~
+field
+D NORTH 19301 0 0
+~
+A cobblestone street begins up ahead.
+~
+D EAST 0 0 0
+~
+Green rolling fields continue in this direction.
+~
+D SOUTH 19311 0 0
+~
+Green rolling fields continue in this direction.
+~
+D WEST 19305 0 0
+~
+A dirt path can be seen up ahead.
+~
+D DOWN 0 0 0
+~
+A thick blanket of lush green grass covers the ground.
+~
+OWNER none~
+#19304
+A Dirt Path through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 19307 0 0
+~
+The path continues in this direction.
+~
+D EAST 19302 0 0
+~
+Lush green hills rise up in this direction.
+~
+D SOUTH 19306 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19305
+A Dirt Path Through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 19306 0 0
+~
+The path continues in this direction.
+~
+D EAST 19303 0 0
+~
+Green rolling fields continue in this direction.
+~
+D SOUTH 19312 0 0
+~
+The path continues in this direction.
+~
+D WEST 19310 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19306
+A Dirt Path Through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 19304 0 0
+~
+The path continues in this direction.
+~
+D EAST 19301 0 0
+~
+A cobblestone street begins up ahead.
+~
+D SOUTH 19305 0 0
+~
+The path continues in this direction.
+~
+D WEST 19309 0 0
+~
+Lush green hills rise up in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19307
+A Dirt Path through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D EAST 19308 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19304 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19308
+A Dirt Path through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 201 0 0
+door~
+~
+D EAST 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D SOUTH 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D WEST 19307 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19309
+Upon the Grassy Hills of the Downs~
+The emerald expanse of grassy, rolling hills surround you.  The long green
+grass waves and dances, moved by the invisible wind.  Wisps of fog lie in
+the low spots, writhing and flowing with the slightest change in the breeze.
+The twin peaks of Mount Cim rise up in the north, and a vast forest can be
+seen off to the southwest.  
+~
+field
+D NORTH 0 0 0
+~
+The green rolling hills continue in this direction.
+~
+D EAST 19306 0 0
+~
+A dirt path can be seen up ahead.
+~
+D SOUTH 19310 0 0
+~
+A dirt path can be seen up ahead.
+~
+D WEST 0 0 0
+~
+The green rolling hills continue in this direction.
+~
+D DOWN 0 0 0
+~
+A thick blanket of lush green grass covers the ground.
+~
+OWNER none~
+#19310
+A Dirt Path Through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 19309 0 0
+~
+Lush green hills rise up in this direction.
+~
+D EAST 19305 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D WEST 19376 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19311
+Upon the Grassy Hills of the Downs~
+The emerald expanse of grassy, rolling hills surround you.  The long green
+grass waves and dances, moved by the invisible wind.  Wisps of fog lie in
+the low spots, writhing and flowing with the slightest change in the breeze.
+The twin peaks of Mount Cim rise up in the north, and a vast forest can be
+seen off to the southwest.  
+~
+field
+D NORTH 19303 0 0
+~
+Green rolling hills continue in this direction.
+~
+D EAST 0 0 0
+~
+Green rolling hills continue in this direction.
+~
+D SOUTH 19316 0 0
+~
+Green rolling hills continue in this direction.
+~
+D WEST 19312 0 0
+~
+A small path can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+A thick blanket of lush green grass covers the ground.
+~
+OWNER none~
+#19312
+A Winding Trail Through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 19305 0 0
+~
+The path continues in this direction.
+~
+D EAST 19311 0 0
+~
+Green rolling fields continue in this direction.
+~
+D SOUTH 19315 0 0
+~
+Green rolling fields continue in this direction.
+~
+D WEST 19313 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19313
+A Winding Trail Through the Downs~
+An expanse of grassy, rolling hills completely surrounds this small dirt
+path.  Wisps of fog hide in the low spots between the hills, writhing and
+flowing to the change in breeze.  The soft emerald peaks of the downs
+continue endlessly to the edge of the horizon.  The long grass waves and
+dances, revealing the invisible wind.  The dusty path you stand upon snakes
+through the downs like a vein, leading far off into the distance.  
+~
+trail
+D NORTH 0 0 0
+~
+Green rolling fields continue in this direction.
+~
+D EAST 19312 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19314 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+The ground seems disapear a little ways in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19314
+Nearing a Stone Bridge~
+The lush, green hills plunge steeply down to the rushing waters of the
+Sywilm.  The grass covered ground rises up once more on the other side of
+the river after plummeting at least one hundred feet down to the frothing
+waters.  A massive bridge of stone traverses the river allowing passage
+across the gap.  The rolling hills of the downs continue off to the east,
+and you notice a dense forest looming on the other side of the river.  
+~
+trail
+D NORTH 19313 0 0
+~
+The dirt path continues in this direction.
+~
+D EAST 19315 0 0
+~
+Green rolling fields continue in this direction.
+~
+D SOUTH 0 0 0
+~
+Green rolling fields continue in this direction.
+~
+D WEST 19317 0 0
+~
+A massive stone bridge crosses the ravine up ahead.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks make up the ground beneath you.
+~
+OWNER none~
+#19315
+Upon the Grassy Hills of the Downs~
+The emerald expanse of grassy, rolling hills surround you.  The long green
+grass waves and dances, moved by the invisible wind.  Wisps of fog lie in
+the low spots, writhing and flowing with the slightest change in the breeze.
+The twin peaks of Mount Cim rise up in the north, and a vast forest can be
+seen off to the southwest.  
+~
+field
+D NORTH 19312 0 0
+~
+A dirt path can be seen up ahead.
+~
+D EAST 19316 0 0
+~
+Green rolling hills continue in this direction.
+~
+D SOUTH 0 0 0
+~
+Green rolling hills continue in this direction.
+~
+D WEST 19314 0 0
+~
+Green rolling hills continue in this direction.
+~
+D DOWN 0 0 0
+~
+A thick blanket of lush green grass covers the ground.
+~
+OWNER none~
+#19316
+Upon the Grassy Hills of the Downs~
+The emerald expanse of grassy, rolling hills surround you.  The long green
+grass waves and dances, moved by the invisible wind.  Wisps of fog lie in
+the low spots, writhing and flowing with the slightest change in the breeze.
+The twin peaks of Mount Cim rise up in the north, and a vast forest can be
+seen off to the southwest.  
+~
+field
+D NORTH 19311 0 0
+~
+Green rolling hills continue in this direction.
+~
+D EAST 0 0 0
+~
+Green rolling hills continue in this direction.
+~
+D SOUTH 0 0 0
+~
+Green rolling hills continue in this direction.
+~
+D WEST 19315 0 0
+~
+Green rolling hills continue in this direction.
+~
+D DOWN 0 0 0
+~
+A thick blanket of lush green grass covers the ground.
+~
+OWNER none~
+#19317
+A Stone Bridge Crossing~
+This bridge is composed of thousands of fieldstones fastened together by
+a dark grey mortar.  A breathtaking view of the great Sywilm can be seen
+from either side of the bridge.  To the north the great peaks of Mount Cim
+pierce the sky.  Off to the south the river snakes its way down into the
+lowland marshes.  Trails begin on either side of the bridge where it meets
+the edges of the ravine.  
+~
+trail
+D NORTH 19377 0 0
+~
+A stone railing runs along the edge of the bridge, providing a small ammount of safety.
+~
+D EAST 19314 0 0
+~
+The path leads off into the downs.
+~
+D SOUTH 19388 0 0
+~
+A stone railing runs along the edge of the bridge, providing a small ammount of safety.
+~
+D WEST 19318 0 0
+~
+The path leads out into the dense woods.
+~
+D DOWN 0 0 0
+~
+The bridge beneath you is composed of an uncalculable ammount of fieldstones.
+~
+OWNER none~
+#19318
+Nearing a Stone Bridge~
+The lush, green hills plunge steeply down to the rushing waters of the
+Sywilm.  The grass covered ground rises up once more on the other side of
+the river after plummeting at least one hundred feet down to the frothing
+waters.  A massive bridge of stone traverses the river allowing passage
+across the gap.  The dense forest continues to the west, and you can see the
+rolling hills of the downs beginning on the other side of the river.  
+~
+trail
+D NORTH 0 0 0
+~
+The bordering woods end at the steep decent down to the river.
+~
+D EAST 19317 0 0
+~
+A massive stone bridge crosses the ravine up ahead.
+~
+D SOUTH 0 0 0
+~
+The bordering woods end at the steep decent down to the river.
+~
+D WEST 19319 0 0
+~
+The dirt path leads up to the edge of the woodlands.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks make up the ground beneath you.
+~
+OWNER none~
+#19319
+On the Edge of the Woodlands~
+Tall oaks and maple stand as silent sentinels watching over the growth of
+the underwood.  The perpetual rustle of leaves and the smells of damp soil
+waft through the air.  Massive brown trunks knotted and weathered stand side
+by side off to the west.  The green grass begins to taper as the tree tops
+steal the light.  The majestic peaks of Mount Cim loom far to the north.  A
+large stone bridge leading up to the edge of the downs can be seen to the
+east.  
+~
+trail
+D NORTH 0 0 0
+~
+The majestic peaks of Mount Cim loom in the distance.
+~
+D EAST 19318 0 0
+~
+A small path leads off in this direction.
+~
+D SOUTH 19320 0 0
+~
+A small path leads off in this direction.
+~
+D WEST 0 0 0
+~
+A thick line of trees continues to border the grass in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks make up the ground beneath you.
+~
+OWNER none~
+#19320
+A Stoney Clearing Within the Woodlands~
+The trees part overhead giving way to the open air above.  Huge smooth
+stones are strewn randomly throughout the clearing.  A mass of green leafy
+vines creep along the ground, wrapping themselves about the bases of the
+stones as if to hold them in place.  All around the clearing tall trees
+stand, solemnly keeping watch over the stoney clearing.  The smell of
+standing water wafts in from the south, in the direction of the lowlands.  
+~
+trail
+D NORTH 19319 0 0
+~
+A small path leads off in this direction.
+~
+D EAST 19321 0 0
+~
+The stoney clearing continues in this direction.
+~
+D SOUTH 19323 0 0
+~
+The stoney clearing continues in this direction.
+~
+D WEST 19322 0 0
+~
+The stoney clearing continues in this direction.
+~
+D DOWN 0 0 0
+~
+Green leafy vines creep among the large stones beneath you.
+~
+OWNER none~
+#19321
+A Stoney Clearing Within the Woodlands~
+The trees part overhead giving way to the open air above.  Huge smooth
+stones are strewn randomly throughout the clearing.  A mass of green leafy
+vines creep along the ground, wrapping themselves about the bases of the
+stones as if to hold them in place.  All around the clearing tall trees
+stand, solemnly keeping watch over the stoney clearing.  The smell of
+standing water wafts in from the south, in the direction of the lowlands.  
+~
+trail
+D NORTH 0 0 0
+~
+The forest thickens in this direction.
+~
+D EAST 0 0 0
+~
+The forest thickens in this direction.
+~
+D SOUTH 19324 0 0
+~
+The stoney clearing continues in this direction.
+~
+D WEST 19320 0 0
+~
+The stoney clearing continues in this direction.
+~
+D DOWN 0 0 0
+~
+Green leafy vines creep among the large stones beneath you.
+~
+OWNER none~
+#19322
+A Stoney Clearing Within the Woodlands~
+The trees part overhead giving way to the open air above.  Huge smooth
+stones are strewn randomly throughout the clearing.  A mass of green leafy
+vines creep along the ground, wrapping themselves about the bases of the
+stones as if to hold them in place.  All around the clearing tall trees
+stand, solemnly keeping watch over the stoney clearing.  The smell of
+standing water wafts in from the south, in the direction of the lowlands.  
+~
+unused
+D NORTH 0 0 0
+~
+The forest thickens in this direction.
+~
+D EAST 19320 0 0
+~
+The stoney clearing continues in this direction.
+~
+D SOUTH 19325 0 0
+~
+The stoney clearing continues in this direction.
+~
+D WEST 0 0 0
+~
+The forest thickens in this direction.
+~
+D DOWN 0 0 0
+~
+Green leafy vines creep among the large stones beneath you.
+~
+OWNER none~
+#19323
+A Stoney Clearing Within the Woodlands~
+The trees part overhead giving way to the open air above.  Huge smooth
+stones are strewn randomly throughout the clearing.  A mass of green leafy
+vines creep along the ground, wrapping themselves about the bases of the
+stones as if to hold them in place.  All around the clearing tall trees
+stand, solemnly keeping watch over the stoney clearing.  The smell of
+standing water wafts in from the south, in the direction of the lowlands.  
+~
+trail
+D NORTH 19320 0 0
+~
+The stoney clearing continues in this direction.
+~
+D EAST 19324 0 0
+~
+The stoney clearing continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest thickens in this direction.
+~
+D WEST 19325 0 0
+~
+The stoney clearing continues in this direction.
+~
+D DOWN 0 0 0
+~
+Green leafy vines creep among the large stones beneath you.
+~
+OWNER none~
+#19324
+A Stoney Clearing Within the Woodlands~
+The trees part overhead giving way to the open air above.  Huge smooth
+stones are strewn randomly throughout the clearing.  A mass of green leafy
+vines creep along the ground, wrapping themselves about the bases of the
+stones as if to hold them in place.  All around the clearing tall trees
+stand, solemnly keeping watch over the stoney clearing.  The smell of
+standing water wafts in from the south, in the direction of the lowlands.  
+~
+trail
+D NORTH 19321 0 0
+~
+The stoney clearing continues in this direction.
+~
+D EAST 19326 0 0
+~
+A small path leads off in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest thickens in this direction.
+~
+D WEST 19323 0 0
+~
+The stoney clearing continues in this direction.
+~
+D DOWN 0 0 0
+~
+Green leafy vines creep among the large stones beneath you.
+~
+OWNER none~
+#19325
+A Stoney Clearing Within the Woodlands~
+The trees part overhead giving way to the open air above.  Huge smooth
+stones are strewn randomly throughout the clearing.  A mass of green leafy
+vines creep along the ground, wrapping themselves about the bases of the
+stones as if to hold them in place.  All around the clearing tall trees
+stand, solemnly keeping watch over the stoney clearing.  The smell of
+standing water wafts in from the south, in the direction of the lowlands.  
+~
+trail
+D NORTH 19322 0 0
+~
+The stoney clearing continues in this direction.
+~
+D EAST 19323 0 0
+~
+The stoney clearing continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest thickens in this direction.
+~
+D WEST 19329 0 0
+~
+A small path leads off in this direction.
+~
+D DOWN 0 0 0
+~
+Green leafy vines creep among the large stones beneath you.
+~
+OWNER none~
+#19326
+A Muddy Path Through the Waterlogged Timber~
+Thick, black muck covers the watery ground.  Tall grey trees rise high
+above you, firmly planted within the mire.  Small tufts of grass sit loosly
+on the edge of the muddy path.  Waterlogged timber lies half sunken in the
+muck, slowly being decomposed by moss and small delicate plants.  Small
+holes have been made in the sides' of trees as a home for the many birds
+throughout the woodlands.  Off to the north a small clearing can be seen,
+and to the south the ground becomes even soggier.  
+~
+swamp
+D NORTH 0 0 0
+~
+The waterlogged timber continues in this direction.
+~
+D EAST 0 0 0
+~
+The waterlogged timber continues in this direction.
+~
+D SOUTH 19327 0 0
+~
+The muddy path continues in this direction.
+~
+D WEST 19324 0 0
+~
+The muddy path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Thick, black mud makes up this soggy path.
+~
+OWNER none~
+#19327
+A Muddy Path Through the Waterlogged Timber~
+Thick, black muck covers the watery ground.  Tall grey trees rise high
+above you, firmly planted within the mire.  Small tufts of grass sit loosly
+on the edge of the muddy path.  Waterlogged timber lies half sunken in the
+muck, slowly being decomposed by moss and small delicate plants.  Small
+holes have been made in the sides' of trees as a home for the many birds
+throughout the woodlands.  Off to the north a small clearing can be seen,
+and to the south the ground becomes even soggier.  
+~
+swamp
+D NORTH 19326 0 0
+~
+The muddy path continues in this direction.
+~
+D EAST 19328 0 0
+~
+The muddy path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The waterlogged timber continues in this direction.
+~
+D WEST 0 0 0
+~
+The waterlogged timber continues in this direction.
+~
+D DOWN 0 0 0
+~
+Thick, black mud makes up this soggy path.
+~
+OWNER none~
+#19328
+A Muddy Path Through the Waterlogged Timber~
+Thick, black muck covers the watery ground.  Tall grey trees rise high
+above you, firmly planted within the mire.  Small tufts of grass sit loosly
+on the edge of the muddy path.  Waterlogged timber lies half sunken in the
+muck, slowly being decomposed by moss and small delicate plants.  Small
+holes have been made in the sides' of trees as a home for the many birds
+throughout the woodlands.  Off to the north a small clearing can be seen,
+and to the south a putrid waterway can be seen.  
+~
+swamp
+D NORTH 0 0 0
+~
+The waterlogged timber continues in this direction.
+~
+D EAST 0 0 0
+~
+The waterlogged timber continues in this direction.
+~
+D SOUTH 10043 0 0
+~
+A putrid waterway can be seen up ahead.
+~
+D WEST 19327 0 0
+~
+The muddy path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Thick, black mud makes up this soggy path.
+~
+OWNER none~
+#19329
+A Mossy Trail Through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 19330 0 0
+~
+The path continues in this direction.
+~
+D EAST 19325 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D WEST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19330
+A Mossy Trail through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D EAST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D SOUTH 19329 0 0
+~
+The path continues in this direction.
+~
+D WEST 19331 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19331
+A Mossy Trail Through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D EAST 19330 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D WEST 19332 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19332
+A Mossy Trail Through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D EAST 19331 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19333 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19333
+A Mossy Trail Through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 19332 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D SOUTH 19336 0 0
+~
+The path continues in this direction.
+~
+D WEST 19334 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19334
+A Mossy Trail Through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 19335 0 0
+~
+The path continues in this direction.
+~
+D EAST 19333 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D WEST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19335
+On the Fringe of a Shadowy Grove~
+The wood seems to have grown a bit darker here.  A thin mist which seems
+to come from the north, creeps along the forest floor.  A host of green-gray
+moss grows upon the trunks and bases of the trees.  Tall oak and maple rise
+high above you forming a sort of primal cathedral.  The perpetual rustle of
+leaves, and the smells of damp soil waft through the air.  The massive brown
+trunks, knotted and weathered stand thick, leading down to the deep
+burrowing roots.  The ground beneath you is composed of an inch of fallen
+leaves.  To the north a strange shadowy grove opens up.  
+~
+trail
+D NORTH 1300 0 0
+~
+A shadowy grove looms up ahead.
+~
+D EAST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D SOUTH 19334 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19336
+A Mossy Trail Through the Thick Underwood~
+A host of green-gray moss grows upon the trunks and bases of the trees. 
+Tall oak and maple rise high above you forming a sort of primal cathedral. 
+The perpetual rustle of leaves, and the smells of damp soil waft through the
+air.  The massive brown trunks, knotted and weathered stand thick, leading
+down to the deep burrowing roots.  The path itself is composed of an inch of
+fallen leaves, and large masses of moss lining the edges.  Occasionally
+small shafts of sunlight fight their way through the thick canopy overhead,
+to dance across the forest floor.  
+~
+trail
+D NORTH 19333 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D WEST 19337 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A inch of fallen leaves blankets the forest floor.
+~
+OWNER none~
+#19337
+On the Edge of the Woodlands~
+Tall oaks and maple stand as silent sentinels watching over the growth of
+the underwood.  The perpetual rustle of leaves and the smells of damp soil
+waft through the air.  Massive brown trunks knotted and weathered stand side
+by side off to the west.  The green grass begins to taper as the tree tops
+steal the light.  The majestic peaks of Mount Cim loom far to the north.  A
+deep gusty vale can be seen off to the west.  
+~
+trail
+D NORTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D EAST 19336 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The forest grows thicker in this direction.
+~
+D WEST 19338 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of small rocks and brown dirt cover the ground beneath you.
+~
+OWNER none~
+#19338
+A Grassy Path Through a Deep Vale~
+This small path of trampled grass winds on through the gusty vale.  Lush
+green grass tumbles down the slopes of the vale edge.  Weeping willows hang
+their heads and sway gently in the breeze.  Tiny natural springs bubble up
+from the ground, babbling softly as they run down through the rich grass
+towards the lowlands to the south.  The majestic peaks of Mount Cim rise up
+on the northern horizon, and a thick wood looms off to the east.  To the
+east the path leads up to the edge of the woodlands.  
+~
+trail
+D NORTH 19339 0 0
+~
+The vale continues in this direction.
+~
+D EAST 19337 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19340 0 0
+~
+The vale continues in this direction.
+~
+D WEST 19341 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+The grass beneath you seems trampled by frequent use.
+~
+OWNER none~
+#19339
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D EAST 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D SOUTH 19338 0 0
+~
+The vale continues in this direction.
+~
+D WEST 19342 0 0
+~
+The vale continues in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19340
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 19338 0 0
+~
+The vale continues in this direction.
+~
+D EAST 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D SOUTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D WEST 19343 0 0
+~
+The vale continues in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19341
+A Grassy Path Through a Deep Vale~
+This small path of trampled grass winds on through the gusty vale.  Lush
+green grass tumbles down the slopes of the vale edge.  Weeping willows hang
+their heads and sway gently in the breeze.  Tiny natural springs bubble up
+from the ground, babbling softly as they run down through the rich grass
+towards the lowlands to the south.  The majestic peaks of Mount Cim rise up
+on the northern horizon, and a thick wood looms off to the east.  
+~
+trail
+D NORTH 19342 0 0
+~
+The vale continues in this direction.
+~
+D EAST 19338 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19343 0 0
+~
+The vale continues in this direction.
+~
+D WEST 19344 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+The grass beneath you seems trampled by frequent use.
+~
+OWNER none~
+#19342
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D EAST 19339 0 0
+~
+The vale continues in this direction.
+~
+D SOUTH 19341 0 0
+~
+The vale continues in this direction.
+~
+D WEST 19345 0 0
+~
+The vale continues in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19343
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 19341 0 0
+~
+~
+D EAST 19340 0 0
+~
+The vale continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D WEST 19346 0 0
+~
+The vale continues in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19344
+A Grassy Path Through a Deep Vale~
+This small path of trampled grass winds on through the gusty vale.  Lush
+green grass tumbles down the slopes of the vale edge.  Weeping willows hang
+their heads and sway gently in the breeze.  Tiny natural springs bubble up
+from the ground, babbling softly as they run down through the rich grass
+towards the lowlands to the south.  The majestic peaks of Mount Cim rise up
+on the northern horizon, and a thick wood looms off to the east.  
+~
+trail
+D NORTH 19345 0 0
+~
+The path continues in this direction.
+~
+D EAST 19341 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19346 0 0
+~
+The vale continues in this direction.
+~
+D WEST 19347 0 0
+~
+The vale continues in this direction.
+~
+D DOWN 0 0 0
+~
+The grass beneath you seems trampled by frequent use.
+~
+OWNER none~
+#19345
+A Grassy Path Through a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+trail
+D NORTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D EAST 19342 0 0
+~
+The vale continues in this direction.
+~
+D SOUTH 19344 0 0
+~
+The path continues in this direction.
+~
+D WEST 19349 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+The grass beneath you seems trampled by frequent use.
+~
+OWNER none~
+#19346
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 19344 0 0
+~
+The vale continues in this direction.
+~
+D EAST 19343 0 0
+~
+The vale continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D WEST 19348 0 0
+~
+The vale continues in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19347
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 19349 0 0
+~
+The vale continues in this direction.
+~
+D EAST 19344 0 0
+~
+The vale continues in this direction.
+~
+D SOUTH 19348 0 0
+~
+The vale continues in this direction.
+~
+D WEST 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19348
+Within a Deep Vale~
+Lush green grass tumbles down the slopes of the vale edge.  Weeping
+willows hang their heads and sway gently in the breeze.  Tiny natural
+springs bubble up from the ground, babbling softly as they run down through
+the rich grass towards the lowlands to the south.  The majestic peaks of
+Mount Cim rise up on the northern horizon, and a thick wood looms off to the
+east.  
+~
+field
+D NORTH 19347 0 0
+~
+The vale continues in this direction.
+~
+D EAST 19346 0 0
+~
+The vale continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D WEST 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D DOWN 0 0 0
+~
+Lush, green grass covers the ground beneath you.
+~
+OWNER none~
+#19349
+A Grassy Path Through a Deep Vale~
+This small path of trampled grass winds on through the gusty vale.  Lush
+green grass tumbles down the slopes of the vale edge.  Weeping willows hang
+their heads and sway gently in the breeze.  Tiny natural springs bubble up
+from the ground, babbling softly as they run down through the rich grass
+towards the lowlands to the south.  The majestic peaks of Mount Cim rise up
+on the northern horizon, and a thick wood looms off to the east.  To the
+north the path leads uphill towards a rough path.  
+~
+trail
+D NORTH 19350 0 0
+~
+The path continues in this direction.
+~
+D EAST 19345 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19347 0 0
+~
+The vale continues in this direction.
+~
+D WEST 0 0 0
+~
+The grassy ground slopes up towards a treeline in this direction.
+~
+D DOWN 0 0 0
+~
+The grass beneath you seems trampled by frequent use.
+~
+OWNER none~
+#19350
+A Rough Path Sloping Towards a Vale~
+Small bushes and tall grass line the edges of this rough path.  Large
+rocks jut out from beneath the rich brown dirt.  Off to the south the land
+drops down into a rich green vale.  Massive cypress and willow trees rise up
+just a ways off the trail, swaying gently in the breeze.  The path leads off
+north towards a meadow, and winds south towards a large vale.  
+~
+trail
+D NORTH 0 0 0
+~
+Small bushes and tall grass line the edge of the path here.
+~
+D EAST 0 0 0
+~
+Small bushes and tall grass line the edge of the path here.
+~
+D SOUTH 19349 0 0
+~
+The path continues in this direction.
+~
+D WEST 19351 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Jagged rocks dominate the dirt path beneath you.
+~
+OWNER none~
+#19351
+A Rough Path Sloping Towards a Vale~
+Small bushes and tall grass line the edges of this rough path.  Large
+rocks jut out from beneath the rich brown dirt.  Off to the south the land
+drops down into a rich green vale.  Massive cypress and willow trees rise up
+just a ways off the trail, swaying gently in the breeze.  The path leads off
+north towards a meadow, and winds south towards a large vale.  
+~
+trail
+D NORTH 19352 0 0
+~
+The path continues in this direction.
+~
+D EAST 19350 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+Small bushes and tall grass line the edge of the path here.
+~
+D WEST 0 0 0
+~
+Small bushes and tall grass line the edge of the path here.
+~
+D DOWN 0 0 0
+~
+Jagged rocks dominate the dirt path beneath you.
+~
+OWNER none~
+#19352
+On the Fringe of a Quiet Meadow~
+This narrow dirt path leads up to the edge of a large meadow. 
+Wildflowers and other scrubby brush grows along the edge of the trail. 
+Birch and Ash trees form primal groves along the edges of the path.  Off to
+the north the sound of chirping birds and the noise of wind through the
+grass grows louder.  South of here the path leads down towards the cusp of a
+deep vale.  
+~
+trail
+D NORTH 19353 0 0
+~
+A grassy meadow begins up ahead.
+~
+D EAST 0 0 0
+~
+Small bushes and tall grass line the edge of the path here.
+~
+D SOUTH 19351 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+Small bushes and tall grass line the edge of the path here.
+~
+D DOWN 0 0 0
+~
+Jagged rocks dominate the dirt path beneath you.
+~
+OWNER none~
+#19353
+Upon a Windswept Meadow~
+Thousands of wildflowers of every color, nod their heads in the breeze. 
+Long tufts of green grass stand stifly above the flowers.  An occasional
+tree trunk, bleached by the sun, lies on the ground half covered with
+vegitation.  The musical sweetness of birds, and the wind dancing through
+the meadow, fills the air.  Off to the north the twin peaks of Mount Cim
+reach towards the heavens.  To the south a thick treeline looms on the
+horizon.  
+~
+field
+D NORTH 19355 0 0
+~
+The meadow continues in this direction.
+~
+D EAST 19354 0 0
+~
+The meadow continues in this direction.
+~
+D SOUTH 19352 0 0
+~
+~
+D WEST 0 0 0
+~
+Scrubby brush and small trees line the edge of the meadow.
+~
+D DOWN 0 0 0
+~
+Tall grasses and wildflowers blanket the ground beneath you.
+~
+OWNER none~
+#19354
+Upon a Windswept Meadow~
+Thousands of wildflowers of every color, nod their heads in the breeze. 
+Long tufts of green grassh stand stifly above the flowers.  An occasional
+tree trunk, bleached by the sun, lies on the ground half covered with
+vegitation.  The musical sweetness of birds, and the wind dancing through
+the meadow, fills the air.  Off to the north the twin peaks of Mount Cim
+reach towards the heavens.  To the south a thick treeline looms on the
+horizon.  
+~
+field
+D NORTH 19356 0 0
+~
+The meadow continues in this direction.
+~
+D EAST 19358 0 0
+~
+The meadow continues in this direction.
+~
+D SOUTH 0 0 0
+~
+Scrubby brush and small trees line the edge of the meadow.
+~
+D WEST 19353 0 0
+~
+The meadow continues in this direction.
+~
+D DOWN 0 0 0
+~
+Tall grasses and wildflowers blanket the ground beneath you.
+~
+OWNER none~
+#19355
+Upon a Windswept Meadow~
+Thousands of wildflowers of every color, nod their heads in the breeze. 
+Long tufts of green grassh stand stifly above the flowers.  An occasional
+tree trunk, bleached by the sun, lies on the ground half covered with
+vegitation.  The musical sweetness of birds, and the wind dancing through
+the meadow, fills the air.  Off to the north the twin peaks of Mount Cim
+reach towards the heavens.  To the south a thick treeline looms on the
+horizon.  
+~
+field
+D NORTH 0 0 0
+~
+The peaks of Mount Cim loom up over the edge of the meadow.
+~
+D EAST 19356 0 0
+~
+The meadow continues in this direction.
+~
+D SOUTH 19353 0 0
+~
+The meadow continues in this direction.
+~
+D WEST 0 0 0
+~
+Scrubby brush and small trees line the edge of the meadow.
+~
+D DOWN 0 0 0
+~
+Tall grasses and wildflowers blanket the ground beneath you.
+~
+OWNER none~
+#19356
+Upon a Windswept Meadow~
+Thousands of wildflowers of every color, nod their heads in the breeze. 
+Long tufts of green grassh stand stifly above the flowers.  An occasional
+tree trunk, bleached by the sun, lies on the ground half covered with
+vegitation.  The musical sweetness of birds, and the wind dancing through
+the meadow, fills the air.  Off to the north the twin peaks of Mount Cim
+reach towards the heavens.  To the south a thick treeline looms on the
+horizon.  
+~
+field
+D NORTH 0 0 0
+~
+The peaks of Mount Cim loom up over the edge of the meadow.
+~
+D EAST 19357 0 0
+~
+The meadow continues in this direction.
+~
+D SOUTH 19354 0 0
+~
+The meadow continues in this direction.
+~
+D WEST 19355 0 0
+~
+The meadow continues in this direction.
+~
+D DOWN 0 0 0
+~
+Tall grasses and wildflowers blanket the ground beneath you.
+~
+OWNER none~
+#19357
+Upon a Windswept Meadow~
+Thousands of wildflowers of every color, nod their heads in the breeze. 
+Long tufts of green grassh stand stifly above the flowers.  An occasional
+tree trunk, bleached by the sun, lies on the ground half covered with
+vegitation.  The musical sweetness of birds, and the wind dancing through
+the meadow, fills the air.  Off to the north the twin peaks of Mount Cim
+reach towards the heavens.  To the south a thick treeline looms on the
+horizon.  
+~
+field
+D NORTH 0 0 0
+~
+The peaks of Mount Cim loom up over the edge of the meadow.
+~
+D EAST 19359 0 0
+~
+A small path leads off in this direction.
+~
+D SOUTH 19358 0 0
+~
+The meadow continues in this direction.
+~
+D WEST 19356 0 0
+~
+The meadow continues in this direction.
+~
+D DOWN 0 0 0
+~
+Tall grasses and wildflowers blanket the ground beneath you.
+~
+OWNER none~
+#19358
+Upon a Windswept Meadow~
+Thousands of wildflowers of every color, nod their heads in the breeze. 
+Long tufts of green grassh stand stifly above the flowers.  An occasional
+tree trunk, bleached by the sun, lies on the ground half covered with
+vegitation.  The musical sweetness of birds, and the wind dancing through
+the meadow, fills the air.  Off to the north the twin peaks of Mount Cim
+reach towards the heavens.  To the south a thick treeline looms on the
+horizon.  
+~
+field
+D NORTH 19357 0 0
+~
+The meadow continues in this direction.
+~
+D EAST 0 0 0
+~
+Scrubby brush and small trees line the edge of the meadow.
+~
+D SOUTH 0 0 0
+~
+Scrubby brush and small trees line the edge of the meadow.
+~
+D WEST 19354 0 0
+~
+The meadow continues in this direction.
+~
+D DOWN 0 0 0
+~
+Tall grasses and wildflowers blanket the ground beneath you.
+~
+OWNER none~
+#19359
+On the Fringe of a Quiet Meadow~
+This narrow dirt path leads up to the edge of a large meadow. 
+Wildflowers and other scrubby brush grows thicker farther down to the south. 
+Birch and Ash trees form primal groves along the edge of the trail.  To the
+north the bare expanse of the highlands leads up towards the mountains.  The
+sound of chirping birds, and the sound of wind through the grass grows
+louder off to the west.  
+~
+trail
+D NORTH 19360 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+Scrubby brush and wildflowers grow along the edge of the trail here.
+~
+D SOUTH 0 0 0
+~
+A quiet meadow expands in this direction.
+~
+D WEST 19357 0 0
+~
+A quiet meadow expands in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks dominate the trail here.
+~
+OWNER none~
+#19360
+A Steep Trail Winding Down Towards a Meadow~
+This narrow dirt path leads down through the highlands towards a large
+meadow.  Wildflowers and other scrubby brush grows thicker farther down to
+the south.  Birch and Ash trees form primal groves along the edge of the
+trail.  To the north the bare expanse of the highlands leads up towards the
+mountains.  Off to the south the woodlands loom darkly.  
+~
+mountains
+D NORTH 0 0 0
+~
+The twin peaks loom up over the edge of the trail.
+~
+D EAST 19361 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19359 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+A large meadow can be seen in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks dominate the trail here.
+~
+OWNER none~
+#19361
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 0 0 0
+~
+The twin peaks loom up in this direction.
+~
+D EAST 19362 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The foothills lead downward in this direction.
+~
+D WEST 19360 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19362
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 19363 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D SOUTH 0 0 0
+~
+The foothills lead downward in this direction.
+~
+D WEST 19361 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19363
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 0 0 0
+~
+The twin peaks loom up in this direction.
+~
+D EAST 19364 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19362 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19364
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 19365 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D SOUTH 0 0 0
+~
+The foothills lead downward in this direction.
+~
+D WEST 19363 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19365
+On the Stoney Banks of the Sywilm~
+Here, the crystal waters of the Sywilm pass patiently through the
+enduring rocks of the highlands.  Gray-blue lichens cover the worn places of
+the lifeless stones.  The twin peaks of Mount Cim stand majestically on the
+northern horizon.  Occasional spruce and ash trees can be seen sprouting up
+defiantly along the river banks.  
+~
+mountains
+D NORTH 0 0 0
+~
+The twin peaks loom up in this direction.
+~
+D EAST 19366 0 0
+~
+A cluster of stones leads across the river in this direction.
+~
+D SOUTH 19364 0 0
+~
+~
+D WEST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19366
+Atop the Falls of the Sywilm~
+The crystal clear waters of the Sywilm slide silently between the large
+stones beneath you.  Small fish can be seen hovering beneath the surface of
+the water, above the stoney bed of the river.  As the water reaches the edge
+cliff it breaks free of the clutches of the ground, and soars through the
+air before plunging into the ground below.  A fine watery mist floats up
+over the edge of the falls, refracting the light and creating a beautiful
+spectrum.  To the north the waters of the Sywilm flow out from beneath a
+sheer rock face.  
+~
+mountains
+D NORTH 0 0 0
+~
+The waters of the Sywilm emerge in this direction, from beneath a rock face.
+~
+D EAST 19367 0 0
+~
+A cluster of stones leads across the river in this direction.
+~
+D SOUTH 0 0 0
+~
+The waters of the Sywilm can be seen snaking of to the south.
+~
+D WEST 19365 0 0
+~
+A cluster of stones leads across the river in this direction.
+~
+D DOWN 19399 0 0
+~
+The rushing waters of the Sywilm careen off the edge of the cliff here.
+~
+OWNER none~
+#19367
+On the Stoney Banks of the Sywilm~
+Here, the crystal waters of the Sywilm pass patiently through the
+enduring rocks of the highlands.  Gray-blue lichens cover the worn places of
+the lifeless stones.  The twin peaks of Mount Cim stand majestically on the
+northern horizon.  Occasional spruce and ash sprout up defiantly along the
+banks of the river.  
+~
+mountains
+D NORTH 0 0 0
+~
+The twin peaks loom up in this direction.
+~
+D EAST 19368 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The foothills lead downward in this direction.
+~
+D WEST 19366 0 0
+~
+A cluster of stones leads across the river in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19368
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 0 0 0
+~
+The twin peaks loom up in this direction.
+~
+D EAST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D SOUTH 19369 0 0
+~
+The path continues in this direction.
+~
+D WEST 19367 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19369
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 19368 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D SOUTH 19370 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19370
+A Rocky Trail Through the Highlands~
+An army of jagged rocks occupies the nearly invisible trail.  Gray-blue
+lichens cover the worn places of the lifeless stones.  The twin peaks of
+Mount Cim stand majestically on the northern horizon.  Occasional spruce and
+ash trees sprout up defiantly through the rocky soil.  Far off to the south
+you can see the rolling green hills of the downs, where the breeze drops in
+to linger and dance in the grass.  The Sywilm can be seen weaving between
+the dark woods and the downs like a shimmering thread of silver.  
+~
+mountains
+D NORTH 19369 0 0
+~
+The path continues in this direction.
+~
+D EAST 19371 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The foothills lead downward in this direction.
+~
+D WEST 0 0 0
+~
+The highlands continue on in this direction.
+~
+D DOWN 0 0 0
+~
+Large, jagged rocks make up this difficult trail.
+~
+OWNER none~
+#19371
+A Narrow Trail Through the Foothills~
+This narrow dirt path leads up through the foothills towards the
+mountains.  Tall evergreens are positioned sparsely through the hills. 
+Gray-blonde grasses which have made their way through the harsh rocky
+ground, blow gently in the wind.  A wide variety of lichens cling to the
+abundant stones which had been thrown down from the mountain tops long ago. 
+The landscape slopes upward to the north, towards the twin peaks.  A small
+trail leads up to the edge of a cliff to the south, and to the west the
+stoney expanse of the highlands begins.  
+~
+trail
+D NORTH 0 0 0
+~
+The twin peaks loom in this direction.
+~
+D EAST 19373 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 19372 0 0
+~
+The path leads up to a cliff.
+~
+D WEST 19370 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19372
+A Rock Shelf Overlooking the Downs~
+The entirety of the Downs is visible from here.  The misty emerald hills
+roll like waves on the ocean far off in the distance.  The wind rushes
+through the craggy rocks whistling now and then.  Off to the southwest the
+Sywilm snakes down towards the lowland marshes far to the south.  A thick
+wood looms off to the west of the river.  The cliff itself drops off sharply
+and drops hundreds of feet down to the foothills below.  
+~
+trail
+D NORTH 19371 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+A spectacular view of the downs unfolds in this direction.
+~
+D SOUTH 0 0 0
+~
+A spectacular view of the downs unfolds in this direction.
+~
+D WEST 0 0 0
+~
+A spectacular view of the woodlands unfolds in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19373
+A Narrow Trail Through the Foothills~
+This narrow dirt path leads up through the foothills towards the
+mountains.  Tall evergreens are positioned sparsley through the hills. 
+Gray-blonde grasses which have made their way through the harsh rocky
+ground, blow gently in the wind.  A wide variety of lichens cling to the
+abundant stones which had been thrown down from the mountain tops long ago. 
+The landcape slopes upward to the north, towards the twin peaks.  
+~
+trail
+D NORTH 19374 0 0
+~
+The path continues in this direction.
+~
+D EAST 0 0 0
+~
+The foothills continue on in this direction.
+~
+D SOUTH 19375 0 0
+~
+The path continues in this direction.
+~
+D WEST 19371 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19374
+A Narrow Trail Through the Foothills~
+This narrow dirt path leads up through the foothills towards the
+mountains.  Tall evergreens are positioned sparsely through the hills. 
+Gray-blonde grasses which have made their way through the harsh rocky
+ground, blow gently in the wind.  A wide variety of lichens cling to the
+abundant stones which had been thrown down from the mountain tops long ago. 
+The landscape slopes upward to the north, towards the twin peaks.  
+~
+trail
+D NORTH 235 0 0
+door~
+~
+D EAST 0 0 0
+~
+The foothills continue on in this direction.
+~
+D SOUTH 19373 0 0
+~
+The path continues in this direction.
+~
+D WEST 0 0 0
+~
+The foothills continue on in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19375
+A Narrow Trail Through the Foothills~
+This narrow dirt path leads up through the foothills towards the
+mountains.  Tall evergreens are positioned sparsley through the hills. 
+Gray-blonde grasses which have made their way through the harsh rocky
+ground, blow gently in the wind.  A wide variety of lichens cling to the
+abundant stones which had been thrown from the mountain tops long ago.  The
+landscape slopes upward to the north, towards the twin peaks.  
+~
+trail
+D NORTH 19373 0 0
+~
+The path continues in this direction.
+~
+D EAST 19376 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The foothills continue downhill in this direction.
+~
+D WEST 0 0 0
+~
+The foothills continue downhill in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19376
+On the Threshold of the Foothills of Mount Cim~
+Occasional evergreens stand lonely at the foot of the looming mountains. 
+Gray-blonde grasses which have made their way through the harsh rocky
+ground, blow gently in the wind.  A wide variety of lichens cling to the
+abundant stones which had been thrown from the mountain tops long ago.  The
+green rolling fields of the downs end here and expand eastward.  The
+lanscape slopes upward to the north, in the direction of the twin peaks.  
+~
+trail
+D NORTH 0 0 0
+~
+The twin peaks of Mount Cim loom in the distance.
+~
+D EAST 19310 0 0
+~
+The path continues in this direction.
+~
+D SOUTH 0 0 0
+~
+Lush green hills rise up in this direction.
+~
+D WEST 19375 0 0
+~
+The path continues in this direction.
+~
+D DOWN 0 0 0
+~
+A combination of brown dirt and small rocks makes up the ground beneath you.
+~
+OWNER none~
+#19377
+High Above the Rushing River~
+The soft wind whistles through the air around you.  The sound of the
+rushing waters of the Sywilm echo below.  The majestic peaks of Mount Cim
+pierce the sky to the north.  Off to the south the fieldstone bridge plunges
+into either side of the ravine.  
+~
+air
+D NORTH 0 0 0
+~
+The twin peaks of Mount Cim rise up in the distance.
+~
+D EAST 0 0 0
+~
+Lush, rolling fields begin in this direction.
+~
+D SOUTH 19317 0 0
+~
+A fieldstone brigde looms up ahead.
+~
+D WEST 0 0 0
+~
+A dense wood looms in the distance.
+~
+D DOWN 19378 0 0
+~
+The rushing, frothing, waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19378
+Upon the Waters of the Sywilm~
+The white, frothing waters of the this river race down from the mountains
+to the north.  The water crashes into the jagged rocks strewn throughout the
+river, producing a crystalline noise.  Foam from the rough waters laps up
+against the stoney edges of the river banks.  Swirling eddies spin silently
+behind large grey stones, which have been worn over time.  A massive bridge
+of fieldstone towers above you, granting passage across the swift waters.  
+~
+water
+D NORTH 19379 0 0
+~
+The river continues in this direction.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19389 0 0
+~
+The river continues in this direction.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D UP 19377 0 0
+~
+A massive bridge made of fieldstone towers above you.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19379
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19378 0 0
+~
+The river continues in this direction.
+~
+D WEST 19380 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19380
+Upon the Waters of the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 19379 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 19381 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19381
+Upon the Waters of the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 19380 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 19382 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19382
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 19383 0 0
+~
+The river continues in this direction.
+~
+D EAST 19381 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19383
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19382 0 0
+~
+The river continues in this direction.
+~
+D WEST 19384 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19384
+Upon the Waters of the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 19383 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 19385 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19385
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 19386 0 0
+~
+The river continues in this direction.
+~
+D EAST 19384 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19386
+Upon the Waters of the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 19387 0 0
+~
+The river continues in this direction.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19385 0 0
+~
+The river continues in this direction.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19387
+At the Base of a Magnificent Waterfall~
+A torrent of waters comes pouring down from the cliff high above you. 
+The water careens into the rocks at the base of the falls with a deafening
+roar.  A fine veil of mist floats through the air refracting the light into
+a beautiful spectrum during the daylight.  Hearty green moss clings to the
+damp faces of the rocky cliff.  High above, large eyries can be seen sitting
+upon various rock shelves.  The swirling waters beneath the falls begin to
+more quickly as they flow silently to the south.  
+~
+water
+D NORTH 19398 I 0
+~
+A shear wall of falling water crashes into the rocks in this direction.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19386 0 0
+~
+The river continues in this direction.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D UP 19399 0 0
+~
+The mighty waters of the Sywilm poor down from above.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19388
+High Above the Rushing River~
+The soft wind whistles through the air around you.  The sound of the
+rushing waters of the Sywilm echo below.  The majestic peaks of Mount Cim
+rise above the stone bridfe and pierce the sky to the north.  Off to the
+south the Sywilm snakes its way down to the lowland marshes.  
+~
+air
+D NORTH 19317 0 0
+~
+A fieldstone brigde looms up ahead.
+~
+D EAST 0 0 0
+~
+Lush, rolling fields begin in this direction.
+~
+D SOUTH 0 0 0
+~
+The rushing waters of the Sywilm snake off in this direction.
+~
+D WEST 0 0 0
+~
+A dense wood looms in the distance.
+~
+D DOWN 19389 0 0
+~
+The rushing, frothing, waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19389
+Upon the Waters of the Sywilm~
+The white, frothing waters of the this river race down from the mountains
+to the north.  The water crashes into the jagged rocks strewn throughout the
+river, producing a crystalline noise.  Foam from the rough waters laps up
+against the stoney edges of the river banks.  Swirling eddies spin silently
+behind large grey stones, which have been worn over time.  A massive bridge
+of fieldstone towers above you, granting passage across the swift waters.  
+~
+water
+D NORTH 19378 0 0
+~
+The river continues in this direction.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19390 0 0
+~
+The river continues in this direction.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D UP 19388 0 0
+~
+A massive bridge made of fieldstone towers above you.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19390
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 19389 0 0
+~
+The river continues in this direction.
+~
+D EAST 19391 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19391
+Upon the Waters of the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 19392 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 19390 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19392
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19393 0 0
+~
+The river continues in this direction.
+~
+D WEST 19391 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19393
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 19392 0 0
+~
+The river continues in this direction.
+~
+D EAST 19394 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19394
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D EAST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19395 0 0
+~
+The river continues in this direction.
+~
+D WEST 19393 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19395
+A Bend in the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 19394 0 0
+~
+The river continues in this direction.
+~
+D EAST 19396 0 0
+~
+The river continues in this direction.
+~
+D SOUTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19396
+Upon the Waters of the Sywilm~
+Towering walls of grass rise up on either side of the angry waters. 
+White frothing waters race down from the mountains to the north.  All about
+you waters crash into jagged rocks, making a crystalline sound.  Foam from
+the rough waters lap up against the stoney river banks.  Swirling eddies
+spin silently behind large grey stones, which have been worn by time.  The
+cold and clear waters continue swiftly southward on their journey to the
+lowlands.  
+~
+water
+D NORTH 0 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D SOUTH 19397 0 0
+~
+The stoney banks of the river end at the grassy turf, which runs up the side of the ravine.
+~
+D WEST 19395 0 0
+~
+The river continues in this direction.
+~
+D DOWN 0 0 0
+~
+The churning waters of the Sywilm flow beneath you.
+~
+OWNER none~
+#19397
+A Widening in the Sywilm~
+The current slows down significantly here, as the land begins to become
+more level.  The width of the river expands, and flows patiently around the
+rocks and trees on its journey towards the marshes.  The river has overun
+the banks here and floods out into the surrounding woodlands.  Off to the
+west the river flows lazily into a rather large waterway.  Far to the north
+the silhouette of the mountains stand gray-blue against the sky.  
+~
+water
+D NORTH 19396 0 0
+~
+The waters of the Sywilm flow in from this direction.
+~
+D EAST 0 0 0
+~
+The waters flow freely through the woodlands in this direction.
+~
+D SOUTH 0 0 0
+~
+The waters flow freely through the woodlands in this direction.
+~
+D WEST 10084 0 0
+~
+The river flows slowly off towards a waterway in this direction.
+~
+D DOWN 0 0 0
+~
+The waters of the Sywilm flow lazily beneath you.
+~
+OWNER none~
+#19398
+A Damp Cavern Behind the Falls~
+The walls of this small cavern are composed of gray slate that glistens
+dimly.  A garbled view of the outside world can be seen through the fall
+sheet of water to the south.  The floor shimmers as the light from the
+outside is twisted and contorted as it passes through the falls.  The
+ceiling drips constantly upon the smooth wet floor over the cavern, which
+appears to have been hewn long ago.  
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The cold, damp walls of the cave lie in this direction.
+~
+D EAST 0 0 0
+~
+The cold, damp walls of the cave lie in this direction.
+~
+D SOUTH 19387 0 0
+~
+A translucent sheet of waters pours down in front of the cavern here.
+~
+D WEST 0 0 0
+~
+The cold, damp walls of the cave lie in this direction.
+~
+D UP 0 0 0
+~
+Water drips from this dull gray ceiling.
+~
+D DOWN 0 0 0
+~
+Small puddles of water collect upon the cold stone floor of the cavern.
+~
+OWNER none~
+#19399
+Mid-air Near the Falls~
+Hundreds of gallons of crystal clear water tumble through the air.  Tiny
+droplets of water break off and disipate into a mist which floats on the
+wind.  Down below the waters crash dramatically into the jagged rocks below,
+making a tremedous noise.  A ways above the water can be seen pouring off
+the edge of the cliff and flying freely back towards the earth.  
+~
+air
+D NORTH 0 0 0
+~
+A huge mass of water falls towards the ground in this direction.
+~
+D EAST 0 0 0
+~
+A sheer rock face lies on the side of the falls here.
+~
+D SOUTH 0 0 0
+~
+The waters of the Sywilm can be seen snaking of to the south.
+~
+D WEST 0 0 0
+~
+A sheer rock face lies on the side of the falls here.
+~
+D UP 19366 0 0
+~
+The waters of the Sywilm can be seen pouring off the edge of the cliff.
+~
+D DOWN 19387 0 0
+~
+The waters of the Sywilm crash into the rocks below.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 19305 TO 19302 GLIMIT 4 LLIMIT 1
+MOB 19300 TO 19303 GLIMIT 20 LLIMIT 1
+MOB 19305 TO 19303 GLIMIT 4 LLIMIT 1
+MOB 19300 TO 19306 GLIMIT 20 LLIMIT 1
+MOB 19300 TO 19308 GLIMIT 20 LLIMIT 1
+MOB 19305 TO 19309 GLIMIT 4 LLIMIT 1
+MOB 19306 TO 19309 GLIMIT 8 LLIMIT 1
+MOB 19301 TO 19311 GLIMIT 20 LLIMIT 1
+MOB 19306 TO 19311 GLIMIT 8 LLIMIT 1
+MOB 19300 TO 19312 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19313 GLIMIT 20 LLIMIT 1
+MOB 19300 TO 19314 GLIMIT 20 LLIMIT 1
+MOB 19308 TO 19314 GLIMIT 2 LLIMIT 1
+EQUIP 19302 ABOUT
+MOB 19300 TO 19316 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19316 GLIMIT 20 LLIMIT 1
+MOB 19305 TO 19316 GLIMIT 4 LLIMIT 1
+MOB 19300 TO 19319 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19320 GLIMIT 20 LLIMIT 1
+MOB 19304 TO 19324 GLIMIT 5 LLIMIT 1
+MOB 19301 TO 19325 GLIMIT 20 LLIMIT 1
+MOB 19300 TO 19327 GLIMIT 20 LLIMIT 1
+MOB 19303 TO 19327 GLIMIT 1 LLIMIT 1
+MOB 19300 TO 19329 GLIMIT 20 LLIMIT 1
+MOB 19309 TO 19329 GLIMIT 1 LLIMIT 1
+EQUIP 19303 WRISTONE
+MOB 19306 TO 19331 GLIMIT 8 LLIMIT 1
+MOB 19300 TO 19332 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19333 GLIMIT 20 LLIMIT 1
+MOB 19304 TO 19333 GLIMIT 5 LLIMIT 1
+MOB 19300 TO 19334 GLIMIT 20 LLIMIT 1
+MOB 19300 TO 19337 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19341 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19342 GLIMIT 20 LLIMIT 1
+MOB 19300 TO 19343 GLIMIT 20 LLIMIT 1
+MOB 19304 TO 19347 GLIMIT 5 LLIMIT 1
+MOB 19306 TO 19347 GLIMIT 8 LLIMIT 1
+MOB 19300 TO 19348 GLIMIT 20 LLIMIT 1
+MOB 19306 TO 19352 GLIMIT 8 LLIMIT 1
+MOB 19300 TO 19353 GLIMIT 20 LLIMIT 1
+MOB 19304 TO 19353 GLIMIT 5 LLIMIT 1
+MOB 19301 TO 19355 GLIMIT 20 LLIMIT 1
+MOB 19301 TO 19357 GLIMIT 20 LLIMIT 1
+MOB 19304 TO 19357 GLIMIT 5 LLIMIT 1
+MOB 19308 TO 19358 GLIMIT 2 LLIMIT 1
+EQUIP 19302 ABOUT
+MOB 19300 TO 19359 GLIMIT 20 LLIMIT 1
+MOB 19306 TO 19359 GLIMIT 8 LLIMIT 1
+MOB 19301 TO 19360 GLIMIT 20 LLIMIT 1
+MOB 19300 TO 19362 GLIMIT 20 LLIMIT 1
+MOB 19302 TO 19362 GLIMIT 3 LLIMIT 1
+MOB 19302 TO 19365 GLIMIT 3 LLIMIT 1
+OBJECT 19301 TO 19366
+MOB 19300 TO 19366 GLIMIT 20 LLIMIT 1
+MOB 19306 TO 19366 GLIMIT 8 LLIMIT 1
+MOB 19300 TO 19368 GLIMIT 20 LLIMIT 1
+MOB 19302 TO 19368 GLIMIT 3 LLIMIT 1
+OBJECT 19300 TO 19369
+MOB 19301 TO 19373 GLIMIT 20 LLIMIT 1
+MOB 19306 TO 19373 GLIMIT 8 LLIMIT 1
+OBJECT 19301 TO 19378
+OBJECT 19301 TO 19379
+OBJECT 19301 TO 19380
+OBJECT 19301 TO 19381
+MOB 19307 TO 19381 GLIMIT 5 LLIMIT 1
+OBJECT 19301 TO 19382
+OBJECT 19301 TO 19383
+MOB 19307 TO 19383 GLIMIT 5 LLIMIT 1
+OBJECT 19301 TO 19384
+OBJECT 19301 TO 19385
+OBJECT 19301 TO 19386
+MOB 19307 TO 19386 GLIMIT 5 LLIMIT 1
+OBJECT 19301 TO 19387
+OBJECT 19301 TO 19389
+OBJECT 19301 TO 19390
+MOB 19307 TO 19390 GLIMIT 5 LLIMIT 1
+OBJECT 19301 TO 19391
+OBJECT 19301 TO 19392
+OBJECT 19301 TO 19393
+MOB 19307 TO 19393 GLIMIT 5 LLIMIT 1
+OBJECT 19301 TO 19394
+OBJECT 19301 TO 19395
+OBJECT 19301 TO 19396
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

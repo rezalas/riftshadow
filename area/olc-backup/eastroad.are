@@ -1,0 +1,2305 @@
+#AREA
+eastroad.are~
+The Great Shalaran Road~
+Eladrian~
+1 51
+3500 3699
+road_river
+temperate
+0
+1
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#3500
+Before the Gates of Cimar~
+The massive Eastern Arch of Cimar towers before you, a monument to mortal   
+ingenuity and testament to the wealth of glorious Cimar.  Reaching well over   
+forty feet towards the skies, the arch supports massive blocks of granite   
+that reach even higher.  Beyond the equally massive wooden gates to the   
+west, stretches a broad thoroughfare that runs through the heart of Cimar.   
+The clamor of restless activity emanates from the west, rolling out across   
+the worn cobblestone roads of the city.  To the east, the road runs between   
+two narrow walls before widening and disappearing into the horizon.   
+~
+road
+D NORTH 0 0 0
+~
+A barricaded guard tower looms to the north.   
+~
+D EAST 3501 0 0
+~
+The gleaming cobblestone highway runs between walls to the east.   
+~
+D SOUTH 0 0 0
+~
+A barricaded guard tower looms to the south.   
+~
+D WEST 2405 0 0
+~
+The walls of Cimar tower to the west, with an arch offering entry to the city.   
+~
+D UP 0 0 0
+~
+The massive Eastern Arch of Cimar towers over you.   
+~
+D DOWN 0 0 0
+~
+The cobblestones beneath you are well-worn, but not cracked or uneven.   
+~
+E gate gates~
+The gates, while inherently less impressive than the Eastern Arch itself,   
+are still quite an impressive site.  Finding trees the size of these   
+massive beams would be a task in itself, let alone assembling them.   
+~
+E eastern arch~
+You can scarcely believe such a thing has been built... but yet, there it   
+is.  Taller than most buildings in the city, this unsupported arch somehow   
+sustains not only its own massive weight, but that of the portion of the   
+wall which stretches above it.   
+~
+#3501
+A Narrow-Walled Avenue~
+The path is narrow here, cramped between the walls of massive guard towers   
+that loom to the north and south.  Armored silhouettes patrol the ramparts   
+above, and an occasional glint of steel is visible through one of the myriad   
+arrowslits that line the side of each tower.  The walls of Cimar and the   
+great Eastern Arch loom to the west, while the road narrows considerable and   
+stretches eastward toward the horizon, flanked by rows of trees on either   
+side.   
+~
+road
+D NORTH 0 0 0
+~
+A barricaded guard tower looms to the north.   
+~
+D EAST 3503 0 0
+~
+The road broadens to the east, bordered by forest on both sides.   
+~
+D SOUTH 0 0 0
+~
+A barricaded guard tower looms to the south.   
+~
+D WEST 3500 0 0
+~
+The towering gates of Cimar loom down the paved road to the west.   
+~
+D UP 0 0 0
+~
+A narrow strip of sky is visible between the two guard towers.   
+~
+D DOWN 0 0 0
+~
+The cobblestones beneath you are well-worn, but not cracked or uneven.   
+~
+#3502
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D EAST 3507 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3503 0 0
+~
+Through a break in the trees you see the paved road to the south.   
+~
+#3503
+Approaching the Walls of Cimar~
+Desc.   
+~
+road
+D NORTH 3502 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3506 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3504 0 0
+~
+A row of trees lines the road on the southern side.   
+~
+D WEST 3501 0 0
+~
+The road runs between towering walls to the west, approaching Cimar.   
+~
+#3504
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3503 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3505 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 500 0 0
+~
+~
+#3505
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3506 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3512 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 501 0 0
+~
+~
+D WEST 3504 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3506
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3507 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3511 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3505 0 0
+~
+A row of trees lines the road on the southern side.   
+~
+D WEST 3503 0 0
+~
+The well-paved road stretches westward toward Cimar.   
+~
+#3507
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3508 0 0
+~
+The forest darkens to the north beneath looming oaks.   
+~
+D EAST 3510 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3506 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3502 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3508
+Within a Dark Forest~
+Desc.   
+~
+forest
+D EAST 3509 0 0
+~
+You can make out a narrow trail running through the trees to the east.   
+~
+D SOUTH 3507 0 0
+~
+The forest thins to the south, and you can make out the road in the distance.   
+~
+#3509
+A Path Through the Forest~
+Desc.   
+~
+field
+D NORTH 1896 0 0
+~
+The path winds northward through the towering trees.   
+~
+D EAST 3516 0 0
+~
+A dense forest of oaks looms to the east.   
+~
+D SOUTH 3510 0 0
+~
+The path winds southward towards the road.   
+~
+D WEST 3507 0 0
+~
+A dense forest of oaks looms to the west.   
+~
+#3510
+A Path Through the Foliage~
+Desc.   
+~
+field
+D NORTH 3509 0 0
+~
+The path winds northward through the towering trees.   
+~
+D EAST 3515 0 0
+~
+The foliage thickens to the east.   
+~
+D SOUTH 3511 0 0
+~
+The path leads onto the wide road to the south.   
+~
+D WEST 3507 0 0
+~
+The foliage thickens to the west.   
+~
+#3511
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3510 0 0
+~
+A narrow path through the foliage splits off the road to the north.   
+~
+D EAST 3514 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3512 0 0
+~
+A row of trees lines the road on the southern side.   
+~
+D WEST 3506 0 0
+~
+The well-paved road stretches westward, the walls of Cimar in the distance.   
+~
+#3512
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3511 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3513 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 502 0 0
+~
+~
+D WEST 3505 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3513
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3514 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3519 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 503 0 0
+~
+~
+D WEST 3512 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3514
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3515 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3518 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.   
+~
+D SOUTH 3513 0 0
+~
+A row of trees lines the road on the southern side.   
+~
+D WEST 3511 0 0
+~
+The well-paved road stretches westward, the walls of Cimar in the distance.   
+~
+#3515
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3516 0 0
+~
+The forest darkens to the north beneath looming oaks.   
+~
+D EAST 3517 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3514 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3510 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3516
+Within a Dark Forest~
+Desc.   
+~
+forest
+D SOUTH 3515 0 0
+~
+The forest thins to the south, and you can make out the road in the distance.   
+~
+D WEST 3509 0 0
+~
+You can make out a narrow trail running through the trees to the west.   
+~
+#3517
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D EAST 3524 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3518 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3515 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3518
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3517 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3523 0 0
+~
+The well-paved road comes to a bend to the east.   
+~
+D SOUTH 3519 0 0
+~
+A row of trees lines the road on the southern side.   
+~
+D WEST 3514 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3519
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3518 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3522 0 0
+~
+Through a break in the trees, you see the paved road to the east.   
+~
+D SOUTH 3520 0 0
+~
+The trees thin somewhat and the ground becomes damper to the south.   
+~
+D WEST 3513 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3520
+At the Edge of a Swamp~
+Desc.   
+~
+forest
+D NORTH 3519 0 0
+~
+The woods become thicker to the north, and the ground more solid.   
+~
+D EAST 3521 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+#3521
+At the Edge of a Swamp~
+Desc.   
+~
+forest
+D NORTH 3522 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3527 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+D SOUTH 497 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.   
+~
+D WEST 3520 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3522
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3523 0 0
+~
+The well-paved road takes a bend to the north.   
+~
+D EAST 3526 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3521 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3519 0 0
+~
+A row of trees lines the road on the western side.   
+~
+#3523
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3524 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3525 0 0
+~
+A row of trees lines the road on the eastern side.   
+~
+D SOUTH 3522 0 0
+~
+The well-paved road takes a bend to the south.   
+~
+D WEST 3518 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3524
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D SOUTH 3523 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3517 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3525
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D EAST 3530 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3526 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3523 0 0
+~
+Through a break in the trees, you see the paved road to the west.   
+~
+#3526
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3525 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3529 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3527 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3522 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.   
+~
+#3527
+At the Edge of a Swamp~
+Desc.   
+~
+forest
+D NORTH 3526 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3528 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+D SOUTH 498 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.   
+~
+D WEST 3521 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3528
+At the Edge of a Swamp~
+Desc.   
+~
+forest
+D NORTH 3529 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3534 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+D SOUTH 404 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.   
+~
+D WEST 3527 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3529
+Along the Cimarrite Causeway~
+Desc.   
+~
+road
+D NORTH 3530 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3533 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3528 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3526 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.   
+~
+#3530
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D EAST 3532 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3529 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3525 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3531
+At a Traveler's Camp~
+Desc.   
+~
+field
+D SOUTH 3532 0 0
+~
+The narrow trail winds back through the trees to the south.   
+~
+#3532
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D NORTH 3531 0 0
+~
+Footsteps lead northward, through the densely-packed trees.   
+~
+D EAST 3537 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3533 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3530 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3533
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3532 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3536 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3534 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3529 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3534
+At the Edge of a Swamp~
+Desc.   
+~
+forest
+D NORTH 3533 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3535 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+D SOUTH 404 0 0
+~
+The swamp opens up to the south as the ground becomes yet softer.   
+~
+D WEST 3528 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3535
+At the Edge of a Swamp~
+Desc.   
+~
+forest
+D NORTH 3536 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3540 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+D WEST 3534 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3536
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3537 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3539 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.   
+~
+D SOUTH 3535 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3533 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3537
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D EAST 3538 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3536 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3532 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3538
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D EAST 3545 0 0
+~
+You can move eastward through the foliage, parallel to the road.   
+~
+D SOUTH 3539 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3537 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3539
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3538 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3544 0 0
+~
+The well-paved road comes to a bend to the east.   
+~
+D SOUTH 3540 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3536 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3540
+On Marshy Ground~
+Desc.   
+~
+field
+D NORTH 3539 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3543 0 0
+~
+Through a break in the trees, you see the paved road to the east.   
+~
+D SOUTH 3541 0 0
+~
+The marshy terrain extends to the south.   
+~
+D WEST 3535 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3541
+On Marshy Ground~
+Desc.   
+~
+field
+D NORTH 3540 0 0
+~
+The marshy terrain extends to the north.   
+~
+D EAST 3542 0 0
+~
+The swampy terrain extends eastward, parallel to the road.   
+~
+#3542
+On Marshy Ground~
+Desc.   
+~
+field
+D NORTH 3543 0 0
+~
+Through a break in the trees, you see the paved road to the north.   
+~
+D EAST 3548 0 0
+~
+The ground hardens to the east, where twisted trees emerge from the earth.   
+~
+D WEST 3541 0 0
+~
+The swampy terrain extends westward, parallel to the road.   
+~
+#3543
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3544 0 0
+~
+The well-paved road takes a bend to the north.   
+~
+D EAST 3547 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3542 0 0
+~
+Swampy terrain spotted with trees lines the road to the south.   
+~
+D WEST 3540 0 0
+~
+Swampy terrain spotted with trees lines the road to the west.   
+~
+#3544
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3545 0 0
+~
+A row of trees lines the road on the northern side.   
+~
+D EAST 3546 0 0
+~
+Dense brush lines the road on the eastern side.   
+~
+D SOUTH 3543 0 0
+~
+The well-paved road takes a bend to the south.   
+~
+D WEST 3539 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3545
+Within the Dense Foliage~
+Desc.   
+~
+forest
+D SOUTH 3544 0 0
+~
+Through a break in the trees, you see the paved road to the south.   
+~
+D WEST 3538 0 0
+~
+You can move westward through the foliage, parallel to the road.   
+~
+#3546
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3551 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3547 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3544 0 0
+~
+The dense brush gives way to looming trees to the west.   
+~
+#3547
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3546 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3550 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3548 0 0
+~
+Twisted trees burst jagged from the earth to the south.   
+~
+D WEST 3543 0 0
+~
+The well-paved road comes to a bend to the west.   
+~
+#3548
+At the Edge of a Stunted Forest~
+Desc.   
+~
+forest
+D NORTH 3547 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.   
+~
+D EAST 3549 0 0
+~
+The gauntlet of twisted trees extends eastward, parallel to the road.   
+~
+D WEST 3542 0 0
+~
+Trees stand erect upon damp ground to the west.   
+~
+#3549
+At the Edge of a Stunted Forest~
+Desc.   
+~
+forest
+D NORTH 3550 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.   
+~
+D EAST 3554 0 0
+~
+A winding path through the twisted trees lies to the east.   
+~
+D WEST 3548 0 0
+~
+The gauntlet of twisted trees extends westward, parallel to the road.   
+~
+#3550
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3551 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3553 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3549 0 0
+~
+Twisted trees burst jagged from the earth to the south.   
+~
+D WEST 3547 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.   
+~
+#3551
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3552 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3550 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3546 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3552
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3557 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3553 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3551 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3553
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3552 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3556 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3554 0 0
+~
+A winding trail through the stunted trees winds southward.   
+~
+D WEST 3550 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3554
+A Trail Leading Into a Stunted Forest~
+Desc.   
+~
+field
+D NORTH 3553 0 0
+~
+The trail intersects with the vast paved road to the north.   
+~
+D EAST 3555 0 0
+~
+A gauntlet of twisted trees extends eastward.   
+~
+D SOUTH 5261 0 0
+~
+The trail winds its way to the south, through myriad dwarf trees.   
+~
+D WEST 3549 0 0
+~
+A gauntlet of twisted trees extends westward.   
+~
+#3555
+At the Edge of a Stunted Forest~
+Desc.   
+~
+forest
+D NORTH 3556 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.   
+~
+D EAST 3560 0 0
+~
+The gauntlet of twisted trees extends eastward, parallel to the road.   
+~
+D WEST 3554 0 0
+~
+A winding path through the twisted trees lies to the west.   
+~
+#3556
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3557 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3559 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3555 0 0
+~
+Twisted trees burst jagged from the earth to the south.   
+~
+D WEST 3553 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3557
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3558 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3556 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3552 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3558
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3563 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3559 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3557 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3559
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3558 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3562 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3560 0 0
+~
+Twisted trees burst jagged from the earth to the south.   
+~
+D WEST 3556 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3560
+At the Edge of a Stunted Forest~
+Desc.   
+~
+forest
+D NORTH 3559 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.   
+~
+D EAST 3561 0 0
+~
+The gauntlet of twisted trees extends eastward, parallel to the road.   
+~
+D WEST 3555 0 0
+~
+The gauntlet of twisted trees extends westward, parallel to the road.   
+~
+#3561
+At the Edge of a Stunted Forest~
+Desc.   
+~
+forest
+D NORTH 3562 0 0
+~
+The stunted trees give way abruptly to the paved road to the north.   
+~
+D EAST 3566 0 0
+~
+The landscape begins to give way to looming black trees to the east.   
+~
+D WEST 3560 0 0
+~
+The gauntlet of twisted trees extends westward, parallel to the road.   
+~
+#3562
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3563 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3565 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3561 0 0
+~
+Twisted trees burst jagged from the earth to the south.   
+~
+D WEST 3559 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3563
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3564 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3562 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3558 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3564
+Amidst a Copse~
+Desc.   
+~
+forest
+D EAST 3574 0 0
+~
+The dense brush continues eastward, parallel to the road.   
+~
+D SOUTH 3565 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3563 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3565
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3564 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3573 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.   
+~
+D SOUTH 3566 0 0
+~
+A row of towering blackened trees lines the road to the south.   
+~
+D WEST 3562 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3566
+At the Edge of a Darken Wood~
+Desc.   
+~
+forest
+D NORTH 3565 0 0
+~
+You see the wide road through a break in the trees to the north.   
+~
+D EAST 3572 0 0
+~
+The array of looming blackened trees stretches to the east.   
+~
+D WEST 3561 0 0
+~
+The massive trees surrounding you give way to twisted trees to the west.   
+~
+#3567
+A Trampled Path~
+Desc.   
+~
+field
+D NORTH 3572 0 0
+~
+The path winds back to the north, through the break in the trees.   
+~
+D SOUTH 3568 0 0
+~
+Cracked branches and crushed leaves line the path winding southward.   
+~
+#3568
+A Trampled Path~
+Desc.   
+~
+field
+D NORTH 3567 0 0
+~
+Cracked branches and crushed leaves line the path winding northward.   
+~
+D SOUTH 3569 0 0
+~
+Cracked branches and crushed leaves line the path winding southward.   
+~
+#3569
+A Trampled Path~
+Desc.   
+~
+field
+D NORTH 3568 0 0
+~
+Cracked branches and crushed leaves line the path winding northward.   
+~
+D EAST 3570 0 0
+~
+Cracked branches and crushed leaves line the path winding eastward.   
+~
+#3570
+A Trampled Path~
+Desc.   
+~
+field
+D SOUTH 3571 0 0
+~
+The trampled path comes to and end to the south, reaching a clearing.   
+~
+D WEST 3569 0 0
+~
+Cracked branches and crushed leaves line the path winding westward.   
+~
+#3571
+An Abandoned Camp~
+Desc.   
+~
+field
+D NORTH 3570 0 0
+~
+The trampled path leads back to the north, away from the abandoned camp.   
+~
+#3572
+At the Edge of a Darken Wood~
+Desc.   
+~
+forest
+D NORTH 3573 0 0
+~
+You see the wide road through a break in the trees to the north.   
+~
+D EAST 3582 0 0
+~
+The array of looming blackened trees stretches to the east.   
+~
+D SOUTH 3567 I 0
+~
+Upon closer inspection, you can make out a trampled path through the trees   
+to the south, obscured by broken branches and crushed foliage.   
+~
+D WEST 3566 0 0
+~
+The array of looming blackened trees stretches to the west.   
+~
+#3573
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3574 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3581 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.   
+~
+D SOUTH 3572 0 0
+~
+A row of towering blackened trees lines the road to the south.   
+~
+D WEST 3565 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3574
+Amidst a Copse~
+Desc.   
+~
+forest
+D NORTH 3575 0 0
+~
+The dense brush continues to the north, alongside the bending road.   
+~
+D EAST 3580 0 0
+~
+The wide road lies to the east beyond the copse.   
+~
+D SOUTH 3573 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3564 0 0
+~
+The dense brush continues westward, parallel to the road.   
+~
+#3575
+Amidst a Copse~
+Desc.   
+~
+forest
+D NORTH 3576 0 0
+~
+The dense brush yields to a glade to the north.   
+~
+D EAST 3579 0 0
+~
+The wide road lies to the east beyond the copse.   
+~
+D SOUTH 3574 0 0
+~
+The dense brush continues to the south, alongside the bending road.   
+~
+#3576
+Before a Shaded Spring~
+Desc.   
+~
+forest
+D EAST 3578 0 0
+~
+A gnarled thicket borders the glade to the east.   
+~
+D SOUTH 3575 0 0
+~
+A thick copse borders the glade to the south.   
+~
+#3577
+Deep Within a Thicket~
+Desc.   
+~
+forest
+D EAST 3591 0 0
+~
+The dense thicket remains passable to the east.   
+~
+D SOUTH 3578 0 0
+~
+The thicket thins slightly to the south.   
+~
+#3578
+Within a Thicket~
+Desc.   
+~
+forest
+D NORTH 3577 0 0
+~
+A dense thicket stretches to the north.   
+~
+D EAST 3590 0 0
+~
+The gnarled thicket stretches eastward.   
+~
+D SOUTH 3579 0 0
+~
+The wide road lies to the south beyond the copse.   
+~
+D WEST 3576 0 0
+~
+The dense brush yields to a glade to the west.   
+~
+#3579
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3578 0 0
+~
+Dense brush lines the road on the northern side.   
+~
+D EAST 3589 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3580 0 0
+~
+The well-paved road takes a bend to the south.   
+~
+D WEST 3575 0 0
+~
+Dense brush lines the road on the western side.   
+~
+#3580
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3579 0 0
+~
+The well-paved road takes a bend to the north.   
+~
+D EAST 3588 0 0
+~
+A gnarled thicket lines the road on the eastern side.   
+~
+D SOUTH 3581 0 0
+~
+The well-paved road takes a bend to the north.   
+~
+D WEST 3574 0 0
+~
+Dense brush lines the road on the western side.   
+~
+#3581
+Along the Great Shalaran Road~
+Desc.   
+~
+road
+D NORTH 3580 0 0
+~
+The well-paved road takes a bend to the north.   
+~
+D EAST 3587 0 0
+~
+An overgrown trail winds through the dense foliage to the east.   
+~
+D SOUTH 3582 0 0
+~
+A row of towering blackened trees lines the road to the south.   
+~
+D WEST 3573 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3582
+At the Edge of a Darken Wood~
+Desc.   
+~
+forest
+D NORTH 3581 0 0
+~
+You see the wide road through a break in the trees to the north.   
+~
+D EAST 3583 0 0
+~
+The array of looming blackened trees stretches to the east.   
+~
+D WEST 3572 0 0
+~
+The array of looming blackened trees stretches to the west.   
+~
+#3583
+At the Edge of a Darken Wood~
+Desc.   
+~
+forest
+D NORTH 3587 0 0
+~
+An overgrown trail peeks through the trees to the north.   
+~
+D EAST 3584 0 0
+~
+The array of looming blackened trees stretches to the east.   
+~
+D WEST 3582 0 0
+~
+The array of looming blackened trees stretches to the west.   
+~
+#3584
+At the Edge of a Darken Wood~
+Desc.   
+~
+forest
+D NORTH 3585 0 0
+~
+An overgrown trail peeks through the trees to the north.   
+~
+D WEST 3583 0 0
+~
+The array of looming blackened trees stretches to the west.   
+~
+#3585
+On an Overgrown Trail~
+Desc.   
+~
+field
+D EAST 3586 0 0
+~
+The trail approaches some sort of dilapidated structure to the east.   
+~
+D SOUTH 3584 0 0
+~
+A row of massive blackened trees looms to the south.   
+~
+D WEST 3587 0 0
+~
+The overgrown trail winds to the west through the dense foliage.   
+~
+#3586
+Before an Abandoned Inn~
+Desc.   
+~
+field
+D WEST 3585 0 0
+~
+The overgrown trail winds back through the foliage to the west.   
+~
+#3587
+On an Overgrown Trail~
+Desc.   
+~
+field
+D NORTH 3588 0 0
+~
+A gnarled thicket lines the northern edge of the trail.   
+~
+D EAST 3585 0 0
+~
+The overgrown trail winds to the east through the dense foliage.   
+~
+D SOUTH 3583 0 0
+~
+A row of massive blackened trees looms to the south.   
+~
+D WEST 3581 0 0
+~
+The overgrown trail merges with the main road to the west.   
+~
+#3588
+Within a Thicket~
+Desc.   
+~
+forest
+D NORTH 3589 0 0
+~
+The wide road lies to the north, beyond the thicket.   
+~
+D EAST 3595 0 0
+~
+The gnarled thicket stretches eastward.   
+~
+D SOUTH 3587 0 0
+~
+An overgrown trail winds its way through the foliage to the south.   
+~
+D WEST 3580 0 0
+~
+The wide road lies to the west, beyond the thicket.   
+~
+#3589
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3590 0 0
+~
+A gnarled thicket lines the road on the northern side.   
+~
+D EAST 3594 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3588 0 0
+~
+A gnarled thicket lines the road on the southern side.   
+~
+D WEST 3579 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.   
+~
+#3590
+Within a Thicket~
+Desc.   
+~
+forest
+D NORTH 3591 0 0
+~
+The thicket grows denser to the north, though it remains passable.   
+~
+D EAST 3593 0 0
+~
+The gnarled thicket stretches eastward.   
+~
+D SOUTH 3589 0 0
+~
+The wide road lies to the south, beyond the thicket.   
+~
+D WEST 3578 0 0
+~
+The gnarled thicket stretches westward.   
+~
+#3591
+Deep Within a Thicket~
+Desc.   
+~
+forest
+D EAST 3592 0 0
+~
+The dense thicket remains passable to the east.   
+~
+D SOUTH 3590 0 0
+~
+The thicket thins slightly to the south.   
+~
+D WEST 3577 0 0
+~
+The dense thicket remains passable to the west.   
+~
+#3592
+Deep Within a Thicket~
+Desc.   
+~
+forest
+D SOUTH 3593 0 0
+~
+The thicket thins slightly to the south.   
+~
+D WEST 3591 0 0
+~
+The dense thicket remains passable to the west.   
+~
+#3593
+Within a Thicket~
+Desc.   
+~
+forest
+D NORTH 3592 0 0
+~
+The thicket grows denser to the north, though it remains passable.   
+~
+D EAST 3598 0 0
+~
+The gnarled thicket gives way to a a row of manicured trees to the east.   
+~
+D SOUTH 3594 0 0
+~
+The wide road lies to the south, beyond the thicket.   
+~
+D WEST 3590 0 0
+~
+The gnarled thicket stretches westward.   
+~
+#3594
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3593 0 0
+~
+A gnarled thicket lines the road on the northern side.   
+~
+D EAST 3597 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3595 0 0
+~
+A gnarled thicket lines the road on the southern side.   
+~
+D WEST 3589 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.   
+~
+#3595
+Within a Thicket~
+Desc.   
+~
+forest
+D NORTH 3594 0 0
+~
+The wide road lies to the north, beyond the thicket.   
+~
+D EAST 3596 0 0
+~
+The gnarled thicket gives way to a a row of manicured trees to the east.   
+~
+D WEST 3588 0 0
+~
+The gnarled thicket stretches westward.   
+~
+#3596
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D NORTH 3597 0 0
+~
+The wide road runs past the row of trees to the north.   
+~
+D EAST 3602 0 0
+~
+The neatly-trimmed row of trees continues eastward.   
+~
+D WEST 3595 0 0
+~
+The neatly-trimmed row of trees fades into a gnarled thicket to the west.   
+~
+#3597
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3598 0 0
+~
+A well-manicured row of trees lines the road to the north.   
+~
+D EAST 3601 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.   
+~
+D SOUTH 3596 0 0
+~
+A well-manicured row of trees lines the road to the south.   
+~
+D WEST 3594 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3598
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D EAST 3600 0 0
+~
+The neatly-trimmed row of trees continues eastward.   
+~
+D SOUTH 3597 0 0
+~
+The wide road runs past the row of trees to the south.   
+~
+D WEST 3593 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3599
+Within a Tamed Wood~
+Desc.   
+~
+road
+D EAST 3606 0 0
+~
+The neatly-trimmed row of trees continues eastward.   
+~
+D SOUTH 3600 0 0
+~
+The neatly-trimmed row of trees continues southward.   
+~
+#3600
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D NORTH 3599 0 0
+~
+The neatly-trimmed row of trees continues northward.   
+~
+D EAST 3605 0 0
+~
+The wide road runs past the row of trees to the east.   
+~
+D SOUTH 3601 0 0
+~
+The wide road runs past the row of trees to the south.   
+~
+D WEST 3598 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3601
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3600 0 0
+~
+A well-manicured row of trees lines the road to the north.   
+~
+D EAST 3604 0 0
+~
+The well-paved road stretches eastward toward a bend in the distance.   
+~
+D SOUTH 3602 0 0
+~
+A well-manicured row of trees lines the road to the south.   
+~
+D WEST 3597 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3602
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D NORTH 3601 0 0
+~
+The wide road runs past the row of trees to the north.   
+~
+D EAST 3603 0 0
+~
+The neatly-trimmed row of trees continues eastward.   
+~
+D WEST 3596 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3603
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D NORTH 3604 0 0
+~
+The wide road runs past the row of trees to the north.   
+~
+D EAST 3610 0 0
+~
+The neatly-trimmed row of trees continues eastward.   
+~
+D WEST 3602 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3604
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3605 0 0
+~
+The well-paved road bends to the north.   
+~
+D EAST 3609 0 0
+~
+A well-manicured row of trees lines the road to the east.   
+~
+D SOUTH 3603 0 0
+~
+A well-manicured row of trees lines the road to the south.   
+~
+D WEST 3601 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3605
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3606 0 0
+~
+A well-manicured row of trees lines the road to the north.   
+~
+D EAST 3608 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3604 0 0
+~
+The well-paved road bends to the south.   
+~
+D WEST 3600 0 0
+~
+A well-manicured row of trees lines the road to the west.   
+~
+#3606
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D EAST 3607 0 0
+~
+The neatly-trimmed row of trees continues eastward.   
+~
+D SOUTH 3608 0 0
+~
+The wide road runs past the row of trees to the south.   
+~
+D WEST 3599 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3607
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D EAST 3613 0 0
+~
+The row of trees comes to an end, and a grassy strip extends to the east.   
+~
+D SOUTH 3608 0 0
+~
+The wide road runs past the row of trees to the south.   
+~
+D WEST 3606 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3608
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3607 0 0
+~
+A well-manicured row of trees lines the road to the north.   
+~
+D EAST 3612 0 0
+~
+The well-paved road stretches eastward toward the horizon.   
+~
+D SOUTH 3609 0 0
+~
+A well-manicured row of trees lines the road to the south.   
+~
+D WEST 3605 0 0
+~
+The well-paved road stretches westward toward a bend in the distance.   
+~
+#3609
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D NORTH 3608 0 0
+~
+The wide road runs past the row of trees to the north.   
+~
+D EAST 3611 0 0
+~
+The row of trees comes to an end, and a grassy strip extends to the east.   
+~
+D SOUTH 3610 0 0
+~
+The neatly-trimmed row of trees continues southward.   
+~
+D WEST 3604 0 0
+~
+The wide road runs past the row of trees to the west.   
+~
+#3610
+Within a Tamed Wood~
+Desc.   
+~
+forest
+D NORTH 3609 0 0
+~
+The neatly-trimmed row of trees continues northward.   
+~
+D WEST 3603 0 0
+~
+The neatly-trimmed row of trees continues westward.   
+~
+#3611
+In a Narrow Field~
+Desc.   
+~
+field
+D NORTH 3612 0 0
+~
+The wide road is to the north, running parallel to the narrow field.   
+~
+D EAST 3616 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.   
+~
+D SOUTH 740 0 0
+~
+~
+D WEST 3609 0 0
+~
+A neatly-manicured row of trees extends westward.   
+~
+#3612
+Along the Aetullan Way~
+Desc.   
+~
+road
+D NORTH 3613 0 0
+~
+A narrow strip of grass lines the wide road on the northern side.   
+~
+D EAST 3615 0 0
+~
+The well-paved road extends eastward, with towering walls looming from afar.   
+~
+D SOUTH 3611 0 0
+~
+A narrow strip of grass lines the wide road on the southern side.   
+~
+D WEST 3608 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3613
+In a Narrow Field~
+Desc.   
+~
+field
+D EAST 3614 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.   
+~
+D SOUTH 3612 0 0
+~
+The wide road is to the south, running parallel to the narrow field.   
+~
+D WEST 3602 0 0
+~
+A neatly-manicured row of trees extends westward.   
+~
+#3614
+In a Narrow Field~
+Desc.   
+~
+field
+D EAST 3619 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.   
+~
+D SOUTH 3615 0 0
+~
+The wide road is to the south, running parallel to the narrow field.   
+~
+D WEST 3613 0 0
+~
+The strip of grass stretches westward, running parallel to the road.   
+~
+#3615
+Approaching Aetullan~
+Desc.   
+~
+road
+D NORTH 3614 0 0
+~
+A narrow strip of grass lines the wide road on the northern side.   
+~
+D EAST 3618 0 0
+~
+The walls of a luminous city rise to the east at the end of the road.   
+~
+D SOUTH 3616 0 0
+~
+A narrow strip of grass lines the wide road on the southern side.   
+~
+D WEST 3612 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3616
+In a Narrow Field~
+Desc.   
+~
+field
+D NORTH 3615 0 0
+~
+The wide road is to the north, running parallel to the narrow field.   
+~
+D EAST 3617 0 0
+~
+The strip of grass extends eastward towards walls rising in the distance.   
+~
+D SOUTH 755 0 0
+~
+~
+D WEST 3611 0 0
+~
+The strip of grass stretches westward, running parallel to the road.   
+~
+#3617
+In a Narrow Field~
+Desc.   
+~
+field
+D NORTH 3618 0 0
+~
+The wide road is to the north, running parallel to the narrow field.   
+~
+D EAST 3621 0 0
+~
+East of here, the road which runs along Aetullan's walls stretches south.   
+~
+D SOUTH 769 0 0
+~
+~
+D WEST 3616 0 0
+~
+The strip of grass stretches westward, running parallel to the road.   
+~
+#3618
+Approaching Aetullan~
+Desc.   
+~
+road
+D NORTH 3619 0 0
+~
+A narrow strip of grass lines the wide road on the northern side.   
+~
+D EAST 3620 0 0
+~
+The gated city of Aetullan looms to the east, at the end of the road.   
+~
+D SOUTH 3617 0 0
+~
+A narrow strip of grass lines the wide road on the southern side.   
+~
+D WEST 3615 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3619
+In a Narrow Field~
+Desc.   
+~
+field
+D EAST 24430 0 0
+~
+East of here, the road which runs along Aetullan's walls stretches north.   
+~
+D SOUTH 3618 0 0
+~
+The wide road is to the south, running parallel to the narrow field.   
+~
+D WEST 3614 0 0
+~
+The strip of grass stretches westward, running parallel to the road.   
+~
+#3620
+Before the Gates of Aetullan~
+Desc.   
+~
+road
+D NORTH 24430 0 0
+~
+To the north, a road stretches around Aetullan's walls.   
+~
+D EAST 1120 0 0
+~
+Through the gates to the east lies the grand city of Aetullan in all its glory.   
+~
+D SOUTH 3621 0 0
+~
+South of here, a thin road curves to the southwest.   
+~
+D WEST 3618 0 0
+~
+The well-paved road stretches westward toward the horizon.   
+~
+#3621
+Extra Room I Added So Karsus' Area Would Fit~
+Desc!   
+~
+road
+D NORTH 3620 0 0
+~
+~
+D SOUTH 777 0 0
+~
+~
+D WEST 3617 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,11 @@
+#!/bin/csh
+cd ../area
+while ( 1 )
+    set index = 1000
+    while ( 1 )
+	set logfile = ../log/$index.log
+	if ( ! -e $logfile ) break
+	@ index++
+    end
+    ../code/rift 9999 >&! $logfile
+end

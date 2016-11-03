@@ -1,0 +1,477 @@
+#AREA
+aetcimroad.are~
+Aetullan-Cimar Road~
+RS~
+1 51
+24460 24499
+normal
+temperate
+0
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24460
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 3620 0 0
+~
+~
+D SOUTH 24461 0 0
+~
+~
+D WEST 3617 0 0
+~
+~
+#24461
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24460 0 0
+~
+~
+D SOUTH 24462 0 0
+~
+~
+#24462
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24461 0 0
+~
+~
+D SOUTH 24463 0 0
+~
+~
+#24463
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24462 0 0
+~
+~
+D SOUTH 24464 0 0
+~
+~
+#24464
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24463 0 0
+~
+~
+D SOUTH 24465 0 0
+~
+~
+#24465
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24464 0 0
+~
+~
+D SOUTH 24466 0 0
+~
+~
+#24466
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24465 0 0
+~
+~
+D SOUTH 24467 0 0
+~
+~
+#24467
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24466 0 0
+~
+~
+D WEST 24468 0 0
+~
+~
+#24468
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24467 0 0
+~
+~
+D WEST 24469 0 0
+~
+~
+#24469
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24468 0 0
+~
+~
+D WEST 24470 0 0
+~
+~
+#24470
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24469 0 0
+~
+~
+D SOUTH 24471 0 0
+~
+~
+#24471
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24470 0 0
+~
+~
+D SOUTH 24472 0 0
+~
+~
+#24472
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24471 0 0
+~
+~
+D SOUTH 24473 0 0
+~
+~
+#24473
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24472 0 0
+~
+~
+D SOUTH 24474 0 0
+~
+~
+#24474
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24473 0 0
+~
+~
+D WEST 24475 0 0
+~
+~
+#24475
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24474 0 0
+~
+~
+D WEST 24476 0 0
+~
+~
+#24476
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24475 0 0
+~
+~
+D WEST 24477 0 0
+~
+~
+#24477
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24476 0 0
+~
+~
+D WEST 24478 0 0
+~
+~
+#24478
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24477 0 0
+~
+~
+D WEST 24479 0 0
+~
+~
+#24479
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24478 0 0
+~
+~
+D WEST 24480 0 0
+~
+~
+#24480
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24479 0 0
+~
+~
+D WEST 24481 0 0
+~
+~
+#24481
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24480 0 0
+~
+~
+D WEST 24482 0 0
+~
+~
+#24482
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24481 0 0
+~
+~
+D WEST 24483 0 0
+~
+~
+#24483
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24484 0 0
+~
+~
+D EAST 24482 0 0
+~
+~
+#24484
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D SOUTH 24483 0 0
+~
+~
+D WEST 24485 0 0
+~
+~
+#24485
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24484 0 0
+~
+~
+D WEST 24486 0 0
+~
+~
+#24486
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D EAST 24485 0 0
+~
+~
+D WEST 24487 0 0
+~
+~
+#24487
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24488 0 0
+~
+~
+D EAST 24486 0 0
+~
+~
+#24488
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24489 0 0
+~
+~
+D SOUTH 24487 0 0
+~
+~
+#24489
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24490 0 0
+~
+~
+D SOUTH 24488 0 0
+~
+~
+#24490
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24491 0 0
+~
+~
+D SOUTH 24489 0 0
+~
+~
+#24491
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D SOUTH 24490 0 0
+~
+~
+D WEST 24492 0 0
+~
+~
+#24492
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24493 0 0
+~
+~
+D EAST 24491 0 0
+~
+~
+#24493
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24494 0 0
+~
+~
+D SOUTH 24492 0 0
+~
+~
+#24494
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24495 0 0
+~
+~
+D SOUTH 24493 0 0
+~
+~
+#24495
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24496 0 0
+~
+~
+D SOUTH 24494 0 0
+~
+~
+D WEST 2428 0 0
+~
+~
+#24496
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24497 0 0
+~
+~
+D SOUTH 24495 0 0
+~
+~
+#24497
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24498 0 0
+~
+~
+D SOUTH 24496 0 0
+~
+~
+#24498
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 24499 0 0
+~
+~
+D SOUTH 24497 0 0
+~
+~
+#24499
+On the Road~
+The road from Aetullan to Cimar   
+~
+road
+D NORTH 3500 0 0
+~
+~
+D SOUTH 24498 0 0
+~
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

@@ -1,0 +1,1718 @@
+4600~Before a vast ravine~Before you lies a deep ravine spanned by a wooden bridge ahead.  The
+massive canopy of trees above you destroys any posibility of sunlight
+breaking through. The forest life about you sings with vibrance, and 
+the smell of moist ground fills the air. The only way through the
+dense woods is to the north or south.
+~14~0~*4601~Upon a wooden bridge~An old wooden bridge traverses the deep ravine here.  Old tree trunks
+have been notched and carved to construct this old looking structure.  A
+rushing river lies many feet below you, continuing its endless persuit to
+shape the land.  The forest thickens off to the south, and a large hill
+rises up in the forest to the north.  
+~14~0~*4602~Before the gates of the Elven Stronghold~A large green hill covered in trees rises up before you.  Small windows
+carved out of the earth can barely be seen at the top of the hill, and
+several smoke stacks poke through the hillside.  A massive gate forged from
+a strange metal is set directly into the base of the hill, and a golden
+plaque catches your attention to the left of the gate.  
+~14~0~*4603~The Entrance Hall~You are beneath a spectacular dome painted with dozens of intricate
+constellations.  Tall pillars guilded with gold and silver twist and turn
+like the roots of a tree to the base of the dome.  Strange runes carved from
+wood sit atop the massive pillars.  Intricate archways lead in every
+direction from this room.  
+~7~8~*4604~A Guard Room~A rather small room surrounds you.  There is no furniture, only several
+weapons hang from the wall.  Marble covers the entire floor seamlessly,
+giving it a simple but elegant feel.  
+~0~8~*4605~A Guard Room~A rather small room surrounds you.  There is no furniture, only several
+weapons hang from the wall.  Marble covers the entire floor seamlessly,
+giving it a simple but elegant feel.  
+~0~8~*4606~A Large Apex~This room is even more spectacular than the room to the south.  A double
+leveled dome rises high above you.  On the first level of the dome a
+painting of a massive library can be seen, and the upper dome is adorned
+with portraits of unknown elves that seem to look down upon you.  Pillars
+sculpted to resemble tree branches reach high above you supporting the
+domes.  Circular doorways are positioned in the four cardinal directions of
+the room.  
+~7~8~*4607~A Hallway Outside of the Grand Hall~This wide hallway is lined with brass lanterns that causes the shadows to
+dance about merrily.  Wreaths and bouquets of wildflowers decorate the wall
+inbetween the lanterns.  The smells of food and incense wafts down the hall.
+The smells and light look a bit brighter down the hallway to the east.
+~7~8~*4608~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4609~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4610~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4611~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4612~The Center of the Grand Hall~All about you song and dance flow in harmony.  The floors shine brightly
+from the many feet that have danced across it.  Encircling this dancing area
+the musicians play merrily.  Above your head the ceiling is a bit taller and
+you can see that a host of fireflys has made it thier home.  Thier tiny
+lights twinkle and give the ceiling the appearance of a beautiful night sky.
+~7~8~*4613~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4614~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4615~The Center of the Grand Hall~All about you song and dance flow in harmony.  The floors shine brightly
+from the many feet that have danced across it.  Encircling this dancing area
+the musicians play merrily.  Above your head the ceiling is a bit taller and
+you can see that a host of fireflys has made it thier home.  Thier tiny
+lights twinkle and give the ceiling the appearance of a beautiful night sky.
+~7~8~*4616~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4617~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4618~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4619~The Grand Hall~You are in the massive hall known best for its merrymaking.  Huge wooden
+tables line the main floor of this room.  Near the very center you can see
+an area cleared out for dancing, and a small place where musicicians play. 
+Waiters and servants can be seen bringing trays of food and glasses of fine
+wine back and forth to the guests.  
+~7~8~*4620~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4621~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4622~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4623~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4624~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4625~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4626~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4627~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4628~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4629~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4630~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4631~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4632~The Upper Gallery~This entire gallery is set several feet above the rest of the hall,
+giving it a spectacular view.  All of the dancing and feasting can be seen
+in clear view from here.  A continuous oak table lines the entire upper
+gallery.  These seats are reserved for the distinguished guests of the Elven
+Lord.  
+~7~8~*4633~An Ornate Hallway~This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~7~8~*4634~An Ornate Hallway~This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~7~8~*4635~A Guest Room~A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~7~8~*4636~A Guest Room~A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~7~8~*4637~An Ornate Hallway~This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~7~8~*4638~A Guest Room~A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~7~8~*4639~A Guest Room~A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~7~8~*4640~An Ornate Hallway~This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~7~8~*4641~A Guest Room~A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~7~8~*4642~A Guest Room~A large bed dominates this room.  Large silk sheets hang down above the
+bed and a mass of pillows lies at the head.  One large lamp stands in the
+corner next to a ornate wooden dresser and mirror.  A fine rug covers the
+floor and the ceiling is stensiled with wildflowers.  
+~7~8~*4643~An Ornate Hallway~This hallway is extremely extravegant.  The walls and floors have been
+polished and buffed to a bright shine, and intricate designs have been
+carved across them.  The floor is covered in a beautiful rug, and chairs and
+tall golden lampstands line the halls.  
+~7~8~*4644~An Arched Hallway~This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~7~8~*4645~An Arched Hallway~This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~7~8~*4646~An Arched Hallway~This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~7~8~*4647~An Arched Hallway~This floor of this hallway is a beautiful black and white marble.  The
+torches that line either side of the hall send the light dancing across the
+marble.  The ceiling in ths room is arched and is supported by old looking
+beams of wood that form an elaborate design because of thier formation.  
+~7~8~*4648~The Bottom of a Spiral Staircase~This small alcove contains a large spiral staircase comprised of slabs of
+grey stone.  The stairway spirals high above your head leading to the
+floors above.  Occasional torches are positioned on the way up the stairs,
+giving off small ammounts of light.  
+~7~8~*4649~Entrance to Gwenidill~The only source of light in this barren room is a single candle that
+burns in the center.  The light from the candle causes shadows to dance
+across the room.  You notice a large rune inscribed upon the floor near the
+candle.  
+~7~1056776~*4650~Hall of the Elven Lords~This is the old hall leading to the chambers of the Elven Lord.  Various
+symbols and runes line the hallway here, to declare the glory of the elven
+race.  A long rug woven with gold lines the hall here, along with different
+portraits of the latest Elven Lords.  
+~7~8~*4651~Before the Chambers of the Elven Lord~A large door of gold stands here embossed with a large dragon.  Vines
+grow all about the walls near the door and beautiful flowers are in full
+bloom among the vines.  
+~7~8~*4652~The Bed Chambers of the Elven Lord~A spectacular and spacious rooms surrounds you.  A breathtaking bed lies
+in the rear of the room.  The bed posts have been carved to look like the
+trunks of a tree which lead up to branches that mingle above the bed.  A
+massive chest sits at the foot of the bed, and a beautiful dresser sits
+against the wall.  Upon the ceiling there is a wonderous scene depicting an
+ancient temple.  Upon the floor an elaborate symbol is carved into the stone
+itself.  
+~7~8~*4653~On a Spiral Staircase~This staircase is comprised of large slabs of grey stone.  Occasional
+torches are positioned on the wall and give off a small ammount of light. 
+The smell of dirt and the moisture in the air give the stairwell an earthy
+feeling.  
+~7~8~*4654~A Wide Hallway~The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the walls to the east.  
+~7~8~*4655~A Split in the Hallway~The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the east.  
+~7~8~*4656~A Wide Hallway~The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the east.  
+~7~8~*4657~The Elven Forge~The heat in this room is incredible, dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading,
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which send an
+orange glow throughout the room.  
+~7~8~*4658~The Elven Forge~The heat in this room is incredible, dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading,
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which send an
+orange glow throughout the room.  
+~7~8~*4659~The Elven Forge~The heat in this room is incredible, dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading,
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which send an
+orange glow throughout the room.  
+~7~8~*4660~The Elven Forge~The heat in this room is incredible, dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading,
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which send an
+orange glow throughout the room.  
+~7~8~*4661~The Elven Forge~The heat in this room is incredible, dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading,
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which send an
+orange glow throughout the room.  
+~7~8~*4662~The Elven Forge~The heat in this room is incredible, dozens of fiery forges are positioned
+throughout this room.  Large ventilation shafts are over each forge leading,
+to the outside.  Countless racks of weapons and armor line the walls.  Piles
+of ignots of every type of metal are near each forge.  The light in this
+room is provided completely by the hot embers in the forge, which send an
+orange glow throughout the room.  
+~7~8~*4663~A Wide Hallway~The floor in this hall is made of packed dirt, but it is nearly rock from
+the ammount of traffic this hallway recieves.  The walls are made of
+fieldstone and there are torches hanging from the ceiling.  The smells of
+fire and metal pervade the area, there is also a fair ammount of heat
+comming from the east.  
+~7~8~*4664~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds are
+lined up in rows with a single chest at the foot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this their
+home.
+~7~8~*4665~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable Looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  Rough hewn walls lies to the east and south.  
+~7~8~*4666~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the east.  
+~7~8~*4667~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  Rough hewn walls lie to the north and east.  
+~7~8~*4668~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the north.  
+~7~8~*4669~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds are
+lined up in rows with a single chest at the foot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this their
+home.  
+~7~8~*4670~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds are
+lined up in rows with a single chest at the foot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this their
+home.  
+~7~8~*4671~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the south.  
+~7~8~*4672~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the south.  
+~7~8~*4673~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds are
+lined up in rows with a single chest at the foot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this their
+home.  
+~7~8~*4674~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds are
+lined up in rows with a single chest at the foot of each bed.  The smell of
+sweat and war is strong here, from the many soldier who call this their
+home.  
+~7~8~*4675~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the north.  
+~7~8~*4676~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the foot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  Rough hewn walls lie to the west and to the north.  
+~7~8~*4677~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the fot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the west.  
+~7~8~*4678~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the fot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  A rough hewn wall lies to the west.  
+~7~8~*4679~The Guard Barracks~This massive room is filled only with beds.  Uncomfortable looking beds
+are lined up in rows with a single chest at the fot of each bed.  The smell
+of sweat and war is strong here, from the many soldier who call this their
+home.  Rough hewn walls lies to the west and south.  
+~7~8~*4680~The Top of a Spiral Staircase~This staircase is comprised of large slabs of grey stone.  Occasional
+torches are positioned on the wall that give off a small ammount of light. 
+The smell of dirt and the moisture in the air give the stairwell an earthy
+feeling.  Below you, you can see the staircase winding down to the floors
+below.  
+~7~8~*4681~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4682~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4683~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4684~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~7~8~*4685~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~7~8~*4686~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4687~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4688~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4689~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4690~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4691~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4692~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~7~8~*4693~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4694~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~7~8~*4695~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4696~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~7~8~*4697~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4698~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the halls for use by the
+archers.  
+~7~8~*4699~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4700~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4701~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4702~A Small Hallway~A fresh breeze flows through the hallway.  Light can be seen at the end
+of the hallway.  The walls and floors of the hall are all dirt.  The roots
+of different trees and plants can be seen running through the dirt.  Baskets
+full of arrows are set here and there about the hallway for use by the
+archers.  
+~7~8~*4703~An Archer's Post~This small area is where the archers take their post.  A small window of
+sorts has been dug through the soil and much of the forest before the
+stronghold can be seen.  Sunlight pours in through the window and the smells
+of the forest waft in though the opening.  
+~7~8~*4704~Entrance to the Ancient Halls of Gwenidill~A strange glow seems to eminate from the walls here, giving light to the
+halls.  The air is heavy with age, and the absolute silence of these halls
+is devastating.  An inch of dust covers the floor, and the eyes of a
+thousand years seems to bare down on you.  A identical rune to the one in
+the upper room is inscribed upon the floor, although it seems to be
+inverted.  
+~7~1581065~*4705~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence is devastating.  An inch of
+dust covers the floor, and the eyes of a thousand years seems to beard down
+on you.  
+~7~1581065~*4706~Hall of the Elven Chiliad~This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~7~1581065~*4707~Hall of the Elven Chiliad~This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~7~524297~*4708~Hall of the Elven Chiliad~This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~7~1581065~*4709~Hall of the Elven Chiliad~This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~7~1581065~*4710~Hall of the Elven Chiliad~This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~7~1581065~*4711~Hall of the Elven Chiliad~This massive rectangular room contains six life like statues of elven
+warriors and mages in full armor or garb.  The ceiling has a slight dome to
+it and golden runes are written across the entire space.  Five arched
+doorways lead out from this room, each doorway containing at least one
+symbol engraved next to it.  
+~7~1581065~*4712~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~1581065~*4713~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~1581065~*4714~Before a Strange Doorway~You are before a small doorway made of a strange wood.  There is quite a
+bit of static electricity in near this doorway, and a cool breeze flows from
+underneath the doorway.  
+~7~1581065~*4715~A Large Laboratory~Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hangs about in the air as if it was used only moments ago.  
+~7~1581064~*4716~A Large Laboratory~Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hangs about in the air as if it was used only moments ago.  
+~7~1581065~*4717~A Large Laboratory~Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hangs about in the air as if it was used only moments ago.  
+~7~1581065~*4718~A Large Laboratory~Every sort of bottle, and instruments of exotic make lie all about in
+this room.  Tables stacked with jars of strange powerds and shavings of
+metal stand against the back wall.  A large counter runs nearly the entire
+walls space.  Diagrams and notes are scribbled on peices of parchment and
+attached to the walls.  The floors are made of a smooth non-descript stone,
+and scorch marks can be seen here and there.  The smell of sulfer still
+hangs about in the air as if it was used only moments ago.  
+~7~1581065~*4719~A Hidden Alcove~This small alcove contains only one desc with several journals upon it. 
+A candle covered in dust is melted to the desk, and random reagents are
+scattered on the floor.  A scorched shelf dominates the wall to the west.  
+~7~524297~*4720~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~1581065~*4721~Before a Scorched Gate~A massive blackened gate stands in the south wall here.  Scorch marks
+line all the edges of the gates, and the floor is burnt as well.  The gate
+itself is inscribed with symbols of warning, and a large crown is embossed
+upon the center.  
+~7~1581065~*4722~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4723~Dummy Room~~0~0~*4724~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4725~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4726~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4727~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4728~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4729~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4730~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4731~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4732~The Elven Coffers~Several torches are lit on the walls of this massive coffer.  Incredible
+ammounts of gold and riches of every kind are piled high from corner to
+corner of this room.  The ceiling is covered in deadly metal spikes that
+hang down menacingly.  The light from the torches dances upon the treasure,
+making it look like the remnants of a shattered sun.  
+~7~1581065~*4733~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~524297~*4734~A Large Rotunda~This circular room lies under a large dome.  The ceiling of the dome is
+covered in stars that glow with an inner light.  The walls are made of an
+obsidian that seems to suck up the light around it.  Arched doorways lead
+off in all directions each baring a different symbol above it.  
+~7~1581065~*4735~Before a Set of Ornate Doors~A large set of oaken doors stand fifthteen feet high in the northern
+walls.  Vines and trees have been carved ornately into the face of the
+doors.  To lanterns containing candles lie on either side of the door frame,
+and a strange rune is cut into the stone beneath your feet.  
+~7~1581065~*4736~The Ancient Gallery~You are on the upper level of a two story room.  All along the walls here
+portraits of the Lords of this stronghold hang with candles on either side. 
+A smooth wood railing runs the edge of the balcony and you can see a massive
+library on the floor below you.  
+~7~1581065~*4737~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4738~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4739~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  A spiral
+stairway comes up through the floor here, leading down to the library.  
+~7~1581065~*4740~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4741~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4742~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4743~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4744~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4745~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  A spiral
+staircase rises up through the floor here, leading down to the library.  
+~7~1581065~*4746~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4747~The Ancient Gallery~A large walkway leads around the edge of this balcony.  All along the
+walls elegant portraits of the past Elven Lords hang with candles on either
+side of the frame.  A smooth wood railing runs the edge of the balcony and
+you can see a massive library opening up on the floor below you.  
+~7~1581065~*4748~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  A large spiral staircase leads up to the gallery here.  
+~7~1581065~*4749~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4750~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4751~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4752~The Center of the Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4753~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4754~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4755~The Center of the Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4756~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4757~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4758~The Center of the Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4759~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4760~A massive library~~0~4~*4761~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4762~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  
+~7~1581065~*4763~A Massive Library~Bookshelves rise high up towards the balcony, filled with rows and rows
+of books, journals, and the recordings of history.  Wooden ladders lean up
+against the shelves so that the higher shelves can be reached.  Tall
+lampstands are placed here and there throughout the room, next to tables and
+benches.  The floor is made of a beautiful black granite, smoothed to
+perfection.  A spiral staircase leads up to the gallery here.  
+~7~1581065~*4764~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~1581065~*4765~Before a Door Embossed with Stars~A smaller door occupies the eastern wall here.  Single stars are
+embossed upon this door that seems to be made of alabaster.  Two strange
+torches burn with a dim blue light on either side of the door frame.  
+~7~1581065~*4766~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps of constellations and even single stars line the entire outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4767~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4768~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4769~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4770~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4771~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4772~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4773~Inside the Observatory~A massive dome rises at least one hundred feet above your head.  In the
+center of this room a large contraption rises up to the very top of the
+dome.  Maps and constellations and even single stars line the enitre outer
+wall of this room, and small candles sit unlit on stands around the walkway
+of the observatory.  
+~7~1581065~*4774~Under a Massive Telescope~A massive contraption of brass rises mightily over your head.  Gear,
+wheels, and pullies command your attention at every glance.  A beautiful
+silver chair embossed with stars sits facing the telescope.  
+~7~1581065~*4775~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~1581065~*4776~Before a Door Depicting a Large Constellation~Two large doors of guilded gold dominate the eastern wall.  A large
+constellation in the shape of a lion is embossed upon the doors face.  A
+crystal chandelier hangs down from the ceiling, and strange candles within
+it burn with a golden light.  Two tapestries depicting grand feasts hang
+upon the southern and western walls.  
+~7~1581065~*4777~Throne Room of the First Elven Lord~A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~7~1581065~*4778~Throne Room of the First Elven Lord~A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~7~1581065~*4779~Throne Room of the First Elven Lord~A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~7~1581065~*4780~Throne Room of the First Elven Lord~A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~7~1581065~*4781~Throne Room of the First Elven Lord~A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~7~1581065~*4782~Throne Room of the First Elven Lord~A spectacular hall spreads out before you.  Large tapestries and curtains
+are draped from the walls next to beautiful paintings and scuptures.  The
+ceiling is high and painted with elaborate designs.  In each corner of the
+ceiling the bust of a lions head faces down towards you in silent vigil. 
+The floors are white marble and covered with beautiful rugs.  
+~7~1581065~*4783~Behind the Throne~You have stumbled into the secret room behind the massive throne. 
+Lifeless stone walls suround you completely.  The only thing that catches
+your eye is a carving of a lion upon the back wall.  
+~7~524296~*4784~A Hallway through Gwenidill~The walls here are made of some form of smooth metal.  A strange glow
+seems to eminate from the walls themselves, giving light to the halls.  The
+air is heavy with age, and the absolute silence of these halls is
+devastating.  An inch of dust covers the floor , and the eyes of a thousand
+years seems to bear down on you.  
+~7~1581065~*4785~Before a Door Carved with Ancient Runes~A large door covered in the runes of ancient dieties commands attention
+at the southern wall.  All along the walls near the doors small prayers are
+written to remind others.  The floor here is a black marble mixed with veins
+of gold running throughout.  Large golden stands are postioned at either end
+of the doorway.  
+~7~1581065~*4786~The Pantheon of Gwenidill~Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~7~1581065~*4787~The Pantheon of Gwenidill~Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~7~1581065~*4788~The Pantheon of Gwenidill~Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~7~1581065~*4789~The Pantheon of Gwenidill~Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~7~1581065~*4790~The Pantheon of Gwenidill~Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~7~1581065~*4791~The Pantheon of Gwenidill~Huge ceilings rise above your head.  Massive arches made of stone cross
+back and forth across the roof, and large murals cover the spaces between. 
+Depictions of gods and thier works have been painted to pay tribute to the
+them.  The entire pantheon is devoid of furnature.  In the southern end of
+the Pantheon a giant alter to the gods is erected.  It contains portraits of
+the gods, or what they are known for, and thier names.  Torches burn
+eternally upon the walls here in the Pantheon.  
+~7~1581065~*4792~The Inner Sanctum of Virinahn~An infinate plane stretches out in all directions.  The ground as far as
+the eye can see is sand as white as snow.  The sky is black and formless
+with only a single star in the sky above.  A constant breeze blows across
+the plane, but without sound, leaving the impression of an infinite void.  
+~9~14163973~*4793~Dummy Room~~0~4~*29100~A Forest Road~A small road cuts through the trees heading off in an easterly direction
+and not seeming to deviate much from that course.  The road itself seems to
+have been made of dark grey stones placed carefully side by side.  The
+forest surrounding the road is alive with the noises of nature and wildlife.
+The stone road continues to the east and originates to the west.  
+~0~0~*29101~A Forest Road~The stone grey path continues eastward through the forest.  A bright
+light begins to appear further down the road.  The forest is even more alive
+with the sound of life.  The forest is thicker here than it was to the west.
+The path continues off towards the light to the east.  The exit is further
+back through the woods to the west.  
+~0~0~*29102~A Forest Road~The forest around the road begins to thin while moving further east.  The
+light coming from the east seems even brighter like the sun itself shines at
+ground level from the trees.  Wild sounds are more scarce and rocks seem to
+be more frequent.  The road seems to decline in mantinence to the east while
+the way out begins to become concealed to the west.  
+~0~0~*29103~A Crumbling Road~The grey road that seems to have been so well maintained in the steps to
+the west is broken seemingly because of weathering of the wind and sand. 
+The sand looks to have origniated from the south where rock walls of a
+canyon can be seen.  A small trail leads south into the canyon whlie the
+road is still whole to the west.  
+~0~0~*29104~Beginning of a Canyon Trail~The ground around the trail starts to get rocky, and the walls of the
+canyon start their ascent upwards.  Small rocks clatter from the tops of the
+canyon walls.  Little noise is made, and few animals are seen.  The path
+leads north back to the road or south further into the desert.  
+~0~0~*29105~A Canyon Trail~The trail follows along east of the crater as it moves further south. 
+Rocks clutter the ground and the canyon walls almost look more like hills
+than cliffs.  Small breaths of wind can be felt while walking through here. 
+The scents of the forest drift back from the north while more rock and dirt
+can be seen off to the west.  
+~0~0~*29106~A Small Cave~The trail leads into a small cave that seems to have been created by
+rocks falling from the high canyon walls.  This cave seems to have
+sat for years in the same state.  There is no sand or extra rock and
+the floor of the cave is suprisingly smooth.  The path out of the
+cave is to the east.
+~0~0~*29107~A Canyon Trail~The trail winds around a big blockage of fallen rocks that could
+only have been caused by a large impact of sorts.  Sand follows the
+wind from the trail further south, stinging the eyes of travellers
+who pass through here.  The path back to the forest road is off to
+the east while the path to the desert is to the south.
+~0~0~*29108~A Canyon Trail~Broken rock litters the ground as if a road once passed through here. 
+The canyon walls seem to get steeper the further south they are followed. 
+Sand drifts in from the south, lining the ground.  The trail leads further
+south towards the bright sands of the desert while the trail leads north
+back towards the crater.  
+~0~0~*29109~A Broken Road~The trail that has lead south so far all of the sudden turns into a road
+that seems to have been broken with time.  Sand covers the places that are
+not made of stone.  The canyon walls almost block out the light.  The broken
+road leads further off the the south as well as the east, while the forest
+is back to the north.  
+~0~0~*29110~A Broken Road~The road continues south towards the scorching sands of the desert.  Sand
+covers the places of the road that are no longer stone.  Light barely shows
+through the tops of the canyon walls.  The broken road continues to the
+south towards the desert and to the west towards the western canyon wall. 
+The crater resides further off to the north.  
+~0~0~*29111~A Broken Road~The trail that has lead south so far all of the sudden turns into a road
+that seems to have been broken with time.  Sand covers the places that are
+not made of stone.  The canyon walls almost block out the light.  The broken
+road leads further off the the south as well as the west, while the forest
+is back to the northwest.  
+~0~0~*29112~A Broken Road~The road continues south towards the scorching sands of the desert.  Sand
+covers the places of the road that are no longer stone.  Light barely shows
+through the tops of the canyon.  The broken road continues to the south
+towards the desert and to the east towards the eastern canyon wall.  The
+crater resides further off to the north.  
+~0~0~*29113~A Broken Road~The road that has so far continued on south comes to a sudden halt
+against the canyon wall.  Sand doesn't seem to cover the area so badly here.
+This area of the road is mainly rock and is mostly whole.  The light cannot
+penetrate the darkness here.  The road continues back to the north and to
+the east.  
+~0~0~*29114~A Broken Road~The road seems to end here, moving back to a true canyon.  Sand covers
+the places where there is no rock as well as the places where there is. 
+Light streams onto the ground here from the path ahead.  To the south lies
+the canyon and blowing sands of the desert.  To the north and east are the
+ways back to the road.  
+~0~0~*29115~A Canyon Trail~The trail that runs inbetween the two sheer canyon walls is covered with
+sand and small rocks.  Wind blows through the canyon bringing more sand with
+it.  The sun beats down on the sand, and the sand reflects the light back
+up, making the whole area very warm.  The last of the road can be seen to
+the north while the winds of the desert beckon to the east.  
+~0~0~*29116~A Canyon Trail~Small rocks clatter from the canyon walls, falling to the ground and
+making small impressions into the sand.  The wind coming from the east is
+almost blinding when combined with the bright sunlight.  The sand seems to
+have piled up into small dunes along the trail.  The beginning of the trail
+can be seen to the west while more sand is off to the east.  
+~0~0~*29117~A Canyon Trail~The small dunes seem to rise a fraction in size, getting larger off to
+the west.  The wind sweeps past, picking up grains of sand and sometimes
+even small rocks, pushing them off to the east.  Shelter seems to be a
+problem and pushing forward seems to be the best idea.  The trail leads out
+of the canyon to the west and the larger sands can be seen to the east.  
+~0~0~*29118~A Canyon Trail~The northern wall of the canyon suddenly stops and blocks off the way
+further east.  The sheer walls of the canyon seem to lead off to the south
+now.  The wind passing through is more rapid now and the sunlight seems
+stronger.  The way back to the trail can barely be seen off to the west
+while the bright sands of the desert beckon to the south.  
+~0~0~*29119~A Canyon Trail~~0~4~*29120~A Canyon Trail~The canyon walls widen as the trail moves south into the desert.  The
+trail is covered completely in sands, the dunes large and hard to climb
+over.  The wind and sunlight together is blistering here.  The canyon leads
+out to the north while the golden sands of the desert stretch off to the
+south.  
+~0~0~*29121~A Large Dune~~0~0~*29122~The Fallen Desert~~0~0~*29123~The Fallen Desert~~0~0~*29124~The Fallen Desert~~0~0~*29125~The Fallen Desert~~0~0~*29126~The Fallen Desert~~0~0~*29127~The Fallen Desert~~0~0~*29128~Dummy Room~~0~0~*29129~The Fallen Desert~~0~0~*29130~The Fallen Desert~~0~0~*29131~The Fallen Desert~~0~0~*29132~The Fallen Desert~~0~0~*29133~The Fallen Desert~~0~0~*29134~The Fallen Desert~~0~0~*29135~The Fallen Desert~~0~0~*29136~The Fallen Desert~~0~0~*29137~Dummy Room~~0~4~*29138~The Fallen Desert~~0~0~*29139~The Fallen Desert~~0~0~*29140~The Fallen Desert~~0~0~*29141~The Fallen Desert~~0~0~*29142~The Fallen Desert~~0~0~*29143~The Fallen Desert~~0~0~*29144~The Fallen Desert~~0~0~*29145~The Fallen Desert~~0~0~*29146~The Fallen Desert~~0~0~*29147~The Fallen Desert~~0~0~*29148~The Fallen Desert~~0~0~*29149~The Fallen Desert~~0~0~*29150~The Fallen Desert~~0~0~*29151~The Fallen Desert~~0~0~*29152~The Fallen Desert~~0~0~*29153~Dummy Room~~0~0~*29154~Dummy Room~~0~0~*29155~Overlooking a Crater~~0~0~*29156~Overlooking a Crater~~0~0~*29157~Overlooking a Crater~~0~0~*29158~Overlooking a Crater~~0~0~*29159~Overlooking a Crater~~0~0~*29160~Overlooking a Crater~~0~0~*29161~Overlooking a Crater~~0~0~*29162~Overlooking a Crater~~0~0~*29163~Overlooking a Crater~~0~0~*29164~Overlooking a Crater~~0~0~*29165~Overlooking a Crater~~0~0~*29166~Overlooking a Crater~~0~0~*29167~Dummy Room~~0~0~*29168~Dummy Room~~0~0~*29169~Dummy Room~~0~0~*29170~Dummy Room~~0~0~*29171~A Dead End~~0~0~*29172~Dummy Room~~0~0~*29173~Dummy Room~~0~0~*29174~Dummy Room~~0~0~*29175~A Path Through the Village~~0~0~*29176~Standing at a Ladder~~0~0~*29177~A Village Tent~~0~0~*29178~A Village Tent~~0~0~*29179~A Path Through the Village~~0~0~*29180~A Path Through the Village~~0~0~*29181~A Path Through the Village~~0~0~*29182~A Path Through the Village~~0~0~*29183~A Village Tent~~0~0~*29184~A Path Through the Village~~0~0~*29185~A Path Through the Village~~0~0~*29186~A Path Through the Village~~0~0~*29187~The Elder's Tent~~0~0~*29188~The Elder's Tent~~0~0~*29189~A Path Through the Village~~0~0~*29190~A Path Through the Village~~0~0~*29191~A Path Through the Village~~0~0~*29192~A Path Through the Village~~0~0~*29193~A Path Through the Village~~0~0~*29194~A Village Tent~~0~0~*29100~A Forest Road~A small road cuts through the trees heading off in an easterly direction
+and not seeming to deviate much from that course.  The road itself seems to
+have been made of dark grey stones placed carefully side by side.  The
+forest surrounding the road is alive with the noises of nature and wildlife.
+The stone road continues to the east and originates to the west.  
+~0~0~*29101~A Forest Road~The stone grey path continues eastward through the forest.  A bright
+light begins to appear further down the road.  The forest is even more alive
+with the sound of life.  The forest is thicker here than it was to the west.
+The path continues off towards the light to the east.  The exit is further
+back through the woods to the west.  
+~0~0~*29102~A Forest Road~The forest around the road begins to thin while moving further east.  The
+light coming from the east seems even brighter like the sun itself shines at
+ground level from the trees.  Wild sounds are more scarce and rocks seem to
+be more frequent.  The road seems to decline in mantinence to the east while
+the way out begins to become concealed to the west.  
+~0~0~*29103~A Crumbling Road~The grey road that seems to have been so well maintained in the steps to
+the west is broken seemingly because of weathering of the wind and sand. 
+The sand looks to have origniated from the south where rock walls of a
+canyon can be seen.  A small trail leads south into the canyon whlie the
+road is still whole to the west.  
+~0~0~*29104~Beginning of a Canyon Trail~The ground around the trail starts to get rocky, and the walls of the
+canyon start their ascent upwards.  Small rocks clatter from the tops of the
+canyon walls.  Little noise is made, and few animals are seen.  The path
+leads north back to the road or south further into the desert.  
+~0~0~*29105~A Canyon Trail~The trail follows along east of the crater as it moves further south. 
+Rocks clutter the ground and the canyon walls almost look more like hills
+than cliffs.  Small breaths of wind can be felt while walking through here. 
+The scents of the forest drift back from the north while more rock and dirt
+can be seen off to the west.  
+~0~0~*29106~A Small Cave~The trail leads into a small cave that seems to have been created by
+rocks falling from the high canyon walls.  This cave seems to have
+sat for years in the same state.  There is no sand or extra rock and
+the floor of the cave is suprisingly smooth.  The path out of the
+cave is to the east.
+~0~0~*29107~A Canyon Trail~The trail winds around a big blockage of fallen rocks that could
+only have been caused by a large impact of sorts.  Sand follows the
+wind from the trail further south, stinging the eyes of travellers
+who pass through here.  The path back to the forest road is off to
+the east while the path to the desert is to the south.
+~0~0~*29108~A Canyon Trail~Broken rock litters the ground as if a road once passed through here. 
+The canyon walls seem to get steeper the further south they are followed. 
+Sand drifts in from the south, lining the ground.  The trail leads further
+south towards the bright sands of the desert while the trail leads north
+back towards the crater.  
+~0~0~*29109~A Broken Road~The trail that has lead south so far all of the sudden turns into a road
+that seems to have been broken with time.  Sand covers the places that are
+not made of stone.  The canyon walls almost block out the light.  The broken
+road leads further off the the south as well as the east, while the forest
+is back to the north.  
+~0~0~*29110~A Broken Road~The road continues south towards the scorching sands of the desert.  Sand
+covers the places of the road that are no longer stone.  Light barely shows
+through the tops of the canyon walls.  The broken road continues to the
+south towards the desert and to the west towards the western canyon wall. 
+The crater resides further off to the north.  
+~0~0~*29111~A Broken Road~The trail that has lead south so far all of the sudden turns into a road
+that seems to have been broken with time.  Sand covers the places that are
+not made of stone.  The canyon walls almost block out the light.  The broken
+road leads further off the the south as well as the west, while the forest
+is back to the northwest.  
+~0~0~*29112~A Broken Road~The road continues south towards the scorching sands of the desert.  Sand
+covers the places of the road that are no longer stone.  Light barely shows
+through the tops of the canyon.  The broken road continues to the south
+towards the desert and to the east towards the eastern canyon wall.  The
+crater resides further off to the north.  
+~0~0~*29113~A Broken Road~The road that has so far continued on south comes to a sudden halt
+against the canyon wall.  Sand doesn't seem to cover the area so badly here.
+This area of the road is mainly rock and is mostly whole.  The light cannot
+penetrate the darkness here.  The road continues back to the north and to
+the east.  
+~0~0~*29114~A Broken Road~The road seems to end here, moving back to a true canyon.  Sand covers
+the places where there is no rock as well as the places where there is. 
+Light streams onto the ground here from the path ahead.  To the south lies
+the canyon and blowing sands of the desert.  To the north and east are the
+ways back to the road.  
+~0~0~*29115~A Canyon Trail~The trail that runs inbetween the two sheer canyon walls is covered with
+sand and small rocks.  Wind blows through the canyon bringing more sand with
+it.  The sun beats down on the sand, and the sand reflects the light back
+up, making the whole area very warm.  The last of the road can be seen to
+the north while the winds of the desert beckon to the east.  
+~0~0~*29116~A Canyon Trail~Small rocks clatter from the canyon walls, falling to the ground and
+making small impressions into the sand.  The wind coming from the east is
+almost blinding when combined with the bright sunlight.  The sand seems to
+have piled up into small dunes along the trail.  The beginning of the trail
+can be seen to the west while more sand is off to the east.  
+~0~0~*29117~A Canyon Trail~The small dunes seem to rise a fraction in size, getting larger off to
+the west.  The wind sweeps past, picking up grains of sand and sometimes
+even small rocks, pushing them off to the east.  Shelter seems to be a
+problem and pushing forward seems to be the best idea.  The trail leads out
+of the canyon to the west and the larger sands can be seen to the east.  
+~0~0~*29118~A Canyon Trail~The northern wall of the canyon suddenly stops and blocks off the way
+further east.  The sheer walls of the canyon seem to lead off to the south
+now.  The wind passing through is more rapid now and the sunlight seems
+stronger.  The way back to the trail can barely be seen off to the west
+while the bright sands of the desert beckon to the south.  
+~0~0~*29119~A Canyon Trail~~0~4~*29120~A Canyon Trail~The canyon walls widen as the trail moves south into the desert.  The
+trail is covered completely in sands, the dunes large and hard to climb
+over.  The wind and sunlight together is blistering here.  The canyon leads
+out to the north while the golden sands of the desert stretch off to the
+south.  
+~0~0~*29121~A Large Dune~~0~0~*29122~The Fallen Desert~~0~0~*29123~The Fallen Desert~~0~0~*29124~The Fallen Desert~~0~0~*29125~The Fallen Desert~~0~0~*29126~The Fallen Desert~~0~0~*29127~The Fallen Desert~~0~0~*29128~Dummy Room~~0~0~*29129~The Fallen Desert~~0~0~*29130~The Fallen Desert~~0~0~*29131~The Fallen Desert~~0~0~*29132~The Fallen Desert~~0~0~*29133~The Fallen Desert~~0~0~*29134~The Fallen Desert~~0~0~*29135~The Fallen Desert~~0~0~*29136~The Fallen Desert~~0~0~*29137~Dummy Room~~0~4~*29138~The Fallen Desert~~0~0~*29139~The Fallen Desert~~0~0~*29140~The Fallen Desert~~0~0~*29141~The Fallen Desert~~0~0~*29142~The Fallen Desert~~0~0~*29143~The Fallen Desert~~0~0~*29144~The Fallen Desert~~0~0~*29145~The Fallen Desert~~0~0~*29146~The Fallen Desert~~0~0~*29147~The Fallen Desert~~0~0~*29148~The Fallen Desert~~0~0~*29149~The Fallen Desert~~0~0~*29150~The Fallen Desert~~0~0~*29151~The Fallen Desert~~0~0~*29152~The Fallen Desert~~0~0~*29153~Dummy Room~~0~0~*29154~Dummy Room~~0~0~*29155~Overlooking a Crater~~0~0~*29156~Overlooking a Crater~~0~0~*29157~Overlooking a Crater~~0~0~*29158~Overlooking a Crater~~0~0~*29159~Overlooking a Crater~~0~0~*29160~Overlooking a Crater~~0~0~*29161~Overlooking a Crater~~0~0~*29162~Overlooking a Crater~~0~0~*29163~Overlooking a Crater~~0~0~*29164~Overlooking a Crater~~0~0~*29165~Overlooking a Crater~~0~0~*29166~Overlooking a Crater~~0~0~*29167~Dummy Room~~0~0~*29168~Dummy Room~~0~0~*29169~Dummy Room~~0~0~*29170~Dummy Room~~0~0~*29171~A Dead End~~0~0~*29172~Dummy Room~~0~0~*29173~Dummy Room~~0~0~*29174~Dummy Room~~0~0~*29175~A Path Through the Village~~0~0~*29176~Standing at a Ladder~~0~0~*29177~A Village Tent~~0~0~*29178~A Village Tent~~0~0~*29179~A Path Through the Village~~0~0~*29180~A Path Through the Village~~0~0~*29181~A Path Through the Village~~0~0~*29182~A Path Through the Village~~0~0~*29183~A Village Tent~~0~0~*29184~A Path Through the Village~~0~0~*29185~A Path Through the Village~~0~0~*29186~A Path Through the Village~~0~0~*29187~The Elder's Tent~~0~0~*29188~The Elder's Tent~~0~0~*29189~A Path Through the Village~~0~0~*29190~A Path Through the Village~~0~0~*29191~A Path Through the Village~~0~0~*29192~A Path Through the Village~~0~0~*29193~A Path Through the Village~~0~0~*29194~A Village Tent~~0~0~*2900~The Description Room~You find yourself in a small, spartan room.  Your insight tells you that
+apparantly the Caelumaedani are not satisfied with your current description,
+and you have been placed here until your appearance is suitable for an
+adventurer.  A number of statues stand in various areas of the room, images
+of assorted races that you may wish to look at.  Please excuse the mess.  We
+are under construction.  
+~1~5252100~*1200~The Chat Room~You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
+which twinkles happily in a warm fireplace.  This is one of the many rooms
+where the heroes and gods come to socialize.  It is by far one of the most
+comfortable!
+~7~327688~*1201~Moses' Hangout~You see here a cozy little room with a fireplace.  You can tell it is Moses'
+room by the two stone tablets and a bible on a small ledge near the fireplace.
+This room was designed for total relaxation.  You can watch television, listen
+to the stereo, even soak in a hot tub.
+There is a bell here for the butler.
+~7~65544~4~10~10~0~~A blast of lightning arcs from the walls!~*1202~The Center of the Universe~You are at the centre of the universe, everything is filled with bright
+light in all colors. You feel time and space no longer exist here.
+Exits fill the room in all 42 dimensions, leading everywhere.
+~7~66056~*1203~Valhalla~This is the huge Hall of Valhalla, where the Gods rule supreme.  The
+cavernous building stretches infinitely in all directions.  Valhalla
+continues to the east, and the gods make their homes north and south of
+the halls.  The golden gates are to the west.  You know not what lies
+upward...
+~7~8~*1204~Priscilla's Pleasure Palace ~As you look around you, you see the largest collection of erotic toys
+in the world!!!  On a table in the middle of the room lies a book titled :
+"All You Ever Wanted to Know About Sex..But Were Afraid to Ask"
+There are things here that you never even imagined in your wildest dreams!
+~7~33288~*1205~The Eye of the Hurricane~The shrieking winds of a monstrous storm surround you, spinning you around
+in an endless web of fury. But then, in the middle of turmoil, you find a
+strange calm. You find yourself hovering in the calm eye of a hurricane. All
+around you you can see the desruction caused by the powerful storm. White
+hot flashes of lightning flicker from the depths of the hurricane.  But
+everything is strangely peaceful in here, with the sun shining in from above
+and a flock of birds winging across the sky.  You stretch out and relax, this
+storm is going to be here a while.
+~9~25100~*1206~Walking on the Moon~The proud and lonely silence of Mare Imbrium surrounds you, as you gaze upon
+the sterile splendor of the moon.  All around is the velvet curtain of night,
+studded with a thousand gleaming jewels.  Below you hangs the beautiful
+fields of Earth, looking fragile and far away, but full of hope.  A sense of
+wistful regret touches you, as you think about what might have been, and what
+will be.
+~7~25092~*1207~The Satin Memorial Reading Room~Half read books lie everywhere: Yeats, Tennyson, Chandler, Barrie;
+a battered paperback de Laclos; a dusty leather-bound Donne.  A
+damp novel perches precariously on the edge of a large bathtub.
+As your eyes travel beyond the steam rising to the air toward the
+rose-brambled balcony railing, you notice a well-creased printout
+of a poem sitting on a the velvet cushions of a rosewood chair
+that has been set so as to see the stark black mountains
+from one angle, or the wine-dark sea from another.
+~4~41480~*1208~A Sea Cave~You are in a small cave in a cliff next to a deep green sea.  Fine
+gold and pink sand blanket the floor.  Shells are scattered and strewn
+about.  A blow hole in the roof of the cave allows beams of light to stream
+in and illuminate the cave.  The wind blows outside the entrance, but
+you are protected from the weather in your cozy cave.  The foamy surf
+never seems to quite reach your feet.  Several boulders here have been
+worn by time into a shape similar to a comfortable chair.
+~7~33288~*1209~The Archmage's Workroom~This well-lit room is absolutely filled with clutter -- enchanting gear,
+reagents, spell components, ancient tomes, scrolls, braziers, exotic incense
+and countless other tools of the magical trade, all jumbled together with
+seemingly no attention paid to organization.  You have no doubts that Alander
+can find whatever he needs without delay, however.  A heavy oak door stands
+barred to the south, to discourage idle visitors, and Alander's quarters
+are east.
+~7~66568~*1210~Office~The first thing you notice about this office is the floor; it
+is a black & white checkerboard pattern, with 8 squares to a side.  The
+south wall is a HUGE picture window that produces a magnificent view of
+the land.  In front of the window is a large desk.  Completely covering
+the east wall is a bookshelf, that is crammed full.  In the northwest
+corner, you notice a statue.
+~7~33288~*1211~Arena of Judgement~The scene lain before you is one that gives you the feeling of being placed
+under a higher authority.  The jury is out.  A statue of Pontius Pilate is
+in the aft of the Arena.  Staring balefully, the statue faces a distant
+hillside where many aged crosses still stand.  The Arena is set in a wide
+pit-like field of trampled bloodstained grass, and is guarded by high walls
+of veinous marble.  A bloodstone seat awaits the true paragon of Romanity.
+~7~1090056~*1212~The Realm of the Dead~You are standing on an immense, grey stone floor that stretches as far as you
+can see in all directions.  Rough winds plunging from the dark, starless sky
+tear savagely at your fragile body.
+~7~8200~*1213~Asgard~You stand on a huge expanse of glass.  Below you are clouds and the
+pains of mortality.  As you stand in Asgard, home of the bravest of the
+brave, you are frozen in awe of the power held within these walls.  A
+huge mansion lies to the east beyond a set of magnificent golden doors.
+~7~327680~*1214~The Room of Lost Souls~This is the room full of souls that never made it to Asgard.  They are
+trapped here eternally, left to wander about in misery.  They were infidels
+and cowards.  Their cries of misery send a shiver down your spine.
+~7~8~*1215~Head of the Rainbow Bridge~Standing on the mortal end of the Rainbow Bridge, the bridge arches up
+before you and seems to disappear into the clouds.  You wonder if it is
+wise to venture upward into the realm of the gods.  But it seems so calm
+and peaceful here that it would be a shame to leave...
+~1~32776~*1216~The Entrance of Valhalla~The huge ornate entrance of Valhalla is before you.  It seems as though
+atleast eight-hundred soldiers could walk abreast of one another through
+these doors. You stare in awe at the sparkling mansion before you.  You
+wonder what secrets are held behind these doors and long to hear the stories
+of bravery and glory that you know are kept within the walls of Valhalla.
+~1~32768~7~8~8~3~You accidentally depress a small stone button.~From hidden holes, gouts of acid spray out at you!~*1217~Valhalla~You are standing in the halls of Valhalla.  Pictures of Odin, Thor, Tyr,
+Loki, Freyr, Feyja, and Balder line the walls.  The cavernous hall extends
+to the east and west.  Rooms belonging to the gods lie to the north and
+south.  There appears to be an exit above you, but you do not know what is
+up there...
+~7~0~*1218~Valhalla~You are standing in the halls of Valhalla.  Tapestries of the gods line
+the walls.  A statue of Odin is here.  The halls continue to the east and
+west, and there are doors to the north and south of you.  There is some
+sort of exit above you, but you do not know where it leads...
+~7~0~*1219~Valhalla~You have reached the end of the halls of Valhalla.  There are heavy doors
+on 3 walls.  They lead into the rooms of the gods.  The hall goes back to
+the west, and there is some sort of an exit above you.  Torches sputter
+softly and the scent of incense is strong here.
+~7~0~*1220~On the Rainbow Bridge~You have reached the center of the Rainbow Bridge.  Clouds and mist swirl
+around your feet.  The view from here is incredible.  It is little wonder
+that the heavens were saved for the gods personal pleasures.
+~1~65536~*1221~The End of the Rainbow Bridge~You have reached the end of the Rainbow Bridge.  Asgard stretches out above
+you.  Looking around, you search for the legendary guardian of Asgard.  The
+clouds are far below you and a sense of beauty and peacefulness surrounds you.
+~7~65536~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~0~*156~Dummy Room~~7~8~*157~Dummy Room~~7~8~*158~Dummy Room~~7~8~*159~Dummy Room~~7~8~*160~Dummy Room~~7~8~*161~Dummy Room~~7~8~*162~Dummy Room~~7~8~*163~Dummy Room~~7~8~*164~Dummy Room~~7~8~*165~Dummy Room~~0~0~*166~Dummy Room~~0~0~*167~a heavy iron door~~0~0~*168~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~Dummy Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Dummy Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~Dummy Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~Dummy Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Dressing Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Dummy Room~~0~0~*173~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Washroom~~0~0~*173~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~0~13631488~*166~Dummy Room~~0~13631488~*167~Dummy Room~~0~13631488~*168~Southwest Dungeon Room~~0~13631488~*169~Dummy Room~~0~0~*170~Dummy Room~~0~0~*171~Dummy Room~~0~0~*172~Washroom~~0~0~*173~Dressing and Powder Room~~0~0~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~8~*170~Dummy Room~~7~8~*171~Dummy Room~~7~8~*172~An Elegant Washroom~~7~8~*173~Dressing and Powder Room~~7~8~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~0~13631488~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~Dummy Room~~7~13631496~*157~Dummy Room~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~Dummy Room~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~Dummy Room~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~Dummy Room~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~Dummy Room~~7~13631496~*159~Dummy Room~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~Dummy Room~~7~13631496~*162~Dummy Room~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~Dummy Room~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~Dummy Room~~7~13631496~*167~Dummy Room~~7~13631496~*168~Southwest Dungeon Room~~7~13631496~*169~Dummy Room~~7~13631496~*170~Dummy Room~~7~13631496~*171~Dummy Room~~7~13631496~*172~An Elegant Washroom~~7~13631496~*173~Dressing and Powder Room~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~The Dungeon~~7~13631496~*169~The Dungeon~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~The Dungeon~~7~13631496~*169~The Dungeon~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~Dummy Room~~0~0~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~The Dungeon~~7~13631496~*169~The Dungeon~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~The Dungeon~~7~13631496~*169~The Dungeon~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~The Dungeon~~7~13631496~*169~The Dungeon~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Dungeon~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Dungeon~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~Dummy Room~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~The Chamber of Femininity~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Dungeon~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~The Chamber of Femininity~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~The Chamber of Femininity~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~The Chamber of Femininity~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~8~*175~An Executive Office Suite~~7~8~*177~The Chamber of Femininity~~7~8~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been expertly
+carved out of the solid underground rock.  Dimly lit torches on all four
+corners of the room provide warmth and help your eyes overcome the darkness
+of the underground.  The smell of perfume permeates the air, giving the room
+a distinctly feminine touch.  Yet, in all its splendour, the room and its
+furnishings have an unnatural feel about them, though you couldn't begin to
+describe how or why.  
+~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~Blah.
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~7~13631496~*175~An Executive Office Suite~~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~7~13631496~*175~An Executive Office Suite~You are in a stately office chamber which obviously belongs to someone of
+high standing.  There are tall bookshelves on the east side of the room,
+full of books written in the drowish language.  There is a large desk here
+upon which piles of paper sit, waiting to be stamped or processed by a
+bureaucratic hand.  The floor is covered with exquisite carpetting made from
+the fur of some unknown animal.  In the corner of the room is a large
+aquarium that is full of colourful fish.  
+~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~7~13631496~*175~An Executive Office Suite~You are in a stately office chamber which obviously belongs to someone of
+high standing.  There are tall bookshelves on the east side of the room,
+full of books written in the drowish language.  There is a large desk here
+upon which piles of paper sit, waiting to be stamped or processed by a
+bureaucratic hand.  The floor is covered with exquisite carpetting made from
+the fur of some unknown animal.  In the corner of the room is a large
+aquarium that is full of colourful fish.  
+~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~7~13631496~*175~An Executive Office Suite~You are in a stately office chamber which obviously belongs to someone of
+high standing.  There are tall bookshelves on the east side of the room,
+full of books written in the drowish language.  There is a large desk here
+upon which piles of paper sit, waiting to be stamped or processed by a
+bureaucratic hand.  The floor is covered with exquisite carpetting made from
+the fur of some unknown animal.  In the corner of the room is a large
+aquarium that is full of colourful fish.  
+~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~7~13631496~*175~An Executive Office Suite~You are in a stately office chamber which obviously belongs to someone of
+high standing.  There are tall bookshelves on the east side of the room,
+full of books written in the drowish language.  There is a large desk here
+upon which piles of paper sit, waiting to be stamped or processed by a
+bureaucratic hand.  The floor is covered with exquisite carpetting made from
+the fur of some unknown animal.  In the corner of the room is a large
+aquarium that is full of colourful fish.  
+~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*155~The Parlor Entrance~You find yourself at the entrance to a relaxing, upscale parlour.  The
+tall front desk before you has a large guest list, as well as a stack of
+brochures printed in drow script.  On the wall behind the front desk is a
+fancy gold logo which amounts to nothing less than the letter "Z".  The
+relaxing sound of running water from a small fountain beside the front desk.
+A corridor leads north into what looks like a large hallway.  
+~7~13631496~*156~The southwestern bath and steam chamber~~7~13631496~*157~A luxurious marble-tiled hallway~~7~13631496~*158~The southeastern bath and steam chamber~~7~13631496~*159~The western bath and steam chamber~~7~13631496~*160~A luxurious marble-tiled hallway~~7~13631496~*161~The eastern bath and steam chamber~~7~13631496~*162~The northwestern bath and steam chamber~~7~13631496~*163~A luxurious marble-tiled hallway~~7~13631496~*164~The northeastern bath and steam chamber~~7~13631496~*165~The Back Room~~7~13631496~*166~A dimly lit passageway beneath the back room~You are in a cold underground passageway.  Your eyes feast hungrily on
+what remains of the light coming from the back room above.  The smell of
+mildew and what you believe to be raw sewage wafts through the air.  You are
+able to tell that the ground is wet, with maggots and cockroaches roaming
+freely.  The constant scurrying of rats and inexorable dripping of water can
+be heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen off in the distance.  The
+passage continues to the north.  
+~7~13631496~*167~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  The passage continues to the north.  
+~7~13631496~*168~A dark underground passageway~You are in a cold, dark underground passageway.  The near absence of
+light is almost overwhelming.  Your eyes are unable to discern any important
+details about the surroundings, but you are able to tell that the ground is
+wet.  The constant scurrying of rats and inexorable dripping of water can be
+heard around you, with an occasional scream of anguish somewhere in the
+distance.  A faint trace of light can be seen behind the doors to the east
+and west.  
+~7~13631496~*169~The Torture Chamber~~7~13631496~*170~The Chamber of Sacrifice~~7~13631496~*171~The Laboratory of Science and Medicine~~7~13631496~*172~An elegant washroom~~7~13631496~*173~The dressing and powder room~~7~13631496~*174~A formal reception area~You are in a spacious reception area looks even more extravagant than the
+parlour below.  The reception desk is covered with neatly arranged piles of
+paperwork.  The atmosphere is genuinely business-like, as numerous doors
+leading into offices can be seen all around you.  
+~7~13631496~*175~An Executive Office Suite~You are in a stately office chamber which obviously belongs to someone of
+high standing.  There are tall bookshelves on the east side of the room,
+full of books written in the drowish language.  There is a large desk here
+upon which piles of paper sit, waiting to be stamped or processed by a
+bureaucratic hand.  The floor is covered with exquisite carpetting made from
+the fur of some unknown animal.  In the corner of the room is a large
+aquarium that is full of colourful fish.  
+~7~13631496~*177~The Chamber of Femininity~You are in a cosy, exquisitely decorated chamber that has been hollowed
+out of the solid underground rock.  Dimly lit torches on all four corners of
+the room provide comforting light and warmth, offering a brief respite from
+the bitter coldness of the underground.  The smell of perfume permeates the
+air, giving the room a distinctly feminine touch.  Yet, in all its
+splendour, the room has an indescribably artificial feel about it.  Its
+furnishings are perfectly arranged and bear no signs of use, as though
+untouched by the reality of time and wear.  
+~7~13631496~*

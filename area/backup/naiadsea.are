@@ -1,0 +1,2322 @@
+#AREA
+naiadsea.are~
+The Naiadian Sea~
+Kyriss~
+20 40
+15800 15899
+normal
+temperate
+0
+1
+Kyriss~
+
+#MOBS
+#15800
+sea serpent green~
+a green sea serpent~
+A green sea serpent skims the waters surface looking for prey.
+~
+Emerald green scales glisten vibrantly in the sun as water streams
+the serpent's back.  It looks up at you, green eyes glaring at you
+with intense hatred.  Its body moves fluidly through the water,
+preparing to devour you piece by piece.
+~
+-700 0 100 dragon~
+45 25d10+3000 8d4+16 0 100 shbite
+0 0 0 0
+standing male none
+BGMXbc BGMXbc huge
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DODGE
+OFF FAST
+AFF CALM
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+RES SLASH
+RES LIGHTNING
+VUL ACID
+CLASS warrior none none 
+#15801
+sea serpent red~
+a red sea serpent~
+A red sea serpent glides gracefully through the water.
+~
+Blood-red eyes stare demonically at you, devouring your flesh even
+before it prepares to attack.  Crimsom scales shimmer in the sunlight,
+creating brilliant sparkles of red as it moves toward you, ready to
+rip you apart.
+~
+-700 0 100 dragon~
+45 25d10+3000 8d4+16 0 100 flbite
+0 0 0 0
+standing male none
+BGMXbc BGMXbc huge
+ACT NPC
+ACT STAY_AREA
+OFF BERSERK
+OFF DODGE
+OFF FAST
+AFF CALM
+AFF WATERBREATH
+IMM SUMMON
+IMM CHARM
+RES SLASH
+RES LIGHTNING
+VUL ACID
+CLASS warrior none none 
+#15802
+merman hunter~
+a merman hunter~
+A merman hunter moves silenty through the water hunting sea serpents.
+~
+He travels all through the sea in search of his bitter enemy, the sea
+serpent.  He worries not who will live or die, only of the battle to
+come.  If he wins, his people will be well fed for a long time, as well
+as being just that much safer.  If he loses, then he will have died
+for their protection and livelihood.  For him, this is the most
+honorable of deaths.
+~
+500 0 100 human~
+40 15d10+1850 4d8+13 0 100 charge
+0 0 0 0
+standing male moderate
+G 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+CLASS warrior none none 
+#15803
+merman guard~
+a merman guard~
+A merman carefully guards the mermaids as they sunbathe.
+~
+He keeps careful watch for predators, especially sea serpents,
+ready to give up his life to protect the mermaids.  He knows
+they trust him explicitely, and would do anything to never let
+them down.
+~
+500 0 100 human~
+40 15d10+1850 4d8+13 0 100 charge
+0 0 0 0
+standing male moderate
+G 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+CLASS warrior none none 
+#15804
+mermaid golden~
+a golden haired mermaid~
+A beautiful mermaid solicitously brushes her lustrous, golden hair.
+~
+Lustrous golden hair floats about her body like a halo.  She glances
+up at you, china blue eyes regarding you with mild curiousity.  She
+smiles absently, then goes back to combing her hair as if you had
+never disturbed her.
+~
+500 0 100 human~
+35 10d10+1300 4d7+11 0 100 magic
+0 0 0 0
+standing female none
+G 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT GAIN
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15805
+mermaid auburn~
+an aurburn haired mermaid~
+A lovely, auburn haired mermaid floats about, soaking up the sun.
+~
+She glances distractedly at you, emerald green eyes flashing her
+irritation at your interupption.  She tosses her head disdainfully,
+auburn hair blazing through the air, slaps her tail against the
+water, then continues her sunbathing session.
+~
+500 0 100 human~
+35 10d10+1300 4d7+11 0 100 magic
+0 0 0 0
+standing female none
+G 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15806
+mermaid tawny~
+a tawny haired mermaid~
+A tawny haired mermaid swims effortlessly through the waves.
+~
+She swims lazily about, languidly stretching her body with each
+movement.  She smiles sweetly at you, brown eyes dancing with
+merriment and a love of life.  She tosses her tawny colored hair
+over her shoulder and resumes her exercises.
+~
+500 0 100 human~
+35 10d10+1300 4d7+11 0 100 magic
+0 0 0 0
+standing female none
+G 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15807
+mermaid raven~
+a raven haired mermaid~
+A mermaid, raven black hair fanning about her body, sings to herself.
+~
+She glances distractedly at you, violet eyes seeing nothing.
+Thoughts of her bethrothed fill her with longing.  She twirls
+one raven black curl around her finger and sings a sweet song
+of love to herself.  Faint notes drift toward you, enchanting
+you with their purity.
+~
+500 0 100 fido~
+35 10d10+1300 4d7+11 0 100 magic
+0 0 0 0
+standing female none
+HM HM medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF ASSIST_GUARD
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15808
+manta ray giant~
+a giant manta ray~
+A giant manta ray can be seen gliding just below the waters surface.
+~
+Wings spread over 20 feet across, the manta ray glides through the
+water like a bird flies through the air.  So fluid of motion, only
+the slighest ripple is created as it swims past.
+~
+0 0 100 human~
+30 6d12+853 4d6+8 0 100 whip
+0 0 0 0
+standing male none
+Gbc Gbc large
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15809
+fish school~
+a school of fish~
+A school of fish blackens the water as it darts about.
+~
+A large school of mullet darts haphazardly about, trying to avoid
+predators.  Their sheer mass blackens the water as they stay tightly
+bound to one another for protection.
+~
+0 0 100 human~
+30 6d12+853 4d6+8 0 100 charge
+0 0 0 0
+standing male none
+Gbc Gbc large
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+AFF WATERBREATH
+IMM DROWNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15810
+pelican~
+a pelican~
+A pelican rides the waves, relaxing from its last meal.
+~
+The pelican scoops up water in its beak causing its pouch to sag
+downward.  It floats lazily on the gentle waves, resting up before
+it begins searching for its next meal.
+~
+0 0 100 water fowl~
+25 5d10+550 2d10+7 0 100 peckb
+0 0 0 0
+standing male none
+HM HM small
+ACT NPC
+ACT STAY_AREA
+AFF SLOW
+IMM ENERGY
+RES LIGHTNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#15811
+albatross~
+an albatross~
+An albatross soars through the air, wings spread wide.
+~
+Asleep in mid air, the albatross soars effortlessly overhead,
+wings spread nearly ten feet wide tip to tip.  It makes not
+even the slightest movement, simply drifts along on the air
+currents.
+~
+0 0 100 water fowl~
+25 5d10+550 2d10+7 0 100 peck
+0 0 0 0
+standing male none
+HM HM medium
+ACT NPC
+ACT STAY_AREA
+AFF SLOW
+IMM DROWNING
+RES LIGHTNING
+RES POISON
+RES DISEASE
+VUL LIGHTNING
+#0
+
+
+
+#OBJS
+#15800
+hide green sea serpent~
+a hide from a green sea serpent~
+A green hide lays balled up here.~
+armor
+flesh~
+2 2 2 2 0
+45 8 3000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+APPLY CON 1
+APPLY HP 25
+APPLY DAMROLL 3
+LIMIT 4
+TIMER 0
+
+#15801
+rear claws green sea serpent~
+the rear claws of a green sea serpent~
+A pair of claws lay here looking deadly.~
+armor
+flesh~
+5 5 5 5 0
+45 45 3000 P
+WEAR TAKE
+WEAR FEET
+ITEM MAGIC
+APPLY STR 1
+APPLY HP 25
+APPLY DAMROLL 2
+LIMIT 4
+TIMER 0
+
+#15802
+hide red sea serpent~
+a hide of a red sea serpent~
+A red hide lays balled up here.~
+armor
+flesh~
+5 5 5 5 0
+45 55 3000 P
+WEAR TAKE
+WEAR BODY
+ITEM MAGIC
+APPLY HP 50
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 4
+TIMER 0
+
+#15803
+front claws red sea serpent~
+the front claws of a red sea serpent~
+A pair of claws lay here looking deadly.~
+armor
+flesh~
+5 5 5 5 0
+45 35 3000 P
+WEAR TAKE
+WEAR HANDS
+ITEM MAGIC
+APPLY DEX 2
+APPLY HP 35
+APPLY HITROLL 1
+LIMIT 4
+TIMER 0
+
+#15804
+arm bands golden~
+a pair of golden arm bands inscribed with a trident~
+A pair of golden arm bands lays discarded in a corner.~
+armor
+gold~
+6 6 6 6 0
+40 25 2500 P
+WEAR TAKE
+WEAR ARMS
+ITEM MAGIC
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 10
+TIMER 0
+
+#15805
+trident golden~
+a golden trident~
+A golden trident lays here looking menacing.~
+weapon
+gold~
+polearm 6 7 pierce 0
+40 25 2500 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+ITEM NODROP
+APPLY HITROLL 4
+APPLY DAMROLL 5
+LIMIT 7
+TIMER 0
+
+#15806
+helm golden~
+a golden helm decorated with sea serpent horns~
+A large helm rests here.~
+armor
+gold~
+3 3 3 3 0
+40 15 2500 P
+WEAR TAKE
+WEAR HEAD
+ITEM MAGIC
+APPLY WIS 3
+APPLY HP 35
+LIMIT 7
+TIMER 0
+
+#15807
+spear poison-tipped~
+a poison-tipped spear~
+A thin, golden stick with a sharp, pointed end lies here.~
+weapon
+gold~
+spear 6 7 pierce 0
+40 24 2500 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+ITEM NODROP
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 8
+TIMER 0
+
+#15808
+comb finger coral~
+a comb made from finger coral~
+A skillfully crafted comb lays half hidden here.~
+armor
+coral~
+9 9 9 9 0
+35 1 2000 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+APPLY MANA 25
+APPLY HP 25
+APPLY HITROLL 2
+LIMIT 10
+TIMER 0
+
+#15809
+necklace blue starfish~
+a necklace made from blue starfish~
+A necklace made from blue starfish lays in a crumpled heap.~
+armor
+starfish~
+1 1 1 1 0
+35 5 2000 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+ITEM BLESS
+APPLY DEX 1
+APPLY HP 25
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 10
+TIMER 0
+
+#15810
+bracelet seahorses~
+a bracelet made from seahorses~
+A bracelet made from seahorses lies neglected in a small pile.~
+armor
+seahorse~
+2 2 2 2 0
+35 10 2000 P
+WEAR TAKE
+WEAR WRIST
+ITEM MAGIC
+ITEM BLESS
+APPLY WIS 2
+APPLY MANA 20
+LIMIT 10
+TIMER 0
+
+#15811
+ring black pearl~
+a black pearl ring~
+A black pearl ring lies here completely fogotten.~
+armor
+pearl~
+2 2 2 0 0
+35 1 2000 P
+WEAR TAKE
+WEAR FINGER
+ITEM MAGIC
+ITEM BLESS
+APPLY MANA 25
+APPLY DAMROLL 2
+LIMIT 10
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#15800
+A Crescent-Shaped Beach~
+A beautiful beach, forming the shape of a crescent moon, stretches
+out from the edge of the woods.  Deep, red sand lends an air of
+relaxation to this utopian setting.  The water, in sharp contrast,
+to the sand, starts out as a brilliant green, then turns to a
+beautiful shade of turquoise all the way to the horizon.  A few
+islands can be seen far into the distance.
+~
+field
+D NORTH 15805 0 0
+~
+~
+D EAST 15801 0 0
+~
+~
+D WEST 19201 0 0
+~
+~
+#15801
+A Crescent-Shaped Beach~
+Extending out in the shape of a crescent-moon, the beach is a
+perfect paradise.  It gives off the appearance of twilight no
+matter the time of day, as deep, red sand stretches from one
+end to the other.  A few palm trees dapple the shoreline,
+adding to the breathtaking beauty of the place.  Some small
+islands can be seen off in the horizon.
+~
+field
+D NORTH 15806 0 0
+~
+~
+D EAST 15802 0 0
+~
+~
+D WEST 15800 0 0
+~
+~
+#15802
+A Crescent-Shaped Beach~
+Extending out in the shape of a crescent-moon, the beach is a
+perfect paradise.  It gives off the appearance of twilight no
+matter the time of day, as deep, red sand stretches from one
+end to the other.  A few palm trees dapple the shoreline,
+adding to the breathtaking beauty of the place.  Some small
+islands can be seen off in the horizon.
+~
+field
+D NORTH 15807 0 0
+~
+~
+D EAST 15803 0 0
+~
+~
+D WEST 15801 0 0
+~
+~
+#15803
+A Crescent-Shaped Beach~
+A beautiful beach, forming the shape of a crescent moon, stretches
+out from the edge of the woods.  Deep, red sand lends an air of
+relaxation to this utopian setting.  The water, in sharp contrast,
+to the sand, starts out as a brilliant green, then turns to a
+beautiful shade of turquoise all the way to the horizon.  A few
+islands can be seen far into the distance.
+~
+field
+D NORTH 15808 0 0
+~
+~
+D WEST 15802 0 0
+~
+~
+#15804
+The Shallows~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D NORTH 15809 0 0
+~
+~
+D EAST 15805 0 0
+~
+~
+#15805
+The Shallows~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D NORTH 15810 0 0
+~
+~
+D EAST 15806 0 0
+~
+~
+D SOUTH 15800 0 0
+~
+~
+D WEST 15804 0 0
+~
+~
+#15806
+The Shallows~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D EAST 15807 0 0
+~
+~
+D SOUTH 15801 0 0
+~
+~
+D WEST 15805 0 0
+~
+~
+#15807
+The Shallows~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D EAST 15808 0 0
+~
+~
+D SOUTH 15802 0 0
+~
+~
+D WEST 15806 0 0
+~
+~
+#15808
+The Shallows~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D NORTH 15812 0 0
+~
+~
+D SOUTH 15803 0 0
+~
+~
+D WEST 15807 0 0
+~
+~
+#15809
+Sandbar~
+A large sandbar runs parallel to the beach.  The normally clear
+water is murky here as waves break violently across it trying
+to reach the shoreline.  No life teems beneath these rough,
+cloudy depths.
+~
+water
+D NORTH 15815 0 0
+~
+~
+D EAST 15810 0 0
+~
+~
+D SOUTH 15804 0 0
+~
+~
+#15810
+Sandbar~
+No life can be seen here, as the water hurtles across the sandbar
+in protest to being denied easy access to the shore.  A piece of
+seaweed gets tossed violently about, caught in the endless currents
+ripping back and forth.
+~
+water
+D NORTH 15821 0 0
+~
+~
+D EAST 15811 0 0
+~
+~
+D SOUTH 15805 0 0
+~
+~
+D WEST 15809 0 0
+~
+~
+#15811
+Sandbar~
+A large sandbar runs parallel to the beach.  The normally clear
+water is murky here as waves break violently across it trying
+to reach the shoreline.  No life teems beneath these rough,
+cloudy depths.
+~
+water
+D NORTH 15816 0 0
+~
+~
+D WEST 15810 0 0
+~
+~
+#15812
+A Coral Reef~
+Clear, turquoise water houses a spectacular variety of exotic,
+colorful fish living on a magnificent reef.  The reef is composed
+of various hues of coral, sea fans and seaweed.   Numerous species
+of sea urchins and starfish cling to the coral, waiting for food
+to drift close.  Crabs can be seen scurrying about, trying to
+avoid predators.
+~
+water
+D NORTH 15823 0 0
+~
+~
+D EAST 15813 0 0
+~
+~
+D SOUTH 15808 0 0
+~
+~
+#15813
+A Coral Reef~
+Hundreds of different species of fish drift across the reef,
+their painted bodies blending together with the corals and
+sea fans to create a glorious kalidescope of swirling colors.
+Tiny seahorses cling to seaweed, drifting back and forth with
+the tides.  A large stingray skims across the top of the reef,
+searching for its next meal.
+~
+water
+D NORTH 15817 0 0
+~
+~
+D WEST 15812 0 0
+~
+~
+#15814
+Sandbar~
+No life can be seen here, as the water hurtles across the sandbar
+in protest to being denied easy access to the shore.  A piece of
+seaweed gets tossed violently about, caught in the endless currents
+ripping back and forth.
+~
+water
+D NORTH 15819 0 0
+~
+~
+D EAST 15815 0 0
+~
+~
+#15815
+Sandbar~
+A large sandbar runs parallel to the beach.  The normally clear
+water is murky here as waves break violently across it trying
+to reach the shoreline.  No life teems beneath these rough,
+cloudy depths.
+~
+water
+D NORTH 15820 0 0
+~
+~
+D SOUTH 15809 0 0
+~
+~
+D WEST 15814 0 0
+~
+~
+#15816
+Sandbar~
+No life can be seen here, as the water hurtles across the sandbar
+in protest to being denied easy access to the shore.  A piece of
+seaweed gets tossed violently about, caught in the endless currents
+ripping back and forth.
+~
+water
+D NORTH 15822 0 0
+~
+~
+D SOUTH 15811 0 0
+~
+~
+#15817
+A Coral Reef~
+Clear, turquoise water houses a spectacular variety of exotic,
+colorful fish living on a magnificent reef.  The reef is composed
+of various hues of coral, sea fans and seaweed.   Numerous species
+of sea urchins and starfish cling to the coral, waiting for food
+to drift close.  Crabs can be seen scurrying about, trying to
+avoid predators.
+~
+water
+D EAST 15818 0 0
+~
+~
+D SOUTH 15813 0 0
+~
+~
+#15818
+A Coral Reef~
+Hundreds of different species of fish drift across the reef,
+their painted bodies blending together with the corals and
+sea fans to create a glorious kalidescope of swirling colors.
+Tiny seahorses cling to seaweed, drifting back and forth with
+the tides.  A large stingray skims across the top of the reef,
+searching for its next meal.
+~
+water
+D NORTH 15824 0 0
+~
+~
+D WEST 15817 0 0
+~
+~
+#15819
+Sandbar~
+A large sandbar runs parallel to the beach.  The normally clear
+water is murky here as waves break violently across it trying
+to reach the shoreline.  No life teems beneath these rough,
+cloudy depths.
+~
+water
+D EAST 15820 0 0
+~
+~
+D SOUTH 15814 0 0
+~
+~
+#15820
+Sandbar~
+No life can be seen here, as the water hurtles across the sandbar
+in protest to being denied easy access to the shore.  A piece of
+seaweed gets tossed violently about, caught in the endless currents
+ripping back and forth.
+~
+water
+D NORTH 15826 0 0
+~
+~
+D EAST 15821 0 0
+~
+~
+D SOUTH 15815 0 0
+~
+~
+D WEST 15819 0 0
+~
+~
+#15821
+Sandbar~
+A large sandbar runs parallel to the beach.  The normally clear
+water is murky here as waves break violently across it trying
+to reach the shoreline.  No life teems beneath these rough,
+cloudy depths.
+~
+water
+D EAST 15822 0 0
+~
+~
+D SOUTH 15810 0 0
+~
+~
+D WEST 15820 0 0
+~
+~
+#15822
+Sandbar~
+No life can be seen here, as the water hurtles across the sandbar
+in protest to being denied easy access to the shore.  A piece of
+seaweed gets tossed violently about, caught in the endless currents
+ripping back and forth.
+~
+water
+D NORTH 15827 0 0
+~
+~
+D EAST 15823 0 0
+~
+~
+D SOUTH 15816 0 0
+~
+~
+D WEST 15821 0 0
+~
+~
+#15823
+A Coral Reef~
+Clear, turquoise water houses a spectacular variety of exotic,
+colorful fish living on a magnificent reef.  The reef is composed
+of various hues of coral, sea fans and seaweed.   Numerous species
+of sea urchins and starfish cling to the coral, waiting for food
+to drift close.  Crabs can be seen scurrying about, trying to
+avoid predators.
+~
+water
+D EAST 15824 0 0
+~
+~
+D SOUTH 15812 0 0
+~
+~
+D WEST 15822 0 0
+~
+~
+#15824
+A Coral Reef~
+Hundreds of different species of fish drift across the reef,
+their painted bodies blending together with the corals and
+sea fans to create a glorious kalidescope of swirling colors.
+Tiny seahorses cling to seaweed, drifting back and forth with
+the tides.  A large stingray skims across the top of the reef,
+searching for its next meal.
+~
+water
+D NORTH 15828 0 0
+~
+~
+D EAST 15825 0 0
+~
+~
+D SOUTH 15818 0 0
+~
+~
+D WEST 15823 0 0
+~
+~
+#15825
+A Coral Reef~
+Clear, turquoise water houses a spectacular variety of exotic,
+colorful fish living on a magnificent reef.  The reef is composed
+of various hues of coral, sea fans and seaweed.   Numerous species
+of sea urchins and starfish cling to the coral, waiting for food
+to drift close.  Crabs can be seen scurrying about, trying to
+avoid predators.
+~
+water
+D NORTH 15829 0 0
+~
+~
+D WEST 15824 0 0
+~
+~
+#15826
+A Coral Reef~
+Hundreds of different species of fish drift across the reef,
+their painted bodies blending together with the corals and
+sea fans to create a glorious kalidescope of swirling colors.
+Tiny seahorses cling to seaweed, drifting back and forth with
+the tides.  A large stingray skims across the top of the reef,
+searching for its next meal.
+~
+water
+D NORTH 15833 0 0
+~
+~
+D SOUTH 15820 0 0
+~
+~
+#15827
+A Coral Reef~
+Clear, turquoise water houses a spectacular variety of exotic,
+colorful fish living on a magnificent reef.  The reef is composed
+of various hues of coral, sea fans and seaweed.   Numerous species
+of sea urchins and starfish cling to the coral, waiting for food
+to drift close.  Crabs can be seen scurrying about, trying to
+avoid predators.
+~
+water
+D NORTH 15834 0 0
+~
+~
+D EAST 15828 0 0
+~
+~
+D SOUTH 15822 0 0
+~
+~
+#15828
+A Coral Reef~
+Hundreds of different species of fish drift across the reef,
+their painted bodies blending together with the corals and
+sea fans to create a glorious kalidescope of swirling colors.
+Tiny seahorses cling to seaweed, drifting back and forth with
+the tides.  A large stingray skims across the top of the reef,
+searching for its next meal.
+~
+water
+D NORTH 15836 0 0
+~
+~
+D EAST 15829 0 0
+~
+~
+D SOUTH 15824 0 0
+~
+~
+D WEST 15827 0 0
+~
+~
+#15829
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D EAST 15830 0 0
+~
+~
+D SOUTH 15825 0 0
+~
+~
+D WEST 15828 0 0
+~
+~
+#15830
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15837 0 0
+~
+~
+D WEST 15829 0 0
+~
+~
+#15831
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15852 0 0
+~
+~
+D EAST 15832 0 0
+~
+~
+#15832
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15838 0 0
+~
+~
+D EAST 15833 0 0
+~
+~
+D WEST 15831 0 0
+~
+~
+#15833
+Shallow Water~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D NORTH 15839 0 0
+~
+~
+D EAST 15834 0 0
+~
+~
+D SOUTH 15826 0 0
+~
+~
+D WEST 15832 0 0
+~
+~
+#15834
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D EAST 15835 0 0
+~
+~
+D SOUTH 15827 0 0
+~
+~
+D WEST 15833 0 0
+~
+~
+#15835
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15841 0 0
+~
+~
+D WEST 15834 0 0
+~
+~
+#15836
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15843 0 0
+~
+~
+D EAST 15837 0 0
+~
+~
+D SOUTH 15828 0 0
+~
+~
+#15837
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15844 0 0
+~
+~
+D SOUTH 15830 0 0
+~
+~
+D WEST 15836 0 0
+~
+~
+#15838
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15846 0 0
+~
+~
+D SOUTH 15832 0 0
+~
+~
+#15839
+Shallow Water~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D NORTH 15847 0 0
+~
+~
+D EAST 15840 0 0
+~
+~
+D SOUTH 15833 0 0
+~
+~
+#15840
+A Sandy Beach~
+Nestled in a small, rocky cove, this tiny beach is the only
+feasible access to the island.  Pitch black sand is covered
+in sand dollars of varying shapes, washed in from the
+occasional storm raging across the sea.  The clear, green
+water is placid here, protected by the jutting rocks that
+form the cove.
+~
+city
+D EAST 20460 0 0
+~
+~
+D WEST 15839 0 0
+~
+~
+#15841
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D EAST 15842 0 0
+~
+~
+D SOUTH 15835 0 0
+~
+~
+#15842
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15848 0 0
+~
+~
+D EAST 15843 0 0
+~
+~
+D WEST 15841 0 0
+~
+~
+#15843
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15856 0 0
+~
+~
+D SOUTH 15836 0 0
+~
+~
+D WEST 15842 0 0
+~
+~
+#15844
+Shallow Water~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D NORTH 15850 0 0
+~
+~
+D EAST 15845 0 0
+~
+~
+D SOUTH 15837 0 0
+~
+~
+#15845
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15851 0 0
+~
+~
+D WEST 15844 0 0
+~
+~
+#15846
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15853 0 0
+~
+~
+D SOUTH 15838 0 0
+~
+~
+#15847
+Shallow Water~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D NORTH 15854 0 0
+~
+~
+D EAST 15848 0 0
+~
+~
+D SOUTH 15839 0 0
+~
+~
+#15848
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D SOUTH 15842 0 0
+~
+~
+D WEST 15847 0 0
+~
+~
+#15849
+A Sandy Beach~
+Nestled in a small, rocky cove, this tiny beach is the only
+feasible access to the island.  Pitch black sand is covered
+in sand dollars of varying shapes, washed in from the
+occasional storm raging across the sea.  The clear, green
+water is placid here, protected by the jutting rocks that
+form the cove.
+~
+city
+D EAST 15850 0 0
+~
+~
+D WEST 20466 0 0
+~
+~
+#15850
+Shallow Water~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D NORTH 15857 0 0
+~
+~
+D SOUTH 15844 0 0
+~
+~
+D WEST 15849 0 0
+~
+~
+#15851
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rhythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15858 0 0
+~
+~
+D SOUTH 15845 0 0
+~
+~
+#15852
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D EAST 15853 0 0
+~
+~
+D SOUTH 15831 0 0
+~
+~
+#15853
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D EAST 15854 0 0
+~
+~
+D SOUTH 15846 0 0
+~
+~
+D WEST 15852 0 0
+~
+~
+#15854
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D EAST 15855 0 0
+~
+~
+D SOUTH 15847 0 0
+~
+~
+D WEST 15853 0 0
+~
+~
+#15855
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15859 0 0
+~
+~
+D WEST 15854 0 0
+~
+~
+#15856
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15862 0 0
+~
+~
+D EAST 15857 0 0
+~
+~
+D SOUTH 15843 0 0
+~
+~
+#15857
+Shallow Water~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D EAST 15858 0 0
+~
+~
+D SOUTH 15850 0 0
+~
+~
+D WEST 15856 0 0
+~
+~
+#15858
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15864 0 0
+~
+~
+D SOUTH 15851 0 0
+~
+~
+D WEST 15857 0 0
+~
+~
+#15859
+An Outcropping of Rocks~
+Massive boulders jut up out of the depths of the sea from a
+dormant volcano just beneath the surface.  Worn smooth from
+thousands of years of sea water, the rocks have become a
+favored sun bathing spot of the merfolk, for which the sea
+was named.  The water is a deep blue here, not even a hint
+of green can be detected.
+~
+water
+D NORTH 15866 0 0
+~
+~
+D EAST 15860 0 0
+~
+~
+D SOUTH 15855 0 0
+~
+~
+#15860
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15867 0 0
+~
+~
+D EAST 15861 0 0
+~
+~
+D WEST 15859 0 0
+~
+~
+#15861
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D EAST 15862 0 0
+~
+~
+D WEST 15860 0 0
+~
+~
+#15862
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15868 0 0
+~
+~
+D EAST 15863 0 0
+~
+~
+D SOUTH 15856 0 0
+~
+~
+D WEST 15861 0 0
+~
+~
+#15863
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D EAST 15864 0 0
+~
+~
+D WEST 15862 0 0
+~
+~
+#15864
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15878 0 0
+~
+~
+D SOUTH 15858 0 0
+~
+~
+D WEST 15863 0 0
+~
+~
+#15865
+An Outcropping of Rocks~
+A soft, warm breeze whispers through the rocks, not even
+strong enough to stir up the dark blue water just barely
+drifting through.  The rocks, worn smooth from the pressure
+of the water, are part of an old, dormant volcano just below
+the water's surface.  At any given time, merfolk can be seen
+here, either sunbathing or gazing up at the stars.
+~
+water
+D NORTH 15871 0 0
+~
+~
+D EAST 15866 0 0
+~
+~
+#15866
+An Outcropping of Rocks~
+Massive boulders jut up out of the depths of the sea from a
+dormant volcano just beneath the surface.  Worn smooth from
+thousands of years of sea water, the rocks have become a
+favored sun bathing spot of the merfolk, for which the sea
+was named.  The water is a deep blue here, not even a hint
+of green can be detected.
+~
+water
+D NORTH 15872 0 0
+~
+~
+D SOUTH 15859 0 0
+~
+~
+D WEST 15865 0 0
+~
+~
+#15867
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15873 0 0
+~
+~
+D EAST 15868 0 0
+~
+~
+D SOUTH 15860 0 0
+~
+~
+#15868
+Shallow Water~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D NORTH 15875 0 0
+~
+~
+D EAST 15869 0 0
+~
+~
+D SOUTH 15862 0 0
+~
+~
+D WEST 15867 0 0
+~
+~
+#15869
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15876 0 0
+~
+~
+D WEST 15868 0 0
+~
+~
+#15870
+An Outcropping of Rocks~
+A soft, warm breeze whispers through the rocks, not even
+strong enough to stir up the dark blue water just barely
+drifting through.  The rocks, worn smooth from the pressure
+of the water, are part of an old, dormant volcano just below
+the water's surface.  At any given time, merfolk can be seen
+here, either sunbathing or gazing up at the stars.
+~
+water
+D NORTH 15880 0 0
+~
+~
+D EAST 15871 0 0
+~
+~
+#15871
+An Outcropping of Rocks~
+Massive boulders jut up out of the depths of the sea from a
+dormant volcano just beneath the surface.  Worn smooth from
+thousands of years of sea water, the rocks have become a
+favored sun bathing spot of the merfolk, for which the sea
+was named.  The water is a deep blue here, not even a hint
+of green can be detected.
+~
+water
+D EAST 15872 0 0
+~
+~
+D SOUTH 15865 0 0
+~
+~
+D WEST 15870 0 0
+~
+~
+#15872
+An Outcropping of Rocks~
+A soft, warm breeze whispers through the rocks, not even
+strong enough to stir up the dark blue water just barely
+drifting through.  The rocks, worn smooth from the pressure
+of the water, are part of an old, dormant volcano just below
+the water's surface.  At any given time, merfolk can be seen
+here, either sunbathing or gazing up at the stars.
+~
+water
+D NORTH 15881 0 0
+~
+~
+D EAST 15873 0 0
+~
+~
+D SOUTH 15866 0 0
+~
+~
+D WEST 15871 0 0
+~
+~
+#15873
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D SOUTH 15867 0 0
+~
+~
+D WEST 15872 0 0
+~
+~
+#15874
+A Sandy Beach~
+Nestled in a small, rocky cove, this tiny beach is the only
+feasible access to the island.  Pitch black sand is covered
+in sand dollars of varying shapes, washed in from the
+occasional storm raging across the sea.  The clear, green
+water is placid here, protected by the jutting rocks that
+form the cove.
+~
+city
+D EAST 15875 0 0
+~
+~
+D SOUTH 20431 0 0
+~
+~
+#15875
+Shallow Water~
+The soothing sound of the surf can clearly be heard as beautiful,
+clear, green water rushes back and forth to the shore, creating
+complex patterns in the sand below.  Sunlight dances off the
+cresting waves, creating a dazzling display of sparkles.
+~
+water
+D NORTH 15883 0 0
+~
+~
+D SOUTH 15868 0 0
+~
+~
+D WEST 15874 0 0
+~
+~
+#15876
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D EAST 15877 0 0
+~
+~
+D SOUTH 15869 0 0
+~
+~
+#15877
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15884 0 0
+~
+~
+D EAST 15878 0 0
+~
+~
+D WEST 15876 0 0
+~
+~
+#15878
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D EAST 15879 0 0
+~
+~
+D SOUTH 15864 0 0
+~
+~
+D WEST 15877 0 0
+~
+~
+#15879
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15885 0 0
+~
+~
+D WEST 15878 0 0
+~
+~
+#15880
+An Outcropping of Rocks~
+Massive boulders jut up out of the depths of the sea from a
+dormant volcano just beneath the surface.  Worn smooth from
+thousands of years of sea water, the rocks have become a
+favored sun bathing spot of the merfolk, for which the sea
+was named.  The water is a deep blue here, not even a hint
+of green can be detected.
+~
+water
+D EAST 15881 0 0
+~
+~
+D SOUTH 15870 0 0
+~
+~
+#15881
+An Outcropping of Rocks~
+A soft, warm breeze whispers through the rocks, not even
+strong enough to stir up the dark blue water just barely
+drifting through.  The rocks, worn smooth from the pressure
+of the water, are part of an old, dormant volcano just below
+the water's surface.  At any given time, merfolk can be seen
+here, either sunbathing or gazing up at the stars.
+~
+water
+D NORTH 15886 0 0
+~
+~
+D EAST 15882 0 0
+~
+~
+D SOUTH 15872 0 0
+~
+~
+D WEST 15880 0 0
+~
+~
+#15882
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15888 0 0
+~
+~
+D EAST 15883 0 0
+~
+~
+D WEST 15881 0 0
+~
+~
+#15883
+Shallow Water~
+Brilliant, green water breaks gently off the shoreline.  Here
+and there, small fish can be seen darting in and out among the
+waves in what appears to be a playful manner.  Far off in the
+distance, a seagull is heard calling to its mate.
+~
+water
+D NORTH 15889 0 0
+~
+~
+D SOUTH 15875 0 0
+~
+~
+D WEST 15882 0 0
+~
+~
+#15884
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15891 0 0
+~
+~
+D SOUTH 15877 0 0
+~
+~
+#15885
+A Bed of Kelp~
+A massive bed of seaweed drifts along with the currents,
+completely obliterating any view of the ocean depths.
+Nothing dares go near it for fear of becoming entangled.
+~
+water
+ROOM NORECALL
+D NORTH 15892 0 0
+~
+~
+D SOUTH 15879 0 0
+~
+~
+#15886
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D EAST 15887 0 0
+~
+~
+D SOUTH 15881 0 0
+~
+~
+#15887
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15893 0 0
+~
+~
+D EAST 15888 0 0
+~
+~
+D WEST 15886 0 0
+~
+~
+#15888
+A Bed of Kelp~
+A massive bed of seaweed drifts along with the currents,
+completely obliterating any view of the ocean depths.
+Nothing dares go near it for fear of becoming entangled.
+~
+water
+ROOM NORECALL
+D NORTH 15894 0 0
+~
+~
+D SOUTH 15882 0 0
+~
+~
+D WEST 15887 0 0
+~
+~
+#15889
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15895 0 0
+~
+~
+D EAST 15890 0 0
+~
+~
+D SOUTH 15883 0 0
+~
+~
+#15890
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D NORTH 15896 0 0
+~
+~
+D EAST 15891 0 0
+~
+~
+D WEST 15889 0 0
+~
+~
+#15891
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D NORTH 15897 0 0
+~
+~
+D EAST 15892 0 0
+~
+~
+D SOUTH 15884 0 0
+~
+~
+D WEST 15890 0 0
+~
+~
+#15892
+A Bed of Kelp~
+A massive bed of seaweed drifts along with the currents,
+completely obliterating any view of the ocean depths.
+Nothing dares go near it for fear of becoming entangled.
+~
+water
+ROOM NORECALL
+D SOUTH 15885 0 0
+~
+~
+D WEST 15891 0 0
+~
+~
+#15893
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D NORTH 15898 0 0
+~
+~
+D SOUTH 15887 0 0
+~
+~
+#15894
+A Bed of Kelp~
+A massive bed of seaweed drifts along with the currents,
+completely obliterating any view of the ocean depths.
+Nothing dares go near it for fear of becoming entangled.
+~
+water
+ROOM NORECALL
+D EAST 15895 0 0
+~
+~
+D SOUTH 15888 0 0
+~
+~
+#15895
+The Naiadian Sea~
+Gentle swells, no more than two feet in height, rise up and down
+in a gentle rythm.  The water is a brilliant shade of turquoise,
+so crystal clear it almost seems like you can see the bottom.
+Here and there, small pieces of seaweed can be seen floating on
+the waters surface.
+~
+water
+D EAST 15896 0 0
+~
+~
+D SOUTH 15889 0 0
+~
+~
+D WEST 15894 0 0
+~
+~
+#15896
+A Bed of Kelp~
+A massive bed of seaweed drifts along with the currents,
+completely obliterating any view of the ocean depths.
+Nothing dares go near it for fear of becoming entangled.
+~
+water
+ROOM NORECALL
+D SOUTH 15890 0 0
+~
+~
+D WEST 15895 0 0
+~
+~
+#15897
+A Bed of Kelp~
+A massive bed of seaweed drifts along with the currents,
+completely obliterating any view of the ocean depths.
+Nothing dares go near it for fear of becoming entangled.
+~
+water
+ROOM NORECALL
+D NORTH 15899 0 0
+~
+~
+D SOUTH 15891 0 0
+~
+~
+#15898
+The Naiadian Sea~
+Diamond-like sparkles ripple across the turquoise water, dazzling
+the eyes with its brilliance.  Dark shapes, large and small, can
+be seen darting beneath the water's surface.  Some shapes are
+clearly distinguishable as fish, while others just appears as
+dark blurs moving to and fro.
+~
+water
+D EAST 15899 0 0
+~
+~
+D SOUTH 15893 0 0
+~
+~
+#15899
+The Naiadian Sea~
+Crystal clear, turquoise water rises gently up and down, teeming
+with life.  A large school of fish can be seen dashing about
+a short distance below the surface, its sheer mass turning the
+water black.  A large piece of seaweed drifts along the surface,
+bobbing up and down in the gentle waves.
+~
+water
+D SOUTH 15897 0 0
+~
+~
+D WEST 15898 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 15809 TO 15818 GLIMIT 4 LLIMIT 1
+MOB 15810 TO 15823 GLIMIT 4 LLIMIT 1
+MOB 15809 TO 15826 GLIMIT 4 LLIMIT 1
+MOB 15800 TO 15830 GLIMIT 3 LLIMIT 1
+EQUIP 15800 ABOUT
+EQUIP 15801 FEET
+MOB 15811 TO 15831 GLIMIT 4 LLIMIT 1
+MOB 15802 TO 15835 GLIMIT 5 LLIMIT 1
+EQUIP 15804 ARMS
+EQUIP 15805 WIELD
+MOB 15801 TO 15836 GLIMIT 3 LLIMIT 1
+MOB 15808 TO 15836 GLIMIT 4 LLIMIT 1
+MOB 15810 TO 15841 GLIMIT 4 LLIMIT 1
+MOB 15802 TO 15842 GLIMIT 5 LLIMIT 1
+EQUIP 15804 ARMS
+EQUIP 15805 WIELD
+MOB 15800 TO 15843 GLIMIT 3 LLIMIT 1
+MOB 15811 TO 15851 GLIMIT 4 LLIMIT 1
+MOB 15800 TO 15852 GLIMIT 3 LLIMIT 1
+EQUIP 15800 ABOUT
+EQUIP 15801 FEET
+MOB 15801 TO 15856 GLIMIT 3 LLIMIT 1
+EQUIP 15802 BODY
+EQUIP 15803 HANDS
+MOB 15809 TO 15856 GLIMIT 4 LLIMIT 1
+MOB 15808 TO 15858 GLIMIT 4 LLIMIT 1
+MOB 15803 TO 15859 GLIMIT 8 LLIMIT 1
+EQUIP 15806 HEAD
+EQUIP 15807 WIELD
+MOB 15805 TO 15859 GLIMIT 4 LLIMIT 1
+EQUIP 15809 NECKONE
+MOB 15807 TO 15859 GLIMIT 4 LLIMIT 1
+EQUIP 15811 RFINGER
+MOB 15810 TO 15861 GLIMIT 4 LLIMIT 1
+MOB 15802 TO 15862 GLIMIT 5 LLIMIT 1
+EQUIP 15804 ARMS
+EQUIP 15805 WIELD
+MOB 15803 TO 15865 GLIMIT 8 LLIMIT 1
+MOB 15804 TO 15865 GLIMIT 4 LLIMIT 1
+EQUIP 15808 HOLD
+MOB 15806 TO 15865 GLIMIT 4 LLIMIT 1
+EQUIP 15810 WRISTTWO
+MOB 15803 TO 15866 GLIMIT 8 LLIMIT 1
+EQUIP 15806 HEAD
+EQUIP 15807 WIELD
+MOB 15805 TO 15866 GLIMIT 4 LLIMIT 1
+EQUIP 15809 NECKONE
+MOB 15807 TO 15866 GLIMIT 4 LLIMIT 1
+EQUIP 15811 RFINGER
+MOB 15811 TO 15869 GLIMIT 4 LLIMIT 1
+MOB 15803 TO 15870 GLIMIT 8 LLIMIT 1
+MOB 15804 TO 15870 GLIMIT 4 LLIMIT 1
+EQUIP 15808 HOLD
+MOB 15806 TO 15870 GLIMIT 4 LLIMIT 1
+EQUIP 15810 WRISTTWO
+MOB 15803 TO 15871 GLIMIT 8 LLIMIT 1
+EQUIP 15806 HEAD
+EQUIP 15807 WIELD
+MOB 15805 TO 15871 GLIMIT 4 LLIMIT 1
+EQUIP 15809 NECKONE
+MOB 15807 TO 15871 GLIMIT 4 LLIMIT 1
+EQUIP 15811 RFINGER
+MOB 15803 TO 15872 GLIMIT 8 LLIMIT 1
+MOB 15804 TO 15872 GLIMIT 4 LLIMIT 1
+EQUIP 15808 HOLD
+MOB 15806 TO 15872 GLIMIT 4 LLIMIT 1
+EQUIP 15810 WRISTTWO
+MOB 15802 TO 15873 GLIMIT 5 LLIMIT 1
+EQUIP 15804 ARMS
+EQUIP 15805 WIELD
+MOB 15803 TO 15880 GLIMIT 8 LLIMIT 1
+EQUIP 15806 HEAD
+EQUIP 15807 WIELD
+MOB 15805 TO 15880 GLIMIT 4 LLIMIT 1
+EQUIP 15809 NECKONE
+MOB 15807 TO 15880 GLIMIT 4 LLIMIT 1
+EQUIP 15811 RFINGER
+MOB 15803 TO 15881 GLIMIT 8 LLIMIT 1
+MOB 15804 TO 15881 GLIMIT 4 LLIMIT 1
+EQUIP 15808 HOLD
+MOB 15806 TO 15881 GLIMIT 4 LLIMIT 1
+EQUIP 15810 WRISTTWO
+MOB 15808 TO 15882 GLIMIT 4 LLIMIT 1
+MOB 15810 TO 15884 GLIMIT 4 LLIMIT 1
+MOB 15808 TO 15891 GLIMIT 4 LLIMIT 1
+MOB 15809 TO 15893 GLIMIT 4 LLIMIT 1
+MOB 15811 TO 15896 GLIMIT 4 LLIMIT 1
+MOB 15802 TO 15898 GLIMIT 5 LLIMIT 1
+EQUIP 15804 ARMS
+EQUIP 15805 WIELD
+MOB 15801 TO 15899 GLIMIT 3 LLIMIT 1
+EQUIP 15802 BODY
+EQUIP 15803 HANDS
+S
+
+#IMPROGS
+END
+#$

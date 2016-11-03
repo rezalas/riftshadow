@@ -1,0 +1,2384 @@
+#AREA
+mythforest.are~
+Swamp of Kordein~
+Kloshen/Fyndin~
+20 40
+22500 22599
+normal
+temperate
+0
+1
+Ceran Kloshen Fyndin~
+
+#MOBS
+#22500
+minotaur necromancer figure hooded robed~
+a minotaur necromancer~
+A horned figure with flowing black robes stands here.
+~
+The figure standing here is rather large in nature.  his hairy horned
+head hangs loosely as he stares into the dull flames of the campfire.
+his black robes are cast back revealing a book held in his right
+hand and a bloodied axe in his left.
+~
+-4000 22500 100 minotaur~
+45 45d8+3177 2d10+7 0 100 grasp
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+AFF INVISIBLE
+AFF INFRARED
+AFF DARK_VISION
+AFF DARKSANC
+YELL ~
+NOTES ~
+A 'protection' (null)
+C 'vampiric touch'
+C 'blindness'
+C 'chill touch'
+C 'weaken'
+C 'poison'
+#22501
+necromancer's victim~
+a female victim~
+This poor female has become the next sacrifice for the necromancer.
+~
+This poor female is laid across a wooden structure covered
+in blood.  Her arms are spread out to either side and her
+stomach has been exposed and a red smear draws a line across
+her stomach.
+~
+-1000 22501 100 human~
+5 5d8+38 2d7+4 0 100 punch
+0 0 0 0
+sleeping female none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+AFF CURSE
+IMM CHARM
+VUL NEGATIVE
+#22502
+massive alligator gator~
+a massive alligator~
+A huge alligator is here baring its teeth menacingly
+~
+This massive alligator must be at least 9 feet long.  His
+green scales can hardly be seen in the darkness provided by the
+surrounding swamp.  He appears ready to bite at any one stupid
+enough to get close to him.
+~
+0 0 100 lizard~
+30 30d8+1364 6d6+16 0 100 chomp
+75 75 75 0
+standing male none
+ad ad large
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF BERSERK
+OFF PARRY
+OFF TAIL
+OFF ASSIST_RACE
+OFF STATIC_TRACK
+AFF INFRARED
+RES DROWNING
+#22503
+mutant rat~
+a giant mutated rat~
+An over-sized rat is here searching for food
+~
+This rat is gigantic.  It stands at about 5 feet in height and
+is around 8 feet from tooth to tailtip.  His fur is a blackish brown
+and his eyes glow a crimson red.  He bares his teeth revealing a
+row of sharp spikes.
+~
+-1000 0 100 rat~
+30 6d12+850 4d6+8 0 100 bite
+0 0 0 0
+standing male none
+GVc GVc medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BERSERK
+OFF DODGE
+OFF FAST
+OFF KICK
+OFF DIRT_KICK
+OFF ASSIST_VNUM
+AFF DETECT_MAGIC
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+#22504
+apindel finstin frenzied researcher~
+Apindel Finstin~
+A frenzied researcher is here searching through the room
+~
+This researcher is frantically searching for something.  He drops
+books and pages as he quickly picks up something else to study.
+His posture is that of someone who is ready to sprint for miles,
+running this way and that to find the unknown object he is looking
+for.
+~
+-1000 0 100 duergar~
+45 45d8+3177 6d4+9 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INDOORS
+OFF DODGE
+OFF FAST
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+RES POISON
+VUL HOLY
+A 'frenzy' (null)
+C 'fireball'
+C 'deafen'
+C 'blind'
+C 'poison'
+C 'chill touch'
+C 'weaken'
+C 'iceball'
+#22505
+saurian scout lizard~
+an armored saurian scout~
+A heavily armored saurian scouts through the swamp.
+~
+Trudging through the swamp, this lizard-man doesn't appear happy in the
+least.  He is wearing a crude scaly armor and holds a mace in front of him
+so matter of factly it would seem he was trying to ward off the darkness
+with it.  His scaly face is curled into a snarl that never departs.  
+~
+-1000 0 100 lizard~
+39 39d8+2335 4d7+11 0 100 punch
+0 0 0 0
+standing male moderate
+HMV HMV medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT SMARTTRACK
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TAIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+CLASS warrior Dragoon none 
+#22506
+saurian savage lizard warrior~
+a saurian savage~
+A lizard-man in hide armor stands here
+~
+A lizard is walking upright here, wearing dark hide armors possibly
+made from a boar or bear.  His scales are a golden brown and his back
+and tail are ridged with hunter green scales.  His eyes glow gold
+as he blinks at you uneasily.
+~
+-1000 0 0 lizard~
+38 38d8+2213 0d0+0 0 100 punch
+0 0 0 0
+standing male poor
+M 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TAIL
+OFF TRIP
+OFF STATIC_TRACK
+AFF REGENERATION
+CLASS warrior Barbarian none 
+NOTES ~
+#22507
+swarm leeches~
+a mass of black leeches~
+A swarm of black oozing leeches crawls toward you.
+~
+There looks to be at least a hundred leeches looking for something to
+feed on.  There skin is black and they are each about four inches in length.
+~
+0 0 0 unique~
+25 25d8+944 0d0+0 0 100 drain
+0 0 0 0
+standing male none
+R R small
+ACT NPC
+ACT AGGRESSIVE
+ACT SMARTTRACK
+ACT FASTWANDER
+OFF DODGE
+OFF ASSIST_ALL
+OFF ASSIST_RACE
+IMM DISEASE
+RES NEGATIVE
+RES MENTAL
+RES DROWNING
+VUL BASH
+VUL FIRE
+#0
+
+
+
+#OBJS
+#22500
+bloodied page book scroll~
+a bloodcovered page encrusted with arcane runes~
+A scroll covered in blood and runes lies here.~
+scroll
+paper~
+45 'vampiric touch' 'reserved' 'reserved' 'reserved'
+35 0 3000 P
+WEAR TAKE
+WEAR WIELD
+WEAR HOLD
+ITEM EVIL
+LIMIT 7
+VERB none
+TIMER 0
+NOTES ~
+E scroll page runes~
+The runes on this scroll are in a dead language and seemingly
+impossible to read.  At the bottom of the scroll are details on
+summoning blood from others.
+~
+
+#22501
+bloody sacrificial axe bloodhowl~
+a bloody sacrificial axe named "Bloodhowl"~
+A small axe is laying here dripping blood off the handle~
+weapon
+iron~
+axe 5 10 defilement 0
+50 14 1000 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+APPLY STR 1
+APPLY DAMROLL 3
+APPLY HITROLL -1
+LIMIT 3
+TIMER 0
+
+#22502
+alligator hide breastplate armor scales~
+an alligator hide full-plate~
+A hide made of greenish brown scales rests here.~
+armor
+scales~
+25 25 25 25 0
+40 45 2250 P
+WEAR TAKE
+ITEM BURNPROOF
+LIMIT 0
+TIMER 0
+
+#22503
+dirt debris pile~
+pile of dirt~
+A pile of dirt~
+container
+dirt~
+0 0 0 0 0
+1 0 0 P
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#22504
+turquoise potion bottle~
+a turquoise colored potion~
+A turquoise bottle filled with a clear liquid lies here~
+potion
+glass~
+35 'pass door' 'pass without trace' 'reserved' 'reserved'
+40 1 3000 P
+WEAR TAKE
+WEAR WIELD
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+LIMIT 13
+TIMER 0
+
+#22505
+barbed tail demon~
+the barbed tail of a demon~
+A red and black tail with a barbed tip rests here~
+weapon
+flesh~
+flail 4 12 terror 0
+45 7 1 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIGOOD
+LIMIT 5
+TIMER 0
+
+#22506
+rock mace~
+a rock mace~
+A mace fashioned from a log and a rock lies here.~
+weapon
+rock~
+mace 3 15 crush 0
+35 37 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#22507
+boar hide breastplate~
+a boar-hide breastplate~
+A breastplate made from animal hide is unattended.~
+armor
+hide~
+17 17 17 17 0
+35 15 0 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#22508
+rock bracers~
+a pair of rock bracers~
+A pair of bracers made of a strange rock need to be polished.~
+armor
+rock~
+22 22 22 22 0
+35 23 0 P
+WEAR TAKE
+WEAR ARMS
+ITEM BURNPROOF
+LIMIT 0
+TIMER 0
+
+#22509
+no name~
+dummy object~
+dummy desc~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#22598
+cloak~
+dummy object~
+dummy desc~
+armor
+unknown~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR NECK
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#22599
+dagger pure light~
+a dagger made of pure light~
+A dagger made of pure light lies here.~
+weapon
+unknown~
+dagger 6 8 divine 0
+1 1 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HUMAN_ONLY
+ITEM ANTIEVIL
+ITEM NOLOCATE
+ITEM ANTILAWFUL
+ITEM NOSTASH
+ITEM NOSAC
+APPLY HITROLL 6
+APPLY DAMROLL 6
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#22528
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22540 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22529 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22534 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22527 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22529
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22541 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22530 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22528 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22530
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22542 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22525 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22529 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22531
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22525 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22532 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22537 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The swamp seems to grow less thick in this direction.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22532
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22526 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22533 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22538 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22531 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22533
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22527 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22534 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22539 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22532 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22534
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22528 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22540 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22533 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22535
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22529 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22536 0 0
+~
+A faint flickering can be seen this way sharply contrasting the surrounding black.
+~
+D SOUTH 22541 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22534 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22536
+A Small Camp~
+A small campfire burns in the middle of three small travelers tents.  The
+area is relatively dry due to the camp location which is atop a small hill
+within the marsh.  The camp is quiet and dreary, darkness covering it other
+than the light that the small fire gives off.  The path back to the swamp is
+to the north while the tents are to the east, south, and west.  A small
+campfire burns in the middle of three small travelers tents.  The area is
+relatively dry due to the camp location which is atop a small hill within
+the marsh.  The camp is quiet and dreary, darkness covering it other than
+the light that the small fire gives off.  The swamp surrounds the camp in
+every direction.  
+~
+swamp
+ROOM DARK
+D NORTH 13700 0 0
+door~
+~
+D EAST 22541 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22542 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The ground is somewhat solid here, however it is drizzled in a red liquid
+draining off a wooden structure in the middle of the camp.  
+~
+#22537
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22531 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22538 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22525 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The swamp seems to grow thinner in this direction.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22538
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22532 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22539 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22526 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22537 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22539
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22533 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22540 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22527 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22538 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22540
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22534 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22541 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22528 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22539 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22541
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22542 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22529 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22540 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22542
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22536 0 0
+~
+A faint flickering of light can be seen this way contrasting sharply with the surrounding black.
+~
+D EAST 22539 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22530 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22541 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22543
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22555 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22544 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22549 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The swamp grows less murky in this direction.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22544
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22556 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22545 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22550 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22543 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22545
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22557 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22546 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22551 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22544 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22546
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22558 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22547 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22552 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22545 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22547
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22559 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22548 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22546 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22548
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22560 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22559 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22547 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22549
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22543 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22550 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22555 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The swamp begins to thin in this direction.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22550
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22544 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22551 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22556 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22549 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22551
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22545 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22552 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22557 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22550 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22552
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22546 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22558 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22551 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22553
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22547 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22559 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22518 0 0
+door~
+The darkness of the bog swallows everything that way.  
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22554
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22548 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22547 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22560 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22555
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22549 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22556 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22543 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The path grows less intrusive this way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22556
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22550 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22557 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22544 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22555 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22557
+Within the Swamp of Kordein~
+The swamp oozes along at a much slower pace here.  It coalesces into
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22551 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22558 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22545 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22556 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22558
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22552 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22559 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22546 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22557 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22559
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22560 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22547 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22558 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22560
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction but up which leads up a hill
+to a large ruin.  
+~
+swamp
+ROOM DARK
+D NORTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22548 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22559 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22500
+A Path Leading into Darkness~
+A path made of packed dirt leads towards a bank of fog off to the east. 
+The stench of sulfur rolls over the path and loud noises sounding like
+bursting bubbles echo through the trees.  The path is dark and seems to be
+the only dry part of the land here.  The path continues on east deeper into
+the forest while the village of Dale can be seen to the west.  
+~
+road
+ROOM DARK
+D NORTH 0 0 0
+door~
+A solid layer of darkness lies in this direction.
+~
+D EAST 22501 0 0
+~
+Darkness blankets the path towards the east.  
+~
+D SOUTH 0 0 0
+door~
+A black bog opens up behind the treeline in this direction.
+~
+D WEST 13606 0 0
+door~
+The path continues to more solid ground to the west.  
+~
+D DOWN 0 0 0
+door~
+The path is somewhat firm but seems to be growing softer further along.  
+~
+#22501
+On a Path Leading into Darkness~
+As the path continues, the vegetation on either side of it grows more
+sparse.  The dense treeline of the Greenleaf forest thins and opens to the
+southeast.  The path continues eastward, curving south as well towaards the
+darkness while the more firm path is safer to the west.  
+~
+road
+ROOM DARK
+D NORTH 0 0 0
+door~
+A solid layer of darkness lies in this direction.
+~
+D EAST 22502 0 0
+~
+The path continues towards the swamp to the east.  
+~
+D SOUTH 0 0 0
+door~
+A black bog opens up behind the treeline in this direction.
+~
+D WEST 22500 0 0
+~
+The lights of the city grow brighter in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground seems to grow less solid as the path continues into the swamp.  
+~
+#22502
+At the Edge of Darkness~
+The treeline drops off suddenly into black water that makes up the swamp.
+The sky above is dark because of the overhanging trees.  To the south, the
+path dwindles into a tiny bridge of dry land leading further into the
+darkness of the swamp.  A bright spot of light to the west leads back
+towards the town of Dale.  
+~
+road
+ROOM DARK
+D NORTH 0 0 0
+door~
+The way north is impassable due to the darkness.
+~
+D EAST 0 0 0
+door~
+Darkness blankets the horizon in this direction.
+~
+D SOUTH 22503 0 0
+~
+The entrance to the bog lies in this direction.
+~
+D WEST 22501 0 0
+~
+The lights of the city grow brighter in this direction.
+~
+D DOWN 0 0 0
+door~
+The dirt is barely just that, growing more and more mire-like.
+~
+#22503
+Entering the Swamp of Kordein~
+The path disappears suddenly and water quickly covers the ground.  Giant
+tree stumps emerge from the depths rising just a few feet into the air. 
+Willow trees stand dead within the swamp water.  The swamp continues to the
+south and west while a safe trail leads through the swamp to the east.  The
+firmer trail to the city can be seen to the north.  
+~
+road
+ROOM DARK
+D NORTH 22502 0 0
+~
+The trail to the city lies in this direction.
+~
+D EAST 22504 0 0
+~
+A small trail lies in this direction.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22536 0 0
+~
+A faint flickering can be seen sharply contrasting the surrounding black.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22504
+Walking Along a Swampy Path~
+The path slopes and curves slightly but still heads eastward in
+direction.  The outline of a structure is barely visible n the shadows in
+the distance.  The swamp surrounds the path to the north and south while the
+damp trail continues both east and west.  
+~
+road
+ROOM DARK
+D NORTH 22536 0 0
+~
+A faint flickering can be seen sharply contrasting the surrounding black.
+~
+D EAST 22505 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22503 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water rises ankle deep along
+the path.  
+~
+#22505
+On the Path Between Stumps~
+A line of stumps to the north of the damp trail is blocking the way into
+the swamp in that direction.  The outlines of the stumps look like small
+figures that look to be advancing upon the trail.  The swamp opens up to the
+south while the path continues east and west further through the swamp.  
+~
+road
+ROOM DARK
+D NORTH 0 0 0
+~
+A bramblebush coated in the swamps waters is preventing passage north here.
+~
+D EAST 22506 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22504 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22506
+On the Swampy Path~
+Continuing on the makeshift path through the swamp, the darkness
+threatens to engulf everything.  The stumps that were easy to see earlier
+are now nearly invisible.  The path continues to the east and west while the
+darkness and water of the swamp threatens to overrun the trail from the
+north and south.  
+~
+road
+ROOM DARK
+D NORTH 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22507 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22505 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22507
+Along the Swampy Path~
+While the path has risen and fell as it moved further into the swamp, the
+water has stayed a constant level.  Venturing off the path into the swamp
+would slow movement down considerably.  The path continues to the east and
+west while the swamp is on both sides of it to the north and south.  
+~
+road
+ROOM DARK
+D NORTH 22534 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22508 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22552 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22508
+A Turn in the Swampy Path~
+Walking through the swamp, the path seems to level off.  The stumps that
+have been seen on each side of the path have suddenly disappeared.  A mound
+of earth can barely be seen forming to the south of the trail.  The path
+continues further into the swamp to the south and back to the west while the
+swamp is to the north and the east of the trail.  
+~
+road
+ROOM DARK
+D NORTH 22530 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22559 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22509 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22507 0 0
+~
+The path disappears into darkness in that direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22509
+An Intersection on a Incline~
+Walking to the top of the hill, it becomes apparent that there are two
+walkable paths.  Both are made of slightly solid ground composed of what
+looks to be mud and various objects that have accumulated.  One path leads
+eastward whlie the other continues further south.  The black swamp is easily
+visible to both the north and west.  
+~
+road
+ROOM DARK
+D NORTH 22508 0 0
+~
+The trail continues to the north.
+~
+D EAST 22510 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22520 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22510
+Along a East-West Path~
+Walking along the path, the ground ahead feels barely sturdier than the
+moist trail at the beginning of the swamp.  The path ahead can only be seen
+for a few feet at a time due to the intense darkness all around.  The swamp
+continues to the and south while the trail moves both to the east and the
+west.  
+~
+road
+ROOM DARK
+D NORTH 22536 0 0
+~
+A faint flickering can be seen this way sharply contrasting the surrounding black.
+~
+D EAST 22511 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22509 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22511
+Along the East-West Path~
+The darkness continues to surrond the swamp as the path continues through
+it.  The water is broken by splashes every now and then.  A smaller path can
+barely be made out in the darkness, a path that heads to the south into
+drier ground.  The path continues east and west while the swamp is further
+to the north.  
+~
+road
+ROOM DARK
+D NORTH 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22512 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22524 0 0
+door~
+Pushing the weeds aside a small hut-like object appears.
+~
+D WEST 22510 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22512
+Along the East-West Path~
+Walking along the path, the ground is just barely sturdier than the
+ground found at the beginning of the swamp.  The path ahead can only be seen
+for a few feet at a time due to the intense darkness all around.  The swamp
+seems to go on to the north and south while the path continues east and
+west.  
+~
+road
+ROOM DARK
+D NORTH 22536 0 0
+~
+A faint flickering can be seen sharply contrasting the surrounding black.
+~
+D EAST 22513 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22511 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22513
+An Abrupt Turn in the Path~
+Continuing through the darkness, the path continues through the swamp. 
+The dark waters spread out like a sea to the east as the path suddenly
+twists southward.  The swampwater to the esat bubbles slightly.  The path
+continues further into the swamp to the south and west while the swamp is to
+the east and north.  
+~
+road
+ROOM DARK
+D NORTH 22536 0 0
+~
+A faint flickering can be seen sharply contrasting the surrounding black.
+~
+D EAST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22514 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22512 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22514
+A Twist in the Trail~
+Expecting the path to continue southward you nearly stumble yet again as
+the blackness swallows up the narrow land-bridge.  The path curves back to
+the east this time leading away from the entrance to the swamp.  The
+darkness made by the tree cover permeates the swamp.  The scent of sulfur
+crosses the path from nearly every direction.  Pops and snaps from what
+sound to be bubbles popping can be heard from every direction.  The path
+continues to the east and north while the swamp is to the west and south.  
+~
+road
+ROOM DARK
+D NORTH 22513 0 0
+~
+The trail continues in this direction.
+~
+D EAST 22515 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22515
+Along the East-West Path~
+Walking along the path further into the swamp, the ground becomes barely
+more sturdy than it was at the beginning of the swamp.  The path can only be
+seen ahead for a few feet at a time due to the intense darkness all around. 
+The swamp surrounds the path to the north and south while the trail
+continues east and west.  
+~
+road
+ROOM DARK
+D NORTH 22542 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22516 0 0
+~
+The trail continues in this direction.
+~
+D SOUTH 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22514 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22516
+A Broad Turn~
+The ground making up the path begins to slowly curve to the south. 
+Cointinuing along the path, the treestumps begin fading into view again to
+the north and the east.  A pale light can be seen to the north of the path. 
+The swamp borders the trail to the north and east while the trail continues
+to the east and south.  
+~
+road
+ROOM DARK
+D NORTH 22536 0 0
+~
+A faint flickering can be seen sharply contrasting the surrounding black.
+~
+D EAST 22552 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22517 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22515 0 0
+~
+The trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22517
+Along the Sparse Trail~
+The path continues through the swamp, slight sounds of gurgling covering
+up the little amount of wildlife noise that can be heard in the swamp.  The
+stumps see to grow taller in the shadows the further into the swamp the
+trail leads.  The trail continues to the north and south while the swamp
+borders the trail to the east and west.  
+~
+road
+ROOM DARK
+D NORTH 22516 0 0
+~
+The trail continues in this direction.
+~
+D EAST 22560 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22518 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22530 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22518
+A Strange Intersection~
+The darkness of the swamp is lighter here further within it.  The trees
+grow taller and actually have small bits of leaves on them.  The path,
+almost solid ground now, continues further into the swamp to the west and
+north.  The swamp borders the path to the east while a strange glow crosses
+the trail from the south.  
+~
+road
+ROOM DARK
+D NORTH 22517 0 0
+~
+The trail continues in this direction.
+~
+D EAST 22553 0 0
+door~
+The swamp encompasses everything in this direction.  
+~
+D SOUTH 22536 0 0
+~
+A faint flickering can be seen in this direction sharply contrasting the surrounding black.
+~
+D WEST 22519 0 0
+~
+A large tuft of marsh weeds springs up in this direction.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22519
+A Hollow Made Out of Marshweeds~
+This small hut is made ouf of a marshweeds that were tied togethre at the
+top.  The hut itself is only about nine feet tall and about ten feet across.
+Towards the back there is a small cot made of weeds and grass.  A small pit
+for fires lies in the center of the hut.  The path is back out of the hut to
+the east.  
+~
+inside
+ROOM INDOORS
+D EAST 22518 0 0
+~
+~
+D DOWN 0 0 0
+door~
+Ashes are strewn about the ground from the fireplace and strange clawed
+footprints litter the ground.  
+~
+#22520
+Along the Swampy Path~
+The darkness of the swamp covers the path from all directions.  The
+stumps that have been riddled through the swamp are gone here.  Loud pops
+are heard from either side of the path like large bubbles were bursting. 
+The path continues to the north and south while the swamp borders the trail
+to the east and west.  
+~
+road
+ROOM DARK
+D NORTH 22509 0 0
+~
+The trail continues in this direction.
+~
+D EAST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22521 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22536 0 0
+~
+A faint flickering can be seen in this direction sharply contrasting the surrounding black.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22521
+Along the Swampy Path~
+The darkness of the swamp covers the path from all directions.  The
+stumps that have been riddled through the swamp are gone here.  Loud pops
+are heard from either side of the path like large bubbles were bursting. 
+The path continues to the north and south while the swamp borders the trail
+to the east and west.  
+~
+road
+ROOM DARK
+D NORTH 22520 0 0
+~
+The trail continues in this direction.
+~
+D EAST 22553 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22522 0 0
+~
+The trail continues in this direction.
+~
+D WEST 22536 0 0
+~
+A faint flickering can be seen in this direction sharply contrasting the surrounding black.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22522
+An Eastward Turn~
+The darkness of the swamp covers the path from all directions.  The
+stumps that have been riddled through the swamp are gone here.  Loud pops
+are heard from either side of the path like large bubbles were bursting. 
+The path continues to the north and east while the swamp borders the path to
+the west and south.  
+~
+road
+ROOM DARK
+D NORTH 22521 0 0
+~
+The trail continues in this direction.
+~
+D EAST 22523 0 0
+~
+A small wooden cabin lies to the east
+~
+D SOUTH 22535 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22554 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The ground is barely solid here and black water raises ankle deep along
+the path.  
+~
+#22523
+A Small Cabin~
+This cabin is rickety and old.  Cobwebs line the corners and the few
+pieces of furniture appear disheveled.  A desk sits in one corner and a
+small oil lamp sits on it, appearing to have been without use for quite some
+time.  A shelf lined with books is standing on the eastern wall.  The exit
+to the cabin leads back into the swamp to the west.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+The back of the wall is bare except for the table.
+~
+D EAST 0 0 0
+door~
+The shelf is littered with old books.
+~
+D SOUTH 0 0 0
+door~
+The southern wall is empty save for a broken window.
+~
+D WEST 22522 0 0
+~
+~
+D DOWN 0 0 0
+door~
+The ground is littered with shreds of paper and turned over chairs.  The
+place is truly a wreck.  
+~
+E encounter demon apindel finstin~
+It details an exotic encounter with a demon by the name of "Gamygyn"
+~
+E desk~
+This desk is of simple design, four legs and a tabletop.  Loose
+papers are strewn about the top  but they all seem to be blank. An
+empty inkwell sits on the desk as well as a quill-pen.
+~
+E oil lamp~
+This lamp is incapable of use.  The bottom of the glass is cracked
+and the desk is discolored where the oil must have leaked out.
+~
+E shelf books~
+The shelf is littered with books that have torn bindings.  One
+sticks out entitled "An encounter with a demon" by Apindel Finstin.
+~
+E broken window~
+Nothing is visible out of the window.
+~
+#22524
+A Hollow Made Out of Marshweeds~
+This small hut is made ouf of a marshweeds that were tied togethre at the
+top.  The hut itself is only about nine feet tall and about ten feet across.
+Towards the back there is a small cot made of weeds and grass.  A small pit
+for fires lies in the center of the hut.  The path is back out of the hut to
+the east.  
+~
+inside
+ROOM INDOORS
+D NORTH 22511 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+Ashes are strewn about the ground from the fireplace and strange clawed
+footprints litter the ground.  Towards the back of the structure a small
+mound of earth looks recently disturbed.  
+~
+E dirt debris pile~
+Looking at the pile of dirt something shiny can be seen sticking out of
+the top.  
+~
+#22525
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22537 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22526 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22531 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22506 0 0
+~
+The swamp seems to grow less thick in this direction.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22526
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22538 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22527 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22532 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22525 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#22527
+Within the Swamp of Kordein~
+Deepening darkness envelops the entire surroundings here.  Bubbling black
+muck surrounds the small pieces of slightly solid ground that act as steps
+through the swamp.  When a bubble pops, a loud echo sounds through the
+swamp.  The swamp continues in every direction, seeming to be undaunted in
+growing.  
+~
+swamp
+ROOM DARK
+D NORTH 22539 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D EAST 22528 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D SOUTH 22533 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D WEST 22526 0 0
+~
+The darkness of the bog swallows everything that way.
+~
+D DOWN 0 0 0
+door~
+The top of the bog is only visible in flashes of lightning and solid
+ground is nowhere in sight.  
+~
+#0
+
+
+
+#RESETS
+MOB 22506 TO 22519 GLIMIT 1 LLIMIT 1
+EQUIP 22506 WIELD
+EQUIP 22507 BODY
+MOB 22504 TO 22523 GLIMIT 1 LLIMIT 1
+EQUIP 22505 WIELD
+MOB 22506 TO 22524 GLIMIT 99 LLIMIT 2
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+OBJECT 22503 TO 22524
+PUT 22504 IN 22503 COUNT 1
+MOB 22505 TO 22525 GLIMIT 99 LLIMIT 2
+MOB 22507 TO 22525 GLIMIT 99 LLIMIT 3
+MOB 22503 TO 22528 GLIMIT 99 LLIMIT 3
+MOB 22502 TO 22528 GLIMIT 99 LLIMIT 3
+MOB 22503 TO 22529 GLIMIT 99 LLIMIT 3
+MOB 22505 TO 22532 GLIMIT 99 LLIMIT 3
+EQUIP 22508 ARMS
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+MOB 22503 TO 22534 GLIMIT 99 LLIMIT 3
+MOB 22507 TO 22534 GLIMIT 99 LLIMIT 3
+MOB 22500 TO 22536 GLIMIT 1 LLIMIT 1
+GIVE 22500
+EQUIP 22501 WIELD
+MOB 22501 TO 22536 GLIMIT 1 LLIMIT 1
+MOB 22507 TO 22538 GLIMIT 99 LLIMIT 3
+MOB 22502 TO 22538 GLIMIT 99 LLIMIT 3
+MOB 22503 TO 22541 GLIMIT 99 LLIMIT 3
+MOB 22502 TO 22541 GLIMIT 99 LLIMIT 3
+MOB 22506 TO 22545 GLIMIT 99 LLIMIT 3
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+MOB 22505 TO 22545 GLIMIT 99 LLIMIT 3
+EQUIP 22508 ARMS
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+MOB 22502 TO 22547 GLIMIT 99 LLIMIT 3
+MOB 22507 TO 22547 GLIMIT 99 LLIMIT 3
+MOB 22506 TO 22551 GLIMIT 99 LLIMIT 3
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+MOB 22507 TO 22551 GLIMIT 99 LLIMIT 3
+MOB 22503 TO 22554 GLIMIT 99 LLIMIT 3
+MOB 22502 TO 22554 GLIMIT 99 LLIMIT 3
+MOB 22505 TO 22557 GLIMIT 99 LLIMIT 3
+EQUIP 22508 ARMS
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+MOB 22506 TO 22557 GLIMIT 99 LLIMIT 3
+EQUIP 22507 BODY
+EQUIP 22506 WIELD
+MOB 22507 TO 22560 GLIMIT 99 LLIMIT 3
+MOB 22503 TO 22560 GLIMIT 99 LLIMIT 3
+MOB 22502 TO 22560 GLIMIT 99 LLIMIT 3
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

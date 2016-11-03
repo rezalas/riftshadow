@@ -1,0 +1,4755 @@
+#AREA
+mythruins.are~
+Ruins of Drannor~
+Ceran~
+30 51
+13700 13899
+normal
+temperate
+0
+
+#MOBS
+#13700
+spirit~
+a spirit of Myth Drannor~
+A ghastly insubstantial elf wanders amongst the ruins.      
+~
+The ghost of a lost elf, killed in violence without last rites and with nobody      
+to guide the lost soul to where it belongs.      
+~
+-1000 13700 100 human~
+40 15d10+1850 4d8+13 0 100 drain
+0 0 0 0
+standing male none
+0 0 medium
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT UNDEAD
+OFF DODGE
+OFF FADE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13701
+beast cacodaemon daemon~
+a horned cacodaemon~
+A huge beast with a twisted horn snarls and charges you!      
+~
+This unearthly creature is an example of what has replaced the once peaceful      
+elves of the ancient city. It has eyes of darkness and seems at home amidst      
+the ruins.      
+~
+-1000 13700 100 unique~
+48 25d10+3500 6d6+18 0 100 claw
+0 0 0 0
+standing male none
+0 0 giant
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13702
+knight~
+a knight of Myth Drannor~
+A tall knight stands here watching for signs of evil.      
+~
+This man stands watch over the ruins, making sure the evil within it stays      
+there.       
+~
+1000 13702 100 human~
+50 50d10+4500 5d8+19 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#13703
+drow marauder~
+a drow marauder~
+An ebon skinned elf is here scowling at the shadows.      
+~
+This dark elven scout seems angry and disturbed. His rightful position, at      
+least in his mind, is inside the lower level of the enclaves where the true      
+power is held.      
+~
+-1000 0 100 drow~
+46 25d10+3250 6d6+16 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF CURSE
+CLASS warrior none none 
+#13704
+plant trap~
+a man-eater trap~
+A wickedly spiked plant sways gently in the breeze.      
+~
+The plants that are growing here in the ruins are not quite as harmless as the     
+normal ones in the forests around the rest of Thera. This one has evil looking     
+branches covered in sharp thorns, and it actually moves and lashes at you!      
+~
+-1000 0 100 human~
+24 5d10+500 2d10+6 0 100 grep
+0 0 0 0
+standing male none
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+IMM CHARM
+CLASS warrior none none 
+#13706
+golem~
+a golem of red stone~
+A golem carved from red stone stands here.      
+~
+This huge automaton stands eternally vigilant over the tower before it.      
+It's body is shaped like a giant but it has nothing in it's mind but the      
+commands of it's long dead masters.      
+~
+0 0 100 unique~
+45 25d10+3000 8d4+16 0 100 crush
+0 0 0 0
+standing male none
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13707
+green dragon~
+an ancient green dragon~
+A massive green dragon stands amidst a cloud of toxic gas.      
+~
+This is one of the largest dragons you have ever seen. Larger even than      
+the massive reds that are found in the dragon towers. It's body is covered      
+in thick green scales as hard as steel and a cloud of corrosive, poison gas      
+clings to it like an outer shell.      
+~
+-1000 0 100 dragon~
+57 50d10+6000 5d10+25 0 100 acbite
+0 0 0 0
+standing male affluent
+0 0 giant
+ACT STAY_AREA
+OFF DISARM
+OFF PARRY
+OFF TAIL
+OFF SPAM_MURDER
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF HASTE
+IMM CHARM
+RES SLASH
+RES LIGHTNING
+VUL ACID
+CLASS warrior none none 
+#13708
+lizard man lizardman~
+a lizardman~
+A giant lizardman is here scavangeing amongst the ruins.      
+~
+A creature with green, dirty-looking skin gazes at you and grins evilly at      
+your presence.      
+~
+-1000 13708 100 unique~
+32 10d10+1000 6d4+10 0 100 claw
+0 0 0 0
+standing male poor
+0 0 large
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+CLASS warrior none none 
+#13709
+shadow demon~
+a shadow demon~
+A dark shadow is moving in silence between the rubble.      
+~
+A blood-red eyes looks at you with immense hatred, sharp claws flashing in      
+the moonlight. Creation of Forgotten Gods shadow demon guards lost secrets      
+of Myth Drannor.      
+~
+-1000 13709 100 human~
+37 10d10+1500 3d10+12 0 100 frbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+OFF FADE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13711
+blue golem~
+a golem of blue stone~
+A golem carved from blue stone stands here.      
+~
+This huge automaton stands eternally vigilant over the tower before it.      
+It's body is shaped like a giant but it has nothing in it's mind but the      
+commands of it's long dead masters.      
+~
+0 0 100 unique~
+45 25d10+3000 8d4+16 0 100 crush
+0 0 0 0
+standing male none
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13712
+green golem~
+a golem of green stone~
+A golem carved from green stone stands here.      
+~
+This huge automaton stands eternally vigilant over the tower before it.      
+It's body is shaped like a giant but it has nothing in it's mind but the      
+commands of it's long dead masters.      
+~
+0 0 100 unique~
+45 25d10+3000 8d4+16 0 100 crush
+0 0 0 0
+standing male none
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13713
+black golem~
+a golem of black stone~
+A golem carved from black stone stands here.      
+~
+This huge automaton stands eternally vigilant over the tower before it.      
+It's body is shaped like a giant but it has nothing in it's mind but the      
+commands of it's long dead masters.      
+~
+0 0 100 unique~
+45 25d10+3000 8d4+16 0 100 crush
+0 0 0 0
+standing male none
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13715
+draconian three tyranthraxus~
+tyranthraxus~
+A massive three headed draconian hisses in fury!      
+~
+Creature with three heads hisses at you in primal fury. Lord of Astral      
+planes Tyranthraxus now rides Thera.        
+~
+-1000 13700 100 unique~
+58 50d10+10500 8d6+30 0 100 acbite
+0 0 0 0
+standing male moderate
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13716
+dark prescence spectre king~
+the spectre of the elven First king~
+A cold and dark prescence forms out of the freezing air.      
+~
+When the last of the elves had fallen in Myth Drannor the ancient evil that      
+had been buried beneath it arose to return to the world. But there was still      
+another unforseen step required and the darkness, while searching for that      
+last piece, required servants to guard It. The last elf king of Myth Drannor      
+was one of these, and now his spectre guards the way to the greatest evil.      
+~
+-1000 13700 100 unique~
+58 50d10+10000 9d6+30 0 100 frbite
+0 0 0 0
+standing male rich
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF FADE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13717
+fallen angel~
+a Fallen Angel~
+A tall man with pale eyes and shredded bloody wings is here.      
+~
+As part of the evil one's final return to the world he has called upon all      
+of his most powerful servants. When failing to find the last piece required      
+to break the imprisonment this Fallen angel was posted as a guard to prevent      
+anyone from entering while It was still vulnerable and imprisoned.      
+~
+-1000 13700 100 unique~
+60 50d10+15000 10d6+34 0 100 wrath
+0 0 0 0
+standing male none
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+OFF FADE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13718
+lord bane~
+the Lord Bane~
+A towering prescence of indescribable power dominates the room!      
+~
+You see nothing special about it. In fact it is so pure pitch-black around      
+this being you can see nothing at all!      
+~
+-1000 13700 100 unique~
+65 1d1+15499 10d5+40 0 100 divine
+0 0 0 0
+standing male rich
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#13719
+rock imp~
+a rock imp~
+A fiendish looking imp with stone-grey wings watches the ruins.      
+~
+~
+-600 0 100 human~
+46 25d10+3250 6d6+16 0 100 claw
+0 0 0 0
+standing male none
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+RES CHARM
+CLASS warrior none none 
+#13721
+ogre~
+a rock ogre~
+A huge ogre is here gnawing on the bone of some unfortunate creature.      
+~
+This ogre has the look of someone who's prepetually hungry. It seems a little      
+dull witted even for an ogre, and you notice it's eyes a red from lack of      
+sleep. It seems even the creatures who prey on others are not safe in these      
+ruins.      
+~
+0 0 100 unique~
+47 25d10+3800 6d6+20 0 100 smash
+0 0 0 0
+standing male poor
+0 0 large
+ACT SENTINEL
+ACT STAY_AREA
+CLASS warrior none none 
+#13722
+stone giant~
+a stone giant~
+A grey skinned giant is grinning as he walks amongsth the ruins.      
+~
+This giant is right at home here within the broken stones of Myth Drannor.      
+It's skin matches the colour of the rocks and debri, making it very hard to      
+see as it hunts for victims to satisfy it's hunger and bloodlust.      
+~
+-600 13722 100 unique~
+51 50d10+5500 5d9+23 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 giant
+ACT STAY_AREA
+OFF DODGE
+CLASS warrior none none 
+#13723
+paladin lord knight~
+a paladin knight of Myth Drannor~
+A tall man rests upon a rock as he surveys the ruins.      
+~
+This lord paladin has entered to find the greatest evil that resides within      
+the ruins. His quest so far has been to no avail for he cannot breach the      
+inner regions of the black tower and is unable to fight his way past what he      
+suspects may hold the key.      
+~
+1000 0 100 human~
+58 50d10+9000 8d6+28 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+ACT CLERIC
+OFF DODGE
+IMM CHARM
+CLASS warrior none none 
+#13724
+hydra neo neohydra~
+a massive Neohydra~
+A huge triple headed hydra swings it's heads about in seach of prey!      
+~
+This thing is HUGE. It's body is the size of a house and the three heads that      
+swing around scanning for victims are like dragon heads, only there are three      
+of them at once.      
+~
+-1000 0 100 dragon~
+55 1d1+29999 6d8+28 0 100 bite
+0 0 0 0
+standing male none
+0 0 giant
+ACT STAY_AREA
+OFF PARRY
+OFF TAIL
+AFF DETECT_HIDDEN
+AFF HASTE
+IMM CHARM
+RES WEAPON
+RES SLASH
+RES LIGHTNING
+VUL ACID
+CLASS warrior none none 
+#13725
+skeletal elf skeleton~
+a skeletal elf~
+A heap of staggering bones is trying to seek out a new life.      
+~
+These bones are all that are left of one of the thousands of elves that tried      
+to flee the destruction of Myth Drannor so many centuries ago. Now cursed to      
+live forever in the state of undying hell in the bone graveyards, it seeks a      
+new life to live and will kill for it...      
+~
+-1000 0 100 human~
+27 5d10+650 5d4+8 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT STAY_AREA
+ACT UNDEAD
+IMM CHARM
+CLASS warrior none none 
+#13726
+girl lady elf~
+a lady in green-blue~
+A stunning elven girl with crystal clear blue eyes stands here.      
+~
+This girl is totally out of place here. She has a look of ancient sadness about    
+her that is totally uncharacteristic for an elf. She seems to want you to do      
+something for her...      
+~
+1000 0 100 elf~
+60 1d1+20000 8d6+28 0 100 divine
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF SLEEP
+AFF HASTE
+IMM CHARM
+IMM PIERCE
+IMM SLASH
+RES DROWNING
+CLASS warrior none none 
+#13728
+mud dweller~
+a mud dweller~
+A slimy lump of mud oozes out of the ground and slides towards you.      
+~
+This piece of disgusting matter seems to be made of the very dirt and slime      
+that you walk upon. It has very little sense other than it's hunger, but it is      
+still a dangerous creature to be around.      
+~
+0 0 100 human~
+35 10d10+1300 4d7+11 0 100 suction
+0 0 0 0
+standing male none
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+CLASS warrior none none 
+#13729
+hissing frog~
+a hissing frog~
+A giant frog hisses and flicks it's pointed tongue out at you.      
+~
+This frog seems to have suffered from some kind of unnatural growth and dark      
+mutation. It's body is about the size of a horse, and as it hisses a spray of      
+burning acid lands on the ground sizzling.      
+~
+0 13729 100 human~
+25 5d10+550 2d10+7 0 100 acbite
+0 0 0 0
+resting male none
+0 0 medium
+ACT AGGRESSIVE
+OFF DODGE
+CLASS warrior none none 
+#13730
+elf knight~
+an elven knight of ages past~
+A shimmering elven knight with a ghostly form is here.      
+~
+The knights of ancient Myth Drannor still respond to the call of their horn and    
+will return to serve in times of great need, as proven by this knights return      
+from the dead.      
+~
+700 13730 100 elf~
+51 50d10+3500 6d8+15 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+AFF SLEEP
+IMM CHARM
+RES DROWNING
+CLASS warrior none none 
+#13731
+bone demon~
+the bone demon~
+A huge creature composed of hundreds of elven bones stands here.      
+~
+This being seems to be from the pieces of elven bones that lie scattered all      
+around the region. It's size is tremendous, easily dwarfing even a giant or      
+small dragon. There is something extremely evil about it's prescence here at      
+the blocked river, as if it were the symbol of the darkness that trapped the      
+doomed elves here in their ships.      
+~
+-1000 0 100 human~
+55 50d10+9000 10d4+25 0 100 pound
+0 0 0 0
+standing male none
+0 0 giant
+ACT STAY_AREA
+ACT UNDEAD
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+IMM PIERCE
+CLASS warrior none none 
+#13732
+mist wraith~
+a mist wraith~
+A misty insubstantial wraith is rising out of the ground here.      
+~
+There is little to see of this undead wraith, other than that it appears to be     
+some kind of elven spirit seeking something long lost.      
+~
+-700 13732 100 human~
+22 5d10+550 2d10+7 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT STAY_AREA
+ACT UNDEAD
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#13700
+spear~
+a rusty spear~
+A long rusted spear is on the ground.~
+weapon
+iron~
+spear 6 5 stab 0
+30 7 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#13701
+scimitar~
+a rusty scimitar~
+A large but rusted scimitar is on the ground.~
+weapon
+iron~
+sword 6 5 slash 0
+30 9 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -1
+APPLY DAMROLL -1
+LIMIT 0
+TIMER 0
+
+#13702
+large iron shield~
+a large iron shield~
+A piece of iron battered into the shape of a shield is here.~
+armor
+iron~
+4 5 4 0 0
+15 7 100 P
+WEAR TAKE
+WEAR SHIELD
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#13703
+chainmail~
+chainmail armor~
+Some chainmail armor is on the ground.~
+armor
+steel~
+7 6 7 0 0
+26 16 2000 P
+WEAR TAKE
+WEAR BODY
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#13704
+longsword~
+a smooth-bladed longsword~
+A smooth-bladed longsword is on the ground.~
+weapon
+steel~
+sword 6 6 slash 0
+34 8 2000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#13705
+armor field plate~
+a suit of field plate~
+A set of light field armor is on the ground.~
+armor
+steel~
+8 7 9 5 5
+40 10 9000 P
+WEAR TAKE
+WEAR BODY
+APPLY HITROLL 1
+APPLY DAMROLL 2
+APPLY HP 15
+APPLY MOVE 25
+LIMIT 25
+TIMER 0
+
+#13706
+leather gauntlets~
+a pair of leather gauntlets~
+A pair of hard leather gauntlets are on the ground.~
+armor
+leather~
+4 5 3 0 0
+40 30 3000 P
+WEAR TAKE
+WEAR HANDS
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY DEX 1
+LIMIT 20
+TIMER 0
+
+#13707
+red quartz ring~
+a ring of red stained quartz~
+A ring made of some red stone is on the ground.~
+armor
+quartz~
+5 5 5 5 5
+40 1 13500 P
+WEAR TAKE
+WEAR FINGER
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+APPLY HITROLL 2
+APPLY DAMROLL 3
+APPLY STR 2
+APPLY SBREATH 5
+LIMIT 6
+TIMER 0
+
+#13708
+green quartz ring~
+a ring of green stained quartz~
+A ring made of some green stone is on the ground.~
+armor
+quartz~
+5 5 5 5 5
+40 1 12500 P
+WEAR TAKE
+WEAR FINGER
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+APPLY WIS 2
+APPLY HP 30
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 4
+TIMER 0
+
+#13709
+blue quartz ring~
+a ring of blue stained quartz~
+A ring made of some green stone is on the ground.~
+armor
+quartz~
+5 5 5 5 5
+40 1 11500 P
+WEAR TAKE
+WEAR FINGER
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+APPLY INT 2
+APPLY MANA 40
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY SBREATH -3
+LIMIT 4
+TIMER 0
+
+#13710
+black quartz ring~
+a ring of black stained quartz~
+A ring made of some black stone is on the ground.~
+armor
+quartz~
+5 5 5 5 5
+40 1 16500 P
+WEAR TAKE
+WEAR FINGER
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY SBREATH -3
+LIMIT 3
+TIMER 0
+
+#13711
+bloody shredded angel wings~
+the shredded wings of a fallen angel~
+The shredded and bloody remains of some creature's wings are here.~
+boat
+energy~
+0 0 0 0 0
+51 20 54000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM VISDEATH
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 3
+TIMER 0
+
+#13712
+horns bane~
+the horns of Bane~
+A pair of black horns rimmed with blue-green flames is here.~
+armor
+energy~
+0 0 0 0 0
+51 19 60000 P
+WEAR TAKE
+WEAR HEAD
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+ITEM MAGIC
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+LIMIT 0
+TIMER 0
+E horns bane~
+These remains of the ancient god Bane still have the last flames of the magic      
+used to imprison him. The blue-green fire burns softly around the horns and      
+gives them an unreal appearance, as if they are ready to vanish into thin air.      
+~
+
+#13713
+scroll binding power~
+a scroll of binding power~
+A scroll with intricate writing has been left here.~
+scroll
+energy~
+270 'reserved' 'reserved' 'reserved' 'reserved'
+45 1 19999 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+E scroll binding power~
+This is one of the last great artifacts of the ancient city of Myth Drannor.      
+The elven archmages had prepared it in order to help create a weapon powerful      
+enough to fight the evil that was coming, but they were defeated first and the      
+scroll was taken by Bane in order to help him break the bonds that held him      
+beneath the ancient city.      
+~
+
+#13714
+red sword planes~
+the sword of planes~
+A straight red sword lies on the ground.~
+weapon
+energy~
+sword 5 7 slice 0
+45 16 46000 P
+WEAR TAKE
+WEAR WIELD
+ITEM INVIS
+ITEM MAGIC
+ITEM BLESS
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 1
+TIMER 0
+
+#13715
+torque restoration silver circle~
+the torque of restoration~
+A shiny circle of silver is on the ground.~
+trash
+silver~
+0 0 0 0 0
+50 2 49999 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+ITEM BLESS
+ITEM NOREMOVE
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+
+#13716
+crown frozen blood red~
+a crown of frozen blood~
+A crown of frozen red blood is here.~
+armor
+blood~
+3 3 3 0 0
+48 8 36999 P
+WEAR TAKE
+WEAR HEAD
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+ITEM MAGIC
+ITEM NOREMOVE
+APPLY DAMROLL 2
+APPLY CON -2
+APPLY DEX -1
+LIMIT 1
+TIMER 0
+
+#13717
+rod lordly might~
+the rod of lordly might~
+A beautifully carved rod of steel is on the ground.~
+trash
+steel~
+0 0 0 0 0
+51 9 45999 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+ITEM BLESS
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+E rod lordly might~
+It appears to be a dull and useless ceremonial staff.      
+There are some strange markings on the rod...      
+~
+E markings~
+There are several scratches and words on the rod, one looks like a mace,      
+another like a sword, and yet another which is some kind of strange star-like      
+symbol. The words 'rulers are just figureheads' are etched into the base of it.      
+~
+E star star-like~
+The words 'rulership is for the divine' are written alongside the star etched      
+into the rod's surface.      
+~
+E mace~
+The words 'rule with an iron fist' are written alongside the mace etched into      
+the rod's surfaec.      
+~
+E sword~
+There are some words scrawled next to the symbol of the sword on the rod's      
+surface, reading 'the strong rule the weak'.      
+~
+
+#13718
+steel mace~
+a shiny steel mace~
+A shiny mace of steel is here.~
+weapon
+steel~
+mace 6 6 pound 0
+35 17 4000 P
+WEAR TAKE
+WEAR WIELD
+ITEM ANTIEVIL
+APPLY HITROLL 3
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#13720
+circle bracelet frozen elf blood~
+a bracelet of frozen elf blood~
+A horrible circle of congealed, frozen blood is on the ground.~
+armor
+blood~
+10 10 10 18 18
+47 2 32199 P
+WEAR TAKE
+WEAR WRIST
+ITEM DARK
+ITEM EVIL
+ITEM INVIS
+ITEM MAGIC
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+ITEM VISDEATH
+APPLY HITROLL 1
+APPLY DAMROLL 3
+LIMIT 3
+TIMER 0
+E circle bracelet frozen blood elf~
+The blood is congealed and disgustingly frozen, yet there almost seems to be      
+some kind of life within it, screaming for release. It as is if the elf whose      
+blood was taken is still contained, screaming for release.,      
+~
+
+#13722
+skull ancient god~
+the skull of an ancient god~
+A huge black skull with a demonic leer is watching you!~
+light
+bone~
+0 0 600 0 0
+40 15 29999 P
+WEAR TAKE
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM NOREMOVE
+ITEM VISDEATH
+APPLY HITROLL 4
+APPLY DAMROLL 8
+LIMIT 1
+TIMER 0
+
+#13723
+suffering~
+Suffering~
+An object of pure suffering is on the ground.~
+trash
+energy~
+0 0 0 0 0
+55 1 43999 P
+WEAR TAKE
+WEAR NECK
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM VISDEATH
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 1
+TIMER 0
+
+#13724
+wrath~
+Wrath~
+An object of unholy wrath is lying on the floor.~
+trash
+energy~
+0 0 0 0 0
+55 1 44999 P
+WEAR TAKE
+WEAR FINGER
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM VISDEATH
+APPLY HITROLL 5
+APPLY DAMROLL 5
+LIMIT 1
+TIMER 0
+
+#13725
+bracelet woven elf hair~
+a bracelet woven from the hair an elf~
+A beautiful bracelet made fomr woven elf hair is on the ground.~
+armor
+blood~
+10 10 10 18 18
+47 2 29099 P
+WEAR TAKE
+WEAR WRIST
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY HITROLL 1
+APPLY DAMROLL 3
+LIMIT 4
+TIMER 0
+
+#13727
+stone club~
+a stone club~
+A large club made from a long piece of stone is here.~
+weapon
+stone~
+mace 7 5 pound 0
+35 21 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -3
+APPLY DAMROLL 2
+LIMIT 250
+TIMER 0
+
+#13728
+poncho skin stone~
+a poncho from the skin of a stone giant~
+A piece of very tough skin the colour of stone is lying here.~
+armor
+skin~
+12 11 10 0 0
+36 8 13000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM DARK
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+APPLY STR 1
+APPLY DEX -1
+APPLY DAMROLL 3
+LIMIT 5
+TIMER 0
+
+#13730
+rear green dragon claws~
+the rear claws of a green dragon~
+A large pair of green dragon claws lie on the ground.~
+armor
+bone~
+7 6 7 0 0
+40 25 17000 P
+WEAR TAKE
+WEAR FEET
+ITEM MAGIC
+APPLY DEX -1
+APPLY DAMROLL 3
+LIMIT 4
+TIMER 0
+
+#13731
+stone green orb dragonorb~
+a green dragonorb~
+A large green stone lies on the ground.~
+staff
+stone~
+40 3 3 'heal' 0
+35 3 2500 P
+WEAR TAKE
+WEAR HOLD
+ITEM MAGIC
+APPLY DAMROLL 3
+LIMIT 100
+TIMER 0
+
+#13732
+shining mace~
+the mace of shining light~
+A ball of brilliant green light rests here.~
+weapon
+energy~
+mace 5 9 light A
+50 0 14000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+APPLY HITROLL 6
+APPLY DAMROLL 4
+LIMIT 1
+TIMER 0
+E mace shining~
+This weapon appears to be made of pure energy. The green light that constitutes      
+the mace's head radiates an aura of holy righteousness that seems to sooth your      
+worries. It doesn't appear as powerful as many weapons you have heard of, yet      
+there is something about it that suggests it is for a special purpose.      
+~
+
+#13733
+scroll protection~
+a scroll of divine protection~
+A white scroll is resting here waiting to be used.~
+scroll
+paper~
+50 'sanctuary' 'reserved' 'shield' 'reserved'
+40 1 9000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+ITEM BLESS
+LIMIT 5
+TIMER 0
+
+#13734
+helm brilliance~
+the helm of brilliance~
+A beautiful helm studded with glowing gems is here.~
+armor
+energy~
+5 5 5 12 12
+48 5 13000 P
+WEAR TAKE
+WEAR HEAD
+ITEM HUM
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY INT 3
+APPLY MANA 30
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 2
+TIMER 0
+
+#13735
+flawless cape white knights~
+the cape of white knights~
+A flowing white cape of flawless make is on the ground.~
+armor
+cloth~
+4 5 5 10 10
+35 1 8000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY STR 2
+APPLY DEX 2
+APPLY SBREATH -7
+APPLY HP 30
+LIMIT 10
+TIMER 0
+
+#13736
+black key~
+the black key~
+A large sheer black key is here.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 500
+TIMER 0
+
+#13737
+hydra neohydra head~
+the head of a neohydra~
+A huge head of a decapitated hydra is here.~
+trash
+flesh~
+0 0 0 0 0
+0 30 0 P
+WEAR TAKE
+LIMIT 500
+TIMER 0
+
+#13738
+cutter hydraslayer slayer~
+a flesh-cutter named 'Hydraslayer'~
+A sharp slicing instrument is lying on the ground.~
+weapon
+steel~
+weapon 4 9 slice 0
+50 16 28800 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+APPLY HITROLL 2
+APPLY DAMROLL 4
+LIMIT 10
+TIMER 0
+
+#13739
+horn valere~
+the horn of valere~
+A large horn of ancient elven make is on the ground.~
+staff
+steel~
+51 1 1 'fireball' 0
+40 14 3000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+ITEM NODROP
+ITEM ANTIEVIL
+LIMIT 3
+TIMER 0
+E horn valere~
+The horn is made of some uniquely tempered steel and seems to be alive with      
+some holy power. You can hear the faint sounds of royal battle calls echoing in      
+the depths of the horn's recess.      
+~
+
+#13740
+rusty sword~
+a rusty sword~
+A rusty sword is lying half buried in the muck.~
+weapon
+steel~
+sword 1 1 slash 0
+0 4 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E rusty rusted sword~
+The weapon is totally rusted through and almost attached to the ground now      
+after all the time it has lain here in the swampy muck.      
+~
+
+#13741
+axe~
+a broken axe~
+A large decayed axe is sticking out of the muddy ground here.~
+weapon
+steel~
+axe 1 1 slice 0
+0 7 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+E axe~
+This weapon of ages past is so broken it's even more useless than your bare      
+hands would be in a fight.      
+~
+
+#13742
+rusted rusty armor~
+a rusty set of armor~
+A pile of rusted armor lies buried in the dirt.~
+trash
+steel~
+0 0 0 0 0
+0 10 0 P
+WEAR TAKE
+WEAR BODY
+APPLY AC 10
+APPLY DEX -2
+LIMIT 0
+TIMER 0
+E rusty armor~
+This armor is so far gone into decay and ruin that it actually hinders your      
+ability to fight.      
+~
+
+#13745
+skeleton~
+a skeleton~
+A half buried skeleton is poking up from the ground.~
+npc_corpse
+bone~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E skeleton~
+It looks like one of the ancient elves that fell in the city's death, left here      
+to rot away like garbage.      
+~
+
+#13746
+corpse~
+a blood soaked corpse~
+A blood soaked corpse of a dark elf is here.~
+npc_corpse
+flesh~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E corpse~
+This corpse looks very recent, and shows signs of violent beastial bites and      
+claw wounding. The creatures that did this must have very little care for the      
+lives of others.      
+~
+
+#13747
+rock boulder~
+a large boulder~
+A large smooth boulder rests on the ground here.~
+trash
+stone~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E boulder rock~
+This rock seems to be placed here rather purposefully compared to the rest of      
+the chaotic ruins lying all around...perhaps there is something under it...      
+~
+
+#0
+
+
+
+#ROOMS
+#13700
+In the ruins of the south gate~
+You stand before a pile of rubble marking the entrance to what looked to once      
+be a fabulous elven city. Remains of what was once great still linger even      
+here in the rocks and creeping undergrowth. The shattered archway leading      
+into the city bears the markings of elvish highlords of longpast. To the      
+east and west you can make out rock strewn paths around the city      
+battlements. South of here heads into the dark forests.      
+~
+inside
+ROOM INDOORS
+D NORTH 13736 0 0
+~
+~
+D EAST 13701 0 0
+~
+~
+D SOUTH 22523 0 0
+~
+~
+D WEST 13723 0 0
+~
+~
+#13701
+In the ruins of the southern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13702 0 0
+~
+~
+D WEST 13700 0 0
+~
+~
+#13702
+In the ruins of the southern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13703 0 0
+~
+~
+D WEST 13701 0 0
+~
+~
+#13703
+In the ruins of the southern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13704 0 0
+~
+~
+D WEST 13702 0 0
+~
+~
+D UP 13735 0 0
+~
+~
+#13704
+In the ruins of the eastern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13705 0 0
+~
+~
+D SOUTH 13703 0 0
+~
+~
+#13705
+In the ruins of the eastern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling. To the east      
+there is a gap in the broekn walls, leading out to the surrroudning      
+forests. ~
+inside
+ROOM INDOORS
+D NORTH 13706 0 0
+~
+~
+D EAST 22519 0 0
+~
+~
+D SOUTH 13704 0 0
+~
+~
+#13706
+In the ruins of the eastern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13707 0 0
+~
+~
+D SOUTH 13705 0 0
+~
+~
+#13707
+In the ruins of the eastern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13708 0 0
+~
+~
+D SOUTH 13706 0 0
+~
+~
+#13708
+In the ruins of the eastern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13709 0 0
+~
+~
+D SOUTH 13707 0 0
+~
+~
+#13709
+In the northeastern corner wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13708 0 0
+~
+~
+D WEST 13710 0 0
+~
+~
+D UP 13730 0 0
+~
+~
+#13710
+In the ruins of the northern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13709 0 0
+~
+~
+D WEST 13711 0 0
+~
+~
+#13711
+In the ruins of the northern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13710 0 0
+~
+~
+D WEST 13712 0 0
+~
+~
+#13712
+In the ruins of the northern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling. To the north is      
+a break in the shattered walls, leading out to the surrounding forests.      
+~
+inside
+ROOM INDOORS
+D NORTH 22524 0 0
+~
+~
+D EAST 13711 0 0
+~
+~
+D WEST 13713 0 0
+~
+~
+#13713
+In the ruins of the northern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13712 0 0
+~
+~
+D WEST 13714 0 0
+~
+~
+#13714
+In the ruins of the northern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13713 0 0
+~
+~
+D WEST 13715 0 0
+~
+~
+#13715
+In the northwest corner wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13714 0 0
+~
+~
+D SOUTH 13716 0 0
+~
+~
+D UP 13724 0 0
+~
+~
+#13716
+In the ruins of the western wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13715 0 0
+~
+~
+D SOUTH 13717 0 0
+~
+~
+#13717
+In the ruins of the western wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling. There is a      
+slight chip in the easter wall here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13716 0 0
+~
+~
+D EAST 13875 AB 0
+secret wall~
+~
+D SOUTH 13718 0 0
+~
+~
+#13718
+In the ruins of the western wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13717 0 0
+~
+~
+D SOUTH 13719 0 0
+~
+~
+#13719
+In the ruins of the western wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13718 0 0
+~
+~
+D SOUTH 13720 0 0
+~
+~
+#13720
+In the ruins of the western wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13719 0 0
+~
+~
+D SOUTH 13721 0 0
+~
+~
+#13721
+In the southwest corner~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D NORTH 13720 0 0
+~
+~
+D EAST 13722 0 0
+~
+~
+#13722
+In the ruins of the southern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13723 0 0
+~
+~
+D WEST 13721 0 0
+~
+~
+#13723
+In the ruins of the southern wall~
+You are standing amidst the ruins of the great city. Large rocks have      
+fallen carelessly along the pathway and their absence from the walls is      
+plain from the large holes in it. A strong smell of decay is evident, and      
+the wind that whistles softly down the rocks is chilling.      
+~
+inside
+ROOM INDOORS
+D EAST 13700 0 0
+~
+~
+D WEST 13722 0 0
+~
+~
+#13724
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads east or back down to the ruined path of the      
+city's old walls.      
+~
+inside
+ROOM INDOORS
+D EAST 13725 0 0
+~
+~
+D DOWN 13715 0 0
+~
+~
+#13725
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads east and west.      
+~
+inside
+ROOM INDOORS
+D EAST 13726 0 0
+~
+~
+D WEST 13724 0 0
+~
+~
+#13726
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads east and west.      
+~
+inside
+ROOM INDOORS
+D EAST 13727 0 0
+~
+~
+D WEST 13725 0 0
+~
+~
+#13727
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads east and west.      
+~
+inside
+ROOM INDOORS
+D EAST 13728 0 0
+~
+~
+D WEST 13726 0 0
+~
+~
+#13728
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads east and west.      
+~
+inside
+ROOM INDOORS
+D EAST 13729 0 0
+~
+~
+D WEST 13727 0 0
+~
+~
+#13729
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads east and west.      
+~
+inside
+ROOM INDOORS
+D EAST 13730 0 0
+~
+~
+D WEST 13728 0 0
+~
+~
+#13730
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads south and west, or you can go down to the      
+rubble of the walkway around the city walls.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13731 0 0
+~
+~
+D WEST 13729 0 0
+~
+~
+D DOWN 13709 0 0
+~
+~
+#13731
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads north and south.      
+~
+inside
+ROOM INDOORS
+D NORTH 13730 0 0
+~
+~
+D SOUTH 13732 0 0
+~
+~
+#13732
+On the remains of the battlement walls~
+The battlements here have totally collapsed. To the south the magnificent      
+stone walls have caved in to make an impassable pile of rubble seperating      
+this northern end of the wall from the southern. You can only head back      
+north.      
+~
+inside
+ROOM INDOORS
+D NORTH 13731 0 0
+~
+~
+#13733
+On the remains of the battlement walls~
+The battlements here have totally collapsed. To the north the magnificent      
+stone walls have caved in to make an impassable pile of rubble seperating      
+this southern end of the wall from the northern. You can only head back      
+south.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13734 0 0
+~
+~
+#13734
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads north and south.      
+~
+inside
+ROOM INDOORS
+D NORTH 13733 0 0
+~
+~
+D SOUTH 13735 0 0
+~
+~
+#13735
+On the remains of the battlement walls~
+You are standing up on the rubbled remains of the city walls. The walls are      
+broken and rubbled, and the walkway around them is dangerous. Cold wind blows      
+over you and a dark shadow from the surrounding forest seems to cover      
+everything. The walkway heads north or you can go down to the rubbled ruins      
+of the city walls.      
+~
+inside
+ROOM INDOORS
+D NORTH 13734 0 0
+~
+~
+D DOWN 13703 0 0
+~
+~
+#13736
+In the ruins of the southern courtyard~
+The courtyard here is shattered and ruined after the devestation of some ages      
+past and long forgotten conflict. Rubble has fallen freely across the once      
+beautiful marble courts, and the stone fountain is dry and crumbling. To the      
+north lies the ruins of Myth Drannor. A large collapsed archway heads south      
+out of the city and toward the surrounding forest.      
+~
+inside
+ROOM INDOORS
+D NORTH 13739 0 0
+~
+~
+D SOUTH 13700 0 0
+~
+~
+#13737
+In the corner of the stone ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. The ground here is level      
+and reasonably flat, indicating that it was probably a market or common      
+area.      
+~
+inside
+ROOM INDOORS
+D NORTH 13742 0 0
+~
+~
+D EAST 13738 0 0
+~
+~
+#13738
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13743 0 0
+~
+~
+D EAST 13739 0 0
+~
+~
+D WEST 13737 0 0
+~
+~
+#13739
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13744 0 0
+~
+~
+D EAST 13740 0 0
+~
+~
+D SOUTH 13736 0 0
+~
+~
+D WEST 13738 0 0
+~
+~
+#13740
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13745 0 0
+~
+~
+D EAST 13741 0 0
+~
+~
+D WEST 13739 0 0
+~
+~
+#13741
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13746 0 0
+~
+~
+D WEST 13740 0 0
+~
+~
+#13742
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13747 0 0
+~
+~
+D EAST 13743 0 0
+~
+~
+D SOUTH 13737 0 0
+~
+~
+#13743
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13748 0 0
+~
+~
+D EAST 13744 0 0
+~
+~
+D SOUTH 13738 0 0
+~
+~
+D WEST 13742 0 0
+~
+~
+#13744
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D EAST 13745 0 0
+~
+~
+D SOUTH 13739 0 0
+~
+~
+D WEST 13743 0 0
+~
+~
+#13745
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13749 0 0
+~
+~
+D EAST 13746 0 0
+~
+~
+D SOUTH 13740 0 0
+~
+~
+D WEST 13744 0 0
+~
+~
+#13746
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13750 0 0
+~
+~
+D EAST 13770 0 0
+~
+~
+D SOUTH 13741 0 0
+~
+~
+D WEST 13745 0 0
+~
+~
+#13747
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13751 0 0
+~
+~
+D EAST 13748 0 0
+~
+~
+D SOUTH 13742 0 0
+~
+~
+D WEST 13761 0 0
+~
+~
+#13748
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13752 0 0
+~
+~
+D SOUTH 13743 0 0
+~
+~
+D WEST 13747 0 0
+~
+~
+#13749
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13754 0 0
+~
+~
+D EAST 13750 0 0
+~
+~
+D SOUTH 13745 0 0
+~
+~
+#13750
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13755 0 0
+~
+~
+D SOUTH 13746 0 0
+~
+~
+D WEST 13749 0 0
+~
+~
+#13751
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13756 0 0
+~
+~
+D EAST 13752 0 0
+~
+~
+D SOUTH 13747 0 0
+~
+~
+#13752
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13757 0 0
+~
+~
+D EAST 13753 0 0
+~
+~
+D SOUTH 13748 0 0
+~
+~
+D WEST 13751 0 0
+~
+~
+#13753
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13758 0 0
+~
+~
+D EAST 13754 0 0
+~
+~
+D WEST 13752 0 0
+~
+~
+#13754
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13759 0 0
+~
+~
+D EAST 13755 0 0
+~
+~
+D SOUTH 13749 0 0
+~
+~
+D WEST 13753 0 0
+~
+~
+#13755
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13760 0 0
+~
+~
+D SOUTH 13750 0 0
+~
+~
+D WEST 13754 0 0
+~
+~
+#13756
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D EAST 13757 0 0
+~
+~
+D SOUTH 13751 0 0
+~
+~
+#13757
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D EAST 13758 0 0
+~
+~
+D SOUTH 13752 0 0
+~
+~
+D WEST 13756 0 0
+~
+~
+#13758
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13779 0 0
+~
+~
+D EAST 13759 0 0
+~
+~
+D SOUTH 13753 0 0
+~
+~
+D WEST 13757 0 0
+~
+~
+#13759
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D EAST 13760 0 0
+~
+~
+D SOUTH 13754 0 0
+~
+~
+D WEST 13758 0 0
+~
+~
+#13760
+Swampy grounds amidst the ruins~
+You are within the rubbled remains of an ancient city. Plants and weeds have      
+grown across everything, and much of the time it almost seems as if the      
+forest is trying to bury the city into the past. There is a lot of wet, damp      
+puddles of mud in the ground here, almost like a swamp was starting to form.      
+~
+inside
+ROOM INDOORS
+D NORTH 13811 0 0
+~
+~
+D SOUTH 13755 0 0
+~
+~
+D WEST 13759 0 0
+~
+~
+#13761
+Under a broken archway~
+Above you is a majestic but shattered stone archway. Intricately carved signs      
+have been cut into it, and fine gems still lie embedded on it's surface. If      
+ever there was an indication of an abandoned city this is it, gems left here      
+untouched by even common looters and scavangers that usually haunt ruins. To      
+the east the ruins open out into a large open space filled with swampish weeds      
+and wet muddy gorund. In the distant north you can make out the ruins of some      
+towers.      
+~
+inside
+ROOM INDOORS
+D NORTH 13762 0 0
+~
+~
+D EAST 13747 0 0
+~
+~
+#13762
+Walking through the rubbled ruins~
+You are amidst the ruins of the ancient elven city. All around you the stones      
+have been crushed and scattered, left to erode with time. The greatness that      
+was once here is long since gone and only the fine delicate stonework gives      
+any indication of what once was. The ruins wind north towards some towers, or      
+south to what appears to be a large broken archway.`      
+~
+inside
+ROOM INDOORS
+D NORTH 13763 0 0
+~
+~
+D SOUTH 13761 0 0
+~
+~
+#13763
+Walking through the rubbled ruins~
+You are amidst the ruins of the ancient elven city. All around you the stones      
+have been crushed and scattered, left to erode with time. The greatness that      
+was once here is long since gone and only the fine delicate stonework gives      
+any indication of what once was. The ruins wind west and north towards some      
+towers.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13762 0 0
+~
+~
+D WEST 13764 0 0
+~
+~
+#13764
+Walking through the rubbled ruins~
+You are amidst the ruins of the ancient elven city. All around you the stones      
+have been crushed and scattered, left to erode with time. The greatness that      
+was once here is long since gone and only the fine delicate stonework gives      
+any indication of what once was. The ruins wind north towards a junction.      
+~
+inside
+ROOM INDOORS
+D NORTH 13765 0 0
+~
+~
+D EAST 13763 0 0
+~
+~
+#13765
+Between the Towers of Passing~
+You are standing in a large open space that appears almost as if maintained      
+and kept clear. The rubble and overgrown forest flora seems to have avoided      
+this region, and the destruction is more subdued here. Three towers lead off      
+from the square here: a green tinted one to the north, blue tinted to the      
+east and a blood red one to the west. The rubbled ruins lead southwards      
+away from here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13767 0 0
+~
+~
+D EAST 13766 0 0
+~
+~
+D SOUTH 13764 0 0
+~
+~
+D WEST 13768 0 0
+~
+~
+#13766
+Before a tower of Blue tinged stone~
+You are standing at the entrance to a small but conspicuous tower. Unlike      
+the rest of the ancient city this tower appears to be in almost perfect      
+condition. The wind here seems stilled and unnaturally quiet, not even the      
+sound of your own footsteps seems to reach your ears. A large stone door      
+tinged with some strange blue colour blocks the way east into the tower.      
+~
+inside
+ROOM INDOORS
+D EAST 23230 AB 0
+blue door~
+~
+D WEST 13765 0 0
+~
+~
+#13767
+Before a tower of Green tinged stone~
+You are standing at the entrance to a small but conspicuous tower. Unlike      
+the rest of the ancient city this tower appears to be in almost perfect      
+condition. The wind here seems stilled and unnaturally quiet, not even the      
+sound of your own footsteps seems to reach your ears. A large door made from      
+some green coloured stone is blocking the way north into the tower.      
+~
+inside
+ROOM INDOORS
+D NORTH 23260 AB -1
+green door~
+~
+D SOUTH 13765 0 0
+~
+~
+#13768
+Before a tower of Red tinged stone~
+You are standing at the entrance to a small but conspicuous tower. Unlike      
+the rest of the ancient city this tower appears to be in almost perfect      
+condition. The wind here seems stilled and unnaturally quiet, not even the      
+sound of your own footsteps seems to reach your ears. A large stone door      
+tinged with some strange red colour blocks the way west into the tower.      
+~
+inside
+ROOM INDOORS
+D EAST 13765 0 0
+~
+~
+D WEST 23200 AB 0
+red door~
+~
+#13770
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D NORTH 13771 0 0
+~
+~
+D EAST 13773 0 0
+~
+~
+D WEST 13746 0 0
+~
+~
+#13771
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D EAST 13772 0 0
+~
+~
+D SOUTH 13770 0 0
+~
+~
+#13772
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13773 0 0
+~
+~
+D WEST 13771 0 0
+~
+~
+#13773
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D NORTH 13772 0 0
+~
+~
+D EAST 13775 0 0
+~
+~
+D SOUTH 13774 0 0
+~
+~
+D WEST 13770 0 0
+~
+~
+#13774
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D NORTH 13773 0 0
+~
+~
+D EAST 13776 0 0
+~
+~
+#13775
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13776 0 0
+~
+~
+D WEST 13773 0 0
+~
+~
+#13776
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D NORTH 13775 0 0
+~
+~
+D EAST 13777 0 0
+~
+~
+D WEST 13774 0 0
+~
+~
+#13777
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D EAST 13778 0 0
+~
+~
+D WEST 13776 0 0
+~
+~
+#13778
+On a swampy part of the ruins~
+The ruins here are overgrown with dark wet swamp growth. Thick wisps of foul      
+marsh gas rise up and hang in the air, almost burying the ruins beneath them.      
+~
+inside
+ROOM INDOORS
+D EAST 13812 0 0
+~
+~
+D WEST 13777 0 0
+~
+~
+#13779
+On a crumbling bridge over a black river~
+You stand on a wide but decayed stone bridge. Large portions of the span have      
+collapsed into the stagnant black waters beneath it, leaving huge holes that      
+threaten to swallow any who venture too close. To the south the ruins seem      
+to have become swamped with water and covered in marsh-like flora. North of      
+here there is a pile of rubbled ruins, most of which is impassable, but a      
+small section can be seen cleared away to allow some exploration.      
+~
+inside
+ROOM INDOORS
+D NORTH 13781 0 0
+~
+~
+D SOUTH 13758 0 0
+~
+~
+#13780
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13784 0 0
+~
+~
+D EAST 13781 0 0
+~
+~
+#13781
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13785 0 0
+~
+~
+D EAST 13782 0 0
+~
+~
+D SOUTH 13779 0 0
+~
+~
+D WEST 13780 0 0
+~
+~
+#13782
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13786 0 0
+~
+~
+D EAST 13783 0 0
+~
+~
+D WEST 13781 0 0
+~
+~
+#13783
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13787 0 0
+~
+~
+D WEST 13782 0 0
+~
+~
+#13784
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13792 0 0
+~
+~
+D EAST 13785 0 0
+~
+~
+D SOUTH 13780 0 0
+~
+~
+D WEST 13792 0 0
+~
+~
+#13785
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13789 0 0
+~
+~
+D EAST 13786 0 0
+~
+~
+D SOUTH 13781 0 0
+~
+~
+D WEST 13784 0 0
+~
+~
+#13786
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13790 0 0
+~
+~
+D EAST 13787 0 0
+~
+~
+D SOUTH 13782 0 0
+~
+~
+D WEST 13785 0 0
+~
+~
+#13787
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13800 0 0
+~
+~
+D SOUTH 13783 0 0
+~
+~
+D WEST 13786 0 0
+~
+~
+#13788
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13789 0 0
+~
+~
+D SOUTH 13784 0 0
+~
+~
+D WEST 13791 0 0
+~
+~
+#13789
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here. The ruins lead north, east, south and west.      
+~
+inside
+ROOM INDOORS
+D NORTH 13850 0 -1
+~
+~
+D EAST 13790 0 0
+~
+~
+D SOUTH 13785 0 0
+~
+~
+D WEST 13788 0 0
+~
+~
+#13790
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13786 0 0
+~
+~
+D WEST 13789 0 0
+~
+~
+#13791
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13788 0 0
+~
+~
+D SOUTH 13792 0 0
+~
+~
+D WEST 13793 0 0
+~
+~
+#13792
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13791 0 0
+~
+~
+D EAST 13784 0 0
+~
+~
+D WEST 13870 0 0
+~
+~
+#13793
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13791 0 0
+~
+~
+D WEST 13794 0 0
+~
+~
+#13794
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13793 0 0
+~
+~
+D SOUTH 13795 0 0
+~
+~
+#13795
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13794 0 0
+~
+~
+D EAST 13870 0 0
+~
+~
+D SOUTH 13796 0 0
+~
+~
+#13796
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13795 0 0
+~
+~
+D EAST 13797 0 0
+~
+~
+#13797
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13870 0 0
+~
+~
+D WEST 13796 0 0
+~
+~
+#13798
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13799 0 0
+~
+~
+D SOUTH 13800 0 0
+~
+~
+#13799
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13801 0 0
+~
+~
+D WEST 13798 0 0
+~
+~
+#13800
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13798 0 0
+~
+~
+D EAST 13801 0 0
+~
+~
+D SOUTH 13802 0 0
+~
+~
+D WEST 13787 0 0
+~
+~
+#13801
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13799 0 0
+~
+~
+D SOUTH 13803 0 0
+~
+~
+D WEST 13800 0 0
+~
+~
+#13802
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13800 0 0
+~
+~
+D EAST 13803 0 0
+~
+~
+#13803
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13801 0 0
+~
+~
+D EAST 13804 0 0
+~
+~
+D SOUTH 13805 0 0
+~
+~
+D WEST 13802 0 0
+~
+~
+#13804
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13807 0 0
+~
+~
+D EAST 13809 0 0
+~
+~
+D SOUTH 13806 0 0
+~
+~
+D WEST 13803 0 0
+~
+~
+#13805
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13803 0 0
+~
+~
+D EAST 13806 0 0
+~
+~
+D WEST 13810 0 0
+~
+~
+#13806
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13804 0 0
+~
+~
+D WEST 13805 0 0
+~
+~
+#13807
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here. To the north you can see a large building that      
+appears to have been restored by someone.      
+~
+inside
+ROOM INDOORS
+D NORTH 13901 0 0
+~
+~
+D EAST 13808 0 0
+~
+~
+D SOUTH 13804 0 0
+~
+~
+#13808
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13809 0 0
+~
+~
+D WEST 13807 0 0
+~
+~
+#13809
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D NORTH 13808 0 0
+~
+~
+D WEST 13804 0 0
+~
+~
+#13810
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13805 0 0
+~
+~
+D WEST 13811 0 0
+~
+~
+#13811
+In the ruins of an ancient city~
+You are standing in the remains of a very old ruined city. The rubble here      
+is blasted and crushed beyond the power of anything you have ever seen before.      
+Around you thick bushes and trees have grown from between the cracks in the      
+stone ground, although nowhere near as much as would be expected from the time      
+that the city has been here.      
+~
+inside
+ROOM INDOORS
+D EAST 13810 0 0
+~
+~
+D SOUTH 13760 0 0
+~
+~
+#13812
+Before a bloody signpost~
+Here in the middle of the marshy ruins there is a large wooden sign covered in      
+dried blood and adorned with blackened and cracked skulls. The ruins to the      
+north of this sign seem ominous and less disturbed than to the west, and you      
+notice that almost all the tracks lead out from the north, rather than into it.      
+~
+inside
+ROOM INDOORS
+D NORTH 13813 0 0
+~
+~
+D WEST 13778 0 0
+~
+~
+#13813
+At a junction in the swampy ruins~
+The wet marshlands that have grown here in the ruined elven city are almost      
+completely taking over the land. There is very little sign in this part of the      
+city of what once was, and the way through is blocked by the dense swamp muck      
+and deep holes of water. There is a wide, cleared path leading east, and a      
+darker path heading west. To the south the swamps seem to recede a little.      
+~
+inside
+ROOM INDOORS
+D EAST 13814 0 -1
+~
+~
+D SOUTH 13812 0 -1
+~
+~
+D WEST 13819 0 -1
+~
+~
+#13814
+Walking through the swamp drowned ruins~
+The ground here is like a normal swamp...wet, muddy and stinking. There is      
+almost no signs of the ancient city that once held power in this region, and      
+it's almost as if it never had been here. This swampy region is the most      
+blatantly obliterated part of the entire elven city.      
+~
+inside
+ROOM INDOORS
+D EAST 13815 0 -1
+~
+~
+D WEST 13813 0 -1
+~
+~
+#13815
+Walking through the swamp drowned ruins~
+The ground here is like a normal swamp...wet, muddy and stinking. There is      
+almost no signs of the ancient city that once held power in this region, and      
+it's almost as if it never had been here. This swampy region is the most      
+blatantly obliterated part of the entire elven city. The path heads north      
+and west, and to the east you can smell the faint smell of salty air.      
+~
+inside
+ROOM INDOORS
+D NORTH 13816 0 -1
+~
+~
+D EAST 13890 0 -1
+~
+~
+D WEST 13814 0 -1
+~
+~
+#13816
+Walking through the swamp drowned ruins~
+The ground here is like a normal swamp...wet, muddy and stinking. There is      
+almost no signs of the ancient city that once held power in this region, and      
+it's almost as if it never had been here. This swampy region is the most      
+blatantly obliterated part of the entire elven city.      
+~
+inside
+ROOM INDOORS
+D NORTH 13817 0 -1
+~
+~
+D SOUTH 13815 0 -1
+~
+~
+#13817
+Walking through the swamp drowned ruins~
+The ground here is like a normal swamp...wet, muddy and stinking. There is      
+almost no signs of the ancient city that once held power in this region, and      
+it's almost as if it never had been here. This swampy region is the most      
+blatantly obliterated part of the entire elven city. To the east you can make      
+out what looks like a raised clearing of rock above the swampy waters.      
+~
+inside
+ROOM INDOORS
+D EAST 13818 0 -1
+~
+~
+D SOUTH 13816 0 -1
+~
+~
+#13818
+The residence of an Ancient Green dragon~
+You stand upon a wide upraised part of the swamp. Large claw marks have been      
+scratched into the rocky surface of the rock and the burning smell of chlorine      
+fills the air.      
+~
+inside
+ROOM INDOORS
+D WEST 13817 0 -1
+~
+~
+#13819
+In a quiet swampy part of the ruins~
+The ruins here are almost buried by the swamp that has grown over it. Unlike      
+most of the ancient elven city this part seems to have been almost obliterated      
+by the destruction, leaving barely the smallest signs of what once was. There      
+is an unnerving stillness in this region.      
+~
+inside
+ROOM INDOORS
+D NORTH 13820 0 -1
+~
+~
+D EAST 13813 0 -1
+~
+~
+#13820
+In a quiet swampy part of the ruins~
+The ruins here are almost buried by the swamp that has grown over it. Unlike      
+most of the ancient elven city this part seems to have been almost obliterated      
+by the destruction, leaving barely the smallest signs of what once was. There      
+is an unnerving stillness in this region.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13819 0 -1
+~
+~
+D WEST 13821 0 -1
+~
+~
+#13821
+In a quiet swampy part of the ruins~
+The ruins here are almost buried by the swamp that has grown over it. Unlike      
+most of the ancient elven city this part seems to have been almost obliterated      
+by the destruction, leaving barely the smallest signs of what once was. There      
+is an unnerving stillness in this region.      
+~
+inside
+ROOM INDOORS
+D NORTH 13822 0 -1
+~
+~
+D EAST 13820 0 -1
+~
+~
+#13822
+In a quiet swampy part of the ruins~
+The ruins here are almost buried by the swamp that has grown over it. Unlike      
+most of the ancient elven city this part seems to have been almost obliterated      
+by the destruction, leaving barely the smallest signs of what once was. There      
+is an unnerving stillness in this region. To the northeast you can see what      
+looks like a black tower standing within the swampy ruins.      
+~
+inside
+ROOM INDOORS
+D NORTH 13823 0 -1
+~
+~
+D SOUTH 13821 0 -1
+~
+~
+#13823
+In a quiet swampy part of the ruins~
+The ruins here are almost buried by the swamp that has grown over it. Unlike      
+most of the ancient elven city this part seems to have been almost obliterated      
+by the destruction, leaving barely the smallest signs of what once was. There      
+is an unnerving stillness in this region. To the east you can see what looks      
+like a black tower standing within the swampy ruins.      
+~
+inside
+ROOM INDOORS
+D EAST 13824 0 -1
+~
+~
+D SOUTH 13822 0 -1
+~
+~
+#13824
+Before the Black tinged tower in the swampy ruins~
+You find yourself at the end of the swamp paths and before a large tower black      
+tinged stone. The surface of the strange building appears smooth and strong,      
+and it looks new even though the swamp growth has covered almost halfway up      
+it's height. There is a black door leading north into the tower.      
+~
+inside
+ROOM INDOORS
+D NORTH 13825 AB -1
+black door~
+~
+D WEST 13823 0 -1
+~
+~
+#13825
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads east and west, and there is a black      
+door in the south wall leading outside.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D EAST 13826 0 -1
+~
+~
+D SOUTH 13824 AB -1
+black door~
+~
+D WEST 13832 0 -1
+~
+~
+#13826
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads north and west.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13827 0 -1
+~
+~
+D WEST 13825 0 -1
+~
+~
+#13827
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads north and south.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13828 0 -1
+~
+~
+D SOUTH 13826 0 -1
+~
+~
+#13828
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads south and west.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D SOUTH 13827 0 -1
+~
+~
+D WEST 13829 0 -1
+~
+~
+#13829
+Before a huge black door~
+You are in a hallway surrounded by black stone and silence. To the south you      
+can almost feel a prescence of pure evil through a massive green door.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D EAST 13828 0 -1
+~
+~
+D SOUTH 13833 ABCDEH 23260
+green door~
+~
+D WEST 13830 0 -1
+~
+~
+#13830
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads south and east.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D EAST 13829 0 -1
+~
+~
+D SOUTH 13831 0 -1
+~
+~
+#13831
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads north and south.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13830 0 -1
+~
+~
+D SOUTH 13832 0 -1
+~
+~
+#13832
+In a black hallway~
+You are in a hallway surrounded by black stone and silence. Nothing seems to      
+stir, not even the air from the marshes outside. Their is something cold and      
+evil in the air here. The hallway heads north and east.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13831 0 -1
+~
+~
+D EAST 13825 0 -1
+~
+~
+#13833
+A cold dark room~
+You have entered a room of the coldest winter. The air from your breath      
+freezes upon your lips and your body almost goes into shock from the cold.      
+There is nothing but ice and darkness in here. A massive green door lies in      
+the northern wall and a stairwell heads up into the cold night.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13829 ABCDEH 23260
+green door~
+~
+D UP 13834 0 -1
+~
+~
+#13834
+In a chilling dark hallway~
+The hallway here is not only dark but freezing cold. Ice hangs from the roof      
+and staligmites of frozen blood protrude from the floor. The hallway heads off      
+south, or you can take a staircase leading down.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D SOUTH 13835 0 -1
+~
+~
+D DOWN 13833 0 -1
+~
+~
+#13835
+Before a door of frozen blood~
+You are standing in a freezing room where even the walls themselves seem to      
+be shivering. To the south there is a door of what looks like frozen blood.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13834 0 -1
+~
+~
+D SOUTH 13836 ABCDEH 23200
+blood red door~
+~
+#13836
+In a pitch black room~
+It's totally dark in here, your own light can't even penetrate more than two      
+feet into the night. The air freezes on your breath, and even more chilling is      
+the sound of something horribly powerful breathing and sending tremors through      
+the tower. There is a bloody frozen door in the north wall and a staircase      
+leading up.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13835 ABCDEH 23200
+blood red door~
+~
+D UP 13837 0 -1
+~
+~
+#13837
+In a patch black hallway~
+It's totally dark here and you only know it is a hallway by the shape of the      
+walls around you. Somewhere nearby a deep rumbling sends tremors through the      
+floor and a heart stopping breathing sound can be heard. There is a staircase      
+leading down, or you can go north along the hallway.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13838 0 -1
+~
+~
+D DOWN 13836 0 -1
+~
+~
+#13838
+Before a dark blue door~
+You are in a totally dark hallway and the only thing you can see is the faint      
+glow of a blue door in the north wall. As you approach it a physical feeling      
+of pure hate and malice seems to come washing through it at you.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13839 ABCDEH 23230
+blue door~
+~
+D SOUTH 13837 0 -1
+~
+~
+#13839
+In a bare black room~
+This room is totally bare, like a monastic refuge. The atmosphere, however, is      
+chilling and almost overpowering in it's hate and evil. You can hear what is      
+unmistakably the breathing of some massive and powerful creature nearby. To      
+the south is a huge dark blue door, and a staircase heads up.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D SOUTH 13838 ABCDEH 23230
+blue door~
+~
+D UP 13841 0 -1
+~
+~
+#13841
+Before a massive door of blackened heartstone~
+You are standing in a room of pure black rock. A prescence of immense power      
+can be physically felt from here, almost like it was existing beyond the normal      
+sense of real. In the north wall there is a door of indestructable heartstone      
+that has somehow been charred and blackend.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 13842 AB -1
+black heartstone door~
+~
+D DOWN 13839 0 -1
+~
+~
+#13842
+In the room of Binding Light~
+This room is totally different to those before it. In here there is light that      
+seems almost blinding and the atmosphere is one of subdued violence. Somehow      
+something of divine power has created a room to nullify the darkest powers that      
+reside in this ruined city, but not powerful enough to destroy it. The only      
+way out is through the blackened heartstone door in the south wall.      
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D SOUTH 13841 AB -1
+black heartstone door~
+~
+#13843
+On a dock in a bloody harbour~
+You are on a collapsed and ruined dock made of rusted steel and decayed wood.      
+To the south you can see one of the harbours of Myth Drannor, filled with a      
+shallow blood red water that laps continuosly upon the ruined harbour. The      
+salty smell of blood fills the air, and there is something powerful and      
+disturbing about the way the region seems locked in time. It is as if the      
+bloodshed of the elves were only yesterday and not centuries ago. There is a      
+ruined boathouse to the north, or you can walk east across the docks. West of      
+here lie the marshlands of the Drannor ruins.      
+~
+inside
+D NORTH 13848 0 0
+~
+~
+D EAST 13844 0 0
+~
+~
+D WEST 13894 0 0
+~
+~
+#13844
+On a dock in a bloody harbour~
+You are on a collapsed and ruined dock made of rusted steel and decayed wood.      
+To the south you can see one of the harbours of Myth Drannor, filled with a      
+shallow blood red water that laps continuosly upon the ruined harbour. The      
+salty smell of blood fills the air, and there is something powerful and      
+disturbing about the way the region seems locked in time. It is as if the      
+bloodshed of the elves were only yesterday and not centuries ago. You can walk      
+east and west across the docks, or head south into the shallow blood red      
+waters of the harbour.      
+~
+inside
+D EAST 13845 0 0
+~
+~
+D SOUTH 13891 0 0
+~
+~
+D WEST 13843 0 0
+~
+~
+#13845
+On a dock in a bloody harbour~
+You are on a collapsed and ruined dock made of rusted steel and decayed wood.      
+To the south you can see one of the harbours of Myth Drannor, filled with a      
+shallow blood red water that laps continuosly upon the ruined harbour. The      
+salty smell of blood fills the air, and there is something powerful and      
+disturbing about the way the region seems locked in time. It is as if the      
+bloodshed of the elves were only yesterday and not centuries ago. You can walk      
+east and west across the docks, or head south into the shallow blood red      
+waters of the harbour.      
+~
+inside
+D EAST 13846 0 0
+~
+~
+D SOUTH 13892 0 0
+~
+~
+D WEST 13844 0 0
+~
+~
+#13846
+On a dock in a bloody harbour~
+You are on a collapsed and ruined dock made of rusted steel and decayed wood.      
+To the south you can see one of the harbours of Myth Drannor, filled with a      
+shallow blood red water that laps continuosly upon the ruined harbour. The      
+salty smell of blood fills the air, and there is something powerful and      
+disturbing about the way the region seems locked in time. It is as if the      
+bloodshed of the elves were only yesterday and not centuries ago. You can walk      
+east and west across the docks, or head south into the shallow blood red      
+waters of the harbour. There is a ruined old boat house to the north.      
+~
+inside
+D NORTH 13849 0 0
+~
+~
+D EAST 13847 0 0
+~
+~
+D SOUTH 13853 0 0
+~
+~
+D WEST 13845 0 0
+~
+~
+#13847
+End of a dock in a bloody harbour~
+You are on a collapsed and ruined dock made of rusted steel and decayed wood.      
+To the south you can see one of the harbours of Myth Drannor, filled with a      
+shallow blood red water that laps continuosly upon the ruined harbour. The      
+salty smell of blood fills the air, and there is something powerful and      
+disturbing about the way the region seems locked in time. It is as if the      
+bloodshed of the elves were only yesterday and not centuries ago. There is an      
+old boat house to the north, or the docks head west towards the harbour.      
+~
+inside
+D NORTH 13893 0 0
+~
+~
+D WEST 13846 0 0
+~
+~
+#13848
+In a destroyed boat house~
+This old wooden shack on the harbour is totally demolished. The wood and      
+scraps left over from the city's destruction lie cluttered amidst the wet,      
+bloody waters seeping in from the harbour. The only exit is back to the      
+south to the ruined docks of the Drannor harbour.      
+~
+inside
+D SOUTH 13843 0 0
+~
+~
+#13849
+Within a blood soaked boat house~
+This destroyed boat house is still covered in wet, warm blood. It is      
+almost as if the annihilation of the elven people in the city had only      
+just occurred in the last few hours, rather than centuries ago. The scent      
+of warm salty blood still hangs in the air, and the waters outside lap up      
+into the shack carrying more bloody red waters. The only exit is back to      
+the south onto the ruined docks of the harbour.      
+~
+inside
+D SOUTH 13846 0 0
+~
+~
+#13850
+In the northern ruins of the city~
+The ruins here seem to have been cleared somewhat and it is possible to just      
+make your way through the rubble and into the northern part of the ruins. All      
+around you the air seems unnaturally still an atmosphere of contained evil      
+hangs all around you.      
+~
+inside
+ROOM INDOORS
+D NORTH 13851 0 -1
+~
+~
+D SOUTH 13789 0 0
+~
+~
+#13851
+In the northern ruins of the city~
+You are standing in the rubbled remains of the ancient elven city. Very little      
+has been left to observe and it's hard to see the old grandeur that once was.      
+You can just make your way a little more north through the cleared rubble or      
+head south to the main ruins.      
+~
+inside
+ROOM INDOORS
+D NORTH 13852 0 -1
+~
+~
+D SOUTH 13850 0 -1
+~
+~
+#13852
+In the northern ruins of the city~
+You are standing at the most northern part of the ruins that seems accessable.      
+From here the rubble and ruin is impassable in all but the south, and even      
+there it is only passable because someone has recently cleared a narrow path.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13851 0 -1
+~
+~
+D DOWN 0 AB 0
+rock boulder~
+~
+#13853
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour heads south and west, or you can go north onto the      
+ruined docks.      
+~
+inside
+D NORTH 13846 0 0
+~
+~
+D SOUTH 13856 0 0
+~
+~
+D WEST 13892 0 0
+~
+~
+#13854
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour waters go north, east and south. You can make out the      
+docks off to the north.      
+~
+inside
+D NORTH 13891 0 0
+~
+~
+D EAST 13855 0 0
+~
+~
+D SOUTH 13857 0 0
+~
+~
+#13855
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour waters head off in all directions around you. In the      
+distance to the north you can make out some docks.      
+~
+inside
+D NORTH 13892 0 0
+~
+~
+D EAST 13856 0 0
+~
+~
+D SOUTH 13858 0 0
+~
+~
+D WEST 13854 0 0
+~
+~
+#13856
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour waters head off to the north, south and west. You can      
+just make out the docks in the distance to the north.      
+~
+inside
+D NORTH 13853 0 0
+~
+~
+D SOUTH 13859 0 0
+~
+~
+D WEST 13855 0 0
+~
+~
+#13857
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour waters head off to the north and east.      
+~
+inside
+D NORTH 13854 0 0
+~
+~
+D EAST 13858 0 0
+~
+~
+#13858
+Before a bloody river outlet in the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour waters head off to the north, east and west. To the      
+south the harbour narrows into a small channel of blood filled water.      
+~
+inside
+D NORTH 13855 0 0
+~
+~
+D EAST 13859 0 0
+~
+~
+D SOUTH 13860 0 0
+~
+~
+D WEST 13857 0 0
+~
+~
+#13859
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very       
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour waters head off to the north and west.      
+~
+inside
+D NORTH 13856 0 0
+~
+~
+D WEST 13858 0 0
+~
+~
+#13860
+Wading through the bloody river outlet~
+You stand knee deep in the murky blood red waters of a small river      
+flowing out of the harbour to the north. There is no sign of the normal      
+animal activity you expect from a river in fertile forest land, and      
+something dark and disturbing is in the air. The river continues to flow      
+south, or you can head north into the shallow harbour waters of one of      
+Drannor's ancient ports.      
+~
+inside
+D NORTH 13858 0 0
+~
+~
+D SOUTH 13861 0 0
+~
+~
+#13861
+Wading through the bloody river outlet~
+You stand knee deep in the murky blood red waters of a small river      
+flowing out of the harbour to the north. There is no sign of the normal      
+animal activity you expect from a river in fertile forest land, and      
+something dark and disturbing is in the air. The river continues to flow      
+east or you can wade back north through it.      
+~
+inside
+D NORTH 13860 0 0
+~
+~
+D EAST 13862 0 0
+~
+~
+#13862
+Wading through the bloody river outlet~
+You stand knee deep in the murky blood red waters of a small river      
+flowing out of the harbour to the north. There is no sign of the normal      
+animal activity you expect from a river in fertile forest land, and      
+something dark and disturbing is in the air. The river continues to flow      
+east or you can wade back west through it.      
+~
+inside
+D EAST 13863 0 0
+~
+~
+D WEST 13861 0 0
+~
+~
+#13863
+Wading through the bloody river outlet~
+You stand knee deep in the murky blood red waters of a small river      
+flowing out of the harbour to the west and north. There is no sign of the      
+normal animal activity you expect from a river in fertile forest land, and      
+something dark and disturbing is in the air. The river continues to flow      
+east or you can wade back west through it.      
+~
+inside
+D EAST 13864 0 0
+~
+~
+D WEST 13862 0 0
+~
+~
+#13864
+A bend in the bloody river outlet~
+You stand knee deep in the murky blood red waters of a small river      
+flowing out of the harbours to the west and north. There is no sign of the      
+normal animal activity you expect from a river in fertile forest land, and      
+something dark and disturbing is in the air. The river continues to flow      
+south or you can wade back west through it.      
+~
+inside
+D SOUTH 13865 0 0
+~
+~
+D WEST 13863 0 0
+~
+~
+#13865
+In a bone and blood filled river outlet~
+The blood red river is mixed with floating bones of elven origin. All      
+around you bones of all sizes, from babies to adults, bob up and down in      
+the murky river. None show signs of corrosiion or decay as you would      
+expect after centuries in the water, and some even appear to almost have      
+flesh still hanging off them. It is as if the region were preserved as it      
+was on the day that the massacres occured. The river heads east where you      
+can make out a large embankment of bones sitting high upon the river, or      
+back north.      
+~
+inside
+D NORTH 13864 0 0
+~
+~
+D EAST 13866 0 0
+~
+~
+#13866
+At the edge of a bone embankment~
+You have reached the edge of a huge, isle-like embankment made of bones      
+from long dead elves. The bloody waters of the river flow around and      
+through the gaps in the bone isle, and it is almost as if the massacre      
+were yesterday rather than centuries ago. Something further off in the      
+bone structure stirs, sending a tremor through them. The river heads back      
+west, or you can go east onto the bone isle.      
+~
+inside
+D EAST 13867 0 0
+~
+~
+D WEST 13865 0 0
+~
+~
+#13867
+On an isle of elven bones~
+You stand on an isle consisting almost purely of bones from long dead      
+elves. There must be thousands of bodies piled up here, all left to rot      
+and decay in the bloody waters. Yet somehow they seem recent, like they      
+were slain only recently rather than centuries ago. Something very dark      
+and disturbing sends a chill through you as you gaze over the piles of      
+bones. To the north and east you can see the ruins of many ships that were      
+destroyed as the elves tried to flee the massacre. West of here the isle      
+heads out to the river.      
+~
+inside
+D NORTH 13884 0 0
+~
+~
+D EAST 13868 0 0
+~
+~
+D WEST 13866 0 0
+~
+~
+#13868
+On an isle of elven bones~
+You stand on an isle consisting almost purely of bones from long dead      
+elves. There must be thousands of bodies piled up here, all left to rot      
+and decay in the bloody waters. Yet somehow they seem recent, like they      
+were slain only recently rather than centuries ago. For a moment it seems      
+the isle shifts beneath you as if the bones were still alive...a chill      
+through you as you gaze over the isle of bones. To the north you can see      
+the ruins of many ships that were destroyed as the elves tried to flee the      
+massacre.      
+~
+inside
+D NORTH 13871 0 0
+~
+~
+D EAST 13869 0 0
+~
+~
+D WEST 13867 0 0
+~
+~
+#13869
+On an isle of elven bones~
+You stand on an isle consisting almost purely of bones from long dead      
+elves. There must be thousands of bodies piled up here, all left to rot      
+and decay in the bloody waters. Yet somehow they seem recent, like they      
+were slain only recently rather than centuries ago. For a moment it seems      
+the isle shifts beneath you as if the bones were still alive...a chill      
+through you as you gaze over the isle of bones. To the north  and west you      
+can see the ruins of many ships that were destroyed as the elves tried to      
+flee the massacre. East of here there is a huge mountain of bones blocking      
+the river flow.      
+~
+inside
+D NORTH 13872 0 0
+~
+~
+D EAST 13873 0 0
+~
+~
+D WEST 13868 0 0
+~
+~
+#13870
+At the entrance to a restored building~
+Here amongst the ruins of Myth Drannor a single building seems to have been      
+restored from the destruction. The stone building shows the signs of massive      
+damage that everything else shows, but it has been restored to an almost decent      
+level by someone or something. As you walk by the building your feet slip in      
+some thick, sticky fluid that gives off a terribly stench. A doorway leads      
+north into the building or you can go east, south or west around the rubble of      
+the city.      
+~
+inside
+ROOM INDOORS
+D NORTH 14000 AB 0
+door~
+~
+D EAST 13792 0 0
+~
+~
+D SOUTH 13797 0 0
+~
+~
+D WEST 13795 0 0
+~
+~
+#13871
+On an isle of elven bones~
+You stand on an isle consisting almost purely of bones from long dead      
+elves. There must be thousands of bodies piled up here, all left to rot      
+and decay in the bloody waters. Yet somehow they seem recent, like they      
+were slain only recently rather than centuries ago. For a moment it seems      
+the isle shifts beneath you as if the bones were still alive...a chill      
+through you as you gaze over the isle of bones. To the north you can see      
+the ruins of many ships that were destroyed as the elves tried to flee the      
+massacre.      
+~
+inside
+D NORTH 13874 0 0
+~
+~
+D EAST 13872 0 0
+~
+~
+D SOUTH 13868 0 0
+~
+~
+D WEST 13884 0 0
+~
+~
+#13872
+On an isle of elven bones~
+You stand on an isle consisting almost purely of bones from long dead      
+elves. There must be thousands of bodies piled up here, all left to rot      
+and decay in the bloody waters. Yet somehow they seem recent, like they      
+were slain only recently rather than centuries ago. For a moment it seems      
+the isle shifts beneath you as if the bones were still alive...a chill      
+through you as you gaze over the isle of bones. To the west and north you      
+can see the ruins of many ships that were destroyed as the elves tried to      
+flee the massacre.      
+~
+inside
+D SOUTH 13869 0 0
+~
+~
+D WEST 13871 0 0
+~
+~
+#13873
+Before a dam built from elven bones~
+You are at the edge of the isle of bones where a huge pile has been      
+erected to totally seal of the river. There must be thousands of dead      
+elves left here to dam up the river, preventing the waters from flowing      
+out of the harbours of Myth Drannor, and keeping it forever in a state of      
+bloody waters. The bones around you seem to shift slightly, and it's like      
+being in an earthquake of bones. The isle heads back to the west, and      
+there is no way through the solid blockade to the east.      
+~
+inside
+D WEST 13869 0 0
+~
+~
+#13874
+Standing at the edge of a huge graveyard of ships~
+Here at the northern edge of the bone isle you can see the extent of the      
+massacre that must have occured centuries ago. Scores of large ships and      
+boats have been totally demolished and left to rot in the bloody, bone      
+filled waters. Burnt and blasted hulls litter the entire region, and      
+skeletons of elves hang lifelessly from the helms and bridges of them.      
+There is no doubt that the forces that blocked and slayed the elves as      
+they tried to flee were powerful beyond anything seen in recent times. The      
+smashed boat graveyard is too hazardous to explore, and you can only head      
+back south onto the isle of elf bones.      
+~
+inside
+D SOUTH 13871 0 0
+~
+~
+#13875
+In the ruins of the city walls~
+The walls here is hollowed out for defence, but the dried skeletons that      
+lie scattered across the floor show that it did little good. The air is      
+dusty and dry, stale with ages of being kept locked up. There is slight      
+break in the west wall here, or you can head south along the inside of the      
+wall.      
+~
+inside
+ROOM INDOORS
+D SOUTH 13876 0 0
+~
+~
+D WEST 13717 AB -1
+secret rock~
+~
+#13876
+In the ruins of the city walls~
+The crumbling walls here are just as bad as outside, and the air is stale      
+and stinks of death. You can head south or north.      
+~
+inside
+ROOM INDOORS
+D NORTH 13875 0 0
+~
+~
+D SOUTH 13877 0 0
+~
+~
+#13877
+Above a hole in the city walls~
+Here in the crumbling walls of the city you can see a small hole that has      
+been excavated in the ground. The work is poor and hasty, and there is no      
+signs of life down below. The wall passage heads back north.      
+~
+inside
+ROOM INDOORS
+D NORTH 13876 0 0
+~
+~
+D DOWN 13878 0 0
+~
+~
+#13878
+In a small excavated hole beneath the walls~
+You are in a small hole that seems to have been dug out in a hurry. The      
+ground is littered with long dead elven skeletons, and there is nothing of      
+interest that hasn't already long been decayed. A hole leads back up, or      
+you can go north to what appears to be a door.      
+~
+inside
+ROOM INDOORS
+D NORTH 13879 0 0
+~
+~
+D UP 13877 0 0
+~
+~
+#13879
+Outside a door in the crumbling walls~
+You are standing in the dark tunnel beneath the city walls. For some      
+reason the tunnel here hasn't collapsed like most of the ruins, and there      
+is a large oak door in the east wall which is in extremely good condition.      
+~
+inside
+ROOM INDOORS
+D EAST 13881 AB -1
+oak door~
+~
+D SOUTH 13878 0 0
+~
+~
+E oak door~
+The door seems to feel warm, almost like it were alive. There is, however,      
+nothing that really seems special about it.      
+~
+#13881
+Inside a small room beneath the crumbling walls~
+You are in a tiny, bare room that is in almost perfect condition. Unlike      
+the rest of the ruins this room has no signs of decay or ruin, and it is      
+almost as if it had been built yesterday. There is, however, nothing of      
+interest in it but the large oak door in the west wall.      
+~
+inside
+ROOM INDOORS
+D WEST 13879 AB -1
+oak door~
+~
+E oak door~
+The door seems to feel warm, almost like it were alive. There is, however,      
+nothing that really seems special about it.      
+~
+#13884
+On an isle of elven bones~
+You stand on an isle consisting almost purely of bones from long dead      
+elves. There must be thousands of bodies piled up here, all left to rot      
+and decay in the bloody waters. Yet somehow they seem recent, like they      
+were slain only recently rather than centuries ago. For a moment it seems      
+the isle shifts beneath you as if the bones were still alive...a chill      
+through you as you gaze over the isle of bones. To the east and north you      
+can see the ruins of many ships that were destroyed as the elves tried to      
+flee the massacre.      
+~
+inside
+D EAST 13871 0 0
+~
+~
+D SOUTH 13867 0 0
+~
+~
+#13890
+On a wet, marshland path in the ruins~
+You are on a path through the marshlands that have overgrown the ancient      
+ruins. There is a faint smell of salty sea water coming from the east,      
+and to the west the path heads back to a T-junction in the swamps.      
+~
+inside
+D EAST 13894 0 0
+~
+~
+D WEST 13815 0 0
+~
+~
+#13891
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour heads east and south, or you can go north onto the      
+ruined docks.      
+~
+inside
+D NORTH 13844 0 0
+~
+~
+D EAST 13892 0 0
+~
+~
+D SOUTH 13854 0 0
+~
+~
+#13892
+Wading through the bloody waters of the harbour~
+You are standing knee deep in the red tinted waters of the ancient      
+harbour. Your steps are made harder by the sucking and clinging mud      
+beneath the murky water, and the air is warm with the smell of blood.      
+There are no fish to be seen and there is a total lack of animal prescence      
+where normally water would attract much attention. Something very      
+disturbing has happened here, and the power of it still lingers in the      
+region. The harbour heads east, south and west, or you can go north onto      
+the ruined docks.      
+~
+inside
+D NORTH 13845 0 0
+~
+~
+D EAST 13853 0 0
+~
+~
+D SOUTH 13855 0 0
+~
+~
+D WEST 13891 0 0
+~
+~
+#13893
+In a burnt out harbour-master's room~
+You are in the ruined remains of what was once the harbour master's room      
+for this port of Myth Drannor's boats. There is nothing here now but the      
+smell of blood and a feeling of disturbed peace. It is as if time has      
+stopped here, capturing the feel and blood of the ancient fall of the      
+city, rather than being just another dried out hole that you would expect.      
+You can head south onto the docks.      
+~
+inside
+D SOUTH 13847 0 0
+~
+~
+#13894
+At the edge of the swampland ruins~
+You are at the eastern edge of the ruins amongst the overgrown swamps. To      
+the east you can make out what looks like the ruins of one of the city's      
+ancient harbours. Unlike the rest of the swampy ruins the harbour to the      
+east seems to be relatively free of swamp and forest growth, and there is      
+the strong smell of salt water, or blood, in the air...      
+~
+inside
+D EAST 13843 0 0
+~
+~
+D WEST 13890 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 13702 TO 13703 GLIMIT 8 LLIMIT 1
+EQUIP 13705 BODY
+EQUIP 13706 HANDS
+EQUIP 13704 WIELD
+MOB 13702 TO 13706 GLIMIT 8 LLIMIT 1
+EQUIP 13705 BODY
+EQUIP 13706 HANDS
+EQUIP 13704 WIELD
+OBJECT 13741 TO 13707
+MOB 13702 TO 13709 GLIMIT 8 LLIMIT 1
+EQUIP 13705 BODY
+EQUIP 13706 HANDS
+EQUIP 13704 WIELD
+MOB 13702 TO 13713 GLIMIT 8 LLIMIT 1
+EQUIP 13705 BODY
+EQUIP 13704 WIELD
+EQUIP 13706 HANDS
+OBJECT 13740 TO 13716
+DOOR 13717 east CLOSED
+MOB 13702 TO 13717 GLIMIT 8 LLIMIT 1
+EQUIP 13705 BODY
+EQUIP 13704 WIELD
+EQUIP 13706 HANDS
+OBJECT 13740 TO 13720
+MOB 13702 TO 13721 GLIMIT 8 LLIMIT 1
+EQUIP 13718 WIELD
+EQUIP 13705 BODY
+EQUIP 13706 HANDS
+OBJECT 13742 TO 13726
+MOB 13702 TO 13726 GLIMIT 8 LLIMIT 1
+EQUIP 13718 WIELD
+EQUIP 13705 BODY
+EQUIP 13706 HANDS
+MOB 13702 TO 13731 GLIMIT 8 LLIMIT 1
+EQUIP 13718 WIELD
+EQUIP 13705 BODY
+EQUIP 13706 HANDS
+MOB 13700 TO 13733 GLIMIT 12 LLIMIT 1
+OBJECT 13745 TO 13738
+MOB 13704 TO 13738 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13738 GLIMIT 9 LLIMIT 1
+MOB 13700 TO 13739 GLIMIT 12 LLIMIT 1
+OBJECT 13740 TO 13740
+MOB 13704 TO 13741 GLIMIT 12 LLIMIT 1
+MOB 13708 TO 13741 GLIMIT 8 LLIMIT 1
+EQUIP 13702 SHIELD
+EQUIP 13703 BODY
+MOB 13701 TO 13742 GLIMIT 3 LLIMIT 1
+MOB 13704 TO 13742 GLIMIT 12 LLIMIT 1
+OBJECT 13741 TO 13743
+MOB 13704 TO 13744 GLIMIT 12 LLIMIT 1
+MOB 13704 TO 13746 GLIMIT 12 LLIMIT 1
+OBJECT 13745 TO 13747
+OBJECT 13742 TO 13747
+MOB 13700 TO 13747 GLIMIT 12 LLIMIT 1
+OBJECT 13745 TO 13749
+MOB 13700 TO 13749 GLIMIT 12 LLIMIT 1
+MOB 13704 TO 13749 GLIMIT 12 LLIMIT 1
+MOB 13708 TO 13749 GLIMIT 8 LLIMIT 1
+EQUIP 13700 WIELD
+EQUIP 13702 SHIELD
+EQUIP 13703 BODY
+MOB 13704 TO 13751 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13752 GLIMIT 9 LLIMIT 1
+MOB 13700 TO 13753 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13754 GLIMIT 9 LLIMIT 1
+OBJECT 13741 TO 13755
+MOB 13708 TO 13755 GLIMIT 8 LLIMIT 1
+EQUIP 13701 WIELD
+EQUIP 13702 SHIELD
+OBJECT 13740 TO 13756
+OBJECT 13742 TO 13756
+MOB 13704 TO 13757 GLIMIT 12 LLIMIT 1
+OBJECT 13745 TO 13760
+OBJECT 13742 TO 13762
+MOB 13703 TO 13763 GLIMIT 1 LLIMIT 1
+MOB 13709 TO 13763 GLIMIT 9 LLIMIT 1
+DOOR 13766 east CLOSED
+MOB 13711 TO 13766 GLIMIT 1 LLIMIT 1
+EQUIP 13709 LFINGER
+DOOR 13767 north CLOSED
+MOB 13712 TO 13767 GLIMIT 1 LLIMIT 1
+EQUIP 13708 LFINGER
+DOOR 13768 west CLOSED
+MOB 13706 TO 13768 GLIMIT 1 LLIMIT 1
+EQUIP 13707 LFINGER
+MOB 13704 TO 13770 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13770 GLIMIT 9 LLIMIT 1
+MOB 13708 TO 13771 GLIMIT 8 LLIMIT 1
+EQUIP 13700 WIELD
+EQUIP 13702 SHIELD
+MOB 13704 TO 13772 GLIMIT 12 LLIMIT 1
+MOB 13708 TO 13773 GLIMIT 8 LLIMIT 1
+EQUIP 13702 SHIELD
+EQUIP 13703 BODY
+MOB 13704 TO 13774 GLIMIT 12 LLIMIT 1
+MOB 13708 TO 13774 GLIMIT 8 LLIMIT 1
+EQUIP 13701 WIELD
+EQUIP 13703 BODY
+OBJECT 13741 TO 13775
+MOB 13704 TO 13775 GLIMIT 12 LLIMIT 1
+MOB 13708 TO 13776 GLIMIT 8 LLIMIT 1
+EQUIP 13703 BODY
+EQUIP 13701 WIELD
+MOB 13708 TO 13777 GLIMIT 8 LLIMIT 1
+EQUIP 13702 SHIELD
+EQUIP 13703 BODY
+MOB 13701 TO 13780 GLIMIT 3 LLIMIT 1
+OBJECT 13745 TO 13784
+MOB 13700 TO 13784 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13784 GLIMIT 9 LLIMIT 1
+MOB 13700 TO 13786 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13787 GLIMIT 9 LLIMIT 1
+OBJECT 13740 TO 13788
+MOB 13719 TO 13791 GLIMIT 3 LLIMIT 1
+MOB 13700 TO 13794 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13794 GLIMIT 9 LLIMIT 1
+MOB 13722 TO 13794 GLIMIT 2 LLIMIT 1
+EQUIP 13727 WIELD
+EQUIP 13728 ABOUT
+MOB 13721 TO 13796 GLIMIT 1 LLIMIT 1
+EQUIP 13727 WIELD
+OBJECT 13741 TO 13797
+MOB 13700 TO 13797 GLIMIT 12 LLIMIT 1
+MOB 13722 TO 13799 GLIMIT 2 LLIMIT 1
+EQUIP 13727 WIELD
+EQUIP 13728 ABOUT
+OBJECT 13740 TO 13800
+MOB 13700 TO 13800 GLIMIT 12 LLIMIT 1
+MOB 13701 TO 13802 GLIMIT 3 LLIMIT 1
+MOB 13719 TO 13803 GLIMIT 3 LLIMIT 1
+OBJECT 13746 TO 13807
+MOB 13700 TO 13808 GLIMIT 12 LLIMIT 1
+MOB 13709 TO 13808 GLIMIT 9 LLIMIT 1
+MOB 13700 TO 13811 GLIMIT 12 LLIMIT 1
+OBJECT 13741 TO 13812
+MOB 13707 TO 13818 GLIMIT 1 LLIMIT 1
+EQUIP 13730 FEET
+EQUIP 13731 HOLD
+MOB 13723 TO 13822 GLIMIT 1 LLIMIT 1
+EQUIP 13732 WIELD
+EQUIP 13733 HOLD
+EQUIP 13734 HEAD
+EQUIP 13735 ABOUT
+MOB 13729 TO 13823 GLIMIT 4 LLIMIT 1
+DOOR 13824 north CLOSED
+MOB 13713 TO 13824 GLIMIT 1 LLIMIT 1
+EQUIP 13710 LFINGER
+DOOR 13825 south CLOSED
+DOOR 13829 south LOCKED
+DOOR 13833 north LOCKED
+MOB 13716 TO 13833 GLIMIT 1 LLIMIT 1
+EQUIP 13717 HOLD
+EQUIP 13716 HEAD
+EQUIP 13720 LFINGER
+DOOR 13835 south LOCKED
+DOOR 13836 north LOCKED
+MOB 13715 TO 13836 GLIMIT 1 LLIMIT 1
+EQUIP 13714 WIELD
+EQUIP 13715 NECKONE
+DOOR 13838 north LOCKED
+DOOR 13839 south LOCKED
+MOB 13717 TO 13839 GLIMIT 1 LLIMIT 1
+EQUIP 13711 ABOUT
+EQUIP 13723 LFINGER
+DOOR 13841 north CLOSED
+DOOR 13842 south CLOSED
+MOB 13718 TO 13842 GLIMIT 1 LLIMIT 1
+EQUIP 13712 HEAD
+EQUIP 13724 LFINGER
+GIVE 13713
+GIVE 13722
+MOB 13729 TO 13844 GLIMIT 4 LLIMIT 1
+MOB 13719 TO 13850 GLIMIT 3 LLIMIT 1
+OBJECT 13747 TO 13852
+DOOR 13852 down CLOSED
+OBJECT 13745 TO 13854
+MOB 13728 TO 13855 GLIMIT 5 LLIMIT 1
+MOB 13728 TO 13857 GLIMIT 5 LLIMIT 1
+MOB 13728 TO 13859 GLIMIT 5 LLIMIT 1
+MOB 13729 TO 13861 GLIMIT 4 LLIMIT 1
+MOB 13728 TO 13862 GLIMIT 5 LLIMIT 1
+DOOR 13870 north CLOSED
+MOB 13731 TO 13873 GLIMIT 1 LLIMIT 1
+DOOR 13875 west CLOSED
+OBJECT 13745 TO 13877
+OBJECT 13740 TO 13877
+DOOR 13879 east CLOSED
+DOOR 13881 west CLOSED
+MOB 13726 TO 13881 GLIMIT 1 LLIMIT 1
+OBJECT 13742 TO 13890
+MOB 13729 TO 13890 GLIMIT 4 LLIMIT 1
+MOB 13728 TO 13891 GLIMIT 5 LLIMIT 1
+S
+
+#IMPROGS
+S 13707 spec_breath_gas
+S 13715 spec_cast_mage
+S 13716 spec_spectre_king
+S 13717 spec_fallen_angel
+S 13718 spec_cast_mage
+S 13730 spec_valere_knight
+S 13732 spec_drannor_wraith
+END
+#$

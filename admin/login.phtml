@@ -1,0 +1,44 @@
+<?
+	$user = $_POST[user];
+	$password = $_POST[password];
+
+	$user = ucfirst($user);
+	$filename = "/home/rift/player/$user.plr";
+	$fd = fopen ($filename, "r") or die("Character name is not valid.");
+
+	while (!feof ($fd))
+	{
+		$string = fgets($fd, 4096);
+		$break = explode(" ",$string);
+		if("$break[0]" == "Pass")
+		{
+			$pass = $break[1];
+			$plen = (strlen($pass) - 2);
+			$pass = substr($pass, 0, $plen);
+			break;
+		}
+		if("$break[0]" == "Tru")
+			$trust = $break[2];
+		if("$break[0]" == "Levl")
+			$level = $break[1];
+	}
+	fclose ($fd);
+
+	if("$trust" == "")
+		$trust = $level;
+
+	if($level <= 51 && (!$trust || $trust <= 51))
+		die("You are not authorized to view this information.");
+
+	$test = crypt($password, $pass);
+
+	if("$test" == "$pass")
+	{
+		setcookie("user","$user", time()+31536000);
+		setcookie("password","$password", time()+31536000);
+		setcookie("trust","$trust", time()+31536000);
+		Header("Location: http://admin.riftshadow.org\n\n");
+	}
+	else
+		echo "Your login information is incorrect.<br>";
+?>		

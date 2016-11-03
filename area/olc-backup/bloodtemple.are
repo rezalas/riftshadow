@@ -1,0 +1,345 @@
+#AREA
+bloodtemple.are~
+The Blood Temple~
+Xanthian~
+0 0
+1900 1999
+normal
+none
+0
+1
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#1900
+Dummy Room~
+This is the example description.    
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#1901
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1902 0 0
+~
+~
+D WEST 1912 0 0
+~
+~
+OWNER none~
+#1902
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1903 0 0
+~
+~
+D WEST 1901 0 0
+~
+~
+OWNER none~
+#1903
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1904 0 0
+~
+~
+D WEST 1902 0 0
+~
+~
+OWNER none~
+#1904
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1905 0 0
+~
+~
+D WEST 1903 0 0
+~
+~
+OWNER none~
+#1905
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1906 0 0
+~
+~
+D SOUTH 1904 0 0
+~
+~
+OWNER none~
+#1906
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1907 0 0
+~
+~
+D SOUTH 1905 0 0
+~
+~
+OWNER none~
+#1907
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1908 0 0
+~
+~
+D SOUTH 1906 0 0
+~
+~
+OWNER none~
+#1908
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1909 0 0
+~
+~
+D SOUTH 1907 0 0
+~
+~
+OWNER none~
+#1909
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1910 0 0
+~
+~
+D SOUTH 1908 0 0
+~
+~
+OWNER none~
+#1910
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1911 0 0
+~
+~
+D SOUTH 1909 0 0
+~
+~
+OWNER none~
+#1911
+Dummy Room~
+This is the example description.    
+~
+unused
+D SOUTH 1910 0 0
+~
+~
+OWNER none~
+#1912
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1901 0 0
+~
+~
+D SOUTH 1925 0 0
+~
+~
+D WEST 1913 0 0
+~
+~
+D DOWN 1924 0 0
+~
+~
+OWNER none~
+#1913
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1912 0 0
+~
+~
+D WEST 1914 0 0
+~
+~
+OWNER none~
+#1914
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1913 0 0
+~
+~
+D WEST 1915 0 0
+~
+~
+OWNER none~
+#1915
+Dummy Room~
+This is the example description.    
+~
+unused
+D EAST 1914 0 0
+~
+~
+D WEST 1916 0 0
+~
+~
+OWNER none~
+#1916
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1917 0 0
+~
+~
+D EAST 1915 0 0
+~
+~
+OWNER none~
+#1917
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1918 0 0
+~
+~
+D SOUTH 1916 0 0
+~
+~
+OWNER none~
+#1918
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1919 0 0
+~
+~
+D SOUTH 1917 0 0
+~
+~
+OWNER none~
+#1919
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1920 0 0
+~
+~
+D SOUTH 1918 0 0
+~
+~
+OWNER none~
+#1920
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1921 0 0
+~
+~
+D SOUTH 1919 0 0
+~
+~
+OWNER none~
+#1921
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1922 0 0
+~
+~
+D SOUTH 1920 0 0
+~
+~
+OWNER none~
+#1922
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1923 0 0
+~
+~
+D SOUTH 1921 0 0
+~
+~
+OWNER none~
+#1923
+Dummy Room~
+This is the example description.    
+~
+unused
+D SOUTH 1922 0 0
+~
+~
+OWNER none~
+#1924
+Dummy Room~
+This is the example description.    
+~
+unused
+D UP 1912 0 0
+~
+~
+OWNER none~
+#1925
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1912 0 0
+~
+~
+D SOUTH 1926 0 0
+~
+~
+OWNER none~
+#1926
+Dummy Room~
+This is the example description.    
+~
+unused
+D NORTH 1925 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

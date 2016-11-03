@@ -1,0 +1,4007 @@
+#AREA
+dale.are~
+The Dale~
+Ceran~
+1 51
+13500 13699
+normal
+temperate
+0
+1
+Ceran~
+
+#MOBS
+#13500
+elminster man mage~
+elminster~
+A timeless man stands here watching the world pass by.
+~
+This old man is the archmage of many planes. He travels extensively and
+has more knowledge than almost any other mortal being. Although old and
+seemingly feeble his power should never be underestimated.
+Right now he is busy trying to unravel a mystery related to the darkness
+that has begun to encompass the northern parts of Shalar.
+~
+500 0 100 human~
+57 50d10+4500 6d8+24 0 100 magic
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT MAGE
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+OFF STATIC_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+RES WEAPON
+#13501
+guard man~
+a dale guard~
+A tall guard is here watching over the dale people.
+~
+The is man is watching the area with vigilance and, unlike many guardsmen,
+seems to actually be doing it with purpose. For this guard peace in the
+dale means peace in his home, for the dale is his home.
+~
+800 0 100 human~
+25 5d10+555 2d10+7 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF INFRARED
+IMM CHARM
+CLASS warrior none none 
+#13502
+watchman man~
+a dale watchman~
+A large watchman stands guard over the township.
+~
+This guard has the badges of a higher ranking sergeant in the dale
+militia. His steel ring is a symbol of his rank and responsibility to the
+people.
+~
+0 0 100 human~
+35 10d10+1300 4d7+11 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13503
+woman citizen~
+a dale woman~
+A young woman is here mingling with her neighbours.
+~
+This young woman seems almost oblivious to you, although she does glance
+at you out of the corner of her eye in interest.
+~
+0 0 100 human~
+15 3d9+208 2d6+3 0 100 slap
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#13504
+man citizen~
+a dale man~
+A man is here wandering through his local township.
+~
+A local man just on the prowl for more liquor or women. He doesn't seem
+too bright but he appears content.
+~
+0 0 100 human~
+19 3d9+308 2d7+5 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#13505
+minstrel elf bard~
+the town minstrel~
+An elven minstrel is here playing his music to all who listen.
+~
+This elf is strumming tunes to help liven up the market and bring in more
+people. He's also getting a nice commision and some generous tips from
+listeners.
+~
+1000 0 100 elf~
+51 50d10+5000 5d8+20 0 100 none
+0 0 0 0
+resting male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TRIP
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF SLEEP
+IMM SUMMON
+RES DROWNING
+CLASS warrior none none 
+#13506
+man owner~
+a local man~
+A bored looking man is here tending his house.
+~
+This man appears very bored. He probably wants to be in the local inn or
+tavern than at home fixing things.
+~
+0 0 100 human~
+20 3d9+333 2d8+5 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF PARRY
+CLASS warrior none none 
+#13507
+man owner~
+a local man~
+A man is here making sure his house is safe.
+~
+This man looks you over in suspicion before returning to fix up his house
+against robbers and intruders such as yourself!
+~
+0 0 100 human~
+20 3d9+333 2d8+5 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF PARRY
+CLASS warrior none none 
+#13508
+woman owner~
+a local woman~
+A woman preparing a meal takes time to glance at you in suspicion.
+~
+This lady doesn't seem to know what to make of strangers just walking in
+on her like this. She regards you with a frown but knows there is little
+she can do, and thus returns to making her meal.
+~
+0 0 100 human~
+20 3d9+333 2d8+5 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF PARRY
+CLASS warrior none none 
+#13509
+familiar imp~
+elminster's imp familiar~
+A horrible little imp grins at you and snaps it's teeth.
+~
+This horrible scaly creature flaps it's leathery wings and grins. It
+seems that the archmage that summoned it has left it to it's own devices
+for now.
+~
+-1000 0 100 human~
+35 10d10+1300 3d10+11 0 100 claw
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF TAIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13510
+inkeeper man~
+the inkeeper~
+A burly inkeeper is here taking orders for drink and food.
+~
+The inkeeper raises and eyebrow at you attention and indictes he's
+waiting for your order.
+~
+700 0 100 dwarf~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+RES LIGHTNING
+CLASS warrior none none 
+#13511
+armorer man blacksmith~
+the dale armorer~
+A strong dwarven blacksmith is here hammering some steel into form.
+~
+The dwarf grunts as he hammers steel into armor. Sweat runs freely down
+his face but he seems very content with his work.
+~
+1000 0 100 dwarf~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+RES LIGHTNING
+CLASS warrior none none 
+#13512
+weaponsmith dwarf~
+the weaponsmith~
+A weaponsmith is here testing a newly tempered blade.
+~
+This stocky dwarf looks over a blade in his hands and smiles a smile that
+only a true creator could understand.
+~
+1000 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13513
+magic owner man~
+K'daan the Magi~
+A man in blue robes is here selling some of his magical wares.
+~
+This man was a failed apprentice of the Arcana. He knows minor magics but
+never managed to become more than passingly proficient. Now he spends his
+time peddling off shoddy magical gear to any who will buy.
+~
+0 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13514
+barmaid girl woman~
+a barmaid~
+A young girl is here serving drinks.
+~
+This young girl looks almost too young to be serving drinks. She was
+plainly hired for her looks rather than her ability since she seems to be
+spilling quite a lot as she dodges the hands of drunken customers.
+~
+1000 0 100 human~
+20 3d9+333 2d8+5 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DISARM
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#13515
+patron man~
+a town drunk~
+A drunken man is here glaring at everyone through reddened eyes.
+~
+~
+0 0 100 human~
+16 3d9+240 2d6+4 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DODGE
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#13516
+man~
+a cart owner~
+A man is here watching over a cart of his produce.
+~
+This man seems impatient. He's waiting for the quartermaster to let him
+through to sell his wares, but the quartermaster appears to be out to
+lunch.
+~
+0 0 100 human~
+28 6d12+705 2d12+8 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#13517
+fisherman man~
+a dale fisherman~
+A local man is here playing with some line and tackle.
+~
+~
+900 0 100 human~
+12 2d12+148 1d10+4 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DODGE
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#13518
+deer~
+a deer~
+A deer is here munching idly upon the grasses.
+~
+~
+0 0 100 unique~
+10 2d7+121 1d10+3 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF BERSERK
+OFF KICK
+OFF PARRY
+CLASS warrior none none 
+#13519
+rabbit~
+a rabbit~
+A small rabbit is here peering at you with apprehension.
+~
+~
+0 0 100 rabbit~
+5 2d6+60 1d6+2 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT NOALIGN
+OFF BERSERK
+CLASS warrior none none 
+#13520
+farmer man~
+a dale farmer~
+A farmer is here watching over his crops.
+~
+This man is here trying to make a living from the land. He's not trained
+in anything special, or knowledgable, but he is the lifeblood of the dale.
+This is where the real dale gets it's life from, the crops it produces.
+~
+500 0 100 human~
+18 3d9+308 2d7+5 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF PARRY
+CLASS warrior none none 
+#13521
+boy farmhand man~
+a farmhand~
+A boy is standing around trying to look busy amidst the fields.
+~
+This local boy seems less interested in tending the fields than getting
+some time to relax.
+~
+500 0 100 human~
+13 2d10+180 2d5+4 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+OFF DISARM
+OFF DODGE
+OFF PARRY
+CLASS warrior none none 
+#13522
+horse~
+a horse~
+A horse attached to a cart is here.
+~
+~
+0 0 100 unique~
+6 2d7+71 1d8+1 0 100 pound
+0 0 0 0
+standing male none
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+CLASS warrior none none 
+#13523
+templar~
+the lord templar~
+A powerful looking knight is here practising his prayers.
+~
+This knight templar has the bearing of royalty. He hails from a nearby
+city and is on leave to survey the operation of local clergy. Right now
+he appears to be communing with his deity, or at least pretending to.
+~
+1000 0 100 human~
+56 50d10+4500 6d8+25 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#13524
+child boy~
+a young boy~
+A young boy is here playing on the floor.
+~
+This boy plays blissfully unaware of you.
+~
+0 0 100 human~
+7 2d6+80 1d8+1 0 100 punch
+0 0 0 0
+resting male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+#13525
+child girl~
+a young girl~
+A girl is here watching you with inquisitive eyes.
+~
+This girl looks back at you in interest, a small sparkle in her eyes
+before she turns away shyly.
+~
+0 0 100 human~
+7 2d6+80 1d8+1 0 100 punch
+0 0 0 0
+resting male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+#13526
+healer priest cleric~
+the dale cleric~
+A cleric is here offering his healing services.
+~
+This old adventurer has now retired and, like many clerics, has turned to
+the more mundane task of providing community healing.
+~
+1000 0 100 human~
+60 50d10+9500 8d6+28 0 100 grep
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT CLERIC
+ACT HEALER
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#13527
+lord~
+the dale lord~
+A stern looking man is here working hard in his study.
+~
+The Lord of the dale is a powerful ex-adventruer who earned his fame
+and power from many years of fighting. His reputation in the local region
+as a fighter is unsurpassed and it is even rumoured he has learned some
+minor magic from his friend Elminster.
+~
+1000 0 100 human~
+60 50d10+6500 8d6+28 0 100 punch
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF STATIC_TRACK
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+RES WEAPON
+CLASS warrior none none 
+#13528
+banker~
+the banker~
+A portly looking banker is here serving people.
+~
+~
+700 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13529
+clother woman seamtress~
+the seamstress~
+An elegantly dressed woman is here trying to make clothes.
+~
+This woman is desperately trying to make more clothes for her stock
+before she opens shop. She seems quite worn out.
+~
+700 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13530
+woman clother~
+a clothing woman~
+A young woman is here selling the shops clothing.
+~
+~
+700 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13531
+tavernkeeper man~
+the tavernkeeper~
+A tavernkeeper is here selling to his demanding customers.
+~
+~
+700 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13532
+baker~
+a baker~
+The dale baker is here making some hot breads.
+~
+~
+700 0 100 human~
+52 50d10+5500 6d7+20 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF NO_TRACK
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#13533
+captain guard~
+Jason the captain of the guard~
+The captain of the dale guard is here making sure things look in order.
+~
+This giant is a dedicated and experienced guardsman, and ex-adventurer
+now turned enforcer.
+~
+1000 0 100 unique~
+51 50d10+4500 5d8+20 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+AFF INFRARED
+CLASS warrior none none 
+#13534
+knight guard man~
+a knight of Myth Drannor~
+A tall knight stands here guarding the path to the forests beyond.
+~
+This knight is one of the legendary knights of Myth Drannor, dedicated to
+protecting the forests of Myth Drannor from looters and would-be
+visitors.
+~
+1000 0 100 human~
+55 50d10+20000 8d6+26 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#13500
+sign signpost~
+a signpost~
+Planted in the ground is a signpost reading 'Welcome to Greenleaf dale'.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E signpost~
+It reads:
+"Welcome to Greenleaf dale, home of peace and tolerance to all races".
+~
+
+#13501
+sign signpost~
+a signpost~
+A small signpost is here.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E signpost~
+It reads:
+North -- To Myth Drannor.
+East -- The Greenleaf dale market and temple.
+West -- Fields.
+
+All traders must talk to the quarter master to the east before taking goods
+into the market.
+~
+
+#13502
+sign signpost~
+a signpost~
+A worn sign rests here in the muddy ground.~
+trash
+wood~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+E signpost sign~
+The sign reads:
+The Forests of Myth Drannor beyond this point to the east are dangerous
+lands leading to deadly lands. Any who pass beyond this point are not
+guaranteed safe passage.
+
+    It is signed, Knights of Myth Drannor.
+~
+
+#13503
+well~
+a well~
+A large open well has been dug into the ground here.~
+fountain
+stone~
+0 0 'water' 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#13504
+fountain~
+fountain~
+A large well has been built here for all.~
+fountain
+stone~
+0 0 'water' 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#13505
+steel plate armor platemail~
+a suit of steel platemail~
+A set of steel plate armor is on the ground.~
+armor
+steel~
+8 7 9 0 0
+20 20 11000 P
+WEAR TAKE
+WEAR BODY
+ITEM ANTIEVIL
+ITEM ROTDEATH
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY HP 10
+LIMIT 0
+TIMER 0
+
+#13506
+steel gauntlets~
+a pair of steel gauntlets~
+A set of steel gauntlets lie here unused.~
+armor
+steel~
+5 4 4 0 0
+15 8 8000 P
+WEAR TAKE
+WEAR HANDS
+APPLY HITROLL 1
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#13507
+dale helmet helm~
+a dale-forged helm~
+A finely made helmet lies upon the ground.~
+armor
+steel~
+6 7 6 5 5
+30 7 17000 P
+WEAR TAKE
+WEAR HEAD
+ITEM ANTIEVIL
+ITEM ROTDEATH
+APPLY HITROLL 2
+APPLY SBREATH -4
+LIMIT 10
+TIMER 0
+
+#13508
+leggings iron~
+a pair of iron leggings~
+A pair of strong iron leggings lie here.~
+armor
+iron~
+8 7 6 0 0
+25 8 14000 P
+WEAR TAKE
+WEAR LEGS
+ITEM ROTDEATH
+APPLY HITROLL 1
+APPLY DAMROLL 2
+APPLY HP 10
+LIMIT 15
+TIMER 0
+
+#13509
+steel sleeves~
+some reinforced steel sleeves~
+A set of steel sleeves are on the floor.~
+armor
+steel~
+5 5 5 5 5
+20 6 11000 P
+WEAR TAKE
+WEAR ARMS
+APPLY DEX 1
+APPLY HP 25
+LIMIT 0
+TIMER 0
+
+#13511
+steel sword longsword~
+a steel longsword~
+A fine steel longsword is lying on the ground.~
+weapon
+steel~
+sword 6 5 slash 0
+22 9 9000 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#13512
+daleforged dale-forged dale mace~
+a dale-forged mace~
+A large mace has been left on the floor here.~
+weapon
+steel~
+mace 5 7 pound 0
+35 20 18000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL -2
+LIMIT 0
+TIMER 0
+
+#13513
+fine dagger~
+a fine dagger~
+A finely made dagger is on the ground.~
+weapon
+iron~
+dagger 7 3 pierce 0
+18 4 4000 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#13515
+flail~
+A dual-headed flail~
+A flail with two lengths of corded steel lies on the ground.~
+weapon
+steel~
+flail 8 3 whip 0
+20 7 7500 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 2
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#13516
+arcane Darokin hat~
+a hat covered in arcane symbols~
+A large floppy hat covered in strange symbols is on the ground.~
+armor
+cloth~
+8 9 8 20 20
+51 2 24240 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+ITEM MAGIC
+ITEM BLESS
+APPLY INT 2
+APPLY WIS 2
+APPLY SBREATH -5
+APPLY MANA 50
+APPLY HP 40
+LIMIT 3
+TIMER 0
+E hat arcane~
+This wide brimmed hat looks silly but the runes inscribed on it are of
+the highest powers. It once belonged to the archmage Darokin of Greenleaf
+dale and perhaps he will come looking for it someday...
+~
+
+#13517
+archmagi robes robe~
+robes of the archmagi~
+A large robe of no importance lies here.~
+armor
+cloth~
+5 5 5 5 20
+51 4 24500 P
+WEAR TAKE
+WEAR BODY
+ITEM MAGIC
+ITEM BLESS
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY INT 3
+APPLY MANA 35
+APPLY SBREATH -5
+LIMIT 2
+TIMER 0
+
+#13521
+jug beer~
+a jug of beer~
+A large jug of beer is here slowly warming up.~
+drink
+unique~
+40 40 'beer' 0 0
+1 2 40 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13522
+mug ale~
+a mug of ale~
+A mug of frothing ale is here.~
+drink
+unique~
+10 10 'ale' 0 0
+1 1 15 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13523
+dwarf ale~
+a mug of dwarven ale~
+A mug of powerful dwarf ale is here.~
+drink
+unique~
+20 20 'ale' 0 0
+1 1 50 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13524
+shot flaming dragon spirits~
+a shot of flaming dragon spirits~
+A small shot of flaming dragon spirit is on the floor.~
+drink
+unique~
+10 10 'ale' 0 0
+1 1 100 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13525
+orc breath~
+a shot of orc's breath~
+A shot of vile looking alcohol is on the ground.~
+drink
+unique~
+10 10 'ale' 0 0
+1 1 75 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13527
+cart~
+a farmer's cart~
+A large farmer's cart filled with produce is here.~
+container
+wood~
+1000 DFGHIJ 1000 1000 1000
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#13528
+apple~
+an apple~
+A ripe, fresh apple is lying here.~
+food
+unique~
+15 15 15 0 0
+0 0 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13529
+steel longsword sword~
+a fine steel longsword~
+A superbly crafted steel longsword has been left here.~
+weapon
+steel~
+sword 5 9 slice 0
+45 7 9000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY HITROLL 6
+APPLY DAMROLL -3
+APPLY HP 20
+LIMIT 0
+TIMER 0
+
+#13530
+steel mithril-lined shield~
+a mithril-lined steel shield~
+A perfect steel shield with mithril lining is here.~
+armor
+steel~
+10 10 10 18 18
+50 9 4000 P
+WEAR TAKE
+WEAR SHIELD
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY HITROLL 3
+APPLY DAMROLL 2
+APPLY HP 25
+APPLY MANA 25
+LIMIT 0
+TIMER 0
+
+#13531
+fine steel sleeves~
+A set of fine steel sleeves~
+A pair of steel sleeves of superior make lie here.~
+armor
+steel~
+7 6 7 15 15
+47 7 7500 P
+WEAR TAKE
+WEAR ARMS
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY HITROLL 2
+APPLY DAMROLL 1
+APPLY MANA 35
+LIMIT 0
+TIMER 0
+
+#13532
+green tunic~
+a green tunic~
+A tunic colored in forest green is here.~
+armor
+cloth~
+3 4 3 0 0
+14 2 4000 P
+WEAR TAKE
+WEAR BODY
+APPLY DEX 1
+APPLY MOVE 40
+LIMIT 0
+TIMER 0
+
+#13533
+leather boots~
+a pair of soft leather boots~
+A pair of soft leather boots is here.~
+armor
+leather~
+4 4 4 4 4
+18 4 7000 P
+WEAR TAKE
+WEAR FEET
+APPLY MOVE 30
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#13534
+camoflauge poncho~
+a camoflauge poncho~
+A poncho colored in forest green is here.~
+armor
+cloth~
+6 6 5 0 0
+2 2 1000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MOVE 25
+LIMIT 0
+TIMER 0
+
+#13537
+potion blue~
+a blue potion~
+A potion of blue liquid is here.~
+potion
+glass~
+25 'detect invis' 'reserved' 'reserved' 'reserved'
+1 1 8400 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13538
+green potion~
+a pale green potion~
+A pale green potion lies on the ground.~
+potion
+glass~
+40 'fly' 'reserved' 'reserved' 'reserved'
+1 1 6500 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13539
+wand silver~
+a silver wand~
+A silver handled wand lies on the ground.~
+wand
+silver~
+20 10 10 'create spring' 0
+1 2 2000 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#13540
+rod black~
+a black rod~
+A black rod is on the floor here.~
+wand
+steel~
+20 3 3 'cure critical' 0
+20 3 11000 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#13541
+bread~
+a loaf of bread~
+A loaf of bread is lying here.~
+food
+unique~
+40 40 40 0 0
+1 1 40 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13542
+pie~
+a pie~
+A steaming hot pie is on the floor.~
+food
+unique~
+20 20 20 0 0
+1 1 30 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13543
+donut~
+a donut~
+A delicious looking donut is on the ground.~
+food
+unique~
+15 15 15 0 0
+1 1 60 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13544
+apple~
+an apple~
+A large fresh apple is on the ground.~
+food
+unique~
+10 10 10 0 0
+1 1 15 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13546
+meal~
+a hot meal~
+A hot meal has been dropped here.~
+food
+unique~
+50 50 50 0 0
+1 2 70 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#13547
+leather boots~
+a pair of leather boots~
+A pair of leather boots are on the ground.~
+armor
+leather~
+4 3 4 0 0
+1 4 60 P
+WEAR TAKE
+WEAR FEET
+LIMIT 0
+TIMER 0
+
+#13548
+white dress~
+a beautiful white dress~
+A well made white dress is on the ground.~
+trash
+cloth~
+0 0 0 0 0
+1 2 150 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#13549
+suit black~
+a black suit~
+A finely stitched black suit is on the floor.~
+trash
+cloth~
+0 0 0 0 0
+1 2 140 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#13554
+steel ring~
+a smooth-steel ring~
+A ring of prefectly smooth steel lies on the ground.~
+armor
+steel~
+5 6 4 0 0
+35 1 10000 P
+WEAR TAKE
+WEAR FINGER
+ITEM ANTIEVIL
+APPLY HITROLL 1
+APPLY DAMROLL 1
+APPLY HP 15
+APPLY MANA 15
+LIMIT 0
+TIMER 0
+
+#13555
+white cloth cape~
+a cape of pure white cloth~
+A piece of white cloth has been dropped on the floor.~
+armor
+cloth~
+9 8 9 12 12
+40 1 18000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM ANTIEVIL
+APPLY MANA 40
+APPLY HP 40
+APPLY MOVE 40
+APPLY SBREATH -8
+LIMIT 0
+TIMER 0
+
+#13556
+silver belt~
+a silver-studded belt buckle~
+A beautiful belt buckle lies on the ground.~
+armor
+silver~
+5 6 7 5 5
+40 3 19800 P
+WEAR TAKE
+WEAR WAIST
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY STR 1
+LIMIT 6
+TIMER 0
+
+#13558
+steel buckler shield~
+a reinforced steel buckler~
+A large steel buckler is on the ground.~
+armor
+steel~
+6 7 6 3 3
+40 9 10000 P
+WEAR TAKE
+WEAR SHIELD
+ITEM GLOW
+ITEM ANTIEVIL
+APPLY DAMROLL 2
+APPLY HP 15
+LIMIT 20
+TIMER 0
+
+#13560
+ivory steel sword longsword~
+an ivory-hilted steel longsword~
+A large sword with an ivory hilt is on the ground.~
+weapon
+steel~
+sword 8 5 slash F
+44 17 14000 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+APPLY HITROLL 4
+APPLY DAMROLL 2
+LIMIT 4
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#13500
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The
+sounds of animals resound all about you and leaves rustle softly in the wind.
+Above you the high tree top canopy blocks out much of the sun, making the
+region seem darker than it really is. A dirt path heads westwards into the
+region.
+~
+forest
+ROOM DARK
+D EAST 24512 0 0
+~
+~
+D WEST 13501 0 0
+~
+~
+#13501
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The
+sounds of animals resound all about you and leaves rustle softly in the wind.
+Above you the high tree top canopy blocks out much of the sun, making the
+region seem darker than it really is. The dirt pathway heads west and east.
+~
+forest
+ROOM DARK
+D EAST 13500 0 0
+~
+~
+D WEST 13502 0 0
+~
+~
+#13502
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The
+sounds of animals resound all about you and leaves rustle softly in the wind.
+Above you the high tree top canopy blocks out much of the sun, making the
+region seem darker than it really is. The dirt path turns north and east.
+~
+forest
+ROOM DARK
+D NORTH 13503 0 0
+~
+~
+D EAST 13501 0 0
+~
+~
+#13503
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The
+sounds of animals resound all about you and leaves rustle softly in the wind.
+Above you the high tree top canopy blocks out much of the sun, making the
+region seem darker than it really is. The dirt path continues north and south.
+~
+forest
+ROOM DARK
+D NORTH 13504 0 0
+~
+~
+D SOUTH 13502 0 0
+~
+~
+#13504
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The sounds
+of animals resound all about you and leaves rustle softly in the wind. Above
+you the high tree top canopy blocks out much of the sun, making the region
+seem darker than it really is. The dirt path continues north where it curves
+west, and south.
+~
+forest
+ROOM DARK
+D NORTH 13505 0 0
+~
+~
+D SOUTH 13503 0 0
+~
+~
+#13505
+A turn in the woodland trail~
+The trail curves west and south here. The droppings of animals and the
+signs of frequent passage by them is an indication that this region is
+safer than the dark shadows covering it suggest.
+~
+forest
+ROOM DARK
+D SOUTH 13504 0 0
+~
+~
+D WEST 13506 0 0
+~
+~
+#13506
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The sounds
+of animals resound all about you and leaves rustle softly in the wind. Above
+you the high tree top canopy blocks out much of the sun, making the region
+seem darker than it really is. The dirt path continues north and east.
+~
+forest
+ROOM DARK
+D NORTH 13507 0 0
+~
+~
+D EAST 13505 0 0
+~
+~
+#13507
+A T-junction in the woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The sounds
+of animals resound all about you and leaves rustle softly in the wind. Above
+you the high tree top canopy blocks out much of the sun, making the region
+seem darker than it really is. To the west you can hear faint sounds of
+running water and the noises of people. The path continues north and south.
+~
+forest
+ROOM DARK
+D NORTH 13508 0 0
+~
+~
+D SOUTH 13506 0 0
+~
+~
+D WEST 13609 0 0
+~
+~
+#13508
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The sounds
+of animals resound all about you and leaves rustle softly in the wind. Above
+you the high tree top canopy blocks out much of the sun, making the region
+seem darker than it really is. The path continues north and south.
+~
+forest
+ROOM DARK
+D NORTH 13509 0 0
+~
+~
+D SOUTH 13507 0 0
+~
+~
+#13509
+On a woodland trail~
+You stand on a narrow but well kept trail through the thick woods. The sounds
+of animals resound all about you and leaves rustle softly in the wind. Above
+you the high tree top canopy blocks out much of the sun, making the region
+seem darker than it really is. To the west the path heads onto a small bridge
+over a river, while to the south it leads off into the woods.
+~
+forest
+ROOM DARK
+D SOUTH 13508 0 0
+~
+~
+D WEST 13510 0 0
+~
+~
+#13510
+On a small wooden bridge~
+You are standing on a small bridge leading across a deep running river. Loud
+gurgling water rushes beneath you and froths up along the river banks. Off to
+the south you can make out a small lake where the river ends, and to the west
+you can see buildings of some sort nestled between this bridge and one further
+on.
+~
+city
+ROOM DARK
+D EAST 13509 0 0
+~
+~
+D WEST 13511 0 0
+~
+~
+#13511
+Southern outskirts of Greenleaf dale~
+You stand amidst a small cluster of buildings between two bridges. The woods
+around you are thick and well kept, showing very little sign of human ruin
+that normally accompanies human settlement. To the north you can see a small
+house and south is what looks like a guard outpost. The path heads east across
+a bridge and westwards into Greenleaf dale.
+~
+city
+ROOM DARK
+D NORTH 13621 AB 0
+door~
+A small house.
+~
+D EAST 13510 0 0
+~
+~
+D SOUTH 13617 0 0
+~
+A guard post.
+~
+D WEST 13512 0 0
+~
+~
+#13512
+Southern outskirts of Greenleaf dale~
+You stand amidst a small cluster of buildings between two bridges. The woods
+around you are thick and well kept, showing very little sign of human ruin
+that normally accompanies human settlement. To the north you can see a small
+house. The path heads east and west amongst the buildings.
+~
+city
+ROOM DARK
+D NORTH 13620 AB 0
+door~
+A small house.
+~
+D EAST 13511 0 0
+~
+~
+D WEST 13513 0 0
+~
+~
+#13513
+Southern outskirts of Greenleaf dale~
+You stand amidst a small cluster of buildings between two bridges. The woods
+around you are thick and well kept, showing very little sign of human ruin
+that normally accompanies human settlement. To the north and south you can see
+a pair of small houses. The path heads east amidst the buildings, and west
+across a small bridge.
+~
+city
+ROOM DARK
+D NORTH 13619 AB 0
+door~
+A small house.
+~
+D EAST 13512 0 0
+~
+~
+D SOUTH 13618 AB 0
+door~
+A small house.
+~
+D WEST 13514 0 0
+~
+On a small bridge.
+~
+#13514
+On a small wooden bridge~
+You are standing on a small bridge leading across a deep running river.
+Loud gurgling water rushes beneath you and froths up along the river
+banks. To the north you can make out a town of somesort, while to the east
+is a bridge leading to a small cluster of buildings. The path heads east
+over the bridge, and west towards the township.
+~
+city
+ROOM DARK
+D EAST 13513 0 0
+~
+~
+D WEST 13515 0 0
+~
+~
+#13515
+On a the woodland trail~
+You stand on a well travelled dirt pathway through a thick forest. The
+region is dark from the choking tree canopy but it is a dark that is
+comforting rather than menacing. To the east is a small bridge leading to
+some building, while the path heads west to a bend.
+~
+city
+ROOM DARK
+D EAST 13514 0 0
+~
+~
+D WEST 13516 0 0
+~
+~
+#13516
+A bend in the woodland path~
+You are at a sharp bend in the path through the woods. It heads north towards
+some buildings and more cultivated land, or east into the woods and a small
+bridge further off.
+~
+city
+ROOM DARK
+D NORTH 13517 0 0
+~
+~
+D EAST 13515 0 0
+~
+~
+#13517
+A path in the woodlands~
+You are on a path through some thick woodland forest. Although the region is
+dark from the overhanging tree cover you can still make out the well used path
+with little problem. Northwards you can see buildings, while south the path
+heads into a bend.
+~
+city
+ROOM DARK
+D NORTH 13518 0 0
+~
+~
+D SOUTH 13516 0 0
+~
+~
+#13518
+At the entrance to Greenleaf dale~
+You stand at the entrance to a small township. The thick and dark forest
+around it seems strangely comforting, like a protective shell from the
+rest of the harsh world. To the east you can see a small house of some
+local resident. The path heads northwards into the township or south into
+the surrounding forests.
+~
+inside
+D NORTH 13519 0 0
+~
+~
+D EAST 13576 AB 0
+door~
+A small house.
+~
+D SOUTH 13517 0 0
+~
+On a path through the woodlands.
+~
+#13519
+A pathway through the township~
+You are walking on a well kept and regularly frequented path through the
+small township here in the forest. The air is fresh and there is an
+unexplainable feeling of peace from all around. To the east and west lie
+small houses, while the path leads north to a common square and south out
+of the town.
+~
+inside
+D NORTH 13520 0 0
+~
+~
+D EAST 13577 AB 0
+door~
+A small house.
+~
+D SOUTH 13518 0 0
+~
+~
+D WEST 13578 AB 0
+door~
+A small house.
+~
+#13520
+At a common square in the township~
+You stand within a large open gravel square set aside for the town's
+way-point. Signs and small makeshift stalls line the intersecting paths as
+people try to make the most of the busy and industrius crossing. The path
+continues north and south through the township. Eastwards you can see the
+majority of the town buildings and what looks like a market place, and
+west appears to head off into some fields.
+~
+inside
+D NORTH 13521 0 0
+~
+~
+D EAST 13530 0 0
+~
+~
+D SOUTH 13519 0 0
+~
+~
+D WEST 13571 0 0
+~
+~
+#13521
+A pathway through the township~
+You are walking on a well kept and regularly frequented path through the small
+township here in the forest. The air is fresh and there is an unexplainable
+feeling of peace from all around. To the east lies a small house, while
+the path leads north out of the town or south to a common square.
+~
+inside
+D NORTH 13522 0 0
+~
+~
+D EAST 13584 AB 0
+door~
+A small house.
+~
+D SOUTH 13520 0 0
+~
+~
+#13522
+A pathway through the township~
+You are walking on a well kept and regularly frequented path through the small
+township here in the forest. The air is fresh and there is an unexplainable
+feeling of peace from all around. To the east and west lie small houses, while
+the path leads north out of the town, or south into it.
+~
+inside
+D NORTH 13523 0 0
+~
+~
+D EAST 13583 AB 0
+door~
+A small house.
+~
+D SOUTH 13521 0 0
+~
+~
+D WEST 13582 AB 0
+door~
+A small house.
+~
+#13523
+A pathway through the township~
+You are walking on a well kept and regularly frequented path through the small
+township here in the forest. The air is fresh and there is an unexplainable
+feeling of peace from all around. For some reason the path is not quite so
+well travelled this far north of the town. The path leads north out of the
+town, or south into it.
+~
+inside
+D NORTH 13524 0 0
+~
+~
+D SOUTH 13522 0 0
+~
+~
+#13524
+The northern outskirts of Greenleaf dale~
+You stand on a small pathway at the northern end of a small township. Around
+you the forest is thick and dark, covered in flickering shadows. The pathway
+here is not too well defined and shows an evident lack of use. The path leads
+east out of the town, or south towards it.
+~
+inside
+ROOM DARK
+D EAST 13525 0 0
+~
+~
+D SOUTH 13523 0 0
+~
+~
+#13525
+The northern outskirts of Greenleaf dale~
+You stand on a small pathway at the northern end of a small township. Around
+you the forest is thick and dark, covered in flickering shadows. The pathway
+here is not too well defined and shows an evident lack of use. The path leads
+east and west.
+~
+inside
+ROOM DARK
+D EAST 13526 0 0
+~
+~
+D WEST 13524 0 0
+~
+~
+#13526
+The northern outskirts of Greenleaf dale~
+You stand on a small pathway at the northern end of a small township. Around
+you the forest is thick and dark, covered in flickering shadows. The pathway
+here is not too well defined and shows an evident lack of use. The path leads
+west back to the town, or north towards a small cluster of isolated buildings.
+~
+inside
+ROOM DARK
+D NORTH 13527 0 0
+~
+~
+D WEST 13525 0 0
+~
+~
+#13527
+The northern outskirts of Greenleaf dale~
+You stand on a small pathway at the northern end of a small township. Around
+you the forest is thick and dark, covered in flickering shadows. The pathway
+here is not too well defined and shows an evident lack of use. To the east and
+west are small buildings, while the path itself leads north and south.
+~
+inside
+ROOM DARK
+D NORTH 13528 0 0
+~
+~
+D EAST 13624 AB 0
+door~
+A small house.
+~
+D SOUTH 13526 0 0
+~
+~
+D WEST 13626 AB 0
+door~
+A small house.
+~
+#13528
+The northern outskirts of Greenleaf dale~
+You stand on a small pathway at the northern end of a small township. Around
+you the forest is thick and dark, covered in flickering shadows. The pathway
+here is not too well defined and shows an evident lack of use. To the east and
+west are small buildings, while the path itself leads north and south.
+~
+inside
+ROOM DARK
+D NORTH 13529 0 0
+~
+~
+D EAST 13625 AB 0
+door~
+A small house.
+~
+D SOUTH 13527 0 0
+~
+~
+D WEST 13627 AB 0
+door~
+A small house.
+~
+#13529
+The northern outskirts of Greenleaf dale~
+You stand at the very northern end of what could possibly be called the
+township. Even here there is more forest than civilised land and the trees
+seem darker and more intimidating than elsewhere. To the south lies a small
+cluster of buildings, and eastwards the forest grows thicker and darker.
+~
+forest
+ROOM DARK
+D EAST 13606 0 0
+~
+~
+D SOUTH 13528 0 0
+~
+~
+#13530
+A pathway through the township~
+You stand upon a well kept gravel path. Around you the thick forest
+provides a comforting cover from the rest of the world, and soft noises of
+animals can be heard. To the north is a small building labelled 'customs'.
+East of here the path heads towards the main township, while west there is
+a large common square.
+~
+city
+ROOM DARK
+D NORTH 13557 0 0
+~
+~
+D EAST 13531 0 0
+~
+~
+D WEST 13520 0 0
+~
+~
+#13531
+Within the main township~
+You stand amongst small buildings in the township of Greenleaf dale. Trees
+line the pathway all around you and it almost seems like you are within a
+forest rather than a town. To the north and south are small houses, and to
+the east there is a large open market place. West leads back out of the
+main township.
+~
+city
+D NORTH 13558 AB 0
+door~
+A small house.
+~
+D EAST 13535 0 0
+~
+~
+D SOUTH 13559 AB 0
+door~
+A small house.
+~
+D WEST 13530 0 0
+~
+~
+#13532
+NW corner of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. To the north there
+is a baker's shop from which the smells of fresh bread are coming. West is
+a small tavern filled with drunken laughter.
+~
+city
+D NORTH 13550 0 0
+~
+The Dale baker's shop.
+~
+D EAST 13533 0 0
+~
+~
+D SOUTH 13535 0 0
+~
+~
+D WEST 13549 0 0
+~
+~
+#13533
+Northern end of the Dale Market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. To the north is a
+large inn filled with happy partons.
+~
+city
+D NORTH 13628 0 0
+~
+~
+D EAST 13534 0 0
+~
+~
+D SOUTH 13536 0 0
+~
+~
+D WEST 13532 0 0
+~
+~
+#13534
+NE corner of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. North of here is a
+loud armorer's shop and east is an accompanying weaponsmith.
+~
+city
+D NORTH 13551 0 0
+~
+~
+D EAST 13552 0 0
+~
+~
+D SOUTH 13537 0 0
+~
+~
+D WEST 13533 0 0
+~
+~
+#13535
+Western side of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. The market spreads
+out to the north, east and south. A small pathway heads west out of the
+main market.
+~
+city
+D NORTH 13532 0 0
+~
+~
+D EAST 13536 0 0
+~
+~
+D SOUTH 13538 0 0
+~
+~
+D WEST 13531 0 0
+~
+~
+#13536
+Centre of the Dale market~
+You stand within the centre of the township's main trading square. All
+around you people are busy buying goods and talking to neighbours. Loud
+sounds and strong smells greet you at every turn and assault your senses.
+All around you the market spreads out.
+~
+city
+D NORTH 13533 0 0
+~
+~
+D EAST 13537 0 0
+~
+~
+D SOUTH 13539 0 0
+~
+~
+D WEST 13535 0 0
+~
+~
+#13537
+Eastern side of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. The market heads off
+to the north,south and west. To the east lies a wide path heading towards
+what look like houses.
+~
+city
+D NORTH 13534 0 0
+~
+~
+D EAST 13541 0 0
+~
+~
+D SOUTH 13540 0 0
+~
+~
+D WEST 13536 0 0
+~
+~
+#13538
+SW corner of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. To the south is a
+strange shop with a sign bearing a crescent moon. West is a shop selling
+forest clothing for the local hunters and trappers.
+~
+city
+D NORTH 13535 0 0
+~
+~
+D EAST 13539 0 0
+~
+~
+D SOUTH 13555 0 0
+~
+~
+D WEST 13556 0 0
+~
+~
+#13539
+Southern end of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby.
+~
+city
+D NORTH 13536 0 0
+~
+~
+D EAST 13540 0 0
+~
+~
+D WEST 13538 0 0
+~
+~
+#13540
+SE corner of the Dale market~
+You stand within a bustling market place filled with the sounds of
+commerce and everyday living. Smells of sweet meets and bread waft through
+the air and music can be heard from somewhere nearby. You can see a bank
+to the east and a busy clothing shop to the south.
+~
+city
+D NORTH 13537 0 0
+~
+~
+D EAST 13553 0 0
+~
+~
+D SOUTH 13554 0 0
+~
+~
+D WEST 13539 0 0
+~
+~
+#13541
+On a pathway amidst the Dale community~
+You are standing upon a wide gravel pathway through the eastern side of the
+forest township. Thick woods surround you in a strangely comforting
+cover, and animals can occasionally be seen loitering near the edges of
+the town. To the north is a small house, and more can be seen in clusters
+to the east. West of here is what looks like a market place.
+~
+city
+D NORTH 13560 AB 0
+door~
+A small house.
+~
+D EAST 13542 0 0
+~
+~
+D WEST 13537 0 0
+~
+~
+#13542
+On a pathway amidst the Dale community~
+You are standing upon a wide gravel pathway through the eastern side of
+the forest township. Thick woods surround you in a strangely comforting
+cover, and animals can occasionally be seen loitering near the edges of
+the town. To the north and south are some small houses, and to the east
+are clusters of more houses.
+~
+city
+D NORTH 13561 AB 0
+door~
+A small house.
+~
+D EAST 13543 0 0
+~
+~
+D SOUTH 13562 AB 0
+door~
+A small house.
+~
+D WEST 13541 0 0
+~
+~
+#13543
+On a pathway amidst the Dale community~
+You are standing upon a wide gravel pathway through the eastern side of the
+forest township. Thick woods surround you in a strangely comforting
+cover, and animals can occasionally be seen loitering near the edges of
+the town. To the north is a guard headquarters and south is a small house.
+The pathway heads east and west.
+~
+city
+D NORTH 13564 0 0
+~
+The town guard quarters.
+~
+D EAST 13544 0 0
+~
+~
+D SOUTH 13563 AB 0
+door~
+A small house.
+~
+D WEST 13542 0 0
+~
+~
+#13544
+End of the township~
+You are standing at the eastern edge of the Greenleaf dale community.
+Thick woods surround you and enclose the buildings in a smothering
+embrace. A large temple has been erected to the north, and south is a
+grand house of some regional lord. The path heads back west to a large
+cluster of common houses.
+~
+city
+D NORTH 13547 0 0
+~
+~
+D SOUTH 13545 AB 0
+door~
+~
+D WEST 13543 0 0
+~
+~
+#13545
+Foyer of the Lord's Manor~
+You stand within a rich and elegant house. The walls are solid and even this
+close to the main dale market you can barely hear anything outside the house.
+A staircase heads up into the house, and a door opens out north to the dale's
+main streets.
+~
+inside
+D NORTH 13544 AB 0
+door~
+~
+D UP 13546 0 0
+~
+~
+#13546
+In a large house~
+You stand in the house of a very rich, very powerful member of the dale
+community. The furnishings are the finest in the region and the food that
+has been laid out on the table is superbly prepared. A staircase leads
+down and a door leads east. To the west the house opens out onto a
+balcony.
+~
+inside
+D EAST 13570 AB 0
+door~
+~
+D WEST 13569 0 0
+~
+~
+D DOWN 13545 0 0
+~
+~
+#13547
+Inside the temple of Sun~
+You are at the entrance to a fine, well built temple. Symbols of sun and
+prosperity have been carved into the walls, along with markings to drive
+away evil spirits and curses. To the east is a small alcove, while the
+main temple heads north to the altar room.
+~
+inside
+D NORTH 13548 0 0
+~
+~
+D EAST 13567 0 0
+~
+~
+D SOUTH 13544 0 0
+~
+~
+#13548
+The altar room~
+This is where the dale community gathers to worship. The room is plain and
+nodescript, holding to the value of humility. There are doors to the east
+and west.
+~
+inside
+D EAST 13566 AB 0
+door~
+~
+D SOUTH 13547 0 0
+~
+~
+D WEST 13565 AB 0
+door~
+~
+#13549
+The Green Fletcher's Tavern~
+The tavern is noisy and messy. It looks like much of what is served here
+ends up on the floor rather than in the customer's stomachs. To the east
+lies the dale market square.
+~
+inside
+D EAST 13532 0 0
+~
+~
+#13550
+The Baker's Delight~
+This bakery has the warm smell of fresh bread and other savoury delights.
+Rows of cakes also line the service table and make your mouth water. To
+the south lies the dale market square.
+~
+inside
+D SOUTH 13532 0 0
+~
+~
+#13551
+The Shadowdale Armory~
+The room is noisy, smelly and hot. A typical armory if ever you've seen one.
+Yet this one seems somewhat more professional than the regular midgaard run
+of the mill blackmsith.
+~
+inside
+D SOUTH 13534 0 0
+~
+~
+#13552
+The Worthy Weapons shop~
+The smell of burning metals and hot coals assaults you as you enter this
+shop. The place is very well set up, however, and looks quite professional.
+~
+inside
+D WEST 13534 0 0
+~
+~
+#13553
+The Dale Bank~
+This branch of the Shalaran banks is small and seems a little unsafe to be
+holding such large sums of money. Maybe the magical wards placed around
+it by the local archmagi have something to do with it's security.
+~
+inside
+D WEST 13540 0 0
+~
+~
+#13554
+Wear 'N Tear~
+This shop is in disarry. It seems to be newly opened and has little stock
+of interest right now. Perhaps in time it will get more organised and
+open.
+~
+inside
+D NORTH 13540 0 0
+~
+~
+#13555
+The Crescent Moon~
+You find yourself standing in a weird and cluttered little shop. Odds and
+ends of all sorts lie around the room, most of which look quite useless.
+But maybe there is one or two things which may actually have some use..
+~
+inside
+D NORTH 13538 0 0
+~
+~
+#13556
+Forest Wear~
+You are standing within a building that has been made, quite convincingly,
+to look like a forest cabin. It seems to be a place where local trappers
+and hunters can come to buy clothing to help them find their prey a little
+easier. The clothes themselves seem a little flimsy for fighting in, but
+well made nonetheless.
+~
+inside
+D EAST 13538 0 0
+~
+~
+#13557
+The Quartermaster's Hold~
+You are standing in what looks like an official's room with maps and
+charts designed to guide people to where they should be guided. There is a
+door leading back south.
+~
+inside
+D SOUTH 13530 0 0
+~
+~
+#13558
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading south out
+of the house.
+~
+inside
+D SOUTH 13531 AB 0
+door~
+~
+#13559
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading north out
+of the house.
+~
+inside
+D NORTH 13531 AB 0
+door~
+~
+#13560
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading south out
+of the house.
+~
+inside
+D SOUTH 13541 AB 0
+door~
+~
+#13561
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading south out
+of the house.
+~
+inside
+D SOUTH 13542 AB 0
+door~
+~
+#13562
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading north out
+of the house.
+~
+inside
+D NORTH 13542 AB 0
+door~
+~
+#13563
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading north out
+of the house.
+~
+inside
+D NORTH 13543 AB 0
+door~
+~
+#13564
+The guard headquarters~
+This room is a sparse and uncomfortable guardhouse. It seems mostly that
+the locals provide the guard force here and they tend to live at home
+anyway.
+~
+inside
+D SOUTH 13543 0 0
+~
+~
+#13565
+The Lord Templar's Room~
+Beautiful plaques and rugs adorn this room making it seem more like a
+room of a prince than a humble servant of god. Yet the richness is surely
+well deserved or the dale people would hardly provide for such a man.
+~
+inside
+D EAST 13548 AB 0
+door~
+~
+#13566
+The High Cleric's Chamber~
+A very spartan and homely room. This has only the bare minimums for
+living in. A bed, desk and a window are the only items and they seem more
+for function than aesthetics.
+~
+inside
+D WEST 13548 AB 0
+door~
+~
+#13567
+A small alcove in the temple~
+You stand in a small side room of the temple where holy water has been
+set aside for those wishing to bless themselves before seeing the priest.
+~
+inside
+D WEST 13547 0 0
+~
+~
+#13569
+On a balcony overlooking the Dale~
+You stand upon a high wooden balcony set high above the house. From here
+the view is superb and allows you to glimpse much of the dale that was
+hidden by the thick woods surrounding it. Far off in the west you can make
+out fields and way off in the north is a dark ominous forest. The only
+exit is back east into the house.
+~
+city
+D EAST 13546 0 0
+~
+~
+#13570
+The Lord's Private Study~
+You are standing within a rich and luxurious study. Much of it contains
+papers and documents relating to the governing of the propsperous daleland
+town and it is evident the lord takes his duties seriously.
+~
+inside
+D WEST 13546 AB 0
+door~
+~
+#13571
+A pathway through the township~
+You stand upon a well kept gravel path. Around you the thick forest
+provides a comforting cover from the rest of the world, and soft noises of
+animals can be heard. To the north is a small building, while east there
+is a large common square.
+~
+city
+ROOM DARK
+D NORTH 13581 AB 0
+door~
+~
+D EAST 13520 0 0
+~
+~
+D WEST 13572 0 0
+~
+~
+#13572
+A pathway through the township~
+You stand upon a well kept gravel path. Around you the thick forest
+provides a comforting cover from the rest of the world, and soft noises of
+animals can be heard. To the north and south are some houses, while the
+pathway heads east and west.
+~
+city
+ROOM DARK
+D NORTH 13580 AB 0
+door~
+~
+D EAST 13571 0 0
+~
+~
+D SOUTH 13579 AB 0
+door~
+~
+D WEST 13573 0 0
+~
+~
+#13573
+A pathway through the western outskirts of Shadowdale~
+You stand upon a well kept gravel path. Around you the thick forest
+provides a comforting cover from the rest of the world, and soft noises of
+animals can be heard. The gravel path continues east and west.
+~
+city
+ROOM DARK
+D EAST 13572 0 0
+~
+~
+D WEST 13574 0 0
+~
+~
+#13574
+Outside the western outskirts of Shadowdale~
+You stand upon a well kept gravel path. Around you the thick forest
+provides a comforting cover from the rest of the world, and soft noises of
+animals can be heard. The gravel path leads north towards some cultivated
+fields, and east to some houses.
+~
+city
+ROOM DARK
+D NORTH 13575 0 0
+~
+~
+D EAST 13573 0 0
+~
+~
+#13575
+The western outskirts of Shadowdale~
+You stand upon a well kept gravel path. Around you the thick forest
+provides a comforting cover from the rest of the world, and soft noises of
+animals can be heard. The gravel path leads north towards some cultivated
+fields, or south.
+~
+city
+ROOM DARK
+D NORTH 13585 0 0
+~
+~
+D SOUTH 13574 0 0
+~
+~
+#13576
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading west out
+of the house.
+~
+inside
+D WEST 13518 AB 0
+door~
+~
+#13577
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading west out
+of the house.
+~
+inside
+D WEST 13519 AB 0
+door~
+~
+#13578
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading east out
+of the house.
+~
+inside
+D EAST 13519 AB 0
+door~
+~
+#13579
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading north out
+of the house.
+~
+inside
+D NORTH 13572 AB 0
+door~
+~
+#13580
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading south out
+of the house.
+~
+inside
+D SOUTH 13572 AB 0
+door~
+~
+#13581
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading south out
+of the house.
+~
+inside
+D SOUTH 13571 AB 0
+door~
+~
+#13582
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading east out
+of the house.
+~
+inside
+D EAST 13522 AB 0
+door~
+~
+#13583
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading west out
+of the house.
+~
+inside
+D WEST 13522 AB 0
+door~
+~
+#13584
+A small house~
+You find yourself within a small but tidy house. The main room is large
+and comfortable with a homely feeling about it. Small partitions seperate
+the house into bedrooms and a couple of windows are set into the sides to
+provide a view of the beautiful forests. There is a door leading west out
+of the house.
+~
+inside
+D WEST 13521 AB 0
+door~
+~
+#13585
+Before the dale fields~
+You are standing before some well cultivated fields. Small trails wind
+between them where farmers have trodden in order to tend and harvest their
+crops. The trails lead east and west through the fields, and a larger
+gravel pathway heads south away from the farming land.
+~
+field
+D EAST 13586 0 0
+~
+~
+D SOUTH 13575 0 0
+~
+~
+D WEST 13587 0 0
+~
+~
+#13586
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north and west.
+~
+field
+D NORTH 13590 0 0
+~
+In the dale fields.
+~
+D WEST 13585 0 0
+~
+In the dale fields.
+~
+#13587
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north and east.
+~
+field
+D NORTH 13588 0 0
+~
+In the dale fields.
+~
+D EAST 13585 0 0
+~
+In the dale fields.
+~
+#13588
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north to a lake, east and south.
+~
+field
+D NORTH 13592 0 0
+~
+In the dale fields.
+~
+D EAST 13584 0 0
+~
+In the dale fields.
+~
+D SOUTH 13587 0 0
+~
+In the dale fields.
+~
+#13589
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north to a lake, east and west.
+~
+field
+D NORTH 13593 0 0
+~
+In the dale fields.
+~
+D EAST 13590 0 0
+~
+In the dale fields.
+~
+D WEST 13588 0 0
+~
+In the dale fields.
+~
+#13590
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north to a lake, south and west.
+~
+field
+D NORTH 13594 0 0
+~
+In the dale fields.
+~
+D SOUTH 13586 0 0
+~
+In the dale fields.
+~
+D WEST 13589 0 0
+~
+In the dale fields.
+~
+#13591
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north, and east towards a lake.
+~
+field
+D NORTH 13596 0 0
+~
+In the dale fields.
+~
+D EAST 13592 0 0
+~
+In the dale fields.
+~
+#13592
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D NORTH 13597 0 0
+~
+~
+D EAST 13593 0 0
+~
+~
+D SOUTH 13588 0 0
+~
+~
+D WEST 13591 0 0
+~
+~
+#13593
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D EAST 13594 0 0
+~
+~
+D SOUTH 13589 0 0
+~
+~
+D WEST 13592 0 0
+~
+~
+#13594
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D NORTH 13598 0 0
+~
+~
+D EAST 13595 0 0
+~
+~
+D SOUTH 13590 0 0
+~
+~
+D WEST 13593 0 0
+~
+~
+#13595
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north, and west towards a lake.
+~
+field
+D NORTH 13599 0 0
+~
+In the dale fields.
+~
+D WEST 13594 0 0
+~
+~
+#13596
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north, and east towards a lake.
+~
+field
+D NORTH 13600 0 0
+~
+In the dale fields.
+~
+D EAST 13597 0 0
+~
+~
+D SOUTH 13591 0 0
+~
+~
+#13597
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D NORTH 13601 0 0
+~
+~
+D SOUTH 13592 0 0
+~
+~
+D WEST 13596 0 0
+~
+~
+#13598
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D NORTH 13603 0 0
+~
+~
+D EAST 13599 0 0
+~
+~
+D SOUTH 13594 0 0
+~
+~
+#13599
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue north, south and west.
+~
+field
+D NORTH 13604 0 0
+~
+In the dale fields.
+~
+D SOUTH 13595 0 0
+~
+~
+D WEST 13598 0 0
+~
+~
+#13600
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue east and south.
+~
+field
+D EAST 13601 0 0
+~
+~
+D SOUTH 13596 0 0
+~
+In the dale fields.
+~
+#13601
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D EAST 13602 0 0
+~
+~
+D SOUTH 13597 0 0
+~
+~
+D WEST 13600 0 0
+~
+~
+#13602
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D EAST 13603 0 0
+~
+~
+D WEST 13601 0 0
+~
+~
+#13603
+Edge of a large lake in the fields~
+You stand at the edge of a large lake amidst the dale farm fields. Water has
+been diverted from it to form shallow riverlets to water the crops. All about
+you the fields spread out.
+~
+field
+D EAST 13604 0 0
+~
+~
+D SOUTH 13598 0 0
+~
+~
+D WEST 13602 0 0
+~
+~
+#13604
+In the dale fields~
+You stand amidst well kept farm fields filled with various crops and fruits.
+Long rows of vegetables have been planted side by side between small trails
+to allow easy harvesting. The fields continue south and west. To the east the
+trails lead off into a small grove of trees amidst the surrounding forest.
+~
+field
+D EAST 13605 0 0
+~
+~
+D SOUTH 13599 0 0
+~
+In the dale fields.
+~
+D WEST 13603 0 0
+~
+~
+#13605
+On the edge of a grove~
+You are standing at the very edge of a small grove of trees amidst the forest
+surrounding the dale. To the west the local farm fields lay spread out, and
+to the east the grove continues into the forests.
+~
+forest
+D EAST 13632 0 0
+~
+~
+D WEST 13604 0 0
+~
+~
+#13606
+On a path in the northern dale~
+You are standing at the very northern end of the dale. All around you the
+forest looms forebodingly and cloaks everything in shadows. East of here you
+can make out a dense and dark forest.
+~
+inside
+ROOM DARK
+D EAST 22500 0 0
+~
+~
+D WEST 13529 0 0
+~
+~
+#13609
+A path through the forest~
+You stand on a narrow but well kept trail through the thick woods. The sounds
+of animals resound all about you and leaves rustle softly in the wind. Above
+you the high tree top canopy blocks out much of the sun, making the region
+seem darker than it really is. To the west you can hear the faint sounds of
+water splashing. The path leads into a T-junction to the east.
+~
+forest
+ROOM DARK
+D EAST 13507 0 0
+~
+~
+D WEST 13610 0 0
+~
+~
+#13610
+A muddy path through the forest~
+You are on a damp and muddy section of the forest path. The path heads south
+to a bend and towards what sounds like water, or east to drier parts.
+~
+forest
+ROOM DARK
+D EAST 13609 0 0
+~
+~
+D SOUTH 13611 0 0
+~
+~
+#13611
+On a muddy bank before the lake~
+You find yourself on the banks of a large lake. Water sloshes at your feet and
+the trees overhead hang heavily above it as if protecting the water. Around
+the lake you can make out the figures of people fishing and talking. A path
+heads north away from the river, or west to the edges of it.
+~
+field
+ROOM DARK
+D NORTH 13610 0 0
+~
+~
+D WEST 13650 0 0
+~
+~
+#13612
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads north and west.
+~
+field
+ROOM DARK
+D NORTH 13650 0 0
+~
+~
+D WEST 13613 0 0
+~
+~
+#13613
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads east and west.
+~
+field
+ROOM DARK
+D EAST 13612 0 0
+~
+~
+D WEST 13614 0 0
+~
+~
+#13614
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads north and east.
+~
+field
+ROOM DARK
+D NORTH 13615 0 0
+~
+~
+D EAST 13613 0 0
+~
+~
+#13615
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads north and south.
+~
+field
+ROOM DARK
+D NORTH 13616 0 0
+~
+~
+D SOUTH 13614 0 0
+~
+~
+#13616
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads east and south.
+~
+field
+ROOM DARK
+D NORTH 0 0 -1
+~
+~
+D EAST 13622 0 0
+~
+~
+D SOUTH 13615 0 0
+~
+~
+D WEST 0 0 -1
+~
+~
+#13617
+In a small outpost~
+You are standing in a small wooden outpost designed for housing local guards
+as they are sent to watch over people entering the dale from the south. The
+room gives a good view of the bridge east and has arror slots for easy firing
+at any invaders. There is very little else of interest here.
+~
+inside
+D NORTH 13511 0 0
+~
+~
+#13618
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading north out of the
+house.
+~
+inside
+D NORTH 13513 A 0
+door~
+~
+#13619
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading south out of the
+house.
+~
+inside
+D SOUTH 13513 A 0
+door~
+~
+#13620
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading south out of the
+house.
+~
+inside
+D SOUTH 13512 A 0
+door~
+~
+#13621
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading south out of the
+house.
+~
+inside
+D SOUTH 13511 A 0
+door~
+~
+#13622
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads east and west.
+~
+field
+ROOM DARK
+D EAST 13623 0 0
+~
+~
+D WEST 13616 0 0
+~
+~
+#13623
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. The lake heads south and west.
+~
+field
+ROOM DARK
+D SOUTH 13650 0 0
+~
+~
+D WEST 13622 0 0
+~
+~
+#13624
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading west out of the
+house.
+~
+inside
+D WEST 13527 AB 0
+door~
+~
+#13625
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading west out of the
+house.
+~
+inside
+D WEST 13528 AB 0
+door~
+~
+#13626
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading east out of the
+house.
+~
+inside
+D EAST 13527 AB 0
+door~
+~
+#13627
+A small house~
+You find yourself within a small but tidy house. The main room is large and
+comfortable with a homely feeling about it. Small partitions seperate the
+house into bedrooms and a couple of windows are set into the sides to provide
+a view of the beautiful forests. There is a door leading east out of the
+house.
+~
+inside
+D EAST 13528 AB 0
+door~
+~
+#13628
+Within the Dale inn~
+You are standing in a smoke filled, noisy inn. Patrons stagger about and yell
+to one another while other curse them and yell for them to go to the tavern
+next door.
+~
+inside
+D SOUTH 13533 0 0
+~
+~
+#13632
+In a small grove~
+You stand within a secluded grove of trees nestled between the farming fields
+to the west and the forest around the dale. Dark shadows converge all around
+and obscure your view of what lies beyond.
+~
+forest
+D EAST 13633 0 0
+~
+~
+D WEST 13605 0 0
+~
+~
+#13633
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still.
+~
+forest
+D SOUTH 13634 0 0
+~
+~
+D WEST 13632 0 0
+~
+~
+#13634
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. To the east the grove seems very dark
+and foreboding. Peering into it you can't make out anything, not even an end
+to the trees...
+~
+forest
+D NORTH 13633 0 0
+~
+~
+D EAST 13636 0 0
+~
+~
+#13635
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. All around you the grove seems to lead
+into nothing but identical clearings.
+~
+forest
+D NORTH 13636 0 0
+~
+~
+D EAST 13638 0 0
+~
+~
+D SOUTH 13636 0 0
+~
+~
+D WEST 13639 0 0
+~
+~
+#13636
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. All around you the grove seems to lead
+into nothing but identical clearings.
+~
+forest
+D NORTH 13635 0 0
+~
+~
+D EAST 13637 0 0
+~
+~
+D SOUTH 13635 0 0
+~
+~
+D WEST 13634 0 0
+~
+~
+#13637
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. All around you the grove seems to lead
+into nothing but identical clearings.
+~
+forest
+D NORTH 13638 0 0
+~
+~
+D EAST 13640 0 0
+~
+~
+D SOUTH 13638 0 0
+~
+~
+D WEST 13636 0 0
+~
+~
+#13638
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. All around you the grove seems to lead
+into nothing but identical clearings.
+~
+forest
+D NORTH 13637 0 0
+~
+~
+D EAST 13639 0 0
+~
+~
+D SOUTH 13637 0 0
+~
+~
+D WEST 13635 0 0
+~
+~
+#13639
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. All around you the grove seems to lead
+into nothing but identical clearings.
+~
+forest
+D NORTH 13640 0 0
+~
+~
+D EAST 13641 0 0
+~
+~
+D SOUTH 13640 0 0
+~
+~
+D WEST 13638 0 0
+~
+~
+#13640
+In a small grove~
+You are within a quiet and dark grove nestled within the dale. Overhead the
+trees cast deep and disturbing shadows upon you and obscure the pathway. All
+around you the air seems very still. All around you the grove seems to lead
+into nothing but identical clearings.
+~
+forest
+D NORTH 13639 0 0
+~
+~
+D EAST 13636 0 0
+~
+~
+D SOUTH 13639 0 0
+~
+~
+D WEST 13637 0 0
+~
+~
+#13641
+Before a strange marble tower~
+You are suddenly standing before a small tower made of marble. It is hard to
+determine it's purpose since there are no windows of any sort and the only
+distinguishing feature on it's smooth surface is an oak door leading east
+into it. To the west you can see a dark and brooding grove.
+~
+city
+ROOM INDOORS
+D EAST 13642 AB 0
+oak door~
+~
+D WEST 13639 0 0
+~
+~
+#13642
+Inside the marble tower~
+The inside of the tower is even smaller than it looks on the outside. From
+here it seems almost like a single room. You somehow get the feeling that it
+is not normally like this, but is more a reaction to your prescence and that
+you are unwanted here...there is an oak door leading west outside, and a
+staircase leading up into the tower.
+~
+inside
+D WEST 13641 A 0
+oak door~
+~
+D UP 13644 0 0
+~
+~
+#13643
+A small room in the marble tower~
+You are within a tiny bare room. It seems that the tower is almost shrinking
+as you go into it, as if trying to get rid of you. The only way out is a
+door in the east wall.
+~
+inside
+D EAST 13644 A 0
+door~
+~
+#13644
+Second floor of the marble tower~
+You are in a small marble room which seems almost too small to be liveable.
+Nothing is here at all, not even a window. You get a strange feeling you are
+not wanted here, as if the tower is shrinking on you in order to make you
+leave. Doors lie in the east and west walls, and a staircase heads up and
+down through the tower.
+~
+inside
+D EAST 13645 AB 0
+door~
+~
+D WEST 13643 AB 0
+door~
+~
+D UP 13646 0 0
+~
+~
+D DOWN 13642 0 0
+~
+~
+#13645
+A small room in the marble tower~
+You are within a tiny bare room. It seems that the tower is almost shrinking
+as you go into it, as if trying to get rid of you. The only way out is a
+door in the west wall.
+~
+inside
+D WEST 13644 A 0
+door~
+~
+#13646
+In a tiny room of the marble tower~
+You stand in a tiny room of marble, barely large enough to stand in. The tower
+almost seems to shrink as you go further into it, as if not wanting you here.
+A staircase heads down and up, but the way up shrinks so severely that it is
+quite impossible to go through it. There is a single door in the south wall
+that seems to tingle with magic.
+~
+inside
+D SOUTH 13648 AB 0
+door~
+~
+D DOWN 13644 0 0
+~
+~
+#13648
+Darokin's Observation room~
+This room is huge. Unlike the rest of the tower outside this room is built
+for accomodation and comfort. The walls seem opaque and shimmer with magic
+of incredible power. Very briefly images flicker across them, images of
+places far away. The only exit is north out the door.
+~
+inside
+D NORTH 13646 AB 0
+door~
+~
+#13650
+On the edge of the fishing lake~
+You are walking around the edge of a large lake filled with murky water.
+The muddy path is slippery and hazardous but it hasn't prevented many people
+from coming here to fish for their dinner. To the east the lake heads onto
+a narrow forest path.
+~
+field
+ROOM DARK
+D NORTH 13623 0 0
+~
+~
+D EAST 13611 0 0
+~
+~
+D SOUTH 13612 0 0
+~
+~
+#0
+
+
+
+#RESETS
+MOB 13519 TO 13502 GLIMIT 2 LLIMIT 1
+MOB 13518 TO 13504 GLIMIT 3 LLIMIT 1
+MOB 13519 TO 13506 GLIMIT 2 LLIMIT 1
+MOB 13518 TO 13508 GLIMIT 3 LLIMIT 1
+DOOR 13511 north CLOSED
+DOOR 13512 north CLOSED
+DOOR 13513 north CLOSED
+DOOR 13513 south CLOSED
+OBJECT 13500 TO 13517
+DOOR 13518 east CLOSED
+MOB 13502 TO 13518 GLIMIT 6 LLIMIT 1
+EQUIP 13511 WIELD
+EQUIP 13554 LFINGER
+DOOR 13519 east CLOSED
+DOOR 13519 west CLOSED
+OBJECT 13503 TO 13520
+MOB 13501 TO 13520 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13502 TO 13520 GLIMIT 6 LLIMIT 1
+EQUIP 13511 WIELD
+EQUIP 13554 LFINGER
+DOOR 13521 east CLOSED
+DOOR 13522 east CLOSED
+DOOR 13522 west CLOSED
+MOB 13501 TO 13522 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13502 TO 13523 GLIMIT 6 LLIMIT 1
+EQUIP 13511 WIELD
+EQUIP 13554 LFINGER
+DOOR 13527 east CLOSED
+DOOR 13527 west CLOSED
+DOOR 13528 east CLOSED
+DOOR 13528 west CLOSED
+OBJECT 13501 TO 13530
+OBJECT 13527 TO 13530
+MOB 13501 TO 13530 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13516 TO 13530 GLIMIT 1 LLIMIT 1
+MOB 13522 TO 13530 GLIMIT 1 LLIMIT 1
+DOOR 13531 north CLOSED
+DOOR 13531 south CLOSED
+MOB 13501 TO 13531 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13501 TO 13532 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13503 TO 13532 GLIMIT 6 LLIMIT 1
+MOB 13501 TO 13533 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13503 TO 13533 GLIMIT 6 LLIMIT 1
+MOB 13504 TO 13533 GLIMIT 6 LLIMIT 1
+MOB 13504 TO 13534 GLIMIT 6 LLIMIT 1
+OBJECT 13504 TO 13536
+MOB 13501 TO 13536 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13504 TO 13536 GLIMIT 6 LLIMIT 1
+MOB 13505 TO 13536 GLIMIT 1 LLIMIT 1
+MOB 13501 TO 13538 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13501 TO 13539 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+MOB 13502 TO 13539 GLIMIT 6 LLIMIT 1
+EQUIP 13511 WIELD
+EQUIP 13554 LFINGER
+MOB 13504 TO 13539 GLIMIT 6 LLIMIT 1
+MOB 13503 TO 13540 GLIMIT 6 LLIMIT 1
+DOOR 13541 north CLOSED
+MOB 13501 TO 13541 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+DOOR 13542 north CLOSED
+DOOR 13542 south CLOSED
+DOOR 13543 south CLOSED
+MOB 13501 TO 13543 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+DOOR 13544 south CLOSED
+MOB 13502 TO 13544 GLIMIT 6 LLIMIT 1
+EQUIP 13511 WIELD
+EQUIP 13554 LFINGER
+DOOR 13545 north CLOSED
+DOOR 13546 east CLOSED
+DOOR 13548 east CLOSED
+DOOR 13548 west CLOSED
+MOB 13526 TO 13548 GLIMIT 1 LLIMIT 1
+MOB 13514 TO 13549 GLIMIT 3 LLIMIT 1
+MOB 13515 TO 13549 GLIMIT 5 LLIMIT 2
+MOB 13515 TO 13549 GLIMIT 5 LLIMIT 2
+MOB 13531 TO 13549 GLIMIT 1 LLIMIT 1
+GIVE 13525
+GIVE 13522
+GIVE 13546
+MOB 13532 TO 13550 GLIMIT 1 LLIMIT 1
+GIVE 13541
+GIVE 13542
+GIVE 13543
+MOB 13511 TO 13551 GLIMIT 1 LLIMIT 1
+GIVE 13505
+GIVE 13506
+GIVE 13507
+GIVE 13508
+GIVE 13509
+MOB 13512 TO 13552 GLIMIT 1 LLIMIT 1
+GIVE 13511
+GIVE 13512
+GIVE 13513
+GIVE 13515
+MOB 13528 TO 13553 GLIMIT 1 LLIMIT 1
+MOB 13529 TO 13554 GLIMIT 1 LLIMIT 1
+GIVE 13547
+GIVE 13548
+GIVE 13549
+MOB 13503 TO 13555 GLIMIT 6 LLIMIT 1
+MOB 13513 TO 13555 GLIMIT 1 LLIMIT 1
+GIVE 13537
+GIVE 13538
+GIVE 13539
+GIVE 13540
+MOB 13503 TO 13556 GLIMIT 6 LLIMIT 1
+MOB 13530 TO 13556 GLIMIT 1 LLIMIT 1
+GIVE 13532
+GIVE 13533
+GIVE 13534
+DOOR 13558 south CLOSED
+DOOR 13559 north CLOSED
+DOOR 13560 south CLOSED
+DOOR 13561 south CLOSED
+MOB 13507 TO 13561 GLIMIT 4 LLIMIT 1
+DOOR 13562 north CLOSED
+MOB 13507 TO 13562 GLIMIT 4 LLIMIT 1
+MOB 13525 TO 13562 GLIMIT 4 LLIMIT 1
+DOOR 13563 north CLOSED
+MOB 13508 TO 13563 GLIMIT 3 LLIMIT 1
+MOB 13525 TO 13563 GLIMIT 4 LLIMIT 1
+MOB 13533 TO 13564 GLIMIT 1 LLIMIT 1
+EQUIP 13558 SHIELD
+EQUIP 13560 WIELD
+DOOR 13565 east CLOSED
+MOB 13523 TO 13565 GLIMIT 1 LLIMIT 1
+EQUIP 13529 WIELD
+EQUIP 13530 SHIELD
+EQUIP 13531 ARMS
+DOOR 13566 west CLOSED
+DOOR 13570 west CLOSED
+MOB 13527 TO 13570 GLIMIT 1 LLIMIT 1
+EQUIP 13555 ABOUT
+EQUIP 13556 WAIST
+DOOR 13571 north CLOSED
+MOB 13501 TO 13571 GLIMIT 14 LLIMIT 1
+EQUIP 13511 WIELD
+DOOR 13572 north CLOSED
+DOOR 13572 south CLOSED
+DOOR 13576 west CLOSED
+MOB 13506 TO 13576 GLIMIT 6 LLIMIT 1
+DOOR 13577 west CLOSED
+MOB 13524 TO 13577 GLIMIT 4 LLIMIT 1
+DOOR 13578 east CLOSED
+MOB 13506 TO 13578 GLIMIT 6 LLIMIT 1
+DOOR 13579 north CLOSED
+MOB 13507 TO 13579 GLIMIT 4 LLIMIT 1
+MOB 13524 TO 13579 GLIMIT 4 LLIMIT 1
+DOOR 13580 south CLOSED
+MOB 13508 TO 13580 GLIMIT 3 LLIMIT 1
+MOB 13525 TO 13580 GLIMIT 4 LLIMIT 1
+DOOR 13581 south CLOSED
+MOB 13506 TO 13581 GLIMIT 6 LLIMIT 1
+DOOR 13582 east CLOSED
+MOB 13506 TO 13582 GLIMIT 6 LLIMIT 1
+DOOR 13583 west CLOSED
+MOB 13524 TO 13583 GLIMIT 4 LLIMIT 1
+DOOR 13584 west CLOSED
+MOB 13521 TO 13584 GLIMIT 6 LLIMIT 1
+MOB 13521 TO 13586 GLIMIT 6 LLIMIT 1
+MOB 13520 TO 13587 GLIMIT 7 LLIMIT 1
+MOB 13521 TO 13587 GLIMIT 6 LLIMIT 1
+MOB 13520 TO 13590 GLIMIT 7 LLIMIT 1
+MOB 13520 TO 13591 GLIMIT 7 LLIMIT 1
+MOB 13520 TO 13593 GLIMIT 7 LLIMIT 1
+MOB 13520 TO 13595 GLIMIT 7 LLIMIT 1
+MOB 13520 TO 13596 GLIMIT 7 LLIMIT 1
+MOB 13521 TO 13598 GLIMIT 6 LLIMIT 1
+MOB 13521 TO 13602 GLIMIT 6 LLIMIT 1
+MOB 13520 TO 13604 GLIMIT 7 LLIMIT 1
+OBJECT 13502 TO 13606
+MOB 13534 TO 13606 GLIMIT 1 LLIMIT 1
+MOB 13518 TO 13609 GLIMIT 3 LLIMIT 1
+MOB 13517 TO 13612 GLIMIT 6 LLIMIT 1
+MOB 13517 TO 13613 GLIMIT 6 LLIMIT 1
+MOB 13517 TO 13615 GLIMIT 6 LLIMIT 1
+MOB 13517 TO 13616 GLIMIT 6 LLIMIT 1
+MOB 13517 TO 13616 GLIMIT 6 LLIMIT 1
+MOB 13502 TO 13617 GLIMIT 8 LLIMIT 1
+EQUIP 13511 WIELD
+EQUIP 13554 LFINGER
+MOB 13517 TO 13623 GLIMIT 6 LLIMIT 1
+DOOR 13624 west CLOSED
+DOOR 13624 west CLOSED
+MOB 13506 TO 13624 GLIMIT 6 LLIMIT 1
+DOOR 13625 west CLOSED
+MOB 13508 TO 13625 GLIMIT 3 LLIMIT 1
+MOB 13525 TO 13625 GLIMIT 4 LLIMIT 1
+DOOR 13626 east CLOSED
+MOB 13507 TO 13626 GLIMIT 4 LLIMIT 1
+MOB 13524 TO 13626 GLIMIT 4 LLIMIT 1
+DOOR 13627 east CLOSED
+MOB 13506 TO 13627 GLIMIT 6 LLIMIT 1
+MOB 13510 TO 13628 GLIMIT 1 LLIMIT 1
+GIVE 13521
+GIVE 13522
+GIVE 13523
+GIVE 13524
+MOB 13514 TO 13628 GLIMIT 3 LLIMIT 1
+MOB 13514 TO 13628 GLIMIT 3 LLIMIT 1
+MOB 13515 TO 13628 GLIMIT 5 LLIMIT 3
+DOOR 13641 east CLOSED
+DOOR 13644 east CLOSED
+DOOR 13644 west CLOSED
+DOOR 13646 south CLOSED
+DOOR 13648 north CLOSED
+MOB 13500 TO 13648 GLIMIT 1 LLIMIT 1
+EQUIP 13517 BODY
+EQUIP 13516 HEAD
+S
+
+#IMPROGS
+END
+#$

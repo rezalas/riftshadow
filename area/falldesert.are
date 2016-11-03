@@ -1,0 +1,3301 @@
+#AREA
+falldesert.are~
+Fallen Desert~
+Fyndin~
+10 30
+29100 29199
+normal
+desert
+0
+1
+Piental Fyndin~
+
+#MOBS
+#29100
+lizard banded~
+a banded lizard~
+A lizard creeps slowly through the rocks and sand.
+~
+The banded lizard is a brown creature about a foot and a half in length. 
+It is no bigger around than a boy's arm.  It has small circles around it's
+body that are whitish-grey in color.  
+~
+0 0 0 lizard~
+10 5d8+151 2d4+2 0 100 bite
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT STAY_AREA
+AFF INFRARED
+#29101
+vulture grey~
+a grey vulture~
+A grey vulture is flying above the ground.
+~
+These vultures are grey in color and are usually the size of a falcon or
+hawk.  They scavenge for food and carcasses of the dead who have perished
+from thirst or hunger in the heat of the desert.  
+~
+0 0 0 water fowl~
+10 5d8+151 2d4+2 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+#29102
+cobra black~
+a black cobra~
+A black cobra slithers along the sands.
+~
+The black cobra, one of the deadliest known desert creatures, is about
+ten feet in length.  Looking much like lizards of the rocks without legs,
+they have small stripes, almost invisible.  Their hoods seem to have small
+white eyes on them when they show them, and their look almost always means
+death.  
+~
+0 0 0 snake~
+15 7d8+339 2d6+3 0 100 none
+0 0 0 0
+standing male none
+0 0 small
+ACT NPC
+ACT STAY_AREA
+#29103
+scorpion large~
+a large scorpion~
+A large scorpion scuttles through the desert.
+~
+These scorpions, raised from a larger breed than most common scorpions,
+are about the size of a large dog.  They slash with their large pincers as
+well as stab with their long tails.  
+~
+0 0 0 insect~
+15 7d8+339 2d6+3 0 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+#29104
+nomad villager~
+a nomad villager~
+A nomad villager stands here, gathering supplies for the village.
+~
+Seeming commonplace in the village, these nomads are the workers and
+gathers for the community.  Having tanned skin from living in the desert and
+shining blue eyes that seem to peer over their scarves.  They wear thin
+white colored clothing that covers almost all their bodies except their eyes
+and foreheads.  
+~
+1000 0 0 human~
+24 12d8+870 2d10+6 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DIRT_KICK
+#29105
+nomad hunter~
+a nomad hunter~
+A nomad hunter stands here, skinning a fur.
+~
+A grizzly looking figure stands here, a skin and knife in his hands. 
+Unlike the other villagers, this man is clothed in colors that easily blend
+in with the desert surroundings.  A spear is strapped to his back as well as
+a dagger is in a sheathe in his belt.  
+~
+1000 0 0 human~
+27 13d8+1102 5d4+7 0 100 none
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DIRT_KICK
+#29106
+Elder~
+the village Elder~
+The villager Elder stands here, worrying about the village problems.
+~
+The Elder's face is worn, his forehead creased in worry.  He is not tall
+but carries himself with a grace most of the other villagers don't have.  He
+wears the same white cloth as the villagers, except his face is uncovered
+completely.  A amulet of his office is worn around his neck.  
+~
+1000 0 0 human~
+30 15d8+1364 4d6+8 0 100 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+#29107
+restless spirit~
+the restless spirit~
+The restless spirit is hovering barely above the ground.
+~
+A low, unearthly moan erupts through the air as a ghost like figure
+materializes in front of you.  The figure, at first glance, seems to
+resemble a wraith like figure, yet upon closer inspection, many heads are
+noticable.  The face seems to change constantly.  A sword is in the hands of
+this figure, a sword that seems to have a slightly blue tint to it, as well
+as a shining ring is on the middle right hand finger of the spirit.  
+ ~
+0 0 0 spirit~
+51 25d8+4274 5d8+32 0 100 none
+0 0 0 0
+standing male rich
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+C 'weaken'
+C 'poison'
+#0
+
+
+
+#OBJS
+#29100
+sword winter frost~
+a sword named 'Winter's Frost'~
+A sword shines with a bluish light as it lies here.~
+weapon
+steel~
+sword 5 9 frbite 0
+51 10 15000 P
+WEAR TAKE
+WEAR WIELD
+ITEM MAGIC
+APPLY DAMROLL 4
+APPLY HITROLL 5
+LIMIT 2
+TIMER 0
+
+#29101
+Calmusian Signet Ring~
+a Calmusian Signet Ring~
+A small signet ring shines brightly because of the light reflecting off the gold.~
+armor
+gold~
+3 3 3 3 0
+51 3 10000 P
+WEAR TAKE
+WEAR FINGER
+APPLY HP 25
+APPLY DAMROLL 3
+APPLY HITROLL 2
+LIMIT 6
+TIMER 0
+
+#29102
+ivory amulet opal~
+a ivory amulet inlaid with opal~
+The amulet of authority of the desert village lies here.~
+treasure
+wood~
+0 0 0 0 0
+30 1 3000 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+APPLY HITROLL 1
+APPLY HP 10
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#29103
+hunting spear~
+a hunting spear~
+A long hunting spear lies here, freshly sharpened.~
+weapon
+unknown~
+spear 3 12 stab 0
+25 10 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM BLESS
+APPLY DAMROLL 2
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#29104
+wooden ladder~
+a wooden ladder~
+A wooden ladder leads upward into the tent.~
+furniture
+wood~
+0 0 0 0 0
+1 500 0 P
+ITEM NOSHOW
+LIMIT 0
+VERB climb
+TIMER 0
+
+#29122
+oasis spring~
+a groundwater spring~
+A precious, groundwater spring graces the oasis.~
+fountain
+unknown~
+9000 10000 'water' 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#29100
+A Forest Road~
+A small road cuts through the trees heading off in an easterly direction
+and not seeming to deviate much from that course.  The road itself seems to
+have been made of dark grey stones placed carefully side by side.  The
+forest surrounding the road is alive with the noises of nature and wildlife.
+The stone road continues to the east and originates to the west.  
+~
+road
+D NORTH 0 0 0
+door~
+The forest blocks the way north.  
+~
+D EAST 29101 0 0
+door~
+The forest road continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The forest blocks the way south.  
+~
+D WEST 5267 0 0
+door~
+~
+D UP 0 0 0
+door~
+Sunlight barely peeks through the canopy.  
+~
+D DOWN 0 0 0
+door~
+The road is covered with leaves.  
+~
+OWNER none~
+#29101
+A Forest Road~
+The stone grey path continues eastward through the forest.  A bright
+light begins to appear further down the road.  The forest is even more alive
+with the sound of life.  The forest is thicker here than it was to the west.
+The path continues off towards the light to the east.  The exit is further
+back through the woods to the west.  
+~
+road
+D NORTH 0 0 0
+door~
+The forest blocks the way north.  
+~
+D EAST 29102 0 0
+door~
+The road continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The forest blocks the way south.  
+~
+D WEST 29100 0 0
+door~
+The road continues to the west.  
+~
+D UP 0 0 0
+door~
+Sunlight barely peeks through the canopy.  
+~
+D DOWN 0 0 0
+door~
+The road is covered with leaves.  
+~
+OWNER none~
+#29102
+A Forest Road~
+The forest around the road begins to thin while moving further east.  The
+light coming from the east seems even brighter like the sun itself shines at
+ground level from the trees.  Wild sounds are more scarce and rocks seem to
+be more frequent.  The road seems to decline in maintenance to the east
+while the way out begins to become concealed to the west.  
+~
+road
+D NORTH 0 0 0
+door~
+The forest blocks the way north.  
+~
+D EAST 29103 0 0
+door~
+The road turns into a trail towards the east.  
+~
+D SOUTH 0 0 0
+door~
+The forest blocks the way south.  
+~
+D WEST 29101 0 0
+door~
+The road continues to the west.  
+~
+D UP 0 0 0
+door~
+Sunlight barely peeks through the canopy.  
+~
+D DOWN 0 0 0
+door~
+The road is covered with leaves.  
+~
+OWNER none~
+#29103
+A Crumbling Road~
+The grey road that seems to have been so well maintained in the steps to
+the west is broken seemingly because of weathering of the wind and sand. 
+The sand looks to have origniated from the south where rock walls of a
+canyon can be seen.  A small trail leads south into the canyon whlie the
+road is still whole to the west.  
+~
+road
+D NORTH 0 0 0
+door~
+The forest gradually turns into a rock wall that rises into the air.
+~
+D EAST 0 0 0
+door~
+A rock wall blocks the way east.  
+~
+D SOUTH 29104 0 0
+door~
+The trail continues on through the canyon to the south.  
+~
+D WEST 29102 0 0
+door~
+The trail leads to a forested road.  
+~
+D UP 0 0 0
+door~
+The sky looms above, barely visible above the rock walls.  
+~
+D DOWN 0 0 0
+door~
+The trail is made of rocks of all sizes.  
+~
+OWNER none~
+#29104
+Beginning of a Canyon Trail~
+The ground around the trail starts to get rocky, and the walls of the
+canyon start their ascent upwards.  Small rocks clatter from the tops of the
+canyon walls.  Little noise is made, and few animals are seen.  The path
+leads north back to the road or south further into the desert.  
+~
+trail
+D NORTH 29103 0 0
+door~
+The trail continues towards the north.  
+~
+D EAST 0 0 0
+door~
+The rock face blocks passage to the east.  
+~
+D SOUTH 29105 0 0
+door~
+The trail continues towarsd the south.  
+~
+D WEST 29106 0 0
+door~
+A small cave is off to the west.  
+~
+D UP 0 0 0
+door~
+The sky looms above, barely visible above the rock walls.  
+~
+D DOWN 0 0 0
+door~
+The trail is made of rocks of all sizes.  
+~
+OWNER none~
+#29105
+A Canyon Trail~
+The trail follows along east of the crater as it moves further south. 
+Rocks clutter the ground and the canyon walls almost look more like hills
+than cliffs.  Small breaths of wind can be felt while walking through here. 
+The scents of the forest drift back from the north while more rock and dirt
+can be seen off to the west.  
+~
+trail
+D NORTH 29104 0 0
+door~
+The trail continues to the north.  
+~
+D EAST 0 0 0
+door~
+The canyon walls block passage to the east.  
+~
+D SOUTH 0 0 0
+door~
+The canyon walls block passage to the south.  
+~
+D WEST 29107 0 0
+door~
+The trail continues to the west.  
+~
+D UP 0 0 0
+door~
+The sky looms above, barely visible above the rock walls.  
+~
+D DOWN 0 0 0
+door~
+The trail is made of rocks of all sizes.  
+~
+OWNER none~
+#29106
+A Small Cave~
+The trail leads into a small cave that seems to have been created by
+rocks falling from the high canyon walls.  This cave seems to have sat for
+years in the same state.  There is no sand or extra rock and the floor of
+the cave is surprisingly smooth.  The path out of the cave is to the east.  
+~
+cave
+D NORTH 0 0 0
+door~
+The small cave ends to the north.  
+~
+D EAST 29104 0 0
+door~
+The cave mouth opens to the east.  
+~
+D SOUTH 0 0 0
+door~
+The small cave ends to the south.  
+~
+D WEST 0 0 0
+door~
+The small cave ends to the west.  
+~
+D UP 0 0 0
+door~
+Stalagtites hang down from the cave ceiling.  
+~
+D DOWN 0 0 0
+door~
+A somewhat flat rock floor makes the bottom of the cave.  
+~
+OWNER none~
+#29107
+A Canyon Trail~
+The trail winds around a big blockage of fallen rocks that could
+only have been caused by a large impact of sorts.  Sand follows the
+wind from the trail further south, stinging the eyes of travellers
+who pass through here.  The path back to the forest road is off to
+the east while the path to the desert is to the south.
+~
+trail
+D NORTH 0 0 0
+door~
+The canyon walls block passage to the north.  
+~
+D EAST 29105 0 0
+door~
+The trail continues to the east.  
+~
+D SOUTH 29108 0 0
+door~
+The trail continues to the south.  
+~
+D WEST 0 0 0
+door~
+The canyon walls block passage to the west.  
+~
+D UP 0 0 0
+door~
+The sky looms above, barely visible above the rock walls.  
+~
+D DOWN 0 0 0
+door~
+The trail is made of rocks of all sizes.  
+~
+OWNER none~
+#29108
+A Canyon Trail~
+Broken rock litters the ground as if a road once passed through here. 
+The canyon walls seem to get steeper the further south they are followed. 
+Sand drifts in from the south, lining the ground.  The trail leads further
+south towards the bright sands of the desert while the trail leads north
+back towards the crater.  
+~
+trail
+D NORTH 29107 0 0
+door~
+The trail continues to the north.  
+~
+D EAST 0 0 0
+door~
+The canyon walls block passage to the east.  
+~
+D SOUTH 29109 0 0
+door~
+The trail continues to the south.  
+~
+D WEST 0 0 0
+door~
+The canyon walls block passage to the west.  
+~
+D UP 0 0 0
+door~
+The sky looms above, barely visible above the rock walls.  
+~
+D DOWN 0 0 0
+door~
+The trail is made of rocks of all sizes.  
+~
+OWNER none~
+#29109
+A Broken Road~
+The trail that has lead south so far all of the sudden turns into a road
+that seems to have been broken with time.  Sand covers the places that are
+not made of stone.  The canyon walls almost block out the light.  The broken
+road leads further off the the south as well as the east, while the forest
+is back to the north.  
+~
+road
+D NORTH 29108 0 0
+door~
+The road turns into a small trail through the canyons to the north.  
+~
+D EAST 29111 0 0
+door~
+The road continues on to the east.  
+~
+D SOUTH 29110 0 0
+door~
+The road continues on to the south.  
+~
+D WEST 0 0 0
+door~
+The canyon walls block the passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The road seems to be broken from time and wear.  
+~
+OWNER none~
+#29110
+A Broken Road~
+The road continues south towards the scorching sands of the desert.  Sand
+covers the places of the road that are no longer stone.  Light barely shows
+through the tops of the canyon walls.  The broken road continues to the
+south towards the desert and to the west towards the western canyon wall. 
+The crater resides further off to the north.  
+~
+road
+D NORTH 29109 0 0
+door~
+The road continues to the north.  
+~
+D EAST 29112 0 0
+door~
+The road continues to the east.  
+~
+D SOUTH 29113 0 0
+door~
+The road continues to the south.  
+~
+D WEST 0 0 0
+door~
+The canyon walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The road seems to be broken from time and wear.  
+~
+OWNER none~
+#29111
+A Broken Road~
+The trail that has lead south so far all of the sudden turns into a road
+that seems to have been broken with time.  Sand covers the places that are
+not made of stone.  The canyon walls almost block out the light.  The broken
+road leads further off the the south as well as the west, while the forest
+is back to the northwest.  
+~
+road
+D NORTH 0 0 0
+door~
+The canyon walls block the passage to the north.  
+~
+D EAST 0 0 0
+door~
+The canyon walls block the passage to the east.  
+~
+D SOUTH 29112 0 0
+door~
+The road continues to the south.  
+~
+D WEST 29109 0 0
+door~
+The road continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The road seems to be broken from time and wear.  
+~
+OWNER none~
+#29112
+A Broken Road~
+The road continues south towards the scorching sands of the desert.  Sand
+covers the places of the road that are no longer stone.  Light barely shows
+through the tops of the canyon.  The broken road continues to the south
+towards the desert and to the east towards the eastern canyon wall.  The
+crater resides further off to the north.  
+~
+road
+D NORTH 29111 0 0
+door~
+The road continues to the north.  
+~
+D EAST 0 0 0
+door~
+The canyon walls block passage to the east.  
+~
+D SOUTH 29114 0 0
+door~
+The road continues to the south.  
+~
+D WEST 29110 0 0
+door~
+The road continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The road seems to be broken from time and wear.  
+~
+OWNER none~
+#29113
+A Broken Road~
+The road that has so far continued on south comes to a sudden halt
+against the canyon wall.  Sand doesn't seem to cover the area so badly here.
+This area of the road is mainly rock and is mostly whole.  The light cannot
+penetrate the darkness here.  The road continues back to the north and to
+the east.  
+~
+road
+D NORTH 29110 0 0
+door~
+The road continues to the north.  
+~
+D EAST 29114 0 0
+door~
+The road continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The canyon walls block passage to the south.  
+~
+D WEST 0 0 0
+door~
+The canyon walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The road seems to be broken from time and wear.  
+~
+OWNER none~
+#29114
+A Broken Road~
+The road seems to end here, moving back to a true canyon.  Sand covers
+the places where there is no rock as well as the places where there is. 
+Light streams onto the ground here from the path ahead.  To the south lies
+the canyon and blowing sands of the desert.  To the north and east are the
+ways back to the road.  
+~
+road
+D NORTH 29112 0 0
+door~
+The road continues to the north.  
+~
+D EAST 0 0 0
+door~
+The canyon walls block passage to the east.  
+~
+D SOUTH 29115 0 0
+door~
+The road turns into a small trail towards the south.  
+~
+D WEST 29113 0 0
+door~
+The road continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The road seems to be broken from time and wear.  
+~
+OWNER none~
+#29115
+A Canyon Trail~
+The trail that runs in between the two sheer canyon walls is covered with
+sand and small rocks.  Wind blows through the canyon bringing more sand with
+it.  The sun beats down on the sand, and the sand reflects the light back
+up, making the whole area very warm.  The last of the road can be seen to
+the north while the winds of the desert beckon to the east.  
+~
+trail
+D NORTH 29114 0 0
+door~
+The trail turns into a road towards the north.  
+~
+D EAST 29116 0 0
+door~
+The trail continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The canyon walls block passage to the south.  
+~
+D WEST 0 0 0
+door~
+The canyon walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The canyon floor is littered with rocks of all shapes and sizes.  
+~
+OWNER none~
+#29116
+A Canyon Trail~
+Small rocks clatter from the canyon walls, falling to the ground and
+making small impressions into the sand.  The wind coming from the east is
+almost blinding when combined with the bright sunlight.  The sand seems to
+have piled up into small dunes along the trail.  The beginning of the trail
+can be seen to the west while more sand is off to the east.  
+~
+trail
+D NORTH 0 0 0
+door~
+The canyon walls block passage to the north.  
+~
+D EAST 29117 0 0
+door~
+The trail continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The canyon walls block passage to the south.  
+~
+D WEST 29115 0 0
+door~
+The trail continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The canyon floor is littered with rocks of all shapes and sizes.  
+~
+OWNER none~
+#29117
+A Canyon Trail~
+The small dunes seem to rise a fraction in size, getting larger off to
+the west.  The wind sweeps past, picking up grains of sand and sometimes
+even small rocks, pushing them off to the east.  Shelter seems to be a
+problem and pushing forward seems to be the best idea.  The trail leads out
+of the canyon to the west and the larger sands can be seen to the east.  
+~
+trail
+D NORTH 0 0 0
+door~
+The canyon walls block passage to the north.  
+~
+D EAST 29118 0 0
+door~
+The trail continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The canyon walls block passage to the south.  
+~
+D WEST 29116 0 0
+door~
+The trail continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The canyon floor is littered with rocks of all shapes and sizes.  
+~
+OWNER none~
+#29118
+A Canyon Trail~
+The northern wall of the canyon suddenly stops and blocks off the way
+further east.  The sheer walls of the canyon seem to lead off to the south
+now.  The wind passing through is more rapid now and the sunlight seems
+stronger.  The way back to the trail can barely be seen off to the west
+while the bright sands of the desert beckon to the south.  
+~
+trail
+D NORTH 0 0 0
+door~
+The canyon walls block passage to the north.  
+~
+D EAST 0 0 0
+door~
+The canyon walls block passage to the east.  
+~
+D SOUTH 29120 0 0
+door~
+The trail continues to the south.  
+~
+D WEST 29117 0 0
+door~
+The trail continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The canyon floor is littered with rocks of all shapes and sizes.  
+~
+OWNER none~
+#29119
+A Canyon Trail~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#29120
+A Canyon Trail~
+The canyon walls widen as the trail moves south into the desert.  The
+trail is covered completely in sands, the dunes large and hard to climb
+over.  The wind and sunlight together is blistering here.  The canyon leads
+out to the north while the golden sands of the desert stretch off to the
+south.  
+~
+trail
+D NORTH 29118 0 0
+door~
+The trail continues to the north.  
+~
+D EAST 0 0 0
+door~
+Canyon walls block passage to the east.  
+~
+D SOUTH 29121 0 0
+door~
+The trail continues into the desert to the south.  
+~
+D WEST 0 0 0
+door~
+Canyon walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The canyon floor is littered with rocks of all shapes and sizes.  
+~
+OWNER none~
+#29121
+A Large Dune~
+The trail leading south suddenly becomes bright and warm.  The sun beats
+down upon the sands and seems to reflect every ray of heat back up into the
+faces of travellers.  Sand can be seen in every direction except to the
+north where the rock face seems almost impenetrable.  The way back to the
+canyon trail can be reached to the north while going any other direction
+leads further into the desert sands.  
+~
+desert
+D NORTH 29120 0 0
+door~
+A trail starts off to the north.  
+~
+D EAST 29133 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29132 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29123 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sand covers the ground.  
+~
+OWNER none~
+#29122
+A Rocky Crevice in the Fallen Desert~
+The only shelter from the desert sands seems to be a small crevice
+protected from the heat and winds by a sheer rock face.  The sands are so
+cool here that a small spring has been found and cultivated, as well as a
+shade of trees that form a small oasis.  The beauty of the oasis compared to
+the bleakness of the desert is a refreshing change.  The way out of the
+oasis, if any should choose to leave for the travel through the desert, is
+back to the south.  
+~
+forest
+D NORTH 0 0 0
+door~
+The trees of the oasis block passage further north.  
+~
+D EAST 0 0 0
+door~
+The trees of the oasis block passage further east.  
+~
+D SOUTH 29133 0 0
+door~
+The sand of the desert stretches on to the south.  
+~
+D WEST 0 0 0
+door~
+The trees of the oasis block passage further west.  
+~
+D DOWN 0 0 0
+door~
+The sand and the water meet at the base of the oasis.  
+~
+OWNER none~
+#29123
+The Fallen Desert~
+The rock face surrounds the desert to the north.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the south.
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 29121 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29131 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29124 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sand covers the ground.  
+~
+OWNER none~
+#29124
+The Fallen Desert~
+The rock face surrounds the desert to the north.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the south.
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 29123 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29130 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29125 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sand covers the ground.  
+~
+OWNER none~
+#29125
+The Fallen Desert~
+The rock face surrounds the desert to the north.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the south.
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 29124 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29129 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29126 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29126
+The Fallen Desert~
+The rock face surrounds the desert to the north and west.  The wind and
+sunlight bounces off the walls back into the desert, making the area nearest
+the walls some of the hottest area.  The only way to return to the desert
+and find chances of survival is back to the east and the south.  
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the the north.  
+~
+D EAST 29125 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29127 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 0 0 0
+door~
+Rock walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29127
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29126 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29129 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29143 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29128 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29128
+The Fallen Desert~
+The rock face surrounds the desert to the north and west.  The wind and
+sunlight bounces off the walls back into the desert, making the area nearest
+the walls some of the hottest area.  The only way to return to the desert
+and find chances of survival is back to the east and the south.  
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 29127 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29144 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 0 0 0
+door~
+Rock walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29129
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29125 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29130 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29142 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29127 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29130
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29124 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29131 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29141 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29129 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29131
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29123 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29132 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29140 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29130 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29132
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29121 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29138 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29139 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29131 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29133
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  Trees can be seen in the distance to
+the north while the sands stretch everywhere else.  
+~
+desert
+D NORTH 29122 0 0
+door~
+A group of trees can be seen faintly to the north.  
+~
+D EAST 29134 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29138 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29121 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sand covers the ground.  
+~
+OWNER none~
+#29134
+The Fallen Desert~
+The rock face surrounds the desert to the north and east.  The wind and
+sunlight bounces off the walls back into the desert, making the area nearest
+the walls some of the hottest area.  The only way to return to the desert
+and find chances of survival is back to the west and to the south.  
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 0 0 0
+door~
+Canyon walls block passage to the east.  
+~
+D SOUTH 29193 0 0
+door~
+The sand stretches on to the south.  
+~
+D WEST 29133 0 0
+door~
+The sand stretches on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sand covers the ground.  
+~
+OWNER none~
+#29135
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29193 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29136 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29150 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29195 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29136
+The Fallen Desert~
+The rock face surrounds the desert to the north.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, the west, and to the south.  
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.
+~
+D EAST 29151 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29152 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29135 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29137
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#29138
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29133 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29193 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29195 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29132 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29139
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29132 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29195 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29148 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29140 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29140
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29131 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29139 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29147 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29141 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29141
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29130 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29140 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29146 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29142 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29142
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29129 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29141 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29145 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29143 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29143
+The Fallen Desert~
+The rock face surrounds the desert to the south.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the north.
+~
+desert
+D NORTH 29127 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29142 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.
+~
+D WEST 29144 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#29144
+The Fallen Desert~
+The rock face surrounds the desert to the south and to the west.  The
+wind and sunlight bounces off the walls back into the desert, making the
+area nearest the walls some of the hottest area.  The only way to return to
+the desert and find chances of survival is back to the east and to the
+north.  
+~
+desert
+D NORTH 29128 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29143 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 0 0 0
+door~
+Rock walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29145
+The Fallen Desert~
+The rock face surrounds the desert to the west.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the south, and to the
+north.  
+~
+desert
+D NORTH 29142 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29146 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 29153 0 0
+door~
+A sandy trail can be seen to the south.  
+~
+D WEST 0 0 0
+door~
+Rock walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29146
+The Fallen Desert~
+The rock face surrounds the desert to the south.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the north.
+~
+desert
+D NORTH 29141 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29147 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29145 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29147
+The Fallen Desert~
+The rock face surrounds the desert to the south.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the north.
+~
+desert
+D NORTH 29140 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29148 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29146 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29148
+The Fallen Desert~
+The rock face surrounds the desert to the south.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the north.
+~
+desert
+D NORTH 29139 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29149 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29147 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29149
+The Fallen Desert~
+The rock face surrounds the desert to the south.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the north.
+~
+desert
+D NORTH 29195 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29150 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29148 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29150
+The Fallen Desert~
+The rock face surrounds the desert to the south.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the east, to the west, and to the north.
+~
+desert
+D NORTH 29135 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 29152 0 0
+door~
+The sands stretch on to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29149 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29151
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 0 0 0
+door~
+Rock walls block passage to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29136 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29152
+The Fallen Desert~
+The rock face surrounds the desert to the south and east.  The wind and
+sunlight bounces off the walls back into the desert, making the area nearest
+the walls some of the hottest area.  The only way to return to the desert
+and find chances of survival is back to the west and to the north.  
+~
+desert
+D NORTH 29136 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 0 0 0
+door~
+Rock walls block passage to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 29150 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29153
+A Sand Covered Path~
+Sand seems to cover a path that is made only by the rock walls
+surrounding it to the east and west as the trail itself runs it's way south.
+A strong wind runs between the rock walls stinging the unprotected eyes of
+anything that enters.  The sun can barely be seen because of the walls.  The
+trail seems to slope downward slowly to the east while the path to the north
+returns back to the desert.  
+~
+trail
+D NORTH 29145 0 0
+door~
+The sand shines brightly to the north.  
+~
+D EAST 29154 0 0
+door~
+The path continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block passage to the south.  
+~
+D WEST 0 0 0
+door~
+Rock walls block passage to the west.  
+~
+D DOWN 0 0 0
+door~
+Sand seems to be scattered along the path.  
+~
+OWNER none~
+#29154
+A Sand Covered Path~
+Sand seems to cover a path that is made only by the rock walls
+surrounding it to the east and west as the trail itself runs it's way south.
+A strong wind runs between the rock walls stinging the unprotected eyes of
+anything that enters.  The sun can barely be seen because of the walls.  The
+trail seems to slope downward slowly to the south while the path to the west
+returns back to the desert.  
+~
+trail
+D NORTH 0 0 0
+door~
+Rock walls block passage to the north.  
+~
+D EAST 0 0 0
+door~
+Rock walls block passage to the east.  The path continues to the east.  
+~
+D SOUTH 29155 0 0
+door~
+The path continues to the south.  
+~
+D WEST 29153 0 0
+door~
+~
+D DOWN 0 0 0
+door~
+The path seems to be less populated with sand and more with rocks here.  
+~
+OWNER none~
+#29155
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail to the sands leads back to the north while the
+trail around the crater wanders to both the east and west.  
+~
+trail
+D NORTH 29154 0 0
+door~
+A sandy path can be seen to the north.  
+~
+D EAST 29157 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+A large hole in the earth beckons from the south.  
+~
+D WEST 29156 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29156
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and south.  
+~
+trail
+D NORTH 0 0 0
+door~
+A rock face blocks passage to the north.  
+~
+D EAST 29155 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 29166 0 0
+door~
+The trail around the crater continues to the south.  
+~
+D WEST 0 0 0
+door~
+A rock face blocks passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29157
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and west.  
+~
+trail
+D NORTH 0 0 0
+door~
+A rock face blocks passage to the north.  
+~
+D EAST 29158 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+A large hole in the earth beckons from the south.  
+~
+D WEST 29155 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29158
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the south
+and west.  
+~
+trail
+D NORTH 0 0 0
+door~
+A rock face blocks passage to the north.  
+~
+D EAST 0 0 0
+door~
+A rock face blocks passage to the east.  
+~
+D SOUTH 29159 0 0
+door~
+The trail around the crater continues to the south.  
+~
+D WEST 29157 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29159
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and north.  
+~
+trail
+D NORTH 29158 0 0
+door~
+The trail around the crater continues to the north.  
+~
+D EAST 29160 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+A large hole in the earth beckons from the south.  
+~
+D WEST 0 0 0
+door~
+A large hole in the earth beckons from the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29160
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the south
+and west.  
+~
+trail
+D NORTH 0 0 0
+door~
+A rock face blocks passage to the north.  
+~
+D EAST 0 0 0
+door~
+A rock face blocks passage to the east.  
+~
+D SOUTH 29161 0 0
+door~
+The trail around the crater continues to the south.  
+~
+D WEST 29159 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29161
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the north
+and west.  
+~
+trail
+D NORTH 29160 0 0
+door~
+The trail around the crater continues to the north.  
+~
+D EAST 0 0 0
+door~
+A rock face blocks passage to the east.  
+~
+D SOUTH 0 0 0
+door~
+A rock face blocks passage to the south.  
+~
+D WEST 29162 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29162
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and west while another trail goes to the south.  
+~
+trail
+D NORTH 0 0 0
+door~
+A large hole in the earth beckons from the north.  
+~
+D EAST 29161 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 29168 0 0
+door~
+A trail leads south, more rocky that before.  
+~
+D WEST 29163 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29163
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and west while another trail goes to the south.  
+~
+trail
+D NORTH 0 0 0
+door~
+A large hole in the earth beckons from the north.  
+~
+D EAST 29162 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 29167 0 0
+door~
+A trail heads south through the sands.  
+~
+D WEST 29164 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29164
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and north.  
+~
+trail
+D NORTH 29165 0 0
+door~
+The trail around the crater continues to the north.  
+~
+D EAST 29163 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+A rock face blocks passage to the south.  
+~
+D WEST 0 0 0
+door~
+A rock face blocks passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29165
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the south
+and west.  
+~
+trail
+D NORTH 0 0 0
+door~
+A large hole in the earth beckons from the north.  
+~
+D EAST 0 0 0
+door~
+A large hole in the earth beckons from the east.  
+~
+D SOUTH 29164 0 0
+door~
+The trail around the crater continues to the south.  
+~
+D WEST 29166 0 0
+door~
+The trail around the crater continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29166
+Overlooking a Crater~
+After walking out of the brightness of the sands, the sight beyond the
+trail is unbelievable.  The trail seems to end in a large hole.  Peering
+over the edge into the hole, all that can be seen is darkness.  Upon further
+examination, the trail seems to wind itself around the hole.  The crater, as
+it looks to be, seems to made by a huge impact upon the earth.  Small hills
+of pure rock are seen around the crater as if the impact made the earth
+itself buckle.  The trail around the crater continues towards both the east
+and north.  
+~
+trail
+D NORTH 29156 0 0
+door~
+The trail around the crater continues to the north.  
+~
+D EAST 29165 0 0
+door~
+The trail around the crater continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+A rock face blocks passage to the south.  
+~
+D WEST 0 0 0
+door~
+A rock face blocks passage to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail seems to be made up of bits of stone and dirt.  
+~
+OWNER none~
+#29167
+A Stone Path through the Sands~
+A trail winds the way through the sands towards the south.  The path is
+made of stone, polished and hard and seemingly very well taken care of.  The
+canyon walls seem to rise and fall in height as the trail winds through
+them.  Further along the trail you can see lights that almost seem like
+torch flames.  The trail winds towards the south while the way back to the
+crater is towards the north.  
+~
+road
+D NORTH 29163 0 0
+door~
+The path leads back to the north towards the crater.  
+~
+D EAST 0 0 0
+door~
+The sand is desolate on the east side of the road.  
+~
+D SOUTH 29172 0 0
+door~
+The path continues south.  
+~
+D WEST 0 0 0
+door~
+The sand is desolate on the west side of the road.  
+~
+D DOWN 0 0 0
+door~
+The stone path seems well maintained.  
+~
+OWNER none~
+#29168
+A Rocky Trail~
+The rocks upon the trail seem to be sharpened and threaten to tear into
+the feet of any who walk upon them.  They seem to be able to be avoided
+until one hidden by the sand touches a boot or foot.  Sand still reflects
+the sunlight and heat back upon the unwary and unprotected travellers, yet
+it seems to have lessened the further south you travel.  The canyon walls
+still can be seen on both sides of the trail and seem to be getting larger
+as the trails gets longer.  The trail winds to the east while the way back
+to the crater is to the north.  
+~
+trail
+D NORTH 29162 0 0
+door~
+The trail around the crater can be seen to the north.  
+~
+D EAST 29169 0 0
+door~
+The rocky trail continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rocks block any chance of pressing on to the south.  
+~
+D WEST 0 0 0
+door~
+Rocks block any chance of pressing on to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail is covered with rocks.  
+~
+OWNER none~
+#29169
+A Rocky Trail~
+The rocks upon the trail seem to be sharpened and threaten to tear into
+the feet of any who walk upon them.  They seem to be able to be avoided
+until one hidden by the sand touches a boot or foot.  Sand still reflects
+the sunlight and heat back upon the unwary and unprotected travellers, yet
+it seems to have lessened the further south you travel.  The canyon walls
+still can be seen on both sides of the trail and seem to be getting larger
+as the trails gets longer.  The trail keeps winding south while the way back
+to the crater is to the west.  
+~
+trail
+D NORTH 0 0 0
+door~
+Rocks block any hope of pressing on to the north.  
+~
+D EAST 0 0 0
+door~
+Rocks block any hope of pressing on to the east.  
+~
+D SOUTH 29170 0 0
+door~
+The rocky trail continues south.  
+~
+D WEST 29168 0 0
+door~
+The rocky trail continues west.  
+~
+D DOWN 0 0 0
+door~
+The trail is covered with rocks.  
+~
+OWNER none~
+#29170
+Before a Rock Wall~
+The rock walls of the canyon rise up on both sides of the trail while a
+large rock face blocks the trail to the south.  The southern rock wall seems
+to be smooth and unclimable.  The trail winds back towards the north while
+the south seems to be a dead end.  
+~
+trail
+D NORTH 29169 0 0
+door~
+The rocky trail continues north.  
+~
+D EAST 0 0 0
+door~
+Rocks block any hope of pressing on to the east.  
+~
+D SOUTH 29171 0 0
+door~
+A rock wall with a small hole faces you, the hole seeming to lead south.  
+~
+D WEST 0 0 0
+door~
+Rocks block any hope of pressing on to the west.  
+~
+D DOWN 0 0 0
+door~
+The trail is covered with rocks.  
+~
+OWNER none~
+#29171
+A Dead End~
+The sun beats down into this roofless cave heating the sands to
+unbearable temperatures.  The hole that travellers enter through is now
+completely hidden.  The rock walls, seemingly polished to perfection like
+solid diamond, reflects the sunlight and the heat back into the depths of
+the cave.  There is no shelter from the burning light wind, the hot
+sunlight, or the heat of the sands underneath.  There is no exit from this
+cave, and it seems to be hopeless to return to the world.  
+~
+cave
+D NORTH 29170 I 0
+door~
+~
+D EAST 0 0 0
+door~
+Rock is all that can be seen to the east.  
+~
+D SOUTH 0 0 0
+door~
+Rock is all that can be seen to the south.  
+~
+D WEST 0 0 0
+door~
+Rock is all that can be seen to the west.  
+~
+D DOWN 0 0 0
+door~
+Rock is all that can be seen when looking down.  
+~
+OWNER none~
+#29172
+A Stone Path through the Sands~
+A trail winds the way through the sands towards the south.  The path is
+made of stone, polished and hard and seemingly very well taken care of.  The
+canyon walls seem to rise and fall in height as the trail winds through
+them.  Further along the trail you can see lights that almost seem like
+torch flames.  The trail winds towards the east while the way back to the
+crater is towards the north.  
+~
+road
+D NORTH 29167 0 0
+door~
+The path continues north.  
+~
+D EAST 29173 0 0
+door~
+The path continues east.  
+~
+D SOUTH 0 0 0
+door~
+The sand is desolate on the south side of the path.  
+~
+D WEST 0 0 0
+door~
+The sand is desolate on the west side of the path.  
+~
+D DOWN 0 0 0
+door~
+The stone path seems well maintained.  
+~
+OWNER none~
+#29173
+A Stone Path through the Sands~
+A trail winds the way through the sands towards the south.  The path is
+made of stone, polished and hard and seemingly very well taken care of.  The
+canyon walls seem to rise and fall in height as the trail winds through
+them.  Further along the trail you can see lights that almost seem like
+torch flames.  The trail winds towards the south while the way back to the
+crater is towards the west.  
+~
+road
+D NORTH 0 0 0
+door~
+The sand seems desolate north of the path.  
+~
+D EAST 0 0 0
+door~
+The sand seems desolate east of the path.  
+~
+D SOUTH 29174 0 0
+door~
+The path continues south.  
+~
+D WEST 29172 0 0
+door~
+The path continues west.  
+~
+D DOWN 0 0 0
+door~
+The stone path seems well maintained.  
+~
+OWNER none~
+#29174
+A Stone Path through the Sands~
+A trail winds the way through the sands towards the south.  The path is
+made of stone, polished and hard and seemingly very well taken care of.  The
+canyon walls seem to rise and fall in height as the trail winds through
+them.  Further along the trail you can see lights that almost seem like
+torch flames.  The trail winds towards the south while the way back to the
+crater is towards the north.  
+~
+road
+D NORTH 29173 0 0
+door~
+The path continues north.  
+~
+D EAST 0 0 0
+door~
+The sand seems desolate to the east of the path.  
+~
+D SOUTH 29175 0 0
+door~
+The path continues south.  
+~
+D WEST 0 0 0
+door~
+The sand seems desolate to the west of the path.  
+~
+D DOWN 0 0 0
+door~
+The stone path seems well maintained.  
+~
+OWNER none~
+#29175
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the south while the
+way back to the stone path can be seen to the north.  A tent can be seen to
+the west while a ladder can be seen to the east.  
+~
+road
+D NORTH 29174 0 0
+door~
+The path continues north.  
+~
+D EAST 29176 0 0
+door~
+A small ladder can be seen against a wall to the east.  
+~
+D SOUTH 29179 0 0
+door~
+The path continues south.  
+~
+D WEST 29177 0 0
+door~
+A small tent can be seen to the west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29176
+Standing at a Ladder~
+The trail leading from the east comes to a place darkened by shadow.  A
+ladder stands here, upright and seemingly bolted to the walls to lead into a
+small tent like cave.  The ladder seems the only way up while the way to
+return to the village path is to the west.  
+~
+inside
+D NORTH 0 0 0
+door~
+Rock walls block the way north.  
+~
+D EAST 0 0 0
+door~
+A ladder sits to the east leading upwards.  
+~
+D SOUTH 0 0 0
+door~
+Rock walls block the way south.  
+~
+D WEST 29175 0 0
+door~
+The path is back to the west.  
+~
+D UP 29178 I 0
+door~
+A small tent can be seen just above the ladder.  
+~
+D DOWN 0 0 0
+door~
+The dirt is packed down into a floor.  
+~
+OWNER none~
+#29177
+A Village Tent~
+While outside the tents, the village seems nomadic and movable, the
+inside of the tents are homely and comfortable.  Small pieces of furniture
+and even beds are made from a strange wood.  Spears and daggers are resting
+on stands, polished and sharpened, waiting to be used.  The way back to the
+village path from the tent is to the east.  
+~
+inside
+D NORTH 0 0 0
+door~
+The tent covers the way north.  
+~
+D EAST 29175 0 0
+door~
+The path can be seen out of the door of the tent to the east.  
+~
+D SOUTH 0 0 0
+door~
+The tent covers the way south.  
+~
+D WEST 0 0 0
+door~
+The tent covers the way west.  
+~
+D UP 0 0 0
+door~
+The tent covers the view of the sky.  
+~
+D DOWN 0 0 0
+door~
+The floor of the tent seems to be packed dirt.  
+~
+OWNER none~
+#29178
+A Village Tent~
+While outside the tents, the village seems nomadic and movable, the
+inside of the tents are homely and comfortable.  Small pieces of furniture
+and even beds are made from a strange wood.  Spears and daggers are resting
+on stands, polished and sharpened, waiting to be used.  The ladder can be
+used to leave the tents back down to the village 
+~
+inside
+D NORTH 0 0 0
+door~
+The tent covers the way north.  
+~
+D EAST 0 0 0
+door~
+The tent covers the way east.  
+~
+D SOUTH 0 0 0
+door~
+The tent covers the way south.  
+~
+D WEST 0 0 0
+door~
+The tent covers the way west.  
+~
+D UP 0 0 0
+door~
+The tent covers the view of the sky.  
+~
+D DOWN 29176 0 0
+door~
+The ladder leads into the tent from the floor.  
+~
+OWNER none~
+#29179
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the south while the
+way back to the stone path can be seen to the north.  
+~
+road
+D NORTH 29175 0 0
+door~
+The path continues to the north.  
+~
+D EAST 0 0 0
+door~
+Sand covers the lands east of the path.  
+~
+D SOUTH 29180 0 0
+door~
+The path continues to the south.  
+~
+D WEST 0 0 0
+door~
+Sand covers the lands west of the path.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29180
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the east and west
+while the way back to the stone path can be seen to the north.  
+~
+road
+D NORTH 29179 0 0
+door~
+The path continues to the north.  
+~
+D EAST 29181 0 0
+door~
+The path continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The path stops at sand to the south.  
+~
+D WEST 29192 0 0
+door~
+The path continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29181
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the east and west.  
+~
+road
+D NORTH 0 0 0
+door~
+The desert continues off to the north.  
+~
+D EAST 29182 0 0
+door~
+The path continues east.  
+~
+D SOUTH 0 0 0
+door~
+The desert continues off to the south.  
+~
+D WEST 29180 0 0
+door~
+The path continues west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29182
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the west and south and
+a ladder leads up into another tent.  
+~
+road
+D NORTH 0 0 0
+door~
+The desert continues off to the north.  
+~
+D EAST 0 0 0
+door~
+The desert continues off to the east.  
+~
+D SOUTH 29184 0 0
+door~
+The path continues south.  
+~
+D WEST 29181 0 0
+door~
+The path continues west.  
+~
+D UP 29183 I 0
+door~
+A pole rises up into a tent.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29183
+A Village Tent~
+While outside the tents, the village seems nomadic and movable, the
+inside of the tents are homely and comfortable.  Small pieces of furniture
+and even beds are made from a strange wood.  Spears and daggers are resting
+on stands, polished and sharpened, waiting to be used.  The pole in the
+middle of the tent can be used to get back to the village path.  
+~
+inside
+D NORTH 0 0 0
+door~
+The tent covers the way north.  
+~
+D EAST 0 0 0
+door~
+The tent covers the way east.  
+~
+D SOUTH 0 0 0
+door~
+The tent covers the way south.  
+~
+D WEST 0 0 0
+door~
+The tent covers the way west.  
+~
+D UP 0 0 0
+door~
+The tent covers the view of the sky.  
+~
+D DOWN 29182 0 0
+door~
+A pole enters the tent through the floor.  
+~
+OWNER none~
+#29184
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the north and south.  
+~
+road
+D NORTH 29182 0 0
+door~
+The path continues north.  
+~
+D EAST 0 0 0
+door~
+The desert continues to the east.  
+~
+D SOUTH 29185 0 0
+door~
+The path continues south.  
+~
+D WEST 0 0 0
+door~
+The desert continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The path seems well worn.  
+~
+OWNER none~
+#29185
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the north and the
+west.  
+~
+road
+D NORTH 29184 0 0
+door~
+The path continues north.  
+~
+D EAST 0 0 0
+door~
+The desert continues to the east.  
+~
+D SOUTH 0 0 0
+door~
+The desert continues to the south.  
+~
+D WEST 29186 0 0
+door~
+The path continues west.  
+~
+D DOWN 0 0 0
+door~
+The path seems well worn.  
+~
+OWNER none~
+#29186
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the east and a huge
+tent can be seen to the south.  
+~
+road
+D NORTH 0 0 0
+door~
+The desert continues to the north.  
+~
+D EAST 29185 0 0
+door~
+The path continues east.  
+~
+D SOUTH 29187 A 0
+door~
+A large tent can be seen to the south.  
+~
+D WEST 0 0 0
+door~
+The desert continues off to the west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29187
+The Elder's Tent~
+If the tents of the village looked comfortable, the tent of the Elder of
+the Village is a palace.  The east part of the elder's tent is furnished
+with chairs, chests, a bed, a table, and even a small desk.  The inside of
+the tent is made of shimmering white silk and the floor is covered in a soft
+blanket of cloth.  A flap covers the entrance into the west side of the tent
+as well as the exit back to the village path to the north.  
+~
+inside
+D NORTH 29186 A 0
+flap~
+The tent flap covers the way back north to the path.  
+~
+D EAST 0 0 0
+door~
+The tent covers the way east.  
+~
+D SOUTH 0 0 0
+door~
+The tent covers the way south.  
+~
+D WEST 29188 A 0
+flap~
+A flap seperates the tent to the west.  
+~
+D UP 0 0 0
+door~
+The tent covers the view of the sky.  
+~
+D DOWN 0 0 0
+door~
+The floor is covered with animal furs.  
+~
+OWNER none~
+#29188
+The Elder's Tent~
+The western part of the elder's tent seems to be the meeting place for
+the village.  There are many stools and even some chairs spread out among
+the tent.  A table with three chairs behind it is at the back of the tent. 
+Flaps cover both the north and the east exits of the tent.  
+~
+inside
+D NORTH 29189 A 0
+flap~
+The tent flap covers the way back north to the path.  
+~
+D EAST 29187 A 0
+flap~
+A flap seperates the tent to the east.  
+~
+D SOUTH 0 0 0
+door~
+The tent covers the way south.  
+~
+D WEST 0 0 0
+door~
+The tent covers the way west.  
+~
+D UP 0 0 0
+door~
+The tent covers the view of the sky.  
+~
+D DOWN 0 0 0
+door~
+The floor is covered in animal furs.  
+~
+OWNER none~
+#29189
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the west and a huge
+tent can be seen to the south.  
+~
+road
+D NORTH 0 0 0
+door~
+The desert continues to the north.  
+~
+D EAST 0 0 0
+door~
+The desert continues to the east.  
+~
+D SOUTH 29188 A 0
+door~
+A large tent can be seen to the south.  
+~
+D WEST 29190 0 0
+door~
+The path continues west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29190
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the north and the
+east.  
+~
+road
+D NORTH 29191 0 0
+door~
+The path continues north.  
+~
+D EAST 29189 0 0
+door~
+The path continues east.  
+~
+D SOUTH 0 0 0
+door~
+The desert continues to the south.  
+~
+D WEST 0 0 0
+door~
+The desert continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29191
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the north and south.  
+~
+road
+D NORTH 29192 0 0
+door~
+The path continues north.  
+~
+D EAST 0 0 0
+door~
+The desert continues to the east.  
+~
+D SOUTH 29190 0 0
+door~
+The path continues south.  
+~
+D WEST 0 0 0
+door~
+The desert continues to the west.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29192
+A Path Through the Village~
+A trail leads through a small village.  The village is surrounded by rock
+walls.  The people here seem to be almost nomadic, living in tents and
+keeping what furs they can.  They seem to ready to move on a whim, almost to
+the point of having everything but the tents packed.  Furs of mountain lions
+and leggings and tunics covered with mountain goat wool can be seen all
+around, as well as upon the tents.  Small poles and ladders lead into tents
+around the village, protection from the winds found in small caves upon the
+rock face.  The path through the village pushes on to the east and the
+south.  
+~
+road
+D NORTH 0 0 0
+door~
+The desert continues to the north.  
+~
+D EAST 29180 0 0
+door~
+The path continues east.  
+~
+D SOUTH 29191 0 0
+door~
+The path continues south.  
+~
+D WEST 0 0 0
+door~
+The desert continues to the west.  
+~
+D UP 29194 I 0
+door~
+A pole rises into a tent.  
+~
+D DOWN 0 0 0
+door~
+The path seems to be well worn.  
+~
+OWNER none~
+#29193
+The Fallen Desert~
+The rock face surrounds the desert to the east.  The wind and sunlight
+bounces off the walls back into the desert, making the area nearest the
+walls some of the hottest area.  The only way to return to the desert and
+find chances of survival is back to the west, to the north, and to the south
+~
+desert
+D NORTH 29134 0 0
+door~
+The sands stretch on to the north.  
+~
+D EAST 0 0 0
+door~
+Rock walls block passage to the east.  
+~
+D SOUTH 29135 0 0
+door~
+The sands stretch on to the south.  
+~
+D WEST 29138 0 0
+door~
+The sands stretch on to the west.  
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.  
+~
+OWNER none~
+#29194
+A Village Tent~
+While outside the tents, the village seems nomadic and movable, the
+inside of the tents are homely and comfortable.  Small pieces of furniture
+and even beds are made from a strange wood.  Spears and daggers are resting
+on stands, polished and sharpened, waiting to be used.  The pole in the
+middle of the tent can be used to get back to the village path.  
+~
+inside
+D NORTH 0 0 0
+door~
+The tent covers the way north.  
+~
+D EAST 0 0 0
+door~
+The tent covers the way east.  
+~
+D SOUTH 0 0 0
+door~
+The tent covers the way south.  
+~
+D WEST 0 0 0
+door~
+The tent covers the way west.  
+~
+D UP 0 0 0
+door~
+The tent covers the view of the sky.  
+~
+D DOWN 29192 0 0
+door~
+A pole enters the tent through the floor.  
+~
+OWNER none~
+#29195
+The Fallen Desert~
+The sands stretch in every direction.  On the horizon can barely be seen
+stone walls.  The heat is almost unbearable and it's obvious no plant and
+most likely no animal could survive.  The nearest rock face seems to be to
+the south while sands stretch everywhere else.  
+~
+desert
+D NORTH 29138 0 0
+door~
+The sands stretch on to the north.
+~
+D EAST 29135 0 0
+door~
+The sands stretch on to the east.
+~
+D SOUTH 29149 0 0
+door~
+The sands stretch on to the south.
+~
+D WEST 29139 0 0
+door~
+The sands stretch on to the west.
+~
+D DOWN 0 0 0
+door~
+Golden sands cover the ground.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 29105 TO 29104 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+MOB 29103 TO 29110 GLIMIT 10 LLIMIT 1
+MOB 29105 TO 29111 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+MOB 29100 TO 29121 GLIMIT 5 LLIMIT 1
+OBJECT 29122 TO 29122
+MOB 29103 TO 29124 GLIMIT 10 LLIMIT 1
+MOB 29102 TO 29125 GLIMIT 10 LLIMIT 1
+MOB 29103 TO 29127 GLIMIT 10 LLIMIT 1
+MOB 29102 TO 29128 GLIMIT 10 LLIMIT 1
+MOB 29101 TO 29130 GLIMIT 5 LLIMIT 1
+MOB 29102 TO 29131 GLIMIT 10 LLIMIT 1
+MOB 29101 TO 29133 GLIMIT 5 LLIMIT 1
+MOB 29102 TO 29134 GLIMIT 10 LLIMIT 1
+MOB 29101 TO 29135 GLIMIT 5 LLIMIT 1
+MOB 29102 TO 29136 GLIMIT 10 LLIMIT 1
+MOB 29103 TO 29138 GLIMIT 10 LLIMIT 1
+MOB 29100 TO 29139 GLIMIT 5 LLIMIT 1
+MOB 29103 TO 29141 GLIMIT 10 LLIMIT 1
+MOB 29100 TO 29141 GLIMIT 5 LLIMIT 1
+MOB 29102 TO 29142 GLIMIT 10 LLIMIT 1
+MOB 29103 TO 29144 GLIMIT 10 LLIMIT 1
+MOB 29103 TO 29145 GLIMIT 10 LLIMIT 1
+MOB 29102 TO 29146 GLIMIT 10 LLIMIT 1
+MOB 29100 TO 29146 GLIMIT 1 LLIMIT 1
+MOB 29103 TO 29148 GLIMIT 10 LLIMIT 1
+MOB 29100 TO 29149 GLIMIT 5 LLIMIT 1
+MOB 29102 TO 29150 GLIMIT 10 LLIMIT 1
+MOB 29103 TO 29151 GLIMIT 10 LLIMIT 1
+MOB 29101 TO 29151 GLIMIT 1 LLIMIT 1
+MOB 29103 TO 29154 GLIMIT 10 LLIMIT 1
+MOB 29107 TO 29171 GLIMIT 1 LLIMIT 1
+EQUIP 29101 RFINGER
+EQUIP 29100 WIELD
+MOB 29105 TO 29175 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+MOB 29105 TO 29176 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+OBJECT 29104 TO 29176
+MOB 29104 TO 29177 GLIMIT 7 LLIMIT 1
+MOB 29104 TO 29178 GLIMIT 7 LLIMIT 1
+MOB 29104 TO 29180 GLIMIT 7 LLIMIT 1
+MOB 29105 TO 29181 GLIMIT 1 LLIMIT 1
+EQUIP 29103 WIELD
+MOB 29105 TO 29182 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+OBJECT 29104 TO 29182
+MOB 29104 TO 29183 GLIMIT 7 LLIMIT 1
+MOB 29104 TO 29185 GLIMIT 7 LLIMIT 1
+MOB 29105 TO 29186 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+MOB 29106 TO 29187 GLIMIT 1 LLIMIT 1
+EQUIP 29102 NECKONE
+MOB 29105 TO 29190 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+MOB 29104 TO 29191 GLIMIT 7 LLIMIT 1
+MOB 29105 TO 29192 GLIMIT 8 LLIMIT 1
+EQUIP 29103 WIELD
+OBJECT 29104 TO 29192
+MOB 29100 TO 29193 GLIMIT 5 LLIMIT 1
+MOB 29104 TO 29194 GLIMIT 7 LLIMIT 1
+MOB 29102 TO 29195 GLIMIT 10 LLIMIT 1
+S
+
+#IMPROGS
+I 29104 verb_prog verb_prog_fallendesert_climb_ladder
+END
+#SPECS
+M 29107 mspec_fallendesert_spirits
+END
+#$

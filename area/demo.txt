@@ -1,0 +1,21 @@
+Riftshadow Demographics
+Racial Statistics:
+Human        27   2700%   Dwarf        7    700%   Duergar      9    900%   
+Elf          15   1500%   Drow         12   1200%   Celestial    17   1700%   
+Planar       9    900%   Abyss        11   1100%   Sidhe        4    400%   
+Halfling     17   1700%   Imp          15   1500%   Minotaur     11   1100%   
+Class Statistics:
+Warrior      65   6500%   Thief        9    900%   Zealot       6    600%   
+Paladin      15   1500%   Anti-paladin 14   1400%   Ranger       0      0%   
+Assassin     8    800%   Shapeshifter 0      0%   Healer       6    600%   
+Necromancer  7    700%   Sorcerer     24   2400%   
+Cabal Statistics:
+Guild        15   1500%   Scion        6    600%   Horde        10   1000%   
+Bounty       9    900%   Theatre      0      0%   Phalanx      0      0%   
+Sex Statistics:
+Male         129  12900%   Female       -128 -12800%
+Alignment Statistics:
+Good         56   5600%   Neutral      -112 -11200%   Evil         57   5700%
+
+Total        1
+

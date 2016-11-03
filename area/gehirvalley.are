@@ -1,0 +1,3546 @@
+#AREA
+gehirvalley.are~
+Valley of Gehir~
+Jathruk~
+10 51
+800 899
+normal
+temperate
+0
+1
+Jathruk~
+
+#MOBS
+#800
+elf elven ranger~
+an elven ranger~
+An elven ranger is here, moving quietly among the forest.
+~
+Wearing light leathers, this ranger moves easily about the forest here,
+though with a great deal of caution.  Constantly watching his surroundings,
+and examining every minute detail closely, you can tell that something is
+bothering this elf about the area.
+~
+1000 800 100 elf~
+40 20d8+2464 4d8+18 0 100 slash
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF PARRY
+OFF TRIP
+AFF DETECT_CAMO
+LIMIT 806 834
+#801
+elf elven ranger~
+an elven ranger~
+An elven ranger is here, moving quietly among the forest.
+~
+Wearing light leathers, this ranger moves easily about the forest here,
+though with a great deal of caution.  Constantly watching his surroundings,
+and examining every minute detail closely, you can tell that something is
+bothering this elf about the area.  
+~
+1000 0 0 elf~
+35 17d8+1867 4d8+18 0 100 slash
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+AFF DETECT_CAMO
+LIMIT 871 887
+#835
+elf elven scout slender~
+an elven scout~
+A slender elf looks out from this tower, watching the valley.
+~
+Looking out over the terrain, this elf has chosen to make use of the
+ancient tower here as a vantage point to survey the valley.  
+~
+1000 0 0 elf~
+30 15d8+1364 4d7+14 0 100 stab
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+VUL MITHRIL
+#836
+cunning malicious imp~
+a malicious imp~
+A cunning, malicious imp looks about warily.
+~
+This imp flies about, appearing quite pleased as it watches the concern
+of the elves in the valley, as they search the forest.  It appears to be
+attempting to avoid being seen as well, though failing miserably.  As it
+passes what healthy plant life that can be seen, it shreds small plants, and
+rips gouges in the trunks of older trees.  
+~
+-1000 0 0 imp~
+25 12d8+944 2d10+7 0 100 claw
+0 0 0 0
+standing either none
+0 0 small
+ACT NPC
+ACT WANDER
+ACT FASTWANDER
+OFF DODGE
+LIMIT 806 887
+#837
+small goblin~
+a goblin~
+A small goblin skulks about, trying to avoid being seen.
+~
+Trying to avoid being seen by both the elves who would kill on sight, and
+it's imp masters, this goblin skulks about the forest.  As it goes, it looks
+about for small animals to torture, though without much apparent success. 
+Most small creatures seem to have fled this forest already, but little
+encouragement is needed for this goblin to keep searching.  
+~
+-1000 0 0 goblin~
+20 10d8+604 2d6+6 0 100 slash
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT WANDER
+OFF DODGE
+OFF DIRT_KICK
+LIMIT 806 887
+#838
+kobold~
+a kobold~
+A kobold slinks about the valley, baring it's teeth as it sees you.
+~
+Almost as much an animal as sentient, this kobold bares it's teeth
+menacingly at you threateningly.  Taking great pleasure in dominance over
+other things, it shreds plants and kills anything it can gleefully, while
+trying to avoid becoming someone else's meal, itself.  
+~
+-1000 0 0 kobold~
+15 7d8+339 2d6+3 0 100 bite
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+ACT WANDER
+LIMIT 806 887
+#857
+massive tentacle tentacled creature octopus~
+the giant octopus~
+A massive, tentacled creature waits patiently, lashing out as it's prey nears.
+~
+Typically a creature of larger bodies of water, an octopus this size is
+an extreme oddity for such a small, fresh-water lake such as this one. 
+Sheltered beneath the waterfall flowing down from the mountains, it must
+survive by preying on creatures which are brought downstream here. 
+Apparently, it considers you such as well, as it's tentacles reach towards
+to for an attack.  
+~
+-1000 0 0 fish~
+45 22d8+3177 7d4+22 0 100 suction
+0 0 0 0
+standing male none
+d d large
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF FAST
+AFF HASTE
+LIMIT 857 857
+NOTES ~
+#858
+large vicious fish~
+a large, vicious fish~
+A large, vicious fish swims about, searching for prey.
+~
+A large fish, similar in form to a gigantic piranha prowls these waters,
+it's jaw's slowly opening and closing menacingly as it searches for prey. 
+You vaguely take note that this creature is much too large for these waters,
+that thought becomes secondary to making certain that it's many effective
+teeth aren't being used on you, as it seems to decide you make a suitable
+meal.  
+~
+-1000 0 0 fish~
+40 20d8+2464 4d8+18 0 100 bite
+0 0 0 0
+standing male none
+d 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+LIMIT 858 867
+#884
+small fish~
+a small fish~
+A small fish swims here, nibbling on small plants.
+~
+This small fish is one of the few creatures you've seen at all in this
+valley, as it swims about in the river, eating on the few small plants and
+roots which grow in the river.  Though generally wandering aimlessly, you
+notice it does tend to avoid the waters of the lake in the west.  
+~
+0 0 0 fish~
+15 7d8+339 2d6+3 0 100 bite
+0 0 0 0
+standing male none
+d 0 medium
+ACT NPC
+ACT WIMPY
+ACT NOALIGN
+LIMIT 848 855
+#885
+elf elven ranger guard~
+an elven ranger~
+An elven ranger is here, moving quietly among the forest.
+~
+Wearing light leathers, this ranger moves easily about the forest here,
+though with a great deal of caution.  Constantly watching his surroundings,
+and examining every minute detail closely, this elf pays a particularly
+close attention to the nearby area, and the dense areas to the north.
+~
+1000 0 0 elf~
+45 22d8+3177 8d4+22 0 100 none
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT WANDER
+OFF DODGE
+OFF PARRY
+OFF ASSIST_RACE
+LIMIT 884 885
+#889
+elf elven warrior~
+an elven warrior~
+An elven warrior sits here, talking quietly around the firepit.
+~
+This young warrior seems very calm and serious, talking quietly with the
+others near the fire.  He wears light chainmail for armor, and keeps a
+well-maintained weapon close at hand, ready to fight at a moment's notice.  
+~
+1000 0 0 elf~
+45 22d8+3177 8d4+22 0 100 punch
+0 0 0 0
+sitting either none
+0 0 medium
+ACT NPC
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+#890
+elf elven messenger~
+an elven messenger~
+An elven messenger runs past, obviously in a hurry.
+~
+This young messenger runs hurridly past, obviously in a rush to deliver
+a message.
+~
+1000 0 0 elf~
+30 15d8+1364 4d7+14 0 100 none
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF FAST
+#891
+elf mage female woman elven~
+the elvish mage~
+An elven woman is here, her attention occupied on a task at hand.
+~
+A relatively young elf, likely only a century or two old, she goes over
+papers and books at fast pace.  Her slim form is covered by a light dress,
+swirling around her as she moves around this small cave.  She looks somewhat
+uncomfortable in her surroundings, but a fierce look of determination can be
+seen in her eyes, as she moves from one project to the next.  
+~
+1000 0 0 elf~
+51 25d8+4274 4d8+32 0 100 stab
+0 0 0 0
+standing female affluent
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT INTELLIGENT
+OFF PARRY
+OFF ASSIST_RACE
+CLASS sorcerer Water Frost
+C 'drown'
+C 'molten stones'
+#892
+elf elven priest~
+an elven priest~
+An elven priest sits here, reading over some texts.
+~
+A relatively young elf, likely only a few centuries old, he appears very
+quiet and reserved, for one of his youth.  Dressed in light, functional
+robes, this young priest spends much of his time reading over books of
+healing and medicine.
+~
+1000 0 0 elf~
+51 25d8+4274 4d8+32 0 100 pound
+0 0 0 0
+sitting male moderate
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT CLERIC
+OFF PARRY
+OFF ASSIST_RACE
+C 'heal'
+#893
+armored elf elven captain~
+the elven captain~
+A lightly armored elf speaks here with the scout commander.
+~
+A somewhat older elf than most of the others here, this fighter has
+probably seen a substantial amount of fighting in his younger days, and has
+risen to a position of leadership, now co-ordinating the efforts of the
+other warriors and rangers here.  
+~
+1000 0 0 elf~
+50 25d8+4066 5d8+30 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+AFF DETECT_CAMO
+#894
+small elf scout commander~
+the scout commander~
+A small elf is here, speaking intently with the captain.
+~
+Though lighter and smaller than most of the warriors in the camp, this
+elf looks like a very experienced and competant fighter, by the way he moves
+and carries himself.  Wearing the same light leather as the other scouts,
+you notice the weapon he carries to be of the finest quality, however.  
+~
+1000 0 0 elf~
+50 25d8+4066 5d8+30 0 100 punch
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+CLASS warrior Skirmisher none 
+#896
+elf elven scout small slender~
+an elven scout~
+A small, slender elf watches the valley floor, nearly completely concealed by the canopy.
+~
+Nearly motionless and silent, this slender elf goes nearly entirely
+unnoticed here among the canopy, keeping watch for threats and movement
+among the forest floor.  Noticing your glance, he quietly manuevers further
+out of view, trying to restore his concealment.  
+~
+1000 0 0 elf~
+30 15d8+1364 4d7+14 0 100 stab
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+#899
+Grendir weathered rugged human man ranger~
+Grendir~
+A weathered, rugged looking man is here, quietly working in his camp.
+~
+A middle-aged man, appearing to be in his mid-thirties, Grendir appears
+to still be quite athletic and capable.  His skin is heavily tanned from
+years of living away from civilization, and his actions swift and confident.
+The armor he wears appears to be exceedingly old, though of very high
+quality, as is the scabbard at his waist, though the blade appears to be a
+different style.  
+~
+0 0 0 human~
+55 55d8+6106 10d8+30 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT INTELLIGENT
+OFF BASH
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF HASTE
+NOTES ~
+#0
+
+
+
+#OBJS
+#800
+statue~
+a statue~
+A statue of an adventurer stands here, waiting to be looked at.~
+trash
+granite~
+0 0 0 0 0
+1 1 1000 P
+LIMIT 0
+TIMER 0
+E statue~
+~
+
+#801
+quality light leather vest~
+a light, leather vest~
+A quality leather vest lies here.~
+armor
+leather~
+5 5 5 5 0
+40 20 1000 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#802
+sturdy leather armguards arm guards~
+a pair of sturdy leather armguards~
+A pair of leather armguards lie here.~
+armor
+leather~
+4 4 5 5 0
+40 10 1200 P
+WEAR TAKE
+WEAR ARMS
+LIMIT 0
+TIMER 0
+
+#803
+light leather leggings~
+a pair of light, leather leggings~
+A pair of light, leather leggings lie here.~
+armor
+leather~
+4 4 5 5 0
+40 10 1200 P
+WEAR TAKE
+WEAR LEGS
+LIMIT 0
+TIMER 0
+
+#804
+small comfortable leather gloves~
+a pair of comfortable leather gloves~
+A small pile of leather sits here in a heap.~
+armor
+leather~
+5 5 7 5 0
+40 3 1500 P
+WEAR TAKE
+WEAR HANDS
+LIMIT 0
+TIMER 0
+
+#805
+pile soft comfortable leather boots~
+a pair of comfortable, leather boots~
+A pile of soft leather sits here.~
+armor
+leather~
+7 5 7 5 0
+40 8 1000 P
+WEAR TAKE
+WEAR FEET
+LIMIT 0
+TIMER 0
+
+#806
+small loop sturdy leather belt~
+a sturdy leather belt~
+A small loop of leather sits here, waiting to be used.~
+armor
+leather~
+6 6 6 5 0
+40 6 1000 P
+WEAR TAKE
+WEAR WAIST
+LIMIT 0
+TIMER 0
+
+#807
+pile leather strudy lightweight cloak~
+a sturdy, lightweight cloak~
+A pile of leather lies crumpled on the ground.~
+armor
+leather~
+8 0 8 3 0
+40 6 1000 P
+WEAR TAKE
+WEAR NECK
+LIMIT 0
+TIMER 0
+
+#885
+elf elvish shortsword short sword~
+an elvish shortsword~
+Temporary long desc~
+weapon
+steel~
+sword 5 6 slash 0
+40 10 300 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#886
+light steel elven mace~
+a light steel mace~
+A light mace of elven make lies here.~
+weapon
+steel~
+mace 5 6 crush 0
+45 12 2500 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#887
+long wooden spear~
+a long, wooden spear~
+A long wooden spear lies here.~
+weapon
+wood~
+spear 6 5 pierce F
+45 20 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#888
+light wooden staff~
+a light, wooden staff~
+A light wooden staff lies here.~
+weapon
+unknown~
+staff 5 6 pound 0
+45 12 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#889
+pile suit bronze chain mail chainmail links~
+a suit of bronze chainmail~
+A pile of bronze links are here, waiting to be used.~
+armor
+bronze~
+6 4 5 3 0
+40 25 500 P
+WEAR TAKE
+WEAR BODY
+LIMIT 0
+TIMER 0
+
+#891
+small crystal bracelet~
+a small crystal bracelet~
+A small crystal bracelet lies here.~
+armor
+crystal~
+1 1 1 5 0
+51 2 10000 P
+WEAR TAKE
+WEAR WRIST
+APPLY HP 20
+APPLY MANA 20
+APPLY SAVES -5
+LIMIT 10
+TIMER 0
+
+#892
+large wooden walking staff~
+a wooden walking staff~
+A large wooden staff lies here.~
+weapon
+wood~
+staff 3 9 beating 0
+45 20 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM BLESS
+APPLY MANA 50
+APPLY AC 5
+LIMIT 0
+TIMER 0
+
+#893
+a heavy leather cape~
+a heavy leather cape~
+A large pile of leather sits here in a heap, waiting for a new owner.~
+armor
+leather~
+6 3 8 4 0
+45 17 5000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MOVE 50
+APPLY HP 25
+APPLY HITROLL 1
+APPLY DEX 2
+LIMIT 0
+TIMER 0
+
+#894
+light mithril shortsword short sword~
+a light, mithril shortsword~
+An exceptionally high-quality mithril shortsword lies here.~
+weapon
+mithril~
+sword 6 6 slash 0
+45 6 8000 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#898
+large steel broadsword broad sword~
+a large, steel broadsword~
+A large, steel broadsword lies here, waiting to be used.~
+weapon
+steel~
+sword 6 6 slash 0
+51 15 10000 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 8
+TIMER 0
+
+#899
+ancient burnished magnificent platemail~
+a suit of ancient, burnished platemail~
+A magnificent suit of burnished platemail lies here.~
+armor
+iron~
+9 9 9 9 0
+51 50 50000 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM BLESS
+APPLY SAVES -5
+APPLY HITROLL 3
+LIMIT 6
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#800
+Void~
+~
+mountains
+ROOM NO_MOB
+ROOM LAW
+ROOM NOWHERE
+ROOM NO_GATE
+#801
+Below a Forested Plateau~
+You are only a few dozen feet below the forested plateau above you, but
+there is a significantly less amount of wildlife and foliage than on the
+plateau above you.  The wind whips down this incline, biting at your face as
+you look about.  From here, you can head to the edge of the cliffs below, or
+attempt to climb back to the plateau above you.  
+~
+mountains
+D NORTH 803 0 0
+~
+The ground slopes downward to the north.
+~
+D EAST 0 0 0
+~
+Small cliffs lead up in this direction, easily climbable.
+~
+D SOUTH 0 0 0
+~
+Small cliffs lead up in this direction, easily climbable.
+~
+D WEST 0 0 0
+~
+The cliffs of Mount Cim are steep and unaccessable here.
+~
+D UP 252 0 0
+~
+~
+#802
+Below a Forested Plateau~
+You are only a few dozen feet below the forested plateau above you, but
+there is a significantly less amount of wildlife and foliage than on the
+plateau above you.  The wind whips down this incline, biting at your face as
+you look about.  From here, you can head to the edge of the cliffs below, or
+attempt to climb back to the plateau above you.  
+~
+mountains
+D NORTH 805 0 0
+~
+The ground slopes downward to the north.
+~
+D EAST 0 0 0
+~
+The cliffs of Mount Cim are steep and unaccessable here.
+~
+D SOUTH 0 0 0
+~
+Small cliffs lead up in this direction, easily climbable.  
+~
+D WEST 0 0 0
+~
+Small cliffs lead up in this direction, easily climbable.
+~
+D UP 263 0 0
+~
+~
+#803
+At the Edge of a Cliff~
+You stand at the edge of a cliff, the ground dropping off sharply here
+into the valley below.  From here, you can see across the forest within the
+valley, a small lake to the west by the mountains, and plains beyond the
+eastern cliffs of the valley.  Winds blow swiftly across the terrain here,
+making the edge of the cliffs dangerous, and the cliff-face itself is too
+smooth and steep here to descend, even for the most adventerous.  
+~
+mountains
+D NORTH 0 0 0
+~
+The cliffs drop off to the north, leaving only empty air.
+~
+D EAST 804 0 0
+~
+To the east, you can follow the slopes upward.
+~
+D SOUTH 801 0 0
+~
+To the south, you can follow the slopes upward.
+~
+D WEST 0 0 0
+~
+The cliffs drop off to the west, leaving only empty air.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar, bitter winds blowing across the cliffs
+here.
+~
+D DOWN 0 0 0
+~
+The cliffs here appear too steep and dangerous to descend.  
+~
+#804
+Below a Forested Plateau~
+You are only a few dozen feet below the forested plateau above you, but
+there is a significantly less amount of wildlife and foliage than on the
+plateau above you.  The wind whips down this incline, biting at your face as
+you look about.  From here, you can head to the edge of the cliffs below, or
+attempt to climb back to the plateau above you.  
+~
+mountains
+D NORTH 808 0 0
+~
+The ground slopes downward to the north.
+~
+D EAST 805 0 0
+~
+The ground slopes downward to the east.
+~
+D SOUTH 0 0 0
+~
+Small cliffs lead up in this direction, easily climbable.
+~
+D WEST 803 0 0
+~
+The ground slopes downward to the west.
+~
+D UP 265 0 0
+~
+~
+#805
+At the Edge of a Cliff~
+You stand at the edge of a cliff, the ground dropping off sharply here
+into the valley below.  From here, you can see across the forest within the
+valley, a small lake to the west by the mountains, and plains beyond the
+eastern cliffs of the valley.  Winds blow swiftly across the terrain here,
+making the edge of the cliffs dangerous, but it does appear possible for the
+adventerous to descend the cliff-face here.  
+~
+mountains
+D NORTH 0 0 0
+~
+The cliffs drop off to the north, leaving only empty air.
+~
+D EAST 0 0 0
+~
+The cliffs drop off to the east, leaving only empty air.
+~
+D SOUTH 802 0 0
+~
+To the south, you can follow the slopes upward.
+~
+D WEST 804 0 0
+~
+To the west, you can follow the slopes upward.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar, bitter winds blowing across the cliffs
+here.  
+~
+D DOWN 809 0 0
+~
+Though steep, it appears possible to climb down the cliffs here.  
+~
+#806
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 811 0 0
+~
+The forest continues on to the north, though you can hear water in the
+distance.  
+~
+D EAST 807 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D WEST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your south and west.
+~
+#807
+Beneath a Small Cliff~
+You find yourself beneath a small cliff along the lower slopes of Mount
+Cim, marking the border between valley and mountains.  Within the valley,
+great trees grow out of the moist, black soil.  There are very few younger
+plants though, oddly, and a disturbing quiet hangs over the forest.  The
+cliffs here are too steep and smooth to climb, leaving your only option to
+walk back into the valley.  
+~
+forest
+D NORTH 812 0 0
+~
+The forest continues on to the north, though you can hear water in the
+distance. 
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D WEST 806 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your south and east.
+~
+#808
+At the Edge of a Cliff~
+You stand at the edge of a cliff, the ground dropping off sharply here
+into the valley below.  From here, you can see across the forest within the
+valley, a small lake to the west by the mountains, and plains beyond the
+eastern cliffs of the valley.  Winds blow swiftly across the terrain here,
+making the edge of the cliffs dangerous, but it does appear possible for the
+adventerous to descend the cliff-face here.  
+~
+mountains
+D NORTH 0 0 0
+~
+The cliffs drop off to the north, leaving only empty air.
+~
+D EAST 0 0 0
+~
+The cliffs drop off to the east, leaving only empty air.
+~
+D SOUTH 804 0 0
+~
+~
+D WEST 0 0 0
+~
+The cliffs drop off to the west, leaving only empty air.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar, bitter winds blowing across the cliffs
+here.
+~
+D DOWN 813 0 0
+~
+Though steep, it appears possible to climb down the cliffs here. 
+~
+#809
+Beneath a Small Cliff~
+You find yourself beneath a small cliff along the lower slopes of Mount
+Cim, marking the border between valley and mountains.  Within the valley,
+great trees grow out of the moist, black soil.  There are very few younger
+plants though, oddly, and a disturbing quiet hangs over the forest.  It
+appears possible to climb up the cliff here, or you can head further into
+the valley.  
+~
+forest
+D NORTH 814 0 0
+~
+The forest continues on to the north.
+~
+D EAST 810 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs prevent passage here, though it does appear possible to
+climb them.  
+~
+D WEST 0 0 0
+~
+Steep cliffs prevent passage here, though it does appear possible to
+climb them.
+~
+D UP 805 0 0
+~
+You see the forest canopy above you, and cliffs to your south and west.  
+~
+#810
+Near an Ancient Tower~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, and you notice a small
+tower to the north, rising up among the forest.  
+~
+forest
+D NORTH 815 0 0
+~
+You see an ancient stone tower to your north, rising out of the forest.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D WEST 809 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your south and east.
+~
+#811
+Along the Southern Lakeshore~
+You stand along the edge of a small lake, with trees and bushes thick
+until merely a few feet away from the water's edge to your north, where the
+soil becomes too damp and wet for such plants as the ground level drops
+below the water.  In other directions, the forest spreads out among the
+valley floor, becoming exceedingly dense to the west, blocking passage.  
+~
+forest
+D NORTH 838 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 812 0 0
+~
+You can continue along the lakeshore.
+~
+D SOUTH 806 0 0
+~
+The forest continues on to the south.
+~
+D WEST 0 0 0
+~
+Thick foliage prevents passage in this direction.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#812
+Along the Southeastern Lakeshore~
+You stand along the edge of a small lake, with trees and bushes thick
+until merely a few feet away from the water's edge to your northwest, where
+the soil becomes too damp and wet for such plants as the ground level drops
+below the water.  In other directions, the forest spreads out among the
+valley floor.  
+~
+forest
+D NORTH 817 0 0
+~
+You can continue along the lakeshore.
+~
+D EAST 813 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 807 0 0
+~
+The forest continues on to the south.
+~
+D WEST 811 0 0
+~
+You can continue along the lakeshore.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#813
+Beneath a Small Cliff~
+You find yourself beneath a small cliff along the lower slopes of Mount
+Cim, marking the border between valley and mountains.  Within the valley,
+great trees grow out of the moist, black soil.  There are very few younger
+plants though, oddly, and a disturbing quiet hangs over the forest.  It
+appears possible to climb up the cliff here, or you can head further into
+the valley.  
+~
+forest
+D NORTH 818 0 0
+~
+The forest continues on to the north.
+~
+D EAST 814 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs prevent passage here, though it does appear possible to
+climb them.
+~
+D WEST 812 0 0
+~
+The forest continues on to the west, though you can hear water in the
+distance. 
+~
+D UP 808 0 0
+~
+You see the forest canopy above you, and cliffs to your south.
+~
+#814
+Near an Ancient Tower~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, and you notice a small
+tower to the east, rising up among the forest.  
+~
+forest
+D NORTH 819 0 0
+~
+The forest continues on to the north.
+~
+D EAST 815 0 0
+~
+You see an ancient stone tower to your east, rising out of the forest.
+~
+D SOUTH 809 0 0
+~
+The forest continues on to the south.
+~
+D WEST 813 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#815
+Among the Ruins of an Ancient Tower~
+You stand among some ancient ruins, a small tower rising up from the
+surrounding landscape.  The immediate area is covered with large stones,
+many of which likely came from above you, where the tower still stands,
+amazingly.  To your north and west, the ground descends into the forested
+valley, while Mount Cim dominates your view to the south, and plains appear
+to spread out to your northeast.  
+~
+forest
+D NORTH 820 0 0
+~
+Further from the ruins, the forest dominates the valley.
+~
+D EAST 816 0 0
+~
+Further from the ruins, the forest dominates the valley.
+~
+D SOUTH 810 0 0
+~
+Further from the ruins, the forest dominates the valley.
+~
+D WEST 814 0 0
+~
+Further from the ruins, the forest dominates the valley.
+~
+D UP 835 0 0
+~
+The ruins still reach above the forest canopy, and it does appear
+possible to climb to the top of the tower.
+~
+#816
+Near an Ancient Tower~
+You are at the eastern edge of the valley, though the ground rises too
+sharply to be able to exit the valley over the cliffs.  To your west, you
+can see a small tower, as the forest thins slightly in that direction.
+~
+forest
+D NORTH 821 0 0
+~
+The forest continues on to the north, following the cliffs.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D WEST 815 0 0
+~
+You see an ancient stone tower to your west, rising out of the forest.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your south and east.
+~
+#817
+Along the Eastern Lakeshore~
+You stand along the edge of a small lake, with trees and bushes thick
+until merely a few feet away from the water's edge to west, where the soil
+becomes too damp and wet for such plants as the ground level drops below the
+water.  In other directions, the forest spreads out among the valley floor. 
+~
+forest
+D NORTH 822 0 0
+~
+You can continue along the lakeshore.
+~
+D EAST 818 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 812 0 0
+~
+You can continue along the lakeshore.
+~
+D WEST 838 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#818
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 823 0 0
+~
+The forest continues on to the north.
+~
+D EAST 819 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 813 0 0
+~
+The forest continues on to the south.
+~
+D WEST 817 0 0
+~
+The forest continues on to the west, though you can hear water in the
+distance. 
+~
+D UP 896 I 0
+~
+You see the forest canopy part slightly, above you.
+~
+#819
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 824 0 0
+~
+The forest continues on to the north.
+~
+D EAST 820 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 814 0 0
+~
+The forest continues on to the south.
+~
+D WEST 818 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#820
+Near an Ancient Tower~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, and you notice a small
+tower to the south, rising up among the forest.  
+~
+forest
+D NORTH 825 0 0
+~
+The forest continues on to the north.
+~
+D EAST 821 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 815 0 0
+~
+You see an ancient stone tower to your south, rising out of the forest.
+~
+D WEST 819 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#821
+Eastern Edge of the Valley~
+You are at the eastern edge of the valley, though the ground rises too
+sharply to be able to exit the valley over the cliffs.  Tall trees fill the
+valley, right until the cliff edge, though you still see little else in the
+way of underbrush or animals.
+~
+forest
+D NORTH 826 0 0
+~
+The forest continues on to the north, following the cliffs.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 816 0 0
+~
+The forest continues on to the south, following the cliffs.
+~
+D WEST 820 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your east.
+~
+#822
+Along the Eastern Lakeshore~
+You stand along the edge of a small lake, with trees and bushes thick
+until merely a few feet away from the water's edge to west, where the soil
+becomes too damp and wet for such plants as the ground level drops below the
+water.  In other directions, the forest spreads out among the valley floor. 
+~
+forest
+D NORTH 827 0 0
+~
+You can continue along the lakeshore.
+~
+D EAST 823 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 817 0 0
+~
+You can continue along the lakeshore.
+~
+D WEST 841 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#823
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 828 0 0
+~
+The forest continues on to the north, though you can hear the sound of
+flowing water as well.
+~
+D EAST 824 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 818 0 0
+~
+The forest continues on to the south.
+~
+D WEST 822 0 0
+~
+The forest continues on to the west, though you can hear water in the
+distance. 
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#824
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 829 0 0
+~
+The forest continues on to the north.
+~
+D EAST 825 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 819 0 0
+~
+The forest continues on to the south.
+~
+D WEST 823 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#825
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 830 0 0
+~
+The forest continues on to the north.
+~
+D EAST 826 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 820 0 0
+~
+The forest continues on to the south.
+~
+D WEST 824 0 0
+~
+The forest continues on to the west.
+~
+D UP 897 I 0
+~
+You see the forest canopy part slightly, above you.
+~
+#826
+Eastern Edge of the Valley~
+You are at the eastern edge of the valley, though the ground rises too
+sharply to be able to exit the valley over the cliffs.  Tall trees fill the
+valley, right until the cliff edge, though you still see little else in the
+way of underbrush or animals.  
+~
+forest
+D NORTH 831 0 0
+~
+The forest continues on to the north, following the cliffs.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 821 0 0
+~
+The forest continues on to the south, following the cliffs.
+~
+D WEST 825 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your east.
+~
+#827
+Near the Start of a River~
+You stand along the edge of a small lake, with trees and bushes thick
+until merely a few feet away from the water's edge to west, where the soil
+becomes too damp and wet for such plants as the ground level drops below the
+water.  In other directions, the forest spreads out among the valley floor. 
+~
+forest
+D NORTH 848 0 0
+~
+A shallow river flows past slowly to your north.
+~
+D EAST 828 0 0
+~
+You can continue along the riverbank to the east.
+~
+D SOUTH 822 0 0
+~
+You can continue along the lakeshore.
+~
+D WEST 844 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#828
+On the Southern Riverbank~
+The ground here drops off abruptly as you come to the southern bank of a
+shallow river.  The trees and other plants in the area grow right up to the
+edge of the river, making it almost unnoticable until you are nearly right
+above it.
+~
+forest
+D NORTH 849 0 0
+~
+A shallow river flows past slowly to your north.
+~
+D EAST 829 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 823 0 0
+~
+The forest continues on to the south.
+~
+D WEST 827 0 0
+~
+You can continue along the riverbank to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#829
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 833 0 0
+~
+The forest continues on to the north, though you can hear the sound of
+flowing water as well.
+~
+D EAST 830 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 824 0 0
+~
+The forest continues on to the south.
+~
+D WEST 828 0 0
+~
+The forest continues on to the west, though you can hear the sound of
+flowing water as well.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#830
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 834 0 0
+~
+The forest continues on to the north, though you can hear the sound of
+flowing water as well.
+~
+D EAST 831 0 0
+~
+The forest continues on to the east, though you can hear the sound of
+flowing water as well.
+~
+D SOUTH 825 0 0
+~
+The forest continues on to the south.
+~
+D WEST 829 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#831
+On the Southern Riverbank~
+The ground here drops off abruptly as you come to the southern bank of a
+shallow river.  The trees and other plants in the area grow right up to the
+edge of the river, making it almost unnoticable until you are nearly right
+above it.  To your east, the cliffs which line the eastern edge of the
+valley are not so steep, possibly passable.  
+~
+forest
+D NORTH 855 0 0
+~
+A shallow river flows past slowly to your north.
+~
+D EAST 832 0 0
+~
+The land rises steeply to the east, but as a steep slope, rather than
+impassable cliffs.
+~
+D SOUTH 826 0 0
+~
+The forest continues on to the south, following the cliffs.
+~
+D WEST 830 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#832
+A Pass Between the Cliffs~
+The ground here is steeply sloped, but not as sharp and dramatic a change
+as the cliffs which border you to the north and south.  To the west, the
+ground descends into heavily forested valley, while leading off into the
+plains, to the east.  
+~
+forest
+D NORTH 0 0 0
+~
+Steep cliffs prevent passage here.
+~
+D EAST 856 0 0
+~
+The ground rises upwards, until reaching the plains.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs prevent passage here.
+~
+D WEST 831 0 0
+~
+The ground slopes downward into a forested valley.  
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#833
+On the Southern Riverbank~
+The ground here drops off abruptly as you come to the southeastern bank
+of a shallow river.  The trees and other plants in the area grow right up to
+the edge of the river, making it almost unnoticable until you are nearly
+right above it.  
+~
+forest
+D NORTH 852 0 0
+~
+A shallow river flows past slowly to your north.
+~
+D EAST 834 0 0
+~
+You can continue along the riverbank to the east.
+~
+D SOUTH 829 0 0
+~
+The forest continues on to the south.
+~
+D WEST 849 0 0
+~
+A shallow river flows past slowly to your west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#834
+On the Southern Riverbank~
+The ground here drops off abruptly as you come to the southwestern bank
+of a shallow river.  The trees and other plants in the area grow right up to
+the edge of the river, making it almost unnoticable until you are nearly
+right above it.  
+~
+forest
+D NORTH 853 0 0
+~
+A shallow river flows past slowly to your north.
+~
+D EAST 855 0 0
+~
+A shallow river flows past slowly to your east.
+~
+D SOUTH 830 0 0
+~
+The forest continues on to the south.
+~
+D WEST 833 0 0
+~
+You can continue along the riverbank to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#835
+High within a Ruined Tower~
+You are high within the remains of what appears to once have been a
+watchtower of some sort.  From it's height, this tower must be centuries old
+to have existed before this forest, at a time it could have served some
+purpose.  Your explorations up to the top of this tower draw your
+sensibilities into question, though, as most of the northwestern walls have
+crumbled down, and the others stand in little better shape.  
+~
+vertical
+D NORTH 0 0 0
+~
+You can see the valley spread out to the north, forests throughout the
+distance.  
+~
+D EAST 0 0 0
+~
+To your east, you can see over the rim of the valley, and the plains
+beyond.  
+~
+D SOUTH 0 0 0
+~
+You can see the great mass of Mount Cim in this direction.
+~
+D WEST 0 0 0
+~
+You can see a small lake to the west, at the border of the mountains.  
+~
+D UP 0 0 0
+~
+The tower roof still exists in places, but in others, you see the
+Shalaran skies above.  
+~
+D DOWN 815 0 0
+~
+You can descend to the bottom of the tower, on the valley floor.  
+~
+OWNER none~
+#836
+Beneath a Waterfall~
+You are at the southwest corner of the lake, fed by a small waterfall as
+a stream cascades down from the mountains near Mount Cim to the southeast,
+curving around west of the valley, then heading north towards the horizon. 
+The water is rather dark here, as the water stirs the soil, and the lake
+spreads out to your north and east.  
+~
+water
+ROOM LAW
+D NORTH 839 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 837 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D WEST 0 0 0
+~
+Steep cliffs rise up out to the west, forming great mountains in the
+distance.  
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 857 0 0
+~
+Beneath you, the waters of the lake are dark and murky.
+~
+#837
+On the Southern Edge of a Lake~
+You are on the southern edge of the lake, the water here still a little
+rough and murky, but settling beneath you as it flows away from the
+waterfall that can be heard to the west.  The lakeshore south of here is
+forested, but the vegetation on that bank is much thicker than elsewhere in
+the area, and appears difficult to pass.  You can see the waters of the lake
+spreading out to the north, and forests to your east, beyond the edge of the
+lake.  
+~
+water
+D NORTH 840 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 838 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 899 I 0
+~
+Thick brush grows on the southern bank here, though it appears something has
+disturbed the plants recently.
+~
+D WEST 836 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 858 0 0
+~
+Beneath you, the waters of the lake are dark and murky.
+~
+#838
+On the Southeastern Edge of a Lake~
+You are on the southeastern edge of the lake, the water beneath you
+sedate and clear.  To your south and east, forest dominates the valley,
+while the waters of the lake spread out around you in other directions as
+they flow slowly northward.  
+~
+water
+D NORTH 841 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 817 0 0
+~
+To your east, trees line the lakeshore.
+~
+D SOUTH 811 0 0
+~
+To your south, trees line the lakeshore.
+~
+D WEST 837 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 859 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#839
+On the Western Edge of a Lake~
+You are at the western edge of the lake, where the mountains block any
+further travel in that direction.  The water beneath you is somewhat rough,
+not quite settled smoothly after it's descent over the waterfall, and it is
+still rather dark and murky.  The waters of the lake surround you in all
+directions but west, and you can see the valley's forests beyond the eastern
+lakeshore.  
+~
+water
+D NORTH 842 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 840 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 836 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 0 0 0
+~
+Steep cliffs rise up out to the west, forming great mountains in the
+distance.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 860 0 0
+~
+Beneath you, the waters of the lake are dark and murky.
+~
+#840
+On the Waters of a Lake~
+You are at the middle of the lake, the water beneath you calm and clear,
+slowly flowing towards the northeast, until it turns into a river flowing
+further into the valley.  The waters of the lake surround you in all
+directions here.
+~
+water
+D NORTH 843 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 841 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 837 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 839 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 861 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#841
+On the Eastern Edge of a Lake~
+You are on the eastern edge of the lake, the water beneath you sedate and
+clear.  To your east, the forest dominates the valley, while the waters of
+the lake spread out around you in other directions as they flow slowly
+northward.  
+~
+water
+D NORTH 844 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 822 0 0
+~
+To your east, trees line the lakeshore.
+~
+D SOUTH 838 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 840 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 862 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#842
+On the Western Edge of a Lake~
+You are at the western edge of the lake, where the mountains block any
+further travel in that direction.  The water beneath you here is relatively
+sedate, slowly flowing towards the northeast, until it turns into a river,
+flowing further into the valley.  The waters of the lake surround you in all
+directions but west, and you can see the valley's forests beyond the eastern
+lakeshore.  
+~
+water
+D NORTH 845 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 843 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 839 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 0 0 0
+~
+Steep cliffs rise up out to the west, forming great mountains in the
+distance.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 863 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#843
+On the Waters of a Lake~
+You are at the middle of the lake, the water beneath you calm and clear,
+slowly flowing towards the northeast, until it turns into a river flowing
+further into the valley.  The waters of the lake surround you in all
+directions here.
+~
+water
+D NORTH 846 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 844 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 840 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 842 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 864 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#844
+On the Eastern Edge of a Lake~
+You are on the eastern edge of the lake, the water beneath you sedate and
+clear.  To your east, the forest dominates the valley, while the waters of
+the lake spread out around you in other directions as they flow slowly
+northward.  
+~
+water
+D NORTH 847 0 0
+~
+The waters of the lake spread out to the north of you.
+~
+D EAST 827 0 0
+~
+To your east, trees line the lakeshore.
+~
+D SOUTH 841 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 843 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 865 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#845
+On the Northwestern Edge of a Lake~
+The waters of the lake flow slowly eastward here, sedate and clear
+beneath you.  To your north, what appear to be the ancient ruins of a great
+castle still stand, though they are dwarfed by the immensity of the great
+mountains which make up the western border of this valley.  To your east,
+the valley leads north and south, with the lake draining into a river that
+flows through the forest that covers the valley floor.  Around you, the lake
+leads off towards the south.  
+~
+water
+D EAST 846 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 842 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 0 0 0
+~
+Steep cliffs rise up out to the west, forming great mountains in the
+distance.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 866 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#846
+On the Northern Edge of a Lake~
+The waters of the lake flow slowly eastward here, sedate and clear
+beneath you.  To your north, a great stone ruin rises up, blocking any
+attempt at travel or even sight, in that direction.  To your east, the
+valley leads north and south, with the lake draining into a river that flows
+through the forest that covers the valley floor.  Around you, the lake leads
+off towards the south.  
+~
+water
+D EAST 847 0 0
+~
+The waters of the lake spread out to the east of you.
+~
+D SOUTH 843 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 845 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 867 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#847
+On the Northeastern Edge of a Lake~
+You are on the northeastern edge of the lake, the water beneath you
+sedate and clear.  To your north, a great stone ruin rises up, blocking any
+attempt at travel in that direction, while the waters of the lake flow past
+you to the east, turning into a shallow river flowing across the valley.  
+~
+water
+D EAST 848 0 0
+~
+The lake drains out to the east, forming a shallow river.
+~
+D SOUTH 844 0 0
+~
+The waters of the lake spread out to the south of you.
+~
+D WEST 846 0 0
+~
+The waters of the lake spread out to the west of you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+D DOWN 0 0 0
+~
+Beneath you, the waters of the lake are relatively calm and clear.
+~
+#848
+On a Shallow River~
+You are on the waters of a shallow river, about six feet deep here as it
+flows out from the lake.  The water is clear near the surface, though
+somewhat clouded near the floor where the same black soil that covers the
+rest of the valley is stirred up by your passage.  
+~
+water
+D NORTH 850 0 0
+~
+The waters of the river have overrun the area to the north, flooding it.
+~
+D EAST 849 0 0
+~
+The river flows slowly eastward.
+~
+D SOUTH 827 0 0
+~
+To your south, trees cover the riverbank.
+~
+D WEST 847 0 0
+~
+West of you is a small lake, the origin of this river.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#849
+On a Shallow River~
+You are on the waters of a shallow river, hardly more than four feet at
+most as it flows slowly along the valley floor.  The water is clear near the
+surface, though somewhat clouded near the bottom as your passage kicks up
+the black soil of the valley that lines the bottom of the river.  
+~
+water
+D NORTH 851 0 0
+~
+The river flows slowly northward.
+~
+D EAST 833 0 0
+~
+To your east, trees cover the riverbank.
+~
+D SOUTH 828 0 0
+~
+To your south, trees cover the riverbank.
+~
+D WEST 848 0 0
+~
+The river flows slowly out of the west, heading downstream towards you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#850
+In a Flooded Area of the Ruins~
+Water covers an expanse of the ruins here, centuries of decay having
+defeated a section of the ancient walls.  In places, the water is still
+shallow enough that some of the stones of the walls reach up above the
+water's surface, vainly attempting to hold back the water that has slowly
+begun to claim the castle grounds.  
+~
+water
+D NORTH 0 0 0
+~
+The remains of what was once a magnificent castle dominate this area,
+though you are unable to gain entrance.
+~
+D EAST 851 0 0
+~
+Water flows out of the area, joining the river again as it flows past to
+the east.  
+~
+D SOUTH 848 0 0
+~
+Water flows in from the river to the south, flooding the area.
+~
+D WEST 0 0 0
+~
+The remains of what was once a magnificent castle dominate this area,
+though you are unable to gain entrance.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#851
+On a Shallow River~
+You are on the waters of a shallow river, hardly more than four feet at
+most as it flows slowly along the valley floor.  The water is clear near the
+surface, though somewhat clouded near the bottom as your passage kicks up
+the black soil of the valley that lines the bottom of the river.  
+~
+water
+D NORTH 871 0 0
+~
+To your north, trees cover the riverbank.
+~
+D EAST 852 0 0
+~
+The river flows slowly eastward.
+~
+D SOUTH 849 0 0
+~
+The river flows slowly out of the south, heading downstream towards you.
+~
+D WEST 850 0 0
+~
+Water flows in from the west, from a flooded area of land.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#852
+On a Shallow River~
+You are on the waters of a shallow river, hardly more than four feet at
+most as it flows slowly along the valley floor.  The water is clear near the
+surface, though somewhat clouded near the bottom as your passage kicks up
+the black soil of the valley that lines the bottom of the river.  
+~
+water
+D NORTH 872 0 0
+~
+To your north, trees cover the riverbank.
+~
+D EAST 853 0 0
+~
+The river flows slowly eastward.
+~
+D SOUTH 833 0 0
+~
+To your south, trees cover the riverbank.
+~
+D WEST 851 0 0
+~
+The river flows slowly out of the west, heading downstream towards you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#853
+On a Shallow River~
+You are on the waters of a shallow river, hardly more than four feet at
+most as it flows slowly along the valley floor.  The water is clear near the
+surface, though somewhat clouded near the bottom as your passage kicks up
+the black soil of the valley that lines the bottom of the river.  
+~
+water
+D NORTH 873 0 0
+~
+To your north, trees cover the riverbank.
+~
+D EAST 854 0 0
+~
+The river flows slowly eastward.
+~
+D SOUTH 834 0 0
+~
+To your south, trees cover the riverbank.
+~
+D WEST 852 0 0
+~
+The river flows slowly out of the west, heading downstream towards you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#854
+On a Shallow River~
+You are on the waters of a shallow river, hardly more than four feet at
+most as it turns southward here, flowing past the cliffs to the east.  The
+water is clear near the surface, though somewhat clouded near the bottom as
+your passage kicks up the black soil of the valley that lines the bottom of
+the river.  
+~
+water
+D NORTH 874 0 0
+~
+To your north, trees cover the riverbank.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 855 0 0
+~
+The river flows slowly southward.
+~
+D WEST 853 0 0
+~
+The river flows slowly out of the west, heading downstream towards you.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#855
+On a Shallow River~
+You are on the waters of a shallow river, hardly more than four feet at
+most as it turns eastward, flowing out of the valley here, where the river
+has worn a path in the cliffs.  The water is clear near the surface, though
+somewhat clouded near the bottom as your passage kicks up the black soil of
+the valley that lines the bottom of the river.
+~
+water
+D NORTH 854 0 0
+~
+The river flows slowly out of the north, heading downstream towards you.
+~
+D EAST 0 0 0
+~
+The river flows into a small cave in the cliff here, flowing underground
+from here.  
+~
+D SOUTH 831 0 0
+~
+To your south, trees cover the riverbank.
+~
+D WEST 834 0 0
+~
+To your west, trees cover the riverbank.
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#856
+A Path through the Plains~
+You are in the middle of some open plains which stretch great distances
+to the north and south between the mountains to the west, and the village of
+Dagdan to the east.  Tall grasses grow around you, bending in the wind, and
+every now and then, you can see the flash of movement, as some animal moves
+across the plains.  
+~
+field
+D NORTH 0 0 0
+~
+The plains continue off towards the north.
+~
+D EAST 21575 0 0
+~
+The path through the plains continues to the east, leading to Dagdan.
+~
+D SOUTH 0 0 0
+~
+The plains continue off towards the south.
+~
+D WEST 832 0 0
+~
+This path leads towards a small pass, leading down into a valley.  
+~
+D UP 0 0 0
+~
+Above you are the skies of Shalar.
+~
+#857
+At the Bottom of a Lake~
+You are in the deepest portion of the lake, the water exceedingly dark
+and murky, making it difficult to see beyond a few feet.  The lake floor
+beneath your feet consists of heavy, black dirt, though there are a great
+deal of small boulders, but no great expanses of stone that one might expect
+to form the floor of a mountainous lake.  
+~
+underwater
+ROOM DARK
+D NORTH 860 0 0
+~
+The lake bed slowly rises to your north.
+~
+D EAST 858 0 0
+~
+The lake bed slowly rises to your east.
+~
+D UP 836 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.  
+~
+#858
+At the Bottom of a Lake~
+The lake floor descends to your west, rising to the north and east, while
+to your south, the ground rises sharply at the lake's edge, becoming too
+shallow to stay underwater.  The water itself is rather murky, making it
+difficult to see, though there is not much to see, beyond the large rocks
+protruding from the black soil of the lake bed.  
+~
+underwater
+ROOM DARK
+D NORTH 861 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 859 0 0
+~
+The lake bed slowly rises to your east.
+~
+D WEST 857 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 837 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#859
+At the Bottom of a Lake~
+The lake floor descends towards the west, rising to the south and east,
+becoming too shallow to stay submerged beneath the surface.  A few aquatic
+plants and fish can be seen, but for the most part the lake is rather empty,
+with the black soil of the lake bed, and a large number of small boulders
+dominating your view.  
+~
+underwater
+ROOM DARK
+D NORTH 862 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 817 0 0
+~
+The lake bed slowly rises to your east, becoming too shallow to stay
+submerged.  
+~
+D SOUTH 811 0 0
+~
+The lake bed slowly rises to your south, becoming too shallow to stay
+submerged.  
+~
+D WEST 858 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 838 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#860
+At the Bottom of a Lake~
+The lake floor slowly descends from the northeast towards the south, with
+the western edge of the lake being abruptly determined by the great mass of
+stone rising up, forming the base of mountains to the west.  The water
+itself is relatively clear, though your passage begins to stir up some of
+the black soil, making it murky and difficult to see through.  
+~
+underwater
+ROOM DARK
+D NORTH 863 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 861 0 0
+~
+The lake bed slowly rises to your east.
+~
+D SOUTH 857 0 0
+~
+The lake bed slowly descends to the south.
+~
+D UP 839 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#861
+At the Bottom of a Lake~
+The lake floor continues to slope downwards from the northeast, towards
+the southwest, the water becoming much darker, and murkier towards the
+southwest.  Aside from the soil being stirred up among the water, there is
+little else in the water.  Merely the great boulders that seem to be
+everywhere among the valley, and the lake floor.  
+~
+underwater
+ROOM DARK
+D NORTH 864 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 862 0 0
+~
+The lake bed slowly rises to your east.
+~
+D SOUTH 858 0 0
+~
+The lake bed slowly descends to the south.
+~
+D WEST 860 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 840 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#862
+At the Bottom of a Lake~
+The lake floor descends to the southwest, continuing to rise to the east,
+becoming too shallow to stay submerged beneath the surface.  A few aquatic
+plants and fish can be seen, but for the most part the lake is rather empty,
+with the black soil of the lake bed, and a large number of small boulders
+dominating your view.  
+~
+underwater
+ROOM DARK
+D NORTH 865 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 822 0 0
+~
+The lake bed slowly rises to your east, becoming too shallow to stay
+submerged.  
+~
+D SOUTH 859 0 0
+~
+The lake bed slowly descends to the south.
+~
+D WEST 861 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 841 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#863
+At the Bottom of a Lake~
+The lake floor slowly descends from the northeast towards the south, with
+the western edge of the lake being abruptly determined by the great mass of
+stone rising up, forming the base of mountains to the west.  The water
+itself is relatively clear, though your passage begins to stir up some of
+the black soil, making it murky and difficult to see through.  
+~
+underwater
+ROOM DARK
+D NORTH 866 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 864 0 0
+~
+The lake bed slowly rises to your east.
+~
+D SOUTH 860 0 0
+~
+The lake bed slowly descends to the south.
+~
+D UP 842 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#864
+At the Bottom of a Lake~
+The lake floor continues to slope downwards from the northeast, towards
+the southwest, the water becoming much darker, and murkier towards the
+southwest.  Aside from the soil being stirred up among the water, there is
+little else in the water.  Merely the great boulders that seem to be
+everywhere among the valley, and the lake floor.  
+~
+underwater
+D NORTH 867 0 0
+~
+The lake bed slowly rises to your north. 
+~
+D EAST 865 0 0
+~
+The lake bed slowly rises to your east.
+~
+D SOUTH 861 0 0
+~
+The lake bed slowly descends to the south.
+~
+D WEST 863 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 843 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#865
+At the Bottom of a Lake~
+The lake floor continues to rise to the north and east, becoming too
+shallow to stay submerged beneath the surface.  A few aquatic plants and
+fish can be seen, but for the most part the lake is rather empty, with the
+black soil of the lake bed, and a large number of small boulders dominating
+your view.  
+~
+underwater
+D NORTH 0 0 0
+~
+The lake bed slowly rises to your north, becoming too shallow to stay
+submerged.  
+~
+D EAST 827 0 0
+~
+The lake bed slowly rises to your east, becoming too shallow to stay
+submerged.  
+~
+D SOUTH 862 0 0
+~
+The lake bed slowly descends to the south.
+~
+D WEST 864 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 844 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#866
+At the Bottom of a Lake~
+You find yourself at the northwest edge of the lake floor, great bulks of
+stone sharply defining the lake's borders here, instead of the rising ground
+which defines the other borders of the lake.  The lake floor itself is still
+composed of the heavy black soil of the forest, though it is relatively
+settled, and the water here much clearer.  
+~
+underwater
+D EAST 867 0 0
+~
+The lake bed slowly rises to your east.
+~
+D SOUTH 863 0 0
+~
+The lake bed slowly descends to the south.
+~
+D UP 845 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#867
+At the Bottom of a Lake~
+The lake floor ends abruptly to the north, blocked by a large mass of
+stone, many of which look as though they had once been worked with tools. 
+The lake bed rises to the east, becoming too shallow to keep beneath the
+water's surface, while to the southwest, the lake continues to become
+deeper.  
+~
+underwater
+D EAST 0 0 0
+~
+The lake bed slowly rises to your east, becoming too shallow to stay submerged.
+~
+D SOUTH 864 0 0
+~
+The lake bed slowly descends to the south.
+~
+D WEST 866 0 0
+~
+The lake bed slowly descends to the west.
+~
+D UP 846 0 0
+~
+Above you is the surface of the lake, and the Shalaran skies above.
+~
+#871
+Near an Ancient Castle~
+Ancient stones cover much of the ground here, moss and small plants
+claiming what is left as their own.  To your west, a great, ancient castle
+rises up, looking down over the valley, while to your south, you can see a
+shallow river flowing slowly past, and the forest which fills the valley.  
+~
+forest
+D NORTH 875 0 0
+~
+The forest continues on to the north, passing the outer walls of an
+ancient castle.
+~
+D EAST 872 0 0
+~
+The forest continues on to the east, along the riverbank.
+~
+D SOUTH 851 0 0
+~
+A shallow river flows past slowly to your south.
+~
+D WEST 0 0 0
+~
+The remains of what was once a magnificent castle dominate this area,
+though you are unable to gain entrance.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#872
+On the Northern Riverbank~
+The ground here drops off abruptly as you come to the northern bank of a
+shallow river.  The trees and other plants in the area grow right up to the
+edge of the river, making it almost unnoticable until you are nearly right
+above it.  Aside from the river flowing past to your south, the forest is
+the only other thing to be seen, spreading out in all directions.  
+~
+forest
+D NORTH 876 0 0
+~
+The forest continues on to the north.
+~
+D EAST 873 0 0
+~
+You can continue along the riverbank to the east.
+~
+D SOUTH 852 0 0
+~
+A shallow river flows past slowly to your south.
+~
+D WEST 871 0 0
+~
+You can continue along the riverbank to the west, coming across a massive
+stone structure.  
+~
+D UP 898 I 0
+~
+You see the forest canopy part slightly, above you.
+~
+#873
+On the Northern Riverbank~
+The ground here drops off abruptly as you come to the northern bank of a
+shallow river.  The trees and other plants in the area grow right up to the
+edge of the river, making it almost unnoticable until you are nearly right
+above it.  Aside from the river flowing past to your south, the forest is
+the only other thing to be seen, spreading out in all directions.  
+~
+forest
+D NORTH 877 0 0
+~
+The forest continues on to the north.
+~
+D EAST 874 0 0
+~
+You can continue along the riverbank to the east.
+~
+D SOUTH 853 0 0
+~
+A shallow river flows past slowly to your south.
+~
+D WEST 872 0 0
+~
+You can continue along the riverbank to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#874
+On the Northern Riverbank~
+The ground here drops off abruptly as you come to the northern bank of a
+shallow river.  The trees and other plants in the area grow right up to the
+edge of the river, making it almost unnoticable until you are nearly right
+above it.  As the river flows past to the south of you, the forest spreads
+out along the valley beyond it, and to your north and west, though stopping
+abruptly as the ground rises sharply to the east, preventing travel.  
+~
+forest
+D NORTH 878 0 0
+~
+The forest continues on to the north, following the cliffs.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 854 0 0
+~
+A shallow river flows past slowly to your south.
+~
+D WEST 873 0 0
+~
+You can continue along the riverbank to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your east.
+~
+#875
+Near an Ancient Castle~
+Ancient stones cover much of the ground here, moss and small plants
+claiming what is left as their own.  To your west, a great, ancient castle
+rises up, looking down over the valley.  Neglect and decay have reclaimed
+much of the castle, though most of the outer walls, and the great portcullis
+still stand against the outside world.  
+~
+forest
+D NORTH 879 0 0
+~
+The forest continues on to the north, passing the outer walls of an
+ancient castle.
+~
+D EAST 876 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 871 0 0
+~
+The forest continues on to the south, passing the outer walls of an
+ancient castle.
+~
+D WEST 0 ABC 0
+~
+The remains of what was once a magnificent castle dominate this area, the
+great portcullis closed against the world, preventing entrance.  
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#876
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 880 0 0
+~
+The forest continues on to the north.
+~
+D EAST 877 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 872 0 0
+~
+The forest continues on to the south, though you can hear the sound of
+flowing water as well.
+~
+D WEST 875 0 0
+~
+The forest continues on to the west, nearing the ruins of an ancient
+castle.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#877
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 881 0 0
+~
+The forest continues on to the north.
+~
+D EAST 878 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 873 0 0
+~
+The forest continues on to the south, though you can hear the sound of
+flowing water as well.
+~
+D WEST 876 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#878
+Eastern Edge of the Valley~
+You are at the eastern edge of the valley, though the ground rises too
+sharply to be able to exit the valley over the cliffs.  Tall trees fill the
+valley, right until the cliff edge, though you still see little else in the
+way of underbrush or animals.
+~
+forest
+D NORTH 882 0 0
+~
+The forest continues on to the north, following the cliffs.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 874 0 0
+~
+The forest continues on to the south, following the cliffs.
+~
+D WEST 877 0 0
+~
+The forest continues on the the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your east.
+~
+#879
+Near an Ancient Castle~
+Ancient stones cover much of the ground here, moss and small plants
+claiming what is left as their own.  To your west, a great, ancient castle
+rises up, looking down over the valley.  Neglect and decay have reclaimed
+much of the castle, though most of the outer walls still stand against the
+outside world, and it remains an impressive sight.  
+~
+forest
+D NORTH 884 0 0
+~
+The forest continues on to the north.
+~
+D EAST 880 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 875 0 0
+~
+The forest continues on to the south, passing the outer walls of an
+ancient castle.
+~
+D WEST 0 0 0
+~
+The remains of what was once a magnificent castle dominate this area,
+though you are unable to gain entrance.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#880
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 885 0 0
+~
+The forest continues on to the north.
+~
+D EAST 881 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 876 0 0
+~
+The forest continues on to the south.
+~
+D WEST 879 0 0
+~
+The forest continues on to the west, nearing the ruins of an ancient
+castle.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#881
+In a Forested Valley~
+You are in a broad valley to the east of the mountains.  What little
+light that manages to reach this valley between the cliffs is further dimmed
+by the thick canopy of trees above you, though the underbrush is small and
+sparse.  A disturbing quiet hangs over the forest, making the absense of
+wildlife even more noticable.  
+~
+forest
+D NORTH 886 0 0
+~
+The forest continues on to the north.
+~
+D EAST 882 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 877 0 0
+~
+The forest continues on to the south.
+~
+D WEST 880 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#882
+Eastern Edge of the Valley~
+You are at the eastern edge of the valley, though the ground rises too
+sharply to be able to exit the valley over the cliffs.  Tall trees fill the
+valley, right until the cliff edge, though you still see little else in the
+way of underbrush or animals.
+~
+forest
+D NORTH 887 0 0
+~
+The forest continues on to the north, following the cliffs.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 878 0 0
+~
+The forest continues on to the south, following the cliffs.
+~
+D WEST 881 0 0
+~
+The forest continues on the the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your east.
+~
+#883
+Near an Ancient Castle~
+You find yourself in a small section of forest between the ancient castle
+walls, and even older mountains to the north.  Large stones from the ruins,
+and nearby mountains are scattered about, some massive boulders the size of
+small titans.  This section of forest is relatively thick, however, and you
+even see a few birds flying among the canopy.  
+~
+forest
+D NORTH 888 I 0
+~
+Thick foliage impedes passage in this direction, though it appears
+passable, with effort.
+~
+D EAST 884 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 0 0 0
+~
+The remains of what was once a magnificent castle dominate this area,
+though you are unable to gain entrance.  
+~
+D WEST 0 0 0
+~
+The ruins of an ancient castle rise up here, and you are unable to gain
+entrance.  
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#884
+Northern Border of the Forest~
+The forest is somewhat sparser here, than the southern areas of the
+valley, though the terrain begins to rise towards the mountains to the
+north.  The forest continues to spread out in other directions, though you
+notice an large mass of stone to your southwest, barely visible through the
+trees.  
+~
+forest
+D NORTH 889 I 0
+~
+Thick foliage impedes passage in this direction, though it appears
+passable, with effort.
+~
+D EAST 885 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 879 0 0
+~
+The forest continues on to the south, passing the outer walls of an
+ancient castle.  
+~
+D WEST 883 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#885
+Northern Border of the Forest~
+The forest becomes noticably denser here, even moreso to the north, where
+the foliage becomes a thick wall, making passage difficult.  In other
+directions, the forest spreads out along the valley, though you notice
+something out of place to the southwest.  
+~
+forest
+D NORTH 890 I 0
+~
+Thick foliage impedes passage in this direction, though it appears
+passable, with effort.
+~
+D EAST 886 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 880 0 0
+~
+The forest continues on to the south.
+~
+D WEST 884 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#886
+Northern Border of the Forest~
+The forest becomes noticably denser here, even moreso to the north, where
+the foliage becomes a thick wall, making passage difficult.  In other
+directions, the forest spreads out along the valley, though you notice
+something out of place to the southwest.  
+~
+forest
+D NORTH 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.  
+~
+D EAST 887 0 0
+~
+The forest continues on to the east.
+~
+D SOUTH 881 0 0
+~
+The forest continues on to the south.
+~
+D WEST 885 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#887
+Northern Border of the Forest~
+The forest is noticibly denser here than to the south, though the forest
+does begin to thin some as it nears the cliffs, which form the borders of
+the valley.  The ground here is a much drier, brown soil, unlike the rest of
+the forest, and lacks the sense of unease that pervades the rest of the
+forest.  
+~
+forest
+D NORTH 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.
+~
+D EAST 0 0 0
+~
+Steep cliffs rise up out of the valley, making passage impossible.
+~
+D SOUTH 882 0 0
+~
+The forest continues on to the south, following the cliffs.  
+~
+D WEST 886 0 0
+~
+The forest continues on to the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your east.  
+~
+#888
+A Small Elven Camp~
+You find yourself in a small, though relatively busy camp hidden behind
+the thick amounts of brush and trees to the south.  Elves pass you often,
+too occupied with their business to question your presence here.  The camp
+is built in and among the surroundings, creating as little disruption to its
+surroundings as possible.  
+~
+forest
+D NORTH 892 0 0
+~
+The camp continues towards the north.
+~
+D EAST 889 0 0
+~
+The camp continues towards the east.
+~
+D SOUTH 883 I 0
+~
+Thick foliage impedes passage in this direction, though it appears
+passable, with effort.
+~
+D WEST 0 0 0
+~
+Cliffs rise up to the west, blocking passage.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#889
+A Small Elven Camp~
+You find yourself in a small, though relatively busy camp hidden behind
+the thick amounts of brush and trees to the south.  Elves pass you often,
+too occupied with their business to question your presence here.  The camp
+is built in and among the surroundings, creating as little disruption to its
+surroundings as possible, though there is a small firepit here, apparently
+used quite frequently.  
+~
+forest
+D NORTH 893 0 0
+~
+The camp continues towards the north.
+~
+D EAST 890 0 0
+~
+The camp continues towards the east.
+~
+D SOUTH 884 I 0
+~
+Thick foliage impedes passage in this direction, though it appears
+passable, with effort.
+~
+D WEST 888 0 0
+~
+The camp continues towards the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#890
+A Small Elven Camp~
+You find yourself in a small, though relatively busy camp hidden behind
+the thick amounts of brush and trees to the south.  Elves pass you often,
+too occupied with their business to question your presence here.  The camp
+is built in and among the surroundings, creating as little disruption to its
+surroundings as possible.  
+~
+forest
+D NORTH 894 0 0
+~
+The camp continues towards the north.
+~
+D EAST 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.
+~
+D SOUTH 885 I 0
+~
+Thick foliage impedes passage in this direction, though it appears
+passable, with effort.
+~
+D WEST 889 0 0
+~
+The camp continues towards the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#891
+A Secluded Corner of the Elven Camp~
+Sheltered slightly in a small cave near the rest of the camp, this is the
+most peaceful and secluded portion of camp.  From the amount of papers and
+other items around the area, it is apparent that this is where all the
+activity of the elvish party here is planned and ordered.
+~
+forest
+D NORTH 0 0 0
+~
+Solid rock forms the northern wall of the cave.
+~
+D EAST 892 0 0
+~
+You can exit this cave towards your east, heading into the camp.  
+~
+D SOUTH 0 0 0
+~
+Solid rock forms the southern wall of the cave.
+~
+D WEST 0 0 0
+~
+Solid rock forms the western wall of the cave.
+~
+D UP 0 0 0
+~
+Solid rock forms the ceiling above you.
+~
+D DOWN 0 0 0
+~
+~
+#892
+A Small Elven Camp~
+You find yourself in a small, though relatively busy camp hidden behind
+the thick amounts of brush and trees to the south.  Elves pass you often,
+too occupied with their business to question your presence here.  The camp
+is built in and among the surroundings, creating as little disruption to its
+surroundings as possible.  
+~
+forest
+D NORTH 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.
+~
+D EAST 893 0 0
+~
+The camp continues towards the east.
+~
+D SOUTH 888 0 0
+~
+The camp continues towards the south.
+~
+D WEST 891 0 0
+~
+A small cave can be seen to your west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#893
+A Small Elven Camp~
+You find yourself in a small, though relatively busy camp hidden behind
+the thick amounts of brush and trees to the south.  Elves pass you often,
+too occupied with their business to question your presence here.  The camp
+is built in and among the surroundings, creating as little disruption to its
+surroundings as possible.  
+~
+forest
+D NORTH 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.
+~
+D EAST 894 0 0
+~
+The camp continues towards the east.
+~
+D SOUTH 889 0 0
+~
+The camp continues towards the south.
+~
+D WEST 892 0 0
+~
+The camp continues towards the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#894
+A Small Elven Camp~
+You find yourself in a small, though relatively busy camp hidden behind
+the thick amounts of brush and trees to the south.  Elves pass you often,
+too occupied with their business to question your presence here.  The camp
+is built in and among the surroundings, creating as little disruption to its
+surroundings as possible.  
+~
+forest
+D NORTH 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.
+~
+D EAST 0 0 0
+~
+Thick foliage impedes passage in this direction, and you are unable to
+find passage.
+~
+D SOUTH 890 0 0
+~
+The camp continues towards the south.
+~
+D WEST 893 0 0
+~
+The camp continues towards the west.
+~
+D UP 0 0 0
+~
+You see the forest canopy above you.
+~
+#896
+Among the Eaves of the Forest~
+You manage to find a somewhat secure perch here among the eaves of the
+forest, concealed from sight by those below you by the lower branches of the
+trees.  From here you can see out above the rest of the treetops, offering a
+view of the plains east of the valley, the mountain ranges bordering the
+other sides of the valley, and what appears to be a small tower to your
+southeast.  
+~
+forest
+D EAST 0 0 0
+~
+~
+D SOUTH 0 0 0
+~
+Not far beyond the border of the valley, Mount Cim can be seen.
+~
+D UP 0 0 0
+~
+Above most of the forest canopy, you can see the skies of Shalar
+relatively easily.  
+~
+D DOWN 818 0 0
+~
+~
+#897
+Among the Eaves of the Forest~
+You manage to find a somewhat secure perch here among the eaves of the
+forest, concealed from sight by those below you by the lower branches of the
+trees.  From here you can see out above the rest of the treetops, offering a
+view of the plains east of the valley, the mountain ranges bordering the
+other sides of the valley, and the small lake to your west.  
+~
+forest
+D DOWN 825 0 0
+~
+~
+#898
+Among the Eaves of the Forest~
+You manage to find a somewhat secure perch here among the eaves of the
+forest, concealed from sight by those below you by the lower branches of the
+trees.  From here you can see out above the rest of the treetops, offering a
+view of the plains east of the valley, the mountain ranges bordering the
+other sides of the valley, and huge ruins to your west.  
+~
+forest
+D DOWN 872 0 0
+~
+~
+#899
+A Hidden Campsite~
+You have managed to stumble onto an exceedingly well hidden campsite. 
+Sheltered cleverly against the cliffs to the southwest, with the foliage in
+the area carefully arranged to further conceal this area, the campsite is
+practically invisible from the outside.  By the layout of the site, it
+appears to be often used by someone, with things laid out in sensible,
+well-placed patterns.  
+~
+forest
+D NORTH 837 0 0
+~
+Though the foliage is thick surrounding the camp, it appears as though
+you can slip between two bushes, and reach the lake.  
+~
+D EAST 811 I 0
+~
+Though the foliage is thick surrounding the camp, it appears as though
+you can slip between two bushes, and head into the forest to the east.  
+~
+D SOUTH 0 0 0
+~
+The cliffs surrounding the valley make up the southern border of this
+camp.  
+~
+D WEST 0 0 0
+~
+The cliffs surrounding the valley make up the western border of this camp.  
+~
+D UP 0 0 0
+~
+You see the forest canopy above you, and the sheer cliffs towering over
+you to your south and west.
+~
+#0
+
+
+
+#RESETS
+OBJECT 800 TO 800
+MOB 838 TO 810 GLIMIT 10 LLIMIT 1
+MOB 800 TO 810 GLIMIT 10 LLIMIT 1
+EQUIP 802 ARMS
+MOB 800 TO 811 GLIMIT 10 LLIMIT 1
+MOB 838 TO 812 GLIMIT 10 LLIMIT 1
+MOB 836 TO 812 GLIMIT 4 LLIMIT 1
+MOB 837 TO 814 GLIMIT 7 LLIMIT 1
+MOB 836 TO 819 GLIMIT 4 LLIMIT 1
+MOB 838 TO 819 GLIMIT 10 LLIMIT 1
+MOB 837 TO 821 GLIMIT 7 LLIMIT 1
+MOB 800 TO 823 GLIMIT 10 LLIMIT 1
+MOB 800 TO 826 GLIMIT 10 LLIMIT 1
+EQUIP 804 HANDS
+MOB 800 TO 834 GLIMIT 10 LLIMIT 1
+EQUIP 807 NECKONE
+MOB 835 TO 835 GLIMIT 3 LLIMIT 1
+MOB 884 TO 849 GLIMIT 5 LLIMIT 1
+MOB 884 TO 853 GLIMIT 5 LLIMIT 1
+MOB 884 TO 855 GLIMIT 3 LLIMIT 1
+MOB 857 TO 857 GLIMIT 1 LLIMIT 1
+MOB 858 TO 862 GLIMIT 3 LLIMIT 1
+MOB 858 TO 863 GLIMIT 3 LLIMIT 1
+MOB 801 TO 871 GLIMIT 6 LLIMIT 1
+MOB 837 TO 873 GLIMIT 7 LLIMIT 1
+MOB 801 TO 874 GLIMIT 6 LLIMIT 1
+EQUIP 801 BODY
+MOB 838 TO 875 GLIMIT 10 LLIMIT 2
+MOB 837 TO 875 GLIMIT 7 LLIMIT 2
+MOB 836 TO 875 GLIMIT 4 LLIMIT 1
+MOB 801 TO 877 GLIMIT 6 LLIMIT 1
+EQUIP 806 WAIST
+MOB 837 TO 878 GLIMIT 7 LLIMIT 1
+MOB 838 TO 883 GLIMIT 10 LLIMIT 1
+MOB 885 TO 884 GLIMIT 1 LLIMIT 1
+EQUIP 805 FEET
+MOB 838 TO 886 GLIMIT 10 LLIMIT 1
+MOB 801 TO 887 GLIMIT 6 LLIMIT 1
+EQUIP 803 LEGS
+MOB 889 TO 889 GLIMIT 5 LLIMIT 3
+EQUIP 889 BODY
+EQUIP 886 WIELD
+MOB 889 TO 889 GLIMIT 5 LLIMIT 3
+EQUIP 889 BODY
+EQUIP 887 WIELD
+MOB 889 TO 889 GLIMIT 5 LLIMIT 3
+EQUIP 889 BODY
+EQUIP 888 WIELD
+MOB 890 TO 890 GLIMIT 1 LLIMIT 1
+MOB 891 TO 891 GLIMIT 1 LLIMIT 1
+EQUIP 891 WRISTTWO
+MOB 892 TO 892 GLIMIT 1 LLIMIT 1
+EQUIP 892 WIELD
+MOB 894 TO 894 GLIMIT 1 LLIMIT 1
+EQUIP 894 WIELD
+MOB 893 TO 894 GLIMIT 1 LLIMIT 1
+EQUIP 893 ABOUT
+MOB 896 TO 896 GLIMIT 5 LLIMIT 1
+MOB 896 TO 897 GLIMIT 5 LLIMIT 1
+MOB 896 TO 898 GLIMIT 5 LLIMIT 1
+MOB 899 TO 899 GLIMIT 1 LLIMIT 1
+EQUIP 899 BODY
+EQUIP 898 WIELD
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

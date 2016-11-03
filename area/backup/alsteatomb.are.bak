@@ -1,0 +1,195 @@
+#AREA
+alsteatomb.are~
+The Tomb of Alstea~
+Riftshadow~
+35 51
+102 110
+unopened
+subtropical
+0
+1
+None~
+
+#MOBS
+#102
+skeletal figure ehrlouge~
+Ehrlouge~
+A skeletal figure in rotting satin and silk sits among countless melted candles.
+~
+~
+-100 0 0 lich~
+51 90d8+4200 0d0+0 0 100 chill
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INTELLIGENT
+ACT DETECT_SPECIAL
+IMM SUMMON
+IMM CHARM
+NOTES Necro's talismanic aura equivalent quest mob.
+~
+C 'vampiric touch'
+C 'talismanic aura'
+C 'plague'
+C 'blindness'
+C 'energy drain'
+#103
+alstea tomb ward mob~
+The sound of dripping water cuts through the stale air.~
+Alstea's tomb ward mob is here.
+~
+~
+0 0 0 fido~
+120 60d8+21600 0d0+0 0 100 none
+102 104 1 24
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+IMM SUMMON
+IMM MAGIC
+IMM WEAPON
+#109
+questy child cloaked spirit winged~
+a winged child-spirit~
+A strange child flutters around on gigantic butterfly wings!
+~
+This child is covered in many layers of clothes and a cloak, making it
+impossible to see its face or gender.  Gigantic wings have torn through the
+clothes, and they flap wildly to keep it in the air.  
+~
+0 0 0 human~
+31 31d8+2000 3d8+10 10 100 chaotic
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+AFF SNEAK
+AFF FLYING
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#102
+A Crumbling Antechamber~
+~
+inside
+ROOM INDOORS
+D NORTH 103 0 0
+door~
+~
+OWNER none~
+#103
+An Ancient Corridor~
+~
+inside
+ROOM INDOORS
+D EAST 106 0 0
+door~
+~
+D SOUTH 102 0 0
+door~
+~
+D WEST 104 0 0
+door~
+~
+OWNER none~
+#104
+An Ancient Corridor~
+~
+inside
+ROOM INDOORS
+D NORTH 105 0 0
+door~
+~
+D EAST 103 0 0
+door~
+~
+OWNER none~
+#105
+A Decaying Study~
+Obviously inhabited by someone or something, this chamber is immediately
+before a tomb.  Splotches of melted wax can be seen on most everything here.
+Wet and smelling strongly of mildew, an old yet fancy carpet covers the cold
+granite floor.  An ornate mahogany desk and a matching chair are set up
+toward the northern wall, some strange implements and books strewn across
+the desk's surface.  One book is opened, though it seems to be in very poor
+condition.  A rectangular doorway leads to the west, and an inscription is
+visible above it.  
+~
+inside
+ROOM INDOORS
+D SOUTH 104 0 0
+door~
+~
+D WEST 107 0 0
+door~
+A rectangular doorway leads into a tomb.  You notice an inscription
+written above it.  
+~
+E inscription~
+"TO BE A ROSE AMONG CARNATIONS"
+~
+E book~
+Much of the book is rotted, wet and smeared.  Short passages have somehow
+remained legible, despite the poor conditions it has been kept in.  
+ 
+Ah, the horrors of existence... to be given the consciousness to learn,
+love and examine the nature of death.  Love, most of all, is both the most
+horrid curse and generous gift given to us by our creators.  The thought of
+the sweet breath of my dearest Alstea to once more caress my cheek brings me
+both ecstacy and agony, for though I look back upon better days, I know that
+what comes will never be able to compare.  I have sealed my own fate, it
+seems.  Never again will my love's eyes rest in mine, her soft lips part to
+smile for me or her hands hold my own.  Alone, I must be, until the end
+comes.  Ah, the end... Should she have stolen half of her beauty away with
+her to the Fields of Paradise, it would be more than enough to sustain me
+for the rest of eternity.
+ 
+The handwriting suddenly becomes much, much worse after this paragraph,
+making even the intact portions of the book completely unreadable.
+~
+OWNER none~
+#106
+A Damp Alcove~
+~
+inside
+ROOM INDOORS
+D WEST 103 0 0
+door~
+~
+OWNER none~
+#107
+Alstea's Tomb~
+~
+inside
+ROOM INDOORS
+D EAST 105 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 103 TO 102 GLIMIT 1 LLIMIT 1
+MOB 102 TO 105 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+M 102 pulse_prog pulse_prog_alstea_ehrlouge
+M 103 pulse_prog pulse_prog_area_echo_ward
+END
+#SPECS
+END
+#$

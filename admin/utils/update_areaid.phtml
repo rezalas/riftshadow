@@ -1,0 +1,13 @@
+<?
+	include("../header.inc");
+
+	$res = mysql_db_query("rift_core","SELECT * FROM world_areas ORDER BY min_vnum", $conn);
+	for($count = 0; $row = mysql_fetch_array($res); $count++)
+	{
+		$name = addslashes($row[name]);
+		@mysql_db_query("rift_core","UPDATE world_areas SET id=$count WHERE name='$name'", $conn);
+		@mysql_db_query("rift_core","UPDATE world_rooms SET area_id=$count WHERE vnum >= $row[min_vnum] AND vnum <= $row[max_vnum]", $conn);
+	}
+	echo "World Areas ID re-sorted.<br>";
+	echo "New AreaID's applied to World Rooms.<br>";
+?>

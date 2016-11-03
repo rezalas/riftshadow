@@ -1,0 +1,44 @@
+<?
+	$target_level=53;
+	include("../check_trust.inc");
+	include("../header.inc");
+
+	$id = $_GET[id];
+
+	$get_res = mysql_db_query("rift","select * from helpfiles where id=$id",$conn);
+	if(mysql_num_rows($get_res) < 1)
+		die("Error");
+	else
+		$row = mysql_fetch_array($get_res);
+	if($_GET[added]) {
+		echo "<center><font color=red>Help file added.</font></center>";
+	}
+
+?>
+<table width=65% align=center>
+<form action='edit_action.phtml' method=post>
+<input type=hidden name=id value=<? echo $id;?>>
+<tr>
+ <td align=right valign=top><? echo $def_font;?>Title:</td>
+ <td><input type=text name=title value="<? echo $row[title];?>"></td>
+</tr>
+<tr>
+ <td align=right valign=top><? echo $def_font;?>Skill:</td>
+ <td><input type=text name=skill value='<? echo $row[skill];?>'></td>
+</tr>
+<tr>
+ <td align=right valign=top><? echo $def_font;?>Minlevel:</td>
+ <td><input type=text name=minlevel value='<? echo $row[minlevel];?>'></td>
+</tr>
+<tr>
+ <td align=right valign=top><? echo $def_font;?>Help:</td>
+ <td><textarea name=helpdata cols=75 rows=10 WRAP=HARD><? echo stripslashes($row[helpdata]);?></textarea></td>
+</tr>
+<tr>
+ <td colspan=2 align=center><input type=submit value=Submit></form></td>
+</tr>
+</table>
+</form>
+<?
+	include("../footer.inc");
+?>

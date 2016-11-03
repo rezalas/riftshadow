@@ -1,0 +1,259 @@
+#AREA
+udgdalroad.are~
+Iseldheim-Dale Road~
+Tiernus~
+1 51
+24800 24812
+normal
+temperate
+0
+1
+RS Tyner Tiernus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#24800
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north, a wide field leads
+off toward a larger forest in the distance.  The plain also runs to the
+south along the city wall.  A large gate offers entrance to the city to the
+west, and the dirt road continues to the east.  
+~
+road
+D EAST 24801 0 0
+~
+This dirt road meanders off to the east.
+~
+D WEST 3822 0 0
+~
+~
+#24801
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north, a wide field leads
+off toward a larger forest in the distance.  The plain also runs to the
+south along the wall of a city that rises up to the west.  A large gate is
+visible in the distance to the west, while the road continues to the east.  
+~
+road
+D EAST 24802 0 0
+~
+The road continues to the east.
+~
+D WEST 24800 0 0
+~
+The road continues to the west.
+~
+#24802
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north, a wide field leads
+off toward a larger forest in the distance.  The plain also runs into the
+horizon to the south.  The road continues to the east, and west toward a
+large, black-walled city.  
+~
+road
+D EAST 24803 0 0
+~
+The road continues to the east.
+~
+D WEST 24801 0 0
+~
+The road continues to the west.
+~
+#24803
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north, a wide field leads
+off toward a larger forest in the distance.  The plain also runs into the
+horizon to the south.  The road continues to the east, and west toward a
+large, black-walled city.  
+~
+road
+D EAST 24804 0 0
+~
+The road continues to the east.
+~
+D WEST 24802 0 0
+~
+The road continues to the west.
+~
+#24804
+An Intersection in the Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north, a wide field leads
+off toward a larger forest in the distance.  The plain also runs into the
+horizon to the south.  The road continues to the north, and west toward a
+large, black-walled city.  A short, snowy trail leads to a rather large,
+old-looking temple to the south.  
+~
+road
+D NORTH 24805 0 0
+~
+The road continues to the north.
+~
+D SOUTH 23876 0 0
+~
+A frosty structure rises above you to the south.
+~
+D WEST 24803 0 0
+~
+The road continues to the west.
+~
+#24805
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the west lies a wide field that
+leads into the distance where a dark-walled city rises up.  The plains also
+stretch out into the horizon to the east.  The road continues to the north
+and south.  
+~
+road
+D NORTH 24806 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24804 0 0
+~
+The road continues to the south.
+~
+#24806
+A Bend in the Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the west lies a wide field that
+leads into the distance where a dark-walled city rises up.  The plains also
+stretch out into the horizon to the east.  The road continues to the east
+and south.  
+~
+road
+D EAST 24807 0 0
+~
+The road continues to the east.
+~
+D SOUTH 24805 0 0
+~
+The road continues to the south.
+~
+#24807
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north a plain leads off
+toward a larger forest in the distance.  The plains also stretch out into
+the horizon to the south.  The road continues here to the east and west.  
+~
+road
+D EAST 24808 0 0
+~
+The road continues to the east.
+~
+D WEST 24806 0 0
+~
+The road continues to the west.
+~
+#24808
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north a plain leads off
+toward a larger forest in the distance.  The plains also stretch out into
+the horizon to the south.  The road continues here to the east and west.  
+~
+road
+D EAST 24809 0 0
+~
+The road continues to the east.
+~
+D WEST 24807 0 0
+~
+The road continues to the west.
+~
+#24809
+A Snowy Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  Beyond the trees to the north a plain leads off
+toward a larger forest in the distance.  The plains also stretch out into
+the horizon to the south.  The road continues to the east and west.  
+~
+road
+D EAST 24810 0 0
+~
+The road continues to the east.
+~
+D WEST 24808 0 0
+~
+The road continues to the west.
+~
+#24810
+A Split in the Trail~
+Light filters down through the branches of sparsely set trees that line
+the sides of the road.  A grassy plain stretches out between the trees to
+the south and east.  To the west the tree-lined road continues.  To the
+north, the trees grow a bit thicker as the road approaches a larger forest. 
+~
+road
+D NORTH 24811 0 0
+~
+The road continues to the north.
+~
+D EAST 28828 0 0
+door~
+~
+D WEST 24809 0 0
+~
+The road continues to the west.
+~
+#24811
+A Forested Trail~
+Light filters down through the branches of evenly set trees that line
+the sides of the road.  The trees are rather thick here, obscuring vision
+into the distance to the east and west.  The road leads to the south, where
+the trees grow more sparse .  To the north, the road leads into thicker
+cover, the beginning of a larger forest.  
+~
+road
+D NORTH 24812 0 0
+~
+The road continues to the north.
+~
+D SOUTH 24810 0 0
+~
+The road continues to the south.
+~
+#24812
+A Bend in the Trail~
+Light filters down through the branches of evenly set trees that line
+the sides of the road.  The forest grows close all around here, the canopy
+thickening significantly as you move away from the road.  The road becomes
+more of a woodland trail to the west, leading into the depths of the forest.
+The road continues to the south, where the trees lighten in the distance.  
+~
+road
+D SOUTH 24811 0 0
+~
+The road continues to the south.
+~
+D WEST 13500 0 0
+~
+The road leads into a wooded dale to the west.
+~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

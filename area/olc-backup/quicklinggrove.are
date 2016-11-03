@@ -1,0 +1,74 @@
+#AREA
+quicklinggrove.are~
+Quickling Grove~
+Morglum~
+0 0
+7900 7949
+normal
+none
+I
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#7900
+Thick brush within the dense forest~
+This is the example description.     
+~
+unused
+D SOUTH 7901 0 0
+~
+~
+OWNER none~
+#7901
+Dummy Room~
+This is the example description.     
+~
+unused
+D NORTH 7900 0 0
+~
+~
+D SOUTH 7902 0 0
+~
+~
+OWNER none~
+#7902
+Dummy Room~
+This is the example description.   
+~
+unused
+D NORTH 7901 0 0
+~
+~
+D SOUTH 7903 0 0
+~
+~
+OWNER none~
+#7903
+Dummy Room~
+This is the example description.  
+~
+unused
+D NORTH 7902 0 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+DOOR 7902 south CLOSED
+S
+
+#IMPROGS
+END
+#$

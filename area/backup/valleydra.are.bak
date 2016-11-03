@@ -1,0 +1,4470 @@
+#AREA
+valleydra.are~
+Valley of Dra~
+Cohtram~
+0 0
+16100 16199
+unopened
+none
+0
+1
+Cohtram~
+
+#MOBS
+#16106
+mountain goat ram~
+a mountain goat~
+A mountain goat stands here grazing carelessly.
+~
+A mountain goat stands here grazing.  It does not seem to notice you and
+continues on as if it is all alone.  The white goat of curly fur reachs up
+to its head where two curled horns reach over and around its ears.  As you
+look closer you notice that its legs are covered in a reddish-brown dirt of
+the mountains.  
+~
+0 0 0 unique~
+23 23d8+798 4d8+20 20 100 charge
+0 0 0 0
+standing either none
+AGV AGV medium
+ACT NPC
+ACT WANDER
+OFF CRUSH
+RES COLD
+VUL FIRE
+#16109
+stout cougar~
+stout cougar~
+A muscular cat watches you keenly from the shadows.
+~
+A reddish-brown feline moves silently.  It licks its lips as it moves
+from shadow to shadow, never fully taking its eyes off of you.  Long black
+whiskers cover the end of its snout, with black fur markings under its eyes
+and around its ears.  The animal seems to be calculating the right time for
+a perfect pounce.  
+~
+2 0 0 cat~
+25 25d8+944 5d5+15 27 100 claw
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT AGGRESSIVE
+AFF SNEAK
+AFF HIDE
+RES COLD
+VUL FIRE
+VUL DROWNING
+#16115
+wary mountain goat~
+mountain goat~
+A fidgity moving mountain goat stands before you.
+~
+A large mountain goat stands here grazing.  His shoulders, legs, and
+hindquaters quiver in an alert state.  His shaggy white pelt corkscrews in
+chaos off of his hide.  Two large horns curl back from the top of his head
+over his ears.  All of the sudden his body freezes and his neck lashes
+around bringing his head up, eyes intently studying the rock cliffs further
+up.  Apparently at ease, he turns back to grazing.  
+~
+0 0 0 unique~
+25 25d8+944 10d4+10 0 100 smash
+0 0 0 0
+standing male none
+G G large
+ACT NPC
+ACT SENTINEL
+OFF CRUSH
+RES COLD
+VUL FIRE
+#16120
+ranger enshrouded human figure~
+a skulking ranger~
+A humaniod figure skulks here enshouded in camoflauge.
+~
+A human cloaked in reds, browns, and greens crouches here behind a rocky
+bastion that is made from a cliff.  With a glance he takes you in, and keeps
+his concealment.  He returns to study his prey that is futher down under the
+cliff.  His face is covered with a green piece of fabric, he moves with slow
+smooth motions as he continues to peer over the side of the cliff apparently
+waiting for the perfect time to snare his prey.  A strange curved bladed
+dagger rests upside down in his hand, as well as a sword hilt that sticks
+out of the back of his cloak.  
+~
+0 0 0 human~
+45 45d8+3177 10d8+50 0 100 none
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT NPC
+ACT FAST_TRACK
+OFF DISARM
+OFF DODGE
+OFF KICK
+OFF DIRT_KICK
+OFF TRIP
+AFF DETECT_CAMO
+AFF INFRARED
+AFF CAMOUFLAGE
+AFF SNEAK
+AFF DARK_VISION
+IMM SUMMON
+CLASS warrior Duelist none 
+#16168
+hobgoblin dirty goblin~
+a large hobgoblin~
+A large hobgoblin stands here, dirty and covered in filth.
+~
+A grotesque hobgoblin stands here fidgeting.  Worrie shines bright in his
+eyes as he peers outside the cave watching for travelers.  His eyes dart
+from copse to copse trying to be aware of everything outside of this cave. 
+His ears have cuts and splices in them, and a large ring hangs from his
+bottom lip.  Ripped soiled clothing covers his body.  The brownish-green
+skin on his arms and legs are bruised and scarred, and he hunches over to
+one side as if covering a long gone wound.  
+~
+0 0 0 hobgoblin~
+37 37d8+2093 6d5+30 34 100 grep
+0 0 0 0
+standing male poor
+0 0 large
+ACT NPC
+ACT SENTINEL
+ACT WIMPY
+OFF BERSERK
+OFF KICK
+OFF CRUSH
+OFF SPAM_MURDER
+#16169
+female hobgoblin goblin~
+a small female hobgoblin~
+A short female hobgoblin stands before you shivering.
+~
+An ugly female hobgoblin stands before you, much smaller than the male to
+the north.  When she catches site of you, she cowers in a corner shivering
+uncontrollably.  Her hands cover here face as one eye peers out from between
+fingers, wild with fear.  Torn soiled clothing barely leaves anything to the
+imagination, and perhaps you are glad for such.  Two earings in both ears
+made of rusted metal, and she wears a large hook through the middle of her
+nose.  
+~
+0 0 0 hobgoblin~
+33 33d8+1655 4d6+15 0 100 none
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF KICK
+OFF INTIMIDATED
+#16198
+Vrok troll mercenary~
+Vrok the Troll Mercenary~
+Vrok the Troll Mercenary stands here, brandishing a large greatsword continuesly dripping with blood.
+~
+Smaller but smarter than most of his kin, Vrok abandon his tribe after years of fighting for survival among his cruel kin. He has a long pointed nose that down past his scrunched features of his face. Large black orbs for eyes and short dredded black hair on the back of his head give him an unnerving appearance. He wears a shirt of chainmail and plated armguards that double as partial covering gloves. Spikes on his shoulders and a sheath on his back for the greatsword in his hand, you also see two small masterworked throwing axe hanging on either side of his belt. Seeming very board, Vrok stands here licking his great sword. When he sees you he grins licks once more and then streaks towards you with the greatsword raised high, screaming a battlecry.
+~
+0 0 0 troll~
+45 45d8+3177 4d8+35 0 100 thwack
+0 0 0 0
+standing male affluent
+0 0 large
+ACT NPC
+ACT AGGRESSIVE
+ACT FAST_TRACK
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+AFF REGENERATION
+CLASS warrior Barbarian Dragoon 
+#0
+
+
+
+#OBJS
+#16100
+sledge hammer kiss mother~
+a two-handed sledge hammer named, 'Kiss of the Mother'~
+A long hammer lies here with inscription etched into the head~
+weapon
+stone~
+mace 20 12 wrath 0
+51 30 100000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM NODISARM
+ITEM ANTILAWFUL
+APPLY DAMROLL 30
+APPLY HITROLL 30
+LIMIT 0
+VERB slam
+CABAL HORDE
+TIMER 0
+
+#16101
+bands lion fur~
+wide armbands made of lion fur~
+A set of wide armbands lay here made of some sort of golden fur.~
+armor
+fur~
+20 20 20 20 0
+51 0 0 P
+WEAR TAKE
+WEAR ARMS
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+APPLY DAMROLL 30
+APPLY STR 20
+APPLY HITROLL 30
+APPLY INT 10
+APPLY WIS 10
+LIMIT 0
+TIMER 0
+
+#16102
+calcite necklace stone fang~
+a stone necklace made of bright calcite adorned with a large fang~
+A pile of shiny orange stones lay here. ~
+armor
+calcite~
+20 20 20 20 0
+51 9 0 P
+WEAR TAKE
+WEAR NECK
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+APPLY DAMROLL 30
+APPLY HITROLL 30
+APPLY INT 10
+APPLY WIS 10
+APPLY NONE -100
+LIMIT 0
+TIMER 0
+
+#16103
+boots pair~
+a pair of knee-high dark leather boots~
+A large pair of dark leather boots sit here undisturbed.~
+armor
+leather~
+20 20 20 20 0
+51 4 0 P
+WEAR TAKE
+WEAR FEET
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+APPLY DAMROLL 30
+APPLY HITROLL 30
+APPLY MOVE 1000
+APPLY NONE -100
+LIMIT 0
+TIMER 0
+
+#16104
+loin cloth leather~
+a long dark leather loin-cloth~
+Two strips of long dark leather lay here crumpled.~
+armor
+leather~
+20 20 20 20 0
+51 0 0 P
+WEAR TAKE
+WEAR LEGS
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+APPLY CON 30
+APPLY DAMROLL 30
+APPLY HITROLL 30
+APPLY DEX 20
+LIMIT 0
+TIMER 0
+
+#16105
+skull ancient king~
+the skull of an ancient king~
+A long dead king belonged to this skull.~
+armor
+bone~
+20 20 20 20 0
+51 3 0 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+APPLY DAMROLL 30
+APPLY HITROLL 30
+APPLY INT 10
+APPLY WIS 10
+APPLY NONE -100
+LIMIT 0
+TIMER 0
+
+#16106
+ring single spike~
+a ring made of stone adorned with a single sharp spike~
+A heavy looking ring lies here, a single spike pointing off to the north.~
+armor
+stone~
+20 20 20 20 0
+55 0 0 P
+WEAR TAKE
+WEAR FINGER
+RESTRICT TITAN_ONLY
+RESTRICT HORDE_ONLY
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM NOLOCATE
+APPLY DAMROLL 30
+APPLY HITROLL 30
+LIMIT 0
+TIMER 0
+
+#16109
+cougar hide pelt~
+a pelt made of a cougar's hide~
+A roll of reddish-black fur lays here in a heap.~
+armor
+fur~
+3 3 3 0 0
+22 2 0 P
+WEAR TAKE
+WEAR NECK
+ITEM VISDEATH
+APPLY DEX 2
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#16112
+orange pear fruit~
+an orange pear~
+A strange looking piece of orange fruit lies here.~
+pill
+unknown~
+25 'refresh' 'cure critical' 'reserved' 'reserved'
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#16113
+apples bushel red pile~
+a bushel of red apples.~
+Red apples lay strewn out on the ground.~
+food
+fruit~
+60 10 0 0 0
+1 0 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#16114
+tapestry goat ram~
+a tapestry is spread out here on the wall.~
+A tapestry hangs here.~
+treasure
+unknown~
+0 0 0 0 0
+52 10 100000 P
+ITEM NOSHOW
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+E tapestry goat ram~
+A magnificent picture of a large ram has been sewn here.  His muscular
+build and giant curled horns conveyed the artists thoughts of this being a
+paramount example of the peek mountain goats species.  The red rocky
+mountains in the background tell of the harsh regions that breeds and courts
+such a creature to its rugged beauty.  Farther down in the picture a valley
+has been depicted, its lush dense foliage speaking volumes of life.  
+~
+
+#16115
+goat horns~
+a pair of large horns from a mountain goat~
+A nasty pair of scalped horns lay here deteriorating.~
+armor
+bone~
+3 5 3 0 0
+20 23 257 P
+WEAR HEAD
+ITEM VISDEATH
+APPLY NONE 5
+APPLY HITROLL 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#16116
+tapestry valley snake~
+a tapestry is spread out here on the wall.~
+A tapestry hangs here.~
+treasure
+unknown~
+0 0 0 0 0
+52 10 100000 P
+ITEM NOSHOW
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+E tapestry valley snake~
+A magnificent picture of a large ram has been sewn here.  His muscular
+build and giant curled horns conveyed the artists thoughts of this being a
+paramount example of the peek mountain goats species.  The red rocky
+mountains in the background tell of the harsh regions that breeds and courts
+such a creature to its rugged beauty.  Farther down in the picture a valley
+has been depicted, its lush dense foliage speaking volumes of life.  
+~
+
+#16117
+tapestry snow capped red mountains~
+a tapestry is spread out here on the wall.~
+A tapestry hangs here.~
+treasure
+unknown~
+0 0 0 0 0
+52 10 100000 P
+ITEM NOSHOW
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+E tapestry snow capped red mountains~
+As far as the eye can see on this tapestry there are white capped red
+rocked mountains.  They stretch the entirety of the tapestry.  The jagged
+peaks look as though they were a pit fall for the divine.  The peaks, cruel
+as any predator, are concealed with snow so that they convey a softer image
+of what lies below.  The scene is breath taking in this portrayal of the
+young mountain range, seconded only to the actual viewing of the scene
+itself.  
+~
+
+#16118
+tapestry cat cougar~
+a tapestry is spread out here on the wall.~
+A tapestry hangs here.~
+treasure
+unknown~
+0 0 0 0 0
+52 0 100000 P
+ITEM NOSHOW
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+E tapestry cat cougar~
+The cougar in the woven into the tapestry speaks of the hunt.  His
+muscular build bristles as he crouches low in between a couple of small
+boulders.  His eyes are focused solely on his prey; a large mountain goat
+that grazes carelessly.  The red rocks that surround the mountain lion and
+his prey seem to voice a certain danger of the beautiful setting that has
+been captured in this picture.  Further into the distance, a lush green
+valley can be seen spreading out into the horizon.  
+~
+
+#16119
+tapestry man fyndin stalwart~
+a tapestry is spread out here on the wall.~
+A tapestry hangs here.~
+treasure
+unknown~
+0 0 0 0 0
+52 10 100000 P
+ITEM NOSHOW
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+E tapestry man fyndin stalwart~
+A dauntless elf stands before a small boulder of red rock.  His left leg
+is raised so that his foot rests on top of the boulder.  His left hand comes
+down to rest on his left knee.  His right arm stretches out to his side, a
+smooth black and white cane is held in his hand completing the pose.  With a
+straight back, he stands tall among the mountain pass that tower over him. 
+Over the cliff a flat plains area stretches out as far as the eye can see. 
+Colorful clothes of another time and place adorn his body loosely.  A
+beautiful face has done justice to the artist's subject, with piercing
+blue-green eyes radiating a warmth even though it is only a woven picture.  
+~
+
+#16120
+tapestry female elf beautiful~
+a tapestry is spread out here on the wall.~
+A tapestry hangs here.~
+treasure
+unknown~
+0 0 0 0 0
+52 10 100000 P
+ITEM NOSHOW
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+E tapestry female elf beautiful~
+The face of a beautiful elven woman has been sewn into this tapestry. 
+Her face shines brightly but her oddly cold blue eyes are fixed on something
+above her.. Smooth silky white skin stretches down her face and neck.  Dark
+brown hair falls back over her shoulders accenting her neckline beautifully.
+An elegent tiara sits on top of her head filled with sapphires and rubies. 
+Enlayed in silver with platinum the small crown communicates that the
+possessor is of some type of royalty.  
+~
+
+#16121
+key dark tiny~
+a tiny dark key~
+A tiny key lies here, barely visible.~
+key
+stone~
+0 0 0 0 0
+45 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#16122
+cougar paws gloves~
+stout gloves made of cougar paws~
+A pair of severed paws lay here declawed.~
+armor
+flesh~
+5 5 5 5 0
+45 3 0 P
+WEAR TAKE
+WEAR HANDS
+APPLY DAMROLL 3
+APPLY HITROLL 2
+APPLY DEX 2
+LIMIT 4
+TIMER 0
+
+#16123
+red dark leather leggings~
+a pair of dark red leggings~
+A crumpled pair of red leather lays here.~
+armor
+leather~
+8 8 8 8 0
+45 5 0 P
+WEAR TAKE
+WEAR LEGS
+ITEM HUM
+APPLY DAMROLL 2
+APPLY HITROLL 1
+APPLY HP 20
+APPLY NONE -5
+LIMIT 3
+TIMER 0
+
+#16124
+dagger kukri wide silk~
+a wide-bladed kukri wrapped in silk~
+A wickledly curved dagger lays here, its handle wrapped tightly in silk.~
+weapon
+adamantite~
+dagger 5 9 slice 0
+45 4 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL 3
+APPLY DAMROLL 4
+LIMIT 3
+TIMER 0
+
+#16125
+curved iron longsword~
+a curved iron longsword~
+A shiny longsword lays here, its blade slightly curved.~
+weapon
+iron~
+sword 4 8 slash 0
+40 16 0 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#16126
+orange dirty cloak~
+a dirty reddish-orange cloak~
+A piece of reddish-orange cloak lies here.~
+armor
+cloth~
+2 2 2 4 0
+40 6 5000 P
+WEAR TAKE
+WEAR NECK
+APPLY HP 10
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#16130
+tree~
+a tree bearing fruit~
+A large tree bearing fruit.~
+container
+wood~
+1 0 0 1 0
+1 1 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16131
+red rock~
+a red rock~
+A jagged red rock big enough to sit on lies here.~
+furniture
+stone~
+1 550 EH 10 10
+1 0 0 P
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 0
+TIMER 0
+
+#16132
+log bench rotten trunk tree~
+a tree trunk made into a log bench~
+A fallen tree trunk that looks as if it could be used as a log bench.~
+furniture
+wood~
+3 700 EHK 10 10
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16133
+boulder red rock huge~
+a huge boulder of red rock~
+A huge smooth boulder of red rock lies here.~
+trash
+stone~
+0 0 0 0 0
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16146
+spring water stream~
+a fresh water spring~
+A long stream of fresh water bubbles out of the north wall.~
+fountain
+unknown~
+-1 -1 'water' 0 0
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16158
+golden lion mark tattoo labbu~
+the golden mark of the Labbu~
+A sliced hunk of skin lies here with the golden mark of the Labbu.~
+armor
+skin~
+30 30 30 30 0
+55 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM NOLOCATE
+ITEM NOSTASH
+APPLY HITROLL 20
+APPLY DAMROLL 20
+LIMIT 0
+TIMER 0
+
+#16159
+writing~
+writing upon the rock.~
+This area has been brought to you by Steven Wilkins for Riftshadows use exclusively. Copywrite March 10th, 2004. "Hope you guys enjoy the new continent."~
+stone
+unknown~
+0 0 0 0 0
+1 0 0 P
+ITEM NOSHOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16161
+stone slab~
+a slab of stone with writing.~
+A tall slab of stone sits here covered in writing.~
+stone
+stone~
+0 0 0 0 0
+55 0 0 P
+ITEM GLOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16162
+boulder~
+a boulder~
+A huge boulder lies here between two rocky shelfs that created the treacherous path upwards.~
+stone
+rock~
+0 0 0 0 0
+55 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16167
+soiled loin-cloth wide~
+a wide soiled loin-cloth~
+A wide, overstretched piece of soiled cloth lays here.~
+armor
+cloth~
+0 0 0 0 0
+10 1 0 P
+WEAR TAKE
+WEAR LEGS
+APPLY DEX 1
+APPLY HITROLL 1
+APPLY DAMROLL -2
+LIMIT 0
+TIMER 0
+
+#16168
+red headband cloth~
+a red strip of cloth tied across the forehead~
+A long strip of soiled red cloth lies here in a pile.~
+armor
+cloth~
+0 0 0 0 0
+10 1 0 P
+WEAR TAKE
+WEAR HEAD
+APPLY HP 5
+APPLY HITROLL 1
+APPLY DAMROLL 1
+LIMIT 0
+TIMER 0
+
+#16169
+metal shield~
+a warped piece of metal in the shape of a shield~
+A beat up peice of metal lies here in a familiar shape.~
+armor
+metal~
+2 1 2 0 0
+22 13 0 P
+WEAR TAKE
+WEAR SHIELD
+APPLY HP 5
+LIMIT 0
+TIMER 0
+
+#16171
+pile bodies hobgoblins~
+a pile of bodies~
+A large pile of hobgoblin bodies lay here sprawled out, some fresh, and some in full blown decay.~
+npc_corpse
+flesh~
+0 0 0 0 0
+1 0 0 P
+ITEM NOLOCATE
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#16181
+rope old long~
+a long rope~
+An old rope is here, nailed into the west wall. It drops into complete darkness below.~
+trash
+rope~
+0 0 0 0 0
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16182
+rope long old~
+a rope~
+An old knotted rope hangs here from the dark hole in the ceiling.~
+trash
+rope~
+0 0 0 0 0
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16183
+padded rail~
+a padded rail for kneeling~
+A long padded rail lays stretches from one dark side of the cavern to the other.~
+furniture
+unknown~
+10 5 H 10 10
+1 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#16196
+golden necklace gold~
+a ring linked necklace made of gold~
+A strap of interlocking rings lay here, glinting in the faitest of light.~
+armor
+gold~
+0 0 0 2 0
+45 1 100000 P
+WEAR TAKE
+WEAR NECK
+ITEM HUM
+ITEM ROTDEATH
+ITEM NOLOCATE
+APPLY HP 15
+LIMIT 1
+TIMER 0
+
+#16198
+greatsword bleeding large~
+an elaborate greatsword constantly dripping with blood~
+A greatsword is stuck in the ground here, blood pouring off the blade onto the ground.~
+weapon
+adamantite~
+weapon 6 9 cleave 0
+51 35 80000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+ITEM ROTDEATH
+ITEM NOLOCATE
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY INT -2
+APPLY STR 2
+LIMIT 1
+TIMER 0
+
+#16199
+amulet~
+amulet~
+dummy desc~
+jewelry
+unknown~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#16100
+A Path Descending into the Valley of Dra~
+The prairie grasses suddenly stop as if they ran smack dab into the
+barricade that the red mountain range has made for itself.  Jagged rocks and
+tall steep walls shadow a small path decending down into the valley ahead. 
+The rugged range would be no place for an occasional traveler, only the most
+skilled will attempt to cross this mountain range, even through a valley
+such as this one.  The green vegatation looks tiny at this hieght.  
+~
+mountains
+ROOM EXPLORE
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Wide open plains stretch out as far as the eye can see.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+A beautiful valley stretches out before you covered in trees and shrubbery.
+~
+D UP 0 0 0
+door~
+The sky can be clearly seen from here.
+~
+D DOWN 16101 0 0
+door~
+The rocky path continues into the valley.
+~
+OWNER none~
+#16101
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16102 0 0
+door~
+The path continues into the valley.
+~
+D UP 16100 0 0
+door~
+The rocky path leading out of the valley.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16102
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16101 0 0
+door~
+The rocky path leads out of the valley.
+The rocky path leading out of the valley.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16103 0 0
+door~
+The rocky path continues into the valley.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16103
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16102 0 0
+door~
+The rocky path leading out of the valley.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 16104 0 0
+door~
+The rocky path continues into the valley.
+~
+OWNER none~
+#16104
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16105 0 0
+door~
+The rocky path continues into the valley.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 16103 0 0
+door~
+The rocky path leading out of the valley.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16105
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 16104 0 0
+door~
+The rocky path leading out of the valley.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 16106 0 0
+door~
+The rocky path continues into the valley.
+~
+OWNER none~
+#16106
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16107 0 0
+door~
+The rocky path continues into the valley.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 16105 0 0
+door~
+The rocky path leading out of the valley.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16107
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 16106 0 0
+door~
+The rocky path leading out of the valley.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16108 0 0
+door~
+The rocky path continues into the valley.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16108
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 16107 0 0
+door~
+The rocky path leading out of the valley.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16109 0 0
+door~
+The rocky path continues into the valley.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16109
+A Rocky Trail Through the Mountains~
+A mountain range of dark brownish-red rock covers this whole area. 
+Jagged as well as treacherous, the walls to this mountain pass are high and
+unforgiving.  Occasionaly a few pebbles tumble down the walls and add to the
+liter of stones on the path.  The path itself also contains many head size
+rocks of irregular shapes that are comprised of very sharp edges.  Foot
+holds are few an far between the big rocks and slippery pebbles that fill
+this path.  
+~
+mountains
+D NORTH 16108 0 0
+door~
+The rocky path leading out of the valley.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Between jagged rocks the valley can be seen much closer now.
+~
+D DOWN 16110 0 0
+door~
+The rocky path continues into the valley.
+~
+OWNER none~
+#16110
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16111 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 16127 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D UP 16109 0 0
+door~
+A rocky path leads out of the valley.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16111
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16110 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 16112 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D WEST 16128 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D UP 0 0 0
+door~
+The sky can be seen.
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16112
+The Lush Green of the Valley~
+Very healthy trees and other vegetation seem to be thriving here.  The
+greenness has spread out a bit from the path, and it now supports the huge
+trees that crowd the ceiling of the canopy.  Slivers of light peek through
+small holes in the canopy, dancing about with the swaying of the leaves. 
+The grass is long skinny blades that are a deep dark green, soft as silk
+that cushin every footfall.  A small break in the trees reveals a concealed
+pathway up into the valley walls.  A few trees scattered amongst the others
+produce an assortment of berries and new strange types of fruit.  Some of
+the trees have needle shapped leaves as others have a velvet look to them,
+and a varieties of shrubs and bushes are cluttered around each other between
+trees.  
+~
+mountains
+D NORTH 16111 0 0
+door~
+Clearly a path can be seen moving through this lush area.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16129 0 0
+door~
+Breath-taking beauty continues on this way.
+~
+D UP 16113 I 0
+door~
+A well concealed trail leads southeast up the side of the pass.
+~
+D DOWN 0 0 0
+door~
+The ground is covered with ferns and pretty looking long-bladed grass that reaches to the mid-calf.
+~
+OWNER none~
+#16113
+A Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 0 0 0
+door~
+The path out of the valley can be seen from here.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16114 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D WEST 0 0 0
+door~
+The rest of the valley spreads out, taking the shape of a small serpent. Lush green trees give way to a thick almost forest like valley towards the west.
+~
+D DOWN 16112 0 0
+door~
+The path leads down into a lush valley.
+~
+OWNER none~
+#16114
+A Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 16113 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 16115 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16115
+A Turn in the Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 0 0 0
+door~
+You see the valley and it seems to you a bit smaller from this height.
+~
+D EAST 16116 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 16114 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+OWNER none~
+#16116
+A Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16117 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16115 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16117
+A Turn in the Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16118 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D WEST 16116 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16118
+A Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 16117 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16119 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16119
+A Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 16118 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 16120 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16120
+A Turn in the Concealed Path~
+A smooth path as been hand made into the valley walls, and it has been
+very well hidden.  The path reaches up high into this side of the mountain,
+taking you up above the canopy.  The wind seems to whip through here, with a
+cold tongue to nip at you with its cool crispness.  Even up onto the path
+its hard to stay with the turns and curves this high up, as well walking the
+right path without tumbling down the side from bad foot placement.  A musty
+smell is strong on this path, even with the wind blowing as it does.  The
+trail looks to turn in every direction.  
+~
+mountains
+D NORTH 0 0 0
+door~
+The valley looks very dwarfed from this height, with the lush area on the east side of the pass, and the thick green along the west, stretching down the pass to the wastes. The valley really resembles a serpent.
+~
+D EAST 0 0 0
+door~
+The plains can clearly be seen from this height, as they spread out far as the eye can see.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16121 0 0
+door~
+Further up the concealed path this direction, you can see a small hidden cave.
+~
+D DOWN 16119 0 0
+door~
+Studing this direction, notice the concealed path leading down this side of the pass.
+~
+OWNER none~
+#16121
+A Concealed Path in Front of a Cave~
+The hand made path ends abrutly at a cave.  A large boulder oddly blocks
+the entrance to the cave.  Looking down from here would spin the stomachs of
+lesser hikers and adventurers.  The fall itself from this height would most
+likely give one time to reflect on the days events and speak a prayer or
+two.  The snow capped peaks can be seen off in the near distance stretching
+from the north to the south.  
+~
+mountains
+D NORTH 0 0 0
+door~
+The tops of the mountain range can be seen from here. It is remarkably beautiful.
+~
+D EAST 16120 0 0
+door~
+Studing this direction, you can see the concealed path up this side of the pass.
+~
+D SOUTH 0 0 0
+door~
+The tops of the mountain range can be seen from here. It is remarkably beautiful.
+~
+D WEST 16122 AI 16121
+stone~
+A small opening in the rock is covered by a large stone resembling a boulder, but you notice that it has a handle.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16122
+A Cozy Cave~
+Inside this warm comfortable cave lies a rug on the floor, some rugs
+spread out along the wall, a tapestry is hung as well.  A few garments of
+hiking gear have been tossed about here near the door, which looks nothing
+like its boulder exterior.  A few small lamps lay here glowing dimly with
+light that creates no heat.  
+~
+inside
+D NORTH 0 0 0
+door~
+Rugs have been hung up here on the wall to keep the winter chill at this elevation out.
+~
+D EAST 16121 AC 16121
+stone~
+The boulder from this direction looks much more like a door. It even has a few concealed peep holes.
+~
+D SOUTH 0 0 0
+door~
+A tapestry hangs here, depicting a large mountain goat looking up from grazing.
+~
+D WEST 16123 0 0
+door~
+A cave big enough for three humans abreast, stretches out before you.
+~
+D UP 0 0 0
+door~
+A smooth stone ceiling lit by firelight.
+~
+D DOWN 0 0 0
+door~
+The floor of this cave has been kept as clean as a cave could be.
+~
+OWNER none~
+#16123
+A Cozy Cave~
+Inside this warm comfortable cave more rugs lie on the floor, a tapestry
+is hungs here as well, with rugs stretching further into the cave.  A fire
+is lit in the corner crackling with heat, a clutch of newly chopped wood
+stocked against the wall next to the fireplace.  The fireplace itself has a
+hand made ventilation system that carries out the smoke, but not the warmth
+granted by the fire.  
+~
+inside
+D NORTH 0 0 0
+door~
+A tapestry hangs here, depicting a beautiful valley shaped like a snake.
+~
+D EAST 16122 0 0
+door~
+A cave big enough for three humans comes to an end with a door in this direction.
+~
+D SOUTH 16124 0 0
+door~
+A cave big enough for three humans abreast, stretches out before you.
+~
+D WEST 0 0 0
+door~
+Rugs have been hung up here on the wall to keep the winter chill at this elevation out.
+~
+D UP 0 0 0
+door~
+A blackened smooth stone ceiling lit by firelight, with a few small holes to let out the smoke.
+~
+D DOWN 0 0 0
+door~
+The floor of this cave has been kept as clean as a cave could be.
+~
+OWNER none~
+#16124
+Deeper into the Cozy Cave~
+Further into this cushy cave the light dims from the fire and lamps in
+the front area.  Paintings of all types lay along the walls stacked ontop of
+each other with the rugs behind them.  A few of these canvas stacks have
+parted to show a beautiful tapestry the size of the western cave wall.  
+~
+inside
+D NORTH 16123 0 0
+door~
+A cave big enough for three humans abreast, stretches out before you.
+~
+D EAST 0 0 0
+door~
+Rugs have been hung up here on the wall to keep the winter chill at this elevation out.
+~
+D SOUTH 16125 0 0
+door~
+A cave big enough for three humans abreast, comes to a wall at the end of this so called corridor.
+~
+D WEST 0 0 0
+door~
+A tapestry hangs here, depicting snow capped red mountains that boarder with plains.
+~
+D UP 0 0 0
+door~
+A smooth stone ceiling lit by firelight.
+~
+D DOWN 0 0 0
+door~
+The floor of this cave has been kept as clean as a cave could be.
+~
+OWNER none~
+#16125
+Deeper into the Cozy Cave~
+In the back of this cushy cave the light is very dim from the fire and
+lamps in the front area.  Rock sculptures and a few paintings lay along the
+walls, the paintings stacked ontop of each other, and the sculptures sit in
+the corner with the rugs behind them.  The canvas stacks have parted to show
+a beautiful tapestry on the south wall.  To the east is a door, light spills
+out of the top and bottom with a dull illumination.  
+~
+inside
+D NORTH 16124 0 0
+door~
+A cave big enough for three humans abreast, stretches out before you.
+~
+D EAST 16126 A 0
+wooden door~
+A wooden door is here with a handle made of metal, it has been carved just right to fit in this space.
+~
+D SOUTH 0 0 0
+door~
+A tapestry hangs here, depicting a savage looking cat crouched down
+watching his prey.  
+~
+D WEST 0 0 0
+door~
+Rugs have been hung up here on the wall to keep the winter chill at this elevation out.
+~
+D UP 0 0 0
+door~
+A smooth stone ceiling lit by firelight.
+~
+D DOWN 0 0 0
+door~
+The floor of this cave has been kept as clean as a cave could be.
+~
+OWNER none~
+#16126
+Back Room in the Cozy Cave~
+A bed lies here in the middle of the room.  Wooden posts with a post
+laying across the top seem to have made a rack for hanging things.  Above
+the bed on the eastern wall is another large tapestry.  A small nightstand
+made from stone has been chiseled out of what looks like marble.  The bed
+looks cushiony with a blanket spread across the top made entirely of
+feathers.  On the nightstand a small lamp like those in the front room
+sparkles brightly giving off just enough light for the room.  Garments of
+traveling gear have been left in a heap in the corner.  The room has a faint
+smell of human body odor.  
+~
+inside
+D NORTH 0 0 0
+door~
+Rugs have been hung up here on the wall to keep the winter chill at this elevation out.
+~
+D EAST 0 0 0
+door~
+A tapestry hangs here, depicting a stalwart-looking man posing.
+~
+D SOUTH 0 0 0
+door~
+Rugs have been hung up here on the wall to keep the winter chill at this elevation out.
+~
+D WEST 16125 A 0
+wooden door~
+The back of the wooden door is here covered with rugs and a small protrait of a beautiful female.
+~
+D UP 0 0 0
+door~
+A smooth stone ceiling fills this area of the room.
+~
+D DOWN 0 0 0
+door~
+The floor of this cave has been kept as clean as a cave could be.
+~
+OWNER none~
+#16127
+The Lush Green of the Valley~
+Very healthy trees and other vegetation seem to be thriving here.  The
+greenness has spread out a bit from the path, and it now supports the huge
+trees that crowd the ceiling of the canopy.  Slivers of light peek through
+small holes in the canopy, dancing about with the swaying of the leaves. 
+The grass is long skinny blades that are a deep dark green, soft as silk
+that cushin every footfall.  A few trees scattered amongst the others
+produce an assortment of berries and new strange types of fruit.  Some of
+the trees have needle shapped leaves as others have a velvet look to them,
+and a varieties of shrubs and bushes are cluttered around each other between
+trees.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 16110 0 0
+door~
+Clearly a path can be seen moving through this lush area.
+~
+D SOUTH 16128 0 0
+door~
+Clearly a path can be seen moving through this lush area.
+~
+D WEST 16130 0 0
+door~
+Breath-taking beauty continues on this way.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+The ground is covered with ferns and pretty looking long-bladed grass that reaches to the mid-calf.
+~
+OWNER none~
+#16128
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16127 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D EAST 16111 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16129 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D WEST 16131 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16129
+The Lush Green of the Valley~
+Very healthy trees and other vegetation seem to be thriving here.  The
+greenness has spread out a bit from the path, and it now supports the huge
+trees that crowd the ceiling of the canopy.  Slivers of light peek through
+small holes in the canopy, dancing about with the swaying of the leaves. 
+The grass is long skinny blades that are a deep dark green, soft as silk
+that cushin every footfall.  A few trees scattered amongst the others
+produce an assortment of berries and new strange types of fruit.  Some of
+the trees have needle shapped leaves as others have a velvet look to them,
+and a varieties of shrubs and bushes are cluttered around each other between
+trees.  
+~
+mountains
+D NORTH 16128 0 0
+door~
+Clearly a path can be seen moving through this lush area.
+~
+D EAST 16112 0 0
+door~
+Breath-taking beauty continues on this way.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16132 0 0
+door~
+Breath-taking beauty continues on this way.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+The ground is covered with ferns and pretty looking long-bladed grass that reaches to the mid-calf.
+~
+OWNER none~
+#16130
+The Lush Green of the Valley~
+Very healthy trees and other vegetation seem to be thriving here.  The
+greenness has spread out a bit from the path, and it now supports the huge
+trees that crowd the ceiling of the canopy.  Slivers of light peek through
+small holes in the canopy, dancing about with the swaying of the leaves. 
+The grass is long skinny blades that are a deep dark green, soft as silk
+that cushin every footfall.  A few trees scattered amongst the others
+produce an assortment of berries and new strange types of fruit.  Some of
+the trees have needle shapped leaves as others have a velvet look to them,
+and a varieties of shrubs and bushes are cluttered around each other between
+trees.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 16127 0 0
+door~
+Breath-taking beauty continues on this way.
+~
+D SOUTH 16131 0 0
+door~
+Clearly a path can be seen moving through this lush area.
+~
+D WEST 16133 0 0
+door~
+The lush green gives way to the compact foliage in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+The ground is covered with ferns and pretty looking long-bladed grass that reaches to the mid-calf.
+~
+OWNER none~
+#16131
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16130 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D EAST 16128 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16132 0 0
+door~
+Lush green continues this direction until it meets the side of the pass.
+~
+D WEST 16134 0 0
+door~
+The trees start to thicken, but the path continues on.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16132
+The Lush Green of the Valley~
+Very healthy trees and other vegetation seem to be thriving here.  The
+greenness has spread out a bit from the path, and it now supports the huge
+trees that crowd the ceiling of the canopy.  Slivers of light peek through
+small holes in the canopy, dancing about with the swaying of the leaves. 
+The grass is long skinny blades that are a deep dark green, soft as silk
+that cushin every footfall.  A few trees scattered amongst the others
+produce an assortment of berries and new strange types of fruit.  Some of
+the trees have needle shapped leaves as others have a velvet look to them,
+and a varieties of shrubs and bushes are cluttered around each other between
+trees.  
+~
+mountains
+D NORTH 16131 0 0
+door~
+Clearly a path can be seen moving through this lush area.
+~
+D EAST 16129 0 0
+door~
+Breath-taking beauty continues on this way.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16135 0 0
+door~
+The lush green gives way to the compact foliage in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+The ground is covered with ferns and pretty looking long-bladed grass that reaches to the mid-calf.
+~
+OWNER none~
+#16133
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 16130 0 0
+door~
+A line of think trees seem to have been cut from the valley wall in this direction and seperated from the wall, slowly rolling westward.
+~
+D SOUTH 16134 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16134
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16133 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D EAST 16131 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16135 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16136 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16135
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16134 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16132 0 0
+door~
+A line of think trees seem to have been cut from the valley wall in this direction and seperated from the wall, slowly rolling westward.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16137 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16136
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16134 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16137 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16139 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16137
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16136 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16135 0 0
+door~
+Thick trees contine on in this direction.
+~
+D SOUTH 16138 0 0
+door~
+Thick trees continue on in this direction.
+~
+D WEST 16140 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16138
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16137 0 0
+door~
+Thick trees continue on in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16141 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16139
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16136 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16140 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 16142 0 0
+door~
+Ahead the trees split for some odd reason.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16140
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16139 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 16137 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D SOUTH 16141 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16143 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16141
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16140 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16138 0 0
+door~
+Thick trees continue on in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16144 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16142
+A Broad Split in the Trees~
+The foliage seems to lighten here, revealing the opening to a cave in the
+northern valley wall.  The ground is covered with many more rocks and sticks
+are scarce as well as fruit found in other areas of the valley.  The canopy
+still hangs above, slightly parted allowing the grass to grows better here
+than most places.  The cave to the north is quite narrow made from splitting
+of a single rock, a natural occurance in this case.  
+~
+mountains
+D NORTH 16145 0 0
+door~
+Between the jagged rocks that make the mountains unaccessible, you can make out a cave in this direction.
+~
+D EAST 16139 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D SOUTH 16143 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16143
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16142 0 0
+door~
+Ahead the trees split for some odd reason.
+~
+D EAST 16140 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16144 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16147 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16144
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16143 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16141 0 0
+door~
+Thick trees continue on in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16148 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16145
+A Narrow Cave in the Mountain Range~
+The cave ceiling is nearly twenty feet tall, but the cave itself is only
+five feet wide.  It stretches upward into what looks like a natural
+staircase leading further back into the cave.  The walls are smooth as is
+the ceiling.  The floor is slightly damp.  A wet smell wafts through the
+cave.  
+~
+cave
+D NORTH 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D EAST 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D SOUTH 16142 0 0
+door~
+The narrow cave opens to reveal thick trees.
+~
+D WEST 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D UP 16146 0 0
+door~
+This direction leads deeper into the narrow cave.
+~
+D DOWN 0 0 0
+door~
+Trickles of water move across the smooth cave floor infront of you, leading out into the valley.
+~
+OWNER none~
+#16146
+Deeper in the Narrow Cave~
+Deeper into the cave, the ceiling suddenly drops and is only twelve feet
+tall.  Running water can be heard as a small stream of water pours from a
+rock opening in the north wall.  The cave itself is very smooth and dark.  
+~
+cave
+D NORTH 0 0 0
+door~
+Smooth, cold rock opens slightly for a small stream of water to trickle down the cave wall to the floor out into the valley.
+~
+D EAST 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D SOUTH 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D WEST 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D UP 0 0 0
+door~
+Smooth, cold rock covers the surface of the cave in this direction.
+~
+D DOWN 16145 0 0
+door~
+This direction leads to the mouth of the narrow cave.
+~
+OWNER none~
+#16147
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16143 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16148 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16149 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16148
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16147 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16144 0 0
+door~
+Thick trees continue on in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16149
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16147 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16151 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16150
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 16151 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 16153 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16151
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16150 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D EAST 16149 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16154 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16152
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 16153 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 16155 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16153
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16152 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D EAST 16150 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D SOUTH 16154 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 16156 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16154
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16153 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 16151 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16155
+A Small Break in the Foliage~
+Here the foliage is much more dense and irregular than in any other place
+within this valley yet a break can be seen near the valley wall.  The trees
+leaves and branches criss cross through here making travel very hard.  Rocks
+and pebbles scarcely cover the ground, but still making foot placement
+difficult.  A few branches here and there have been snapped and are hanging
+by just the bark.  Sticks and fruit also cover the ground as well short
+coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 16152 0 0
+door~
+Thick trees continue on in this direction.
+~
+D SOUTH 16156 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D UP 16157 I 0
+door~
+Through a small break in the foliage, you can see a trail in the jagged pass.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+ALTDESC 0 Deep Within the Valley of Dra~
+ Default alternate description.  Here the foliage is much more dense and
+irregular than in any other place within this valley.  The trees leaves and
+branches criss cross through here making travel very hard.  Rocks and
+pebbles scarcely cover the ground, but still making foot placement
+difficult.  A few branches here and there have been snapped and are hanging
+by just the bark.  Sticks and fruit also cover the ground as well short
+coarse grass pokes up between them and the rocks.  
+~
+OWNER none~
+#16156
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16155 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D EAST 16153 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16163 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16157
+Treacherous Trail~
+This trail is almost completely vertical.  Only cliff ledge to cliff
+ledge is what one would have to climb too.  Further up the trail a boulder
+sits with only two thin pieces of the mountain holding it from droping into
+the valley below.  The jagged rocks here provide for stable footing but one
+slip and they could easily shred flesh like a meat cleaver.  
+~
+mountains
+D NORTH 16158 0 0
+door~
+The treacherous trail continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+The canopy stretches out above the valley floor.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 16155 0 0
+door~
+A small break in the canopy shows the valley floor.
+~
+OWNER none~
+#16158
+Treacherous Trail~
+This trail is almost completely vertical.  Only cliff ledge to cliff
+ledge is what one would have to climb too.  Further up the trail a boulder
+sits with only two thin pieces of the mountain holding it from droping into
+the valley below.  The jagged rocks here provide for stable footing but one
+slip and they could easily shred flesh like a meat cleaver.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16157 0 0
+door~
+The treacherous trail continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 16159 0 0
+door~
+The treacherous trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16159
+Treacherous Trail~
+This trail is almost completely vertical.  Only cliff ledge to cliff
+ledge is what one would have to climb too.  Further up the trail a boulder
+sits with only two thin pieces of the mountain holding it from droping into
+the valley below.  The jagged rocks here provide for stable footing but one
+slip and they could easily shred flesh like a meat cleaver.  A cave can be
+seen to the north.  
+~
+mountains
+D NORTH 16161 I 0
+door~
+A cave seems hidden in the side of this treacherous trail.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+The valley walls can be seen from here, jagged and unwelcoming.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 16162 0 0
+door~
+The treacherous trail continues in this direction.
+~
+D DOWN 16158 0 0
+door~
+The treacherous trail continues in this direction.
+~
+OWNER none~
+#16161
+A Lit Cavern~
+This small cave is lit by a large slab of stone that sits in the middle
+of the room.  The writing on the stone circles around the sides in one long
+sentence.  The walls of the cave are quite rough as if one of the divine
+reached down and plucked the rock from the cave himself.  There is not a
+loose peice of gravel in the whole cave.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+This rough stone walls seem to be lit by some unnatural means.
+~
+D EAST 0 0 0
+door~
+This rough stone walls seem to be lit by some unnatural means.
+~
+D SOUTH 16159 0 0
+door~
+The mouth of the cave widens out into the treacherous trail.
+~
+D WEST 0 0 0
+door~
+This rough stone walls seem to be lit by some unnatural means.
+~
+D UP 0 0 0
+door~
+A ceiling of rough stone flickers with dancing light that swirls around it.
+~
+D DOWN 0 0 0
+door~
+Rough stone covers the floor, yet there isn't a pebble in site.
+~
+OWNER none~
+#16162
+An Obstructed Treacherous Trail~
+The trail almost comes to an end with the boulder directly above.  The
+only thing holding it is an irregular cliff side that has somehow caught the
+boulder in between two stone fingers.  Although the jagged rocks here
+provide for stable footing it is a futile attempt to go any further upward. 
+~
+mountains
+D NORTH 0 0 0
+door~
+A Large boulder blocks the treacherous path northward.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+The valley walls can be seen from here, jagged and unwelcoming.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D DOWN 16159 0 0
+door~
+The treacherous trail continues in this direction.
+~
+OWNER none~
+#16163
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16156 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16164 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16164
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+unused
+D NORTH 16163 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16165 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16165
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16164 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16166 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16166
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16165 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16167 0 0
+door~
+The trees part to reveal a small field of grass.
+~
+D WEST 16170 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16167
+An Ample Field of Grass~
+The trees line comes to an end as this large field of grass stretches to
+the side of the valley here.  Quite strange for the trees in this area to
+suddenly stop.  A foul smell lingers in the air, as the wind seems to
+neglect this grass field.  A broad cave lies along the wall of the valley. 
+The sharp edges of rocks can be seen sticking up from within grass to make
+travel in this field slightly difficult.  
+~
+mountains
+D NORTH 16166 0 0
+door~
+A path can be seen through a few trees that cover it.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 16168 0 0
+door~
+The jagged rocks part to reveal a large broad cave.
+~
+D WEST 16171 0 0
+door~
+Thick trees look as if they are kept at bay.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+Short grass grows in this field cushioning your footfalls.
+~
+OWNER none~
+#16168
+A Large Broad Cave~
+There is a huge opening into this grotesque cave.  Mud and fecal matter
+lines the walls, floor, and ceiling as if hundreds of creatures lived here
+at this exact spot for a time.  The stench of death and fecies fills the air
+almost to the point of choking out the oxygen.  
+~
+cave
+D NORTH 16167 0 0
+door~
+The mouth of the large cave opens into a field of grass.
+~
+D EAST 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D SOUTH 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D WEST 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D UP 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D DOWN 16169 0 0
+door~
+A small decline leads deeper into the cave.
+~
+OWNER none~
+#16169
+Dark Depths of the Large Cave~
+Deeper into this cave the more foul the smell is, dead bodies of
+hobgoblins piled up down here along the walls.  Flies buzz around noisily
+feeding and laying eggs.  Some of the more decomposed bodies are rotting
+with maggots coming out everywhere.  Fecies and mud cake the bodies as they
+do the walls and floor.  The noxiousness aroma of the dark depths of this
+cave could make the most seasoned warrior's head spin.  
+~
+cave
+D NORTH 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D EAST 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D SOUTH 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D WEST 0 0 0
+door~
+Mud and other substances have been caked on this cave wall.
+~
+D UP 16168 0 0
+door~
+A small incline leads to the entrance of the cave.
+~
+D DOWN 0 0 0
+door~
+The floor is covered in mud, fecies, and food.
+~
+OWNER none~
+#16170
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16166 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16171 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16172 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16171
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16170 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16167 0 0
+door~
+The trees part to reveal a small field of grass.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16173 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16172
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16170 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16173 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 16174 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16173
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16172 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 16171 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16175 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16174
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 16172 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D SOUTH 16175 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 16178 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16175
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16174 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D EAST 16173 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16176 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16179 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16176
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16175 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16180 0 0
+door~
+Thick trees continue on in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16177
+A Small Cave~
+This small cave is crapped and tiny.  The ceiling only reaches five feet
+three inches tall.  It is very circular, all the way to the top.  The width
+is nearly the same as the hieght.  On the floor in the back of the cave a
+seam of a stone slab is pulled apart slightly, hinting at perhaps a trap
+door.  The walls are smooth and cool, and the floor is covered in rocks and
+pebbles.  
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D EAST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D SOUTH 16178 0 0
+door~
+You can see only thick foliage in this direction.
+~
+D WEST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D UP 0 0 0
+door~
+Smooth cold walls meet here to encapsulate this small cave.
+~
+D DOWN 16181 AI 0
+slab~
+Small pebbles and rocks litter the floor of this small cave, but you seem notice a circular outline of a stone slab in the floor near the wall.
+~
+OWNER none~
+#16178
+Deep Within the Valley of Dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16177 I 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D EAST 16174 0 0
+door~
+Thick trees continue on in this direction.
+~
+D SOUTH 16179 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16179
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 16178 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D EAST 16175 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16180 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D WEST 16191 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16180
+Deep within the valley of dra~
+Here the foliage is much more dense and irregular than in any other place
+within this valley.  The trees leaves and branches criss cross through here
+making travel very hard.  Rocks and pebbles scarcely cover the ground, but
+still making foot placement difficult.  A few branches here and there have
+been snapped and are hanging by just the bark.  Sticks and fruit also cover
+the ground as well short coarse grass pokes up between them and the rocks.  
+~
+mountains
+D NORTH 16179 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D EAST 16176 0 0
+door~
+Thick trees continue on in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the edge of the valley making travel in this direction unattainable.
+~
+D WEST 16192 0 0
+door~
+The trees ahead seem to draw apart from each other slightly.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A tangle of thick vegetation covers the floor of the valley here, jagged red rocks stick up frequently from under it that you have to watch your step.
+~
+OWNER none~
+#16181
+A Confined Crawl Space~
+A dark narrow tunnel just big enough to crawl through lined with cold
+smooth walls made out of the mountain.  Near the bottom edge of the tunnel
+is a rope that disappears into the darkness below.  
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D EAST 0 0 0
+door~
+A smooth cold wall has markings on this wall that seem to be some sort of language.
+~
+D SOUTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D WEST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D UP 16177 A 0
+slab of stone~
+A slab of rock has been moved aside to allow entrance into this cramped corridor.
+~
+D DOWN 16182 0 0
+door~
+The crawlspace drops into a blanket of darkness this way.
+~
+TRAP 'dart' 0 0 0
+arrives.~
+A soft click sounds as a whistling dart is flung from the shadows.~
+OWNER none~
+#16182
+The Center of a Dark Abandon Cavern~
+A hazy darkness spreads out in all directions.  A rope hangs in the
+center of the room possibly the only exit.  Rugs lie on the floor as does a
+large wooden podium in the center of the room just collecting dust.  A small
+chair sits next to the podium, its orgins ancient at best.  A few rows of
+padded rails lie on the floor, perhaps for some to kneel and pray.  
+~
+cave
+D NORTH 16184 0 0
+door~
+The dark cavern continues in this direction.
+~
+D EAST 16187 0 0
+door~
+The dark cavern continues in this direction.
+~
+D SOUTH 16189 0 0
+door~
+The dark cavern continues in this direction.
+~
+D WEST 16186 0 0
+door~
+The dark cavern continues in this direction.
+~
+D UP 16181 0 0
+door~
+The rock ceiling gives way to a dark hole in the middle.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16183
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D EAST 16184 0 0
+door~
+The dark cavern continues in this direction.
+~
+D SOUTH 16186 0 0
+door~
+The dark cavern continues in this direction.
+~
+D WEST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16184
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+D NORTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D EAST 16185 0 0
+door~
+The dark cavern continues in this direction.
+~
+D SOUTH 16182 0 0
+door~
+The dark cavern continues in this direction.
+~
+D WEST 16183 0 0
+door~
+The dark cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16185
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D EAST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D SOUTH 16187 0 0
+door~
+The dark cavern continues in this direction.
+~
+D WEST 16184 0 0
+door~
+The dark cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16186
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 16183 0 0
+door~
+The dark cavern continues in this direction.
+~
+D EAST 16182 0 0
+door~
+The dark cavern continues in this direction.
+~
+D SOUTH 16188 0 0
+door~
+The dark cavern continues in this direction.
+~
+D WEST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16187
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 16185 0 0
+door~
+The dark cavern continues in this direction.
+~
+D EAST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D SOUTH 16190 0 0
+door~
+The dark cavern continues in this direction.
+~
+D WEST 16182 0 0
+door~
+The dark cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16188
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 16186 0 0
+door~
+The dark cavern continues in this direction.
+~
+D EAST 16189 0 0
+door~
+The dark cavern continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D WEST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16189
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 16182 0 0
+door~
+The dark cavern continues in this direction.
+~
+D EAST 16190 0 0
+door~
+The dark cavern continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D WEST 16188 0 0
+door~
+The dark cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16190
+A Dark Abandon Cavern~
+Dust covers everything.  Small benches made of wood line the walls, as
+well as a coat rack in the northeast corner.  Rugs cover the floor, now full
+of dirt and pebbles.  This was obviously some type of hideout, but to whom? 
+Nothing that was needed had been left behind.  The walls are smooth as the
+walls in the cave ontop.  A few burlap sacks lie here and there, and some
+hemp twine has been left on the ground.  
+~
+cave
+ROOM INDOORS
+D NORTH 16187 0 0
+door~
+The dark cavern continues in this direction.
+~
+D EAST 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D SOUTH 0 0 0
+door~
+A smooth cold wall covers this direction.
+~
+D WEST 16189 0 0
+door~
+The dark cavern continues in this direction.
+~
+D UP 0 0 0
+door~
+The walls curve in to form a ceiling in this dark cavern.
+~
+D DOWN 0 0 0
+door~
+Small pebbles and rocks litter the floor of this dark Cavern.
+~
+OWNER none~
+#16191
+A Narrow Pathway Through the Valley~
+The rocky trail continues through the valley as treacherous as through
+the pass.  Large sharp rocks are hidden within the surrounding foliage, and
+some lie on the pathway.  The trees are bunched togather so tight that the
+path has become narrow through time.  Large trees, small trees, shrubbery
+and prairie grass grow in every available spot.  The valley is very quiet,
+only the wind passing through the canopy is audible.  From time to time
+wildlife can be seen grazing, or a bird perched in a tree with nothing to
+sing about.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16179 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D SOUTH 16192 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 0 0 0
+door~
+A narrow pathway cutting through the Valley is covered in red rocks and small vegitation.
+~
+OWNER none~
+#16192
+A Narrow Pathway Descends into the Desert~
+The dense foliage of the valley seems to stop at the cliffs edge.  The
+pathway leads right to it, over the cliff lies a desert wasteland a small
+footpath leads down to the bottom of the mountain.  Nothing but
+reddish-brown rock and sand meet at the bottom of the mountain.  
+~
+mountains
+D NORTH 16191 0 0
+door~
+The trees break slightly as the path continues in this direction.
+~
+D EAST 16180 0 0
+door~
+You can not see very far from the trees that clutter this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+The trees begin to disappear you find yourself on a cliff, far off in the distance all that you can see are sand dunes.
+~
+D UP 0 0 0
+door~
+The canopy covers any sight of the sky and moons.
+~
+D DOWN 16193 0 0
+door~
+The steep path leads down taking you closer to the desert wasteland.
+~
+OWNER none~
+#16193
+Steep Footpath~
+Reddish-brown rocks cover this footpath with jagged edges and unforgiving
+placement making travel across it difficult.  The path moves in and out of
+rock cliffs and around boulders.  Pebbles fall down from above with
+regularity, racing to be the first one to hit the bottom of the mountain. 
+This trail has the look as though it is used quite often, but there is no
+one in site.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+A desert wasteland stretches out towards this direction. A path can be seen leading into the swirling sands that are the Wastes of Ven.
+~
+D UP 16192 0 0
+door~
+A steep climb upwards leads back to the valley.
+~
+D DOWN 16194 0 0
+door~
+The steep path leads down taking you closer to the desert wasteland.
+~
+OWNER none~
+#16194
+Steep Footpath~
+Reddish-brown rocks cover this footpath with jagged edges and unforgiving
+placement making travel across it difficult.  The path moves in and out of
+rock cliffs and around boulders.  Pebbles fall down from above with
+regularity, racing to be the first one to hit the bottom of the mountain. 
+This trail has the look as though it is used quite often, but there is no
+one in site.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 16195 0 0
+door~
+The steep path leads west taking you closer to the desert wasteland.
+~
+D UP 16193 0 0
+door~
+A steep climb upward leads back to the valley.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16195
+Steep Footpath~
+Reddish-brown rocks cover this footpath with jagged edges and unforgiving
+placement making travel across it difficult.  The path moves in and out of
+rock cliffs and around boulders.  Pebbles fall down from above with
+regularity, racing to be the first one to hit the bottom of the mountain. 
+This trail has the look as though it is used quite often, but there is no
+one in site.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 16194 0 0
+door~
+A steep climb eastward leads back to the valley.
+~
+D SOUTH 16196 0 0
+door~
+The steep path leads south taking you closer to the desert wasteland.
+~
+D WEST 0 0 0
+door~
+A desert wasteland stretches out towards this direction. A path can be seen leading into the swirling sands that are the Wastes of Ven.
+~
+D DOWN 0 0 0
+door~
+Jagged rocks and very few footholds cover this ground.
+~
+OWNER none~
+#16196
+Steep Footpath~
+Reddish-brown rocks cover this footpath with jagged edges and unforgiving
+placement making travel across it difficult.  The path moves in and out of
+rock cliffs and around boulders.  Pebbles fall down from above with
+regularity, racing to be the first one to hit the bottom of the mountain. 
+This trail has the look as though it is used quite often, but there is no
+one in site.  
+~
+mountains
+D NORTH 16195 0 0
+door~
+It looks like a steep climb will take you back to the valley.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D WEST 0 0 0
+door~
+A desert wasteland stretches out towards this direction. A path can be seen leading into the swirling sands that are the Wastes of Ven.
+~
+D DOWN 16197 0 0
+door~
+The steep path leads down to the desert wasteland.
+~
+OWNER none~
+#16197
+Along the Bottom of the Mountains~
+The trail breaks way into the bottom of the mountain.  Littered with
+rocks and pebbles that sit ontop of the sand that runs right up and into the
+mountain.  The sand on the ground crunches under every foot fall.  Upward a
+footpath can be seen to hike up and over this mountain, to the west lays an
+endless desert wasteland.  
+~
+desert
+D NORTH 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D EAST 0 0 0
+door~
+Jagged rocks line the path making travel in this direction unattainable.
+~
+D SOUTH 16198 0 0
+door~
+A cave lies in this direction.
+~
+D WEST 16199 0 0
+door~
+You see a path leading into a desert wasteland.
+~
+D UP 16196 0 0
+door~
+It looks like a steep climb will take you back to the valley.
+~
+D DOWN 0 0 0
+door~
+Many jagged red rocks cover this area, but the sand from the west seems to have creeped its way thus far.
+~
+OWNER none~
+#16198
+A Shallow Cave~
+A small cave big enough to get out of the sandstorms is here.  It is
+carved out of rock of the mountains, enough for a few to sit comfortibly. 
+It is not deep enough to make a home from, but it certainly can provide
+shelter.  The walls are smooth and warm to the touch, which heats the open
+space of the shallow cave.  Carved just right by the withering of time, a
+small protrudent stone looks to be carved as one piece from the back of the
+cave making a nice bench.  
+~
+cave
+D NORTH 16197 0 0
+door~
+The opening of the cave leads out among the bottom of the mountain pass.
+~
+D EAST 0 0 0
+door~
+This side of the cave is smooth and warm.
+~
+D SOUTH 0 0 0
+door~
+This side of the cave is smooth and warm.
+~
+D WEST 0 0 0
+door~
+This side of the cave is smooth and warm.
+~
+D UP 0 0 0
+door~
+The ceiling of the cave is smooth and warm.
+~
+D DOWN 0 0 0
+door~
+The floor of this cave is a rough with pebbles and a few jagged rocks.
+~
+OWNER none~
+#16199
+A Clear Path into the Waste of Ven~
+The mountains suddenly cease to move towards the west.  A few rocks lay
+around out here, fell and rolled down from the steep mountain side above. 
+The end of dunes stretch this far, trying to reach over the mountain range
+to no avail.  The mountains look like enormous titans standing in a line
+from here.  The jagged peaks are a reddish-brown color and covered with
+snow.  
+~
+desert
+D NORTH 0 0 0
+door~
+The red mountain range meets turns into a sandy wasteland as far as you can see.
+~
+D EAST 16197 0 0
+door~
+You can see a path that leads to the foot of the mountain pass.
+~
+D SOUTH 0 0 0
+door~
+The red mountain range meets turns into a sandy wasteland as far as you can see.
+~
+D WEST 16000 0 0
+door~
+An endless desert wasteland stretches out before you in this direction.
+~
+D DOWN 0 0 0
+door~
+Only a few smooth red rocks are on the ground, they seem to have been worn from the sound that fills this area like dirt and grass.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 16106 TO 16101 GLIMIT 6 LLIMIT 1
+MOB 16106 TO 16106 GLIMIT 6 LLIMIT 1
+MOB 16109 TO 16109 GLIMIT 5 LLIMIT 1
+GIVE 16109
+OBJECT 16130 TO 16111
+OBJECT 16113 TO 16111
+OBJECT 16130 TO 16112
+MOB 16115 TO 16115 GLIMIT 1 LLIMIT 1
+MOB 16120 TO 16120 GLIMIT 1 LLIMIT 1
+EQUIP 16126 NECKONE
+EQUIP 16123 LEGS
+EQUIP 16122 HANDS
+EQUIP 16124 WIELD
+EQUIP 16125 WIELD
+GIVE 16121
+OBJECT 16114 TO 16122
+OBJECT 16116 TO 16123
+OBJECT 16117 TO 16124
+OBJECT 16118 TO 16125
+OBJECT 16120 TO 16126
+OBJECT 16119 TO 16126
+OBJECT 16130 TO 16127
+PUT 16112 IN 16130 COUNT 1
+OBJECT 16130 TO 16129
+OBJECT 16113 TO 16129
+MOB 16106 TO 16130 GLIMIT 6 LLIMIT 1
+OBJECT 16130 TO 16130
+OBJECT 16113 TO 16130
+OBJECT 16130 TO 16132
+PUT 16112 IN 16130 COUNT 1
+OBJECT 16113 TO 16132
+MOB 16109 TO 16133 GLIMIT 5 LLIMIT 1
+GIVE 16109
+OBJECT 16131 TO 16133
+MOB 16106 TO 16139 GLIMIT 6 LLIMIT 1
+OBJECT 16133 TO 16141
+OBJECT 16146 TO 16146
+MOB 16109 TO 16147 GLIMIT 5 LLIMIT 1
+GIVE 16109
+OBJECT 16132 TO 16149
+OBJECT 16131 TO 16152
+MOB 16106 TO 16153 GLIMIT 6 LLIMIT 1
+MOB 16106 TO 16159 GLIMIT 1 LLIMIT 1
+OBJECT 16161 TO 16161
+OBJECT 16159 TO 16161
+OBJECT 16162 TO 16162
+MOB 16168 TO 16168 GLIMIT 1 LLIMIT 1
+EQUIP 16168 HEAD
+EQUIP 16169 SHIELD
+EQUIP 16167 LEGS
+MOB 16169 TO 16169 GLIMIT 1 LLIMIT 1
+EQUIP 16167 LEGS
+OBJECT 16171 TO 16169
+MOB 16109 TO 16178 GLIMIT 5 LLIMIT 1
+GIVE 16109
+OBJECT 16132 TO 16178
+OBJECT 16181 TO 16181
+OBJECT 16182 TO 16182
+OBJECT 16183 TO 16182
+MOB 16106 TO 16193 GLIMIT 6 LLIMIT 1
+MOB 16109 TO 16195 GLIMIT 5 LLIMIT 1
+GIVE 16109
+OBJECT 16131 TO 16195
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

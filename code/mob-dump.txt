@@ -1,0 +1,502 @@
+4600~elven elf ranger archer~an elven ranger~A large archer is here watching the forests.
+~A large elf draped in green cloaks and a large hood is here with a long bow slung over his shoulder. On his back he wears a full quiver of arrows.
+~1000~0~0~elf~40~20~8~2464~4~8~18~0~100~sting~0~0~0~0~standing~male~poor~4601~elf elven blacksmith~an elven blacksmith~An strong elf covered in soot hammers out some metal here.
+~A strong elf covered in soot is here, wearing a set of elven mail and a
+thick apron.  His body is muscular from the relentless hammering of armor
+and weapons.  
+~1000~0~0~elf~38~19~8~2213~5~6~16~0~100~smash~0~0~0~0~standing~male~poor~4602~warrior elven elf~an elven guardsman~A quick elven guardsman is here preparing for battle.
+~A slender elf wearing a complete set of elven chain mail is before you. 
+He posesses a stern visage but carries a twinkle in his eye.  
+~1000~0~0~elf~35~17~8~1867~4~7~14~0~100~slash~0~0~0~0~standing~male~poor~4603~elf elfven man~an elven man~An elven man is feasting here merrily.
+~A slender elf in bright clothing is here feasting and looking merry.
+~1000~0~0~elf~25~12~8~944~2~10~7~0~100~slice~0~0~0~0~standing~male~moderate~4604~elven elf woman~an elven woman~A beautiful elven woman is enjoying the feasting here.
+~A beautiful elven woman draped in colerful robes stands here with flowers
+in her hair and a smile in her eyes.  
+~1000~0~0~elf~25~12~8~944~2~7~10~0~100~slice~0~0~0~0~standing~female~moderate~4605~server waiter elf elven~an elven server~An elven server moves quickly through the room with a tray over his head.
+~Dressed in black robes this elf looks a bit overwhelmed by the ammount of
+food he is carrying around.  
+~1000~0~0~elf~20~10~8~604~2~6~6~0~100~crush~0~0~0~0~standing~male~poor~4606~elven elf man dancer~an elven dancer~A male elf dances about merrily to the music.
+~Draped in colorful clothing this slender elf wears his blonde hair tied
+behind his head.  His face is young and healthy looking and his eyes sparkle
+in the light.  
+~1000~0~0~elf~25~12~8~944~2~10~7~0~100~slap~0~0~0~0~standing~male~poor~4607~elf elven woman dancer~an elven dancer~A slender female elf dances about to the beat of the music.
+~A beautiful female elf smiles happily.  She is draped in beautiful
+clothes of nearly every color.  Her hair is braided and laced with beautiful
+wildflowers.  
+~1000~0~0~elf~25~12~8~944~4~10~7~0~100~slap~0~0~0~0~standing~female~poor~4608~musician drummer elven elf~an elven drummer~A large elf is here beating on a drum.
+~He is a large elf in brown leather and a large floppy hat.  You notice he
+has a few drumsticks hanging out of his pocket.  
+~1000~0~0~elf~30~15~8~1364~4~6~8~0~100~beating~0~0~0~0~standing~male~moderate~4609~elf elven woman harpist harp~an elven harpist~A elven woman with beautiful long hair plucks a harp beautifully here.
+~With long golden hair cascading down her back you see this elven woman
+has rose buds througout her hair.  She is wearing a beautiful jade dress
+that matches her gleaming eyes.  
+~1000~0~0~elf~30~15~8~1364~4~6~8~0~100~pierce~0~0~0~0~standing~female~moderate~4610~elf elven musician piccolo~a small elf~A small elf is here playing a silver piccolo.
+~A small elf wearing deep purple robes and a black hat smiles to himself. 
+His face is wrinkled from smiling and his eyes are a bright blue.  
+~1000~0~0~elf~30~15~8~1364~4~6~8~0~100~none~0~0~0~0~standing~male~moderate~4611~noble elven elf man~an elven noble~A elven man in extravagant clothing is sitting here.
+~Beautiful golden chains and expensive clothing cover this well groomed
+elf.  His hair and skin are extremely well taken care of and he looks about
+with a superior tone.  
+~1000~0~0~elf~35~17~8~1867~4~7~14~0~100~slash~0~0~0~0~standing~male~affluent~4612~female elven elf noble~an elven noble~A beautiful elf in an expensive dress sits here quietly.
+~Wearing a beautiful white dress this elven woman is wearing a ring on
+almost every finger and has a beautiful necklace around her neck.  
+~1000~0~0~elf~35~17~8~1867~4~7~14~0~100~slash~0~0~0~0~standing~female~affluent~4613~spectral dragon blackened bones~the Spectral Dragon~A massive spectral dragon made of blackened bones rises up before you.
+~A massive spectral dragon flickers slightly before you.  Huge blackened
+bones form its entire body.  A deep crimson burns in its eye sockets as it
+looks towards you.  
+~-1000~0~0~dragon~60~30~8~7128~10~6~50~80~100~defilement~200~200~200~200~standing~male~rich~4614~soul elven spectre~an elven spectre~A lost elven soul floats quietly in the room.
+~A greenish translucense floats before you.
+~0~0~0~spectre~55~27~8~5268~3~12~22~0~100~none~100~100~100~100~standing~male~none~4615~elven ambassador~an elven ambassador~A regal elven man stands here stiffly.
+~This elven man wears lavish clothing and is extremely well groomed.  His
+face is kind looking and without blemish.  His hair is tied neatly behind
+his head, and he dons a strange looking cap.  
+~1000~24940~0~elf~45~22~8~3177~8~8~45~0~100~smash~0~0~0~0~standing~male~rich~4616~celestial titan ambassador~a celestial ambassador~A cleancut celestial titan stands here regally. 
+~Clad in large robes and a leather belt across his chest you see a very
+clean looking titan.  His hair flows down his back and tied at the very
+bottom.  
+~1000~0~0~celestial~45~22~8~3177~8~8~45~0~100~chop~0~0~0~0~standing~male~rich~4617~planar titan ambassador~a planar ambassador~A massive planar titan is thumbing through a small book here.
+~Clothed in a sky blue cloak and shining steel armor this planar titan
+carries a small book at his side.  On his arm he wears a strange emblem of a
+wolf.  His visage is cast with a bit of worry, and his brow is wrinkled from
+constant thought.  
+~0~0~0~planar~45~22~8~3177~8~8~45~0~100~crush~0~0~0~0~standing~male~rich~4618~sidhe ambassador~a sidhe ambassador~A beautiful female sidhe is here tending to her image.
+~Clothed in green robes this sidhe wears a wreath of wildflowers in her
+hair and a belt of vines around her waste.  She hovers silently before you
+quite breathtakingly.  
+~1000~0~0~sidhe~45~22~8~3177~8~8~45~0~100~stab~0~0~0~0~standing~female~rich~4619~minotaur ambassador~a minotaur ambassador~A large minotaur snorts to himself as he paces back and forth.
+~An extremely large minotaur is before you.  His horns are capped with
+gold and his hooves have been shined to a soft glow.  He wears black leather
+armor and a large medallion around his neck.  
+~0~0~0~minotaur~45~22~8~3177~8~8~45~0~100~none~0~0~0~0~standing~male~rich~4620~halfling ambassador~a halfling ambassador~A small halfling crouches in the shadows here.
+~Cloaked in black garb this halfling moves about with unparalleled
+stealth.  His face cannot even be seen past the dark hood he wears over his
+head.  
+~0~0~0~halfling~45~22~8~3177~8~8~45~55~100~slash~0~0~0~0~standing~male~rich~4621~stronghold patrol guard~a stronghold patrolman~A member of the stronghold patrol keeps vigil over the halls.
+~Clothed from head to toe in elven chain mail this patrolman guards the
+halls with his life.  
+~1000~0~0~elf~40~20~8~2464~4~8~14~0~100~slice~0~0~0~0~standing~male~none~4622~elven elf lord~the Elven Lord~A regal elven man stands here in flowing robes.
+~A tall and slender elven man with long flowing robes, and and elven armor
+is before you.  He is extremely well groomed and wears strange flowers in
+his long blonde hair.  Beautiful eyes of azure emminate grace and goodness,
+and his skin is milky white and youthfull.  
+~1000~0~0~elf~51~25~8~4274~10~4~36~50~100~slash~0~0~0~0~standing~male~rich~4623~human ambassador~a human ambassador~A well-kept human stands here, deep in thought.
+~A tall and slender human stands before you.  Lead-colored eyes peer out
+from beneath two well groomed eyebrows.  His hair is blonde and tied behind
+his head with a leather band.  He wears a short beard which is trimmed to
+perfection.  
+~1000~0~0~human~45~22~8~3177~8~8~25~0~100~slash~0~0~0~0~standing~male~rich~4624~ancient statue living~an ancient living statue~A massive statue stands here, breathing heavily.
+~~0~26988~0~spectre~53~26~8~4734~10~4~36~40~100~crush~200~200~200~200~standing~male~none~4625~guardian apparition wispy figure~the guardian apparition~A wispy figure floats silently here.
+~A thin wispy figure composed of refracting light and a hazy translucence
+is before you.  
+~0~25974~13876~spectre~51~25~8~4274~10~4~36~0~100~stab~0~0~0~0~standing~male~none~4626~vynith fawentod old man decrepit~Vynith Fawentod~A old decrepit elf hunches here with a dismal look upon his face.
+~An ancient elf clothed in simple robes which have been ravaged by time. 
+Tangled grey hair cascades down upon his shoulders, adding to his
+discheveled appearance.  He looks about with a distant look in his eyes. 
+You notice a large lion has been embroidered on the back of his robe.  
+~0~17184~27745~elf~60~30~8~7128~0~0~8205~0~100~punch~0~0~0~0~standing~male~none~2901~zombie~the zombie~A zombie stands rotting here, awaiting his masters command.
+~White bones peek out from beneath tattered rags as he grins at you with
+a malevolent aura.
+~-1000~2901~100~human~30~5~5~5~1~1~1~0~100~pound~0~0~0~0~standing~male~none~2906~falcon~a falcon~A majestic looking falcon circles overhead.
+~With fine feathers he looks young, his eyes dart quickly to and fro looking
+for danger..or for dinner.
+~0~0~100~unique~1~25~10~3000~4~4~1~0~100~claw~0~0~0~0~standing~male~none~2907~wolf~a wolf~A grey wolf stands here, snarling softly.
+~A thick heavy coat covers this beast and long sharp teeth protrude from his
+mouth. Making him look like something that is best seen, and not touched.
+~0~0~100~dog~1~25~10~3000~4~4~1~0~100~bite~0~0~0~0~standing~male~none~2908~bear~a bear~A large bear is here, sharpening is claws on the ground.
+~Larger then most men he towers above almost anything. Sharp claws, sharp
+teeth. One word sums it all up...sharp.
+~0~0~100~bear~1~25~10~3000~6~4~1~0~100~none~0~0~0~0~standing~male~none~2909~lion~a lion~A large mountain lion stands here, eyeing you suspiciously.
+~It looks very mean, with sharp claws and intelligent eyes you'd better think
+twice before tangling with it.
+~0~0~100~cat~1~25~10~3000~4~4~1~0~100~slash~0~0~0~0~standing~male~none~2910~guard special~a special guard~A special guard is standing here.
+~Selected from the strongest guard corp, these guards will stop at nothing
+to protect and uphold the law.
+~1000~0~100~human~15~15~15~160~5~5~2~0~100~slash~0~0~0~0~standing~male~none~2911~flesh golem~a flesh golem~A disgusting mass of stitched flesh stands here.
+~The product of some twisted mage who has been tampering with the powers
+of necromancy. This horrible being is not quite alive, yet also not dead.
+~0~0~100~human~1~25~10~3000~3~6~8~0~100~slash~0~0~0~0~standing~male~none~2915~iron golem~an iron golem~A large iron golem is here.
+~The product of some twisted mage who has been tampering with the powers
+of necromancy. This horrible being is not quite alive, yet also not dead.
+~0~0~100~human~1~25~10~3000~3~6~8~0~100~slash~0~0~0~0~standing~male~none~2920~creature dark slayer~a dark slayer~A creature of darkest night stands here ready to slay the light.
+~It has no soul, no mind, just the essence that it was formed iwth when the
+Lord Bane called upon the night for service.
+~-1000~0~100~human~45~25~10~3000~8~4~16~0~100~drain~0~0~0~0~standing~male~none~2921~skeleton~the skeleton~A zombie stands rotting here, awaiting his masters command.
+~The bones of this undead are pristine clean and move with an impossible
+life of their own. Small burning points of red reside within the eye
+sockets, gleaming with dark magic.
+ ~-1000~0~100~human~45~25~10~3000~4~4~1~0~100~none~0~0~0~0~standing~male~none~2922~mummie mummy~the mummy~A disgusting bloody mummy is here.
+~The tatttered and bloody remains of a corpse is here bound together by
+ragger bits of cloth. A dark set of hollow eyes stare back at you
+menacingly.
+~-1000~0~100~human~45~25~10~3000~6~7~1~0~100~pound~0~0~0~0~standing~male~none~2923~shadow~a shadow~The shadow of %s has been severed and given substance.
+~A strange moving shadow is standing here restlessly, every few moments you
+think you can make out a face below it's veil of darkness but as quickly
+as it appears it is gone again.~0~0~100~human~0~1~1~1~5~6~1~0~100~chill~0~0~0~0~standing~male~none~2924~slave purgatory~a slave of purgatory~A dark figure floats here, lurking amongst the shadows.
+~*growl*
+~-1000~0~100~unique~55~25~10~4000~8~6~45~0~100~drain~0~0~0~0~standing~male~none~2927~greater ice devil~a greater ice devil~Lashing its barbed tail angrily, a greater ice devil chitters furiously.
+~Straight from the Hells, this is one of the strongest devils to be found,
+and clearly a deadly force. Razor sharp mandibles, a tail with a poisonous
+barbed hook, this creature resembles the nightmare of an insane mind.
+~-1000~0~100~human~61~2000~1~1~12~12~50~0~100~defilement~0~0~0~0~standing~male~none~2930~warrior bounty mercenary~a hulking warrior mercenary~Standing here impatiently, a strong-looking warrior mercenary follows his bounty hunter.
+~Looking bored, this huge man seems quite competent with his weapons, yet follows
+his employer without question.
+~0~555~100~human~51~1~1~1~7~7~7~0~100~slash~0~0~0~0~standing~male~none~2931~thief bounty mercenary~an agile thief mercenary~Standing here in the shadows, an agile thief follows his bounty hunter, ready to strike.
+~This quiet thief makes no noise when he moves. You wonder if he doesn't dip into
+the pockets of his master every now and again. Then again, he does look loyal,
+if a bit shifty....
+~0~0~100~human~51~1~1~1~9~8~5~0~100~pierce~0~0~0~0~standing~male~none~2932~assassin bounty mercenary~a silent assassin mercenary~Cloaked in shadows, a deadly assassin mercenary stands here poised to strike.
+~Cloaked in shadows, this assassin looks extremely dangerous.
+~0~0~100~human~54~1~1~1~10~11~5~0~100~pierce~0~0~0~0~standing~male~none~2933~healer bounty mercenary~a rugged healer mercenary~Dispensing prayers for money, a rugged healer mercenary stands here following his master.
+~This fellow is in a most odd line of work, selling prayers for money.
+Nonetheless, he looks surprisingly competent, and seems to enjoy his work.
+~0~0~100~human~51~2250~1~1~4~4~5~0~100~divine~0~0~0~0~standing~male~none~2935~lesser demon barbed~a barbed styx demon~Covered in deadly, needle-like spikes, a barbed styx demon crouches here impatiently.
+~This barbed horror has emerged from the Hells for some no doubt horrid intent.
+~-1000~666~100~human~55~3000~1~1~10~10~10~0~100~slash~0~0~0~0~standing~male~none~2936~greater demon barbed~a greater ixitchatl demon~Saliva drips slowly down the armored body of this huge, winged demon.
+~This winged horror has emerged from the Hells for some no doubt horrid intent.
+~-1000~666~100~human~58~4000~1~1~10~15~10~0~100~defilement~0~0~0~0~standing~male~none~2937~lesser ice devil~a lesser ice devil~Touching its razor sharp mandibles together, a lesser ice devil hovers here in a cloud of darkness.
+~In many respects the overlord of the higher planes of Hell, lesser ice devils are the most feared
+denizens of their respective Circles.
+~-1000~666~100~human~60~5000~1~1~10~20~10~0~100~defilement~0~0~0~0~standing~male~none~2940~lesser shade~a lesser shade~An unearthly, intangible gray mist hovers soundlessly here.
+~This ghastly thing is but a floating torso, arms and head, shrouded in an
+unearthly gray mist. Its face is but a transparent, pale mound of puffy
+features. Only a sharp-toothed, crooked grin along with its two beady,
+black, narrow eyes are completely recognizable.
+~-1000~2940~100~human~1~1~1~1~10~6~15~0~100~drain~0~0~0~0~standing~male~none~2941~wailing banshee~a wailing banshee~A tall, translucent apparition hovers mournfully here.
+~This strange sort of shade has a look of profound loss and sadness on
+its ethereal face.  Hovering about a foot off of the ground, it is constantly
+whimpering, occasionally singing a death hymn in an unnatural, wailing voice.
+~-1000~2940~100~human~1~1~1~1~10~6~15~0~100~none~0~0~0~0~standing~male~none~2942~ghastly phantasm~a ghastly phantasm~A swirling, formless spirit seems to shift and twist into your worst nightmare.
+~This mini-maelstrom of hatred looks like a black raincloud, riddled
+with bolts of thunder and lightning, yet it makes no noise.  From time
+to time, you see the image of your most dreaded nightmare flash into
+the body of the cloud, only to be gone again soon after.
+~-1000~2940~100~human~1~1~1~1~10~6~10~0~100~slash~0~0~0~0~standing~male~none~2945~skeletal behemoth~a skeletal behemoth~A large, hulking mass of bones shambles heavily behind its master.
+~A huge, animalistic structure of bone covered with strips of ragged flesh rises
+above its surroundings. Relatively tiny pinpoints of a foul green light act as
+eyes for this undead beast. The sound of its grinding bones is almost deafening
+as it moves.
+~-1000~2940~100~human~1~1~1~1~19~10~30~0~100~crush~0~0~0~0~standing~male~none~2946~ravenous ghoul~a ravenous ghoul~A hunched form peers at everything around it menacingly.
+~Hobbling behind its master in a revolting manner, this undead creature
+glares at everything around it that moves. From time to time, it nibbles
+at the flesh on its own arms in a useless attempt to temporarily satiate
+its endless, infernal hunger.
+~-1000~2940~100~human~1~1~1~1~24~10~30~0~100~claw~0~0~0~0~standing~male~none~2947~menacing deathknight~a menacing deathknight~A black-boned skeleton in rusted platemail armor stands here, guarding someone.
+~Rusty iron platemail covers the black skeletal frame of this horrid thing.
+Small, red pinpoints of light stare straight ahead. As it moves, the rusted
+metal scrapes up against its bones, creating a screeching, creaking sound
+that would make its own skin crawl were it a living thing.
+~-1000~2940~100~human~1~1~1~1~24~10~40~0~100~slash~150~150~150~150~standing~male~none~2948~nephilim~a gigantic Nephilim~A being of immense size stands here immersed in shadow, the remains of chains hanging from him.
+~The shadows seem to cling around this giant-like being as it stands with fury
+and hatred burning it its pitch-black eyes.  The marks of its torment show
+still on the body and face of this rebellious angel.
+~-1000~0~100~human~1~20~10~20~20~10~20~0~100~slash~0~0~0~0~standing~male~none~2955~flesh golem~a flesh golem~A hunched and bloated creature stands here, bathed in the stench of decay.
+~This horrible necromantic creation is an attempt to mimic a humanoid creature...
+However, it is made entirely of black and bloated flesh of all different kinds.
+Hoarse sounds come from its throat periodically, as if it is trying to speak.
+~-1000~0~100~human~1~0~0~25~0~0~55~0~100~slash~0~0~0~0~standing~male~none~2956~bone golem~a bone golem~A strange skeletal being mindlessly paces here.
+~One may mistake this thing for a simple skeleton, if they were to ignore
+the fact that all of the bones are obviously from different races and species.
+The result is a wholly terrifying conglomeration of macabre detritus, an
+abomination whose mere sight would leave most mortals petrified with terror.
+~-1000~0~100~human~1~0~0~25~0~0~55~0~100~slash~0~0~0~0~standing~male~none~2957~blood golem~a blood golem~Flowing blood in a humanoid shape sloshes around here.
+~This seemingly unstable golem fashioned of viciously flowing blood
+is certainly a mess.  Parts of it are frothy and pink, others have
+chunks of scabs and dirt that it has picked up from the floor flowing
+through it.  Watching the froth and scabs closely, you can tell in just
+which direction the blood is churning.
+~-1000~0~100~human~1~0~0~25~0~0~55~0~100~drowning~0~0~0~0~standing~male~none~2958~funnel cloud whirlwind~the small whirlwind~A compact funnel cloud swirls quickly here, raising up dust in its wake.
+~This miniature whirlwind spins vigorously, but seems to barely affect the
+surrounding environment, save for a few stray dust particle. It barely even
+moves from its place, leading you to suspect that this is not a natural
+phenomenon.
+~0~0~0~unique~36~0~0~1~0~0~0~0~0~slash~0~0~0~0~standing~male~none~2959~stone golem~a hulking stone golem~An ape-like mass of stone trundles along, crushing everything beneath it.
+~This stone golem is of incredible craftsmanship, despite the fact that its
+finer features are virtually non-existant. It towers over even the largest of
+giants, and uses its massive figure to easily crush any who would dare stand in
+the way of its master.
+~-1000~0~100~human~1~0~0~25~0~0~55~0~65~crush~0~0~0~0~standing~male~none~2960~shadow golem~a malevolent shadow golem~A pitch-black shadow quietly slips through its surroundings.
+~This creature has no features or form, save two crimson eye-like dots toward
+the top. It moves with barely a whisper, and as it does you are reminded of the
+movement of water between stones. Fluid and indomitable, it presses forth
+to do its master's dark bidding.
+~-1000~0~100~human~1~0~0~25~0~0~55~0~100~defilement~0~0~0~0~standing~male~none~2961~glass golem~a jagged glass golem~A bristling mass of razor-sharp glass looms ominously here.
+~This odd golem looks as if it were once a stained glass window. Now,
+however, it is a colorful, disturbing distortion of the image of a knight.
+The colors have become slightly darker, and the face contains no valiance...
+only malevolence. The edges of this two-dimensional spectre are incredibly
+sharp and jagged.
+~-1000~0~100~human~1~0~0~25~0~0~55~0~100~slash~0~0~0~0~standing~male~none~2962~skull sentinel~a broken, rotting skull~A strangely cracked skull lies here.
+~Covered with putrid flesh, this skull seems to bleed a sort of mixture of
+pus-like fluid and insects;  ants and maggots crawl and writhe over its
+surface, giving it the eerie appearance of a moving, living thing.  What
+little skin and meat are left on the grinning bone look to have become
+rather decrepit, and give off a foul odor.  The surface of the skull's
+solid structure is covered with tiny cracks and fractures, and crossed
+with a few lashings of discolored and malodorous fungal growth.
+~-1000~0~100~unique~1~0~0~1~0~0~1~0~100~bite~0~0~0~0~standing~male~none~2963~barbas lesser demon~Barbas~A lesser demon stands here flexing his bulky muscles.
+~A great red man stands here, adorned with natural scaly armor and pounding
+it with his fists.  Displeased to be summoned from the abyss, Barbas scans
+the area for his tormentor and for tools with which he might crush said
+tormentor.  Bellowing challenges and fuming with rage, the lesser demon
+certainly seems livid.
+~-1000~0~100~demon~30~1~1~1499~1~1~34~25~100~flbite~100~100~100~100~standing~male~none~2964~aamon lesser demon~Aamon~Standing tall with a smirk, a lesser demon looks at you curiously.
+~A sigh resounds through the area, quickly replaced by a guttering snicker.
+Aamon stands before you, and his eyes twinkle at the opportunity to see you
+humiliated.  He fingers a small scroll of parchment, rolling and unrolling
+it almost nervously.  Glancing to the sky with a wavering gaze, his anxiety
+is bolstered against him by a glimpse through the clear air.
+~-1000~0~100~demon~30~1~1~1999~1~1~34~25~100~flbite~30~30~30~30~standing~male~none~2965~malaphar lesser demon~Malaphar~A lesser demon rubs his hands vigorously here.
+~Dressed like an everyday merchant, in robes of fine lavender and purple and
+golden chains and fobs, Malaphar wrings his hands in anticipation of new
+wealth.  He surveys his surroundings with a few furtive glances (doubtless
+scanning carefully for silver or gold) and finally focuses his attention
+upon you.  He unfurls the tache of a small leather bag and jingles its
+contents.
+~-1000~0~100~demon~30~1~1~1999~1~1~34~25~100~flbite~30~30~30~30~standing~male~none~2966~furcas lesser demon tiny~Furcas~A tiny demon darts to and fro here, barely able to be seen.
+~Galloping about on all fours like a gaunt swine, Furcas stares up at you
+with damp eyes the size of apples.  Baring his teeth suddenly, he reveals
+sharpened incisors and a hideously forked tongue.  His narrow features and
+spindly physique seem to portray a malnourished bush man, but deceptive
+strength in his arms and legs thrust him about effortlessly.
+~-1000~0~100~demon~30~1~1~1999~1~1~34~25~100~flbite~30~30~30~30~standing~male~none~2967~ipos lesser demon tall thin~Ipos~A tall and thin lesser demon struts about haughtily.
+~With a twinkling eye, Ipos measures his surroundings carefully.  Being
+plucked from the abyss as he was, he adapts to the environment remarkably
+quickly.  As steam rises from his skin, he pauses as though composing a
+thought.  Watching him speak is a marvel; his machinations and ruminations
+slowly tumble until well-placed words pour forth from his mouth.
+~-1000~0~100~demon~30~1~1~1999~1~1~34~25~100~flbite~30~30~30~30~standing~male~none~2968~oze greater demon blood bones~Oze~A towering demon of blood and bones grinds his teeth before you.
+~This greater demon is a perfect example of summoned beings which are
+incompatible with their surroundings.  In fact, Oze serves as the innards
+of another, somewhat greater demon; his departure likely meant death (or at
+least extreme discomfort) to the other, and certainly a rather awkward
+situation for himself, with no skin to hold him together.
+~-1000~0~100~demon~45~1~1~2999~1~1~44~45~100~flbite~30~30~30~30~standing~male~none~2969~gamygyn greater demon great barbed~Gamygyn~A great barbed demon stands here, somehow shining with black light.
+~A shimmering form which seems at times to dwarf you, and at times to stare
+into your face at eye level, Gamygyn is an amorphous being.  His body seems
+to phase in and out of existence on this plane; when here, he is a great
+being which emanates the light which would be seen if it were possible to
+view the sun through a lump of coal.
+~-1000~0~100~demon~45~1~1~2999~1~1~44~45~100~flbite~30~30~30~30~standing~male~none~2970~orobas greater demon~Orobas~A demon with an eerily wide smile crouches before you.
+~Orobas is at once young and old, appearing as both a man and a woman.
+Beautiful and handsome, he is also hideous.  Shockingly, the number of
+limbs his frame contains is uncertain; you simply cannot seem to tell.
+Likewise, though you may stare directly into his gaze, you cannot decipher
+which of his heads it is that you address.
+~-1000~0~100~demon~45~1~1~2999~1~1~44~45~100~flbite~30~30~30~30~standing~male~none~2971~geryon greater demon gaunt~Geryon~A gaunt demon with a long, pale, and disturbingly human face stands here.
+~This demon looks almost to be accustomed to the air on the surface of
+Shalar.  One might expect a denizen of the abyss to be shocked or upset at
+being plucked from its confines, but Geryon is quite at home.  In fact, his
+forlorn expression betrays no real angst; a glimmer in one eye tells you
+that he is looking forward to expanding his collection of bits of mortals.
+~-1000~0~100~demon~45~1~1~2999~1~1~44~45~100~flbite~30~30~30~30~standing~male~none~2972~cimeries greater demon pig-like winged~Cimeries~A pig-like winged demon grunts and snarls, displaying many large teeth.
+~At a great fifteen feet in height, this slobbering beast beats its shredded
+wings against the air in a vain attempt to take flight.  One might almost
+feel pity for Cimeries, were he not a greater demon of the abyss.  Vicious
+teeth are set in his jaw at odd angles, and they slash and tear at bleeding
+sores upon his face as he speaks.
+~-1000~0~100~demon~45~1~1~2999~1~1~44~45~100~flbite~30~30~30~30~standing~male~none~2973~mephistopheles arch-devil arch devil living tower blue flame~Mephistopheles~A living tower of blue flame arches above you into the sky.
+~Desc
+~-1000~0~100~demon~60~1~1~5999~1~1~64~65~50~flbite~150~150~150~150~standing~male~none~2974~baal arch-devil arch devil ebon man~Baal~An ebon man the size of a tree stands here draped with plates of armor.
+~Desc
+~-1000~0~100~demon~60~1~1~5999~1~1~64~65~50~flbite~150~150~150~150~standing~male~none~2975~moloch arch-devil arch devil~Moloch~A terrifying arch-devil with eyes of flame peers down into your very soul.
+~Desc
+~-1000~0~100~demon~60~1~1~5999~1~1~64~65~50~flbite~150~150~150~150~standing~male~none~2976~dispater arch-devil arch devil~Dispater~A mountainous arch-devil lies flaccid and prone before you.
+~Desc
+~-1000~0~100~demon~60~1~1~5999~1~1~64~65~50~flbite~150~150~150~150~standing~male~none~2977~asmodeus arch-devil arch devil~Asmodeus~A handsome being with iron eyes stands casually before you.
+~Desc
+~-1000~0~100~demon~60~1~1~5999~1~1~64~65~50~flbite~150~150~150~150~standing~male~none~2978~geulgon familiar~a geulgon familiar~A gaunt demon stands here, dark energy crackling at its fingertips.
+~Looking much like a human necromancer, this demon wears robes of black with
+silvery runes imprinted upon them.  His face is ever so slightly drawn back,
+however, resulting in a most unpleasant appearance which differs from that
+of a human only enough so as to disturb the viewer.
+~-1000~0~100~demon~40~1~1~1~1~1~1~0~100~slash~50~50~50~50~standing~male~none~2979~minotaur familiar~a minotaur familiar~A large demon with horns and hooves claws at the ground here.
+~This larger than normal minotaur pulverizes the ground with its hooves,
+tossing its head around and causing movements of air significant enough to
+toss a sidhe about.  Unlike most mortal minotaur, this specimen sports eyes
+of pure white and skin as black as coal.
+~-1000~0~100~minotaur~40~1~1~1~1~1~1~0~100~slash~100~100~100~100~standing~male~none~2980~cornogun familiar~a cornogun familiar~A shivering demon the size of a dog cowers here on all fours.
+~Summoned from the 7th circle of the abyss, this cornogun is accustomed to
+taking abuse from angry demons, and serving no other function.  This is
+apparent in its behavior; the familiar shivers as though chilled, constantly
+scanning the shadows for hidden oppressors.
+~-1000~0~100~imp~40~1~1~1~1~1~1~0~100~slash~25~25~25~75~standing~male~none~2981~warty imp familiar~a warty imp familiar~A short, portly green demon stands here snickering softly.
+~This tiny imp hops about, dodging people's feet, completely nude aside from
+the canvas backpack he has strapped over his shoulders.  This backpack bulges
+out oddly in several places, and the glitter of highly polished metal is
+visible beneath its loosely fastened flap.
+~-1000~0~100~imp~40~1~1~1~1~1~1~0~100~slash~40~40~40~40~standing~male~none~2982~hamatula familiar~a hamatula familiar~A man-sized demon with plates of scaly armor stands here.
+~From the arenas and fighting pits of the most violent sections of the abyss
+comes this hamatula familiar.  With armor that looks to have been freshly
+plucked from the back of some demonic dragon and a stony expression to freeze
+any aggressor in his tracks, the hamatula familiar is well equipped for war.
+~-1000~0~100~demon~40~1~1~1~1~1~1~0~100~slash~200~200~200~200~standing~male~none~2983~pit-fiend pitfiend pit fiend familiar~a pit-fiend familiar~A towering demon with straggling black hair stands here.
+~This pit-fiend comes from the very deepest levels of the abyss.  Its stomping
+grounds are rife with beasts of nightmarish substance and masters more evil
+than the mortal mind can comprehend.  Its strange, all-black appearance is
+made all the more frightening by the seeming lack of armor or weapons.
+~-1000~0~100~demon~40~1~1~1~1~1~1~0~100~slash~125~125~125~125~standing~male~none~1~avatar darkness black cloud swirling~the Avatar of Darkness~A swirling black cloud towers here, absorbing light from all around it.
+~~-1000~0~0~human~70~50~50~15000~8~8~80~50~100~drain~150~150~150~150~standing~male~none~2~avatar light pillar~the Avatar of Light~A crackling pillar of niveous light fills the area with a radiant glow.
+~~1000~0~0~human~70~35~8~17617~8~8~80~50~100~divine~0~0~0~0~standing~male~none~60~drow vehdrel~Vehdrel~A powerful drow stands here, glaring at you.
+~~-1000~25972~0~drow~55~27~8~5268~10~18~15~0~100~slash~220~220~220~220~standing~male~none~1200~Heimdall~Heimdall~Heimdall, guardian of Bifrost, stands guard over the Rainbow Bridge.
+~Standing over 7 feet tall and muscled as only a god can be, Heimdall keeps
+his unsleeping gaze over the Rainbow bridge.  His trusty Gjallor-horn never
+leaves his side, and shall remain unwinded until the dread ship Naglfar sails
+towards Valhalla on the dawn of Ragnarok.
+~1000~0~100~human~57~1~1~19999~5~4~40~0~100~crush~0~0~0~0~standing~male~none~1201~player mob~the player mob~The Player Mob stands here.
+~The Player Mob stands here.
+~1000~0~100~human~1~1~1~1~5~4~40~0~100~crush~0~0~0~0~standing~male~none~1202~captain obvious~Captain Obvious~Captain Obvious is here, obviously.
+~You don't need to LOOK at him.  His appearance is obvious!
+~1000~0~100~human~57~1~1~19999~5~4~40~0~100~crush~0~0~0~0~standing~male~none~1203~test guildguard~a test guildguard~A test guildguard stands here.
+~This is a test guildguard.
+~0~1200~100~human~60~1~1~999~5~5~10~0~100~slash~0~0~0~0~standing~male~none~1204~private obvious~Private Obvious~Private Obvious is here, obviously following the Captain.
+~You don't need to LOOK at him.  His appearance is obvious!
+~1000~0~100~human~52~1~1~19999~5~4~40~0~100~crush~0~0~0~0~standing~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~180~figure white robed white-robed~the white-robed figure~A white-robed figure stands motionless in the center of the room.
+~~0~0~0~human~54~27~8~4990~0~0~0~0~100~divine~0~0~0~0~resting~male~none~1~avatar darkness black cloud swirling~the Avatar of Darkness~A swirling black cloud towers here, absorbing light from all around it.
+~~-1000~0~0~human~70~50~50~15000~8~8~80~50~100~drain~150~150~150~150~standing~male~none~2~avatar light pillar~the Avatar of Light~A crackling pillar of niveous light fills the area with a radiant glow.
+~~1000~0~0~human~70~35~8~17617~8~8~80~50~100~divine~0~0~0~0~standing~male~none~60~drow vehdrel~Vehdrel~A powerful drow stands here, glaring at you.
+~~-1000~25972~0~drow~55~27~8~5268~10~18~15~0~100~slash~220~220~220~220~standing~male~none~155~no name~dummy mob~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~155~sareh~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~155~sareh~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~159~drow bodyguard~a drow bodyguard~A muscular drow in black armour is here, maintaining security throughout the premises.
+~~0~0~0~drow~50~25~8~4066~10~10~0~0~100~none~0~0~0~0~standing~male~none~160~shil'uzar shiluzar~Shil'Uzar~A curvaceous drow with shoulder-length hair is here, offering an alluring smile.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~161~no name~dummy mob~A dummy mob is standing here.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~162~no name~dummy mob~A dummy mob is standing here.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~163~no name~dummy mob~A dummy mob is standing here.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~159~drow bodyguard~a drow bodyguard~A muscular drow in black armour is here, maintaining security throughout the premises.
+~~0~0~0~drow~50~25~8~4066~10~10~0~0~100~none~0~0~0~0~standing~male~none~160~shil'uzar shiluzar~Shil'Uzar~A curvaceous drow with shoulder-length hair is here, offering an alluring smile.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~161~nazira~Nazira~An attractive but austere drow woman stands here with a serious expression on her face.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~162~no name~dummy mob~A dummy mob is standing here.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~163~no name~dummy mob~A dummy mob is standing here.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~155~drow sareh receptionist~Sareh~A beautiful young drow appears to be pleasantly conducting office business here.
+~~-1000~0~0~drow~51~25~8~4274~25~25~25~0~100~none~0~0~0~0~standing~female~none~156~yochlol handmaiden creature tentacles~the Handmaiden~A large, menacing creature with massive tentacles whips about here.
+~~-1000~0~0~demon~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~male~none~157~drow headmistress mistress zari~Zari~An attractive, mature-looking drow is here, perusing the guest list.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~158~alluring drow mistress Shil'Uzar~Shil'Uzar~An alluring drow with silvery white hair is here, running her hand through the bath water.
+~~-1000~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~159~drow bodyguard~a drow bodyguard~A muscular drow in black armour is here, maintaining security throughout the premises.
+~~0~0~0~drow~50~25~8~4066~10~10~0~0~100~none~0~0~0~0~standing~male~none~160~shil'uzar shiluzar~Shil'Uzar~A curvaceous drow with shoulder-length hair is here, offering an alluring smile.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~161~nazira~Nazira~An attractive but austere drow woman stands here with a serious expression on her face.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~162~zahreen~Zahreen~A young drow medical assistant is here, arranging flasks.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~163~zefarah~Zefarah~A fashionable drow mistress is here, managing important business matters.
+~~0~0~0~drow~51~25~8~4274~0~0~0~0~100~none~0~0~0~0~standing~female~none~1~avatar darkness black cloud swirling~the Avatar of Darkness~A swirling black cloud towers here, absorbing light from all around it.
+~~-1000~0~0~human~70~50~50~15000~8~8~80~50~100~drain~150~150~150~150~standing~male~none~2~avatar light pillar~the Avatar of Light~A crackling pillar of niveous light fills the area with a radiant glow.
+~~1000~0~0~human~70~35~8~17617~8~8~80~50~100~divine~0~0~0~0~standing~male~none~60~drow vehdrel~Vehdrel~A powerful drow stands here, glaring at you.
+~~-1000~25972~0~drow~55~27~8~5268~10~18~15~0~100~slash~220~220~220~220~standing~male~none~

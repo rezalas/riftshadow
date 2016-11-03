@@ -1,0 +1,834 @@
+#AREA
+bluetwr.are~
+Xal Ocilyra~
+Wylache~
+35 51
+23230 23259
+unopened
+none
+LMNOR
+1
+Wylache~
+
+#MOBS
+#23230
+cloaked figure colossal titan abyss abyssal hooded guard~
+a hooded abyssal guard~
+A colossal cloaked figure roams the platform in silence.
+~
+This dark titanic figure appears faceless under its dark, heavy hood. 
+It's body is decked in a combination of brass armor and dark robes.  It its
+left hand it carries a long, rusted scythe, in the other a length of heavy
+black chain.  
+~
+-1000 23230 100 abyss~
+45 22d8+3177 5d8+37 15 100 slash
+-300 -300 -300 -300
+standing male none
+0 0 huge
+ACT NPC
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+OFF BASH
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF NO_TRACK
+AFF DETECT_HIDDEN
+AFF INFRARED
+AFF HASTE
+AFF BERSERK
+IMM SUMMON
+IMM CHARM
+RES MAGIC
+#23231
+blue ghost~
+a ghost with a blue aura~
+A deathly looking old man surrounded by a blue aura is here.
+~
+The energy around this figure is so strong that it has formed a permenant blue
+aura of crackling power. It raises it's withered hand and points at you,
+sending sizzling blue energy through the air!
+~
+-1000 23230 100 human~
+51 50d10+5250 6d6+20 0 100 magic
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT UNDEAD
+ACT MAGE
+OFF DODGE
+OFF PARRY
+OFF ASSIST_VNUM
+OFF STATIC_TRACK
+OFF SPAM_MURDER
+AFF DETECT_EVIL
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+#23232
+elven lich archmage~
+the elven lich archmage~
+An elf with torn dried skin and glowing blue eyes is here.
+~
+This ancient elven wizard is all that remains of Myth Drannor's once powerful
+mage cabals. He exists now as a shell of his former power, brought back by the
+evil that destroyed the city and kept as a taunting reminder of the fall of the
+elves. The power of pure magic hums around him and even his eyes glow with the
+blue energy that sizzles in the air.
+~
+-1000 23230 100 lich~
+55 50d10+7000 10d4+21 0 50 magic
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT CLERIC
+OFF AREA_ATTACK
+OFF DODGE
+OFF PARRY
+OFF SPAM_MURDER
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+#23233
+witch queen~
+the witch queen of Myth Drannor~
+A beautiful elven woman with cold blue eyes screams in fury!
+~
+This lady was one of the few elves who chose to be lead by the darkness that
+overcame Myth Drannor, and as a reward she now rules this small tower where
+all the magic of the ancient elves is gathered in preperation for the release
+of the Lord.
+~
+-1000 23230 100 human~
+60 50d10+8000 5d10+25 0 100 wrath
+0 0 0 0
+standing female affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT UNDEAD
+ACT MAGE
+OFF AREA_ATTACK
+OFF DISARM
+OFF DODGE
+OFF PARRY
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+IMM MAGIC
+CLASS warrior none none 
+#23234
+devil familiar~
+a satanic familiar~
+A beast with a single black horn and symbols burned into it's flesh is here.
+~
+This unholy familiar has the markings of a servant of darkness. It's body is
+covered in symbols guarding against control by those not of the darkest soul.
+~
+-1000 23230 100 demon~
+57 50d10+8500 5d10+25 0 100 claw
+0 0 0 0
+standing male none
+0 0 giant
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF AREA_ATTACK
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF CRUSH
+OFF SPAM_MURDER
+AFF DETECT_INVIS
+AFF DETECT_MAGIC
+AFF DETECT_HIDDEN
+IMM SUMMON
+IMM CHARM
+VUL HOLY
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#23230
+wooden handled scythe steel~
+a wooden-handled scythe with a rusted steel blade~
+A long wooden-handled scythe of poor quality is here.~
+weapon
+steel~
+polearm 3 6 slash 0
+36 12 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM NOREMOVE
+LIMIT 80
+TIMER 0
+E blue seal parchment~
+The writing on the parchment relates how the elves of Myth Drannor were used
+as sacrifices to provide the pure blood needed to help raise and evil of total
+corruption and unspeakable power that lay dormant beneath the city. Thie red
+bloodletting was to be accompanied by two other merging powers, that of the
+pure magics, the blue energies, and the divine magics, green energies. Yet
+something went wrong and now forces of darkness are fighting for the last
+keys to the power that lies hidden. Once the red, blue and green are finally
+joined the black tower will reveal it's secrets..
+~
+
+#23231
+rusted iron key~
+a rusted iron key~
+A tiny iron key lies here covered in flakes of rust.~
+key
+iron~
+0 0 0 0 0
+40 3 5 P
+WEAR TAKE
+WEAR HOLD
+ITEM EVIL
+LIMIT 0
+TIMER 0
+
+#23232
+blue ice dagger~
+a blue-ice dagger~
+A dagger carved from deep blue ice is on the floor.~
+weapon
+energy~
+dagger 5 9 frbite B
+45 4 31999 P
+WEAR TAKE
+WEAR WIELD
+ITEM INVIS
+ITEM MAGIC
+ITEM BLESS
+LIMIT 2
+TIMER 0
+
+#23233
+blue sapphire collar~
+a blue sapphire collar~
+A perfectly formed collar of blue sapphire is here.~
+armor
+sapphire~
+4 4 4 9 9
+35 3 9999 P
+WEAR TAKE
+WEAR NECK
+ITEM DARK
+ITEM EVIL
+APPLY SBREATH -3
+APPLY MANA 15
+APPLY HP 15
+LIMIT 0
+TIMER 0
+
+#23235
+wand spellfire~
+(blue-green) a wand of spellfire~
+A deadly looking wand covered in blue green flames is here.~
+weapon
+energy~
+weapon 5 5 magic 0
+48 4 14999 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT NEWBIE_ONLY
+ITEM MAGIC
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+
+#23236
+gold ring wizardry~
+a ring of wizardry~
+A shiny golden ring is on the ground.~
+armor
+gold~
+4 3 4 10 10
+40 1 40000 P
+WEAR TAKE
+WEAR FINGER
+ITEM INVIS
+ITEM MAGIC
+APPLY INT 2
+APPLY WIS 1
+APPLY MANA 20
+LIMIT 3
+TIMER 0
+
+#23237
+blue key~
+a blue key~
+A key of some strange blue material is here.~
+key
+steel~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#23238
+gold ring wizardry~
+a ring of wizardry~
+A shiny golden ring is on the ground.~
+armor
+gold~
+4 3 4 4 10
+45 1 43000 P
+WEAR TAKE
+WEAR FINGER
+ITEM INVIS
+ITEM MAGIC
+APPLY INT 2
+APPLY WIS 2
+APPLY MANA 30
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#23230
+Entrance to Xal Ocilyra Tower~
+The crumbling tower ahead is built for hundreds of square blocks of dark,
+aged granite crowned in black iron spires.  There is no gate, only a dingy
+corridor that leads into the blackness within.  The surrounding area is
+desolate and barren and the only sounds to be heard are the eerie creeks and
+clangs coming from deep within the heart of the gloom- stricken tower.  High
+above the ground level the faint flickering of orange flames can be seen
+infrequently licking the edge of the black-trimmed windows.  The only
+obvious exit, save for back into the dark forest is into the pitch black
+corridor and into the tower.  
+~
+trail
+ROOM DARK
+D EAST 23231 0 0
+~
+A dark, gloom filled corridor leads into the depths of the tower. 
+~
+D WEST 13766 B 0
+door~
+~
+#23231
+A dark, gloom-filled corridor~
+The only light in this dark, forsaking place is what streaks in from the
+corridors breach to the west.  The floor is littered with dust and chipped
+rock, making it apparent that the tower is crudely cared for and centuries
+old.  It is too dark to tell how large the corridor is, but it's ceiling
+exceeds your grasp.  Periodically the forbidding red eyes of unknown
+creatures blinks into the emptiness before disappearing into the gloom.  The
+dingy hallway exits to the west and continues up a short flight of stairs to
+the east, which can barely be seen in the darkness of this eternal night.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 0 0 0
+door~
+A small flight of steps lead to a large platform.
+~
+D WEST 23230 0 0
+~
+A faint splash of lights lingers to the west. 
+~
+D UP 23236 0 0
+~
+~
+#23232
+The first level of Xal Ocilyra~
+~
+inside
+D EAST 23233 0 0
+~
+Bathed in a blue light.
+~
+D SOUTH 23235 0 0
+~
+Bathed in a blue light.
+~
+D WEST 23257 0 0
+door~
+~
+D UP 23241 0 0
+~
+In a blinding blue light.
+~
+#23233
+The first level of Xal Ocilyra~
+~
+inside
+D EAST 23234 0 0
+~
+Bathed in a blue light.
+~
+D SOUTH 23236 0 0
+~
+Bathed in a blue light.
+~
+D WEST 23232 0 0
+~
+Bathed in a blue light.
+~
+#23234
+The first level of Xal Ocilyra~
+~
+inside
+D SOUTH 23237 0 0
+~
+Bathed in a blue light.
+~
+D WEST 23233 0 0
+~
+Bathed in a blue light.
+~
+D UP 23243 0 0
+~
+In a blinding blue light.
+~
+#23235
+The first level of Xal Ocilyra~
+The twilight fades ever so slightly along the edge of this large
+platform, still offering no visibility.  To the west is a black iron gate
+which leads into a cell of some kind, the likes of which seem horrific. 
+Laying on the floor at the foot of the cells iron gate are a few small
+animal bones and scraps of newer carrion, perhaps too rotten for even a
+dying slave to eat.  Hanging from a hook next to the door are a few short
+lengths of chains and manacles.  The darkness resides in all directions.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 23232 0 0
+~
+Bathed in a blue light.
+~
+D EAST 23236 0 0
+~
+Bathed in a blue light.
+~
+D SOUTH 23238 0 0
+~
+~
+D WEST 23256 ABC 0
+door~
+~
+#23236
+The first level of Xal Ocilyra~
+This open platform is covered in a hazy twilight that is cast by the faint
+shimmer of dying oil lamps in the shade of the towers darkness.  The cold
+stone floor and chilly think air can only remind one of the despair and pain
+that forever lingers within these walls.  It is there that one can find the
+first sigh of life within these harrowed walls.  Colossal cloaked figures
+roam the platform in silence, some of them dragging small creatures, perhaps
+slaves or prisoners, in chains.  The platform extends in all directions.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D NORTH 23233 0 0
+~
+The platform continues into the twilight. 
+~
+D EAST 23237 0 0
+~
+The platform continues into the twilight. 
+~
+D SOUTH 23239 0 0
+~
+The platform continues into the twilight. 
+~
+D WEST 23235 0 0
+~
+The platform continues into the twilight. 
+~
+D DOWN 23231 0 0
+~
+A flight of shallow steps leads down into the darkness.
+~
+#23237
+The first level of Xal Ocilyra~
+~
+inside
+D NORTH 23234 0 0
+~
+Bathed in a blue light.
+~
+D SOUTH 23240 0 0
+~
+Bathed in a blue light.
+~
+D WEST 23236 0 0
+~
+Bathed in a blue light.
+~
+#23238
+The first level of Xal Ocilyra~
+~
+inside
+D NORTH 23235 0 0
+~
+Bathed in a blue light.
+~
+D EAST 23239 0 0
+~
+Bathed in a blue light.
+~
+D UP 23247 0 0
+~
+In a blinding blue light.
+~
+#23239
+The first level of Xal Ocilyra~
+~
+inside
+D NORTH 23236 0 0
+~
+Bathed in a blue light.
+~
+D EAST 23240 0 0
+~
+Bathed in a blue light.
+~
+D WEST 23238 0 0
+~
+Bathed in a blue light.
+~
+#23240
+The first level of Xal Ocilyra~
+~
+inside
+D NORTH 23237 0 0
+~
+Bathed in a blue light.
+~
+D WEST 23239 0 0
+~
+Bathed in a blue light.
+~
+D UP 23245 0 0
+~
+In a blinding blue light.
+~
+#23241
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower swirls
+and crackles. A column of blue light descends through the floor here to a
+level lower down.
+~
+inside
+D EAST 23242 0 -1
+~
+~
+D SOUTH 23248 0 -1
+~
+~
+D DOWN 23232 0 -1
+~
+~
+#23242
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. Above you there is a clear tunnel through the light.
+~
+inside
+D EAST 23243 0 -1
+~
+~
+D WEST 23241 0 -1
+~
+~
+D UP 23250 0 -1
+~
+~
+#23243
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. A column of blue light descends through the floor here
+to a level lower down.
+~
+inside
+D SOUTH 23244 0 -1
+~
+~
+D WEST 23242 0 -1
+~
+~
+D DOWN 23234 0 -1
+~
+~
+#23244
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. Above you there is a clear tunnel through the light.
+~
+inside
+D NORTH 23243 0 -1
+~
+~
+D SOUTH 23245 0 -1
+~
+~
+D UP 23251 0 -1
+~
+~
+#23245
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. A column of blue light descends through the floor here
+to a level lower down.
+~
+inside
+D NORTH 23244 0 -1
+~
+~
+D WEST 23246 0 -1
+~
+~
+D DOWN 23240 0 -1
+~
+~
+#23246
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. Above you there is a clear tunnel through the light.
+~
+inside
+D EAST 23245 0 -1
+~
+~
+D WEST 23247 0 -1
+~
+~
+D UP 23252 0 -1
+~
+~
+#23247
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. A column of blue light descends through the floor here
+to a level lower down.
+~
+inside
+D NORTH 23248 0 -1
+~
+~
+D EAST 23246 0 -1
+~
+~
+D DOWN 23238 0 -1
+~
+~
+#23248
+Standing within a blinding blue light~
+The room is filled with a crackling blue energy that tingles your skin and
+blinds your eyes. All around you the magic building up within the tower
+swirls and crackles. Above you there is a clear tunnel through the light.
+~
+inside
+D NORTH 23241 0 -1
+~
+~
+D SOUTH 23247 0 -1
+~
+~
+D UP 23249 0 -1
+~
+~
+#23249
+On a shimmering blue platform~
+You are standing upon a flat platform suspended above the warm blue energy
+fields below.  The sounds of sizzling energy crackle in the air, and the smell
+of burning ozone reeks all around you. A tunnel of light leads back down, or
+you can go east to what looks like a stairwell.
+~
+inside
+D EAST 23253 0 -1
+~
+~
+D DOWN 23248 0 -1
+~
+~
+#23250
+On a shimmering blue platform~
+You are standing upon a flat platform suspended above the warm blue energy
+fields below.  The sounds of sizzling energy crackle in the air, and the smell
+of burning ozone reeks all around you. A tunnel of light leads back down, or
+you can go south to what looks like a stairwell.
+~
+inside
+D SOUTH 23253 0 -1
+~
+~
+D DOWN 23242 0 -1
+~
+~
+#23251
+On a shimmering blue platform~
+You are standing upon a flat platform suspended above the warm blue energy
+fields below.  The sounds of sizzling energy crackle in the air, and the smell
+of burning ozone reeks all around you. A tunnel of light leads back down, or
+you can go west to what looks like a stairwell.
+~
+inside
+D WEST 23253 0 -1
+~
+~
+D DOWN 23244 0 -1
+~
+~
+#23252
+On a shimmering blue platform~
+You are standing upon a flat platform suspended above the warm blue energy
+fields below.  The sounds of sizzling energy crackle in the air, and the smell
+of burning ozone reeks all around you. A tunnel of light leads back down, or
+you can go north to what looks like a stairwell.
+~
+inside
+D NORTH 23253 0 -1
+~
+~
+D DOWN 23246 0 -1
+~
+~
+#23253
+Before the burning blue stairwell~
+You are at the bottom of a stairwell wreathed in blue flames. Strangely there
+is no heat of smoke, and the flames that lick the stairs do not seem to be
+fuelled by anything. The magic at this part of the tower is obviously so strong
+that it manifests itself as raw fire, but blue and without the heat. The stairs
+head upwards.
+~
+inside
+D NORTH 23250 0 -1
+~
+~
+D EAST 23251 0 -1
+~
+~
+D SOUTH 23252 0 -1
+~
+~
+D WEST 23249 0 -1
+~
+~
+D UP 23254 0 -1
+~
+~
+#23254
+On a balcony wreathed in blue fire~
+You are at the top of a stairwell covered in flickering blue flames. The room
+here is more of a balcony overlooking the shimmering blue lake of energy below.
+There is a door to the south.
+~
+inside
+D SOUTH 23255 A 23237
+door~
+~
+D DOWN 23253 0 -1
+~
+~
+#23255
+The Witch Queen's Watch~
+This room is unlike any other in the tower. There is no energy shimmering in
+the air, no crackling sounds or burning blue flames. Rather it is a plain and
+empty study with nothing of interest but a single pentegram inscribed in the
+floor for protection against some kind of unholy beast. The only exit is to
+the north through the door.
+~
+inside
+D NORTH 23254 A 23237
+door~
+~
+#23256
+A gloomy prison cell~
+This dark cell is only large enough to fit a large human man at best, and
+even so it constricts with the feeling of hopelessness and despair.  Two
+slits form a small window on the western wall, its streaks of faint light
+are just enough to taunt a man with the unobtainable thought of freedom. 
+The door is made of flat iron bars, their joints rusted at the corners.  In
+the furthest corner of the dark cell is what appears to be the shadow of a
+man, or perhaps just the essence of one who wasted away in the timelessness
+of the tower.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+D EAST 23235 A 0
+door~
+~
+OWNER none~
+#23257
+An empty lockup~
+~
+inside
+ROOM DARK
+D EAST 23232 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 23230 TO 23234 GLIMIT 6 LLIMIT 1
+MOB 23230 TO 23236 GLIMIT 12 LLIMIT 1
+EQUIP 23230 WIELD
+GIVE 23231
+MOB 23230 TO 23237 GLIMIT 6 LLIMIT 1
+MOB 23230 TO 23238 GLIMIT 6 LLIMIT 1
+MOB 23230 TO 23239 GLIMIT 6 LLIMIT 1
+MOB 23231 TO 23242 GLIMIT 4 LLIMIT 1
+MOB 23231 TO 23244 GLIMIT 4 LLIMIT 1
+MOB 23231 TO 23246 GLIMIT 4 LLIMIT 1
+MOB 23231 TO 23248 GLIMIT 4 LLIMIT 1
+MOB 23232 TO 23253 GLIMIT 1 LLIMIT 1
+EQUIP 23236 LFINGER
+EQUIP 23235 WIELD
+DOOR 23254 south LOCKED
+MOB 23234 TO 23254 GLIMIT 4 LLIMIT 1
+GIVE 23237
+EQUIP 23233 NECKONE
+DOOR 23255 north LOCKED
+MOB 23233 TO 23255 GLIMIT 1 LLIMIT 1
+EQUIP 23238 LFINGER
+EQUIP 23231 HEAD
+EQUIP 23232 WIELD
+GIVE 23230
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

@@ -1,0 +1,1341 @@
+#AREA
+malkeran.are~
+Ruins of Malkeran~
+Karsus~
+0 0
+4000 4099
+unopened
+none
+0
+1
+Karsus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#4096
+Dummy Room~
+~
+unused
+D SOUTH 4095 0 0
+~
+~
+D WEST 4097 0 0
+~
+~
+OWNER none~
+#4097
+Dummy Room~
+~
+unused
+D EAST 4096 0 0
+~
+~
+D SOUTH 4098 0 0
+~
+~
+D WEST 4099 0 0
+~
+~
+OWNER none~
+#4098
+Dummy Room~
+~
+unused
+D NORTH 4097 0 0
+~
+~
+D EAST 4095 0 0
+~
+~
+OWNER none~
+#4099
+Dummy Room~
+~
+unused
+D EAST 4097 0 0
+~
+~
+OWNER none~
+#4000
+Deep within the thick forest~
+~
+forest
+D NORTH 4003 0 0
+~
+~
+D EAST 4001 0 0
+~
+~
+D SOUTH 799 AFI 0
+~
+~
+D WEST 4009 0 0
+~
+~
+OWNER none~
+#4001
+Deep within the thick forest~
+~
+forest
+D NORTH 4002 0 0
+~
+~
+D WEST 4000 0 0
+~
+~
+OWNER none~
+#4002
+Deep within the thick forest~
+~
+forest
+D SOUTH 4001 0 0
+~
+~
+D WEST 4003 0 0
+~
+~
+OWNER none~
+#4003
+Deep within the thick forest~
+~
+forest
+D NORTH 4004 0 0
+~
+~
+D EAST 4002 0 0
+~
+~
+D SOUTH 4000 0 0
+~
+~
+D WEST 4010 0 0
+~
+~
+OWNER none~
+#4004
+Deep within the thick forest~
+~
+forest
+D SOUTH 4003 0 0
+~
+~
+D WEST 4005 0 0
+~
+~
+OWNER none~
+#4005
+Deep within the thick forest~
+~
+forest
+D EAST 4004 0 0
+~
+~
+D SOUTH 4010 0 0
+~
+~
+D WEST 4006 0 0
+~
+~
+OWNER none~
+#4006
+Deep within the thick forest~
+~
+forest
+D EAST 4005 0 0
+~
+~
+D SOUTH 4007 0 0
+~
+~
+OWNER none~
+#4007
+Deep within the thick forest~
+~
+forest
+D NORTH 4006 0 0
+~
+~
+D EAST 4010 0 0
+~
+~
+D SOUTH 4008 0 0
+~
+~
+D WEST 4013 0 0
+~
+~
+OWNER none~
+#4008
+overgrown ruins~
+~
+field
+D NORTH 4007 0 0
+~
+~
+D EAST 4009 0 0
+~
+~
+D WEST 4011 0 0
+~
+~
+OWNER none~
+#4009
+overgrown ruins~
+~
+field
+D NORTH 4010 0 0
+~
+~
+D EAST 4000 0 0
+~
+~
+D SOUTH 4019 0 0
+~
+~
+D WEST 4008 0 0
+~
+~
+OWNER none~
+#4010
+Deep within the thick forest~
+~
+forest
+D NORTH 4005 0 0
+~
+~
+D EAST 4003 0 0
+~
+~
+D SOUTH 4009 0 0
+~
+~
+D WEST 4007 0 0
+~
+~
+OWNER none~
+#4011
+overgrown ruins~
+~
+field
+D NORTH 4013 0 0
+~
+~
+D EAST 4008 0 0
+~
+~
+D WEST 4012 0 0
+~
+~
+OWNER none~
+#4012
+overgrown ruins~
+~
+field
+D NORTH 4014 0 0
+~
+~
+D EAST 4011 0 0
+~
+~
+D WEST 4018 0 0
+~
+~
+OWNER none~
+#4013
+Deep within the thick forest~
+~
+forest
+D EAST 4007 0 0
+~
+~
+D SOUTH 4011 0 0
+~
+~
+D WEST 4014 0 0
+~
+~
+OWNER none~
+#4014
+Deep within the thick forest~
+~
+forest
+D EAST 4013 0 0
+~
+~
+D SOUTH 4012 0 0
+~
+~
+D WEST 4015 0 0
+~
+~
+OWNER none~
+#4015
+Deep within the thick forest~
+~
+forest
+D EAST 4014 0 0
+~
+~
+D SOUTH 4018 0 0
+~
+~
+D WEST 4016 0 0
+~
+~
+OWNER none~
+#4016
+Deep within the thick forest~
+~
+forest
+D EAST 4015 0 0
+~
+~
+D SOUTH 4017 0 0
+~
+~
+D UP 4095 AFI 0
+~
+~
+OWNER none~
+#4017
+Overgrown ruins~
+~
+field
+D NORTH 4016 0 0
+~
+~
+D EAST 4018 0 0
+~
+~
+OWNER none~
+#4018
+overgrown ruins~
+~
+field
+D NORTH 4015 0 0
+~
+~
+D EAST 4012 0 0
+~
+~
+D WEST 4017 0 0
+~
+~
+D UP 4057 AFI 0
+~
+~
+OWNER none~
+#4019
+overgrown ruins~
+~
+field
+D NORTH 4009 0 0
+~
+~
+D SOUTH 4020 0 0
+~
+~
+OWNER none~
+#4020
+overgrown ruins~
+~
+field
+D NORTH 4019 0 0
+~
+~
+D SOUTH 4021 0 0
+~
+~
+OWNER none~
+#4021
+overgrown ruins~
+~
+field
+D NORTH 4020 0 0
+~
+~
+D SOUTH 4022 0 0
+~
+~
+OWNER none~
+#4022
+overgrown ruins~
+~
+field
+D NORTH 4021 0 0
+~
+~
+D EAST 4023 0 0
+~
+~
+D SOUTH 4033 0 0
+~
+~
+D WEST 4034 0 0
+~
+~
+OWNER none~
+#4023
+Deep within the thick forest~
+~
+forest
+D SOUTH 4024 0 0
+~
+~
+D WEST 4022 0 0
+~
+~
+OWNER none~
+#4024
+Deep within the thick forest~
+~
+forest
+D NORTH 4023 0 0
+~
+~
+D EAST 4025 0 0
+~
+~
+D SOUTH 4027 0 0
+~
+~
+D WEST 4033 0 0
+~
+~
+OWNER none~
+#4025
+Deep within the thick forest~
+~
+forest
+D SOUTH 4026 0 0
+~
+~
+D WEST 4024 0 0
+~
+~
+OWNER none~
+#4026
+Deep within the thick forest~
+~
+forest
+D NORTH 4025 0 0
+~
+~
+D WEST 4027 0 0
+~
+~
+OWNER none~
+#4027
+Deep within the thick forest~
+~
+forest
+D NORTH 4024 0 0
+~
+~
+D EAST 4026 0 0
+~
+~
+D WEST 4028 0 0
+~
+~
+OWNER none~
+#4028
+Deep within the thick forest~
+~
+forest
+D NORTH 4033 0 0
+~
+~
+D EAST 4027 0 0
+~
+~
+D WEST 4029 0 0
+~
+~
+OWNER none~
+#4029
+Deep within the thick forest~
+~
+forest
+D NORTH 4032 0 0
+~
+~
+D EAST 4028 0 0
+~
+~
+D WEST 4030 0 0
+~
+~
+OWNER none~
+#4030
+Deep within the thick forest~
+~
+forest
+D NORTH 4031 0 0
+~
+~
+D EAST 4029 0 0
+~
+~
+OWNER none~
+#4031
+Deep within the thick forest~
+~
+forest
+D NORTH 4035 0 0
+~
+~
+D EAST 4032 0 0
+~
+~
+D SOUTH 4030 0 0
+~
+~
+D WEST 4037 0 0
+~
+~
+OWNER none~
+#4032
+Deep within the thick forest~
+~
+forest
+D NORTH 4034 0 0
+~
+~
+D EAST 4033 0 0
+~
+~
+D SOUTH 4029 0 0
+~
+~
+D WEST 4031 0 0
+~
+~
+OWNER none~
+#4033
+Deep within the thick forest~
+~
+forest
+D NORTH 4022 0 0
+~
+~
+D EAST 4024 0 0
+~
+~
+D SOUTH 4028 0 0
+~
+~
+D WEST 4032 0 0
+~
+~
+OWNER none~
+#4034
+overgrown ruins~
+~
+field
+D EAST 4022 0 0
+~
+~
+D SOUTH 4032 0 0
+~
+~
+D WEST 4035 0 0
+~
+~
+OWNER none~
+#4035
+overgrown ruins~
+~
+field
+D EAST 4034 0 0
+~
+~
+D SOUTH 4031 0 0
+~
+~
+D WEST 4036 0 0
+~
+~
+OWNER none~
+#4036
+overgrown ruins~
+~
+field
+D EAST 4035 0 0
+~
+~
+D SOUTH 4037 0 0
+~
+~
+D WEST 4047 0 0
+~
+~
+OWNER none~
+#4037
+Deep within the thick forest~
+~
+forest
+D NORTH 4036 0 0
+~
+~
+D EAST 4031 0 0
+~
+~
+D WEST 4038 0 0
+~
+~
+OWNER none~
+#4038
+Deep within the thick forest~
+~
+forest
+D NORTH 4047 0 0
+~
+~
+D EAST 4037 0 0
+~
+~
+D WEST 4039 0 0
+~
+~
+OWNER none~
+#4039
+Deep within the thick forest~
+~
+forest
+D NORTH 4046 0 0
+~
+~
+D EAST 4038 0 0
+~
+~
+D SOUTH 4040 0 0
+~
+~
+D WEST 4044 0 0
+~
+~
+OWNER none~
+#4040
+Deep within the thick forest~
+~
+forest
+D NORTH 4039 0 0
+~
+~
+D WEST 4041 0 0
+~
+~
+OWNER none~
+#4041
+Deep within the thick forest~
+~
+forest
+D NORTH 4044 0 0
+~
+~
+D EAST 4040 0 0
+~
+~
+D WEST 4042 0 0
+~
+~
+OWNER none~
+#4042
+Deep within the thick forest~
+~
+forest
+D NORTH 4043 0 0
+~
+~
+D EAST 4041 0 0
+~
+~
+OWNER none~
+#4043
+Deep within the thick forest~
+~
+forest
+D EAST 4044 0 0
+~
+~
+D SOUTH 4042 0 0
+~
+~
+OWNER none~
+#4044
+Deep within the thick forest~
+~
+forest
+D NORTH 4045 0 0
+~
+~
+D EAST 4039 0 0
+~
+~
+D SOUTH 4041 0 0
+~
+~
+D WEST 4043 0 0
+~
+~
+OWNER none~
+#4045
+overgrown ruins~
+~
+field
+D EAST 4046 0 0
+~
+~
+D SOUTH 4044 0 0
+~
+~
+OWNER none~
+#4046
+Before some overgrown steps~
+~
+field
+D EAST 4047 0 0
+~
+~
+D SOUTH 4039 0 0
+~
+~
+D WEST 4045 0 0
+~
+~
+D UP 4049 0 0
+~
+~
+OWNER none~
+#4047
+Before some overgrown steps~
+~
+field
+D EAST 4036 0 0
+~
+~
+D SOUTH 4038 0 0
+~
+~
+D WEST 4046 0 0
+~
+~
+D UP 4048 0 0
+~
+~
+OWNER none~
+#4048
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4056 0 0
+~
+~
+D EAST 4050 0 0
+~
+~
+D WEST 4049 0 0
+~
+~
+D DOWN 4047 0 0
+~
+~
+OWNER none~
+#4049
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4062 0 0
+~
+~
+D EAST 4048 0 0
+~
+~
+D WEST 4058 0 0
+~
+~
+D DOWN 4046 0 0
+~
+~
+OWNER none~
+#4050
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4055 0 0
+~
+~
+D EAST 4051 0 0
+~
+~
+D WEST 4048 0 0
+~
+~
+OWNER none~
+#4051
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4052 0 0
+~
+~
+D WEST 4050 0 0
+~
+~
+OWNER none~
+#4052
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4053 0 0
+~
+~
+D SOUTH 4051 0 0
+~
+~
+D WEST 4055 0 0
+~
+~
+OWNER none~
+#4053
+Atop the ruins of malkeran~
+~
+road
+D SOUTH 4052 0 0
+~
+~
+D WEST 4054 0 0
+~
+~
+OWNER none~
+#4054
+Atop the ruins of malkeran~
+~
+road
+D EAST 4053 0 0
+~
+~
+D SOUTH 4055 0 0
+~
+~
+D WEST 4057 0 0
+~
+~
+OWNER none~
+#4055
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4054 0 0
+~
+~
+D EAST 4052 0 0
+~
+~
+D SOUTH 4050 0 0
+~
+~
+D WEST 4056 0 0
+~
+~
+OWNER none~
+#4056
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4057 0 0
+~
+~
+D EAST 4055 0 0
+~
+~
+D SOUTH 4048 0 0
+~
+~
+D WEST 4062 0 0
+~
+~
+OWNER none~
+#4057
+Atop the ruins of malkeran~
+~
+road
+D EAST 4054 0 0
+~
+~
+D SOUTH 4056 0 0
+~
+~
+D WEST 4061 0 0
+~
+~
+D DOWN 4018 AFI 0
+~
+~
+OWNER none~
+#4058
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4059 0 0
+~
+~
+D EAST 4049 0 0
+~
+~
+OWNER none~
+#4059
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4060 0 0
+~
+~
+D EAST 4062 0 0
+~
+~
+D SOUTH 4058 0 0
+~
+~
+OWNER none~
+#4060
+Atop the ruins of malkeran~
+~
+road
+D EAST 4061 0 0
+~
+~
+D SOUTH 4059 0 0
+~
+~
+OWNER none~
+#4061
+Atop the ruins of malkeran~
+~
+road
+D EAST 4057 0 0
+~
+~
+D SOUTH 4062 0 0
+~
+~
+D WEST 4060 0 0
+~
+~
+OWNER none~
+#4062
+Atop the ruins of malkeran~
+~
+road
+D NORTH 4061 0 0
+~
+~
+D EAST 4056 0 0
+~
+~
+D SOUTH 4049 0 0
+~
+~
+D WEST 4059 0 0
+~
+~
+D DOWN 4063 AB 0
+stone~
+~
+OWNER none~
+#4063
+Entrance to the tomb of Malkeran~
+~
+inside
+D WEST 4064 0 0
+~
+~
+D UP 4062 AB 0
+~
+~
+OWNER none~
+#4064
+Within a Passageway~
+~
+inside
+D NORTH 4065 0 0
+~
+~
+D EAST 4063 0 0
+~
+~
+OWNER none~
+#4065
+Within a Passageway~
+~
+inside
+D EAST 4066 0 0
+~
+~
+D SOUTH 4064 0 0
+~
+~
+OWNER none~
+#4066
+Within a Passageway~
+~
+inside
+D EAST 4067 0 0
+~
+~
+D WEST 4065 0 0
+~
+~
+OWNER none~
+#4067
+Within a Passageway~
+~
+inside
+D EAST 4068 0 0
+~
+~
+D SOUTH 4073 ABCEHI 0
+~
+~
+D WEST 4066 0 0
+~
+~
+OWNER none~
+#4068
+Within a Passageway~
+~
+inside
+D EAST 4069 0 0
+~
+~
+D WEST 4067 0 0
+~
+~
+OWNER none~
+#4069
+Above a large hole~
+~
+inside
+D WEST 4068 0 0
+~
+~
+D DOWN 4070 0 0
+~
+~
+OWNER none~
+#4070
+Below a large hole~
+~
+inside
+D WEST 4071 0 0
+~
+~
+D UP 4069 0 0
+~
+~
+OWNER none~
+#4071
+Before the antechamber~
+~
+inside
+D EAST 4070 0 0
+~
+~
+D SOUTH 4072 0 0
+~
+~
+OWNER none~
+#4072
+The antechamber~
+~
+inside
+D NORTH 4071 0 0
+~
+~
+OWNER none~
+#4073
+Behind a hollow wall~
+~
+inside
+D NORTH 4067 ABCEHI 0
+~
+~
+D EAST 4074 0 0
+~
+~
+D SOUTH 4082 ABCEHI 0
+~
+~
+OWNER none~
+#4074
+A secret passage~
+~
+inside
+D SOUTH 4075 0 0
+~
+~
+D WEST 4073 0 0
+~
+~
+OWNER none~
+#4075
+A secret passage~
+~
+inside
+D NORTH 4074 0 0
+~
+~
+D EAST 4076 0 0
+~
+~
+OWNER none~
+#4076
+A secret passage~
+~
+inside
+D NORTH 4077 0 0
+~
+~
+D WEST 4075 0 0
+~
+~
+OWNER none~
+#4077
+Above a small shaft~
+~
+inside
+D SOUTH 4076 0 0
+~
+~
+D DOWN 4078 0 0
+~
+~
+OWNER none~
+#4078
+At the bottom of a small shaft~
+~
+inside
+D SOUTH 4079 0 0
+~
+~
+D UP 4077 0 0
+~
+~
+OWNER none~
+#4079
+Before cerimonial pillars~
+~
+inside
+D NORTH 4078 0 0
+~
+~
+D WEST 4080 0 0
+~
+~
+OWNER none~
+#4080
+The tomb of Malkeran~
+~
+inside
+D EAST 4079 0 0
+~
+~
+D WEST 4081 ABCDEIK 0
+~
+~
+OWNER none~
+#4081
+Dummy Room~
+~
+unused
+D EAST 4080 ABCDEIK 0
+~
+~
+OWNER none~
+#4082
+Dummy Room~
+~
+unused
+D NORTH 4073 ABCEHI 0
+~
+~
+D WEST 4083 0 0
+~
+~
+OWNER none~
+#4083
+Dummy Room~
+~
+unused
+D EAST 4082 0 0
+~
+~
+D WEST 4084 0 0
+~
+~
+OWNER none~
+#4084
+Dummy Room~
+~
+unused
+D EAST 4083 0 0
+~
+~
+D DOWN 4085 0 0
+~
+~
+OWNER none~
+#4085
+Dummy Room~
+~
+unused
+D EAST 4086 0 0
+~
+~
+D UP 4084 0 0
+~
+~
+OWNER none~
+#4086
+Dummy Room~
+~
+unused
+D NORTH 4087 ABEHI 0
+~
+~
+D SOUTH 4093 ABCEHI 0
+~
+~
+D WEST 4085 0 0
+~
+~
+OWNER none~
+#4087
+Dummy Room~
+~
+unused
+D NORTH 4090 0 0
+~
+~
+D EAST 4092 0 0
+~
+~
+D SOUTH 4086 ABCEHI 0
+~
+~
+D WEST 4088 0 0
+~
+~
+OWNER none~
+#4088
+Dummy Room~
+~
+unused
+D NORTH 4089 0 0
+~
+~
+D EAST 4087 0 0
+~
+~
+OWNER none~
+#4089
+Dummy Room~
+~
+unused
+D EAST 4090 0 0
+~
+~
+D SOUTH 4088 0 0
+~
+~
+OWNER none~
+#4090
+Dummy Room~
+~
+unused
+D EAST 4091 0 0
+~
+~
+D SOUTH 4087 0 0
+~
+~
+D WEST 4089 0 0
+~
+~
+OWNER none~
+#4091
+Dummy Room~
+~
+unused
+D SOUTH 4092 0 0
+~
+~
+D WEST 4090 0 0
+~
+~
+OWNER none~
+#4092
+Dummy Room~
+~
+unused
+D NORTH 4091 0 0
+~
+~
+D WEST 4087 0 0
+~
+~
+OWNER none~
+#4093
+Dummy Room~
+~
+unused
+D NORTH 4086 ABCEHI 0
+~
+~
+D SOUTH 4094 0 0
+~
+~
+OWNER none~
+#4094
+Dummy Room~
+~
+unused
+D NORTH 4093 0 0
+~
+~
+OWNER none~
+#4095
+Dummy Room~
+~
+unused
+D NORTH 4096 0 0
+~
+~
+D WEST 4098 0 0
+~
+~
+D DOWN 4016 AFI 0
+~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+DOOR 4086 north CLOSED
+S
+
+#IMPROGS
+END
+#$

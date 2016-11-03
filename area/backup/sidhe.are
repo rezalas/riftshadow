@@ -1,0 +1,1076 @@
+#AREA
+sidhe.are~
+Sidhe Village~
+Tiernus~
+1 51
+4100 4249
+unopened
+temperate
+0
+1
+Tyner Tiernus~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#0
+
+
+
+#ROOMS
+#4100
+Above the Forest Floor~
+Broad, flat limbs extend themselves from this massive tree in a rather
+neat spiral, virtually creating a winding staircase which runs into the
+forest canopy above, and to the floor far below.  The mottled trunk is
+impossibly wide, even at this height, and a host of forest creatures appear
+to reside in its dark nooks and furrows.  A short distance above, the trunk
+splits into two mighty halves.  Built into the tree near the split a large
+platform can be seen.  A rope ladder hangs from above to offer access.  
+~
+vertical
+D UP 4101 0 0
+~
+A platform can be seen higher up in the tree.
+~
+D DOWN 9023 0 0
+~
+The forest floor is visible far below.
+~
+OWNER none~
+#4101
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful hardwood
+laid upon crossbeams built into the side of the mammoth tree.  The immense
+trunk splits here, the two mighty halves reaching impossible heights into
+the canopy, which grows even thicker above.  In spite of its intricate
+construction, the platform is quite plain.  It's only ornamentation is a
+large railing around the perimeter, which is certainly a detail of function
+and not form.  The platform continues to the north and west, while a rope
+ladder leads down into the tree below.  
+~
+trail
+D NORTH 4104 0 0
+~
+The platform continues to the north.
+~
+D WEST 4102 0 0
+~
+The platform continues to the west.
+~
+D DOWN 4100 0 0
+~
+Broad, flat limbs permit descent of the tree below.
+~
+OWNER none~
+#4102
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful hardwood
+laid upon crossbeams built into the sids of the mammoth tree.  In spite of
+its intricate construction, the platform is quite plain.  It's only
+ornamentation is a large railing around the perimeter, which is certainly a
+detail of function and not form.  The platform continues here to the east
+and north.  
+~
+trail
+D NORTH 4103 0 0
+~
+The platform continues to the north.
+~
+D EAST 4101 0 0
+~
+The platform continues to the east.
+~
+OWNER none~
+#4103
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful
+hardwood laid upon crossbeams built into the sids of the mammoth tree.  In
+spite of its intricate construction, the platform is quite plain.  It's only
+ornamentation is a large railing around the perimeter, which is certainly a
+detail of function and not form.  The platform continues here to the east
+and south.  
+~
+trail
+D EAST 4104 0 0
+~
+The platform continues to the east.
+~
+D SOUTH 4102 0 0
+~
+The platform continues to the south.
+~
+OWNER none~
+#4104
+A Platform High in the Trees~
+This sturdy platform consists of long, thick boards of beautiful
+hardwood laid upon crossbeams built into the sids of the mammoth tree.  In
+spite of its intricate construction, the platform is quite plain.  It's only
+ornamentation is a large railing around the perimeter, which is certainly a
+detail of function and not form.  The platform continues here to the west
+and south.  To the north, a rope bridge sags out over the forest floor,
+connecting this platform with another.  
+~
+trail
+D NORTH 4105 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D SOUTH 4101 0 0
+~
+The platform continues to the south.
+~
+D WEST 4103 0 0
+~
+The platform continues to the west.
+~
+OWNER none~
+#4105
+A Rope Bridge, High in the Trees~
+Long, knotted cords form the frame of this bridge, with crosswise boards
+providing a passable surface.  Other ropes provide a makeshift railing, but
+it seems they would do little to guard against an actual fall.  The forest
+floor can be seen below, man-sized bushes reduced to motes far beneath this
+arbor paradise.  The bridge continues to the north, where it can be seen to
+reach a platform a short distance ahead.  Another such platform lies more
+immediately to the south, nestled into the mighty trunk of an enormous tree.
+~
+trail
+D NORTH 4106 0 0
+~
+The rope bridge continues to the north.
+~
+D SOUTH 4104 0 0
+~
+A large platform lies just to the south.
+~
+OWNER none~
+#4106
+A Rope Bridge, High in the Trees~
+Long, knotted cords form the frame of this bridge, with crosswise boards
+providing a passable surface.  Other ropes provide a makeshift railing, but
+it seems they would do little to guard against an actual fall.  The forest
+floor can be seen below, man-sized bushes reduced to motes far beneath this
+arbor paradise.  The bridge connects to a small platform to the north, built
+into the side of a tree trunk.  A short distance to the south, a larger
+platform is built into the forking trunk of a colossal tree.  
+~
+trail
+D NORTH 4107 0 0
+~
+A wooden platform lies to the north.
+~
+D SOUTH 4105 0 0
+~
+The rope bridge continues to the south.
+~
+OWNER none~
+#4107
+A Platform, Before a Hollow Tree~
+This narrow platform is anchored on several thin tree trunks, the
+crossbeams overlaid with boards of sturdy hardwood.  A wooden railing to the
+north and west makes a cursory effort at preventing falls into the
+incredible emptiness below.  The platform runs to the east toward the
+hollowed-out trunk of a mammoth tree, where a large archway offers entrance.
+A rope bridge sags out over the forest to the south, where another platform
+can be seen in the distance.  
+~
+trail
+D EAST 4108 0 0
+~
+An opening in a large hollow tree lies to the east.
+~
+D SOUTH 4106 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+OWNER none~
+#4108
+Within a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D WEST 4107 0 0
+~
+Through the opening in the tree lies a platform to the west.
+~
+D UP 4109 0 0
+~
+A winding stair ascends the inner walls of the tree.
+~
+OWNER none~
+#4109
+Within a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D EAST 4110 0 0
+~
+To the east, a large platform has been built into the trees.
+~
+D DOWN 4108 0 0
+~
+A winding stair leads down into the tree.
+~
+OWNER none~
+#4110
+On a Wide Platform~
+~
+trail
+D NORTH 4111 0 0
+~
+The platform continues to the north.
+~
+D EAST 4128 0 0
+~
+The platform continues to the east.
+~
+D WEST 4109 0 0
+~
+A large archway offers access to a hollow tree to the west.
+~
+OWNER none~
+#4111
+On a Wide Platform~
+~
+trail
+D NORTH 4112 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D EAST 4127 0 0
+~
+The platform continues to the east.
+~
+D SOUTH 4110 0 0
+~
+The platform continues to the south.
+~
+OWNER none~
+#4112
+On a Rope Bridge~
+~
+trail
+D NORTH 4113 0 0
+~
+The bridge sways out over the forest to the north.
+~
+D SOUTH 4111 0 0
+~
+The bridge leads to a platform to the south.
+~
+OWNER none~
+#4113
+On a Rope Bridge~
+~
+trail
+D NORTH 4114 0 0
+~
+A wide platform leads between some huts to the north.
+~
+D SOUTH 4112 0 0
+~
+The bridge sways out over the forest to the south.
+~
+OWNER none~
+#4114
+A Cliffside Platform~
+~
+trail
+D NORTH 4117 0 0
+~
+The platform continues to the north.
+~
+D EAST 4116 0 0
+~
+A large hut is built on the platform to the east.
+~
+D SOUTH 4113 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+D WEST 4115 0 0
+~
+A rather elaborate hut is constructed into the side of the cliff to the west.
+~
+OWNER none~
+#4115
+Inside an Octagonal Hut~
+~
+inside
+ROOM INDOORS
+D EAST 4114 0 0
+~
+A small entrance leads out to a platform to the east.
+~
+OWNER none~
+#4116
+Inside a Hut~
+~
+inside
+ROOM INDOORS
+D WEST 4114 0 0
+~
+An arched opening leads to a platform to the west.
+~
+OWNER none~
+#4117
+A Cliffside Platform~
+~
+trail
+D NORTH 4120 0 0
+~
+A rocky trail leads north onto the mountainside.
+~
+D EAST 4119 0 0
+~
+A hut is built on the platform to the east.
+~
+D SOUTH 4114 0 0
+~
+The platform continues to the south.
+~
+D WEST 4118 0 0
+~
+A hut is built into the cliffside to the west.
+~
+OWNER none~
+#4118
+Inside a Hut~
+~
+inside
+ROOM INDOORS
+D EAST 4117 0 0
+~
+An opening leads out to a platform to the east.
+~
+OWNER none~
+#4119
+Inside a Hut~
+~
+inside
+ROOM INDOORS
+D WEST 4117 0 0
+~
+An opening leads out to a platform to the west.
+~
+OWNER none~
+#4120
+A Rocky Trail on the Mountainside~
+~
+trail
+D NORTH 4121 0 0
+~
+The trail continues on the mountainside to the north.
+~
+D SOUTH 4117 0 0
+~
+A wide platform leads out over the forest to the south.
+~
+OWNER none~
+#4121
+A Small Junction on the Mountainside~
+~
+trail
+D EAST 4122 0 0
+~
+A rather elaborate lean-to is built into the mountainside to the east.
+~
+D SOUTH 4120 0 0
+~
+A rocky trail leads south toward the forest.
+~
+D WEST 4123 0 0
+~
+A rocky path leads off to the west, where it winds down along the cliffs.
+~
+OWNER none~
+#4122
+An Elaborate Lean-To~
+~
+inside
+ROOM INDOORS
+D WEST 4121 0 0
+~
+A rocky trail runs along the mountainside to the west.
+~
+OWNER none~
+#4123
+A Rocky Path, Above a Cliff~
+~
+trail
+D EAST 4121 0 0
+~
+A rocky trail leads along the mountainside to the east.
+~
+D DOWN 4124 0 0
+~
+A steep slope runs along a cliff below.
+~
+OWNER none~
+#4124
+A Narrow Trail on a Cliff~
+~
+trail
+D WEST 4125 0 0
+~
+The cliffside continues to the west.
+~
+D UP 4123 0 0
+~
+A rocky path ascends the cliff above.
+~
+OWNER none~
+#4125
+A Narrow Trail on a Cliff~
+~
+trail
+D EAST 4124 0 0
+~
+The cliffside continues to the east.
+~
+D WEST 4126 0 0
+~
+The cliffside continues to the west.
+~
+OWNER none~
+#4126
+The End of a Cliffside Trail~
+~
+trail
+D EAST 4125 0 0
+~
+The cliffside continues to the east.
+~
+OWNER none~
+#4127
+On a Wide Platform~
+~
+trail
+D SOUTH 4128 0 0
+~
+The platform continues to the south.
+~
+D WEST 4111 0 0
+~
+The platform continues to the west.
+~
+OWNER none~
+#4128
+On a Wide Platform~
+~
+trail
+D NORTH 4127 0 0
+~
+The platform continues to the north.
+~
+D EAST 4129 0 0
+~
+A rope bridge sags out over the forest to the east.
+~
+D WEST 4110 0 0
+~
+The platform continues to the west.
+~
+OWNER none~
+#4129
+On a Rope Bridge~
+~
+trail
+D EAST 4130 0 0
+~
+The rope bridge sags out over the forest to the east.
+~
+D WEST 4128 0 0
+~
+A platform is built into some trees to the west.
+~
+OWNER none~
+#4130
+On a Rope Bridge~
+~
+trail
+D EAST 4131 0 0
+~
+A long wooden platform is built into some trees to the east.
+~
+D WEST 4129 0 0
+~
+The rope bridge sags out over the forest to the west.
+~
+OWNER none~
+#4131
+A Wide Boulevard of Planks~
+~
+trail
+D NORTH 4132 0 0
+~
+A small balcony overlooks the forest to the north.
+~
+D EAST 4133 0 0
+~
+The wide platform continues to the east.
+~
+D SOUTH 4151 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+D WEST 4130 0 0
+~
+A rope bridge sags out over the forest to the west.
+~
+OWNER none~
+#4132
+A Platform Overlooking the Forest~
+~
+trail
+D SOUTH 4131 0 0
+~
+A wooden platform lies to the south.
+~
+OWNER none~
+#4133
+A Wide Boulevard of Planks~
+~
+trail
+D NORTH 4135 0 0
+~
+A small door leads into a tidy hut to the north.
+~
+D EAST 4136 0 0
+~
+The long platform continues to the east.
+~
+D SOUTH 4134 0 0
+~
+A small door offers entrance to a tree-dwelling to the south.
+~
+D WEST 4131 0 0
+~
+The long platform continues to the west.
+~
+OWNER none~
+#4134
+A Dwelling in a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D NORTH 4133 0 0
+~
+A small door leads onto a long platform to the north.
+~
+OWNER none~
+#4135
+Within a Tidy Hut~
+~
+inside
+ROOM INDOORS
+D SOUTH 4133 0 0
+~
+A small door leads onto a long platform to the south.
+~
+OWNER none~
+#4136
+A Wide Boulevard of Planks~
+~
+trail
+D NORTH 4139 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D EAST 4138 0 0
+~
+A small tavern lies through a door to the east.
+~
+D SOUTH 4137 0 0
+~
+To the south, a door opens into the bakery.
+~
+D WEST 4133 0 0
+~
+The long platform continues to the west.
+~
+OWNER none~
+#4137
+Rellah's Kitchen~
+~
+inside
+ROOM INDOORS
+D NORTH 4136 0 0
+~
+A door leads onto a wide platform to the north.
+~
+OWNER none~
+#4138
+A Cheery Tavern~
+~
+inside
+ROOM INDOORS
+D WEST 4136 0 0
+~
+A doorway leads out to a platform to the west.
+~
+OWNER none~
+#4139
+On a Rope Bridge~
+~
+trail
+D NORTH 4140 0 0
+~
+A small, circular platform is built into the side of a tree to the north.
+~
+D SOUTH 4136 0 0
+~
+The rope bridge connects to a long platform to the south.
+~
+OWNER none~
+#4140
+A Small, Circular Platform~
+~
+trail
+D NORTH 4143 0 0
+~
+A narrow plank leads precariously between two trees to the north.
+~
+D EAST 4142 0 0
+~
+To the east the platform dead-ends at a point overlooking the valley.
+~
+D SOUTH 4139 0 0
+~
+A rope bridge sags out over the forest to the south.
+~
+D WEST 4141 0 0
+~
+A ramshackle dwelling has been constructed among some trees to the west.
+~
+OWNER none~
+#4141
+A Ramshackle Dwelling~
+~
+inside
+ROOM INDOORS
+D EAST 4140 0 0
+~
+A small platform is accessable to the east.
+~
+OWNER none~
+#4142
+The Valley Overlook~
+~
+trail
+D WEST 4140 0 0
+~
+A small platform is accessable to the west.
+~
+OWNER none~
+#4143
+On a Narrow Plank~
+~
+trail
+D NORTH 4144 0 0
+~
+The plank runs into the hollow of an immense and ancient tree to the north.
+~
+D SOUTH 4140 0 0
+~
+A small, circular platform lies to the south.
+~
+OWNER none~
+#4144
+A Passage in a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D NORTH 4147 0 0
+~
+To the north a rope bridge sags out over the forest.
+~
+D EAST 4146 0 0
+~
+A small door leads into another part of the tree to the east.
+~
+D SOUTH 4143 0 0
+~
+A narrow plank runs south toward a small platform.
+~
+D WEST 4145 0 0
+~
+A small door leads into another part of the tree to the west.
+~
+OWNER none~
+#4145
+A Strange Laboratory, Within a Tree~
+~
+inside
+ROOM INDOORS
+D EAST 4144 0 0
+~
+A small door leads east into the main body of the tree.
+~
+OWNER none~
+#4146
+A Bedroom, Within a Tree~
+~
+inside
+ROOM INDOORS
+D WEST 4144 0 0
+~
+A small door to the west leads into the main body of the tree.
+~
+OWNER none~
+#4147
+On a Rope Bridge~
+~
+trail
+D NORTH 4148 0 0
+~
+The rope bridge continues toward a platform to the north.
+~
+D SOUTH 4144 0 0
+~
+To the south lies a gaping entrance to an immense, hollow tree.
+~
+OWNER none~
+#4148
+On a Rope Bridge~
+~
+trail
+D NORTH 4149 0 0
+~
+A small platform lies to the north.
+~
+D SOUTH 4147 0 0
+~
+The rope bridge continues toward a large tree to the south.
+~
+OWNER none~
+#4149
+Dummy Room~
+~
+unused
+D EAST 4150 0 0
+~
+~
+D SOUTH 4148 0 0
+~
+~
+OWNER none~
+#4150
+Dummy Room~
+~
+unused
+D WEST 4149 0 0
+~
+~
+OWNER none~
+#4151
+On a Rope Bridge~
+~
+trail
+D NORTH 4131 0 0
+~
+A wide platform is just to the north.
+~
+D SOUTH 4152 0 0
+~
+The rope bridge sags out over the forest to the south.
+~
+OWNER none~
+#4152
+On a Rope Bridge~
+~
+trail
+D NORTH 4151 0 0
+~
+The rope bridge sags out over the forest to the north.
+~
+D SOUTH 4153 0 0
+~
+A narrow platform winds among densely-packed trees to the south.
+~
+OWNER none~
+#4153
+An Overgrown Platform~
+~
+trail
+D NORTH 4152 0 0
+~
+A rope bridge sags out over the forest to the north.
+~
+D EAST 4154 0 0
+~
+A door has been built into a large tree to the east.
+~
+D SOUTH 4156 0 0
+~
+The overgrown platform continues to the south.
+~
+D WEST 4155 0 0
+~
+A door has been built into a large tree to the west.
+~
+OWNER none~
+#4154
+A Dwelling in a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D WEST 4153 0 0
+~
+An overgrown platform lies to the west.
+~
+OWNER none~
+#4155
+A Dwelling in a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D EAST 4153 0 0
+~
+An overgrown platform lies to the east.
+~
+OWNER none~
+#4156
+An Overgrown Platform~
+~
+trail
+D NORTH 4153 0 0
+~
+~
+D EAST 4159 0 0
+~
+A rope bridge sags out over the forest to the east.
+~
+D SOUTH 4158 0 0
+~
+A door has been built into a large tree to the south.
+~
+D WEST 4157 0 0
+~
+A door has been built into a large tree to the west.
+~
+OWNER none~
+#4157
+A Dwelling in a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D EAST 4156 0 0
+~
+An overgrown platform lies to the east.
+~
+OWNER none~
+#4158
+A Dwelling in a Hollow Tree~
+~
+inside
+ROOM INDOORS
+D NORTH 4156 0 0
+~
+An overgrown platform lies to the north.
+~
+OWNER none~
+#4159
+On a Rope Bridge~
+~
+trail
+D EAST 4160 0 0
+~
+A platform to the east stands before an immense, gnarled oak.
+~
+D WEST 4156 0 0
+~
+An overgrown platform lies to the west.
+~
+OWNER none~
+#4160
+A Platform, Before a Gnarled Oak~
+~
+trail
+D EAST 4161 0 0
+~
+A door leads into the gnarled oak to the east.
+~
+D WEST 4159 0 0
+~
+A rope bridge sags out over the forest to the west.
+~
+OWNER none~
+#4161
+A Foyer, Within the Gnarled Oak~
+~
+inside
+ROOM INDOORS
+D NORTH 4169 0 0
+~
+A small doorway lies to the north.
+~
+D EAST 4170 0 0
+~
+A small doorway lies to the east.
+~
+D WEST 4160 0 0
+~
+A door leads out of the tree to the west.
+~
+D UP 4171 0 0
+~
+A stairway carved into the inside wall ascends to the second level.
+~
+OWNER none~
+#4169
+A Library, Within the Gnarled Oak~
+~
+inside
+ROOM INDOORS
+D SOUTH 4161 0 0
+~
+A small doorway leads south into the foyer.
+~
+OWNER none~
+#4170
+A Bedroom, Within the Gnarled Oak~
+~
+inside
+ROOM INDOORS
+D WEST 4161 0 0
+~
+A small doorway leads west into the foyer.
+~
+OWNER none~
+#4171
+A Landing, Within the Gnarled Oak~
+~
+inside
+ROOM INDOORS
+D EAST 4172 0 0
+~
+An archway leads east onto a balcony.
+~
+D DOWN 4161 0 0
+~
+A stairway carved into the inside wall leads down into the foyer.
+~
+OWNER none~
+#4172
+A Balcony on the Gnarled Oak~
+~
+trail
+D NORTH 4173 0 0
+~
+The balcony continues to the north.
+~
+D SOUTH 4179 0 0
+~
+The balcony continues to the south.
+~
+D WEST 4171 0 0
+~
+An archway leads into the tree to the west.
+~
+OWNER none~
+#4173
+A Balcony on the Gnarled Oak~
+~
+trail
+D SOUTH 4172 0 0
+~
+The balcony continues to the south.
+~
+D WEST 4174 0 0
+~
+The balcony continues to the west.
+~
+OWNER none~
+#4174
+A Balcony on the Gnarled Oak~
+~
+trail
+D EAST 4173 0 0
+~
+The balcony continues to the east.
+~
+D WEST 4175 0 0
+~
+The balcony continues to the west.
+~
+OWNER none~
+#4175
+A Balcony on the Gnarled Oak~
+~
+trail
+D EAST 4174 0 0
+~
+The balcony continues to the east.
+~
+D SOUTH 4176 0 0
+~
+The balcony continues to the south.
+~
+OWNER none~
+#4176
+A Balcony on the Gnarled Oak~
+~
+trail
+D NORTH 4175 0 0
+~
+The balcony continues to the north.
+~
+D SOUTH 4177 0 0
+~
+The balcony continues to the south.
+~
+OWNER none~
+#4177
+A Balcony on the Gnarled Oak~
+~
+trail
+D NORTH 4176 0 0
+~
+The balcony continues to the north.
+~
+D EAST 4178 0 0
+~
+The balcony continues to the east.
+~
+OWNER none~
+#4178
+A Balcony on the Gnarled Oak~
+~
+trail
+D EAST 4179 0 0
+~
+The balcony continues to the east.
+~
+D WEST 4177 0 0
+~
+The balcony continues to the west.
+~
+OWNER none~
+#4179
+A Balcony on the Gnarled Oak~
+~
+trail
+D NORTH 4172 0 0
+~
+The balcony continues to the north.
+~
+D WEST 4178 0 0
+~
+The balcony continues to the west.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#$

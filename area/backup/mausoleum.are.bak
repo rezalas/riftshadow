@@ -1,0 +1,2946 @@
+#AREA
+mausoleum.are~
+Mausoleum~
+Khargqw~
+25 51
+6200 6299
+normal
+none
+A
+1
+Khargqw~
+
+#MOBS
+#6200
+zombie undead~
+a disgusting, rotting zombie~
+A horribly disgusting zombie is here, looking to devour the living.
+~
+You can't tell if this was once a man or a woman, or even what race it
+once was.... Just that it is horribly decayed, and appears to be
+missing a few chunks of flesh, like something else had been eating off
+of it. The zombie seems oblivious to you, until you draw close enough for it
+to make its kill.
+~
+-1000 6200 100 zombie~
+31 9d5+1200 6d6+18 0 100 slash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6201
+juju zombie undead~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and evil
+purpose.  Upon closer examination, you notice that the thing before you
+actually has no eyes, but instead a faint red glow emanates from its eye
+sockets.  
+~
+-1000 6201 100 zombie~
+36 7d20+1600 6d6+22 0 100 smash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6202
+ghoul~
+a hungry ghoul~
+A horrible creature is here, feeding off of a decaying corpse.
+~
+This disgusting, withered humanoid creature greedily devours a decayed
+corpse in earnest, but drops it upon noticing the fresh meat that just
+walked into the room.
+~
+-1000 6202 100 zombie~
+33 10d10+1200 5d5+15 0 100 claw
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6203
+hellhound dog mastiff~
+a Hellhound~
+A large mastiff stands here guarding something.
+~
+This large dog stands poised to strike at whomever intends to intrude
+upon its post. You find this out only too late as a great jet of flames
+shoots from its mouth, turning all in its path to cinders.
+~
+-1000 6203 100 dog~
+45 25d10+2500 8d4+20 0 100 flame
+0 0 0 0
+standing male none
+I 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM COLD
+#6204
+dracolich~
+the great Dracolich~
+A huge dragon-skeleton form stands here, radiating pure evil.
+~
+This creature is not only huge, covering a length of over 40 feet,
+but is probably the most deadly thing in existance right now...
+But then, by the time you've read this, you have already noticed
+its sheer power for yourself!
+~
+-1000 6204 100 dragon~
+62 60d10+10000 7d7+30 0 75 claw
+100 100 100 150
+standing male none
+I 0 giant
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF SPAM_MURDER
+AFF DETECT_HIDDEN
+AFF HASTE
+AFF REGENERATION
+AFF DARKSANC
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM NEGATIVE
+IMM DISEASE
+IMM DROWNING
+#6205
+drow vampire undead kharzandra~
+Kharzandra, the Dark-elf Vampire~
+A dark-skinned wizardress stands here, raising the dead.
+~
+Fear grips you upon looking at this frail, young looking creature, when
+you realize what it truly is... a Dark-elf enchantress which has become a
+creature of the undead.  She looks a bit hungry after having a full day of
+reanimating corpses, perhaps you will be her dinner?  
+~
+-1000 6205 100 vampire~
+56 56d20+5500 6d7+30 0 100 shbite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF SPAM_MURDER
+IMM SUMMON
+IMM CHARM
+#6206
+vampire undead shadar lunn~
+the vampire, Shadar Lunn~
+A large, stout man stands here clad in darkened armor.
+~
+This large man is clad in high darkened armor, and was probably once
+a lieutenant in the Arkham guard... or else, he just knows good armor
+when he sees it.
+~
+-1000 6206 100 vampire~
+57 10d20+7100 7d6+35 50 100 suction
+100 100 100 100
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+ACT INTELLIGENT
+OFF BASH
+OFF DODGE
+OFF FAST
+OFF PARRY
+OFF SPAM_MURDER
+AFF HASTE
+AFF DARKSANC
+IMM SUMMON
+IMM CHARM
+CLASS warrior Gladiator Tactician 
+#6207
+priest vampire undead~
+the dark priest vampire~
+A dark-robed man stands here, praying to his unholy god.
+~
+This dark-priest wears the sign of Destruction about his neck, and is seeming
+disturbed by your intrusion during his meditation.
+~
+-1000 6207 100 vampire~
+46 25d10+3300 8d5+23 0 100 scratch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6208
+dark spectre~
+the dark spectre~
+A dark spectre is here, feeding off your lifeforce.
+~
+You can see right through this creature, except for the dark patch surrounding
+its red, glowing eyes...
+it looks pissed off that you're still alive.
+~
+-1000 6208 100 spectre~
+56 10d10+3600 6d6+5 0 100 none
+0 0 0 0
+standing male none
+L 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6209
+Rakshasa~
+the Rakshasa~
+A half-tiger, half-man beast is here, conjuring a dark spell on the dead.
+~
+This is a fascinating looking creature... its face looks exactly like a
+tiger's, with the brownish orange fur, black stripes, and whiskers, but its
+hands and lower body are human, and drabbed in a grey overcoat.  You feel
+strangely compelled to surrender yourself to the creature before you, in
+hopes of becoming its friend.  
+~
+-1000 6209 100 rakshasa~
+45 25d10+3000 8d4+16 0 100 bite
+0 0 0 0
+standing male none
+I 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT STAY_AREA
+OFF SPAM_MURDER
+IMM SUMMON
+IMM CHARM
+#6210
+demon familiar~
+the demon familiar~
+A small demon is here, hovering in mid-air.
+~
+This little guy looks very familiar... you know it would be a bad thing to
+mess with it.
+~
+-850 6210 100 demon~
+42 30d10+2900 3d10+22 0 100 wrath
+0 0 0 0
+standing male none
+I 0 medium
+ACT NPC
+ACT SCAVENGER
+ACT AGGRESSIVE
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6211
+vampire undead~
+a young vampire~
+A young vampire stands here, looking for something to kill.
+~
+This young lady looks quite famished and pale.
+~
+-1000 6211 100 vampire~
+37 12d12+1650 6d5+13 0 100 scratch
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT AGGRESSIVE
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6212
+juju undead zombie~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and
+powerful creature.  Upon closer examination, you notice that the thing
+before you actually has no eyes, but instead a faint red glow emanates from
+its eye sockets.  
+~
+-1000 6212 100 zombie~
+36 7d20+1450 6d6+18 0 100 smash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6213
+juju undead zombie~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and
+powerful creature.  Upon closer examination, you notice that the thing
+before you actually has no eyes, but instead a faint red glow emanates from
+its eye sockets.  
+~
+-1000 6213 100 zombie~
+36 7d20+1400 3d10+17 0 100 claw
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6214
+juju undead zombie~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and
+powerful creature.  Upon closer examination, you notice that the thing
+before you actually has no eyes, but instead a faint red glow emanates from
+its eye sockets.  
+~
+-1000 6214 100 zombie~
+36 7d20+1300 6d6+11 0 100 smash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6215
+juju undead zombie~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and
+powerful creature.  Upon closer examination, you notice that the thing
+before you actually has no eyes, but instead a faint red glow emanates from
+its eye sockets.  
+~
+-1000 6215 100 zombie~
+36 7d20+1300 6d6+11 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6216
+juju undead zombie~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and
+powerful creature.  Upon closer examination, you notice that the thing
+before you actually has no eyes, but instead a faint red glow emanates from
+its eye sockets.  
+~
+-1000 6216 100 zombie~
+36 7d20+1300 6d6+11 0 100 smash
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#6217
+hellhound dog mastiff~
+a Hellhound~
+A large mastiff stands here guarding something.
+~
+This large dog stands poised to strike at whomever intends to intrude
+upon its post.  You find this out only too late as a great jet of flames
+shoots from its mouth, turning all in its path to cinders.  
+~
+-1000 6217 100 dog~
+45 25d10+2500 8d4+20 0 100 flame
+0 0 0 0
+standing male none
+I 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM NEGATIVE
+IMM DISEASE
+IMM DROWNING
+#6218
+hellhound dog mastiff~
+a Hellhound~
+A large mastiff stands here guarding something.
+~
+This large dog stands poised to strike at whomever intends to intrude
+upon its post.  You find this out only too late as a great jet of flames
+shoots from its mouth, turning all in its path to cinders.  
+~
+-1000 6218 100 dog~
+45 25d10+2500 8d4+20 0 100 flame
+0 0 0 0
+standing male none
+I 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT STAY_AREA
+AFF DARK_VISION
+IMM SUMMON
+IMM CHARM
+IMM POISON
+IMM NEGATIVE
+IMM DISEASE
+IMM DROWNING
+#6219
+paladin lord siig~
+Lord Siig~
+A heavily armored paladin stands here, cleansing the evil around him.
+~
+Lord Siig stands before you in his highly polished, platemail armor,
+with his holy sword held ready to destroy the next minion of evil
+that faces him. Although he stands proud, and remains vigilant, he
+has a look of weariness about him, as if his task is never-ending.
+
+Lord Siig looks upon you and decides you are not a threat, while
+scanning the area intently. He then asks if you have any ideas on the
+cause of the undead infestation here, and what manner of creature is
+controlling it.
+
+Before you can answer, you hear a deafening roar from the south.
+Your party begins to tense up as Lord Siig mutters 'Dracolich...
+this is worse then I thought. Excuse me, I must do what I can to
+destroy it before the evil here overruns Cimar.'
+~
+1000 6219 100 human~
+56 20d20+5400 7d6+26 0 100 wrath
+0 0 0 0
+standing male none
+I 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+AFF INFRARED
+IMM SUMMON
+IMM CHARM
+#6220
+undead zombie~
+the Juju zombie~
+A pale, withered man stands here, staring at you with immense hatred.
+~
+This greyish skinned creature was once probably a powerful adventurer,
+such as yourself, before it was slain and reanimated for some dark and
+powerful creature.  Upon closer examination, you notice that the thing
+before you actually has no eyes, but instead a faint red glow emanates from
+its eye sockets.  
+~
+-1000 6220 100 zombie~
+36 9d20+1200 6d6+12 0 100 scratch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#0
+
+
+
+#OBJS
+#6200
+corpse~
+a smelly humanoid corpse~
+A decaying corpse lies here, feeding the worms and rats.~
+container
+flesh~
+35 0 0 0 0
+25 90 0 P
+LIMIT 0
+
+#6201
+corpse~
+a corpse of an elfin wizard~
+A freshly killed corpse lies here, waiting to be buried.~
+container
+flesh~
+25 0 0 0 0
+25 75 0 P
+LIMIT 0
+
+#6202
+corpse~
+a corpse of an elfin paladin~
+A freshly slain corpse of an elfin paladin lies here untouched.~
+container
+flesh~
+25 0 0 0 0
+25 75 0 P
+LIMIT 0
+
+#6203
+corpse~
+a corpse of an elfin ranger~
+A horribly mutilated, yet still fairly fresh elfin ranger corpse lies here.~
+container
+flesh~
+0 0 0 0 0
+25 70 0 P
+LIMIT 0
+
+#6204
+skull dracolich~
+the huge skull of the ancient Dracolich~
+A large dragon's skull lies here, eminating an aura of fear and evil.~
+light
+energy~
+0 0 -1 0 0
+51 30 150000 P
+WEAR TAKE
+ITEM GLOW
+ITEM DARK
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+APPLY WIS -2
+APPLY DAMROLL 4
+APPLY HITROLL 3
+APPLY AC 5
+APPLY HP 30
+LIMIT 6
+E skull dracolich~
+When you look deeper into the eye sockets of this long-undead remanent,
+you feel as though it is talking to you... perhaps changing you in some
+way. The power you feel when holding it close to you makes you forget all
+your troubles, though.
+~
+
+#6205
+copper ring fortitude~
+the ring of fortitude~
+A small copper ring lays here, shining with a dull gleam.~
+armor
+copper~
+0 0 0 0 0
+51 0 120000 P
+WEAR TAKE
+WEAR FINGER
+ITEM GLOW
+ITEM EVIL
+ITEM MAGIC
+ITEM NOREMOVE
+APPLY HP 40
+APPLY SAVES -6
+APPLY CON 4
+APPLY STR 1
+LIMIT 10
+E ring copper~
+An inscription is engraved inside the ring, stating 'accursed be the
+one not worthy of the true powers you behold'...
+~
+
+#6206
+claw dracolich~
+the claw of the Dracolich~
+A large skeletal claw lies here, beckoning for you to put it to use.~
+weapon
+steel~
+weapon 7 8 defilement 0
+51 30 150000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+APPLY DAMROLL 6
+APPLY HITROLL 5
+APPLY HP -50
+APPLY CON -2
+LIMIT 2
+
+#6207
+key black~
+a small black skeleton key~
+An ordinary skeleton key lies here.~
+key
+wood~
+0 0 0 0 0
+15 1 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#6208
+key black~
+a small black skeleton key~
+An ordinary skeleton key lies here.~
+key
+wood~
+0 0 0 0 0
+15 1 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#6209
+key black~
+a small black skeleton key~
+An ordinary skeleton key lies here.~
+key
+wood~
+0 0 0 0 0
+15 1 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#6210
+key black~
+a small black skeleton key~
+An ordinary skeleton key lies here.~
+key
+wood~
+0 0 0 0 0
+15 1 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#6211
+key black~
+a small black skeleton key~
+An ordinary skeleton key lies here.~
+key
+wood~
+0 0 0 0 0
+15 1 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#6212
+key black~
+a small black skeleton key~
+An ordinary skeleton key lies here.~
+key
+wood~
+0 0 0 0 0
+15 1 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#6213
+potion preparation prep~
+a potion of preparation~
+An orange potion lies here.~
+potion
+glass~
+20 'cure light' 'detect magic' 'poison' 'reserved'
+10 1 2000 P
+WEAR TAKE
+LIMIT 0
+
+#6214
+cloak death~
+the Cloak of Death~
+A pile of black garb is here, collecting your soul.~
+armor
+fur~
+8 8 8 10 0
+45 4 50000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+APPLY DAMROLL -3
+APPLY HP -250
+APPLY MANA 250
+APPLY WIS 3
+APPLY DEX -2
+LIMIT 0
+E cloak death~
+A tag on the inside warns 'A soul is a small price to pay for the power
+of the dark...'
+~
+
+#6215
+corpse~
+a half-eaten corpse~
+A horribly mutilated, yet still fairly fresh corpse lies here.~
+container
+flesh~
+25 0 0 0 0
+25 70 0 P
+LIMIT 0
+
+#6216
+corpse~
+a peaceful corpse~
+This corpse appears to have been left alone by the ravaging undead here.~
+container
+flesh~
+25 0 0 0 0
+25 70 0 P
+LIMIT 0
+
+#6217
+potion healing bvumpertan~
+a potion of healing~
+A crystal-clear potion lies here... it looks refreshing.~
+potion
+glass~
+25 'harm' 'blindness' 'poison' 'reserved'
+5 0 15000 P
+WEAR TAKE
+LIMIT 0
+
+#6218
+potion healing~
+a potion of healing~
+A crystal-clear potion lies here... it looks refreshing.~
+potion
+glass~
+30 'cure critical' 'refresh' 'blindness' 'reserved'
+5 0 15000 P
+WEAR TAKE
+LIMIT 0
+
+#6219
+potion healing~
+a potion of healing~
+A crystal-clear potion lies here... it looks refreshing.~
+potion
+glass~
+20 'weaken' 'poison' 'blindness' 'reserved'
+5 3 15000 P
+WEAR TAKE
+LIMIT 0
+
+#6220
+silver shield~
+a flawless silver shield~
+A large dish of pure silver rests here.~
+armor
+silver~
+10 10 10 10 10
+51 10 10000 P
+WEAR TAKE
+WEAR SHIELD
+RESTRICT HUMAN_ONLY
+APPLY DAMROLL 1
+APPLY HITROLL 4
+LIMIT 4
+
+#6221
+potion life~
+a potion of life~
+A reddish-brown potion lies here.~
+potion
+glass~
+30 'harm' 'harm' 'harm' 'reserved'
+5 0 1000 P
+WEAR TAKE
+LIMIT 0
+
+#6222
+potion emerald~
+an emerald colored potion~
+An emerald colored potion is here.~
+potion
+glass~
+30 'armor' 'detect evil' 'detect good' 'reserved'
+5 0 1000 P
+WEAR TAKE
+LIMIT 0
+
+#6223
+potion emerald~
+an emerald colored potion~
+An emerald colored potion is here.~
+potion
+glass~
+30 'poison' 'plague' 'blindness' 'reserved'
+5 4 1000 P
+WEAR TAKE
+LIMIT 0
+
+#6224
+silver longsword~
+the silver longsword "Vampire Slayer"~
+A silver longsword lies here scabbardless.~
+weapon
+silver~
+sword 7 7 divine 0
+52 17 63000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT HUMAN_ONLY
+ITEM GLOW
+ITEM MAGIC
+ITEM BLESS
+ITEM ANTIEVIL
+ITEM ANTINEUTRAL
+APPLY SVSPELL -8
+APPLY DAMROLL 4
+APPLY HITROLL 4
+LIMIT 3
+
+#6225
+staff corridors~
+a staff of corridors~
+A short, wooden stick is lying here.~
+staff
+wood~
+10 3 3 'pass door' 0
+5 10 1500 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#6226
+staff wrath~
+a staff of wrath~
+A long, golden staff is here.~
+staff
+wood~
+10 2 2 'frenzy' 0
+5 5 2000 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#6227
+staff wrath~
+a staff of wrath~
+A long, golden staff is here.~
+staff
+gold~
+10 2 2 'frenzy' 0
+5 5 2000 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#6228
+potion protection divine~
+a potion of divine protection~
+A gleaming, white potion is here.~
+potion
+glass~
+51 'armor' 'protection' 'plague' 'reserved'
+5 0 2000 P
+WEAR TAKE
+LIMIT 0
+
+#6229
+libram ineffable damnation~
+the Libram of Ineffable Damnation~
+A large spellbook lies here waiting to be read~
+container
+parchment~
+50 0 0 0 0
+50 15 40000 P
+WEAR TAKE
+WEAR HOLD
+ITEM EVIL
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+LIMIT 0
+TIMER 3
+E book~
+A note is scribbled on the inside cover of the book...
+Happy birthday, Sister... hoping you will return home to Belenderez
+for a visit soon, it's been years.   --Kharg--
+~
+
+#6230
+scroll overkill~
+a scroll of extreme overkill~
+A scroll with the title 'Extreme Overkill' lies here.~
+scroll
+parchment~
+20 'fire breath' 'frost breath' 'lightning breath' 'reserved'
+42 3 1500 P
+WEAR TAKE
+LIMIT 3
+
+#6231
+scroll triumph~
+a scroll of triumph~
+A scroll with the title 'Triumph' lies here.~
+scroll
+parchment~
+20 'blindness' 'poison' 'weaken' 'reserved'
+43 1 1500 P
+WEAR TAKE
+LIMIT 6
+
+#6232
+scroll feasting~
+a scroll of feasting~
+A scroll with the title 'Feasting' lies here.~
+scroll
+parchment~
+50 'create food' 'create food' 'create food' 'create spring'
+5 3 1500 P
+WEAR TAKE
+LIMIT 0
+
+#6233
+scroll redecoration~
+a scroll of room-redecoration~
+A scroll with the title 'Room-redecoration' lies here.~
+scroll
+parchment~
+30 'fireball' 'gas breath' 'iceball' 'reserved'
+45 3 1500 P
+WEAR TAKE
+LIMIT 3
+
+#6234
+scroll protection~
+a scroll of protection~
+A scroll with the title 'Protection' lies here.~
+scroll
+parchment~
+50 'reserved' 'armor' 'fly' 'reserved'
+40 1 1500 P
+WEAR TAKE
+LIMIT 8
+
+#6235
+scroll invulnerability~
+a scroll of invulnerability~
+A scroll with the title "Invulnerability" lies here.~
+scroll
+parchment~
+35 'reserved' 'protection' 'armor' 'reserved'
+45 1 2500 P
+WEAR TAKE
+LIMIT 8
+
+#6236
+scroll wolverine~
+a scroll of the Wolverine~
+A scroll with the title 'Wolverine' lies here.~
+scroll
+parchment~
+20 'enhance synaptics' 'frenzy' 'bless' 'reserved'
+25 0 3000 P
+WEAR TAKE
+LIMIT 8
+
+#6237
+scroll lifebane~
+a scroll of lifebane~
+A scroll with the title 'Lifebane' lies here.~
+scroll
+parchment~
+30 'blindness' 'reserved' 'reserved' 'reserved'
+35 0 3500 P
+WEAR TAKE
+LIMIT 8
+
+#6238
+scroll destruction~
+a scroll of destruction~
+A scroll with the title 'Destruction" lies here.~
+scroll
+parchment~
+50 'chain lightning' 'fireball' 'iceball' 'reserved'
+43 0 5000 P
+WEAR TAKE
+LIMIT 4
+
+#6239
+scroll chaos~
+a scroll of chaos~
+A scroll with the title 'Chaos' lies here.~
+scroll
+parchment~
+40 'teleport' 'reserved' 'fireball' 'reserved'
+30 0 2500 P
+WEAR TAKE
+LIMIT 0
+
+#6240
+scroll rejuvination~
+a scroll of rejuvination~
+A scroll with the title 'Rejuvination' lies here.~
+scroll
+parchment~
+20 'energy drain' 'energy drain' 'energy drain' 'reserved'
+35 0 90 P
+WEAR TAKE
+LIMIT 3
+
+#6241
+scroll improvement~
+a scroll of improvement~
+A scroll with the title 'Improvement' lies here.~
+scroll
+parchment~
+50 'fortify weapon' 'fortify weapon' 'fortify weapon' 'reserved'
+15 0 30000 P
+WEAR TAKE
+LIMIT 0
+
+#6242
+cloak wizardry~
+a cloak of wizardry~
+A mystical, maroon cloak lies in a pile here.~
+container
+flesh~
+300 A 0 0 0
+50 3 25000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM BLESS
+ITEM NOREMOVE
+APPLY AC 8
+APPLY MANA 50
+APPLY WIS 2
+APPLY INT 3
+LIMIT 4
+
+#6243
+shadow dagger~
+the Shadow Dagger~
+A black, glinting blade lies here waiting to be picked up.~
+weapon
+iron~
+dagger 1 1 pierce 0
+52 1 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM EVIL
+ITEM NODROP
+ITEM NOREMOVE
+APPLY HP -100
+APPLY DEX -2
+APPLY STR -8
+LIMIT 0
+E dagger shadow~
+Wear the dagger and speak the magic words, 'Litrahth Ezandor' to open
+the portal to the spirit realms...
+~
+
+#6244
+shadow dagger litrahth~
+the Shadow Dagger~
+A black, glinting blade lies here waiting to be picked up.~
+weapon
+iron~
+dagger 8 6 defilement 0
+52 1 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM EVIL
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+ITEM NOREMOVE
+APPLY DAMROLL 6
+APPLY HITROLL 8
+APPLY AC 10
+LIMIT 4
+E dagger shadow~
+Wear the dagger and speak the magic words, 'Litrahth Ezandor' to open
+the portal to the spirit realms...
+~
+
+#6245
+wooden coffin~
+a coffin~
+A plain, wooden coffin is here.~
+container
+wood~
+600 A 0 0 0
+1 600 0 P
+LIMIT 0
+
+#6246
+guardian sword~
+a guardian sword~
+A guardian sword is lying here.~
+weapon
+iron~
+sword 8 6 slash 0
+52 8 55000 P
+WEAR TAKE
+WEAR WIELD
+ITEM EVIL
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM NOREMOVE
+APPLY DAMROLL 7
+APPLY HITROLL 3
+APPLY AC 10
+LIMIT 4
+E guardian sword~
+Upon closer examination of this sword, you realize it is of extraordinary
+craftsmanship, and is very light for its huge size. Only a great warrior
+may wield it with little fear of death.
+~
+
+#6247
+darkened platemail plate~
+a suit of darkened platemail~
+A suit of darkened platemail is lying here.~
+armor
+iron~
+10 10 10 10 0
+49 45 55000 P
+WEAR TAKE
+WEAR BODY
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY DAMROLL 3
+APPLY HITROLL 4
+APPLY HP 50
+APPLY CON 2
+LIMIT 4
+E darkened platemail plate~
+Upon closer examination of this armor, you realize it is of extraordinary
+craftsmanship.  Only a great warrior may wear it with little fear of death.
+~
+
+#6248
+darkened leggings~
+a pair of darkened leggings~
+A pair of darkened leggings is lying here.~
+armor
+iron~
+10 10 10 10 0
+49 25 55000 P
+WEAR TAKE
+WEAR LEGS
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY DAMROLL 3
+APPLY HITROLL 2
+APPLY HP 35
+APPLY CON 1
+LIMIT 2
+E darkened leggings~
+Upon closer examination of these leggings, you realize they are of
+extraordinary craftsmanship.  Only a great warrior may wear them with
+little fear of death.
+~
+
+#6249
+darkened helm helmet~
+a darkened helm~
+A darkened helm lies here.~
+armor
+iron~
+10 10 10 10 0
+49 20 48000 P
+WEAR TAKE
+WEAR HEAD
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+APPLY HITROLL 3
+APPLY HP 40
+APPLY CON 1
+APPLY INT 1
+LIMIT 3
+E helm darkened helmet~
+This appear to have belonged to a high-officer in a powerful guard unit...
+holding it seems to make you feel more confidant.
+~
+
+#6250
+darkened boots~
+a pair of darkened boots~
+A pair of darkened boots lie here.~
+armor
+iron~
+10 10 10 10 0
+49 20 51000 P
+WEAR TAKE
+WEAR FEET
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+APPLY HITROLL 3
+APPLY HP 40
+APPLY CON 1
+APPLY DEX 1
+LIMIT 3
+
+#6251
+signet ring arkham~
+an Arkham signet ring~
+A small, iron ring lies here.~
+boat
+iron~
+0 0 0 0 0
+49 3 42000 P
+WEAR TAKE
+WEAR FINGER
+ITEM EVIL
+ITEM MAGIC
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+APPLY HITROLL 3
+APPLY HP 22
+APPLY STR 1
+APPLY AC 2
+LIMIT 6
+E signet ring~
+This ring is engraved with faint wavy sigils that seem to swirl as you look
+at them.
+~
+
+#6252
+darkened shield~
+a darkened shield~
+A darkened shield is propped up against the wall here.~
+armor
+iron~
+-10 -10 -10 -10 0
+25 15 1 P
+WEAR TAKE
+WEAR SHIELD
+ITEM EVIL
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM NOREMOVE
+APPLY DAMROLL -5
+APPLY HITROLL -15
+APPLY HP -20
+APPLY CON -2
+APPLY STR -3
+LIMIT 0
+E darkened shield~
+This shield seems to finish the set of armor perfectly.
+~
+
+#6253
+frostbrand sword~
+a Frostbrand sword~
+An ice-cold broad sword lies here.~
+weapon
+iron~
+sword 6 6 frbite 0
+35 9 12000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 20
+
+#6254
+poncho~
+a rat-eaten poncho~
+A pile of filthy rags lies here.~
+armor
+cloth~
+-3 -3 -3 -3 0
+1 1 0 P
+WEAR TAKE
+WEAR NECK
+ITEM EVIL
+ITEM NOREMOVE
+APPLY DAMROLL -6
+APPLY HP -20
+APPLY CON -5
+APPLY STR -3
+LIMIT 0
+
+#6255
+flaming sceptre~
+the flaming sceptre of Chaos~
+A flaming rod of steel lies here.~
+weapon
+iron~
+mace 6 7 wrath 0
+40 8 28550 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM EVIL
+ITEM BLESS
+APPLY DAMROLL 4
+APPLY HITROLL 4
+APPLY HP 20
+APPLY DEX 1
+LIMIT 12
+
+#6256
+symbol unholy~
+an unholy symbol of Destruction~
+A forboding symbol of evil lies here.~
+armor
+iron~
+4 4 4 7 0
+45 4 25000 P
+WEAR TAKE
+WEAR NECK
+ITEM GLOW
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY DAMROLL 2
+APPLY HITROLL 2
+APPLY MANA 30
+APPLY HP 30
+LIMIT 10
+
+#6257
+sleeves harrapia~
+the sleeves of Harrapia~
+A set of black-gold sleeves lie here.~
+armor
+gold~
+10 10 10 10 0
+42 30 28000 P
+WEAR TAKE
+WEAR ARMS
+ITEM HUM
+ITEM EVIL
+ITEM BLESS
+APPLY DAMROLL 3
+APPLY HITROLL 3
+APPLY HP 30
+APPLY WIS 1
+LIMIT 3
+
+#6258
+ulrician belt~
+an ulrician belt~
+A amber-tainted belt lies coiled up here.~
+armor
+iron~
+9 9 9 9 0
+40 20 19230 P
+WEAR TAKE
+WEAR WAIST
+ITEM GLOW
+ITEM EVIL
+ITEM BLESS
+ITEM ANTIGOOD
+APPLY DAMROLL 2
+APPLY HP 11
+APPLY DEX 2
+LIMIT 6
+
+#6259
+flail pestilence~
+a flail of Pestilence~
+a worm-infested ball and chain lie here.~
+weapon
+steel~
+flail 5 6 wrath 0
+30 16 16000 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM EVIL
+ITEM ANTIGOOD
+APPLY DAMROLL 3
+APPLY HP 10
+LIMIT 0
+
+#6260
+key black~
+a small black skeleton key~
+A small black key is here.~
+key
+gold~
+0 0 0 0 0
+15 0 100 P
+WEAR TAKE
+ITEM NODROP
+LIMIT 0
+
+#0
+
+
+
+#ROOMS
+#6200
+The office of the Damned!~
+A small cubicle is here, with a small government issue desk barely
+crammed inbetween the wooden walls. On the desk, you see a rolodex,
+desk-top calander, a white telephone, and a pencil sharpener. Off to
+the left edge of the desk (just above a trash-filled can), you notice
+an In/Out box filled with papers detailing the recently damned,
+waiting to be processed.
+ On the walls, you see work orders waiting to be filled on those who
+are due to be damned in the current quarter, what the weekly damning
+quotas are, and a couple of Dilbert and Cathy cartoon strips.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6249 0 0
+~
+You see the keeper of the damned's office here.
+~
+D SOUTH 1214 0 0
+~
+You see the way back to freedom.
+~
+#6201
+Outside of the mausoleum~
+The skies seem eternally dark and cloudy here, and the stench of death is
+almost overpowering as you stand north of the huge grey stone building. 
+There are numerous heavy footprints in the dirt leading into and out of this
+accursed place, along with many deep grooves as if something heavy has been
+dragged inside.  You hear a faint howling from within, and sense an
+occassional rustling in the graveyard surrounding you.  Suddenly, it dawns
+on you that entering here may be a very bad idea...
+A sign is posted, urging caution.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 2399 0 0
+~
+You see the path back to the graveyard.
+~
+D SOUTH 6203 A 6207
+door gate stone~
+You see the foyer of the mausoleum.
+~
+E sign posted~
+This area is for high level characters only... 25 to 50+, and most
+everything is aggressive, so keep in large groups of high levels.
+Once you go in, there may be no coming back alive... you have been
+warned.
+- Written by Khargqwzxdds
+- Idea by Khargqwzxdds, Ulric, and Harrap Jan-1995
+~
+#6202
+A grisly scene, NW corner of Mausoleum~
+Half-decayed corpses have been dragged here and half-eaten by something
+with a ravenous appetite. Maybe it would be a good idea to find the way
+back outside now...
+A door leads back out to the south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 6206 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6203
+Foyer of the mausoleum~
+You are in the entrance hall of the accursed mausoleum. Rats and roaches
+scuttle about here, feeding on decaying flesh. You hear the door shut
+behind you and realize that you have indeed made a mistake.
+ To the north is the entryway back to the graveyard, to the south is
+the main area of the mausoleum.
+ Corpses litter the ground, obviously being dragged here for some vile
+purpose. You have an urge to leave this place now.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6201 ABC 6207
+door~
+You see the exit to the real world.
+~
+D SOUTH 6207 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6204
+A grisly scene, NE corner of Mausoleum~
+Half-decayed corpses have been dragged here and half-eaten by something
+with a ravenous appetite. Maybe it would be a good idea to find the way
+back outside now...
+A door to the south leaves this carnage.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 6208 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6205
+A small room~
+This room is being used as a temporary storehouse for the corpses, until
+they can be dragged into the room to the south for some obviously
+horrible process to create the zombies you see roaming around here.
+To the south is a black wooden doorway, and to the east you may go back
+out to the main mausoleum area.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6206 AB 0
+door~
+You see the main area of the mausoleum.
+~
+D SOUTH 6211 ABC 6208
+black wooden door~
+You see a forboding doorway.
+~
+#6206
+Northwest main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There are doors to the north and west, and the mausoleum extends to the
+east and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6202 AB 0
+door~
+A doorway to a dark room is here.
+~
+D EAST 6207 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6212 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6205 AB 0
+door~
+Some sort of storage room is this way.
+~
+#6207
+Northern main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There is a door to the north, and the mausoleum extends to the west, east,
+and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6203 AB 0
+door~
+A doorway to the foyer is here.
+~
+D EAST 6208 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6213 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6206 0 0
+~
+The mausoleum main area extends in this direction
+~
+#6208
+Northeastern main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There is a door to the north and east, and the mausoleum extends to the
+west and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6204 AB 0
+door~
+A dark room is here.
+~
+D EAST 6209 AB 0
+door~
+Some sort of storage room lies in this direction.
+~
+D SOUTH 6214 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6207 0 0
+~
+The mausoleum main area extends in this direction
+~
+#6209
+A small room~
+This room is being used as a temporary storehouse for the corpses, until
+they can be dragged into the room to the south for some obviously
+horrible process to create the zombies you see roaming around here.
+To the south is a black wooden doorway, and to the west you may go back
+out to the main mausoleum area.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 6215 ABC 6209
+black wooden door~
+You see a forboding doorway.
+~
+D WEST 6208 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6210
+An emptied crypt~
+This crypt once held a citizen of Cimar, but has been taken over
+by the dark forces which now keep this area. A large rat in the corner
+of the room gnaws on a bone, and snarls when it sees you.
+A human sized coffin is here.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6211 A 0
+door~
+You see a large room.
+~
+E coffin box~
+It looks like a very nice, brass lined wooden coffin. Opening it up
+reveals nothing too exciting, except perhaps a feeling of nausea.
+~
+#6211
+The workroom of Kharzandra~
+This large cryptroom has been converted to a test-room for a powerful,
+twisted mage. Corpses are mutilated and dissected on tables in
+manners too disturbing to mention, and groups of zombies stand against
+the far wall, waiting to recieve orders from their master.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6205 ABC 6208
+door~
+You see a storage room here.
+~
+D WEST 6210 A 0
+hidden crypt~
+You notice a small crypt here.
+~
+#6212
+Western main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There is a wall to the west, and the mausoleum extends to the north, east,
+and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6206 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6213 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6219 0 0
+~
+The mausoleum main area extends this direction.
+~
+#6213
+Central main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+The mausoleum extends to the west, east, north and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6207 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6214 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6220 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6212 0 0
+~
+The mausoleum main area extends in this direction
+~
+#6214
+Eastern main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There is a wall to the east, and the mausoleum extends to the north, west,
+and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6208 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6221 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6213 0 0
+~
+The mausoleum main area extends this direction.
+~
+#6215
+The workroom of Shadar Lunn~
+The room is very orderly and neat, except for a pile of gore and body parts
+against the far wall. Weapons are displayed neatly in cases, and a suit of
+armor lies ready to be donned at a moment's notice. The occupant is
+obviously a very organized, however twisted, individual.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6209 ABC 6209
+door~
+A storage area is here.
+~
+D EAST 6216 AB 0
+hidden door~
+A wall is here.
+~
+#6216
+Shadar Lunn's coffin room~
+The only discernable feature of this room is its coffin in the far corner,
+with its former inhabitant likely out wandering around with the other
+denizens of this foul area.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 6215 AB 0
+door~
+Shadar Lunn's workroom is here.
+~
+#6217
+The dark priest's coffin room~
+This room has several black candles burning, and a small shrine to the
+god of Chaotic Evil, Lloth. There is not much more worth noticing, besides
+the rancid odor coming from the opened crypts nearby.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6218 AB 0
+door~
+The dark priest's workwoom is here.
+~
+#6218
+The dark priest's workroom~
+There is obviously an unholy resident that works in this room, judging by
+the evil and accursed relics strewn about.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6219 AB 0
+door~
+You see a guard post here.
+~
+D WEST 6217 AB 0
+hidden door~
+You see a crypt here.
+~
+#6219
+Western check point~
+A pile of bodies lies by the doorway here, while burdened zombies dump
+more corpses slowly in with the rest. To the west appears to be some
+sort of important room in the building.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6212 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6220 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6226 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6218 ABC 6212
+door~
+A doorway is here.
+~
+#6220
+Central main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+The mausoleum extends to the west, east, north and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6213 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6221 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6227 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6219 0 0
+~
+The mausoleum main area extends in this direction
+~
+#6221
+Eastern check point~
+A pile of bodies lies by the doorway here, while burdened zombies dump
+more corpses slowly in with the rest. To the east appears to be some
+sort of important room in the building.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6214 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6222 ABC 6260
+door~
+A doorway is here.
+~
+D SOUTH 6228 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6220 0 0
+~
+The mausoleum main area extends this direction.
+~
+#6222
+A vacant workroom~
+This crypt area is seemingly undisturbed by the undead pillagers roaming
+around outside. Maybe this would be a good place to rest.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6223 AB 0
+hidden~
+You see a crypt.
+~
+D WEST 6221 A 6260
+door~
+A guard point is here.
+~
+#6223
+An undisturbed crypt~
+Everything in this crypt is as it was when the poor soul in the coffin was
+put to rest. Everything in this room seems rather peaceful, compared to the
+horror of the rest of the complex... maybe this would be a good place to
+take a rest to prepare yourself for what awaits outside.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 6222 AB 0
+door~
+You see an empty workroom.
+~
+#6224
+A Rakshasa's lair~
+The Rakshasa that has taken up residence in this crypt leaves little
+by way of personal belongings around. A few polished skulls, a couple of
+silver chains, and perhaps a coin or two from a country you have never
+heard of.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6225 AB 0
+door~
+You see the Rakshasa's workspace.
+~
+#6225
+The Rakshasa's workspace~
+This room has several jungle-type plants in pots against the far wall,
+giving it a bit of scenery, despite the unspeakable things that have taken
+place to the dead bodies which lie piled up in the corner.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 6231 A 6210
+door~
+You see some sort of storage area.
+~
+D WEST 6224 A 0
+hidden~
+You see a crypt.
+~
+#6226
+Western main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There is a wall to the west, and the mausoleum extends to the north, east,
+and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6219 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6227 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6232 0 0
+~
+The mausoleum main area extends this direction.
+~
+#6227
+Central main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+The mausoleum extends to the west, east, north and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6220 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6228 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6233 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6226 0 0
+~
+The mausoleum main area extends in this direction.
+~
+#6228
+Eastern main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There is a wall to the east, and the mausoleum extends to the north, west,
+and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6221 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6234 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6227 0 0
+~
+The mausoleum main area extends this direction.
+~
+#6229
+Roaming ground for the Demon~
+A small demon has taken up residence in this room, and is hard at work in
+raising a small force of undead troops to please its master.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6230 AB 0
+hidden~
+You see a crypt.
+~
+D SOUTH 6235 A 6211
+door~
+You see a strange storage area.
+~
+#6230
+A burnt room~
+The walls of this crypt chamber have been covered in ash and cinder,
+leading you to believe there has been a large fire recently. In the
+far corner of the room, 3 huddled, burnt corpses lie resting.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D WEST 6229 AB 0
+door~
+You see another room.
+~
+#6231
+A small room~
+This room is being used as a temporary storehouse for the corpses, until
+they can be dragged into the room to the north for some obviously
+horrible process to create the zombies you see roaming around here.
+To the north is a black wooden doorway, and to the east you may go back
+out to the main mausoleum area.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6225 ABC 6210
+door~
+You see a forboding doorway.
+~
+D EAST 6232 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6232
+Southwest main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There are doors to the south and west, and the mausoleum extends to the
+east and north.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6226 0 0
+~
+You see the main area of the mausoleum.
+~
+D EAST 6233 0 0
+~
+You see the main area of the mausoleum.
+~
+D SOUTH 6236 AB 0
+door~
+A doorway to a dark room is here.
+~
+D WEST 6231 AB 0
+door~
+Some sort of storage room is here.
+~
+#6233
+Central main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+The mausoleum extends to the west, east, north and south.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6227 0 0
+~
+The mausoleum main area extends this direction.
+~
+D EAST 6234 0 0
+~
+The mausoleum main area extends this direction.
+~
+D SOUTH 6237 0 0
+~
+The mausoleum main area extends this direction.
+~
+D WEST 6232 0 0
+~
+The mausoleum main area extends in this direction
+~
+#6234
+Southeast main area of the Mausoleum~
+Zombies wander aimlessly around here. Most are oblivious to you, and go
+about their business of hauling corpses from one area to another, but
+a few of the unoccupied ones seem to have taken an interest in your life.
+There are doors to the south and east, and the mausoleum extends to the
+west and north.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6228 0 0
+~
+You see the main area of the mausoleum.
+~
+D EAST 6235 AB 0
+door~
+Some sort of storage room is here.
+~
+D SOUTH 6238 AB 0
+door~
+A doorway to a dark room is here.
+~
+D WEST 6233 0 0
+~
+You see the main area of the mausoleum.
+~
+#6235
+A small room~
+This room is being used as a temporary storehouse for the corpses, until
+they can be dragged into the room to the north for some obviously
+horrible process to create the zombies you see roaming around here.
+To the north is a black wooden doorway, and to the west you may go back
+out to the main mausoleum area.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6229 ABC 6211
+door~
+You see a forboding doorway.
+~
+D WEST 6234 AB 0
+door ~
+You see the main area of the mausoleum.
+~
+#6236
+A grisly scene, SW corner of Mausoleum~
+Half-decayed corpses have been dragged here and half-eaten by something
+with a ravenous appetite. Maybe it would be a good idea to find the way
+back outside now...
+A door leads back out to the nouth.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6232 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6237
+A hole in the southern wall~
+A large hole has been smashed into the south end of the Mausoleum's wall,
+to allow something easier access in and out of the complex. To the south,
+a large crater is vaguely visible through the patches of fog and smoke.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6233 0 0
+~
+You see the relative safety of the mausoleum main area.
+~
+D SOUTH 6240 AB 0
+door~
+You see what looks like an army standing at attention in the fog.
+~
+#6238
+A grisly scene, SE corner of Mausoleum~
+Half-decayed corpses have been dragged here and half-eaten by something
+with a ravenous appetite. Maybe it would be a good idea to find the way
+back outside now...
+A door leads back out to the nouth.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6234 AB 0
+door~
+You see the main area of the mausoleum.
+~
+#6239
+A foggy barracks~
+A crude bunker has been crafted out of stone here, to be used as a
+temporary guard post for the undead army that makes preparations here.
+To the north is the wall of the mausoleum, and to the east and south
+the barracks area continues.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6240 0 0
+~
+You see fog.
+~
+D SOUTH 6242 0 0
+~
+You see fog.
+~
+D WEST 6241 0 0
+~
+You see more fog.
+~
+#6240
+The entrance into the undead barracks~
+This area was probably once another part of the graveyards, but all the
+bodies have been unearthed (and are wandering around here), and the
+tombstones have been laid together to form a fortification of sorts.
+The fog is too difficult to see more than a few feet through, but to the
+south you hear shuffling and work being carried out.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6237 AB 0
+door~
+You see a door back into the relative safety of the mausoleum.
+~
+D EAST 6241 0 0
+~
+You see fog.
+~
+D SOUTH 6243 0 0
+~
+You see more fog.
+~
+D WEST 6239 0 0
+~
+You see some sort of bunker.
+~
+#6241
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 6239 0 0
+~
+You see some sort of structure.
+~
+D SOUTH 6244 0 0
+~
+You some sort of structure.
+~
+D WEST 6240 0 0
+~
+You see endless fog.
+~
+#6242
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6239 0 0
+~
+You see some sort of structure.
+~
+D EAST 6243 0 0
+~
+You see endless fog.
+~
+D SOUTH 6245 0 0
+~
+You see a crude fortification.
+~
+D WEST 6244 0 0
+~
+You see some sort of building.
+~
+#6243
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6240 0 0
+~
+You see more fog everywhere.
+~
+D EAST 6244 0 0
+~
+You see a crude fortification.
+~
+D SOUTH 6246 0 0
+~
+You see more fog.
+~
+D WEST 6242 0 0
+~
+You see endless fog.
+~
+#6244
+A foggy barracks~
+A crude bunker has been crafted out of stone here, to be used as a temporary
+guard post for the undead army that makes preparations here.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6241 0 0
+~
+You see fog.
+~
+D EAST 6242 0 0
+~
+You see some fog!
+~
+D SOUTH 6247 0 0
+~
+You see fog.
+~
+D WEST 6243 0 0
+~
+You see fog.
+~
+#6245
+A foggy barracks~
+A crude bunker has been crafted out of stone here, to be used as a temporary
+guard post for the undead army that makes preparations here.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6242 0 0
+~
+You see fog.
+~
+D EAST 6246 0 0
+~
+You see fog.
+~
+D SOUTH 6248 0 0
+~
+You see fog.
+~
+D WEST 6247 0 0
+~
+You see more fog, dammit!
+~
+#6246
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6243 0 0
+~
+You see more fog.
+~
+D EAST 6247 0 0
+~
+You see endless fog.
+~
+D WEST 6245 0 0
+~
+You see some sort of structure.
+~
+#6247
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6244 0 0
+~
+You see some sort of structure.
+~
+D EAST 6245 0 0
+~
+You see a strange structure.
+~
+D SOUTH 6250 0 0
+~
+You see more fog.
+~
+D WEST 6246 0 0
+~
+You see endless fog.
+~
+#6248
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6245 0 0
+~
+You see some sort of crude structure.
+~
+D EAST 6250 0 0
+~
+You see some fog.
+~
+D SOUTH 6251 0 0
+~
+You see what looks like a dark horse standing here.
+~
+D WEST 6250 0 0
+~
+You see too much fog.
+~
+#6249
+The lair of the great Dracolich~
+The fog seems to be originating from here, as a large skeletal creature
+lies waiting for the unwary intruders to find their way to certain death.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 6252 0 0
+~
+You see what looks like an empty room.
+~
+#6250
+Lost in the graveyard fog~
+The sun never seems to break through the magical, evil fog that surrounds
+this graveyard. You feel hopelessly lost as you attempt to get anywhere...
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6247 0 0
+~
+You see more fog.
+~
+D EAST 6248 0 0
+~
+You see thick fog.
+~
+D SOUTH 6253 0 0
+~
+You see what appears to be a large horse standing here.
+~
+D WEST 6248 0 0
+~
+You see heavy fog.
+~
+#6251
+A Hellhound's roaming grounds~
+The scorched ground and charred corpses should be a good indication to you
+that some fire-using creature is using it as an ambush point for the unwary
+and unready. Maybe this would have been a good day to stay at home.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6248 0 0
+~
+You see endless fog.
+~
+D EAST 6252 0 0
+~
+You see more scorched earth.
+~
+#6252
+A Hellhound's roaming grounds~
+The scorched ground and charred corpses should be a good indication to you
+that some fire-using creature is using it as an ambush point for the unwary
+and unready. Maybe this would have been a good day to stay at home.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6249 0 0
+~
+You see something very large stirring in the fog.
+~
+D EAST 6253 0 0
+~
+You see more scorched earth.
+~
+D WEST 6251 0 0
+~
+You see more scorched earth.
+~
+#6253
+A Hellhound's roaming grounds~
+The scorched ground and charred corpses should be a good indication to you
+that some fire-using creature is using it as an ambush point for the unwary
+and unready. Maybe this would have been a good day to stay at home.
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM NORECALL
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 6250 0 0
+~
+You see endless fog.
+~
+D WEST 6252 0 0
+~
+You see more scorched earth.
+~
+#0
+
+
+
+#RESETS
+MOB 6201 TO 6201 GLIMIT 11 LLIMIT 3
+GIVE 6207
+OBJECT 6200 TO 6201
+PUT 6207 IN 6200 COUNT 1
+OBJECT 6200 TO 6201
+DOOR 6201 south OPEN
+MOB 6202 TO 6202 GLIMIT 12 LLIMIT 1
+MOB 6202 TO 6202 GLIMIT 12 LLIMIT 1
+DOOR 6202 south CLOSED
+DOOR 6203 north LOCKED
+DOOR 6203 south CLOSED
+MOB 6202 TO 6204 GLIMIT 12 LLIMIT 1
+DOOR 6204 south CLOSED
+MOB 6220 TO 6205 GLIMIT 4 LLIMIT 4
+GIVE 6208
+DOOR 6205 east CLOSED
+DOOR 6205 south LOCKED
+MOB 6200 TO 6206 GLIMIT 46 LLIMIT 4
+OBJECT 6200 TO 6206
+DOOR 6206 north CLOSED
+DOOR 6206 west CLOSED
+MOB 6200 TO 6207 GLIMIT 46 LLIMIT 4
+OBJECT 6200 TO 6207
+PUT 6207 IN 6200 COUNT 1
+DOOR 6207 north CLOSED
+MOB 6200 TO 6208 GLIMIT 46 LLIMIT 4
+OBJECT 6201 TO 6208
+PUT 6217 IN 6201 COUNT 1
+OBJECT 6200 TO 6208
+DOOR 6208 north CLOSED
+DOOR 6208 east CLOSED
+MOB 6200 TO 6209 GLIMIT 46 LLIMIT 4
+GIVE 6200
+MOB 6212 TO 6209 GLIMIT 3 LLIMIT 3
+GIVE 6209
+MOB 6202 TO 6209 GLIMIT 12 LLIMIT 1
+DOOR 6209 west CLOSED
+DOOR 6209 south LOCKED
+DOOR 6210 east OPEN
+OBJECT 6202 TO 6211
+PUT 6219 IN 6202 COUNT 1
+OBJECT 6200 TO 6211
+PUT 6218 IN 6200 COUNT 1
+MOB 6205 TO 6211 GLIMIT 1 LLIMIT 1
+GIVE 6243
+EQUIP 6244 WIELD
+EQUIP 6242 ABOUT
+GIVE 6228
+GIVE 6229
+PUT 6230 IN 6229 COUNT 1
+PUT 6231 IN 6229 COUNT 1
+PUT 6232 IN 6229 COUNT 1
+PUT 6233 IN 6229 COUNT 1
+PUT 6234 IN 6229 COUNT 1
+PUT 6235 IN 6229 COUNT 1
+PUT 6236 IN 6229 COUNT 1
+PUT 6237 IN 6229 COUNT 1
+PUT 6238 IN 6229 COUNT 1
+PUT 6239 IN 6229 COUNT 1
+PUT 6240 IN 6229 COUNT 1
+PUT 6241 IN 6229 COUNT 1
+DOOR 6211 north LOCKED
+DOOR 6211 west OPEN
+OBJECT 6200 TO 6212
+MOB 6200 TO 6213 GLIMIT 46 LLIMIT 4
+GIVE 6200
+MOB 6200 TO 6213 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6213 GLIMIT 46 LLIMIT 4
+OBJECT 6200 TO 6213
+OBJECT 6215 TO 6213
+OBJECT 6200 TO 6215
+DOOR 6215 north LOCKED
+DOOR 6215 east CLOSED
+MOB 6206 TO 6215 GLIMIT 1 LLIMIT 1
+EQUIP 6252 SHIELD
+EQUIP 6251 LFINGER
+EQUIP 6250 FEET
+EQUIP 6249 HEAD
+EQUIP 6248 LEGS
+EQUIP 6247 BODY
+EQUIP 6246 WIELD
+DOOR 6216 west CLOSED
+OBJECT 6245 TO 6216
+PUT 6217 IN 6245 COUNT 1
+DOOR 6217 east CLOSED
+OBJECT 6245 TO 6217
+PUT 6226 IN 6245 COUNT 1
+MOB 6207 TO 6217 GLIMIT 1 LLIMIT 1
+EQUIP 6255 WIELD
+EQUIP 6256 NECKONE
+DOOR 6218 east CLOSED
+DOOR 6218 west CLOSED
+MOB 6211 TO 6218 GLIMIT 2 LLIMIT 1
+EQUIP 6253 WIELD
+EQUIP 6254 ABOUT
+MOB 6213 TO 6219 GLIMIT 4 LLIMIT 4
+GIVE 6212
+DOOR 6219 west LOCKED
+MOB 6200 TO 6221 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6221 GLIMIT 46 LLIMIT 4
+MOB 6214 TO 6221 GLIMIT 5 LLIMIT 5
+GIVE 6260
+DOOR 6221 east LOCKED
+MOB 6200 TO 6222 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6222 GLIMIT 46 LLIMIT 4
+GIVE 6200
+DOOR 6222 east CLOSED
+DOOR 6222 west OPEN
+MOB 6208 TO 6222 GLIMIT 2 LLIMIT 2
+OBJECT 6227 TO 6223
+DOOR 6223 west CLOSED
+OBJECT 6245 TO 6223
+PUT 6221 IN 6245 COUNT 1
+MOB 6208 TO 6223 GLIMIT 2 LLIMIT 2
+MOB 6200 TO 6224 GLIMIT 46 LLIMIT 4
+DOOR 6224 east CLOSED
+OBJECT 6245 TO 6224
+DOOR 6225 south OPEN
+MOB 6209 TO 6225 GLIMIT 1 LLIMIT 1
+EQUIP 6257 ARMS
+GIVE 6214
+MOB 6200 TO 6226 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6227 GLIMIT 46 LLIMIT 4
+MOB 6202 TO 6227 GLIMIT 12 LLIMIT 1
+OBJECT 6201 TO 6227
+OBJECT 6215 TO 6229
+DOOR 6229 east CLOSED
+DOOR 6229 south OPEN
+MOB 6211 TO 6229 GLIMIT 2 LLIMIT 1
+EQUIP 6253 WIELD
+EQUIP 6254 ABOUT
+MOB 6210 TO 6229 GLIMIT 1 LLIMIT 1
+EQUIP 6258 WAIST
+EQUIP 6259 WIELD
+MOB 6203 TO 6230 GLIMIT 2 LLIMIT 1
+GIVE 6223
+DOOR 6230 west CLOSED
+OBJECT 6245 TO 6230
+MOB 6215 TO 6231 GLIMIT 3 LLIMIT 3
+GIVE 6210
+MOB 6202 TO 6231 GLIMIT 12 LLIMIT 1
+MOB 6202 TO 6231 GLIMIT 12 LLIMIT 1
+OBJECT 6200 TO 6231
+DOOR 6231 north LOCKED
+DOOR 6231 east CLOSED
+OBJECT 6216 TO 6232
+PUT 6219 IN 6216 COUNT 1
+DOOR 6232 south CLOSED
+DOOR 6232 west CLOSED
+MOB 6200 TO 6233 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6234 GLIMIT 46 LLIMIT 4
+DOOR 6234 east CLOSED
+DOOR 6234 south CLOSED
+MOB 6216 TO 6235 GLIMIT 3 LLIMIT 3
+GIVE 6211
+MOB 6202 TO 6235 GLIMIT 12 LLIMIT 1
+DOOR 6235 north LOCKED
+DOOR 6235 west CLOSED
+MOB 6202 TO 6236 GLIMIT 12 LLIMIT 1
+DOOR 6236 north CLOSED
+MOB 6200 TO 6237 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6237 GLIMIT 46 LLIMIT 4
+GIVE 6200
+OBJECT 6200 TO 6237
+DOOR 6237 south CLOSED
+MOB 6202 TO 6238 GLIMIT 12 LLIMIT 1
+GIVE 6225
+OBJECT 6222 TO 6238
+DOOR 6238 north CLOSED
+MOB 6200 TO 6239 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6239 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6239 GLIMIT 46 LLIMIT 4
+GIVE 6200
+MOB 6200 TO 6239 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6239 GLIMIT 46 LLIMIT 4
+MOB 6201 TO 6239 GLIMIT 11 LLIMIT 4
+DOOR 6240 north CLOSED
+MOB 6200 TO 6244 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6244 GLIMIT 46 LLIMIT 4
+MOB 6201 TO 6244 GLIMIT 11 LLIMIT 4
+MOB 6200 TO 6245 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6245 GLIMIT 46 LLIMIT 4
+MOB 6200 TO 6245 GLIMIT 46 LLIMIT 4
+GIVE 6226
+MOB 6201 TO 6245 GLIMIT 11 LLIMIT 4
+OBJECT 6215 TO 6246
+PUT 6221 IN 6215 COUNT 1
+MOB 6202 TO 6247 GLIMIT 12 LLIMIT 1
+MOB 6219 TO 6247 GLIMIT 1 LLIMIT 1
+EQUIP 6224 WIELD
+EQUIP 6220 NECKONE
+MOB 6201 TO 6248 GLIMIT 11 LLIMIT 4
+MOB 6204 TO 6249 GLIMIT 2 LLIMIT 1
+GIVE 6204
+GIVE 6205
+GIVE 6206
+GIVE 6214
+MOB 6217 TO 6251 GLIMIT 1 LLIMIT 1
+GIVE 6213
+MOB 6218 TO 6252 GLIMIT 1 LLIMIT 1
+GIVE 6213
+MOB 6203 TO 6253 GLIMIT 2 LLIMIT 1
+GIVE 6223
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

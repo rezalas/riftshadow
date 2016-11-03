@@ -1,0 +1,1151 @@
+#AREA
+regal.are~
+The Regal Theatre~
+Eluviel~
+1 51
+23700 23715
+normal
+none
+0
+1
+Eluviel~
+
+#MOBS
+#23700
+old man elgat~
+Elgat~
+A white-haired man slouches down in his chair, snoozing.
+~
+Round little spectacles slide down to the tip of the old man's nose,
+and with each time he grunts and pushes them back up in annoyance.
+Dressed in simple brown leggings and jerkin, his job appears to be
+that of guarding the backstage door.
+~
+0 23700 100 human~
+40 15d10+1929 4d8+18 0 100 punch
+0 0 0 0
+sitting male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+IMM CHARM
+#23701
+kanchil woman plump~
+Kanchil~
+A plump, dark-haired woman is slaving over a pot of stew.
+~
+Beads of sweat run down Kanchil's wide brow, her brown hair wet
+and clinging to the sides of her face.  She manages a brief but
+genuine smile for you and goes back to her cooking.  Her apron
+was white at some point in the past, but stew and flour has been
+splattered all over it.  She frowns, but you're not sure if it's
+because the task at hand is so hard or if she's struggling from
+eating the food before anyone else can.
+~
+0 23701 100 human~
+40 15d10+1929 4d8+18 0 100 punch
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+#23702
+handsome man jhonan~
+Jhonan~
+A handsome man stands behind the bar, serving drinks to the patrons.
+~
+Black hair tied back to keep from being a distraction, Jhonan is
+always prepared to tell a joke or smirk at the customer's.  Some
+may think of mixing drinks and serving ale as a menial job, but
+he takes it quite seriously, practically regarding it as an art.
+Judging solely from his looks, you're willing to bet he's a real
+hit with the ladies.
+~
+0 23702 100 human~
+40 15d10+1929 4d8+18 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 0 CLOSE 0 EXIT north
+#23703
+wench serving girl~
+A serving wench~
+A serving wench scurries through here, carrying platters of food.
+~
+Dressed in a low cut, silk blouse and a long, flowing skirt, this
+server hustles in and out of the kitchen trying to keep pace with
+the customers.  Her curly brown hair is pinned up against the back
+of her head to keep it from distracting her as she works the tables.
+~
+0 23703 100 human~
+40 15d10+1929 4d8+18 0 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+IMM SUMMON
+IMM CHARM
+SHOPKEEPER OPEN 0 CLOSE 0 EXIT north
+#23704
+guard large man~
+A theatre guard~
+A large man stands before the doors, keeping out the riffraff.
+~
+A burly looking man dressed in plain colored clothing watches
+the traffic on the streets of Cimar pass by.  Every once in a
+while he turns people away, their appearance being too bloody
+or suspicious.
+~
+0 23704 100 human~
+40 15d10+1929 4d8+18 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+IMM CHARM
+#23705
+stage hand man~
+a stage hand~
+A young man dressed completely in black pushes some props into place.
+~
+Short black hair matches well with the clothing of the stage hand,
+helping him to move props around undetected.  His movements are
+quick and accurate, and his experience at his current position is
+very apparent.
+~
+0 23705 100 human~
+40 15d10+1929 4d8+18 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+IMM SUMMON
+IMM CHARM
+#0
+
+
+
+#OBJS
+#23700
+bench benches~
+a padded bench~
+A bench padded with velvet sets against the wall.~
+furniture
+wood~
+4 600 H 100 100
+0 0 0 P
+LIMIT 0
+E bench benches~
+The clawed feet of the legs lead up to the padded seat of the bench.
+The deep blue color of the velvet covering adds a classy touch to an
+otherwise ordinary piece of furniture.
+~
+
+#23701
+stool stools~
+a bar stool~
+A few bar stools have been lined up along the bar here.~
+furniture
+wood~
+6 900 E 100 100
+0 0 0 P
+LIMIT 0
+E stool stools~
+A few of the bar stools at the far end of the bar have padded seats,
+but they're rare and almost always taken.  The rest are bare, their
+hard wooden seats occasionally showing off a splinter or two.
+~
+
+#23702
+chair chairs~
+a wooden chair~
+Chairs line up in rows before the stage.~
+furniture
+wood~
+20 3000 E 100 100
+0 0 0 P
+LIMIT 0
+E chair chairs~
+A few small carvings are all that decorate the chairs here in
+the auditorium.  Built sturdy to withstand the amount of plays
+and other performances shown, they still manage to be somewhat
+comfortable.
+~
+
+#23703
+chair cushioned chairs~
+a cushioned chair~
+Cushioned chairs line up in rows before the balcony.~
+furniture
+wood~
+10 1500 E 100 100
+0 0 0 P
+LIMIT 0
+E chair cushioned chairs~
+Somewhat more ornate than those in the main seating section,
+more detailed carvings cover the legs and arms of the chairs,
+and red velvet cushions make the back and seat of the chair
+much more comfortable.
+~
+
+#23704
+chair carved cherrywood~
+a carved cherrywood chair~
+An intricately carved cherrywood chair rests peacefully here.~
+furniture
+wood~
+1 150 E 100 100
+0 0 0 P
+LIMIT 0
+E chair cushioned chairs~
+All the feet of this exquisite chair have been carved into the shape
+of the curled, taloned feet of an eagle.  The legs almost seem to be
+feathered.  The smooth cherrywood furniture is of high quality, its
+well polished surfaces shining in the light.
+~
+
+#23705
+bowl beef stew~
+a bowl of beef stew~
+A steaming bowl of beef stew lies here untouched.~
+food
+food~
+24 24 0 0 0
+1 1 25 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#23706
+stein ale dark~
+a stein of dark ale~
+A heavy stein of ale has been left here.~
+drink
+glass~
+1 1 'dark ale' 0 0
+1 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#23707
+shot firebreather boiling glass~
+a shot of firebreather~
+A tiny glass of boiling liquid has been left here.~
+drink
+glass~
+1 1 'firebreather' 0 0
+1 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#23708
+cup tea chamomile honey~
+a cup of chamomile tea swirled with honey~
+A small cup of honey swirled tea has been left here.~
+drink
+glass~
+1 1 'tea' 0 0
+1 1 5 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#23709
+table~
+a carved wooden table~
+A carved cherrywood table rests peacefully here.~
+furniture
+wood~
+2 300 H 100 100
+0 0 0 P
+LIMIT 0
+E table~
+The feet of both the table and chair have been carved into the shape of
+the curled, taloned feet of an eagle.  The legs almost seem feathered.
+The smooth cherry wood furniture is of high quality, its well polished
+surfaces shining in the light.  The only items on the table's flawless
+surface is an inkpot and a quill pen.
+~
+
+#23710
+armchair chair armchairs chairs comfortable~
+a comfortable armchair~
+Several comfortable armchairs beckon customers to sit down and relax.~
+furniture
+wood~
+4 600 Q 100 100
+0 0 0 P
+LIMIT 0
+E chair armchair chairs comfortable armchairs~
+Puffy, soft chairs for relaxing and lazying about beckon you to
+take a seat.  You find it incredibly hard to resist.
+~
+
+#23711
+pillow pillows~
+some soft pillows~
+~
+furniture
+cloth~
+3 450 Q 100 100
+0 0 0 P
+LIMIT 0
+E pillows pillow~
+Colorful pillows of all shapes and sizes make their home in the
+crevices of armchairs and open floor spaces.  The soft cotton
+makes them perfect for snuggling with or just to sit on.
+~
+
+#23712
+theatre cabal item~
+the Theatre Cabal Item~
+The Theatre cabal item.~
+treasure
+paper~
+0 0 0 0 0
+60 0 100000 P
+WEAR TAKE
+WEAR HOLD
+ITEM NOPURGE
+LIMIT 1
+TIMER 0
+
+#23713
+chessboard~
+a chessboard~
+A marble chessboard is here, with pieces assembled.~
+trash
+marble~
+0 0 0 0 0
+51 0 0 P
+LIMIT 0
+
+#0
+
+
+
+#ROOMS
+#23700
+Before the Regal Theatre~
+Heavy oak doors carved with intricate designs mark the entrance
+to an elaborate stone building.  Polished square stones hug the
+large doors to form an archway, each etched and painted to depict
+action scenes from the stage.  The wide granite stairs that lead
+up to the arched stone doorway are immaculately clean despite the
+great deal of foot traffic that passes through.
+~
+city
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 2599 0 0
+~
+The roads of Cimar bustle with people to the north.
+~
+D EAST 0 0 0
+~
+The stone sides of the large theatre climb toward the sky.
+~
+D SOUTH 23701 ABGH 0
+heavy oak doors~
+The heavy oak doors of the Regal Theatre welcome you.
+~
+D WEST 0 0 0
+~
+The stone sides of the large theatre climb toward the sky.
+~
+D UP 0 0 0
+~
+The front of the theatre rises up toward the sky.
+~
+D DOWN 0 0 0
+~
+A platform of smooth granite slabs covers the ground.
+~
+E heavy oak doors~
+The oak of the front doors have been carved to show curls and
+other designs.  Even the grain of the wood itself seems to lend
+to the overall theme of the carvings.
+~
+E polished stones archway~
+Someone quite obviously spent a great deal of time as the pictures
+on each stone in the archway are exquisitely done.  Two figures in
+a duel, a woman mourning over a tombstone, a village consumed in a
+lust of war - all depicted on individual stones.
+~
+E granite stairs~
+Large slabs of the dull grey stone pale in comparison to the rest
+of the theatre's exterior.
+~
+CABAL theatre
+#23701
+The Lobby of the Theatre~
+Benches cushioned with blue velvet pillows line the walls of the
+high ceiling foyer.  Along side each bench stands an oak hall tree
+covered in cloaks and coats of the people here to enjoy performances.
+A few portraits and other fine works of art give life to the clean
+walls of the entry way.  The soft glow of candle light from their
+wall sconces give a warm and welcoming atmosphere to the theatre.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23700 ABGH 0
+heavy oak doors~
+You see the heavy oak doors of the entrance.
+~
+D EAST 23702 0 0
+~
+You spy a small stairway in this direction.
+~
+D SOUTH 23704 ABGH 0
+wooden doors~
+Wooden doors separate you from the auditorium.
+~
+D WEST 23703 0 0
+~
+You spy a bar in this direction.
+~
+D UP 0 0 0
+~
+A vaulted ceiling soars above you.
+~
+D DOWN 0 0 0
+~
+Fine rugs cover the floor beneath your feet.
+~
+E hall tree~
+Several knobbed arms spike out from the upper portion of the oaken
+stand, providing a place for guests to hang their cloaks, coats and
+hats should they choose to do so.
+~
+E portrait portraits~
+A squirrely looking halfing is depicted in this painting, a slightly
+insane look blessing his eyes.  The pose itself seems to be mocking
+the idea of even having portraits, making it a rather humorous thing
+to see.
+~
+E art~
+The only piece of art that catches your eye is a vase made of light
+blue crystal with some sort of red liquid swirling between its very
+layers.  The swirling seems to almost hypnotize you, and you find it
+rather difficult to break the trance, but finally manage.
+~
+E sconce sconces candles candle~
+Made simply from small pieces of wood, the wall sconces are hung
+from small, iron nails.  A small metal ring rests at the bottom of
+the plain, white candles to catch the wax drippings.
+~
+CABAL theatre
+#23702
+Below a Spiral Staircase~
+A narrow red rug runs up the center of the twisting stairway, metal
+railings curving around to offer support on the climb.  Wall sconces
+lit with candles decorate the solid mahogany walls here, giving life
+to the flicker shadows of the sturdy rails.  Behind the staircase, a
+small hallway extends toward the south.  The buzzing of the crowded
+lobby fills your ears from the east.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Candles flicker in their wall sconces along the mahogany wall.
+~
+D EAST 0 0 0
+~
+Candles flicker in their wall sconces along the mahogany wall.
+~
+D SOUTH 23705 0 0
+~
+A small, lit hallway extends in this direction.
+~
+D WEST 23701 0 0
+~
+You see the bustle of the theatre lobby.
+~
+D UP 23707 0 0
+~
+The stairway continues its spiral upward to the second floor.
+~
+D DOWN 0 0 0
+~
+Narrow red carpeting extends down from the base of the stairs.
+~
+E sconce sconce candles candle~
+Made simply from small pieces of wood, the wall sconces are hung
+from small, iron nails.  A small metal ring rests at the bottom
+of the plain, white candles to catch the wax drippings.
+~
+E rug red~
+The color of this soft, tightly woven rug can only be described as
+something very close to that of a new blooming rose.
+~
+E metal railing~
+Instead of being one solid mass, the railing is actually three
+separate, weaving wires of some kind of dark stained metal.
+~
+CABAL theatre
+#23703
+The Regal Tavern~
+Rustic wooden chairs, scruffy tables and bar stools give this small
+tavern a rough, comfortable and inviting.  The bar covers the entire
+northern wall, displaying a vast selection of bottles, and kegs behind
+it.  Torches line the mahogany walls in even intervals, but shadows
+still keep the bar in a shadowy light.  The walls are otherwise void
+of decoration, thanks to the rough clientel that usually resides here.
+A well-lit, less seedy area extends off the tavern to the south.
+~
+inside
+ROOM SAFE
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+The bar runs the length of the wall.
+~
+D EAST 23701 0 0
+~
+You see the bustle of the theatre lobby.
+~
+D SOUTH 23711 0 0
+~
+Torches and a few paintings line the mahogany walls.
+~
+D WEST 23713 ABGH 0
+small door~
+A small door is set into the wall.
+~
+D UP 0 0 0
+~
+Plain wooden planks make up the ceiling.
+~
+D DOWN 0 0 0
+~
+Plain wooden planks make up the floor.
+~
+E rustic chair chairs scruffy table tables~
+The overall atmosphere of the tavern has paid its toll on the plain,
+wooden chairs and tables.  The only decoration on them is the scuffs,
+scratches and stains that every day bar life deals to the furniture.
+~
+E bar~
+The shiny surface of the counter has been taken good care of by the
+folks working here at the tavern.  The mahogany bar has seen better
+days, but it remains in good condition.
+~
+E torch torches~
+Maintaining the somewhat rugged theme of the tavern's decore, the
+torches lining the walls spit and flare like the tempers of its
+worst customers.
+~
+CABAL theatre
+#23704
+A Large Auditorium~
+An army of wooden chairs fills the large auditorium before you.  The
+lights along the walls are of a magical nature, as they simply seem to
+glow with their own power.  Several aisles cloaked in red velvet run
+down the length of the auditorium, all the way to the raised platform
+that makes up the stage.  Murals cover the walls, their colorful paint
+giving a new life to the auditorium.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23701 ABGH 0
+wooden doors~
+A pair of wooden doors leads back out to the lobby.
+~
+D EAST 0 0 0
+~
+Scenes from plays come alive in the mural along the wall.
+~
+D SOUTH 0 0 0
+~
+The stage draws your undivided attention.
+~
+D WEST 0 0 0
+~
+Scenes from plays come alive in the mural along the wall.
+~
+D UP 0 0 0
+~
+Ceiling of the auditorium towers above you.
+~
+D DOWN 0 0 0
+~
+Soft red velvet carpets the aisle beneath your feet.
+~
+E red velvet~
+You are amazed at how the carpeting that runs down each aisle
+can keep such vibrant color for the amount of dirty, wet feet
+that trample through here on a daily basis.
+~
+E mural murals~
+None of the scenes depicted on the walls are from plays that you
+recognize, but they are beautifully painted, none the less.
+~
+E stage~
+You have the perfect view to see everything that is currently
+happening on the stage.
+~
+E light lights~
+These strange little spheres of light pulse with a life all their
+own, magically hovering in the air along the walls.
+~
+CABAL theatre
+#23705
+A Small Hallway~
+Candles line the mahogany walls along this small, undecorated hall.
+There seems to be little of interest for the average theatre patron,
+though it is obviously kept clean and doesn't smell of disuse. A stout
+wooden door in the south end of the hallway is all you can see.  A
+brightly painted sign is suspended from a rusty nail on the door
+itself.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23702 0 0
+~
+A stairway raises up from the floor in this direction.
+~
+D EAST 0 0 0
+~
+Candles bring the plain mahogany walls to live with shadows.
+~
+D SOUTH 23706 ABGH 0
+stout wooden door~
+A stout wooden door blocks further passage.
+~
+D WEST 0 0 0
+~
+Candles bring the plain mahogany walls to live with shadows.
+~
+D UP 0 0 0
+~
+You see the plain yet clean ceiling.
+~
+D DOWN 0 0 0
+~
+The wooden floor beneath your feet is worn, yet clean.
+~
+E candle candles~
+Made simply from small pieces of wood, the wall sconces are hung
+from small, iron nails.  A small metal ring rests at the bottom
+of the plain, white candles to catch the wax drippings.
+~
+E sign~
+Painted in bright red, easy to read lettering is the following
+notice: Regal Theatre Staff Only.
+~
+CABAL theatre
+#23706
+Backstage~
+Props lie scattered about in this large, backstage area.  Costumes,
+both finished and not, cover the limited amount of counter space as
+provided by a few wooden tables.  A dark curtain hangs down from the
+ceiling, keeping the fluid workings of the stage crew invisible to
+the audience.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23705 ABGH 0
+stout wooden door~
+A stout wooden door leads out to the back hallway.
+~
+D EAST 0 0 0
+~
+Props and costumes cover the walls.
+~
+D SOUTH 0 0 0
+~
+Props and costumes cover the walls.
+~
+D WEST 23710 0 0
+~
+A veil of black cloth is all that stands between you and the stage.
+~
+D UP 0 0 0
+~
+Ropes and harnesses dangle down from wooden poles.
+~
+D DOWN 0 0 0
+~
+The wooden planks of the floor are worn from many performances.
+~
+E table tables~
+Stains and scratches cover the few clear patches of the table.
+They have obviously seen some use as the wood is in very poor
+condition.
+~
+E dark curtain~
+Made form some sort of thin cloth, the curtain still manages to
+be impenetrable to the eyes.
+~
+E props prop costume costumes~
+Dull edged swords and many other weapons hang from hooks along the
+back wall, along with many other, less violent props.  Everything
+from hats to kettles is crammed into these backstage area.  Pieces
+of armor and shields with many different coat of arms have also
+found their way in the collection of the Regal Theatre.
+~
+CABAL theatre
+#23707
+Atop a Spiraling Staircase~
+A narrow, red rug runs down the center of the twisting stairway,
+metal railings curving around to offer support should you wish to
+descend.  Wall sconces lit with candles decorate the solid mahogany
+walls here, giving life to the flicker shadows of the sturdy rails.
+There seems to be little in the way of entertainment on this level,
+but you also notice that there is a door in the southern wall and
+the hallway extends farther to the west.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Candles flicker in their wall sconces along the mahogany wall.
+~
+D EAST 0 0 0
+~
+Candles flicker in their wall sconces along the mahogany wall.
+~
+D SOUTH 23712 ABGH 0
+wooden door~
+A wooden door is set in the southern wall.
+~
+D WEST 23708 0 0
+~
+Candles lit the hallway as it extends in this direction.
+~
+D UP 0 0 0
+~
+Above you hovers an immaculately clean ceiling.
+~
+D DOWN 23702 0 0
+~
+The soft red velvet covers the floor beneath your feet.
+~
+E sconce sconces candles candle~
+Made simply from small pieces of wood, the wall sconces are hung
+from small, iron nails.  A small metal ring rests at the bottom
+of the plain, white candles to catch the wax drippings.
+~
+E rug red~
+The color of this soft, tightly woven rug can only be described as
+something very close to that of a new blooming rose.
+~
+E metal railing~
+Instead of being one solid mass, the railing is actually three
+separate, weaving wires of some kind of dark stained metal.
+~
+CABAL theatre
+#23708
+A Small Lobby~
+The hallway here comes to dead end and expands into a lobby similar
+to the one downstairs.  A few cushioned benches line against the back
+wall, and some smaller paintings hang here as well.  Wall sconces as
+seen in other portions of the theatre light the way here, making this
+gathering space warm and cozy.  A doorway is set into the south wall,
+leading out onto the balcony seating.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Candles flicker in their wall sconces along the mahogany wall.
+~
+D EAST 23707 0 0
+~
+You spy a stairway in this direction.
+~
+D SOUTH 23709 ABGH 0
+wooden doors~
+A doorway leads into the balcony here.
+~
+D WEST 0 0 0
+~
+Candles flicker in their wall sconces along the mahogany wall.
+~
+D UP 0 0 0
+~
+Above you hovers an immaculately clean ceiling.
+~
+D DOWN 0 0 0
+~
+The soft red velvet covers the floor beneath your feet.
+~
+E sconce sconces candles candle~
+Made simply from small pieces of wood, the wall sconces are hung
+from small, iron nails.  A small metal ring rests at the bottom of
+the plain, white candles to catch the wax drippings.
+~
+E painting paintings~
+The particular painting that catches your eye is of a lady of human
+descent wandering through a field of tall, golden grass.  Auburn hair
+and unblinking sapphire eyes seem to be the outstanding features in
+this painting, as all else maintains a sense of mystery.
+~
+CABAL theatre
+#23709
+Overlooking the Stage~
+From above the downstairs seating, the view of the stage can only
+be described as extraordinary.  The smaller, more cozy seating of the
+balcony also looks to be for special guests, as the chairs here are
+cushioned as opposed to the bare seating of the main section.  Guard
+rails carved out of solid pieces of oak safely keep you from tumbling
+over to what would be a rather rough landing.  The lighting here is
+similar to that of the main seating area, balls of light seem to glow
+with a life all their own.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23708 ABGH 0
+wooden doors~
+Wooden doors lead back out into the second floor lobby.
+~
+D EAST 0 0 0
+~
+The walls seem to dance as the light spheres glow and pulse.
+~
+D SOUTH 0 0 0
+~
+You get a spectacular view as you look over the stage.
+~
+D WEST 0 0 0
+~
+The walls seem to dance as the light spheres glow and pulse.
+~
+D UP 0 0 0
+~
+The vaulted ceiling of the auditorium towers above you.
+~
+D DOWN 0 0 0
+~
+Plush, red velvet carpeting softens your footsteps.
+~
+E stage~
+You have the perfect view to see everything that is currently
+happening on the stage.
+~
+E light lighting~
+These strange little spheres of light pulse with a life all their
+own, magically hovering in the air along the walls.
+~
+E guard rail rails~
+Flowering vines have been carved into the oak rails here on
+the balcony, keeping the audience safe from harm.
+~
+CABAL theatre
+#23710
+Upon the Stage~
+The auditorium is seen from a new perpective here on the stage.
+Whether the seats are full or empty, there's a certain rush you
+get just by standing here in anticipation of your performance.
+A red velvet curtain is pulled to each side from the stage with
+lengths of golden rope.  The wooden boards that make up the stage
+itself are scuffed and worn, their ordinariness calming your nerves.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+You spy the audience both below and above you in the balcony.
+~
+D EAST 23706 0 0
+~
+The curtains are pulled back toward the wall for your performance.
+~
+D SOUTH 0 0 0
+~
+The props are set here for your upcoming scene.
+~
+D WEST 0 0 0
+~
+The curtains are pulled back toward the wall for your performance.
+~
+D UP 0 0 0
+~
+The vaulted ceiling of the auditorium towers above you.
+~
+D DOWN 0 0 0
+~
+The plain wooden stage is scuffed and worn from so many shows.
+~
+E velvet curtain rope golden~
+The heavy, red velvet can barely be held by the thin woven rope
+that holds it back from the stage.  You get the feeling that it
+takes several people to complete the task.
+~
+E wooden board boards~
+A few of the boards seem to wiggle and squeak when you step on
+them, but it's nothing that a few nails wouldn't fix.  Lighter
+spots on the wood are visible from where a majority of actors
+stand for their performances.
+~
+CABAL theatre
+#23711
+A Quiet Corner~
+Candles of all different sizes emit a warm glow to this somewhat
+less rowdy corner off the tavern's main room.  Comfortable looking
+chairs and pillows are scattered throughout the room.  A few wooden
+tables are thrown into the mix, some well worn books in able reach
+for the reading enthusiast.  Soft, woven rugs cover the otherwise
+plain floor and despite their scruffy appearance, they feel like
+heaven against your feet.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23703 0 0
+~
+The rough sounds of the tavern accost you from this direction.
+~
+D EAST 0 0 0
+~
+Shelves filled with books and a few paintings decorate the walls.
+~
+D SOUTH 0 0 0
+~
+Shelves filled with books and a few paintings decorate the walls.
+~
+D WEST 0 0 0
+~
+Shelves filled with books and a few paintings decorate the walls.
+~
+D UP 0 0 0
+~
+The plain white ceiling hovers above you.
+~
+D DOWN 0 0 0
+~
+Some woven rugs soften up the hard wood floor.
+~
+E wooden table tables~
+Not overly elaborate but not incredibly plain, the cherry wood
+tables are sturdy and well polished.
+~
+E book books~
+The worn bindings and age-colored pages of these thick volumes
+suggest popularity among new and frequent guests alike.
+~
+E woven rug rugs~
+Patterns of blue and grey spiral in the circular, soft textured
+scatter rugs.
+~
+E candle candles~
+Candles both thick and thin are set on small trays on each table
+to provide the warm light that only candles can give.
+~
+CABAL theatre
+#23712
+A Private Library~
+It looks as though you have wandered into the private collection of
+books belonging to the Regal Theatre.  Every wall, from the ceiling to
+the floor, is lined with book after book.  Many of them are worn with
+use, the lettering on the binding completely gone off some of them.  A
+ladder is set off to the side of the doorway, used to get some of the
+harder to reach volumes.  A small table and matching chair is all the
+furniture that fits in the room.  A few magical globes illuminate over
+the table itself, shedding enough light to read by.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 23707 ABGH 0
+wooden door~
+A small stairway is through the doorway to the north.
+~
+D EAST 0 0 0
+~
+Bookshelves filled with books line the walls.
+~
+D SOUTH 0 0 0
+~
+Bookshelves filled with books line the walls.
+~
+D WEST 0 0 0
+~
+Bookshelves filled with books line the walls.
+~
+D UP 0 0 0
+~
+A few magical lights hover in the doomed ceiling.
+~
+D DOWN 0 0 0
+~
+Sturdy grey carpeting covers the floor here in the library.
+~
+E light globe globes magical~
+These strange little spheres of light pulse with a life all their
+own, magically hovering around the room.
+~
+E bookshelves book books~
+You can't believe the number of books that line the shelves on every
+wall.  A few particularly spark your interest, one on poetry, another
+on historical matters, and one a compilation of short stories.  All
+of them seem to be a work in progress.
+~
+CABAL theatre
+#23713
+A Bustling Kitchen~
+Cook's aids and serving wenches scurry through the kitchen, plates of
+steaming food giving a tasty aroma to the place.  Pantries filled with
+unprepared foods line many of the walls, and a large fireplace is set
+in the western wall.  A small tripod fashioned from metal balances a
+pot of beef stew over the flames.  A large wooden table takes up the
+majority of the room in the kitchen.  Utensils, kettles, and all sorts
+of food lay heaped up on the counters, and you wonder how anything can
+possibly get done.
+~
+inside
+ROOM LAW
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 0 0 0
+~
+Counter tops and pantries filled with food and cookware dominate the walls.
+~
+D EAST 23703 ABGH 0
+small door~
+A small door leads back to the tavern.
+~
+D SOUTH 0 0 0
+~
+Counter tops and pantries filled with food and cookware dominate the walls.
+~
+D WEST 0 0 0
+~
+Counter tops and pantries filled with food and cookware dominate the walls.
+~
+D UP 0 0 0
+~
+The ceiling is plain, with a few food stains sprinkling the white paint.
+~
+D DOWN 0 0 0
+~
+The stone floor is swept clean of any dirt or spilled food.
+~
+E pantries~
+Even in times of hardship the pantries of this busy kitchen are likely
+stocked.  Pottery filled with flour and sugar rest lazily on shelves,
+waiting to be disturbed.
+~
+E tripod metal~
+A heavy pot of stew hangs precariously from the steel contraption.
+Steam rises out from the top of the kettle, its mouthwatering aroma
+filling the air.
+~
+E wooden table~
+Pots, flour, knives - anything you can think of regarding preparation
+of food - is thrown onto this large table.  Deep scratches from the
+use of butcher knives can be seen throughout, and despite rigorous
+cleaning, stains spot along the surface.
+~
+E fireplace~
+Dark grey stones form a tall, rectangular opening in the wall here.
+Flames crackle and caress the charred wood inside, keeping the room
+uncomfortably hot.  A few covered kettles are barely visible beneath
+the ashes of the fire, the insulation keeping the food inside warm.
+~
+CABAL theatre
+#0
+
+
+
+#RESETS
+MOB 23704 TO 23700 GLIMIT 1 LLIMIT 1
+DOOR 23700 south CLOSED
+OBJECT 23700 TO 23701
+DOOR 23701 north CLOSED
+DOOR 23701 south CLOSED
+MOB 23702 TO 23703 GLIMIT 1 LLIMIT 1
+GIVE 23706
+GIVE 23707
+OBJECT 23701 TO 23703
+OBJECT 23713 TO 23703
+DOOR 23703 west CLOSED
+OBJECT 23702 TO 23704
+DOOR 23704 north CLOSED
+MOB 23700 TO 23705 GLIMIT 1 LLIMIT 1
+DOOR 23705 south CLOSED
+MOB 23705 TO 23706 GLIMIT 1 LLIMIT 1
+DOOR 23706 north CLOSED
+DOOR 23707 south CLOSED
+OBJECT 23700 TO 23708
+DOOR 23708 south CLOSED
+OBJECT 23703 TO 23709
+DOOR 23709 north CLOSED
+MOB 23703 TO 23711 GLIMIT 1 LLIMIT 1
+GIVE 23705
+GIVE 23708
+OBJECT 23710 TO 23711
+OBJECT 23711 TO 23711
+OBJECT 23704 TO 23712
+OBJECT 23709 TO 23712
+DOOR 23712 north CLOSED
+MOB 23701 TO 23713 GLIMIT 1 LLIMIT 1
+DOOR 23713 east CLOSED
+S
+
+#IMPROGS
+M 23704 move_prog move_prog_theatre_guard
+I 23712 give_prog give_prog_cabal_item
+END
+#$

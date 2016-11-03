@@ -1,0 +1,10 @@
+<?
+		include("header.inc");
+		
+		$open = fopen("const.txt","r");
+		$read = fread($open, 1500000);
+//		$search = eregi("\s\{\s\"(.*)\"\s,\s\{(\w*)\s,\s(\w*)\s,\s", $read, $printing);
+		$search = eregi("\\\"(.*)\\\"", $read, $printing);
+		echo $printing[3];
+		fclose($open);
+?>

@@ -1,0 +1,6808 @@
+#AREA
+adrianna.are~
+Estates of Adrianna~
+Karsus~
+10 30
+1500 1599
+unopened
+english
+0
+1
+Mynhra~
+
+#MOBS
+#1500
+sleeping girl female servant~
+a sleepy female servant~
+A female servant is fast asleep here.
+~
+Dressed in simple servant clothes this young female servant is fast asleep.
+Her hair covering a part of her face, it slowly moveing with each inhale and
+exhale of her steady breath.
+~
+1000 1500 100 human~
+15 3d9+250 2d6+3 0 100 slap
+0 0 0 0
+sleeping female none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1501
+female servant~
+a female servant~
+This female servant is awake and doing some private chores.
+~
+This young female servant is dressed in a plain maids dress, it has a few
+areas where it is dirty from recent use. She looks up at you in puzzlement
+as you stare at her.
+~
+1000 1501 100 human~
+15 3d9+250 2d6+3 0 100 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1502
+sleeping male boy servant~
+a sleepy male servant~
+A male servant is fast asleep here.
+~
+Dressed in simple servant clothes this young male servant is fast asleep.
+His chest rises and lowers with each inhale and exhale.
+~
+1000 1502 100 human~
+15 3d9+250 2d6+3 0 100 punch
+0 0 0 0
+sleeping male none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1503
+male servant~
+a male servant~
+This male servant is about doing some personal errins.
+~
+This young male servant is dressed in a neat shirt and trousers, the shirt
+even has cuffs and a collar. His hair is neatly groomed, and he is almost
+old enough to be a butler.
+~
+1000 1503 100 human~
+15 3d9+250 2d6+3 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1504
+serving servant~
+a serving servant~
+A serving servant is here serving food from the table.
+~
+This servant is adorned in clean and neat looking clothes, with a white apron
+and a neat white cap to keep any hair from falling into the food they are
+serving.
+~
+1000 1504 100 human~
+15 3d9+250 2d6+3 0 100 punch
+0 0 0 0
+standing either none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1505
+jittery servant~
+a jittery servant~
+A jittery servant is here paceing back and forth.
+~
+This servants clothes are a mess along with their hair. Their whole
+appearence is in a sorry state, they are lucky that they have not been
+seen by the lord lady Adrianna.
+~
+1000 1505 100 human~
+15 3d9+250 2d6+5 0 100 slap
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES proged, for good quest, is jittery because it has been asked to
+find out what happened to the escapeing servant. Asks if you would
+take its place. If you say yes he tells you to go to the head servant
+for a key to let you down into the dungeons.
+Jittery servant mentions the papers on the wall with the map. 
+prog only works for neutral/good aligns. not evils.
+~
+#1506
+head servant~
+the head servant~
+Standing here with a stare that could kill is the head servant.
+~
+A thick scowl is etched into the face of this mid aged female. Her clothes
+indicate that she is a servant, but her demeanor indicates that she is not
+just a common servant.
+~
+1000 1506 100 human~
+20 3d9+350 2d6+6 0 100 slap
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+ACT WANDER
+OFF DODGE
+OFF PARRY
+NOTES proged X2, 1st she has key to stairwell, (1502)
+will give it to a good align player if you have spoken
+with the jittery servant, and offered to take his place.
+In trying to find what happened to the escapeing servant.
+2nd, when given the silver amulet from the flagstone golem
+she casts a minor spell on the amulet that turns it into a key
+that unlocks the door to altran the elf mage.
+~
+#1507
+elven visitor~
+a elven visitor~
+A elven visitor stands here enjoying the food.
+~
+A neat looking elven adventurer stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+adventurer. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1507 100 elf~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1508
+dwarven visitor~
+a dwarven visitor~
+A dwarven visitor stands here enjoying the food.
+~
+A neat looking dwarven adventurer stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+adventurer. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1508 100 dwarf~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1509
+human visitor~
+a human visitor~
+A human visitor stands here enjoying the food.
+~
+A neat looking human adventurer stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+adventurer. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1509 100 human~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1510
+halfling visitor~
+a halfling visitor~
+A halfling visitor stands here enjoying the food.
+~
+A neat looking halfling adventurer stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+adventurer. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1510 100 halfling~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+AFF DARK_VISION
+#1511
+human merchant~
+a human merchant~
+A human merchant stands here enjoying the food.
+~
+A neat looking human merchant stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+merchant. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1511 100 human~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1512
+elven merchant~
+a elven merchant~
+A elven merchant stands here enjoying the food.
+~
+A neat looking elven merchant stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+merchant. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1512 100 unique~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+M 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1513
+dwarven merchant~
+a dwarven merchant~
+A dwarven merchant stands here enjoying the food.
+~
+A neat looking dwarven merchant stands before you. Their clothes not so
+rugged so it looke more like they avoid the hardned life of a proper
+merchant. They seem quiet pleased with the food and the comfort of the
+furnishings compared to where they might have come from.
+~
+1000 1513 100 dwarf~
+20 3d9+450 2d6+6 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1514
+prisoner merchant~
+a prisoner~
+A prisoner is chained here to the wall.
+~
+This prisoner is dressed in tattered rage which look like they once were
+fancy merchant clothes. Guess you are lucky that you are not in their
+position chained to the walls.
+~
+1000 1514 100 human~
+20 3d9+350 2d6+6 0 100 bite
+0 0 0 0
+resting either none
+0 0 medium
+ACT NPC
+OFF DODGE
+#1515
+ambasitor~
+a ambasitor~
+A ambasitor stands here listening.
+~
+Dressed in very impressive clothes from head to toe, this ambasitor represents
+their sanction well. Impeckable in maners and appearence this ambasitor makes
+you feel very low class.
+~
+1000 1515 100 human~
+25 5d10+750 2d10+7 0 100 punch
+0 0 0 0
+standing either moderate
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1516
+sleeping ambasitor~
+a sleepy ambasitor~
+A ambasitor has fallen asleep here on the bed without undressing.
+~
+Dressed in very impressive clothes from head to toe, this ambasitor represents
+their sanction well. Impeckable in maners and appearence this ambasitor makes
+you feel very low class, untill you hear a noisy snore followed by a flem
+filled short cough.
+~
+1000 1516 100 human~
+25 5d10+750 2d10+7 0 100 punch
+0 0 0 0
+sleeping either moderate
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1517
+throne consort~
+the consort~
+Lord lady Adrianna's personal consort is standing here.
+~
+The consort is dressed in a regal robe that reaches down to the ground.
+On the front of the regal robe is the emblem of the Lord lady. Hanging
+around their neck is a small medallion with a small black monocos gem in
+the center of it.
+~
+-10 1517 100 human~
+25 5d10+750 2d10+7 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES Consort is working for the drow mage, has key to the tower.
+~
+#1518
+lord lady adrianna~
+Adrianna~
+Lord lady Adrianna is sitting here at her throne.
+~
+Dressed in a evening dress with a solid bodice that adds curves to the lord
+lady and exposes a healthy cleavage, she is definately the center of
+attention. Long flowing hair cascades down her shoulders and around her
+busom. Apon her head is a sparkling tiara that has a multitude of gems set
+into its design.
+~
+1000 1518 100 human~
+30 6d12+1200 4d6+8 0 100 slap
+100 100 100 100
+standing female affluent
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+OFF PARRY
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+RES WEAPON
+NOTES when lady hits 75% living plants come to life.
+when lady hits 70% spectral knight all south comes to life
+when spectral knight arrives he rescues her, and she tries to
+flee, and then fast tracks to her room, locking her door.
+~
+C 'vampiric touch'
+C 'induce pain'
+C 'faerie fire'
+C 'fireball'
+#1519
+living plant~
+a living plant~
+A wide leaf tropical plant has come to live and stands here on its roots.
+~
+This wide leaf tropical plant has curled its leaves up forming long tough
+whip like tendrils. They seem to be trying to lash at your ankles. The roots
+of the plant littered with clumps of dirt spread out like hands on the ground
+trying to maintain stability.
+~
+1000 1519 100 unique~
+25 5d10+750 2d10+7 0 100 whip
+100 100 100 100
+standing male none
+J 0 medium
+ACT NPC
+OFF DODGE
+NOTES (proged, comes to life from vase item, proged to assist lord lady & lash often)~
+#1520
+living plant~
+a living plant~
+A wide leaf tropical plant has come to live and stands here on its roots.
+~
+This wide leaf tropical plant has curled its leaves up forming long tough
+whip like tendrils. They seem to be trying to lash at your ankles. The roots
+of the plant littered with clumps of dirt spread out like hands on the ground
+trying to maintain stability.
+~
+1000 1520 100 unique~
+25 5d10+750 2d10+7 0 100 whip
+100 100 100 100
+standing male none
+J 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES (proged, comes to life from vase item, proged to assist lord lady & lash often)~
+#1521
+living plant~
+a living plant~
+A wide leaf tropical plant has come to live and stands here on its roots.
+~
+This wide leaf tropical plant has curled its leaves up forming long tough
+whip like tendrils. They seem to be trying to lash at your ankles. The roots
+of the plant littered with clumps of dirt spread out like hands on the ground
+trying to maintain stability.
+~
+1000 1521 100 unique~
+25 5d10+750 2d10+7 0 100 whip
+100 100 100 100
+standing male none
+J 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES (proged, comes to life from vase item, proged to assist lord lady & lash often)~
+#1522
+living plant~
+a living plant~
+A wide leaf tropical plant has come to live and stands here on its roots.
+~
+This wide leaf tropical plant has curled its leaves up forming long tough
+whip like tendrils. They seem to be trying to lash at your ankles. The roots
+of the plant littered with clumps of dirt spread out like hands on the ground
+trying to maintain stability.
+~
+1000 1522 100 unique~
+25 5d10+750 2d10+7 0 100 whip
+100 100 100 100
+standing male none
+J 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES (proged, comes to life from vase item, proged to assist lord lady & lash often)~
+#1523
+living plant~
+a living plant~
+A wide leaf tropical plant has come to live and stands here on its roots.
+~
+This wide leaf tropical plant has curled its leaves up forming long tough
+whip like tendrils. They seem to be trying to lash at your ankles. The roots
+of the plant littered with clumps of dirt spread out like hands on the ground
+trying to maintain stability.
+~
+1000 1523 100 unique~
+25 5d10+750 2d10+7 0 100 whip
+100 100 100 100
+standing male none
+J 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES (proged, comes to life from vase item, proged to assist lord lady & lash often)~
+#1524
+tower guard~
+a tower guard~
+A tower guard is here, his gaze almost totaly blank.
+~
+This guard is dressed in armours and weapons of a normal guard. But that is
+not what you find abnormal, the guards eyes are glazed over. His face shows
+no expression. If it wasnt for his breathing you would have assumed that he
+was well and truely dead.
+~
+1000 1524 100 human~
+25 5d10+750 2d10+7 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF BASH
+OFF DODGE
+OFF PARRY
+#1525
+estate guard~
+a estate guard~
+A estate guard is here, his gaze almost totaly blank.
+~
+This guard is dressed in armours and weapons of a normal guard. But that is
+not what you find abnormal, the guards eyes are glazed over. His face shows
+no expression. If it wasnt for his breathing you would have assumed that he
+was well and truely dead.
+~
+1000 1525 100 human~
+25 5d10+750 2d10+7 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF BASH
+OFF DODGE
+OFF PARRY
+#1526
+dungeon master drow~
+a dungeon master~
+A drow in a black leather vest is here.
+~
+This drow looks like he has spent half his life doing this sort of work. A
+expressionless face and short croped hair is a abnormal appearance for a drow
+of his profession. A black leather vest and a pair of fur lined boots are
+pulled over some tan leather pants. Turning towards you, his face doesnt
+change, but you notice anger in his eyes. Your presence is not wanted.
+~
+-1000 1526 100 drow~
+25 5d10+750 2d10+7 0 100 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES ~
+#1527
+dungeon torturer drow~
+a drow torturer~
+A muscular drow stands here splattered in blood.
+~
+This drow torturer is quiet muscular compared with most drow that you have
+seen. A thick leather apron with a satchel pouch on the front is all this
+drow wears along with black leather trousers. Blood splatters cover the
+front of the apon and in one hand is a serated blade. A wide grin crosses
+the drows face when he notices you looking at him.
+~
+-1000 1527 100 drow~
+25 5d10+750 2d10+10 0 100 slash
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+#1528
+courtyard gargoyle~
+a gargoyle~
+A stone gargoyle with two large gem eyes sits here.
+~
+This stone gargoyle is modled on a small demon , wings and razor sharp claws
+and tetth. Spines down it's back and pointed ears. There are two large
+gems in each of its eyes.
+~
+0 1528 100 unique~
+25 5d10+750 2d10+7 0 100 claw
+0 0 0 0
+standing male none
+J 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+AFF FLYING
+RES WEAPON
+VUL MAGIC
+NOTES (proged, loads when pc "pry gems", has 1key, 1gquest item.)The key item, is used in tower gargoyle prog, without it, he blocks the path
+leading up to the second level in the foyer. prog checks for key.
+quest item is one of the two needed for altran to burn the drow mages vision.
+~
+#1529
+tower gargoyle~
+a gargoyle~
+A stone gargoyle sits here gazeing at you.
+~
+This stone gargoyle is modled on a small demon , wings and razor sharp claws
+and tetth. Spines down it's back and pointed ears. Even tho its eye sockets
+are empty it seems to be gazeing at you searching for something.
+~
+0 1529 100 unique~
+25 5d10+750 2d10+7 0 100 claw
+100 100 100 100
+standing either none
+J 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+AFF FLYING
+RES WEAPON
+VUL MAGIC
+NOTES (proged, checks pcs for gem from courtyard gargoyle, otherwise aggies)~
+#1530
+flagstone golem~
+a flagstone golem~
+Massive chunks of flagstone form a humanoid shape.
+~
+Big chunks of flagstone are held together with some unseen force, together
+all the pieces form into a humanoid shape as it towers above you.
+~
+0 1530 100 unique~
+30 6d12+1050 4d6+8 0 100 smash
+200 200 200 200
+standing male none
+M 0 large
+ACT NPC
+OFF DODGE
+OFF PARRY
+OFF CRUSH
+RES WEAPON
+VUL MAGIC
+NOTES (proged, gquest: loads when silver amulet is taken from container. retakes amulet) 
+Silver amulet is given to head servant, she turns it into a key to unlock
+the door to altran, elf mage.
+~
+#1531
+Altran mage elven~
+Altran~
+A elven mage stands paces back and forth here.
+~
+Altran the elven mage is dressed in simple robes, his long hair drapeing
+down his shoulders. His eyes a deep hue blue stare at you when you look at
+him. Small long fingers start to move qith practiced grace but his lips do
+note move a fraction.
+~
+1000 1531 100 elf~
+30 6d12+1050 4d6+8 0 100 punch
+100 100 100 100
+standing male poor
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+RES MAGIC
+A 'fly' (null)
+A 'ironskin' (null)
+C 'acid stream'
+C 'molten stones'
+C 'plasma arc'
+C 'icelance'
+#1532
+Uroleth mage drow~
+Uroleth~
+A drow mage stands here dressed in battle robes.
+~
+This drow mage isnt kidding with his attire, the robe has many little pockets
+and pouches that contain wands scrolls and potions. Sections of his robe swirl
+with runes and sigils. Sharp amber eyes look you up and down, as he blows a
+stray strand of white hair away from his brow.
+~
+-1000 1532 100 drow~
+30 6d12+1050 4d6+8 0 100 punch
+100 100 100 100
+standing male affluent
+0 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+RES MAGIC
+NOTES (evil-quest,proged: if pc=evil, sends them to find/catch escaped servant)~
+A 'fly' (null)
+A 'stoneskin' (null)
+C 'acid stream'
+C 'rejuvenate'
+C 'heat earth'
+C 'lightning bolt'
+C 'iceball'
+C 'boreal wind'
+#1533
+spectral knight~
+a spectral knight~
+A faint spectral knight can be seen standing here.
+~
+Though the outline and the detail of the spectral knight is very faint, the
+massive halberd that it has is far from spectral. It looks like it could
+cleave a human in half with a single swing.
+~
+0 1533 100 celestial~
+30 6d12+1500 4d7+20 0 100 cleave
+250 250 250 250
+standing male none
+IJ 0 large
+ACT NPC
+OFF BASH
+OFF DODGE
+OFF FADE
+OFF KICK
+OFF PARRY
+OFF TRIP
+IMM MAGIC
+NOTES (proged to load when lord lady is at 70% health) 
+when it dies, it's halberds blade breaks off, leaving a spectral sword.
+~
+#1534
+horse~
+a horse~
+A horse is here asleep.
+~
+A horse about sixteen spans high is here on the ground asleep. It is a
+brilliant grey that only a rich merchant could afford. Your presence has not
+woken it up.
+~
+500 1534 100 unique~
+10 2d6+120 2d4+2 0 100 bite
+0 0 0 0
+sleeping either none
+G 0 medium
+ACT NPC
+OFF DODGE
+OFF KICK
+#1535
+escape servant traped~
+a escaped servant~
+A escaped servant is here traped and unable to go any further.
+~
+This servant looks distressed. Unable to go any further and carry out their
+task at hand. The clothes they are dressed in are filthy rags and offer
+little protection.
+~
+1000 1534 100 human~
+10 2d6+120 2d4+2 0 100 slap
+0 0 0 0
+resting female none
+G 0 medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+NOTES (Equest: need to kill for visdeath head +map. Gquest: need to break bars)~
+#0
+
+
+
+#OBJS
+#1500
+rusty key~
+a rusty key~
+A rusty key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1501
+key~
+a key~
+A key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1502
+fancy key~
+a fancy key~
+A fancy key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1503
+worn old key~
+a worn old key~
+A worn old key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 1 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1504
+fine key~
+a fine key~
+A fine key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1505
+key~
+a key~
+A key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1506
+key~
+a key~
+A key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1507
+key gem monocus~
+a monocus gem~
+A large black gem has been left here on the ground.~
+key
+gem~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM VISDEATH
+LIMIT 0
+TIMER 0
+
+#1508
+key~
+a key~
+A key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1509
+key~
+a key~
+A key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1510
+key~
+a key~
+A key has been left here on the ground.~
+key
+steel~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#1511
+water trough~
+a water trough~
+A old stone water trough is here. container.~
+container
+nothingness~
+500 0 0 500 100
+52 1000 0 P
+WEAR TAKE
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#1512
+water trough~
+a water trough~
+A old stone water trough is here. fountain.~
+fountain
+nothingness~
+10001 10000 'water' 0 0
+52 1000 0 P
+WEAR TAKE
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#1513
+torch bracket~
+a torch bracket~
+A torch braet with a flaming torch.~
+trash
+steel~
+0 0 0 0 0
+0 0 0 P
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#1514
+rubble~
+piles of scattered rubble~
+Piles of scattered rubble~
+trash
+stone~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+VERB move
+TIMER 0
+NOTES moveing this rubbles loads container 1515
+which has a key in it.
+~
+
+#1515
+skeleton~
+a skeleton~
+A half crushed skeleton is here.~
+container
+bone~
+500 0 0 500 100
+0 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1516
+rubble~
+pile of rubble~
+Some large pieces of rubble lay scattered about.~
+trash
+stone~
+0 0 0 0 0
+0 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1517
+monocus gem~
+a monocus gem~
+A large black gem has been left here on the ground.~
+trash
+gem~
+0 0 0 0 0
+0 1 150 P
+WEAR TAKE
+ITEM VISDEATH
+LIMIT 0
+TIMER 0
+NOTES this is 1 quest item needed for the good quest.
+The item is to be given to the elf mage Altran.
+He will use the gem to sear the drow's vision.
+~
+
+#1518
+gap~
+a small gap~
+A gap in the flagstone. container.~
+container
+nothingness~
+500 0 0 500 100
+52 1000 0 P
+WEAR TAKE
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#1519
+silver medallion~
+a pure silver medallion~
+A silver medallion has been left here on the ground.~
+armor
+silver~
+0 0 0 0 0
+52 5 150 P
+WEAR TAKE
+WEAR NECK
+LIMIT 0
+TIMER 0
+NOTES Item loads in gap (hidden container)
+when you get it from the container, it loads
+the flagstone golem, the golem takes it from you(prog)
+then goes aggie. If you kill the golem for the medallion,
+you then take it to the head servant who turns it into a key
+to unlock Altrans door.
+~
+
+#1520
+bed~
+a bed~
+A small hay bed.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1521
+table~
+a table~
+A small wooden table.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1522
+chair~
+a chair~
+A rickety chair.~
+trash
+wood~
+0 0 0 0 0
+52 20 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1523
+hearth~
+a pot belly hearth~
+A pot belly hearth.~
+trash
+iron~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1524
+feed trough~
+a feed trough~
+A long feed trough.~
+trash
+stone~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1525
+water barrel~
+a water barrel~
+A wooden casket water barrel.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1526
+lever~
+a lever~
+A lever attached to the wall.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+VERB pull
+TIMER 0
+NOTES pulling this lever opens up the portcalius that
+shuts when you enter the estate, It does not close it.
+~
+
+#1527
+pillar~
+giant pillars~
+Giant pillars.~
+trash
+stone~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#1528
+mosaic carpet~
+a long mosaic carpet~
+A long mosaic carpet.~
+trash
+cloth~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1529
+serving table~
+a serving table~
+A serving table covered in an assortment of foods.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1530
+cushioned chairs~
+cushioned chairs~
+A couple cushioned chairs.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1531
+suit armour armor~
+a suit of giant armour.~
+A suit of titan armour.~
+trash
+steel~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+NOTES This item is to be dested, when spectral knight is loaded.
+~
+
+#1532
+bunk bed~
+a bunk bed~
+A wooden bunk bed.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1533
+small table~
+a small table~
+A small table.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1534
+small chest~
+a small wooden chest~
+A small wooden chest.~
+container
+wood~
+500 0 0 500 100
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1535
+cast iron bracer~
+a cast iron bracer~
+~
+container
+nothingness~
+500 0 0 500 100
+52 1000 0 P
+WEAR TAKE
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#1536
+large wooden bed~
+a large wooden framed bed~
+A large wooden framged bed.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1537
+maple table~
+a maple table~
+A maple table.~
+trash
+wood~
+0 0 0 0 0
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1538
+chair~
+a comfortable chair~
+A comfortable chair.~
+container
+wood~
+500 0 0 500 100
+52 1000 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#1539
+chest~
+a small chest~
+~
+container
+wood~
+500 0 1504 500 100
+52 1000 0 P
+WEAR TAKE
+ITEM NOSHOW
+LIMIT 0
+TIMER 0
+
+#1540
+story parchment scroll bound~
+a bound parchment scroll~
+A tighly wound scroll of parchment is here on the ground.~
+trash
+parchment~
+0 0 0 0 0
+0 1 10 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E scroll~
+"Months have past and we have been held captor by a drow mage who has
+imprisoned lord lady Adrianna's personal mage.  The estates affirs still
+continue as if nothing has befallen.  The pompus traders and visitors
+thinking that everything is running fine.  The guards have been mentally
+subdued somehow rendering them of little use.  The lord lady we belive to be
+We servants are the few remaining who are not under the direct influence or
+surveilence of this wicked creature.  What the drow is up to the gods only
+know, we have managed to aid with the escape of a fellow servant, but only
+time shall dictate how futile that might have been.  If this scroll should
+fall into the right hands please send aid as fast as you can to the Estate
+of Adrianna.  We are in urgent need, it is a matter of life and death. 
+Those young and brave we dare not ask, We have discovered that the drow has
+control over gargoyles golems and a assortment of other horrid creatures.  A
+hardened troupe of adventurers would be best to ensue victory."  
+~
+
+#1541
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1542
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1543
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1544
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1545
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1546
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1547
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1548
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1549
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1550
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1551
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1552
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1553
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1554
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1555
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1556
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1557
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1558
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1559
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1560
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1561
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1562
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1563
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1564
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1565
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1566
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1567
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1568
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1569
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1570
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1571
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1572
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1573
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1574
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1575
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1576
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1577
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1578
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1579
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1580
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1581
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1582
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1583
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1584
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1585
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1586
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1587
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1588
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1589
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1590
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1591
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1592
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1593
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1594
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1595
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1596
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1597
+no name~
+dummy object~
+~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+
+#1598
+map massive bound melcene~
+a massive bound map~
+A massive bound map is here on the ground.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E map~
+#  
+                                           /   
+            #--#              #--#     #--u    
+            |                 |        |       
+   #--#--#--#--#--#--#--#--#--#--#--#--#--#--# 
+   |              |     |        |           | 
+   #              #     #        #--#        # 
+   |                    |                    | 
+   #        #--#--#--#--#--#--#--#--#     #--#-|# 
+   |        |     |  H  |  P  |     |        |
+   #     #--#     #--E  #  A--#     #--#     #
+   |     |           L  |  L  |        |     |
+#|-#     #     #--#--#--#--#--#--#     #--#  #
+   |     |     |shift|     |chron|     |     |
+   #--#  #--#  #  #--#     #--#  #  #--#     #
+   |  |  |  |  |  |           |  |     |     |  
+   #  #  # ZEA #--#           #--#     #     #        #--#
+   |     |     |                 |     |     |        |  |
+#--#--#--#--#--#--#--#--#--#--#--#--#--#--#--D--#--#--#  #
+   |     |     |                 |     |     |           |
+   #     # WAR #--# #       # #--# A-P #     #           #
+   |     |  |  |  |/         \|  |  |  |     |           |
+   #     #--#  #  U--#     #--U  #  #--#  #  #           #
+   |     |     | necr|     |sorc |     |  |  |           |
+#--#  #--#     #--#--#--#--#--#--#     #  #--#        #--#
+-  |     |           T  |       #      |  |  |        |
+#  #     #--#     #--H  #   ASS/    #--#  #  #--#     #
+   |        |     |  I  |     |     |        |  |     |
+   #--#  #  #--#--#--#--#--#--#--#--#  #     #  #--#--#
+   |     |              |        |     |     |  
+   #     #--#  #        #     #--#  #--#--#  # 
+   |     |     |        |              |     | 
+   #--#--#--#--#--#--#--#--#--#--#--#--#--#--# 
+         |        -           |     -          
+      #|-#-|#     #           U     # 
+         -                     \
+         #                      #
+~
+
+#1599
+map melcene~
+a map of Melcene~
+A massive map is here.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+E map~
+#  
+                                           /   
+            #--#              #--#     #--u    
+            |                 |        |       
+            |                 |        |       
+   #--#--#--#--#--#--#--#--#--#--#--#--#--#--# 
+   |              |     |        |           | 
+   |              |     |        |           | 
+   #              #     #        #--#        # 
+   |                    |                    | 
+   |                    |                    | 
+   #        #--#--#--#--#--#--#--#--#     #--#-|# 
+   |        |     |     |     |     |        |
+   |        |     |   H | P   |     |        |
+   #     #--#     #--#E # A#--#     #--#     #
+   |     |            L | L   |        |     |
+   |     |              |     |        |     |
+#|-#     #     #--#--#--#--#--#--#     #--#  #
+   |     |     |     |     |     |     |     |
+   |     |     |shift|     |chron|     |     |
+   #--#  #--#  #  #--#     #--#  #  #--#     #
+   |  |  |  |  |  |           |  |     |     |
+   |  |  |  |  |  |           |  |     |     |
+   #  #  # ZEA #--#           #--#     #     #        #--#
+   |     |     |                 |     |     |        |  |
+   |     |     |                 |     |     |        |  |
+#--#--#--#--#--#--#--#--#--#--#--#--#--#--#--D--#--#--#  #
+   |     |     |                 |     |     |           |
+   |     |     |                 | AP  |     |           |
+   #     # WAR #--#           #--#  #  #     #           #
+   |     |  |  |  | #       # |  |  |  |     |           |
+   |     |  |  |  |/         \|  |  |  |     |           |
+   #     #--#  #  U--#     #--U  #  #--#  #  #           #
+   |     |     |     |     |sorc |     |  |  |           |
+   |     |     |     |     |     |     |  |  |           |
+#--#  #--#     #--#--#--#--#--#--#     #  #--#        #--#
+|  |     |              |              |  |  |        |
+-  |     |           T  |    ASS       |  |  |        |
+#  #     #--#     #--H  #     D     #--#  #  #--#     #
+   |        |     |  I  |    /|     |        |  |     |
+   |        |     |  E  |   # |     |        |  |     |
+   #--#  #  #--#--#--#--#--#--#--#--#  #     #  #--#--#
+   |     |              |        |     |     |  
+   |     |              |        |     |     |  
+   #     #--#  #        #     #--#  #--#--#  # 
+   |     |     |        |              |     | 
+   |     |     |        |              |     | 
+   #--#--#--#--#--#--#--#--#--#--#--#--#--#--# 
+         |        |           |     |          
+         |        -           |     -          
+      #|-#-|#     #           U     # 
+         |                     \ 
+         -                      #
+         #  
+ 
+~
+
+#0
+
+
+
+#ROOMS
+#1500
+Before the Main Gate~
+At the end of the trail a small clearing has been made.  There is enough
+room for perhaps five or six horses.  Large brushes and small trees line the
+clearing all around you.  To the west is a large stone wall eighteen feet
+high.  Set in the wall are two large, steel bound oak doors beset by a
+battlement tower on each side.  
+~
+trail
+ROOM LAW
+D NORTH 0 0 0
+~
+The clearing pushes hard up against rocks and bushes, there seems to be no
+way to follow the edge of the wall.
+~
+D SOUTH 0 0 0
+~
+The small trees and bushes overhang the clearing to the south.  Hidden
+beneath the overhang is a large water trough.  
+~
+D WEST 1501 A 1500
+Main gates~
+The huge oaken doors appear to have been well built but weather and time
+have taken their toll.  On either side of the door are archer slots.  
+~
+D UP 0 0 0
+~
+The sky opens up before you as you peer upwards.
+~
+D DOWN 0 0 0
+~
+The path here is narrow and leads directly into the estate.  The tracks
+are fresh.  The extremities of the clearing haven't been tread on in some
+time allowing crawler grass to spread.  
+~
+E water trough~
+A crudely made water trough constructed of plank wood sits on the ground.
+It is full of water and seems to have gone unused for some time.  A slight
+stagnant smell eminates from it.  
+~
+E gate~
+This massive gate has stood strong for years. Hardened by the weather and
+held together by massive steel braces that bind the doors to the massive
+stone mounted hinges that inserted into the wall. There is a large lock on
+the left door that is still functional.
+~
+E lock~
+The lock on the gate is just a simple key lock, you wish you had a skeleton
+key on you. This lock is as simple as it comes.
+~
+E tracks~
+It is unclear what made these tracks but it is clear that it is very
+large and heavy.  
+~
+#1501
+The Main Foyer~
+The inner wall has been constructed from massive blocks of stone.  Two
+massive upright pieces of stone have been positioned on each side of the
+door for the hinges to be fastened to.  The inside of the oaken doors are in
+better shape than the outside.  A fire cage hangs on either side of the door
+to light the room at night.  Otherwise, the room is clear of any objects and
+is bare from the arch ceiling to the paved floor.  
+~
+inside
+ROOM INDOORS
+D NORTH 1502 0 0
+~
+There is a small alcove entrance that leaves north further into the wall.
+You notice the flicker of a dull yellow light in the darkness, obviously a
+lit torch bracket.
+~
+D EAST 1500 A 0
+~
+Two large, steel bound oak doors are hinged to the sturdy stone wall. 
+There is a large, plain steel ring handle fastened to the door.  The key
+hole for the lock can be seen through the center of the ring.  The stonework
+around the doors is well constructed.  
+~
+D SOUTH 1504 0 0
+~
+There is a alcove entrance that leaves south into the outer wall. Darkness
+is all that you can see within.
+~
+D WEST 1506 0 0
+~
+Peering westward you can see what looks to be a small courtyard.  The
+part of the courtyard you can see is paved in stone and edged with a knee
+high stone curbing that holds the overgrown garden at bay.  
+~
+D UP 0 0 0
+~
+Looking up you stare in amazement, the ceiling is a quadrangle arch.  The
+arch almost forming a dome is an impressive sight.  The individual stone
+pieces that are inlayed slowly change shape and placement turning from level
+square pieces of angled diamond shaped pieces.  
+~
+D DOWN 0 0 0
+~
+The cobbles under your feet are almost hidden from view by fine dirt. 
+The dirt doesn't look like it has been trapsed in, rather it has been blown
+in from the courtyard or from outside and packed down over time.  
+~
+E quadrangle arch~
+This is truely a amazing piece of mansonary, only after staring at it do
+you notice a small seaming gap in the stone work that is to the west side
+of the arch. Lining yourself up with it from underneath you can make out
+what looks to be a drop down portcalius of some sort. Perhaps standing
+under it might not be such a wise idea.
+~
+E lock~
+Even a stupid abyssal titan could work out how to operate this lock and
+unlock it.
+~
+E tracks~
+There are a large pair of heavy tracks that lead east and west, which
+direction they came from or headed to you are unsure. You are unable to
+distinguish a toe and heel placement in the prints.
+~
+#1502
+Lower Level of the North Eastern Guard Tower~
+This room is partially lit by a large flaming torch that is sitting snug
+in a cast iron torch bracket that is fastened to the wall.  The light sends
+eerie shadows over the walls as you approach.  There is a start to a spiral
+staircase that follows the edge of the room leading up to the tower above.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The spiral stair case follows the northern wall of this room, rising
+sharply on small stone blocks that lay flush to the ground.
+~
+D EAST 0 0 0
+~
+In the darkness of your shadow you notice that there is a wooden rack
+that has been fastened to the wall here.
+~
+D SOUTH 1501 0 0
+~
+Through a small alcove-cut arch to the south is the main gate entrance.  
+~
+D WEST 0 0 0
+~
+The western wall is lit brightly by a large cinder wood torch.  The
+flames giving off a large ammount of heat as well as light.  The torch is
+held within the protective grasp of a large cast iron torch bracket.  
+~
+D UP 1503 0 0
+~
+The ceiling of this room is flat paved stone braced by foot thick hardwood
+supports that cross the ceiling and disapear into the walls. The soot line
+from the torch has left a thick black residue along the path that the fumes
+take, crawling their way slowly over support beam after support beam until
+they reach the north side of the room leading into the room above.
+~
+D DOWN 0 0 0
+~
+The floor has a small ammount of dirt, but nowhere near as much as to the
+south. Piled hard up against the west wall is a large crate that holds
+another nine massive torches. Piled next to the crate is a large pile of
+ash and fallen soot.
+~
+E torch bracket~
+The torch bracket has been coated in soot so thick that you can not even
+see the rivets that join the pieces of metal together.
+~
+E wooden rack~
+This is a old wooden rack that looks to have once been used to hold weapons
+used by guards. Thick gouge marks and cut marks have been left in the edge
+of the wood. Deep cut marks indicate that someone had once tested their
+weapon on a section of the hardwood.
+~
+E soot~
+The massive buildup of soot provides two usefull pieces of information, the
+first being that it seems few travel here often. The second being that the
+torch has been burning non stop for a very long time.
+~
+E crate ~
+This crate has nine large torches in it, though it probably held a dozen
+at one time.  It seems that the crate has not been moved in some time. 
+Thick deposits of soot have settled onto the wooden crate edge that holds
+the torches, even the torches themselves have a small deposit of soot upon
+them.  Something seems weird.... the spare torch pile is covered in soot,
+yet one still remains burning.  
+~
+#1503
+Upper Level of the North Eastern Guard Tower~
+This room is partially lit by the torch on the lower level but mostly
+from the archers slot on the east wall.  This part of the tower is
+relatively clean and appears to be used frequently.  The north wall has a
+weapons rack stocked with spears, bows, arrows and quivers.  The west wall
+has a window that over looks the courtyard below.  You can can leave back
+down the stairs on the south wall.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall is just a plain display of the layers of rocks that make up
+the wall that you are within.
+~
+D EAST 0 0 0
+~
+To the east is an archers slot, a two foot high one foot wide cross cut
+into the stone.  The archers slot grants a archer the right angles to be
+able to aim at anyone approaching or attacking from the outside.  At the
+same time it offers the archer the greatest amount of protection from being
+hit by the arrows of enemies.  Peering out through the archers slot you can
+see the clearing below and where the mountain enfolds the trail.  You can
+also see the forest below, some fields and the road that meanders through
+it.  
+~
+D SOUTH 0 0 0
+~
+Up against the southern wall is a chain hung barrack bed that seems to have
+had no use in quiet some time, layered in straw long ago perhaps it is now
+covered in crumbling remains.
+~
+D WEST 0 0 0
+~
+The west wall has wooden rack attached to it.
+~
+D UP 0 0 0
+~
+The ceiling is a poorly made dome, but has been made well enough for it
+not to fall in upon those within.  
+~
+D DOWN 1502 0 0
+~
+The floor is paved with stone, a good prevention against torches and
+anything flaming that might be hurled through the archers slot. Similar
+to the rest of the room it is also lined in a thin layer of soot and dust.
+
+~
+E soot~
+The whole room is layered in soot, even the floor has a healthy layer of
+soot and dust. You notice that the foot has some foot prints, you trace
+your own tracks and realise that there are none others. The guard has left
+no tracks.
+~
+E wooden rack~
+The wooden rack on the west wall has a heavy crossbow that has been wound
+and loaded sitting onto.  There is also a light bow with several quivers
+each containing at least half a dozen arrows.  The last quiver is half the
+size of the rest and instead contains steel bolts.  
+~
+E heavy crossbow~
+The crossbow a high tensil strong small bow mounted apon a triggering shaft
+with a launching rail. This heavy crossbow once was probably a very potent
+weapon, now though it is nothing more than a piece of junk. It has been
+left loaded way to long and the strung gut lays losely over the end of the
+bolt. The flex in the steel small bow lost.
+~
+#1504
+Lower Level of the South-Eastern Guard Tower~
+The room is dark and you rely on your senses to make your way around.  It
+is extremely cold chilling you to the bone.  A constant draft sings a soft
+howling melody that rises and falls unrhythmically.  Cobwebs brush against
+your face as you move about.  You can leave here to the north.  
+~
+inside
+ROOM INDOORS
+D NORTH 1501 0 0
+~
+You can see the main foyer from here.  Light from the north streams into
+the room only to be swallowed up by the cold and darkness.  
+~
+D EAST 0 0 0
+~
+You squint but only see darkness.
+~
+D SOUTH 0 0 0
+~
+You squint but only see darkness, you think you can make out a slight haze
+that lines a section of the south wall.
+~
+D WEST 0 0 0
+~
+You squint but only see darkness.
+~
+D UP 1505 A 0
+trapdoor~
+You squint but only see darkness.
+~
+D DOWN 0 0 0
+~
+You squint but only see darkness.
+~
+E haze~
+You strain your eyes trying to focus on the haze and can make the outline
+of what looks to be stairs lining the southern wall.  
+~
+E stairs~
+Following the focus of the stairs, using the haze as a source of light to
+reference objects between you and it, you move yourself learning the outlay
+of the stairs, and slowly ascend them untill you bump your head into what
+sounded like a wooden trapdoor.
+~
+E trapdoor~
+Running your hands along the trapdoor you cross over a ice cold steel brace
+and many pains of hard wood that makeup the trapdoor, finally you come
+across a small iron handle that can be used to slide the trapdoor back apon
+itself.
+~
+#1505
+Upper Level of the South-Eastern Guard Tower~
+Light floods into this room from two directions.  From the east through
+the cross-shaped archer slot.  Also, from the west through a large hole that
+looks to have been made with picks and sledge hammers.  A soft breeze flows
+through the room.  Rubble lays strewn on the floor covering most of the west
+and north side of the room.  There is a torch rack on the north wall but it
+is empty.  
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall is still intact but it has several gouges and scratches. 
+It looks like someone tried to bust through it but gave up.  There is a
+torch rack barely hanging from one bolt.  
+~
+D EAST 0 0 0
+~
+To the east is an archers slot.  It is roughly two foot high and one foot
+cross.  The archers slot grants an archer the right angles to be able to aim
+at anyone approaching or attacking from the outside while at the same time
+it offers the archer the greatest amount of protection from being hit by
+archers from the outside.  Peering out through the slot you can see the
+clearing below and where the mountain enfolds the trail.  You can also see
+the forest below, some fields and the road that meanders through it.  
+~
+D SOUTH 0 0 0
+~
+A few pieces of rubble lay around the trapdoor that leads back down.  
+~
+D WEST 0 0 0
+~
+There is a hole big enough for a small giant to fit through in this wall.
+Looking through the hole you can see some of the rubble strewn around the
+courtyard below.  Out across the courtyard you can see a decrepid tower set
+within a high iron, spear-lined wall.  Through one of the small stairwell
+window holes you notice a flicker of light.  
+~
+D UP 0 0 0
+~
+The dome ceiling appears to be holding up well considering the structural
+damage on the west wall.  
+~
+D DOWN 1504 A 0
+trapdoor~
+Rubble covers most of the floor save the east side.  There is a trapdoor
+on the south end.  
+~
+E trapdoor~
+It appears to be just a normal trapdoor, the odd thing is that the stones
+that were placed ontop of the trapdoor left no impact marks apon it. It
+looks like someone had placed the heavy pieces onto the trapdoor
+intentionally.
+~
+E rubble~
+Pieces of the western wall are all over the floor.  Some are whole stone
+blocks but most of it is broken stone and small pebbles.  At the north
+western corner you can make out what looks to be a skeleton of some kind.  
+~
+E skeleton~
+You squat down and take a close look at the skeleton crushed under the
+pieces of stone.  It looks like it must have been a slow death.  Perhaps if
+you moved some of the rubble you might be able to be able to search the
+skeleton.  
+~
+#1506
+Entrace to the courtyard~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens.  The gardens are kept at bay with a knee high stone curbing.  Every
+five feet or so along the edge of the courtyard is a large pillar that has
+been almost overgrown with creeper ivy.  A gentle breeze swirls around the
+courtyard bringing the fragrance of the flowers in the garden to your nose. 
+~
+city
+D NORTH 0 0 0
+~
+A thick mat of vegetation overflows from the garden.  Pushing its way
+past the mighty pillars that line the stone curbing of the garden.  
+~
+D EAST 1501 0 0
+~
+To the east is the entrance and exit of the estate. The main gate within
+the outer wall. The swirling breeze of the courtyard seems to slow briefly
+as it passes this entrance, the loss of momentum enough for the wind to
+drop the material it was carring.
+~
+D SOUTH 1507 0 0
+~
+The courtyard continues on to the south.
+~
+D WEST 1509 0 0
+~
+The courtyard continues on to the west.
+~
+D UP 0 0 0
+~
+The sky opens up high above you.
+~
+D DOWN 0 0 0
+~
+The flagstone pavers of the couryard have been heavily worn.  The mortar
+in between the stones is beginning to show signs of wear.  Some of the
+stones are even loose.  
+~
+E pillar~
+The pillar to the north has a small plaque attached to it, but it is hardly
+visible due to all the plants.
+~
+E plaque~
+The plaque is made from bronze and is heavily tarnished but you are still
+able to read what is written apon the plague.
+
+		"The Estate of Lord & Lady Adrianna"
+
+There is some smaller writing underneath the plaque.
+~
+E writing~
+This area has been created by Karsus for RiftShadow, It can be used
+modified tweaked manipulated without my permission by anybody.
+~
+E tracks~
+The heavy tracks have crushed some of the creepers that have crawled over
+the curbeing of the garden, they move east and west.
+~
+#1507
+In the courtyard~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose. At your feet are a couple pieces
+of rubble that have overflowen from the garden which seemed to have
+caught the majority of rubble that fell from above.
+~
+city
+D NORTH 1506 0 0
+~
+The courtyard continues on to the north.
+~
+D EAST 0 0 0
+~
+The garden here has been crushed by large ammounts of rubble and rocks
+that have fallen from the the outerwall tower to the east. The more
+hardier plants have growen around and through the gaps in the rubble
+sprouting new growths, but no brushes or trees have regrowen.
+~
+D SOUTH 0 0 0
+~
+The garden is heavily overgrown here except for one section that is in the
+south eastern corner. Sitting there is a stone gargoyle.
+~
+D WEST 1508 0 0
+~
+The courtyard continues on to the west.
+~
+D UP 0 0 0
+~
+The sky opens up before you and your eyes are dragged to the massive
+gaping hole that is the outer wall southern tower. It appears from here
+that the blast occoured from outside even though most of the rubble lays
+outside.. Weird, to weird. Why would anyone go to the effort to move the
+rubble out from within the tower.
+~
+D DOWN 0 0 0
+~
+The flagstone of the coutyard here is struin with a couple pieces of rubble
+that have been left here for some time.
+~
+E gargoyle~
+The gargoyle sits here unmoving in the garden, claw clentched fists
+resting on its crossed legs. The gargoyls gaze falls over the whole
+courtyard its piercing black eyes twinkle briefly as you approach.
+~
+E black piercing eyes~
+You get closer and take a close look at the gargoyls eyes. They are infact
+two large monocus gems inset into the stone gargoyle. Perhaps you might be
+able to pry them from the gargoyle.
+~
+E rubble~
+The rubble that covers the flagstone ground is slighly different from the
+other rubble you have seen. It seems a darker hue than the rest. Sitting in
+the center of the rubble pile is a large single piece window stone. The
+window stone piece is heavily charred and pitted, it looks to have been the
+focal point of what caused the blast. Perhaps even the target of the blast.
+~
+#1508
+In the courtyard~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose.
+~
+city
+D NORTH 1509 0 0
+~
+The courtyard continues on to the north.
+~
+D EAST 1507 0 0
+~
+The courtyard continues on to the east.
+~
+D SOUTH 1513 0 0
+~
+The courtyard continues on to the south.
+~
+D WEST 1511 0 0
+~
+The courtyard continues on to the west.
+~
+D UP 0 0 0
+~
+The sky opens up before you. There is a large overhanging torch bracket
+that reaches overhead from the corner pillar.
+~
+D DOWN 0 0 0
+~
+The flagstone of the coutyard has been here for years many tell tail signs
+of wear are visible.
+~
+E pillar~
+The pillar that is on the corner of the courtyard has a large ornate torch
+holder that protrudes out over your head. Sitting in the torch bracket is
+four massive torches that blaze with fury in the gusts of wind.
+~
+E massive torch torches ~
+These massive torches seem to have a abnormal crackle about them when they
+burn, The fire almost spits sparks as it burns each spitting a small flare
+of flame that radiates more light than normal and yet doesnt seem to burn
+the torch any faster.
+~
+E tracks~
+The track marks are hard to see but your just able to see them heading
+north and west.
+~
+#1509
+In the courtyard~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose.
+~
+city
+D NORTH 0 0 0
+~
+The overgrown garden has a large assortment of flowers that seem to be in
+bloom.
+~
+D EAST 1506 0 0
+~
+The courtyard continues on to the east.
+~
+D SOUTH 1508 0 0
+~
+The courtyard continues on to the south.
+~
+D WEST 1510 0 0
+~
+The courtyard continues on to the west.
+~
+D UP 0 0 0
+~
+The sky opens up before you.
+~
+D DOWN 0 0 0
+~
+The heavy flagstone of the courtyard is worn up to the edge of the stone
+curbeing before the flowers.
+~
+E flower flowers~
+The colours are endless , every type of flower you can imagine somehow has
+gained a footing in this thick overgrown garden. A flower of each type and
+colour that one might need displays itself.
+~
+E tracks~
+It is alot harder to follow since there is very little to leave disturbed
+on the flagstone, kneeling down and inspecting the flagstone though you
+pick up abrasive scratch marks that lead east and south.
+~
+#1510
+The courtyard before the house~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose.
+~
+city
+D NORTH 1517 0 0
+~
+The flagstone courtyard narrows and turns into a small paved path leading
+up to a gate set in the estates inner wall.
+~
+D EAST 1509 0 0
+~
+The courtyard continues on to the east.
+~
+D SOUTH 1511 0 0
+~
+The courtyard continues on to the south.
+~
+D WEST 0 0 0
+~
+The garden overflows with plants some reaching for light, others stretching
+out over the curbeing searching for a firm footing.
+~
+D UP 0 0 0
+~
+The sky opens up above you.
+~
+D DOWN 0 0 0
+~
+The heavy flagstones have creeper plants crawling across them striving
+to gain new ground to grow in.
+~
+#1511
+In the courtyard~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose.
+~
+city
+D NORTH 1510 0 0
+~
+The courtyard continues on to the north.
+~
+D EAST 1508 0 0
+~
+The courtyard continues on to the east.
+~
+D SOUTH 1512 0 0
+~
+The courtyard continues on to the south.
+~
+D WEST 0 0 0
+~
+The garden here is very shallow there is a large spear bound wall behind
+it. Peering through the garden you can make out sections of the wall,
+standing back you peer upward and see a large tower rising into the sky.
+~
+D UP 0 0 0
+~
+The sky opens up above you as your vision is pulled towards a high tower
+to the west.
+~
+D DOWN 0 0 0
+~
+The flagstone paving of the coutyard here doesnt seem to be anywhere near
+as worn as other sections. Also the creepers from the garden seem to have
+left it alone as well. The individual pieces of the flag stone dont seem
+to fit all that well large gaps that have not been set with mortar are
+clearly evident.
+~
+E Tower~
+This isnt a guard tower of any sort, it is way to big for that. The tower
+is as big as the courtyard if not slighly bigger. And looks to be four
+stories high.
+~
+E flagstone gap gaps~
+Lodged in one of the flagstone gaps is a fine chain silver medallion. You
+might be able to get it out.
+~
+E tracks~
+The tracks stop here and come from the east, where they go from here you
+are unsure of.
+~
+#1512
+Before a run down tower~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose. To the west is a large spear grill
+gate that is overgrowen with ivy and leads to the tower.
+~
+city
+D NORTH 1511 0 0
+~
+The courtyard continues on to the north.
+~
+D EAST 1513 0 0
+~
+The courtyard continues on to the east.
+~
+D SOUTH 0 0 0
+~
+The garden here is heavily overgrown, flowers sprout up displaying an
+assortment of colours and sents.
+~
+D WEST 1558 ABCDEH 1506
+grill gate~
+The courtyard ends here and a small overgrown path leads westward up to a
+large spear grill gate. Beyond the gate is a massive tower that soars into
+the sky.
+~
+D UP 0 0 0
+~
+The sky opens up above you, but is largely dominated by the structure to
+your west.
+~
+D DOWN 0 0 0
+~
+The flagstone of the courtyard has been worn smooth here, constant acess
+coming in from the north east and west.
+~
+E spear grill gate~
+Each iron spear about two inches thick and five inches apart nine twelve
+foot in height are fastened tight to the gate. The gate is hinged on a
+thick stone wall that has copied the spear tip lining of the gate.
+~
+E tower~
+The tower seems very run down from the outside. The walls are a jigsaw
+puzzle of stones that have been assorted and mortared together. Soaring
+high into the sky there are atleast four levels. There are occasional
+window holes and a balcony at the very top.
+~
+E window hole holes~
+staring at the window holes you notice the flicker of a light inside and
+the casting of a shadow within. There is no doubt that there is someone
+inside the tower.
+~
+E Balcony~
+Quiet abnormal to see a balcony built onto the side of a tower especially
+since there are no doors or even windows that attach to the balcony.
+~
+#1513
+Before the stables~
+The courtyard is paved in flagstone and lined with heavily overgrown
+gardens. The gardens are kept at bay with a knee high stone curbeing.
+Every five feet or so along the edge of the courtyard is a large pillar
+that has been almost overgrown with creeper ivy. A gentle breeze swirls
+around the courtyard in a clockwise direction bringin the fragrance of
+the flowers in the garden to your nose.
+~
+city
+D NORTH 1508 0 0
+~
+The courtyard continues on to the north.
+~
+D EAST 1515 0 0
+~
+There are stables to the east. The rails and implements are a give away.
+~
+D SOUTH 1514 0 0
+~
+A small stable boys post has been built to the south here.
+~
+D WEST 1512 0 0
+~
+The courtyard continues on to the west.
+~
+D UP 0 0 0
+~
+The sky opens up above you.
+~
+D DOWN 0 0 0
+~
+The flagstone here is well worn and stained from years and years of use.
+~
+#1514
+Within a small building~
+This small building has a small pot belly hearth in the south western
+corner a small copper pipe has been bent and dogleged around the slate
+roof. A table and chair and hay bed are all that is in this room.
+Stragely enough there isnt a stable boy in here.
+~
+inside
+ROOM INDOORS
+D NORTH 1513 0 0
+~
+To the north is the edge of the courtyard.
+~
+D EAST 0 0 0
+~
+The east rail has a large wooden peg rack fastened to it about eye level.
+You are able to see straight through into the stables.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a small hay bed hard up against it with a pile of
+choped wood underneath. To the south west is the hearth, it seems almost
+cold. The hearth has recently been used probably a day ago or less.
+~
+D WEST 0 0 0
+~
+On the west wall is a small table and chair.
+~
+D UP 0 0 0
+~
+The slate roof slopes down towards the courtyard. The north west corner of
+the slate roof has a thick copper pipe from the hearth leading out and up.
+~
+D DOWN 0 0 0
+~
+The floor of this building has been layed with hay. Underneath is the cold
+hard flagstone of the courtyard.
+~
+E wooden peg rack~
+The wooden peg rack has a couple bridals and whips. There are a couple
+unused leather straps and a pair of iron stirups.
+~
+E table~
+The table has a plate and cup and a candle holder, the plate still has food
+on it, and the cup is half full of water. The candle holder is covered in
+wax that has melted down the side.
+~
+E hearth~
+The pot belly hearth isnt ice cold, but nor is it warm to the touch. This
+indicates that the hearth has been going, but hasing been stoked in at
+least a day.
+~
+E bed pile wood~
+The hay bed has been recently packed and used, the new hay has yet to be
+totaly compacted from weeks of use. The wood under the bed is still green
+and oozes sap. Something is indeed very weird about this whole estate.
+~
+#1515
+Within the stables~
+The stables carry a distinct smell to them, the presence of horses and
+other such animals and the smells associated with them. The floor is lined
+with hay both to help absorb the animals mess and to make cleaning it up
+easier. There is a large trough of feed on the eastern wall, in the north
+eastern corner is a large old wine casket barrel full of water.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a three level railing, behind that grows the thick garden
+which is lined by a knee high curbeing of stone.
+~
+D EAST 0 0 0
+~
+The eatern wall has a large trough feeder attached to the solid outer wall
+that surrounds the whole estate.
+~
+D SOUTH 1516 0 0
+~
+The stables continue on to the south.
+~
+D WEST 1513 0 0
+~
+To the west you can see the courtyard.
+~
+D UP 0 0 0
+~
+There is a slate roof that tilts down towards the courtyard to the west.
+Running along the support beam is a wire runner which looks to have been
+used to harness the animals in the stables to.
+~
+D DOWN 0 0 0
+~
+The floor is covered in hay, riddled with droppings and wet patches.
+Through the hay you can see the hard flagstone that appears to be heavily
+stained.
+~
+E Trough~
+The trough is half full with grains and fruit rhinds. It is almost twelve
+feet long , starting in this room and stretching all the way into the south
+room of the stables.
+~
+E wire runner~
+This wire runner is firmly attached to the support beams, little hooks with
+leather straps hang losely from the wire runner. Attaching a horse to this
+would allow for it to move up and down the runner, and yet not escape the
+stables.
+~
+#1516
+Within the stables~
+The stables carry a distinct smell to them, the presence of horses and
+other such animals and the smells associated with them. The floor is lined
+with hay both to help absorb the animals mess and to make cleaning it up
+easier. There is a large trough of feed on the eastern wall, in the south
+eastern corner is a large old wine casket barrel full of water.
+~
+inside
+ROOM INDOORS
+D NORTH 1515 0 0
+~
+The stables continue on to the north.
+~
+D EAST 0 0 0
+~
+The eatern wall has a large trough feeder attached to the solid outer wall
+that surrounds the whole estate.
+~
+D SOUTH 0 0 0
+~
+The southern wall of the stables is just the solid stone of the outer wall.
+~
+D WEST 0 0 0
+~
+There is a three level rail wall here that pokes through into the stable
+boys quaters.
+~
+D UP 0 0 0
+~
+There is a slate roof that tilts down towards the courtyard to the west.
+Running along the support beam is a wire runner which looks to have been
+used to harness the animals in the stables to.
+~
+D DOWN 0 0 0
+~
+The floor is covered in hay, riddled with droppings and wet patches.
+Through the hay you can see the hard flagstone that appears to be heavily
+stained.
+~
+E Trough~
+The trough is half full with grains and fruit rhinds. It is almost twelve
+feet long , starting in this room and stretching all the way into the south
+room of the stables.
+~
+E wire runner~
+This wire runner is firmly attached to the support beams, little hooks with
+leather straps hang losely from the wire runner. Attaching a horse to this
+would allow for it to move up and down the runner, and yet not escape the
+stables.
+~
+#1517
+Under the estates inner wall~
+The inner wall is only half as thick as the outer wall, and seems to be
+more show than function. The stone masonary is still high quality and seems
+quiet solid. But a hardened assult would crumble the wall with ease. The
+arch leading in and out from the wall has been decorated with some fine
+chisel work and displays a emblem on the key stone at the peak of the arch.
+~
+city
+ROOM INDOORS
+D NORTH 1520 0 0
+~
+To the north is the entrance to the estates house, It seems quiet weird
+because there isnt a massive main door, and the house seems to be built
+this way. The intention of foyer being open yet two walls of protection
+are extremly contracdicting aspects of design.
+~
+D EAST 0 0 0
+~
+The east wall has a small torch bracket with a torch inside that burns
+brightly.
+~
+D SOUTH 1510 0 0
+~
+To the south is the courtyard and the gardens of the estate.
+~
+D WEST 1518 0 0
+~
+To the west is a small alcove that disapears into the wall.
+~
+D UP 0 0 0
+~
+The fancy arch that has been decorated with impressive chisel work leaves
+spooky shadows from the flickering light of the torch.
+~
+D DOWN 0 0 0
+~
+The hard flagstones of the courtyard continue in from the south, but they
+seem to be turning into more shapely squares as they continue on northward.
+~
+E emblem~
+The emblem of Lord Lady Adrianna is a coiled serpent apon a tower shield.
+~
+E arch~
+The arch is indeed a impressive sight, the fine edges of the stone would
+have been almost impossible to carve and yet still provide enough
+structural support so that the arch wouldnt fall in.
+~
+#1518
+Under the inner wall tower~
+Since the inner wall is half the thickness of the outerwall it leaves
+little room to have a room within it. They have managed to squeeze a small
+room in here that has a staircase that doubles back on itself as it rises
+up to the room above. There isnt a single piece of furniture in this room.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The stone wall of the inner wall of the estate is all that is here.
+~
+D EAST 1517 0 0
+~
+Through a small alcove is the path leading through the estates inner wall.
+~
+D SOUTH 0 0 0
+~
+The south wall is bare and its only appealing aspect is the mosaic look
+that the stones of the inner wall provide.
+~
+D WEST 0 0 0
+~
+The west wall has a tight stair case that doubles back apon itself as it
+ascends into the tower that is above the room you are currently in.
+~
+D UP 1519 0 0
+~
+The ceiling of this room is quiet low, you almost have to stoop to avoid
+hitting your head on the ceiling.
+~
+D DOWN 0 0 0
+~
+The floor is paved stone unlike the flagstone that is to the east.
+~
+E stairs~
+The masons of this estate sure have worked wonders, the cramped conditions
+must have been almost impossible to work in, yet they have managed to make
+this flawless staircase that leads up to the tower above.
+~
+#1519
+The inner wall tower~
+The tower room is alot larger than the room below, it extends slightly to
+the east and west opening up more room. There are three archer slots, one
+to the direct east, another to the southeast and the last to the south.
+The room smells slighly dank but still lived in. Light streams in from the
+three archer slots but this still leaves sections of the north wall in
+shadows. Standing in the room is another guard that just seems to stare
+at your presence.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+On the north wall in the darkness is a large lever, what it opens or closes
+you done know.
+~
+D EAST 0 0 0
+~
+To the east is a archers slot, as you peer through the archers slot you can
+see clearly out over the garden of the estate as well as norther tower on
+the outer wall. Past that it becomes a slighty hazey.
+~
+D SOUTH 0 0 0
+~
+To the south is a archers slot, looking out through it you can see the
+tower and its four stories. To the left of the tower is the stables and
+before both of them is the courtyard that connects them both.
+~
+D WEST 0 0 0
+~
+The west wall is clear because it has the tight staircase that comes up
+from below at its base.
+~
+D UP 0 0 0
+~
+The roof of the tower is braced with small hard wood cross beams. Hanging
+from one of the hooks on the cross beam is quiver of arrows.
+~
+D DOWN 1518 0 0
+~
+The floor of this tower is paved with stone. The stone a better choice to
+avoid the use of wood and the risk of having the floor catch alight if
+it were to be intended by an enemy.
+~
+E lever~
+The lever is mounted on a bracket that is flush with the wall, it is about
+fifteen inches long and two inches thick. Perhaps if you think it wise you
+can throw the lever and find out what it does.
+~
+#1520
+The foyer of the house~
+The foyer of the house is extremly large and open, the ceiling is almost
+thirty foot high. Giant pillars soar to the roof to give it support. You
+step up two steps as you enter this room onto polished quary stone floors.
+A fine mosaic carpet runs off to the north.
+~
+inside
+ROOM INDOORS
+D NORTH 1529 0 0
+~
+The grand foyer continues on to the north, the lovely thick mosaic carpet
+runner also continues on to the north. Lining the carpet are the huge
+pillars one pillar every twenty feet or so.
+~
+D EAST 1531 0 0
+~
+The foyer continues on to the east, where there are large ornate chairs
+as well as piles of cushions.
+~
+D SOUTH 1517 0 0
+~
+Looking south you see passage through the inner wall.
+~
+D WEST 1521 0 0
+~
+The foyer continues on to the west, where there are large ornate chairs
+as well as tables.
+~
+D UP 0 0 0
+~
+Looking up is a dazaling sight. The ceiling is lit with a magical glow
+that seems to eminate from the tops of the pillars.
+~
+D DOWN 0 0 0
+~
+The fine polished quary stone is almost shined enough for you to see your
+own reflection in them as you stare down.
+~
+E mosaic carpet~
+This thick pile carpet is about eight feet wide and runs in a north south
+direction.
+~
+E pillar~
+The massive pillars would take four people holding hands together to reach
+around just one. The masonary work on the marble is quiet exquisit.
+~
+E stair stairs~
+The two steps up seems abnormal but it wouldnt surprise you if the lord
+lady deemed herself so important that she must be on higher ground than
+the commoners, and that she must walk apon fine polished stone at all
+times.
+~
+#1521
+West side of the foyer~
+The west side of the foyer is quiet interesting. Half of it is raised up
+on the polished quary stone, the other isnt. There is a table with an
+assortment of foods and drinks which is being served by some staff. The
+table and staff is positioned down off the raise polished quary stone.
+~
+inside
+ROOM INDOORS
+D NORTH 1528 0 0
+~
+The west side of the foyer continues on to the north.
+~
+D EAST 1520 0 0
+~
+Towards the east are the grand pillars the mosaic carpet and the central
+foyer.
+~
+D SOUTH 0 0 0
+~
+On the south wall hangs a beautiful tapistry which covers everything.
+~
+D WEST 1522 AB 0
+door~
+To the west is a door outlined in a ornate wood worked frame.
+~
+D UP 0 0 0
+~
+The ceiling of the foyer is quiet impressive a soft hue sky blue reflects
+every single ray of light making it almost seem luminescent.
+~
+D DOWN 0 0 0
+~
+The fine polished quary stone is almost shined enough for you to see your
+own reflection in them as you stare down. There is a couple of steps down
+to a lower section to the west about half way through this room.
+~
+E tapistry~
+This full wall tapistry has been hung on a massive steel chain, the weight
+of it must be more than it appears. Woven in the finest threads it depicts
+the scene of a greate battle, a lone man standing amungst many enemy
+lashing out with a large sword.
+~
+E lone man~
+The lone man looks to be a dwarf due to his small stature, but he has no
+beard.
+~
+E large sword~
+The large sword is being weidled as a two handed sword by this small man
+but its design appears to be one handed, indicating that it's owner was
+extremly large.
+~
+#1522
+Small side hallway~
+This small hallway lies in the west side of the building. It is quiet dark
+compared with the rest of the rooms. There is nothing adorning the wall
+except a single torch bracket on the eastern wall near the doorway.
+~
+inside
+ROOM INDOORS
+D NORTH 1524 0 0
+~
+The small hallway continues on to the north.
+~
+D EAST 1521 AB 0
+door~
+There is a large door in the eastern side of the hallway.
+~
+D SOUTH 0 0 0
+~
+Mounted on the wall here is a torch bracket with a flaming torch inside,
+the light from the torch is quiet blinding in the darkness of the tunnel
+and it casts a haunting shadow of yourself northward down the hallway.
+~
+D WEST 1523 AB 0
+door~
+There is a simple wooden door with a tarnished brass handle set into the
+solid stone walls.
+~
+D UP 0 0 0
+~
+Unlike in the foyer looking upward proves a big let down. Large wooden
+support beams about a foot thick each span across the ceiling. Big cast
+iron braces hold the support beams firmly in place.
+~
+D DOWN 0 0 0
+~
+A well worn hard flagstone floor lines the hallway. Years of use have
+started to wear commonly trodden foot prints into the stone.
+~
+E torch bracket~
+Like many of the other torch brackets in the building this one holds a
+burning torch. There is nothing abnormal about it.
+~
+E cast iron braces~
+forged from iron these large braces are large caps over sections of the
+woodern support beams. Large rivets have been driven through the braces
+to ensure that there is no movement of the wood inside.
+~
+#1523
+Servants room~
+This servants room has four beds in it, two bunks lining the north and
+westerly wall. On the southern wall is a small table with a chest at its
+side. The room is extremly cold compared to the hallway you were just
+standing in, but the air is fresher and free of the heavy soot smell.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall has a double bunk bed attached to it. The beds look to be
+quiet comfortable and are of decent size.
+~
+D EAST 1522 0 0
+~
+The plain door with a tarnished brass handle almost fills the whole wall.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a couple pieces of parchment stuck up. Some letters
+from a loved one it looks like. Below those pieces of parchment is a table
+and at the side of the table is a chest.
+~
+D WEST 0 0 0
+~
+The west wall has a double bunk bed attached to it. The beds look to be
+quiet comfortable and are of decent size.
+~
+D UP 0 0 0
+~
+The support beams that were in the hallway stretch through the wall and
+cross overhead disapearing into the western wall.
+~
+D DOWN 0 0 0
+~
+The hard flagstone floor is quiet clean, even under the bunks where pieces
+of hay are bound to fall out.
+~
+E parchment paper letters~
+What you first through were letters to loved ones are infact a cleaver
+deception. Folded up and placed in envelopes these pieces of paper contain
+no writing on them, but rather contain a small map with a few words.
+~
+E map~
+Taking the parchment out from it's envelope and opening it up, it takes
+you little time to recognise that it is a simple map of the complex that
+you are in. You take more time and look over a section of the map that
+has the writing next to it:
+
+                  Use this to escape when you are able.
+          ------- It leads to the sewers of cimar.
+          |
+          ---> #|# U-# #|#
+                 |   |   |
+               #|#-#-# #-#
+                 | | | |
+               #|# #-#-#
+
+                  Twist the small protruding rock to open
+                  the hidden passage.
+
+~
+#1524
+Small side hallway~
+This small hallway lies in the west side of the building. It is quiet dark
+compared with the rest of the rooms. There is nothing adorning the wall
+except a single torch bracket on the eastern wall opposite the doorway.
+~
+inside
+ROOM INDOORS
+D NORTH 1526 0 0
+~
+The small hallway continues on to the north.
+~
+D EAST 0 0 0
+~
+Mounted on the wall here is a torch bracket with a flaming torch inside,
+the light from the torch is quiet blinding in the darkness of the tunnel.
+~
+D SOUTH 1522 0 0
+~
+The small hallway continues on to the south.
+~
+D WEST 1525 ABC 1503
+door~
+There is a simple wooden door with a tarnished brass handle set into the
+solid stone walls.
+~
+D UP 0 0 0
+~
+Unlike in the foyer looking upward proves a big let down. Large wooden
+support beams about a foot thick each span across the ceiling. Big cast
+iron braces hold the support beams firmly in place.
+~
+D DOWN 0 0 0
+~
+A well worn hard flagstone floor lines the hallway. Years of use have
+started to wear commonly trodden foot prints into the stone.
+~
+E torch bracket~
+Like many of the other torch brackets in the building this one holds a
+burning torch. There is nothing abnormal about it.
+~
+E cast iron braces~
+forged from iron these large braces are large caps over sections of the
+woodern support beams. Large rivets have been driven through the braces
+to ensure that there is no movement of the wood inside. Hanging on one of
+the rivets is a small key.
+~
+#1525
+Servant quaters~
+This room is unlike the other servant rooms, there is a single wooden frame
+bed hard up against the west wall, there is a large maple table on the
+north wall and there is a comfortable looking chair to the side of it. The
+air is still cold fresh and free of any heavy soot smell.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall has a large flat section of cork hanging from two rivets
+that have been driven into the walls.
+~
+D EAST 1524 ABC 1503
+~
+Filling the majority of the eastern wall is a plain looking door with a
+tarnished brass handle. It leads out into the small hallway.
+~
+D SOUTH 0 0 0
+~
+The south wall is completly bare, all you can see is the overlay of the
+stones that have been used to build the walls.
+~
+D WEST 0 0 0
+~
+Hard up against the western wall is a large wooden frame bed, it looks alot
+more comfortable than the other servant beds and is padded with alot more
+hay than normally used. Under the bed is a small chest.
+~
+D UP 0 0 0
+~
+The ceiling has a small chain hanginf from the central wooden support beam.
+On that chain is a small hanging oil lamp that sheds light over the room.
+~
+D DOWN 0 0 0
+~
+The hard flagstone floor is covered with a small fure hide of some animal
+that you cannot recognise.
+~
+E chest~
+The chest under the bed when you try and move it appears to be fixed to the
+flagstone. Moving it out will be impossible. Looking closely at the lock
+you discover that it is a very complicated fine key that would fit the hole
+and that you wont be able to pick it with ease.
+~
+E hanging oil lamp~
+This is a polished fancy brass oil lamp, it even has a fine cylinder of
+glass around it to protect it from breezes. It seems to be out of place
+for servant quaters.
+~
+E cork~
+There is a large sliver of cork fixed to the north wall. A couple
+pieces of paper have been pinned to it, but nothing on any interest.
+~
+E chair~
+This is a large comfortable looking chair. It looks out of preportion
+because the seat is so small compared with the actual size of the whole
+chair. Perhaps the chair isnt quiet a chair, but rather a fancy container.
+~
+#1526
+Small side hallway~
+This small hallway lies in the west side of the building. It is quiet dark
+compared with the rest of the rooms. There is nothing adorning the wall
+except a single torch bracket on the northern wall near the doorway.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Mounted on the wall here is a torch bracket with a flaming torch inside,
+the light from the torch is quiet blinding in the darkness of the tunnel.
+~
+D EAST 0 0 0
+~
+This section of the wall is completly bare, there is nothing of interest.
+~
+D SOUTH 1524 0 0
+~
+The small hallway continues on to the south.
+~
+D WEST 1527 AB 0
+door~
+There is a simple wooden door with a tarnished brass handle set into the
+solid stone walls.
+~
+D UP 0 0 0
+~
+Unlike in the foyer looking upward proves a big let down. Large wooden
+support beams about a foot thick each span across the ceiling. Big cast
+iron braces hold the support beams firmly in place.
+~
+D DOWN 0 0 0
+~
+A well worn hard flagstone floor lines the hallway. Years of use have
+started to wear commonly trodden foot prints into the stone.
+~
+E torch bracket~
+Like many of the other torch brackets in the building this one holds a
+burning torch. There is nothing abnormal about it.
+~
+E cast iron braces~
+forged from iron these large braces are large caps over sections of the
+woodern support beams. Large rivets have been driven through the braces
+to ensure that there is no movement of the wood inside.
+~
+#1527
+Servants room~
+This servants room has four beds in it, two bunks lining the north and
+westerly wall. On the southern wall is a small table with a chest at its
+side. The room is extremly cold compared to the hallway you were just
+standing in, but the air is fresher and free of the heavy soot smell.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall has a double bunk bed attached to it. The beds look to be
+quiet comfortable and are of decent size.
+~
+D EAST 1526 0 0
+~
+The plain door with a tarnished brass handle almost fills the whole wall.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a couple pieces of parchment stuck up. Some letters
+from a loved one it looks like. Below those pieces of parchment is a table
+and at the side of the table is a chest.
+~
+D WEST 0 0 0
+~
+The west wall has a double bunk bed attached to it. The beds look to be
+quiet comfortable and are of decent size.
+~
+D UP 0 0 0
+~
+The support beams that were in the hallway stretch through the wall and
+cross overhead disapearing into the western wall.
+~
+D DOWN 0 0 0
+~
+The hard flagstone floor is quiet clean, even under the bunks where pieces
+of hay are bound to fall out.
+~
+E letters~
+These are just normal letters from relatives and loved ones.
+~
+#1528
+West side of the foyer~
+The west side of the foyer is quiet interesting. Half of it is raised up
+on the polished quary stone, the other isnt. There is a table with an
+assortment of foods and drinks which is being served by some staff. The
+table and staff is positioned down off the raise polished quary stone.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The west side of the foyer stops here are a large framed picture of a
+elderly lady showing a health bit of cleavage.
+~
+D EAST 1529 0 0
+~
+Towards the east are the grand pillars the mosaic carpet and the central
+foyer.
+~
+D SOUTH 1521 0 0
+~
+The west side of the foyer continues to the south.
+~
+D WEST 0 0 0
+~
+The west wall is adorned with the lord ladies emblem carved in protruding
+stone.
+~
+D UP 0 0 0
+~
+The ceiling of the foyer is quiet impressive a soft hue sky blue reflects
+every single ray of light making it almost seem luminescent.
+~
+D DOWN 0 0 0
+~
+The fine polished quary stone is almost shined enough for you to see your
+own reflection in them as you stare down. There is a couple of steps down
+to a lower section to the west about half way through this room.
+~
+E emblem~
+The emblem of Lord Lady Adrianna is a coiled serpent apon a tower shield.
+~
+E picture lady~
+This picture is of Lord lady Adrianna, the artists has taken much poetic
+liscence to it. The lady of course appears stunning, young, flawlessly
+bueatiful and almost nakid.
+~
+#1529
+The foyer of the house~
+The foyer of the house is extremly large and open, the ceiling is almost
+thirty foot high. Giant pillars soar to the roof to give it support. You
+continue on down the fine plush mosaic carpet to the west are servants
+serving foods, to the east it appears a gathering of higher social class
+people. The fine mosaic carpet runs off to the north and south.
+~
+inside
+ROOM INDOORS
+D NORTH 1533 0 0
+~
+The grand foyer continues on to the north, the lovely thick mosaic carpet
+runner also continues on to the north. Lining the carpet are the huge
+pillars one pillar every twenty feet or so.
+~
+D EAST 1530 0 0
+~
+The foyer continues on to the east, where there are large ornate chairs
+as well as piles of cushions. There appears to be a gathering of higher
+class people here as well.
+~
+D SOUTH 1520 0 0
+~
+The grand foyer continues on to the south, the lovely thick mosaic carpet
+runner also continues on to the south. Lining the carpet are the huge
+pillars one pillar every twenty feet or so.
+~
+D WEST 1528 0 0
+~
+The foyer continues on to the west, where there are large ornate chairs
+as well as tables with some servants serving some food.
+~
+D UP 0 0 0
+~
+Looking up is a dazaling sight. The ceiling is lit with a magical glow
+that seems to eminate from the tops of the pillars.
+~
+D DOWN 0 0 0
+~
+The fine polished quary stone is almost shined enough for you to see your
+own reflection in them as you stare down.
+~
+E mosaic carpet~
+This thick pile carpet is about eight feet wide and runs in a north south
+direction.
+~
+E pillar~
+The massive pillars would take four people holding hands together to reach
+around just one. The masonary work on the marble is quiet exquisit.
+~
+#1530
+Eastern side of the foyer~
+The eastern side of the foyer features a assortment of fancy chairs and
+cushions for socializing. Every comfort feature that you could possibly
+think of is here, private smokers, a open fireplace in the eastern wall,
+thick fur rugs almost totaly covering the polished floor. Those of the
+higher class would probably expect nothing less whilst attending some
+sort of function.
+~
+inside
+ROOM INDOORS
+D NORTH 1532 0 0
+~
+To the north you can see a large throne and a wealthier section of the
+foyer.
+~
+D EAST 0 0 0
+~
+Inset in the eastern wall is a large open fire. Massive steel bars form
+a cuped grasp to hold tree trunk size chunks of wood, waves of heat roll
+out from the open hearth.
+~
+D SOUTH 1531 0 0
+~
+The eastern side of the foyer continues on to the south.
+~
+D WEST 1529 0 0
+~
+Towards the west are the grand pillars the mosaic carpet and the central
+foyer.
+~
+D UP 0 0 0
+~
+The ceiling of the foyer is quiet impressive a soft hue sky blue reflects
+every single ray of light making it almost seem luminescent.
+~
+D DOWN 0 0 0
+~
+Thick fur rugs line the floor, in sections the polished quary stone can
+be seen.
+~
+E open fire hearth~
+This is truely a large scale fire, and is more of show than for
+functionality. The heart stretchs on southward due to its large size.
+~
+#1531
+Eastern side of the foyer~
+The eastern side of the foyer features a assortment of fancy chairs and
+cushions for socializing. Every comfort feature that you could possibly
+think of is here, private smokers, a open fireplace in the eastern wall,
+thick fur rugs almost totaly covering the polished floor. Those of the
+higher class would probably expect nothing less whilst attending some
+sort of function.
+~
+inside
+ROOM INDOORS
+D NORTH 1530 0 0
+~
+The eastern side of the foyer continues on to the north.
+~
+D EAST 0 0 0
+~
+Inset in the eastern wall is a large open fire. Massive steel bars form
+a cuped grasp to hold tree trunk size chunks of wood, waves of heat roll
+out from the open hearth.
+~
+D SOUTH 0 0 0
+~
+On the southern wall is a large suit of armour, held clenched in fist is a
+massive halberd with a fancy blade.
+~
+D WEST 1520 0 0
+~
+Towards the west are the grand pillars the mosaic carpet and the central
+foyer.
+~
+D UP 0 0 0
+~
+The ceiling of the foyer is quiet impressive a soft hue sky blue reflects
+every single ray of light making it almost seem luminescent.
+~
+D DOWN 0 0 0
+~
+Thick fur rugs line the floor, in sections the polished quary stone can
+be seen.
+~
+E open fire hearth~
+This is truely a large scale fire, and is more of show than for
+functionality. The heart stretchs on southward due to its large size.
+~
+E suit armour~
+This massive suit of armour wasnt built for a human, it was built for a
+titan. Massive bands of what looks to be black pitted steel form a scaled
+like set of armour. Towering out and slightly above you is a twenty foot
+long halberd with a four foot fancy mithril blade apon it. Lucky this
+suit of armour is empty, and not living.
+~
+#1532
+Throne room~
+Layered in more riches than the rest of the foyer, this throne room is
+positioned in the north east corner of the foyer. The throne facing
+diagonally southwest. The mosaic carpet enters the room from the west and
+has been indented up the steps to the throne. Large vases containing what
+appears to be some broad leaf tropical plant have been placed on either
+side of the throne and add a nice contrast to the otherwise empty walls.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall is empty from all pictures and murials, obviously so that
+whomever is in this room isnt distracted by whoever is sitting in the
+throne.
+~
+D EAST 0 0 0
+~
+The east wall is empty from all pictures and murials, obviously so that
+whomever is in this room isnt distracted by whoever is sitting in the
+throne.
+ ~
+D SOUTH 1530 0 0
+~
+The foyer continues on to the south, where the eastern side of the foyer is
+and where the higher class people are socializing.
+~
+D WEST 1533 0 0
+~
+To the west is a gap in the large pillars that support the ceiling, through
+that gap runs the plush mosaic capret. The center of the foyer lays to the
+west.
+~
+D UP 0 0 0
+~
+The ceiling of the foyer is quiet impressive a soft hue sky blue reflects
+every single ray of light making it almost seem luminescent. Placed above
+the throne is the emblem of the lord lady.
+~
+D DOWN 0 0 0
+~
+The floor here is the polished quary stone with no fur rugs. The mosaic
+carpet enters from the west and ascends the four steps up to the throne.
+~
+E Emblem~
+The emblem of Lord Lady Adrianna is a coiled serpent apon a tower shield.
+The serpent seems to be coiled around a dark crystal of some sort.
+~
+E dark crystal~
+looking more closely at this dark crystal you realise it to be a monocus
+gem. It's size is huge, and would be worth a fair bit.
+~
+#1533
+The foyer of the house~
+The foyer of the house is extremly large and open, the ceiling is almost
+thirty foot high. Giant pillars soar to the roof to give it support. The
+fine mosaic carpet runs off to the east and south. To the west there is
+a small alcove lit with a silver torch holder.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+Before you set in the north wall is a large stain glass window that has
+a picture of a massive dragon its wings spread wide sitting atop a
+outcroping of rock.
+~
+D EAST 1532 0 0
+~
+To the east following the mosaic carpet is the throne room.
+~
+D SOUTH 1529 0 0
+~
+The grand foyer continues on to the south, the lovely thick mosaic carpet
+runner also continues on to the south. Lining the carpet are the huge
+pillars one pillar every twenty feet or so.
+~
+D WEST 1534 ABC 1502
+door~
+The alcove that is cut into the west wall has a large silver torch holder
+next to a finely crafted and stained oak door.
+~
+D UP 0 0 0
+~
+Looking up is a dazaling sight. The ceiling is lit with a magical glow
+that seems to eminate from the tops of the pillars.
+~
+D DOWN 0 0 0
+~
+The fine polished quary stone is almost shined enough for you to see your
+own reflection in them as you stare down. The mosaic carpet continues from
+the south to the east.
+~
+E mosaic carpet~
+This thick pile carpet is about eight feet wide and runs in a north south
+direction.
+~
+E pillar~
+The massive pillars would take four people holding hands together to reach
+around just one. The masonary work on the marble is quiet exquisit.
+~
+E silver torch holder~
+This silver torch holder looks quiet impressive, unlike the other torch
+holders this one holds three torches angled inward to form a larger central
+flame.
+~
+#1534
+Spiraled staircase~
+The stiars are extremly wide and are stacked apon each other linked in the
+center of the room with a keystone formation. The stairs lead both up and
+down, only the stairs leading up have a carpet apon them. The stairs that
+lead down, descend into darkness. A slight breeze blows up from the
+darkness and with it comes the danke smell of moisture.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The edge of this circular room is bare, all you can see is the interlaced
+stones that make up the walls.
+~
+D EAST 1533 ABC 1502
+door~
+To the east is a large stained oak door that leads out into the foyer
+of the lady lords estate house.
+~
+D SOUTH 0 0 0
+~
+The edge of this circular room is bare, all you can see is the interlaced
+stones that make up the walls.
+~
+D WEST 0 0 0
+~
+The edge of this circular room is bare, all you can see is the interlaced
+stones that make up the walls.
+~
+D UP 1535 0 0
+~
+The stairs continue upward, directly above you are the stairs of the next
+ring.
+~
+D DOWN 1544 0 0
+~
+The stairs continue downward, descending into darkness.
+~
+#1535
+Top of a spiral staircase~
+The central key of the stone staircase continues up to the roof, but the
+stone key stair pieces end as soon as the become flush with the floor.
+The carpet that has lined the stairs upward comes to a end just after
+the polished quary stone begins.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The edge of this circular room is bare, all you can see is the interlaced
+stones that make up the walls.
+~
+D EAST 1536 0 0
+~
+To the east is a small corridor that is lined with pictures and carpets.
+~
+D SOUTH 0 0 0
+~
+All you can see on the southern wall is the interlaced stones that make it
+up and a fancy silver torch holder.
+~
+D WEST 0 0 0
+~
+The edge of this circular room is bare, all you can see is the interlaced
+stones that make up the walls. The flip side of the circular stairs has
+been walled off and over the top of the wall hangs a small tapistary
+displaying the emblem of the lady lord Adrianna.
+~
+D UP 0 0 0
+~
+The stone key pieces of the staircase continue upward above you, but the
+staircase you are able to walk does not.
+~
+D DOWN 1534 0 0
+~
+The stairs continue downward lined by a carpet and lit by torch light.
+~
+#1536
+Second level corridor~
+This corridor is about ten feet wide, running down the center are stepping
+stone fur rugs. Foot wide tables line the edge of the corridor, apon them
+trinks and items that hold some historical value. There is a large vase
+with a broad leaf tropical plant next to each table. The corridor continues
+on to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall has a large stain glass window in it, allowing the light
+to enter the room during the day.
+~
+D EAST 1539 AB 0
+door~
+To the east is a door that you didnt notice with greate ease, for its
+fancy appearence blended in with rest of the decorations apon the wall.
+~
+D SOUTH 1537 0 0
+~
+The second level corridor continues on to the south.
+~
+D WEST 1535 0 0
+~
+To the west is the spiral stone staircase.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor is littered with fur rugs about every five
+feet.
+~
+E picture stain glass window~
+The picture in the stain glass window is of a mage hurling spells in what
+looks to be a war of mages, streaks of what looks to be spells zig and zag
+across the picture.
+~
+#1537
+Second level corridor~
+This corridor is about ten feet wide, running down the center are stepping
+stone fur rugs. Foot wide tables line the edge of the corridor, apon them
+trinks and items that hold some historical value. There is a large vase
+with a broad leaf tropical plant next to each table. The corridor continues
+on to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 1536 0 0
+~
+The second level corridor continues on to the north.
+~
+D EAST 1540 AB 0
+door~
+To the east is a door that you didnt notice with greate ease, for its
+fancy appearence blended in with rest of the decorations apon the wall.
+~
+D SOUTH 1538 0 0
+~
+The second level corridor continues on to the south.
+~
+D WEST 0 0 0
+~
+The west wall has a hanging tapistary apon it.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor is littered with fur rugs about every five
+feet.
+~
+E tapistary~
+Woven in a thick wool thread this tapistary has a third dimensional feel
+to it. Some sections are woven tigher to depict no depth, others are left
+a little lose so they bulge giving depth. The picture is of the estate
+from the east looking westward, as if whoever had picture it was flying
+high above the southern road.
+~
+#1538
+Second level corridor~
+This corridor is about ten feet wide, running down the center are stepping
+stone fur rugs. Foot wide tables line the edge of the corridor, apon them
+trinks and items that hold some historical value. There is a large vase
+with a broad leaf tropical plant next to each table. The corridor continues
+on to the south.
+~
+inside
+ROOM INDOORS
+D NORTH 1537 0 0
+~
+The second level corridor continues on to the north.
+~
+D EAST 1541 AB 0
+door~
+To the east is a door that you didnt notice with greate ease, for its
+fancy appearence blended in with rest of the decorations apon the wall.
+~
+D SOUTH 0 0 0
+~
+On the southern wall is a large stain glass window to allow the light to
+flood in during the day.
+~
+D WEST 1542 0 0
+~
+To the west is a large arched stone entranceway, above the entranceway is
+the lord lady Adriannas emblem.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor is littered with fur rugs about every five
+feet.
+~
+E stain glass window~
+This is a more comforting picture, a person is in plain robes is standing
+over others that look to be lying in beds. The persons hands are glowing
+with a white glow, and it appears that he is healing them.
+~
+#1539
+Visitor's room~
+The room is quiet large, and it appears that it has been sing some use as
+well. There is a large four posted bed in the south west corner, on the
+east wall is a small open hearth and on the north wall next to a small
+window is a cabinet with a lock on it.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall of the room has a large cabinet with a lock on it next to
+a small window about two foot wide and high.
+~
+D EAST 0 0 0
+~
+The eatern wall has a small mantle over a open hearth above the mantle
+is the emblem of lord lady Adrianna.
+~
+D SOUTH 0 0 0
+~
+The southern wall has no decorations apon it and there is a large four
+posted bed that fits in the southwest corner.
+~
+D WEST 1536 AB 0
+door~
+There is a oaken doar with a polished brass handle in the north west corner
+of the room.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor has a large central rug at the base of the
+four posted bed, centralised to the rest of the room.
+~
+E emblem~
+The emblem of the lady lord adrianna is a curled up serpent apon a shield.
+Similar to other emblems you have seen in this house it also has a large
+gem which the serpent is curling around.
+~
+E gem~
+This is a large dark gem, you recognise it to be a monocos gem.
+~
+E mantle~
+This mantle is a large slab of marble that has some decorative masonary
+work along it's edges.
+~
+#1540
+Visitors room~
+The room is quiet large, and it appears that it has been sing some use as
+well. There is a large four posted bed in the south west corner, on the
+east wall is a small open hearth and on the north wall next to a small
+window is a cabinet with a lock on it.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall of the room has a large cabinet with a lock on it.
+~
+D EAST 0 0 0
+~
+The eatern wall has a small mantle over a open hearth above the mantle
+is the emblem of lord lady Adrianna.
+~
+D SOUTH 0 0 0
+~
+The southern wall has no decorations apon it and there is a large four
+posted bed that fits in the southwest corner.
+~
+D WEST 1537 AB 0
+door~
+There is a oaken doar with a polished brass handle in the north west corner
+of the room.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor has a large central rug at the base of the
+four posted bed, centralised to the rest of the room.
+~
+E emblem~
+The emblem of the lady lord adrianna is a curled up serpent apon a shield.
+Similar to other emblems you have seen in this house it also has a large
+gem which the serpent is curling around.
+~
+E gem~
+This is a large dark gem, you recognise it to be a monocos gem.
+~
+E mantle~
+This mantle is a large slab of marble that has some decorative masonary
+work along it's edges.
+~
+#1541
+Visitors room~
+The room is quiet large, and it appears that it has been sing some use as
+well. There is a large four posted bed in the south west corner, on the
+east wall is a small open hearth and on the north wall next to a small
+window is a cabinet with a lock on it.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The northern wall has no decorations apon it and there is a large four
+posted bed that fits in the northwest corner.
+~
+D EAST 0 0 0
+~
+The eatern wall has a small mantle over a open hearth above the mantle
+is the emblem of lord lady Adrianna.
+~
+D SOUTH 0 0 0
+~
+The south wall of the room has a large cabinet with a lock on it next to
+a small window about two foot wide and high.
+~
+D WEST 1538 AB 0
+door~
+There is a oaken doar with a polished brass handle in the north west corner
+of the room.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor has a large central rug at the base of the
+four posted bed, centralised to the rest of the room.
+~
+E emblem~
+The emblem of the lady lord adrianna is a curled up serpent apon a shield.
+Similar to other emblems you have seen in this house it also has a large
+gem which the serpent is curling around.
+~
+E gem~
+This is a large dark gem, you recognise it to be a monocos gem.
+~
+E mantle~
+This mantle is a large slab of marble that has some decorative masonary
+work along it's edges.
+~
+#1542
+Lord lady Adriannas front room~
+This room is quiet a sight, gold trimming lines everything that is in the
+room giving the room a golden glow. There are no windows to this room
+to allow prying eyes in, the air is quiet warm but not to hot. There is a
+slight perfume fragrance to the air similar to a flower that you have smelt
+before but are unable to name.
+~
+inside
+ROOM INDOORS
+D NORTH 1543 0 0
+~
+To the north through a small doorless dorway is a bedroom, you can just
+make out what looks to be a lavish bed.
+~
+D EAST 1538 AB 0
+door~
+To the east is the large doors leading back out into the second level
+corridor.
+~
+D SOUTH 0 0 0
+~
+Apon the south wall is a picture of a stout person dressed in a suit of
+armour and holding his helm under his arm.
+~
+D WEST 0 0 0
+~
+The western wall is bare, but does not show stone. It looks to have been
+plastered over with a white plaster. Apon the smooth finish a fine gold
+leaf pattern has been applied from floor to ceiling.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor has a massive single fur rug that is from
+a giant white bear, its head still attached its jaw wide open baring a
+impressive set of teeth.
+~
+E picture stout person~
+This picture looks to be the lord ladys husband, where he is now you do not
+know. Due to the name of the estate though, you can assume safely that he
+is not merely lost, instead he might have perished in some war many years
+ago.
+~
+#1543
+Lord lady Adriannas bedroom~
+The bedroom has a massive four posted bed in the center of the northern
+wall, draped down from each post is a fish silken sheeth that is almost
+transparent. To the west is a large brass bathing tub full of steaming
+water that seems to carry with it a touch of purfume.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The northern wall is bare, but does not show stone. It looks to have been
+plastered over with a white plaster. Apon the smooth finish a fine gold
+leaf pattern has been applied from floor to ceiling. Hard up against the
+north wall is the silk draped four posted bed.
+~
+D EAST 0 0 0
+~
+The eastern wall is bare, but does not show stone. It looks to have been
+plastered over with a white plaster. Apon the smooth finish a fine gold
+leaf pattern has been applied from floor to ceiling. Blending in against
+the gold leaf pattern is a cabinet which displays the same gold leaf.
+~
+D SOUTH 1542 0 0
+~
+To the south through a small doorless dorway is a room which has a large
+desk in its center.
+~
+D WEST 0 0 0
+~
+The western wall is bare, but does not show stone. It looks to have been
+plastered over with a white plaster. Apon the smooth finish a fine gold
+leaf pattern has been applied from floor to ceiling.
+~
+D UP 0 0 0
+~
+Looking up you see a twenty five foot high ceiling with large support beams
+that are about a foot thick and held together with cast iron braces.
+~
+D DOWN 0 0 0
+~
+The polished quary stone floor has a massive single fur rug that is from
+a giant white bear, its head still attached its jaw wide open baring a
+impressive set of teeth.
+~
+E cabinet~
+This cabinet is quiet large, and your eyes play tricks on you as you near
+the cabinet to get a better look, each step the cabinet seems to become
+visible as the patterens mismatch, then disapear as they pattern matches.
+~
+E bathing tub~
+The polished brass bathing tub has steaming water in it, It is up on four
+gargoyl clawed feet, underneath the tub is a large belly pouch that looks
+to hold heated up forge stone. The purfumed water fills the air nearby
+with a nice aroma.
+~
+#1544
+Bottom of the spiral staircase~
+The darkness of this room compared to the others indicates that it is not
+traveled often. The moist dank air indicates that this section leads
+under ground where water is able to seap in. Long shadows are cast from a
+soft glowing torch that doesnt shed much light or warmth, the cold of the
+ground and stone around you sends a small shiver down your spine.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The northern wall of the staircase is bare, all you can see is the pattern
+the stone makes from its weird placements.
+~
+D EAST 1545 0 0
+~
+To the east the tunnel continues into what looks to be a cellar or very
+quiet dungeon.
+~
+D SOUTH 0 0 0
+~
+The southern wall of the staircase is bare, all you can see is the pattern
+the stone makes from its weird placements.
+~
+D WEST 0 0 0
+~
+The flip side of the key stone stairwell has been sealed off here, sitting
+along in the center of the wall is a small torch bracket with a dimly
+burning torch in it that gives of littel light or warmth.
+~
+D UP 1534 0 0
+~
+The stone key spiral staircase continues upward, directly above you is the
+underneath of the steps above. Brighter light can be seen from above.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E torch~
+This torch is almost burnt out completly, it has been left for some time.
+The flame crawl over the fist size head of the torch barely gathering
+enough fuel to maintain a constant flame.
+~
+#1545
+In a stone tunnel~
+This stone tunnel is lined with flagstone, it is high and wide enough for
+two people to travel shoulder to shoulder down it without bumping into
+each other. There is a cold moist breeze that comes from the south and
+leaves to the west. The air smells almost stale.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The northern wall is made up of multiple blocks of flagstone, solid
+foundations for the building that is build above.
+~
+D EAST 0 0 0
+~
+The eastern wall is made up of multiple blocks of flagstone, solid
+foundations for the building that is build above.
+~
+D SOUTH 1546 ADEH 1501
+door~
+To the south is a large oak door with a grill in it.
+~
+D WEST 1544 0 0
+~
+To the west the tunnel continues leading towards the spiral staircase.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a small arch way that gives a bit more head room
+whilst still suppling support.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E door grill~
+Looking at the door the central feature is the grill. Stepping closer and
+looking through the grill you see a room full of barrels and caskets, a
+table with piles of sacks next to it. It looks like it is a cellar.
+~
+#1546
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the south and west. There is a large table hard
+up against the eastern wall. Small glowing sigils and runes can be seen
+to the north.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1545 ADEH 1501
+door~
+The door is covered with Glowing sigils and runes which seems to pulse and
+hum with the noises you can hear and the breeze you can feel, They are
+probably there to nullify any stench or noise continuing on to the north.
+~
+D EAST 0 0 0
+~
+The eastern wall is made up of multiple blocks of flagstone, solid
+foundations for the building that is build above. Hard up against the wall
+is a large table, some tin trays with some food slop in them has been
+placed ontop. Underneath the table is a large keg which looks to contain
+water, and leaning up against that are some sacks full of grains.
+~
+D SOUTH 1547 0 0
+~
+The dungeon continues on to the south.
+~
+D WEST 1549 0 0
+~
+The dungeon continues on to the west.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E rune runes sigil sigils~
+These runes look like they have been recently applied, they lack the luster
+which runes and sigils gain from age.
+~
+#1547
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the north and west. There is a large table hard
+up against the eastern wall.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1546 0 0
+~
+The dungeon continues on to the north.
+~
+D EAST 0 0 0
+~
+The eastern wall is made up of multiple blocks of flagstone, solid
+foundations for the building that is build above. Hard up against the wall
+is a large table, spalyed out on the table is an assorment of implements
+used for torture.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a couple barrels piled up against the large flagstone
+blocks inbetween the two buttresses that reach out overhead towards the
+central pillar.
+~
+D WEST 1548 0 0
+~
+The dungeon continues on to the west.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E torture implements~
+Serached curved blades, pokers, fine needles, thick plyers and a large flat
+head hammer are a few amungst many implments that are on this table. Most
+are dirty and have blood stains on them.
+~
+#1548
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the north and east. Many devices of pain and
+torture fill the room.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1549 0 0
+~
+The dungeon continues on to the north.
+~
+D EAST 1547 0 0
+~
+The dungeon continues on to the east.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a large wooden and steel structure leaning against
+it with a prisoner stretched out on it. A large rack designed for torture.
+~
+D WEST 0 0 0
+~
+The western wall has a spiken coffin chained to it, next to the spiked
+coffin are some wall chains.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E rack~
+This device has four manacles attached to it. Each manacle is attached to a
+limb of the person to be tortured and through a simple spindle wheel setup
+it slowly ever so slowly stretches a person. The pain inflicted apon all
+the joints in the person often renders them unconscious. This rack unlike
+many other racks has a large pivotal a frame on either side, allow the
+person to be gutted during the procedure. Turned upside down so their
+innards hang losely and stretched even further.
+~
+E spiked coffin~
+This spiked coffin has recently been used, the give away is the pool of
+blood that sits at it's base, seaping out from the small holes that have
+been left in the case to allow for the blood to drain.
+~
+E wall chains~
+These wall chains are almost ten feet of the ground, this would leave a
+person hanging a good foot from the ground.
+~
+#1549
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the south, west and east. There Is a semi circle
+well on the north wall which looks to contain drinkable water.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The northern wall has a couple barrels piled up against the large flagstone
+blocks inbetween the two buttresses that reach out overhead towards the
+central pillar.
+~
+D EAST 1546 0 0
+~
+The dungeon continues on to the east.
+~
+D SOUTH 1548 0 0
+~
+The dungeon continues on to the south.
+~
+D WEST 1550 AB 0
+spiked gate~
+To the west is a large iron gate with spikes on both sides.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E spiked gate~
+This gate is designed for one specific reason, that is to make sure no one
+goes near this gate without a large ammount of caution. being pushed up
+against this gate would surely bring about a very painfull death.
+~
+#1550
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the north, south, west and east. This section of
+the dungeon looks to house the cells.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1552 0 0
+~
+The dungeon continues on to the north.
+~
+D EAST 1549 AB 0
+spiked gate~
+The dungeon continues on to the east through a large spiked gate.
+~
+D SOUTH 1551 0 0
+~
+The dungeon continues on to the south.
+~
+D WEST 1554 AB 0
+heavy door~
+There is a large heavy looking wooden door with a slide plate in its
+center.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E spiked gate~
+This gate is designed for one specific reason, that is to make sure no one
+goes near this gate without a large ammount of caution. being pushed up
+against this gate would surely bring about a very painfull death.
+~
+#1551
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the north and the west. This section of the
+dungeon looks to house the cells.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1550 0 0
+~
+The dungeon continues on to the north.
+~
+D EAST 0 0 0
+~
+The wall is made up of large flagstone blocks that notonly make it close
+to impossible to break but also provide good foundations for the structure
+above.
+~
+D SOUTH 0 0 0
+~
+The wall is made up of large flagstone blocks that notonly make it close
+to impossible to break but also provide good foundations for the structure
+above.
+~
+D WEST 1553 AB 0
+heavy door~
+There is a large heavy looking wooden door with a slide plate in its
+center.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+#1552
+Within the dungeon~
+The air is full of a putrid stench, and the room echos with moans and the
+drip of water. The room is constructed from large blocks of flagstone and
+it looks to continue to the south and west. This section of the dungeon
+looks to house the cells.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The wall is made up of large flagstone blocks that notonly make it close
+to impossible to break but also provide good foundations for the structure
+above.
+~
+D EAST 0 0 0
+~
+The wall is made up of large flagstone blocks that notonly make it close
+to impossible to break but also provide good foundations for the structure
+above.
+~
+D SOUTH 1550 0 0
+~
+The dungeon continues on to the south.
+~
+D WEST 1555 AB 0
+heavy door~
+There is a large heavy looking wooden door with a slide plate in its
+center.
+~
+D UP 0 0 0
+~
+The flagstone ceiling is a impressive work of engineering. Stone buttresses
+stretch from wall to wall and to the pillar that is in the center of the
+room.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+#1553
+Withing a dungeon cell~
+This cell is a complete box of flagstone, each block fits perfectly with
+the other leaving not enough spave to even start to pick at the edges. On
+the west wall is a pair of steel manacles which would be used to chain the
+prisoner to. The cell has a stomach turning smell to it, a true cess pit.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall is made up of a few massive pieces of flagstone.
+~
+D EAST 1551 AB 0
+heavy door~
+To the east is a large heavy door with a slide plate in its center.
+~
+D SOUTH 0 0 0
+~
+The south wall is made up of a few massive pieces of flagstone.
+~
+D WEST 0 0 0
+~
+The west wall is made up of a few massive pieces of flagstone, fastened
+to the flagstone is a pair of steel manacles.
+~
+D UP 0 0 0
+~
+The ceiling of the cell is made up of three large chunks of flagstone that
+stretch across the whole expance of the roof.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E manacles~
+The manacles have a fair bit of length to them, but not enough for the
+prisoner to get up and move about, they are long enough for the prisoner
+to sleep on the ground, but just short enough for them to reach the heavy
+door that is to the east.
+~
+#1554
+Withing a dungeon cell~
+This cell is a complete box of flagstone, each block fits perfectly with
+the other leaving not enough spave to even start to pick at the edges. On
+the west wall is a pair of steel manacles which would be used to chain the
+prisoner to. The cell has a stomach turning smell to it, a true cess pit.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall is made up of a few massive pieces of flagstone.
+~
+D EAST 1550 AB 0
+heavy door~
+To the east is a large heavy door with a slide plate in its center.
+~
+D SOUTH 0 0 0
+~
+The south wall is made up of a few massive pieces of flagstone.
+~
+D WEST 0 0 0
+~
+The west wall is made up of a few massive pieces of flagstone, fastened
+to the flagstone is a pair of steel manacles.
+~
+D UP 0 0 0
+~
+The ceiling of the cell is made up of three large chunks of flagstone that
+stretch across the whole expance of the roof.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E manacles~
+The manacles have a fair bit of length to them, but not enough for the
+prisoner to get up and move about, they are long enough for the prisoner
+to sleep on the ground, but just short enough for them to reach the heavy
+door that is to the east.
+~
+#1555
+Withing a dungeon cell~
+This cell is a complete box of flagstone, each block fits perfectly with
+the other leaving not enough spave to even start to pick at the edges. On
+the west wall is a pair of steel manacles which would be used to chain the
+prisoner to. The cell has a stomach turning smell to it, a true cess pit.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall is made up of a few massive pieces of flagstone and a odd
+looking protruding piece of flagstone.
+~
+D EAST 1552 AB 0
+heavy door~
+To the east is a large heavy door with a slide plate in its center.
+~
+D SOUTH 0 0 0
+~
+The south wall is made up of a few massive pieces of flagstone.
+~
+D WEST 0 0 0
+~
+The west wall is made up of a few massive pieces of flagstone, fastened
+to the flagstone is a pair of steel manacles.
+~
+D UP 0 0 0
+~
+The ceiling of the cell is made up of three large chunks of flagstone that
+stretch across the whole expance of the roof.
+~
+D DOWN 0 0 0
+~
+The floor is a coars flagstone that grates with your footsteps, the surface
+covered with a moist granual dirt.
+~
+E manacles~
+The manacles have a fair bit of length to them, but not enough for the
+prisoner to get up and move about, they are long enough for the prisoner
+to sleep on the ground, but just short enough for them to reach the heavy
+door that is to the east.
+~
+E protruding piece flagstone~
+This weird peice of flagstone protrudes slightly from the wall.
+~
+#1556
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D EAST 0 0 0
+~
+The pipe continues on to the east, but your passage in that direction is
+barred by several steel bars.
+~
+D SOUTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D WEST 1557 0 0
+~
+The pipe continues on to the west.
+~
+D UP 0 0 0
+~
+Looking upward you can see a large square cut hole in the pipe that leads
+all the way up to the cell almost twenty five feet above you, there is no
+way of reaching it.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+E bars~
+Grasping them firmly you try and move or bend them, but you are unable to.
+~
+#1557
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 1594 0 0
+~
+The pipe continues on to the north.
+~
+D EAST 0 0 0
+~
+The pipe continues on to the east, but your passage in that direction is
+impossible to travel due to the slimy footing and the downward angle of
+the pipe you are travelig in.
+~
+D SOUTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D WEST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D UP 0 0 0
+~
+The top of the pipe is quiet clean compared to the rest of the pipe.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+#1558
+At the entrance to the old stone tower~
+Standing within the entrance to this old stone tower is quiet weird, the
+weather turns placid as soon as you take your first step within the walls
+of the tower. Before you is a large circluar room, rimming the north and
+west sides of the room is a walkway that slowly ascends to the floor above.
+~
+inside
+ROOM INDOORS
+D NORTH 1562 0 0
+~
+To the north is where the slowly ascending walkway leads to the level
+above.
+~
+D EAST 1512 ABCDEH 1506
+grill gate~
+To the east is the courtyard through a large grill gate.
+~
+D SOUTH 1559 0 0
+~
+To the south is a small foyer.
+~
+D WEST 1561 0 0
+~
+To the west is a small foyer.
+~
+D UP 0 0 0
+~
+Above you is the floor planks for the level above, supported by large beams
+that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+E lever~
+This is a simple lever fixed to the wall before you. Pulling it should
+open the grill gate to your east.
+~
+E gargoyle~
+This gargoyle looks very out of place sitting here, and starts to move as
+soon as you enter the room. It doesnt attack but instead looks at you
+searching for something it recognises to allow you passage northward.
+~
+#1559
+Within the foyer of the tower~
+Standing in the small foyer section of the tower you look around and start
+to notice that this is a tower of a mage, it isnt adorned with fancy things
+that display wealth, rather achievements and items that display ability.
+Before you is a large circluar room, rimming the north and west sides of
+the room is a walkway that slowly ascends to the floor above.
+~
+inside
+ROOM INDOORS
+D NORTH 1558 0 0
+~
+To the north is the entrance to the tower.
+~
+D EAST 0 0 0
+~
+To the east is a plain unadorned wall.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain unadorned wall.
+~
+D WEST 1560 0 0
+~
+To the west the foyer of the tower continues.
+~
+D UP 0 0 0
+~
+Above you is the floor planks for the level above, supported by large beams
+that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1560
+Within the foyer of the tower~
+Standing in the small foyer section of the tower you look around and start
+to notice that this is a tower of a mage, it isnt adorned with fancy things
+that display wealth, rather achievements and items that display ability.
+Before you is a large circluar room, rimming the north and west sides of
+the room is a walkway that slowly ascends to the floor above.
+~
+inside
+ROOM INDOORS
+D NORTH 1561 0 0
+~
+To the north the foyer of the tower continues.
+~
+D EAST 1559 0 0
+~
+To the east the foyer of the tower continues.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain unadorned wall.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 0 0 0
+~
+Above you is the floor planks for the level above, supported by large beams
+that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1561
+Within the foyer of the tower~
+Standing in the small foyer section of the tower you look around and start
+to notice that this is a tower of a mage, it isnt adorned with fancy things
+that display wealth, rather achievements and items that display ability.
+Before you is a large circluar room, rimming the north and west sides of
+the room is a walkway that slowly ascends to the floor above.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain unadorned wall.
+~
+D EAST 1558 0 0
+~
+To the east is the entrace of the tower.
+~
+D SOUTH 1560 0 0
+~
+To the south the foyer of the tower continues.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 0 0 0
+~
+Above you is the floor planks for the level above, supported by large beams
+that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1562
+The lower level walkway~
+This is a small walkway that rims the outer edge of the tower and slowly
+ascends to the level above. The walkway is far from steep and is almost
+level, the slight angle probabl to aid those old in age.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain unadorned wall.
+~
+D EAST 0 0 0
+~
+To the east is a plain unadorned wall.
+~
+D SOUTH 1558 0 0
+~
+To the south is the entrance to the tower.
+~
+D WEST 1563 0 0
+~
+To the west the walkway continues.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1563
+The lower level walkway~
+This is a small walkway that rims the outer edge of the tower and slowly
+ascends to the level above. The walkway is far from steep and is almost
+level, the slight angle probabl to aid those old in age.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain unadorned wall.
+~
+D EAST 1562 0 0
+~
+To the east the walkway continues.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain unadorned wall.
+~
+D WEST 1564 0 0
+~
+To the west the walkway continues.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1564
+The lower level walkway~
+This is a small walkway that rims the outer edge of the tower and slowly
+ascends to the level above. The walkway is far from steep and is almost
+level, the slight angle probabl to aid those old in age.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain unadorned wall.
+~
+D EAST 1563 0 0
+~
+To the east the walkway continues.
+~
+D SOUTH 1565 0 0
+~
+To the south the walkway continues.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1565
+The lower level walkway~
+This is a small walkway that rims the outer edge of the tower and slowly
+ascends to the level above. The walkway is far from steep and is almost
+level, the slight angle probabl to aid those old in age.
+~
+inside
+ROOM INDOORS
+D NORTH 1564 0 0
+~
+To the north the walkway continues.
+~
+D EAST 0 0 0
+~
+To the east is a plain unadorned wall.
+~
+D SOUTH 1566 0 0
+~
+To the south the walkway continues.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1566
+The lower level walkway~
+This is a small walkway that rims the outer edge of the tower and slowly
+ascends to the level above. The walkway is far from steep and is almost
+level, the slight angle probabl to aid those old in age.
+~
+inside
+ROOM INDOORS
+D NORTH 1565 0 0
+~
+To the north the walkway continues.
+~
+D EAST 0 0 0
+~
+To the east is a plain unadorned wall.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain unadorned wall.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 1567 0 0
+~
+Leading upward and curving back apon itselt the walkway continues.
+~
+D DOWN 0 0 0
+~
+The floor you are standing on is a polished wooden plank floor.
+~
+#1567
+The second level hallway~
+This hallway is similar to the walk way you were on the level below, expect
+it now seems more personal, the occasional picture and tapistary hangs
+from the walls, there is a carpet hall runner and even a small side table.
+~
+inside
+ROOM INDOORS
+D NORTH 1572 0 0
+~
+To the north the hallway continues.
+~
+D EAST 1568 AB 0
+large wooden door~
+To the east is a large wooden doar fixed to the wall with iron hinges.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain unadorned wall.
+~
+D WEST 0 0 0
+~
+To the west is a plain wall adorned with only a small side table.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 1566 0 0
+~
+Leading downward and curving back apon itselt the walkway continues.
+~
+E table~
+This is a small side table that is up against the west wall. Apon the
+table are a couple books that look all to boring.
+~
+E picture~
+This is a picture of a young elven lady barely a hundred summers old.
+Stunningly bueatiful and unfortunately has a large slash directly through
+its center.
+~
+E tapistary~
+This tapisarty displays the emblem of the lord lady Adrianna, the curled
+up serpent apon a shield.
+~
+#1568
+Within the towers living room~
+This is a plain room used for living in, everything from cooking to eating
+is done in this room. The room is quiet warm and has a plesant smell of
+food to it. The large living room continues on to the north and east.
+~
+inside
+ROOM INDOORS
+D NORTH 1571 0 0
+~
+The large living room continues on to the north.
+~
+D EAST 1569 0 0
+~
+The large living room continues on to the east.
+~
+D SOUTH 0 0 0
+~
+On the south wall is a large bookcase containing hundreds of books.
+~
+D WEST 1567 AB 0
+large wooden door~
+To the west is a large wooden door fixed to the wall is iron hinges.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+Under your feet is a large hide from a animal that you do not recognise,
+under that hide are the polished floor boards.
+~
+E bookcase~
+The bookcase reaches from the floor to the ceiling and has hundreds of
+books, all of them heavily covered in dust. It appears that none of them
+have been used in quiet some time.
+~
+#1569
+Within the towers living room~
+This is a plain room used for living in, everything from cooking to eating
+is done in this room. The room is quiet warm and has a plesant smell of
+food to it. The large living room continues on to the north and west.
+~
+inside
+ROOM INDOORS
+D NORTH 1570 0 0
+~
+The large living room continues on to the north.
+~
+D EAST 0 0 0
+~
+On the east wall is a small cooking stove and a table next to it with a
+rack fixed to the wall above it. Under the table are a couple small barrels
+and a few sacks of grains and food.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a large bookcase on it that reaches from floor to
+ceiling.
+~
+D WEST 1568 0 0
+~
+The living room continues on to the west.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+Under your feet is a large hide from a animal that you do not recognise,
+under that hide are the polished floor boards.
+~
+E bookcase~
+The bookcase reaches from the floor to the ceiling and has hundreds of
+books, all of them heavily covered in dust. It appears that none of them
+have been used in quiet some time.
+~
+E cooking stove~
+This is a weird stove, and is definately magical, it puffs out little
+clouds of smoke that disapear, you can feal the warmth radiating from it.
+~
+E rack~
+This is a spice rack and has an assortment of small vials containing all
+sorts of spices to treat ones pallet.
+~
+E table~
+This table is used in the preperation of food, heavy cutting marks can be
+seen over the surface of it, and splotches of food stains appear everywhere
+over the surface.
+~
+E barrels sacks~
+Common supplies used for cooking, flour, grain, dried fruits and barreled
+oils and water.
+~
+#1570
+Within the towers living room~
+This is a plain room used for living in, everything from cooking to eating
+is done in this room. The room is quiet warm and has a plesant smell of
+food to it. The large living room continues on to the south and west.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The northern wall has a large skull of some creature mounted on the wall.
+~
+D EAST 0 0 0
+~
+The eastern wall has a small window in it about two foot high and one foot
+wide.
+~
+D SOUTH 1569 0 0
+~
+The living room continues on to the south.
+~
+D WEST 1571 0 0
+~
+The living room continues on to the west.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+Under your feet is a large hide from a animal that you do not recognise,
+under that hide are the polished floor boards.
+~
+E skull~
+The skull is quiet large, and the monster that It came from must have
+been even large, it is quiet a trophy.
+~
+#1571
+Within the towers living room~
+This is a plain room used for living in, everything from cooking to eating
+is done in this room. The room is quiet warm and has a plesant smell of
+food to it. The large living room continues on to the south and east.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall has a large emblem of the lord lady Adrianna apon it.
+~
+D EAST 1570 0 0
+~
+The living room continues on to the east.
+~
+D SOUTH 1568 0 0
+~
+The living room continues on to the south.
+~
+D WEST 0 0 0
+~
+Up against the west north corner of the wall is a large comfortable looking
+chair. Next to the chair is a side table that has a large stack of books
+apon it.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+Under your feet is a large hide from a animal that you do not recognise,
+under that hide are the polished floor boards.
+~
+E side table books~
+The side table has several books stacked one atop the other. The titles of
+the books look extremly boring, so you dont bother reading them.
+~
+E comfortable chair~
+This chair looks like it would be perfect to sit back and relax in after
+having a nice meal.
+~
+#1572
+The second level hallway~
+This hallway is similar to the walk way you were on the level below, expect
+it now seems more personal, the occasional picture and tapistary hangs
+from the walls, there is a carpet hall runner and even a small side table.
+~
+inside
+ROOM INDOORS
+D NORTH 1573 0 0
+~
+To the north the hallway continues.
+~
+D EAST 0 0 0
+~
+To the east is a plain unadorned wall.
+~
+D SOUTH 1567 0 0
+~
+To the south the hallway continues.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+On the floor is a large hall runner carpet that leads south and north.
+~
+E table~
+This is a small side table that is up against the west wall. Apon the
+table are a couple books that look all to boring.
+~
+E picture~
+This is a picture of a young elven male barely a hundred summers old.
+Stunningly handsome and unfortunately has a large slash directly through
+its center.
+~
+E tapistary~
+This tapisarty displays the emblem of the lord lady Adrianna, the curled
+up serpent apon a shield.
+~
+#1573
+The second level hallway~
+This hallway is similar to the walk way you were on the level below, expect
+it now seems more personal, the occasional picture and tapistary hangs
+from the walls, there is a carpet hall runner and even a small side table.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain and unadorned wall.
+~
+D EAST 1574 0 0
+~
+To the east the hallway continues.
+~
+D SOUTH 1572 0 0
+~
+To the south the hallway continues.
+~
+D WEST 0 0 0
+~
+To the west is a plain unadorned wall.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+On the floor is a large hall runner carpet that leads south and east.
+~
+E table~
+This is a small side table that is up against the west wall. Apon the
+table are a couple books that look all to boring.
+~
+E picture~
+This is a picture of a young elven male barely a hundred summers old.
+Stunningly handsome and unfortunately has a large slash directly through
+its center.
+~
+E tapistary~
+This tapisarty displays the emblem of the lord lady Adrianna, the curled
+up serpent apon a shield.
+~
+#1574
+The second level hallway~
+This hallway is similar to the walk way you were on the level below, expect
+it now seems more personal, the occasional picture and tapistary hangs
+from the walls, there is a carpet hall runner and even a small side table.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain and unadorned wall.
+~
+D EAST 1575 0 0
+~
+To the east the hallway continues.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain and unadorned wall.
+~
+D WEST 1573 0 0
+~
+To the west the hallway continues.
+~
+D UP 0 0 0
+~
+Above you is the floor planks of the next level, supported by large
+beams that cross from wall to wall.
+~
+D DOWN 0 0 0
+~
+On the floor is a large hall runner carpet that leads west and east.
+~
+E table~
+This is a small side table that is up against the west wall. Apon the
+table are a couple books that look all to boring.
+~
+E picture~
+This is a picture of a young elven female barely a hundred summers old.
+Stunningly bueatiful and unfortunately has a large slash directly through
+its center.
+~
+E tapistary~
+This tapisarty displays the emblem of the lord lady Adrianna, the curled
+up serpent apon a shield.
+~
+#1575
+The second level hallway~
+This hallway is similar to the walk way you were on the level below, expect
+it now seems more personal, the occasional picture and tapistary hangs
+from the walls, there is a carpet hall runner and even a small side table.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+To the north is a plain and unadorned wall.
+~
+D EAST 0 0 0
+~
+To the east is a plain and unadorned wall.
+~
+D SOUTH 0 0 0
+~
+To the south is a plain and unadorned wall.
+~
+D WEST 1574 0 0
+~
+To the west the hallway continues.
+~
+D UP 1576 0 0
+~
+The hallway takes a sharp turn towards the south as you rise above the
+second level ceiling and near the third level.
+~
+D DOWN 0 0 0
+~
+On the floor is a large hall runner carpet that leads west and up.
+~
+E table~
+This is a small side table that is up against the west wall. Apon the
+table are a couple books that look all to boring.
+~
+E picture~
+This is a picture of a young elven female barely a hundred summers old.
+Stunningly bueatiful and unfortunately has a large slash directly through
+its center.
+~
+E tapistary~
+This tapisarty displays the emblem of the lord lady Adrianna, the curled
+up serpent apon a shield.
+~
+#1576
+End of the hallway~
+As soon as you enter this room you feel a slight resistance as you step
+through some sort of magical barrier, smalls harmless sparts arc from
+conductive items that you posses. The air is thick with the smell of magic
+weather it has been recently cast, or still in use you are unable to tell.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall is plain and unadorned.
+~
+D EAST 0 0 0
+~
+The east wall has a small window in it about two feet high and one foot
+wide. Through the window you can see the courtyard below, and a large
+blast hole in the outer wall southern tower. Below the tower piles of
+rubble have filled the garden and some has overflowed into courtyard.
+~
+D SOUTH 1577 0 0
+~
+To the south you can see a small room that looks to be some sort of waiting
+room.
+~
+D WEST 0 0 0
+~
+On the west wall hangs a white tabbard with the lady lord Adriannas emblem.
+~
+D UP 0 0 0
+~
+Above you unlike before are solid slabs of stone, it looks like the tower
+does not have anymore than three levels.
+~
+D DOWN 1575 0 0
+~
+Looking down you see the end of the hall runner carpet than continues
+slightly north before taking a sharp turn down and westward.
+~
+E tabbard emblem~
+The white tabbard is of the lord lady Adriannas emblem, the curled up serpent
+apon a shield. There seems to be some shadow on it that you cannot make out.
+~
+E shadow~
+Looking closer at the white tabbard you can make out a faint outline over the
+white material. It appears humanoid, a head, shoulders all that your able
+to depict. Something very powerfull must have caused this.
+~
+#1577
+A small waiting room~
+This small waiting room has a large hall chair about five people wide that
+has fancy wood carving all along it and is lined with plush cushions. There
+is a large circular fur rug that is positioned in the center of the room,
+in the north west corner is a large vase with a broad leaf tropical plant
+in it.
+~
+inside
+ROOM INDOORS
+D NORTH 1576 0 0
+~
+To the north is the end of the hallway on the third level.
+~
+D EAST 0 0 0
+~
+On the east wall is a large plaque and emblem.
+~
+D SOUTH 0 0 0
+~
+On the south wall is empty torch bracket.
+~
+D WEST 1578 ABCDEH 1508
+Old oak door~
+To the west is a large grand archway with a old oak door. The door has two
+massive adamantite braces that are perpendicular to the hinges and cross all
+the pieces of oak that make up the door. Inscribed apon the adamantite
+braces are small runes and sigils. The sigils swirl slowly and eminate a soft
+blue glow. The runes cycle through a soft room vibrating hum.
+~
+D UP 0 0 0
+~
+Above you unlike before are solid slabs of stone, it looks like the tower
+does not have anymore than three levels. One of the pieces of stone has a
+small hole in it.
+~
+D DOWN 0 0 0
+~
+On the floor in the center of the room is a lare black fur rug, it covers
+what looks to be a scorch mark in the stone.
+~
+E scorch~
+The scorch mark in the stone looks weird, so you kneel down and feel it with
+your hand, coarse and heavily serated. This is no surface burn, whatever
+caused this indeed melted away the surface of the rock.
+~
+E hole~
+You squit up at the small hole in the rock above you, but you cannot see
+anything in there, it's comeplete darkness. Swallowing you reach up and
+put your index finger into the hole and feel around untill you can work out
+the shape of a small button.
+~
+E plaque~
+The polished brass plaque has some writing on it that is luminated with
+some magic:
+                      " Altrans study, wait and you
+                        shall be attended to.      "
+
+~
+#1578
+Inside Altrans study~
+This mages study is quiet a impressive sight, a large room with a assortment
+of items and furniture. A thick blanket of magic floats in the air here and
+you can almost feel magic radiating from objects about you.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall has a small side table with a assortment of papers and books.
+~
+D EAST 1577 ABCDEH 1508
+Old oak door~
+To the east is a old oak door with two large adamantite bracers.
+~
+D SOUTH 1579 0 0
+~
+To the south Altrans study continues.
+~
+D WEST 1581 0 0
+~
+To the west Altrans study continues.
+~
+D UP 0 0 0
+~
+Looking up above you, you see large pieces of stone that are supported by
+the large central pillar and its finger like buttresses.
+~
+D DOWN 0 0 0
+~
+The floor is covered with many small furs and helps retain a large ammount of
+warmth.
+~
+E side table~
+The table is about four foot high, and looks to be of flimsy construction.
+Yet it manages to hold two dozen books in three piles, ontop of the piled
+books is a small pile of papers.
+~
+E books~
+These books look very old, and are all bound in leather, and have metal caps
+on the corners to prevent damage occouring to them. Some of them are in
+good condition, others have lose pages hanging out from them.
+~
+E lose pages~
+These are spell books, and the lose pages could be used as a scroll one would
+think. Perhaps you could look through the books and see what you might want.
+~
+E pile pappers~
+Ontop of the piled books is a pile of papers, each page different the dozen
+or so pieces of paper each have a different spell description inscribed apon
+them. Thinking you have discovered something of value you reach out to grab
+one and then realise that the hand gestures and words for the spell have not
+been written down apon the pages.
+~
+#1579
+Inside Altrans study~
+This mages study is quiet a impressive sight, a large room with a assortment
+of items and furniture. A thick blanket of magic floats in the air here and
+you can almost feel magic radiating from objects about you.
+~
+inside
+ROOM INDOORS
+D NORTH 1578 0 0
+~
+To the north Altrans study continues.
+~
+D EAST 0 0 0
+~
+The east wall has a large bookcase full of books and items holding the books
+upright.
+~
+D SOUTH 0 0 0
+~
+The southern wall has a large workbench, infront of that work bench is a
+rack with hundreds of glass jars and viles.
+~
+D WEST 1580 0 0
+~
+To the west Altrans study continues.
+~
+D UP 0 0 0
+~
+Looking up above you, you see large pieces of stone that are supported by
+the large central pillar and its finger like buttresses.
+~
+D DOWN 0 0 0
+~
+The floor is covered with many small furs and helps retain a large ammount of
+warmth.
+~
+E bookcase~
+The bookcase is full of many old books, there are gaps here and there where
+one book or two has been removed and the ones next to them have tiled and
+fallen against their opposite under the pressure from the other books.
+~
+E items~
+Many of the items that are holding the books upright look just like little
+idols and boring heavy trinkets except for one piece that is a adamantite
+encaged sapphire about the size of your fist.
+~
+E workbench~
+This workbench has seen extensive use, littered with quills and blank
+parchment, it appears that many a scroll or spell book has been written here.
+~
+E rack~
+This rack has lots of ingredients that any up and coming mage would like to
+be allowed access to use. There are a couple potions and pills that you might
+find usefull.
+~
+#1580
+Within Altrans study~
+This mages study is quiet a impressive sight, a large room with a assortment
+of items and furniture. A thick blanket of magic floats in the air here and
+you can almost feel magic radiating from objects about you.
+~
+inside
+ROOM INDOORS
+D NORTH 1581 0 0
+~
+To the north Altrans study continues.
+~
+D EAST 1579 0 0
+~
+To the east Altrans study continues.
+~
+D SOUTH 0 0 0
+~
+Up against the south west wall is a large crystaline cage.
+~
+D WEST 0 0 0
+~
+Up against the south west wall is a large crystaline cage.
+~
+D UP 0 0 0
+~
+Looking up above you, you see large pieces of stone that are supported by
+the large central pillar and its finger like buttresses.
+~
+D DOWN 0 0 0
+~
+The floor is covered with many small furs and helps retain a large ammount of
+warmth.
+~
+E crystaline cage~
+This is quiet a structure, it looks almost delicate. Crystal threads as thick
+as your fingers are interlaced into a cage, it is almost a web of crystals.
+Obviously used for testing spells, this crystal cage would absorb a large
+ammount of magic, providing decent protection to onlookers.
+~
+#1581
+Within Altrans study~
+This mages study is quiet a impressive sight, a large room with a assortment
+of items and furniture. A thick blanket of magic floats in the air here and
+you can almost feel magic radiating from objects about you.
+~
+inside
+ROOM INDOORS
+D NORTH 1582 ABCDEHI 0
+morphing door~
+Up against the north wall is a large bed carved from a single piece of oak,
+or rather created magically from a single piece of oak. At the end of the
+bed, made from the same piece of wood is a wooden chest.
+~
+D EAST 1578 0 0
+~
+To the east Altrans study continues.
+~
+D SOUTH 1580 0 0
+~
+To the south Altrans study continues.
+~
+D WEST 0 0 0
+~
+In the west wall is a small window about two foot high and one foot wide.
+~
+D UP 0 0 0
+~
+Looking up above you, you see large pieces of stone that are supported by
+the large central pillar and its finger like buttresses.
+~
+D DOWN 0 0 0
+~
+The floor is covered with many small furs and helps retain a large ammount of
+warmth.
+~
+E buttresses~
+You have seen these before, but you wonder that if the level you are
+currently in is the top level, why have support buttresses ?
+~
+E window~
+Looking out through the window in the west wall you can see out over the
+cliff side and down across the sea to the close by city of Cimar. The view
+is quiet breath taking.
+~
+E bed~
+This looks like a bed you could sleep in with ease, the perfect length,
+height and width. It even has a candle stick holder in the head of the bed
+for you read by.
+~
+E candle stick holder~
+This candle stick holder has a half melted candle in it. Looking closer you
+notice that there is no melted wax down the side of the candle. Mages are
+indeed lazy, magical candles. At the base of the candle stick holder you can
+make out what looks to be a small slide plate.
+~
+E slide plate~
+This is a tiny slide plate and when you move it, it swivels on a fixed rivet
+and reveals a small black circular hole.
+~
+#1582
+The hidden study~
+Cold and dusty with very stale air, this hidden study has not been used in
+quiet some time. Glowing items can been seen on the shelves as well as a pile
+of scrolls. levitating about a foot above your head is a orb that radiates
+light with your presence.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+On the north wall are four levels of shelves, almost totaly full of usefull
+items.
+~
+D EAST 1583 0 0
+~
+To the east the hidden study continues.
+~
+D SOUTH 1581 ABCDEHI 0
+morphing door~
+You can see a door in the south wall , that has hundreds of sigils on it
+that twist in agitation but do not swirl. Next to the door is a small wooden
+lever
+~
+D WEST 0 0 0
+~
+The west wall has a large cabinet up against it. One of the doors slightly
+open.
+~
+D UP 0 0 0
+~
+Looking up you spot a orb that is radiating light. Past that you see stone
+slabs that stretch from wall to wall.
+~
+D DOWN 0 0 0
+~
+The stone floor here is bare and cold.
+~
+E cabinet~
+This unfortunatly just looks like a plain ordenary cabinet.
+~
+E shelves~
+It is a young mages dream, lots of scrolls and wands and even a stave to use.
+~
+E orb~
+At first you are unsure of what this orb might do, as it seems to be getting
+brighter and brighter since you enterd the room, could It be a trap of some
+sort, or is it just a light source ?
+~
+E lever~
+this looks like it would open the door next to it.
+~
+#1583
+The hidden study~
+Cold and dusty with very stale air, this hidden study has not been used in
+quiet some time. Glowing items can been seen on the shelves as well as a pile
+of scrolls. levitating about a foot above your head is a orb that radiates
+light with your presence.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The north wall is bare except for a small single shelf that is cut deep
+into the stone.
+~
+D EAST 0 0 0
+~
+There is a grand desk that faces west and is hard up against the east wall.
+~
+D SOUTH 0 0 0
+~
+The south wall is bare.
+~
+D WEST 1582 0 0
+~
+To the west the hidden study continues.
+~
+D UP 0 0 0
+~
+Looking up you spot a orb that is radiating light. Past that you see stone
+slabs that stretch from wall to wall.
+~
+D DOWN 0 0 0
+~
+The stone floor here is bare and cold.
+~
+E shelf~
+Sitting in this shelf is a sceptre, it is unlike the other wands and staves
+and seems to be more of a combat weapon.
+~
+E orb~
+At first you are unsure of what this orb might do, as it seems to be getting
+brighter and brighter since you enterd the room, could It be a trap of some
+sort, or is it just a light source ?
+~
+E grand desk~
+This desk is huge, it reaches from the north wall to the south wall, all
+along the eastern wall. There is a large leather chair that sits infront of
+it. There are a couple dozen open front compartments on either side of the
+working space, with a single shelf of books.
+~
+E books~
+Looking briefly over the books which are before you, one of them takes your
+interest. A book by the title of "gem enchantments".
+~
+E compartments~
+These compartments have scrolls and letters in them, some of them even have
+unenchanted crystal rods, and wooden sticks.
+~
+#1584
+Outside on a balcony~
+You stand outside on a balcony that has no windows or doors, at all. It is
+made from a hardened weather treated oak, and is just attached to the wall
+of the tower.
+~
+city
+D NORTH 0 0 0
+~
+Looking closer at the north wall which the balcony is attached to, you notice
+that there is infact a indentation. The indentation is hidden from view due
+to the well layed design of the stone, stepping format you run your hand over
+the coars stone that is set about two inches into the wall. At the top right
+corner of the indentation is a small hole.
+~
+D EAST 0 0 0
+~
+Looking east you peer out over the courtyard of the estate below, and down
+over the mountains to the forrest fields and the southern road.
+~
+D SOUTH 0 0 0
+~
+Looking south out over the outerwall of the estate the mountain range
+continues on southward for a fair distance before turning eastward. Beyond
+the mountain range the horizon is filled with the sea.
+~
+D WEST 0 0 0
+~
+Looking to the west you can see the edge of the mountain before the sharp
+drop down to the sea below, over the sea you can see the port of Cimar. A
+couple ships set in harbour and even off in the distance Mount Cim.
+~
+D UP 1585 IJ 0
+~
+Above you the sky opens up and the tower continues upward.
+~
+D DOWN 0 0 0
+~
+The balcony is made from a hardened weather treated oak. It feels stable
+enough.
+~
+E hole~
+You reach and and put one of your fingers in the hole, feeling around
+searching for anything on the inside. On the inner right side you can
+make out the shape of a button.
+~
+#1585
+In the air~
+You are in the air high above the balcony of the old stone tower. It is
+quiet windy up here.
+~
+air
+D NORTH 1586 ABCDEHI 1507
+stone wall door~
+To the north is the wall of the old stone tower, in the center of the wall
+is a large adamantite plug which has a empty socket in it.
+~
+D EAST 0 0 0
+~
+Looking east you peer out over the courtyard of the estate below, and down
+over the mountains to the forrest fields and the southern road.
+~
+D SOUTH 0 0 0
+~
+Looking south out over the outerwall of the estate the mountain range
+continues on southward for a fair distance before turning eastward. Beyond
+the mountain range the horizon is filled with the sea.
+~
+D WEST 0 0 0
+~
+Looking to the west you can see the edge of the mountain before the sharp
+drop down to the sea below, over the sea you can see the port of Cimar. A
+couple ships set in harbour and even off in the distance Mount Cim.
+~
+D UP 0 0 0
+~
+Above you the sky opens up.
+~
+D DOWN 1584 IJ 0
+~
+About twenty feet below you is the balcony attached to the side of the old
+stone tower.
+~
+E adamantite plug~
+about the side of your head this adamantite plug has small runes drawn apon
+it. In the center of the plug is a small socket.
+~
+E soekcet~
+The small socket in the center of the adamantite plug looks to be a mould
+of a multifacted gem.
+~
+#1586
+Within a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1587 0 0
+~
+To the north the dome room continues.
+~
+D EAST 0 0 0
+~
+The eastern wall is bare.
+~
+D SOUTH 1585 ABCDEH 1507
+stone wall door~
+To the south you can clearly see the stone wall door, next to it is a lever.
+~
+D WEST 1589 0 0
+~
+To the north the dome room continues.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E lever~
+This lever next to the southern door, looks like it would open the door.
+~
+#1587
+Within a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. In this
+center of the room is a large crystal.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall is bare.
+~
+D EAST 0 0 0
+~
+The east wall is bare.
+~
+D SOUTH 1586 0 0
+~
+To the south the dome room continues.
+~
+D WEST 1588 0 0
+~
+To the west the dome room continues.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E crytal~
+This large crystal is almost six feet high, and seems to be levitating by
+itself. The crystal has about fourteen facets and within one you think you
+can see a face.
+~
+E face~
+Traped inside this crystal is a soul, whos you do not know. The soul is
+probably a source of energy and being used when needed.
+~
+#1588
+Within a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. In this
+center of the room is a large crystal.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall is bare.
+~
+D EAST 1587 0 0
+~
+To the east the dome room continues.
+~
+D SOUTH 1589 0 0
+~
+To the south the dome room continues.
+~
+D WEST 1593 0 0
+~
+To the west the dome room continues.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E crytal~
+This large crystal is almost six feet high, and seems to be levitating by
+itself. The crystal has about fourteen facets and within one you think you
+can see a face.
+~
+E face~
+Traped inside this crystal is a soul, whos you do not know. The soul is
+probably a source of energy and being used when needed.
+~
+#1589
+Within a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. There is a
+desk here in the center of the room facing to the northwest.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1588 0 0
+~
+To the north the domed room continues.
+~
+D EAST 1586 0 0
+~
+To the east the domed room continues.
+~
+D SOUTH 1590 0 0
+~
+To the south the domed room continues.
+~
+D WEST 1592 0 0
+~
+To the west the domed room continues.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E Desk~
+This large desk has a couple spell books on it as well as a couple pieces
+of paper with wax seals.
+~
+#1590
+Withing a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. There is a
+bed here up against the south eastern wall.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1589 0 0
+~
+To the north the domed room continues.
+~
+D EAST 0 0 0
+~
+Up against the east wall is a simple bed.
+~
+D SOUTH 0 0 0
+~
+Up against the southern wall to the east is a simple bed.
+~
+D WEST 1591 0 0
+~
+To the west the domed room continues.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E bed~
+This is a rather small bed, it is only just five foot long.
+~
+#1591
+Withing a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. In this
+center of the room is a large crystal.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1592 0 0
+~
+To the north the dome room continues.
+~
+D EAST 1590 0 0
+~
+To the east the dome room continues.
+~
+D SOUTH 0 0 0
+~
+The wall to the south is bare.
+~
+D WEST 0 0 0
+~
+The wall to the south is bare.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E crytal~
+This large crystal is almost six feet high, and seems to be levitating by
+itself. The crystal has about fourteen facets and within one you think you
+can see a face.
+~
+E face~
+Traped inside this crystal is a soul, whos you do not know. The soul is
+probably a source of energy and being used when needed.
+~
+#1592
+Withing a domed room~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. In this
+center of the room is a large crystal.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 1593 0 0
+~
+To the north the dome room continues.
+~
+D EAST 1589 0 0
+~
+To the east the dome room continues.
+~
+D SOUTH 1591 0 0
+~
+To the south the dome room continues.
+~
+D WEST 0 0 0
+~
+The wall to the south is bare.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E crytal~
+This large crystal is almost six feet high, and seems to be levitating by
+itself. The crystal has about fourteen facets and within one you think you
+can see a face.
+~
+E face~
+Traped inside this crystal is a soul, whos you do not know. The soul is
+probably a source of energy and being used when needed.
+~
+#1593
+Standing before a portal~
+The top level of this old stone tower isnt heavily furnished. The air is
+clean and warm and there is a slight smell of magic. A heavy humming noise
+and the crackling tearing noise of arching energy can be heard. In the
+center of the room is a large portal.
+~
+inside
+ROOM INDOORS
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+~
+The north wall is bare.
+~
+D EAST 1588 0 0
+~
+To the east the domed room continues.
+~
+D SOUTH 1592 0 0
+~
+To the south the domed room continues.
+~
+D WEST 0 0 0
+~
+The west wall is bare.
+~
+D UP 0 0 0
+~
+The dome roof above you is a mesh of interlinking stones that support each
+other with their weight.
+~
+D DOWN 0 0 0
+~
+The floor of this dome room is made up of large pieces of stone.
+~
+E portal~
+The portal in this room sits about half a foot from the ground, it is about
+twelve feet high and six feet wide. The edges of it are held open by a
+snarling twisting web of energy. Keeping the portal open requires energy
+which is drawn from the web around the edge of the portal. Now and again when
+a section of the web dulls slightly a crackling noise builds up from the east
+and south, then suddenly white and black interlaced bolts strike the web of
+energy from the east and south, restoring its glow.
+~
+#1594
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 1595 0 0
+~
+The pipe continues on to the north.
+~
+D EAST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D SOUTH 1557 0 0
+~
+The pipe continues on to the south, but your passage in that direction is
+impossible to travel due to the slimy footing and the downward angle of
+the pipe you are travelig in.
+~
+D WEST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D UP 0 0 0
+~
+The top of the pipe is quiet clean compared to the rest of the pipe.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+#1595
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D EAST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D SOUTH 1594 0 0
+~
+The pipe continues on to the south, but your passage in that direction is
+impossible to travel due to the slimy footing and the downward angle of
+the pipe you are travelig in.
+~
+D WEST 1596 0 0
+~
+The pipe continues on to the west.
+~
+D UP 0 0 0
+~
+The top of the pipe is quiet clean compared to the rest of the pipe.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+#1596
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D EAST 1595 0 0
+~
+The pipe continues on to the east, but your passage in that direction is
+impossible to travel due to the slimy footing and the downward angle of
+the pipe you are travelig in.
+~
+D SOUTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D WEST 1597 0 0
+~
+The pipe continues on to the west.
+~
+D UP 0 0 0
+~
+The top of the pipe is quiet clean compared to the rest of the pipe.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+#1597
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D EAST 1596 0 0
+~
+The pipe continues on to the east, but your passage in that direction is
+impossible to travel due to the slimy footing and the downward angle of
+the pipe you are travelig in.
+~
+D SOUTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D WEST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D UP 0 0 0
+~
+The top of the pipe is quiet clean compared to the rest of the pipe.
+~
+D DOWN 1598 0 0
+~
+The pipe drops out from below you and decents are a very steep angle
+downwards and northward.
+~
+#1598
+Within a large sewer pipe~
+This room is lit only by a tiny glowing piece of algie that is on the cusp
+of the pipe. The pipe is long and extends downward and nowrthwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 1599 ABCJ 0
+rusty bars~
+To the north the pipe continues, except it seems to be blocked by some
+rusted iron bars.
+~
+D EAST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D SOUTH 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D WEST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D UP 1597 0 0
+~
+The pipe continues on upward, but your passage in that direction is
+impossible to travel due to the slimy footing and the downward angle of
+the pipe you are travelig in.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+E rusty biron bars~
+These are so rusted you might be strong enough to Break them.
+~
+#1599
+Within a large sewer pipe~
+This room is lit only by a tiny piece of alige that is on the cusp of
+the pipe. The pipe is long and extends downward and northwestward.
+~
+inside
+ROOM INDOORS
+D NORTH 2201 0 0
+~
+To the north the pipe continues and leads into a pipe that seems more open.
+~
+D EAST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D SOUTH 0 0 0
+~
+To the south are some jaggered rusty iron bars that prevent you from moving
+southward.
+~
+D WEST 0 0 0
+~
+The edge of the pipe is covered in think slime.
+~
+D UP 0 0 0
+~
+The top of the pipe is dry.
+~
+D DOWN 0 0 0
+~
+The sewer is flowlying with all sort of things you would rather not think
+about.
+~
+#0
+
+
+
+#RESETS
+OBJECT 1511 TO 1500
+PUT 1500 IN 1511 COUNT 1
+OBJECT 1512 TO 1500
+MOB 1524 TO 1503 GLIMIT 2 LLIMIT 1
+OBJECT 1514 TO 1505
+OBJECT 1515 TO 1505
+PUT 1501 IN 1515 COUNT 1
+OBJECT 1516 TO 1507
+MOB 1528 TO 1507 GLIMIT 1 LLIMIT 1
+EQUIP 1507 HEAD
+OBJECT 1518 TO 1511
+PUT 1519 IN 1518 COUNT 1
+MOB 1530 TO 1511 GLIMIT 1 LLIMIT 1
+OBJECT 1523 TO 1514
+OBJECT 1522 TO 1514
+OBJECT 1521 TO 1514
+OBJECT 1520 TO 1514
+OBJECT 1525 TO 1515
+OBJECT 1524 TO 1515
+MOB 1534 TO 1515 GLIMIT 10 LLIMIT 4
+MOB 1534 TO 1515 GLIMIT 10 LLIMIT 4
+MOB 1534 TO 1515 GLIMIT 10 LLIMIT 4
+MOB 1534 TO 1515 GLIMIT 10 LLIMIT 4
+OBJECT 1525 TO 1516
+OBJECT 1524 TO 1516
+MOB 1534 TO 1516 GLIMIT 10 LLIMIT 6
+MOB 1534 TO 1516 GLIMIT 10 LLIMIT 6
+MOB 1534 TO 1516 GLIMIT 10 LLIMIT 6
+MOB 1534 TO 1516 GLIMIT 10 LLIMIT 6
+MOB 1534 TO 1516 GLIMIT 10 LLIMIT 6
+MOB 1534 TO 1516 GLIMIT 10 LLIMIT 6
+OBJECT 1526 TO 1519
+MOB 1524 TO 1519 GLIMIT 2 LLIMIT 1
+OBJECT 1528 TO 1520
+OBJECT 1527 TO 1520
+MOB 1513 TO 1520 GLIMIT 1 LLIMIT 1
+OBJECT 1529 TO 1521
+MOB 1511 TO 1521 GLIMIT 2 LLIMIT 1
+MOB 1504 TO 1521 GLIMIT 4 LLIMIT 2
+OBJECT 1534 TO 1523
+OBJECT 1533 TO 1523
+OBJECT 1532 TO 1523
+OBJECT 1532 TO 1523
+MOB 1505 TO 1523 GLIMIT 1 LLIMIT 1
+MOB 1503 TO 1523 GLIMIT 4 LLIMIT 2
+MOB 1502 TO 1523 GLIMIT 4 LLIMIT 2
+MOB 1501 TO 1523 GLIMIT 4 LLIMIT 2
+MOB 1500 TO 1523 GLIMIT 4 LLIMIT 2
+OBJECT 1535 TO 1524
+PUT 1503 IN 1535 COUNT 1
+OBJECT 1537 TO 1525
+OBJECT 1538 TO 1525
+PUT 1504 IN 1538 COUNT 1
+OBJECT 1536 TO 1525
+OBJECT 1539 TO 1525
+OBJECT 1534 TO 1527
+OBJECT 1533 TO 1527
+OBJECT 1532 TO 1527
+OBJECT 1532 TO 1527
+MOB 1503 TO 1527 GLIMIT 4 LLIMIT 2
+MOB 1502 TO 1527 GLIMIT 4 LLIMIT 2
+MOB 1501 TO 1527 GLIMIT 4 LLIMIT 2
+MOB 1500 TO 1527 GLIMIT 4 LLIMIT 2
+OBJECT 1529 TO 1528
+MOB 1512 TO 1528 GLIMIT 1 LLIMIT 1
+MOB 1506 TO 1528 GLIMIT 1 LLIMIT 1
+EQUIP 1502 HOLD
+MOB 1504 TO 1528 GLIMIT 4 LLIMIT 2
+OBJECT 1528 TO 1529
+OBJECT 1527 TO 1529
+MOB 1511 TO 1529 GLIMIT 2 LLIMIT 1
+OBJECT 1530 TO 1530
+MOB 1510 TO 1530 GLIMIT 2 LLIMIT 1
+MOB 1509 TO 1530 GLIMIT 2 LLIMIT 1
+MOB 1508 TO 1530 GLIMIT 2 LLIMIT 1
+MOB 1507 TO 1530 GLIMIT 2 LLIMIT 1
+OBJECT 1531 TO 1531
+OBJECT 1530 TO 1531
+MOB 1533 TO 1531 GLIMIT 1 LLIMIT 1
+MOB 1510 TO 1531 GLIMIT 2 LLIMIT 1
+MOB 1509 TO 1531 GLIMIT 2 LLIMIT 1
+MOB 1508 TO 1531 GLIMIT 2 LLIMIT 1
+MOB 1507 TO 1531 GLIMIT 2 LLIMIT 1
+OBJECT 1528 TO 1532
+MOB 1519 TO 1532 GLIMIT 2 LLIMIT 2
+MOB 1519 TO 1532 GLIMIT 2 LLIMIT 2
+MOB 1518 TO 1532 GLIMIT 1 LLIMIT 1
+MOB 1517 TO 1532 GLIMIT 1 LLIMIT 1
+MOB 1515 TO 1532 GLIMIT 2 LLIMIT 2
+OBJECT 1528 TO 1533
+OBJECT 1527 TO 1533
+MOB 1520 TO 1536 GLIMIT 1 LLIMIT 1
+MOB 1525 TO 1536 GLIMIT 2 LLIMIT 1
+MOB 1521 TO 1537 GLIMIT 1 LLIMIT 1
+MOB 1522 TO 1538 GLIMIT 1 LLIMIT 1
+MOB 1525 TO 1538 GLIMIT 2 LLIMIT 1
+MOB 1516 TO 1539 GLIMIT 3 LLIMIT 1
+MOB 1516 TO 1540 GLIMIT 3 LLIMIT 1
+MOB 1516 TO 1541 GLIMIT 3 LLIMIT 1
+MOB 1526 TO 1546 GLIMIT 2 LLIMIT 1
+MOB 1527 TO 1547 GLIMIT 2 LLIMIT 1
+MOB 1514 TO 1553 GLIMIT 3 LLIMIT 1
+MOB 1514 TO 1554 GLIMIT 3 LLIMIT 1
+MOB 1514 TO 1555 GLIMIT 3 LLIMIT 1
+MOB 1529 TO 1558 GLIMIT 1 LLIMIT 1
+MOB 1531 TO 1581 GLIMIT 1 LLIMIT 1
+MOB 1532 TO 1590 GLIMIT 1 LLIMIT 1
+MOB 1535 TO 1598 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

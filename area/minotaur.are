@@ -1,0 +1,3653 @@
+#AREA
+minotaur.are~
+Iseldheim~
+Zethus~
+1 51
+3800 3899
+city
+alpine
+0
+1
+Zethus Tiernus Anria~
+
+#MOBS
+#3800
+male minotaur~
+a male minotaur~
+Wearing rough furs, a minotaur indifferently lumbers about the streets.
+~
+Thick hair covers this minotaur's body, inhabited by bits and pieces of
+dead, dried grass and probably a few parasites as well.  Two horns of an
+off-white color jut out from his skull, and a set of large and old pelts of
+crude make cover his body.  
+~
+0 0 0 minotaur~
+16 3d10+400 4d9+10 24 100 charge
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT OUTDOORS
+ACT DIURNAL
+OFF BERSERK
+OFF KICK
+OFF PARRY
+NOTES ~
+#3801
+minotaur barbarian~
+a minotaur barbarian~
+A huge, filthy minotaur clad in smelly skins walks through the city. 
+~
+Scars mottle the fur of this barbarian with slash-shaped spots of
+baldness, exposing knotted white flesh.  The thick stenches of death and
+dust rise from the animal hide he wears over his head and shoulders and a
+large axe seems quite at home in his meaty hands.  
+~
+-100 0 0 minotaur~
+37 18d8+2094 3d10+40 40 100 cleave
+0 0 0 0
+standing male poor
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+OFF BASH
+OFF BERSERK
+OFF DISARM
+OFF FAST
+OFF KICK
+IMM SUMMON
+#3802
+minotaur paladin guard guildguard~
+a minotaur paladin~
+An imposing minotaur clad in heavy plate armor stands before the silver arch.
+~
+Wearing simple and well-kept metal plate, this paladin appears to embody
+the virtuous qualities of his guild and the stubborness of his race.  His
+horns are remarkably clean, as is his fur, making him seem more civilized
+than the majority of his kind.  
+~
+1000 0 0 minotaur~
+35 30d3+1200 3d8+33 45 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+OFF DISARM
+OFF PARRY
+OFF ASSIST_ALIGN
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+B class EQUALTO 4 3877 SAY I cannot let you pass.~
+#3803
+minotaur zealot guildguard guard~
+a minotaur zealot~
+A robed minotaur stands here sternly and quietly.
+~
+The look on his face so stern that it makes him appear angry, this
+zealot's sneering-distorted and wrinkled face should be enough to turn
+anyone around in their tracks.  He carries a large blade at his side, in
+case it isn't.  His eyes seem hollow and empty, as if he is being driven by
+his religious zeal rather than his own will.  
+~
+0 0 0 minotaur~
+35 30d3+1200 3d8+33 45 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BERSERK
+AFF SANCTUARY
+IMM SUMMON
+IMM CHARM
+B class EQUALTO 3 3879 ECHO A minotaur zealot growls slightly and steps to block your path.~
+A minotaur zealot growls slightly and steps to block $n's path.~
+#3804
+minotaur warrior guildguard guard~
+the minotaur warrior guard~
+A large minotaur stands in front of the door of the house, a large axe in his hands.
+~
+A very small amount of clothing has been strategically placed to cover
+this minotaur's body just enough so that he can show off the majority of his
+muscles and not freeze to death.  He idly tosses a battleaxe back and forth
+between his hands, seemingly unintentionally threateningly.  
+~
+0 0 0 minotaur~
+35 30d3+1500 4d9+40 45 100 cleave
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF BERSERK
+OFF DODGE
+OFF PARRY
+IMM SUMMON
+IMM CHARM
+CLASS warrior Barbarian none 
+B class EQUALTO 1 3888 ECHO The minotaur warrior guard shoves the broad side of his axe into your chest.~
+The minotaur warrior guard shoves the broad side of his axe into $n's chest.~
+#3805
+high shaman minotaur~
+the High Shaman of Iseldheim~
+A robed minotaur with shaggy white hair stands here shaking beads and chanting.
+~
+Thin and frail in appearance, the venerable High Shaman of Iseldheim is
+an important figure in the city, and was so since it was but a village.  His
+hair is thick and white, and his head is long and narrow compared to most
+minotaurs.  Robes of white with orange trim cover his feeble frame, and
+rattling beads cover his body.  Whispers are constantly croaked from his
+long throat and spat from his sagging lips as his body rocks back and forth,
+shaking with religious fervor.  
+~
+500 0 0 minotaur~
+51 300d10+5000 10d5+32 90 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT HEALER
+AFF SANCTUARY
+AFF HASTE
+IMM SUMMON
+IMM CHARM
+#3806
+minotaur boy child~
+a minotaur boy~
+A young minotaur awkwardly trots about, unbalanced by his unproportionally large head.
+~
+Bearing oddly long limbs and a horribly large head, this minotaur youth
+seems more like a half-minotaur, half-spider.  The youth does his best,
+however, to trot about the streets and try to have fun, even if it means
+tripping quite a few times in the process.  
+~
+300 0 0 minotaur~
+8 4d8+97 3d3+6 0 100 charge
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT WANDER
+ACT STAY_AREA
+ACT OUTDOORS
+ACT DIURNAL
+#3807
+minotaur militia member~
+a militia member~
+A determined minotaur in bulky armor plods through the city.
+~
+The city of Iseldheim has very few guards of its own, and they are
+concentrated at the gates.  This is one of many minotaurs of the city that
+has decided to take the law into his or her own hands, and watch the streets
+for those who might attempt to bring harm to its citizens.  
+~
+0 0 0 minotaur~
+26 13d8+1022 3d5+20 40 100 none
+30 30 30 30
+standing either poor
+0 0 medium
+ACT NPC
+ACT STAY_AREA
+ACT INTELLIGENT
+OFF ASSIST_VNUM
+IMM SUMMON
+#3808
+minotaur black huge tattooed~
+a heavily tattooed minotaur~
+A huge minotaur covered with tattooes menacingly paces the moon-lit alley.
+~
+A strange brooding expression lies upon this nearly bald minotaur's face
+as he paces back and forth endlessly in the night.  His skin is one giant
+work of art, the only hair visible grows from under his arms.  A silver ring
+pierces through his left nostril, which flares violently.  His breath
+becomes a frosty mist as it touches the night air, making his brooding seem
+all the more dangerous.  
+~
+-1000 0 0 minotaur~
+35 17d8+1867 8d5+34 37 100 beating
+12 30 30 30
+standing male poor
+0 0 medium
+ACT NPC
+ACT NOCTURNAL
+AFF SANCTUARY
+AFF PROTECTION
+IMM SUMMON
+C 'chill touch'
+#3809
+cloaked minotaur guard sentry~
+an Iseldhamin Sentry~
+A cloaked minotaur stands at the gate, staring at the outside in silence.
+~
+Dark eyes and a large bull like snout peek out from beneath the hood of a
+thick, black greatcloak.  Bits of snow, dirt and dried weeds and such stick
+to the outside of the greatcloak and the fur of this minotaur.  An undying
+sort of confidence and loyalty to duty permeates his very existence.  
+~
+0 0 0 minotaur~
+38 19d8+2213 2d12+28 30 100 charge
+50 50 50 50
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DISARM
+OFF DIRT_KICK
+IMM SUMMON
+CLASS warrior Gladiator none 
+#3810
+human traveler~
+a heavily-clothed traveler~
+A human wearing several layers of heavy clothing shuffles through the city.
+~
+~
+2300 0 0 human~
+18 9d8+489 3d8+2 12 100 none
+12 12 12 12
+standing male none
+0 0 medium
+ACT NPC
+ACT DIURNAL
+#3811
+silversmith ward mob~
+{wSteam and smoke pour out of the pipes and chimneys of the buildings surrounding you.{x~
+Silversmith ward mob
+~
+~
+0 0 0 human~
+180 5d5+5 0d0+0 0 100 none
+3850 3852 0 23
+standing male none
+0 0 medium
+ACT NPC
+ACT WARD_MOB
+#3812
+no name~
+a human merchant~
+A human lies here in bed, trying to get some rest before sunrise.
+~
+An expression of relaxation lazily sprawls across this human's face.  His
+dark hair is already messy from its contact with the pillow, and his arms
+rest in an "L" shape, one reaching past his head, and one almost straight
+out in front of him, but bent slightly.  
+~
+0 26999 0 human~
+20 10d8+604 3d8+15 20 100 punch
+0 0 0 0
+sleeping male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT NOCTURNAL
+OFF DODGE
+IMM SUMMON
+#3813
+dahmmun minotaur husky bartender~
+Dahmmun~
+A husky minotaur stands behind the bar, serving drinks.
+~
+A strange sort of formal apparel covers this bartender's body, made from
+various soft furs sewn together and a puffy silk sleeve on his left arm. 
+Though odd and pretty much ugly to most other races, the minotaurs find this
+garb to be the most tasteful and formal.  He is able to mix drinks without
+spilling a drop -- a display of incredible deftness, by minotaur standards. 
+~
+200 0 0 minotaur~
+40 20d8+2464 3d30+10 45 100 beating
+60 60 60 60
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DISARM
+OFF DODGE
+IMM SUMMON
+RES CHARM
+SHOPKEEPER OPEN 0 CLOSE 24 EXIT east
+#3814
+anti-paladin dark knight black figure~
+a dark knight~
+A stout figure covered entirely by heavy black platemail stands before the steps.
+~
+Faceless and nameless, this suit of black plate may not have an ounce of
+flesh within its confines at all, for all you know.  A large claymore rests
+within its hands, a horrid sort of mindlessness and confidence emanating
+from its being.  
+~
+-1000 0 0 unique~
+35 17d8+2500 3d10+39 40 100 cleave
+50 50 50 50
+standing male none
+AHMV 0 medium
+ACT NPC
+ACT SENTINEL
+ACT SMARTTRACK
+ACT GUILDGUARD
+AFF PROTECTION
+IMM SUMMON
+IMM CHARM
+IMM SLEEP
+B class EQUALTO 5 3894 SAY Ye may not pass.~
+C 'iceball'
+C 'curse'
+C 'blind'
+#3815
+fiend fiendish man guildmaster anti-paladin~
+the guildmaster~
+A fiendish man stands tall amidst the chaos surrounding him.
+~
+The features of this man are constantly shifting, the only quality of his
+visage that remains constant are the heavy wrinkles that are etched into his
+skin.  His wide, round eyes seem to move with the sporadic ebb and flow of
+motion in the room, quiet chanting escaping his lips.  Standing tall and
+even proud of what he is a part of down in this pit of horror, he shows
+those with the will to approach him how to spread this chaos.  
+~
+-1000 28257 0 demon~
+51 25d8+4274 3d30+60 90 100 defilement
+80 90 90 90
+standing male none
+0 W medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+OFF BERSERK
+OFF NO_TRACK
+AFF SANCTUARY
+IMM SUMMON
+RES COLD
+C 'energy drain'
+C 'plague'
+C 'iceball'
+C 'fireball'
+#3816
+behrum minotaur gray~
+Behrum~
+A gray-furred minotaur crouches behind the counter, staring at you.
+~
+A ridiculous amount of charms and trinkets cover this thin white
+minotaur.  Large wooden beads are hung around his neck, and smaller ones are
+upon his wrists, and a number of tiny metallic charms are tied to his long
+fur.  A single earring is set into his left ear.  He crouches behind the
+counter, rocking and humming, his eyes timid and suspicious.  
+~
+0 0 0 minotaur~
+35 17d8+1867 3d10+32 40 100 thwack
+30 30 30 30
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+OFF KICK
+OFF TRIP
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 24 EXIT east
+C 'blindness'
+C 'poison'
+C 'rejuvenate'
+C 'curse'
+#3817
+short minotaur bank teller~
+a bank teller~
+A short minotaur stands behind the counter, tapping her cheek.
+~
+Obviously bored, and not making much of an attempt to hide it, this
+banker taps her cheek, the counter and anything else she can get her hands
+on to keep from falling asleep.  A few bags of money sit just behind her,
+indicating that she is ready to help a customer of the bank... when the time
+comes.  
+~
+200 0 0 minotaur~
+30 15d8+1364 3d3+40 30 100 punch
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT BANKER
+IMM SUMMON
+#3818
+furrier minotaur~
+the furrier~
+A big minotaur cleans up a bundle of pelts behind the counter.
+~
+An apron of thick material covers the front end of the furrier's body,
+and a good amount of tanning fluids, blood and gore cover this apron.  His
+hands, however, aren't so much as gloved, and are soaked in things that
+would make some of the most seasoned necromancers shudder.  This grizzled,
+impatient minotaur glances up at you and seems to almost glare as he awaits
+your order.  
+~
+0 29801 0 minotaur~
+40 20d8+2464 3d20+50 50 100 cleave
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF TRIP
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 24 EXIT north
+#3819
+thin minotaur shopkeeper~
+a shopkeeper~
+A relatively thin minotaur is here, constantly speaking with customers.
+~
+An awkwardly wiry minotaur, the keeper of this shop is one of the most
+successful merchants in Iseldheim.  He strides about the store confidently,
+speaking with everyone about his fine products, and telling them the latest
+stories of feats accomplished with them.  His smile is almost as false and
+ridiculous as these tales, of course, but at the end of the day, he'll be
+the one on the way to the bank.  
+~
+0 0 0 minotaur~
+35 17d8+1867 30d3+30 30 100 punch
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 24 EXIT north
+#3820
+chanting ward mob~
+{cA chorus of chanting voices echoes through the ancient temple for a few moments, then stops abruptly.{x~
+A chanting ward mob is here
+~
+~
+0 0 0 human~
+500 100d1+0 0d0+0 0 100 none
+3874 3879 0 23
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT WARD_MOB
+IMM SUMMON
+#3821
+sleek brown falcon~
+a sleek brown falcon~
+A brown falcon glides through the air, staring down at the city.
+~
+Brown and black feathers cover the sleek and deadly frame of this bird of
+prey.  Its large black eyes scan the ground tirelessly for its next meal,
+keeping the rodent population of Iseldheim and the surrounding mountains in
+check.  
+~
+0 0 0 bat~
+10 5d8+151 3d6+9 0 100 claw
+0 0 0 0
+standing either none
+W 0 medium
+ACT NPC
+ACT DIURNAL
+#3822
+gray wolf dog hybrid~
+a gray wolf hybrid~
+A gray wolf-like dog pads through the streets silently.
+~
+This lanky gray dog trots through the streets, its eyes and ears at full
+alert, watching people it passes by.  A pink tongue hangs loosely out of its
+mouth as it looks for something to do.  
+~
+0 0 0 dog~
+10 5d8+151 3d5+10 0 100 bite
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+OFF DODGE
+RES COLD
+VUL FIRE
+#3823
+minotaur~
+a minotaur~
+A lone minotaur walks through the streets, his breath steaming in the crisp night air.
+~
+Against the street at an uneven rate beneath him seems incredibly loud. 
+Thick hair covers his body, inhabited by bits and pieces of dead, dried
+grass and probably a few parasites as well.  Two horns of an off-white color
+jut out from his skull, and a set of warm pelts blanket his body.  A puff of
+steam jets out of his nose every other step or so as he silently grumbles
+off to his destination.  
+~
+0 0 0 minotaur~
+22 11d8+731 4d8+28 30 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT OUTDOORS
+ACT NOCTURNAL
+#3824
+minotaur bartender hearty host ulgeiht~
+Ulgeiht~
+The hearty minotaur host of this tavern jokes with his guests and pours ale.
+~
+Old and merry, Ulgeiht is well-known amongst the townspeople of
+Iseldheim.  His tales and merriment (and supply of low-priced alcoholic
+beverages) have long been a staple in the community.  A slight bit of fat
+jiggles beneath his chin as he talks, but it is hardly visible beneath his
+beard-like patch of fur beneath his long chin.  
+~
+1000 0 0 minotaur~
+35 17d8+1867 10d8+36 40 100 beating
+30 10 10 10
+standing male poor
+0 0 medium
+ACT NPC
+ACT SENTINEL
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 23 EXIT west
+#3825
+minotaur guildmaster warrior~
+the warrior guildmaster~
+A tall, imposing minotaur actively teaches those of his guild here.
+~
+The most striking feature about this minotaur is that his fur is
+completely and utterly pitch-black.  He is considered the greatest warrior
+in Iseldheim.  The books that line his walls are a great testament to the
+fact that the art of war is as much of a science as it is an art, if not
+moreso.  Quietly and patiently, he guides his students through steps and
+lectures them on the tactics and maneuvers of combat.  
+~
+100 0 0 minotaur~
+51 25d8+4274 10d8+35 78 100 beating
+110 90 90 90
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+ACT INTELLIGENT
+OFF DISARM
+OFF FAST
+OFF DIRT_KICK
+IMM SUMMON
+CLASS warrior Tactician none 
+#3826
+minotaur fat weaponsmith~
+the weaponsmith~
+A fat minotaur hobbles about, working the forge.
+~
+Most uncommon in the minotaur culture, this young, fat minotaur has found
+success and even praise due to his mastery of his field.  His awkward gait
+is probably due to his tiny, hooved legs supporting his massive weight, but
+from the look of concentration on his face and the quality of the weapons
+that he deals, it is obvious why most of the city look beyond the
+superficiality of his features and recognize the wonders of his work.  
+~
+0 0 0 minotaur~
+40 20d8+2464 3d20+20 0 100 beating
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF DODGE
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 23 EXIT south
+#3827
+minotaur woman herbalist~
+the herbalist~
+A minotaur woman sits here cross-legged, grinding a root with a mortar and pestle.
+~
+Serene and at ease, the herbalist of Iseldheim works her craft here.  Her
+fur is shiny, well kept and sweet-smelling, which is most uncommon of her
+race.  She holds some books of lore in her hands and carefully experiments
+with different combinations of herbs, but for the most part she simply
+sticks with traditional herbs for traditional uses.  
+~
+300 25960 0 minotaur~
+40 20d8+2464 8d8+38 39 100 punch
+0 0 0 0
+standing female none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+AFF SANCTUARY
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 23 EXIT south
+C 'blindness'
+C 'burning vision'
+C 'divine malison'
+#3828
+minotaur silversmith~
+the silversmith~
+A heavily set minotaur polishes a newly made piece of jewelry.
+~
+His shoulders broad and rectangular and hands large and clumsy-looking,
+the silversmith has somehow established himself as the city's foremost
+silversmith.  The quality of his crafts is fine, and the designs upon them
+intricate.  It is a wonder that he can even handle such small objects in his
+freakishly big hands.  
+~
+0 25964 0 minotaur~
+40 20d8+2464 3d12+50 50 100 beating
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+OFF BASH
+OFF DODGE
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 23 EXIT west
+#3829
+no name~
+{yThe sweet and musty scent of burning wood reaches your nose as torches are lit throughout the city.{x~
+Shimmy shimmy.
+~
+~
+0 25968 0 human~
+95 47d8+0 0d0+0 0 100 none
+3800 3899 20 21
+standing male none
+0 0 medium
+ACT NPC
+ACT WARD_MOB
+#3830
+minotaur armorer grizzled~
+the armorer~
+A grizzled minotaur limps around behind the counter.
+~
+Battle scars, burn marks and a permanent frown seem to afflict this
+minotaur.  He does his work thoroughly and is present for his job every day,
+no matter what he coughs up or has bandaged or broken.  Unlike many others
+of his craft, he works alone and does not take in apprentices, steadfastly
+keeping to himself.  Though his manners seem odd, his armor does not, and he
+remains the best armorer in the city.  
+~
+0 25964 0 minotaur~
+45 22d8+3177 30d2+15 30 100 cleave
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+IMM SUMMON
+SHOPKEEPER OPEN 0 CLOSE 23 EXIT east
+NOTES ~
+#3831
+high zealot elderly minotaur~
+the High Zealot of Iseldheim~
+An elderly minotaur stands here quietly, a flame of religious passion burning in his eyes.
+~
+~
+0 0 0 minotaur~
+51 25d8+4274 3d20+29 0 100 wrath
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT TRAIN
+ACT PRACTICE
+IMM SUMMON
+C 'divine malison'
+C 'burning vision'
+C 'demonfire'
+C 'plague'
+#3899
+minotaur paladin guildmaster~
+the paladin guildmaster.~
+A tall minotaur paces the room slowly, a look of quiet contemplation on his face.
+~
+~
+1000 0 0 minotaur~
+51 25d8+4274 0d0+0 70 100 none
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT TRAIN
+ACT PRACTICE
+AFF SANCTUARY
+#0
+
+
+
+#OBJS
+#3800
+steaming well hot spring~
+a steaming well~
+A deep, ancient well emits steam from its mouth, feeding from hot springs.~
+fountain
+silver~
+30000 30000 'water' 0 0
+0 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#3801
+fire fireplace~
+a large stone fireplace~
+A stone fireplace crackles loudly, emanating warmth and light.~
+trash
+stone~
+0 0 0 0 0
+0 0 0 P
+ITEM GLOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#3802
+basket baskets offering~
+a series of offering baskets~
+A series of baskets have been placed around the altar containing offerings.~
+container
+energy~
+30000 0 0 30000 100
+52 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#3803
+fire pit~
+a fire pit~
+A caged fire pit sits in the center of the room.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+ITEM GLOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#3804
+circle torches~
+a circle of torches~
+A circle of torches casts dancing shadows upon the black walls.~
+trash
+unknown~
+0 0 0 0 0
+0 0 0 P
+ITEM GLOW
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#3805
+ring braided silver~
+a ring of braided silver~
+A shining ring of silver has been left here in the dirt.~
+armor
+silver~
+1 0 0 2 0
+35 1 200 P
+WEAR TAKE
+WEAR FINGER
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY MANA 20
+APPLY HP 20
+LIMIT 0
+TIMER 0
+
+#3806
+razor sharp mithril halberd polearm~
+a razor sharp mithril halberd~
+A rather large mithril polearm has been left here, apparently.~
+weapon
+mithril~
+polearm 10 4 cleave 0
+35 30 2100 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 1
+APPLY HITROLL 1
+LIMIT 0
+TIMER 0
+
+#3807
+runed summoning gloves~
+a pair of runed summoning gloves~
+A pair of runed gloves lie here, emitting a sickly glow.~
+armor
+flesh~
+1 0 1 4 0
+25 3 200 P
+WEAR TAKE
+WEAR HANDS
+ITEM GLOW
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY DAMROLL 1
+APPLY HITROLL 1
+APPLY MANA 50
+LIMIT 15
+TIMER 0
+
+#3808
+spear blackened steel~
+a spear of blackened steel~
+A darkened steel spear has been abandoned here.~
+weapon
+steel~
+spear 4 11 pierce 0
+35 18 800 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#3809
+black hooded greatcloak cloak cloth~
+a black hooded greatcloak~
+A thick and heavy pile of black cloth has been left here.~
+armor
+cloth~
+4 3 4 4 0
+28 5 0 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DEX -1
+APPLY DAMROLL 1
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#3810
+soft white bed~
+a soft bed with white sheets~
+A bed with a fluffy pillow sits here with its head against the wall.~
+furniture
+wood~
+2 400 EK 160 160
+52 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+TIMER 0
+
+#3811
+steel lever~
+a steel lever~
+A steel lever with a wooden handle is set into a gear-laden contraption.~
+armor
+unknown~
+3 3818 3870 0 0
+52 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+VERB pull
+TIMER 0
+NOTES Eastern elevator: TOP
+~
+
+#3812
+steel lever~
+a steel lever~
+A steel lever with a wooden handle is set into a gear-laden contraption.~
+armor
+unknown~
+0 3819 3870 0 0
+0 0 0 P
+LIMIT 0
+VERB pull
+TIMER 0
+NOTES Eastern elevator: BOTTOM
+~
+
+#3813
+steel lever~
+a steel lever~
+A steel lever with a wooden handle is set into a gear-laden contraption.~
+armor
+unknown~
+0 3825 3889 0 0
+0 0 0 P
+LIMIT 0
+VERB pull
+TIMER 0
+NOTES Northern elevator: TOP
+~
+
+#3814
+steel lever~
+a steel lever~
+A steel lever with a wooden handle is set into a gear-laden contraption.~
+armor
+steel~
+1 3824 3889 0 0
+0 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+VERB pull
+TIMER 0
+
+#3815
+steel lever~
+a steel lever~
+A steel lever with a wooden handle is set into a gear-laden contraption.~
+armor
+unknown~
+3 3816 3864 0 0
+0 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+VERB pull
+TIMER 0
+
+#3816
+steel lever~
+a steel lever~
+A steel lever with a wooden handle is set into a gear-laden contraption.~
+armor
+unknown~
+1 3815 3864 0 0
+0 0 0 P
+ITEM NOLOCATE
+LIMIT 0
+VERB pull
+TIMER 0
+
+#3817
+thick leather belt~
+a thick leather belt~
+A thick belt of leather lies here, coiled.~
+armor
+leather~
+2 1 1 1 0
+28 2 120 P
+WEAR TAKE
+WEAR WAIST
+APPLY DAMROLL 1
+APPLY HP 8
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#3818
+heavy fur poncho~
+a heavy fur poncho~
+A heap of smelly fur has been left here.~
+armor
+leather~
+6 2 6 2 0
+30 12 10 P
+WEAR TAKE
+WEAR ABOUT
+APPLY HP 10
+APPLY DAMROLL 2
+APPLY DEX -2
+APPLY STR 1
+LIMIT 0
+TIMER 0
+
+#3819
+black gray fur wolf pelt cloak~
+a thick wolf pelt cloak~
+A black and gray pile of fur lies here.~
+armor
+fur~
+2 2 4 5 0
+30 5 400 P
+WEAR TAKE
+WEAR ABOUT
+APPLY HITROLL 2
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+FLAG RES COLD
+FLAG VUL FIRE
+
+#3820
+bone hilted steel axe~
+a bone-hilted steel axe~
+A large axe with a hilt of polished bone has been left here.~
+weapon
+steel~
+weapon 5 8 slash 0
+35 28 200 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#3821
+heavy iron battleaxe~
+a heavy iron battleaxe~
+A heavy iron battleaxe rests upon the ground.~
+weapon
+iron~
+axe 4 11 cleave 0
+35 33 300 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX -1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#3822
+face devilish mask~
+a devilish mask~
+A wicked-looking wooden face sits on the floor.~
+armor
+wood~
+2 1 1 3 0
+25 3 700 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT MINOTAUR_ONLY
+ITEM ANTIGOOD
+LIMIT 0
+TIMER 0
+FLAG RES NEGATIVE
+FLAG VUL HOLY
+FLAG AFF 'detect good' none SHOW
+
+#3823
+talisman black rock~
+a talisman of black rock~
+A talisman of smooth black stone has been left here.~
+treasure
+stone~
+0 0 0 0 0
+38 1 1200 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+APPLY SVSPELL -10
+APPLY HP -10
+APPLY STR -2
+APPLY MANA 20
+LIMIT 0
+TIMER 0
+
+#3824
+opaque turquoise pendant~
+an opaque turquoise pendant~
+A pendant fashioned from turquoise rests on the floor.~
+treasure
+stone~
+0 0 0 0 0
+38 2 1200 P
+WEAR TAKE
+WEAR NECK
+ITEM MAGIC
+APPLY SVSPELL 3
+APPLY STR 2
+APPLY DAMROLL 2
+APPLY MANA -20
+LIMIT 0
+TIMER 0
+
+#3825
+pig head stick~
+a pig head on a stick~
+A rotting pig's head lies here, a wooden stick driven up through its neck.~
+staff
+flesh~
+20 3 3 'bless' 0
+15 10 100 P
+WEAR TAKE
+WEAR HOLD
+APPLY MANA 10
+APPLY SVSPELL -5
+APPLY WIS -1
+LIMIT 0
+TIMER 20
+
+#3826
+gnarled brown root~
+a gnarled brown root~
+A gnarled brown root lies here in a pile of its own dirt.~
+pill
+plant~
+30 'weaken' 'detect good' 'detect evil' 'detect invis'
+25 1 200 P
+WEAR TAKE
+ITEM MAGIC
+LIMIT 0
+TIMER 0
+
+#3827
+tuft dry weeds~
+a tuft of dry weeds~
+A tuft of dry weeds has been left here.~
+pill
+plant~
+35 'stoneskin' 'incandescense' 'reserved' 'reserved'
+30 1 400 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3828
+handful gray powder~
+a handful of gray powder~
+A handful of gray powder has been left here.~
+pill
+plant~
+15 'resist heat' 'burden' 'reserved' 'reserved'
+17 1 300 P
+WEAR TAKE
+ITEM MELTDROP
+LIMIT 0
+TIMER 48
+
+#3829
+bear pelt~
+a large bear pelt~
+A huge, smelly pelt lies here in a heap.~
+armor
+leather~
+5 3 6 5 0
+35 20 1900 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DEX -1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#3830
+deerskin gloves~
+some deerskin gloves~
+Some soft-looking gloves rest on the ground.~
+armor
+leather~
+1 0 1 1 0
+10 1 600 P
+WEAR TAKE
+WEAR HANDS
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#3831
+burlap sack~
+a large burlap sack~
+A worn burlap sack lies here, open.~
+container
+cloth~
+160 0 0 200 0
+1 2 50 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3832
+simple torch~
+a simple torch~
+A torch has been left here on the ground, its head slightly charred.~
+light
+unknown~
+0 0 48 0 0
+1 5 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3833
+spiked warhammer~
+a spiked warhammer~
+A spiked hammer of dark steel rests on the ground, a long red ribbon tied to its handle.~
+weapon
+steel~
+mace 4 10 crush 0
+35 31 400 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+APPLY HITROLL 2
+LIMIT 0
+TIMER 0
+
+#3834
+mug ale~
+a mug of ale~
+A clay mug filled with ale sits here.~
+drink
+clay~
+3 3 'ale' 0 0
+1 1 20 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3835
+tiny glass absinthe~
+a tiny glass of absinthe~
+A tiny glass filled with some strong-smelling green liquid has been left here.~
+drink
+glass~
+1 1 'absinthe' 0 0
+1 1 200 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3836
+lamb stew~
+some lamb stew~
+A steaming bowl of stew has been left here.~
+food
+clay~
+18 7 0 0 0
+1 2 40 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3837
+spiked battlehelm helmet spikes~
+a spiked battlehelm~
+An oddly-shaped helmet covered with spikes has been left here.~
+armor
+steel~
+3 6 3 2 0
+35 3 950 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT MINOTAUR_ONLY
+APPLY HP 10
+APPLY STR 1
+APPLY DAMROLL 2
+LIMIT 0
+TIMER 0
+
+#3838
+round hoop hooveguards hoove steel~
+some steel hooveguards~
+Some thick, round and hoop-like pieces of steel lie here.~
+armor
+steel~
+1 2 1 1 0
+24 5 300 P
+WEAR TAKE
+WEAR FEET
+RESTRICT MINOTAUR_ONLY
+APPLY MOVE 20
+APPLY DEX 1
+LIMIT 0
+TIMER 0
+
+#3839
+razor sharp hooveguards hoove guard~
+some razor-edged hooveguards~
+A pair of sharp hooveguards have been left here.~
+armor
+unknown~
+3 6 3 1 0
+35 6 3000 P
+WEAR TAKE
+WEAR FEET
+RESTRICT MINOTAUR_ONLY
+APPLY STR 1
+APPLY DEX -1
+APPLY DAMROLL 2
+LIMIT 11
+TIMER 0
+
+#3840
+iron minotaur battlehelm~
+an iron minotaur battlehelm~
+An engraved battlehelm fit for a minotaur has been left here.~
+armor
+iron~
+5 6 3 2 0
+30 4 400 P
+WEAR TAKE
+WEAR HEAD
+RESTRICT MINOTAUR_ONLY
+APPLY HP 12
+APPLY CON 2
+APPLY DAMROLL 2
+LIMIT 20
+TIMER 0
+
+#3841
+glass oakwine~
+a glass of oakwine~
+A wide-mouthed glass filled to the brim with a honey-colored liquid lies here.~
+drink
+glass~
+3 3 'mead' 0 0
+1 1 70 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#3842
+roasted falcon~
+some roasted falcon~
+A well-cooked and well-seasoned bird lies on the ground.~
+food
+meat~
+10 7 0 0 0
+1 2 90 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+
+#3843
+spiked bronze mace~
+a spiked bronze mace~
+A bronze mace covered with spikes has been left here.~
+weapon
+bronze~
+mace 3 11 crush 0
+20 20 200 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#3844
+iron greataxe axe~
+an iron greataxe~
+An long-hafted axe with an oversized head has been left here.~
+weapon
+iron~
+axe 4 10 slash 0
+30 33 500 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -2
+APPLY DAMROLL 3
+LIMIT 0
+TIMER 0
+
+#3845
+whip iron chains handle~
+a whip of iron chains~
+A series of chains connected to a single handle has been left here.~
+weapon
+steel~
+whip 5 8 whip 0
+35 27 800 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#3846
+silver longsword iseldhamin war blade~
+an Iseldhamin War Blade~
+A heavy silver longsword of fine make has been left here.~
+weapon
+silver~
+sword 6 7 slash 0
+1 28 4000 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR 1
+APPLY HITROLL 1
+APPLY DAMROLL 5
+LIMIT 4
+TIMER 0
+
+#3847
+embroidered orange robes cloth~
+some embroidered orange robes~
+A large amount of orange cloth has been left here.~
+armor
+cloth~
+0 0 0 0 0
+23 1 40 P
+WEAR TAKE
+WEAR ABOUT
+ITEM BLESS
+APPLY MANA 20
+APPLY SVSPELL -5
+APPLY WIS 2
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#3800
+Inside the Southern Gate~
+A wide gateway stands just to the south, black walls framing the dark
+portcullis that digs deeply into the dark mountain rock that litters the
+ground.  Snow drifts up against the city walls, melting into a slush before
+the traveled gateway.  To the south, a road leads off toward Melcene, while
+to the north, the main road snakes through the city.  
+~
+city
+ROOM LAW
+D NORTH 3801 0 0
+~
+A worn street begins to the north.
+~
+D SOUTH 29417 0 0
+door~
+~
+OWNER none~
+#3801
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the north and south, where you can see the southern
+gate of the city.  
+~
+city
+ROOM LAW
+D NORTH 3802 0 0
+~
+The worn street continues.
+~
+D SOUTH 3800 0 0
+~
+The southern gate lies to the south.
+~
+OWNER none~
+#3802
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the north and south, while to the west, a wide
+alleyway opens up.  A few doors and signs cover the sides of the buildings
+that form the northern and southern borders of the alleyway, and a fair
+amount of the little traffic that traverses the city enters and exits.  
+~
+city
+ROOM LAW
+D NORTH 3803 0 0
+~
+The worn street continues.
+~
+D SOUTH 3801 0 0
+~
+The worn street continues.
+~
+D WEST 3850 0 0
+~
+A dark alleyway departs from this main street to the west.
+~
+OWNER none~
+#3803
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The acrid smell of molten metal fills the air here.  The smoke stacks set
+upon the top of the building to the east that billow dark smoke into the sky
+probably have something to do with that.  A heavy wooden door leads into the
+building to the east and a small sign hangs over it.  The street continues
+to the north and south, where the southern gate lies.  
+~
+city
+ROOM LAW
+D NORTH 3804 0 0
+~
+The worn street continues.
+~
+D EAST 3869 A 0
+door~
+A large doorway leads into the silversmith's shop.
+~
+D SOUTH 3802 0 0
+~
+The worn street continues.
+~
+E sign~
+This simple yet elegant sign reads:
+Tarluhn's Silver Shop
+~
+OWNER none~
+#3804
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the east and south, heading deeper into the city and
+to the southern gate, respectively.  
+~
+city
+ROOM LAW
+D EAST 3805 0 0
+~
+The worn street continues.
+~
+D SOUTH 3803 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3805
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the east and west, where in the distance it bends to
+the south.  
+~
+city
+ROOM LAW
+D EAST 3806 0 0
+~
+The worn street continues.
+~
+D WEST 3804 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3806
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+A door leads into a building to the south.  Through frosty windows, you can
+make out the warm glow of a fireplace and hear some laughter.  To the west,
+the street continues.  
+~
+city
+ROOM LAW
+D EAST 3807 0 0
+~
+The worn street continues.
+~
+D SOUTH 3898 A 0
+door~
+A doorway leads into a warm and cozy-looking building.
+~
+D WEST 3805 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3807
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the north and west.  
+~
+city
+ROOM LAW
+D NORTH 3808 0 0
+~
+The worn street continues.
+~
+D WEST 3806 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3808
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+A sort of intersection is here.  To the north and south, the street
+continues, while to the east, a bridge-like walkway leads off to the eastern
+gate and a series of other places.  
+~
+city
+ROOM LAW
+D NORTH 3809 0 0
+~
+The worn street continues.
+~
+D EAST 3818 0 0
+~
+A short wooden walkway leads up to an odd contraption.
+~
+D SOUTH 3807 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3809
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the north and bends to the west, and to the south.  
+~
+city
+ROOM LAW
+D NORTH 3810 0 0
+~
+The worn street continues.
+~
+D SOUTH 3808 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3810
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+The street continues to the west, where it eventually splits off into many
+directions, and to the south.  
+~
+city
+ROOM LAW
+D SOUTH 3809 0 0
+~
+The worn street continues.
+~
+D WEST 3811 0 0
+~
+The worn street continues.
+~
+OWNER none~
+#3811
+A Worn Street Through the City~
+The ground here is composed of densely packed dirt, wet and frozen over
+many times by nature to produce a frosty substance hardly softer than rock. 
+It accomodates hooves just fine.  The buildings surrounding this street are
+made of bricks of dark stone that have been masterfully placed by craftsmen.
+To the west, whatever traffic happens to fill the streets splits into
+several different directions, and a bit of steam can be seen rising up into
+the air.  
+~
+city
+ROOM LAW
+D EAST 3810 0 0
+~
+The worn street continues.
+~
+D WEST 3812 0 0
+~
+To the west, you can make out Tarvhaalik's Square.
+~
+OWNER none~
+#3812
+Tarvhaalik's Square~
+A fair amount of traffic ends up passing through this one particular
+area.  This is no anomaly, considering that the temple lies atop the stairs
+to the south, the most frequently used well has been dug here for ages, and
+from here, most of the city is easily accessible.  The ground is made of
+densely packed and frozen dirt.  A rim of frost even surrounds the well,
+which steam constantly billows out of.  To the north and west are some of
+Iseldheim's bridges and walkways, serving to connect the mountain city,
+which spans many ledges.  
+~
+city
+ROOM LAW
+D NORTH 3823 0 0
+~
+A wooden plankway runs off to the north.
+~
+D EAST 3811 0 0
+~
+A worn street begins to the east.
+~
+D SOUTH 3871 0 0
+~
+~
+D WEST 3813 0 0
+~
+A wooden walkway runs off to the west.
+~
+OWNER none~
+#3813
+Upon a Wide Wooden Walkway~
+The planks from which this walkway is made are of ironwood, the strongest
+and most durable kind of wood in all of Shalar.  The hollow clomping of
+hooves upon the wood can be heard as the natives of these mountains make use
+of it.  To the east, you can make out Tarvhaalik's Square, to the southeast
+a massive stairway rises up to meet a neighboring mountain, and to the west,
+the walkway continues.  
+~
+city
+ROOM LAW
+D EAST 3812 0 0
+~
+Tarvhaalik's Square lies to the east.
+~
+D WEST 3814 0 0
+~
+The walkway continues.
+~
+OWNER none~
+#3814
+Upon a Wide Wooden Walkway~
+The planks from which this walkway is made are of ironwood, the strongest
+and most durable kind of wood in all of Shalar.  The hollow clomping of
+hooves upon the wood can be heard as the natives of these mountains make use
+of it.  To the east, you can make out Tarvhaalik's Square, to the southeast
+a massive stairway rises up to meet a neighboring mountain, and to the
+south, the walkway continues.  
+~
+city
+ROOM LAW
+D EAST 3813 0 0
+~
+The walkway continues.
+~
+D SOUTH 3815 0 0
+~
+The walkway continues.
+~
+OWNER none~
+#3815
+Upon a Wide Wooden Walkway, Before a Lift~
+The planks from which this walkway is made are of ironwood, the strongest
+and most durable kind of wood in all of Shalar.  The hollow clomping of
+hooves upon the wood can be heard as the natives of these mountains make use
+of it.  To the north, the walkway continues.  To the northeast, you can see
+Tarvhaalik's Square and a massive stairway.  A huge mechanism that involves
+gears, ropes and a wooden platform towers above the platform and descends to
+the street far below begins where the walkway abruptly ends.  
+A small sign has been placed next to the contraption.
+~
+city
+ROOM LAW
+D NORTH 3814 0 0
+~
+The walkway continues.
+~
+D WEST 3864 0 0
+~
+The contraption towers over you to the west.
+~
+E sign~
+How to operate the Iseldhamin Lift:
+ 
+Pull the lever below this sign, then quickly step onto the lift before it
+begins to move.  Wait for the lift to reach the ledge beneath, then exit.
+ 
+If the lift is not on the same ledge as you are, then pull the lever to summon it.
+~
+OWNER none~
+#3816
+A Well-Paved Street, Before a Lift~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The road
+continues to the north, and to the east, a strange mechanism towers high
+above you, connecting to the walkway above.  The western gate lies to the
+west.  
+A small sign has been placed next to the contraption.
+~
+city
+ROOM LAW
+D NORTH 3829 0 0
+~
+The street continues.
+~
+D EAST 0 0 0
+~
+The large contraption towers over you to the east.
+~
+D WEST 3817 0 0
+~
+You can see the western gate over to the west.
+~
+E sign~
+How to operate the Iseldhamin Lift:
+ 
+Pull the lever below this sign, then quickly step onto the lift before it
+begins to move.  Wait for the lift to reach the ledge beneath, then exit.
+ 
+If the lift is not on the same ledge as you are, then pull the lever to summon it.
+~
+OWNER none~
+#3817
+Inside the Western Gate~
+A wide gateway stands just to the west, crafted from the thick black rock
+as the surrounding mountains.  Snow drifts up against the city walls,
+melting into a slush before the traveled gateway.  Beyond the gates, to the
+west, a worn and barren trail leads off into the wilderness.  To the east
+you can see the streets of Iseldheim.  
+~
+city
+ROOM LAW
+D EAST 3816 0 0
+~
+~
+D WEST 24813 0 0
+door~
+~
+OWNER none~
+#3818
+Upon a Wooden Walkway, Before a Lift~
+The planks from which this walkway is made are of ironwood, known for its
+strength and beauty throughout Shalar.  The hollow clomping of hooves upon
+the wood can be heard as the natives of these mountains make use of it.  A
+large mechanism of gears, ropes and a broad wooden platform rises high above
+to another walkway.  To the west, a worn street runs to the north and south.
+A small sign has been placed next to the contraption.
+~
+city
+ROOM LAW
+D NORTH 0 0 0
+~
+The towering contraption lies to the north.
+~
+D WEST 3808 0 0
+~
+A worn street runs north and south, to the west.
+~
+E sign~
+How to operate the Iseldhamin Lift:
+ 
+Pull the lever below this sign, then quickly step onto the lift before it
+begins to move.  Wait for the lift to reach the ledge beneath, then exit.
+ 
+If the lift is not on the same ledge as you are, then pull the lever to summon it.
+~
+OWNER none~
+#3819
+Upon a Wooden Walkway, Before a Lift~
+He planks from which this walkway is made are of ironwood, the strongest
+and most durable kind of wood in all of Shalar.  The hollow clomping of
+hooves upon the wood can be heard as the natives of these mountains make use
+of it.  To the east, the walkway turns into a ramp that leads up to the
+eastern gate, while to the south, the walkway continues to a landing.  To
+the west, a contraption set with gears, ropes and a broad platform descends
+to the city below.  
+A small sign has been placed next to the contraption.
+~
+city
+ROOM LAW
+D EAST 3820 0 0
+~
+A wide ramp leads up to the eastern gate.
+~
+D SOUTH 3846 0 0
+~
+~
+D WEST 3870 0 0
+~
+~
+E sign~
+How to operate the Iseldhamin Lift:
+ 
+Pull the lever below this sign, then quickly step onto the lift before it
+begins to move.  Wait for the lift to reach the ledge beneath, then exit.
+ 
+If the lift is not on the same ledge as you are, then pull the lever to summon it.
+~
+OWNER none~
+#3820
+At the Bottom of a Wide Ramp~
+Here, a wooden ramp leads down from the eastern gate to meet a walkway,
+which leads to the rest of the city.  Both the ramp and the walkway are
+crafted from ironwood.  The hollow clomping of hooves upon the wood can be
+heard as the natives of these mountains make use of it.  To the west, the
+walkway continues, while above and to the east lies the eastern gate.  
+~
+city
+ROOM LAW
+D WEST 3819 0 0
+~
+A walkway leads to a strange, towering structure.
+~
+D UP 3821 0 0
+~
+The ramp leads up toward the eastern gate.
+~
+OWNER none~
+#3821
+Overlooking the City of Iseldheim~
+From here, you can see almost all of Iseldheim.  Most of it lies below
+you, save the Great Temple, which towers above you still atop a mountain's
+peak.  The entire city is spread out over many levels, strange contraptions,
+steam and smoke from forges and fireplaces, and and plenty of work and
+wandering going on in the streets below.  Soft, white snow blankets much of
+the city, and contrasts greatly with the jagged black rocks that make up
+most of the surrounding mountains.  The silver mines can be seen to the
+northwest, forming the northern border of the city.  
+~
+city
+ROOM LAW
+D EAST 3822 0 0
+~
+The eastern gate lies just to the east.
+~
+D DOWN 3820 0 0
+~
+A ramp leads down into the city.
+~
+OWNER none~
+#3822
+Inside the Eastern Gate~
+A wide gateway stands just to the east, black walls framing a dark
+portcullis that digs deeply into the dark mountain rock that litters the
+ground.  Snow drifts up against the city walls, melting into a slush before
+the traveled gateway.  Off to the west, smoke rises into the air
+accompanying the odor of molten metal.  A path to the east runs off into the
+wilderness, blanketed with snow.  To the west the road comes sharply to an
+overlook, beyond which the city of Iseldheim is visible in its totality.  
+~
+city
+ROOM LAW
+D EAST 24800 0 0
+~
+~
+D WEST 3821 0 0
+~
+~
+OWNER none~
+#3823
+Upon a Narrow Walkway~
+The planks from which this walkway is made are of ironwood, the strongest
+and most durable kind of wood in all of Shalar.  The hollow clomping of
+hooves upon the wood can be heard as the natives of these mountains make use
+of it.  To the south, you can make out Tarvhaalik's Square and the stairway
+to the temple.  To the north, the walkway continues.  
+~
+city
+ROOM LAW
+D NORTH 3824 0 0
+~
+~
+D SOUTH 3812 0 0
+~
+~
+OWNER none~
+#3824
+Upon a Narrow Walkway, Before a Lift~
+Here, the walkway ends abruptly.  A large mechanism set with metal gears
+and huge, thick ropes towers up above the walkway and connects to a broad
+wooden platform.  Far below, you can make out a well-paved street that leads
+to the north and southwest.  To the south, the walkway continues until it
+reaches Tarvhaalik's Square.  The city itself continues far to the north
+until it reaches the jagged horizon of the silver mines in the distance.  
+A small sign has been placed next to the contraption.
+~
+city
+ROOM LAW
+D NORTH 0 0 0
+~
+~
+D SOUTH 3823 0 0
+~
+~
+E sign~
+How to operate the Iseldhamin Lift:
+ 
+Pull the lever below this sign, then quickly step onto the lift before it
+begins to move.  Wait for the lift to reach the ledge beneath, then exit.
+ 
+If the lift is not on the same ledge as you are, then pull the lever to summon it.
+~
+OWNER none~
+#3825
+A Well-Paved Street, Before a Lift~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The street
+continues to the north and south, and to the east, a strange mechanism
+towers high above you, connecting to the walkway above.  
+A small sign has been placed next to the contraption.
+~
+city
+ROOM LAW
+D NORTH 3831 0 0
+~
+The street continues.
+~
+D EAST 3889 0 0
+~
+The strange contraption towers over you to the east.
+~
+D SOUTH 3826 0 0
+~
+The street continues.
+~
+E sign~
+How to operate the Iseldhamin Lift:
+ 
+Pull the lever below this sign, then quickly step onto the lift before it
+begins to move.  Wait for the lift to reach the ledge beneath, then exit.
+ 
+If the lift is not on the same ledge as you are, then pull the lever to summon it.
+~
+OWNER none~
+#3826
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The road
+continues to the north and south, and to the east squats a rather large
+complex.  
+~
+city
+ROOM LAW
+D NORTH 3825 0 0
+~
+The street continues.
+~
+D EAST 3887 0 0
+~
+A large complex squats to the east.
+~
+D SOUTH 3827 0 0
+~
+The street continues.
+~
+OWNER none~
+#3827
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The street
+continues to the north and west.  
+~
+city
+ROOM LAW
+D NORTH 3826 0 0
+~
+The street continues.
+~
+D WEST 3828 0 0
+~
+The street continues.
+~
+OWNER none~
+#3828
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The street
+continues to the east and west.  
+~
+city
+ROOM LAW
+D EAST 3827 0 0
+~
+The street continues.
+~
+D WEST 3829 0 0
+~
+The street continues.
+~
+OWNER none~
+#3829
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The street
+continues to the east and south.  
+~
+city
+ROOM LAW
+D EAST 3828 0 0
+~
+The street continues.
+~
+D SOUTH 3816 0 0
+~
+The street continues.
+~
+OWNER none~
+#3830
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#3831
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Buildings sit upon either side of the
+street, and above, wooden walkways connect rocky black ledges.  The street
+continues to the north and south.  
+~
+unused
+ROOM LAW
+D NORTH 3832 0 0
+~
+The street continues.
+~
+D SOUTH 3825 0 0
+~
+The street continues.
+~
+OWNER none~
+#3832
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  To the west, a narrow and rough trail
+snakes down the side of the mountain, dropping beneath sight.  To the north
+and south, the street continues.  
+~
+unused
+ROOM LAW
+D NORTH 3833 0 0
+~
+The street continues.
+~
+D SOUTH 3831 0 0
+~
+The street continues.
+~
+OWNER none~
+#3833
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  Here, the street intersects with an
+side street, which does not seem to be as well kept as most of the city's
+streets.  The main road continues to the north and south, while the side
+street crosses to the east and west.  The jagged black rocks of the silver
+mine slouch over the city further to the north.  
+~
+unused
+ROOM LAW
+D NORTH 3834 0 0
+~
+The street continues.
+~
+D EAST 3838 0 0
+~
+A side street branches off from the main road.
+~
+D SOUTH 3832 0 0
+~
+The street continues.
+~
+D WEST 3842 0 0
+~
+A side street branches off from the main road.
+~
+OWNER none~
+#3834
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  The road seems to become more rough
+gradually, however, and buildings no longer sit upon either side of the
+street.  The jagged black rocks of the silver mine slouch over the city
+further to the north.  
+~
+unused
+ROOM LAW
+D NORTH 3835 0 0
+~
+The street continues.
+~
+D SOUTH 3833 0 0
+~
+The street continues.
+~
+OWNER none~
+#3835
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  The road seems to become more rough
+gradually, however, and buildings no longer sit upon either side of the
+street.  The jagged black rocks of the silver mine slouch over the city
+further to the north.  
+~
+unused
+ROOM LAW
+D NORTH 3836 0 0
+~
+The street continues.
+~
+D SOUTH 3834 0 0
+~
+The street continues.
+~
+OWNER none~
+#3836
+A Well-Paved Street~
+Paved smoothly by the city's artisians, this street winds from the
+western to the northern side of the city.  A bit of frost and snow lines the
+sides of the street, yet the middle portion is clean and dry for the most
+part.  Frost still does creep across the path at times, but the road is
+maintained so that it is not overrun.  To the west, a narrow and rough trail
+snakes down the side of the mountain, dropping beneath sight.  To the north
+and south, the street continues.
+~
+unused
+ROOM LAW
+D NORTH 3837 0 0
+door~
+A street of rough stone begins in this direction.
+~
+D SOUTH 3835 0 0
+~
+The street continues.
+~
+D WEST 3891 0 0
+~
+A trail snakes snakes off around the buildings, bending around the mountain and out of view.
+~
+OWNER none~
+#3837
+A Rough Road~
+This road seems to have been formed more by constant traffic than by
+actual paving.  The dirt is marked by wheels and hooves, while snow and ice
+make it firm and hard.  The jagged black rocks of the silver mines can be
+seen to the north, yet there seems to be an obstacle of some sort in the
+way, blocking the pathway to the entrance.  To the south lie the streets of
+Iseldheim.  
+~
+unused
+ROOM LAW
+D NORTH 2800 0 0
+door~
+A rough road continues on to the north.
+~
+D SOUTH 3836 0 0
+~
+A well-paved street begins to the south.
+~
+OWNER none~
+#3838
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  Pungent odors waft through this area, highly detectable
+despite the cold weather.  The sign above the door set into the seemingly
+unstable building to the north may provide an explaination.  
+~
+unused
+ROOM LAW
+D NORTH 3881 A 0
+door~
+A shack-like structure of black stone lies to the north.
+~
+D EAST 3839 0 0
+~
+The snow-covered street continues.
+~
+D WEST 3833 0 0
+~
+The main street runs north and south, to the west.
+~
+OWNER none~
+#3839
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  Some rugged-looking men wander in and out of the building
+to the south, which bears a rather large and ornate sign above its doorway. 
+~
+unused
+ROOM LAW
+D EAST 3840 0 0
+~
+The snow-covered street continues.
+~
+D SOUTH 3880 A 0
+door~
+A door to the south leads into the furrier's shop.
+~
+D WEST 3838 0 0
+~
+The snow-covered street continues.
+~
+E sign~
+The sign reads: The Furrier of Iseldheim.
+~
+OWNER none~
+#3840
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  The street continues to the east, where you can see the
+its end and to the west.  
+~
+unused
+ROOM LAW
+D EAST 3841 0 0
+~
+The snow-covered street continues.
+~
+D WEST 3839 0 0
+~
+The snow-covered street continues.
+~
+OWNER none~
+#3841
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  To the east, a large wrought iron fence has been
+constructed to keep the city's denizens from wandering beyond, into
+treacherous, cliff-ridden rocky grounds.  
+~
+unused
+ROOM LAW
+D NORTH 3883 0 0
+~
+A small, new-looking building squats to the north.
+~
+D WEST 3840 0 0
+~
+The snow-covered street continues.
+~
+OWNER none~
+#3842
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  To the south, a wooden door bearing a plaque has been set
+into the wall of a short, squatty building.  
+~
+unused
+ROOM LAW
+D EAST 3833 0 0
+~
+The well-paved main street runs north and south, to the east.
+~
+D SOUTH 3882 A 0
+door~
+A wooden door leads into the shop of essentials.
+~
+D WEST 3843 0 0
+~
+The snow-covered street continues.
+~
+OWNER none~
+#3843
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  To the north is an odd little door with a small sign
+hanging over it, while to the east and west, the side street continues.  
+~
+unused
+ROOM LAW
+D NORTH 3884 A 0
+door~
+The doorway to the north is covered with scratches and markings, leading into a dark building.
+~
+D EAST 3842 0 0
+~
+The snow-covered street continues.
+~
+D WEST 3844 0 0
+~
+The snow-covered street continues.
+~
+OWNER none~
+#3844
+A Snow-Covered Side Street~
+This street is not as well-kept as most of the city's streets, as it is
+covered in snow and ice.  The bricks that make these buildings up are jagged
+and uneven, as if they were pulled straight out of the surrounding mountains
+for construction.  To the west is a wall of solid rock, while to the east
+the alley continues toward the main street.  
+~
+unused
+ROOM LAW
+D EAST 3843 0 0
+~
+The snow-covered street continues.
+~
+OWNER none~
+#3845
+A Roadblock~
+A large, wooden structure has been used to seal off the entrance of the
+silver mines from ordinary citizens.  The jagged black rocks of the mines
+hide as many secrets as they do silver, and it will be some time before the
+denizens of this city allow common folk to enter the mines unattended.  
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#3846
+A Wide Wooden Landing~
+This landing is almost perfectly square and very broad.  The tall wooden
+railing on all sides of it helps to keep any unfortunate mishaps from
+occuring, while still allowing one to see the view.  Below this landing is
+the jagged peak of a small crag, into which has been placed a thick pillar
+to support this landing.  
+~
+city
+ROOM LAW
+D NORTH 3819 0 0
+~
+The walkway continues, and a towering contraption is visible to the northwest.
+~
+D WEST 3849 0 0
+~
+A bridge leads to a ledge in the distance.
+~
+OWNER none~
+#3847
+Upon a Flat Plateau~
+Snow covers the hard, flat ground atop this mesa, along with a few
+seemingly strangled brown weeds that grope desperately for air.  Just to the
+north lies a doorway to a lone house that sits on here, puffing out smoke. 
+Off of every side of this natural platform, there is a sheer drop, though a
+short distance away and almost on the same level on each side, you can see
+the rest of the city.  
+~
+city
+ROOM LAW
+D NORTH 3848 A 0
+door~
+A doorway leads into the lone house.
+~
+D EAST 3849 0 0
+~
+A wooden walkway leads off to a landing in the distance.
+~
+OWNER none~
+#3848
+The Weapon Forge~
+The entire inside of this cold, small building is made up of granite
+blocks.  A number of steel and iron weapons are on display, and a single
+mithril weapon rests in a display case on the eastern wall.  The forge is in
+plain view, next to the northern wall.  A short granite counter squats right
+in front of the forge, often times becoming quite hot.  A door leads out of
+the building to the south.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3847 A 0
+~
+A doorway leads outside.
+~
+OWNER none~
+#3849
+A Wooden Bridge Leading to a Ledge~
+Thick wooden planks make up the floor of this bridge as well as the rails
+on its sides.  Far below, on either side of the bridge, lie other, smaller
+crags and rock formations.  To the west, a somewhat small, mesa-like crag
+stands alone from the rest of the city.  A house sits near its center.  To
+the east, the bridge stops at a small landing and turns to the north.  
+~
+city
+ROOM LAW
+D EAST 3846 0 0
+~
+The bridge continues until it reaches a landing.
+~
+D WEST 3847 0 0
+~
+The bridge leads to a wide ledge of sorts.
+~
+OWNER none~
+#3850
+A Frigid Cobblestone Alley~
+Only a slight amount of cold light has found its way into this alleyway. 
+Dark buildings loom over the alley on the north and south sides.  The scent
+of hickory smoke and cooking food lingers in the air, quite appetizing, and
+the cold, dark shades that this alley consists mainly of are broken
+occasionally by fireplaces that shine through windows of these buildings. 
+The cobblestones that this alley consists of are incredibly fine and tiny,
+achieving an interesting artistic effect as well as making it easier on the
+hooves of the natives.  To the south, a door leads into the building.  A
+small sign hangs over it.  
+~
+unused
+ROOM LAW
+D EAST 3802 0 0
+~
+A main street runs north and south, to the east.
+~
+D SOUTH 3853 A 0
+door~
+A door emblazoned with a picture of a shield leads into the building to the south.
+~
+D WEST 3851 0 0
+~
+The frigid alley continues.
+~
+OWNER none~
+#3851
+A Frigid Cobblestone Alley~
+Only a slight amount of cold light has found its way into this alleyway. 
+Dark buildings loom over the alley on the north and south sides.  The scent
+of hickory smoke and cooking food lingers in the air, quite appetizing, and
+the cold, dark shades that this alley consists mainly of are broken
+occasionally by fireplaces that shine through windows of these buildings. 
+The cobblestones that this alley consists of are incredibly fine and tiny,
+achieving an interesting artistic effect as well as making it easier on the
+hooves of the natives.  To the north, a door leads into the building.  A
+small sign hangs over it.  
+~
+unused
+ROOM LAW
+D NORTH 3855 A 0
+door~
+A doorway leads into the inn to the north.
+~
+D EAST 3850 0 0
+~
+The frigid alley continues.
+~
+D WEST 3852 0 0
+~
+The frigid alley continues.
+~
+OWNER none~
+#3852
+The End of a Frigid Cobblestone Alley~
+The vast sky opens up to the west, snow-covered mountains in the
+distance.  The wind whips through the open air and into the alley, running
+its course and coming out the far end.  A sturdy iron rail connects to the
+westernmost sides of the two buildings, preventing anyone unwary or drunk
+from falling down the nearly sheer drop to the valley below.  Dark buildings
+loom over the alley on the north and south sides.  The scent of hickory
+smoke and cooking food lingers in the air, quite appetizing, and the cold,
+dark shades that this alley consists mainly of are broken occasionally by
+fireplaces that shine through windows of these buildings.  The cobblestones
+that this alley consists of are incredibly fine and tiny, achieving an
+interesting artistic effect as well as making it easier on the hooves of the
+natives.  
+~
+unused
+ROOM LAW
+D EAST 3851 0 0
+~
+The frigid alley continues.
+~
+OWNER none~
+#3853
+The Anteroom of the Armory~
+Displays of plate armor and impressive-looking helms are set up all
+around this room, most likely to show off the finest goods that the armorer
+has to offer to those first entering the store.  The walls are made of large
+stone bricks, as is the fireplace which provides heat to the room.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3850 A 0
+~
+A doorway leads back out into the alleyway.
+~
+D WEST 3854 0 0
+~
+The counter awaits you to the west.
+~
+OWNER none~
+#3854
+The Counter of the Armory~
+A huge, black steel forge is visible a few feet behind the counter, and a
+number of blocks and scraps of raw materials are strewn about the back room.
+The counter itself is made up of the same sort of brick that the rest of the
+building is made out of.  If it were made of wood, there would definitely be
+danger of fire.  The anteroom lies back to the east.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 3853 0 0
+~
+The anteroom lies back to the east.
+~
+OWNER none~
+#3855
+The Entrance to the Ice Drake Inn~
+The air in this room is dry, rich and warm, due to the numerous
+fireplaces that burn within the confines of this building.  Carpets cover
+parts of the floor, which is composed of polished wooden planks.  This small
+entrance room is quite comfortable when compared to the harsh weather just
+outside the door.  To the east, a doorway leads into a small room from which
+a good deal of flickering warmth emanates, while to the west, a corridor
+goes on for a way and bends to the north.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 3856 0 0
+~
+You see a fire pit in the center of a small room to the east.
+~
+D SOUTH 3851 A 0
+door~
+A doorway leads back out into the frigid alley.
+~
+D WEST 3857 0 0
+~
+A short hallway heads west and bends to the north.
+~
+OWNER none~
+#3856
+A Sitting Room Within the Inn~
+A wooden ledge has been set into the walls, serving as a sort of bench
+that wraps all the way around the room in an almost full square.  In the
+center of the room lies a caged fire pit, which provides warmth to those who
+lounge in this small side room.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 3855 0 0
+~
+~
+OWNER none~
+#3857
+A Short Hallway~
+Patterned carpeting covers the floor in this short hallway, muffling the
+sound of the patrons' footsteps.  The air in this room is dry, rich and
+warm, due to the numerous fireplaces that burn within the confines of this
+building.  To the north lies the front desk of the Ice Drake Inn, while to
+the east lies the entrance.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3858 0 0
+~
+The front desk awaits you to the north.
+~
+D EAST 3855 0 0
+~
+The entrance to the Ice Drake Inn lies to the east.
+~
+OWNER none~
+#3858
+The Front Desk~
+A short counter juts out of the western wall, spanning halfway across the
+room.  Behind this counter, against the northern wall, a wooden staircase
+leads up into the upper level of the building.  Inn patrons constantly walk
+up and down the stairs, creating quite a racket.  To the west, the scent of
+smokey food and ale wafts in, while to the south a hallway leads back toward
+the entrance.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3857 0 0
+~
+A short hallway leads south and bends to the east.
+~
+D WEST 3860 0 0
+~
+A small bar lies to the west.
+~
+D UP 3859 0 0
+~
+A flight of stairs leads up to the inn's rooms.
+~
+OWNER none~
+#3859
+A Hallway Within the Inn~
+Ill-lit, this carpeted hallway leads to the Inn's rooms.  It feels
+slightly stuffy up here, and it is only a little bit warmer than it is
+outside.  Wooden rafters hang relatively low from the ceiling, and the
+wooden walls are decorated with various old and strange things, such as a
+set of antlers and an old, worthless belt.  To the south, the hallway
+continues and opens up to the east and west.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3861 0 0
+~
+To the south, the hallway splits to the east and west.
+~
+D DOWN 3858 0 0
+~
+A flight of stairs leads down to the front desk.
+~
+OWNER none~
+#3860
+The Ice Drake Tavern~
+The air is thick with sweet-smelling hickory smoke, and a rather large
+number of people sit about tables around the room eating meals of a roasted
+meat of some sort.  Reaching across the northern side of the room, the bar
+houses a great number of alcoholic drinks.  Sounds of clinking and clanking
+glasses and the scraping of forks and knives fill the air along with quite a
+bit of conversation, both hushed and loud.  To the east lies the front desk
+of the inn.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 3858 0 0
+~
+The front desk lies to the east.
+~
+OWNER none~
+#3861
+A Hallway Within the Inn~
+Ill-lit, this carpeted hallway leads to the Inn's rooms.  It feels
+slightly stuffy up here, and it is only a little bit warmer than it is
+outside.  Wooden rafters hang relatively low from the ceiling, and the
+wooden walls are decorated with various old and strange things, such as a
+rusty tin cup and a cracked axe hilt.  The hallway continues to the north,
+east and west, while a door rests in the southern wall.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3859 0 0
+~
+~
+D EAST 3862 0 0
+~
+The hallway continues to the east.
+~
+D WEST 3863 0 0
+~
+The hallway continues to the west.
+~
+OWNER none~
+#3862
+A Hallway Within the Inn~
+Ill-lit, this carpeted hallway leads to the Inn's rooms.  It feels
+slightly stuffy up here, and it is only a little bit warmer than it is
+outside.  Wooden rafters hang relatively low from the ceiling, and the
+wooden walls are decorated with various old and strange things, such as a
+useless ragdoll and a large iron nail.  To the north and south lie doors. 
+To the west, the hallway continues.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3867 A 0
+door~
+One of the inn's rooms lies through the doorway to the north.
+~
+D SOUTH 3868 A 0
+door~
+One of the inn's rooms lies through the doorway to the south.
+~
+D WEST 3861 0 0
+~
+The hallway continues to the west.
+~
+OWNER none~
+#3863
+A Hallway Within the Inn~
+Ill-lit, this carpeted hallway leads to the Inn's rooms.  It feels
+slightly stuffy up here, and it is only a little bit warmer than it is
+outside.  Wooden rafters hang relatively low from the ceiling, and the
+wooden walls are decorated with various old and strange things, such as a
+burlap sack and an old humanoid bone.  Doors lie to the north and south, and
+the hallway continues to the east.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3865 A 0
+door~
+One of the inn's rooms lies through the doorway to the north.
+~
+D EAST 3861 0 0
+~
+The hallway continues to the east.
+~
+D SOUTH 3866 A 0
+door~
+One of the inn's rooms lies through the doorway to the south.
+~
+OWNER none~
+#3864
+Upon a Lift~
+This lift is basically a wooden platform with a tall rail that runs
+around the edge of all its sides.  In the middle of the eastern and western
+sides, hinges are set into the rail, allowing it to open and close like a
+door in those directions.  
+~
+unused
+ROOM INDOORS
+D EAST 3815 0 0
+~
+~
+D WEST 0 0 0
+~
+~
+OWNER none~
+#3865
+A Room in the Inn~
+A thin layer of dust covers just about everything in this small room...
+Not from disuse, simply from the wooden structure of the building.  Cobwebs
+and spiderwebs make their homes in the corners, perhaps the insects'
+testament to the strange sort of warm coziness of the room.  A bed lies in
+the corner, its sheets disturbed slightly, and a door leads out to the
+south.  
+~
+unused
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3863 A 0
+~
+~
+OWNER none~
+#3866
+A Room in the Inn~
+A thin layer of dust covers just about everything in this small room...
+Not from disuse, simply from the wooden structure of the building.  Cobwebs
+and spiderwebs make their homes in the corners, perhaps the insects'
+testament to the strange sort of warm coziness of the room.  A bed lies in
+the corner, its sheets disturbed slightly, and a door leads out to the
+north.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3863 A 0
+~
+~
+OWNER none~
+#3867
+A Room in the Inn~
+A thin layer of dust covers just about everything in this small room...
+Not from disuse, simply from the wooden structure of the building.  Cobwebs
+and spiderwebs make their homes in the corners, perhaps the insects'
+testament to the strange sort of warm coziness of the room.  A bed lies in
+the corner, its sheets disturbed slightly, and a door leads out to the
+south.
+~
+unused
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3862 A 0
+~
+~
+OWNER none~
+#3868
+A Room in the Inn~
+A thin layer of dust covers just about everything in this small room...
+Not from disuse, simply from the wooden structure of the building.  Cobwebs
+and spiderwebs make their homes in the corners, perhaps the insects'
+testament to the strange sort of warm coziness of the room.  A bed lies in
+the corner, its sheets disturbed slightly, and a door leads out to the
+north.  A small table sits in the center of the room, covered with papers
+and books, and a splash of dark liquid has stained the wooden floor.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3862 A 0
+~
+~
+OWNER none~
+#3869
+The Silversmith's Shop~
+About six tables have been set up all around the room, each one holding
+pillows and pieces of soft, thick cloth upon which many pieces of silver
+jewelry have been placed.  This little shop is quite successful -- silver is
+what Iseldheim is famed for.  A wooden counter with a large scale upon it
+blocks the doorway to the back room, where various instruments for melting
+and molding the silver can be seen.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 3803 A 0
+~
+A door leads out to the city streets.
+~
+OWNER none~
+#3870
+Upon a Lift~
+This lift is basically a wooden platform with a tall rail that runs
+around the edge of all its sides.  In the middle of the eastern and southern
+sides, hinges are set into the rail, allowing it to open and close like a
+door in those directions.  
+~
+city
+ROOM LAW
+D EAST 3819 0 0
+~
+~
+D SOUTH 0 0 0
+~
+~
+#3871
+The Bottom of a Tall Granite Staircase~
+The weathered staircase that juts out of the mountain ledge that you
+stand upon ascends rather steeply to a closely neighboring peak.  Its grey
+stone is chipped in some places and weathered, but still incredibly stable. 
+The faint scent of molten silver drifts by when the wind blows just right. 
+Tarvhaalik's Square is back to the north.  
+~
+city
+ROOM LAW
+D NORTH 3812 0 0
+~
+Tarvhaalik's Square lies to the north.
+~
+D UP 3872 0 0
+~
+The stairs begin, gradually climbing upward to a high ledge.
+~
+OWNER none~
+#3872
+A Broad Landing~
+Strong and biting winds batter this solid stairway and those who walk
+upon it.  It is wide enough for four large people to walk side by side and
+still be safe, but it is not fitted with any sort of railing for a
+safeguard.  The staircase continues upward for a way yet, its base lying
+just below you.  
+~
+city
+ROOM LAW
+D SOUTH 3886 0 0
+~
+The landing continues to the south.
+~
+D DOWN 3871 0 0
+~
+The stairs continue downward.
+~
+OWNER none~
+#3873
+Before the Temple of Iseldheim~
+A simple and ancient temple rests upon the top of the stairs, upon a
+flattened peak.  Chilling winds dart into the temple, giving it voice to
+wail its mournful song to the earthen sentinels in the distance, grimly
+hulking over their windswept valleys.  The stone stairway slowly descends to
+the main square of the village to the north, its lack of railing almost
+compensated for by its width.  Far below, the city of Iseldheim sprawls out
+with its many bridges, walkways, smoke stacks and chimneys, letting off a
+warm orange glow to contrast with the natural white and blue hues lent to
+the area by the snow-covered mountains.  
+~
+city
+ROOM LAW
+D SOUTH 3874 0 0
+~
+The main chamber of the temple lies beyond the portal to the south.
+~
+D DOWN 3886 0 0
+~
+The stairs continue downward.
+~
+OWNER none~
+#3874
+The Main Chamber of the Temple of Iseldheim~
+A rectangular portal to the north opens up to the outside, revealing the
+sky and the jagged horizon of what seems to be endless mountains.  Sharp
+gusts of cold wind dart into this dark stone chamber, giving a hollow voice
+to the temple's solemn walls.  Twin hallways branch off to the east and
+west, bending in opposite directions into quiet darkness.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3873 0 0
+~
+The open sky greets you out the large doorway to the north.
+~
+D EAST 3876 0 0
+~
+A dark hallway bends to the north.
+~
+D SOUTH 3875 0 0
+~
+You can see some movement and hear chanting from the south.
+~
+D WEST 3878 0 0
+~
+A dark hallway bends to the south.
+~
+D DOWN 24531 0 0
+door~
+Young adventurers may take this route to the famed Shalaran Academy.
+~
+OWNER none~
+#3875
+At the High Altar of Iseldheim~
+The sound of the frigid winds howling through the ancient temple's maw
+echoes through this dark stone chamber.  Despite this slightly unsettling
+chorus, the temple still remains a place of peace, comfort and rest.  A
+granite altar stands in the center of the room, its sides adorned with
+somewhat weathered carvings.  Baskets filled with offerings from bread and
+ale to gilded blades and trophies squat neatly about the chamber, around the
+altar.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3874 0 0
+~
+The main chamber of the temple lies to the north.
+~
+OWNER none~
+#3876
+Before a Silver-Banded Archway~
+This short, bent corridor is completely unlit.  A very small amount of
+light flows in from the main chamber to the west, as well as from the room
+to the north.  Some chanting and movement can be heard from that direction
+as well.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3877 0 0
+~
+~
+D WEST 3874 0 0
+~
+~
+OWNER none~
+#3877
+Within a Spartan Room~
+This room is very cold and completely empty, save a few wooden chairs.  A
+single, small window lies up at the top of the eastern wall toward the
+ceiling, allowing a modest glimpse of the sky.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3876 0 0
+~
+~
+OWNER none~
+#3878
+Before an Iron-Banded Archway~
+This short, bent corridor is completely unlit.  A very small amount of
+light flows in from the main chamber to the east, as well as from the room
+to the south.  Some chanting and movement can be heard from that direction
+as well.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 3874 0 0
+~
+~
+D SOUTH 3879 0 0
+~
+~
+OWNER none~
+#3879
+The Chamber of Murals~
+Detailed murals of terrible, bloody wars cover the walls of this small
+room, along with banners imprinted with the symbols of various gods. 
+Stained glass windows add strangely colored patterns to the already large
+mixture of colors.  Arguments take place often within this chamber, but they
+rarely escalate to violence.  The High Shaman would not hear of such a thing
+within his temple.  To the north, a dark hallway goes on a short way then
+bends to the east.  
+~
+inside
+ROOM LAW
+D NORTH 3878 0 0
+~
+~
+OWNER none~
+#3880
+The Furrier~
+The majority of this room is crafted of wood.  The dark wooden planks
+that make up the floor is stained in many places with blood.  The scent of
+tanning fluid is strong here.  Two large vats in the back of the room are
+probably to blame for this.  Furry hides of all different sorts are hung
+upon the wall, and most of them seem to be of high quality.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3839 A 0
+~
+The door to the north leads back out to the snow-covered street.
+~
+OWNER none~
+#3881
+An Herb-Filled Shanty~
+The inside of this weird little building is constructed from the same
+black stone as the outside and wooden planks here and there.  A crude wooden
+stand serves as both a counter and a dangerously flammable incense holder. 
+Drying herbs hang from the ceiling by gnarled ropes, the scents of all of
+the herbs combining with the scent of incense and raw wood to create an
+overpowering aroma.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3838 A 0
+~
+The door to the south leads back out to the snow-covered street.
+~
+OWNER none~
+#3882
+The Shop of Essentials~
+Well-lit by both natural light and candles, this shop is one of the most
+popular in the entire city.  All sorts of the more basic traveling supplies
+are carried here, and a few people of varied races stand about looking over
+the goods.  The streets of Iseldheim lie back to the north.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D NORTH 3842 A 0
+~
+The door to the north leads back out to the snow-covered street.
+~
+OWNER none~
+#3883
+The First Bank of Iseldheim~
+Obviously brand new and not used too often by most of the population,
+this bank has yet to be crowded.  There is only enough space behind the
+counter for a single teller, or two at best.  The building itself is brand
+new, and constructed of both dark and light gray bricks.  On the lighter
+bricks are set small decorative silver plaques, as if to celebrate this new
+prosperity being enjoyed by the city.  A single archway leads out to the
+south.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3841 0 0
+~
+The door to the south leads back out to the snow-covered street.
+~
+OWNER none~
+#3884
+A Strange Little Room~
+A number of crude charms such as talismans, dream-catchers, feathered
+pendants and masks are hung up on display.  Symbols have been painted onto
+the walls in earthen colored paints, probably with fingers.  The scent of
+death lingers in the air, drawing attention to a large bucket filled with
+goat heads on sticks.  The ants seem to have taken note of this as well. 
+Some bead curtains cover a doorway to the west, and the exit is to the
+south.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3843 A 0
+door~
+The door to the south leads back out to the snow-covered street.
+~
+D WEST 3885 I 0
+bead curtain~
+A bead curtain conceals another room to the west.
+~
+OWNER none~
+#3885
+Behrum's Ward Shop~
+The inside of this shop feels more like a tribal witchdoctor's hut than
+anything else.  Beads, amulets, masks and a variety of other protective
+magical things are currently on display.  Symbols have been painted onto the
+walls in earthen colored paints, probably with fingers.  The scent of death
+lingers in the air, drawing attention to a large bucket filled with goat
+heads on sticks.  The ants seem to have taken note of this as well.  The
+shop continues to the east.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D EAST 3884 I 0
+~
+The entrance lies beyond a bead curtain.
+~
+OWNER none~
+#3886
+A Broad Landing~
+Strong and biting winds batter this solid stairway and those who walk
+upon it.  It is wide enough for four large people to walk side by side and
+still be safe, but it is not fitted with any sort of railing for a
+safeguard.  Above you, you can make out some sort of structure against the
+sky.  
+~
+unused
+ROOM LAW
+D NORTH 3872 0 0
+~
+The landing continues to the north.
+~
+D UP 3873 0 0
+~
+The stairs continue upward.
+~
+OWNER none~
+#3887
+At the Entrance to a Large Hall~
+This large house-like structure has two large doors, both left wide open
+despite the wather.  The hall itself is made almost completely of wood, with
+some iron reinforcements.  Shouts can be heard coming from inside and the
+faint scents of ale and sweat can be detected from out here.  To the west
+lies the main path, while to the north and south, the front halves of two
+neighboring buildings block your way.  
+~
+unused
+ROOM LAW
+D EAST 3888 0 0
+~
+~
+D WEST 3826 0 0
+~
+~
+OWNER none~
+#3888
+A Large Ale Hall~
+This huge room is crafted completely of wood.  Large lamps hang down from
+massive rafters that work to hold this structure together.  The air has a
+thick, woody scent to it due to the fact that the entire hall is mainly
+crafted of wood, and a good deal of it is wettened by the weather, blood or
+ale.  Large tables are set up around the room where warriors of many races
+shout, laugh, eat and brawl.  Most of it seems to be in good fun, or what
+one who would choose this sort of lifestyle would deem to be good fun.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D EAST 3890 0 0
+~
+~
+D WEST 3887 0 0
+~
+~
+OWNER none~
+#3889
+Upon a Lift~
+This lift is basically a wooden platform with a tall rail that runs
+around the edge of all its sides.  In the middle of the western and southern
+sides, hinges are set into the rail, allowing it to open and close like a
+door in those directions.  
+~
+unused
+D SOUTH 0 0 0
+~
+~
+D WEST 3825 0 0
+~
+~
+OWNER none~
+#3890
+The Guildmaster's Quarters~
+Appearing to be more like a library than a training room, these quarters
+are where the guildmaster of the Warrior's Guild of Iseldheim spends most of
+his time.  Shelves filled with books rest up against the northern and
+eastern walls, along with posters and charts detailing the vital points of
+many of Shalar's races.  Pads cover the center of the floor, allowing a
+number of techniques to be safely demonstrated by the guildmaster.  The loud
+shouts and strong scents of ale and burning meat waft in from the west.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D WEST 3888 0 0
+~
+~
+OWNER none~
+#3891
+A Rough Pathway~
+This narrow, snowy trail lies behind some of the stone buildings of
+Iseldhim, leading around a wall of rock, turning to the north in the
+distance toward the western silver mines.  To the east, the more civilized
+streets of the minotaur city await you.  
+~
+unused
+ROOM LAW
+D EAST 3836 0 0
+~
+The streets of Iseldheim are still visible to the east.
+~
+D WEST 3892 0 0
+~
+The rough pathway continues, bending to the north in the distance.
+~
+OWNER none~
+#3892
+A Rough Pathway~
+The rough pathway bends here to the north around a rock formation, toward
+the silver mines.  Up ahead, a strange black structure can be seen set into
+the jagged rocks of the mines.  Off to a distance to the east, you can make
+out the streets of Iseldheim.  
+~
+unused
+ROOM LAW
+D NORTH 3893 0 0
+~
+The trail continues to the north, leading toward the dark mountains of the silver mines.
+~
+D EAST 3891 0 0
+~
+The streets of Iseldheim are still visible to the east.
+~
+OWNER none~
+#3893
+A Rocky Ledge~
+The frost-covered sharp black rocks that make up this mountainous
+formation jut out in all directions.  The wind blows through the area
+fiercely, the biting frigid breeze attacking every opening in your gear. 
+The rocks seem to form natural steps that lead higher up into the mountain,
+though they are cracked and crumbling.  
+~
+unused
+ROOM LAW
+D SOUTH 3892 0 0
+~
+A trail goes south for a bit, then bends to the east toward the city.
+~
+D UP 3894 0 0
+~
+An odd sort of structure seems to have been carved into the mountain.
+~
+OWNER none~
+#3894
+Before An Abandoned Temple~
+The frost-covered sharp black rocks that make up this mountainous
+formation jut out in all directions.  The wind blows through the area
+fiercely, the biting frigid breeze attacking every opening in your gear.  In
+front of the top of the staircase rests a strange structure: a smoothed out
+archway opening into the rock wall and leading into darkness.  
+~
+city
+ROOM LAW
+D NORTH 3895 0 0
+~
+The foyer of the temple awaits you to the north.
+~
+D DOWN 3893 0 0
+~
+A seemingly natural stairway leads down to a ledge.
+~
+OWNER none~
+#3895
+A Crumbling Foyer~
+The darkness within this chamber is so thick that it is almost palpable,
+and so abundant that it is almost suffocating.  Dust covers the floor here,
+which slopes downward slightly and to the north.  
+~
+inside
+ROOM DARK
+ROOM INDOORS
+ROOM LAW
+D NORTH 3896 0 0
+~
+A faint, flicking light can be seen coming from the north.
+~
+D SOUTH 3894 0 0
+~
+The outside seems almost blindingly bright as compared to this room.
+~
+OWNER none~
+#3896
+A Dusty Room~
+A strange, warm and flickering light comes from below, shedding meager
+light upon this dark room.  Strange stains and scrawlings are scratched into
+the walls, their age unknown.  A deep, circular pit is set into the floor
+with a ladder at the side to climb down.  From up here, you can see some
+strange figures moving about and a circle of torches.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D SOUTH 3895 0 0
+~
+The dark foyer of the temple awaits you to the south.
+~
+D DOWN 3897 0 0
+~
+A circle of torches and a number of strange figures scurry about below.
+~
+OWNER none~
+#3897
+A Bone-Filled Pit~
+The walls in this strange circular pit are smooth and black, darker where
+it is stained.  The ground here is made of a rough beige tile, but debris is
+scattered about the area.  There is an odd air about this place, and exactly
+how many people or things are here is almost impossible to tell.  Shadows
+dance upon the walls, adding to the confusion and mingling with the fading,
+moving bodies that crouch about the room.  
+~
+inside
+ROOM INDOORS
+ROOM LAW
+D UP 3896 0 0
+~
+Through a haze, you can see a ring of darkness above you.
+~
+OWNER none~
+#3898
+The Front Room of the Silver Horn Tavern~
+The warm glow provided by the fireplace fills this small, cozy tavern.  A
+few chairs and tables of dark wood are scattered about the room and most of
+them are inhabited.  Some loud conversation and laughing can be heard, among
+other things, and the scent of ale-soaked wood fills the air.  To the north,
+a door leads out to the frigid streets of the city, while to the east, you
+can see the bar.  
+~
+unused
+ROOM INDOORS
+ROOM LAW
+D NORTH 3806 A 0
+door~
+A door leads out to the city streets.
+~
+D EAST 3899 0 0
+~
+The bar of the tavern lies to the east.
+~
+OWNER none~
+#3899
+At the Bar~
+The bar is covered with half-empty glasses, crumbs of numerous meals and
+dirty dishes, but this does not seem to bother the locals much.  A great
+number of crude barrels lie stacked behind the bar, almost reaching the
+ceiling in some places.  A window is set into the southern wall, where a
+barbeque pit is plainly visible.  Some loud conversation and laughing can be
+heard, among other things, and the scent of ale-soaked wood fills the air. 
+Back to the west is the front room of the tavern.  
+~
+unused
+ROOM INDOORS
+ROOM LAW
+D WEST 3898 0 0
+~
+The front room lies to the west.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 3809 TO 3800 GLIMIT 6 LLIMIT 2
+EQUIP 3808 WIELD
+EQUIP 3809 ABOUT
+MOB 3809 TO 3800 GLIMIT 6 LLIMIT 2
+EQUIP 3809 ABOUT
+EQUIP 3808 WIELD
+MOB 3807 TO 3802 GLIMIT 6 LLIMIT 1
+EQUIP 3806 WIELD
+EQUIP 3805 RFINGER
+EQUIP 3840 HEAD
+MOB 3806 TO 3802 GLIMIT 3 LLIMIT 1
+MOB 3800 TO 3802 GLIMIT 10 LLIMIT 1
+MOB 3821 TO 3803 GLIMIT 4 LLIMIT 1
+MOB 3800 TO 3805 GLIMIT 10 LLIMIT 1
+MOB 3822 TO 3809 GLIMIT 4 LLIMIT 1
+MOB 3807 TO 3809 GLIMIT 6 LLIMIT 1
+EQUIP 3806 WIELD
+EQUIP 3805 RFINGER
+EQUIP 3840 HEAD
+OBJECT 3800 TO 3812
+MOB 3800 TO 3812 GLIMIT 10 LLIMIT 1
+MOB 3821 TO 3813 GLIMIT 4 LLIMIT 1
+OBJECT 3815 TO 3815
+OBJECT 3816 TO 3816
+MOB 3809 TO 3817 GLIMIT 6 LLIMIT 2
+EQUIP 3808 WIELD
+EQUIP 3809 ABOUT
+MOB 3809 TO 3817 GLIMIT 6 LLIMIT 2
+EQUIP 3808 WIELD
+EQUIP 3809 ABOUT
+OBJECT 3812 TO 3818
+OBJECT 3811 TO 3819
+MOB 3800 TO 3820 GLIMIT 10 LLIMIT 1
+MOB 3809 TO 3822 GLIMIT 6 LLIMIT 2
+EQUIP 3808 WIELD
+EQUIP 3809 ABOUT
+MOB 3809 TO 3822 GLIMIT 6 LLIMIT 2
+EQUIP 3808 WIELD
+EQUIP 3809 ABOUT
+OBJECT 3813 TO 3824
+MOB 3822 TO 3825 GLIMIT 4 LLIMIT 1
+OBJECT 3814 TO 3825
+MOB 3801 TO 3826 GLIMIT 1 LLIMIT 1
+EQUIP 3817 WAIST
+EQUIP 3818 ABOUT
+EQUIP 3820 WIELD
+MOB 3806 TO 3827 GLIMIT 3 LLIMIT 1
+MOB 3823 TO 3828 GLIMIT 3 LLIMIT 1
+MOB 3800 TO 3828 GLIMIT 10 LLIMIT 1
+MOB 3800 TO 3831 GLIMIT 10 LLIMIT 1
+MOB 3807 TO 3832 GLIMIT 6 LLIMIT 1
+EQUIP 3806 WIELD
+EQUIP 3805 RFINGER
+EQUIP 3840 HEAD
+MOB 3821 TO 3837 GLIMIT 4 LLIMIT 1
+MOB 3807 TO 3839 GLIMIT 6 LLIMIT 1
+EQUIP 3806 WIELD
+EQUIP 3805 RFINGER
+EQUIP 3840 HEAD
+MOB 3806 TO 3839 GLIMIT 3 LLIMIT 1
+MOB 3800 TO 3839 GLIMIT 10 LLIMIT 1
+MOB 3823 TO 3843 GLIMIT 3 LLIMIT 1
+MOB 3807 TO 3844 GLIMIT 6 LLIMIT 1
+EQUIP 3806 WIELD
+EQUIP 3805 RFINGER
+EQUIP 3840 HEAD
+MOB 3821 TO 3846 GLIMIT 4 LLIMIT 1
+MOB 3826 TO 3848 GLIMIT 1 LLIMIT 1
+GIVE 3843
+GIVE 3844
+GIVE 3845
+OBJECT 3801 TO 3848
+MOB 3800 TO 3849 GLIMIT 10 LLIMIT 1
+MOB 3811 TO 3850 GLIMIT 1 LLIMIT 1
+MOB 3822 TO 3850 GLIMIT 4 LLIMIT 1
+MOB 3800 TO 3851 GLIMIT 10 LLIMIT 1
+MOB 3808 TO 3852 GLIMIT 1 LLIMIT 1
+EQUIP 3807 HANDS
+EQUIP 3839 FEET
+OBJECT 3801 TO 3853
+MOB 3830 TO 3854 GLIMIT 1 LLIMIT 1
+GIVE 3837
+OBJECT 3803 TO 3856
+MOB 3813 TO 3860 GLIMIT 1 LLIMIT 1
+GIVE 3841
+GIVE 3834
+GIVE 3842
+OBJECT 3801 TO 3860
+OBJECT 3810 TO 3865
+MOB 3812 TO 3865 GLIMIT 1 LLIMIT 1
+OBJECT 3810 TO 3866
+OBJECT 3810 TO 3867
+OBJECT 3810 TO 3868
+MOB 3828 TO 3869 GLIMIT 1 LLIMIT 1
+OBJECT 3801 TO 3869
+MOB 3823 TO 3872 GLIMIT 3 LLIMIT 1
+MOB 3800 TO 3872 GLIMIT 10 LLIMIT 1
+MOB 3820 TO 3874 GLIMIT 1 LLIMIT 1
+MOB 3829 TO 3875 GLIMIT 1 LLIMIT 1
+OBJECT 3802 TO 3875
+MOB 3805 TO 3875 GLIMIT 1 LLIMIT 1
+EQUIP 3847 ABOUT
+MOB 3802 TO 3876 GLIMIT 1 LLIMIT 1
+MOB 3803 TO 3878 GLIMIT 1 LLIMIT 1
+EQUIP 3847 ABOUT
+MOB 3831 TO 3879 GLIMIT 1 LLIMIT 1
+EQUIP 3847 ABOUT
+MOB 3818 TO 3880 GLIMIT 1 LLIMIT 1
+OBJECT 3801 TO 3880
+GIVE 3829
+GIVE 3819
+GIVE 3830
+MOB 3827 TO 3881 GLIMIT 1 LLIMIT 1
+GIVE 3826
+GIVE 3827
+GIVE 3828
+MOB 3819 TO 3882 GLIMIT 1 LLIMIT 1
+GIVE 3832
+GIVE 3831
+MOB 3817 TO 3883 GLIMIT 1 LLIMIT 1
+MOB 3816 TO 3885 GLIMIT 1 LLIMIT 1
+GIVE 3822
+GIVE 3823
+GIVE 3824
+GIVE 3825
+MOB 3804 TO 3887 GLIMIT 1 LLIMIT 1
+EQUIP 3821 WIELD
+MOB 3825 TO 3890 GLIMIT 1 LLIMIT 1
+EQUIP 3846 WIELD
+EQUIP 3833 WIELD
+MOB 3814 TO 3893 GLIMIT 1 LLIMIT 1
+OBJECT 3804 TO 3897
+MOB 3815 TO 3897 GLIMIT 1 LLIMIT 1
+OBJECT 3801 TO 3898
+MOB 3824 TO 3899 GLIMIT 1 LLIMIT 1
+GIVE 3834
+GIVE 3835
+GIVE 3836
+S
+
+#IMPROGS
+M 3811 pulse_prog pulse_prog_area_echo_ward
+M 3820 pulse_prog pulse_prog_area_echo_ward
+M 3829 pulse_prog pulse_prog_area_echo_ward
+I 3811 verb_prog verb_prog_iseldheim_lever_pull
+I 3812 verb_prog verb_prog_iseldheim_lever_pull
+I 3813 verb_prog verb_prog_iseldheim_lever_pull
+I 3814 verb_prog verb_prog_iseldheim_lever_pull
+I 3815 verb_prog verb_prog_iseldheim_lever_pull
+I 3816 verb_prog verb_prog_iseldheim_lever_pull
+END
+#SPECS
+END
+#$

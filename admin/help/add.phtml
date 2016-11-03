@@ -1,0 +1,16 @@
+<?
+	$target_level=52;
+	include("../check_trust.inc");
+	include("../header.inc");
+?>
+<table width=65% align=center>
+<form action='add_action.phtml' method=post>
+<tr><td align=right valign=top><? echo $def_font;?>Title:</td><td><input type=text name=title></td></tr>
+<tr><td align=right valign=top><? echo $def_font;?>Skill:</td><td><input type=text name=skill value='none'></td></tr>
+<tr><td align=right valign=top><? echo $def_font;?>Minlevel:</td><td><input type=text name=minlevel value=0></td></tr>
+<tr><td align=right valign=top><? echo $def_font;?>Help:</td><td><textarea name=helpdata cols=75 rows=10 WRAP=HARD></textarea></td></tr>
+<tr><td colspan=2 align=center><input type=submit value=Add!></form></td></tr>
+</table>
+<?
+	include("../footer.inc");
+?>

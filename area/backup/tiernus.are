@@ -1,0 +1,190 @@
+#AREA
+tiernus.are~
+The Shrine of Tiernus~
+Tiernus~
+1 51
+180 184
+unopened
+none
+0
+1
+Tiernus~
+
+#MOBS
+#180
+figure white robed white-robed~
+the white-robed figure~
+A white-robed figure stands motionless in the center of the room.
+~
+Robes of brilliant white cover this figure from head to toe, face hidden
+beneath a sweeping hood.  Shimmering gold trim sparkles in the dim light,
+and even the white cloth itself takes on a luminescent quality.  Standing
+completely motionless, the figure exudes not menace, rather a distinct
+feeling of peace emanates from him throughout this strange chamber.  Of
+medium height, his build is hidden beneath the sweeping folds of his robe,
+almost giving the illusion that the clothing itself stands animated before
+you.  
+~
+1000 0 0 elf~
+60 30d8+7128 0d0+0 0 100 divine
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+ACT INTELLIGENT
+AFF HASTE
+IMM HOLY
+#0
+
+
+
+#OBJS
+#180
+bench iron wrought-iron~
+a wrought-iron bench~
+A bench made from intricately wrought iron sits on the balcony.~
+furniture
+iron~
+2 2000 E 100 0
+0 400 0 P
+WEAR TAKE
+LIMIT 0
+TIMER 0
+NOTES ~
+
+#181
+mark osprey~
+the mark of the osprey in flight~
+Tattoo of the osprey in flight~
+trash
+ink~
+0 0 0 0 0
+60 0 0 P
+WEAR TAKE
+WEAR BRAND
+LIMIT 0
+TIMER 0
+
+#182
+altar tiernus osprey~
+an Altar to Tiernus~
+A round altar of plain white marble sits in the center of the room.~
+altar
+unknown~
+0 0 0 0 0
+55 0 0 P
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#180
+Above the Cascade~
+Hanging in the air before the luminous cascade, water streams down
+endlessly from the cliffs which tower into the heavens above.  A fine mist
+drifts through the air, illuminated in a pale yellow from the mossy plants
+growing into the cliff walls.  An arched opening leads into the sheer face
+of the cliff to the east, and far below the waters flow into a wide river.  
+~
+air
+D EAST 181 0 0
+~
+An opening in the cliffside lies to the east.
+~
+D DOWN 9067 0 0
+~
+~
+OWNER none~
+#181
+An Illuminated Cavern~
+The cavern here has been carved out in a circular shape, the jagged rock
+walls illuminated by torches mounted on stands all around.  The floor is not
+dirt, but hard clay tile, polished and glazed to create an intensely
+brilliant white.  A set of stone stairs rises up from the center of the
+chamber, leading up where a gap in the ceiling admits outside light.  A
+small archway to the east leads into a quiet nook, while a larger opening to
+the west leads out into open air, where the waters of a cascade rage past.  
+~
+cave
+D EAST 182 0 0
+~
+The cavern dead-ends to the east, where a smaller nook is carved out.
+~
+D WEST 180 0 0
+~
+Open air to the west is home to a faintly illuminated cascade.
+~
+D UP 183 0 0
+~
+Worked into the stone, a staircase leads through the ceiling of the cavern into open air.
+~
+OWNER none~
+#182
+An Illuminated Cavern, Before an Altar~
+A small archway offers entrance to another circular chamber, illuminated
+by flaming braziers.  The tiled floor here is glazed to a brilliantly
+shining black, interrupted by only a single circle of white marble in the
+center.  On the eastern wall hangs a finely embroidered tapestry, depicting
+a bird of prey diving through a forest canopy, talons extended.  The flames
+crackle alarmingly, but there is no smoke to be seen rising toward the domed
+ceiling overhead.  An archway leads west, into a larger chamber.  
+~
+cave
+D WEST 181 0 0
+~
+~
+OWNER none~
+#183
+An Opening Above the Cavern~
+This small area is partially exposed to the sky, with only an arching
+column of stone obscuring the overhead view.  The arch resolves at its base
+into a rather narrow passageway which leads off to the south where a wider
+platform opens up atop the cliff face.  A large, square opening in the
+ground here reveals a set of stairs carved into the stone, winding down into
+a cavern below.  
+~
+mountains
+D SOUTH 184 0 0
+~
+A wide balcony stretches out to the south.
+~
+D DOWN 181 0 0
+~
+A staircase embedded in the stone descends into a cavern.
+~
+OWNER none~
+#184
+A Balcony Overlooking the Forest~
+This balcony is built out over the top of a sheer cliff face which drops
+hundreds of feet to the south and west.  Off to the west, the roar of
+rushing water is audible where a cascade pours down from sources even higher
+up in the mountains.  The view to the southwest is astounding, the entire
+valley of Ilopheth visible below, and the faintest hints of civilization
+visible on the horizon to the south.  Beyond the forest to the west a
+towering range of mountain peaks rises up.  Off to the east, endless plains
+and rolling foothills make up the landscape.  A small passage to the north
+leads toward an opening in the ground.  
+~
+park
+D NORTH 183 0 0
+~
+A narrow passage leads north toward an opening in the ground.
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+MOB 180 TO 181 GLIMIT 1 LLIMIT 1
+OBJECT 182 TO 182
+OBJECT 180 TO 184
+S
+
+#IMPROGS
+END
+#$

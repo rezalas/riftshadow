@@ -1,0 +1,1881 @@
+#AREA
+nightwalker.are~
+Alpine Mountain Pass~
+Erifdel~
+20 35
+2800 2899
+normal
+alpine
+0
+1
+Erifdel~
+
+#MOBS
+#2890
+green mist beholder~
+A massive ancient beholder~
+A massive beholder levitates here.
+~
+This massive beholder is nothing like you have seen before, its skin is
+aged and grey with hundreds of folds and ripples.  Spread evenly over the
+whole sphere of flesh are little eyestalks with big bolbus eyeballs that
+swivil around looking in all directions.  In the center of this levitating
+orb of eyestalk covered sphere of flesh is a massive central eye, lining the
+edge of the eye is a massive eyelid folded up.  The corners of the eye ooze
+what looks like green mist.  Underneath the massive Central eye is a large
+gaping maw, large teeth that have been worn down over the ages line the
+edges like a saw blade.  As this unique creatue exhales you can see a slight
+green tinge to its breath and the air seems to twinkle and sparkle a litte,
+the arcane smell of cast magic issues forth.  
+~
+0 25960 0 beholder~
+70 35d8+17617 0d0+13 0 100 chomp
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+AFF DETECT_INVIS
+AFF DETECT_HIDDEN
+AFF PASS_DOOR
+AFF HASTE
+AFF WATERBREATH
+AFF REGENERATION
+RES MAGIC
+#2899
+xpman deny~
+BadKarsus~
+Karsus is going to get denied if he loads another one of these.
+~
+~
+0 0 0 dwarf~
+70 900d900+14464 99d99+8000 0 100 wrath
+2000 2000 2000 2000
+standing male peerless
+0 W medium
+ACT NPC
+OFF DODGE
+OFF PARRY
+AFF SANCTUARY
+AFF HASTE
+VUL BASH
+VUL MENTAL
+NOTES ~
+#0
+
+
+
+#OBJS
+#2867
+container bound black adamantite chainmail~
+bound black admantite chainmail~
+A pile of minotaur nose ringer interlinked has been left here~
+container
+adamantite~
+350 0 0 100 350
+1 15 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY DAMROLL 9
+APPLY HITROLL 12
+LIMIT 1
+TIMER 0
+
+#2868
+crown ages~
+the Crown of Ages~
+A ancient crown pulsates as if it is alive.~
+armor
+dragonbone~
+10 10 10 10 0
+1 10 0 P
+WEAR TAKE
+WEAR HEAD
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY INT 5
+APPLY WIS 5
+APPLY HITROLL 5
+APPLY DAMROLL 5
+APPLY MANA 100
+APPLY SVSPELL -10
+LIMIT 1
+TIMER 0
+
+#2869
+Girth last estural~
+girth of the last Estural~
+A writhing worm has been left on the ground here.~
+armor
+living flesh~
+10 10 10 10 0
+1 5 0 P
+WEAR TAKE
+WEAR WAIST
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY SVSPELL -10
+LIMIT 1
+TIMER 0
+
+#2870
+spiked chausses Legion~
+spiked chausses of Legion~
+A pair of spiked plates have been left here~
+armor
+adamantite~
+10 10 10 10 0
+1 5 0 P
+WEAR TAKE
+WEAR LEGS
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY HITROLL 5
+APPLY DAMROLL 5
+APPLY HP 50
+APPLY MOVE 50
+LIMIT 1
+TIMER 0
+
+#2871
+quickling skin boots~
+quickling skin boots~
+A pile of fuzzy flesh has been left here.~
+armor
+quickling skin~
+10 10 10 10 0
+1 5 0 P
+WEAR TAKE
+WEAR FEET
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY DEX 10
+APPLY DAMROLL 5
+APPLY HITROLL 5
+LIMIT 1
+TIMER 0
+
+#2872
+spiked vertibray kelnor~
+spike vertibray of Kelnor~
+A piece of dragon bone backbone has been left here~
+armor
+dragonbone~
+10 10 10 10 0
+1 5 0 P
+WEAR TAKE
+WEAR WRIST
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY HP 50
+APPLY MOVE 50
+LIMIT 1
+TIMER 0
+
+#2873
+translucent pauldron drennick~
+a translucent pauldron of Drennick~
+A translucent plate has been left here~
+armor
+spectral plate~
+15 15 15 15 0
+1 5 0 P
+WEAR TAKE
+WEAR NECK
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY SVSPELL -5
+APPLY HP 50
+APPLY MOVE 50
+LIMIT 1
+TIMER 0
+
+#2874
+ring frozen dragons blood~
+ring of frozen dragons blood~
+A ice cold ring that is releasing a slow vapour sits here.~
+armor
+blood~
+0 0 0 0 0
+1 1 0 P
+WEAR TAKE
+WEAR FINGER
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM FIXED
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY HP 75
+APPLY MOVE 75
+APPLY SVSPELL -10
+LIMIT 1
+TIMER 0
+
+#2875
+studded brawling gloves~
+mithril studded brawling gloves~
+A pair of studded gloves have been left here~
+armor
+dragonskin~
+10 10 10 10 0
+1 5 0 P
+WEAR TAKE
+WEAR HANDS
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM BLESS
+ITEM FIXED
+APPLY STR 10
+APPLY DAMROLL 5
+APPLY HITROLL 5
+LIMIT 1
+TIMER 0
+
+#2876
+interlocking spurred scales~
+interlocking spurred dragonscales~
+A jaggered pile of dragonscale has been left here~
+armor
+dragonbone~
+30 30 30 30 0
+1 80 0 P
+WEAR TAKE
+WEAR ARMS
+RESTRICT TITAN_ONLY
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM FIXED
+ITEM ANTILAWFUL
+ITEM ANTICHAOTIC
+APPLY HITROLL 8
+APPLY DAMROLL 8
+APPLY HP 50
+APPLY MOVE 50
+LIMIT 1
+TIMER 0
+
+#2877
+ribcage encased souls~
+a pulsating Ribcage of Encased Souls~
+A ribcage of crystal moans loudly on the ground here~
+armor
+crytal~
+50 50 50 50 0
+1 20 0 P
+WEAR TAKE
+WEAR BODY
+RESTRICT TITAN_ONLY
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM FIXED
+ITEM ANTILAWFUL
+ITEM ANTICHAOTIC
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY HP 50
+APPLY MOVE 50
+APPLY MANA 50
+APPLY SVSPELL -50
+LIMIT 1
+TIMER 0
+
+#2878
+dragon ancient backbone claymore living~
+a twohanded Claymore called 'Dragonkin'~
+A massive dull claymore made of dragonbone lies here.~
+weapon
+dragonbone~
+sword 14 4 suction DFH
+1 10 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM FIXED
+ITEM NODISARM
+ITEM ANTILAWFUL
+ITEM ANTICHAOTIC
+APPLY HITROLL 20
+APPLY DAMROLL 7
+LIMIT 1
+TIMER 0
+
+#2879
+claymore spectral~
+a Spectral Claymore~
+A massive transparent claymore is here~
+weapon
+spectral~
+sword 14 4 mental DF
+1 10 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTIEVIL
+ITEM FIXED
+ITEM NODISARM
+ITEM ANTILAWFUL
+ITEM ANTICHAOTIC
+APPLY HITROLL 20
+APPLY DAMROLL 7
+LIMIT 1
+TIMER 0
+
+#2880
+sack backpack container pouch dragon serpent cape billowing~
+a billowing cape of living dragon scales~
+A pile of fine scales has been left here.~
+container
+dragonscale~
+350 0 0 350 50
+52 5 350000 P
+WEAR TAKE
+WEAR ABOUT
+ITEM MAGIC
+ITEM NODROP
+ITEM NOREMOVE
+ITEM FIXED
+ITEM NOLOCATE
+ITEM BURNPROOF
+ITEM NOUNCURSE
+APPLY SVSPELL -20
+APPLY AC 60
+APPLY HP 20
+LIMIT 1
+TIMER 0
+E dragon~
+As you look at this billowing cape of living dragon scales you notice
+that there are hundreds of pockets all over the inside that could be use to
+contain anything.  
+~
+
+#2881
+Wand Dark arts weapon~
+a Wand of the Dark Arts~
+A adamantie wand of the dark arts lies here.~
+weapon
+adamantite~
+weapon 10 4 drain 0
+50 5 0 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT MAGE_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM ANTIGOOD
+ITEM NODISARM
+APPLY NONE 9
+APPLY HP 50
+APPLY MANA 50
+APPLY DAMROLL 5
+APPLY HITROLL 5
+APPLY SVSPELL -10
+LIMIT 1
+MSG WEAR The wand pulsates and a multitude of spells are cast apon you.~
+A small maelstrom of spells burst into life within the room surrounding someone.~
+TIMER 0
+
+#2882
+hammer ages ancient~
+a Ancient War Hammer of Ages~
+A massive twohanded war hammer lies here.~
+weapon
+dragonbone~
+mace 16 3 blast 0
+50 60 800000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM NODROP
+ITEM NODISARM
+APPLY HP 50
+APPLY HITROLL -5
+APPLY DAMROLL 10
+LIMIT 1
+TIMER 0
+
+#2883
+ribcage eternal darkness~
+a dragonbone ribcage of darkness~
+A pile of bones sits here sucking up the light.~
+armor
+dragonbone~
+10 10 10 10 0
+60 5 600000 P
+WEAR TAKE
+WEAR BODY
+RESTRICT MAGE_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY SVSPELL -20
+APPLY HP 80
+APPLY MANA 80
+LIMIT 1
+MSG WEAR As you wear $p your soul is filled with pure darkness.~
+As $n puts on $p a pulse of darkness fills the room.~
+MSG REMOVE As you remove $p you gasp as a bit of light creeps back into your soul.~
+As $n removes $p a look of relief crosses their face.~
+TIMER 0
+
+#2884
+battle axe severance~
+a etheral battle axe called "Severance"~
+A alien shaped axe seems to draw all light into it here.~
+weapon
+nothingness~
+axe 13 4 defilement CF
+1 40 9999999 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT TITAN_ONLY
+RESTRICT WARRIOR_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM FIXED
+ITEM NODISARM
+APPLY SVSPELL -10
+APPLY HITROLL 6
+APPLY DAMROLL 6
+LIMIT 1
+MSG WEAR As you grasp the hilt a surge of darkness pulsates outwards in a slow moving circle.~
+Darkness pulsates outwards and all light dims momentarily.~
+MSG REMOVE As you unwield this alien axe a part of you feels drained.~
+Darkness gathers from the shadows and pulsates towards a focal point in the room.~
+TIMER 0
+
+#2885
+robe robes surg suring flame flames~
+robes of surging flame~
+A pile of clother has been left here, flames crawling over it.~
+armor
+flame~
+8 8 8 8 0
+60 15 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM BLESS
+ITEM BURNPROOF
+APPLY AC -20
+APPLY SVSPELL -15
+APPLY MANA 80
+APPLY HP 80
+LIMIT 2
+MSG WEAR ~
+~
+MSG REMOVE ~
+~
+TIMER 0
+
+#2886
+sabre zulz'oran sword~
+a dual bladed sabre called 'Zulz'Oran'~
+A finely acid etched serated sabre of obsidian has been left here.~
+weapon
+obsidian~
+sword 8 6 cleave 0
+40 9 200000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT DROW_ONLY
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM NODISARM
+APPLY AC 20
+APPLY DAMROLL 8
+APPLY HITROLL 8
+LIMIT 1
+TIMER 0
+E sabre~
+This sword was once wielded by Zulz'oran a famous sword fighter.  
+~
+E sword~
+This sword was once wielded by Zulz'oran a famous sword fighter.  
+~
+E zulz'oran~
+This sabre has a fancy hilt that seems almost one with the blade.  The
+hilt is spun with fine threads of obsidian, apon grasping the hilt the
+threads seem to tighten around your hand.  The tight grasp bringing the
+blade into perfect balance with your hand, enabling the blade to become a
+extention of your body.  
+~
+
+#2887
+dragon sword~
+a serrated bastard sword named "Telkoran"~
+A long bastard sword made of dragon bone lays here, a dark shadow ever covering it.~
+weapon
+dragonbone~
+sword 8 5 digestion 0
+40 5 15000 P
+WEAR TAKE
+WEAR WIELD
+RESTRICT DROW_ONLY
+ITEM GLOW
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NOREMOVE
+APPLY DAMROLL 6
+APPLY HITROLL 6
+APPLY DEX 2
+LIMIT 1
+TIMER 0
+E dragon~
+This is the famous sword of Telkoran, it is constructed from the jawbone
+of a realm feared black dragon.  The blade is honed from the jawbone and the
+remenants of the teeth have been left in the formation of a jaggered
+seration down it's length.  The hilt has been forged of the ever durable
+adamantite, providing the blade with perfect balance, some wielders have even
+commented that it has improved their deftness.
+~
+E hilt~
+The hilt of this sword is weird, it has a small spike that seems to sit
+in the center of where your palm would rest when gripping the sword.  
+~
+E sword~
+This sword is far from normal, it is made up of what looks to be
+dragonbone, the only part that isnt dragonbone is the hilt.  
+~
+
+#2888
+tattered black leather~
+some tattered black leather~
+A pile of tattered black folds are haped on the ground here.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR LEGS
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2889
+tattered black leather~
+some tattered black folds of leather~
+A pile of tattered black folds are haped on the ground here.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR ARMS
+ITEM BURNPROOF
+APPLY HP 400
+LIMIT 1
+TIMER 0
+
+#2890
+tattoo blind eye~
+a blind eye~
+The mark of Gravan is burnt into your flesh.~
+armor
+magic~
+0 0 0 0 0
+59 0 0 P
+WEAR TAKE
+WEAR BRAND
+ITEM GLOW
+ITEM NODROP
+ITEM NOREMOVE
+ITEM NOPURGE
+ITEM FIXED
+ITEM BURNPROOF
+ITEM NOUNCURSE
+ITEM BRAND
+ITEM NOSAC
+APPLY AC 20
+APPLY MANA 35
+APPLY HP 35
+LIMIT 0
+TIMER 0
+
+#2891
+sphere~
+sphere of Manipulation~
+A sphere sits here on the ground pulsating with energy.~
+light
+magic~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+ITEM GLOW
+ITEM HUM
+ITEM NOREMOVE
+ITEM BURNPROOF
+LIMIT 0
+TIMER 0
+
+#2892
+bracer eye stalks~
+five living beholder eye stalks~
+Five eye stalks sit writhing on the ground here.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR WRIST
+ITEM GLOW
+ITEM BURNPROOF
+APPLY MANA 500
+LIMIT 2
+TIMER 0
+
+#2893
+green mist cloak~
+luminant green mists~
+A puddle of luminant green mists stirs here slowly.~
+armor
+magic~
+0 0 0 0 0
+55 1 0 P
+WEAR TAKE
+WEAR ABOUT
+ITEM GLOW
+ITEM BURNPROOF
+APPLY SVSPELL -200
+LIMIT 1
+TIMER 0
+NOTES ~
+
+#2894
+belt runed siggiled balance~
+runed and sigiled belt of balance~
+A cirlce of glowing and humming runes and sigils has been left here on the ground.~
+armor
+magic~
+20 20 20 20 0
+55 1 0 P
+WEAR TAKE
+WEAR WAIST
+ITEM GLOW
+ITEM HUM
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2895
+gloves spectral~
+spectral gloves of spell weaving~
+A pair of fleshy spectral gloves has been left here.~
+armor
+flesh~
+20 20 20 20 0
+55 1 0 P
+WEAR TAKE
+WEAR HANDS
+ITEM INVIS
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2896
+straped leather boots~
+black straped leather boots~
+A pair of tattered leather staped boots have been left here.~
+armor
+magic~
+50 50 50 50 0
+55 1 0 P
+WEAR TAKE
+WEAR FEET
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2897
+cowl black leather~
+tattered black cowl~
+A old cowl of black leather has been left here on the ground.~
+armor
+magic~
+25 25 25 25 0
+55 0 0 P
+WEAR TAKE
+WEAR HEAD
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#2898
+tattered black leather~
+black folds of leather~
+A pile of tattered black folds are heaped on the ground here.~
+armor
+magic~
+25 25 25 25 0
+55 1 0 P
+WEAR TAKE
+WEAR NECK
+ITEM BURNPROOF
+LIMIT 4
+TIMER 0
+
+#2899
+robes tattered shroud ancients~
+tattered shroud of the ancients~
+A pile of tattered leather is heaped here on the ground.~
+armor
+magic~
+100 100 100 100 0
+55 1 0 P
+WEAR TAKE
+WEAR BODY
+ITEM GLOW
+ITEM HUM
+ITEM MAGIC
+ITEM BURNPROOF
+LIMIT 1
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#2800
+A Rough Road~
+This road seems to have been formed more by constant traffic than by
+actual paving.  The dirt is marked by wheels and hooves, while snow and ice
+make it firm and hard.  The jagged black rocks of the silver mines can be
+seen to the north.  To the south lie the streets of Iseldheim.
+~
+trail
+D NORTH 2801 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D SOUTH 3837 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D DOWN 0 0 0
+door~
+The road is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2801
+A Rough Road~
+This road seems to have been formed more by constant traffic than by
+actual paving.  The dirt is marked by wheels and hooves, while snow and ice
+make it firm and hard.  The jagged black rocks of the silver mines can be
+seen to the north.  To the south lie the streets of Iseldheim.
+~
+trail
+D NORTH 2802 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D SOUTH 2800 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D DOWN 0 0 0
+door~
+The road is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2802
+A Rough Road~
+This road seems to have been formed more by constant traffic than by
+actual paving.  The dirt is marked by wheels and hooves, while snow and ice
+make it firm and hard.  The jagged black rocks of the silver mines can be
+seen to the north.  To the south lie the streets of Iseldheim.
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D EAST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D SOUTH 2801 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D WEST 2820 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D UP 2803 0 0
+door~
+A trail of snow and ice forms in this direction.
+~
+D DOWN 0 0 0
+door~
+The road is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2803
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 2804 0 0
+door~
+The trail of ice continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D DOWN 2802 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2804
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 2805 0 0
+door~
+The trail of ice continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 2803 0 0
+door~
+The trail of ice continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2805
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 2806 0 0
+door~
+The trail of ice continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 2804 0 0
+door~
+The trail of ice continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2806
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 2805 0 0
+door~
+The trail of ice continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D DOWN 2807 0 0
+door~
+The trail of ice continues down the mountain side.
+~
+OWNER none~
+#2807
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 2808 0 0
+door~
+The trail of ice continues in this direction.
+~
+D UP 2806 0 0
+door~
+The trail of ice continues up the mountain side.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2808
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 2807 0 0
+door~
+The trail of ice continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 2809 0 0
+door~
+The trail of ice continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2809
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 2808 0 0
+door~
+The trail of ice continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D UP 2810 0 0
+door~
+The trail of ice continues up the mountain side.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2810
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 2811 0 0
+door~
+The trail of ice continues in this direction.
+~
+D DOWN 2809 0 0
+door~
+The trail of ice continues down the mountain side.
+~
+OWNER none~
+#2811
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 2810 0 0
+door~
+The trail of ice continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 2812 0 0
+door~
+The trail of ice continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2812
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 2811 0 0
+door~
+The trail of ice continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D UP 2813 0 0
+door~
+The trail of ice continues up the mountain side.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2813
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 2814 0 0
+door~
+The trail of ice continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+The smoke of lit torches can be seen in the distance from the city of Iseldheim.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D DOWN 2812 0 0
+door~
+The trail of ice continues down the mountain side.
+~
+OWNER none~
+#2814
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 2815 0 0
+door~
+The trail of ice continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 0 0 0
+door~
+The smoke of lit torches can be seen in the distance from the city of Iseldheim.
+~
+D WEST 2813 0 0
+door~
+The trail of ice continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2815
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 2816 0 0
+door~
+The trail of ice continues in this direction.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 2814 0 0
+door~
+The trail of ice continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2816
+An Icy Trail~
+Jagged stones of solid black rock surround both sides of the trail as it
+weaves through these mountain passes.  Stones are packed with ice and dirt
+to offer a firm landing, yet the chill breeze of the pass offer their own
+dangers of coldness.  Foot prints and other impressions within the dirt give
+evidence to a well used trail, but otherwise no common wildlife animals have
+chosen to frequent these climates.  
+~
+mountains
+D NORTH 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D EAST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D SOUTH 2815 0 0
+door~
+The trail of ice continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged stones of black rock are covered in layers of ice and snow.
+~
+D UP 2817 0 0
+door~
+The trail of ice continues upwards into a rocky terrain.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2817
+A Rock Strewn Path~
+This trail appears to be wide enough for several men to easily stand side
+by side before the mountain walls begin to rise on each side of the path. 
+The ground is fairly dry and rocky except for the natural affects of the
+weather, and though many areas of the ground remain uneven, well packed dirt
+suggests it is used regularly.
+~
+mountains
+D NORTH 0 0 0
+door~
+A wall of dark stone rises before you with a thin layer of ice and snow.
+~
+D EAST 2818 0 0
+door~
+A rocky trail continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+The view of an icy trail can be seen from this vantage point.
+~
+D WEST 0 0 0
+door~
+A wall of dark stone rises before you with a thin layer of ice and snow.
+~
+D DOWN 2816 0 0
+door~
+The pathway continues downward forming a trail of ice and snow.
+~
+OWNER none~
+#2818
+A Rocky Trail~
+This trail appears to be wide enough for several men to easily stand side
+by side before the mountain walls begin to rise on each side of the path. 
+The ground is fairly dry and rocky except for the natural affects of the
+weather, and though many areas of the ground remain uneven, well packed dirt
+suggests it is used regularly.
+~
+mountains
+D NORTH 2819 0 0
+door~
+The rocky trail continues in this direction.
+~
+D EAST 0 0 0
+door~
+A wall of dark stone rises before you.
+~
+D SOUTH 0 0 0
+door~
+A wall of dark stone rises before you.
+~
+D WEST 2817 0 0
+door~
+The rocky trail continues in this direction.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a light layer of ice and snow, but is strewn with a significant amount of rock.
+~
+OWNER none~
+#2819
+A Rocky Trail~
+This trail appears to be wide enough for several men to easily stand side
+by side before the mountain walls begin to rise on each side of the path. 
+The ground is fairly dry and rocky except for the natural affects of the
+weather, and though many areas of the ground remain uneven, well packed dirt
+suggests it is used regularly.
+~
+mountains
+D NORTH 9300 0 0
+door~
+The rocky trail continues in this direction.
+~
+D EAST 0 0 0
+door~
+A wall of dark stone rises before you.
+~
+D SOUTH 2818 0 0
+door~
+The rocky trail continues in this direction.
+~
+D WEST 0 0 0
+door~
+A wall of dark stone rises before you.
+~
+D DOWN 0 0 0
+door~
+The trail is formed from a light layer of ice and snow, but is strewn with a significant amount of rock.
+~
+OWNER none~
+#2820
+A Rough Road~
+This road seems to have been formed more by constant traffic than by
+actual paving.  The dirt is marked by wheels and hooves, while snow and ice
+make it firm and hard.  The jagged black rocks of the silver mines can be
+seen to the north.
+~
+trail
+D NORTH 2821 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D EAST 2802 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D SOUTH 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D WEST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D DOWN 0 0 0
+door~
+The road is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2821
+A Roadblock~
+A large, wooden structure has been used to seal off the entrance of the
+silver mines from ordinary citizens.  The jagged black rocks of the mines
+hide as many secrets as they do silver, and it will be some time before the
+denizens of this city allow common folk to enter the mines unattended.
+~
+trail
+D NORTH 0 0 0
+door~
+A large roadblock of wood and stone block the entrance to the silver mines.
+~
+D EAST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D SOUTH 2820 0 0
+door~
+A street of rough stone continues in this direction.
+~
+D WEST 0 0 0
+door~
+Jagged walls of black stone rise up before you.
+~
+D DOWN 0 0 0
+door~
+The road is formed from a mixture of ice, dirt and snow.
+~
+OWNER none~
+#2822
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2823
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2824
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2825
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2826
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2827
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2828
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2829
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2830
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2831
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2832
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2833
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2834
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2835
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2836
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2837
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2838
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2839
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2840
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2841
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2842
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2843
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2844
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2845
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2846
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2847
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2848
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2849
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2850
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2851
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2852
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2853
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2854
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2855
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2856
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2857
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2858
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2859
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2860
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2861
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2862
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2863
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2864
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2865
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2866
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2867
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2868
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2869
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2870
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2871
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2872
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2873
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2874
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2875
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2876
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2877
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2878
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2879
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2880
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2881
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2882
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2883
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+OWNER none~
+#2884
+Dummy Room~
+~
+unused
+ROOM NO_MOB
+D NORTH 0 0 0
+door~
+~
+OWNER none~
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

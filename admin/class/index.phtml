@@ -1,0 +1,49 @@
+<?
+	$target_level=58;
+	include("../check_trust.inc");
+	include("../header.inc");
+?>
+
+<table class=disp width=95% align=center>
+<tr><td colspan=20 align=center><b>Current Class Information</td></tr>
+
+<tr class=bold>
+	<td>Name</td>
+	<td>Abbrev</td>
+	<td>Prime</td>
+	<td>Align</td>
+	<td>Weapon</td>
+	<td>Level Gain</td>
+	<td>Base Group</td>
+	<td>Default Group</td>
+	<td>Casting Type</td>
+	<td>Status</td>
+</tr>
+
+<?
+	$get_res = mysql_db_query("rift_core","select * from class_table order by name asc",$core_conn);
+	if(mysql_num_rows($get_res) < 1)
+		die("Error");
+
+
+	for($count = 0; $row = mysql_fetch_array($get_res); $count++)
+	{
+		echo "<tr><td><a
+		href='edit.phtml?name=$row[name]'>$row[name]</a></td>";
+		echo "<td>$row[who_name]</td><td>".define_lookup("stats", $row[attr_prime], "abbrev", $core_conn)."</td>";
+		echo "<td>".define_lookup("align_allowed", $row[align], "name", $core_conn)."</td><td>$row[weapon]</td><td>$row[gainconst]</td>";
+		echo "<td>$row[base_group]</td><td>$row[default_group]</td><td>".define_lookup("magical_class", $row[ctype], "name", $core_conn)."</td>";
+		echo "<td>".define_lookup("race_status", $row[status], "name", $core_conn)."</td></tr>";
+	}
+?>
+
+</table>
+<br>
+<hr>
+
+New Class<br>
+
+	
+<?
+	include("../footer.inc");
+?>

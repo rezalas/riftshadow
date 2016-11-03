@@ -1,0 +1,2240 @@
+#AREA
+beholder.are~
+Beholder Corps~
+Ceran~
+30 51
+14000 14050
+normal
+none
+0
+
+#MOBS
+#14000
+beholder~
+a beholder~
+A beholder with a huge gaping mouth and writhing eye stalks is here.   
+~
+The beholder resembles a massive ball of scabby flesh with a massive mouth   
+that drools and drips mucus. A huge central eye above the mouth swivels to   
+watch you in interest, and it's ten smaller eyes attached to stalks around   
+it's body twist and turn.   
+~
+-1000 14000 100 human~
+40 15d10+1850 4d8+13 0 100 blast
+0 0 0 0
+standing male none
+0 0 large
+ACT AGGRESSIVE
+ACT MAGE
+AFF DETECT_HIDDEN
+IMM CHARM
+#14001
+xanath beholder~
+Xanath the beholder lord~
+A massive beholder rolls it's eye stalks and floats towards you.   
+~
+~
+0 0 100 human~
+56 50d10+7500 10d4+24 0 100 suction
+0 0 0 0
+standing male none
+0 0 large
+ACT AGGRESSIVE
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#14002
+greater beholder~
+a greater beholder~
+A huge beholder drools mucus as it turns it's eyes upon you in hatred.   
+~
+~
+-1000 14000 100 human~
+45 25d10+3000 8d4+16 0 100 blast
+0 0 0 0
+standing male none
+0 0 large
+ACT AGGRESSIVE
+ACT MAGE
+AFF DETECT_HIDDEN
+IMM CHARM
+#14003
+priest man~
+a Zhentil cleric~
+A tall human in black robes is standing here waiting for something.   
+~
+This is the Zhentil Cleric acting as the go-between for the Beholder Corps   
+here in Myth Drannor and the main zhentarim forces. Right now he seems very   
+nervous and anxious about something.   
+~
+-1000 14000 100 human~
+51 50d10+5000 5d8+20 0 100 punch
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT CLERIC
+OFF DODGE
+IMM CHARM
+CLASS warrior none none 
+#14004
+drow emissary warrior dark-elf~
+a drow emissary~
+A dark-skinned elven warrior glances around herself in fear.   
+~
+This drow warrior has been sent to deliver a message to the beholders in   
+order to arrange a truce between them and the drow. She seems very scared   
+and is casting furtive glances at the massive beholders that float around   
+the halls.   
+~
+-1000 14000 100 human~
+50 50d10+5000 5d8+24 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+OFF DODGE
+IMM CHARM
+CLASS warrior none none 
+#14005
+beast eye gazer~
+a gazer~
+A beast a huge eye hovers in the air watching you and dribbling.   
+~
+This minor beholder-kin is one of the lesser types used for guard duty. It   
+has a very small brain and no real motivation other than to eat and digest   
+it's food into mucus that it secretes in order to provide incubating material   
+for the greater beholders.   
+~
+-400 0 100 human~
+36 10d10+1400 3d10+11 0 100 suction
+0 0 0 0
+standing male none
+0 0 medium
+ACT AGGRESSIVE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#14007
+drow dark-elf elf trader~
+a dark-elven trader~
+A dark elf in rich clothes stands here counting his money.   
+~
+This drow has followed the path that many individuals or all races do and seeks    
+to make his fortune by selling to the highest bidders. He has no scruples and   
+cares nothing about where his wares go, and has even gone as far as to offer   
+trade with the beholders, who currently are in contest with the drow over the   
+ruins.   
+~
+-700 0 100 drow~
+52 50d10+5000 6d7+23 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM CHARM
+CLASS warrior none none 
+#14008
+drow dark-elf elf warrior guard~
+a dark-elven bodyguard~
+A powerful looking dark skinned elf is here sharpening his blades.   
+~
+This drow is assigned to watch over the drow emissaries here in the beholder   
+corps tower. He has the eyes of a nervous and distrusting guard, one who places    
+little faith in the beholder's watching eyes.   
+~
+-900 0 100 drow~
+56 50d10+7500 5d10+25 0 100 slice
+0 0 0 0
+standing male poor
+0 0 medium
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+AFF HASTE
+IMM CHARM
+CLASS warrior none none 
+#14009
+rakshasa prisoner~
+a rakshasa prisoner~
+A bloody and dying black rakshasa is lying here.   
+~
+This rakshasa has been captured by drow and presented as a show of power and   
+common enemy to the beholder.   
+~
+-500 0 100 rakshasa~
+40 15d10+1850 4d8+13 0 100 claw
+0 0 0 0
+resting male none
+0 0 large
+ACT SENTINEL
+ACT AGGRESSIVE
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+VUL HOLY
+CLASS warrior none none 
+#14010
+drow dark-elf necromancer elf~
+the drow necromancer~
+A figure cloaked in heavy black robes and a darkened hood slowly chants.   
+~
+The drow necromancer is here as a sign of the drow's power and as a way of   
+intimidating the beholder corps into accepting the drow enclaves as part of the    
+new Myth Drannor that is to arise.   
+~
+-1000 0 100 drow~
+56 50d10+6500 7d6+23 0 100 drain
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT AGGRESSIVE
+ACT STAY_AREA
+ACT CLERIC
+AFF DETECT_HIDDEN
+AFF SANCTUARY
+IMM CHARM
+RES MAGIC
+#14013
+beholder lord~
+an ancient beholder~
+A massive but ashen gray beholder regards you with a half closed eye.   
+~
+This ancient lord of the beholder's lives in this room, barely able to maintain    
+it's own functions let alone rule the powerful Corps that is forming in the   
+ruins.   
+~
+-900 0 100 human~
+53 50d10+5250 5d8+21 0 100 magic
+0 0 0 0
+standing male none
+0 0 large
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#14014
+stone giant lord~
+a stone giant lord~
+A massive giant with skin like grey rock is here.   
+~
+The beholder's have invited the lord of the local stone giants to reside here   
+in the tower as a token effort of truce. The sheer physical power of the giants    
+is enough to make even the beholders wary, as only physical force is what they     
+are scared of.   
+~
+0 0 100 unique~
+54 50d10+7500 6d8+25 0 100 crush
+0 0 0 0
+standing male moderate
+0 0 giant
+ACT SENTINEL
+ACT STAY_AREA
+OFF DODGE
+CLASS warrior none none 
+#14018
+elite beholder~
+a beholder corps elite~
+A huge beholder floats vigilantly in the air scanning all around.   
+~
+This huge beholder is the elite of the Corps, more disciplined than the   
+lesser ones who have yet to control their bloodlust.   
+~
+-700 0 100 human~
+51 50d10+4250 5d8+19 0 100 magic
+0 0 0 0
+standing male none
+0 0 large
+ACT AGGRESSIVE
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#14019
+manshoon human~
+Manshoon, the black cleric~
+A human in black robes stands here bathed in an aura of darkness.   
+~
+This is Manshoon, the First Priest of the ancient god Bane. With the coming   
+of age of Myth Drannor he has taken over the beholder Corps in order to be the     
+first to greet the great power that will be unleashed when the Black tower is   
+finally breached. His stance is arrogant and he has the power to back it, be   
+very wary of him indeed.   
+~
+-1000 0 100 human~
+57 50d10+9000 8d6+28 0 100 punch
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT STAY_AREA
+ACT CLERIC
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#0
+
+
+
+#OBJS
+#14000
+corpse~
+a petrified rakshasa corpse~
+The petrified corpse of a rakshasa is here.~
+npc_corpse
+flesh~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#14001
+corpse~
+the corpse of a beholder~
+A mangled beholder corpse is lying here in a pool of blood.~
+npc_corpse
+flesh~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#14002
+corpse~
+a rakshasa corpse~
+The blasted remains of a rakshasa corpse is here.~
+npc_corpse
+flesh~
+0 0 0 0 0
+0 0 0 P
+ITEM NOPURGE
+LIMIT 0
+TIMER 0
+
+#14003
+eye beholder~
+the eye of a beholder~
+A huge bloody eye lies in a puddle of it's own blood.~
+light
+flesh~
+0 0 240 0 0
+50 6 9000 P
+WEAR TAKE
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM VISDEATH
+LIMIT 1
+TIMER 0
+
+#14004
+leather spiked flail~
+a spiked leather flail~
+A tangle of wickedly spiked leather stands lie here.~
+weapon
+leather~
+flail 6 7 beating 0
+45 7 17000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+LIMIT 1
+TIMER 0
+
+#14005
+zhentil black robes~
+the black robes of a Zhentil priest~
+A mass of blackened robes with arcane signs of darkness lies here.~
+armor
+cloth~
+7 6 7 10 10
+48 4 23000 P
+WEAR TAKE
+WEAR BODY
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+ITEM BLESS
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY MANA 25
+APPLY DAMROLL 2
+APPLY SBREATH -6
+LIMIT 2
+TIMER 0
+E zhentil black robes~
+The robes are covered in the symbols of the lord of darkness and hum softly   
+with the power imbued upon them by the high priests of the Zhentil order.   
+~
+
+#14006
+beholder eyestalk flesh~
+a beholder eyestalk~
+A large eye hanging by bloody strands off a stump of flesh is here.~
+wand
+flesh~
+40 3 3 'fireball' 0
+30 1 12000 P
+WEAR TAKE
+WEAR HOLD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+LIMIT 50
+TIMER 0
+
+#14007
+beholder eyestalk flesh~
+a beholder eyestalk~
+A large eye hanging by bloody strands off a stump of flesh is here.~
+wand
+flesh~
+50 4 4 'harm' 0
+30 1 12000 P
+WEAR TAKE
+WEAR HOLD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+LIMIT 50
+TIMER 0
+
+#14008
+beholder eyestalk flesh~
+a beholder eyestalk~
+A large eye hanging by bloody strands off a stump of flesh is here.~
+wand
+flesh~
+45 2 2 'sanctuary' 0
+30 1 22000 P
+WEAR TAKE
+WEAR HOLD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+LIMIT 50
+TIMER 0
+
+#14010
+iron key~
+an iron key~
+A large iron key is here.~
+key
+iron~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#14011
+gold key~
+an gold key~
+A large gold key is here.~
+key
+gold~
+0 0 0 0 0
+1 0 200 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#14014
+blue sapphire hilted mace~
+a dark blue sapphire-hilted mace~
+A deadly looking mace with a dark blue hilt of sapphire is here.~
+weapon
+steel~
+mace 5 9 blast BC
+50 15 24000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM ANTIGOOD
+LIMIT 1
+TIMER 0
+E blue sapphire hilted mace~
+The mace seems to be made of some extermely hard sapphire and there is a harsh   
+glow of dark evil pulsing within it.   
+~
+
+#14015
+belt grey-elven intestines coil flesh~
+a belt of dried grey-elven intestines~
+A coil of gross flesh has been dropped on the ground.~
+trash
+flesh~
+0 0 0 0 0
+40 3 19000 P
+WEAR TAKE
+WEAR WAIST
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+APPLY DEX 2
+APPLY DAMROLL 2
+LIMIT 1
+TIMER 0
+
+#14017
+red ioun stone~
+a red ioun stone~
+A red stone hums softly in the air here.~
+trash
+energy~
+0 0 0 0 0
+0 0 1000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+ITEM MAGIC
+LIMIT 10
+TIMER 0
+
+#14018
+broach spider~
+a spider-shaped broach~
+A broach in the shape of a large spider is sitting on the ground.~
+armor
+iron~
+4 3 5 0 0
+35 1 18000 P
+WEAR TAKE
+WEAR NECK
+ITEM DARK
+ITEM EVIL
+APPLY DEX 2
+APPLY HP 40
+LIMIT 3
+TIMER 0
+
+#14019
+sacrificial knife~
+a sacrificial knife~
+A sharp knife coated in dried blood is here.~
+weapon
+steel~
+dagger 5 9 pierce D
+40 1 10000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+APPLY HITROLL -4
+APPLY DAMROLL 7
+LIMIT 1
+TIMER 0
+E sacrificial knife~
+It looks extremely sharp, almost good enough for surgical work, but it is very   
+unwieldly and has little balance for fighting with.   
+~
+
+#14020
+iron key~
+a shiny iron key~
+A shiny iron key is here.~
+key
+iron~
+0 0 0 0 0
+0 0 0 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+TIMER 0
+
+#14022
+eyestalk~
+the bloody eyestalk of a beholder~
+A large eye hanging by bloody strands off a stump of flesh is here.~
+weapon
+flesh~
+weapon 5 9 magic 0
+40 6 14000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+APPLY HITROLL 5
+APPLY DAMROLL 3
+LIMIT 1
+TIMER 0
+
+#14025
+stone club bone crusher bonecrusher~
+a stone club named 'Bone crusher'~
+A huge lump of stone in the shape of a club lies here.~
+weapon
+stone~
+mace 7 7 crush 0
+50 31 31000 P
+WEAR TAKE
+WEAR WIELD
+APPLY HITROLL -5
+APPLY DAMROLL 3
+LIMIT 2
+TIMER 0
+
+#14026
+burning spiked ring~
+a burning spiked ring~
+A spiked ring covered in flickering red flames is here.~
+armor
+energy~
+4 6 5 0 0
+45 1 20000 P
+WEAR TAKE
+WEAR FINGER
+ITEM DARK
+ITEM EVIL
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+APPLY DAMROLL 4
+LIMIT 2
+TIMER 0
+E spiked ring burning~
+The flames flickering about the ring make it seem almost ethereal. As you watch   
+it the flames spark and flash, tiny points of light hidden between the spikes.   
+~
+
+#14027
+pendant soulbinder~
+a soulbinder~
+A strange pendant with dark engravings is lying here.~
+wand
+stone~
+51 3 3 'reserved' 0
+30 1 4000 P
+WEAR TAKE
+WEAR HOLD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+ITEM ANTIGOOD
+ITEM ANTINEUTRAL
+LIMIT 2
+TIMER 0
+E souldinder pendant~
+There is something very dark and disturbing about this pendant. The markings on   
+it's surface are of necromantic origin, and they seem to indicate some kind of   
+relationship between the undead and their master.   
+~
+
+#14028
+black arm armguards~
+a pair of black armguards~
+Some black armguards are here on the floor.~
+armor
+leather~
+4 6 5 0 0
+45 4 7000 P
+WEAR TAKE
+WEAR ARMS
+ITEM DARK
+ITEM EVIL
+APPLY STR 1
+APPLY DEX 1
+APPLY DAMROLL 2
+LIMIT 4
+TIMER 0
+
+#14029
+acid singer scimitar~
+the acid singer scimitar~
+A huge scimitar dripping with vile acids is here.~
+weapon
+steel~
+sword 6 8 acbite 0
+51 23 43000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM DARK
+ITEM EVIL
+ITEM NOREMOVE
+APPLY HITROLL 3
+APPLY DAMROLL 3
+LIMIT 1
+TIMER 0
+E acid singer scimitar~
+The acid on the blade seems to be seeping out of the very steel itself. There   
+is no indication of how it keeps producing the acid, but it is of an extremely   
+powerful kind.   
+~
+
+#14030
+skin stone~
+the skin of a stone giant lord~
+A large hardened skin of a dead stone giant is here.~
+armor
+stone~
+0 0 0 0 0
+51 25 23000 P
+WEAR TAKE
+WEAR BODY
+APPLY DAMROLL 2
+LIMIT 1
+TIMER 0
+
+#14031
+opal ring~
+an opal ring~
+A large opal ring is lying on the ground.~
+armor
+opal~
+4 3 3 0 0
+45 1 13000 P
+WEAR TAKE
+WEAR FINGER
+ITEM DARK
+ITEM EVIL
+APPLY HITROLL 2
+APPLY DAMROLL 2
+APPLY SBREATH -5
+APPLY MANA 25
+LIMIT 3
+TIMER 0
+
+#14032
+ivory necklace~
+an ivory necklace~
+A carefully carved piece of ivory on a short chain is here.~
+armor
+ivory~
+5 4 5 0 0
+46 1 7000 P
+WEAR TAKE
+WEAR NECK
+APPLY INT 2
+APPLY HP 20
+LIMIT 30
+TIMER 0
+
+#14033
+orb annihilation~
+the orb of annihilation~
+A pitch-black hole in space is floating here in the air.~
+weapon
+energy~
+weapon 7 8 drain 0
+51 0 9000 P
+WEAR TAKE
+WEAR WIELD
+ITEM DARK
+ITEM EVIL
+ITEM MAGIC
+ITEM NODROP
+LIMIT 1
+TIMER 0
+E orb annihilation~
+The region of nothingness that this small orb contains is perhaps the most   
+deadly thing in the universe. Anything touching it is destroyed, but only the   
+most powerful of archmages can control such power. It is, however, very slow   
+and it is hard to imagine anything of any reasonable ability being caught by   
+it unless the user were far superior in ability.   
+~
+
+#0
+
+
+
+#ROOMS
+#14000
+In the foyer of a stone building~
+You find yourself standing at the entrance to a large stone building. Unlike   
+most buildings in the ruins this one has been restored and kept in reasonable   
+condition. Large sticky globs of some fluid line the walls and floors, and   
+a disgusting smell fills the air. To the east and west you can see that the   
+corridor heads towards a pair of balconys overlooking the main entrance here.   
+South of here is a door leading out to the ruins.   
+~
+inside
+ROOM INDOORS
+D EAST 14004 0 0
+~
+~
+D SOUTH 13870 AB 0
+door~
+~
+D WEST 14001 0 0
+~
+~
+#14001
+In a stone corridor~
+You are standing within a wide stone hallway. There are large pools of ichor   
+and fluids on the walls and floors. A horrible smell permeates the air and   
+threatens to choke you. To the east you can see the corridor leading to   
+the entrance of the building, while west the corridor turns towards a large   
+balcony that overlooks the entrance.   
+~
+inside
+ROOM INDOORS
+D EAST 14000 0 0
+~
+~
+D WEST 14002 0 0
+~
+~
+#14002
+A bend in the stone corridor~
+You are in a wide stone corridor of what appears to be a recently restored   
+building. The sticky ichor that clings to the walls of the building is very   
+thick here, almost like it was smothered onto the walls. To the north you   
+can see a staircase heading up to a balcony. The corridor itself heads back   
+east.   
+~
+inside
+ROOM INDOORS
+D NORTH 14003 0 0
+~
+~
+D EAST 14001 0 0
+~
+~
+#14003
+Beneath a wide staircase~
+You are standing beneath a wide stairwell made of wood. It appears to be a   
+new feature of the building, replacing the older stone steps that had been   
+destroyed with the rest of Myth Drannor.   
+~
+inside
+ROOM INDOORS
+D SOUTH 14002 0 0
+~
+~
+D UP 14009 0 0
+~
+~
+#14004
+In a stone corridor~
+You are standing within a wide stone hallway. There are large pools of ichor   
+and fluids on the walls and floors. A horrible smell permeates the air and   
+threatens to choke you. The corridor heads east and west.   
+~
+inside
+ROOM INDOORS
+D EAST 14005 0 0
+~
+~
+D WEST 14000 0 0
+~
+~
+#14005
+A bend in the stone corridor~
+You are in a wide stone corridor of what appears to be a recently restored   
+building. The sticky ichor that clings to the walls of the building is very   
+thick here, almost like it was smothered onto the walls. To the north you   
+can see a staircase heading up to a balcony. The corirdor itself heads back   
+west.   
+~
+inside
+ROOM INDOORS
+D NORTH 14006 0 0
+~
+~
+D WEST 14004 0 0
+~
+~
+#14006
+Beneath a wide staircase~
+You are standing beneath a wide stairwell made of wood. It appears to be a   
+new feature of the building, replacing the older stone steps that had been   
+destroyed with the rest of Myth Drannor. Sticky ichor drips from the stairs   
+and hangs heavily from the roof. Above you there are faint sounds of   
+something breathing hard.   
+   
+~
+inside
+ROOM INDOORS
+D SOUTH 14005 0 0
+~
+~
+D UP 14007 0 0
+~
+~
+#14007
+On a recently built wooden balcony~
+You are standing on a recently constructed platform overlooking the main   
+entrance to this building. Your feet make SQUELCHing sounds as you step in   
+the thick, sticky ichor and gore that clings to the floor. There is an almost   
+overwhelming stench of something putrid in the air. The balcony heads west   
+to an alcove, or back down.   
+~
+inside
+ROOM INDOORS
+D WEST 14008 0 0
+~
+~
+D DOWN 14006 0 0
+~
+~
+#14008
+An alcove overlooking the main entrance~
+You stand in wide alcove overlooking the building's entranec. From here it   
+is easy to see any intruders who may enter. There is a huge pool of sticky   
+fluids and green ichor on the floor and dripping from the walls here. The   
+only exit appears to be back east along the balcony.   
+~
+inside
+ROOM INDOORS
+D EAST 14007 0 0
+~
+~
+#14009
+On a recently built wooden balcony~
+You are standing on a recently constructed platform overlooking the main   
+entrance to this building. Your feet make SQUELCHing sounds as you step in   
+the thick, sticky ichor and gore that clings to the floor. There is an almost   
+overwhelming stench of something putrid in the air. The balcony heads east   
+to an alcove with some stairs leading up, or back down to the main entrance   
+place.   
+~
+inside
+ROOM INDOORS
+D EAST 14010 0 0
+~
+~
+D DOWN 14003 0 0
+~
+~
+#14010
+An alcove overlooking the main entrance~
+You stand in wide alcove overlooking the building's entrance. From here it   
+is easy to see any intruders who may enter. There are huge pools of sticky   
+fluids on the floor and green ichor dripps from the walls. The balcony heads   
+back west. A stairwell heads up to the second floor where you can hear heavy   
+ghastly breathing and disgusting suction sounds.   
+   
+~
+inside
+ROOM INDOORS
+D WEST 14009 0 0
+~
+~
+D UP 14011 0 0
+~
+~
+#14011
+On a wide stairwell~
+You are standing at the top of a wide stairwell. The stone walls around you   
+are covered in sticky gore and the air is almost unbreathable. Something   
+truly disgusting has been living in the building and the air reeks of it's   
+prescence. A decaying stone corridor heads south into the building's   
+second floor where you can hear the sounds of awful sucking and breathing.   
+~
+inside
+ROOM INDOORS
+D SOUTH 14012 0 0
+~
+~
+D DOWN 14010 0 0
+~
+~
+#14012
+In a stone corridor~
+You are walking down a wide corridor made of rough hewn stone. The most   
+immediate aspect of the region is the terrible stench of some disgusting   
+creature. On the floor and walls are large sticky masses of slime and   
+gore. A pair of alcoves are to the east and west, while the corridor heads   
+north and south.   
+~
+inside
+ROOM INDOORS
+D NORTH 14011 0 0
+~
+~
+D EAST 14016 0 0
+~
+~
+D SOUTH 14013 0 0
+~
+~
+D WEST 14014 0 0
+~
+~
+#14013
+In a stone corridor~
+You are walking down a wide corridor made of rough hewn stone. The most   
+immediate aspect of the region is the terrible stench of some disgusting   
+creature. On the floor and walls are large sticky masses of slime and   
+gore. A pair of alcoves are to the east and west, while the corridor heads   
+north and south.   
+~
+inside
+ROOM INDOORS
+D NORTH 14012 0 0
+~
+~
+D EAST 14017 0 0
+~
+~
+D SOUTH 14018 0 0
+~
+~
+D WEST 14015 0 0
+~
+~
+#14014
+In a beholder's alcove~
+You are in a large alcove in the stone building. The walls are packed with   
+gross slime and fluids from some unspeakable beast. Burnt and mangled   
+corpses of some unidentifiable creatures litter the floor. There is very   
+little else other than the overwhelming smell of putrid decay. The alcove   
+heads back east to the corridor.   
+~
+inside
+ROOM INDOORS
+D EAST 14012 0 0
+~
+~
+#14015
+In a beholder's alcove~
+You are in a large alcove in the stone building. The walls are packed with   
+gross slime and fluids from some unspeakable beast. Burnt and mangled   
+corpses of some unidentifiable creatures litter the floor. There is very   
+little else other than the overwhelming smell of putrid decay. The alcove   
+heads back east to the corridor.   
+~
+inside
+ROOM INDOORS
+D EAST 14013 0 0
+~
+~
+#14016
+In a beholder's alcove~
+You are in a large alcove in the stone building. The walls are packed with   
+gross slime and fluids from some unspeakable beast. Burnt and mangled   
+corpses of some unidentifiable creatures litter the floor. There is very   
+little else other than the overwhelming smell of putrid decay. You can   
+only head back west to the corridor.   
+~
+inside
+ROOM INDOORS
+D WEST 14012 0 0
+~
+~
+#14017
+In a beholder's alcove~
+You are in a large alcove in the stone building. The walls are packed with   
+gross slime and fluids from some unspeakable beast. Burnt and mangled   
+corpses of some unidentifiable creatures litter the floor. There is very   
+little else other than the overwhelming smell of putrid decay. The only   
+exit is back west to the corridor.   
+~
+inside
+ROOM INDOORS
+D WEST 14013 0 0
+~
+~
+#14018
+Bottom of a wide stairwell~
+You are standing at the southern end of a wide stone corridor. Sticky   
+green fluids and ichor drip off the walls and an awful stench reeks in the   
+air. A wide, slime encrusted stairwell heads up into the building.   
+~
+inside
+ROOM INDOORS
+D NORTH 14013 0 0
+~
+~
+D UP 14019 0 0
+~
+~
+#14019
+On a large stairwell in a building~
+You are standing on a large, wide stone stariwell. The steps are slippery   
+and slick with strange green ichor and thick sticky slime. Heavy breathing   
+and disgusting sounds of eating can be heard echoing all around you. There   
+are small alcoves in the stairwell in all directions, while the stairs   
+themselves head up and down.   
+~
+inside
+ROOM INDOORS
+D NORTH 14020 0 0
+~
+~
+D EAST 14021 0 0
+~
+~
+D SOUTH 14022 0 0
+~
+~
+D WEST 14023 0 0
+~
+~
+D UP 14024 0 0
+~
+~
+D DOWN 14018 0 0
+~
+~
+#14020
+In a beholder's alcove~
+You find yourself in a small chamber off of the stairwell heading up and   
+down in the building. Putrid, decayed corpses of some unidentifiable   
+creatures lie upon the floor and smaller body parts are stuck in the slime   
+and ichor clinging to the walls. You can only go south to the stairwell.   
+~
+inside
+ROOM INDOORS
+D SOUTH 14019 0 0
+~
+~
+#14021
+In a beholder's alcove~
+You find yourself in a small chamber off of the stairwell heading up and   
+down in the building. Putrid, decayed corpses of some unidentifiable   
+creatures lie upon the floor and smaller body parts are stuck in the slime   
+and ichor clinging to the walls. You can go west to the stairwell.   
+~
+inside
+ROOM INDOORS
+D WEST 14019 0 0
+~
+~
+#14022
+In a beholder's alcove~
+You find yourself in a small chamber off of the stairwell heading up and   
+down in the building. Putrid, decayed corpses of some unidentifiable   
+creatures lie upon the floor and smaller body parts are stuck in the slime   
+and ichor clinging to the walls. The only exit is north to the stairwell.   
+~
+inside
+ROOM INDOORS
+D NORTH 14019 0 0
+~
+~
+#14023
+In a beholder's alcove~
+You find yourself in a small chamber off of the stairwell heading up and   
+down in the building. Putrid, decayed corpses of some unidentifiable   
+creatures lie upon the floor and smaller body parts are stuck in the slime   
+and ichor clinging to the walls. The only exit is east to the stairwell.   
+~
+inside
+ROOM INDOORS
+D EAST 14019 0 0
+~
+~
+#14024
+At the top of a wide stairwell~
+You are standing at the northern end of a wide stone corridor. Sticky   
+green fluids and ichor drip off the walls and an awful stench reeks in the   
+air. A wide, slime encrusted stairwell heads down into a dark stairwell.   
+To the south you can hear muted sucking sounds and heavy wet breathing.   
+~
+inside
+ROOM INDOORS
+D SOUTH 14025 0 0
+~
+~
+D DOWN 14019 0 0
+~
+~
+#14025
+In a slime encrusted corridor~
+The corridor here is filled with thick warm mucus and green bile. It looks   
+like dozens of huge mouths have been drooling their saliva onto the floor   
+and walls for days on end. There is also an almost deadening stench of   
+something vile and despicable. The corridor heads north to some wide stairs   
+or south to a doorway.   
+~
+inside
+ROOM INDOORS
+D NORTH 14024 0 0
+~
+~
+D SOUTH 14026 0 0
+~
+~
+#14026
+Outside a huge iron door~
+You are standing at the southern end of a slimy, disgusting corridor in the   
+stone building. Wisps of steaming green mist rise from the slime that lies   
+on the floor, indicating that it is very fresh and warm. A huge ornate iron   
+door has been set into the east wall, and you can make out belaboured   
+breathing of some horrible beasts on the other side. The corridor itself   
+heads back north.   
+~
+inside
+ROOM INDOORS
+D NORTH 14025 0 0
+~
+~
+D EAST 14027 ABC 14010
+iron door~
+~
+#14027
+SW corner of the Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate. There is a large iron door in the west wall, and the   
+hall heads of north and east.   
+~
+inside
+ROOM INDOORS
+D NORTH 14030 0 0
+~
+~
+D EAST 14028 0 0
+~
+~
+D WEST 14026 ABC 14010
+iron door~
+~
+#14028
+Southern end of the Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14031 0 0
+~
+~
+D EAST 14029 0 0
+~
+~
+D WEST 14027 0 0
+~
+~
+#14029
+SE corner of the Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14032 0 0
+~
+~
+D WEST 14028 0 0
+~
+~
+#14030
+Western Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14033 0 0
+~
+~
+D EAST 14031 0 0
+~
+~
+D SOUTH 14027 0 0
+~
+~
+#14031
+Central Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14034 0 0
+~
+~
+D EAST 14032 0 0
+~
+~
+D SOUTH 14028 0 0
+~
+~
+D WEST 14030 0 0
+~
+~
+#14032
+Eastern Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14035 0 0
+~
+~
+D SOUTH 14029 0 0
+~
+~
+D WEST 14031 0 0
+~
+~
+#14033
+Western Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14036 0 0
+~
+~
+D EAST 14034 0 0
+~
+~
+D SOUTH 14030 0 0
+~
+~
+#14034
+Central Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14037 0 0
+~
+~
+D EAST 14035 0 0
+~
+~
+D SOUTH 14031 0 0
+~
+~
+D WEST 14033 0 0
+~
+~
+#14035
+Easter Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D NORTH 14038 0 0
+~
+~
+D SOUTH 14032 0 0
+~
+~
+D WEST 14034 0 0
+~
+~
+#14036
+NW corner of the Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D EAST 14037 0 0
+~
+~
+D SOUTH 14033 0 0
+~
+~
+#14037
+Northern end of the Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate.   
+~
+inside
+ROOM INDOORS
+D EAST 14038 0 0
+~
+~
+D SOUTH 14034 0 0
+~
+~
+D WEST 14036 0 0
+~
+~
+#14038
+NE corner of the Beholder Corps hall~
+You stand within a massive open hall. The stone walls of the building have   
+been broken down between the individual rooms up here and cleared away in   
+order to provide a single huge, open area. Green warm gas fills the air as   
+it rises in stinking clouds from the mucus and slime pooling on the floor.   
+Large globs of ichor drip off the ceiling and onto you, causing burning and   
+itching. All around you the sounds of heavy breathing and rumbling voices   
+echo and revererate. To the east is an elaborate golden door.   
+~
+inside
+ROOM INDOORS
+D EAST 14039 ABC 14011
+golden door~
+~
+D SOUTH 14035 0 0
+~
+~
+D WEST 14037 0 0
+~
+~
+#14039
+The Inner Chamber~
+You are in th dangerous inner chamber of the beholder corps' main level.   
+Here there is very little to see but blank walls, there beholders   
+preferring to indulge themsleves in amusements not seen in the mortal   
+realm. There is a golden door in the west wall, and the chambers continue   
+east.   
+~
+inside
+ROOM INDOORS
+D EAST 14040 0 0
+~
+~
+D WEST 14038 ABC 14011
+golden door~
+~
+#14040
+The Inner Chamber~
+You are in th dangerous inner chamber of the beholder corps' main level.   
+Here there is very little to see but blank walls, there beholders   
+preferring to indulge themsleves in amusements not seen in the mortal   
+realm. There is a single ebon door in the south wall, or you can head west   
+through the chambers.   
+~
+inside
+ROOM INDOORS
+D SOUTH 14041 AB 0
+ebon door~
+~
+D WEST 14039 0 0
+~
+~
+#14041
+The Chamber of Xanath~
+You stand in the blank but foreboding room of the Myth Drannor beholder   
+Corps' current beholder leader.  It is rather bland, but then beholder's   
+see things that mortals don't and there is probably more to the room than   
+meets the eye. An ebon door heads north, or you can climb some stairs up.   
+~
+inside
+D NORTH 14040 AB 0
+ebon door~
+~
+D UP 14042 0 0
+~
+~
+#14042
+On a wide stairwell~
+You stand at the head of a large staircase heading down. The walls here are   
+cleaner than those in the rest of the building and the stench of beholder   
+excretions is not so strong in the air. To the north the building opens into   
+a crossroads of corridors.    
+~
+inside
+ROOM INDOORS
+D NORTH 14043 0 0
+~
+~
+D DOWN 14041 0 0
+~
+~
+E inscriptions paintings~
+The paintings and inscriptions are all related to the power of the dark elf   
+enclaves and houses. They seem to be asserting the drow power and making sure   
+it is being acknowledged here with the beholder corps.   
+~
+#14043
+A junction in the cleared corridors~
+You are in a corridor of the old building that seems better restored and kept   
+than the majority of the region. The air still has the foul stench that fills   
+the area, but it is not so strong here. Some inscriptions and paintings of dark   
+elven people adorn the walls along the corridor. The junction here goes north,   
+east and west, or south towards some stairs heading down.   
+~
+inside
+ROOM INDOORS
+D NORTH 14057 0 0
+~
+~
+D EAST 14049 0 0
+~
+~
+D SOUTH 14042 0 0
+~
+~
+D WEST 14056 0 0
+~
+~
+#14044
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off east and west.   
+~
+inside
+ROOM INDOORS
+D EAST 14045 0 0
+~
+~
+D WEST 14043 0 0
+~
+~
+#14045
+A bend in a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the foul   
+stench of beholder excretions is not so strong here. The corridor heads off to   
+the north and west.   
+~
+inside
+ROOM INDOORS
+D NORTH 14046 0 0
+~
+~
+D WEST 14044 0 0
+~
+~
+#14046
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the foul   
+stench of beholder excretions is not so strong here. The corridor heads off to   
+the north and south, while plain wooden door are set into the east and west   
+walls.   
+~
+inside
+ROOM INDOORS
+D NORTH 14047 0 0
+~
+~
+D EAST 14066 AB -1
+wood door~
+~
+D SOUTH 14045 0 0
+~
+~
+D WEST 14069 AB -1
+wood door~
+~
+#14047
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the north and south, while plain wooden door are set into the east and   
+west walls.   
+~
+inside
+ROOM INDOORS
+D NORTH 14048 0 0
+~
+~
+D EAST 14067 AB -1
+wood door~
+~
+D SOUTH 14046 0 0
+~
+~
+D WEST 14068 AB 0
+wood door~
+~
+#14048
+A bend in a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the south and west. To the east is a large stairwell leading up.   
+~
+inside
+ROOM INDOORS
+D EAST 14060 0 0
+~
+~
+D SOUTH 14047 0 0
+~
+~
+D WEST 14049 0 0
+~
+~
+#14049
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the east and west.   
+~
+inside
+ROOM INDOORS
+D EAST 14048 0 0
+~
+~
+D WEST 14050 0 0
+~
+~
+#14050
+A junction in the corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the east, south and west.   
+~
+inside
+ROOM INDOORS
+D EAST 14049 0 0
+~
+~
+D SOUTH 14058 0 0
+~
+~
+D WEST 14051 0 0
+~
+~
+#14051
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the east and west.   
+~
+inside
+ROOM INDOORS
+D EAST 14050 0 0
+~
+~
+D WEST 14052 0 0
+~
+~
+#14052
+A bend in a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the east and south. There is a large stairwell to the west.   
+~
+inside
+ROOM INDOORS
+D EAST 14051 0 0
+~
+~
+D SOUTH 14053 0 0
+~
+~
+D WEST 14059 0 0
+~
+~
+#14053
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the north and south, while plain wooden door are set into the east and   
+west walls.   
+~
+inside
+ROOM INDOORS
+D NORTH 14052 0 0
+~
+~
+D EAST 14076 AB -1
+wood door~
+~
+D SOUTH 14054 0 0
+~
+~
+D WEST 14074 AB -1
+wood door~
+~
+#14054
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the north and south, while plain wooden door are set into the east and   
+west walls.   
+~
+inside
+ROOM INDOORS
+D NORTH 14053 0 0
+~
+~
+D EAST 14077 AB -1
+wood door~
+~
+D SOUTH 14055 0 0
+~
+~
+D WEST 14075 AB -1
+wood door~
+~
+#14055
+A bend in a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the north amd east.   
+~
+inside
+ROOM INDOORS
+D NORTH 14054 0 0
+~
+~
+D EAST 14056 0 0
+~
+~
+#14056
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the east and west.   
+~
+inside
+ROOM INDOORS
+D EAST 14043 0 0
+~
+~
+D WEST 14055 0 0
+~
+~
+#14057
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the north and south, while plain wooden door are set into the east and   
+west walls.   
+~
+inside
+ROOM INDOORS
+D NORTH 14058 0 0
+~
+~
+D EAST 14072 AB -1
+wood door~
+~
+D SOUTH 14043 0 0
+~
+~
+D WEST 14071 AB -1
+wood door~
+~
+#14058
+In a wide cleaned corridor~
+You are in a wide cleared out corridor in the restored beholder building. The   
+walls and floor are much cleaner than in the rest of the building, and the   
+foul stench of beholder excretions is not so strong here. The corridor heads   
+off to the north and south, while plain wooden door are set into the east and   
+west walls.   
+~
+inside
+ROOM INDOORS
+D NORTH 14050 0 0
+~
+~
+D EAST 14073 AB -1
+wood door~
+~
+D SOUTH 14057 0 0
+~
+~
+D WEST 14070 AB -1
+wood door~
+~
+#14059
+Beneath a large stairwell~
+There is a strong odour of disgusting beholder excretions blowing in from the   
+area above the stairs. Down here the stench is not so strong and the corridors   
+seem to have been cleaned of the sticky green saliva like mess. The stairs go   
+up or you can head east into the corridors.   
+~
+inside
+ROOM INDOORS
+D EAST 14052 0 0
+~
+~
+D UP 14061 0 0
+~
+~
+#14060
+Beneath a large stairwell~
+There is a strong odour of disgusting beholder excretions blowing in from the   
+area above the stairs. Down here the stench is not so strong and the corridors   
+seem to have been cleaned of the sticky green saliva like mess. The stairs go   
+up or you can head west into the corridors.   
+~
+inside
+ROOM INDOORS
+D WEST 14048 0 0
+~
+~
+D UP 14065 0 0
+~
+~
+#14061
+Above a large stairwell~
+You are standing at the top of a stairwell amidst a virtual lake of disgusting   
+beholder excretions. The stench from here is overwhelming and you can barely   
+breath as it rises around you in steaming wafts. To the east is a large open   
+space that almost looks like it's a pool of exrection and waste. The stairwell   
+leads back down.   
+~
+inside
+ROOM INDOORS
+D EAST 14062 0 0
+~
+~
+D DOWN 14059 0 0
+~
+~
+#14062
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. You can see a stairwell to the west.   
+~
+inside
+D EAST 14063 0 0
+~
+~
+D SOUTH 14084 0 0
+~
+~
+D WEST 14061 0 0
+~
+~
+#14063
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls head east, south and west.   
+~
+inside
+D EAST 14064 0 0
+~
+~
+D SOUTH 14085 0 0
+~
+~
+D WEST 14062 0 0
+~
+~
+#14064
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. You can see a stairwell to the east.   
+~
+inside
+D EAST 14065 0 0
+~
+~
+D SOUTH 14086 0 0
+~
+~
+D WEST 14063 0 0
+~
+~
+#14065
+Above a large stairwell~
+You are standing at the top of a stairwell amidst a virtual lake of disgusting   
+beholder excretions. The stench from here is overwhelming and you can barely   
+breath as it rises around you in steaming wafts. To the west is a large open   
+space that almost looks like it's a pool of exrection and waste. The stairwell   
+leads back down.   
+~
+inside
+ROOM INDOORS
+D WEST 14064 0 0
+~
+~
+D DOWN 14060 0 0
+~
+~
+#14066
+In a well furnished room~
+This room has all the trappings of a lords bedroom. It is spacious and very   
+expensively decorated. It looks like something other than just foul beholder   
+beasts live in this tower. There is a door in the west wall leading out to   
+the corridors.   
+~
+inside
+D WEST 14046 AB -1
+door~
+~
+#14067
+In a dark room of arcana power~
+This room has the feel of supressed violence and magical forces waiting to   
+be released. Despite the vileness of the room there is something almost making   
+you feel in awe of the power that is building up in here. The only exit out of   
+the room is to the west through a door.   
+~
+inside
+D WEST 14047 AB -1
+door~
+~
+#14068
+In a bare room filled with rubble~
+This room hasn't been restored like the rest of the building. There is a pile   
+of rock and debris dumped in here, indicating that much of the clean up ended   
+up being deposited in this room rather than carried all the way outside. There   
+is a door in the east wall leading out into the corridors.   
+~
+inside
+D EAST 14047 AB -1
+door~
+~
+#14069
+The prisoner's room~
+This bare room is mostly filled with rocks and derbis left over from the clean   
+up of the building. Some strong manacles hang off the west wall and pools of   
+thick blood and torn black fur are scattered around the room.   
+~
+inside
+D EAST 14046 AB -1
+door~
+~
+#14070
+In a bare room filled with rubble~
+This room hasn't been restored like the rest of the building. There is a pile   
+of rock and debris dumped in here, indicating that much of the clean up ended   
+up being deposited in this room rather than carried all the way outside. There   
+is a door in the east wall leading out into the corridors.   
+~
+inside
+D EAST 14058 AB -1
+door~
+~
+#14071
+In a bare room filled with rubble~
+This room hasn't been restored like the rest of the building. There is a pile   
+of rock and debris dumped in here, indicating that much of the clean up ended   
+up being deposited in this room rather than carried all the way outside. There   
+is a door in the east wall leading out into the corridors.   
+~
+inside
+D EAST 14057 AB -1
+door~
+~
+#14072
+In a bare room filled with rubble~
+This room hasn't been restored like the rest of the building. There is a pile   
+of rock and debris dumped in here, indicating that much of the clean up ended   
+up being deposited in this room rather than carried all the way outside. There   
+is a door in the west wall leading out into the corridors.   
+~
+inside
+D WEST 14057 AB -1
+door~
+~
+#14073
+In a slime encrusted room~
+The room is totally drenched in the foul smelling liquids of beholder drool.   
+There is nothing in the room untouched by the sticky green substance, and you   
+can barely see through the steaming mist rising from the warm mess. There is   
+a door leading west into the clean aired corridors.   
+~
+inside
+D WEST 14058 AB -1
+door~
+~
+#14074
+A stone filled room~
+The room is filled with stones and rubble of all size. The rocks here are in a   
+very ordered fashion, set up almost as if being used as furniture. There is a   
+door leading east out to the corridor.   
+~
+inside
+D EAST 14053 AB -1
+door~
+~
+#14075
+A room of foul smelling vapours~
+This room is filled with the smell of disgusting beholder matter. There is   
+little of real interest in it however, and you can barely breathe while in   
+here. The best way out is the door in the east wall.   
+~
+inside
+D EAST 14054 AB -1
+door~
+~
+#14076
+In a bare room filled with rubble~
+This room hasn't been restored like the rest of the building. There is a pile   
+of rock and debris dumped in here, indicating that much of the clean up ended   
+up being deposited in this room rather than carried all the way outside. There   
+is a door in the west wall leading out into the corridors.   
+~
+inside
+D WEST 14053 AB -1
+door~
+~
+#14077
+In a bare room filled with rubble~
+This room hasn't been restored like the rest of the building. There is a pile   
+of rock and debris dumped in here, indicating that much of the clean up ended   
+up being deposited in this room rather than carried all the way outside. There   
+is a door in the west wall leading out into the corridors.   
+~
+inside
+D WEST 14054 AB -1
+door~
+~
+#14080
+The Dark Room~
+This room is dark, with no lights at all within it. It is like some kind   
+of shrine to the night. The only thing you can see of interest is a lage   
+iron door in the north wall.    
+~
+inside
+ROOM INDOORS
+D NORTH 14088 ABC 14020
+iron door~
+~
+#14084
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls head north, east and south.   
+~
+inside
+D NORTH 14062 0 0
+~
+~
+D EAST 14085 0 0
+~
+~
+D SOUTH 14087 0 0
+~
+~
+#14085
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls in all directions around you.   
+~
+inside
+D NORTH 14063 0 0
+~
+~
+D EAST 14086 0 0
+~
+~
+D SOUTH 14088 0 0
+~
+~
+D WEST 14084 0 0
+~
+~
+#14086
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls head north, south and west.   
+~
+inside
+D NORTH 14064 0 0
+~
+~
+D SOUTH 14089 0 0
+~
+~
+D WEST 14085 0 0
+~
+~
+#14087
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls head north and east.   
+~
+inside
+D NORTH 14084 0 0
+~
+~
+D EAST 14088 0 0
+~
+~
+#14088
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls head north, east and west. To the   
+south is a large iron door.   
+~
+inside
+D NORTH 14085 0 0
+~
+~
+D EAST 14089 0 0
+~
+~
+D SOUTH 14080 ABC 14020
+iron door~
+~
+D WEST 14087 0 0
+~
+~
+#14089
+In a hall of beholders~
+You stand ankle deep in the sticky green excretions of a massive number of   
+beholders. The room is filled with thick steaming gas as it rises from the mess   
+on the floor, and you find it hard to breath. All around you there is the sick   
+sound of heavy laboured breathing. The halls head north and west.   
+~
+inside
+D NORTH 14086 0 0
+~
+~
+D WEST 14088 0 0
+~
+~
+#0
+
+
+
+#RESETS
+DOOR 14000 south CLOSED
+MOB 14005 TO 14000 GLIMIT 3 LLIMIT 1
+MOB 14000 TO 14008 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14005 TO 14009 GLIMIT 3 LLIMIT 1
+MOB 14000 TO 14014 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14015 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14016 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14017 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14018 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14005 TO 14018 GLIMIT 3 LLIMIT 1
+MOB 14000 TO 14020 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14021 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14022 GLIMIT 19 LLIMIT 1
+GIVE 14010
+MOB 14000 TO 14023 GLIMIT 19 LLIMIT 1
+GIVE 14010
+DOOR 14026 east LOCKED
+DOOR 14027 west LOCKED
+MOB 14000 TO 14027 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14002 TO 14028 GLIMIT 7 LLIMIT 1
+GIVE 14011
+MOB 14000 TO 14029 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14000 TO 14030 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14002 TO 14030 GLIMIT 7 LLIMIT 1
+GIVE 14011
+MOB 14002 TO 14031 GLIMIT 7 LLIMIT 1
+GIVE 14011
+MOB 14000 TO 14032 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14000 TO 14033 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14000 TO 14034 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14002 TO 14035 GLIMIT 7 LLIMIT 1
+GIVE 14011
+MOB 14000 TO 14036 GLIMIT 19 LLIMIT 3
+GIVE 14010
+MOB 14002 TO 14036 GLIMIT 7 LLIMIT 1
+GIVE 14011
+DOOR 14038 east LOCKED
+MOB 14002 TO 14038 GLIMIT 7 LLIMIT 1
+GIVE 14011
+DOOR 14039 west LOCKED
+DOOR 14040 south CLOSED
+MOB 14002 TO 14040 GLIMIT 7 LLIMIT 1
+GIVE 14011
+MOB 14003 TO 14040 GLIMIT 1 LLIMIT 1
+EQUIP 14004 WIELD
+DOOR 14041 north CLOSED
+MOB 14001 TO 14041 GLIMIT 1 LLIMIT 1
+GIVE 14020
+GIVE 14003
+DOOR 14046 east CLOSED
+DOOR 14046 west CLOSED
+DOOR 14047 east CLOSED
+DOOR 14047 west CLOSED
+S
+
+#IMPROGS
+S 14000 spec_beholder
+S 14001 spec_beholder
+S 14002 spec_beholder
+S 14013 spec_beholder
+S 14018 spec_beholder
+S 14019 spec_cast_cleric
+END
+#$

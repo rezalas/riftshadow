@@ -1,0 +1,229 @@
+Chronomancers (Time-mages): a guild of mages dedicated to the manipulation of time and runes. Obviously this is an intriguing 
+subject for which to develop powers and around which to base a class, but it's hard to come up with lots of original spells. 
+What we've come up with so far is below, and added help is appreciated. Pay special attention to what levels I've assigned to 
+which skills, as I'm terrible with balance. The main problem I see with the class as it stands now is that they have very few 
+options for in-combat casting. It might be a good idea to give them a few warrior/assassin type skills because of their highly 
+heightened reflexes, for no reason other than that it will give them something to do. 
+
+
+Note on spells versus runes: 
+All beneficial spells are self-cast only, though they may be inscribed into rune form (see below). For example, the 
+chronomancer tells his groupmate, "Give me your armor/sword" and then puts a rune for celerity into the armor, or a rune for 
+pernicity onto the sword. Then, his groupmate wears the gear, and voila, they're affected for X hours - but in rune form, 
+rather than in spell form, where it cannot be dispelled by conventional means. 
+
+A chronomancer might also inscribe a rune for langour into a noremove helmet and leave it lying around, then stand there 
+rushing and watch, hoping his enemy might pick it up and wear it and be moving too slowly to escape. 
+
+
+Spells: 
+(All casting lags are shown pre-pernicity, which halves casting lag) 
+(NONE of these spells are stackable.) 
+
+(12) pernicity 
+This spell allows the chronomancer to speed his thoughts and movements slightly, halving the lag on spells and skills, whereas 
+the intense concentration required in casting a stasis wall or creating a rune is normally very time consuming. 2 round 
+casting lag, level/4 duration. 
+
+You feel yourself thinking more clearly. 
+$n's face lights up suddenly, energized with new speed. 
+
+Your thoughts slow down suddenly. 
+
+(14) celerity 
+Like pernicity, this spell lets the chronomancer speed his movements slightly more, and remove all terrain- or 
+skill/spell-induced movement lag. 2 round casting lag, level/5 duration. 
+
+Your movements begin to come with more ease. 
+$n somehow looks much lighter and faster. 
+
+Your legs feel heavy as your movements slow down. 
+
+(22) langour 
+The opposite of pernicity, this spell doubles command lag. 2 round casting lag, level/6 duration. 
+
+You feel suddenly burdened mentally, unable to think clearly. 
+$N's eyes haze over slightly, and $e becomes somewhat sluggish. 
+
+Your thoughts regain their natural speed. 
+
+(25) stasis field 
+This spell contains the target in an immovable time rift, holding them in perfect stasis. They cannot move or act in anyway, 
+but are likewise impervious to harm as none can cross into the stasis field without temporally freezing themselves as well. 
+Castable outside combat only. 4 round casting lag, level/10 duration. 
+
+As $n's spell is woven, a stasis field blazes and then fades, rendering you immobile! 
+A stasis field blazes into existence around $N, and $e suddenly ceases all movement! 
+
+You feel free to move once more, as the stasis field loses its effect. 
+The stasis field containing $N disappears. 
+
+(27) stasis wall 
+Like stasis field, this spell creates an immovable temporal barrier which cannot be passed through. Castable outside combat 
+only. 4 round casting lag, level/10 duration. 
+
+Syntax: c 'stasis wall' n 
+
+$n gestures, and an immovable temporal barrier snaps into existence to the $d! ($d = direction) 
+
+You try to move to the $d, but a stasis wall flickers and holds you back. 
+$N tries to move to the $d, but is halted by a stasis wall. 
+
+The stasis wall to the $d fades away. 
+
+(29) claudication 
+The opposite of celerity, this powerful spell doubles movement lag (is not stackable with other movement lag - "Their 
+movements are already being slowed.") 2 round casting lag, level/5 duration. 
+
+You suddenly feel your movements slow considerably. 
+$N sags and begins moving as through through water. 
+
+Your movements regain their natural speed. 
+
+(33) prudence 
+This spell speeds a chronomancer's perceptions to the point where he can detect another chronomancer who is rushing. Castable 
+outside combat only. 2 round casting lag, level/3 duration. 
+
+You feel your eyes tighten and begin to focus very intently. 
+$n's eyes flare with active intensity. 
+
+You feel your vision become less intent. 
+
+(35) prospicience 
+This spell further speeds a chronomancer's perceptions, heightening his reflexes and actually giving him very short glimpses 
+into the future. Prospicience is a very powerful spell, making a chronomancer possibly the best tank in the game. Against a 
+single opponent, he is all but invincible, able to block or dodge 99% of attacks. Against two, he is still better than the 
+best of warriors or defensive forms. Against three, he is as good as a single well-practiced warrior might be against another 
+single warrior. Against four, his ability begins to fail him occasionally, and after four it is all but useless, as he can see 
+the attacks coming but cannot possibly parry them when they come from seven different directions at once. Castable outside 
+combat only. 6 round casting lag, level/5 duration. 
+
+Your thoughts and motions become very quick, clear and precise. 
+$n begins moving with incredible grace and dexterity. 
+
+Your thoughts and motions slow down, and you no longer glimpse the future. 
+
+(36) rush 
+Allows the chronomancer to move very rapidly in a room, too fast for the unenhanced viewer's eyes to see. A chronomancer might 
+be given the 'steal' skill, because for my money, moving that fast would make one a pretty decent thief. After too long in 
+this state, though, his clothing begins to burn. Castable outside combat only. 6 round casting lag, 2 round vis lag (not 
+shortened by pernicity). Vis with 'slow' command. 
+
+You begin to rush back and forth, gaining speed until you are unable to be seen. 
+$n begins to rush around the area, gaining speed until he cannot be seen. 
+
+You forcibly slow yourself back to a normal pace. 
+
+1-5 hours in rush state: no effect 
+6-7 hours in rush state: You feel your equipment heating up. 
+8 hours in rush state: Some of your clothing bursts into flame! 
+Room echo: Small wisps of smoke appear in the room. 
+1d3 pieces of flammable clothing begin to burn. 
+9 hours in rush state: Your clothing begins to burn furiously! 
+Room echo: Smoke begins to fill the area, and flames pop in and out of existence. 
+All pieces of flammable clothing begin to burn. 
+10 hours in rush state: You slow down and begin batting at the flames on your clothing! 
+Room echo: $n suddenly appears, furiously batting at $s flaming clothing! 
+
+Interesting possibility: Chronomancers might be able to remain in rush state indefinitely if they remove all their clothing. 
+Discuss. 
+
+(38) providence 
+A highly advanced version of pernicity, providence allows a chronomancer to so speed his perceptions and movements that he is 
+too well-prepared to be lagged out of combat. He can still be bashed/tripped/thrown/pincered, etc, but all in-combat lagging 
+skills are reduced to one round of lag for the chronomancer (and not reduced for the lagger, thus spamming bash becomes a bad 
+tactic). Castable outside combat only. 4 round casting lag, level/6 duration. 
+
+Your heightened perceptions prepare you for combat. 
+$n seems to move more cautiously, as though prepared for anything. 
+
+You feel less prepared. 
+
+(40) temporal discord 
+The chronomancer creates clashing flows of temporality around a target, warping his perceptions so that he cannot function 
+properly. One minute flies by, the next moves at a crawl, and the target finds himself stumbling around for the duration of 
+the spell. This would have a chance of causing the target to pass out entirely, and would create a displacement effect 
+regardless of unconsciousness. Preys on low int. Begins combat only. 4 round casting lag, level/10 duration. 
+
+Your world suddenly begins moving erratically, and you are unable to focus! 
+$N jerks suddenly, and begins staggering and trying in vain to focus. 
+
+You find it easier to move and concentrate. 
+
+Your world suddenly turns upside down, and you lose consciousness. 
+$N jerks suddenly, staggers a bit and then passes out. 
+
+You wake from troubled sleep, and try to shake the cobwebs from your mind. 
+
+(40) senesce 
+This spell causes the target to age very rapidly, and very suddenly. It does (8d24 + level) damage, and is a str/dex 
+malediction (level/6 str, level/6 dex) which causes hits from aging every tick (3d8). Also has a small chance (10-20%, save 
+vs. int) to increase the target's age_mod by 2 or 3 points permanently. Begins combat only. Is NOT stackable or re-castable 
+for damage ("They have already been aged.") 6 round casting lag, level/5 duration. 
+
+You gasp in agony as $n tears years of your life away! 
+You pluck years away from $N, aging $m rapidly! 
+
+With a rush, you feel your youth return to you. 
+With a rush, you feel some of your youth return to you. (if age_mod has been increased) 
+
+
+Runes: 
+
+A character can only be affected by one armor rune and one weapon rune at a given time. 
+
+Syntax: rune [rune type] [rune imbuement] 
+For example: rune weapon pernicity or rune portal 'stasis wall' n 
+Runes are magical symbols drawn on matter at first, and in the air invisibly as the chronomancer learns more, which imbue said 
+matter or space with time-related properties. Chronomancers may imbue runes with any spells they've learned which are 
+appropriate to a rune imbuement [these spells listed below]. A runespell is cast at the time that the rune is triggered (door 
+passed through, weapon/armor worn, room entered) at (level * spell % * rune skill %) level. For example, a level 50 
+chronomancer inscribing a rune of celerity with celerity at 90% and rune at 75% would imbue a level 34 rune. Thus, it's 
+definitely a good idea to perfect things, but not at all necessary. All rune imbuements have a four round lag (2 after 
+pernicity). 
+
+Concentrating intently, you inscribe a rune onto (weapon name/armor name). 
+Concentrating intently, $n inscribes a rune onto (weapon name/armor name). 
+
+Running your hands over the portal, you imbue it with a powerful rune. 
+Running $s hands over the portal, $n imbues it with a powerful rune. 
+
+Tracing a glowing pattern before you, you create a rune in midair. 
+$n moves $s hands in archaic patterns, tracing a glowing line in midair. 
+
+Rune Types: 
+
+(18) weapon runes 
+The simplest of the rune types to learn, it involves inscribing a few symbols into a weapon and imbuing it with temporal 
+properties for a duration. The rune triggers when the weapon is worn. 
+
+Example: Wielding (weapon name), you suddenly feel your thoughts moving faster! 
+
+(20) armor runes 
+Same as weapon runes, inscribed into armor rather than weapons. More difficult to learn because familiarity isn't as strong 
+between armor and its wearer as between a weapon and its wielder. Rune triggers when armor is worn. 
+
+Example: As you wear (armor name), you suddenly feel your thoughts moving faster! 
+
+(30) portal runes 
+Far more difficult than simple weapon and armor runes, this is the first type of rune which could be considered a trap. Etched 
+into a doorframe, it remains dormant until being triggered by someone passing through the door. 
+
+Example: As you pass through the door, a stasis wall snaps into existence behind you! 
+
+(45) spatial runes 
+The most complex runes are not drawn into physical objects, but scribed into the air with a finger, glowing for a moment then 
+fading to invisibility. These are also "traps," firing off when someone enters the room. 
+
+Example: A rune flares in midair momentarily as you stumble through it, suddenly confining you within a stasis field! 
+
+Rune Imbuements: 
+
+(12) pernicity 
+(14) celerity 
+(22) langour
+(25) stasis field 
+(27) stasis wall (portal only) 
+(29) claudication 
+(40) temporal discord 
+

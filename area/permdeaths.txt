@@ -1,0 +1,159 @@
+DELETED||[22  Dwarf War]||Lanorethe the Master Knight||Kills: 0||Deaths: 0||Age: 62||Hours: 1||Fri Aug  8 14:57:50 2003
+DELETED||[20  Abyss A-P]||Istaniel the Anti-Paladin||Kills: 0||Deaths: 0||Age: 125||Hours: 0||Fri Aug  8 15:02:15 2003
+DELETED||[ 3  Duerg War]||Quilithen the Sentry||Kills: 0||Deaths: 0||Age: 62||Hours: 0||Fri Aug  8 15:05:54 2003
+DELETED||[20 Planar War]||Zelithan the Knight||Kills: 0||Deaths: 0||Age: 125||Hours: 0||Fri Aug  8 21:45:01 2003
+DELETED||[51  Dwarf War]||[PHALANX] Kraenesk the Free-Spirited Knight||Kills: 2||Deaths: 1||Age: 75||Hours: 35||Sat Aug  9 15:48:36 2003
+DELETED||[40  Sidhe Sor]||[SCION] Thorivel the Master of the Elements||Kills: 2||Deaths: 3||Age: 16||Hours: 23||Wed Aug 13 16:12:22 2003
+DELETED||[33  Human Nec]||Talinos the Apprentice Summoner of Demons||Kills: 0||Deaths: 2||Age: 20||Hours: 15||Fri Aug 15 10:28:00 2003
+DELETED||[34  Sidhe Sor]||Xulithane the Master of Earth||Kills: 0||Deaths: 1||Age: 15||Hours: 5||Sat Aug 16 23:47:30 2003
+DELETED||[35  Abyss A-P]||[BOUNTY] Marcus the Field Marshall of Darkness, Neophyte Hunter||Kills: 18||Deaths: 1||Age: 152||Hours: 34||Sun Aug 17 16:12:40 2003
+DELETED||[51 Halflng War]||Lotranios the Knight Hero||Kills: 9||Deaths: 9||Age: 114||Hours: 41||Wed Aug 20 15:58:23 2003
+DELETED||[35  Abyss A-P]||Achirath the Field Marshall of Darkness||Kills: 3||Deaths: 3||Age: 149||Hours: 20||Wed Aug 20 17:12:46 2003
+DELETED||[38  Abyss A-P]||[HORDE] Benakk the Invoker of Suffering||Kills: 2||Deaths: 8||Age: 126||Hours: 36||Sat Aug 23 00:11:10 2003
+DELETED||[43 Planar War]||[HORDE] Dalafean the Armor Splitter||Kills: 0||Deaths: 2||Age: 159||Hours: 23||Mon Aug 25 16:12:28 2003
+DELETED||[39   Elf Sor]||[PHALANX] Throach the Master of Abjuration||Kills: 2||Deaths: 1||Age: 236||Hours: 37||Mon Aug 25 17:51:21 2003
+DELETED||[36  Duerg A-P]||Vudish the Knight of the Apocalypse||Kills: 2||Deaths: 1||Age: 64||Hours: 30||Fri Aug 29 17:53:55 2003
+DELETED||[51 Celest Pal]||Aepheoeus the Steadfast Paladin Hero||Kills: 3||Deaths: 8||Age: 142||Hours: 70||Mon Sep  1 11:32:03 2003
+DELETED||[43  Human Thi]||Morgren the Undetectable, Neophyte Hunter||Kills: 16||Deaths: 7||Age: 20||Hours: 38||Mon Sep  1 17:59:56 2003
+DELETED||[53  Duerg Nec]||[BOUNTY] Piental the Tower of Fortitude, Shaper of Worlds||Kills: 1||Deaths: 0||Age: 87||Hours: 96||Tue Sep  2 15:35:57 2003
+DELETED||[40 Celest War]||Zod the Master of War||Kills: 1||Deaths: 4||Age: 138||Hours: 16||Tue Sep  2 21:08:54 2003
+DELETED||[41   Elf Sor]||Suelaun the Greater Elemental Magician||Kills: 1||Deaths: 2||Age: 240||Hours: 12||Tue Sep  2 22:48:14 2003
+DELETED||[45  Human Pal]||[PHALANX] Vascioshal the High Priest of the Templars||Kills: 1||Deaths: 0||Age: 23||Hours: 23||Fri Sep  5 11:42:58 2003
+DELETED||[37 Planar War]||Araxa the Shield Cleaver||Kills: 0||Deaths: 1||Age: 171||Hours: 11||Fri Sep  5 18:33:28 2003
+DELETED||[34 Planar Hea]||Araenai the Healer of Poison||Kills: 0||Deaths: 1||Age: 131||Hours: 25||Sun Sep  7 21:52:49 2003
+DELETED||[39  Abyss A-P]||Ghedes the Arch-Fiend||Kills: 3||Deaths: 1||Age: 126||Hours: 13||Tue Sep  9 15:38:49 2003
+DELETED||[35  Mino War]||Rhaokor the Baron of Meteors||Kills: 0||Deaths: 1||Age: 23||Hours: 12||Wed Sep 10 12:11:39 2003
+DELETED||[51  Mino War]||Karchic the Knight Hero||Kills: 2||Deaths: 1||Age: 24||Hours: 55||Wed Sep 10 15:11:04 2003
+DELETED||[41  Human Hea]||[PHALANX] Xranis the Priest of Life, Initiate to the Erethryn||Kills: 0||Deaths: 1||Age: 22||Hours: 26||Wed Sep 10 15:11:21 2003
+DELETED||[45 Planar War]||Kaa the Weapon Master, Exiled from the Horde||Kills: 4||Deaths: 7||Age: 164||Hours: 49||Wed Sep 10 15:11:35 2003
+DELETED||[43 Celest Pal]||Draci the Champion of the Templars, Disgraced Outcast of Phalanx||Kills: 1||Deaths: 12||Age: 170||Hours: 43||Wed Sep 10 15:11:48 2003
+DELETED||[39  Human Thi]||Giac the Shadow||Kills: 4||Deaths: 3||Age: 23||Hours: 29||Thu Sep 11 13:36:56 2003
+DELETED||[36  Human Nec]||Azkahl the Abominable Archmage||Kills: 0||Deaths: 3||Age: 24||Hours: 16||Thu Sep 11 15:20:04 2003
+DELETED||[51  Mino War]||[BOUNTY] Kosin the Knight Hero, Neophyte Hunter||Kills: 33||Deaths: 5||Age: 31||Hours: 50||Thu Sep 18 02:35:14 2003
+DELETED||[36 Celest War]||Karthrag the Rock Crusher||Kills: 0||Deaths: 1||Age: 129||Hours: 16||Thu Sep 18 17:06:55 2003
+DELETED||[32 Halflng War]||Aler the Baron of Storms||Kills: 1||Deaths: 2||Age: 124||Hours: 10||Fri Sep 19 18:47:16 2003
+DELETED||[43  Sidhe Sor]||[SCION] Thrawn the Master of Evocation, Outcast of the Light||Kills: 1||Deaths: 3||Age: 21||Hours: 48||Fri Sep 19 21:34:27 2003
+CON-DIE||[20  Human War]||Carancock the Knight||Kills: 0||Deaths: 40||Age: 20||Hours: 0||Fri Sep 19 23:19:56 2003
+DELETED||[38 Halflng War]||Breton the Student of War||Kills: 0||Deaths: 0||Age: 106||Hours: 13||Mon Sep 22 18:02:40 2003
+DELETED||[45  Drow War]||Xallengack the Weapon Master||Kills: 2||Deaths: 3||Age: 243||Hours: 23||Fri Sep 26 20:38:15 2003
+DELETED||[42  Human Nec]||[SCION] Xajelgrak the Occultist||Kills: 6||Deaths: 5||Age: 25||Hours: 28||Fri Sep 26 20:38:57 2003
+DELETED||[43   Imp Sor]||Dunkaza the Master of Evocation||Kills: 3||Deaths: 2||Age: 93||Hours: 42||Sun Sep 28 13:02:30 2003
+DELETED||[51 Celest Pal]||[PHALANX] Carissa the Paladin Heroine||Kills: 2||Deaths: 8||Age: 158||Hours: 55||Mon Sep 29 03:47:22 2003
+DELETED||[51   Elf War]||[PHALANX] Marcolyn the Knight Hero||Kills: 3||Deaths: 5||Age: 335||Hours: 52||Mon Sep 29 20:46:58 2003
+DELETED||[40 Halflng War]||Bobkins the Master of War||Kills: 3||Deaths: 0||Age: 117||Hours: 21||Tue Sep 30 11:20:17 2003
+DELETED||[42   Imp Thi]||[HORDE] Drammenmar the Unseen||Kills: 2||Deaths: 3||Age: 114||Hours: 25||Tue Sep 30 17:19:21 2003
+DELETED||[42  Human Thi]||[HORDE] Grolier the Unseen||Kills: 7||Deaths: 1||Age: 23||Hours: 27||Thu Oct  2 21:48:01 2003
+DELETED||[40  Abyss War]||[HORDE] Juzequol the Master of War||Kills: 10||Deaths: 5||Age: 138||Hours: 39||Fri Oct  3 11:25:01 2003
+DELETED||[40  Sidhe Sor]||[PHALANX] Gaelieap the Master of the Elements||Kills: 0||Deaths: 4||Age: 15||Hours: 12||Fri Oct  3 12:52:30 2003
+DELETED||[32  Human Asn]||Falien the Master of Severance||Kills: 0||Deaths: 0||Age: 22||Hours: 10||Sun Oct  5 13:00:23 2003
+DELETED||[35  Duerg A-P]||Xalpheon the Field Marshall of Darkness||Kills: 1||Deaths: 0||Age: 63||Hours: 7||Wed Oct  8 14:58:38 2003
+DELETED||[51  Dwarf War]||Raxx the Oath-Bound Dwarf, Exile to the Phalanx||Kills: 7||Deaths: 22||Age: 90||Hours: 95||Thu Oct  9 22:33:57 2003
+DELETED||[51  Human Thi]||[BOUNTY] Dagracel the Thief Hero, Neophyte Hunter||Kills: 5||Deaths: 2||Age: 24||Hours: 50||Mon Oct 13 09:51:21 2003
+DELETED||[45  Abyss War]||Thoikor the Weapon Master||Kills: 6||Deaths: 6||Age: 144||Hours: 22||Tue Oct 14 18:45:50 2003
+DELETED||[39 Halflng War]||Ethan the Learned of War||Kills: 2||Deaths: 5||Age: 176||Hours: 14||Thu Oct 16 03:10:58 2003
+DELETED||[32  Drow War]||Verisol the Baron of Storms||Kills: 0||Deaths: 2||Age: 275||Hours: 13||Sat Oct 18 20:06:00 2003
+DELETED||[43  Human Thi]||Eralim the Undetectable||Kills: 8||Deaths: 2||Age: 23||Hours: 42||Sat Oct 18 21:51:21 2003
+DELETED||[40   Imp A-P]||Kontasti the Evil Lord||Kills: 2||Deaths: 2||Age: 91||Hours: 27||Sun Oct 19 03:05:48 2003
+DELETED||[39  Dwarf War]||Dror the Learned of War||Kills: 0||Deaths: 1||Age: 63||Hours: 11||Mon Oct 20 20:55:33 2003
+DELETED||[32 Halflng Thi]||Bodo the Infamous Crime Lord||Kills: 1||Deaths: 0||Age: 120||Hours: 17||Mon Oct 20 20:57:16 2003
+DELETED||[51  Human Asn]||[BOUNTY] Mikhail the Hero of the Dark, the Hunter's Guildmaster||Kills: 28||Deaths: 3||Age: 34||Hours: 123||Wed Oct 22 02:36:17 2003
+DELETED||[37  Duerg A-P]||Greglikzer the LightSlayer||Kills: 2||Deaths: 1||Age: 82||Hours: 21||Thu Oct 23 14:13:55 2003
+DELETED||[51 Celest War]||[PHALANX] Zargen the Knight Hero||Kills: 2||Deaths: 2||Age: 156||Hours: 34||Mon Oct 27 21:56:55 2003
+DELETED||[41   Elf Sor]||[SCION] Dechosien the Greater Elemental Magician||Kills: 0||Deaths: 0||Age: 235||Hours: 14||Tue Nov  4 17:30:41 2003
+DELETED||[51  Human Pal]||Ishtabien the Paladin Hero||Kills: 3||Deaths: 4||Age: 37||Hours: 35||Tue Nov 11 22:00:57 2003
+DELETED||[37  Human Sor]||Demofyr the Master of Ether||Kills: 0||Deaths: 1||Age: 29||Hours: 12||Tue Nov 11 22:01:52 2003
+DELETED||[39  Drow Zea]||[HORDE] Agraflean the Cardinal of the North||Kills: 2||Deaths: 1||Age: 196||Hours: 19||Wed Nov 12 17:10:03 2003
+DELETED||[36  Sidhe Sor]||Inimisidal the Master of Air||Kills: 0||Deaths: 0||Age: 22||Hours: 9||Fri Nov 14 20:06:06 2003
+DELETED||[37  Dwarf War]||Dalangral the Shield Cleaver||Kills: 0||Deaths: 0||Age: 64||Hours: 8||Sun Nov 16 23:49:56 2003
+DELETED||[51  Human War]||Galodus the Knight Hero||Kills: 0||Deaths: 7||Age: 30||Hours: 66||Thu Nov 20 14:33:46 2003
+DELETED||[36  Human Sor]||Dakka the Master of Air||Kills: 0||Deaths: 0||Age: 27||Hours: 11||Thu Nov 20 14:34:29 2003
+DELETED||[41 Planar War]||Hruk the Bone Shatterer||Kills: 2||Deaths: 1||Age: 197||Hours: 16||Mon Nov 24 15:06:58 2003
+DELETED||[40  Human Thi]||Chilrac the Master of Shadows||Kills: 2||Deaths: 0||Age: 32||Hours: 21||Mon Nov 24 15:15:47 2003
+DELETED||[47  Duerg War]||Galfielaek the Learned of Battle||Kills: 2||Deaths: 2||Age: 68||Hours: 19||Mon Dec  1 12:21:42 2003
+DELETED||[32 Halflng War]||Gamil the Baron of Storms||Kills: 0||Deaths: 1||Age: 100||Hours: 5||Tue Dec  2 18:32:52 2003
+DELETED||[42 Halflng War]||Lidric the Skull Cracker||Kills: 2||Deaths: 2||Age: 112||Hours: 23||Fri Dec  5 00:32:49 2003
+DELETED||[35   Imp Sor]||[SCION] Taladelien the Master of Water||Kills: 0||Deaths: 2||Age: 97||Hours: 9||Mon Dec 15 19:46:55 2003
+DELETED||[38   Imp Nec]||Pondue the Infernal Archmage, Hunter Extraordinaire||Kills: 2||Deaths: 2||Age: 142||Hours: 17||Tue Dec 16 20:34:35 2003
+DELETED||[51  Mino War]||[HORDE] Jenobe the Lifeblood, Chieftain of the Horde||Kills: 4||Deaths: 12||Age: 45||Hours: 32||Thu Dec 18 20:54:09 2003
+DELETED||[51  Human Thi]||[PHALANX] Gralfion the Thief Hero||Kills: 0||Deaths: 0||Age: 26||Hours: 36||Sat Dec 20 17:22:48 2003
+DELETED||[51 Celest War]||Shuria the Knight Heroine||Kills: 0||Deaths: 1||Age: 152||Hours: 28||Sun Dec 21 21:27:22 2003
+DELETED||[38  Drow A-P]||Vierna the Invoker of Suffering||Kills: 1||Deaths: 2||Age: 338||Hours: 23||Sun Jan  4 23:10:02 2004
+DELETED||[33   Elf War]||Valandil the Baron of Tornadoes||Kills: 0||Deaths: 0||Age: 217||Hours: 5||Mon Jan  5 11:54:59 2004
+DELETED||[48  Abyss A-P]||[HORDE] Crekfileg the Dark Slayer||Kills: 1||Deaths: 3||Age: 143||Hours: 22||Tue Jan  6 12:51:37 2004
+DELETED||[47 Celest War]||Allysia the Learned of Battle||Kills: 0||Deaths: 8||Age: 148||Hours: 19||Sun Jan 11 03:57:52 2004
+DELETED||[35   Imp Sor]||Arthalu the Master of Water||Kills: 0||Deaths: 1||Age: 92||Hours: 8||Mon Jan 12 17:28:05 2004
+DELETED||[31   Imp Sor]||Crealinfiel the Learned of the Elements||Kills: 0||Deaths: 0||Age: 88||Hours: 4||Tue Jan 13 13:56:09 2004
+DELETED||[43  Human War]||[HORDE] Zymn the Armor Splitter||Kills: 6||Deaths: 2||Age: 40||Hours: 22||Tue Jan 13 21:38:58 2004
+DELETED||[33  Drow War]||Qedriv the Baron of Tornadoes||Kills: 0||Deaths: 0||Age: 199||Hours: 6||Tue Jan 13 21:39:30 2004
+DELETED||[51   Elf Pal]||[PHALANX] Celioldor the Shining Blade of the Phalanx, Grand Inquisitor||Kills: 23||Deaths: 15||Age: 432||Hours: 144||Wed Jan 14 11:08:40 2004
+DELETED||[48  Dwarf Zea]||Jarrakul the Saint||Kills: 7||Deaths: 2||Age: 92||Hours: 37||Sat Jan 17 18:25:43 2004
+DELETED||[51 Halflng War]||Aurion the Knight Hero||Kills: 8||Deaths: 8||Age: 120||Hours: 49||Mon Jan 19 14:03:39 2004
+DELETED||[44   Elf Hea]||[PHALANX] Vanim the Giver of Life, Seeker of the Searing Blade||Kills: 1||Deaths: 2||Age: 491||Hours: 41||Mon Jan 19 18:49:34 2004
+DELETED||[51  Abyss War]||[BOUNTY] Kouga the Deadly Dagger, Bounty Hunter||Kills: 28||Deaths: 14||Age: 312||Hours: 100||Sun Feb  1 00:53:20 2004
+DELETED||[51  Abyss A-P]||Luel the Anti-Hero, the Strong and Silent Type||Kills: 33||Deaths: 13||Age: 278||Hours: 121||Mon Feb  2 01:32:07 2004
+DELETED||[32  Human Zea]||Quelfiax the Demon Killer||Kills: 0||Deaths: 0||Age: 24||Hours: 6||Thu Feb  5 17:40:57 2004
+DELETED||[35  Human Nec]||Zynunin the Archmage Summoner of Demons||Kills: 0||Deaths: 2||Age: 21||Hours: 10||Fri Feb 13 15:15:38 2004
+DELETED||[46 Planar War]||Dyhenik the Student of Battle||Kills: 0||Deaths: 0||Age: 210||Hours: 34||Wed Feb 25 01:30:21 2004
+DELETED||[38  Abyss A-P]||[HORDE] Korthix the Invoker of Suffering||Kills: 0||Deaths: 0||Age: 147||Hours: 17||Thu Feb 26 20:08:58 2004
+DELETED||[38  Human Sor]||Mumei the Master of Conjuration||Kills: 0||Deaths: 0||Age: 26||Hours: 15||Tue Mar  2 00:47:47 2004
+DELETED||[51  Mino War]||[PHALANX] Ogriban the Knight Hero||Kills: 7||Deaths: 17||Age: 59||Hours: 77||Sun Mar  7 00:33:35 2004
+DELETED||[44 Celest War]||Krichek the Sword Breaker||Kills: 0||Deaths: 3||Age: 186||Hours: 31||Sun Mar  7 16:19:22 2004
+DELETED||[51  Human War]||Cern the Knight Hero||Kills: 0||Deaths: 4||Age: 25||Hours: 50||Fri Mar 12 19:48:10 2004
+DELETED||[47 Planar War]||[HORDE] Lamgwin the Learned of Battle||Kills: 6||Deaths: 3||Age: 193||Hours: 26||Sat Mar 20 13:05:27 2004
+DELETED||[31  Human Thi]||Sertac the Crime Lord||Kills: 0||Deaths: 0||Age: 32||Hours: 6||Tue Mar 23 11:46:39 2004
+DELETED||[38  Mino A-P]||Donnae the Invoker of Suffering||Kills: 1||Deaths: 1||Age: 24||Hours: 11||Wed Mar 24 17:30:11 2004
+DELETED||[40   Imp Sor]||[BOUNTY] Trennom the Master of the Elements, Neophyte Hunter||Kills: 0||Deaths: 2||Age: 84||Hours: 10||Thu Mar 25 23:18:31 2004
+DELETED||[36  Human Thi]||Tohnei the Student of Speed||Kills: 0||Deaths: 0||Age: 23||Hours: 7||Sun Mar 28 18:34:38 2004
+DELETED||[51  Dwarf War]||[BOUNTY] Thelulan the Knight Hero, Bounty Hunter||Kills: 19||Deaths: 7||Age: 118||Hours: 66||Sun Mar 28 22:11:49 2004
+DELETED||[45  Drow War]||Choiron the Weapon Master||Kills: 1||Deaths: 4||Age: 266||Hours: 24||Sun Mar 28 22:22:43 2004
+DELETED||[31   Imp Nec]||Gunferler the Summoner||Kills: 0||Deaths: 1||Age: 87||Hours: 3||Sun Apr  4 17:51:56 2004
+DELETED||[45  Duerg War]||Kjaelis the Weapon Master||Kills: 0||Deaths: 1||Age: 83||Hours: 41||Sun Apr  4 20:09:13 2004
+DELETED||[36   Imp Sor]||[SCION] Ngylle the Master of Air||Kills: 1||Deaths: 1||Age: 91||Hours: 15||Sun Apr  4 20:12:08 2004
+DELETED||[41  Human Sor]||Sifre the Greater Elemental Magician||Kills: 0||Deaths: 0||Age: 21||Hours: 21||Sun Apr  4 20:14:33 2004
+DELETED||[51   Imp Nec]||[SCION] Xajliemar the Anti-Hero of Death||Kills: 19||Deaths: 2||Age: 168||Hours: 72||Mon Apr  5 20:43:53 2004
+DELETED||[51  Human Asn]||[PHALANX] Vizherai, High Priest of the Open Hand, Unyielding Savior of the Light||Kills: 4||Deaths: 9||Age: 49||Hours: 78||Wed Apr  7 20:34:07 2004
+DELETED||[51 Halflng War]||[HORDE] Blodden the Knight Hero||Kills: 0||Deaths: 2||Age: 127||Hours: 38||Thu Apr  8 06:23:48 2004
+DELETED||[40 Celest Pal]||Tenebryl the Defender||Kills: 0||Deaths: 0||Age: 135||Hours: 12||Thu Apr  8 17:54:52 2004
+DELETED||[35  Human Thi]||Miky the Godfather||Kills: 0||Deaths: 0||Age: 25||Hours: 8||Sat Apr 10 17:22:20 2004
+DELETED||[43  Human Pal]||Treland the Champion of the Templars||Kills: 0||Deaths: 1||Age: 23||Hours: 14||Thu Apr 15 22:04:35 2004
+DELETED||[48  Human War]||[HORDE] Linaot the Master of Battle||Kills: 9||Deaths: 22||Age: 22||Hours: 53||Fri Apr 16 22:27:03 2004
+DELETED||[32  Dwarf War]||Baldrick the Baron of Storms||Kills: 0||Deaths: 0||Age: 64||Hours: 13||Mon Apr 19 14:42:47 2004
+DELETED||[39 Celest Pal]||[PHALANX] Araiceil the Avenger||Kills: 0||Deaths: 2||Age: 123||Hours: 18||Wed Apr 21 21:42:52 2004
+DELETED||[33 Halflng War]||[HORDE] Hagdush the Baron of Tornadoes||Kills: 0||Deaths: 1||Age: 183||Hours: 5||Thu Apr 22 02:54:46 2004
+DELETED||[37  Human A-P]||[BOUNTY] Poanst the LightSlayer, Neophyte Hunter||Kills: 3||Deaths: 2||Age: 23||Hours: 24||Thu Apr 22 13:44:45 2004
+DELETED||[51 Planar Hea]||Naezia the Holy Heroine||Kills: 1||Deaths: 3||Age: 137||Hours: 74||Fri Apr 23 00:04:51 2004
+DELETED||[51  Mino War]||[HORDE] Grelfrak the Tempered Blade of the Wolf||Kills: 10||Deaths: 3||Age: 27||Hours: 21||Fri Apr 23 13:28:02 2004
+DELETED||[51  Drow War]||[HORDE] Alakymma the Savagess||Kills: 5||Deaths: 4||Age: 252||Hours: 36||Fri Apr 23 14:23:50 2004
+DELETED||[43  Drow Hea]||Meranwan the Living Touch||Kills: 8||Deaths: 0||Age: 243||Hours: 24||Sat Apr 24 12:28:50 2004
+DELETED||[37  Human Nec]||Moserikon the Malefic Archmage||Kills: 0||Deaths: 0||Age: 24||Hours: 17||Sat Apr 24 12:29:14 2004
+DELETED||[51  Human Sor]||[PHALANX] Gabrian the Elemental Hero||Kills: 6||Deaths: 6||Age: 45||Hours: 47||Sat Apr 24 12:30:01 2004
+DELETED||[37  Human Thi]||[BOUNTY] Felephen the Learned of Speed, Neophyte Hunter||Kills: 2||Deaths: 1||Age: 25||Hours: 10||Wed Apr 28 18:51:50 2004
+DELETED||[44  Abyss War]||[HORDE] Bekosn the Sword Breaker||Kills: 5||Deaths: 2||Age: 159||Hours: 24||Sun May  2 23:08:58 2004
+DELETED||[40  Human Sor]||[SCION] Guillot the Master of the Elements||Kills: 8||Deaths: 13||Age: 33||Hours: 35||Tue May  4 19:26:19 2004
+DELETED||[45   Imp Sor]||[SCION] Nydohar the Grand Elemental Magician, the Wielder of Pain||Kills: 7||Deaths: 7||Age: 160||Hours: 38||Thu May  6 21:03:24 2004
+DELETED||[49  Human War]||Brutus the Grand Battle Master||Kills: 1||Deaths: 1||Age: 21||Hours: 35||Thu May 13 02:00:33 2004
+DELETED||[33   Imp Sor]||Pelifkir the Master of Ice||Kills: 0||Deaths: 0||Age: 81||Hours: 10||Fri May 14 00:49:16 2004
+DELETED||[37  Drow Nec]||Verdival the Malefic Archmage||Kills: 1||Deaths: 1||Age: 216||Hours: 25||Tue May 18 00:06:17 2004
+DELETED||[46  Mino War]||[PHALANX] Sanandar the Student of Battle||Kills: 0||Deaths: 2||Age: 23||Hours: 28||Tue May 18 15:09:34 2004
+DELETED||[38  Dwarf Pal]||[PHALANX] Delgrevs the Healer-Knight||Kills: 0||Deaths: 0||Age: 69||Hours: 12||Tue May 18 15:12:47 2004
+DELETED||[35   Imp A-P]||[BOUNTY] Zeglifin the Field Marshall of Darkness, Neophyte Hunter||Kills: 1||Deaths: 0||Age: 88||Hours: 9||Tue May 18 15:15:32 2004
+DELETED||[33  Dwarf War]||Ravelos the Baron of Tornadoes||Kills: 0||Deaths: 0||Age: 67||Hours: 12||Wed May 19 16:34:23 2004
+DELETED||[50  Human Thi]||Lorythyn the Grand Master of Thieves||Kills: 2||Deaths: 0||Age: 22||Hours: 28||Fri May 21 05:02:45 2004
+DELETED||[36   Elf Sor]||Adonaieth the Master of Air||Kills: 0||Deaths: 5||Age: 218||Hours: 18||Sat May 22 15:08:00 2004
+DELETED||[51  Mino War]||[PHALANX] Zorthane the Knight Hero||Kills: 4||Deaths: 4||Age: 23||Hours: 47||Sun May 30 16:53:26 2004
+DELETED||[41  Drow War]||Alorymn the Bone Shatterer||Kills: 1||Deaths: 0||Age: 199||Hours: 22||Sun May 30 16:53:37 2004
+DELETED||[33   Imp Sor]||Asfielien the Master of Ice||Kills: 1||Deaths: 2||Age: 93||Hours: 5||Mon May 31 05:59:25 2004
+DELETED||[48  Mino War]||[HORDE] Krogan the First Among the Bull||Kills: 3||Deaths: 6||Age: 32||Hours: 34||Thu Jun  3 15:48:40 2004
+DELETED||[36  Abyss War]||[HORDE] Urbanski the Rock Crusher||Kills: 0||Deaths: 0||Age: 169||Hours: 11||Sun Jun  6 08:07:24 2004
+DELETED||[51  Sidhe Sor]||[BOUNTY] Kitrio the Elemental Hero, Elder Hunter||Kills: 8||Deaths: 8||Age: 23||Hours: 63||Sun Jun 13 16:59:04 2004
+DELETED||[51  Abyss War]||[BOUNTY] Volanthar the Slayer of Pillagers, Bounty Hunter||Kills: 12||Deaths: 20||Age: 191||Hours: 89||Tue Jun 15 16:18:25 2004
+DELETED||[36   Imp A-P]||Ikrialol the Knight of the Apocalypse||Kills: 0||Deaths: 1||Age: 87||Hours: 12||Tue Jun 15 19:08:18 2004
+DELETED||[51 Celest Pal]||[PHALANX] Loronoth the Paladin Hero||Kills: 4||Deaths: 1||Age: 137||Hours: 46||Tue Jun 15 21:16:07 2004
+DELETED||[36  Human War]||Ejebeko the Rock Crusher||Kills: 0||Deaths: 0||Age: 22||Hours: 7||Thu Jun 17 11:13:12 2004
+DELETED||[40   Elf Zea]||[PHALANX] Kraven the Cardinal of the East||Kills: 0||Deaths: 1||Age: 210||Hours: 14||Tue Jun 22 18:56:50 2004
+DELETED||[42  Abyss War]||[HORDE] Roelanthe the Skull Cracker||Kills: 1||Deaths: 0||Age: 135||Hours: 19||Sat Jun 26 17:32:45 2004
+DELETED||[35 Celest War]||Khazidhea the Baron of Meteors||Kills: 0||Deaths: 0||Age: 179||Hours: 14||Mon Jun 28 10:37:04 2004
+DELETED||[51   Elf War]||[PHALANX] Huvtolien the Knight Hero, Steadfast Defender of the Flame||Kills: 17||Deaths: 8||Age: 305||Hours: 187||Wed Jul 14 01:55:01 2004
+DELETED||[41 Celest War]||Lystori the Bone Shatterer||Kills: 0||Deaths: 0||Age: 123||Hours: 12||Wed Jul 14 01:55:35 2004
+OLD-AGE||[42 Celest War]||[HORDE] Zod the Skull Cracker||Kills: 2||Deaths: 4||Age: 392||Hours: 27||Fri Aug  6 00:37:48 2004
+DELETED||[54  Human Thi]||Waekath the Demigod||Kills: 0||Deaths: 0||Age: 245||Hours: 26||Thu Mar 22 14:18:22 2007

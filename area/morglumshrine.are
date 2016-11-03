@@ -1,0 +1,189 @@
+#AREA
+morglumshrine.are~
+The Shrine of Morglum~
+Morglum~
+1 51
+130 154
+unopened
+none
+0
+1
+Morglum~
+
+#MOBS
+#130
+Cruak~
+Cruak~
+A large duergar clad in armor is standing here.
+~
+~
+0 0 0 duergar~
+0 100d10+1000 10d10+50 0 100 none
+100 100 100 100
+standing male none
+0 0 medium
+ACT NPC
+ACT SENTINEL
+#150
+goblin chieftain lork~
+Lork the Goblin Chieftain~
+A round ball of green muscle is here screaming and yelling.
+~
+~
+-1000 0 0 human~
+40 20d8+2464 7d10+30 50 100 beating
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT INTELLIGENT
+OFF ASSIST_RACE
+RES DISEASE
+VUL MAGIC
+#151
+goblin soldier~
+A goblin soldier~
+A goblin soldier is here following the orders of his chieftain.
+~
+~
+-1000 0 0 human~
+25 12d8+944 4d7+20 20 100 beating
+0 0 0 0
+standing male none
+0 0 medium
+ACT NPC
+ACT AGGRESSIVE
+ACT INTELLIGENT
+OFF ASSIST_RACE
+RES DISEASE
+VUL MAGIC
+#0
+
+
+
+#OBJS
+#130
+skull altar~
+a large titan skull~
+A large titan skull dominates the center of the alcove.~
+altar
+unknown~
+0 0 0 0 0
+0 0 0 P
+LIMIT 0
+TIMER 0
+E skull~
+This huge skull seems to be acting as an altar of sorts.
+Perhaps you should OFFER something to this one who resides here?
+~
+
+#131
+sword lyntress asskicker~
+a sword named 'Lyntress Asskicker'~
+A huge sword is here.~
+weapon
+steel~
+sword 80 80 slash 0
+52 0 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+TIMER 0
+
+#133
+piece funniness funny hastur~
+a piece of funniness~
+A piece of funniness is here, being funny.~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+E piece~
+Seeing hastur asleep under a table in the engineering lab on monday
+morning after letting him into the building on thursday night to find out
+that he hadn't actually left the building because he doesn't have access to
+it and that he was living off vending machines was.. well.. bloody
+hilarious.  
+ 
+- Zharradam
+~
+
+#140
+no name~
+dummy object~
+dummy desc~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+LIMIT 0
+TIMER 0
+
+#145
+fine elven blade Selknal~
+a fine elven blade named "Selknal"~
+A fine elven blade lies here.~
+weapon
+heartstone~
+sword 6 8 slice 0
+55 10 0 P
+WEAR TAKE
+WEAR WIELD
+ITEM GLOW
+ITEM HUM
+APPLY HITROLL 5
+APPLY DAMROLL 5
+APPLY HP 50
+LIMIT 1
+TIMER 0
+
+#150
+lork shortsword~
+a shortsword named 'Lorks Blade-O-Death'~
+A shortsword covered in blood lies here.~
+weapon
+steel~
+sword 5 8 slice 0
+40 5 0 P
+WEAR TAKE
+WEAR WIELD
+WEAR HOLD
+ITEM GLOW
+LIMIT 0
+TIMER 0
+
+#0
+
+
+
+#ROOMS
+#130
+An Alcove~
+This alcove looks to be carved out by hand.  There are many
+pelts and hides lining the wall, and the heavy stench of blood
+lingers.  You see what looks to be a huge skull attached to
+the ground at the base of the wall.  There is a torch on both sides,
+and what seems to be a pickaxe carved in the wall.
+~
+cave
+D EAST 22601 0 0
+~
+~
+OWNER Morglum~
+#0
+
+
+
+#RESETS
+OBJECT 130 TO 130
+MOB 130 TO 130 GLIMIT 1 LLIMIT 1
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

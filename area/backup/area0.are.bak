@@ -1,0 +1,79 @@
+#AREA
+area0.are~
+New area~
+None~
+0 0
+29000 29099
+unopened
+none
+0
+1
+Cassidine~
+
+#MOBS
+#0
+
+
+
+#OBJS
+#29000
+open-toe black stiletto platform heels~
+a pair of shiny black open-toe platform stiletto heels~
+You see a rather wicked pair of shiny black, open-toe platform stiletto heels.  The heel itself is about five inches long and appears sharp enough to pierce through skin.~
+armor
+hard leather~
+0 0 0 0 0
+60 1 50000 P
+WEAR TAKE
+WEAR COSMETIC
+RESTRICT DROW_ONLY
+LIMIT 0
+TIMER 0
+NAMEOFLOC on ankles~
+NOTES ~
+
+#29001
+designs~
+fingernail designs!~
+dummy desc~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR COSMETIC
+LIMIT 0
+TIMER 0
+NAMEOFLOC on pinky~
+
+#29002
+designs~
+desc cooler fingernail designs!~
+dummy desc~
+trash
+unknown~
+0 0 0 0 0
+1 0 0 P
+WEAR TAKE
+WEAR COSMETIC
+LIMIT 0
+TIMER 0
+NAMEOFLOC on right pinky fingernail~
+
+#0
+
+
+
+#ROOMS
+#0
+
+
+
+#RESETS
+S
+
+#IMPROGS
+END
+#SPECS
+END
+#$

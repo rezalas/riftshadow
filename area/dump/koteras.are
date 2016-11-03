@@ -1,0 +1,3653 @@
+#AREA
+koteras.are~
+Koteras Village~
+Metaphiusen~
+1 30
+11800 11899
+normal
+none
+0
+
+#MOBS
+#11800
+blacksmith dwarf short muscled~
+the village blacksmith~
+A short, heavily muscled dwarf hammers viciously at his anvil here.     
+~
+This dwarf is covered head to foot in a black mixture of soot and sweat,     
+the latter of which courses in rivulets down his face and torso. His hammer     
+flies in seeming uncontrolled fury, yet each stroke lands with purpose upon     
+the red-hot iron slowly shaping to the smith's will.     
+~
+400 0 100 dwarf~
+30 1000d1+100 8d5+6 0 85 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT SCAVENGER
+ACT STAY_AREA
+ACT NOPURGE
+AFF REGENERATION
+IMM CHARM
+#11801
+brewer heavy jowled man~
+the brewer~
+A heavy-jowled man stands here, reeking of ale and spirits.     
+~
+This man wears an apron of thick, many-layered cloth, something that many      
+have warned him is a mistake in his business.  Its front and sides are      
+spotted and soaked a hundred times over with all colors of wine, beer, and     
+more potent liquors.     
+~
+500 11801 100 human~
+30 400d2+200 9d5+6 0 120 slap
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+ACT NOPURGE
+#11802
+tanner fat man human~
+the obese tanner~
+A fat, beaming human strolls about the yard, checking hides.     
+~
+This immensity has some of yesterday's lunch spilled on the leather      
+overalls he must have custom-sewn himself.  He bears a contented smile     
+as he walks around the yard, watching the hides for variation in color     
+or consistency, sometimes applying moisture, sometimes a pungent-     
+smelling oil.     
+~
+600 11802 100 human~
+30 500d2+200 11d3+5 0 140 none
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+IMM CHARM
+VUL PIERCE
+#11803
+butcher meat bloody woman~
+the butcher~
+A wiry woman chops at a side of raw meat with a gleaming knife.     
+~
+This woman looks to have been born and bred a meat-cutter, and she plies     
+her trade with exceptional skill.  Whole carcasses are deftly sectioned     
+and fully dismembered before your eyes, and small, neat packages belie     
+the bloody mess that the woman's clothing reflect.     
+~
+300 11803 100 human~
+30 400d1+250 8d8+4 0 100 slash
+0 0 0 0
+standing female moderate
+0 0 medium
+ACT STAY_AREA
+IMM CHARM
+#11804
+serf peasant human worker~
+a peasant~
+A gaunt, weary serf trundles along listlessly, eyes devoid of hope.     
+~
+This peasant is the perfect workhorse for the noblemen of the northern      
+cantrevs- face expression is carefully neutral, though the eyes show     
+years of toil and sorrow, simply eking out what sorry existence remains.     
+Clothes are covered in the dirt from the fields, and head hanging     
+low.     
+~
+0 11804 100 human~
+4 40d2+20 3d3+1 0 120 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT STAY_AREA
+#11805
+serf peasant disgruntled angry~
+an angry peasant~
+A peasant ambles about here, muttering darkly.	     
+~
+This serf is obviously displeased with something, and from what you     
+catch, it has to do with the overseer, or the lord's fief in general.     
+Face like a stormcloud, the peasant before you is quite disgruntled.     
+~
+300 11805 100 human~
+4 40d2+30 3d2+2 0 120 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT STAY_AREA
+#11806
+patrolman soldier guard trooper~
+a border patrolman~
+A troop soldier assigned to border patrol stands at attention here.     
+~
+This soldier is actually somewhat fortunate in his duty, as he may roam     
+the outlands and villages surrounding Cimar, seeking a chance to prove     
+his superior battle prowess and make a name for the Border Patrol.     
+His uniform and weapons are immaculately clean, in keeping with the Cimar     
+Army's policy, even in the dusty plains.     
+~
+0 11806 100 human~
+18 200d4+600 5d6+20 0 100 slash
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+OFF DODGE
+AFF DETECT_HIDDEN
+IMM CHARM
+CLASS warrior none none 
+#11807
+captain soldier guard border patrolman~
+the Border Patrol Captain~
+The Captain of the Border Patrol sits behind his desk, awaiting orders.     
+~
+The Captain of the prestigious Border Legion is assigned many duties,      
+including the paperwork for all incidents of violence in the outlying      
+lands.  Cimar extends its dominance throughout the countryside through     
+men such as this.     
+~
+0 11807 100 human~
+30 800d2+600 12d8+9 0 80 slash
+0 0 0 0
+sitting male moderate
+0 0 medium
+ACT STAY_AREA
+ACT TRAIN
+ACT NOPURGE
+AFF DETECT_HIDDEN
+CLASS warrior none none 
+#11808
+wife tanner woman ungainly~
+the tanner's wife~
+An ungainly, pockmarked woman is preparing food at a ferocious pace here.     
+~
+This woman, most likely the wife of the tanner, is in a frenzy of meal     
+preparation.  She is grilling meats, turning bread, frying bacon, slicing     
+vegetables, and peeling potatoes with efficacy to be admired by a drill     
+sergeant.  Her endless task seems to be feeding her large husband.     
+~
+0 11808 100 human~
+20 300d3+150 5d3+12 0 100 beating
+0 0 0 0
+standing female poor
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+#11809
+son brewer thin man~
+the brewer's son~
+A thin young man wanders about the cellar, counting bottles and kegs.     
+~
+This man seems young, but has dark circles under his eyes and his skin is     
+unnaturally pale, likely from long hours in this dank hole of a cellar.     
+He carries a bundle of parchment and looks very official, though his breath     
+smells faintly of brandy.     
+~
+0 11809 100 human~
+25 400d2+200 5d4+12 0 100 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT STAY_AREA
+IMM CHARM
+#11810
+inn keeper innkeeper man~
+the Innkeeper~
+The keeper of the Inn welcomes you and bids you take a rest at the bar.     
+~
+All smiles and welcomes, this happy fellow seems to take real pleasure in     
+serving others- a rare trait indeed.  He and his wife opened for business     
+with the blessing of the Cimar Army- a rare thing indeed that the Border     
+Patrol, among others, would have a place to relax other than their own     
+barracks.     
+~
+400 11810 100 human~
+30 20d2+800 6d6+8 0 110 beating
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+IMM CHARM
+#11811
+elf traveller ranger~
+an elven traveller~
+An elven traveller sits here with his brethren, enjoying a carafe of wine.     
+~
+The elves of the northern kingdoms never stay in one place long, but seem     
+to incessantly wander and find new adventure, accepting the life of a      
+merchant and peddler while perhaps seeking something more.  The dress is     
+loose-fitting leathers, with forest-hued cloak.     
+~
+400 11811 100 elf~
+15 10d10+250 3d6+6 0 100 slash
+0 0 0 0
+sitting male moderate
+0 0 medium
+ACT SCAVENGER
+ACT STAY_AREA
+ACT WIMPY
+AFF HIDE
+AFF DARK_VISION
+RES MAGIC
+RES DISEASE
+#11812
+wife woman inn innkeeper~
+the innkeeper's wife~
+A broad, smiling woman shuffles about here, checking kegs and frying bacon.     
+~
+This woman seems to take as much joy in preparing food and libations as      
+her husband in serving the public.  She wears an embroidered apron and a     
+beige dress, and always, always, a smile framed by her greying auburn     
+locks.     
+~
+500 11812 100 human~
+15 30d5+170 4d4+9 0 120 slap
+0 0 0 0
+standing female poor
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+#11813
+herdsman shepherd man~
+a herdsman~
+A wool-robed herdsman chases down his flock, grazing them on the pasture.     
+~
+The people who roam the northern lands belong to different worlds- the      
+serfs and peasants who seek the shelter of the cantrev lords, and the      
+merchants and peddlers, those who seek freedom and perhaps even danger.     
+The herd is never easy, with thieves, animal predators, even the      
+occasional young dragon seeking its first kill.  It is a lonely lifestyle,     
+and one given certainly to contemplation.     
+~
+0 11813 100 human~
+12 30d2+170 4d4+3 0 110 pound
+0 0 0 0
+standing male poor
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+IMM CHARM
+#11814
+sheep dirty large~
+a sheep~
+A large, dirty sheep wanders about here, grazing contentedly.     
+~
+This animal is typical of the commerce that surrounds Cimar's bright      
+existence: fat and valuable.  Its glazed eyes stare at nothing while     
+its black mouth grinds the vegetation of the surrounding environs into     
+mush.  Its coat of wool is full and soft, and its meat will bring high     
+prices in the markets, come slaughter season.     
+~
+0 11814 100 pig~
+4 10d10+60 3d3+5 0 120 bite
+0 0 0 0
+standing either none
+0 0 medium
+ACT STAY_AREA
+#11815
+priest young healer~
+the young healer~
+A young priest leads the service at the head of the church here.     
+~
+This young man has drawn the self-effacing duty of preaching to the      
+needy serfs, the arrogant merchants, and the largely apathetic Border     
+Patrol.  His is truly a quest of immeasurable proportions, to give      
+these people faith.  His face and eyes show signs and scars of this      
+long, thankless labour.     
+~
+800 11815 100 human~
+30 50d10+750 5d4+9 0 100 crush
+0 0 0 0
+standing male poor
+d 0 medium
+ACT STAY_AREA
+ACT NOPURGE
+ACT HEALER
+IMM CHARM
+#11816
+acolyte young robed~
+a young acolyte~
+A young acolyte wearing a white robe and a bored expression stands here.     
+~
+This young villager was selected from among the few fervent townsfolk to      
+come out and aid the priest in his daily devotions for the congregation.      
+The position of acolyte is certainly not a coveted one, as it mostly      
+involves the sweeping of the church floor after services.     
+~
+300 11816 100 human~
+9 5d6+220 2d4+4 0 110 punch
+0 0 0 0
+standing either poor
+0 0 medium
+ACT STAY_AREA
+IMM CHARM
+#11817
+parishoner devout villager~
+a devout parishoner~
+An unusually devout villager sits in the pews here, listening intently.     
+~
+This villager appears to be somewhat considerate of the possible      
+repercussions available in the hereafter.  Silent and respectful, this     
+parishoner seems focused on the young preacher's words and the hymns     
+and prayers that follow.     
+~
+350 11817 100 human~
+9 10d6+220 2d4+5 0 100 punch
+0 0 0 0
+sitting either poor
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+#11818
+pilgrim weary traveller~
+a weary pilgrim~
+A road-weary pilgrim thankfully gives praise for the safe journey here.     
+~
+This man has braved the wilds, the roads, and who knows what else to      
+reach this center of holiness, either in devotion to this particular      
+church, or because he was turned away at the gates of Cimar.  He almost     
+weeps with joy to see the church's bell-tower ringing out a hymnal      
+melody, though its echo produces a strangely discordant note.     
+~
+500 11818 100 human~
+12 10d4+200 1d12+9 0 110 pound
+0 0 0 0
+standing male poor
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+#11819
+sleeping patrolman soldier man~
+an off-duty patrolman~
+An off-duty patrolman takes time to rest in his bunk and clean his gear.     
+~
+This soldier is done with his shift out on the plains for the day, and a     
+day surviving in the much-aspired-to Border Legion is certainly a      
+triumph of some sort.  He cleans all manner of blood and fur from his      
+weapons before laying down to sleep, and take his rest before tomorrow.     
+~
+200 11819 100 human~
+18 20d10+400 5d5+12 0 100 pound
+0 0 0 0
+sleeping male moderate
+0 0 medium
+ACT STAY_AREA
+IMM CHARM
+#11820
+ranger weatherbeaten man sleeping~
+a menacing ranger~
+A fierce-visaged ranger, weatherbeaten and travel-stained, is here.     
+~
+This man looks to have stomped through every bog, marsh, and swamp in     
+Shalar before returning to some semblance of civilization.  His clothes     
+are torn, yet patched and serviceable, and his boots and weapons show     
+the wear of leagues upon leagues of travel.     
+~
+0 11820 100 human~
+35 20d10+1450 12d5+15 0 90 charge
+0 0 0 0
+sleeping male moderate
+d 0 medium
+ACT STAY_AREA
+AFF DETECT_HIDDEN
+IMM CHARM
+#11821
+villager robed~
+a villager~
+A villager stands here in fine woolen robes and leather sandals.     
+~
+The residents of Koteras Village are fortunate to enjoy the safety     
+of the Cimar Army's vindictive and precise protection, and also to     
+enjoy living outside the walls of Cimar, where the clean air and      
+fresh wilderness contribute to their well-being.     
+~
+0 11821 100 human~
+10 10d2+140 4d6+1 0 110 punch
+0 0 0 0
+standing either moderate
+0 0 medium
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+#11822
+child villager~
+a village child~
+A small child of the village populace is here, playing in the dirt.     
+~
+The children of Koteras are provided a largely sheltered life, save the     
+few women who are seduced into servitude by the noblemen of the cantrevs.     
+These children know nothing of serfdom, and will grow into merchants,      
+peddlers, shopkeepers, and soldiers, as their parents have.     
+~
+0 11822 100 human~
+3 2d8+50 1d8+1 0 130 scratch
+0 0 0 0
+standing either none
+0 0 small
+ACT SCAVENGER
+ACT WANDER
+ACT STAY_AREA
+ACT WIMPY
+#11823
+drunk wino villager~
+the village drunk~
+A staggering, sodden drunk wanders about here, bottle in hand.     
+~
+This disgraceful human has imbibed nearly to the point of unconsciousness,     
+and looks to have been intoxicated for several days.  Dark circles rim     
+his eyes, and his face is flushed, with a bright red nose.  His breath     
+reeks nauseatingly of liquor and stale wine.     
+~
+0 11823 100 human~
+9 8d4+200 1d12+4 0 90 punch
+0 0 0 0
+standing male poor
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+ACT INDOORS
+#11824
+courier village villager man~
+a village courier~
+A courier and peddler for the village runs through here.     
+~
+This man is integral to the relationship of commerce between the village,     
+Cimar, and the Lords of the Northern Cantrevs.  He takes messages,      
+shipments of goods with serfs to bear the loads, and payments back and     
+forth, earning quite a fair living with the commission he receives.     
+~
+0 11824 100 human~
+20 9d5+550 5d5+9 0 100 beating
+0 0 0 0
+standing male affluent
+0 0 medium
+ACT STAY_AREA
+ACT WIMPY
+IMM CHARM
+#11825
+lieutenant patrol patrolman man soldier~
+a patrol lieutenant~
+A lieutenant for the Border Patrol watches over the crossroads.     
+~
+This soldier has seen his fair share of action- raids of wild beasts      
+and dark predators alike, the seemingly ceaseless efforts to breach     
+even the outermost of the Cimar Army's defenses.  His uniform and     
+gear are immaculately kept, of course, and his sword is honed to      
+a razor's edge.     
+~
+0 11825 100 human~
+27 10d10+800 8d4+20 0 90 crush
+0 0 0 0
+standing male moderate
+0 0 medium
+ACT STAY_AREA
+#0
+
+
+
+#OBJS
+#11800
+hammer forge black iron~
+a black-iron forgehammer~
+A heavy hammer of wrought black iron with an ironwood handle lies here.~
+weapon
+iron~
+mace 7 4 crush 0
+40 11 12000 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR 1
+APPLY DAMROLL 3
+APPLY MOVE -20
+LIMIT 12
+E handle ironwood~
+The handle is specially crafted from ironwood, to resist the forge heat.     
+~
+
+#11801
+apron leather heavy~
+a heavy leather apron~
+A short apron of heavy-looking leather with burn marks lies here.~
+armor
+hard leather~
+2 3 5 1 0
+30 12 3000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY CON 1
+APPLY SBREATH -2
+LIMIT 0
+
+#11802
+flask silver embossed~
+a silver-embossed brandy flask~
+A brandy flask with elaborate silver designs lies here, looking dusty.~
+drink
+silver~
+8 6 'brandy' 0 0
+30 4 8000 P
+WEAR TAKE
+LIMIT 3
+E pattern repetition~
+Eureka- that appears to be the seal of House Aerthiel, the elvish wood-     
+crafters' guild, and one of the most prosperous in years past!     
+~
+E rose petals elvish~
+The pattern seems familiar, a certain repetition to the cascading petals.     
+~
+E designs silver flask~
+The flask has silver rose petals expanding outward, an elvish design.     
+~
+
+#11803
+knife serrated butcher~
+a serrated butcher's knife~
+A large, bloodstained knife with one serrated edge rests here.~
+weapon
+steel~
+dagger 9 3 stab D
+40 6 8500 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 2
+APPLY DEX 3
+APPLY HITROLL 4
+LIMIT 30
+
+#11804
+spade iron shovel~
+an iron spade~
+A slightly bent iron spade, crusted with soil, lies here.~
+weapon
+iron~
+polearm 4 3 smash 0
+5 11 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+MSG WEAR You notice that $p is quite poorly out of balance.~
+~
+
+#11805
+rake wooden long~
+a long wooden rake~
+A rake fashioned of wood has been left here to slowly rot.~
+weapon
+softwood~
+polearm 4 3 scratch 0
+5 9 0 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+MSG WEAR Small slivers of wood prick your skin as you grab $p.~
+~
+
+#11806
+spear steel headed long~
+a steel-headed spear~
+A long-hafted spear with a head of razored steel lies here.~
+weapon
+steel~
+spear 8 3 stab 0
+20 11 500 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 5
+LIMIT 25
+
+#11807
+chain chainmail mail banded black~
+A suit of black-banded chainmail~
+A suit of fine steel chain with black steel bands lies here.~
+armor
+steel~
+10 6 9 4 0
+25 25 1100 P
+WEAR TAKE
+WEAR BODY
+APPLY STR 3
+LIMIT 30
+
+#11808
+silver hilted chased long sword longsword~
+A longsword with a hilt of silver chasing~
+A fine steel longsword with a hilt of purest silver chasings lies here.~
+weapon
+steel~
+sword 10 3 slash 0
+45 11 12000 P
+WEAR TAKE
+WEAR WIELD
+ITEM BLESS
+APPLY HP 20
+APPLY HITROLL 6
+LIMIT 5
+E hilt chasings silver~
+The hilt is cunningly wrought with bands of silver encircling the grip,     
+to form a protective basket guard for easier parrying.     
+~
+
+#11809
+plate field suit black silver~
+A suit of black and silver field plate~
+A custom-forged set of field plate with silver and black trappings is here.~
+armor
+steel~
+11 12 12 12 0
+40 40 15000 P
+WEAR TAKE
+WEAR BODY
+APPLY DAMROLL 2
+APPLY HITROLL 2
+APPLY STR 4
+LIMIT 8
+MSG WEAR $p is custom-fit to someone close to your body type.~
+~
+E trappings silver black~
+The insignia shows clearly the brand of the Cimar Army Border Patrol, and     
+the shoulder plates have engraved markings of captain's rank.     
+~
+E plate custom~
+This set of platemail looks made for someone specific, as its joints are     
+locked with steel pins, and the greaves and breastplate are permanently      
+attached.       
+~
+
+#11810
+shield lion large triangle~
+a lion-engraved shield~
+A large triangle shield etched with a rearing silver lion lies here.~
+armor
+steel~
+8 8 8 5 0
+40 9 9000 P
+WEAR TAKE
+WEAR SHIELD
+APPLY SBREATH -3
+APPLY SVSPELL -3
+APPLY HP 15
+LIMIT 10
+
+#11811
+pan frying black iron cast-iron~
+a frying pan~
+A frying pan of black cast-iron rests here, still greasy from use.~
+weapon
+iron~
+mace 3 3 beating 0
+3 7 10 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+E grease~
+The inside of the pan is spattered with meaty yellow fat.     
+LIMIT 0     
+~
+
+#11812
+tankard ale~
+a tankard of golden ale~
+A generous tankard of foaming golden ale rests here.~
+drink
+pewter~
+3 3 'ale' 0 0
+1 1 20 P
+WEAR TAKE
+LIMIT 0
+
+#11813
+haunch mutton meat~
+a haunch of sumptuous mutton~
+A greasy haunch of spicy, tender mutton is here going to waste.~
+food
+meat~
+2 8 0 0 0
+1 1 30 P
+WEAR TAKE
+LIMIT 0
+
+#11814
+roast beef helping slices~
+thick slices of roasted beef~
+A large helping of tender, sizzling roasted beef in slices lies here.~
+food
+meat~
+3 8 0 0 0
+1 1 50 P
+WEAR TAKE
+LIMIT 0
+
+#11815
+key room inn innkey~
+an inn roomkey~
+A copper-ridged key bearing "Koteras Inn" lies in the dirt here.~
+key
+copper~
+0 0 0 0 0
+20 1 5000 P
+WEAR TAKE
+LIMIT 0
+
+#11816
+cloak deep green worn~
+a deep-green cloak~
+A cloak of deep, forest hue lies crumpled into a ball here.~
+armor
+cloth~
+2 1 4 8 0
+15 3 600 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MOVE 50
+LIMIT 30
+
+#11817
+boots hard leather~
+a pair of hard leather boots~
+A tan pair of hard, boiled leather boots sit on the ground before you.~
+armor
+hard leather~
+2 2 1 3 0
+15 3 400 P
+WEAR TAKE
+WEAR FEET
+RESTRICT ELF_ONLY
+APPLY MOVE 20
+APPLY DEX 2
+LIMIT 20
+
+#11818
+crook wood shepherd~
+a shepherd's crook~
+A long crook of a shepherd fashioned from willow wood lies here.~
+weapon
+softwood~
+staff 3 3 smash 0
+5 3 10 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+
+#11819
+woolen wool grey robes~
+grey wool robes~
+A long, frayed set of grey woolen robes is collecting dust here.~
+armor
+cloth~
+1 1 1 1 0
+1 1 1 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+TIMER 30
+
+#11820
+white embroidered robes priest holy~
+silver embroidered white robes~
+Robes of pure white with silver embroidery decorate the ground here.~
+armor
+cloth~
+3 2 2 6 0
+30 3 4000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY WIS 2
+APPLY INT 2
+LIMIT 3
+MSG WEAR Those who don the mantle of the servants of the Gods falsely should be somewhat wary...~
+$n gets a troubled look on his face as he dons $p.~
+
+#11821
+robes white woolen wool~
+white woolen robes~
+A set of robes, consisting of bleached wool, lies on the ground here.~
+armor
+cloth~
+2 2 2 2 0
+10 2 200 P
+WEAR TAKE
+WEAR ABOUT
+LIMIT 0
+
+#11822
+hymnal book songs red~
+a red-bound hymnal~
+A red-bound book filled with songs and prayers lies here.~
+treasure
+parchment~
+0 0 0 0 0
+5 3 150 P
+WEAR TAKE
+LIMIT 0
+TIMER 20
+E page 21 twenty-one twenty one~
+Joyful, ye steadfast, ye brave:     
+     
+"In rampant night and darkened valley     
+ the faithful from their homes were driven;     
+ The spears of honor, love and might     
+ were shattered, brake, and riven."     
+     
+"We sought ne'er once this fury bound     
+ We gave our hails to peace     
+ In time of war we asked no more     
+ than to be buried with quiet honor."     
+     
+"Yea, children found with haste and fear     
+ the terror was no illusion;     
+ The clash of heathen and righteous men     
+ The blood spilt for our freedom."     
+     
+"Our fathers walked as champions alone     
+ 'twixt nightmare rounds of war     
+ outmatched, outnumbered;     
+ ne'er to fly from the face of battle     
+ staying the course of heroes' mettle."     
+     
+Chorus:     
+     
+"Joyful, ye steadfast, ye brave     
+ beyond the night;     
+     
+ The eyes of Heaven mark well your     
+ tread, and grant ye holy might;     
+     
+ A thousand strong may run thee far     
+ A hundred drive ye fair to the sea;     
+     
+ But not once ye waver in heart or soul;     
+ Yea, the Heavens favour thee!"     
+~
+E hymnal red~
+This book is filled with songs of praise, many pages worth.     
+Page twenty-one is open.      
+~
+
+#11823
+staff ironwood iron wood~
+a smooth ironwood staff~
+A long staff of heavy, stout ironwood lies here.~
+weapon
+hardwood~
+staff 8 4 pound 0
+40 9 9000 P
+WEAR TAKE
+WEAR WIELD
+ITEM HUM
+ITEM NOREMOVE
+APPLY SVSPELL 3
+APPLY HITROLL 8
+LIMIT 5
+
+#11824
+tunic blue azure royal~
+a royal azure tunic~
+A tunic of deep, royal azure with black stitching lies here.~
+armor
+cloth~
+2 2 2 2 0
+30 2 20000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY DEX 3
+APPLY AC 10
+LIMIT 10
+
+#11825
+silvery tube sleek cylinder~
+a sleek, silvery cylinder~
+A strange-looking silvery tube with soft, rounded edges lies here.~
+staff
+silver~
+40 6 4 'fly' 0
+35 6 30000 P
+WEAR TAKE
+WEAR HOLD
+ITEM HUM
+LIMIT 20
+E tube silvery~
+This strange cylinder is unlike anything you've ever seen manufactured      
+before.  Its intricacy and its hardness, in conjunction with each other,     
+are a marvel of craftsmanship.     
+~
+
+#11826
+wine cheap bottle greasy~
+a bottle of cheap wine~
+A greasy bottle of cheap, disgusting wine lies in the dirt here.~
+drink
+glass~
+8 5 'icewine' 0 0
+5 3 150 P
+WEAR TAKE
+LIMIT 0
+E bottle cheap~
+It's a strange brand, with a knife and a noose on the label.       
+It smells quite a bit like urine.     
+~
+
+#11827
+map case brown leather~
+a leather map case~
+A map case of dark, stained brown leather lies on the ground here.~
+container
+hard leather~
+30 AC 0 2 75
+8 4 600 P
+WEAR TAKE
+WEAR HOLD
+LIMIT 0
+
+#11828
+parchment letter dispatch~
+a parchment letter~
+A sheet of parchment with flowing script penned on it is lying here.~
+trash
+parchment~
+0 0 0 0 0
+10 1 20 P
+WEAR TAKE
+LIMIT 0
+TIMER 7
+E letter script parchment~
+To the men who still know what it means to live free:     
+     
+It has been some time since I last heard from you.  I have been     
+working day and night on the plan, and I grow weary of wondering what     
+aid I can expect when I move against this buffoon of a cantrev-lord.     
+He's taken recently to calling himself a King, did you hear that?  His     
+arrogance sickens me and my followers more every day.  I will lead the     
+bandit swordsmen in, as planned.  I must receive your communique,      
+however, to know that we are not compromised and found out!  Remember,     
+the trail by the river.  Your messenger must hurry, for freedom awaits     
+us all!     
+~
+
+#11829
+sword bronze broadsword hilted~
+a bronze-hilted broadsword~
+A broadsword bearing a heavy bronze hilt lies here glinting.~
+weapon
+bronze~
+sword 19 1 slash 0
+25 10 9000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DAMROLL 3
+LIMIT 12
+
+#11830
+banded mail black silver~
+A suit of silver banded mail~
+A suit of silvery banded mail with black trappings lies here, unused.~
+armor
+steel~
+9 9 9 12 0
+30 20 14000 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 20
+APPLY STR 2
+LIMIT 15
+
+#11831
+iron shortsword short sword~
+an iron short sword~
+A short sword of iron make lies here.~
+weapon
+iron~
+sword 2 11 slash 0
+5 9 750 P
+WEAR TAKE
+WEAR WIELD
+LIMIT 0
+
+#11832
+axe iron~
+a heavy iron axe~
+A large, single-bladed axe fashioned of iron lies here.~
+weapon
+iron~
+axe 2 12 slash 0
+7 9 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY STR 1
+LIMIT 0
+
+#11833
+flail iron chain~
+an iron chain-flail~
+A wood handle with an iron ball-and-chain rests here.~
+weapon
+iron~
+flail 2 11 crush 0
+5 8 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX 1
+LIMIT 0
+
+#11834
+iron plate breastplate~
+an iron breastplate~
+A breastplate forged of iron and bearing the smith's mark lies here.~
+armor
+iron~
+8 8 8 4 0
+5 20 3000 P
+WEAR TAKE
+WEAR BODY
+APPLY HP 10
+LIMIT 0
+E smith mark~
+A smith's initials, giving free advertising, hopefully not too often on      
+the corpses of his customers.      
+~
+
+#11835
+helm iron~
+an iron helm~
+An open iron helm with a nose guard lies here on its side.~
+armor
+iron~
+4 4 4 3 0
+5 7 500 P
+WEAR TAKE
+WEAR HEAD
+LIMIT 0
+
+#11836
+knife long iron~
+an iron long-knife~
+A long-bladed knife forged of iron lies here.~
+weapon
+iron~
+dagger 2 12 thrust 0
+5 4 1000 P
+WEAR TAKE
+WEAR WIELD
+APPLY DEX 1
+LIMIT 0
+
+#11837
+shield iron small~
+a small iron shield~
+A small, circular shield forged of strong iron lies here.~
+armor
+iron~
+4 4 4 3 0
+5 7 2000 P
+WEAR TAKE
+WEAR SHIELD
+LIMIT 0
+
+#11838
+wine skin large~
+a large skin of wine~
+A voluminous skin for carrying fluids is lying on the ground here.~
+drink
+gut~
+20 12 'sherry' 0 0
+5 3 100 P
+WEAR TAKE
+LIMIT 0
+
+#11839
+bottle spirits clear~
+a bottle of clear spirits~
+A bottle simply labeled, 'Spirits' has been left here.~
+drink
+glass~
+8 7 'vodka' 0 0
+5 2 100 P
+WEAR TAKE
+LIMIT 0
+
+#11840
+cask ale small~
+a small cask of ale~
+A small oak cask for ale storage lies here on the ground.~
+drink
+hardwood~
+40 30 'dark ale' 0 0
+5 10 500 P
+WEAR TAKE
+LIMIT 0
+
+#11841
+glass champagne~
+a glass of champagne~
+A glass of bubbling champagne sits here, looking festive.~
+drink
+glass~
+3 3 'champagne' 0 0
+5 1 100 P
+WEAR TAKE
+LIMIT 0
+
+#11842
+stout beer jug~
+A jug of stout~
+A jug of dark stout lies here.~
+drink
+clay~
+7 7 'beer' 0 0
+5 3 100 P
+WEAR TAKE
+LIMIT 0
+
+#11843
+leather supple armor~
+supple leather armor~
+A suit of flexible leather body armor rests here in a pile.~
+armor
+soft leather~
+5 5 5 2 0
+5 4 1200 P
+WEAR TAKE
+WEAR BODY
+APPLY HITROLL 1
+APPLY DEX 1
+LIMIT 0
+
+#11844
+leather supple armguards~
+supple leather armguards~
+A pair of leather arm-guards lies here in a pile.~
+armor
+soft leather~
+3 3 3 1 0
+5 2 800 P
+WEAR TAKE
+WEAR ARMS
+APPLY HITROLL 2
+LIMIT 0
+
+#11845
+leather boiled cloak~
+a tough leather cloak~
+A large cloak of tough leather hide lies here in a pile.~
+armor
+soft leather~
+3 3 3 1 0
+5 3 3000 P
+WEAR TAKE
+WEAR ABOUT
+APPLY MOVE 10
+LIMIT 0
+
+#11846
+hide belt leather~
+a belt of leather hide~
+A belt of hide leather lies here.~
+armor
+soft leather~
+2 2 2 2 0
+5 2 1200 P
+WEAR TAKE
+WEAR WAIST
+APPLY DEX 1
+LIMIT 0
+
+#11847
+shield hide tough~
+a shield of reinforced hides~
+A shield of hide leather, layered and boiled, lies here.~
+armor
+hard leather~
+3 4 3 2 0
+5 4 1100 P
+WEAR TAKE
+WEAR SHIELD
+LIMIT 0
+
+#11848
+leather boots skin~
+a pair of leather boots~
+A pair of boots fashioned from leather lies here.~
+armor
+soft leather~
+2 2 2 1 0
+5 3 1200 P
+WEAR TAKE
+WEAR FEET
+APPLY MOVE 20
+LIMIT 0
+
+#11849
+leather helm cap~
+a hard leather helm~
+A helm of hardened leather lies here.~
+armor
+hard leather~
+3 3 3 3 0
+5 3 1500 P
+WEAR TAKE
+WEAR HEAD
+APPLY HP 10
+LIMIT 0
+
+#11850
+beef trail ration jerky~
+a beef trail ration~
+A small package of dried beef awaits carry and consumption here.~
+food
+meat~
+1 6 0 0 0
+1 1 75 P
+WEAR TAKE
+LIMIT 0
+
+#11851
+mutton trail ration jerky dried~
+a mutton trail ration~
+A small package of dried mutton awaits carry and consumption here.~
+food
+meat~
+1 6 0 0 0
+1 1 75 P
+WEAR TAKE
+LIMIT 0
+
+#11852
+side beef roast~
+a side of roasted beef~
+A large chunk of roasted beef lies here.~
+food
+meat~
+3 8 0 0 0
+1 3 175 P
+WEAR TAKE
+LIMIT 0
+
+#11853
+liver package meat~
+a portion of liver~
+A generous portion of beef liver lies here, steaming.~
+food
+meat~
+5 8 0 0 0
+1 1 150 P
+WEAR TAKE
+LIMIT 0
+
+#11854
+stew clay jar~
+a clay jar of beef stew~
+A smooth clay jar of meaty beef stew sits here.~
+food
+meat~
+4 6 0 0 0
+1 2 150 P
+WEAR TAKE
+LIMIT 0
+
+#11855
+heart beef whole~
+a whole beef heart~
+A whole heart of beef lies here, roasted and steaming.~
+food
+meat~
+6 6 0 0 0
+1 3 200 P
+WEAR TAKE
+LIMIT 0
+
+#11856
+well granite wooden creaking~
+a large granite well~
+A large granite well with wooden shelter and bucket serves the village.~
+fountain
+stone~
+100000 100000 'water' 0 0
+1 5000 10 P
+LIMIT 1
+
+#11857
+side mutton roast~
+a side of roasted mutton~
+A large chunk of roasted mutton lies here.~
+food
+meat~
+3 8 0 0 0
+1 3 175 P
+WEAR TAKE
+LIMIT 0
+
+#0
+
+
+
+#ROOMS
+#11800
+The Village Road~
+You stand now on the northern road just beyond Cimar's gates.  To the     
+north extends the outlying village community of Cimar's influence.  Here,     
+the Border Patrol of Cimar's Army takes over jurisdiction.  You can see     
+all manner of low buildings to the north, as well as one impressive one to     
+your northwest.     
+~
+road
+D NORTH 11801 0 0
+0~
+The village road leads north.     
+~
+D SOUTH 2565 0 0
+~
+To the south, Cimar's massive northern gates beckon.     
+~
+#11801
+The Village Road~
+You stand now on the northern road just beyond Cimar's gates.  To the       
+north extends the outlying village community of Cimar's influence.  Here,      
+the Border Patrol of Cimar's Army takes over jurisdiction.  You can see        
+all manner of low buildings to the north, as well as one impressive one to     
+your northwest.                                                                
+~
+road
+D NORTH 11802 0 0
+0     
+~
+The village road leads north.     
+~
+D SOUTH 11800 0 0
+0     
+~
+The village roads south to Cimar's northern gates.     
+~
+#11802
+The Village Road~
+You stand now on the northern road just beyond Cimar's gates.  To the       
+north extends the outlying village community of Cimar's influence.  Here,      
+the Border Patrol of Cimar's Army takes over jurisdiction.  You can see        
+all manner of low buildings to the north, as well as one impressive one to     
+your northwest.                                                                
+~
+road
+D NORTH 11803 0 0
+0     
+~
+The village road leads north into the community.     
+~
+D SOUTH 11801 0 0
+0     
+~
+The road leads back toward Cimar.     
+~
+#11803
+The Village Road~
+This is the southern end of Koteras Village, before reaching the famed     
+city of Cimar.  Here, the dirt road extends north as well, to the village     
+itself, and a small side road beckons toward a wooden longhouse with a     
+small belltower behind it.     
+~
+road
+D NORTH 11804 0 0
+0     
+~
+The village road continues on.     
+~
+D EAST 11841 0 0
+0     
+~
+A small dirt side road leads off toward a wooden longhouse.     
+~
+D SOUTH 11802 0 0
+0     
+~
+The road leads back toward Cimar.     
+~
+#11804
+The Village Road~
+You stand on the southern edge of Koteras Village, among dwellings of     
+city laborers, serfs, and merchants alike.  A marketplate looms up ahead,      
+and some thatch huts sit on the western side of the road.     
+~
+road
+D NORTH 11806 0 0
+0     
+~
+The village road continues on through Koteras.     
+~
+D SOUTH 11803 0 0
+0     
+~
+The road leads back toward the city of Cimar.     
+~
+D WEST 11805 0 0
+0     
+~
+A small thatch hut sits on the edge of the road.     
+~
+#11805
+A peasant hut~
+You stand within a small domicile that, were justice rampant, should      
+house perhaps two people.  In the world of the peasant, four families must     
+take up residence here.  A small firepit is dug in the center of the dirt      
+floor, and piles of skins and straw provide sleeping quarters for these     
+unfortunate people.     
+~
+inside
+ROOM INDOORS
+D EAST 11804 0 0
+0     
+~
+The village road lies back outside.     
+~
+#11806
+The Village Road~
+You stand on Koteras Village's main road, stretching through the north     
+plains that border Cimar.  A marketplace looms ever closer, and from here     
+you can actually catch smells of burning coal and roasted meats.  To the     
+west, several thatch huts line the road.     
+~
+road
+D NORTH 11808 0 0
+0     
+~
+The road continues on toward the marketplace.     
+~
+D SOUTH 11804 0 0
+0     
+~
+The road leads back toward Cimar's gates.     
+~
+D WEST 11807 0 0
+0     
+~
+A small thatch hut sits to the west.     
+~
+#11807
+A peasant hut~
+You stand within a small domicile that, were justice rampant, should     
+house perhaps two people.  In the world of the peasant, four families must     
+take up residence here.  A small firepit is dug in the center of the dirt     
+floor, and piles of skins and straw provide sleeping quarters for these     
+unfortunate people.     
+~
+inside
+ROOM INDOORS
+D EAST 11806 0 0
+0     
+~
+The village road lies back outside.     
+~
+#11808
+The Village Road~
+You stand on the road stretching through Koteras Village on the northern     
+spur of the grand city of Cimar.  Just north of you, a wide marketplace opens     
+into the town square.  To the east and west are dwellings, though the wooden     
+cabin to your east seems quite a bit more hospitable than the thatch hut to     
+the west.  The road here is cleaner, more well kept.     
+~
+road
+D NORTH 11810 0 0
+0     
+~
+A wide square hosts a village market, among other things.     
+~
+D EAST 11811 ABG 0
+wooden door     
+~
+A wood cabin lies to the east of here.     
+~
+D SOUTH 11806 0 0
+0      
+~
+The Village road leads toward a looming city.     
+~
+D WEST 11809 0 0
+0     
+~
+A small peasant's hut lies to the west.     
+~
+#11809
+A peasant hut~
+You stand within a small, cramped hut that seems to be the living space     
+for several families, though in time of comfort would perhaps serve only a     
+largish pet.  It is well-kept, however, and the serfs here are even good      
+enough to dispose of their trash by burning it in the center firepit.     
+~
+inside
+ROOM INDOORS
+D EAST 11808 0 0
+~
+The village road lies back outside in that direction.     
+~
+E fire pit firepit~
+This small pit, dug in the center of the hut, provides the families the      
+warmth they require, as well as a means for disposing of any trash.     
+~
+#11810
+Village Square~
+Here, you stand upon the southern edge of the village proper.  Not quite      
+within the grasp of the bustling marketplace that Koteras is built around,     
+here you see mainly smaller vendors, peddlers from the city offering trinkets     
+and useless furs, things of no real value.  A large, somewhat opulent      
+residence lies off to the east, and the cobblestones here in the square have     
+become much easier to walk upon.     
+~
+road
+D NORTH 11813 0 0
+0     
+~
+The center of the village square lies in this direction.     
+~
+D EAST 11896 ABG 0
+double doors~
+A set of rich ebony double doors lead into a large house.     
+~
+D SOUTH 11808 0 0
+0      
+~
+The village road leads southward, to Cimar.     
+~
+D WEST 11895 0 0
+0     
+~
+The western village square looks fairly empty.     
+~
+#11811
+Inside a cabin home~
+Within this small domicile lives a family who must be one of the lucky     
+few to succeed in peddling their goods, or perhaps the family of one of the     
+town's rather prosperous shop keepers.  It is comfortable but not lavish,     
+with sturdy wooden walls, hardwood floors, and even a bank of crystal     
+windows set into the eastern wall.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11812 ABG 0
+door     
+~
+A small door leads into a pantry storeroom.     
+~
+D WEST 11808 ABG 0
+wooden door     
+~
+A wooden door leads back out to the village road.     
+~
+E windows crystal bank~
+The windows are somewhat dirty, but you can see a long wooden hall off     
+to the east, as well as a tower rising behind it.     
+~
+#11812
+A small storeroom~
+This provides the family a place for hanging meats, keeping belongings      
+and extra clothing.  It is somewhat cramped, but still of good, sturdy     
+construction and quite warm in the wintertime.  The hardwood floor shows     
+signs of being well-cared for.  This also serves as a pantry for the      
+family, as dried goods and jars of food are kept here on shelves.     
+~
+inside
+ROOM INDOORS
+D NORTH 11811 ABG 0
+door     
+~
+A small door leads out into the main house.     
+~
+E shelves jars goods~
+The shelves are stocked well with food to be prepared and consumed      
+during the winter.  Nothing looks easy enough to prepare without some     
+cooking skill.     
+~
+#11813
+The Center of the Square~
+Here, you stand in the commercial and geographical center of Koteras     
+Village.  Vendors struggle all around you to garner position for themselves,     
+and citizens bustle about as well as serfs on their trek to or from the      
+cantrevs.  Here the town meetings are held, or in the Inn, depending on     
+weather.  The cobblestones here have been worn down from years of the heavy     
+commercial traffic.     
+~
+road
+D NORTH 11842 0 0
+0     
+~
+The village road leads on northward.     
+~
+D EAST 11814 0 0
+0     
+~
+A trail of discolored ground stretches away from the square.     
+~
+D SOUTH 11810 0 0
+0     
+~
+The village square continues.     
+~
+D WEST 11865 0 0
+0     
+~
+A trail of discolored ground stretches away from the square.     
+~
+#11814
+Village Square~
+You stand on the eastern edge of the bustling center of this village.     
+Vendors rich and poor, peddlers local and famous alike vie for position on     
+the grey cobblestones, while around you rise wooden buildings and shops.     
+~
+road
+D NORTH 11815 0 0
+0     
+~
+A smoking forge awaits you in that direction under a canvas tent.     
+~
+D EAST 11816 0 0
+0     
+~
+The trail of discolored ground leads away east.     
+~
+D WEST 11813 0 0
+0     
+~
+You see the center of the market and the square.     
+~
+#11815
+In a canvas shelter~
+Here, inside the giant canvas strung up by large metal stakes, there     
+is quite obviously a smithy of some kind.  A short black anvil rests in     
+the center of the grass, with buckets of oil and water sitting beside it.     
+Metal implements for shaving, smelting, and shaping are strewn about on     
+a nearby table.  The smell of burning coal fills the tent.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11814 0 0
+0     
+~
+The marketplace opens back up to the south.     
+~
+#11816
+A road of whitened earth~
+This trail, while not cobbled, serves as a main east-west thoroughfare     
+for the citizens and the commerce of the village.  The solid, packed earth     
+that comprises the road is whitish in color, and is covered with a fine,     
+white dust that swirls about in the slight breeze.       
+~
+road
+D EAST 11817 0 0
+0     
+~
+The white road continues to the east.     
+~
+D SOUTH 11818 0 0
+0     
+~
+A small thatched hut lies to the south.     
+~
+D WEST 11814 0 0
+0     
+~
+The village square lies to the west.     
+~
+E road white dust~
+The dust on the road, when you examine it further, appears to be      
+powdered marble, by its consistency.  How odd.     
+~
+#11817
+A road of whitened earth~
+You stand on a road of solid, packed earth that serves as the main      
+east-west thoroughfare for the citizenry and commerce of Koteras Village.     
+The road itself is of a fine, white dust that swirls about in the breeze.     
+To the north of you is a small stone house, and thatch huts line the south     
+edge of the road.     
+~
+road
+D NORTH 11820 ABG 0
+stone door     
+~
+A small stone house lies in that direction.     
+~
+D EAST 11819 0 0
+0     
+~
+The road of white earth continues to the east.     
+~
+D SOUTH 11897 0 0
+0     
+~
+A small thatch hut lies in that direction.     
+~
+D WEST 11816 0 0
+0     
+~
+The road of white earth continues to the west.     
+~
+#11818
+A peasant hut~
+You stand within a small domicile that, were justice rampant, should     
+house perhaps two people.  In the world of the peasant, four families must     
+take up residence here.  A small firepit is dug in the center of the dirt     
+floor, and piles of skins and straw provide sleeping quarters for these     
+unfortunate people.     
+~
+inside
+ROOM INDOORS
+D NORTH 11816 0 0
+0     
+~
+The road of white earth lies beyond the hut's entrance.     
+~
+#11819
+A road of whitened earth~
+You stand on a road of solid, packed earth that serves as the main     
+east-west thoroughfare for the citizenry and commerce of Koteras Village.     
+The road itself is of a fine, white dust that swirls about in the breeze.     
+~
+road
+D NORTH 11898 0 0
+0     
+~
+A small thatched hut lies in that direction.     
+~
+D EAST 11821 0 0
+0     
+~
+The road of white earth leads eastward.     
+~
+D WEST 11817 0 0
+0     
+~
+The road of white earth leads westward.     
+~
+#11820
+Inside a small stone dwelling~
+You are within a cozy granite and mortar dwelling belonging likely     
+to one of the town's prosperous resident merchants, most likely the town     
+blacksmith.  A large fireplace decorates the western wall, and shelves     
+line the other walls, bearing food as well as books scribed in what      
+appears to be dwarvish lettering.  A large rug of some unknown animal     
+fur covers the hardwood floor, and a soft bed lies in one corner.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11817 ABG 0
+stone door     
+~
+The stone door leads back out to the busy road.     
+~
+E books dwarvish~
+The books are in dwarvish script, of a strange dialect.  One large     
+tome has an etching of a hammer and tongs on the cover.     
+~
+#11821
+A road of whitened earth~
+You stand on a road of solid, packed earth that serves as the main     
+east-west thoroughfare for the citizenry and commerce of Koteras Village.     
+The road itself is of a fine, white dust that swirls about in the breeze.     
+Another trail, this one of cobbled stone, leads away south toward a large     
+brick tower.     
+~
+road
+D EAST 11822 0 0
+0     
+~
+The road of white earth continues on.     
+~
+D SOUTH 11823 0 0
+0     
+~
+A cobbled road leads south toward a large tower.     
+~
+D WEST 11819 0 0
+0     
+~
+The road of white earth continues on.     
+~
+#11822
+A road of whitened earth~
+You stand on a trail of whitened earth that has been packed solid by     
+the meanderings and commerce of the village and its relationship with the     
+lords of the northern cantrevs.  The earth is covered in a fine white dust     
+that swirls in the slight breeze.     
+~
+road
+D EAST 11893 0 0
+0     
+~
+The road of white earth leads eastward, toward a grassy valley.     
+~
+D WEST 11821 0 0
+0     
+~
+The road of white earth leads west into the village.     
+~
+#11823
+A twisting path of cobbled stone~
+This road is of evenly placed cobbled stone, and worn ruts show the      
+frequent passage of carts and wagons.  The path was obviously laid by     
+a scenic-minded person, and bends to showcase the few trees lining the     
+path here.  To the east and south, a short, iron fence encloses a small     
+cemetery.     
+~
+road
+D NORTH 11821 0 0
+0     
+~
+A road of whitened earth lies in that direction.     
+~
+D SOUTH 11824 0 0
+0     
+~
+The twisting path continues south.     
+~
+#11824
+A twisting path of cobbled stone~
+This road is of evenly placed cobbled stone, and worn ruts show the     
+frequent passage of carts and wagons.  The path was obviously laid by     
+a scenic-minded person, and bends to showcase the few trees lining the     
+path.  To the east, an iron gate beckons you to a final resting place.     
+~
+road
+D NORTH 11823 0 0
+0     
+~
+The twisting path leads northward.     
+~
+D EAST 11825 ABG 0
+iron gate     
+~
+A black iron fence and gate bar passage into the village graveyard.     
+~
+D SOUTH 11826 0 0
+0     
+~
+The twisting path of cobbled stone leads south.     
+~
+#11825
+A silent cemetery~
+A black iron fence boxes in this plot of land, though scattered      
+gravestones dot the field beyond it.  The ground here is uneven and     
+crowded with chiseled monuments to faceless thousands, gone before in     
+the long march to the Gates of Silence.  A large stone near the east     
+edge of the yard proclaims a mass grave for fallen warriors in the ages-old     
+defense of the "grandest city ever to rise on proud earth".  The spirits      
+of those resting here seem to compel you to honor them and quiet yourself.     
+~
+field
+ROOM SILENCE
+D WEST 11824 ABG 0
+iron gate     
+~
+The black iron gate leads back to the twisting path of stone.     
+~
+#11826
+A twisting path of cobbled stone~
+You stand on a path that turns and twists like a serpent past a long     
+wooden structure on the west, and a fenced enclosure on the east.  The     
+stones are evenly placed and smooth, and the path's turns take you near     
+the few trees that dot the landscape.     
+~
+road
+D NORTH 11824 0 0
+0     
+~
+The road of twisting stone leads northward.     
+~
+D SOUTH 11827 0 0
+0     
+~
+A lawn of groomed grass lies to the south.     
+~
+#11827
+A well-maintained churchyard~
+Here the dirt and rock and rubble of the terrain have been cleared      
+away, and a tranquil lawn of groomed grass provides solace and peace     
+to weary travellers.  In the southeast corner of the yard, a brick     
+tower looms over the yard and most of the village.     
+~
+field
+D NORTH 11826 0 0
+0     
+~
+A twisting path of cobblestone beckons from the north.     
+~
+D SOUTH 11828 0 0
+0     
+~
+The southern end of the yard lies there.     
+~
+#11828
+A well-maintained churchyard~
+Here the dirt and rock and rubble of the terrain have been cleared     
+away, and a tranquil lawn of groomed grass provides solace and peace     
+to weary travellers.  The long, soft grasses bend over themselves,      
+creating a cushion to weary feet and sitting visitors.  On the borders     
+of the lawn, azaleas and lilacs dot the grass, emanating light,     
+sweet fragrances.     
+~
+field
+D NORTH 11827 0 0
+0     
+~
+The northern end of the yard, not nearly so plush, lies there.     
+~
+D EAST 11829 ABG 0
+door     
+~
+A small door leads into the churchyard bell tower.     
+~
+D WEST 11831 0 0
+0     
+~
+An arch beckons you into a wooden longhouse.     
+~
+#11829
+Inside a brick belltower~
+You are at the foot of spiral stone steps that look to oudate     
+the church, oddly, by several hundred years or more.  They are     
+chiseled out of a black stone with an oddly metallic sheen, though     
+nowhere near as reflective as obsidian.  The stairs lead up, and      
+the bricks must have been laid around it, though they show the      
+cracking and faded look of long years as well.     
+~
+inside
+ROOM INDOORS
+ROOM NOWHERE
+D WEST 11828 ABG 0
+door     
+~
+A small door leads out to the churchyard.     
+~
+D UP 11830 0 0
+0     
+~
+The steps lead to the tower's bell chamber.     
+~
+#11830
+In the tower bell chamber~
+You stand in a small, open chamber at the top of the brick bell     
+tower serving the village church.  A giant copper bell sways heavily     
+in the center of the chamber, and several smaller bells decorate     
+the top of each arch facing the cardinal directions. A strange stone     
+stairway leads back into the interior of the tower.     
+~
+inside
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+D NORTH 0 0 0
+0     
+~
+Out this arch you see the cemetery close by, and the road beyond.     
+~
+D EAST 0 0 0
+0     
+~
+Out this arch you see far, across fields to a pair of grey castles.     
+~
+D SOUTH 0 0 0
+0     
+~
+Out this arch you see Cimar's northern wall looming near.     
+~
+D WEST 0 0 0
+0     
+~
+Out this arch you can see all of Koteras splayed out beneath you.     
+~
+D DOWN 11829 0 0
+0     
+~
+The strange steps lead down into darkness.     
+~
+E bell copper~
+The giant bell is etched with images and script that you cannot     
+decipher, scenes of battles among the clouds and ruin on the      
+ground below.  Every humanoid form raining down from the clouds     
+appears to be strangely faceless.     
+~
+#11831
+Inside a longhouse cathedral~
+This wooden structure is quite sturdy, and has stood the test of      
+time and the elements to serve this small community.  The church of     
+Cimar has donated a fair amount to establishing this center of      
+holiness in a Border Patrol region, mainly for the comfort of the     
+village and the soldier's families.  Beautiful hardwood pews are     
+furnished with layers of pillows to make services more bearable, and     
+the altar at the front of the sanctuary is laden with gold cloth.     
+~
+inside
+ROOM INDOORS
+D NORTH 11833 0 0
+0     
+~
+The pews continue leading toward the altar there.     
+~
+D EAST 11828 0 0
+0     
+~
+An arch leads out into the well-groomed churchyard.     
+~
+D SOUTH 11832 0 0
+0     
+~
+The pews lead toward the back of the church.     
+~
+#11832
+Inside a longhouse cathedral~
+You stand in the southern end of a large nave that serves the entire     
+community of Koteras.  Elegant hardwood pews are cushioned and numerous     
+enough to seat the whole community twice over, it seems.  Many pilgrims     
+come to see the church that has utilized its donations with a good idea     
+of the aesthetic.  Double doors beckon the populace in to the south,     
+while a small, candle-lit alcove lies to the west.     
+~
+inside
+ROOM INDOORS
+D NORTH 11831 0 0
+0     
+~
+The hardwood pews continue all the way to the altar.     
+~
+D SOUTH 11836 ABG 0
+double door doors     
+~
+A pair of wooden double doors lead out to a small road.     
+~
+D WEST 11835 0 0
+0     
+~
+A small candlelit alcove lies to the west.     
+~
+#11833
+Inside a longhouse cathedral~
+You stand at the northern end of a vast sanctuary, entirely      
+constructed of hardwood, right down to the altar itself.  The timber     
+likely imported from the river valley nobility holdings and shaped     
+by their serfs to sweeten the deal.  The craftsmanship looks exceptional,     
+however, and the floor is carved with images of a grand city, perhaps     
+a representation of the beauties of the heavens.  Simple wooden      
+chandeliers provide the lighting for the entire cathedral.       
+~
+inside
+ROOM INDOORS
+D NORTH 11834 0 0
+0     
+~
+The altar of the church lies in that direction, on a raised dais.     
+~
+D SOUTH 11831 0 0
+0     
+~
+The wooden pews continue past a large arch in the east wall.     
+~
+#11834
+At the altar~
+Upon a raised dais, this wooden altar is covered in crimson velvet and      
+white cloth lined with shimmering golden thread.  A pulpit, also of sturdy     
+wood construction, stands off to one side.  From here, voices echo all     
+throughout the church as if you stood overlooking an expansive valley. All     
+the wood walls act as sounding boards, to heighten the intensity and volume     
+of the speaking priest.     
+~
+inside
+ROOM INDOORS
+ROOM LAW
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D NORTH 11899 ABG 0
+door white wooden     
+~
+A small, white wooden door leads off behind the pulpit, out of view.     
+~
+D SOUTH 11833 0 0
+0     
+~
+The rows and rows of hardwood, cushioned pews beckon you to rest.     
+~
+#11835
+A small, candle-lit alcove~
+Here, worshippers can escape the noise and populace of the general     
+service to find more personal prayer time.  A series of low tables along     
+the western wall hold hundreds upon hundreds of white candles, long-     
+burning beeswax that sheds a soft glow upon the faces of the faithful     
+and gives the hardwood church a homey look.  Small cushions are also     
+provided for those who kneel in silent prayer here.     
+~
+inside
+ROOM INDOORS
+D EAST 11832 0 0
+0     
+~
+The large sanctuary beckons all to worship.     
+~
+#11836
+A small dirt road~
+You stand on a small road before an imposing wooden longhouse.  A     
+pair of wooden double doors that reach perhaps fifteen feet in height     
+beckon to the north, and the road itself, of solid, packed brown earth     
+and dotted with small chunks of strangely smooth rock, leads west.     
+~
+road
+D NORTH 11832 ABG 0
+double door doors     
+~
+The doors beckon the faithful to enter and find peace.     
+~
+D WEST 11837 0 0
+0     
+~
+The dirt road leads on, passing small piles of rubble.     
+~
+#11837
+A small dirt road~
+You stand on a small dirt road at the southwestern corner of a     
+large wooden longhouse.  On occasion you can hear the singing of a     
+large group of people echoing through the structure, the strains of     
+a nameless hymn of praise.  The entrance to the longhouse is east     
+of here, while the road leads west, bending north.     
+~
+road
+D EAST 11836 0 0
+0     
+~
+The dirt road leads toward a pair of solid wooden double doors.     
+~
+D WEST 11838 0 0
+0     
+~
+The dirt road bends to the north in that direction.     
+~
+#11838
+A small dirt road~
+You stand on a small dirt road, wending its way through the huts and     
+cabins to end east of here at an exceptionally large structure.  The road     
+itself is solid, packed earth, though occasional rubble dots its surface.     
+The rubble is of well-shaped stone that bears centuries of weather on its     
+face, yet seems structurally little the worse for wear.     
+~
+road
+D NORTH 11839 0 0
+0     
+~
+The dirt road leads north from here, past more piles of stone.     
+~
+D EAST 11837 0 0
+0     
+~
+The dirt road leads east, toward a large building.     
+~
+#11839
+A small dirt road~
+You stand on a small dirt road, wending its way through the huts and     
+cabins to end east of here at an exceptionally large structure.  The road     
+itself is solid, packed earth, though occasional rubble dots its surface.     
+The rubble is of well-shaped stone that bears centuries of weather on its     
+face, yet seems structurally little the worse for wear.     
+~
+road
+D NORTH 11840 0 0
+0     
+~
+The dirt road continues on to the north.     
+~
+D SOUTH 11838 0 0
+0     
+~
+The dirt road bends to the east there.     
+~
+#11840
+A small dirt road~
+You stand on a small dirt road, wending its way through the huts and     
+cabins to end east of here at an exceptionally large structure.  The road     
+itself is solid, packed earth, though occasional rubble dots its      
+surface. The rubble is of well-shaped stone that bears centuries of      
+weather on its face, yet seems structurally little the worse for wear.     
+~
+road
+D NORTH 11841 0 0
+0     
+~
+The dirt road bends sharply to the west in that direction.     
+~
+D SOUTH 11839 0 0
+0     
+~
+The dirt road continues on to the south.     
+~
+#11841
+A small dirt road~
+You stand on a small dirt road, wending its way through the huts and     
+cabins to end east of here at an exceptionally large structure.  The      
+road itself is solid, packed earth, though occasional rubble dots its      
+surface. The rubble is of well-shaped stone that bears centuries of      
+weather on its face, yet seems structurally little the worse for wear.     
+The road also joins the main village path to the west of here.     
+~
+road
+D SOUTH 11840 0 0
+0     
+~
+The dirt road continues on to the south.     
+~
+D WEST 11803 0 0
+0     
+~
+The dirt trail joins up with the Village road there.     
+~
+#11842
+The Village Road~
+You stand on the main village road just north of a large market-     
+place.  The cobblestone road leads north and south, and to the immediate     
+west of you stands a large longhouse, with a stone chimney that pours     
+out black, greasy-looking smoke.  More cabins lie to the north on this     
+road.     
+~
+road
+D NORTH 11843 0 0
+0     
+~
+The village road continues on to the north.     
+~
+D SOUTH 11813 0 0
+0     
+~
+The center of the village square lies in that direction.     
+~
+#11843
+The Village Road~
+You stand on the main village road north of the large marketplace      
+which serves Koteras in its entirety.  To your west, a longhouse stands     
+imposingly wide, and from the east, the thick, coppery reek of blood     
+emanates with brutal intensity.     
+~
+road
+D NORTH 11844 0 0
+0     
+~
+The village road continues on in this direction.     
+~
+D EAST 11883 0 0
+0     
+~
+A long cabin with a swinging sign bearing a stuffed pig.     
+~
+D SOUTH 11842 0 0
+0     
+~
+The village road continues on in this direction.     
+~
+#11844
+The Village Road~
+You stand on the main village road nearing the northern edge of the     
+community of Koteras.  The cobblestones are extremely well-placed in     
+this district of town, as the soldiers who are remanded for any sort     
+of disciplinary action usually draw that job.     
+~
+road
+D NORTH 11845 0 0
+0     
+~
+The village road continues on in this direction.     
+~
+D SOUTH 11843 0 0
+0     
+~
+The village road leads back into the heart of town.     
+~
+#11845
+The Village Road~
+You stand at the veritable end of the village service-road.  To the     
+north, it becomes the solid earth of the North Cimar Road.  Some of the     
+village's merchants have their shops set up here, mostly so the odors     
+from their wares do not infest the entire town.  The butcher, the      
+tanner, and anyone peddling pungent herbs are all encouraged to seek     
+the downwind side of north.     
+~
+road
+D NORTH 11846 0 0
+0     
+~
+The North Cimar Road begins there, reaching out into the wilds.     
+~
+D EAST 11881 0 0
+0     
+~
+A large yard precedes a wooden cabin in that direction.     
+~
+D SOUTH 11844 0 0
+0     
+~
+The village road leads back into the heart of the community.     
+~
+#11846
+North Cimar Road~
+You stand upon the wide, solid earth of the North Cimar Road, the     
+pride, joy, and primary responsibility of the city's Border Patrol. The     
+low cabins and huts of the village to the south give way to rolling,      
+verdant pastures, and far-off woodlands to the north.     
+~
+road
+D NORTH 11847 0 0
+0     
+~
+The North Cimar Road continues on.     
+~
+D SOUTH 11845 0 0
+0     
+~
+Koteras Village lies to the south of you.     
+~
+D WEST 11857 0 0
+0     
+~
+A rolling pasture of green lies in that direction.     
+~
+#11847
+North Cimar Road~
+You stand upon the wide, solid earth of the North Cimar Road, the     
+pride, joy, and primary responsibility of the city's Border Patrol.      
+The low cabins and huts of the village to the south give way to rolling,     
+verdant pastures, and far-off woodlands to the north.     
+~
+road
+D NORTH 11848 0 0
+0     
+~
+The Road leads on toward a fork.     
+~
+D SOUTH 11846 0 0
+0     
+~
+The North Cimar Road leads back toward Koteras village.     
+~
+D WEST 11858 0 0
+0     
+~
+A rolling pasture of green opens up in that direction.     
+~
+#11848
+North Cimar Road~
+You stand upon the wide, solid earth of the North Cimar Road, the     
+pride, joy, and primary responsibility of the city's Border Patrol.      
+The low cabins and huts of the village to the south give way to rolling,     
+verdant pastures, and far-off woodlands to the north.     
+~
+road
+D NORTH 11849 0 0
+0     
+~
+The Northern Crossroads and its barricade lie ahead of you.     
+~
+D EAST 11863 0 0
+0     
+~
+A rolling pasture of green opens up in that direction.     
+~
+D SOUTH 11847 0 0
+0     
+~
+The North Cimar Road leads south toward a small village.     
+~
+#11849
+The Northern Crossroads~
+You stand before a large way-post maintained by the Cimar Army's     
+prestigious Border Patrol.  A wooden barricade with stakes tipped with     
+razor-sharp steel is dug in awaiting a horde of brigands, or goblins,     
+or anything to keep the patrolmen in practice.  On either side of you,     
+deep green pastures open up, thanks to the nearby river valley's      
+fertility.  The road branches here, one continuing north, and another     
+leading west.  A large wooden sign sits next to the barricade.     
+~
+road
+D NORTH 11850 0 0
+0     
+~
+The North Cimar Road continues on.     
+~
+D EAST 11864 0 0
+0     
+~
+A rolling pasture of green opens up in that direction.     
+~
+D SOUTH 11848 0 0
+0     
+~
+North Cimar Road leads south into Koteras village.     
+~
+D WEST 11855 0 0
+0     
+~
+A wide road leads westward, strewn with rubble here and there.     
+~
+#11850
+North Cimar Road~
+You stand upon Cimar's main commercial artery for trading with the     
+northern cities.  Here the road joins to the south with others, and     
+beyond that is bordered on either side by rolling, verdant green     
+pastures. The road itself bends to the east here.     
+~
+road
+D EAST 11851 0 0
+0     
+~
+The road continues on to destinations unknown.     
+~
+D SOUTH 11849 0 0
+0     
+~
+A large barricade precedes the crossroads in that direction.     
+~
+#11851
+North Cimar Road~
+You stand upon Cimar's main commercial artery for trading with the     
+northern cities.  Here the road wends its way northward and east, and     
+to the southeast lie verdant, rolling pastures rich with plant life.     
+~
+road
+D NORTH 11852 0 0
+0     
+~
+The north road continues on to destinations unknown.     
+~
+D WEST 11850 0 0
+0     
+~
+The Road leads west and south to a junction.     
+~
+#11852
+North Cimar Road~
+You stand upon Cimar's main commercial artery for trading with the     
+northern cities.  Here the road wends its way northward and east, and     
+to the southeast lie verdant, rolling pastures rich with plant life.     
+~
+road
+D EAST 11853 0 0
+0     
+~
+The north road continues on to destinations unknown.     
+~
+D SOUTH 11851 0 0
+0     
+~
+The road leads back toward a junction.     
+~
+#11853
+North Cimar Road~
+You stand upon Cimar's main commercial artery for trading with the     
+northern cities.  Here the road wends its way northward and east, and     
+to the southeast lie verdant, rolling pastures rich with plant life.     
+~
+road
+D EAST 11854 0 0
+0     
+~
+The north road continues on to destinations unknown.     
+~
+D SOUTH 11864 0 0
+0     
+~
+A rolling pasture of verdant green opens up in that direction.     
+~
+D WEST 11852 0 0
+0     
+~
+The road angles back toward a barricade in the distance.     
+~
+#11854
+North Cimar Road~
+You stand upon Cimar's main commercial artery for trading with the     
+northern cities.  Here the road wends its way northward and east, and     
+to the southeast lie verdant, rolling pastures rich with plant life.   
+North of here, a road stretches into the mountains at the horizon.   
+~
+road
+D NORTH 24400 0 0
+0   
+~
+To the north, the road into the north opens up.   
+~
+D SOUTH 11861 0 0
+0     
+~
+A rolling pasture of verdant green opens up in that direction.     
+~
+D WEST 11853 0 0
+0     
+~
+The north road leads toward a crossroads far in the distance.     
+~
+#11855
+A wide road~
+This road runs east and west just north of Cimar's outlying village     
+community.  Here you are just west of the barricade and crossroads     
+maintained by the Border Patrol.  To your south a large, rich green     
+pasture opens up.     
+~
+road
+D EAST 11849 0 0
+0     
+~
+You see a large barricade in this direction.     
+~
+D SOUTH 11858 0 0
+0     
+~
+A large pasture opens up in this direction.     
+~
+D WEST 11856 0 0
+0     
+~
+The road continues onward.     
+~
+#11856
+A wide road~
+This road runs east and west just north of Cimar's outlying village     
+community.  Here you are just west of the barricade and crossroads        
+maintained by the Border Patrol.  To your south a large, rich green       
+pasture opens up.  North of here, another road branches off.    
+~
+road
+D NORTH 21500 0 0
+~
+To the north, a road continues on.    
+~
+D EAST 11855 0 0
+0     
+~
+The road leads back toward the barricade.     
+~
+D SOUTH 11859 0 0
+0     
+~
+A rich green pasture opens up in this direction.     
+~
+D WEST 226 0 0
+~
+To the west, a small trail leads up into the mountains.    
+~
+#11857
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11858 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D EAST 11846 0 0
+0     
+~
+The northern road lies in that direction.     
+~
+D WEST 11860 0 0
+0     
+~
+More expanses of green pasture.     
+~
+#11858
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11855 0 0
+0     
+~
+A wide road beckons from that direction.     
+~
+D EAST 11847 0 0
+0     
+~
+The north road lies in that direction.     
+~
+D SOUTH 11857 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D WEST 11859 0 0
+0     
+~
+More expanses of green pasture.     
+~
+#11859
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11856 0 0
+0     
+~
+A wide road lies in that direction.     
+~
+D EAST 11858 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D SOUTH 11860 0 0
+0     
+~
+More expanses of green pasture.     
+~
+#11860
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11859 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D EAST 11857 0 0
+0     
+~
+More expanses of green pasture.     
+~
+#11861
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11854 0 0
+0     
+~
+The North Cimar Road lies in that direction.     
+~
+D SOUTH 11862 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D WEST 11864 0 0
+0     
+~
+More expanses of green pasture.     
+~
+#11862
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11861 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D WEST 11863 0 0
+0     
+~
+More expanses of green pasture.     
+~
+#11863
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn      
+down to a simple monument.     
+~
+field
+D NORTH 11864 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D EAST 11862 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D WEST 11848 0 0
+0     
+~
+The north road lies in that direction.     
+~
+#11864
+A rolling, verdant pasture~
+You stand upon an expansive field of soft grasses and tall thistle,     
+blowing gently in the breeze.  Rabbit dens are scattered throughout the     
+area, and the rare pile of stones denotes some ancient cairn, worn     
+down to a simple monument.     
+~
+field
+D NORTH 11853 0 0
+0     
+~
+The north road lies in that direction.     
+~
+D EAST 11861 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D SOUTH 11863 0 0
+0     
+~
+More expanses of green pasture.     
+~
+D WEST 11849 0 0
+0     
+~
+The barricade of the crossroads lies in this direction.     
+~
+#11865
+Village Square~
+You stand on the western edge of the central square and marketplace     
+of Koteras Village.  The cobblestones here are evenly placed, and afford     
+all the merchants and villagers easy passage throughout their busy day.     
+~
+city
+D NORTH 11873 0 0
+0     
+~
+A tall wooden longhouse lies in that direction.     
+~
+D EAST 11813 0 0
+0     
+~
+The center of the square lies in that direction.     
+~
+D SOUTH 11895 0 0
+0     
+~
+The southwestern edge of the square lies in that direction.     
+~
+D WEST 11866 0 0
+0     
+~
+A road of whitened earth leads westward through the town.     
+~
+#11866
+A road of whitened earth~
+You stand on a road of solid, packed earth that serves as the main     
+east-west thoroughfare for the citizenry and commerce of Koteras      
+Village. The road itself is of a fine, white dust that swirls about      
+in the breeze.     
+~
+road
+D NORTH 11872 0 0
+0     
+~
+A small path lies parallel to the white road.     
+~
+D EAST 11865 0 0
+0     
+~
+The village square lies in that direction.     
+~
+D WEST 11867 0 0
+0     
+~
+The road of whitened earth continues.     
+~
+#11867
+A road of whitened earth~
+You stand on a road of solid, packed earth that serves as the main     
+east-west thoroughfare for the citizenry and commerce of Koteras      
+Village. The road itself is of a fine, white dust that swirls about      
+in the breeze.     
+~
+road
+D NORTH 11868 0 0
+0     
+~
+A small path lies parallel to the white road.     
+~
+D EAST 11866 0 0
+0     
+~
+The road of whitened earth continues.     
+~
+D WEST 11884 0 0
+0     
+~
+A road leads on south toward another longhouse.     
+~
+#11868
+A small path~
+Here a small road has been cleared parallel to the trail of      
+whitened earth directly to the south of you.  It serves as a sort     
+of pedestrian road, away from wagon and cart traffic that the peddlers     
+and traveling merchants. North of you, a large brick building rises      
+above the horizon, smelling faintly of ale.     
+~
+city
+D NORTH 11869 0 0
+0     
+~
+The path turns off in front of a large brick building.     
+~
+D EAST 11872 0 0
+0     
+~
+The small path continues eastward parallel to the white road.     
+~
+D SOUTH 11867 0 0
+0     
+~
+The road of whitened earth beckons from this direction.     
+~
+#11869
+The end of the path~
+Here the path turns and ends abruptly at one of the biggest      
+buildings in town- the brewery.  A large wooden sign with a foaming     
+tankard hangs above the massive oaken door, and the smell of spirits     
+comes wafting down from above.     
+~
+city
+D NORTH 11870 ABG 0
+door massive oaken     
+~
+A massive oaken door leads inward.     
+~
+D SOUTH 11868 0 0
+0     
+~
+The path lies to the south.     
+~
+#11870
+Inside the Koteras Brewery~
+You stand in a vast hall filled with tubes, barrels, kegs, and     
+flagons containing all manner of conventional beers, ales, liquors,     
+and many unconventional ones as well.  The resident brewer is something     
+of an adventurous, experimental type.  A large wooden staircase leads     
+downward in the northeast corner of the room, though the other walls     
+are dominated by shelves upon shelves of recipes and secrets of brewing.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11869 ABG 0
+door massive oaken     
+~
+A massive oaken door leads out on to the path.     
+~
+D DOWN 11871 0 0
+0     
+~
+The wooden stairs lead down into cold darkness.     
+~
+#11871
+A vast wine cellar~
+You stand in the basement of the brewer's home and business.  Here,     
+racks upon racks of wine lean against every wall, including the rickety     
+staircase you came down.  Self-supporting wooden racks fill the      
+center of the floor, and dusty bottles are spread in formations next     
+to them.  Casks of ale and barrels of beer stand about the staircase,     
+ready to be tapped or sold to the local Inn.     
+~
+inside
+ROOM INDOORS
+D UP 11870 0 0
+0     
+~
+The staircase leads up into the main brewery.     
+~
+#11872
+A small path~
+This small dirt path runs parallel to the village's road of white     
+earth that traverses the east-west course.  To the northwest, the     
+giant brick hall of the village brewery rests, while the northeast     
+the wooden halls of Koteras Inn offer rest to weary travelers.  An     
+extremely unfortunate group of peasants also have a hut right      
+between them.     
+~
+city
+D NORTH 11874 0 0
+0     
+~
+A peasant hut lies in that direction.     
+~
+D EAST 11873 0 0
+0     
+~
+The small path continues toward the Inn.     
+~
+D SOUTH 11866 0 0
+0     
+~
+The road of whitened earth lies in that direction.     
+~
+D WEST 11868 0 0
+0      
+~
+The path continues, bending north toward the Brewery.     
+~
+#11873
+A small path~
+This small dirt path runs parallel to the village's road of white     
+earth that traverses the east-west course.  You stand now on the east     
+end of the path, underneath a large wooden sign proclaiming the Inn     
+and its stature.     
+~
+city
+D NORTH 11875 ABG 0
+door wooden     
+~
+A wooden door opens into the Inn's interior.     
+~
+D SOUTH 11865 0 0
+0     
+~
+The road of whitened earth beckons from that direction.     
+~
+D WEST 11872 0 0
+0     
+~
+The small path continues to the west.     
+~
+#11874
+A peasant hut~
+You stand inside a miserable construct intended for the housing of     
+perhaps two people or three large livestock animals, but in time of     
+the peasantry, houses four families.  The firepit in the center of     
+the hut smolders with the past evening's fire, and furs and straw     
+are spread about to convey warmth.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11872 0 0
+0     
+~
+The small dirt path lies back outside this filth.     
+~
+#11875
+Common room of the Koteras Inn~
+You stand within a warm, friendly, homey hall.  Here, the wide     
+room sports a couple of decent tables as well as deer and elk heads     
+on the wooden walls, sleeping rooms off to the east, and a large     
+candle-chandelier hanging down from the ceiling.  The floor of the     
+Inn is surprisingly well-kept, showing no stains of ale, beer or      
+wine.     
+~
+inside
+ROOM INDOORS
+D NORTH 11876 0 0
+0     
+~
+The bar of the Inn lies in that direction.     
+~
+D EAST 11880 ABCD 11815
+door room     
+~
+A stout door blocks entrance to a sleeping room.     
+~
+D SOUTH 11873 ABG 0
+door wooden     
+~
+The wooden door leads back outside to the path.     
+~
+D WEST 11879 ABC 11815
+door room     
+~
+A stout door blocks entrance into a sleeping room.     
+~
+#11876
+The bar of Koteras Inn~
+You stand in the northern end of the common room amid tables,     
+scattered stools, and drunken laughter.  Always a few patrons ducking     
+in and out, whether for dinner, a room, or a cheap bottle of wine-     
+the family serving the Inn is one of the best in Shalar, or so the     
+locals will tell you.  Behind the bar a grill steams and sizzles.     
+~
+inside
+ROOM INDOORS
+D NORTH 11877 AB 0
+door back bar     
+~
+The back door of the bar leads to the storeroom.     
+~
+D EAST 11878 ABC 11815
+door room     
+~
+A stout door blocks entrance to a sleeping room.     
+~
+D SOUTH 11875 0 0
+0     
+~
+The southern end of the common room lies in that direction.     
+~
+#11877
+The inn storeroom~
+You stand in the back of the Koteras Inn, among piles of delivered     
+items to be used by the local populace.  Barrels of beer, casks of     
+ale, bottles of liquor all stand amidst a meat cellar containing pounds     
+upon pounds of beef, pork, and mutton.  Bread hangs in baskets from the     
+north wall, all netted and knotted together to keep prying hands as     
+well as mice away.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11876 AB 0
+door back bar     
+~
+The door leads back into the interior of the bar.     
+~
+#11878
+A room in the Inn~
+This room is comfortably kept for any traveller wealthy enough to     
+afford the modern comforts of living on the road.  Koteras residents     
+will also frequent the Inn on occasion and enjoy the bar and grille.     
+A fair-quality bed rests in one corner of the room, and a small desk     
+is flush with the wall exactly opposite.  A small rug finishes the     
+tasteful decor.     
+~
+inside
+ROOM INDOORS
+D WEST 11876 ABC 11815
+door room     
+~
+A stout door leads back into the Inn's common room.     
+~
+#11879
+A room in the Inn~
+This room is comfortably kept for any traveller wealthy enough to     
+afford the modern comforts of living on the road.  Koteras residents      
+will also frequent the Inn on occasion and enjoy the bar and grille.     
+A fair-quality bed rests in one corner of the room, and a small desk     
+is flush with the wall exactly opposite.  A small rug finishes the     
+tasteful decor.     
+~
+inside
+ROOM INDOORS
+D EAST 11875 ABC 11815
+door room     
+~
+A stout door leads back into the Inn's common room.     
+~
+#11880
+A room in the Inn~
+This room is comfortably kept for any traveller wealthy enough to     
+afford the modern comforts of living on the road.  Koteras residents      
+will also frequent the Inn on occasion and enjoy the bar and grille.     
+A fair-quality bed rests in one corner of the room, and a small desk     
+is flush with the wall exactly opposite.  A small rug finishes the     
+tasteful decor.     
+~
+inside
+ROOM INDOORS
+D WEST 11875 ABC 11815
+door room     
+~
+A stout door leads back into the Inn's common room.     
+~
+#11881
+A wide yard strung with lines~
+This yard stands before a small wooden cabin and smells absolutely     
+horrible.  Here the tanner allows his hides to dry in the sun while he     
+applies either pungent oils to harden or moisture to soften the      
+products so they may be shaped for later usage.  Lines of nylon cord     
+traverse the width of the yard to let the hides hang and dry.     
+~
+city
+D EAST 11882 AB 0
+door cabin     
+~
+The front door of the cabin bars entrance to the tanner's home.     
+~
+D WEST 11845 0 0
+0     
+~
+The village road lies in that direction.     
+~
+#11882
+Inside the tanner's home~
+You stand inside the modest wooden cabin of the tanner.  Here, it     
+seems that the entire house has been converted into a cookery for the     
+despondent and the homeless- though Koteras sports quite few of those.     
+Cooking firepits and fireplaces are set strategically throughout the      
+entire home.  Beside that, a huge wooden chair dominates the central     
+floor of the home, looking large enough to hold even the master of the     
+house.     
+~
+inside
+ROOM INDOORS
+D WEST 11881 AB 0
+door cabin     
+~
+The cabin door leads back out into the tanning yard.     
+~
+#11883
+A small slaughterhouse~
+This small cabin is fitted with a stone chimney and several layers     
+of cowhide tenting to allow meats to be smoked in the center of the     
+building, while packages of cooked meat meant for the trail lay on     
+shelves encircling the center.  A large cutting table in the center     
+of the room shows countless knife- and cleaver-marks, and a large     
+pen in the back of the building holds a collar and cage to slaughter     
+livestock.     
+~
+inside
+ROOM INDOORS
+D WEST 11843 0 0
+0     
+~
+The village road lies back outside the door, as does fresh air.     
+~
+#11884
+A road of whitened earth~
+Here, the trail of white earth seems to stretch out for a while     
+to the west, but the road itself turns southward, next to a wooden     
+longhouse to your immediate west. The building is austere but well     
+maintained, and shows the mark of the Border Patrol.     
+~
+city
+D EAST 11867 0 0
+0     
+~
+The road of white earth leads back toward the center of the village.     
+~
+D SOUTH 11885 0 0
+0     
+~
+The dirt road leads on toward the longhouse door.     
+~
+D WEST 212 0 0
+~
+To the west, a path leads up into Mount Cim.    
+~
+#11885
+A dirt road~
+You stand upon a dirt road leading south from Koteras village's     
+main east-west thoroughfare, the white road.  The trail you stand upon     
+rejoins it to the north, and also leads south to meet the door of     
+the wooden longhouse that rests immediately to your west.     
+~
+road
+D NORTH 11884 0 0
+0     
+~
+The road rejoins the trail of white earth in that direction.     
+~
+D SOUTH 11886 0 0
+0     
+~
+The dirt road passes a large, guarded door there.     
+~
+#11886
+Before the barracks~
+You stand on a dirt road directly east of a large, guarded door that     
+serves the Border Patrol who must maintain at least an adequate garrison     
+even this far out simply to combat banditry and highwaymen.  The door     
+and the longhouse itself are nothing special, well kept but simple.       
+However, the men who occupy its walls are nothing if not exceptional.     
+~
+road
+D NORTH 11885 0 0
+0     
+~
+The dirt road leads back to rejoin the trail of white earth.     
+~
+D SOUTH 11887 0 0
+0      
+~
+A small garden rests to the south.     
+~
+D WEST 11888 ABG 0
+door barracks     
+~
+The barracks door awaits you there.     
+~
+#11887
+A small garden~
+By order of the Cimar Army, the Patrolmen who serve in the outlying     
+lands must also pursue a given hobby, to encourage good morale and to     
+strengthen their bond with the native land they are called upon to      
+defend, to possibly give their life for.  Here, the men of the Patrol     
+are given tasks in raising certain herbs that flavor food, heal the ill,     
+and mostly produce a better smell for most of the town.  All manner     
+of cheap herbs grow in abundance here, tended by the Army.     
+~
+field
+D NORTH 11886 0 0
+0     
+~
+The dirt road leads north past the barracks door in that direction.     
+~
+#11888
+The barracks of the Border Patrol~
+Here, you stand in a large room filled with bunks, footlockers,     
+and chests containing personal items, gear, and spare weapons, as     
+well as food and herbs.  This room serves as a communal living space     
+for the men of Koteras Patrol, and they utilize it well.  A pair of     
+soldiers dice in the corner, while others sleep or polish their      
+already-impeccable armor.  A bookshelf rests against the western wall.     
+~
+inside
+ROOM INDOORS
+D NORTH 11889 0 0
+0     
+~
+The barracks bay continues in that direction.     
+~
+D EAST 11886 AB 0
+door barracks     
+~
+The barracks door leads back outside.     
+~
+D SOUTH 11890 AB 0
+door wooden     
+~
+A wooden door leads into an office there.     
+~
+#11889
+The barracks of the Border Patrol~
+Here, you stand in a large room filled with bunks, footlockers,     
+and chests containing personal items, gear, and spare weapons, as     
+well as food and herbs.  This room serves as a communal living space      
+for the men of Koteras Patrol, and they utilize it well.  A pair of     
+soldiers dice in the corner, while others sleep or polish their     
+already-impeccable armor.  A bookshelf rests against the western      
+wall.       
+~
+inside
+ROOM INDOORS
+D NORTH 11891 AB 0
+door wooden     
+~
+A large wooden door leads into a sort of waiting room.     
+~
+D SOUTH 11888 0 0
+0     
+~
+The barracks bay continues in that direction.     
+~
+#11890
+The lieutenant's office~
+This office serves the second in command of the Border Patrol's     
+northern brigade.  A young lieutenant, his desk is a folderol of      
+written march orders, disciplinary procedures, squad and platoon     
+assignment dispatches, and small nicks and scars where a sharp,     
+frustration-driven dagger may have found its way.  A small, yet     
+comfortable bed rests in the southeast corner of the room atop a     
+large floor rug.     
+~
+inside
+ROOM INDOORS
+D NORTH 11888 AB 0
+door wooden     
+~
+A stout wooden door leads back out into the barracks bay.     
+~
+#11891
+A small waiting room~
+Here, the Patrol has constructed a small, well-cushioned room to     
+receive official visitors to the Captain of the Northern Division. With     
+plush chairs and tea service at the pull of a bellrope, Any fairly     
+distinguished visitor would most likely be at home.     
+~
+inside
+ROOM INDOORS
+D EAST 11892 AB 0
+door banded     
+~
+A steel-banded door bearing captain's bars is there.     
+~
+D SOUTH 11889 AB 0
+door wooden     
+~
+The barracks bay lies in that direction.     
+~
+#11892
+The Captain's Office~
+You stand now in the absolute heart of the military workings of the     
+Northern division of the Border Patrol.  Runners stop in every couple     
+of seconds, couriers drop by every OTHER second, and the Captain's      
+desk seems a veritable cornucopia of papers, orders, and dispatches.     
+Despite this, it actually seems that the man has everything in order!     
+Miraculously, every page that crosses his hands finds the perfect      
+place in the piles, and the business of the region is conducted with     
+Cimarian efficiency.     
+~
+inside
+ROOM INDOORS
+D WEST 11891 AB 0
+door banded     
+~
+A steel-banded door bearing the Patrol's symbol is there.     
+~
+#11893
+A road of whitened earth~
+You stand on a road of white, dusty earth that swirls about your feet     
+in the wind and yet seems never to leave the actual path.  This east-     
+west thoroughfare that Koteras Village enjoys seems not to be a      
+product of modern engineering, rather a remnant of it, with the piles     
+of rubble that are strewn about.     
+~
+road
+D EAST 11894 0 0
+0     
+~
+The road of white earth continues to the east, toward a river valley.     
+~
+D WEST 11822 0 0
+0     
+~
+The road of white earth continues to the west.     
+~
+#11894
+A road of whitened earth~
+You stand on a road of white, dusty earth that swirls about your feet     
+in the wind and yet seems never to leave the actual path.  This east-     
+west thoroughfare that Koteras Village enjoys seems not to be a     
+product of modern engineering, rather a remnant of it, with the piles     
+of rubble that are strewn about.     
+~
+road
+D EAST 11900 0 0
+0     
+~
+The white road disappears, but a trail leads down into the river valley.     
+~
+D WEST 11893 0 0
+0     
+~
+The road of whitened earth leads into the Village of Koteras.     
+~
+#11895
+The Village Square~
+Here you stand in the southwestern corner of Koteras village square.     
+Most peddlers and merchants crowd into the center, and those who cannot     
+successfully vie for position there take up position along the main      
+north-south or east-west roads that converge at the town well.  Here     
+it is somewhat quiet and removed from the hustle of business.     
+~
+city
+D NORTH 11865 0 0
+0     
+~
+The village square beckons you from the north.     
+~
+D EAST 11810 0 0
+0     
+~
+The village square beckons you from the east.     
+~
+#11896
+Inside a large house~
+You stand inside the largest, most luxurious house in all of the      
+village, perhaps one to rival a house in Cimar itself- the furnishings     
+are of sleek ebony wood, and the tile on the floor is marble.  The town     
+gossip tells of a great historian and public figure who inhabits the     
+house, but also that he has not been seen for years.     
+~
+inside
+ROOM INDOORS
+D WEST 11810 AB 0
+door doors double ebony     
+~
+A large set of ebony double doors lead out to the square.     
+~
+#11897
+A peasant hut~
+A small, thatch hut of rather shoddy construction, this building     
+was perhaps meant to serve a couple, even a small family.  It serves     
+four families, by the look of it.  Furs and straw lie piled around,     
+and a small firepit is dug in the center of the room for cooking and     
+warmth.  What few small treasures they own are probably buried.     
+~
+inside
+ROOM INDOORS
+D NORTH 11817 0 0
+0     
+~
+The white road lies back outside in that direction.     
+~
+#11898
+A peasant hut~
+A small, thatch hut of rather shoddy construction, this building     
+was perhaps meant to serve a couple, even a small family.  It serves     
+four families, by the look of it.  Furs and straw lie piled around,     
+and a small firepit is dug in the center of the room for cooking and     
+warmth.  What few small treasures they own are probably buried.     
+~
+inside
+ROOM INDOORS
+D SOUTH 11819 0 0
+0     
+~
+The white road lies back outside in that direction.     
+~
+#11899
+The priest's chambers~
+You stand in a low, shed-type addition built on the back of the      
+longhouse cathedral.  Here, the honored priest from Cimar can take     
+his rest, entertain visitors, or simply ponder the next mystery of     
+his theological study.  Spare robes, though not so resplendent, hang     
+neatly in a wardrobe on the eastern wall, and a small desk sits in     
+one corner.     
+~
+inside
+ROOM INDOORS
+ROOM NO_GATE
+ROOM NO_SUMMON_TO
+ROOM NO_SUMMON_FROM
+D SOUTH 11834 ABG 0
+door white wooden     
+~
+The small, white door leads back into the longhouse cathedral.     
+~
+#0
+
+
+
+#RESETS
+MOB 11804 TO 11805 GLIMIT 25 LLIMIT 2
+EQUIP 11804 WIELD
+MOB 11804 TO 11807 GLIMIT 25 LLIMIT 2
+EQUIP 11804 WIELD
+MOB 11805 TO 11807 GLIMIT 25 LLIMIT 2
+EQUIP 11805 WIELD
+DOOR 11808 east CLOSED
+MOB 11804 TO 11809 GLIMIT 25 LLIMIT 2
+EQUIP 11804 WIELD
+MOB 11805 TO 11809 GLIMIT 25 LLIMIT 2
+EQUIP 11805 WIELD
+DOOR 11810 east CLOSED
+MOB 11821 TO 11810 GLIMIT 10 LLIMIT 2
+DOOR 11811 west CLOSED
+DOOR 11811 south CLOSED
+MOB 11821 TO 11811 GLIMIT 10 LLIMIT 1
+DOOR 11812 north CLOSED
+MOB 11822 TO 11812 GLIMIT 10 LLIMIT 1
+OBJECT 11856 TO 11813
+MOB 11806 TO 11813 GLIMIT 20 LLIMIT 1
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+MOB 11822 TO 11813 GLIMIT 10 LLIMIT 2
+MOB 11800 TO 11815 GLIMIT 1 LLIMIT 1
+EQUIP 11800 WIELD
+EQUIP 11801 ABOUT
+GIVE 11831
+GIVE 11832
+GIVE 11833
+GIVE 11834
+GIVE 11835
+GIVE 11836
+GIVE 11837
+DOOR 11817 north CLOSED
+MOB 11805 TO 11817 GLIMIT 25 LLIMIT 2
+EQUIP 11805 WIELD
+MOB 11804 TO 11818 GLIMIT 25 LLIMIT 2
+EQUIP 11804 WIELD
+DOOR 11820 south CLOSED
+MOB 11821 TO 11820 GLIMIT 10 LLIMIT 1
+MOB 11822 TO 11820 GLIMIT 10 LLIMIT 1
+MOB 11805 TO 11821 GLIMIT 25 LLIMIT 2
+EQUIP 11805 WIELD
+MOB 11806 TO 11821 GLIMIT 20 LLIMIT 1
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+DOOR 11824 east CLOSED
+DOOR 11825 west CLOSED
+MOB 11818 TO 11827 GLIMIT 7 LLIMIT 3
+DOOR 11828 east CLOSED
+MOB 11818 TO 11828 GLIMIT 7 LLIMIT 3
+DOOR 11829 west CLOSED
+MOB 11816 TO 11830 GLIMIT 6 LLIMIT 1
+EQUIP 11821 ABOUT
+MOB 11816 TO 11831 GLIMIT 6 LLIMIT 1
+EQUIP 11821 ABOUT
+MOB 11817 TO 11831 GLIMIT 7 LLIMIT 3
+GIVE 11822
+MOB 11817 TO 11831 GLIMIT 7 LLIMIT 3
+GIVE 11822
+DOOR 11832 south CLOSED
+MOB 11818 TO 11832 GLIMIT 7 LLIMIT 3
+MOB 11816 TO 11833 GLIMIT 6 LLIMIT 1
+EQUIP 11821 ABOUT
+MOB 11817 TO 11833 GLIMIT 7 LLIMIT 3
+GIVE 11822
+MOB 11817 TO 11833 GLIMIT 7 LLIMIT 3
+GIVE 11822
+DOOR 11834 north CLOSED
+MOB 11815 TO 11834 GLIMIT 1 LLIMIT 1
+EQUIP 11820 ABOUT
+MOB 11816 TO 11835 GLIMIT 6 LLIMIT 1
+EQUIP 11821 ABOUT
+MOB 11818 TO 11835 GLIMIT 7 LLIMIT 3
+DOOR 11836 north CLOSED
+MOB 11806 TO 11836 GLIMIT 20 LLIMIT 1
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+MOB 11822 TO 11841 GLIMIT 10 LLIMIT 1
+MOB 11821 TO 11842 GLIMIT 10 LLIMIT 2
+MOB 11824 TO 11846 GLIMIT 2 LLIMIT 1
+GIVE 11827
+MOB 11806 TO 11849 GLIMIT 20 LLIMIT 3
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+MOB 11806 TO 11849 GLIMIT 20 LLIMIT 3
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+MOB 11806 TO 11849 GLIMIT 20 LLIMIT 3
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+MOB 11825 TO 11849 GLIMIT 1 LLIMIT 1
+EQUIP 11829 WIELD
+EQUIP 11830 BODY
+EQUIP 11810 SHIELD
+MOB 11813 TO 11860 GLIMIT 4 LLIMIT 1
+EQUIP 11818 WIELD
+EQUIP 11819 ABOUT
+MOB 11814 TO 11860 GLIMIT 12 LLIMIT 5
+MOB 11814 TO 11860 GLIMIT 12 LLIMIT 5
+MOB 11814 TO 11860 GLIMIT 12 LLIMIT 5
+MOB 11813 TO 11862 GLIMIT 4 LLIMIT 1
+EQUIP 11818 WIELD
+EQUIP 11819 ABOUT
+MOB 11814 TO 11862 GLIMIT 12 LLIMIT 5
+MOB 11814 TO 11862 GLIMIT 12 LLIMIT 5
+MOB 11814 TO 11862 GLIMIT 12 LLIMIT 5
+MOB 11821 TO 11866 GLIMIT 10 LLIMIT 2
+DOOR 11869 north CLOSED
+DOOR 11870 south CLOSED
+MOB 11801 TO 11870 GLIMIT 1 LLIMIT 1
+GIVE 11838
+GIVE 11839
+GIVE 11840
+GIVE 11841
+GIVE 11842
+MOB 11809 TO 11871 GLIMIT 1 LLIMIT 1
+GIVE 11802
+DOOR 11873 north CLOSED
+MOB 11823 TO 11873 GLIMIT 1 LLIMIT 1
+GIVE 11826
+PUT 11828 IN 11827 COUNT 1
+MOB 11804 TO 11874 GLIMIT 25 LLIMIT 2
+EQUIP 11804 WIELD
+MOB 11822 TO 11874 GLIMIT 10 LLIMIT 1
+DOOR 11875 south CLOSED
+DOOR 11875 east LOCKED
+DOOR 11875 west LOCKED
+MOB 11811 TO 11875 GLIMIT 3 LLIMIT 3
+EQUIP 11816 ABOUT
+EQUIP 11817 FEET
+MOB 11811 TO 11875 GLIMIT 3 LLIMIT 3
+EQUIP 11816 ABOUT
+EQUIP 11817 FEET
+MOB 11811 TO 11875 GLIMIT 3 LLIMIT 3
+EQUIP 11816 ABOUT
+EQUIP 11817 FEET
+DOOR 11876 east LOCKED
+DOOR 11876 north CLOSED
+MOB 11810 TO 11876 GLIMIT 1 LLIMIT 1
+GIVE 11812
+GIVE 11813
+GIVE 11814
+GIVE 11815
+DOOR 11877 south CLOSED
+MOB 11812 TO 11877 GLIMIT 1 LLIMIT 1
+DOOR 11878 west LOCKED
+DOOR 11879 east LOCKED
+DOOR 11880 west LOCKED
+MOB 11820 TO 11880 GLIMIT 1 LLIMIT 1
+EQUIP 11823 WIELD
+EQUIP 11824 ABOUT
+GIVE 11825
+DOOR 11881 east CLOSED
+MOB 11802 TO 11881 GLIMIT 1 LLIMIT 1
+GIVE 11843
+GIVE 11844
+GIVE 11845
+GIVE 11846
+GIVE 11847
+GIVE 11848
+GIVE 11849
+DOOR 11882 west CLOSED
+MOB 11808 TO 11882 GLIMIT 1 LLIMIT 1
+EQUIP 11811 WIELD
+MOB 11803 TO 11883 GLIMIT 1 LLIMIT 1
+EQUIP 11803 WIELD
+GIVE 11850
+GIVE 11851
+GIVE 11852
+GIVE 11853
+GIVE 11854
+GIVE 11855
+DOOR 11886 west CLOSED
+MOB 11806 TO 11886 GLIMIT 20 LLIMIT 2
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+MOB 11806 TO 11886 GLIMIT 20 LLIMIT 2
+EQUIP 11806 WIELD
+EQUIP 11807 BODY
+DOOR 11888 east CLOSED
+DOOR 11888 south CLOSED
+MOB 11819 TO 11888 GLIMIT 8 LLIMIT 2
+MOB 11819 TO 11888 GLIMIT 8 LLIMIT 2
+DOOR 11889 north CLOSED
+MOB 11819 TO 11889 GLIMIT 8 LLIMIT 2
+MOB 11819 TO 11889 GLIMIT 8 LLIMIT 2
+DOOR 11890 north CLOSED
+DOOR 11891 south CLOSED
+DOOR 11891 east CLOSED
+MOB 11816 TO 11891 GLIMIT 6 LLIMIT 1
+EQUIP 11821 ABOUT
+DOOR 11892 west CLOSED
+MOB 11807 TO 11892 GLIMIT 1 LLIMIT 1
+EQUIP 11808 WIELD
+EQUIP 11809 BODY
+EQUIP 11810 SHIELD
+MOB 11824 TO 11893 GLIMIT 2 LLIMIT 1
+GIVE 11827
+DOOR 11896 west CLOSED
+MOB 11804 TO 11897 GLIMIT 25 LLIMIT 2
+EQUIP 11804 WIELD
+DOOR 11899 south CLOSED
+S
+
+#IMPROGS
+END
+#$

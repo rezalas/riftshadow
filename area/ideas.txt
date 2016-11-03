@@ -1,0 +1,266 @@
+[ 1200] Eladrian: Mon Mar 12 11:42:35 2001: I rox.
+[ 3714] Noethan: Sat May 19 16:36:01 2001: Make gains a different color
+[ 2512] Derven: Mon May 21 10:11:44 2001: Tripwire counter.
+[ 3724] Zarlak: Fri May 25 07:35:25 2001: allow leveling to continue after 51 to gain practices or something perhaps at a reduced rate
+[ 3710] Bremm: Mon Jun  4 23:13:05 2001: Give echoes for failing to cast spells like energy drain and weaken instead of just a carriage return.
+[21526] Gatog: Fri Jul 27 18:25:24 2001: tunic
+[11922] Gatog: Sun Jul 29 19:15:25 2001: flute
+[24525] Bantril: Sat Aug 11 15:53:07 2001: Log every time someone does a help lookup for a help file that isn't there
+[11926] Jaiso: Sun Aug 12 17:02:07 2001: Too many dang no exit places.
+[ 2387] Jaiso: Tue Aug 14 13:33:27 2001: Let entwine and pull work with a whip in the offhand.
+[24243] Erifdel: Tue Aug 14 16:11:16 2001: for crystal element...when you fashion a crystal...can it look different depending on how much mana is stored from within? so you know when it gets weak as well
+[ 2538] Fernard: Thu Aug 16 19:20:42 2001: bracelet
+[ 2538] Fernard: Thu Aug 16 19:26:04 2001: chain mail
+[24525] Gadifee: Sat Aug 18 13:51:13 2001: Give the warrior class the option of choosing which weapon they have the 40% knowledge of at the start.
+[24539] Braden: Sat Aug 18 14:11:56 2001: Autosplit % - split the %, sa y 5% to your groupmates, keep the rest
+[ 1084] Aichros: Sun Aug 19 22:04:34 2001: vtell vsay ... voices added to tells vsay quietly in a sad voice 'I have lost everything. = SadOne says quietly in a sad voice 'I have lost everthing.'
+[24539] Aichros: Sun Aug 19 22:21:22 2001: Make the newbie school a place of silence so that only says or tells are heard and all other cries are not.
+[ 2571] Jxenvi: Tue Aug 21 15:18:40 2001: Please encourage people not to quit out, making it against the rules would be nice, but I would not have a problem with someone quitting if they at least rped their way out.
+[24300] Jxenvi: Tue Aug 21 19:29:23 2001: Make it so you can be frenzied and berserked.
+[24317] Jxenvi: Tue Aug 21 19:40:34 2001: Make it so that a necro can only work on corpses he or his party made.
+[19208] Lilandraya: Thu Aug 23 08:24:28 2001: How about letting the compare command tell you which object weighs more?  Would seem a natural thing to be able to do, as well as being useful for Dragoons, Skirmishers, and Mages.
+[10005] Elo: Fri Aug 24 11:01:35 2001: maybe more exp from perfecting a skill/spell/anything, at the moment reward is 2 exp, which is more annoying than 0 exp.
+[ 2538] Aichros: Sat Aug 25 20:11:26 2001: Could someone make an editor located on the web site like the one on Dioxide'
+[ 2538] Aichros: Sat Aug 25 20:12:08 2001: Could people starting in Melcene please get a map of melcene
+[  944] Aichros: Sat Aug 25 20:17:17 2001: Make home towns summoning proof, that way people can't hide in them summoning creatures from hell's half acre and gain levels.
+[24538] Xaltaer: Sat Aug 25 21:51:49 2001: I started out with hardly any str.  Pure cleric.  There should be an easier way to lvl early on w/o fighting.  Too hard to solo like this.
+[24538] Xaltaer: Sat Aug 25 22:02:20 2001: Need VERY VERY VERY week enemies for those who don't have str to start off.
+[24436] Morlonok: Sat Aug 25 23:43:54 2001: Put in road signs at intersections that point out places of intrest.
+[  204] Tehzdal: Tue Aug 28 02:13:07 2001: mayhaps you should make it so people can type partial names for mobs and items. it would make things a bit easier
+[ 2411] Lalaliina: Tue Aug 28 11:04:25 2001: Let mercenaries be ordered to do all the socials, lets the owner give a mercenary a personality.
+[ 2551] Lalaliina: Tue Aug 28 11:06:26 2001: Seriously, I think having Cimar a no summon area would be a darn good idea, three of the Rulers from the elemental canyon are here at the Temple, ranking made too easy.
+[11400] Lalaliina: Wed Aug 29 00:12:05 2001: Let hunger and thirst show up in the affects command please.
+[ 2489] Lalaliina: Wed Aug 29 10:18:39 2001: Let crystal mages use a crystal in their primary hand so they can use a stave or a wand in the other.
+[23606] Lalaliina: Wed Aug 29 19:02:47 2001: Mages should be able to dual wield wands and staves and magical objects.. not weapons, in any combination.
+[ 2588] Lalaliina: Thu Aug 30 18:27:07 2001: I think mages should be able to dual wield staves, wands and other magical NON weapons..
+[10014] Saen: Fri Aug 31 06:56:53 2001: 1.
+[ 5261] Telmir: Thu Sep  6 02:11:39 2001: using blood to also make the preserve spell last longer....this would help with carrying arms and whatnot around.
+[ 5261] Telmir: Thu Sep  6 02:12:47 2001: Carve skill, could actually carve off arms, legs, wings, things like that from corpes, necro skill
+[ 5261] Telmir: Thu Sep  6 02:13:30 2001: In aspect to carve...it could also be used more so in unique rituals if you obtain runes to carve on corpses
+[ 2538] Eowilaelith: Thu Sep  6 08:05:07 2001: scimitar
+[22042] Telmir: Sun Sep  9 07:22:41 2001: Can you make the glass cabinet in old thalos pick-upable? *smiles innocently* searching for glass...
+[24351] Enterk: Mon Sep 10 04:59:02 2001: ground control...chance of hyperplexing (spelling) legs, arms, wrists...with affects, perhaps chance of dropping weapons, moving, etc...
+[ 2343] Ingurath: Wed Sep 12 12:35:14 2001: pill
+[ 1069] Kelzix: Wed Sep 12 12:40:45 2001: mayhaps Warriors who know different styles could teach them to other warriors. This wouldnt really be unheard of. Also many warriors could learn more then 2 styles of fighting. put a cap on how many total you can learn perhaps. maybe based on int.. like int / 4 styles total.
+[ 2608] Senn: Thu Sep 13 06:36:26 2001: polearm
+[ 2540] Senn: Thu Sep 13 06:39:10 2001: poleaxe
+[24263] Asthimus: Sat Sep 15 16:54:23 2001: cloak
+[19213] Zymrynaryq: Thu Sep 20 21:46:50 2001: Please make some very tough mobs have a fair bit of money that way Hunters get to have some fun.... at least 1500 to 3500 gp.
+[ 3586] Zymrynaryq: Fri Sep 21 14:41:07 2001: Please don't but cues like this in a room unless there is something there:The bar
+[ 9123] Aelianna: Sat Sep 22 08:49:52 2001: Please let owners of the mercenaries order their creatures to sleep so that they heal a wee bit faster.
+[19213] Zymrynaryq: Sat Sep 22 16:17:59 2001: Maybe make it so that you can quaff potions and recite scrolls in battle with an enormous penalty to the success rate for sorcerer versatility?
+[ 2538] Gasaguin: Sun Sep 23 12:39:49 2001: mace
+[ 9260] Satyagraha: Mon Sep 24 13:14:39 2001: boots
+[20513] Satyagraha: Mon Sep 24 13:49:12 2001: 1.
+[22637] Winsprent: Tue Sep 25 13:43:34 2001: shortsword
+[21939] Winsprent: Tue Sep 25 14:04:35 2001: breastplate
+[ 2474] Anaesi: Tue Sep 25 16:05:35 2001: Consider granting elves the one point more of wisdom to their max to make them more viable as characters of any profession.
+[24508] Pilino: Thu Sep 27 14:59:03 2001: Make maps for sale for more of Shalar's cities.
+[ 2561] Gadifee: Sun Sep 30 21:57:35 2001: Let warriors have a complete set of starter weapons to begin with.
+[ 2605] Pilino: Mon Oct  1 00:48:34 2001: Could the major spheres be given a defensive spell against themselves? I know some para have them, I think it would make a nice addition to the majors.
+[24353] Pilino: Sat Oct  6 22:17:06 2001: Can you make a command that logs what people are musing? For instance: muse Hmm I wonder if Karsus has enough followers to start a crusade? and you imms get to see Pilino muses 'I wonder if Karsus has enough followers to start a crusade?' And it gets logged so you know what a character has been upto.
+[ 2579] Vhlinia: Mon Oct  8 14:31:20 2001: Ghosts really have no reason to be denied access to their guilds, also allowing them to depart Shalar is a good idea since sometimes people are too frustrated and need to depart.
+[ 2604] Pilino: Tue Oct  9 12:18:36 2001: I like the courier with the message idea of a quest, make it so evils can approach the Northern Kingdom Lord and goods can approach the Southern Kingdom Lord/find the man by river. And go from there.
+[23603] Pilino: Tue Oct  9 13:07:43 2001: Have a vault area within each of the Cabals for storing items, does not necessarily have to be behind the Cabal Item Bearer. This would be very beneficial especially for the Common guild who want to work together and aid each other.
+[ 7200] Pilino: Tue Oct  9 21:33:00 2001: Have the Cabal guys do a few progged things, trip or bash or something...
+[15866] Therin: Tue Oct  9 21:58:01 2001: critical strike...once every few rounds we hit through protection or get an extra perk damage
+[15866] Therin: Tue Oct  9 21:58:07 2001: cheap shot? or a form of it?
+[ 2348] Vhlinia: Wed Oct 10 14:58:00 2001: Ghosts should be allow into their guilds.
+[ 2489] Gasaguin: Wed Oct 10 22:36:32 2001: staff
+[  951] Pilino: Fri Oct 12 21:06:32 2001: Have a map of all hometowns available to purchase.
+[11537] Pilino: Sat Oct 13 19:11:51 2001: Can we have different echoes for enervate and agitate depending on whether they are aiding or harming..
+[23656] Gasaguin: Tue Oct 16 12:16:45 2001: vellum
+[ 2489] Ehluana: Wed Oct 17 02:53:48 2001: Could you please but hungry and thirsty in the affects list? That way people will not spam themselves with score to see if they should eat.
+[ 2580] Enterk: Thu Oct 18 02:26:01 2001: will assassins ever receive an 'assassinate' type skill?
+[23864] Ehluana: Thu Oct 18 19:12:19 2001: Could we please have a rating of how encumbered we are in either out scores or our affects list?
+[ 2538] Treste: Fri Oct 19 19:12:47 2001: Under help for each race or under the umbrella races racial alignment possibilities would be a good addition if you would please.
+[ 2628] Ehluana: Fri Oct 19 20:57:57 2001: Make the Guards come to the rescue of shopkeepers.
+[20467] Ehluana: Fri Oct 19 23:43:31 2001: Please put hungry and thirsty in affects list!!!
+[23676] Ehluana: Sat Oct 20 02:28:52 2001: Please make a Q/A channel for newbies, having players being able to answer simple non gear/area related questions about RS would make it much more friendly.
+[15859] Teryx: Sat Oct 20 07:31:53 2001: why do people have to wait so long before seeing ac numbers in score?
+[ 2409] Ehluana: Sun Oct 21 18:52:48 2001: Adrenalizing from battling mobs is silly.
+[24525] Testre: Sun Oct 21 20:59:59 2001: Maybe under empowerment you should emphasize having a role is a good idea? :)
+[24525] Destre: Sun Oct 21 21:31:42 2001: Please add that Cimar is the major hometown so people can chose it and get a map.
+[13545] Tefahnis: Mon Oct 22 18:34:10 2001: leggings
+[24534] Kzranz: Wed Oct 24 03:00:44 2001: Maybe remove pissed from the socials? It is sort of well.. out of Shalarian context?
+[ 2362] Ildraenai: Wed Oct 24 23:25:29 2001: If you parry more effectively with a staff even before you learn the parry skill, a mage would be a lot better off with a staff to start with, or at least an option to start with a staff.
+[19206] Ildraenai: Thu Oct 25 00:37:34 2001: Make more easily accessible mercenaries/creature-allies for low level characters.
+[ 2575] Ildraenai: Thu Oct 25 01:39:26 2001: Could Pete the insane Imp in the newbie school, keep up with the pace of inflation? :)
+[10000] Ildraenai: Thu Oct 25 06:31:48 2001: I know it is a short term, or minor stop gap measure but maybe a newbie guide could be made for the main page? A bit general areas to check out, where to buy creatures early on to help you learn etc etc just a bunch of general things to try and a hint at the locales best to try them.
+[  875] Ildraenai: Thu Oct 25 08:26:13 2001: I am not sure if this happens already or not, it does not seem to happen but that does not mean it does not :P, anyhoo it would be beneficial for learning if skills/spells that reduce strength caused a mob so affected to hit a tad less harder.
+[ 2538] Ildraenai: Thu Oct 25 16:24:04 2001: Could encumberance should take into account the type of equipment you are wearing? Some metals may have more magically passive attributes that allows a mage to wear them, mithril and adamantite come to mind. Not that Ildraenai is wearing a full suit of mithril or anything like that :P Thanks for reading :)
+[10077] Ildraenai: Fri Oct 26 00:56:11 2001: Possibly make it so that the beaten Halfling rewards you for rescuing him from the thieves? Could be the end or start of a low level quest.
+[  523] Ildraenai: Fri Oct 26 02:50:00 2001: For when the Cimarian guards attack, could one not not be allowed to surrender? Or possibly even bribe... :P
+[ 2602] Ildraenai: Mon Oct 29 01:38:06 2001: Have healing spells do damage to undead since it is positive energy going into a being created of negative energy ala Final Fantasy Tatics.
+[ 2538] Ildraenai: Mon Oct 29 22:17:33 2001: Your economy needs adventurers to be able to sell items..barter or otherwise.
+[ 2489] Ildraenai: Tue Oct 30 04:11:17 2001: Forward, for notes you would like to forward on to other characters.
+[ 2487] Ildraenai: Tue Oct 30 05:12:39 2001: Make it so when you look at someone under the creeping tomb there is sign.
+[11483] Rawinth: Mon Nov  5 16:24:45 2001: staff
+[ 2538] Jktal: Sat Nov 17 19:02:07 2001: Put in a think command, it will seriously enhance your RP. See Avendar or Armageddon for examples.
+[24311] Arafelis: Mon Nov 19 12:27:44 2001: Allow warriors to train Hit/Dam
+[23625] Arafelis: Wed Nov 21 00:47:24 2001: Bring back/create the Ranger guild.
+[24311] Arafelis: Wed Nov 21 17:30:50 2001: "Concuss <target>"  As Duelists often fight more than one foe, and casters hide often behind warriors, it would greatly improve the versitility of the skill to allow it to target a specific foe.
+[22053] Arafelis: Fri Nov 23 01:20:21 2001: Dart could be altered to allow it's user to choose which weapon he/she attacks with.  dart 1 or dart prime, or simply 'dart', would attack with the primary weapon, while dart 2 or dart second would attack with the dual wielded weapon.
+[ 2621] Eswael: Sat Nov 24 14:37:26 2001: Implement a think command, that way you can have a log of a char's current thoughts. Have it cleared whenever a char logs off.
+[ 2609] Eswael: Mon Dec 10 06:06:17 2001: If there are two soldiers of the trio that work the streets of Cimar, you should be able to look at each using key words like: Huge, Strong, etc etc.
+[23852] Naedi: Tue Dec 18 21:05:32 2001: ring
+[ 3829] Celandel: Fri Dec 21 10:57:34 2001: perhaps making proficiencies such as slashing, piercing, bludgeoning, and cleaving instead of axe, sword, and mace would be cool
+[24259] Celandel: Sat Dec 22 11:24:44 2001: perhaps battlecries would be cool
+[ 4630] Eldrinor: Sat Jan  5 14:41:47 2002: make the muttering for fireball say HADOUKEN
+[ 2540] Celandel: Tue Jan  8 20:17:15 2002: + I have been looking through all kinds of muds for it but cant find it. And since
+[ 2540] Celandel: Tue Jan  8 20:17:16 2002: + this is my favorite, i thought i'd propose the idea to you. OK, here it is:
+[ 2540] Celandel: Tue Jan  8 20:17:16 2002: + Perhaps a race based off of Megaman X, the Reploid. If they choose to be evil,
+[ 2540] Celandel: Tue Jan  8 20:17:16 2002: + they can join a clan or class called mavericks. If they choose good they can be
+[ 2540] Celandel: Tue Jan  8 20:17:16 2002: + in a clan or class called maverick hunters. If neutral they can choose to be a
+[ 2540] Celandel: Tue Jan  8 20:17:17 2002: + freelancer, helping whichever side they see fit. I just think it'd be cool to
+[ 2540] Celandel: Tue Jan  8 20:17:17 2002: + have a buster cannon and/or z-saber. Perhaps they could be an evolutionary race,
+[ 2540] Celandel: Tue Jan  8 20:17:17 2002: + upgrading the class that they are (class as in rank), like D class up to GA class
+[ 2540] Celandel: Tue Jan  8 20:17:17 2002: + just for a little extra spice. Thanks for taking the time to read my letter.
+[ 2540] Celandel: Tue Jan  8 20:17:18 2002: +                                                                     Eldrinor
+[ 2540] Celandel: Tue Jan  8 20:17:24 2002: show
+[ 2540] Celandel: Tue Jan  8 20:17:37 2002: oops
+[ 2540] Celandel: Tue Jan  8 20:17:40 2002: wrong mud
+[ 6125] Scytale: Thu Jan 17 01:54:46 2002: branch
+[ 6125] Scytale: Thu Jan 17 01:55:02 2002: sorry, mistake
+[ 2538] Kallus: Sat Jan 19 08:57:05 2002: Please create a think commmand it would be very helpful in demonstrating exactly what a character was plotting at the time.
+[ 2538] Kallus: Sat Jan 19 17:31:34 2002: Have a function within emotes that allows you to enter another player's name and replaces it for him with "you". ex emote smiles at ~Glim... he sees Fred smiles at you. Others see Fred smiles at Glim..
+[ 2610] Bracht: Fri Jan 25 15:55:39 2002: have the shops open longer than normal, we can't get anything unless your bery lucky and find them open on your way through
+[  949] Zlxarqi: Tue Jan 29 23:44:14 2002: Please make a think command, it is very useful tool for roleplaying.
+[24364] Kiger: Fri Feb  1 15:58:29 2002: hrm
+[24362] Kiger: Fri Feb  1 15:59:08 2002: Perhaps halflings shouldnt be so weak to blunt, there one of my favorite races and I cant play them cause everyone uses maces
+[24365] Kiger: Fri Feb  1 16:00:16 2002: Catch is not working at all
+[24360] Kiger: Fri Feb  1 16:03:07 2002: It seems that unblance does not even work in a PK situation, not really sure what its suppose to do, maybe a certain type of feint? anyway it doesnt work to well
+[24351] Kiger: Fri Feb  1 16:08:54 2002: I really like the duelest class, thats why im posting all this, perhaps some type of weapon specialization on the person might make it betteR?
+[ 2538] Albanassi: Mon Feb 11 15:55:23 2002: Ok diamond skin is too fragile either make it that way with stone skin or let it take more damage.
+[ 6203] Zigov: Sun Feb 24 00:58:01 2002: For the prompt %e, if no exits are visible, or all are closed, have it say None. Also maybe have the doors a different color  or maybe have something around them
+[ 2538] Piental: Wed Feb 27 00:50:05 2002: 2.staff
+[ 2538] Piental: Wed Feb 27 00:50:08 2002: 2.staff
+[ 2625] Keran: Sat Mar 16 03:49:55 2002: troll
+[ 2538] Keran: Sat Mar 16 17:09:47 2002: sword
+[24211] Keran: Sat Mar 16 23:12:27 2002: ring
+[11503] Siktar: Tue Mar 19 10:52:43 2002: Potions of pass door more frequent
+[23683] Keran: Wed Mar 20 23:39:38 2002: Well, I think it's difficult to play this MUD simply because of the player base being PK only focused players... I was looted clean enough and it seems it would be too aggravating to continue playing in the long run when the majority of players are here to just PK in numbers and loot and remove people from the server... i thought this MUD with its playerkilling rules would allow for roleplayed kills and single item looting but seems there's never an immortal to report it to... thanks for the time here but you just lost another player
+[ 2538] Lisel: Tue Apr  2 13:51:00 2002: caustic vapors may cause hallucenations and possible loss of int... after all it is like taking hits of acid
+[ 2538] Arkasi: Fri Apr  5 00:14:49 2002: Make whispers targetable so that you can whisper to someone. :)
+[13873] Siktar: Fri Apr  5 10:50:48 2002: shouldnt bone demons be weak to pound?
+[13813] Siktar: Fri Apr  5 11:20:20 2002: Green dragon In mythdrannor could realllly use some good items.. cause damn he hurts.
+[ 2547] Nodik: Fri Apr  5 12:21:54 2002: when someone is yelling, why not specificy direction? something like a ..X trooper yells from southeast. infact, you could make it a skill. the higher it is, the more accuracte is the direction
+[ 2538] Nodik: Fri Apr  5 12:25:55 2002: heh, i've witnessed how a fellow invaded a city around 20 times, got cought and thrown out. lots of ruckus, but..all he did was get thrown out. why not make being caught a finable offense? aka they throw him out alright, if not execution. but atleast some kind of Fine.
+[24540] Kaen: Fri Apr  5 13:20:45 2002: perhaps you should add the command to clear description completely out, in case someone wants to do a full redo
+[ 2546] Nodik: Fri Apr  5 17:50:24 2002: shouldnt such effects as hiding/sneaking, be displayed in score  ?
+[ 2512] Nodik: Mon Apr  8 17:54:15 2002: a skill, butcher. you butcher a corpse on pieces. and you can naturally eat it then. 
+[ 2538] Arkasi: Tue Apr  9 01:25:31 2002: Make whisper targetable. So that whisper zurkell Would head that way.
+[24222] Valick: Wed Apr 10 20:44:14 2002: Has the imm staff ever considered blind fighting as an upper level warrior skill, maybe for tactitian or duelist?
+[ 2538] Valick: Wed Apr 10 21:11:45 2002: I've been using the wrap chop on carrion.gameshadow.com to form the correct line length for descriptions and such, maybe we could have one on the web site since notes descriptions roles and such are a good portion of gaming.
+[ 2401] Laerteus: Thu Apr 11 09:53:03 2002: the seaweeds description when it is lying on the ground really takes away from the game. EXAMPLE: The War Chamber: Some seaweed floats around following the OCEANS CURRENTS. Heh, just letting you know.
+[ 2572] Kreknar: Tue Apr 16 09:56:57 2002: fresbrog
+[24329] Eilis: Thu Apr 18 11:09:44 2002: Lyntress should have a help file.
+[24568] Kardin: Thu Apr 18 16:38:28 2002: agro mobs in acadamy how lame
+[24581] Kardin: Thu Apr 18 16:41:03 2002: levers would be nice again though.
+[13505] Crimthann: Sat Apr 20 17:42:33 2002: ring
+[ 2501] Nodik: Tue Apr 23 16:49:18 2002: the thief skill gag. shouldnt it bar mages to speaking spells? like breaking the jaw does ?
+[ 2400] Nodik: Wed Apr 24 15:06:28 2002: why not be able to drag corpses with the drag and similar skills? not just sleeping people.
+[ 2538] Nodik: Fri Apr 26 22:44:17 2002: how about a show command. simply ..showing an item in your possession to another
+[24531] Braedyn: Sat Apr 27 07:13:08 2002: Why don't ice mages get iceball?
+[ 2538] Nodik: Sun Apr 28 16:00:21 2002: thief's skill. to flip coin, and choose the side it'll land on
+[18058] Nodik: Mon Apr 29 12:48:11 2002: how about making AI more smarter, if it is binded and cannot flee. it'll stop trying atleast. 
+[ 2538] Vierna: Mon May  6 23:33:07 2002: sword
+[11537] Siktar: Wed May  8 13:41:02 2002: Diffrent socials for sleeping/like when you are sleeping and you type social it only lists sleep socials...
+[23625] Broanin: Mon May 13 22:25:20 2002: A way for mages to have something to do when no one is available to group.  Midlevel spells that if you perfect add additional spells, but not based off of %, make more of a deep code that keeps track of the amount of casting time and whatnot.  This way spells aren't perfected by just leveling to hero
+[23625] Broanin: Mon May 13 22:26:14 2002: and also some spell(s) at hero that also can be perfected for added benefits.
+[ 2382] Harhed: Fri May 17 15:06:08 2002: what about a command stop fight. Which will let you stop fighting, even if it allows another to harmlessly hit you
+[23629] Soutou: Sat May 18 15:04:29 2002: talismanic aura works once per level/10, six times at hero....(per day) instead of 3, forever...
+[ 9041] Mnephosis: Wed May 22 03:38:07 2002: Create a charmie/pet for sale that is level 25 so that mages can make that leap from lvl 20 to lvl 25 a wee bit easier.
+[ 2422] Mnephosis: Wed May 22 03:45:12 2002: Reduce to lag of defensive and noncombative spells to "one" unit.
+[ 1120] Sangai: Wed May 22 13:04:42 2002: water breathing makes you at least resist drowning damage.
+[ 2432] Mnephosis: Wed May 22 23:50:11 2002: Make the lag on miscasts for prismatic spray two ticks.
+[ 2401] Mnephosis: Fri May 24 04:29:25 2002: Set it up so that characters who are not played X amount during a week start having their limited equipment disappear on them. That way players will stop hoarding stuff on multiple characters.
+[ 2370] Mnephosis: Fri May 24 05:30:49 2002: Put in a time for talismanic aura in the affects list please?
+[ 2538] Mnephosis: Mon May 27 08:47:33 2002: Make detect invisible potions a wee bit rare, and potions of invisibility as well.
+[23812] Mnephosis: Mon May 27 08:57:34 2002: Stop adrenaline from mobs, period.
+[ 2629] Partahs: Wed Jul 16 23:02:26 2003: dagger
+[11865] Dargrum: Sun Jul 20 21:11:33 2003: l
+[11865] Dargrum: Sun Jul 20 21:11:53 2003: make it so you can quit anywhere.  
+[24365] Erifdel: Wed Jul 23 17:16:29 2003: Can the spell preserve add a longer decaying timer...? seems like it's still relatively short :(
+[23650] Araxa: Thu Jul 24 19:35:05 2003: Imaple apply to other weapons that could be benificial to impale, with such as swords.
+[ 2421] Lithric: Fri Jul 25 04:36:49 2003: perhaps, instead of Jinarre/any other newbie helpers, replace them with Familiars that can be summoned for magic-user types, and similar entites for different classes
+[ 2538] Kailus: Fri Jul 25 13:46:11 2003: I am not sure how often these are checked, but here is an idea: Make a permanent kind of trust, or even an introduce system. Use trust or intro to determine who can 'tell' who.
+[ 2538] Delium: Mon Jul 28 10:04:12 2003: spear
+[ 2405] Toryl: Mon Aug  4 21:49:53 2003: Maybe the troopers in town should Auto-Assist each other?
+[  426] Erifdel: Thu Aug  7 18:28:41 2003: Could we use blood to increase the chance of hex working? maybe making siphon draw blood to urn on anything same level or above as well?
+[24807] Throach: Mon Aug 11 20:47:17 2003: Could you let any text surrounded by single quotes in an emote turn yellow as if it were a say?
+[ 2497] Milac: Sat Aug 16 22:01:31 2003: Water: I say you should be able to fill your skins in lakes/rivers because in middle ages they drank water from rivers and lakes cause they didn't know about germs and shite.
+[23654] Aepheoeus: Tue Aug 19 01:53:21 2003: I do think that Paladins should get cancellation.
+[ 2419] Erifdel: Fri Aug 22 13:28:17 2003: can the nosum toggle be added to the helpfile for summon spell/commune? Hard to explain it IC
+[ 2620] Erifdel: Sun Aug 24 20:33:40 2003: Can the skull heads (c corrupt head) be more specific, so that they name the room when they say who enters?
+[  934] Verisol: Sun Sep  7 17:58:23 2003: hem
+[  934] Verisol: Sun Sep  7 17:58:25 2003: helm
+[  933] Verisol: Sun Sep  7 18:00:25 2003: buckler
+[ 2409] Verisol: Sun Sep  7 19:14:48 2003: amulet
+[ 2538] Verisol: Sun Sep  7 19:16:25 2003: sword
+[ 1084] Yavell: Sun Sep  7 23:38:02 2003: carapase
+[ 1084] Yavell: Sun Sep  7 23:38:07 2003: carapase
+[22080] Raxx: Wed Sep 10 14:53:25 2003: iron
+[ 3501] Rafter: Fri Sep 12 20:20:57 2003: dagger
+[ 3870] Inimisidal: Fri Sep 19 23:03:08 2003: how about a program that autobans people for creating names like [ 1 Human War] Carancock the Swordpupil?
+[24351] Vaerzlithar: Mon Sep 22 14:08:19 2003: Could divine malison also make a person more susceptible to your maladictions if you got it successfully casted upon them?  Built in spellcraft so to speak against those affected by your divine malison.
+[23698] Luel: Fri Sep 26 01:56:41 2003: fix windows in common guild.
+[ 9118] Luel: Fri Sep 26 03:54:59 2003: add abyssal titan to zealot help file.
+[11848] Galodus: Sun Sep 28 14:10:23 2003: shield
+[ 3523] Solien: Mon Sep 29 11:10:00 2003: I dont know if its a balance issue, but healers really should have fly
+[24525] Uros: Sat Oct  4 09:32:42 2003: list
+[ 4664] Vierna: Sat Oct 18 21:07:58 2003: lionj
+[ 4664] Vierna: Sat Oct 18 21:08:00 2003: lion
+[24251] Lorethias: Sat Oct 25 17:44:17 2003: book
+[ 6201] Vizherai: Fri Nov 14 02:01:49 2003: Woops, sorry about that... typo.
+[12010] Sevoen: Thu Nov 20 22:48:05 2003: staff
+[ 4639] Lidric: Tue Nov 25 17:37:19 2003: lion
+[21531] Vierna: Wed Nov 26 15:27:32 2003: golden
+[23848] Vierna: Wed Nov 26 15:38:37 2003: teeth
+[23848] Vierna: Wed Nov 26 15:39:40 2003: razor
+[15881] Vierna: Wed Nov 26 16:29:54 2003: cloak
+[20473] Vierna: Wed Nov 26 20:47:44 2003: crown
+[20473] Vierna: Wed Nov 26 20:48:24 2003: leggings
+[21525] Vierna: Thu Nov 27 12:54:29 2003: boots
+[21525] Vierna: Thu Nov 27 12:54:43 2003: gauntlets
+[  884] Vierna: Thu Nov 27 13:11:24 2003: boots
+[19216] Lorethias: Fri Nov 28 18:33:48 2003: pauldron
+[29014] Queleerk: Wed Dec  3 18:57:39 2003: Could diffusion offer some minor protection?
+[19236] Fuyu: Tue Dec  9 04:01:59 2003: gourd
+[ 2538] Vierna: Wed Dec 24 14:21:15 2003: belt
+[ 2538] Vierna: Wed Dec 24 14:21:44 2003: girdle
+[ 2369] Vierna: Wed Dec 24 14:47:56 2003: dagger
+[ 2369] Vierna: Wed Dec 24 14:57:19 2003: scroll
+[29415] Avernell: Wed Dec 24 21:47:01 2003: sword
+[ 2421] Vocier: Fri Feb 13 16:50:12 2004: robe
+[29006] Bracht: Sun Mar 14 23:08:21 2004: badge
+[  205] Bracht: Fri Mar 19 21:14:05 2004: make it to where fashion crystal gives you a glowing humming crystal instead of just a humming crystal...that is all, your loyal servant...Bracht
+[24525] Krotukael: Thu Mar 25 22:53:49 2004: list
+[ 2339] Javen: Mon Apr  5 15:54:14 2004: ring
+[ 2339] Javen: Mon Apr  5 15:54:18 2004: ss
+[19238] Javen: Tue Apr  6 18:40:52 2004: mushroom
+[24222] Krogan: Thu Apr  8 13:42:24 2004: Perhaps Bandage helps plague and poison?
+[19329] Volanthar: Thu Apr  8 22:27:51 2004: bracer
+[ 2538] Volanthar: Thu Apr  8 22:37:09 2004: belt
+[ 2538] Volanthar: Thu Apr  8 22:37:22 2004: boots
+[ 2538] Volanthar: Thu Apr  8 22:38:02 2004: hides
+[ 2538] Volanthar: Thu Apr  8 22:38:14 2004: cloak
+[ 4629] Volanthar: Thu Apr  8 23:33:09 2004: lion
+[ 4607] Volanthar: Fri Apr  9 01:58:45 2004: tunic
+[19231] Volanthar: Sat Apr 10 00:03:42 2004: candle
+[  315] Volanthar: Sat Apr 10 01:06:18 2004: sleeves
+[  315] Volanthar: Sat Apr 10 01:07:16 2004: helm
+[  315] Volanthar: Sat Apr 10 01:07:44 2004: shirt
+[ 4628] Volanthar: Sat Apr 10 01:33:58 2004: lion
+[19300] Volanthar: Sat Apr 10 02:57:03 2004: shirt
+[11400] Volanthar: Sat Apr 10 02:58:29 2004: bracer
+[ 2576] Volanthar: Sat Apr 10 03:11:39 2004: claymore
+[ 3809] Volanthar: Sat Apr 10 03:17:40 2004: polearm
+[ 3803] Volanthar: Sat Apr 10 21:11:15 2004: spear
+[ 4627] Volanthar: Sat Apr 10 21:33:52 2004: spear
+[24694] Volanthar: Sat Apr 10 22:22:40 2004: boots
+[24694] Volanthar: Sat Apr 10 22:23:43 2004: greatcloak
+[15859] Volanthar: Sun Apr 11 01:31:26 2004: halberd
+[ 3800] Volanthar: Sun Apr 11 14:00:47 2004: spear
+[ 2580] Javen: Sun Apr 11 19:45:39 2004: pickaxe
+[11813] Lorrel: Wed May 12 15:43:01 2004: candle
