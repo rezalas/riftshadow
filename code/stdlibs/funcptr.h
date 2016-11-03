@@ -51,7 +51,7 @@ public:
                 (*funcptr)(fptrs[0],fptrs[1],fptrs[2]fptrs[3],fptrs[4],fptrs[5],fptrs[6]);
                 break;
             case 8:
-                (*funcptr)(fptrs[0],fptrs[1],fptrs[2]fptrs[3],fptrs[4],fptrs[5],fptrs[7]);
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2]fptrs[3],fptrs[4],fptrs[5],fptrs[6]),fptrs[7];
                 break;
         }
 		/*for(i = 0; i < nArgs; i++)
