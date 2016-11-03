@@ -2513,7 +2513,10 @@ void do_sacrifice( CHAR_DATA *ch, char *argument )
 void quaff_potion(void *arg1, void *arg2, void *arg3, void *arg4, void *arg5)
 {
 	CHAR_DATA *ch = (CHAR_DATA *) arg1;
-	int sLevel = (int)arg2, sn1 = (int)arg3, sn2 = (int)arg4, sn3 = (int)arg5;
+	int sLevel = *((int *)arg2);
+	int sn1 = *((int *)arg3);
+	int sn2 = *((int *)arg4);
+	int sn3 = *((int *)arg5);
 	send_to_char("You feel the unmistakable tingle of magic as the liquid flows through your body.\n\r",ch);
 	obj_cast_spell(sn1, sLevel, ch, ch, NULL );
 	obj_cast_spell(sn2, sLevel, ch, ch, NULL );
