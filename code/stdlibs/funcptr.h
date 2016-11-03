@@ -23,7 +23,38 @@ public:
 		
 		for(i = 0; i < nArgs; i++)
 			fptrs[i] = va_arg(ap, void *);
-		for(i = 0; i < nArgs; i++)
+            
+        switch(nArgs)
+        {
+            case 0:
+                (*funcptr)();
+                break;
+            case 1:
+                (*funcptr)(fptrs[0]);
+                break;
+            case 2:
+                (*funcptr)(fptrs[0],fptrs[1]);
+                break;
+            case 3: 
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2]);
+                break;
+            case 4:
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2],fptrs[3]);
+                break;
+            case 5:
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2],fptrs[3],fptrs[4]);
+                break;
+            case 6:
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2]fptrs[3],fptrs[4],fptrs[5]);
+                break;
+            case 7:
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2]fptrs[3],fptrs[4],fptrs[5],fptrs[6]);
+                break;
+            case 8:
+                (*funcptr)(fptrs[0],fptrs[1],fptrs[2]fptrs[3],fptrs[4],fptrs[5],fptrs[7]);
+                break;
+        }
+		/*for(i = 0; i < nArgs; i++)
 		{
 			ptrs[i] = fptrs[nArgs - i - 1];
 			asm volatile("" \
@@ -33,7 +64,7 @@ public:
 					: "r"(ptrs[i])
 					: "%eax");
 		}
-		(*funcptr) ();
+		(*funcptr) ();*/
 		va_end(ap);
 	}
 	void		SetPtr(void *newptr)
