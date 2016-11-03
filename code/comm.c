@@ -3191,12 +3191,12 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,
 			break;
 
 		case 'i':
-			sprintf(buf2,"%d",(int)arg1);
+			sprintf(buf2,"%d",*((int *)arg1));
 			i = (const char *)&buf2;
 			break;
 
 		case 'I':
-			sprintf(buf2,"%d",(int)arg2);
+			sprintf(buf2,"%d",*((int *)arg2));
 			i = (const char*)&buf2;
 			break;
 
