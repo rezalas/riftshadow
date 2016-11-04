@@ -888,13 +888,16 @@ bool can_pk( CHAR_DATA *ch, CHAR_DATA *victim )
 	if( ch == NULL || victim == NULL)
 		return FALSE;
 
+	int levelDif = victim->level - ch->level;
+	if(levelDif <= -1)
+	{ levelDif *= -1; }
     if (IS_NPC(ch)
 	|| IS_NPC(victim)
 	|| (ch->ghost > 0)
 	|| (victim->ghost > 0)
 	|| (ch->level < MIN_LEVEL_TO_PK)
 	|| (victim->level < MIN_LEVEL_TO_PK)
-	|| abs(victim->level - ch->level) > 9)
+	|| levelDif > 9) //abs(victim->level - ch->level)
 	return FALSE;
 
 	if (!IS_NPC(ch) 
