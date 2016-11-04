@@ -74,7 +74,8 @@ void CQueue::ProcessQueue()
             //                     : "%eax");
 			// }
 			// (*qf->queue_function) ();
-
+			// for(int r = 0; r < qf->queue_numargs; r++)
+			// 	asm volatile("popl %%eax" : : : "%eax");
 
 			switch(qf->queue_numargs)
 			{
@@ -105,10 +106,9 @@ void CQueue::ProcessQueue()
 				case 8:
 					(*qf->queue_function)(qf->queue_args[0],qf->queue_args[1],qf->queue_args[2],qf->queue_args[3],qf->queue_args[4],qf->queue_args[5],qf->queue_args[6],qf->queue_args[7]);
 					break;
-			}
+			}		
+			
 
-			for(int r = 0; r < qf->queue_numargs; r++)
-				asm volatile("popl %%eax" : : : "%eax");
 			qf->FreeQueue();
 			/*asm volatile("
 						popl	%eax

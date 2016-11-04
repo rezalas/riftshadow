@@ -1,5 +1,6 @@
 #include "mud.h"
 #include <stdlib.h>
+#include "mysql.h"
 
 CSQLInterface::CSQLInterface(void)
 {

@@ -1363,7 +1363,7 @@ void do_ctrack( CHAR_DATA *ch, char *argument )
         sprintf(buf2,"%s%s.plr",PLAYER_DIR,newbuf);
         fpChar2 = fopen(buf2,"r");
         login = get_login(ch,fpChar2);
-        close((int)fpChar2);
+        close(*((int *)fpChar2));
         numMatches++;
         sprintf(buf,"%3d) %s: %s\n\r",numMatches,newbuf,login ? login : "(none)");
         add_buf(output,buf);

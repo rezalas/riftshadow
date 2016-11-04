@@ -89,7 +89,7 @@
 
 /* system calls */
 int remove();
-int system(const char * string);
+// int system(const char * string);
 
 #ifndef RIFTINCLD
 //#include "rift.h"

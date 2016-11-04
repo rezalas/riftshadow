@@ -2,7 +2,7 @@
 #define TRUE        1
 #define FALSE       0
 //#define NULL        0
-#define size_t      unsigned int
+//#define size_t      int //unsigned int 20161104 Rezalas
 
 #define DEFAULTCASE TRUE
 #define MAX_FORMATTED_SIZE 4096

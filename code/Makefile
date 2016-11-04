@@ -1,7 +1,8 @@
 CC      = g++
 PROF    = -O1 -g
-INCLUDES=  -Wall -Wno-unused-variable -Wno-deprecated $(PROF) $(NOCRYPT) -I/usr/include/mysql
-L_FLAGS =  $(PROF) -lcrypt -L/usr/lib -lmysqlclient
+INCLUDES= -w $(PROF) $(NOCRYPT) -I/usr/include/mysql
+#INCLUDES=  -Wall -Wno-unused-variable -Wno-deprecated $(PROF) $(NOCRYPT) -I/usr/include/mysql -lmysqlclient 
+L_FLAGS =  -lm -lcrypt -L/usr/lib -lmysqlclient
 
 O_FILES = strings.o \
 		  file.o \
@@ -76,7 +77,7 @@ O_FILES = strings.o \
 		  prof.o
 tartarus: $(O_FILES)
 	rm -f rift
-	$(CC) $(L_FLAGS) -o rift $(O_FILES)
+	$(CC) $(PROF) -o rift $(O_FILES) $(L_FLAGS)
 	chmod 770 *.o
 
 clean:

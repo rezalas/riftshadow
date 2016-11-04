@@ -1,4 +1,4 @@
-#include "mysql.h"
+#include <mysql.h>
 #include "../rift.h"
 
 #define MYSQL_USER			"rift"

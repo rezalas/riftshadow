@@ -791,7 +791,7 @@ void do_tripwire( CHAR_DATA *ch, char *argument)
 	EXIT_DATA *pexit_opp;
 	CHAR_DATA *victim;
 	char *direction;
-	int skill, door = (int)argument;
+	int skill, door = *((int *)argument);
 
 	if((skill = get_skill(ch, gsn_tripwire)) == 0)
 		return send_to_char("Huh?\n\r", ch);
