@@ -1,4 +1,5 @@
 # Riftshadow MUD
+[![Build Status](https://travis-ci.com/rezalas/riftshadow.svg?branch=master)](https://travis-ci.com/rezalas/riftshadow)
 ---
 RS is a fun swords and sorcery style PVP-enabled MUD from the early 2000s. My goal for this community is to restore RS to a fully-functional state, capable of operating on modern hardware. Along the way the community should have the goal of adapting the code to be easier to read and maintain without changing the play of the game itself. 
 
