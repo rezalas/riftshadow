@@ -24,7 +24,7 @@ required DBs and assoc. files
 
 | Database  | SQL struct file |
 |-----------|-----------------|
-|  rscore | rift_core.sql|
+|  rift_core | rift_core.sql|
 |  rift | rift.sql |
 |  riftforum | unknown / needs creation |
 
