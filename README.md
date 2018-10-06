@@ -19,6 +19,17 @@ The following packages are required to build on linux x86 and test the applicati
 
 You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. After building the project you will need to copy the generted 'rift' file to either the area folder, or to whatever execution folder you intend to use (if you intend to use a different one also make the rs.conf file and copy the areas over as well). 
 
+###### rift mysql setup
+required DBs and assoc. files
+
+| Database  | SQL struct file |
+|-----------|-----------------|
+|  rscore | rift_core.sql|
+|  rift | rift.sql |
+|  riftforum | unknown / needs creation |
+
+default user: rift
+default pwd: rift123
 
 ###### rs.conf
 ``` 
