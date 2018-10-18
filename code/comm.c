@@ -3397,7 +3397,7 @@ return;
 int color( char type, CHAR_DATA *ch, char *string )
 {
     char	code[ 20 ];
-    char	*p = '\0';
+    char	*p = (char *) '\0';
 
     if( IS_NPC( ch ) && !IS_SET(ch->act,ACT_WARD_MOB))
 	return( 0 );

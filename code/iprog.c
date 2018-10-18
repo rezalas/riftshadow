@@ -1557,7 +1557,7 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	int i=0, rand, inc=2, tc=0, cres=0, ccount[MAX_CABAL];
 	CHAR_DATA *fat, *minotaur, *violet;
 	char buf[MSL];
-	char *temp = '\0';
+	char *temp = (char *) '\0';
 	CRow row;
 	
 	rand = dice(1,4);

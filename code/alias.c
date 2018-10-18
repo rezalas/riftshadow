@@ -211,7 +211,7 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 
     argument = one_argument(argument,arg);
 
-    if (arg == '\0')
+    if (arg == (char *) '\0')
     {
 	send_to_char("Unalias what?\n\r",ch);
 	return;
