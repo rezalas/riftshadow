@@ -601,7 +601,7 @@ const char *upstring(const char *i)
 	char *ori;
 
 	if(i == NULL) {
-		return '\0';
+		return (char *) '\0';
 	}	
 	
 	for (o = buf; *i && (unsigned int)(o - buf) < sizeof(buf) - 1; i++, o++)
