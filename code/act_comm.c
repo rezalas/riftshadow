@@ -50,9 +50,9 @@ DECLARE_DO_FUN(do_look);
 DECLARE_DO_FUN(do_buglist);
 DECLARE_DO_FUN(do_undisguise);
 DECLARE_AFF_FUN(traitor_pulse);
-#define PDEATH_LOG_FILE	"permdeaths.txt"
-#define DEATH_LOG_FILE	"tempdeaths.txt"
-#define MOB_LOG_FILE	"mobdeaths.txt"
+#define PDEATH_LOG_FILE	RIFT_AREA_DIR "/permdeaths.txt"
+#define DEATH_LOG_FILE	RIFT_AREA_DIR "/tempdeaths.txt"
+#define MOB_LOG_FILE	RIFT_AREA_DIR "/mobdeaths.txt"
 
 void obj_say_lordly args((CHAR_DATA *ch,OBJ_DATA *obj,char *argument));
 void obj_say_heavenly_sceptre args((CHAR_DATA *ch,OBJ_DATA *obj,char *argument));
@@ -90,7 +90,7 @@ void do_delete( CHAR_DATA *ch, char *argument)
 	{
 	    if(ch->level > 30)
 		perm_death_log(ch,1);
-    	    sprintf( strsave, "%s%s.plr", PLAYER_DIR, capitalize( ch->name ) );
+    	    sprintf( strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize( ch->name ) );
 	    wiznet("$N turns $Mself into line noise.",ch,NULL,0,0,0);
 	    ch->pause = 0;
 	    while (ch->affected) {
@@ -991,8 +991,8 @@ void do_pray( CHAR_DATA *ch, char *argument )
 
     WAIT_STATE( ch, 10 );
     send_to_char("You pray to the heavens!\n\r",ch);
+    fp = fopen(RIFT_AREA_DIR "/prays.txt","a");
     sprintf(buf,"%s: %s [%d] is PRAYing for: %s\n", log_time(), ch->true_name, ch->in_room->vnum,argument);
-    fp = fopen("/home/rift/area/prays.txt","a");
     if(fp)
 	{
 		fprintf(fp,"%s",buf);

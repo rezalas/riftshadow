@@ -6890,7 +6890,7 @@ void buglist_end_fun(CHAR_DATA *ch, char *argument)
 
 void do_constdump(CHAR_DATA *ch, char *argument)
 {
-	FILE *fp = fopen("../code/constdump.txt","w"), *fp2;
+	FILE *fp = fopen(RIFT_CODE_DIR "/constdump.txt","w"), *fp2;
 	int sn, i;
 	if(!fp)
 		return;
@@ -6947,7 +6947,7 @@ void do_constdump(CHAR_DATA *ch, char *argument)
 
 void do_interpdump(CHAR_DATA *ch, char *argument)
 {
-	FILE *fp = fopen("/home/rift/code/interpdump.txt","w");
+	FILE *fp = fopen(RIFT_CODE_DIR "/interpdump.txt","w");
 	int i=0,j=0,k=0;
 	int bit=0;	
 	
@@ -6967,7 +6967,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 	}
 	fclose(fp);
 
-	fp = fopen("/home/rift/code/climate-dump.txt","w");
+	fp = fopen(RIFT_CODE_DIR "/climate-dump.txt","w");
 
 	for(i = 0; climate_table[i].number!=CLIMATE_ENGLISH ; i++)
 	{
@@ -7006,7 +7006,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 
 void do_racedump(CHAR_DATA *ch, char *argument)
 {
-	FILE *fp = fopen("/home/rift/code/racdump.txt","w");
+	FILE *fp = fopen(RIFT_CODE_DIR "/racdump.txt","w");
 	int race=0,i=0;
 	long temp_bit=0;
 	char buf[MSL];

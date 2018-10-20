@@ -2750,7 +2750,7 @@ void save_demos()
 	//gold constant....
 */
 	FILE *fp;
-	if(!(fp=fopen("gold.txt","w")))
+	if(!(fp=fopen(RIFT_AREA_DIR "/gold.txt","w")))
 		return;
 	fprintf(fp,"%ld",gold_constant);
 	fclose(fp);

@@ -71,7 +71,7 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 	if (!load_char_obj(d,name))
 		return send_to_char("No such character exists.\n\r",ch);
 
-	sprintf(buf,"cp %s%s%s %spload.txt",PLAYER_DIR,name,".plr",PLAYER_DIR);
+	sprintf(buf,"cp %s/%s%s %s/pload.txt", RIFT_PLAYER_DIR,name,".plr", RIFT_PLAYER_DIR);
 	system(buf);
 
 	d->character->desc = NULL;
@@ -546,9 +546,9 @@ void delete_char(char *name, bool save_pfile)
 	int cres=0;
 	//whack their pfile.. or maybe just move it to dead_char
 	if(save_pfile)
-		sprintf(buf2,"mv %s%s.plr %sdead_char/%s.plr",PLAYER_DIR,name,PLAYER_DIR,name);
+		sprintf(buf2,"mv %s/%s.plr %s/dead_char/%s.plr", RIFT_PLAYER_DIR,name, RIFT_PLAYER_DIR,name);
 	else
-		sprintf(buf2,"rm %s%s.plr",PLAYER_DIR,name);
+		sprintf(buf2,"rm %s/%s.plr", RIFT_PLAYER_DIR,name);
 	system(buf2);
 	cres = RS.SQL.Delete("players WHERE name='%s'",name);
 	one_query(query);
@@ -1117,7 +1117,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	
 	arg1[0] = UPPER(arg1[0]);
 
-	sprintf(dir,"%s%s%s",PLAYER_DIR,arg1,".plr");
+	sprintf(dir,"%s/%s%s",RIFT_PLAYER_DIR,arg1,".plr");
 
 	if ( ( victim = get_char_world( ch, arg1 ) ) != NULL )
 	{
