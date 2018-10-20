@@ -58,7 +58,7 @@ void CMud::LoadObjLimits()
 	float tempfloat;
 
     RS.Log("Loading object counts off players now...");
-        sprintf(pbuf,"ls %s%s > %s", RIFT_PLAYER_DIR,"/*.plr", PLAYER_LIST);
+        sprintf(pbuf,"ls %s/%s > %s", RIFT_PLAYER_DIR,"*.plr", PLAYER_LIST);
         system(pbuf);
 
         if ((fpChar_list = fopen( PLAYER_LIST, "r")) == NULL)
@@ -69,7 +69,7 @@ void CMud::LoadObjLimits()
 
         //for(i=0;i<=MAX_TOP_BOUNTY;i++)
         //      top_bounty_value[i]=0;
-        sprintf(chkbuf,"%s%s", RIFT_PLAYER_DIR,"/Zzz.plr");
+        sprintf(chkbuf,"%s/%s", RIFT_PLAYER_DIR,"Zzz.plr");
         for (; ;)
         {
                 strcpy(strPlr, fread_word(fpChar_list) );
