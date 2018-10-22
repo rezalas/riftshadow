@@ -118,7 +118,7 @@ void save_char_obj( CHAR_DATA *ch )
 		(ch->played + current_time - ch->logon) / 3600,ch->alignment,ch->pcdata->ethos,ch->gold+ch->gold_bank,ch->true_name);
 	}	
 
-	sprintf(strsave, "%s%s.plr",PLAYER_DIR, capitalize(ch->true_name));
+	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR , capitalize(ch->true_name));
     if ( ( fp = fopen( TEMP_FILE, "w" ) ) == NULL )
     {
 	bug( "Save_char_obj: fopen", 0 );
@@ -866,7 +866,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
     fclose( fpReserve );
 
     /* decompress if .gz file exists */
-    sprintf( strsave, "%s%s%s", PLAYER_DIR, capitalize(name),".gz");
+    sprintf( strsave, "%s%s%s", RIFT_PLAYER_DIR, capitalize(name),".gz");
     if ( ( fp = fopen( strsave, "r" ) ) != NULL )
     {
 	fclose(fp);
@@ -874,7 +874,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 	system(buf);
     }
 
-    sprintf( strsave, "%s%s.plr", PLAYER_DIR, capitalize( name ) );
+    sprintf( strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize( name ) );
     if ( ( fp = fopen( strsave, "r" ) ) != NULL )
     {
 	int iNest;

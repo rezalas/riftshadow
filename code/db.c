@@ -3786,8 +3786,8 @@ players loaded */
 	}
 	send_to_char("Loading all pfile object counts now.\n\r",ch);
 
-	sprintf(catplr,"%s%s",PLAYER_DIR,"*.plr");
-	sprintf(pbuf,"ls %s > %s",catplr,PLAYER_LIST);
+	sprintf(catplr,"%s/%s", RIFT_PLAYER_DIR,"*.plr");
+	sprintf(pbuf,"ls %s > %s",catplr, PLAYER_LIST);
 	system(pbuf);
 
 	if ((fpChar_list = fopen( PLAYER_LIST, "r")) == NULL)
@@ -3800,8 +3800,8 @@ players loaded */
 	{
 	 strcpy(strPlr, fread_word(fpChar_list) );
 //     log_string(strPlr);
- 	 sprintf(chkbuf,"%s%s",PLAYER_DIR,"Zzz.plr");
-	 if (!str_cmp(strPlr,"../player/Zzz.plr"))
+ 	 sprintf(chkbuf,"%s/%s", RIFT_PLAYER_DIR, "Zzz.plr");
+	 if (!str_cmp(strPlr, chkbuf))
 		break;	/* Exit if == Zzz.plr file */		
 
 	 if ( (	fpChar = fopen(strPlr, "r") ) == NULL)

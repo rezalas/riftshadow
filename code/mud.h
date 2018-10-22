@@ -17,7 +17,7 @@
 #include "race.h"
 #include "prof.h"
 
-#define OPTION_FILE "../area/rs.conf"
+#define OPTION_FILE RIFT_AREA_DIR "/rs.conf"
 
 class CMud
 {	

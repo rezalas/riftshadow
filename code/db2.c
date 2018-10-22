@@ -903,7 +903,7 @@ void bugout(char *reason)
 {
 	FILE *fp;
 	bug(reason,0);
-	fp = fopen("/home/rift/area/bugout.txt","a");
+	fp = fopen(RIFT_AREA_DIR "/bugout.txt","a");
 	fprintf(fp,"%s\n",reason);
 	fclose(fp);
 	exit(3);

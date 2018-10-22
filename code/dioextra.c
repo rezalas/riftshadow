@@ -990,8 +990,8 @@ void do_finger(CHAR_DATA *ch, char *argument)
     desc = NULL;
     sprintf(eqbuf,"Sorry, that is unavailable.\n\r");
 
-    sprintf(dir,"%s%s%s",PLAYER_DIR,arg1,".plr");
-    sprintf(dir2,"%sdead_char/%s%s",PLAYER_DIR,arg1,".plr");
+    sprintf(dir,"%s/%s%s",RIFT_PLAYER_DIR,arg1,".plr");
+    sprintf(dir2,"%s/dead_char/%s%s",RIFT_PLAYER_DIR,arg1,".plr");
     if(!str_cmp(arg1,"Zzz"))
         return send_to_char("Invalid player.\n\r",ch);
     if (((fp = fopen(dir, "r" )) != NULL) ) {
@@ -1338,7 +1338,7 @@ void do_ctrack( CHAR_DATA *ch, char *argument )
 
     sprintf(arg,"%s",lowstring(arg));
 
-    sprintf(buf,"grep 'Cabal %s~' %s%s > %s",arg,PLAYER_DIR,"*.plr",TEMP_GREP_RESULTS);
+    sprintf(buf,"grep 'Cabal %s~' %s/%s > %s",arg, RIFT_PLAYER_DIR,"*.plr",TEMP_GREP_RESULTS);
     system(buf);
 
     fpChar = fopen(TEMP_GREP_RESULTS,"r");
@@ -1360,7 +1360,7 @@ void do_ctrack( CHAR_DATA *ch, char *argument )
             }
             newbuf[counter] = results[counter + 10];
         }
-        sprintf(buf2,"%s%s.plr",PLAYER_DIR,newbuf);
+        sprintf(buf2,"%s/%s.plr",RIFT_PLAYER_DIR,newbuf);
         fpChar2 = fopen(buf2,"r");
         login = get_login(ch,fpChar2);
         close(*((int *)fpChar2));
@@ -1532,7 +1532,7 @@ void do_pload (CHAR_DATA *ch,char *argument)
         return;
     }
 
-    sprintf(buf,"cp %s%s%s %spload.txt",PLAYER_DIR,name,".plr",PLAYER_DIR);
+    sprintf(buf,"cp %s%s%s %spload.txt", RIFT_PLAYER_DIR,name,".plr", RIFT_PLAYER_DIR);
     system(buf);
 
     d->character->desc = NULL;
@@ -1547,7 +1547,7 @@ void do_pload (CHAR_DATA *ch,char *argument)
 
     interpret(ch,argument);
 
-    sprintf(buf,"%s%s%s",PLAYER_DIR,name,".plr");
+    sprintf(buf,"%s/%s%s", RIFT_PLAYER_DIR,name,".plr");
 
     if (fopen(buf, "r") != NULL)
     {
