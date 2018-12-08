@@ -23,8 +23,14 @@ void bug(const char *bugstr, ...); //wraps onto RS.Bug
 //the following is for typecasting rstrings when the func is weak typing
 #define RSTR	const char *
 
-#define RIFT_DIR	/home/rift/
-#define GREET_FILE	"../area/login.txt"
+#define RIFT_ROOT_DIR	".."
+#define RIFT_ADMIN_DIR	RIFT_ROOT_DIR "/admin"
+#define RIFT_AREA_DIR	RIFT_ROOT_DIR "/area"
+#define RIFT_CODE_DIR	RIFT_ROOT_DIR "/code"
+#define RIFT_PLAYER_DIR	RIFT_ROOT_DIR "/player"
+#define RIFT_TEMP_DIR	RIFT_ROOT_DIR "/temp"
+
+#define GREET_FILE	RIFT_AREA_DIR "/login.txt"
 
 #define throwbug(...) throw Exception(__FILE__, __LINE__, __VA_ARGS__);
 #define ERROR_TRAP()	try {

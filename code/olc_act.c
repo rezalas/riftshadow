@@ -1828,7 +1828,7 @@ AEDIT( aedit_builder )
 
     argument[0] = UPPER( argument[0] );
 
-    if ( strstr( pArea->builders, argument ) != '\0' )
+    if ( strstr( pArea->builders, argument ) != (char *) '\0' )
     {
 		pArea->builders = string_replace( pArea->builders, argument, "\0" );
 		pArea->builders = string_unpad( pArea->builders );
@@ -1845,7 +1845,7 @@ AEDIT( aedit_builder )
     else
     {
 		buf[0] = '\0';
-		if ( strstr( pArea->builders, "None" ) != '\0' )
+		if ( strstr( pArea->builders, "None" ) != (char *) '\0' )
 		{
 	    	pArea->builders = string_replace( pArea->builders, "None", "\0" );
 	    	pArea->builders = string_unpad( pArea->builders );

@@ -4052,26 +4052,26 @@ void *  calloc          args( ( unsigned nelem, size_t size ) );
  */
 
 #if defined(unix)
-#define PLAYER_DIR      "../player/"        	/* Player files */
-#define PLAYER_LIST	"../player/Player.lst"  /* Player list for limits */
-#define TEMP_GREP_RESULTS "../temp/tempgrepresults.tmp" /* Temporary grep results */
-#define TEMP_GREP_RESULTS_TWO "../temp/tempgrepresults2.tmp"
-#define GOD_DIR         "../gods/"  		/* list of gods */
-#define TEMP_FILE	"../player/romtmp"
+// #define PLAYER_DIR      "../player/"        	/* Player files */
+#define PLAYER_LIST	RIFT_PLAYER_DIR "/Player.lst"  /* Player list for limits */
+#define TEMP_GREP_RESULTS RIFT_TEMP_DIR "/tempgrepresults.tmp" /* Temporary grep results */
+#define TEMP_GREP_RESULTS_TWO RIFT_TEMP_DIR "/temp/tempgrepresults2.tmp"
+#define GOD_DIR     RIFT_ROOT_DIR "/gods/"  		/* list of gods */
+#define TEMP_FILE	RIFT_PLAYER_DIR "/romtmp"
 #define NULL_FILE	"/dev/null"		/* To reserve one stream */
 #endif
 
-#define VOTE_FILE	"votes.txt"
-#define AREA_LIST       "area.lst"  /* List of areas*/
-#define BUG_FILE        "bugs.txt" /* For 'bug' and bug()*/
-#define TYPO_FILE       "typos.txt" /* For 'typo'*/
-#define IDEAS_FILE		"ideas.txt" /* For ideas! */
-#define NOTE_FILE       "notes.not"/* For 'notes'*/
-#define IDEA_FILE		"ideas.not"
-#define PENALTY_FILE	"penal.not"
-#define NEWS_FILE	"news.not"
-#define CHANGES_FILE	"chang.not"
-#define BAN_FILE	"ban.txt"
+#define VOTE_FILE       RIFT_AREA_DIR "/votes.txt"
+#define AREA_LIST       RIFT_AREA_DIR "/area.lst"  /* List of areas*/
+#define BUG_FILE        RIFT_AREA_DIR "/bugs.txt" /* For 'bug' and bug()*/
+#define TYPO_FILE       RIFT_AREA_DIR "/typos.txt" /* For 'typo'*/
+#define IDEAS_FILE		RIFT_AREA_DIR "/ideas.txt" /* For ideas! */
+#define NOTE_FILE       RIFT_AREA_DIR "/notes.not"/* For 'notes'*/
+#define IDEA_FILE		RIFT_AREA_DIR "/ideas.not"
+#define PENALTY_FILE	RIFT_AREA_DIR "/penal.not"
+#define NEWS_FILE	    RIFT_AREA_DIR "/news.not"
+#define CHANGES_FILE	RIFT_AREA_DIR "/chang.not"
+#define BAN_FILE	    RIFT_AREA_DIR "/ban.txt"
 #define MULT_EXP	5	
 
 

@@ -103,14 +103,14 @@ void CMud::Bootup()
 		weather_update();
 		RS.Log("Priming weather");
 		reset_chessboard();
-		fp = fopen("login.txt", "r");
+		fp = fopen(RIFT_AREA_DIR "/login.txt", "r");
 		while(fgets(tempbuf,200,fp))
 		{
 			strcat(buf,tempbuf);
 			strcat(buf,"\r");
 		}
 		fclose(fp);
-		fp = fopen("gold.txt", "r");
+		fp = fopen(RIFT_AREA_DIR "/gold.txt", "r");
 		gold_constant = fread_number(fp);
 		fclose(fp);
 		chop(buf);

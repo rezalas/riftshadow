@@ -61,7 +61,7 @@ char *fix_string( const char *str )
     int o;
 
     if ( str == NULL )
-        return '\0';
+        return (char *) '\0';
 
     for ( o = i = 0; str[i+o] != '\0'; i++ )
     {
@@ -97,7 +97,7 @@ void save_area_list()
     FILE *fp;
     AREA_DATA *pArea;
 
-    if ( ( fp = fopen( "area.lst", "w" ) ) == NULL )
+    if ( ( fp = fopen(RIFT_AREA_DIR "/area.lst", "w" ) ) == NULL )
     {
 		bug( "Save_area_list: fopen", 0 );
 		perror( "area.lst" );
@@ -900,10 +900,10 @@ void save_area( AREA_DATA *pArea )
     fclose( fpReserve );
 
 
-	sprintf(buf,"mv -f %s ../area/backup/%s.bak",pArea->file_name,pArea->file_name);
+	sprintf(buf,"mv -f %s " RIFT_AREA_DIR "/backup/%s.bak", pArea->file_name, pArea->file_name);
 	system(buf);
 
-	system("touch /home/rift/code/area-dump.txt");
+	system("touch " RIFT_CODE_DIR "/area-dump.txt");
 	
 	if ( !( fp = fopen( pArea->file_name, "w" ) ) )
 	{

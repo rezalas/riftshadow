@@ -1166,7 +1166,7 @@ void do_envenom(CHAR_DATA *ch, char *argument)
     int percent,skill;
 
     /* find out what */
-    if (argument == '\0')
+    if (argument == (char *) '\0')
     {
 	send_to_char("Envenom what item?\n\r",ch);
 	return;

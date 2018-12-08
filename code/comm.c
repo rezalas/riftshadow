@@ -1490,7 +1490,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	    return;
 	}
 	
-	sprintf(buffile,"%sdead_char/%s.plr",PLAYER_DIR,argument);
+	sprintf(buffile,"%s/dead_char/%s.plr", RIFT_PLAYER_DIR,argument);
 
 	if((deadchar=fopen(buffile,"r"))!=NULL)
 	{
@@ -2931,7 +2931,7 @@ void show_string(struct descriptor_data *d, char *input)
 {
     char buffer[4*MAX_STRING_LENGTH];
     char buf[MAX_INPUT_LENGTH];
-    register char *scan, *chk;
+    char *scan, *chk;
     int lines = 0, toggle = 1;
     int show_lines;
 
@@ -3355,7 +3355,7 @@ void do_rename (CHAR_DATA* ch, char* argument)
 	if(is_affected(victim,gsn_cloak_form) || IS_SHIFTED(victim))
 		return send_to_char("They must be in normal form.\n\r",ch);
 
-	sprintf(strsave, "%s%s.plr", PLAYER_DIR, capitalize(new_name));
+	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(new_name));
 
 	if (fopen(strsave,"r") != NULL)
 	{
@@ -3397,7 +3397,7 @@ return;
 int color( char type, CHAR_DATA *ch, char *string )
 {
     char	code[ 20 ];
-    char	*p = '\0';
+    char	*p = (char *) '\0';
 
     if( IS_NPC( ch ) && !IS_SET(ch->act,ACT_WARD_MOB))
 	return( 0 );

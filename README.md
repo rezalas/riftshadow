@@ -17,7 +17,9 @@ The following packages are required to build on linux x86 and test the applicati
 * mysql-server
 * libmysqlclient-dev
 
-You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. After building the project you will need to copy the generted 'rift' file to either the area folder, or to whatever execution folder you intend to use (if you intend to use a different one also make the rs.conf file and copy the areas over as well). 
+You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. After building the project you will need to copy the compiled 'rift' file to either the area folder, or to whatever execution folder you intend to use (if you intend to use a different one also make the rs.conf file and copy the areas over as well). 
+
+*Note:* If you don't execute the rift file by copying it to the area folder, you should run the executable from within that folder so as to gain access to the area files. If you have issues getting the project to run properly you're likely missing the area files or the log 'area/login.txt'. (this is going to be refacored out too).
 
 ###### rift mysql setup
 required DBs and assoc. files
