@@ -1,3 +1,6 @@
+#ifndef AREA_H
+#define AREA_H
+
 #include "rift.h"
 #include "weather.h"
 
@@ -40,3 +43,5 @@ public:
 private:
 	int				area_age;
 };
+
+#endif /* AREA_H */

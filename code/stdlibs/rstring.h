@@ -1,3 +1,6 @@
+#ifndef RSTRING_H
+#define RSTRING_H
+
 #define RSTRING
 #define TRUE		1
 #define FALSE		0
@@ -90,3 +93,5 @@ protected:
 #ifndef TSTRING
 #include "tstring.h"
 #endif
+
+#endif /* RSTRING_H */

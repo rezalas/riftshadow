@@ -1,3 +1,6 @@
+#ifndef OBJ_H
+#define OBJ_H
+
 class CObject //not a CEntity because it doesn't have a UID, just its ObjTemplate UID
 {
 	CObject();
@@ -61,3 +64,5 @@ protected:
 	RString				short_descr;
 	RString 			description;
 };
+
+#endif /* OBJ_H */

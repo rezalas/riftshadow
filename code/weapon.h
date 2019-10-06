@@ -1,3 +1,6 @@
+#ifndef WEAPON_H
+#define WEAPON_H
+
 class CWeapon
 {
 	char *	name;
@@ -6,3 +9,4 @@ class CWeapon
 	int		gsn;
 }
 
+#endif /* WEAPON_H */

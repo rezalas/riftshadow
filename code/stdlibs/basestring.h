@@ -1,3 +1,6 @@
+#ifndef BASESTRING_H
+#define BASESTRING_H
+
 #define TRUE		1
 #define FALSE		0
 #define NULL		0
@@ -60,4 +63,4 @@ protected:
 	virtual void	SetRefCount(int nRef) = 0;
 };
 
-
+#endif /* BASESTRING_H */

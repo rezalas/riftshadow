@@ -3,6 +3,9 @@
  * charges, urns, and so forth.  Set up by Eladrian, 3/5/01.
  */
 
+#ifndef NECRO_H
+#define NECRO_H
+
 OBJ_DATA *find_urn args((CHAR_DATA *ch));
 bool drain_urn args((CHAR_DATA *ch, int charges));
 bool check_bond args((CHAR_DATA *ch, CHAR_DATA *mob));
@@ -23,3 +26,5 @@ void flesh_three args((CHAR_DATA *ch, CHAR_DATA *victim));
 void flesh_four args((CHAR_DATA *ch, CHAR_DATA *victim));
 void soul_add args((CHAR_DATA *ch, int souls));
 DECLARE_IPROG_FUN_GREET(greet_prog_corpse_explode);
+
+#endif /* NECRO_H */

@@ -32,6 +32,10 @@
 ***************************************************************************/
 
 /* vals from db.c */
+
+#ifndef DB_H
+#define DB_H
+
 extern bool fBootDb;
 extern int		newmobs;
 extern int		newobjs;
@@ -63,3 +67,5 @@ void	convert_obj(OBJ_INDEX_DATA *obj);
 extern void assign_area_vnum( int vnum );                    /* OLC */
 
 /* from db2.c */
+
+#endif /* DB_H */

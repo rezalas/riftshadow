@@ -1,3 +1,6 @@
+#ifndef INTERP2_H
+#define INTERP2_H
+
 #include "rift.h"
 
 #define MAX_QUEUED_COMMANDS		10
@@ -40,3 +43,5 @@ private:
 	void						ProcessInputQueue(CSocket *d);	//after all else is said and done, we're willing to consider popping
 																//the top of the stack and doing a command.  If you're polite.
 };
+
+#endif /* INTERP2_H */

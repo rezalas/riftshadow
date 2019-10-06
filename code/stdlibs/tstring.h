@@ -30,3 +30,5 @@ private:
 };
 #define TSTRING
 #endif
+
+#endif /* TSTRING_H */

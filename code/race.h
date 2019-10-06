@@ -1,3 +1,6 @@
+#ifndef RACE_H
+#define RACE_H
+
 #include "rift.h"
 
 #ifndef MAX_STAT
@@ -57,3 +60,4 @@ public:
 	int						index;
 };
 
+#endif /* RACE_H */

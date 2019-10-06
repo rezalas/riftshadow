@@ -16,6 +16,8 @@
  * the code.  -Jason Dinkel
  */
 
+#ifndef OLC_H
+#define OLC_H
 
 /*
  * The version info.  Please use this info when reporting bugs.
@@ -325,3 +327,5 @@ void		free_mob_index		args ( ( MOB_INDEX_DATA *pMob ) );
 
 bool check_security(CHAR_DATA *ch);
 int get_security(CHAR_DATA *ch);
+
+#endif /* OLC_H */

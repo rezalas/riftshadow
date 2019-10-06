@@ -1,3 +1,5 @@
+#ifndef UPDATE_H
+#define UPDATE_H
 /*
  * Local functions
  */
@@ -31,3 +33,5 @@ int reverse_d args((int dir));
 int get_grav_distance args( ( OBJ_DATA *obj ) );
 ROOM_INDEX_DATA *get_random_exit args((ROOM_INDEX_DATA *room));
 void extract_rune args((RUNE_DATA *rune));
+
+#endif /* UPDATE_H */

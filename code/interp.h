@@ -33,6 +33,9 @@
 
 /* this is a listing of all the commands and command related data */
 
+#ifndef INTERP_H
+#define INTERP_H
+
 /* for command types */
 #define ML 	MAX_LEVEL	/* implementor */
 #define L1	MAX_LEVEL - 1  	/* creator */
@@ -574,3 +577,5 @@ DECLARE_DO_FUN(modhelp_end_fun);
 DECLARE_DO_FUN(comment_end_fun);
 DECLARE_DO_FUN(redit_end_fun);
 DECLARE_DO_FUN(buglist_end_fun);
+
+#endif /* INTERP_H */

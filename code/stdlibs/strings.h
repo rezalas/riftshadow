@@ -1,3 +1,6 @@
+#ifndef STRINGS_H
+#define STRINGS_H
+
 #include <stdarg.h>
 #define TRUE        1
 #define FALSE       0
@@ -152,3 +155,4 @@ protected:
 	char myBuf[TSTR_LEN];
 };
 
+#endif /* STRINGS_H */

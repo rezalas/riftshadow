@@ -31,6 +31,9 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
+#ifndef MERC_H
+#define MERC_H
+
 #define args( list )                    list
 
 #define DECLARE_DO_FUN( fun )				DO_FUN    			fun
@@ -4841,3 +4844,5 @@ bool    check_catch     args( ( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 char * get_room_name(ROOM_INDEX_DATA *room);
 
 #define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';
+
+#endif /* MERC_H */

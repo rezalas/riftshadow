@@ -31,6 +31,9 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
+#ifndef MAGIC_H
+#define MAGIC_H
+
 /*
  * Spell functions.
  * Defined in magic.c.
@@ -552,3 +555,5 @@ DECLARE_RUNE_FUN(	trigger_stasis_wall		);
 
 /* Queue function declarations */
 void recall_execute args ( (CHAR_DATA *ch, ROOM_INDEX_DATA *location) );
+
+#endif /* MAGIC_H */

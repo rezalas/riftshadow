@@ -1,3 +1,6 @@
+#ifndef PCDATA_H
+#define PCDATA_H
+
 #include "rift.h"
 class CPCData
 {
@@ -20,3 +23,5 @@ private:
 
 	int						beauty;
 };
+
+#endif /* PCDATA_H */

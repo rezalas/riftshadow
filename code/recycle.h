@@ -31,6 +31,9 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
+#ifndef RECYCLE_H
+#define RECYCLE_H
+
 /* externs */
 extern char str_empty[1];
 extern int mobile_count;
@@ -179,3 +182,5 @@ void	free_buf args( (BUFFER *buffer) );
 bool	add_buf args( (BUFFER *buffer, char *string) );
 void	clear_buf args( (BUFFER *buffer) );
 char	*buf_string args( (BUFFER *buffer) );
+
+#endif /* RECYCLE_H */

@@ -1,3 +1,6 @@
+#ifndef GAMELOOP_H
+#define GAMELOOP_H
+
 #include "rift.h"
 
 #define PULSE_PER_SECOND 4
@@ -20,3 +23,5 @@ private:
 	void SleepUntilSynchronized();
 	unsigned long ctime;
 };
+
+#endif /* GAMELOOP_H */

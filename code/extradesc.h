@@ -1,3 +1,6 @@
+#ifndef EXTRADESC_H
+#define EXTRADESC_H
+
 class CExtraDesc
 {
 public:
@@ -13,3 +16,5 @@ public:
 private:
 	bool					valid;
 };
+
+#endif /* EXTRADESC_H */

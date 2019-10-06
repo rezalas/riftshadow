@@ -1,3 +1,6 @@
+#ifndef PROF_H
+#define PROF_H
+
 #define PFLAGS_NONE 0
 #define PFLAGS_BASIC 1
 
@@ -61,3 +64,5 @@ private:
 extern sh_int psn_none;
 extern sh_int psn_swimming;
 extern sh_int psn_mountaineering;
+
+#endif /* PROF_H */
