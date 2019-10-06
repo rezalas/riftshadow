@@ -1,3 +1,6 @@
+#ifndef SKILL_H
+#define SKILL_H
+
 /*
  * Replacement for const.c skill/spell table.
  * As well as anything with a gsn.
@@ -30,3 +33,5 @@ public:
 	
 	CFuncPtr		skill_fun;
 };
+
+#endif /* SKILL_H */

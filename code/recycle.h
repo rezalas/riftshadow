@@ -1,3 +1,6 @@
+#ifndef RECYCLE_H
+#define RECYCLE_H
+
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -179,3 +182,5 @@ void	free_buf args( (BUFFER *buffer) );
 bool	add_buf args( (BUFFER *buffer, char *string) );
 void	clear_buf args( (BUFFER *buffer) );
 char	*buf_string args( (BUFFER *buffer) );
+
+#endif /* RECYCLE_H */

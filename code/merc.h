@@ -1,3 +1,6 @@
+#ifndef MERC_H
+#define MERC_H
+
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,        *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -2559,10 +2562,10 @@ struct line_data
 /*
  * Color codes
  */
-#define ANSI_NORMAL			"\x01B[m"
-#define ANSI_BOLD			"\x01B[1m"
-#define ANSI_BLINK			"\x01B[5m"
-#define ANSI_REVERSE		"\x01B[7m"
+#define ANSI_NORMAL			"B[m"
+#define ANSI_BOLD			"B[1m"
+#define ANSI_BLINK			"B[5m"
+#define ANSI_REVERSE		"B[7m"
 
 /* memory for mobs */
 struct mem_data
@@ -4840,4 +4843,6 @@ void mprog_emote(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch);
 bool    check_catch     args( ( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj));
 char * get_room_name(ROOM_INDEX_DATA *room);
 
-#define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';
+#define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = ' ';
+
+#endif /* MERC_H */

@@ -1,3 +1,6 @@
+#ifndef CLASSLIST_H
+#define CLASSLIST_H
+
 class RString;
 
 class CMud;
@@ -41,3 +44,5 @@ class CTrackData;
 class CPathFindData;
 class CTrapData;
 class CRuneData;
+
+#endif /* CLASSLIST_H */

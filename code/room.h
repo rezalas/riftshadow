@@ -1,3 +1,6 @@
+#ifndef ROOM_H
+#define ROOM_H
+
 #define MAX_EXIT 		6
 #define MAX_TRACKS 		4
 class CRoom
@@ -53,3 +56,5 @@ protected:
 	RString			name;
 	RString			description;
 };
+
+#endif /* ROOM_H */

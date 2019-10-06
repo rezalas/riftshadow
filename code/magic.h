@@ -1,3 +1,6 @@
+#ifndef MAGIC_H
+#define MAGIC_H
+
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -552,3 +555,5 @@ DECLARE_RUNE_FUN(	trigger_stasis_wall		);
 
 /* Queue function declarations */
 void recall_execute args ( (CHAR_DATA *ch, ROOM_INDEX_DATA *location) );
+
+#endif /* MAGIC_H */

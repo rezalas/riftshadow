@@ -1,3 +1,6 @@
+#ifndef DB_H
+#define DB_H
+
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -63,3 +66,5 @@ void	convert_obj(OBJ_INDEX_DATA *obj);
 extern void assign_area_vnum( int vnum );                    /* OLC */
 
 /* from db2.c */
+
+#endif /* DB_H */

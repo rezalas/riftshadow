@@ -31,6 +31,9 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
+#ifndef TABLES_H
+#define TABLES_H
+
 /* game tables */
 extern  const   struct  cabal_type      cabal_table[MAX_CABAL];
 extern	const	struct	position_type	position_table[];
@@ -294,3 +297,5 @@ struct prof_cmd_type
         DO_FUN *cmd;
         char *  requires;
 };
+
+#endif /* TABLES_H */

@@ -1,3 +1,6 @@
+#ifndef SHAPE_H
+#define SHAPE_H
+
 #define MAX_FORM	 22
 
 #define FORM_QUEST 	 0
@@ -41,3 +44,5 @@ struct  form_type
     char *	spec_two;		// second special
     char *	spec_three;		// third special
 };
+
+#endif /* SHAPE_H */

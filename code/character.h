@@ -1,3 +1,6 @@
+#ifndef CHARACTER_H
+#define CHARACTER_H
+
 #include "stdlibs/file.h"
 #include "rift.h"
 
@@ -172,3 +175,5 @@ private:
 	int							hp;
 	int							max_hp;
 };
+
+#endif /* CHARACTER_H */

@@ -1,3 +1,6 @@
+#ifndef OBJTEMPLATE_H
+#define OBJTEMPLATE_H
+
 class CObjTemplate : public CEntity
 {
 public:
@@ -49,3 +52,5 @@ protected:
 	RString					description;
 	int						cabal;
 };
+
+#endif /* OBJTEMPLATE_H */

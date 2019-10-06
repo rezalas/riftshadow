@@ -1,3 +1,6 @@
+#ifndef AFFECT_H
+#define AFFECT_H
+
 class CAffect
 {
 public:
@@ -46,3 +49,5 @@ protected:
 	CCharacter *		owner;
 	RString				name;
 };
+
+#endif /* AFFECT_H */

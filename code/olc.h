@@ -1,3 +1,6 @@
+#ifndef OLC_H
+#define OLC_H
+
 /***************************************************************************
  *  File: olc.h                                                            *
  *                                                                         *
@@ -22,16 +25,26 @@
  * It is displayed in the game by typing 'version' while editing.
  * Do not remove these from the code - by request of Jason Dinkel
  */
-#define VERSION	"ILAB Online Creation [Beta 1.0, ROM 2.3 modified]\n\r" \
-				"     Port a ROM 2.4 v1.00\n\r"
-#define AUTHOR	"     By Jason(jdinkel@mines.colorado.edu)\n\r" \
-                "     Modified for use with ROM 2.3\n\r"        \
-                "     By Hans Birkeland (hansbi@ifi.uio.no)\n\r" \
-				"     Modified for use with Riftshadow\n\r" \
-				"     By Chad Sorrell (gabe@qhcf.net)\n\r" 
-#define DATE	"     (Apr. 7, 1995 - ROM mod, Apr 16, 1995)\n\r" \
-				"     (Port a ROM 2.4 - Nov 2, 1996)\n\r" \
-				"     (Riftshadow Mod - June 1, 2001)\n\r"
+#define VERSION	"ILAB Online Creation [Beta 1.0, ROM 2.3 modified]
+" \
+				"     Port a ROM 2.4 v1.00
+"
+#define AUTHOR	"     By Jason(jdinkel@mines.colorado.edu)
+" \
+                "     Modified for use with ROM 2.3
+"        \
+                "     By Hans Birkeland (hansbi@ifi.uio.no)
+" \
+				"     Modified for use with Riftshadow
+" \
+				"     By Chad Sorrell (gabe@qhcf.net)
+" 
+#define DATE	"     (Apr. 7, 1995 - ROM mod, Apr 16, 1995)
+" \
+				"     (Port a ROM 2.4 - Nov 2, 1996)
+" \
+				"     (Riftshadow Mod - June 1, 2001)
+"
 #define CREDITS "     Original by Surreality(cxw197@psu.edu) and Locke(locke@lm.com)"
 
 
@@ -325,3 +338,5 @@ void		free_mob_index		args ( ( MOB_INDEX_DATA *pMob ) );
 
 bool check_security(CHAR_DATA *ch);
 int get_security(CHAR_DATA *ch);
+
+#endif /* OLC_H */

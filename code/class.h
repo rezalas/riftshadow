@@ -1,3 +1,6 @@
+#ifndef CLASS_H
+#define CLASS_H
+
 #include "rift.h"
 /*
 #define CLASS_NONE          0
@@ -62,3 +65,5 @@ public:
 */		
 		int				index;
 };
+
+#endif /* CLASS_H */

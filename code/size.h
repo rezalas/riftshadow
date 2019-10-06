@@ -1,3 +1,6 @@
+#ifndef SIZE_H
+#define SIZE_H
+
 /*
  * CSize - Some men would have you believe it doesn't matter.
  * 
@@ -17,3 +20,5 @@ private:
 	CSize *		next_size;
 	RString		name;
 };
+
+#endif /* SIZE_H */

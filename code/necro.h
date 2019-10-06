@@ -1,3 +1,6 @@
+#ifndef NECRO_H
+#define NECRO_H
+
 /*
  * Stores all the functions for necromancer spells and handling of blood
  * charges, urns, and so forth.  Set up by Eladrian, 3/5/01.
@@ -23,3 +26,5 @@ void flesh_three args((CHAR_DATA *ch, CHAR_DATA *victim));
 void flesh_four args((CHAR_DATA *ch, CHAR_DATA *victim));
 void soul_add args((CHAR_DATA *ch, int souls));
 DECLARE_IPROG_FUN_GREET(greet_prog_corpse_explode);
+
+#endif /* NECRO_H */

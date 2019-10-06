@@ -1,3 +1,6 @@
+#ifndef EXIT_H
+#define EXIT_H
+
 class CExit
 {
 public:
@@ -15,3 +18,5 @@ public:
 	CBitvector		exit_info;
 
 };
+
+#endif /* EXIT_H */

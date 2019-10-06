@@ -1,3 +1,6 @@
+#ifndef LOOKUP_H
+#define LOOKUP_H
+
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -35,3 +38,5 @@ int     cabal_lookup    args( (const char *name) );
 int		position_lookup	args( (const char *name) );
 int 	sex_lookup	args( (const char *name) );
 int 	size_lookup	args( (const char *name) );
+
+#endif /* LOOKUP_H */

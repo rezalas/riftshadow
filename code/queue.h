@@ -1,3 +1,6 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
 #include "rift.h"
 #include <stdarg.h>
 /*
@@ -27,3 +30,5 @@ private:
 	void *			queue_args[MAX_QUEUE_ARGS];	/* Queue function args */
 	int				queue_numargs;
 };
+
+#endif /* QUEUE_H */

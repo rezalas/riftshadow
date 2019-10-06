@@ -1,3 +1,6 @@
+#ifndef SOCKET_H
+#define SOCKET_H
+
 #include "rift.h"
 #include <arpa/inet.h>
 #include <cstddef>
@@ -110,3 +113,5 @@ private:
 
 	static CSocket	control;					//main socket for handling new people and such
 };
+
+#endif /* SOCKET_H */

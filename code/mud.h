@@ -1,3 +1,6 @@
+#ifndef MUD_H
+#define MUD_H
+
 /*					R I F T S H A D O W
  * 						   M U D
  *
@@ -91,3 +94,5 @@ private:
 	void *				AllocPerm(int nBytes);
 	bool				game_up;
 };
+
+#endif /* MUD_H */
