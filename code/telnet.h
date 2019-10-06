@@ -1,6 +1,3 @@
-#ifndef TELNET_H
-#define TELNET_H
-
 /*	@(#)telnet.h 1.7 88/08/19 SMI; from UCB 5.1 5/30/85	*/
 /*
  * Copyright (c) 1983 Regents of the University of California.
@@ -88,5 +85,3 @@ char *telopts[NTELOPTS] = {
 #define	TELQUAL_SEND	1	/* send option */
 
 #endif /*!_arpa_telnet_h*/
-
-#endif /* TELNET_H */
