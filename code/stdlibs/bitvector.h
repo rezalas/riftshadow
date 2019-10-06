@@ -1,3 +1,6 @@
+#ifndef BITVECTOR_H
+#define BITVECTOR_H
+
 class CBitvector
 {
 public:
@@ -13,3 +16,5 @@ public:
 private:
 		long				bitvector[2];
 };
+
+#endif /* BITVECTOR_H */

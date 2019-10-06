@@ -1,3 +1,6 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
 <template T>
 class LLNode
 {
@@ -13,3 +16,5 @@ public:
 	
 private:
 };
+
+#endif /* LINKEDLIST_H */

@@ -1,6 +1,3 @@
-#ifndef OLC_H
-#define OLC_H
-
 /***************************************************************************
  *  File: olc.h                                                            *
  *                                                                         *
@@ -19,6 +16,8 @@
  * the code.  -Jason Dinkel
  */
 
+#ifndef OLC_H
+#define OLC_H
 
 /*
  * The version info.  Please use this info when reporting bugs.

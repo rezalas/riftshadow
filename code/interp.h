@@ -1,6 +1,3 @@
-#ifndef INTERP_H
-#define INTERP_H
-
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -35,6 +32,9 @@
 ***************************************************************************/
 
 /* this is a listing of all the commands and command related data */
+
+#ifndef INTERP_H
+#define INTERP_H
 
 /* for command types */
 #define ML 	MAX_LEVEL	/* implementor */

@@ -1,6 +1,3 @@
-#ifndef DB_H
-#define DB_H
-
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -35,6 +32,10 @@
 ***************************************************************************/
 
 /* vals from db.c */
+
+#ifndef DB_H
+#define DB_H
+
 extern bool fBootDb;
 extern int		newmobs;
 extern int		newobjs;

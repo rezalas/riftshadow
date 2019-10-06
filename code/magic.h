@@ -1,6 +1,3 @@
-#ifndef MAGIC_H
-#define MAGIC_H
-
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,	   *
  *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
@@ -33,6 +30,9 @@
 *	In using this code you agree to comply with the Tartarus license   *
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
+
+#ifndef MAGIC_H
+#define MAGIC_H
 
 /*
  * Spell functions.

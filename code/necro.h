@@ -1,10 +1,10 @@
-#ifndef NECRO_H
-#define NECRO_H
-
 /*
  * Stores all the functions for necromancer spells and handling of blood
  * charges, urns, and so forth.  Set up by Eladrian, 3/5/01.
  */
+
+#ifndef NECRO_H
+#define NECRO_H
 
 OBJ_DATA *find_urn args((CHAR_DATA *ch));
 bool drain_urn args((CHAR_DATA *ch, int charges));

@@ -1,3 +1,6 @@
+#ifndef FUNCPTR_H
+#define FUNCPTR_H
+
 typedef void (*CPtrCast)(...);
 #define MAX_FUNCTION_ARGS	8
 #include <stdarg.h>
@@ -58,8 +61,10 @@ public:
 		{
 			ptrs[i] = fptrs[nArgs - i - 1];
 			asm volatile("" \
-					"movl 	%0, %%eax\n\t" \
-					"pushl	%%eax\n\t" \
+					"movl 	%0, %%eax
+	" \
+					"pushl	%%eax
+	" \
 					:
 					: "r"(ptrs[i])
 					: "%eax");
@@ -75,3 +80,5 @@ private:
 	CPtrCast	funcptr;
 	//char		nargs;
 };
+
+#endif /* FUNCPTR_H */
