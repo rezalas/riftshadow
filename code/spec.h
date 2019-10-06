@@ -1,6 +1,3 @@
-#ifndef SPEC_H
-#define SPEC_H
-
 //DO NOT TOUCH!!!!
 #ifndef SPECSLOADED
 #include <stdarg.h>
@@ -168,5 +165,3 @@ extern const struct flag_type ievent_table[];
 extern const struct flag_type mevent_table[];
 #define SPECSLOADED
 #endif
-
-#endif /* SPEC_H */
