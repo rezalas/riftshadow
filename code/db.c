@@ -50,7 +50,7 @@
 #include "olc.h"
 #include "spec.h"
 
-#if !defined(OLD_RAND)
+#ifndef OLD_RAND
 //long random();
 void srandom(unsigned int);
 int getpid();

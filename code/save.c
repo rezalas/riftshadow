@@ -977,35 +977,35 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
  */
 
 #ifndef KEY
-#define KEY( literal, field, value )				\
-				if ( !str_cmp( word, literal ) )	\
-				{					                \
-				    field  = value;			        \
-				    fMatch = TRUE;			        \
-				    break;				            \
-				}
+#define KEY( literal, field, value )                \
+                if ( !str_cmp( word, literal ) )    \
+                {                                   \
+                    field  = value;                 \
+                    fMatch = TRUE;                  \
+                    break;                          \
+                }
 #endif
 
 /* provided to free strings */
 #ifndef KEYS
-#define KEYS( literal, field, value )				\
-				if ( !str_cmp( word, literal ) )	\
-				{					                \
-				    free_pstring(field);			\
-				    field  = value;			        \
-				    fMatch = TRUE;			        \
-				    break;				            \
-				}
+#define KEYS( literal, field, value )               \
+                if ( !str_cmp( word, literal ) )    \
+                {                                   \
+                    free_pstring(field);            \
+                    field  = value;                 \
+                    fMatch = TRUE;                  \
+                    break;                          \
+                }
 #endif
 
 #ifndef KEYV
-#define KEYV( literal, field )						\
-				if ( !str_cmp( word, literal ) )	\
-				{									\
-					fread_flag_new(field, fp);		\
-					fMatch = TRUE;					\
-					break;							\
-				}
+#define KEYV( literal, field )                      \
+                if ( !str_cmp( word, literal ) )    \
+                {                                   \
+                    fread_flag_new(field, fp);      \
+                    fMatch = TRUE;                  \
+                    break;                          \
+                }
 #endif
 
 void fread_char( CHAR_DATA *ch, FILE *fp )

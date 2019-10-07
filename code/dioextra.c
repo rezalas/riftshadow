@@ -917,11 +917,11 @@ int get_spell_aftype(CHAR_DATA *ch) {
 #ifndef KEYV
 #define KEYV( literal, field )                      \
                 if ( !str_cmp( word, literal ) )    \
-				{                                   \
-					fread_flag_new(field, fp);      \
-					fMatch = TRUE;                  \
-					break;                          \
-				}
+                {                                   \
+                    fread_flag_new(field, fp);      \
+                    fMatch = TRUE;                  \
+                    break;                          \
+                }
 #endif
 
 

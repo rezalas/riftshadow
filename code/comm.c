@@ -75,7 +75,7 @@ void announce_logout args( ( CHAR_DATA *ch));
  * Malloc debugging stuff.
  */
 
-#if defined(MALLOC_DEBUG)
+#ifdef MALLOC_DEBUG
 extern	int	malloc_debug	args( ( int  ) );
 extern	int	malloc_verify	args( ( void ) );
 #endif
@@ -104,7 +104,7 @@ const	char 	go_ahead_str	[] = { IAC, GA, '\0' };
  * OS-dependent declarations.
  */
 
-#if	defined(linux)
+#ifdef __linux__
 /*
     Linux shouldn't need these. If you have a problem compiling, try
     uncommenting accept and bind.
@@ -184,7 +184,7 @@ int main( int argc, char **argv )
 	/*
      * Memory debugging if needed.
      */
-#if defined(MALLOC_DEBUG)
+#ifdef MALLOC_DEBUG
     malloc_debug( 2 );
 #endif
 
@@ -273,7 +273,7 @@ BIND_AGAIN:
 	exit( 0 );
     }
 /*
-#if defined(SO_DONTLINGER)
+#ifdef SO_DONTLINGER
     {
 	struct	linger	ld;
 
@@ -340,7 +340,7 @@ void game_loop_unix( int control )
 	DESCRIPTOR_DATA *d;
 	int maxdesc;
 
-#if defined(MALLOC_DEBUG)
+#ifdef MALLOC_DEBUG
 	if ( malloc_verify( ) != 1 )
 	    abort( );
 #endif
@@ -583,7 +583,7 @@ void init_descriptor( int control )
 	return;
     }
 
-#if !defined(FNDELAY)
+#ifndef FNDELAY
 #define FNDELAY O_NDELAY
 #endif
 
