@@ -5,12 +5,13 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/rift",
+            "program": "${workspaceRoot}/code/rift",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/code/",
             "environment": [],
             "externalConsole": true,
+            "miDebuggerPath": "/usr/bin/gdb",
             "linux": {
                 "MIMode": "gdb"
             },
@@ -25,8 +26,8 @@
             "name": "C++ Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceRoot}/rift",
-            "processId": "${command.pickProcess}",
+            "program": "${workspaceRoot}/code/rift",
+            "processId": "${command:pickProcess}",
             "linux": {
                 "MIMode": "gdb"
             },

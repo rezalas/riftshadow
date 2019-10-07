@@ -1,3 +1,4 @@
 /Debug/
 .vs/
 .vscode/
+*.o

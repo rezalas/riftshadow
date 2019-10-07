@@ -1475,6 +1475,10 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		return;
 
     case CON_GET_NAME:
+	if(argument[0] =='\'')
+	{
+		argument++; 
+	}
 	if ( argument[0] == '\0' )
 	{
 	    close_socket( d );
@@ -1493,10 +1497,10 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	sprintf(buffile,"%s/dead_char/%s.plr", RIFT_PLAYER_DIR,argument);
 
 	if((deadchar=fopen(buffile,"r"))!=NULL)
-	{
-		//Ack. This name is in use in the dead_char directory. Spank them.
-		write_to_buffer(d,"You are denied access.\n\r",0);
-		close_socket(d);
+	{ // 20191006 rezalas - previously this kicked players picking
+	  // a name of a dead char. Better practice is to notify them to
+	  // choose again vs 'spanking' them and closing the connection.
+		write_to_buffer(d,"This char is dead, choose another name: ", 0);
 		return;
 	}
 
@@ -1614,7 +1618,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	if ( check_reconnect( d, ch->name, TRUE ) )
 	    return;
 
-	free_pstring(ch->pcdata->logon_time);
+	//free_pstring(ch->pcdata->logon_time); // rezalas 20191006
 	ch->pcdata->logon_time = palloc_string(ctime( &current_time ));
 	ch->pcdata->logon_time[strlen(ch->pcdata->logon_time)-1] = '\0';
 
@@ -2701,22 +2705,15 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
  * Parse a name for acceptability.
  */
 bool check_parse_name( char *name )
-{
+{	
+    if (strlen(name) <  2 || strlen(name) > 12)
+		return FALSE; 
+
     /*
      * Reserved words.
      */
-    if ( is_name( name,
-	"all auto immortal self zzz someone something the you scion theatre horde bounty common anti-paladin sorcerer warrior thief paladin zealot healer necromancer chronomancer") )
-		return FALSE;
-	
-    /*
-     * Length restrictions.
-     */
-
-    if ( strlen(name) <  2 )
-		return FALSE;
-
-    if ( strlen(name) > 12 )
+	const char* reservedWords = "all auto immortal self zzz someone something the you scion theatre horde bounty common anti-paladin sorcerer warrior thief paladin zealot healer necromancer chronomancer";
+    if ( is_name( name, reservedWords))
 		return FALSE;
 
     /*
@@ -2725,27 +2722,29 @@ bool check_parse_name( char *name )
      */
     {
 	char *pc;
-	bool fIll,adjcaps = FALSE,cleancaps = FALSE;
+	bool fIll = false;
+	bool adjcaps = FALSE;
+	bool cleancaps = FALSE;
  	unsigned int total_caps = 0;
 
 	fIll = TRUE;
 	for ( pc = name; *pc != '\0'; pc++ )
 	{
 	    if ( !isalpha(*pc) )
-		return FALSE;
+			return FALSE;
 
 	    if ( isupper(*pc)) /* ugly anti-caps hack */
 	    {
-		if (adjcaps)
-		    cleancaps = TRUE;
-		total_caps++;
-		adjcaps = TRUE;
+			if (adjcaps)
+		    	cleancaps = TRUE;
+			total_caps++;
+			adjcaps = TRUE;
 	    }
 	    else
-		adjcaps = FALSE;
+			adjcaps = FALSE;
 
 	    if ( LOWER(*pc) != 'i' && LOWER(*pc) != 'l' )
-		fIll = FALSE;
+			fIll = FALSE;
 	}
 
 	if ( fIll )
