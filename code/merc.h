@@ -104,16 +104,16 @@ int remove();
  * Short scalar types.
  * Diavolo reports AIX compiler has bugs with short types.
  */
-#if	!defined(FALSE)
+#ifndef FALSE
 #define FALSE	 0
 #endif
 
-#if	!defined(TRUE)
+#ifndef TRUE
 #define TRUE	 1
 #endif
 
-#if	defined(_AIX)
-#if	!defined(const)
+#ifdef _AIX
+#ifndef const
 #define const
 #endif
 typedef int				sh_int;
@@ -4054,7 +4054,7 @@ void *  calloc          args( ( unsigned nelem, size_t size ) );
  * Then we close it whenever we need to open a file (e.g. a save file).
  */
 
-#if defined(unix)
+#ifdef __unix__
 // #define PLAYER_DIR      "../player/"        	/* Player files */
 #define PLAYER_LIST	RIFT_PLAYER_DIR "/Player.lst"  /* Player list for limits */
 #define TEMP_GREP_RESULTS RIFT_TEMP_DIR "/tempgrepresults.tmp" /* Temporary grep results */
