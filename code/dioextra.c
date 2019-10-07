@@ -899,34 +899,30 @@ int get_spell_aftype(CHAR_DATA *ch) {
     return -1;
 }
 
-#if defined(KEY)
-#undef KEY
+#ifndef KEY
+#define KEY( literal, field, value )                    \
+                if ( !str_cmp( word, literal ) )        \
+                {                                       \
+                    field  = value;                     \
+                    fMatch = TRUE;                      \
+                    break;                              \
+                }
 #endif
 
-#define KEY( literal, field, value )                                    \
-                                if ( !str_cmp( word, literal ) )        \
-                                {                                       \
-                                    field  = value;                     \
-                                    fMatch = TRUE;                      \
-                                    break;                              \
-                                }
-
 /* provided to free strings */
-#if defined(KEYS)
+#ifdef KEYS
 #undef KEYS
 #endif
 
-#if defined(KEYV)
-#undef KEYV
-#endif
-
+#ifndef KEYV
 #define KEYV( literal, field )                      \
                 if ( !str_cmp( word, literal ) )    \
 				{                                   \
-					fread_flag_new(field, fp);        \
+					fread_flag_new(field, fp);      \
 					fMatch = TRUE;                  \
 					break;                          \
 				}
+#endif
 
 
 void do_finger(CHAR_DATA *ch, char *argument)

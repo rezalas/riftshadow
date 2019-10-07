@@ -854,28 +854,26 @@ void sort_areas(void)
  * support on your MUD.  See the new_load_area format below for
  * a short example.
  */
-#if defined(KEY)
-#undef KEY
-#endif
-
+#ifndef KEY
 #define KEY( literal, field, value )                \
                 if ( !str_cmp( word, literal ) )    \
-                {  \
-    field  = value;\
-    fMatch = TRUE; \
-    break;         \
+                {                                   \
+                    field  = value;                 \
+                    fMatch = TRUE;                  \
+                    break;                          \
                 }
+#endif
 
-#define SKEY( string, field )       \
+#ifndef SKEY
+#define SKEY( string, field )                       \
                 if ( !str_cmp( word, string ) )     \
-                {  \
-    free_pstring( field );           \
-    field = fread_string( fp );     \
-    fMatch = TRUE; \
-    break;         \
+                {                                   \
+                    free_pstring( field );          \
+                    field = fread_string( fp );     \
+                    fMatch = TRUE;                  \
+                    break;                          \
                 }
-
-
+#endif
 
 /* OLC
  * Snarf an 'area' header line.   Check this format.  MUCH better.  Add fields
