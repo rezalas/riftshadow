@@ -295,35 +295,28 @@ DECLARE_OLC_FUN( medit_yell		);
 #define EDIT_ROOM(Ch, Room)	( Room = Ch->in_room )
 #define EDIT_AREA(Ch, Area)	( Area = (AREA_DATA *)Ch->desc->pEdit )
 
-
-
-
-
-
 /*
  * Prototypes
  */
 /* mem.c - memory prototypes. */
-#define ED	EXTRA_DESCR_DATA
-RESET_DATA	*new_reset_data		args ( ( void ) );
-void		free_reset_data		args ( ( RESET_DATA *pReset ) );
-AREA_DATA	*new_area		args ( ( void ) );
-void		free_area		args ( ( AREA_DATA *pArea ) );
-EXIT_DATA	*new_exit		args ( ( void ) );
-void		free_exit		args ( ( EXIT_DATA *pExit ) );
-ED 		*new_extra_descr	args ( ( void ) );
-void		free_extra_descr	args ( ( ED *pExtra ) );
-ROOM_INDEX_DATA *new_room_index		args ( ( void ) );
-void		free_room_index		args ( ( ROOM_INDEX_DATA *pRoom ) );
-AFFECT_DATA	*new_affect		args ( ( void ) );
-void		free_affect		args ( ( AFFECT_DATA* pAf ) );
-SHOP_DATA	*new_shop		args ( ( void ) );
-void		free_shop		args ( ( SHOP_DATA *pShop ) );
-OBJ_INDEX_DATA	*new_obj_index		args ( ( void ) );
-void		free_obj_index		args ( ( OBJ_INDEX_DATA *pObj ) );
-MOB_INDEX_DATA	*new_mob_index		args ( ( void ) );
-void		free_mob_index		args ( ( MOB_INDEX_DATA *pMob ) );
-#undef	ED
+RESET_DATA *new_reset_data args ( ( void ) );
+void free_reset_data args ( ( RESET_DATA *pReset ) );
+AREA_DATA *new_area args ( ( void ) );
+void free_area args ( ( AREA_DATA *pArea ) );
+EXIT_DATA *new_exit args ( ( void ) );
+void free_exit args ( ( EXIT_DATA *pExit ) );
+EXTRA_DESCR_DATA *new_extra_descr args ( ( void ) );
+void free_extra_descr args ( ( EXTRA_DESCR_DATA *pExtra ) );
+ROOM_INDEX_DATA *new_room_index args ( ( void ) );
+void free_room_index args ( ( ROOM_INDEX_DATA *pRoom ) );
+AFFECT_DATA	*new_affect args ( ( void ) );
+void free_affect args ( ( AFFECT_DATA* pAf ) );
+SHOP_DATA *new_shop args ( ( void ) );
+void free_shop args ( ( SHOP_DATA *pShop ) );
+OBJ_INDEX_DATA *new_obj_index args ( ( void ) );
+void free_obj_index args ( ( OBJ_INDEX_DATA *pObj ) );
+MOB_INDEX_DATA *new_mob_index args ( ( void ) );
+void free_mob_index args ( ( MOB_INDEX_DATA *pMob ) );
 
 bool check_security(CHAR_DATA *ch);
 int get_security(CHAR_DATA *ch);

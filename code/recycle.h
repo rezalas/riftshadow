@@ -50,137 +50,90 @@ extern int mobile_count;
 #define BUFFER_FREED 	2
 
 RUNE_DATA *new_rune args ( ( void ) );
-void	  free_rune args( ( RUNE_DATA *rune) );
+void free_rune args( ( RUNE_DATA *rune) );
+
 /* note recycling */
-#define ND NOTE_DATA
-ND	*new_note args( (void) );
-void	free_note args( (NOTE_DATA *note) );
-#undef ND
+NOTE_DATA *new_note args( (void) );
+void free_note args( (NOTE_DATA *note) );
 
 /* ban data recycling */
-#define BD BAN_DATA
-BD	*new_ban args( (void) );
-void	free_ban args( (BAN_DATA *ban) );
-#undef BD
+BAN_DATA *new_ban args( (void) );
+void free_ban args( (BAN_DATA *ban) );
 
 /* descriptor recycling */
-#define DD DESCRIPTOR_DATA
-DD	*new_descriptor args( (void) );
-void	free_descriptor args( (DESCRIPTOR_DATA *d) );
-#undef DD
+DESCRIPTOR_DATA *new_descriptor args( (void) );
+void free_descriptor args( (DESCRIPTOR_DATA *d) );
 
 /* char gen data recycling */
-#define GD GEN_DATA
-GD 	*new_gen_data args( (void) );
-void	free_gen_data args( (GEN_DATA * gen) );
-#undef GD
+GEN_DATA *new_gen_data args( (void) );
+void free_gen_data args( (GEN_DATA * gen) );
 
 /* extra descr recycling */
-#define ED EXTRA_DESCR_DATA
-ED	*new_extra_descr args( (void) );
-void	free_extra_descr args( (EXTRA_DESCR_DATA *ed) );
-#undef ED
+EXTRA_DESCR_DATA *new_extra_descr args( (void) );
+void free_extra_descr args( (EXTRA_DESCR_DATA *ed) );
 
 /* trophy recycling */
-#define TD TROPHY_DATA
-TD *new_trophy_data args( (char *victname) ) ;
-void	free_trophy args( ( TROPHY_DATA *trophy ) );
-#undef TD
+TROPHY_DATA *new_trophy_data args( (char *victname) ) ;
+void free_trophy args( ( TROPHY_DATA *trophy ) );
 
 /* race_data recycling (never gonna happen!) */
-#define RD RACE_DATA
-RD *new_race_data args( (void) );
-void	free_race_data args( ( RACE_DATA *race_specs ) );
-#undef RD
+RACE_DATA *new_race_data args( (void) );
+void free_race_data args( ( RACE_DATA *race_specs ) );
 
 /* tracks recycling */
-#define TD TRACK_DATA
-TD *new_track_data args( (void) ) ;
+TRACK_DATA *new_track_data args( (void) ) ;
 void free_track args( ( TRACK_DATA *tracks ) );
-#undef TD
 
 /* pathfind recycling */
-#define PD PATHFIND_DATA
-PD *new_path_data args( (void) );
-void free_path args( ( PD *path) );
-#undef PD
+PATHFIND_DATA *new_path_data args( (void) );
+void free_path args( ( PATHFIND_DATA *path) );
 
 /* trap recycling */
-#define TD TRAP_DATA
-TD *new_trap args( (void) );
-void free_trap args( ( TD*trap) );
-#undef TD
+TRAP_DATA *new_trap args( (void) );
+void free_trap args( ( TRAP_DATA *trap) );
 
 /* apply recycling */
-#define OAD OBJ_APPLY_DATA
-OAD *new_apply_data args( (void) );
-void free_apply args( ( OAD *apply) );
-#undef OAD 
+OBJ_APPLY_DATA *new_apply_data args( (void) );
+void free_apply args( ( OBJ_APPLY_DATA *apply) );
 
 /* affect recycling */
-#define AD AFFECT_DATA
-AD	*new_affect args( (void) );
-void	free_affect args( (AD *af) );
-#undef AD
-
-#define OAD OBJ_AFFECT_DATA
-OAD *new_affect_obj args ((void));
-void free_affect_obj args ((OAD *af));
-#undef OAD
-
-#define AAD AREA_AFFECT_DATA
-AAD *new_affect_area args ((void));
-void free_affect_area args ((AAD *af));
-#undef AAD
+AFFECT_DATA *new_affect args( (void) );
+void free_affect args( (AFFECT_DATA *af) );
+OBJ_AFFECT_DATA *new_affect_obj args ((void));
+void free_affect_obj args ((OBJ_AFFECT_DATA *af));
+AREA_AFFECT_DATA *new_affect_area args ((void));
+void free_affect_area args ((AREA_AFFECT_DATA *af));
 
 /* object recycling */
-#define OD OBJ_DATA
-OD	*new_obj args( (void) );
-void	free_obj args( (OBJ_DATA *obj) );
-#undef OD
+OBJ_DATA *new_obj args( (void) );
+void free_obj args( (OBJ_DATA *obj) );
 
 /* character recyling */
-#define CD CHAR_DATA
-#define PD PC_DATA
-#define OC OLD_CHAR
-CD	*new_char args( (void) );
-void	free_char args( (CHAR_DATA *ch) );
-PD	*new_pcdata args( (void) );
-void	free_pcdata args( (PC_DATA *pcdata) );
-OC	*new_oldchar args((void));
-void	free_oldchar args( (OLD_CHAR *old) );
-
-#undef PD
-#undef CD
-#undef OC
+CHAR_DATA *new_char args( (void) );
+void free_char args( (CHAR_DATA *ch) );
+PC_DATA *new_pcdata args( (void) );
+void free_pcdata args( (PC_DATA *pcdata) );
+OLD_CHAR *new_oldchar args((void));
+void free_oldchar args( (OLD_CHAR *old) );
 
 /* speech recycling */
-#define SD SPEECH_DATA
-#define LD LINE_DATA
-
-SD *new_speech_data args( (void) );
+SPEECH_DATA *new_speech_data args( (void) );
 void free_speech args( (SPEECH_DATA *speech) );
 void free_line args( (LINE_DATA *line) );
-LD *new_line_data args( (void) );
-
-#undef LD
-#undef SD
+LINE_DATA *new_line_data args( (void) );
 
 /* mob id and memory procedures */
-#define MD MEM_DATA
-long 	get_pc_id args( (void) );
-long	get_mob_id args( (void) );
-MD	*new_mem_data args( (void) );
-void	free_mem_data args( ( MEM_DATA *memory) );
-MD	*find_memory args( (MEM_DATA *memory, long id) );
-#undef MD
+long get_pc_id args( (void) );
+long get_mob_id args( (void) );
+MEM_DATA *new_mem_data args( (void) );
+void free_mem_data args( ( MEM_DATA *memory) );
+MEM_DATA *find_memory args( (MEM_DATA *memory, long id) );
 
 /* buffer procedures */
-
-BUFFER	*new_buf args( (void) );
-void	free_buf args( (BUFFER *buffer) );
-bool	add_buf args( (BUFFER *buffer, char *string) );
-void	clear_buf args( (BUFFER *buffer) );
-char	*buf_string args( (BUFFER *buffer) );
+BUFFER *new_buf args( (void) );
+void free_buf args( (BUFFER *buffer) );
+bool add_buf args( (BUFFER *buffer, char *string) );
+void clear_buf args( (BUFFER *buffer) );
+char *buf_string args( (BUFFER *buffer) );
 
 #endif /* RECYCLE_H */

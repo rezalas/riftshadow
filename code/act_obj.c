@@ -51,17 +51,15 @@ DECLARE_DO_FUN(do_tell		);
 /*
  * Local functions.
  */
-#define CD CHAR_DATA
-#define OD OBJ_DATA
 #define CABAL_ITEMS_FILE	"citems.txt"
-bool	remove_obj	args( (CHAR_DATA *ch, int iWear, bool fReplace ) );
-void	wear_obj	args( (CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace ) );
-CD *	find_keeper	args( (CHAR_DATA *ch ) );
-int	get_cost	args( (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy ) );
-void 	obj_to_keeper	args( (OBJ_DATA *obj, CHAR_DATA *ch ) );
-OD *	get_obj_keeper	args( (CHAR_DATA *ch,CHAR_DATA *keeper,char *argument));
+bool remove_obj args( (CHAR_DATA *ch, int iWear, bool fReplace ) );
+void wear_obj args( (CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace ) );
+CHAR_DATA *find_keeper args( (CHAR_DATA *ch ) );
+int get_cost args( (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy ) );
+void obj_to_keeper args( (OBJ_DATA *obj, CHAR_DATA *ch ) );
+OBJ_DATA *get_obj_keeper args( (CHAR_DATA *ch,CHAR_DATA *keeper,char *argument));
 bool is_owner args((CHAR_DATA *ch,OBJ_DATA *corpse));
-bool	check_arms	args( (CHAR_DATA *ch,OBJ_DATA *obj));
+bool check_arms args( (CHAR_DATA *ch,OBJ_DATA *obj));
 
 /* A pile of obj progs for use in legion.are, and the drannor areas.
 Remove these if you don't want to use those areas
@@ -77,9 +75,6 @@ void brandish_sceptre_dead args((CHAR_DATA *ch,OBJ_DATA *obj));
 void wear_obj_misty_cloak args((CHAR_DATA *ch,OBJ_DATA *obj));
 void remove_obj_misty_cloak args((CHAR_DATA *ch,OBJ_DATA *obj));
 void save_cabal_items args( ( void ) );
-
-#undef OD
-#undef	CD
 
 #define MINOTAUR_ONLY 		I
 

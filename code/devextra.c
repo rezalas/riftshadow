@@ -1079,20 +1079,18 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 	return;
 }
 
-#if defined(KEY)
-#undef KEY
+#ifndef KEY
+#define KEY( literal, field, value )                    \
+				if ( !str_cmp( word, literal ) )        \
+				{                                       \
+					field  = value;                     \
+					fMatch = TRUE;                      \
+					break;                              \
+				}
 #endif
 
-#define KEY( literal, field, value )                                    \
-                                if ( !str_cmp( word, literal ) )        \
-                                {                                       \
-                                    field  = value;                     \
-                                    fMatch = TRUE;                      \
-                                    break;                              \
-                                }
-
 /* provided to free strings */
-#if defined(KEYS)
+#ifdef KEYS
 #undef KEYS
 #endif
 
