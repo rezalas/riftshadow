@@ -31,19 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <mysql.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-
-#define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
+#include "dioextra.h"
 
 void do_crumble( CHAR_DATA *ch, char *argument )
 {
