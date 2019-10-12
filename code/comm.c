@@ -49,129 +49,23 @@
  * -- Furey  26 Jan 1993
  */
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <ctype.h>
-#include <errno.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <signal.h>
-#include <crypt.h>
-
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "olc.h"
-#include "interp.h"
-
-/* command procedures needed */
-DECLARE_DO_FUN(easy_induct	);
-void announce_login args( ( CHAR_DATA *ch));
-void announce_logout args( ( CHAR_DATA *ch));
-
-/*
- * Malloc debugging stuff.
- */
-
-#ifdef MALLOC_DEBUG
-extern	int	malloc_debug	args( ( int  ) );
-extern	int	malloc_verify	args( ( void ) );
-#endif
-
-bool bDebug = FALSE;
-
-/*
- * Signal handling.
- *   I dance around it.
- */
-
-
-/*
- * Socket and TCP/IP stuff.
- */
-#include <fcntl.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include "telnet.h"
-const	char	echo_off_str	[] = { IAC, WILL, TELOPT_ECHO, '\0' };
-const	char	echo_on_str	[] = { IAC, WONT, TELOPT_ECHO, '\0' };
-const	char 	go_ahead_str	[] = { IAC, GA, '\0' };
-
-/*
- * OS-dependent declarations.
- */
-
-#ifdef __linux__
-/*
-    Linux shouldn't need these. If you have a problem compiling, try
-    uncommenting accept and bind.
-int	accept		args( ( int s, struct sockaddr *addr, int *addrlen ) );
-int	bind		args( ( int s, struct sockaddr *name, int namelen ) );
-*/
-
-int	close		args( ( int fd ) );
-//int	getpeername	args( ( int s, struct sockaddr *name, int *namelen ) );
-//int	getsockname	args( ( int s, struct sockaddr *name, int *namelen ) );
-int     gofday    args( ( struct timeval *tp, struct timezone *tzp ) );
-//int	listen		args( ( int s, int backlog ) );
-//int	read		args( ( int fd, char *buf, int nbyte ) );
-int	select		args( ( int width, fd_set *readfds, fd_set *writefds,
-			    fd_set *exceptfds, struct timeval *timeout ) );
-int	socket		args( ( int domain, int type, int protocol ) );
-//int	write		args( ( int fd, char *buf, int nbyte ) );
-#endif
+#include "comm.h"
 
 /*
  * Global variables.
  */
-DESCRIPTOR_DATA *   descriptor_list;	/* All open descriptors		*/
-DESCRIPTOR_DATA *   d_next;		/* Next descriptor in loop	*/
-FILE *		    fpReserve;		/* Reserved file handle		*/
-bool		    god;		/* All new chars are gods!	*/
-bool		    merc_down;		/* Shutdown			*/
-bool			rebooting = FALSE;
-int				reboot_num = -1;
-bool		    wizlock = FALSE;	/* Game is wizlocked		*/
-bool		    newlock = FALSE;	/* Game is newlocked		*/
-bool            MOBtrigger = TRUE;  /* act() switch                 */
-char		    str_boot_time[MAX_INPUT_LENGTH];
-time_t		    current_time;	/* time of this pulse */	
-
-
-
-/*
- * OS-dependent local functions.
- */
-
-void	game_loop_unix		args( ( int control ) );
-int	init_socket		args( ( int port ) );
-void	init_descriptor		args( ( int control ) );
-bool	read_from_descriptor	args( ( DESCRIPTOR_DATA *d ) );
-bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
-
-
-/*
- * Other local functions (OS-independent).
- */
-bool	check_parse_name	args( ( char *name ) );
-bool	check_reconnect		args( ( DESCRIPTOR_DATA *d, char *name,
-				    bool fConn ) );
-bool	check_playing		args( ( DESCRIPTOR_DATA *d, char *name ) );
-int	main			args( ( int argc, char **argv ) );
-void	nanny			args( ( DESCRIPTOR_DATA *d, char *argument ) );
-bool	process_output		args( ( DESCRIPTOR_DATA *d, bool fPrompt ) );
-void	read_from_buffer	args( ( DESCRIPTOR_DATA *d ) );
-void	stop_idling		args( ( CHAR_DATA *ch ) );
-void    bust_a_prompt           args( ( CHAR_DATA *ch ) );
-bool 	output_buffer		args( ( DESCRIPTOR_DATA *d ) );
-int     get_allocate_points	args( ( CHAR_DATA *ch ) );
-void    show_allocate		args( ( CHAR_DATA *ch , int finish) );
-void	process_text		args( ( CHAR_DATA *ch, char *text ) );
-#define CHAR_WRAP		85
-
+DESCRIPTOR_DATA * descriptor_list;		/* All open descriptors		*/
+DESCRIPTOR_DATA * d_next;				/* Next descriptor in loop	*/
+FILE * fpReserve;						/* Reserved file handle		*/
+bool god;								/* All new chars are gods!	*/
+bool merc_down;							/* Shutdown					*/
+bool rebooting = FALSE;
+int reboot_num = -1;
+bool wizlock = FALSE;					/* Game is wizlocked		*/
+bool newlock = FALSE;					/* Game is newlocked		*/
+bool MOBtrigger = TRUE;					/* act() switch				*/
+char str_boot_time[MAX_INPUT_LENGTH];
+time_t current_time;					/* time of this pulse		*/
 int mPort;
 
 int main( int argc, char **argv )
@@ -582,10 +476,6 @@ void init_descriptor( int control )
 	perror( "New_descriptor: accept" );
 	return;
     }
-
-#ifndef FNDELAY
-#define FNDELAY O_NDELAY
-#endif
 
     if ( fcntl( desc, F_SETFL, FNDELAY ) == -1 )
     {
