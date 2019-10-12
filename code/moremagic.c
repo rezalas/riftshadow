@@ -31,21 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "magic.h"
-
-#define LOGIN_LOG_FILE       "logins.txt"
-#define TEMP_GREP_RESULTS_TWO "../temp/tempgrepresults2.tmp"
-bool cleansed args ((CHAR_DATA *ch, CHAR_DATA *victim,int diffmodifier, int sn));
-int get_affect_level args ((CHAR_DATA *ch, int sn));
+#include "moremagic.h"
 
 void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
