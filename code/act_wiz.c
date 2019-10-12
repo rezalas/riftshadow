@@ -31,62 +31,12 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "olc.h"
-#include "spec.h"
-#include "interp.h"
+#include "act_wiz.h"
 
-typedef struct multdata MULTDATA;
+AREA_DATA * area_first;
+unsigned int *gDebug; 
 
-struct multdata {
-   DESCRIPTOR_DATA *des;
-};
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_rstat		);
-DECLARE_DO_FUN(do_mstat		);
-DECLARE_DO_FUN(do_ostat		);
-DECLARE_DO_FUN(do_astat		);
-DECLARE_DO_FUN(do_rset		);
-DECLARE_DO_FUN(do_mset		);
-DECLARE_DO_FUN(do_oset		);
-DECLARE_DO_FUN(do_sset		);
-DECLARE_DO_FUN(do_mfind		);
-DECLARE_DO_FUN(do_ofind		);
-DECLARE_DO_FUN(do_slookup	);
-DECLARE_DO_FUN(do_mload		);
-DECLARE_DO_FUN(do_oload		);
-DECLARE_DO_FUN(do_quit		);
-DECLARE_DO_FUN(do_look		);
-DECLARE_DO_FUN(do_stand		);
-DECLARE_DO_FUN(do_force		);
-DECLARE_DO_FUN(do_vmstat        );
-DECLARE_DO_FUN(do_vostat        );
-DECLARE_DO_FUN(buglist_end_fun	);
-
-
-DECLARE_MPROG_FUN_PULSE(pulse_prog_area_echo_ward);
-
-void log_naughty args(( CHAR_DATA *ch, char *argument, int logtype));
-void do_sgset( CHAR_DATA *ch, char *argument );
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
 extern bool wizlock;
-AREA_DATA *             area_first;
-
-#define GOD_LOG_FILE	"glog.txt"
-/*
- * Local functions.
- */
-ROOM_INDEX_DATA *	find_location	args( ( CHAR_DATA *ch, char *arg ) );
 
 void do_wiznet( CHAR_DATA *ch, char *argument )
 {
@@ -275,7 +225,6 @@ void do_leader( CHAR_DATA *ch, char *argument )
     return;
 }
 
-unsigned int *gDebug; 
 void do_smite( CHAR_DATA *ch, char *argument )
 {
     CHAR_DATA *victim;
