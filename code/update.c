@@ -31,27 +31,8 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
 #include "update.h"
-#include "spec.h"
 
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_quit		);
-DECLARE_DO_FUN(do_yell		);
-DECLARE_DO_FUN(do_follow	);
-DECLARE_DO_FUN(do_murder        );
-DECLARE_AFF_FUN(poison_tick);
-CHAR_DATA *get_random_ch(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
 
 int save_number = 0;
 
