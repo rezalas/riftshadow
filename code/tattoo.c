@@ -31,30 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-
-void do_invoke_jackass args((CHAR_DATA *ch));
-void do_invoke_dioxide args((CHAR_DATA *ch));
-void do_invoke_seracuz args((CHAR_DATA *ch));
-void do_invoke_butter args((CHAR_DATA *ch));
-void do_invoke_jhyrbian args((CHAR_DATA *ch));
-void do_invoke_dev args((CHAR_DATA *ch, char *argument));
-void do_invoke_daedelex args((CHAR_DATA *ch));
-void do_invoke_xanthrailles args((CHAR_DATA *ch));
-void do_invoke_iomahk args((CHAR_DATA *ch));
-void do_invoke_detlef args((CHAR_DATA *ch));
-void do_invoke_lestregus args((CHAR_DATA *ch));
-void do_invoke_kyrissaean args((CHAR_DATA *ch));
-void do_invoke_gabe args((CHAR_DATA *ch));
-void do_invoke_lichen  args((CHAR_DATA *ch));
+#include "tattoo.h"
 
 void do_brands( CHAR_DATA *ch, char *argument )
 {
