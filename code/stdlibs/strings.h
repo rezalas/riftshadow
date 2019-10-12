@@ -9,8 +9,10 @@
 
 #define DEFAULTCASE TRUE
 #define MAX_FORMATTED_SIZE 4096
-#define TSTR_LEN		2048
+#define TSTR_LEN 2048
 #define MUNCH_VARARG(msg, str)  va_list arglist;va_start(arglist, msg);str.Format(arglist, msg);va_end(arglist);
+
+#define UPCHAR(c) ((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
 
 class RString
 {
