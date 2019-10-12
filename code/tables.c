@@ -31,10 +31,6 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <time.h>
-#include "merc.h"
 #include "tables.h"
 
 

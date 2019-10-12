@@ -34,6 +34,11 @@
 #ifndef TABLES_H
 #define TABLES_H
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <time.h>
+#include "merc.h"
+
 /* game tables */
 extern  const   struct  cabal_type      cabal_table[MAX_CABAL];
 extern	const	struct	position_type	position_table[];
