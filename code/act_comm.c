@@ -32,37 +32,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <mysql.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "olc.h"
-#include "spec.h"
-/* command procedures needed */
-DECLARE_DO_FUN(do_quit	);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_buglist);
-DECLARE_DO_FUN(do_undisguise);
-DECLARE_AFF_FUN(traitor_pulse);
-#define PDEATH_LOG_FILE	RIFT_AREA_DIR "/permdeaths.txt"
-#define DEATH_LOG_FILE	RIFT_AREA_DIR "/tempdeaths.txt"
-#define MOB_LOG_FILE	RIFT_AREA_DIR "/mobdeaths.txt"
-
-void obj_say_lordly args((CHAR_DATA *ch,OBJ_DATA *obj,char *argument));
-void obj_say_heavenly_sceptre args((CHAR_DATA *ch,OBJ_DATA *obj,char *argument));
-void mob_say_lady args((CHAR_DATA *ch, char *argument));
-void say_prog_summon_demon args((CHAR_DATA *ch,char *argument));
-void say_prog_raise_shadowlord args((CHAR_DATA *ch,char *argument));
-void say_prog_karguska args((CHAR_DATA *ch,char *argument));
-bool check_ooc args((CHAR_DATA *ch, char *argument, char*type));
-const char *upstring(const char *i);
-const char *lowstring(const char *i);
+#include "act_comm.h"
 
 /* RT code to delete yourself */
 
