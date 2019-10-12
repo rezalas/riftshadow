@@ -1,13 +1,5 @@
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
+#include "scan.h"
 
-void show_char_to_char_0 args((CHAR_DATA *victim, CHAR_DATA *ch));
-void scan_list           args((ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch,
-                               sh_int depth, sh_int door));
 void do_scan(CHAR_DATA *ch, char *argument)
 {
    extern char *const dir_name[];
