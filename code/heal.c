@@ -31,15 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "merc.h"
-#include "magic.h"
-
-DECLARE_DO_FUN(do_say);
+#include "heal.h"
 
 float get_mod_cost(CHAR_DATA *ch, int cost)
 {
