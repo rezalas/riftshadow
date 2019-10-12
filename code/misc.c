@@ -1,28 +1,5 @@
 /* blah */
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <ctype.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include <stdarg.h>
-
-extern	sh_int	chessboard[8][8];
-extern	CHAR_DATA *chess_white;
-extern 	CHAR_DATA *chess_black;
-
-void print_chessboard(CHAR_DATA *ch);
-void reset_chessboard ( void );
-void move_piece (CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_to);
-char *piece_name (int piece);
-char num_to_letter (int coord);
-
+#include "misc.h"
 
 char *act_msg(const char *point, CHAR_DATA *ch)
 {
