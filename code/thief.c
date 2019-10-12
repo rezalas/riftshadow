@@ -1,19 +1,4 @@
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
-
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-void disguise_remove(CHAR_DATA *ch);
+#include "thief.h"
 
 void do_backstab( CHAR_DATA *ch, char *argument )
 {
@@ -680,7 +665,6 @@ bool check_drag(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room, int where)
 {
 	return TRUE;
 }
-bool    check_barred            args((CHAR_DATA *ch, ROOM_INDEX_DATA *to_room));
 	
 void do_drag(CHAR_DATA *ch, char *argument)
 {
