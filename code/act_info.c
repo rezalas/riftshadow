@@ -31,82 +31,77 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <time.h>
-#include <crypt.h>
-#include "merc.h"
-//#include "math.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-/* command procedures needed */
-DECLARE_DO_FUN(	do_exits	);
-DECLARE_DO_FUN( do_look		);
-DECLARE_DO_FUN( do_help		);
-DECLARE_DO_FUN( do_affects	);
-DECLARE_DO_FUN( do_play		);
-DECLARE_DO_FUN( do_tell		);
-DECLARE_DO_FUN( descr_end_fun	);
-DECLARE_DO_FUN( do_weather	);
-#define DEBUG_LOG_FILE	"debug.txt"
-#define GOD_LOG_FILE	"glog.txt"
+#include "act_info.h"
 
-char *	const	where_name	[] =
+char * const where_name	[] =
 {
-    "<used as light>     ",
-    "<worn on finger>    ",
-    "<worn on finger>    ",
-    "<worn around neck>  ",
-    "<worn around neck>  ",
-    "<worn on torso>     ",
-    "<worn on head>      ",
-    "<worn on legs>      ",
-    "<worn on feet>      ",
-    "<worn on hands>     ",
-    "<worn on arms>      ",
-    "<worn as shield>    ",
-    "<worn on body>      ",
-    "<worn on waist>     ",
-    "<worn around wrist> ",
-    "<worn around wrist> ",
-    "<wielded>           ",
-    "<held>              ",
-    "<dual wielded>      ",
+	"<used as light>     ",
+	"<worn on finger>    ",
+	"<worn on finger>    ",
+	"<worn around neck>  ",
+	"<worn around neck>  ",
+	"<worn on torso>     ",
+	"<worn on head>      ",
+	"<worn on legs>      ",
+	"<worn on feet>      ",
+	"<worn on hands>     ",
+	"<worn on arms>      ",
+	"<worn as shield>    ",
+	"<worn on body>      ",
+	"<worn on waist>     ",
+	"<worn around wrist> ",
+	"<worn around wrist> ",
+	"<wielded>           ",
+	"<held>              ",
+	"<dual wielded>      ",
 	"<marked>            ",
-    "<strapped on>       ",
-    "<cosmetic gear>     ",
+	"<strapped on>       ",
+	"<cosmetic gear>     ",
+};
+
+static char * const moon_look[MAX_MOON] =
+{
+	"new",
+	"crescent waxing",
+	"half waxing",
+	"gibbous waxing",
+	"full",
+	"gibbous waning",
+	"half waning",
+	"crescent waning"
+};
+
+static char * const sky_look[MAX_SKY] =
+{
+	"The sky is cloudless",
+	"The sky is partly cloudy",
+	"The sky is overcast",
+	"A light drizzle falls from the sky",
+	"A drenching rain pours from the sky",
+	"The sky is lit by flashes of lightning",
+	"A light flurry of snowflakes falls from the sky",
+	"A ferocious blizzard blots out the sky",
+	"Pebble-sized hailstones fall from the sky"
+};
+
+static char * const temp_look[MAX_TEMP] =
+{
+	"hot",
+	"warm",
+	"cool",
+	"cold"
+};
+
+static char * const wind_look[MAX_WIND] =
+{
+	"is perfectly still.",
+	"wafts on a gentle breeze.",
+	"swirls briskly.",
+	"whips across the area with gale force!"
 };
 
 /* for do_count */
 int max_on = 0;
-
-
-/*
- * Local functions.
- */
-char *	format_obj_to_char	args( ( OBJ_DATA *obj, CHAR_DATA *ch,
-				    bool fShort ) );
-void	show_list_to_char	args( ( OBJ_DATA *list, CHAR_DATA *ch,
-				    bool fShort, bool fShowNothing ) );
-void	show_char_to_char_0	args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
-void	show_char_to_char_1	args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
-void	show_char_to_char_2	args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
-void	show_char_to_char_3	args( ( CHAR_DATA *victim, CHAR_DATA *ch ) );
-void	show_char_to_char	args( ( CHAR_DATA *list, CHAR_DATA *ch ) );
-bool	check_blind		args( ( CHAR_DATA *ch ) );
-
-bool	can_shapeshift		args( ( CHAR_DATA *ch, int form_num) );
-void	shapeshift_revert	args( ( CHAR_DATA *ch) );
-bool    isCabalItem		args( ( OBJ_DATA *obj) );
-bool    isNewbie		args( ( CHAR_DATA *ch) );
-void print_chessboard	args( (CHAR_DATA *ch ) );
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
 
 char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 {
@@ -1513,17 +1508,6 @@ void do_examine( CHAR_DATA *ch, char *argument )
     return;
 }
 
-static char * const moon_look[MAX_MOON] =
-{
-	"new",
-	"crescent waxing",
-	"half waxing",
-	"gibbous waxing",
-	"full",
-	"gibbous waning",
-	"half waning",
-	"crescent waning"
-};
 
 bool   show_altdesc(ROOM_INDEX_DATA *room)
 {
@@ -2558,34 +2542,6 @@ void do_time( CHAR_DATA *ch, char *argument )
 
 
 
-    static char * const sky_look[MAX_SKY] =
-    {
-	"The sky is cloudless",
-	"The sky is partly cloudy",
-	"The sky is overcast",
-	"A light drizzle falls from the sky",
-	"A drenching rain pours from the sky",
-	"The sky is lit by flashes of lightning",
-	"A light flurry of snowflakes falls from the sky",
-	"A ferocious blizzard blots out the sky",
-	"Pebble-sized hailstones fall from the sky"
-    };
-
-	static char * const temp_look[MAX_TEMP] =
-	{
-	"hot",
-	"warm",
-	"cool",
-	"cold"
-	};
-	
-	static char * const wind_look[MAX_WIND] =
-	{
-	"is perfectly still.",
-	"wafts on a gentle breeze.",
-	"swirls briskly.",
-	"whips across the area with gale force!"
-	};
 
 void do_weather( CHAR_DATA *ch, char *argument )
 {
