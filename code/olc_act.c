@@ -11,48 +11,7 @@
  *                                                                         *
  ***************************************************************************/
 
-
-
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "olc.h"
-#include "tables.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "spec.h"
-
-char * mprog_type_to_name ( int type );
-extern int flag_index_lookup args((const char *name, const struct flag_type *flag_table));
-extern int flag_lookup args((const char *name, const struct flag_type *flag_table));
-extern char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-char *restrict_string   args ( ( const struct restrict_type *restrict_table, long bits[] ) );
-DECLARE_DO_FUN( do_resets );
-/* Return TRUE if area changed, FALSE if not. */
-#define REDIT( fun )		bool fun( CHAR_DATA *ch, char *argument )
-#define OEDIT( fun )		bool fun( CHAR_DATA *ch, char *argument )
-#define MEDIT( fun )		bool fun( CHAR_DATA *ch, char *argument )
-#define AEDIT( fun )		bool fun( CHAR_DATA *ch, char *argument )
-
-
-
-struct olc_help_type
-{
-    char *command;
-    const void *structure;
-    char *desc;
-};
-
-
+#include "olc_act.h"
 
 bool show_version( CHAR_DATA *ch, char *argument )
 {
@@ -110,6 +69,29 @@ const struct olc_help_type help_table[] =
 	{	NULL,		NULL,		 NULL				 }
 };
 
+const struct wear_type wear_table[] =
+{
+    {	WEAR_NONE,	ITEM_TAKE		},
+    {	WEAR_LIGHT,	ITEM_LIGHT		},
+    {	WEAR_FINGER_L,	ITEM_WEAR_FINGER	},
+    {	WEAR_FINGER_R,	ITEM_WEAR_FINGER	},
+    {	WEAR_NECK_1,	ITEM_WEAR_NECK		},
+    {	WEAR_NECK_2,	ITEM_WEAR_NECK		},
+    {	WEAR_BODY,	ITEM_WEAR_BODY		},
+    {	WEAR_HEAD,	ITEM_WEAR_HEAD		},
+    {	WEAR_LEGS,	ITEM_WEAR_LEGS		},
+    {	WEAR_FEET,	ITEM_WEAR_FEET		},
+    {	WEAR_HANDS,	ITEM_WEAR_HANDS		},
+    {	WEAR_ARMS,	ITEM_WEAR_ARMS		},
+    {	WEAR_SHIELD,	ITEM_WEAR_SHIELD	},
+    {	WEAR_ABOUT,	ITEM_WEAR_ABOUT		},
+    {	WEAR_WAIST,	ITEM_WEAR_WAIST		},
+    {	WEAR_WRIST_L,	ITEM_WEAR_WRIST		},
+    {	WEAR_WRIST_R,	ITEM_WEAR_WRIST		},
+    {	WEAR_WIELD,	ITEM_WEAR_WIELD		},
+    {	WEAR_HOLD,	ITEM_WEAR_HOLD		},
+    {	NO_FLAG,	NO_FLAG			}
+};
 
 
 /*****************************************************************************
@@ -3069,42 +3051,6 @@ REDIT( redit_mreset )
     return TRUE;
 }
 
-
-
-struct wear_type
-{
-    int	wear_loc;
-    int	wear_bit;
-};
-
-
-
-const struct wear_type wear_table[] =
-{
-    {	WEAR_NONE,	ITEM_TAKE		},
-    {	WEAR_LIGHT,	ITEM_LIGHT		},
-    {	WEAR_FINGER_L,	ITEM_WEAR_FINGER	},
-    {	WEAR_FINGER_R,	ITEM_WEAR_FINGER	},
-    {	WEAR_NECK_1,	ITEM_WEAR_NECK		},
-    {	WEAR_NECK_2,	ITEM_WEAR_NECK		},
-    {	WEAR_BODY,	ITEM_WEAR_BODY		},
-    {	WEAR_HEAD,	ITEM_WEAR_HEAD		},
-    {	WEAR_LEGS,	ITEM_WEAR_LEGS		},
-    {	WEAR_FEET,	ITEM_WEAR_FEET		},
-    {	WEAR_HANDS,	ITEM_WEAR_HANDS		},
-    {	WEAR_ARMS,	ITEM_WEAR_ARMS		},
-    {	WEAR_SHIELD,	ITEM_WEAR_SHIELD	},
-    {	WEAR_ABOUT,	ITEM_WEAR_ABOUT		},
-    {	WEAR_WAIST,	ITEM_WEAR_WAIST		},
-    {	WEAR_WRIST_L,	ITEM_WEAR_WRIST		},
-    {	WEAR_WRIST_R,	ITEM_WEAR_WRIST		},
-    {	WEAR_WIELD,	ITEM_WEAR_WIELD		},
-    {	WEAR_HOLD,	ITEM_WEAR_HOLD		},
-    {	NO_FLAG,	NO_FLAG			}
-};
-
-
-
 /*****************************************************************************
  Name:		wear_loc
  Purpose:	Returns the location of the bit that matches the count.
@@ -4158,7 +4104,6 @@ OEDIT( oedit_show )
 /*
  * Need to issue warning if flag isn't valid. -- does so now -- Hugin.
  */
-int display_lookup (const char *name, const struct display_type *flag_table);
 OEDIT( oedit_addapply )
 {
     int value;
@@ -5527,8 +5472,6 @@ MEDIT( medit_class )
 		return FALSE;
 	}
 }
-
-char *style_string( const struct style_type *style_table, long bits[] );
 
 MEDIT( medit_show )
 {
