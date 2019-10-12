@@ -1,33 +1,7 @@
 /****************************************************************************/
 /* Dev's happy place.							    */
 /****************************************************************************/
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <mysql.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "time.h"
-#include "interp.h"
-#include "help.h"
-
-#define LOGIN_LOG_FILE       "logins.txt"
-#define BOUNTY_LOG_FILE	     "bounties.txt"
-#define TEMP_GREP_RESULTS_TWO "../temp/tempgrepresults2.tmp"
-#define HISTORY_FILE	     "history.txt"
-char * flags_to_string args ((CHAR_DATA *ch, const struct flag_type *showflags, int flagsperline));
-void bounty_log args ((char *string));
-void bounty_credit args((CHAR_DATA *ch, int credit));
-void sortvotes(CHAR_DATA *ch, BALLOT_DATA *ballot);
-void clean_mud args((void));
-int display_lookup args((const char *name, const struct display_type *flag_table));
-int flag_lookup args((const char *name, const struct flag_type *flag_table));
+#include "devextra.h"
 
 bool IS_IMP(CHAR_DATA *ch)
 {
@@ -1078,21 +1052,6 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 
 	return;
 }
-
-#ifndef KEY
-#define KEY( literal, field, value )                    \
-                if ( !str_cmp( word, literal ) )        \
-                {                                       \
-                    field  = value;                     \
-                    fMatch = TRUE;                      \
-                    break;                              \
-                }
-#endif
-
-/* provided to free strings */
-#ifdef KEYS
-#undef KEYS
-#endif
 
 void do_vote(CHAR_DATA *ch, char *argument)
 {
@@ -2704,8 +2663,6 @@ void mob_tell(CHAR_DATA *mob, CHAR_DATA *ch, char *tell)
 	sprintf(buf,"%s %s",ch->name,tell);
 	do_tell(mob,buf);
 }
-int flag_value( const struct flag_type *flag_table, char *argument);
-void show_flag_cmds( CHAR_DATA *ch, const struct flag_type *flag_table );
 
 void do_forcewear(CHAR_DATA *ch, char *argument)
 {
@@ -2832,9 +2789,6 @@ OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeti
 	return obj;
 }
 
-#define COSM_UNDER(a,b,c,d) 	obj_to_obj(make_cosmetic(a,b,c,d),obj);
-#define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,NULL,NULL),obj);
-#define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,NULL,c),obj);
 void pulse_prog_repop_container(OBJ_DATA *obj, bool isTick)
 {
 	if(obj->contains)
