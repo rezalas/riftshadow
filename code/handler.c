@@ -31,28 +31,8 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-#include "spec.h"
+#include "handler.h"
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_return	);
-DECLARE_DO_FUN(do_wake          );
-
-/*
- * Local functions.
- */
-void	affect_modify	args( ( CHAR_DATA *ch, AFFECT_DATA *paf, bool add ) );
-void	object_modify	args( ( OBJ_DATA *obj, AFFECT_DATA *paf, bool fAdd ) );
-bool	is_safe_rspell	args( ( int level, CHAR_DATA *victim) );
-void    modify_location args( (CHAR_DATA *ch, int location, int mod, bool add) );
 /* friend stuff -- for NPC's mostly */
 bool is_friend(CHAR_DATA *ch,CHAR_DATA *victim)
 {
@@ -551,8 +531,6 @@ int get_skill(CHAR_DATA *ch, int sn)
 	
 	return URANGE(0,skill,100);
 }
-
-int get_weapon_sn_new(CHAR_DATA *ch, int type);
 
 /* for returning weapon information */
 int get_weapon_sn(CHAR_DATA *ch)
@@ -3187,7 +3165,6 @@ char *off_bit_name(long off_flags[])
 }
 
 /* Room Affects */
-void	affect_modify_room	args( ( ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd ) );
 
 /*
  * Apply or remove an affect to a room.
