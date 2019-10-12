@@ -2,24 +2,8 @@
 /****************************************************************************/
 /* Welcome to Sorcerer land.						    					*/
 /****************************************************************************/
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "interp.h"
-#include "tables.h"
+#include "sorcerer.h"
 
-int flag_lookup args((const char *name, const struct flag_type *flag_table));
-void concave_shell_move args((CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom));
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-int damage_queue args((CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun));
 int para_compute(int ele1, int ele2)
 {
 	switch (ele1) {
@@ -3506,9 +3490,6 @@ void acid_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	extract_obj(obj);
 	return;
 }
-
-extern char *  const   dir_name[];
-extern const   sh_int  rev_dir[];
 
 void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
