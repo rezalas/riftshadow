@@ -1,5 +1,5 @@
 #include "class.h"
-#include <stdio.h> //temp
+
 CClass *CClass::first = NULL;
 
 CClass::CClass()

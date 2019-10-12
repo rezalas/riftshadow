@@ -1,6 +1,7 @@
 #ifndef CLASS_H
 #define CLASS_H
 
+#include <stdio.h> //temp
 #include "rift.h"
 /*
 #define CLASS_NONE          0
