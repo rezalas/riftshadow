@@ -1,43 +1,4 @@
-#include "stdlibs/file.h"
-//#include "autogen/fundefs.h"
-#include "autogen/coldefs.h"
-
-#include <stdlib.h>
-//#include "mud.h"
-#include "area.h"
-#include "room.h"
-#include "exit.h"
-#include "merc.h"
-#include "db.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "tables.h"
-#include "update.h"
-#include "interp.h"
-#include "olc.h"
-#include "spec.h"
-#include <string.h>
-/*
- *  * Local booting procedures.
- *  */
-void    init_mm         args( ( void ) );
-void    load_area       args( ( FILE *fp ) );
-void    new_load_area   args( ( FILE *fp ) );   /* OLC */
-void    load_mobs  args( ( FILE *fp ) );
-void    load_objs       args( ( FILE *fp ) );
-void    load_resets     args( ( FILE *fp ) );
-void    load_newresets    args( ( FILE *fp ) );
-void    load_rooms  args( ( FILE *fp ) );
-void    load_socials    args( ( FILE *fp ) );
-void    load_bans       args( ( void ) );
-void    load_votes      args( ( void ) );
-void    load_cabal_items        args( ( void ) );
-void    fix_exits       args( ( void ) );
-void    find_adjacents  args( ( void ) );
-void    clean_notes     args( ( void ) );
-void    load_improgs    args( ( FILE *fp ) );
-void    load_specs      args( ( FILE *fp ) );
-void    reset_area      args( ( AREA_DATA * pArea ) );
+#include "bootup.h"
 
 extern char strArea[MAX_INPUT_LENGTH];
 extern FILE *                  fpArea;
@@ -280,63 +241,7 @@ void CMud::LoadAreas()
 	
 }
 
-/*
-* this macro loads SQL table data into a linked list
-* superfast kung fu style!
-* -cal 
-*/
 
-#define DEFINE_SQLTABLELOAD(classname, funcname, loaddef) \
-void classname::funcname(const char *query) \
-{ \
-	CRow row; \
-	classname *stackcopy; \
-	int i = 0; \
-	int nResults = RS.SQL.Select(query), nSize = nResults * sizeof(classname); \
-	classname *lastp = NULL, *memptr = NULL; \
-	while(!RS.SQL.End()) \
-	{ \
-		row = RS.SQL.GetRow(); \
-		stackcopy                               = new classname; \
-		if(!classname::first) \
-		{ \
-			classname::first 			= stackcopy; \
-		}\
-		else \
-			((classname *)lastp)->next 	= stackcopy; \
-		stackcopy->index						= i++; \
-		loaddef(stackcopy) \
-		stackcopy->next 						= NULL; \
-		lastp 							   		 = stackcopy; \
-	} \
-	RS.SQL.FreeResults(); \
-} 
-/* associates rooms with their area in an appallingly fast way by avoiding lookups */
-#define ASSOCIATE_AREA(troom, aid)	troom.SetArea((CArea *)(CArea::first+aid*sizeof(CArea)))
-/* allocates exits for rooms */
-#define ALLOCATE_EXITS(troom)	\
-	int numexits = 0; \
-	for(int jloop = 0; jloop < MAX_EXITS; jloop++) \
-		if(row[jloop*4 + COL_WORLD_ROOMS_0_TO_ROOM][0] != -1) \
-			numexits++; \
-	void *jptr = (void *)new char[numexits * sizeof(CExit)]; \
-	for(int jloop = 0; jloop < MAX_EXITS; jloop++) \
-	{\
-		if(row[jloop*4 + COL_WORLD_ROOMS_0_TO_ROOM][0] == -1) continue;\
-		CExit *eptr = (CExit *)((char *)jptr + jloop * sizeof(CExit)); \
-		LOAD_EXIT_DATA(eptr); \
-		troom.exits[i] = eptr; \
-	}
-
-DEFINE_SQLTABLELOAD(CClass, LoadClassTable, LOAD_CLASS_TABLE)
-//DEFINE_SQLTABLELOAD(CRace, LoadRaceTable, LOAD_RACE_TABLE)
-//DEFINE_SQLTABLELOAD(CCommand, LoadCmdTable, LOAD_INTERP_TABLE)
-//DEFINE_SQLTABLELOAD(CArea, LoadAreaTable, LOAD_WORLD_AREAS)
-
-//DEFINE_SQLTABLELOAD(CRoom, LoadRoomTable, LOAD_WORLD_ROOMS)
-	
-/* remove this */
-//#include <sys/time.h>
 void CArea::LoadAreaData()
 {
 	/* NOTE: class macro weapon is disabled 'cause it's a double for some
