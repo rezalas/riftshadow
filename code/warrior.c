@@ -1,24 +1,7 @@
 /****************************************************************************/
 /* Welcome to Warrior land.                                                 */
 /****************************************************************************/
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-
-bool	is_wielded		args((CHAR_DATA *ch, int weapon, int type));
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-CHAR_DATA *get_char_room	args((CHAR_DATA *ch, char *argument));
-void	brace_helper_undo (CHAR_DATA *ch, float *bracemod);
-void	execute_retreat (CHAR_DATA *ch, int *direction);
+#include "warrior.h"
 
 int style_lookup(char *argument)
 {
