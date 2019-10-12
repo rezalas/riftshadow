@@ -1,35 +1,6 @@
 /* IMPROGS Expansion: ROOM PROGS (Eladrian) */
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "magic.h"
-#include "interp.h"
-#include "recycle.h"
-#include "tables.h"
-#include "room.h"
-#include "rift.h"
-
-DECLARE_RPROG_FUN_PULSE( pulse_prog_cimar_sewergrate );
-DECLARE_RPROG_FUN_SPEECH( speech_prog_ilopheth_shack );
-DECLARE_RPROG_FUN_PULSE(pulse_prog_cim_conv);
-DECLARE_RPROG_FUN_ENTRY(entry_prog_ilopheth_flute);
-DECLARE_RPROG_FUN_ENTRY(entry_prog_sidhe_ankle);
-DECLARE_RPROG_FUN_OPEN(open_prog_mudschool_key);
-DECLARE_RPROG_FUN_MOVE(move_prog_mudschool_key);
-DECLARE_RPROG_FUN_MOVE(move_prog_door_close);
-DECLARE_RPROG_FUN_PULSE(pulse_prog_mudschool_snake);
-DECLARE_RPROG_FUN_PULSE(pulse_prog_elven_star);
-DECLARE_RPROG_FUN_OPEN(open_prog_bust_room);
-DECLARE_RPROG_FUN_OPEN(open_prog_nodoor);
-DECLARE_RPROG_FUN_MOVE(move_prog_stone_roll);
-DECLARE_RPROG_FUN_MOVE(move_prog_horde_shrine);
-DECLARE_RPROG_FUN_ENTRY(entry_prog_iseldheim_lift);
-DECLARE_RPROG_FUN_DROP(drop_prog_elven_star);
-DECLARE_RPROG_FUN_SPEECH(speech_prog_elven_down);
+#include "rprog.h"
 
 const	struct	improg_type	rprog_table[] =
 {
