@@ -31,120 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "magic.h"
-#include "interp.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-
-DECLARE_IPROG_FUN_GREET( greet_prog_corpse_explode);
-
-DECLARE_IPROG_FUN_LOOT(loot_prog_shelf);
-
-DECLARE_IPROG_FUN_FIGHT(fight_prog_cure_critical);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_tattoo_sceptre);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_amber_medallion);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_axe_trelaran);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_horde_bull);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_horde_bear);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_horde_lion);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_horde_wolf);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_horde_hawk);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_ruins_sword);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_essence_darkness);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_cankerworm);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_skean);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_scales);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_arms_light);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_devils_eye);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_drow_talisman);
-
-DECLARE_IPROG_FUN_PULSE(pulse_prog_steal);
-DECLARE_IPROG_FUN_PULSE(pulse_prog_pillar_zap);
-DECLARE_IPROG_FUN_PULSE(pulse_prog_talismanic_scrap);
-DECLARE_IPROG_FUN_PULSE(pulse_prog_talismanic_page);
-DECLARE_IPROG_FUN_PULSE(pulse_prog_cimar_babies);
-DECLARE_IPROG_FUN_PULSE(pulse_prog_repop_container);
-
-DECLARE_IPROG_FUN_OPEN(open_prog_sewer_casket);
-DECLARE_IPROG_FUN_OPEN(open_prog_beef_balls);
-
-DECLARE_IPROG_FUN_INVOKE(invoke_prog_tattoo_dioxide);
-DECLARE_IPROG_FUN_INVOKE(invoke_prog_tattoo_jackass);
-DECLARE_IPROG_FUN_INVOKE(invoke_prog_tattoo_morglum);
-DECLARE_IPROG_FUN_INVOKE(invoke_prog_tattoo_calenduil);
-DECLARE_IPROG_FUN_INVOKE(invoke_prog_tattoo_zethus);
-DECLARE_IPROG_FUN_INVOKE(invoke_prog_explosives);
-
-DECLARE_IPROG_FUN_ENTRY(entry_prog_explosives);
-
-DECLARE_IPROG_FUN_DEATH(death_prog_explosives);
-DECLARE_IPROG_FUN_DEATH(death_prog_trophy_belt);
-
-DECLARE_IPROG_FUN_DROP(drop_prog_elven_gem);
-
-DECLARE_IPROG_FUN_SPEECH(speech_prog_ice_dragon_statue);
-DECLARE_IPROG_FUN_SPEECH(speech_prog_vnum_talisman);
-DECLARE_IPROG_FUN_SPEECH(speech_prog_elven_mirror);
-
-DECLARE_IPROG_FUN_GIVE(give_prog_cabal_item);
-
-DECLARE_IPROG_FUN_PULSE(pulse_prog_horde_jackal);
-
-DECLARE_IPROG_FUN_VERB(verb_prog_place_star);
-DECLARE_IPROG_FUN_VERB(verb_prog_turn_wyntran);
-
-// Fallen Desert Progs
-DECLARE_IPROG_FUN_VERB(verb_prog_fallendesert_climb_ladder);
-
-DECLARE_IPROG_FUN_VERB(verb_prog_rub_ball);
-DECLARE_IPROG_FUN_VERB(verb_prog_twist_ring);
-DECLARE_IPROG_FUN_VERB(verb_prog_twist_two_faced);
-DECLARE_IPROG_FUN_VERB(verb_prog_energize_tattoo);
-DECLARE_IPROG_FUN_VERB(verb_prog_harness_crystal);
-DECLARE_IPROG_FUN_VERB(verb_prog_fire_pistol);
-DECLARE_IPROG_FUN_VERB(verb_prog_kneel_guillotine);
-DECLARE_IPROG_FUN_VERB(verb_prog_rub_talisman);
-DECLARE_IPROG_FUN_VERB(verb_prog_gate_talisman);
-DECLARE_IPROG_FUN_VERB(verb_prog_touch_obelisk);
-DECLARE_IPROG_FUN_VERB(verb_prog_pull_hook);
-DECLARE_IPROG_FUN_VERB(verb_prog_turn_spindle);
-DECLARE_IPROG_FUN_VERB(verb_prog_listen_conversation);
-DECLARE_IPROG_FUN_VERB(verb_prog_feed_baby);
-DECLARE_IPROG_FUN_VERB(verb_prog_antava_touch_hand);
-DECLARE_IPROG_FUN_VERB(verb_prog_ilopheth_bush);
-DECLARE_IPROG_FUN_VERB(verb_prog_ilopheth_climb_tree);
-DECLARE_IPROG_FUN_VERB(verb_prog_sidhe_climb_vine);
-DECLARE_IPROG_FUN_VERB(verb_prog_pull_book);
-DECLARE_IPROG_FUN_VERB(verb_prog_look_topbounties);
-DECLARE_IPROG_FUN_VERB(verb_prog_pour_wine);
-DECLARE_IPROG_FUN_VERB(verb_prog_attach_weapon);
-DECLARE_IPROG_FUN_VERB(verb_prog_join_guild);
-DECLARE_IPROG_FUN_VERB(verb_prog_pull_lever);
-DECLARE_IPROG_FUN_VERB(verb_prog_turn_wheel);
-DECLARE_IPROG_FUN_VERB(verb_prog_tie_rope);
-DECLARE_IPROG_FUN_VERB(verb_prog_tilt_bust);
-DECLARE_IPROG_FUN_VERB(verb_prog_tilt_scales);
-DECLARE_IPROG_FUN_VERB(verb_prog_roll_tablet);
-DECLARE_IPROG_FUN_VERB(verb_prog_throw_net);
-DECLARE_IPROG_FUN_VERB(verb_prog_check_bounties);
-DECLARE_IPROG_FUN_VERB(verb_prog_iseldheim_lever_pull);
-
-DECLARE_IPROG_FUN_HIT(hit_prog_blade_truth);
-DECLARE_IPROG_FUN_HIT(hit_prog_essence_light);
-DECLARE_IPROG_FUN_HIT(hit_prog_essence_darkness);
-DECLARE_IPROG_FUN_FIGHT(fight_prog_bugzapper);
-
-DECLARE_IPROG_FUN_GET(get_prog_bad_idea);
+#include "iprog.h"
 
 const   struct  improg_type   iprog_table[] =
 {
@@ -1317,9 +1204,6 @@ void fight_prog_ruins_sword(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	return;
 }
-
-void mprog_say(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch);
-void mprog_emote(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch);
 
 void verb_prog_check_bounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {

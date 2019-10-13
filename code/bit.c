@@ -17,75 +17,7 @@
  implementing a system like below with such functions. -Jason Dinkel
  */
 
-
-
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "tables.h"
-
-
-struct flag_stat_type
-{
-    const struct flag_type *structure;
-    bool stat;
-};
-
-
-
-/*****************************************************************************
- Name:		flag_stat_table
- Purpose:	This table catagorizes the tables following the lookup
- 		functions below into stats and flags.  Flags can be toggled
- 		but stats can only be assigned.  Update this table when a
- 		new set of flags is installed.
- ****************************************************************************/
-const struct flag_stat_type flag_stat_table[] =
-{
-/*  {	structure		stat	}, */
-    {	area_flags,		FALSE	},
-    {   sex_flags,		TRUE	},
-    {   exit_flags,		FALSE	},
-    {   door_resets,		TRUE	},
-    {   room_flags,		FALSE	},
-    {   sector_flags,		TRUE	},
-    {   type_flags,		TRUE	},
-    {   extra_flags,		FALSE	},
-    {   wear_flags,		FALSE	},
-    {   act_flags,		FALSE	},
-    {   affect_flags,		FALSE	},
-    {   apply_flags,		TRUE	},
-    {   wear_loc_flags,		TRUE	},
-    {   wear_loc_strings,	TRUE	},
-    {   weapon_flags,		TRUE	},
-    {   container_flags,	FALSE	},
-
-/* ROM specific flags: */
-
-    {   material_type,          TRUE    },
-    {   form_flags,             FALSE   },
-    {   part_flags,             FALSE   },
-    {   ac_type,                TRUE    },
-    {   size_flags,             TRUE    },
-    {   position_flags,         TRUE    },
-    {   off_flags,              FALSE   },
-    {   imm_flags,              FALSE   },
-    {   res_flags,              FALSE   },
-    {   vuln_flags,             FALSE   },
-    {   weapon_class,           TRUE    },
-    {   weapon_type2,            FALSE   },
-    {   0,			0	}
-};
-
-
+#include "bit.h"
 
 /*****************************************************************************
  Name:		is_stat( table )

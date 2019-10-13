@@ -31,15 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "merc.h"
-#include "tables.h"
-
-int flag_lookup args( ( const char *name, const struct flag_type *flag_table) );
+#include "flags.h"
 
 void do_flag(CHAR_DATA *ch, char *argument)
 {

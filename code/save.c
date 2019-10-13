@@ -1,23 +1,13 @@
+#include "save.h"
 
-#include <sys/types.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "tables.h"
-
-extern  int     _filbuf         args( (FILE *) );
-
-
-int rename(const char *oldfname, const char *newfname);
 long lvuln_flags[MAX_BITVECTOR];
 long limmune_flags[MAX_BITVECTOR];
 long lres_flags[MAX_BITVECTOR];
-bool check_parse_name args((char *name));
+
+/*
+ * Array of containers read for proper re-nesting of objects.
+ */
+static	OBJ_DATA *	rgObjNest	[MAX_NEST];
 
 char *print_flags(long flag[])
 {
@@ -51,28 +41,6 @@ char *print_flags(long flag[])
 }
 
 
-/*
- * Array of containers read for proper re-nesting of objects.
- */
-#define MAX_NEST	100
-static	OBJ_DATA *	rgObjNest	[MAX_NEST];
-
-
-
-/*
- * Local functions.
- */
-void	fwrite_char	args( ( CHAR_DATA *ch,  FILE *fp ) );
-void	fwrite_obj	args( ( CHAR_DATA *ch,  OBJ_DATA  *obj,
-			    FILE *fp, int iNest ) );
-void	fwrite_pet	args( ( CHAR_DATA *pet, FILE *fp) );
-void    fwrite_charmie  args( ( CHAR_DATA *ch, FILE *fp) );
-void	fread_char	args( ( CHAR_DATA *ch,  FILE *fp ) );
-void    fread_pet	args( ( CHAR_DATA *ch,  FILE *fp ) );
-void	fread_obj	args( ( CHAR_DATA *ch,  FILE *fp ) );
-void    fread_charmie   args( ( CHAR_DATA *ch, FILE *fp ) );
-
-
 int isAftSpell (int aftype) {
 	if ((aftype != AFT_SKILL) &&
 	(aftype != AFT_POWER) &&
@@ -91,7 +59,6 @@ int isAftSpell (int aftype) {
  * Would be cool to save NPC's too for quest purposes,
  *   some of the infrastructure is provided.
  */
-extern int mPort;
 void save_char_obj( CHAR_DATA *ch )
 {
     char strsave[MAX_INPUT_LENGTH], filenm[MSL], query[MSL*2];
@@ -975,39 +942,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name )
 /*
  * Read in a char.
  */
-
-#ifndef KEY
-#define KEY( literal, field, value )                \
-                if ( !str_cmp( word, literal ) )    \
-                {                                   \
-                    field  = value;                 \
-                    fMatch = TRUE;                  \
-                    break;                          \
-                }
-#endif
-
-/* provided to free strings */
-#ifndef KEYS
-#define KEYS( literal, field, value )               \
-                if ( !str_cmp( word, literal ) )    \
-                {                                   \
-                    free_pstring(field);            \
-                    field  = value;                 \
-                    fMatch = TRUE;                  \
-                    break;                          \
-                }
-#endif
-
-#ifndef KEYV
-#define KEYV( literal, field )                      \
-                if ( !str_cmp( word, literal ) )    \
-                {                                   \
-                    fread_flag_new(field, fp);      \
-                    fMatch = TRUE;                  \
-                    break;                          \
-                }
-#endif
-
 void fread_char( CHAR_DATA *ch, FILE *fp )
 {
     char buf[MAX_STRING_LENGTH];
@@ -1794,8 +1728,6 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
     	}
     }
 }
-
-extern	OBJ_DATA	*obj_free;
 
 void fread_obj( CHAR_DATA *ch, FILE *fp )
 {

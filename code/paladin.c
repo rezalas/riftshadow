@@ -1,18 +1,4 @@
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
-
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
+#include "paladin.h"
 
 void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

@@ -31,13 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "recycle.h"
+#include "effects.h"
 
 void acid_effect(void *vo, int level, int dam, int target)
 {

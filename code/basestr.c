@@ -5,9 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define RSTRDEBUG
-#define UPCHAR(c)       ((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
-
 CBaseStr::CBaseStr(void)
 {
 }

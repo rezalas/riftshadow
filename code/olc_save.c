@@ -19,37 +19,7 @@
  *  mob etc is part of that area.
  */
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "olc.h"
-#include "tables.h"
-#include "lookup.h"
-#include "update.h"
-#include "interp.h"
-#include "spec.h"
-
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-char * bitvector_to_flag args((long bitvect[]));
-char * munch(char *str);
-char * display_name_lookup args((long bitv, const struct display_type *flag_table));
-char * restrict_name_lookup args((long bitv));
-/*
- *  Verbose writes reset data in plain english into the comments
- *  section of the resets.  It makes areas considerably larger but
- *  may aid in debugging.
- */
-
-/* #define VERBOSE */
+#include "olc_save.h"
 
 /*****************************************************************************
  Name:		fix_string

@@ -13,29 +13,13 @@
 
 
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
+#include "mem.h"
 
 /*
  * Globals
  */
-extern          int                     top_reset;
-extern          int                     top_area;
-extern          int                     top_exit;
-extern          int                     top_ed;
-extern          int                     top_room;
 
 AREA_DATA		*	area_free;
-extern EXTRA_DESCR_DATA	*	extra_descr_free;
 EXIT_DATA		*	exit_free;
 ROOM_INDEX_DATA		*	room_index_free;
 OBJ_INDEX_DATA		*	obj_index_free;
@@ -43,11 +27,6 @@ SHOP_DATA		*	shop_free;
 MOB_INDEX_DATA		*	mob_index_free;
 RESET_DATA		*	reset_free;
 HELP_DATA		*	help_free;
-
-extern HELP_DATA		*	help_last;
-
-void free_extra_descr( EXTRA_DESCR_DATA *pExtra );
-void free_affect( AFFECT_DATA *af );
 
 RESET_DATA *new_reset_data( void )
 {
@@ -275,7 +254,6 @@ ROOM_INDEX_DATA *new_room_index( void )
 
 
 
-extern AFFECT_DATA *affect_free;
 /*
 AFFECT_DATA *new_affect( void )
 {

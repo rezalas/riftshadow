@@ -31,59 +31,27 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "interp.h"
-#include "tables.h"
-#include "spec.h"
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_wear);
-DECLARE_DO_FUN(do_look		);
-DECLARE_DO_FUN(do_cb );
-DECLARE_DO_FUN(do_recall	);
-DECLARE_DO_FUN(do_visible	);
-DECLARE_DO_FUN(do_stand		);
-DECLARE_DO_FUN(do_camp		);
-DECLARE_DO_FUN(do_animal_call	);
-DECLARE_DO_FUN(do_say		);
-DECLARE_DO_FUN(do_slay		);
-DECLARE_DO_FUN(do_yell		);
-DECLARE_DO_FUN( do_door_bash);
-DECLARE_DO_FUN(do_open		);
-DECLARE_DO_FUN(do_pick		);
-DECLARE_AFF_FUN(poison_tick);
-DECLARE_AFF_FUN(quicksand_pulse_sink);
-
-char *  const   dir_name    []      =
+#include "act_move.h"
+char * const dir_name [] = 
 {
-	    "north", "east", "south", "west", "up", "down"
+	"north",
+	"east",
+	"south",
+	"west",
+	"up",
+	"down"
 };
 
-const   sh_int  rev_dir     []      =
+const sh_int rev_dir [] = 
 {
-	    2, 3, 0, 1, 5, 4
+	2,
+	3,
+	0,
+	1,
+	5,
+	4
 };
 
-int	find_door	args( ( CHAR_DATA *ch, char *arg ) );
-bool	has_key		args( ( CHAR_DATA *ch, int key ) );
-void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap);
-void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap);
-bool	check_barred		args((CHAR_DATA *ch, ROOM_INDEX_DATA *to_room));
-bool	bar_entry		args((CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room));
-void	parse_bar		args((char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA
-					*to_room));
-RUNE_DATA *find_rune args((void *vo, int target_type, int trigger_type, RUNE_DATA *rune_prev));
-AFFECT_DATA *affect_find	args((AFFECT_DATA *paf, int sn));
-bool	is_land	args( ( ROOM_INDEX_DATA *room) );
-void	add_tracks	args((ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction));
-void	track_attack(CHAR_DATA *mob, CHAR_DATA *victim);
 /* globals */
 
 PATHFIND_DATA *best_path;

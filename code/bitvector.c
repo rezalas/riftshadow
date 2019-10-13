@@ -4,8 +4,6 @@
 #include "stdlibs/bitvector.h"
 #include <stdlib.h>
 
-#define ARR(x)		x < 32 ? 0 : 1
-
 CBitvector::CBitvector()
 {
 	bitvector[0] = 0;

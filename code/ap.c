@@ -1,25 +1,5 @@
 /* Home for everything Anti */
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
-
-DECLARE_DO_FUN(do_taunt);
-char *	format_obj_to_char	args(( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort ));
-void command_execute_delay	args(( CHAR_DATA *ch, char *command));
-void furcas_vanish (CHAR_DATA *ch, CHAR_DATA *mob);
-void insanity_two (CHAR_DATA *ch, int room);
-void insanity_fight (CHAR_DATA *ch);
-void mephisto_two (CHAR_DATA *ch, CHAR_DATA *victim, char *argument);
+#include "ap.h"
 
 void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 {

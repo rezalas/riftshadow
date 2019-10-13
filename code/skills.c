@@ -31,26 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_groups	);
-DECLARE_DO_FUN(do_help		);
-DECLARE_DO_FUN(do_say		);
-
-
-int is_mob_spec args((int sn));
-
-int weapon_num_lookup args((const char *name));
-
+#include "skills.h"
 
 /* used to get new skills */
 void do_gain(CHAR_DATA *ch, char *argument)

@@ -25,24 +25,7 @@
 *	ROM license, in the file Rom24/doc/rom.license			   *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <math.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "magic.h"
-
-
-DECLARE_DO_FUN(do_goto);
-DECLARE_DO_FUN(do_yell);
-DECLARE_DO_FUN(do_murder);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_flee);
+#include "cabal.h"
 
 bool check_horde(CHAR_DATA *ch)
 {
@@ -624,7 +607,6 @@ void spell_hunters_strength(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	send_to_char("You feel your body surge with the newfound strength of a hunter seeking his prey!\n\r",ch);
 	act("$n seems to move with a newfound strength and agility.",ch,0,0,TO_ROOM);
 }
-char * get_room_description(ROOM_INDEX_DATA *room);
 
 void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

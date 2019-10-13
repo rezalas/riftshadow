@@ -4,6 +4,9 @@
 #define STRING_END		'~'
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include "../rift.h"
 #ifndef BEENHERE
 //	#define throwbug(...) throw Exception(__FILE__, __LINE__, __VA_ARGS__);

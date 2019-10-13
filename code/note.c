@@ -31,25 +31,7 @@
 *       found in the file /Tartarus/doc/tartarus.doc                       *
 ***************************************************************************/
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <mysql.h>
-#include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-
-/* globals from db.c for load_notes */
-extern  int     _filbuf         args( (FILE *) );
-extern FILE *                  fpArea;
-extern char                    strArea[MAX_INPUT_LENGTH];
-
-void parse_note(CHAR_DATA *ch, char *argument, int type);
-bool hide_note(CHAR_DATA *ch, MYSQL_ROW row);
+#include "note.h"
 
 int count_spool(CHAR_DATA *ch, int type)
 {
@@ -239,8 +221,6 @@ void update_read(CHAR_DATA *ch, long stamp, int type)
             break;
     }
 }
-void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis = TRUE);
-bool is_affected_prof(CHAR_DATA *ch, char *prof);
 
 void parse_note( CHAR_DATA *ch, char *argument, int type )
 {
