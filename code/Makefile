@@ -1,8 +1,16 @@
 CC      = g++
 PROF    = -O1 -g
-INCLUDES= -w $(PROF) $(NOCRYPT) -I/usr/include/mysql
+
+ifeq ($(OS),Windows_NT)
+	INCLUDES = -w $(PROF) $(NOCRYPT) -I C:/Program\ Files\ (x86)/MariaDB/MariaDB\ Connector\ C/include -I C:/MinGW/msys/1.0/include
+	L_FLAGS = -lm -lcrypt -L C:/MinGW/msys/1.0/lib -lmysqlclient 
+else 
+	INCLUDES= -w $(PROF) $(NOCRYPT) -I/usr/include/mysql
+	L_FLAGS =  -lm -lcrypt -L/usr/lib -lmysqlclient
+endif
 #INCLUDES=  -Wall -Wno-unused-variable -Wno-deprecated $(PROF) $(NOCRYPT) -I/usr/include/mysql -lmysqlclient 
-L_FLAGS =  -lm -lcrypt -L/usr/lib -lmysqlclient
+
+
 
 O_FILES = strings.o \
 		  file.o \

@@ -4056,60 +4056,60 @@ void do_password( CHAR_DATA *ch, char *argument )
      */
     pArg = arg1;
     while ( isspace(*argument) )
-	argument++;
+		argument++;
 
     cEnd = ' ';
     if ( *argument == '\'' || *argument == '"' )
-	cEnd = *argument++;
+		cEnd = *argument++;
 
     while ( *argument != '\0' )
-    {
-	if ( *argument == cEnd )
 	{
-	    argument++;
-	    break;
+		if ( *argument == cEnd )
+		{
+			argument++;
+			break;
+		}
+		*pArg++ = *argument++;
 	}
-	*pArg++ = *argument++;
-    }
     *pArg = '\0';
 
     pArg = arg2;
     while ( isspace(*argument) )
-	argument++;
+		argument++;
 
     cEnd = ' ';
     if ( *argument == '\'' || *argument == '"' )
-	cEnd = *argument++;
+		cEnd = *argument++;
 
     while ( *argument != '\0' )
     {
-	if ( *argument == cEnd )
-	{
-	    argument++;
-	    break;
-	}
-	*pArg++ = *argument++;
+		if ( *argument == cEnd )
+		{
+			argument++;
+			break;
+		}
+		*pArg++ = *argument++;
     }
     *pArg = '\0';
 
     if ( arg1[0] == '\0' || arg2[0] == '\0' )
     {
-	send_to_char( "Syntax: password <old> <new>.\n\r", ch );
-	return;
+		send_to_char( "Syntax: password <old> <new>.\n\r", ch );
+		return;
     }
 
     if ( strcmp(crypt(arg1, ch->pcdata->pwd ), ch->pcdata->pwd ) )
     {
-	WAIT_STATE( ch, 40 );
-	send_to_char( "Wrong password.  Wait 10 seconds.\n\r", ch );
-	return;
+		WAIT_STATE( ch, 40 );
+		send_to_char( "Wrong password.  Wait 10 seconds.\n\r", ch );
+		return;
     }
 
     if ( strlen(arg2) < 5 )
     {
-	send_to_char(
-	    "New password must be at least five characters long.\n\r", ch );
-	return;
+		send_to_char(
+	    	"New password must be at least five characters long.\n\r", ch );
+		return;
     }
 
     /*

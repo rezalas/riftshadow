@@ -10,7 +10,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <signal.h>
-#include <crypt.h>
+
+#ifdef _WIN32
+  #include <windows.h>
+  #include <wincrypt.h>
+#else
+  #include <crypt.h>
+#endif
 
 #include "merc.h"
 #include "recycle.h"
@@ -44,9 +50,14 @@ bool bDebug = FALSE;
  * Socket and TCP/IP stuff.
  */
 #include <fcntl.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
+#ifdef _WIN32
+  #include <winsock.h>
+  #include <winsock2.h>
+#else 
+  #include <netdb.h>
+  #include <netinet/in.h>
+#endif
+  #include <sys/socket.h>
 #include "telnet.h"
 const char echo_off_str[] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const char echo_on_str[] = { IAC, WONT, TELOPT_ECHO, '\0' };

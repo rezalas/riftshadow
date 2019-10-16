@@ -8,7 +8,13 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <time.h>
-#include <crypt.h>
+
+#ifdef _WIN32
+    #include <windows.h>
+    #include <wincrypt.h>
+#else
+    #include <crypt.h>
+#endif
 #include "merc.h"
 #include "magic.h"
 #include "recycle.h"
