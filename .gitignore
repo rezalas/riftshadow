@@ -2,3 +2,7 @@
 .vs/
 .vscode/
 *.o
+.vscode/launch.json
+
+.vscode/launch.json
+.vscode/tasks.json
