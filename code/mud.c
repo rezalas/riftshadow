@@ -1,4 +1,10 @@
-#include "socket.h"
+#ifdef _WIN32
+	#include <windows.h>
+	#include <winsock.h>
+	#include <winsock2.h>
+#else
+	#include "socket.h"
+#endif
 #include "stdlibs/file.h"
 //#include "autogen/fundefs.h"
 //#include "autogen/coldefs.h"

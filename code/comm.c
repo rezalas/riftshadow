@@ -477,11 +477,14 @@ void init_descriptor( int control )
 	return;
     }
 
+#ifndef _WIN32  /* windows doesn't lock files like this so we should be able to bypass
+				 */
     if ( fcntl( desc, F_SETFL, FNDELAY ) == -1 )
     {
-	perror( "New_descriptor: fcntl: FNDELAY" );
-	return;
+		perror( "New_descriptor: fcntl: FNDELAY" );
+		return;
     }
+#endif
 
     /*
      * Cons a new descriptor.
@@ -1165,7 +1168,7 @@ bool output_buffer( DESCRIPTOR_DATA *d )
     if ( d==NULL )
     	return FALSE;
     	
-    bzero( buf, MAX_STRING_LENGTH );
+    memset( buf, '\0', MAX_STRING_LENGTH );
     point=buf;
     str=d->outbuf;
     o_color=color;
@@ -1182,7 +1185,7 @@ bool output_buffer( DESCRIPTOR_DATA *d )
     	    				   buf,
     	    				   strlen( buf ) )) )
     	        break;
-    	    bzero( buf, MAX_STRING_LENGTH );
+    	    memset( buf,'\0', MAX_STRING_LENGTH);
     	    point=buf;
     	}
 

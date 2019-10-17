@@ -52,7 +52,7 @@
 
 #ifndef OLD_RAND
 //long random();
-void srandom(unsigned int);
+//void srandom(unsigned int);
 int getpid();
 time_t time(time_t *tloc);
 #endif
@@ -3333,26 +3333,26 @@ static  int     rgiState[2+55];
 
 void init_mm( )
 {
-#if defined (OLD_RAND)
-    int *piState;
-    int iState;
+	#if defined (OLD_RAND)
+		int *piState;
+		int iState;
 
-    piState     = &rgiState[2];
+		piState     = &rgiState[2];
 
-    piState[-2] = 55 - 55;
-    piState[-1] = 55 - 24;
+		piState[-2] = 55 - 55;
+		piState[-1] = 55 - 24;
 
-    piState[0]  = ((int) current_time) & ((1 << 30) - 1);
-    piState[1]  = 1;
-    for ( iState = 2; iState < 55; iState++ )
-    {
-        piState[iState] = (piState[iState-1] + piState[iState-2])
-        & ((1 << 30) - 1);
-    }
-#else
-    srandom(time(NULL)^getpid());
-#endif
-    return;
+		piState[0]  = ((int) current_time) & ((1 << 30) - 1);
+		piState[1]  = 1;
+		for ( iState = 2; iState < 55; iState++ )
+		{
+			piState[iState] = (piState[iState-1] + piState[iState-2])
+			& ((1 << 30) - 1);
+		}
+	#else
+		srand(time(NULL)^getpid());
+	#endif
+		return;
 }
 
 
@@ -3379,7 +3379,7 @@ long number_mm( void )
     piState[-1]         = iState2;
     return iRand >> 6;
 #else
-    return random() >> 6;
+    return rand() >> 6;
 #endif
 }
 

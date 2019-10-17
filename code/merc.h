@@ -94,6 +94,10 @@
 int remove();
 // int system(const char * string);
 
+#ifdef _WIN32
+    #include <windows.h>
+#endif
+
 #ifndef RIFTINCLD
 //#include "rift.h"
 #include "mud.h"
@@ -4055,15 +4059,18 @@ void *  calloc          args( ( unsigned nelem, size_t size ) );
  */
 
 #ifdef __unix__
-// #define PLAYER_DIR      "../player/"        	/* Player files */
-#define PLAYER_LIST	RIFT_PLAYER_DIR "/Player.lst"  /* Player list for limits */
+    // #define PLAYER_DIR      "../player/"        	/* Player files */
+    #define NULL_FILE	"/dev/null"		/* To reserve one stream */
+
+#elif _WIN32
+    #define NULL_FILE RIFT_ROOT_DIR "/nul"  /* win32 equiv to /dev/null */
+#endif
+
 #define TEMP_GREP_RESULTS RIFT_TEMP_DIR "/tempgrepresults.tmp" /* Temporary grep results */
 #define TEMP_GREP_RESULTS_TWO RIFT_TEMP_DIR "/temp/tempgrepresults2.tmp"
 #define GOD_DIR     RIFT_ROOT_DIR "/gods/"  		/* list of gods */
 #define TEMP_FILE	RIFT_PLAYER_DIR "/romtmp"
-#define NULL_FILE	"/dev/null"		/* To reserve one stream */
-#endif
-
+#define PLAYER_LIST	RIFT_PLAYER_DIR "/Player.lst"  /* Player list for limits */
 #define VOTE_FILE       RIFT_AREA_DIR "/votes.txt"
 #define AREA_LIST       RIFT_AREA_DIR "/area.lst"  /* List of areas*/
 #define BUG_FILE        RIFT_AREA_DIR "/bugs.txt" /* For 'bug' and bug()*/
