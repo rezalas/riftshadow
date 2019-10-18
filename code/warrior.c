@@ -83,7 +83,8 @@ void do_style(CHAR_DATA *ch, char *argument)
 		return send_to_char("You aren't familiar with any such style.\n\r",ch);
 	if(ch->fighting)
 	{
-		if((skill=get_skill(ch,gsn_integrate))<2)
+	  skill = get_skill(ch, gsn_integrate);
+		if(skill < 2)
 			return send_to_char("You don't know how to switch styles in combat.\n\r",ch);
 		if(number_percent()>skill)
 		{
@@ -110,12 +111,14 @@ void do_entrap(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *wield, *dual, *weapon;
 	char buf[MAX_STRING_LENGTH];
 
-	if ((skill = get_skill(ch,gsn_entrap)) == 0) {
+	skill = get_skill(ch,gsn_entrap);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if (victim == NULL)
 	{
 		send_to_char("You must be in combat to entrap a foe's weapon!\n\r",ch);
 		return;
@@ -123,7 +126,8 @@ void do_entrap(CHAR_DATA *ch, char *argument)
 
 	if (is_wielded(ch,WEAPON_POLEARM,WIELD_PRIMARY) || is_wielded(ch,WEAPON_SPEAR,WIELD_PRIMARY) || is_wielded(ch,WEAPON_STAFF,WIELD_PRIMARY))
 	{
-		if ((weapon = get_eq_char(victim,WEAR_WIELD)) != NULL)
+	  weapon = get_eq_char(victim,WEAR_WIELD);
+		if (weapon != NULL)
 		{
 			switch(weapon->value[0])
 			{
@@ -202,7 +206,8 @@ void do_entrap(CHAR_DATA *ch, char *argument)
 	}
 	else if (get_eq_char(ch,WEAR_WIELD) && get_eq_char(ch,WEAR_DUAL_WIELD))
 	{
-		if ((weapon = get_eq_char(victim,WEAR_WIELD)) != NULL)
+	  weapon = get_eq_char(victim,WEAR_WIELD);
+		if (weapon != NULL)
 		{
 			switch(weapon->value[0])
 			{
@@ -288,7 +293,8 @@ void do_entrap(CHAR_DATA *ch, char *argument)
 			get_obj(victim,weapon,NULL, TRUE);
 	}
 
-	if ((dual = get_eq_char(victim,WEAR_DUAL_WIELD)) != NULL)
+	dual = get_eq_char(victim,WEAR_DUAL_WIELD);
+	if (dual != NULL)
 	{
 		unequip_char(victim,dual,FALSE);
 		act("You quickly swap $p into your primary hand.",victim,dual,0,TO_CHAR);
@@ -310,12 +316,14 @@ void do_hobble(CHAR_DATA *ch, char *argument)
 	bool special = FALSE;
 	AFFECT_DATA af, af2;
 
-	if ((skill = get_skill(ch,gsn_hobble)) == 0) {
+	skill = get_skill(ch,gsn_hobble);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if (victim == NULL)
 	{
 		send_to_char("You must be in combat to do that!\n\r",ch);
 		return;
@@ -341,7 +349,8 @@ void do_hobble(CHAR_DATA *ch, char *argument)
 	if (number_percent() < .5*skill)
 		special = TRUE;
 
-	if ((weapon = get_eq_char(ch,WEAR_WIELD)) != NULL)
+	weapon = get_eq_char(ch,WEAR_WIELD);
+	if (weapon != NULL)
 	{
 		switch(weapon->value[0])
 		{
@@ -567,12 +576,14 @@ void do_crippling_blow(CHAR_DATA *ch, char *argument)
 	bool special = FALSE;
 	AFFECT_DATA af, af2;
 
-	if ((skill = get_skill(ch,gsn_crippling_blow)) == 0) {
+	skill = get_skill(ch,gsn_crippling_blow);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if (victim == NULL)
 		return send_to_char("You must be in combat to do that!\n\r",ch);
 
 	if (victim->arms <= 0)
@@ -599,7 +610,8 @@ void do_crippling_blow(CHAR_DATA *ch, char *argument)
 	if (number_percent() < .5*skill)
 		special = TRUE;
 
-	if ((weapon = get_eq_char(ch,WEAR_WIELD)) != NULL)
+	weapon = get_eq_char(ch,WEAR_WIELD);
+	if (weapon != NULL)
 	{
 		switch(weapon->value[0])
 		{
@@ -805,12 +817,14 @@ void do_gouge(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *weapon;
 	AFFECT_DATA af;
 
-	if ((skill = get_skill(ch,gsn_gouge)) == 0) {
+	skill = get_skill(ch,gsn_gouge);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if (victim == NULL)
 	{
 		send_to_char("You must be in combat to do that!\n\r",ch);
 		return;
@@ -823,7 +837,8 @@ void do_gouge(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((weapon = get_eq_char(ch,WEAR_WIELD)) != NULL)
+	weapon = get_eq_char(ch,WEAR_WIELD);
+	if (weapon != NULL)
 	{
 		switch(weapon->value[0])
 		{
@@ -956,18 +971,21 @@ void do_bleed(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *weapon;
 	AFFECT_DATA af;
 
-	if ((skill = get_skill(ch,gsn_bleed)) == 0) {
+	skill = get_skill(ch,gsn_bleed);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if (victim == NULL)
 	{
 		send_to_char("You must be in combat to do that!\n\r",ch);
 		return;
 	}
 
-	if ((weapon = get_eq_char(ch,WEAR_WIELD)) != NULL)
+	weapon = get_eq_char(ch,WEAR_WIELD);
+	if (weapon != NULL)
 	{
 		switch(weapon->value[0])
 		{
@@ -1159,12 +1177,14 @@ void do_unbalance(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
 
-	if ((skill = get_skill(ch,gsn_unbalance)) == 0) {
+	skill = get_skill(ch,gsn_unbalance);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if (victim == NULL)
 	{
 		send_to_char("You must be in combat to do that!\n\r",ch);
 		return;
@@ -1443,12 +1463,14 @@ void do_impale(CHAR_DATA *ch, char *argument)
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
-	
-	if((victim = ch->fighting) == NULL)
+	victim = ch->fighting;
+	if(victim == NULL)
 	{
 		if (argument[0]=='\0')
 			return send_to_char("Impale who?\n\r",ch);
-		if ((victim = get_char_room(ch,argument)) == NULL)
+
+		victim = get_char_room(ch,argument);
+		if (victim == NULL)
 			return send_to_char("They aren't here.\n\r",ch);
 	}
 
@@ -1575,10 +1597,12 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *weapon, *dual;
 	AFFECT_DATA af;
 
-	if ((skill = get_skill(ch,gsn_hurl)) == 0)
+	skill = get_skill(ch, gsn_hurl);
+	if (skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
-	if ((weapon = get_eq_char(ch,WEAR_WIELD)) == NULL)
+	weapon = get_eq_char(ch, WEAR_WIELD);
+	if (weapon == NULL)
 		return send_to_char("You must be primary wielding the weapon you wish to hurl.\n\r",ch);
 
 	if (weapon->weight > skirmisher_max_weapweight(ch))
@@ -1598,8 +1622,10 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 	else
 		return send_to_char("You can't hurl that.\n\r",ch);
 
-	if ((direction = direction_lookup(arg2)) == -1) {
-		if ((victim = get_char_room(ch,arg1)) == NULL) {
+	direction = direction_lookup(arg2);
+	if (direction == -1) {
+	  victim = get_char_room(ch,arg1);
+		if (victim == NULL) {
 			return send_to_char("They aren't here.\n\r",ch);
 		}
 	} else {
@@ -1618,7 +1644,8 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 		to_room = pexit->u1.to_room;
 
-		if ((victim = get_char_from_room(ch,to_room,arg1)) == NULL) {
+		victim = get_char_from_room(ch,to_room,arg1);
+		if (victim == NULL) {
 			dirname = (char *)flag_name_lookup(direction,direction_table);
 			act("You can't see them $t.",ch,dirname,0,TO_CHAR);
 			return;
@@ -1714,7 +1741,8 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 	obj_from_char(weapon);
 	obj_to_room(weapon, victroom);
 
-	if ((dual = get_eq_char(ch,WEAR_DUAL_WIELD)) != NULL)
+	dual = get_eq_char(ch,WEAR_DUAL_WIELD);
+	if (dual != NULL)
 	{
 		unequip_char(ch,dual,FALSE);
 		act("You quickly swap $p into your primary hand.",ch,dual,0,TO_CHAR);
@@ -1739,17 +1767,23 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 	
 	one_argument(argument,arg);
 	
-	if ((skill = get_skill(ch,gsn_overhead)) == 0) {
+	skill = get_skill(ch,gsn_overhead);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
 	if(argument[0] == '\0') {
-		if((victim = ch->fighting) == NULL) {
+	    victim = ch->fighting;
+		if(victim == NULL) {
 			return send_to_char("Overhead who?\n\r",ch);
 		}
-	} else if ((victim = get_char_room(ch,argument)) == NULL)
-		return send_to_char("They aren't here.\n\r",ch);
+	} else{
+		victim = get_char_room(ch,argument);
+		if(victim == NULL){
+			return send_to_char("They aren't here.\n\r",ch);
+		}
+	}
 
 	if(victim == ch) {
 		send_to_char("You aren't too bright, are you?\n\r",ch);
@@ -1939,8 +1973,10 @@ void do_extract(CHAR_DATA *ch, char *argument)
 	send_to_char("You rip the broken shaft out of your wound and blood gushes forth!\n\r",ch);
 	act("$n rips the broken shaft out of his wound!",ch,0,0,TO_ROOM);
 	owner = ch;
-	if((af=affect_find(ch->affected,gsn_impale)) && af->owner)
+	af = affect_find(ch->affected,gsn_impale);
+	if(af && af->owner){
 		owner = af->owner;
+	}
 	damage_new(owner,ch,dam,gsn_impale,DAM_OTHER,TRUE,HIT_UNBLOCKABLE,HIT_NOADD,HIT_NOMULT,"the extraction*");
 	affect_strip(ch,gsn_impale);
 	return;
@@ -1950,9 +1986,10 @@ void do_exchange( CHAR_DATA *ch, char *argument)
 {
         CHAR_DATA *victim;
         int AC;
-	float chance;
+		float chance = get_skill(ch, gsn_exchange);
 
-        if (((chance = get_skill(ch,gsn_exchange)) == 0 ) ||
+
+        if ((chance == 0 ) ||
             (ch->level < skill_table[gsn_exchange].skill_level[ch->Class()->GetIndex()] &&
 			!IS_NPC(ch))) {
                 send_to_char("You don't know how to do that.\n\r",ch);
@@ -2032,7 +2069,8 @@ void do_charge (CHAR_DATA *ch, char *argument)
 	
 	one_argument (argument,arg);
 
-	if ((skill = get_skill(ch,gsn_charge)) == 0) {
+	skill = get_skill(ch,gsn_charge);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
@@ -2047,7 +2085,8 @@ void do_charge (CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_room(ch,arg)) == NULL) {
+	victim = get_char_room(ch,arg);
+	if (victim == NULL) {
 		send_to_char("They aren't here.\n\r",ch);
 		return;
 	}
@@ -2068,7 +2107,8 @@ void do_charge (CHAR_DATA *ch, char *argument)
 	if (check_sidestep(ch,victim,gsn_charge,95))
 		return;
 
-	if ((avoid = get_skill(victim, gsn_avoid)) > 0) {
+	avoid = get_skill(victim, gsn_avoid);
+	if (avoid > 0) {
 		avoid /= 2;
 		avoid += 5 * (get_curr_stat(ch,STAT_DEX) - 20);
 	}
@@ -2119,7 +2159,8 @@ bool check_ease (CHAR_DATA *ch)
 		return FALSE;
 	}
 	
-	if ((skill = get_skill(ch,gsn_ease)) == 0) {
+	skill = get_skill(ch,gsn_ease);
+	if (skill == 0) {
 		return FALSE;
 	}
 
@@ -2139,17 +2180,20 @@ void do_shieldbash (CHAR_DATA *ch, char *argument)
 	int lag = 1;
 	OBJ_DATA *shield;
 
-	if ((skill = get_skill(ch,gsn_shieldbash)) == 0) {
+	skill = get_skill(ch,gsn_shieldbash);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 			return;
 	}
 	
-	if ((victim = ch->fighting) == NULL) {
+	victim = ch->fighting;
+	if (victim == NULL) {
 		send_to_char("You must be in combat to do that!\n\r",ch);
 		return;
 	}
 
-	if ((shield = get_eq_char(ch,WEAR_SHIELD)) == NULL) {
+	shield = get_eq_char(ch,WEAR_SHIELD);
+	if (shield == NULL) {
 		send_to_char("You can't perform a shield bash without a shield!\n\r",ch);
 		return;
 	}
@@ -2208,12 +2252,14 @@ void do_brace (CHAR_DATA *ch, char *arg)
 	float  *braceptr = NULL;
 	CHAR_DATA *victim;
 	
-	if ((skill = get_skill(ch,gsn_brace)) == 0) {
+	skill = get_skill(ch,gsn_brace);
+	if (skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if ((victim = ch->fighting) == NULL) {
+	victim = ch->fighting;
+	if (victim == NULL) {
 		send_to_char("Brace yourself against what blows?\n\r",ch);
 		return;
 	}
@@ -2270,7 +2316,8 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 	bool isprimary = FALSE;
 	bool isoffhand = FALSE;
 	
-	if ((skill = get_skill(ch,gsn_shatter)) == 0)
+	skill = get_skill(ch,gsn_shatter);
+	if (skill == 0)
 	{
 		send_to_char("Huh?\n\r",ch);
 		return;
@@ -2300,7 +2347,8 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 	}
 
 
-	if ((weapon = get_eq_char(ch,WEAR_WIELD)) == NULL)
+	weapon = get_eq_char(ch,WEAR_WIELD);
+	if (weapon == NULL)
 	{
 		return send_to_char("You can't do that with your bare hands!\n\r",ch);
 	}
@@ -2326,7 +2374,8 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (isoffhand && ((wield = get_eq_char(victim,WEAR_SHIELD)) != NULL))
+	wield = get_eq_char(victim,WEAR_SHIELD);
+	if (isoffhand && (wield != NULL))
 	{
 		if (material_table[weapon->pIndexData->material_index].mat_hardness >= material_table[wield->pIndexData->material_index].mat_hardness)
 		{
@@ -2388,9 +2437,10 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 			chance=0;
 		}
 	}
-	else if ((isoffhand && ((handtwo = get_eq_char(victim,WEAR_DUAL_WIELD)) != NULL)) ||
-			(isprimary && ((handone = get_eq_char(victim,WEAR_WIELD)) != NULL)))
-	{
+	else{
+	  handone = get_eq_char(victim, WEAR_WIELD);
+	  handtwo = get_eq_char(victim, WEAR_DUAL_WIELD);
+	  if ((isoffhand && (handtwo != NULL)) || (isprimary && (handone != NULL))){
 		if (isoffhand)
 		{
 			wield = get_eq_char(victim,WEAR_DUAL_WIELD);
@@ -2632,6 +2682,7 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 		sprintf(victsuc,"Driving in mightily, $n shatters your $t with a single powerful blow!");
 		sprintf(nvictsuc,"Driving in mightily, $n shatters $N's $t with a single powerful blow!");
 	}
+	}
 
 	if (IS_OBJ_STAT(wield,ITEM_NODISARM) || IS_OBJ_STAT(wield, ITEM_FIXED))
 		chance = 0;
@@ -2654,7 +2705,8 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 	act(nvictsuc,ch,(char*)weapon_name_lookup(wield->value[0]),victim,TO_NOTVICT);
 
 	extract_obj(wield);
-    if ((secondary = get_eq_char(victim,WEAR_DUAL_WIELD)) != NULL)
+	secondary = get_eq_char(victim,WEAR_DUAL_WIELD);
+    if (secondary != NULL)
     {
                 unequip_char(victim,secondary,FALSE);
                 act("You quickly swap $p into your primary hand.",victim,secondary,0,TO_CHAR);
@@ -2673,31 +2725,35 @@ void do_whirlwind(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *vch, *vch_next, *victim;
 	OBJ_DATA *wield,*dualwield;
 	
-	if((skill = get_skill(ch,gsn_whirlwind))==0) {
+	skill = get_skill(ch, gsn_whirlwind);
+	if(skill == 0) {
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
 	if (argument[0] == '\0')
 	{
-		if ((victim = ch->fighting) == NULL) {
+	  victim = ch->fighting;
+		if (victim == NULL) {
 			send_to_char("Who are you trying to whirlwind?\n\r",ch);
 			return;
 		}
 	} else {
-		if ((victim = get_char_room(ch,argument)) == NULL) {
+	  victim = get_char_room(ch, argument);
+		if (victim == NULL) {
 			send_to_char("They aren't here.\n\r",ch);
 			return;
 		}
 	}
 
-
-	if((wield = get_eq_char(ch,WEAR_WIELD))==NULL) {
+	wield = get_eq_char(ch, WEAR_WIELD);
+	if(wield == NULL) {
 		send_to_char("You cannot do that barehanded.\n\r",ch);
 		return;
 	}
 
-	if((dualwield = get_eq_char(ch,WEAR_DUAL_WIELD))==NULL) {
+	dualwield = get_eq_char(ch, WEAR_DUAL_WIELD);
+	if(dualwield == NULL) {
 		send_to_char("You must be wielding two weapons to perform that maneuver.\n\r",ch);
 		return;
 	}
@@ -2774,19 +2830,22 @@ void	check_batter (CHAR_DATA *ch)
 	OBJ_DATA *wield, *dual;
 	int skill;
 	
-	if ((skill = get_skill(ch,gsn_batter)) == 0)
+	skill = get_skill(ch,gsn_batter);
+	if (skill == 0)
 		return;
 
 	if (number_percent () > skill)
 		return;
 	
-	if ((wield = get_eq_char(ch, WEAR_WIELD)) == NULL)
+	wield = get_eq_char(ch, WEAR_WIELD);
+	if (wield == NULL)
 		return;
 
 	if (wield->weight < 15)	
 		return;
 
-	if ((dual = get_eq_char(ch, WEAR_DUAL_WIELD)) != NULL && dual->weight >= 15)
+	dual = get_eq_char(ch, WEAR_DUAL_WIELD);
+	if (dual != NULL && dual->weight >= 15)
 		ch->batter += 5;
 	else
 		ch->batter += 3;
@@ -2819,7 +2878,8 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 	bool arm = FALSE, leg = FALSE;
 	AFFECT_DATA af;
 
-	if ((skill = get_skill(ch,gsn_entwine)) == 0)
+	skill = get_skill(ch,gsn_entwine);
+	if (skill == 0)
 	{
 		send_to_char("Huh?\n\r",ch);
 		return;
@@ -2830,7 +2890,8 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument,arg1);
 
-	if ((victim = ch->fighting) == NULL) {
+	victim = ch->fighting;
+	if (victim == NULL) {
 		if (arg1[0] == '\0')
 		{
 			send_to_char("Who are you trying to entwine?\n\r",ch);
@@ -2838,7 +2899,8 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			if ((victim = get_char_room(ch,arg1)) == NULL) {
+		  victim = get_char_room(ch,arg1);
+			if (victim == NULL) {
 				return send_to_char("They aren't here.\n\r",ch);
 			}
 		}
@@ -3025,7 +3087,8 @@ void do_uncoil(CHAR_DATA *ch, char *argument)
 				obj_from_char(weapon);
 				extract_obj(weapon);
 
-				if ((dual = get_eq_char(guy,WEAR_DUAL_WIELD)) != NULL)
+				dual = get_eq_char(guy,WEAR_DUAL_WIELD);
+				if (dual != NULL)
 				{
 					unequip_char(guy,dual,FALSE);
 					act("You quickly swap $p into your primary hand.",guy,dual,0,TO_CHAR);
@@ -3056,7 +3119,8 @@ void do_pull(CHAR_DATA *ch, char *argument)
 	ROOM_INDEX_DATA *to_room;
 	EXIT_DATA *pexit;
 
-	if ((skill = get_skill(ch,gsn_entwine)) == 0)
+	skill = get_skill(ch,gsn_entwine);
+	if (skill == 0)
 	{
 		send_to_char("Huh?\n\r",ch);
 		return;
@@ -3101,8 +3165,11 @@ void do_pull(CHAR_DATA *ch, char *argument)
 		{
 			if (argument[0] == '\0')
 				return send_to_char("Pull them in which direction?\n\r",ch);
- 			if ((dir = direction_lookup(argument)) == -1)
+
+			dir = direction_lookup(argument);
+ 			if (dir == -1)
 				return send_to_char("That is not a direction!\n\r",ch);
+
 			pexit = ch->in_room->exit[dir];
  			if (pexit == NULL)
  				return send_to_char("You cannot pull them in that direction.\n\r",ch);
@@ -3197,13 +3264,15 @@ void do_assess(CHAR_DATA *ch, char *argument)
 	float dammod;
 	CHAR_DATA *victim = NULL;
 
-	if ((skill = get_skill(ch,gsn_assess)) == 0)
+	skill = get_skill(ch,gsn_assess);
+	if (skill == 0)
 	{
 		send_to_char("Huh?\n\r",ch);
 		return;
 	}
 
-	if (argument[0] == '\0' && !(victim = ch->fighting))
+	victim = ch->fighting;
+	if (argument[0] == '\0' && !victim)
 		return send_to_char("Assess who?\n\r",ch);
 
 	if (!victim && (victim = get_char_room(ch,argument)) == NULL)
@@ -3322,10 +3391,12 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 
 	one_argument(argument,arg);
 
-	if((skill = get_skill(ch,gsn_exploit)) <= 1)
+	skill = get_skill(ch, gsn_exploit);
+	if(skill <= 1)
 		return send_to_char("Huh?\n\r",ch);
 
-	if ( ( victim = ch->fighting ) == NULL )
+	victim = ch->fighting;
+	if (victim == NULL)
 		return send_to_char( "You aren't fighting anyone.\n\r", ch );
 
 	if ((get_eq_char(ch, WEAR_WIELD) == NULL))
@@ -3366,7 +3437,8 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 	{
 		if(arm)
 		{
-			if (((exposed = get_eq_char(victim, WEAR_ARMS)) != NULL))
+			exposed = get_eq_char(victim, WEAR_ARMS);
+			if ((exposed != NULL))
 			{
 				arm = FALSE;
 				broken = check_exploit_armor_break(ch, victim, exposed);
@@ -3383,7 +3455,8 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			}
 		} else if(leg)
 		{
-			if (((exposed = get_eq_char(victim, WEAR_LEGS)) != NULL))
+			exposed = get_eq_char(victim, WEAR_LEGS);
+			if ((exposed != NULL))
 			{
 				leg = FALSE;
 				broken = check_exploit_armor_break(ch, victim, exposed);
@@ -3397,7 +3470,8 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			}
 		} else if(torso)
 		{
-			if (((exposed = get_eq_char(victim, WEAR_BODY)) != NULL))
+			exposed = get_eq_char(victim, WEAR_BODY);
+			if ((exposed != NULL))
 			{
 				torso = FALSE;
 				broken = check_exploit_armor_break(ch, victim, exposed);
@@ -3412,7 +3486,8 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			}
 		} else if(head)
 		{
-			if (((exposed = get_eq_char(victim, WEAR_HEAD)) != NULL))
+			exposed = get_eq_char(victim, WEAR_HEAD);
+			if ((exposed != NULL))
 			{
 				head = FALSE;
 				broken = check_exploit_armor_break(ch, victim, exposed);
@@ -3503,25 +3578,32 @@ void do_offhand(CHAR_DATA *ch, char *arg)
 
 	if (victim == NULL )
 			return send_to_char("You aren't fighting anyone.\n\r",ch);
-	if((wield=get_eq_char(ch,WEAR_WIELD))==NULL)
+
+	wield = get_eq_char(ch, WEAR_WIELD);
+	if(wield == NULL)
 	{
 		send_to_char("You must be wielding a weapon to offhand disarm your opponent.\n\r",ch);
 		return;
 	}
 	/* Offhand disarm can offhand: a dual wielded weapon, a shield, a held item, or a light */
 	found=FALSE;
-	if((offhand=get_eq_char(victim,WEAR_DUAL_WIELD))!=NULL)
+
+	offhand = get_eq_char(victim, WEAR_DUAL_WIELD);
+	if(offhand != NULL){
+	    found = TRUE;
+	}else if((offhand =get_eq_char(victim, WEAR_SHIELD)) != NULL){
+		found = TRUE;
+	}else if((offhand = get_eq_char(victim,WEAR_HOLD)) != NULL){
 		found=TRUE;
-	else if((offhand=get_eq_char(victim,WEAR_SHIELD))!=NULL)
+ 	}else{
+		offhand=get_eq_char(victim,WEAR_LIGHT);
 		found=TRUE;
-	else if((offhand=get_eq_char(victim,WEAR_HOLD))!=NULL)
-     	found=TRUE;
- 	else if((offhand=get_eq_char(victim,WEAR_LIGHT))!=NULL)
-       	found=TRUE;
+	}
+
 	if(offhand && !can_see_obj(ch,offhand))
 		found=FALSE;
-	if(!found)
-	{
+
+	if(!found) {
 		send_to_char("Your opponent is not wielding anything in their off hand.\n\r",ch);
 		return;
 	}
@@ -3583,7 +3665,8 @@ void do_drive(CHAR_DATA *ch, char *argument)
 	char store[MSL],target[MSL],dir[MSL];
 
 	/* Must have the skill to use it */
-	if ((skill = get_skill(ch,gsn_drive)) == 0)
+	skill = get_skill(ch,gsn_drive);
+	if (skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
 	/* break up the argument into two variables */
@@ -3592,13 +3675,16 @@ void do_drive(CHAR_DATA *ch, char *argument)
 
 	/* Check to see if they are fighting */
  	if(ch->fighting) {
-		if((where = direction_lookup(argument)) == -1) {
+		where = direction_lookup(argument);
+		if(where == -1) {
 			half_chop(argument, target, dir);
 			if(!*target)
 				return send_to_char("Drive who?\n\r", ch);
 			if(!*dir)
 				return send_to_char("Drive where?\n\r", ch);
-			if ((victim = get_char_room(ch,target)) == NULL)
+
+			victim = get_char_room(ch,target);
+			if (victim == NULL)
 				return send_to_char("They aren't here.\n\r",ch);
 		} else {
 			sprintf(dir,"%s",argument);
@@ -3616,7 +3702,8 @@ void do_drive(CHAR_DATA *ch, char *argument)
 
 	
 		/* Set victim */
-		if ((victim = get_char_room(ch,target)) == NULL)
+		victim = get_char_room(ch,target);
+		if (victim == NULL)
 			return send_to_char("They aren't here.\n\r",ch);
  	}
 
@@ -3632,7 +3719,8 @@ void do_drive(CHAR_DATA *ch, char *argument)
  		return send_to_char("You can't push yourself around.\n\r",ch);
 
  	/* Check to see if the direction verb is valid */
- 	if((where = direction_lookup(dir)) == -1)
+	where = direction_lookup(dir);
+ 	if(where == -1)
 		return send_to_char("That is not a direction!\n\r",ch);
 
 	/* Get the default word for the direction */
@@ -3640,7 +3728,8 @@ void do_drive(CHAR_DATA *ch, char *argument)
     sprintf(dir,"%s",direction);
 
  	/* Make sure the exit is valid */
- 	if ((pexit = ch->in_room->exit[where]) == NULL)
+	pexit = ch->in_room->exit[where];
+ 	if (pexit == NULL)
  		return send_to_char("You cannot drive in that direction.\n\r",ch);
 
 	if (!IS_NPC(ch) && !IS_NPC(victim)
@@ -3699,7 +3788,8 @@ void do_dash(CHAR_DATA *ch, char *argument)
 	char *direction;
 
  	/* Must have the skill to use it */
- 	if ((skill = get_skill(ch,gsn_dash)) == 0)
+	skill = get_skill(ch,gsn_dash);
+ 	if (skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
  	/* break up the argument into two variables */
@@ -3725,7 +3815,8 @@ void do_dash(CHAR_DATA *ch, char *argument)
 		return send_to_char("You can't do that.\n\r",ch);
 
  	/* Check to see if the direction verb is valid */
- 	if((where = direction_lookup(dir)) == -1)
+	where = direction_lookup(dir);
+ 	if(where == -1)
 		return send_to_char("That is not a direction!\n\r",ch);
 
  	/* Get the default word for the direction */
@@ -3733,7 +3824,8 @@ void do_dash(CHAR_DATA *ch, char *argument)
     sprintf(dir,"%s",direction);
 
  	/* Make sure the exit is valid */
-	if ((pexit = ch->in_room->exit[where]) == NULL)
+	pexit = ch->in_room->exit[where];
+	if (pexit == NULL)
   		return send_to_char("You cannot dash in that direction.\n\r",ch);
 
  	/* Set the direction room */
@@ -3774,7 +3866,8 @@ void do_concuss( CHAR_DATA *ch,char *argument)
 	
 	one_argument(argument,arg);
 
-	if ((chance = get_skill(ch,gsn_concuss)) == 0
+	chance = get_skill(ch,gsn_concuss);
+	if (chance == 0
 		|| ( ch->level < skill_table[gsn_concuss].skill_level[ch->Class()->GetIndex()]
 		&& !IS_NPC(ch)))
 		return send_to_char("You don't know how to do that.\n\r",ch);
@@ -3871,13 +3964,15 @@ void do_retreat(CHAR_DATA *ch, char *arg)
 	int direction;
 	int *dirptr = NULL;
 
-	if ((skill = get_skill(ch,gsn_retreat)) == 0)
+	skill = get_skill(ch,gsn_retreat);
+	if (skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
 	if(!ch->fighting)
 		return send_to_char("You must be fighting to retreat!\n\r",ch);
 
-	if((direction = direction_lookup(arg))<0 || !ch->in_room->exit[direction])
+	direction = direction_lookup(arg);
+	if(direction < 0 || !ch->in_room->exit[direction])
 		return send_to_char("That's not a valid direction.\n\r",ch);
 	
 	pexit = ch->in_room->exit[direction];
@@ -3937,10 +4032,14 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 		if (victim == NULL)
 			return send_to_char("But you aren't fighting anyone!\n\r",ch);
 	}                   
-    else if ((victim = get_char_room(ch,arg)) == NULL)
-        return send_to_char("They aren't here.\n\r",ch);
+    else{
+		victim = get_char_room(ch,arg);
+		if (victim  == NULL)
+			return send_to_char("They aren't here.\n\r",ch);
+	}
 	
-	if((skill = get_skill(ch,gsn_disrupt_formation)) == 0)
+	skill = get_skill(ch, gsn_disrupt_formation);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
 	if(ch->fighting && !IS_NPC(ch))
@@ -4028,7 +4127,8 @@ void do_leadership(CHAR_DATA *ch,char *argument)
 		bool leader=FALSE;
 		int chance;
 
-		if ( (chance = get_skill(ch,gsn_leadership)) == 0
+		chance = get_skill(ch, gsn_leadership);
+		if ( chance == 0
         || ch->level < skill_table[gsn_leadership].skill_level[ch->Class()->GetIndex()])
         {
         	return send_to_char("Huh?\n\r",ch);
@@ -4159,7 +4259,8 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' && !IS_NPC(ch)) {
 		send_to_char("Syntax: outflank <direction>\n\r",ch);
 
-		if ((type = check_outflank(ch)) != -1)
+		type = check_outflank(ch);
+		if (type != -1)
 		{
 			direction = (char*)flag_name_lookup(type,direction_table);
 			sprintf(buf,"You are currently blocking your foes from escaping %sward.\n\r",direction);
@@ -4168,7 +4269,8 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
- 	if ((type = direction_lookup(argument)) == -1 && !IS_NPC(ch))
+	type = direction_lookup(argument);
+ 	if (type == -1 && !IS_NPC(ch))
 		return send_to_char("That is not a direction!\n\r",ch);
 
 	if (IS_NPC(ch))
@@ -4176,7 +4278,8 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 		type = -2;
 		for (dir = 0; dir <= 5; dir++)
 		{
-			if ((pexit = ch->in_room->exit[dir]) != NULL)
+			pexit = ch->in_room->exit[dir];
+			if (pexit != NULL)
 			{
 				type = -1;
 				break;
@@ -4188,7 +4291,8 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 		while (type == -1)
 		{
 			dir = number_range(0,5);
-			if ((pexit = ch->in_room->exit[dir]) != NULL)
+			pexit = ch->in_room->exit[dir];
+			if (pexit != NULL)
 				type = dir;
 		}
 	}
@@ -4229,9 +4333,12 @@ bool outflank_me(CHAR_DATA *ch, int dir)
 	{
 		if(victim!=ch && !is_same_group(ch,victim))
 		{
-			if ((outflank = get_skill(victim,gsn_outflank)) != 0 && check_outflank(victim) == dir)
+			outflank = get_skill(victim,gsn_outflank);
+			if (outflank  != 0 && check_outflank(victim) == dir)
 			{
-			if ((weapon = get_eq_char(victim,WEAR_WIELD)) != NULL)
+
+			weapon = get_eq_char(victim,WEAR_WIELD);
+			if (weapon  != NULL)
 			{
 			switch(weapon->value[0])
 			{
