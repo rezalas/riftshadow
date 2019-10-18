@@ -4,7 +4,7 @@ ifeq ($(OS),Windows_NT)
 	RM		= del /f
 	FNAME	= rift.exe
 	INCLUDES = -w $(PROF) $(NOCRYPT) -I C:/Program\ Files/MariaDB\ 10.4/include/mysql -I C:/MinGW/msys/1.0/include
-	L_FLAGS = -lm   -llibcrypto -Lc:/MinGW/lib -Lc:/MinGW/msys/1.0/lib -L"C:\Program Files (x86)\MariaDB\MariaDB Connector C\lib" -Lc:/MinGW/msys/1.0/lib/openssl/engines-1.0.0 -lmariadbclient
+	L_FLAGS = -lm   -llibcrypto -Lc:/MinGW/lib -Lc:/MinGW/msys/1.0/lib -L"C:\Program Files (x86)\MySQL\MySQL Connector C++ 8.0\lib" -Lc:/MinGW/msys/1.0/lib/openssl/engines-1.0.0 -l mysqlcppconn8-2-vs14
 	# The above library includes requires figuring out, as I'm not sure what
 	# libraries we should use to get this pig to fly. I've broken it down to 
 	# the point that all the object files build, but if you try to link with maria she
@@ -94,9 +94,9 @@ O_FILES = strings.o \
 tartarus: $(O_FILES)
 	$(RM) $(FNAME)
 	$(CC) $(PROF) -o $(FNAME) $(O_FILES) $(L_FLAGS)
-	ifneq ($(OS),Windows_NT)
-		chmod 770 *.o
-	endif
+ifneq ($(OS),Windows_NT)
+	chmod 770 *.o
+endif
 clean:
 	$(RM) *.o
 
