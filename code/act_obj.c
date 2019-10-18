@@ -156,7 +156,8 @@ void get_obj( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck )
 			&&  !CAN_WEAR(container, ITEM_TAKE))
 	    	obj->timer = 0;	
 	
-		if ((pchance = get_skill(ch,gsn_drag)) != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == TRUE)
+        pchance = get_skill(ch,gsn_drag);
+		if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == TRUE)
 		{
 			act("You attempt to silently get $p from $P.", ch, obj, container, TO_CHAR);
 			if(number_percent() < pchance)
@@ -180,7 +181,8 @@ void get_obj( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck )
     }
     else
     {
-		if ((pchance = get_skill(ch,gsn_palm)) != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == TRUE)
+        pchance = get_skill(ch,gsn_palm);
+		if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == TRUE)
 		{
 			act("You attempt to silently get $p.", ch, obj, NULL, TO_CHAR);
 			if(number_percent() < pchance)
@@ -319,7 +321,8 @@ void do_get( CHAR_DATA *ch, char *argument )
 		if ( !str_cmp( arg2, "all" ) || !str_prefix( "all.", arg2 ) )
 	    	return send_to_char( "You can't do that.\n\r", ch );
 
-		if ( ( container = get_obj_here( ch, arg2 ) ) == NULL )
+         container = get_obj_here( ch, arg2 ) ;
+		if ( container == NULL )
 	    	return act( "I see no $T here.", ch, NULL, arg2, TO_CHAR );
 
 		switch ( container->item_type ) {
@@ -445,7 +448,8 @@ void do_put( CHAR_DATA *ch, char *argument )
     if ( !str_cmp( arg2, "all" ) || !str_prefix( "all.", arg2 ) )
 		return send_to_char( "You can't do that.\n\r", ch );
 
-    if ( ( container = get_obj_here( ch, arg2 ) ) == NULL )
+     container = get_obj_here( ch, arg2 ) ;
+    if (container == NULL )
 		return act( "I see no $T here.", ch, NULL, arg2, TO_CHAR );
 
     if ( container->item_type != ITEM_CONTAINER )
@@ -461,7 +465,8 @@ void do_put( CHAR_DATA *ch, char *argument )
 	{
 	
 		/* 'put obj container' */
-	if ( ( obj = get_obj_carry( ch, arg1, ch ) ) == NULL )
+       obj = get_obj_carry( ch, arg1, ch ) ;
+	if (obj == NULL )
     	return send_to_char( "You do not have that item.\n\r", ch );
 
 	if ( obj == container )
@@ -494,7 +499,8 @@ void do_put( CHAR_DATA *ch, char *argument )
 	obj_from_char( obj );
 	obj_to_obj( obj, container );
 
-	if ((pchance = get_skill(ch,gsn_palm)) != 0 && IS_AFFECTED(ch, AFF_SNEAK)) {
+    pchance = get_skill(ch,gsn_palm);
+	if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK)) {
 		if(number_percent() < pchance) {
 			if(IS_SET_OLD(container->value[1],CONT_PUT_ON)) {
 				act("You attempt to silently put $p on $P.", ch, obj, container, TO_CHAR);
@@ -642,7 +648,8 @@ void do_drop( CHAR_DATA *ch, char *argument )
 	}
 
 	obj_to_room( create_money( gold ), ch->in_room );
-	if ((pchance = get_skill(ch,gsn_palm)) != 0 && IS_AFFECTED(ch, AFF_SNEAK))
+    pchance = get_skill(ch,gsn_palm);
+	if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK))
 	{
 		act("You attempt to silently drop some gold.", ch, NULL, NULL, TO_CHAR);
 		if(number_percent() < pchance)
@@ -666,7 +673,8 @@ void do_drop( CHAR_DATA *ch, char *argument )
     if ( str_cmp( arg, "all" ) && str_prefix( "all.", arg ) )
     {
 	/* 'drop obj' */
-	if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg, ch ) ;
+	if (obj == NULL )
 	{
 	    send_to_char( "You do not have that item.\n\r", ch );
 	    return;
@@ -680,7 +688,8 @@ void do_drop( CHAR_DATA *ch, char *argument )
 	obj_from_char( obj );
 	obj_to_room( obj, ch->in_room );
 	
-	if ((pchance = get_skill(ch,gsn_palm)) != 0 && IS_AFFECTED(ch, AFF_SNEAK))
+    pchance = get_skill(ch,gsn_palm);
+	if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK))
 	{
 		act("You attempt to silently drop $p.", ch, obj, NULL, TO_CHAR);
 		if(number_percent() < pchance)
@@ -803,7 +812,8 @@ void do_give( CHAR_DATA *ch, char *argument )
 	    return;
 	}
 
-	if ( ( victim = get_char_room( ch, arg2 ) ) == NULL )
+    victim = get_char_room( ch, arg2 ) ;
+	if (victim == NULL )
 	{
 	    send_to_char( "They aren't here.\n\r", ch );
 	    return;
@@ -836,7 +846,8 @@ void do_give( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_carry( ch, arg1, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg1, ch ) ;
+    if (obj == NULL )
     {
 	send_to_char( "You do not have that item.\n\r", ch );
 	return;
@@ -848,7 +859,8 @@ void do_give( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_room( ch, arg2 ) ) == NULL )
+     victim = get_char_room( ch, arg2 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -1130,7 +1142,8 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 	return;
     }
 
-    if ((skill = get_skill(ch,gsn_envenom)) < 1)
+    skill = get_skill(ch,gsn_envenom);
+    if (skill < 1)
     {
 	send_to_char("Are you crazy? You'd poison yourself!\n\r",ch);
 	return;
@@ -1241,7 +1254,8 @@ void do_fill( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg, ch ) ;
+    if (obj == NULL )
     {
 	send_to_char( "You do not have that item.\n\r", ch );
 	return;
@@ -1310,7 +1324,8 @@ void do_pour(CHAR_DATA *ch, char *argument)
 	}
 
 
-	if ((out = get_obj_carry(ch,arg, ch)) == NULL)
+    out = get_obj_carry(ch,arg, ch);
+	if (out == NULL)
 	{
 		send_to_char("You don't have that item.\n\r",ch);
 		return;
@@ -1363,7 +1378,8 @@ void do_pour(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((on = get_obj_here(ch,argument)) == NULL)
+    on = get_obj_here(ch,argument);
+	if (on == NULL)
 	{
 		send_to_char("You don't see that here.\n\r",ch);
  		return;
@@ -1421,7 +1437,8 @@ void do_drink( CHAR_DATA *ch, char *argument )
     }
     else
     {
-	if ( ( obj = get_obj_here( ch, arg ) ) == NULL )
+    obj = get_obj_here( ch, arg ) ;
+	if (obj == NULL )
 	{
 	    send_to_char( "You can't find it.\n\r", ch );
 	    return;
@@ -1447,7 +1464,8 @@ void do_drink( CHAR_DATA *ch, char *argument )
 	return;
 
     case ITEM_FOUNTAIN:
-        if ( ( liquid = obj->value[2] )  < 0 )
+      liquid = obj->value[2] ;
+        if(liquid < 0 )
         {
 	    sprintf(buf,"Do_drink: bad liquid number, %d, on %s.",
 	liquid, obj->short_descr);
@@ -1467,7 +1485,8 @@ void do_drink( CHAR_DATA *ch, char *argument )
 	    return;
 	}
 
-	if ( ( liquid = obj->value[2] )  < 0 )
+    liquid = obj->value[2] ;
+	if (liquid < 0 )
 	{
 	    sprintf(buf,"Do_drink: bad liquid number, %d, on %s.",
 	liquid, obj->short_descr);
@@ -1541,7 +1560,8 @@ void do_eat( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg, ch ) ;
+    if (obj == NULL )
     {
 	send_to_char( "You do not have that item.\n\r", ch );
 	return;
@@ -1633,7 +1653,8 @@ bool remove_obj( CHAR_DATA *ch, int iWear, bool fReplace )
 {
     OBJ_DATA *obj, *secondary, *revealed;
 
-	if (iWear == WEAR_COSMETIC || ( obj = get_eq_char( ch, iWear ) ) == NULL )
+    obj = get_eq_char(ch, iWear);
+	if (iWear == WEAR_COSMETIC || obj == NULL )
 	return TRUE;
 
     if ( !fReplace )
@@ -2334,7 +2355,8 @@ void do_wear( CHAR_DATA *ch, char *argument )
     }
     else
     {
-	if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg, ch ) ;
+	if (obj == NULL )
 	{
 	    send_to_char( "You do not have that item.\n\r", ch );
 	    return;
@@ -2373,10 +2395,13 @@ void do_remove( CHAR_DATA *ch, char *argument )
 		}
 		return;
     }
-    else if ( ( obj = get_obj_wear( ch, arg ) ) == NULL )
-    {
-	send_to_char( "You do not have that item.\n\r", ch );
-	return;
+    else{
+        obj = get_obj_wear( ch, arg ) ;
+        if(obj == NULL )
+        {
+            send_to_char( "You do not have that item.\n\r", ch );
+            return;
+        }
     }
 
 	if (obj->wear_loc == WEAR_COSMETIC)
@@ -2489,7 +2514,8 @@ void do_quaff( CHAR_DATA *ch, char *argument )
 	
     if ( arg[0] == '\0' )
 	{
-		if ((obj = get_eq_char(ch,WEAR_HOLD)) != NULL)
+        obj = get_eq_char(ch,WEAR_HOLD);
+		if (obj != NULL)
 		{
 			if (obj->item_type == ITEM_POTION)
 			{
@@ -2508,7 +2534,8 @@ void do_quaff( CHAR_DATA *ch, char *argument )
 		return;
     }
 
-    if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg, ch ) ;
+    if (obj == NULL )
     {
 	send_to_char( "You do not have that potion.\n\r", ch );
 	return;
@@ -2547,7 +2574,8 @@ void do_recite( CHAR_DATA *ch, char *argument )
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
 
-    if ( ( scroll = get_obj_carry( ch, arg1, ch ) ) == NULL )
+    scroll = get_obj_carry( ch, arg1, ch ) ;
+    if (scroll == NULL )
     {
 	send_to_char( "You do not have that scroll.\n\r", ch );
 	return;
@@ -2579,15 +2607,21 @@ void do_recite( CHAR_DATA *ch, char *argument )
 		victim = ch;
     else
     {
-	if ( ( victim = get_char_room ( ch, arg2 ) ) == NULL
-	&&   ( obj    = get_obj_here  ( ch, arg2 ) ) == NULL )
-		return send_to_char( "You can't find it.\n\r", ch );
+        victim = get_char_room(ch, arg2);
+        obj    = get_obj_here(ch, arg2);
+        if ( victim == NULL && obj == NULL )
+            return send_to_char( "You can't find it.\n\r", ch );
     }
 
-    if(!IS_NPC(ch) && (alangbonus = ch->Profs()->GetProf("ancient languages") > -1))
+
+    if(!IS_NPC(ch))
     {
-	send_to_char("With your knowledge of ancient languages, you better understand the invocation of the scroll.\n\r",ch);
-	ch->Profs()->CheckImprove("ancient languages", 100);
+      alangbonus = ch->Profs()->GetProf("ancient languages");
+        if(alangbonus > -1)
+        {
+            send_to_char("With your knowledge of ancient languages, you better understand the invocation of the scroll.\n\r",ch);
+            ch->Profs()->CheckImprove("ancient languages", 100);
+        }
     }
 
     act( "$n recites $p.", ch, scroll, NULL, TO_ROOM );
@@ -2623,7 +2657,8 @@ void do_brandish( CHAR_DATA *ch, char *argument )
     int sn;
 
 
-    if ( ( staff = get_eq_char( ch, WEAR_HOLD ) ) == NULL )
+    staff = get_eq_char( ch, WEAR_HOLD ) ;
+    if (staff == NULL )
     {
 	send_to_char( "You hold nothing in your hand.\n\r", ch );
 	return;
@@ -2635,7 +2670,8 @@ void do_brandish( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( sn = staff->value[3] ) < 0
+    sn = staff->value[3];
+    if ( sn < 0
     ||   sn >= MAX_SKILL
     ||   skill_table[sn].spell_fun == 0 )
     {
@@ -2732,7 +2768,8 @@ void do_zap( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( wand = get_eq_char( ch, WEAR_HOLD ) ) == NULL )
+    wand = get_eq_char( ch, WEAR_HOLD ) ;
+    if (wand == NULL )
     {
 	send_to_char( "You hold nothing in your hand.\n\r", ch );
 	return;
@@ -2759,8 +2796,9 @@ void do_zap( CHAR_DATA *ch, char *argument )
     }
     else
     {
-	if ( ( victim = get_char_room ( ch, arg ) ) == NULL
-	&&   ( obj    = get_obj_here  ( ch, arg ) ) == NULL )
+        victim = get_char_room ( ch, arg );
+        obj    = get_obj_here  ( ch, arg ); 
+	if ( victim == NULL && obj == NULL )
 	{
 	    send_to_char( "You can't find it.\n\r", ch );
 	    return;
@@ -2833,7 +2871,8 @@ void do_steal( CHAR_DATA *ch, char *argument )
     if ( arg1[0] == '\0' || arg2[0] == '\0' )
 		return send_to_char( "Steal what from whom?\n\r", ch );
 
-    if ( ( victim = get_char_room( ch, arg2 ) ) == NULL )
+    victim = get_char_room( ch, arg2 ) ;
+    if (victim == NULL )
 		return send_to_char( "They aren't here.\n\r", ch );
 
     if ( victim == ch )
@@ -2959,7 +2998,8 @@ void do_steal( CHAR_DATA *ch, char *argument )
 		return;
     }
 
-    if ( ( obj = get_obj_carry( victim, arg1, ch ) ) == NULL )
+    obj = get_obj_carry( victim, arg1, ch ) ;
+    if (obj == NULL )
 		return send_to_char( "You can't find it.\n\r", ch );
 	
     if ( !can_drop_obj( ch, obj )
@@ -3007,7 +3047,8 @@ CHAR_DATA *find_keeper( CHAR_DATA *ch )
     pShop = NULL;
     for ( keeper = ch->in_room->people; keeper; keeper = keeper->next_in_room )
     {
-	if ( IS_NPC(keeper) && (pShop = keeper->pIndexData->pShop) != NULL )
+      pShop = keeper->pIndexData->pShop;
+	if ( IS_NPC(keeper) && pShop != NULL )
 	    break;
     }
 
@@ -3140,8 +3181,8 @@ int get_cost( CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy )
 {
     SHOP_DATA *pShop;
     float cost;
-
-    if ( obj == NULL || ( pShop = keeper->pIndexData->pShop ) == NULL )
+    pShop = keeper->pIndexData->pShop;
+    if ( obj == NULL || pShop == NULL )
 	return 0;
 
     cost = obj->cost * calculate_inflation();
@@ -3243,7 +3284,8 @@ void do_buy( CHAR_DATA *ch, char *argument )
 	/* haggle */
 	roll = number_percent();
 	bool appraised = FALSE;
-	if (roll < get_skill(ch,gsn_haggle) || (appraised = ch->Profs()->HasProf("appraising")))
+    appraised = ch->Profs()->HasProf("appraising");
+	if (roll < get_skill(ch,gsn_haggle) || appraised)
 	{
 	    if(get_skill(ch, gsn_haggle) > 60)
    		cost -= cost / 3 * roll / 100;
@@ -3294,7 +3336,8 @@ void do_buy( CHAR_DATA *ch, char *argument )
 	char arg[MAX_INPUT_LENGTH], buf[MSL];
 	int number = 1, count = 1;
 
-	if ( ( keeper = find_keeper( ch ) ) == NULL )
+    keeper = find_keeper( ch ) ;
+	if (keeper == NULL )
 	    return;
 
 	if (keeper == ch)
@@ -3496,7 +3539,8 @@ void do_list( CHAR_DATA *ch, char *argument )
 	bool found;
 	char arg[MAX_INPUT_LENGTH];
 
-	if ( ( keeper = find_keeper( ch ) ) == NULL )
+    keeper = find_keeper( ch ) ;
+	if (keeper == NULL )
 	    return;
         one_argument(argument,arg);
 
@@ -3559,7 +3603,8 @@ void do_sell( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( keeper = find_keeper( ch ) ) == NULL )
+    keeper = find_keeper( ch ) ;
+    if (keeper == NULL )
 	return;
 
     do_say(keeper,"I don't want to buy anything from the likes of you.");
@@ -3614,10 +3659,12 @@ void do_value( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( keeper = find_keeper( ch ) ) == NULL )
+    keeper = find_keeper( ch ) ;
+    if (keeper == NULL )
 	return;
 
-    if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg, ch ) ;
+    if (obj == NULL )
     {
 	act( "$n tells you 'You don't have that item'.",
 	    keeper, NULL, ch, TO_VICT );
@@ -3637,7 +3684,8 @@ void do_value( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( cost = get_cost( keeper, obj, FALSE ) ) <= 0 )
+    cost = get_cost( keeper, obj, FALSE ) ;
+    if (cost <= 0 )
     {
 	act( "$n looks uninterested in $p.", keeper, obj, ch, TO_VICT );
 	return;
@@ -3674,7 +3722,8 @@ void do_request(CHAR_DATA *ch,char *argument)
 	send_to_char("Request what of whom?\n\r",ch);
 	return;
     }
-    if ((victim = get_char_room(ch,m_name)) == NULL )
+    victim = get_char_room(ch,m_name);
+    if (victim == NULL )
     {
         send_to_char("They aren't here.\n\r",ch);
         return;
@@ -3716,7 +3765,8 @@ void do_request(CHAR_DATA *ch,char *argument)
         return;
     }
 
-    if ( (obj = get_obj_list(victim, i_name, victim->carrying)) == NULL)
+    obj = get_obj_list(victim, i_name, victim->carrying);
+    if (obj == NULL)
         return send_to_char("They don't have that object.\n\r",ch);
 
     if (!can_see_obj(ch,obj) )
@@ -3806,7 +3856,8 @@ bool hands_full(CHAR_DATA *ch)
 	count++;
    if (get_eq_char(ch,WEAR_DUAL_WIELD) != NULL)
 	count++;
-   if ((weapon = get_eq_char(ch,WEAR_WIELD) )
+   weapon = get_eq_char(ch,WEAR_WIELD) ;
+   if (weapon 
 	&& (weapon->value[0] == WEAPON_STAFF
 	|| weapon->value[0] == WEAPON_POLEARM
 	|| weapon->value[0] == WEAPON_SPEAR))
@@ -3841,7 +3892,8 @@ void do_embalm(CHAR_DATA *ch,char *argument)
         return;
     }
 
-    if ( (corpse = get_obj_here(ch,arg)) == NULL)
+    corpse = get_obj_here(ch,arg);
+    if (corpse == NULL)
     {
         send_to_char("You don't have that item to embalm.\n\r",ch);
         return;
@@ -4012,7 +4064,8 @@ void do_demand(CHAR_DATA *ch,char *argument)
 
     if (IS_NPC(ch))
         return;
-    if ((victim = get_char_room(ch,m_name)) == NULL )
+    victim = get_char_room(ch,m_name);
+    if (victim == NULL )
     {
         send_to_char("They aren't here.\n\r",ch);
         return;
@@ -4036,7 +4089,8 @@ void do_demand(CHAR_DATA *ch,char *argument)
 
     vlevel += 8;
 
-    if ((obj = get_obj_list(victim, i_name, victim->carrying)) == NULL)
+    obj = get_obj_list(victim, i_name, victim->carrying);
+    if (obj == NULL)
     {
         send_to_char("They do not have that object.\n\r",ch);
         return;
@@ -4263,7 +4317,8 @@ void save_cabal_items(void)
 	OBJ_DATA *obj;
         FILE *fp;
 	int i, vnum;
-    	if ( ( fp = fopen( CABAL_ITEMS_FILE, "w" ) ) == NULL )
+    fp = fopen( CABAL_ITEMS_FILE, "w" ) ;
+    	if(fp == NULL )
         	return perror( CABAL_ITEMS_FILE );
 	for(i = 1; i<MAX_CABAL; i++)
 	{
@@ -4299,7 +4354,8 @@ void do_roll(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((obj = get_obj_carry(ch,argument,ch)) == NULL)
+    obj = get_obj_carry(ch,argument,ch);
+	if (obj == NULL)
 		return send_to_char("Roll what?\n\r",ch);
 
 	if (obj->item_type != ITEM_DICE)
