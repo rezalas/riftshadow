@@ -2913,7 +2913,7 @@ char *act_bit_name( long act_flags[] )
 	if (IS_SET(act_flags, ACT_UPDATE_ALWAYS)) strcat(buf," update_always");
 	if (IS_SET(act_flags, ACT_BANKER))	strcat(buf," banker");
 	if (IS_SET(act_flags, ACT_INNER_GUARDIAN)) strcat(buf, " inner_guardian");
-	if (IS_SET(act_flags, ACT_NOCTURNAL))	strcat(buf," noctunal");
+	if (IS_SET(act_flags, ACT_NOCTURNAL))	strcat(buf," nocturnal");
 	if (IS_SET(act_flags, ACT_DIURNAL))		strcat(buf," diurnal");
 	if (IS_SET(act_flags, ACT_FASTWANDER))	strcat(buf," fastwander");
 	if (IS_SET(act_flags, ACT_LAW))			strcat(buf," law");
