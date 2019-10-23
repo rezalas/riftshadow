@@ -17,7 +17,8 @@ void do_backstab( CHAR_DATA *ch, char *argument )
     if (arg[0] == '\0')
         return send_to_char("Backstab whom?\n\r",ch);
 
-	if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 	
     if (ch->fighting != NULL || victim->fighting)
@@ -129,7 +130,8 @@ void do_circle_stab( CHAR_DATA *ch, char *argument )
     attempt_dual = FALSE;
     one_argument(argument,arg);
 
-    if ( (chance = get_skill(ch,gsn_circle)) <= 1)
+    chance = get_skill(ch,gsn_circle);
+    if ( chance <= 1)
     {
 	send_to_char("Circling? What's that?\n\r",ch);
 	return;
@@ -250,14 +252,16 @@ void do_blackjack( CHAR_DATA *ch,char *argument)
 
 	one_argument(argument,arg);
 
-	if ((chance = get_skill(ch,gsn_blackjack)) == 0
+    chance = get_skill(ch,gsn_blackjack);
+	if (chance == 0
 		|| ( ch->level < skill_table[gsn_blackjack].skill_level[ch->Class()->GetIndex()]) )
         return send_to_char("You don't know how to blackjack.\n\r",ch);
 
 	if (arg[0] == '\0')
         return send_to_char("Blackjack who?\n\r",ch);
 
-	if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if (victim == NULL)
         return send_to_char("They aren't here.\n\r",ch);
 
 	if (victim == ch)
@@ -371,13 +375,15 @@ void do_ghetto_bind(CHAR_DATA *ch,char *argument)
 		return;
 
 	
-	if ((chance = get_skill(ch,gsn_bind)) == 0)
+    chance = get_skill(ch,gsn_bind);
+	if (chance == 0)
 		return send_to_char("Huh?\n\r",ch);
 
 	if (arg[0] == '\0')
 		return send_to_char("Attempt to bind who?\n\r",ch);
 
-	if ( (victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if ( victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if (victim == ch)
@@ -480,7 +486,8 @@ void do_plant( CHAR_DATA *ch, char *argument )
     if ( arg1[0] == '\0' || arg2[0] == '\0' )
     	return send_to_char( "Plant what on whom?\n\r", ch );
 
-    if ( ( victim = get_char_room( ch, arg2 ) ) == NULL )
+    victim = get_char_room( ch, arg2 ) ;
+    if ( (victim ) == NULL )
     	return send_to_char( "They aren't here.\n\r", ch );
 
     if ( victim == ch )
@@ -517,7 +524,8 @@ void do_plant( CHAR_DATA *ch, char *argument )
     if (!IS_AWAKE(victim))
     	chance+=100;
 
-    if ( ( obj = get_obj_carry( ch, arg1, ch ) ) == NULL )
+    obj = get_obj_carry( ch, arg1, ch ) ;
+    if ( (obj ) == NULL )
 		return send_to_char( "You can't find it.\n\r", ch );
 
 	if ( percent > chance)
@@ -563,7 +571,8 @@ void do_plant( CHAR_DATA *ch, char *argument )
 void do_ungag(CHAR_DATA *ch,char *argument)
 {
     CHAR_DATA *vch;
-    if ((vch = get_char_room(ch,argument)) == NULL)
+    vch = get_char_room(ch,argument);
+    if (vch == NULL)
     	vch = ch;
 	
     if(!IS_NPC(vch) && vch != ch)
@@ -608,13 +617,15 @@ void do_gag( CHAR_DATA *ch, char *argument )
 
 	one_argument(argument,arg);
 
-	if ((chance = get_skill(ch,gsn_gag)) == 0 || ( ch->level < skill_table[gsn_gag].skill_level[ch->Class()->GetIndex()]) )
+    chance = get_skill(ch,gsn_gag);
+	if (chance == 0 || ( ch->level < skill_table[gsn_gag].skill_level[ch->Class()->GetIndex()]) )
 		return send_to_char("Huh?\n\r",ch);
 
 	if (arg[0] == '\0')
 		return send_to_char("Gag who?\n\r",ch);
 
-	if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if (victim == ch)
@@ -676,7 +687,8 @@ void do_drag(CHAR_DATA *ch, char *argument)
     char store[MSL],target[MSL],dir[MSL];
 
     /* Must have the skill to use it */
-    if ((skill = get_skill(ch,gsn_drag)) == 0)
+    skill = get_skill(ch,gsn_drag);
+    if (skill == 0)
         return send_to_char("Huh?\n\r",ch);
 
     /* break up the argument into two variables */
@@ -693,7 +705,8 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		return send_to_char("Where are you trying to drag them?\n\r", ch);
 
 	/* Set victim */
-	if ((victim = get_char_room(ch,target)) == NULL)
+    victim = get_char_room(ch,target);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
     /* Check for pk range */
@@ -716,7 +729,8 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		return send_to_char("You can't drag anyone while you are fighting!\n\r", ch);
 
     /* Check to see if the direction verb is valid */
-    if((where = direction_lookup(dir)) == -1)
+    where = direction_lookup(dir);
+    if(where == -1)
         return send_to_char("That is not a direction!\n\r",ch);
 
     /* Get the default word for the direction */
@@ -724,7 +738,8 @@ void do_drag(CHAR_DATA *ch, char *argument)
     sprintf(dir,"%s",direction);
 
     /* Make sure the exit is valid */
-    if ((pexit = ch->in_room->exit[where]) == NULL)
+    pexit = ch->in_room->exit[where];
+    if (pexit == NULL)
         return send_to_char("You cannot drag anyone that direction.\n\r",ch);
 
 	if(IS_NPC(victim) && victim->pIndexData->barred_entry)
@@ -777,7 +792,8 @@ void do_tripwire( CHAR_DATA *ch, char *argument)
 	char *direction;
 	int skill, door = *((int *)argument);
 
-	if((skill = get_skill(ch, gsn_tripwire)) == 0)
+    skill = get_skill(ch, gsn_tripwire);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r", ch);
 
 	if(ch->in_room->sector_type != SECT_CITY && ch->in_room->sector_type != SECT_INSIDE && !IS_IMMORTAL(ch))
@@ -920,7 +936,8 @@ void do_slash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_room(ch, arg2)) == NULL)
+    victim = get_char_room(ch, arg2);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r", ch);
 
 	if (victim == ch)
@@ -941,9 +958,13 @@ void do_slash(CHAR_DATA *ch, char *argument)
 	/* before item check to prevent spamming */
 	WAIT_STATE(ch, skill_table[gsn_slash].beats);
 
-	if ((obj = get_obj_carry(victim, arg1, ch)) == NULL)
-                if((obj = get_obj_wear(victim, arg1)) == NULL)
+    obj = get_obj_carry(victim, arg1, ch);
+	if (obj == NULL)
+    {
+                obj = get_obj_wear(victim, arg1);
+                if(obj == NULL)
                         return send_to_char("They are not carrying or wearing that.\n\r", ch );
+    }
 
         if (obj->item_type != ITEM_CONTAINER )
                 return send_to_char("That's not a container.\n\r",ch);
@@ -1016,7 +1037,8 @@ void do_stash(CHAR_DATA *ch, char *argument)
 	OBJ_AFFECT_DATA oaf;
 	int skill;
 
-	if((skill = get_skill(ch, gsn_stash)) == 0)
+    skill = get_skill(ch, gsn_stash);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r", ch);
 
 	if(ch->in_room->sector_type != SECT_CITY && ch->in_room->sector_type != SECT_INSIDE && !IS_IMMORTAL(ch))
@@ -1024,7 +1046,8 @@ void do_stash(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument( argument, arg);
 	
-	if((obj = get_obj_carry(ch, arg, ch)) == NULL)
+    obj = get_obj_carry(ch, arg, ch);
+	if(obj == NULL)
 		return send_to_char("You can't find it.\n\r", ch);
 
 	act("You attempt to stash $p away.", ch, obj, 0, TO_CHAR);
@@ -1059,7 +1082,8 @@ void do_disguise(CHAR_DATA *ch, char *argument)
 	char arg[MSL];
 	int skill;
 
-	if((skill = get_skill(ch, gsn_disguise)) == 0)
+    skill = get_skill(ch, gsn_disguise);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r", ch);
 	
 	argument = one_argument(argument, arg);
@@ -1228,7 +1252,8 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 	int skill;
 	OBJ_AFFECT_DATA oaf;
 
-	if((skill = get_skill(ch, gsn_counterfeit)) == 0)
+    skill = get_skill(ch, gsn_counterfeit);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r", ch);
 
 	argument = one_argument(argument, arg1);
@@ -1237,10 +1262,12 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 	if(arg1[0] == '\0' || arg2[0] == '\0')
 		return send_to_char("Syntax: counterfeit <original item> <base item for forgery>\n\r",ch);
 
-	if ((orig = get_obj_carry(ch, arg1, ch)) == NULL)
+    orig = get_obj_carry(ch, arg1, ch);
+	if (orig == NULL)
 		return send_to_char("You can't find the original item.\n\r", ch );
 
-	if ((copy = get_obj_carry(ch, arg2, ch)) == NULL)
+    copy = get_obj_carry(ch, arg2, ch);
+	if (copy == NULL)
 		return send_to_char("You can't find the copy item.\n\r", ch );
 
 	if (orig->item_type != copy->item_type)
@@ -1309,7 +1336,8 @@ void do_shadow_cloak(CHAR_DATA *ch, char *argument)
 	AFFECT_DATA af;
 	int skill, cost;
 
-	if((skill = get_skill(ch, gsn_shadow_cloak)) == 0)
+    skill = get_skill(ch, gsn_shadow_cloak);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r", ch);
 
 	if(is_affected(ch, gsn_shadow_cloak))
@@ -1351,7 +1379,8 @@ bool check_stealth(CHAR_DATA *ch, CHAR_DATA *mob)
 	if (mob->last_fought == ch)
 		return FALSE;
 	
-	if((skill = get_skill(ch, gsn_stealth)) == 0)
+    skill = get_skill(ch, gsn_stealth);
+	if(skill == 0)
 		return FALSE;
 	
 	if (IS_SET(mob->act,ACT_DETECT_SPECIAL))
@@ -1385,13 +1414,15 @@ void do_strip(CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
 
-	if ((chance = get_skill(ch, gsn_strip)) == 0)
+    chance = get_skill(ch, gsn_strip);
+	if (chance == 0)
 		return send_to_char("Huh?\n\r", ch);
 
 	if (arg2[0] == '\0')
 		return send_to_char("Strip whom?\n\r",ch);
 
-	if ((victim = get_char_room( ch, arg2)) == NULL )
+    victim = get_char_room( ch, arg2);
+	if (victim == NULL )
 		return send_to_char( "They aren't here.\n\r", ch );
 
 	if ( victim == ch)
@@ -1526,7 +1557,8 @@ void do_bind(CHAR_DATA *ch,char *argument)
 	argument = one_argument(argument,arg1);
 	argument = one_argument(argument,arg2);
 
-	if ((skill = get_skill(ch,gsn_bind)) == 0)
+    skill = get_skill(ch,gsn_bind);
+	if (skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
 	if (arg1[0] == '\0')
@@ -1549,7 +1581,8 @@ void do_bind(CHAR_DATA *ch,char *argument)
 		return send_to_char("Syntax: bind <target> <head/arms/legs>\n\r",ch);
 	}
 
-	if ((victim = get_char_room(ch,arg1)) == NULL)
+    victim = get_char_room(ch,arg1);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if (victim == ch)
@@ -1657,7 +1690,8 @@ void do_bind(CHAR_DATA *ch,char *argument)
 void do_unbind(CHAR_DATA *ch,char *argument)
 {
 	AFFECT_DATA *af;
-	if ((af = check_bind(ch,"arms")) != NULL) {
+    af = check_bind(ch,"arms");
+	if (af != NULL) {
 		if (number_percent() < get_curr_stat(ch,STAT_STR)*6) {
 			act("Exerting all of your strength, you break the bindings on your arms!",ch,0,0,TO_CHAR);
 			act("Exerting all of $s strength, $n breaks the bindings on $s arms!",ch,0,0,TO_ROOM);
@@ -1716,7 +1750,8 @@ void do_knife( CHAR_DATA *ch, char *argument )
 	if (ch->fighting != NULL)
 		return send_to_char("No way! You're still fighting!\n\r",ch);
 
-	if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if ( victim == ch )
@@ -1803,7 +1838,8 @@ void do_bluff(CHAR_DATA *ch, char *argument)
 
 	one_argument(argument, arg);
 
-	if((skill = get_skill(ch, gsn_bluff)) == 0)
+    skill = get_skill(ch, gsn_bluff);
+	if(skill == 0)
 		return send_to_char("Huh?\n\r", ch);
 
         if(arg[0] == '\0')
@@ -1856,7 +1892,8 @@ void do_false_motives(CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
 
-	if((skill = get_skill(ch, gsn_false_motives)) < 2 || IS_NPC(ch))
+    skill = get_skill(ch, gsn_false_motives);
+	if(skill < 2 || IS_NPC(ch))
 		return send_to_char("Huh?\n\r", ch);
 	
 	if(arg1[0] == '\0' || arg2[0] == '\0')
