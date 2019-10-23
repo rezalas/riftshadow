@@ -268,7 +268,8 @@ void do_offer(CHAR_DATA *ch, char *argument)
 		if(status == 0)
 			return send_to_char("The pile of offerings doesn't appear to have been disturbed since your last visit.\n\r",ch);
 	}
-        if (!(obj = get_obj_carry(ch, argument, ch)))
+        obj = get_obj_carry(ch, argument, ch);
+        if (!obj)
 		return send_to_char("You don't have that item.\n\r", ch);
         if (!can_drop_obj(ch, obj))
 		return send_to_char("You can't let go of it.\n\r", ch);
@@ -495,17 +496,20 @@ void do_demo(CHAR_DATA *ch, char *name)
 	char tempbuf[MSL], buf[MSL];
 	int i = 0, r = 0, j;
 	OBJ_INDEX_DATA *pIndex;
-	for(j = 0; j < 32000; j++)
-		if((pIndex = get_obj_index(j)) && pIndex->limtotal > 0)
+	for(j = 0; j < 32000; j++){
+      pIndex = get_obj_index(j);
+		if(pIndex && pIndex->limtotal > 0)
 		{
 			i += pIndex->limtotal - pIndex->limcount;
 			r += pIndex->limcount;
 		}
+    }
 	sprintf(buf,"There are currently %i limited items in the game (%i on players).\n\r",i,r);
 	send_to_char(buf,ch);
 	return;
 	
-	if(!(fp=fopen("demo.txt","r")))
+    fp = fopen("demo.txt","r");
+	if(!fp)
 		return send_to_char("Error opening demographics.\n\r",ch);
 	buf[0] = '\0';
         while(fgets(tempbuf,300,fp))
@@ -1076,13 +1080,15 @@ void do_vote(CHAR_DATA *ch, char *argument)
 
 	sprintf(dir,"%s/%s%s",RIFT_PLAYER_DIR,arg1,".plr");
 
-	if ( ( victim = get_char_world( ch, arg1 ) ) != NULL )
+    victim = get_char_world( ch, arg1 ) ;
+	if ( victim != NULL )
 	{
 		cabal = victim->cabal;
 	}
 	else
 	{
-	if ( ((fp = fopen(dir, "r" )) == NULL))
+      fp = fopen(dir, "r" );
+	if ( fp == NULL)
 		return send_to_char("There is no such person.\n\r",ch);
 	else
 	{
@@ -1236,7 +1242,8 @@ bool check_volley(CHAR_DATA *ch, CHAR_DATA *victim)
 	return FALSE;
 	if(!ch || !victim)
 		return FALSE;
-	if(!(skill=get_skill(victim,gsn_volley)) || victim->fighting || !IS_AWAKE(victim) || victim==ch)
+    skill = get_skill(victim,gsn_volley);
+	if(!skill || victim->fighting || !IS_AWAKE(victim) || victim==ch)
 		return FALSE;
 	if(get_trust(victim) == MAX_LEVEL)
 		return TRUE;
@@ -1390,7 +1397,8 @@ void bounty_log(char *string)
         strtime[strlen(strtime)-1] = '\0';
 
 
-        if ((fp = fopen( BOUNTY_LOG_FILE, "a" )) != NULL)
+        fp = fopen( BOUNTY_LOG_FILE, "a" );
+        if (fp != NULL)
         {
                 fprintf( fp, "%s :: %s\n", strtime, string);
                   fclose(fp);
@@ -1522,7 +1530,8 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if(!(victim=get_char_world(ch,arg1)))
+    victim=get_char_world(ch,arg1);
+	if(!victim)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if(IS_NPC(victim) || ch->cabal==CABAL_BOUNTY || ((IS_IMMORTAL(victim) || IS_HEROIMM(victim)) && !IS_IMMORTAL(ch)))
@@ -1718,21 +1727,25 @@ void do_affto(CHAR_DATA *ch, char *argument)
 		send_to_char(returnstr,ch);
 		return;
 	}
-	if(!(victim=get_char_world(ch,cname)))
+    victim=get_char_world(ch,cname);
+	if(!victim)
 	{
 		send_to_char("They aren't here.\n\r",ch);
 	}
-	if((sn=skill_lookup(skill_name))==-1)
+    sn = skill_lookup(skill_name);
+	if(sn ==-1)
 	{
 		send_to_char("There is no skill by that name.\n\r",ch);
 		return;
 	}
-	if((nlocation=display_lookup(location,apply_locations))==0 && str_cmp(location,"none"))
+    nlocation = display_lookup(location,apply_locations);
+	if(nlocation ==0 && str_cmp(location,"none"))
 	{
 		send_to_char("There is no affect location by that name.\n\r",ch);
 		return;
 	}
-	if((aftype=flag_lookup(saftype,aftype_table))==NO_FLAG && str_cmp(saftype,"AFT_SPELL"))
+    aftype = flag_lookup(saftype,aftype_table);
+	if(aftype == NO_FLAG && str_cmp(saftype,"AFT_SPELL"))
 	{
 		send_to_char("There is no aftype by that name.\n\r",ch);
 		return;
@@ -1862,12 +1875,14 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 		send_to_char("Syntax: assess <target>\n\r",ch);
 		return;
 	}
-	if((skill=get_skill(ch,skill_lookup("assess")))<5)
+    skill = get_skill(ch,skill_lookup("assess"));
+	if(skill < 5)
 	{
 		send_to_char("You don't know how to assess people's conditions.\n\r",ch);
 		return;
 	}
-        if ((victim = get_char_room(ch,arg)) == NULL)
+        victim = get_char_room(ch,arg);
+        if (victim == NULL)
         {
                 send_to_char("They aren't here.\n\r",ch);
                 return;
@@ -2002,7 +2017,8 @@ void do_supps( CHAR_DATA *ch, char *argument )
         if (skill_table[sn].name == NULL )
 	    break;
 
-	if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+    level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+	if (level < LEVEL_HERO + 1
 	&&  level >= min_lev && level <= max_lev
 	&&  skill_table[sn].spell_fun != spell_null
 	&&  ch->pcdata->learned[sn] > 0
@@ -2082,7 +2098,8 @@ void do_commune( CHAR_DATA *ch, char *argument )
     if ( arg1[0] == '\0' )
 	return send_to_char( "Commune which what where?\n\r", ch );
  
-    if ((sn = find_spell(ch,arg1)) < 1
+    sn = find_spell(ch,arg1);
+    if (sn < 1
     ||  skill_table[sn].spell_fun == spell_null
     || (!IS_NPC(ch) && get_skill(ch,sn) < 5)
     || (!IS_NPC(ch) && ch->pcdata->learned[sn] == 0))
@@ -2151,7 +2168,8 @@ void do_commune( CHAR_DATA *ch, char *argument )
     case TAR_CHAR_OFFENSIVE:
 	if ( arg2[0] == '\0' )
 	{
-	    if ( ( victim = ch->fighting ) == NULL )
+        victim = ch->fighting ;
+	    if ( victim == NULL )
 	    {
 		send_to_char( "Commune the prayer on whom?\n\r", ch );
 		return;
@@ -2159,7 +2177,8 @@ void do_commune( CHAR_DATA *ch, char *argument )
 	}
 	else
 	{
-	    if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
+        victim = get_char_room( ch, target_name ) ;
+	    if ( (victim) == NULL )
 	    {
 		send_to_char( "They aren't here.\n\r", ch );
 		return;
@@ -2181,7 +2200,8 @@ void do_commune( CHAR_DATA *ch, char *argument )
 	}
 	else
 	{
-	    if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
+        victim = get_char_room( ch, target_name ) ;
+	    if ( (victim) == NULL )
 	    {
 		send_to_char( "They aren't here.\n\r", ch );
 		return;
@@ -2210,7 +2230,8 @@ void do_commune( CHAR_DATA *ch, char *argument )
 	    return;
 	}
 
-	if ( ( obj = get_obj_carry( ch, target_name, ch ) ) == NULL )
+    obj = get_obj_carry( ch, target_name, ch ) ;
+	if ( (obj) == NULL )
 	{
 	    send_to_char( "You are not carrying that.\n\r", ch );
 	    return;
@@ -2222,7 +2243,8 @@ void do_commune( CHAR_DATA *ch, char *argument )
     case TAR_OBJ_CHAR_OFF:
 	if (arg2[0] == '\0')
 	{
-	    if ((victim = ch->fighting) == NULL)
+      victim = ch->fighting;
+	    if (victim == NULL)
 	    {
 		send_to_char("Commune the prayer on whom or what?\n\r",ch);
 		return;
@@ -2270,7 +2292,9 @@ void do_commune( CHAR_DATA *ch, char *argument )
 
 	break;
     case TAR_DIR:
-        if((where = direction_lookup(target_name))<0 || !(pexit=ch->in_room->exit[where]))
+        where = direction_lookup(target_name);
+        pexit = ch->in_room->exit[where];
+        if(where <0 || !pexit)
                 return send_to_char("That's not a valid direction.\n\r",ch);
         vo = &where;
         target = TARGET_RUNE;
@@ -2396,7 +2420,8 @@ void do_call( CHAR_DATA *ch, char *argument )
     if ( arg1[0] == '\0' )
 	return send_to_char( "Call which what where?\n\r", ch );
 
-    if ((sn = find_spell(ch,arg1)) < 1
+    sn = find_spell(ch,arg1);
+    if (sn < 1
     ||  skill_table[sn].spell_fun == spell_null
     || (!IS_NPC(ch) && get_skill(ch,sn) < 5)
     || (!IS_NPC(ch) && ch->pcdata->learned[sn] == 0))
@@ -2438,12 +2463,14 @@ void do_call( CHAR_DATA *ch, char *argument )
 	case TAR_CHAR_OFFENSIVE:
 	if ( arg2[0] == '\0' )
 	{
-	    if ( ( victim = ch->fighting ) == NULL )
+        victim = ch->fighting ;
+	    if ( victim == NULL )
 		return send_to_char( "Call the power on whom?\n\r", ch );
 	}
 	else
 	{
-	    if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
+        victim = get_char_room( ch, target_name ) ;
+	    if ( (victim) == NULL )
 		return send_to_char( "They aren't here.\n\r", ch );
 	}
 	
@@ -2458,7 +2485,8 @@ void do_call( CHAR_DATA *ch, char *argument )
 	    victim = ch;
 	else
 	{
-	    if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
+        victim = get_char_room( ch, target_name ) ;
+	    if ( (victim) == NULL )
 		return send_to_char( "They aren't here.\n\r", ch );
 	}
 	vo = (void *) victim;
@@ -2475,7 +2503,8 @@ void do_call( CHAR_DATA *ch, char *argument )
 	if ( arg2[0] == '\0' )
 		return send_to_char( "What should the power be called upon?\n\r", ch );
 
-	if ( ( obj = get_obj_carry( ch, target_name, ch ) ) == NULL )
+    obj = get_obj_carry( ch, target_name, ch ) ;
+	if ( (obj) == NULL )
 		return send_to_char( "You are not carrying that.\n\r", ch );
 
 	vo = (void *) obj;
@@ -2484,7 +2513,8 @@ void do_call( CHAR_DATA *ch, char *argument )
     case TAR_OBJ_CHAR_OFF:
 	if (arg2[0] == '\0')
 	{
-	    if ((victim = ch->fighting) == NULL)
+        victim = ch->fighting;
+	    if (victim == NULL)
 		return send_to_char("Call the power on who or what?\n\r",ch);
 	    target = TARGET_CHAR;
 	}
@@ -2527,7 +2557,9 @@ void do_call( CHAR_DATA *ch, char *argument )
 		return send_to_char("You don't see that here.\n\r",ch);
 	break;
     case TAR_DIR:
-        if((where = direction_lookup(target_name))<0 || !(pexit=ch->in_room->exit[where]))
+        where = direction_lookup(target_name);
+        pexit = ch->in_room->exit[where];
+        if(where < 0 || !pexit)
                 return send_to_char("That's not a valid direction.\n\r",ch);
         vo = &where;
         target = TARGET_DIR;
