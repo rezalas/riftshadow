@@ -1018,7 +1018,8 @@ void load_resets( FILE *fp )
 /*	OBJ_INDEX_DATA *temp_index;
 	int temp; */
 
-	if ( ( letter = fread_letter( fp ) ) == 'S' )
+    letter = fread_letter( fp ) ;
+	if (letter == 'S' )
 	    break;
 
 	if ( letter == '*' )
@@ -1054,7 +1055,8 @@ void load_resets( FILE *fp )
 	case 'M':
 	    get_mob_index  ( pReset->arg1 );
 /*	    get_room_index ( pReset->arg3 ); */
-            if ( ( pRoomIndex = get_room_index ( pReset->arg3 ) ) )
+        pRoomIndex = get_room_index ( pReset->arg3 ) ;
+            if (pRoomIndex)
             {
                 new_reset( pRoomIndex, pReset );
                 iLastRoom = pReset->arg3;
@@ -1066,7 +1068,8 @@ void load_resets( FILE *fp )
 	    temp_index->reset_num++;
 	    get_room_index ( pReset->arg3 ); */
 	    get_obj_index ( pReset->arg1 );
-            if ( ( pRoomIndex = get_room_index ( pReset->arg3 ) ) )
+        pRoomIndex = get_room_index ( pReset->arg3 ) ;
+            if (pRoomIndex)
             {
                 new_reset( pRoomIndex, pReset );
                 iLastObj = pReset->arg3;
@@ -1078,7 +1081,8 @@ void load_resets( FILE *fp )
 	    temp_index->reset_num++;
 	    get_obj_index  ( pReset->arg3 ); */
 	    get_obj_index  ( pReset->arg1 );
-            if ( ( pRoomIndex = get_room_index ( iLastObj ) ) )
+        pRoomIndex = get_room_index ( iLastObj ) ;
+            if (pRoomIndex)
             {
                 new_reset( pRoomIndex, pReset );
             }
@@ -1089,7 +1093,8 @@ void load_resets( FILE *fp )
 /*	    temp_index = get_obj_index  ( pReset->arg1 );
 	    temp_index->reset_num++; */
 	    get_obj_index (pReset->arg1);
-            if ( ( pRoomIndex = get_room_index ( iLastRoom ) ) )
+        pRoomIndex = get_room_index ( iLastRoom ) ;
+            if (pRoomIndex)
             {
                 new_reset( pRoomIndex, pReset );
                 iLastObj = iLastRoom;
@@ -1257,7 +1262,8 @@ void fix_exits( void )
 	    fexit = FALSE;
 	    for ( door = 0; door <= 5; door++ )
 	    {
-		if ( ( pexit = pRoomIndex->exit[door] ) != NULL )
+          pexit = pRoomIndex->exit[door] ;
+		if (pexit != NULL )
 		{
 		    if ( pexit->u1.vnum <= 0
 		    || get_room_index(pexit->u1.vnum) == NULL)
@@ -1328,9 +1334,11 @@ void find_adjacents( void )
 
 			for (dir = 0; dir <= 5; dir++)
 			{
-				if ((pexit = room->exit[dir]) != NULL)
+              pexit = room->exit[dir];
+				if (pexit != NULL)
 				{
-					if ((to_room = pexit->u1.to_room) != NULL)
+                  to_room = pexit->u1.to_room;
+					if (to_room != NULL)
 					{
 						if (to_room->area != area)
 						{
@@ -1450,13 +1458,15 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 	    	break;
 
 			case 'M':
-	    		if ( ( pMobIndex = get_mob_index( pReset->arg1 ) ) == NULL )
+              pMobIndex = get_mob_index( pReset->arg1 ) ;
+	    		if (pMobIndex == NULL )
 	    		{
 					bug( "Reset_area: 'M': bad vnum %d.", pReset->arg1 );
 					continue;
 	    		}
 
-	    		if ( ( pRoomIndex = get_room_index( pReset->arg3 ) ) == NULL )
+                pRoomIndex = get_room_index( pReset->arg3 ) ;
+	    		if (pRoomIndex == NULL )
 	    		{
 					bug( "Reset_area: 'R': bad vnum %d.", pReset->arg3 );
 					continue;
@@ -1513,7 +1523,8 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			break;
 
 			case 'O':
-				if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
+                pObjIndex = get_obj_index( pReset->arg1 ) ;
+				if (!pObjIndex)
 				{
 					bug( "Reset_room: 'O' 1 : bad vnum %d", pReset->arg1 );
 					sprintf (buf,"%d %d %d %d",pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4 );
@@ -1521,7 +1532,8 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 					continue;
 				}
 
-				if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
+                pRoomIndex = get_room_index( pReset->arg3 ) ;
+				if (!pRoomIndex)
 				{
 					bug( "Reset_room: 'O' 2 : bad vnum %d.", pReset->arg3 );
 					sprintf (buf,"%d %d %d %d",pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4 );
@@ -1552,13 +1564,15 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			break;
 
 			case 'P':
-				if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
+              pObjIndex = get_obj_index( pReset->arg1 ) ;
+				if (!pObjIndex)
 				{
 					bug( "Reset_room: 'P': bad vnum %d.", pReset->arg1 );
 					continue;
 				}
 
-				if ( !( pObjToIndex = get_obj_index( pReset->arg3 ) ) )
+                pObjToIndex = get_obj_index( pReset->arg3 ) ;
+				if (!pObjToIndex)
 				{
 					bug( "Reset_room: 'P': bad vnum %d.", pReset->arg3 );
 					continue;
@@ -1598,7 +1612,8 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 
 			case 'G':
 			case 'E':
-				if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
+              pObjIndex = get_obj_index( pReset->arg1 ) ;
+				if ( !pObjIndex )
 				{
 					bug( "Reset_room: 'E' or 'G': bad vnum %d.", pReset->arg1 );
 					continue;
@@ -1694,7 +1709,8 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 				{
 					if (pReset->arg3 == 16)
 					{
-						if ( (secondary = get_eq_char(LastMob,WEAR_WIELD)) != NULL)
+                      secondary = get_eq_char(LastMob,WEAR_WIELD);
+						if ( secondary != NULL)
 						{
 							unequip_char(LastMob,secondary,TRUE);
 							equip_char(LastMob,secondary,18,TRUE);
@@ -1740,13 +1756,15 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			break;
 
 			case 'D':
-				if ( ( pRoomIndex = get_room_index( pReset->arg1 ) ) == NULL )                                            
+              pRoomIndex = get_room_index( pReset->arg1 ) ;
+				if ( (pRoomIndex) == NULL )                                            
 				{                                                                                                         
 					bug( "Reset_area: 'D': bad vnum %d.", pReset->arg1 );                                                     
 					continue;                                                                                                 
 				}                                                                                                         
                                                                                                                   
-				if ( ( pexit = pRoomIndex->exit[pReset->arg2] ) == NULL )                                                 
+                pexit = pRoomIndex->exit[pReset->arg2] ;
+				if ( pexit == NULL )                                                 
 					break;                                                                                                    
 	                                                                                                                  
 				SET_BIT( pexit->exit_info, EX_ISDOOR );                                                                   
@@ -1772,7 +1790,8 @@ void reset_room( ROOM_INDEX_DATA *pRoom )
 			break;
 
 			case 'R':
-if ( !( pRoomIndex = get_room_index( pReset->arg1 ) ) )
+pRoomIndex = get_room_index( pReset->arg1 ) ;
+if ( !(pRoomIndex) )
 {
 bug( "Reset_room: 'R': bad vnum %d.", pReset->arg1 );
 continue;
@@ -1807,7 +1826,8 @@ void reset_area( AREA_DATA *pArea )
 
 	for ( vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++ )
 	{
-		if ( ( pRoom = get_room_index(vnum) ) )
+        pRoom = get_room_index(vnum) ;
+		if ( (pRoom ) )
 			reset_room(pRoom);
 	}
 
@@ -3159,13 +3179,15 @@ void do_dump( CHAR_DATA *ch, char *argument )
 	count, count * (sizeof(*d)), count2, count2 * (sizeof(*d)));
 
     /* object prototypes */
-    for ( vnum = 0; nMatch < top_obj_index; vnum++ )
-        if ( ( pObjIndex = get_obj_index( vnum ) ) != NULL )
+    for ( vnum = 0; nMatch < top_obj_index; vnum++ ){
+      pObjIndex = get_obj_index( vnum ) ;
+        if ( (pObjIndex) != NULL )
         {
 	    for (af = pObjIndex->affected; af != NULL; af = af->next)
 		aff_count++;
             nMatch++;
         }
+    }
 
     fprintf(fp,"ObjProt	%4d (%8d bytes)\n",
 	top_obj_index, top_obj_index * (sizeof(*pObjIndex)));
@@ -3210,7 +3232,8 @@ void do_dump( CHAR_DATA *ch, char *argument )
     fprintf(fp,  "---------------\n");
     nMatch = 0;
     for (vnum = 0; nMatch < top_mob_index; vnum++)
-	if ((pMobIndex = get_mob_index(vnum)) != NULL)
+      pMobIndex = get_mob_index(vnum);
+	if (pMobIndex != NULL)
 	{
 	    nMatch++;
 	    fprintf(fp,"#%-4d %3d active %3d killed     %s\n",
@@ -3226,7 +3249,8 @@ void do_dump( CHAR_DATA *ch, char *argument )
     fprintf(fp,  "---------------\n");
     nMatch = 0;
     for (vnum = 0; nMatch < top_obj_index; vnum++)
-	if ((pObjIndex = get_obj_index(vnum)) != NULL)
+      pObjIndex = get_obj_index(vnum);
+	if (pObjIndex != NULL)
 	{
 	    nMatch++;
 	    fprintf(fp,"#%-4d %3d active %3d reset      %s\n",
@@ -3266,7 +3290,8 @@ int number_range( int from, int to )
     if (from == 0 && to == 0)
 	return 0;
 
-    if ( ( to = to - from + 1 ) <= 1 )
+    to = to - from + 1 ;
+    if (to <= 1 )
 	return from;
 
     for ( power = 2; power < to; power <<= 1 )
@@ -3508,7 +3533,8 @@ bool str_infix( const char *astr, const char *bstr )
     int ichar;
     char c0;
 
-    if ( ( c0 = LOWER(astr[0]) ) == '\0' )
+    c0 = LOWER(astr[0]) ;
+    if ( c0 == '\0' )
 	return FALSE;
 
     sstr1 = strlen(astr);
@@ -3573,7 +3599,8 @@ void append_file( CHAR_DATA *ch, char *file, char *str )
 	return;
 
     fclose( fpReserve );
-    if ( ( fp = fopen( file, "a" ) ) == NULL )
+    fp = fopen( file, "a" ) ;
+    if (fp == NULL )
     {
 	perror( file );
 	send_to_char( "Could not open the file!\n\r", ch );
@@ -3788,7 +3815,8 @@ players loaded */
 	sprintf(pbuf,"ls %s > %s",catplr, PLAYER_LIST);
 	system(pbuf);
 
-	if ((fpChar_list = fopen( PLAYER_LIST, "r")) == NULL)
+    fpChar_list = fopen( PLAYER_LIST, "r");
+	if (fpChar_list == NULL)
 	{
 	perror(PLAYER_LIST);
 	exit(1);
@@ -3802,7 +3830,8 @@ players loaded */
 	 if (!str_cmp(strPlr, chkbuf))
 		break;	/* Exit if == Zzz.plr file */		
 
-	 if ( (	fpChar = fopen(strPlr, "r") ) == NULL)
+     fpChar = fopen(strPlr, "r") ;
+	 if (fpChar == NULL)
 	 {
 		perror(strPlr);
 		exit(1);
@@ -4060,7 +4089,8 @@ void load_votes()
 	BALLOT_DATA *ballot;
 	VOTE_DATA *vote;
 	char discard, *word;
-	if(!(fp=fopen(VOTE_FILE,"r")))
+    fp=fopen(VOTE_FILE,"r");
+	if(!fp)
 		return;
 	return;
 	vote_first	= NULL;
@@ -4112,7 +4142,8 @@ void load_newresets( FILE *fp )
 	char letter, tletter;
 	OBJ_INDEX_DATA *temp_index;
 	char *word;
-	if ( ( letter = fread_letter( fp ) ) == 'S' )
+    letter = fread_letter( fp ) ;
+	if (letter == 'S' )
 	    break;
 
 	if ( letter == '*' )
@@ -4156,7 +4187,8 @@ void load_newresets( FILE *fp )
 		pReset->arg2	= fread_number( fp ); 	// global limit
 		fread_word( fp ); 			    	//the word LLIMIT
 		pReset->arg4	= fread_number( fp ); 	// local limit
-		if ( ( pRoomIndex = get_room_index ( pReset->arg3 ) ) )
+        pRoomIndex = get_room_index ( pReset->arg3 ) ;
+		if ( pRoomIndex )
 		{
 			new_reset( pRoomIndex, pReset );
 			iLastRoom = pReset->arg3;
@@ -4177,7 +4209,8 @@ void load_newresets( FILE *fp )
 	    pReset->arg4		= 0;				//crappy placeholder
 	    temp_index = get_obj_index  ( pReset->arg1 );
 	    temp_index->reset_num++;
-		if ( ( pRoomIndex = get_room_index ( pReset->arg3 ) ) )
+        pRoomIndex = get_room_index ( pReset->arg3 ) ;
+		if ( (pRoomIndex) )
 		{
 			new_reset( pRoomIndex, pReset );
 			iLastObj = pReset->arg3;
@@ -4195,7 +4228,8 @@ void load_newresets( FILE *fp )
 	    pReset->arg4		= fread_number(fp);	//number of copies to put in cont.
 	    temp_index = get_obj_index  ( pReset->arg1 );
 	    temp_index->reset_num++;
-		if ( ( pRoomIndex = get_room_index ( iLastRoom ) ) )
+        pRoomIndex = get_room_index ( iLastRoom ) ;
+		if ( (pRoomIndex) )
 			new_reset( pRoomIndex, pReset );
 		if(area_last->area_type == ARE_UNOPENED)
 	    	get_obj_index  ( pReset->arg3 );
@@ -4208,7 +4242,8 @@ void load_newresets( FILE *fp )
 	    pReset->arg4		= 0;
 	    temp_index = get_obj_index  ( pReset->arg1 );
 	    temp_index->reset_num++;
-		if ( ( pRoomIndex = get_room_index ( iLastRoom ) ) )
+        pRoomIndex = get_room_index ( iLastRoom ) ;
+		if ( (pRoomIndex) )
 		{
 			new_reset( pRoomIndex, pReset );
 			iLastObj = iLastRoom;
@@ -4225,7 +4260,8 @@ void load_newresets( FILE *fp )
 	    pReset->arg4		= 0;
 	    temp_index = get_obj_index  ( pReset->arg1 );
 	    temp_index->reset_num++;
-		if ( ( pRoomIndex = get_room_index ( iLastRoom ) ) )
+        pRoomIndex = get_room_index ( iLastRoom ) ;
+		if ( (pRoomIndex) )
 		{
 			new_reset( pRoomIndex, pReset );
 			iLastObj = iLastRoom;
@@ -4248,7 +4284,8 @@ void load_newresets( FILE *fp )
 	    else
 		bugout("Invalid door reset state.");
 	    pReset->arg4		= 0;
-		if ( ( pRoomIndex = get_room_index ( pReset->arg1 ) ) )
+        pRoomIndex = get_room_index ( pReset->arg1 ) ;
+		if ( (pRoomIndex) )
 			new_reset( pRoomIndex, pReset);
 		break;
 
@@ -4257,7 +4294,8 @@ void load_newresets( FILE *fp )
 	    pReset->arg2	= fread_number(fp);
 	    pReset->arg3	= 0;
 	    pReset->arg4	= 0;
-		if ( ( pRoomIndex = get_room_index ( pReset->arg1 ) ) )
+        pRoomIndex = get_room_index ( pReset->arg1 ) ;
+		if ( (pRoomIndex) )
 			new_reset( pRoomIndex, pReset );
 		if ( pReset->arg2 < 0 || pReset->arg2 > 6 )
 	    {
