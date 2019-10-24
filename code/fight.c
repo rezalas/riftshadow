@@ -82,7 +82,8 @@ void violence_update( void )
 			affect_strip(ch,gsn_unbalance);
 	}
 
-        if ( ( victim = ch->fighting ) == NULL || ch->in_room == NULL )
+    victim = ch->fighting ;
+        if(victim == NULL || ch->in_room == NULL )
             continue;
 
 	if (IS_NPC(ch) && (!IS_NPC(ch->fighting))
@@ -818,7 +819,8 @@ int one_hit_new( CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool b
             	OBJ_AFFECT_DATA *poison;
 			AFFECT_DATA af;
 
-            	if ((poison = affect_find_obj(wield->affected,gsn_poison)) == NULL)
+            poison = affect_find_obj(wield->affected,gsn_poison);
+            	if(poison == NULL)
                 		level = wield->level;
             	else
                 		level = poison->level;
@@ -966,7 +968,8 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 			if (check_mist(ch,victim,dt))
 				return 0;
 		
-		if ((dam=check_armor(ch, victim, dt, dam_type, (int)dam)) == 0)
+        dam = check_armor(ch, victim, dt, dam_type, (int)dam);
+		if (dam == 0)
 		    return 0;
 		
 		int sanguine = check_sanguine(victim);
@@ -1305,7 +1308,8 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
             if (IS_SET(ch->act,PLR_AUTOGOLD) &&
                 corpse && corpse->contains  && /* exists and not empty */
                 !IS_SET(ch->act,PLR_AUTOLOOT))
-                if ((coins = get_obj_list(ch,"gcash",corpse->contains)) != NULL)
+              coins = get_obj_list(ch,"gcash",corpse->contains);
+                if(coins != NULL)
                     do_get(ch, "all.gcash corpse");
 
             if ( IS_SET(ch->act, PLR_AUTOSAC) )
@@ -1683,7 +1687,8 @@ int check_armor(CHAR_DATA *ch, CHAR_DATA *victim, int dt, int dam_type, int dam)
 	
 	chance *= 1 + ((float) str_app[get_curr_stat(ch,STAT_STR)].topenetrate / 100.001);
 
-	if((wield = get_eq_char(ch,WEAR_WIELD)) && wield->weight>=10)
+    wield = get_eq_char(ch,WEAR_WIELD);
+	if(wield && wield->weight>=10)
 		chance *= 1 - ((float)wield->weight/100.001);
 	
 	attack = get_dam_message(ch,dt);
@@ -1731,7 +1736,8 @@ bool check_parry( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
     if (IS_AFFECTED(victim, AFF_HASTE))	chance+=20;
     if (IS_AFFECTED(ch, AFF_HASTE))		chance-=15;
 
-	if((cd_sk = get_skill(victim, gsn_champions_defense)) > 1)
+    cd_sk = get_skill(victim, gsn_champions_defense);
+	if(cd_sk > 1)
 	{
 		if(number_percent() < (cd_sk * .85))
 		{
@@ -1770,7 +1776,8 @@ bool check_parry( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	    }
     }
 
-    if((victimwield=get_eq_char(victim,WEAR_WIELD)) != NULL) {
+    victimwield=get_eq_char(victim,WEAR_WIELD);
+    if(victimwield != NULL) {
 	    switch (victimwield->value[0]) {
 			case (WEAPON_SWORD): 	chance+=10;		break;
 			case (WEAPON_DAGGER): 	chance-=20;		break;
@@ -1824,7 +1831,8 @@ bool check_parry( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 
     	chance = UMIN(chance, 95);
 	
-    if ((roll = number_percent( )) >= chance)
+        roll = number_percent( );
+    if (roll >= chance)
 	return FALSE;
 
     diff = (int)((float)chance - (float)roll);
@@ -1872,13 +1880,15 @@ bool check_shield_block( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
     if ( !IS_AWAKE(victim) )
         return FALSE;
 
-	if ((chance = get_skill(victim, gsn_shield_block)) < 2)
+    chance = get_skill(victim, gsn_shield_block);
+	if (chance < 2)
 		return FALSE;
 	
     chance /= 4;
     chance += 15;
 
-	if((cd_sk = get_skill(victim, gsn_champions_defense)) > 1)
+    cd_sk = get_skill(victim, gsn_champions_defense);
+	if(cd_sk > 1)
 	{
 		if(number_percent() < (cd_sk * .85))
 		{
@@ -2069,7 +2079,8 @@ bool check_dodge( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	
 	chance = UMIN(chance, 95);
 
-	if ((roll = number_percent( )) >= chance)
+    roll = number_percent( );
+	if (roll >= chance)
         return FALSE;
 	
 	diff = (int)chance - roll;
@@ -2185,7 +2196,8 @@ bool check_avoid( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	
 	chance = UMIN(chance, 75);
 	
-	if ((roll = number_percent( )) >= chance)
+    roll = number_percent( );
+	if (roll >= chance)
         return FALSE;
 	
 	diff = (int)chance - roll;
@@ -2214,10 +2226,12 @@ int	check_evasion (CHAR_DATA *ch, int chance)
 	weapon = get_eq_char(ch,WEAR_WIELD);
 	dual = get_eq_char(ch,WEAR_DUAL_WIELD);
 	
-	if ((skill = get_skill(ch,gsn_evasion)) <= 1) 	
+    skill = get_skill(ch,gsn_evasion);
+	if (skill <= 1) 	
 		return chance;
 	
-	if ((dex = get_curr_stat(ch,STAT_DEX)) <= 18)	
+    dex = get_curr_stat(ch,STAT_DEX);
+	if (dex <= 18)	
 		return chance;
 	
 	if (weapon != NULL)
@@ -2263,7 +2277,8 @@ bool check_fend( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	if (!IS_AWAKE(victim))
 		return FALSE;
 
-	if ((skill = get_skill(victim,gsn_fend)) < 5)
+    skill = get_skill(victim,gsn_fend);
+	if (skill < 5)
 		return FALSE;
 
 	if (!is_wielded(victim,WEAPON_SPEAR,WIELD_PRIMARY)
@@ -2338,13 +2353,15 @@ bool check_deflect (CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 		if(!style_check(gsn_deflect,victim->pcdata->style))
 			return FALSE;
 
-	if ((skill = get_skill(victim,gsn_deflect)) <= 1)
+    skill = get_skill(victim,gsn_deflect);
+	if (skill <= 1)
 		return FALSE;
 	
 	if (!IS_AWAKE(victim))
 		return FALSE;
 	
-	if ((sleeves = get_eq_char(victim,WEAR_ARMS)) == NULL)
+    sleeves = get_eq_char(victim,WEAR_ARMS);
+	if (sleeves == NULL)
 		return FALSE;
 
 	if (material_table[sleeves->pIndexData->material_index].mat_hardness <= 2)
@@ -2429,7 +2446,8 @@ void check_analyze (CHAR_DATA *ch, CHAR_DATA *victim)
 	}
 	if (!style_check(gsn_analyze, ch->pcdata->style)) return;
 	
-	if ((skill = get_skill(ch,gsn_analyze)) == 0) return;
+    skill = get_skill(ch,gsn_analyze);
+	if (skill == 0) return;
 
 	intel = get_curr_stat(ch,STAT_INT);
 	
@@ -2839,7 +2857,8 @@ void death_cry( CHAR_DATA *ch, bool infidels )
     {
         EXIT_DATA *pexit;
 
-        if ( ( pexit = was_in_room->exit[door] ) != NULL
+        pexit = was_in_room->exit[door] ;
+        if (pexit != NULL
         &&   pexit->u1.to_room != NULL
         &&   pexit->u1.to_room != was_in_room )
         {
@@ -3899,7 +3918,8 @@ void warrior_ai (CHAR_DATA *mob, CHAR_DATA *victim)
 				if (is_same_group(victim,gch))
 					count++;
 			}
-			if ((mobweap = get_eq_char(mob,WEAR_WIELD)) != NULL
+            mobweap = get_eq_char(mob,WEAR_WIELD);
+			if (mobweap != NULL
 				&& mobweap->value[0] == WEAPON_WHIP
 				&& !is_affected(mob,gsn_entwine))
 				do_entwine(mob,"arm");
@@ -4006,12 +4026,15 @@ void warrior_ai (CHAR_DATA *mob, CHAR_DATA *victim)
 void thief_ai (CHAR_DATA *mob, CHAR_DATA *victim)
 {
 	OBJ_DATA *mobweap;
+	OBJ_DATA *mobdualweap;
 	OBJ_DATA *victweap;
 	
-	if ((((mobweap = get_eq_char(mob,WEAR_WIELD)) != NULL
+    mobweap = get_eq_char(mob, WEAR_WIELD);
+    mobdualweap = get_eq_char(mob, WEAR_DUAL_WIELD);
+	if (((mobweap != NULL
 		&& mobweap->value[0] == WEAPON_DAGGER)
-		|| ((mobweap = get_eq_char(mob,WEAR_DUAL_WIELD)) != NULL
-		&& mobweap->value[0] == WEAPON_DAGGER))
+		|| (mobdualweap != NULL
+		&& mobdualweap->value[0] == WEAPON_DAGGER))
 		&& victim->fighting != mob)
 		do_circle_stab(mob,"");
 	else if (can_see(victim,mob))
@@ -4057,7 +4080,8 @@ void disarm( CHAR_DATA *ch, CHAR_DATA *victim )
     OBJ_DATA *secondary;
 
 
-    if ( ( obj = get_eq_char( victim, WEAR_WIELD ) ) == NULL )
+    obj = get_eq_char( victim, WEAR_WIELD ) ;
+    if (obj == NULL )
         return;
 
     if ( IS_OBJ_STAT(obj,ITEM_NOREMOVE) || IS_OBJ_STAT(obj,ITEM_NODISARM))
@@ -4089,7 +4113,8 @@ void disarm( CHAR_DATA *ch, CHAR_DATA *victim )
 		}
     }
 
-    if ((secondary = get_eq_char(victim,WEAR_DUAL_WIELD)) != NULL)
+    secondary = get_eq_char(victim,WEAR_DUAL_WIELD);
+    if (secondary != NULL)
     {
 		unequip_char(victim,secondary,FALSE);
 		act("You quickly swap $p into your primary hand.",victim,secondary,0,TO_CHAR);
@@ -4104,7 +4129,8 @@ void do_berserk( CHAR_DATA *ch, char *argument)
     float chance;
     int	hp_percent;
 
-    if ((chance = get_skill(ch,gsn_berserk)) == 0
+    chance = get_skill(ch,gsn_berserk);
+    if (chance == 0
     ||  (IS_NPC(ch) && !IS_SET(ch->off_flags,OFF_BERSERK))
     ||  (!IS_NPC(ch)
     &&   ch->level < skill_table[gsn_berserk].skill_level[ch->Class()->GetIndex()]))
@@ -4197,7 +4223,8 @@ void do_bash( CHAR_DATA *ch, char *argument )
 
     one_argument(argument,arg);
 
-    if ( (chance = get_skill(ch,gsn_bash)) == 0)
+    chance = get_skill(ch,gsn_bash);
+    if (chance == 0)
         return send_to_char("Bashing? What's that?\n\r",ch);
 
     if (IS_NPC(ch) && IS_AFFECTED(ch,AFF_CHARM))
@@ -4240,7 +4267,8 @@ void do_bash( CHAR_DATA *ch, char *argument )
 	if (ch->size - 1 > victim->size)
 		return send_to_char("They are too small to properly aim a bash at.\n\r",ch);
 
-	if ((avoid = get_skill(victim, gsn_avoid)) > 0)
+    avoid = get_skill(victim, gsn_avoid);
+	if (avoid > 0)
 	{
 		avoid /= 2;
 
@@ -4422,7 +4450,8 @@ void do_dirt( CHAR_DATA *ch, char *argument )
 
     one_argument(argument,arg);
 
-    if ( (chance = get_skill(ch,gsn_dirt)) == 0)
+    chance = get_skill(ch,gsn_dirt);
+    if (chance == 0)
         return send_to_char("You get your feet dirty.\n\r",ch);
 
     if (arg[0] == '\0')
@@ -4578,7 +4607,8 @@ void do_trip( CHAR_DATA *ch, char *argument )
     one_argument(argument,arg);
 
 
-    if ( (chance = get_skill(ch,gsn_trip)) == 0
+    chance = get_skill(ch,gsn_trip);
+    if (chance == 0
     	|| (IS_NPC(ch) && !IS_SET(ch->off_flags,OFF_TRIP))
     	||   (!IS_NPC(ch)
         && ch->level < skill_table[gsn_trip].skill_level[ch->Class()->GetIndex()]))
@@ -4727,7 +4757,8 @@ void do_hit( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+    victim = get_char_room( ch, arg ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -4768,7 +4799,8 @@ void do_kill( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+    victim = get_char_room( ch, arg ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -4839,7 +4871,8 @@ void do_murder( CHAR_DATA *ch, char *argument )
 	{
 //        return;
 	}
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+    victim = get_char_room( ch, arg ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -5029,7 +5062,8 @@ void do_rescue( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+    victim = get_char_room( ch, arg ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -5046,7 +5080,8 @@ void do_rescue( CHAR_DATA *ch, char *argument )
         send_to_char( "Doesn't need your help!\n\r", ch );
         return;
     }
-    if ( ( fch = victim->fighting ) == NULL )
+    fch = victim->fighting ;
+    if (fch == NULL )
     {
         send_to_char( "That person is not fighting right now.\n\r", ch );
         return;
@@ -5085,10 +5120,12 @@ void do_kick( CHAR_DATA *ch, char *argument )
     CHAR_DATA *victim;
     int dam, skill;
 
-    if ((skill = get_skill(ch, gsn_kick)) == 0)
+    skill = get_skill(ch, gsn_kick);
+    if (skill == 0)
 		return send_to_char("You better leave the martial arts to fighters.\n\r", ch );
 
-    if ( ( victim = ch->fighting ) == NULL )
+    victim = ch->fighting ;
+    if (victim == NULL )
     {
         send_to_char( "You aren't fighting anyone.\n\r", ch );
         return;
@@ -5139,7 +5176,8 @@ void do_disarm( CHAR_DATA *ch, char *argument )
 
     hth = 0;
 
-    if ((chance = get_skill(ch,gsn_disarm)) == 0)
+    chance = get_skill(ch,gsn_disarm);
+    if (chance == 0)
     {
         send_to_char( "You don't know how to disarm opponents.\n\r", ch );
         return;
@@ -5153,13 +5191,15 @@ void do_disarm( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = ch->fighting ) == NULL )
+    victim = ch->fighting ;
+    if (victim == NULL )
     {
         send_to_char( "You aren't fighting anyone.\n\r", ch );
         return;
     }
 
-    if ( ( obj = get_eq_char( victim, WEAR_WIELD ) ) == NULL )
+    obj = get_eq_char( victim, WEAR_WIELD ) ;
+    if (obj == NULL )
     {
         send_to_char( "Your opponent is not wielding a weapon.\n\r", ch );
         return;
@@ -5226,8 +5266,8 @@ void do_disarm( CHAR_DATA *ch, char *argument )
 
 void do_surrender( CHAR_DATA *ch, char *argument )
 {
-    CHAR_DATA *mob;
-    if ( (mob = ch->fighting) == NULL )
+    CHAR_DATA *mob = ch->fighting;
+    if (mob == NULL )
     {
         send_to_char( "But you're not fighting!\n\r", ch );
         return;
@@ -5260,7 +5300,8 @@ void do_slay( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+    victim = get_char_room( ch, arg ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -5409,7 +5450,8 @@ void do_cleave(CHAR_DATA *ch,char *argument)
         int sn;
 	int skill;
 
-        if ( ( ( chance = get_skill(ch,gsn_cleave)) == 0)
+        chance = get_skill(ch, gsn_cleave);
+        if ( ( chance == 0)
         || (ch->level < skill_table[gsn_cleave].skill_level[ch->Class()->GetIndex()]) )
         {
         send_to_char("You don't know how to cleave.\n\r",ch);
@@ -5431,7 +5473,8 @@ void do_cleave(CHAR_DATA *ch,char *argument)
         send_to_char("You need to wield a sword or axe to cleave.\n\r",ch);
         return;
         }
-        if ( (victim = get_char_room(ch,arg)) == NULL )
+        victim = get_char_room(ch,arg);
+        if (victim == NULL )
         {
         send_to_char("They aren't here.\n\r",ch);
         return;
@@ -5563,7 +5606,8 @@ void do_tail(CHAR_DATA *ch, char *argument)
     if (IS_NPC(ch) && IS_AFFECTED(ch,AFF_CHARM))
 	return;
 
-    if ( (chance = get_skill(ch,gsn_tail)) == 0)
+    chance = get_skill(ch,gsn_tail);
+    if (chance == 0)
 	return send_to_char("You don't have a tail to strike with like that.\n\r",ch);
 
     if (arg[0] == '\0')
@@ -5618,7 +5662,8 @@ void do_throw(CHAR_DATA *ch,char *argument)
     int dam, chance;
     char arg[MAX_INPUT_LENGTH];
 
-    if ( ((chance = get_skill(ch,gsn_throw)) == 0
+    chance = get_skill(ch,gsn_throw);
+    if ((chance == 0
     || ch->level < skill_table[gsn_throw].skill_level[ch->Class()->GetIndex()]))
     {
         send_to_char("Throwing? What's that?\n\r",ch);
@@ -5790,7 +5835,8 @@ void do_nerve(CHAR_DATA *ch,char *argument)
     AFFECT_DATA af;
     float chance;
 
-    if ( (chance = get_skill(ch,gsn_nerve)) == 0
+    chance = get_skill(ch,gsn_nerve);
+    if (chance == 0
     || ch->level < skill_table[gsn_nerve].skill_level[ch->Class()->GetIndex()])
     {
         send_to_char("You don't know how to use nerve pressure tactics.\n\r",ch);
@@ -5926,7 +5972,8 @@ void do_blindness_dust(CHAR_DATA *ch,char *argument)
         bool fighting = FALSE;
         char buf[MAX_STRING_LENGTH];
 
-        if ( (chance = get_skill(ch,gsn_blindness_dust)) == 0
+        chance = get_skill(ch,gsn_blindness_dust);
+        if (chance == 0
         || ch->level < skill_table[gsn_blindness_dust].skill_level[ch->Class()->GetIndex()])
         {
         send_to_char("You don't know how to make blindness dust to throw.\n\r",ch);
@@ -6002,7 +6049,8 @@ void do_poison_dust(CHAR_DATA *ch,char *argument)
         bool fighting = FALSE;
         char buf[MAX_STRING_LENGTH];
 
-        if ( (chance = get_skill(ch,gsn_poison_dust)) == 0
+        chance = get_skill(ch,gsn_poison_dust);
+        if (chance == 0
         || ch->level < skill_table[gsn_poison_dust].skill_level[ch->Class()->GetIndex()])
         {
         send_to_char("You don't know how to make poison dust to throw.\n\r",ch);
@@ -6070,7 +6118,8 @@ void do_warcry(CHAR_DATA *ch,char *argument)
 {
         AFFECT_DATA af;
         float chance;
-        if ( (chance = get_skill(ch,gsn_warcry)) == 0
+        chance = get_skill(ch,gsn_warcry);
+        if (chance == 0
         || ch->level < skill_table[gsn_warcry].skill_level[ch->Class()->GetIndex()])
         {
         send_to_char("You don't know how to warcry properly.\n\r",ch);
@@ -6129,12 +6178,14 @@ void do_strangle(CHAR_DATA *ch,char *argument)
 	one_argument(argument,arg);
 
     
-	if ( (chance = get_skill(ch,gsn_strangle)) == 0
+    chance = get_skill(ch,gsn_strangle);
+	if (chance == 0
 		|| ch->level < skill_table[gsn_strangle].skill_level[ch->Class()->GetIndex()])
         return send_to_char("You don't know how to strangle properly.\n\r",ch);
 
 
-	if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if (victim == NULL)
         return send_to_char("They aren't here.\n\r",ch);
         
 	if (victim == ch)
@@ -6239,7 +6290,8 @@ void do_enlist(CHAR_DATA *ch,char *argument)
         send_to_char("Who do you wish to enlist as a follower?\n\r",ch);
         return;
     }
-    if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+    if (victim == NULL)
     {
         send_to_char("They aren't here.\n\r",ch);
         return;
@@ -6452,7 +6504,8 @@ void do_shield_cleave(CHAR_DATA *ch,char *argument)
 send_to_char("That isn't possible.\n\r",ch);
 return;
 }
-        if ((shield = get_eq_char(victim,WEAR_SHIELD)) == NULL)
+    shield = get_eq_char(victim,WEAR_SHIELD);
+        if(shield == NULL)
         {
         send_to_char("But they aren't using a shield.\n\r",ch);
         return;
@@ -6579,8 +6632,9 @@ void do_forage(CHAR_DATA *ch,char *argument)
         OBJ_DATA *berry_2;
         int chance, found;
 
-    if ( (chance = get_skill(ch,gsn_forage)) == 0
-    || (ch->level < skill_table[gsn_forage].skill_level[ch->Class()->GetIndex()]) )
+    chance = get_skill(ch,gsn_forage);
+    if (chance == 0
+    || (ch->level < skill_table[gsn_forage].skill_level[ch->Class()->GetIndex()]))
     {
         send_to_char("You aren't able to decide on which plants are edible.\n\r",ch);
 	return;
@@ -6759,7 +6813,8 @@ void do_flee( CHAR_DATA *ch, char *argument )
     bool pounced = FALSE;
 
 
-    if ( ( victim = ch->fighting ) == NULL ) {
+     victim = ch->fighting ;
+    if (victim == NULL ) {
         if (ch->position == POS_FIGHTING) {
 			ch->position = POS_STANDING;
 		}
@@ -6830,7 +6885,8 @@ void do_flee( CHAR_DATA *ch, char *argument )
             door = number_door( );
         else
             door = dir;
-        if ( ( pexit = was_in->exit[door] ) == 0
+        pexit = was_in->exit[door] ;
+        if (pexit == 0
         ||   pexit->u1.to_room == NULL
         ||   ( IS_SET(pexit->exit_info, EX_CLOSED)
 		&& (!IS_AFFECTED(ch,AFF_PASS_DOOR) ))
@@ -6851,7 +6907,8 @@ void do_flee( CHAR_DATA *ch, char *argument )
 		
 		move_char( ch, door, FALSE, TRUE );
 	
-		if ( ( now_in = ch->in_room ) == was_in )
+        now_in = ch->in_room ;
+		if (now_in == was_in )
 		{
 			set_fighting(victim,ch);
 			set_fighting(ch, victim); //to stop people from walking away
@@ -6922,7 +6979,8 @@ void do_assassinate(CHAR_DATA *ch,char *argument)
         send_to_char("Attempt to assassinate who?\n\r",ch);
         return;
         }
-        if ( (victim = get_char_room(ch,arg)) == NULL)
+        victim = get_char_room(ch,arg);
+        if (victim  == NULL)
         {
         send_to_char("They aren't here.\n\r",ch);
         return;
@@ -7031,7 +7089,8 @@ void do_lash(CHAR_DATA *ch,char *argument)
 
     one_argument(argument,arg);
 
-    if ( (chance = get_skill(ch,gsn_lash)) == 0)
+    chance = get_skill(ch,gsn_lash);
+    if (chance == 0)
         return send_to_char("You don't have the skill to lash people's legs.\n\r",ch);
 
     weapon = get_eq_char(ch,WEAR_WIELD);
@@ -7117,7 +7176,8 @@ void do_pugil(CHAR_DATA *ch,char *argument)
 
     one_argument(argument,arg);
 
-    if ( (chance = get_skill(ch,gsn_pugil)) == 0
+    chance = get_skill(ch,gsn_pugil);
+    if (chance == 0
     ||  IS_NPC(ch)
     ||  (!IS_NPC(ch) && ch->level < skill_table[gsn_pugil].skill_level[ch->Class()->GetIndex()]) )
     {
@@ -7465,7 +7525,8 @@ bool check_maneuvering( CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 		return FALSE;
 
 	/* Check to make sure the person has the skill */
-	if ((chance = get_skill(victim,gsn_maneuvering)) == 0)
+    chance = get_skill(victim,gsn_maneuvering);
+	if (chance == 0)
 		return FALSE;
 
 		/* Loop through all the people in the room */
@@ -7526,7 +7587,8 @@ bool check_catch( CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 			return FALSE;
 	}
 
-	if ((chance = get_skill(ch,gsn_catch)) == 0)
+    chance = get_skill(ch,gsn_catch);
+	if (chance == 0)
 		return FALSE;
 
 	if((get_eq_char(ch,WEAR_SHIELD)!=NULL || get_eq_char(ch,WEAR_DUAL_WIELD)!=NULL) && (get_eq_char(ch,WEAR_WIELD)!=NULL))
@@ -7714,7 +7776,8 @@ bool check_sidestep(CHAR_DATA *ch, CHAR_DATA *victim, int skill, int mod)
 	}
 	else
 	{
-		if((chance = get_skill(victim,gsn_sidestep)) < 2)
+        chance = get_skill(victim,gsn_sidestep);
+		if(chance < 2)
 			return FALSE;
 		sprintf(type,"%s",skill_table[skill].name);
 		chance=(int)(chance * ((float)mod / 100));
@@ -7767,7 +7830,8 @@ int check_terrain_mastery(CHAR_DATA *ch)
 	if(IS_NPC(ch))
 		return 0;
 	
-	if((skill = get_skill(ch,gsn_terrain_mastery)) > 0)
+    skill = get_skill(ch,gsn_terrain_mastery);
+	if(skill > 0)
 	{
 		if(!style_check(gsn_terrain_mastery, ch->pcdata->style))
 			return 0;
@@ -7829,7 +7893,8 @@ void do_gore (CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0')
 		return send_to_char("Gore whom?\n\r",ch);
 	
-	if ((victim = get_char_room(ch,arg)) == NULL)
+    victim = get_char_room(ch,arg);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if (victim == ch)
@@ -7897,10 +7962,12 @@ void do_headbutt (CHAR_DATA *ch, char *argument)
 	AFFECT_DATA af;
 	int skill, dam;
 
-	if ((skill = get_skill(ch,gsn_headbutt)) == 0)
+    skill = get_skill(ch,gsn_headbutt);
+	if (skill == 0)
 		return send_to_char("Huh?\n\r",ch);
 
-	if ((victim = ch->fighting) == NULL)
+    victim = ch->fighting;
+	if (victim == NULL)
 		return send_to_char("You're not fighting anyone!\n\r",ch);
 
 	if (ch->size < (victim->size - 1))

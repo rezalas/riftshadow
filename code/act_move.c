@@ -178,8 +178,10 @@ void move_char( CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
     in_room = ch->in_room;
 
-    if ( ( pexit   = in_room->exit[door] ) == NULL
-   		|| ( to_room = pexit->u1.to_room   ) == NULL
+    pexit   = in_room->exit[door] ;
+    to_room = pexit->u1.to_room;
+    if (pexit == NULL
+   		|| to_room == NULL
     	|| !can_see_room(ch,pexit->u1.to_room))
 		return send_to_char( "Alas, you cannot go that way.\n\r", ch );
 
@@ -192,7 +194,9 @@ void move_char( CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		int d0, i;
 		for(i=0; i< 1000; i++) {
 			d0 = number_range(0,5);
-			if ( ( pexit   = in_room->exit[d0] ) == NULL
+            pexit   = in_room->exit[d0] ;
+            to_room = pexit->u1.to_room; 
+			if (pexit == NULL
 				|| ( to_room = pexit->u1.to_room   ) == NULL
 				|| !can_see_room(ch,pexit->u1.to_room))
 				continue;
@@ -568,7 +572,8 @@ void move_char( CHAR_DATA *ch, int door, bool automatic, bool fcharm)
         {       
                 send_to_char("The jagged shaft twists painfully in your wound as you move.\n\r",ch);
                 owner = ch;
-                if((imaf=affect_find(ch->affected,gsn_impale)) && imaf->owner)
+                imaf=affect_find(ch->affected,gsn_impale);
+                if(imaf && imaf->owner)
                         owner = imaf->owner;
                 damage_new(owner,ch,dice(3,3),TYPE_UNDEFINED,DAM_NONE,TRUE,HIT_UNBLOCKABLE,HIT_NOADD,HIT_NOMULT,"Your gaping wound*");
                 if (!ch->in_room || ch->ghost > 0)
@@ -1197,7 +1202,8 @@ int find_door( CHAR_DATA *ch, char *arg )
     {
 	for ( door = 0; door <= 5; door++ )
 	{
-	    if ( ( pexit = ch->in_room->exit[door] ) != NULL
+      pexit = ch->in_room->exit[door] ;
+	    if(pexit != NULL
 	    &&   IS_SET(pexit->exit_info, EX_ISDOOR)
 	    &&   pexit->keyword != NULL
 	    &&   is_name( arg, pexit->keyword ) )
@@ -1207,7 +1213,8 @@ int find_door( CHAR_DATA *ch, char *arg )
 	return -1;
     }
 
-    if ( ( pexit = ch->in_room->exit[door] ) == NULL )
+     pexit = ch->in_room->exit[door] ;
+    if (pexit == NULL )
     {
 	act( "You see no door $T here.", ch, NULL, arg, TO_CHAR );
 	return -1;
@@ -1239,7 +1246,8 @@ void do_open( CHAR_DATA *ch, char *argument )
     }
 
 
-    if ( ( obj = get_obj_here( ch, arg ) ) != NULL )
+    obj = get_obj_here( ch, arg ) ;
+    if (obj != NULL )
     {
  	/* open portal */
 	if (obj->item_type == ITEM_PORTAL)
@@ -1290,7 +1298,8 @@ void do_open( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( door = find_door( ch, arg ) ) >= 0 )
+    door = find_door( ch, arg ) ;
+    if (door >= 0 )
     {
 	/* 'open door' */
 	ROOM_INDEX_DATA *to_room;
@@ -1315,7 +1324,8 @@ void do_open( CHAR_DATA *ch, char *argument )
 	send_to_char( "Ok.\n\r", ch );
 
 	/* open the other side */
-	if ( ( to_room   = pexit->u1.to_room            ) != NULL
+    to_room   = pexit->u1.to_room;
+	if (to_room != NULL
 	&&   ( pexit_rev = to_room->exit[rev_dir[door]] ) != NULL
 	&&   pexit_rev->u1.to_room == ch->in_room )
 	{
@@ -1348,7 +1358,8 @@ void do_close( CHAR_DATA *ch, char *argument )
     }
 
 
-    if ( ( obj = get_obj_here( ch, arg ) ) != NULL )
+    obj = get_obj_here( ch, arg ) ;
+    if (obj != NULL )
     {
 	/* portal stuff */
 	if (obj->item_type == ITEM_PORTAL)
@@ -1389,7 +1400,8 @@ void do_close( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( door = find_door( ch, arg ) ) >= 0 )
+    door = find_door( ch, arg ) ;
+    if (door >= 0 )
     {
 	/* 'close door' */
 	ROOM_INDEX_DATA *to_room;
@@ -1407,7 +1419,8 @@ void do_close( CHAR_DATA *ch, char *argument )
 	WAIT_STATE(ch, 2 * PULSE_PER_SECOND);
 
 	/* close the other side */
-	if ( ( to_room   = pexit->u1.to_room            ) != NULL
+    to_room   = pexit->u1.to_room;
+	if (to_room != NULL
 	&&   ( pexit_rev = to_room->exit[rev_dir[door]] ) != 0
 	&&   pexit_rev->u1.to_room == ch->in_room )
 	{
@@ -1454,7 +1467,8 @@ void do_lock( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_here( ch, arg ) ) != NULL )
+    obj = get_obj_here( ch, arg ) ;
+    if (obj != NULL )
     {
 	/* portal stuff */
 	if (obj->item_type == ITEM_PORTAL)
@@ -1513,7 +1527,8 @@ void do_lock( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( door = find_door( ch, arg ) ) >= 0 )
+    door = find_door( ch, arg ) ;
+    if (door >= 0 )
     {
 	/* 'lock door' */
 	ROOM_INDEX_DATA *to_room;
@@ -1535,7 +1550,8 @@ void do_lock( CHAR_DATA *ch, char *argument )
 	act( "$n locks the $T.", ch, NULL, pexit->keyword, TO_ROOM );
 
 	/* lock the other side */
-	if ( ( to_room   = pexit->u1.to_room            ) != NULL
+    to_room   = pexit->u1.to_room;
+	if (to_room != NULL
 	&&   ( pexit_rev = to_room->exit[rev_dir[door]] ) != 0
 	&&   pexit_rev->u1.to_room == ch->in_room )
 	{
@@ -1562,7 +1578,8 @@ void do_unlock( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_here( ch, arg ) ) != NULL )
+    obj = get_obj_here( ch, arg ) ;
+    if (obj != NULL )
     {
  	/* portal stuff */
 	if (obj->item_type == ITEM_PORTAL)
@@ -1621,7 +1638,8 @@ void do_unlock( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( door = find_door( ch, arg ) ) >= 0 )
+    door = find_door( ch, arg ) ;
+    if (door >= 0 )
     {
 	/* 'unlock door' */
 	ROOM_INDEX_DATA *to_room;
@@ -1643,7 +1661,8 @@ void do_unlock( CHAR_DATA *ch, char *argument )
 	act( "$n unlocks the $T.", ch, NULL, pexit->keyword, TO_ROOM );
 
 	/* unlock the other side */
-	if ( ( to_room   = pexit->u1.to_room            ) != NULL
+    to_room   = pexit->u1.to_room;
+	if (to_room != NULL
 	&&   ( pexit_rev = to_room->exit[rev_dir[door]] ) != NULL
 	&&   pexit_rev->u1.to_room == ch->in_room )
 	{
@@ -1690,7 +1709,8 @@ void do_pick( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_here( ch, arg ) ) != NULL )
+    obj = get_obj_here( ch, arg ) ;
+    if (obj != NULL )
     {
 	/* portal stuff */
 	if (obj->item_type == ITEM_PORTAL)
@@ -1749,7 +1769,8 @@ void do_pick( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( door = find_door( ch, arg ) ) >= 0 )
+    door = find_door( ch, arg ) ;
+    if (door >= 0 )
     {
 	/* 'pick door' */
 	ROOM_INDEX_DATA *to_room;
@@ -1772,7 +1793,8 @@ void do_pick( CHAR_DATA *ch, char *argument )
 	check_improve(ch,gsn_pick_lock,TRUE,2);
 
 	/* pick the other side */
-	if ( ( to_room   = pexit->u1.to_room            ) != NULL
+    to_room   = pexit->u1.to_room;
+	if (to_room != NULL
 	&&   ( pexit_rev = to_room->exit[rev_dir[door]] ) != NULL
 	&&   pexit_rev->u1.to_room == ch->in_room )
 	{
@@ -2275,7 +2297,8 @@ void do_wake( CHAR_DATA *ch, char *argument )
     if ( !IS_AWAKE(ch) )
 		return send_to_char( "You are asleep yourself!\n\r", ch);
 
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+    victim = get_char_room( ch, arg ) ;
+    if (victim == NULL )
 		return send_to_char( "They aren't here.\n\r",ch);
 
     if ( IS_AWAKE(victim) )
@@ -2598,7 +2621,8 @@ void do_creep(CHAR_DATA *ch, char *argument)
 	int direction=0, chance, wait;
 	AFFECT_DATA af;
 
-	if ( (chance = get_skill(ch,gsn_creep)) == 0 )
+    chance = get_skill(ch,gsn_creep);
+	if (chance == 0 )
 	{
       	send_to_char("Creeping? What's that?\n\r",ch);
       	return;
@@ -2832,7 +2856,8 @@ void do_recall( CHAR_DATA *ch, char *argument )
  	   || IS_AFFECTED(ch, AFF_CURSE))
         return send_to_char( "The gods have forsaken you.\n\r", ch );
 
-    if ( ( victim = ch->fighting ) != NULL) {
+    victim = ch->fighting ;
+    if (victim != NULL) {
 		int skill;
 
 		skill = get_skill(ch,gsn_recall);
@@ -3127,7 +3152,8 @@ void do_animal_call(CHAR_DATA *ch,char *argument)
 
     one_argument(argument,arg);
 
-    if ((chance = get_skill(ch,gsn_animal_call)) == 0
+    chance = get_skill(ch,gsn_animal_call);
+    if (chance == 0
     || ch->level < skill_table[gsn_animal_call].skill_level[ch->Class()->GetIndex()])
     {
         send_to_char("You don't know how to call upon animals for aid.\n\r",ch);
@@ -3626,7 +3652,8 @@ void do_vanish(CHAR_DATA *ch,char *argument)
 	int nocrash;
 	bool found = FALSE;
 
-	if ( (chance = get_skill(ch,gsn_vanish)) == 0
+    chance = get_skill(ch,gsn_vanish);
+	if (chance == 0
 	|| ch->level < skill_table[gsn_vanish].skill_level[ch->Class()->GetIndex()])
 		return send_to_char("Huh?\n\r",ch);
 
@@ -3710,7 +3737,8 @@ void do_door_bash(CHAR_DATA *ch,char *argument)
 	if (ch->move < 5)
 		return send_to_char("You are too exhausted.\n\r",ch);
 
-    if ( (door = find_door(ch,arg) ) >= 0)
+    door = find_door(ch,arg) ;
+    if (door >= 0)
     {
     ROOM_INDEX_DATA *to_room;
     EXIT_DATA *pexit;
@@ -3761,7 +3789,8 @@ void do_door_bash(CHAR_DATA *ch,char *argument)
     REMOVE_BIT(pexit->exit_info,EX_CLOSED);
 	REMOVE_BIT(pexit->exit_info,EX_JAMMED);
 
-    if ( ( (to_room = pexit->u1.to_room) != NULL)
+    to_room = pexit->u1.to_room;
+    if ((to_room != NULL)
     && ( pexit_rev = to_room->exit[rev_dir[door]] ) != NULL
     && pexit_rev->u1.to_room == ch->in_room) {
         REMOVE_BIT(pexit_rev->exit_info,EX_LOCKED);

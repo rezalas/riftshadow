@@ -305,7 +305,8 @@ REDIT( redit_rlist )
 
     for ( vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++ )
     {
-		if ( ( pRoomIndex = get_room_index( vnum ) ) )
+      pRoomIndex = get_room_index( vnum ) ;
+		if (pRoomIndex )
 		{
 			found = TRUE;
 			sprintf( buf, "[%5d] %-17.16s", vnum, capitalize( pRoomIndex->name ) );
@@ -352,7 +353,8 @@ REDIT( redit_mview )
 		return FALSE;
 	}
 
-	if((pMob = get_mob_index(vnum)) == NULL)
+    pMob = get_mob_index(vnum);
+	if(pMob == NULL)
 		return FALSE;
 	
 	send_to_char("Viewing mobile:\n\r", ch);
@@ -397,7 +399,8 @@ REDIT( redit_mlist )
 
     for ( vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++ )
     {
-		if ( ( pMobIndex = get_mob_index( vnum ) ) != NULL )
+      pMobIndex = get_mob_index( vnum ) ;
+		if (pMobIndex != NULL )
 		{
 	    	if ( fAll || is_name( arg, pMobIndex->player_name ) )
 	    	{
@@ -452,7 +455,8 @@ REDIT( redit_olist )
 
     for ( vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++ )
     {
-		if ( ( pObjIndex = get_obj_index( vnum ) ) )
+      pObjIndex = get_obj_index( vnum ) ;
+		if (pObjIndex )
 		{
 	    	if ( fAll || is_name( arg, pObjIndex->name ) || flag_value( type_flags, arg ) == pObjIndex->item_type )
 	    	{
@@ -501,7 +505,8 @@ REDIT( redit_mshow )
     if ( is_number( argument ) )
     {
 	value = atoi( argument );
-	if ( !( pMob = get_mob_index( value ) ))
+    pMob = get_mob_index( value ) ;
+	if ( !(pMob ))
 	{
 	    send_to_char( "REdit:  That mobile does not exist.\n\r", ch );
 	    return FALSE;
@@ -537,7 +542,8 @@ REDIT( redit_oshow )
     if ( is_number( argument ) )
     {
 	value = atoi( argument );
-	if ( !( pObj = get_obj_index( value ) ))
+    pObj = get_obj_index( value ) ;
+	if ( !(pObj ))
 	{
 	    send_to_char( "REdit:  That object does not exist.\n\r", ch );
 	    return FALSE;
@@ -672,7 +678,8 @@ MEDIT( medit_speech )
 		argument = one_argument(argument,name);
 		argument = one_argument(argument,arg3);
 
-		if((speech = find_speech(pMobIndex,cmd)) != NULL)
+        speech = find_speech(pMobIndex,cmd);
+		if(speech != NULL)
 		{
 			sort_speech(speech);
 			if(!str_prefix(name,"line"))
@@ -2024,7 +2031,8 @@ AEDIT( aedit_climate )
 	one_argument( argument, wcli);
 
 	
-	if((icli=aclimate_lookup(wcli)) < 0)
+    icli=aclimate_lookup(wcli);
+	if(icli < 0)
 	{
 		sprintf(hold,"%s is not a valid climate.\n\r", wcli);
 		send_to_char(hold, ch);
@@ -2068,7 +2076,8 @@ REDIT( redit_cabal )
     	return FALSE;
 	}
 
-    if((cabal = cabal_lookup(argument)) == 0)
+    cabal = cabal_lookup(argument);
+    if(cabal == 0)
     {
     	send_to_char("That is not a valid cabal.\n\r", ch);
     	return FALSE;
@@ -2265,7 +2274,8 @@ REDIT( redit_show )
     {
 	EXIT_DATA *pexit = NULL;
 
-	if ( ( pexit = pRoom->exit[door] ) != NULL )
+    pexit = pRoom->exit[door] ;
+	if ( pexit != NULL )
 	{
 	    char word[MAX_INPUT_LENGTH];
 	    char reset_state[MAX_STRING_LENGTH];
@@ -2349,7 +2359,8 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
      * Set the exit flags, needs full argument.
      * ----------------------------------------
      */
-    if ( ( value = flag_value( exit_flags, command ) ) != NO_FLAG )
+    value = flag_value( exit_flags, command ) ;
+    if ( value != NO_FLAG )
     {
 		ROOM_INDEX_DATA *pToRoom;
 		sh_int rev;                                    /* ROM OLC */
@@ -2510,7 +2521,9 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door )
 		redit_create( ch, arg );
 		sprintf( buf, "link %s", arg );
 		change_exit( ch, buf, door);
-		if((move_to = get_room_index(atoi(arg))) != NULL && dMove)
+
+        move_to = get_room_index(atoi(arg));
+		if(move_to != NULL && dMove)
 		{
 			char_from_room(ch);
 			char_to_room(ch, move_to);
@@ -3012,7 +3025,8 @@ REDIT( redit_mreset )
 	return FALSE;
     }
 
-    if ( !( pMobIndex = get_mob_index( atoi( arg ) ) ) )
+    pMobIndex = get_mob_index( atoi( arg ) ) ;
+    if (!pMobIndex)
     {
 	send_to_char( "REdit: No mobile has that vnum.\n\r", ch );
 	return FALSE;
@@ -3121,7 +3135,8 @@ REDIT( redit_oreset )
 	return FALSE;
     }
 
-    if ( !( pObjIndex = get_obj_index( atoi( arg1 ) ) ) )
+    pObjIndex = get_obj_index( atoi( arg1 ) ) ;
+    if ( !(pObjIndex) )
     {
 	send_to_char( "REdit: No object has that vnum.\n\r", ch );
 	return FALSE;
@@ -3200,14 +3215,16 @@ REDIT( redit_oreset )
     /*
      * Load into mobile's inventory.
      */
-    if ( ( to_mob = get_char_room( ch, arg2 ) ) != NULL )
+    to_mob = get_char_room( ch, arg2 ) ;
+    if (to_mob != NULL )
     {
 	int	wear_loc;
 
 	/*
 	 * Make sure the location on mobile is valid.
 	 */
-	if ( (wear_loc = flag_value( wear_loc_flags, argument )) == NO_FLAG )
+    wear_loc = flag_value( wear_loc_flags, argument );
+	if (wear_loc == NO_FLAG )
 	{
 	    send_to_char( "REdit: Invalid wear_loc.  '? wear-loc'\n\r", ch );
 	    return FALSE;
@@ -3614,7 +3631,8 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	            break;
 	        case 4:
                 send_to_char( "SPECIAL WEAPON TYPE SET.\n\r\n\r", ch );
-				if((value = flag_value( weapon_type2, argument)) != NO_FLAG)
+                value = flag_value( weapon_type2, argument);
+				if(value != NO_FLAG)
 					TOGGLE_BIT_OLD( pObj->value[4], value);
 		    break;
 	    }
@@ -3633,12 +3651,14 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	    	    break;
 	    	case 1:
 	    	    send_to_char( "EXIT FLAGS SET.\n\r\n\r", ch);
-				if((value = flag_value( exit_flags, argument)) != NO_FLAG)
+                value = flag_value( exit_flags, argument);
+				if(value != NO_FLAG)
 					TOGGLE_BIT_OLD(pObj->value[1], value);
 	    	    break;
 	    	case 2:
 	    	    send_to_char( "PORTAL FLAGS SET.\n\r\n\r", ch);
-				if((value = flag_value( portal_flags, argument )) != NO_FLAG)
+                value = flag_value( portal_flags, argument );
+				if(value != NO_FLAG)
 					TOGGLE_BIT_OLD(pObj->value[2], value);
 	    	    break;
 	    	case 3:
@@ -3665,7 +3685,8 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	            break;
 	        case 2:
 	            send_to_char( "FURNITURE FLAGS SET.\n\r\n\r", ch);
-				if(( value = flag_value( furniture_flags, argument )) != NO_FLAG)
+                value = flag_value( furniture_flags, argument );
+				if((value) != NO_FLAG)
 					TOGGLE_BIT_OLD(pObj->value[2], value);
 	            break;
 	        case 3:
@@ -3692,7 +3713,8 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	            pObj->value[0] = atoi( argument );
 	            break;
 		case 1:
-	            if ( ( value = flag_value( container_flags, argument ) ) != NO_FLAG )
+                value = flag_value( container_flags, argument ) ;
+	            if ( (value ) != NO_FLAG )
 	        	TOGGLE_BIT_OLD(pObj->value[1], value);
 		    else
 		    {
@@ -4123,7 +4145,8 @@ OEDIT( oedit_addapply )
 	return FALSE;
     }
 	
-	if ( (value = display_lookup(loc,apply_locations)) == -1)
+    value = display_lookup(loc,apply_locations);
+	if ( value == -1)
 	{
 		send_to_char("Invalid apply.\n\r", ch);
 		return FALSE;
@@ -4345,7 +4368,8 @@ OEDIT( oedit_limit)
 		return FALSE;
 	}
 
-	if((num = atoi(argument)) == -1)
+    num = atoi(argument);
+	if(num == -1)
 	{
 		send_to_char("Limit must be a valid number greater than or equal to 0.\n\r", ch);
 		return FALSE;
@@ -4386,7 +4410,8 @@ OEDIT( oedit_cabal )
 		return FALSE;
 	}
 
-	if((cabal = cabal_lookup(argument)) == 0)
+    cabal = cabal_lookup(argument);
+	if(cabal == 0)
 	{
 		send_to_char("That is not a valid cabal.\n\r", ch);
 		return FALSE;
@@ -4411,7 +4436,8 @@ OEDIT( oedit_timer )
 		return FALSE;
 	}
 
-	if((num = atoi(argument)) < 0 )
+    num = atoi(argument);
+	if(num < 0 )
 	{
 		send_to_char("Timer must be a number greater than -1.\n\r", ch);
 		return FALSE;
@@ -4436,7 +4462,8 @@ OEDIT( oedit_restrict )
 		return FALSE;
 	}
 
-	if((bit = restrict_lookup(argument)) == NO_FLAG)
+    bit = restrict_lookup(argument);
+	if(bit == NO_FLAG)
 	{
 		send_to_char("That was an invalid restriction type.  Choose from the following:\n\r", ch);
 		for(count=0; restrict_table[count].name != NULL; count++)
@@ -4497,7 +4524,8 @@ OEDIT( oedit_flag )
 	
 	if(!str_cmp(arg1,"imm"))
 	{
-		if((bit = flag_lookup(arg2, imm_flags)) == NO_FLAG)
+      bit = flag_lookup(arg2, imm_flags);
+		if(bit == NO_FLAG)
 		{
 			send_to_char("That is not a valid flag type for immunities.\n\r", ch);
 			return FALSE;
@@ -4507,7 +4535,8 @@ OEDIT( oedit_flag )
 	}
 	else if(!str_cmp(arg1,"res"))
 	{
-		if((bit = flag_lookup(arg2, imm_flags)) == NO_FLAG)
+      bit = flag_lookup(arg2, imm_flags);
+		if(bit == NO_FLAG)
 		{
 			send_to_char("That is not a valid flag type for resistances.\n\r", ch);
 			return FALSE;
@@ -4517,7 +4546,8 @@ OEDIT( oedit_flag )
 	}
 	else if(!str_cmp(arg1,"vul"))
 	{
-		if((bit = flag_lookup(arg2, imm_flags)) == NO_FLAG)
+      bit = flag_lookup(arg2, imm_flags);
+		if(bit == NO_FLAG)
 		{
 			send_to_char("That is not a vlaid flag type for vulnerbilities.\n\r", ch);
 			return FALSE;
@@ -4552,7 +4582,8 @@ OEDIT( oedit_flag )
 		pAf.where = TO_AFFECTS;
 		pAf.aftype = AFT_INVIS;
 		pAf.type = skill_lookup(arg2);
-		if((bit = flag_lookup(arg3, affect_flags)) != NO_FLAG)
+        bit = flag_lookup(arg3, affect_flags);
+		if(bit != NO_FLAG)
 			SET_BIT(pAf.bitvector, bit);
 		if(!str_prefix(arg4,"show"))
 			pAf.aftype = AFT_SPELL;
@@ -4958,7 +4989,8 @@ OEDIT( oedit_extra )      /* Moved out of oedit() due to naming conflicts -- Hug
     {
 	EDIT_OBJ(ch, pObj);
 
-	if ( ( value = flag_value( extra_flags, argument ) ) != NO_FLAG )
+    value = flag_value( extra_flags, argument ) ;
+	if ( (value) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pObj->extra_flags, value);
 
@@ -4982,7 +5014,8 @@ OEDIT( oedit_wear )      /* Moved out of oedit() due to naming conflicts -- Hugi
     {
 	EDIT_OBJ(ch, pObj);
 
-	if ( ( value = flag_value( wear_flags, argument ) ) != NO_FLAG )
+    value = flag_value( wear_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pObj->wear_flags, value);
 
@@ -5005,7 +5038,8 @@ OEDIT( oedit_type )      /* Moved out of oedit() due to naming conflicts -- Hugi
     {
 	EDIT_OBJ(ch, pObj);
 
-	if ( ( value = flag_value( type_flags, argument ) ) != NO_FLAG )
+    value = flag_value( type_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    pObj->item_type = value;
 
@@ -5190,7 +5224,8 @@ MEDIT( medit_optional )
 			}
 		}
 		
-		if((sn = skill_lookup(arg2)) == -1)
+        sn = skill_lookup(arg2);
+		if(sn == -1)
 		{
 			send_to_char("That is not a valid spell.\n\r", ch);
 			return FALSE;
@@ -5271,7 +5306,8 @@ MEDIT( medit_optional )
 			return FALSE;
 		}
 
-		if((bar->vnum = atoi(arg5)) == -1)
+        bar->vnum = atoi(arg5);
+		if(bar->vnum == -1)
 		{
 			send_to_char("Not a valid vnum.\n\r", ch);
 			return FALSE;
@@ -5322,7 +5358,8 @@ MEDIT( medit_optional )
 			}
 		}
 
-		if((sn = skill_lookup(arg2)) == -1)
+        sn = skill_lookup(arg2);
+		if(sn == -1)
 		{
 			send_to_char("That is not a valid spell.\n\r", ch);
 			return FALSE;
@@ -5411,7 +5448,8 @@ MEDIT( medit_class )
 
 	if(!str_cmp(arg1,"warrior"))
 	{
-		if(!(style = style_lookup(arg2)))
+      style = style_lookup(arg2);
+		if(!style)
 		{
 			send_to_char("Not a valid style.\n\r", ch);
 			return FALSE;
@@ -5434,7 +5472,8 @@ MEDIT( medit_class )
 		clean_mob_class(pMob, CLASS_SORCERER);
 		if(!str_prefix(arg2,"major"))
 		{
-			if(!(style = ele_name_lookup(arg3)))
+          style = ele_name_lookup(arg3);
+			if(!style)
 			{
 				send_to_char("Not a valid element name.\n\r", ch);
 				return FALSE;
@@ -5443,7 +5482,8 @@ MEDIT( medit_class )
 		}
 		else
 		{
-			if(!(style = ele_name_lookup(arg3)))
+          style = ele_name_lookup(arg3);
+			if(!style)
 			{
 				send_to_char("Not a valid element name.\n\r", ch);
 				return FALSE;
@@ -5902,7 +5942,8 @@ MEDIT( medit_damtype )
 	return FALSE;
     }
 
-    if ( ( value = flag_value( weapon_flags, argument ) ) != NO_FLAG )
+    value = flag_value( weapon_flags, argument ) ;
+    if ( (value ) != NO_FLAG )
     {
 	pMob->dam_type = value;
 	send_to_char( "Damage type set.\n\r", ch);
@@ -6057,7 +6098,8 @@ MEDIT( medit_cabal )
     	return FALSE;
 	}
 
-    if((cabal = cabal_lookup(argument)) == 0)
+    cabal = cabal_lookup(argument);
+    if(cabal == 0)
 	{
     	send_to_char("That is not a valid cabal.\n\r", ch);
     	return FALSE;
@@ -6103,7 +6145,8 @@ MEDIT( medit_shop )
 		return FALSE;
 	}
 
-	if((direction=flag_lookup(argument, direction_table)) == NO_FLAG)
+    direction=flag_lookup(argument, direction_table);
+	if(direction == NO_FLAG)
 	{
 		send_to_char("That was not a valid direction.\n\r", ch);
 		return FALSE;
@@ -6138,7 +6181,8 @@ MEDIT( medit_sex )          /* Moved out of medit() due to naming conflicts -- H
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( sex_flags, argument ) ) != NO_FLAG )
+    value = flag_value( sex_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    pMob->sex = value;
 
@@ -6162,7 +6206,8 @@ MEDIT( medit_act )          /* Moved out of medit() due to naming conflicts -- H
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( act_flags, argument ) ) != NO_FLAG )
+    value = flag_value( act_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->act, value);
 	    SET_BIT( pMob->act, ACT_IS_NPC );
@@ -6187,7 +6232,8 @@ MEDIT( medit_affect )      /* Moved out of medit() due to naming conflicts -- Hu
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( affect_flags, argument ) ) != NO_FLAG )
+    value = flag_value( affect_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->affected_by, value);
 
@@ -6269,7 +6315,8 @@ MEDIT( medit_form )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( form_flags, argument ) ) != NO_FLAG )
+    value = flag_value( form_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->form, value);
 	    send_to_char( "Form toggled.\n\r", ch );
@@ -6291,7 +6338,8 @@ MEDIT( medit_part )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( part_flags, argument ) ) != NO_FLAG )
+    value = flag_value( part_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->parts, value);
 	    send_to_char( "Parts toggled.\n\r", ch );
@@ -6313,7 +6361,8 @@ MEDIT( medit_imm )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( imm_flags, argument ) ) != NO_FLAG )
+    value = flag_value( imm_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->imm_flags,value);
 	    send_to_char( "Immunity toggled.\n\r", ch );
@@ -6335,7 +6384,8 @@ MEDIT( medit_res )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( res_flags, argument ) ) != NO_FLAG )
+    value = flag_value( res_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->res_flags, value);
 	    send_to_char( "Resistance toggled.\n\r", ch );
@@ -6357,7 +6407,8 @@ MEDIT( medit_vuln )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( vuln_flags, argument ) ) != NO_FLAG )
+    value = flag_value( vuln_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->vuln_flags, value);
 	    send_to_char( "Vulnerability toggled.\n\r", ch );
@@ -6405,7 +6456,8 @@ MEDIT( medit_off )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( off_flags, argument ) ) != NO_FLAG )
+    value = flag_value( off_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    TOGGLE_BIT(pMob->off_flags, value);
 	    send_to_char( "Offensive behavior toggled.\n\r", ch );
@@ -6427,7 +6479,8 @@ MEDIT( medit_size )
     {
 	EDIT_MOB( ch, pMob );
 
-	if ( ( value = flag_value( size_flags, argument ) ) != NO_FLAG )
+    value = flag_value( size_flags, argument ) ;
+	if ( (value ) != NO_FLAG )
 	{
 	    pMob->size = value;
 	    send_to_char( "Size set.\n\r", ch );
@@ -6642,7 +6695,8 @@ MEDIT( medit_position )
 
     argument = one_argument( argument, arg );
 
-	if ( ( value = position_lookup(arg) ) == -1 )
+    value = position_lookup(arg) ;
+	if ( (value ) == -1 )
 		return FALSE;
 
 	EDIT_MOB( ch, pMob );

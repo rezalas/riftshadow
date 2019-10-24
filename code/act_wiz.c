@@ -188,7 +188,8 @@ void do_leader( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
         send_to_char("They aren't playing.\n\r",ch);
         return;
@@ -244,7 +245,8 @@ void do_smite( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't playing.\n\r", ch );
         return;
@@ -331,7 +333,8 @@ void do_induct( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't playing.\n\r", ch );
         return;
@@ -378,10 +381,11 @@ void do_induct( CHAR_DATA *ch, char *argument )
     if ( victim->cabal != 0 )
 		return send_to_char("That person is already in a cabal!\n\r", ch);
 
-    if ((cabal = cabal_lookup(arg2)) == 0)
+    cabal = cabal_lookup(arg2);
+    if (cabal == 0)
 		return send_to_char("No such cabal exists.\n\r",ch);
 
-    if ((cabal = cabal_lookup(arg2)) != ch->cabal && get_trust(ch)<54)
+    if (cabal != ch->cabal && get_trust(ch)<54)
     {
         send_to_char("You may only induct into the cabal which you belong.\n\r", ch);
         return;
@@ -461,7 +465,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
 		shield = 24580;
 	}
 
-    if ( ( obj = get_eq_char( ch, WEAR_BODY ) ) == NULL )
+    obj = get_eq_char( ch, WEAR_BODY ) ;
+    if (obj == NULL )
     {
 	obj = create_object( get_obj_index(body), 0 );
 	obj->cost = 0;
@@ -493,7 +498,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
       wear_obj( ch, obj, FALSE );
     } */
 
-    if ( ( obj = get_eq_char( ch, WEAR_LEGS ) ) == NULL )
+    obj = get_eq_char( ch, WEAR_LEGS ) ;
+    if (obj == NULL )
     {
 	obj = create_object( get_obj_index(legs), 0 );
 	obj->cost = 0;
@@ -501,7 +507,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
       wear_obj( ch, obj, FALSE );
     }
 
-    if ( ( obj = get_eq_char( ch, WEAR_FEET ) ) == NULL )
+    obj = get_eq_char( ch, WEAR_FEET ) ;
+    if (obj == NULL )
     {
 	obj = create_object( get_obj_index(feet), 0 );
 	obj->cost = 0;
@@ -509,7 +516,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
       wear_obj( ch, obj, FALSE );
     }
 
-    if ( ( obj = get_eq_char( ch, WEAR_HANDS ) ) == NULL )
+    obj = get_eq_char( ch, WEAR_HANDS ) ;
+    if (obj == NULL )
     {
 	obj = create_object( get_obj_index(hands), 0 );
 	obj->cost = 0;
@@ -517,7 +525,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
       wear_obj( ch, obj, FALSE );
     }
 
-    if ( ( obj = get_eq_char( ch, WEAR_ARMS ) ) == NULL )
+    obj = get_eq_char( ch, WEAR_ARMS ) ;
+    if (obj == NULL )
     {
 	obj = create_object( get_obj_index(arms), 0 );
 	obj->cost = 0;
@@ -559,7 +568,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
     }
 */
     /* do the weapon thing*/
-    if ((obj = get_eq_char(ch,WEAR_WIELD)) == NULL)
+    obj = get_eq_char(ch,WEAR_WIELD);
+    if (obj == NULL)
     {
     	sn = 0;
     	vnum = OBJ_VNUM_SCHOOL_SWORD;
@@ -581,7 +591,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
     	wear_obj(ch,obj,FALSE);
     }
 
-    if (((obj = get_eq_char(ch,WEAR_WIELD)) == NULL
+    obj = get_eq_char(ch,WEAR_WIELD);
+    if ((obj == NULL
     ||   !IS_WEAPON_STAT(obj,WEAPON_TWO_HANDS))
     &&  (obj = get_eq_char( ch, WEAR_LIGHT ) ) == NULL
     &&  (obj = get_eq_char( ch, WEAR_SHIELD ) ) == NULL )
@@ -638,7 +649,8 @@ void do_nochannels( CHAR_DATA *ch, char *argument )
         send_to_char( "Nochannel whom?\n\r", ch );
         return;
     }
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -704,7 +716,8 @@ void do_smote(CHAR_DATA *ch, char *argument )
         if (vch->desc == NULL || vch == ch)
             continue;
 
-        if ((letter = strstr(argument,vch->name)) == NULL)
+        letter = strstr(argument,vch->name);
+        if (letter == NULL)
         {
 	    send_to_char(argument,vch);
 	    send_to_char("\n\r",vch);
@@ -841,7 +854,8 @@ void do_deny( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -913,7 +927,8 @@ void do_disconnect( CHAR_DATA *ch, char *argument )
 	}
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -959,7 +974,8 @@ void do_pardon( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -1116,7 +1132,8 @@ void do_pecho( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if  ( (victim = get_char_world(ch, arg) ) == NULL )
+    victim = get_char_world(ch, arg) ;
+    if  (victim == NULL )
     {
 	send_to_char("Target not found.\n\r",ch);
 	return;
@@ -1143,10 +1160,12 @@ ROOM_INDEX_DATA *find_location( CHAR_DATA *ch, char *arg )
     if ( is_number(arg) )
 	return get_room_index( atoi( arg ) );
 
-    if ( ( victim = get_char_world( ch, arg ) ) != NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim != NULL )
 	return victim->in_room;
 
-    if ( ( obj = get_obj_world( ch, arg ) ) != NULL )
+    obj = get_obj_world( ch, arg ) ;
+    if (obj != NULL )
 	return obj->in_room;
 
     return NULL;
@@ -1197,7 +1216,9 @@ void do_transfer( CHAR_DATA *ch, char *argument )
     }
     else
     {
-	if ( ( location = find_location( ch, arg2 ) ) == NULL )
+
+    location = find_location( ch, arg2 ) ;
+	if (location == NULL )
 	{
 	    send_to_char( "No such location.\n\r", ch );
 	    return;
@@ -1216,7 +1237,8 @@ void do_transfer( CHAR_DATA *ch, char *argument )
 	}
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -1264,7 +1286,8 @@ void do_at( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( location = find_location( ch, arg ) ) == NULL )
+    location = find_location( ch, arg ) ;
+    if (location == NULL )
     {
 	send_to_char( "No such location.\n\r", ch );
 	return;
@@ -1319,7 +1342,8 @@ void do_goto( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( location = find_location( ch, argument ) ) == NULL )
+    location = find_location( ch, argument ) ;
+    if (location == NULL )
     {
 	send_to_char( "No such location.\n\r", ch );
 	return;
@@ -1388,7 +1412,8 @@ void do_violate( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( location = find_location( ch, argument ) ) == NULL )
+    location = find_location( ch, argument ) ;
+    if (location == NULL )
     {
         send_to_char( "No such location.\n\r", ch );
         return;
@@ -1591,7 +1616,8 @@ void do_rstat( CHAR_DATA *ch, char *argument )
 	EXIT_DATA *pexit;
 	char ebuf[500];
 	int i;
-	if ( ( pexit = location->exit[door] ) != NULL )
+    pexit = location->exit[door] ;
+	if (pexit != NULL )
 	{
 	    ebuf[0]='\0';
 	    for(i=0; exit_flags[i].name!=NULL; i++)
@@ -2247,7 +2273,8 @@ void do_mstat( CHAR_DATA *ch, char *argument )
     if ( arg[0] == '\0' )
 		return send_to_char( "Stat whom?\n\r", ch );
 
-    if ( ( victim = get_char_world( ch, argument ) ) == NULL )
+    victim = get_char_world( ch, argument ) ;
+    if (victim == NULL )
 		return send_to_char( "They aren't here.\n\r", ch );
 
     if(IS_NPC(victim))
@@ -2742,7 +2769,8 @@ void do_mfind( CHAR_DATA *ch, char *argument )
      */
     for ( vnum = 0; nMatch < top_mob_index; vnum++ )
     {
-	if ( ( pMobIndex = get_mob_index( vnum ) ) != NULL )
+      pMobIndex = get_mob_index( vnum ) ;
+	if (pMobIndex != NULL )
 	{
 	    nMatch++;
 	    if ( fAll || is_name( argument, pMobIndex->player_name ) )
@@ -2793,7 +2821,8 @@ void do_ofind( CHAR_DATA *ch, char *argument )
      */
     for ( vnum = 0; nMatch < top_obj_index; vnum++ )
     {
-	if ( ( pObjIndex = get_obj_index( vnum ) ) != NULL )
+      pObjIndex = get_obj_index( vnum ) ;
+	if (pObjIndex != NULL )
 	{
 	    nMatch++;
 	    if ( fAll || is_name( argument, pObjIndex->name ) )
@@ -3100,7 +3129,8 @@ void do_protect( CHAR_DATA *ch, char *argument)
 	return;
     }
 
-    if ((victim = get_char_world(ch,argument)) == NULL)
+    victim = get_char_world(ch,argument);
+    if (victim == NULL)
     {
 	send_to_char("You can't find them.\n\r",ch);
 	return;
@@ -3137,7 +3167,8 @@ void do_snoop( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -3231,7 +3262,8 @@ void do_switch( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -3507,7 +3539,8 @@ void do_mload( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( pMobIndex = get_mob_index( atoi( arg ) ) ) == NULL )
+    pMobIndex = get_mob_index( atoi( arg ) ) ;
+    if (pMobIndex == NULL )
     {
 	send_to_char( "No mob has that vnum.\n\r", ch );
 	return;
@@ -3557,7 +3590,8 @@ void do_oload( CHAR_DATA *ch, char *argument )
 	}
     }
 
-    if ( ( pObjIndex = get_obj_index( atoi( arg1 ) ) ) == NULL )
+    pObjIndex = get_obj_index( atoi( arg1 ) ) ;
+    if (pObjIndex == NULL )
     {
 	send_to_char( "No object has that vnum.\n\r", ch );
 	return;
@@ -3612,7 +3646,8 @@ void do_purge( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -3672,7 +3707,8 @@ void do_advance( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "That player is not here.\n\r", ch);
 	return;
@@ -3684,7 +3720,8 @@ void do_advance( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( level = atoi( arg2 ) ) < 1 || level > 60 )
+    level = atoi( arg2 ) ;
+    if (level < 1 || level > 60 )
     {
 	send_to_char( "Level must be 1 to 60.\n\r", ch );
 	return;
@@ -3763,13 +3800,15 @@ void do_trust( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "That player is not here.\n\r", ch);
 	return;
     }
 
-    if ( ( level = atoi( arg2 ) ) < 0 || level > 60 )
+    level = atoi( arg2 ) ;
+    if (level < 0 || level > 60 )
     {
 	send_to_char( "Level must be 0 (reset) or 1 to 60.\n\r", ch );
 	return;
@@ -3855,7 +3894,8 @@ void do_restore( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -3892,7 +3932,8 @@ void do_freeze( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -3962,7 +4003,8 @@ void do_log( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -4006,7 +4048,8 @@ void do_noemote( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -4054,7 +4097,8 @@ void do_noshout( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -4107,7 +4151,8 @@ void do_notell( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -4226,7 +4271,8 @@ void do_slookup( CHAR_DATA *ch, char *argument )
     }
     else
     {
-	if ( ( sn = skill_lookup( arg ) ) < 0 )
+    sn = skill_lookup( arg ) ;
+	if (sn < 0 )
 	{
 	    send_to_char( "No such skill or spell.\n\r", ch );
 	    return;
@@ -4307,7 +4353,8 @@ void do_sgset( CHAR_DATA *ch, char *argument )
     if ( arg1[0] == '\0' || arg2[0] == '\0')
    		return send_to_char( "Syntax:\n\r  set sgroup <name> <group name>\n\r", ch);
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     	return send_to_char( "They aren't here.\n\r", ch );
 
     if ( IS_NPC(victim) )
@@ -4367,7 +4414,8 @@ void do_sset( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -4449,7 +4497,8 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+    victim = get_char_world( ch, arg1 ) ;
+    if (victim == NULL )
     {
 	send_to_char( "They aren't here.\n\r", ch );
 	return;
@@ -4957,7 +5006,8 @@ void do_string( CHAR_DATA *ch, char *argument )
 
     if (!str_prefix(type,"character") || !str_prefix(type,"mobile"))
     {
-    	if ( ( victim = get_char_world( ch, arg1 ) ) == NULL )
+        victim = get_char_world( ch, arg1 ) ;
+    	if (victim == NULL )
     	{
 	    send_to_char( "They aren't here.\n\r", ch );
 	    return;
@@ -5015,7 +5065,8 @@ void do_string( CHAR_DATA *ch, char *argument )
     {
     	/* string an obj */
     	
-   	if ( ( obj = get_obj_world( ch, arg1 ) ) == NULL )
+    obj = get_obj_world( ch, arg1 ) ;
+   	if (obj == NULL )
     	{
 	    send_to_char( "Nothing like that in heaven or earth.\n\r", ch );
 	    return;
@@ -5096,7 +5147,8 @@ void do_oset( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( obj = get_obj_world( ch, arg1 ) ) == NULL )
+    obj = get_obj_world( ch, arg1 ) ;
+    if (obj == NULL )
     {
 	send_to_char( "Nothing like that in heaven or earth.\n\r", ch );
 	return;
@@ -5196,7 +5248,8 @@ void do_rset( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if ( ( location = find_location( ch, arg1 ) ) == NULL )
+    location = find_location( ch, arg1 ) ;
+    if (location == NULL )
     {
 	send_to_char( "No such location.\n\r", ch );
 	return;
@@ -5514,7 +5567,8 @@ void do_force( CHAR_DATA *ch, char *argument )
     {
 	CHAR_DATA *victim;
 
-	if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+    victim = get_char_world( ch, arg ) ;
+	if (victim  == NULL )
 	{
 	    send_to_char( "They aren't here.\n\r", ch );
 	    return;
@@ -5952,7 +6006,8 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 		return;
 	}
 	
-	if ((obj = get_obj_world(ch,arg1)) == NULL)
+    obj = get_obj_world(ch,arg1);
+	if (obj == NULL)
 		return send_to_char("No such object exists!\n\r",ch);
 	
 	if(!str_prefix(arg2,"clear")) {
@@ -6038,7 +6093,8 @@ void log_naughty( CHAR_DATA *ch, char *argument, int logtype )
 
     	strtime                    = ctime( &current_time );
     	strtime[strlen(strtime)-1] = '\0';	
-   if ( ( fp = fopen( GOD_LOG_FILE, "a" ) ) != NULL )
+    fp = fopen( GOD_LOG_FILE, "a" ) ;
+   if (fp != NULL )
     {
 		if(logtype==1)
 			fprintf(fp,"%s: LOAD- %s is loading %s.\n",strtime,ch->name,argument);
@@ -6098,7 +6154,8 @@ void do_vmstat( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if ( ( pMobIndex = get_mob_index( atoi( arg ) ) ) == NULL )
+    pMobIndex = get_mob_index( atoi( arg ) ) ;
+    if (pMobIndex == NULL )
     {
         send_to_char( "No mob has that vnum.\n\r", ch );
         return;
@@ -6131,7 +6188,8 @@ void do_vostat( CHAR_DATA *ch, char *argument )
     }
     if(is_number(arg1))
     {
-    if ( ( pObjIndex = get_obj_index( atoi( arg1 ) ) ) == NULL )
+      pObjIndex = get_obj_index( atoi( arg1 ) ) ;
+    if (pObjIndex == NULL )
     {
         send_to_char( "No object has that vnum.\n\r", ch );
         return;
@@ -6142,7 +6200,8 @@ void do_vostat( CHAR_DATA *ch, char *argument )
 	{
 	    for ( vnum = 0; nMatch < top_obj_index; vnum++ )
 	    {
-        	if ( ( pObjIndex = get_obj_index( vnum ) ) != NULL )
+          pObjIndex = get_obj_index( vnum ) ;
+        	if (pObjIndex != NULL )
 	        {
         	nMatch++;
 	            if ( is_name( argument, pObjIndex->name ) )
@@ -6192,7 +6251,8 @@ void do_history(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch,arg1)) == NULL)
+    victim = get_char_world(ch,arg1);
+	if (victim == NULL)
 	{
 		send_to_char("They aren't here, attempting offline history...\n\r",ch);
 		sprintf(buf,"finger %s history",arg1);
@@ -6416,7 +6476,8 @@ void do_empower(CHAR_DATA *ch, char *argument)
 	if (IS_SWITCHED(ch))
 		return send_to_char("You can't do that while switched!\n\r", ch);
 	
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL || IS_NPC(victim))
+    victim = get_char_world( ch, arg ) ;
+    if (victim == NULL || IS_NPC(victim))
     {
         send_to_char( "They aren't here.\n\r", ch );
         return;
@@ -6610,7 +6671,8 @@ void do_givexp(CHAR_DATA *ch, char *argument)
 	if(!*argument)
 		return send_to_char("Syntax:   givexp <character> <# xp> <message they receive>\n\r", ch);
 
-	if((victim = get_char_world(ch,arg1)) == NULL)
+    victim = get_char_world(ch,arg1);
+	if(victim == NULL)
 		return send_to_char("You can't find them.\n\r", ch);
 
 	if(!is_number(arg2))
@@ -6647,7 +6709,8 @@ void do_setpath(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || arg1[0] == '\0')
 		return send_to_char("Syntax: setpath <character> <protector/crusader>\n\r",ch);
 
-	if((victim = get_char_world(ch,arg1)) == NULL)
+    victim = get_char_world(ch,arg1);
+	if(victim == NULL)
 		return send_to_char("You cannot find that person.\n\r", ch);
 	
 	if(!strcmp(argument, "protector"))

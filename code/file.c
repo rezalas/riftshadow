@@ -18,7 +18,8 @@ bool CFile::LoadFile(const char *file, int mode)
 	if(!file)
 		return FALSE;
 
-	if((fp = fopen(file, mode == MODE_READ ? "r" : mode == MODE_WRITE ? "w+" : "a+")) == NULL)
+    fp = fopen(file, mode == MODE_READ ? "r" : mode == MODE_WRITE ? "w+" : "a+");
+	if(fp == NULL)
 	{
 		fprintf(stderr,"LoadFile error: Unable to open %s.", file);
 		return FALSE;
@@ -139,7 +140,8 @@ TString& CFile::ReadString(bool fToEOL)
 		c = fgetc(fp);
 	} while (isspace(c)); //bzzt
 
-	if((*pbuf++ = c) == cEnd)
+    *pbuf = c;
+	if(*pbuf++ == cEnd)
 		return result;
 
 	while(1)

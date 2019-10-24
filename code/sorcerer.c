@@ -305,7 +305,8 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
     {
         victim = (CHAR_DATA *) vo;
 
-        if ((obj = get_eq_char(victim, WEAR_WIELD)) == NULL)
+        obj = get_eq_char(victim, WEAR_WIELD);
+        if (obj == NULL)
         {
             send_to_char("They are not wielding a weapon.\n\r", ch);
             return;
@@ -705,7 +706,8 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *) vo;
 	OBJ_DATA *obj, *obj2;
 
-	if ((obj = get_eq_char(victim, WEAR_WIELD)) == NULL)
+    obj = get_eq_char(victim, WEAR_WIELD);
+	if (obj == NULL)
 	{
 		send_to_char("They are not wielding a weapon.\n\r", ch);
 		return;
@@ -766,7 +768,8 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
  	}
 	reslot_weapon(victim);
 
-	if ((obj2 = get_eq_char(victim,WEAR_DUAL_WIELD)) != NULL)
+    obj2 = get_eq_char(victim,WEAR_DUAL_WIELD);
+	if (obj2 != NULL)
 	{
 		unequip_char(victim,obj2,FALSE);
 		act("You hastily swap $p into your primary hand.",ch,obj2,0,TO_CHAR);
@@ -790,7 +793,8 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return send_to_char("Which door?\n\r",ch);
 	}
 
-	if ((door = find_door(ch,target_name)) >= 0) {
+    door = find_door(ch,target_name);
+	if (door >= 0) {
 		pexit = ch->in_room->exit[door];
 		if(!pexit->u1.to_room)
 			return send_to_char("There is no door there.\n\r",ch);
@@ -814,7 +818,8 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		REMOVE_BIT(pexit->exit_info,EX_CLOSED);
 		REMOVE_BIT(pexit->exit_info, EX_ISDOOR);
 
-		if ((to_room = pexit->u1.to_room) != NULL
+        to_room = pexit->u1.to_room;
+		if (to_room != NULL
 			&& (pexit_opp = to_room->exit[reverse_d(door)]) != NULL
 			&& pexit_opp->u1.to_room == ch->in_room) {
 			REMOVE_BIT(pexit_opp->exit_info,EX_LOCKED);
@@ -885,13 +890,18 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		damage_new(ch,vch,dice(level,6),TYPE_HIT + attack_lookup("asphyxiation"),DAM_ENERGY,TRUE,HIT_UNBLOCKABLE,HIT_NOADD,HIT_NOMULT,"the vacuum*");
 	}
 
-	for (i=0; i<=5; i++)
-		if((pexit = ch->in_room->exit[i]))
-			if ((to_room = pexit->u1.to_room))
-				if (to_room->people) {
-					direction = (char*)flag_name_lookup(reverse_d(i),direction_table);
-					act("A sudden blast of air rushes in from the $T!",to_room->people,0,direction,TO_ALL);
-				}
+	for (i=0; i<=5; i++){
+        pexit = ch->in_room->exit[i];
+        if(pexit){
+            to_room = pexit->u1.to_room;
+            if (to_room ){
+                if (to_room->people) {
+                    direction = (char*)flag_name_lookup(reverse_d(i),direction_table);
+                    act("A sudden blast of air rushes in from the $T!",to_room->people,0,direction,TO_ALL);
+                }
+            }
+        }
+    }
 
 	return;
 }
@@ -910,11 +920,14 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	for (i=0; i<=5; i++)
 	{
-		if((pexit = room->exit[i]))
+      pexit = room->exit[i];
+		if(pexit)
 		{
 			if (!IS_SET(pexit->exit_info,EX_CLOSED))
 				roomcount++;
-			if ((to_room = pexit->u1.to_room))
+
+            to_room = pexit->u1.to_room;
+			if (to_room)
 				if (to_room->people) {
 					direction = (char*)flag_name_lookup(reverse_d(i),direction_table);
 					act("Air rushes back $Tward!",to_room->people,0,direction,TO_ALL);
@@ -933,11 +946,13 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	for (i=0; i<=5; i++)
 	{
-		if((pexit = room->exit[i]))
+      pexit = room->exit[i];
+		if(pexit)
 		{
 			if (IS_SET(pexit->exit_info,EX_CLOSED))
 				continue;
-			if ((to_room = pexit->u1.to_room))
+            to_room = pexit->u1.to_room;
+			if (to_room)
 			{
 				for (obj = to_room->contents; obj != NULL; obj = obj_next )
 				{
@@ -979,11 +994,14 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	{
 	for (i=0; i<=5; i++)
 	{
-		if((pexit = room->exit[i]))
+        pexit = room->exit[i];
+		if(pexit)
 		{
 			if (IS_SET(pexit->exit_info,EX_CLOSED))
 				continue;
-			if ((to_room = pexit->u1.to_room))
+
+            to_room = pexit->u1.to_room;
+			if (to_room)
 			{
 				for (vch = to_room->people; vch != NULL; vch = vch_next )
 				{
@@ -1996,8 +2014,9 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-        if((door = direction_lookup(target_name)) == -1)
-	 return send_to_char("Create a tidal wave in what direction?\n\r",ch);
+        door = direction_lookup(target_name);
+        if(door == -1)
+            return send_to_char("Create a tidal wave in what direction?\n\r",ch);
 
 	to_room = ch->in_room;
 
@@ -3126,7 +3145,8 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
     for ( iWear = 0; iWear < MAX_WEAR; iWear++ )
     {
-        if (( ( obj = get_eq_char( victim, iWear ) ) == NULL ) ||
+      ( obj = get_eq_char( victim, iWear ) ) == NULL ;
+        if ((obj == NULL ) ||
 	    (iWear == WEAR_WIELD) ||
 	    (iWear == WEAR_DUAL_WIELD))
             continue;
@@ -3294,7 +3314,8 @@ void spell_acid_stream (int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	int dam = dice(level,3);
 	int diceroll, location, hardness = 0;
 
-	if (((diceroll = number_percent()) <= 20) && IS_SET(victim->parts,PART_ARMS))
+    diceroll = number_percent();
+	if (((diceroll) <= 20) && IS_SET(victim->parts,PART_ARMS))
 	{
 		location = WEAR_ARMS;
 		strcpy(bodypart, "arm");
@@ -3315,7 +3336,8 @@ void spell_acid_stream (int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		strcpy(bodypart, "chest");
 	}
 
-	if ((armor = get_eq_char(victim, location)) != NULL)
+armor = get_eq_char(victim, location);
+	if (armor != NULL)
 	{
 		hardness = material_table[armor->pIndexData->material_index].mat_hardness;
 
@@ -3450,7 +3472,8 @@ void spell_acid_vein(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	target_name = one_argument(target_name,arg);
 
-	if((weapon=get_obj_carry(ch,arg,ch))==NULL)
+    weapon=get_obj_carry(ch,arg,ch);
+	if(weapon ==NULL)
 		return send_to_char("You aren't carrying that.\n\r",ch);
 
 	if(weapon->item_type != ITEM_WEAPON)
@@ -3512,7 +3535,8 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 	else
 	{
-    	if ( ( obj = get_obj_here( ch, arg ) ) != NULL )
+      obj = get_obj_here( ch, arg ) ;
+    	if ( (obj ) != NULL )
     	{
 	    	if (obj->item_type == ITEM_PORTAL)
 	    	{
@@ -4759,7 +4783,8 @@ void spell_freeze_door(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (!str_cmp(target_name,""))
 		return send_to_char("What door?\n\r",ch);
 
-	if ((door = find_door(ch,target_name)) == -1)
+    door = find_door(ch,target_name);
+	if (door == -1)
 		return;
 	
 	pexit = ch->in_room->exit[door];
@@ -4784,7 +4809,8 @@ void spell_freeze_door(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.end_fun	=	door_unfreeze;
 	new_affect_to_room(ch->in_room,&raf);
 	
-	if ((to_room = pexit->u1.to_room) != NULL
+    to_room = pexit->u1.to_room;
+	if (to_room != NULL
 		&& (pexit_opp = to_room->exit[reverse_d(door)]) != NULL
 		&& pexit_opp->u1.to_room == ch->in_room) {
 		SET_BIT(pexit_opp->exit_info,EX_JAMMED);
@@ -5102,7 +5128,8 @@ void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_AFFECT_DATA oaf;
 	OBJ_DATA *wield;
 
-	if ((wield = get_eq_char(victim, WEAR_WIELD)) == NULL)
+    wield = get_eq_char(victim, WEAR_WIELD);
+	if (wield == NULL)
 		return send_to_char("They are not wielding a weapon!\n\r",ch);
 
 	if (is_affected_obj(wield,gsn_sheath_of_ice))
@@ -5188,7 +5215,8 @@ void spell_metal_shards (int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *weapon;
 	int number, dam, i;
 
-	if((weapon = get_eq_char(ch,WEAR_WIELD)) == NULL)
+    weapon = get_eq_char(ch,WEAR_WIELD);
+	if(weapon == NULL)
 		return send_to_char("You must be wielding a weapon to cast this spell.\n\r",ch);
 
 	if (!IS_METAL(weapon))	
@@ -5463,7 +5491,8 @@ void spell_alter_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if(arg1[0] == '\0')
 		return send_to_char("Syntax: c 'alter metal' <object> <copper/silver/iron/steel/mithril>\n\r",ch);
 	
-	if((obj=get_obj_carry(ch,arg1,ch))==NULL)
+    obj=get_obj_carry(ch,arg1,ch);
+	if(obj ==NULL)
 		return send_to_char("You aren't carrying that.\n\r",ch);
 	
 	if (!IS_METAL(obj))
@@ -6394,7 +6423,8 @@ void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (!strcmp(target_name,""))
 		return send_to_char("You cannot cast this on yourself.\n\r",ch);
 
-	if ((victim = get_char_room(ch, target_name)) == NULL)
+    victim = get_char_room(ch, target_name);
+	if (victim == NULL)
 		return send_to_char("They aren't here.\n\r",ch);
 
 	if (!trusts(ch,victim) && is_safe(ch,victim))
@@ -6554,7 +6584,8 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
     for ( iWear = 0; iWear < MAX_WEAR; iWear++ )
     {
-        if (((obj = get_eq_char(victim, iWear)) == NULL) ||
+      obj = get_eq_char(victim, iWear);
+        if ((obj == NULL) ||
         	(iWear == WEAR_WIELD) ||
         	(iWear == WEAR_DUAL_WIELD))
             continue;
@@ -6597,7 +6628,8 @@ void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	bool next=TRUE;
 
 	old_room = ch->in_room;
-	if((where = direction_lookup(target_name)) < 0)
+    where = direction_lookup(target_name);
+	if(where < 0)
 		return send_to_char("Syntax: cast 'magma tunnel' <direction>\n\r",ch);
 	if(old_room->sector_type == SECT_UNDERWATER || old_room->sector_type == SECT_WATER || old_room->sector_type == SECT_AIR ||
            old_room->sector_type == SECT_VERTICAL)
@@ -6719,7 +6751,8 @@ void spell_mana_beam (int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *obj;
 	int dam;
 
-	if ((obj = get_eq_char(ch,WEAR_HOLD)) == NULL)
+    obj = get_eq_char(ch,WEAR_HOLD);
+	if (obj == NULL)
 		return send_to_char("You must be holding a charged crystal to cast this spell.\n\r",ch);
 
 	af = affect_find_obj(obj->affected,gsn_fashion_crystal);
@@ -6753,7 +6786,8 @@ void spell_detonation (int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *obj;
 	int dam;
 
-	if ((obj = get_eq_char(ch,WEAR_HOLD)) == NULL)
+    obj = get_eq_char(ch,WEAR_HOLD);
+	if (obj == NULL)
 		return send_to_char("You must be holding a charged crystal to cast this spell.\n\r",ch);
 
 	af = affect_find_obj(obj->affected,gsn_fashion_crystal);
@@ -6795,7 +6829,8 @@ void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	bool affected = FALSE;
 	int count = 0;
 
-	if ((obj = get_eq_char(ch,WEAR_HOLD)) == NULL)
+    obj = get_eq_char(ch,WEAR_HOLD);
+	if (obj == NULL)
 		return send_to_char("You must be holding a charged crystal to cast this spell.\n\r",ch);
 
 	oaf = affect_find_obj(obj->affected,gsn_fashion_crystal);
