@@ -3928,7 +3928,9 @@ void do_practice( CHAR_DATA *ch, char *argument )
 	if ( ch->practice <= 0 )
 		return send_to_char( "You have no practice sessions left.\n\r", ch );
 	
-	if ( ( sn = find_spell( ch,argument ) ) < 0 || ( !IS_NPC(ch)
+	sn = find_spell(ch, argument) /*This was in the conditional below*/
+
+	if ( (sn < 0) || ( !IS_NPC(ch)
 	&&   (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()]
  	||    ch->pcdata->learned[sn] < 1))) /* skill is not known */
 	    return send_to_char( "You can't practice that.\n\r", ch );
@@ -4264,6 +4266,7 @@ void do_withdraw(CHAR_DATA *ch,char *argument)
 
     if(amount > 0 && amount <= MAX_STORED_ITEMS)
     {
+
 	if((i = ch->pcdata->deposited_items[amount-1]) == 0 || (pIndex = get_obj_index(i)) == NULL)
 		return mob_tell(banker,ch,"I'm sorry, but I can't seem to find any record of that.");
 	act("$n nods briefly before scurrying away.",banker,0,ch,TO_VICT);
@@ -4495,7 +4498,10 @@ void do_lore( CHAR_DATA *ch, char *argument )
 
   if(ch->mana < UMAX(obj->level-10, 15))
 	return send_to_char("You're too tired to examine it right now.\n\r",ch);
-  if(!IS_NPC(ch) && (lorebonus = ch->Profs()->GetProf("forgotten lore") > -1))
+
+  lorebonus = ch->Profs()->GetProf("forgotten lore") /*This was previously assigned in the conditional below*/
+
+  if(!IS_NPC(ch) && (lorebonus > -1))
   {
         send_to_char("Your knowledge of forgotten lore grants you additional insight.\n\r",ch);
         ch->Profs()->CheckImprove("forgotten lore", 100);
