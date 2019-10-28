@@ -4,10 +4,10 @@
 void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	AFFECT_DATA *af_old, af;
-	int skill = get_skill(ch, gsn_bloodlust);
+	int skill;
 	int level = ch->level;
 	
-	if (skill < number_percent()) {
+	if ((skill = get_skill(ch, gsn_bloodlust)) < number_percent()) {
 		check_improve(ch,gsn_bloodlust,FALSE,1);
 		return;
 	}
@@ -48,11 +48,9 @@ void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 
 void check_leech(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-	int leeched;
-
-	int skill = get_skill(ch, gsn_leech);
+	int leeched, skill;
 	
-	if (skill < number_percent())
+	if ((skill = get_skill(ch,gsn_leech)) < number_percent())
 		return;
 	
 	if (IS_SET(victim->imm_flags,IMM_MAGIC))
@@ -1974,9 +1972,9 @@ void burning_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 void do_darksight(CHAR_DATA *ch, char *argument)
 {
 	AFFECT_DATA af;
-	int number = get_skill(ch, gsn_darksight);
+	int number;
 
-	if ( number == 0 ||
+	if ( (number = get_skill(ch,gsn_darksight)) == 0 ||
 		ch->level < skill_table[gsn_darksight].skill_level[ch->Class()->GetIndex()] )
 		return send_to_char("Huh?\n\r", ch);
 
@@ -1989,9 +1987,7 @@ void do_darksight(CHAR_DATA *ch, char *argument)
 	if (ch->mana < 40)
 		return send_to_char("You don't have enough mana.\n\r",ch);
 
-	number = number_percent(); //This was in the below conditional
-
-	if ( number > get_skill(ch, gsn_darksight) ) {
+	if ( (number = number_percent()) > get_skill(ch, gsn_darksight) ) {
 		send_to_char("You peer into the shadows but your vision stays the same.\n\r",ch);
 		check_improve(ch,gsn_darksight,FALSE, 2);
 		ch->mana -= 20;
