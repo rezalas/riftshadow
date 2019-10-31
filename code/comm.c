@@ -109,7 +109,11 @@ int main( int argc, char **argv )
 	    fprintf( stderr, "Usage: %s [port #]\n", argv[0] );
 	    exit( 0 );
 	}
-	else if ( (port = atoi(argv[1])) == 666)
+	else 
+	{
+		port = atoi(argv[1])
+	}
+	if ( port == 666)
 	{
 	    bDebug = TRUE;
 	    port = 9998;
