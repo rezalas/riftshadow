@@ -3928,7 +3928,7 @@ void do_practice( CHAR_DATA *ch, char *argument )
 	if ( ch->practice <= 0 )
 		return send_to_char( "You have no practice sessions left.\n\r", ch );
 	
-	sn = find_spell(ch, argument) /*This was in the conditional below*/
+	sn = find_spell(ch, argument); /*This was in the conditional below*/
 
 	if ( (sn < 0) || ( !IS_NPC(ch)
 	&&   (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()]
@@ -4499,7 +4499,7 @@ void do_lore( CHAR_DATA *ch, char *argument )
   if(ch->mana < UMAX(obj->level-10, 15))
 	return send_to_char("You're too tired to examine it right now.\n\r",ch);
 
-  lorebonus = ch->Profs()->GetProf("forgotten lore") /*This was previously assigned in the conditional below*/
+  lorebonus = ch->Profs()->GetProf("forgotten lore"); /*This was previously assigned in the conditional below*/
 
   if(!IS_NPC(ch) && (lorebonus > -1))
   {

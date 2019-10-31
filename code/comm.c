@@ -111,7 +111,7 @@ int main( int argc, char **argv )
 	}
 	else 
 	{
-		port = atoi(argv[1])
+		port = atoi(argv[1]);
 	}
 	if ( port == 666)
 	{
