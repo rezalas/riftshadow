@@ -135,7 +135,9 @@ void do_rune( CHAR_DATA *ch, char *argument )
     if ( arg1[0] == '\0' )
 		return send_to_char( "Syntax:\n\rrune   <type> <name> <target>\n\r", ch );
 
-    if ((sn = find_spell(ch,arg1)) < 1
+	sn = find_spell(ch, arg1);
+
+    if (sn < 1
     ||  skill_table[sn].spell_fun == spell_null
     || (!IS_NPC(ch) && get_skill(ch,sn) < 5)
     || (!IS_NPC(ch) && ch->pcdata->learned[sn] == 0))
