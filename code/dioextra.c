@@ -545,7 +545,9 @@ void do_powers(CHAR_DATA *ch, char *argument)
     {
         sn = skill_lookup(cabal_skills[gns].skill);
 
-        if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
+		level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
+		
+        if (level  < LEVEL_HERO + 1
                 &&  level >= min_lev && level <= max_lev
                 &&  ch->pcdata->learned[sn] > 0)
         {
