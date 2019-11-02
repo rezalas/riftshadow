@@ -10,7 +10,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <signal.h>
-#include <crypt.h>
+
+#ifdef _WIN32
+  #include <windows.h>
+  #include <wincrypt.h>
+  #include <ws2tcpip.h>
+#else
+  #include <crypt.h>
+#endif
 
 #include "merc.h"
 #include "recycle.h"
@@ -44,9 +51,15 @@ bool bDebug = FALSE;
  * Socket and TCP/IP stuff.
  */
 #include <fcntl.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
+#ifdef _WIN32
+  #include <windows.h>
+  #include <winsock.h>
+  #include <winsock2.h>
+#else 
+  #include <netdb.h>
+  #include <netinet/in.h>
+  #include <sys/socket.h>
+#endif
 #include "telnet.h"
 const char echo_off_str[] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const char echo_on_str[] = { IAC, WONT, TELOPT_ECHO, '\0' };
@@ -56,13 +69,36 @@ const char go_ahead_str[] = { IAC, GA, '\0' };
  * OS-dependent declarations.
  */
 
-#ifdef __linux__
+#ifdef _WIN32
+  int	accept (int s, struct sockaddr *addr, int *addrlen);
+  int	bind (int s, struct sockaddr *name, int namelen);
+
+  /*
+   * If we were in linux, this would be declared for us, 
+   * but sadly we're not. This is a stopgap for signal
+   * processing until a better option is created.  
+   */
+  #ifndef SIGFPE
+    #define SIGFPE  8
+  #endif
+  #ifndef SIGPIPE
+  #define SIGPIPE 13
+  #endif
+  #ifndef F_SETFL
+  #define F_SETFL 4
+  #endif
+  #ifndef O_NDELAY
+  #define O_NDELAY  04000
+  #endif
+#elif __linux__
 /*
     Linux shouldn't need these. If you have a problem compiling, try
     uncommenting accept and bind.
 int	accept (int s, struct sockaddr *addr, int *addrlen);
 int	bind (int s, struct sockaddr *name, int namelen);
 */
+int	socket (int domain, int type, int protocol);
+#endif
 
 int	close (int fd);
 //int getpeername (int s, struct sockaddr *name, int *namelen);
@@ -71,9 +107,7 @@ int gofday (struct timeval *tp, struct timezone *tzp);
 //int listen (int s, int backlog);
 //int read (int fd, char *buf, int nbyte);
 int	select (int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
-int	socket (int domain, int type, int protocol);
 //int write (int fd, char *buf, int nbyte);
-#endif
 
 
 

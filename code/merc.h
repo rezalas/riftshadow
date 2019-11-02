@@ -1,35 +1,35 @@
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,        *
- *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
- *                       *
+ *  Michael Seifert, Hans Henrik Stærfeldt, Tom Madsen, and Katja Nyboe.   *
+ *                                                                         *
  *  Merc Diku Mud improvments copyright (C) 1992, 1993 by Michael          *
- *  Chastain, Michael Quan, and Mitchell Tse. *
- *                       *
+ *  Chastain, Michael Quan, and Mitchell Tse.                              *
+ *                                                                         *
  *  In order to use any part of this Merc Diku Mud, you must comply with   *
  *  both the original Diku license in 'license.doc' as well the Merc       *
  *  license in 'license.txt'.  In particular, you may not remove either of *
- *  these copyright notices.                  *
- *                       *
+ *  these copyright notices.                                               *
+ *                                                                         *
  *  Much time and thought has gone into this software and you are          *
  *  benefitting.  We hope that you share your changes too.  What goes      *
- *  around, comes around.*
+ *  around, comes around.                                                  *
  ***************************************************************************/
 
 /***************************************************************************
-*	ROM 2.4 is copyright 1993-1996 Russ Taylor			   *
-*	ROM has been brought to you by the ROM consortium		   *
-*	    Russ Taylor (rtaylor@pacinfo.com)				   *
-*	    Gabrielle Taylor (gtaylor@pacinfo.com)			   *
-*	    Brian Moore (rom@rom.efn.org)				   *
-*	By using this code, you have agreed to follow the terms of the	   *
-*	ROM license, in the file Rom24/doc/rom.license			   *
-***************************************************************************/
+ *  ROM 2.4 is copyright 1993-1996 Russ Taylor                             *
+ *  ROM has been brought to you by the ROM consortium                      *
+ *      Russ Taylor (rtaylor@pacinfo.com)                                  *
+ *      Gabrielle Taylor (gtaylor@pacinfo.com)                             *
+ *      Brian Moore (rom@rom.efn.org)                                      *
+ *  By using this code, you have agreed to follow the terms of the         *
+ *  ROM license, in the file Rom24/doc/rom.license                         *
+ ***************************************************************************/
 
 /***************************************************************************
-*       Tartarus code is copyright (C) 1997-1998 by Daniel Graham          *
-*	In using this code you agree to comply with the Tartarus license   *
-*       found in the file /Tartarus/doc/tartarus.doc                       *
-***************************************************************************/
+ *       Tartarus code is copyright (C) 1997-1998 by Daniel Graham         *
+ *  In using this code you agree to comply with the Tartarus license       *
+ *       found in the file /Tartarus/doc/tartarus.doc                      *
+ ***************************************************************************/
 
 #ifndef MERC_H
 #define MERC_H
@@ -93,6 +93,10 @@
 /* system calls */
 int remove();
 // int system(const char * string);
+
+#ifdef _WIN32
+    #include <windows.h>
+#endif
 
 #ifndef RIFTINCLD
 //#include "rift.h"
@@ -4055,15 +4059,18 @@ void *  calloc          args( ( unsigned nelem, size_t size ) );
  */
 
 #ifdef __unix__
-// #define PLAYER_DIR      "../player/"        	/* Player files */
-#define PLAYER_LIST	RIFT_PLAYER_DIR "/Player.lst"  /* Player list for limits */
+    // #define PLAYER_DIR      "../player/"        	/* Player files */
+    #define NULL_FILE	"/dev/null"		/* To reserve one stream */
+
+#elif _WIN32
+    #define NULL_FILE RIFT_ROOT_DIR "/nul"  /* win32 equiv to /dev/null */
+#endif
+
 #define TEMP_GREP_RESULTS RIFT_TEMP_DIR "/tempgrepresults.tmp" /* Temporary grep results */
 #define TEMP_GREP_RESULTS_TWO RIFT_TEMP_DIR "/temp/tempgrepresults2.tmp"
 #define GOD_DIR     RIFT_ROOT_DIR "/gods/"  		/* list of gods */
 #define TEMP_FILE	RIFT_PLAYER_DIR "/romtmp"
-#define NULL_FILE	"/dev/null"		/* To reserve one stream */
-#endif
-
+#define PLAYER_LIST	RIFT_PLAYER_DIR "/Player.lst"  /* Player list for limits */
 #define VOTE_FILE       RIFT_AREA_DIR "/votes.txt"
 #define AREA_LIST       RIFT_AREA_DIR "/area.lst"  /* List of areas*/
 #define BUG_FILE        RIFT_AREA_DIR "/bugs.txt" /* For 'bug' and bug()*/

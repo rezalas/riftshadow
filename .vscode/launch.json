@@ -11,7 +11,7 @@
             "cwd": "${workspaceRoot}/code/",
             "environment": [],
             "externalConsole": true,
-            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "C:/MinGW/bin",
             "linux": {
                 "MIMode": "gdb"
             },

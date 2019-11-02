@@ -1,10 +1,24 @@
+# logging / debugging
 /Debug/
+*.log
+
+# VSCode entries
 .vs/
 .vscode/
+.vscode/launch.json
+.vscode/tasks.json
+
+# Object files
 *.o
+
+# Player data
 player/*.plr
 player/Player.lst
+
+# Binaries
 rift
 code/rift
 area/rift
-*.log
+*.exe
+code/rift.exe
+area/rift.exe

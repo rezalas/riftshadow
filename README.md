@@ -15,7 +15,7 @@ The following packages are required to build on linux x86 and test the applicati
 * make
 * g++
 * mysql-server
-* libmysqlclient-dev
+* libmysqlclient-dev (substitute mariadb connector if needed)
 
 You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. After building the project you will need to copy the compiled 'rift' file to either the area folder, or to whatever execution folder you intend to use (if you intend to use a different one also make the rs.conf file and copy the areas over as well). 
 
