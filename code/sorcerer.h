@@ -2,9 +2,9 @@
 #define SORCERER_H
 
 
-/****************************************************************************/
-/* Welcome to Sorcerer land.						    					*/
-/****************************************************************************/
+/****************************************************************************
+ *                        Welcome to Sorcerer land.                         *
+ ****************************************************************************/
 #include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,9 +19,9 @@
 #include "interp.h"
 #include "tables.h"
 
-extern int flag_lookup args((const char *name, const struct flag_type *flag_table));
-extern char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-extern int damage_queue args((CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun));
+extern int flag_lookup (const char *name, const struct flag_type *flag_table);
+extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
+extern int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun);
 
 extern char * const dir_name[];
 extern const sh_int rev_dir[];
@@ -37,9 +37,9 @@ void cyclone_end_fun (AREA_DATA *area, AREA_AFFECT_DATA *af);
 void spell_chill (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_chillmetal (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_conflagration (int sn, int level, CHAR_DATA *ch, void *vo, int target);
-bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf);
-void conflagration_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
-void conflag_burnout(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
+bool conflagrate_room (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf);
+void conflagration_pulse (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
+void conflag_burnout (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
 void spell_ultradiffusion (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void ultradiffusion_tick (CHAR_DATA *ch, AFFECT_DATA *af);
 void un_ultradiffusion (CHAR_DATA *ch, char *argument);
@@ -59,16 +59,16 @@ void spell_scathing (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_earthquake (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_electrocute (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_induce_pain (int sn, int level, CHAR_DATA *ch, void *vo, int target);
-void spell_disrupt_vision( int sn, int level, CHAR_DATA *ch, void *vo, int target);
+void spell_disrupt_vision (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_mana_conduit (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_synaptic_enhancement (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_synaptic_impairment (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_elecshield (int sn,int level,CHAR_DATA *ch,void *vo,int target);
-void spell_scramble_neurons( int sn, int level, CHAR_DATA *ch, void *vo, int target);
+void spell_scramble_neurons (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_mana_leech (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_interference (int sn, int level, CHAR_DATA *ch, void *vo, int target );
 void interference_end (AREA_DATA *area, AREA_AFFECT_DATA *af);
-void spell_hydroperception( int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_hydroperception (int sn, int level, CHAR_DATA *ch, void *vo,int target );
 void spell_dehydrate (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_drown (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_hydration (int sn, int level, CHAR_DATA *ch, void *vo, int target);
@@ -82,8 +82,8 @@ void riptide_one_end (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
 void riptide_two_end (ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af);
 int average_ac (CHAR_DATA *ch);
 void spell_watermeld (int sn, int level, CHAR_DATA *ch, void *vo, int target);
-void spell_sense_disturbance( int sn, int level, CHAR_DATA *ch, void *vo,int target );
-void spell_travelease( int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_sense_disturbance (int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_travelease (int sn, int level, CHAR_DATA *ch, void *vo,int target );
 void spell_diffusion (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_disruption (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_anchor (int sn, int level, CHAR_DATA *ch, void *vo, int target);
@@ -95,13 +95,13 @@ void spell_stability (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_crush (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_sensevibrations (int sn, int level, CHAR_DATA *ch, void *vo, int target );
 void spell_diamondskin (int sn, int level, CHAR_DATA *ch, void *vo, int target );
-void spell_overbear  (int sn, int level, CHAR_DATA *ch, void *vo, int target);
+void spell_overbear (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_reduce (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_earthshield (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_coldshield (int sn,int level,CHAR_DATA *ch,void *vo,int target);
-void spell_coagulate( int sn, int level, CHAR_DATA *ch, void *vo,int target );
-void spell_hypothermia( int sn, int level, CHAR_DATA *ch, void *vo,int target );
-void spell_imprisonvoice( int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_coagulate (int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_hypothermia (int sn, int level, CHAR_DATA *ch, void *vo,int target );
+void spell_imprisonvoice (int sn, int level, CHAR_DATA *ch, void *vo,int target );
 void spell_frigidaura (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_enervate_agitate_helper (int sn, int level, CHAR_DATA *ch, void *vo, int target, int iDir);
 void spell_enervate (int sn,int level,CHAR_DATA *ch,void *vo,int target);
