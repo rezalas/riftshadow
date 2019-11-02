@@ -2,3 +2,9 @@
 .vs/
 .vscode/
 *.o
+player/*.plr
+player/Player.lst
+rift
+code/rift
+area/rift
+*.log
