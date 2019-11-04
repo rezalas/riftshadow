@@ -941,7 +941,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 	AREA_DATA *pArea;
 	FILE *fp;
 	int value;
-	bool found = FALSE;
+	bool found = false;
 
 	fp = NULL;
 
@@ -989,7 +989,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 
 				if (IS_SET(pArea->area_flags, AREA_CHANGED) || IS_SET(pArea->area_flags, AREA_ADDED))
 				{
-					found = TRUE;
+					found = true;
 					clean_olc_aflags(pArea);
 					save_area(pArea);
 					sprintf(buf, "%24s - '%s'\n\r", pArea->name, pArea->file_name);

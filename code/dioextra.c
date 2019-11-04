@@ -78,7 +78,7 @@ void do_crumble(CHAR_DATA *ch, char *argument)
 			send_to_char("You can't find it.\n\r", ch);
 			return;
 		}
-		unequip_char(ch, obj, TRUE);
+		unequip_char(ch, obj, true);
 	}
 	else
 	{
@@ -252,7 +252,7 @@ void do_affrem(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int sn;
 	AFFECT_DATA *af, *af_next;
-	bool remove = TRUE;
+	bool remove = true;
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
 
@@ -294,7 +294,7 @@ void do_affrem(CHAR_DATA *ch, char *argument)
 		if (IS_SET(af->bitvector, AFF_PERMANENT) && get_trust(ch) < MAX_LEVEL && af->type == sn)
 		{
 			send_to_char("You cannot remove a permanent affect.\n\r", ch);
-			remove = FALSE;
+			remove = false;
 			continue;
 		}
 
@@ -364,7 +364,7 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	isgoodaffect = FALSE;
+	isgoodaffect = false;
 
 	value = atoi(arg3);
 	duration = atoi(arg4);
@@ -372,49 +372,49 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 	if (!str_prefix(arg2, "hp"))
 	{
 		if (value > 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_HIT;
 	}
 	else if (!str_prefix(arg2, "mana"))
 	{
 		if (value > 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_MANA;
 	}
 	else if (!str_prefix(arg2, "move"))
 	{
 		if (value > 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_MOVE;
 	}
 	else if (!str_prefix(arg2, "ac"))
 	{
 		if (value < 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_AC;
 	}
 	else if (!str_prefix(arg2, "hitroll"))
 	{
 		if (value > 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_HITROLL;
 	}
 	else if (!str_prefix(arg2, "damroll"))
 	{
 		if (value > 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_DAMROLL;
 	}
 	else if (!str_prefix(arg2, "saves"))
 	{
 		if (value < 0)
-			isgoodaffect = TRUE;
+			isgoodaffect = true;
 
 		enchant_type = APPLY_SAVING_SPELL;
 	}
@@ -435,7 +435,7 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 	af.aftype = AFT_COMMUNE;
 	affect_to_char(victim, &af);
 
-	if (isgoodaffect == TRUE)
+	if (isgoodaffect == true)
 	{
 		sprintf(buf, "%s is blessed with %s.\n\r", victim->name, arg2);
 		send_to_char(buf, ch);
@@ -526,7 +526,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 	char skill_list[LEVEL_HERO + 1][MAX_STRING_LENGTH];
 	char skill_columns[LEVEL_HERO + 1];
 	int gns, sn, level, min_lev = 1, max_lev = LEVEL_HERO;
-	bool fAll = FALSE, found = FALSE;
+	bool fAll = false, found = false;
 	char buf[MAX_STRING_LENGTH];
 
 	if (IS_NPC(ch))
@@ -540,7 +540,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 
 	if (argument[0] != '\0')
 	{
-		fAll = TRUE;
+		fAll = true;
 
 		if (str_prefix(argument, "all"))
 		{
@@ -605,7 +605,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 			&& level >= min_lev
 			&& level <= max_lev && ch->pcdata->learned[sn] > 0)
 		{
-			found = TRUE;
+			found = true;
 			level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
 
 			if (ch->level < level)
@@ -655,7 +655,7 @@ bool check_shroud_of_light(CHAR_DATA *ch, CHAR_DATA *victim)
 	AFFECT_DATA af;
 
 	if (get_skill(ch, gsn_shroud_of_light) < 2)
-		return FALSE;
+		return false;
 
 	if (number_percent() <= 35 && is_affected(ch, gsn_shroud_of_light))
 	{
@@ -672,11 +672,11 @@ bool check_shroud_of_light(CHAR_DATA *ch, CHAR_DATA *victim)
 		SET_BIT(af.bitvector, AFF_BLIND);
 		affect_to_char(ch, &af);
 
-		damage_old(victim, ch, (victim->level + 10), gsn_shroud_of_light, DAM_HOLY, TRUE);
-		return TRUE;
+		damage_old(victim, ch, (victim->level + 10), gsn_shroud_of_light, DAM_HOLY, true);
+		return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_heroimm(CHAR_DATA *ch, char *argument)
@@ -752,7 +752,7 @@ void check_keen_vision(CHAR_DATA *ch, CHAR_DATA *victim)
 		{
 			sprintf(buf, "You notice %s slipping into %s's inventory.\n\r", PERS(ch, gch), PERS(victim, gch));
 			send_to_char(buf, gch);
-			check_improve(gch, gsn_keen_vision, TRUE, 1);
+			check_improve(gch, gsn_keen_vision, true, 1);
 		}
 	}
 }
@@ -775,8 +775,8 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 		if (IS_NPC(ch))
 			return;
 
-		found = FALSE;
-		afound = FALSE;
+		found = false;
+		afound = false;
 		guardian = NULL;
 
 		for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
@@ -795,7 +795,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 					if ((obj->pIndexData->vnum) && isCabalItem(obj))
 					{
 						total++;
-						found = TRUE;
+						found = true;
 
 						if (obj_next != NULL)
 						{
@@ -823,7 +823,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 				if (!found)
 					strcat(buf, "nothing.");
 
-				afound = TRUE;
+				afound = true;
 			}
 		}
 
@@ -977,10 +977,10 @@ void do_finger(CHAR_DATA *ch, char *argument)
 	int con = 0, stat = 25, died = 0, agemod = 0, bcredits = 0, hometown = 0, aobj = -1, lobj = -1, timeplayed = -1;
 	int vnum = 0, room = 0;
 	char *history, *name, *login, *title, *extitle, *sex, *allsites, *desc;
-	bool fMatch = FALSE;
+	bool fMatch = false;
 	char *word;
-	bool end = FALSE;
-	bool dead = FALSE;
+	bool end = false;
+	bool dead = false;
 	char eqbuf[MAX_STRING_LENGTH];
 	long sect_time[SECT_MAX];
 	sh_int quests[MAX_QUESTS];
@@ -1040,11 +1040,11 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 	if (((fp = fopen(dir, "r")) != NULL))
 	{
-		dead = FALSE;
+		dead = false;
 	}
 	else if (((fp = fopen(dir2, "r")) != NULL))
 	{
-		dead = TRUE;
+		dead = true;
 	}
 	else
 	{
@@ -1055,12 +1055,12 @@ void do_finger(CHAR_DATA *ch, char *argument)
 	for (;;)
 	{
 		word = feof(fp) ? (char *)"End" : fread_word(fp);
-		fMatch = FALSE;
+		fMatch = false;
 
 		switch (UPPER(word[0]))
 		{
 			case '*':
-				fMatch = TRUE;
+				fMatch = true;
 				fread_to_eol(fp);
 				break;
 			case 'A':
@@ -1089,7 +1089,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 				if (!str_cmp(word, "Cla"))
 				{
 					class_index = CClass::Lookup(fread_string(fp));
-					fMatch = TRUE;
+					fMatch = true;
 					break;
 				}
 
@@ -1107,7 +1107,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 				if (!str_cmp(word, "End"))
 				{
-					end = TRUE;
+					end = true;
 				}
 
 				break;
@@ -1150,7 +1150,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 					mkilled = fread_number(fp);
 				}
 
-				fMatch = TRUE;
+				fMatch = true;
 				break;
 			case 'L':
 				KEY("Levl", level, fread_number(fp));
@@ -1256,13 +1256,13 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		sprintf(buf2, " *** Quest history for %s (reputation %d) ***\n\r", name, reputation);
 		send_to_char(buf2, ch);
 
-		fMatch = FALSE;
+		fMatch = false;
 
 		for (i = 0; i < MAX_QUESTS; i++)
 		{
 			if (quests[i] > 0)
 			{
-				fMatch = TRUE;
+				fMatch = true;
 				strcat(questtext, quest_table[i].name);
 				strcat(questtext, " -- ");
 				strcat(questtext, quest_table[i].description);
@@ -1486,7 +1486,7 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 
 char *get_login(CHAR_DATA *ch, FILE *fpChar2)
 {
-	bool fMatch, end = FALSE;
+	bool fMatch, end = false;
 	char *login = NULL, *word;
 
 	if (fpChar2 == NULL)
@@ -1497,7 +1497,7 @@ char *get_login(CHAR_DATA *ch, FILE *fpChar2)
 
 	for (;;)
 	{
-		fMatch = FALSE;
+		fMatch = false;
 		word = feof(fpChar2) ? (char *)"End" : fread_word(fpChar2);
 
 		switch (UPPER(word[0]))
@@ -1505,7 +1505,7 @@ char *get_login(CHAR_DATA *ch, FILE *fpChar2)
 			case 'E':
 				if (!str_cmp(word, "End"))
 				{
-					end = TRUE;
+					end = true;
 				}
 				break;
 			case 'L':
@@ -1549,7 +1549,7 @@ void chop(char *str)
 bool can_live_in(CHAR_DATA *ch, int hometown)
 {
 	if (hometown > MAX_HOMETOWN || hometown <= 0)
-		return FALSE;
+		return false;
 
 	if (hometown_table[hometown].align == ALIGN_NONE
 		|| hometown_table[hometown].align == ALIGN_GN && IS_EVIL(ch)
@@ -1559,7 +1559,7 @@ bool can_live_in(CHAR_DATA *ch, int hometown)
 		|| hometown_table[hometown].align == ALIGN_E && !IS_EVIL(ch)
 		|| hometown_table[hometown].align == ALIGN_GE && IS_NEUTRAL(ch))
 	{
-		return FALSE;
+		return false;
 	}
 
 	if (hometown_table[hometown].ethos == ETHOS_NONE
@@ -1570,10 +1570,10 @@ bool can_live_in(CHAR_DATA *ch, int hometown)
 		|| hometown_table[hometown].ethos == ETHOS_C && !IS_CHAOTIC(ch)
 		|| hometown_table[hometown].ethos == ETHOS_LC && IS_ENEUTRAL(ch))
 	{
-		return FALSE;
+		return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 int count_carried(CHAR_DATA *ch, bool limited)
@@ -1600,10 +1600,10 @@ bool auto_check_multi(DESCRIPTOR_DATA *d_check, char *host)
 			continue;
 
 		if (!str_cmp(host, d->host))
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_pload(CHAR_DATA *ch, char *argument)
@@ -1662,7 +1662,7 @@ void do_pload(CHAR_DATA *ch, char *argument)
 	if (fopen(buf, "r") != NULL)
 	{
 		save_char_obj(victim);
-		extract_char(victim, TRUE);
+		extract_char(victim, true);
 	}
 
 	free_descriptor(d);
@@ -1698,13 +1698,13 @@ void do_damage(CHAR_DATA *ch, char *argument)
 
 	dam = atoi(arg2);
 
-	damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_OTHER, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, argument);
+	damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, argument);
 
 	if (ch->fighting == victim)
-		stop_fighting(ch, FALSE);
+		stop_fighting(ch, false);
 
 	if (victim->fighting == ch)
-		stop_fighting(victim, FALSE);
+		stop_fighting(victim, false);
 }
 
 void zone_echo(AREA_DATA *area, char *echo)
@@ -1740,13 +1740,13 @@ bool old_is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 				if ((to_room = pexit->u1.to_room) != NULL)
 				{
 					if (to_room->area == area2)
-						return TRUE;
+						return true;
 				}
 			}
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
@@ -1754,16 +1754,16 @@ bool is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 	for (int i = 0; i < MAX_ADJACENT; i++)
 	{
 		if (area->adjacent[i] == area2)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool is_adj_range(AREA_DATA *area, AREA_DATA *area2, int range)
 {
 	if (area == area2)
-		return TRUE;
+		return true;
 
 	for (int i = 0; i < MAX_ADJACENT; i++)
 	{
@@ -1771,12 +1771,12 @@ bool is_adj_range(AREA_DATA *area, AREA_DATA *area2, int range)
 		{
 			range -= 1;
 			if (is_adj_range(area->adjacent[i], area2, range))
-				return TRUE;
+				return true;
 		}
 
 		if (area->adjacent[i] == area2)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }

@@ -9,7 +9,7 @@ void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	if ((skill = get_skill(ch, gsn_bloodlust)) < number_percent())
 	{
-		check_improve(ch, gsn_bloodlust, FALSE, 1);
+		check_improve(ch, gsn_bloodlust, false, 1);
 		return;
 	}
 
@@ -45,7 +45,7 @@ void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 		affect_to_char(ch, &af);
 	}
 
-	check_improve(ch, gsn_bloodlust, TRUE, 6);
+	check_improve(ch, gsn_bloodlust, true, 6);
 }
 
 void check_leech(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -66,7 +66,7 @@ void check_leech(CHAR_DATA *ch, CHAR_DATA *victim)
 	victim->hit -= leeched;
 	ch->hit += leeched;
 
-	check_improve(ch, gsn_leech, TRUE, 6);
+	check_improve(ch, gsn_leech, true, 6);
 }
 
 void spell_indomitability(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -122,7 +122,7 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 
 		do_murder(victim, ch->name);
 
-		check_improve(ch, skill_lookup("taunt"), TRUE, 1);
+		check_improve(ch, skill_lookup("taunt"), true, 1);
 	}
 	else
 	{
@@ -130,7 +130,7 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 		act("$n shouts insults and curses at you, but you calmly ignore $m.", ch, 0, victim, TO_VICT);
 		act("$n shouts and curses at $N, but $N ignores $m.", ch, 0, victim, TO_NOTVICT);
 
-		check_improve(ch, skill_lookup("taunt"), FALSE, 1);
+		check_improve(ch, skill_lookup("taunt"), false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -292,7 +292,7 @@ void lust_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 
 	for (victim = ch->in_room->people; victim; victim = victim->next_in_room)
 	{
-		if ((victim == ch) || (is_safe_new(victim, ch, FALSE)) || number_percent() < 95)
+		if ((victim == ch) || (is_safe_new(victim, ch, false)) || number_percent() < 95)
 			continue;
 
 		for (steal = victim->carrying; steal; steal = steal->next_content)
@@ -346,7 +346,7 @@ void spell_dispaters(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if ((obj = get_eq_char(victim, wear)) != NULL && (can_see_obj(ch, obj)))
 		{
 			send_to_char(get_where_name(wear), ch);
-			send_to_char(format_obj_to_char(obj, ch, TRUE), ch);
+			send_to_char(format_obj_to_char(obj, ch, true), ch);
 			send_to_char("\n\r", ch);
 		}
 	}
@@ -555,7 +555,7 @@ void check_baals_mastery(CHAR_DATA *ch, CHAR_DATA *victim)
 			return;
 	}
 
-	check_improve(ch, gsn_baals_mastery, TRUE, 5);
+	check_improve(ch, gsn_baals_mastery, true, 5);
 
 	return;
 }
@@ -599,7 +599,7 @@ void spell_word_of_command(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		return;
 	}
 
-	if (is_safe_new(ch, victim, TRUE))
+	if (is_safe_new(ch, victim, true))
 		return;
 
 	if (IS_NPC(victim))
@@ -859,7 +859,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 		af2->duration = af->duration;
 		af2->end_fun = af->end_fun;
 		af2->pulse_fun = af->pulse_fun;
-		affect_remove_obj(obj, af, FALSE);
+		affect_remove_obj(obj, af, false);
 
 		af2->modifier--;
 		af2->modifier = UMAX(0, af2->modifier);
@@ -889,7 +889,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	af2->duration = af->duration;
 	af2->end_fun = af->end_fun;
 	af2->pulse_fun = af->pulse_fun;
-	affect_remove_obj(obj, af, FALSE);
+	affect_remove_obj(obj, af, false);
 
 	if (IS_NPC(ch->fighting) && af2->modifier <= 15)
 	{
@@ -960,13 +960,13 @@ void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	int vnum;
 	int i;
 	float hp_mod = 1;
-	bool found = FALSE;
+	bool found = false;
 
 	for (check = char_list; check != NULL; check = check->next)
 	{
 		if (IS_NPC(check) && check->leader == ch)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -1524,7 +1524,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
 
 				af->owner->pcdata->lesserdata[LESSER_FURCAS] = FAVOR_FAILED;
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 			}
 
 			break;
@@ -1556,7 +1556,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
 
 				af->owner->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 			}
 			break;
 		case MOB_VNUM_IPOS:
@@ -1566,7 +1566,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
 
 				af->owner->pcdata->lesserdata[LESSER_IPOS] = FAVOR_FAILED;
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 			}
 			break;
 		default:
@@ -1604,7 +1604,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				act("The puddle of gore before you which was once a greater demon seeps downward.", mob, 0, 0, TO_ROOM);
 				af->owner->pcdata->greaterdata[GREATER_OZE] = FAVOR_FAILED;
 
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 				break;
 			}
 
@@ -1616,7 +1616,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				do_tell(mob, buf);
 
 				act("Flashing a great dark light, $n vanishes from sight.", mob, 0, 0, TO_ROOM);
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 				break;
 			}
 
@@ -1628,7 +1628,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				do_say(mob, buf);
 
 				act("With a fierce snarl, and many assorted whispers, Orobas streaks into the sky.", mob, 0, 0, TO_ROOM);
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 				break;
 
 			}
@@ -1667,7 +1667,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 
 				af->owner->pcdata->greaterdata[GREATER_GERYON] = FAVOR_FAILED;
 
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 				break;
 			}
 			break;
@@ -1691,7 +1691,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 				act("Slowly, the monstrous demon fades into shadows and dissipates.", mob, 0, 0, TO_ROOM);
 
 				af->owner->pcdata->greaterdata[GREATER_CIMERIES] = FAVOR_FAILED;
-				extract_char(mob, TRUE);
+				extract_char(mob, true);
 			}
 			break;
 		default:
@@ -1778,7 +1778,7 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 		if (ch->fighting != NULL)
 			return;
 
-		if ((victim == ch) || (is_safe_new(ch, victim, FALSE)) || (number_percent() > 95))
+		if ((victim == ch) || (is_safe_new(ch, victim, false)) || (number_percent() > 95))
 		{
 			insanity_two(ch, room);
 			break;
@@ -2116,7 +2116,7 @@ void do_breath_mephisto(CHAR_DATA *ch, char *argument)
 	if (number_percent() > (get_skill(ch, skill_lookup("breath of mephisto"))))
 	{
 		send_to_char("You fail to build up the intense cold within you.\n\r", ch);
-		check_improve(ch, skill_lookup("breath of mephisto"), FALSE, 2);
+		check_improve(ch, skill_lookup("breath of mephisto"), false, 2);
 		return;
 	}
 
@@ -2139,7 +2139,7 @@ void mephisto_two(CHAR_DATA *ch, CHAR_DATA *victim, char *argument)
 	act("$n opens $s mouth and a plume of deathly cold issues forth!", ch, 0, 0, TO_ROOM);
 	act("You open your mouth and unleash your icy fury!", ch, 0, 0, TO_CHAR);
 
-	damage_new(ch, victim, ch->level * 3, TYPE_UNDEFINED, TRUE, DAM_COLD, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "icy breath");
+	damage_new(ch, victim, ch->level * 3, TYPE_UNDEFINED, true, DAM_COLD, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "icy breath");
 
 	act("$n freezes in $s tracks under the icy onslaught.", victim, 0, ch, TO_ROOM);
 	act("The intense cold shocks you into temporary immobility!", ch, 0, victim, TO_VICT);
@@ -2195,7 +2195,7 @@ void do_touch(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (is_safe_new(ch, victim, TRUE))
+	if (is_safe_new(ch, victim, true))
 		return;
 
 	if (ch->fighting)
@@ -2215,7 +2215,7 @@ void do_touch(CHAR_DATA *ch, char *argument)
 		act("$n places his hand on you as you feel fire engulf your body!", ch, 0, victim, TO_VICT);
 		act("$n places his hand on $N as $N bursts into flames!", ch, 0, victim, TO_NOTVICT);
 
-		damage_new(ch, victim, ch->level * 2, TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burning touch");
+		damage_new(ch, victim, ch->level * 2, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burning touch");
 
 		if (is_affected(victim, skill_lookup("burning touch")))
 			return;
@@ -2244,14 +2244,14 @@ void do_touch(CHAR_DATA *ch, char *argument)
 void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	OBJ_DATA *corpse;
-	bool found = FALSE;
+	bool found = false;
 	char buf[MSL];
 
 	for (corpse = ch->in_room->contents; corpse; corpse = corpse->next_content)
 	{
 		if (corpse->item_type == ITEM_CORPSE_PC && !str_cmp(corpse->owner, victim->true_name))
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -2302,7 +2302,7 @@ void burning_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 
 	act("You scream in pain as fire erupts from within your body!", ch, 0, 0, TO_CHAR);
 	act("$n screams in pain as fire erupts from within $s body!", ch, 0, 0, TO_ROOM);
-	damage_new(owner, ch, owner->level / 2, skill_lookup("burning touch"), DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the consuming fire*");
+	damage_new(owner, ch, owner->level / 2, skill_lookup("burning touch"), DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the consuming fire*");
 }
 
 void do_darksight(CHAR_DATA *ch, char *argument)
@@ -2338,7 +2338,7 @@ void do_darksight(CHAR_DATA *ch, char *argument)
 	if ((number = number_percent()) > get_skill(ch, gsn_darksight))
 	{
 		send_to_char("You peer into the shadows but your vision stays the same.\n\r", ch);
-		check_improve(ch, gsn_darksight, FALSE, 2);
+		check_improve(ch, gsn_darksight, false, 2);
 		ch->mana -= 20;
 		return;
 	}
@@ -2362,7 +2362,7 @@ void do_darksight(CHAR_DATA *ch, char *argument)
 	af.end_fun = darksight_end;
 	affect_to_char(ch, &af);
 
-	check_improve(ch, gsn_darksight, TRUE, 1);
+	check_improve(ch, gsn_darksight, true, 1);
 }
 
 void darksight_end(CHAR_DATA *ch, AFFECT_DATA *af)

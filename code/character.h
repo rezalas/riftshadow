@@ -71,7 +71,7 @@ public:
 	int							GetArms();
 	int							GetBalance();
 	int							GetSex();
-	const char *				GetSexName(bool nPossessive = FALSE); //"he"
+	const char *				GetSexName(bool nPossessive = false); //"he"
 	
 	CSize *						GetSize();	
 	CClass *					GetClass();

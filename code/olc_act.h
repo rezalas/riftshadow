@@ -32,7 +32,7 @@
 #include "lookup.h"
 #include "spec.h"
 
-/* Return TRUE if area changed, FALSE if not. */
+/* Return true if area changed, false if not. */
 #define REDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
 #define OEDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
 #define MEDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )

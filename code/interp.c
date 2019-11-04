@@ -33,13 +33,13 @@
 
 #include "interp.h"
 
-bool command_result = FALSE;
+bool command_result= false;
 char *command_line;
 
 /*
  * Log-all switch.
  */
-bool fLogAll = FALSE;
+bool fLogAll= false;
 
 /*
  * Command table.
@@ -565,7 +565,7 @@ void clear_cmd_queue(CHAR_DATA *ch)
 	int i = 0;
 	ch->pcdata->read_next = 0;
 	ch->pcdata->write_next = 0;
-	ch->pcdata->pending = FALSE;
+	ch->pcdata->pending= false;
 
 	for (i = ch->pcdata->write_next; i < MAX_QUEUE; i++)
 	{
@@ -587,7 +587,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	char buf[MSL];
 	int cmd, gn, skill_num, cmd2;
 	int trust, sn = 0, where, mana = 0;
-	bool found, is_social = FALSE, vprog = FALSE;
+	bool found, is_social= false, vprog= false;
 	void *vo = NULL;
 	int i;
 	AFFECT_DATA *paf;
@@ -660,12 +660,12 @@ void interpret(CHAR_DATA *ch, char *argument)
 		//		sprintf(buf,"Command '%s' queued.\n\r",qcommand);
 		//		send_to_char(buf,ch);
 		ch->pcdata->write_next++;
-		ch->pcdata->pending = TRUE;
+		ch->pcdata->pending = true;
 
 		return;
 	}
 
-	found = FALSE;
+	found= false;
 	trust = get_trust(ch);
 
 	for (cmd = 0; cmd_table[cmd].name[0] != '\0'; cmd++)
@@ -675,7 +675,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 			&& cmd_table[cmd].level <= trust
 			&& knows_command(ch, cmd))
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -765,7 +765,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	{
 		if (command[0] == social_table[cmd2].name[0] && !str_prefix(command, social_table[cmd2].name))
 		{
-			is_social = TRUE;
+			is_social = true;
 			break;
 		}
 	}
@@ -828,7 +828,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	{
 		if (!str_cmp(command, verb_prog_table[i].type))
 		{
-			vprog = TRUE;
+			vprog = true;
 			break;
 		}
 	}
@@ -1043,7 +1043,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	{
 		WAIT_STATE(ch, skill_table[sn].beats);
 		ch->mana -= mana;
-		command_result = FALSE;
+		command_result= false;
 
 		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE
 			&& victim
@@ -1061,12 +1061,12 @@ void interpret(CHAR_DATA *ch, char *argument)
 bool knows_command(CHAR_DATA *ch, int cmd)
 {
 	if (!cmd_table[cmd].skill_name || cmd_table[cmd].skill_name == "none")
-		return TRUE;
+		return true;
 
 	if (get_skill(ch, skill_lookup(cmd_table[cmd].skill_name)) < 2)
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 bool check_social(CHAR_DATA *ch, char *command, char *argument)
@@ -1076,37 +1076,37 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 	int cmd;
 	bool found;
 
-	found = FALSE;
+	found= false;
 	for (cmd = 0; social_table[cmd].name[0] != '\0'; cmd++)
 	{
 		if (command[0] == social_table[cmd].name[0] && !str_prefix(command, social_table[cmd].name))
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
 
 	if (!found)
-		return FALSE;
+		return false;
 
 	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You are anti-social!\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	switch (ch->position)
 	{
 	case POS_DEAD:
 			send_to_char("Lie still; you are DEAD.\n\r", ch);
-			return TRUE;
+			return true;
 		case POS_INCAP:
 		case POS_MORTAL:
 			send_to_char("You are hurt far too bad for that.\n\r", ch);
-			return TRUE;
+			return true;
 		case POS_STUNNED:
 			send_to_char("You are too stunned to do that.\n\r", ch);
-			return TRUE;
+			return true;
 		case POS_SLEEPING:
 			/*
 			* I just know this is the path to a 12" 'if' statement.  :(
@@ -1116,7 +1116,7 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 				break;
 
 			send_to_char("In your dreams, or what?\n\r", ch);
-			return TRUE;
+			return true;
 	}
 
 	one_argument(argument, arg);
@@ -1144,7 +1144,7 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 		act(social_table[cmd].char_found, ch, NULL, victim, TO_CHAR);
 	}
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -1153,7 +1153,7 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 bool is_number(char *arg)
 {
 	if (*arg == '\0')
-		return FALSE;
+		return false;
 
 	if (*arg == '+' || *arg == '-')
 		arg++;
@@ -1161,24 +1161,24 @@ bool is_number(char *arg)
 	for (; *arg != '\0'; arg++)
 	{
 		if (!isdigit(*arg))
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool is_alphanum(char *arg)
 {
 	if (*arg == '\0')
-		return FALSE;
+		return false;
 
 	for (; *arg != '\0'; arg++)
 	{
 		if (!isdigit(*arg) && !isalpha(*arg))
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 int have_space(char *arg)
@@ -1200,15 +1200,15 @@ int have_space(char *arg)
 bool have_schar(char *arg)
 {
 	if (*arg == '\0')
-		return FALSE;
+		return false;
 
 	for (; *arg != '\0'; arg++)
 	{
 		if (!isdigit(*arg) && !isalpha(*arg) && *arg != ' ')
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -1331,12 +1331,12 @@ void do_wizhelp(CHAR_DATA *ch, char *argument)
 	char buf[MAX_STRING_LENGTH];
 	int cmd;
 	int col, showval = 0, arrangeListLooper = LEVEL_HERO;
-	bool showlevel = FALSE;
+	bool showlevel= false;
 	col = 0;
 
 	if (is_number(argument))
 	{
-		showlevel = TRUE;
+		showlevel = true;
 		showval = atoi(argument);
 	}
 

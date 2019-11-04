@@ -107,7 +107,7 @@ void convert_obj(OBJ_INDEX_DATA *obj);
 	if (!str_cmp(word, literal))	\
 	{								\
 		field = value;				\
-		fMatch = TRUE;				\
+		fMatch = true;				\
 		break;						\
 	}
 #endif
@@ -118,7 +118,7 @@ void convert_obj(OBJ_INDEX_DATA *obj);
 	{								\
 		free_pstring(field);		\
 		field = fread_string(fp);	\
-		fMatch = TRUE;				\
+		fMatch = true;				\
 		break;						\
 	}
 #endif

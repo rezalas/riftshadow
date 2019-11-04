@@ -59,11 +59,11 @@ DESCRIPTOR_DATA *d_next;		  /* Next descriptor in loop	*/
 FILE *fpReserve;				  /* Reserved file handle		*/
 bool god;						  /* All new chars are gods!	*/
 bool merc_down;					  /* Shutdown					*/
-bool rebooting = FALSE;
+bool rebooting= false;
 int reboot_num = -1;
-bool wizlock = FALSE;	/* Game is wizlocked		*/
-bool newlock = FALSE;	/* Game is newlocked		*/
-bool MOBtrigger = TRUE; /* act() switch				*/
+bool wizlock= false;	/* Game is wizlocked		*/
+bool newlock= false;	/* Game is newlocked		*/
+bool MOBtrigger = true; /* act() switch				*/
 char str_boot_time[MAX_INPUT_LENGTH];
 time_t current_time; /* time of this pulse		*/
 int mPort;
@@ -111,7 +111,7 @@ int main(int argc, char **argv)
 		}
 		else if ((port = atoi(argv[1])) == 666)
 		{
-			bDebug = TRUE;
+			bDebug = true;
 			port = 9998;
 		}
 		else if (port <= 1024)
@@ -294,7 +294,7 @@ void game_loop_unix(int control)
 		for (d = descriptor_list; d != NULL; d = d_next)
 		{
 			d_next = d->next;
-			d->fcommand = FALSE;
+			d->fcommand= false;
 
 			if (FD_ISSET(d->descriptor, &in_set))
 			{
@@ -338,7 +338,7 @@ void game_loop_unix(int control)
 				}
 
 				if (d->character->pcdata->write_next == 0)
-					d->character->pcdata->pending = FALSE;
+					d->character->pcdata->pending= false;
 
 				continue;
 				/*
@@ -348,14 +348,14 @@ void game_loop_unix(int control)
 					if (d->character->pcdata->read_next > 19)
 						d->character->pcdata->read_next = 0;
 					if (d->character->pcdata->queue[d->character->pcdata->read_next][0] == '\0')
-						d->character->pcdata->pending = FALSE;
+						d->character->pcdata->pending= false;
 				*/
 			}
 
 			read_from_buffer(d);
 			if (d->incomm[0] != '\0')
 			{
-				d->fcommand = TRUE;
+				d->fcommand = true;
 				stop_idling(d->character);
 
 				/* OLC */
@@ -408,7 +408,7 @@ void game_loop_unix(int control)
 
 			if ((d->fcommand || d->outtop > 0) && FD_ISSET(d->descriptor, &out_set))
 			{
-				if (!process_output(d, TRUE))
+				if (!process_output(d, true))
 				{
 					if (d->character != NULL && d->character->level > 1)
 						save_char_obj(d->character);
@@ -596,7 +596,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 	char buf[MAX_STRING_LENGTH];
 
 	if (dclose->outtop > 0)
-		process_output(dclose, FALSE);
+		process_output(dclose, false);
 
 	if (dclose->snoop_by != NULL)
 	{
@@ -669,7 +669,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 
 	/* Hold horses if pending command already. */
 	if (d->incomm[0] != '\0')
-		return TRUE;
+		return true;
 
 	/* Check for overflow. */
 	iStart = strlen(d->inbuf);
@@ -679,7 +679,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		log_string(log_buf);
 
 		write_to_descriptor(d->descriptor, "\n\r*** PUT A LID ON IT!!! ***\n\r", 0);
-		return FALSE;
+		return false;
 	}
 
 	for (;;)
@@ -696,7 +696,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		else if (nRead == 0)
 		{
 			log_string("EOF encountered on read.");
-			return FALSE;
+			return false;
 		}
 		else if (errno == EAGAIN)
 		{
@@ -705,12 +705,12 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		else
 		{
 			perror("Read_from_descriptor");
-			return FALSE;
+			return false;
 		}
 	}
 
 	d->inbuf[iStart] = '\0';
-	return TRUE;
+	return true;
 }
 
 /*
@@ -891,7 +891,7 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 	 * Short-circuit if nothing to write.
 	 */
 	if (d->outtop == 0)
-		return TRUE;
+		return true;
 
 	/*
 	 * Snoop-o-rama.
@@ -915,12 +915,12 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 	if (!write_to_descriptor(d->descriptor, d->outbuf, d->outtop))
 	{
 		d->outtop = 0;
-		return FALSE;
+		return false;
 	}
 	else
 	{
 		d->outtop = 0;
-		return TRUE;
+		return true;
 	}
 }
 
@@ -974,7 +974,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 		switch (*str)
 		{
 			case 'e':
-				found = FALSE;
+				found= false;
 				doors[0] = '\0';
 
 				for (door = 0; door < 6; door++)
@@ -985,7 +985,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 						&& !IS_SET(pexit->exit_info, EX_NONOBVIOUS)
 						&& (!IS_SET(pexit->exit_info, EX_CLOSED) || IS_IMMORTAL(ch)))
 					{
-						found = TRUE;
+						found = true;
 						strcat(doors, dir_name[door]);
 					}
 				}
@@ -1237,13 +1237,13 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 	const char *str;
 	char *i;
 	char *point;
-	bool flash = FALSE, o_flash, bold = FALSE, o_bold;
-	bool act = FALSE, ok = TRUE, color_code = FALSE;
+	bool flash= false, o_flash, bold= false, o_bold;
+	bool act= false, ok = true, color_code= false;
 	int color = 7, o_color;
 
 	/* discard NULL descriptor */
 	if (d == NULL)
-		return FALSE;
+		return false;
 
 	memset(buf, '\0', MAX_STRING_LENGTH);
 	point = buf;
@@ -1268,7 +1268,7 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 
 		if (*str != '{')
 		{
-			color_code = FALSE;
+			color_code= false;
 			*point++ = *str++;
 			continue;
 		}
@@ -1280,8 +1280,8 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 			o_flash = flash;
 		}
 
-		color_code = TRUE;
-		act = FALSE;
+		color_code = true;
+		act= false;
 		str++;
 
 		switch (*str)
@@ -1296,55 +1296,55 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 				color = o_color;
 				bold = o_bold;
 				flash = o_flash;
-				act = TRUE;
+				act = true;
 				break;
 			case '0':
 				color = 0;
-				act = TRUE;
+				act = true;
 				break;
 			case '1':
 				color = 1;
-				act = TRUE;
+				act = true;
 				break;
 			case '2':
 				color = 2;
-				act = TRUE;
+				act = true;
 				break;
 			case '3':
 				color = 3;
-				act = TRUE;
+				act = true;
 				break;
 			case '4':
 				color = 4;
-				act = TRUE;
+				act = true;
 				break;
 			case '5':
 				color = 5;
-				act = TRUE;
+				act = true;
 				break;
 			case '6':
 				color = 6;
-				act = TRUE;
+				act = true;
 				break;
 			case '7':
 				color = 7;
-				act = TRUE;
+				act = true;
 				break;
 			case 'B':
-				bold = TRUE;
-				act = TRUE;
+				bold = true;
+				act = true;
 				break;
 			case 'b':
-				bold = FALSE;
-				act = TRUE;
+				bold= false;
+				act = true;
 				break;
 			case 'F':
-				flash = TRUE;
-				act = TRUE;
+				flash = true;
+				act = true;
 				break;
 			case 'f':
-				flash = FALSE;
-				act = TRUE;
+				flash= false;
+				act = true;
 				break;
 			case 'n':
 				if (d->character && IS_ANSI(d->character))
@@ -1352,9 +1352,9 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 				else
 					buf2[0] = '\0';
 
-				bold = FALSE;
+				bold= false;
 				color = 7;
-				flash = FALSE;
+				flash= false;
 				break;
 			default:
 				sprintf(buf2, "{%c", *str);
@@ -1366,7 +1366,7 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 			if (d->character && IS_ANSI(d->character))
 			{
 				sprintf(buf2, "%s", color_value_string(color, bold, flash));
-				color_code = TRUE;
+				color_code = true;
 			}
 			else
 			{
@@ -1460,11 +1460,11 @@ bool write_to_descriptor(int desc, char *txt, int length)
 		if ((nWrite = write(desc, txt + iStart, nBlock)) < 0)
 		{
 			perror("Write_to_descriptor");
-			return FALSE;
+			return false;
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -1549,9 +1549,9 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				return;
 			}
 
-			if (check_reconnect(d, argument, FALSE))
+			if (check_reconnect(d, argument, false))
 			{
-				fOld = TRUE;
+				fOld = true;
 			}
 			else
 			{
@@ -1645,7 +1645,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			if (check_playing(d, (ch->true_name ? ch->true_name : ch->name)))
 				return;
 
-			if (check_reconnect(d, ch->name, TRUE))
+			if (check_reconnect(d, ch->name, true))
 				return;
 
 			// free_pstring(ch->pcdata->logon_time); // rezalas 20191006
@@ -1654,8 +1654,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			sprintf(log_buf, "%s@%s has connected. [%d (%d) obj] %s",
 				ch->true_name,
-				d->host, count_carried(ch, FALSE),
-				count_carried(ch, TRUE),
+				d->host, count_carried(ch, false),
+				count_carried(ch, true),
 				auto_check_multi(d, d->host) ? " (MULTI)" : "");
 
 			log_string(log_buf);
@@ -1699,7 +1699,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 						close_socket(d_old);
 					}
 
-					if (check_reconnect(d, ch->name, TRUE))
+					if (check_reconnect(d, ch->name, true))
 						return;
 
 					write_to_buffer(d, "Reconnect attempt failed.\n\rName: ", 0);
@@ -2583,7 +2583,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 
 			write_to_buffer(d, "\n\r", 0);
-			group_add(ch, "class basics", FALSE);
+			group_add(ch, "class basics", false);
 
 			ch->pcdata->learned[gsn_recall] = 100;
 
@@ -2788,7 +2788,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			if (!IS_IMMORTAL(ch))
 				act("$n awakens into the world of Shalar.", ch, NULL, NULL, TO_ROOM);
 
-			group_add(ch, "class basics", FALSE);
+			group_add(ch, "class basics", false);
 
 			race = ch->race;
 
@@ -2836,7 +2836,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			sprintf(buf, "players SET logins=logins+1, lastlogin=%d", (int)ch->logon);
 			/*	if(ch->cabal>0)
 				{
-					if(cabal_down_new(ch,ch->cabal,FALSE))
+					if(cabal_down_new(ch,ch->cabal,false))
 						strcat(buf,", no_clogins=no_clogins+1");
 					else
 						strcat(buf,", c_logins=c_logins+1");
@@ -2877,7 +2877,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 bool check_parse_name(char *name)
 {
 	if (strlen(name) < 2 || strlen(name) > 12)
-		return FALSE;
+		return false;
 
 	/*
 	 * Reserved words.
@@ -2887,7 +2887,7 @@ bool check_parse_name(char *name)
 		"warrior thief paladin zealot healer necromancer chronomancer";
 
 	if (is_name(name, reservedWords))
-		return FALSE;
+		return false;
 
 	/*
 	 * Alphanumerics only.
@@ -2895,40 +2895,40 @@ bool check_parse_name(char *name)
 	 */
 	{
 		char *pc;
-		bool fIll = false;
-		bool adjcaps = FALSE;
-		bool cleancaps = FALSE;
+		bool fIll= false;
+		bool adjcaps= false;
+		bool cleancaps= false;
 		unsigned int total_caps = 0;
 
-		fIll = TRUE;
+		fIll = true;
 
 		for (pc = name; *pc != '\0'; pc++)
 		{
 			if (!isalpha(*pc))
-				return FALSE;
+				return false;
 
 			if (isupper(*pc)) /* ugly anti-caps hack */
 			{
 				if (adjcaps)
-					cleancaps = TRUE;
+					cleancaps = true;
 
 				total_caps++;
-				adjcaps = TRUE;
+				adjcaps = true;
 			}
 			else
 			{
-				adjcaps = FALSE;
+				adjcaps= false;
 			}
 
 			if (LOWER(*pc) != 'i' && LOWER(*pc) != 'l')
-				fIll = FALSE;
+				fIll= false;
 		}
 
 		if (fIll)
-			return FALSE;
+			return false;
 
 		if (cleancaps || (total_caps > (strlen(name)) / 2 && strlen(name) < 3))
-			return FALSE;
+			return false;
 	}
 
 	/*
@@ -2944,12 +2944,12 @@ bool check_parse_name(char *name)
 			for (pMobIndex = mob_index_hash[iHash]; pMobIndex != NULL; pMobIndex = pMobIndex->next)
 			{
 				if (is_name(name, pMobIndex->player_name))
-					return FALSE;
+					return false;
 			}
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -2966,7 +2966,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 			&& (!fConn || ch->desc == NULL)
 			&& !str_cmp((d->character->true_name ? d->character->true_name : d->character->name), (ch->true_name ? ch->true_name : ch->name)))
 		{
-			if (fConn == FALSE)
+			if (fConn == false)
 			{
 				free_pstring(d->character->pcdata->pwd);
 				d->character->pcdata->pwd = palloc_string(ch->pcdata->pwd);
@@ -2980,7 +2980,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 						&& (is_affected(fch, gsn_animate_dead) || IS_AFFECTED(fch, AFF_CHARM))
 						&& fch->master == d->character)
 					{
-						extract_char(fch, TRUE);
+						extract_char(fch, true);
 					}
 				}
 
@@ -3009,11 +3009,11 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 				d->connected = CON_PLAYING;
 			}
 
-			return TRUE;
+			return true;
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -3035,11 +3035,11 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 			write_to_buffer(d, "Do you wish to connect anyway (Y/N)?", 0);
 
 			d->connected = CON_BREAK_CONNECT;
-			return TRUE;
+			return true;
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 void stop_idling(CHAR_DATA *ch)
@@ -3227,7 +3227,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 					{
 						/* Thx alex for 't' idea */
 						case 'n':
-							i = get_descr_form(victim, ch, FALSE);
+							i = get_descr_form(victim, ch, false);
 							break;
 						case 'e':
 							i = he_she[URANGE(0, victim->sex, 2)];
@@ -3373,10 +3373,10 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 						i = (char *)arg2;
 						break;
 					case 'n':
-						i = get_descr_form(ch, to, FALSE);
+						i = get_descr_form(ch, to, false);
 						break;
 					case 'N':
-						i = get_descr_form(vch, to, FALSE);
+						i = get_descr_form(vch, to, false);
 						break;
 					case 'f':
 						i = (ch->true_name ? ch->true_name : ch->name);
@@ -3602,7 +3602,7 @@ void do_rename(CHAR_DATA *ch, char *argument)
 
 	save_char_obj(victim);
 
-	delete_char(cname, FALSE);
+	delete_char(cname, false);
 
 	//	unlink(strsave);
 
@@ -3800,7 +3800,7 @@ void show_allocate(CHAR_DATA *ch, int finish)
 void process_text(CHAR_DATA *ch, char *text)
 {
 	char obuf[MSL * 2], tbuf[MSL], rbuf[MSL];
-	bool found = FALSE;
+	bool found= false;
 	unsigned int len, rcount, i, iloc;
 
 	if (!str_cmp(text, ""))
@@ -3808,7 +3808,7 @@ void process_text(CHAR_DATA *ch, char *text)
 
 	if (!str_cmp(text, "exit"))
 	{
-		ch->pcdata->entering_text = FALSE;
+		ch->pcdata->entering_text= false;
 		ch->pcdata->entered_text[0] = '\0';
 		ch->pcdata->end_fun = NULL;
 
@@ -3823,7 +3823,7 @@ void process_text(CHAR_DATA *ch, char *text)
 		if (ch->pcdata->end_fun)
 			(*ch->pcdata->end_fun)(ch, ch->pcdata->entered_text);
 
-		ch->pcdata->entering_text = FALSE;
+		ch->pcdata->entering_text= false;
 		ch->pcdata->end_fun = NULL;
 		return;
 	}
@@ -3847,7 +3847,7 @@ void process_text(CHAR_DATA *ch, char *text)
 					if (len > 0)
 						len--;
 
-					found = TRUE;
+					found = true;
 				}
 				else
 				{

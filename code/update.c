@@ -163,7 +163,7 @@ void gain_exp(CHAR_DATA *ch, int gain)
 		sprintf(buf, "$N has attained level %d!", ch->level);
 		wiznet(buf, ch, NULL, WIZ_LEVELS, 0, 0);
 
-		advance_level(ch, FALSE);
+		advance_level(ch, false);
 		// ch->hit = ch->max_hit;
 		// ch->mana = ch->max_mana;
 		// ch->move = ch->max_move;
@@ -227,7 +227,7 @@ int hit_gain(CHAR_DATA *ch)
 			gain += number * gain / 100;
 
 			if (ch->hit < ch->max_hit)
-				check_improve(ch, gsn_fast_healing, TRUE, 8);
+				check_improve(ch, gsn_fast_healing, true, 8);
 		}
 
 		switch (ch->position)
@@ -350,7 +350,7 @@ int mana_gain(CHAR_DATA *ch)
 			gain += number * gain / 100;
 
 			if (ch->mana < ch->max_mana)
-				check_improve(ch, gsn_meditation, TRUE, 4);
+				check_improve(ch, gsn_meditation, true, 4);
 		}
 
 		number = number_percent();
@@ -360,7 +360,7 @@ int mana_gain(CHAR_DATA *ch)
 			gain += number * gain / 100;
 
 			if (ch->mana < ch->max_mana)
-				check_improve(ch, gsn_trance, TRUE, 4);
+				check_improve(ch, gsn_trance, true, 4);
 		}
 
 		switch (ch->position)
@@ -564,7 +564,7 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 		send_to_char("You are starving!\n\r", ch);
 
 		if (ch->level > 10)
-			damage_new(ch, ch, UMIN(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_OTHER, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "hunger");
+			damage_new(ch, ch, UMIN(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "hunger");
 	}
 
 	if (ch->pcdata->condition[COND_THIRST] > COND_HUNGRY + 5 && iCond == COND_THIRST)
@@ -573,7 +573,7 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 		send_to_char("You are dying of thirst!\n\r", ch);
 
 		if (ch->level > 10)
-			damage_new(ch, ch, UMIN(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "thirst");
+			damage_new(ch, ch, UMIN(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "thirst");
 	}
 }
 
@@ -638,7 +638,7 @@ void mobile_update(void)
 
 			if (obj_best)
 			{
-				/*		get_obj(ch,obj,NULL, FALSE);*/
+				/*		get_obj(ch,obj,NULL, false);*/
 				obj_from_room(obj_best);
 				obj_to_char(obj_best, ch);
 				act("$n gets $p.", ch, obj_best, NULL, TO_ROOM);
@@ -682,7 +682,7 @@ void mobile_update(void)
 					&& !IS_SET(ch->form, FORM_FISH)
 					&& !IS_AFFECTED(ch, AFF_FLYING)))
 			{
-				move_char(ch, door, FALSE, TRUE);
+				move_char(ch, door, false, true);
 			}
 		}
 	}
@@ -716,7 +716,7 @@ void time_update(void)
 
 	if (time_info.half)
 	{
-		time_info.half = FALSE;
+		time_info.half= false;
 
 		/* Season affects sunrise/sunset! */
 		switch (time_info.season)
@@ -849,7 +849,7 @@ void time_update(void)
 	}
 	else
 	{
-		time_info.half = TRUE;
+		time_info.half = true;
 	}
 
 	if (buf[0] != '\0')
@@ -1091,7 +1091,7 @@ void char_update(void)
 	CHAR_DATA *ch_next;
 	CHAR_DATA *ch_quit;
 	int hgain;
-	bool ghost = FALSE;
+	bool ghost= false;
 
 	ch_quit = NULL;
 
@@ -1163,7 +1163,7 @@ void char_update(void)
 			ch->bounty_timer--;
 
 		if (ch->ghost > 0)
-			ghost = TRUE;
+			ghost = true;
 
 		/* LOWBIE LEVELLING */
 		if (!IS_NPC(ch) && ch->level < 20 && (ch->in_room->vnum > 24599 || ch->in_room->vnum < 24500))
@@ -1172,7 +1172,7 @@ void char_update(void)
 			while (ch->level < 20)
 			{
 				ch->level++;
-				advance_level(ch, TRUE);
+				advance_level(ch, true);
 			}
 
 			ch->exp = exp_per_level(ch) * (ch->level - 1);
@@ -1223,7 +1223,7 @@ void char_update(void)
 			update_pos(ch);
 
 		if (ch->position < POS_STUNNED)
-			damage_new(ch, ch, 2, gsn_bleeding, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "slow bleeding");
+			damage_new(ch, ch, 2, gsn_bleeding, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "slow bleeding");
 
 		ch->talismanic = UMAX(0, ch->talismanic - 0.0625);
 
@@ -1264,7 +1264,7 @@ void char_update(void)
 					ch->was_in_room = ch->in_room;
 
 					if (ch->fighting != NULL)
-						stop_fighting(ch, TRUE);
+						stop_fighting(ch, true);
 
 					act("$n disappears into the void.", ch, NULL, NULL, TO_ROOM);
 					send_to_char("You disappear into the void.\n\r", ch);
@@ -1273,7 +1273,7 @@ void char_update(void)
 						save_char_obj(ch);
 
 					ch->pause = 0;
-					do_quit_new(ch, "", TRUE);
+					do_quit_new(ch, "", true);
 					continue;
 				}
 			}
@@ -1292,7 +1292,7 @@ void char_update(void)
 			for (paf = ch->affected; paf != NULL; paf = paf_next)
 			{
 				paf_next = paf->next;
-				charm_gone = FALSE;
+				charm_gone= false;
 
 				if (!ghost && ch->ghost > 0)
 					break;
@@ -1336,7 +1336,7 @@ void char_update(void)
 						if (number_percent() < (get_skill(paf->owner ? paf->owner : ch, gsn_channeling) * .85)
 							&& !(skill_table[paf->type].dispel & CAN_CLEANSE))
 						{
-							check_improve(paf->owner ? paf->owner : ch, gsn_channeling, TRUE, 1);
+							check_improve(paf->owner ? paf->owner : ch, gsn_channeling, true, 1);
 
 							if (!paf->owner || ch == paf->owner)
 							{
@@ -1384,7 +1384,7 @@ void char_update(void)
 		 */
 
 		if (!IS_NPC(ch) && ch->in_room && ch->in_room->sector_type == SECT_BURNING)
-			damage_new(ch, ch, dice(ch->level / 2, 2), gsn_bleeding, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the searing heat*");
+			damage_new(ch, ch, dice(ch->level / 2, 2), gsn_bleeding, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the searing heat*");
 	}
 	/*
 	 * Autosave and autoquit.
@@ -1418,7 +1418,7 @@ void obj_update(void)
 		obj_next = obj->next;
 
 		if (obj->moved)
-			obj->moved = FALSE;
+			obj->moved= false;
 
 		if ((IS_AFFECTED(obj, AFF_OBJ_BURNING)
 				&& (obj->carried_by
@@ -1455,7 +1455,7 @@ void obj_update(void)
 			}
 			else
 			{
-				affect_remove_obj(obj, paf, TRUE);
+				affect_remove_obj(obj, paf, true);
 			}
 		}
 
@@ -1765,7 +1765,7 @@ void aggr_update(void)
 			if (IS_AWAKE(wch) && wch->in_room == wch->fighting->in_room)
 				multi_hit(wch, wch->fighting, TYPE_UNDEFINED);
 			else
-				stop_fighting(wch, FALSE);
+				stop_fighting(wch, false);
 
 			wch->pulseTimer = 0;
 		}
@@ -1787,7 +1787,7 @@ void aggr_update(void)
 					if (check_stealth(vch, wch))
 						continue;
 
-					if (is_safe_new(wch, vch, FALSE))
+					if (is_safe_new(wch, vch, false))
 						continue;
 
 					if (is_same_cabal(wch, vch) && number_range(1, 10000) > 1)
@@ -1831,7 +1831,7 @@ void aggr_update(void)
 				if (check_stealth(vch, wch))
 					continue;
 
-				if (is_safe_new(wch, vch, FALSE))
+				if (is_safe_new(wch, vch, false))
 					continue;
 
 				if (is_affected(vch, skill_lookup("radiance")))
@@ -1866,7 +1866,7 @@ void aggr_update(void)
 				if (is_affected(vch, skill_lookup("radiance")))
 					continue;
 
-				if (is_safe_new(wch, vch, FALSE))
+				if (is_safe_new(wch, vch, false))
 					continue;
 
 				if (vch == paf->owner)
@@ -1926,7 +1926,7 @@ void aggr_update(void)
 					&& can_see(ch, vch)
 					&& (!IS_SET(ch->act, ACT_DIURNAL) || sun >= SUN_SET)
 					&& (!IS_SET(ch->act, ACT_NOCTURNAL) || (sun != SUN_RISE && sun != SUN_LIGHT))
-					&& !is_safe_new(ch, vch, FALSE)
+					&& !is_safe_new(ch, vch, false)
 					&& !is_affected(vch, skill_lookup("radiance")))
 				{
 					if (number_range(0, count) == 0)
@@ -2011,7 +2011,7 @@ void age_update(void)
 
 	CHAR_DATA *ch;
 	CHAR_DATA *ch_next;
-	bool timedied = FALSE;
+	bool timedied= false;
 	char *cname;
 
 	for (ch = char_list; ch != NULL; ch = ch_next)
@@ -2046,12 +2046,12 @@ void age_update(void)
 
 				ch->pause = 0;
 
-				stop_fighting(ch, TRUE);
+				stop_fighting(ch, true);
 
 				cname = talloc_string(ch->true_name);
 
-				do_quit_new(ch, "", TRUE);
-				delete_char(cname, TRUE);
+				do_quit_new(ch, "", true);
+				delete_char(cname, true);
 			}
 
 			continue;
@@ -2059,7 +2059,7 @@ void age_update(void)
 
 		if (ch->pcdata->roll_time + CHARACTER_TIME_DEATH < current_time)
 		{
-			timedied = TRUE;
+			timedied = true;
 			send_to_char("You breathe your last as the long years you have lived finally take their toll.\n\r", ch);
 		}
 
@@ -2074,7 +2074,7 @@ void age_update(void)
 		ch->pcdata->death_status = HAS_DIED;
 
 		wiznet("$N has become an old age ghost.", ch, NULL, 0, 0, 0);
-		timedied = FALSE;
+		timedied= false;
 	}
 }
 
@@ -2105,9 +2105,9 @@ void update_handler(void)
 		pulse_iprog_pulse = PULSE_IPROG_PULSE;
 
 		if (--pepe <= 0)
-			iprog_pulse_update(TRUE);
+			iprog_pulse_update(true);
 		else
-			iprog_pulse_update(FALSE);
+			iprog_pulse_update(false);
 
 		RS.Queue.ProcessQueue();
 		// execute_queue();	//execute queue every second.
@@ -2372,7 +2372,7 @@ void room_affect_update(void)
 							if (IS_NPC(victim) && IS_SET(victim->act, ACT_SENTINEL))
 								continue;
 
-							if (!IS_NPC(victim) && is_safe_new(af->owner, victim, FALSE))
+							if (!IS_NPC(victim) && is_safe_new(af->owner, victim, false))
 								continue;
 
 							if (victim->invis_level > LEVEL_HERO)
@@ -2431,11 +2431,11 @@ void room_affect_update(void)
 					{
 						v_next = vch->next_in_room;
 
-						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, FALSE))
+						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
 							continue;
 
 						send_to_char("Your lungs burn furiously, desperate for air!\n\r", vch);
-						damage_new(vch, vch, dice(10, 5) + 5, TYPE_HIT + attack_lookup("asphyxiation"), DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+						damage_new(vch, vch, dice(10, 5) + 5, TYPE_HIT + attack_lookup("asphyxiation"), DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 					}
 				}
 				else
@@ -2459,7 +2459,7 @@ void room_affect_update(void)
 				{
 					v_next = vch->next_in_room;
 
-					if (is_safe_new(af->owner, vch, FALSE))
+					if (is_safe_new(af->owner, vch, false))
 						continue;
 
 					dam = dice(10, 15);
@@ -2470,7 +2470,7 @@ void room_affect_update(void)
 					}
 
 					send_to_char("Large chunks of rubble tumble down from the ceiling, crushing you!\n\r", vch);
-					damage_new(af->owner, vch, dam, TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
+					damage_new(af->owner, vch, dam, TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
 				}
 			}
 		}
@@ -2518,7 +2518,7 @@ void room_affect_update(void)
 					if (vch == af->owner)
 						continue;
 
-					if (!IS_NPC(vch) && is_safe_new(af->owner, vch, FALSE))
+					if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
 						continue;
 
 					if (!IS_NPC(vch))
@@ -2535,7 +2535,7 @@ void room_affect_update(void)
 						}
 					}
 
-					damage_new(af->owner, vch, dice(af2->modifier, 10), gsn_tidalwave, DAM_DROWNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the tidal wave*");
+					damage_new(af->owner, vch, dice(af2->modifier, 10), gsn_tidalwave, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the tidal wave*");
 				}
 
 				if (room->sector_type != SECT_WATER)
@@ -2554,10 +2554,10 @@ void room_affect_update(void)
 						if (vch == af->owner)
 							continue;
 
-						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, FALSE))
+						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
 							continue;
 
-						damage_new(af->owner, vch, dice(af2->modifier, 10), gsn_tidalwave, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the crashing wave*");
+						damage_new(af->owner, vch, dice(af2->modifier, 10), gsn_tidalwave, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the crashing wave*");
 						WAIT_STATE(vch, PULSE_VIOLENCE * 2);
 					}
 				}
@@ -2658,7 +2658,7 @@ void room_affect_update(void)
 
 						new_affect_join(vch, &cvaf2);
 
-						damage_new(af->owner, vch, dam, af->type, DAM_POISON, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the noxious fumes*$");
+						damage_new(af->owner, vch, dam, af->type, DAM_POISON, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the noxious fumes*$");
 					}
 				}
 			}
@@ -2695,7 +2695,7 @@ void room_affect_update(void)
 
 				obj_from_room(obj);
 				obj_to_room(obj, to_room);
-				obj->moved = TRUE;
+				obj->moved = true;
 
 				if (!to_room->people)
 					continue;
@@ -2710,7 +2710,7 @@ void room_affect_update(void)
 					continue;
 
 				dam = dice(obj->weight + 1, 8);
-				damage_new(aaf->owner, victim, dam, skill_lookup("cyclone"), DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the flying debris*");
+				damage_new(aaf->owner, victim, dam, skill_lookup("cyclone"), DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the flying debris*");
 			}
 			for (victim = room->people; victim != NULL; victim = v_next)
 			{
@@ -2752,7 +2752,7 @@ void room_affect_update(void)
 		if (dam && !ch->ghost)
 		{
 			send_to_char("You scream in pain as your burning equipment sears your flesh!\n\r", ch);
-			damage_new(ch, ch, dam, gsn_immolate, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burning armor");
+			damage_new(ch, ch, dam, gsn_immolate, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burning armor");
 		}
 	}
 }
@@ -2886,7 +2886,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 	CHAR_DATA *vch, *victim;
 
 	if (!IS_NPC(ch) || !ch->fighting || ch->pIndexData->cast_spell[0] == NULL)
-		return FALSE;
+		return false;
 
 	for (;;)
 	{
@@ -2898,7 +2898,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 	sn = skill_lookup(ch->pIndexData->cast_spell[i]);
 
 	if (sn < 1)
-		return FALSE;
+		return false;
 
 	victim = ch->fighting;
 	// Share the wealth.
@@ -2948,7 +2948,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 
 	(*skill_table[sn].spell_fun)(sn, ch->level, ch, victim, TAR_CHAR_OFFENSIVE);
 
-	return TRUE;
+	return true;
 }
 
 void save_votes()
@@ -3036,7 +3036,7 @@ CHAR_DATA *get_random_ch(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 	for (vch = room->people; vch; vch = vch->next_in_room)
 	{
 		if (!IS_NPC(vch)
-			&& !is_safe_new(ch, vch, FALSE)
+			&& !is_safe_new(ch, vch, false)
 			&& vch->invis_level < LEVEL_HERO + 1
 			&& (now = number_percent()) > highest)
 		{

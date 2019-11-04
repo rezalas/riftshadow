@@ -79,11 +79,11 @@ void drowning_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 		case 1:
 		case 2:
 			act("Gasping involuntarily, you take huge amounts of water into your lungs!", ch, 0, 0, TO_CHAR);
-			damage_new(ch, ch, (int)((ch->max_hit / 100) * 75), gsn_drowning, DAM_DROWNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "drowning");
+			damage_new(ch, ch, (int)((ch->max_hit / 100) * 75), gsn_drowning, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "drowning");
 			break;
 		case 3:
 			act("Your heart leaps in your chest, protesting the lack of oxygen!", ch, 0, 0, TO_CHAR);
-			damage_new(ch, ch, (int)((ch->max_hit / 100) * 25), gsn_drowning, DAM_DROWNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "asphyxiation");
+			damage_new(ch, ch, (int)((ch->max_hit / 100) * 25), gsn_drowning, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "asphyxiation");
 			break;
 		case 4:
 			act("Your face grows a deeper shade of red as you struggle to hold your breath!", ch, 0, 0, TO_CHAR);
@@ -134,7 +134,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	int invnum, distance, oppdir, dam, i, twchance, ss_chance;
 	float move, wait;
 	OBJ_DATA *obj, *well;
-	bool room_has_pc, found = FALSE, swimmer = FALSE, mountaineer = FALSE;
+	bool room_has_pc, found= false, swimmer= false, mountaineer= false;
 	DESCRIPTOR_DATA *d;
 
 	if (door < 0 || door > 5)
@@ -186,11 +186,11 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	}
 
 	/*
-		if(pexit->has_rune == TRUE)
+		if(pexit->has_rune == true)
 		{
 			while((rune = find_rune(pexit, RUNE_TO_PORTAL, RUNE_TRIGGER_EXIT, rune)))
 			{
-				if(((*rune->function) (rune, ch, &door, NULL)) == TRUE)
+				if(((*rune->function) (rune, ch, &door, NULL)) == true)
 					return;
 			}
 		}
@@ -287,7 +287,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
 			{
 				if (obj->item_type == ITEM_BOAT)
-					found = TRUE;
+					found = true;
 			}
 
 			if (!found && /*!IS_IMMORTAL(ch)) &&*/ !ch->Profs()->HasProf(psn_swimming))
@@ -297,7 +297,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			}
 			else if (!found) // swimmer
 			{
-				swimmer = TRUE;
+				swimmer = true;
 			}
 		}
 
@@ -329,7 +329,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (IS_SET(in_room->progtypes, RPROG_MOVE))
 		{
-			if (((in_room->rprogs->move_prog)(in_room, ch, door)) == FALSE)
+			if (((in_room->rprogs->move_prog)(in_room, ch, door)) == false)
 				return;
 		}
 
@@ -337,7 +337,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		{
 			if (IS_SET(moveprog->progtypes, MPROG_MOVE))
 			{
-				if (((moveprog->pIndexData->mprogs->move_prog)(ch, moveprog, ch->in_room, door)) == FALSE)
+				if (((moveprog->pIndexData->mprogs->move_prog)(ch, moveprog, ch->in_room, door)) == false)
 					return;
 			}
 
@@ -442,7 +442,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			&& !IS_NPC(ch)
 			&& ch->Profs()->HasProf(psn_mountaineering))
 		{
-			mountaineer = TRUE;
+			mountaineer = true;
 			move = UMAX(2, move - ch->Profs()->GetProf(psn_mountaineering) > 3 ? 3 : 2);
 			wait = UMAX(1, wait - ch->Profs()->GetProf(psn_mountaineering) > 6 ? 3 : 2);
 			ch->Profs()->CheckImprove(psn_mountaineering, 6);
@@ -563,7 +563,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	}
 
 	if (ch->fighting)
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 
 	char_from_room(ch);
 	char_to_room(ch, to_room);
@@ -589,12 +589,12 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 				if (number_percent() < ss_chance)
 				{
-					check_improve(victim, gsn_shadowsense, TRUE, 1);
+					check_improve(victim, gsn_shadowsense, true, 1);
 					send_to_char("You feel darkness enter the vicinity.\n\r", victim);
 				}
 				else
 				{
-					check_improve(victim, gsn_shadowsense, FALSE, 1);
+					check_improve(victim, gsn_shadowsense, false, 1);
 				}
 			}
 		}
@@ -645,7 +645,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (imaf && imaf->owner)
 			owner = imaf->owner;
 
-		damage_new(owner, ch, dice(3, 3), TYPE_UNDEFINED, DAM_NONE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "Your gaping wound*");
+		damage_new(owner, ch, dice(3, 3), TYPE_UNDEFINED, DAM_NONE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "Your gaping wound*");
 
 		if (!ch->in_room || ch->ghost > 0)
 			return;
@@ -697,7 +697,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		{
 			if (raf->type == gsn_riptide && raf->location == APPLY_ROOM_NONE && raf->modifier == 1)
 			{
-				if (is_safe_new(raf->owner, ch, FALSE) || raf->owner == ch)
+				if (is_safe_new(raf->owner, ch, false) || raf->owner == ch)
 					break;
 
 				for (room = top_affected_room; room; room = room->aff_next)
@@ -765,9 +765,9 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		WAIT_STATE(ch, (ch->carry_weight / 150) * PULSE_VIOLENCE);
 
-		damage_new(raf->owner, ch, 5 + ch->carry_weight / 6, TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the fall*");
+		damage_new(raf->owner, ch, 5 + ch->carry_weight / 6, TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the fall*");
 
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 
 		ch->position = POS_RESTING;
 		break;
@@ -786,7 +786,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				break;
 		}
 
-		if (is_safe_new(raf->owner, ch, FALSE) || is_same_group(raf->owner, ch) || is_same_cabal(raf->owner, ch))
+		if (is_safe_new(raf->owner, ch, false) || is_same_group(raf->owner, ch) || is_same_cabal(raf->owner, ch))
 			break;
 
 		if (is_affected(ch, gsn_ultradiffusion))
@@ -826,7 +826,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				break;
 		}
 
-		if (is_safe_new(raf->owner, ch, FALSE) || is_same_group(raf->owner, ch) || is_same_cabal(raf->owner, ch))
+		if (is_safe_new(raf->owner, ch, false) || is_same_group(raf->owner, ch) || is_same_cabal(raf->owner, ch))
 			break;
 
 		if (is_affected(ch, gsn_ultradiffusion))
@@ -839,17 +839,17 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (number_percent() > (10 * get_curr_stat(ch, STAT_DEX) - 175))
 		{
-			damage_new(raf->owner, ch, dice(raf->level, 3), gsn_stalactites, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling stalactite*");
+			damage_new(raf->owner, ch, dice(raf->level, 3), gsn_stalactites, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling stalactite*");
 		}
 		else
 		{
 			act("The mass of ice shatters on the ground as you leap out of the way!", ch, 0, 0, TO_CHAR);
 			act("The mass of ice shatters on the ground as $n leaps out of the way!", ch, 0, 0, TO_ROOM);
-			damage_new(raf->owner, ch, 0, gsn_stalactites, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling stalactite*");
+			damage_new(raf->owner, ch, 0, gsn_stalactites, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling stalactite*");
 		}
 
 		if (!IS_NPC(ch))
-			stop_fighting(ch, TRUE);
+			stop_fighting(ch, true);
 
 		if (--raf->modifier <= 0)
 			affect_remove_room(to_room, raf);
@@ -946,7 +946,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 			new_affect_join(ch, &cvaf2);
 
-			damage_new(raf->owner, ch, dam, raf->type, DAM_POISON, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the noxious fumes*$");
+			damage_new(raf->owner, ch, dam, raf->type, DAM_POISON, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the noxious fumes*$");
 
 			if (!ch->in_room || ch->ghost > 0)
 				return;
@@ -977,7 +977,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	rune = NULL;
 
-	if (to_room->has_rune == TRUE && to_room == ch->in_room)
+	if (to_room->has_rune == true && to_room == ch->in_room)
 	{
 		while ((rune = find_rune(to_room, RUNE_TO_ROOM, RUNE_TRIGGER_ENTRY, rune)) != NULL)
 		{
@@ -988,10 +988,10 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	if (to_room->trap && to_room->trap->armed)
 		trip_trap(ch, to_room, to_room->trap);
 
-	for (fch = to_room->people, room_has_pc = FALSE; fch != NULL; fch = fch->next_in_room)
+	for (fch = to_room->people, room_has_pc= false; fch != NULL; fch = fch->next_in_room)
 	{
 		if (!IS_NPC(fch))
-			room_has_pc = TRUE;
+			room_has_pc = true;
 	}
 
 	for (fch = to_room->people; fch != NULL; fch = fch_next)
@@ -1052,7 +1052,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				}
 
 				act("You follow $N.", fch, NULL, ch, TO_CHAR);
-				move_char(fch, door, TRUE, TRUE);
+				move_char(fch, door, true, true);
 			}
 		}
 	}
@@ -1111,7 +1111,7 @@ void do_north(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_NORTH, FALSE, TRUE);
+	move_char(ch, DIR_NORTH, false, true);
 }
 
 void do_east(CHAR_DATA *ch, char *argument)
@@ -1122,7 +1122,7 @@ void do_east(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_EAST, FALSE, TRUE);
+	move_char(ch, DIR_EAST, false, true);
 }
 
 void do_south(CHAR_DATA *ch, char *argument)
@@ -1133,7 +1133,7 @@ void do_south(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_SOUTH, FALSE, TRUE);
+	move_char(ch, DIR_SOUTH, false, true);
 }
 
 void do_west(CHAR_DATA *ch, char *argument)
@@ -1144,7 +1144,7 @@ void do_west(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_WEST, FALSE, TRUE);
+	move_char(ch, DIR_WEST, false, true);
 }
 
 void do_up(CHAR_DATA *ch, char *argument)
@@ -1155,7 +1155,7 @@ void do_up(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_UP, FALSE, TRUE);
+	move_char(ch, DIR_UP, false, true);
 }
 
 void do_down(CHAR_DATA *ch, char *argument)
@@ -1166,7 +1166,7 @@ void do_down(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_DOWN, FALSE, TRUE);
+	move_char(ch, DIR_DOWN, false, true);
 }
 
 void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
@@ -1188,7 +1188,7 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 		}
 	}
 
-	trap->armed = FALSE;
+	trap->armed= false;
 
 	if (trap->timer)
 	{
@@ -1218,10 +1218,10 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 	switch (trap->type)
 	{
 		case TRAP_DART:
-			damage_new(victim, victim, (dice(trap->quality * 10, 7)), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the razor-tipped dart*");
+			damage_new(victim, victim, (dice(trap->quality * 10, 7)), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the razor-tipped dart*");
 			break;
 		case TRAP_PDART:
-			damage_new(victim, victim, (dice(trap->quality * 5, 7)), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the poison-tipped dart*");
+			damage_new(victim, victim, (dice(trap->quality * 5, 7)), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the poison-tipped dart*");
 			if (saves_spell(8 * trap->quality, victim, DAM_POISON))
 			{
 				send_to_char("You feel a burning sensation in your veins, but it fades away.\n\r", victim);
@@ -1250,11 +1250,11 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 			for (vch = room->people; vch; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
-				damage_new(vch, vch, dice(trap->quality * 9, 9), TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the fireball*");
+				damage_new(vch, vch, dice(trap->quality * 9, 9), TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the fireball*");
 			}
 			break;
 		case TRAP_LIGHTNING:
-			dam = damage_new(victim, victim, dice(trap->quality * 10, 9), TYPE_UNDEFINED, DAM_LIGHTNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning bolt*");
+			dam = damage_new(victim, victim, dice(trap->quality * 10, 9), TYPE_UNDEFINED, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning bolt*");
 
 			if (trap->quality > 5)
 				shock_effect(victim, trap->quality * 7, dam, TARGET_CHAR);
@@ -1472,7 +1472,7 @@ void do_open(CHAR_DATA *ch, char *argument)
 
 		if (IS_SET(obj->progtypes, IPROG_OPEN))
 		{
-			if (((obj->pIndexData->iprogs->open_prog)(obj, ch)) == FALSE)
+			if (((obj->pIndexData->iprogs->open_prog)(obj, ch)) == false)
 				return;
 		}
 
@@ -1502,7 +1502,7 @@ void do_open(CHAR_DATA *ch, char *argument)
 
 		if (IS_SET(ch->in_room->progtypes, RPROG_OPEN))
 		{
-			if (((ch->in_room->rprogs->open_prog)(ch->in_room, ch, pexit)) == FALSE)
+			if (((ch->in_room->rprogs->open_prog)(ch->in_room, ch, pexit)) == false)
 				return;
 		}
 
@@ -1670,10 +1670,10 @@ bool has_key(CHAR_DATA *ch, int key)
 	for (OBJ_DATA *obj = ch->carrying; obj != NULL; obj = obj->next_content)
 	{
 		if (obj->pIndexData->vnum == key)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_lock(CHAR_DATA *ch, char *argument)
@@ -1998,7 +1998,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 	if (!IS_NPC(ch) && number_percent() > get_skill(ch, gsn_pick_lock))
 	{
 		send_to_char("You failed.\n\r", ch);
-		check_improve(ch, gsn_pick_lock, FALSE, 2);
+		check_improve(ch, gsn_pick_lock, false, 2);
 		return;
 	}
 
@@ -2037,7 +2037,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 
 			act("You pick the lock on $p.", ch, obj, NULL, TO_CHAR);
 			act("$n picks the lock on $p.", ch, obj, NULL, TO_ROOM);
-			check_improve(ch, gsn_pick_lock, TRUE, 2);
+			check_improve(ch, gsn_pick_lock, true, 2);
 			return;
 		}
 
@@ -2076,7 +2076,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 
 		act("You pick the lock on $p.", ch, obj, NULL, TO_CHAR);
 		act("$n picks the lock on $p.", ch, obj, NULL, TO_ROOM);
-		check_improve(ch, gsn_pick_lock, TRUE, 2);
+		check_improve(ch, gsn_pick_lock, true, 2);
 		return;
 	}
 
@@ -2119,7 +2119,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 
 		send_to_char("*Click*\n\r", ch);
 		act("$n picks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
-		check_improve(ch, gsn_pick_lock, TRUE, 2);
+		check_improve(ch, gsn_pick_lock, true, 2);
 
 		/* pick the other side */
 		to_room = pexit->u1.to_room;
@@ -2698,7 +2698,7 @@ void do_sneak(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < get_skill(ch, gsn_sneak))
 	{
-		check_improve(ch, gsn_sneak, TRUE, 3);
+		check_improve(ch, gsn_sneak, true, 3);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2715,7 +2715,7 @@ void do_sneak(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		check_improve(ch, gsn_sneak, FALSE, 3);
+		check_improve(ch, gsn_sneak, false, 3);
 	}
 }
 
@@ -2794,14 +2794,14 @@ void do_cloak(CHAR_DATA *ch, char *argument)
 			af.modifier = ch->level*2;
 			affect_to_char(ch,&af);
 
-			check_improve(ch,gsn_cloak_form,TRUE,6);
+			check_improve(ch,gsn_cloak_form,true,6);
 
 			send_to_char("You cloak your presence.\n\r",ch);
 			return;
 		}
 		else
 		{
-			check_improve(ch,gsn_cloak_form, FALSE,3);
+			check_improve(ch,gsn_cloak_form, false,3);
 			send_to_char("You fail to cloak yourself.\n\r",ch);
 			return;
 		}
@@ -2835,7 +2835,7 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 	if (number_percent() > ch->pcdata->learned[gsn_vigilance])
 	{
 		send_to_char("You try to watch things more carefully but lose concentration.\n\r",ch);
-		check_improve(ch,gsn_vigilance,FALSE,1);
+		check_improve(ch,gsn_vigilance,false,1);
 		ch->mana -= 15;
 		return;
 	}
@@ -2891,7 +2891,7 @@ void do_acute_vision(CHAR_DATA *ch, char *argument)
 	if (number_percent() > get_skill(ch, gsn_acute_vision))
 	{
 		send_to_char("Your vision sharpens but then dulls.\n\r", ch);
-		check_improve(ch, gsn_acute_vision, FALSE, 1);
+		check_improve(ch, gsn_acute_vision, false, 1);
 		ch->mana -= 12;
 		return;
 	}
@@ -2914,7 +2914,7 @@ void do_acute_vision(CHAR_DATA *ch, char *argument)
 	send_to_char("Your vision sharpens.\n\r", ch);
 
 	return;
-	check_improve(ch, gsn_acute_vision, TRUE, 1);
+	check_improve(ch, gsn_acute_vision, true, 1);
 }
 
 void do_camp(CHAR_DATA *ch, char *argument)
@@ -2997,12 +2997,12 @@ void do_camouflage(CHAR_DATA *ch, char *argument)
 	if (number_percent() < get_skill(ch, gsn_camouflage))
 	{
 		SET_BIT(ch->affected_by, AFF_CAMOUFLAGE);
-		check_improve(ch, gsn_camouflage, TRUE, 2);
+		check_improve(ch, gsn_camouflage, true, 2);
 		WAIT_STATE(ch, 8);
 	}
 	else
 	{
-		check_improve(ch, gsn_camouflage, FALSE, 2);
+		check_improve(ch, gsn_camouflage, false, 2);
 		REMOVE_BIT(ch->affected_by, AFF_CAMOUFLAGE);
 		WAIT_STATE(ch, 8);
 	}
@@ -3074,10 +3074,10 @@ void do_creep(CHAR_DATA *ch, char *argument)
 	af.level = ch->level;
 	affect_join(ch, &af);
 
-	move_char(ch, direction, FALSE, TRUE);
+	move_char(ch, direction, false, true);
 
 	affect_strip(ch, gsn_creep);
-	check_improve(ch, gsn_creep, TRUE, 2);
+	check_improve(ch, gsn_creep, true, 2);
 
 	wait = 100 - chance;
 	WAIT_STATE(ch, wait);
@@ -3122,11 +3122,11 @@ void do_hide(CHAR_DATA *ch, char *argument)
 	if (number_percent() < get_skill(ch, gsn_hide))
 	{
 		SET_BIT(ch->affected_by, AFF_HIDE);
-		check_improve(ch, gsn_hide, TRUE, 3);
+		check_improve(ch, gsn_hide, true, 3);
 	}
 	else
 	{
-		check_improve(ch, gsn_hide, FALSE, 3);
+		check_improve(ch, gsn_hide, false, 3);
 	}
 }
 
@@ -3301,7 +3301,7 @@ void do_recall(CHAR_DATA *ch, char *argument)
 
 		if (number_percent() < 80 * skill / 100)
 		{
-			check_improve(ch, gsn_recall, FALSE, 6);
+			check_improve(ch, gsn_recall, false, 6);
 
 			WAIT_STATE(ch, 4);
 
@@ -3310,10 +3310,10 @@ void do_recall(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		check_improve(ch, gsn_recall, TRUE, 4);
+		check_improve(ch, gsn_recall, true, 4);
 		sprintf(buf, "You recall from combat!\n\r");
 		send_to_char(buf, ch);
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 	}
 
 	un_watermeld(ch, NULL);
@@ -3490,7 +3490,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	int a_level;
 	char arg1[MAX_INPUT_LENGTH];
 	CHAR_DATA *check;
-	bool found = FALSE;
+	bool found= false;
 	int count;
 
 	one_argument(argument, arg1);
@@ -3516,7 +3516,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	for (check = char_list; check != NULL; check = check->next)
 	{
 		if ((check->master == ch) && check->pIndexData->vnum == MOB_VNUM_BEAR)
-			found = TRUE;
+			found = true;
 	}
 
 	if (found)
@@ -3537,7 +3537,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	if (number_percent() > ch->pcdata->learned[gsn_bear_call])
 	{
 		send_to_char("You call out for bears but none respond.\n\r", ch);
-		check_improve(ch, gsn_bear_call, FALSE, 1);
+		check_improve(ch, gsn_bear_call, false, 1);
 
 		ch->mana -= 35;
 		return;
@@ -3581,7 +3581,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	af.type = gsn_bear_call;
 
 	affect_to_char(ch, &af);
-	check_improve(ch, gsn_bear_call, TRUE, 1);
+	check_improve(ch, gsn_bear_call, true, 1);
 }
 
 void do_animal_call(CHAR_DATA *ch, char *argument)
@@ -3595,7 +3595,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	int chance;
 	int type;
 	int i;
-	bool cant_call = FALSE;
+	bool cant_call= false;
 	AFFECT_DATA af;
 
 	one_argument(argument, arg);
@@ -3623,21 +3623,21 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		type = MOB_VNUM_WOLF;
 
 		if (ch->level < 25)
-			cant_call = TRUE;
+			cant_call = true;
 	}
 	else if (!str_cmp(arg, "bear"))
 	{
 		type = MOB_VNUM_BEAR;
 
 		if (ch->level < 30)
-			cant_call = TRUE;
+			cant_call = true;
 	}
 	else if (!str_cmp(arg, "lion"))
 	{
 		type = MOB_VNUM_LION;
 
 		if (ch->level < 35)
-			cant_call = TRUE;
+			cant_call = true;
 	}
 	else
 	{
@@ -3698,7 +3698,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 
 		ch->mana -= 25;
 
-		check_improve(ch, gsn_animal_call, FALSE, 1);
+		check_improve(ch, gsn_animal_call, false, 1);
 		return;
 	}
 
@@ -3817,7 +3817,7 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 {
 	int track_dir, i;
 	EXIT_DATA *pexit;
-	bool found = FALSE;
+	bool found= false;
 
 	if (mob->in_room == NULL)
 		return;
@@ -3826,7 +3826,7 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 	{
 		if (mob->in_room->tracks[i] && mob->in_room->tracks[i]->prey == ch)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -3852,7 +3852,7 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 
 	pexit = mob->in_room->exit[track_dir];
 
-	move_char(mob, track_dir, FALSE, TRUE);
+	move_char(mob, track_dir, false, true);
 }
 
 void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
@@ -3929,7 +3929,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 	log_string(buf);
 	*/
 
-	move_char(mob, solve->dir_from, FALSE, TRUE);
+	move_char(mob, solve->dir_from, false, true);
 
 	free_path(mob->path);
 
@@ -4002,7 +4002,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 	log_string(buf);
 	*/
 
-	move_char(mob, solve->dir_from, FALSE, TRUE);
+	move_char(mob, solve->dir_from, false, true);
 
 	free_path(mob->path);
 
@@ -4019,9 +4019,9 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 {
 	PATHFIND_DATA *next_path;
 	int i;
-	bool found = FALSE;
+	bool found= false;
 
-	path->evaluated = TRUE;
+	path->evaluated = true;
 	iterations++;
 
 	if (path->room == goal)
@@ -4040,12 +4040,12 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 				&& path->room->exit[i]->u1.to_room->area == goal->area
 				&& !(path->room->exit[i]->u1.to_room->path
 					&& path->room->exit[i]->u1.to_room->path->steps <= path->steps + 1
-					&& path->room->exit[i]->u1.to_room->path->evaluated == TRUE)
+					&& path->room->exit[i]->u1.to_room->path->evaluated == true)
 				&& !(path->room->exit[i]->u1.to_room->path
 					&& path->room->exit[i]->u1.to_room->path->steps < path->steps + 1
-					&& path->room->exit[i]->u1.to_room->path->evaluated == FALSE)))
+					&& path->room->exit[i]->u1.to_room->path->evaluated == false)))
 		{
-			found = TRUE;
+			found = true;
 		}
 	}
 
@@ -4066,10 +4066,10 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 			|| path->room->exit[i]->u1.to_room->area != goal->area
 			|| (path->room->exit[i]->u1.to_room->path 
 				&& path->room->exit[i]->u1.to_room->path->steps <= path->steps + 1 
-				&& path->room->exit[i]->u1.to_room->path->evaluated == TRUE)
+				&& path->room->exit[i]->u1.to_room->path->evaluated == true)
 			|| (path->room->exit[i]->u1.to_room->path
 				&& path->room->exit[i]->u1.to_room->path->steps < path->steps + 1
-				&& path->room->exit[i]->u1.to_room->path->evaluated == FALSE))
+				&& path->room->exit[i]->u1.to_room->path->evaluated == false))
 		{
 			continue;
 		}
@@ -4090,7 +4090,7 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 			|| !path->dir_to[i]
 			|| !path->room->exit[i]->u1.to_room
 			|| path->room->exit[i]->u1.to_room->area != goal->area
-			|| path->room->exit[i]->u1.to_room->path->evaluated == TRUE)
+			|| path->room->exit[i]->u1.to_room->path->evaluated == true)
 		{
 			continue;
 		}
@@ -4144,7 +4144,7 @@ void do_vanish(CHAR_DATA *ch, char *argument)
 	ROOM_INDEX_DATA *pRoomIndex;
 	int chance;
 	int nocrash;
-	bool found = FALSE;
+	bool found= false;
 
 	chance = get_skill(ch, gsn_vanish);
 
@@ -4175,7 +4175,7 @@ void do_vanish(CHAR_DATA *ch, char *argument)
 		send_to_char("You attempt to vanish without trace but fail.\n\r", ch);
 		act("$n attempts to slide into the shadows but fails.", ch, 0, 0, TO_ROOM);
 
-		check_improve(ch, gsn_vanish, FALSE, 2);
+		check_improve(ch, gsn_vanish, false, 2);
 
 		ch->mana -= 10;
 
@@ -4199,7 +4199,7 @@ void do_vanish(CHAR_DATA *ch, char *argument)
 			&& ch->in_room->vnum != 1212
 			&& pRoomIndex->vnum != 1212)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -4212,7 +4212,7 @@ void do_vanish(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	stop_fighting(ch, TRUE);
+	stop_fighting(ch, true);
 
 	act("$n suddenly vanishes into the shadows!", ch, 0, 0, TO_ROOM);
 	send_to_char("You slip into the shadows and vanish!\n\r", ch);
@@ -4311,9 +4311,9 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 			if (pexit->u1.to_room->people)
 				act("The door buckles as a heavy weight crashes against it from the other side!", pexit->u1.to_room->people, 0, 0, TO_ALL);
 
-			damage_new(ch, ch, dice(ch->level, 2), gsn_door_bash, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the impact*");
+			damage_new(ch, ch, dice(ch->level, 2), gsn_door_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the impact*");
 
-			check_improve(ch, gsn_door_bash, FALSE, 1);
+			check_improve(ch, gsn_door_bash, false, 1);
 
 			ch->position = POS_RESTING;
 
@@ -4324,7 +4324,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		act("$n slams into the $T door and throws it open with a mighty crash!", ch, 0, dir_name[door], TO_ROOM);
 		act("You slam into the $T door and it cracks open with a deafening sound!", ch, 0, dir_name[door], TO_CHAR);
 
-		check_improve(ch, gsn_door_bash, TRUE, 1);
+		check_improve(ch, gsn_door_bash, true, 1);
 
 		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
@@ -4359,7 +4359,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		af.level = ch->level;
 		affect_to_char(ch, &af);
 
-		move_char(ch, door, FALSE, TRUE);
+		move_char(ch, door, false, true);
 		affect_strip(ch, gsn_door_bash);
 	}
 }
@@ -4491,7 +4491,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 				&& !IS_IMMORTAL(ch))
 			{
 				send_to_char("Your guild will not offer you sanctuary yet.\n\r", ch);
-				return TRUE;
+				return true;
 			}
 
 			if ((blocker->pIndexData->barred_entry->comparison == BAR_EQUAL_TO && field != blocker->pIndexData->barred_entry->value)
@@ -4503,7 +4503,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
@@ -4540,9 +4540,9 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 	}
 
 	if (IS_IMMORTAL(ch))
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 void parse_bar(char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
@@ -4598,9 +4598,9 @@ void parse_bar(char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, RO
 bool is_land(ROOM_INDEX_DATA *room)
 {
 	if (room->sector_type == SECT_WATER || room->sector_type == SECT_UNDERWATER || room->sector_type == SECT_AIR)
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 void add_tracks(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction)
@@ -4644,9 +4644,9 @@ void clear_tracks(ROOM_INDEX_DATA *room)
 	{
 		room->tracks[i]->prey = NULL;
 		room->tracks[i]->direction = -1;
-		room->tracks[i]->flying = FALSE;
-		room->tracks[i]->sneaking = FALSE;
-		room->tracks[i]->bleeding = FALSE;
+		room->tracks[i]->flying= false;
+		room->tracks[i]->sneaking= false;
+		room->tracks[i]->bleeding= false;
 		room->tracks[i]->legs = -1;
 	}
 }

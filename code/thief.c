@@ -77,7 +77,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < get_skill(ch, gsn_backstab))
 	{
-		check_improve(ch, gsn_backstab, TRUE, 1);
+		check_improve(ch, gsn_backstab, true, 1);
 
 		if (!IS_NPC(ch) && !IS_NPC(victim) && victim->fighting == NULL)
 		{
@@ -98,7 +98,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		check_improve(ch, gsn_backstab, FALSE, 1);
+		check_improve(ch, gsn_backstab, false, 1);
 
 		if (!IS_NPC(ch) && !IS_NPC(victim) && victim->fighting == NULL)
 		{
@@ -115,7 +115,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 			do_myell(victim, buf, ch);
 		}
 
-		damage(ch, victim, 0, gsn_backstab, DAM_NONE, TRUE);
+		damage(ch, victim, 0, gsn_backstab, DAM_NONE, true);
 	}
 
 	if (ch->level < skill_table[gsn_dual_backstab].skill_level[ch->Class()->GetIndex()])
@@ -124,14 +124,14 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 	if (number_range(0, 3) == 0)
 	{
 		if (get_skill(ch, gsn_dual_backstab) != 100)
-			check_improve(ch, gsn_dual_backstab, FALSE, 1);
+			check_improve(ch, gsn_dual_backstab, false, 1);
 
 		return;
 	}
 
 	if (number_percent() > (get_skill(ch, gsn_dual_backstab) + ch->level - victim->level))
 	{
-		check_improve(ch, gsn_dual_backstab, FALSE, 1);
+		check_improve(ch, gsn_dual_backstab, false, 1);
 		dam = 0;
 	}
 	else
@@ -152,7 +152,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 		dam += (ch->damroll * get_skill(ch, gsn_dual_backstab) / 100);
 	}
 
-	damage_old(ch, victim, dam, gsn_dual_backstab, DAM_NONE, TRUE);
+	damage_old(ch, victim, dam, gsn_dual_backstab, DAM_NONE, true);
 }
 
 void do_circle_stab(CHAR_DATA *ch, char *argument)
@@ -166,7 +166,7 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 	int chance;
 	int dam;
 
-	attempt_dual = FALSE;
+	attempt_dual = false;
 	one_argument(argument, arg);
 
 	chance = get_skill(ch, gsn_circle);
@@ -220,7 +220,7 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 
 	if (obj == NULL || obj->value[0] != WEAPON_DAGGER)
 	{
-		attempt_dual = TRUE;
+		attempt_dual = true;
 		obj = get_eq_char(ch, WEAR_DUAL_WIELD);
 	}
 
@@ -247,7 +247,7 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 		act("$n circles around you to land a critical strike.", ch, NULL, victim, TO_VICT);
 		act("$n circles $N to land a critical strike.", ch, NULL, victim, TO_NOTVICT);
 
-		check_improve(ch, gsn_circle, TRUE, 1);
+		check_improve(ch, gsn_circle, true, 1);
 
 		dam = dice(obj->value[1], obj->value[2]);
 		dam += 40;
@@ -269,12 +269,12 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 		else
 			dam *= 10 / 3;
 
-		damage_old(ch, victim, dam, gsn_circle, attack_table[obj->value[3]].damage, TRUE);
+		damage_old(ch, victim, dam, gsn_circle, attack_table[obj->value[3]].damage, true);
 	}
 	else
 	{
-		check_improve(ch, gsn_circle, FALSE, 1);
-		damage_old(ch, victim, 0, gsn_circle, DAM_NONE, TRUE);
+		check_improve(ch, gsn_circle, false, 1);
+		damage_old(ch, victim, 0, gsn_circle, DAM_NONE, true);
 	}
 }
 
@@ -402,10 +402,10 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 
 		affect_to_char(victim, &af);
 
-		stop_fighting(victim, TRUE);
+		stop_fighting(victim, true);
 		victim->position = POS_SLEEPING;
 
-		check_improve(ch, gsn_blackjack, TRUE, 1);
+		check_improve(ch, gsn_blackjack, true, 1);
 
 		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 		return;
@@ -419,8 +419,8 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 		af.duration = 2;
 		affect_to_char(victim, &af);
 
-		check_improve(ch, gsn_blackjack, FALSE, 1);
-		damage_old(ch, victim, 2 + 2 * number_range(2, 5), gsn_blackjack, DAM_BASH, TRUE);
+		check_improve(ch, gsn_blackjack, false, 1);
+		damage_old(ch, victim, 2 + 2 * number_range(2, 5), gsn_blackjack, DAM_BASH, true);
 
 		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 
@@ -514,7 +514,7 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 		act("You put a sack over $N's head and tie a rope around $S legs tightly.", ch, 0, victim, TO_CHAR);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
-		check_improve(ch, gsn_bind, TRUE, 1);
+		check_improve(ch, gsn_bind, true, 1);
 	}
 	else
 	{
@@ -534,7 +534,7 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 		act("You try to put a sack over $N's head but it rips.", ch, 0, victim, TO_CHAR);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 3);
-		check_improve(ch, gsn_bind, FALSE, 3);
+		check_improve(ch, gsn_bind, false, 3);
 	}
 }
 
@@ -654,7 +654,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 
 		REMOVE_BIT(ch->affected_by, AFF_SNEAK);
 
-		check_improve(ch, gsn_plant, FALSE, 2);
+		check_improve(ch, gsn_plant, false, 2);
 
 		act("$n tried to slip $p into your inventory.\n\r", ch, obj, victim, TO_VICT);
 		act("$n tried to slip $p into $N's inventory.\n\r", ch, obj, victim, TO_NOTVICT);
@@ -695,7 +695,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 
 	obj_from_char(obj);
 	obj_to_char(obj, victim);
-	check_improve(ch, gsn_plant, TRUE, 2);
+	check_improve(ch, gsn_plant, true, 2);
 
 	act("Without $N noticing, you slip $p into $S inventory!", ch, obj, victim, TO_CHAR);
 }
@@ -828,7 +828,7 @@ void do_gag(CHAR_DATA *ch, char *argument)
 		af.aftype = AFT_SKILL;
 		af.duration = -1;
 
-		check_improve(ch, gsn_gag, TRUE, 2);
+		check_improve(ch, gsn_gag, true, 2);
 		affect_to_char(victim, &af);
 	}
 	else
@@ -836,7 +836,7 @@ void do_gag(CHAR_DATA *ch, char *argument)
 		act("You try to place a gag around $N's mouth, but it breaks.", ch, NULL, victim, TO_CHAR);
 		act("You feel someone try to place a gag around your mouth, but the tightness goes away.", ch, NULL, victim, TO_VICT);
 		act("$n tries to place a gag around $N's mouth, but it breaks.", ch, NULL, victim, TO_NOTVICT);
-		check_improve(ch, gsn_gag, TRUE, 2);
+		check_improve(ch, gsn_gag, true, 2);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -844,7 +844,7 @@ void do_gag(CHAR_DATA *ch, char *argument)
 
 bool check_drag(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room, int where)
 {
-	return TRUE;
+	return true;
 }
 
 void do_drag(CHAR_DATA *ch, char *argument)
@@ -897,7 +897,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Check for pk range */
-	if (is_safe_new(ch, victim, TRUE))
+	if (is_safe_new(ch, victim, true))
 		return;
 
 	if (IS_AWAKE(victim))
@@ -980,7 +980,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 
 		to_room = pexit->u1.to_room;
 
-		move_char(ch, where, TRUE, FALSE);
+		move_char(ch, where, true, false);
 
 		char_from_room(victim);
 		char_to_room(victim, to_room);
@@ -991,13 +991,13 @@ void do_drag(CHAR_DATA *ch, char *argument)
 			return;
 
 		act("$n drags $N in from the $t!", ch, dir, victim, TO_NOTVICT);
-		check_improve(ch, gsn_drag, TRUE, 1);
+		check_improve(ch, gsn_drag, true, 1);
 	}
 	else
 	{
 		act("You grapple $N, and try to drag $M but $E doesn't budge!", ch, 0, victim, TO_CHAR);
 		act("$n grapples $N, and tries to drag $M away but $N doesn't budge!", ch, 0, victim, TO_NOTVICT);
-		check_improve(ch, gsn_drag, FALSE, 1);
+		check_improve(ch, gsn_drag, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1081,11 +1081,11 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 		af.duration = ch->level / 2;
 		affect_to_char(ch, &af);
 
-		check_improve(ch, gsn_tripwire, TRUE, 1);
+		check_improve(ch, gsn_tripwire, true, 1);
 	}
 	else
 	{
-		check_improve(ch, gsn_tripwire, FALSE, 1);
+		check_improve(ch, gsn_tripwire, false, 1);
 	}
 }
 
@@ -1159,7 +1159,7 @@ void do_sign(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	check_improve(ch, gsn_sign, TRUE, 1);
+	check_improve(ch, gsn_sign, true, 1);
 	WAIT_STATE(ch, skill_table[gsn_sign].beats);
 }
 
@@ -1269,7 +1269,7 @@ void do_slash(CHAR_DATA *ch, char *argument)
 
 		REMOVE_BIT(ch->affected_by, AFF_SNEAK);
 
-		check_improve(ch, gsn_slash, FALSE, 2);
+		check_improve(ch, gsn_slash, false, 2);
 
 		act("$n tried to slash your belongings.\n\r", ch, NULL, victim, TO_VICT);
 		act("$n tried to slash $N's belongings.\n\r", ch, NULL, victim, TO_NOTVICT);
@@ -1294,7 +1294,7 @@ void do_slash(CHAR_DATA *ch, char *argument)
 	act("$n sneaks close to you and slashes $p, spilling its contents!", ch, obj, victim, TO_VICT);
 	act("$n sneaks close to $N and slashes $p, spilling its contents!", ch, obj, victim, TO_NOTVICT);
 
-	check_improve(ch, gsn_slash, TRUE, 1);
+	check_improve(ch, gsn_slash, true, 1);
 
 	for (iobj = obj->contains; iobj != NULL; iobj = iobj_next)
 	{
@@ -1359,11 +1359,11 @@ void do_stash(CHAR_DATA *ch, char *argument)
 		oaf.owner = ch;
 		affect_to_obj(obj, &oaf);
 
-		check_improve(ch, gsn_stash, TRUE, 1);
+		check_improve(ch, gsn_stash, true, 1);
 	}
 	else
 	{
-		check_improve(ch, gsn_stash, FALSE, 1);
+		check_improve(ch, gsn_stash, false, 1);
 	}
 
 	obj_from_char(obj);
@@ -1474,11 +1474,11 @@ void do_disguise(CHAR_DATA *ch, char *argument)
 		af.mod_name = MOD_APPEARANCE;
 		affect_to_char(ch, &af);
 
-		check_improve(ch, gsn_disguise, TRUE, 1);
+		check_improve(ch, gsn_disguise, true, 1);
 	}
 	else
 	{
-		check_improve(ch, gsn_disguise, FALSE, 1);
+		check_improve(ch, gsn_disguise, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1651,7 +1651,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 		free_pstring(copy->description);
 		copy->description = palloc_string(orig->description);
 
-		check_improve(ch, gsn_counterfeit, TRUE, 1);
+		check_improve(ch, gsn_counterfeit, true, 1);
 	}
 	else
 	{
@@ -1667,7 +1667,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 		free_pstring(copy->description);
 		copy->description = palloc_string(orig->description);
 
-		check_improve(ch, gsn_counterfeit, FALSE, 1);
+		check_improve(ch, gsn_counterfeit, false, 1);
 	}
 
 	init_affect_obj(&oaf);
@@ -1752,12 +1752,12 @@ void do_shadow_cloak(CHAR_DATA *ch, char *argument)
 		af.duration = ch->level / 2;
 		af.aftype = AFT_SKILL;
 		affect_to_char(ch, &af);
-		check_improve(ch, gsn_shadow_cloak, TRUE, 1);
+		check_improve(ch, gsn_shadow_cloak, true, 1);
 	}
 	else
 	{
 		act("You sharpen your mind and attempt to shield yourself from scrying magic, but you fail.", ch, 0, 0, TO_CHAR);
-		check_improve(ch, gsn_shadow_cloak, FALSE, 1);
+		check_improve(ch, gsn_shadow_cloak, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1768,31 +1768,31 @@ bool check_stealth(CHAR_DATA *ch, CHAR_DATA *mob)
 	int skill;
 
 	if (!IS_AFFECTED(ch, AFF_SNEAK))
-		return FALSE;
+		return false;
 
 	if (mob->last_fought == ch)
-		return FALSE;
+		return false;
 
 	skill = get_skill(ch, gsn_stealth);
 
 	if (skill == 0)
-		return FALSE;
+		return false;
 
 	if (IS_SET(mob->act, ACT_DETECT_SPECIAL))
-		return FALSE;
+		return false;
 
 	skill += (get_curr_stat(ch, STAT_DEX) - 20) * 3;
 
 	if (number_percent() < skill)
 	{
-		check_improve(ch, gsn_stealth, TRUE, 5);
-		return TRUE;
+		check_improve(ch, gsn_stealth, true, 5);
+		return true;
 	}
 	else
 	{
 		act("You stumble slightly and $N notices you!", ch, 0, mob, TO_CHAR);
-		check_improve(ch, gsn_stealth, FALSE, 3);
-		return FALSE;
+		check_improve(ch, gsn_stealth, false, 3);
+		return false;
 	}
 }
 
@@ -1899,14 +1899,14 @@ void do_strip(CHAR_DATA *ch, char *argument)
 	{
 		if (number_percent() < (chance - 30))
 		{
-			unequip_char(victim, obj, TRUE);
+			unequip_char(victim, obj, true);
 
 			obj_from_char(obj);
 			obj_to_char(obj, ch);
 
 			act("You silently strip $p from $N.", ch, obj, victim, TO_CHAR);
 
-			check_improve(ch, gsn_strip, TRUE, 1);
+			check_improve(ch, gsn_strip, true, 1);
 
 			if (number_range(1, 5) > 3)
 			{
@@ -1919,14 +1919,14 @@ void do_strip(CHAR_DATA *ch, char *argument)
 		{
 			act("Oops.", ch, 0, victim, TO_CHAR);
 			thief_yell(ch, victim);
-			check_improve(ch, gsn_strip, FALSE, 1);
+			check_improve(ch, gsn_strip, false, 1);
 		}
 	}
 	else
 	{
 		act("Oops.", ch, 0, victim, TO_CHAR);
 		thief_yell(ch, victim);
-		check_improve(ch, gsn_strip, FALSE, 1);
+		check_improve(ch, gsn_strip, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -2156,7 +2156,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 
 		affect_to_char(victim, &af);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		check_improve(ch, gsn_bind, TRUE, 1);
+		check_improve(ch, gsn_bind, true, 1);
 	}
 	else
 	{
@@ -2177,7 +2177,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		check_improve(ch, gsn_bind, FALSE, 2);
+		check_improve(ch, gsn_bind, false, 2);
 	}
 
 	if (!IS_AFFECTED(victim, AFF_SLEEP))
@@ -2335,7 +2335,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 		bool killed = one_hit_new(ch, victim, gsn_knife, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, NULL);
 
-		check_improve(ch, gsn_knife, TRUE, 1);
+		check_improve(ch, gsn_knife, true, 1);
 
 		if (killed)
 			return;
@@ -2358,8 +2358,8 @@ void do_knife(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		damage(ch, victim, 0, gsn_knife, DAM_NONE, TRUE);
-		check_improve(ch, gsn_knife, FALSE, 2);
+		damage(ch, victim, 0, gsn_knife, DAM_NONE, true);
+		check_improve(ch, gsn_knife, false, 2);
 	}
 }
 
@@ -2372,11 +2372,11 @@ void check_detect_movement(CHAR_DATA *ch, char *in_out)
 			if (number_percent() < (get_skill(vch, gsn_detect_movement) * .98))
 			{
 				act("You hear someone moving around, quickly scrutinizing you notice $N sneaking $t.", vch, in_out, ch, TO_CHAR);
-				check_improve(vch, gsn_detect_movement, TRUE, 2);
+				check_improve(vch, gsn_detect_movement, true, 2);
 			}
 			else
 			{
-				check_improve(vch, gsn_detect_movement, FALSE, 2);
+				check_improve(vch, gsn_detect_movement, false, 2);
 			}
 		}
 	}
@@ -2445,11 +2445,11 @@ void do_bluff(CHAR_DATA *ch, char *argument)
 		af.mod_name = MOD_APPEARANCE;
 		new_affect_to_char(ch, &af);
 
-		check_improve(ch, gsn_bluff, TRUE, 2);
+		check_improve(ch, gsn_bluff, true, 2);
 	}
 	else
 	{
-		check_improve(ch, gsn_bluff, FALSE, 2);
+		check_improve(ch, gsn_bluff, false, 2);
 	}
 
 	WAIT_STATE(ch, skill_table[gsn_bluff].beats);
@@ -2540,12 +2540,12 @@ void do_false_motives(CHAR_DATA *ch, char *argument)
 		new_affect_to_char(ch, &af);
 
 		send_to_char("You alter your behavioral patterns in an attempt to convince onlookers.\n\r", ch);
-		check_improve(ch, gsn_false_motives, TRUE, 2);
+		check_improve(ch, gsn_false_motives, true, 2);
 	}
 	else
 	{
 		send_to_char("Your attempt at altering your behavior fooled no one.\n\r", ch);
-		check_improve(ch, gsn_false_motives, FALSE, 2);
+		check_improve(ch, gsn_false_motives, false, 2);
 	}
 
 	WAIT_STATE(ch, skill_table[gsn_false_motives].beats);

@@ -57,14 +57,14 @@ void do_unread(CHAR_DATA *ch, char *arg)
 {
 	char buf[MAX_STRING_LENGTH];
 	int count;
-	bool found = FALSE;
+	bool found= false;
 
 	if (IS_NPC(ch))
 		return;
 
 	if ((count = count_spool(ch, NOTE_NOTE)) > 0)
 	{
-		found = TRUE;
+		found = true;
 
 		sprintf(buf, "You have %d new note%s waiting.\n\r", count, count > 1 ? "s" : "");
 		send_to_char(buf, ch);
@@ -72,7 +72,7 @@ void do_unread(CHAR_DATA *ch, char *arg)
 
 	if ((count = count_spool(ch, NOTE_IDEA)) > 0)
 	{
-		found = TRUE;
+		found = true;
 
 		sprintf(buf, "You have %d unread idea%s to peruse.\n\r", count, count > 1 ? "s" : "");
 		send_to_char(buf, ch);
@@ -118,33 +118,33 @@ void append_note(NOTE_DATA *pnote)
 bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
 {
 	if (!str_cmp(ch->true_name, sender))
-		return TRUE;
+		return true;
 
 	if (is_name("all", to_list))
-		return TRUE;
+		return true;
 
 	if (IS_IMMORTAL(ch) && is_name("immortal", to_list))
-		return TRUE;
+		return true;
 
 	if (IS_HEROIMM(ch) && is_name("heroimm", to_list))
-		return TRUE;
+		return true;
 
 	if (IS_SET(ch->act, PLR_CODER) && is_name("coder", to_list))
-		return TRUE;
+		return true;
 
 	if (!IS_NPC(ch) && is_name(ch->Class()->name, to_list))
-		return TRUE;
+		return true;
 
 	if (ch->cabal && is_name(cabal_table[ch->cabal].name, to_list))
-		return TRUE;
+		return true;
 
 	if (is_name(ch->true_name, to_list))
-		return TRUE;
+		return true;
 
 	if (is_number(to_list) && ch->level >= atoi(to_list))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 void note_attach(CHAR_DATA *ch, int type)
@@ -171,7 +171,7 @@ bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 	time_t last_read;
 
 	if (IS_NPC(ch))
-		return TRUE;
+		return true;
 
 	switch (atoi(row[0]))
 	{
@@ -191,19 +191,19 @@ bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 			last_read = ch->pcdata->last_changes;
 			break;
 		default:
-			return TRUE;
+			return true;
 	}
 
 	if (atol(row[6]) <= last_read)
-		return TRUE;
+		return true;
 
 	if (!str_cmp(ch->name, row[1]))
-		return TRUE;
+		return true;
 
 	if (!is_note_to(ch, row[1], row[3]))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 void update_read(CHAR_DATA *ch, long stamp, int type)
@@ -275,7 +275,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 		if (!str_cmp(argument, "all"))
 		{
-			fAll = TRUE;
+			fAll = true;
 			anum = 0;
 		}
 		else if (argument[0] == '\0' || !str_prefix(argument, "next"))
@@ -313,7 +313,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 		}
 		else if (is_number(argument))
 		{
-			fAll = FALSE;
+			fAll= false;
 			anum = atoi(argument);
 		}
 		else
@@ -497,7 +497,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 	if (!str_cmp(arg, "-"))
 	{
 		int len;
-		bool found = FALSE;
+		bool found= false;
 
 		note_attach(ch, type);
 
@@ -524,7 +524,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 					if (len > 0)
 						len--;
 
-					found = TRUE;
+					found = true;
 				}
 				else /* found the second one */
 				{
@@ -667,7 +667,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 		append_note(ch->pnote);
 		ch->pnote = NULL;
 		send_to_char("Note sent.\n\r", ch);
-		add_prof_affect(ch, "note_written", 4, TRUE);
+		add_prof_affect(ch, "note_written", 4, true);
 		return;
 	}
 

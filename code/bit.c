@@ -21,7 +21,7 @@
 
 /*****************************************************************************
  Name:		is_stat( table )
- Purpose:	Returns TRUE if the table is a stat table and FALSE if flag.
+ Purpose:	Returns true if the table is a stat table and FALSE if flag.
  Called by:	flag_value and flag_string.
  Note:		This function is local and used only in bit.c.
  ****************************************************************************/
@@ -32,10 +32,10 @@ bool is_stat(const struct flag_type *flag_table)
 	for (flag = 0; flag_stat_table[flag].structure; flag++)
 	{
 		if (flag_stat_table[flag].structure == flag_table && flag_stat_table[flag].stat)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*

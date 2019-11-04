@@ -61,7 +61,7 @@ bool RString::IsShared(void)
 
 bool TString::IsShared(void)
 {
-	return FALSE;
+	return false;
 }
 
 void RString::PrepForMod(void)
@@ -250,8 +250,8 @@ bool RString::PrefixMatch(const char *pref)
 	const char *mystr = myString;
 	for(; *pref && *mystr; pref++, mystr++)
 		if(*pref && (!(*mystr) || UPCHAR(*pref) != UPCHAR(*mystr)))
-			return FALSE;
-	return TRUE;
+			return false;
+	return true;
 }
 
 bool TString::PrefixMatch(const char *pref)
@@ -259,8 +259,8 @@ bool TString::PrefixMatch(const char *pref)
 	const char *mystr = myString;
 	for(; *pref && *mystr; pref++, mystr++)
 		if(*pref && (!(*mystr) || UPCHAR(*pref) != UPCHAR(*mystr)))
-			return FALSE;
-	return TRUE;
+			return false;
+	return true;
 }
 
 int RString::ToNumber(void)

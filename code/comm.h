@@ -39,7 +39,7 @@ extern	int	malloc_debug	args( ( int  ) );
 extern	int	malloc_verify	args( ( void ) );
 #endif
 
-bool bDebug = FALSE;
+bool bDebug = false;
 
 /*
  * Signal handling.

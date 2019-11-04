@@ -14,30 +14,30 @@
 
 bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 {
-	bool elf=FALSE,drow=FALSE;
+	bool elf=false,drow=false;
 
 	if(!str_cmp(race_table[ch->race].name,"elf"))
-		elf=TRUE;
+		elf=true;
 	else if(!str_cmp(race_table[ch->race].name,"drow"))
-		drow=TRUE;
+		drow=true;
 	else
-		return FALSE;
+		return false;
 
 	if(room->sector_type == SECT_UNDERWATER
 	   || room->sector_type == SECT_AIR
 	   || room->sector_type == SECT_WATER)
-		return FALSE;
+		return false;
 
 	if(elf && !(room->sector_type == SECT_INSIDE)
 		   && !(room->sector_type == SECT_CITY)
 		   && !(room->sector_type == SECT_CAVE))
-		return TRUE;
+		return true;
 	else if(drow && ((room->sector_type == SECT_INSIDE)
 				 || (room->sector_type == SECT_CITY)
 				 || (room->sector_type == SECT_CAVE)))
-		return TRUE;
+		return true;
 	else
-		return FALSE;
+		return false;
 }
 
 void do_silent_movement(CHAR_DATA *ch, char *argument)
@@ -60,7 +60,7 @@ void do_silent_movement(CHAR_DATA *ch, char *argument)
 
 	if ( number_percent( ) < skill)
 	{
-		check_improve(ch,gsn_silent_movement,TRUE,3);
+		check_improve(ch,gsn_silent_movement,true,3);
 		init_affect(&af);
 		af.where     = TO_AFFECTS;
 		af.aftype	 = AFT_INVIS;
@@ -70,7 +70,7 @@ void do_silent_movement(CHAR_DATA *ch, char *argument)
 		affect_to_char( ch, &af );
 	}
 	else
-		check_improve(ch,gsn_silent_movement,FALSE,3);
+		check_improve(ch,gsn_silent_movement,false,3);
 						
 	return;
 }

@@ -189,7 +189,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 	}
 
 	if (!mprog_table[i].name)
-		return FALSE;
+		return false;
 
 	// IF YOU ADD A NEW TYPE ALSO PUT IT IN DB.C DO_ADUMP!
 	if (!str_cmp(progtype, "bribe_prog"))
@@ -197,7 +197,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->bribe_prog = NULL;
 		free_pstring(mobindex->mprogs->bribe_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_BRIBE);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "entry_prog"))
@@ -205,7 +205,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->entry_prog = NULL;
 		free_pstring(mobindex->mprogs->entry_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_ENTRY);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "greet_prog"))
@@ -214,7 +214,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		free_pstring(mobindex->mprogs->greet_name);
 		mobindex->mprogs->greet_name = palloc_string(name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_GREET);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "fight_prog"))
@@ -222,15 +222,15 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->fight_prog = NULL;
 		free_pstring(mobindex->mprogs->fight_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_FIGHT);
-		return TRUE;
+		return true;
 	}
 
-	if (!str_cmp(progtype, "death_prog")) /* returning TRUE prevents death */
+	if (!str_cmp(progtype, "death_prog")) /* returning true prevents death */
 	{
 		mobindex->mprogs->death_prog = NULL;
 		free_pstring(mobindex->mprogs->death_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_DEATH);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "beat_prog"))
@@ -238,7 +238,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->beat_prog = NULL;
 		free_pstring(mobindex->mprogs->beat_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_BEAT);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "pulse_prog"))
@@ -246,7 +246,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->pulse_prog = NULL;
 		free_pstring(mobindex->mprogs->pulse_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_PULSE);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "speech_prog"))
@@ -254,7 +254,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->speech_prog = NULL;
 		free_pstring(mobindex->mprogs->speech_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_SPEECH);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "give_prog"))
@@ -262,7 +262,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->give_prog = NULL;
 		free_pstring(mobindex->mprogs->give_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_GIVE);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "attack_prog"))
@@ -270,15 +270,15 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->attack_prog = NULL;
 		free_pstring(mobindex->mprogs->attack_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_ATTACK);
-		return TRUE;
+		return true;
 	}
 
-	if (!str_cmp(progtype, "aggress_prog")) /* Returning TRUE stops attack */
+	if (!str_cmp(progtype, "aggress_prog")) /* Returning true stops attack */
 	{
 		mobindex->mprogs->aggress_prog = NULL;
 		free_pstring(mobindex->mprogs->aggress_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_AGGRESS);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(progtype, "move_prog"))
@@ -286,10 +286,10 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 		mobindex->mprogs->move_prog = NULL;
 		free_pstring(mobindex->mprogs->move_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_MOVE);
-		return TRUE;
+		return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
@@ -350,7 +350,7 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 		return;
 	}
 
-	if (!str_cmp(progtype, "death_prog")) /* returning TRUE prevents death */
+	if (!str_cmp(progtype, "death_prog")) /* returning true prevents death */
 	{
 		mobindex->mprogs->death_prog = (MPROG_FUN_DEATH *)mprog_table[i].function;
 
@@ -416,7 +416,7 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 		return;
 	}
 
-	if (!str_cmp(progtype, "aggress_prog")) /* Returning TRUE stops attack */
+	if (!str_cmp(progtype, "aggress_prog")) /* Returning true stops attack */
 	{
 		mobindex->mprogs->aggress_prog = (MPROG_FUN_AGGRESS *)mprog_table[i].function;
 
@@ -465,18 +465,18 @@ void bribe_prog_cityguard(CHAR_DATA *mob, CHAR_DATA *ch, int amount)
 void greet_prog_arangird(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	OBJ_DATA *obj;
-	bool found = FALSE;
+	bool found= false;
 
 	if (IS_NPC(ch))
-		found = TRUE;
+		found = true;
 
 	if (!IS_NPC(ch) && check_stealth(ch, mob))
-		found = TRUE;
+		found = true;
 
 	if ((obj = get_eq_char(ch, WEAR_ABOUT)) != NULL
 		&& (obj->pIndexData->vnum == 12219 || obj->pIndexData->vnum == 21800))
 	{
-		found = TRUE;
+		found = true;
 	}
 
 	if (!found && str_cmp(race_table[ch->race].name, "duergar"))
@@ -881,7 +881,7 @@ void pulse_prog_demon(CHAR_DATA *mob)
 		}
 
 		act("$n returns to the Hells.", elemental, 0, 0, TO_ALL);
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 		return;
 	}
 
@@ -923,10 +923,10 @@ bool aggress_prog_arangird_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		if (attacker->fighting == mob)
 			stop_fighting(attacker, mob);
 
-		return TRUE;
+		return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool aggress_prog_arangird_regthor(CHAR_DATA *mob, CHAR_DATA *attacker)
@@ -934,19 +934,19 @@ bool aggress_prog_arangird_regthor(CHAR_DATA *mob, CHAR_DATA *attacker)
 	CHAR_DATA *demon;
 
 	if ((demon = get_char_room(mob, "ertruza")) == NULL)
-		return FALSE;
+		return false;
 
 	act("A look of horror crosses $n's face as $s concentration falters.", mob, 0, demon, TO_ALL);
 	act("The barrier surrounding $N flickers and fades, and $n shrieks!", mob, 0, demon, TO_ALL);
 	act("Roaring with anger, $n grabs his former captor and devours $M whole!", demon, 0, mob, TO_ALL);
 
-	extract_char(mob, TRUE);
+	extract_char(mob, true);
 
 	act("$n then turns you and strikes!", demon, 0, attacker, TO_CHAR);
 	act("$n then turns to $N and strikes!", demon, 0, attacker, TO_ROOM);
 	do_murder(demon, attacker->name);
 
-	return TRUE;
+	return true;
 }
 
 void fight_prog_ilopheth_druid(CHAR_DATA *mob, CHAR_DATA *victim)
@@ -1025,9 +1025,9 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 
 	act("$n leaps from the water, razor teeth flashing!", mob, 0, 0, TO_ROOM);
 
-	damage_new(mob, victim, (20 + dice(5, 6)), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chomp");
+	damage_new(mob, victim, (20 + dice(5, 6)), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chomp");
 
-	stop_fighting(mob, TRUE);
+	stop_fighting(mob, true);
 
 	char_from_room(mob);
 	char_to_room(mob, room);
@@ -1123,7 +1123,7 @@ void attack_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *attacker)
 	if (attacker->ghost)
 	{
 		do_say(mob, "Ghosts are not allowed in this place!");
-		damage_new(mob, attacker, attacker->hit - 1, TYPE_HIT, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "divine wrath");
+		damage_new(mob, attacker, attacker->hit - 1, TYPE_HIT, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "divine wrath");
 		attacker->hit = 25;
 		attacker->ghost = 0;
 	}
@@ -1168,7 +1168,7 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 	{
 		for (obj = cabalguardian->carrying; obj != NULL; obj = obj_next)
 		{
-			present = FALSE;
+			present= false;
 			obj_next = obj->next_content;
 
 			if (!isCabalItem(obj))
@@ -1182,7 +1182,7 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 					{
 						if (obj->pIndexData->cabal == vch->cabal)
 						{
-							present = TRUE;
+							present = true;
 						}
 					}
 				}
@@ -1197,7 +1197,7 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 					obj_to_char(obj, othercabalguardian);
 
 					act(buf, mob, 0, 0, TO_ALL);
-					cabal_shudder(obj->pIndexData->cabal, FALSE);
+					cabal_shudder(obj->pIndexData->cabal, false);
 				}
 			}
 		}
@@ -1205,21 +1205,21 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 		save_cabal_items();
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool death_prog_inner_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 {
 	OBJ_DATA *obj, *obj_next;
 	char buf[MSL];
-	bool found = FALSE;
+	bool found= false;
 	CHAR_DATA *cabalguardian;
 
 	do_cb(mob, "Alas, my life has come to an end.");
 
 	for (obj = mob->carrying; obj != NULL; obj = obj_next)
 	{
-		found = FALSE;
+		found= false;
 		obj_next = obj->next_content;
 
 		if (!isCabalItem(obj))
@@ -1238,10 +1238,10 @@ bool death_prog_inner_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 				obj_from_char(obj);
 				obj_to_char(obj, cabalguardian);
 
-				found = TRUE;
+				found = true;
 
 				act(buf, mob, 0, 0, TO_ALL);
-				cabal_shudder(obj->pIndexData->cabal, FALSE);
+				cabal_shudder(obj->pIndexData->cabal, false);
 			}
 		}
 
@@ -1259,7 +1259,7 @@ bool death_prog_inner_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
@@ -1294,30 +1294,30 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 bool move_prog_horde_shrine_ward(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
 {
 	if (direction != DIR_SOUTH)
-		return TRUE;
+		return true;
 
 	if (IS_NPC(ch))
-		return FALSE;
+		return false;
 
 	if (!is_affected(ch, gsn_horde_communion))
 	{
 		send_to_char("Alas, you cannot go that way.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	send_to_char("With a muted hush, the bushes part easily, allowing you passage to the south.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aggress_prog_anchor(CHAR_DATA *mob, CHAR_DATA *attacker)
 {
 	act("$n dissipates harmlessly as you turn your attention towards it.", mob, 0, 0, TO_ROOM);
 
-	stop_fighting(mob, TRUE);
+	stop_fighting(mob, true);
 
-	extract_char(mob, TRUE);
-	stop_fighting(attacker, TRUE);
-	return TRUE;
+	extract_char(mob, true);
+	stop_fighting(attacker, true);
+	return true;
 }
 
 bool death_prog_glass(CHAR_DATA *mob, CHAR_DATA *killer)
@@ -1327,7 +1327,7 @@ bool death_prog_glass(CHAR_DATA *mob, CHAR_DATA *killer)
 	ch = mob->leader;
 
 	if (ch == NULL)
-		return FALSE;
+		return false;
 
 	for (vch = mob->in_room->people; vch != NULL; vch = vch_next)
 	{
@@ -1337,19 +1337,19 @@ bool death_prog_glass(CHAR_DATA *mob, CHAR_DATA *killer)
 			continue;
 
 		act("Some of the exploding glass from $n strikes you!", mob, 0, vch, TO_VICT);
-		damage_new(ch, vch, dice(mob->level, 6), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
+		damage_new(ch, vch, dice(mob->level, 6), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 
 		if ((vch != NULL) && (number_percent() > 60))
-			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
+			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 		if ((vch != NULL) && (number_percent() > 70))
-			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
+			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 		if ((vch != NULL) && (number_percent() > 80))
-			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
+			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 		if ((vch != NULL) && (number_percent() > 90))
-			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
+			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 	}
 
-	return FALSE;
+	return false;
 }
 
 void pulse_prog_being_watched(CHAR_DATA *mob)
@@ -1460,17 +1460,17 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 bool move_prog_theatre_guard(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
 {
 	if (direction != DIR_SOUTH || IS_IMMORTAL(ch))
-		return TRUE;
+		return true;
 
 	if (ch->pause)
 	{
 		act("$n moves to block $N.", mob, 0, ch, TO_ROOM);
 		act("$n moves to block you.", mob, 0, ch, TO_VICT);
 		do_say(mob, "You'd better clean yourself up a little before you go in.");
-		return FALSE;
+		return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 void greet_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *ch)
@@ -1498,8 +1498,8 @@ void greet_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *ch)
 bool death_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *killer)
 {
 	act("$n crumbles into dust.", mob, 0, 0, TO_ROOM);
-	extract_char(mob, TRUE);
-	return TRUE;
+	extract_char(mob, true);
+	return true;
 }
 
 void pulse_prog_necro_skull(CHAR_DATA *mob)
@@ -1507,7 +1507,7 @@ void pulse_prog_necro_skull(CHAR_DATA *mob)
 	if (mob->leader == NULL)
 	{
 		act("$n crumbles into a pile of dust.", mob, 0, 0, TO_ROOM);
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 	}
 }
 
@@ -1528,7 +1528,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 
 		act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
 
-		stop_fighting(mob, TRUE);
+		stop_fighting(mob, true);
 
 		char_from_room(mob);
 		char_to_room(mob, get_room_index(3));
@@ -1568,7 +1568,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 		do_say(mob, "You could have had powers beyond your dreams, fool.  Beyond your dreams....");
 
 		act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
-		stop_fighting(mob, TRUE);
+		stop_fighting(mob, true);
 
 		char_from_room(mob);
 		char_to_room(mob, get_room_index(3));
@@ -1608,7 +1608,7 @@ void attack_prog_lesser_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 
 		act("$n vanishes in a crimson flash!", mob, 0, 0, TO_ROOM);
 
-		stop_fighting(mob, TRUE);
+		stop_fighting(mob, true);
 
 		char_from_room(mob);
 		char_to_room(mob, get_room_index(3));
@@ -1636,7 +1636,7 @@ void beat_prog_barbas(CHAR_DATA *mob)
 	{
 		sprintf(buf, "%s I'll be takin' me leave now, weakling.", ch->name);
 		do_tell(mob, buf);
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 		return;
 	}
 
@@ -1675,21 +1675,21 @@ bool death_prog_barbas(CHAR_DATA *mob, CHAR_DATA *killer)
 
 	af = affect_find(mob->affected, gsn_lesser_demon);
 	if (!af)
-		return FALSE;
+		return false;
 
 	act("Emitting a ghastly grunt, Barbas falls to the ground in a heap and disappears.", mob, 0, 0, TO_ROOM);
 
 	if (killer != af->owner)
-		return FALSE;
+		return false;
 
 	send_to_char("You feel a gluttonous lust enter your body as you stand victorious!\n\r", killer);
 
 	killer->pcdata->lesserdata[LESSER_BARBAS] = FAVOR_GRANTED;
 	killer->pcdata->learned[skill_lookup("consume")] = 1;
 
-	extract_char(mob, TRUE);
+	extract_char(mob, true);
 
-	return TRUE;
+	return true;
 }
 
 void speech_prog_aamon(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
@@ -1726,7 +1726,7 @@ void speech_prog_aamon(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		send_to_char("You stagger under a sudden mental assault, but when it passes your mind seems sharper.\n\r", ch);
 
 		do_emote(mob, "disappears in a cloud of smoke, a frown on his face.");
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 		return;
 	}
 
@@ -1766,14 +1766,14 @@ void give_prog_malaphar(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 
 		act("$n wraps his cloak around him and vanishes into the shadows.", ch, 0, 0, TO_ROOM);
 
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 		ch->pcdata->lesserdata[LESSER_MALAPHAR] = FAVOR_FAILED;
 		return;
 	}
 
 	act("A thin smile crosses Malaphar's face as he tips his hat to you and vanishes.", mob, 0, 0, TO_ROOM);
 
-	extract_char(mob, TRUE);
+	extract_char(mob, true);
 
 	send_to_char("A wave of greed flashes over you as your fingers seem somehow more nimble.\n\r", ch);
 
@@ -1825,7 +1825,7 @@ void greet_prog_furcas(CHAR_DATA *mob, CHAR_DATA *ch)
 
 	send_to_char("Your eyes burn for a moment, and your vision seems somehow sharper.\n\r", ch);
 	act("$n shrinks back into nearby shadows and is gone.", mob, 0, 0, TO_ROOM);
-	extract_char(mob, TRUE);
+	extract_char(mob, true);
 }
 
 void speech_prog_ipos(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
@@ -1920,7 +1920,7 @@ void speech_prog_oze(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		sprintf(buf, "'siphon' %s", ch->name);
 		do_cast(mob, buf);
 
-		stop_fighting(mob, TRUE);
+		stop_fighting(mob, true);
 
 		RS.Queue.AddToQueue(3, 5, act, "Suddenly rejuvenated, Oze begins to growl deep in his torso of exposed organs.", mob, 0, 0, TO_ROOM);
 		RS.Queue.AddToQueue(5, 2, do_say, mob, (char *)"I would say that your deed would be remembered... but as you were the one who put me here in the first place,  I doubt very much that you would wish it so.  I take my leave.");
@@ -2203,7 +2203,7 @@ void pulse_prog_imp(CHAR_DATA *mob)
 	for (victim = mob->in_room->people; victim; victim = victim->next_in_room)
 	{
 		if (number_percent() < 98
-			|| (mob->master && (victim == mob->master || is_safe_new(mob->master, victim, FALSE)))
+			|| (mob->master && (victim == mob->master || is_safe_new(mob->master, victim, false)))
 			|| mob == victim)
 		{
 			continue;
@@ -2302,12 +2302,12 @@ void give_prog_minotaur(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 
 	if (get_eq_char(mob, WEAR_WIELD) == NULL)
 	{
-		equip_char(mob, obj, WEAR_WIELD, TRUE);
+		equip_char(mob, obj, WEAR_WIELD, true);
 		return;
 	}
 	else
 	{
-		equip_char(mob, obj, WEAR_DUAL_WIELD, TRUE);
+		equip_char(mob, obj, WEAR_DUAL_WIELD, true);
 		return;
 	}
 }
@@ -2386,7 +2386,7 @@ void pulse_prog_nocturnal_mob(CHAR_DATA *mob)
 {
 	if ((sun == SUN_RISE || sun == SUN_LIGHT) && number_percent() < 30 && mob->fighting == NULL)
 	{
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 	}
 }
 
@@ -2394,7 +2394,7 @@ void pulse_prog_diurnal_mob(CHAR_DATA *mob)
 {
 	if (sun == SUN_DARK && number_percent() < 30 && mob->fighting == NULL)
 	{
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 	}
 }
 
@@ -2410,8 +2410,8 @@ bool death_prog_cim(CHAR_DATA *mob, CHAR_DATA *killer)
 		continue;
 	}
 
-	extract_char(extract, TRUE);
-	return TRUE;
+	extract_char(extract, true);
+	return true;
 }
 
 void greet_prog_tower_shopkeeper(CHAR_DATA *mob, CHAR_DATA *ch)
@@ -2442,7 +2442,7 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 	ROOM_INDEX_DATA *room = get_room_index(2402);
 	ROOM_INDEX_DATA *room2 = mob->in_room;
 	CHAR_DATA *vch, *vch_next;
-	bool found = FALSE;
+	bool found= false;
 	AFFECT_DATA af, *paf = NULL;
 
 	if (!room->people && is_affected(mob, gsn_bash))
@@ -2458,7 +2458,7 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 		if (IS_NPC(vch))
 			continue;
 
-		found = FALSE;
+		found= false;
 
 		if (is_affected(mob, gsn_bash))
 		{
@@ -2466,7 +2466,7 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 			{
 				if (paf->type == gsn_bash && paf->owner == vch)
 				{
-					found = TRUE;
+					found = true;
 					break;
 				}
 			}
@@ -2681,7 +2681,7 @@ bool verify_aggressor(CHAR_DATA *mob, CHAR_DATA *ch, int min, int max)
 	ROOM_INDEX_DATA *pRoom;
 	CHAR_DATA *tch;
 	int i;
-	bool found = FALSE;
+	bool found= false;
 
 	for (i = min; i <= max; i++)
 	{
@@ -2690,7 +2690,7 @@ bool verify_aggressor(CHAR_DATA *mob, CHAR_DATA *ch, int min, int max)
 			for (tch = pRoom->people; tch != NULL; tch = tch->next_in_room)
 			{
 				if (ch == tch)
-					found = TRUE;
+					found = true;
 			}
 		}
 	}
@@ -2915,8 +2915,8 @@ void fight_prog_law_subdue(CHAR_DATA *mob, CHAR_DATA *ch)
 
 	if (number_percent() > chance)
 	{
-		stop_fighting(ch, TRUE);
-		stop_fighting(mob, TRUE);
+		stop_fighting(ch, true);
+		stop_fighting(mob, true);
 
 		mob->last_fought = NULL;
 		mob->tracktimer = 0;
@@ -3163,7 +3163,7 @@ void pulse_prog_troopers(CHAR_DATA *mob)
 	if ((gryphon = get_char_room(mob, "gryphon trooper soldier")) == NULL)
 	{
 		act("$n looks around hurriedly then retreats to call in reinforcements.", mob, 0, 0, TO_ROOM);
-		extract_char(mob, TRUE);
+		extract_char(mob, true);
 	}
 }
 
@@ -3251,7 +3251,7 @@ void pulse_prog_banshee(CHAR_DATA *mob)
 
 		dam = dice(20, 7) + 20;
 
-		damage_new(mob, victim, dam, TYPE_UNDEFINED, DAM_SOUND, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "piercing scream");
+		damage_new(mob, victim, dam, TYPE_UNDEFINED, DAM_SOUND, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "piercing scream");
 	}
 	else if (number_percent() > 40)
 	{
@@ -3391,7 +3391,7 @@ void pulse_prog_behemoth(CHAR_DATA *mob)
 	act("Bones clattering in a terrible cacophony, $n charges at you!", mob, 0, victim, TO_VICT);
 	act("You are trampled to the ground!", mob, 0, victim, TO_VICT);
 
-	damage_new(mob, victim, dam, TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "trampling");
+	damage_new(mob, victim, dam, TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "trampling");
 
 	if (is_affected(victim, skill_lookup("protective shield")) && number_percent() < 70)
 		return;
@@ -3413,7 +3413,7 @@ void pulse_prog_glass(CHAR_DATA *mob)
 		act("$n raises one of its massive arms and impales $N on it!", mob, 0, victim, TO_NOTVICT);
 		act("$n raises one of its massive arms and impales you on it!", mob, 0, victim, TO_VICT);
 
-		damage_new(mob, victim, dice(16, 15), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "impalement");
+		damage_new(mob, victim, dice(16, 15), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "impalement");
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -3457,7 +3457,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 	if ((sun == SUN_RISE || sun == SUN_LIGHT) && !IS_AFFECTED(mob, AFF_NOSHOW))
 	{
 		if (mob->fighting)
-			stop_fighting(mob, TRUE);
+			stop_fighting(mob, true);
 
 		act("As the first rays of the sun emerge, $n scuttles away with sickening speed.", mob, 0, 0, TO_ROOM);
 
@@ -3472,7 +3472,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 
 		for (victim = mob->in_room->people; victim; victim = victim->next_in_room)
 		{
-			if (victim != mob && !is_safe_new(mob, victim, FALSE))
+			if (victim != mob && !is_safe_new(mob, victim, false))
 			{
 				one_hit(mob, victim, TYPE_UNDEFINED);
 				break;
@@ -3490,7 +3490,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 
 		act("With a vicious clacking noise, $n sinks its razor-sharp pincers into $N!", mob, 0, mob->fighting, TO_NOTVICT);
 		act("With a vicious clacking noise, $n sinks its razor-sharp pincers into you!", mob, 0, mob->fighting, TO_VICT);
-		damage_new(mob, mob->fighting, dice(mob->fighting->level / 3, 3), TYPE_UNDEFINED, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "pincering claws$");
+		damage_new(mob, mob->fighting, dice(mob->fighting->level / 3, 3), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "pincering claws$");
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -3537,7 +3537,7 @@ void sucker_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	act("$n swells slightly as it drains the bodily fluids from $N.", owner, 0, ch, TO_NOTVICT);
 	act("$n swells slightly as it drains your bodily fluids!", owner, 0, ch, TO_VICT);
 
-	damage_new(owner, ch, dice(8, 5), TYPE_UNDEFINED, DAM_ACID, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "suction");
+	damage_new(owner, ch, dice(8, 5), TYPE_UNDEFINED, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "suction");
 	owner->hit += number_range(20, 40);
 }
 
@@ -3551,7 +3551,7 @@ void greet_prog_face_sucker(CHAR_DATA *mob, CHAR_DATA *ch)
 		|| mob == ch
 		|| mob->hunting == ch
 		|| !can_see(mob, ch)
-		|| is_safe_new(mob, ch, FALSE))
+		|| is_safe_new(mob, ch, false))
 	{
 		return;
 	}

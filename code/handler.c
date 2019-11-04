@@ -37,33 +37,33 @@
 bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	if (is_same_group(ch, victim))
-		return TRUE;
+		return true;
 
 	if (!IS_NPC(ch))
-		return FALSE;
+		return false;
 
 	if (!IS_NPC(victim))
 	{
 		if (IS_SET(ch->off_flags, ASSIST_PLAYERS))
-			return TRUE;
+			return true;
 		else
-			return FALSE;
+			return false;
 	}
 
 	if (IS_AFFECTED(ch, AFF_CHARM))
-		return FALSE;
+		return false;
 
 	if (IS_SET(ch->off_flags, ASSIST_ALL))
-		return TRUE;
+		return true;
 
 	if (ch->group && ch->group == victim->group)
-		return TRUE;
+		return true;
 
 	if (IS_SET(ch->off_flags, ASSIST_VNUM) && ch->pIndexData == victim->pIndexData)
-		return TRUE;
+		return true;
 
 	if (IS_SET(ch->off_flags, ASSIST_RACE) && ch->race == victim->race)
-		return TRUE;
+		return true;
 
 	if (IS_SET(ch->off_flags, ASSIST_ALIGN)
 		&& !IS_SET(ch->act, ACT_NOALIGN)
@@ -72,10 +72,10 @@ bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
 			|| (IS_EVIL(ch) && IS_EVIL(victim))
 			|| (IS_NEUTRAL(ch) && IS_NEUTRAL(victim))))
 	{
-		return TRUE;
+		return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /* returns number of people on an object */
@@ -450,7 +450,7 @@ bool is_cabal(CHAR_DATA *ch)
 bool is_same_cabal(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	if (cabal_table[ch->cabal].independent)
-		return FALSE;
+		return false;
 	else
 		return (ch->cabal == victim->cabal);
 }
@@ -459,11 +459,11 @@ bool is_same_cabal(CHAR_DATA *ch, CHAR_DATA *victim)
 bool is_old_mob(CHAR_DATA *ch)
 {
 	if (ch->pIndexData == NULL)
-		return FALSE;
+		return false;
 	else if (ch->pIndexData->new_format)
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 /* for returning skill information */
@@ -471,11 +471,11 @@ int get_skill(CHAR_DATA *ch, int sn)
 {
 	int skill = 0, gn = 0;
 	AFFECT_DATA *af;
-	bool using_switched = FALSE;
+	bool using_switched= false;
 	CHAR_DATA *original = ch;
 
 	if (IS_NPC(ch) && ch->desc && ch->desc->original && IS_SET(ch->comm, COMM_SWITCHSKILLS))
-		using_switched = TRUE;
+		using_switched = true;
 
 	if (using_switched)
 		ch = ch->desc->original;
@@ -745,7 +745,7 @@ void reset_char(CHAR_DATA *ch)
 
 			for (app = obj->apply; app != NULL; app = app->next)
 			{
-				modify_location(ch, app->location, app->modifier, FALSE);
+				modify_location(ch, app->location, app->modifier, false);
 			}
 		}
 
@@ -802,19 +802,19 @@ void reset_char(CHAR_DATA *ch)
 
 		for (af = obj->charaffs; af != NULL; af = af->next)
 		{
-			affect_modify(ch, af, TRUE);
+			affect_modify(ch, af, true);
 		}
 
 		for (app = obj->apply; app != NULL; app = app->next)
 		{
-			modify_location(ch, app->location, app->modifier, TRUE);
+			modify_location(ch, app->location, app->modifier, true);
 		}
 	}
 
 	/* now add back spell effects */
 	for (af = ch->affected; af != NULL; af = af->next)
 	{
-		modify_location(ch, af->location, af->modifier, TRUE);
+		modify_location(ch, af->location, af->modifier, true);
 	}
 
 	/* make sure sex is RIGHT!!!! */
@@ -997,10 +997,10 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 	int xp, vxp;
 
 	if (ch == victim)
-		return TRUE;
+		return true;
 
 	if (ch == NULL || victim == NULL)
-		return FALSE;
+		return false;
 
 	int levelDif = victim->level - ch->level;
 
@@ -1015,7 +1015,7 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 		|| victim->level < MIN_LEVEL_TO_PK
 		|| levelDif > 9) // abs(victim->level - ch->level)
 	{
-		return FALSE;
+		return false;
 	}
 
 	if (!IS_NPC(ch)
@@ -1023,7 +1023,7 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 		&& ch->level == LEVEL_HERO
 		&& victim->level == LEVEL_HERO)
 	{
-		return TRUE;
+		return true;
 	}
 
 	xp = ch->exp;
@@ -1034,20 +1034,20 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 		if (ch->level - victim->level < MIN_LEVEL_TO_PK && ch->level - victim->level > -MIN_LEVEL_TO_PK)
 		{
 			if (((xp * .7) < vxp) && ((xp * 1.3) > vxp))
-				return TRUE;
+				return true;
 			else if (((vxp * .7) < xp) && ((vxp * 1.3) > xp))
-				return TRUE;
+				return true;
 			else
-				return FALSE;
+				return false;
 		}
 		else
 		{
-			return FALSE;
+			return false;
 		}
 	}
 	else
 	{
-		return FALSE;
+		return false;
 	}
 }
 
@@ -1062,11 +1062,11 @@ bool is_name(const char *str, const char *namelist)
 
 	/* fix crash on NULL namelist */
 	if (namelist == NULL || namelist[0] == '\0')
-		return FALSE;
+		return false;
 
-	/* fixed to prevent is_name on "" returning TRUE */
+	/* fixed to prevent is_name on "" returning true */
 	if (str == NULL || str[0] == '\0')
-		return FALSE;
+		return false;
 
 	string = (char *)str;
 	/* we need ALL parts of string to match part of namelist */
@@ -1075,7 +1075,7 @@ bool is_name(const char *str, const char *namelist)
 		str = one_argument((char *)str, part);
 
 		if (part[0] == '\0')
-			return TRUE;
+			return true;
 
 		/* check to see if this is part of namelist */
 		list = (char *)namelist;
@@ -1084,10 +1084,10 @@ bool is_name(const char *str, const char *namelist)
 			list = one_argument(list, name);
 
 			if (name[0] == '\0') /* this name was not found */
-				return FALSE;
+				return false;
 
 			if (!str_cmp(string, name))
-				return TRUE; /* full pattern match */
+				return true; /* full pattern match */
 
 			if (!str_cmp(part, name))
 				break;
@@ -1100,16 +1100,16 @@ bool is_exact_name(char *str, char *namelist)
 	char name[MAX_INPUT_LENGTH];
 
 	if (namelist == NULL)
-		return FALSE;
+		return false;
 
 	for (;;)
 	{
 		namelist = one_argument(namelist, name);
 
 		if (name[0] == '\0')
-			return FALSE;
+			return false;
 		if (!str_cmp(str, name))
-			return TRUE;
+			return true;
 	}
 }
 
@@ -1141,7 +1141,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 {
 	OBJ_DATA *wield;
 	int mod;
-	bool disarmed = FALSE;
+	bool disarmed= false;
 
 	mod = paf->modifier;
 
@@ -1201,7 +1201,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 			depth++;
 			act("You can no longer find the strength to wield $p.", ch, wield, NULL, TO_CHAR);
 			act("$n can no longer find the strength to wield $p.", ch, wield, NULL, TO_ROOM);
-			disarmed = TRUE;
+			disarmed = true;
 			obj_from_char(wield);
 			obj_to_char(wield, ch);
 			depth--;
@@ -1220,7 +1220,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 			depth++;
 			act("You can no longer find the strength to wield $p.", ch, wield, NULL, TO_CHAR);
 			act("$n can no longer find the strength to wield $p.", ch, wield, NULL, TO_ROOM);
-			disarmed = TRUE;
+			disarmed = true;
 			obj_from_char(wield);
 			obj_to_char(wield, ch);
 			depth--;
@@ -1239,7 +1239,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 				depth++;
 				act("You are no longer able to grasp $p.", ch, wield, NULL, TO_CHAR);
 				act("$n is no longer able to grasp $p.", ch, wield, NULL, TO_ROOM);
-				disarmed = TRUE;
+				disarmed = true;
 				obj_from_char(wield);
 				obj_to_char(wield, ch);
 				depth--;
@@ -1255,7 +1255,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 				depth++;
 				act("You are no longer able to grasp $p.", ch, wield, NULL, TO_CHAR);
 				act("$n is no longer able to grasp $p.", ch, wield, NULL, TO_ROOM);
-				disarmed = TRUE;
+				disarmed = true;
 				obj_from_char(wield);
 				obj_to_char(wield, ch);
 				depth--;
@@ -1277,7 +1277,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 				depth++;
 				act("You are no longer able to grasp $p.", ch, wield, NULL, TO_CHAR);
 				act("$n is no longer able to grasp $p.", ch, wield, NULL, TO_ROOM);
-				disarmed = TRUE;
+				disarmed = true;
 				obj_from_char(wield);
 				obj_to_char(wield, ch);
 				depth--;
@@ -1289,10 +1289,10 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 	{
 		if (disarmed && get_eq_char(ch, WEAR_WIELD) == NULL)
 		{
-			unequip_char(ch, wield, FALSE);
+			unequip_char(ch, wield, false);
 			act("You swap $p into your primary hand.", ch, wield, 0, TO_CHAR);
 			act("$n swaps $p into $s primary hand.", ch, wield, 0, TO_ROOM);
-			equip_char(ch, wield, WEAR_WIELD, FALSE);
+			equip_char(ch, wield, WEAR_WIELD, false);
 		}
 	}
 }
@@ -1421,9 +1421,9 @@ void new_affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
 	ch->affected = paf_new;
 
 	/* Morg - Valgrind fix */
-	paf_new->valid = TRUE;
+	paf_new->valid = true;
 
-	affect_modify(ch, paf_new, TRUE);
+	affect_modify(ch, paf_new, true);
 }
 
 /*
@@ -1443,7 +1443,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 	if (paf->end_fun != NULL)
 		(*paf->end_fun)(ch, paf);
 
-	affect_modify(ch, paf, FALSE);
+	affect_modify(ch, paf, false);
 	where = paf->where;
 	copy_vector(vector, paf->bitvector);
 
@@ -1502,15 +1502,15 @@ bool is_affected(CHAR_DATA *ch, int sn)
 	AFFECT_DATA *paf;
 
 	if (!ch)
-		return FALSE;
+		return false;
 
 	for (paf = ch->affected; paf != NULL; paf = paf->next)
 	{
 		if (paf->type == sn)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 /*
 bool is_affected_obj( OBJ_DATA *obj, int sn )
@@ -1520,10 +1520,10 @@ bool is_affected_obj( OBJ_DATA *obj, int sn )
 	for ( paf = obj->affected; paf != NULL; paf = paf->next )
 	{
 		if ( paf->type == sn )
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 */
 
@@ -1567,7 +1567,7 @@ void char_from_room(CHAR_DATA *ch)
 	ROOM_AFFECT_DATA *af;
 	OBJ_DATA *obj;
 	CHAR_DATA *mob;
-	bool other = FALSE;
+	bool other= false;
 	AFFECT_DATA *aaf;
 
 	if (ch->in_room == NULL)
@@ -1593,11 +1593,11 @@ void char_from_room(CHAR_DATA *ch)
 		for (mob = ch->in_room->people; mob; mob = mob->next_in_room)
 		{
 			if (mob != ch && IS_SET(mob->progtypes, MPROG_MOVE))
-				other = TRUE;
+				other = true;
 		}
 
 		if (!other)
-			ch->in_room->move_progs = FALSE;
+			ch->in_room->move_progs = false;
 	}
 
 	if (ch == ch->in_room->people)
@@ -1680,7 +1680,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	{
 		/* this is crashing us */
 		if (ch->in_room->area->empty)
-			ch->in_room->area->empty = FALSE;
+			ch->in_room->area->empty= false;
 
 		++ch->in_room->area->nplayer;
 	}
@@ -1700,7 +1700,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	}
 
 	if (IS_SET(ch->progtypes, MPROG_MOVE))
-		ch->in_room->move_progs = TRUE;
+		ch->in_room->move_progs = true;
 
 	if (IS_AFFECTED(ch, AFF_PLAGUE))
 	{
@@ -1753,7 +1753,7 @@ void obj_from_char(OBJ_DATA *obj)
 	}
 
 	if (obj->wear_loc != WEAR_NONE)
-		unequip_char(ch, obj, TRUE);
+		unequip_char(ch, obj, true);
 
 	if (ch->carrying == obj)
 	{
@@ -1853,9 +1853,9 @@ OBJ_DATA *get_eq_char(CHAR_DATA *ch, int iWear)
 bool is_worn(OBJ_DATA *obj)
 {
 	if (obj->wear_loc > WEAR_NONE)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -1869,7 +1869,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 	int i;
 	bool status;
 
-	status = FALSE;
+	status= false;
 	if (iWear != WEAR_COSMETIC && get_eq_char(ch, iWear) != NULL)
 	{
 		sprintf(buf, "Equip_char: already equipped (%d) -- %s -- %s.", iWear, ch->name, ch->in_room->area->file_name);
@@ -1936,7 +1936,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 
 	for (app = obj->apply; app; app = app->next)
 	{
-		modify_location(ch, app->location, app->modifier, TRUE);
+		modify_location(ch, app->location, app->modifier, true);
 	}
 
 	for (paf = obj->charaffs; paf != NULL; paf = paf->next)
@@ -1996,7 +1996,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 
 	for (app = obj->apply; app; app = app->next)
 	{
-		modify_location(ch, app->location, app->modifier, FALSE);
+		modify_location(ch, app->location, app->modifier, false);
 	}
 
 	for (paf = obj->charaffs; paf != NULL; paf = paf->next)
@@ -2229,7 +2229,7 @@ void extract_obj(OBJ_DATA *obj)
 
 void delay_extract(CHAR_DATA *ch)
 {
-	extract_char(ch, TRUE);
+	extract_char(ch, true);
 }
 
 /*
@@ -2283,7 +2283,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 	if (fPull)
 		die_follower(ch);
 
-	stop_fighting(ch, TRUE);
+	stop_fighting(ch, true);
 
 	for (obj = ch->carrying; obj != NULL; obj = obj_next)
 	{
@@ -2709,24 +2709,24 @@ bool room_is_dark(ROOM_INDEX_DATA *pRoomIndex)
 {
 
 	if (pRoomIndex->light > 2)
-		return FALSE;
+		return false;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_DARK))
-		return TRUE;
+		return true;
 
 	if (pRoomIndex->sector_type == SECT_INSIDE || pRoomIndex->sector_type == SECT_CITY)
-		return FALSE;
+		return false;
 
 	if (sun == SUN_SET || sun == SUN_DARK)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool is_room_owner(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 {
 	if (room->owner == NULL || room->owner[0] == '\0')
-		return FALSE;
+		return false;
 
 	return is_name(ch->name, room->owner);
 }
@@ -2739,44 +2739,44 @@ bool room_is_private(ROOM_INDEX_DATA *pRoomIndex)
 	CHAR_DATA *rch;
 	int count;
 
-	return FALSE;
+	return false;
 
 	if (pRoomIndex->owner != NULL && pRoomIndex->owner[0] != '\0')
-		return TRUE;
+		return true;
 
 	count = 0;
 	for (rch = pRoomIndex->people; rch != NULL; rch = rch->next_in_room)
 		count++;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_PRIVATE) && count >= 2)
-		return TRUE;
+		return true;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_SOLITARY) && count >= 1)
-		return TRUE;
+		return true;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_IMP_ONLY))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 /* visibility on a room -- for entering and exits */
 bool can_see_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 {
 	if (IS_SET(pRoomIndex->room_flags, ROOM_IMP_ONLY) && get_trust(ch) < MAX_LEVEL)
-		return FALSE;
+		return false;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_GODS_ONLY) && !IS_IMMORTAL(ch))
-		return FALSE;
+		return false;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_HEROES_ONLY) && !IS_IMMORTAL(ch))
-		return FALSE;
+		return false;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_NEWBIES_ONLY) && ch->level > 10 && !IS_IMMORTAL(ch) &&
 		(!IS_NPC(ch) || ch->pIndexData->vnum != ACADEMY_PET))
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -2788,44 +2788,44 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 	AFFECT_DATA *af;
 
 	if (IS_NPC(ch) && IS_SET(ch->act, ACT_DETECT_SPECIAL))
-		return TRUE;
+		return true;
 
 	if (ch == victim)
-		return TRUE;
+		return true;
 
 	if (!IS_IMMORTAL(ch) && IS_AFFECTED(victim, AFF_NOSHOW))
-		return FALSE;
+		return false;
 
 	if (IS_CABAL_GUARD(ch) && !ch->desc)
-		return TRUE;
+		return true;
 
 	if (get_trust(ch) < victim->invis_level)
-		return FALSE;
+		return false;
 
 	if (get_trust(ch) < victim->incog_level && ch->in_room != victim->in_room)
-		return FALSE;
+		return false;
 
 	if (get_trust(ch) == LEVEL_HERO && victim->invis_level == LEVEL_HERO && !IS_HEROIMM(ch))
-		return FALSE;
+		return false;
 
 	if ((!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT)) || (IS_NPC(ch) && IS_IMMORTAL(ch)))
-		return TRUE;
+		return true;
 
 	if (IS_NPC(ch) && victim->invis_level >= LEVEL_HERO)
-		return FALSE;
+		return false;
 
 	if (!IS_NPC(ch) && ch->pcdata->death_status == HAS_DIED)
-		return TRUE;
+		return true;
 
 	/* Make sure cabal guardians can always see */
 	if (IS_CABAL_GUARD(ch))
-		return TRUE;
+		return true;
 
 	if (IS_AFFECTED(ch, AFF_BLIND))
-		return FALSE;
+		return false;
 
 	if (is_affected(victim, gsn_ultradiffusion))
-		return FALSE;
+		return false;
 
 	if (is_affected_area(ch->in_room->area, gsn_whiteout) && IS_OUTSIDE(ch))
 	{
@@ -2836,14 +2836,14 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 		}
 
 		if (paf->owner != ch)
-			return FALSE;
+			return false;
 	}
 
 	if (is_affected(victim, gsn_watermeld) && !is_affected(ch, gsn_hydroperception))
-		return FALSE;
+		return false;
 
 	if (is_affected(victim, gsn_earthfade))
-		return FALSE;
+		return false;
 
 	if (IS_AFFECTED(victim, AFF_INVISIBLE)
 		&& !IS_AFFECTED(ch, AFF_DETECT_INVIS)
@@ -2863,7 +2863,7 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 			&& !IS_AFFECTED(victim, AFF_SNEAK)
 			&& !IS_AFFECTED(victim, AFF_FLYING))))
 	{
-		return FALSE;
+		return false;
 	}
 
 	if (IS_AFFECTED(victim, AFF_HIDE)
@@ -2886,19 +2886,19 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 			&& !IS_AFFECTED(victim, AFF_SNEAK)
 			&& !IS_AFFECTED(victim, AFF_FLYING)))
 	{
-		return FALSE;
+		return false;
 	}
 
 	if (IS_AFFECTED(victim, AFF_CAMOUFLAGE) && !IS_AFFECTED(ch, AFF_DETECT_CAMO))
-		return FALSE;
+		return false;
 
 	if (IS_NPC(ch))
-		return TRUE;
+		return true;
 
 	if (room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_DARK_VISION))
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -2913,7 +2913,7 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (!ch->in_room)
 	{
 		bug("ERROR IN CANSEEOBJ!", 0);
-		return FALSE;
+		return false;
 	}
 
 	if (is_affected_obj(obj, gsn_stash))
@@ -2925,20 +2925,20 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 		}
 
 		if (oaf->owner != ch && !IS_IMMORTAL(ch))
-			return FALSE;
+			return false;
 	}
 
 	if (IS_OBJ_STAT(obj, ITEM_NOSHOW) && !IS_IMMORTAL(ch) && is_worn(obj) && (tat = get_eq_char(ch, WEAR_BRAND)) != obj)
-		return FALSE;
+		return false;
 
 	if (!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
-		return TRUE;
+		return true;
 
 	if (IS_SET(obj->extra_flags, ITEM_VIS_DEATH))
-		return FALSE;
+		return false;
 
 	if ((IS_AFFECTED(ch, AFF_BLIND) && obj->item_type != ITEM_POTION))
-		return FALSE;
+		return false;
 
 	if (is_affected_area(ch->in_room->area, gsn_whiteout) && IS_OUTSIDE(ch) && obj->item_type != ITEM_POTION)
 	{
@@ -2949,22 +2949,22 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 		}
 
 		if (paf && paf->owner != ch)
-			return FALSE;
+			return false;
 	}
 
 	if (obj->item_type == ITEM_LIGHT && obj->value[2] != 0)
-		return TRUE;
+		return true;
 
 	if (IS_SET(obj->extra_flags, ITEM_INVIS) && !IS_AFFECTED(ch, AFF_DETECT_INVIS))
-		return FALSE;
+		return false;
 
 	if (IS_OBJ_STAT(obj, ITEM_GLOW) || IS_AFFECTED(obj, AFF_OBJ_BURNING))
-		return TRUE;
+		return true;
 
 	if (room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_DARK_VISION))
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -2973,12 +2973,12 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 bool can_drop_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	if (!IS_SET(obj->extra_flags, ITEM_NODROP))
-		return TRUE;
+		return true;
 
 	if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -3900,7 +3900,7 @@ void init_affect_room(ROOM_AFFECT_DATA *paf)
 	paf->end_fun = NULL;
 	paf->owner = NULL;
 	/* Morg - Valgrind fix */
-	paf->valid = FALSE;
+	paf->valid= false;
 }
 
 void affect_modify_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd)
@@ -4001,7 +4001,7 @@ void new_affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 	paf_new->next = room->affected;
 	room->affected = paf_new;
 
-	affect_modify_room(room, paf_new, TRUE);
+	affect_modify_room(room, paf_new, true);
 }
 
 void affect_check_room(ROOM_INDEX_DATA *room, int where, long vector[])
@@ -4049,7 +4049,7 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 	if (paf->end_fun != NULL)
 		(*paf->end_fun)(room, paf);
 
-	affect_modify_room(room, paf, FALSE);
+	affect_modify_room(room, paf, false);
 	where = paf->where;
 	copy_vector(vector, paf->bitvector);
 
@@ -4136,15 +4136,15 @@ bool is_affected_room(ROOM_INDEX_DATA *room, int sn)
 	ROOM_AFFECT_DATA *paf;
 
 	if (!room)
-		return FALSE;
+		return false;
 
 	for (paf = room->affected; paf != NULL; paf = paf->next)
 	{
 		if (paf->type == sn)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -4313,7 +4313,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 				wear = obj->wear_loc;
 
 				if (ch && (wear != WEAR_NONE))
-					unequip_char(ch, obj, FALSE);
+					unequip_char(ch, obj, false);
 
 				app = new_apply_data();
 				app->location = paf->location;
@@ -4323,7 +4323,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 				obj->apply = app;
 
 				if (ch && (wear != WEAR_NONE))
-					equip_char(ch, obj, wear, FALSE);
+					equip_char(ch, obj, wear, false);
 
 				break;
 		}
@@ -4340,7 +4340,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 			wear = obj->wear_loc;
 
 			if (ch && (wear != WEAR_NONE))
-				unequip_char(ch, obj, FALSE);
+				unequip_char(ch, obj, false);
 
 			for (app = obj->apply; app; app = app->next)
 			{
@@ -4351,7 +4351,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 			if (!app)
 			{
 				if (ch && (wear != WEAR_NONE))
-					equip_char(ch, obj, wear, FALSE);
+					equip_char(ch, obj, wear, false);
 
 				break;
 			}
@@ -4373,7 +4373,7 @@ void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
 			}
 
 			if (ch && (wear != WEAR_NONE))
-				equip_char(ch, obj, wear, FALSE);
+				equip_char(ch, obj, wear, false);
 
 			break;
 		}
@@ -4428,7 +4428,7 @@ void affect_to_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf)
 	paf_new->next = obj->affected;
 	obj->affected = paf_new;
 
-	affect_modify_obj(obj, paf_new, TRUE);
+	affect_modify_obj(obj, paf_new, true);
 }
 
 void affect_check_obj(OBJ_DATA *obj, int where, long vector[])
@@ -4468,7 +4468,7 @@ void affect_remove_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show)
 	if (paf->end_fun != NULL && show)
 		(*paf->end_fun)(obj, paf);
 
-	affect_modify_obj(obj, paf, FALSE);
+	affect_modify_obj(obj, paf, false);
 	where = paf->where;
 	copy_vector(vector, paf->bitvector);
 
@@ -4510,7 +4510,7 @@ void affect_strip_obj(OBJ_DATA *obj, int sn)
 		paf_next = paf->next;
 
 		if (paf->type == sn)
-			affect_remove_obj(obj, paf, TRUE);
+			affect_remove_obj(obj, paf, true);
 	}
 }
 
@@ -4521,10 +4521,10 @@ bool is_affected_obj(OBJ_DATA *obj, int sn)
 	for (paf = obj->affected; paf != NULL; paf = paf->next)
 	{
 		if (paf->type == sn)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void affect_join_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf)
@@ -4538,7 +4538,7 @@ void affect_join_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf)
 			paf->level = (paf->level + paf_old->level) / 2;
 			paf->duration += paf_old->duration;
 			paf->modifier += paf_old->modifier;
-			affect_remove_obj(obj, paf_old, TRUE);
+			affect_remove_obj(obj, paf_old, true);
 			break;
 		}
 	}
@@ -4669,7 +4669,7 @@ void affect_to_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 	paf_new->next = area->affected;
 	area->affected = paf_new;
 
-	affect_modify_area(area, paf_new, TRUE);
+	affect_modify_area(area, paf_new, true);
 }
 
 void affect_check_area(AREA_DATA *area, int where, long vector[])
@@ -4709,7 +4709,7 @@ void affect_remove_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 	if (paf->end_fun != NULL)
 		(*paf->end_fun)(area, paf);
 
-	affect_modify_area(area, paf, FALSE);
+	affect_modify_area(area, paf, false);
 	where = paf->where;
 	copy_vector(vector, paf->bitvector);
 
@@ -4763,10 +4763,10 @@ bool is_affected_area(AREA_DATA *area, int sn)
 	for (paf = area->affected; paf != NULL; paf = paf->next)
 	{
 		if (paf->type == sn)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void affect_join_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
@@ -4810,15 +4810,15 @@ bool is_safe_rspell_nom(int level, CHAR_DATA *victim)
 {
 	/* ghosts are safe */
 	if (!IS_NPC(victim) && (victim->ghost))
-		return TRUE;
+		return true;
 
 	if (victim->level < 5 && !IS_NPC(victim))
-		return TRUE;
+		return true;
 
 	if (!IS_NPC(victim) && ((level >= victim->level + 10) || (victim->level >= level + 10)))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool is_safe_rspell(int level, CHAR_DATA *victim)
@@ -4828,11 +4828,11 @@ bool is_safe_rspell(int level, CHAR_DATA *victim)
 		act("The gods protect $n.", victim, NULL, NULL, TO_CHAR);
 		act("The gods protect $n from the spell of room.", victim, NULL, NULL, TO_ROOM);
 
-		return TRUE;
+		return true;
 	}
 	else
 	{
-		return FALSE;
+		return false;
 	}
 }
 
@@ -5034,5 +5034,5 @@ int get_ethos(CHAR_DATA *ch)
 
 int damage_queue(CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun)
 {
-	return damage_new(ch, victim, dam, gsn_bash, damtype, TRUE, blockable, add, mult, dnoun);
+	return damage_new(ch, victim, dam, gsn_bash, damtype, true, blockable, add, mult, dnoun);
 }

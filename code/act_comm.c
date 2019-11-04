@@ -52,7 +52,7 @@ void do_delete(CHAR_DATA *ch, char *argument)
 		if (argument[0] != '\0')
 		{
 			send_to_char("Delete status removed.\n\r", ch);
-			ch->pcdata->confirm_delete = FALSE;
+			ch->pcdata->confirm_delete = false;
 			return;
 		}
 		else
@@ -69,18 +69,18 @@ void do_delete(CHAR_DATA *ch, char *argument)
 				affect_remove(ch, ch->affected);
 			}
 
-			stop_fighting(ch, TRUE);
+			stop_fighting(ch, true);
 			act("$n has left Shalar, never to return.", ch, NULL, NULL, TO_ROOM);
 
 			cname = palloc_string(ch->true_name);
 
 			plug_graveyard(ch, 1);
-			do_quit_new(ch, "", TRUE);
+			do_quit_new(ch, "", true);
 
 			if (((ch->played + (current_time - ch->logon)) / 3600) >= 15)
-				delete_char(cname, TRUE); // >= 15 hours. Make name unusable.
+				delete_char(cname, true); // >= 15 hours. Make name unusable.
 			else
-				delete_char(cname, FALSE);
+				delete_char(cname, false);
 
 			free_pstring(cname);
 			return;
@@ -97,7 +97,7 @@ void do_delete(CHAR_DATA *ch, char *argument)
 	send_to_char("WARNING: this command is irreversible.\n\r", ch);
 	send_to_char("Typing delete with an argument will undo delete status.\n\r", ch);
 
-	ch->pcdata->confirm_delete = TRUE;
+	ch->pcdata->confirm_delete = true;
 
 	if (((ch->played + (current_time - ch->logon)) / 3600) >= 15)
 		send_to_char("ALERT: Deletion will render this name unusable.\n\r", ch);
@@ -1130,7 +1130,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
 	int count, number;
-	bool deaf = FALSE;
+	bool deaf = false;
 	char arg2[MAX_STRING_LENGTH];
 
 	if (is_affected(ch, gsn_silence))
@@ -1241,7 +1241,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 
 	if (is_affected(ch, gsn_deafen))
 	{
-		deaf = TRUE;
+		deaf = true;
 		argument = palloc_string(upstring(argument));
 	}
 
@@ -1288,7 +1288,7 @@ void do_reply(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *victim;
 	char buf[MAX_STRING_LENGTH];
-	bool deaf = FALSE;
+	bool deaf = false;
 
 	if (IS_SET(ch->comm, COMM_NOTELL))
 	{
@@ -1343,7 +1343,7 @@ void do_reply(CHAR_DATA *ch, char *argument)
 
 	if (is_affected(ch, gsn_deafen))
 	{
-		deaf = TRUE;
+		deaf = true;
 		argument = palloc_string(upstring(argument));
 	}
 
@@ -1374,7 +1374,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 {
 	DESCRIPTOR_DATA *d;
 	char buf[MAX_STRING_LENGTH];
-	bool deaf = FALSE;
+	bool deaf = false;
 
 	if (is_affected(ch, gsn_silence))
 	{
@@ -1421,7 +1421,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 
 	if (is_affected(ch, gsn_deafen))
 	{
-		deaf = TRUE;
+		deaf = true;
 		argument = palloc_string(upstring(argument));
 	}
 
@@ -1637,10 +1637,10 @@ bool check_ooc(CHAR_DATA *ch, char *argument, char *type)
 
 	/* Imms can curse and be OOC all we want! */
 	if (IS_IMMORTAL(ch))
-		return TRUE;
+		return true;
 
 	if (IS_NPC(ch) && !IS_AFFECTED(ch, AFF_CHARM))
-		return TRUE;
+		return true;
 
 	/* The list of naughty words.  Add more as needed. */
 
@@ -1668,7 +1668,7 @@ bool check_ooc(CHAR_DATA *ch, char *argument, char *type)
 		wiznet(buf, NULL, NULL, WIZ_OOC, 0, 0);
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_bug(CHAR_DATA *ch, char *argument)
@@ -1707,7 +1707,7 @@ void do_qui(CHAR_DATA *ch, char *argument)
 
 void do_quit(CHAR_DATA *ch, char *argument)
 {
-	do_quit_new(ch, argument, FALSE);
+	do_quit_new(ch, argument, false);
 }
 
 void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
@@ -1782,7 +1782,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 			return send_to_char("You can't quit out in an enemy Cabal!\n\r", ch);
 	}
 
-	if (autoq == FALSE)
+	if (autoq == false)
 	{
 		for (obj = object_list; obj != NULL; obj = obj_next)
 		{
@@ -1823,8 +1823,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 			!IS_SET(ch->comm, COMM_NOSOCKET) ? ch->pcdata->host : "",
 			autoq ? "auto" : "",
 			((current_time - ch->logon) / 60),
-			count_carried(ch, FALSE),
-			count_carried(ch, TRUE));
+			count_carried(ch, false),
+			count_carried(ch, true));
 
 	log_string(log_buf);
 	wiznet(log_buf, ch, NULL, WIZ_SITES, 0, get_trust(ch));
@@ -1878,14 +1878,14 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 
 		if (IS_NPC(wch) && IS_AFFECTED(wch, AFF_CHARM) && wch->master == ch && IS_SET(wch->act, ACT_UNDEAD))
 		{
-			extract_char(wch, TRUE);
+			extract_char(wch, true);
 			continue;
 		}
 
 		if (wch->pIndexData->vnum == MOB_VNUM_DECOY && is_name(ch->name, wch->name))
 		{
 			act("$n crumbles to dust.", wch, 0, 0, TO_ROOM);
-			extract_char(wch, TRUE);
+			extract_char(wch, true);
 		}
 	}
 
@@ -1893,7 +1893,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	id = ch->id;
 	d = ch->desc;
 
-	extract_char(ch, TRUE);
+	extract_char(ch, true);
 
 	if (d != NULL)
 		close_socket(d);
@@ -1907,7 +1907,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 		tch = d->original ? d->original : d->character;
 		if (tch && tch->id == id)
 		{
-			extract_char(tch, TRUE);
+			extract_char(tch, true);
 			close_socket(d);
 		}
 	}
@@ -2016,13 +2016,13 @@ void add_follower(CHAR_DATA *ch, CHAR_DATA *master)
 			af.aftype = AFT_INVIS;
 			af.duration = -1;
 			affect_to_char(ch, &af);
-			check_improve(ch, gsn_trail, TRUE, 1);
+			check_improve(ch, gsn_trail, true, 1);
 		}
 		else
 		{
 			act("You attempt to secretly trail $N.", ch, NULL, master, TO_CHAR);
 			act("You have a sudden feeling someone is following you.", ch, NULL, master, TO_VICT);
-			check_improve(ch, gsn_trail, FALSE, 1);
+			check_improve(ch, gsn_trail, false, 1);
 		}
 	}
 	else
@@ -2075,7 +2075,7 @@ void nuke_pets(CHAR_DATA *ch)
 		if (pet->in_room != NULL)
 			act("$N slowly fades away.", ch, NULL, pet, TO_NOTVICT);
 
-		extract_char(pet, TRUE);
+		extract_char(pet, true);
 	}
 
 	ch->pet = NULL;
@@ -2117,7 +2117,7 @@ void die_follower(CHAR_DATA *ch)
 				REMOVE_BIT(fch->affected_by, AFF_CHARM);
 				affect_strip(fch, gsn_animate_dead);
 				act("$n slowly fades away.", fch, NULL, NULL, TO_ROOM);
-				extract_char(fch, TRUE);
+				extract_char(fch, true);
 			}
 		}
 		else
@@ -2158,12 +2158,12 @@ void do_order(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg, "all"))
 	{
-		fAll = TRUE;
+		fAll = true;
 		victim = NULL;
 	}
 	else
 	{
-		fAll = FALSE;
+		fAll = false;
 
 		if ((victim = get_char_room(ch, arg)) == NULL)
 		{
@@ -2184,11 +2184,11 @@ void do_order(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	cOK = FALSE;
+	cOK = false;
 	for (i = 0; i < MAX_ORDERS; i++)
 	{
 		if (!str_prefix(arg2, order_table[i].command))
-			cOK = TRUE;
+			cOK = true;
 	}
 
 	if (!cOK)
@@ -2197,7 +2197,7 @@ void do_order(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	found = FALSE;
+	found = false;
 
 	for (och = ch->in_room->people; och != NULL; och = och_next)
 	{
@@ -2208,7 +2208,7 @@ void do_order(CHAR_DATA *ch, char *argument)
 			if (IS_NPC(och) && och->pIndexData->vnum == ACADEMY_PET)
 				continue;
 
-			found = TRUE;
+			found = true;
 			sprintf(buf, "$n orders you to '%s'.", argument);
 			act(buf, ch, NULL, och, TO_VICT);
 			interpret(och, argument);
@@ -2458,7 +2458,7 @@ void do_gtell(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *gch;
 	char buf[MAX_STRING_LENGTH];
-	bool deaf = FALSE;
+	bool deaf = false;
 
 	if (is_affected(ch, gsn_silence))
 	{
@@ -2500,7 +2500,7 @@ void do_gtell(CHAR_DATA *ch, char *argument)
 
 	if (is_affected(ch, gsn_deafen))
 	{
-		deaf = TRUE;
+		deaf = true;
 		argument = palloc_string(upstring(argument));
 	}
 
@@ -2523,7 +2523,7 @@ void do_gtell(CHAR_DATA *ch, char *argument)
 SPEECH_DATA *find_speech(MOB_INDEX_DATA *mob, char *name)
 {
 	SPEECH_DATA *speech;
-	bool found = FALSE;
+	bool found = false;
 
 	if (!mob->speech)
 		return NULL;
@@ -2532,7 +2532,7 @@ SPEECH_DATA *find_speech(MOB_INDEX_DATA *mob, char *name)
 	{
 		if (!str_cmp(speech->name, name))
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -2663,10 +2663,10 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 bool is_same_group(CHAR_DATA *ach, CHAR_DATA *bch)
 {
 	if (ach == NULL || bch == NULL)
-		return FALSE;
+		return false;
 
 	/* if ( ( ach->level - bch->level > 8 || ach->level - bch->level < -8 ) && !IS_NPC(ach) )
-		return FALSE;*/
+		return false;*/
 
 	if (ach->leader != NULL)
 		ach = ach->leader;
@@ -2705,7 +2705,7 @@ void do_release(CHAR_DATA *ch, char *argument)
 	if (IS_NPC(victim))
 	{
 		act("$n slowly fades away.", victim, 0, 0, TO_ROOM);
-		extract_char(victim, TRUE);
+		extract_char(victim, true);
 	}
 	else
 	{
@@ -2798,7 +2798,7 @@ void login_log(CHAR_DATA *ch, int type)
 			log_time(),
 			current_time,
 			type == 2 ? ((current_time - ch->logon) / 60) : -1,
-			type > 0 ? count_carried(ch, FALSE) : -1, type > 0 ? count_carried(ch, TRUE) : -1,
+			type > 0 ? count_carried(ch, false) : -1, type > 0 ? count_carried(ch, true) : -1,
 			type);
 	one_query(query);
 }

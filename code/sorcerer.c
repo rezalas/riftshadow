@@ -91,7 +91,7 @@ void spell_scorch(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("Waves of heat ripple through the air as $n's flesh crackles.", victim, 0, ch, TO_ROOM);
 	act("Waves of heat ripple through the air towards you.\n\rYou feel your skin crackling.", ch, 0, victim, TO_VICT);
-	damage_new(ch, victim, dam, sn, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_gravity_well(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -185,7 +185,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	CHAR_DATA *victim, *v_next, *ch = af->owner;
 	OBJ_DATA *well;
 	int dam;
-	bool wasinroom = TRUE;
+	bool wasinroom = true;
 
 	affect_strip_area(room->area, gsn_gravity_well);
 
@@ -210,7 +210,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	{
 		v_next = victim->next_in_room;
 
-		if (!IS_NPC(victim) && is_safe_new(ch, victim, FALSE))
+		if (!IS_NPC(victim) && is_safe_new(ch, victim, false))
 			continue;
 
 		dam = dice(20, 20);
@@ -221,10 +221,10 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		if (!ch->in_room)
 		{
 			char_to_room(ch, room);
-			wasinroom = FALSE;
+			wasinroom = false;
 		}
 
-		damage_new(ch, victim, dam, af->type, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the violent explosion*");
+		damage_new(ch, victim, dam, af->type, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the violent explosion*");
 
 		if (!wasinroom)
 			char_from_room(ch);
@@ -346,12 +346,12 @@ void spell_chill(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		act("$n's flesh turns purple as he shivers!", victim, 0, ch, TO_ROOM);
 		act("You begin shivering violently.", 0, 0, victim, TO_VICT);
-		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chill");
+		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chill");
 	}
 	else
 	{
 		dam /= 2;
-		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chill");
+		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "chill");
 	}
 }
 
@@ -493,7 +493,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 	int i;
 
 	if (is_affected_room(room, gsn_conflagration))
-		return FALSE;
+		return false;
 
 	for (i = 0; i <= 6; i++)
 	{
@@ -502,7 +502,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 	}
 
 	if (i == 6)
-		return FALSE;
+		return false;
 
 	if ((room->sector_type && room->sector_type == SECT_WATER)
 		|| room->sector_type == SECT_AIR
@@ -511,7 +511,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 		|| room->sector_type == SECT_CONFLAGRATION
 		|| room->sector_type == SECT_CITY)
 	{
-		return FALSE;
+		return false;
 	}
 
 	init_affect_room(&raf);
@@ -534,7 +534,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 	}
 
 	zone_echo(room->area, "The crackling roar of fire reaches your ears.\n\r");
-	return TRUE;
+	return true;
 }
 
 void conflagration_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
@@ -566,7 +566,7 @@ void conflagration_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 			if (dam <= 1)
 				continue;
 
-			damage_new(af->owner, vch, dam, TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the raging wildfire*");
+			damage_new(af->owner, vch, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the raging wildfire*");
 		}
 	}
 
@@ -718,45 +718,45 @@ void ultradiffusion_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	{
 		case 20:
 		case 19:
-			damage_new(ch, ch, 20, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 20, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 18:
 		case 17:
-			damage_new(ch, ch, 30, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 30, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 16:
 		case 15:
-			damage_new(ch, ch, 50, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 50, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 14:
 		case 13:
-			damage_new(ch, ch, 100, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 100, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 12:
 		case 11:
-			damage_new(ch, ch, 200, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 200, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 10:
 		case 9:
-			damage_new(ch, ch, 300, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 300, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 8:
 		case 7:
-			damage_new(ch, ch, 400, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 400, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			break;
 		case 6:
 		case 5:
-			damage_new(ch, ch, 600, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 600, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			modifier = 1;
 			break;
 		case 4:
 		case 3:
-			damage_new(ch, ch, 800, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 800, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			modifier = 2;
 			break;
 		case 2:
 		case 1:
-			damage_new(ch, ch, 1000, gsn_ultradiffusion, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 1000, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			modifier = 3;
 			break;
 		case 0:
@@ -832,7 +832,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("You rapidly raise the temperature of $N's weapon, but $E adjusts $S grip.", ch, obj, victim, TO_CHAR);
 		act("Your weapon suddenly becomes burning to the touch, but you quickly find a comfortable grip.", ch, obj, victim, TO_VICT);
 		act("$N's weapon glows a dull red, but $E adjusts $S grip.", ch, obj, victim, TO_NOTVICT);
-		damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		set_fighting(ch, victim);
 		return;
 	}
@@ -842,7 +842,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("You rapidly raise the temperature of $N's weapon, but it clings to $S hand, burning him!", ch, obj, victim, TO_CHAR);
 		act("Your weapon suddenly becomes burning to the touch, but you cannot let go of it!", ch, obj, victim, TO_VICT);
 		act("$N's weapon glows a dull red, but it clings to $S hand, burning him!", ch, obj, victim, TO_NOTVICT);
-		damage_new(ch, victim, dice(level, 5), gsn_burning_hands, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(level, 5), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		set_fighting(ch, victim);
 		return;
 	}
@@ -851,7 +851,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("Your weapon suddenly becomes burning to the touch, and you instinctively drop it!", ch, obj, victim, TO_VICT);
 	act("$N's weapon glows a dull red and $E drops it, pulling back $S hand in pain!", ch, obj, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	set_fighting(ch, victim);
 
 	obj_from_char(obj);
@@ -865,7 +865,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		obj_to_room(obj, victim->in_room);
 
 		if (IS_NPC(victim) && victim->wait == 0 && can_see_obj(victim, obj))
-			get_obj(victim, obj, NULL, TRUE);
+			get_obj(victim, obj, NULL, true);
 	}
 
 	reslot_weapon(victim);
@@ -874,10 +874,10 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (obj2 != NULL)
 	{
-		unequip_char(victim, obj2, FALSE);
+		unequip_char(victim, obj2, false);
 		act("You hastily swap $p into your primary hand.", ch, obj2, 0, TO_CHAR);
 		act("$n hastily swaps $p into $s primary hand.", ch, obj2, 0, TO_ROOM);
-		equip_char(victim, obj2, WEAR_WIELD, FALSE);
+		equip_char(victim, obj2, WEAR_WIELD, false);
 	}
 }
 
@@ -1006,7 +1006,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		vch_next = vch->next_in_room;
 
-		if (!IS_NPC(vch) && is_safe_new(ch, vch, FALSE))
+		if (!IS_NPC(vch) && is_safe_new(ch, vch, false))
 			continue;
 
 		if (!IS_NPC(vch) && !is_same_group(vch, ch))
@@ -1017,7 +1017,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		WAIT_STATE(vch, PULSE_VIOLENCE);
 
-		damage_new(ch, vch, dice(level, 6), TYPE_HIT + attack_lookup("asphyxiation"), DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the vacuum*");
+		damage_new(ch, vch, dice(level, 6), TYPE_HIT + attack_lookup("asphyxiation"), DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the vacuum*");
 	}
 
 	for (i = 0; i <= 5; i++)
@@ -1083,7 +1083,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 		WAIT_STATE(vch, PULSE_VIOLENCE);
 
-		damage_new(af->owner, vch, (3 * af->level) / roomcount, TYPE_HIT + attack_lookup("asphyxiation"), DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the vacuum*");
+		damage_new(af->owner, vch, (3 * af->level) / roomcount, TYPE_HIT + attack_lookup("asphyxiation"), DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the vacuum*");
 
 		if (vch)
 			pplcount++;
@@ -1127,7 +1127,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 							{
 								vch_next = vch->next_in_room;
 
-								if (j == randperson && !is_safe_new(af->owner, vch, FALSE))
+								if (j == randperson && !is_safe_new(af->owner, vch, false))
 									smacked = vch;
 								j++;
 							}
@@ -1138,7 +1138,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 						act("$p is sucked into the room, striking $n!", smacked, obj, 0, TO_ROOM);
 						act("$p is sucked into the room, striking you!", smacked, obj, 0, TO_CHAR);
-						damage_new(af->owner, smacked, dice(get_true_weight(obj) + 1, 9), TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the flying debris*");
+						damage_new(af->owner, smacked, dice(get_true_weight(obj) + 1, 9), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the flying debris*");
 						objcount++;
 					}
 				}
@@ -1168,7 +1168,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 						if (IS_NPC(vch) && IS_SET(vch->act, ACT_SENTINEL))
 							continue;
 
-						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, FALSE))
+						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
 							continue;
 
 						direction = (char *)flag_name_lookup(reverse_d(i), direction_table);
@@ -1404,7 +1404,7 @@ void spell_immolate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	if (dam)
-		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "immolation");
+		damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "immolation");
 	else
 		act("You failed to ignite any of $N's armor.", ch, 0, victim, TO_CHAR);
 }
@@ -1467,7 +1467,7 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			affect_to_char(vch, &af);
 		}
 
-		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "scathing wind");
+		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "scathing wind");
 	}
 }
 
@@ -1513,7 +1513,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("You lose your footing amidst the shaking and fall to the ground!", vch, 0, 0, TO_CHAR);
 
 		WAIT_STATE(vch, PULSE_VIOLENCE);
-		damage_new(ch, vch, dice(10, 3), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, vch, dice(10, 3), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	}
 
 	switch (ch->in_room->sector_type)
@@ -1538,7 +1538,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 					continue;
 
-				damage_new(ch, vch, dice(4, 10), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the scattered debris*");
+				damage_new(ch, vch, dice(4, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the scattered debris*");
 			}
 
 			break;
@@ -1551,7 +1551,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 					continue;
 
 				act("Loose bricks and mortar tumble down from the buildings around you!", vch, 0, 0, TO_CHAR);
-				damage_new(ch, vch, dice(10, 10), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
+				damage_new(ch, vch, dice(10, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
 			}
 
 			break;
@@ -1565,7 +1565,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 				ADD_WAIT_STATE(vch, PULSE_VIOLENCE);
 				act("Nearby trees topple, crushing you beneath their weight!", vch, 0, 0, TO_CHAR);
-				damage_new(ch, vch, dice(10, 15), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling trees*$");
+				damage_new(ch, vch, dice(10, 15), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling trees*$");
 			}
 
 			break;
@@ -1593,9 +1593,9 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				act("A torrential downpour of stone and debris pours down from the ceiling above!", vch, 0, 0, TO_CHAR);
 
 				if (is_same_group(vch, ch) || is_same_cabal(ch, vch))
-					damage_new(ch, vch, dice(10, 15), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
+					damage_new(ch, vch, dice(10, 15), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
 				else
-					damage_new(ch, vch, dice(20, 15), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
+					damage_new(ch, vch, dice(20, 15), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling debris*");
 
 				ADD_WAIT_STATE(vch, PULSE_VIOLENCE);
 			}
@@ -1654,7 +1654,7 @@ void spell_electrocute(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("$n lets out a horrible shriek as the electric current roasts $m alive within $s armor!", victim, 0, 0, TO_ROOM);
 	}
 
-	damage_new(ch, victim, dice((level / 15) * tconduct, 4), sn, DAM_LIGHTNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice((level / 15) * tconduct, 4), sn, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	LAG_CHAR(victim, (tconduct / 15) * PULSE_VIOLENCE);
 }
 
@@ -1676,7 +1676,7 @@ void spell_induce_pain(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("Your vision clouds as searing pain courses through your body!", victim, 0, 0, TO_CHAR);
 	}
 
-	damage_new(ch, victim, dam, sn, DAM_OTHER, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1882,7 +1882,7 @@ void spell_mana_leech(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends tendrils of electricity towards you.", ch, 0, victim, TO_VICT);
 	act("$n extends tendrils of electricity towards $N.", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dice(5, 2), sn, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice(5, 2), sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
 	if (saves_spell(level, victim, DAM_ENERGY))
 	{
@@ -2005,11 +2005,11 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (IS_NPC(victim))
 	{
-		damage_new(ch, victim, dice(level, 3), sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(level, 3), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	}
 	else
 	{
-		damage_new(ch, victim, dice(COND_HUNGRY - victim->pcdata->condition[COND_THIRST], level / 5), sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(COND_HUNGRY - victim->pcdata->condition[COND_THIRST], level / 5), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
 		if (victim->pcdata->condition[COND_THIRST] >= 0)
 			victim->pcdata->condition[COND_THIRST] = COND_HUNGRY;
@@ -2030,7 +2030,7 @@ void spell_drown(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (IS_AFFECTED(victim, AFF_WATERBREATH))
 		dam /= 2;
 
-	damage_new(ch, victim, dam, sn, DAM_DROWNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_hydration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -2038,12 +2038,12 @@ void spell_hydration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	int heal = 0;
 	OBJ_DATA *obj;
-	bool spring = FALSE;
+	bool spring = false;
 
 	for (obj = ch->in_room->contents; obj; obj = obj->next_content)
 	{
 		if (obj->item_type == ITEM_FOUNTAIN)
-			spring = TRUE;
+			spring = true;
 	}
 
 	switch (ch->in_room->sector_type)
@@ -2452,7 +2452,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (vch == ch)
 			continue;
 
-		if (!IS_NPC(vch) && is_safe_new(ch, vch, FALSE))
+		if (!IS_NPC(vch) && is_safe_new(ch, vch, false))
 			continue;
 
 		if (!IS_NPC(vch))
@@ -2461,7 +2461,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			do_myell(vch, buf, ch);
 		}
 
-		damage_new(ch, vch, dice(10, 10), gsn_tidalwave, DAM_DROWNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the tidal wave*");
+		damage_new(ch, vch, dice(10, 10), gsn_tidalwave, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the tidal wave*");
 	}
 
 	init_affect(&af);
@@ -2754,7 +2754,7 @@ void spell_disruption(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, 0, victim, TO_VICT);
 	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dam, sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_anchor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -2783,7 +2783,7 @@ void spell_anchor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (oldanchor)
 	{
 		act("$n dissipates harmlessly.", oldanchor, 0, 0, TO_ROOM);
-		extract_char(oldanchor, TRUE);
+		extract_char(oldanchor, true);
 	}
 
 	anchor = create_mobile(get_mob_index(MOB_VNUM_ANCHOR));
@@ -2867,7 +2867,7 @@ void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, void *vo, int 
 		act("$n plummets suddenly from the sky, hitting the ground hard!", ch, 0, 0, TO_ROOM);
 
 		do_look(ch, "auto");
-		damage_new(ch, ch, dice(10, 10), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, ch, dice(10, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		check_plasma_thread(ch, -1);
 	}
 }
@@ -2971,7 +2971,7 @@ void spell_crush(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, 0, victim, TO_VICT);
 	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dam, sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "crushing force");
+	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "crushing force");
 }
 
 void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -3109,7 +3109,7 @@ void spell_overbear(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("An invisible weight bears down upon you, forcing you to your knees!", victim, 0, 0, TO_CHAR);
 		act("$n loses his footing, staggering under an unseen burden!", victim, 0, 0, TO_ROOM);
 
-		damage_new(ch, victim, dice(2, 6), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "overbearing force");
+		damage_new(ch, victim, dice(2, 6), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "overbearing force");
 		victim->position = POS_RESTING;
 		LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 	}
@@ -3254,7 +3254,7 @@ void spell_coagulate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You draw heat out of $N's bloodstream.", ch, 0, victim, TO_CHAR);
 	act("Your blood chills as $n extends a hand towards you.", ch, 0, victim, TO_VICT);
 
-	if (damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "coagulation") == -1)
+	if (damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "coagulation") == -1)
 		return;
 
 	if (is_affected(victim, gsn_bleeding))
@@ -3551,18 +3551,18 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, void *vo, i
 	if (dmod)
 	{
 		if (es > 0 && sn == gsn_agitate)
-			damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "agitation");
+			damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "agitation");
 		else if (es < 0 && sn == gsn_enervate)
-			damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "enervation");
+			damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "enervation");
 	}
 
 	if (trusts(ch, victim) && abs(es) < 2)
 	{
 		if (ch->fighting == victim)
-			stop_fighting(ch, FALSE);
+			stop_fighting(ch, false);
 
 		if (victim->fighting == ch)
-			stop_fighting(victim, FALSE);
+			stop_fighting(victim, false);
 	}
 }
 
@@ -3606,7 +3606,7 @@ void agitate_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 		dam = ch->pcdata->energy_state;
 		dam = dice(dam == 2 ? 5 : dam == 3 ? 10 : dam == 4 ? 20 : 5, 10);
 
-		damage_new(af->owner, ch, dam, gsn_agitate, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "agitation");
+		damage_new(af->owner, ch, dam, gsn_agitate, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "agitation");
 	}
 }
 
@@ -3664,10 +3664,10 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	if (crushdam > 0)
-		damage_new(ch, victim, crushdam, sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the contracting armor*");
+		damage_new(ch, victim, crushdam, sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the contracting armor*");
 
 	if (piercedam > 0)
-		damage_new(ch, victim, piercedam, sn, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the metal shards*$");
+		damage_new(ch, victim, piercedam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the metal shards*$");
 }
 
 void spell_frostbite(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -3900,9 +3900,9 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (hardness > 3 || (armor != NULL && number_percent() > 50))
 	{
 		if (ch != victim)
-			damage_new(ch, victim, dam, gsn_acid_stream, DAM_ACID, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "acid stream");
+			damage_new(ch, victim, dam, gsn_acid_stream, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "acid stream");
 		else
-			damage_new(victim, victim, dam, gsn_acid_stream, DAM_ACID, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The stream of acid*");
+			damage_new(victim, victim, dam, gsn_acid_stream, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The stream of acid*");
 
 		return;
 	}
@@ -3971,9 +3971,9 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	if (ch != victim)
-		damage_new(ch, victim, dam, gsn_acid_stream, DAM_ACID, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "acid stream");
+		damage_new(ch, victim, dam, gsn_acid_stream, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "acid stream");
 	else
-		damage_new(victim, victim, dam, gsn_acid_stream, DAM_ACID, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The stream of acid*");
+		damage_new(victim, victim, dam, gsn_acid_stream, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The stream of acid*");
 }
 
 void spell_acid_vein(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4051,7 +4051,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (number_percent() > get_skill(ch, gsn_corrode_lock))
 	{
 		send_to_char("Your acid touch has no effect on the lock.\n\r", ch);
-		check_improve(ch, gsn_pick_lock, FALSE, 2);
+		check_improve(ch, gsn_pick_lock, false, 2);
 		return;
 	}
 	else
@@ -4126,7 +4126,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			act("You touch $p with an acid coated hand and corrode the lock.", ch, obj, NULL, TO_CHAR);
 			act("$n corrodes the lock on $p with his acid touch.", ch, obj, NULL, TO_ROOM);
 
-			check_improve(ch, gsn_corrode_lock, TRUE, 2);
+			check_improve(ch, gsn_corrode_lock, true, 2);
 			return;
 		}
 		else if ((door = find_door(ch, arg)) >= 0)
@@ -4166,7 +4166,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			send_to_char("You corrode the lock on the door.\n\r", ch);
 			act("$n corrodes the lock on $T.", ch, NULL, pexit->keyword, TO_ROOM);
 
-			check_improve(ch, gsn_corrode_lock, TRUE, 2);
+			check_improve(ch, gsn_corrode_lock, true, 2);
 
 			if ((to_room = pexit->u1.to_room) != NULL
 				&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
@@ -4225,7 +4225,7 @@ void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (!af->owner)
 		af->owner = ch;
 
-	damage_new(af->owner, ch, dice(af->level, 4), gsn_attract, DAM_LIGHTNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning strike*");
+	damage_new(af->owner, ch, dice(af->level, 4), gsn_attract, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning strike*");
 
 	if (!IS_AWAKE(ch))
 		ch->position = POS_STANDING;
@@ -4317,7 +4317,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	if (saves_spell(level, victim, DAM_LIGHTNING))
 		dam /= 2;
 
-	damage_new(ch, victim, dice(level, 8), sn, DAM_LIGHTNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
+	damage_new(ch, victim, dice(level, 8), sn, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 }
 
 void spell_grounding(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4698,7 +4698,7 @@ void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_INTERNAL))
 		dam /= 2;
 
-	damage_new(ch, victim, dam, sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4795,11 +4795,11 @@ void spell_molten_stones(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You grab a large stone, liquify it with a burst of heat, and send it flying at $N!", ch, 0, victim, TO_CHAR);
 	act("$n grabs a large stone, liquifies it in a flash and sends it flying at you!", ch, 0, victim, TO_VICT);
 
-	damage_new(ch, victim, blunt, sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "molten stone");
+	damage_new(ch, victim, blunt, sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "molten stone");
 
 	send_to_char("Your flesh sizzles as the hurled magma strikes you!\n\r", victim);
 
-	damage_new(ch, victim, fire, sn, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the searing heat*");
+	damage_new(ch, victim, fire, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the searing heat*");
 }
 
 void spell_heat_earth(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4838,7 +4838,7 @@ void spell_heat_earth(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (IS_AFFECTED(vch, AFF_FLYING))
 			dam /= 2;
 
-		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "scorched earth");
+		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "scorched earth");
 	}
 }
 
@@ -4959,7 +4959,7 @@ void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_COLD))
 		dam /= 2;
 
-	damage_new(ch, victim, dam, sn, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -5009,7 +5009,7 @@ void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	ch->disrupted = FALSE;
+	ch->disrupted = false;
 
 	dirptr = (int *)talloc_struct(sizeof(int));
 	*dirptr = dir;
@@ -5024,7 +5024,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 {
 	char buf[MSL];
 	int i, dir, range;
-	bool verbose = FALSE, stopped = FALSE;
+	bool verbose = false, stopped = false;
 	EXIT_DATA *pexit;
 	char *direction;
 	CHAR_DATA *wch, *wch_next;
@@ -5055,7 +5055,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 	if (!IS_SET(ch->comm, COMM_BRIEF))
 	{
 		SET_BIT(ch->comm, COMM_BRIEF);
-		verbose = TRUE;
+		verbose = true;
 	}
 
 	pexit = ch->in_room->exit[dir];
@@ -5071,7 +5071,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 
 	for (i = 1; i <= range; i++)
 	{
-		move_char(ch, dir, TRUE, TRUE);
+		move_char(ch, dir, true, true);
 
 		pexit = ch->in_room->exit[dir];
 
@@ -5083,7 +5083,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 			send_to_char("Your rapid motion comes to a crashing halt as you strike an obstacle!\n\r", ch);
 			act("$n flies into the room and crashes into the obstruction $tward!", ch, direction, 0, TO_ROOM);
 
-			damage_new(ch, ch, dice(10, 10), gsn_bash, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bone-jarring collision");
+			damage_new(ch, ch, dice(10, 10), gsn_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bone-jarring collision");
 			WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
 			ch->position = POS_RESTING;
@@ -5109,7 +5109,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 				WAIT_STATE(ch, PULSE_VIOLENCE);
 
 				ch->position = POS_RESTING;
-				stopped = TRUE;
+				stopped = true;
 				break;
 			}
 		}
@@ -5209,7 +5209,7 @@ void spell_unbreakable(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	damage_new(ch, victim, dice(6, 9), TYPE_UNDEFINED, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the intense cold*");
+	damage_new(ch, victim, dice(6, 9), TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the intense cold*");
 
 	if (is_affected(victim, gsn_unbreakable))
 	{
@@ -5425,14 +5425,14 @@ void spell_pure_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
 	{
-		cleansed = FALSE;
+		cleansed = false;
 
 		for (laf = ch->affected; laf != NULL; laf = laf->next)
 		{
 			if (skill_table[laf->type].dispel & CAN_PURIFY)
 			{
 				affect_strip(vch, laf->type);
-				cleansed = TRUE;
+				cleansed = true;
 			}
 		}
 
@@ -5466,7 +5466,7 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n gestures at the ground and a jagged lance of ice erupts, impaling you!", ch, 0, victim, TO_VICT);
 	act("$n gestures at the ground and a jagged lance of ice erupts, impaling $N!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dam, sn, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
 	if (number_percent() <= 15)
 	{
@@ -5698,7 +5698,7 @@ void spell_hailstorm(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (saves_spell(level, vch, DAM_COLD))
 			dam /= 2;
 
-		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "hailstorm");
+		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "hailstorm");
 	}
 }
 
@@ -5745,7 +5745,7 @@ void spell_ice_blast(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends an arm toward you and sends forth a frigid blast!", ch, 0, victim, TO_VICT);
 	act("$n extends an arm toward $N and sends forth a frigid blast!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dice(level, 3), gsn_ice_blast, DAM_COLD, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice(level, 3), gsn_ice_blast, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
 	for (obj = victim->carrying; obj; obj = obj_next)
 	{
@@ -5804,7 +5804,7 @@ void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	OBJ_DATA *obj = NULL;
 	AFFECT_DATA af;
-	bool puddle = FALSE, fountain = FALSE;
+	bool puddle = false, fountain = false;
 
 	if (is_affected(ch, gsn_icy_carapace))
 	{
@@ -5817,10 +5817,10 @@ void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		for (obj = ch->in_room->contents; obj; obj = obj->next_content)
 		{
 			if (obj->item_type == ITEM_FOUNTAIN)
-				fountain = TRUE;
+				fountain = true;
 
 			if (obj->pIndexData->vnum == OBJ_VNUM_PUDDLE)
-				puddle = TRUE;
+				puddle = true;
 		}
 
 		if (!puddle && !fountain)
@@ -6005,9 +6005,9 @@ void spell_metal_shards(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			dam = (int)((float)dam * 1.33);
 		}
 
-		damage_new(ch, victim, dam, sn, DAM_PIERCE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "metal shard");
+		damage_new(ch, victim, dam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "metal shard");
 
-		if (is_safe_new(ch, victim, FALSE))
+		if (is_safe_new(ch, victim, false))
 			return;
 
 		if (ch->in_room != victim->in_room)
@@ -6056,8 +6056,8 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 {
 	OBJ_DATA *weapon = (OBJ_DATA *)vo;
 	OBJ_APPLY_DATA *hitapp = NULL, *damapp = NULL;
-	bool damfound = FALSE, hitfound = FALSE;
-	bool dambonus = FALSE, hitbonus = FALSE;
+	bool damfound = false, hitfound = false;
+	bool dambonus = false, hitbonus = false;
 	int chance = 50, diff, oldhit = 0, olddam = 0;
 
 	if (weapon->item_type != ITEM_WEAPON)
@@ -6093,15 +6093,15 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	if (diff > 50)
 	{
-		hitbonus = TRUE;
-		dambonus = TRUE;
+		hitbonus = true;
+		dambonus = true;
 	}
 	else if (diff > 0)
 	{
 		if (number_percent() > 50)
-			dambonus = TRUE;
+			dambonus = true;
 		else
-			hitbonus = TRUE;
+			hitbonus = true;
 	}
 	else if (diff > -25)
 	{
@@ -6113,7 +6113,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	{
 		act("$p shudders and explodes in your hands!", ch, weapon, 0, TO_CHAR);
 		act("$p shudders and explodes in $n's hands!", ch, weapon, 0, TO_ROOM);
-		damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
+		damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 		extract_obj(weapon);
 		return;
 	}
@@ -6124,7 +6124,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		{
 			if (hitapp->location == APPLY_HITROLL && hitapp->type == sn)
 			{
-				hitfound = TRUE;
+				hitfound = true;
 				oldhit = hitapp->modifier;
 				break;
 			}
@@ -6147,7 +6147,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		{
 			if (damapp->location == APPLY_DAMROLL && damapp->type == sn)
 			{
-				damfound = TRUE;
+				damfound = true;
 				olddam = damapp->modifier;
 				break;
 			}
@@ -6188,7 +6188,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 			{
 				act("$p shudders and explodes in your hands!", ch, weapon, 0, TO_CHAR);
 				act("$p shudders and explodes in $n's hands!", ch, weapon, 0, TO_ROOM);
-				damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
+				damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 				extract_obj(weapon);
 				return;
 			}
@@ -6215,7 +6215,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 			{
 				act("$p shudders and explodes in your hands!", ch, weapon, 0, TO_CHAR);
 				act("$p shudders and explodes in $n's hands!", ch, weapon, 0, TO_ROOM);
-				damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
+				damage_new(ch, ch, dice(weapon->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 				extract_obj(weapon);
 				return;
 			}
@@ -6313,7 +6313,7 @@ void spell_fortify_armor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		act("$p shudders and explodes in your hands!", ch, armor, 0, TO_CHAR);
 		act("$p shudders and explodes in $n's hands!", ch, armor, 0, TO_ROOM);
-		damage_new(ch, ch, dice(armor->level, 5), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
+		damage_new(ch, ch, dice(armor->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 		extract_obj(armor);
 	}
 }
@@ -6399,7 +6399,7 @@ void spell_alter_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		act("$p shudders and explodes in your hands!", ch, obj, 0, TO_CHAR);
 		act("$p shudders and explodes in $n's hands!", ch, obj, 0, TO_ROOM);
-		damage_new(ch, ch, dice(obj->level, 5), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
+		damage_new(ch, ch, dice(obj->level, 5), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the explosion*");
 		extract_obj(obj);
 	}
 }
@@ -6653,7 +6653,7 @@ void spell_emulsify(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n writhes in agony as $s midsection suddenly distends.", victim, 0, 0, TO_ROOM);
 	act("Your insides twist with pain, as your organs begin to dissolve into viscous pools.", ch, 0, victim, TO_VICT);
 
-	damage_new(ch, victim, dam, sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "emulsification");
+	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "emulsification");
 }
 
 void spell_rust(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -6811,7 +6811,7 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 	int color = number_range(1, 7), dam = 0;
-	bool poisoned = FALSE, disint = FALSE, blinded = FALSE;
+	bool poisoned = false, disint = false, blinded = false;
 
 	act("You send a diffuse spray of varicolored light streaking towards $N!", ch, 0, victim, TO_CHAR);
 	act("$n sends a diffuse spray of varicolored light streaking towards you!", ch, 0, victim, TO_VICT);
@@ -6859,7 +6859,7 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 				dam /= 2;
 
 			if (!saves_spell(level, victim, DAM_POISON))
-				poisoned = TRUE;
+				poisoned = true;
 
 			break;
 		case 5:
@@ -6883,7 +6883,7 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 				dam /= 2;
 
 			if (saves_spell(level, victim, DAM_CHARM))
-				blinded = TRUE;
+				blinded = true;
 
 			break;
 		case 7:
@@ -6893,12 +6893,12 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 			dam = dice(level, 3);
 
 			if (!saves_spell(level, victim, DAM_INTERNAL))
-				disint = TRUE;
+				disint = true;
 
 			break;
 	}
 
-	damage_new(ch, victim, dam, sn, DAM_LIGHT, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "prismatic spray");
+	damage_new(ch, victim, dam, sn, DAM_LIGHT, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "prismatic spray");
 
 	if (poisoned && !is_affected(victim, gsn_poison))
 	{
@@ -6957,7 +6957,7 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		}
 		else
 		{
-			damage_new(ch, victim, dice(level, 9), sn, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "disintegration");
+			damage_new(ch, victim, dice(level, 9), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "disintegration");
 		}
 	}
 }
@@ -7094,10 +7094,10 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			do_myell(vch, buf, ch);
 		}
 
-		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	}
 
-	stop_fighting(ch, TRUE);
+	stop_fighting(ch, true);
 
 	char_from_room(ch);
 	char_to_room(ch, pRoomIndex);
@@ -7121,7 +7121,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			do_myell(vch, buf, ch);
 		}
 
-		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	}
 }
 
@@ -7159,7 +7159,7 @@ void sphere_of_plasma_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	act("A tendril of plasma from the sphere encircling you lashes out at $N!", ch, 0, ch->fighting, TO_CHAR);
 	act("A writhing, pulsating tendril of plasma lashes out from $n's body!", ch, 0, 0, TO_ROOM);
 
-	damage_new(ch, ch->fighting, af->level, gsn_sphere_of_plasma, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, ch->fighting, af->level, gsn_sphere_of_plasma, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
 	if (--af->modifier <= 0)
 		affect_remove(ch, af);
@@ -7272,7 +7272,7 @@ void spell_essence_of_plasma(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 void essence_of_plasma_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
 	CHAR_DATA *victim;
-	bool valid_target = FALSE, found = FALSE, fighting = FALSE;
+	bool valid_target = false, found = false, fighting = false;
 	int dam;
 
 	if (!room->people)
@@ -7280,8 +7280,8 @@ void essence_of_plasma_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	for (victim = room->people; victim; victim = victim->next_in_room)
 	{
-		if (!is_safe_new(af->owner, victim, FALSE))
-			valid_target = TRUE;
+		if (!is_safe_new(af->owner, victim, false))
+			valid_target = true;
 	}
 
 	if (!valid_target)
@@ -7291,19 +7291,19 @@ void essence_of_plasma_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	{
 		for (victim = room->people; victim; victim = victim->next_in_room)
 		{
-			if (is_safe_new(af->owner, victim, FALSE))
+			if (is_safe_new(af->owner, victim, false))
 				continue;
 
 			if (number_percent() < 80)
 				continue;
 
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
 
 	if (victim->fighting)
-		fighting = TRUE;
+		fighting = true;
 
 	if (af->modifier == 0)
 		af->modifier = 1;
@@ -7313,10 +7313,10 @@ void essence_of_plasma_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	act("The ball of plasma hurtles about wildly, discharging pure energy into you!", victim, 0, 0, TO_CHAR);
 	act("The ball of plasma hurtles about wildly, discharging pure energy into $n!", victim, 0, 0, TO_ROOM);
 
-	damage_new(af->owner, victim, dam, gsn_essence_of_plasma, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the essence of plasma*");
+	damage_new(af->owner, victim, dam, gsn_essence_of_plasma, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the essence of plasma*");
 
 	if (!fighting && !IS_NPC(victim))
-		stop_fighting(victim, TRUE);
+		stop_fighting(victim, true);
 
 	af->modifier++;
 
@@ -7461,7 +7461,7 @@ void check_plasma_thread(CHAR_DATA *ch, int direction)
 		act("A thread of plasma pulls $N along with $n.", ch, 0, victim, TO_ROOM);
 		act("The thread of plasma pulls you along with $N.", victim, 0, ch, TO_CHAR);
 		act("A thread of plasma pulls $n along with $N.", victim, 0, ch, TO_ROOM);
-		move_char(victim, direction, TRUE, TRUE);
+		move_char(victim, direction, true, true);
 	}
 
 	if (ch->in_room != victim->in_room)
@@ -7543,7 +7543,7 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		dam = dice(obj->level, 2) / 2;
 
-		damage_new(ch, victim, dam, sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The molten rock*");
+		damage_new(ch, victim, dam, sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The molten rock*");
 		extract_obj(obj);
 	}
 
@@ -7555,7 +7555,7 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			act("$N's stoneskin melts under the intense heat, scorching $m!", ch, obj, victim, TO_CHAR);
 			act("$N's stoneskin melts under the intense heat, scorching $m!", ch, obj, victim, TO_NOTVICT);
 
-			damage_new(ch, victim, dice(ch->level, 10), sn, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The molten rock*");
+			damage_new(ch, victim, dice(ch->level, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The molten rock*");
 		}
 	}
 }
@@ -7565,7 +7565,7 @@ void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	ROOM_INDEX_DATA *to_room = NULL, *old_room = NULL;
 	EXIT_DATA *pexit;
 	int where, count = 0, mcount = (ch->level / 15) + 2;
-	bool next = TRUE;
+	bool next = true;
 
 	old_room = ch->in_room;
 	where = direction_lookup(target_name);
@@ -7751,7 +7751,7 @@ void spell_mana_beam(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	af->modifier = (int)((float)af->modifier * 0.9);
 
-	damage_new(ch, victim, dam, sn, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana beam");
+	damage_new(ch, victim, dam, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana beam");
 
 	if (af->modifier == 0)
 	{
@@ -7795,7 +7795,7 @@ void spell_detonation(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (vch == ch)
 			continue;
 
-		if (!IS_NPC(vch) && is_safe_new(ch, vch, TRUE))
+		if (!IS_NPC(vch) && is_safe_new(ch, vch, true))
 			continue;
 
 		if (is_same_group(ch, vch) || is_same_cabal(ch, vch))
@@ -7804,7 +7804,7 @@ void spell_detonation(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		dam = number_range(45, 60) * af->modifier;
 		dam /= 100;
 
-		damage_new(ch, vch, dam, sn, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "detonation");
+		damage_new(ch, vch, dam, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "detonation");
 	}
 
 	extract_obj(obj);
@@ -7816,7 +7816,7 @@ void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	AFFECT_DATA *paf, af;
 	OBJ_DATA *obj;
 	int charges;
-	bool affected = FALSE;
+	bool affected = false;
 	int count = 0;
 
 	obj = get_eq_char(ch, WEAR_HOLD);
@@ -7845,7 +7845,7 @@ void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				count++;
 		}
 
-		affected = TRUE;
+		affected = true;
 	}
 
 	if (count >= (ch->level / 25))
@@ -7973,5 +7973,5 @@ void infusion_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	act("You writhe in pain as the mana continues to flow out of you.", ch, 0, 0, TO_CHAR);
 	act("$n writhes in pain as the mana continues to flow out of $m.", ch, 0, 0, TO_ROOM);
 
-	damage_new(af->owner ? af->owner : ch, ch, af->owner ? af->owner->level / 2 : ch->level / 2, gsn_mana_sickness, TRUE, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the escaping mana*");
+	damage_new(af->owner ? af->owner : ch, ch, af->owner ? af->owner->level / 2 : ch->level / 2, gsn_mana_sickness, true, DAM_OTHER, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the escaping mana*");
 }

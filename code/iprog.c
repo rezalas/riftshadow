@@ -214,7 +214,7 @@ void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 		return;
 	}
 
-	if (!str_cmp(progtype, "loot_prog")) /* Returning FALSE prevents taking */
+	if (!str_cmp(progtype, "loot_prog")) /* Returning false prevents taking */
 	{
 		obj->iprogs->loot_prog = (IPROG_FUN_LOOT *)iprog_table[i].function;
 
@@ -303,7 +303,7 @@ void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 		return;
 	}
 
-	if (!str_cmp(progtype, "death_prog")) /* returning TRUE prevents death */
+	if (!str_cmp(progtype, "death_prog")) /* returning true prevents death */
 	{
 		obj->iprogs->death_prog = (IPROG_FUN_DEATH *)iprog_table[i].function;
 
@@ -417,7 +417,7 @@ bool iprog_unset(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 	}
 
 	if (!iprog_table[i].name)
-		return FALSE;
+		return false;
 
 	if (!str_cmp(progtype, "wear_prog"))
 	{
@@ -440,7 +440,7 @@ bool iprog_unset(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 
 		REMOVE_BIT(obj->progtypes, IPROG_GET);
 	}
-	else if (!str_cmp(progtype, "loot_prog")) /* Returning FALSE prevents taking */
+	else if (!str_cmp(progtype, "loot_prog")) /* Returning false prevents taking */
 	{
 		obj->iprogs->loot_prog = NULL;
 		free_pstring(obj->iprogs->loot_name);
@@ -488,7 +488,7 @@ bool iprog_unset(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 
 		REMOVE_BIT(obj->progtypes, IPROG_FIGHT);
 	}
-	else if (!str_cmp(progtype, "death_prog")) /* returning TRUE prevents death */
+	else if (!str_cmp(progtype, "death_prog")) /* returning true prevents death */
 	{
 		obj->iprogs->death_prog = NULL;
 		free_pstring(obj->iprogs->death_name);
@@ -545,7 +545,7 @@ bool iprog_unset(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 		REMOVE_BIT(obj->progtypes, IPROG_HIT);
 	}
 
-	return TRUE;
+	return true;
 }
 
 /* ITEM FUNCTIONS */
@@ -571,7 +571,7 @@ void fight_prog_devils_eye(OBJ_DATA *obj, CHAR_DATA *ch)
 	{
 		act("The Devil's Eye suddenly pivots and stares directly into $n's face!", ch, 0, ch->fighting, TO_NOTVICT);
 		act("The Devil's Eye suddenly pivots and stares directly into your face!", ch, 0, ch->fighting, TO_VICT);
-		damage_new(ch, ch->fighting, dice(12, 12), TYPE_UNDEFINED, DAM_SLASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "heartquake");
+		damage_new(ch, ch->fighting, dice(12, 12), TYPE_UNDEFINED, DAM_SLASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "heartquake");
 	}
 }
 
@@ -642,7 +642,7 @@ void fight_prog_cankerworm(OBJ_DATA *obj, CHAR_DATA *ch)
 		dam = dice((ch->level), 3);
 		act("The Cankerworm leaps from your hands momentarily!", ch, 0, 0, TO_CHAR);
 		act("The Cankerworm seems to leap from $n's hands momentarily!", ch, 0, 0, TO_ROOM);
-		damage_new(ch, ch->fighting, dam, TYPE_UNDEFINED, DAM_SLASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burrowing axe");
+		damage_new(ch, ch->fighting, dam, TYPE_UNDEFINED, DAM_SLASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "burrowing axe");
 	}
 }
 
@@ -686,7 +686,7 @@ void pulse_prog_steal(OBJ_DATA *obj, bool isTick)
 {
 	CHAR_DATA *vch, *ch = obj->carried_by;
 	OBJ_DATA *stolen = NULL;
-	bool dbreak = FALSE;
+	bool dbreak= false;
 	int invnum = number_range(0, 5), i = 0;
 
 	if (!ch || !is_worn(obj) || ch->position != POS_STANDING)
@@ -701,7 +701,7 @@ void pulse_prog_steal(OBJ_DATA *obj, bool isTick)
 		{
 			if (stolen->wear_loc == WEAR_NONE && (can_see_obj(ch, stolen)) && (invnum == i || !stolen->next_content))
 			{
-				dbreak = TRUE;
+				dbreak = true;
 				break;
 			}
 
@@ -919,8 +919,8 @@ void invoke_prog_tattoo_zethus(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		act("A flash of darkness arcs between $n and $N, leaving $N looking hopeless!", ch, 0, ch->fighting, TO_NOTVICT);
 		act("A flash of darkness arcs between you and $N as you sever $N's link with $S god.", ch, 0, ch->fighting, TO_CHAR);
 		act("Negative energy crackles in the air around you, temporarily severing your link with your god!", ch, 0, ch->fighting, TO_VICT);
-		damage_new(ch, ch->fighting, ch->level + 15, TYPE_UNDEFINED, DAM_NEGATIVE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy wave");
-		damage_new(ch, ch, ch->level - 15, TYPE_UNDEFINED, DAM_INTERNAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "exertion");
+		damage_new(ch, ch->fighting, ch->level + 15, TYPE_UNDEFINED, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy wave");
+		damage_new(ch, ch, ch->level - 15, TYPE_UNDEFINED, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "exertion");
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -952,10 +952,10 @@ void entry_prog_explosives(OBJ_DATA *obj)
 bool death_prog_explosives(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	if (!is_worn(obj))
-		return FALSE;
+		return false;
 
 	bag_explode(ch, obj, 2);
-	return FALSE;
+	return false;
 }
 
 /* explosive packs -- Dioxide */
@@ -981,7 +981,7 @@ void invoke_prog_explosives(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 				act("$n sets $p and stuffs it in $s mouth!", ch, obj, 0, TO_ROOM);
 				act("You set $p and stuff it in your mouth!", ch, obj, 0, TO_CHAR);
 
-				unequip_char(ch, obj, TRUE);
+				unequip_char(ch, obj, true);
 				bag_explode(ch, obj, 3);
 				return;
 			}
@@ -1053,7 +1053,7 @@ void fight_prog_scales(OBJ_DATA *obj, CHAR_DATA *ch)
 				act("Ethereal green tendrils reach out of $n's tattoo and lash out at you!", ch, obj, victim, TO_VICT);
 				act("Ethereal green tendrils reach out of $n's tattoo and lash out at $N!", ch, obj, victim, TO_ROOM);
 
-				damage_new(ch, victim, ch->level, TYPE_UNDEFINED, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "lashing tendrils");
+				damage_new(ch, victim, ch->level, TYPE_UNDEFINED, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "lashing tendrils");
 			}
 
 			break;
@@ -1103,15 +1103,15 @@ bool give_prog_cabal_item(OBJ_DATA *obj, CHAR_DATA *from, CHAR_DATA *to)
 	char buf[MSL];
 
 	if (!IS_CABAL_GUARD(to) || IS_IMMORTAL(to))
-		return FALSE;
+		return false;
 
 	if (from->cabal != to->cabal)
 	{
 		do_say(to, "I want nothing from the likes of you.");
-		return TRUE;
+		return true;
 	}
 
-	cabal_shudder(obj->pIndexData->cabal, TRUE);
+	cabal_shudder(obj->pIndexData->cabal, true);
 
 	sprintf(buf, "%s has given me %s.", PERS(from, to), obj->short_descr);
 	do_cb(to, buf);
@@ -1119,7 +1119,7 @@ bool give_prog_cabal_item(OBJ_DATA *obj, CHAR_DATA *from, CHAR_DATA *to)
 	obj_to_char(obj, to);
 
 	save_cabal_items();
-	return TRUE;
+	return true;
 }
 
 void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -1200,13 +1200,13 @@ void greet_prog_corpse_explode(OBJ_DATA *obj, CHAR_DATA *ch)
 	if (owner == ch)
 		return;
 
-	if (is_safe_new(ch, owner, FALSE))
+	if (is_safe_new(ch, owner, false))
 		return;
 
 	act("As $n enters, $p starts to shudder violently, then explodes!", ch, obj, 0, TO_NOTVICT);
 	act("As you enter, $p starts to shudder violently, then explodes!", ch, obj, 0, TO_CHAR);
 
-	damage_new(owner, ch, dice(obj->level, 2), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the exploding corpse*");
+	damage_new(owner, ch, dice(obj->level, 2), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the exploding corpse*");
 	extract_obj(obj);
 }
 
@@ -1235,7 +1235,7 @@ void fight_prog_horde_bear(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	WAIT_STATE(ch->fighting, (int)(PULSE_VIOLENCE * 1.9));
 
-	damage_new(ch, ch->fighting, dice(8, 8), TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "charge");
+	damage_new(ch, ch->fighting, dice(8, 8), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "charge");
 }
 
 void fight_prog_horde_lion(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -1249,7 +1249,7 @@ void fight_prog_horde_lion(OBJ_DATA *obj, CHAR_DATA *ch)
 	act("$n gets a wild look in $s eyes, clawing viciously at $N!", ch, 0, ch->fighting, TO_NOTVICT);
 	act("$n gets a wild look in $s eyes, clawing viciously at you!", ch, 0, ch->fighting, TO_VICT);
 
-	damage_new(ch, ch->fighting, dice(ch->level - 2, 4), TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "raking claws$");
+	damage_new(ch, ch->fighting, dice(ch->level - 2, 4), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "raking claws$");
 
 	if (!ch->fighting || is_affected(ch->fighting, gsn_bleeding))
 		return;
@@ -1281,7 +1281,7 @@ void fight_prog_horde_wolf(OBJ_DATA *obj, CHAR_DATA *ch)
 	act("The spirit of the Wolf enrages you as you leap at $N and sink your fangs into $S throat!", ch, 0, ch->fighting, TO_CHAR);
 	act("$n gets a wild look in $s eyes and leaps at $N, sinking $s teeth into $S throat!", ch, 0, ch->fighting, TO_NOTVICT);
 	act("$n gets a wild look in $s eyes and leaps at you, sinking $s teeth into your throat!", ch, 0, ch->fighting, TO_VICT);
-	damage_new(ch, ch->fighting, dice(ch->level, 2), TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bite");
+	damage_new(ch, ch->fighting, dice(ch->level, 2), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "bite");
 
 	if (!ch->fighting)
 		return;
@@ -1368,18 +1368,18 @@ bool death_prog_trophy_belt(OBJ_DATA *belt, CHAR_DATA *ch)
 	OBJ_DATA *newbelt;
 
 	if (!belt->value[4])
-		return FALSE;
+		return false;
 
 	extract_obj(belt);
 
 	newbelt = create_object(get_obj_index(23645), 0);
 	obj_to_char(newbelt, ch);
-	equip_char(ch, newbelt, WEAR_WAIST, FALSE);
+	equip_char(ch, newbelt, WEAR_WAIST, false);
 
 	free_trophy(ch->pcdata->trophy);
 
 	newbelt->value[4] = 0;
-	return FALSE;
+	return false;
 }
 
 void fight_prog_ruins_sword(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -1401,7 +1401,7 @@ void verb_prog_check_bounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	DESCRIPTOR_DATA *d;
 	char buf[MSL];
-	bool found = FALSE;
+	bool found= false;
 	CHAR_DATA *mob;
 	static char *const his_her[] = {"it", "his", "her"};
 
@@ -1445,7 +1445,7 @@ void verb_prog_check_bounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		{
 			if (d->character->pcdata && d->character->pcdata->bounty)
 			{
-				found = TRUE;
+				found = true;
 
 				if (d->character == ch)
 					sprintf(buf, "Hm, I see your name on this list, do you think it's wise for you to be here?");
@@ -1916,7 +1916,7 @@ void verb_prog_energize_tattoo(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	if (!saves_spell(ch->level, ch->fighting, DAM_NEGATIVE))
 	{
-		damage_new(ch, ch->fighting, dice(1, 10), TYPE_UNDEFINED, DAM_NEGATIVE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy sapping");
+		damage_new(ch, ch->fighting, dice(1, 10), TYPE_UNDEFINED, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy sapping");
 		ch->fighting->mana -= (int)(2.8 * ch->level);
 		obj->value[0]++;
 
@@ -2141,7 +2141,7 @@ void verb_prog_fire_pistol(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		act("$n turns $p sideways and busts a cap in $N's ass!", ch, obj, victim, TO_NOTVICT);
 	}
 
-	damage_new(ch, victim, number_range(200, 500), gsn_bash, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "ass cappin'");
+	damage_new(ch, victim, number_range(200, 500), gsn_bash, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "ass cappin'");
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 }
@@ -2167,13 +2167,13 @@ void verb_prog_kneel_guillotine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void hit_prog_blade_truth(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int damage)
 {
-	bool dual = FALSE;
+	bool dual= false;
 
 	if (number_percent() > 20)
 		return;
 
 	if ((get_eq_char(ch, WEAR_DUAL_WIELD)) == obj)
-		dual = TRUE;
+		dual = true;
 
 	act("$p blurs into motion as it whistles through the air.", ch, obj, 0, TO_ALL);
 
@@ -2206,7 +2206,7 @@ void hit_prog_essence_light(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int
 			{
 				act("A reluctant light flickers in $n's hands and lashes out!", ch, obj, victim, TO_ROOM);
 				act("A reluctant light flickers in your hands and lashes out!", ch, obj, victim, TO_CHAR);
-				damage_new(ch, victim, dice(3, ch->level), TYPE_UNDEFINED, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "torrent of light");
+				damage_new(ch, victim, dice(3, ch->level), TYPE_UNDEFINED, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "torrent of light");
 			}
 		}
 		else
@@ -2214,7 +2214,7 @@ void hit_prog_essence_light(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int
 			act("Waves of brilliant white light cascade from your hands, searing $n!", victim, obj, ch, TO_VICT);
 			act("Waves of brilliant white light cascade from $N's hands, searing $n!", victim, obj, ch, TO_NOTVICT);
 			act("Waves of brilliant white light cascade from $N's hands, searing you!", victim, obj, ch, TO_CHAR);
-			damage_new(ch, victim, dice(ch->level, 5), TYPE_UNDEFINED, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "blinding fury");
+			damage_new(ch, victim, dice(ch->level, 5), TYPE_UNDEFINED, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "blinding fury");
 
 			if (number_percent() <= 20)
 			{
@@ -2243,7 +2243,7 @@ void hit_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, 
 {
 	AFFECT_DATA af;
 	int leech;
-	bool dual = FALSE;
+	bool dual= false;
 
 	if (damage <= 0)
 		return;
@@ -2283,7 +2283,7 @@ void hit_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, 
 	if (IS_GOOD(victim) && number_percent() <= 40)
 	{
 		if ((get_eq_char(ch, WEAR_DUAL_WIELD)) == obj)
-			dual = TRUE;
+			dual = true;
 
 		act("$p writhes in your hands and strikes anew, thirsty for blood!", ch, obj, victim, TO_CHAR);
 		act("A mournful wail is audible as $n's black hands lash out at $N!", ch, 0, victim, TO_NOTVICT);
@@ -2404,7 +2404,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, bool isTick)
 	char buf[MSL];
 	CHAR_DATA *mob, *mob_next;
 	ROOM_INDEX_DATA *room;
-	bool found = FALSE;
+	bool found= false;
 
 	if ((room = obj->in_room) == NULL)
 		return;
@@ -2416,7 +2416,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, bool isTick)
 	{
 		if (IS_NPC(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -2435,7 +2435,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, bool isTick)
 		if (IS_NPC(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
 		{
 			act("$n dissolves into dust as the shining blue light sweeps over it!", mob, 0, 0, TO_ROOM);
-			extract_char(mob, TRUE);
+			extract_char(mob, true);
 		}
 	}
 }
@@ -2445,33 +2445,33 @@ bool loot_prog_shelf(OBJ_DATA *shelf, OBJ_DATA *obj, CHAR_DATA *ch)
 	ROOM_INDEX_DATA *room;
 	CHAR_DATA *mob;
 	int mobvnum = 0;
-	bool found = FALSE;
+	bool found= false;
 
 	if ((room = shelf->in_room) == NULL)
-		return TRUE;
+		return true;
 
 	switch (shelf->pIndexData->vnum)
 	{
 		case 2241:
 			if (room->vnum != 2375)
-				return TRUE;
+				return true;
 
 			mobvnum = 2222;
 			break;
 		case 2242:
 			if (room->vnum != 2377)
-				return TRUE;
+				return true;
 
 			mobvnum = 2220;
 			break;
 		case 2243:
 			if (room->vnum != 2379)
-				return TRUE;
+				return true;
 
 			mobvnum = 2221;
 			break;
 		default:
-			return TRUE;
+			return true;
 	}
 
 	for (mob = room->people; mob; mob = mob->next_in_room)
@@ -2481,18 +2481,18 @@ bool loot_prog_shelf(OBJ_DATA *shelf, OBJ_DATA *obj, CHAR_DATA *ch)
 
 		if (mob->pIndexData->vnum == mobvnum)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
 
 	if (!found)
-		return TRUE;
+		return true;
 
 	act("$n bars your access to $p, and you are unable to do that.", mob, shelf, ch, TO_VICT);
 	act("$N moves toward $p as though to get something from it, but $n blocks $m.", mob, shelf, ch, TO_NOTVICT);
 
-	return FALSE;
+	return false;
 }
 
 bool open_prog_sewer_casket(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -2513,7 +2513,7 @@ bool open_prog_sewer_casket(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	do_murder(skeleton, ch->name);
 
-	return FALSE;
+	return false;
 }
 
 void verb_prog_pull_hook(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
@@ -2962,7 +2962,7 @@ void communion_handler(CHAR_DATA *ch)
 			{
 				if (IS_NPC(animal) && animal->pIndexData->vnum == 23630)
 				{
-					extract_char(animal, TRUE);
+					extract_char(animal, true);
 					break;
 				}
 			}
@@ -3014,9 +3014,9 @@ void communion_handler(CHAR_DATA *ch)
 			obj_to_char(obj, ch);
 
 			if ((remove = get_eq_char(ch, WEAR_WAIST)) != NULL)
-				unequip_char(ch, remove, FALSE);
+				unequip_char(ch, remove, false);
 
-			equip_char(ch, obj, WEAR_WAIST, FALSE);
+			equip_char(ch, obj, WEAR_WAIST, false);
 
 			switch (ch->pcdata->tribe)
 			{
@@ -3060,9 +3060,9 @@ void communion_handler(CHAR_DATA *ch)
 			obj_to_char(obj, ch);
 
 			if ((remove = get_eq_char(ch, WEAR_ABOUT)) != NULL)
-				unequip_char(ch, remove, FALSE);
+				unequip_char(ch, remove, false);
 
-			equip_char(ch, obj, WEAR_ABOUT, FALSE);
+			equip_char(ch, obj, WEAR_ABOUT, false);
 
 			RS.Queue.AddToQueue(5, 1, communion_handler, ch);
 			break;
@@ -3114,7 +3114,7 @@ void verb_prog_feed_baby(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *milk;
 	OBJ_AFFECT_DATA af, af2;
-	bool found = FALSE;
+	bool found= false;
 
 	if (!is_worn(obj))
 	{
@@ -3126,7 +3126,7 @@ void verb_prog_feed_baby(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	{
 		if (milk->pIndexData->vnum == 2454)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -3237,7 +3237,7 @@ void trapdoor_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 bool open_prog_beef_balls(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	CHAR_DATA *mob;
-	bool found = FALSE;
+	bool found= false;
 
 	for (mob = char_list; mob != NULL; mob = mob->next)
 	{
@@ -3245,7 +3245,7 @@ bool open_prog_beef_balls(OBJ_DATA *obj, CHAR_DATA *ch)
 		{
 			if (mob->pIndexData->vnum == 24549)
 			{
-				found = TRUE;
+				found = true;
 				break;
 			}
 		}
@@ -3260,7 +3260,7 @@ bool open_prog_beef_balls(OBJ_DATA *obj, CHAR_DATA *ch)
 		ch->pcdata->quests[PETE_QUEST] = 2;
 	}
 
-	return TRUE;
+	return true;
 }
 
 void verb_prog_look_topbounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
@@ -3271,14 +3271,14 @@ void verb_prog_look_topbounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 void verb_prog_pour_wine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *obj2;
-	bool found = FALSE;
+	bool found= false;
 	OBJ_AFFECT_DATA af;
 
 	for (obj2 = ch->carrying; obj2 != NULL; obj2 = obj2->next_content)
 	{
 		if (obj2->pIndexData->vnum == 2412)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -3335,13 +3335,13 @@ void wine_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 void verb_prog_attach_weapon(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *pole, *finished;
-	bool found = FALSE;
+	bool found= false;
 
 	for (pole = ch->carrying; pole != NULL; pole = pole->next_content)
 	{
 		if (pole->pIndexData->vnum == 2431)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -3423,14 +3423,14 @@ void verb_prog_pull_lever(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	CHAR_DATA *mob, *check;
 	int vnum = 0;
 	char buf[MSL], buf2[MSL];
-	bool found = FALSE;
+	bool found= false;
 
 	for (check = char_list; check != NULL; check = check->next)
 	{
 		if (IS_NPC(check) && check->in_room == ch->in_room &&
 			(check->pIndexData->vnum == 24538 || check->pIndexData->vnum == 24539 || check->pIndexData->vnum == 24540))
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -3648,7 +3648,7 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 
 	ROOM_INDEX_DATA *lRoom = ch->in_room, *eleRoom, *tRoom = NULL;
 	int eDir = obj->value[0], i;
-	bool elInTransit = TRUE;
+	bool elInTransit = true;
 	char *mmsg;
 	eleRoom = get_room_index(obj->value[2]);
 
@@ -3660,7 +3660,7 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 		if (eleRoom->exit[i] && eleRoom->exit[i]->u1.to_room)
 		{
 			tRoom = eleRoom->exit[i]->u1.to_room;
-			elInTransit = FALSE;
+			elInTransit= false;
 		}
 	}
 

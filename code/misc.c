@@ -141,25 +141,25 @@ int next_sline(SPEECH_DATA *speech)
 void sort_speech(SPEECH_DATA *speech)
 {
 	LINE_DATA *lptr, *hold;
-	bool sorted = FALSE, first = FALSE;
+	bool sorted= false, first= false;
 
 	while (!sorted)
 	{
-		sorted = TRUE;
+		sorted = true;
 
 		for (lptr = speech->first_line; lptr; lptr = lptr->next)
 		{
-			first = FALSE;
+			first= false;
 
 			if (!lptr->next)
 				break;
 
 			if (lptr == speech->first_line)
-				first = TRUE;
+				first = true;
 
 			if (lptr->number > lptr->next->number)
 			{
-				sorted = FALSE;
+				sorted= false;
 
 				if (lptr->next->next)
 					lptr->next->next->prev = lptr;
@@ -226,10 +226,10 @@ bool IS_ZERO_VECTOR(long vector[])
 	for (int i = 0; i < MAX_BITVECTOR; i++)
 	{
 		if (vector[i] != 0)
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool vector_equal(long vector1[], long vector2[])
@@ -237,10 +237,10 @@ bool vector_equal(long vector1[], long vector2[])
 	for (int i = 0; i < MAX_BITVECTOR; i++)
 	{
 		if (vector1[i] != vector2[i])
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 void copy_vector(long copy[], const long original[])
@@ -465,7 +465,7 @@ void do_chess(CHAR_DATA *ch, char *argument)
 	int col_from, row_from, col_to, row_to;
 	OBJ_DATA *board;
 	CHAR_DATA *victim;
-	bool found = FALSE;
+	bool found= false;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -495,7 +495,7 @@ void do_chess(CHAR_DATA *ch, char *argument)
 	{
 		if (board->pIndexData->vnum == OBJ_VNUM_CHESSBOARD)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
