@@ -61,9 +61,9 @@ bool bDebug = FALSE;
   #include <sys/socket.h>
 #endif
 #include "telnet.h"
-const char echo_off_str[] = { IAC, WILL, TELOPT_ECHO, '\0' };
-const char echo_on_str[] = { IAC, WONT, TELOPT_ECHO, '\0' };
-const char go_ahead_str[] = { IAC, GA, '\0' };
+const char echo_off_str[] = { static_cast<char>(IAC), static_cast<char>(WILL), static_cast<char>(TELOPT_ECHO), '\0' };
+const char echo_on_str[] = { static_cast<char>(IAC), static_cast<char>(WONT), static_cast<char>(TELOPT_ECHO), '\0' };
+const char go_ahead_str[] = { static_cast<char>(IAC), static_cast<char>(GA), '\0' };
 
 /*
  * OS-dependent declarations.
