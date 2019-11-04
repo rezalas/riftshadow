@@ -130,7 +130,7 @@ const 	struct	race_type	race_table	[]		=
 	/* Default race -- DO NOT REMOVE OR CHANGE */
 	
     {
-		"unique",		FALSE,
+		"unique",		false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -146,7 +146,7 @@ const 	struct	race_type	race_table	[]		=
 	/* PC races */
 	
 	{
-		"human", TRUE,
+		"human", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -160,7 +160,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"dwarf", TRUE,
+		"dwarf", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -174,7 +174,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"duergar", TRUE,
+		"duergar", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -188,7 +188,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"elf", TRUE,
+		"elf", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -202,7 +202,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"drow", TRUE,
+		"drow", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -216,7 +216,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"celestial", TRUE,
+		"celestial", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -230,7 +230,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"planar", TRUE,
+		"planar", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -244,7 +244,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"abyss", TRUE,
+		"abyss", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -258,7 +258,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"sidhe", TRUE,
+		"sidhe", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_FLYING, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -272,7 +272,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"halfling", TRUE,
+		"halfling", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_SNEAK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -286,7 +286,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"imp", TRUE,
+		"imp", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_FLYING, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -300,7 +300,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"minotaur", TRUE,
+		"minotaur", true,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -316,7 +316,7 @@ const 	struct	race_type	race_table	[]		=
 	/* NPC races needed for areas */
 	
 	{
-		"avian", FALSE,
+		"avian", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_FLYING, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -330,7 +330,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"bat", FALSE,
+		"bat", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_FLYING, AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_DODGE, OFF_FAST, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -344,7 +344,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"bear", FALSE,
+		"bear", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_DODGE, OFF_FAST, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -358,7 +358,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"beholder", FALSE,
+		"beholder", false,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, AFF_FLYING, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -372,7 +372,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"cat", FALSE,
+		"cat", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, OFF_DODGE, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -386,7 +386,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"centaur", FALSE,
+		"centaur", false,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -400,7 +400,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"centipede", FALSE,
+		"centipede", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -414,7 +414,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"demon", FALSE,
+		"demon", false,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_TRIP, OFF_DODGE, OFF_BASH, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -428,7 +428,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"dog", FALSE,
+		"dog", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -442,7 +442,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"dragon", FALSE,
+		"dragon", false,
 		{ACT_SMARTTRACK, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, AFF_FLYING, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_TAIL, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -456,7 +456,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"fido", FALSE,
+		"fido", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -470,7 +470,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"fish", FALSE,
+		"fish", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_WATERBREATH, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_DODGE, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -484,7 +484,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"fox", FALSE,
+		"fox", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, OFF_DODGE, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -498,7 +498,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"goblin", FALSE,
+		"goblin", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -512,7 +512,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"grimalkin", FALSE,
+		"grimalkin", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -526,7 +526,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"hobgoblin", FALSE,
+		"hobgoblin", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -540,7 +540,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"insect", FALSE,
+		"insect", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -554,7 +554,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"kobold", FALSE,
+		"kobold", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -568,7 +568,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"lich", FALSE,
+		"lich", false,
 		{ACT_UNDEAD, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, AFF_DETECT_INVIS, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -582,7 +582,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"lizard", FALSE,
+		"lizard", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -596,7 +596,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"pig", FALSE,
+		"pig", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -610,7 +610,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"rabbit", FALSE,
+		"rabbit", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, OFF_DODGE, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -624,7 +624,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"rakshasa", FALSE,
+		"rakshasa", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, AFF_DETECT_INVIS, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -638,7 +638,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"rat", FALSE,
+		"rat", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, AFF_DETECT_INVIS, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -652,7 +652,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"skeleton", FALSE,
+		"skeleton", false,
 		{ACT_UNDEAD, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_KICK_DIRT, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -666,7 +666,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"snake", FALSE,
+		"snake", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -680,7 +680,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"spectre", FALSE,
+		"spectre", false,
 		{ACT_UNDEAD, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_FLYING, AFF_PASS_DOOR, AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -694,7 +694,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"spirit", FALSE,
+		"spirit", false,
 		{ACT_UNDEAD, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_FLYING, AFF_PASS_DOOR, AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -708,7 +708,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"troll", FALSE,
+		"troll", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -722,7 +722,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"vampire", FALSE,
+		"vampire", false,
 		{ACT_UNDEAD, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -736,7 +736,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"water fowl", FALSE,
+		"water fowl", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_WATERBREATH, AFF_FLYING, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, OFF_DODGE, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -750,7 +750,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 
 	{
-		"wolf", FALSE,
+		"wolf", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, OFF_DODGE, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -764,7 +764,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"wyvern", FALSE,
+		"wyvern", false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DETECT_INVIS, AFF_FLYING, AFF_DETECT_HIDDEN, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{OFF_FAST, OFF_DODGE, OFF_BASH, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -778,7 +778,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		"zombie", FALSE,
+		"zombie", false,
 		{ACT_UNDEAD, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{AFF_DARK_VISION, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
@@ -792,7 +792,7 @@ const 	struct	race_type	race_table	[]		=
 	},
 	
 	{
-		NULL, FALSE,
+		NULL, false,
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},
 		{NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG, NO_FLAG},

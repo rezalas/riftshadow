@@ -34,7 +34,7 @@ bool rprog_unset(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 	}
 
 	if (!rprog_table[i].name)
-		return FALSE;
+		return false;
 
 	// IF YOU ADD A NEW TYPE ALSO PUT IT IN DB.C DO_ADUMP
 	if (!str_cmp(progtype, "pulse_prog"))
@@ -74,7 +74,7 @@ bool rprog_unset(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 		REMOVE_BIT(room->progtypes, RPROG_OPEN);
 	}
 
-	return TRUE;
+	return true;
 }
 
 void rprog_set(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
@@ -232,7 +232,7 @@ void entry_prog_sidhe_ankle(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 	send_to_char("You feel a sharp pain in your ankle as your foot slips on a loose rock.\n\r", ch);
 	act("$n winces in pain as $e twists his ankle on a loose rock.", ch, 0, 0, TO_ROOM);
 
-	damage_new(ch, ch, dice(ch->level, 2), TYPE_UNDEFINED, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "twisted ankle");
+	damage_new(ch, ch, dice(ch->level, 2), TYPE_UNDEFINED, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "twisted ankle");
 
 	if (number_percent() < 20 && ch->legs > 0)
 	{
@@ -258,22 +258,22 @@ void entry_prog_sidhe_ankle(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 bool open_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
 {
 	OBJ_DATA *obj, *obj2;
-	bool found = FALSE;
+	bool found= false;
 
 	for (obj2 = ch->carrying; obj2 != NULL; obj2 = obj2->next_content)
 	{
 		if (obj2->pIndexData->vnum == 24596)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
 
 	if (found)
-		return TRUE;
+		return true;
 
 	if (!IS_SET(exit->exit_info, EX_LOCKED))
-		return TRUE;
+		return true;
 
 	obj = create_object(get_obj_index(24596), 1);
 	send_to_char("It's locked...\n\r", ch);
@@ -281,26 +281,26 @@ bool open_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *ex
 	act("With a sudden flash of lavender light, a pudgy hand pops into existence and gives you a key!", ch, 0, 0, TO_CHAR);
 	act("With a sudden flash of lavender light, a pudgy hand pops into existence gives $n a key!", ch, 0, 0, TO_ROOM);
 
-	return FALSE;
+	return false;
 }
 
 bool move_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 {
 	EXIT_DATA *exit = room->exit[dir];
 	OBJ_DATA *obj;
-	bool found = FALSE;
+	bool found= false;
 
 	for (obj = ch->carrying; obj != NULL; obj = obj->next)
 	{
 		if (obj->pIndexData->vnum == 24596)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
 
 	if (IS_SET(exit->exit_info, EX_CLOSED))
-		return FALSE;
+		return false;
 
 	SET_BIT(exit->exit_info, EX_CLOSED);
 	SET_BIT(exit->exit_info, EX_LOCKED);
@@ -315,7 +315,7 @@ bool move_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	if (room->people)
 		act("The eastern door slams shut.", room->people, 0, 0, TO_ROOM);
 
-	return TRUE;
+	return true;
 }
 
 bool move_prog_door_close(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
@@ -323,7 +323,7 @@ bool move_prog_door_close(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	EXIT_DATA *exit = room->exit[dir];
 
 	if (IS_SET(exit->exit_info, EX_CLOSED))
-		return TRUE;
+		return true;
 
 	act("The door to the north closes up behind you, locking with a tiny click.", ch, 0, 0, TO_CHAR);
 	act("The door to the south closes up behind $n, locking with a tiny click.", ch, 0, 0, TO_ROOM);
@@ -331,7 +331,7 @@ bool move_prog_door_close(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	SET_BIT(exit->exit_info, EX_LOCKED);
 	SET_BIT(exit->exit_info, EX_NONOBVIOUS);
 
-	return TRUE;
+	return true;
 }
 
 void pulse_prog_mudschool_snake(ROOM_INDEX_DATA *room)
@@ -385,7 +385,7 @@ void pulse_prog_mudschool_snake(ROOM_INDEX_DATA *room)
 bool open_prog_bust_room(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
 {
 	send_to_char("You see no door south here.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool open_prog_nodoor(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
@@ -401,7 +401,7 @@ bool open_prog_nodoor(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
 
 	sprintf(buf, "You see no door %s here.\n\r", dir_name[dir]);
 	send_to_char(buf, ch);
-	return FALSE;
+	return false;
 }
 
 bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
@@ -409,10 +409,10 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	ROOM_INDEX_DATA *room2 = get_room_index(24559);
 	EXIT_DATA *exit = room2->exit[DIR_EAST];
 	OBJ_DATA *obj, *corpse;
-	bool found = FALSE;
+	bool found= false;
 
 	if (IS_SET(exit->exit_info, EX_CLOSED))
-		return TRUE;
+		return true;
 
 	SET_BIT(exit->exit_info, EX_CLOSED);
 	SET_BIT(exit->exit_info, EX_LOCKED);
@@ -424,7 +424,7 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	{
 		if (corpse->pIndexData->vnum == 24558)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -432,15 +432,15 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	if (!found)
 	{
 		bug("Corpse in 24560 missing.  Odd.", 0);
-		return TRUE;
+		return true;
 	}
 
 	if (corpse->contains)
-		return TRUE;
+		return true;
 
 	obj = create_object(get_obj_index(24560), 10);
 	obj_to_obj(obj, corpse);
-	return TRUE;
+	return true;
 }
 
 bool move_prog_horde_shrine(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
@@ -448,16 +448,16 @@ bool move_prog_horde_shrine(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	if (dir == DIR_SOUTH && !is_affected(ch, gsn_horde_communion))
 	{
 		send_to_char("Alas, you cannot go that way.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (dir == DIR_SOUTH && is_affected(ch, gsn_horde_communion))
 	{
 		send_to_char("With a muted hush, the bushes part easily, allowing you passage to the south.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
-	return TRUE;
+	return true;
 }
 
 void entry_prog_iseldheim_lift(ROOM_INDEX_DATA *room, CHAR_DATA *ch)

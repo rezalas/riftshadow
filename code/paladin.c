@@ -4,7 +4,7 @@ void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int 
 {
 	CHAR_DATA *to;
 	AFFECT_DATA af;
-	bool hasgroup = FALSE;
+	bool hasgroup= false;
 
 	if (is_affected(ch, sn))
 	{
@@ -15,7 +15,7 @@ void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int 
 	for (to = ch->in_room->people; to != NULL; to = to->next_in_room)
 	{
 		if (is_same_group(to, ch) && to != ch)
-			hasgroup = TRUE;
+			hasgroup = true;
 		else
 			continue;
 
@@ -50,7 +50,7 @@ void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int 
 		}
 	}
 
-	if (hasgroup == FALSE)
+	if (hasgroup == false)
 	{
 		send_to_char("You need a party to perform these rites.\n\r", ch);
 		return;
@@ -105,7 +105,7 @@ void spell_spiritual_hammer(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	if (saves_spell(level, victim, DAM_HOLY))
 		dam /= 2;
 
-	damage_new(ch, victim, (int)dam, sn, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "spiritual hammer");
+	damage_new(ch, victim, (int)dam, sn, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "spiritual hammer");
 }
 
 void do_turn_undead(CHAR_DATA *ch, char *argument)
@@ -115,7 +115,7 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim, *v_next;
 	OBJ_DATA *corpse;
 	AFFECT_DATA af;
-	bool forceflee = FALSE;
+	bool forceflee= false;
 
 	if (get_skill(ch, gsn_turn_undead) == 0)
 	{
@@ -152,14 +152,14 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 		{
 			act("Horrible screams of undeath fill the air as $n is reduced to scattered ashes by brilliant white flames.", victim, 0, ch, TO_ROOM);
 			raw_kill(ch, victim);
-			forceflee = FALSE;
+			forceflee= false;
 		}
 		else if (difference > 1)
 		{
 			dam = dice(ch->level, 20);
 			act("$n is suddenly engulfed by holy fire!", victim, 0, ch, TO_ROOM);
-			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
-			forceflee = TRUE;
+			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			forceflee = true;
 		}
 		else if (difference > -5)
 		{
@@ -167,9 +167,9 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 			act("$n is burned by holy fire!", victim, 0, ch, TO_ROOM);
 
 			if (number_percent() > 50)
-				forceflee = TRUE;
+				forceflee = true;
 
-			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		}
 		else
 		{
@@ -178,15 +178,15 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 				act("$N shrieks in unholy fury and bounds toward you!", ch, 0, victim, TO_CHAR);
 				act("$n shrieks in unholy fury and bounds toward $N!", victim, 0, ch, TO_ROOM);
 				multi_hit(victim, ch, TYPE_UNDEFINED);
-				forceflee = FALSE;
+				forceflee= false;
 			}
 			else
 			{
-				forceflee = FALSE;
+				forceflee= false;
 			}
 		}
 
-		if (forceflee == TRUE && !IS_SET(victim->act, ACT_SENTINEL))
+		if (forceflee == true && !IS_SET(victim->act, ACT_SENTINEL))
 		{
 			act("$n shambles away in hopes of escaping $N's holy aura!", victim, 0, ch, TO_ROOM);
 			act("$n shambles away from your holy presence!", ch, 0, victim, TO_CHAR);
@@ -208,14 +208,14 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 bool check_benevolence(CHAR_DATA *ch, CHAR_DATA *keeper)
 {
 	if (!IS_GOOD(keeper))
-		return FALSE;
+		return false;
 
 	if (number_percent() > get_skill(ch, gsn_benevolence))
-		return FALSE;
+		return false;
 
 	act("$N smiles warmly at you and bows slightly, offering you a large discount.", ch, 0, keeper, TO_CHAR);
 
-	return TRUE;
+	return true;
 }
 
 bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int dt)
@@ -226,25 +226,25 @@ bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int d
 	char *attack;
 
 	if (!is_same_group(victim, paladin))
-		return FALSE;
+		return false;
 
 	if (!IS_AWAKE(paladin))
-		return FALSE;
+		return false;
 
 	if (paladin->fighting != ch)
-		return FALSE;
+		return false;
 
 	if (!IS_NPC(ch) && (!can_pk(ch, paladin) || !can_pk(paladin, ch)))
-		return FALSE;
+		return false;
 
 	if ((skill = get_skill(paladin, gsn_intercept)) <= 1)
-		return FALSE;
+		return false;
 
 	if (get_eq_char(paladin, WEAR_SHIELD) == NULL)
-		return FALSE;
+		return false;
 
 	if (paladin == victim)
-		return FALSE;
+		return false;
 
 	for (gch = paladin->in_room->people; gch; gch = gch->next_in_room)
 	{
@@ -261,7 +261,7 @@ bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int d
 			chance = 20;
 			break;
 		default:
-			return FALSE;
+			return false;
 	}
 
 	skill = skill * (15 + get_skill(ch, gsn_shield_block) / 4) / 100;
@@ -293,8 +293,8 @@ bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int d
 		attack);
 	act(buf3, ch, 0, paladin, TO_CHAR);
 
-	check_improve(paladin, gsn_intercept, TRUE, 4);
-	return TRUE;
+	check_improve(paladin, gsn_intercept, true, 4);
+	return true;
 }
 
 void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -349,7 +349,7 @@ void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (!victim->fighting && !IS_NPC(victim))
 			do_myell(victim, buf2, ch);
 
-		damage_new(ch, victim, dam, sn, DAM_LIGHT, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dam, sn, DAM_LIGHT, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
 		if (!saves_spell(ch->level, victim, DAM_LIGHT) && !IS_AFFECTED(victim, AFF_BLIND))
 		{
@@ -399,7 +399,7 @@ void spell_voice_of_damnation(int sn, int level, CHAR_DATA *ch, void *vo, int ta
 		}
 
 		act("The terrifying voice resounds in your head, filling you with fear about your fate!", ch, 0, victim, TO_VICT);
-		damage_new(ch, victim, dice(ch->level, 5), sn, DAM_MENTAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(ch->level, 5), sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		WAIT_STATE(victim, PULSE_VIOLENCE * 1);
 	}
 }
@@ -716,13 +716,13 @@ void do_strike_of_virtue(CHAR_DATA *ch, char *argument)
 		act("You deliver a brutal blow to $N!", ch, 0, victim, TO_CHAR);
 
 		one_hit_new(ch, victim, gsn_strike_of_virtue, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, NULL);
-		check_improve(ch, gsn_strike_of_virtue, TRUE, 1);
+		check_improve(ch, gsn_strike_of_virtue, true, 1);
 	}
 	else
 	{
 		act("You swing hard, but fail to connect with your opponent.", ch, 0, 0, TO_CHAR);
-		damage(ch, victim, 0, gsn_strike_of_virtue, DAM_NONE, TRUE);
-		check_improve(ch, gsn_strike_of_virtue, FALSE, 1);
+		damage(ch, victim, 0, gsn_strike_of_virtue, DAM_NONE, true);
+		check_improve(ch, gsn_strike_of_virtue, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -857,7 +857,7 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 
 			if (is_same_group(to, ch) && to != ch)
 			{
-				stop_fighting(to, TRUE);
+				stop_fighting(to, true);
 				act("$n retreats to the $t under $N's cover!", ch, direction, to, TO_NOTVICT);
 				act("$N retreats under your cover!", ch, 0, to, TO_CHAR);
 				act("You retreat under $n's cover.", ch, 0, to, TO_VICT);
@@ -867,7 +867,7 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 		}
 
 		act("$s group having retreated, $n follows suit!", ch, 0, 0, TO_ROOM);
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 
 		char_from_room(ch);
 		char_to_room(ch, to_room);
@@ -1050,7 +1050,7 @@ int check_arms(CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound)
 
 	if (is_affected_obj(wield, gsn_arms_of_light))
 	{
-		if (bOncePerRound == TRUE && number_percent() > 90)
+		if (bOncePerRound == true && number_percent() > 90)
 		{
 			act("$p suddenly flares brightly!", 0, wield, 0, TO_ROOM);
 
@@ -1073,16 +1073,16 @@ int check_arms(CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound)
 			}
 		}
 
-		if (bOncePerRound == FALSE && number_percent() < ch->level / 2)
+		if (bOncePerRound == false && number_percent() < ch->level / 2)
 			return 46;
 	}
 
-	if (is_affected_obj(wield, gsn_arms_of_wrath) && bOncePerRound == FALSE)
+	if (is_affected_obj(wield, gsn_arms_of_wrath) && bOncePerRound == false)
 	{
 		if (number_percent() > 96 && victim)
 		{
 			act("$p explodes in holy flames!", ch, wield, 0, TO_ALL);
-			damage_new(ch, victim, dice(ch->level, 2), 0, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "holy wrath");
+			damage_new(ch, victim, dice(ch->level, 2), 0, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "holy wrath");
 
 			if (number_percent() < ch->level / 2)
 				return 18;
@@ -1091,7 +1091,7 @@ int check_arms(CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound)
 
 	if (is_affected_obj(wield, gsn_arms_of_purity))
 	{
-		if (bOncePerRound == TRUE && number_percent() > 75)
+		if (bOncePerRound == true && number_percent() > 75)
 		{
 			act("$p glows softly and grows warm in your hands.", ch, wield, 0, TO_CHAR);
 			act("$n's $p glows softly.", ch, wield, 0, TO_ROOM);
@@ -1101,7 +1101,7 @@ int check_arms(CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound)
 
 	if (is_affected_obj(wield, gsn_arms_of_judgement))
 	{
-		if (bOncePerRound == TRUE
+		if (bOncePerRound == true
 			&& number_percent() > 75
 			&& !IS_NPC(victim)
 			&& (IS_EVIL(victim) || victim->pcdata->kills[PK_GOOD] < victim->pcdata->kills[PK_EVIL]))
@@ -1117,7 +1117,7 @@ int check_arms(CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound)
 			}
 		}
 
-		if (bOncePerRound == FALSE && ch->level / 2 > number_percent())
+		if (bOncePerRound == false && ch->level / 2 > number_percent())
 			return 20;
 	}
 

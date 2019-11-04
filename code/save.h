@@ -19,7 +19,7 @@
                 if ( !str_cmp( word, literal ) )    \
                 {                                   \
                     field  = value;                 \
-                    fMatch = TRUE;                  \
+                    fMatch = true;                  \
                     break;                          \
                 }
 #endif
@@ -31,7 +31,7 @@
                 {                                   \
                     free_pstring(field);            \
                     field  = value;                 \
-                    fMatch = TRUE;                  \
+                    fMatch = true;                  \
                     break;                          \
                 }
 #endif
@@ -41,7 +41,7 @@
                 if ( !str_cmp( word, literal ) )    \
                 {                                   \
                     fread_flag_new(field, fp);      \
-                    fMatch = TRUE;                  \
+                    fMatch = true;                  \
                     break;                          \
                 }
 #endif

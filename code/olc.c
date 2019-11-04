@@ -205,10 +205,10 @@ bool run_olc_editor(DESCRIPTOR_DATA *d)
 			medit(d->character, d->incomm);
 			break;
 		default:
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool is_editing(CHAR_DATA *ch)
@@ -219,12 +219,12 @@ bool is_editing(CHAR_DATA *ch)
 		case ED_ROOM:
 		case ED_OBJECT:
 		case ED_MOBILE:
-			return TRUE;
+			return true;
 		default:
-			return FALSE;
+			return false;
 	}
 
-	return FALSE;
+	return false;
 }
 
 char *olc_ed_name(CHAR_DATA *ch)
@@ -342,7 +342,7 @@ bool show_commands(CHAR_DATA *ch, char *argument)
 			break;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*****************************************************************************
@@ -374,7 +374,7 @@ bool edit_done(CHAR_DATA *ch)
 	ch->desc->editor = 0;
 
 	send_to_char("Exiting Riftshadow OLC...\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 /*****************************************************************************
@@ -679,24 +679,24 @@ bool check_security(CHAR_DATA *ch)
 	if (IS_SWITCHED(ch) || IS_NPC(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (ch->pcdata->security < 1)
 	{
 		send_to_char("Huh?\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	/*
 	if(ch->pcdata->security < 4 && mPort == 9999)
 	{
 		send_to_char("You are not authorized to edit on this port.\n\r",ch);
-		return FALSE;
+		return false;
 	}
 	*/
 
-	return TRUE;
+	return true;
 }
 
 /* Entry point for all editors. */

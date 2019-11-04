@@ -217,7 +217,7 @@ void show_list_to_char(OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNot
 		if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj))
 		{
 			pstrShow = format_obj_to_char(obj, ch, fShort);
-			fCombine = FALSE;
+			fCombine= false;
 
 			if (IS_NPC(ch) || IS_SET(ch->comm, COMM_COMBINE))
 			{
@@ -230,7 +230,7 @@ void show_list_to_char(OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNot
 					if (!strcmp(prgpstrShow[iShow], pstrShow))
 					{
 						prgnShow[iShow]++;
-						fCombine = TRUE;
+						fCombine = true;
 						break;
 					}
 				}
@@ -440,7 +440,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 		return;
 	}
 
-	strcat(buf, get_descr_form(victim, ch, FALSE));
+	strcat(buf, get_descr_form(victim, ch, false));
 
 	if (!IS_NPC(victim) && !IS_SET(ch->comm, COMM_BRIEF))
 		strcat(buf, victim->pcdata->title);
@@ -610,7 +610,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 	else
 		percent = -1;
 
-	strcpy(buf, get_descr_form(victim, ch, FALSE));
+	strcpy(buf, get_descr_form(victim, ch, false));
 
 	if (!IS_NPC(victim))
 	{
@@ -681,7 +681,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 
 	if (!is_affected(victim, gsn_cloak_form) || IS_IMMORTAL(ch))
 	{
-		found = FALSE;
+		found= false;
 		for (iWear = 0; iWear < MAX_WEAR; iWear++)
 		{
 			if (iWear == WEAR_WIELD) // cosmetics come right before "wield" on display
@@ -713,12 +713,12 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 						send_to_char(buf, ch);
 
 						if (can_see_obj(ch, tObj))
-							send_to_char(format_obj_to_char(tObj, ch, TRUE), ch);
+							send_to_char(format_obj_to_char(tObj, ch, true), ch);
 						else
 							send_to_char("something.", ch);
 
 						send_to_char("\n\r", ch);
-						found = TRUE;
+						found = true;
 					}
 				}
 			}
@@ -729,11 +729,11 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 				{
 					send_to_char("\n\r", ch);
 					act("$N is using:", ch, NULL, victim, TO_CHAR);
-					found = TRUE;
+					found = true;
 				}
 
 				send_to_char(where_name[iWear], ch);
-				send_to_char(format_obj_to_char(obj, ch, TRUE), ch);
+				send_to_char(format_obj_to_char(obj, ch, true), ch);
 				send_to_char("\n\r", ch);
 			}
 		}
@@ -792,9 +792,9 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 		{
 			send_to_char("\n\rYou peek at the inventory:\n\r", ch);
 
-			check_improve(ch, gsn_peek, TRUE, 4);
+			check_improve(ch, gsn_peek, true, 4);
 
-			show_list_to_char(victim->carrying, ch, TRUE, TRUE);
+			show_list_to_char(victim->carrying, ch, true, true);
 
 			if (!IS_NPC(victim))
 			{
@@ -846,7 +846,7 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 	else
 		percent = -1;
 
-	strcpy(buf, get_descr_form(victim, ch, FALSE));
+	strcpy(buf, get_descr_form(victim, ch, false));
 
 	if (!IS_NPC(victim))
 	{
@@ -864,7 +864,7 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 
 	send_to_char(buf, ch);
 
-	found = FALSE;
+	found= false;
 	for (iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
 		if ((obj = get_eq_char(victim, iWear)) != NULL && can_see_obj(ch, obj))
@@ -873,11 +873,11 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 			{
 				send_to_char("\n\r", ch);
 				act("$N is using:", ch, NULL, victim, TO_CHAR);
-				found = TRUE;
+				found = true;
 			}
 
 			send_to_char(where_name[iWear], ch);
-			send_to_char(format_obj_to_char(obj, ch, TRUE), ch);
+			send_to_char(format_obj_to_char(obj, ch, true), ch);
 			send_to_char("\n\r", ch);
 		}
 	}
@@ -888,8 +888,8 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 		&& number_percent() < get_skill(ch, gsn_peek))
 	{
 		send_to_char("\n\rYou peek at the inventory:\n\r", ch);
-		check_improve(ch, gsn_peek, TRUE, 4);
-		show_list_to_char(victim->carrying, ch, TRUE, TRUE);
+		check_improve(ch, gsn_peek, true, 4);
+		show_list_to_char(victim->carrying, ch, true, true);
 	}
 }
 
@@ -921,7 +921,7 @@ void show_char_to_char_3(CHAR_DATA *victim, CHAR_DATA *ch)
 	else
 		percent = -1;
 
-	strcpy(buf, get_descr_form(victim, ch, FALSE));
+	strcpy(buf, get_descr_form(victim, ch, false));
 
 	if (!IS_NPC(victim))
 	{
@@ -943,7 +943,7 @@ void show_char_to_char_3(CHAR_DATA *victim, CHAR_DATA *ch)
 void show_char_to_char(CHAR_DATA *list, CHAR_DATA *ch)
 {
 	CHAR_DATA *rch;
-	bool cant_see = FALSE;
+	bool cant_see= false;
 
 	for (rch = list; rch != NULL; rch = rch->next_in_room)
 	{
@@ -973,12 +973,12 @@ bool check_blind(CHAR_DATA *ch)
 	AREA_AFFECT_DATA *paf;
 
 	if (!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
-		return TRUE;
+		return true;
 
 	if (IS_AFFECTED(ch, AFF_BLIND))
 	{
 		send_to_char("You can't see a thing!\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (is_affected_area(ch->in_room->area, gsn_whiteout) && IS_OUTSIDE(ch))
@@ -992,11 +992,11 @@ bool check_blind(CHAR_DATA *ch)
 		if (paf->owner != ch)
 		{
 			send_to_char("You can't see a thing through the snow!\n\r", ch);
-			return FALSE;
+			return false;
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 /* changes your scroll */
@@ -1693,12 +1693,12 @@ void do_examine(CHAR_DATA *ch, char *argument)
 bool show_altdesc(ROOM_INDEX_DATA *room)
 {
 	if (!room->alt_description)
-		return FALSE;
+		return false;
 
 	if (room->alt_description_cond == AD_COND_NIGHT && sun == SUN_DARK)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 char *get_room_description(ROOM_INDEX_DATA *room)
@@ -1736,7 +1736,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 	char *pdesc, *direction;
 	int door;
 	int number, count, i;
-	bool found = FALSE;
+	bool found= false;
 	AFFECT_DATA *af;
 	ROOM_AFFECT_DATA *raf;
 
@@ -1955,7 +1955,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		show_list_to_char(ch->in_room->contents, ch, FALSE, FALSE);
+		show_list_to_char(ch->in_room->contents, ch, false, false);
 		show_char_to_char(ch->in_room->people, ch);
 		return;
 	}
@@ -2029,7 +2029,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 				if (obj->contains)
 				{
-					show_list_to_char(obj->contains, ch, TRUE, TRUE);
+					show_list_to_char(obj->contains, ch, true, true);
 				}
 				else
 				{
@@ -2099,7 +2099,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			{
 				if (++count == number)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char(pdesc, ch);
 					break;
 				}
@@ -2114,7 +2114,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			{
 				if (++count == number)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char(pdesc, ch);
 					break;
 				}
@@ -2128,7 +2128,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			{
 				if (++count == number)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char(obj->description, ch);
 					send_to_char("\n\r", ch);
 					break;
@@ -2146,7 +2146,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			{
 				if (++count == number)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char(pdesc, ch);
 					break;
 				}
@@ -2161,7 +2161,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			{
 				if (++count == number)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char(pdesc, ch);
 					break;
 				}
@@ -2175,7 +2175,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			{
 				if (++count == number)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char(obj->description, ch);
 					send_to_char("\n\r", ch);
 					break;
@@ -2371,7 +2371,7 @@ void do_exits(CHAR_DATA *ch, char *argument)
 	else
 		sprintf(buf, "Obvious exits:\n\r");
 
-	found = FALSE;
+	found= false;
 	for (door = 0; door <= 5; door++)
 	{
 		if ((pexit = ch->in_room->exit[door]) != NULL
@@ -2380,7 +2380,7 @@ void do_exits(CHAR_DATA *ch, char *argument)
 			&& (!IS_SET(pexit->exit_info, EX_NONOBVIOUS) || IS_IMMORTAL(ch))
 			&& (!is_affected_room(ch->in_room, gsn_smokescreen)))
 		{
-			found = TRUE;
+			found = true;
 
 			if (fAuto)
 			{
@@ -2909,7 +2909,7 @@ void do_oldhelp(CHAR_DATA *ch, char *argument)
 {
 	HELP_DATA *pHelp;
 	BUFFER *output;
-	bool found = FALSE;
+	bool found= false;
 	char argall[MAX_INPUT_LENGTH], argone[MAX_INPUT_LENGTH];
 	int level;
 
@@ -2960,7 +2960,7 @@ void do_oldhelp(CHAR_DATA *ch, char *argument)
 			else
 				add_buf(output, pHelp->text);
 
-			found = TRUE;
+			found = true;
 
 			/* small hack :) */
 			if (ch->desc != NULL && ch->desc->connected != CON_PLAYING && ch->desc->connected != CON_GEN_GROUPS)
@@ -2985,7 +2985,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 	char rbuf[MAX_STRING_LENGTH];
 	char disp[MSL];
 	DESCRIPTOR_DATA *d;
-	bool found = FALSE;
+	bool found= false;
 
 	one_argument(argument, arg);
 
@@ -3019,7 +3019,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 				? !str_prefix(arg, wch->true_name) : 0
 			: !str_prefix(arg, wch->name))
 		{
-			found = TRUE;
+			found = true;
 
 			/* work out the printing */
 			class_name = wch->Class()->who_name;
@@ -3199,17 +3199,17 @@ void do_who(CHAR_DATA *ch, char *argument)
 	bool rgfClass[MAX_CLASS];
 	bool rgfRace[MAX_PC_RACE];
 	bool rgfCabal[MAX_CABAL];
-	bool fCriminal = FALSE;
-	bool fClassRestrict = FALSE;
-	bool fCabalRestrict = FALSE;
-	bool fCabal = FALSE;
-	bool fRaceRestrict = FALSE;
-	bool fImmortalOnly = FALSE;
-	bool fPkOnly = FALSE;
-	bool fBuilder = FALSE;
-	bool fNewbie = FALSE;
-	bool fNoDesc = FALSE;
-	bool fRole = FALSE;
+	bool fCriminal= false;
+	bool fClassRestrict= false;
+	bool fCabalRestrict= false;
+	bool fCabal= false;
+	bool fRaceRestrict= false;
+	bool fImmortalOnly= false;
+	bool fPkOnly= false;
+	bool fBuilder= false;
+	bool fNewbie= false;
+	bool fNoDesc= false;
+	bool fRole= false;
 	/*
 	 * Set default arguments.
 	 */
@@ -3217,13 +3217,13 @@ void do_who(CHAR_DATA *ch, char *argument)
 	iLevelUpper = MAX_LEVEL;
 
 	for (iClass = 0; iClass < MAX_CLASS; iClass++)
-		rgfClass[iClass] = FALSE;
+		rgfClass[iClass]= false;
 
 	for (iRace = 0; iRace < MAX_PC_RACE; iRace++)
-		rgfRace[iRace] = FALSE;
+		rgfRace[iRace]= false;
 
 	for (iCabal = 0; iCabal < MAX_CABAL; iCabal++)
-		rgfCabal[iCabal] = FALSE;
+		rgfCabal[iCabal]= false;
 
 	/*
 	 * Parse arguments.
@@ -3266,23 +3266,23 @@ void do_who(CHAR_DATA *ch, char *argument)
 			 */
 			if (!str_prefix(arg, "immortal"))
 			{
-				fImmortalOnly = TRUE;
+				fImmortalOnly = true;
 			}
 			else if (!str_prefix(arg, "pk"))
 			{
-				fPkOnly = TRUE;
+				fPkOnly = true;
 			}
 			else if (!str_prefix(arg, "wanted") || !str_prefix(arg, "criminal"))
 			{
-				fCriminal = TRUE;
+				fCriminal = true;
 			}
 			else if (!str_prefix(arg, "builder") && IS_IMMORTAL(ch))
 			{
-				fBuilder = TRUE;
+				fBuilder = true;
 			}
 			else if (!str_prefix(arg, "newbie"))
 			{
-				fNewbie = TRUE;
+				fNewbie = true;
 			}
 			else if (!str_prefix(arg, "good") && IS_IMMORTAL(ch))
 			{
@@ -3310,11 +3310,11 @@ void do_who(CHAR_DATA *ch, char *argument)
 			}
 			else if (!str_prefix(arg, "nodesc") && IS_IMMORTAL(ch))
 			{
-				fNoDesc = TRUE;
+				fNoDesc = true;
 			}
 			else if (!str_prefix(arg, "role") && IS_IMMORTAL(ch))
 			{
-				fRole = TRUE;
+				fRole = true;
 			}
 			else
 			{
@@ -3329,8 +3329,8 @@ void do_who(CHAR_DATA *ch, char *argument)
 						{
 							if (iCabal == ch->cabal || IS_IMMORTAL(ch))
 							{
-								fCabalRestrict = TRUE;
-								rgfCabal[iCabal] = TRUE;
+								fCabalRestrict = true;
+								rgfCabal[iCabal] = true;
 							}
 							else
 							{
@@ -3346,8 +3346,8 @@ void do_who(CHAR_DATA *ch, char *argument)
 					}
 					else
 					{
-						fRaceRestrict = TRUE;
-						rgfRace[iRace] = TRUE;
+						fRaceRestrict = true;
+						rgfRace[iRace] = true;
 					}
 				}
 				else
@@ -3355,8 +3355,8 @@ void do_who(CHAR_DATA *ch, char *argument)
 
 					if (IS_IMMORTAL(ch))
 					{
-						fClassRestrict = TRUE;
-						rgfClass[iClass] = TRUE;
+						fClassRestrict = true;
+						rgfClass[iClass] = true;
 					}
 					else
 					{
@@ -3379,9 +3379,9 @@ void do_who(CHAR_DATA *ch, char *argument)
 		CHAR_DATA *wch;
 		char const *class_name;
 		char const *imm_lvl;
-		bool fOChar = FALSE;
+		bool fOChar= false;
 
-		fOChar = FALSE;
+		fOChar= false;
 		/*
 		 * Check for match against restrictions.
 		 * Don't use trust as that exposes trusted mortals.
@@ -3395,7 +3395,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 			continue;
 
 		if (wch->pcdata->old && !IS_IMMORTAL(ch))
-			fOChar = TRUE;
+			fOChar = true;
 
 		if (!IS_IMMORTAL(ch) && is_affected(wch, gsn_cloak_form) && ch != wch && ch->pcdata->induct == 5)
 		{
@@ -3634,7 +3634,7 @@ void do_count(CHAR_DATA *ch, char *argument)
 void do_inventory(CHAR_DATA *ch, char *argument)
 {
 	send_to_char("You are carrying:\n\r", ch);
-	show_list_to_char(ch->carrying, ch, TRUE, TRUE);
+	show_list_to_char(ch->carrying, ch, true, true);
 }
 
 void do_equipment(CHAR_DATA *ch, char *argument)
@@ -3644,7 +3644,7 @@ void do_equipment(CHAR_DATA *ch, char *argument)
 	bool found;
 
 	send_to_char("You are using:\n\r", ch);
-	found = FALSE;
+	found= false;
 
 	for (iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
@@ -3662,12 +3662,12 @@ void do_equipment(CHAR_DATA *ch, char *argument)
 					send_to_char(buf, ch);
 
 					if (can_see_obj(ch, tObj))
-						send_to_char(format_obj_to_char(tObj, ch, TRUE), ch);
+						send_to_char(format_obj_to_char(tObj, ch, true), ch);
 					else
 						send_to_char("something.", ch);
 
 					send_to_char("\n\r", ch);
-					found = TRUE;
+					found = true;
 				}
 			}
 		}
@@ -3678,12 +3678,12 @@ void do_equipment(CHAR_DATA *ch, char *argument)
 		send_to_char(where_name[iWear], ch);
 
 		if (can_see_obj(ch, obj))
-			send_to_char(format_obj_to_char(obj, ch, TRUE), ch);
+			send_to_char(format_obj_to_char(obj, ch, true), ch);
 		else
 			send_to_char("something.", ch);
 
 		send_to_char("\n\r", ch);
-		found = TRUE;
+		found = true;
 	}
 
 	if (!found)
@@ -3811,7 +3811,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0')
 	{
 		send_to_char("Players near you:\n\r", ch);
-		found = FALSE;
+		found= false;
 
 		for (d = descriptor_list; d; d = d->next)
 		{
@@ -3830,7 +3830,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 				&& !is_affected_room(victim->in_room, gsn_smokescreen)
 				&& !is_affected(victim, gsn_disguise))
 			{
-				found = TRUE;
+				found = true;
 
 				sprintf(buf, "%s%-28s %s%s%s\n\r",
 					can_pk(ch, victim) ? "(PK) " : "     ",
@@ -3847,7 +3847,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_prefix(arg, "pk"))
 	{
-		found = FALSE;
+		found= false;
 		for (d = descriptor_list; d; d = d->next)
 		{
 			if (d->connected == CON_PLAYING
@@ -3863,7 +3863,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 				&& can_see(ch, victim)
 				&& !is_affected_room(victim->in_room, gsn_smokescreen))
 			{
-				found = TRUE;
+				found = true;
 
 				sprintf(buf, "%s%-28s %s%s%s\n\r",
 					can_pk(ch, victim) ? "(PK) " : "     ",
@@ -3880,7 +3880,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		found = FALSE;
+		found= false;
 		for (victim = char_list; victim != NULL; victim = victim->next)
 		{
 			if (victim->in_room != NULL
@@ -3892,7 +3892,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 				&& is_name(arg, victim->name)
 				&& !is_affected_room(victim->in_room, gsn_smokescreen))
 			{
-				found = TRUE;
+				found = true;
 
 				sprintf(buf, "%s%-28s %s%s%s\n\r",
 					can_pk(ch, victim) ? "(PK) " : "     ", PERS(victim, ch),
@@ -4239,7 +4239,7 @@ void do_description(CHAR_DATA *ch, char *argument)
 	else if (!str_cmp(arg1, "-"))
 	{
 		int len;
-		bool found = FALSE;
+		bool found= false;
 
 		if (ch->description == NULL || ch->description[0] == '\0')
 		{
@@ -4258,7 +4258,7 @@ void do_description(CHAR_DATA *ch, char *argument)
 					if (len > 0)
 						len--;
 
-					found = TRUE;
+					found = true;
 				}
 				else /* found the second one */
 				{
@@ -4393,7 +4393,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 		col = 0;
 		for (sn = 0; sn < MAX_SKILL; sn++)
 		{
-			hide_skill = FALSE;
+			hide_skill= false;
 			if (skill_table[sn].name == NULL)
 				break;
 
@@ -4407,7 +4407,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 						style_skill = skill_lookup(group_table[gn].name);
 						if (ch->pcdata->learned[style_skill] < style_percent[p].percent)
 						{
-							hide_skill = TRUE;
+							hide_skill = true;
 						}
 
 						if (hide_skill)
@@ -4422,7 +4422,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 				|| sn == gsn_dragoon_skill
 				|| sn == gsn_skirmisher_skill
 				|| sn == gsn_tactician_skill)
-				hide_skill = TRUE;
+				hide_skill = true;
 
 			if (skill_table[sn].skill_level[ch->Class()->GetIndex()] > 52)
 				continue;
@@ -4430,7 +4430,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 			if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()] || ch->pcdata->learned[sn] < 1)
 				continue;
 
-			if (hide_skill == FALSE)
+			if (hide_skill == false)
 			{
 				sprintf(buf, "%-18s %3d%%  ", skill_table[sn].name, ch->pcdata->learned[sn]);
 				send_to_char(buf, ch);
@@ -4811,7 +4811,7 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 	int amount;
 	char buf[MAX_STRING_LENGTH];
 	int charges, i;
-	bool bFound = FALSE;
+	bool bFound= false;
 	OBJ_INDEX_DATA *pIndex;
 	OBJ_DATA *pObj;
 
@@ -4844,7 +4844,7 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 					continue;
 				}
 
-				bFound = TRUE;
+				bFound = true;
 				sprintf(buf, "%d) %s - estimated at %d gold\n\r",
 					i + 1,
 					pIndex->short_descr,
@@ -4931,7 +4931,7 @@ void do_deposit(CHAR_DATA *ch, char *argument)
 	int amount, charges, i;
 	char buf[MAX_STRING_LENGTH];
 	OBJ_DATA *deposited = NULL;
-	bool bFull = TRUE;
+	bool bFull = true;
 
 	for (banker = ch->in_room->people; banker != NULL; banker = banker->next_in_room)
 	{
@@ -5004,7 +5004,7 @@ void do_deposit(CHAR_DATA *ch, char *argument)
 	{
 		if (ch->pcdata->deposited_items[i] == 0)
 		{
-			bFull = FALSE;
+			bFull= false;
 			break;
 		}
 	}
@@ -5291,12 +5291,12 @@ void do_lore(CHAR_DATA *ch, char *argument)
 			send_to_char(buf, ch);
 		}
 
-		check_improve(ch, gsn_lore, TRUE, 2);
+		check_improve(ch, gsn_lore, true, 2);
 	}
 	else
 	{
 		act("You examine $p closely but fail to gain any insight into it.", ch, obj, 0, TO_CHAR);
-		check_improve(ch, gsn_lore, FALSE, 2);
+		check_improve(ch, gsn_lore, false, 2);
 	}
 
 	ch->mana -= UMAX(obj->level - 10 - (lorebonus * 3), 15);
@@ -5309,21 +5309,21 @@ bool isCabalItem(OBJ_DATA *obj)
 	for (i = 1; i < MAX_CABAL; i++)
 	{
 		if (cabal_table[i].item_vnum == ovnum)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool isNewbie(CHAR_DATA *ch)
 {
 	/*	if (IS_NPC(ch))
-			return FALSE;
+			return false;
 
-		if (ch->pcdata->newbie==TRUE)
-			return TRUE;
+		if (ch->pcdata->newbie==true)
+			return true;
 	*/
-	return FALSE;
+	return false;
 }
 
 void debug_string(const char *str)
@@ -5431,14 +5431,14 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 		if ((obj = get_eq_char(victim, iWear)) != NULL && can_see_obj(ch, obj))
 		{
 			send_to_char(where_name[iWear], ch);
-			send_to_char(format_obj_to_char(obj, ch, TRUE), ch);
+			send_to_char(format_obj_to_char(obj, ch, true), ch);
 			send_to_char("\n\r", ch);
 		}
 	}
 
 	send_to_char("\n\r", ch);
 	send_to_char("Inventory:\n\r", ch);
-	show_list_to_char(victim->carrying, ch, TRUE, FALSE);
+	show_list_to_char(victim->carrying, ch, true, false);
 }
 
 char *get_where_name(int iWear)
@@ -5514,7 +5514,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_BUF], arg1[MAX_BUF], obuf[MAX_BUF];
 	CHAR_DATA *victim;
-	bool found = FALSE;
+	bool found= false;
 	int len;
 	BUFFER *output;
 
@@ -5577,7 +5577,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 						if (len > 0)
 							len--;
 
-						found = TRUE;
+						found = true;
 					}
 					else
 					{

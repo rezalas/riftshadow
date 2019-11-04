@@ -24,7 +24,7 @@ bool show_version(CHAR_DATA *ch, char *argument)
 	send_to_char(CREDITS, ch);
 	send_to_char("\n\r", ch);
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -205,7 +205,7 @@ bool show_help(CHAR_DATA *ch, char *argument)
 			send_to_char(buf, ch);
 		}
 
-		return FALSE;
+		return false;
 	}
 
 	/*
@@ -222,7 +222,7 @@ bool show_help(CHAR_DATA *ch, char *argument)
 				if (spell[0] == '\0')
 				{
 					send_to_char("Syntax:  ? spells [ignore/attack/defend/self/object/all]\n\r", ch);
-					return FALSE;
+					return false;
 				}
 
 				if (!str_prefix(spell, "all"))
@@ -240,18 +240,18 @@ bool show_help(CHAR_DATA *ch, char *argument)
 				else
 					send_to_char("Syntax:  ? spell [ignore/attack/defend/self/object/all]\n\r", ch);
 
-				return FALSE;
+				return false;
 			}
 			else
 			{
 				show_flag_cmds(ch, (flag_type *)help_table[cnt].structure);
-				return FALSE;
+				return false;
 			}
 		}
 	}
 
 	show_help(ch, "");
-	return FALSE;
+	return false;
 }
 
 bool redit_rlist(CHAR_DATA *ch, char *argument)
@@ -270,14 +270,14 @@ bool redit_rlist(CHAR_DATA *ch, char *argument)
 	pArea = ch->in_room->area;
 	buf1 = new_buf();
 	/*    buf1[0] = '\0'; */
-	found = FALSE;
+	found = false;
 
 	for (vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++)
 	{
 		pRoomIndex = get_room_index(vnum);
 		if (pRoomIndex)
 		{
-			found = TRUE;
+			found = true;
 
 			sprintf(buf, "[%5d] %-17.16s", vnum, capitalize(pRoomIndex->name));
 			add_buf(buf1, buf);
@@ -290,7 +290,7 @@ bool redit_rlist(CHAR_DATA *ch, char *argument)
 	if (!found)
 	{
 		send_to_char("Room(s) not found in this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (col % 3 != 0)
@@ -298,7 +298,7 @@ bool redit_rlist(CHAR_DATA *ch, char *argument)
 
 	page_to_char(buf_string(buf1), ch);
 	free_buf(buf1);
-	return FALSE;
+	return false;
 }
 
 bool redit_mview(CHAR_DATA *ch, char *argument)
@@ -313,7 +313,7 @@ bool redit_mview(CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0' || (vnum = atoi(arg)) == -1)
 	{
 		send_to_char("Syntax:  mview <vnum>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea = ch->in_room->area;
@@ -321,12 +321,12 @@ bool redit_mview(CHAR_DATA *ch, char *argument)
 	if (vnum < pArea->min_vnum || vnum > pArea->max_vnum)
 	{
 		send_to_char("You can only view mobiles within your area range.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob = get_mob_index(vnum);
 	if (pMob == NULL)
-		return FALSE;
+		return false;
 
 	send_to_char("Viewing mobile:\n\r", ch);
 
@@ -347,7 +347,7 @@ bool redit_mview(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "Level:    [%d]\n\r", pMob->level);
 	send_to_char(buf, ch);
-	return FALSE;
+	return false;
 }
 
 bool redit_mlist(CHAR_DATA *ch, char *argument)
@@ -366,14 +366,14 @@ bool redit_mlist(CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0')
 	{
 		send_to_char("Syntax:  mlist <all/name>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	buf1 = new_buf();
 	pArea = ch->in_room->area;
 	/*    buf1[0] = '\0'; */
 	fAll = !str_cmp(arg, "all");
-	found = FALSE;
+	found = false;
 
 	for (vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++)
 	{
@@ -383,7 +383,7 @@ bool redit_mlist(CHAR_DATA *ch, char *argument)
 		{
 			if (fAll || is_name(arg, pMobIndex->player_name))
 			{
-				found = TRUE;
+				found = true;
 
 				sprintf(buf, "[%5d] %-17.16s", pMobIndex->vnum, capitalize(pMobIndex->short_descr));
 				add_buf(buf1, buf);
@@ -397,7 +397,7 @@ bool redit_mlist(CHAR_DATA *ch, char *argument)
 	if (!found)
 	{
 		send_to_char("Mobile(s) not found in this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (col % 3 != 0)
@@ -405,7 +405,7 @@ bool redit_mlist(CHAR_DATA *ch, char *argument)
 
 	page_to_char(buf_string(buf1), ch);
 	free_buf(buf1);
-	return FALSE;
+	return false;
 }
 
 bool redit_olist(CHAR_DATA *ch, char *argument)
@@ -424,14 +424,14 @@ bool redit_olist(CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0')
 	{
 		send_to_char("Syntax:  olist <all/name/item_type>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea = ch->in_room->area;
 	buf1 = new_buf();
 	/*    buf1[0] = '\0'; */
 	fAll = !str_cmp(arg, "all");
-	found = FALSE;
+	found = false;
 
 	for (vnum = pArea->min_vnum; vnum <= pArea->max_vnum; vnum++)
 	{
@@ -441,7 +441,7 @@ bool redit_olist(CHAR_DATA *ch, char *argument)
 		{
 			if (fAll || is_name(arg, pObjIndex->name) || flag_value(type_flags, arg) == pObjIndex->item_type)
 			{
-				found = TRUE;
+				found = true;
 
 				sprintf(buf, "[%5d] %-17.16s", pObjIndex->vnum, capitalize(pObjIndex->short_descr));
 				add_buf(buf1, buf);
@@ -455,7 +455,7 @@ bool redit_olist(CHAR_DATA *ch, char *argument)
 	if (!found)
 	{
 		send_to_char("Object(s) not found in this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (col % 3 != 0)
@@ -463,7 +463,7 @@ bool redit_olist(CHAR_DATA *ch, char *argument)
 
 	page_to_char(buf_string(buf1), ch);
 	free_buf(buf1);
-	return FALSE;
+	return false;
 }
 
 bool redit_mshow(CHAR_DATA *ch, char *argument)
@@ -474,13 +474,13 @@ bool redit_mshow(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  mshow <vnum>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!is_number(argument))
 	{
 		send_to_char("REdit: vnum has to be a number.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (is_number(argument))
@@ -490,7 +490,7 @@ bool redit_mshow(CHAR_DATA *ch, char *argument)
 		if (!(pMob))
 		{
 			send_to_char("REdit:  That mobile does not exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		ch->desc->pEdit = (void *)pMob;
@@ -498,7 +498,7 @@ bool redit_mshow(CHAR_DATA *ch, char *argument)
 
 	medit_show(ch, argument);
 	ch->desc->pEdit = (void *)ch->in_room;
-	return FALSE;
+	return false;
 }
 
 bool redit_oshow(CHAR_DATA *ch, char *argument)
@@ -509,13 +509,13 @@ bool redit_oshow(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  oshow <vnum>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!is_number(argument))
 	{
 		send_to_char("REdit: vnum has to be a number.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (is_number(argument))
@@ -525,7 +525,7 @@ bool redit_oshow(CHAR_DATA *ch, char *argument)
 		if (!(pObj))
 		{
 			send_to_char("REdit:  That object does not exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		ch->desc->pEdit = (void *)pObj;
@@ -533,7 +533,7 @@ bool redit_oshow(CHAR_DATA *ch, char *argument)
 
 	oedit_show(ch, argument);
 	ch->desc->pEdit = (void *)ch->in_room;
-	return FALSE;
+	return false;
 }
 
 bool check_range(int lower, int upper)
@@ -553,10 +553,10 @@ bool check_range(int lower, int upper)
 		}
 
 		if (cnt > 1)
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 AREA_DATA *get_vnum_area(int vnum)
@@ -579,12 +579,12 @@ bool medit_vnum(CHAR_DATA *ch, char *argument)
 
 	EDIT_MOB(ch, pMob);
 
-	return FALSE;
+	return false;
 
 	if (!*argument || !is_number(argument))
 	{
 		send_to_char("Syntax: vnum <vnum>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	vnum = atoi(argument);
@@ -593,15 +593,15 @@ bool medit_vnum(CHAR_DATA *ch, char *argument)
 	{
 		pMob->vnum = vnum;
 		send_to_char("Vnum set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else
 	{
 		send_to_char("That vnum is not within the area range.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool medit_group(CHAR_DATA *ch, char *argument)
@@ -613,12 +613,12 @@ bool medit_group(CHAR_DATA *ch, char *argument)
 	if (!*argument || !is_number(argument))
 	{
 		send_to_char("Syntax:  group <xxyy>  - First vnum in your area\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->group = atoi(argument);
 	send_to_char("Group set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_speech(CHAR_DATA *ch, char *argument)
@@ -664,7 +664,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 					if (!speech->first_line)
 					{
 						send_to_char("This speech has no lines.\n\r", ch);
-						return FALSE;
+						return false;
 					}
 
 					sprintf(buf, "%s Lines:\n\r", speech->name);
@@ -692,7 +692,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 					if (type == NO_FLAG)
 					{
 						send_to_char("Not a valid type.\n\r", ch);
-						return FALSE;
+						return false;
 					}
 
 					new_line->type = type;
@@ -704,7 +704,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 					}
 
 					send_to_char("Added.\n\r", ch);
-					return TRUE;
+					return true;
 				}
 				else
 				{
@@ -719,7 +719,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 					if (!lptr)
 					{
 						send_to_char("Not a valid line number.\n\r", ch);
-						return FALSE;
+						return false;
 					}
 					else
 					{
@@ -727,19 +727,19 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 						{
 							delete lptr;
 							send_to_char("Deleted.\n\r", ch);
-							return TRUE;
+							return true;
 						}
 						else if (!str_prefix(arg4, "delay"))
 						{
 							lptr->delay = atoi(argument);
 							send_to_char("Delay set.\n\r", ch);
-							return TRUE;
+							return true;
 						}
 						else if (!str_prefix(arg4, "number"))
 						{
 							lptr->number = atoi(argument);
 							send_to_char("Number set.\n\r", ch);
-							return TRUE;
+							return true;
 						}
 						else if (!str_prefix(arg4, "type"))
 						{
@@ -748,12 +748,12 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 							if (type == NO_FLAG)
 							{
 								send_to_char("Not a valid type.\n\r", ch);
-								return FALSE;
+								return false;
 							}
 
 							lptr->type = type;
 							send_to_char("Type set.\n\r", ch);
-							return TRUE;
+							return true;
 						}
 						else if (!str_prefix(arg4, "text"))
 						{
@@ -761,12 +761,12 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 							lptr->text = palloc_string(argument);
 
 							send_to_char("Text set.\n\r", ch);
-							return TRUE;
+							return true;
 						}
 						else
 						{
 							send_to_char("Not a valid entry.\n\r", ch);
-							return FALSE;
+							return false;
 						}
 					}
 				}
@@ -777,7 +777,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 			if (!pMobIndex->speech)
 			{
 				send_to_char("Mobile has no speeches defined.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			send_to_char("Mobile has the following speeches defined:\n\r", ch);
@@ -793,7 +793,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 			if (!*name)
 			{
 				send_to_char("You must specify a name for the new speech.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			speech = new_speech_data();
@@ -811,14 +811,14 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 			}
 
 			send_to_char("Speech added.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 		else if (!str_prefix(cmd, "del"))
 		{
 			if (!*name)
 			{
 				send_to_char("Delete which speech?\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			speech = find_speech(pMobIndex, name);
@@ -826,12 +826,12 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 			if (!speech)
 			{
 				send_to_char("No speech by that name found.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			free_speech(speech);
 			send_to_char("Speech deleted.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 		else if (!str_prefix(cmd, "edit"))
 		{
@@ -840,14 +840,14 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 		else
 		{
 			send_to_char("Invalid speech command.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (speech)
 			sort_speech(speech);
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool medit_prog(CHAR_DATA *ch, char *argument)
@@ -855,7 +855,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
 	MOB_INDEX_DATA *pMobIndex;
-	bool found = FALSE;
+	bool found = false;
 
 	EDIT_MOB(ch, pMobIndex);
 
@@ -896,7 +896,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char("Syntax: prog add <prog_name>\n\r" \
 						 "        prog del <prog_name>\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (count = 0; mprog_table[count].type != NULL; count++)
@@ -904,7 +904,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 			if (!str_cmp(mprog_table[count].name, prog))
 			{
 				sprintf(prog_type, "%s", mprog_table[count].type);
-				found = TRUE;
+				found = true;
 			}
 		}
 
@@ -912,7 +912,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 		{
 			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
 			send_to_char(buf, ch);
-			return FALSE;
+			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
@@ -938,12 +938,12 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
 				send_to_char(buf, ch);
-				return FALSE;
+				return false;
 			}
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool oedit_prog(CHAR_DATA *ch, char *argument)
@@ -951,7 +951,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
 	OBJ_INDEX_DATA *pObjIndex;
-	bool found = FALSE;
+	bool found = false;
 
 	EDIT_OBJ(ch, pObjIndex);
 
@@ -993,7 +993,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 			send_to_char("Syntax: prog add <prog_name>\n\r"
 						 "        prog del <prog_name>\n\r",
 						 ch);
-			return FALSE;
+			return false;
 		}
 
 		if (pObjIndex->iprogs == NULL)
@@ -1007,7 +1007,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 			if (!str_cmp(iprog_table[count].name, prog))
 			{
 				sprintf(prog_type, "%s", iprog_table[count].type);
-				found = TRUE;
+				found = true;
 			}
 		}
 
@@ -1015,7 +1015,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 		{
 			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
 			send_to_char(buf, ch);
-			return FALSE;
+			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
@@ -1034,12 +1034,12 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
 				send_to_char(buf, ch);
-				return FALSE;
+				return false;
 			}
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool oedit_spec(CHAR_DATA *ch, char *argument)
@@ -1058,7 +1058,7 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 		send_to_char("Syntax: spec add <prog_name>\n\r"\
 					 "        spec del <prog_name>\n\r",
 					 ch);
-		return FALSE;
+		return false;
 	}
 
 	for (count = 0; ispec_table[count].spec_name; count++)
@@ -1071,7 +1071,7 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 	{
 		sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
 		send_to_char(buf, ch);
-		return FALSE;
+		return false;
 	}
 	else if (!str_prefix(add, "add"))
 	{
@@ -1092,11 +1092,11 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 		else
 		{
 			send_to_char("That is not a valid item spec.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool redit_trap(CHAR_DATA *ch, char *argument)
@@ -1119,7 +1119,7 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 			if (num == NO_FLAG)
 			{
 				send_to_char("That is not a valid trap.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			pRoom->trap->type = num;
@@ -1133,12 +1133,12 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 			{
 				pRoom->trap->quality = num;
 				send_to_char("Trap quality updated.\n\r", ch);
-				return TRUE;
+				return true;
 			}
 			else
 			{
 				send_to_char("Quality must be a number between 1 and 10.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 		}
 		else if (!str_cmp(arg1, "complexity"))
@@ -1149,12 +1149,12 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 			{
 				pRoom->trap->complexity = num;
 				send_to_char("Trap complexity updated.\n\r", ch);
-				return TRUE;
+				return true;
 			}
 			else
 			{
 				send_to_char("Complexity must be a number between 1 and 100.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 		}
 		else if (!str_cmp(arg1, "timer"))
@@ -1165,37 +1165,37 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 			{
 				pRoom->trap->timer = num;
 				send_to_char("Trap timer updated.\n\r", ch);
-				return TRUE;
+				return true;
 			}
 			else
 			{
 				send_to_char("Timer must be a number between 0 (immediate) and 15 seconds.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 		}
 		else if (!str_cmp(arg1, "trigger"))
 		{
 			pRoom->trap->trig_echo = palloc_string(argument);
 			send_to_char("Trigger echo updated.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 		else if (!str_cmp(arg1, "execute"))
 		{
 			pRoom->trap->exec_echo = palloc_string(argument);
 			send_to_char("Execute echo updated.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 		else if (!str_cmp(arg1, "delete"))
 		{
 			free_trap(pRoom->trap);
 			pRoom->trap = NULL;
 			send_to_char("Trap deleted.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 		else
 		{
 			redit_trap(ch, "");
-			return FALSE;
+			return false;
 		}
 	}
 	else if (!pRoom->trap && !str_cmp(arg1, "new"))
@@ -1208,10 +1208,10 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 		trap->timer = 0;
 		trap->trig_echo = NULL;
 		trap->exec_echo = NULL;
-		trap->armed = FALSE;
+		trap->armed = false;
 		pRoom->trap = trap;
 		send_to_char("Trap created.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else
 	{
@@ -1228,10 +1228,10 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 		else
 			send_to_char("Syntax:  trap new\n\r", ch);
 
-		return FALSE;
+		return false;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool redit_prog(CHAR_DATA *ch, char *argument)
@@ -1239,7 +1239,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
 	ROOM_INDEX_DATA *pRoomIndex;
-	bool found = FALSE;
+	bool found = false;
 
 	EDIT_ROOM(ch, pRoomIndex);
 
@@ -1281,7 +1281,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char("Syntax: prog add <prog_name>\n\r"\
 						 "        prog del <prog_name>\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (pRoomIndex->rprogs == NULL)
@@ -1295,7 +1295,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 			if (!str_cmp(rprog_table[count].name, prog))
 			{
 				sprintf(prog_type, "%s", rprog_table[count].type);
-				found = TRUE;
+				found = true;
 			}
 		}
 
@@ -1303,7 +1303,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 		{
 			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
 			send_to_char(buf, ch);
-			return FALSE;
+			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
@@ -1322,12 +1322,12 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
 				send_to_char(buf, ch);
-				return FALSE;
+				return false;
 			}
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 bool redit_altdesc(CHAR_DATA *ch, char *argument)
@@ -1343,7 +1343,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		send_to_char("        altdesc edit          - edits existing altdesc\n\r", ch);
 		send_to_char("        altdesc delete        - deletes altdesc\n\r", ch);
 		send_to_char("        altdesc types          - shows valid values for when altdesc is shown\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	argument = one_argument(argument, arg1);
@@ -1356,7 +1356,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		pRoom->alt_description = NULL;
 
 		send_to_char("Alternate description deleted.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(arg1, "types"))
@@ -1370,7 +1370,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 			send_to_char(buf, ch);
 		}
 
-		return FALSE;
+		return false;
 	}
 
 	if (!str_cmp(arg1, "add"))
@@ -1378,13 +1378,13 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		if (!*argument)
 		{
 			send_to_char("You must specify a valid type of alternate description to add.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (pRoom->alt_description)
 		{
 			send_to_char("You must first delete the alternate description before adding a new one.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		int i;
@@ -1398,7 +1398,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		if (!altdesc_condtable[i].name)
 		{
 			send_to_char("Invalid alternate description type.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		pRoom->alt_description = palloc_string("Default alternate description.");
@@ -1406,7 +1406,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		pRoom->alt_description_cond = i;
 
 		send_to_char("Alternate description added.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(arg1, "edit"))
@@ -1414,11 +1414,11 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		if (!pRoom->alt_description)
 		{
 			send_to_char("You must first create an alternate description with altdesc add before changing the description.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		string_append(ch, &pRoom->alt_description);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(arg1, "title"))
@@ -1426,24 +1426,24 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		if (!pRoom->alt_description)
 		{
 			send_to_char("You must create an alternate description with altdesc add before changing the title.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!*argument)
 		{
 			send_to_char("You must specify a new title to set.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		free_pstring(pRoom->alt_name);
 		pRoom->alt_name = palloc_string(argument);
 
 		send_to_char("Alternate room title changed.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	redit_altdesc(ch, "");
-	return FALSE;
+	return false;
 }
 
 bool aedit_type(CHAR_DATA *ch, char *argument)
@@ -1456,20 +1456,20 @@ bool aedit_type(CHAR_DATA *ch, char *argument)
 	if (!*argument)
 	{
 		send_to_char("Syntax:  type <type>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	type = flag_lookup(argument, area_type_table);
 	if (type == NO_FLAG)
 	{
 		send_to_char("Not a valid type.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea->area_type = type;
 	send_to_char("Type set.\n\r", ch);
 
-	return TRUE;
+	return true;
 }
 
 bool aedit_prog(CHAR_DATA *ch, char *argument)
@@ -1477,7 +1477,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
 	AREA_DATA *pArea;
-	bool found = FALSE;
+	bool found = false;
 
 	EDIT_AREA(ch, pArea);
 
@@ -1518,7 +1518,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char("Syntax: prog add <prog_name>\n\r"\
 						 "        prog del <prog_name>\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (pArea->aprogs == NULL)
@@ -1532,7 +1532,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 			if (!str_cmp(aprog_table[count].name, prog))
 			{
 				sprintf(prog_type, "%s", aprog_table[count].type);
-				found = TRUE;
+				found = true;
 			}
 		}
 
@@ -1540,7 +1540,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 		{
 			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
 			send_to_char(buf, ch);
-			return FALSE;
+			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
@@ -1559,12 +1559,12 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
 				send_to_char(buf, ch);
-				return FALSE;
+				return false;
 			}
 		}
 	}
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -1586,7 +1586,7 @@ bool aedit_security(CHAR_DATA *ch, char *argument)
 	if (!is_number(sec) || sec[0] == '\0')
 	{
 		send_to_char("Syntax:  security [#xlevel]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	value = atoi(sec);
@@ -1603,12 +1603,12 @@ bool aedit_security(CHAR_DATA *ch, char *argument)
 			send_to_char("Security is 0 only.\n\r", ch);
 		}
 
-		return FALSE;
+		return false;
 	}
 
 	pArea->security = value;
 	send_to_char("Security set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_show(CHAR_DATA *ch, char *argument)
@@ -1693,7 +1693,7 @@ bool aedit_show(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool aedit_reset(CHAR_DATA *ch, char *argument)
@@ -1705,7 +1705,7 @@ bool aedit_reset(CHAR_DATA *ch, char *argument)
 	reset_area(pArea);
 	send_to_char("Area reset.\n\r", ch);
 
-	return FALSE;
+	return false;
 }
 
 bool aedit_create(CHAR_DATA *ch, char *argument)
@@ -1715,7 +1715,7 @@ bool aedit_create(CHAR_DATA *ch, char *argument)
 	if (get_security(ch) < 9)
 	{
 		send_to_char("You do not have the security to do that.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea = new_area();
@@ -1725,7 +1725,7 @@ bool aedit_create(CHAR_DATA *ch, char *argument)
 
 	SET_BIT(pArea->area_flags, AREA_ADDED);
 	send_to_char("Area Created.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool aedit_name(CHAR_DATA *ch, char *argument)
@@ -1737,14 +1737,14 @@ bool aedit_name(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:   name [$name]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pArea->name);
 	pArea->name = palloc_string(argument);
 
 	send_to_char("Name set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_credits(CHAR_DATA *ch, char *argument)
@@ -1756,14 +1756,14 @@ bool aedit_credits(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  credits [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pArea->credits);
 	pArea->credits = palloc_string(argument);
 
 	send_to_char("Credits set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_file(CHAR_DATA *ch, char *argument)
@@ -1779,7 +1779,7 @@ bool aedit_file(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  filename [$file]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	/*
@@ -1789,7 +1789,7 @@ bool aedit_file(CHAR_DATA *ch, char *argument)
 	if (length > 16)
 	{
 		send_to_char("No more than eight characters allowed.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	/*
@@ -1800,7 +1800,7 @@ bool aedit_file(CHAR_DATA *ch, char *argument)
 		if (!isalnum(file[i]))
 		{
 			send_to_char("Only letters and numbers are valid.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 	}
 
@@ -1809,7 +1809,7 @@ bool aedit_file(CHAR_DATA *ch, char *argument)
 	pArea->file_name = palloc_string(file);
 
 	send_to_char("Filename set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_level(CHAR_DATA *ch, char *argument)
@@ -1826,7 +1826,7 @@ bool aedit_level(CHAR_DATA *ch, char *argument)
 	if (lowc[0] == '\0' || highc[0] == '\0' || !is_number(lowc) || !is_number(highc))
 	{
 		send_to_char("Syntax:  level [low] [high]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	low = atoi(lowc);
@@ -1835,13 +1835,13 @@ bool aedit_level(CHAR_DATA *ch, char *argument)
 	if (low < 1 || high > 51)
 	{
 		send_to_char("Level range is from 1 to 51.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea->low_range = low;
 	pArea->high_range = high;
 	send_to_char("Level range set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_age(CHAR_DATA *ch, char *argument)
@@ -1856,13 +1856,13 @@ bool aedit_age(CHAR_DATA *ch, char *argument)
 	if (!is_number(age) || age[0] == '\0')
 	{
 		send_to_char("Syntax:  age [#xage]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea->age = atoi(age);
 
 	send_to_char("Age set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_builder(CHAR_DATA *ch, char *argument)
@@ -1876,7 +1876,7 @@ bool aedit_builder(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("Syntax:  builder [$name]  -toggles builder\n\r", ch);
 		send_to_char("Syntax:  builder All      -allows everyone\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	argument[0] = UPPER(argument[0]);
@@ -1893,7 +1893,7 @@ bool aedit_builder(CHAR_DATA *ch, char *argument)
 		}
 
 		send_to_char("Builder removed.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else
 	{
@@ -1916,10 +1916,10 @@ bool aedit_builder(CHAR_DATA *ch, char *argument)
 		pArea->builders = string_proper(palloc_string(buf));
 
 		send_to_char("Builder added.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool aedit_vnum(CHAR_DATA *ch, char *argument)
@@ -1938,25 +1938,25 @@ bool aedit_vnum(CHAR_DATA *ch, char *argument)
 	if (!is_number(lower) || lower[0] == '\0' || !is_number(upper) || upper[0] == '\0')
 	{
 		send_to_char("Syntax:  vnum [#xlower] [#xupper]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if ((ilower = atoi(lower)) > (iupper = atoi(upper)))
 	{
 		send_to_char("AEdit:  Upper must be larger then lower.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!check_range(atoi(lower), atoi(upper)))
 	{
 		send_to_char("AEdit:  Range must include only this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_vnum_area(ilower) && get_vnum_area(ilower) != pArea)
 	{
 		send_to_char("AEdit:  Lower vnum already assigned.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea->min_vnum = ilower;
@@ -1965,13 +1965,13 @@ bool aedit_vnum(CHAR_DATA *ch, char *argument)
 	if (get_vnum_area(iupper) && get_vnum_area(iupper) != pArea)
 	{
 		send_to_char("AEdit:  Upper vnum already assigned.\n\r", ch);
-		return TRUE; /* The lower value has been set. */
+		return true; /* The lower value has been set. */
 	}
 
 	pArea->max_vnum = iupper;
 	send_to_char("Upper vnum set.\n\r", ch);
 
-	return TRUE;
+	return true;
 }
 
 bool aedit_lvnum(CHAR_DATA *ch, char *argument)
@@ -1988,30 +1988,30 @@ bool aedit_lvnum(CHAR_DATA *ch, char *argument)
 	if (!is_number(lower) || lower[0] == '\0')
 	{
 		send_to_char("Syntax:  min_vnum [#xlower]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if ((ilower = atoi(lower)) > (iupper = pArea->max_vnum))
 	{
 		send_to_char("AEdit:  Value must be less than the max_vnum.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!check_range(ilower, iupper))
 	{
 		send_to_char("AEdit:  Range must include only this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_vnum_area(ilower) && get_vnum_area(ilower) != pArea)
 	{
 		send_to_char("AEdit:  Lower vnum already assigned.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea->min_vnum = ilower;
 	send_to_char("Lower vnum set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool aedit_uvnum(CHAR_DATA *ch, char *argument)
@@ -2028,31 +2028,31 @@ bool aedit_uvnum(CHAR_DATA *ch, char *argument)
 	if (!is_number(upper) || upper[0] == '\0')
 	{
 		send_to_char("Syntax:  max_vnum [#xupper]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if ((ilower = pArea->min_vnum) > (iupper = atoi(upper)))
 	{
 		send_to_char("AEdit:  Upper must be larger then lower.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!check_range(ilower, iupper))
 	{
 		send_to_char("AEdit:  Range must include only this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_vnum_area(iupper) && get_vnum_area(iupper) != pArea)
 	{
 		send_to_char("AEdit:  Upper vnum already assigned.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea->max_vnum = iupper;
 	send_to_char("Upper vnum set.\n\r", ch);
 
-	return TRUE;
+	return true;
 }
 
 int aclimate_lookup(const char *name)
@@ -2106,13 +2106,13 @@ bool aedit_climate(CHAR_DATA *ch, char *argument)
 		if (climate % 3 != 0)
 			send_to_char("\n\r", ch);
 
-		return FALSE;
+		return false;
 	}
 	else
 	{
 		pArea->climate = icli;
 		send_to_char("Climate set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 }
 
@@ -2130,19 +2130,19 @@ bool redit_cabal(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  cabal (cabal name)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	cabal = cabal_lookup(argument);
 	if (cabal == 0)
 	{
 		send_to_char("That is not a valid cabal.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pRoom->cabal = cabal;
 	send_to_char("Cabal set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool redit_owner(CHAR_DATA *ch, char *argument)
@@ -2154,18 +2154,18 @@ bool redit_owner(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  owner (name)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_security(ch) < 5)
 	{
 		send_to_char("You are not high enough level for that.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pRoom->owner = palloc_string(argument);
 	send_to_char("Owner set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool redit_show(CHAR_DATA *ch, char *argument)
@@ -2280,14 +2280,14 @@ bool redit_show(CHAR_DATA *ch, char *argument)
 	}
 
 	strcat(buf1, "Characters: [");
-	fcnt = FALSE;
+	fcnt = false;
 
 	for (rch = pRoom->people; rch; rch = rch->next_in_room)
 	{
 		one_argument(rch->name, buf);
 		strcat(buf1, buf);
 		strcat(buf1, " ");
-		fcnt = TRUE;
+		fcnt = true;
 	}
 
 	if (fcnt)
@@ -2302,14 +2302,14 @@ bool redit_show(CHAR_DATA *ch, char *argument)
 	}
 
 	strcat(buf1, "Objects:    [");
-	fcnt = FALSE;
+	fcnt = false;
 
 	for (obj = pRoom->contents; obj; obj = obj->next_content)
 	{
 		one_argument(obj->name, buf);
 		strcat(buf1, buf);
 		strcat(buf1, " ");
-		fcnt = TRUE;
+		fcnt = true;
 	}
 
 	if (fcnt)
@@ -2400,7 +2400,7 @@ bool redit_show(CHAR_DATA *ch, char *argument)
 	send_to_char(buf1, ch);
 	send_to_char("Syntax:  resets\n\r---- RESETS ----\n\r", ch);
 	do_resets(ch, "");
-	return FALSE;
+	return false;
 }
 
 /* Local function. */
@@ -2410,7 +2410,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 	char command[MAX_INPUT_LENGTH];
 	char arg[MAX_INPUT_LENGTH];
 	int value, count = 0;
-	bool dFound = FALSE, dMove = FALSE;
+	bool dFound = false, dMove = false;
 
 	EDIT_ROOM(ch, pRoom);
 
@@ -2431,7 +2431,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (!pRoom->exit[door])
 		{
 			send_to_char("Exit flag doesn't exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 		/*   pRoom->exit[door] = new_exit(); */
 
@@ -2456,19 +2456,19 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 			send_to_char("Linking room exit flag toggled.\n\r", ch);
 		}
 
-		return TRUE;
+		return true;
 	}
 
 	if (command[0] == '\0' && argument[0] == '\0') /* Move command. */
 	{
-		move_char(ch, door, TRUE, TRUE); /* ROM OLC */
-		return FALSE;
+		move_char(ch, door, true, true); /* ROM OLC */
+		return false;
 	}
 
 	if (command[0] == '?')
 	{
 		do_help(ch, "EXIT");
-		return FALSE;
+		return false;
 	}
 
 	if (!str_cmp(command, "delete"))
@@ -2479,7 +2479,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (!pRoom->exit[door])
 		{
 			send_to_char("REdit:  Cannot delete a null exit.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		/*
@@ -2501,7 +2501,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		pRoom->exit[door] = NULL;
 
 		send_to_char("Exit unlinked.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "link"))
@@ -2511,7 +2511,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (arg[0] == '\0' || !is_number(arg))
 		{
 			send_to_char("Syntax:  [direction] link [vnum]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		value = atoi(arg);
@@ -2519,19 +2519,19 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (!get_room_index(value))
 		{
 			send_to_char("REdit:  Cannot link to non-existant room.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!IS_BUILDER(ch, get_room_index(value)->area))
 		{
 			send_to_char("REdit:  Cannot link to that area.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (get_room_index(value)->exit[rev_dir[door]])
 		{
 			send_to_char("REdit:  Remote side's exit already exists.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!pRoom->exit[door])
@@ -2553,7 +2553,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		pRoom->exit[door] = pExit;
 
 		send_to_char("Two-way link established.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "dig"))
@@ -2566,8 +2566,8 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 			{
 				if ((get_room_index(count)) == NULL)
 				{
-					dFound = TRUE;
-					dMove = TRUE;
+					dFound = true;
+					dMove = true;
 					break;
 				}
 			}
@@ -2576,7 +2576,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 			{
 				send_to_char("Syntax: [direction] dig        -- Assigns next available vnum\n\r"\
 							 "        [direction] dig <vnum> -- Assigns that specific vnum\n\r", ch);
-				return FALSE;
+				return false;
 			}
 			else
 			{
@@ -2596,7 +2596,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 			char_to_room(ch, move_to);
 		}
 
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "room"))
@@ -2604,7 +2604,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (arg[0] == '\0' || !is_number(arg))
 		{
 			send_to_char("Syntax:  [direction] room [vnum]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!pRoom->exit[door])
@@ -2615,7 +2615,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (!get_room_index(value))
 		{
 			send_to_char("REdit:  Cannot link to non-existant room.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		pRoom->exit[door]->u1.to_room = get_room_index(value); /* ROM OLC */
@@ -2623,7 +2623,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		/*	pRoom->exit[door]->vnum = value;                 Can't set vnum in ROM */
 
 		send_to_char("One-way link established.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "key"))
@@ -2631,7 +2631,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (arg[0] == '\0' || !is_number(arg))
 		{
 			send_to_char("Syntax:  [direction] key [vnum]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!pRoom->exit[door])
@@ -2642,19 +2642,19 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (!get_obj_index(value))
 		{
 			send_to_char("REdit:  Key doesn't exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (get_obj_index(value)->item_type != ITEM_KEY)
 		{
 			send_to_char("REdit:  Key doesn't exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		pRoom->exit[door]->key = value;
 
 		send_to_char("Exit key set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "copydesc"))
@@ -2663,20 +2663,20 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (!pRoom->exit[door])
 		{
 			send_to_char("REdit:  Exit doesn't exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!pRoom->exit[door]->u1.to_room)
 		{
 			send_to_char("REdit:  Room doesn't exist.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		free_pstring(pRoom->exit[door]->u1.to_room->description);
 		pRoom->exit[door]->u1.to_room->description = palloc_string(pRoom->description);
 
 		send_to_char("Room description copied.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "name"))
@@ -2684,7 +2684,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (arg[0] == '\0')
 		{
 			send_to_char("Syntax:  [direction] name [string]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!pRoom->exit[door])
@@ -2696,7 +2696,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		pRoom->exit[door]->keyword = palloc_string(arg);
 
 		send_to_char("Exit name set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_prefix(command, "description"))
@@ -2707,62 +2707,62 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 				pRoom->exit[door] = new_exit();
 
 			string_append(ch, &pRoom->exit[door]->description);
-			return TRUE;
+			return true;
 		}
 
 		send_to_char("Syntax:  [direction] desc\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool redit_north(CHAR_DATA *ch, char *argument)
 {
 	if (change_exit(ch, argument, DIR_NORTH))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool redit_south(CHAR_DATA *ch, char *argument)
 {
 	if (change_exit(ch, argument, DIR_SOUTH))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool redit_east(CHAR_DATA *ch, char *argument)
 {
 	if (change_exit(ch, argument, DIR_EAST))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool redit_west(CHAR_DATA *ch, char *argument)
 {
 	if (change_exit(ch, argument, DIR_WEST))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool redit_up(CHAR_DATA *ch, char *argument)
 {
 	if (change_exit(ch, argument, DIR_UP))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool redit_down(CHAR_DATA *ch, char *argument)
 {
 	if (change_exit(ch, argument, DIR_DOWN))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool redit_ed(CHAR_DATA *ch, char *argument)
@@ -2781,7 +2781,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		send_to_char("         ed edit [one of keywords]\n\r", ch);
 		send_to_char("         ed delete [one of keywords]\n\r", ch);
 		send_to_char("         ed format [one of keywords]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!str_cmp(command, "add"))
@@ -2789,7 +2789,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed add [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		ed = new_extra_descr();
@@ -2800,7 +2800,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 
 		string_append(ch, &ed->description);
 
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "edit"))
@@ -2808,7 +2808,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed edit [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (ed = pRoom->extra_descr; ed; ed = ed->next)
@@ -2820,12 +2820,12 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (!ed)
 		{
 			send_to_char("REdit:  Extra description keyword not found.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		string_append(ch, &ed->description);
 
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "delete"))
@@ -2835,7 +2835,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed delete [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (ed = pRoom->extra_descr; ed; ed = ed->next)
@@ -2849,7 +2849,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (!ed)
 		{
 			send_to_char("REdit:  Extra description keyword not found.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!ped)
@@ -2860,7 +2860,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		free_extra_descr(ed);
 
 		send_to_char("Extra description deleted.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "format"))
@@ -2868,7 +2868,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed format [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (ed = pRoom->extra_descr; ed; ed = ed->next)
@@ -2880,17 +2880,17 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 		if (!ed)
 		{
 			send_to_char("REdit:  Extra description keyword not found.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		ed->description = format_string(ed->description);
 
 		send_to_char("Extra description formatted.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	redit_ed(ch, "");
-	return FALSE;
+	return false;
 }
 
 bool redit_create(CHAR_DATA *ch, char *argument)
@@ -2908,7 +2908,7 @@ bool redit_create(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || value <= 0)
 	{
 		send_to_char("Syntax:  create [vnum > 0]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea = get_vnum_area(value);
@@ -2916,19 +2916,19 @@ bool redit_create(CHAR_DATA *ch, char *argument)
 	if (!pArea)
 	{
 		send_to_char("REdit:  That vnum is not assigned an area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!IS_BUILDER(ch, pArea))
 	{
 		send_to_char("REdit:  Vnum in an area you cannot build in.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_room_index(value))
 	{
 		send_to_char("REdit:  Room vnum already exists.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pRoom = new_room_index();
@@ -2945,7 +2945,7 @@ bool redit_create(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "Room #%d created.\n\r", value);
 	send_to_char(buf, ch);
-	return TRUE;
+	return true;
 }
 
 bool redit_name(CHAR_DATA *ch, char *argument)
@@ -2957,14 +2957,14 @@ bool redit_name(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  name [name]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pRoom->name);
 	pRoom->name = palloc_string(argument);
 
 	send_to_char("Name set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 void redit_end_fun(CHAR_DATA *ch, char *argument)
@@ -2983,11 +2983,11 @@ bool redit_desc(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		string_append(ch, &pRoom->description);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("Syntax:  desc\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool redit_heal(CHAR_DATA *ch, char *argument)
@@ -3000,11 +3000,11 @@ bool redit_heal(CHAR_DATA *ch, char *argument)
 	{
 		pRoom->heal_rate = atoi(argument);
 		send_to_char("Heal rate set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("Syntax : heal <#xnumber>\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool redit_mana(CHAR_DATA *ch, char *argument)
@@ -3017,11 +3017,11 @@ bool redit_mana(CHAR_DATA *ch, char *argument)
 	{
 		pRoom->mana_rate = atoi(argument);
 		send_to_char("Mana rate set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("Syntax : mana <#xnumber>\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool redit_clan(CHAR_DATA *ch, char *argument)
@@ -3031,7 +3031,7 @@ bool redit_clan(CHAR_DATA *ch, char *argument)
 	EDIT_ROOM(ch, pRoom);
 
 	send_to_char("Clan set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool redit_format(CHAR_DATA *ch, char *argument)
@@ -3043,7 +3043,7 @@ bool redit_format(CHAR_DATA *ch, char *argument)
 	pRoom->description = format_string(pRoom->description);
 
 	send_to_char("String formatted.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool redit_mreset(CHAR_DATA *ch, char *argument)
@@ -3065,7 +3065,7 @@ bool redit_mreset(CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0' || !is_number(arg))
 	{
 		send_to_char("Syntax:  mreset <vnum> <max #x> <mix #x>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMobIndex = get_mob_index(atoi(arg));
@@ -3073,13 +3073,13 @@ bool redit_mreset(CHAR_DATA *ch, char *argument)
 	if (!pMobIndex)
 	{
 		send_to_char("REdit: No mobile has that vnum.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (pMobIndex->area != pRoom->area)
 	{
 		send_to_char("REdit: No such mobile in this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	/*
@@ -3106,7 +3106,7 @@ bool redit_mreset(CHAR_DATA *ch, char *argument)
 	send_to_char(output, ch);
 
 	act("$n has created $N!", ch, NULL, newmob, TO_ROOM);
-	return TRUE;
+	return true;
 }
 
 int wear_loc(int bits, int count)
@@ -3157,7 +3157,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		send_to_char("        -no_args               = into room\n\r", ch);
 		send_to_char("        -<obj_name>            = into obj\n\r", ch);
 		send_to_char("        -<mob_name> <wear_loc> = into mob\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObjIndex = get_obj_index(atoi(arg1));
@@ -3165,13 +3165,13 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 	if (!(pObjIndex))
 	{
 		send_to_char("REdit: No object has that vnum.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (pObjIndex->area != pRoom->area)
 	{
 		send_to_char("REdit: No such object in this area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	/*
@@ -3255,7 +3255,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		if (wear_loc == NO_FLAG)
 		{
 			send_to_char("REdit: Invalid wear_loc.  '? wear-loc'\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		/*
@@ -3268,7 +3268,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 				pObjIndex->vnum,
 				flag_string(wear_flags, pObjIndex->wear_flags));
 			send_to_char(output, ch);
-			return FALSE;
+			return false;
 		}
 
 		/*
@@ -3277,7 +3277,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		if (get_eq_char(to_mob, wear_loc))
 		{
 			send_to_char("REdit:  Object already equipped.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		pReset = new_reset_data();
@@ -3343,7 +3343,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		obj_to_char(newobj, to_mob);
 
 		if (pReset->command == 'E')
-			equip_char(to_mob, newobj, pReset->arg3, FALSE);
+			equip_char(to_mob, newobj, pReset->arg3, false);
 
 		sprintf(output,
 				"%s (%d) has been loaded "\
@@ -3358,11 +3358,11 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 	else /* Display Syntax */
 	{
 		send_to_char("REdit:  That mobile isn't here.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	act("$n has created $p!", ch, newobj, NULL, TO_ROOM);
-	return TRUE;
+	return true;
 }
 
 /*
@@ -3531,7 +3531,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_LIGHT");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3557,7 +3557,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_STAFF_WAND");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3588,7 +3588,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_SCROLL_POTION_PILL");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3615,7 +3615,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_ARMOR");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3651,7 +3651,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_WEAPON");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3680,7 +3680,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_PORTAL");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3713,7 +3713,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_FURNITURE");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3734,7 +3734,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					else
 					{
 						do_help(ch, "ITEM_CONTAINER");
-						return FALSE;
+						return false;
 					}
 
 					send_to_char("CONTAINER TYPE SET.\n\r\n\r", ch);
@@ -3745,13 +3745,13 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 						if (!get_obj_index(atoi(argument)))
 						{
 							send_to_char("THERE IS NO SUCH ITEM.\n\r\n\r", ch);
-							return FALSE;
+							return false;
 						}
 
 						if (get_obj_index(atoi(argument))->item_type != ITEM_KEY)
 						{
 							send_to_char("THAT ITEM IS NOT A KEY.\n\r\n\r", ch);
-							return FALSE;
+							return false;
 						}
 					}
 
@@ -3768,7 +3768,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_CONTAINER");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3794,7 +3794,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 				default:
 					do_help(ch, "ITEM_DRINK");
 					/* OLC		    do_help( ch, "liquids" );    */
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3816,7 +3816,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 				default:
 					do_help(ch, "ITEM_FOUNTAIN");
 					/* OLC		    do_help( ch, "liquids" );    */
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3837,7 +3837,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_FOOD");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3854,7 +3854,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 					break;
 				default:
 					do_help(ch, "ITEM_MONEY");
-					return FALSE;
+					return false;
 			}
 
 			break;
@@ -3864,7 +3864,7 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 
 	show_obj_values(ch, pObj);
 
-	return TRUE;
+	return true;
 }
 
 bool oedit_show(CHAR_DATA *ch, char *argument)
@@ -4172,7 +4172,7 @@ bool oedit_show(CHAR_DATA *ch, char *argument)
 
 	show_obj_values(ch, pObj);
 
-	return FALSE;
+	return false;
 }
 
 /*
@@ -4194,7 +4194,7 @@ bool oedit_addapply(CHAR_DATA *ch, char *argument)
 	if (loc[0] == '\0' || mod[0] == '\0' || !is_number(mod))
 	{
 		send_to_char("Syntax:  addapply [location] [#mod]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	value = display_lookup(loc, apply_locations);
@@ -4202,7 +4202,7 @@ bool oedit_addapply(CHAR_DATA *ch, char *argument)
 	if (value == -1)
 	{
 		send_to_char("Invalid apply.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pAf = new_apply_data();
@@ -4212,7 +4212,7 @@ bool oedit_addapply(CHAR_DATA *ch, char *argument)
 	pObj->apply = pAf;
 
 	send_to_char("Affect added.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 /*
@@ -4234,14 +4234,14 @@ bool oedit_addaffect(CHAR_DATA *ch, char *argument)
 	if ( loc[0] == '\0' || mod[0] == '\0' || !is_number( mod ) )
 	{
 	send_to_char( "Syntax:  addaffect [location] [#xmod]\n\r", ch );
-	return FALSE;
+	return false;
 	}
 
 	if ( ( value = flag_value( apply_flags, loc ) ) == NO_FLAG )
 	{
 		send_to_char( "Valid affects are:\n\r", ch );
 	show_help( ch, "apply" );
-	return FALSE;
+	return false;
 	}
 
 	value3 = flag_value( affect_flags, value2 );
@@ -4257,7 +4257,7 @@ bool oedit_addaffect(CHAR_DATA *ch, char *argument)
 	pObj->affected  =   pAf;
 
 	send_to_char( "Affect added.\n\r", ch);
-	return TRUE;
+	return true;
 }
 */
 
@@ -4281,7 +4281,7 @@ bool oedit_delapply(CHAR_DATA *ch, char *argument)
 	if (!is_number(apply) || apply[0] == '\0')
 	{
 		send_to_char("Syntax:  delapply [#xapply]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	value = atoi(apply);
@@ -4289,13 +4289,13 @@ bool oedit_delapply(CHAR_DATA *ch, char *argument)
 	if (value < 0)
 	{
 		send_to_char("Only non-negative apply-numbers allowed.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!(pAf = pObj->apply))
 	{
 		send_to_char("OEdit:  Non-existant apply.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (value == 0) /* First case: Remove first affect */
@@ -4319,12 +4319,12 @@ bool oedit_delapply(CHAR_DATA *ch, char *argument)
 		else /* Doesn't exist */
 		{
 			send_to_char("No such affect.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 	}
 
 	send_to_char("Affect removed.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_msg(CHAR_DATA *ch, char *argument)
@@ -4344,7 +4344,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 					 "         msg wear room (echo)\n\r"\
 					 "         msg remove ch (echo)\n\r"\
 					 "         msg remove room (echo)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!str_prefix(type, "wear"))
@@ -4368,7 +4368,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 		else
 		{
 			send_to_char("That is not a valid target for the message echo.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 	}
 	else if (!str_prefix(type, "remove"))
@@ -4392,7 +4392,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 		else
 		{
 			send_to_char("That is not a valid target for the message echo.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 	}
 	else
@@ -4401,11 +4401,11 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 					 "         msg wear room (echo)\n\r"\
 					 "         msg remove ch (echo)\n\r"\
 					 "         msg remove room (echo)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	send_to_char("Echo updated.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_limit(CHAR_DATA *ch, char *argument)
@@ -4420,7 +4420,7 @@ bool oedit_limit(CHAR_DATA *ch, char *argument)
 		send_to_char("Syntax:  limit (number)\n\r"\
 					 "         Setting limit to 0 will make the object unlimited.\n\r",
 					 ch);
-		return FALSE;
+		return false;
 	}
 
 	num = atoi(argument);
@@ -4428,12 +4428,12 @@ bool oedit_limit(CHAR_DATA *ch, char *argument)
 	if (num == -1)
 	{
 		send_to_char("Limit must be a valid number greater than or equal to 0.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->limtotal = num;
 	send_to_char("Limit set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_verb(CHAR_DATA *ch, char *argument)
@@ -4445,12 +4445,12 @@ bool oedit_verb(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  verb (verb name)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->verb = palloc_string(argument);
 	send_to_char("Verb set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_cabal(CHAR_DATA *ch, char *argument)
@@ -4463,7 +4463,7 @@ bool oedit_cabal(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  cabal (cabal name)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	cabal = cabal_lookup(argument);
@@ -4471,12 +4471,12 @@ bool oedit_cabal(CHAR_DATA *ch, char *argument)
 	if (cabal == 0)
 	{
 		send_to_char("That is not a valid cabal.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->cabal = cabal;
 	send_to_char("Cabal set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_timer(CHAR_DATA *ch, char *argument)
@@ -4490,7 +4490,7 @@ bool oedit_timer(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("Syntax:  timer (number)\n\r"\
 					 "         -1 is no timer and 0 is one tick.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	num = atoi(argument);
@@ -4498,12 +4498,12 @@ bool oedit_timer(CHAR_DATA *ch, char *argument)
 	if (num < 0)
 	{
 		send_to_char("Timer must be a number greater than -1.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->start_timer = num;
 	send_to_char("Timer set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_restrict(CHAR_DATA *ch, char *argument)
@@ -4517,7 +4517,7 @@ bool oedit_restrict(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  restrict (type)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	bit = restrict_lookup(argument);
@@ -4537,12 +4537,12 @@ bool oedit_restrict(CHAR_DATA *ch, char *argument)
 			sprintf(buf, "%s\n\r", buf);
 
 		send_to_char(buf, ch);
-		return FALSE;
+		return false;
 	}
 
 	TOGGLE_BIT(pObj->restrict_flags, bit);
 	send_to_char("Restrict flag toggled.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_notes(CHAR_DATA *ch, char *argument)
@@ -4552,7 +4552,7 @@ bool oedit_notes(CHAR_DATA *ch, char *argument)
 	EDIT_OBJ(ch, pObj);
 
 	string_append(ch, &pObj->notes);
-	return TRUE;
+	return true;
 }
 
 bool oedit_wear_name(CHAR_DATA *ch, char *argument)
@@ -4563,12 +4563,12 @@ bool oedit_wear_name(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  worn (location) will show <worn (location)> on look\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->wear_loc_name = palloc_string(argument);
 	send_to_char("Wear location name set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_flag(CHAR_DATA *ch, char *argument)
@@ -4592,7 +4592,7 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 		if (bit == NO_FLAG)
 		{
 			send_to_char("That is not a valid flag type for immunities.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 		else
 		{
@@ -4605,7 +4605,7 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 		if (bit == NO_FLAG)
 		{
 			send_to_char("That is not a valid flag type for resistances.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 		else
 		{
@@ -4619,7 +4619,7 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 		if (bit == NO_FLAG)
 		{
 			send_to_char("That is not a vlaid flag type for vulnerbilities.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 		else
 		{
@@ -4631,7 +4631,7 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 		if (skill_lookup(arg2) == -1)
 		{
 			send_to_char(arg2, ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!str_cmp(arg3, "delete"))
@@ -4645,12 +4645,12 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 			if (af == NULL || skill_lookup(arg2) == -1)
 			{
 				send_to_char("That object doesn't have that flag affect.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			charaff_from_obj_index(pObj, af);
 			send_to_char("Flag affect removed.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 
 		init_affect(&pAf);
@@ -4668,7 +4668,7 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 		pAf.level = pObj->level;
 		charaff_to_obj_index(pObj, &pAf);
 		top_affect++;
-		return TRUE;
+		return true;
 	}
 	else
 	{
@@ -4677,11 +4677,11 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 					 "         flag vul <type>\n\r"\
 					 "         flag aff 'spell' <affect_bit> show|noshow\n\r"\
 					 "         flag aff 'spell' delete\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	send_to_char("Flag toggled.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_name(CHAR_DATA *ch, char *argument)
@@ -4693,14 +4693,14 @@ bool oedit_name(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  name [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pObj->name);
 	pObj->name = palloc_string(argument);
 
 	send_to_char("Name set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_short(CHAR_DATA *ch, char *argument)
@@ -4712,7 +4712,7 @@ bool oedit_short(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  short [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pObj->short_descr);
@@ -4720,7 +4720,7 @@ bool oedit_short(CHAR_DATA *ch, char *argument)
 	pObj->short_descr[0] = LOWER(pObj->short_descr[0]);
 
 	send_to_char("Short description set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_long(CHAR_DATA *ch, char *argument)
@@ -4732,7 +4732,7 @@ bool oedit_long(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  long [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pObj->description);
@@ -4740,7 +4740,7 @@ bool oedit_long(CHAR_DATA *ch, char *argument)
 	pObj->description[0] = UPPER(pObj->description[0]);
 
 	send_to_char("Long description set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool set_value(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, char *argument, int value)
@@ -4748,13 +4748,13 @@ bool set_value(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, char *argument, int value)
 	if (argument[0] == '\0')
 	{
 		set_obj_values(ch, pObj, -1, ""); /* '\0' changed to "" -- Hugin */
-		return FALSE;
+		return false;
 	}
 
 	if (set_obj_values(ch, pObj, value, argument))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_values(CHAR_DATA *ch, char *argument, int value)
@@ -4764,49 +4764,49 @@ bool oedit_values(CHAR_DATA *ch, char *argument, int value)
 	EDIT_OBJ(ch, pObj);
 
 	if (set_value(ch, pObj, argument, value))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_value0(CHAR_DATA *ch, char *argument)
 {
 	if (oedit_values(ch, argument, 0))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_value1(CHAR_DATA *ch, char *argument)
 {
 	if (oedit_values(ch, argument, 1))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_value2(CHAR_DATA *ch, char *argument)
 {
 	if (oedit_values(ch, argument, 2))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_value3(CHAR_DATA *ch, char *argument)
 {
 	if (oedit_values(ch, argument, 3))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_value4(CHAR_DATA *ch, char *argument)
 {
 	if (oedit_values(ch, argument, 4))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 bool oedit_weight(CHAR_DATA *ch, char *argument)
@@ -4818,13 +4818,13 @@ bool oedit_weight(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || !is_number(argument))
 	{
 		send_to_char("Syntax:  weight [number]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->weight = atoi(argument);
 
 	send_to_char("Weight set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_cost(CHAR_DATA *ch, char *argument)
@@ -4836,13 +4836,13 @@ bool oedit_cost(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || !is_number(argument))
 	{
 		send_to_char("Syntax:  cost [number]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->cost = atoi(argument);
 
 	send_to_char("Cost set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_create(CHAR_DATA *ch, char *argument)
@@ -4857,7 +4857,7 @@ bool oedit_create(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || value == 0)
 	{
 		send_to_char("Syntax:  oedit create [vnum]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea = get_vnum_area(value);
@@ -4865,19 +4865,19 @@ bool oedit_create(CHAR_DATA *ch, char *argument)
 	if (!pArea)
 	{
 		send_to_char("OEdit:  That vnum is not assigned an area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!IS_BUILDER(ch, pArea))
 	{
 		send_to_char("OEdit:  Vnum in an area you cannot build in.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_obj_index(value))
 	{
 		send_to_char("OEdit:  Object vnum already exists.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj = new_obj_index();
@@ -4893,7 +4893,7 @@ bool oedit_create(CHAR_DATA *ch, char *argument)
 	ch->desc->pEdit = (void *)pObj;
 
 	send_to_char("Object Created.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_ed(CHAR_DATA *ch, char *argument)
@@ -4912,7 +4912,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		send_to_char("         ed delete [keyword]\n\r", ch);
 		send_to_char("         ed edit [keyword]\n\r", ch);
 		send_to_char("         ed format [keyword]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!str_cmp(command, "add"))
@@ -4920,7 +4920,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed add [keywords]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		ed = new_extra_descr();
@@ -4930,7 +4930,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 
 		string_append(ch, &ed->description);
 
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "edit"))
@@ -4938,7 +4938,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed edit [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (ed = pObj->extra_descr; ed; ed = ed->next)
@@ -4950,12 +4950,12 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (!ed)
 		{
 			send_to_char("OEdit:  Extra description keyword not found.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		string_append(ch, &ed->description);
 
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "delete"))
@@ -4965,7 +4965,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed delete [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (ed = pObj->extra_descr; ed; ed = ed->next)
@@ -4978,7 +4978,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (!ed)
 		{
 			send_to_char("OEdit:  Extra description keyword not found.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!ped)
@@ -4989,7 +4989,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		free_extra_descr(ed);
 
 		send_to_char("Extra description deleted.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (!str_cmp(command, "format"))
@@ -4999,7 +4999,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (argument[0] == '\0')
 		{
 			send_to_char("Syntax:  ed format [keyword]\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		for (ed = pObj->extra_descr; ed; ed = ed->next)
@@ -5012,17 +5012,17 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 		if (!ed)
 		{
 			send_to_char("OEdit:  Extra description keyword not found.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		ed->description = format_string(ed->description);
 
 		send_to_char("Extra description formatted.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	oedit_ed(ch, "");
-	return FALSE;
+	return false;
 }
 
 /* ROM object functions : */
@@ -5042,14 +5042,14 @@ bool oedit_extra(CHAR_DATA *ch, char *argument) /* Moved out of oedit() due to n
 			TOGGLE_BIT(pObj->extra_flags, value);
 
 			send_to_char("Extra flag toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax:  extra [flag]\n\r"
 				 "Type '? extra' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool oedit_wear(CHAR_DATA *ch, char *argument) /* Moved out of oedit() due to naming conflicts -- Hugin */
@@ -5067,13 +5067,13 @@ bool oedit_wear(CHAR_DATA *ch, char *argument) /* Moved out of oedit() due to na
 			TOGGLE_BIT(pObj->wear_flags, value);
 
 			send_to_char("Wear flag toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax:  wear [flag]\n\r"\
 				 "Type '? wear' for a list of flags.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool oedit_type(CHAR_DATA *ch, char *argument) /* Moved out of oedit() due to naming conflicts -- Hugin */
@@ -5101,14 +5101,14 @@ bool oedit_type(CHAR_DATA *ch, char *argument) /* Moved out of oedit() due to na
 			pObj->value[3] = 0;
 			pObj->value[4] = 0; /* ROM */
 
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax:  item [flag]\n\r"\
 				 "Type '? item' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool oedit_material(CHAR_DATA *ch, char *argument)
@@ -5120,14 +5120,14 @@ bool oedit_material(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  material [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pObj->material);
 	pObj->material = palloc_string(argument);
 
 	send_to_char("Material set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 /*
@@ -5145,13 +5145,13 @@ bool oedit_material(CHAR_DATA *ch, char *argument)
 	{
 		pObj->material = material_name(value);
 		send_to_char( "Material type set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	}
 
 	send_to_char( "Syntax:  material [material-name]\n\r"
 		  "Type '? material' for a list of materials.\n\r", ch );
-	return FALSE;
+	return false;
 }
 */
 
@@ -5164,13 +5164,13 @@ bool oedit_level(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || !is_number(argument))
 	{
 		send_to_char("Syntax:  level [number]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pObj->level = atoi(argument);
 
 	send_to_char("Level set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_condition(CHAR_DATA *ch, char *argument)
@@ -5185,12 +5185,12 @@ bool oedit_condition(CHAR_DATA *ch, char *argument)
 		pObj->condition = value;
 		send_to_char("Condition set.\n\r", ch);
 
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("Syntax:  condition [number]\n\r"\
 				 "Where number can range from 0 (ruined) to 100 (perfect).\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 /*
@@ -5209,20 +5209,20 @@ bool medit_limit(CHAR_DATA *ch, char *argument)
 	if (!*arg1 || !*arg2)
 	{
 		send_to_char("Syntax:  limit <low vnum> <high vnum>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if ((low = atoi(arg1)) == -1 || (high = atoi(arg2)) == -1)
 	{
 		send_to_char("Syntax:  limit <low vnum> <high vnum>\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->restrict_low = low;
 	pMob->restrict_high = high;
 
 	send_to_char("Limit set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_optional(CHAR_DATA *ch, char *argument)
@@ -5231,7 +5231,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 	char arg1[MSL], arg2[MSL], arg3[MSL], arg4[MSL];
 	char arg5[MSL], arg6[MSL], arg7[MSL];
 	int sn, bit, i;
-	bool added = FALSE;
+	bool added = false;
 	BARRED_DATA *bar = NULL;
 
 	EDIT_MOB(ch, pMob);
@@ -5254,12 +5254,12 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 				pMob->affect_sn[sn] = -1;
 				pMob->affect_bit[sn] = 0;
 				send_to_char("Optional Mob Affect Removed.\n\r", ch);
-				return TRUE;
+				return true;
 			}
 			else
 			{
 				send_to_char("Not a valid id for mob affect.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 		}
 
@@ -5268,7 +5268,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (sn == -1)
 		{
 			send_to_char("That is not a valid spell.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		bit = flag_lookup(arg3, affect_flags);
@@ -5281,7 +5281,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 				{
 					pMob->affect_sn[i] = sn;
 					pMob->affect_bit[i] = bit;
-					added = TRUE;
+					added = true;
 					break;
 				}
 			}
@@ -5290,7 +5290,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (added)
 		{
 			send_to_char("Affected added.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 	else if (arg1[0] == 'B' || arg1[0] == 'b')
@@ -5305,12 +5305,12 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 				pMob->barred_entry = NULL;
 				delete pMob->barred_entry;
 				send_to_char("Barred entry removed.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 			else
 			{
 				send_to_char("This mob already has a barred exit.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 		}
 
@@ -5319,7 +5319,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (bar->type == NO_FLAG)
 		{
 			send_to_char("Invalid Bar Entry Type.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		bar->comparison = -1;
@@ -5339,7 +5339,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		else
 		{
 			send_to_char("Not a valid operator.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (bar->type == 1)
@@ -5350,7 +5350,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (bar->value == -1)
 		{
 			send_to_char("Not a valid value.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		bar->vnum = atoi(arg5);
@@ -5358,7 +5358,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (bar->vnum == -1)
 		{
 			send_to_char("Not a valid vnum.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (!str_cmp(arg6, "SAY") || !str_cmp(arg6, "say"))
@@ -5385,13 +5385,13 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		else
 		{
 			send_to_char("Not a valid message type.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		bar->message = palloc_string(argument);
 		pMob->barred_entry = bar;
 		send_to_char("Barred exit added.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else if (arg1[0] == 'C' || arg1[0] == 'c')
 	{
@@ -5404,12 +5404,12 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 				free_pstring(pMob->cast_spell[sn]);
 				free_pstring(pMob->cast_spell[sn] = NULL);
 				send_to_char("Optional: Castable Spell Reset.\n\r", ch);
-				return TRUE;
+				return true;
 			}
 			else
 			{
 				send_to_char("That is not a valid ID for a castable spell.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 		}
 
@@ -5418,7 +5418,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (sn == -1)
 		{
 			send_to_char("That is not a valid spell.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if (sn)
@@ -5428,7 +5428,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 				if (pMob->cast_spell[i] == NULL)
 				{
 					pMob->cast_spell[i] = palloc_string(arg2);
-					added = TRUE;
+					added = true;
 					break;
 				}
 			}
@@ -5437,7 +5437,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		if (added)
 		{
 			send_to_char("Castable spell added.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 	else
@@ -5446,10 +5446,10 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 					 "         optional b <field> <operator> <value> <vnum> <response type> <message>\n\r"\
 					 "         optional c 'spell'\n\r"\
 					 "         optional <a/b/c> delete #\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool medit_yell(CHAR_DATA *ch, char *argument)
@@ -5459,7 +5459,7 @@ bool medit_yell(CHAR_DATA *ch, char *argument)
 	EDIT_MOB(ch, pMob);
 
 	pMob->attack_yell = palloc_string(argument);
-	return TRUE;
+	return true;
 }
 
 bool medit_notes(CHAR_DATA *ch, char *argument)
@@ -5469,7 +5469,7 @@ bool medit_notes(CHAR_DATA *ch, char *argument)
 	EDIT_MOB(ch, pMob);
 
 	string_append(ch, &pMob->notes);
-	return TRUE;
+	return true;
 }
 
 void clean_mob_class(MOB_INDEX_DATA *pMob, int class_index)
@@ -5507,13 +5507,13 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 		if (!style)
 		{
 			send_to_char("Not a valid style.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		if ((style_count(pMob->styles) >= 2) && !IS_SET(pMob->styles, style_table[style].bit))
 		{
 			send_to_char("Mobs may only have two styles.\n\r", ch);
-			return FALSE;
+			return false;
 		}
 
 		TOGGLE_BIT(pMob->styles, style_table[style].bit);
@@ -5524,7 +5524,7 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 			clean_mob_class(pMob, CLASS_WARRIOR);
 
 		send_to_char("Style toggled.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else if (!str_cmp(arg1, "sorcerer"))
 	{
@@ -5537,7 +5537,7 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 			if (!style)
 			{
 				send_to_char("Not a valid element name.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			pMob->ele_major = style;
@@ -5549,7 +5549,7 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 			if (!style)
 			{
 				send_to_char("Not a valid element name.\n\r", ch);
-				return FALSE;
+				return false;
 			}
 
 			pMob->ele_para = style;
@@ -5561,20 +5561,20 @@ bool medit_class(CHAR_DATA *ch, char *argument)
 			clean_mob_class(pMob, CLASS_SORCERER);
 
 		send_to_char("Sorcerer focus set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else if (!str_cmp(arg1, "delete"))
 	{
 		clean_mob_class(pMob, CLASS_NONE);
 		send_to_char("Class removed.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else
 	{
 		send_to_char("Syntax:  class warrior <style>\n\r"\
 					 "         class sorcerer <major/para> <element>\n\r"\
 					 "         class delete\n\r", ch);
-		return FALSE;
+		return false;
 	}
 }
 
@@ -5903,7 +5903,7 @@ bool medit_show(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool medit_create(CHAR_DATA *ch, char *argument)
@@ -5918,7 +5918,7 @@ bool medit_create(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || value == 0)
 	{
 		send_to_char("Syntax:  medit create [vnum]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pArea = get_vnum_area(value);
@@ -5926,19 +5926,19 @@ bool medit_create(CHAR_DATA *ch, char *argument)
 	if (!pArea)
 	{
 		send_to_char("MEdit:  That vnum is not assigned an area.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!IS_BUILDER(ch, pArea))
 	{
 		send_to_char("MEdit:  Vnum in an area you cannot build in.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (get_mob_index(value))
 	{
 		send_to_char("MEdit:  Mobile vnum already exists.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob = new_mob_index();
@@ -5957,7 +5957,7 @@ bool medit_create(CHAR_DATA *ch, char *argument)
 	ch->desc->pEdit = (void *)pMob;
 
 	send_to_char("Mobile Created.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 /*
@@ -5970,7 +5970,7 @@ bool medit_spec(CHAR_DATA *ch, char *argument)
 	if ( argument[0] == '\0' )
 	{
 		send_to_char( "Syntax:  spec [special function]\n\r", ch );
-		return FALSE;
+		return false;
 	}
 
 	if ( !str_cmp( argument, "none" ) )
@@ -5978,18 +5978,18 @@ bool medit_spec(CHAR_DATA *ch, char *argument)
 		pMob->spec_fun = NULL;
 
 		send_to_char( "Spec removed.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if ( spec_lookup( argument ) )
 	{
 		pMob->spec_fun = spec_lookup( argument );
 		send_to_char( "Spec set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char( "MEdit: No such special function.\n\r", ch );
-	return FALSE;
+	return false;
 }
 */
 bool medit_damtype(CHAR_DATA *ch, char *argument)
@@ -6003,7 +6003,7 @@ bool medit_damtype(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("Syntax:  damtype [damage message]\n\r", ch);
 		send_to_char("Para ver una lista de tipos de mensajes, pon '? weapon'.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	value = flag_value(weapon_flags, argument);
@@ -6012,11 +6012,11 @@ bool medit_damtype(CHAR_DATA *ch, char *argument)
 	{
 		pMob->dam_type = value;
 		send_to_char("Damage type set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("MEdit: No such damage type.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_align(CHAR_DATA *ch, char *argument)
@@ -6028,13 +6028,13 @@ bool medit_align(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || !is_number(argument))
 	{
 		send_to_char("Syntax:  alignment [number]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->alignment = atoi(argument);
 
 	send_to_char("Alignment set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_level(CHAR_DATA *ch, char *argument)
@@ -6046,7 +6046,7 @@ bool medit_level(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || !is_number(argument))
 	{
 		send_to_char("Syntax:  level [number]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->level = atoi(argument);
@@ -6063,7 +6063,7 @@ bool medit_level(CHAR_DATA *ch, char *argument)
 		pMob->hit[DICE_BONUS] += (int)pow(pMob->level - 46, 3) + pMob->level * 2;
 
 	send_to_char("Auto-hitdice Set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_desc(CHAR_DATA *ch, char *argument)
@@ -6075,11 +6075,11 @@ bool medit_desc(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		string_append(ch, &pMob->description);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("Syntax:  desc    - line edit\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_long(CHAR_DATA *ch, char *argument)
@@ -6091,7 +6091,7 @@ bool medit_long(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  long [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pMob->long_descr);
@@ -6100,7 +6100,7 @@ bool medit_long(CHAR_DATA *ch, char *argument)
 	pMob->long_descr[0] = UPPER(pMob->long_descr[0]);
 
 	send_to_char("Long description set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_short(CHAR_DATA *ch, char *argument)
@@ -6112,14 +6112,14 @@ bool medit_short(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  short [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pMob->short_descr);
 	pMob->short_descr = palloc_string(argument);
 
 	send_to_char("Short description set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_name(CHAR_DATA *ch, char *argument)
@@ -6131,14 +6131,14 @@ bool medit_name(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  name [string]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	free_pstring(pMob->player_name);
 	pMob->player_name = palloc_string(argument);
 
 	send_to_char("Name set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_cabal(CHAR_DATA *ch, char *argument)
@@ -6151,7 +6151,7 @@ bool medit_cabal(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  cabal (cabal name)\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	cabal = cabal_lookup(argument);
@@ -6159,12 +6159,12 @@ bool medit_cabal(CHAR_DATA *ch, char *argument)
 	if (cabal == 0)
 	{
 		send_to_char("That is not a valid cabal.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->cabal = cabal;
 	send_to_char("Cabal set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_shop(CHAR_DATA *ch, char *argument)
@@ -6183,7 +6183,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("Syntax:  shop [open_hour] [close_hour] [direction]\n\r", ch);
 		send_to_char("         shop delete\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!str_cmp(arg1, "delete"))
@@ -6191,13 +6191,13 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 		free_shop(pMob->pShop);
 		pMob->pShop = NULL;
 		send_to_char("Shop deleted.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (arg1[0] == '\0' || !is_number(arg1) || arg2[0] == '\0' || !is_number(arg2) || argument[0] == '\0')
 	{
 		medit_shop(ch, "");
-		return FALSE;
+		return false;
 	}
 
 	direction = flag_lookup(argument, direction_table);
@@ -6205,7 +6205,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 	if (direction == NO_FLAG)
 	{
 		send_to_char("That was not a valid direction.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (!pMob->pShop)
@@ -6221,7 +6221,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 	pMob->pShop->direction = direction;
 
 	send_to_char("Shop set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 /* ROM medit functions: */
@@ -6242,13 +6242,13 @@ bool medit_sex(CHAR_DATA *ch, char *argument) /* Moved out of medit() due to nam
 			pMob->sex = value;
 
 			send_to_char("Sex set.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: sex [sex]\n\r"\
 				 "Type '? sex' for a list of flags.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_act(CHAR_DATA *ch, char *argument) /* Moved out of medit() due to naming conflicts -- Hugin */
@@ -6268,13 +6268,13 @@ bool medit_act(CHAR_DATA *ch, char *argument) /* Moved out of medit() due to nam
 			SET_BIT(pMob->act, ACT_IS_NPC);
 
 			send_to_char("Act flag toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: act [flag]\n\r"\
 				 "Type '? act' for a list of flags.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_affect(CHAR_DATA *ch, char *argument) /* Moved out of medit() due to naming conflicts -- Hugin */
@@ -6292,13 +6292,13 @@ bool medit_affect(CHAR_DATA *ch, char *argument) /* Moved out of medit() due to 
 			TOGGLE_BIT(pMob->affected_by, value);
 
 			send_to_char("Affect flag toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: affect [flag]\n\r"\
 				 "Type '? affect' for a list of flags.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_ac(CHAR_DATA *ch, char *argument)
@@ -6365,12 +6365,12 @@ bool medit_ac(CHAR_DATA *ch, char *argument)
 		pMob->ac[AC_EXOTIC] = exotic;
 
 		send_to_char("Ac set.\n\r", ch);
-		return TRUE;
-	} while (FALSE); /* Just do it once.. */
+		return true;
+	} while (false); /* Just do it once.. */
 
 	send_to_char("Syntax:  ac [ac-pierce [ac-bash [ac-slash [ac-exotic]]]]\n\r"\
 				 "help MOB_AC  gives a list of reasonable ac-values.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_form(CHAR_DATA *ch, char *argument)
@@ -6388,14 +6388,14 @@ bool medit_form(CHAR_DATA *ch, char *argument)
 		{
 			TOGGLE_BIT(pMob->form, value);
 			send_to_char("Form toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: form [flags]\n\r"\
 				 "Type '? form' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_part(CHAR_DATA *ch, char *argument)
@@ -6413,14 +6413,14 @@ bool medit_part(CHAR_DATA *ch, char *argument)
 		{
 			TOGGLE_BIT(pMob->parts, value);
 			send_to_char("Parts toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: part [flags]\n\r"\
 				 "Type '? part' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_imm(CHAR_DATA *ch, char *argument)
@@ -6438,14 +6438,14 @@ bool medit_imm(CHAR_DATA *ch, char *argument)
 		{
 			TOGGLE_BIT(pMob->imm_flags, value);
 			send_to_char("Immunity toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: imm [flags]\n\r"\
 				 "Type '? imm' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_res(CHAR_DATA *ch, char *argument)
@@ -6463,14 +6463,14 @@ bool medit_res(CHAR_DATA *ch, char *argument)
 		{
 			TOGGLE_BIT(pMob->res_flags, value);
 			send_to_char("Resistance toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: res [flags]\n\r"\
 				 "Type '? res' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_vuln(CHAR_DATA *ch, char *argument)
@@ -6488,19 +6488,19 @@ bool medit_vuln(CHAR_DATA *ch, char *argument)
 		{
 			TOGGLE_BIT(pMob->vuln_flags, value);
 			send_to_char("Vulnerability toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: vuln [flags]\n\r"\
 				 "Type '? vuln' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_material(CHAR_DATA *ch, char *argument)
 {
-	return FALSE;
+	return false;
 }
 
 /*
@@ -6515,11 +6515,11 @@ bool medit_material(CHAR_DATA *ch, char *argument)
 	{
 		pMob->material = material_name(value);
 		send_to_char( "Material type set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	send_to_char("Unknown material type, '? material' for a list.\n\r", ch);
-	return FALSE;
+	return false;
 
 }
 */
@@ -6539,14 +6539,14 @@ bool medit_off(CHAR_DATA *ch, char *argument)
 		{
 			TOGGLE_BIT(pMob->off_flags, value);
 			send_to_char("Offensive behavior toggled.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: off [flags]\n\r"\
 				 "Type '? off' for a list of flags.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_size(CHAR_DATA *ch, char *argument)
@@ -6564,14 +6564,14 @@ bool medit_size(CHAR_DATA *ch, char *argument)
 		{
 			pMob->size = value;
 			send_to_char("Size set.\n\r", ch);
-			return TRUE;
+			return true;
 		}
 	}
 
 	send_to_char("Syntax: size [size]\n\r"\
 				 "Type '? size' for a list of sizes.\n\r",
 				 ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_hitdice(CHAR_DATA *ch, char *argument)
@@ -6585,7 +6585,7 @@ bool medit_hitdice(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	num = cp = argument;
@@ -6627,7 +6627,7 @@ bool medit_hitdice(CHAR_DATA *ch, char *argument)
 		|| (!is_number(bonus) || atoi(bonus) < 0))
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->hit[DICE_NUMBER] = atoi(num);
@@ -6635,7 +6635,7 @@ bool medit_hitdice(CHAR_DATA *ch, char *argument)
 	pMob->hit[DICE_BONUS] = atoi(bonus);
 
 	send_to_char("Hitdice set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_manadice(CHAR_DATA *ch, char *argument)
@@ -6649,7 +6649,7 @@ bool medit_manadice(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	num = cp = argument;
@@ -6689,7 +6689,7 @@ bool medit_manadice(CHAR_DATA *ch, char *argument)
 	if (!(is_number(num) && is_number(type) && is_number(bonus)))
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	if ((!is_number(num) || atoi(num) < 1)
@@ -6697,7 +6697,7 @@ bool medit_manadice(CHAR_DATA *ch, char *argument)
 		|| (!is_number(bonus) || atoi(bonus) < 0))
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->mana[DICE_NUMBER] = atoi(num);
@@ -6705,7 +6705,7 @@ bool medit_manadice(CHAR_DATA *ch, char *argument)
 	pMob->mana[DICE_BONUS] = atoi(bonus);
 
 	send_to_char("Manadice set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_damdice(CHAR_DATA *ch, char *argument)
@@ -6719,7 +6719,7 @@ bool medit_damdice(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	num = cp = argument;
@@ -6759,7 +6759,7 @@ bool medit_damdice(CHAR_DATA *ch, char *argument)
 	if (!(is_number(num) && is_number(type) && is_number(bonus)))
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	if ((!is_number(num) || atoi(num) < 1)
@@ -6767,7 +6767,7 @@ bool medit_damdice(CHAR_DATA *ch, char *argument)
 		|| (!is_number(bonus) || atoi(bonus) < 0))
 	{
 		send_to_char(syntax, ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->damage[DICE_NUMBER] = atoi(num);
@@ -6775,7 +6775,7 @@ bool medit_damdice(CHAR_DATA *ch, char *argument)
 	pMob->damage[DICE_BONUS] = atoi(bonus);
 
 	send_to_char("Damdice set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_race(CHAR_DATA *ch, char *argument)
@@ -6796,7 +6796,7 @@ bool medit_race(CHAR_DATA *ch, char *argument)
 		BITWISE_OR(pMob->parts, race_data_lookup(race)->parts);
 
 		send_to_char("Race set.\n\r", ch);
-		return TRUE;
+		return true;
 	}
 
 	if (argument[0] == '?')
@@ -6815,12 +6815,12 @@ bool medit_race(CHAR_DATA *ch, char *argument)
 		}
 
 		send_to_char("\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	send_to_char("Syntax:  race [race]\n\r"\
 				 "Type 'race ?' for a list of races.\n\r", ch);
-	return FALSE;
+	return false;
 }
 
 bool medit_position(CHAR_DATA *ch, char *argument)
@@ -6833,13 +6833,13 @@ bool medit_position(CHAR_DATA *ch, char *argument)
 
 	value = position_lookup(arg);
 	if (value == -1)
-		return FALSE;
+		return false;
 
 	EDIT_MOB(ch, pMob);
 
 	pMob->start_pos = value;
 	send_to_char("Start position set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_gold(CHAR_DATA *ch, char *argument)
@@ -6852,7 +6852,7 @@ bool medit_gold(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Syntax:  wealth [none/poor/moderate/affluent/rich/peerless]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	index = flag_lookup(argument, wealth_table);
@@ -6860,12 +6860,12 @@ bool medit_gold(CHAR_DATA *ch, char *argument)
 	if (index == NO_FLAG)
 	{
 		medit_gold(ch, "");
-		return FALSE;
+		return false;
 	}
 
 	pMob->wealth = index;
 	send_to_char("Wealth set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool medit_hitroll(CHAR_DATA *ch, char *argument)
@@ -6877,12 +6877,12 @@ bool medit_hitroll(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0' || !is_number(argument))
 	{
 		send_to_char("Syntax:  hitroll [number]\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	pMob->hitroll = atoi(argument);
 	send_to_char("Hitroll set.\n\r", ch);
-	return TRUE;
+	return true;
 }
 
 bool oedit_liqlist(CHAR_DATA *ch, char *argument)
@@ -6911,5 +6911,5 @@ bool oedit_liqlist(CHAR_DATA *ch, char *argument)
 	page_to_char(buf_string(buffer), ch);
 	free_buf(buffer);
 
-	return TRUE;
+	return true;
 }

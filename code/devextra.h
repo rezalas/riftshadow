@@ -27,7 +27,7 @@
 				if ( !str_cmp( word, literal ) )		\
 				{										\
 					field  = value;						\
-					fMatch = TRUE;						\
+					fMatch = true;						\
 					break;								\
 				}
 #endif

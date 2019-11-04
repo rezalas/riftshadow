@@ -6,9 +6,9 @@
 bool IS_IMP(CHAR_DATA *ch)
 {
 	if (get_trust(ch) == MAX_LEVEL)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 float calculate_inflation()
@@ -164,7 +164,7 @@ void clean_mud()
 			if (d->character->level >= 30)
 				perm_death_log(d->character, 4);
 
-			delete_char(d->character->true_name, TRUE);
+			delete_char(d->character->true_name, true);
 		}
 
 		free_descriptor(d);
@@ -200,12 +200,12 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 	MYSQL_RES *res_set;
 	MYSQL_ROW row;
 	char query[MSL], buf[MSL], result[200], arg1[MSL], arg2[MSL];
-	bool autol = FALSE, found = FALSE;
+	bool autol= false, found= false;
 	int status, i = 1, argnum;
 	long ttime;
 
 	if (!str_cmp(argument, "auto"))
-		autol = TRUE;
+		autol = true;
 
 	sprintf(query, "SELECT * FROM offerings WHERE deity = \"%s\" %s ORDER BY time ASC",
 		ch->true_name,
@@ -248,7 +248,7 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 			sprintf(buf, "%s's offering has been %sed.\n\r", row[3], arg1);
 			send_to_char(buf, ch);
 
-			found = TRUE;
+			found = true;
 			break;
 		}
 
@@ -280,7 +280,7 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 				row[1]);
 			send_to_char(buf, ch);
 
-			found = TRUE;
+			found = true;
 			break;
 		}
 
@@ -299,7 +299,7 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 		status = atoi(row[4]);
 		sprintf(buf, "[%3i%c]  %s offered %s\n\r", i++, status == 0 ? 'N' : status == 1 ? 'R' : status == 2 ? 'A' : ' ', row[3], row[2]);
 		send_to_char(buf, ch);
-		found = TRUE;
+		found = true;
 	}
 
 	if (!found)
@@ -825,7 +825,7 @@ void enter_text(CHAR_DATA *ch, DO_FUN *end_fun)
 	if (IS_NPC(ch))
 		return;
 
-	ch->pcdata->entering_text = TRUE;
+	ch->pcdata->entering_text = true;
 	ch->pcdata->end_fun = end_fun;
 
 	send_to_char("Entering text editing mode.\n\r", ch);
@@ -1035,7 +1035,7 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 	BUFFER *buffer;
 	char arg1[MSL], query[MSL], qpart[MSL], buf[MSL];
 	int i = 0;
-	bool found = FALSE;
+	bool found= false;
 
 	if (!str_cmp(argument, ""))
 	{
@@ -1094,7 +1094,7 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 				row[4]);
 
 			add_buf(buffer, buf);
-			found = TRUE;
+			found = true;
 		}
 
 		if (!found)
@@ -1114,29 +1114,29 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 bool trusts(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	if (IS_NPC(ch))
-		return FALSE;
+		return false;
 
 	if (IS_NPC(victim))
 	{
 		if (IS_AFFECTED(victim, AFF_CHARM) && victim->master == ch)
-			return TRUE;
+			return true;
 		else
-			return FALSE;
+			return false;
 	}
 
 	if (ch == victim)
-		return TRUE;
+		return true;
 
 	if (IS_SET(victim->pcdata->trust, TRUST_CABAL) && is_same_cabal(ch, victim))
-		return TRUE;
+		return true;
 
 	if (IS_SET(victim->pcdata->trust, TRUST_GROUP) && is_same_group(ch, victim))
-		return TRUE;
+		return true;
 
 	if (victim->pcdata->trusting == ch)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 void sortvotes(CHAR_DATA *ch, BALLOT_DATA *ballot)
@@ -1195,7 +1195,7 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 	MYSQL_ROW row;
 	char buf[MSL];
 	int j, m, i;
-	bool added = FALSE;
+	bool added= false;
 	char *temp;
 	int tempi;
 
@@ -1208,7 +1208,7 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 	{
 		while ((row = mysql_fetch_row(res)) != NULL)
 		{
-			added = FALSE;
+			added= false;
 
 			for (j = 0; j <= 200; j++)
 			{
@@ -1217,7 +1217,7 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 
 				if (!str_cmp(hold[j], row[0]))
 				{
-					added = TRUE;
+					added = true;
 					holdi[j]++;
 					break;
 				}
@@ -1251,10 +1251,10 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 	}
 	else
 	{
-		return FALSE;
+		return false;
 	}
 
-	return TRUE;
+	return true;
 	mysql_free_result(res);
 }
 
@@ -1347,7 +1347,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	MYSQL_RES *res;
 	MYSQL_ROW row;
-	bool end = FALSE, fMatch = FALSE;
+	bool end= false, fMatch= false;
 
 	if (IS_NPC(ch))
 		return;
@@ -1384,12 +1384,12 @@ void do_vote(CHAR_DATA *ch, char *argument)
 			for (;;)
 			{
 				word = feof(fp) ? (char *)"End" : fread_word(fp);
-				fMatch = FALSE;
+				fMatch= false;
 
 				switch (UPPER(word[0]))
 				{
 					case '*':
-						fMatch = TRUE;
+						fMatch = true;
 						fread_to_eol(fp);
 						break;
 					case 'C':
@@ -1397,7 +1397,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 						break;
 					case 'E':
 						if (!str_cmp(word, "End"))
-							end = TRUE;
+							end = true;
 
 						break;
 				}
@@ -1546,27 +1546,27 @@ bool check_volley(CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	int skill, chance;
 	// CH is caster of offensive spell, victim is victim
-	return FALSE;
+	return false;
 
 	if (!ch || !victim)
-		return FALSE;
+		return false;
 
 	skill = get_skill(victim, gsn_volley);
 
 	if (!skill || victim->fighting || !IS_AWAKE(victim) || victim == ch)
-		return FALSE;
+		return false;
 
 	if (get_trust(victim) == MAX_LEVEL)
-		return TRUE;
+		return true;
 
 	chance = (int)((float)skill * .6);
 	chance -= get_curr_stat(ch, STAT_INT);
 	chance += get_curr_stat(victim, STAT_INT);
 
 	if (number_percent() < chance)
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 char *get_char_color(CHAR_DATA *ch, char *event)
@@ -2355,7 +2355,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 	if (number_percent() > skill)
 	{
 		send_to_char("You lose your concentration before finding any telltale signs of affliction.\n\r", ch);
-		check_improve(ch, skill_lookup("assess"), FALSE, 1);
+		check_improve(ch, skill_lookup("assess"), false, 1);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 
@@ -2366,7 +2366,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 	if (victim->affected == NULL)
 	{
 		send_to_char("You are unable to find any signs of affliction.\n\r", ch);
-		check_improve(ch, skill_lookup("assess"), TRUE, 1);
+		check_improve(ch, skill_lookup("assess"), true, 1);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 
@@ -2409,7 +2409,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	check_improve(ch, skill_lookup("assess"), TRUE, 1);
+	check_improve(ch, skill_lookup("assess"), true, 1);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 
@@ -2423,7 +2423,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 	char spell_list[LEVEL_HERO + 1][MAX_STRING_LENGTH];
 	char spell_columns[LEVEL_HERO + 1];
 	int sn, level, min_lev = 1, max_lev = LEVEL_HERO, mana;
-	bool fAll = FALSE, found = FALSE;
+	bool fAll= false, found= false;
 	char buf[MAX_STRING_LENGTH];
 
 	if (IS_NPC(ch))
@@ -2437,7 +2437,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 
 	if (argument[0] != '\0')
 	{
-		fAll = TRUE;
+		fAll = true;
 
 		if (str_prefix(argument, "all"))
 		{
@@ -2507,7 +2507,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 			&& ch->pcdata->learned[sn] > 0
 			&& (skill_table[sn].ctype == CMD_COMMUNE || skill_table[sn].ctype == CMD_BOTH))
 		{
-			found = TRUE;
+			found = true;
 			level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
 
 			if (ch->level < level)
@@ -2875,7 +2875,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	if (!IS_NPC(ch) && (number_percent() > get_skill(ch, sn)))
 	{
 		send_to_char("You failed to commune the power of your deity.\n\r", ch);
-		check_improve(ch, sn, FALSE, 1);
+		check_improve(ch, sn, false, 1);
 		ch->mana -= mana / 2;
 	}
 	else
@@ -2956,11 +2956,11 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 		if (sn == gsn_rage)
 		{
-			check_improve(ch, sn, TRUE, 2);
+			check_improve(ch, sn, true, 2);
 		}
 		else
 		{
-			check_improve(ch, sn, TRUE, 1);
+			check_improve(ch, sn, true, 1);
 		}
 	}
 
@@ -3228,7 +3228,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 		send_to_char("You lost your concentration.\n\r", ch);
 
 		if (sn != gsn_rage)
-			check_improve(ch, sn, FALSE, 1);
+			check_improve(ch, sn, false, 1);
 
 		ch->mana -= mana / 2;
 	}
@@ -3269,7 +3269,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 		}
 
 		(*skill_table[sn].spell_fun)(sn, ch->level, ch, vo, target);
-		check_improve(ch, sn, TRUE, 1);
+		check_improve(ch, sn, true, 1);
 	}
 
 	if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE
@@ -3413,7 +3413,7 @@ void do_forceremove(CHAR_DATA *ch, char *argument)
 	act("$n strips you of $p.", ch, obj, victim, TO_VICT);
 	act("$n strips $N of $p.", ch, obj, victim, TO_NOTVICT);
 
-	unequip_char(victim, obj, FALSE);
+	unequip_char(victim, obj, false);
 
 	obj_from_char(obj);
 	obj_to_char(obj, ch);
@@ -3424,7 +3424,7 @@ void do_createcosmetic(CHAR_DATA *ch, char *argument)
 	char arg1[MSL], arg2[MSL], wlname[MSL], *wearname;
 	OBJ_DATA *obj;
 	int value = 0;
-	bool under = FALSE, wear = FALSE;
+	bool under= false, wear= false;
 
 	if (!strcmp(argument, ""))
 	{
@@ -3459,7 +3459,7 @@ void do_createcosmetic(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		under = TRUE;
+		under = true;
 	}
 	else if (!str_cmp(arg1, "wear"))
 	{
@@ -3472,7 +3472,7 @@ void do_createcosmetic(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		wear = TRUE;
+		wear = true;
 	}
 	else if (!wear && !under)
 	{

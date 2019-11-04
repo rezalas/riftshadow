@@ -1,12 +1,10 @@
 #ifndef BASESTRING_H
 #define BASESTRING_H
 
-#define TRUE		1
-#define FALSE		0
 #define NULL		0
 #define size_t		unsigned int
 
-#define DEFAULTCASE TRUE
+#define DEFAULTCASE true
 #define MAX_FORMATTED_SIZE 4096
 
 #include <stdarg.h>
@@ -44,8 +42,8 @@ public:
 				int cStartPos = 0,
 				bool fIgnoreCase = DEFAULTCASE); /* returns # of first instance of match inside string, -1 								 for no match */
 	bool		Contains(const char *substr,
-				bool fIgnoreCase = DEFAULTCASE); /* TRUE if the CBaseStr contains substr */
-	virtual bool		IsShared(void) = 0;		 /* TRUE if CBaseStr is currently shared */
+				bool fIgnoreCase = DEFAULTCASE); /* true if the CBaseStr contains substr */
+	virtual bool		IsShared(void) = 0;		 /* true if CBaseStr is currently shared */
 	bool 		CBaseStr::PrefixMatch(const char *pref);
 	
 	/* MODIFICATION FUNCTIONS */

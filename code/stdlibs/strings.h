@@ -2,12 +2,15 @@
 #define STRINGS_H
 
 #include <stdarg.h>
-#define TRUE        1
-#define FALSE       0
+
+#ifndef __cplusplus
+#include <stdbool.h>
+#endif
+
 //#define NULL        0
 //#define size_t      int //unsigned int 20161104 Rezalas
 
-#define DEFAULTCASE TRUE
+#define DEFAULTCASE true
 #define MAX_FORMATTED_SIZE 4096
 #define TSTR_LEN 2048
 #define MUNCH_VARARG(msg, str)  va_list arglist;va_start(arglist, msg);str.Format(arglist, msg);va_end(arglist);
@@ -59,7 +62,7 @@ public:
 				int cStartPos = 0,
 				bool fIgnoreCase = DEFAULTCASE); /* returns # of first instance of match inside string, -1 								 for no match */
 	bool		Contains(const char *substr,
-				bool fIgnoreCase = DEFAULTCASE); /* TRUE if the RString contains substr */
+				bool fIgnoreCase = DEFAULTCASE); /* true if the RString contains substr */
 	bool 		PrefixMatch(const char *pref);
 	
 	/* MODIFICATION FUNCTIONS */

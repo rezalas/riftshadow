@@ -77,7 +77,7 @@ void do_specialize(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "You are now specialized in the %s fighting style.\n\r", style_table[style].name);
 	send_to_char(buf, ch);
 
-	group_add(ch, style_table[style].name, FALSE);
+	group_add(ch, style_table[style].name, false);
 
 	ch->pcdata->learned[skill_lookup(style_table[style].name)] = 2;
 
@@ -136,11 +136,11 @@ void do_style(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char("You try to shift fighting styles, but blunder it.\n\r", ch);
 			WAIT_STATE(ch, PULSE_VIOLENCE);
-			check_improve(ch, gsn_integrate, FALSE, 2);
+			check_improve(ch, gsn_integrate, false, 2);
 			return;
 		}
 
-		check_improve(ch, gsn_integrate, TRUE, 2);
+		check_improve(ch, gsn_integrate, true, 2);
 	}
 
 	if (style == ch->pcdata->style)
@@ -362,17 +362,17 @@ void do_entrap(CHAR_DATA *ch, char *argument)
 		obj_to_room(weapon, victim->in_room);
 
 		if (IS_NPC(victim) && victim->wait == 0 && can_see_obj(victim, weapon))
-			get_obj(victim, weapon, NULL, TRUE);
+			get_obj(victim, weapon, NULL, true);
 	}
 
 	dual = get_eq_char(victim, WEAR_DUAL_WIELD);
 
 	if (dual != NULL)
 	{
-		unequip_char(victim, dual, FALSE);
+		unequip_char(victim, dual, false);
 		act("You quickly swap $p into your primary hand.", victim, dual, 0, TO_CHAR);
 		act("$n quickly swaps $p into $s primary hand.", victim, dual, 0, TO_ROOM);
-		equip_char(victim, dual, WEAR_WIELD, FALSE);
+		equip_char(victim, dual, WEAR_WIELD, false);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -383,7 +383,7 @@ void do_hobble(CHAR_DATA *ch, char *argument)
 	int skill;
 	CHAR_DATA *victim;
 	OBJ_DATA *weapon;
-	bool special = FALSE;
+	bool special = false;
 	AFFECT_DATA af, af2;
 
 	skill = get_skill(ch, gsn_hobble);
@@ -420,7 +420,7 @@ void do_hobble(CHAR_DATA *ch, char *argument)
 	}
 
 	if (number_percent() < .5 * skill)
-		special = TRUE;
+		special = true;
 
 	weapon = get_eq_char(ch, WEAR_WIELD);
 
@@ -649,13 +649,13 @@ void do_hobble(CHAR_DATA *ch, char *argument)
 		}
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		check_improve(ch, gsn_hobble, TRUE, 1);
+		check_improve(ch, gsn_hobble, true, 1);
 	}
 	else
 	{
-		damage(ch, victim, 0, gsn_hobble, DAM_NONE, TRUE);
+		damage(ch, victim, 0, gsn_hobble, DAM_NONE, true);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		check_improve(ch, gsn_hobble, FALSE, 1);
+		check_improve(ch, gsn_hobble, false, 1);
 	}
 }
 
@@ -664,7 +664,7 @@ void do_crippling_blow(CHAR_DATA *ch, char *argument)
 	int skill;
 	CHAR_DATA *victim;
 	OBJ_DATA *weapon;
-	bool special = FALSE;
+	bool special = false;
 	AFFECT_DATA af, af2;
 
 	skill = get_skill(ch, gsn_crippling_blow);
@@ -706,7 +706,7 @@ void do_crippling_blow(CHAR_DATA *ch, char *argument)
 	}
 
 	if (number_percent() < .5 * skill)
-		special = TRUE;
+		special = true;
 
 	weapon = get_eq_char(ch, WEAR_WIELD);
 
@@ -910,12 +910,12 @@ void do_crippling_blow(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		check_improve(ch, gsn_crippling_blow, TRUE, 1);
+		check_improve(ch, gsn_crippling_blow, true, 1);
 	}
 	else
 	{
-		damage(ch, victim, 0, gsn_crippling_blow, DAM_NONE, TRUE);
-		check_improve(ch, gsn_crippling_blow, FALSE, 1);
+		damage(ch, victim, 0, gsn_crippling_blow, DAM_NONE, true);
+		check_improve(ch, gsn_crippling_blow, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1074,7 +1074,7 @@ void do_gouge(CHAR_DATA *ch, char *argument)
 		}
 
 		one_hit_new(ch, victim, gsn_gouge, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, dammod, "gouge");
-		check_improve(ch, gsn_gouge, TRUE, 1);
+		check_improve(ch, gsn_gouge, true, 1);
 	}
 	else
 	{
@@ -1082,8 +1082,8 @@ void do_gouge(CHAR_DATA *ch, char *argument)
 		act(miss2, ch, 0, victim, TO_VICT);
 		act(miss3, ch, 0, victim, TO_NOTVICT);
 
-		damage(ch, victim, 0, gsn_gouge, DAM_NONE, TRUE);
-		check_improve(ch, gsn_gouge, FALSE, 1);
+		damage(ch, victim, 0, gsn_gouge, DAM_NONE, true);
+		check_improve(ch, gsn_gouge, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1198,7 +1198,7 @@ void do_bleed(CHAR_DATA *ch, char *argument)
 		}
 
 		one_hit_new(ch, victim, gsn_bleed, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, dammod, NULL);
-		check_improve(ch, gsn_bleed, TRUE, 1);
+		check_improve(ch, gsn_bleed, true, 1);
 	}
 	else
 	{
@@ -1206,8 +1206,8 @@ void do_bleed(CHAR_DATA *ch, char *argument)
 		act(miss2, ch, 0, victim, TO_VICT);
 		act(miss3, ch, 0, victim, TO_NOTVICT);
 
-		damage(ch, victim, 0, gsn_bleed, DAM_NONE, TRUE);
-		check_improve(ch, gsn_bleed, FALSE, 1);
+		damage(ch, victim, 0, gsn_bleed, DAM_NONE, true);
+		check_improve(ch, gsn_bleed, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1373,7 +1373,7 @@ void do_unbalance(CHAR_DATA *ch, char *argument)
 		}
 
 		victim->balance += 10;
-		check_improve(ch, gsn_unbalance, TRUE, 1);
+		check_improve(ch, gsn_unbalance, true, 1);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -1390,7 +1390,7 @@ void do_unbalance(CHAR_DATA *ch, char *argument)
 		act("You lunge at $N and suddenly withdraw, but $E doesn't fall for your feint.", ch, 0, victim, TO_CHAR);
 		act("$n lunges at you and suddenly withdraws, but you don't fall for $s feint.", ch, 0, victim, TO_VICT);
 		act("$n lunges at $N and suddenly withdraws, but $E doesn't fall for $s feint.", ch, 0, victim, TO_NOTVICT);
-		check_improve(ch, gsn_unbalance, FALSE, 1);
+		check_improve(ch, gsn_unbalance, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1513,7 +1513,7 @@ void do_uppercut(CHAR_DATA *ch, char *argument)
 		}
 
 		one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, special, "uppercut");
-		check_improve(ch, gsn_uppercut, TRUE, 1);
+		check_improve(ch, gsn_uppercut, true, 1);
 	}
 	else
 	{
@@ -1521,8 +1521,8 @@ void do_uppercut(CHAR_DATA *ch, char *argument)
 		act(vict1, ch, 0, victim, TO_VICT);
 		act(nv1, ch, 0, victim, TO_NOTVICT);
 
-		damage(ch, victim, 0, gsn_uppercut, DAM_NONE, TRUE);
-		check_improve(ch, gsn_uppercut, FALSE, 1);
+		damage(ch, victim, 0, gsn_uppercut, DAM_NONE, true);
+		check_improve(ch, gsn_uppercut, false, 1);
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 3);
 		return;
@@ -1647,14 +1647,14 @@ void do_dart(CHAR_DATA *ch, char *argument)
 			new_affect_to_char(victim, &af);
 
 		one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "darting strike");
-		check_improve(ch, gsn_dart, TRUE, 1);
+		check_improve(ch, gsn_dart, true, 1);
 	}
 	else
 	{
 		act("Moving nimbly, you dart in under $N's guard and strike!", ch, 0, victim, TO_CHAR);
 		act("$n nimbly darts under your guard and strikes!", ch, 0, victim, TO_VICT);
-		damage(ch, victim, 0, gsn_dart, DAM_NONE, TRUE);
-		check_improve(ch, gsn_dart, FALSE, 1);
+		damage(ch, victim, 0, gsn_dart, DAM_NONE, true);
+		check_improve(ch, gsn_dart, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1810,7 +1810,7 @@ void do_impale(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		check_improve(ch, gsn_impale, TRUE, 1);
+		check_improve(ch, gsn_impale, true, 1);
 	}
 	else
 	{
@@ -1818,8 +1818,8 @@ void do_impale(CHAR_DATA *ch, char *argument)
 		act("$n makes a ferocious lunge at you with $s weapon, but misses!", ch, 0, victim, TO_VICT);
 		act("$n makes a ferocious lunge at $N with $s weapon, but misses!", ch, 0, victim, TO_NOTVICT);
 
-		damage_new(ch, victim, 0, TYPE_UNDEFINED, DAM_NONE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "impalement");
-		check_improve(ch, gsn_impale, FALSE, 1);
+		damage_new(ch, victim, 0, TYPE_UNDEFINED, DAM_NONE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "impalement");
+		check_improve(ch, gsn_impale, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -1974,7 +1974,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			damage_new(ch, victim, 0, gsn_hurl, DAM_NONE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, victim, 0, gsn_hurl, DAM_NONE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		}
 	}
 	else
@@ -2009,7 +2009,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			damage_new(ch, victim, 0, gsn_hurl, DAM_NONE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, victim, 0, gsn_hurl, DAM_NONE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 		}
 	}
 
@@ -2019,10 +2019,10 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 	dual = get_eq_char(ch, WEAR_DUAL_WIELD);
 	if (dual != NULL)
 	{
-		unequip_char(ch, dual, FALSE);
+		unequip_char(ch, dual, false);
 		act("You quickly swap $p into your primary hand.", ch, dual, 0, TO_CHAR);
 		act("$n quickly swaps $p into $s primary hand.", ch, dual, 0, TO_ROOM);
-		equip_char(ch, dual, WEAR_WIELD, FALSE);
+		equip_char(ch, dual, WEAR_WIELD, false);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -2168,11 +2168,11 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 						act("$N collapses in a heap as the mace comes down solidly on top of $S head!", ch, 0, victim, TO_NOTVICT);
 
 						affect_to_char(victim, &af);
-						stop_fighting(victim, TRUE);
+						stop_fighting(victim, true);
 
 						victim->position = POS_SLEEPING;
 
-						check_improve(ch, gsn_overhead, TRUE, 1);
+						check_improve(ch, gsn_overhead, true, 1);
 						WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 						return;
 					case WEAPON_STAFF:
@@ -2181,11 +2181,11 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 						act("$N collapses in a heap as the staff comes down solidly on top of $S head!", ch, 0, victim, TO_NOTVICT);
 
 						affect_to_char(victim, &af);
-						stop_fighting(victim, TRUE);
+						stop_fighting(victim, true);
 
 						victim->position = POS_SLEEPING;
 
-						check_improve(ch, gsn_overhead, TRUE, 1);
+						check_improve(ch, gsn_overhead, true, 1);
 						WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 						return;
 					case WEAPON_FLAIL:
@@ -2194,11 +2194,11 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 						act("$N collapses in a heap as the flail comes down solidly on top of $S head!", ch, 0, victim, TO_NOTVICT);
 
 						affect_to_char(victim, &af);
-						stop_fighting(victim, TRUE);
+						stop_fighting(victim, true);
 
 						victim->position = POS_SLEEPING;
 
-						check_improve(ch, gsn_overhead, TRUE, 1);
+						check_improve(ch, gsn_overhead, true, 1);
 						WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 						return;
 				}
@@ -2285,12 +2285,12 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 		}
 
 		one_hit_new(ch, victim, gsn_overhead, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, dammod, NULL);
-		check_improve(ch, gsn_overhead, TRUE, 1);
+		check_improve(ch, gsn_overhead, true, 1);
 	}
 	else
 	{
-		damage(ch, victim, 0, gsn_overhead, DAM_NONE, TRUE);
-		check_improve(ch, gsn_overhead, FALSE, 1);
+		damage(ch, victim, 0, gsn_overhead, DAM_NONE, true);
+		check_improve(ch, gsn_overhead, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -2319,7 +2319,7 @@ void do_extract(CHAR_DATA *ch, char *argument)
 	if (af && af->owner)
 		owner = af->owner;
 
-	damage_new(owner, ch, dam, gsn_impale, DAM_OTHER, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the extraction*");
+	damage_new(owner, ch, dam, gsn_impale, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the extraction*");
 	affect_strip(ch, gsn_impale);
 }
 
@@ -2380,12 +2380,12 @@ void do_exchange(CHAR_DATA *ch, char *argument)
 	if (number_percent() < chance)
 	{
 		one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 200, NULL);
-		check_improve(ch, gsn_exchange, TRUE, 1);
+		check_improve(ch, gsn_exchange, true, 1);
 	}
 	else
 	{
 		one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 0, NULL);
-		check_improve(ch, gsn_exchange, FALSE, 1);
+		check_improve(ch, gsn_exchange, false, 1);
 	}
 
 	WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
@@ -2508,8 +2508,8 @@ void do_charge(CHAR_DATA *ch, char *argument)
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		LAG_CHAR(victim, PULSE_VIOLENCE * lag);
 
-		damage(ch, victim, number_range(dam - 1, dam + 1), gsn_charge, DAM_BASH, TRUE);
-		check_improve(ch, gsn_charge, TRUE, 2);
+		damage(ch, victim, number_range(dam - 1, dam + 1), gsn_charge, DAM_BASH, true);
+		check_improve(ch, gsn_charge, true, 2);
 	}
 	else
 	{
@@ -2517,9 +2517,9 @@ void do_charge(CHAR_DATA *ch, char *argument)
 		act("$n charges toward you but misses, crashing awkwardly to the ground!", ch, 0, victim, TO_VICT);
 		act("$n charges toward $N but misses, crashing awkwardly to the ground!", ch, 0, victim, TO_NOTVICT);
 
-		damage(ch, victim, 0, gsn_charge, DAM_NONE, TRUE);
+		damage(ch, victim, 0, gsn_charge, DAM_NONE, true);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 3);
-		check_improve(ch, gsn_charge, FALSE, 2);
+		check_improve(ch, gsn_charge, false, 2);
 	}
 }
 
@@ -2528,21 +2528,21 @@ bool check_ease(CHAR_DATA *ch)
 	int skill;
 
 	if (!IS_NPC(ch) && !style_check(gsn_ease, ch->pcdata->style))
-		return FALSE;
+		return false;
 
 	skill = get_skill(ch, gsn_ease);
 
 	if (skill == 0)
-		return FALSE;
+		return false;
 
 	if (number_percent() < skill)
 	{
-		check_improve(ch, gsn_ease, TRUE, 4);
-		return TRUE;
+		check_improve(ch, gsn_ease, true, 4);
+		return true;
 	}
 	else
 	{
-		return FALSE;
+		return false;
 	}
 }
 
@@ -2613,8 +2613,8 @@ void do_shieldbash(CHAR_DATA *ch, char *argument)
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		LAG_CHAR(victim, PULSE_VIOLENCE * lag);
 
-		damage(ch, victim, dam, gsn_shieldbash, DAM_BASH, TRUE);
-		check_improve(ch, gsn_shieldbash, TRUE, 1);
+		damage(ch, victim, dam, gsn_shieldbash, DAM_BASH, true);
+		check_improve(ch, gsn_shieldbash, true, 1);
 	}
 	else
 	{
@@ -2624,8 +2624,8 @@ void do_shieldbash(CHAR_DATA *ch, char *argument)
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-		damage(ch, victim, 0, gsn_shieldbash, DAM_BASH, TRUE);
-		check_improve(ch, gsn_shieldbash, FALSE, 1);
+		damage(ch, victim, 0, gsn_shieldbash, DAM_BASH, true);
+		check_improve(ch, gsn_shieldbash, false, 1);
 	}
 }
 
@@ -2658,7 +2658,7 @@ void do_brace(CHAR_DATA *ch, char *arg)
 		act("$n crouches awkwardly for a moment, and then straightens $mself out.", ch, 0, victim, TO_VICT);
 		act("$n crouches awkwardly for a moment, and then straightens $mself out.", ch, 0, victim, TO_NOTVICT);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		check_improve(ch, gsn_brace, FALSE, 3);
+		check_improve(ch, gsn_brace, false, 3);
 		return;
 	}
 	else
@@ -2686,7 +2686,7 @@ void do_brace(CHAR_DATA *ch, char *arg)
 
 		RS.Queue.AddToQueue(8, 2, brace_helper_undo, ch, braceptr);
 		RS.Queue.AddToQueue(8, 5, act, "You are no longer bracing yourself against incoming blows.", ch, NULL, NULL, TO_CHAR);
-		check_improve(ch, gsn_brace, TRUE, 3);
+		check_improve(ch, gsn_brace, true, 3);
 	}
 }
 
@@ -2702,8 +2702,8 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim = ch->fighting;
 	OBJ_DATA *weapon, *wield, *handone, *handtwo, *secondary;
 	char chsuc[MSL], chfail[MSL], victsuc[MSL], victfail[MSL], nvictsuc[MSL], nvictfail[MSL];
-	bool isprimary = FALSE;
-	bool isoffhand = FALSE;
+	bool isprimary = false;
+	bool isoffhand = false;
 
 	skill = get_skill(ch, gsn_shatter);
 
@@ -2727,11 +2727,11 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(argument, "primary"))
 	{
-		isprimary = TRUE;
+		isprimary = true;
 	}
 	else if (!str_prefix(argument, "offhand"))
 	{
-		isoffhand = TRUE;
+		isoffhand = true;
 	}
 	else
 	{
@@ -3128,7 +3128,7 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 		act(chfail, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
 		act(victfail, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_VICT);
 		act(nvictfail, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
-		check_improve(ch, gsn_shatter, FALSE, 1);
+		check_improve(ch, gsn_shatter, false, 1);
 
 		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 		return;
@@ -3143,14 +3143,14 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 
 	if (secondary != NULL)
 	{
-		unequip_char(victim, secondary, FALSE);
+		unequip_char(victim, secondary, false);
 		act("You quickly swap $p into your primary hand.", victim, secondary, 0, TO_CHAR);
 		act("$n quickly swaps $p into $s primary hand.", victim, secondary, 0, TO_ROOM);
-		equip_char(victim, secondary, WEAR_WIELD, FALSE);
+		equip_char(victim, secondary, WEAR_WIELD, false);
 	}
 
 	WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
-	check_improve(ch, gsn_shatter, TRUE, 1);
+	check_improve(ch, gsn_shatter, true, 1);
 	return;
 }
 
@@ -3292,7 +3292,7 @@ void check_batter(CHAR_DATA *ch)
 	else
 		ch->batter += 3;
 
-	check_improve(ch, gsn_batter, TRUE, 5);
+	check_improve(ch, gsn_batter, true, 5);
 }
 
 bool check_entwine(CHAR_DATA *ch, int type)
@@ -3300,14 +3300,14 @@ bool check_entwine(CHAR_DATA *ch, int type)
 	for (AFFECT_DATA *af = ch->affected; af != NULL; af = af->next)
 	{
 		if (type == 0 && af->type == gsn_entwine && af->modifier == 0)
-			return TRUE;
+			return true;
 		else if (type == 1 && af->type == gsn_entwine && af->modifier == 1)
-			return TRUE;
+			return true;
 		else if (type == 2 && af->type == gsn_entwine && af->location == APPLY_DEX)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_entwine(CHAR_DATA *ch, char *argument)
@@ -3315,7 +3315,7 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 	int skill;
 	CHAR_DATA *victim;
 	char arg1[MSL], buf[MSL];
-	bool arm = FALSE, leg = FALSE;
+	bool arm = false, leg = false;
 	AFFECT_DATA af;
 
 	skill = get_skill(ch, gsn_entwine);
@@ -3353,11 +3353,11 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 
 		if (!str_cmp(argument, "arm"))
 		{
-			arm = TRUE;
+			arm = true;
 		}
 		else if (!str_cmp(argument, "leg"))
 		{
-			leg = TRUE;
+			leg = true;
 		}
 		else
 		{
@@ -3372,11 +3372,11 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 	{
 		if (!str_cmp(arg1, "arm"))
 		{
-			arm = TRUE;
+			arm = true;
 		}
 		else if (!str_cmp(arg1, "leg"))
 		{
-			leg = TRUE;
+			leg = true;
 		}
 		else
 		{
@@ -3394,7 +3394,7 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (is_safe_new(ch, victim, TRUE))
+	if (is_safe_new(ch, victim, true))
 		return;
 
 	if (!is_wielded(ch, WEAPON_WHIP, WIELD_PRIMARY))
@@ -3471,14 +3471,14 @@ void do_entwine(CHAR_DATA *ch, char *argument)
 		act("You crack your whip, deftly coiling it about $N's $t and pulling it taut!", ch, arm ? "arm" : leg ? "leg" : "", victim, TO_CHAR);
 		act("$n cracks $s whip, deftly coiling it about your $t and pulling it taut!", ch, arm ? "arm" : leg ? "leg" : "", victim, TO_VICT);
 		act("$n cracks $s whip, deftly coiling it about $N's $t and pulling it taut!", ch, arm ? "arm" : leg ? "leg" : "", victim, TO_NOTVICT);
-		check_improve(ch, gsn_entwine, TRUE, 1);
+		check_improve(ch, gsn_entwine, true, 1);
 	}
 	else
 	{
 		act("Your whip makes a loud *crack* as it snaps, barely missing $N's $t!", ch, arm ? "arm" : leg ? "leg" : "", victim, TO_CHAR);
 		act("$n's whip makes a loud *crack* as it snaps, barely missing your $t!", ch, arm ? "arm" : leg ? "leg" : "", victim, TO_VICT);
 		act("$n's whip makes a loud *crack* as it snaps, barely missing $N's $t!", ch, arm ? "arm" : leg ? "leg" : "", victim, TO_NOTVICT);
-		check_improve(ch, gsn_entwine, FALSE, 1);
+		check_improve(ch, gsn_entwine, false, 1);
 	}
 
 	if (!ch->fighting && !victim->fighting)
@@ -3578,10 +3578,10 @@ void do_uncoil(CHAR_DATA *ch, char *argument)
 
 				if (dual != NULL)
 				{
-					unequip_char(guy, dual, FALSE);
+					unequip_char(guy, dual, false);
 					act("You quickly swap $p into your primary hand.", guy, dual, 0, TO_CHAR);
 					act("$n quickly swaps $p into $s primary hand.", guy, dual, 0, TO_ROOM);
-					equip_char(guy, dual, WEAR_WIELD, FALSE);
+					equip_char(guy, dual, WEAR_WIELD, false);
 				}
 			}
 		}
@@ -3639,14 +3639,14 @@ void do_pull(CHAR_DATA *ch, char *argument)
 				act("$n draws $s whip taut, pulling your legs out from under you!", ch, 0, guy, TO_VICT);
 				act("$n draws $s whip taut, pulling $N's legs out from under $M!", ch, 0, guy, TO_NOTVICT);
 				WAIT_STATE(guy, PULSE_VIOLENCE * 2);
-				check_improve(ch, gsn_pull, TRUE, 1);
+				check_improve(ch, gsn_pull, true, 1);
 			}
 			else
 			{
 				act("$N staggers slightly as you jerk your whip back, but remains standing.", ch, 0, guy, TO_CHAR);
 				act("You stagger slightly as $n jerks $s whip back, but remain standing.", ch, 0, guy, TO_VICT);
 				act("$N staggers slightly as $n jerks $s whip back, but remains standing.", ch, 0, guy, TO_NOTVICT);
-				check_improve(ch, gsn_pull, FALSE, 1);
+				check_improve(ch, gsn_pull, false, 1);
 			}
 		}
 		else if (af2->modifier == 1)
@@ -3685,10 +3685,10 @@ void do_pull(CHAR_DATA *ch, char *argument)
 
 				to_room = pexit->u1.to_room;
 
-				stop_fighting(ch, TRUE);
-				move_char(ch, dir, TRUE, FALSE);
-				stop_fighting(guy, TRUE);
-				move_char(guy, dir, TRUE, FALSE);
+				stop_fighting(ch, true);
+				move_char(ch, dir, true, false);
+				stop_fighting(guy, true);
+				move_char(guy, dir, true, false);
 
 				direction = (char *)flag_name_lookup(reverse_d(dir), direction_table);
 				act("$n enters from $t, pulling along a tightly-entwined $N with him!", ch, direction, guy, TO_NOTVICT);
@@ -3701,7 +3701,7 @@ void do_pull(CHAR_DATA *ch, char *argument)
 
 				affect_strip(ch, gsn_pull);
 				affect_strip(guy, gsn_pull);
-				check_improve(ch, gsn_pull, TRUE, 1);
+				check_improve(ch, gsn_pull, true, 1);
 			}
 			else
 			{
@@ -3709,7 +3709,7 @@ void do_pull(CHAR_DATA *ch, char *argument)
 				act("You attempt to drag $N $tward, but $E holds $S ground.", ch, direction, guy, TO_CHAR);
 				act("$n attempts to drag you $tward, but you hold your ground.", ch, direction, guy, TO_VICT);
 				act("$n attempts to drag $N $tward, but $E holds $S ground.", ch, direction, guy, TO_NOTVICT);
-				check_improve(ch, gsn_pull, FALSE, 1);
+				check_improve(ch, gsn_pull, false, 1);
 			}
 		}
 	}
@@ -3847,7 +3847,7 @@ void do_assess(CHAR_DATA *ch, char *argument)
 	if (found == 0)
 		send_to_char("Your assessment reveals nothing interesting.\n\r", ch);
 
-	check_improve(ch, gsn_assess, TRUE, 1);
+	check_improve(ch, gsn_assess, true, 1);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
@@ -3855,7 +3855,7 @@ void do_assess(CHAR_DATA *ch, char *argument)
 bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *exposed)
 {
 	if (IS_OBJ_STAT(exposed, ITEM_FIXED) || IS_OBJ_STAT(exposed, ITEM_BURN_PROOF))
-		return FALSE;
+		return false;
 
 	int matindex = exposed->pIndexData->material_index;
 	float chance = get_skill(ch, gsn_exploit), avgac = 0;
@@ -3864,7 +3864,7 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 	if (exposed->item_type != ITEM_ARMOR)
 	{
 		act("$p is not being used as armor.", ch, exposed, victim, TO_CHAR);
-		return FALSE;
+		return false;
 	}
 
 	for (int i = 0; i < MAX_AC; i++)
@@ -3884,7 +3884,7 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 		act("$n lands a calculated blow upon your $p, damaging it beyond repair!", ch, exposed, victim, TO_VICT);
 
 		extract_obj(exposed);
-		return TRUE;
+		return true;
 	}
 
 	if (IS_IMMORTAL(ch))
@@ -3903,11 +3903,11 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 			exposed->value[i] = UMAX(0, exposed->value[i] - number_range(1, 2));
 		}
 
-		return TRUE;
+		return true;
 	}
 
 	act("Your blow fails to do any lasting damage to $p.", ch, exposed, 0, TO_CHAR);
-	return FALSE;
+	return false;
 }
 
 void do_exploit(CHAR_DATA *ch, char *argument)
@@ -3917,7 +3917,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 	char chsuc[MSL], victsuc[MSL], nvictsuc[MSL];
 	char chspe[MSL], victspe[MSL], nvictspe[MSL];
 	char chfail[MSL], anfail[MSL];
-	bool arm = FALSE, leg = FALSE, torso = FALSE, head = FALSE, anatomy = FALSE, broken = FALSE;
+	bool arm = false, leg = false, torso = false, head = false, anatomy = false, broken = false;
 	char arg[MAX_INPUT_LENGTH];
 	int dam = 120;
 	float skill = 0;
@@ -3947,19 +3947,19 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg, "arm"))
 	{
-		arm = TRUE;
+		arm = true;
 	}
 	else if (!str_cmp(arg, "leg"))
 	{
-		leg = TRUE;
+		leg = true;
 	}
 	else if (!str_cmp(arg, "torso"))
 	{
-		torso = TRUE;
+		torso = true;
 	}
 	else if (!str_cmp(arg, "head"))
 	{
-		head = TRUE;
+		head = true;
 	}
 	else
 	{
@@ -3995,7 +3995,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			exposed = get_eq_char(victim, WEAR_ARMS);
 			if (exposed != NULL)
 			{
-				arm = FALSE;
+				arm = false;
 				broken = check_exploit_armor_break(ch, victim, exposed);
 			}
 			else
@@ -4014,7 +4014,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			exposed = get_eq_char(victim, WEAR_LEGS);
 			if ((exposed != NULL))
 			{
-				leg = FALSE;
+				leg = false;
 				broken = check_exploit_armor_break(ch, victim, exposed);
 			}
 			else
@@ -4030,7 +4030,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			exposed = get_eq_char(victim, WEAR_BODY);
 			if (exposed != NULL)
 			{
-				torso = FALSE;
+				torso = false;
 				broken = check_exploit_armor_break(ch, victim, exposed);
 				dam = 150;
 			}
@@ -4047,7 +4047,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 			exposed = get_eq_char(victim, WEAR_HEAD);
 			if (exposed != NULL)
 			{
-				head = FALSE;
+				head = false;
 				broken = check_exploit_armor_break(ch, victim, exposed);
 			}
 			else
@@ -4060,7 +4060,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 		}
 
 		sprintf(chfail, "You are unable to find a weakness in $N's armor.");
-		anatomy = TRUE;
+		anatomy = true;
 	}
 	else
 	{
@@ -4095,7 +4095,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 					obj_to_room(wield, victim->in_room);
 
 					if (IS_NPC(victim) && victim->wait == 0 && can_see_obj(victim, wield))
-						get_obj(victim, wield, NULL, TRUE);
+						get_obj(victim, wield, NULL, true);
 				}
 			}
 		}
@@ -4110,17 +4110,17 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 		}
 
 		one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, dam, NULL);
-		check_improve(ch, gsn_exploit, TRUE, 1);
+		check_improve(ch, gsn_exploit, true, 1);
 	}
 	else if (!anatomy)
 	{
 		act(anfail, ch, 0, victim, TO_CHAR);
-		check_improve(ch, gsn_exploit, FALSE, 1);
+		check_improve(ch, gsn_exploit, false, 1);
 	}
 	else
 	{
 		act(chfail, ch, 0, victim, TO_CHAR);
-		check_improve(ch, gsn_exploit, FALSE, 1);
+		check_improve(ch, gsn_exploit, false, 1);
 	}
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -4149,29 +4149,29 @@ void do_offhand(CHAR_DATA *ch, char *arg)
 	}
 
 	/* Offhand disarm can offhand: a dual wielded weapon, a shield, a held item, or a light */
-	found = FALSE;
+	found = false;
 
 	offhand = get_eq_char(victim, WEAR_DUAL_WIELD);
 	if (offhand != NULL)
 	{
-		found = TRUE;
+		found = true;
 	}
 	else if ((offhand = get_eq_char(victim, WEAR_SHIELD)) != NULL)
 	{
-		found = TRUE;
+		found = true;
 	}
 	else if ((offhand = get_eq_char(victim, WEAR_HOLD)) != NULL)
 	{
-		found = TRUE;
+		found = true;
 	}
 	else
 	{
 		offhand = get_eq_char(victim, WEAR_LIGHT);
-		found = TRUE;
+		found = true;
 	}
 
 	if (offhand && !can_see_obj(ch, offhand))
-		found = FALSE;
+		found = false;
 
 	if (!found)
 	{
@@ -4200,7 +4200,7 @@ void do_offhand(CHAR_DATA *ch, char *arg)
 		act("You knock $N's $p to the ground!", ch, offhand, victim, TO_CHAR);
 		act("$n knocks $N's $p to the ground!", ch, offhand, victim, TO_NOTVICT);
 		act("$n knocks your $p to the ground!", ch, offhand, victim, TO_VICT);
-		check_improve(ch, skill_lookup("offhand disarm"), TRUE, 1);
+		check_improve(ch, skill_lookup("offhand disarm"), true, 1);
 		obj_from_char(offhand);
 
 		if (IS_OBJ_STAT(offhand, ITEM_NODROP))
@@ -4218,7 +4218,7 @@ void do_offhand(CHAR_DATA *ch, char *arg)
 		if (IS_NPC(victim) && !IS_AFFECTED(victim, AFF_BLIND))
 			interpret(victim, "get 1.");
 
-		command_result = TRUE;
+		command_result = true;
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 		return;
 	}
@@ -4226,8 +4226,8 @@ void do_offhand(CHAR_DATA *ch, char *arg)
 	act("You try to knock $N's $p to the ground, but fail.", ch, offhand, victim, TO_CHAR);
 	act("$n tries to knock $N's $p to the ground, but fails.", ch, offhand, victim, TO_NOTVICT);
 	act("$n tries to knock your $p to the ground, but fails.", ch, offhand, victim, TO_VICT);
-	check_improve(ch, skill_lookup("offhand disarm"), FALSE, 1);
-	command_result = TRUE;
+	check_improve(ch, skill_lookup("offhand disarm"), false, 1);
+	command_result = true;
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 }
 
@@ -4315,7 +4315,7 @@ void do_drive(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Check for pk range */
-	if (is_safe_new(ch, victim, TRUE))
+	if (is_safe_new(ch, victim, true))
 		return;
 
 	if (check_sidestep(ch, victim, gsn_drive, 95))
@@ -4377,13 +4377,13 @@ void do_drive(CHAR_DATA *ch, char *argument)
 		to_room = pexit->u1.to_room;
 
 		/* stop and move driver */
-		stop_fighting(ch, TRUE);
-		move_char(ch, where, TRUE, FALSE);
+		stop_fighting(ch, true);
+		move_char(ch, where, true, false);
 
 		/* stop and move drivee */
-		stop_fighting(victim, TRUE);
-		move_char(victim, where, TRUE, FALSE);
-		check_improve(ch, gsn_drive, TRUE, 1);
+		stop_fighting(victim, true);
+		move_char(victim, where, true, false);
+		check_improve(ch, gsn_drive, true, 1);
 
 		if (victim->in_room != ch->in_room)
 			return;
@@ -4395,7 +4395,7 @@ void do_drive(CHAR_DATA *ch, char *argument)
 		act("You surge at $N, but $E doesn't budge!", ch, 0, victim, TO_CHAR);
 		act("$n surges at you, but you don't budge!", ch, 0, victim, TO_VICT);
 		act("$n surges at $N, but $E doesn't budge!", ch, 0, victim, TO_NOTVICT);
-		check_improve(ch, gsn_drive, FALSE, 1);
+		check_improve(ch, gsn_drive, false, 1);
 	}
 
 	if (victim->in_room == ch->in_room && !ch->fighting && !victim->fighting)
@@ -4489,7 +4489,7 @@ void do_dash(CHAR_DATA *ch, char *argument)
 	if (number_percent() < skill)
 	{
 		/* stop and move driver */
-		move_char(ch, where, TRUE, FALSE);
+		move_char(ch, where, true, false);
 
 		if (ch->in_room != to_room)
 			return;
@@ -4499,17 +4499,17 @@ void do_dash(CHAR_DATA *ch, char *argument)
 		act("$n dashes in from the $t!", ch, dir, 0, TO_ROOM);
 		interpret(ch, command);
 		WAIT_STATE(ch, PULSE_VIOLENCE);
-		check_improve(ch, gsn_dash, TRUE, 5);
+		check_improve(ch, gsn_dash, true, 5);
 	}
 	else
 	{
 		send_to_char("You fail to prepare for your dash properly, and manage only to stumble in!\n\r", ch);
 
 		/* stop and move driver */
-		move_char(ch, where, TRUE, FALSE);
+		move_char(ch, where, true, false);
 		act("$n stumbles in from the $t!", ch, dir, 0, TO_ROOM);
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
-		check_improve(ch, gsn_dash, FALSE, 5);
+		check_improve(ch, gsn_dash, false, 5);
 	}
 }
 
@@ -4519,7 +4519,7 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 	AFFECT_DATA af;
 	CHAR_DATA *victim;
 	int chance, size;
-	bool concussed = FALSE;
+	bool concussed = false;
 	OBJ_DATA *weapon;
 	char weapon_name[MSL];
 
@@ -4555,7 +4555,7 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 	}
 
 	if (is_affected(victim, gsn_concuss))
-		concussed = TRUE;
+		concussed = true;
 
 	if (is_safe(ch, victim))
 		return;
@@ -4619,7 +4619,7 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 		if (!concussed)
 			affect_to_char(victim, &af);
 
-		check_improve(ch, gsn_concuss, TRUE, 1);
+		check_improve(ch, gsn_concuss, true, 1);
 		one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "concussion");
 	}
 	else
@@ -4627,8 +4627,8 @@ void do_concuss(CHAR_DATA *ch, char *argument)
 		act("You fail to connect with $N's temple.", ch, 0, victim, TO_CHAR);
 		act("$n fails to connect with $N's temple.", ch, 0, victim, TO_NOTVICT);
 		act("$n fails to hit you in the temple.", ch, 0, victim, TO_VICT);
-		damage(ch, victim, 0, gsn_concuss, DAM_NONE, TRUE);
-		check_improve(ch, gsn_concuss, FALSE, 1);
+		damage(ch, victim, 0, gsn_concuss, DAM_NONE, true);
+		check_improve(ch, gsn_concuss, false, 1);
 	}
 
 	WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
@@ -4693,7 +4693,7 @@ void execute_retreat(CHAR_DATA *ch, int *direction)
 	if (number_percent() > skill)
 	{
 		send_to_char("You fail to find an opening to make your retreat.\n\r", ch);
-		check_improve(ch, gsn_retreat, FALSE, 1);
+		check_improve(ch, gsn_retreat, false, 1);
 		return;
 	}
 
@@ -4701,17 +4701,17 @@ void execute_retreat(CHAR_DATA *ch, int *direction)
 	act("You make a hasty retreat $t.", ch, dirname, 0, TO_CHAR);
 	act("$n makes a hasty retreat $t.", ch, dirname, 0, TO_ROOM);
 
-	move_char(ch, dir, TRUE, FALSE);
+	move_char(ch, dir, true, false);
 
 	if (ch->in_room != start)
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 }
 
 void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 {
 	int skill, percent;
 	CHAR_DATA *vch, *vch_next, *gch;
-	bool grouped = FALSE;
+	bool grouped = false;
 	CHAR_DATA *victim = NULL;
 
 	if (arg[0] == '\0')
@@ -4747,7 +4747,7 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 	}
 
 	if (ch->leader)
-		grouped = TRUE;
+		grouped = true;
 
 	if (IS_NPC(victim))
 	{
@@ -4759,7 +4759,7 @@ void do_disrupt_formation(CHAR_DATA *ch, char *arg)
 	{
 		if (is_same_group(gch, ch) && gch != ch)
 		{
-			grouped = TRUE;
+			grouped = true;
 		}
 	}
 
@@ -4828,7 +4828,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 {
 	AFFECT_DATA af;
 	CHAR_DATA *to;
-	bool leader = FALSE;
+	bool leader = false;
 	int chance;
 
 	chance = get_skill(ch, gsn_leadership);
@@ -4841,7 +4841,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 	for (to = ch->in_room->people; to != NULL; to = to->next_in_room)
 	{
 		if (is_same_group(to, ch) && to != ch)
-			leader = TRUE;
+			leader = true;
 	}
 
 	if (is_affected(ch, gsn_leadership))
@@ -4866,7 +4866,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 	{
 		act("$n tries to explain combat tactics to you, but he just becomes frustrated at himself.", ch, 0, 0, TO_GROUP);
 		act("You try to explain combat tactics to your group, but they just do not understand.", ch, 0, 0, TO_CHAR);
-		check_improve(ch, gsn_leadership, FALSE, 2);
+		check_improve(ch, gsn_leadership, false, 2);
 		ch->mana -= 25;
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 	}
@@ -4875,7 +4875,7 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 		act("You organize your group into an efficient combat formation.", ch, 0, 0, TO_CHAR);
 		act("$n organizes the group into an efficient combat formation.", ch, 0, 0, TO_GROUP);
 		act("$n gives some instructions to $s group as they listen intently.", ch, 0, 0, TO_NOTGROUP);
-		check_improve(ch, gsn_leadership, TRUE, 2);
+		check_improve(ch, gsn_leadership, true, 2);
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -4922,14 +4922,14 @@ void do_leadership(CHAR_DATA *ch, char *argument)
 bool check_leadership_save(CHAR_DATA *ch, int skill)
 {
 	if (ch->leader == NULL || ch->leader == ch)
-		return FALSE;
+		return false;
 
 	if (skill == gsn_howl || skill == gsn_disrupt_formation)
 	{
-		return TRUE;
+		return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 void check_leadership_affect(CHAR_DATA *ch)
@@ -5104,20 +5104,20 @@ bool outflank_me(CHAR_DATA *ch, int dir)
 					act("As $N attempts to flee, you bar $S exit $tward!", victim, direction, ch, TO_CHAR);
 					act("As you attempt to flee, $n bars your exit $tward!", victim, direction, ch, TO_VICT);
 					act("As $N attempts to flee, $n bars $s exit $tward!", victim, direction, ch, TO_NOTVICT);
-					check_improve(victim, gsn_outflank, TRUE, 1);
+					check_improve(victim, gsn_outflank, true, 1);
 					WAIT_STATE(ch, PULSE_VIOLENCE);
-					return TRUE;
+					return true;
 				}
 				else
 				{
 					act("$N slips past you, escaping $t!", victim, direction, ch, TO_CHAR);
 					act("You slip past $n as $e attempts to block your path!", victim, 0, ch, TO_VICT);
 					act("$N slips past $n as $e attempts to block $S path!", victim, 0, ch, TO_NOTVICT);
-					check_improve(victim, gsn_outflank, FALSE, 2);
+					check_improve(victim, gsn_outflank, false, 2);
 				}
 			}
 		}
 	}
 
-	return FALSE;
+	return false;
 }

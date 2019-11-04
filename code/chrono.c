@@ -78,15 +78,15 @@ bool trigger_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
 	int dir = (int)*(int *)vo3;
 
 	if (!rune->owner)
-		return FALSE;
+		return false;
 
-	if (is_safe_new(ch, victim, FALSE))
-		return FALSE;
+	if (is_safe_new(ch, victim, false))
+		return false;
 
 	act("You try to move to the $t but a stasis wall flickers and holds you back!", victim, direction_table[dir].name, 0, TO_CHAR);
 	act("$n tries to move to the $t but is halted by a stasis wall!", victim, direction_table[dir].name, 0, TO_ROOM);
 
-	return TRUE;
+	return true;
 }
 
 bool activate_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
@@ -97,10 +97,10 @@ bool activate_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
 	EXIT_DATA *pexit = ch->in_room->exit[dir];
 
 	if (!rune->owner || rune->owner == victim || dir != rune->extra || !pexit)
-		return FALSE;
+		return false;
 
-	if (is_safe_new(ch, victim, FALSE))
-		return FALSE;
+	if (is_safe_new(ch, victim, false))
+		return false;
 
 	act("As you pass through the $t, a stasis wall snaps into existence behind you!", victim, pexit->keyword, 0, TO_CHAR);
 	act("As $n passes through the $t, a stasis wall snaps into existence behind $m!", victim, pexit->keyword, 0, TO_ROOM);
@@ -116,7 +116,7 @@ bool activate_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
 	new_rune.function = trigger_stasis_wall;
 	apply_rune(&new_rune);
 
-	return FALSE;
+	return false;
 }
 
 void draw_rune(void *vo, void *vo2)
@@ -126,7 +126,7 @@ void draw_rune(void *vo, void *vo2)
 	if (ch->in_room->vnum != rune->drawn_in)
 	{
 		send_to_char("A backlash of energy whips through you as your uncompleted rune overloads!\n\r", ch);
-		damage_new(ch, ch, dice(rune->level, 4), TYPE_UNDEFINED, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, 0, 1, "mana surge");
+		damage_new(ch, ch, dice(rune->level, 4), TYPE_UNDEFINED, DAM_ENERGY, true, HIT_UNBLOCKABLE, 0, 1, "mana surge");
 		return;
 	}
 
@@ -316,7 +316,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	}
 
 	(*skill_table[sn].spell_fun)(sn, ch->level * 2, ch, vo, target);
-	check_improve(ch, sn, TRUE, 1);
+	check_improve(ch, sn, true, 1);
 }
 
 RUNE_DATA *find_rune(void *vo, int target_type, int trigger_type, RUNE_DATA *rune_prev)
@@ -371,7 +371,7 @@ void extract_rune(RUNE_DATA *rune)
 				break;
 			}
 
-			obj->has_rune = FALSE;
+			obj->has_rune = false;
 			break;
 		case RUNE_TO_PORTAL:
 			exit = (EXIT_DATA *)rune->placed_on;
@@ -382,7 +382,7 @@ void extract_rune(RUNE_DATA *rune)
 				break;
 			}
 
-			exit->has_rune = FALSE;
+			exit->has_rune = false;
 			break;
 		case RUNE_TO_ROOM:
 			room = (ROOM_INDEX_DATA *)rune->placed_on;
@@ -393,7 +393,7 @@ void extract_rune(RUNE_DATA *rune)
 				break;
 			}
 
-			room->has_rune = FALSE;
+			room->has_rune = false;
 			break;
 	}
 
@@ -437,7 +437,7 @@ void apply_rune(RUNE_DATA *rune)
 				rune_new->next_content = obj->rune;
 
 			obj->rune = rune_new;
-			obj->has_rune = TRUE;
+			obj->has_rune = true;
 			break;
 		case RUNE_TO_PORTAL:
 			pexit = (EXIT_DATA *)rune_new->placed_on;
@@ -446,7 +446,7 @@ void apply_rune(RUNE_DATA *rune)
 				rune_new->next_content = pexit->rune;
 
 			pexit->rune = rune_new;
-			pexit->has_rune = TRUE;
+			pexit->has_rune = true;
 			break;
 		case RUNE_TO_ROOM:
 			room = (ROOM_INDEX_DATA *)rune_new->placed_on;
@@ -455,7 +455,7 @@ void apply_rune(RUNE_DATA *rune)
 				rune_new->next_content = room->rune;
 
 			room->rune = rune_new;
-			room->has_rune = TRUE;
+			room->has_rune = true;
 			break;
 	}
 }

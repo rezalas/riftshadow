@@ -52,12 +52,12 @@ bool check_ban(char *usite, int type, int host)
 			{
 				sprintf(buf, "BANNED - %s just tried to connect.", site);
 				wiznet(buf, NULL, NULL, WIZ_LOGINS, 0, 0);
-				return TRUE;
+				return true;
 			}
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_ban(CHAR_DATA *ch, char *argument)

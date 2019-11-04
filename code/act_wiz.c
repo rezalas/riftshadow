@@ -513,7 +513,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(body), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 	/*
 	obj = get_eq_char(ch, WEAR_HEAD);
@@ -522,7 +522,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3706), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_NECK_1);
@@ -531,7 +531,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3705), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_NECK_2);
@@ -540,7 +540,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3705), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 	*/
 
@@ -551,7 +551,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(legs), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_FEET);
@@ -561,7 +561,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(feet), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_HANDS);
@@ -571,7 +571,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(hands), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_ARMS);
@@ -581,7 +581,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(arms), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	/*
@@ -591,7 +591,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3711), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_WAIST);
@@ -600,7 +600,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3712), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_WRIST_L);
@@ -609,7 +609,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3713), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_WRIST_R);
@@ -618,7 +618,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(3713), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 	*/
 
@@ -645,7 +645,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 		obj = create_object(get_obj_index(vnum), 0);
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	obj = get_eq_char(ch, WEAR_WIELD);
@@ -657,7 +657,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		obj = create_object(get_obj_index(OBJ_VNUM_SCHOOL_SHIELD), 0);
 		obj->cost = 0;
 		obj_to_char(obj, ch);
-		wear_obj(ch, obj, FALSE);
+		wear_obj(ch, obj, false);
 	}
 
 	/*
@@ -946,7 +946,7 @@ void do_deny(CHAR_DATA *ch, char *argument)
 
 	save_char_obj(victim);
 
-	stop_fighting(victim, TRUE);
+	stop_fighting(victim, true);
 
 	victim->pause = 0;
 
@@ -962,8 +962,8 @@ void do_deny(CHAR_DATA *ch, char *argument)
 
 	cname = palloc_string(victim->true_name);
 
-	do_quit_new(victim, "", TRUE);
-	delete_char(cname, TRUE);
+	do_quit_new(victim, "", true);
+	delete_char(cname, true);
 }
 
 void do_disconnect(CHAR_DATA *ch, char *argument)
@@ -1334,7 +1334,7 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 	}
 
 	if (victim->fighting != NULL)
-		stop_fighting(victim, TRUE);
+		stop_fighting(victim, true);
 
 	act("$n disappears in a mushroom cloud.", victim, NULL, NULL, TO_ROOM);
 
@@ -1450,7 +1450,7 @@ void do_goto(CHAR_DATA *ch, char *argument)
 	}
 
 	if (ch->fighting != NULL)
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 
 	for (rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
 	{
@@ -1512,7 +1512,7 @@ void do_violate(CHAR_DATA *ch, char *argument)
 	}
 
 	if (ch->fighting != NULL)
-		stop_fighting(ch, TRUE);
+		stop_fighting(ch, true);
 
 	for (rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
 	{
@@ -2016,7 +2016,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 	if (obj->extra_descr != NULL || obj->pIndexData->extra_descr != NULL)
 	{
 		EXTRA_DESCR_DATA *ed, *ed2;
-		bool duplicate = FALSE; /* Don't duplicate extradescs. */
+		bool duplicate = false; /* Don't duplicate extradescs. */
 
 		send_to_char("Extra description keywords: '", ch);
 
@@ -2033,7 +2033,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 			for (ed2 = obj->extra_descr; ed2; ed2 = ed2->next)
 			{
 				if (!str_cmp(ed->keyword, ed2->keyword))
-					duplicate = TRUE;
+					duplicate = true;
 			}
 
 			if (duplicate)
@@ -3083,8 +3083,8 @@ void do_mfind(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	fAll = FALSE; /* !str_cmp( arg, "all" ); */
-	found = FALSE;
+	fAll = false; /* !str_cmp( arg, "all" ); */
+	found = false;
 	nMatch = 0;
 
 	/*
@@ -3102,7 +3102,7 @@ void do_mfind(CHAR_DATA *ch, char *argument)
 			nMatch++;
 			if (fAll || is_name(argument, pMobIndex->player_name))
 			{
-				found = TRUE;
+				found = true;
 				sprintf(buf, "[%5d] %s\n\r", pMobIndex->vnum, pMobIndex->short_descr);
 				send_to_char(buf, ch);
 			}
@@ -3131,8 +3131,8 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	fAll = FALSE; /* !str_cmp( arg, "all" ); */
-	found = FALSE;
+	fAll = false; /* !str_cmp( arg, "all" ); */
+	found = false;
 	nMatch = 0;
 
 	/*
@@ -3150,7 +3150,7 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 			nMatch++;
 			if (fAll || is_name(argument, pObjIndex->name))
 			{
-				found = TRUE;
+				found = true;
 				sprintf(buf, "[%5d] %s\n\r", pObjIndex->vnum, pObjIndex->short_descr);
 				send_to_char(buf, ch);
 			}
@@ -3170,7 +3170,7 @@ void do_owhere(CHAR_DATA *ch, char *argument)
 	bool found;
 	int number = 0, max_found;
 
-	found = FALSE;
+	found = false;
 	number = 0;
 	max_found = 200;
 
@@ -3213,7 +3213,7 @@ void do_owhere(CHAR_DATA *ch, char *argument)
 			continue;
 		}
 
-		found = TRUE;
+		found = true;
 
 		buf[0] = UPPER(buf[0]);
 		add_buf(buffer, buf);
@@ -3283,14 +3283,14 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	found = FALSE;
+	found = false;
 	buffer = new_buf();
 
 	for (victim = char_list; victim != NULL; victim = victim->next)
 	{
 		if (victim->in_room != NULL && can_see(ch, victim) && is_name(argument, victim->name))
 		{
-			found = TRUE;
+			found = true;
 			count++;
 
 			sprintf(buf, "%3d) [%5d] %-28s [%5d] %s\n\r",
@@ -3378,7 +3378,7 @@ void reboot_now(CHAR_DATA *ch)
 		close_socket(d);
 	}
 
-	merc_down = TRUE;
+	merc_down = true;
 }
 
 void start_reboot(CHAR_DATA *ch)
@@ -3389,7 +3389,7 @@ void start_reboot(CHAR_DATA *ch)
 
 	if (reboot_num == -1)
 	{
-		rebooting = FALSE;
+		rebooting = false;
 		do_echo(ch, "*** REBOOT CANCELLED ***");
 	}
 	else if (reboot_num == 0)
@@ -3417,7 +3417,7 @@ void do_reboot(CHAR_DATA *ch, char *argument)
 	char send[MSL];
 	char arg1[MSL], area[MSL] = "";
 	AREA_DATA *pArea = NULL;
-	bool found = FALSE;
+	bool found = false;
 
 	argument = one_argument(argument, arg1);
 	mins = atoi(arg1);
@@ -3426,7 +3426,7 @@ void do_reboot(CHAR_DATA *ch, char *argument)
 	{
 		if (IS_SET(pArea->area_flags, AREA_CHANGED) || IS_SET(pArea->area_flags, AREA_ADDED))
 		{
-			found = TRUE;
+			found = true;
 			sprintf(area, "%s%24s\n\r", area, pArea->name);
 		}
 	}
@@ -3450,7 +3450,7 @@ void do_reboot(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	rebooting = TRUE;
+	rebooting = true;
 
 	if (mins == 0)
 	{
@@ -3461,7 +3461,7 @@ void do_reboot(CHAR_DATA *ch, char *argument)
 		sprintf(send, "{R%s has cancelled the reboot.{x", ch->true_name);
 		do_immecho(ch, send);
 		reboot_num = -1;
-		rebooting = FALSE;
+		rebooting = false;
 	}
 	else
 	{
@@ -3710,9 +3710,9 @@ bool obj_check(CHAR_DATA *ch, OBJ_DATA *obj)
 		|| (IS_TRUSTED(ch, DEMI) && obj->level <= 10 && obj->cost <= 500)
 		|| (IS_TRUSTED(ch, ANGEL) && obj->level <= 5 && obj->cost <= 250)
 		|| (IS_TRUSTED(ch, AVATAR) && obj->level == 0 && obj->cost <= 100))
-		return TRUE;
+		return true;
 	else
-		return FALSE;
+		return false;
 }
 
 /* for clone, to insure that cloning goes many levels deep */
@@ -3998,7 +3998,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 			vnext = victim->next_in_room;
 
 			if (IS_NPC(victim) && !IS_SET(victim->act, ACT_NOPURGE) && victim != ch /* safety precaution */)
-				extract_char(victim, TRUE);
+				extract_char(victim, true);
 		}
 
 		for (obj = ch->in_room->contents; obj != NULL; obj = obj_next)
@@ -4044,7 +4044,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 			save_char_obj(victim);
 
 		d = victim->desc;
-		extract_char(victim, TRUE);
+		extract_char(victim, true);
 
 		if (d != NULL)
 			close_socket(d);
@@ -4053,7 +4053,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 	}
 
 	act("$n purges $N.", ch, NULL, victim, TO_NOTVICT);
-	extract_char(victim, TRUE);
+	extract_char(victim, true);
 }
 
 void do_advance(CHAR_DATA *ch, char *argument)
@@ -4129,7 +4129,7 @@ void do_advance(CHAR_DATA *ch, char *argument)
 		victim->hit = victim->max_hit;
 		victim->mana = victim->max_mana;
 		victim->move = victim->max_move;
-		advance_level(victim, TRUE);
+		advance_level(victim, true);
 	}
 	else
 	{
@@ -4140,7 +4140,7 @@ void do_advance(CHAR_DATA *ch, char *argument)
 	for (iLevel = victim->level; iLevel < level; iLevel++)
 	{
 		victim->level += 1;
-		advance_level(victim, FALSE);
+		advance_level(victim, false);
 	}
 
 	sprintf(buf, "You are now level %d.\n\r", victim->level);
@@ -4368,12 +4368,12 @@ void do_log(CHAR_DATA *ch, char *argument)
 	{
 		if (fLogAll)
 		{
-			fLogAll = FALSE;
+			fLogAll = false;
 			send_to_char("Log ALL off.\n\r", ch);
 		}
 		else
 		{
-			fLogAll = TRUE;
+			fLogAll = true;
 			send_to_char("Log ALL on.\n\r", ch);
 		}
 
@@ -4563,7 +4563,7 @@ void do_peace(CHAR_DATA *ch, char *argument)
 	for (CHAR_DATA *rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
 	{
 		if (rch->fighting != NULL)
-			stop_fighting(rch, TRUE);
+			stop_fighting(rch, true);
 
 		if (IS_NPC(rch) && IS_SET(rch->act, ACT_AGGRESSIVE))
 			REMOVE_BIT(rch->act, ACT_AGGRESSIVE);
@@ -4740,15 +4740,15 @@ void do_sgset(CHAR_DATA *ch, char *argument)
 
 	if (gn != -1)
 	{
-		if (ch->pcdata->group_known[gn] == TRUE)
+		if (ch->pcdata->group_known[gn] == true)
 		{
-			ch->pcdata->group_known[gn] = FALSE;
+			ch->pcdata->group_known[gn] = false;
 			gn_remove(victim, gn);
 			send_to_char("Group removed.\n\r", ch);
 		}
 		else
 		{
-			ch->pcdata->group_known[gn] = TRUE;
+			ch->pcdata->group_known[gn] = true;
 
 			/* Check for sorc focus and adjust acordingly */
 			for (i = 0; i < (MAX_ELE); i++)
@@ -5746,13 +5746,13 @@ void do_sockets(CHAR_DATA *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
 	DESCRIPTOR_DATA *d;
 	int count;
-	bool bDis = FALSE; // displinary
+	bool bDis = false; // displinary
 
 	count = 0;
 	buf[0] = '\0';
 
 	if (!strcmp(argument, "show"))
-		bDis = TRUE;
+		bDis = true;
 
 	one_argument(argument, arg);
 
@@ -6695,7 +6695,7 @@ void do_vmstat(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "%s", victim->name);
 	do_mstat(ch, buf);
 
-	extract_char(victim, TRUE);
+	extract_char(victim, true);
 }
 
 void do_vostat(CHAR_DATA *ch, char *argument)
@@ -6705,7 +6705,7 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_INPUT_LENGTH];
 	OBJ_INDEX_DATA *pObjIndex = NULL;
 	OBJ_DATA *obj;
-	bool found = FALSE;
+	bool found = false;
 	int vnum, nMatch = 0;
 	char *blah;
 	blah = one_argument(argument, arg1);
@@ -6726,7 +6726,7 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		found = TRUE;
+		found = true;
 	}
 
 	if (!is_number(arg1))
@@ -6741,7 +6741,7 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 
 				if (is_name(argument, pObjIndex->name))
 				{
-					found = TRUE;
+					found = true;
 					break;
 				}
 			}
@@ -6774,7 +6774,7 @@ void do_history(CHAR_DATA *ch, char *argument)
 	char obuf[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
 	int len;
-	bool found = FALSE;
+	bool found = false;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -6901,7 +6901,7 @@ void do_history(CHAR_DATA *ch, char *argument)
 					{
 						len--;
 					}
-					found = TRUE;
+					found = true;
 				}
 				else
 				{
@@ -7106,12 +7106,12 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 	ROOM_AFFECT_DATA *paf;
 	RUNE_DATA *rune;
 	char buf[MAX_STRING_LENGTH];
-	bool found = FALSE;
+	bool found = false;
 	int i = 0;
 
 	if (ch->in_room->affected != NULL)
 	{
-		found = TRUE;
+		found = true;
 		send_to_char("The room is affected by:\n\r", ch);
 
 		for (paf = ch->in_room->affected; paf != NULL; paf = paf->next)
@@ -7160,7 +7160,7 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 
 	for (i = 0; i < 6; i++)
 	{
-		if (ch->in_room->exit[i] && ch->in_room->exit[i]->has_rune == TRUE)
+		if (ch->in_room->exit[i] && ch->in_room->exit[i]->has_rune == true)
 		{
 			rune = ch->in_room->exit[i]->rune;
 
@@ -7171,7 +7171,7 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 				rune->level, rune->duration);
 			send_to_char(buf, ch);
 
-			found = TRUE;
+			found = true;
 		}
 	}
 
@@ -7247,7 +7247,7 @@ void do_oastrip(CHAR_DATA *ch, char *argument)
 		if (IS_SET(af->bitvector, AFF_PERMANENT))
 			continue;
 
-		affect_remove_obj(obj, af, TRUE);
+		affect_remove_obj(obj, af, true);
 	}
 
 	act("All affects stripped from $p.", ch, obj, 0, TO_CHAR);
@@ -7332,7 +7332,7 @@ void do_setpath(CHAR_DATA *ch, char *argument)
 	{
 		victim->pcdata->paladin_path = PALADIN_PROTECTOR;
 
-		group_add(victim, "protector", FALSE);
+		group_add(victim, "protector", false);
 
 		send_to_char("You have set that character's path to Protector.\n\r", ch);
 		send_to_char("Your path has been set, you will follow that of the Protector of Shalar.\n\r", victim);
@@ -7343,7 +7343,7 @@ void do_setpath(CHAR_DATA *ch, char *argument)
 	{
 		victim->pcdata->paladin_path = PALADIN_CRUSADER;
 
-		group_add(victim, "crusader", FALSE);
+		group_add(victim, "crusader", false);
 
 		send_to_char("You have set that character's path to Crusader.\n\r", ch);
 		send_to_char("Your path has been set, you will follow that of the Crusader of Shalar.\n\r", victim);

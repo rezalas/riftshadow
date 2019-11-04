@@ -406,17 +406,17 @@ void load_mobs( FILE *fp )
         if ( vnum == 0 )
             break;
 
-        fBootDb = FALSE;
+        fBootDb = false;
         if ( get_mob_index( vnum ) != NULL )
         {
             bug( "Load_new_mobiles: vnum %d duplicated.", vnum );
             exit( 1 );
         }
-        fBootDb = TRUE;
+        fBootDb = true;
 
         pMobIndex                        = new MOB_INDEX_DATA;
         pMobIndex->vnum                 = vnum;
-		pMobIndex->new_format			= TRUE;
+		pMobIndex->new_format			= true;
 		pMobIndex->area					= area_last;
 		newmobs++;
 		pMobIndex->count				= 0;
@@ -835,13 +835,13 @@ void load_mobs( FILE *fp )
 			temp = fread_word(fp);
 			if(!strcmp(temp,"NORMAL_SHOP"))
 			{
-				pShop->fIsPetShop 	= FALSE;
+				pShop->fIsPetShop 	= false;
 				pShop->pet_cage_vnum 	= 0;
 				fread_number(fp);
 			}
 			else if (!strcmp(temp,"PET_SHOP"))
 			{
-				pShop->fIsPetShop	= TRUE;
+				pShop->fIsPetShop	= true;
 				pShop->pet_cage_vnum	= fread_number(fp);
 			}
 			*/
@@ -922,7 +922,7 @@ void bug_exit(char *file, int nLine)
 void load_objs( FILE *fp )
 {
     OBJ_INDEX_DATA *pObjIndex;
-	bool goodflag = FALSE;
+	bool goodflag = false;
 
     if ( !area_last )   /* OLC */
     {
@@ -947,20 +947,20 @@ void load_objs( FILE *fp )
         if ( vnum == 0 )
             break;
 
-        fBootDb = FALSE;
+        fBootDb = false;
         if ( get_obj_index( vnum ) != NULL )
         {
             bug( "Load_objects: vnum %d duplicated.", vnum );
             exit( 1 );
         }
-        fBootDb = TRUE;
+        fBootDb = true;
 
         pObjIndex                        = new OBJ_INDEX_DATA;
 	if(!oIndex_list)
 		oIndex_list = pObjIndex;
         pObjIndex->vnum                 = vnum;
 	pObjIndex->area			= area_last;
-        pObjIndex->new_format           = TRUE;
+        pObjIndex->new_format           = true;
 	pObjIndex->reset_num		= 0;
 	newobjs++;
 	pObjIndex->limcount		= 0;
@@ -1122,7 +1122,7 @@ void load_objs( FILE *fp )
 			paf.modifier	= 0;
 			charaff_to_obj_index(pObjIndex, &paf);
 			
-			goodflag = TRUE;
+			goodflag = true;
 			top_affect++;
 		}
         if(!str_cmp(word,"IMM"))
@@ -1132,7 +1132,7 @@ void load_objs( FILE *fp )
 			bit = flag_lookup(fread_word(fp),imm_flags);
 			if (bit != NO_FLAG)
 				SET_BIT(pObjIndex->imm_flags, bit);
-			goodflag = TRUE;
+			goodflag = true;
 		}
 		if(!str_cmp(word,"RES"))
 		{
@@ -1141,7 +1141,7 @@ void load_objs( FILE *fp )
 			bit = flag_lookup(fread_word(fp),imm_flags);
 			if (bit != NO_FLAG)
 				SET_BIT(pObjIndex->res_flags, bit);
-			goodflag = TRUE;
+			goodflag = true;
 		}
 		if(!str_cmp(word,"VUL"))
 		{
@@ -1150,7 +1150,7 @@ void load_objs( FILE *fp )
 			bit = flag_lookup(fread_word(fp),imm_flags);
 			if (bit != NO_FLAG)
 				SET_BIT(pObjIndex->vuln_flags,bit);
-			goodflag = TRUE;
+			goodflag = true;
 		}
 		if(!goodflag)
 			bugout("Invalid flag.");

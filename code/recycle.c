@@ -391,7 +391,7 @@ PATHFIND_DATA *new_path_data(void)
 	PATHFIND_DATA *path = new PATHFIND_DATA;
 
 	path->room = NULL;
-	path->evaluated = FALSE;
+	path->evaluated= false;
 	path->dir_from = -1;
 	path->steps = -1;
 	path->prev = NULL;
@@ -806,7 +806,7 @@ CHAR_DATA *new_char(void)
 	ch->batter = 0;
 	ch->analyze = 0;
 	ch->talismanic = 0;
-	ch->law_pass = FALSE;
+	ch->law_pass= false;
 
 	zero_vector(ch->imm_flags);
 
@@ -1085,25 +1085,25 @@ bool add_buf(BUFFER *buffer, char *string)
 	char *tptr;
 
 	if (string[0] == '\0' || string == NULL)
-		return FALSE;
+		return false;
 
 	if (!buffer->string || !strlen(buffer->string)) // like a virgin.. touched for the very first tiiiiime
 	{
 		buffer->string = palloc_string(string);
 		buffer->size = strlen(string) + 1;
-		return TRUE;
+		return true;
 	}
 
 	len = strlen(buffer->string) + strlen(string) + 1;
 
 	if (len > 32766)
-		return TRUE;
+		return true;
 
 	tptr = buffer->string;
 	buffer->string = new char[len];
 
 	if (!buffer->string)
-		return FALSE;
+		return false;
 
 	buffer->size = len;
 
@@ -1111,7 +1111,7 @@ bool add_buf(BUFFER *buffer, char *string)
 	strcat(buffer->string, string);
 
 	delete[] tptr;
-	return TRUE;
+	return true;
 }
 
 void clear_buf(BUFFER *buffer)

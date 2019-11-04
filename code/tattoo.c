@@ -85,7 +85,7 @@ void do_brands(CHAR_DATA *ch, char *argument)
 		objj = create_object(obj->pIndexData, 0);
 		clone_object(obj, objj);
 		obj_to_char(objj, victim);
-		equip_char(victim, objj, WEAR_BRAND, TRUE);
+		equip_char(victim, objj, WEAR_BRAND, true);
 
 		act("You mark $N with $p!", ch, objj, victim, TO_CHAR);
 		act("$n marks you with $p!", ch, objj, victim, TO_VICT);
@@ -140,7 +140,7 @@ void do_unbrands(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	unequip_char(victim, obj, TRUE);
+	unequip_char(victim, obj, true);
 	obj_from_char(obj);
 	extract_obj(obj);
 

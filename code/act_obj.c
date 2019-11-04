@@ -56,12 +56,12 @@ bool check_arms(CHAR_DATA *ch, OBJ_DATA *obj)
 			{
 				act("$p shocks you, falling from your numb hands.", ch, obj, 0, TO_CHAR);
 				act("$n drops $p.", ch, obj, 0, TO_ROOM);
-				return TRUE;
+				return true;
 			}
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
@@ -83,27 +83,27 @@ bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
 	}
 
 	if (obj->item_type != ITEM_CORPSE_PC)
-		return TRUE;
+		return true;
 
 	if (IS_NPC(ch) && IS_AFFECTED(ch, AFF_CHARM))
-		return FALSE;
+		return false;
 
 	if (IS_NPC(ch))
-		return FALSE;
+		return false;
 
 	if (!obj->owner || obj->owner == NULL)
-		return TRUE;
+		return true;
 
 	if (!str_cmp(ch->true_name, obj->owner))
-		return TRUE;
+		return true;
 
-	if (!IS_NPC(ch) && ch->pcdata->newbie == TRUE)
+	if (!IS_NPC(ch) && ch->pcdata->newbie == true)
 	{
 		send_to_char("You can't loot other players as a newbie.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
-	return TRUE;
+	return true;
 
 	owner = NULL;
 	for (wch = char_list; wch != NULL; wch = wch->next)
@@ -113,15 +113,15 @@ bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
 	}
 
 	if (owner == NULL || IS_NPC(owner))
-		return TRUE;
+		return true;
 
 	if (!str_cmp(ch->true_name, owner->true_name))
-		return TRUE;
+		return true;
 
 	if (is_same_group(ch, owner))
-		return TRUE;
+		return true;
 
-	return FALSE;
+	return false;
 }
 
 void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck)
@@ -187,19 +187,19 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck)
 
 		pchance = get_skill(ch, gsn_drag);
 
-		if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == TRUE)
+		if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == true)
 		{
 			act("You attempt to silently get $p from $P.", ch, obj, container, TO_CHAR);
 
 			if (number_percent() < pchance)
 			{
 				act("IMM: $n palmed $p from $P.", ch, obj, container, TO_IMMINROOM);
-				check_improve(ch, gsn_palm, TRUE, 1);
+				check_improve(ch, gsn_palm, true, 1);
 			}
 			else
 			{
 				act("$n gets $p from $P.", ch, obj, container, TO_ROOM);
-				check_improve(ch, gsn_palm, FALSE, 1);
+				check_improve(ch, gsn_palm, false, 1);
 			}
 		}
 		else
@@ -214,19 +214,19 @@ void get_obj(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck)
 	{
 		pchance = get_skill(ch, gsn_palm);
 
-		if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == TRUE)
+		if (pchance != 0 && IS_AFFECTED(ch, AFF_SNEAK) && pcheck == true)
 		{
 			act("You attempt to silently get $p.", ch, obj, NULL, TO_CHAR);
 
 			if (number_percent() < pchance)
 			{
 				act("IMM: $n palmed $p.", ch, obj, NULL, TO_IMMINROOM);
-				check_improve(ch, gsn_palm, TRUE, 1);
+				check_improve(ch, gsn_palm, true, 1);
 			}
 			else
 			{
 				act("$n gets $p.", ch, obj, NULL, TO_ROOM);
-				check_improve(ch, gsn_palm, FALSE, 1);
+				check_improve(ch, gsn_palm, false, 1);
 			}
 		}
 		else
@@ -284,8 +284,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 	bool found;
 	bool isPcCorpse;
 
-	found = FALSE;
-	isPcCorpse = FALSE;
+	found= false;
+	isPcCorpse= false;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -328,7 +328,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			get_obj(ch, obj, NULL, TRUE);
+			get_obj(ch, obj, NULL, true);
 
 			if (cant_carry(ch, obj))
 			{
@@ -342,7 +342,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 		else
 		{
 			/* 'get all' or 'get all.obj' */
-			found = FALSE;
+			found= false;
 
 			for (obj = ch->in_room->contents; obj != NULL; obj = obj_next)
 			{
@@ -353,8 +353,8 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 				if ((arg1[3] == '\0' || is_name(&arg1[4], obj->name)) && can_see_obj(ch, obj))
 				{
-					found = TRUE;
-					get_obj(ch, obj, NULL, FALSE);
+					found = true;
+					get_obj(ch, obj, NULL, false);
 
 					if (cant_carry(ch, obj))
 					{
@@ -399,7 +399,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 			case ITEM_CORPSE_NPC:
 				break;
 			case ITEM_CORPSE_PC:
-				isPcCorpse = TRUE;
+				isPcCorpse = true;
 
 				if (!can_loot(ch, container))
 				{
@@ -445,7 +445,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 			if (IS_SET(container->progtypes, IPROG_LOOT))
 			{
-				if (((container->pIndexData->iprogs->loot_prog)(container, obj, ch)) == FALSE)
+				if (((container->pIndexData->iprogs->loot_prog)(container, obj, ch)) == false)
 					return;
 			}
 
@@ -459,10 +459,10 @@ void do_get(CHAR_DATA *ch, char *argument)
 				&& is_affected_obj(container, gsn_noxious_ward)
 				&& !is_owner(ch, container))
 			{
-				damage_new(ch, ch, dice(ch->level, 2), gsn_noxious_ward, DAM_OTHER, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the noxious ward*");
+				damage_new(ch, ch, dice(ch->level, 2), gsn_noxious_ward, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the noxious ward*");
 			}
 
-			get_obj(ch, obj, container, TRUE);
+			get_obj(ch, obj, container, true);
 
 			if (cant_carry(ch, obj))
 			{
@@ -482,7 +482,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			found = FALSE;
+			found= false;
 
 			for (obj = container->contains; obj != NULL; obj = obj_next)
 			{
@@ -490,11 +490,11 @@ void do_get(CHAR_DATA *ch, char *argument)
 
 				if ((arg1[3] == '\0' || is_name(&arg1[4], obj->name)) && can_see_obj(ch, obj))
 				{
-					found = TRUE;
+					found = true;
 
 					if (IS_SET(container->progtypes, IPROG_LOOT))
 					{
-						if (((container->pIndexData->iprogs->loot_prog)(container, obj, ch)) == FALSE)
+						if (((container->pIndexData->iprogs->loot_prog)(container, obj, ch)) == false)
 							return;
 					}
 
@@ -504,7 +504,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 							return;
 					}
 
-					get_obj(ch, obj, container, FALSE);
+					get_obj(ch, obj, container, false);
 
 					if (cant_carry(ch, obj))
 					{
@@ -658,7 +658,7 @@ void do_put(CHAR_DATA *ch, char *argument)
 					act("You attempt to silently put $p in $P.", ch, obj, container, TO_CHAR);
 					act("IMM: $n palmed $p in $P", ch, obj, container, TO_IMMINROOM);
 				}
-				check_improve(ch, gsn_palm, TRUE, 1);
+				check_improve(ch, gsn_palm, true, 1);
 			}
 			else
 			{
@@ -673,7 +673,7 @@ void do_put(CHAR_DATA *ch, char *argument)
 					act("$n puts $p in $P.", ch, obj, container, TO_ROOM);
 				}
 
-				check_improve(ch, gsn_palm, FALSE, 1);
+				check_improve(ch, gsn_palm, false, 1);
 			}
 		}
 		else
@@ -802,12 +802,12 @@ void do_drop(CHAR_DATA *ch, char *argument)
 			if (number_percent() < pchance)
 			{
 				act("IMM: $n dropped some gold. (palm)", ch, obj, NULL, TO_IMMINROOM);
-				check_improve(ch, gsn_palm, TRUE, 1);
+				check_improve(ch, gsn_palm, true, 1);
 			}
 			else
 			{
 				act("$n drops some gold.", ch, NULL, NULL, TO_ROOM);
-				check_improve(ch, gsn_palm, FALSE, 1);
+				check_improve(ch, gsn_palm, false, 1);
 			}
 		}
 		else
@@ -847,12 +847,12 @@ void do_drop(CHAR_DATA *ch, char *argument)
 			if (number_percent() < pchance)
 			{
 				act("IMM: $n palmed $p.", ch, obj, NULL, TO_IMMINROOM);
-				check_improve(ch, gsn_palm, TRUE, 1);
+				check_improve(ch, gsn_palm, true, 1);
 			}
 			else
 			{
 				act("$n drops $p.", ch, obj, NULL, TO_ROOM);
-				check_improve(ch, gsn_palm, FALSE, 1);
+				check_improve(ch, gsn_palm, false, 1);
 			}
 		}
 		else
@@ -877,7 +877,7 @@ void do_drop(CHAR_DATA *ch, char *argument)
 	else
 	{
 		/* 'drop all' or 'drop all.obj' */
-		found = FALSE;
+		found= false;
 
 		if (str_prefix("all.", arg))
 			wiznet("$N just dropped all $S stuff!", ch, NULL, 0, 0, 0);
@@ -891,7 +891,7 @@ void do_drop(CHAR_DATA *ch, char *argument)
 				&& obj->wear_loc == WEAR_NONE
 				&& can_drop_obj(ch, obj))
 			{
-				found = TRUE;
+				found = true;
 				obj_from_char(obj);
 				obj_to_room(obj, ch->in_room);
 
@@ -1070,7 +1070,7 @@ void do_give(CHAR_DATA *ch, char *argument)
 
 	if (IS_SET(obj->progtypes, IPROG_GIVE))
 	{
-		if ((obj->pIndexData->iprogs->give_prog)(obj, ch, victim) == TRUE);
+		if ((obj->pIndexData->iprogs->give_prog)(obj, ch, victim) == true);
 		return;
 	}
 
@@ -1345,7 +1345,7 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 			if (!obj->value[3])
 			{
 				obj->value[3] = 1;
-				check_improve(ch, gsn_envenom, TRUE, 4);
+				check_improve(ch, gsn_envenom, true, 4);
 			}
 
 			WAIT_STATE(ch, skill_table[gsn_envenom].beats);
@@ -1355,7 +1355,7 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 		act("You fail to poison $p.", ch, obj, NULL, TO_CHAR);
 
 		if (!obj->value[3])
-			check_improve(ch, gsn_envenom, FALSE, 4);
+			check_improve(ch, gsn_envenom, false, 4);
 
 		WAIT_STATE(ch, skill_table[gsn_envenom].beats);
 		return;
@@ -1405,7 +1405,7 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 
 			act("$n coats $p with deadly venom.", ch, obj, NULL, TO_ROOM);
 			act("You coat $p with venom.", ch, obj, NULL, TO_CHAR);
-			check_improve(ch, gsn_envenom, TRUE, 3);
+			check_improve(ch, gsn_envenom, true, 3);
 
 			WAIT_STATE(ch, skill_table[gsn_envenom].beats);
 			return;
@@ -1413,7 +1413,7 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 		else
 		{
 			act("You fail to envenom $p.", ch, obj, NULL, TO_CHAR);
-			check_improve(ch, gsn_envenom, FALSE, 3);
+			check_improve(ch, gsn_envenom, false, 3);
 
 			WAIT_STATE(ch, skill_table[gsn_envenom].beats);
 			return;
@@ -1447,13 +1447,13 @@ void do_fill(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	found = FALSE;
+	found= false;
 
 	for (fountain = ch->in_room->contents; fountain != NULL; fountain = fountain->next_content)
 	{
 		if (fountain->item_type == ITEM_FOUNTAIN)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 	}
@@ -1848,23 +1848,23 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
 	obj = get_eq_char(ch, iWear);
 
 	if (iWear == WEAR_COSMETIC || obj == NULL)
-		return TRUE;
+		return true;
 
 	if (!fReplace)
-		return FALSE;
+		return false;
 
 	if (IS_SET(obj->extra_flags, ITEM_NOREMOVE))
 	{
 		act("You can't remove $p.", ch, obj, NULL, TO_CHAR);
 
 		if (!IS_IMMORTAL(ch))
-			return FALSE;
+			return false;
 	}
 
 	if (is_affected_obj(obj, gsn_rust))
 	{
 		act("$p is covered with rust and can't be pried off!", ch, obj, 0, TO_CHAR);
-		return FALSE;
+		return false;
 	}
 
 	if (iWear == WEAR_WIELD && is_affected(ch, gsn_unbreakable))
@@ -1872,30 +1872,30 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
 		act("$p is frozen to your hand!", ch, obj, NULL, TO_CHAR);
 
 		if (!IS_IMMORTAL(ch))
-			return FALSE;
+			return false;
 	}
 
 	if (check_entwine(ch, 1) && (iWear == WEAR_DUAL_WIELD || iWear == WEAR_SHIELD || iWear == WEAR_HOLD))
 	{
 		act("You can't remove $p.", ch, obj, NULL, TO_CHAR);
-		return FALSE;
+		return false;
 	}
 
 	if (check_entwine(ch, 0) && (iWear == WEAR_WIELD))
 	{
 		act("You can't remove $p.", ch, obj, NULL, TO_CHAR);
-		return FALSE;
+		return false;
 	}
 
 	secondary = get_eq_char(ch, WEAR_DUAL_WIELD);
 
-	unequip_char(ch, obj, TRUE);
+	unequip_char(ch, obj, true);
 
 	if (iWear == WEAR_DUAL_WIELD)
 	{
 		act("$n stops dual wielding $p.", ch, obj, 0, TO_ROOM);
 		act("You stop dual wielding $p.", ch, obj, 0, TO_CHAR);
-		return TRUE;
+		return true;
 	}
 
 	for (revealed = ch->carrying; revealed; revealed = revealed->next_content)
@@ -1923,13 +1923,13 @@ bool remove_obj(CHAR_DATA *ch, int iWear, bool fReplace)
 
 	if (iWear == WEAR_WIELD && secondary != NULL)
 	{
-		unequip_char(ch, secondary, FALSE);
+		unequip_char(ch, secondary, false);
 		act("You swap $p into your primary hand.", ch, secondary, NULL, TO_CHAR);
 		act("$n swaps $p into $s primary hand.", ch, secondary, NULL, TO_ROOM);
-		equip_char(ch, secondary, WEAR_WIELD, FALSE);
+		equip_char(ch, secondary, WEAR_WIELD, false);
 	}
 
-	return TRUE;
+	return true;
 }
 
 /*
@@ -1967,7 +1967,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wears $p.", ch, obj, NULL, TO_ROOM);
 		act("You wear $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_COSMETIC, FALSE);
+		equip_char(ch, obj, WEAR_COSMETIC, false);
 		return;
 	}
 
@@ -1983,7 +1983,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		{
 			act("$n wears $p on $s left finger.", ch, obj, NULL, TO_ROOM);
 			act("You wear $p on your left finger.", ch, obj, NULL, TO_CHAR);
-			equip_char(ch, obj, WEAR_FINGER_L, TRUE);
+			equip_char(ch, obj, WEAR_FINGER_L, true);
 			return;
 		}
 
@@ -1991,7 +1991,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		{
 			act("$n wears $p on $s right finger.", ch, obj, NULL, TO_ROOM);
 			act("You wear $p on your right finger.", ch, obj, NULL, TO_CHAR);
-			equip_char(ch, obj, WEAR_FINGER_R, TRUE);
+			equip_char(ch, obj, WEAR_FINGER_R, true);
 			return;
 		}
 
@@ -2013,7 +2013,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		{
 			act("$n ducks $s head and slips $p around $s neck.", ch, obj, NULL, TO_ROOM);
 			act("You duck your head and slip $p around your neck.", ch, obj, NULL, TO_CHAR);
-			equip_char(ch, obj, WEAR_NECK_1, TRUE);
+			equip_char(ch, obj, WEAR_NECK_1, true);
 			return;
 		}
 
@@ -2021,7 +2021,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		{
 			act("$n ducks $s head and slips $p around $s neck.", ch, obj, NULL, TO_ROOM);
 			act("You duck your head and slip $p around your neck.", ch, obj, NULL, TO_CHAR);
-			equip_char(ch, obj, WEAR_NECK_2, TRUE);
+			equip_char(ch, obj, WEAR_NECK_2, true);
 			return;
 		}
 
@@ -2037,7 +2037,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n shrugs into $p.", ch, obj, NULL, TO_ROOM);
 		act("You shrug into $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_BODY, TRUE);
+		equip_char(ch, obj, WEAR_BODY, true);
 		return;
 	}
 
@@ -2056,7 +2056,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n dons $p.", ch, obj, NULL, TO_ROOM);
 		act("You don $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_HEAD, TRUE);
+		equip_char(ch, obj, WEAR_HEAD, true);
 		return;
 	}
 
@@ -2067,7 +2067,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n slips $s legs into $p.", ch, obj, NULL, TO_ROOM);
 		act("You slip your legs into $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_LEGS, TRUE);
+		equip_char(ch, obj, WEAR_LEGS, true);
 		return;
 	}
 
@@ -2084,7 +2084,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n places $p on $s feet.", ch, obj, NULL, TO_ROOM);
 		act("You place $p on your feet.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_FEET, TRUE);
+		equip_char(ch, obj, WEAR_FEET, true);
 		return;
 	}
 
@@ -2095,7 +2095,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n slips $p onto $s hands.", ch, obj, NULL, TO_ROOM);
 		act("You slip $p onto your hands.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_HANDS, TRUE);
+		equip_char(ch, obj, WEAR_HANDS, true);
 		return;
 	}
 
@@ -2106,7 +2106,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n slides $p onto $s arms.", ch, obj, NULL, TO_ROOM);
 		act("You slide $p onto your arms.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_ARMS, TRUE);
+		equip_char(ch, obj, WEAR_ARMS, true);
 		return;
 	}
 
@@ -2117,7 +2117,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wraps $p about $s body.", ch, obj, NULL, TO_ROOM);
 		act("You wrap $p about your body.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_ABOUT, TRUE);
+		equip_char(ch, obj, WEAR_ABOUT, true);
 		return;
 	}
 
@@ -2128,7 +2128,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n clasps $p about $s waist.", ch, obj, NULL, TO_ROOM);
 		act("You clasp $p about your waist.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_WAIST, TRUE);
+		equip_char(ch, obj, WEAR_WAIST, true);
 		return;
 	}
 
@@ -2146,7 +2146,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		{
 			act("$n slips $p onto $s left wrist.", ch, obj, NULL, TO_ROOM);
 			act("You slip $p onto your left wrist.", ch, obj, NULL, TO_CHAR);
-			equip_char(ch, obj, WEAR_WRIST_L, TRUE);
+			equip_char(ch, obj, WEAR_WRIST_L, true);
 			return;
 		}
 
@@ -2154,7 +2154,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		{
 			act("$n slips $p onto $s right wrist.", ch, obj, NULL, TO_ROOM);
 			act("You slip $p onto your right wrist.", ch, obj, NULL, TO_CHAR);
-			equip_char(ch, obj, WEAR_WRIST_R, TRUE);
+			equip_char(ch, obj, WEAR_WRIST_R, true);
 			return;
 		}
 
@@ -2205,7 +2205,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n holds $p in $s hands.", ch, obj, 0, TO_ROOM);
 		act("You hold $p in your hands.", ch, obj, 0, TO_CHAR);
-		equip_char(ch, obj, WEAR_HOLD, TRUE);
+		equip_char(ch, obj, WEAR_HOLD, true);
 		return;
 	}
 
@@ -2241,7 +2241,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wears $p as a shield.", ch, obj, 0, TO_ROOM);
 		act("You wear $p as a shield.", ch, obj, 0, TO_CHAR);
-		equip_char(ch, obj, WEAR_SHIELD, TRUE);
+		equip_char(ch, obj, WEAR_SHIELD, true);
 		return;
 	}
 
@@ -2279,13 +2279,13 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n lights $p and holds it.", ch, obj, 0, TO_ROOM);
 		act("You light $p and hold it.", ch, obj, 0, TO_CHAR);
-		equip_char(ch, obj, WEAR_LIGHT, TRUE);
+		equip_char(ch, obj, WEAR_LIGHT, true);
 		return;
 	}
 
 	if (CAN_WEAR(obj, ITEM_WEAR_WIELD))
 	{
-		wield_primary = TRUE;
+		wield_primary = true;
 		primary = get_eq_char(ch, WEAR_WIELD);
 		secondary = get_eq_char(ch, WEAR_DUAL_WIELD);
 
@@ -2303,30 +2303,30 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 		}
 
 		if (get_eq_char(ch, WEAR_DUAL_WIELD) != NULL)
-			wield_primary = FALSE;
+			wield_primary= false;
 
 		if (primary != NULL && (!hands_full(ch)))
-			wield_primary = FALSE;
+			wield_primary= false;
 
 		if (get_skill(ch, gsn_dual_wield) < 3 && (!IS_NPC(ch)))
-			wield_primary = TRUE;
+			wield_primary = true;
 
 		if (ch->level < skill_table[gsn_dual_wield].skill_level[ch->Class()->GetIndex()] && !IS_NPC(ch))
-			wield_primary = TRUE;
+			wield_primary = true;
 
 		if (ch->size < SIZE_LARGE && IS_WEAPON_STAT(obj, WEAPON_TWO_HANDS))
-			wield_primary = TRUE;
+			wield_primary = true;
 
 		if (primary != NULL && ch->size < SIZE_LARGE && IS_WEAPON_STAT(obj, WEAPON_TWO_HANDS))
-			wield_primary = TRUE;
+			wield_primary = true;
 
 		if (primary != NULL && ch->size < SIZE_LARGE && IS_WEAPON_STAT(primary, WEAPON_TWO_HANDS))
-			wield_primary = TRUE;
+			wield_primary = true;
 
 		if (obj != NULL
 			&& (obj->value[0] == WEAPON_SPEAR || obj->value[0] == WEAPON_STAFF || obj->value[0] == WEAPON_POLEARM))
 		{
-			wield_primary = TRUE;
+			wield_primary = true;
 		}
 
 		if (primary != NULL
@@ -2334,7 +2334,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 				|| primary->value[0] == WEAPON_STAFF
 				|| primary->value[0] == WEAPON_POLEARM))
 		{
-			wield_primary = TRUE;
+			wield_primary = true;
 		}
 
 		/* First attempt to dual wield if !primary. */
@@ -2347,7 +2347,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 				{
 					act("$n wields $p in $s offhand.", ch, obj, 0, TO_ROOM);
 					act("You wield $p in your offhand.", ch, obj, 0, TO_CHAR);
-					equip_char(ch, obj, WEAR_DUAL_WIELD, TRUE);
+					equip_char(ch, obj, WEAR_DUAL_WIELD, true);
 
 					switch (obj->value[0])
 					{
@@ -2410,7 +2410,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 				act("$n wields $p in $s offhand.", ch, obj, 0, TO_ROOM);
 				act("You wield $p in your offhand.", ch, obj, 0, TO_CHAR);
-				equip_char(ch, obj, WEAR_DUAL_WIELD, TRUE);
+				equip_char(ch, obj, WEAR_DUAL_WIELD, true);
 
 				switch (obj->value[0])
 				{
@@ -2491,13 +2491,13 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 					act("$n wields $p.", ch, obj, 0, TO_ROOM);
 					act("You wield $p.", ch, obj, 0, TO_CHAR);
-					unequip_char(ch, secondary, TRUE);
+					unequip_char(ch, secondary, true);
 
 					if (secondary == NULL)
 						return;
 
-					equip_char(ch, obj, WEAR_WIELD, TRUE);
-					equip_char(ch, secondary, WEAR_DUAL_WIELD, TRUE);
+					equip_char(ch, obj, WEAR_WIELD, true);
+					equip_char(ch, secondary, WEAR_DUAL_WIELD, true);
 
 					sn = get_weapon_sn(ch);
 					if (sn == gsn_hand_to_hand)
@@ -2554,7 +2554,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wields $p.", ch, obj, 0, TO_ROOM);
 		act("You wield $p.", ch, obj, 0, TO_CHAR);
-		equip_char(ch, obj, WEAR_WIELD, TRUE);
+		equip_char(ch, obj, WEAR_WIELD, true);
 
 		sn = get_weapon_sn(ch);
 		if (sn == gsn_hand_to_hand)
@@ -2587,7 +2587,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wears $p.", ch, obj, NULL, TO_ROOM);
 		act("You wear $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_BRAND, TRUE);
+		equip_char(ch, obj, WEAR_BRAND, true);
 		return;
 	}
 
@@ -2598,7 +2598,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wears $p.", ch, obj, NULL, TO_ROOM);
 		act("You wear $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_STRAPPED, TRUE);
+		equip_char(ch, obj, WEAR_STRAPPED, true);
 		return;
 	}
 
@@ -2620,7 +2620,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 
 		act("$n wears $p.", ch, obj, NULL, TO_ROOM);
 		act("You wear $p.", ch, obj, NULL, TO_CHAR);
-		equip_char(ch, obj, WEAR_COSMETIC, FALSE);
+		equip_char(ch, obj, WEAR_COSMETIC, false);
 		return;
 	}
 
@@ -2662,7 +2662,7 @@ void do_wear(CHAR_DATA *ch, char *argument)
 			obj_next = obj->next_content;
 
 			if (obj->wear_loc == WEAR_NONE && can_see_obj(ch, obj))
-				wear_obj(ch, obj, FALSE);
+				wear_obj(ch, obj, false);
 		}
 
 		return;
@@ -2686,7 +2686,7 @@ void do_wear(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		wear_obj(ch, obj, TRUE);
+		wear_obj(ch, obj, true);
 	}
 }
 
@@ -2712,7 +2712,7 @@ void do_remove(CHAR_DATA *ch, char *argument)
 			obj_next = obj->next_content;
 
 			if (obj->wear_loc != WEAR_NONE && can_see_obj(ch, obj) && obj->wear_loc != WEAR_BRAND)
-				remove_obj(ch, obj->wear_loc, TRUE);
+				remove_obj(ch, obj->wear_loc, true);
 		}
 
 		return;
@@ -2732,7 +2732,7 @@ void do_remove(CHAR_DATA *ch, char *argument)
 	{
 		act("$n stops using $p.", ch, obj, NULL, TO_ROOM);
 		act("You stop using $p.", ch, obj, NULL, TO_CHAR);
-		unequip_char(ch, obj, TRUE);
+		unequip_char(ch, obj, true);
 		return;
 	}
 
@@ -2742,7 +2742,7 @@ void do_remove(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	remove_obj(ch, obj->wear_loc, TRUE);
+	remove_obj(ch, obj->wear_loc, true);
 }
 
 void do_sacrifice(CHAR_DATA *ch, char *argument)
@@ -2798,7 +2798,7 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (isCabalItem(obj) == TRUE)
+	if (isCabalItem(obj) == true)
 	{
 		act("You can't do that!", ch, obj, 0, TO_CHAR);
 		return;
@@ -3019,7 +3019,7 @@ void do_recite(CHAR_DATA *ch, char *argument)
 	if (number_percent() >= 15 + get_skill(ch, gsn_scrolls) * 4 / 5 + UMAX(0, alangbonus * 3))
 	{
 		send_to_char("You mispronounce a syllable.\n\r", ch);
-		check_improve(ch, gsn_scrolls, FALSE, 2);
+		check_improve(ch, gsn_scrolls, false, 2);
 	}
 	else
 	{
@@ -3030,7 +3030,7 @@ void do_recite(CHAR_DATA *ch, char *argument)
 			obj_cast_spell(scroll->value[3], scroll->value[0] + URANGE(0, alangbonus, 1), ch, victim, obj);
 		}
 
-		check_improve(ch, gsn_scrolls, TRUE, 2);
+		check_improve(ch, gsn_scrolls, true, 2);
 	}
 
 	extract_obj(scroll);
@@ -3076,7 +3076,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 		{
 			act("You fail to invoke $p.", ch, staff, NULL, TO_CHAR);
 			act("...and nothing happens.", ch, NULL, NULL, TO_ROOM);
-			check_improve(ch, gsn_staves, FALSE, 2);
+			check_improve(ch, gsn_staves, false, 2);
 		}
 		else if (!check_deny_magic(ch))
 		{
@@ -3120,7 +3120,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 				}
 
 				obj_cast_spell(staff->value[3], staff->value[0], ch, vch, NULL);
-				check_improve(ch, gsn_staves, TRUE, 2);
+				check_improve(ch, gsn_staves, true, 2);
 			}
 		}
 	}
@@ -3214,14 +3214,14 @@ void do_zap(CHAR_DATA *ch, char *argument)
 		{
 			act("Your efforts with $p produce only smoke and sparks.", ch, wand, NULL, TO_CHAR);
 			act("$n's efforts with $p produce only smoke and sparks.", ch, wand, NULL, TO_ROOM);
-			check_improve(ch, gsn_wands, FALSE, 2);
+			check_improve(ch, gsn_wands, false, 2);
 		}
 		else
 		{
 			if (!check_deny_magic(ch))
 				obj_cast_spell(wand->value[3], wand->value[0], ch, victim, obj);
 
-			check_improve(ch, gsn_wands, TRUE, 2);
+			check_improve(ch, gsn_wands, true, 2);
 		}
 	}
 
@@ -3333,7 +3333,7 @@ void do_steal(CHAR_DATA *ch, char *argument)
 
 		REMOVE_BIT(ch->affected_by, AFF_SNEAK);
 
-		check_improve(ch, gsn_steal, FALSE, 2);
+		check_improve(ch, gsn_steal, false, 2);
 
 		act("$n tried to steal from you.\n\r", ch, NULL, victim, TO_VICT);
 		act("$n tried to steal from $N.\n\r", ch, NULL, victim, TO_NOTVICT);
@@ -3407,10 +3407,10 @@ void do_steal(CHAR_DATA *ch, char *argument)
 		}
 
 		send_to_char(buf, ch);
-		check_improve(ch, gsn_steal, TRUE, 2);
+		check_improve(ch, gsn_steal, true, 2);
 
 		if (IS_NPC(victim) && !victim->stolen_from)
-			victim->stolen_from = TRUE;
+			victim->stolen_from = true;
 
 		return;
 	}
@@ -3443,13 +3443,13 @@ void do_steal(CHAR_DATA *ch, char *argument)
 
 	obj_from_char(obj);
 	obj_to_char(obj, ch);
-	check_improve(ch, gsn_steal, TRUE, 2);
+	check_improve(ch, gsn_steal, true, 2);
 
 	if (is_affected(victim, gsn_accumulate_heat))
 	{
 		act("As you grab for $p you are burned!", ch, obj, victim, TO_CHAR);
 		act("As $n grabs for $p, $e is burned!", ch, obj, victim, TO_VICT);
-		damage_new(victim, ch, dice(4, 6), gsn_burning_hands, DAM_FIRE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(victim, ch, dice(4, 6), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	}
 
 	act("You steal $p from $N.", ch, obj, victim, TO_CHAR);
@@ -3735,7 +3735,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 		/* haggle */
 		roll = number_percent();
 
-		bool appraised = FALSE;
+		bool appraised= false;
 
 		if (roll < get_skill(ch, gsn_haggle) || (appraised = ch->Profs()->HasProf("appraising")))
 		{
@@ -3753,7 +3753,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			}
 
 			send_to_char(buf, ch);
-			check_improve(ch, gsn_haggle, TRUE, 4);
+			check_improve(ch, gsn_haggle, true, 4);
 		}
 
 		deduct_cost(ch, cost);
@@ -3811,7 +3811,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			number = atoi(argument);
 
 		obj = get_obj_keeper(ch, keeper, arg);
-		cost = get_cost(keeper, obj, TRUE);
+		cost = get_cost(keeper, obj, true);
 
 		if (number < 1)
 		{
@@ -3886,7 +3886,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 		/* haggle */
 
 		roll = number_percent();
-		bool appraised = FALSE;
+		bool appraised= false;
 
 		if ((!IS_OBJ_STAT(obj, ITEM_SELL_EXTRACT) && roll < get_skill(ch, gsn_haggle))
 			|| (appraised = ch->Profs()->HasProf("appraising")))
@@ -3906,7 +3906,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 				act("You haggle with $N.", ch, NULL, keeper, TO_CHAR);
 			}
 
-			check_improve(ch, gsn_haggle, TRUE, 4);
+			check_improve(ch, gsn_haggle, true, 4);
 		}
 
 		act("$n hands some gold to $N.", ch, 0, keeper, TO_ROOM);
@@ -3983,7 +3983,7 @@ void do_list(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		found = FALSE;
+		found= false;
 
 		for (pet = pRoomIndexNext->people; pet; pet = pet->next_in_room)
 		{
@@ -3991,7 +3991,7 @@ void do_list(CHAR_DATA *ch, char *argument)
 			{
 				if (!found)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char("Pets for sale:\n\r", ch);
 				}
 
@@ -4018,18 +4018,18 @@ void do_list(CHAR_DATA *ch, char *argument)
 
 		one_argument(argument, arg);
 
-		found = FALSE;
+		found= false;
 
 		for (obj = keeper->carrying; obj; obj = obj->next_content)
 		{
 			if (obj->wear_loc == WEAR_NONE
 				&& can_see_obj(ch, obj)
-				&& (cost = get_cost(keeper, obj, TRUE)) > 0
+				&& (cost = get_cost(keeper, obj, true)) > 0
 				&& (arg[0] == '\0' || is_name(arg, obj->name)))
 			{
 				if (!found)
 				{
-					found = TRUE;
+					found = true;
 					send_to_char("[Lv Price Qty] Item\n\r", ch);
 				}
 
@@ -4089,9 +4089,9 @@ void do_sell(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("You haggle with the shopkeeper.\n\r",ch);
 		cost += obj->cost / 2 * roll / 100;
-		cost = UMIN(cost,95 * get_cost(keeper,obj,TRUE) / 100);
+		cost = UMIN(cost,95 * get_cost(keeper,obj,true) / 100);
 		cost = UMIN(cost,(keeper->gold));
-		check_improve(ch,gsn_haggle,TRUE,4);
+		check_improve(ch,gsn_haggle,true,4);
 	}
 
 	sprintf( buf, "You sell $p for %d gold piece%s.", cost/100, cost == 1 ? "" : "s" );
@@ -4158,7 +4158,7 @@ void do_value(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	cost = get_cost(keeper, obj, FALSE);
+	cost = get_cost(keeper, obj, false);
 
 	if (cost <= 0)
 	{
@@ -4370,12 +4370,12 @@ bool hands_full(CHAR_DATA *ch)
 	count -= ch->arms - 2;
 
 	if (count < 2)
-		return FALSE;
+		return false;
 
 	if (count > 2)
 		bug("Hands full: Character holding %d items.", count);
 
-	return TRUE;
+	return true;
 }
 
 void do_embalm(CHAR_DATA *ch, char *argument)
@@ -4421,7 +4421,7 @@ void do_embalm(CHAR_DATA *ch, char *argument)
 	{
 		act("You spill your embalming fluids all over $p, ruining it.", ch, corpse, 0, TO_CHAR);
 		act("$n spills embalming fluids over $p and ruins it.", ch, corpse, 0, TO_ROOM);
-		check_improve(ch, gsn_embalm, FALSE, 4);
+		check_improve(ch, gsn_embalm, false, 4);
 		extract_obj(corpse);
 		return;
 	}
@@ -4432,7 +4432,7 @@ void do_embalm(CHAR_DATA *ch, char *argument)
 	corpse->timer += ch->level / 2;
 	corpse->value[4] = 1;
 
-	check_improve(ch, gsn_embalm, TRUE, 4);
+	check_improve(ch, gsn_embalm, true, 4);
 }
 
 void cabal_shudder(int cabal, bool itemloss)
@@ -4453,13 +4453,13 @@ void cabal_shudder(int cabal, bool itemloss)
 
 bool cabal_down(CHAR_DATA *ch, int cabal)
 {
-	return cabal_down_new(ch, cabal, TRUE);
+	return cabal_down_new(ch, cabal, true);
 }
 
 bool cabal_down_new(CHAR_DATA *ch, int cabal, bool show)
 {
 	OBJ_DATA *obj;
-	bool is_down = FALSE;
+	bool is_down= false;
 	int objvnum = cabal_table[ch->cabal].item_vnum;
 
 	for (obj = object_list; obj != NULL; obj = obj->next)
@@ -4469,10 +4469,10 @@ bool cabal_down_new(CHAR_DATA *ch, int cabal, bool show)
 	}
 
 	if (!obj || !obj->carried_by || !IS_NPC(obj->carried_by))
-		return FALSE;
+		return false;
 
 	if (obj->carried_by->cabal && obj->carried_by->cabal != cabal)
-		is_down = TRUE;
+		is_down = true;
 
 	if (is_down)
 	{
@@ -4481,7 +4481,7 @@ bool cabal_down_new(CHAR_DATA *ch, int cabal, bool show)
 			if (show)
 				send_to_char("Your cabal has no power but you can do that anyway.\n\r", ch);
 
-			return FALSE;
+			return false;
 		}
 
 		if (show)
@@ -4494,8 +4494,8 @@ bool cabal_down_new(CHAR_DATA *ch, int cabal, bool show)
 bool cant_carry(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	bool status;
-	status = FALSE;
-	return FALSE;
+	status= false;
+	return false;
 }
 
 bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
@@ -4506,18 +4506,18 @@ bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 	char *race;
 
 	if (IS_NPC(ch) && !IS_AFFECTED(ch, AFF_CHARM))
-		return FALSE;
+		return false;
 
 	if (str_cmp(obj->owner, "none") && !is_owner(ch, obj))
-		return TRUE;
+		return true;
 
 	race = race_table[ch->race].name;
 	copy_vector(restrict, obj->pIndexData->restrict_flags);
 
-	status = FALSE;
+	status= false;
 
 	if (!restrict)
-		return FALSE;
+		return false;
 
 	for (i = 0; restrict_table[i].name != NULL; i++)
 	{
@@ -4532,44 +4532,44 @@ bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 						&& str_cmp(race_table[ch->race].name, "celestial")
 						&& str_cmp(race_table[ch->race].name, "planar"))))
 			{
-				return TRUE;
+				return true;
 			}
 		}
 
 		if (restrict_table[i].type == RESTRICT_CLASS)
 		{
 			if (str_cmp(ch->Class()->name, restrict_table[i].value))
-				return TRUE;
+				return true;
 		}
 
 		if (restrict_table[i].type == RESTRICT_CABAL)
 		{
 			if (str_cmp(cabal_table[ch->cabal].name, restrict_table[i].value))
-				return TRUE;
+				return true;
 		}
 
 		if (restrict_table[i].type == RESTRICT_OTHER)
 		{
 			if (IS_NPC(ch))
-				return FALSE;
+				return false;
 
 			if (!str_cmp(restrict_table[i].name, "mage_only")
 				&& ch->Class()->GetIndex() != CLASS_NECROMANCER
 				&& ch->Class()->GetIndex() != CLASS_SHAPESHIFTER
 				&& ch->Class()->GetIndex() != CLASS_SORCERER)
 			{
-				return TRUE;
+				return true;
 			}
 
 			if (!str_cmp(restrict_table[i].name, "male_only") && ch->pcdata->true_sex != SEX_MALE)
-				return TRUE;
+				return true;
 
 			if (!str_cmp(restrict_table[i].name, "female_only") && ch->pcdata->true_sex != SEX_FEMALE)
-				return TRUE;
+				return true;
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 void do_demand(CHAR_DATA *ch, char *argument)
@@ -4641,7 +4641,7 @@ void do_demand(CHAR_DATA *ch, char *argument)
 
 	if (vlevel > ch->level || number_percent() > chance)
 	{
-		check_improve(ch, gsn_demand, FALSE, 2);
+		check_improve(ch, gsn_demand, false, 2);
 
 		sprintf(buf1, "I don't think i'd give my belongings to one as weak as you!");
 		sprintf(buf2, "Help! I'm being attacked by %s!", victim->short_descr);
@@ -4743,7 +4743,7 @@ void do_demand(CHAR_DATA *ch, char *argument)
 	act("$N gives $p to $n.", ch, obj, victim, TO_NOTVICT);
 	act("$N gives you $p.", ch, obj, victim, TO_CHAR);
 
-	check_improve(ch, gsn_demand, TRUE, 2);
+	check_improve(ch, gsn_demand, true, 2);
 
 	WAIT_STATE(ch, 24);
 
@@ -4761,12 +4761,12 @@ void reslot_weapon(CHAR_DATA *ch)
 
 	if (primary == NULL && secondary != NULL)
 	{
-		unequip_char(ch, secondary, FALSE);
+		unequip_char(ch, secondary, false);
 
 		if (secondary == NULL)
 			return;
 
-		equip_char(ch, secondary, WEAR_WIELD, FALSE);
+		equip_char(ch, secondary, WEAR_WIELD, false);
 
 		primary = secondary;
 		secondary = NULL;
@@ -4905,9 +4905,9 @@ void save_cabal_items(void)
 bool is_owner(CHAR_DATA *ch, OBJ_DATA *corpse)
 {
 	if (!str_cmp(ch->true_name, corpse->owner))
-		return TRUE;
+		return true;
 	else
-		return FALSE;
+		return false;
 }
 
 void do_roll(CHAR_DATA *ch, char *argument)
@@ -5024,7 +5024,7 @@ void do_flip(CHAR_DATA *ch, char *argument)
 
 			WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
 
-			damage_new(ch, ch, dice(4, 4), gsn_bash, DAM_BASH, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "fall");
+			damage_new(ch, ch, dice(4, 4), gsn_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "fall");
 			ch->position = POS_RESTING;
 			return;
 		}
@@ -5082,16 +5082,16 @@ bool is_carrying(CHAR_DATA *ch, int vnum)
 	for (obj = ch->carrying; obj; obj = obj->next_content)
 	{
 		if (obj->pIndexData->vnum == vnum)
-			return TRUE;
+			return true;
 
 		for (cont = obj->contains; cont; cont = cont->next_content)
 		{
 			if (cont->pIndexData->vnum == vnum)
-				return TRUE;
+				return true;
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 bool is_carrying_type(CHAR_DATA *ch, int type)
@@ -5099,8 +5099,8 @@ bool is_carrying_type(CHAR_DATA *ch, int type)
 	for (OBJ_DATA *obj = ch->carrying; obj; obj = obj->next_content)
 	{
 		if (obj->item_type == ITEM_BOAT)
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }

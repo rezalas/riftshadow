@@ -129,8 +129,8 @@ bool CBaseStr::PrefixMatch(const char *pref)
 	const char *mystr = myString;
 	for(; *pref && *mystr; pref++, mystr++)
 		if(*pref && (!(*mystr) || UPCHAR(*pref) != UPCHAR(*mystr)))
-			return FALSE;
-	return TRUE;
+			return false;
+	return true;
 }
 int CBaseStr::ToNumber(void)
 {

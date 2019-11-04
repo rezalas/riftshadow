@@ -87,7 +87,7 @@ AREA_DATA *new_area(void)
 	pArea->max_vnum = 0;
 	pArea->age = 0;
 	pArea->nplayer = 0;
-	pArea->empty = TRUE; /* ROM patch */
+	pArea->empty = true; /* ROM patch */
 
 	sprintf(buf, "area%d.are", pArea->vnum);
 
@@ -239,9 +239,9 @@ ROOM_INDEX_DATA *new_room_index(void)
 
 	zero_vector(pRoom->affected_by);
 
-	pRoom->move_progs = FALSE;
+	pRoom->move_progs= false;
 	pRoom->rune = NULL;
-	pRoom->has_rune = FALSE;
+	pRoom->has_rune= false;
 	pRoom->light = 0;
 	pRoom->reset_first = NULL;
 	pRoom->reset_last = NULL;
@@ -365,7 +365,7 @@ OBJ_INDEX_DATA *new_obj_index(void)
 	}
 
 	pObj->spec_prog.trapvector = 0;
-	pObj->new_format = TRUE; /* ROM */
+	pObj->new_format = true; /* ROM */
 
 	zero_vector(pObj->progtypes);
 	zero_vector(pObj->imm_flags);
@@ -465,7 +465,7 @@ MOB_INDEX_DATA *new_mob_index(void)
 	pMob->restrict_low = -1;
 	pMob->restrict_high = 65535;
 	pMob->SetClass(CLASS_NONE);
-	pMob->new_format = TRUE; /* ROM */
+	pMob->new_format = true; /* ROM */
 	pMob->barred_entry = NULL;
 	pMob->mprogs = NULL;
 	pMob->game_fun = NULL;

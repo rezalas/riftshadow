@@ -114,8 +114,8 @@ int CSQLInterface::Delete(const char *pquery, ...)
 bool CSQLInterface::End(void)
 {
 	if(row.rowpos >= row.maxrow)
-		return TRUE;
-	return FALSE;
+		return true;
+	return false;
 }
 
 CRow &CSQLInterface::GetRow(void)

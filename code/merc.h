@@ -94,6 +94,10 @@
 int remove();
 // int system(const char * string);
 
+#ifndef __cplusplus
+#include <stdbool.h>
+#endif
+
 #ifdef _WIN32
     #include <windows.h>
 #endif
@@ -108,13 +112,6 @@ int remove();
  * Short scalar types.
  * Diavolo reports AIX compiler has bugs with short types.
  */
-#ifndef FALSE
-#define FALSE	 0
-#endif
-
-#ifndef TRUE
-#define TRUE	 1
-#endif
 
 #ifdef _AIX
 #ifndef const
@@ -3819,8 +3816,8 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
  */
 
 #define IS_VALID(data)		((data) != NULL && (data)->valid)
-#define VALIDATE(data)		((data)->valid = TRUE)
-#define INVALIDATE(data)	((data)->valid = FALSE)
+#define VALIDATE(data)		((data)->valid = true)
+#define INVALIDATE(data)	((data)->valid = false)
 #define UMIN(a, b)		((a) < (b) ? (a) : (b))
 #define UMAX(a, b)		((a) > (b) ? (a) : (b))
 #define URANGE(a, b, c)		((b) < (a) ? (a) : ((b) > (c) ? (c) : (b)))
@@ -3881,9 +3878,9 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 
 #define get_carry_weight(ch)    ((ch)->carry_weight + (ch)->gold/10000)
 
-#define IS_SHIFTED(ch)		(FALSE)
-#define IS_HUNGRY(ch)		(IS_NPC(ch) ? FALSE : (ch)->pcdata->condition[COND_HUNGER] > COND_HUNGRY ? TRUE : FALSE)
-#define IS_THIRSTY(ch)          (IS_NPC(ch) ? FALSE : (ch)->pcdata->condition[COND_THIRST] > COND_HUNGRY ? TRUE : FALSE)
+#define IS_SHIFTED(ch)		(false)
+#define IS_HUNGRY(ch)		(IS_NPC(ch) ? false : (ch)->pcdata->condition[COND_HUNGER] > COND_HUNGRY ? true : false)
+#define IS_THIRSTY(ch)          (IS_NPC(ch) ? false : (ch)->pcdata->condition[COND_THIRST] > COND_HUNGRY ? true : false)
 
 /*
  * Room Macros
@@ -3902,7 +3899,7 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 #define IS_WEAPON_STAT(obj,stat)(IS_SET_OLD((obj)->value[4],(stat)))
 #define WEIGHT_MULT(obj)	((obj)->item_type == ITEM_CONTAINER ? \
 	(obj)->value[4] : 100)
-#define IS_EXPLORE(room)	(IS_SET((room)->room_flags,ROOM_AREA_EXPLORE) || IS_SET((room)->area->area_flags,AREA_EXPLORE) ? TRUE : FALSE)
+#define IS_EXPLORE(room)	(IS_SET((room)->room_flags,ROOM_AREA_EXPLORE) || IS_SET((room)->area->area_flags,AREA_EXPLORE) ? true : false)
 #define IS_METAL(obj)	   ((!str_cmp(obj->material,"iron")) 		||	\
 							(!str_cmp(obj->material,"steel")) 		|| 	\
 							(!str_cmp(obj->material,"mithril"))		||	\

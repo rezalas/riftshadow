@@ -719,7 +719,7 @@ void load_area(FILE *fp)
 	pArea->builders = fread_string(fp);
 	pArea->age = 15;
 	pArea->nplayer = 0;
-	pArea->empty = FALSE;
+	pArea->empty= false;
 	pArea->nplayer = 0;
 	zero_vector(pArea->affected_by);
 
@@ -750,27 +750,27 @@ void sort_areas(void)
 {
 	AREA_DATA *placeholder;
 	AREA_DATA *pArea;
-	bool sorted = FALSE;
-	bool first = FALSE;
+	bool sorted= false;
+	bool first= false;
 	int vnum = 0;
 
 	while (!sorted)
 	{
-		sorted = TRUE;
+		sorted = true;
 
 		for (pArea = area_first; pArea; pArea = pArea->next)
 		{
-			first = FALSE;
+			first= false;
 
 			if (!pArea->next)
 				break;
 
 			if (pArea == area_first)
-				first = TRUE;
+				first = true;
 
 			if (pArea->min_vnum > pArea->next->min_vnum)
 			{
-				sorted = FALSE;
+				sorted= false;
 
 				if (pArea->next->next)
 					pArea->next->next->prev = pArea;
@@ -831,7 +831,7 @@ void new_load_area(FILE *fp)
 	for (;;)
 	{
 		word = feof(fp) ? (char *)"End" : fread_word(fp);
-		fMatch = FALSE;
+		fMatch= false;
 
 		switch (UPPER(word[0]))
 		{
@@ -851,7 +851,7 @@ void new_load_area(FILE *fp)
 			case 'E':
 				if (!str_cmp(word, "End"))
 				{
-					fMatch = TRUE;
+					fMatch = true;
 					if (area_first == NULL)
 						area_first = pArea;
 					if (area_last != NULL)
@@ -1221,7 +1221,7 @@ void fix_exits(void)
 	{
 		for (pRoomIndex = room_index_hash[iHash]; pRoomIndex != NULL; pRoomIndex = pRoomIndex->next)
 		{
-			bool fexit = FALSE;
+			bool fexit= false;
 
 			for (door = 0; door <= 5; door++)
 			{
@@ -1235,7 +1235,7 @@ void fix_exits(void)
 					}
 					else
 					{
-						fexit = TRUE;
+						fexit = true;
 						pexit->u1.to_room = get_room_index(pexit->u1.vnum);
 
 						if (IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->exit_info, EX_ISDOOR))
@@ -1310,15 +1310,15 @@ void find_adjacents(void)
 					{
 						if (to_room->area != area)
 						{
-							in = FALSE;
+							in= false;
 
 							for (i = 0; i < MAX_ADJACENT; i++)
 							{
 								if (area->adjacent[i] == to_room->area)
-									in = TRUE;
+									in = true;
 							}
 
-							if (in == FALSE)
+							if (in == false)
 							{
 								area->adjacent[count] = to_room->area;
 								count++;
@@ -1364,9 +1364,9 @@ void area_update(void)
 		}
 
 		if (pArea->nplayer == 0)
-			pArea->empty = TRUE;
+			pArea->empty = true;
 		else
-			pArea->empty = FALSE;
+			pArea->empty= false;
 
 		if (++pArea->age < 6)
 			continue;
@@ -1412,10 +1412,10 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 		return;
 
 	pMob = NULL;
-	last = TRUE;
+	last = true;
 
 	if (pRoom->trap)
-		pRoom->trap->armed = TRUE;
+		pRoom->trap->armed = true;
 
 	for (pReset = pRoom->reset_first; pReset != NULL; pReset = pReset->next)
 	{
@@ -1447,7 +1447,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pMobIndex->count >= pReset->arg2)
 				{
-					last = FALSE;
+					last= false;
 					break;
 				}
 
@@ -1459,7 +1459,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 						count++;
 						if (count >= pReset->arg4)
 						{
-							last = FALSE;
+							last= false;
 							break;
 						}
 					}
@@ -1493,7 +1493,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				LastMob = pMob;
 				level = URANGE(0, pMob->level - 2, LEVEL_HERO - 1); /* -1 ROM */
-				last = TRUE;
+				last = true;
 				break;
 			case 'O':
 				pObjIndex = get_obj_index(pReset->arg1);
@@ -1532,7 +1532,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				if ((pObjIndex->limcount >= pObjIndex->limtotal && pObjIndex->limtotal > 0)
 					|| count_obj_list(pObjIndex, pRoomIndex->contents) > 0)
 				{
-					last = FALSE;
+					last= false;
 					break;
 				}
 
@@ -1543,7 +1543,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				obj_to_room(pObj, pRoom);
 
-				last = TRUE;
+				last = true;
 				break;
 			case 'P':
 				pObjIndex = get_obj_index(pReset->arg1);
@@ -1576,7 +1576,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					|| (pObjIndex->count >= limit /* && number_range(0,4) != 0 */)
 					|| (count = count_obj_list(pObjIndex, LastObj->contains)) > pReset->arg4)
 				{
-					last = FALSE;
+					last= false;
 					break;
 				}
 
@@ -1593,7 +1593,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				}
 
 				LastObj->value[1] = LastObj->pIndexData->value[1];
-				last = TRUE;
+				last = true;
 				break;
 			case 'G':
 			case 'E':
@@ -1611,7 +1611,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				if (!LastMob)
 				{
 					bug("Reset_room: 'E' or 'G': null mob for vnum %d.", pReset->arg1);
-					last = FALSE;
+					last= false;
 					break;
 				}
 
@@ -1699,32 +1699,32 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 						if (secondary != NULL)
 						{
-							unequip_char(LastMob, secondary, TRUE);
-							equip_char(LastMob, secondary, 18, TRUE);
-							equip_char(LastMob, pObj, 16, TRUE);
+							unequip_char(LastMob, secondary, true);
+							equip_char(LastMob, secondary, 18, true);
+							equip_char(LastMob, pObj, 16, true);
 						}
 						else
 						{
-							equip_char(LastMob, pObj, pReset->arg3, TRUE);
+							equip_char(LastMob, pObj, pReset->arg3, true);
 						}
 					}
 					else if (pReset->arg3 == 18)
 					{
 						if (get_eq_char(LastMob, WEAR_WIELD) == NULL)
-							equip_char(LastMob, pObj, 16, TRUE);
+							equip_char(LastMob, pObj, 16, true);
 						else
-							equip_char(LastMob, pObj, pReset->arg3, TRUE);
+							equip_char(LastMob, pObj, pReset->arg3, true);
 					}
 					else
 					{
-						equip_char(LastMob, pObj, pReset->arg3, TRUE);
+						equip_char(LastMob, pObj, pReset->arg3, true);
 					}
 				}
-				last = TRUE;
+				last = true;
 				break;
 
 			case 'F':
-				found = FALSE;
+				found= false;
 
 				if (!LastMob)
 					continue;
@@ -1733,7 +1733,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				{
 					if (IS_NPC(rch) && (pReset->arg2 == rch->pIndexData->vnum))
 					{
-						found = TRUE;
+						found = true;
 						break;
 					}
 				}
@@ -1776,7 +1776,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 						break;
 				}
 
-				last = TRUE;
+				last = true;
 				break;
 			case 'R':
 				pRoomIndex = get_room_index(pReset->arg1);
@@ -1924,7 +1924,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 		mob->legs = pMobIndex->legs;
 		mob->regen_rate = 0;
 		mob->mobstyle = 0;
-		mob->stolen_from = FALSE;
+		mob->stolen_from= false;
 
 		if (pMobIndex->Class()->GetIndex() == CLASS_WARRIOR)
 		{
@@ -2579,7 +2579,7 @@ int fread_number(FILE *fp)
 
 	number = 0;
 
-	sign = FALSE;
+	sign= false;
 
 	if (c == '+')
 	{
@@ -2587,7 +2587,7 @@ int fread_number(FILE *fp)
 	}
 	else if (c == '-')
 	{
-		sign = TRUE;
+		sign = true;
 		c = getc(fp);
 	}
 
@@ -2627,7 +2627,7 @@ long fread_flag(FILE *fp)
 {
 	int number;
 	char c;
-	bool negative = FALSE;
+	bool negative= false;
 
 	do
 	{
@@ -2636,7 +2636,7 @@ long fread_flag(FILE *fp)
 
 	if (c == '-')
 	{
-		negative = TRUE;
+		negative = true;
 		c = getc(fp);
 	}
 
@@ -2861,11 +2861,11 @@ char *fread_string_eol(FILE *fp)
 	char *plast;
 	char buf[MSL], c;
 
-	if (char_special[EOF - EOF] != TRUE)
+	if (char_special[EOF - EOF] != true)
 	{
-		char_special[EOF - EOF] = TRUE;
-		char_special['\n' - EOF] = TRUE;
-		char_special['\r' - EOF] = TRUE;
+		char_special[EOF - EOF] = true;
+		char_special['\n' - EOF] = true;
+		char_special['\r' - EOF] = true;
 	}
 
 	/*
@@ -3548,7 +3548,7 @@ void smash_tilde(char *str)
 
 /*
  * Compare strings, case insensitive.
- * Return TRUE if different
+ * Return true if different
  *   (compatibility with historical functions).
  */
 bool str_cmp(const char *astr, const char *bstr)
@@ -3557,28 +3557,28 @@ bool str_cmp(const char *astr, const char *bstr)
 	{
 		//	sprintf(buf,"Str_cmp: null astr, bstr: %s (%s:%d dev=pimp)",gLastFile, gLastLine, bstr);
 		//	bug( buf, 0 );
-		return TRUE;
+		return true;
 	}
 
 	if (bstr == NULL)
 	{
 		//	sprintf(buf,"Str_cmp: null bstr, astr: %s",astr);
 		//	bug( buf, 0 );
-		return TRUE;
+		return true;
 	}
 
 	for (; *astr || *bstr; astr++, bstr++)
 	{
 		if (LOWER(*astr) != LOWER(*bstr))
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*
  * Compare strings, case insensitive, for prefix matching.
- * Return TRUE if astr not a prefix of bstr
+ * Return true if astr not a prefix of bstr
  *   (compatibility with historical functions).
  */
 bool str_prefix(const char *astr, const char *bstr)
@@ -3586,27 +3586,27 @@ bool str_prefix(const char *astr, const char *bstr)
 	if (astr == NULL)
 	{
 		bug("Strn_cmp: null astr.", 0);
-		return TRUE;
+		return true;
 	}
 
 	if (bstr == NULL)
 	{
 		bug("Strn_cmp: null bstr.", 0);
-		return TRUE;
+		return true;
 	}
 
 	for (; *astr; astr++, bstr++)
 	{
 		if (LOWER(*astr) != LOWER(*bstr))
-			return TRUE;
+			return true;
 	}
 
-	return FALSE;
+	return false;
 }
 
 /*
  * Compare strings, case insensitive, for match anywhere.
- * Returns TRUE is astr not part of bstr.
+ * Returns true is astr not part of bstr.
  *   (compatibility with historical functions).
  */
 bool str_infix(const char *astr, const char *bstr)
@@ -3619,7 +3619,7 @@ bool str_infix(const char *astr, const char *bstr)
 	c0 = LOWER(astr[0]);
 
 	if (c0 == '\0')
-		return FALSE;
+		return false;
 
 	sstr1 = strlen(astr);
 	sstr2 = strlen(bstr);
@@ -3627,15 +3627,15 @@ bool str_infix(const char *astr, const char *bstr)
 	for (ichar = 0; ichar <= sstr2 - sstr1; ichar++)
 	{
 		if (c0 == LOWER(bstr[ichar]) && !str_prefix(astr, bstr + ichar))
-			return FALSE;
+			return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 /*
  * Compare strings, case insensitive, for suffix matching.
- * Return TRUE if astr not a suffix of bstr
+ * Return true if astr not a suffix of bstr
  *   (compatibility with historical functions).
  */
 bool str_suffix(const char *astr, const char *bstr)
@@ -3644,9 +3644,9 @@ bool str_suffix(const char *astr, const char *bstr)
 	int sstr2 = strlen(bstr);
 
 	if (sstr1 <= sstr2 && !str_cmp(astr, bstr + sstr2 - sstr1))
-		return FALSE;
+		return false;
 	else
-		return TRUE;
+		return true;
 }
 
 /*
@@ -3794,7 +3794,7 @@ void do_force_reset(CHAR_DATA *ch, char *argument)
 		ich_next = ich->next;
 
 		if (IS_NPC(ich) && ich->in_room && ich->in_room->area == pArea && pArea->area_type == ARE_UNOPENED)
-			extract_char(ich, TRUE);
+			extract_char(ich, true);
 	}
 
 	reset_area(pArea);
@@ -4022,7 +4022,7 @@ void load_rooms(FILE *fp)
 		if (vnum == 0)
 			break;
 
-		fBootDb = FALSE;
+		fBootDb= false;
 
 		if (get_room_index(vnum) != NULL)
 		{
@@ -4030,13 +4030,13 @@ void load_rooms(FILE *fp)
 			bugout(error_v);
 		}
 
-		fBootDb = TRUE;
+		fBootDb = true;
 
 		pRoomIndex = new ROOM_INDEX_DATA;
 		pRoomIndex->reset_first = NULL;
 		pRoomIndex->reset_last = NULL;
 		pRoomIndex->owner = palloc_string("");
-		pRoomIndex->move_progs = FALSE;
+		pRoomIndex->move_progs= false;
 		pRoomIndex->people = NULL;
 		pRoomIndex->contents = NULL;
 		pRoomIndex->extra_descr = NULL;
@@ -4066,7 +4066,7 @@ void load_rooms(FILE *fp)
 		pRoomIndex->rprogs = NULL;
 		zero_vector(pRoomIndex->progtypes);
 		pRoomIndex->cabal = 0;
-		pRoomIndex->has_rune = FALSE;
+		pRoomIndex->has_rune= false;
 
 		zero_vector(pRoomIndex->affected_by);
 		if (pRoomIndex->area->area_type == ARE_SHRINE)
@@ -4166,7 +4166,7 @@ void load_rooms(FILE *fp)
 
 				trap->trig_echo = fread_string(fp);
 				trap->exec_echo = fread_string(fp);
-				trap->armed = TRUE;
+				trap->armed = true;
 				pRoomIndex->trap = trap;
 			}
 			else if (letter == 'O')

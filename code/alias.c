@@ -195,7 +195,7 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *rch;
 	char arg[MAX_INPUT_LENGTH];
 	int pos;
-	bool found = FALSE;
+	bool found = false;
 
 	if (ch->desc == NULL)
 		rch = ch;
@@ -237,7 +237,7 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 			rch->pcdata->alias[pos] = NULL;
 			rch->pcdata->alias_sub[pos] = NULL;
 
-			found = TRUE;
+			found = true;
 		}
 	}
 

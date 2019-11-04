@@ -125,15 +125,15 @@ int agrees(CHAR_DATA *ch, char *speech)
 bool can_do_quest(CHAR_DATA *ch, int quest)
 {
 	if (get_trust(ch) > 55)
-		return TRUE;
+		return true;
 
 	if (((ch->level < quest_table[quest].minlevel) || (ch->level > quest_table[quest].maxlevel)))
-		return FALSE;
+		return false;
 
 	if (IS_NPC(ch))
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 void store_quest_val(CHAR_DATA *ch, char *valname, sh_int value)
@@ -324,7 +324,7 @@ void give_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 	act("$N snatches the doll from $n's hands and examines it intently.", ch, 0, mob, TO_ROOM);
 	act("$N lets out a squeal of gleeful laughter and skips away, dangling the doll loosely by its leg.", ch, 0, mob, TO_ALL);
 
-	extract_char(mob, TRUE);
+	extract_char(mob, true);
 
 	ch->pcdata->quests[DOLL_QUEST] = 4;
 	ch->pcdata->reputation += 15;
@@ -376,7 +376,7 @@ void greet_prog_cimar_sorcgm(CHAR_DATA *mob, CHAR_DATA *ch)
 void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 {
 	CHAR_DATA *rch, *mob;
-	bool alone = TRUE;
+	bool alone = true;
 	char buf[MSL];
 	ROOM_INDEX_DATA *shack;
 
@@ -405,7 +405,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 	for (rch = room->people; rch; rch = rch->next_in_room)
 	{
 		if (!IS_NPC(rch) && (rch != ch))
-			alone = FALSE;
+			alone= false;
 	}
 
 	switch (ch->pcdata->quests[TALISMANIC_QUEST])
@@ -523,7 +523,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 			act("A bolt of lightning streaks down from the clouds above!", ch, 0, 0, TO_ALL);
 			do_myell(ch, "Argh!  I've been struck by lightning!", NULL);
 
-			damage_new(mob, ch, dice(ch->level, 8), gsn_call_lightning, DAM_LIGHTNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
+			damage_new(mob, ch, dice(ch->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 			sprintf(buf, "%s Get the hell away from here, and don't you ever come back, you dirty grubber!", ch->name);
 			do_tell(mob, buf);
 			break;
@@ -539,7 +539,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 void speech_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
 	ROOM_INDEX_DATA *outside;
-	bool found = FALSE;
+	bool found= false;
 
 	if (IS_NPC(ch))
 		return;
@@ -556,7 +556,7 @@ void speech_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			"is a mountain to the south where it used to grow... mayhaps it still does!  Mayhaps, yes?  Now, go!");
 		do_emote(mob, "opens the door and hustles you outside.");
 		ch->pcdata->quests[TALISMANIC_QUEST] = 3;
-		found = TRUE;
+		found = true;
 	}
 	else if (!str_prefix("no", speech))
 	{
@@ -566,7 +566,7 @@ void speech_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		do_emote(mob, "waves a hand and the door behind you opens.  He casts you out violently!");
 
 		ch->pcdata->quests[TALISMANIC_QUEST] = 2;
-		found = TRUE;
+		found = true;
 	}
 
 	if (found)
@@ -579,7 +579,7 @@ void speech_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 {
-	bool found = FALSE;
+	bool found= false;
 	ROOM_INDEX_DATA *outside = get_room_index(9147);
 
 	if (IS_NPC(ch))
@@ -761,7 +761,7 @@ bool aggress_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *attacker)
 	do_say(mob, "You... you lying sneaky little grubber!  I kill you!  Out!  Out!  OUT!!");
 
 	do_emote(mob, "suddenly unleashes a blast of raw energy, sending you flying!");
-	damage_new(mob, attacker, dice(20, 10), gsn_bash, DAM_ENERGY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy wave");
+	damage_new(mob, attacker, dice(20, 10), gsn_bash, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "energy wave");
 
 	attacker->pcdata->quests[TALISMANIC_QUEST] = 5;
 
@@ -769,7 +769,7 @@ bool aggress_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *attacker)
 	char_to_room(attacker, outside);
 	do_look(attacker, "auto");
 
-	return TRUE;
+	return true;
 }
 
 void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
@@ -792,7 +792,7 @@ void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
 			act("A bolt of lightning streaks down from the clouds above!", d->character, 0, 0, TO_ALL);
 			do_myell(d->character, "Argh!  I've been struck by lightning!", NULL);
 
-			damage_new(mob, d->character, dice(d->character->level, 8), gsn_call_lightning, DAM_LIGHTNING, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
+			damage_new(mob, d->character, dice(d->character->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 		}
 	}
 

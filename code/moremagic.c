@@ -148,7 +148,7 @@ void spell_sunray(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		affect_to_char(victim, &af);
 	}
 
-	damage_old(ch, victim, dam, sn, DAM_LIGHT, TRUE);
+	damage_old(ch, victim, dam, sn, DAM_LIGHT, true);
 }
 
 void spell_cleanse(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -262,7 +262,7 @@ void spell_cleanse(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		affect_strip(victim, sn);
 	}
 
-	check_improve(ch, skill_lookup("cleanse"), TRUE, 1);
+	check_improve(ch, skill_lookup("cleanse"), true, 1);
 }
 
 bool cleansed(CHAR_DATA *ch, CHAR_DATA *victim, int diffmodifier, int sn)
@@ -273,14 +273,14 @@ bool cleansed(CHAR_DATA *ch, CHAR_DATA *victim, int diffmodifier, int sn)
 	snlevel = get_affect_level(victim, sn);
 
 	if (snlevel < 0)
-		return FALSE;
+		return false;
 
 	chance -= (snlevel - ch->level) * 2;
 
 	if (number_percent() > chance)
-		return FALSE;
+		return false;
 
-	return TRUE;
+	return true;
 }
 
 int get_affect_level(CHAR_DATA *ch, int sn)
@@ -674,7 +674,7 @@ void spell_fatigue(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		victim->move -= dam / 2;
 	}
 
-	damage_new(ch, victim, dam, sn, DAM_MENTAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 }
 
 void spell_strength(int sn, int level, CHAR_DATA *ch, void *vo, int target)

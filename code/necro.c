@@ -96,13 +96,13 @@ bool drain_urn(CHAR_DATA *ch, int charges)
 	if (!urn)
 	{
 		send_to_char("You do not have an urn from which to drain blood!\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	if (urn->value[4] < charges)
 	{
 		send_to_char("Your urn does not contain enough blood to do that.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
 	urn->value[4] -= charges;
@@ -112,7 +112,7 @@ bool drain_urn(CHAR_DATA *ch, int charges)
 		(charges == 1) ? "" : "s");
 
 	send_to_char(buf, ch);
-	return TRUE;
+	return true;
 }
 
 void power_urn(CHAR_DATA *ch, int charges)
@@ -157,7 +157,7 @@ void spell_siphon(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n siphons the blood right out of your body in a crimson burst!", ch, 0, victim, TO_VICT);
 	act("You siphon the blood out of $N's body in a crimson burst!", ch, 0, victim, TO_CHAR);
 
-	damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_NEGATIVE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "siphoning");
+	damage_new(ch, victim, dam, TYPE_UNDEFINED, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "siphoning");
 
 	if (IS_SET(victim->imm_flags, IMM_NEGATIVE) || IS_SET(victim->imm_flags, IMM_MAGIC))
 		return;
@@ -343,7 +343,7 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	SET_BIT(corpse->wear_flags, ITEM_NO_SAC);
 	WAIT_STATE(ch, PULSE_VIOLENCE * 3);
 
-	ch->disrupted = FALSE;
+	ch->disrupted= false;
 
 	act("You kneel before $p, chanting softly in an arcane language.", ch, corpse, 0, TO_CHAR);
 	act("$n kneels before $p, chanting softly in an unintelligible language.", ch, corpse, 0, TO_ROOM);
@@ -358,7 +358,7 @@ void animate_two(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	if (!corpse->in_room || corpse->in_room != ch->in_room)
 	{
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 
 		send_to_char("You don't see the corpse anymore.\n\r", ch);
 		return;
@@ -371,7 +371,7 @@ void animate_two(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 		extract_obj(corpse);
 
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -388,7 +388,7 @@ void animate_three(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	if (!corpse->in_room || corpse->in_room != ch->in_room)
 	{
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 
 		send_to_char("You don't see the corpse anymore.\n\r", ch);
 		return;
@@ -401,7 +401,7 @@ void animate_three(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 		extract_obj(corpse);
 
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -531,7 +531,7 @@ void spell_vampiric_touch(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	if (saves_spell(level, victim, DAM_NEGATIVE))
 		dam /= 2;
 
-	damage(ch, victim, dam, gsn_vampiric_touch, DAM_NEGATIVE, TRUE);
+	damage(ch, victim, dam, gsn_vampiric_touch, DAM_NEGATIVE, true);
 
 	if (IS_SET(victim->imm_flags, IMM_NEGATIVE))
 		dam = 0;
@@ -543,7 +543,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *pet;
 	AFFECT_DATA af;
-	bool found = FALSE;
+	bool found= false;
 	if (is_affected(ch, sn))
 		return send_to_char("You cannot summon your minions again yet.\n\r", ch);
 
@@ -554,7 +554,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		if (IS_NPC(pet) && IS_AFFECTED(pet, AFF_CHARM) && pet->master && pet->master == ch)
 		{
-			stop_fighting(pet, TRUE);
+			stop_fighting(pet, true);
 
 			act("$n disappears suddenly.", pet, 0, 0, TO_ROOM);
 
@@ -564,7 +564,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			act("$N arrives suddenly, kneeling before you outside the circle.", ch, NULL, pet, TO_CHAR);
 			act("$N arrives suddenly, kneeling before $n outside the circle.", ch, 0, pet, TO_ROOM);
 
-			found = TRUE;
+			found = true;
 		}
 	}
 
@@ -623,7 +623,7 @@ void spell_visceral(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		extract_obj(ccorpses[i]);
 	}
 
-	ch->disrupted = FALSE;
+	ch->disrupted= false;
 
 	act("$n slices open three corpses, spreading their entrails upon the ground.", ch, 0, 0, TO_ROOM);
 	act("You slice open three corpses, spreading their entrails upon the ground.", ch, 0, 0, TO_CHAR);
@@ -636,7 +636,7 @@ void visceral_two(CHAR_DATA *ch)
 	if (ch->fighting)
 	{
 		send_to_char("The profane ritual disrupted, the magicks dissipate harmlessly.\n\r", ch);
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -657,9 +657,9 @@ void visceral_three(CHAR_DATA *ch)
 
 		act("A swirling black cloud coalesces above and lashes out at $n!", ch, NULL, NULL, TO_ROOM);
 
-		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
+		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
 
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -684,7 +684,7 @@ void visceral_four(CHAR_DATA *ch)
 
 		act("Swirling shadows surround $n, tearing at his flesh as $e shrieks in agony!", ch, NULL, NULL, TO_ROOM);
 
-		damage_new(ch, ch, dice(30, 40), gsn_unholy_bond, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the unholy assault*");
+		damage_new(ch, ch, dice(30, 40), gsn_unholy_bond, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the unholy assault*");
 		return;
 	}
 
@@ -744,7 +744,7 @@ void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (!drain_urn(ch, 10))
 		return;
 
-	ch->disrupted = FALSE;
+	ch->disrupted= false;
 
 	act("$n begins to spread out some infernal relics and charms.", ch, 0, 0, TO_ROOM);
 	act("You begin to spread out some infernal relics and charms.", ch, 0, 0, TO_CHAR);
@@ -761,7 +761,7 @@ void ritual_two(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		send_to_char("The unholy ritual disrupted, the harnessed energy dissipates harmlessly.\n\r", ch);
 
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -780,7 +780,7 @@ void ritual_three(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		send_to_char("The unholy ritual disrupted, the harnessed energy dissipates harmlessly.\n\r", ch);
 
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -806,7 +806,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		send_to_char("The Dark Gods are angered at the disruption, and unleash their fury upon you!\n\r", ch);
 		act("A swirling black cloud coalesces above and lashes out at $n!", ch, NULL, NULL, TO_ROOM);
-		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
+		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
 		return;
 	}
 
@@ -831,7 +831,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 		affect_to_char(mob, &af);
 	}
 
-	extract_char(victim, TRUE);
+	extract_char(victim, true);
 
 	act("From the ashes rises $n!", mob, 0, ch, TO_ALL);
 
@@ -874,7 +874,7 @@ void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (!drain_urn(ch, 10))
 		return;
 
-	ch->disrupted = FALSE;
+	ch->disrupted= false;
 
 	RS.Queue.AddToQueue(3, 2, flesh_two, ch, victim);
 	act("You prepare to make an unholy sacrifice to the Dark Gods!", ch, 0, 0, TO_CHAR);
@@ -885,7 +885,7 @@ void flesh_two(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (ch->fighting)
 	{
 		send_to_char("The unholy ritual disrupted, the harnessed energy dissipates harmlessly.\n\r", ch);
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 		return;
 	}
 
@@ -903,7 +903,7 @@ void flesh_three(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (ch->fighting)
 	{
 		send_to_char("The unholy ritual disrupted, the harnessed energy dissipates harmlessly.\n\r", ch);
-		ch->disrupted = TRUE;
+		ch->disrupted = true;
 	}
 
 	act("$n calls upon the Dark Gods and forfeits part of $s vitality in sacrifice!", ch, 0, 0, TO_ROOM);
@@ -928,7 +928,7 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		send_to_char("The Dark Gods are angered at the disruption, and unleash their fury upon you!\n\r", ch);
 		act("A swirling black cloud coalesces above and lashes out at $n!", ch, NULL, NULL, TO_ROOM);
-		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
+		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
 		return;
 	}
 
@@ -956,7 +956,7 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 		affect_to_char(mob, &af);
 	}
 
-	extract_char(victim, TRUE);
+	extract_char(victim, true);
 
 	act("Suddenly, the pile of ashes is scattered as $N arises to kneel before you!", ch, 0, mob, TO_CHAR);
 	act("Suddenly, the pile of ashes is scattered as $N arises to kneel before $n!", ch, 0, mob, TO_ROOM);
@@ -971,7 +971,7 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		obj = create_object(get_obj_index(number_range(2932, 2935)), 0);
 		obj_to_char(obj, mob);
-		equip_char(mob, obj, WEAR_WIELD, FALSE);
+		equip_char(mob, obj, WEAR_WIELD, false);
 	}
 }
 
@@ -1551,7 +1551,7 @@ void do_drain(CHAR_DATA *ch, char *argument)
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-		check_improve(ch, skill_lookup("drain"), TRUE, 1);
+		check_improve(ch, skill_lookup("drain"), true, 1);
 	}
 	else
 	{
@@ -1562,7 +1562,7 @@ void do_drain(CHAR_DATA *ch, char *argument)
 
 		WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-		check_improve(ch, skill_lookup("drain"), FALSE, 1);
+		check_improve(ch, skill_lookup("drain"), false, 1);
 	}
 }
 
@@ -1585,12 +1585,12 @@ bool check_bond(CHAR_DATA *ch, CHAR_DATA *mob)
 		act("The zombie's eyes suddenly flare a deep crimson, which rapidly fades away.", ch, 0, mob, TO_CHAR);
 		act("You form a successful bond with $N!", ch, 0, mob, TO_CHAR);
 
-		check_improve(ch, gsn_unholy_bond, TRUE, 1);
-		return TRUE;
+		check_improve(ch, gsn_unholy_bond, true, 1);
+		return true;
 	}
 
-	check_improve(ch, gsn_unholy_bond, FALSE, 1);
-	return FALSE;
+	check_improve(ch, gsn_unholy_bond, false, 1);
+	return false;
 }
 
 bool check_zombie_summon(CHAR_DATA *ch)
@@ -1598,7 +1598,7 @@ bool check_zombie_summon(CHAR_DATA *ch)
 	CHAR_DATA *mob;
 
 	if (get_skill(ch, gsn_unholy_bond) < 1)
-		return FALSE;
+		return false;
 
 	for (mob = char_list; mob != NULL; mob = mob->next)
 	{
@@ -1609,18 +1609,18 @@ bool check_zombie_summon(CHAR_DATA *ch)
 			&& is_affected(mob, gsn_unholy_bond))
 		{
 			if (number_percent() > 75)
-				return FALSE;
+				return false;
 
-			stop_fighting(mob, TRUE);
+			stop_fighting(mob, true);
 			act("$n disappears suddenly.", mob, 0, 0, TO_ROOM);
 			char_from_room(mob);
 			char_to_room(mob, ch->in_room);
 			act("$n arrives suddenly.", mob, 0, 0, TO_ROOM);
-			return TRUE;
+			return true;
 		}
 	}
 
-	return FALSE;
+	return false;
 }
 
 void soul_add(CHAR_DATA *ch, int souls)

@@ -8,24 +8,24 @@ int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
 	if (!str_cmp(row[2], "olc"))
 	{
 		if (ch->pcdata->security > 0)
-			return TRUE;
+			return true;
 		else
-			return FALSE;
+			return false;
 	}
 
 	if (atoi(row[3]) > ch->level && ch->level > 0)
-		return FALSE;
+		return false;
 
 	if (atoi(row[3]) == 51 && (!str_cmp(row[2], "heroimm") && !IS_HEROIMM(ch)))
-		return FALSE;
+		return false;
 
 	if (sn > 1 && get_skill(ch, sn) < 1)
 	{
 		send_to_char("Viewing that helpfile requires a skill you do not have.\n\r", ch);
-		return FALSE;
+		return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 void show_helpfile(CHAR_DATA *ch, MYSQL_ROW row)
@@ -137,7 +137,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 	{
 		row = mysql_fetch_row(res_set);
 
-		if (!can_see_help(ch, row, TRUE))
+		if (!can_see_help(ch, row, true))
 			send_to_char("No matching helpfiles found.\n\r", ch);
 		else
 			show_helpfile(ch, row);
@@ -154,7 +154,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 		{
 			row = mysql_fetch_row(res_set2);
 
-			if (!can_see_help(ch, row, FALSE))
+			if (!can_see_help(ch, row, false))
 			{
 				send_to_char("No matching helpfiles found.\n\r", ch);
 			}
@@ -170,7 +170,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 
 			while ((row = mysql_fetch_row(res_set)) != NULL)
 			{
-				if (!can_see_help(ch, row, FALSE))
+				if (!can_see_help(ch, row, false))
 					continue;
 
 				sprintf(buf, "%-5s %s\n\r", row[0], row[1]);

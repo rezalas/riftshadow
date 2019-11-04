@@ -32,11 +32,11 @@ bool check_horde(CHAR_DATA *ch)
 	if (ch->cabal == CABAL_HORDE)
 	{
 		send_to_char("Huh?\n\r", ch);
-		return TRUE;
+		return true;
 	}
 	else
 	{
-		return FALSE;
+		return false;
 	}
 }
 
@@ -76,7 +76,7 @@ void update_cskills(CHAR_DATA *ch)
 void do_storytell(CHAR_DATA *ch, char *argument)
 {
 	char arg1[MSL], arg2[MSL], buf[MSL];
-	bool color = FALSE;
+	bool color = false;
 
 	argument = one_argument(argument, arg1);
 
@@ -95,7 +95,7 @@ void do_storytell(CHAR_DATA *ch, char *argument)
 	if (arg1[0] != '\0' && strcmp(get_char_color(ch, arg1), ""))
 	{
 		argument = one_argument(argument, arg2);
-		color = TRUE;
+		color = true;
 	}
 
 	if (!strcmp(argument, "") || arg1[0] == '\0' || (arg2[0] == '\0' && color))
@@ -263,7 +263,7 @@ void spell_rage(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			&& obj->wear_loc != WEAR_WAIST
 			&& obj->wear_loc != WEAR_ABOUT)
 		{
-			unequip_char(ch, obj, TRUE);
+			unequip_char(ch, obj, true);
 		}
 	}
 
@@ -897,7 +897,7 @@ void spell_web(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	victim->move /= 2;
 
-	damage(ch, victim, number_range(30, 50), sn, DAM_ACID, TRUE);
+	damage(ch, victim, number_range(30, 50), sn, DAM_ACID, true);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -995,13 +995,13 @@ void do_howl(CHAR_DATA *ch, char *argument)
 	{
 		act("$n opens $s mouth to scream, but his voice sounds stripped.", ch, 0, 0, TO_ROOM);
 		send_to_char("Your howl seems to be rather weak.\n\r", ch);
-		check_improve(ch, gsn_howl, FALSE, 2);
+		check_improve(ch, gsn_howl, false, 2);
 	}
 	else
 	{
 		act("$n opens $s mouth and startles you with an animal-like howl!", ch, 0, 0, TO_ROOM);
 		send_to_char("You scream at the top of your lungs like an animal!\n\r", ch);
-		check_improve(ch, gsn_howl, TRUE, 2);
+		check_improve(ch, gsn_howl, true, 2);
 
 		/* Loop through all the people in the room */
 		for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
@@ -1036,7 +1036,7 @@ void spell_mana_transfer(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n transfers part of $s energy to you!", ch, 0, victim, TO_VICT);
 	act("$n tranfers part of $s energy to $N!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, ch, mod, sn, DAM_MENTAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana tranfer");
+	damage_new(ch, ch, mod, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana tranfer");
 
 	victim->mana += mod;
 
@@ -1159,12 +1159,12 @@ void spell_deny_magic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 bool check_deny_magic(CHAR_DATA *ch)
 {
 	if (!is_affected(ch, gsn_deny_magic))
-		return FALSE;
+		return false;
 
 	act("The light blue aura around you flares and your magic does nothing.", ch, 0, 0, TO_CHAR);
 	act("The light blue aura around $n flares.", ch, 0, 0, TO_ROOM);
 
-	return TRUE;
+	return true;
 }
 
 void spell_bane(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1184,7 +1184,7 @@ void spell_bane(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		damage = 2 * dice(level, 2);
 	}
 
-	damage_new(ch, victim, damage, gsn_bane, DAM_MENTAL, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mental assault");
+	damage_new(ch, victim, damage, gsn_bane, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mental assault");
 }
 
 void spell_repose(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1564,7 +1564,7 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	for (vch = ch->in_room->people; vch; vch = vch->next_in_room)
 	{
-		if (IS_EVIL(vch) && !is_safe_new(ch, vch, FALSE))
+		if (IS_EVIL(vch) && !is_safe_new(ch, vch, false))
 			break;
 	}
 
@@ -1591,9 +1591,9 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	for (vch = ch->in_room->people; vch; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
-		if (!IS_GOOD(vch) && !is_safe_new(ch, vch, FALSE))
+		if (!IS_GOOD(vch) && !is_safe_new(ch, vch, false))
 		{
-			damage_new(ch, vch, (int)((float)ch->hit * .35), sn, DAM_TRUESTRIKE, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, vch, (int)((float)ch->hit * .35), sn, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			LAG_CHAR(vch, PULSE_VIOLENCE * 2);
 		}
 	}
@@ -1622,7 +1622,7 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	act("$n slumps to the ground, crimson blood streaming from $s body.", ch, 0, 0, TO_ROOM);
 	send_to_char("You fall to the ground as the searing ravages of your martyrdom take their toll.\n\r", ch);
 
-	stop_fighting(ch, TRUE);
+	stop_fighting(ch, true);
 
 	ch->hit = (int)((float)ch->max_hit * .05);
 }
@@ -1635,7 +1635,7 @@ void retribution_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	float dam = af->modifier / (af->duration == 0 ? 1 : af->duration);
 
 	send_to_char("Pain courses through your body as zealous retribution is extracted upon you!\n\r", ch);
-	damage_new(af->owner, ch, (int)dam, gsn_retribution, DAM_HOLY, TRUE, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the retribution of the Phalanx*");
+	damage_new(af->owner, ch, (int)dam, gsn_retribution, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the retribution of the Phalanx*");
 	af->modifier -= (int)dam;
 }
 

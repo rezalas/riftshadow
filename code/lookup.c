@@ -75,7 +75,7 @@ int restrict_lookup(const char *name)
 RACE_DATA *race_data_lookup(const int race)
 {
 	RACE_DATA *temp;
-	bool found = FALSE;
+	bool found= false;
 
 	temp = race_list;
 
@@ -83,7 +83,7 @@ RACE_DATA *race_data_lookup(const int race)
 	{
 		if (race == temp->number)
 		{
-			found = TRUE;
+			found = true;
 			break;
 		}
 		temp = temp->next;
@@ -115,7 +115,7 @@ char *get_demon_names(CHAR_DATA *ch)
 {
 	int favor, i;
 	char buf[MSL], buf2[MSL], buf3[MSL];
-	bool dFound = FALSE;
+	bool dFound= false;
 
 	sprintf(buf, "Lesser: ");
 	buf2[0] = '\0';

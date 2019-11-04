@@ -54,12 +54,12 @@ void CMud::Bootup()
 		RS.Log("\n\r*** Beginning RIFTSHADOW MUD server ***");
 		
 		top_string = NULL;
-		fBootDb = TRUE;
+		fBootDb = true;
 
 		RS.Log("Creating persistent SQL connection...");
 		RS.SQL.StartSQLServer();
 		
-		game_up = TRUE;
+		game_up = true;
 		
 		RS.Log("Loading options and greeting screen...");
 		RS.LoadGreetingScreen();
@@ -99,7 +99,7 @@ void CMud::Bootup()
 		RS.Log("Adjacent areas found");
 		clean_notes( );
 		RS.Log("Notes cleaned");
-		fBootDb = FALSE;
+		fBootDb= false;
 		area_update( );
 		RS.Log("Area update");
 		gold_update( );
@@ -154,12 +154,12 @@ inline bool CMud::RunGame()
 
 void CMud::Shutdown()
 {
-	game_up = FALSE;
+	game_up= false;
 }
 
 bool CMud::IsBanned(int desc, const char *tIP)
 {
-	return FALSE;
+	return false;
 }
 
 char * CMud::GetError()

@@ -351,7 +351,7 @@ BEGIN_SPEC(mspec_academy_pet)
 	EVENT_MPULSE
 		if (!ch->leader)
 		{
-			extract_char(ch, TRUE);
+			extract_char(ch, true);
 			return 0;
 		}
 
@@ -364,7 +364,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			ch->leader = NULL;
 			ch->master = NULL;
 
-			extract_char(ch, TRUE);
+			extract_char(ch, true);
 			return 0;
 		}
 
@@ -373,7 +373,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			if (ch->fighting)
 			{
 				act("$n seems to fade into the shadows.", ch, 0, 0, TO_ROOM);
-				stop_fighting(ch, TRUE);
+				stop_fighting(ch, true);
 			}
 
 			char_from_room(ch);
@@ -384,7 +384,7 @@ BEGIN_SPEC(mspec_academy_pet)
 		}
 
 		if (ch->hit < ch->max_hit / 3)
-			stop_fighting(ch, TRUE);
+			stop_fighting(ch, true);
 
 		if (ch->in_room->vnum == 24527 && number_percent() > 90)
 		{
@@ -600,10 +600,10 @@ BEGIN_SPEC(mspec_academy_pet)
 	EVENT_MDEATH
 		mob->hit = mob->max_hit / 3;
 
-		stop_fighting(mob, TRUE);
+		stop_fighting(mob, true);
 
 		if (!mob->leader)
-			extract_char(mob, TRUE);
+			extract_char(mob, true);
 
 		return 1;
 	END_EVENT

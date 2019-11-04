@@ -13,7 +13,7 @@ bool aprog_unset(AREA_DATA *area, const char *progtype, const char *name)
 	}
 
 	if (!aprog_table[i].name)
-		return FALSE;
+		return false;
 
 	if (!str_cmp(progtype, "pulse_prog"))
 	{
@@ -52,7 +52,7 @@ bool aprog_unset(AREA_DATA *area, const char *progtype, const char *name)
 		REMOVE_BIT(area->progtypes, APROG_MYELL);
 	}
 
-	return TRUE;
+	return true;
 }
 
 void aprog_set(AREA_DATA *area, const char *progtype, const char *name)
@@ -187,7 +187,7 @@ void tick_prog_academy_reset(AREA_DATA *area)
 	/*
 	for ( ch->level = ch->level ; ch->level < 25; ch->level++ )
 	{
-		advance_level( ch,FALSE);
+		advance_level( ch,false);
 	}
 	ch->exp = exp_per_level(ch) * (ch->level - 1);
 	*/
@@ -199,7 +199,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 	ROOM_INDEX_DATA *pedroom = get_room_index(9096);
 	ROOM_INDEX_DATA *portroom = get_room_index(9114);
 	char buf[MSL];
-	bool sph_found = FALSE;
+	bool sph_found = false;
 
 	if (time_info.day != 0 && time_info.day != 14)
 		return;
@@ -227,7 +227,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 		if (obj->pIndexData->vnum == 9016)
 		{
 			sphere = obj;
-			sph_found = TRUE;
+			sph_found = true;
 			break;
 		}
 	}
@@ -343,7 +343,7 @@ void pulse_prog_ruins_shark(AREA_DATA *area)
 		if (shark->pIndexData->vnum == 20111)
 		{
 			if (!shark->fighting && !shark->last_fought && number_percent() > 50 && shark->in_room)
-				extract_char(shark, TRUE);
+				extract_char(shark, true);
 			else
 				count++;
 		}
@@ -432,7 +432,7 @@ void myell_prog_lawful_city(AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 
 	if (ch->law_pass)
 	{
-		ch->law_pass = FALSE;
+		ch->law_pass = false;
 		return;
 	}
 

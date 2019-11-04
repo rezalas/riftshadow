@@ -105,7 +105,7 @@ void string_add(CHAR_DATA *ch, char *argument)
 	char buf[MAX_STRING_LENGTH];
 	char obuf[MSL * 2];
 	int len = 0;
-	bool found = FALSE;
+	bool found = false;
 	/*
 	 * Thanks to James Seng
 	 */
@@ -118,8 +118,8 @@ void string_add(CHAR_DATA *ch, char *argument)
 		char arg3[MAX_INPUT_LENGTH];
 
 		argument = one_argument(argument, arg1);
-		argument = first_arg(argument, arg2, FALSE);
-		argument = first_arg(argument, arg3, FALSE);
+		argument = first_arg(argument, arg2, false);
+		argument = first_arg(argument, arg3, false);
 
 		if (!str_cmp(arg1, ".c"))
 		{
@@ -177,7 +177,7 @@ void string_add(CHAR_DATA *ch, char *argument)
 						if (len > 0)
 							len--;
 
-						found = TRUE;
+						found = true;
 					}
 					else
 					{
@@ -263,7 +263,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
 	char xbuf2[MAX_STRING_LENGTH];
 	char *rdesc;
 	int i = 0;
-	bool cap = TRUE;
+	bool cap = true;
 
 	xbuf[0] = xbuf2[0] = 0;
 
@@ -348,7 +348,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
 				}
 			}
 
-			cap = TRUE;
+			cap = true;
 		}
 		else
 		{
@@ -356,7 +356,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
 
 			if (cap)
 			{
-				cap = FALSE;
+				cap = false;
 				xbuf[i] = UPPER(xbuf[i]);
 			}
 
@@ -428,7 +428,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
 
 /*
  * Used above in string_add.  Because this function does not
- * modify case if fCase is FALSE and because it understands
+ * modify case if fCase is false and because it understands
  * parenthesis, it would probably make a nice replacement
  * for one_argument.
  */
