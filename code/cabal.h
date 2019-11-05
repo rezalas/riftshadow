@@ -12,7 +12,11 @@
 #include "tables.h"
 #include "lookup.h"
 #include "magic.h"
-
+#include "warrior.h"
+#include "fight.h"
+#include "dioextra.h"
+#include "db.h"
+#include "devextra.h"
 
 DECLARE_DO_FUN(do_goto);
 DECLARE_DO_FUN(do_yell);

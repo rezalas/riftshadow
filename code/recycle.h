@@ -46,10 +46,13 @@
 #include <string.h>
 #include <stdlib.h>
 #include "merc.h"
+#include "handler.h"
+#include "newmem.h"
 
 /* externs */
 extern char str_empty[1];
 extern int mobile_count;
+
 
 /* stuff for providing a crash-proof buffer */
 
@@ -116,6 +119,8 @@ OBJ_AFFECT_DATA *new_affect_obj args ((void));
 void free_affect_obj args ((OBJ_AFFECT_DATA *af));
 AREA_AFFECT_DATA *new_affect_area args ((void));
 void free_affect_area args ((AREA_AFFECT_DATA *af));
+ROOM_AFFECT_DATA *new_affect_room(void);
+void free_affect_room(ROOM_AFFECT_DATA *af);
 
 /* object recycling */
 OBJ_DATA *new_obj args( (void) );

@@ -12,11 +12,33 @@
 #include "magic.h"
 #include "recycle.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "warrior.h"
+#include "devextra.h"
+#include "skills.h"
+#include "thief.h"
+#include "save.h"
+#include "paladin.h"
+#include "act_obj.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "handler.h"
+#include "dioextra.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "dioextra.h"
+#include "db.h"
+#include "misc.h"
+#include "ap.h"
+#include "iprog.h"
 
 #define HITS (dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8
 #define BASE_PEER_FACTOR		1.75
 #define SUMMONED_XP_PENALTY		 .55
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_quit);

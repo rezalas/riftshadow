@@ -13,18 +13,15 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "olc.h"
 #include "tables.h"
 #include "lookup.h"
 #include "update.h"
 #include "interp.h"
 #include "spec.h"
-
-extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
-extern char * bitvector_to_flag (long bitvect[]);
-extern char * munch (char *str);
-extern char * display_name_lookup (long bitv, const struct display_type *flag_table);
-extern char * restrict_name_lookup (long bitv);
+#include "db.h"
+#include "act_comm.h"
 
 /*
  *  Verbose writes reset data in plain english into the comments

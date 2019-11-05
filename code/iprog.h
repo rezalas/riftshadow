@@ -13,8 +13,13 @@
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
-
-char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
+#include "act_comm.h"
+#include "cabal.h"
+#include "fight.h"
+#include "act_obj.h"
+#include "update.h"
+#include "db.h"
+#include "devextra.h"
 
 DECLARE_IPROG_FUN_GREET( greet_prog_corpse_explode);
 

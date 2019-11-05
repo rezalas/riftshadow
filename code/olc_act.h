@@ -26,11 +26,40 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "olc.h"
 #include "tables.h"
 #include "recycle.h"
 #include "lookup.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "misc.h"
+#include "act_move.h"
+#include "warrior.h"
+#include "comm.h"
+#include "db.h"
+#include "bit.h"
+
+//#include "string.c"
+extern void string_append (CHAR_DATA *ch, char **pString);
+extern char *string_replace (char * orig, char * old, char * newstr);
+extern char *format_string (char *oldstring);
+extern char *string_unpad (char * argument);
+extern char *string_proper (char * argument);
+
+//#include "iprog.h"
+//#include "mprog.h"
+//#include "rprog.h"
+//#include "aprog.h"
+extern void iprog_set (OBJ_INDEX_DATA *, const char *, const char *);
+extern void mprog_set (MOB_INDEX_DATA *, const char *, const char *);
+extern void rprog_set (ROOM_INDEX_DATA *, const char *, const char *);
+extern void aprog_set (AREA_DATA *, const char *, const char *);
+extern bool mprog_unset (MOB_INDEX_DATA *, const char *, const char *);
+extern bool aprog_unset (AREA_DATA *, const char *, const char *);
+extern bool iprog_unset (OBJ_INDEX_DATA *, const char *, const char *);
+extern bool rprog_unset (ROOM_INDEX_DATA *, const char *, const char *);
+
 
 /* Return true if area changed, false if not. */
 #define REDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
@@ -39,15 +68,6 @@
 #define AEDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
 
 DECLARE_DO_FUN(do_resets);
-
-extern int flag_index_lookup (const char *name, const struct flag_type *flag_table);
-extern int flag_lookup (const char *name, const struct flag_type *flag_table);
-extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
-extern int display_lookup (const char *name, const struct display_type *flag_table);
-extern char *style_string (const struct style_type *style_table, long bits[]);
-
-char * mprog_type_to_name (int type);
-char *restrict_string (const struct restrict_type *restrict_table, long bits[]);
 
 struct olc_help_type
 {

@@ -13,6 +13,8 @@
 #include <time.h>
 #include "merc.h"
 #include "tables.h"
+#include "interp.h"
+#include "db.h"
 
 
 struct flag_stat_type

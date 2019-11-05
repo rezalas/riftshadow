@@ -24,6 +24,29 @@
 #include "tables.h"
 #include "olc.h"
 #include "interp.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "save.h"
+#include "dioextra.h"
+#include "mspec.h"
+#include "newmem.h"
+#include "handler.h"
+#include "sorcerer.h"
+#include "act_wiz.h"
+#include "alias.h"
+#include "ban.h"
+#include "update.h"
+#include "fight.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "handler.h"
+#include "misc.h"
+
+// TODO: string.c - make string.h
+extern void string_add (CHAR_DATA *ch, char *argument);
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(easy_induct);
@@ -38,8 +61,6 @@ void announce_logout (CHAR_DATA *ch);
 extern	int	malloc_debug	args( ( int  ) );
 extern	int	malloc_verify	args( ( void ) );
 #endif
-
-bool bDebug = false;
 
 /*
  * Signal handling.

@@ -15,11 +15,25 @@
 #else
     #include <crypt.h>
 #endif
+
 #include "merc.h"
+#include "handler.h"
 #include "magic.h"
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
+#include "act_comm.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "interp.h"
+#include "db.h"
+#include "zealot.h"
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_exits);

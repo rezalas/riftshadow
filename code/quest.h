@@ -16,17 +16,14 @@
 #include "tables.h"
 #include "interp.h"
 #include "spec.h"
+#include "mprog.h"
+#include "act_obj.h"
 
 #define STAGE(ch)		ch->pcdata->quests[nQuestIndex]
 #define SET_STAGE(ch, i) ch->pcdata->quests[nQuestIndex] = i
 
 #define SMITH_QUEST_LASTCOMP "Smith Quest Last Component"
 #define SMITH_QUEST_COMP_ACQUIRED "Smith Quest Components Used"
-
-extern void mprog_say (int inc, char *speech, CHAR_DATA *mob, CHAR_DATA *ch);
-extern void mprog_emote(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch);
-extern int mprog_drop(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch);
-extern int mprog_give(int inc, char *arg, OBJ_DATA *obj, CHAR_DATA *mob, CHAR_DATA *ch);
 
 
 void do_clearquests(CHAR_DATA *ch, char *argument);

@@ -11,9 +11,12 @@
 #include "tables.h"
 #include "lookup.h"
 #include "magic.h"
+#include "act_move.h"
+#include "comm.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
+
 
 void spell_enlarge (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_sunray (int sn,int level, CHAR_DATA *ch, void *vo, int target);

@@ -13,6 +13,25 @@
 #include "tables.h"
 #include "olc.h"
 #include "spec.h"
+#include "comm.h"
+#include "devextra.h"
+#include "warrior.h"
+#include "save.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "fight.h"
+#include "skills.h"
+#include "act_comm.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "dioextra.h"
+#include "act_move.h"
+#include "handler.h"
+#include "ap.h"
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_quit	);

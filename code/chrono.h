@@ -13,6 +13,8 @@
 #include "db.h"
 #include "lookup.h"
 #include "tables.h"
+#include "newmem.h"
+
 
 void extract_rune (RUNE_DATA *rune);
 RUNE_DATA *find_rune (void *vo, int target_type, int trigger_type, RUNE_DATA *rune_prev);

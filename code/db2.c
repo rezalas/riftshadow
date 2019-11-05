@@ -49,6 +49,23 @@
 struct		social_type	social_table		[MAX_SOCIALS];
 extern int flag_lookup args((const char *name, const struct flag_type *flag_table));
 extern int flag_index_lookup args((const char *name, const struct flag_type *flag_table));
+extern int style_lookup (char *argument);
+extern IPROG_DATA *new_iprog (void);
+extern long fread_flag (FILE *fp);
+extern char *fread_string_eol (FILE *fp);
+extern bool str_prefix (const char *astr, const char *bstr);
+extern int attack_lookup (const char *name);
+extern int race_lookup (const char *name);
+extern int liq_lookup (const char *name);
+extern void charaff_to_obj_index (OBJ_INDEX_DATA *obj, AFFECT_DATA *paf);
+extern int item_lookup (const char *name);
+extern int weapon_type (const char *name);
+extern void iprog_set (OBJ_INDEX_DATA *, const char *, const char *);
+extern void mprog_set (MOB_INDEX_DATA *, const char *, const char *);
+extern void rprog_set (ROOM_INDEX_DATA *, const char *, const char *);
+extern void aprog_set (AREA_DATA *, const char *, const char *);
+extern void BITWISE_OR (long bit1[], const long bit2[]);
+
 int display_lookup args((const char *name, const struct display_type *flag_table));
 int		social_count;
 void		bugout args((char *reason));

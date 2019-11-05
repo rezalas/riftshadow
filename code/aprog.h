@@ -13,6 +13,9 @@
 #include "interp.h"
 #include "recycle.h"
 #include "tables.h"
+#include "dioextra.h"
+#include "db.h"
+#include "devextra.h"
 
 DECLARE_APROG_FUN_RESET(reset_prog_cimsewer);
 DECLARE_APROG_FUN_PULSE(pulse_prog_ruins_shark);

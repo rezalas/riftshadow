@@ -22,6 +22,17 @@
 extern int flag_lookup (const char *name, const struct flag_type *flag_table);
 extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
 extern int damage_queue (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int damtype, bool blockable, int add, int mult, char *dnoun);
+extern void die_follower (CHAR_DATA *ch);
+extern void clear_tracks (ROOM_INDEX_DATA *room);
+extern void set_fighting (CHAR_DATA *ch, CHAR_DATA *victim);
+extern void *talloc_struct (long nStructSize);
+extern void rarea_echo (ROOM_INDEX_DATA *room, char *echo);
+extern void zone_echo (AREA_DATA *area, char *echo);
+extern int find_door (CHAR_DATA *ch, char *arg);
+extern void ADD_WAIT_STATE (CHAR_DATA *ch, int npulse);
+extern void get_obj (CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container, bool pcheck);
+extern void reslot_weapon (CHAR_DATA *ch);
+extern bool check_dispel (int dis_level, CHAR_DATA *victim, int sn);
 
 extern char * const dir_name[];
 extern const sh_int rev_dir[];

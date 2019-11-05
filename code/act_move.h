@@ -7,11 +7,26 @@
 #include <string.h>
 #include <math.h>
 #include "merc.h"
+#include "handler.h"
 #include "magic.h"
 #include "recycle.h"
 #include "interp.h"
 #include "tables.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "db.h"
+
+// TODO: add to race.h
+extern bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_wear);

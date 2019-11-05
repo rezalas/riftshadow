@@ -68,6 +68,8 @@ char str_boot_time[MAX_INPUT_LENGTH];
 time_t current_time; /* time of this pulse		*/
 int mPort;
 
+bool bDebug = false;
+
 int main(int argc, char **argv)
 {
 	struct timeval now_time;

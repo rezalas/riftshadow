@@ -10,6 +10,9 @@
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
 
 void do_invoke_dioxide (CHAR_DATA *ch);
 void do_invoke_seracuz (CHAR_DATA *ch);

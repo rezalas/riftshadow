@@ -15,6 +15,10 @@
 #include "magic.h"
 #include "db.h"
 #include "lookup.h"
+#include "fight.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "act_comm.h"
 
 DECLARE_DO_FUN(do_taunt);
 char *	format_obj_to_char (OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);

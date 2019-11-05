@@ -9,9 +9,23 @@
 #include <stdlib.h>
 #include <mysql.h>
 #include "merc.h"
+#include "handler.h"
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
+#include "save.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "fight.h"
+#include "mspec.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+
 
 #define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
 

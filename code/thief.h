@@ -14,9 +14,11 @@
 #include "magic.h"
 #include "db.h"
 #include "lookup.h"
-
-extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
-extern bool check_barred (CHAR_DATA *ch, ROOM_INDEX_DATA *to_room);
+#include "act_move.h"
+#include "act_comm.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "db.h"
 
 void do_backstab (CHAR_DATA *ch, char *argument);
 void do_circle_stab (CHAR_DATA *ch, char *argument);

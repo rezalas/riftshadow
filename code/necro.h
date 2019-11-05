@@ -18,6 +18,9 @@
 #include "lookup.h"
 #include "magic.h"
 #include "interp.h"
+#include "fight.h"
+#include "db.h"
+#include "misc.h"
 
 DECLARE_IPROG_FUN_GREET(greet_prog_corpse_explode);
 

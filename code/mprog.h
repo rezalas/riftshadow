@@ -11,6 +11,17 @@
 #include "interp.h"
 #include "recycle.h"
 #include "tables.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "thief.h"
+#include "fight.h"
+#include "act_obj.h"
+#include "save.h"
+#include "update.h"
+#include "misc.h"
+#include "db.h"
+#include "devextra.h"
+#include "comm.h"
 
 DECLARE_MPROG_FUN_BRIBE( bribe_prog_cityguard );
 DECLARE_MPROG_FUN_FIGHT( fight_prog_priest  );

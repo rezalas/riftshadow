@@ -7,8 +7,12 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
-
-extern void show_char_to_char_0 (CHAR_DATA *victim, CHAR_DATA *ch);
+#include "handler.h"
+#include "act_info.h"
+#include "zealot.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
 
 void scan_list (ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int door);
 void do_scan(CHAR_DATA *ch, char *argument);

@@ -15,6 +15,8 @@
 #include "tables.h"
 #include "room.h"
 #include "rift.h"
+#include "db.h"
+#include "devextra.h"
 
 DECLARE_RPROG_FUN_PULSE( pulse_prog_cimar_sewergrate );
 DECLARE_RPROG_FUN_SPEECH( speech_prog_ilopheth_shack );
