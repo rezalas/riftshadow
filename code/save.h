@@ -11,6 +11,14 @@
 #include "recycle.h"
 #include "lookup.h"
 #include "tables.h"
+#include "act_comm.h"
+#include "act_wiz.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "dioextra.h"
+
 
 #define MAX_NEST	100
 

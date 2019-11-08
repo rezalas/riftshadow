@@ -7,7 +7,13 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "recycle.h"
+#include "comm.h"
+#include "update.h"
+#include "db.h"
+#include "magic.h"
+
 
 void acid_effect (void *vo, int level, int dam, int target);
 void cold_effect (void *vo, int level, int dam, int target);

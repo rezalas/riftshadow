@@ -7,9 +7,23 @@
 #include <string.h>
 #include <stdlib.h>
 #include "merc.h"
+#include "handler.h"
 #include "magic.h"
 #include "tables.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "paladin.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "interp.h"
+#include "db.h"
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_split);

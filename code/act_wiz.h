@@ -8,18 +8,35 @@
 #include <stdlib.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
 #include "olc.h"
 #include "spec.h"
 #include "interp.h"
+#include "act_info.h"
+#include "save.h"
+#include "dioextra.h"
+#include "help.h"
+#include "devextra.h"
+#include "newmem.h"
+#include "update.h"
+#include "cabal.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "fight.h"
+#include "skills.h"
+#include "db.h"
+#include "magic.h"
 
 typedef struct multdata MULTDATA;
 
 struct multdata {
    DESCRIPTOR_DATA *des;
 };
+
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_rstat);

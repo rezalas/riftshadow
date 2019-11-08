@@ -7,18 +7,18 @@
 #include <string.h>
 #include <stdlib.h>
 #include "merc.h"
+#include "handler.h"
 #include "magic.h"
 #include "recycle.h"
 #include "tables.h"
+#include "update.h"
+#include "devextra.h"
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_groups);
 DECLARE_DO_FUN(do_help);
 DECLARE_DO_FUN(do_say);
 
-
-extern int is_mob_spec (int sn);
-extern int weapon_num_lookup (const char *name);
 
 
 void do_gain (CHAR_DATA *ch, char *argument);

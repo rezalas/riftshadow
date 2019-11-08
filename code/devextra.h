@@ -16,6 +16,10 @@
 #include "time.h"
 #include "interp.h"
 #include "help.h"
+#include "save.h"
+#include "cabal.h"
+#include "magic.h"
+#include "act_info.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"
@@ -40,6 +44,7 @@
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);
 #define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,NULL,NULL),obj);
 #define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,NULL,c),obj);
+
 
 char * flags_to_string (CHAR_DATA *ch, const struct flag_type *showflags, int flagsperline);
 void clean_mud (void);

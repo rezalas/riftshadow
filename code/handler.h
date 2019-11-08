@@ -11,6 +11,20 @@
 #include "recycle.h"
 #include "tables.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "warrior.h"
+#include "fight.h"
+#include "skill.h"
+#include "newmem.h"
+#include "act_obj.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "misc.h"
+
+//TODO: bring this func back from act_info.c
+extern CHAR_DATA *get_char_room (CHAR_DATA *ch, char *argument);
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_return);

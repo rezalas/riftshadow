@@ -43,10 +43,19 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "interp.h"
 #include "magic.h"
 #include "tables.h"
 #include "spec.h"
+#include "act_move.h"
+#include "devextra.h"
+#include "skills.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "fight.h"
+#include "db.h"
+
 
 /* for command types */
 #define ML	MAX_LEVEL	/* implementor */
@@ -600,5 +609,13 @@ DECLARE_DO_FUN(modhelp_end_fun);
 DECLARE_DO_FUN(comment_end_fun);
 DECLARE_DO_FUN(redit_end_fun);
 DECLARE_DO_FUN(buglist_end_fun);
+
+bool is_alphanum(char *arg);
+int have_space(char *arg);
+bool have_schar(char *arg);
+void interpret (CHAR_DATA *ch, char *argument);
+bool is_number (char *arg);
+char *one_argument (char *argument, char *arg_first);
+int number_argument (char *argument, char *arg);
 
 #endif /* INTERP_H */

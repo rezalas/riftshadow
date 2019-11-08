@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include "merc.h"
 #include "magic.h"
+#include "devextra.h"
 
 DECLARE_DO_FUN(do_say);
 

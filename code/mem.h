@@ -12,6 +12,10 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
+
+#include "newmem.h"
+#include "recycle.h"
 
 /*
  * Globals

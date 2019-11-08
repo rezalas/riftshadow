@@ -7,10 +7,19 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "spec.h"
 #include "tables.h"
+#include "mprog.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "devextra.h"
 
-extern void mprog_say(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch);
 extern va_list arglist;
 
 DECLARE_SPEC(mspec_academy_smith);

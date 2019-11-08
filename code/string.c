@@ -24,6 +24,17 @@
 #include <string.h>
 #include <time.h>
 
+extern char *palloc_string (const char *str);
+extern void free_pstring (char *pstr);
+extern void send_to_char (const char *txt, CHAR_DATA *ch);
+extern char *one_argument (char *argument, char *arg_first);
+extern void smash_tilde (char *str);
+extern bool str_cmp (const char *astr, const char *bstr);
+
+char *format_string (char *oldstring);
+char *first_arg (char *argument, char *arg_first, bool fCase);
+
+
 /*****************************************************************************
  Name:		string_edit
  Purpose:	Clears string and puts player into editing mode.

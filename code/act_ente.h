@@ -7,6 +7,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include "merc.h"
+#include "handler.h"
+#include "comm.h"
+#include "db.h"
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_look);

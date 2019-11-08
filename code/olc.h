@@ -31,34 +31,17 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "tables.h"
+#include "mem.h"
+#include "olc_act.h"
+#include "lookup.h"
+#include "bit.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "act_comm.h"
 
-
-extern AREA_DATA *get_vnum_area (int vnum);
-extern int flag_lookup (const char *name, const struct flag_type *flag_table);
-extern int flag_value (const struct flag_type *flag_table, char *argument);
-extern char *flag_string (const struct flag_type *flag_table, long bits[]);
-extern char *flag_string_old (const struct flag_type *flag_table, int bits);
-
-/* mem.c - memory prototypes. */
-extern RESET_DATA *new_reset_data (void);
-extern void free_reset_data (RESET_DATA *pReset);
-extern AREA_DATA *new_area (void);
-extern void free_area (AREA_DATA *pArea);
-extern EXIT_DATA *new_exit (void);
-extern void free_exit (EXIT_DATA *pExit);
-extern EXTRA_DESCR_DATA *new_extra_descr (void);
-extern void free_extra_descr (EXTRA_DESCR_DATA *pExtra);
-extern ROOM_INDEX_DATA *new_room_index (void);
-extern void free_room_index (ROOM_INDEX_DATA *pRoom);
-extern AFFECT_DATA	*new_affect (void);
-extern void free_affect (AFFECT_DATA* pAf);
-extern SHOP_DATA *new_shop (void);
-extern void free_shop (SHOP_DATA *pShop);
-extern OBJ_INDEX_DATA *new_obj_index (void);
-extern void free_obj_index (OBJ_INDEX_DATA *pObj);
-extern MOB_INDEX_DATA *new_mob_index (void);
-extern void free_mob_index (MOB_INDEX_DATA *pMob);
 
 /*
  * Interpreter Table Prototypes
@@ -321,5 +304,10 @@ AREA_DATA *get_area_data (int vnum);
 void add_reset (ROOM_INDEX_DATA *room, RESET_DATA *pReset, int index);
 bool check_security(CHAR_DATA *ch);
 int get_security(CHAR_DATA *ch);
+
+bool run_olc_editor (DESCRIPTOR_DATA *d);
+bool is_editing (CHAR_DATA *ch);
+char *olc_ed_name (CHAR_DATA *ch);
+char *olc_ed_vnum (CHAR_DATA *ch);
 
 #endif /* OLC_H */

@@ -45,6 +45,24 @@
 #include "magic.h"
 #include "recycle.h"
 #include "tables.h"
+#include "act_obj.h"
+#include "act_ente.h"
+#include "act_comm.h"
+#include "warrior.h"
+#include "dioextra.h"
+#include "sorcerer.h"
+#include "act_move.h"
+#include "fight.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "handler.h"
+#include "effects.h"
+#include "comm.h"
+#include "interp.h"
+#include "skill.h"
+#include "devextra.h"
+#include "db.h"
+
 
 /* command procedures needed */
 DECLARE_DO_FUN(do_gtell);
@@ -64,10 +82,6 @@ void say_spell (CHAR_DATA *ch, int sn);
 int	check_spellcraft (CHAR_DATA *ch, int sn);
 bool check_somatic (CHAR_DATA *ch);
 
-/* imported functions */
-extern bool check_zombie_summon (CHAR_DATA *ch);
-extern bool remove_obj (CHAR_DATA *ch, int iWear, bool fReplace);
-extern void wear_obj (CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace);
 
 void summon_char(CHAR_DATA *ch, CHAR_DATA *victim);
 /*
@@ -591,5 +605,14 @@ DECLARE_RUNE_FUN(trigger_stasis_wall);
 
 /* Queue function declarations */
 void recall_execute (CHAR_DATA *ch, ROOM_INDEX_DATA *location);
+
+
+bool check_dispel(int dis_level, CHAR_DATA *victim, int sn);
+int check_sanguine(CHAR_DATA *ch);
+void sanguine_blind(CHAR_DATA *ch, CHAR_DATA *victim);
+void obj_cast_spell (int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj);
+bool saves_spell (int level, CHAR_DATA *victim, int dam_type);
+int skill_lookup (const char *name);
+int find_spell(CHAR_DATA *ch, const char *name);
 
 #endif /* MAGIC_H */

@@ -10,6 +10,8 @@
 #define END_PROF_COMMANDS	};
 #define DECL_PROF_CMD(x)	void x (CHAR_DATA *ch, char *argument);
 
+extern char *format_string (char *oldstring);
+
 typedef short int sh_int;
 struct proficiency_type
 {

@@ -13,6 +13,8 @@
 #include "lookup.h"
 #include "tables.h"
 #include "interp.h"
+#include "act_comm.h"
+#include "devextra.h"
 
 int can_see_help (CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult);
 void show_helpfile (CHAR_DATA *ch, MYSQL_ROW row);

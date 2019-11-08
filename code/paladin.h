@@ -14,8 +14,9 @@
 #include "magic.h"
 #include "db.h"
 #include "lookup.h"
-
-extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
+#include "warrior.h"
+#include "fight.h"
+#include "skills.h"
 
 void spell_rites_of_preparation (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_spiritual_hammer (int sn, int level, CHAR_DATA *ch, void *vo, int target);

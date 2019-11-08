@@ -54,6 +54,20 @@
 #include "interp.h"
 #include "olc.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "devextra.h"
+#include "magic.h"
+#include "handler.h"
+#include "misc.h"
+#include "dioextra.h"
+
+// TODO: currently in db2.c - make db2.h
+extern void bugout (char *reason);
+
+
 
 #ifndef OLD_RAND
 // long random();
@@ -61,6 +75,7 @@ void srandom(unsigned int);
 int getpid();
 time_t time(time_t *tloc);
 #endif
+
 
 /* externals for counting purposes */
 extern OBJ_DATA *obj_free;
@@ -162,5 +177,44 @@ void load_improgs args((FILE * fp));
 void load_specs args((FILE * fp));
 void reset_area args((AREA_DATA * pArea));
 
+void area_update(void);
+void update_db_gold(void);
+void clone_object (OBJ_DATA *parent, OBJ_DATA *clone);
+void reset_room (ROOM_INDEX_DATA *pRoom);
+char *munch (char *str);
+
+int number_door (void);
+void tail_chain(void);
+long number_mm (void);
+int number_bits (int width);
+char fread_letter (FILE *fp);
+int fread_number (FILE *fp);
+long fread_flag (FILE *fp);
+void fread_flag_new (long vector[], FILE *fp);
+long vector_convert (char letter);
+char *fread_string (FILE *fp);
+void fread_to_eol (FILE *fp);
+char *fread_word (FILE *fp);
+long flag_convert (char letter);
+void append_file (CHAR_DATA *ch, char *file, char *str);
+void clone_mobile (CHAR_DATA *parent, CHAR_DATA *clone);
+void log_string (const char *str);
+int number_fuzzy (int number);
+bool str_infix (const char *astr, const char *bstr);
+ROOM_INDEX_DATA *get_room_index(int vnum);
+MOB_INDEX_DATA *get_mob_index (int vnum);
+ROOM_INDEX_DATA *get_room_index (int vnum);
+int dice (int number, int size);
+CHAR_DATA *create_mobile (MOB_INDEX_DATA *pMobIndex);
+bool str_cmp (const char *astr, const char *bstr);
+bool str_prefix (const char *astr, const char *bstr);
+bool str_suffix (const char *astr, const char *bstr);
+char *capitalize (const char *str);
+int number_percent (void);
+int number_range (int from, int to);
+void smash_tilde (char *str);
+OBJ_INDEX_DATA *get_obj_index(int vnum);
+OBJ_DATA *create_object (OBJ_INDEX_DATA *pObjIndex, int level);
+char *get_extra_descr (const char *name, EXTRA_DESCR_DATA *ed);
 
 #endif /* DB_H */
