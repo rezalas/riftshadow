@@ -10,7 +10,7 @@
 //#include "autogen/coldefs.h"
 
 #include <string.h>
-//#include "mud.h"
+#include "mud.h"
 #include "merc.h"
 #include "update.h"
 extern FILE *                  fpArea;
@@ -57,7 +57,9 @@ void CMud::Bootup()
 		fBootDb = true;
 
 		RS.Log("Creating persistent SQL connection...");
-		RS.SQL.StartSQLServer();
+		DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
+		RS.SQL.StartSQLServer(riftCore.Host.c_str(),
+		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str());
 		
 		game_up = true;
 		

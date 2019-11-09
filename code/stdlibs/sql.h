@@ -1,10 +1,7 @@
 #include <mysql.h>
 #include "../rift.h"
+#include "../config.h"
 
-#define MYSQL_USER			"rift"
-#define MYSQL_PASSWORD		"rift123"
-#define MYSQL_DATABASE		"rift_core"
-#define MYSQL_HOST		NULL
 class CSQLInterface;
 
 class CRow
@@ -28,9 +25,10 @@ class CSQLInterface
 public:
 	CSQLInterface();
 	~CSQLInterface();
-	void 		StartSQLServer(const char *db = MYSQL_DATABASE);		//called at boot
+	void 		StartSQLServer(const char* host, const char* db, const char* user, const char* pass);		//called at boot
 	void 		FreeResults(void);			//self explanatory
 	
+	Config					Settings;
 	int	 	 	Select(const char *query, ...);
 	int 	 	Insert(const char *query, ...);
 	int			Delete(const char *query, ...);

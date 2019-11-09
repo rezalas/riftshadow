@@ -1,11 +1,13 @@
 #include "mud.h"
 #include <stdlib.h>
 #include "mysql.h"
+#include <string>
 
 CSQLInterface::CSQLInterface(void)
 {
 	connstate = STATE_INVALID;
 	result_set = NULL;
+	Settings = Config("../config.json");
 	return;
 }
 
@@ -23,11 +25,11 @@ inline bool CSQLInterface::SQLValid(void)
 	return connstate > STATE_INVALID;
 }
 
-void CSQLInterface::StartSQLServer(const char *db)
+void CSQLInterface::StartSQLServer(const char* host, const char* db, const char* user, const char* pass)
 {
 	connection = mysql_init(NULL);
 
-	if(!mysql_real_connect(connection, MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, db, 0, NULL, 0))
+	if(!mysql_real_connect(connection, host, user, pass, db, 0, NULL, 0))
 		return RS.Bug("Unable to connect to mysql database: %s", mysql_error(connection));
 	
 	connstate = STATE_VALID;

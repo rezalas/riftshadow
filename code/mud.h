@@ -19,8 +19,10 @@
 #include "class.h"
 #include "race.h"
 #include "prof.h"
+#include "config.h"
 
 #define OPTION_FILE RIFT_AREA_DIR "/rs.conf"
+#define CONFIG_FILE RIFT_ROOT_DIR "/config.json"
 
 extern int fread_number (FILE *fp);
 extern void chop(char *str);
@@ -31,7 +33,6 @@ class CMud
 public:
 	CMud();
 	virtual ~CMud();
-	
 //	CGameLoop 			GameEngine;
 	CSQLInterface		SQL;
 //	CInterpreter		Interpreter;

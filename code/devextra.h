@@ -20,6 +20,7 @@
 #include "cabal.h"
 #include "magic.h"
 #include "act_info.h"
+#include "config.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"

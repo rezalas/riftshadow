@@ -336,8 +336,9 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 	do_disc(conn);
 }
 
-MYSQL *do_conn(char *host_name, char *user_name, char *password, char *db_name, unsigned int port_num,
-			   char *socket_name, unsigned int flags)
+MYSQL *do_conn(const char *host_name, const char *user_name, const char *password,
+	const char *db_name, unsigned int port_num, const char *socket_name,
+	unsigned int flags)
 {
 	MYSQL *conn; /* pointer to connection handler */
 

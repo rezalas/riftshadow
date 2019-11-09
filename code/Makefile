@@ -20,7 +20,8 @@ endif
 
 
 
-O_FILES = strings.o \
+O_FILES = config.o \
+		  strings.o \
 		  file.o \
 		  sql.o \
 		  bitvector.o \

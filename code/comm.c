@@ -103,7 +103,7 @@ int main(int argc, char **argv)
 	/*
 	 * Get the port number.
 	 */
-	port = 9998;
+	port = atoi(RS.SQL.Settings.GetValue("Port").c_str());
 	if (argc > 1)
 	{
 		if (!is_number(argv[1]))
@@ -114,7 +114,6 @@ int main(int argc, char **argv)
 		else if ((port = atoi(argv[1])) == 666)
 		{
 			bDebug = true;
-			port = 9998;
 		}
 		else if (port <= 1024)
 		{

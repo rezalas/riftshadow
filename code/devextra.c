@@ -126,7 +126,9 @@ void clean_mud()
 	CSQLInterface nSQL;
 	DESCRIPTOR_DATA *d;
 
-	nSQL.StartSQLServer();
+	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
+	nSQL.StartSQLServer(riftCore.Host.c_str(),
+		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str());
 	// 5184000 = one month
 
 	sprintf(buf, "DELETE FROM logins WHERE ctime + 5184000 < %ld", current_time);
@@ -747,7 +749,10 @@ void delete_char(char *name, bool save_pfile)
 
 MYSQL *open_fconn(void)
 {
-	return do_conn("localhost", "rift", "rift123", "riftforum", 0, NULL, 0);
+	CSQLInterface nSQL;
+	DbConnection riftForum = nSQL.Settings.GetDbConnection("riftforum");
+	return do_conn(riftForum.Host.c_str(), riftForum.User.c_str(),
+	 riftForum.Pwd.c_str(), riftForum.Db.c_str(), riftForum.Port, NULL, 0);
 }
 
 MYSQL_ROW one_query_row(char *query)
@@ -849,7 +854,10 @@ char *log_time(void)
 
 MYSQL *open_conn(void)
 {
-	return do_conn(MYSQL_HOST, "rift", "rift123", "rift", 0, NULL, 0);
+	CSQLInterface nSQL;
+	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
+	return do_conn(riftCore.Host.c_str(), riftCore.User.c_str(),
+	 riftCore.Pwd.c_str(), riftCore.Db.c_str(), riftCore.Port, NULL, 0);
 }
 
 void one_fquery(char *query)
