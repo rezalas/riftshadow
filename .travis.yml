@@ -2,4 +2,4 @@ language: cpp
 compiler: 
     - gcc
 
-script: make -C ./code/ #&& ./code/make test
+script: make -D_GLIBCXX_USE_C99 -std=c++11 -C ./code/ #&& ./code/make test
