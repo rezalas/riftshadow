@@ -857,7 +857,7 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 	}
 }
 
-void do_whisper(CHAR_DATA *ch, char *argument)
+void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 {
 	char buf[MSL];
 	CHAR_DATA *victim;

@@ -33,6 +33,9 @@
 
 #include "db.h"
 
+/* LOAD CABAL ITEMS */
+extern int mPort;
+
 char *top_bounty_name[MAX_TOP_BOUNTY];
 long top_bounty_value[MAX_TOP_BOUNTY];
 /*
@@ -1159,9 +1162,6 @@ void load_shops(FILE *fp)
 	}
 	*/
 }
-
-/* LOAD CABAL ITEMS */
-extern int mPort;
 
 void load_cabal_items(void)
 {

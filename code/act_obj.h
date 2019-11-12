@@ -23,46 +23,32 @@
 #include "update.h"
 #include "interp.h"
 #include "db.h"
+#include "act_move.h"
+
+#define CABAL_ITEMS_FILE	"citems.txt"
+#define MINOTAUR_ONLY		I
 
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_split);
-DECLARE_DO_FUN(do_yell);
-DECLARE_DO_FUN(do_say);
-DECLARE_DO_FUN(do_wake);
-DECLARE_DO_FUN(do_tell);
-
-#define CABAL_ITEMS_FILE "citems.txt"
-#define MINOTAUR_ONLY I
-
-/*
- * Local functions.
- */
-
-bool remove_obj (CHAR_DATA *ch, int iWear, bool fReplace);
-void wear_obj (CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace);
-CHAR_DATA *find_keeper (CHAR_DATA *ch);
-int get_cost (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy);
-void obj_to_keeper (OBJ_DATA *obj, CHAR_DATA *ch);
-OBJ_DATA *get_obj_keeper (CHAR_DATA *ch, CHAR_DATA *keeper,char *argument);
-bool is_owner (CHAR_DATA *ch, OBJ_DATA *corpse);
-bool check_arms (CHAR_DATA *ch, OBJ_DATA *obj);
+//
+// TODO: UNKNOWN FUNCTIONS
+//
 
 /* A pile of obj progs for use in legion.are, and the drannor areas.
 Remove these if you don't want to use those areas
 */
-void obj_give_hydra_head (CHAR_DATA *ch, CHAR_DATA *lady, OBJ_DATA *obj);
-void wear_obj_zhentil_robe (CHAR_DATA *ch, OBJ_DATA *obj);
-void wear_obj_fallen_wings (CHAR_DATA *ch, OBJ_DATA *obj);
-void remove_obj_fallen_wings (CHAR_DATA *ch, OBJ_DATA *obj);
-void wear_obj_symbol_magic (CHAR_DATA *ch, OBJ_DATA *obj);
-void remove_obj_symbol_magic (CHAR_DATA *ch, OBJ_DATA *obj);
-void recite_libram_conjuration (CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *scroll, OBJ_DATA *obj, bool fRead);
-void brandish_sceptre_dead (CHAR_DATA *ch, OBJ_DATA *obj);
-void wear_obj_misty_cloak (CHAR_DATA *ch, OBJ_DATA *obj);
-void remove_obj_misty_cloak (CHAR_DATA *ch, OBJ_DATA *obj);
-void save_cabal_items (void);
+// void obj_give_hydra_head (CHAR_DATA *ch, CHAR_DATA *lady, OBJ_DATA *obj);
+// void wear_obj_zhentil_robe (CHAR_DATA *ch, OBJ_DATA *obj);
+// void wear_obj_symbol_magic (CHAR_DATA *ch, OBJ_DATA *obj);
+// void remove_obj_symbol_magic (CHAR_DATA *ch, OBJ_DATA *obj);
+// void recite_libram_conjuration (CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *scroll, OBJ_DATA *obj, bool fRead);
+// void brandish_sceptre_dead (CHAR_DATA *ch, OBJ_DATA *obj);
+// void wear_obj_misty_cloak (CHAR_DATA *ch, OBJ_DATA *obj);
+// void remove_obj_misty_cloak (CHAR_DATA *ch, OBJ_DATA *obj);
 
+
+//
+// LOCAL FUNCTIONS
+//
 
 /* RT part of the corpse looting code */
 bool check_arms (CHAR_DATA *ch, OBJ_DATA *obj);

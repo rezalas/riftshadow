@@ -30,22 +30,10 @@
 #include "comm.h"
 
 
+//
+// LOCAL FUNCTIONS
+//
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_quit);
-DECLARE_DO_FUN(do_yell);
-DECLARE_DO_FUN(do_follow);
-DECLARE_DO_FUN(do_murder);
-DECLARE_AFF_FUN(poison_tick);
-
-/*
- * Local functions
- */
-void upfile_update (void);
-
-/*
- * Advancement stuff.
- */
 void advance_level (CHAR_DATA *ch, bool hide);
 void gain_exp (CHAR_DATA *ch, int gain);
 /*

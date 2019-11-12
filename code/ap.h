@@ -19,14 +19,11 @@
 #include "act_info.h"
 #include "newmem.h"
 #include "act_comm.h"
+#include "act_info.h"
 
-DECLARE_DO_FUN(do_taunt);
-char *	format_obj_to_char (OBJ_DATA *obj, CHAR_DATA *ch, bool fShort);
-void command_execute_delay (CHAR_DATA *ch, char *command);
-void furcas_vanish (CHAR_DATA *ch, CHAR_DATA *mob);
-void insanity_two (CHAR_DATA *ch, int room);
-void insanity_fight (CHAR_DATA *ch);
-void mephisto_two (CHAR_DATA *ch, CHAR_DATA *victim, char *argument);
+//
+// LOCAL FUNCTIONS
+//
 
 void check_bloodlust (CHAR_DATA *ch, CHAR_DATA *victim);
 void check_leech (CHAR_DATA *ch, CHAR_DATA *victim);

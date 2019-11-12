@@ -35,6 +35,9 @@
 
 extern bool bDebug;
 
+/* buffer sizes */
+const int buf_size[MAX_BUF_LIST] = {16, 32, 64, 128, 256, 1024, 2048, 4096, 8192, 16384};
+
 NOTE_DATA *note_free;
 BAN_DATA *ban_free;
 DESCRIPTOR_DATA *descriptor_free;
@@ -1011,9 +1014,6 @@ void free_pstruct_data(MEM_DATA *memory)
 	mem_data_free = memory;
 	INVALIDATE(memory);
 }
-
-/* buffer sizes */
-const int buf_size[MAX_BUF_LIST] = {16, 32, 64, 128, 256, 1024, 2048, 4096, 8192, 16384};
 
 /* local procedure for finding the next acceptable size */
 /* -1 indicates out-of-boundary error */

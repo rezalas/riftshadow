@@ -14,6 +14,10 @@
 #include "interp.h"
 #include "db.h"
 
+//
+// LOCAL FUNCTIONS
+//
+
 bool check_ban (char *usite, int type, int host);
 void do_ban (CHAR_DATA *ch, char *argument);
 void do_unban (CHAR_DATA *ch, char *argument);

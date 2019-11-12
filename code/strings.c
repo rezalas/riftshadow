@@ -1,16 +1,10 @@
 #include "stdlibs/strings.h"
-#define UPCHAR(c)       ((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
 
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-int vsnprintf(char *str, size_t size, const char *format, va_list ap);
-char *strcpy(char *dest, const char *src);
-char *strncpy(char *dest, const char *src, size_t n);
-size_t strlen(const char *s);
-char *strcat(char *dest, const char *src);
+// int vsnprintf(char *str, size_t size, const char *format, va_list ap);
+// char *strcpy(char *dest, const char *src);
+// char *strncpy(char *dest, const char *src, size_t n);
+// size_t strlen(const char *s);
+// char *strcat(char *dest, const char *src);
 
 RString::RString()
 {

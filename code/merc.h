@@ -34,63 +34,6 @@
 #ifndef MERC_H
 #define MERC_H
 
-#define args( list )						list
-
-#define DECLARE_DO_FUN( fun )				DO_FUN				fun
-#define DECLARE_SPELL_FUN( fun )			SPELL_FUN			fun
-#define DECLARE_GAME_FUN( fun )				GAME_FUN			fun
-#define DECLARE_AFF_FUN( fun )				AFF_FUN				fun
-#define DECLARE_RAFF_FUN( fun )				RAFF_FUN			fun
-#define DECLARE_AAFF_FUN( fun )				AAFF_FUN			fun
-#define DECLARE_OAFF_FUN( fun )				OAFF_FUN			fun 
-#define DECLARE_RUNE_FUN( fun )				RUNE_FUN			fun
-
-#define DECLARE_MPROG_FUN_AGGRESS( fun )	MPROG_FUN_AGGRESS	fun
-#define DECLARE_MPROG_FUN_ATTACK( fun )		MPROG_FUN_ATTACK	fun
-#define DECLARE_MPROG_FUN_BRIBE( fun )		MPROG_FUN_BRIBE		fun
-#define DECLARE_MPROG_FUN_ENTRY( fun )		MPROG_FUN_ENTRY		fun
-#define DECLARE_MPROG_FUN_GREET( fun )		MPROG_FUN_GREET		fun
-#define DECLARE_MPROG_FUN_GIVE( fun )		MPROG_FUN_GIVE		fun
-#define DECLARE_MPROG_FUN_FIGHT( fun )		MPROG_FUN_FIGHT		fun
-#define DECLARE_MPROG_FUN_DEATH( fun )		MPROG_FUN_DEATH		fun
-#define DECLARE_MPROG_FUN_BEAT( fun )		MPROG_FUN_BEAT		fun
-#define DECLARE_MPROG_FUN_PULSE( fun )		MPROG_FUN_PULSE		fun
-#define DECLARE_MPROG_FUN_SPEECH( fun )		MPROG_FUN_SPEECH	fun
-#define DECLARE_MPROG_FUN_MOVE( fun )		MPROG_FUN_MOVE		fun
-
-#define DECLARE_IPROG_FUN_WEAR(fun)			IPROG_FUN_WEAR		fun
-#define DECLARE_IPROG_FUN_REMOVE(fun)		IPROG_FUN_REMOVE	fun
-#define DECLARE_IPROG_FUN_GET(fun)			IPROG_FUN_GET		fun
-#define	DECLARE_IPROG_FUN_LOOT(fun)			IPROG_FUN_LOOT		fun
-#define DECLARE_IPROG_FUN_DROP(fun)			IPROG_FUN_DROP		fun
-#define DECLARE_IPROG_FUN_SAC(fun)			IPROG_FUN_SAC		fun
-#define DECLARE_IPROG_FUN_ENTRY(fun)		IPROG_FUN_ENTRY		fun
-#define DECLARE_IPROG_FUN_GIVE(fun)			IPROG_FUN_GIVE		fun
-#define DECLARE_IPROG_FUN_GREET(fun)		IPROG_FUN_GREET		fun
-#define DECLARE_IPROG_FUN_FIGHT(fun)		IPROG_FUN_FIGHT		fun
-#define DECLARE_IPROG_FUN_DEATH(fun)		IPROG_FUN_DEATH		fun
-#define DECLARE_IPROG_FUN_SPEECH(fun)		IPROG_FUN_SPEECH	fun
-#define DECLARE_IPROG_FUN_PULSE(fun)		IPROG_FUN_PULSE		fun
-#define DECLARE_IPROG_FUN_INVOKE(fun)		IPROG_FUN_INVOKE	fun
-#define DECLARE_IPROG_FUN_OPEN(fun)			IPROG_FUN_OPEN		fun
-#define DECLARE_IPROG_FUN_LOOK(fun)			IPROG_FUN_LOOK		fun
-#define DECLARE_IPROG_FUN_VERB(fun)			IPROG_FUN_VERB		fun
-#define DECLARE_IPROG_FUN_HIT(fun)			IPROG_FUN_HIT		fun
-
-#define DECLARE_RPROG_FUN_PULSE(fun)		RPROG_FUN_PULSE		fun
-#define DECLARE_RPROG_FUN_ENTRY(fun)		RPROG_FUN_ENTRY		fun
-#define DECLARE_RPROG_FUN_MOVE(fun)			RPROG_FUN_MOVE		fun
-#define DECLARE_RPROG_FUN_DROP(fun)			RPROG_FUN_DROP		fun
-#define DECLARE_RPROG_FUN_SPEECH(fun)		RPROG_FUN_SPEECH	fun
-#define DECLARE_RPROG_FUN_OPEN(fun)			RPROG_FUN_OPEN		fun
-
-#define DECLARE_APROG_FUN_PULSE(fun)		APROG_FUN_PULSE		fun
-#define DECLARE_APROG_FUN_RESET(fun)		APROG_FUN_RESET		fun
-#define DECLARE_APROG_FUN_SUN(fun)			APROG_FUN_SUN		fun
-#define DECLARE_APROG_FUN_TICK(fun)			APROG_FUN_TICK		fun
-#define DECLARE_APROG_FUN_AGGRESS(fun)		APROG_FUN_AGGRESS	fun
-#define DECLARE_APROG_FUN_MYELL(fun)		APROG_FUN_MYELL		fun
-
 //
 // system calls
 //
@@ -98,7 +41,7 @@
 int remove();
 
 #ifndef __cplusplus
-#include <stdbool.h>
+	#include <stdbool.h>
 #endif
 
 #ifdef _WIN32
@@ -107,7 +50,7 @@ int remove();
 
 #ifndef RIFTINCLD
 #define RIFTINCLD
-#include "mud.h"
+	#include "mud.h"
 #endif /* RIFTINCLD */
 
 //
@@ -116,15 +59,70 @@ int remove();
 //
 
 #ifdef _AIX
-#ifndef const
-#define const
-#endif
-typedef int sh_int;
-typedef int bool;
-#define unix
+	#ifndef const
+	#define const
+	#endif /* const */
+
+	typedef int sh_int;
+	typedef int bool;
+
+	#define unix
 #else
-typedef short int sh_int;
+	typedef short int sh_int;
+#endif /* _AIX */
+
+
+/*
+ * OLC
+ * Use these macros to load any new area formats that you choose to
+ * support on your MUD.  See the new_load_area format below for
+ * a short example.
+ */
+#ifndef KEY
+#define KEY(literal, field, value)	\
+	if (!str_cmp(word, literal))	\
+	{								\
+		field = value;				\
+		fMatch = true;				\
+		break;						\
+	}
 #endif
+
+/* provided to free strings */
+#ifndef KEYS
+#define KEYS(literal, field, value)	\
+	if (!str_cmp(word, literal))	\
+	{								\
+		free_pstring(field);		\
+		field  = value;				\
+		fMatch = true;				\
+		break;						\
+	}
+#endif
+
+#ifndef KEYV
+#define KEYV(literal, field)		\
+	if (!str_cmp(word, literal))	\
+	{								\
+		fread_flag_new(field, fp);	\
+		fMatch = true;				\
+		break;						\
+	}
+#endif
+
+#ifndef SKEY
+#define SKEY(string, field)			\
+	if (!str_cmp(word, string))		\
+	{								\
+		free_pstring(field);		\
+		field = fread_string(fp);	\
+		fMatch = true;				\
+		break;						\
+	}
+#endif
+
+
+
 
 extern CMud RS;
 

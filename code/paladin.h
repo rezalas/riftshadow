@@ -18,6 +18,10 @@
 #include "fight.h"
 #include "skills.h"
 
+//
+// LOCAL FUNCTIONS
+//
+
 void spell_rites_of_preparation (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_spiritual_hammer (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void do_turn_undead (CHAR_DATA *ch, char *argument);

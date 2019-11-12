@@ -13,27 +13,27 @@
 #include "mud.h"
 #include "merc.h"
 #include "update.h"
-extern FILE *                  fpArea;
-extern char                    strArea[MAX_INPUT_LENGTH];
-extern char *			top_string;
-extern bool			fBootDb;
-extern char * help_greeting;
+extern FILE *fpArea;
+extern char strArea[MAX_INPUT_LENGTH];
+extern char *top_string;
+extern bool fBootDb;
+extern char *help_greeting;
 
 
-void    init_mm         args( ( void ) );
+void init_mm (void);
 void sort_areas(void);
 void load_race_info(void);
-void    fix_exits       args( ( void ) );
-void    find_adjacents  args( ( void ) );
-void    clean_notes     args( ( void ) );
-void    load_improgs    args( ( FILE *fp ) );
-void    load_specs      args( ( FILE *fp ) );
-void    reset_area      args( ( AREA_DATA * pArea ) );
-long    process_bounty  args( ( char *name, long bounty));
-void    load_socials    args( ( FILE *fp ) );
-void    load_votes      args( ( void ) );
-void    load_cabal_items        args( ( void ) );
-void reset_chessboard ( void );
+void fix_exits (void);
+void find_adjacents (void);
+void clean_notes (void);
+void load_improgs (FILE *fp);
+void load_specs (FILE *fp);
+void reset_area (AREA_DATA * pArea);
+long process_bounty (char *name, long bounty);
+void load_socials (FILE *fp);
+void load_votes (void);
+void load_cabal_items (void);
+void reset_chessboard (void);
 
 CMud RS;
 

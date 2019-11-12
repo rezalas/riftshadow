@@ -11,29 +11,7 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include "merc.h"
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-
-extern char *palloc_string (const char *str);
-extern void free_pstring (char *pstr);
-extern void send_to_char (const char *txt, CHAR_DATA *ch);
-extern char *one_argument (char *argument, char *arg_first);
-extern void smash_tilde (char *str);
-extern bool str_cmp (const char *astr, const char *bstr);
-
-char *format_string (char *oldstring);
-char *first_arg (char *argument, char *arg_first, bool fCase);
-
+#include "string.h"
 
 /*****************************************************************************
  Name:		string_edit

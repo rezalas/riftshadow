@@ -6,6 +6,8 @@
 #ifndef MAX_STAT
 #define MAX_STAT 5
 #endif
+
+
 class CRace
 {
 friend class CMud;

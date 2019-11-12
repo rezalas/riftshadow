@@ -19,12 +19,15 @@
 #include "mprog.h"
 #include "act_obj.h"
 
-#define STAGE(ch)		ch->pcdata->quests[nQuestIndex]
-#define SET_STAGE(ch, i) ch->pcdata->quests[nQuestIndex] = i
+#define STAGE(ch)					ch->pcdata->quests[nQuestIndex]
+#define SET_STAGE(ch, i)			ch->pcdata->quests[nQuestIndex] = i
 
-#define SMITH_QUEST_LASTCOMP "Smith Quest Last Component"
-#define SMITH_QUEST_COMP_ACQUIRED "Smith Quest Components Used"
+#define SMITH_QUEST_LASTCOMP		"Smith Quest Last Component"
+#define SMITH_QUEST_COMP_ACQUIRED	"Smith Quest Components Used"
 
+//
+// LOCAL FUNCTIONS
+//
 
 void do_clearquests(CHAR_DATA *ch, char *argument);
 int agrees(CHAR_DATA *ch, char *speech);

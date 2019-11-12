@@ -13,13 +13,11 @@
 #include "tables.h"
 #include "update.h"
 #include "devextra.h"
+#include "act_comm.h"
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_groups);
-DECLARE_DO_FUN(do_help);
-DECLARE_DO_FUN(do_say);
-
-
+//
+// LOCAL FUNCTIONS
+//
 
 void do_gain (CHAR_DATA *ch, char *argument);
 /* RT spells and skills show the players spells (or skills) */

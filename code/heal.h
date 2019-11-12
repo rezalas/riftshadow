@@ -9,8 +9,11 @@
 #include "merc.h"
 #include "magic.h"
 #include "devextra.h"
+#include "act_comm.h"
 
-DECLARE_DO_FUN(do_say);
+//
+// LOCAL FUNCTIONS
+//
 
 float get_mod_cost(CHAR_DATA *ch, int cost);
 /* This is all from Rom except the restoration spell */
