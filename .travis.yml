@@ -1,5 +1,19 @@
+matrix:
+    include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+before_install:
+    - eval "${MATRIX_EVAL}"
+
 language: cpp
 compiler: 
     - gcc
 
-script: make -D_GLIBCXX_USE_C99 -std=c++11 -C ./code/ #&& ./code/make test
+script: make -C ./code/ #&& ./code/make test
