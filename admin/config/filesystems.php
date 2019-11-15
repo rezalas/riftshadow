@@ -43,6 +43,13 @@ return [
 
     'disks' => [
 
+        'players' => [
+            'driver' => 'local',
+            'root' => base_path().env('PLAYER_DIRECTORY', '/../player/'),
+        ],
+
+        // TODO: Add disk for config file in root of project dir
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

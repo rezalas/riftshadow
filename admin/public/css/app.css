@@ -11100,3 +11100,8 @@ a.text-dark:focus {
   }
 }
 
+.was-validated select[size].form-control:invalid,
+select[size].form-control.is-invalid {
+  background-image: none;
+}
+

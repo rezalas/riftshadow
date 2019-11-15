@@ -6,6 +6,3 @@
 
 .vscode/launch.json
 .vscode/tasks.json
-
-admin/vendor
-admin/node_modules
