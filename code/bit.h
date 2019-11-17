@@ -23,50 +23,10 @@ struct flag_stat_type
 	bool stat;
 };
 
+//
+// LOCAL FUNCTIONS
+//
 
-
-/*****************************************************************************
- Name:		flag_stat_table
- Purpose:	This table catagorizes the tables following the lookup
- 		functions below into stats and flags.  Flags can be toggled
- 		but stats can only be assigned.  Update this table when a
- 		new set of flags is installed.
- ****************************************************************************/
-const struct flag_stat_type flag_stat_table[] =
-{
-	{ area_flags, false	},
-	{ sex_flags, true	},
-	{ exit_flags, false	},
-	{ door_resets, true	},
-	{ room_flags, false	},
-	{ sector_flags, true },
-	{ type_flags, true },
-	{ extra_flags, false },
-	{ wear_flags, false },
-	{ act_flags, false },
-	{ affect_flags, false },
-	{ apply_flags, true },
-	{ wear_loc_flags, true },
-	{ wear_loc_strings, true },
-	{ weapon_flags, true },
-	{ container_flags, false },
-
-	/* ROM specific flags: */
-
-	{ material_type, true },
-	{ form_flags, false },
-	{ part_flags, false },
-	{ ac_type, true },
-	{ size_flags, true },
-	{ position_flags, true },
-	{ off_flags, false },
-	{ imm_flags, false },
-	{ res_flags, false },
-	{ vuln_flags, false },
-	{ weapon_class, true },
-	{ weapon_type2, false },
-	{ 0, 0 }
-};
 
 /*****************************************************************************
  Name:		is_stat( table )

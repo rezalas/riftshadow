@@ -31,6 +31,10 @@
 
 /* #define VERBOSE */
 
+//
+// LOCAL FUNCTIONS
+//
+
 /*****************************************************************************
  Name:		fix_string
  Purpose:	Returns a string without \r and ~.

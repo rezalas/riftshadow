@@ -13,20 +13,6 @@
 
 #include "olc_act.h"
 
-bool show_version(CHAR_DATA *ch, char *argument)
-{
-	send_to_char(VERSION, ch);
-	send_to_char("\n\r", ch);
-	send_to_char(AUTHOR, ch);
-	send_to_char("\n\r", ch);
-	send_to_char(DATE, ch);
-	send_to_char("\n\r", ch);
-	send_to_char(CREDITS, ch);
-	send_to_char("\n\r", ch);
-
-	return false;
-}
-
 /*
  * This table contains help commands and a brief description of each.
  * ------------------------------------------------------------------
@@ -91,6 +77,20 @@ const struct wear_type wear_table[] =
 	{WEAR_HOLD, ITEM_WEAR_HOLD},
 	{NO_FLAG, NO_FLAG}
 };
+
+bool show_version(CHAR_DATA *ch, char *argument)
+{
+	send_to_char(VERSION, ch);
+	send_to_char("\n\r", ch);
+	send_to_char(AUTHOR, ch);
+	send_to_char("\n\r", ch);
+	send_to_char(DATE, ch);
+	send_to_char("\n\r", ch);
+	send_to_char(CREDITS, ch);
+	send_to_char("\n\r", ch);
+
+	return false;
+}
 
 void show_flag_cmds(CHAR_DATA *ch, const struct flag_type *flag_table)
 {

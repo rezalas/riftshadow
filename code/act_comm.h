@@ -31,26 +31,25 @@
 #include "act_move.h"
 #include "handler.h"
 #include "ap.h"
+#include "thief.h"
 
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_quit	);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_buglist);
-DECLARE_DO_FUN(do_undisguise);
-DECLARE_AFF_FUN(traitor_pulse);
 #define PDEATH_LOG_FILE	RIFT_AREA_DIR "/permdeaths.txt"
 #define DEATH_LOG_FILE	RIFT_AREA_DIR "/tempdeaths.txt"
 #define MOB_LOG_FILE	RIFT_AREA_DIR "/mobdeaths.txt"
 
-/* TODO: unused functions? */
-void obj_say_lordly (CHAR_DATA *ch,OBJ_DATA *obj,char *argument);
-void mob_say_lady (CHAR_DATA *ch, char *argument);
-void say_prog_summon_demon (CHAR_DATA *ch,char *argument);
-void say_prog_raise_shadowlord (CHAR_DATA *ch,char *argument);
-void say_prog_karguska (CHAR_DATA *ch,char *argument);
-bool check_ooc (CHAR_DATA *ch, char *argument, char*type);
-/* END TODO */
+//
+// TODO: UNKNOWN FUNCTIONS
+//
+
+// void obj_say_lordly (CHAR_DATA *ch,OBJ_DATA *obj,char *argument);
+// void mob_say_lady (CHAR_DATA *ch, char *argument);
+// void say_prog_summon_demon (CHAR_DATA *ch,char *argument);
+// void say_prog_raise_shadowlord (CHAR_DATA *ch,char *argument);
+// void say_prog_karguska (CHAR_DATA *ch,char *argument);
+
+//
+// LOCAL FUNCTIONS
+//
 
 void do_delet (CHAR_DATA *ch, char *argument);
 void do_delete (CHAR_DATA *ch, char *argument);
@@ -66,10 +65,10 @@ void do_global (CHAR_DATA *ch,char *argument);
 void do_newbie (CHAR_DATA *ch, char *argument);
 void do_builder (CHAR_DATA *ch, char *argument);
 void do_immtalk (CHAR_DATA *ch, char *argument);
-const char *upstring(const char *i);
-const char *lowstring(const char *i);
 /* Used for an object...take this out if you don't want it */
 void obj_say_heavenly_sceptre (CHAR_DATA *ch, OBJ_DATA *obj,char *argument);
+const char *upstring(const char *i);
+const char *lowstring(const char *i);
 void do_say (CHAR_DATA *ch, char *argument);
 void say_to (CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra);
 void do_whisper (CHAR_DATA *ch, char *argument);
@@ -85,7 +84,7 @@ void do_pmote (CHAR_DATA *ch, char *argument);
 /* Simple, yet brilliant.  Notify immortals when players are using words that
  * are offensive/harrassing or commonly associated with OOC speech.  Immortals
  * can then respond accordingly if a rule violation is detected.
- * 											-El
+ * -El
  */
 bool check_ooc (CHAR_DATA *ch, char *argument, char *type);
 void do_bug (CHAR_DATA *ch, char *argument);

@@ -39,13 +39,7 @@
 #include "comm.h"
 #include "db.h"
 #include "bit.h"
-
-//#include "string.c"
-extern void string_append (CHAR_DATA *ch, char **pString);
-extern char *string_replace (char * orig, char * old, char * newstr);
-extern char *format_string (char *oldstring);
-extern char *string_unpad (char * argument);
-extern char *string_proper (char * argument);
+#include "string.h"
 
 //#include "iprog.h"
 //#include "mprog.h"
@@ -61,26 +55,22 @@ extern bool iprog_unset (OBJ_INDEX_DATA *, const char *, const char *);
 extern bool rprog_unset (ROOM_INDEX_DATA *, const char *, const char *);
 
 
-/* Return true if area changed, false if not. */
-#define REDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
-#define OEDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
-#define MEDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
-#define AEDIT( fun )	bool fun( CHAR_DATA *ch, char *argument )
-
-DECLARE_DO_FUN(do_resets);
-
 struct olc_help_type
 {
-    char *command;
-    const void *structure;
-    char *desc;
+	char *command;
+	const void *structure;
+	char *desc;
 };
 
 struct wear_type
 {
-    int	wear_loc;
-    int	wear_bit;
+	int	wear_loc;
+	int	wear_bit;
 };
+
+//
+// LOCAL FUNCTIONS
+//
 
 
 bool show_version (CHAR_DATA *ch, char *argument);
@@ -105,79 +95,76 @@ void show_skill_cmds (CHAR_DATA *ch, int tar);
  Purpose:	Displays settable special functions.
  Called by:	show_help(olc_act.c).
  ****************************************************************************/
+
 /*
 void show_spec_cmds (CHAR_DATA *ch);
 */
+
 /*****************************************************************************
  Name:		show_help
  Purpose:	Displays help for many tables used in OLC.
  Called by:	olc interpreters.
  ****************************************************************************/
 bool show_help (CHAR_DATA *ch, char *argument);
-/*****************************************************************************
- Name:		check_range( lower vnum, upper vnum )
- Purpose:	Ensures the range spans only one area.
- Called by:	aedit_vnum(olc_act.c).
- ****************************************************************************/
-bool check_range( int lower, int upper );
-AREA_DATA *get_vnum_area( int vnum );
-
-/*
- * Area Editor Functions.
- */
-bool aedit_type (CHAR_DATA *ch, char *argument);
-bool aedit_prog (CHAR_DATA *ch, char *argument);
-bool aedit_security (CHAR_DATA *ch, char *argument );
-bool aedit_show (CHAR_DATA *ch, char *argument );
-bool aedit_reset (CHAR_DATA *ch, char *argument );
-bool aedit_create (CHAR_DATA *ch, char *argument );
-bool aedit_name (CHAR_DATA *ch, char *argument );
-bool aedit_credits (CHAR_DATA *ch, char *argument );
-bool aedit_file (CHAR_DATA *ch, char *argument );
-bool aedit_level (CHAR_DATA *ch, char *argument );
-bool aedit_age (CHAR_DATA *ch, char *argument );
-bool aedit_builder (CHAR_DATA *ch, char *argument );
-bool aedit_vnum (CHAR_DATA *ch, char *argument );
-bool aedit_lvnum (CHAR_DATA *ch, char *argument );
-bool aedit_uvnum (CHAR_DATA *ch, char *argument );
-bool aedit_climate (CHAR_DATA *ch, char *argument);
-
-int aclimate_lookup (const char *name);
-
-/*
- * Room Editor Functions.
- */
-bool change_exit( CHAR_DATA *ch, char *argument, int door );
 bool redit_rlist (CHAR_DATA *ch, char *argument);
 bool redit_mview (CHAR_DATA *ch, char *argument);
 bool redit_mlist (CHAR_DATA *ch, char *argument);
 bool redit_olist (CHAR_DATA *ch, char *argument);
 bool redit_mshow (CHAR_DATA *ch, char *argument);
 bool redit_oshow (CHAR_DATA *ch, char *argument);
+/*****************************************************************************
+ Name:		check_range( lower vnum, upper vnum )
+ Purpose:	Ensures the range spans only one area.
+ Called by:	aedit_vnum(olc_act.c).
+ ****************************************************************************/
+bool check_range( int lower, int upper);
+AREA_DATA *get_vnum_area( int vnum);
+bool medit_vnum (CHAR_DATA *ch, char *argument);
+bool medit_group (CHAR_DATA *ch, char *argument);
+bool medit_speech (CHAR_DATA *ch, char *argument);
+bool medit_prog (CHAR_DATA *ch, char *argument);
+bool oedit_prog (CHAR_DATA *ch, char *argument);
+bool oedit_spec (CHAR_DATA *ch, char *argument);
 bool redit_trap (CHAR_DATA *ch, char *argument);
 bool redit_prog (CHAR_DATA *ch, char *argument);
 bool redit_altdesc (CHAR_DATA *ch, char *argument);
-bool redit_cabal (CHAR_DATA *ch, char *argument );
-bool redit_owner (CHAR_DATA *ch, char *argument );
-bool redit_show (CHAR_DATA *ch, char *argument );
-bool redit_north (CHAR_DATA *ch, char *argument );
-bool redit_south (CHAR_DATA *ch, char *argument );
-bool redit_east (CHAR_DATA *ch, char *argument );
-bool redit_west (CHAR_DATA *ch, char *argument );
-bool redit_up (CHAR_DATA *ch, char *argument );
-bool redit_down (CHAR_DATA *ch, char *argument );
-bool redit_ed (CHAR_DATA *ch, char *argument );
-bool redit_create (CHAR_DATA *ch, char *argument );
-bool redit_name (CHAR_DATA *ch, char *argument );
+bool aedit_type (CHAR_DATA *ch, char *argument);
+bool aedit_prog (CHAR_DATA *ch, char *argument);
+bool aedit_security (CHAR_DATA *ch, char *argument);
+bool aedit_show (CHAR_DATA *ch, char *argument);
+bool aedit_reset (CHAR_DATA *ch, char *argument);
+bool aedit_create (CHAR_DATA *ch, char *argument);
+bool aedit_name (CHAR_DATA *ch, char *argument);
+bool aedit_credits (CHAR_DATA *ch, char *argument);
+bool aedit_file (CHAR_DATA *ch, char *argument);
+bool aedit_level (CHAR_DATA *ch, char *argument);
+bool aedit_age (CHAR_DATA *ch, char *argument);
+bool aedit_builder (CHAR_DATA *ch, char *argument);
+bool aedit_vnum (CHAR_DATA *ch, char *argument);
+bool aedit_lvnum (CHAR_DATA *ch, char *argument);
+bool aedit_uvnum (CHAR_DATA *ch, char *argument);
+int aclimate_lookup (const char *name);
+bool aedit_climate (CHAR_DATA *ch, char *argument);
+bool redit_cabal (CHAR_DATA *ch, char *argument);
+bool redit_owner (CHAR_DATA *ch, char *argument);
+bool redit_show (CHAR_DATA *ch, char *argument);
+bool change_exit( CHAR_DATA *ch, char *argument, int door);
+bool redit_north (CHAR_DATA *ch, char *argument);
+bool redit_south (CHAR_DATA *ch, char *argument);
+bool redit_east (CHAR_DATA *ch, char *argument);
+bool redit_west (CHAR_DATA *ch, char *argument);
+bool redit_up (CHAR_DATA *ch, char *argument);
+bool redit_down (CHAR_DATA *ch, char *argument);
+bool redit_ed (CHAR_DATA *ch, char *argument);
+bool redit_create (CHAR_DATA *ch, char *argument);
+bool redit_name (CHAR_DATA *ch, char *argument);
 void redit_end_fun(CHAR_DATA *ch, char *argument);
-bool redit_desc (CHAR_DATA *ch, char *argument );
-bool redit_heal (CHAR_DATA *ch, char *argument );
-bool redit_mana (CHAR_DATA *ch, char *argument );
-bool redit_clan (CHAR_DATA *ch, char *argument );
-bool redit_format (CHAR_DATA *ch, char *argument );
-bool redit_mreset (CHAR_DATA *ch, char *argument );
-bool redit_oreset (CHAR_DATA *ch, char *argument );
-
+bool redit_desc (CHAR_DATA *ch, char *argument);
+bool redit_heal (CHAR_DATA *ch, char *argument);
+bool redit_mana (CHAR_DATA *ch, char *argument);
+bool redit_clan (CHAR_DATA *ch, char *argument);
+bool redit_format (CHAR_DATA *ch, char *argument);
+bool redit_mreset (CHAR_DATA *ch, char *argument);
 /*****************************************************************************
  Name:		wear_loc
  Purpose:	Returns the location of the bit that matches the count.
@@ -191,22 +178,16 @@ int wear_loc (int bits, int count);
  Called by:	redit_oreset(olc_act.c).
  ****************************************************************************/
 int wear_bit (int loc);
-
-
-/*
- * Object Editor Functions.
- */
+bool redit_oreset (CHAR_DATA *ch, char *argument);
 void show_obj_values (CHAR_DATA *ch, OBJ_INDEX_DATA *obj);
 bool set_obj_values (CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *argument);
-bool set_value (CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, char *argument, int value);
-
-bool oedit_prog (CHAR_DATA *ch, char *argument);
-bool oedit_spec (CHAR_DATA *ch, char *argument);
 bool oedit_show (CHAR_DATA *ch, char *argument);
 bool oedit_addapply (CHAR_DATA *ch, char *argument);
+
 /*
 bool oedit_addaffect (CHAR_DATA *ch, char *argument);
 */
+
 /*
  * My thanks to Hans Hvidsten Birkeland and Noam Krendel(Walker)
  * for really teaching me how to manipulate pointers.
@@ -224,6 +205,7 @@ bool oedit_flag (CHAR_DATA *ch, char *argument);
 bool oedit_name (CHAR_DATA *ch, char *argument);
 bool oedit_short (CHAR_DATA *ch, char *argument);
 bool oedit_long (CHAR_DATA *ch, char *argument);
+bool set_value (CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, char *argument, int value);
 /*****************************************************************************
  Name:		oedit_values
  Purpose:	Finds the object and sets its value.
@@ -239,34 +221,25 @@ bool oedit_weight (CHAR_DATA *ch, char *argument);
 bool oedit_cost (CHAR_DATA *ch, char *argument);
 bool oedit_create (CHAR_DATA *ch, char *argument);
 bool oedit_ed (CHAR_DATA *ch, char *argument);
-bool oedit_liqlist (CHAR_DATA *ch, char *argument);
-
-/* ROM object functions : */
 bool oedit_extra (CHAR_DATA *ch, char *argument);      /* Moved out of oedit() due to naming conflicts -- Hugin */
 bool oedit_wear (CHAR_DATA *ch, char *argument);      /* Moved out of oedit() due to naming conflicts -- Hugin */
 bool oedit_type (CHAR_DATA *ch, char *argument);      /* Moved out of oedit() due to naming conflicts -- Hugin */
 bool oedit_material (CHAR_DATA *ch, char *argument);
 bool oedit_level (CHAR_DATA *ch, char *argument);
 bool oedit_condition (CHAR_DATA *ch, char *argument);
-
-/*
- * Mobile Editor Functions.
- */
-void clean_mob_class (MOB_INDEX_DATA *pMob, int class_index);
-bool medit_vnum (CHAR_DATA *ch, char *argument);
-bool medit_group (CHAR_DATA *ch, char *argument);
-bool medit_speech (CHAR_DATA *ch, char *argument);
-bool medit_prog (CHAR_DATA *ch, char *argument);
 bool medit_limit (CHAR_DATA *ch, char *argument);
 bool medit_optional (CHAR_DATA *ch, char *argument);
 bool medit_yell (CHAR_DATA *ch, char *argument);
 bool medit_notes (CHAR_DATA *ch, char *argument);
+void clean_mob_class (MOB_INDEX_DATA *pMob, int class_index);
 bool medit_class (CHAR_DATA *ch, char *argument);
 bool medit_show (CHAR_DATA *ch, char *argument);
 bool medit_create (CHAR_DATA *ch, char *argument);
+
 /*
 bool medit_spec (CHAR_DATA *ch, char *argument);
 */
+
 bool medit_damtype (CHAR_DATA *ch, char *argument);
 bool medit_align (CHAR_DATA *ch, char *argument);
 bool medit_level (CHAR_DATA *ch, char *argument);
@@ -276,7 +249,6 @@ bool medit_short (CHAR_DATA *ch, char *argument);
 bool medit_name (CHAR_DATA *ch, char *argument);
 bool medit_cabal (CHAR_DATA *ch, char *argument);
 bool medit_shop (CHAR_DATA *ch, char *argument);
-
 /* ROM medit functions: */
 bool medit_sex (CHAR_DATA *ch, char *argument);          /* Moved out of medit() due to naming conflicts -- Hugin */
 bool medit_act (CHAR_DATA *ch, char *argument);          /* Moved out of medit() due to naming conflicts -- Hugin */
@@ -297,5 +269,6 @@ bool medit_race (CHAR_DATA *ch, char *argument);
 bool medit_position (CHAR_DATA *ch, char *argument);
 bool medit_gold (CHAR_DATA *ch, char *argument);
 bool medit_hitroll (CHAR_DATA *ch, char *argument);
+bool oedit_liqlist (CHAR_DATA *ch, char *argument);
 
 #endif /* OLC_ACT_H */

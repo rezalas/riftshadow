@@ -31,22 +31,18 @@
  *       found in the file /Tartarus/doc/tartarus.doc                       *
  ****************************************************************************/
 
-/* vals from db.c */
-
 #ifndef DB_H
 #define DB_H
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 #include <ctype.h>
 #include <time.h>
 #include <sys/types.h>
 #include <sys/time.h>
-/* #include <sys/resource.h> */
 #include "merc.h"
-#include "db.h"
+#include "db2.h"
 #include "recycle.h"
 #include "lookup.h"
 #include "tables.h"
@@ -64,16 +60,11 @@
 #include "misc.h"
 #include "dioextra.h"
 
-// TODO: currently in db2.c - make db2.h
-extern void bugout (char *reason);
-
-
-
 #ifndef OLD_RAND
-// long random();
-void srandom(unsigned int);
-int getpid();
-time_t time(time_t *tloc);
+#define OLD_RAND
+	void srandom(unsigned int);
+	int getpid();
+	time_t time(time_t *tloc);
 #endif
 
 
@@ -101,120 +92,117 @@ extern AREA_DATA *area_first;
 /* from db2.c */
 extern int social_count;
 
-/* conversion from db.h */
-void convert_mob(MOB_INDEX_DATA *mob);
-void convert_obj(OBJ_INDEX_DATA *obj);
+// macro for flag swapping
+#define GET_UNSET(flag1,flag2)		(~(flag1)&((flag1)|(flag2)))
 
-/* macro for flag swapping */
-#define GET_UNSET(flag1,flag2) (~(flag1)&((flag1)|(flag2)))
+// Magic number for memory allocation
+#define MAGIC_NUM					52571214
 
-/* Magic number for memory allocation */
-#define MAGIC_NUM 52571214
+//#define social_debug				0
 
-/*
- * OLC
- * Use these macros to load any new area formats that you choose to
- * support on your MUD.  See the new_load_area format below for
- * a short example.
- */
-#ifndef KEY
-#define KEY(literal, field, value)	\
-	if (!str_cmp(word, literal))	\
-	{								\
-		field = value;				\
-		fMatch = true;				\
-		break;						\
-	}
-#endif
+//
+// LOCAL FUNCTIONS
+//
 
-#ifndef SKEY
-#define SKEY(string, field)			\
-	if (!str_cmp(word, string))		\
-	{								\
-		free_pstring(field);		\
-		field = fread_string(fp);	\
-		fMatch = true;				\
-		break;						\
-	}
-#endif
-
-//#define social_debug 0
-
-char *display_name_lookup args((long bitv, const struct display_type *flag_table));
-char *restrict_name_lookup args((long bitv));
-int sex_lookup args((const char *name));
-
-
-/* func from db.c */
-extern void assign_area_vnum( int vnum );                    /* OLC */
-
-char *flag_name_lookup args((long bitv, const struct flag_type *flag_table));
-int flag_lookup args((const char *name, const struct flag_type *flag_table));
-char *bitvector_to_flag args((long bitvect[]));
-int flag_index_ilookup args((int i, const struct flag_type *flag_table));
-void reset_chessboard(void);
-void sort_areas(void);
-void load_race_info(void);
-
-/*
- * Local booting procedures.
- */
-void init_mm args((void));
-void load_area args((FILE * fp));
-void new_load_area args((FILE * fp)); /* OLC */
-void load_mobs args((FILE * fp));
-void load_objs args((FILE * fp));
-void load_resets args((FILE * fp));
-void load_newresets args((FILE * fp));
-void load_rooms args((FILE * fp));
-void load_socials args((FILE * fp));
-void load_votes args((void));
-void load_cabal_items args((void));
-void fix_exits args((void));
-void find_adjacents args((void));
-void clean_notes args((void));
-void load_improgs args((FILE * fp));
-void load_specs args((FILE * fp));
-void reset_area args((AREA_DATA * pArea));
-
-void area_update(void);
-void update_db_gold(void);
-void clone_object (OBJ_DATA *parent, OBJ_DATA *clone);
-void reset_room (ROOM_INDEX_DATA *pRoom);
 char *munch (char *str);
-
-int number_door (void);
-void tail_chain(void);
-long number_mm (void);
-int number_bits (int width);
+void update_db_gold(void);
+void load_area (FILE * fp);
+void sort_areas (void);
+void new_load_area (FILE * fp);				/* OLC */
+void assign_area_vnum (int vnum);			/* OLC */
+/*
+ * Adds a reset to a room.  OLC
+ * Similar to add_reset in olc.c
+ */
+void new_reset(ROOM_INDEX_DATA *pR, RESET_DATA *pReset);
+void load_resets (FILE * fp);
+/*
+ * Snarf a shop section.
+ */
+void load_shops(FILE *fp);
+void load_cabal_items (void);
+void fix_exits (void);
+void find_adjacents (void);
+void area_update(void);
+void reset_room (ROOM_INDEX_DATA *pRoom);	/* OLC */
+void reset_area (AREA_DATA * pArea);		/* OLC */
+CHAR_DATA *create_mobile (MOB_INDEX_DATA *pMobIndex);
+void clone_mobile (CHAR_DATA *parent, CHAR_DATA *clone);
+OBJ_DATA *create_object (OBJ_INDEX_DATA *pObjIndex, int level);
+void clone_object (OBJ_DATA *parent, OBJ_DATA *clone);
+void clear_char(CHAR_DATA *ch);
+char *get_extra_descr (const char *name, EXTRA_DESCR_DATA *ed);
+MOB_INDEX_DATA *get_mob_index (int vnum);
+OBJ_INDEX_DATA *get_obj_index(int vnum);
+ROOM_INDEX_DATA *get_room_index (int vnum);
 char fread_letter (FILE *fp);
 int fread_number (FILE *fp);
 long fread_flag (FILE *fp);
 void fread_flag_new (long vector[], FILE *fp);
 long vector_convert (char letter);
+long flag_convert (char letter);
+void fread_vector(long vector[], FILE *fp);
 char *fread_string (FILE *fp);
+char *fread_string_eol(FILE *fp);
 void fread_to_eol (FILE *fp);
 char *fread_word (FILE *fp);
-long flag_convert (char letter);
-void append_file (CHAR_DATA *ch, char *file, char *str);
-void clone_mobile (CHAR_DATA *parent, CHAR_DATA *clone);
-void log_string (const char *str);
+/*
+ * Allocate some ordinary memory,
+ *   with the expectation of freeing it someday.
+ */
+void *iamlame(int sMem);
+/*
+ * Free some memory.
+ * Recycle it back onto the free list for blocks of that size.
+ */
+void soami(void *pMem, int sMem);
+/*
+ * Allocate some permanent memory.
+ * Permanent memory is never freed,
+ *   pointers into it may be copied safely.
+ */
+void *crappyold(int sMem);
+/*
+ * Duplicate a string into dynamic memory.
+ * Fread_strings are read-only and shared.
+ */
+char *iamnotereet(const char *str);
+void do_areas(CHAR_DATA *ch, char *argument);
+void do_memory(CHAR_DATA *ch, char *argument);
+void do_dump(CHAR_DATA *ch, char *argument);
 int number_fuzzy (int number);
-bool str_infix (const char *astr, const char *bstr);
-ROOM_INDEX_DATA *get_room_index(int vnum);
-MOB_INDEX_DATA *get_mob_index (int vnum);
-ROOM_INDEX_DATA *get_room_index (int vnum);
+int number_range (int from, int to);
+int number_percent (void);
+int number_door (void);
+int number_bits (int width);
+void init_mm (void);
+long number_mm (void);
 int dice (int number, int size);
-CHAR_DATA *create_mobile (MOB_INDEX_DATA *pMobIndex);
+int interpolate(int level, int value_00, int value_32);
+void smash_tilde (char *str);
 bool str_cmp (const char *astr, const char *bstr);
 bool str_prefix (const char *astr, const char *bstr);
+bool str_infix (const char *astr, const char *bstr);
 bool str_suffix (const char *astr, const char *bstr);
 char *capitalize (const char *str);
-int number_percent (void);
-int number_range (int from, int to);
-void smash_tilde (char *str);
-OBJ_INDEX_DATA *get_obj_index(int vnum);
-OBJ_DATA *create_object (OBJ_INDEX_DATA *pObjIndex, int level);
-char *get_extra_descr (const char *name, EXTRA_DESCR_DATA *ed);
+void append_file (CHAR_DATA *ch, char *file, char *str);
+/*
+ * Reports a bug.
+ */
+void bug(const char *str, int param);
+void log_string (const char *str);
+void tail_chain(void);
+void do_force_reset(CHAR_DATA *ch, char *argument);
+/*
+void do_alist(CHAR_DATA *ch,char *argument);
+*/
+void do_llimit(CHAR_DATA *ch, char *argument);
+void load_rooms (FILE *fp);
+void load_votes (void);
+void load_newresets (FILE * fp);
+void clean_notes (void);
+void load_race_info (void);
+char intflag_to_char(int i);
+char *bitvector_to_flag (long bitvect[]);
 
 #endif /* DB_H */

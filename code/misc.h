@@ -19,6 +19,10 @@ extern sh_int chessboard[8][8];
 extern CHAR_DATA *chess_white;
 extern CHAR_DATA *chess_black;
 
+//
+// LOCAL FUNCTIONS
+//
+
 char *act_msg (const char *point, CHAR_DATA *ch);
 void do_rngtest (CHAR_DATA *ch, char *argument);
 int next_sline (SPEECH_DATA *speech);

@@ -29,48 +29,20 @@
 #include "skills.h"
 #include "db.h"
 #include "magic.h"
-
-typedef struct multdata MULTDATA;
-
-struct multdata {
-   DESCRIPTOR_DATA *des;
-};
-
-
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_rstat);
-DECLARE_DO_FUN(do_mstat);
-DECLARE_DO_FUN(do_ostat);
-DECLARE_DO_FUN(do_astat);
-DECLARE_DO_FUN(do_rset);
-DECLARE_DO_FUN(do_mset);
-DECLARE_DO_FUN(do_oset);
-DECLARE_DO_FUN(do_sset);
-DECLARE_DO_FUN(do_mfind);
-DECLARE_DO_FUN(do_ofind);
-DECLARE_DO_FUN(do_slookup);
-DECLARE_DO_FUN(do_mload);
-DECLARE_DO_FUN(do_oload);
-DECLARE_DO_FUN(do_quit);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_stand);
-DECLARE_DO_FUN(do_force);
-DECLARE_DO_FUN(do_vmstat);
-DECLARE_DO_FUN(do_vostat);
-DECLARE_DO_FUN(buglist_end_fun);
-
-DECLARE_MPROG_FUN_PULSE(pulse_prog_area_echo_ward);
+#include "mprog.h"
 
 #define GOD_LOG_FILE	"glog.txt"
 
-/*
- * Local functions.
- */
-void log_naughty (CHAR_DATA *ch, char *argument, int logtype);
-void do_sgset (CHAR_DATA *ch, char *argument);
-char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
-ROOM_INDEX_DATA * find_location	(CHAR_DATA *ch, char *arg);
+typedef struct multdata MULTDATA;
+
+struct multdata
+{
+	DESCRIPTOR_DATA *des;
+};
+
+//
+// LOCAL FUNCTIONS
+//
 
 void do_wiznet (CHAR_DATA *ch, char *argument);
 void wiznet (char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_skip, int min_level);

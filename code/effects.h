@@ -14,6 +14,9 @@
 #include "db.h"
 #include "magic.h"
 
+//
+// LOCAL FUNCTIONS
+//
 
 void acid_effect (void *vo, int level, int dam, int target);
 void cold_effect (void *vo, int level, int dam, int target);

@@ -12,8 +12,12 @@
 #include "comm.h"
 #include "interp.h"
 #include "db.h"
+#include "lookup.h"
 
-int flag_lookup (const char *name, const struct flag_type *flag_table);
+//
+// LOCAL FUNCTIONS
+//
+
 void do_flag (CHAR_DATA *ch, char *argument);
 
 #endif /* FLAGS_H */

@@ -29,30 +29,9 @@
 
 #define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
 
-#ifndef KEY
-#define KEY( literal, field, value )                    \
-                if ( !str_cmp( word, literal ) )        \
-                {                                       \
-                    field  = value;                     \
-                    fMatch = true;                      \
-                    break;                              \
-                }
-#endif
-
-/* provided to free strings */
-#ifdef KEYS
-#undef KEYS
-#endif
-
-#ifndef KEYV
-#define KEYV( literal, field )                      \
-                if ( !str_cmp( word, literal ) )    \
-                {                                   \
-                    fread_flag_new(field, fp);      \
-                    fMatch = true;                  \
-                    break;                          \
-                }
-#endif
+//
+// LOCAL FUNCTIONS
+//
 
 void do_crumble (CHAR_DATA *ch, char *argument);
 void do_ghost (CHAR_DATA *ch, char *argument);
@@ -72,7 +51,7 @@ void do_finger (CHAR_DATA *ch, char *argument);
 void update_pc_last_fight (CHAR_DATA *ch,CHAR_DATA *ch2);
 /* horrid Cabal track code */
 void do_ctrack (CHAR_DATA *ch, char *argument);
-char * get_login (CHAR_DATA *ch, FILE *fpChar2);
+char *get_login (CHAR_DATA *ch, FILE *fpChar2);
 void chomp (char *str);
 void chompr (char *str);
 void chop (char *str);

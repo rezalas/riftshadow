@@ -21,6 +21,10 @@
 #include "act_info.h"
 #include "act_obj.h"
 
+//
+// LOCAL FUNCTIONS
+//
+
 
 int style_lookup (char *argument);
 int style_count (long bits[]);

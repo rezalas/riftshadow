@@ -20,7 +20,7 @@
 #include "db.h"
 
 //#include "prof.h"
-extern void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis = true);
+extern void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis);
 extern bool is_affected_prof(CHAR_DATA *ch, char *prof);
 
 
@@ -28,6 +28,10 @@ extern bool is_affected_prof(CHAR_DATA *ch, char *prof);
 extern int _filbuf (FILE *);
 extern FILE * fpArea;
 extern char strArea[MAX_INPUT_LENGTH];
+
+//
+// LOCAL FUNCTIONS
+//
 
 int count_spool (CHAR_DATA *ch, int type);
 void do_unread (CHAR_DATA *ch, char *arg);

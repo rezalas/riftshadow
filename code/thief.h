@@ -20,6 +20,11 @@
 #include "fight.h"
 #include "db.h"
 
+
+//
+// LOCAL FUNCTIONS
+//
+
 void do_backstab (CHAR_DATA *ch, char *argument);
 void do_circle_stab (CHAR_DATA *ch, char *argument);
 void do_blackjack (CHAR_DATA *ch,char *argument);
@@ -46,7 +51,7 @@ void do_shadow_cloak (CHAR_DATA *ch, char *argument);
 bool check_stealth (CHAR_DATA *ch, CHAR_DATA *mob);
 void do_strip (CHAR_DATA *ch, char *argument);
 void thief_yell (CHAR_DATA *ch, CHAR_DATA *victim);
-AFFECT_DATA * check_bind (CHAR_DATA *ch,char *type);
+AFFECT_DATA *check_bind (CHAR_DATA *ch,char *type);
 void do_bind (CHAR_DATA *ch,char *argument);
 void do_unbind (CHAR_DATA *ch,char *argument);
 void do_knife (CHAR_DATA *ch, char *argument);

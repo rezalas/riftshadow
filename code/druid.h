@@ -16,6 +16,10 @@
 #include "db.h"
 #include "lookup.h"
 
+//
+// LOCAL FUNCTIONS
+//
+
 /*
 void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, void *vo, int target);
 */

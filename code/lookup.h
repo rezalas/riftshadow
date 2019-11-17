@@ -44,18 +44,22 @@
 #include "newmem.h"
 #include "db.h"
 
+//
+// LOCAL FUNCTIONS
+//
+
 int flag_lookup (const char *name, const struct flag_type *flag_table);
 int climate_lookup (const char *name);
 int restrict_lookup (const char *name);
 RACE_DATA *race_data_lookup (const int race);
 int display_lookup (const char *name, const struct display_type *flag_table);
-char * get_demon_names (CHAR_DATA *ch);
-char * display_name_lookup (long bitv, const struct display_type *flag_table);
-char * restrict_name_lookup (long bitv);
-char * tribe_name_lookup (long bitv);
+char *get_demon_names (CHAR_DATA *ch);
+char *display_name_lookup (long bitv, const struct display_type *flag_table);
+char *restrict_name_lookup (long bitv);
+char *tribe_name_lookup (long bitv);
 int ele_name_lookup (const char *name);
-char * wealth_lookup (int number);
-char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
+char *wealth_lookup (int number);
+char *flag_name_lookup (long bitv, const struct flag_type *flag_table);
 int flag_index_ilookup (int i, const struct flag_type *flag_table);
 int flag_index_lookup (const char *name, const struct flag_type *flag_table);
 int material_lookup (const char *name);
@@ -70,6 +74,6 @@ int hometown_lookup (const char *name);
 int direction_lookup (char *dir);
 /* chop the string into two variables */
 void half_chop (const char *string, char *arg1, char *arg2);
-char * chaldir (int dir);
+char *chaldir (int dir);
 
 #endif /* LOOKUP_H */

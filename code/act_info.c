@@ -5136,7 +5136,7 @@ void do_ratings(CHAR_DATA *ch, char *argument)
 	return;
 }
 
-void do_lore(CHAR_DATA *ch, char *argument)
+void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 {
 	char object_name[MAX_INPUT_LENGTH + 100];
 	int i;

@@ -1,5 +1,4 @@
 #include "stdlibs/tstring.h"
-#include <string.h>
 
 TString::TString()
 {
@@ -11,7 +10,6 @@ TString::~TString()
 {
 	//nothing ..
 }
-#include <stdio.h>
 void TString::SafeDealloc()
 {
 	//nothing ..

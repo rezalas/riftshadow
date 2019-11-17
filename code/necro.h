@@ -22,8 +22,9 @@
 #include "db.h"
 #include "misc.h"
 
-DECLARE_IPROG_FUN_GREET(greet_prog_corpse_explode);
-
+//
+// LOCAL FUNCTIONS
+//
 
 void spell_dark_vessel (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void make_urn (CHAR_DATA *ch, OBJ_DATA *corpse);

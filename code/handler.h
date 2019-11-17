@@ -25,18 +25,16 @@
 //TODO: bring this func back from act_info.c
 extern CHAR_DATA *get_char_room (CHAR_DATA *ch, char *argument);
 
+//
+// TODO: UNKNOWN FUNCTIONS
+//
+// void object_modify (OBJ_DATA *obj, AFFECT_DATA *paf, bool fAdd);
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_return);
-DECLARE_DO_FUN(do_wake);
 
-/*
- * Local functions.
- */
-void affect_modify (CHAR_DATA *ch, AFFECT_DATA *paf, bool add);
-void object_modify (OBJ_DATA *obj, AFFECT_DATA *paf, bool fAdd);
-bool is_safe_rspell (int level, CHAR_DATA *victim);
-void modify_location (CHAR_DATA *ch, int location, int mod, bool add);
+//
+// LOCAL FUNCTIONS
+//
+
 
 /* friend stuff -- for NPC's mostly */
 bool is_friend (CHAR_DATA *ch, CHAR_DATA *victim);
@@ -48,7 +46,7 @@ int act_lookup (const char *name);
 int liq_lookup (const char *name);
 int weapon_lookup (const char *name);
 int weapon_num_lookup (const char *name);
-char * weapon_name_lookup (int type);
+char *weapon_name_lookup (int type);
 int weapon_type (const char *name);
 int item_lookup (const char *name);
 char *item_name (int item_type);
@@ -61,7 +59,6 @@ int strlen_color (char *argument);
 /* for immunity, vulnerabiltiy, and resistant
    the 'globals' (magic and weapons) may be overriden
    three other cases -- wood, silver, and iron -- are checked in fight.c */
-
 int check_immune (CHAR_DATA *ch, int dam_type);
 bool is_cabal (CHAR_DATA *ch);
 bool is_same_cabal (CHAR_DATA *ch, CHAR_DATA *victim);
@@ -69,9 +66,9 @@ bool is_same_cabal (CHAR_DATA *ch, CHAR_DATA *victim);
 bool is_old_mob (CHAR_DATA *ch);
 /* for returning skill information */
 int get_skill (CHAR_DATA *ch, int sn);
-int get_weapon_sn_new (CHAR_DATA *ch, int type);
 /* for returning weapon information */
 int get_weapon_sn (CHAR_DATA *ch);
+int get_weapon_sn_new (CHAR_DATA *ch, int type);
 int get_weapon_skill (CHAR_DATA *ch, int sn);
 /* used to de-screw characters */
 void reset_char (CHAR_DATA *ch);
@@ -108,9 +105,9 @@ void init_affect (AFFECT_DATA *paf);
  */
 void affect_modify (CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd);
 /* find an effect in an affect list */
-AFFECT_DATA  *affect_find (AFFECT_DATA *paf, int sn);
+AFFECT_DATA *affect_find (AFFECT_DATA *paf, int sn);
 OBJ_AFFECT_DATA *affect_find_obj (OBJ_AFFECT_DATA *paf, int sn);
-ROOM_AFFECT_DATA  *affect_find_room (ROOM_AFFECT_DATA *paf, int sn);
+ROOM_AFFECT_DATA *affect_find_room (ROOM_AFFECT_DATA *paf, int sn);
 AREA_AFFECT_DATA *affect_find_area (AREA_AFFECT_DATA *paf, int sn);
 /* fix object affects when removing one */
 void affect_check (CHAR_DATA *ch, int where, long vector[]);

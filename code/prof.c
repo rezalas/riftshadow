@@ -14,7 +14,6 @@
 
 //don't forget to increment max_prof in prof.h and clean make if your new proficiency goes over MAX_PROF
 //or there are SIGSEGVs and axes to the face in your future
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
 CProficiencies prof_none; 
 CProficiencies * char_data::Profs()
 { return pcdata ? &pcdata->profs : &prof_none; }

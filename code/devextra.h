@@ -21,43 +21,30 @@
 #include "magic.h"
 #include "act_info.h"
 #include "config.h"
+#include "olc_act.h"
+#include "bit.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"
 #define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
 #define HISTORY_FILE			"history.txt"
 
-#ifndef KEY
-#define KEY( literal, field, value )					\
-				if ( !str_cmp( word, literal ) )		\
-				{										\
-					field  = value;						\
-					fMatch = true;						\
-					break;								\
-				}
-#endif
-
-/* provided to free strings */
-#ifdef KEYS
-#undef KEYS
-#endif
-
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);
 #define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,NULL,NULL),obj);
 #define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,NULL,c),obj);
 
 
-char * flags_to_string (CHAR_DATA *ch, const struct flag_type *showflags, int flagsperline);
-void clean_mud (void);
-int display_lookup (const char *name, const struct display_type *flag_table);
-int flag_lookup (const char *name, const struct flag_type *flag_table);
+//
+// LOCAL FUNCTIONS
+//
 
 bool IS_IMP (CHAR_DATA *ch);
 float calculate_inflation (void);
-char * escape_string (char *string);
+char *escape_string (char *string);
 void do_pswitch (CHAR_DATA *ch, char *argument);
 void do_gold (CHAR_DATA *ch, char *argument);
 void do_clean (CHAR_DATA *ch, char *argument);
+void clean_mud (void);
 void do_listoffer (CHAR_DATA *ch, char *argument);
 void do_offer (CHAR_DATA *ch, char *argument);
 void do_sitetrack (CHAR_DATA *ch, char *argument);
@@ -68,7 +55,7 @@ void delete_char (char *name, bool save_pfile);
 MYSQL *open_fconn (void);
 MYSQL_ROW one_query_row (char *query);
 MYSQL_ROW one_fquery_row (char *query);
-MYSQL_RES* one_query_res (char *query);
+MYSQL_RES *one_query_res (char *query);
 int one_query_count (char *query);
 void one_query (char *query);
 void enter_text (CHAR_DATA *ch, DO_FUN *end_fun);
@@ -87,11 +74,11 @@ void area_echo (CHAR_DATA *ch, char *echo);
 void rarea_echo (ROOM_INDEX_DATA *room, char *echo);
 void outdoors_echo (AREA_DATA *area, char *echo);
 bool check_volley (CHAR_DATA *ch, CHAR_DATA *victim);
-char * get_char_color (CHAR_DATA *ch, char *event);
+char *get_char_color (CHAR_DATA *ch, char *event);
 int get_event_number (char *name);
-char * get_color_name (char *name);
-char * color_name_to_ascii (char *name);
-char * END_COLOR (CHAR_DATA *ch);
+char *get_color_name (char *name);
+char *color_name_to_ascii (char *name);
+char *END_COLOR (CHAR_DATA *ch);
 void ADD_WAIT_STATE (CHAR_DATA *ch, int npulse);
 void WAIT_STATE (CHAR_DATA *ch, int npulse);
 void LAG_CHAR (CHAR_DATA *ch, int npulse);
@@ -104,7 +91,7 @@ void do_bounty (CHAR_DATA *ch, char *argument);
 void pay_bounty (CHAR_DATA *ch, CHAR_DATA *victim);
 void do_rchanges (CHAR_DATA *ch, char *argument);
 void do_affto (CHAR_DATA *ch, char *argument);
-char * flags_to_string (CHAR_DATA *ch, const struct flag_type *showflags, int flagsperline);
+char *flags_to_string (CHAR_DATA *ch, const struct flag_type *showflags, int flagsperline);
 void do_ltrack (CHAR_DATA *ch, char *argument);
 void do_assess_old (CHAR_DATA *ch, char *argument);
 void do_supps (CHAR_DATA *ch, char *argument );
@@ -112,8 +99,6 @@ void do_commune (CHAR_DATA *ch, char *argument );
 void do_call (CHAR_DATA *ch, char *argument );
 void do_snare (CHAR_DATA *ch, char *argument );
 void mob_tell (CHAR_DATA *mob, CHAR_DATA *ch, char *tell);
-int flag_value (const struct flag_type *flag_table, char *argument);
-void show_flag_cmds (CHAR_DATA *ch, const struct flag_type *flag_table );
 void do_forcewear (CHAR_DATA *ch, char *argument);
 void do_forceremove (CHAR_DATA *ch, char *argument);
 void do_createcosmetic (CHAR_DATA *ch, char *argument);

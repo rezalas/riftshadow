@@ -2,6 +2,19 @@
 
 #include "aprog.h"
 
+const struct improg_type aprog_table[] = 
+{
+	{ "reset_prog", "reset_prog_cimsewer", (void*)reset_prog_cimsewer, "Sewers of Cimar"},
+	{ "pulse_prog", "pulse_prog_ruins_shark", (void*)pulse_prog_ruins_shark, "Ruins of the Deep"},
+	{ "sun_prog", "sun_prog_caelumaedan", (void*)sun_prog_caelumaedan, "None" },
+	{ "sun_prog", "sun_prog_glasstower", (void*)sun_prog_glasstower, "None" },
+	{ "sun_prog", "sun_prog_ilopheth", (void*)sun_prog_ilopheth, "Valley of Ilopheth"},
+	{ "tick_prog", "tick_prog_academy_reset", (void *)tick_prog_academy_reset, "None" },
+	{ "tick_prog", "tick_prog_ilopheth", (void*)tick_prog_ilopheth, "Valley of Ilopheth"},
+	{ "myell_prog", "myell_prog_lawful_city", (void*)myell_prog_lawful_city, "Cimar"},
+	{ NULL, NULL, NULL, NULL},
+};
+
 bool aprog_unset(AREA_DATA *area, const char *progtype, const char *name)
 {
 	int i;

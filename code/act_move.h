@@ -23,41 +23,21 @@
 #include "act_wiz.h"
 #include "update.h"
 #include "db.h"
+#include "act_obj.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "sorcerer.h"
+#include "chrono.h"
+#include "update.h"
 
 // TODO: add to race.h
 extern bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
 
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_wear);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_cb);
-DECLARE_DO_FUN(do_recall);
-DECLARE_DO_FUN(do_visible);
-DECLARE_DO_FUN(do_stand);
-DECLARE_DO_FUN(do_camp);
-DECLARE_DO_FUN(do_animal_call);
-DECLARE_DO_FUN(do_say);
-DECLARE_DO_FUN(do_slay);
-DECLARE_DO_FUN(do_yell);
-DECLARE_DO_FUN( do_door_bash);
-DECLARE_DO_FUN(do_open);
-DECLARE_DO_FUN(do_pick);
-DECLARE_AFF_FUN(poison_tick);
-DECLARE_AFF_FUN(quicksand_pulse_sink);
-
-int	find_door (CHAR_DATA *ch, char *arg);
-bool has_key (CHAR_DATA *ch, int key);
-void trip_trap (CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap);
-void trap_execute (CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap);
-bool check_barred (CHAR_DATA *ch, ROOM_INDEX_DATA *to_room);
-bool bar_entry (CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room);
-void parse_bar (char *buf, const char *str, CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room);
-RUNE_DATA *find_rune (void *vo, int target_type, int trigger_type, RUNE_DATA *rune_prev);
-AFFECT_DATA *affect_find (AFFECT_DATA *paf, int sn);
-bool is_land (ROOM_INDEX_DATA *room);
-void add_tracks	(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction);
-void track_attack (CHAR_DATA *mob, CHAR_DATA *victim);
+//
+// LOCAL FUNCTIONS
+//
+//
 
 void drowning_tick (CHAR_DATA *ch, AFFECT_DATA *af);
 void check_waterbreath (CHAR_DATA *ch, ROOM_INDEX_DATA *to_room);
