@@ -116,7 +116,6 @@ int select (int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, str
 // LOCAL FUNCTIONS
 //
 
-int main (int argc, char **argv);
 int init_socket  (int port);
 void game_loop_unix (int control);
 void init_descriptor (int control);
