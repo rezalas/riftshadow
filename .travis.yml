@@ -3,4 +3,4 @@ dist: bionic
 compiler: gcc
 
 
-script: make -C ./code/ #&& ./code/make test
+script: make -C ./code/ && make -C ./tests/make

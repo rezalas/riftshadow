@@ -91,7 +91,8 @@ O_FILES = config.o \
 		  mud.o \
 		  bootup.o \
 		  class.o \
-		  prof.o
+		  prof.o \
+		  main.o
 tartarus: $(O_FILES)
 	$(RM) $(FNAME)
 	$(CC) $(PROF) -o $(FNAME) $(O_FILES) $(L_FLAGS)
