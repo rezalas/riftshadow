@@ -4501,7 +4501,7 @@ bool cant_carry(CHAR_DATA *ch, OBJ_DATA *obj)
 bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	int i;
-	long restrict[MAX_BITVECTOR];
+	long restricted[MAX_BITVECTOR];
 	bool status;
 	char *race;
 
@@ -4512,16 +4512,16 @@ bool is_restricted(CHAR_DATA *ch, OBJ_DATA *obj)
 		return true;
 
 	race = race_table[ch->race].name;
-	copy_vector(restrict, obj->pIndexData->restrict_flags);
+	copy_vector(restricted, obj->pIndexData->restrict_flags);
 
 	status= false;
 
-	if (!restrict)
+	if (!restricted)
 		return false;
 
 	for (i = 0; restrict_table[i].name != NULL; i++)
 	{
-		if (!IS_SET(restrict, restrict_table[i].bit))
+		if (!IS_SET(restricted, restrict_table[i].bit))
 			continue;
 
 		if (restrict_table[i].type == RESTRICT_RACE)
