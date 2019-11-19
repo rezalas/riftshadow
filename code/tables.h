@@ -180,7 +180,7 @@ struct hometown_type
 	int pit;
 	int align;
 	int ethos;
-	int restrict;
+	int restricted;
 };
 
 struct color_type
