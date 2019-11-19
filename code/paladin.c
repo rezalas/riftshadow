@@ -843,7 +843,7 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 				&& IS_AFFECTED(ch, AFF_PASS_DOOR))
 				&& !IS_SET(pexit->exit_info, EX_NOPASS))))
 	{
-		direction = (char *)flag_name_lookup(dir, direction_table);
+		direction = flag_name_lookup(dir, direction_table);
 
 		act("You quickly position yourself to cover your group's retreat!", ch, 0, 0, TO_CHAR);
 		act("$n positions $mself to cover $s group's retreat!", ch, 0, 0, TO_ROOM);

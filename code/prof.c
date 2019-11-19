@@ -193,7 +193,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 	sprintf(buf,"You were unable to find any sign of $N here.");
 	for (i=0;i<MAX_TRACKS;i++)
 	{
-        	if (!ch->in_room->tracks[i])
+		if (!ch->in_room->tracks[i])
 			break;
 		if (ch->in_room->tracks[i]->prey != victim || ch->in_room->tracks[i]->flying || ch->in_room->tracks[i]->sneaking)
 			continue;
@@ -208,7 +208,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		}
 		int diruse = (number_percent() > (35 - (ch->Profs()->GetProf("tracking")) * 2)) ? 
 			ch->in_room->tracks[i]->direction : number_range(0, MAX_DIR - 1);
-		direction = (char*)flag_name_lookup(diruse,direction_table);
+		direction = flag_name_lookup(diruse,direction_table);
 		sprintf(buf,"From the pattern of tracks here, you suspect $N left $t.");
 	}
 	act(buf,ch,direction,victim,TO_CHAR);

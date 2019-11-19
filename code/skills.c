@@ -811,7 +811,7 @@ bool group_skill_lookup(int gn, int sn)
 		if (sn < 1)
 			break;
 
-		if (str_cmp(skill_table[sn].name, (char *)group_table[gn].spells[i]))
+		if (str_cmp(skill_table[sn].name, group_table[gn].spells[i]))
 			return true;
 	}
 

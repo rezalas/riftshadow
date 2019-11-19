@@ -2729,7 +2729,7 @@ void perm_death_log(CHAR_DATA *ch, int deltype)
 			ch->true_name, IS_NPC(ch) ? "" : ch->pcdata->title,
 			IS_NPC(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle : "", ch->pcdata->kills[PK_KILLS],
 			ch->pcdata->killed[PK_KILLED], get_age(ch), (int)(ch->played + current_time - ch->logon) / 3600,
-			(char *)ctime(&current_time));
+			ctime(&current_time));
 
 		fclose(fp);
 	}
@@ -2772,7 +2772,7 @@ void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 			killer->short_descr,
 			killer->in_room->area->name,
 			get_room_name(killer->in_room),
-			(char *)ctime(&current_time));
+			ctime(&current_time));
 
 		fclose(fp);
 	}

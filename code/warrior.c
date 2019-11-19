@@ -1851,7 +1851,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 	if (weapon->weight > skirmisher_max_weapweight(ch))
 	{
-		act("That $t is too heavy to be hurled properly.", ch, (char *)weapon_name_lookup(weapon->value[0]), 0, TO_CHAR);
+		act("That $t is too heavy to be hurled properly.", ch, weapon_name_lookup(weapon->value[0]), 0, TO_CHAR);
 		return;
 	}
 
@@ -1898,14 +1898,14 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 		if (pexit == NULL)
 		{
-			dirname = (char *)flag_name_lookup(direction, direction_table);
+			dirname = flag_name_lookup(direction, direction_table);
 			act("You can't hurl your weapon $t.", ch, dirname, 0, TO_CHAR);
 			return;
 		}
 
 		if (IS_SET(pexit->exit_info, EX_CLOSED))
 		{
-			dirname = (char *)flag_name_lookup(direction, direction_table);
+			dirname = flag_name_lookup(direction, direction_table);
 			act("You can't hurl your weapon $t.", ch, dirname, 0, TO_CHAR);
 			return;
 		}
@@ -1916,7 +1916,7 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 		if (victim == NULL)
 		{
-			dirname = (char *)flag_name_lookup(direction, direction_table);
+			dirname = flag_name_lookup(direction, direction_table);
 			act("You can't see them $t.", ch, dirname, 0, TO_CHAR);
 			return;
 		}
@@ -1935,17 +1935,17 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 
 	if (to_room)
 	{
-		dirname = (char *)flag_name_lookup(direction, direction_table);
+		dirname = flag_name_lookup(direction, direction_table);
 
-		sprintf(buf, "Sighting $N in the distance %sward, you hurl your %s at $M!", dirname, (char *)weapon_name_lookup(weapon->value[0]));
+		sprintf(buf, "Sighting $N in the distance %sward, you hurl your %s at $M!", dirname, weapon_name_lookup(weapon->value[0]));
 		act(buf, ch, 0, victim, TO_CHAR);
 
-		sprintf(buf, "$n suddenly hurls $s %s %sward!", (char *)weapon_name_lookup(weapon->value[0]), dirname);
+		sprintf(buf, "$n suddenly hurls $s %s %sward!", weapon_name_lookup(weapon->value[0]), dirname);
 		act(buf, ch, 0, victim, TO_ROOM);
 
-		dirname = (char *)flag_name_lookup(reverse_d(direction), direction_table);
+		dirname = flag_name_lookup(reverse_d(direction), direction_table);
 
-		sprintf(buf, "A %s comes hurtling in from the %s, flipping end over end!", (char *)weapon_name_lookup(weapon->value[0]), dirname);
+		sprintf(buf, "A %s comes hurtling in from the %s, flipping end over end!", weapon_name_lookup(weapon->value[0]), dirname);
 		act(buf, victim, 0, 0, TO_ALL);
 
 		if (!IS_NPC(victim) && victim->fighting == NULL)
@@ -1979,9 +1979,9 @@ void do_hurl(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("With a flick of your wrist, you hurl your $t at $N!", ch, (char *)weapon_name_lookup(weapon->value[0]), victim, TO_CHAR);
-		act("With a flick of $s wrist, $n hurls $S $t at you!", ch, (char *)weapon_name_lookup(weapon->value[0]), victim, TO_VICT);
-		act("With a flick of $s wrist, $n hurls $S $t at $N!", ch, (char *)weapon_name_lookup(weapon->value[0]), victim, TO_NOTVICT);
+		act("With a flick of your wrist, you hurl your $t at $N!", ch, weapon_name_lookup(weapon->value[0]), victim, TO_CHAR);
+		act("With a flick of $s wrist, $n hurls $S $t at you!", ch, weapon_name_lookup(weapon->value[0]), victim, TO_VICT);
+		act("With a flick of $s wrist, $n hurls $S $t at $N!", ch, weapon_name_lookup(weapon->value[0]), victim, TO_NOTVICT);
 
 		if (!IS_NPC(victim) && victim->fighting == NULL)
 		{
@@ -2136,10 +2136,7 @@ void do_overhead(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
-	// TODO: much easier to read than whats below
-	// special = (float)(skill * (1.00f + (ch->size - victim->size) / 4.00f) * (1.00f + weapon->weight / 200.00f));
-	special = skill * (int)((float)1 + (float)((float)ch->size - (float)victim->size) / (float)4) *
-		(float)((float)1 + (float)(weapon->weight) / (float)200);
+	special = (float)(skill * (1.00f + (ch->size - victim->size) / 4.00f) * (1.00f + weapon->weight / 200.00f));
 
 	if (number_percent() < .7 * skill)
 	{
@@ -3125,18 +3122,18 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() > chance)
 	{
-		act(chfail, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
-		act(victfail, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_VICT);
-		act(nvictfail, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
+		act(chfail, ch, weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
+		act(victfail, ch, weapon_name_lookup(wield->value[0]), victim, TO_VICT);
+		act(nvictfail, ch, weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
 		check_improve(ch, gsn_shatter, false, 1);
 
 		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 		return;
 	}
 
-	act(chsuc, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
-	act(victsuc, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_VICT);
-	act(nvictsuc, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
+	act(chsuc, ch, weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
+	act(victsuc, ch, weapon_name_lookup(wield->value[0]), victim, TO_VICT);
+	act(nvictsuc, ch, weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
 
 	extract_obj(wield);
 	secondary = get_eq_char(victim, WEAR_DUAL_WIELD);
@@ -3673,7 +3670,7 @@ void do_pull(CHAR_DATA *ch, char *argument)
 
 			if (number_percent() < (skill * 0.9) && !(IS_NPC(guy) && IS_SET(guy->act, ACT_SENTINEL)))
 			{
-				direction = (char *)flag_name_lookup(dir, direction_table);
+				direction = flag_name_lookup(dir, direction_table);
 				act("Suddenly pulling your whip taut, you drag $N $tward!", ch, direction, guy, TO_CHAR);
 				act("Suddenly pulling $s whip taut, $n drags you $tward!", ch, direction, guy, TO_VICT);
 				act("Suddenly pulling $s whip taut, $n drags $N $tward!", ch, direction, guy, TO_NOTVICT);
@@ -3690,7 +3687,7 @@ void do_pull(CHAR_DATA *ch, char *argument)
 				stop_fighting(guy, true);
 				move_char(guy, dir, true, false);
 
-				direction = (char *)flag_name_lookup(reverse_d(dir), direction_table);
+				direction = flag_name_lookup(reverse_d(dir), direction_table);
 				act("$n enters from $t, pulling along a tightly-entwined $N with him!", ch, direction, guy, TO_NOTVICT);
 
 				if (guy->in_room == ch->in_room && !ch->fighting && !guy->fighting)
@@ -3705,7 +3702,7 @@ void do_pull(CHAR_DATA *ch, char *argument)
 			}
 			else
 			{
-				direction = (char *)flag_name_lookup(dir, direction_table);
+				direction = flag_name_lookup(dir, direction_table);
 				act("You attempt to drag $N $tward, but $E holds $S ground.", ch, direction, guy, TO_CHAR);
 				act("$n attempts to drag you $tward, but you hold your ground.", ch, direction, guy, TO_VICT);
 				act("$n attempts to drag $N $tward, but $E holds $S ground.", ch, direction, guy, TO_NOTVICT);
@@ -4071,18 +4068,18 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 	{
 		if (!broken)
 		{
-			act(chsuc, ch, (char *)weapon_name_lookup(weapon->value[0]), victim, TO_CHAR);
-			act(victsuc, ch, (char *)weapon_name_lookup(weapon->value[0]), victim, TO_VICT);
-			act(nvictsuc, ch, (char *)weapon_name_lookup(weapon->value[0]), victim, TO_NOTVICT);
+			act(chsuc, ch, weapon_name_lookup(weapon->value[0]), victim, TO_CHAR);
+			act(victsuc, ch, weapon_name_lookup(weapon->value[0]), victim, TO_VICT);
+			act(nvictsuc, ch, weapon_name_lookup(weapon->value[0]), victim, TO_NOTVICT);
 		}
 
 		if (arm)
 		{
 			if (wield != NULL && (!IS_OBJ_STAT(wield, ITEM_NODISARM) && !IS_OBJ_STAT(wield, ITEM_NOREMOVE)))
 			{
-				act(chspe, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
-				act(victspe, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_VICT);
-				act(nvictspe, ch, (char *)weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
+				act(chspe, ch, weapon_name_lookup(wield->value[0]), victim, TO_CHAR);
+				act(victspe, ch, weapon_name_lookup(wield->value[0]), victim, TO_VICT);
+				act(nvictspe, ch, weapon_name_lookup(wield->value[0]), victim, TO_NOTVICT);
 
 				obj_from_char(wield);
 
@@ -4337,7 +4334,7 @@ void do_drive(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Get the default word for the direction */
-	direction = (char *)flag_name_lookup(where, direction_table);
+	direction = flag_name_lookup(where, direction_table);
 	sprintf(dir, "%s", direction);
 
 	/* Make sure the exit is valid */
@@ -4472,7 +4469,7 @@ void do_dash(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Get the default word for the direction */
-	direction = (char *)flag_name_lookup(reverse_d(where), direction_table);
+	direction = flag_name_lookup(reverse_d(where), direction_table);
 	sprintf(dir, "%s", direction);
 
 	/* Make sure the exit is valid */
@@ -4697,7 +4694,7 @@ void execute_retreat(CHAR_DATA *ch, int *direction)
 		return;
 	}
 
-	dirname = (char *)flag_name_lookup(dir, direction_table);
+	dirname = flag_name_lookup(dir, direction_table);
 	act("You make a hasty retreat $t.", ch, dirname, 0, TO_CHAR);
 	act("$n makes a hasty retreat $t.", ch, dirname, 0, TO_ROOM);
 
@@ -4977,7 +4974,7 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 
 		if (type != -1)
 		{
-			direction = (char *)flag_name_lookup(type, direction_table);
+			direction = flag_name_lookup(type, direction_table);
 			sprintf(buf, "You are currently blocking your foes from escaping %sward.\n\r", direction);
 			send_to_char(buf, ch);
 		}
@@ -5028,7 +5025,7 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
 
-	direction = (char *)flag_name_lookup(type, direction_table);
+	direction = flag_name_lookup(type, direction_table);
 	act("You position yourself so as to obstruct the $t egress.", ch, direction, 0, TO_CHAR);
 	act("$n positions $mself so as to obstruct the $t egress.", ch, direction, 0, TO_ROOM);
 
@@ -5098,7 +5095,7 @@ bool outflank_me(CHAR_DATA *ch, int dir)
 					outflank *= .5;
 				}
 
-				direction = (char *)flag_name_lookup(dir, direction_table);
+				direction = flag_name_lookup(dir, direction_table);
 				if (number_percent() < outflank)
 				{
 					act("As $N attempts to flee, you bar $S exit $tward!", victim, direction, ch, TO_CHAR);

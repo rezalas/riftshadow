@@ -1459,10 +1459,10 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				if (!str_cmp(word, "frg"))
 				{
-					ch->pcdata->frags[PK_KILLS] = (float)((float)fread_number(fp) / (float)1000000);
-					ch->pcdata->frags[PK_GOOD] = (float)((float)fread_number(fp) / (float)1000000);
-					ch->pcdata->frags[PK_NEUTRAL] = (float)((float)fread_number(fp) / (float)1000000);
-					ch->pcdata->frags[PK_EVIL] = (float)((float)fread_number(fp) / (float)1000000);
+					ch->pcdata->frags[PK_KILLS] = (float)(fread_number(fp) / 1000000);
+					ch->pcdata->frags[PK_GOOD] = (float)(fread_number(fp) / 1000000);
+					ch->pcdata->frags[PK_NEUTRAL] = (float)(fread_number(fp) / 1000000);
+					ch->pcdata->frags[PK_EVIL] = (float)(fread_number(fp) / 1000000);
 				}
 
 				if (!str_cmp(word, "frgd"))

@@ -2781,7 +2781,7 @@ void spell_faerie_fire(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.level = level;
 	af.duration = 6 + (level / 5);
 	af.location = APPLY_AC;
-	af.modifier = -1 * (short)(average_ac(victim) * (float)((float)level / (float)400));
+	af.modifier = -1 * (short)(average_ac(victim) * (level / 400.00f));
 	af.mod_name = MOD_VISIBILITY;
 	affect_to_char(victim, &af);
 

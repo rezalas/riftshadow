@@ -1151,7 +1151,7 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 		}
 
 		if (ch != victim)
-			damage_new(ch, laf->owner, (int)((float)dam * .25), gsn_empathy, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "spiritual link");
+			damage_new(ch, laf->owner, (int)(dam * 0.25f), gsn_empathy, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "spiritual link");
 
 		dam *= .75;
 	}
@@ -2090,7 +2090,7 @@ bool check_parry(CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 	if (roll >= chance)
 		return false;
 
-	diff = (int)((float)chance - (float)roll);
+	diff = (int)(chance - (float)roll);
 
 	attack = get_dam_message(ch, dt);
 	sprintf(buf1, "You %sparry $n's %s.", (diff < 15) ? "manage to " : (diff > 50) ? "confidently " : "", attack);
@@ -3564,13 +3564,13 @@ void pk_record(CHAR_DATA *ch, CHAR_DATA *victim)
 		}
 	}
 
-	victim_credit = (float)((float)victim_group / (float)killer_group);
+	victim_credit = (float)(victim_group / killer_group);
 
 	if (victim_credit > 1)
 		victim_credit = 1;
 
 	killer_credit = victim_credit;
-	killer_credit = (float)(killer_credit / (float)killer_in_room);
+	killer_credit = killer_credit / killer_in_room;
 	victim->pcdata->fragged += victim_credit;
 
 	for (wch = char_list; wch; wch = wch->next)

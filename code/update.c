@@ -1952,7 +1952,7 @@ int get_age(CHAR_DATA *ch) /* returns age in years. */
 		return 1;
 
 	// long time = ch->played + (int) (current_time - ch->logon));
-	result = 20 + (float)(((float)time_info.month + (float)1) / (float)12) + time_info.year - ch->pcdata->birth_date;
+	result = 20 + ((time_info.month + 1.00f) / 12.00f) + time_info.year - ch->pcdata->birth_date;
 	result *= pc_race_table[ch->race].agemod;
 
 	return (int)result;
@@ -2383,7 +2383,7 @@ void room_affect_update(void)
 
 							char_from_room(victim);
 							char_to_room(victim, prevroom);
-							dirname = (char *)flag_name_lookup(reverse_d(direction), direction_table);
+							dirname = flag_name_lookup(reverse_d(direction), direction_table);
 
 							act("A powerful force drags you inexorably $T.", victim, 0, dirname, TO_CHAR);
 							do_look(victim, "auto");
@@ -2701,7 +2701,7 @@ void room_affect_update(void)
 					continue;
 
 				act("The violent winds blow $p in!", to_room->people, obj, 0, TO_ALL);
-				victim = (CHAR_DATA *)get_random_ch(aaf->owner, to_room);
+				victim = get_random_ch(aaf->owner, to_room);
 
 				if (!victim)
 					continue;
@@ -2793,7 +2793,7 @@ void iprog_pulse_update(bool isTick)
 					{
 						if (obj->in_room->people)
 						{
-							direction = (char *)flag_name_lookup(door, direction_table);
+							direction = flag_name_lookup(door, direction_table);
 							act("$p drifts $Tward.", obj->in_room->people, obj, direction, TO_ALL);
 						}
 
@@ -2837,7 +2837,7 @@ void iprog_pulse_update(bool isTick)
 					{
 						if (obj->in_room->people && obj->in_room->sector_type == SECT_UNDERWATER)
 						{
-							direction = (char *)flag_name_lookup(door, direction_table);
+							direction = flag_name_lookup(door, direction_table);
 							act("$p floats $Tward.", obj->in_room->people, obj, direction, TO_ALL);
 						}
 
@@ -2854,7 +2854,7 @@ void iprog_pulse_update(bool isTick)
 						}
 						else if (obj->in_room->people && obj->in_room->sector_type == SECT_UNDERWATER)
 						{
-							direction = (char *)flag_name_lookup(door, direction_table);
+							direction = flag_name_lookup(door, direction_table);
 							act("$p floats $Tward.", obj->in_room->people, obj, direction, TO_ALL);
 						}
 

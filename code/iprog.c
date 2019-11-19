@@ -2336,7 +2336,7 @@ void verb_prog_rub_talisman(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	int sn = skill_lookup("word of recall");
 	int target = TAR_CHAR_DEFENSIVE;
-	void *vo = (CHAR_DATA *)ch;
+	void *vo = ch;
 
 	act("You rub a worn patch of the wooden talisman.", ch, 0, 0, TO_CHAR);
 	act("$n vigorously rubs $p.", ch, obj, 0, TO_ROOM);
@@ -2581,7 +2581,7 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	act("The spindle wheel creaks loudly as you turn it....", ch, 0, 0, TO_CHAR);
 	act("The spindle wheel creaks loudly as $n turns it....", ch, 0, 0, TO_ROOM);
 
-	direction = (char *)flag_name_lookup(dir, direction_table);
+	direction = flag_name_lookup(dir, direction_table);
 
 	if (IS_SET(pexit->exit_info, EX_CLOSED))
 	{
@@ -2594,7 +2594,7 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 		if (pexit->u1.to_room->people)
 		{
-			revdir = (char *)flag_name_lookup(reverse_d(dir), direction_table);
+			revdir = flag_name_lookup(reverse_d(dir), direction_table);
 			act("A massive rusted grate slides noisily open, revealing a tunnel $tward!", ch, revdir, 0, TO_ALL);
 		}
 	}
@@ -2609,7 +2609,7 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 		if (pexit->u1.to_room->people)
 		{
-			revdir = (char *)flag_name_lookup(reverse_d(dir), direction_table);
+			revdir = flag_name_lookup(reverse_d(dir), direction_table);
 			act("A massive rusted grate slides noisily shut, revealing a tunnel $tward!", ch, revdir, 0, TO_ALL);
 		}
 	}

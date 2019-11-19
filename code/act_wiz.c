@@ -1750,7 +1750,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 								   : 24 * 30 * (12 + time_info.month - location->tracks[i]->time.month) +
 										 24 * 30 * 12 * (time_info.year - location->tracks[i]->time.year);
 
-			direction = (char *)flag_name_lookup(location->tracks[i]->direction, direction_table);
+			direction = flag_name_lookup(location->tracks[i]->direction, direction_table);
 
 			sprintf(buf, "%s exited to the %s %d hours ago.\n\r", location->tracks[i]->prey->name, direction, time);
 			send_to_char(buf, ch);

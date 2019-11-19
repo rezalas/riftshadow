@@ -5009,11 +5009,11 @@ void modify_location(CHAR_DATA *ch, int location, int mod, bool add)
 			break;
 		case APPLY_DAM_MOD:
 			if (add)
-				ch->dam_mod *= (float)(1 + (float)mod / (float)100);
+				ch->dam_mod *= (1.00f + (float)mod / 100.00f);
 			else
 			{
 				mod = 0 - mod;
-				ch->dam_mod *= (float)1 / (float)(1 + (float)mod / (float)100);
+				ch->dam_mod *= 1.00f / (1.00f + (float)mod / 100.00f);
 			}
 			break;
 	}
