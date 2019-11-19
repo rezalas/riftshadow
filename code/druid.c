@@ -79,14 +79,14 @@ void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void spell_tangleroot(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
-	int dam = (int)((float)((float)ch->level * (float).6) + (dice(10, (int)(level / 4))));
+	int dam = (int)((float)((float)ch->level * 0.60f) + (dice(10, level / 4)));
 
 	act("The ground beneath your feet begins to rumble.", ch->in_room->people, NULL, NULL, TO_ALL);
 
 	if (number_percent() > 10)
 	{
 		RS.Queue.AddToQueue(2, 2, LAG_CHAR, victim, (2 * PULSE_VIOLENCE));
-		RS.Queue.AddToQueue(2, 8, damage_queue, ch, victim, (int)dam, DAM_BASH, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, (char *)"entangling roots*");
+		RS.Queue.AddToQueue(2, 8, damage_queue, ch, victim, dam, DAM_BASH, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, (char *)"entangling roots*");
 		RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground and entangles $N!", ch, 0, victim, TO_NOTVICT);
 		RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground and entangles you!", ch, 0, victim, TO_VICT);
 		RS.Queue.AddToQueue(2, 5, act, "A tangleroot bursts out of the ground and entangles $N!", ch, 0, victim, TO_CHAR);

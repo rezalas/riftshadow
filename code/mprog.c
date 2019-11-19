@@ -3288,7 +3288,7 @@ void pulse_prog_phantasm(CHAR_DATA *mob)
 			act("$n shows you the face of your worst nightmare, paralyzing you with fear!", mob, 0, victim, TO_VICT);
 			act("$n's ghostly form flickers briefly as $N flinches away in terror.", mob, 0, victim, TO_NOTVICT);
 
-			LAG_CHAR(victim, (int)(PULSE_VIOLENCE * 3));
+			LAG_CHAR(victim, PULSE_VIOLENCE * 3);
 			break;
 		case 1:
 		case 2:

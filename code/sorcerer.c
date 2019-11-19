@@ -921,13 +921,13 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (IS_SET(pexit->exit_info, EX_NOPASS))
 		{
-			direction = (char *)flag_name_lookup(door, direction_table);
+			direction = flag_name_lookup(door, direction_table);
 			act("You rapidly heat the $T door, causing it to expand within its confines.", ch, 0, direction, TO_CHAR);
 			act("The $T door buckles slightly, but remains intact.", ch, 0, direction, TO_ALL);
 			return;
 		}
 
-		direction = (char *)flag_name_lookup(door, direction_table);
+		direction = flag_name_lookup(door, direction_table);
 		act("You rapidly heat the $T door, causing it to expand within its confines.", ch, 0, direction, TO_CHAR);
 		act("The $T door suddenly buckles on its hinges and bursts open!", ch, 0, direction, TO_ALL);
 
@@ -946,7 +946,7 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			REMOVE_BIT(pexit_opp->exit_info, EX_ISDOOR);
 		}
 
-		direction = (char *)flag_name_lookup(reverse_d(door), direction_table);
+		direction = flag_name_lookup(reverse_d(door), direction_table);
 
 		for (fch = to_room->people; fch != NULL; fch = fch->next_in_room)
 		{
@@ -1032,7 +1032,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			{
 				if (to_room->people)
 				{
-					direction = (char *)flag_name_lookup(reverse_d(i), direction_table);
+					direction = flag_name_lookup(reverse_d(i), direction_table);
 					act("A sudden blast of air rushes in from the $T!", to_room->people, 0, direction, TO_ALL);
 				}
 			}
@@ -1067,7 +1067,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 			{
 				if (to_room->people)
 				{
-					direction = (char *)flag_name_lookup(reverse_d(i), direction_table);
+					direction = flag_name_lookup(reverse_d(i), direction_table);
 					act("Air rushes back $Tward!", to_room->people, 0, direction, TO_ALL);
 				}
 			}
@@ -1171,7 +1171,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
 							continue;
 
-						direction = (char *)flag_name_lookup(reverse_d(i), direction_table);
+						direction = flag_name_lookup(reverse_d(i), direction_table);
 
 						act("A torrent of air pulls $n $T!", vch, 0, direction, TO_ROOM);
 
@@ -1181,7 +1181,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 						act("A torrent of air pulls you unexpectedly $T!", vch, 0, direction, TO_CHAR);
 						do_look(vch, "auto");
 
-						direction = (char *)flag_name_lookup(i, direction_table);
+						direction = flag_name_lookup(i, direction_table);
 						act("The torrent of air pulls $n into the room from the $T!", vch, 0, direction, TO_ROOM);
 					}
 				}
@@ -1205,7 +1205,7 @@ void spell_incandescense(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.level = level;
 	af.duration = level / 3;
 	af.location = APPLY_AC;
-	af.modifier = (int)(-1 * (average_ac(victim) * (float)((float)level / (float)400)));
+	af.modifier = (int)(-1 * (average_ac(victim) * (float)(level / 400)));
 	af.mod_name = MOD_VISIBILITY;
 	affect_to_char(victim, &af);
 
@@ -2265,12 +2265,12 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			return;
 		}
 
-		direction = (char *)flag_name_lookup(door, direction_table);
+		direction = flag_name_lookup(door, direction_table);
 		act("You gather the water around you and direct it to overflow the bank to the $T!", ch, 0, direction, TO_CHAR);
 
 		if (to_room->people)
 		{
-			direction = (char *)flag_name_lookup(reverse_d(door), direction_table);
+			direction = flag_name_lookup(reverse_d(door), direction_table);
 			act("A torrent of water rushes in from the $T, flooding the room!", to_room->people, 0, direction, TO_ALL);
 		}
 
@@ -2441,7 +2441,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You gather the waters around you into a massive tidal wave!", ch, 0, 0, TO_CHAR);
 	act("As $n gestures, a massive wave rises from the waters before him.", ch, 0, 0, TO_ROOM);
 
-	direction = (char *)flag_name_lookup(door, direction_table);
+	direction = flag_name_lookup(door, direction_table);
 
 	act("The tidal wave surges $T, leaving havoc in its wake!", ch, 0, direction, TO_ALL);
 
@@ -5048,7 +5048,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 
 	range = ch->level / 3;
 
-	direction = (char *)flag_name_lookup(dir, direction_table);
+	direction = flag_name_lookup(dir, direction_table);
 	act("The shell of air finishes forming and rushes $tward, taking you with it!", ch, direction, 0, TO_CHAR);
 	act("The shell of air finishes forming and rushes $tward, taking $n with it!", ch, direction, 0, TO_ROOM);
 
@@ -5516,7 +5516,7 @@ void spell_freeze_door(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	direction = (char *)flag_name_lookup(door, direction_table);
+	direction = flag_name_lookup(door, direction_table);
 	act("You cover the $T door with a thick frost, freezing it shut.", ch, 0, direction, TO_CHAR);
 	act("$n covers the $T door with a thick frost, freezing it shut.", ch, 0, direction, TO_ROOM);
 
@@ -5554,7 +5554,7 @@ void door_unfreeze(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	if (room->people)
 	{
-		direction = (char *)flag_name_lookup(af->modifier, direction_table);
+		direction = flag_name_lookup(af->modifier, direction_table);
 		act("The frost covering the door $T thaws.", room->people, 0, direction, TO_ALL);
 	}
 

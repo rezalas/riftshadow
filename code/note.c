@@ -102,7 +102,7 @@ void append_note(NOTE_DATA *pnote)
 	char query[MSL];
 	char *escape;
 
-	escape = (char *)escape_string(pnote->text);
+	escape = escape_string(pnote->text);
 	sprintf(query, "INSERT INTO notes VALUES(%d,\"%s\",'%s',\"%s\",\"%s\",\"%s\",%ld)",
 		pnote->type,
 		pnote->sender,

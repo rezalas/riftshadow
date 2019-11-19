@@ -1010,7 +1010,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 				break;
 			case TAR_IGNORE:
 			default:
-				vo = (char *)argument;
+				vo = argument;
 				break;
 		}
 
@@ -1022,7 +1022,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		vo = (char *)argument;
+		vo = argument;
 	}
 
 	command_line = argument;
@@ -1032,7 +1032,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	{
 		if (TRAPS_IEVENT(iObj, TRAP_IDOFUN))
 		{
-			if (CALL_IEVENT(iObj, TRAP_IDOFUN, ch, iObj, cmd, sn, (void *)vo))
+			if (CALL_IEVENT(iObj, TRAP_IDOFUN, ch, iObj, cmd, sn, vo))
 				return;
 		}
 	}

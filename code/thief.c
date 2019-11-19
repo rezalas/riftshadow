@@ -938,7 +938,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Get the default word for the direction */
-	direction = (char *)flag_name_lookup(where, direction_table);
+	direction = flag_name_lookup(where, direction_table);
 	sprintf(dir, "%s", direction);
 
 	/* Make sure the exit is valid */
@@ -1045,7 +1045,7 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < skill)
 	{
-		direction = (char *)flag_name_lookup(door, direction_table);
+		direction = flag_name_lookup(door, direction_table);
 
 		act("You lay a concealed tripwire across the exit $Tward and draw it taut.", ch, 0, direction, TO_CHAR);
 

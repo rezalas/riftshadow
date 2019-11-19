@@ -13,8 +13,7 @@ bool IS_IMP(CHAR_DATA *ch)
 
 float calculate_inflation()
 {
-	float temp = (float)(1 + 3 * ((float)player_gold / (float)total_gold));
-	return temp;
+	return 1.00f + 3.00f * (player_gold / total_gold);
 }
 
 char *escape_string(char *string)
@@ -23,6 +22,7 @@ char *escape_string(char *string)
 	mysql_escape_string(txt, string, strlen(string));
 	return talloc_string(txt);
 }
+
 void do_pswitch(CHAR_DATA *ch, char *argument)
 {
 	DESCRIPTOR_DATA *d;
@@ -98,9 +98,9 @@ void do_gold(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 
 	if (total_gold > 0)
-		gc = (float)(1 + 3 * ((float)player_gold / (float)total_gold)) * (float)100;
+		gc = (1.00f + 3.00f * (player_gold / total_gold)) * 100.00f;
 	else
-		gc = 0;
+		gc = 0.00f;
 
 	sprintf(buf, "Global inflation rate: %.1f%% (gold constant %ld)\n\r", gc, gold_constant);
 	send_to_char(buf, ch);
@@ -380,7 +380,7 @@ void do_offer(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	escape = (char *)escape_string(obj->short_descr);
+	escape = escape_string(obj->short_descr);
 
 	sprintf(query, "INSERT INTO offerings VALUES(\"%s\", %d, \"%s\", '%s', 0, %ld, NULL)",
 		altar->in_room->owner,
@@ -463,7 +463,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		escape = (char *)escape_string(arg2);
+		escape = escape_string(arg2);
 		sprintf(query, "INSERT INTO sitetracker VALUES(NULL, '%s',0)", escape);
 		one_query(query);
 
@@ -597,7 +597,7 @@ void comment_end_fun(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	escape = (char *)escape_string(argument);
+	escape = escape_string(argument);
 	sprintf(query, "INSERT INTO sitecomments VALUES(%d, NULL, \"%s\", \"%s\", \"%s\")",
 		ch->pcdata->helpid,
 		ch->true_name,
@@ -1437,7 +1437,9 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	row = mysql_fetch_row(res);
 
 	cvote = atoi(row[0]);
-	escape = (char *)((ch->pcdata->host) ? escape_string(ch->pcdata->host) : escape_string(ch->desc->host));
+	escape = ch->pcdata->host
+		? escape_string(ch->pcdata->host)
+		: escape_string(ch->desc->host);
 
 	if (cvote > 0)
 	{
@@ -2004,7 +2006,7 @@ void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	victim->pcdata->bounty_killed = 0;
 
-	total_mod = (float)credit * (float)mod + bonus;
+	total_mod = (float)credit * mod + bonus;
 
 	credit = (int)total_mod;
 
@@ -2014,7 +2016,7 @@ void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (credit < 0)
 		credit = 0;
 
-	sprintf(buf, "Base - %.2f, Mod - %.2f, Bonus - %.2f", (float)credit, (float)mod, (float)bonus);
+	sprintf(buf, "Base - %.2f, Mod - %.2f, Bonus - %.2f", (float)credit, mod, (float)bonus);
 	wiznet(buf, NULL, NULL, WIZ_LOG, 0, 0);
 
 	sprintf(sbounty, "%s collects the %ld gold bounty on %s.", ch->name, victim->pcdata->bounty, victim->name);

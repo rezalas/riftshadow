@@ -270,8 +270,8 @@ void do_addhelp(CHAR_DATA *ch, char *argument)
 
 	ttitle = palloc_string(upstring(title));
 	minlevel = atoi(arg);
-	escape = (char *)escape_string(ttitle);
-	escape2 = (char *)escape_string(ch->pcdata->entered_text);
+	escape = escape_string(ttitle);
+	escape2 = escape_string(ch->pcdata->entered_text);
 
 	sprintf(buf, "INSERT INTO helpfiles VALUES(NULL, \"%s\", \"%s\", %d, \"%s\")", escape, skill, minlevel, escape2);
 	mysql_query(conn, buf);

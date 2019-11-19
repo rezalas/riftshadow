@@ -36,7 +36,7 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (target != RUNE_DOOR)
 	{
 		rune->level = level;
-		rune->placed_on = (EXIT_DATA *)pexit;
+		rune->placed_on = pexit;
 		rune->target_type = RUNE_TO_PORTAL; // grep for this too
 		rune->owner = ch;
 		rune->trigger_type = RUNE_TRIGGER_EXIT; // grep for rune trigger types if you need to
@@ -106,7 +106,7 @@ bool activate_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
 	act("As $n passes through the $t, a stasis wall snaps into existence behind $m!", victim, pexit->keyword, 0, TO_ROOM);
 
 	new_rune.level = rune->level;
-	new_rune.placed_on = (EXIT_DATA *)pexit;
+	new_rune.placed_on = pexit;
 	new_rune.target_type = RUNE_TO_PORTAL;
 	new_rune.owner = rune->owner;
 	new_rune.trigger_type = RUNE_TRIGGER_EXIT;
