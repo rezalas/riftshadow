@@ -1,6 +1,8 @@
 #ifndef PROF_H
 #define PROF_H
 
+#include <time.h>
+
 #define PFLAGS_NONE 0
 #define PFLAGS_BASIC 1
 
