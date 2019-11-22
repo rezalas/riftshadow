@@ -11,9 +11,10 @@
 # CMake files
 CMakeFiles/
 cmake_install.cmake
-CTestTestfile.cmake
 CMakeCache.txt
 Makefile
+Testing/
+CTestTestfile.cmake
 
 # Object files
 *.o
