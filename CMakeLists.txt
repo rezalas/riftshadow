@@ -11,7 +11,10 @@ else()
 	set(CXXCOMPILER "/usr/bin/g++")
 endif()
 set(CMAKE_C_COMPILER "${CCOMPILER}")
+set(CMAKE_C_FLAGS "-O1 -g")
+
 set(CMAKE_CXX_COMPILER "${CXXCOMPILER}")
+set(CMAKE_CXX_FLAGS "-O1 -g -Wno-write-strings")
 
 
 project(riftshadow)
@@ -21,19 +24,18 @@ set(CMAKE_CXX_STANDARD 17)
 if(WIN32)
 	include_directories("C:\\Program Files\\MariaDB 10.4\\include\\mysql" "C:\\MinGW\\msys\\1.0\\include")
 	link_directories("c:\\MinGW\\lib" "c:\\MinGW\\msys\\1.0\\lib" "C:\\Program Files (x86)\\MySQL\\MySQL Connector C++ 8.0\\lib" "c:\\MinGW\\msys\\1.0\\lib\\openssl\\engines-1.0.0")
+	set(CRYPTOLIB "libcrypto")
+	set(MARIADBLIB "mysqlcppconn8-2-vs14")
 else()
-	include_directories("/usr/include")
-	include_directories("/usr/include/mysql")
+	include_directories("/usr/include" "/usr/include/mysql")
 	link_directories("/usr/lib")
+	set(CRYPTOLIB "crypt")
+	set(MARIADBLIB "mysqlclient")
 endif()
 
-
-# file(GLOB_RECURSE RIFT_SOURCE code/*.c code/*.cpp code/*.h code/*.hpp)
-# list(FILTER RIFT_SOURCE EXCLUDE REGEX "code/main.c")
-# list(FILTER RIFT_SOURCE EXCLUDE REGEX "code/basestr.c")
-# list(FILTER RIFT_SOURCE EXCLUDE REGEX "code/classlist.h")
-# list(FILTER RIFT_SOURCE EXCLUDE REGEX "code/affect.h")
-# list(FILTER RIFT_SOURCE EXCLUDE REGEX "autogen")
+##
+## SOURCE
+##
 
 set(RIFT_SOURCE code/config.cpp
 	code/config.h
@@ -173,13 +175,26 @@ set(RIFT_SOURCE code/config.cpp
 )
 
 set_source_files_properties(${RIFT_SOURCE} code/main.c PROPERTIES LANGUAGE CXX)
-
 add_library(RiftCore ${RIFT_SOURCE})
 add_executable(rift code/main.c)
 
-if(WIN32)
-	target_link_libraries(rift RiftCore libcrypto mysqlcppconn8-2-vs14 m)
-else()
-	target_link_libraries(rift RiftCore "crypt" "mysqlclient" m)
-endif()
+target_link_libraries(rift RiftCore ${CRYPTOLIB} ${MARIADBLIB} m)
+
+##
+## TESTS
+##
+
+set(RIFT_SOURCE_TEST 
+	tests/db_tests.c
+	tests/fight_tests.c
+	tests/main.c
+)
+
+set_source_files_properties(${RIFT_SOURCE_TEST} tests/main.c PROPERTIES LANGUAGE CXX)
+add_executable(rift_tests ${RIFT_SOURCE_TEST})
+
+target_link_libraries(rift_tests RiftCore ${CRYPTOLIB} ${MARIADBLIB} m)
+
+enable_testing()
+add_test(NAME RiftTest COMMAND rift_tests)
 

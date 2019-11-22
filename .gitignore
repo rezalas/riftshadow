@@ -11,11 +11,13 @@
 # CMake files
 CMakeFiles/
 cmake_install.cmake
+CTestTestfile.cmake
 CMakeCache.txt
 Makefile
 
 # Object files
 *.o
+libRiftCore.a
 
 # Player data
 player/*.plr
@@ -23,6 +25,7 @@ player/Player.lst
 
 # Binaries
 rift
+rift_tests
 code/rift
 area/rift
 *.exe
@@ -30,4 +33,3 @@ code/rift.exe
 area/rift.exe
 area/rift
 tests/rift_tests
-libRiftCore.a
