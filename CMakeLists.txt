@@ -1,6 +1,6 @@
 # > cmake -B .
 # > make
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.12)
 
 # need to define the compiler before project because reasons
 if(WIN32)
