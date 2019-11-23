@@ -80,13 +80,13 @@ const struct wear_type wear_table[] =
 
 bool show_version(CHAR_DATA *ch, char *argument)
 {
-	send_to_char(VERSION, ch);
+	send_to_char(SHOW_VERSION, ch);
 	send_to_char("\n\r", ch);
-	send_to_char(AUTHOR, ch);
+	send_to_char(SHOW_AUTHOR, ch);
 	send_to_char("\n\r", ch);
-	send_to_char(DATE, ch);
+	send_to_char(SHOW_DATE, ch);
 	send_to_char("\n\r", ch);
-	send_to_char(CREDITS, ch);
+	send_to_char(SHOW_CREDITS, ch);
 	send_to_char("\n\r", ch);
 
 	return false;

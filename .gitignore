@@ -8,8 +8,17 @@
 .vscode/launch.json
 .vscode/tasks.json
 
+# CMake files
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+Testing/
+CTestTestfile.cmake
+
 # Object files
 *.o
+libRiftCore.a
 
 # Player data
 player/*.plr
@@ -17,6 +26,7 @@ player/Player.lst
 
 # Binaries
 rift
+rift_tests
 code/rift
 area/rift
 *.exe

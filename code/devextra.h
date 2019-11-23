@@ -26,7 +26,7 @@
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"
-#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
+//#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
 #define HISTORY_FILE			"history.txt"
 
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);
