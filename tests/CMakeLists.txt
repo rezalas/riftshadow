@@ -3,15 +3,22 @@ project(riftshadow_tests)
 add_library(catch INTERFACE)
 target_include_directories(catch INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(RIFT_SOURCE_TEST 
-	db_tests.c
-	fight_tests.c
-	main.c
-)
+set(TEST_LIB_FLAGS RiftCore catch ${CRYPTOLIB} ${MARIADBLIB} m)
 
-set_source_files_properties(${RIFT_SOURCE_TEST} main.c PROPERTIES LANGUAGE CXX)
-add_executable(rift_tests ${RIFT_SOURCE_TEST})
+##
+## DB TESTS
+##
+set(DB_TESTS db_tests.c main.c)
+set_source_files_properties(${DB_TESTS} PROPERTIES LANGUAGE CXX)
+add_executable(db_tests ${DB_TESTS})
+target_link_libraries(db_tests PRIVATE ${TEST_LIB_FLAGS})
+add_test(NAME DB_TESTS COMMAND db_tests)
 
-target_link_libraries(rift_tests PRIVATE RiftCore catch ${CRYPTOLIB} ${MARIADBLIB} m)
-
-add_test(NAME RiftTest COMMAND rift_tests)
+##
+## FIGHT TESTS
+##
+set(FIGHT_TESTS fight_tests.c main.c)
+set_source_files_properties(${FIGHT_TESTS} PROPERTIES LANGUAGE CXX)
+add_executable(fight_tests ${FIGHT_TESTS})
+target_link_libraries(fight_tests PRIVATE ${TEST_LIB_FLAGS})
+add_test(NAME FIGHT_TESTS COMMAND fight_tests)

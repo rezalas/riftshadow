@@ -26,11 +26,11 @@ player/Player.lst
 
 # Binaries
 rift
-rift_tests
 code/rift
 area/rift
 *.exe
 code/rift.exe
 area/rift.exe
 area/rift
-tests/rift_tests
+tests/db_tests
+tests/fight_tests
