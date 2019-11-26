@@ -1401,7 +1401,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 						fread_to_eol(fp);
 						break;
 					case 'C':
-						KEY("Cabal", cabal, cabal_lookup(fread_string(fp)));
+						KEY("Cabal", cabal, cabal_lookup(fread_string(fp)))
 						break;
 					case 'E':
 						if (!str_cmp(word, "End"))

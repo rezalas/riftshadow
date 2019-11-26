@@ -1597,7 +1597,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 
 	if (skill == 0)
 	{
-		send_to_char("Huh?\n\r", ch);;
+		send_to_char("Huh?\n\r", ch);
 		return;
 	}
 

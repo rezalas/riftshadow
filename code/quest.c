@@ -1088,11 +1088,8 @@ BEGIN_SPEC(mspec_academy_smith)
 		if (agrees(ch, argument) != REPLY_YES)
 			return 0;
 		mprog_say(2, "Good!  I'm in short bloody supply of materials to work with these days.", mob, ch);
-		mprog_say(4, "If yer can find me some, I'll keep half for myself and use the other half to strengthen yer weapon.", mob,
-				ch);
-		;
-		mprog_say(6, "I need four raw metals.  Iandia said there might be some secreted in the Outlying Wilds and thereabouts.",
-				mob, ch);
+		mprog_say(4, "If yer can find me some, I'll keep half for myself and use the other half to strengthen yer weapon.", mob, ch);
+		mprog_say(6, "I need four raw metals.  Iandia said there might be some secreted in the Outlying Wilds and thereabouts.", mob, ch);
 		RS.Queue.AddToQueue(8, 5, act, "$N returns to his forge, turning his back to you.", ch, 0, mob, TO_CHAR);
 		SET_STAGE(ch, 2);
 	END_EVENT

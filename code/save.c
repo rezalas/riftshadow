@@ -1165,12 +1165,12 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				fread_to_eol(fp);
 				break;
 			case 'A':
-				KEYV("Act", ch->act);
-				KEYV("AffectedBy", ch->affected_by);
-				KEY("Agemod", ch->pcdata->age_mod, fread_number(fp));
-				KEYV("AfBy", ch->affected_by);
-				KEY("Alignment", ch->alignment, fread_number(fp));
-				KEY("Alig", ch->alignment, fread_number(fp));
+				KEYV("Act", ch->act)
+				KEYV("AffectedBy", ch->affected_by)
+				KEY("Agemod", ch->pcdata->age_mod, fread_number(fp))
+				KEYV("AfBy", ch->affected_by)
+				KEY("Alignment", ch->alignment, fread_number(fp))
+				KEY("Alig", ch->alignment, fread_number(fp))
 
 				if (!str_cmp(word, "Alia"))
 				{
@@ -1312,16 +1312,16 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'B':
-				KEY("Bgold", ch->gold_bank, fread_number(fp));
-				KEY("Bamfin", ch->pcdata->bamfin, fread_string(fp));
-				KEY("Bamfout", ch->pcdata->bamfout, fread_string(fp));
-				KEY("Bin", ch->pcdata->bamfin, fread_string(fp));
-				KEY("Bout", ch->pcdata->bamfout, fread_string(fp));
-				KEY("Bounty", ch->pcdata->bounty, fread_number(fp));
-				KEY("BCredits", ch->pcdata->bounty_credits, fread_number(fp));
-				KEY("Born", ch->pcdata->birth_date, fread_number(fp));
-				KEY("Beauty", ch->pcdata->beauty, fread_number(fp));
-				KEY("BountyKilled", ch->pcdata->bounty_killed, fread_number(fp));
+				KEY("Bgold", ch->gold_bank, fread_number(fp))
+				KEY("Bamfin", ch->pcdata->bamfin, fread_string(fp))
+				KEY("Bamfout", ch->pcdata->bamfout, fread_string(fp))
+				KEY("Bin", ch->pcdata->bamfin, fread_string(fp))
+				KEY("Bout", ch->pcdata->bamfout, fread_string(fp))
+				KEY("Bounty", ch->pcdata->bounty, fread_number(fp))
+				KEY("BCredits", ch->pcdata->bounty_credits, fread_number(fp))
+				KEY("Born", ch->pcdata->birth_date, fread_number(fp))
+				KEY("Beauty", ch->pcdata->beauty, fread_number(fp))
+				KEY("BountyKilled", ch->pcdata->bounty_killed, fread_number(fp))
 				break;
 			case 'C':
 				if (!str_cmp(word, "Cla"))
@@ -1331,8 +1331,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					break;
 				}
 
-				KEY("Cabal", ch->cabal, cabal_lookup(fread_string(fp)));
-				KEY("CabalLevel", ch->pcdata->cabal_level, fread_number(fp));
+				KEY("Cabal", ch->cabal, cabal_lookup(fread_string(fp)))
+				KEY("CabalLevel", ch->pcdata->cabal_level, fread_number(fp))
 
 				if (!str_cmp(word, "Condition") || !str_cmp(word, "Cond"))
 				{
@@ -1377,18 +1377,18 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				if (!str_cmp(word, "CScheme"))
 					ch->pcdata->color_scheme[get_event_number(fread_word(fp))] = get_color_name(fread_word(fp));
 
-				KEYV("Comm", ch->comm);
+				KEYV("Comm", ch->comm)
 				break;
 			case 'D':
-				KEY("Deaths", ch->pcdata->death_count, fread_number(fp));
-				KEY("Died", ch->pcdata->death_status, fread_number(fp));
-				KEY("Dtime", ch->pcdata->death_timer, fread_number(fp));
-				KEY("Damroll", ch->damroll, fread_number(fp));
-				KEY("Dam", ch->damroll, fread_number(fp));
-				KEY("Description", ch->description, fread_string(fp));
-				KEY("Desc", ch->description, fread_string(fp));
-				KEY("DeathTime", ch->pcdata->death_time, fread_number(fp));
-				KEY("Dmsg", ch->pcdata->imm_death, fread_string(fp));
+				KEY("Deaths", ch->pcdata->death_count, fread_number(fp))
+				KEY("Died", ch->pcdata->death_status, fread_number(fp))
+				KEY("Dtime", ch->pcdata->death_timer, fread_number(fp))
+				KEY("Damroll", ch->damroll, fread_number(fp))
+				KEY("Dam", ch->damroll, fread_number(fp))
+				KEY("Description", ch->description, fread_string(fp))
+				KEY("Desc", ch->description, fread_string(fp))
+				KEY("DeathTime", ch->pcdata->death_time, fread_number(fp))
+				KEY("Dmsg", ch->pcdata->imm_death, fread_string(fp))
 
 				if (!str_cmp(word, "DeposItems"))
 				{
@@ -1400,8 +1400,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'E':
-				KEY("EleMaj", ch->pcdata->ele_major, fread_number(fp));
-				KEY("ElePar", ch->pcdata->ele_para, fread_number(fp));
+				KEY("EleMaj", ch->pcdata->ele_major, fread_number(fp))
+				KEY("ElePar", ch->pcdata->ele_para, fread_number(fp))
 
 				if (!str_cmp(word, "EXTitle") || !str_cmp(word, "EXTitl"))
 				{
@@ -1442,8 +1442,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					return;
 				}
 
-				KEY("Etho", ch->pcdata->ethos, fread_number(fp));
-				KEY("Exp", ch->exp, fread_number(fp));
+				KEY("Etho", ch->pcdata->ethos, fread_number(fp))
+				KEY("Exp", ch->exp, fread_number(fp))
 				break;
 			case 'F':
 				if (!str_cmp(word, "Form"))
@@ -1470,8 +1470,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'G':
-				KEY("Gold", ch->gold, fread_number(fp));
-				KEY("Ghost", ch->ghost, fread_number(fp));
+				KEY("Gold", ch->gold, fread_number(fp))
+				KEY("Ghost", ch->ghost, fread_number(fp))
 
 				if (!str_cmp(word, "Group") || !str_cmp(word, "Gr"))
 				{
@@ -1508,10 +1508,10 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'H':
-				KEY("History", ch->pcdata->history_buffer, fread_string(fp));
-				KEY("Hitroll", ch->hitroll, fread_number(fp));
-				KEY("Hit", ch->hitroll, fread_number(fp));
-				KEY("HomeTown", ch->hometown, fread_number(fp));
+				KEY("History", ch->pcdata->history_buffer, fread_string(fp))
+				KEY("Hitroll", ch->hitroll, fread_number(fp))
+				KEY("Hit", ch->hitroll, fread_number(fp))
+				KEY("HomeTown", ch->hometown, fread_number(fp))
 
 				ch->pcdata->temp_history_buffer = NULL;
 
@@ -1538,13 +1538,13 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'I':
-				KEY("Id", ch->id, fread_number(fp));
-				KEY("Indu", ch->pcdata->induct, fread_number(fp));
-				KEY("InvisLevel", ch->invis_level, fread_number(fp));
-				KEY("Inco", ch->incog_level, fread_number(fp));
-				KEY("Invi", ch->invis_level, fread_number(fp));
-				KEYV("Immune", limmune_flags);
-				KEY("Instyle", ch->pcdata->style, fread_number(fp));
+				KEY("Id", ch->id, fread_number(fp))
+				KEY("Indu", ch->pcdata->induct, fread_number(fp))
+				KEY("InvisLevel", ch->invis_level, fread_number(fp))
+				KEY("Inco", ch->incog_level, fread_number(fp))
+				KEY("Invi", ch->invis_level, fread_number(fp))
+				KEYV("Immune", limmune_flags)
+				KEY("Instyle", ch->pcdata->style, fread_number(fp))
 				break;
 			case 'K':
 				if (!str_cmp(word, "kls"))
@@ -1563,14 +1563,14 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'L':
-				KEY("LastLevel", ch->pcdata->last_level, fread_number(fp));
-				KEY("LLev", ch->pcdata->last_level, fread_number(fp));
-				KEY("Level", ch->level, fread_number(fp));
-				KEY("Lev", ch->level, fread_number(fp));
-				KEY("Levl", ch->level, fread_number(fp));
-				KEY("LogO", lastlogoff, fread_number(fp));
-				KEY("LongDescr", ch->long_descr, fread_string(fp));
-				KEY("LnD", ch->long_descr, fread_string(fp));
+				KEY("LastLevel", ch->pcdata->last_level, fread_number(fp))
+				KEY("LLev", ch->pcdata->last_level, fread_number(fp))
+				KEY("Level", ch->level, fread_number(fp))
+				KEY("Lev", ch->level, fread_number(fp))
+				KEY("Levl", ch->level, fread_number(fp))
+				KEY("LogO", lastlogoff, fread_number(fp))
+				KEY("LongDescr", ch->long_descr, fread_string(fp))
+				KEY("LnD", ch->long_descr, fread_string(fp))
 
 				if (!str_cmp(word, "Lssr"))
 				{
@@ -1585,8 +1585,8 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'N':
-				KEY("Name", ch->name, fread_string(fp));
-				KEY("Note", ch->pcdata->last_note, fread_number(fp));
+				KEY("Name", ch->name, fread_string(fp))
+				KEY("Note", ch->pcdata->last_note, fread_number(fp))
 
 				if (!str_cmp(word, "Not"))
 				{
@@ -1599,24 +1599,24 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					break;
 				}
 
-				KEY("Newbie", ch->pcdata->newbie, fread_number(fp));
+				KEY("Newbie", ch->pcdata->newbie, fread_number(fp))
 				break;
 			case 'O':
-				KEY("OAli", ch->pcdata->oalign, fread_number(fp));
-				KEY("OEth", ch->pcdata->oethos, fread_number(fp));
+				KEY("OAli", ch->pcdata->oalign, fread_number(fp))
+				KEY("OEth", ch->pcdata->oethos, fread_number(fp))
 				break;
 			case 'P':
-				KEY("Paladin_path", ch->pcdata->paladin_path, fread_number(fp));
-				KEY("Password", ch->pcdata->pwd, fread_string(fp));
-				KEY("Pass", ch->pcdata->pwd, fread_string(fp));
-				KEY("Played", ch->played, fread_number(fp));
-				KEY("Plyd", ch->played, fread_number(fp));
-				KEY("Position", ch->position, fread_number(fp));
-				KEY("Pos", ch->position, fread_number(fp));
-				KEY("Practice", ch->practice, fread_number(fp));
-				KEY("Prac", ch->practice, fread_number(fp));
-				KEY("Prompt", ch->prompt, fread_string(fp));
-				KEY("Prom", ch->prompt, fread_string(fp));
+				KEY("Paladin_path", ch->pcdata->paladin_path, fread_number(fp))
+				KEY("Password", ch->pcdata->pwd, fread_string(fp))
+				KEY("Pass", ch->pcdata->pwd, fread_string(fp))
+				KEY("Played", ch->played, fread_number(fp))
+				KEY("Plyd", ch->played, fread_number(fp))
+				KEY("Position", ch->position, fread_number(fp))
+				KEY("Pos", ch->position, fread_number(fp))
+				KEY("Practice", ch->practice, fread_number(fp))
+				KEY("Prac", ch->practice, fread_number(fp))
+				KEY("Prompt", ch->prompt, fread_string(fp))
+				KEY("Prom", ch->prompt, fread_string(fp))
 
 				if (!str_cmp(word, "Prof"))
 					ch->Profs()->SetProf(CProficiencies::ProfIndexLookup(fread_string(fp)), fread_number(fp));
@@ -1634,11 +1634,11 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'R':
-				KEY("Race", ch->race, race_lookup(fread_string(fp)));
-				KEY("Rep", ch->pcdata->reputation, fread_number(fp));
-				KEYV("Resist", lres_flags);
-				KEY("Role", ch->pcdata->role, fread_string(fp));
-				KEY("RollTime", ch->pcdata->roll_time, fread_number(fp));
+				KEY("Race", ch->race, race_lookup(fread_string(fp)))
+				KEY("Rep", ch->pcdata->reputation, fread_number(fp))
+				KEYV("Resist", lres_flags)
+				KEY("Role", ch->pcdata->role, fread_string(fp))
+				KEY("RollTime", ch->pcdata->roll_time, fread_number(fp))
 
 				if (!str_cmp(word, "Room"))
 				{
@@ -1671,18 +1671,18 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'S':
-				KEY("SavingThrow", ch->saving_throw, fread_number(fp));
-				KEY("Save", ch->saving_throw, fread_number(fp));
-				KEY("Scro", ch->lines, fread_number(fp));
-				KEY("Sex", ch->sex, fread_number(fp));
-				KEY("ShortDescr", ch->short_descr, fread_string(fp));
-				KEY("ShD", ch->short_descr, fread_string(fp));
-				KEY("Sec", ch->pcdata->security, fread_number(fp)); /* OLC */
-				KEY("Sp", ch->pcdata->sp, fread_number(fp));
-				KEYV("Styles", ch->pcdata->styles);
-				KEY("Special", ch->pcdata->special, fread_number(fp));
-				KEY("Souls", ch->pcdata->souls, fread_number(fp));
-				KEY("StartWeap", ch->pcdata->start_weapon, fread_number(fp));
+				KEY("SavingThrow", ch->saving_throw, fread_number(fp))
+				KEY("Save", ch->saving_throw, fread_number(fp))
+				KEY("Scro", ch->lines, fread_number(fp))
+				KEY("Sex", ch->sex, fread_number(fp))
+				KEY("ShortDescr", ch->short_descr, fread_string(fp))
+				KEY("ShD", ch->short_descr, fread_string(fp))
+				KEY("Sec", ch->pcdata->security, fread_number(fp)) /* OLC */
+				KEY("Sp", ch->pcdata->sp, fread_number(fp))
+				KEYV("Styles", ch->pcdata->styles)
+				KEY("Special", ch->pcdata->special, fread_number(fp))
+				KEY("Souls", ch->pcdata->souls, fread_number(fp))
+				KEY("StartWeap", ch->pcdata->start_weapon, fread_number(fp))
 
 				if (!str_cmp(word, "Skill") || !str_cmp(word, "Sk"))
 				{
@@ -1719,13 +1719,13 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'T':
-				KEY("TrueSex", ch->pcdata->true_sex, fread_number(fp));
-				KEY("TSex", ch->pcdata->true_sex, fread_number(fp));
-				KEY("Trai", ch->train, fread_number(fp));
-				KEY("Trust", ch->trust, fread_number(fp));
-				KEYV("TrSet", ch->pcdata->trust);
-				KEY("Tru", ch->trust, fread_number(fp));
-				KEY("Tribe", ch->pcdata->tribe, fread_number(fp));
+				KEY("TrueSex", ch->pcdata->true_sex, fread_number(fp))
+				KEY("TSex", ch->pcdata->true_sex, fread_number(fp))
+				KEY("Trai", ch->train, fread_number(fp))
+				KEY("Trust", ch->trust, fread_number(fp))
+				KEYV("TrSet", ch->pcdata->trust)
+				KEY("Tru", ch->trust, fread_number(fp))
+				KEY("Tribe", ch->pcdata->tribe, fread_number(fp))
 
 				if (!str_cmp(word, "Title") || !str_cmp(word, "Titl"))
 				{
@@ -1769,9 +1769,9 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'V':
-				KEY("Version", ch->version, fread_number(fp));
-				KEY("Vers", ch->version, fread_number(fp));
-				KEYV("Vuln", lvuln_flags);
+				KEY("Version", ch->version, fread_number(fp))
+				KEY("Vers", ch->version, fread_number(fp))
+				KEYV("Vuln", lvuln_flags)
 
 				if (!str_cmp(word, "Vnum"))
 				{
@@ -1782,9 +1782,9 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'W':
-				KEY("Wimpy", ch->wimpy, fread_number(fp));
-				KEY("Wimp", ch->wimpy, fread_number(fp));
-				KEYV("Wizn", ch->wiznet);
+				KEY("Wimpy", ch->wimpy, fread_number(fp))
+				KEY("Wimp", ch->wimpy, fread_number(fp))
+				KEYV("Wizn", ch->wiznet)
 				break;
 		}
 
@@ -1842,9 +1842,9 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 				fread_to_eol(fp);
 				break;
 			case 'A':
-				KEYV("Act", pet->act);
-				KEYV("AfBy", pet->affected_by);
-				KEY("Alig", pet->alignment, fread_number(fp));
+				KEYV("Act", pet->act)
+				KEYV("AfBy", pet->affected_by)
+				KEY("Alig", pet->alignment, fread_number(fp))
 
 				if (!str_cmp(word, "ACs"))
 				{
@@ -1939,12 +1939,12 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'C':
-				KEYV("Comm", pet->comm);
-				KEY("Cabal", pet->cabal, cabal_lookup(fread_string(fp)));
+				KEYV("Comm", pet->comm)
+				KEY("Cabal", pet->cabal, cabal_lookup(fread_string(fp)))
 				break;
 			case 'D':
-				KEY("Dam", pet->damroll, fread_number(fp));
-				KEY("Desc", pet->description, fread_string(fp));
+				KEY("Dam", pet->damroll, fread_number(fp))
+				KEY("Desc", pet->description, fread_string(fp))
 				break;
 			case 'E':
 				if (!str_cmp(word, "End"))
@@ -1966,13 +1966,13 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 					return;
 				}
 
-				KEY("Exp", pet->exp, fread_number(fp));
+				KEY("Exp", pet->exp, fread_number(fp))
 				break;
 			case 'G':
-				KEY("Gold", pet->gold, fread_number(fp));
+				KEY("Gold", pet->gold, fread_number(fp))
 				break;
 			case 'H':
-				KEY("Hit", pet->hitroll, fread_number(fp));
+				KEY("Hit", pet->hitroll, fread_number(fp))
 
 				if (!str_cmp(word, "HMV"))
 				{
@@ -1988,23 +1988,23 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'L':
-				KEY("Levl", pet->level, fread_number(fp));
-				KEY("LnD", pet->long_descr, fread_string(fp));
-				KEY("LogO", lastlogoff, fread_number(fp));
+				KEY("Levl", pet->level, fread_number(fp))
+				KEY("LnD", pet->long_descr, fread_string(fp))
+				KEY("LogO", lastlogoff, fread_number(fp))
 				break;
 			case 'N':
-				KEY("Name", pet->name, fread_string(fp));
+				KEY("Name", pet->name, fread_string(fp))
 				break;
 			case 'P':
-				KEY("Pos", pet->position, fread_number(fp));
+				KEY("Pos", pet->position, fread_number(fp))
 				break;
 			case 'R':
-				KEY("Race", pet->race, race_lookup(fread_string(fp)));
+				KEY("Race", pet->race, race_lookup(fread_string(fp)))
 				break;
 			case 'S':
-				KEY("Save", pet->saving_throw, fread_number(fp));
-				KEY("Sex", pet->sex, fread_number(fp));
-				KEY("ShD", pet->short_descr, fread_string(fp));
+				KEY("Save", pet->saving_throw, fread_number(fp))
+				KEY("Sex", pet->sex, fread_number(fp))
+				KEY("ShD", pet->short_descr, fread_string(fp))
 				break;
 		}
 
@@ -2140,20 +2140,20 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'C':
-				KEY("Cond", obj->condition, fread_number(fp));
-				KEY("Cost", obj->cost, fread_number(fp));
+				KEY("Cond", obj->condition, fread_number(fp))
+				KEY("Cost", obj->cost, fread_number(fp))
 				break;
 			case 'D':
-				KEY("Description", obj->description, fread_string(fp));
-				KEY("Desc", obj->description, fread_string(fp));
+				KEY("Description", obj->description, fread_string(fp))
+				KEY("Desc", obj->description, fread_string(fp))
 				break;
 			case 'E':
-				KEYV("ExtraFlags", obj->extra_flags);
+				KEYV("ExtraFlags", obj->extra_flags)
 
 				if (!str_cmp(word, "ExtF"))
 				{
 					zero_vector(obj->extra_flags);
-					KEYV("ExtF", obj->extra_flags);
+					KEYV("ExtF", obj->extra_flags)
 				}
 
 				if (!str_cmp(word, "ExtraDescr") || !str_cmp(word, "ExDe"))
@@ -2238,18 +2238,18 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'I':
-				KEY("ItemType", obj->item_type, fread_number(fp));
-				KEY("Ityp", obj->item_type, fread_number(fp));
+				KEY("ItemType", obj->item_type, fread_number(fp))
+				KEY("Ityp", obj->item_type, fread_number(fp))
 				break;
 			case 'L':
-				KEY("Level", obj->level, fread_number(fp));
-				KEY("Lev", obj->level, fread_number(fp));
+				KEY("Level", obj->level, fread_number(fp))
+				KEY("Lev", obj->level, fread_number(fp))
 				break;
 			case 'M':
-				KEY("Mat", obj->material, fread_string(fp));
+				KEY("Mat", obj->material, fread_string(fp))
 				break;
 			case 'N':
-				KEY("Name", obj->name, fread_string(fp));
+				KEY("Name", obj->name, fread_string(fp))
 
 				if (!str_cmp(word, "Nest"))
 				{
@@ -2270,7 +2270,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'O':
-				KEY("Owner", obj->owner, fread_string(fp));
+				KEY("Owner", obj->owner, fread_string(fp))
 
 				if (!str_cmp(word, "Oldstyle"))
 				{
@@ -2285,8 +2285,8 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 				// KEY("ResF", obj->restrict_flags, fread_number(fp));
 				break;
 			case 'S':
-				KEY("ShortDescr", obj->short_descr, fread_string(fp));
-				KEY("ShD", obj->short_descr, fread_string(fp));
+				KEY("ShortDescr", obj->short_descr, fread_string(fp))
+				KEY("ShD", obj->short_descr, fread_string(fp))
 
 				if (!str_cmp(word, "Spell"))
 				{
@@ -2315,8 +2315,8 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'T':
-				KEY("Timer", obj->timer, fread_number(fp));
-				KEY("Time", obj->timer, fread_number(fp));
+				KEY("Timer", obj->timer, fread_number(fp))
+				KEY("Time", obj->timer, fread_number(fp))
 				break;
 			case 'V':
 				if (!str_cmp(word, "Values") || !str_cmp(word, "Vals"))
@@ -2361,13 +2361,13 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				break;
 			case 'W':
-				KEYV("WearFlags", obj->wear_flags);
-				KEYV("WeaF", obj->wear_flags);
-				KEY("WLName", obj->wear_loc_name, fread_string(fp));
-				KEY("WearLoc", obj->wear_loc, fread_number(fp));
-				KEY("Wear", obj->wear_loc, fread_number(fp));
-				KEY("Weight", obj->weight, fread_number(fp));
-				KEY("Wt", obj->weight, fread_number(fp));
+				KEYV("WearFlags", obj->wear_flags)
+				KEYV("WeaF", obj->wear_flags)
+				KEY("WLName", obj->wear_loc_name, fread_string(fp))
+				KEY("WearLoc", obj->wear_loc, fread_number(fp))
+				KEY("Wear", obj->wear_loc, fread_number(fp))
+				KEY("Weight", obj->weight, fread_number(fp))
+				KEY("Wt", obj->weight, fread_number(fp))
 				break;
 		}
 

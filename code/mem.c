@@ -33,7 +33,7 @@ RESET_DATA *new_reset_data(void)
 	if (!reset_free)
 	{
 		pReset = new RESET_DATA;
-		CLEAR_MEM(pReset, sizeof(RESET_DATA));
+		CLEAR_MEM(pReset, sizeof(RESET_DATA))
 		top_reset++;
 	}
 	else
@@ -66,7 +66,7 @@ AREA_DATA *new_area(void)
 	if (!area_free)
 	{
 		pArea = new AREA_DATA;
-		CLEAR_MEM(pArea, sizeof(AREA_DATA));
+		CLEAR_MEM(pArea, sizeof(AREA_DATA))
 		top_area++;
 	}
 	else
@@ -120,7 +120,7 @@ EXIT_DATA *new_exit(void)
 	if (!exit_free)
 	{
 		pExit = new EXIT_DATA;
-		CLEAR_MEM(pExit, sizeof(EXIT_DATA));
+		CLEAR_MEM(pExit, sizeof(EXIT_DATA))
 		top_exit++;
 	}
 	else
@@ -192,7 +192,7 @@ ROOM_INDEX_DATA *new_room_index(void)
 	if (!room_index_free)
 	{
 		pRoom = new ROOM_INDEX_DATA;
-		CLEAR_MEM(pRoom, sizeof(ROOM_INDEX_DATA));
+		CLEAR_MEM(pRoom, sizeof(ROOM_INDEX_DATA))
 		top_room++;
 	}
 	else
@@ -289,7 +289,7 @@ SHOP_DATA *new_shop(void)
 {
 	SHOP_DATA *pShop = new SHOP_DATA;
 
-	CLEAR_MEM(pShop, sizeof(SHOP_DATA));
+	CLEAR_MEM(pShop, sizeof(SHOP_DATA))
 
 	pShop->open_hour = 0;
 	pShop->close_hour = 23;
@@ -313,7 +313,7 @@ OBJ_INDEX_DATA *new_obj_index(void)
 	{
 		pObj = new OBJ_INDEX_DATA;
 
-		CLEAR_MEM(pObj, sizeof(OBJ_INDEX_DATA));
+		CLEAR_MEM(pObj, sizeof(OBJ_INDEX_DATA))
 
 		top_obj_index++;
 	}
@@ -407,7 +407,7 @@ MOB_INDEX_DATA *new_mob_index(void)
 	if (!mob_index_free)
 	{
 		pMob = new MOB_INDEX_DATA;
-		CLEAR_MEM(pMob, sizeof(MOB_INDEX_DATA));
+		CLEAR_MEM(pMob, sizeof(MOB_INDEX_DATA))
 		top_mob_index++;
 	}
 	else

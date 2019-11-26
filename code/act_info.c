@@ -1866,7 +1866,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 				END_COLOR(ch));
 
 			send_to_char(buf, ch);
-		};
+		}
 
 		if (is_affected_room(ch->in_room, gsn_flood))
 		{

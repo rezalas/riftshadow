@@ -73,7 +73,7 @@ int CSQLInterface::Select(const char *pquery, ...)
 {
 	TString query, tquery;
 	
-	MUNCH_VARARG(pquery, query);
+	MUNCH_VARARG(pquery, query)
 	
 	tquery = "SELECT ";
 	tquery += (const char *)query;
@@ -84,7 +84,7 @@ int CSQLInterface::Update(const char *pquery, ...)
 {
 	TString query, tquery;
 
-	MUNCH_VARARG(pquery, query);
+	MUNCH_VARARG(pquery, query)
 
 	tquery = "UPDATE ";
 	tquery += (const char *)query;
@@ -95,7 +95,7 @@ int CSQLInterface::Insert(const char *pquery, ...)
 {
 	TString query, tquery;
 	
-	MUNCH_VARARG(pquery, query);
+	MUNCH_VARARG(pquery, query)
 
 	tquery = "INSERT INTO ";
 	tquery += (const char *)query;
@@ -106,7 +106,7 @@ int CSQLInterface::Delete(const char *pquery, ...)
 {
 	TString query, tquery;
 
-	MUNCH_VARARG(pquery, query);
+	MUNCH_VARARG(pquery, query)
 
 	tquery = "DELETE FROM ";
 	tquery += (const char *)query;

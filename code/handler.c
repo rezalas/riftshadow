@@ -514,7 +514,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 		}
 		else if (ch->pIndexData->Class()->GetIndex() == CLASS_SORCERER)
 		{
-			;
+			//TODO: what logic for sorcerers goes here?
 		}
 		else
 		{

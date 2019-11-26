@@ -1064,9 +1064,9 @@ void do_finger(CHAR_DATA *ch, char *argument)
 				fread_to_eol(fp);
 				break;
 			case 'A':
-				KEY("Alig", align, fread_number(fp));
-				KEYV("Act", act);
-				KEY("Agemod", agemod, fread_number(fp));
+				KEY("Alig", align, fread_number(fp))
+				KEYV("Act", act)
+				KEY("Agemod", agemod, fread_number(fp))
 
 				if (!str_cmp(word, "Attr"))
 				{
@@ -1082,8 +1082,8 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 				break;
 			case 'B':
-				KEY("BCredits", bcredits, fread_number(fp));
-				KEY("Born", born, fread_number(fp));
+				KEY("BCredits", bcredits, fread_number(fp))
+				KEY("Born", born, fread_number(fp))
 				break;
 			case 'C':
 				if (!str_cmp(word, "Cla"))
@@ -1093,17 +1093,17 @@ void do_finger(CHAR_DATA *ch, char *argument)
 					break;
 				}
 
-				KEY("Cabal", cabal, cabal_lookup(fread_string(fp)));
-				KEY("Comm", comm, fread_flag(fp));
+				KEY("Cabal", cabal, cabal_lookup(fread_string(fp)))
+				KEY("Comm", comm, fread_flag(fp))
 				break;
 			case 'D':
-				KEY("Died", died, fread_number(fp));
-				KEY("Desc", desc, fread_string(fp));
-				KEY("DeathTime", dtime, fread_number(fp));
+				KEY("Died", died, fread_number(fp))
+				KEY("Desc", desc, fread_string(fp))
+				KEY("DeathTime", dtime, fread_number(fp))
 				break;
 			case 'E':
-				KEY("Etho", ethos, fread_number(fp));
-				KEY("EXTitl", extitle, fread_string(fp));
+				KEY("Etho", ethos, fread_number(fp))
+				KEY("EXTitl", extitle, fread_string(fp))
 
 				if (!str_cmp(word, "End"))
 				{
@@ -1129,11 +1129,11 @@ void do_finger(CHAR_DATA *ch, char *argument)
 				}
 				break;
 			case 'H':
-				KEY("History", history, fread_string(fp));
-				KEY("HomeTown", hometown, fread_number(fp));
+				KEY("History", history, fread_string(fp))
+				KEY("HomeTown", hometown, fread_number(fp))
 				break;
 			case 'I':
-				KEY("Indu", induct, fread_number(fp));
+				KEY("Indu", induct, fread_number(fp))
 				break;
 			case 'K':
 				if (!str_cmp(word, "kls"))
@@ -1153,14 +1153,14 @@ void do_finger(CHAR_DATA *ch, char *argument)
 				fMatch = true;
 				break;
 			case 'L':
-				KEY("Levl", level, fread_number(fp));
-				KEY("LogonTime", login, fread_string(fp));
+				KEY("Levl", level, fread_number(fp))
+				KEY("LogonTime", login, fread_string(fp))
 				break;
 			case 'N':
-				KEY("Name", name, fread_string(fp));
+				KEY("Name", name, fread_string(fp))
 				break;
 			case 'P':
-				KEY("Plyd", played, fread_number(fp));
+				KEY("Plyd", played, fread_number(fp))
 				break;
 			case 'Q':
 				if (!str_cmp(word, "Quest"))
@@ -1168,15 +1168,15 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 				break;
 			case 'R':
-				KEY("Race", race, race_lookup(fread_string(fp)));
-				KEY("Rep", reputation, fread_number(fp));
-				KEY("Room", room, fread_number(fp));
-				KEY("Role", tbuf, fread_string(fp));
+				KEY("Race", race, race_lookup(fread_string(fp)))
+				KEY("Rep", reputation, fread_number(fp))
+				KEY("Room", room, fread_number(fp))
+				KEY("Role", tbuf, fread_string(fp))
 				break;
 			case 'S':
-				KEY("Sex", sex, sex_table[fread_number(fp)].name);
-				KEY("SiteTrack", allsites, fread_string(fp));
-				KEY("Souls", souls, fread_number(fp));
+				KEY("Sex", sex, sex_table[fread_number(fp)].name)
+				KEY("SiteTrack", allsites, fread_string(fp))
+				KEY("Souls", souls, fread_number(fp))
 
 				if (!str_cmp(word, "Sect"))
 				{
@@ -1189,10 +1189,10 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 				break;
 			case 'T':
-				KEY("Titl", title, fread_string(fp));
-				KEY("TimePlayed", timeplayed, fread_number(fp));
-				KEY("TrackAObj", aobj, fread_number(fp));
-				KEY("TrackLObj", lobj, fread_number(fp));
+				KEY("Titl", title, fread_string(fp))
+				KEY("TimePlayed", timeplayed, fread_number(fp))
+				KEY("TrackAObj", aobj, fread_number(fp))
+				KEY("TrackLObj", lobj, fread_number(fp))
 				break;
 		}
 
@@ -1509,7 +1509,7 @@ char *get_login(CHAR_DATA *ch, FILE *fpChar2)
 				}
 				break;
 			case 'L':
-				KEY("LogonTime", login, fread_string(fpChar2));
+				KEY("LogonTime", login, fread_string(fpChar2))
 				break;
 		}
 
