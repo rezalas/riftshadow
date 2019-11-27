@@ -839,10 +839,10 @@ void new_load_area(FILE *fp)
 		switch (UPPER(word[0]))
 		{
 			case 'N':
-				SKEY("Name", pArea->name);
+				SKEY("Name", pArea->name)
 				break;
 			case 'S':
-				KEY("Security", pArea->security, fread_number(fp));
+				KEY("Security", pArea->security, fread_number(fp))
 				break;
 			case 'V':
 				if (!str_cmp(word, "VNUMs"))
@@ -866,10 +866,10 @@ void new_load_area(FILE *fp)
 				}
 				break;
 			case 'B':
-				SKEY("Builders", pArea->builders);
+				SKEY("Builders", pArea->builders)
 				break;
 			case 'C':
-				SKEY("Credits", pArea->credits);
+				SKEY("Credits", pArea->credits)
 				break;
 		}
 	}

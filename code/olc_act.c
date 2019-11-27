@@ -643,7 +643,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 		send_to_char("   speech <speech_name> line <#> delay <#>\n\r", ch);
 		send_to_char("   speech <speech_name> line <#> type <type>\n\r", ch);
 		send_to_char("   speech <speech_name> line <#> delete\n\r", ch);
-		/* list commands */;
+		/* list commands */
 	}
 	else
 	{
@@ -919,7 +919,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 			if (pMobIndex->mprogs == NULL)
 			{
 				pMobIndex->mprogs = new MPROG_DATA;
-				CLEAR_MEM(pMobIndex->mprogs, sizeof(MPROG_DATA));
+				CLEAR_MEM(pMobIndex->mprogs, sizeof(MPROG_DATA))
 			}
 
 			mprog_set(pMobIndex, prog_type, prog);
@@ -999,7 +999,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 		if (pObjIndex->iprogs == NULL)
 		{
 			pObjIndex->iprogs = new IPROG_DATA;
-			CLEAR_MEM(pObjIndex->iprogs, sizeof(IPROG_DATA));
+			CLEAR_MEM(pObjIndex->iprogs, sizeof(IPROG_DATA))
 		}
 
 		for (count = 0; iprog_table[count].type != NULL; count++)
@@ -1287,7 +1287,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 		if (pRoomIndex->rprogs == NULL)
 		{
 			pRoomIndex->rprogs = new RPROG_DATA;
-			CLEAR_MEM(pRoomIndex->rprogs, sizeof(RPROG_DATA));
+			CLEAR_MEM(pRoomIndex->rprogs, sizeof(RPROG_DATA))
 		}
 
 		for (count = 0; rprog_table[count].type != NULL; count++)
@@ -1524,7 +1524,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 		if (pArea->aprogs == NULL)
 		{
 			pArea->aprogs = new APROG_DATA;
-			CLEAR_MEM(pArea->aprogs, sizeof(APROG_DATA));
+			CLEAR_MEM(pArea->aprogs, sizeof(APROG_DATA))
 		}
 
 		for (count = 0; aprog_table[count].type != NULL; count++)
@@ -5296,7 +5296,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 	else if (arg1[0] == 'B' || arg1[0] == 'b')
 	{
 		bar = new BARRED_DATA;
-		CLEAR_MEM(bar, sizeof(BARRED_DATA));
+		CLEAR_MEM(bar, sizeof(BARRED_DATA))
 
 		if (pMob->barred_entry)
 		{
@@ -6211,7 +6211,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 	if (!pMob->pShop)
 	{
 		pShop = new SHOP_DATA;
-		CLEAR_MEM(pShop, sizeof(SHOP_DATA));
+		CLEAR_MEM(pShop, sizeof(SHOP_DATA))
 		pMob->pShop = pShop;
 		pShop->pMobIndex = pMob;
 	}

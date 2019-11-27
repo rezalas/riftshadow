@@ -179,20 +179,21 @@ void bug(const char *bugstr, ...)
 void CMud::Bug(const char *tError, ...)
 {
 	TString bug;
-	MUNCH_VARARG(tError, bug); //mmm, chewy.
+	MUNCH_VARARG(tError, bug) //mmm, chewy.
 	fprintf(stderr,"%s", (RSTR)bug);
 }
 
 void CMud::Debug(const char *tDebug, ...)
 {
 	return;
-	TString debug;
-	MUNCH_VARARG(tDebug, (RSTR)debug); //burp	
+//TODO: why are these instructions after the return?
+//	TString debug;
+//	MUNCH_VARARG(tDebug, (RSTR)debug) //burp	
 }
 
 void CMud::Log(const char *tEvent, ...)
 {
 	TString log;
-	MUNCH_VARARG(tEvent, log); //varargs are always better with a little gray poupon
+	MUNCH_VARARG(tEvent, log) //varargs are always better with a little gray poupon
 	fprintf(stderr,"%s\n\r", (RSTR)log); //temporary
 }
