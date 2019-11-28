@@ -22,3 +22,12 @@ set_source_files_properties(${FIGHT_TESTS} PROPERTIES LANGUAGE CXX)
 add_executable(fight_tests ${FIGHT_TESTS})
 target_link_libraries(fight_tests PRIVATE ${TEST_LIB_FLAGS})
 add_test(NAME FIGHT_TESTS COMMAND fight_tests)
+
+##
+## QUEUE TESTS
+##
+set(QUEUE_TESTS queue_tests.c main.c)
+set_source_files_properties(${QUEUE_TESTS} PROPERTIES LANGUAGE CXX)
+add_executable(queue_tests ${QUEUE_TESTS})
+target_link_libraries(queue_tests PRIVATE ${TEST_LIB_FLAGS})
+add_test(NAME QUEUE_TESTS COMMAND queue_tests)
