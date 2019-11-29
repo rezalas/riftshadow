@@ -38,6 +38,15 @@ class ClassTable extends Model
         return $this->dLookups('race_status', $this->status, 'name');
     }
 
+    /**
+     * Get the define lookup for the given category and value, then retrieve
+     * the column
+     *
+     * @param string $category
+     * @param * $value
+     * @param string $column
+     * @return *
+     */
     private function dLookups(string $category, $value, string $column)
     {
         return DLookup::where('category', $category)

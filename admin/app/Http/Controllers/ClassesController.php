@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\{ClassTable, DLookup};
 use Illuminate\Http\Request;
 
-class ClassController extends Controller
+class ClassesController extends Controller
 {
 
     /**
@@ -28,7 +28,7 @@ class ClassController extends Controller
     {
         $modeles = ClassTable::orderBy('name', 'asc')->get();
 
-        return view('class.index', [
+        return view('classes.index', [
             'classes' => $modeles
         ]);
     }
@@ -40,7 +40,7 @@ class ClassController extends Controller
      */
     public function create()
     {
-        return view('class.create', $this->genSelects());
+        return view('classes.create', $this->genSelects());
     }
 
     /**
@@ -108,7 +108,7 @@ class ClassController extends Controller
      */
     public function edit(ClassTable $class)
     {
-        return view('class.edit', array_merge([
+        return view('classes.edit', array_merge([
             'class' => $class
         ], $this->genSelects($class, true)));
     }
@@ -166,7 +166,7 @@ class ClassController extends Controller
      */
     public function delete(ClassTable $class)
     {
-        return view('class.delete', [
+        return view('classes.delete', [
             'class' => $class
         ]);
     }
