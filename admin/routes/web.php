@@ -11,18 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/test', function () {
-    $pass = "teH0wLIpW0gyQ";
-    $test = crypt("test", $pass);
-    $test2 = crypt("test", "test");
-
-    return dd([$pass,$test,$test2]);
+// Users of trust/level lower than 52 cannot access the routes
+// in this group
+Route::middleware(['admin:52'])->group(function () {
+    Route::get('classes/{class}/delete', 'ClassController@delete')->name('classes.delete');
+    Route::resource('classes', 'ClassController');
 });

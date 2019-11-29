@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        // TODO: Shove trust level in database
+        $isAdmin = $request->user()->trust > 51;
+
+        return view('home', [
+            'isAdmin' => $isAdmin
+        ]);
     }
 }

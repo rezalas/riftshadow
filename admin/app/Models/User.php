@@ -44,4 +44,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(PlayerFile::class);
     }
+
+    /**
+     * Get the maximum trust for a user from all the user's player files
+     *
+     * @return integer
+     */
+    public function getTrustAttribute()
+    {
+        return $this->playerFiles()->get()->pluck('trust')->max();
+    }
 }
