@@ -1,6 +1,5 @@
 //#include "../rift.h" //includes bitvector.h
 #include <math.h>
-#include "stdlibs/gmacro.h"
 #include "stdlibs/bitvector.h"
 #include <stdlib.h>
 
