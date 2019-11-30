@@ -45,9 +45,6 @@
     <ClCompile Include="code\ban.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\basestr.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="code\bit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -225,9 +222,6 @@
     <ClCompile Include="code\tattoo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\temp_interp.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="code\thief.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -385,9 +379,6 @@
     <ClInclude Include="code\autogen\stddefs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="code\stdlibs\basestring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="code\stdlibs\bitvector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -398,12 +389,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\stdlibs\funcptr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="code\stdlibs\gmacro.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="code\stdlibs\linkedlist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="code\stdlibs\rift.h">
