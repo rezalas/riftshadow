@@ -21,7 +21,8 @@ class AdminMenuGenerator
             
             if ($request->user()) {
                 if ($request->user()->trust >= 58) {
-                    $classes = $menu->add('Class', 'classes');
+                    $classes = $menu->add('Classes', 'classes');
+                    $races = $menu->add('Races', 'races');
                 }
             }
         });

@@ -18,6 +18,14 @@ class ClassTable extends Model
      */
     public $timestamps = false;
 
+    /**
+     * Get all the defines for a class
+     */
+    public function defines()
+    {
+        return $this->morphToMany(Define::class, 'definable');
+    }
+
     public function getMagicalClassNameAttribute()
     {
         return $this->dLookups('magical_class', $this->ctype, 'name');
