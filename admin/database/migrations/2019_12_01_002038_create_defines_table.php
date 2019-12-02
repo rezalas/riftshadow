@@ -19,6 +19,7 @@ class CreateDefinesTable extends Migration
             $table->string('abbrev');
             $table->string('define');
             $table->string('category');
+            $table->tinyInteger('value')->unsigned();
         });
 
         Schema::create('definables', function (Blueprint $table) {
