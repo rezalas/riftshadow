@@ -9,36 +9,29 @@
 #include <stdlib.h>
 #include <mysql.h>
 #include "merc.h"
+#include "handler.h"
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
+#include "save.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "fight.h"
+#include "mspec.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+
 
 #define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
 
-#ifndef KEY
-#define KEY( literal, field, value )                    \
-                if ( !str_cmp( word, literal ) )        \
-                {                                       \
-                    field  = value;                     \
-                    fMatch = TRUE;                      \
-                    break;                              \
-                }
-#endif
-
-/* provided to free strings */
-#ifdef KEYS
-#undef KEYS
-#endif
-
-#ifndef KEYV
-#define KEYV( literal, field )                      \
-                if ( !str_cmp( word, literal ) )    \
-                {                                   \
-                    fread_flag_new(field, fp);      \
-                    fMatch = TRUE;                  \
-                    break;                          \
-                }
-#endif
+//
+// LOCAL FUNCTIONS
+//
 
 void do_crumble (CHAR_DATA *ch, char *argument);
 void do_ghost (CHAR_DATA *ch, char *argument);
@@ -58,7 +51,7 @@ void do_finger (CHAR_DATA *ch, char *argument);
 void update_pc_last_fight (CHAR_DATA *ch,CHAR_DATA *ch2);
 /* horrid Cabal track code */
 void do_ctrack (CHAR_DATA *ch, char *argument);
-char * get_login (CHAR_DATA *ch, FILE *fpChar2);
+char *get_login (CHAR_DATA *ch, FILE *fpChar2);
 void chomp (char *str);
 void chompr (char *str);
 void chop (char *str);

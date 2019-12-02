@@ -9,6 +9,14 @@
 #include "merc.h"
 #include "recycle.h"
 #include "time.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "db.h"
+
+//
+// LOCAL FUNCTIONS
+//
 
 bool check_ban (char *usite, int type, int host);
 void do_ban (CHAR_DATA *ch, char *argument);

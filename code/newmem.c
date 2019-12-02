@@ -205,7 +205,7 @@ void do_memtest(CHAR_DATA *ch, char *argument)
 		for(qch = char_list; qch; qch = qch->next)
 			if(IS_NPC(qch) && qch->pIndexData->vnum == 3001 && qch->in_room->vnum > 2399 &&
 			   qch->in_room->vnum < 2801)
-				extract_char(qch, TRUE);
+				extract_char(qch, true);
 		send_to_char("It has.. ENDED!\n\r",ch);
 	}
 }

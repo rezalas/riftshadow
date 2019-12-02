@@ -12,25 +12,32 @@
 #include "tables.h"
 #include "lookup.h"
 #include "magic.h"
+#include "warrior.h"
+#include "fight.h"
+#include "dioextra.h"
+#include "db.h"
+#include "devextra.h"
+#include "act_info.h"
+#include "act_comm.h"
+#include "act_wiz.h"
 
-
-DECLARE_DO_FUN(do_goto);
-DECLARE_DO_FUN(do_yell);
-DECLARE_DO_FUN(do_murder);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_flee);
+//
+// LOCAL FUNCTIONS
+//
 
 bool check_horde (CHAR_DATA *ch);
 void update_cskills (CHAR_DATA *ch);
 void do_storytell (CHAR_DATA *ch, char *argument);
+/*
+void spell_fervor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
+*/
 void spell_epic (int sn, int level, CHAR_DATA *ch, void *vo,int target);
 void spell_calm (int sn, int level, CHAR_DATA *ch, void *vo,int target);
 void spell_rage (int sn, int level, CHAR_DATA *ch, void *vo,int target);
-void spell_scourge (int sn, int level, CHAR_DATA *ch, void *vo, int target);
+void spell_scourge (int sn, int level, CHAR_DATA *ch, void *vo, int target);		/* Scourge for Arcanas -Dev */
 void spell_hunters_vision (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_hire_mercenary (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_hunters_strength (int sn, int level, CHAR_DATA *ch, void *vo, int target);
-char * get_room_description (ROOM_INDEX_DATA *room);
 void spell_hunters_awareness (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_web (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_informant (int sn, int level, CHAR_DATA *ch, void *vo, int target);

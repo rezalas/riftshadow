@@ -35,7 +35,7 @@ public:
 	void ReadBitvector(CBitvector &vec);
 	void ReadToEOL();
 	TString& ReadWord();			//note: this and readstring share the same str!  return string is INVALID after the next read
-	TString& ReadString(bool fToEOL = FALSE);  //so assign to a rstring result.  readstring is terminated by STRING_END.
+	TString& ReadString(bool fToEOL = false);  //so assign to a rstring result.  readstring is terminated by STRING_END.
 	TString& ReadStringToEOL(); 		//just calls readstring(true)
 private:
 	FILE * fp;

@@ -8,6 +8,7 @@
 #include <time.h>
 #include <math.h>
 #include "merc.h"
+#include "handler.h"
 #include "interp.h"
 #include "tables.h"
 #include "recycle.h"
@@ -15,6 +16,9 @@
 #include "db.h"
 #include "lookup.h"
 
+//
+// LOCAL FUNCTIONS
+//
 
 /*
 void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, void *vo, int target);

@@ -1,8 +1,38 @@
+# logging / debugging
 /Debug/
+*.log
+
+# VSCode entries
 .vs/
 .vscode/
-*.o
-.vscode/launch.json
-
 .vscode/launch.json
 .vscode/tasks.json
+
+# CMake files
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+Testing/
+CTestTestfile.cmake
+
+# Object files
+*.o
+libRiftCore.a
+
+# Player data
+player/*.plr
+player/Player.lst
+
+# Binaries
+rift
+code/rift
+area/rift
+*.exe
+code/rift.exe
+area/rift.exe
+area/rift
+tests/db_tests
+tests/fight_tests
+tests/queue_tests
+build/

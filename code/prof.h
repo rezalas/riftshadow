@@ -1,6 +1,8 @@
 #ifndef PROF_H
 #define PROF_H
 
+#include <time.h>
+
 #define PFLAGS_NONE 0
 #define PFLAGS_BASIC 1
 
@@ -9,6 +11,8 @@
 #define PROF_COMMAND(x, y, z)	{ #x, y, #z },
 #define END_PROF_COMMANDS	};
 #define DECL_PROF_CMD(x)	void x (CHAR_DATA *ch, char *argument);
+
+extern char *format_string (char *oldstring);
 
 typedef short int sh_int;
 struct proficiency_type

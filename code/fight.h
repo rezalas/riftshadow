@@ -7,92 +7,48 @@
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
 #include "interp.h"
 #include "tables.h"
 #include "magic.h"
 #include "recycle.h"
 #include "spec.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "warrior.h"
+#include "devextra.h"
+#include "skills.h"
+#include "thief.h"
+#include "save.h"
+#include "paladin.h"
+#include "act_obj.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "dioextra.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "dioextra.h"
+#include "db.h"
+#include "misc.h"
+#include "ap.h"
+#include "iprog.h"
 
-#define HITS (dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
+#define HITS 					(dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8
 #define BASE_PEER_FACTOR		1.75
-#define SUMMONED_XP_PENALTY		 .55
-
-/* command procedures needed */
-DECLARE_DO_FUN(do_quit);
-DECLARE_DO_FUN(do_say);
-DECLARE_DO_FUN(do_backstab);
-DECLARE_DO_FUN(do_emote);
-DECLARE_DO_FUN(do_ambush);
-DECLARE_DO_FUN(do_berserk);
-DECLARE_DO_FUN(do_deathstyle);
-DECLARE_DO_FUN(do_bash);
-DECLARE_DO_FUN(do_trip);
-DECLARE_DO_FUN(do_dirt);
-DECLARE_DO_FUN(do_flee);
-DECLARE_DO_FUN(do_kick);
-DECLARE_DO_FUN(do_disarm);
-DECLARE_DO_FUN(do_get);
-DECLARE_DO_FUN(do_recall);
-DECLARE_DO_FUN(do_sacrifice);
-DECLARE_DO_FUN(do_circle_stab);
-DECLARE_DO_FUN(do_look);
-DECLARE_DO_FUN(do_tail);
-DECLARE_DO_FUN(do_bind);
-DECLARE_DO_FUN(do_unbind);
-DECLARE_SPELL_FUN(spell_power_word_kill);
-
-bool is_wielded (CHAR_DATA *ch, int weapon, int type);
-
-/*
- * Local functions.
- */
-int check_arms (CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound);
-void check_assist (CHAR_DATA *ch, CHAR_DATA *victim);
-bool check_dodge (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-bool check_piety (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-bool check_avoid (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-int check_evasion (CHAR_DATA *ch, int chance);
-bool check_parry (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-bool check_shield_block (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-bool check_deflect (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-bool check_fend (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-bool check_mist	(CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-int check_armor (CHAR_DATA *ch, CHAR_DATA *victim, int dt, int dam_type, int dam);
-bool check_maneuvering (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-void check_batter (CHAR_DATA *ch);
-void check_analyze (CHAR_DATA *ch, CHAR_DATA *victim);
-bool check_catch (CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj);
-void dam_message (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, bool immune, char *dnoun, bool reduced);
-void death_cry (CHAR_DATA *ch);
-void group_gain (CHAR_DATA *ch, CHAR_DATA *victim);
-void pk_record (CHAR_DATA *ch, CHAR_DATA *victim);
-int xp_compute_pk (CHAR_DATA *ch, CHAR_DATA *victim, int members);
-int xp_compute (CHAR_DATA *gch, CHAR_DATA *victim, int group_amount, int glevel);
-bool is_safe (CHAR_DATA *ch, CHAR_DATA *victim);
-void make_corpse (CHAR_DATA *killer, CHAR_DATA *ch);
-int one_hit (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-void mob_hit (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
-void raw_kill (CHAR_DATA *ch, CHAR_DATA *victim);
-void set_fighting (CHAR_DATA *ch, CHAR_DATA *victim);
-void disarm (CHAR_DATA *ch, CHAR_DATA *victim);
-void check_ground_control (CHAR_DATA *ch,CHAR_DATA *victim,float chance,int dam);
-bool check_counter (CHAR_DATA *ch,CHAR_DATA *victim, int dam,int dt);
-bool check_parting_blow (CHAR_DATA *ch, CHAR_DATA *victim);
-int one_hit_new (CHAR_DATA *ch, CHAR_DATA *victim, int dt, bool specials, bool blockable, int addition, int multiplier, char *dnoun);
-int damage_new (CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int dam_type, bool show, bool blockable, int addition, int multiplier, char *dnoun);
-char *get_dam_message (CHAR_DATA *ch, int dt);
-bool check_blade_barrier (CHAR_DATA *ch, CHAR_DATA *victim);
-char * get_attack_noun (CHAR_DATA *ch, int dt);
-int get_attack_number (CHAR_DATA *ch, int dt);
-void trophy_corpse (CHAR_DATA *ch, CHAR_DATA *victim);
-void warrior_ai (CHAR_DATA *mob, CHAR_DATA *victim);
-void thief_ai (CHAR_DATA *mob, CHAR_DATA *victim);
-bool can_bash (CHAR_DATA *ch, CHAR_DATA *victim);
-int skirmisher_max_weapweight(CHAR_DATA *ch);
+#define SUMMONED_XP_PENALTY		0.55
 
 extern char *const dir_name[];
-extern int get_weapon_sn_new(CHAR_DATA *ch, int type);
+
+//
+// TODO: UNKNOWN FUNCTIONS
+//
+//bool check_counter (CHAR_DATA *ch,CHAR_DATA *victim, int dam,int dt);
+
+//
+// LOCAL FUNCTIONS
+//
 
 /*
  * Control the fights going on.
@@ -247,7 +203,7 @@ bool check_blade_barrier (CHAR_DATA *ch, CHAR_DATA *victim);
 bool check_maneuvering (CHAR_DATA *ch, CHAR_DATA *victim, int dt);
 bool check_catch (CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj);
 char *get_dam_message (CHAR_DATA *ch, int dt);
-char * get_attack_noun (CHAR_DATA *ch, int dt);
+char *get_attack_noun (CHAR_DATA *ch, int dt);
 int get_attack_number (CHAR_DATA *ch, int dt);
 void trophy_corpse (CHAR_DATA *ch, CHAR_DATA *victim);
 bool check_sidestep (CHAR_DATA *ch, CHAR_DATA *victim, int skill, int mod);

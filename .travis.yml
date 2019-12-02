@@ -1,5 +1,6 @@
 language: cpp
-compiler: 
-    - gcc
+dist: bionic
+compiler: gcc
 
-script: make -C ./code/ #&& ./code/make test
+
+script: cmake -B . && make

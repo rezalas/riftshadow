@@ -2,31 +2,38 @@
 #define MEM_H
 
 #ifdef macintosh
-#include <types.h>
+	#include <types.h>
 #else
-#include <sys/types.h>
+	#include <sys/types.h>
 #endif
+
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include "merc.h"
+#include "handler.h"
+#include "newmem.h"
+#include "recycle.h"
 
-/*
- * Globals
- */
+//
+// Globals
+//
+
 extern int top_reset;
 extern int top_area;
 extern int top_exit;
 extern int top_ed;
 extern int top_room;
-extern EXTRA_DESCR_DATA	* extra_descr_free;
-extern HELP_DATA * help_last;
+extern EXTRA_DESCR_DATA	*extra_descr_free;
+extern HELP_DATA *help_last;
 extern AFFECT_DATA *affect_free;
 
-void free_extra_descr (EXTRA_DESCR_DATA *pExtra);
-void free_affect (AFFECT_DATA *af);
+//
+// LOCAL FUNCTIONS
+//
+
 RESET_DATA *new_reset_data (void);
 void free_reset_data (RESET_DATA *pReset);
 AREA_DATA *new_area (void);

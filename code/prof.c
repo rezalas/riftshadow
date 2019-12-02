@@ -14,7 +14,6 @@
 
 //don't forget to increment max_prof in prof.h and clean make if your new proficiency goes over MAX_PROF
 //or there are SIGSEGVs and axes to the face in your future
-char * flag_name_lookup args((long bitv, const struct flag_type *flag_table));
 CProficiencies prof_none; 
 CProficiencies * char_data::Profs()
 { return pcdata ? &pcdata->profs : &prof_none; }
@@ -159,7 +158,7 @@ float CProficiencies::ProfEffect(char *profname, float nArg)
 	}
 	return 0;
 }
-void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis = TRUE)
+void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis = true)
 {
         AFFECT_DATA af;
         init_affect(&af); 
@@ -171,8 +170,8 @@ bool is_affected_prof(CHAR_DATA *ch, char *prof)
 	AFFECT_DATA *paf;
 	for(paf = ch->affected; paf; paf = paf->next)
 		if(paf->type == gsn_timer && paf->name && !str_cmp(paf->name, prof))
-			return TRUE;
-	return FALSE;
+			return true;
+	return false;
 }
 
 #define OBJ_VNUM_MEAT_CHUNKS 75
@@ -194,7 +193,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 	sprintf(buf,"You were unable to find any sign of $N here.");
 	for (i=0;i<MAX_TRACKS;i++)
 	{
-        	if (!ch->in_room->tracks[i])
+		if (!ch->in_room->tracks[i])
 			break;
 		if (ch->in_room->tracks[i]->prey != victim || ch->in_room->tracks[i]->flying || ch->in_room->tracks[i]->sneaking)
 			continue;
@@ -209,7 +208,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		}
 		int diruse = (number_percent() > (35 - (ch->Profs()->GetProf("tracking")) * 2)) ? 
 			ch->in_room->tracks[i]->direction : number_range(0, MAX_DIR - 1);
-		direction = (char*)flag_name_lookup(diruse,direction_table);
+		direction = flag_name_lookup(diruse,direction_table);
 		sprintf(buf,"From the pattern of tracks here, you suspect $N left $t.");
 	}
 	act(buf,ch,direction,victim,TO_CHAR);
@@ -328,7 +327,7 @@ void prof_bandage(CHAR_DATA *ch, char *argument)
 		return send_to_char("That wound has been bandaged too recently.\n\r",ch);
 	//if(baf->level)
 	//	baf->level /= 2;
-	add_prof_affect(ch, "bandage", 2, FALSE);
+	add_prof_affect(ch, "bandage", 2, false);
 	if(victim == ch)
 	{
 		send_to_char("You bandage your wounds, staunching the worst of the bleeding.\n\r",ch);
@@ -351,27 +350,27 @@ bool CProficiencies::InterpCommand(char *command, char *argument)
 	int i, pindex;
 
 	// Quick Test - Morglum
-	return FALSE;
+	return false;
 
 	for(i = 0; prof_cmd_table[i].name != NULL; i++)
 		if(!str_prefix(command, prof_cmd_table[i].name)
 		&& 
 			(!str_cmp(prof_cmd_table[i].requires,"none") ||
 			(pindex = CProficiencies::ProfIndexLookup(prof_cmd_table[i].requires)) == -1 ||
-			ch->Profs()->HasProf(pindex) == TRUE))
+			ch->Profs()->HasProf(pindex) == true))
 			{
 				(prof_cmd_table[i].cmd) (ch, argument);
-				return TRUE;
+				return true;
 			}
 			
-	return FALSE;
+	return false;
 }
 
 void do_proficiencies(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *iterator, *trainer = NULL;
 	char buf[MSL];
-	bool bBreak = FALSE;
+	bool bBreak= false;
 
 	if(IS_NPC(ch))
 		return;
@@ -379,18 +378,18 @@ void do_proficiencies(CHAR_DATA *ch, char *argument)
 		for(int i = 0; i < MAX_PROFS_TAUGHT_BY_MOB && !bBreak; i++)
 			if(IS_NPC(iterator) && iterator->pIndexData->profs_taught[i] > -1)
 			{
-				bBreak = TRUE;
+				bBreak = true;
 				trainer = iterator;
 			}
 	if(!trainer && str_cmp(argument, "basic"))
 	{
-		bool bFound = FALSE;
+		bool bFound= false;
 		for(int i = 0; prof_table[i].name != NULL; i++)
 			if(ch->Profs()->GetProf(i) > -1)
 			{
 				if(!bFound)
 					send_to_char("Your proficiencies are:\n\r",ch);
-				bFound = TRUE;
+				bFound = true;
 				sprintf(buf,"You are %s at %s.\n\r", ch->Profs()->GetSkillLevelName(i), prof_table[i].name);
 				send_to_char(buf,ch);
 			}

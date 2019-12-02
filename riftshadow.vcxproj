@@ -110,7 +110,6 @@
     <ClCompile Include="code\ap.c" />
     <ClCompile Include="code\aprog.c" />
     <ClCompile Include="code\ban.c" />
-    <ClCompile Include="code\basestr.c" />
     <ClCompile Include="code\bit.c" />
     <ClCompile Include="code\bitvector.c" />
     <ClCompile Include="code\bootup.c" />
@@ -170,7 +169,6 @@
     <ClCompile Include="code\strings.c" />
     <ClCompile Include="code\tables.c" />
     <ClCompile Include="code\tattoo.c" />
-    <ClCompile Include="code\temp_interp.c" />
     <ClCompile Include="code\thief.c" />
     <ClCompile Include="code\titles.c" />
     <ClCompile Include="code\tstring.c" />
@@ -221,13 +219,10 @@
     <ClInclude Include="code\skill.h" />
     <ClInclude Include="code\socket.h" />
     <ClInclude Include="code\spec.h" />
-    <ClInclude Include="code\stdlibs\basestring.h" />
     <ClInclude Include="code\stdlibs\bitvector.h" />
     <ClInclude Include="code\stdlibs\exception.h" />
     <ClInclude Include="code\stdlibs\file.h" />
     <ClInclude Include="code\stdlibs\funcptr.h" />
-    <ClInclude Include="code\stdlibs\gmacro.h" />
-    <ClInclude Include="code\stdlibs\linkedlist.h" />
     <ClInclude Include="code\stdlibs\rift.h" />
     <ClInclude Include="code\stdlibs\rstring.h" />
     <ClInclude Include="code\stdlibs\sql.h" />

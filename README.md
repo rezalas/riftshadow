@@ -1,27 +1,52 @@
 # Riftshadow MUD
 [![Build Status](https://travis-ci.com/rezalas/riftshadow.svg?branch=master)](https://travis-ci.com/rezalas/riftshadow)
 ---
-RS is a fun swords and sorcery style PVP-enabled MUD from the early 2000s. My goal for this community is to restore RS to a fully-functional state, capable of operating on modern hardware. Along the way the community should have the goal of adapting the code to be easier to read and maintain without changing the play of the game itself.
 
-### Goals 
-* Add appropriate commenting and remove inappropriate comments that exist 
-* adapt code to be readable and maintainable over time by multiple developers
-* Preserve gameplay style
-* Improve security (ex. data storage of passwords)
-* Decouple storage type from the code to support multiple backends
+| Table of Contents |
+| ------------------ |
+|**[Summary](#summary)**|
+|**[Goals](#goals)**|
+|**[Build Requirements](#build-requirements)**|
+|**[SQL Setup](#sql-setup)**|
+|**[config json](#config-json)**|
 
-### Build Reqs
+## Summary
+
+Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MUD) from the early 2000s. As the original server is no longer live, the original authors provided the source code to the community to use and modify so that RS can live on. The primary goals for this community are to restore RS to a fully-functional state capable of operating on modern hardware with all features finished and bugs eliminated or codified as features. Preservation of the game for future generations requires  adapting the code to be easier to read and maintain, but without changing the feel of the core gameplay.
+
+## Goals
+
+* With preservation in mind, act to maintain and improve the codebase with modern standards.
+* Add appropriate commenting, and remove inappropriate comments that exist.
+* adapt code to be readable and maintainable over time by future developers.
+* Preserve core gameplay.
+* Improve security (ex. data storage of passwords) and thus safety for players and maintainers.
+* Decouple storage types from the code to support multiple backends with limited code changes.
+
+## Build Reqs
+
 The following packages are required to build on linux x86 and test the application at this time.
+
 * make
+* cmake
+* git
 * g++
-* mysql-server
-* libmysqlclient-dev (substitute mariadb connector if needed)
+* sql-server (mariadb suggested)
+* libmariadb-dev
+* libmariadb-dev-compat
 
-You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. After building the project you will need to copy the compiled 'rift' file to either the area folder, or to whatever execution folder you intend to use (if you intend to use a different one also make the rs.conf file and copy the areas over as well). 
+### Building
 
-*Note:* If you don't execute the rift file by copying it to the area folder, you should run the executable from within that folder so as to gain access to the area files. If you have issues getting the project to run properly you're likely missing the area files or the log 'area/login.txt'. (this is going to be refacored out too).
+To build, run `cmake .` at the root of the project directory which will build system-appropriate Makefile configs. Then, run `make` to begin the build process. Afterward if successful the binary is located in the `./code/` directory and ready to execute.
 
-###### rift mysql setup
+### Database injection
+
+You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. 
+
+*Note:* If you have issues getting the project to run properly you're likely missing the area files or the log 'area/login.txt'. (this is going to be refactored out eventually).
+
+## SQL Setup
+
 required DBs and assoc. files
 
 | Database  | SQL struct file |
@@ -33,9 +58,28 @@ required DBs and assoc. files
 default user: rift
 default pwd: rift123
 
-###### rs.conf
-``` 
-game_port = 6000
-base_directory = /home/rift/code/newcode/
-player_dir = /home/rift/player/
+The username and password can be changed using the config json and no longer need to be hosted on the same system. See the config json section for information on updating credentials.
+
+## config json
+
+The following is an example config.json file, which needs to be located in the root directory for the project. The defaults listed for the db connections are customizable, so if you want to name your databases differently use the same key name here but change the db value to match your setup.
+
+```json
+{
+    "Port" : 9999,
+     "DbConnections": {
+          "rift" : {
+               "Host" : "localhost",
+               "User" : "rift",
+               "Pwd" : "rift123",
+               "Db" : "rift"
+          },
+          "rift_core" : {
+              ...
+          },
+          "riftforum" : {
+              ...
+          }
+     }
+}
 ```

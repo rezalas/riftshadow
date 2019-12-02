@@ -11,9 +11,16 @@
 #include "tables.h"
 #include "lookup.h"
 #include "magic.h"
+#include "act_move.h"
+#include "comm.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
-#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
+//#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
+
+
+//
+// LOCAL FUNCTIONS
+//
 
 void spell_enlarge (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_sunray (int sn,int level, CHAR_DATA *ch, void *vo, int target);
@@ -30,10 +37,10 @@ void spell_resist_mental (int sn, int level, CHAR_DATA *ch, void *vo, int target
 void spell_resist_acid (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_resist_negative (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_group_teleport (int sn, int level, CHAR_DATA *ch, void *vo, int target);
-void spell_soften (int sn, int level, CHAR_DATA *ch, void *vo,int target );
-void spell_rejuvenate (int sn, int level, CHAR_DATA *ch, void *vo,int target );
-void spell_fatigue (int sn, int level, CHAR_DATA *ch, void *vo, int target );
-void spell_strength (int sn, int level, CHAR_DATA *ch, void *vo, int target );
+void spell_soften (int sn, int level, CHAR_DATA *ch, void *vo,int target);
+void spell_rejuvenate (int sn, int level, CHAR_DATA *ch, void *vo,int target);				/* Cleric Rejuvenate -Dioxide */
+void spell_fatigue (int sn, int level, CHAR_DATA *ch, void *vo, int target);
+void spell_strength (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void spell_remove_taint (int sn,int level,CHAR_DATA *ch,void *vo,int target);
 void spell_worldbind (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 void waterbreath_end (CHAR_DATA *ch, AFFECT_DATA *af);

@@ -13,7 +13,7 @@ public:
 	{
 	};
 	
-	static bool				IsValidPlayer(const char *name, bool lDead = FALSE);
+	static bool				IsValidPlayer(const char *name, bool lDead = false);
 	static bool				IsDeadPlayer(const char *name);
 	static bool				IsValidPassword(const char *name, const char *pwd);
 	CPCData *				next;

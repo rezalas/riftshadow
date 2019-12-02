@@ -10,30 +10,30 @@
 //#include "autogen/coldefs.h"
 
 #include <string.h>
-//#include "mud.h"
+#include "mud.h"
 #include "merc.h"
 #include "update.h"
-extern FILE *                  fpArea;
-extern char                    strArea[MAX_INPUT_LENGTH];
-extern char *			top_string;
-extern bool			fBootDb;
-extern char * help_greeting;
+extern FILE *fpArea;
+extern char strArea[MAX_INPUT_LENGTH];
+extern char *top_string;
+extern bool fBootDb;
+extern char *help_greeting;
 
 
-void    init_mm         args( ( void ) );
+void init_mm (void);
 void sort_areas(void);
 void load_race_info(void);
-void    fix_exits       args( ( void ) );
-void    find_adjacents  args( ( void ) );
-void    clean_notes     args( ( void ) );
-void    load_improgs    args( ( FILE *fp ) );
-void    load_specs      args( ( FILE *fp ) );
-void    reset_area      args( ( AREA_DATA * pArea ) );
-long    process_bounty  args( ( char *name, long bounty));
-void    load_socials    args( ( FILE *fp ) );
-void    load_votes      args( ( void ) );
-void    load_cabal_items        args( ( void ) );
-void reset_chessboard ( void );
+void fix_exits (void);
+void find_adjacents (void);
+void clean_notes (void);
+void load_improgs (FILE *fp);
+void load_specs (FILE *fp);
+void reset_area (AREA_DATA * pArea);
+long process_bounty (char *name, long bounty);
+void load_socials (FILE *fp);
+void load_votes (void);
+void load_cabal_items (void);
+void reset_chessboard (void);
 
 CMud RS;
 
@@ -54,12 +54,14 @@ void CMud::Bootup()
 		RS.Log("\n\r*** Beginning RIFTSHADOW MUD server ***");
 		
 		top_string = NULL;
-		fBootDb = TRUE;
+		fBootDb = true;
 
 		RS.Log("Creating persistent SQL connection...");
-		RS.SQL.StartSQLServer();
+		DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
+		RS.SQL.StartSQLServer(riftCore.Host.c_str(),
+		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str());
 		
-		game_up = TRUE;
+		game_up = true;
 		
 		RS.Log("Loading options and greeting screen...");
 		RS.LoadGreetingScreen();
@@ -99,7 +101,7 @@ void CMud::Bootup()
 		RS.Log("Adjacent areas found");
 		clean_notes( );
 		RS.Log("Notes cleaned");
-		fBootDb = FALSE;
+		fBootDb= false;
 		area_update( );
 		RS.Log("Area update");
 		gold_update( );
@@ -154,12 +156,12 @@ inline bool CMud::RunGame()
 
 void CMud::Shutdown()
 {
-	game_up = FALSE;
+	game_up= false;
 }
 
 bool CMud::IsBanned(int desc, const char *tIP)
 {
-	return FALSE;
+	return false;
 }
 
 char * CMud::GetError()
@@ -177,20 +179,21 @@ void bug(const char *bugstr, ...)
 void CMud::Bug(const char *tError, ...)
 {
 	TString bug;
-	MUNCH_VARARG(tError, bug); //mmm, chewy.
+	MUNCH_VARARG(tError, bug) //mmm, chewy.
 	fprintf(stderr,"%s", (RSTR)bug);
 }
 
 void CMud::Debug(const char *tDebug, ...)
 {
 	return;
-	TString debug;
-	MUNCH_VARARG(tDebug, (RSTR)debug); //burp	
+//TODO: why are these instructions after the return?
+//	TString debug;
+//	MUNCH_VARARG(tDebug, (RSTR)debug) //burp	
 }
 
 void CMud::Log(const char *tEvent, ...)
 {
 	TString log;
-	MUNCH_VARARG(tEvent, log); //varargs are always better with a little gray poupon
+	MUNCH_VARARG(tEvent, log) //varargs are always better with a little gray poupon
 	fprintf(stderr,"%s\n\r", (RSTR)log); //temporary
 }

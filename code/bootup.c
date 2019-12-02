@@ -90,8 +90,8 @@ void CMud::LoadObjLimits()
 				char tbuf[MSL];
 				sprintf(tbuf, "Autodeleting %s.", temp_player_name);
 				log_string(tbuf);
-				breakout = TRUE;
-				delete_char(temp_player_name, TRUE);
+				breakout = true;
+				delete_char(temp_player_name, true);
 				break;
 			}
                         if ( !str_cmp( word, "O") || !str_cmp( word, "OBJECT"))
@@ -237,7 +237,7 @@ void CMud::LoadAreas()
 	}
 	fclose( fpList );
 
-	fBootDb = FALSE;
+	fBootDb = false;
 	
 }
 
@@ -258,7 +258,7 @@ void CMud::LoadOptions()
 	CFile myFile;
 	TString word;
 	
-	if(myFile.LoadFile(OPTION_FILE) == FALSE)
+	if(myFile.LoadFile(OPTION_FILE) == false)
 		return;
 	
 	for(word = myFile.ReadWord(); !myFile.End(); word = myFile.ReadWord())

@@ -10,13 +10,19 @@
 #include <stdlib.h>
 #include <time.h>
 #include <signal.h>
+#include <fcntl.h>
 
 #ifdef _WIN32
-  #include <windows.h>
-  #include <wincrypt.h>
-  #include <ws2tcpip.h>
+	#include <windows.h>
+	#include <wincrypt.h>
+	#include <ws2tcpip.h>
+	#include <winsock.h>
+	#include <winsock2.h>
 #else
-  #include <crypt.h>
+	#include <crypt.h>
+	#include <netdb.h>
+	#include <netinet/in.h>
+	#include <sys/socket.h>
 #endif
 
 #include "merc.h"
@@ -24,101 +30,92 @@
 #include "tables.h"
 #include "olc.h"
 #include "interp.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "save.h"
+#include "dioextra.h"
+#include "mspec.h"
+#include "newmem.h"
+#include "handler.h"
+#include "sorcerer.h"
+#include "act_wiz.h"
+#include "alias.h"
+#include "ban.h"
+#include "update.h"
+#include "fight.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "handler.h"
+#include "misc.h"
+#include "telnet.h"
+#include "string.h"
 
-/* command procedures needed */
-DECLARE_DO_FUN(easy_induct);
-void announce_login (CHAR_DATA *ch);
-void announce_logout (CHAR_DATA *ch);
+#define CHAR_WRAP			85
 
-/*
- * Malloc debugging stuff.
- */
+#ifndef FNDELAY
+	#define FNDELAY			O_NDELAY
+#endif
 
 #ifdef MALLOC_DEBUG
-extern	int	malloc_debug	args( ( int  ) );
-extern	int	malloc_verify	args( ( void ) );
+	extern int malloc_debug (int);
+	extern int malloc_verify (void);
 #endif
-
-bool bDebug = FALSE;
-
-/*
- * Signal handling.
- *   I dance around it.
- */
-
-
-/*
- * Socket and TCP/IP stuff.
- */
-#include <fcntl.h>
-#ifdef _WIN32
-  #include <windows.h>
-  #include <winsock.h>
-  #include <winsock2.h>
-#else 
-  #include <netdb.h>
-  #include <netinet/in.h>
-  #include <sys/socket.h>
-#endif
-#include "telnet.h"
-const char echo_off_str[] = { IAC, WILL, TELOPT_ECHO, '\0' };
-const char echo_on_str[] = { IAC, WONT, TELOPT_ECHO, '\0' };
-const char go_ahead_str[] = { IAC, GA, '\0' };
 
 /*
  * OS-dependent declarations.
  */
 
 #ifdef _WIN32
-  int	accept (int s, struct sockaddr *addr, int *addrlen);
-  int	bind (int s, struct sockaddr *name, int namelen);
+	int accept (int s, struct sockaddr *addr, int *addrlen);
+	int bind (int s, struct sockaddr *name, int namelen);
 
-  /*
-   * If we were in linux, this would be declared for us, 
-   * but sadly we're not. This is a stopgap for signal
-   * processing until a better option is created.  
-   */
-  #ifndef SIGFPE
-    #define SIGFPE  8
-  #endif
-  #ifndef SIGPIPE
-  #define SIGPIPE 13
-  #endif
-  #ifndef F_SETFL
-  #define F_SETFL 4
-  #endif
-  #ifndef O_NDELAY
-  #define O_NDELAY  04000
-  #endif
+	/*
+	* If we were in linux, this would be declared for us, 
+	* but sadly we're not. This is a stopgap for signal
+	* processing until a better option is created.  
+	*/
+
+	#ifndef SIGFPE
+		#define SIGFPE			8
+	#endif
+
+	#ifndef SIGPIPE
+		#define SIGPIPE			13
+	#endif
+
+	#ifndef F_SETFL
+		#define F_SETFL			4
+	#endif
+
+	#ifndef O_NDELAY
+		#define O_NDELAY		04000
+	#endif
 #elif __linux__
-/*
-    Linux shouldn't need these. If you have a problem compiling, try
-    uncommenting accept and bind.
-int	accept (int s, struct sockaddr *addr, int *addrlen);
-int	bind (int s, struct sockaddr *name, int namelen);
-*/
-int	socket (int domain, int type, int protocol);
+	int	socket (int domain, int type, int protocol);
 #endif
 
-int	close (int fd);
-//int getpeername (int s, struct sockaddr *name, int *namelen);
-//int getsockname (int s, struct sockaddr *name, int *namelen);
+// Telnet commands
+
+const char echo_off_str[] = { static_cast<char>(IAC), static_cast<char>(WILL), static_cast<char>(TELOPT_ECHO), '\0' };
+const char echo_on_str[] = { static_cast<char>(IAC), static_cast<char>(WONT), static_cast<char>(TELOPT_ECHO), '\0' };
+const char go_ahead_str[] = { static_cast<char>(IAC), static_cast<char>(GA), '\0' };
+
+//
+// TODO: built-in functions. need to check windows equivalent
+//
+//#include <unistd.h>
+int close (int fd);
+// unknown
 int gofday (struct timeval *tp, struct timezone *tzp);
-//int listen (int s, int backlog);
-//int read (int fd, char *buf, int nbyte);
-int	select (int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
-//int write (int fd, char *buf, int nbyte);
+//#include <sys/select.h>
+int select (int width, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
 
+//
+// LOCAL FUNCTIONS
+//
 
-
-
-#define CHAR_WRAP 85
-
-#ifndef FNDELAY
-#define FNDELAY O_NDELAY
-#endif
-
-int main (int argc, char **argv);
 int init_socket  (int port);
 void game_loop_unix (int control);
 void init_descriptor (int control);
@@ -128,7 +125,7 @@ bool read_from_descriptor (DESCRIPTOR_DATA *d);
  * Transfer one line from input buffer to input line.
  */
 void read_from_buffer (DESCRIPTOR_DATA *d);
-const char * get_battle_condition (CHAR_DATA *victim, int percent);
+const char *get_battle_condition (CHAR_DATA *victim, int percent);
 /*
  * Low level output function.
  */

@@ -1,0 +1,23 @@
+{
+     "Port" : 9999,
+     "DbConnections": {
+          "rift" : {
+               "Host" : "localhost",
+               "User" : "rift",
+               "Pwd" : "rift123",
+               "Db" : "rift"
+          },
+          "rift_core" : {
+               "Host" : "localhost",
+               "User" : "rift",
+               "Pwd" : "rift123",
+               "Db" : "rift_core"
+          },
+          "riftforum" : {
+               "Host" : "localhost",
+               "User" : "rift",
+               "Pwd" : "rift123",
+               "Db" : "riftforum"
+          }
+     }
+}

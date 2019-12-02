@@ -15,6 +15,10 @@
 #include "db.h"
 #include "lookup.h"
 
+//
+// LOCAL FUNCTIONS
+//
+
 void spell_infidels_weight (int sn, int level, CHAR_DATA *ch, void *vo, int target);
 int get_bv_stage (CHAR_DATA *ch);
 void spell_burning_vision (int sn, int level, CHAR_DATA *ch, void *vo, int target);

@@ -2,8 +2,6 @@
 #define RSTRING_H
 
 #define RSTRING
-#define TRUE		1
-#define FALSE		0
 #define NULL		0
 #define size_t		unsigned int
 
@@ -11,7 +9,7 @@
 
 #include <stdarg.h>
 
-#define DEFAULTCASE TRUE
+#define DEFAULTCASE true
 //#define BOUNDS_CHECK_GETCHAR //define for slower getchar or [] array access w/ check to make sure it's not beyond end of str
 
 #define MUNCH_VARARG(msg, str)	va_list arglist;va_start(arglist, msg);str.Format(arglist, msg);va_end(arglist);
@@ -65,8 +63,8 @@ public:
 					int cStartPos = 0,
 					bool fIgnoreCase = DEFAULTCASE);	/* returns # of first instance of match inside string, -1 for no match */
 	bool		Contains(const char *substr,
-					bool fIgnoreCase = DEFAULTCASE);	/* TRUE if the Rstring contains substr */
-	bool		IsShared(void);					/* TRUE if RString is currently shared */
+					bool fIgnoreCase = DEFAULTCASE);	/* true if the Rstring contains substr */
+	bool		IsShared(void);							/* true if RString is currently shared */
 
 	/* MODIFICATION FUNCTIONS */
 	

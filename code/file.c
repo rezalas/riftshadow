@@ -3,7 +3,7 @@
 CFile::CFile()
 {
 	fp = NULL;
-	endoffile = FALSE;
+	endoffile = false;
 }
 
 CFile::~CFile()
@@ -13,18 +13,19 @@ CFile::~CFile()
 
 bool CFile::LoadFile(const char *file, int mode)
 {
-	endoffile = FALSE;
+	endoffile = false;
 	
 	if(!file)
-		return FALSE;
+		return false;
 
-	if((fp = fopen(file, mode == MODE_READ ? "r" : mode == MODE_WRITE ? "w+" : "a+")) == NULL)
+    fp = fopen(file, mode == MODE_READ ? "r" : mode == MODE_WRITE ? "w+" : "a+");
+	if(fp == NULL)
 	{
 		fprintf(stderr,"LoadFile error: Unable to open %s.", file);
-		return FALSE;
+		return false;
 	}
 
-	return TRUE;
+	return true;
 }
 
 void CFile::CloseFile(void)
@@ -47,7 +48,7 @@ void CFile::UpdateEOF()
 		return;
 	char c = fgetc(fp);
 	if(c == EOF)
-		endoffile = TRUE;
+		endoffile = true;
 	ungetc(c, fp);
 }
 
@@ -139,7 +140,8 @@ TString& CFile::ReadString(bool fToEOL)
 		c = fgetc(fp);
 	} while (isspace(c)); //bzzt
 
-	if((*pbuf++ = c) == cEnd)
+    *pbuf = c;
+	if(*pbuf++ == cEnd)
 		return result;
 
 	while(1)
@@ -161,5 +163,5 @@ TString& CFile::ReadString(bool fToEOL)
 
 inline TString& CFile::ReadStringToEOL()
 {
-	return ReadString(TRUE);
+	return ReadString(true);
 }

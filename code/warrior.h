@@ -8,15 +8,23 @@
 #include <time.h>
 #include <math.h>
 #include "merc.h"
+#include "handler.h"
+#include "fight.h"
 #include "magic.h"
 #include "recycle.h"
 #include "db.h"
 #include "lookup.h"
 #include "tables.h"
+#include "skills.h"
+#include "newmem.h"
+#include "interp.h"
+#include "act_info.h"
+#include "act_obj.h"
 
-extern bool	is_wielded (CHAR_DATA *ch, int weapon, int type);
-extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
-extern CHAR_DATA *get_char_room	(CHAR_DATA *ch, char *argument);
+//
+// LOCAL FUNCTIONS
+//
+
 
 int style_lookup (char *argument);
 int style_count (long bits[]);

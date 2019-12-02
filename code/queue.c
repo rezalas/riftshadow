@@ -163,8 +163,8 @@ bool CQueue::HasQueuePending(void *qChar)
 	for(r = queue_first; r; r = r->queue_next)
 		for(int i = 0; i < r->queue_numargs; i++)
 			if(r->queue_args[i] == qChar && r->queue_delay > 0)
-				return TRUE;
-	return FALSE;
+				return true;
+	return false;
 }
 
 void CQueue::DeleteQueuedEventsInvolving(void *qChar)

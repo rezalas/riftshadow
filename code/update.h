@@ -12,25 +12,28 @@
 #include "recycle.h"
 #include "update.h"
 #include "spec.h"
+#include "lookup.h"
+#include "chrono.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "thief.h"
+#include "save.h"
+#include "misc.h"
+#include "act_obj.h"
+#include "fight.h"
+#include "skills.h"
+#include "dioextra.h"
+#include "olc.h"
+#include "db.h"
+#include "devextra.h"
+#include "act_comm.h"
+#include "comm.h"
 
-extern char * flag_name_lookup (long bitv, const struct flag_type *flag_table);
-extern void extract_rune (RUNE_DATA *rune);
 
-/* command procedures needed */
-DECLARE_DO_FUN(do_quit);
-DECLARE_DO_FUN(do_yell);
-DECLARE_DO_FUN(do_follow);
-DECLARE_DO_FUN(do_murder);
-DECLARE_AFF_FUN(poison_tick);
+//
+// LOCAL FUNCTIONS
+//
 
-/*
- * Local functions
- */
-void upfile_update (void);
-
-/*
- * Advancement stuff.
- */
 void advance_level (CHAR_DATA *ch, bool hide);
 void gain_exp (CHAR_DATA *ch, int gain);
 /*

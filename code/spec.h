@@ -18,7 +18,7 @@ typedef int SFUN (long event_vector, ...);
 #define END_EVENT			} }
 #define BV(x)				pow(2,x)
 #define TRAPS_IEVENT(owner, event)	owner->pIndexData->spec_prog.trapvector & event
-#define TRAPS_MEVENT(owner, event)	IS_NPC(owner) ? owner->pIndexData->spec_prog.trapvector & event : FALSE
+#define TRAPS_MEVENT(owner, event)	IS_NPC(owner) ? owner->pIndexData->spec_prog.trapvector & event : false
 #define CALL_IEVENT(owner, event, ...)	(*owner->pIndexData->spec_prog.func) (event, __VA_ARGS__)
 #define CALL_MEVENT(owner, event, ...)	(*owner->pIndexData->spec_prog.func) (event, __VA_ARGS__)
 
@@ -31,8 +31,8 @@ long spec_events;
 
 #define BEGIN_IEVENT_TYPES		const struct flag_type ievent_table[] = {
 #define BEGIN_MEVENT_TYPES		const struct flag_type mevent_table[] = {
-#define IEVENT(name, bit)		{ name, bit, TRUE },
-#define MEVENT(name, bit)		{ name, bit, TRUE },
+#define IEVENT(name, bit)		{ name, bit, true },
+#define MEVENT(name, bit)		{ name, bit, true },
 #define END_EVENT_TYPES			};
 #define TRAP_IWEAR			1
 #define TRAP_IREMOVE		2

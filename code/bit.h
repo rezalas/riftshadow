@@ -13,6 +13,8 @@
 #include <time.h>
 #include "merc.h"
 #include "tables.h"
+#include "interp.h"
+#include "db.h"
 
 
 struct flag_stat_type
@@ -21,54 +23,14 @@ struct flag_stat_type
 	bool stat;
 };
 
+//
+// LOCAL FUNCTIONS
+//
 
-
-/*****************************************************************************
- Name:		flag_stat_table
- Purpose:	This table catagorizes the tables following the lookup
- 		functions below into stats and flags.  Flags can be toggled
- 		but stats can only be assigned.  Update this table when a
- 		new set of flags is installed.
- ****************************************************************************/
-const struct flag_stat_type flag_stat_table[] =
-{
-	{ area_flags, FALSE	},
-	{ sex_flags, TRUE	},
-	{ exit_flags, FALSE	},
-	{ door_resets, TRUE	},
-	{ room_flags, FALSE	},
-	{ sector_flags, TRUE },
-	{ type_flags, TRUE },
-	{ extra_flags, FALSE },
-	{ wear_flags, FALSE },
-	{ act_flags, FALSE },
-	{ affect_flags, FALSE },
-	{ apply_flags, TRUE },
-	{ wear_loc_flags, TRUE },
-	{ wear_loc_strings, TRUE },
-	{ weapon_flags, TRUE },
-	{ container_flags, FALSE },
-
-	/* ROM specific flags: */
-
-	{ material_type, TRUE },
-	{ form_flags, FALSE },
-	{ part_flags, FALSE },
-	{ ac_type, TRUE },
-	{ size_flags, TRUE },
-	{ position_flags, TRUE },
-	{ off_flags, FALSE },
-	{ imm_flags, FALSE },
-	{ res_flags, FALSE },
-	{ vuln_flags, FALSE },
-	{ weapon_class, TRUE },
-	{ weapon_type2, FALSE },
-	{ 0, 0 }
-};
 
 /*****************************************************************************
  Name:		is_stat( table )
- Purpose:	Returns TRUE if the table is a stat table and FALSE if flag.
+ Purpose:	Returns true if the table is a stat table and false if flag.
  Called by:	flag_value and flag_string.
  Note:		This function is local and used only in bit.c.
  ****************************************************************************/

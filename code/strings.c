@@ -1,16 +1,10 @@
 #include "stdlibs/strings.h"
-#define UPCHAR(c)       ((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
 
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-int vsnprintf(char *str, size_t size, const char *format, va_list ap);
-char *strcpy(char *dest, const char *src);
-char *strncpy(char *dest, const char *src, size_t n);
-size_t strlen(const char *s);
-char *strcat(char *dest, const char *src);
+// int vsnprintf(char *str, size_t size, const char *format, va_list ap);
+// char *strcpy(char *dest, const char *src);
+// char *strncpy(char *dest, const char *src, size_t n);
+// size_t strlen(const char *s);
+// char *strcat(char *dest, const char *src);
 
 RString::RString()
 {
@@ -61,7 +55,7 @@ bool RString::IsShared(void)
 
 bool TString::IsShared(void)
 {
-	return FALSE;
+	return false;
 }
 
 void RString::PrepForMod(void)
@@ -250,8 +244,8 @@ bool RString::PrefixMatch(const char *pref)
 	const char *mystr = myString;
 	for(; *pref && *mystr; pref++, mystr++)
 		if(*pref && (!(*mystr) || UPCHAR(*pref) != UPCHAR(*mystr)))
-			return FALSE;
-	return TRUE;
+			return false;
+	return true;
 }
 
 bool TString::PrefixMatch(const char *pref)
@@ -259,8 +253,8 @@ bool TString::PrefixMatch(const char *pref)
 	const char *mystr = myString;
 	for(; *pref && *mystr; pref++, mystr++)
 		if(*pref && (!(*mystr) || UPCHAR(*pref) != UPCHAR(*mystr)))
-			return FALSE;
-	return TRUE;
+			return false;
+	return true;
 }
 
 int RString::ToNumber(void)
