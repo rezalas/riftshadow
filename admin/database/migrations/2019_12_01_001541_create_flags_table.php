@@ -18,6 +18,7 @@ class CreateFlagsTable extends Migration
             $table->string('name');
             $table->string('define');
             $table->string('type');
+            $table->bigInteger('bit')->unsigned();
         });
 
         Schema::create('flag_race', function (Blueprint $table) {
