@@ -18,6 +18,6 @@ Route::get('/', 'HomeController@index')->name('home');
 // Users of trust/level lower than 52 cannot access the routes
 // in this group
 Route::middleware(['admin:52'])->group(function () {
-    Route::get('classes/{class}/delete', 'ClassController@delete')->name('classes.delete');
-    Route::resource('classes', 'ClassController');
+    Route::get('classes/{class}/delete', 'ClassesController@delete')->name('classes.delete');
+    Route::resource('classes', 'ClassesController');
 });
