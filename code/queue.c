@@ -132,11 +132,7 @@ void CQueue::AddToQueue(int nTimer, int nArgs, ...)
 	va_start(ap, nArgs);
 	nq->queue_function = (QUEUE_FUNCTION)va_arg(ap, void *);
 	for(i = 0; i < MAX_QUEUE_ARGS; i++)
-		nq->queue_args[i] = 0; //null
-	for(i = 0; i < nArgs; i++)
-		hax[i] = va_arg(ap, void *);
-	for(i = 0; i < nArgs; i++)
-		nq->queue_args[i] = hax[nArgs - i - 1]; //don't even ask why
+		nq->queue_args[i] = va_arg(ap, void *);
 	va_end(ap);
 }
 
