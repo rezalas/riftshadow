@@ -32,7 +32,5 @@ area/rift
 code/rift.exe
 area/rift.exe
 area/rift
-tests/db_tests
-tests/fight_tests
-tests/queue_tests
 build/
+tests/*_tests

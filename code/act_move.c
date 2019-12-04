@@ -178,12 +178,13 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	in_room = ch->in_room;
 
 	pexit   = in_room->exit[door] ;
-	to_room = pexit->u1.to_room;
-	if (pexit == NULL || to_room == NULL || !can_see_room(ch,pexit->u1.to_room))
+	if (pexit == NULL || pexit->u1.to_room == NULL || !can_see_room(ch,pexit->u1.to_room))
 	{
 		send_to_char( "Alas, you cannot go that way.\n\r", ch );
 		return;
 	}
+
+	to_room = pexit->u1.to_room;
 
 	/*
 		if(pexit->has_rune == true)

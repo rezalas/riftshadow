@@ -6,6 +6,15 @@ target_include_directories(catch INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 set(TEST_LIB_FLAGS RiftCore catch ${CRYPTOLIB} ${MARIADBLIB} m)
 
 ##
+## ACT_OBJ TESTS
+##
+set(ACT_OBJ_TESTS act_obj_tests.c main.c)
+set_source_files_properties(${ACT_OBJ_TESTS} PROPERTIES LANGUAGE CXX)
+add_executable(act_obj_tests ${ACT_OBJ_TESTS})
+target_link_libraries(act_obj_tests PRIVATE ${TEST_LIB_FLAGS})
+add_test(NAME ACT_OBJ_TESTS COMMAND act_obj_tests)
+
+##
 ## DB TESTS
 ##
 set(DB_TESTS db_tests.c main.c)

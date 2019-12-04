@@ -3475,10 +3475,11 @@ CHAR_DATA *find_keeper(CHAR_DATA *ch)
 	pShop = NULL;
 	for (keeper = ch->in_room->people; keeper; keeper = keeper->next_in_room)
 	{
+		if(IS_NPC(keeper) == false || keeper->pIndexData == NULL || keeper->pIndexData->pShop == NULL)
+			continue;
+		
 		pShop = keeper->pIndexData->pShop;
-
-		if (IS_NPC(keeper) && pShop != NULL)
-			break;
+		break;
 	}
 
 	if (pShop == NULL)
