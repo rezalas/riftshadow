@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'player_directory' => base_path().env('PLAYER_DIRECTORY', '/../player/'),
+	'player_directory' => base_path().env('PLAYER_DIRECTORY', '/../player/'),
 ];

@@ -16,5 +16,5 @@ use Illuminate\Http\Request;
 // This interferes with route caching; should we need to do this, use a
 // controller instead of a closure
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
+//	return $request->user();
 //});

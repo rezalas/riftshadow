@@ -9,30 +9,30 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
+	/**
+	 * Register any application services.
+	 *
+	 * @return void
+	 */
+	public function register()
+	{
+		//
+	}
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        // Alias Blade includes
-        Blade::include('includes.modelselect', 'modelselect');
+	/**
+	 * Bootstrap any application services.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		// Alias Blade includes
+		Blade::include('includes.modelselect', 'modelselect');
 
-        // Alias ORM relations
-        Relation::morphMap([
-            'classes' => ClassTable::class,
-            'races' => RaceTable::class
-        ]);
-    }
+		// Alias ORM relations
+		Relation::morphMap([
+			'classes' => ClassTable::class,
+			'races' => RaceTable::class
+		]);
+	}
 }

@@ -6,35 +6,35 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateFlagsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('flags', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('define');
-            $table->string('type');
-            $table->bigInteger('bit')->unsigned();
-        });
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('flags', function (Blueprint $table) {
+			$table->increments('id');
+			$table->string('name');
+			$table->string('define');
+			$table->string('type');
+			$table->bigInteger('bit')->unsigned();
+		});
 
-        Schema::create('flag_race', function (Blueprint $table) {
-            $table->integer('race_id')->unsigned();
-            $table->integer('flag_id')->unsigned();
-        });
-    }
+		Schema::create('flag_race', function (Blueprint $table) {
+			$table->integer('race_id')->unsigned();
+			$table->integer('flag_id')->unsigned();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('flags');
-        Schema::dropIfExists('flag_race');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('flags');
+		Schema::dropIfExists('flag_race');
+	}
 }

@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Flag extends Model
 {
-    protected $connection = 'rift_core';
+	protected $connection = 'rift_core';
 
-    public function races()
-    {
-        return $this->belongsToMany(RaceTable::class);
-    }
+	public function races()
+	{
+		return $this->belongsToMany(RaceTable::class);
+	}
 }

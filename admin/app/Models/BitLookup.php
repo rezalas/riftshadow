@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class BitLookup extends Model
 {
-    protected $connection = 'rift_core';
+	protected $connection = 'rift_core';
 
-    protected $table = 'bit_lookup';
+	protected $table = 'bit_lookup';
 
-    /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
+	/**
+	 * Indicates if the model should be timestamped.
+	 *
+	 * @var bool
+	 */
+	public $timestamps = false;
 }

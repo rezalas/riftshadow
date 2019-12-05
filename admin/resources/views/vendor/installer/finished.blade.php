@@ -1,12 +1,12 @@
 @extends('vendor.installer.layouts.master')
 
 @section('template_title')
-    {{ trans('installer_messages.final.templateTitle') }}
+	{{ trans('installer_messages.final.templateTitle') }}
 @endsection
 
 @section('title')
-    <i class="fas fa-flag-checkered fa-fw" aria-hidden="true"></i>
-    {{ trans('installer_messages.final.title') }}
+	<i class="fas fa-flag-checkered fa-fw" aria-hidden="true"></i>
+	{{ trans('installer_messages.final.title') }}
 @endsection
 
 @section('container')
@@ -25,8 +25,8 @@
 	<p><strong><small>{{ trans('installer_messages.final.env') }}</small></strong></p>
 	<pre><code>{{ $finalEnvFile }}</code></pre>
 
-    <div class="buttons">
-        <a href="{{ url('/') }}" class="button">{{ trans('installer_messages.final.exit') }}</a>
-    </div>
+	<div class="buttons">
+		<a href="{{ url('/') }}" class="button">{{ trans('installer_messages.final.exit') }}</a>
+	</div>
 
 @endsection
