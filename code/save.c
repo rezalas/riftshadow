@@ -1619,7 +1619,12 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				KEY("Prom", ch->prompt, fread_string(fp))
 
 				if (!str_cmp(word, "Prof"))
-					ch->Profs()->SetProf(CProficiencies::ProfIndexLookup(fread_string(fp)), fread_number(fp));
+				{
+					auto profIndex = CProficiencies::ProfIndexLookup(fread_string(fp));
+                    auto profLevel = fread_number(fp);
+                    ch->Profs()->SetProf(profIndex, profLevel);
+				}
+				
 
 				if (!str_cmp(word, "ProfPoints"))
 				{
