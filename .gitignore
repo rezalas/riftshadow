@@ -34,3 +34,4 @@ area/rift.exe
 area/rift
 build/
 tests/*_tests
+tests/catch

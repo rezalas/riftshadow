@@ -847,10 +847,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 {
 	AFFECT_DATA *af;
 	int max;
-	int iClass;
 	int mod = 0;
-
-	iClass = ch->Class()->GetIndex();
 
 	if (IS_NPC(ch) || ch->level > LEVEL_IMMORTAL)
 		max = 25;
@@ -861,6 +858,8 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 
 		if (!str_cmp(race_table[ch->race].name, "human"))
 		{
+			int iClass;
+			iClass = ch->Class()->GetIndex();
 			switch (ch->Class()->attr_prime)
 			{
 				case STAT_STR:

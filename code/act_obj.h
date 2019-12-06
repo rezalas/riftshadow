@@ -80,7 +80,7 @@ void wear_obj (CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace);
 void do_wear (CHAR_DATA *ch, char *argument);
 void do_remove (CHAR_DATA *ch, char *argument);
 void do_sacrifice (CHAR_DATA *ch, char *argument);
-void quaff_potion(void *arg1, void *arg2, void *arg3, void *arg4, void *arg5);
+void quaff_potion(CHAR_DATA *arg1, int arg2, int arg3, int arg4, int arg5);
 void do_quaff (CHAR_DATA *ch, char *argument);
 void do_recite (CHAR_DATA *ch, char *argument);
 void do_brandish (CHAR_DATA *ch, char *argument);
