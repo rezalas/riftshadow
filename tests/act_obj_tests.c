@@ -113,40 +113,40 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
         }
     }
 }
-SCENARIO("testing looting containers", "[do_get]")
-{
+// SCENARIO("testing looting containers", "[do_get]")
+// {
     
-    GIVEN("a player character looting a generic container")
-    {
-        room_index_data* room = new room_index_data();
-        room->area = new area_data();
-        room->light = 3;
+//     GIVEN("a player character looting a generic container")
+//     {
+//         room_index_data* room = new room_index_data();
+//         room->area = new area_data();
+//         room->light = 3;
 
-        obj_data *container = new OBJ_DATA();
-        container->name = "sut";
-        container->item_type = ITEM_CONTAINER;
-        container->pIndexData = new obj_index_data();
+//         obj_data *container = new OBJ_DATA();
+//         container->name = "sut";
+//         container->item_type = ITEM_CONTAINER;
+//         container->pIndexData = new obj_index_data();
 
-        char_data* player1 = new char_data();
-        player1->name = "player 1";
-        player1->pcdata = new PC_DATA();
-        TestHelperSetPlayerStats(player1, 20);
+//         char_data* player1 = new char_data();
+//         player1->name = "player 1";
+//         player1->pcdata = new PC_DATA();
+//         TestHelperSetPlayerStats(player1, 20);
 
-        obj_data* itemToGet = new obj_data();
-        itemToGet->name = "bobble";
-        SET_BIT(itemToGet->wear_flags, ITEM_TAKE);
+//         obj_data* itemToGet = new obj_data();
+//         itemToGet->name = "bobble";
+//         SET_BIT(itemToGet->wear_flags, ITEM_TAKE);
         
-        TestHelperAddPlayerToRoom(player1, room);
-        obj_to_room(container, room);
-        obj_to_obj(itemToGet, container);
+//         TestHelperAddPlayerToRoom(player1, room);
+//         obj_to_room(container, room);
+//         obj_to_obj(itemToGet, container);
 
-        WHEN("do_get is passed ' bobble from sut'")
-        {
-            do_get(player1, "bobble from sut");
-            THEN("the item should move to the players inventory")
-            {
-                REQUIRE(get_obj_carry(player1, "bobble",player1) == itemToGet);
-            }
-        }
-    }
-}
+//         WHEN("do_get is passed ' bobble from sut'")
+//         {
+//             do_get(player1, "bobble from sut");
+//             THEN("the item should move to the players inventory")
+//             {
+//                 REQUIRE(get_obj_carry(player1, "bobble",player1) == itemToGet);
+//             }
+//         }
+//     }
+// }
