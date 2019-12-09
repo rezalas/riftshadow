@@ -13,18 +13,19 @@ class CreateFlagsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('flags', function (Blueprint $table) {
-			$table->increments('id');
-			$table->string('name');
-			$table->string('define');
-			$table->string('type');
-			$table->bigInteger('bit')->unsigned();
-		});
-
-		Schema::create('flag_race', function (Blueprint $table) {
-			$table->integer('race_id')->unsigned();
-			$table->integer('flag_id')->unsigned();
-		});
+		// TODO: Add after move to relational/ORM
+		//Schema::connection('rift_core')->create('flags', function (Blueprint $table) {
+		//	$table->increments('id');
+		//	$table->string('name');
+		//	$table->string('define');
+		//	$table->string('type');
+		//	$table->bigInteger('bit')->unsigned();
+		//});
+		//
+		//Schema::connection('rift_core')->create('flag_race', function (Blueprint $table) {
+		//	$table->integer('race_id')->unsigned();
+		//	$table->integer('flag_id')->unsigned();
+		//});
 	}
 
 	/**
@@ -34,7 +35,7 @@ class CreateFlagsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('flags');
-		Schema::dropIfExists('flag_race');
+		//Schema::connection('rift_core')->dropIfExists('flags');
+		//Schema::connection('rift_core')->dropIfExists('flag_race');
 	}
 }

@@ -13,16 +13,21 @@ class CreateClassTable extends Migration
 	 */
 	public function up()
 	{
-		// TODO: Uncomment for admin installer
-		//Schema::create('class_table', function (Blueprint $table) {
-		//	$table->increments('id');
-		//	$table->string('name', 50);
-		//	$table->string('who_name');
-		//	$table->integer('weapon')->unsigned();
-		//	$table->string('base_group', 50);
-		//	$table->string('default_group', 50);
-		//	$table->timestamps();
-		//});
+		Schema::connection('rift_core')->create('class_table', function (Blueprint $table) {
+			$table->increments('id');
+			$table->string('name', 50);
+			$table->string('who_name');
+			$table->integer('attr_prime')->default(0);
+			$table->integer('align')->default(0);
+			$table->integer('weapon')->default(0);
+			$table->integer('gainconst')->default(0);
+			$table->string('base_group', 50);
+			$table->string('default_group', 50);
+			$table->integer('ctype')->default(0);
+			$table->integer('status')->default(0);
+			// TODO: Add after move to relational/ORM
+			//$table->timestamps();
+		});
 	}
 
 	/**
@@ -32,6 +37,6 @@ class CreateClassTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('class_table');
+		//Schema::connection('rift_core')->dropIfExists('class_table');
 	}
 }

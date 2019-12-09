@@ -13,20 +13,21 @@ class CreateDefinesTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('defines', function (Blueprint $table) {
-			$table->increments('id');
-			$table->string('name');
-			$table->string('abbrev');
-			$table->string('define');
-			$table->string('category');
-			$table->tinyInteger('value')->unsigned();
-		});
-
-		Schema::create('definables', function (Blueprint $table) {
-			$table->integer('define_id')->unsigned();
-			$table->integer('definable_id')->unsigned();
-			$table->string('definable_type');
-		});
+		// TODO: Add after move to relational/ORM
+		//Schema::connection('rift_core')->create('defines', function (Blueprint $table) {
+		//	$table->increments('id');
+		//	$table->string('name');
+		//	$table->string('abbrev');
+		//	$table->string('define');
+		//	$table->string('category');
+		//	$table->tinyInteger('value')->unsigned();
+		//});
+		//
+		//Schema::connection('rift_core')->create('definables', function (Blueprint $table) {
+		//	$table->integer('define_id')->unsigned();
+		//	$table->integer('definable_id')->unsigned();
+		//	$table->string('definable_type');
+		//});
 	}
 
 	/**
@@ -36,7 +37,7 @@ class CreateDefinesTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('defines');
-		Schema::dropIfExists('definables');
+		//Schema::connection('rift_core')->dropIfExists('defines');
+		//Schema::connection('rift_core')->dropIfExists('definables');
 	}
 }
