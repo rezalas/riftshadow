@@ -94,14 +94,13 @@ void drowning_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 void check_waterbreath(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 {
-	AFFECT_DATA af;
-
 	if (!is_affected(ch, gsn_drowning)
 		&& to_room->sector_type == SECT_UNDERWATER
 		&& !is_affected_room(to_room, gsn_airy_water)
 		&& !IS_IMMORTAL(ch)
 		&& !IS_HEROIMM(ch))
 	{
+		AFFECT_DATA af;
 		init_affect(&af);
 		af.where = TO_AFFECTS;
 		af.aftype = AFT_INVIS;
@@ -124,18 +123,9 @@ void check_waterbreath(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 
 void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 {
-	CHAR_DATA *victim, *fch, *fch_next, *moveprog, *owner;
-	ROOM_INDEX_DATA *in_room, *to_room, *gravroom, *room, *riptideroom = NULL;
-	RUNE_DATA *rune = NULL;
-	EXIT_DATA *pexit;
 	AFFECT_DATA *imaf, *paf, cvaf, cvaf2;
-	ROOM_AFFECT_DATA *raf, *raf_two;
-	char exbuf[MSL];
-	int invnum, distance, oppdir, dam, i, twchance, ss_chance;
+	int distance, oppdir, dam, twchance, ss_chance;
 	float move, wait;
-	OBJ_DATA *obj, *well;
-	bool room_has_pc, found= false, swimmer= false, mountaineer= false;
-	DESCRIPTOR_DATA *d;
 
 	if (door < 0 || door > 5)
 	{
@@ -146,23 +136,27 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	if (!ch->in_room)
 		return;
 
-	invnum = ch->in_room->vnum;
+	auto invnum = ch->in_room->vnum;
 
 	if (is_affected_room(ch->in_room, gsn_smokescreen))
 	{
-		for (raf = ch->in_room->affected; raf != NULL; raf = raf->next)
+		auto raf = ch->in_room->affected;
+		for (; raf != NULL; raf = raf->next)
 		{
 			if (raf->type == gsn_smokescreen)
 				break;
 		}
 
-		if (raf->owner == ch)
+		if (raf != NULL)
 		{
-			act("The smoke parts for you allowing you passage.", ch, 0, 0, TO_CHAR);
-		}
-		else if (raf->owner == ch->master && automatic)
-		{
-			act("You follow $N through the smoke.", ch, 0, ch->master, TO_CHAR);
+			if (raf->owner == ch)
+			{
+				act("The smoke parts for you allowing you passage.", ch, 0, 0, TO_CHAR);
+			}
+			else if (raf->owner == ch->master && automatic)
+			{
+				act("You follow $N through the smoke.", ch, 0, ch->master, TO_CHAR);
+			}
 		}
 		else
 		{
@@ -175,16 +169,16 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	 * Exit trigger, if activated, bail out. Only PCs are triggered.
 	 */
 
-	in_room = ch->in_room;
+	auto in_room = ch->in_room;
 
-	pexit   = in_room->exit[door] ;
+	auto pexit = in_room->exit[door];
 	if (pexit == NULL || pexit->u1.to_room == NULL || !can_see_room(ch,pexit->u1.to_room))
 	{
 		send_to_char( "Alas, you cannot go that way.\n\r", ch );
 		return;
 	}
 
-	to_room = pexit->u1.to_room;
+	auto to_room = pexit->u1.to_room;
 
 	/*
 		if(pexit->has_rune == true)
@@ -199,11 +193,9 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (IS_ROOM_AFFECTED(in_room, AFF_ROOM_RANDOMIZER))
 	{
-		int d0, i;
-
-		for (i = 0; i < 1000; i++)
+		for (auto i = 0; i < 1000; i++)
 		{
-			d0 = number_range(0,5);
+			auto d0 = number_range(0,5);
 			pexit = in_room->exit[d0];
 			to_room = pexit->u1.to_room;
 
@@ -272,6 +264,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	if (!IS_NPC(ch) && ch->ghost > 0 && IS_SET(to_room->area->area_flags, AREA_UNGHOST))
 		ch->ghost = 0;
 
+	auto found = false, swimmer = false, mountaineer = false;
 	if (!IS_NPC(ch))
 	{
 		if ((to_room->sector_type == SECT_VERTICAL || to_room->sector_type == SECT_AIR)
@@ -285,7 +278,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (to_room->sector_type == SECT_WATER
 			&& (!IS_AFFECTED(ch, AFF_FLYING) && !IS_AFFECTED(ch, AFF_WATERBREATH)))
 		{
-			for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+			for (auto obj = ch->carrying; obj != NULL; obj = obj->next_content)
 			{
 				if (obj->item_type == ITEM_BOAT)
 					found = true;
@@ -334,11 +327,11 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				return;
 		}
 
-		for (moveprog = ch->in_room->people; moveprog; moveprog = moveprog->next_in_room)
+		for (auto moveprog = ch->in_room->people; moveprog; moveprog = moveprog->next_in_room)
 		{
 			if (IS_SET(moveprog->progtypes, MPROG_MOVE))
 			{
-				if (((moveprog->pIndexData->mprogs->move_prog)(ch, moveprog, ch->in_room, door)) == false)
+				if (!moveprog->pIndexData->mprogs->move_prog(ch, moveprog, ch->in_room, door))
 					return;
 			}
 
@@ -372,9 +365,11 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (is_affected_area(ch->in_room->area, gsn_gravity_well))
 		{
 			oppdir = reverse_d(door);
-			gravroom = to_room;
 
-			for (well = object_list; well; well = well->next)
+			auto gravroom = to_room;
+
+			auto well = object_list;
+			for (; well; well = well->next)
 			{
 				if (well->item_type == ITEM_GRAVITYWELL && well->in_room && well->in_room->area == in_room->area)
 					break;
@@ -383,7 +378,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			if (!well)
 				return;
 
-			for (distance = 0; distance <= get_grav_distance(well); distance++)
+			for (auto distance = 0; distance <= get_grav_distance(well); distance++)
 			{
 				if (!gravroom->exit[oppdir] || !gravroom->exit[oppdir]->u1.to_room)
 					break;
@@ -433,7 +428,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (swimmer)
 		{
-			int pval = ch->Profs()->GetProf(psn_swimming);
+			auto pval = ch->Profs()->GetProf(psn_swimming);
 			move *= pval > 2 ? pval > 5 ? .6 : 1.2 : 2;
 			wait *= pval > 3 ? pval > 7 ? .5 : 1.2 : 2;
 			ch->Profs()->CheckImprove(psn_swimming, 6);
@@ -451,7 +446,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (ch->move < (int)move)
 		{
-			return send_to_char("You are too exhausted.\n\r", ch);
+			send_to_char("You are too exhausted.\n\r", ch);
+			return;
 		}
 
 		if (get_trust(ch) > 53)
@@ -512,43 +508,41 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		send_to_char("Due to the unfamiliar area you stop moving around silently.\n\r", ch);
 	}
 
-	if (!automatic || automatic)
+	char exbuf[MAX_STRING_LENGTH];
+	if (!IS_AFFECTED(ch, AFF_SNEAK)
+		&& !check_silent_movement(ch, ch->in_room)
+		&& ch->invis_level < LEVEL_HERO
+		&& !IS_AFFECTED(ch, AFF_NOSHOW)
+		&& !is_affected(ch, gsn_creep)
+		&& !is_affected(ch, gsn_watermeld))
 	{
-		if (!IS_AFFECTED(ch, AFF_SNEAK)
-			&& !check_silent_movement(ch, ch->in_room)
-			&& ch->invis_level < LEVEL_HERO
-			&& !IS_AFFECTED(ch, AFF_NOSHOW)
-			&& !is_affected(ch, gsn_creep)
-			&& !is_affected(ch, gsn_watermeld))
-		{
-			un_hide(ch, NULL);
+		un_hide(ch, NULL);
 
-			if (is_affected(ch, gsn_door_bash))
-				act("$n goes crashing through the door $T.", ch, 0, dir_name[door], TO_ROOM);
-			else
-				sprintf(exbuf, "leave");
-
-			if (to_room->sector_type == SECT_UNDERWATER || ch->in_room->sector_type == SECT_UNDERWATER || swimmer)
-				sprintf(exbuf, "swim");
-			else if (IS_AFFECTED(ch, AFF_FLYING))
-				sprintf(exbuf, "float");
-			else if (ch->legs < 1)
-				sprintf(exbuf, "crawl");
-			else if (ch->legs < 2)
-				sprintf(exbuf, "limp");
-			else if (mountaineer)
-				sprintf(exbuf, "climb");
-
-			if (mountaineer || swimmer || (ch->legs < 2 && is_land(ch->in_room) && is_land(to_room)))
-				act("You $t $T.", ch, exbuf, dir_name[door], TO_CHAR);
-
-			act("$n $ts $T.", ch, exbuf, dir_name[door], TO_ROOM);
-		}
+		if (is_affected(ch, gsn_door_bash))
+			act("$n goes crashing through the door $T.", ch, 0, dir_name[door], TO_ROOM);
 		else
-		{
-			check_detect_movement(ch, dir_name[door]);
-			act("IMM: $n sneaks $T.", ch, NULL, dir_name[door], TO_IMMINROOM);
-		}
+			sprintf(exbuf, "leave");
+
+		if (to_room->sector_type == SECT_UNDERWATER || ch->in_room->sector_type == SECT_UNDERWATER || swimmer)
+			sprintf(exbuf, "swim");
+		else if (IS_AFFECTED(ch, AFF_FLYING))
+			sprintf(exbuf, "float");
+		else if (ch->legs < 1)
+			sprintf(exbuf, "crawl");
+		else if (ch->legs < 2)
+			sprintf(exbuf, "limp");
+		else if (mountaineer)
+			sprintf(exbuf, "climb");
+
+		if (mountaineer || swimmer || (ch->legs < 2 && is_land(ch->in_room) && is_land(to_room)))
+			act("You $t $T.", ch, exbuf, dir_name[door], TO_CHAR);
+
+		act("$n $ts $T.", ch, exbuf, dir_name[door], TO_ROOM);
+	}
+	else
+	{
+		check_detect_movement(ch, dir_name[door]);
+		act("IMM: $n sneaks $T.", ch, NULL, dir_name[door], TO_IMMINROOM);
 	}
 
 	if (to_room->sector_type != SECT_FOREST
@@ -571,13 +565,14 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (in_room->area != to_room->area)
 	{
-		for (d = descriptor_list; d; d = d->next)
+		for (auto d = descriptor_list; d; d = d->next)
 		{
+			auto victim = d->character;
 			if (d->connected == CON_PLAYING
-				&& (victim = d->character) != NULL
+				&& victim != NULL
 				&& !IS_NPC(victim)
 				&& victim->in_room != NULL
-				&& (victim->in_room->area == ch->in_room->area)
+				&& victim->in_room->area == ch->in_room->area
 				&& !IS_IMMORTAL(ch)
 				&& get_skill(victim, gsn_shadowsense) > 1
 				&& victim != ch
@@ -601,39 +596,36 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 	}
 
-	if (!automatic || automatic)
+	if (!IS_AFFECTED(ch, AFF_SNEAK) 
+		&& !check_silent_movement(ch, ch->in_room)
+		&& ch->invis_level < LEVEL_HERO
+		&& !is_affected(ch, gsn_creep)
+		&& !is_affected(ch, gsn_watermeld)
+		&& !IS_AFFECTED(ch, AFF_NOSHOW))
 	{
-		if (!IS_AFFECTED(ch, AFF_SNEAK) 
-			&& !check_silent_movement(ch, ch->in_room)
-			&& ch->invis_level < LEVEL_HERO
-			&& !is_affected(ch, gsn_creep)
-			&& !is_affected(ch, gsn_watermeld)
-			&& !IS_AFFECTED(ch, AFF_NOSHOW))
+		sprintf(exbuf, "has arrived");
+
+		if (!IS_NPC(ch))
 		{
-			sprintf(exbuf, "has arrived");
-
-			if (!IS_NPC(ch))
-			{
-				if (to_room->sector_type == SECT_UNDERWATER || ch->in_room->sector_type == SECT_UNDERWATER)
-					sprintf(exbuf, "swims in");
-				else if (IS_AFFECTED(ch, AFF_FLYING))
-					sprintf(exbuf, "floats in");
-				else if (ch->legs < 1)
-					sprintf(exbuf, "crawls in");
-				else if (ch->legs < 2)
-					sprintf(exbuf, "limps in");
-			}
-
-			if (is_affected(ch, gsn_door_bash))
-				act("The $T door bursts open and $n comes crashing in!", ch, 0, dir_name[door], TO_ROOM);
-			else
-				act("$n $t.", ch, exbuf, NULL, TO_ROOM);
+			if (to_room->sector_type == SECT_UNDERWATER || ch->in_room->sector_type == SECT_UNDERWATER)
+				sprintf(exbuf, "swims in");
+			else if (IS_AFFECTED(ch, AFF_FLYING))
+				sprintf(exbuf, "floats in");
+			else if (ch->legs < 1)
+				sprintf(exbuf, "crawls in");
+			else if (ch->legs < 2)
+				sprintf(exbuf, "limps in");
 		}
+
+		if (is_affected(ch, gsn_door_bash))
+			act("The $T door bursts open and $n comes crashing in!", ch, 0, dir_name[door], TO_ROOM);
 		else
-		{
-			check_detect_movement(ch, "in");
-			act("IMM: $n sneaks in.", ch, NULL, NULL, TO_IMMINROOM);
-		}
+			act("$n $t.", ch, exbuf, NULL, TO_ROOM);
+	}
+	else
+	{
+		check_detect_movement(ch, "in");
+		act("IMM: $n sneaks in.", ch, NULL, NULL, TO_IMMINROOM);
 	}
 
 	do_look(ch, "auto");
@@ -641,7 +633,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	{
 		send_to_char("The jagged shaft twists painfully in your wound as you move.\n\r", ch);
 
-		owner = ch;
+		auto owner = ch;
 		imaf = affect_find(ch->affected, gsn_impale);
 		if (imaf && imaf->owner)
 			owner = imaf->owner;
@@ -654,13 +646,15 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (is_affected_room(in_room, gsn_tripwire) && is_affected_room(to_room, gsn_tripwire))
 	{
-		for (raf = in_room->affected; raf != NULL; raf = raf->next)
+		auto raf = in_room->affected;
+		for (; raf != NULL; raf = raf->next)
 		{
 			if (raf->modifier == door && raf->type == gsn_tripwire)
 				break;
 		}
 
-		for (raf_two = to_room->affected; raf_two != NULL; raf_two = raf_two->next)
+		auto raf_two = to_room->affected;
+		for (; raf_two != NULL; raf_two = raf_two->next)
 		{
 			if (raf_two->modifier == reverse_d(door) && raf->type == gsn_tripwire)
 				break;
@@ -694,18 +688,19 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (is_affected_room(to_room, gsn_riptide))
 	{
-		for (raf = to_room->affected; raf != NULL; raf = raf->next)
+		for (auto raf = to_room->affected; raf != NULL; raf = raf->next)
 		{
 			if (raf->type == gsn_riptide && raf->location == APPLY_ROOM_NONE && raf->modifier == 1)
 			{
 				if (is_safe_new(raf->owner, ch, false) || raf->owner == ch)
 					break;
 
-				for (room = top_affected_room; room; room = room->aff_next)
+				ROOM_INDEX_DATA *riptideroom;
+				for (auto room = top_affected_room; room; room = room->aff_next)
 				{
 					if (is_affected_room(room, gsn_riptide))
 					{
-						for (raf_two = room->affected; raf_two != NULL; raf_two = raf_two->next)
+						for (auto raf_two = room->affected; raf_two != NULL; raf_two = raf_two->next)
 						{
 							if (raf_two->type == gsn_riptide && raf_two->owner == raf->owner &&
 								raf_two->location == APPLY_ROOM_NONE && raf_two->modifier == 2)
@@ -714,7 +709,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 					}
 				}
 
-				if (riptideroom)
+				if (riptideroom != NULL)
 				{
 					sprintf(exbuf, "%sAs you enter, a violent current sucks you under the surface of the ocean!\n\rYou are pulled through the water at a dizzying pace, unable to resist!%s\n\r",
 						get_char_color(ch, "cyan"),
@@ -739,7 +734,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	while (is_affected_room(to_room, gsn_frost_growth))
 	{
-		for (raf = to_room->affected; raf; raf = raf->next)
+		auto raf = to_room->affected;
+		for (; raf != NULL; raf = raf->next)
 		{
 			if (raf->type == gsn_frost_growth)
 				break;
@@ -776,12 +772,11 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	while (is_affected_room(to_room, gsn_quicksand))
 	{
-		AFFECT_DATA qs;
-
 		if (IS_NPC(ch))
 			break;
 
-		for (raf = to_room->affected; raf; raf = raf->next)
+		auto raf = to_room->affected;
+		for (; raf != NULL; raf = raf->next)
 		{
 			if (raf->type == gsn_quicksand)
 				break;
@@ -803,6 +798,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		act("As $n enters, the ground gives way beneath $m and $e sinks into quicksand!", ch, 0, 0, TO_ROOM);
 		do_myell(ch, "Help!  I'm sinking in quicksand!", NULL);
 
+		AFFECT_DATA qs;
 		init_affect(&qs);
 		qs.where = TO_AFFECTS;
 		qs.aftype = AFT_INVIS;
@@ -821,7 +817,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	while (is_affected_room(to_room, gsn_stalactites))
 	{
-		for (raf = to_room->affected; raf; raf = raf->next)
+		auto raf = to_room->affected;
+		for (; raf != NULL; raf = raf->next)
 		{
 			if (raf->type == gsn_stalactites)
 				break;
@@ -863,7 +860,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (is_affected_room(to_room, gsn_caustic_vapor))
 	{
-		for (raf = to_room->affected; raf != NULL; raf = raf->next)
+		auto raf = to_room->affected;
+		for (; raf != NULL; raf = raf->next)
 		{
 			if (raf->type == gsn_caustic_vapor)
 				break;
@@ -892,7 +890,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				new_affect_to_char(ch, &cvaf);
 			}
 
-			for (paf = ch->affected; paf != NULL; paf = paf->next)
+			for (auto paf = ch->affected; paf != NULL; paf = paf->next)
 			{
 				if (paf->type == gsn_noxious_fumes)
 					break;
@@ -962,12 +960,13 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (!IS_NPC(ch) && ch->Profs()->HasProf("trap detecting"))
 	{
-		ROOM_INDEX_DATA *td;
-		for (int i = 0; i < MAX_EXITS; i++)
+		for (auto i = 0; i < MAX_EXITS; i++)
 		{
-			if (to_room->exit[i] && (td = to_room->exit[i]->u1.to_room))
+			if (to_room->exit[i])
 			{
-				if (td->trap && td->trap->armed && ch->Profs()->ProfEffect("trap detecting") >= td->trap->quality)
+				auto td = to_room->exit[i]->u1.to_room;
+
+				if (td != NULL && td->trap && td->trap->armed && ch->Profs()->ProfEffect("trap detecting") >= td->trap->quality)
 				{
 					RS.Queue.AddToQueue(1, 2, send_to_char, "Something about your surroundings suddenly makes you feel wary.\n\r", ch);
 					break;
@@ -976,33 +975,34 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 	}
 
-	rune = NULL;
-
 	if (to_room->has_rune == true && to_room == ch->in_room)
 	{
-		while ((rune = find_rune(to_room, RUNE_TO_ROOM, RUNE_TRIGGER_ENTRY, rune)) != NULL)
+		auto rune = find_rune(to_room, RUNE_TO_ROOM, RUNE_TRIGGER_ENTRY, NULL);
+		while (rune != NULL)
 		{
-			(*rune->function)(rune, ch, &door, NULL);
+			rune->function(rune, ch, &door, NULL);
 		}
 	}
 
 	if (to_room->trap && to_room->trap->armed)
 		trip_trap(ch, to_room, to_room->trap);
 
-	for (fch = to_room->people, room_has_pc= false; fch != NULL; fch = fch->next_in_room)
+	auto room_has_pc = false;
+	for (auto fch = to_room->people; fch != NULL; fch = fch->next_in_room)
 	{
 		if (!IS_NPC(fch))
 			room_has_pc = true;
 	}
 
-	for (fch = to_room->people; fch != NULL; fch = fch_next)
+	CHAR_DATA *fch_next;
+	for (auto fch = to_room->people; fch != NULL; fch = fch_next)
 	{
 		fch_next = fch->next_in_room;
 		/* greet trigger for items carried by people in room */
-		for (obj = fch->carrying; room_has_pc && obj != NULL; obj = obj->next_content)
+		for (auto obj = fch->carrying; room_has_pc && obj != NULL; obj = obj->next_content)
 		{
 			if (IS_SET(obj->progtypes, IPROG_GREET))
-				(obj->pIndexData->iprogs->greet_prog)(obj, ch);
+				obj->pIndexData->iprogs->greet_prog(obj, ch);
 
 			if (TRAPS_IEVENT(obj, TRAP_IGREET))
 				CALL_IEVENT(obj, TRAP_IGREET, ch, obj);
@@ -1019,24 +1019,24 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		/* Greet trigger for mobs  */
 		if (room_has_pc && IS_SET(fch->progtypes, MPROG_GREET))
-			(fch->pIndexData->mprogs->greet_prog)(fch, ch);
+			fch->pIndexData->mprogs->greet_prog(fch, ch);
 
 		if (room_has_pc && TRAPS_MEVENT(fch, TRAP_MGREET))
 			CALL_MEVENT(fch, TRAP_MGREET, ch, fch);
 	}
 
-	for (obj = ch->carrying; room_has_pc && obj != NULL; obj = obj->next_content)
+	for (auto obj = ch->carrying; room_has_pc && obj != NULL; obj = obj->next_content)
 	{
 		if (IS_SET(obj->progtypes, IPROG_ENTRY))
 			(obj->pIndexData->iprogs->entry_prog)(obj);
 	}
 
 	if (IS_SET(to_room->progtypes, RPROG_ENTRY))
-		(to_room->rprogs->entry_prog)(to_room, ch);
+		to_room->rprogs->entry_prog(to_room, ch);
 
 	if (fcharm)
 	{
-		for (fch = in_room->people; fch != NULL; fch = fch_next)
+		for (auto fch = in_room->people; fch != NULL; fch = fch_next)
 		{
 			fch_next = fch->next_in_room;
 
@@ -1060,18 +1060,19 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	check_plasma_thread(ch, door);
 
-	for (obj = ch->in_room->contents; obj != NULL; obj = obj->next_content)
+	for (auto obj = ch->in_room->contents; obj != NULL; obj = obj->next_content)
 	{
 		if (IS_SET(obj->progtypes, IPROG_GREET))
 			(obj->pIndexData->iprogs->greet_prog)(obj, ch);
 	}
 
 	if (IS_SET(ch->progtypes, MPROG_ENTRY))
-		(ch->pIndexData->mprogs->entry_prog)(ch);
+		ch->pIndexData->mprogs->entry_prog(ch);
 
-	if (!IS_NPC(ch) && (to_room->tracks[0] != NULL))
+	if (!IS_NPC(ch) && to_room->tracks[0] != NULL)
 	{
-		for (i = 0; i < MAX_TRACKS; i++)
+		auto i = 0;
+		for (; i < MAX_TRACKS; i++)
 		{
 			if (to_room->tracks[i]->prey == ch)
 				break;
@@ -1189,7 +1190,7 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 		}
 	}
 
-	trap->armed= false;
+	trap->armed = false;
 
 	if (trap->timer)
 	{
@@ -1204,10 +1205,6 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 
 void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 {
-	AFFECT_DATA af;
-	CHAR_DATA *vch, *vch_next;
-	int dam, mod;
-
 	if (!victim)
 		victim = get_rand_from_room(room);
 
@@ -1215,7 +1212,6 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 		return;
 
 	act(trap->exec_echo, victim, 0, 0, TO_ALL);
-
 	switch (trap->type)
 	{
 		case TRAP_DART:
@@ -1234,6 +1230,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 
 			send_to_char("Your blood burns as a deadly venom seeps into your body!\n\r", victim);
 
+			AFFECT_DATA af;
 			init_affect(&af);
 			af.where = TO_AFFECTS;
 			af.aftype = AFT_MALADY;
@@ -1248,46 +1245,49 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 			affect_to_char(victim, &af);
 			break;
 		case TRAP_FIREBALL:
-			for (vch = room->people; vch; vch = vch_next)
+			for (auto vch = room->people; vch; vch = vch->next_in_room)
 			{
-				vch_next = vch->next_in_room;
 				damage_new(vch, vch, dice(trap->quality * 9, 9), TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the fireball*");
 			}
 			break;
 		case TRAP_LIGHTNING:
-			dam = damage_new(victim, victim, dice(trap->quality * 10, 9), TYPE_UNDEFINED, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning bolt*");
+			{
+				auto dam = damage_new(victim, victim, dice(trap->quality * 10, 9), TYPE_UNDEFINED, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning bolt*");
 
-			if (trap->quality > 5)
-				shock_effect(victim, trap->quality * 7, dam, TARGET_CHAR);
+				if (trap->quality > 5)
+					shock_effect(victim, trap->quality * 7, dam, TARGET_CHAR);
+			}
 			break;
 		case TRAP_SLEEPGAS:
-			if (trap->quality < 5)
-				mod = (trap->quality * 3) - 6;
-			else
-				mod = trap->quality * 2;
-
-			for (vch = room->people; vch; vch = vch->next_in_room)
 			{
-				if (saves_spell(vch->level + mod, vch, DAM_OTHER))
-				{
-					send_to_char("A wave of drowsiness washes over you, but it passes.\n\r", vch);
-					continue;
-				}
-				else
-				{
-					send_to_char("As you inhale the vapors, you drift off into a deep blackness....\n\r", vch);
+				auto mod = trap->quality < 5
+					? (trap->quality * 3) - 6
+					: trap->quality * 2;
 
-					init_affect(&af);
-					af.where = TO_AFFECTS;
-					af.aftype = AFT_MALADY;
-					af.type = gsn_sleep;
-					af.level = trap->quality * 6;
-					af.owner = vch;
-					af.location = 0;
-					af.modifier = 0;
-					af.duration = trap->quality * 4;
+				for (auto vch = room->people; vch; vch = vch->next_in_room)
+				{
+					if (saves_spell(vch->level + mod, vch, DAM_OTHER))
+					{
+						send_to_char("A wave of drowsiness washes over you, but it passes.\n\r", vch);
+						continue;
+					}
+					else
+					{
+						send_to_char("As you inhale the vapors, you drift off into a deep blackness....\n\r", vch);
 
-					affect_to_char(vch, &af);
+						AFFECT_DATA af;
+						init_affect(&af);
+						af.where = TO_AFFECTS;
+						af.aftype = AFT_MALADY;
+						af.type = gsn_sleep;
+						af.level = trap->quality * 6;
+						af.owner = vch;
+						af.location = 0;
+						af.modifier = 0;
+						af.duration = trap->quality * 4;
+
+						affect_to_char(vch, &af);
+					}
 				}
 			}
 			break;
@@ -1297,7 +1297,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 			spell_acid_stream(gsn_acid_stream, trap->quality * 7, victim, victim, TARGET_CHAR);
 			break;
 		case TRAP_DRAIN:
-			for (vch = room->people; vch; vch = vch->next_in_room)
+			for (auto vch = room->people; vch; vch = vch->next_in_room)
 			{
 				send_to_char("You feel drained.\n\r", vch);
 
@@ -1312,6 +1312,8 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 				else
 				{
 					vch->mana = 0;
+
+					AFFECT_DATA af;
 					init_affect(&af);
 					af.where = TO_AFFECTS;
 					af.level = vch->level;
@@ -1403,9 +1405,6 @@ int find_door(CHAR_DATA *ch, char *arg)
 void do_open(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	OBJ_DATA *obj;
-	int door;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -1414,8 +1413,7 @@ void do_open(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	obj = get_obj_here(ch, arg);
-
+	auto obj = get_obj_here(ch, arg);
 	if (obj != NULL)
 	{
 		/* open portal */
@@ -1473,7 +1471,7 @@ void do_open(CHAR_DATA *ch, char *argument)
 
 		if (IS_SET(obj->progtypes, IPROG_OPEN))
 		{
-			if (((obj->pIndexData->iprogs->open_prog)(obj, ch)) == false)
+			if (!obj->pIndexData->iprogs->open_prog(obj, ch))
 				return;
 		}
 
@@ -1490,60 +1488,52 @@ void do_open(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	door = find_door(ch, arg);
+	auto door = find_door(ch, arg);
+	if (door < 0)
+		return;
 
-	if (door >= 0)
+	/* 'open door' */
+	auto pexit = ch->in_room->exit[door];
+
+	if (IS_SET(ch->in_room->progtypes, RPROG_OPEN))
 	{
-		/* 'open door' */
-		ROOM_INDEX_DATA *to_room;
-		EXIT_DATA *pexit;
-		EXIT_DATA *pexit_rev;
-
-		pexit = ch->in_room->exit[door];
-
-		if (IS_SET(ch->in_room->progtypes, RPROG_OPEN))
-		{
-			if (((ch->in_room->rprogs->open_prog)(ch->in_room, ch, pexit)) == false)
-				return;
-		}
-
-		if (!IS_SET(pexit->exit_info, EX_CLOSED))
-		{
-			send_to_char("It's already open!\n\r", ch);
+		if (!ch->in_room->rprogs->open_prog(ch->in_room, ch, pexit))
 			return;
-		}
+	}
 
-		if (IS_SET(pexit->exit_info, EX_LOCKED))
+	if (!IS_SET(pexit->exit_info, EX_CLOSED))
+	{
+		send_to_char("It's already open!\n\r", ch);
+		return;
+	}
+
+	if (IS_SET(pexit->exit_info, EX_LOCKED))
+	{
+		send_to_char("It's locked.\n\r", ch);
+		return;
+	}
+
+	if (IS_SET(pexit->exit_info, EX_JAMMED))
+	{
+		send_to_char("You can't seem to pull the door open.\n\r", ch);
+		return;
+	}
+
+	REMOVE_BIT(pexit->exit_info, EX_CLOSED);
+
+	act("$n opens the $T.", ch, NULL, pexit->keyword != NULL ? pexit->keyword : "door", TO_ROOM);
+	send_to_char("Ok.\n\r", ch);
+
+	/* open the other side */
+	auto to_room = pexit->u1.to_room;
+	auto pexit_rev = to_room->exit[rev_dir[door]];
+	if (to_room != NULL && pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
+	{
+		REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
+
+		for (auto rch = to_room->people; rch != NULL; rch = rch->next_in_room)
 		{
-			send_to_char("It's locked.\n\r", ch);
-			return;
-		}
-
-		if (IS_SET(pexit->exit_info, EX_JAMMED))
-		{
-			send_to_char("You can't seem to pull the door open.\n\r", ch);
-			return;
-		}
-
-		REMOVE_BIT(pexit->exit_info, EX_CLOSED);
-
-		act("$n opens the $T.", ch, NULL, (pexit->keyword != NULL) ? pexit->keyword : "door", TO_ROOM);
-		send_to_char("Ok.\n\r", ch);
-
-		/* open the other side */
-		to_room = pexit->u1.to_room;
-
-		if (to_room != NULL
-			&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
-			&& pexit_rev->u1.to_room == ch->in_room)
-		{
-			CHAR_DATA *rch;
-
-			REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
-			for (rch = to_room->people; rch != NULL; rch = rch->next_in_room)
-			{
-				act("The $T opens.", rch, NULL, (pexit_rev->keyword != NULL) ? pexit_rev->keyword : "door", TO_CHAR);
-			}
+			act("The $T opens.", rch, NULL, pexit_rev->keyword != NULL ? pexit_rev->keyword : "door", TO_CHAR);
 		}
 	}
 }
@@ -1551,9 +1541,6 @@ void do_open(CHAR_DATA *ch, char *argument)
 void do_close(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	OBJ_DATA *obj;
-	int door;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -1562,8 +1549,7 @@ void do_close(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	obj = get_obj_here(ch, arg);
-
+	auto obj = get_obj_here(ch, arg);
 	if (obj != NULL)
 	{
 		/* portal stuff */
@@ -1619,56 +1605,51 @@ void do_close(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	door = find_door(ch, arg);
+	auto door = find_door(ch, arg);
+	if (door < 0)
+		return;
 
-	if (door >= 0)
+	/* 'close door' */
+	auto pexit = ch->in_room->exit[door];
+	if (IS_SET(pexit->exit_info, EX_CLOSED))
 	{
-		/* 'close door' */
-		ROOM_INDEX_DATA *to_room;
-		EXIT_DATA *pexit;
-		EXIT_DATA *pexit_rev;
+		send_to_char("It's already closed.\n\r", ch);
+		return;
+	}
 
-		pexit = ch->in_room->exit[door];
-		if (IS_SET(pexit->exit_info, EX_CLOSED))
+	if (IS_SET(pexit->exit_info, EX_NOCLOSE))
+	{
+		send_to_char("You can't close it.\n\r", ch);
+		return;
+	}
+
+	SET_BIT(pexit->exit_info, EX_CLOSED);
+
+	act("$n closes the $T.", ch, NULL, pexit->keyword, TO_ROOM);
+	send_to_char("Ok.\n\r", ch);
+
+	WAIT_STATE(ch, 2 * PULSE_PER_SECOND);
+
+	/* close the other side */
+	auto to_room = pexit->u1.to_room;
+	auto pexit_rev = to_room->exit[rev_dir[door]];
+	if (to_room != NULL
+		&& (pexit_rev = to_room->exit[rev_dir[door]]) != 0
+		&& pexit_rev->u1.to_room == ch->in_room)
+	{
+		CHAR_DATA *rch;
+
+		SET_BIT(pexit_rev->exit_info, EX_CLOSED);
+		for (rch = to_room->people; rch != NULL; rch = rch->next_in_room)
 		{
-			send_to_char("It's already closed.\n\r", ch);
-			return;
-		}
-
-		if (IS_SET(pexit->exit_info, EX_NOCLOSE))
-		{
-			send_to_char("You can't close it.\n\r", ch);
-			return;
-		}
-
-		SET_BIT(pexit->exit_info, EX_CLOSED);
-
-		act("$n closes the $T.", ch, NULL, pexit->keyword, TO_ROOM);
-		send_to_char("Ok.\n\r", ch);
-
-		WAIT_STATE(ch, 2 * PULSE_PER_SECOND);
-
-		/* close the other side */
-		to_room = pexit->u1.to_room;
-
-		if (to_room != NULL
-			&& (pexit_rev = to_room->exit[rev_dir[door]]) != 0
-			&& pexit_rev->u1.to_room == ch->in_room)
-		{
-			CHAR_DATA *rch;
-
-			SET_BIT(pexit_rev->exit_info, EX_CLOSED);
-			for (rch = to_room->people; rch != NULL; rch = rch->next_in_room)
-			{
-				act("The $T closes.", rch, NULL, pexit_rev->keyword, TO_CHAR);
-			}
+			act("The $T closes.", rch, NULL, pexit_rev->keyword, TO_CHAR);
 		}
 	}
 }
 
 bool has_key(CHAR_DATA *ch, int key)
 {
-	for (OBJ_DATA *obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (auto *obj = ch->carrying; obj != NULL; obj = obj->next_content)
 	{
 		if (obj->pIndexData->vnum == key)
 			return true;
@@ -1680,9 +1661,6 @@ bool has_key(CHAR_DATA *ch, int key)
 void do_lock(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	OBJ_DATA *obj;
-	int door;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -1691,8 +1669,7 @@ void do_lock(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	obj = get_obj_here(ch, arg);
-
+	auto obj = get_obj_here(ch, arg);
 	if (obj != NULL)
 	{
 		/* portal stuff */
@@ -1771,63 +1748,52 @@ void do_lock(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	door = find_door(ch, arg);
+	auto door = find_door(ch, arg);
+	if (door < 0)
+		return;
 
-	if (door >= 0)
+	/* 'lock door' */
+	auto pexit = ch->in_room->exit[door];
+	if (!IS_SET(pexit->exit_info, EX_CLOSED))
 	{
-		/* 'lock door' */
-		ROOM_INDEX_DATA *to_room;
-		EXIT_DATA *pexit;
-		EXIT_DATA *pexit_rev;
+		send_to_char("It's not closed.\n\r", ch);
+		return;
+	}
 
-		pexit = ch->in_room->exit[door];
+	if (pexit->key < 0)
+	{
+		send_to_char("It can't be locked.\n\r", ch);
+		return;
+	}
 
-		if (!IS_SET(pexit->exit_info, EX_CLOSED))
-		{
-			send_to_char("It's not closed.\n\r", ch);
-			return;
-		}
+	if (!has_key(ch, pexit->key))
+	{
+		send_to_char("You lack the key.\n\r", ch);
+		return;
+	}
 
-		if (pexit->key < 0)
-		{
-			send_to_char("It can't be locked.\n\r", ch);
-			return;
-		}
+	if (IS_SET(pexit->exit_info, EX_LOCKED))
+	{
+		send_to_char("It's already locked.\n\r", ch);
+		return;
+	}
 
-		if (!has_key(ch, pexit->key))
-		{
-			send_to_char("You lack the key.\n\r", ch);
-			return;
-		}
+	SET_BIT(pexit->exit_info, EX_LOCKED);
+	send_to_char("*Click*\n\r", ch);
+	act("$n locks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
 
-		if (IS_SET(pexit->exit_info, EX_LOCKED))
-		{
-			send_to_char("It's already locked.\n\r", ch);
-			return;
-		}
-
-		SET_BIT(pexit->exit_info, EX_LOCKED);
-		send_to_char("*Click*\n\r", ch);
-		act("$n locks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
-
-		/* lock the other side */
-		to_room = pexit->u1.to_room;
-
-		if (to_room != NULL
-			&& (pexit_rev = to_room->exit[rev_dir[door]]) != 0
-			&& pexit_rev->u1.to_room == ch->in_room)
-		{
-			SET_BIT(pexit_rev->exit_info, EX_LOCKED);
-		}
+	/* lock the other side */
+	auto to_room = pexit->u1.to_room;
+	auto pexit_rev = to_room->exit[rev_dir[door]];
+	if (to_room != NULL && pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
+	{
+		SET_BIT(pexit_rev->exit_info, EX_LOCKED);
 	}
 }
 
 void do_unlock(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	OBJ_DATA *obj;
-	int door;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -1836,8 +1802,7 @@ void do_unlock(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	obj = get_obj_here(ch, arg);
-
+	auto obj = get_obj_here(ch, arg);
 	if (obj != NULL)
 	{
 		/* portal stuff */
@@ -1917,65 +1882,53 @@ void do_unlock(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	door = find_door(ch, arg);
+	auto door = find_door(ch, arg);
+	if (door < 0)
+		return;
 
-	if (door >= 0)
+	/* 'unlock door' */
+	auto pexit = ch->in_room->exit[door];
+	if (!IS_SET(pexit->exit_info, EX_CLOSED))
 	{
-		/* 'unlock door' */
-		ROOM_INDEX_DATA *to_room;
-		EXIT_DATA *pexit;
-		EXIT_DATA *pexit_rev;
+		send_to_char("It's not closed.\n\r", ch);
+		return;
+	}
 
-		pexit = ch->in_room->exit[door];
+	if (pexit->key < 0)
+	{
+		send_to_char("It can't be unlocked.\n\r", ch);
+		return;
+	}
 
-		if (!IS_SET(pexit->exit_info, EX_CLOSED))
-		{
-			send_to_char("It's not closed.\n\r", ch);
-			return;
-		}
+	if (!has_key(ch, pexit->key))
+	{
+		send_to_char("You lack the key.\n\r", ch);
+		return;
+	}
 
-		if (pexit->key < 0)
-		{
-			send_to_char("It can't be unlocked.\n\r", ch);
-			return;
-		}
+	if (!IS_SET(pexit->exit_info, EX_LOCKED))
+	{
+		send_to_char("It's already unlocked.\n\r", ch);
+		return;
+	}
 
-		if (!has_key(ch, pexit->key))
-		{
-			send_to_char("You lack the key.\n\r", ch);
-			return;
-		}
+	REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 
-		if (!IS_SET(pexit->exit_info, EX_LOCKED))
-		{
-			send_to_char("It's already unlocked.\n\r", ch);
-			return;
-		}
+	send_to_char("*Click*\n\r", ch);
+	act("$n unlocks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
 
-		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
-
-		send_to_char("*Click*\n\r", ch);
-		act("$n unlocks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
-
-		/* unlock the other side */
-		to_room = pexit->u1.to_room;
-
-		if (to_room != NULL
-			&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
-			&& pexit_rev->u1.to_room == ch->in_room)
-		{
-			REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
-		}
+	/* unlock the other side */
+	auto to_room = pexit->u1.to_room;
+	auto pexit_rev = to_room->exit[rev_dir[door]];
+	if (to_room != NULL && pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
+	{
+		REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
 	}
 }
 
 void do_pick(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	CHAR_DATA *gch;
-	OBJ_DATA *obj;
-	int door;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -1987,7 +1940,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, skill_table[gsn_pick_lock].beats);
 
 	/* look for guards */
-	for (gch = ch->in_room->people; gch; gch = gch->next_in_room)
+	for (auto gch = ch->in_room->people; gch; gch = gch->next_in_room)
 	{
 		if (IS_NPC(gch) && IS_AWAKE(gch) && ch->level + 5 < gch->level)
 		{
@@ -2003,8 +1956,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	obj = get_obj_here(ch, arg);
-
+	auto obj = get_obj_here(ch, arg);
 	if (obj != NULL)
 	{
 		/* portal stuff */
@@ -2081,56 +2033,48 @@ void do_pick(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	door = find_door(ch, arg);
+	auto door = find_door(ch, arg);
+	if (door < 0)
+		return;
 
-	if (door >= 0)
+	/* 'pick door' */
+	auto pexit = ch->in_room->exit[door];
+	if (!IS_SET(pexit->exit_info, EX_CLOSED) && !IS_IMMORTAL(ch))
 	{
-		/* 'pick door' */
-		ROOM_INDEX_DATA *to_room;
-		EXIT_DATA *pexit;
-		EXIT_DATA *pexit_rev;
+		send_to_char("It's not closed.\n\r", ch);
+		return;
+	}
 
-		pexit = ch->in_room->exit[door];
+	if (pexit->key < 0 && !IS_IMMORTAL(ch))
+	{
+		send_to_char("It can't be picked.\n\r", ch);
+		return;
+	}
 
-		if (!IS_SET(pexit->exit_info, EX_CLOSED) && !IS_IMMORTAL(ch))
-		{
-			send_to_char("It's not closed.\n\r", ch);
-			return;
-		}
+	if (!IS_SET(pexit->exit_info, EX_LOCKED))
+	{
+		send_to_char("It's already unlocked.\n\r", ch);
+		return;
+	}
 
-		if (pexit->key < 0 && !IS_IMMORTAL(ch))
-		{
-			send_to_char("It can't be picked.\n\r", ch);
-			return;
-		}
+	if (IS_SET(pexit->exit_info, EX_PICKPROOF) && !IS_IMMORTAL(ch))
+	{
+		send_to_char("You failed.\n\r", ch);
+		return;
+	}
 
-		if (!IS_SET(pexit->exit_info, EX_LOCKED))
-		{
-			send_to_char("It's already unlocked.\n\r", ch);
-			return;
-		}
+	REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 
-		if (IS_SET(pexit->exit_info, EX_PICKPROOF) && !IS_IMMORTAL(ch))
-		{
-			send_to_char("You failed.\n\r", ch);
-			return;
-		}
+	send_to_char("*Click*\n\r", ch);
+	act("$n picks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
+	check_improve(ch, gsn_pick_lock, true, 2);
 
-		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
-
-		send_to_char("*Click*\n\r", ch);
-		act("$n picks the $T.", ch, NULL, pexit->keyword, TO_ROOM);
-		check_improve(ch, gsn_pick_lock, true, 2);
-
-		/* pick the other side */
-		to_room = pexit->u1.to_room;
-
-		if (to_room != NULL
-			&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
-			&& pexit_rev->u1.to_room == ch->in_room)
-		{
-			REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
-		}
+	/* pick the other side */
+	auto to_room = pexit->u1.to_room;
+	auto pexit_rev = to_room->exit[rev_dir[door]];
+	if (to_room != NULL && pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
+	{
+		REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
 	}
 }
 
@@ -2147,7 +2091,6 @@ void do_stand(CHAR_DATA *ch, char *argument)
 		}
 
 		obj = get_obj_list(ch, argument, ch->in_room->contents);
-
 		if (obj == NULL)
 		{
 			send_to_char("You don't see that here.\n\r", ch);
@@ -2622,8 +2565,6 @@ void do_sleep(CHAR_DATA *ch, char *argument)
 void do_wake(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	CHAR_DATA *victim;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -2638,8 +2579,7 @@ void do_wake(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	victim = get_char_room(ch, arg);
-
+	auto victim = get_char_room(ch, arg);
 	if (victim == NULL)
 	{
 		send_to_char("They aren't here.\n\r", ch);
@@ -2667,12 +2607,8 @@ void do_wake(CHAR_DATA *ch, char *argument)
 
 void do_sneak(CHAR_DATA *ch, char *argument)
 {
-	AFFECT_DATA af;
-
-	int sn_fog, sn_fire;
-
-	sn_fog = skill_lookup("faerie fog");
-	sn_fire = skill_lookup("faerie fire");
+	auto sn_fog = skill_lookup("faerie fog");
+	auto sn_fire = skill_lookup("faerie fire");
 
 	if (is_affected(ch, sn_fog)
 		|| is_affected(ch, sn_fire)
@@ -2697,27 +2633,27 @@ void do_sneak(CHAR_DATA *ch, char *argument)
 	if (IS_AFFECTED(ch, AFF_SNEAK))
 		return;
 
-	if (number_percent() < get_skill(ch, gsn_sneak))
-	{
-		check_improve(ch, gsn_sneak, true, 3);
-
-		init_affect(&af);
-		af.where = TO_AFFECTS;
-		af.aftype = AFT_INVIS;
-		af.type = gsn_sneak;
-		af.level = ch->level;
-		af.duration = ch->level;
-		af.location = APPLY_NONE;
-		af.modifier = 0;
-
-		SET_BIT(af.bitvector, AFF_SNEAK);
-
-		affect_to_char(ch, &af);
-	}
-	else
+	if (number_percent() >= get_skill(ch, gsn_sneak))
 	{
 		check_improve(ch, gsn_sneak, false, 3);
+		return;
 	}
+
+	check_improve(ch, gsn_sneak, true, 3);
+
+	AFFECT_DATA af;
+	init_affect(&af);
+	af.where = TO_AFFECTS;
+	af.aftype = AFT_INVIS;
+	af.type = gsn_sneak;
+	af.level = ch->level;
+	af.duration = ch->level;
+	af.location = APPLY_NONE;
+	af.modifier = 0;
+
+	SET_BIT(af.bitvector, AFF_SNEAK);
+
+	affect_to_char(ch, &af);
 }
 
 void do_cloak(CHAR_DATA *ch, char *argument)
@@ -2868,8 +2804,6 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 
 void do_acute_vision(CHAR_DATA *ch, char *argument)
 {
-	AFFECT_DATA af;
-
 	if (get_skill(ch, gsn_acute_vision) == 0 ||
 		ch->level < skill_table[gsn_acute_vision].skill_level[ch->Class()->GetIndex()])
 	{
@@ -2897,6 +2831,7 @@ void do_acute_vision(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	AFFECT_DATA af;
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
@@ -2915,14 +2850,11 @@ void do_acute_vision(CHAR_DATA *ch, char *argument)
 	send_to_char("Your vision sharpens.\n\r", ch);
 
 	return;
-	check_improve(ch, gsn_acute_vision, true, 1);
 }
 
 void do_camp(CHAR_DATA *ch, char *argument)
 {
-	AFFECT_DATA af;
-
-	if ((get_skill(ch, gsn_camp) == 0) || ch->level < skill_table[gsn_camp].skill_level[ch->Class()->GetIndex()])
+	if (get_skill(ch, gsn_camp) == 0 || ch->level < skill_table[gsn_camp].skill_level[ch->Class()->GetIndex()])
 	{
 		send_to_char("You don't know how to effectively camp.\n\r", ch);
 		return;
@@ -2954,6 +2886,7 @@ void do_camp(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	AFFECT_DATA af;
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
@@ -2972,10 +2905,8 @@ void do_camp(CHAR_DATA *ch, char *argument)
 
 void do_camouflage(CHAR_DATA *ch, char *argument)
 {
-	int sn_fog, sn_fire;
-
-	sn_fog = skill_lookup("faerie fog");
-	sn_fire = skill_lookup("faerie fire");
+	auto sn_fog = skill_lookup("faerie fog");
+	auto sn_fire = skill_lookup("faerie fire");
 
 	if (is_affected(ch, sn_fog) || is_affected(ch, sn_fire) || is_affected(ch, gsn_incandescense))
 	{
@@ -3013,11 +2944,7 @@ void do_camouflage(CHAR_DATA *ch, char *argument)
 
 void do_creep(CHAR_DATA *ch, char *argument)
 {
-	int direction = 0, chance, wait;
-	AFFECT_DATA af;
-
-	chance = get_skill(ch, gsn_creep);
-
+	auto chance = get_skill(ch, gsn_creep);
 	if (chance == 0)
 	{
 		send_to_char("Creeping? What's that?\n\r", ch);
@@ -3036,6 +2963,7 @@ void do_creep(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	int direction = 0;
 	if (!str_cmp(argument, "n") || !str_cmp(argument, "north"))
 	{
 		direction = 0;
@@ -3065,6 +2993,7 @@ void do_creep(CHAR_DATA *ch, char *argument)
 		act("You can't creep there.", ch, NULL, 0, TO_CHAR);
 	}
 
+	AFFECT_DATA af;
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
@@ -3080,16 +3009,14 @@ void do_creep(CHAR_DATA *ch, char *argument)
 	affect_strip(ch, gsn_creep);
 	check_improve(ch, gsn_creep, true, 2);
 
-	wait = 100 - chance;
+	auto wait = 100 - chance;
 	WAIT_STATE(ch, wait);
 }
 
 void do_hide(CHAR_DATA *ch, char *argument)
 {
-	int sn_fog, sn_fire;
-
-	sn_fog = skill_lookup("faerie fog");
-	sn_fire = skill_lookup("faerie fire");
+	auto sn_fog = skill_lookup("faerie fog");
+	auto sn_fire = skill_lookup("faerie fire");
 
 	if (is_affected(ch, sn_fog)
 		|| is_affected(ch, sn_fire)
@@ -3124,22 +3051,21 @@ void do_hide(CHAR_DATA *ch, char *argument)
 	{
 		SET_BIT(ch->affected_by, AFF_HIDE);
 		check_improve(ch, gsn_hide, true, 3);
+		return;
 	}
-	else
-	{
-		check_improve(ch, gsn_hide, false, 3);
-	}
+
+	check_improve(ch, gsn_hide, false, 3);
 }
 
 void un_camouflage(CHAR_DATA *ch, char *argument)
 {
-	if (IS_AFFECTED(ch, AFF_CAMOUFLAGE))
-	{
-		REMOVE_BIT(ch->affected_by, AFF_CAMOUFLAGE);
+	if (!IS_AFFECTED(ch, AFF_CAMOUFLAGE))
+		return;
 
-		act("$n steps out from their cover.", ch, NULL, NULL, TO_ROOM);
-		send_to_char("You step out from your cover.\n\r", ch);
-	}
+	REMOVE_BIT(ch->affected_by, AFF_CAMOUFLAGE);
+
+	act("$n steps out from their cover.", ch, NULL, NULL, TO_ROOM);
+	send_to_char("You step out from your cover.\n\r", ch);
 }
 
 void un_blackjack(CHAR_DATA *ch, char *argument)
@@ -3156,27 +3082,27 @@ void un_strangle(CHAR_DATA *ch, char *argument)
 
 void un_hide(CHAR_DATA *ch, char *argument)
 {
-	if (IS_AFFECTED(ch, AFF_HIDE))
-	{
-		REMOVE_BIT(ch->affected_by, AFF_HIDE);
+	if (!IS_AFFECTED(ch, AFF_HIDE))
+		return;
 
-		act("$n steps out of the shadows.", ch, NULL, NULL, TO_ROOM);
-		send_to_char("You step out of the shadows.\n\r", ch);
-	}
+	REMOVE_BIT(ch->affected_by, AFF_HIDE);
+
+	act("$n steps out of the shadows.", ch, NULL, NULL, TO_ROOM);
+	send_to_char("You step out of the shadows.\n\r", ch);
 }
 
 void un_invis(CHAR_DATA *ch, char *argument)
 {
-	if (IS_AFFECTED(ch, AFF_INVISIBLE))
-	{
-		affect_strip(ch, gsn_invis);
-		affect_strip(ch, gsn_mass_invis);
+	if (!IS_AFFECTED(ch, AFF_INVISIBLE))
+		return;
 
-		REMOVE_BIT(ch->affected_by, AFF_INVISIBLE);
+	affect_strip(ch, gsn_invis);
+	affect_strip(ch, gsn_mass_invis);
 
-		act("$n fades into existence.", ch, NULL, NULL, TO_ROOM);
-		send_to_char("You fade into existence.\n\r", ch);
-	}
+	REMOVE_BIT(ch->affected_by, AFF_INVISIBLE);
+
+	act("$n fades into existence.", ch, NULL, NULL, TO_ROOM);
+	send_to_char("You fade into existence.\n\r", ch);
 }
 
 void un_sneak(CHAR_DATA *ch, char *argument)
@@ -3216,25 +3142,25 @@ void un_earthfade(CHAR_DATA *ch, char *argument)
 
 void un_blade_barrier(CHAR_DATA *ch, char *argument)
 {
-	if (is_affected(ch, gsn_blade_barrier))
-	{
-		affect_strip(ch, gsn_blade_barrier);
+	if (!is_affected(ch, gsn_blade_barrier))
+		return;
 
-		act("The whirling blades around $n vanish.", ch, 0, 0, TO_ROOM);
-		act("The whirling blades around you vanish.", ch, 0, 0, TO_CHAR);
+	affect_strip(ch, gsn_blade_barrier);
 
-		WAIT_STATE(ch, PULSE_VIOLENCE);
-	}
+	act("The whirling blades around $n vanish.", ch, 0, 0, TO_ROOM);
+	act("The whirling blades around you vanish.", ch, 0, 0, TO_CHAR);
+
+	WAIT_STATE(ch, PULSE_VIOLENCE);
 }
 
 void un_watermeld(CHAR_DATA *ch, char *argument)
 {
-	if (is_affected(ch, gsn_watermeld))
-	{
-		affect_strip(ch, gsn_watermeld);
+	if (!is_affected(ch, gsn_watermeld))
+		return;
 
-		act("The water swirls around you as your concealment fails you.", ch, 0, 0, TO_CHAR);
-	}
+	affect_strip(ch, gsn_watermeld);
+
+	act("The water swirls around you as your concealment fails you.", ch, 0, 0, TO_CHAR);
 }
 
 void un_shroud(CHAR_DATA *ch, char *argument)
@@ -3259,10 +3185,6 @@ void do_visible(CHAR_DATA *ch, char *argument)
 
 void do_recall(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
-	CHAR_DATA *victim;
-	ROOM_INDEX_DATA *location;
-
 	if (IS_NPC(ch) && !IS_SET(ch->act, ACT_PET))
 	{
 		send_to_char("Only players can recall.\n\r", ch);
@@ -3277,8 +3199,7 @@ void do_recall(CHAR_DATA *ch, char *argument)
 
 	act("$n prays for transportation!", ch, 0, 0, TO_ROOM);
 
-	location = get_room_index(hometown_table[ch->hometown].recall);
-
+	auto location = get_room_index(hometown_table[ch->hometown].recall);
 	if (location == NULL)
 	{
 		send_to_char("Your temple has been destroyed...pray to the Gods for help!\n\r", ch);
@@ -3294,11 +3215,11 @@ void do_recall(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	victim = ch->fighting;
-
+	auto victim = ch->fighting;
 	if (victim != NULL)
 	{
-		int skill = get_skill(ch, gsn_recall);
+		char buf[MAX_STRING_LENGTH];
+		auto skill = get_skill(ch, gsn_recall);
 
 		if (number_percent() < 80 * skill / 100)
 		{
@@ -3337,10 +3258,6 @@ void do_recall(CHAR_DATA *ch, char *argument)
 void do_train(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
-	CHAR_DATA *mob;
-	sh_int stat = -1;
-	char *pOutput = NULL;
-	int cost;
 
 	if (IS_NPC(ch))
 		return;
@@ -3348,7 +3265,8 @@ void do_train(CHAR_DATA *ch, char *argument)
 	/*
 	 * Check for trainer.
 	 */
-	for (mob = ch->in_room->people; mob; mob = mob->next_in_room)
+	auto mob = ch->in_room->people;
+	for (; mob != NULL; mob = mob->next_in_room)
 	{
 		if (IS_NPC(mob) && IS_SET(mob->act, ACT_TRAIN))
 			break;
@@ -3367,7 +3285,9 @@ void do_train(CHAR_DATA *ch, char *argument)
 		argument = "foo";
 	}
 
-	cost = 1;
+	auto cost = 1;
+	char *pOutput = NULL;
+	sh_int stat = -1;
 
 	if (!str_cmp(argument, "str"))
 	{
@@ -3486,14 +3406,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
 void do_bear_call(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *animal;
-	AFFECT_DATA af;
-	int a_level;
 	char arg1[MAX_INPUT_LENGTH];
-	CHAR_DATA *check;
-	bool found= false;
-	int count;
-
 	one_argument(argument, arg1);
 
 	if (get_skill(ch, gsn_bear_call) == 0 || ch->level < skill_table[gsn_bear_call].skill_level[ch->Class()->GetIndex()])
@@ -3514,9 +3427,10 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (check = char_list; check != NULL; check = check->next)
+	auto found = false;
+	for (auto check = char_list; check != NULL; check = check->next)
 	{
-		if ((check->master == ch) && check->pIndexData->vnum == MOB_VNUM_BEAR)
+		if (check->master == ch && check->pIndexData->vnum == MOB_VNUM_BEAR)
 			found = true;
 	}
 
@@ -3526,9 +3440,9 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((ch->in_room->sector_type != SECT_FOREST)
-		&& (ch->in_room->sector_type != SECT_HILLS)
-		&& (ch->in_room->sector_type != SECT_MOUNTAIN))
+	if (ch->in_room->sector_type != SECT_FOREST
+		&& ch->in_room->sector_type != SECT_HILLS
+		&& ch->in_room->sector_type != SECT_MOUNTAIN)
 	{
 		act("$n calls out into the surroundings but nothing comes.", ch, 0, 0, TO_ROOM);
 		send_to_char("You call a bear call but nothing responds.\n\r", ch);
@@ -3545,14 +3459,14 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 	}
 
 	ch->mana -= 70;
-	a_level = ch->level;
+	auto a_level = ch->level;
 
 	act("$n calls out to the wild and is heard!", ch, 0, 0, TO_ROOM);
 	send_to_char("Your call to the wild is heard!\n\r", ch);
 
-	for (count = 0; count < 2; count++)
+	for (auto count = 0; count < 2; count++)
 	{
-		animal = create_mobile(get_mob_index(MOB_VNUM_BEAR));
+		auto animal = create_mobile(get_mob_index(MOB_VNUM_BEAR));
 		animal->level = a_level;
 		animal->max_hit = ch->max_hit + dice(a_level, 5);
 		animal->damroll += a_level * 3 / 4;
@@ -3572,6 +3486,7 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 		animal->hit = animal->max_hit;
 	}
 
+	AFFECT_DATA af;
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
@@ -3588,21 +3503,9 @@ void do_bear_call(CHAR_DATA *ch, char *argument)
 void do_animal_call(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	MOB_INDEX_DATA *pMobIndex;
-	CHAR_DATA *animal1;
-	CHAR_DATA *animal2;
-	CHAR_DATA *mob;
-	ROOM_INDEX_DATA *pRoomIndex;
-	int chance;
-	int type;
-	int i;
-	bool cant_call= false;
-	AFFECT_DATA af;
-
 	one_argument(argument, arg);
 
-	chance = get_skill(ch, gsn_animal_call);
-
+	auto chance = get_skill(ch, gsn_animal_call);
 	if (chance == 0 || ch->level < skill_table[gsn_animal_call].skill_level[ch->Class()->GetIndex()])
 	{
 		send_to_char("You don't know how to call upon animals for aid.\n\r", ch);
@@ -3615,6 +3518,8 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	auto type = 0;
+	auto cant_call = false;
 	if (!str_cmp(arg, "falcon"))
 	{
 		type = MOB_VNUM_FALCON;
@@ -3664,7 +3569,8 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (mob = char_list; mob != NULL; mob = mob->next)
+	auto mob = char_list;
+	for (; mob != NULL; mob = mob->next)
 	{
 		if (IS_NPC(mob)
 			&& IS_AFFECTED(mob, AFF_CHARM)
@@ -3684,9 +3590,9 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((ch->in_room->sector_type != SECT_FOREST)
-		&& (ch->in_room->sector_type != SECT_HILLS)
-		&& (ch->in_room->sector_type != SECT_MOUNTAIN))
+	if (ch->in_room->sector_type != SECT_FOREST
+		&& ch->in_room->sector_type != SECT_HILLS
+		&& ch->in_room->sector_type != SECT_MOUNTAIN)
 	{
 		send_to_char("You are not within the right environment to call animals.\n\r", ch);
 		return;
@@ -3703,9 +3609,8 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	pRoomIndex = ch->in_room;
-	pMobIndex = get_mob_index(type);
-
+	auto pRoomIndex = ch->in_room;
+	auto pMobIndex = get_mob_index(type);
 	if (pMobIndex == NULL)
 	{
 		bug("Animal call: Bad mob vnum call %d.", type);
@@ -3717,11 +3622,11 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	animal1 = create_mobile(pMobIndex);
-	animal2 = create_mobile(pMobIndex);
+	auto animal1 = create_mobile(pMobIndex);
+	auto animal2 = create_mobile(pMobIndex);
 	animal2->dam_type = animal1->dam_type;
 
-	for (i = 0; i < 4; i++)
+	for (auto i = 0; i < 4; i++)
 	{
 		animal1->armor[i] = 0;
 		animal2->armor[i] = 0;
@@ -3803,6 +3708,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	animal1->cabal = ch->cabal;
 	animal2->cabal = ch->cabal;
 
+	AFFECT_DATA af;
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
@@ -3816,14 +3722,12 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 
 void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 {
-	int track_dir, i;
-	EXIT_DATA *pexit;
-	bool found= false;
-
 	if (mob->in_room == NULL)
 		return;
 
-	for (i = 0; i < MAX_TRACKS; i++)
+	auto i = 0;
+	auto found = false;
+	for (; i < MAX_TRACKS; i++)
 	{
 		if (mob->in_room->tracks[i] && mob->in_room->tracks[i]->prey == ch)
 		{
@@ -3838,7 +3742,7 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 	if (mob->in_room->tracks[i]->prey != ch)
 		return;
 
-	track_dir = mob->in_room->tracks[i]->direction;
+	auto track_dir = mob->in_room->tracks[i]->direction;
 
 	if (IS_AFFECTED(mob, AFF_CHARM))
 		return;
@@ -3851,16 +3755,13 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 	if (IS_SET(mob->off_flags, STATIC_TRACKING) || track_dir == -1)
 		return;
 
-	pexit = mob->in_room->exit[track_dir];
+	auto pexit = mob->in_room->exit[track_dir];
 
 	move_char(mob, track_dir, false, true);
 }
 
 void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 {
-	PATHFIND_DATA *path, *solve;
-	ROOM_INDEX_DATA *room;
-
 	if (!IS_NPC(mob) || !IS_SET(mob->act, ACT_SMARTTRACK))
 		return;
 
@@ -3883,8 +3784,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 	best_path = NULL;
 	iterations = 0;
 
-	path = new_path_data();
-
+	auto path = new_path_data();
 	path->room = mob->in_room;
 	path->steps = 0;
 
@@ -3893,8 +3793,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 
 	find_path(mob->path, ch->in_room);
 
-	solve = best_path;
-
+	auto solve = best_path;
 	if (!best_path)
 	{
 		/*
@@ -3936,7 +3835,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 
 	best_path = NULL;
 
-	for (room = room_list; room != NULL; room = room->next_room)
+	for (auto room = room_list; room != NULL; room = room->next_room)
 	{
 		if (room->path)
 			room->path = NULL;
@@ -3945,10 +3844,6 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 
 void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 {
-	char buf[MSL];
-	PATHFIND_DATA *path, *solve;
-	ROOM_INDEX_DATA *room;
-
 	if (!IS_NPC(mob))
 		return;
 
@@ -3968,8 +3863,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 	best_path = NULL;
 	iterations = 0;
 
-	path = new_path_data();
-
+	auto path = new_path_data();
 	path->room = mob->in_room;
 	path->steps = 0;
 
@@ -3978,8 +3872,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 
 	find_path(mob->path, goal);
 
-	solve = best_path;
-
+	auto solve = best_path;
 	if (!best_path)
 	{
 		bug("Some weird tracking shit just happened with mob vnum %d.", mob->pIndexData->vnum);
@@ -4009,7 +3902,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 
 	best_path = NULL;
 
-	for (room = room_list; room != NULL; room = room->next_room)
+	for (auto room = room_list; room != NULL; room = room->next_room)
 	{
 		if (room->path)
 			room->path = NULL;
@@ -4018,10 +3911,6 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 
 void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 {
-	PATHFIND_DATA *next_path;
-	int i;
-	bool found= false;
-
 	path->evaluated = true;
 	iterations++;
 
@@ -4033,7 +3922,8 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 		return;
 	}
 
-	for (i = 0; i < 6; i++)
+	auto found = false;
+	for (auto i = 0; i < 6; i++)
 	{
 		if ((best_path && best_path->steps < 2)
 			|| (path->room->exit[i] 
@@ -4041,10 +3931,10 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 				&& path->room->exit[i]->u1.to_room->area == goal->area
 				&& !(path->room->exit[i]->u1.to_room->path
 					&& path->room->exit[i]->u1.to_room->path->steps <= path->steps + 1
-					&& path->room->exit[i]->u1.to_room->path->evaluated == true)
+					&& path->room->exit[i]->u1.to_room->path->evaluated)
 				&& !(path->room->exit[i]->u1.to_room->path
 					&& path->room->exit[i]->u1.to_room->path->steps < path->steps + 1
-					&& path->room->exit[i]->u1.to_room->path->evaluated == false)))
+					&& !path->room->exit[i]->u1.to_room->path->evaluated)))
 		{
 			found = true;
 		}
@@ -4052,7 +3942,7 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 
 	if (!found)
 	{
-		for (i = 0; i < 6; i++)
+		for (auto i = 0; i < 6; i++)
 		{
 			path->dir_to[i] = NULL;
 		}
@@ -4060,22 +3950,22 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 		return;
 	}
 
-	for (i = 0; i < 6; i++)
+	for (auto i = 0; i < 6; i++)
 	{
 		if (!path->room->exit[i]
 			|| !path->room->exit[i]->u1.to_room
 			|| path->room->exit[i]->u1.to_room->area != goal->area
 			|| (path->room->exit[i]->u1.to_room->path 
 				&& path->room->exit[i]->u1.to_room->path->steps <= path->steps + 1 
-				&& path->room->exit[i]->u1.to_room->path->evaluated == true)
+				&& path->room->exit[i]->u1.to_room->path->evaluated)
 			|| (path->room->exit[i]->u1.to_room->path
 				&& path->room->exit[i]->u1.to_room->path->steps < path->steps + 1
-				&& path->room->exit[i]->u1.to_room->path->evaluated == false))
+				&& !path->room->exit[i]->u1.to_room->path->evaluated))
 		{
 			continue;
 		}
 
-		next_path = new_path_data();
+		auto next_path = new_path_data();
 		next_path->room = path->room->exit[i]->u1.to_room;
 		next_path->dir_from = i;
 		next_path->steps = path->steps + 1;
@@ -4085,13 +3975,13 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 		path->room->exit[i]->u1.to_room->path = next_path;
 	}
 
-	for (i = 0; i < 6; i++)
+	for (auto i = 0; i < 6; i++)
 	{
 		if (!path->room->exit[i]
 			|| !path->dir_to[i]
 			|| !path->room->exit[i]->u1.to_room
 			|| path->room->exit[i]->u1.to_room->area != goal->area
-			|| path->room->exit[i]->u1.to_room->path->evaluated == true)
+			|| path->room->exit[i]->u1.to_room->path->evaluated)
 		{
 			continue;
 		}
@@ -4102,8 +3992,6 @@ void find_path(PATHFIND_DATA *path, ROOM_INDEX_DATA *goal)
 
 void do_aura_of_sustenance(CHAR_DATA *ch, char *argument)
 {
-	AFFECT_DATA af;
-
 	if (get_skill(ch, gsn_aura_of_sustenance) == 0 || ch->level < skill_table[gsn_aura_of_sustenance].skill_level[ch->Class()->GetIndex()])
 	{
 		send_to_char("Huh?\n\r", ch);
@@ -4122,6 +4010,7 @@ void do_aura_of_sustenance(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	AFFECT_DATA af;
 	init_affect(&af);
 	af.where = TO_AFFECTS;
 	af.aftype = AFT_SKILL;
@@ -4142,13 +4031,7 @@ void do_aura_of_sustenance(CHAR_DATA *ch, char *argument)
 
 void do_vanish(CHAR_DATA *ch, char *argument)
 {
-	ROOM_INDEX_DATA *pRoomIndex;
-	int chance;
-	int nocrash;
-	bool found= false;
-
-	chance = get_skill(ch, gsn_vanish);
-
+	auto chance = get_skill(ch, gsn_vanish);
 	if (chance == 0 || ch->level < skill_table[gsn_vanish].skill_level[ch->Class()->GetIndex()])
 	{
 		send_to_char("Huh?\n\r", ch);
@@ -4185,11 +4068,12 @@ void do_vanish(CHAR_DATA *ch, char *argument)
 
 	ch->mana -= 20;
 
-	for (nocrash = 0; nocrash < 100000; nocrash++)
+	auto found = false;
+	ROOM_INDEX_DATA *pRoomIndex;
+	for (auto nocrash = 0; nocrash < 100000; nocrash++)
 	{
 		pRoomIndex = get_room_index(number_range(0, 30000));
-
-		if (!pRoomIndex)
+		if (pRoomIndex == NULL)
 			continue;
 
 		if (pRoomIndex->area == ch->in_room->area
@@ -4231,10 +4115,6 @@ void do_vanish(CHAR_DATA *ch, char *argument)
 void do_door_bash(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	int door;
-	int chance;
-	AFFECT_DATA af;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -4243,7 +4123,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	chance = get_skill(ch, gsn_door_bash);
+	auto chance = get_skill(ch, gsn_door_bash);
 
 	if (IS_NPC(ch))
 		chance = 50;
@@ -4260,122 +4140,109 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	door = find_door(ch, arg);
+	auto door = find_door(ch, arg);
+	if (door < 0)
+		return;
 
-	if (door >= 0)
+	auto pexit = ch->in_room->exit[door];
+	if (!IS_SET(pexit->exit_info, EX_CLOSED))
 	{
-		ROOM_INDEX_DATA *to_room;
-		EXIT_DATA *pexit;
-		EXIT_DATA *pexit_rev;
-
-		pexit = ch->in_room->exit[door];
-
-		if (!IS_SET(pexit->exit_info, EX_CLOSED))
-		{
-			send_to_char("It's not closed.\n\r", ch);
-			return;
-		}
-
-		if (!IS_SET(pexit->exit_info, EX_LOCKED) && !IS_SET(pexit->exit_info, EX_JAMMED))
-		{
-			send_to_char("It's already unlocked, why not just use the knob?\n\r", ch);
-			return;
-		}
-
-		if (!IS_NPC(ch))
-		{
-			chance /= 4;
-			chance += ch->carry_weight / 10;
-			chance += get_curr_stat(ch, STAT_STR) / 2;
-		}
-
-		if (!IS_NPC(ch))
-		{
-			if (!str_cmp(pc_race_table[ch->race].name, "planar")
-				|| !str_cmp(pc_race_table[ch->race].name, "abyss")
-				|| !str_cmp(pc_race_table[ch->race].name, "celestial"))
-			{
-				chance += 20;
-			}
-		}
-
-		if (!IS_NPC(ch) && IS_IMMORTAL(ch))
-			chance = 100;
-
-		do_visible(ch, "");
-
-		if (number_percent() > chance || IS_SET(pexit->exit_info, EX_NOBASH))
-		{
-			act("$n flies into the $T door and rebounds with a great lack of dignity!", ch, 0, dir_name[door], TO_ROOM);
-			act("You fly into the door $T but simply bounce off it like a lump of rock!", ch, 0, dir_name[door], TO_CHAR);
-
-			if (pexit->u1.to_room->people)
-				act("The door buckles as a heavy weight crashes against it from the other side!", pexit->u1.to_room->people, 0, 0, TO_ALL);
-
-			damage_new(ch, ch, dice(ch->level, 2), gsn_door_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the impact*");
-
-			check_improve(ch, gsn_door_bash, false, 1);
-
-			ch->position = POS_RESTING;
-
-			WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
-			return;
-		}
-
-		act("$n slams into the $T door and throws it open with a mighty crash!", ch, 0, dir_name[door], TO_ROOM);
-		act("You slam into the $T door and it cracks open with a deafening sound!", ch, 0, dir_name[door], TO_CHAR);
-
-		check_improve(ch, gsn_door_bash, true, 1);
-
-		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
-		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
-		REMOVE_BIT(pexit->exit_info, EX_CLOSED);
-		REMOVE_BIT(pexit->exit_info, EX_JAMMED);
-
-		to_room = pexit->u1.to_room;
-
-		if (to_room != NULL
-			&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
-			&& pexit_rev->u1.to_room == ch->in_room)
-		{
-			REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
-			REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
-			REMOVE_BIT(pexit_rev->exit_info, EX_JAMMED);
-		}
-
-		if (number_percent() < (3 * get_curr_stat(ch, STAT_DEX)) || IS_NPC(ch))
-			return;
-
-		/*
-		 * Affect to char so in move_char you relay the right move message, then
-		 *  strip affect once moved.
-		 */
-		init_affect(&af);
-		af.where = TO_AFFECTS;
-		af.aftype = AFT_SKILL;
-		af.type = gsn_door_bash;
-		af.location = 0;
-		af.modifier = 0;
-		af.duration = -1;
-		af.level = ch->level;
-		affect_to_char(ch, &af);
-
-		move_char(ch, door, false, true);
-		affect_strip(ch, gsn_door_bash);
+		send_to_char("It's not closed.\n\r", ch);
+		return;
 	}
+
+	if (!IS_SET(pexit->exit_info, EX_LOCKED) && !IS_SET(pexit->exit_info, EX_JAMMED))
+	{
+		send_to_char("It's already unlocked, why not just use the knob?\n\r", ch);
+		return;
+	}
+
+	if (!IS_NPC(ch))
+	{
+		chance /= 4;
+		chance += ch->carry_weight / 10;
+		chance += get_curr_stat(ch, STAT_STR) / 2;
+	}
+
+	if (!IS_NPC(ch))
+	{
+		if (!str_cmp(pc_race_table[ch->race].name, "planar")
+			|| !str_cmp(pc_race_table[ch->race].name, "abyss")
+			|| !str_cmp(pc_race_table[ch->race].name, "celestial"))
+		{
+			chance += 20;
+		}
+	}
+
+	if (!IS_NPC(ch) && IS_IMMORTAL(ch))
+		chance = 100;
+
+	do_visible(ch, "");
+
+	if (number_percent() > chance || IS_SET(pexit->exit_info, EX_NOBASH))
+	{
+		act("$n flies into the $T door and rebounds with a great lack of dignity!", ch, 0, dir_name[door], TO_ROOM);
+		act("You fly into the door $T but simply bounce off it like a lump of rock!", ch, 0, dir_name[door], TO_CHAR);
+
+		if (pexit->u1.to_room->people)
+			act("The door buckles as a heavy weight crashes against it from the other side!", pexit->u1.to_room->people, 0, 0, TO_ALL);
+
+		damage_new(ch, ch, dice(ch->level, 2), gsn_door_bash, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the impact*");
+
+		check_improve(ch, gsn_door_bash, false, 1);
+
+		ch->position = POS_RESTING;
+
+		WAIT_STATE(ch, 3 * PULSE_VIOLENCE);
+		return;
+	}
+
+	act("$n slams into the $T door and throws it open with a mighty crash!", ch, 0, dir_name[door], TO_ROOM);
+	act("You slam into the $T door and it cracks open with a deafening sound!", ch, 0, dir_name[door], TO_CHAR);
+
+	check_improve(ch, gsn_door_bash, true, 1);
+
+	WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
+	REMOVE_BIT(pexit->exit_info, EX_LOCKED);
+	REMOVE_BIT(pexit->exit_info, EX_CLOSED);
+	REMOVE_BIT(pexit->exit_info, EX_JAMMED);
+
+	auto to_room = pexit->u1.to_room;
+	auto pexit_rev = to_room->exit[rev_dir[door]];
+
+	if (to_room != NULL && pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
+	{
+		REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
+		REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
+		REMOVE_BIT(pexit_rev->exit_info, EX_JAMMED);
+	}
+
+	if (number_percent() < (3 * get_curr_stat(ch, STAT_DEX)) || IS_NPC(ch))
+		return;
+
+	/*
+	* Affect to char so in move_char you relay the right move message, then
+	*  strip affect once moved.
+	*/
+	AFFECT_DATA af;
+	init_affect(&af);
+	af.where = TO_AFFECTS;
+	af.aftype = AFT_SKILL;
+	af.type = gsn_door_bash;
+	af.location = 0;
+	af.modifier = 0;
+	af.duration = -1;
+	af.level = ch->level;
+	affect_to_char(ch, &af);
+
+	move_char(ch, door, false, true);
+	affect_strip(ch, gsn_door_bash);
 }
 
 /* For selecting new home */
 
 void do_hometown(CHAR_DATA *ch, char *argument)
 {
-	int i;
-	int cost;
-	char arg[MAX_STRING_LENGTH];
-	char arg2[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
-	int hometown;
-
 	if (IS_NPC(ch))
 		return;
 
@@ -4385,16 +4252,18 @@ void do_hometown(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	char arg[MAX_STRING_LENGTH];
+	char arg2[MAX_STRING_LENGTH];
 	argument = one_argument(argument, arg);
 	one_argument(argument, arg2);
 
-	cost = 50 * (ch->level * ch->level);
-
+	char buf[MAX_STRING_LENGTH];
+	auto cost = 50 * (ch->level * ch->level);
 	if (arg[0] == '\0')
 	{
 		send_to_char("Available hometowns to you are: \n\r", ch);
 
-		for (i = 0; i < MAX_HOMETOWN; i++)
+		for (auto i = 0; i < MAX_HOMETOWN; i++)
 		{
 			if (can_live_in(ch, i))
 			{
@@ -4421,8 +4290,7 @@ void do_hometown(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		hometown = hometown_lookup(arg);
-
+		auto hometown = hometown_lookup(arg);
 		if (hometown == ch->hometown)
 		{
 			send_to_char("That is your current hometown already.\n\r", ch);
@@ -4451,11 +4319,9 @@ void do_hometown(CHAR_DATA *ch, char *argument)
 
 bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 {
-	CHAR_DATA *blocker;
 	int field = 0;
-	OBJ_DATA *tattoo;
 
-	for (blocker = ch->in_room->people; blocker != NULL; blocker = blocker->next_in_room)
+	for (auto blocker = ch->in_room->people; blocker != NULL; blocker = blocker->next_in_room)
 	{
 		if (IS_NPC(blocker)
 			&& blocker->pIndexData->barred_entry
@@ -4476,7 +4342,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 
 			if (blocker->pIndexData->barred_entry->type == BAR_TATTOO)
 			{
-				tattoo = get_eq_char(ch, WEAR_BRAND);
+				auto tattoo = get_eq_char(ch, WEAR_BRAND);
 
 				if (!tattoo && blocker->pIndexData->barred_entry->value)
 					return bar_entry(ch, blocker, to_room);
@@ -4509,9 +4375,8 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 
 bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 {
-	const char *str, *strtwo;
-	char buf2[MAX_STRING_LENGTH], buf[MAX_STRING_LENGTH];
-	str = palloc_string(blocker->pIndexData->barred_entry->message);
+	char buf[MAX_STRING_LENGTH];
+	auto str = palloc_string(blocker->pIndexData->barred_entry->message);
 
 	parse_bar(buf, str, ch, blocker, to_room);
 
@@ -4530,7 +4395,8 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 
 		if (blocker->pIndexData->barred_entry->message_two)
 		{
-			strtwo = palloc_string(blocker->pIndexData->barred_entry->message_two);
+			char buf2[MAX_STRING_LENGTH];
+			auto strtwo = palloc_string(blocker->pIndexData->barred_entry->message_two);
 			parse_bar(buf2, strtwo, ch, blocker, to_room);
 
 			buf2[0] = UPPER(buf2[0]);
@@ -4606,8 +4472,6 @@ bool is_land(ROOM_INDEX_DATA *room)
 
 void add_tracks(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction)
 {
-	int i;
-
 	if (IS_GROUND(room) && is_affected(ch, gsn_pass_without_trace))
 		return;
 
@@ -4616,7 +4480,7 @@ void add_tracks(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction)
 
 	if (room->tracks[0]->prey != NULL)
 	{
-		for (i = MAX_TRACKS - 1; i > 0; i--)
+		for (auto i = MAX_TRACKS - 1; i > 0; i--)
 		{
 			room->tracks[i]->prey = room->tracks[i - 1]->prey;
 			room->tracks[i]->time = room->tracks[i - 1]->time;
@@ -4631,17 +4495,15 @@ void add_tracks(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction)
 	room->tracks[0]->prey = ch;
 	room->tracks[0]->time = time_info;
 	room->tracks[0]->direction = direction;
-	room->tracks[0]->flying = (IS_AFFECTED(ch, AFF_FLYING));
-	room->tracks[0]->sneaking = (IS_AFFECTED(ch, AFF_SNEAK));
-	room->tracks[0]->bleeding = (is_affected(ch, gsn_bleeding));
+	room->tracks[0]->flying = IS_AFFECTED(ch, AFF_FLYING);
+	room->tracks[0]->sneaking = IS_AFFECTED(ch, AFF_SNEAK);
+	room->tracks[0]->bleeding = is_affected(ch, gsn_bleeding);
 	room->tracks[0]->legs = ch->legs;
 }
 
 void clear_tracks(ROOM_INDEX_DATA *room)
 {
-	int i;
-
-	for (i = 0; i < MAX_TRACKS - 1; i++)
+	for (auto i = 0; i < MAX_TRACKS - 1; i++)
 	{
 		room->tracks[i]->prey = NULL;
 		room->tracks[i]->direction = -1;
