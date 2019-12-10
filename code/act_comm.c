@@ -42,8 +42,6 @@ void do_delet(CHAR_DATA *ch, char *argument)
 
 void do_delete(CHAR_DATA *ch, char *argument)
 {
-	char strsave[MAX_INPUT_LENGTH];
-	char *cname;
 	if (IS_NPC(ch))
 		return;
 
@@ -60,6 +58,7 @@ void do_delete(CHAR_DATA *ch, char *argument)
 			if (ch->level > 30)
 				perm_death_log(ch, 1);
 
+			char strsave[MAX_INPUT_LENGTH];
 			sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(ch->name));
 			wiznet("$N turns $Mself into line noise.", ch, NULL, 0, 0, 0);
 			ch->pause = 0;
@@ -72,15 +71,12 @@ void do_delete(CHAR_DATA *ch, char *argument)
 			stop_fighting(ch, true);
 			act("$n has left Shalar, never to return.", ch, NULL, NULL, TO_ROOM);
 
-			cname = palloc_string(ch->true_name);
-
 			plug_graveyard(ch, 1);
 			do_quit_new(ch, "", true);
 
-			if (((ch->played + (current_time - ch->logon)) / 3600) >= 15)
-				delete_char(cname, true); // >= 15 hours. Make name unusable.
-			else
-				delete_char(cname, false);
+			auto cname = palloc_string(ch->true_name);
+			auto save_pfile = ((ch->played + (current_time - ch->logon)) / 3600) >= 15;
+			delete_char(cname, true); // >= 15 hours. Make name unusable.
 
 			free_pstring(cname);
 			return;
@@ -108,44 +104,33 @@ void do_delete(CHAR_DATA *ch, char *argument)
 /* RT code to display channel status */
 void do_channels(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
-
 	/* lists all channels and their status */
 	send_to_char("   channel     status\n\r", ch);
 	send_to_char("---------------------\n\r", ch);
 
+	auto sendToChar = [](bool isSet, CHAR_DATA *ch)
+	{
+		auto txt = isSet ? "ON\n\r" : "OFF\n\r";
+		send_to_char(txt, ch);
+	};
+
 	send_to_char("auction        ", ch);
-	if (!IS_SET(ch->comm, COMM_NOAUCTION))
-		send_to_char("ON\n\r", ch);
-	else
-		send_to_char("OFF\n\r", ch);
+	sendToChar(!IS_SET(ch->comm, COMM_NOAUCTION), ch);
 
 	send_to_char("Q/A            ", ch);
-	if (!IS_SET(ch->comm, COMM_NOQUESTION))
-		send_to_char("ON\n\r", ch);
-	else
-		send_to_char("OFF\n\r", ch);
+	sendToChar(!IS_SET(ch->comm, COMM_NOQUESTION), ch);
 
 	if (IS_IMMORTAL(ch))
 	{
 		send_to_char("god channel    ", ch);
-		if (!IS_SET(ch->comm, COMM_NOWIZ))
-			send_to_char("ON\n\r", ch);
-		else
-			send_to_char("OFF\n\r", ch);
+		sendToChar(!IS_SET(ch->comm, COMM_NOWIZ), ch);
 	}
 
 	send_to_char("tells          ", ch);
-	if (!IS_SET(ch->comm, COMM_DEAF))
-		send_to_char("ON\n\r", ch);
-	else
-		send_to_char("OFF\n\r", ch);
+	sendToChar(!IS_SET(ch->comm, COMM_DEAF), ch);
 
 	send_to_char("quiet mode     ", ch);
-	if (IS_SET(ch->comm, COMM_QUIET))
-		send_to_char("ON\n\r", ch);
-	else
-		send_to_char("OFF\n\r", ch);
+	sendToChar(IS_SET(ch->comm, COMM_QUIET), ch);
 
 	if (IS_SET(ch->comm, COMM_SNOOP_PROOF))
 		send_to_char("You are immune to snooping.\n\r", ch);
@@ -154,11 +139,14 @@ void do_channels(CHAR_DATA *ch, char *argument)
 	{
 		if (ch->lines)
 		{
+			char buf[MAX_STRING_LENGTH];
 			sprintf(buf, "You display %d lines of scroll.\n\r", ch->lines + 2);
 			send_to_char(buf, ch);
 		}
 		else
+		{
 			send_to_char("Scroll buffering is off.\n\r", ch);
+		}
 	}
 
 	if (IS_SET(ch->comm, COMM_NOTELL))
@@ -178,12 +166,11 @@ void do_deaf(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("You can now hear tells again.\n\r", ch);
 		REMOVE_BIT(ch->comm, COMM_DEAF);
+		return;
 	}
-	else
-	{
-		send_to_char("From now on, you won't hear tells.\n\r", ch);
-		SET_BIT(ch->comm, COMM_DEAF);
-	}
+
+	send_to_char("From now on, you won't hear tells.\n\r", ch);
+	SET_BIT(ch->comm, COMM_DEAF);
 }
 
 /* RT quiet blocks out all communication */
@@ -193,12 +180,11 @@ void do_quiet(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("Quiet mode removed.\n\r", ch);
 		REMOVE_BIT(ch->comm, COMM_QUIET);
+		return;
 	}
-	else
-	{
-		send_to_char("From now on, you will only hear says and emotes.\n\r", ch);
-		SET_BIT(ch->comm, COMM_QUIET);
-	}
+
+	send_to_char("From now on, you will only hear says and emotes.\n\r", ch);
+	SET_BIT(ch->comm, COMM_QUIET);
 }
 
 void do_replay(CHAR_DATA *ch, char *argument)
@@ -221,9 +207,6 @@ void do_replay(CHAR_DATA *ch, char *argument)
 
 void do_cb(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
-	DESCRIPTOR_DATA *d;
-
 	if (is_affected_area(ch->in_room->area, gsn_interference))
 	{
 		send_to_char("The electrical currents in the area block your attempt to communicate.\n\r", ch);
@@ -295,6 +278,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 
 	REMOVE_BIT(ch->comm, COMM_NOCABAL);
 
+	char buf[MAX_STRING_LENGTH];
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf, "%s%s: %s%s%s\n\r", 
@@ -314,12 +298,14 @@ void do_cb(CHAR_DATA *ch, char *argument)
 
 	send_to_char(buf, ch);
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (auto d = descriptor_list; d != NULL; d = d->next)
 	{
-		if (d->connected == CON_PLAYING && d->character != ch &&
-			((is_same_cabal(ch, d->character) && !IS_SET(d->character->comm, COMM_NOCABAL) &&
-			  !IS_SET(d->character->in_room->room_flags, ROOM_SILENCE)) ||
-			 IS_SET(d->character->comm, COMM_ALL_CABALS)))
+		if (d->connected == CON_PLAYING
+			&& d->character != ch
+			&& ((is_same_cabal(ch, d->character)
+					&& !IS_SET(d->character->comm, COMM_NOCABAL)
+					&& !IS_SET(d->character->in_room->room_flags, ROOM_SILENCE))
+				||IS_SET(d->character->comm, COMM_ALL_CABALS)))
 		{
 			if (IS_SET(d->character->comm, COMM_ANSI))
 			{
@@ -349,23 +335,15 @@ void do_global(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("You will no longer hear all Cabal channels.\n\r", ch);
 		REMOVE_BIT(ch->comm, COMM_ALL_CABALS);
+		return;
 	}
-	else
-	{
-		send_to_char("You will now hear all Cabal channels.\n\r", ch);
-		SET_BIT(ch->comm, COMM_ALL_CABALS);
-	}
+
+	send_to_char("You will now hear all Cabal channels.\n\r", ch);
+	SET_BIT(ch->comm, COMM_ALL_CABALS);
 }
 
 void do_newbie(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *wch;
-	int trust;
-	char buf[MAX_STRING_LENGTH];
-	char buf2[MAX_STRING_LENGTH];
-
-	trust = ch->level;
-
 	if (ch->level > 25 && !IS_IMMORTAL(ch) && !IS_SET(ch->act, PLR_HEROIMM))
 	{
 		send_to_char("Huh?\n\r", ch);
@@ -396,6 +374,8 @@ void do_newbie(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	char buf[MAX_STRING_LENGTH];
+	char buf2[MAX_STRING_LENGTH];
 	sprintf(buf, ": %s", argument);
 
 	REMOVE_BIT(ch->comm, COMM_NONEWBIE);
@@ -406,15 +386,19 @@ void do_newbie(CHAR_DATA *ch, char *argument)
 		act_new(buf2, ch, buf, 0, TO_CHAR, POS_DEAD);
 	}
 	else
+	{
 		act_new("[NEWBIE] $n$t", ch, buf, 0, TO_CHAR, POS_DEAD);
+	}
 
-	for (wch = char_list; wch != NULL; wch = wch->next)
+	for (auto wch = char_list; wch != NULL; wch = wch->next)
 	{
 		if (IS_NPC(wch) && wch->desc == NULL)
 			continue;
 
-		if ((wch->level <= 25 && !IS_SET(wch->comm, COMM_NONEWBIE)) || IS_IMMORTAL(wch) || IS_HEROIMM(wch) ||
-			(IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+		if ((wch->level <= 25 && !IS_SET(wch->comm, COMM_NONEWBIE))
+			|| IS_IMMORTAL(wch)
+			|| IS_HEROIMM(wch)
+			|| (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -429,12 +413,7 @@ void do_newbie(CHAR_DATA *ch, char *argument)
 
 void do_builder(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *wch;
-	int trust;
-	char buf[MAX_STRING_LENGTH];
-	char buf2[MAX_STRING_LENGTH];
-
-	trust = ch->level;
+	int trust = ch->level;
 
 	if (trust < 52 && !IS_SET(ch->act, PLR_HEROIMM))
 	{
@@ -466,6 +445,8 @@ void do_builder(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	char buf[MAX_STRING_LENGTH];
+	char buf2[MAX_STRING_LENGTH];
 	sprintf(buf, ": %s", argument);
 
 	REMOVE_BIT(ch->comm, COMM_NOBUILDER);
@@ -476,15 +457,19 @@ void do_builder(CHAR_DATA *ch, char *argument)
 		act_new(buf2, ch, buf, 0, TO_CHAR, POS_DEAD);
 	}
 	else
+	{
 		act_new("[BUILDER] $n$t", ch, buf, 0, TO_CHAR, POS_DEAD);
+	}
 
-	for (wch = char_list; wch != NULL; wch = wch->next)
+	for (auto wch = char_list; wch != NULL; wch = wch->next)
 	{
 		if (IS_NPC(wch) && wch->desc == NULL)
 			continue;
 
-		if ((IS_IMMORTAL(wch)) || IS_SET(wch->comm, COMM_BUILDER) || IS_HEROIMM(wch) ||
-			(IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+		if (IS_IMMORTAL(wch)
+			|| IS_SET(wch->comm, COMM_BUILDER)
+			|| IS_HEROIMM(wch)
+			|| (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -492,24 +477,15 @@ void do_builder(CHAR_DATA *ch, char *argument)
 				act_new(buf2, ch, buf, wch, TO_VICT, POS_DEAD);
 			}
 			else
+			{
 				act_new("[BUILDER] $n$t", ch, buf, wch, TO_VICT, POS_DEAD);
+			}
 		}
 	}
-
-	return;
 }
 
 void do_immtalk(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *wch;
-	int trust;
-	char arg1[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
-	char buf2[MAX_STRING_LENGTH];
-	int level;
-
-	trust = get_trust(ch);
-
 	if (!IS_IMMORTAL(ch))
 		return;
 
@@ -525,23 +501,27 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 			send_to_char("Immortal channel is now OFF\n\r", ch);
 			SET_BIT(ch->comm, COMM_NOWIZ);
 		}
+
 		return;
 	}
 
+	char buf2[MAX_STRING_LENGTH];
 	sprintf(buf2, "%s", argument);
+
+	char arg1[MAX_STRING_LENGTH];
 	argument = one_argument(argument, arg1);
 
 	if (arg1[0] == '\0')
-		return send_to_char("Syntax: immtalk <level?> <message>\n\r", ch);
-
-	if (!is_number(arg1))
 	{
-		level = 51;
+		send_to_char("Syntax: immtalk <level?> <message>\n\r", ch);
+		return;
 	}
-	else
+
+	int level = 51;
+	if(is_number(arg1))
 	{
 		level = atoi(arg1);
-		if (level > trust || level < 51)
+		if (level > get_trust(ch) || level < 51)
 		{
 			level = 51;
 		}
@@ -552,30 +532,38 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 	}
 
 	if (buf2[0] == '\0')
-		return send_to_char("Syntax: immtalk <level?> <message>\n\r", ch);
+	{
+		send_to_char("Syntax: immtalk <level?> <message>\n\r", ch);
+		return;
+	}
 
+	char buf[MAX_STRING_LENGTH];
 	if (level > LEVEL_HERO)
 		sprintf(buf, " [%d]: %s", level, buf2);
 	else
 		sprintf(buf, ": %s", buf2);
 
 	REMOVE_BIT(ch->comm, COMM_NOWIZ);
+
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf2, "%s[IMM] $n$t%s", get_char_color(ch, "immtalk"), END_COLOR(ch));
 		act_new(buf2, ch, buf, 0, TO_CHAR, POS_DEAD);
 	}
 	else
+	{
 		act_new("[IMM] $n$t", ch, buf, 0, TO_CHAR, POS_DEAD);
+	}
 
-	for (wch = char_list; wch != NULL; wch = wch->next)
+	for (auto wch = char_list; wch != NULL; wch = wch->next)
 	{
 		if (IS_NPC(wch) && wch->desc == NULL)
 			continue;
 
-		if ((IS_IMMORTAL(wch) || IS_SET(wch->comm, COMM_IMMORTAL) ||
-			 (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original))) &&
-			get_trust(wch) >= UMAX(level, 52))
+		if ((IS_IMMORTAL(wch)
+				|| IS_SET(wch->comm, COMM_IMMORTAL)
+				|| (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+			&& get_trust(wch) >= UMAX(level, 52))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -583,11 +571,11 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 				act_new(buf2, ch, buf, wch, TO_VICT, POS_DEAD);
 			}
 			else
+			{
 				act_new("[IMM] $n$t", ch, buf, wch, TO_VICT, POS_DEAD);
+			}
 		}
 	}
-
-	return;
 }
 
 /* Used for an object...take this out if you don't want it */
@@ -617,7 +605,6 @@ const char *upstring(const char *i)
 {
 	static char buf[MAX_STRING_LENGTH];
 	char *o;
-	char *ori;
 
 	if (i == NULL)
 		return (char *)'\0';
@@ -648,12 +635,6 @@ const char *lowstring(const char *i)
 
 void do_say(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *room_char;
-	CHAR_DATA *victim;
-	OBJ_DATA *char_obj;
-	char saymsg[MSL];
-	char buf[MAX_STRING_LENGTH];
-
 	if (argument[0] == '\0')
 	{
 		send_to_char("Say what?\n\r", ch);
@@ -715,6 +696,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 		send_to_char("***It's 'ING', not 'EING' you fooker!!!***\n\r", ch);
 	}
 
+	char saymsg[MAX_STRING_LENGTH];
 	if (argument[strlen(argument) - 1] == '!')
 		sprintf(saymsg, "exclaim");
 	else if (argument[strlen(argument) - 1] == '?')
@@ -722,11 +704,11 @@ void do_say(CHAR_DATA *ch, char *argument)
 	else
 		sprintf(saymsg, "say");
 
+	char buf[MAX_STRING_LENGTH];
 	sprintf(buf, "You %s '%s$T%s'", saymsg, get_char_color(ch, "speech"), END_COLOR(ch));
-
 	act(buf, ch, NULL, argument, TO_CHAR);
 
-	for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
+	for (auto victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 	{
 		if (IS_AWAKE(victim))
 		{
@@ -746,14 +728,12 @@ void do_say(CHAR_DATA *ch, char *argument)
 	}
 
 	if (IS_SET(ch->in_room->progtypes, RPROG_SPEECH))
-		(ch->in_room->rprogs->speech_prog)(ch->in_room, ch, argument);
+		ch->in_room->rprogs->speech_prog(ch->in_room, ch, argument);
 
-	for (room_char = ch->in_room->people; room_char != NULL; room_char = room_char->next_in_room)
+	for (auto room_char = ch->in_room->people; room_char != NULL; room_char = room_char->next_in_room)
 	{
 		if (IS_SET(room_char->progtypes, MPROG_SPEECH) && room_char != ch)
-		{
-			(room_char->pIndexData->mprogs->speech_prog)(room_char, ch, argument);
-		}
+			room_char->pIndexData->mprogs->speech_prog(room_char, ch, argument);
 
 		if (TRAPS_MEVENT(room_char, TRAP_MSPEECH))
 			CALL_MEVENT(room_char, TRAP_MSPEECH, ch, room_char, argument);
@@ -764,18 +744,20 @@ void do_say(CHAR_DATA *ch, char *argument)
 	if (is_affected(ch, gsn_unholy_communion) && (ch->Class()->name == "anti-paladin"))
 		check_unholy_communion(ch, argument);
 
-	for (char_obj = ch->carrying; char_obj != NULL; char_obj = char_obj->next_content)
+	for (auto char_obj = ch->carrying; char_obj != NULL; char_obj = char_obj->next_content)
 	{
 		if (IS_SET(char_obj->progtypes, IPROG_SPEECH) && char_obj->pIndexData->iprogs)
-			(char_obj->pIndexData->iprogs->speech_prog)(char_obj, ch, argument);
+			char_obj->pIndexData->iprogs->speech_prog(char_obj, ch, argument);
+
 		if (TRAPS_IEVENT(char_obj, TRAP_ISPEECH))
 			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
 	}
 
-	for (char_obj = ch->in_room->contents; char_obj != NULL; char_obj = char_obj->next_content)
+	for (auto char_obj = ch->in_room->contents; char_obj != NULL; char_obj = char_obj->next_content)
 	{
 		if (IS_SET(char_obj->progtypes, IPROG_SPEECH) && char_obj->pIndexData->iprogs)
-			(char_obj->pIndexData->iprogs->speech_prog)(char_obj, ch, argument);
+			char_obj->pIndexData->iprogs->speech_prog(char_obj, ch, argument);
+
 		if (TRAPS_IEVENT(char_obj, TRAP_ISPEECH))
 			CALL_IEVENT(char_obj, TRAP_ISPEECH, ch, char_obj, argument);
 	}
@@ -783,9 +765,6 @@ void do_say(CHAR_DATA *ch, char *argument)
 
 void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 {
-	char saymsg[MSL];
-	char buf[MAX_STRING_LENGTH];
-
 	if (argument[0] == '\0')
 	{
 		send_to_char("Say what?\n\r", ch);
@@ -835,6 +814,7 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 		return;
 	}
 
+	char saymsg[MAX_STRING_LENGTH];
 	if (argument[strlen(argument) - 1] == '!')
 		sprintf(saymsg, "exclaim");
 	else if (argument[strlen(argument) - 1] == '?')
@@ -845,9 +825,12 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 	if (IS_AWAKE(victim))
 	{
 		if (!(IS_IMMORTAL(ch)) && is_affected(victim, gsn_deafen))
+		{
 			act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
+		}
 		else
 		{
+			char buf[MAX_STRING_LENGTH];
 			sprintf(buf, "$n %ss '%s%s%s'", saymsg, get_char_color(victim, "speech"), argument, END_COLOR(victim));
 			act(buf, ch, extra, victim, TO_VICT);
 
@@ -859,9 +842,6 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 
 void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 {
-	char buf[MSL];
-	CHAR_DATA *victim;
-
 	if (!IS_NPC(ch) && argument[0] == '\0')
 	{
 		send_to_char("Whisper what?\n\r", ch);
@@ -901,18 +881,18 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 		return;
 	}
 
+	char buf[MAX_STRING_LENGTH];
 	sprintf(buf, "You whisper '%s%s%s'", get_char_color(ch, "red"), argument, END_COLOR(ch));
-
 	act(buf, ch, NULL, argument, TO_CHAR);
 
 	if (IS_SET(ch->in_room->progtypes, RPROG_SPEECH))
-		(ch->in_room->rprogs->speech_prog)(ch->in_room, ch, argument);
+		ch->in_room->rprogs->speech_prog(ch->in_room, ch, argument);
 
-	for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
+	for (auto victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 	{
 		if (IS_AWAKE(victim))
 		{
-			if (!(IS_IMMORTAL(ch)) && is_affected(victim, gsn_deafen))
+			if (!IS_IMMORTAL(ch) && is_affected(victim, gsn_deafen))
 			{
 				act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
 			}
@@ -922,7 +902,7 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 				act(buf, ch, 0, victim, TO_VICT);
 
 				if (IS_SET(victim->progtypes, MPROG_SPEECH) && victim != ch)
-					(victim->pIndexData->mprogs->speech_prog)(victim, ch, argument);
+					victim->pIndexData->mprogs->speech_prog(victim, ch, argument);
 
 				if (TRAPS_MEVENT(victim, TRAP_MSPEECH))
 					CALL_MEVENT(victim, TRAP_MSPEECH, ch, victim, argument);
@@ -939,11 +919,6 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 
 void do_sing(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *victim;
-	char buf[MSL], buf2[MSL], buf3[MSL];
-	char *copy;
-	int i, j, lines = 1, length;
-
 	if (argument[0] == '\0')
 	{
 		send_to_char("Sing what?\n\r", ch);
@@ -989,27 +964,32 @@ void do_sing(CHAR_DATA *ch, char *argument)
 
 	check_ooc(ch, argument, "SING");
 
-	copy = argument;
-
-	for (i = 0; i < MAX_STRING_LENGTH; i++)
+	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+	for (auto i = 0; i < MAX_STRING_LENGTH; i++)
 	{
 		buf[i] = '\0';
 		buf2[i] = '\0';
 	}
 
-	if (!IS_NPC(ch))
-		length = strlen(ch->name);
-	else
-		length = strlen(ch->short_descr);
+	auto length = !IS_NPC(ch)
+		? strlen(ch->name)
+		: strlen(ch->short_descr);
 
-	for (i = 0; *copy && *copy != '\0'; i++)
+	auto copy = argument;
+	int i, j, lines = 1;
+
+	for (i = 0; *copy != '\0'; i++)
 	{
 		if (*copy == '/')
 		{
 			lines++;
 			strcat(buf, "\n\r");
+
 			for (j = 0; j <= length; j++)
+			{
 				strcat(buf, " ");
+			}
+
 			strcat(buf, "       ");
 			i += (j + 8);
 		}
@@ -1017,6 +997,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		{
 			buf[i] = *copy;
 		}
+
 		copy++;
 	}
 
@@ -1031,8 +1012,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 	buf[i] = '\0';
 
 	copy = argument;
-
-	for (i = 0; *copy && *copy != '\0'; i++)
+	for (i = 0; *copy != '\0'; i++)
 	{
 		if (*copy == '/')
 		{
@@ -1044,16 +1024,18 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		{
 			buf2[i] = *copy;
 		}
+
 		copy++;
 	}
 
 	buf2[i] = '\0';
 
-	for (victim = ch->in_room->people; victim; victim = victim->next_in_room)
+	char buf3[MAX_STRING_LENGTH];
+	for (auto victim = ch->in_room->people; victim; victim = victim->next_in_room)
 	{
 		if (IS_AWAKE(victim))
 		{
-			if (!(IS_IMMORTAL(ch)) && is_affected(victim, gsn_deafen))
+			if (!IS_IMMORTAL(ch) && is_affected(victim, gsn_deafen))
 			{
 				act("$n sings something you can't quite hear.", ch, 0, victim, TO_VICT);
 			}
@@ -1074,10 +1056,6 @@ void do_sing(CHAR_DATA *ch, char *argument)
 
 void do_pray(CHAR_DATA *ch, char *argument)
 {
-	DESCRIPTOR_DATA *d;
-	FILE *fp;
-	char buf[MSL];
-
 	if (argument[0] == '\0')
 	{
 		send_to_char("Pray what?\n\r", ch);
@@ -1094,21 +1072,23 @@ void do_pray(CHAR_DATA *ch, char *argument)
 
 	send_to_char("You pray to the heavens!\n\r", ch);
 
-	fp = fopen(RIFT_AREA_DIR "/prays.txt", "a");
+	char buf[MAX_STRING_LENGTH];
 
-	sprintf(buf, "%s: %s [%d] is PRAYing for: %s\n", log_time(), ch->true_name, ch->in_room->vnum, argument);
-
+	auto fp = fopen(RIFT_AREA_DIR "/prays.txt", "a");
 	if (fp)
 	{
+		sprintf(buf, "%s: %s [%d] is PRAYing for: %s\n",
+			log_time(),
+			ch->true_name,
+			ch->in_room->vnum,
+			argument);
 		fprintf(fp, "%s", buf);
 		fclose(fp);
 	}
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (auto d = descriptor_list; d != NULL; d = d->next)
 	{
-		CHAR_DATA *victim;
-
-		victim = d->original ? d->original : d->character;
+		auto victim = d->original ? d->original : d->character;
 
 		if (d->connected == CON_PLAYING
 			&& d->character != ch
@@ -1116,23 +1096,19 @@ void do_pray(CHAR_DATA *ch, char *argument)
 			&& !IS_SET(victim->comm, COMM_QUIET)
 			&& victim->level >= 52)
 		{
-			sprintf(buf, "%s%s [%d] is PRAYing for: %s%s\n\r", get_char_color(victim, "prays"), ch->true_name,
-					ch->in_room->vnum, argument, END_COLOR(victim));
+			sprintf(buf, "%s%s [%d] is PRAYing for: %s%s\n\r",
+				get_char_color(victim, "prays"),
+				ch->true_name,
+				ch->in_room->vnum,
+				argument,
+				END_COLOR(victim));
 			send_to_char(buf, d->character);
 		}
 	}
-
-	return;
 }
 
 void do_tell(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
-	CHAR_DATA *victim;
-	int count, number;
-	bool deaf = false;
-	char arg2[MAX_STRING_LENGTH];
-
 	if (is_affected(ch, gsn_silence))
 	{
 		send_to_char("You cannot find the words within you.\n\r", ch);
@@ -1165,6 +1141,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 
 	check_ooc(ch, argument, "TELL");
 
+	char arg[MAX_INPUT_LENGTH];
 	argument = one_argument(argument, arg);
 
 	if (arg[0] == '\0' || argument[0] == '\0')
@@ -1177,6 +1154,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	of the person you are trying to talk to when their decoys occupy 1.<name>,
 	and that's mega annoying...(Ceran)
 	*/
+	char arg2[MAX_STRING_LENGTH];
 	arg2[0] = '\0';
 	sprintf(arg2, "%s", arg);
 
@@ -1185,10 +1163,10 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	 * -- Furey
 	 */
 
-	number = number_argument(arg2, arg);
-	count = 0;
-
-	for (victim = char_list; victim != NULL; victim = victim->next)
+	auto number = number_argument(arg2, arg);
+	auto count = 0;
+	auto victim = char_list;
+	for (; victim != NULL; victim = victim->next)
 	{
 		if (is_name(victim->name, arg)
 			&& (IS_NPC(victim)
@@ -1218,6 +1196,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	char buf[MAX_STRING_LENGTH];
 	if (victim->desc == NULL && !IS_NPC(victim))
 	{
 		act("$N seems to have lost consciousness...try again later.", ch, NULL, victim, TO_CHAR);
@@ -1239,6 +1218,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	auto deaf = false;
 	if (is_affected(ch, gsn_deafen))
 	{
 		deaf = true;
@@ -1260,7 +1240,7 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	act_new(buf, ch, argument, victim, TO_VICT, POS_DEAD);
 
 	if (IS_SET(victim->progtypes, MPROG_SPEECH) && victim != ch)
-		(victim->pIndexData->mprogs->speech_prog)(victim, ch, argument);
+		victim->pIndexData->mprogs->speech_prog(victim, ch, argument);
 
 	if (is_affected(victim, gsn_word_of_command) && strstr(argument, victim->pcdata->command[0]))
 		command_execute(victim);
@@ -1269,15 +1249,13 @@ void do_tell(CHAR_DATA *ch, char *argument)
 
 	if (deaf)
 		free_pstring(argument);
-
-	return;
 }
 
 void do_noreply(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *vch;
 	send_to_char("You concentrate and momentarily close your ears to the replies of others.\n\r", ch);
-	for (vch = char_list; vch; vch = vch->next)
+
+	for (auto vch = char_list; vch; vch = vch->next)
 	{
 		if (!IS_NPC(vch) && vch->reply == ch)
 			vch->reply = NULL;
@@ -1286,22 +1264,20 @@ void do_noreply(CHAR_DATA *ch, char *argument)
 
 void do_reply(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *victim;
-	char buf[MAX_STRING_LENGTH];
-	bool deaf = false;
-
 	if (IS_SET(ch->comm, COMM_NOTELL))
 	{
 		send_to_char("Your message didn't get through.\n\r", ch);
 		return;
 	}
 
-	if ((victim = ch->reply) == NULL)
+	auto victim = ch->reply;
+	if (victim == NULL)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
+	char buf[MAX_STRING_LENGTH];
 	if (victim->desc == NULL && !IS_NPC(victim) && !IS_SWITCHED(victim) && victim->pcdata)
 	{
 		act("$N seems to have lost consciousness...try again later.", ch, NULL, victim, TO_CHAR);
@@ -1336,11 +1312,15 @@ void do_reply(CHAR_DATA *ch, char *argument)
 	}
 
 	if (is_affected(ch, gsn_gag))
-		return send_to_char("You are gagged and cannot speak!\n\r", ch);
+	{
+		send_to_char("You are gagged and cannot speak!\n\r", ch);
+		return;
+	}
 
 	if (!IS_IMMORTAL(victim))
 		check_ooc(ch, argument, "TELL");
 
+	auto deaf = false;
 	if (is_affected(ch, gsn_deafen))
 	{
 		deaf = true;
@@ -1362,7 +1342,7 @@ void do_reply(CHAR_DATA *ch, char *argument)
 	act_new(buf, ch, argument, victim, TO_VICT, POS_DEAD);
 
 	if (IS_SET(victim->progtypes, MPROG_SPEECH) && victim != ch)
-		(victim->pIndexData->mprogs->speech_prog)(victim, ch, argument);
+		victim->pIndexData->mprogs->speech_prog(victim, ch, argument);
 
 	victim->reply = ch;
 
@@ -1372,10 +1352,6 @@ void do_reply(CHAR_DATA *ch, char *argument)
 
 void do_yell(CHAR_DATA *ch, char *argument)
 {
-	DESCRIPTOR_DATA *d;
-	char buf[MAX_STRING_LENGTH];
-	bool deaf = false;
-
 	if (is_affected(ch, gsn_silence))
 	{
 		send_to_char("You cannot find the words within you.\n\r", ch);
@@ -1419,6 +1395,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	auto deaf = false;
 	if (is_affected(ch, gsn_deafen))
 	{
 		deaf = true;
@@ -1434,15 +1411,18 @@ void do_yell(CHAR_DATA *ch, char *argument)
 		send_to_char("***It's 'ING', not 'EING' you fooker!!!***\n\r", ch);
 	}
 
+	char buf[MAX_STRING_LENGTH];
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf, "You yell '%s$t%s'", get_char_color(ch, "yells"), END_COLOR(ch));
 		act(buf, ch, argument, NULL, TO_CHAR);
 	}
 	else
+	{
 		act("You yell '$t'", ch, argument, NULL, TO_CHAR);
+	}
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (auto d = descriptor_list; d != NULL; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
 			&& d->character != ch
@@ -1498,7 +1478,7 @@ void do_myell(CHAR_DATA *ch, char *argument, CHAR_DATA *attacker)
 	if (ch && ch->in_room && attacker && can_see(ch, attacker))
 	{
 		if (IS_SET(ch->in_room->area->progtypes, APROG_MYELL))
-			((ch->in_room->area->aprogs->myell_prog)(ch->in_room->area, attacker, ch));
+			ch->in_room->area->aprogs->myell_prog(ch->in_room->area, attacker, ch);
 	}
 
 	do_yell(ch, argument);
@@ -1506,8 +1486,6 @@ void do_myell(CHAR_DATA *ch, char *argument, CHAR_DATA *attacker)
 
 void do_emote(CHAR_DATA *ch, char *argument)
 {
-	char buffer[MAX_STRING_LENGTH * 2];
-
 	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You can't show your emotions.\n\r", ch);
@@ -1522,6 +1500,7 @@ void do_emote(CHAR_DATA *ch, char *argument)
 
 	check_ooc(ch, argument, "EMOT");
 
+	char buffer[MAX_STRING_LENGTH * 2];
 	buffer[0] = '\0';
 	if (argument[0] != '\'' || UPPER(argument[1]) != 'S')
 		strcpy(buffer, " ");
@@ -1533,11 +1512,6 @@ void do_emote(CHAR_DATA *ch, char *argument)
 
 void do_pmote(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *vch;
-	char *letter, *name;
-	char last[MAX_INPUT_LENGTH], temp[MAX_STRING_LENGTH], tbuf[MSL];
-	unsigned int matches = 0;
-
 	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You can't show your emotions.\n\r", ch);
@@ -1552,6 +1526,7 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 
 	check_ooc(ch, argument, "PMOT");
 
+	char temp[MAX_STRING_LENGTH], tbuf[MAX_STRING_LENGTH];
 	sprintf(temp, "%s", argument);
 	tbuf[0] = '\0';
 
@@ -1563,12 +1538,16 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 
 	act("$n$t", ch, argument, NULL, TO_CHAR);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+	char *letter, *name;
+	unsigned int matches = 0;
+	char last[MAX_INPUT_LENGTH];
+	for (auto vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
 	{
 		if (vch->desc == NULL || vch == ch)
 			continue;
 
-		if ((letter = strstr(argument, vch->name)) == NULL)
+		letter = strstr(argument, vch->name);
+		if (letter == NULL)
 		{
 			act("$N$t", vch, argument, ch, TO_CHAR);
 			continue;
@@ -1594,14 +1573,13 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 			}
 
 			if (matches == strlen(vch->name))
-			{
 				matches = 0;
-			}
 
 			if (*letter == *name)
 			{
 				matches++;
 				name++;
+
 				if (matches == strlen(vch->name))
 				{
 					strcat(temp, "you");
@@ -1609,6 +1587,7 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 					name = vch->name;
 					continue;
 				}
+
 				strncat(last, letter, 1);
 				continue;
 			}
@@ -1633,8 +1612,6 @@ void do_pmote(CHAR_DATA *ch, char *argument)
  */
 bool check_ooc(CHAR_DATA *ch, char *argument, char *type)
 {
-	char buf[MSL];
-
 	/* Imms can curse and be OOC all we want! */
 	if (IS_IMMORTAL(ch))
 		return true;
@@ -1663,6 +1640,7 @@ bool check_ooc(CHAR_DATA *ch, char *argument, char *type)
 		strstr(argument, "jew") || strstr(argument, "Jew") || strstr(argument, "kike") || strstr(argument, " spic") ||
 		strstr(argument, "newbie"))
 	{
+		char buf[MAX_STRING_LENGTH];
 		sprintf(buf, "%s is %sING: ", ch->name, type);
 		strcat(buf, argument);
 		wiznet(buf, NULL, NULL, WIZ_OOC, 0, 0);
@@ -1712,44 +1690,40 @@ void do_quit(CHAR_DATA *ch, char *argument)
 
 void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 {
-	DESCRIPTOR_DATA *d, *d_next;
-	OBJ_DATA *obj;
-	OBJ_DATA *obj_next;
-	int id;
-	CHAR_DATA *wch;
-	CHAR_DATA *wch_next;
-
 	if (IS_NPC(ch))
 		return;
 
-	if (!autoq && IS_AFFECTED(ch, AFF_CHARM))
+	if (!autoq)
 	{
-		send_to_char("Now why would you want to leave your master?\n\r", ch);
-		return;
-	}
+		if (IS_AFFECTED(ch, AFF_CHARM))
+		{
+			send_to_char("Now why would you want to leave your master?\n\r", ch);
+			return;
+		}
 
-	if (!autoq && ch->position == POS_FIGHTING)
-	{
-		send_to_char("No way! You are fighting.\n\r", ch);
-		return;
-	}
+		if (ch->position == POS_FIGHTING)
+		{
+			send_to_char("No way! You are fighting.\n\r", ch);
+			return;
+		}
 
-	if (!autoq && ch->position < POS_STUNNED)
-	{
-		send_to_char("You're not DEAD yet.\n\r", ch);
-		return;
-	}
+		if (ch->position < POS_STUNNED)
+		{
+			send_to_char("You're not DEAD yet.\n\r", ch);
+			return;
+		}
 
-	if (!autoq && ch->pause > 0 && !IS_IMMORTAL(ch))
-	{
-		send_to_char("Your adrenaline is gushing too much to quit!\n\r", ch);
-		return;
-	}
+		if (ch->pause > 0 && !IS_IMMORTAL(ch))
+		{
+			send_to_char("Your adrenaline is gushing too much to quit!\n\r", ch);
+			return;
+		}
 
-	if (!autoq && (is_affected(ch, gsn_blackjack) || IS_AFFECTED(ch, AFF_SLEEP)))
-	{
-		send_to_char("You can't quit!\n\r", ch);
-		return;
+		if (is_affected(ch, gsn_blackjack) || IS_AFFECTED(ch, AFF_SLEEP))
+		{
+			send_to_char("You can't quit!\n\r", ch);
+			return;
+		}
 	}
 
 	if (is_affected(ch, skill_lookup("diamond skin")))
@@ -1764,29 +1738,28 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	if (is_affected(ch, gsn_cloak_form))
 		do_cloak(ch, "auto");
 
-	if (!autoq && IS_AFFECTED(ch, AFF_CHARM))
+	if (!autoq)
 	{
-		send_to_char("You don't want to leave your master yet!\n\r", ch);
-		return;
-	}
-
-	if (!autoq && !IS_SET(ch->in_room->room_flags, ROOM_LAW) && ch->in_room->cabal == 0 && !IS_IMMORTAL(ch))
-	{
-		send_to_char("You don't feel safe enough to quit here.\n\r", ch);
-		return;
-	}
-
-	if (!autoq && ch->in_room->cabal != 0 && !IS_IMMORTAL(ch))
-	{
-		if (ch->in_room->cabal != ch->cabal)
-			return send_to_char("You can't quit out in an enemy Cabal!\n\r", ch);
-	}
-
-	if (autoq == false)
-	{
-		for (obj = object_list; obj != NULL; obj = obj_next)
+		if (IS_AFFECTED(ch, AFF_CHARM))
 		{
-			obj_next = obj->next;
+			send_to_char("You don't want to leave your master yet!\n\r", ch);
+			return;
+		}
+
+		if (!IS_SET(ch->in_room->room_flags, ROOM_LAW) && ch->in_room->cabal == 0 && !IS_IMMORTAL(ch))
+		{
+			send_to_char("You don't feel safe enough to quit here.\n\r", ch);
+			return;
+		}
+
+		if (ch->in_room->cabal != 0 && !IS_IMMORTAL(ch) && ch->in_room->cabal != ch->cabal)
+		{
+			send_to_char("You can't quit out in an enemy Cabal!\n\r", ch);
+			return;
+		}
+
+		for (auto obj = object_list; obj != NULL; obj = obj->next)
+		{
 			if (isCabalItem(obj))
 			{
 				if (obj->carried_by != NULL && obj->carried_by == ch)
@@ -1803,7 +1776,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 		if (autoq)
 			bug("Trying to autoquit char %s with pending queue.", ch->name);
 
-		return send_to_char("You cannot quit while events requiring your presence are pending.\n\r", ch);
+		send_to_char("You cannot quit while events requiring your presence are pending.\n\r", ch);
+		return;
 	}
 
 	if (is_affected(ch, gsn_disguise))
@@ -1837,7 +1811,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	/* Remove any Cabal items first , also owners
 		and any limiteds on levels 10 and below
 	*/
-	for (obj = object_list; obj != NULL; obj = obj_next)
+	OBJ_DATA *obj_next;
+	for (auto obj = object_list; obj != NULL; obj = obj_next)
 	{
 		obj_next = obj->next;
 		if (isCabalItem(obj))
@@ -1853,9 +1828,9 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	}
 
 	/* extract all decoys */
-	for (wch = char_list; wch != NULL; wch = wch_next)
+	CHAR_DATA *wch_next;
+	for (auto wch = char_list; wch != NULL; wch = wch_next)
 	{
-		AFFECT_DATA *laf;
 		wch_next = wch->next;
 
 		if (wch->defending != NULL && wch->defending == ch)
@@ -1863,7 +1838,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 
 		if (is_affected(wch, gsn_empathy))
 		{
-			for (laf = wch->affected; laf != NULL; laf = laf->next)
+			auto laf = wch->affected;
+			for (; laf != NULL; laf = laf->next)
 			{
 				if (laf->type == gsn_empathy)
 					break;
@@ -1890,8 +1866,8 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	}
 
 	save_char_obj(ch);
-	id = ch->id;
-	d = ch->desc;
+	auto id = ch->id;
+	auto d = ch->desc;
 
 	extract_char(ch, true);
 
@@ -1899,12 +1875,9 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 		close_socket(d);
 
 	/* toast evil cheating bastards */
-	for (d = descriptor_list; d != NULL; d = d_next)
+	for (d = descriptor_list; d != NULL; d = d->next)
 	{
-		CHAR_DATA *tch;
-
-		d_next = d->next;
-		tch = d->original ? d->original : d->character;
+		auto tch = d->original ? d->original : d->character;
 		if (tch && tch->id == id)
 		{
 			extract_char(tch, true);
@@ -1928,7 +1901,6 @@ void do_follow(CHAR_DATA *ch, char *argument)
 {
 	/* RT changed to allow unlimited following and follow the NOFOLLOW rules */
 	char arg[MAX_INPUT_LENGTH];
-	CHAR_DATA *victim;
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
@@ -1937,7 +1909,8 @@ void do_follow(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_room(ch, arg)) == NULL)
+	auto victim = get_char_room(ch, arg);
+	if (victim == NULL)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1961,10 +1934,11 @@ void do_follow(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(victim) && IS_SET(victim->act, PLR_NOFOLLOW) && /*!IS_IMMORTAL(ch) && */
-		(get_skill(ch, gsn_trail) == 0 || can_see(victim, ch)))
+	if (!IS_NPC(victim)
+		&& IS_SET(victim->act, PLR_NOFOLLOW)
+		&& (get_skill(ch, gsn_trail) == 0 || can_see(victim, ch)))
 	{
-		if ((get_skill(ch, gsn_trail) > 0 && can_see(victim, ch)))
+		if (get_skill(ch, gsn_trail) > 0 && can_see(victim, ch))
 			act("You can't very well trail someone if they can see you.", ch, NULL, NULL, TO_CHAR);
 
 		act("$N doesn't seem to want any followers.\n\r", ch, NULL, victim, TO_CHAR);
@@ -1992,9 +1966,6 @@ void do_follow(CHAR_DATA *ch, char *argument)
 
 void add_follower(CHAR_DATA *ch, CHAR_DATA *master)
 {
-	int chance;
-	AFFECT_DATA af;
-
 	if (ch->master != NULL)
 	{
 		bug("Add_follower: non-null master.", 0);
@@ -2004,11 +1975,14 @@ void add_follower(CHAR_DATA *ch, CHAR_DATA *master)
 	ch->master = master;
 	ch->leader = NULL;
 
-	if ((chance = get_skill(ch, gsn_trail)) > 0 && IS_SET(master->act, PLR_NOFOLLOW))
+	auto chance = get_skill(ch, gsn_trail);
+	if (chance > 0 && IS_SET(master->act, PLR_NOFOLLOW))
 	{
 		if (number_percent() < chance)
 		{
 			act("You attempt to secretly trail $N.", ch, NULL, master, TO_CHAR);
+
+			AFFECT_DATA af;
 			init_affect(&af);
 			af.where = TO_AFFECTS;
 			af.type = gsn_trail;
@@ -2067,9 +2041,8 @@ void stop_follower(CHAR_DATA *ch)
 /* nukes charmed monsters and pets */
 void nuke_pets(CHAR_DATA *ch)
 {
-	CHAR_DATA *pet;
-
-	if ((pet = ch->pet) != NULL)
+	auto pet = ch->pet;
+	if (pet != NULL)
 	{
 		stop_follower(pet);
 		if (pet->in_room != NULL)
@@ -2083,9 +2056,6 @@ void nuke_pets(CHAR_DATA *ch)
 
 void die_follower(CHAR_DATA *ch)
 {
-	CHAR_DATA *fch;
-	CHAR_DATA *fch_next;
-
 	if (!ch)
 	{
 		bug("Error: Die follower, invalid master.", 0);
@@ -2102,7 +2072,8 @@ void die_follower(CHAR_DATA *ch)
 
 	ch->leader = NULL;
 
-	for (fch = char_list; fch != NULL; fch = fch_next)
+	CHAR_DATA *fch_next;
+	for (auto fch = char_list; fch != NULL; fch = fch_next)
 	{
 		fch_next = fch->next;
 		/*if(!fch->in_room && IS_NPC(fch))
@@ -2110,7 +2081,7 @@ void die_follower(CHAR_DATA *ch)
 			bug("Error: Mob %d in room is NULL!",fch->pIndexData->vnum);
 			break;
 		}*/
-		if ((IS_NPC(fch)) && ((is_affected(fch, gsn_animate_dead)) || (IS_AFFECTED(fch, AFF_CHARM))))
+		if (IS_NPC(fch) && (is_affected(fch, gsn_animate_dead) || IS_AFFECTED(fch, AFF_CHARM)))
 		{
 			if (fch->master == ch)
 			{
@@ -2133,14 +2104,7 @@ void die_follower(CHAR_DATA *ch)
 
 void do_order(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
 	char arg[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
-	CHAR_DATA *victim;
-	CHAR_DATA *och;
-	CHAR_DATA *och_next;
-	bool found, fAll, cOK;
-	int i;
-
 	argument = one_argument(argument, arg);
 	one_argument(argument, arg2);
 
@@ -2156,16 +2120,12 @@ void do_order(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!str_cmp(arg, "all"))
+	CHAR_DATA *victim = NULL;
+	auto fAll = !str_cmp(arg, "all");
+	if (!fAll)
 	{
-		fAll = true;
-		victim = NULL;
-	}
-	else
-	{
-		fAll = false;
-
-		if ((victim = get_char_room(ch, arg)) == NULL)
+		victim = get_char_room(ch, arg);
+		if (victim == NULL)
 		{
 			send_to_char("They aren't here.\n\r", ch);
 			return;
@@ -2184,8 +2144,8 @@ void do_order(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	cOK = false;
-	for (i = 0; i < MAX_ORDERS; i++)
+	auto cOK = false;
+	for (auto i = 0; i < MAX_ORDERS; i++)
 	{
 		if (!str_prefix(arg2, order_table[i].command))
 			cOK = true;
@@ -2197,9 +2157,10 @@ void do_order(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	found = false;
+	auto found = false;
 
-	for (och = ch->in_room->people; och != NULL; och = och_next)
+	CHAR_DATA *och_next;
+	for (auto och = ch->in_room->people; och != NULL; och = och_next)
 	{
 		och_next = och->next_in_room;
 
@@ -2209,6 +2170,8 @@ void do_order(CHAR_DATA *ch, char *argument)
 				continue;
 
 			found = true;
+
+			char buf[MAX_STRING_LENGTH];
 			sprintf(buf, "$n orders you to '%s'.", argument);
 			act(buf, ch, NULL, och, TO_VICT);
 			interpret(och, argument);
@@ -2226,38 +2189,34 @@ void do_order(CHAR_DATA *ch, char *argument)
 		send_to_char("Ok.\n\r", ch);
 	}
 	else
+	{
 		send_to_char("You have no followers here.\n\r", ch);
+	}
 }
 
 void do_group(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH], buf2[MSL];
 	char arg[MAX_INPUT_LENGTH];
-	CHAR_DATA *victim, *vch;
-	AFFECT_DATA af;
-	int exp_tnl, exp_ltl, epl;
-
 	one_argument(argument, arg);
 
 	if (arg[0] == '\0')
 	{
-		CHAR_DATA *gch;
-		CHAR_DATA *leader;
+		char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+		auto leader = ch->leader != NULL ? ch->leader : ch;
 
-		leader = (ch->leader != NULL) ? ch->leader : ch;
 		sprintf(buf, "%s's group:\n\r", PERS(leader, ch));
 		send_to_char(buf, ch);
 
-		for (gch = char_list; gch != NULL; gch = gch->next)
+		for (auto gch = char_list; gch != NULL; gch = gch->next)
 		{
 			if (is_same_group(gch, ch))
 			{
 				if (!IS_NPC(gch))
 				{
-					exp_tnl = (gch->level * exp_per_level(gch) - gch->exp);
-					epl = pc_race_table[gch->race].xpadd + 1500;
+					auto exp_tnl = (gch->level * exp_per_level(gch) - gch->exp);
+					auto epl = pc_race_table[gch->race].xpadd + 1500;
 					epl += (int)((gch->level - 2) * epl * 0.08);
-					exp_ltl = (gch->level * exp_per_level(gch) - (gch->level - 1) * epl);
+					auto exp_ltl = (gch->level * exp_per_level(gch) - (gch->level - 1) * epl);
 					sprintf(buf, "[%2d %s] %-32s %3d%%hp %3d%%mana %3d%%mv %3d%%tnl\n\r",
 						gch->level,
 						IS_NPC(gch) ? "Mob" : gch->Class()->who_name,
@@ -2287,7 +2246,8 @@ void do_group(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_room(ch, arg)) == NULL)
+	auto victim = get_char_room(ch, arg);
+	if (victim == NULL)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -2332,6 +2292,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 	act_new("You join $n's group.", ch, NULL, victim, TO_VICT, POS_SLEEPING);
 	act_new("$N joins your group.", ch, NULL, victim, TO_CHAR, POS_SLEEPING);
 
+	AFFECT_DATA af;
 	if (!IS_NPC(ch) && !IS_NPC(victim) && ch->Class()->name == "anti-paladin" && ch->pcdata->learned[gsn_traitors_luck] > 1)
 	{
 		init_affect(&af);
@@ -2362,7 +2323,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 		af.location = 0;
 		af.pulse_fun = traitor_pulse;
 
-		for (vch = char_list; vch; vch = vch->next)
+		for (auto vch = char_list; vch; vch = vch->next)
 		{
 			if (vch != ch && is_same_group(vch, ch))
 				new_affect_to_char(vch, &af);
@@ -2375,15 +2336,8 @@ void do_group(CHAR_DATA *ch, char *argument)
  */
 void do_split(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH];
 	char arg1[MAX_INPUT_LENGTH];
-	CHAR_DATA *gch;
-	int members;
-	int amount_gold = 0;
-	int share_gold;
-	int extra_gold;
-
-	argument = one_argument(argument, arg1);
+	one_argument(argument, arg1);
 
 	if (arg1[0] == '\0')
 	{
@@ -2391,8 +2345,7 @@ void do_split(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	amount_gold = atoi(arg1);
-
+	auto amount_gold = atoi(arg1);
 	if (amount_gold < 0)
 	{
 		send_to_char("Your group wouldn't like that.\n\r", ch);
@@ -2411,8 +2364,8 @@ void do_split(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	members = 0;
-	for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
+	auto members = 0;
+	for (auto gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
 	{
 		if (is_same_group(gch, ch) && !IS_AFFECTED(gch, AFF_CHARM))
 			members++;
@@ -2424,8 +2377,8 @@ void do_split(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	share_gold = amount_gold / members;
-	extra_gold = amount_gold % members;
+	auto share_gold = amount_gold / members;
+	auto extra_gold = amount_gold % members;
 
 	if (share_gold == 0)
 	{
@@ -2436,6 +2389,7 @@ void do_split(CHAR_DATA *ch, char *argument)
 	ch->gold -= amount_gold;
 	ch->gold += share_gold + extra_gold;
 
+	char buf[MAX_STRING_LENGTH];
 	if (share_gold > 0)
 	{
 		sprintf(buf, "You split %d gold coins. Your share is %d gold.\n\r", amount_gold, share_gold + extra_gold);
@@ -2444,7 +2398,7 @@ void do_split(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "$n splits %d gold coins. Your share is %d gold.", amount_gold, share_gold);
 
-	for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
+	for (auto gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
 	{
 		if (gch != ch && is_same_group(gch, ch) && !IS_AFFECTED(gch, AFF_CHARM))
 		{
@@ -2456,10 +2410,6 @@ void do_split(CHAR_DATA *ch, char *argument)
 
 void do_gtell(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *gch;
-	char buf[MAX_STRING_LENGTH];
-	bool deaf = false;
-
 	if (is_affected(ch, gsn_silence))
 	{
 		send_to_char("You cannot find the words within you.\n\r", ch);
@@ -2498,16 +2448,18 @@ void do_gtell(CHAR_DATA *ch, char *argument)
 
 	check_ooc(ch, argument, "GROUPTELL");
 
+	auto deaf = false;
 	if (is_affected(ch, gsn_deafen))
 	{
 		deaf = true;
 		argument = palloc_string(upstring(argument));
 	}
 
+	char buf[MAX_STRING_LENGTH];
 	sprintf(buf, "You tell the group '%s$t%s'", get_char_color(ch, "grouptells"), END_COLOR(ch));
 	act_new(buf, ch, argument, NULL, TO_CHAR, POS_SLEEPING);
 
-	for (gch = char_list; gch != NULL; gch = gch->next)
+	for (auto gch = char_list; gch != NULL; gch = gch->next)
 	{
 		if (is_same_group(gch, ch) && !is_affected(gch, gsn_deafen))
 		{
@@ -2522,25 +2474,16 @@ void do_gtell(CHAR_DATA *ch, char *argument)
 
 SPEECH_DATA *find_speech(MOB_INDEX_DATA *mob, char *name)
 {
-	SPEECH_DATA *speech;
-	bool found = false;
-
 	if (!mob->speech)
 		return NULL;
 
-	for (speech = mob->speech; speech; speech = speech->next)
+	for (auto speech = mob->speech; speech; speech = speech->next)
 	{
 		if (!str_cmp(speech->name, name))
-		{
-			found = true;
-			break;
-		}
+			return speech;
 	}
 
-	if (found)
-		return speech;
-	else
-		return NULL;
+	return NULL;
 }
 
 void execute_speech(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
@@ -2556,31 +2499,29 @@ void execute_speech(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 
 void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 {
-	LINE_DATA *line;
-	char buf[MSL];
-	char *point, *copy;
-	int i;
-
 	if (!speech || !speech->first_line || !mob || !mob->in_room)
 		return;
 
 	if (mob->position < POS_RESTING)
 		return;
 
-	if ((line = speech->current_line) == NULL)
+	auto line = speech->current_line;
+	if (line == NULL)
 	{
 		speech->current_line = speech->first_line;
 		return;
 	}
 
-	for (i = 0; i < MSL; i++)
+	char buf[MAX_STRING_LENGTH];
+	for (auto i = 0; i < MAX_STRING_LENGTH; i++)
+	{
 		buf[i] = '\0';
+	}
 
-	copy = palloc_string(line->text);
+	auto copy = palloc_string(line->text);
+	auto point = copy;
 
-	point = copy;
-
-	for (i = 0; *point && *point != '\0'; i++)
+	for (auto i = 0; *point && *point != '\0'; i++)
 	{
 		if (*point == '$')
 		{
@@ -2607,32 +2548,33 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 
 	switch (line->type)
 	{
-		case (SPEECH_SAY):
+		case SPEECH_SAY:
 			do_say(mob, buf);
 			break;
-		case (SPEECH_SAYTO):
+		case SPEECH_SAYTO:
 			say_to(mob, ch, buf, "");
 			break;
-		case (SPEECH_TELL):
+		case SPEECH_TELL:
 			sprintf(buf, "%s %s", ch->name, buf);
 			do_tell(mob, buf);
 			break;
-		case (SPEECH_WHISPER):
+		case SPEECH_WHISPER:
 			do_whisper(mob, buf);
 			break;
-		case (SPEECH_YELL):
+		case SPEECH_YELL:
 			do_yell(mob, buf);
 			break;
-		case (SPEECH_EMOTE):
+		case SPEECH_EMOTE:
 			do_emote(mob, buf);
 			break;
-		case (SPEECH_ECHO):
+		case SPEECH_ECHO:
 			break;
-		case (SPEECH_SING):
+		case SPEECH_SING:
 			do_sing(mob, buf);
 			break;
 		default:
-			return bug("Error in speech -- missing/invalid type.", 0);
+			bug("Error in speech -- missing/invalid type.", 0);
+			return;
 	}
 
 	if (!line->next)
@@ -2650,8 +2592,6 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 	}
 
 	RS.Queue.AddToQueue(speech->current_line->delay, 3, speech_handler, ch, mob, speech);
-
-	return;
 }
 
 /*
@@ -2679,17 +2619,16 @@ bool is_same_group(CHAR_DATA *ach, CHAR_DATA *bch)
 
 void do_release(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *victim;
 	char arg[MAX_INPUT_LENGTH];
-
 	one_argument(argument, arg);
+
 	if (arg[0] == '\0')
 	{
 		send_to_char("Release which follower?\n\r", ch);
 		return;
 	}
 
-	victim = get_char_room(ch, arg);
+	auto victim = get_char_room(ch, arg);
 	if (victim == NULL)
 	{
 		send_to_char("They aren't here.\n\r", ch);
@@ -2716,35 +2655,35 @@ void do_release(CHAR_DATA *ch, char *argument)
 
 void perm_death_log(CHAR_DATA *ch, int deltype)
 {
-	FILE *fp;
+	auto fp = fopen(PDEATH_LOG_FILE, "a");
+	if (fp == NULL)
+		return;
 
-	if ((fp = fopen(PDEATH_LOG_FILE, "a")) != NULL)
-	{
-		fprintf(fp, "%s||[%2d %5s %s]||%s%s%s%s||Kills: %d||Deaths: %d||Age: %d||Hours: %d||%s",
-			deltype == 1 ? "DELETED" : deltype == 2 ? "CON-DIE" : deltype == 3 ? "OLD-AGE" : deltype == 4 ? "AUTODELETE" : "DELETED",
-			ch->level,
-			pc_race_table[ch->race].who_name,
-			(RSTR)ch->Class()->who_name,
-			cabal_table[ch->cabal].who_name,
-			ch->true_name, IS_NPC(ch) ? "" : ch->pcdata->title,
-			IS_NPC(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle : "", ch->pcdata->kills[PK_KILLS],
-			ch->pcdata->killed[PK_KILLED], get_age(ch), (int)(ch->played + current_time - ch->logon) / 3600,
-			ctime(&current_time));
+	fprintf(fp, "%s||[%2d %5s %s]||%s%s%s%s||Kills: %d||Deaths: %d||Age: %d||Hours: %d||%s",
+		deltype == 1 ? "DELETED" : deltype == 2 ? "CON-DIE" : deltype == 3 ? "OLD-AGE" : deltype == 4 ? "AUTODELETE" : "DELETED",
+		ch->level,
+		pc_race_table[ch->race].who_name,
+		(RSTR)ch->Class()->who_name,
+		cabal_table[ch->cabal].who_name,
+		ch->true_name, IS_NPC(ch) ? "" : ch->pcdata->title,
+		IS_NPC(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle : "", ch->pcdata->kills[PK_KILLS],
+		ch->pcdata->killed[PK_KILLED],
+		get_age(ch),
+		(ch->played + current_time - ch->logon) / 3600,
+		ctime(&current_time));
 
-		fclose(fp);
-	}
+	fclose(fp);
 }
 
 void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 {
-	char query[MSL];
-
 	if (IS_NPC(killer) && (killer->master != NULL))
 		killer = killer->master;
 
 	if (IS_NPC(dead) || IS_NPC(killer))
 		return;
 
+	char query[MAX_STRING_LENGTH];
 	sprintf(query, "INSERT INTO pklogs VALUES('%s', %d, '%s', %d, '%s', '%s (%d)',%ld)",
 		killer->true_name,
 		killer->cabal,
@@ -2760,38 +2699,37 @@ void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 
 void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 {
-	FILE *fp;
-
 	if (!IS_NPC(killer) || IS_NPC(dead) || !IS_EXPLORE(killer->in_room))
 		return;
 
-	if ((fp = fopen(MOB_LOG_FILE, "a")) != NULL)
-	{
-		fprintf(fp, "%s | %s | %s | %s | %s",
-			dead->true_name,
-			killer->short_descr,
-			killer->in_room->area->name,
-			get_room_name(killer->in_room),
-			ctime(&current_time));
+	auto fp = fopen(MOB_LOG_FILE, "a");
+	if(fp == NULL)
+		return;
 
-		fclose(fp);
-	}
+	fprintf(fp, "%s | %s | %s | %s | %s",
+		dead->true_name,
+		killer->short_descr,
+		killer->in_room->area->name,
+		get_room_name(killer->in_room),
+		ctime(&current_time));
+
+	fclose(fp);
 }
 
 /* type 0 = create, 1 = login, 2 = logout */
 void login_log(CHAR_DATA *ch, int type)
 {
-	char query[MSL];
-	char *escape;
-
 	if (!ch->pcdata->host && !ch->desc)
 		return;
 
 	if (IS_SET(ch->comm, COMM_NOSOCKET))
 		return;
 
-	escape = (char *)((ch->pcdata->host) ? escape_string(ch->pcdata->host) : escape_string(ch->desc->host));
+	auto escape = ch->pcdata->host
+		? escape_string(ch->pcdata->host)
+		: escape_string(ch->desc->host);
 
+	char query[MAX_STRING_LENGTH];
 	sprintf(query, "INSERT INTO logins VALUES('%s', '%s', '%s', '%ld', '%ld', '%d', '%d', '%d')",
 			ch->true_name,
 			escape,
@@ -2800,5 +2738,6 @@ void login_log(CHAR_DATA *ch, int type)
 			type == 2 ? ((current_time - ch->logon) / 60) : -1,
 			type > 0 ? count_carried(ch, false) : -1, type > 0 ? count_carried(ch, true) : -1,
 			type);
+
 	one_query(query);
 }

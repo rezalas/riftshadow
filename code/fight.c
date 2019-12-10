@@ -7161,8 +7161,6 @@ void do_warcry(CHAR_DATA *ch, char *argument)
 		send_to_char("You don't have the mana.\n\r", ch);
 		return;
 	}
-	return;
-
 	if (number_percent() > chance)
 	{
 		act("$n makes some soft grunting noises.", ch, 0, 0, TO_ROOM);

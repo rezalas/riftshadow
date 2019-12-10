@@ -2,5 +2,4 @@ language: cpp
 dist: bionic
 compiler: gcc
 
-
-script: cmake -B . && make
+script: cmake -B . && make && make test 

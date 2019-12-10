@@ -406,6 +406,7 @@ void do_get(CHAR_DATA *ch, char *argument)
 					send_to_char("You can't do that.\n\r", ch);
 					return;
 				}
+				break; // important to not waterfall into the default.
 			default:
 				send_to_char("That's not a container.\n\r", ch);
 				return;
@@ -2833,13 +2834,13 @@ void do_sacrifice(CHAR_DATA *ch, char *argument)
 	extract_obj(obj);
 }
 
-void quaff_potion(void *arg1, void *arg2, void *arg3, void *arg4, void *arg5)
+void quaff_potion(CHAR_DATA *arg1, int arg2, int arg3, int arg4, int arg5)
 {
-	CHAR_DATA *ch = (CHAR_DATA *)arg1;
-	int sLevel = *((int *)arg2);
-	int sn1 = *((int *)arg3);
-	int sn2 = *((int *)arg4);
-	int sn3 = *((int *)arg5);
+	CHAR_DATA *ch = arg1;
+	int sLevel = arg2;
+	int sn1 = arg3;
+	int sn2 = arg4;
+	int sn3 = arg5;
 
 	send_to_char("You feel the unmistakable tingle of magic as the liquid flows through your body.\n\r", ch);
 
@@ -2883,12 +2884,12 @@ void do_quaff(CHAR_DATA *ch, char *argument)
 				{
 					RS.Queue.AddToQueue(nDelay,
 						5,
-						(void *)quaff_potion,
+						quaff_potion,
 						ch,
-						(void *)obj->value[0],
-						(void *)obj->value[1],
-						(void *)obj->value[2],
-						(void *)obj->value[3]);
+						obj->value[0],
+						obj->value[1],
+						obj->value[2],
+						obj->value[3]);
 				}
 
 				extract_obj(obj);
@@ -2927,12 +2928,12 @@ void do_quaff(CHAR_DATA *ch, char *argument)
 	{
 		RS.Queue.AddToQueue(nDelay,
 			5,
-			(void *)quaff_potion,
+			quaff_potion,
 			ch,
-			(void *)obj->value[0],
-			(void *)obj->value[1],
-			(void *)obj->value[2],
-			(void *)obj->value[3]);
+			obj->value[0],
+			obj->value[1],
+			obj->value[2],
+			obj->value[3]);
 	}
 
 	extract_obj(obj);
@@ -3475,10 +3476,11 @@ CHAR_DATA *find_keeper(CHAR_DATA *ch)
 	pShop = NULL;
 	for (keeper = ch->in_room->people; keeper; keeper = keeper->next_in_room)
 	{
+		if(IS_NPC(keeper) == false || keeper->pIndexData == NULL || keeper->pIndexData->pShop == NULL)
+			continue;
+		
 		pShop = keeper->pIndexData->pShop;
-
-		if (IS_NPC(keeper) && pShop != NULL)
-			break;
+		break;
 	}
 
 	if (pShop == NULL)
