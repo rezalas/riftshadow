@@ -12,7 +12,7 @@ class SeedDefinablesTableRaces extends Seeder
 	 */
 	public function run()
 	{
-		RaceTable::where('name', 'unique')
+		/*RaceTable::where('name', 'unique')
 			->first()
 			->defines()
 			->attach(
@@ -668,6 +668,6 @@ class SeedDefinablesTableRaces extends Seeder
 				->get()
 				->pluck('id')
 				->all()
-			);
+			);*/
 	}
 }

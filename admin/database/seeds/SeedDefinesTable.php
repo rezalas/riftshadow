@@ -11,7 +11,7 @@ class SeedDefinesTable extends Seeder
 	 */
 	public function run()
 	{
-		DB::connection('rift_core')->table('defines')->insert([
+		/*DB::connection('rift_core')->table('defines')->insert([
 			[
 				'name' => 'strength',
 				'abbrev' => 'str',
@@ -341,6 +341,6 @@ class SeedDefinesTable extends Seeder
 				'category' => 'directions',
 				'value' => 5
 			] 
-		]);
+		]);*/
 	}
 }

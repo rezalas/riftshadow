@@ -12,7 +12,7 @@ class SeedFlagRaceTable extends Seeder
 	 */
 	public function run()
 	{
-		RaceTable::where('name', 'abyss')
+		/*RaceTable::where('name', 'abyss')
 			->first()
 			->flags()
 			->attach(
@@ -1311,6 +1311,6 @@ class SeedFlagRaceTable extends Seeder
 				->get()
 				->pluck('id')
 				->all()
-			);
+			);*/
 	}
 }

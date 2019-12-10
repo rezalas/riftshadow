@@ -11,7 +11,7 @@ class SeedFlagsTable extends Seeder
 	 */
 	public function run()
 	{
-		DB::connection('rift_core')
+		/*DB::connection('rift_core')
 			->table('flags')
 			->insert([
 				[
@@ -1382,6 +1382,6 @@ class SeedFlagsTable extends Seeder
 					'type' => 'exit_flags',
 					'bit' => 1024
 				]		
-			]);
+			]);*/
 	}
 }

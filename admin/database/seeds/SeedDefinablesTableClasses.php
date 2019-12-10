@@ -12,7 +12,7 @@ class SeedDefinablesTableClasses extends Seeder
 	 */
 	public function run()
 	{
-		ClassTable::where('name', 'warrior')
+		/*ClassTable::where('name', 'warrior')
 			->first()
 			->defines()
 			->attach(
@@ -190,6 +190,6 @@ class SeedDefinablesTableClasses extends Seeder
 				->get()
 				->pluck('id')
 				->all()
-			);
+			);*/
 	}
 }
