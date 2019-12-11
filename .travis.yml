@@ -3,7 +3,7 @@ dist: bionic
 compiler: gcc
 
 before_install:
-- sudo apt-get -q ninja-build
+- sudo apt-get install ninja-build
 before_script:
 - cmake -GNinja .
 script:
