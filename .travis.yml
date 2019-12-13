@@ -13,7 +13,7 @@ script:
 - ninja --version
 - gcc --version
 - g++ --version
-- ninja
-- ninja test 
+- time ninja
+- time ninja test 
 #- make
 #- make test
