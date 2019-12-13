@@ -16,6 +16,10 @@ Makefile
 Testing/
 CTestTestfile.cmake
 
+# Ninja files
+*.ninja
+*.ninja_*
+
 # Object files
 *.o
 libRiftCore.a
