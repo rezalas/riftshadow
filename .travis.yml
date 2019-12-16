@@ -2,4 +2,18 @@ language: cpp
 dist: bionic
 compiler: gcc
 
-script: cmake -B . && make && make test 
+before_install:
+- sudo apt-get install ninja-build
+before_script:
+- cmake -GNinja .
+#- cmake -B .
+script:
+- env
+- cmake --version
+- ninja --version
+- gcc --version
+- g++ --version
+- time ninja
+- time ninja test 
+#- make
+#- make test
