@@ -10,12 +10,11 @@ add_library(TestMain main.c)
 set_target_properties(TestMain PROPERTIES LINKER_LANGUAGE CXX)
 
 set(TEST_SRC_FILES act_obj_tests.c
+	cabal_tests.c
 	db_tests.c
 	fight_tests.c
-	queue_tests.c
 	prof_tests.c
-	cabal_tests.c
-	act_obj_tests.c
+	queue_tests.c
 )
 
 ##
