@@ -95,7 +95,7 @@ extern const struct flag_type wealth_table[];
 extern const struct display_type altdesc_condtable[];
 extern const struct restrict_type restrict_table[];
 extern const struct cabal_list cabal_skills[];
-extern const struct proficiency_type prof_table[];
+//extern const struct proficiency_type prof_table[];
 
 struct flag_type
 {

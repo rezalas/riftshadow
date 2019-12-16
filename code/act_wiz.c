@@ -32,6 +32,7 @@
  ***************************************************************************/
 
 #include "act_wiz.h"
+#include "prof.h"
 
 AREA_DATA *area_first;
 unsigned int *gDebug;
@@ -2892,7 +2893,9 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		{
 			if (victim->pIndexData->profs_taught[i] > -1)
 			{
-				sprintf(buf, "Mobile teaches proficiency '%s'.\n\r", prof_table[victim->pIndexData->profs_taught[i]].name);
+				auto profPSN = victim->pIndexData->profs_taught[i];
+				char* profName = ch->Profs()->GetProficiency(profPSN).name; //prof_table[victim->pIndexData->profs_taught[i]].name
+				sprintf(buf, "Mobile teaches proficiency '%s'.\n\r", profName);
 				send_to_char(buf, ch);
 			}
 		}

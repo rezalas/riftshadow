@@ -21,6 +21,7 @@
  */
 
 #include "olc_save.h"
+#include "prof.h"
 
 char *fix_string(const char *str)
 {
@@ -294,7 +295,12 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 	for (i = 0; i < MAX_PROFS_TAUGHT_BY_MOB; i++)
 	{
 		if (pMobIndex->profs_taught[i] > -1)
-			fprintf(fp, "TEACHES %s~\n", prof_table[pMobIndex->profs_taught[i]].name);
+		{
+			auto profPSN = pMobIndex->profs_taught[i];
+			auto profs = new CProficiencies();
+			char* profName = profs->GetProficiency(profPSN).name; //prof_table[pMobIndex->profs_taught[i]].name
+			fprintf(fp, "TEACHES %s~\n", profName);
+		}
 	}
 
 	if (pMobIndex->speech)

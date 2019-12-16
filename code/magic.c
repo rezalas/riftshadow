@@ -4379,7 +4379,11 @@ void spell_teleport(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	for (nocrash = 1; nocrash < 10000; nocrash++)
 	{
 		pRoomIndex = get_random_room(victim);
-
+		if(pRoomIndex == NULL)
+		{
+			continue; // this prevents us from evaluating rooms that don't exist due to our
+			// lovely method of getting a "random" room.
+		}
 		if (!IS_SET(pRoomIndex->room_flags, ROOM_NO_RECALL)
 			&& !IS_SET(pRoomIndex->room_flags, ROOM_NO_GATE)
 			&& !IS_EXPLORE(pRoomIndex)
