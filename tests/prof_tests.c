@@ -76,21 +76,21 @@ SCENARIO("testing outputting character known proficiencies", "[ListKnownProficie
     {
         WHEN("the function is called")
         {
-            THEN("it should send a single line of text to the player buffer")
-            {
-                char_data* player = new char_data();
-                player->name = "player1";
-                player->pcdata = new pc_data();
-                player->desc = new descriptor_data();
-                player->desc->outbuf = "\n\r";
-                player->desc->outtop = 2;
-                player->desc->outsize = 100;
-                player->Profs()->SetChar(player);
+            // THEN("it should send a single line of text to the player buffer")
+            // {
+            //     char_data* player = new char_data();
+            //     player->name = "player1";
+            //     player->pcdata = new pc_data();
+            //     player->desc = new descriptor_data();
+            //     player->desc->outbuf = "\n\r";
+            //     player->desc->outtop = 2;
+            //     player->desc->outsize = 100;
+            //     player->Profs()->SetChar(player);
 
-                player->Profs()->ListKnownProficiencies(player);
+            //     player->Profs()->ListKnownProficiencies(player);
 
-                REQUIRE(player->desc->outbuf);
-            }
+            //     REQUIRE(player->desc->outbuf);
+            // }
         }
     }
 }

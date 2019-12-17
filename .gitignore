@@ -39,3 +39,4 @@ area/rift
 build/
 tests/*_tests
 tests/catch
+tests/libTestMain.a
