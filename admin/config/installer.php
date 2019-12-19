@@ -20,7 +20,7 @@ return [
 	'final' => [
 		'key' => true,
 		'publish' => false
-	],	
+	],
 	'requirements' => [
 		'php' => [
 			'openssl',
@@ -69,17 +69,20 @@ return [
 				'app_url'			   => 'required|url',
 				'log_channel'		   => 'required|string|max:50',
 				'player_directory'	  => 'required|string',
+				'code_directory'	  => 'required|string',
 				'database_connection'   => 'required|string|max:50',
-				'database_hostname'	 => 'required|string|max:50',
-				'database_port'		 => 'required|numeric',
-				'database_name'		 => 'required|string|max:50',
-				'database_username'	 => 'required|string|max:50',
-				'database_password'	 => (env('APP_ENV', 'production') === 'production' ? 'required|' : 'nullable|') . 'string|max:50',
-				'database_hostname2'	=> 'required|string|max:50',
-				'database_port2'		=> 'required|numeric',
-				'database_name2'		=> 'required|string|max:50',
-				'database_username2'	=> 'required|string|max:50',
-				'database_password2'	=> (env('APP_ENV', 'production') === 'production' ? 'required|' : 'nullable|') . 'string|max:50',
+				'rift_hostname'	 => 'required|string|max:50',
+				'rift_port'		 => 'required|numeric',
+				'rift_name'		 => 'required|string|max:50',
+				'rift_username'	 => 'required|string|max:50',
+				'rift_password'	 => (env('APP_ENV', 'production') === 'production' ? 'required|' : 'nullable|').
+				'string|max:50',
+				'rift_core_hostname'	=> 'required|string|max:50',
+				'rift_core_port'		=> 'required|numeric',
+				'rift_core_name'		=> 'required|string|max:50',
+				'rift_core_username'	=> 'required|string|max:50',
+				'rift_core_password'	=> (env('APP_ENV', 'production') === 'production' ? 'required|' : 'nullable|').
+				'string|max:50',
 				'broadcast_driver'	  => 'required|string|max:50',
 				'cache_driver'		  => 'required|string|max:50',
 				'session_driver'		=> 'required|string|max:50',
@@ -111,7 +114,7 @@ return [
 	'installed' => [
 		'redirectOptions' => [
 			'route' => [
-				'name' => 'welcome',
+				'name' => 'home',
 				'data' => [],
 			],
 			'abort' => [
@@ -145,6 +148,5 @@ return [
 	| Boolean value
 	|
 	*/
-	'updaterEnabled' => false,
-
+	'updaterEnabled' => false
 ];

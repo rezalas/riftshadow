@@ -35,6 +35,13 @@ class Kernel extends HttpKernel
 			\Illuminate\View\Middleware\ShareErrorsFromSession::class,
 			\App\Http\Middleware\VerifyCsrfToken::class,
 			\Illuminate\Routing\Middleware\SubstituteBindings::class,
+		],
+
+		'caninstall' => [
+			\App\Http\Vendor\LaravelInstaller\Middleware\CanInstall::class
+		],
+
+		'admin-menu' => [
 			\App\Http\Middleware\AdminMenuGenerator::class,
 		],
 

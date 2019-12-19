@@ -3,6 +3,7 @@
 namespace App\Http\Vendor\LaravelInstaller\Controllers;
 
 use App\Http\Vendor\LaravelInstaller\Helpers\EnvironmentManager;
+use Dotenv\Dotenv;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Validation\Rule;
@@ -18,6 +19,19 @@ class EnvironmentController extends BaseController
 	public function __construct(EnvironmentManager $environmentManager)
 	{
 		$this->EnvironmentManager = $environmentManager;
+	}
+
+	/**
+	 * Display the Environment page.
+	 *
+	 * @return \Illuminate\View\View
+	 */
+	public function environmentWizard()
+	{
+		$dotenv = Dotenv::create(base_path());
+		$envConfig = $dotenv->load();
+		
+		return view('vendor.installer.environment-wizard', compact('envConfig'));
 	}
 	
 	/**

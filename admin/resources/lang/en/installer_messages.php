@@ -1,6 +1,15 @@
 <?php
 
 return [
+	
+	/*
+	|--------------------------------------------------------------------------
+	| Installer Language Lines
+	|--------------------------------------------------------------------------
+	|
+	| The following language lines are used during the installer
+	|
+	*/
 
 	/**
 	 *
@@ -90,25 +99,27 @@ return [
 				'log_channel_placeholder' => 'channel_name',
 				'player_directory_label' => 'Player Directory',
 				'player_directory_placeholder' => '/../player/',
+				'code_directory_label' => 'Code Directory',
+				'code_directory_placeholder' => '/../code/',
 				'db_connection_label' => 'Database Connection',
 				'db_connection_label_mysql' => 'mysql',
 				'db_connection_label_sqlite' => 'sqlite',
 				'db_connection_label_pgsql' => 'pgsql',
 				'db_connection_label_sqlsrv' => 'sqlsrv',
-				'db_host_label' => 'Database Host',
-				'db_host_label2' => 'Core Database Host',
+				'db_rift_host_label' => 'Rift Database Host',
+				'db_rift_core_host_label' => 'Rift Core Database Host',
 				'db_host_placeholder' => 'Database Host',
-				'db_port_label' => 'Database Port',
-				'db_port_label2' => 'Core Database Port',
+				'db_rift_port_label' => 'Rift Database Port',
+				'db_rift_core_port_label' => 'Rift Core Database Port',
 				'db_port_placeholder' => 'Database Port',
-				'db_name_label' => 'Database Name',
-				'db_name_label2' => 'Core Database Name',
+				'db_rift_name_label' => 'Rift Database Name',
+				'db_rift_core_name_label' => 'Rift Core Database Name',
 				'db_name_placeholder' => 'Database Name',
-				'db_username_label' => 'Database User Name',
-				'db_username_label2' => 'Core Database User Name',
+				'db_rift_username_label' => 'Rift Database User Name',
+				'db_rift_core_username_label' => 'Rift Core Database User Name',
 				'db_username_placeholder' => 'Database User Name',
-				'db_password_label' => 'Database Password',
-				'db_password_label2' => 'Core Database Password',
+				'db_rift_password_label' => 'Rift Database Password',
+				'db_rift_core_password_label' => 'Rift Core Database Password',
 				'db_password_placeholder' => 'Database Password',
 
 				'app_tabs' => [
@@ -120,8 +131,10 @@ return [
 					'cache_placeholder' => 'Cache Driver',
 					'session_label' => 'Session Driver',
 					'session_placeholder' => 'Session Driver',
-					'queue_label' => 'Queue Driver',
-					'queue_placeholder' => 'Queue Driver',
+					'session_lifetime_label' => 'Session Lifetime',
+					'session_lifetime_placeholder' => 'Session Lifetime',
+					'queue_label' => 'Queue Connection',
+					'queue_placeholder' => 'Queue Connection',
 					'redis_label' => 'Redis Driver',
 					'redis_host' => 'Redis Host',
 					'redis_password' => 'Redis Password',
@@ -188,6 +201,7 @@ return [
 		'templateTitle' => 'Installation Finished',
 		'finished' => 'Application has been successfully installed.',
 		'migration' => 'Migration & Seed Console Output:',
+		'seeding_imports' => 'Seeding large datasets progress:',
 		'console' => 'Application Console Output:',
 		'log' => 'Installation Log Entry:',
 		'env' => 'Final .env File:',
