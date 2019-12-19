@@ -24,9 +24,9 @@ class AdminMenuGenerator
 					$menu->add(trans('menu.classes'), 'classes');
 					$menu->add(trans('menu.races'), 'races');
 					$menu->add(trans('menu.helpfiles'), 'helpfiles');
-					$menu->add(trans('menu.utilities.genDefs'), 'utilities.genDefs');
-					$menu->add(trans('menu.utilities.updateAreaIds'), 'utilities.updateAreaIds');
-					$menu->add(trans('menu.utilities.updateRoomIds'), 'utilities.updateRoomIds');
+					$menu->add(trans('menu.utilities.genDefs'), route('utilities.genDefs'));
+					$menu->add(trans('menu.utilities.updateAreaIds'), route('utilities.updateAreaIds'));
+					$menu->add(trans('menu.utilities.updateRoomIds'), route('utilities.updateRoomIds'));
 				}
 			}
 		});

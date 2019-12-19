@@ -100,7 +100,7 @@ class UtilitiesController extends Controller
 	public function updateAreaIds(Request $request)
 	{
 		$error = '';
-		WorldArea::orderBy('min_vnum')->chunk(100, function ($worldAreas) {
+		WorldArea::orderBy('min_vnum')->chunk(100, function ($worldAreas) use ($error) {
 			// TODO: Make this faster if it is slow
 			try {
 				foreach ($worldAreas as $idx => $worldArea) {
@@ -140,7 +140,7 @@ class UtilitiesController extends Controller
 	 */
 	public function updateRoomIds(Request $request)
 	{
-		WorldRoom::from('WorldRoom as wr')
+		WorldRoom::from('world_rooms as wr')
 			->select(
 				'wr.name',
 				'wrr0.room_id as 0_to_room',
@@ -156,7 +156,7 @@ class UtilitiesController extends Controller
 			->leftJoin('world_rooms as wrr3', 'wr.3_to_room', '=', 'wrr3.vnum')
 			->leftJoin('world_rooms as wrr4', 'wr.4_to_room', '=', 'wrr4.vnum')
 			->leftJoin('world_rooms as wrr5', 'wr.5_to_room', '=', 'wrr5.vnum')
-			->orderBy('vnum')
+			->orderBy('wr.vnum')
 			->limit(1)
 			->chunk(100, function ($rows) {
 				foreach ($rows as $idx => $row) {
@@ -203,6 +203,8 @@ class UtilitiesController extends Controller
 					}
 				}
 			});
+		
+		$redirect = redirect()->route('home');
 
 		return $redirect->with('message', trans('utilities.updateRoomIds'));
 	}

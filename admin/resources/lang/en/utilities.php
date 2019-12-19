@@ -11,7 +11,7 @@ return [
 	|
 	*/
 
-	'updateAreaIds' => 'World Area ID\'s re-sorted.  Bew Area ID\'s applied to World Rooms.',
+	'updateAreaIds' => 'World Area ID\'s re-sorted.  New Area ID\'s applied to World Rooms.',
 	'updateRoomIds' => 'World Room ID\'s re-sorted.  New Room ID\'s applied to World Rooms.',
 	'autogen' => [
 		'coldefs' => 'File: :defPath/autogen/coldefs.h has been populated.',
