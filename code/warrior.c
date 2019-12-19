@@ -3118,7 +3118,11 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 	chance *= .01;
 
 	if (IS_IMMORTAL(ch))
-		act("Chance of success is $i%, raw chance is $I%.", ch, (void *)((int)skill), (void *)((int)chance), TO_CHAR);
+	{
+		int successChance = (int)skill;
+		int rawChance = (int)chance;
+		act("Chance of success is $i%, raw chance is $I%.", ch, &successChance, &rawChance, TO_CHAR);
+	}
 
 	if (number_percent() > chance)
 	{
@@ -3885,7 +3889,11 @@ bool check_exploit_armor_break(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *expos
 	}
 
 	if (IS_IMMORTAL(ch))
-		act("Chance of destruction is $i%, chance of denting is $I%.", ch, (void *)((int)chance), (void *)((int)(chance * 1.5)), TO_CHAR);
+	{
+		int breakChance = (int)chance;
+		int dentChance = (int)(chance * 1.5);
+		act("Chance of destruction is $i%, chance of denting is $I%.", ch, &breakChance, &dentChance, TO_CHAR);
+	}
 
 	chance *= 1.5;
 

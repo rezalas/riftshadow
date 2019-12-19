@@ -2,6 +2,7 @@
 #define PROF_H
 
 #include <time.h>
+#include <vector>
 
 #define PFLAGS_NONE 0
 #define PFLAGS_BASIC 1
@@ -42,8 +43,14 @@ public:
 	bool		HasProf(char *profname) { return HasProf(ProfIndexLookup(profname)); }
 	int		GetProf(int psn) { return profs[psn]; }
 	int		GetProf(char *profname) { return GetProf(ProfIndexLookup(profname)); }
+	void	GetProfsTaughtByTrainer(char_data* ch, char_data* trainer);
+	void	TrainProficiency(char_data* ch, char_data* trainer, char* argument);
+	proficiency_type GetProficiency(int psn);
+	proficiency_type GetProficiency(char* profname);
 	float		ProfEffect(char *profname, float nArg = 0);
 	float		ProfEffect(int psn);
+	void		ListKnownProficiencies(char_data* player);
+	void		ListBasicProficiencies(char_data* player);
 	void		SetChar(char_data *nch) { ch = nch; }
 	void		SetProf(int profindex, int proflevel) { profs[profindex] = proflevel; }
 	void		WriteProfs(void *vfp);
@@ -63,6 +70,7 @@ private:
 	char_data	*ch;
 	int		points;
 	int		profs[MAX_PROFS];
+	static const std::vector<proficiency_type> prof_table;
 };
 
 extern sh_int psn_none;

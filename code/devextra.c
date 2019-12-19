@@ -1887,7 +1887,10 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, arg2);
 
 	if (check_horde(ch))
+	{
+		send_to_char("Only the weak let others hunt for them!\n\r", ch);
 		return;
+	}
 
 	if (!arg1 || !arg2 || (!is_number(arg2) && !IS_IMMORTAL(ch)))
 	{

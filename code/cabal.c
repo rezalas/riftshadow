@@ -34,10 +34,8 @@ bool check_horde(CHAR_DATA *ch)
 		send_to_char("Huh?\n\r", ch);
 		return true;
 	}
-	else
-	{
-		return false;
-	}
+	
+	return false;
 }
 
 void update_cskills(CHAR_DATA *ch)

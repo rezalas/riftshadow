@@ -16,6 +16,10 @@ Makefile
 Testing/
 CTestTestfile.cmake
 
+# Ninja files
+*.ninja
+*.ninja_*
+
 # Object files
 *.o
 libRiftCore.a
@@ -35,6 +39,7 @@ area/rift
 build/
 tests/*_tests
 tests/catch
+tests/libTestMain.a
 
 # Vagrant directories and files
 /.vagrant

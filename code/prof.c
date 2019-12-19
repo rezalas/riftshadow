@@ -12,6 +12,11 @@
 #include "lookup.h"
 #include "tables.h"
 
+// #include <string>
+// #include "./include/fmt/core.h"
+// #include "./include/fmt/format.h"
+// #include "./include/fmt/format-inl.h"
+
 //don't forget to increment max_prof in prof.h and clean make if your new proficiency goes over MAX_PROF
 //or there are SIGSEGVs and axes to the face in your future
 CProficiencies prof_none; 
@@ -32,7 +37,7 @@ const struct prof_level_type prof_level_table[MAX_PLEVEL] =
 /* note: profs can be referred to either by psn or by profname, use psn in the rare cases where it's checked very often
         otherwise use psn_none and refer by profname */
 
-const struct proficiency_type prof_table [] =
+const std::vector<proficiency_type> CProficiencies::prof_table =
 {
 	//ppsn, 		name,       		cost, 		mnlevel,requires, 	flags
 	{ &psn_swimming, 	"swimming", 		18, 		1, 	NULL,		PFLAGS_BASIC 	},
@@ -177,6 +182,26 @@ bool is_affected_prof(CHAR_DATA *ch, char *prof)
 #define OBJ_VNUM_MEAT_CHUNKS 75
 #define OBJ_VNUM_CAMPFIRE 76
 
+proficiency_type CProficiencies::GetProficiency(int psn)
+{
+	return prof_table[psn];
+}
+
+proficiency_type CProficiencies::GetProficiency(char* profname)
+{
+	int max = std::size(prof_table);
+	proficiency_type result;
+	for(int i = 0; i < max; i++)
+	{
+		if(prof_table[i].name == profname)
+		{
+			result = prof_table[i];
+			break;
+		}	
+	}
+	return result;
+}
+
 void prof_tracking(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *victim;
@@ -299,7 +324,8 @@ void prof_butcher(CHAR_DATA *ch, char *argument)
 		ch, obj, 0, TO_CHAR);
 	extract_obj(obj);
 	int nummeat = UMAX(1, (ch->Profs()->GetProf("butchery") + 2) / 3);
-	act("After the butchering process, you are left with $i pieces of meat.", ch, (void *)nummeat, 0, TO_CHAR);
+
+	act("After the butchering process, you are left with $i pieces of meat.", ch, &nummeat, 0, TO_CHAR);
 	for(int i = 0; i < nummeat; i++)
 	{
 		meat = create_object(get_obj_index(OBJ_VNUM_MEAT_CHUNKS), ch->level);
@@ -347,127 +373,180 @@ void prof_bandage(CHAR_DATA *ch, char *argument)
 
 bool CProficiencies::InterpCommand(char *command, char *argument)
 {
-	int i, pindex;
+	if(strlen(command) == 0)
+		return false;
 
-	// Quick Test - Morglum
-	return false;
+	for(auto i = 0; prof_cmd_table[i].name != NULL; i++)
+	{
+		auto foundPos = std::string(prof_cmd_table[i].name).find(command);
+		if(foundPos == std::string::npos)
+			continue;
+		
+		auto pindex = CProficiencies::ProfIndexLookup(prof_cmd_table[i].requires);
 
-	for(i = 0; prof_cmd_table[i].name != NULL; i++)
-		if(!str_prefix(command, prof_cmd_table[i].name)
-		&& 
-			(!str_cmp(prof_cmd_table[i].requires,"none") ||
-			(pindex = CProficiencies::ProfIndexLookup(prof_cmd_table[i].requires)) == -1 ||
-			ch->Profs()->HasProf(pindex) == true))
-			{
-				(prof_cmd_table[i].cmd) (ch, argument);
-				return true;
-			}
+		if(prof_cmd_table[i].requires == "none" || pindex == -1 || ch->Profs()->HasProf(pindex))
+		{
+			(prof_cmd_table[i].cmd) (ch, argument);
+			return true;
+		}
+	}
 			
 	return false;
+}
+
+void CProficiencies::ListKnownProficiencies(char_data* player)
+{
+	std::vector<std::string> responseList;
+	auto limit = std::size(this->profs);
+	for(int i = 0; i < limit ; i++)
+	{
+		if(this->profs[i] < 0)
+			continue;
+		
+		char charBuffer[MSL];
+		char* profName = ch->Profs()->GetProficiency(i).name;
+		//auto profStr = fmt::format("You are {} at {}s.\n\r",ch->Profs()->GetSkillLevelName(i), profName);
+		//responseList.push_back(profStr.c_str());
+		sprintf(charBuffer,"You are %s at %s.\n\r", ch->Profs()->GetSkillLevelName(i), profName);
+		auto outStr = std::string(charBuffer);
+		responseList.push_back(outStr);
+	}
+	if(std::size(responseList) == 0)
+	{
+		send_to_char("You currently have no proficiencies.\n\r", player);
+	}
+	else
+	{
+		send_to_char("Your proficiencies are:\n\r", player);
+		for(std::string response : responseList)
+		{
+			send_to_char(response.c_str(), player);
+		}
+	}	
+}
+
+void CProficiencies::ListBasicProficiencies(char_data* player)
+{
+	char buf[MSL];
+
+	send_to_char("The basic proficiencies available to adventurers are:\n\r", player);
+		for(int i = 0; prof_table[i].name != NULL; i++)
+		{
+			if(prof_table[i].flags & PFLAGS_BASIC)
+			{
+				sprintf(buf,"%-20s  ", prof_table[i].name);
+				if((i+1) % 3 == 0)
+				{
+					int slen = strlen(buf), j;
+					for(j = 1; buf[slen - j] == ' '; j++)
+					;
+					buf[slen - j + 1] = '\0';
+				}
+				send_to_char(buf,ch);
+				if((i+1) % 3 == 0)
+					send_to_char("\n\r", player);
+			}
+		}
+
+	send_to_char("\n\rMany other proficiencies are known to Shalaran adventurers, but you must first find a teacher.\n\r",player);
 }
 
 void do_proficiencies(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *iterator, *trainer = NULL;
-	char buf[MSL];
 	bool bBreak= false;
 
 	if(IS_NPC(ch))
 		return;
 	for(iterator = ch->in_room->people; iterator && !bBreak; iterator = iterator->next_in_room)
+	{
+		if(!IS_NPC(iterator))
+			continue;
 		for(int i = 0; i < MAX_PROFS_TAUGHT_BY_MOB && !bBreak; i++)
-			if(IS_NPC(iterator) && iterator->pIndexData->profs_taught[i] > -1)
+			if(iterator->pIndexData->profs_taught[i] > -1)
 			{
 				bBreak = true;
 				trainer = iterator;
+				break;
 			}
+	}
 	if(!trainer && str_cmp(argument, "basic"))
 	{
-		bool bFound= false;
-		for(int i = 0; prof_table[i].name != NULL; i++)
-			if(ch->Profs()->GetProf(i) > -1)
-			{
-				if(!bFound)
-					send_to_char("Your proficiencies are:\n\r",ch);
-				bFound = true;
-				sprintf(buf,"You are %s at %s.\n\r", ch->Profs()->GetSkillLevelName(i), prof_table[i].name);
-				send_to_char(buf,ch);
-			}
-		if(!bFound)
-			send_to_char("You currently have no proficiencies.\n\r",ch);
+		ch->Profs()->ListKnownProficiencies(ch);
 		return;
 	}
 	else if (!str_cmp(argument, "basic"))
 	{
-		send_to_char("The basic proficiencies available to adventurers are:\n\r",ch);
-		for(int i = 0; prof_table[i].name != NULL; i++)
-                        if(prof_table[i].flags & PFLAGS_BASIC)
-                        {
-                                sprintf(buf,"%-20s  ", prof_table[i].name);
-				if((i+1) % 3 == 0)
-				{
-					int slen = strlen(buf), j;
-					for(j = 1; buf[slen - j] == ' '; j++)
-						;
-					buf[slen - j + 1] = '\0';
-				}
-                                send_to_char(buf,ch);
-                                if((i+1) % 3 == 0)
-                                        send_to_char("\n\r",ch);
-                        }
-		send_to_char(
-		"\n\rMany other proficiencies are known to Shalaran adventurers, but you must first find a teacher.\n\r",ch);
+		ch->Profs()->ListBasicProficiencies(ch);
 		return;
 	}
 	if(!trainer)
 		return;
 	if(argument[0] != '\0')
 	{
-		char arg1[MSL];
-		argument = one_argument(argument, arg1);
-		if(str_cmp(arg1, "train"))
-			return send_to_char("Syntax: proficiencies train <proficiency>\n\r",ch);
-		int prof = CProficiencies::ProfIndexLookup(argument), i;
-		for(i = 0; i < MAX_PROFS_TAUGHT_BY_MOB; i++)
-			if(trainer->pIndexData->profs_taught[i] == prof)
-				break;
-		if(prof == -1 || i == MAX_PROFS_TAUGHT_BY_MOB)
-			return send_to_char("You can't study that here.\n\r",ch);
-		if(ch->Profs()->GetProf(prof) > 0)
-			return send_to_char("You are already familiar with that proficiency.\n\r",ch);
-		if(prof_table[prof].cost > ch->Profs()->GetPoints())
-			return send_to_char("You don't have enough points to study that proficiency.\n\r",ch);
-		if(prof_table[prof].requires && CProficiencies::ProfIndexLookup(prof_table[prof].requires) != -1 
-			&& ch->Profs()->GetProf(CProficiencies::ProfIndexLookup(prof_table[prof].requires)) < 0)
-			return send_to_char("That proficiency requires understanding of a proficiency you do not possess.\n\r",ch);
-		if(prof_table[prof].minlevel > ch->level)
-			return send_to_char("You are not advanced enough in your guild to learn that proficiency.\n\r",ch);
-		act("You ask $N to teach you about $t.", ch, prof_table[prof].name, trainer, TO_CHAR);
-		for(i = 0; prof_msg_table[prof].learning_msgs[i] != NULL && i < 5; i++)
-		{
-			if(i == 4 || !prof_msg_table[prof].learning_msgs[i+1])
-			{
-				sprintf(buf,"%sYou are now proficient at %s.%s\n\r",
-					get_char_color(ch,"yellow"),prof_table[prof].name,END_COLOR(ch));
-                		char *tptr = talloc_string(buf); 
-                		RS.Queue.AddToQueue((i + 1) * 2, 2, send_to_char, tptr, ch);				
-			}
-			RS.Queue.AddToQueue((i + 1) * 2, 5, act, prof_msg_table[prof].learning_msgs[i], ch, 0, trainer, TO_CHAR);
-		}
-		ch->Profs()->DeductPoints(prof_table[prof].cost);
-		ch->Profs()->SetProf(prof, 1);
-		WAIT_STATE(ch, (i + 1) * 2);
+		ch->Profs()->TrainProficiency(ch, trainer, argument);
 		return;
 	}
+
+	ch->Profs()->GetProfsTaughtByTrainer(ch, trainer);
+}
+
+void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* argument)
+{
+	char buf[MSL];
+	char arg1[MSL];
+	argument = one_argument(argument, arg1);
+	if(str_cmp(arg1, "train"))
+		return send_to_char("Syntax: proficiencies train <proficiency>\n\r",ch);
+	int prof = CProficiencies::ProfIndexLookup(argument), i;
+	for(i = 0; i < MAX_PROFS_TAUGHT_BY_MOB; i++)
+		if(trainer->pIndexData->profs_taught[i] == prof)
+			break;
+	if(prof == -1 || i == MAX_PROFS_TAUGHT_BY_MOB)
+		return send_to_char("You can't study that here.\n\r",ch);
+	if(ch->Profs()->GetProf(prof) > 0)
+		return send_to_char("You are already familiar with that proficiency.\n\r",ch);
+	if(prof_table[prof].cost > ch->Profs()->GetPoints())
+		return send_to_char("You don't have enough points to study that proficiency.\n\r",ch);
+	if(prof_table[prof].requires && CProficiencies::ProfIndexLookup(prof_table[prof].requires) != -1 
+		&& ch->Profs()->GetProf(CProficiencies::ProfIndexLookup(prof_table[prof].requires)) < 0)
+		return send_to_char("That proficiency requires understanding of a proficiency you do not possess.\n\r",ch);
+	if(prof_table[prof].minlevel > ch->level)
+		return send_to_char("You are not advanced enough in your guild to learn that proficiency.\n\r",ch);
+	act("You ask $N to teach you about $t.", ch, prof_table[prof].name, trainer, TO_CHAR);
+	for(i = 0; prof_msg_table[prof].learning_msgs[i] != NULL && i < 5; i++)
+	{
+		if(i == 4 || !prof_msg_table[prof].learning_msgs[i+1])
+		{
+			sprintf(buf,"%sYou are now proficient at %s.%s\n\r",
+				get_char_color(ch,"yellow"),prof_table[prof].name,END_COLOR(ch));
+					char *tptr = talloc_string(buf); 
+					RS.Queue.AddToQueue((i + 1) * 2, 2, send_to_char, tptr, ch);				
+		}
+		RS.Queue.AddToQueue((i + 1) * 2, 5, act, prof_msg_table[prof].learning_msgs[i], ch, 0, trainer, TO_CHAR);
+	}
+	ch->Profs()->DeductPoints(prof_table[prof].cost);
+	ch->Profs()->SetProf(prof, 1);
+	WAIT_STATE(ch, (i + 1) * 2);
+}
+
+void CProficiencies::GetProfsTaughtByTrainer(char_data* ch, char_data* trainer)
+{
+	char buf[MSL];
 	act("You may learn the following proficiencies from $N:", ch, 0, trainer, TO_CHAR);
 	for(int i = 0; prof_table[i].name != NULL; i++)
+	{
 		for(int j = 0; j < MAX_PROFS_TAUGHT_BY_MOB; j++)
+		{
 			if(trainer->pIndexData->profs_taught[j] == i)
 			{
 				sprintf(buf,"%-16s | %d points\n\r", prof_table[i].name, prof_table[i].cost);
 				send_to_char(buf,ch);
 			}
+		}
+	}
 }
+
 void CProficiencies::CheckImprove(int pindex, int chance) //chance is out of 10000
 {
 	if(profs[pindex] >= 10 || profs[pindex] < 1)
