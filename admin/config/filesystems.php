@@ -43,12 +43,26 @@ return [
 
 	'disks' => [
 
+		// Players directory for player files
 		'players' => [
 			'driver' => 'local',
 			'root' => base_path().env('PLAYER_DIRECTORY', '/../player/'),
+			'visibility' => 'private',
 		],
 
-		// TODO: Add disk for config file in root of project dir
+		// Code directory for cpp code
+		'code' => [
+			'driver' => 'local',
+			'root' => base_path().env('CODE_DIRECTORY', '/../code/'),
+			'visibility' => 'private',
+		],
+
+		// Config file for cpp server
+		'config' => [
+			'driver' => 'local',
+			'root' => base_path().'/../config.json',
+			'visibility' => 'private',
+		],
 
 		'local' => [
 			'driver' => 'local',
