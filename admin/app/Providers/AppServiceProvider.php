@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\{ClassTable, RaceTable};
+use App\Services\Database\DatabaseManager;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +18,9 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		//
+		$this->app->singleton('db', function ($app) {
+			return new DatabaseManager($app, $app['db.factory']);
+		});
 	}
 
 	/**
@@ -28,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
 	{
 		// Alias Blade includes
 		Blade::include('includes.modelselect', 'modelselect');
+
+		// Set connection resolver
+		Model::setConnectionResolver($this->app['db']);
 
 		// Alias ORM relations
 		Relation::morphMap([
