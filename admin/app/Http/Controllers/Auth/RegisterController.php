@@ -84,7 +84,7 @@ class RegisterController extends Controller
 		});
 
 		// Merge the orphaned file records with the files collection
-		$merged_files = $orphaned_player_file_records->merge($player_files)->unique()->values();
+		$merged_files = $player_files->merge($orphaned_player_file_records)->unique()->values();
 
 		// Remove files from the collection that are already assigned to users with a lowercase string comparison to
 		// prevent casing issues
@@ -104,7 +104,8 @@ class RegisterController extends Controller
 	 * @param string $pass
 	 * @return boolean
 	 */
-	private function testPlayerFilePass($player, $pass = '') {
+	private function testPlayerFilePass($player, $pass = '')
+	{
 		$player_file_contents = Storage::disk('players')->get($player . '.plr');
 
 		$lines = preg_split('/\n|\r\n/', $player_file_contents);
@@ -112,9 +113,9 @@ class RegisterController extends Controller
 		$keys = [];
 
 		foreach ($lines as $key => $val) {
-			$val_array = explode(' ',$val);
+			$val_array = explode(' ', $val);
 			$new_key = $val_array[0];
-			$keys[$new_key] = ['line' => ($key + 1), 'data' => join('', array_slice($val_array,1))];
+			$keys[$new_key] = ['line' => ($key + 1), 'data' => join('', array_slice($val_array, 1))];
 		}
 
 		if (isset($keys['Pass']['data'])) {
@@ -142,8 +143,9 @@ class RegisterController extends Controller
 					$player_file_pass = $data['player_passes'][$value];
 
 					// TODO: Configurable enforced password length
-					if (strlen($player_file_pass) < 4) {
-						$fail('Password for ' . $value . ' must be >= 4 characters long.');
+					$min = 4;
+					if (strlen($player_file_pass) < $min) {
+						$fail(trans('auth.player_files.file_pass', compact(['value', 'min'])));
 						// Has to return otherwise it tries to use crypt with a password under 4 characters.
 						// Doing that triggers an exception.
 						return;
@@ -153,7 +155,7 @@ class RegisterController extends Controller
 					$player_file_test = $this->testPlayerFilePass($value, $player_file_pass);
 					
 					if ($player_file_test === false) {
-						$fail('Password mismatch for file ' . $value);
+						$fail(trans('auth.player_files.pass_mismatch', compact('value')));
 					}
 				}
 			]

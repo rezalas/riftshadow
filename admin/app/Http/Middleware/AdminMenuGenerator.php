@@ -21,8 +21,12 @@ class AdminMenuGenerator
 			
 			if ($request->user()) {
 				if ($request->user()->trust >= 58) {
-					$classes = $menu->add('Classes', 'classes');
-					$races = $menu->add('Races', 'races');
+					$menu->add(trans('menu.classes'), 'classes');
+					$menu->add(trans('menu.races'), 'races');
+					$menu->add(trans('menu.helpfiles'), 'helpfiles');
+					$menu->add(trans('menu.utilities.genDefs'), 'utilities.genDefs');
+					$menu->add(trans('menu.utilities.updateAreaIds'), 'utilities.updateAreaIds');
+					$menu->add(trans('menu.utilities.updateRoomIds'), 'utilities.updateRoomIds');
 				}
 			}
 		});

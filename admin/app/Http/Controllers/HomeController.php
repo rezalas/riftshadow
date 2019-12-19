@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-
 class HomeController extends Controller
 {
 	/**
@@ -26,7 +25,7 @@ class HomeController extends Controller
 	{
 		// TODO: Shove trust level in database
 		$isAdmin = $request->user()->trust > 51;
-
+		
 		return view('home', [
 			'isAdmin' => $isAdmin
 		]);

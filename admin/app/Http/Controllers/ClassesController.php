@@ -13,7 +13,7 @@ class ClassesController extends Controller
 	 *
 	 * @return void
 	 */
-	public function __contstruct()
+	public function __construct()
 	{
 		// Users lower than trust level(Tru or Levl < 58) not permitted
 		$this->middleware('admin:58');
@@ -86,7 +86,11 @@ class ClassesController extends Controller
 		
 		$class->save();
 
-		return redirect()->route('classes.index')->with('message', 'Creation successful.');;
+		return redirect()
+			->route('classes.index')
+			->with('message', trans('general.action.success', [
+				'action' => trans('general.crud.creation')
+			]));
 	}
 
 	/**
@@ -110,7 +114,7 @@ class ClassesController extends Controller
 	{
 		return view('classes.edit', array_merge([
 			'class' => $class
-		], $this->genSelects($class, true)));
+		], $this->genSelects($class)));
 	}
 
 	/**
@@ -155,7 +159,11 @@ class ClassesController extends Controller
 		
 		$class->save();
 
-		return redirect()->route('classes.edit', ['class' => $class->id])->with('message', 'Edit successful.');;
+		return redirect()
+			->route('classes.edit', ['class' => $class->id])
+			->with('message', trans('general.action.success', [
+				'action' => trans('general.crud.edit')
+			]));
 	}
 
 	/**
@@ -180,7 +188,11 @@ class ClassesController extends Controller
 	public function destroy(ClassTable $class)
 	{
 		$class->delete();
-		return redirect()->route('classes.index')->with('message', 'Deletion successful.');
+		return redirect()
+			->route('classes.index')
+			->with('message', trans('general.action.success', [
+				'action' => trans('general.crud.deletion')
+			]));
 	}
 
 	/**
@@ -188,16 +200,14 @@ class ClassesController extends Controller
 	 * whether they start selected or not
 	 *
 	 * @param \Illuminate\Database\Eloquent\Model|null $model The currently edited model instance
-	 * @param boolean $selected Whether to start selected or not, defaults to false
 	 * @return array
 	 */
-	private function genSelects($model = null, bool $selected = false)
+	private function genSelects($model = null)
 	{
 		return [
 			'statSelect' => [
 				'name' => 'prime',
 				'className' => '',
-				'selected' => $selected,
 				'opts' => DLookup::where('category', 'stats')->get(),
 				'optValue' => 'value',
 				'optTitle' => 'name',
@@ -207,7 +217,6 @@ class ClassesController extends Controller
 			'alignSelect' => [
 				'name' => 'align',
 				'className' => '',
-				'selected' => $selected,
 				'opts' => DLookup::where('category', 'align_allowed')->get(),
 				'optValue' => 'value',
 				'optTitle' => 'name',
@@ -217,7 +226,6 @@ class ClassesController extends Controller
 			'ctypeSelect' => [
 				'name' => 'ctype',
 				'className' => '',
-				'selected' => $selected,
 				'opts' => DLookup::where('category', 'magical_class')->get(),
 				'optValue' => 'value',
 				'optTitle' => 'name',
@@ -227,7 +235,6 @@ class ClassesController extends Controller
 			'statusSelect' => [
 				'name' => 'status',
 				'className' => '',
-				'selected' => $selected,
 				'opts' => DLookup::where('category', 'race_status')->get(),
 				'optValue' => 'value',
 				'optTitle' => 'name',

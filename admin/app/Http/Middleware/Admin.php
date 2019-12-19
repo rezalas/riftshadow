@@ -18,10 +18,10 @@ class Admin
 	{
 		if (!is_null($request->user())) {
 			if (!$this->canTrust($request->user(), $targetLevel)) {
-				return redirect('home');
+				return redirect('/');
 			}
 		} else {
-			return redirect('home');
+			return redirect('/');
 		}
 
 		return $next($request);
@@ -46,6 +46,7 @@ class Admin
 				break;
 			}
 		}
+
 		return $shouldTrust;
 	}
 }

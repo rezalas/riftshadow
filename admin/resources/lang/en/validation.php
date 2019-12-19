@@ -145,6 +145,45 @@ return [
 	|
 	*/
 
-	'attributes' => [],
+	'attributes' => [
+		'name' => 'name',
+		// Races CRUD
+		'short_name' => 'short name',
+		'imm_name' => 'imm name',
+		'pcrace' => 'pc race',
+		'race_status' => 'race status',
+		'act_flags' => 'act flags',
+		'aff_flags' => 'aff flags',
+		'off_flags' => 'off flags',
+		'imm_flags' => 'imm flags',
+		'res_flags' => 'res flags',
+		'vuln_flags' => 'vuln flags',
+		'form_flags' => 'form flags',
+		'body_parts' => 'body parts',
+		'arms' => 'arms',
+		'legs' => 'legs',
+		'size' => 'size',
+		'age_mod' => 'age mod',
+		'deathtime' => 'death time',
+		'align' => 'align',
+		'xp_add' => 'xp add',
+		'max_str' => 'max str',
+		'max_int' => 'max int',
+		'max_wis' => 'max wis',
+		'max_dex' => 'max dex',
+		'max_con' => 'max con',
+		// Classes CRUD
+		'abbrev' => 'abbrev',
+		'prime' => 'prime',
+		'align' => 'align',
+		'weapon' => 'weapon',
+		'adept' => 'adept',
+		'hp_min' => 'hp min',
+		'hp_max' => 'hp max',
+		'base_group' => 'base group',
+		'default_group' => 'default group',
+		'ctype' => 'casting type',
+		'status' => 'status',
+	],
 
 ];
