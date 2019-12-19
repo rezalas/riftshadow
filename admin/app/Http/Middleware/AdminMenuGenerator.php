@@ -26,7 +26,8 @@ class AdminMenuGenerator
 					$menu->add(trans('menu.helpfiles'), 'helpfiles');
 					$menu->add(trans('menu.utilities.genDefs'), route('utilities.genDefs'));
 					$menu->add(trans('menu.utilities.updateAreaIds'), route('utilities.updateAreaIds'));
-					$menu->add(trans('menu.utilities.updateRoomIds'), route('utilities.updateRoomIds'));
+					// TODO: Implement
+					//$menu->add(trans('menu.utilities.updateRoomIds'), route('utilities.updateRoomIds'));
 				}
 			}
 		});

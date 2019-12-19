@@ -33,7 +33,8 @@ Route::middleware(['admin:52', 'admin-menu'])->group(function () {
 	// Utilities
 	Route::get('utilities/gen-defs', 'UtilitiesController@genDefs')->name('utilities.genDefs');
 	Route::get('utilities/update-area-ids', 'UtilitiesController@updateAreaIds')->name('utilities.updateAreaIds');
-	Route::get('utilities/update-room-ids', 'UtilitiesController@updateRoomIds')->name('utilities.updateRoomIds');
+	// TODO: Implement
+	//Route::get('utilities/update-room-ids', 'UtilitiesController@updateRoomIds')->name('utilities.updateRoomIds');
 });
 
 // Overwrite the controller for this route
