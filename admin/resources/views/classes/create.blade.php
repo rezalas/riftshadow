@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<form class="" action="{{route('classes.store')}}" method="POST">
-	@csrf
-	<div class="">
+<div class="">
+	<div style="cursor: pointer;" onclick="this.remove();">
+		{{session('message') !== null ? session('message') . ' x' : ''}}
+	</div>
+	<form class="" action="{{route('classes.store')}}" method="POST">
+		@csrf
 		@if ($errors->any())
 			<div class="">
 				<ul>
@@ -13,45 +16,45 @@
 				</ul>
 			</div>
 		@endif
-		New Class
+		<strong>@lang('classes.header_new')</strong>
 		<div class="">
-			Name: <input name="name" value="{{old('name')}}" />
+			<strong>@lang('classes.fields.name'): </strong> <input name="name" value="{{old('name')}}" />
 		</div>
 		<div class="">
-			Abbrev: <input name="abbrev" value="{{old('abbrev')}}" />
+			<strong>@lang('classes.fields.abbrev'): </strong> <input name="abbrev" value="{{old('abbrev')}}" />
 		</div>
 		<div class="">
-			Prime: @modelselect($statSelect)
+			<strong>@lang('classes.fields.prime'): </strong> @modelselect($statSelect)
 		</div>
 		<div class="">
-			Align: @modelselect($alignSelect)
+			<strong>@lang('classes.fields.align'): </strong> @modelselect($alignSelect)
 		</div>
 		<div class="">
-			Weapon: <input name="weapon" value="{{old('weapon')}}" />
+			<strong>@lang('classes.fields.weapon'): </strong> <input name="weapon" value="{{old('weapon')}}" />
 		</div>
 		<div class="">
-			<s>Adept: <input name="adept"  value="{{old('adept')}}" disabled title="Not implemented" /></s>
+			<strong>@lang('classes.fields.adept'): </strong> <input name="adept"  value="{{old('adept')}}" disabled title="Not implemented" /></s>
 		</div>
 		<div class="">
-			<s>HP Range: <input name="hp_min" value="{{old('hp_min')}}" size="2" maxlength="2" disabled title="Not implemented" />-<input name="hp_max" value="{{old('hp_max')}}" size="2" maxlength="2" disabled title="Not implemented" /></s>
+			<strong>@lang('classes.fields.hp_range'): </strong> <input name="hp_min" value="{{old('hp_min')}}" size="2" maxlength="2" disabled title="Not implemented" />-<input name="hp_max" value="{{old('hp_max')}}" size="2" maxlength="2" disabled title="Not implemented" /></s>
 		</div>
 		<div class="">
-			Base Group: <input name="base_group" value="{{old('base_group')}}" />
+			<strong>@lang('classes.fields.base_group'): </strong> <input name="base_group" value="{{old('base_group')}}" />
 		</div>
 		<div class="">
-			Default Group: <input name="default_group" value="{{old('default_group')}}" />
+			<strong>@lang('classes.fields.default_group'): </strong> <input name="default_group" value="{{old('default_group')}}" />
 		</div>
 		<div class="">
-			Casting Type: @modelselect($ctypeSelect)
+			<strong>@lang('classes.fields.casting_type'): </strong> @modelselect($ctypeSelect)
 		</div>
 		<div class="">
-			Status: @modelselect($statusSelect)
+			<strong>@lang('classes.fields.status'): </strong> @modelselect($statusSelect)
 		</div>
 		<div class="">
 			<button type="submit" class="">
-				Create
+				@lang('general.button_save')
 			</button>
 		</div>
-	</div>
-</form>
+	</form>
+</div>
 @endsection

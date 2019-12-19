@@ -70,12 +70,12 @@
 								</select>
 								
 								<div>
-									<button type="button" class="btn btn-danger" @click="resetPlayerFiles">Reset selection</button>
+									<button type="button" class="btn btn-danger" @click="resetPlayerFiles">@lang('registration.reset_selection')</button>
 								</div>
 
 								@if ($errors->has('player_files.*'))
 								<div class="invalid-feedback mb-2" role="alert">
-									<strong>There were problems creating the account:</strong><br />
+									<strong>@lang('registration.problems_creating_account'):</strong><br />
 									@foreach ($errors->get('player_files.*') as $message)
 										{{$message[0]}}<br />
 									@endforeach

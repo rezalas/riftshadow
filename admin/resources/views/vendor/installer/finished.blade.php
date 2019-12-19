@@ -11,22 +11,31 @@
 
 @section('container')
 
-	@if(session('message')['dbOutputLog'])
-		<p><strong><small>{{ trans('installer_messages.final.migration') }}</small></strong></p>
-		<pre><code>{{ session('message')['dbOutputLog'] }}</code></pre>
-	@endif
+	<div id="finished">
+		@if(session('message') && session('message')['dbOutputLog'])
+			<p><strong>{{ trans('installer_messages.final.migration') }}</strong></p>
+			<pre><code>{{ session('message')['dbOutputLog'] }}</code></pre>
+			<p><strong>{{ trans('installer_messages.final.seeding_imports') }}</strong></p>
+			<queue-progress></queue-progress>
+		@endif
 
-	<p><strong><small>{{ trans('installer_messages.final.console') }}</small></strong></p>
-	<pre><code>{{ $finalMessages }}</code></pre>
+		<p><strong>{{ trans('installer_messages.final.console') }}</strong></p>
+		<pre><code>{{ $finalMessages }}</code></pre>
 
-	<p><strong><small>{{ trans('installer_messages.final.log') }}</small></strong></p>
-	<pre><code>{{ $finalStatusMessage }}</code></pre>
+		<p><strong>{{ trans('installer_messages.final.log') }}</strong></p>
+		<pre><code>{{ $finalStatusMessage }}</code></pre>
 
-	<p><strong><small>{{ trans('installer_messages.final.env') }}</small></strong></p>
-	<pre><code>{{ $finalEnvFile }}</code></pre>
+		<p><strong>{{ trans('installer_messages.final.env') }}</strong></p>
+		<pre><code>{{ $finalEnvFile }}</code></pre>
 
-	<div class="buttons">
-		<a href="{{ url('/') }}" class="button">{{ trans('installer_messages.final.exit') }}</a>
+		<form action="{{ url('/') }}">
+			<div class="buttons">
+				<button type="submit" class="button" :disabled="!canExit">{{ trans('installer_messages.final.exit') }}</button>
+			</div>
+		</form>
 	</div>
-
 @endsection
+
+@push('scripts')
+	<script type="text/javascript" src="{{mix('/installer/js/finished.js')}}"></script>
+@endpush

@@ -3,20 +3,25 @@
 @section('content')
 <div class="">
 	<div class="">
+		<div style="cursor: pointer;" onclick="this.remove();">
+			{{session('message') !== null ? session('message') . ' x' : ''}}
+		</div>
 		@if($isAdmin)
 		<div class="">
 			<div class="">
 				@foreach(Menu::get('admin')->roots() as $menu)
-				<a href="{{$menu->url()}}" class="">
-					{{$menu->title}}
-				</a>
+				<div>
+					<a href="{{$menu->url()}}" class="">
+						{{$menu->title}}
+					</a>
+				</div>
 				@endforeach
 			</div>
 		</div>
 		@endif
 		<div class="">
 			<div class="">
-				<div class="">Dashboard</div>
+				<div class="">@lang('general.dashboard')</div>
 
 				<div class="">
 					@if(session('status'))
@@ -25,7 +30,7 @@
 						</div>
 					@endif
 
-					You are logged in!
+					@lang('general.logged_in')
 				</div>
 			</div>
 		</div>

@@ -12,9 +12,7 @@
 		<link href="{{ mix('/installer/css/style.css') }}" rel="stylesheet"/>
 		@yield('style')
 		<script>
-			window.Laravel = <?php echo json_encode([
-				'csrfToken' => csrf_token(),
-			]); ?>
+			window.Laravel = @json(['csrfToken' => csrf_token()]);
 		</script>
 	</head>
 	<body>
@@ -84,7 +82,7 @@
 					@endif
 					@if(session()->has('errors'))
 						<div class="alert alert-danger" id="error_alert">
-							<button type="button" class="close" id="close_alert" data-dismiss="alert" aria-hidden="true">
+							<button type="button" class="close" id="close_alert" data-dismiss="alert" aria-hidden="true" onclick="document.getElementById('error_alert').style.display = 'none';">
 								 <i class="fas fa-times" aria-hidden="true"></i>
 							</button>
 							<h4>
@@ -102,13 +100,6 @@
 				</div>
 			</div>
 		</div>
-		@yield('scripts')
-		<script type="text/javascript">
-			var x = document.getElementById('error_alert');
-			var y = document.getElementById('close_alert');
-			y.onclick = function() {
-				x.style.display = "none";
-			};
-		</script>
+		@stack('scripts')
 	</body>
 </html>

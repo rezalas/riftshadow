@@ -3,14 +3,14 @@
 @section('content')
 <div class="">
 	<div class="">
-		Are you sure you want to delete {{$class->name}}?
+		@lang('general.are_you_sure_delete', ['name' => $race->name])
 		<div>
-			<form action="{{route('races.destroy', ['class' => $class->id])}}" method="POST">
+			<form action="{{route('races.destroy', ['race' => $race->id])}}" method="POST">
 				@csrf
 				@method('DELETE')
-				<button type="submit">Yes</button>
+				<button type="submit">@lang('general.button_yes')</button>
 			</form>
-			<a href="{{route('races.index')}}">No</a>
+			<a href="{{route('races.index')}}">@lang('general.button_no')</a>
 		</div>
 	</div>
 </div>
