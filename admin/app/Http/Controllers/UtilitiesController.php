@@ -78,10 +78,10 @@ class UtilitiesController extends Controller
 
 		$defPath = basename(env('CODE_DIRECTORY')).'/';
 
-		Storage::disk('code')->put('autogen/coldefs_test.h', $coldefs);
-		Storage::disk('code')->put('autogen/fundefs_test.h', $fundefs);
-		Storage::disk('code')->put('temp_interp_test.c', $tempinterps);
-		Storage::disk('code')->put('autogen/stddefs_test.h', $stddefs);
+		Storage::disk('code')->put('autogen/coldefs.h', $coldefs);
+		Storage::disk('code')->put('autogen/fundefs.h', $fundefs);
+		Storage::disk('code')->put('temp_interp.c', $tempinterps);
+		Storage::disk('code')->put('autogen/stddefs.h', $stddefs);
 
 		return redirect()
 			->route('home')
