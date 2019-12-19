@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-class BitLookup extends Model
+class WorldRoomRid extends Model
 {
 	protected $database = 'rift_core';
 
-	protected $table = 'bit_lookup';
+	protected $table = 'world_rooms_rid';
 
 	/**
 	 * Indicates if the model should be timestamped.

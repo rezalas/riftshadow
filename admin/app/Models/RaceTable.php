@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
 class RaceTable extends Model
 {
-	protected $connection = 'rift_core';
+	protected $database = 'rift_core';
 
 	protected $table = 'race_table';
 
@@ -17,69 +15,69 @@ class RaceTable extends Model
 	/**
 	 * Get all the defines for a race
 	 */
-	public function defines()
+	//public function defines()
+	//{
+	//	return $this->morphToMany(Define::class, 'definable');
+	//}
+
+	//public function flags()
+	//{
+	//	return $this->belongsToMany(Flag::class);
+	//}
+
+	public function getRaceStatusAccessorAttribute()
 	{
-		return $this->morphToMany(Define::class, 'definable');
+		return $this->dLookups('race_status', $this->race_status, 'name');
 	}
 
-	public function flags()
+	public function getActFlagsAccessorAttribute()
 	{
-		return $this->belongsToMany(Flag::class);
+		return $this->bitLookups('act_flags', $this->act_flags);
 	}
 
-	public function getRaceStatusAttribute($originalValue)
+	public function getAffFlagsAccessorAttribute()
 	{
-		return $this->dLookups('race_status', $originalValue, 'name');
+		return $this->bitLookups('aff_flags', $this->aff_flags);
 	}
 
-	public function getActFlagsAttribute($originalValue)
+	public function getOffFlagsAccessorAttribute()
 	{
-		return $this->bitLookups('act_flags', $originalValue);
+		return $this->bitLookups('off_flags', $this->off_flags);
 	}
 
-	public function getAffFlagsAttribute($originalValue)
+	public function getImmFlagsAccessorAttribute()
 	{
-		return $this->bitLookups('aff_flags', $originalValue);
+		return $this->bitLookups('imm_flags', $this->imm_flags);
 	}
 
-	public function getOffFlagsAttribute($originalValue)
+	public function getResFlagsAccessorAttribute()
 	{
-		return $this->bitLookups('off_flags', $originalValue);
+		return $this->bitLookups('res_flags', $this->res_flags);
 	}
 
-	public function getImmFlagsAttribute($originalValue)
+	public function getVulnFlagsAccessorAttribute()
 	{
-		return $this->bitLookups('imm_flags', $originalValue);
+		return $this->bitLookups('vuln_flags', $this->vuln_flags);
 	}
 
-	public function getResFlagsAttribute($originalValue)
+	public function getFormFlagsAccessorAttribute()
 	{
-		return $this->bitLookups('res_flags', $originalValue);
+		return $this->bitLookups('form_flags', $this->form_flags);
 	}
 
-	public function getVulnFlagsAttribute($originalValue)
+	public function getBodyPartsAccessorAttribute()
 	{
-		return $this->bitLookups('vuln_flags', $originalValue);
+		return $this->bitLookups('body_parts', $this->body_parts);
 	}
 
-	public function getFormFlagsAttribute($originalValue)
+	public function getSizeAccessorAttribute()
 	{
-		return $this->bitLookups('form_flags', $originalValue);
+		return $this->dLookups('size', $this->size, 'name');
 	}
 
-	public function getBodyPartsAttribute($originalValue)
+	public function getAlignAccessorAttribute()
 	{
-		return $this->bitLookups('body_parts', $originalValue);
-	}
-
-	public function getSizeAttribute($originalValue)
-	{
-		return $this->dLookups('size', $originalValue, 'name');
-	}
-
-	public function getAlignAttribute($originalValue)
-	{
-		return $this->dLookups('align_allowed', $originalValue, 'name');
+		return $this->dLookups('align_allowed', $this->align, 'name');
 	}
 
 

@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-class BitLookup extends Model
+class WorldArea extends Model
 {
 	protected $database = 'rift_core';
 
-	protected $table = 'bit_lookup';
+	protected $table = 'world_areas';
 
 	/**
 	 * Indicates if the model should be timestamped.
@@ -14,4 +14,11 @@ class BitLookup extends Model
 	 * @var bool
 	 */
 	public $timestamps = false;
+	
+	/**
+	* The primary key associated with the table.
+	*
+	* @var string
+	*/
+	protected $primaryKey = 'a_id';
 }

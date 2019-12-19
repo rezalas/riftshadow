@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-class BitLookup extends Model
+class ClimateTable extends Model
 {
 	protected $database = 'rift_core';
 
-	protected $table = 'bit_lookup';
+	protected $table = 'climate_table';
 
 	/**
 	 * Indicates if the model should be timestamped.

@@ -2,11 +2,9 @@
 
 namespace App\Models;
 
-class BitLookup extends Model
+class HelpFile extends Model
 {
-	protected $database = 'rift_core';
-
-	protected $table = 'bit_lookup';
+	protected $table = 'helpfiles';
 
 	/**
 	 * Indicates if the model should be timestamped.
