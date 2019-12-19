@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use App\Facades\Schema;
 
 class CreateClassTable extends Migration
 {
@@ -13,7 +13,7 @@ class CreateClassTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::connection('rift_core')->create('class_table', function (Blueprint $table) {
+		Schema::database('rift_core')->create('class_table', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('name', 50);
 			$table->string('who_name');
@@ -37,6 +37,6 @@ class CreateClassTable extends Migration
 	 */
 	public function down()
 	{
-		//Schema::connection('rift_core')->dropIfExists('class_table');
+		Schema::database('rift_core')->dropIfExists('class_table');
 	}
 }

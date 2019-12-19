@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use App\Facades\Schema;
 
 class CreateRaceTable extends Migration
 {
@@ -13,7 +13,7 @@ class CreateRaceTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::connection('rift_core')->create('race_table', function (Blueprint $table) {
+		Schema::database('rift_core')->create('race_table', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
 			$table->string('short_name');
@@ -29,8 +29,8 @@ class CreateRaceTable extends Migration
 			$table->bigInteger('vuln_flags')->default(0);
 			$table->bigInteger('form_flags')->default(0);
 			$table->bigInteger('body_parts')->default(0);
-			$table->tinyInteger('arms')->default(0);
-			$table->tinyInteger('legs')->default(0);
+			$table->smallInteger('arms')->default(0);
+			$table->smallInteger('legs')->default(0);
 			$table->smallInteger('size')->default(0);
 			$table->float('age_mod')->default(0);
 			$table->smallInteger('deathtime')->default(0);
@@ -53,6 +53,6 @@ class CreateRaceTable extends Migration
 	 */
 	public function down()
 	{
-		//Schema::connection('rift_core')->dropIfExists('race_table');
+		Schema::database('rift_core')->dropIfExists('race_table');
 	}
 }

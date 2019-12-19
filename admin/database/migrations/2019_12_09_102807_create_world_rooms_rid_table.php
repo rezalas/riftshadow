@@ -2,32 +2,33 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use App\Facades\Schema;
 
 class CreateWorldRoomsRidTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::connection('rift_core')->create('world_rooms_rid', function (Blueprint $table) {
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::database('rift_core')->create('world_rooms_rid', function (Blueprint $table) {
 			$table->integer('room_id');
 			$table->integer('vnum');
+			$table->bigIncrements('id');
 			//TODO: Add after move to relational/ORM?
-            //$table->timestamps();
-        });
-    }
+			//$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        //Schema::connection('rift_core')->dropIfExists('world_rooms_rid');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::database('rift_core')->dropIfExists('world_rooms_rid');
+	}
 }

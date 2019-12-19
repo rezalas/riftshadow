@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use App\Facades\Schema;
+use Illuminate\Support\Facades\Schema;
 
-class CreateTheftTable extends Migration
+class CreateInductionsTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -13,13 +13,15 @@ class CreateTheftTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::database('rift_core')->create('theft', function (Blueprint $table) {
+		Schema::create('inductions', function (Blueprint $table) {
 			$table->bigIncrements('ID');
 			$table->string('ch', 50);
 			$table->string('victim', 50);
-			$table->string('obj', 50);
-			$table->smallInteger('success')->default(0);
-			// TODO: Add after move to relational/ORM
+			$table->integer('cabal')->default(0);
+			$table->bigInteger('ctime')->default(0);
+			$table->string('chsite', 50);
+			$table->string('victimsite', 50);
+			$table->index(['ID', 'cabal', 'ctime'], 'ID');
 			//$table->timestamps();
 		});
 	}
@@ -31,6 +33,6 @@ class CreateTheftTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::database('rift_core')->dropIfExists('theft');
+		Schema::dropIfExists('inductions');
 	}
 }

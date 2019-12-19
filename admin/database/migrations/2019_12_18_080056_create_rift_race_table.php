@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use App\Facades\Schema;
+use Illuminate\Support\Facades\Schema;
 
-class CreateSkillGroupsTable extends Migration
+class CreateRiftRaceTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -13,10 +13,13 @@ class CreateSkillGroupsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::database('rift_core')->create('skill_groups', function (Blueprint $table) {
+		Schema::create('race', function (Blueprint $table) {
 			$table->string('name', 50);
-			$table->string('skill', 50);
+			$table->string('type', 50);
+			$table->string('value0', 50);
+			$table->string('value1', 50);
 			$table->bigIncrements('id');
+			//$table->timestamps();
 		});
 	}
 
@@ -27,6 +30,6 @@ class CreateSkillGroupsTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::database('rift_core')->dropIfExists('skill_groups');
+		Schema::dropIfExists('race');
 	}
 }
