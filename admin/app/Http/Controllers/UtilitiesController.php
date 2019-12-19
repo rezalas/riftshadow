@@ -141,7 +141,7 @@ class UtilitiesController extends Controller
 	public function updateRoomIds(Request $request)
 	{
 		// Not implemented yet
-		// TODO: Implement	
+		// TODO: Implement
 		
 		$redirect = redirect()->route('home');
 
