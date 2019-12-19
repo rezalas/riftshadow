@@ -140,69 +140,8 @@ class UtilitiesController extends Controller
 	 */
 	public function updateRoomIds(Request $request)
 	{
-		WorldRoom::from('world_rooms as wr')
-			->select(
-				'wr.name',
-				'wrr0.room_id as 0_to_room',
-				'wrr1.room_id as 1_to_room',
-				'wrr2.room_id as 2_to_room',
-				'wrr3.room_id as 3_to_room',
-				'wrr4.room_id as 4_to_room',
-				'wrr5.room_id as 5_to_room'
-			)
-			->leftJoin('world_rooms as wrr0', 'wr.0_to_room', '=', 'wrr0.vnum')
-			->leftJoin('world_rooms as wrr1', 'wr.1_to_room', '=', 'wrr1.vnum')
-			->leftJoin('world_rooms as wrr2', 'wr.2_to_room', '=', 'wrr2.vnum')
-			->leftJoin('world_rooms as wrr3', 'wr.3_to_room', '=', 'wrr3.vnum')
-			->leftJoin('world_rooms as wrr4', 'wr.4_to_room', '=', 'wrr4.vnum')
-			->leftJoin('world_rooms as wrr5', 'wr.5_to_room', '=', 'wrr5.vnum')
-			->orderBy('wr.vnum')
-			->limit(1)
-			->chunk(100, function ($rows) {
-				foreach ($rows as $idx => $row) {
-					if ($row->room_id != $idx) {
-						DB::transaction(function () {
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('0_to_room', $row->room_id)
-								->update(['0_to_room' => $idx]);
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('1_to_room', $row->room_id)
-								->update(['1_to_room' => $idx]);
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('2_to_room', $row->room_id)
-								->update(['2_to_room' => $idx]);
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('3_to_room', $row->room_id)
-								->update(['3_to_room' => $idx]);
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('4_to_room', $row->room_id)
-								->update(['4_to_room' => $idx]);
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('5_to_room', $row->room_id)
-								->update(['5_to_room' => $idx]);
-							// The below code should mimic the below SQL:
-							// UPDATE world_rooms SET room_id=$count WHERE vnum=$row[0]
-							DB::database('rift_core')
-								->table('world_rooms')
-								->sharedLock()
-								->where('vnum', $row->area_id)
-								->update(['room_id' => $idx]);
-						});
-					}
-				}
-			});
+		// Not implemented yet
+		// TODO: Implement	
 		
 		$redirect = redirect()->route('home');
 
