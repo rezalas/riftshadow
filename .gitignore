@@ -35,3 +35,9 @@ area/rift
 build/
 tests/*_tests
 tests/catch
+
+# Vagrant directories and files
+/.vagrant
+/vendor
+/Homestead.json
+/Homestead.yaml
