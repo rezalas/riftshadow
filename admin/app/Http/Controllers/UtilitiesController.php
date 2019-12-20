@@ -320,9 +320,10 @@ class UtilitiesController extends Controller
 					}
 				}
 		
-				if ($f_type === "string" && $first_flag === "") {
+				if ($f_type === "string" && $first_flag === "" && $f_name !== 'description') {
 					$go = false;
 				}
+
 				if ($f_name === "max_str") {
 					$f_name = "max_stats[0]";
 				}
@@ -359,24 +360,28 @@ class UtilitiesController extends Controller
 		
 				if ($go) {
 					$content .= $line;
+					$pchar = '.';
+					if ($tableName === 'class_table') {
+						$pchar = '->';
+					}
 					if ($f_name === "do_fun_name") {
 						$m_var .= "tvar.do_fun.SetPtr((void *)do_fun_table[i].name);";
 					} elseif ($f_type === "int") {
 						if ($first_flag === "") {
-							$m_var .= "tvar.$f_name.SetToDouble(row[$d_name]);";
+							$m_var .= "tvar{$pchar}{$f_name}.SetToDouble(row[{$d_name}]);";
 						} else {
-							$m_var .= "tvar.$f_name = row.RowToNumber($d_name);";
+							$m_var .= "tvar{$pchar}{$f_name} = row.RowToNumber({$d_name});";
 						}
 					} elseif (
 						$f_type === "string" ||
 						$f_type === "blob" ||
-						$f_type === 'datetime' // TODO: Fix this hack please
+						$f_type === 'datetime' // FIXME: Fix this hack please
 					) {
-						$m_var .= "tvar.$f_name.NoDeallocSetTo(row[$d_name]);";
+						$m_var .= "tvar{$pchar}{$f_name}.NoDeallocSetTo(row[{$d_name}]);";
 					} elseif ($f_type === "real") {
-						$m_var .= "tvar.$f_name = row.RowToFloat($d_name);";
+						$m_var .= "tvar{$pchar}{$f_name} = row.RowToFloat({$d_name});";
 					} else {
-						die("Error with field types! - $f_name, $f_type");
+						die("Error with field types! - {$f_name}, {$f_type}");
 					}
 		
 					// Add the allocate_exits macro for loading rooms from

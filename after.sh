@@ -26,17 +26,17 @@
 #sudo apt-get install -y nodejs
 
 # Get a copy of the signing key for cmake's developer
-wget -O /etc/apt/trusted.gpg.d/kitware.asc https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null
+sudo wget -O /etc/apt/trusted.gpg.d/kitware.asc https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null
 
 # Add the cmake repo to sources list
 sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu bionic main'
 
 # Add another repo to sources list for gcc-9, g++-9, and update
-sudo apt-add-repository ppa:ubuntu-toolchain-r/test
+#sudo apt-add-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 
 # Install deps
-sudo apt-get install -y ninja-build cmake gcc-9 g++-9 libmariadb-dev libmariadb-dev-compat
+sudo apt-get install -y ninja-build cmake gcc g++ libmariadb-dev libmariadb-dev-compat
 
 # Update alternatives
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
+#sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
