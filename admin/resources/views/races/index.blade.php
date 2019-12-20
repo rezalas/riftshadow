@@ -2,9 +2,6 @@
 
 @section('content')
 <div class="">
-	<div style="cursor: pointer;" onclick="this.remove();">
-		{{session('message') !== null ? session('message') . ' x' : ''}}
-	</div>
 	<div class="">
 		<a class="" href="{{route('races.create')}}">
 			@lang('races.index.new')

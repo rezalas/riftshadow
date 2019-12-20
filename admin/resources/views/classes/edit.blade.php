@@ -2,9 +2,6 @@
 
 @section('content')
 <div class="">
-	<div style="cursor: pointer;" onclick="this.remove();">
-		{{session('message') !== null ? session('message') . ' x' : ''}}
-	</div>
 	<form class="" action="{{route('classes.update', ['class' => $class->id])}}" method="POST">
 		@csrf
 		@method('PUT')

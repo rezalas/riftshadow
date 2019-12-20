@@ -74,7 +74,8 @@
 			</div>
 		</nav>
 
-		<main class="py-4">
+		<main class="py-4 container">
+			@include('message')
 			@yield('content')
 		</main>
 	</div>

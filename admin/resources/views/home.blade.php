@@ -3,9 +3,6 @@
 @section('content')
 <div class="">
 	<div class="">
-		<div style="cursor: pointer;" onclick="this.remove();">
-			{{session('message') !== null ? session('message') . ' x' : ''}}
-		</div>
 		@if($isAdmin)
 		<div class="">
 			<div class="">
