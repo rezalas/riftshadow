@@ -1,0 +1,23 @@
+ip: 192.168.10.10 # can be changed
+memory: 2048 # can be changed
+cpus: 2 # can be changed
+provider: virtualbox # can be changed depending on provider
+authorize: ~/.ssh/id_ecdsa.pub # must be changed
+keys:
+  - ~/.ssh/id_ecdsa # must be changed
+folders:
+  - map: ./
+    to: /home/vagrant/code
+    #type: "nfs" #optional
+sites:
+  - map: admin.riftshadow.org # can be changed
+    to: /home/vagrant/code/admin/public
+databases:
+  - rift
+  - rift_core
+features:
+  - mariadb: false
+  - ohmyzsh: false
+  - webdriver: false
+name: riftshadow
+hostname: riftshadow

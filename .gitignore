@@ -40,3 +40,9 @@ build/
 tests/*_tests
 tests/catch
 tests/libTestMain.a
+
+# Vagrant directories and files
+/.vagrant
+/vendor
+/Homestead.json
+/Homestead.yaml

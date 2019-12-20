@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="">
-    <div class="">
-        Are you sure you want to delete {{$class->name}}?
-        <div>
-            <form action="{{route('classes.destroy', ['class' => $class->id])}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit">Yes</button>
-            </form>
-            <a href="{{route('classes.index')}}">No</a>
-        </div>
-    </div>
+	<div class="">
+		@lang('general.are_you_sure_delete', ['name' => $class->name])
+		<div>
+			<form action="{{route('classes.destroy', ['class' => $class->id])}}" method="POST">
+				@csrf
+				@method('DELETE')
+				<button type="submit">@lang('general.button_yes')</button>
+			</form>
+			<a href="{{route('classes.index')}}">@lang('general.button_no')</a>
+		</div>
+	</div>
 </div>
 @endsection
