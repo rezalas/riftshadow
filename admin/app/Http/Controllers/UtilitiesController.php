@@ -76,7 +76,7 @@ class UtilitiesController extends Controller
 		$tempinterps = $this->genTempInterps();
 		$stddefs = $this->genStdDefs();
 
-		$defPath = basename(env('CODE_DIRECTORY')).'/';
+		$defPath = basename(config('filesystems.code_directory'));
 
 		Storage::disk('code')->put('autogen/coldefs.h', $coldefs);
 		Storage::disk('code')->put('autogen/fundefs.h', $fundefs);
@@ -85,10 +85,12 @@ class UtilitiesController extends Controller
 
 		return redirect()
 			->route('home')
-			->with(
-				'message',
-				view('utilities.message', compact('defPath'))->render()
-			);
+			->with('message', [
+				trans('utilities.autogen.coldefs', compact('defPath')),
+				trans('utilities.autogen.fundefs', compact('defPath')),
+				trans('utilities.autogen.tempinterps', compact('defPath')),
+				trans('utilities.autogen.stddefs', compact('defPath'))
+			]);
 	}
 
 	/**

@@ -26,11 +26,9 @@ class ClassesController extends Controller
 	 */
 	public function index()
 	{
-		$modeles = ClassTable::orderBy('name', 'asc')->get();
+		$classes = ClassTable::orderBy('name', 'asc')->get();
 
-		return view('classes.index', [
-			'classes' => $modeles
-		]);
+		return view('classes.index', compact('classes'));
 	}
 
 	/**

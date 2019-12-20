@@ -87,4 +87,11 @@ return [
 
 	],
 
+	// Player file directory
+
+	'player_directory' => env('PLAYER_DIRECTORY', '/../player/'),
+
+	// Code directory for cpp files and autogen files
+
+	'code_directory' => env('CODE_DIRECTORY', '/../code/'),
 ];

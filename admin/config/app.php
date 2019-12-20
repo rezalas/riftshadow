@@ -228,4 +228,38 @@ return [
 
 	],
 
+	// Blacklist env variables from appearing in the debug screen
+	'debug_blacklist' => [
+		'_ENV' => [
+			'APP_KEY',
+			'RIFT_DB_HOST',
+			'RIFT_DB_PORT',
+			'RIFT_DB_DATABASE',
+			'RIFT_DB_USERNAME',
+			'RIFT_DB_PASSWORD',
+			'RIFT_CORE_DB_HOST',
+			'RIFT_CORE_DB_PORT',
+			'RIFT_CORE_DB_DATABASE',
+			'RIFT_CORE_DB_USERNAME',
+			'RIFT_CORE_DB_PASSWORD',
+		],
+
+		'_SERVER' => [
+			'APP_KEY',
+			'RIFT_DB_HOST',
+			'RIFT_DB_PORT',
+			'RIFT_DB_DATABASE',
+			'RIFT_DB_USERNAME',
+			'RIFT_DB_PASSWORD',
+			'RIFT_CORE_DB_HOST',
+			'RIFT_CORE_DB_PORT',
+			'RIFT_CORE_DB_DATABASE',
+			'RIFT_CORE_DB_USERNAME',
+			'RIFT_CORE_DB_PASSWORD',
+		],
+
+		'_POST' => [
+			'password',
+		],
+	],
 ];
