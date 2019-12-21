@@ -1526,14 +1526,17 @@ void do_open(CHAR_DATA *ch, char *argument)
 
 	/* open the other side */
 	auto to_room = pexit->u1.to_room;
-	auto pexit_rev = to_room->exit[rev_dir[door]];
-	if (to_room != NULL && pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
+	if(to_room != NULL)
 	{
-		REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
-
-		for (auto rch = to_room->people; rch != NULL; rch = rch->next_in_room)
+		auto pexit_rev = to_room->exit[rev_dir[door]];
+		if (pexit_rev != NULL && pexit_rev->u1.to_room == ch->in_room)
 		{
-			act("The $T opens.", rch, NULL, pexit_rev->keyword != NULL ? pexit_rev->keyword : "door", TO_CHAR);
+			REMOVE_BIT(pexit_rev->exit_info, EX_CLOSED);
+
+			for (auto rch = to_room->people; rch != NULL; rch = rch->next_in_room)
+			{
+				act("The $T opens.", rch, NULL, pexit_rev->keyword != NULL ? pexit_rev->keyword : "door", TO_CHAR);
+			}
 		}
 	}
 }
@@ -1632,17 +1635,18 @@ void do_close(CHAR_DATA *ch, char *argument)
 
 	/* close the other side */
 	auto to_room = pexit->u1.to_room;
-	auto pexit_rev = to_room->exit[rev_dir[door]];
-	if (to_room != NULL
-		&& (pexit_rev = to_room->exit[rev_dir[door]]) != 0
-		&& pexit_rev->u1.to_room == ch->in_room)
+	if(to_room != NULL)
 	{
-		CHAR_DATA *rch;
-
-		SET_BIT(pexit_rev->exit_info, EX_CLOSED);
-		for (rch = to_room->people; rch != NULL; rch = rch->next_in_room)
+		auto pexit_rev = to_room->exit[rev_dir[door]];
+		if (pexit_rev != 0 && pexit_rev->u1.to_room == ch->in_room)
 		{
-			act("The $T closes.", rch, NULL, pexit_rev->keyword, TO_CHAR);
+			CHAR_DATA *rch;
+
+			SET_BIT(pexit_rev->exit_info, EX_CLOSED);
+			for (rch = to_room->people; rch != NULL; rch = rch->next_in_room)
+			{
+				act("The $T closes.", rch, NULL, pexit_rev->keyword, TO_CHAR);
+			}
 		}
 	}
 }
