@@ -4,17 +4,18 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	OBJ_DATA *urn, *corpse;
 
-	if (find_urn(ch))
+	urn = find_urn(ch);
+	if (urn != NULL && urn->value[3] >= corpse->level)
 	{
 		send_to_char("You already have a dark vessel in your possession.\n\r", ch);
-		return;
+		return;	
 	}
 
 	corpse = get_obj_here(ch, target_name);
 
 	if (!corpse || !str_cmp(target_name, ""))
 	{
-		send_to_char("You don't see that here.\n\r", ch);
+		send_to_char("You fail to select a corpse and waste your dark energies.\n\r", ch);
 		return;
 	}
 
@@ -31,16 +32,25 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	urn = create_object(get_obj_index(OBJ_VNUM_URN), 0);
+	bool isNewUrn = false;
+	if(urn == NULL)
+	{
+		urn = create_object(get_obj_index(OBJ_VNUM_URN), 0);
+		if (!urn) // something went wrong, stop the creation
+			return;
+		
+		isNewUrn = true;
+	}
 
-	if (!urn)
-		return;
 
 	urn->level = ch->level;
-	urn->value[4] = 0;
 	urn->value[3] = corpse->level;
 
-	obj_to_char(urn, ch);
+	if(isNewUrn)
+	{
+		urn->value[4] = 0;
+		obj_to_char(urn, ch);
+	}
 
 	SET_BIT(corpse->wear_flags, ITEM_NO_SAC);
 	REMOVE_BIT(corpse->wear_flags, ITEM_TAKE);
@@ -53,6 +63,13 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	send_to_char("You remove the corpse's heart and squeeze the blood out of it, hardening it into a solid object.\n\r", ch);
 
 	RS.Queue.AddToQueue(4, 2, make_urn, ch, corpse);
+	
+	if(isNewUrn == false)
+	{
+		RS.Queue.AddToQueue(6, 2, send_to_char, "You drink the remaining blood from your old vessel, expelling each drop into the new one as your body convulses!\n\r The old vessel drops from your hand as it turns to ash.\n\r", ch);
+		RS.Queue.AddToQueue(7, 5, act, "$n drinks a thick fluid from a sanguine object and begins convulsing as they expel the fluid into the newly made vessel!", ch, 0, 0, TO_ROOM);
+		RS.Queue.AddToQueue(8, 5, act, "$n shudders, releasing the sanguine object as it turns to ash.", ch, 0, 0, TO_ROOM);
+	}
 }
 
 void make_urn(CHAR_DATA *ch, OBJ_DATA *corpse)
@@ -128,7 +145,16 @@ void power_urn(CHAR_DATA *ch, int charges)
 
 	if (urn->value[4] + charges > urn->value[3])
 	{
-		send_to_char("The blood overflows your sated vessel, wasting the new strength.\n\r", ch);
+		if(urn->value[4] == urn->value[3])
+		{
+			send_to_char("The blood overflows your sated vessel, wasting the new strength.\n\r", ch);
+		}
+		else
+		{
+			urn->value[4] = urn->value[3];
+			send_to_char("The blood saturates your now sated vessel, wasting any excess strength.\n\r", ch);
+		}
+		
 		return;
 	}
 
@@ -1520,17 +1546,24 @@ void do_drain(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (corpse->item_type == ITEM_CORPSE_PC && ((corpse->level + 6) < (ch->level)))
-	{
-		send_to_char("That corpse is not powerful enough.\n\r", ch);
-		return;
-	}
+	/*
+	* This bit is commented out to enable necromancers to prey on weakened corpses
+	* of low level mobs and characters. This can be disabled by simply uncommenting
+	* the below code if you want to set more stringent limits on how wicked
+	* a necromancer can really be.
+	*/
 
-	if (corpse->item_type == ITEM_CORPSE_NPC && ((corpse->level + 6) < ch->level))
-	{
-		send_to_char("That corpse is not powerful enough.\n\r", ch);
-		return;
-	}
+	// if (corpse->item_type == ITEM_CORPSE_PC && ((corpse->level + 6) < (ch->level)))
+	// {
+	// 	send_to_char("That corpse is not powerful enough.\n\r", ch);
+	// 	return;
+	// }
+
+	// if (corpse->item_type == ITEM_CORPSE_NPC && ((corpse->level + 6) < ch->level))
+	// {
+	// 	send_to_char("That corpse is not powerful enough.\n\r", ch);
+	// 	return;
+	// }
 
 	if (IS_SET(corpse->extra_flags, CORPSE_NO_ANIMATE))
 	{
@@ -1543,7 +1576,11 @@ void do_drain(CHAR_DATA *ch, char *argument)
 		act("You successfully drain $p of its blood!", ch, corpse, 0, TO_CHAR);
 		act("$n crouches over $p, chanting softly as $e desiccates it.", ch, corpse, 0, TO_ROOM);
 
-		blood = URANGE(1, ch->level / 15, corpse->item_type == ITEM_CORPSE_NPC ? 3 : 4);
+		long modifier = corpse->item_type == ITEM_CORPSE_PC ? 4 : 8;
+		long minBloodScore = 1;
+		long adjustedCorpseScore = (corpse->level / modifier <= minBloodScore) ? minBloodScore :  corpse->level / modifier;
+		
+		blood = URANGE(minBloodScore, adjustedCorpseScore, ch->level / modifier);
 
 		power_urn(ch, blood);
 
