@@ -5,13 +5,14 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *urn, *corpse;
 
 	urn = find_urn(ch);
+	corpse = get_obj_here(ch, target_name);
+	
 	if (urn != NULL && urn->value[3] >= corpse->level)
 	{
 		send_to_char("You already have a dark vessel in your possession.\n\r", ch);
 		return;	
 	}
 
-	corpse = get_obj_here(ch, target_name);
 
 	if (!corpse || !str_cmp(target_name, ""))
 	{
