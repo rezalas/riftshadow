@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iterator>
 #include "merc.h"
 #include "handler.h"
 #include "recycle.h"

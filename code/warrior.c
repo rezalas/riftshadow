@@ -4972,7 +4972,6 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 	int type, dir;
 	char buf[MSL];
 	char *direction;
-	EXIT_DATA *pexit;
 
 	if (argument[0] == '\0' && !IS_NPC(ch))
 	{
@@ -5001,11 +5000,9 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 	{
 		type = -2;
 
-		for (dir = 0; dir <= 5; dir++)
+		for (auto exit : ch->in_room->exit)
 		{
-			pexit = ch->in_room->exit[dir];
-
-			if (pexit != NULL)
+			if (exit != NULL)
 			{
 				type = -1;
 				break;
@@ -5015,12 +5012,11 @@ void do_outflank(CHAR_DATA *ch, char *argument)
 		if (type == -2)
 			return;
 
+		auto size = static_cast<int>(std::size(ch->in_room->exit)) - 1;
 		while (type == -1)
 		{
-			dir = number_range(0, 5);
-			pexit = ch->in_room->exit[dir];
-
-			if (pexit != NULL)
+			dir = number_range(0, size);
+			if (ch->in_room->exit[dir] != NULL)
 				type = dir;
 		}
 	}

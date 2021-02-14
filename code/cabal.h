@@ -7,6 +7,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <iterator>
 #include "merc.h"
 #include "recycle.h"
 #include "tables.h"

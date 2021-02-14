@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iterator>
 #include "merc.h"
 #include "interp.h"
 #include "tables.h"
