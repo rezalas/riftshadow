@@ -955,8 +955,7 @@ void spell_informant(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void do_howl(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch, *vch_next;
-	int exits = 0, dir;
-	EXIT_DATA *pexit;
+	int exits = 0;
 
 	if (get_skill(ch, gsn_howl) == 0)
 	{
@@ -983,9 +982,9 @@ void do_howl(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (dir = 0; dir <= 5; dir++)
+	for (auto pexit : ch->in_room->exit)
 	{
-		if ((pexit = ch->in_room->exit[dir]) != NULL && !IS_SET(pexit->exit_info, EX_CLOSED))
+		if (pexit != NULL && !IS_SET(pexit->exit_info, EX_CLOSED))
 			exits++;
 	}
 

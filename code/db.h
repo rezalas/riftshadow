@@ -41,6 +41,7 @@
 #include <time.h>
 #include <sys/types.h>
 #include <sys/time.h>
+#include <iterator>
 #include "merc.h"
 #include "db2.h"
 #include "recycle.h"

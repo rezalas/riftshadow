@@ -1631,7 +1631,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *obj;
 	CHAR_DATA *rch;
 	char *direction;
-	int door, i = 0, counter = 0, time = 0;
+	int door = 0, i = 0, counter = 0, time = 0;
 
 	one_argument(argument, arg);
 
@@ -1703,13 +1703,9 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 
 	send_to_char(".\n\r", ch);
 
-	for (door = 0; door <= 5; door++)
+	for(auto pexit : location->exit)
 	{
-		EXIT_DATA *pexit;
 		char ebuf[500];
-		int i;
-
-		pexit = location->exit[door];
 
 		if (pexit != NULL)
 		{
@@ -1733,6 +1729,8 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 				pexit->description[0] != '\0' ? pexit->description : "(none).\n\r");
 			send_to_char(buf, ch);
 		}
+
+		door++;
 	}
 
 	send_to_char("Characters who have passed through:\n\r", ch);
@@ -2903,12 +2901,12 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
 	if (IS_NPC(victim))
 	{
-		for (i = 0; i <= 9; i++)
+		for (auto victim_cast_spell : victim->pIndexData->cast_spell)
 		{
-			if (victim->pIndexData->cast_spell[i] == NULL)
+			if (victim_cast_spell == NULL)
 				break;
 
-			sprintf(buf, "Mobile casts spell '%s'.\n\r", victim->pIndexData->cast_spell[i]);
+			sprintf(buf, "Mobile casts spell '%s'.\n\r", victim_cast_spell);
 			send_to_char(buf, ch);
 		}
 	}

@@ -445,10 +445,12 @@ void spell_conflagration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (i = 0; i <= 6; i++)
+	i = 0;
+	for (auto exit : ch->in_room->exit)
 	{
-		if (ch->in_room->exit[i])
+		if (exit) 
 			break;
+		i++;
 	}
 
 	if (i == 6)
@@ -489,19 +491,20 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 {
 	CHAR_DATA *rch;
 	ROOM_AFFECT_DATA raf;
-
-	int i;
+	bool found = false;
 
 	if (is_affected_room(room, gsn_conflagration))
 		return false;
 
-	for (i = 0; i <= 6; i++)
+	for (auto exit : room->exit)
 	{
-		if (room->exit[i])
+		if (exit != NULL) {
+			found = true;
 			break;
+		}
 	}
 
-	if (i == 6)
+	if (!found)
 		return false;
 
 	if ((room->sector_type && room->sector_type == SECT_WATER)
@@ -964,9 +967,9 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *vch, *vch_next;
 	EXIT_DATA *pexit;
 	ROOM_INDEX_DATA *to_room;
-	int i;
 	char *direction;
 	char buf[MAX_STRING_LENGTH];
+	bool found = false;
 
 	if (is_affected_room(ch->in_room, sn))
 	{
@@ -974,13 +977,15 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (i = 0; i <= 6; i++)
+	for (auto exit : ch->in_room->exit)
 	{
-		if (ch->in_room->exit[i])
+		if (exit != NULL) {
+			found = true;
 			break;
+		}
 	}
 
-	if (i == 6)
+	if (!found)
 	{
 		send_to_char("There is nowhere for the air to go!\n\r", ch);
 		return;
@@ -1020,58 +1025,57 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		damage_new(ch, vch, dice(level, 6), TYPE_HIT + attack_lookup("asphyxiation"), DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the vacuum*");
 	}
 
-	for (i = 0; i <= 5; i++)
+	auto i = 0;
+	for (auto pexit : ch->in_room->exit)
 	{
-		pexit = ch->in_room->exit[i];
+		if (pexit == NULL)
+			continue;
 
-		if (pexit)
+		to_room = pexit->u1.to_room;
+
+		if (to_room)
 		{
-			to_room = pexit->u1.to_room;
-
-			if (to_room)
+			if (to_room->people)
 			{
-				if (to_room->people)
-				{
-					direction = flag_name_lookup(reverse_d(i), direction_table);
-					act("A sudden blast of air rushes in from the $T!", to_room->people, 0, direction, TO_ALL);
-				}
+				direction = flag_name_lookup(reverse_d(i), direction_table);
+				act("A sudden blast of air rushes in from the $T!", to_room->people, 0, direction, TO_ALL);
 			}
 		}
+
+		i++;
 	}
 }
 
 void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
 	CHAR_DATA *vch, *vch_next, *smacked;
-	EXIT_DATA *pexit;
 	ROOM_INDEX_DATA *to_room;
-	int i, j, roomcount = 0, pplcount = 0, randperson = 0, objcount = 0;
+	int j, roomcount = 0, pplcount = 0, randperson = 0, objcount = 0;
 	char *direction;
 	OBJ_DATA *obj, *obj_next;
 
 	if (room->people)
 		act("Air rushes back into the area in a fierce torrent!", room->people, 0, 0, TO_ALL);
 
-	for (i = 0; i <= 5; i++)
+	auto i = 0;
+
+	for (auto pexit : room->exit)
 	{
-		pexit = room->exit[i];
+		if (pexit == NULL)
+			continue;
 
-		if (pexit)
+		if (!IS_SET(pexit->exit_info, EX_CLOSED))
+			roomcount++;
+
+		to_room = pexit->u1.to_room;
+
+		if (to_room != NULL && to_room->people)
 		{
-			if (!IS_SET(pexit->exit_info, EX_CLOSED))
-				roomcount++;
-
-			to_room = pexit->u1.to_room;
-
-			if (to_room)
-			{
-				if (to_room->people)
-				{
-					direction = flag_name_lookup(reverse_d(i), direction_table);
-					act("Air rushes back $Tward!", to_room->people, 0, direction, TO_ALL);
-				}
-			}
+			direction = flag_name_lookup(reverse_d(i), direction_table);
+			act("Air rushes back $Tward!", to_room->people, 0, direction, TO_ALL);
 		}
+
+		i++;
 	}
 
 	for (vch = room->people; vch != NULL; vch = vch_next)
@@ -1089,10 +1093,8 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 			pplcount++;
 	}
 
-	for (i = 0; i <= 5; i++)
+	for (auto pexit : room->exit)
 	{
-		pexit = room->exit[i];
-
 		if (pexit)
 		{
 			if (IS_SET(pexit->exit_info, EX_CLOSED))
@@ -1148,44 +1150,43 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	if (af->modifier > 3)
 	{
-		for (i = 0; i <= 5; i++)
+		i = 0;
+
+		for (auto pexit : room->exit)
 		{
-			pexit = room->exit[i];
+			if (pexit == NULL || IS_SET(pexit->exit_info, EX_CLOSED))
+				continue;
 
-			if (pexit)
+			to_room = pexit->u1.to_room;
+
+			if (to_room)
 			{
-				if (IS_SET(pexit->exit_info, EX_CLOSED))
-					continue;
-
-				to_room = pexit->u1.to_room;
-
-				if (to_room)
+				for (vch = to_room->people; vch != NULL; vch = vch_next)
 				{
-					for (vch = to_room->people; vch != NULL; vch = vch_next)
-					{
-						vch_next = vch->next_in_room;
+					vch_next = vch->next_in_room;
 
-						if (IS_NPC(vch) && IS_SET(vch->act, ACT_SENTINEL))
-							continue;
+					if (IS_NPC(vch) && IS_SET(vch->act, ACT_SENTINEL))
+						continue;
 
-						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
-							continue;
+					if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
+						continue;
 
-						direction = flag_name_lookup(reverse_d(i), direction_table);
+					direction = flag_name_lookup(reverse_d(i), direction_table);
 
-						act("A torrent of air pulls $n $T!", vch, 0, direction, TO_ROOM);
+					act("A torrent of air pulls $n $T!", vch, 0, direction, TO_ROOM);
 
-						char_from_room(vch);
-						char_to_room(vch, room);
+					char_from_room(vch);
+					char_to_room(vch, room);
 
-						act("A torrent of air pulls you unexpectedly $T!", vch, 0, direction, TO_CHAR);
-						do_look(vch, "auto");
+					act("A torrent of air pulls you unexpectedly $T!", vch, 0, direction, TO_CHAR);
+					do_look(vch, "auto");
 
-						direction = flag_name_lookup(i, direction_table);
-						act("The torrent of air pulls $n into the room from the $T!", vch, 0, direction, TO_ROOM);
-					}
+					direction = flag_name_lookup(i, direction_table);
+					act("The torrent of air pulls $n into the room from the $T!", vch, 0, direction, TO_ROOM);
 				}
 			}
+
+			i++;
 		}
 	}
 }

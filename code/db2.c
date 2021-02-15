@@ -682,13 +682,15 @@ void load_mobs(FILE *fp)
 			}
 		}
 
-		for (i = 0; i < 10; i++)
+		auto pMobIndex_affect_sn_size = std::size(pMobIndex->affect_sn);
+		for (i = 0; i < pMobIndex_affect_sn_size; i++)
 		{
 			pMobIndex->affect_sn[i] = -1;
 		}
 
 		/* Morg - Valgrind fix */
-		for (i = 0; i <= 9; i++)
+		auto pMobIndex_cast_spell_size = std::size(pMobIndex->cast_spell);
+		for (i = 0; i < pMobIndex_cast_spell_size; i++)
 		{
 			pMobIndex->cast_spell[i] = NULL;
 		}
@@ -757,7 +759,7 @@ void load_mobs(FILE *fp)
 				bit = flag_lookup(word2, affect_flags);
 				if (sn)
 				{
-					for (i = 0; i < 10; i++)
+					for (i = 0; i < pMobIndex_affect_sn_size; i++)
 					{
 						if (pMobIndex->affect_sn[i] < 1)
 						{
@@ -783,7 +785,7 @@ void load_mobs(FILE *fp)
 				ungetc(letter, fp);
 
 				word = fread_word(fp);
-				for (i = 0; i <= 9; i++)
+				for (i = 0; i < pMobIndex_cast_spell_size; i++)
 				{
 					if (pMobIndex->cast_spell[i] == NULL)
 					{

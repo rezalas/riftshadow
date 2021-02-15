@@ -3206,10 +3206,8 @@ void death_cry(CHAR_DATA *ch, bool infidels)
 
 		was_in_room = ch->in_room;
 
-		for (door = 0; door <= 5; door++)
+		for (auto pexit : was_in_room->exit)
 		{
-			EXIT_DATA *pexit = was_in_room->exit[door];
-
 			if (pexit != NULL
 				&& pexit->u1.to_room != NULL
 				&& pexit->u1.to_room != was_in_room)

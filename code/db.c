@@ -1214,16 +1214,16 @@ void fix_exits(void)
 {
 	ROOM_INDEX_DATA *pRoomIndex;
 	EXIT_DATA *pexit;
-	int iHash;
 	int door;
 
-	for (iHash = 0; iHash < MAX_KEY_HASH; iHash++)
+	for (auto iHash = 0; iHash < MAX_KEY_HASH; iHash++)
 	{
 		for (pRoomIndex = room_index_hash[iHash]; pRoomIndex != NULL; pRoomIndex = pRoomIndex->next)
 		{
-			bool fexit= false;
+			bool fexit = false;
 
-			for (door = 0; door <= 5; door++)
+			auto pRoomIndex_exit_size = std::size(pRoomIndex->exit);
+			for (door = 0; door < pRoomIndex_exit_size; door++)
 			{
 				pexit = pRoomIndex->exit[door];
 
@@ -1278,13 +1278,11 @@ void fix_exits(void)
 
 void find_adjacents(void)
 {
-	AREA_DATA *area;
-	int count, dir, i;
+	int count, i;
 	ROOM_INDEX_DATA *room, *to_room;
-	EXIT_DATA *pexit;
 	bool in;
 
-	for (area = area_first; area; area = area->next)
+	for (auto area = area_first; area; area = area->next)
 	{
 		count = 0;
 
@@ -1298,32 +1296,26 @@ void find_adjacents(void)
 			if (room->area != area)
 				continue;
 
-			for (dir = 0; dir <= 5; dir++)
+			for (auto pexit : room->exit)
 			{
-				pexit = room->exit[dir];
+				if (pexit == NULL)
+					continue;
 
-				if (pexit != NULL)
+				to_room = pexit->u1.to_room;
+				if (to_room != NULL && to_room->area != area)
 				{
-					to_room = pexit->u1.to_room;
+					in = false;
 
-					if (to_room != NULL)
+					for (i = 0; i < MAX_ADJACENT; i++)
 					{
-						if (to_room->area != area)
-						{
-							in= false;
+						if (area->adjacent[i] == to_room->area)
+							in = true;
+					}
 
-							for (i = 0; i < MAX_ADJACENT; i++)
-							{
-								if (area->adjacent[i] == to_room->area)
-									in = true;
-							}
-
-							if (in == false)
-							{
-								area->adjacent[count] = to_room->area;
-								count++;
-							}
-						}
+					if (in == false)
+					{
+						area->adjacent[count] = to_room->area;
+						count++;
 					}
 				}
 			}
@@ -4076,7 +4068,8 @@ void load_rooms(FILE *fp)
 			SET_BIT(pRoomIndex->room_flags, ROOM_NO_GATE);
 		}
 
-		for (door = 0; door <= 5; door++)
+		auto pRoomIndex_exit_size = std::size(pRoomIndex->exit);
+		for (door = 0; door < pRoomIndex_exit_size; door++)
 		{
 			pRoomIndex->exit[door] = NULL;
 		}

@@ -2350,15 +2350,19 @@ void room_affect_update(void)
 			if (!well)
 				continue;
 
-			for (direction = 0; direction <= 5; direction++)
+			auto room_exit_size = std::size(room->exit);
+			auto well_grav_distance = get_grav_distance(well);
+
+			direction = 0;
+			for (auto rexit : room->exit)
 			{
-				if (!room->exit[direction])
+				if (rexit == NULL)
 					continue;
 
-				droom = room->exit[direction]->u1.to_room;
+				droom = rexit->u1.to_room;
 				prevroom = room;
 
-				for (distance = 0; distance <= get_grav_distance(well); distance++)
+				for (distance = 0; distance <= well_grav_distance; distance++)
 				{
 					if (droom == prevroom || droom == room || droom == NULL)
 						break;
@@ -2402,6 +2406,8 @@ void room_affect_update(void)
 					prevroom = droom;
 					droom = droom->exit[direction]->u1.to_room;
 				}
+
+				direction++;
 			}
 		}
 
@@ -2419,9 +2425,9 @@ void room_affect_update(void)
 			{
 				roomcount = 0;
 
-				for (i = 0; i <= 5; i++)
+				for (auto rexit : room->exit)
 				{
-					if (room->exit[i] && !IS_SET(room->exit[i]->exit_info, EX_CLOSED))
+					if (rexit != NULL && !IS_SET(rexit->exit_info, EX_CLOSED))
 						roomcount++;
 				}
 

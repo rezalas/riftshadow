@@ -8,6 +8,7 @@
 #include <time.h>
 #include <sys/types.h>
 #include <sys/time.h>
+#include <iterator>
 #include "merc.h"
 #include "handler.h"
 #include "db.h"

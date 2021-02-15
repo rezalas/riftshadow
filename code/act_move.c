@@ -1340,7 +1340,7 @@ void trap_execute(CHAR_DATA *victim, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 int find_door(CHAR_DATA *ch, char *arg)
 {
 	EXIT_DATA *pexit;
-	int door;
+	int door = 0;
 
 	if (!str_cmp(arg, "n") || !str_cmp(arg, "north"))
 	{
@@ -1368,9 +1368,9 @@ int find_door(CHAR_DATA *ch, char *arg)
 	}
 	else
 	{
-		for (door = 0; door <= 5; door++)
+		for (auto exit : ch->in_room->exit)
 		{
-			pexit = ch->in_room->exit[door];
+			pexit = exit;
 
 			if (pexit != NULL
 				&& IS_SET(pexit->exit_info, EX_ISDOOR)
@@ -1379,6 +1379,8 @@ int find_door(CHAR_DATA *ch, char *arg)
 			{
 				return door;
 			}
+
+			door++;
 		}
 
 		act("You don't see a door $T here.", ch, NULL, arg, TO_CHAR);

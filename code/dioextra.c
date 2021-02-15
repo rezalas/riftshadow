@@ -1724,25 +1724,22 @@ void zone_echo(AREA_DATA *area, char *echo)
 
 bool old_is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 {
-	ROOM_INDEX_DATA *room, *to_room;
-	int dir;
-	EXIT_DATA *pexit;
+	ROOM_INDEX_DATA *to_room;
 
-	for (room = room_list; room != NULL; room = room->next_room)
+	for (auto room = room_list; room != NULL; room = room->next_room)
 	{
 		if (room->area != area)
 			continue;
 
-		for (dir = 0; dir <= 5; dir++)
+		for (auto exit : room->exit)
 		{
-			if ((pexit = room->exit[dir]) != NULL)
-			{
-				if ((to_room = pexit->u1.to_room) != NULL)
-				{
-					if (to_room->area == area2)
-						return true;
-				}
-			}
+			if (exit == NULL)
+				continue;
+
+			to_room = exit->u1.to_room;
+
+			if (to_room != NULL && to_room->area == area2)
+				return true;
 		}
 	}
 
@@ -1751,9 +1748,9 @@ bool old_is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 
 bool is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 {
-	for (int i = 0; i < MAX_ADJACENT; i++)
+	for (auto adjacent : area->adjacent)
 	{
-		if (area->adjacent[i] == area2)
+		if (adjacent == area2)
 			return true;
 	}
 
