@@ -1207,6 +1207,13 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 	char *temp;
 	int tempi;
 
+	auto hold_size = 200; //std::size(hold);
+	auto holdi_size = 200; //std::size(holdi);
+	// TODO: make hold and holdi into a std::map<char*, int>
+	// NOTE: calculations assume both arrays are the same length
+	if(hold_size != holdi_size)
+		return false;
+
 	sprintf(buf, "SELECT vote_for FROM votes WHERE cabal=%d", cabal);
 
 	res = one_query_res(buf);
@@ -1216,9 +1223,9 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 	{
 		while ((row = mysql_fetch_row(res)) != NULL)
 		{
-			added= false;
+			added = false;
 
-			for (j = 0; j <= 200; j++)
+			for (j = 0; j < hold_size; j++)
 			{
 				if (hold[j] == NULL)
 					break;
@@ -1238,9 +1245,9 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 			}
 		}
 
-		for (j = 0; j <= 200; j++)
+		for (j = 0; j < hold_size ; j++)
 		{
-			for (m = 0; m <= 200 - j; m++)
+			for (m = 0; m < hold_size - j; m++)
 			{
 				if (!holdi[m] || hold[m] == NULL)
 					continue;
@@ -1313,7 +1320,10 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		for (j = 0; j <= 200; j++)
+		// TODO: make hold and holdi into a std::map<char*, int>
+		// NOTE: hold and holdi are the same size.
+		auto hold_size = std::size(hold);
+		for (j = 0; j < hold_size; j++)
 		{
 			hold[j] = NULL;
 			holdi[j] = 0;
@@ -1334,7 +1344,8 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 		if (cabal == CABAL_GUILD)
 			send_to_char("Common Guild voting polls:\n\r", ch);
 
-		for (j = 0; j <= 200; j++)
+		// NOTE: hold and holdi are the same size.
+		for (j = 0; j < hold_size; j++)
 		{
 			if (hold[j] == NULL)
 				continue;
@@ -1853,7 +1864,8 @@ void do_topbounties(CHAR_DATA *ch, char *argument)
 
 	send_to_char("      The Top Ten Most Wanted:\n\r", ch);
 
-	for (i = 0; i <= MAX_TOP_BOUNTY_SHOWN; i++)
+	auto bounty_size = std::min(MAX_TOP_BOUNTY_SHOWN + 1, static_cast<int>(std::size(top_bounty_value)));
+	for (i = 0; i < bounty_size; i++)
 	{
 		if (top_bounty_value[i])
 		{

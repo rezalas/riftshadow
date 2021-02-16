@@ -7,6 +7,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include <iterator>
 #include "merc.h"
 #include "handler.h"
 #include "fight.h"

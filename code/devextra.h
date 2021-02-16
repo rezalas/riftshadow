@@ -7,6 +7,8 @@
 #include <string.h>
 #include <time.h>
 #include <mysql.h>
+#include <algorithm>
+#include <iterator>
 #include "merc.h"
 #include "magic.h"
 #include "recycle.h"
