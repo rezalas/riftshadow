@@ -4,9 +4,9 @@
 
 # VSCode entries
 .vs/
-.vscode/
 .vscode/launch.json
 .vscode/tasks.json
+!.vscode/settings.json
 
 # CMake files
 CMakeFiles/

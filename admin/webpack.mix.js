@@ -12,7 +12,8 @@ const mix = require("laravel-mix");
  */
 
 mix.js("resources/js/app.js", "public/js")
-    .js("resources/js/registration.js", "public/js")
-    .js("resources/js/vendor/installer/finished.js", "public/installer/js")
-    .sass("resources/sass/vendor/installer/style.scss", "public/installer/css")
-    .sass("resources/sass/app.scss", "public/css");
+	.js("resources/js/registration.js", "public/js")
+	.js("resources/js/vendor/installer/finished.js", "public/installer/js")
+	.vue()
+	.sass("resources/sass/vendor/installer/style.scss", "public/installer/css")
+	.sass("resources/sass/app.scss", "public/css");
