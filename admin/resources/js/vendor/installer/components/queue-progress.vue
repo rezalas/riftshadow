@@ -67,7 +67,7 @@ export default {
 					jobCount: this.jobCount,
 					lastSecs: this.data.lastSecs
 				})
-				.then(({ data }) => {
+				.then(({ data, statusText }) => {
 					let { cont, cur, jobCount, lastSecs, max } = data,
 						erred = false;
 
@@ -82,7 +82,7 @@ export default {
 					this.cur = cur;
 					this.lastSecs = lastSecs;
 
-					if (this.output.indexOf("Failed") >= 0) {
+					if (statusText.indexOf("Failed") >= 0) {
 						cont = false;
 						erred = true;
 					}

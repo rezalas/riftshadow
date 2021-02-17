@@ -483,20 +483,20 @@ class Homestead
       settings['databases'].each do |db|
         config.vm.provision 'shell' do |s|
           s.name = 'Creating MySQL Database: ' + db['name']
-          s.path = './homestead-scripts/create-mysql.sh'
+          s.path = 'vendor/laravel/homestead/scripts/create-mysql.sh'
           s.args = [db['name'], db['user'], db['pass']]
         end
 
         config.vm.provision 'shell' do |s|
           s.name = 'Creating Postgres Database: ' + db['name']
-          s.path = './homestead-scripts/create-postgres.sh'
+          s.path = 'vendor/laravel/homestead/scripts/create-postgres.sh'
           s.args = [db['name'], db['user'], db['pass']]
         end
 
         if enabled_databases.include? 'mongodb'
           config.vm.provision 'shell' do |s|
             s.name = 'Creating Mongo Database: ' + db['name']
-            s.path = './homestead-scripts/create-mongo.sh'
+            s.path = 'vendor/laravel/homestead/scripts/create-mongo.sh'
             s.args = [db['name'], db['user'], db['pass']]
           end
         end
@@ -504,7 +504,7 @@ class Homestead
         if enabled_databases.include? 'couchdb'
           config.vm.provision 'shell' do |s|
             s.name = 'Creating Couch Database: ' + db['name']
-            s.path = './homestead-scripts/create-couch.sh'
+            s.path = 'vendor/laravel/homestead/scripts/create-couch.sh'
             s.args = [db['name']]
           end
         end
@@ -512,7 +512,7 @@ class Homestead
         if enabled_databases.include? 'influxdb'
           config.vm.provision 'shell' do |s|
             s.name = 'Creating InfluxDB Database: ' + db['name']
-            s.path = './homestead-scripts/create-influxdb.sh'
+            s.path = 'vendor/laravel/homestead/scripts/create-influxdb.sh'
             s.args = [db['name'], db['user'], db['pass']]
           end
         end

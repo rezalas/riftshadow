@@ -170,27 +170,31 @@ class RegisterController extends Controller
 	 */
 	protected function create(array $data)
 	{
+		$player_files = isset($data['player_files']) ? $data['player_files'] : [];
 		$user = User::create([
 			'username' => $data['username'],
 			'email' => $data['email'],
 			'password' => Hash::make($data['password'])
 		]);
 
-		$existingPlayerFiles = PlayerFile::whereIn('name', $data['player_files'])->get();
+		if (count($player_files) > 0)
+		{
+			$existingPlayerFiles = PlayerFile::whereIn('name', $player_files)->get();
 
-		$newPlayerFileNames = collect($data['player_files'])->diff($existingPlayerFiles->pluck('name'));
+			$newPlayerFileNames = collect($player_files)->diff($existingPlayerFiles->pluck('name'));
 
-		$orphanedPlayerFileNames = collect($data['player_files'])->intersect($existingPlayerFiles->pluck('name'));
+			$orphanedPlayerFileNames = collect($player_files)->intersect($existingPlayerFiles->pluck('name'));
 
-		$orphanedPlayerFiles = PlayerFile::whereIn('name', $orphanedPlayerFileNames)->get();
-		
-		$newPlayerFileNames->transform(function ($filename) {
-			return ['name' => $filename];
-		});
-		
-		$user->playerFiles()->createMany($newPlayerFileNames->toArray());
+			$orphanedPlayerFiles = PlayerFile::whereIn('name', $orphanedPlayerFileNames)->get();
+			
+			$newPlayerFileNames->transform(function ($filename) {
+				return ['name' => $filename];
+			});
+			
+			$user->playerFiles()->createMany($newPlayerFileNames->toArray());
 
-		$user->playerFiles()->saveMany($orphanedPlayerFiles);
+			$user->playerFiles()->saveMany($orphanedPlayerFiles);
+		}
 
 		return $user;
 	}
