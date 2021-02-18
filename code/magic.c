@@ -3217,7 +3217,7 @@ void spell_identify(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	sprintf(buf, "Object '%s' is type %s, extra flags %s.\n\r",
 		obj->name,
-		item_name(obj->item_type),
+		item_name_lookup(obj->item_type),
 		extra_bit_name(obj->extra_flags));
 	strcat(buf, "It appears to be made of ");
 	strcat(buf, obj->material);

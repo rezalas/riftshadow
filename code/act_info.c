@@ -4945,7 +4945,7 @@ void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 	if (number_percent() < get_skill(ch, gsn_lore) + lorebonus * 15)
 	{
 		char buf[MAX_STRING_LENGTH];
-		sprintf(buf, "Object '%s' is type %s.\n\r", obj->name, item_name(obj->item_type));
+		sprintf(buf, "Object '%s' is type %s.\n\r", obj->name, item_name_lookup(obj->item_type));
 		sprintf(buf, "%sIt weighs %d pounds.\n\r", buf, obj->weight);
 		send_to_char(buf, ch);
 

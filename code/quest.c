@@ -1159,9 +1159,9 @@ BEGIN_SPEC(mspec_academy_smith)
 				mprog_say(8, "Har!  Yer lucky to have the benefits of me skilled hands!", mob, ch);
 			REMOVE_BIT(obj->extra_flags, ITEM_MELT_DROP);
 			if (get_quest_val(ch, SMITH_QUEST_COMP_ACQUIRED) >= 15)
-				sprintf(buf, "a fully strengthened Academy %s", weapon_name(obj->value[0]));
+				sprintf(buf, "a fully strengthened Academy %s", weapon_name_lookup(obj->value[0], "exotic"));
 			else
-				sprintf(buf, "a reinforced Academy %s", weapon_name(obj->value[0]));
+				sprintf(buf, "a reinforced Academy %s", weapon_name_lookup(obj->value[0], "exotic"));
 			free_pstring(obj->short_descr);
 			obj->short_descr = palloc_string(buf);
 			setbit_quest_val(ch, SMITH_QUEST_COMP_ACQUIRED, (comp_vnum - MIN_COMPONENT));

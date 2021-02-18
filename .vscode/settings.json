@@ -43,12 +43,12 @@
 		"variant": "cpp",
 		"*.inc": "cpp",
 		"condition_variable": "cpp",
-		"cstring": "cpp"
+		"cstring": "cpp",
+		"deque": "cpp",
+		"vector": "cpp",
+		"initializer_list": "cpp"
 	},
-	"catch2TestExplorer.executables": {
-		"name": "${filename}",
-		"pattern": "tests/*{_tests}*"
-	},
+	"testMate.cpp.test.executables": "tests/*{_tests}*",
 	"C_Cpp.intelliSenseEngine": "Tag Parser",
 	"php.suggest.basic": false,
 	"php.validate.enable": false,
