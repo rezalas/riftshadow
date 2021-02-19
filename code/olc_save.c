@@ -355,7 +355,7 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 	fprintf(fp, "%s~\n", pObjIndex->name);
 	fprintf(fp, "%s~\n", pObjIndex->short_descr);
 	fprintf(fp, "%s~\n", munch(pObjIndex->description));
-	fprintf(fp, "%s\n", item_name(pObjIndex->item_type));
+	fprintf(fp, "%s\n", item_name_lookup(pObjIndex->item_type));
 	fprintf(fp, "%s~\n", pObjIndex->material);
 
 	switch (pObjIndex->item_type)

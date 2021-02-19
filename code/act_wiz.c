@@ -1794,7 +1794,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "Vnum: %d  Format: %s  Type: %s  Resets: %d\n\r",
 		obj->pIndexData->vnum,
 		obj->pIndexData->new_format ? "new" : "old",
-		item_name(obj->item_type),
+		item_name_lookup(obj->item_type),
 		obj->pIndexData->reset_num);
 	send_to_char(buf, ch);
 

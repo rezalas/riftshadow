@@ -109,7 +109,7 @@ const	struct	pc_race_type	pc_race_table	[]	=
 };
 
 	
-const 	struct	race_type	race_table	[]		=
+const std::vector<race_type> race_table	=
 {
 /*
     {

@@ -114,7 +114,7 @@ const   struct  material_type   material_table  []	=
 };
 
 
-const	struct	liq_type	liq_table	[]	=
+const std::vector<liq_type> liq_table =
 {
 /*    name					color			proof,full,thirst,food,ssize */
     { "water",				"clear",		{   0, 	1, 10, 	0, 16 }	},

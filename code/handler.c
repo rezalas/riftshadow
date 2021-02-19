@@ -96,24 +96,25 @@ int count_users(OBJ_DATA *obj)
 	return count;
 }
 
-/* returns race number */
+/// Queries the race table for the index of the given race.
+/// @param name: The name of the race to query.
+/// @returns The table index of the given race. (Default: -1)
 int race_lookup(const char *name)
 {
-	int race;
+	auto it = std::find_if(race_table.begin(), race_table.end(), [name] (auto race) {
+		return race.name != NULL && !str_prefix(name, race.name);
+	});
 
-	for (race = 0; race_table[race].name != NULL; race++)
-	{
-		if (LOWER(name[0]) == LOWER(race_table[race].name[0]) && !str_prefix(name, race_table[race].name))
-			return race;
-	}
-
-	return -1;
+	return it != race_table.end()
+		? it - race_table.begin()
+		: -1;
 }
 
 int act_lookup(const char *name)
 {
 	int act;
 
+	// TODO: change act_flags from array to vector. requires detailed refactoring.
 	for (act = 0; act_flags[act].name != NULL; act++)
 	{
 		if (LOWER(name[0]) == LOWER(act_flags[act].name[0]) && !str_prefix(name, act_flags[act].name))
@@ -123,135 +124,120 @@ int act_lookup(const char *name)
 	return -1;
 }
 
+/// Queries the liquid table for the index of the given liquid.
+/// @param name: The name of the liquid to query.
+/// @returns The table index of the given liquid. (Default: 0)
 int liq_lookup(const char *name)
 {
-	int liq;
+	auto it = std::find_if(liq_table.begin(), liq_table.end(), [name] (auto liquid) {
+		return liquid.liq_name != NULL && !str_prefix(name, liquid.liq_name);
+	});
 
-	for (liq = 0; liq_table[liq].liq_name != NULL; liq++)
-	{
-		if (LOWER(name[0]) == LOWER(liq_table[liq].liq_name[0]) && !str_prefix(name, liq_table[liq].liq_name))
-			return liq;
-	}
-
-	return 0;
+	return it != liq_table.end()
+		? it - liq_table.begin()
+		: 0;
 }
 
+/// Queries the weapon table for the index of the given weapon.
+/// @param name: The name of the weapon to query.
+/// @returns The table index of the given weapon. (Default: -1)
 int weapon_lookup(const char *name)
 {
-	int type;
+	auto it = std::find_if(weapon_table.begin(), weapon_table.end(), [name] (auto weapon) {
+		return weapon.name != NULL && !str_prefix(name, weapon.name);
+	});
 
-	for (type = 0; weapon_table[type].name != NULL; type++)
-	{
-		if (LOWER(name[0]) == LOWER(weapon_table[type].name[0]) && !str_prefix(name, weapon_table[type].name))
-			return type;
-	}
-
-	return -1;
+	return it != weapon_table.end()
+		? it - weapon_table.begin()
+		: -1;
 }
 
-int weapon_num_lookup(const char *name)
+/// Queries the weapon table for the type of the given weapon.
+/// @param name: The name of the weapon to query.
+/// @returns The type of the given weapon. (Default: WEAPON_EXOTIC)
+int weapon_type_lookup(const char *name)
 {
-	int type;
-
-	for (type = 0; weapon_table[type].name != NULL; type++)
-	{
-		if (LOWER(name[0]) == LOWER(weapon_table[type].name[0]) && !str_prefix(name, weapon_table[type].name))
-			return weapon_table[type].type;
-	}
-
-	return -1;
+	auto idx = weapon_lookup(name);
+	return idx > -1 || idx < weapon_table.size()
+		? weapon_table[idx].type
+		: WEAPON_EXOTIC;
 }
 
-char *weapon_name_lookup(int type)
+/// Queries the weapon table for the name of the given weapon type.
+/// @param type: The type of the weapon to query.
+/// @param default_name (optional) If the weapon is not found, the default_name is returned. (Default: weapon).
+/// @returns The type of the given weapon. (Default: default_name)
+char *weapon_name_lookup(int type, char* default_name)
 {
-	int count;
+	auto it = std::find_if(weapon_table.begin(), weapon_table.end(), [type] (auto weapon) {
+		return weapon.name != NULL && type == weapon.type;
+	});
 
-	for (count = 0; weapon_table[count].name != NULL; count++)
-	{
-		if (weapon_table[count].type == type)
-			return weapon_table[count].name;
-	}
+	if (it == weapon_table.end())
+		return default_name;
 
-	return "weapon";
+	auto idx = it - weapon_table.begin();
+	return weapon_table[idx].name;
 }
 
-int weapon_type(const char *name)
-{
-	int type;
-
-	for (type = 0; weapon_table[type].name != NULL; type++)
-	{
-		if (LOWER(name[0]) == LOWER(weapon_table[type].name[0]) && !str_prefix(name, weapon_table[type].name))
-			return weapon_table[type].type;
-	}
-
-	return WEAPON_EXOTIC;
-}
-
+/// Queries the item table for the type of the given item.
+/// @param name: The name of the item to query.
+/// @returns The type of the given item. (Default: -1)
 int item_lookup(const char *name)
 {
-	int type;
+	auto it = std::find_if(item_table.begin(), item_table.end(), [name] (auto item) {
+		return item.name != NULL && !str_prefix(name, item.name);
+	});
 
-	for (type = 0; item_table[type].name != NULL; type++)
-	{
-		if (LOWER(name[0]) == LOWER(item_table[type].name[0]) && !str_prefix(name, item_table[type].name))
-			return item_table[type].type;
-	}
+	if (it == item_table.end())
+		return -1;
 
-	return -1;
+	auto idx = it - item_table.begin();
+	return item_table[idx].type;
 }
 
-char *item_name(int item_type)
+/// Queries the item table for the name of the given item type.
+/// @param item_type: The type of the item to query.
+/// @returns The name of the given item type. (Default: none)
+char *item_name_lookup(int item_type)
 {
-	int type;
+	auto it = std::find_if(item_table.begin(), item_table.end(), [item_type] (auto item) {
+		return item.name != NULL && item_type == item.type;
+	});
 
-	for (type = 0; item_table[type].name != NULL; type++)
-	{
-		if (item_type == item_table[type].type)
-			return item_table[type].name;
-	}
+	if (it == item_table.end())
+		return "none";
 
-	return "none";
+	auto idx = it - item_table.begin();
+	return item_table[idx].name;
 }
 
-char *weapon_name(int weapon_type)
-{
-	int type;
-
-	for (type = 0; weapon_table[type].name != NULL; type++)
-	{
-		if (weapon_type == weapon_table[type].type)
-			return weapon_table[type].name;
-	}
-
-	return "exotic";
-}
-
+/// Queries the attack table for the index of the given attack.
+/// @param name: The name of the attack to query.
+/// @returns The table index of the given attack. (Default: 0)
 int attack_lookup(const char *name)
 {
-	int att;
+	auto it = std::find_if(attack_table.begin(), attack_table.end(), [name] (auto attack) {
+		return attack.name != NULL && !str_prefix(name, attack.name);
+	});
 
-	for (att = 0; attack_table[att].name != NULL; att++)
-	{
-		if (LOWER(name[0]) == LOWER(attack_table[att].name[0]) && !str_prefix(name, attack_table[att].name))
-			return att;
-	}
-
-	return 0;
+	return it != attack_table.end()
+		? it - attack_table.begin()
+		: 0;
 }
 
-/* returns a flag for wiznet */
+/// Queries the wiznet table for the index of the given wiznet flag.
+/// @param name: The name of the wiznet flag to query.
+/// @returns The table index of the given wiznet flag. (Default: -1)
 long wiznet_lookup(const char *name)
 {
-	int flag;
+	auto it = std::find_if(wiznet_table.begin(), wiznet_table.end(), [name] (auto wiznet) {
+		return wiznet.name != NULL && !str_prefix(name, wiznet.name);
+	});
 
-	for (flag = 0; wiznet_table[flag].name != NULL; flag++)
-	{
-		if (LOWER(name[0]) == LOWER(wiznet_table[flag].name[0]) && !str_prefix(name, wiznet_table[flag].name))
-			return flag;
-	}
-
-	return -1;
+	return it != wiznet_table.end()
+		? it - wiznet_table.begin()
+		: -1;
 }
 
 char *color_value_string(int color, bool bold, bool flash)
