@@ -26,6 +26,47 @@ void TestHelperSetPlayerStats(char_data *player, sh_int value)
     player->level = 1;
 }
 
+char_data* TestHelperCreateNPC()
+{
+	auto npc = new char_data();
+	SET_BIT(npc->act, ACT_IS_NPC);
+	npc->pIndexData = new mob_index_data();
+	return npc;
+}
+
+char_data* TestHelperCreateNPCWithShop()
+{
+	auto npc = TestHelperCreateNPC();
+	npc->pIndexData->pShop = new shop_data();
+	return npc;
+}
+
+
+char_data* TestHelperCreatePlayer(char *name)
+{
+	auto player = new char_data();
+	player->name = name;
+	auto dnew = new descriptor_data();
+	dnew->showstr_head = NULL;
+	dnew->showstr_point = NULL;
+	dnew->outsize = 2000;
+	dnew->pEdit = NULL;	  /* OLC */
+	dnew->pString = NULL; /* OLC */
+	dnew->editor = 0;	  /* OLC */
+	dnew->outbuf = new char[dnew->outsize];
+	dnew->outtop = 0;	
+	player->desc = dnew;
+
+	return player;
+}
+
+room_index_data* TestHelperCreateRoom()
+{
+	auto room = new room_index_data();
+	room->area = new area_data();
+	return room;
+}
+
 SCENARIO("testing finding shop keepers","[find_keeper]")
 {
     GIVEN("a player character in a room")
@@ -47,12 +88,9 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
     {
         WHEN("find_keeper is called")
         {
-            char_data* player1 = new char_data();
-            player1->name = "player 1";
-            char_data* npc = new char_data();
-            SET_BIT(npc->act, ACT_IS_NPC);
-
-            room_index_data* room = new room_index_data();
+            char_data* player1 = TestHelperCreatePlayer("player 1");
+            char_data* npc =  TestHelperCreateNPC();
+            room_index_data* room = TestHelperCreateRoom();
 
             TestHelperAddPlayerToRoom(npc, room);
             TestHelperAddPlayerToRoom(player1, room);
@@ -69,17 +107,13 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
     {
         WHEN("find_keeper is called")
         {
-            char_data* player1 = new char_data();
-            player1->name = "player 1";
+            char_data* player1 = TestHelperCreatePlayer("player 1");
             // setup NPC with flag and shop index
-            char_data* npc = new char_data();
-            SET_BIT(npc->act, ACT_IS_NPC);
-            npc->pIndexData = new mob_index_data();
-            npc->pIndexData->pShop = new shop_data();
-
-            room_index_data* room = new room_index_data();
-            room->area = new area_data();
+            char_data* npc = TestHelperCreateNPCWithShop();
+			// setup room for player and npc
+            room_index_data* room = TestHelperCreateRoom();
             
+			// add both to the room
             TestHelperAddPlayerToRoom(npc, room);
             TestHelperAddPlayerToRoom(player1, room);
 
@@ -95,12 +129,10 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
     {
         WHEN("find_keeper is called")
         {
-            char_data* player1 = new char_data();
-            player1->name = "player 1";
-            char_data* player2 = new char_data();
-            player2->name = "player 2";
+            char_data* player1 = TestHelperCreatePlayer("player 1");
+            char_data* player2 = TestHelperCreatePlayer("player 2");
 
-            room_index_data* room = new room_index_data();
+            room_index_data* room = TestHelperCreateRoom();
 
             TestHelperAddPlayerToRoom(player1, room);
             TestHelperAddPlayerToRoom(player2, room);
@@ -113,6 +145,66 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
         }
     }
 }
+SCENARIO("testing selling to merchants", "[do_sell]")
+{
+	GIVEN("a player calls sell")
+	{
+		WHEN("no arguments are provided")
+		{
+			char *arg = "";	
+			char_data *player1 = TestHelperCreatePlayer("player 1"); // create a player 
+			auto npc = TestHelperCreateNPCWithShop(); // create a shopkeeper	
+			room_index_data* room = TestHelperCreateRoom(); // build the shop floor
+            // add both to a shop
+            TestHelperAddPlayerToRoom(npc, room);
+            TestHelperAddPlayerToRoom(player1, room);
+
+			do_sell(player1, arg);
+			auto expected = "Sell what?";
+			auto actual = player1->desc->outbuf;
+			THEN("do_sell should return after notifying the player and rejecting the command.")
+			{
+				REQUIRE(strstr(actual,expected) != NULL);
+			}
+		}
+
+		WHEN("an argument is provided but no merchants are present")
+		{
+			char *arg = "broken_spoon";
+			auto player = TestHelperCreatePlayer("player 1");
+			auto room = TestHelperCreateRoom();
+			TestHelperAddPlayerToRoom(player, room);
+			do_sell(player, arg);
+			auto expected = "Sell to whom? Yourself?";
+			auto actual = player->desc->outbuf;
+
+			THEN("do_sell should return after notifying the player and rejecting the command.")
+			{
+				REQUIRE(strstr(actual, expected) != NULL);
+			}
+		}
+
+		WHEN("an argument is provided but the item is not posessed")
+		{
+			char *arg = "broken_spoon";
+			auto player = TestHelperCreatePlayer("player 1");
+			auto keeper = TestHelperCreateNPCWithShop();
+			auto room = TestHelperCreateRoom();
+			TestHelperAddPlayerToRoom(player, room);
+			TestHelperAddPlayerToRoom(keeper, room);
+			
+			do_sell(player, arg);
+			auto expected = "You cannot sell what you do not have.";
+			auto actual = player->desc->outbuf;
+
+			THEN("do_sell should return after notifying the player and rejecting the command.")
+			{
+				REQUIRE(strstr(actual, expected) != NULL);
+			}
+		}
+	}
+}
+
 // SCENARIO("testing looting containers", "[do_get]")
 // {
     

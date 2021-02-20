@@ -2986,9 +2986,11 @@ void stop_idling(CHAR_DATA *ch)
 	act("$n has returned from the void.", ch, NULL, NULL, TO_ROOM);
 }
 
-/*
- * Write to one char.
- */
+///
+/// Send a message to a character 
+/// @param txt: The message to send
+/// @param ch: The character to receive it
+///
 void send_to_char(const char *txt, CHAR_DATA *ch)
 {
 	if (txt != NULL && ch->desc != NULL)
@@ -3084,9 +3086,12 @@ void fix_sex(CHAR_DATA *ch)
 		ch->sex = IS_NPC(ch) ? 0 : ch->pcdata->true_sex;
 }
 
+///
+/// Exists for compatibility only with older code that may use it.
+/// @deprecated Please use act_new instead.
+///
 void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type)
 {
-	/* to be compatible with older code */
 	act_new(format, ch, arg1, arg2, type, POS_RESTING);
 }
 

@@ -1303,6 +1303,8 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *mob;
 	int vnum = 0;
+	float armorMultiplier = 1;
+	float dmgMultiplier = 1;
 	char type[MSL];
 	int num;
 	CHAR_DATA *check;
@@ -1354,17 +1356,30 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 	}
 
+	
 	if (!drain_urn(ch, num))
 		return;
 
 	if (!str_cmp(type, "blood"))
+	{
 		vnum = 2957;
+		armorMultiplier = 1;
+		dmgMultiplier = 1.5;
+	}
 
 	if (!str_cmp(type, "bone"))
+	{
 		vnum = 2956;
+		armorMultiplier = 3;
+		dmgMultiplier = 0.5;
+	}
 
 	if (!str_cmp(type, "flesh"))
+	{
 		vnum = 2955;
+		armorMultiplier =  2;
+		dmgMultiplier = 1;
+	}
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -1377,13 +1392,13 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(ch, &af);
 
 	mob = create_mobile(get_mob_index(vnum));
-	mob->max_hit = (short)(ch->max_hit * 1.5);
+	mob->max_hit = (short)(ch->max_hit * armorMultiplier);
 	mob->hit = mob->max_hit;
 	mob->damroll = 0;
 	mob->level = ch->level - 10 + (num / 2);
 	mob->damage[DICE_TYPE] = 2;
 	mob->damage[DICE_NUMBER] = mob->level;
-	mob->damage[DICE_BONUS] = mob->level / 3;
+	mob->damage[DICE_BONUS] = (mob->level / 3) + (int)(num * dmgMultiplier);
 
 	add_follower(mob, ch);
 

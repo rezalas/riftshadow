@@ -452,7 +452,12 @@ bool is_old_mob(CHAR_DATA *ch)
 	return true;
 }
 
-/* for returning skill information */
+///
+/// Returns the skill level of a character given a skill GSN. 
+/// @param ch: The character with the skill
+/// @param sn: The GSN for a skill 
+/// @returns A skill between 0 and 100, defaulting to 0 if the character does not have the skill.
+///
 int get_skill(CHAR_DATA *ch, int sn)
 {
 	int skill = 0, gn = 0;

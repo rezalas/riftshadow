@@ -108,8 +108,7 @@ void do_channels(CHAR_DATA *ch, char *argument)
 	send_to_char("   channel     status\n\r", ch);
 	send_to_char("---------------------\n\r", ch);
 
-	auto sendToChar = [](bool isSet, CHAR_DATA *ch)
-	{
+	auto sendToChar = [](bool isSet, CHAR_DATA *ch) {
 		auto txt = isSet ? "ON\n\r" : "OFF\n\r";
 		send_to_char(txt, ch);
 	};
@@ -238,7 +237,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 	if (IS_SHIFTED(ch) && !IS_IMMORTAL(ch))
 	{
 		send_to_char("You can't seem to form the words.\n\r", ch);
-		return ;
+		return;
 	}
 
 	if (is_affected(ch, gsn_silence))
@@ -281,47 +280,42 @@ void do_cb(CHAR_DATA *ch, char *argument)
 	char buf[MAX_STRING_LENGTH];
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
-		sprintf(buf, "%s%s: %s%s%s\n\r", 
-			cabal_table[ch->cabal].who_name, 
-			IS_NPC(ch) ? ch->short_descr : ch->true_name,
-			get_char_color(ch, "channels"),
-			argument,
-			END_COLOR(ch));
+		sprintf(buf, "%s%s: %s%s%s\n\r",
+				cabal_table[ch->cabal].who_name,
+				IS_NPC(ch) ? ch->short_descr : ch->true_name,
+				get_char_color(ch, "channels"),
+				argument,
+				END_COLOR(ch));
 	}
 	else
 	{
-		sprintf(buf, "%s%s: %s\n\r", 
-			cabal_table[ch->cabal].who_name, 
-			IS_NPC(ch) ? ch->short_descr : ch->name,
-			argument);
+		sprintf(buf, "%s%s: %s\n\r",
+				cabal_table[ch->cabal].who_name,
+				IS_NPC(ch) ? ch->short_descr : ch->name,
+				argument);
 	}
 
 	send_to_char(buf, ch);
 
 	for (auto d = descriptor_list; d != NULL; d = d->next)
 	{
-		if (d->connected == CON_PLAYING
-			&& d->character != ch
-			&& ((is_same_cabal(ch, d->character)
-					&& !IS_SET(d->character->comm, COMM_NOCABAL)
-					&& !IS_SET(d->character->in_room->room_flags, ROOM_SILENCE))
-				||IS_SET(d->character->comm, COMM_ALL_CABALS)))
+		if (d->connected == CON_PLAYING && d->character != ch && ((is_same_cabal(ch, d->character) && !IS_SET(d->character->comm, COMM_NOCABAL) && !IS_SET(d->character->in_room->room_flags, ROOM_SILENCE)) || IS_SET(d->character->comm, COMM_ALL_CABALS)))
 		{
 			if (IS_SET(d->character->comm, COMM_ANSI))
 			{
 				sprintf(buf, "%s%s: %s%s%s\n\r",
-					cabal_table[ch->cabal].who_name,
-					!IS_NPC(ch) && can_see(d->character, ch) ? ch->true_name : PERS(ch, d->character),
-					get_char_color(d->character, "channels"),
-					argument,
-					END_COLOR(d->character));
+						cabal_table[ch->cabal].who_name,
+						!IS_NPC(ch) && can_see(d->character, ch) ? ch->true_name : PERS(ch, d->character),
+						get_char_color(d->character, "channels"),
+						argument,
+						END_COLOR(d->character));
 			}
 			else
 			{
 				sprintf(buf, "%s%s: %s\n\r",
-					cabal_table[ch->cabal].who_name,
-					!IS_NPC(ch) && can_see(d->character, ch) ? ch->true_name : PERS(ch, d->character),
-					argument);
+						cabal_table[ch->cabal].who_name,
+						!IS_NPC(ch) && can_see(d->character, ch) ? ch->true_name : PERS(ch, d->character),
+						argument);
 			}
 
 			send_to_char(buf, d->character);
@@ -395,10 +389,7 @@ void do_newbie(CHAR_DATA *ch, char *argument)
 		if (IS_NPC(wch) && wch->desc == NULL)
 			continue;
 
-		if ((wch->level <= 25 && !IS_SET(wch->comm, COMM_NONEWBIE))
-			|| IS_IMMORTAL(wch)
-			|| IS_HEROIMM(wch)
-			|| (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+		if ((wch->level <= 25 && !IS_SET(wch->comm, COMM_NONEWBIE)) || IS_IMMORTAL(wch) || IS_HEROIMM(wch) || (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -466,10 +457,7 @@ void do_builder(CHAR_DATA *ch, char *argument)
 		if (IS_NPC(wch) && wch->desc == NULL)
 			continue;
 
-		if (IS_IMMORTAL(wch)
-			|| IS_SET(wch->comm, COMM_BUILDER)
-			|| IS_HEROIMM(wch)
-			|| (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+		if (IS_IMMORTAL(wch) || IS_SET(wch->comm, COMM_BUILDER) || IS_HEROIMM(wch) || (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -518,7 +506,7 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 	}
 
 	int level = 51;
-	if(is_number(arg1))
+	if (is_number(arg1))
 	{
 		level = atoi(arg1);
 		if (level > get_trust(ch) || level < 51)
@@ -560,10 +548,7 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 		if (IS_NPC(wch) && wch->desc == NULL)
 			continue;
 
-		if ((IS_IMMORTAL(wch)
-				|| IS_SET(wch->comm, COMM_IMMORTAL)
-				|| (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
-			&& get_trust(wch) >= UMAX(level, 52))
+		if ((IS_IMMORTAL(wch) || IS_SET(wch->comm, COMM_IMMORTAL) || (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original))) && get_trust(wch) >= UMAX(level, 52))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -633,6 +618,12 @@ const char *lowstring(const char *i)
 	return lowbuf;
 }
 
+
+///
+/// Allows a player or NPC to say things to others in the same room 
+/// @param ch: The source of the message
+/// @param argument: The message to be sent
+///
 void do_say(CHAR_DATA *ch, char *argument)
 {
 	if (argument[0] == '\0')
@@ -640,9 +631,9 @@ void do_say(CHAR_DATA *ch, char *argument)
 		send_to_char("Say what?\n\r", ch);
 		return;
 	}
-
 	check_ooc(ch, argument, "SAY");
 
+#pragma region  Reasons you shouldnt be able to talk
 	if (is_affected(ch, gsn_silence))
 	{
 		send_to_char("You cannot find the words within you.\n\r", ch);
@@ -682,18 +673,12 @@ void do_say(CHAR_DATA *ch, char *argument)
 		act("Muffled sounds emanate from $n's direction as $e attempts in vain to speak through $s gag.", ch, NULL, NULL, TO_ROOM);
 		return;
 	}
+#pragma  endregion
 
 	if (is_affected(ch, gsn_deafen))
 	{
 		do_yell(ch, argument);
 		return;
-	}
-
-	if (!str_cmp(ch->name, "Karsus") && strstr(argument, "eing") && !strstr(argument, "being"))
-	{
-		send_to_char("***It's 'ING', not 'EING' you fooker!!!***\n\r", ch);
-		send_to_char("***It's 'ING', not 'EING' you fooker!!!***\n\r", ch);
-		send_to_char("***It's 'ING', not 'EING' you fooker!!!***\n\r", ch);
 	}
 
 	char saymsg[MAX_STRING_LENGTH];
@@ -922,7 +907,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		send_to_char("Sing what?\n\r", ch);
-		return ;
+		return;
 	}
 
 	if (is_affected(ch, gsn_silence) || IS_SET(ch->in_room->room_flags, ROOM_SILENCE))
@@ -972,8 +957,8 @@ void do_sing(CHAR_DATA *ch, char *argument)
 	}
 
 	auto length = !IS_NPC(ch)
-		? strlen(ch->name)
-		: strlen(ch->short_descr);
+					  ? strlen(ch->name)
+					  : strlen(ch->short_descr);
 
 	auto copy = argument;
 	int i, j, lines = 1;
@@ -1078,10 +1063,10 @@ void do_pray(CHAR_DATA *ch, char *argument)
 	if (fp)
 	{
 		sprintf(buf, "%s: %s [%d] is PRAYing for: %s\n",
-			log_time(),
-			ch->true_name,
-			ch->in_room->vnum,
-			argument);
+				log_time(),
+				ch->true_name,
+				ch->in_room->vnum,
+				argument);
 		fprintf(fp, "%s", buf);
 		fclose(fp);
 	}
@@ -1090,18 +1075,14 @@ void do_pray(CHAR_DATA *ch, char *argument)
 	{
 		auto victim = d->original ? d->original : d->character;
 
-		if (d->connected == CON_PLAYING
-			&& d->character != ch
-			&& !IS_SET(victim->comm, COMM_SHOUTSOFF)
-			&& !IS_SET(victim->comm, COMM_QUIET)
-			&& victim->level >= 52)
+		if (d->connected == CON_PLAYING && d->character != ch && !IS_SET(victim->comm, COMM_SHOUTSOFF) && !IS_SET(victim->comm, COMM_QUIET) && victim->level >= 52)
 		{
 			sprintf(buf, "%s%s [%d] is PRAYing for: %s%s\n\r",
-				get_char_color(victim, "prays"),
-				ch->true_name,
-				ch->in_room->vnum,
-				argument,
-				END_COLOR(victim));
+					get_char_color(victim, "prays"),
+					ch->true_name,
+					ch->in_room->vnum,
+					argument,
+					END_COLOR(victim));
 			send_to_char(buf, d->character);
 		}
 	}
@@ -1168,16 +1149,10 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	auto victim = char_list;
 	for (; victim != NULL; victim = victim->next)
 	{
-		if (is_name(victim->name, arg)
-			&& (IS_NPC(victim)
-			&& victim->pIndexData->vnum == MOB_VNUM_DECOY))
+		if (is_name(victim->name, arg) && (IS_NPC(victim) && victim->pIndexData->vnum == MOB_VNUM_DECOY))
 			continue;
 
-		if (victim->in_room == NULL
-			|| (IS_IMMORTAL(ch)
-				? !is_name(arg, (victim->true_name ? victim->true_name : victim->name))
-				: !is_name(arg, victim->name))
-			|| !can_see(ch, victim))
+		if (victim->in_room == NULL || (IS_IMMORTAL(ch) ? !is_name(arg, (victim->true_name ? victim->true_name : victim->name)) : !is_name(arg, victim->name)) || !can_see(ch, victim))
 			continue;
 
 		if (++count == number)
@@ -1225,17 +1200,17 @@ void do_tell(CHAR_DATA *ch, char *argument)
 		argument = palloc_string(upstring(argument));
 	}
 
-	sprintf(buf, "You tell $%s '%s$t%s'", 
-		IS_IMMORTAL(ch) && !IS_NPC(victim) ? "F" : "N",
-		get_char_color(ch, "tells"),
-		END_COLOR(ch));
+	sprintf(buf, "You tell $%s '%s$t%s'",
+			IS_IMMORTAL(ch) && !IS_NPC(victim) ? "F" : "N",
+			get_char_color(ch, "tells"),
+			END_COLOR(ch));
 
 	act(buf, ch, argument, victim, TO_CHAR);
 
 	sprintf(buf, "$%s tells you '%s$t%s'",
-		IS_IMMORTAL(victim) && !IS_NPC(ch) ? "f" : "n",
-		get_char_color(victim, "tells"),
-		END_COLOR(victim));
+			IS_IMMORTAL(victim) && !IS_NPC(ch) ? "f" : "n",
+			get_char_color(victim, "tells"),
+			END_COLOR(victim));
 
 	act_new(buf, ch, argument, victim, TO_VICT, POS_DEAD);
 
@@ -1327,17 +1302,17 @@ void do_reply(CHAR_DATA *ch, char *argument)
 		argument = palloc_string(upstring(argument));
 	}
 
-	sprintf(buf, "You tell $%s '%s$t%s'", 
-		IS_IMMORTAL(ch) && !IS_NPC(victim) ? "F" : "N",
-		get_char_color(ch, "tells"),
-		END_COLOR(ch));
+	sprintf(buf, "You tell $%s '%s$t%s'",
+			IS_IMMORTAL(ch) && !IS_NPC(victim) ? "F" : "N",
+			get_char_color(ch, "tells"),
+			END_COLOR(ch));
 
 	act(buf, ch, argument, victim, TO_CHAR);
 
 	sprintf(buf, "$%s tells you '%s$t%s'",
-		IS_IMMORTAL(victim) && !IS_NPC(ch) ? "f" : "n",
-		get_char_color(victim, "tells"),
-		END_COLOR(victim));
+			IS_IMMORTAL(victim) && !IS_NPC(ch) ? "f" : "n",
+			get_char_color(victim, "tells"),
+			END_COLOR(victim));
 
 	act_new(buf, ch, argument, victim, TO_VICT, POS_DEAD);
 
@@ -1424,11 +1399,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 
 	for (auto d = descriptor_list; d != NULL; d = d->next)
 	{
-		if (d->connected == CON_PLAYING
-			&& d->character != ch
-			&& d->character->in_room != NULL
-			&& d->character->in_room->area == ch->in_room->area
-			&& !IS_SET(d->character->comm, COMM_QUIET))
+		if (d->connected == CON_PLAYING && d->character != ch && d->character->in_room != NULL && d->character->in_room->area == ch->in_room->area && !IS_SET(d->character->comm, COMM_QUIET))
 		{
 			if (IS_SET(d->character->in_room->room_flags, ROOM_SILENCE))
 				continue;
@@ -1792,7 +1763,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 	send_to_char("Alas, all good things must come to an end.\n\r", ch);
 	act("$n has left the realm.", ch, NULL, NULL, TO_ROOM);
 
-	sprintf(log_buf, "%s@%s has %squit. [%ld played, %d (%d) obj]", 
+	sprintf(log_buf, "%s@%s has %squit. [%ld played, %d (%d) obj]",
 			ch->true_name,
 			!IS_SET(ch->comm, COMM_NOSOCKET) ? ch->pcdata->host : "",
 			autoq ? "auto" : "",
@@ -1934,9 +1905,7 @@ void do_follow(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(victim)
-		&& IS_SET(victim->act, PLR_NOFOLLOW)
-		&& (get_skill(ch, gsn_trail) == 0 || can_see(victim, ch)))
+	if (!IS_NPC(victim) && IS_SET(victim->act, PLR_NOFOLLOW) && (get_skill(ch, gsn_trail) == 0 || can_see(victim, ch)))
 	{
 		if (get_skill(ch, gsn_trail) > 0 && can_see(victim, ch))
 			act("You can't very well trail someone if they can see you.", ch, NULL, NULL, TO_CHAR);
@@ -2218,13 +2187,13 @@ void do_group(CHAR_DATA *ch, char *argument)
 					epl += (int)((gch->level - 2) * epl * 0.08);
 					auto exp_ltl = (gch->level * exp_per_level(gch) - (gch->level - 1) * epl);
 					sprintf(buf, "[%2d %s] %-32s %3d%%hp %3d%%mana %3d%%mv %3d%%tnl\n\r",
-						gch->level,
-						IS_NPC(gch) ? "Mob" : gch->Class()->who_name,
-						capitalize(PERS(gch, ch)),
-						(gch->max_hit == 0) ? 0 : (gch->hit * 100) / gch->max_hit,
-						(gch->max_mana == 0) ? 0 : (gch->mana * 100) / gch->max_mana,
-						(gch->max_move == 0) ? 0 : (gch->move * 100) / gch->max_move,
-						URANGE(0, (exp_tnl * 100) / exp_ltl, 100));
+							gch->level,
+							IS_NPC(gch) ? "Mob" : gch->Class()->who_name,
+							capitalize(PERS(gch, ch)),
+							(gch->max_hit == 0) ? 0 : (gch->hit * 100) / gch->max_hit,
+							(gch->max_mana == 0) ? 0 : (gch->mana * 100) / gch->max_mana,
+							(gch->max_move == 0) ? 0 : (gch->move * 100) / gch->max_move,
+							URANGE(0, (exp_tnl * 100) / exp_ltl, 100));
 				}
 				else
 				{
@@ -2233,10 +2202,10 @@ void do_group(CHAR_DATA *ch, char *argument)
 						buf2[0] = UPPER(buf2[0]);
 
 					sprintf(buf, "[Minion] %-32s %3d%%hp %3d%%mana %3d%%mv\n\r",
-						buf2,
-						(gch->max_hit == 0) ? 0 : (gch->hit * 100) / gch->max_hit,
-						(gch->max_mana == 0) ? 0 : (gch->mana * 100) / gch->max_mana,
-						(gch->max_move == 0) ? 0 : (gch->move * 100) / gch->max_move);
+							buf2,
+							(gch->max_hit == 0) ? 0 : (gch->hit * 100) / gch->max_hit,
+							(gch->max_mana == 0) ? 0 : (gch->mana * 100) / gch->max_mana,
+							(gch->max_move == 0) ? 0 : (gch->move * 100) / gch->max_move);
 				}
 
 				send_to_char(buf, ch);
@@ -2548,33 +2517,33 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 
 	switch (line->type)
 	{
-		case SPEECH_SAY:
-			do_say(mob, buf);
-			break;
-		case SPEECH_SAYTO:
-			say_to(mob, ch, buf, "");
-			break;
-		case SPEECH_TELL:
-			sprintf(buf, "%s %s", ch->name, buf);
-			do_tell(mob, buf);
-			break;
-		case SPEECH_WHISPER:
-			do_whisper(mob, buf);
-			break;
-		case SPEECH_YELL:
-			do_yell(mob, buf);
-			break;
-		case SPEECH_EMOTE:
-			do_emote(mob, buf);
-			break;
-		case SPEECH_ECHO:
-			break;
-		case SPEECH_SING:
-			do_sing(mob, buf);
-			break;
-		default:
-			bug("Error in speech -- missing/invalid type.", 0);
-			return;
+	case SPEECH_SAY:
+		do_say(mob, buf);
+		break;
+	case SPEECH_SAYTO:
+		say_to(mob, ch, buf, "");
+		break;
+	case SPEECH_TELL:
+		sprintf(buf, "%s %s", ch->name, buf);
+		do_tell(mob, buf);
+		break;
+	case SPEECH_WHISPER:
+		do_whisper(mob, buf);
+		break;
+	case SPEECH_YELL:
+		do_yell(mob, buf);
+		break;
+	case SPEECH_EMOTE:
+		do_emote(mob, buf);
+		break;
+	case SPEECH_ECHO:
+		break;
+	case SPEECH_SING:
+		do_sing(mob, buf);
+		break;
+	default:
+		bug("Error in speech -- missing/invalid type.", 0);
+		return;
 	}
 
 	if (!line->next)
@@ -2660,17 +2629,22 @@ void perm_death_log(CHAR_DATA *ch, int deltype)
 		return;
 
 	fprintf(fp, "%s||[%2d %5s %s]||%s%s%s%s||Kills: %d||Deaths: %d||Age: %d||Hours: %d||%s",
-		deltype == 1 ? "DELETED" : deltype == 2 ? "CON-DIE" : deltype == 3 ? "OLD-AGE" : deltype == 4 ? "AUTODELETE" : "DELETED",
-		ch->level,
-		pc_race_table[ch->race].who_name,
-		(RSTR)ch->Class()->who_name,
-		cabal_table[ch->cabal].who_name,
-		ch->true_name, IS_NPC(ch) ? "" : ch->pcdata->title,
-		IS_NPC(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle : "", ch->pcdata->kills[PK_KILLS],
-		ch->pcdata->killed[PK_KILLED],
-		get_age(ch),
-		(ch->played + current_time - ch->logon) / 3600,
-		ctime(&current_time));
+			deltype == 1 ? "DELETED" : deltype == 2 ? "CON-DIE"
+								   : deltype == 3	? "OLD-AGE"
+								   : deltype == 4	? "AUTODELETE"
+													: "DELETED",
+			ch->level,
+			pc_race_table[ch->race].who_name,
+			(RSTR)ch->Class()->who_name,
+			cabal_table[ch->cabal].who_name,
+			ch->true_name, IS_NPC(ch) ? "" : ch->pcdata->title,
+			IS_NPC(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle
+													: "",
+			ch->pcdata->kills[PK_KILLS],
+			ch->pcdata->killed[PK_KILLED],
+			get_age(ch),
+			(ch->played + current_time - ch->logon) / 3600,
+			ctime(&current_time));
 
 	fclose(fp);
 }
@@ -2685,14 +2659,14 @@ void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 
 	char query[MAX_STRING_LENGTH];
 	sprintf(query, "INSERT INTO pklogs VALUES('%s', %d, '%s', %d, '%s', '%s (%d)',%ld)",
-		killer->true_name,
-		killer->cabal,
-		dead->true_name,
-		dead->cabal,
-		log_time(),
-		escape_string(get_room_name(dead->in_room)),
-		dead->in_room->vnum,
-		current_time);
+			killer->true_name,
+			killer->cabal,
+			dead->true_name,
+			dead->cabal,
+			log_time(),
+			escape_string(get_room_name(dead->in_room)),
+			dead->in_room->vnum,
+			current_time);
 
 	one_query(query);
 }
@@ -2703,15 +2677,15 @@ void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 		return;
 
 	auto fp = fopen(MOB_LOG_FILE, "a");
-	if(fp == NULL)
+	if (fp == NULL)
 		return;
 
 	fprintf(fp, "%s | %s | %s | %s | %s",
-		dead->true_name,
-		killer->short_descr,
-		killer->in_room->area->name,
-		get_room_name(killer->in_room),
-		ctime(&current_time));
+			dead->true_name,
+			killer->short_descr,
+			killer->in_room->area->name,
+			get_room_name(killer->in_room),
+			ctime(&current_time));
 
 	fclose(fp);
 }
@@ -2726,8 +2700,8 @@ void login_log(CHAR_DATA *ch, int type)
 		return;
 
 	auto escape = ch->pcdata->host
-		? escape_string(ch->pcdata->host)
-		: escape_string(ch->desc->host);
+					  ? escape_string(ch->pcdata->host)
+					  : escape_string(ch->desc->host);
 
 	char query[MAX_STRING_LENGTH];
 	sprintf(query, "INSERT INTO logins VALUES('%s', '%s', '%s', '%ld', '%ld', '%d', '%d', '%d')",

@@ -664,7 +664,13 @@ void check_style_improve(CHAR_DATA *ch, int style, int multiplier)
 	}
 }
 
-/* checks for skill improvement */
+///
+/// checks for skill improvement 
+/// @param ch: The character with the skill
+/// @param sn: The GSN of the skill used
+/// @param success: Whether or not the use was successful
+/// @param multiplier: A difficulty multiplier. Higher is harder to improve. Set between 1 and int[max]
+///
 void check_improve(CHAR_DATA *ch, int sn, bool success, int multiplier)
 {
 	int inum;

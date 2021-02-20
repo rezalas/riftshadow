@@ -3402,14 +3402,14 @@ int number_range(int from, int to)
 	return from + number;
 }
 
-/*
- * Generate a percentile roll.
- */
+///
+/// Generate a percentile roll.
+///
 int number_percent(void)
 {
 	int percent;
 
-	while ((percent = number_mm() & (128 - 1)) > 99);
+	while ((percent = number_mm() & 127) > 99);
 
 	return 1 + percent;
 }
