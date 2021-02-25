@@ -40,6 +40,9 @@
 #include "db.h"
 #include "bit.h"
 #include "string.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 //#include "iprog.h"
 //#include "mprog.h"

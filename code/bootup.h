@@ -18,6 +18,8 @@
 #include "olc.h"
 #include "spec.h"
 #include <string.h>
+#include "const.h"
+
 /*
  *  * Local booting procedures.
  *  */

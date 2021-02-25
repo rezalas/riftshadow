@@ -19,6 +19,8 @@
 #include "dioextra.h"
 #include "fight.h"
 #include "db.h"
+#include "const.h"
+#include "material.h"
 
 
 //

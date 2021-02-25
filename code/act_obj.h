@@ -24,6 +24,9 @@
 #include "interp.h"
 #include "db.h"
 #include "act_move.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 #define CABAL_ITEMS_FILE	"citems.txt"
 #define MINOTAUR_ONLY		I

@@ -28,6 +28,9 @@
 #include "dioextra.h"
 #include "act_move.h"
 #include "act_obj.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 extern char *const dir_name[];
 extern const sh_int rev_dir[];

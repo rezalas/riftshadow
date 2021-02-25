@@ -51,6 +51,9 @@
 #include "misc.h"
 #include "telnet.h"
 #include "string.h"
+#include "chardef.h"
+#include "const.h"
+#include "titles.h"
 
 #define CHAR_WRAP			85
 

@@ -54,6 +54,7 @@
 #include "act_wiz.h"
 #include "fight.h"
 #include "db.h"
+#include "db2.h"
 #include "note.h"
 #include "olc.h"
 #include "olc_act.h"
@@ -66,6 +67,7 @@
 #include "scan.h"
 #include "act_info.h"
 #include "act_wiz.h"
+#include "const.h"
 
 /* for command types */
 #define ML				MAX_LEVEL		/* implementor */

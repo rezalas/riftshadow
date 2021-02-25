@@ -29,7 +29,10 @@
 #include "devextra.h"
 #include "act_comm.h"
 #include "comm.h"
-
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "titles.h"
 
 //
 // LOCAL FUNCTIONS

@@ -21,6 +21,8 @@
 #include "db.h"
 #include "devextra.h"
 #include "quest.h"
+#include "chardef.h"
+#include "const.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

@@ -23,6 +23,8 @@
 #include "devextra.h"
 #include "comm.h"
 #include "quest.h"
+#include "chardef.h"
+#include "const.h"
 
 //
 // LOCAL FUNCTIONS

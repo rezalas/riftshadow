@@ -60,6 +60,8 @@
 #include "handler.h"
 #include "misc.h"
 #include "dioextra.h"
+#include "chardef.h"
+#include "const.h"
 
 #ifndef OLD_RAND
 #define OLD_RAND

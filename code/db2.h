@@ -24,6 +24,8 @@
 #include "rprog.h"
 #include "aprog.h"
 
+extern struct social_type social_table[MAX_SOCIALS];
+
 //
 // LOCAL FUNCTIONS
 //

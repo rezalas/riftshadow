@@ -38,6 +38,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "merc.h"
+#include "material.h"
 
 /* game tables */
 extern const struct cabal_type cabal_table[MAX_CABAL];
@@ -53,7 +54,6 @@ extern const struct hometown_type hometown_table[MAX_HOMETOWN];
 extern const struct color_type color_table[MAX_COLORS];
 extern const struct color_event_type color_event[MAX_EVENTS];
 extern const struct sect_type sect_table[];
-extern const struct material_type  material_table[];
 extern const struct quest_type quest_table[];
 extern const struct tribe_type tribe_table[];
 extern const struct style_type style_table[];

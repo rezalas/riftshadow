@@ -19,6 +19,8 @@
 #include "magic.h"
 #include "dioextra.h"
 #include "comm.h"
+#include "chardef.h"
+#include "const.h"
 
 #define MAX_NEST	100
 

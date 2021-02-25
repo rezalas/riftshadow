@@ -616,44 +616,6 @@ struct bounty
 };
 
 //
-// Attribute bonus structures.
-//
-
-struct str_app_type
-{
-	sh_int topenetrate;
-	sh_int todam;
-	sh_int carry;
-	sh_int wield;
-};
-
-struct int_app_type
-{
-	sh_int learn;
-};
-
-struct wis_app_type
-{
-	sh_int practice;
-};
-
-struct dex_app_type
-{
-	sh_int defensive;
-	sh_int carry;
-	sh_int tohit;
-	sh_int armor;
-};
-
-struct con_app_type
-{
-	sh_int hitp;
-	sh_int shock;
-};
-
-
-
-//
 // TO types for act.
 //
 
@@ -796,51 +758,6 @@ struct class_type
 	sh_int status;
 };
 
-struct item_type
-{
-	int type;
-	char *name;
-};
-
-struct weapon_type
-{
-	char *name;
-	sh_int vnum;
-	sh_int type;
-	sh_int *gsn;
-};
-
-struct wiznet_type
-{
-	char *name;
-	int flag;
-	int level;
-};
-
-struct attack_type
-{
-	char *name;		// name
-	char *noun;		// message
-	int damage;		// damage class
-	int modifier;	// difficulty to parry, - for harder + for easier
-};
-
-struct race_type
-{
-	char *name;		// call name of the race
-	bool pc_race;	// can be chosen by pcs
-	long act[10];	// act bits for the race
-	long aff[10];	// aff bits for the race
-	long off[10];	// off bits for the race
-	long imm[10];	// imm bits for the race
-	long res[10];	// res bits for the race
-	long vuln[10];	// vuln bits for the race
-	long form[15];	// default form flag for the race
-	long parts[15];	// default parts for the race
-	int arms;
-	int legs;
-};
-
 struct race_data
 {
 	RACE_DATA *first;
@@ -859,26 +776,6 @@ struct race_data
 	int arms;
 	int legs;
 };
-
-struct pc_race_type // additional data for pc races
-{
-	char *name;						// MUST be in race_type
-	char who_name[8];
-	char *who_name_five;
-	char *race_time;		
-	float agemod;
-	int death_modifier;				// how soon they die
-	sh_int align;					// alignments race can have: 0=gne 1=gn 2=ne 3=g 4=n 5=e
-	sh_int xpadd;					// extra xp per lvl needed
-	char *skills[5];				// bonus skills for the race
-	sh_int classes[MAX_CLASS]; 		// class restricts for races
-	sh_int max_stats[MAX_STATS];	// maximum stats
-	sh_int size;					// aff bits for the race
-	sh_int racePulse;				// combat pulse for this race
-	float racialDam;				// racial dam modifier
-	sh_int status;
-};
-
 
 struct old_char
 {
@@ -3213,33 +3110,6 @@ struct gen_data
 };
 
 //
-// Liquids.
-//
-
-#define LIQ_WATER					0
-
-struct liq_type
-{
-	char * liq_name;
-	char * liq_color;
-	sh_int liq_affect[5];
-};
-
-struct material_type
-{
-	char * mat_name;
-	sh_int mat_phase;
-	sh_int mat_hardness;
-	sh_int mat_rarity;
-	sh_int mat_conductivity;
-	sh_int mat_flammability;
-	sh_int mat_density;
-	long mat_flags;
-};
-
-extern const struct material_type material_table[];
-
-//
 // Extra description data for a room or object.
 //
 
@@ -3584,34 +3454,6 @@ struct pathfind_data
 #define RUNE_WEAPON					4
 #define RUNE_DOOR					8
 #define RUNE_ROOM					16
-
-
-//
-// Skills include spells as a particular case.
-//
-
-struct skill_type
-{
-	char *name;							// Name of skill
-	sh_int skill_level[MAX_CLASS];		// Level needed by class
-	SPELL_FUN *spell_fun;				// Spell pointer (for spells)
-	sh_int target;						// Legal targets
-	sh_int minimum_position;			// Position for caster / user
-	sh_int *pgsn;						// Pointer to associated gsn
-	sh_int dispel;						// affect bitvector for dispel
-	sh_int min_mana;					// Minimum mana used
-	sh_int beats;						// Waiting time after use
-	char *noun_damage;					// Damage message
-	char *msg_off;						// Wear off message
-	char *room_msg_off;					// Wear off message to room
-	sh_int ctype;						// Is this a spell or prayer or power?
-};
-
-struct  group_type
-{
-	char *name;
-	char *spells[MAX_IN_GROUP];
-};
 
 
 extern int nAllocPerm;
@@ -4289,24 +4131,7 @@ struct social_type
 // Global constants.
 //
 
-extern const struct str_app_type str_app[26];
-extern const struct int_app_type int_app[26];
-extern const struct wis_app_type wis_app[26];
-extern const struct dex_app_type dex_app[26];
-extern const struct con_app_type con_app[26];
-
 extern const struct class_type class_table[MAX_CLASS];
-extern const struct pc_race_type pc_race_table[];
-extern const std::vector<attack_type> attack_table;
-extern const std::vector<item_type> item_table;
-extern const std::vector<liq_type> liq_table;
-extern const std::vector<race_type> race_table;
-extern const std::vector<weapon_type> weapon_table;
-extern const std::vector<wiznet_type> wiznet_table;
-extern const struct skill_type skill_table[MAX_SKILL];
-extern const struct group_type group_table[MAX_GROUP];
-extern struct social_type social_table[MAX_SOCIALS];
-extern char * const title_table[MAX_CLASS][MAX_LEVEL+1][2];
 
 extern const struct improg_type iprog_table[];
 extern const struct improg_type verb_prog_table[];
