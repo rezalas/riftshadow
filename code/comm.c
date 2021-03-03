@@ -3200,6 +3200,15 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 	}
 }
 
+///
+/// Sends a message to an area, group, etc. E.g. "The shopkeeper gives jimmyDean the magic blender."
+///
+/// @param format: The format of the text to send
+/// @param ch: The character sending the words
+/// @param arg1: The first subject mentioned
+/// @param arg2: (optional) The second subject mentioned
+/// @param type: The scope of the message, e.g. TO_ROOM, TO_GROUP, etc.
+/// @param min_pos: The minimum position for the act (lowest default is POS_RESTING)
 void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type, int min_pos)
 {
 	static char *const he_she[] = {"it", "he", "she"};

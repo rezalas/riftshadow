@@ -620,7 +620,7 @@ const char *lowstring(const char *i)
 
 
 ///
-/// Allows a player or NPC to say things to others in the same room 
+/// Allows a player or NPC to say things to others in the same room.
 /// @param ch: The source of the message
 /// @param argument: The message to be sent
 ///

@@ -2579,8 +2579,12 @@ OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
 	return NULL;
 }
 
-/* deduct cost from a character */
-
+///
+/// Deduct a sum from a character's currency pool. If this would cause
+/// the character to have negative currency, it sets the value to 0 
+/// instead. 
+/// @param ch: The character to take from
+/// @param cost: The sum to deduct
 void deduct_cost(CHAR_DATA *ch, int cost)
 {
 	int gold = 0;

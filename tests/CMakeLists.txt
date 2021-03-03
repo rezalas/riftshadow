@@ -14,6 +14,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	db_tests.c
 	fight_tests.c
 	handler_tests.c
+	magic_tests.c
 	prof_tests.c
 	queue_tests.c
 )

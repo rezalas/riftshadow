@@ -34,15 +34,16 @@ char_data* TestHelperCreateNPC()
 	return npc;
 }
 
-char_data* TestHelperCreateNPCWithShop()
+char_data* TestHelperCreateNPCWithShop(int setGold = 1000)
 {
 	auto npc = TestHelperCreateNPC();
 	npc->pIndexData->pShop = new shop_data();
+	npc->gold = setGold;
 	return npc;
 }
 
 
-char_data* TestHelperCreatePlayer(char *name)
+char_data* TestHelperCreatePlayer(char *name, obj_data *item = NULL)
 {
 	auto player = new char_data();
 	player->name = name;
@@ -57,14 +58,38 @@ char_data* TestHelperCreatePlayer(char *name)
 	dnew->outtop = 0;	
 	player->desc = dnew;
 
+	if(item != NULL)
+		player->carrying = item;
+	
+
 	return player;
+}
+
+void TestHelperAddPlayerToCabal(char_data* player, char *cabalName = "guild")
+{
+	auto cabalCode = cabal_lookup(cabalName);
+	player->cabal = cabalCode;
+	player->pcdata->cabal_level = cabal_table[cabalCode].start_level;
+	cabal_members[cabalCode]++;
 }
 
 room_index_data* TestHelperCreateRoom()
 {
 	auto room = new room_index_data();
+	room->light = 3; // classifies the room as 'not dark'
 	room->area = new area_data();
+	
 	return room;
+}
+
+obj_data* TestHelperCreateItem(char *itemName = "broken_lamp", int cost = 0)
+{
+	auto item = new obj_data();
+	item->name = itemName;
+	item->cost = cost;
+	item->description = "A magically generated item for testing";
+
+	return item;
 }
 
 SCENARIO("testing finding shop keepers","[find_keeper]")
@@ -200,6 +225,68 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 			THEN("do_sell should return after notifying the player and rejecting the command.")
 			{
 				REQUIRE(strstr(actual, expected) != NULL);
+			}
+		}
+
+		WHEN("an argument is provided, but the item has no value")
+		{
+			auto item = TestHelperCreateItem("broken_spoon");
+			auto player = TestHelperCreatePlayer("player 1", item);
+			auto keeper = TestHelperCreateNPCWithShop();
+			auto room = TestHelperCreateRoom();
+			TestHelperAddPlayerToRoom(player, room);
+			TestHelperAddPlayerToRoom(keeper, room);
+			
+			do_sell(player, item->name);
+
+			THEN("it should not be sold to the shopkeeper")
+			{
+				REQUIRE(player->carrying == item);
+				REQUIRE(player->gold == 0);
+				REQUIRE(keeper->carrying != item);
+			}
+		}
+
+		WHEN("an item of value is provided, but the character is in horde")
+		{
+			auto item = TestHelperCreateItem("broken_spoon", 100);
+			auto player = TestHelperCreatePlayer("player 1", item);
+			TestHelperAddPlayerToCabal(player, "horde");
+			auto keeper = TestHelperCreateNPCWithShop();
+			auto room = TestHelperCreateRoom();
+			TestHelperAddPlayerToRoom(player, room);
+			TestHelperAddPlayerToRoom(keeper, room);
+			
+			do_sell(player, item->name);
+			auto actual = player->desc->outbuf;
+			auto expected = "You would never trade for coin when coin can be taken!";
+			THEN("it should not be sold to the shopkeeper")
+			{
+				REQUIRE(strstr(actual, expected) != NULL);
+				REQUIRE(player->carrying == item);
+				REQUIRE(player->gold == 0);
+				REQUIRE(keeper->carrying != item);
+			}
+		}
+
+		WHEN("an item of value is provided, but the char doesn't have the haggle skill")
+		{
+			auto item = TestHelperCreateItem("broken_spoon");
+			auto player = TestHelperCreatePlayer("player 1", item);
+			auto keeper = TestHelperCreateNPCWithShop();
+			auto room = TestHelperCreateRoom();
+			TestHelperAddPlayerToRoom(player, room);
+			TestHelperAddPlayerToRoom(keeper, room);
+			
+			do_sell(player, item->name);
+			auto expected = "The shopkeeper haggles with you about the price - you seem poorly equipped for this.";
+			auto actual = player->desc->outbuf;
+
+			THEN("it should not be sold to the shopkeeper")
+			{
+				REQUIRE(player->carrying == item);
+				REQUIRE(player->gold == 0);
+				REQUIRE(keeper->carrying != item);
 			}
 		}
 	}

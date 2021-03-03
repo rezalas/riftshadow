@@ -2,11 +2,16 @@
 
 char *target_name;
 
-/*
- * Lookup a skill by name.
- */
+///
+/// Returns the number for a skill, searched by name.
+/// @param name: The name of the skill.
+/// @return The number associated with the skill, or -1 if not found, null, or empty.
+///
 int skill_lookup(const char *name)
 {
+	if(name == NULL)
+		return -1;
+
 	int sn;
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
