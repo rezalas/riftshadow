@@ -61,6 +61,15 @@
 	"phpcs.executablePath": "./admin/vendor/bin/phpcs",
 	"php-cs-fixer.config": "./admin/.phpcs.xml",
 	"runOnSave.commands": [],
+	"triggerTaskOnSave.tasks": {
+        "compile source": [
+            "${workspaceRoot}/code/*.h",
+			"${workspaceRoot}/code/*.c",
+            "${workspaceRoot}/code/*.cpp",
+			"${workspaceRoot}/tests/*.c",
+			"${workspaceRoot}/tests/*.cpp",
+        ],
+    },
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
