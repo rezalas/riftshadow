@@ -3407,11 +3407,13 @@ int number_range(int from, int to)
 ///
 int number_percent(void)
 {
-	int percent;
+	// int percent;
 
-	while ((percent = number_mm() & 127) > 99);
+	// while ((percent = number_mm() & 127) > 99);
 
-	return 1 + percent;
+	// return 1 + percent;
+
+	return rand() % 100 + 1;
 }
 
 /*

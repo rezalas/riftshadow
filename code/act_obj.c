@@ -4110,6 +4110,12 @@ void do_sell(CHAR_DATA *ch, char *objName)
 		do_say(keeper, "I'm not interested in that item.");
 		return;
 	}
+	
+	if(keeper->gold == 0)
+	{
+		do_say(keeper, "Sorry business is tight right now, maybe later.");
+		return;
+	}
 
 	act_new( "$n sells $p.", ch, obj, NULL, TO_ROOM, POS_RESTING);
 	roll = number_percent();
@@ -4134,12 +4140,11 @@ void do_sell(CHAR_DATA *ch, char *objName)
 	}
 
 	cost += obj->cost / costDivisor * roll / 100;
-	cost = UMIN(cost,95 * get_cost(keeper,obj,true) / 100);
+	//cost = UMIN(cost,95 * get_cost(keeper,obj,true) / 100);
+	cost = UMAX(cost, 1);
 	cost = UMIN(cost, keeper->gold);
-	check_improve(ch, gsn_haggle, false, 4);	
 
-
-	sprintf( buf, "You sell $p for %d gold piece%s.", obj->name, cost, cost == 1 ? "" : "s" );
+	sprintf( buf, "You sell $p for %d gold.", obj->name, cost);
 	act(buf, ch, obj, NULL, TO_CHAR );
 
 
@@ -4154,8 +4159,8 @@ void do_sell(CHAR_DATA *ch, char *objName)
 		obj_to_keeper( obj, keeper );
 	}
 	
-	ch->gold += cost;
 	deduct_cost(keeper,cost);
+	ch->gold += cost;
 }
 
 void do_value(CHAR_DATA *ch, char *argument)

@@ -1,6 +1,6 @@
 #include "catch.hpp"
-#include "../code/cabal.h"
 #include "../code/merc.h"
+#include "../code/cabal.h"
 
 char_data* TestHelperCreatePlayer(char *name = "player 1")
 {
@@ -120,11 +120,11 @@ SCENARIO("testing update cabal skills","[update_cskills]")
 			{
 				for(auto skill : cabal_skills)
 				{
-					if(skill.cabal != player->pcdata->cabal)
+					if(skill.cabal != player->cabal)
 					{
 						REQUIRE(player->pcdata->learned[skill_lookup(skill.skill)] == 0);
 					}
-					else if(player->cabal_level < skill.level)
+					else if(player->pcdata->cabal_level < skill.level)
 					{
 						REQUIRE(player->pcdata->learned[skill_lookup(skill.skill)] == 0);	
 					}

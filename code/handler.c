@@ -1715,9 +1715,12 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 		do_raffects(ch, "");
 }
 
-/*
- * Give an obj to a char.
- */
+///
+/// Give an item (object) to a specified character and iterate carried count.
+///
+/// @param obj: Any item in the game
+/// @param ch: The character to receive the item
+///
 void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	obj->next_content = ch->carrying;

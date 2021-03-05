@@ -4,6 +4,18 @@
 #include "../code/act_obj.h"
 #include "../code/merc.h"
 #include "../code/handler.h"
+//#include "../code/bootup.h"
+
+void TestHelperLoadGSNList()
+{
+	int sn;
+
+	for ( sn = 0; sn < MAX_SKILL; sn++ )
+	{
+		if ( skill_table[sn].pgsn != NULL)
+			*skill_table[sn].pgsn = sn;
+	}
+}
 
 void TestHelperAddPlayerToRoom(char_data *player, room_index_data *room)
 {
@@ -42,12 +54,24 @@ char_data* TestHelperCreateNPCWithShop(int setGold = 1000)
 	return npc;
 }
 
+void TestHelperLoadCClass()
+{
+	auto cclass = new CClass();
+	cclass->name = "ANTI_PALADIN";
+	cclass->index = 5;
+	CClass::first = cclass;
+	CClass::first->name;
+}
 
 char_data* TestHelperCreatePlayer(char *name, obj_data *item = NULL)
 {
 	auto player = new char_data();
 	player->name = name;
 	auto dnew = new descriptor_data();
+	player->pcdata = new pc_data();
+	TestHelperLoadCClass();
+	player->SetClass(5);
+	player->level = 51;
 	dnew->showstr_head = NULL;
 	dnew->showstr_point = NULL;
 	dnew->outsize = 2000;
@@ -59,7 +83,7 @@ char_data* TestHelperCreatePlayer(char *name, obj_data *item = NULL)
 	player->desc = dnew;
 
 	if(item != NULL)
-		player->carrying = item;
+		obj_to_char(item, player);
 	
 
 	return player;
@@ -87,6 +111,7 @@ obj_data* TestHelperCreateItem(char *itemName = "broken_lamp", int cost = 0)
 	auto item = new obj_data();
 	item->name = itemName;
 	item->cost = cost;
+	item->wear_loc = -1;
 	item->description = "A magically generated item for testing";
 
 	return item;
@@ -94,6 +119,8 @@ obj_data* TestHelperCreateItem(char *itemName = "broken_lamp", int cost = 0)
 
 SCENARIO("testing finding shop keepers","[find_keeper]")
 {
+	TestHelperLoadGSNList();
+
     GIVEN("a player character in a room")
     {
         WHEN("find_keeper is called while alone")
@@ -172,6 +199,8 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
 }
 SCENARIO("testing selling to merchants", "[do_sell]")
 {
+	TestHelperLoadGSNList();
+
 	GIVEN("a player calls sell")
 	{
 		WHEN("no arguments are provided")
@@ -271,7 +300,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 
 		WHEN("an item of value is provided, but the char doesn't have the haggle skill")
 		{
-			auto item = TestHelperCreateItem("broken_spoon");
+			auto item = TestHelperCreateItem("broken_spoon", 100);
 			auto player = TestHelperCreatePlayer("player 1", item);
 			auto keeper = TestHelperCreateNPCWithShop();
 			auto room = TestHelperCreateRoom();
@@ -282,11 +311,36 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 			auto expected = "The shopkeeper haggles with you about the price - you seem poorly equipped for this.";
 			auto actual = player->desc->outbuf;
 
-			THEN("it should not be sold to the shopkeeper")
+			THEN("it should be sold to the shopkeeper at an unskilled multiplier")
 			{
-				REQUIRE(player->carrying == item);
-				REQUIRE(player->gold == 0);
-				REQUIRE(keeper->carrying != item);
+				REQUIRE(strstr(actual,expected) != NULL);
+				REQUIRE(player->carrying != item);
+				REQUIRE(player->gold > 0);
+				REQUIRE(keeper->carrying == item);
+			}
+		}
+
+		WHEN("an item of value is provided and the char has the haggle skill")
+		{
+			auto item = TestHelperCreateItem("broken_spoon", 100);
+			auto player = TestHelperCreatePlayer("player 1", item);
+			player->pcdata->learned[222] = 100;
+
+			auto keeper = TestHelperCreateNPCWithShop();
+			auto room = TestHelperCreateRoom();
+			TestHelperAddPlayerToRoom(player, room);
+			TestHelperAddPlayerToRoom(keeper, room);
+			
+			do_sell(player, item->name);
+			auto expected = "The shopkeeper reluctantly concedes to your final price.";
+			auto actual = player->desc->outbuf;
+
+			THEN("it should be sold to the shopkeeper at a skilled multiplier")
+			{
+				REQUIRE(strstr(actual,expected) != NULL);
+				REQUIRE(player->carrying != item);
+				REQUIRE(player->gold > 0);
+				REQUIRE(keeper->carrying == item);
 			}
 		}
 	}

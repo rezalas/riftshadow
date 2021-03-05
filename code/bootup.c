@@ -125,7 +125,9 @@ void CMud::LoadObjLimits()
 }
 
 
-// Sets all the gsn's for the skills and spells
+///
+/// Sets all the gsn's for the skills and spells
+///
 void CMud::LoadGsn()
 {
 	int sn;
