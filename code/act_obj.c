@@ -4144,7 +4144,7 @@ void do_sell(CHAR_DATA *ch, char *objName)
 	cost = UMAX(cost, 1);
 	cost = UMIN(cost, keeper->gold);
 
-	sprintf( buf, "You sell $p for %d gold.", obj->name, cost);
+	sprintf( buf, "You sell %s for %d gold.", obj->name, cost);
 	act(buf, ch, obj, NULL, TO_CHAR );
 
 

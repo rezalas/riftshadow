@@ -2628,11 +2628,27 @@ void perm_death_log(CHAR_DATA *ch, int deltype)
 	if (fp == NULL)
 		return;
 
-	fprintf(fp, "%s||[%2d %5s %s]||%s%s%s%s||Kills: %d||Deaths: %d||Age: %d||Hours: %d||%s",
-			deltype == 1 ? "DELETED" : deltype == 2 ? "CON-DIE"
-								   : deltype == 3	? "OLD-AGE"
-								   : deltype == 4	? "AUTODELETE"
-													: "DELETED",
+	char *deletedReason; // deltype == 1 ? "DELETED" : deltype == 2 ? "CON-DIE" : deltype == 3	? "OLD-AGE"
+						//		   : deltype == 4	? "AUTODELETE" : "DELETED";
+	switch(deltype)
+	{
+		case 2:
+			deletedReason = "CON-DIE";
+		break;
+		case 3:
+			deletedReason = "OLD-AGE";
+		break;
+		case 4:
+			deletedReason = "AUTODELETE";
+		break;
+		case 1:
+		default:
+			deletedReason = "DELETED";
+		break;
+	}
+
+	fprintf(fp, "%s||[%2d %5s %s]||%s%s%s%s||Kills: %d||Deaths: %d||Age: %d||Hours: %ld||%s",
+			deletedReason,
 			ch->level,
 			pc_race_table[ch->race].who_name,
 			(RSTR)ch->Class()->who_name,
