@@ -2986,9 +2986,11 @@ void stop_idling(CHAR_DATA *ch)
 	act("$n has returned from the void.", ch, NULL, NULL, TO_ROOM);
 }
 
-/*
- * Write to one char.
- */
+///
+/// Send a message to a character 
+/// @param txt: The message to send
+/// @param ch: The character to receive it
+///
 void send_to_char(const char *txt, CHAR_DATA *ch)
 {
 	if (txt != NULL && ch->desc != NULL)
@@ -3084,9 +3086,12 @@ void fix_sex(CHAR_DATA *ch)
 		ch->sex = IS_NPC(ch) ? 0 : ch->pcdata->true_sex;
 }
 
+///
+/// Exists for compatibility only with older code that may use it.
+/// @deprecated Please use act_new instead.
+///
 void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type)
 {
-	/* to be compatible with older code */
 	act_new(format, ch, arg1, arg2, type, POS_RESTING);
 }
 
@@ -3195,6 +3200,15 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 	}
 }
 
+///
+/// Sends a message to an area, group, etc. E.g. "The shopkeeper gives jimmyDean the magic blender."
+///
+/// @param format: The format of the text to send
+/// @param ch: The character sending the words
+/// @param arg1: The first subject mentioned
+/// @param arg2: (optional) The second subject mentioned
+/// @param type: The scope of the message, e.g. TO_ROOM, TO_GROUP, etc.
+/// @param min_pos: The minimum position for the act (lowest default is POS_RESTING)
 void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type, int min_pos)
 {
 	static char *const he_she[] = {"it", "he", "she"};

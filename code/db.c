@@ -31,6 +31,7 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <cstddef>
 #include "db.h"
 
 /* LOAD CABAL ITEMS */
@@ -3402,14 +3403,15 @@ int number_range(int from, int to)
 	return from + number;
 }
 
-/*
- * Generate a percentile roll.
- */
+///
+/// Generate a percentile roll.
+///
+/// @return a random integer from 1 - 99
+///
 int number_percent(void)
 {
 	int percent;
-
-	while ((percent = number_mm() & (128 - 1)) > 99);
+	while ((percent = number_mm() & 127) > 99);
 
 	return 1 + percent;
 }
@@ -3446,6 +3448,10 @@ int number_bits(int width)
 static int rgiState[2 + 55];
 #endif
 
+///
+/// This is mandatory for the random number generator to work, and MUST run 
+/// during the startup phase for randomization to function properly in the game.
+///
 void init_mm()
 {
 #ifdef OLD_RAND
@@ -3468,9 +3474,31 @@ void init_mm()
 #endif
 }
 
+///
+/// Generates a random number using Mitchell-Moore algorithm from Knuth Volume II.
+///
+/// @return a randomly generated long.
+///
 long number_mm(void)
 {
 #ifdef OLD_RAND
+	
+	if(rgiState[0] == 0) // check if they're all zero, if so call init_mm()
+	{
+		bool isAnyrgiStateNumberNotZero = false;
+		for(auto i = 0; i < std::size(rgiState); i++)
+		{
+			if(rgiState[i] != 0)
+			{
+				isAnyrgiStateNumberNotZero = true;
+				break;
+			}
+		}
+		if(isAnyrgiStateNumberNotZero == false)
+		{
+			init_mm();
+		}
+	}
 	int *piState;
 	int iState1;
 	int iState2;

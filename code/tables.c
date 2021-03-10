@@ -915,36 +915,36 @@ const struct style_list style_percent[] =
 
     };
 
-const struct cabal_list cabal_skills[] =
-    {
-        { CABAL_SCION,	"mana transfer",	1, false},
-        { CABAL_SCION, 	"scribe",			1, false},
-        { CABAL_SCION,	"deny magic",		1, false},
-        { CABAL_SCION,	"nullify",			1, false},
-        { CABAL_SCION,	"bane of ignorance",1, false},
-        { CABAL_HORDE,	"howl",				1, false},
-        { CABAL_HORDE,	"epic strength",	1, false},
-        { CABAL_HORDE,	"trophy",			1, false},
-        { CABAL_HORDE,	"rage",				1, false},
-        { CABAL_HORDE,	"calm",				1, false},
-        { CABAL_HORDE,	"communion",		10, false},
-        { CABAL_BOUNTY,	"hunters strength",	1, false},
-        { CABAL_BOUNTY, "hunters awareness",1, false},
-        { CABAL_BOUNTY, "hunters stealth",	4, false},
-        { CABAL_BOUNTY, "isolation",		5, false},
-        { CABAL_THEATRE,"story tell",		1, false},
-        { CABAL_GUILD,	"medicine",			1, false},
-        { CABAL_GUILD,	"repose",			1, false},
-        { CABAL_PHALANX,"fervor",			1, false},
-        { CABAL_PHALANX,"piety",			1, false},
-        { CABAL_PHALANX,"spiritual healing",2, true},
-        { CABAL_PHALANX,"shroud of light",	2, true},
-        { CABAL_PHALANX,"safehaven",		2, true},
-        { CABAL_PHALANX,"crimson martyr",	3, true},
-        { CABAL_PHALANX,"retribution",		3, true},
-        { CABAL_PHALANX,"infidels fate",	3, true},
-        { CABAL_NONE,	NULL,				0, false},
-    };
+const std::vector<cabal_list> cabal_skills =
+{
+	{ CABAL_SCION,	"mana transfer",	1, false},
+	{ CABAL_SCION, 	"scribe",			1, false},
+	{ CABAL_SCION,	"deny magic",		1, false},
+	{ CABAL_SCION,	"nullify",			1, false},
+	{ CABAL_SCION,	"bane of ignorance",1, false},
+	{ CABAL_HORDE,	"howl",				1, false},
+	{ CABAL_HORDE,	"epic strength",	1, false},
+	{ CABAL_HORDE,	"trophy",			1, false},
+	{ CABAL_HORDE,	"rage",				1, false},
+	{ CABAL_HORDE,	"calm",				1, false},
+	{ CABAL_HORDE,	"communion",		10, false},
+	{ CABAL_BOUNTY,	"hunters strength",	1, false},
+	{ CABAL_BOUNTY, "hunters awareness",1, false},
+	{ CABAL_BOUNTY, "hunters stealth",	4, false},
+	{ CABAL_BOUNTY, "isolation",		5, false},
+	{ CABAL_THEATRE,"story tell",		1, false},
+	{ CABAL_GUILD,	"medicine",			1, false},
+	{ CABAL_GUILD,	"repose",			1, false},
+	{ CABAL_PHALANX,"fervor",			1, false},
+	{ CABAL_PHALANX,"piety",			1, false},
+	{ CABAL_PHALANX,"spiritual healing",2, true},
+	{ CABAL_PHALANX,"shroud of light",	2, true},
+	{ CABAL_PHALANX,"safehaven",		2, true},
+	{ CABAL_PHALANX,"crimson martyr",	3, true},
+	{ CABAL_PHALANX,"retribution",		3, true},
+	{ CABAL_PHALANX,"infidels fate",	3, true},
+	{ CABAL_NONE,	NULL,				0, false},
+};
 
 const struct flag_type wealth_table[] =
     {

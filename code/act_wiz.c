@@ -279,13 +279,19 @@ void do_smite(CHAR_DATA *ch, char *argument)
 	victim->hit /= 2;
 }
 
-/* Induction in a Cabal. When inducted a player gains skills or spells
-specific for that Cabal. You can add or remove abilities very easily by
-just following the basic format used here.
--Ceran
-*/
+///
+/// Allows a character to induct other characters into a specified cabal.
+/// @historical: Induction in a Cabal. When inducted a player gains skills or spells
+/// specific for that Cabal. You can add or remove abilities very easily by
+/// just following the basic format used here.
+/// -Ceran
+/// @param ch: The character calling induct
+/// @param argument: the name of the character to induct, followed by
+///  the name of the cabal to induct into. 
+/// Ex: "induct jimmydean sausage_lords"
 void do_induct(CHAR_DATA *ch, char *argument)
 {
+	// arg1 = character, arg2 = cabal name
 	char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH];
 	char buf[MAX_STRING_LENGTH], tbuf[MAX_STRING_LENGTH];
 	char tstr[MAX_STRING_LENGTH];
@@ -297,9 +303,16 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	if (IS_NPC(ch))
 		return;
 
-	argument = one_argument(argument, arg1);
-	argument = one_argument(argument, arg2);
+	argument = one_argument(argument, arg1); // character
+	argument = one_argument(argument, arg2); // cabal name
 
+	/**
+	 *  IF the character calling induct is under level 54 and not the cabal leader,
+	 *  or the character calling induct is an NPC,
+	 *  or the character calling induct is in horde and is not an immortal
+	 *  THEN tell them "huh?" and return.
+	 */
+	
 	if ((ch->level < 54 && ch->pcdata->induct != CABAL_LEADER)
 		|| IS_NPC(ch)
 		|| ch->cabal == CABAL_HORDE && !IS_IMMORTAL(ch))

@@ -582,3 +582,21 @@ SCENARIO("Testing wiznet lookup", "[wiznet_lookup]")
 		}
 	}
 }
+
+SCENARIO("Testing deduct gold cost from character","[deduct_cost]")
+{
+	GIVEN("a character with zero gold")
+	{
+		auto player = new char_data();
+		player->gold = 0;
+
+		WHEN("gold is taken from that character")
+		{
+			deduct_cost(player, 1000);
+			THEN("their gold should be set to zero")
+			{
+				REQUIRE(player->gold == 0);
+			}
+		}
+	}
+}

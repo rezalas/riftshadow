@@ -4063,47 +4063,90 @@ void do_list(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_sell(CHAR_DATA *ch, char *argument)
+///
+/// Allows a character to sell an item to a shop keeper given a few parameters are met.
+/// @param ch: The character selling the item
+/// @param objName: The item name being sold to the vendor
+///
+void do_sell(CHAR_DATA *ch, char *objName)
 {
-	//    char buf[MAX_STRING_LENGTH];
-	//    char arg[MAX_INPUT_LENGTH];
+	char buf[MAX_STRING_LENGTH];
+	char arg[MAX_INPUT_LENGTH];
 	CHAR_DATA *keeper;
-	//    OBJ_DATA *obj;
-	//    int cost,roll;
-
-	if (argument[0] == '\0')
-	{
-		send_to_char("Sell what?\n\r", ch);
-		return;
-	}
+	OBJ_DATA *obj;
+	int cost,roll,haggleSkillLevel;
 
 	keeper = find_keeper(ch);
 
 	if (keeper == NULL)
-		return;
-
-	do_say(keeper, "I don't want to buy anything from the likes of you.");
-
-	/*
-	act( "$n sells $p.", ch, obj, NULL, TO_ROOM );
-	roll = number_percent();
-	if (!IS_OBJ_STAT(obj,ITEM_SELL_EXTRACT) && roll < get_skill(ch,gsn_haggle))
 	{
-		send_to_char("You haggle with the shopkeeper.\n\r",ch);
-		cost += obj->cost / 2 * roll / 100;
-		cost = UMIN(cost,95 * get_cost(keeper,obj,true) / 100);
-		cost = UMIN(cost,(keeper->gold));
-		check_improve(ch,gsn_haggle,true,4);
+		send_to_char("Sell to whom? Yourself?",ch);
+		return;
 	}
 
-	sprintf( buf, "You sell $p for %d gold piece%s.", cost/100, cost == 1 ? "" : "s" );
-	act( buf, ch, obj, NULL, TO_CHAR );
+	if (objName[0] == '\0')
+	{
+		send_to_char("Sell what?\n\r", ch);
+		return;
+	}
+	
+	if (check_horde(ch))
+	{
+		send_to_char("You would never trade for coin when coin can be taken!\n\r", ch);
+		return;
+	}
 
-	ch->gold     += cost/100;
-	deduct_cost(keeper,cost);
+	obj = get_obj_carry(ch, objName, ch);
 
-	if ( keeper->gold < 0 )
-		keeper->gold = 0;
+	if(obj == NULL)
+	{
+		send_to_char("You cannot sell what you do not have.", ch);
+		return;
+	}
+
+
+	if(obj->cost <= 0)
+	{
+		do_say(keeper, "I'm not interested in that item.");
+		return;
+	}
+	
+	if(keeper->gold == 0)
+	{
+		do_say(keeper, "Sorry business is tight right now, maybe later.");
+		return;
+	}
+
+	act_new( "$n sells $p.", ch, obj, NULL, TO_ROOM, POS_RESTING);
+	roll = number_percent();
+	haggleSkillLevel = get_skill(ch,gsn_haggle);
+	auto costDivisor = 10;
+
+	if(haggleSkillLevel > 0)
+	{
+		send_to_char("You haggle with the shopkeeper.\n\r",ch);
+		auto isHaggleSuccessful = roll < haggleSkillLevel;
+		costDivisor = isHaggleSuccessful ? 2 : 5;
+		if (isHaggleSuccessful)
+			send_to_char("The shopkeeper reluctantly concedes to your final price.\n\r",ch);
+		else 
+			send_to_char("Irritated by your poor haggling, the shopkeeper demands a much lower price.\n\r",ch);	
+
+		check_improve(ch, gsn_haggle, isHaggleSuccessful, 4);
+	}
+	else // the player does not have haggle
+	{
+		send_to_char("The shopkeeper haggles with you about the price - you seem poorly equipped for this.\n\r",ch);
+	}
+
+	cost += obj->cost / costDivisor * roll / 100;
+	//cost = UMIN(cost,95 * get_cost(keeper,obj,true) / 100);
+	cost = UMAX(cost, 1);
+	cost = UMIN(cost, keeper->gold);
+
+	sprintf( buf, "You sell %s for %d gold.", obj->name, cost);
+	act(buf, ch, obj, NULL, TO_CHAR );
+
 
 	if ( obj->item_type == ITEM_TRASH || IS_OBJ_STAT(obj,ITEM_SELL_EXTRACT))
 	{
@@ -4115,7 +4158,9 @@ void do_sell(CHAR_DATA *ch, char *argument)
 		obj->timer = number_range(50,100);
 		obj_to_keeper( obj, keeper );
 	}
-	*/
+	
+	deduct_cost(keeper,cost);
+	ch->gold += cost;
 }
 
 void do_value(CHAR_DATA *ch, char *argument)

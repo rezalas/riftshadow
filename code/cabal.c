@@ -27,46 +27,50 @@
 
 #include "cabal.h"
 
+///
+/// Checks if the character is a member of the Horde Cabal.
+/// @param ch: The character to check
+/// @return True if a Horde member
+///
 bool check_horde(CHAR_DATA *ch)
 {
-	if (ch->cabal == CABAL_HORDE)
-	{
-		send_to_char("Huh?\n\r", ch);
-		return true;
-	}
-	
-	return false;
+	return ch->cabal == CABAL_HORDE;
 }
 
+
+
+///
+/// Updates the cabal-associated skills for a character. If they
+/// don't have a cabal, this removes all cabal-related skills. 
+/// @param ch: The character to operate on
+///
 void update_cskills(CHAR_DATA *ch)
 {
-	int i;
+	if(ch == NULL) // We cannot update what does not exist
+		return;
+	
+	if(ch->cabal == false) // if they don't have a cabal, remove all their cabal skills.
+	{ 
+		for (auto skill : cabal_skills)
+			ch->pcdata->learned[skill_lookup(skill.skill)] = 0;
 
-	if (ch->cabal)
-	{
-		for (i = 0; cabal_skills[i].skill; i++)
-		{
-			if (ch->cabal != cabal_skills[i].cabal)
-				continue;
-
-			if (ch->pcdata->cabal_level < cabal_skills[i].level && cabal_skills[i].level != 10)
-				continue;
-
-			if (ch->pcdata->cabal_level != cabal_skills[i].level && cabal_skills[i].specific)
-				continue;
-
-			if (cabal_skills[i].level == 10 && ch->pcdata->induct != CABAL_LEADER)
-				continue;
-
-			if (ch->pcdata->learned[skill_lookup(cabal_skills[i].skill)] < 2)
-				ch->pcdata->learned[skill_lookup(cabal_skills[i].skill)] = 70;
-		}
+		return;
 	}
-	else
+
+	auto charCabalLevel = ch->pcdata->cabal_level;
+
+	for(cabal_list skill : cabal_skills)
 	{
-		for (i = 0; cabal_skills[i].skill; i++)
+		if (ch->cabal != skill.cabal || (charCabalLevel < skill.level && skill.level != 10))
+			continue;
+		 
+		if((charCabalLevel != skill.level && skill.specific) || (skill.level == 10 && ch->pcdata->induct != CABAL_LEADER))
+			continue;
+		
+		auto skillPosInLearned = skill_lookup(skill.skill);
+		if(ch->pcdata->learned[skillPosInLearned] < 2)
 		{
-			ch->pcdata->learned[skill_lookup(cabal_skills[i].skill)] = 0;
+			ch->pcdata->learned[skillPosInLearned] = 70;
 		}
 	}
 }

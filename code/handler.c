@@ -452,7 +452,12 @@ bool is_old_mob(CHAR_DATA *ch)
 	return true;
 }
 
-/* for returning skill information */
+///
+/// Returns the skill level of a character given a skill GSN. 
+/// @param ch: The character with the skill
+/// @param sn: The GSN for a skill 
+/// @returns A skill between 0 and 100, defaulting to 0 if the character does not have the skill.
+///
 int get_skill(CHAR_DATA *ch, int sn)
 {
 	int skill = 0, gn = 0;
@@ -1710,9 +1715,12 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 		do_raffects(ch, "");
 }
 
-/*
- * Give an obj to a char.
- */
+///
+/// Give an item (object) to a specified character and iterate carried count.
+///
+/// @param obj: Any item in the game
+/// @param ch: The character to receive the item
+///
 void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	obj->next_content = ch->carrying;
@@ -2574,8 +2582,12 @@ OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
 	return NULL;
 }
 
-/* deduct cost from a character */
-
+///
+/// Deduct a sum from a character's currency pool. If this would cause
+/// the character to have negative currency, it sets the value to 0 
+/// instead. 
+/// @param ch: The character to take from
+/// @param cost: The sum to deduct
 void deduct_cost(CHAR_DATA *ch, int cost)
 {
 	int gold = 0;
