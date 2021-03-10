@@ -26,6 +26,7 @@
 #include "db.h"
 #include "devextra.h"
 #include "magic.h"
+#include "quest.h"
 #include "chardef.h"
 #include "const.h"
 

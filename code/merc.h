@@ -4133,12 +4133,6 @@ struct social_type
 
 extern const struct class_type class_table[MAX_CLASS];
 
-extern const struct improg_type iprog_table[];
-extern const struct improg_type verb_prog_table[];
-extern const struct improg_type mprog_table[];
-extern const struct improg_type rprog_table[];
-extern const struct improg_type aprog_table[];
-
 //
 // Global variables.
 //
@@ -4281,39 +4275,6 @@ extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
 extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 
-/* bit.c */
-extern const struct flag_type area_flags[];
-extern const struct flag_type sex_flags[];
-extern const struct flag_type exit_flags[];
-extern const struct flag_type door_resets[];
-extern const struct flag_type room_flags[];
-extern const struct flag_type sector_flags[];
-extern const struct flag_type type_flags[];
-extern const struct flag_type extra_flags[];
-extern const struct flag_type wear_flags[];
-extern const struct flag_type act_flags[];
-extern const struct flag_type affect_flags[];
-extern const struct flag_type apply_flags[];
-extern const struct flag_type wear_loc_strings[];
-extern const struct flag_type wear_loc_flags[];
-extern const struct flag_type weapon_flags[];
-extern const struct flag_type container_flags[];
-
-/* ROM OLC: */
-
-extern const struct flag_type material_type[];
-extern const struct flag_type form_flags[];
-extern const struct flag_type part_flags[];
-extern const struct flag_type ac_type[];
-extern const struct flag_type size_flags[];
-extern const struct flag_type off_flags[];
-extern const struct flag_type imm_flags[];
-extern const struct flag_type res_flags[];
-extern const struct flag_type vuln_flags[];
-extern const struct flag_type position_flags[];
-extern const struct flag_type weapon_class[];
-extern const struct flag_type weapon_type2[];
-extern const struct flag_type furniture_flags[];
 
 #define CAP(st)						(*(st) = UPPER(*(st)), st)
 #define	HIGH_VNUM					65535

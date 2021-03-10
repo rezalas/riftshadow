@@ -26,6 +26,8 @@
 #define SMITH_QUEST_LASTCOMP		"Smith Quest Last Component"
 #define SMITH_QUEST_COMP_ACQUIRED	"Smith Quest Components Used"
 
+extern const struct quest_type quest_table[];
+
 //
 // LOCAL FUNCTIONS
 //

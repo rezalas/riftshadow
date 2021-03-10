@@ -18,6 +18,8 @@
 #include "db.h"
 #include "devextra.h"
 
+extern const struct improg_type rprog_table[];
+
 //
 // LOCAL FUNCTIONS
 //

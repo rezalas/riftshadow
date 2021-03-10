@@ -67,6 +67,7 @@
 #include "scan.h"
 #include "act_info.h"
 #include "act_wiz.h"
+#include "iprog.h"
 #include "const.h"
 
 /* for command types */

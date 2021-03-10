@@ -26,6 +26,8 @@
 #include "chardef.h"
 #include "const.h"
 
+extern const struct improg_type mprog_table[];
+
 //
 // LOCAL FUNCTIONS
 //
