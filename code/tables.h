@@ -40,62 +40,6 @@
 #include "merc.h"
 #include "material.h"
 
-/* game tables */
-extern const struct cabal_type cabal_table[MAX_CABAL];
-extern const struct position_type position_table[];
-extern const struct sex_type sex_table[];
-extern const struct size_type size_table[];
-extern const struct display_type apply_locations[];
-extern const struct mod_name_type mod_names[];
-extern const struct flag_type aftype_table[];
-extern const struct bounty_type bounty_table[MAX_BOUNTY];
-extern const struct cabal_message  cabal_messages[MAX_CABAL];
-extern const struct hometown_type hometown_table[MAX_HOMETOWN];
-extern const struct color_type color_table[MAX_COLORS];
-extern const struct color_event_type color_event[MAX_EVENTS];
-extern const struct sect_type sect_table[];
-extern const struct quest_type quest_table[];
-extern const struct tribe_type tribe_table[];
-extern const struct style_type style_table[];
-extern const struct ele_sphere sphere_table[];
-extern const struct para_sphere para_list[];
-extern const struct style_list style_percent[];
-extern const struct demon_type demon_table[];
-extern const struct climate_type climate_table[MAX_CLIMATE];
-extern const struct piece_type piece_table[2][MAX_PIECE];
-extern const struct beauty_type beauty_table[];
-extern const struct order_list order_table[];
-extern char * const day_name[];
-extern char * const month_name[];
-extern char * const season_name[];
-/* flag tables */
-
-extern const struct flag_type act_flags[];
-extern const struct flag_type plr_flags[];
-extern const struct flag_type affect_flags[];
-extern const struct flag_type off_flags[];
-extern const struct flag_type imm_flags[];
-extern const struct flag_type form_flags[];
-extern const struct flag_type part_flags[];
-extern const struct flag_type comm_flags[];
-extern const struct flag_type extra_flags[];
-extern const struct flag_type wear_locations[];
-extern const struct flag_type wear_flags[];
-extern const struct flag_type weapon_flags[];
-extern const struct flag_type container_flags[];
-extern const struct flag_type portal_flags[];
-extern const struct flag_type room_flags[];
-extern const struct flag_type exit_flags[];
-extern const struct flag_type trap_table[];
-extern const struct flag_type speech_table[];
-extern const struct flag_type criterion_flags[];
-extern const struct flag_type direction_table[];
-extern const struct flag_type area_type_table[];
-extern const struct flag_type wealth_table[];
-extern const struct display_type altdesc_condtable[];
-extern const struct restrict_type restrict_table[];
-//extern const struct proficiency_type prof_table[];
-
 struct flag_type
 {
 	char *name;
@@ -184,8 +128,8 @@ struct hometown_type
 
 struct color_type
 {
- char *color_name;
- char *color_ascii;
+	char *color_name;
+	char *color_ascii;
 };
 
 struct color_event_type
@@ -300,7 +244,77 @@ struct prof_cmd_type
 	char *requires;
 };
 
+extern const struct flag_type aftype_table[];
+extern const struct display_type apply_locations[];
+extern const struct mod_name_type mod_names[];
+extern const struct cabal_type cabal_table[MAX_CABAL];
+extern const struct cabal_message cabal_messages[MAX_CABAL];
+extern const struct position_type position_table[];
+extern const struct sex_type sex_table[];
+extern const struct size_type size_table[];
+extern const struct flag_type act_flags[];
+extern const struct flag_type plr_flags[];
+extern const struct flag_type affect_flags[];
+extern const struct flag_type off_flags[];
+extern const struct flag_type imm_flags[];
+extern const struct flag_type extra_flags[];
+extern const struct flag_type wear_locations[];
+extern const struct flag_type wear_flags[];
+extern const struct flag_type form_flags[];
+extern const struct flag_type part_flags[];
+extern const struct flag_type comm_flags[];
+extern const struct flag_type criterion_flags[];
+extern const struct flag_type trap_table[];
+extern const struct flag_type speech_table[];
+extern const struct bounty_type bounty_table[MAX_BOUNTY];
+extern const struct hometown_type hometown_table[MAX_HOMETOWN];
+extern const struct color_type color_table[MAX_COLORS];
+extern const struct color_event_type color_event[MAX_EVENTS];
+extern const struct sect_type sect_table[];
+extern const struct flag_type room_flags[];
+extern const struct flag_type direction_table[];
+extern const struct flag_type exit_flags[];
+extern const struct flag_type area_type_table[];
+extern const struct flag_type sky_table[MAX_SKY];
+extern const struct flag_type temp_table[MAX_TEMP];
+extern const struct flag_type wind_table[MAX_WIND];
+extern const struct restrict_type restrict_table[];
+extern const struct tribe_type tribe_table[];
+extern const char* day_name[];
+extern const char* month_name[];
+extern const char* season_name[];
+extern const struct para_sphere para_list[];
+extern const struct ele_sphere sphere_table[];
+extern const struct style_type style_table[];
+extern const struct style_list style_percent[];
 extern const std::vector<cabal_list> cabal_skills;
-
+extern const struct flag_type wealth_table[];
+extern const struct demon_type demon_table[];
+extern const struct climate_type climate_table[MAX_CLIMATE];
+extern const struct piece_type piece_table[2][MAX_PIECE];
+extern const struct beauty_type beauty_table[];
+extern const struct order_list order_table[];
+extern const struct flag_type area_flags[];
+extern const struct flag_type sex_flags[];
+extern const struct flag_type door_resets[];
+extern const struct flag_type sector_flags[];
+extern const struct flag_type type_flags[];
+extern const struct flag_type apply_flags[];
+extern const struct flag_type wear_loc_strings[];
+extern const struct flag_type wear_loc_flags[];
+extern const struct flag_type weapon_flags[];
+extern const struct flag_type container_flags[];
+extern const struct flag_type ac_type[];
+extern const struct flag_type size_flags[];
+extern const struct flag_type weapon_class[];
+extern const struct flag_type weapon_type2[];
+extern const struct flag_type res_flags[];
+extern const struct flag_type vuln_flags[];
+extern const struct flag_type material_type[];
+extern const struct flag_type position_flags[];
+extern const struct flag_type portal_flags[];
+extern const struct flag_type furniture_flags[];
+extern const struct display_type altdesc_condtable[];
+//extern const struct proficiency_type prof_table[];
 
 #endif /* TABLES_H */
