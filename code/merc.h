@@ -161,9 +161,6 @@ typedef struct aprog_data		APROG_DATA;
 typedef struct bounty			BOUNTY_DATA;
 typedef struct old_char			OLD_CHAR;
 typedef struct barred_data		BARRED_DATA;
-typedef struct ballot_data		BALLOT_DATA;
-typedef struct vote_data		VOTE_DATA;
-typedef struct vote_sort		VOTE_SORT;
 typedef struct room_affect_data	ROOM_AFFECT_DATA;
 typedef struct area_affect_data	AREA_AFFECT_DATA;
 typedef struct obj_affect_data	OBJ_AFFECT_DATA;
@@ -684,33 +681,6 @@ struct barred_data
 	char *message_two;	// room message for echo type
 };
 
-//
-// Voting
-//
-
-struct ballot_data
-{
-	BALLOT_DATA *next;			// next ballot.
-	char *name;					// name of ballot
-	char *top_votes_name[15];
-	sh_int top_votes[15];
-	VOTE_DATA *first_vote;		// first vote. yay.
-};
-
-struct vote_data
-{
-	VOTE_DATA *next;
-	char *voter;	// name of person placing vote
-	char *vote_for;	// who they voted for
-	char *time;		// time they voted
-	char *ip;		// ip they voted from
-};
-
-struct vote_sort
-{
-	char who[MAX_STRING_LENGTH]; // person voted for
-	int votes;					 // how many votes
-};
 
 //
 // Per-class stuff.
@@ -4188,7 +4158,6 @@ extern sh_int count_data[30000];
 #define GOD_DIR						RIFT_ROOT_DIR "/gods/"						// list of gods
 #define TEMP_FILE					RIFT_PLAYER_DIR "/romtmp"
 #define PLAYER_LIST					RIFT_PLAYER_DIR "/Player.lst"				// Player list for limits
-#define VOTE_FILE					RIFT_AREA_DIR "/votes.txt"
 #define AREA_LIST					RIFT_AREA_DIR "/area.lst"					// List of areas
 #define BUG_FILE					RIFT_AREA_DIR "/bugs.txt"					// For 'bug' and bug()
 #define TYPO_FILE					RIFT_AREA_DIR "/typos.txt"					// For 'typo'
@@ -4202,8 +4171,6 @@ extern sh_int count_data[30000];
 #define MULT_EXP					5
 
 
-extern BALLOT_DATA *ballot_first;
-extern VOTE_DATA  *vote_first;
 extern QUEUE_DATA *global_queue;
 extern AREA_DATA *area_first;
 extern PATHFIND_DATA *best_path;

@@ -49,6 +49,7 @@
 #include "spec.h"
 #include "act_move.h"
 #include "devextra.h"
+#include "vote.h"
 #include "skills.h"
 #include "comm.h"
 #include "act_wiz.h"

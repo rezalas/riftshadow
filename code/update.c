@@ -2957,30 +2957,6 @@ bool do_mob_cast(CHAR_DATA *ch)
 	return true;
 }
 
-void save_votes()
-{
-	FILE *fp;
-	BALLOT_DATA *ballot;
-	VOTE_DATA *vote;
-
-	if (!(fp = fopen(VOTE_FILE, "w")))
-		return;
-
-	for (ballot = ballot_first; ballot != NULL; ballot = ballot->next)
-	{
-		fprintf(fp, "#%s~\n", ballot->name);
-
-		for (vote = ballot_first->first_vote; vote != NULL; vote = vote->next)
-		{
-			fprintf(fp, "%s %s %s~ %s~\n", vote->voter, vote->vote_for, vote->time, vote->ip);
-		}
-		fprintf(fp, "ENDVOTES\n");
-	}
-
-	fprintf(fp, "$");
-	fclose(fp);
-}
-
 int reverse_d(int dir)
 {
 	if (dir == DIR_NORTH)

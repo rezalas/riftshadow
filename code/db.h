@@ -201,7 +201,6 @@ void do_alist(CHAR_DATA *ch,char *argument);
 */
 void do_llimit(CHAR_DATA *ch, char *argument);
 void load_rooms (FILE *fp);
-void load_votes (void);
 void load_newresets (FILE * fp);
 void clean_notes (void);
 void load_race_info (void);
