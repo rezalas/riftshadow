@@ -559,9 +559,6 @@ char *string_hash[MAX_KEY_HASH];
 
 AREA_DATA *area_last;
 
-BALLOT_DATA *ballot_first;
-VOTE_DATA *vote_first;
-
 char *string_space;
 char *top_string;
 char str_empty[1];
@@ -4222,58 +4219,6 @@ void load_rooms(FILE *fp)
 		room_list = pRoomIndex;
 		top_room++;
 	}
-}
-
-void load_votes()
-{
-	FILE *fp;
-	BALLOT_DATA *ballot;
-	VOTE_DATA *vote;
-	char discard, *word;
-
-	fp = fopen(VOTE_FILE, "r");
-	if (!fp)
-		return;
-
-	return; //TODO: memory leak
-
-	vote_first = NULL;
-	ballot_first = NULL;
-
-	for (;;)
-	{
-		// Discard the first '#'
-		discard = fread_letter(fp);
-
-		if (discard == '$')
-			break;
-
-		ballot = new BALLOT_DATA;
-		ballot->name = fread_string(fp);
-		ballot->next = ballot_first;
-
-		for (;;)
-		{
-			// votez
-			word = fread_word(fp);
-
-			if (!str_cmp(word, "ENDVOTES"))
-				break;
-
-			vote = new VOTE_DATA;
-			vote->voter = palloc_string(word);
-			vote->vote_for = palloc_string(fread_word(fp));
-			vote->time = fread_string(fp);
-			vote->ip = fread_string(fp);
-			vote->next = vote_first;
-			vote_first = vote;
-			ballot->first_vote = vote;
-		}
-
-		ballot_first = ballot;
-	}
-
-	fclose(fp);
 }
 
 void load_newresets(FILE *fp)

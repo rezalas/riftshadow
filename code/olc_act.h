@@ -40,20 +40,13 @@
 #include "db.h"
 #include "bit.h"
 #include "string.h"
-
-//#include "iprog.h"
-//#include "mprog.h"
-//#include "rprog.h"
-//#include "aprog.h"
-extern void iprog_set (OBJ_INDEX_DATA *, const char *, const char *);
-extern void mprog_set (MOB_INDEX_DATA *, const char *, const char *);
-extern void rprog_set (ROOM_INDEX_DATA *, const char *, const char *);
-extern void aprog_set (AREA_DATA *, const char *, const char *);
-extern bool mprog_unset (MOB_INDEX_DATA *, const char *, const char *);
-extern bool aprog_unset (AREA_DATA *, const char *, const char *);
-extern bool iprog_unset (OBJ_INDEX_DATA *, const char *, const char *);
-extern bool rprog_unset (ROOM_INDEX_DATA *, const char *, const char *);
-
+#include "aprog.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 struct olc_help_type
 {
@@ -67,6 +60,22 @@ struct wear_type
 	int	wear_loc;
 	int	wear_bit;
 };
+
+extern const struct olc_help_type help_table[];
+extern const struct wear_type wear_table[];
+
+//#include "iprog.h"
+//#include "mprog.h"
+//#include "rprog.h"
+//#include "aprog.h"
+extern void iprog_set (OBJ_INDEX_DATA *, const char *, const char *);
+extern void mprog_set (MOB_INDEX_DATA *, const char *, const char *);
+extern void rprog_set (ROOM_INDEX_DATA *, const char *, const char *);
+extern void aprog_set (AREA_DATA *, const char *, const char *);
+extern bool mprog_unset (MOB_INDEX_DATA *, const char *, const char *);
+extern bool aprog_unset (AREA_DATA *, const char *, const char *);
+extern bool iprog_unset (OBJ_INDEX_DATA *, const char *, const char *);
+extern bool rprog_unset (ROOM_INDEX_DATA *, const char *, const char *);
 
 //
 // LOCAL FUNCTIONS

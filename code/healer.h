@@ -17,6 +17,7 @@
 #include "lookup.h"
 #include "comm.h"
 #include "devextra.h"
+#include "const.h"
 
 //
 // LOCAL FUNCTIONS

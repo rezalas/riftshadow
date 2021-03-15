@@ -17,6 +17,8 @@
 #include "db.h"
 #include "devextra.h"
 
+extern const struct improg_type aprog_table[];
+
 //
 // LOCAL FUNCTIONS
 //

@@ -62,6 +62,9 @@
 #include "skill.h"
 #include "devextra.h"
 #include "db.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

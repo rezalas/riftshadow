@@ -13,6 +13,7 @@
 #include "magic.h"
 #include "act_move.h"
 #include "comm.h"
+#include "const.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 //#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"

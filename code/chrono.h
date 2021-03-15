@@ -14,6 +14,7 @@
 #include "lookup.h"
 #include "tables.h"
 #include "newmem.h"
+#include "const.h"
 
 //
 // LOCAL FUNCTIONS

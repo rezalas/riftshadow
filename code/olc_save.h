@@ -22,6 +22,9 @@
 #include "spec.h"
 #include "db.h"
 #include "act_comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 /*
  *  Verbose writes reset data in plain english into the comments

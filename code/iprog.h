@@ -21,6 +21,12 @@
 #include "db.h"
 #include "devextra.h"
 #include "quest.h"
+#include "chardef.h"
+#include "const.h"
+
+
+extern const struct improg_type iprog_table[];
+extern const struct improg_type verb_prog_table[];
 
 //
 // TODO: UNKNOWN FUNCTIONS

@@ -17,6 +17,7 @@
 #include "warrior.h"
 #include "fight.h"
 #include "skills.h"
+#include "const.h"
 
 //
 // LOCAL FUNCTIONS

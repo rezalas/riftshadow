@@ -20,6 +20,7 @@
 #include "newmem.h"
 #include "act_comm.h"
 #include "act_info.h"
+#include "const.h"
 
 //
 // LOCAL FUNCTIONS

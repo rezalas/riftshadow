@@ -14,6 +14,8 @@
 #include "update.h"
 #include "devextra.h"
 #include "act_comm.h"
+#include "chardef.h"
+#include "const.h"
 
 //
 // LOCAL FUNCTIONS

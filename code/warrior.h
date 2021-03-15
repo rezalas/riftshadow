@@ -21,6 +21,9 @@
 #include "interp.h"
 #include "act_info.h"
 #include "act_obj.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 //
 // LOCAL FUNCTIONS

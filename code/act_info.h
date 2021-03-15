@@ -33,9 +33,13 @@
 #include "update.h"
 #include "interp.h"
 #include "db.h"
+#include "db2.h"
 #include "zealot.h"
 #include "help.h"
 #include "misc.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 #define DEBUG_LOG_FILE	"debug.txt"
 #define GOD_LOG_FILE	"glog.txt"
