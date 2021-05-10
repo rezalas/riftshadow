@@ -17,7 +17,7 @@
 		"ionicons": "^4.6.3",
 		"jquery": "^3.5.1",
 		"laravel-mix": "^6.0.11",
-		"lodash": "^4.17.20",
+		"lodash": "^4.17.21",
 		"moment": "^2.24.0",
 		"node-sass": "^4.14.1",
 		"popper.js": "^1.12",
