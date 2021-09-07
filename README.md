@@ -1,5 +1,7 @@
 # Riftshadow MUD
-[![Build Status](https://travis-ci.com/rezalas/riftshadow.svg?branch=master)](https://travis-ci.com/rezalas/riftshadow)
+
+[![Build & Test](https://github.com/rezalas/riftshadow/actions/workflows/cmake.yml/badge.svg)](https://github.com/rezalas/riftshadow/actions/workflows/cmake.yml)
+
 ---
 
 | Table of Contents |
