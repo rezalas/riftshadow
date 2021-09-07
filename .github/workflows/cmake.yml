@@ -29,7 +29,7 @@ jobs:
       run: cmake -B ${{github.workspace}} -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build
-      run: tine ninja
+      run: time ninja
       #run: cmake --build ${{github.workspace}} --config ${{env.BUILD_TYPE}}
 
     - name: Test
