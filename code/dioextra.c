@@ -213,7 +213,7 @@ void do_praclist(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 		return;
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
@@ -458,7 +458,7 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 	DESCRIPTOR_DATA *d;
 
 	/*
-	if (!IS_IMMORTAL(ch))
+	if (!is_immortal(ch))
 	{
 		send_to_char("Huh?\n\r",ch);
 		return;
@@ -489,7 +489,7 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "%s%s: %s%s%s\n\r",
 		cabal_table[cabal].who_name,
-		IS_NPC(ch) ? ch->short_descr : ch->name,
+		is_npc(ch) ? ch->short_descr : ch->name,
 		get_char_color(ch, "channels"),
 		arg2,
 		END_COLOR(ch));
@@ -509,7 +509,7 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "%s%s: %s%s%s\n\r",
 					cabal_table[cabal].who_name,
-					PERS(ch, d->character),
+					pers(ch, d->character),
 					get_char_color(d->character, "channels"),
 					arg2,
 					END_COLOR(ch));
@@ -529,7 +529,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 	bool fAll = false, found = false;
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!ch->cabal)
@@ -684,7 +684,7 @@ void do_heroimm(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	char arg[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	one_argument(argument, arg);
@@ -710,7 +710,7 @@ void do_heroimm(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_HEROIMM(victim))
+	if (is_heroimm(victim))
 	{
 		send_to_char("They are already a Hero Imm.\n\r", ch);
 		return;
@@ -750,7 +750,7 @@ void check_keen_vision(CHAR_DATA *ch, CHAR_DATA *victim)
 
 		if (number_percent() < chance)
 		{
-			sprintf(buf, "You notice %s slipping into %s's inventory.\n\r", PERS(ch, gch), PERS(victim, gch));
+			sprintf(buf, "You notice %s slipping into %s's inventory.\n\r", pers(ch, gch), pers(victim, gch));
 			send_to_char(buf, gch);
 			check_improve(gch, gsn_keen_vision, true, 1);
 		}
@@ -772,7 +772,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 
 	if (strstr(argument, "which items") || strstr(argument, "Which items"))
 	{
-		if (IS_NPC(ch))
+		if (is_npc(ch))
 			return;
 
 		found = false;
@@ -781,9 +781,9 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 
 		for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
 		{
-			if (IS_CABAL_GUARD(gch))
+			if (is_cabal_guard(gch))
 			{
-				if (ch->cabal != gch->cabal && !IS_IMMORTAL(ch))
+				if (ch->cabal != gch->cabal && !is_immortal(ch))
 					continue;
 
 				sprintf(buf, "I hold ");
@@ -836,14 +836,14 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 	guardian = NULL;
 	if (strstr(argument, "where is") || strstr(argument, "Where is"))
 	{
-		if (IS_NPC(ch))
+		if (is_npc(ch))
 			return;
 
 		for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
 		{
-			if (IS_CABAL_GUARD(gch))
+			if (is_cabal_guard(gch))
 			{
-				if (ch->cabal == gch->cabal || IS_IMMORTAL(ch))
+				if (ch->cabal == gch->cabal || is_immortal(ch))
 					guardian = gch;
 			}
 		}
@@ -863,7 +863,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(pbuf, "%s is carried by %s.",
 					obj->short_descr,
-					IS_NPC(obj->carried_by) ? obj->carried_by->short_descr : obj->carried_by->name);
+					is_npc(obj->carried_by) ? obj->carried_by->short_descr : obj->carried_by->name);
 				break;
 			}
 		}
@@ -923,7 +923,7 @@ void do_lag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(victim) && victim->level >= get_trust(ch))
+	if (!is_npc(victim) && victim->level >= get_trust(ch))
 	{
 		send_to_char("Respect your elders.\n\r", ch);
 		return;
@@ -1386,7 +1386,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 void update_pc_last_fight(CHAR_DATA *ch, CHAR_DATA *ch2)
 {
-	if (IS_NPC(ch) || IS_NPC(ch2) || ch == ch2)
+	if (is_npc(ch) || is_npc(ch2) || ch == ch2)
 		return;
 
 	ch->last_fight_time = current_time;
@@ -1552,23 +1552,23 @@ bool can_live_in(CHAR_DATA *ch, int hometown)
 		return false;
 
 	if (hometown_table[hometown].align == ALIGN_NONE
-		|| hometown_table[hometown].align == ALIGN_GN && IS_EVIL(ch)
-		|| hometown_table[hometown].align == ALIGN_NE && IS_GOOD(ch)
-		|| hometown_table[hometown].align == ALIGN_G && !IS_GOOD(ch)
-		|| hometown_table[hometown].align == ALIGN_N && !IS_NEUTRAL(ch)
-		|| hometown_table[hometown].align == ALIGN_E && !IS_EVIL(ch)
-		|| hometown_table[hometown].align == ALIGN_GE && IS_NEUTRAL(ch))
+		|| hometown_table[hometown].align == ALIGN_GN && is_evil(ch)
+		|| hometown_table[hometown].align == ALIGN_NE && is_good(ch)
+		|| hometown_table[hometown].align == ALIGN_G && !is_good(ch)
+		|| hometown_table[hometown].align == ALIGN_N && !is_neutral(ch)
+		|| hometown_table[hometown].align == ALIGN_E && !is_evil(ch)
+		|| hometown_table[hometown].align == ALIGN_GE && is_neutral(ch))
 	{
 		return false;
 	}
 
 	if (hometown_table[hometown].ethos == ETHOS_NONE
-		|| hometown_table[hometown].ethos == ETHOS_LN && IS_CHAOTIC(ch)
-		|| hometown_table[hometown].ethos == ETHOS_NC && IS_LAWFUL(ch)
-		|| hometown_table[hometown].ethos == ETHOS_L && !IS_LAWFUL(ch)
-		|| hometown_table[hometown].ethos == ETHOS_N && !IS_ENEUTRAL(ch)
-		|| hometown_table[hometown].ethos == ETHOS_C && !IS_CHAOTIC(ch)
-		|| hometown_table[hometown].ethos == ETHOS_LC && IS_ENEUTRAL(ch))
+		|| hometown_table[hometown].ethos == ETHOS_LN && is_chaotic(ch)
+		|| hometown_table[hometown].ethos == ETHOS_NC && is_lawful(ch)
+		|| hometown_table[hometown].ethos == ETHOS_L && !is_lawful(ch)
+		|| hometown_table[hometown].ethos == ETHOS_N && !is_eneutral(ch)
+		|| hometown_table[hometown].ethos == ETHOS_C && !is_chaotic(ch)
+		|| hometown_table[hometown].ethos == ETHOS_LC && is_eneutral(ch))
 	{
 		return false;
 	}

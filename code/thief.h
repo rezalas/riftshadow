@@ -21,6 +21,7 @@
 #include "db.h"
 #include "const.h"
 #include "material.h"
+#include "utility.h"
 
 
 //

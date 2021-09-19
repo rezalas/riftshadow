@@ -25,6 +25,7 @@
 	#include <sys/socket.h>
 #endif
 
+#include <algorithm>
 #include "merc.h"
 #include "recycle.h"
 #include "tables.h"
@@ -54,6 +55,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "titles.h"
+#include "utility.h"
 
 #define CHAR_WRAP			85
 

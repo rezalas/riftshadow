@@ -608,7 +608,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	/*
 	 * Implement freeze command.
 	 */
-	if (!IS_NPC(ch) && IS_SET(ch->act, PLR_FREEZE) && !IS_IMP(ch))
+	if (!is_npc(ch) && IS_SET(ch->act, PLR_FREEZE) && !IS_IMP(ch))
 	{
 		send_to_char("You're totally frozen!\n\r", ch);
 		return;
@@ -647,7 +647,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->wait > 0 && !IS_NPC(ch))
+	if (ch->wait > 0 && !is_npc(ch))
 	{
 		if (ch->pcdata->write_next > (MAX_QUEUE - 1))
 		{
@@ -686,7 +686,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	if (cmd_table[cmd].log == LOG_NEVER)
 		strcpy(logline, "");
 
-	if ((!IS_NPC(ch) && IS_SET(ch->act, PLR_LOG)) || fLogAll || cmd_table[cmd].log == LOG_ALWAYS)
+	if ((!is_npc(ch) && IS_SET(ch->act, PLR_LOG)) || fLogAll || cmd_table[cmd].log == LOG_ALWAYS)
 	{
 		sprintf(log_buf, "Log %s: %s", ch->desc->original ? ch->desc->original->true_name : ch->true_name, logline);
 		wiznet(log_buf, ch, NULL, WIZ_SECURE, 0, get_trust(ch));
@@ -702,7 +702,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 
 	/* Hold person */
 
-	if (!IS_NPC(ch)
+	if (!is_npc(ch)
 		&& (is_affected(ch, gsn_hold_person) || ch->pcdata->energy_state < -4)
 		&& get_trust(ch) < MAX_LEVEL
 		&& cmd_table[cmd].name != "immtalk"
@@ -849,7 +849,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!found && !IS_NPC(ch) && ch->position >= POS_FIGHTING)
+	if (!found && !is_npc(ch) && ch->position >= POS_FIGHTING)
 	{
 		if (ch->Profs()->InterpCommand(command, argument))
 			return;
@@ -906,7 +906,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 		un_hide(ch, NULL);
 
 	/* Style checks */
-	if (!IS_NPC(ch) && get_trust(ch) < 60 && ch->pcdata->style && str_cmp(cmd_table[cmd].skill_name, "none"))
+	if (!is_npc(ch) && get_trust(ch) < 60 && ch->pcdata->style && str_cmp(cmd_table[cmd].skill_name, "none"))
 	{
 		if (!str_cmp(cmd_table[cmd].skill_name, "none"))
 			sprintf(skill_name, "%s", cmd_table[cmd].name);
@@ -1014,7 +1014,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 				break;
 		}
 
-		if ((mana = skill_table[sn].min_mana) > UMAX(ch->mana, 0))
+		if ((mana = skill_table[sn].min_mana) > std::max((int)ch->mana, 0))
 		{
 			send_to_char("You don't have enough mana.\n\r", ch);
 			return;
@@ -1089,7 +1089,7 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 	if (!found)
 		return false;
 
-	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
+	if (!is_npc(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You are anti-social!\n\r", ch);
 		return true;

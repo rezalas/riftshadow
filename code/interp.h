@@ -70,6 +70,7 @@
 #include "act_wiz.h"
 #include "iprog.h"
 #include "const.h"
+#include "utility.h"
 
 /* for command types */
 #define ML				MAX_LEVEL		/* implementor */

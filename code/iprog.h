@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <algorithm>
 #include <time.h>
 #include "merc.h"
 #include "magic.h"
@@ -23,7 +24,7 @@
 #include "quest.h"
 #include "chardef.h"
 #include "const.h"
-
+#include "utility.h"
 
 extern const struct improg_type iprog_table[];
 extern const struct improg_type verb_prog_table[];

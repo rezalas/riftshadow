@@ -46,7 +46,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_BLIND) || (get_bv_stage(ch) > 0))
+	if (is_affected_by(ch, AFF_BLIND) || (get_bv_stage(ch) > 0))
 	{
 		send_to_char("You can't see anything, you're blind!\n\r", ch);
 		return;
@@ -108,7 +108,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 	if (ch->in_room->area->wind > 2)
 		depth--;
 
-	if (!IS_OUTSIDE(ch))
+	if (!is_outside(ch))
 		depth = 3;
 
 	if ((obj = get_eq_char(ch, WEAR_HOLD)) != NULL)
@@ -202,7 +202,7 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 		if (rch == ch)
 			continue;
 
-		if (!IS_NPC(rch) && rch->invis_level > get_trust(ch))
+		if (!is_npc(rch) && rch->invis_level > get_trust(ch))
 			continue;
 
 		if (can_see(ch, rch))

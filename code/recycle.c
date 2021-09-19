@@ -75,13 +75,13 @@ NOTE_DATA *new_note()
 		note_free = note_free->next;
 	}
 
-	VALIDATE(note);
+	note->valid = true;
 	return note;
 }
 
 void free_note(NOTE_DATA *note)
 {
-	if (!IS_VALID(note))
+	if (!(note != NULL && note->valid))
 		return;
 
 	free_pstring(note->text);
@@ -90,8 +90,7 @@ void free_note(NOTE_DATA *note)
 	free_pstring(note->date);
 	free_pstring(note->sender);
 
-	INVALIDATE(note);
-
+	note->valid = false;
 	note->next = note_free;
 	note_free = note;
 }
@@ -114,21 +113,19 @@ BAN_DATA *new_ban(void)
 
 	*ban = ban_zero;
 
-	VALIDATE(ban);
-
+	ban->valid = true;
 	ban->name = &str_empty[0];
 	return ban;
 }
 
 void free_ban(BAN_DATA *ban)
 {
-	if (!IS_VALID(ban))
+	if (!(ban != NULL && ban->valid))
 		return;
 
 	free_pstring(ban->name);
 
-	INVALIDATE(ban);
-
+	ban->valid = false;
 	ban->next = ban_free;
 	ban_free = ban;
 }
@@ -149,13 +146,13 @@ DESCRIPTOR_DATA *new_descriptor(void)
 
 	*d = d_zero;
 
-	VALIDATE(d);
+	d->valid = true;
 	return d;
 }
 
 void free_descriptor(DESCRIPTOR_DATA *d)
 {
-	if (!IS_VALID(d))
+	if (!(d != NULL && d->valid))
 		return;
 
 	free_pstring(d->host);
@@ -163,8 +160,7 @@ void free_descriptor(DESCRIPTOR_DATA *d)
 	if (d->outbuf)
 		delete[] d->outbuf;
 
-	INVALIDATE(d);
-
+	d->valid = false;
 	d->next = descriptor_free;
 	descriptor_free = d;
 }
@@ -187,17 +183,16 @@ GEN_DATA *new_gen_data(void)
 
 	*gen = gen_zero;
 
-	VALIDATE(gen);
+	gen->valid = true;
 	return gen;
 }
 
 void free_gen_data(GEN_DATA *gen)
 {
-	if (!IS_VALID(gen))
+	if (!(gen != NULL && gen->valid))
 		return;
 
-	INVALIDATE(gen);
-
+	gen->valid = false;
 	gen->next = gen_data_free;
 	gen_data_free = gen;
 }
@@ -449,20 +444,19 @@ EXTRA_DESCR_DATA *new_extra_descr(void)
 	ed->keyword = &str_empty[0];
 	ed->description = &str_empty[0];
 
-	VALIDATE(ed);
+	ed->valid = true;
 	return ed;
 }
 
 void free_extra_descr(EXTRA_DESCR_DATA *ed)
 {
-	if (!IS_VALID(ed))
+	if (!(ed != NULL && ed->valid))
 		return;
 
 	free_pstring(ed->keyword);
 	free_pstring(ed->description);
 
-	INVALIDATE(ed);
-
+	ed->valid = false;
 	ed->next = extra_descr_free;
 	extra_descr_free = ed;
 }
@@ -485,17 +479,16 @@ OBJ_APPLY_DATA *new_apply_data(void)
 	*app = app_zero;
 	app->type = 0;
 
-	VALIDATE(app);
+	app->valid = true;
 	return app;
 }
 
 void free_apply(OBJ_APPLY_DATA *app)
 {
-	if (!IS_VALID(app))
+	if (!(app != NULL && app->valid))
 		return;
 
-	INVALIDATE(app);
-
+	app->valid = false;
 	app->next = apply_free;
 	apply_free = app;
 }
@@ -519,7 +512,7 @@ AFFECT_DATA *new_affect(void)
 
 	*af = af_zero;
 
-	VALIDATE(af);
+	af->valid = true;
 	return af;
 }
 
@@ -590,13 +583,12 @@ void free_queue(QUEUE_DATA *queue)
 
 void free_affect(AFFECT_DATA *af)
 {
-	if (!IS_VALID(af))
+	if (!(af != NULL && af->valid))
 		return;
 
 	free_pstring(af->name);
 
-	INVALIDATE(af);
-
+	af->valid = false;
 	af->next = affect_free;
 	affect_free = af;
 }
@@ -618,17 +610,16 @@ ROOM_AFFECT_DATA *new_affect_room(void)
 
 	*af = af_zero;
 
-	VALIDATE(af);
+	af->valid = true;
 	return af;
 }
 
 void free_affect_room(ROOM_AFFECT_DATA *af)
 {
-	if (!IS_VALID(af))
+	if (!(af != NULL && af->valid))
 		return;
 
-	INVALIDATE(af);
-
+	af->valid = false;
 	af->next = raffect_free;
 	raffect_free = af;
 }
@@ -650,17 +641,16 @@ OBJ_AFFECT_DATA *new_affect_obj(void)
 
 	*af = af_zero;
 
-	VALIDATE(af);
+	af->valid = true;
 	return af;
 }
 
 void free_affect_obj(OBJ_AFFECT_DATA *af)
 {
-	if (!IS_VALID(af))
+	if (!(af != NULL && af->valid))
 		return;
 
-	INVALIDATE(af);
-
+	af->valid = false;
 	af->next = oaffect_free;
 	oaffect_free = af;
 }
@@ -682,17 +672,16 @@ AREA_AFFECT_DATA *new_affect_area(void)
 
 	*af = af_zero;
 
-	VALIDATE(af);
+	af->valid = true;
 	return af;
 }
 
 void free_affect_area(AREA_AFFECT_DATA *af)
 {
-	if (!IS_VALID(af))
+	if (!(af != NULL && af->valid))
 		return;
 
-	INVALIDATE(af);
-
+	af->valid = false;
 	af->next = aaffect_free;
 	aaffect_free = af;
 }
@@ -716,7 +705,7 @@ OBJ_DATA *new_obj(void)
 
 	*obj = obj_zero;
 
-	VALIDATE(obj);
+	obj->valid = true;
 	return obj;
 }
 
@@ -725,7 +714,7 @@ void free_obj(OBJ_DATA *obj)
 	OBJ_AFFECT_DATA *paf, *paf_next;
 	EXTRA_DESCR_DATA *ed, *ed_next;
 
-	if (!IS_VALID(obj))
+	if (!(obj != NULL && obj->valid))
 		return;
 
 	for (paf = obj->affected; paf != NULL; paf = paf_next)
@@ -749,8 +738,7 @@ void free_obj(OBJ_DATA *obj)
 	free_pstring(obj->short_descr);
 
 	// free_pstring( obj->owner     );
-	INVALIDATE(obj);
-
+	obj->valid = false;
 	obj->next = obj_free;
 	obj_free = obj;
 }
@@ -778,7 +766,7 @@ CHAR_DATA *new_char(void)
 
 	*ch = ch_zero;
 
-	VALIDATE(ch);
+	ch->valid = true;
 
 	ch->name = &str_empty[0];
 	ch->short_descr = &str_empty[0];
@@ -829,10 +817,10 @@ void free_char(CHAR_DATA *ch)
 	AFFECT_DATA *paf;
 	AFFECT_DATA *paf_next;
 
-	if (!IS_VALID(ch) || !ch)
+	if (!(ch != NULL && ch->valid) || !ch)
 		return;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		mobile_count--;
 
 	for (obj = ch->carrying; obj != NULL; obj = obj_next)
@@ -864,7 +852,7 @@ void free_char(CHAR_DATA *ch)
 	ch->next = char_free;
 	char_free = ch;
 
-	INVALIDATE(ch);
+	ch->valid = false;
 }
 
 PC_DATA *new_pcdata(void)
@@ -894,7 +882,7 @@ PC_DATA *new_pcdata(void)
 
 	pcdata->buffer = new_buf();
 
-	VALIDATE(pcdata);
+	pcdata->valid = true;
 
 	pcdata->trusting = NULL;
 	pcdata->death_status = 0;
@@ -933,7 +921,7 @@ void free_oldchar(OLD_CHAR *old)
 
 void free_pcdata(PC_DATA *pcdata)
 {
-	if (!IS_VALID(pcdata))
+	if (!(pcdata != NULL && pcdata->valid))
 		return;
 
 	free_pstring(pcdata->pwd);
@@ -959,7 +947,7 @@ void free_pcdata(PC_DATA *pcdata)
 	}
 	*/
 
-	INVALIDATE(pcdata);
+	pcdata->valid = false;
 
 	pcdata->next = pcdata_free;
 	pcdata_free = pcdata;
@@ -1000,19 +988,19 @@ MEM_DATA *new_mem_data(void)
 	memory->id = 0;
 	memory->reaction = 0;
 	memory->when = 0;
-	VALIDATE(memory);
+	memory->valid = true;
 
 	return memory;
 }
 
 void free_pstruct_data(MEM_DATA *memory)
 {
-	if (!IS_VALID(memory))
+	if (!(memory != NULL && memory->valid))
 		return;
 
 	memory->next = mem_data_free;
 	mem_data_free = memory;
-	INVALIDATE(memory);
+	memory->valid = false;
 }
 
 /* local procedure for finding the next acceptable size */
@@ -1057,13 +1045,13 @@ BUFFER *new_buf()
 	buffer->size = 0;
 	buffer->string = NULL;
 
-	VALIDATE(buffer);
+	buffer->valid = true;
 	return buffer;
 }
 
 void free_buf(BUFFER *buffer)
 {
-	if (!IS_VALID(buffer))
+	if (!(buffer != NULL && buffer->valid))
 		return;
 
 	if (buffer->string)
@@ -1073,8 +1061,7 @@ void free_buf(BUFFER *buffer)
 	buffer->size = 0;
 	buffer->state = BUFFER_FREED;
 
-	INVALIDATE(buffer);
-
+	buffer->valid = false;
 	buffer->next = buf_free;
 	buf_free = buffer;
 }

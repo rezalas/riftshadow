@@ -42,7 +42,7 @@ void do_delet(CHAR_DATA *ch, char *argument)
 
 void do_delete(CHAR_DATA *ch, char *argument)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->confirm_delete)
@@ -119,7 +119,7 @@ void do_channels(CHAR_DATA *ch, char *argument)
 	send_to_char("Q/A            ", ch);
 	sendToChar(!IS_SET(ch->comm, COMM_NOQUESTION), ch);
 
-	if (IS_IMMORTAL(ch))
+	if (is_immortal(ch))
 	{
 		send_to_char("god channel    ", ch);
 		sendToChar(!IS_SET(ch->comm, COMM_NOWIZ), ch);
@@ -188,7 +188,7 @@ void do_quiet(CHAR_DATA *ch, char *argument)
 
 void do_replay(CHAR_DATA *ch, char *argument)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		send_to_char("You can't replay.\n\r", ch);
 		return;
@@ -234,7 +234,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_SHIFTED(ch) && !IS_IMMORTAL(ch))
+	if (is_shifted(ch) && !is_immortal(ch))
 	{
 		send_to_char("You can't seem to form the words.\n\r", ch);
 		return;
@@ -282,7 +282,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 	{
 		sprintf(buf, "%s%s: %s%s%s\n\r",
 				cabal_table[ch->cabal].who_name,
-				IS_NPC(ch) ? ch->short_descr : ch->true_name,
+				is_npc(ch) ? ch->short_descr : ch->true_name,
 				get_char_color(ch, "channels"),
 				argument,
 				END_COLOR(ch));
@@ -291,7 +291,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 	{
 		sprintf(buf, "%s%s: %s\n\r",
 				cabal_table[ch->cabal].who_name,
-				IS_NPC(ch) ? ch->short_descr : ch->name,
+				is_npc(ch) ? ch->short_descr : ch->name,
 				argument);
 	}
 
@@ -305,7 +305,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "%s%s: %s%s%s\n\r",
 						cabal_table[ch->cabal].who_name,
-						!IS_NPC(ch) && can_see(d->character, ch) ? ch->true_name : PERS(ch, d->character),
+						!is_npc(ch) && can_see(d->character, ch) ? ch->true_name : pers(ch, d->character),
 						get_char_color(d->character, "channels"),
 						argument,
 						END_COLOR(d->character));
@@ -314,7 +314,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 			{
 				sprintf(buf, "%s%s: %s\n\r",
 						cabal_table[ch->cabal].who_name,
-						!IS_NPC(ch) && can_see(d->character, ch) ? ch->true_name : PERS(ch, d->character),
+						!is_npc(ch) && can_see(d->character, ch) ? ch->true_name : pers(ch, d->character),
 						argument);
 			}
 
@@ -338,7 +338,7 @@ void do_global(CHAR_DATA *ch, char *argument)
 
 void do_newbie(CHAR_DATA *ch, char *argument)
 {
-	if (ch->level > 25 && !IS_IMMORTAL(ch) && !IS_SET(ch->act, PLR_HEROIMM))
+	if (ch->level > 25 && !is_immortal(ch) && !IS_SET(ch->act, PLR_HEROIMM))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -386,10 +386,10 @@ void do_newbie(CHAR_DATA *ch, char *argument)
 
 	for (auto wch = char_list; wch != NULL; wch = wch->next)
 	{
-		if (IS_NPC(wch) && wch->desc == NULL)
+		if (is_npc(wch) && wch->desc == NULL)
 			continue;
 
-		if ((wch->level <= 25 && !IS_SET(wch->comm, COMM_NONEWBIE)) || IS_IMMORTAL(wch) || IS_HEROIMM(wch) || (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+		if ((wch->level <= 25 && !IS_SET(wch->comm, COMM_NONEWBIE)) || is_immortal(wch) || is_heroimm(wch) || (is_npc(wch) && (wch->desc != NULL) && is_immortal(wch->desc->original)))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -454,10 +454,10 @@ void do_builder(CHAR_DATA *ch, char *argument)
 
 	for (auto wch = char_list; wch != NULL; wch = wch->next)
 	{
-		if (IS_NPC(wch) && wch->desc == NULL)
+		if (is_npc(wch) && wch->desc == NULL)
 			continue;
 
-		if (IS_IMMORTAL(wch) || IS_SET(wch->comm, COMM_BUILDER) || IS_HEROIMM(wch) || (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original)))
+		if (is_immortal(wch) || IS_SET(wch->comm, COMM_BUILDER) || is_heroimm(wch) || (is_npc(wch) && (wch->desc != NULL) && is_immortal(wch->desc->original)))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -474,7 +474,7 @@ void do_builder(CHAR_DATA *ch, char *argument)
 
 void do_immtalk(CHAR_DATA *ch, char *argument)
 {
-	if (!IS_IMMORTAL(ch))
+	if (!is_immortal(ch))
 		return;
 
 	if (argument[0] == '\0')
@@ -545,10 +545,10 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 
 	for (auto wch = char_list; wch != NULL; wch = wch->next)
 	{
-		if (IS_NPC(wch) && wch->desc == NULL)
+		if (is_npc(wch) && wch->desc == NULL)
 			continue;
 
-		if ((IS_IMMORTAL(wch) || IS_SET(wch->comm, COMM_IMMORTAL) || (IS_NPC(wch) && (wch->desc != NULL) && IS_IMMORTAL(wch->desc->original))) && get_trust(wch) >= UMAX(level, 52))
+		if ((is_immortal(wch) || IS_SET(wch->comm, COMM_IMMORTAL) || (is_npc(wch) && (wch->desc != NULL) && is_immortal(wch->desc->original))) && get_trust(wch) >= std::max(level, 52))
 		{
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
@@ -649,7 +649,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 	if (IS_SET(ch->in_room->room_flags, ROOM_SILENCE))
 		return send_to_char("You open your mouth, but no sound comes out.\n\r", ch);
 
-	if (IS_SHIFTED(ch) && !IS_IMMORTAL(ch))
+	if (is_shifted(ch) && !is_immortal(ch))
 	{
 		send_to_char("You can't talk while you're in form.\n\r", ch);
 		return;
@@ -695,9 +695,9 @@ void do_say(CHAR_DATA *ch, char *argument)
 
 	for (auto victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 	{
-		if (IS_AWAKE(victim))
+		if (is_awake(victim))
 		{
-			if (!(IS_IMMORTAL(ch)) && is_affected(victim, gsn_deafen))
+			if (!(is_immortal(ch)) && is_affected(victim, gsn_deafen))
 			{
 				act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
 			}
@@ -774,7 +774,7 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 		return;
 	}
 
-	if (IS_SHIFTED(ch) && !IS_IMMORTAL(ch))
+	if (is_shifted(ch) && !is_immortal(ch))
 	{
 		send_to_char("You can't talk while you're in form.\n\r", ch);
 		return;
@@ -807,9 +807,9 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 	else
 		sprintf(saymsg, "say");
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
-		if (!(IS_IMMORTAL(ch)) && is_affected(victim, gsn_deafen))
+		if (!(is_immortal(ch)) && is_affected(victim, gsn_deafen))
 		{
 			act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
 		}
@@ -827,7 +827,7 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 
 void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 {
-	if (!IS_NPC(ch) && argument[0] == '\0')
+	if (!is_npc(ch) && argument[0] == '\0')
 	{
 		send_to_char("Whisper what?\n\r", ch);
 		return;
@@ -839,7 +839,7 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 		return;
 	}
 
-	if (IS_SHIFTED(ch) && !IS_IMMORTAL(ch))
+	if (is_shifted(ch) && !is_immortal(ch))
 	{
 		send_to_char("You can't whisper while shapeshifted.\n\r", ch);
 		return;
@@ -875,9 +875,9 @@ void do_whisper(CHAR_DATA *ch, char *argument) /* whisper -- dioxide */
 
 	for (auto victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 	{
-		if (IS_AWAKE(victim))
+		if (is_awake(victim))
 		{
-			if (!IS_IMMORTAL(ch) && is_affected(victim, gsn_deafen))
+			if (!is_immortal(ch) && is_affected(victim, gsn_deafen))
 			{
 				act("$n says something you can't quite hear.", ch, 0, victim, TO_VICT);
 			}
@@ -916,7 +916,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_SHIFTED(ch) && !IS_IMMORTAL(ch))
+	if (is_shifted(ch) && !is_immortal(ch))
 	{
 		send_to_char("You can't sing while shapeshifted.\n\r", ch);
 		return;
@@ -956,7 +956,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		buf2[i] = '\0';
 	}
 
-	auto length = !IS_NPC(ch)
+	auto length = !is_npc(ch)
 					  ? strlen(ch->name)
 					  : strlen(ch->short_descr);
 
@@ -1018,9 +1018,9 @@ void do_sing(CHAR_DATA *ch, char *argument)
 	char buf3[MAX_STRING_LENGTH];
 	for (auto victim = ch->in_room->people; victim; victim = victim->next_in_room)
 	{
-		if (IS_AWAKE(victim))
+		if (is_awake(victim))
 		{
-			if (!IS_IMMORTAL(ch) && is_affected(victim, gsn_deafen))
+			if (!is_immortal(ch) && is_affected(victim, gsn_deafen))
 			{
 				act("$n sings something you can't quite hear.", ch, 0, victim, TO_VICT);
 			}
@@ -1149,17 +1149,17 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	auto victim = char_list;
 	for (; victim != NULL; victim = victim->next)
 	{
-		if (is_name(victim->name, arg) && (IS_NPC(victim) && victim->pIndexData->vnum == MOB_VNUM_DECOY))
+		if (is_name(victim->name, arg) && (is_npc(victim) && victim->pIndexData->vnum == MOB_VNUM_DECOY))
 			continue;
 
-		if (victim->in_room == NULL || (IS_IMMORTAL(ch) ? !is_name(arg, (victim->true_name ? victim->true_name : victim->name)) : !is_name(arg, victim->name)) || !can_see(ch, victim))
+		if (victim->in_room == NULL || (is_immortal(ch) ? !is_name(arg, (victim->true_name ? victim->true_name : victim->name)) : !is_name(arg, victim->name)) || !can_see(ch, victim))
 			continue;
 
 		if (++count == number)
 			break;
 	}
 
-	if (victim == NULL || (IS_NPC(victim) && victim->in_room != ch->in_room))
+	if (victim == NULL || (is_npc(victim) && victim->in_room != ch->in_room))
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1172,22 +1172,22 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	}
 
 	char buf[MAX_STRING_LENGTH];
-	if (victim->desc == NULL && !IS_NPC(victim))
+	if (victim->desc == NULL && !is_npc(victim))
 	{
 		act("$N seems to have lost consciousness...try again later.", ch, NULL, victim, TO_CHAR);
-		sprintf(buf, "%s tells you '%s'\n\r", PERS(ch, victim), argument);
+		sprintf(buf, "%s tells you '%s'\n\r", pers(ch, victim), argument);
 		buf[0] = UPPER(buf[0]);
 		add_buf(victim->pcdata->buffer, buf);
 		return;
 	}
 
-	if (!(IS_IMMORTAL(ch) && ch->level > LEVEL_IMMORTAL) && (!IS_AWAKE(victim) || is_affected(victim, gsn_deafen)))
+	if (!(is_immortal(ch) && ch->level > LEVEL_IMMORTAL) && (!is_awake(victim) || is_affected(victim, gsn_deafen)))
 	{
 		act("$E can't hear you.", ch, 0, victim, TO_CHAR);
 		return;
 	}
 
-	if ((IS_SET(victim->comm, COMM_QUIET) || IS_SET(victim->comm, COMM_DEAF)) && !IS_IMMORTAL(ch)) /* Let Imms send tells to deaf players */
+	if ((IS_SET(victim->comm, COMM_QUIET) || IS_SET(victim->comm, COMM_DEAF)) && !is_immortal(ch)) /* Let Imms send tells to deaf players */
 	{
 		act("$E is not receiving tells.", ch, 0, victim, TO_CHAR);
 		return;
@@ -1201,14 +1201,14 @@ void do_tell(CHAR_DATA *ch, char *argument)
 	}
 
 	sprintf(buf, "You tell $%s '%s$t%s'",
-			IS_IMMORTAL(ch) && !IS_NPC(victim) ? "F" : "N",
+			is_immortal(ch) && !is_npc(victim) ? "F" : "N",
 			get_char_color(ch, "tells"),
 			END_COLOR(ch));
 
 	act(buf, ch, argument, victim, TO_CHAR);
 
 	sprintf(buf, "$%s tells you '%s$t%s'",
-			IS_IMMORTAL(victim) && !IS_NPC(ch) ? "f" : "n",
+			is_immortal(victim) && !is_npc(ch) ? "f" : "n",
 			get_char_color(victim, "tells"),
 			END_COLOR(victim));
 
@@ -1232,7 +1232,7 @@ void do_noreply(CHAR_DATA *ch, char *argument)
 
 	for (auto vch = char_list; vch; vch = vch->next)
 	{
-		if (!IS_NPC(vch) && vch->reply == ch)
+		if (!is_npc(vch) && vch->reply == ch)
 			vch->reply = NULL;
 	}
 }
@@ -1253,28 +1253,28 @@ void do_reply(CHAR_DATA *ch, char *argument)
 	}
 
 	char buf[MAX_STRING_LENGTH];
-	if (victim->desc == NULL && !IS_NPC(victim) && !IS_SWITCHED(victim) && victim->pcdata)
+	if (victim->desc == NULL && !is_npc(victim) && !is_switched(victim) && victim->pcdata)
 	{
 		act("$N seems to have lost consciousness...try again later.", ch, NULL, victim, TO_CHAR);
-		sprintf(buf, "%s tells you '%s'\n\r", PERS(ch, victim), argument);
+		sprintf(buf, "%s tells you '%s'\n\r", pers(ch, victim), argument);
 		buf[0] = UPPER(buf[0]);
 		add_buf(victim->pcdata->buffer, buf);
 		return;
 	}
 
-	if (!IS_IMMORTAL(ch) && (!IS_AWAKE(victim) || is_affected(victim, gsn_deafen)))
+	if (!is_immortal(ch) && (!is_awake(victim) || is_affected(victim, gsn_deafen)))
 	{
 		act("$E can't hear you.", ch, 0, victim, TO_CHAR);
 		return;
 	}
 
-	if ((IS_SET(victim->comm, COMM_QUIET) || IS_SET(victim->comm, COMM_DEAF)) && !IS_IMMORTAL(ch) && !IS_IMMORTAL(victim))
+	if ((IS_SET(victim->comm, COMM_QUIET) || IS_SET(victim->comm, COMM_DEAF)) && !is_immortal(ch) && !is_immortal(victim))
 	{
 		act_new("$E is not receiving tells.", ch, 0, victim, TO_CHAR, POS_DEAD);
 		return;
 	}
 
-	if (!IS_IMMORTAL(victim) && !IS_AWAKE(ch))
+	if (!is_immortal(victim) && !is_awake(ch))
 	{
 		send_to_char("In your dreams, or what?\n\r", ch);
 		return;
@@ -1292,7 +1292,7 @@ void do_reply(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_IMMORTAL(victim))
+	if (!is_immortal(victim))
 		check_ooc(ch, argument, "TELL");
 
 	auto deaf = false;
@@ -1303,14 +1303,14 @@ void do_reply(CHAR_DATA *ch, char *argument)
 	}
 
 	sprintf(buf, "You tell $%s '%s$t%s'",
-			IS_IMMORTAL(ch) && !IS_NPC(victim) ? "F" : "N",
+			is_immortal(ch) && !is_npc(victim) ? "F" : "N",
 			get_char_color(ch, "tells"),
 			END_COLOR(ch));
 
 	act(buf, ch, argument, victim, TO_CHAR);
 
 	sprintf(buf, "$%s tells you '%s$t%s'",
-			IS_IMMORTAL(victim) && !IS_NPC(ch) ? "f" : "n",
+			is_immortal(victim) && !is_npc(ch) ? "f" : "n",
 			get_char_color(victim, "tells"),
 			END_COLOR(victim));
 
@@ -1333,7 +1333,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_SET(ch->comm, COMM_NOSHOUT) || (IS_SHIFTED(ch) && !IS_IMMORTAL(ch)))
+	if (IS_SET(ch->comm, COMM_NOSHOUT) || (is_shifted(ch) && !is_immortal(ch)))
 	{
 		send_to_char("You can't yell.\n\r", ch);
 		return;
@@ -1405,7 +1405,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 				continue;
 
 			/* Can't hear yells while asleep, MORGLUM */
-			if (!IS_AWAKE(d->character))
+			if (!is_awake(d->character))
 				continue;
 
 			sprintf(buf, "$n yells '%s$t%s'", get_char_color(d->character, "yells"), END_COLOR(d->character));
@@ -1423,7 +1423,7 @@ void do_yell(CHAR_DATA *ch, char *argument)
 void do_myell(CHAR_DATA *ch, char *argument, CHAR_DATA *attacker)
 {
 	/*
-	if(IS_SHIFTED(ch))
+	if(is_shifted(ch))
 	{
 		for (d = descriptor_list; d; d = d->next)
 		{
@@ -1457,7 +1457,7 @@ void do_myell(CHAR_DATA *ch, char *argument, CHAR_DATA *attacker)
 
 void do_emote(CHAR_DATA *ch, char *argument)
 {
-	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
+	if (!is_npc(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You can't show your emotions.\n\r", ch);
 		return;
@@ -1483,7 +1483,7 @@ void do_emote(CHAR_DATA *ch, char *argument)
 
 void do_pmote(CHAR_DATA *ch, char *argument)
 {
-	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
+	if (!is_npc(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You can't show your emotions.\n\r", ch);
 		return;
@@ -1584,10 +1584,10 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 bool check_ooc(CHAR_DATA *ch, char *argument, char *type)
 {
 	/* Imms can curse and be OOC all we want! */
-	if (IS_IMMORTAL(ch))
+	if (is_immortal(ch))
 		return true;
 
-	if (IS_NPC(ch) && !IS_AFFECTED(ch, AFF_CHARM))
+	if (is_npc(ch) && !is_affected_by(ch, AFF_CHARM))
 		return true;
 
 	/* The list of naughty words.  Add more as needed. */
@@ -1622,7 +1622,7 @@ bool check_ooc(CHAR_DATA *ch, char *argument, char *type)
 
 void do_bug(CHAR_DATA *ch, char *argument)
 {
-	if (IS_IMMORTAL(ch))
+	if (is_immortal(ch))
 	{
 		do_buglist(ch, argument);
 		return;
@@ -1661,12 +1661,12 @@ void do_quit(CHAR_DATA *ch, char *argument)
 
 void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!autoq)
 	{
-		if (IS_AFFECTED(ch, AFF_CHARM))
+		if (is_affected_by(ch, AFF_CHARM))
 		{
 			send_to_char("Now why would you want to leave your master?\n\r", ch);
 			return;
@@ -1684,13 +1684,13 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 			return;
 		}
 
-		if (ch->pause > 0 && !IS_IMMORTAL(ch))
+		if (ch->pause > 0 && !is_immortal(ch))
 		{
 			send_to_char("Your adrenaline is gushing too much to quit!\n\r", ch);
 			return;
 		}
 
-		if (is_affected(ch, gsn_blackjack) || IS_AFFECTED(ch, AFF_SLEEP))
+		if (is_affected(ch, gsn_blackjack) || is_affected_by(ch, AFF_SLEEP))
 		{
 			send_to_char("You can't quit!\n\r", ch);
 			return;
@@ -1711,19 +1711,19 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 
 	if (!autoq)
 	{
-		if (IS_AFFECTED(ch, AFF_CHARM))
+		if (is_affected_by(ch, AFF_CHARM))
 		{
 			send_to_char("You don't want to leave your master yet!\n\r", ch);
 			return;
 		}
 
-		if (!IS_SET(ch->in_room->room_flags, ROOM_LAW) && ch->in_room->cabal == 0 && !IS_IMMORTAL(ch))
+		if (!IS_SET(ch->in_room->room_flags, ROOM_LAW) && ch->in_room->cabal == 0 && !is_immortal(ch))
 		{
 			send_to_char("You don't feel safe enough to quit here.\n\r", ch);
 			return;
 		}
 
-		if (ch->in_room->cabal != 0 && !IS_IMMORTAL(ch) && ch->in_room->cabal != ch->cabal)
+		if (ch->in_room->cabal != 0 && !is_immortal(ch) && ch->in_room->cabal != ch->cabal)
 		{
 			send_to_char("You can't quit out in an enemy Cabal!\n\r", ch);
 			return;
@@ -1820,10 +1820,10 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 				affect_strip(wch, gsn_empathy);
 		}
 
-		if (!IS_NPC(wch))
+		if (!is_npc(wch))
 			continue;
 
-		if (IS_NPC(wch) && IS_AFFECTED(wch, AFF_CHARM) && wch->master == ch && IS_SET(wch->act, ACT_UNDEAD))
+		if (is_npc(wch) && is_affected_by(wch, AFF_CHARM) && wch->master == ch && IS_SET(wch->act, ACT_UNDEAD))
 		{
 			extract_char(wch, true);
 			continue;
@@ -1861,7 +1861,7 @@ void do_save(CHAR_DATA *ch, char *argument)
 {
 	send_to_char("Saving. Remember that Riftshadow has automatic saving.\n\r", ch);
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	save_char_obj(ch);
@@ -1887,7 +1887,7 @@ void do_follow(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CHARM) && ch->master != NULL)
+	if (is_affected_by(ch, AFF_CHARM) && ch->master != NULL)
 	{
 		act("But you'd rather follow $N!", ch, NULL, ch->master, TO_CHAR);
 		return;
@@ -1905,7 +1905,7 @@ void do_follow(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(victim) && IS_SET(victim->act, PLR_NOFOLLOW) && (get_skill(ch, gsn_trail) == 0 || can_see(victim, ch)))
+	if (!is_npc(victim) && IS_SET(victim->act, PLR_NOFOLLOW) && (get_skill(ch, gsn_trail) == 0 || can_see(victim, ch)))
 	{
 		if (get_skill(ch, gsn_trail) > 0 && can_see(victim, ch))
 			act("You can't very well trail someone if they can see you.", ch, NULL, NULL, TO_CHAR);
@@ -1985,13 +1985,13 @@ void stop_follower(CHAR_DATA *ch)
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CHARM))
+	if (is_affected_by(ch, AFF_CHARM))
 	{
 		REMOVE_BIT(ch->affected_by, AFF_CHARM);
 		affect_strip(ch, gsn_charm_person);
 	}
 
-	if (can_see(ch->master, ch) && ch->in_room != NULL && !(IS_NPC(ch) && ch->pIndexData->vnum == MOB_VNUM_ANCHOR))
+	if (can_see(ch->master, ch) && ch->in_room != NULL && !(is_npc(ch) && ch->pIndexData->vnum == MOB_VNUM_ANCHOR))
 	{
 		act("$n stops following you.", ch, NULL, ch->master, TO_VICT);
 		act("You stop following $N.", ch, NULL, ch->master, TO_CHAR);
@@ -2045,12 +2045,12 @@ void die_follower(CHAR_DATA *ch)
 	for (auto fch = char_list; fch != NULL; fch = fch_next)
 	{
 		fch_next = fch->next;
-		/*if(!fch->in_room && IS_NPC(fch))
+		/*if(!fch->in_room && is_npc(fch))
 		{
 			bug("Error: Mob %d in room is NULL!",fch->pIndexData->vnum);
 			break;
 		}*/
-		if (IS_NPC(fch) && (is_affected(fch, gsn_animate_dead) || IS_AFFECTED(fch, AFF_CHARM)))
+		if (is_npc(fch) && (is_affected(fch, gsn_animate_dead) || is_affected_by(fch, AFF_CHARM)))
 		{
 			if (fch->master == ch)
 			{
@@ -2083,7 +2083,7 @@ void do_order(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CHARM))
+	if (is_affected_by(ch, AFF_CHARM))
 	{
 		send_to_char("You feel like taking, not giving, orders.\n\r", ch);
 		return;
@@ -2106,7 +2106,7 @@ void do_order(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (!IS_AFFECTED(victim, AFF_CHARM) || victim->master != ch || (IS_IMMORTAL(victim) && victim->trust >= ch->trust))
+		if (!is_affected_by(victim, AFF_CHARM) || victim->master != ch || (is_immortal(victim) && victim->trust >= ch->trust))
 		{
 			send_to_char("Do it yourself!\n\r", ch);
 			return;
@@ -2133,9 +2133,9 @@ void do_order(CHAR_DATA *ch, char *argument)
 	{
 		och_next = och->next_in_room;
 
-		if (IS_AFFECTED(och, AFF_CHARM) && och->master == ch && (fAll || och == victim))
+		if (is_affected_by(och, AFF_CHARM) && och->master == ch && (fAll || och == victim))
 		{
-			if (IS_NPC(och) && och->pIndexData->vnum == ACADEMY_PET)
+			if (is_npc(och) && och->pIndexData->vnum == ACADEMY_PET)
 				continue;
 
 			found = true;
@@ -2173,14 +2173,14 @@ void do_group(CHAR_DATA *ch, char *argument)
 		char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
 		auto leader = ch->leader != NULL ? ch->leader : ch;
 
-		sprintf(buf, "%s's group:\n\r", PERS(leader, ch));
+		sprintf(buf, "%s's group:\n\r", pers(leader, ch));
 		send_to_char(buf, ch);
 
 		for (auto gch = char_list; gch != NULL; gch = gch->next)
 		{
 			if (is_same_group(gch, ch))
 			{
-				if (!IS_NPC(gch))
+				if (!is_npc(gch))
 				{
 					auto exp_tnl = (gch->level * exp_per_level(gch) - gch->exp);
 					auto epl = pc_race_table[gch->race].xpadd + 1500;
@@ -2188,8 +2188,8 @@ void do_group(CHAR_DATA *ch, char *argument)
 					auto exp_ltl = (gch->level * exp_per_level(gch) - (gch->level - 1) * epl);
 					sprintf(buf, "[%2d %s] %-32s %3d%%hp %3d%%mana %3d%%mv %3d%%tnl\n\r",
 							gch->level,
-							IS_NPC(gch) ? "Mob" : gch->Class()->who_name,
-							capitalize(PERS(gch, ch)),
+							is_npc(gch) ? "Mob" : gch->Class()->who_name,
+							capitalize(pers(gch, ch)),
 							(gch->max_hit == 0) ? 0 : (gch->hit * 100) / gch->max_hit,
 							(gch->max_mana == 0) ? 0 : (gch->mana * 100) / gch->max_mana,
 							(gch->max_move == 0) ? 0 : (gch->move * 100) / gch->max_move,
@@ -2197,7 +2197,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 				}
 				else
 				{
-					sprintf(buf2, PERS(gch, ch));
+					sprintf(buf2, pers(gch, ch));
 					if (buf2[0] != '\0')
 						buf2[0] = UPPER(buf2[0]);
 
@@ -2234,13 +2234,13 @@ void do_group(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_AFFECTED(victim, AFF_CHARM))
+	if (is_affected_by(victim, AFF_CHARM))
 	{
 		send_to_char("You can't remove charmed followers from your group.\n\r", ch);
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CHARM))
+	if (is_affected_by(ch, AFF_CHARM))
 	{
 		act_new("You like your master too much to leave $m!", ch, NULL, victim, TO_VICT, POS_SLEEPING);
 		return;
@@ -2262,7 +2262,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 	act_new("$N joins your group.", ch, NULL, victim, TO_CHAR, POS_SLEEPING);
 
 	AFFECT_DATA af;
-	if (!IS_NPC(ch) && !IS_NPC(victim) && ch->Class()->name == "anti-paladin" && ch->pcdata->learned[gsn_traitors_luck] > 1)
+	if (!is_npc(ch) && !is_npc(victim) && ch->Class()->name == "anti-paladin" && ch->pcdata->learned[gsn_traitors_luck] > 1)
 	{
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2278,7 +2278,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 		new_affect_to_char(ch, &af);
 	}
 
-	if (!IS_NPC(ch) && !IS_NPC(victim) && victim->Class()->name == "anti-paladin" && victim->pcdata->learned[gsn_traitors_luck] > 1)
+	if (!is_npc(ch) && !is_npc(victim) && victim->Class()->name == "anti-paladin" && victim->pcdata->learned[gsn_traitors_luck] > 1)
 	{
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2336,7 +2336,7 @@ void do_split(CHAR_DATA *ch, char *argument)
 	auto members = 0;
 	for (auto gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
 	{
-		if (is_same_group(gch, ch) && !IS_AFFECTED(gch, AFF_CHARM))
+		if (is_same_group(gch, ch) && !is_affected_by(gch, AFF_CHARM))
 			members++;
 	}
 
@@ -2369,7 +2369,7 @@ void do_split(CHAR_DATA *ch, char *argument)
 
 	for (auto gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
 	{
-		if (gch != ch && is_same_group(gch, ch) && !IS_AFFECTED(gch, AFF_CHARM))
+		if (gch != ch && is_same_group(gch, ch) && !is_affected_by(gch, AFF_CHARM))
 		{
 			act(buf, ch, NULL, gch, TO_VICT);
 			gch->gold += share_gold;
@@ -2574,7 +2574,7 @@ bool is_same_group(CHAR_DATA *ach, CHAR_DATA *bch)
 	if (ach == NULL || bch == NULL)
 		return false;
 
-	/* if ( ( ach->level - bch->level > 8 || ach->level - bch->level < -8 ) && !IS_NPC(ach) )
+	/* if ( ( ach->level - bch->level > 8 || ach->level - bch->level < -8 ) && !is_npc(ach) )
 		return false;*/
 
 	if (ach->leader != NULL)
@@ -2604,13 +2604,13 @@ void do_release(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_AFFECTED(victim, AFF_CHARM) || victim->master != ch)
+	if (!is_affected_by(victim, AFF_CHARM) || victim->master != ch)
 	{
 		send_to_char("They aren't under your control.\n\r", ch);
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		act("$n slowly fades away.", victim, 0, 0, TO_ROOM);
 		extract_char(victim, true);
@@ -2653,8 +2653,8 @@ void perm_death_log(CHAR_DATA *ch, int deltype)
 			pc_race_table[ch->race].who_name,
 			(RSTR)ch->Class()->who_name,
 			cabal_table[ch->cabal].who_name,
-			ch->true_name, IS_NPC(ch) ? "" : ch->pcdata->title,
-			IS_NPC(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle
+			ch->true_name, is_npc(ch) ? "" : ch->pcdata->title,
+			is_npc(ch) ? "" : (ch->pcdata->extitle) ? ch->pcdata->extitle
 													: "",
 			ch->pcdata->kills[PK_KILLS],
 			ch->pcdata->killed[PK_KILLED],
@@ -2667,10 +2667,10 @@ void perm_death_log(CHAR_DATA *ch, int deltype)
 
 void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 {
-	if (IS_NPC(killer) && (killer->master != NULL))
+	if (is_npc(killer) && (killer->master != NULL))
 		killer = killer->master;
 
-	if (IS_NPC(dead) || IS_NPC(killer))
+	if (is_npc(dead) || is_npc(killer))
 		return;
 
 	char query[MAX_STRING_LENGTH];
@@ -2689,7 +2689,7 @@ void temp_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 
 void mob_death_log(CHAR_DATA *killer, CHAR_DATA *dead)
 {
-	if (!IS_NPC(killer) || IS_NPC(dead) || !IS_EXPLORE(killer->in_room))
+	if (!is_npc(killer) || is_npc(dead) || !is_explore(killer->in_room))
 		return;
 
 	auto fp = fopen(MOB_LOG_FILE, "a");

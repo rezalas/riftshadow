@@ -40,6 +40,7 @@
 #include "merc.h"
 #include "material.h"
 
+
 struct flag_type
 {
 	char *name;
@@ -219,13 +220,6 @@ struct demon_type
 	sh_int type;
 };
 
-struct piece_type
-{
-	char *row1;
-	char *row2;
-	char *row3;
-};
-
 struct beauty_type
 {
 	char *male;
@@ -291,7 +285,6 @@ extern const std::vector<cabal_list> cabal_skills;
 extern const struct flag_type wealth_table[];
 extern const struct demon_type demon_table[];
 extern const struct climate_type climate_table[MAX_CLIMATE];
-extern const struct piece_type piece_table[2][MAX_PIECE];
 extern const struct beauty_type beauty_table[];
 extern const struct order_list order_table[];
 extern const struct flag_type area_flags[];

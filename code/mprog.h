@@ -25,6 +25,7 @@
 #include "quest.h"
 #include "chardef.h"
 #include "const.h"
+#include "utility.h"
 
 extern const struct improg_type mprog_table[];
 

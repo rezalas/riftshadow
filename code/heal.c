@@ -52,7 +52,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	/* check for healer */
 	for (mob = ch->in_room->people; mob; mob = mob->next_in_room)
 	{
-		if (IS_NPC(mob) && IS_SET(mob->act, ACT_IS_HEALER))
+		if (is_npc(mob) && IS_SET(mob->act, ACT_IS_HEALER))
 			break;
 	}
 
@@ -233,7 +233,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	if (spell == NULL)
 	{
 		ch->mana += dice(4, 8) + mob->level / 3;
-		ch->mana = UMIN(ch->mana, ch->max_mana);
+		ch->mana = std::min(ch->mana, ch->max_mana);
 		send_to_char("A warm glow passes through you.\n\r", ch);
 		return;
 	}

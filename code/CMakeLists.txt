@@ -140,6 +140,8 @@ set(RIFT_SOURCE config.cpp
 	prof.h
 	vote.c
 	vote.h
+	utility.c
+	utility.h
 )
 
 set_source_files_properties(${RIFT_SOURCE} main.c PROPERTIES LANGUAGE CXX)

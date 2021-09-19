@@ -151,7 +151,7 @@ void wiznet(char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_ski
 	{
 		if (d->connected == CON_PLAYING
 			&& d->character
-			&& IS_IMMORTAL(d->character)
+			&& is_immortal(d->character)
 			&& IS_SET(d->character->wiznet, WIZ_ON)
 			&& (!flag || IS_SET(d->character->wiznet, flag))
 			&& (!flag_skip || !IS_SET(d->character->wiznet, flag_skip))
@@ -174,7 +174,7 @@ void do_leader(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int cres = 0;
 
-	if (ch->level < 54 || IS_NPC(ch))
+	if (ch->level < 54 || is_npc(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -196,7 +196,7 @@ void do_leader(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Can't make mobs leaders.\n\r", ch);
 		return;
@@ -238,7 +238,7 @@ void do_smite(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	char arg1[MAX_INPUT_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		send_to_char("Mobs can't smite.\n\r", ch);
 		return;
@@ -260,7 +260,7 @@ void do_smite(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Trying to smite a mob?\n\r", ch);
 		return;
@@ -300,7 +300,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	int i;
 	char query[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	argument = one_argument(argument, arg1); // character
@@ -314,8 +314,8 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	 */
 	
 	if ((ch->level < 54 && ch->pcdata->induct != CABAL_LEADER)
-		|| IS_NPC(ch)
-		|| ch->cabal == CABAL_HORDE && !IS_IMMORTAL(ch))
+		|| is_npc(ch)
+		|| ch->cabal == CABAL_HORDE && !is_immortal(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -364,7 +364,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim) && !IS_IMMORTAL(ch))
+	if (is_npc(victim) && !is_immortal(ch))
 	{
 		send_to_char("Mobs can't be inducted into Cabals.\n\r", ch);
 		return;
@@ -407,7 +407,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 				cabal ? capitalize(cabal_table[cabal].name) : "-",
 				ch->true_name);
 
-			if (!IS_IMMORTAL(victim))
+			if (!is_immortal(victim))
 				add_history(NULL, victim, buf);
 
 			return;
@@ -455,10 +455,10 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	log_naughty(ch, tstr, 5);
 
 	sprintf(buf, "AUTO: Inducted into %s by %s.\n\r", capitalize(cabal_table[cabal].name), ch->true_name);
-	if (!IS_IMMORTAL(victim))
+	if (!is_immortal(victim))
 		add_history(NULL, victim, buf);
 
-	if (IS_IMMORTAL(ch) && IS_IMMORTAL(victim))
+	if (is_immortal(ch) && is_immortal(victim))
 	{
 		sprintf(query, "insert into inductions(ch, victim, cabal, ctime, chsite, victimsite) values('%s','%s',%d,%ld,'%s','%s')",
 			ch->true_name,
@@ -492,7 +492,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->level > 25 && !IS_IMMORTAL(ch))
+	if (ch->level > 25 && !is_immortal(ch))
 	{
 		send_to_char("You are far too experienced to outfit yourself.\n\r", ch);
 		return;
@@ -664,7 +664,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_WIELD);
 
-	if ((obj == NULL || !IS_WEAPON_STAT(obj, WEAPON_TWO_HANDS))
+	if ((obj == NULL || !is_weapon_stat(obj, WEAPON_TWO_HANDS))
 		&& (obj = get_eq_char(ch, WEAR_LIGHT)) == NULL
 		&& (obj = get_eq_char(ch, WEAR_SHIELD)) == NULL)
 	{
@@ -769,7 +769,7 @@ void do_smote(CHAR_DATA *ch, char *argument)
 	char last[MAX_INPUT_LENGTH], temp[MAX_STRING_LENGTH];
 	unsigned int matches = 0;
 
-	if (!IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
+	if (!is_npc(ch) && IS_SET(ch->comm, COMM_NOEMOTE))
 	{
 		send_to_char("You can't show your emotions.\n\r", ch);
 		return;
@@ -781,7 +781,7 @@ void do_smote(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (strstr(argument, ch->name) == NULL && !IS_NPC(ch))
+	if (strstr(argument, ch->name) == NULL && !is_npc(ch))
 	{
 		send_to_char("You must include your name in an smote.\n\r", ch);
 		return;
@@ -861,7 +861,7 @@ void do_bamfin(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		smash_tilde(argument);
 
@@ -890,7 +890,7 @@ void do_bamfout(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		smash_tilde(argument);
 
@@ -937,7 +937,7 @@ void do_deny(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -1065,7 +1065,7 @@ void do_pardon(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -1168,7 +1168,7 @@ void do_recho(CHAR_DATA *ch, char *argument)
 		{
 			colorconv(buffer, argument, d->character);
 
-			if (get_trust(d->character) >= get_trust(ch) && !IS_NPC(ch))
+			if (get_trust(d->character) >= get_trust(ch) && !is_npc(ch))
 				send_to_char("local> ", d->character);
 
 			send_to_char(buffer, d->character);
@@ -1197,7 +1197,7 @@ void do_zecho(CHAR_DATA *ch, char *argument)
 		{
 			colorconv(buffer, argument, d->character);
 
-			if (get_trust(d->character) >= get_trust(ch) && !IS_NPC(ch))
+			if (get_trust(d->character) >= get_trust(ch) && !is_npc(ch))
 				send_to_char("zone> ", d->character);
 
 			send_to_char(buffer, d->character);
@@ -1341,7 +1341,7 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (get_trust(victim) >= get_trust(ch) && !IS_NPC(victim) && ch->level != 60)
+	if (get_trust(victim) >= get_trust(ch) && !is_npc(victim) && ch->level != 60)
 	{
 		send_to_char("They are too high for you to mess with.\n\r", ch);
 		return;
@@ -1470,10 +1470,10 @@ void do_goto(CHAR_DATA *ch, char *argument)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
-			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !IS_HEROIMM(rch))
+			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !is_heroimm(rch))
 				continue;
 
-			if (ch->pcdata != NULL && ch->pcdata->bamfout[0] != '\0' && !IS_SWITCHED(ch))
+			if (ch->pcdata != NULL && ch->pcdata->bamfout[0] != '\0' && !is_switched(ch))
 				act("$t", ch, ch->pcdata->bamfout, rch, TO_VICT);
 			else
 				act("$n leaves in a swirling mist.", ch, NULL, rch, TO_VICT);
@@ -1487,10 +1487,10 @@ void do_goto(CHAR_DATA *ch, char *argument)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
-			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !IS_HEROIMM(rch))
+			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !is_heroimm(rch))
 				continue;
 
-			if (ch->pcdata != NULL && ch->pcdata->bamfin[0] != '\0' && !IS_SWITCHED(ch))
+			if (ch->pcdata != NULL && ch->pcdata->bamfin[0] != '\0' && !is_switched(ch))
 				act("$t", ch, ch->pcdata->bamfin, rch, TO_VICT);
 			else
 				act("$n appears in a swirling mist.", ch, NULL, rch, TO_VICT);
@@ -1532,7 +1532,7 @@ void do_violate(CHAR_DATA *ch, char *argument)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
-			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !IS_HEROIMM(rch))
+			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !is_heroimm(rch))
 				continue;
 
 			if (ch->pcdata != NULL && ch->pcdata->bamfout[0] != '\0')
@@ -1659,7 +1659,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 	if (!is_room_owner(ch, location)
 		&& ch->in_room != location
 		&& room_is_private(location)
-		&& !IS_TRUSTED(ch, IMPLEMENTOR))
+		&& !is_trusted(ch, IMPLEMENTOR))
 	{
 		send_to_char("That room is private right now.\n\r", ch);
 		return;
@@ -2482,15 +2482,15 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 		sprintf(buf, "Vnum:   %-12d", victim->pIndexData->vnum);
 	else if (str_cmp(victim->name, victim->true_name))
 		sprintf(buf, "True Name: %-10s", victim->true_name);
 
-	if (IS_NPC(victim) || str_cmp(victim->name, victim->true_name))
+	if (is_npc(victim) || str_cmp(victim->name, victim->true_name))
 		send_to_char(buf, ch);
 
-	sprintf(buf, "Name: %s%s (%s)\n\r", !IS_NPC(victim) ? "  " : "", victim->name, IS_NPC(victim) ? "NPC" : "PC");
+	sprintf(buf, "Name: %s%s (%s)\n\r", !is_npc(victim) ? "  " : "", victim->name, is_npc(victim) ? "NPC" : "PC");
 	send_to_char(buf, ch);
 
 	/* begin shared PC/NPC stuff that fits on one line */
@@ -2528,8 +2528,8 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		victim->max_mana,
 		victim->move,
 		victim->max_move,
-		GET_HITROLL(victim),
-		GET_DAMROLL(victim));
+		get_hitroll(victim),
+		get_damroll(victim));
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Align:  %-11s Ethos:  %-10s  Gold:   %-10ld Size: %-9s Pos:   %s\n\r",
@@ -2538,7 +2538,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 			: victim->alignment < ALIGN_NEUTRAL
 				? "evil"
 				: "neutral",
-		IS_NPC(victim)
+		is_npc(victim)
 			? "neutral"
 			: victim->pcdata->ethos > ETHOS_NEUTRAL
 				? "lawful"
@@ -2563,14 +2563,14 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 
 	sprintf(buf, "Pierce: %-10d  Bash:   %-8d    Slash:  %-8d   Exotic: %-10d\n\r",
-		GET_AC(victim, AC_PIERCE),
-		GET_AC(victim, AC_BASH),
-		GET_AC(victim, AC_SLASH),
-		GET_AC(victim, AC_EXOTIC));
+		get_ac(victim, AC_PIERCE),
+		get_ac(victim, AC_BASH),
+		get_ac(victim, AC_SLASH),
+		get_ac(victim, AC_EXOTIC));
 	send_to_char(buf, ch);
 	send_to_char("-----------------------------------------------------------------------------------------\n\r", ch);
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		sprintf(buf, "Count:  %-10d  XPMod:  %d%%%-5s   Wealth: %-8s   Damage: %2dd%2d+%-1d Attack: %s\n\r",
 			victim->pIndexData->count,
@@ -2579,7 +2579,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 			wealth_lookup(victim->pIndexData->wealth),
 			victim->damage[DICE_NUMBER],
 			victim->damage[DICE_TYPE],
-			GET_DAMROLL(victim),
+			get_damroll(victim),
 			attack_table[victim->dam_type].noun);
 		send_to_char(buf, ch);
 
@@ -2667,7 +2667,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
 	send_to_char("-----------------------------------------------------------------------------------------\n\r", ch);
 
-	sprintf(buf, "%s: %s\n\r", IS_NPC(victim) ? "Act" : "Plr", act_bit_name(victim->act));
+	sprintf(buf, "%s: %s\n\r", is_npc(victim) ? "Act" : "Plr", act_bit_name(victim->act));
 	send_to_char(buf, ch);
 
 	if (victim->comm[0])
@@ -2676,7 +2676,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (!IS_NPC(victim) && victim->trust)
+	if (!is_npc(victim) && victim->trust)
 	{
 		sprintf(buf, "Trust: %s%s%s\n\r",
 			IS_SET(victim->pcdata->trust, TRUST_GROUP) ? "group " : "",
@@ -2685,7 +2685,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim) && victim->off_flags)
+	if (is_npc(victim) && victim->off_flags)
 	{
 		sprintf(buf, "Offense: %s\n\r", off_bit_name(victim->off_flags));
 		send_to_char(buf, ch);
@@ -2709,7 +2709,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		sprintf(buf, "Form: %s\n\rParts: %s\n\r", form_bit_name(victim->form), part_bit_name(victim->parts));
 		send_to_char(buf, ch);
@@ -2721,7 +2721,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 	{
 		sprintf(buf, "Last PC fought: %s, %d seconds ago\n\r",
 			victim->last_fight_name != NULL ? victim->last_fight_name : "(none)",
@@ -2729,7 +2729,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (!IS_NPC(victim) && victim->Class()->GetIndex() == CLASS_SORCERER)
+	if (!is_npc(victim) && victim->Class()->GetIndex() == CLASS_SORCERER)
 	{
 		sprintf(buf, "Major Focus: %s\tPara-Elemental Focus: %s\n\r",
 			sphere_table[victim->pcdata->ele_major].name,
@@ -2737,10 +2737,10 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 		victim->Profs()->DisplayProfsForStat(ch);
 
-	if (!IS_NPC(victim) && victim->pcdata->styles[0])
+	if (!is_npc(victim) && victim->pcdata->styles[0])
 	{
 		sprintf(buf, "Styles: ");
 
@@ -2757,7 +2757,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->styles[0])
+	if (is_npc(victim) && victim->pIndexData->styles[0])
 	{
 		sprintf(buf, "Styles: ");
 		for (i = 1; i < MAX_STYLE; i++)
@@ -2773,19 +2773,19 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (!IS_NPC(victim) && victim->pcdata->security)
+	if (!is_npc(victim) && victim->pcdata->security)
 	{
 		sprintf(buf, "Security: %d\n\r", victim->pcdata->security); /* OLC */
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->notes)
+	if (is_npc(victim) && victim->pIndexData->notes)
 	{
 		sprintf(buf, "NOTES: %s\n\r", victim->pIndexData->notes);
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->spec_prog.func)
+	if (is_npc(victim) && victim->pIndexData->spec_prog.func)
 	{
 		int i;
 		long x;
@@ -2817,7 +2817,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char("\n\r", ch);
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->progtypes != 0)
+	if (is_npc(victim) && victim->pIndexData->progtypes != 0)
 	{
 		if (IS_SET(victim->progtypes, MPROG_ATTACK))
 		{
@@ -2880,7 +2880,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (IS_NPC(victim)
+	if (is_npc(victim)
 		&& IS_SET(victim->act, ACT_WARD_MOB)
 		&& IS_SET(victim->progtypes, MPROG_PULSE)
 		&& victim->pIndexData->mprogs->pulse_prog == pulse_prog_area_echo_ward)
@@ -2898,7 +2898,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		for (i = 0; i < MAX_PROFS_TAUGHT_BY_MOB; i++)
 		{
@@ -2912,7 +2912,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		for (auto victim_cast_spell : victim->pIndexData->cast_spell)
 		{
@@ -2924,7 +2924,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->barred_entry)
+	if (is_npc(victim) && victim->pIndexData->barred_entry)
 	{
 		barred = get_room_index(victim->pIndexData->barred_entry->vnum);
 		i = victim->pIndexData->barred_entry->comparison;
@@ -2960,7 +2960,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->pShop)
+	if (is_npc(victim) && victim->pIndexData->pShop)
 	{
 		i = victim->pIndexData->pShop->open_hour;
 		x = victim->pIndexData->pShop->close_hour;
@@ -2973,7 +2973,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->restrict_low != -1)
+	if (is_npc(victim) && victim->pIndexData->restrict_low != -1)
 	{
 		sprintf(buf, "Mob will only wander within vnum range %d to %d.\n\r",
 			victim->pIndexData->restrict_low,
@@ -3027,7 +3027,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 	{
 		for (i = 0; i < 20; i++)
 		{
@@ -3210,7 +3210,7 @@ void do_owhere(CHAR_DATA *ch, char *argument)
 		{
 			sprintf(buf, "%3d) %s is carried by %s [Room %d]\n\r",
 				number, obj->short_descr,
-				PERS(in_obj->carried_by, ch),
+				pers(in_obj->carried_by, ch),
 				in_obj->carried_by->in_room->vnum);
 		}
 		else if (in_obj->in_room != NULL && can_see_room(ch, in_obj->in_room))
@@ -3283,7 +3283,7 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 				{
 					sprintf(buf, "%3d) %s is in %s [%d]\n\r",
 						count,
-						IS_NPC(victim) ? victim->name : victim->true_name,
+						is_npc(victim) ? victim->name : victim->true_name,
 						get_room_name(victim->in_room),
 						victim->in_room->vnum);
 				}
@@ -3309,8 +3309,8 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 
 			sprintf(buf, "%3d) [%5d] %-28s [%5d] %s\n\r",
 				count,
-				IS_NPC(victim) ? victim->pIndexData->vnum : 0,
-				IS_NPC(victim) ? victim->short_descr : victim->name,
+				is_npc(victim) ? victim->pIndexData->vnum : 0,
+				is_npc(victim) ? victim->short_descr : victim->name,
 				victim->in_room->vnum,
 				get_room_name(victim->in_room));
 			add_buf(buffer, buf);
@@ -3347,7 +3347,7 @@ void reboot_now(CHAR_DATA *ch)
 
 		for(owner=char_list;owner!=NULL;owner=owner->next)
 		{
-			if(!IS_NPC(owner) && !str_cmp(owner->true_name,obj->owner))
+			if(!is_npc(owner) && !str_cmp(owner->true_name,obj->owner))
 			{
 				send_to_char("Your corpse decays.\n\r",owner);
 
@@ -3601,7 +3601,7 @@ void do_snoop(CHAR_DATA *ch, char *argument)
 
 	victim->desc->snoop_by = ch->desc;
 
-	sprintf(buf, "$N starts snooping on %s", (IS_NPC(ch) ? victim->short_descr : victim->name));
+	sprintf(buf, "$N starts snooping on %s", (is_npc(ch) ? victim->short_descr : victim->name));
 	wiznet(buf, ch, NULL, WIZ_SNOOPS, WIZ_SECURE, get_trust(ch));
 
 	send_to_char("Ok.\n\r", ch);
@@ -3643,7 +3643,7 @@ void do_switch(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 	{
 		send_to_char("You can only switch into mobiles.\n\r", ch);
 		return;
@@ -3652,7 +3652,7 @@ void do_switch(CHAR_DATA *ch, char *argument)
 	if (!is_room_owner(ch, victim->in_room)
 		&& ch->in_room != victim->in_room
 		&& room_is_private(victim->in_room)
-		&& !IS_TRUSTED(ch, IMPLEMENTOR))
+		&& !is_trusted(ch, IMPLEMENTOR))
 	{
 		send_to_char("That character is in a private room.\n\r", ch);
 		return;
@@ -3719,11 +3719,11 @@ void do_return(CHAR_DATA *ch, char *argument)
 /* trust levels for load and clone */
 bool obj_check(CHAR_DATA *ch, OBJ_DATA *obj)
 {
-	if (IS_TRUSTED(ch, GOD)
-		|| (IS_TRUSTED(ch, IMMORTAL) && obj->level <= 20 && obj->cost <= 1000)
-		|| (IS_TRUSTED(ch, DEMI) && obj->level <= 10 && obj->cost <= 500)
-		|| (IS_TRUSTED(ch, ANGEL) && obj->level <= 5 && obj->cost <= 250)
-		|| (IS_TRUSTED(ch, AVATAR) && obj->level == 0 && obj->cost <= 100))
+	if (is_trusted(ch, GOD)
+		|| (is_trusted(ch, IMMORTAL) && obj->level <= 20 && obj->cost <= 1000)
+		|| (is_trusted(ch, DEMI) && obj->level <= 10 && obj->cost <= 500)
+		|| (is_trusted(ch, ANGEL) && obj->level <= 5 && obj->cost <= 250)
+		|| (is_trusted(ch, AVATAR) && obj->level == 0 && obj->cost <= 100))
 		return true;
 	else
 		return false;
@@ -3827,17 +3827,17 @@ void do_clone(CHAR_DATA *ch, char *argument)
 		OBJ_DATA *new_obj;
 		char buf[MAX_STRING_LENGTH];
 
-		if (!IS_NPC(mob))
+		if (!is_npc(mob))
 		{
 			send_to_char("You can only clone mobiles.\n\r", ch);
 			return;
 		}
 
-		if ((mob->level > 20 && !IS_TRUSTED(ch, GOD))
-			|| (mob->level > 10 && !IS_TRUSTED(ch, IMMORTAL))
-			|| (mob->level > 5 && !IS_TRUSTED(ch, DEMI))
-			|| (mob->level > 0 && !IS_TRUSTED(ch, ANGEL))
-			|| !IS_TRUSTED(ch, AVATAR))
+		if ((mob->level > 20 && !is_trusted(ch, GOD))
+			|| (mob->level > 10 && !is_trusted(ch, IMMORTAL))
+			|| (mob->level > 5 && !is_trusted(ch, DEMI))
+			|| (mob->level > 0 && !is_trusted(ch, ANGEL))
+			|| !is_trusted(ch, AVATAR))
 		{
 			send_to_char("Your powers are not great enough for such a task.\n\r", ch);
 			return;
@@ -3980,7 +3980,7 @@ void do_oload(CHAR_DATA *ch, char *argument)
 
 	obj = create_object(pObjIndex, level);
 
-	if (CAN_WEAR(obj, ITEM_TAKE))
+	if (can_wear(obj, ITEM_TAKE))
 		obj_to_char(obj, ch);
 	else
 		obj_to_room(obj, ch->in_room);
@@ -4011,7 +4011,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 		{
 			vnext = victim->next_in_room;
 
-			if (IS_NPC(victim) && !IS_SET(victim->act, ACT_NOPURGE) && victim != ch /* safety precaution */)
+			if (is_npc(victim) && !IS_SET(victim->act, ACT_NOPURGE) && victim != ch /* safety precaution */)
 				extract_char(victim, true);
 		}
 
@@ -4019,7 +4019,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 		{
 			obj_next = obj->next_content;
 
-			if (!IS_OBJ_STAT(obj, ITEM_NOPURGE))
+			if (!is_obj_stat(obj, ITEM_NOPURGE))
 				extract_obj(obj);
 		}
 
@@ -4036,7 +4036,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 	{
 		if (ch == victim)
 		{
@@ -4096,7 +4096,7 @@ void do_advance(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -4163,7 +4163,7 @@ void do_advance(CHAR_DATA *ch, char *argument)
 	if (victim->level >= 52)
 		res = RS.SQL.Delete("players WHERE name = '%s'", victim->true_name);
 
-	victim->exp = exp_per_level(victim) * UMAX(1, victim->level);
+	victim->exp = exp_per_level(victim) * std::max(1, (int)victim->level);
 	save_char_obj(victim);
 }
 
@@ -4233,7 +4233,7 @@ void do_restore(CHAR_DATA *ch, char *argument)
 			vch->mana = vch->max_mana;
 			vch->move = vch->max_move;
 
-			if (!IS_NPC(vch))
+			if (!is_npc(vch))
 				update_pos(vch);
 
 			act("$n has restored you.", ch, NULL, vch, TO_VICT);
@@ -4254,7 +4254,7 @@ void do_restore(CHAR_DATA *ch, char *argument)
 		{
 			victim = d->character;
 
-			if (victim == NULL || IS_NPC(victim))
+			if (victim == NULL || is_npc(victim))
 				continue;
 
 			affect_strip(victim, gsn_plague);
@@ -4267,7 +4267,7 @@ void do_restore(CHAR_DATA *ch, char *argument)
 			victim->mana = victim->max_mana;
 			victim->move = victim->max_move;
 
-			if (!IS_NPC(victim))
+			if (!is_npc(victim))
 				update_pos(victim);
 
 			if (victim->in_room != NULL)
@@ -4301,12 +4301,12 @@ void do_restore(CHAR_DATA *ch, char *argument)
 	victim->mana = victim->max_mana;
 	victim->move = victim->max_move;
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 		update_pos(victim);
 
 	act("$n has restored you.", ch, NULL, victim, TO_VICT);
 
-	sprintf(buf, "$N restored %s", IS_NPC(victim) ? victim->short_descr : victim->name);
+	sprintf(buf, "$N restored %s", is_npc(victim) ? victim->short_descr : victim->name);
 	wiznet(buf, ch, NULL, WIZ_RESTORE, WIZ_SECURE, get_trust(ch));
 
 	send_to_char("Ok.\n\r", ch);
@@ -4333,7 +4333,7 @@ void do_freeze(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -4402,7 +4402,7 @@ void do_log(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -4489,7 +4489,7 @@ void do_noshout(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -4579,10 +4579,10 @@ void do_peace(CHAR_DATA *ch, char *argument)
 		if (rch->fighting != NULL)
 			stop_fighting(rch, true);
 
-		if (IS_NPC(rch) && IS_SET(rch->act, ACT_AGGRESSIVE))
+		if (is_npc(rch) && IS_SET(rch->act, ACT_AGGRESSIVE))
 			REMOVE_BIT(rch->act, ACT_AGGRESSIVE);
 
-		if (IS_NPC(rch))
+		if (is_npc(rch))
 			rch->last_fought = NULL;
 	}
 
@@ -4744,7 +4744,7 @@ void do_sgset(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -4814,7 +4814,7 @@ void do_sset(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Not on NPC's.\n\r", ch);
 		return;
@@ -4999,7 +4999,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg2, "security")) /* OLC */
 	{
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Not on NPC's.\n\r", ch);
 			return;
@@ -5079,7 +5079,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 		victim->sex = value;
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			victim->pcdata->true_sex = value;
 
 		return;
@@ -5087,7 +5087,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "class"))
 	{
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Mobiles have no class.\n\r", ch);
 			return;
@@ -5119,7 +5119,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "level"))
 	{
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 		{
 			send_to_char("Not on PC's.\n\r", ch);
 			return;
@@ -5151,7 +5151,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 		victim->max_hit = value;
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			victim->pcdata->perm_hit = value;
 
 		return;
@@ -5167,7 +5167,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 		victim->max_mana = value;
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			victim->pcdata->perm_mana = value;
 
 		return;
@@ -5183,7 +5183,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 		victim->max_move = value;
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			victim->pcdata->perm_move = value;
 
 		return;
@@ -5233,7 +5233,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			victim->pcdata->ethos = value;
 
 		return;
@@ -5241,7 +5241,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "thirst"))
 	{
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Not on NPC's.\n\r", ch);
 			return;
@@ -5259,7 +5259,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "drunk"))
 	{
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Not on NPC's.\n\r", ch);
 			return;
@@ -5277,7 +5277,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "hunger"))
 	{
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Not on NPC's.\n\r", ch);
 			return;
@@ -5303,7 +5303,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (!IS_NPC(victim) && !race_table[race].pc_race)
+		if (!is_npc(victim) && !race_table[race].pc_race)
 		{
 			send_to_char("That is not a valid player race.\n\r", ch);
 			return;
@@ -5316,7 +5316,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "group"))
 	{
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 		{
 			send_to_char("Only on NPCs.\n\r", ch);
 			return;
@@ -5337,7 +5337,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 		victim->dam_mod = atoi(arg3);
 
 		sprintf(buf, "%s's dam_mod set to %f%%.\n\r",
-			IS_NPC(victim) ? victim->short_descr : victim->name,
+			is_npc(victim) ? victim->short_descr : victim->name,
 			victim->dam_mod);
 		send_to_char(buf, ch);
 		return;
@@ -5366,7 +5366,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "specializations"))
 	{
-		if (IS_NPC(victim) || !is_number(arg3))
+		if (is_npc(victim) || !is_number(arg3))
 		{
 			send_to_char("You can't do that.\n\r", ch);
 			return;
@@ -5381,7 +5381,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "pause"))
 	{
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("You can't do that.\n\r", ch);
 			return;
@@ -5408,7 +5408,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 		int ind = CProficiencies::ProfIndexLookup(buf4);
 
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Not on mobiles.\n\r", ch);
 			return;
@@ -5428,7 +5428,7 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "profpoints"))
 	{
-		if (IS_NPC(victim) || !is_number(arg3))
+		if (is_npc(victim) || !is_number(arg3))
 		{
 			send_to_char("You can't do that.\n\r", ch);
 			return;
@@ -5518,7 +5518,7 @@ void do_string(CHAR_DATA *ch, char *argument)
 
 		if (!str_prefix(arg2, "title"))
 		{
-			if (IS_NPC(victim))
+			if (is_npc(victim))
 			{
 				send_to_char("Not on NPC's.\n\r", ch);
 				return;
@@ -5630,7 +5630,7 @@ void do_oset(CHAR_DATA *ch, char *argument)
 	 */
 	if (!str_cmp(arg2, "value0") || !str_cmp(arg2, "v0"))
 	{
-		/*	obj->value[0] = UMIN(50,value); */
+		/*	obj->value[0] = std::min(50,value); */
 		obj->value[0] = value;
 		return;
 	}
@@ -5720,7 +5720,7 @@ void do_rset(CHAR_DATA *ch, char *argument)
 	}
 
 	if (!is_room_owner(ch, location) && ch->in_room != location && room_is_private(location) &&
-		!IS_TRUSTED(ch, IMPLEMENTOR))
+		!is_trusted(ch, IMPLEMENTOR))
 	{
 		send_to_char("That room is private right now.\n\r", ch);
 		return;
@@ -6000,7 +6000,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 		{
 			vch_next = vch->next;
 
-			if (!IS_NPC(vch) && get_trust(vch) < get_trust(ch))
+			if (!is_npc(vch) && get_trust(vch) < get_trust(ch))
 			{
 				if (!can_see(vch, ch))
 					sprintf(buf, "An irresistable urge forces you to '%s'.", argument);
@@ -6022,7 +6022,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 		{
 			vch_next = vch->next;
 
-			if (!IS_NPC(vch) && get_trust(vch) < get_trust(ch) && vch->level < LEVEL_HERO)
+			if (!is_npc(vch) && get_trust(vch) < get_trust(ch) && vch->level < LEVEL_HERO)
 			{
 				act(buf, ch, NULL, vch, TO_VICT);
 				interpret(vch, argument);
@@ -6041,7 +6041,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 		{
 			vch_next = vch->next;
 
-			if (!IS_NPC(vch) && get_trust(vch) < get_trust(ch) && vch->level >= LEVEL_HERO)
+			if (!is_npc(vch) && get_trust(vch) < get_trust(ch) && vch->level >= LEVEL_HERO)
 			{
 				act(buf, ch, NULL, vch, TO_VICT);
 				interpret(vch, argument);
@@ -6075,7 +6075,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 		if (!is_room_owner(ch, victim->in_room)
 			&& ch->in_room != victim->in_room
 			&& room_is_private(victim->in_room)
-			&& !IS_TRUSTED(ch, IMPLEMENTOR))
+			&& !is_trusted(ch, IMPLEMENTOR))
 		{
 			send_to_char("That character is in a private room.\n\r", ch);
 			return;
@@ -6087,7 +6087,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (!IS_NPC(victim) && get_trust(ch) < MAX_LEVEL - 3)
+		if (!is_npc(victim) && get_trust(ch) < MAX_LEVEL - 3)
 		{
 			send_to_char("Not at your level!\n\r", ch);
 			return;
@@ -6199,7 +6199,7 @@ void do_incognito(CHAR_DATA *ch, char *argument)
 
 void do_holylight(CHAR_DATA *ch, char *argument)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (IS_SET(ch->act, PLR_HOLYLIGHT))
@@ -6392,7 +6392,7 @@ void do_deathmessage(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		smash_tilde(argument);
 
@@ -6814,7 +6814,7 @@ void do_history(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("You can't history a mob.\n\r", ch);
 		return;
@@ -7049,7 +7049,7 @@ void do_empower(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_SWITCHED(ch))
+	if (is_switched(ch))
 	{
 		send_to_char("You can't do that while switched!\n\r", ch);
 		return;
@@ -7057,7 +7057,7 @@ void do_empower(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL || IS_NPC(victim))
+	if (victim == NULL || is_npc(victim))
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -7165,7 +7165,7 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 		{
 			sprintf(buf, "Rune '%s' placed in room by %s, level %d, duration %d hours.\n\r",
 				skill_table[rune->type].name,
-				!IS_NPC(rune->owner) ? rune->owner->true_name : rune->owner->name,
+				!is_npc(rune->owner) ? rune->owner->true_name : rune->owner->name,
 				rune->level,
 				rune->duration);
 			send_to_char(buf, ch);
@@ -7181,7 +7181,7 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 			sprintf(buf, "Rune '%s' placed on %s door by %s, level %d, duration %d hours.\n\r",
 				skill_table[rune->type].name,
 				direction_table[i].name,
-				!IS_NPC(rune->owner) ? rune->owner->true_name : rune->owner->name,
+				!is_npc(rune->owner) ? rune->owner->true_name : rune->owner->name,
 				rune->level, rune->duration);
 			send_to_char(buf, ch);
 
@@ -7460,7 +7460,7 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		send_to_char("Die.\n\r", ch);
 		return;

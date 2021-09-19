@@ -3,6 +3,7 @@
 
 #include "merc.h"
 #include "devextra.h"
+#include "utility.h"
 
 #define VOTE_FILE RIFT_AREA_DIR "/votes.txt"
 

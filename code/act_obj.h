@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <algorithm>
 #include "merc.h"
 #include "handler.h"
 #include "magic.h"
@@ -27,6 +28,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "material.h"
+#include "utility.h"
 
 #define CABAL_ITEMS_FILE	"citems.txt"
 #define MINOTAUR_ONLY		I

@@ -27,6 +27,7 @@
 #include "bit.h"
 #include "chardef.h"
 #include "const.h"
+#include "utility.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"

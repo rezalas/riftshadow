@@ -51,7 +51,7 @@ void advance_level(CHAR_DATA *ch, bool hide)
 	int i;
 	int wis_mod;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	ch->pcdata->last_level = (ch->played + (int)(current_time - ch->logon)) / 3600;
@@ -84,7 +84,7 @@ void advance_level(CHAR_DATA *ch, bool hide)
 	if (ch->Class()->GetIndex() == CLASS_SORCERER)
 		add_mana -= number_range(1, 2);
 
-	add_move = UMAX(6, add_move);
+	add_move = std::max(6, add_move);
 
 	ch->max_hit += add_hp;
 	ch->max_mana += add_mana;
@@ -106,7 +106,7 @@ void advance_level(CHAR_DATA *ch, bool hide)
 		if (ch->pcdata->learned[sn] > 10 && skill_table[sn].ctype != CMD_POWER)
 		{
 			ch->pcdata->learned[sn]++;
-			ch->pcdata->learned[sn] = UMIN(ch->pcdata->learned[sn], 100);
+			ch->pcdata->learned[sn] = std::min((int)ch->pcdata->learned[sn], 100);
 		}
 	}
 
@@ -144,7 +144,7 @@ void gain_exp(CHAR_DATA *ch, int gain)
 {
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->level < LEVEL_HERO)
@@ -185,19 +185,19 @@ int hit_gain(CHAR_DATA *ch)
 	if (is_affected(ch, gsn_atrophy) || is_affected(ch, gsn_prevent_healing))
 		return 0;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		gain = 5 + ch->level;
 
-		if (IS_AFFECTED(ch, AFF_REGENERATION))
+		if (is_affected_by(ch, AFF_REGENERATION))
 			gain *= 2;
 
 		if (is_affected_area(ch->in_room->area, gsn_infidels_fate))
 		{
-			if (IS_GOOD(ch))
+			if (is_good(ch))
 				gain = (int)((float)gain * 1.75);
 
-			if (IS_EVIL(ch))
+			if (is_evil(ch))
 				gain = (int)((float)gain * .75);
 		}
 
@@ -218,7 +218,7 @@ int hit_gain(CHAR_DATA *ch)
 	}
 	else
 	{
-		gain = UMAX(3, (get_curr_stat(ch, STAT_CON) - 3) / 2 + ch->level / 4);
+		gain = std::max(3, (get_curr_stat(ch, STAT_CON) - 3) / 2 + ch->level / 4);
 		gain += (ch->Class()->gainconst + 3) * 3;
 		number = number_percent();
 
@@ -245,10 +245,10 @@ int hit_gain(CHAR_DATA *ch)
 				break;
 		}
 
-		if (IS_HUNGRY(ch))
+		if (is_hungry(ch))
 			gain /= 2;
 
-		if (IS_THIRSTY(ch))
+		if (is_thirsty(ch))
 			gain /= 2;
 	}
 
@@ -258,16 +258,16 @@ int hit_gain(CHAR_DATA *ch)
 	if (is_affected(ch, gsn_bleeding))
 		gain = (gain * 3 / 5);
 
-	if (IS_AFFECTED(ch, AFF_POISON))
+	if (is_affected_by(ch, AFF_POISON))
 		gain /= 4;
 
-	if (IS_AFFECTED(ch, AFF_PLAGUE))
+	if (is_affected_by(ch, AFF_PLAGUE))
 		gain /= 8;
 
-	if (IS_AFFECTED(ch, AFF_HASTE))
+	if (is_affected_by(ch, AFF_HASTE))
 		gain /= 2;
 
-	if (IS_AFFECTED(ch, AFF_SLOW))
+	if (is_affected_by(ch, AFF_SLOW))
 	{
 		gain *= 17;
 		gain /= 10;
@@ -284,10 +284,10 @@ int hit_gain(CHAR_DATA *ch)
 	if (is_affected(ch, gsn_regeneration))
 		gain *= 2;
 
-	if (!IS_NPC(ch) && IS_SET(ch->act, PLR_MORON))
+	if (!is_npc(ch) && IS_SET(ch->act, PLR_MORON))
 		gain /= 2;
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		for (OBJ_DATA *fire = ch->in_room->contents; fire; fire = fire->next_content)
 		{
@@ -296,7 +296,7 @@ int hit_gain(CHAR_DATA *ch)
 		}
 	}
 
-	return UMIN(gain, ch->max_hit - ch->hit);
+	return std::min(gain, (int)(ch->max_hit - ch->hit));
 }
 
 int mana_gain(CHAR_DATA *ch)
@@ -311,7 +311,7 @@ int mana_gain(CHAR_DATA *ch)
 		return 0;
 
 	/*
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		if (ch->pcdata->condition[COND_STARVING] > 6)
 			return 0;
@@ -321,7 +321,7 @@ int mana_gain(CHAR_DATA *ch)
 	}
 	*/
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		gain = 5 + ch->level / 2;
 
@@ -378,26 +378,26 @@ int mana_gain(CHAR_DATA *ch)
 				break;
 		}
 
-		if (IS_HUNGRY(ch))
+		if (is_hungry(ch))
 			gain /= 2;
 
-		if (IS_THIRSTY(ch))
+		if (is_thirsty(ch))
 			gain /= 2;
 	}
 
 	if (ch->on != NULL && ch->on->item_type == ITEM_FURNITURE)
 		gain = gain * 7 / 5;
 
-	if (IS_AFFECTED(ch, AFF_POISON))
+	if (is_affected_by(ch, AFF_POISON))
 		gain /= 4;
 
-	if (IS_AFFECTED(ch, AFF_PLAGUE))
+	if (is_affected_by(ch, AFF_PLAGUE))
 		gain /= 8;
 
-	if (IS_AFFECTED(ch, AFF_HASTE))
+	if (is_affected_by(ch, AFF_HASTE))
 		gain /= 2;
 
-	if (IS_AFFECTED(ch, AFF_SLOW))
+	if (is_affected_by(ch, AFF_SLOW))
 		gain += (7 * gain / 10);
 
 	if (is_affected(ch, gsn_camp))
@@ -412,7 +412,7 @@ int mana_gain(CHAR_DATA *ch)
 	}
 
 	gain *= 2;
-	return UMIN(gain, ch->max_mana - ch->mana);
+	return std::min(gain, (int)(ch->max_mana - ch->mana));
 }
 
 int move_gain(CHAR_DATA *ch)
@@ -425,7 +425,7 @@ int move_gain(CHAR_DATA *ch)
 	if (is_affected(ch, gsn_atrophy) || is_affected(ch, gsn_prevent_healing))
 		return 0;
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		if (ch->pcdata->condition[COND_STARVING] > 6)
 			return 5;
@@ -434,13 +434,13 @@ int move_gain(CHAR_DATA *ch)
 			return 5;
 	}
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		gain = ch->level;
 	}
 	else
 	{
-		gain = UMAX(15, ch->level / 2);
+		gain = std::max(15, ch->level / 2);
 
 		switch (ch->position)
 		{
@@ -452,10 +452,10 @@ int move_gain(CHAR_DATA *ch)
 				break;
 		}
 
-		if (IS_HUNGRY(ch))
+		if (is_hungry(ch))
 			gain /= 2;
 
-		if (IS_THIRSTY(ch))
+		if (is_thirsty(ch))
 			gain /= 2;
 	}
 
@@ -464,13 +464,13 @@ int move_gain(CHAR_DATA *ch)
 	if (ch->on != NULL && ch->on->item_type == ITEM_FURNITURE)
 		gain = gain * 6 / 5;
 
-	if (IS_AFFECTED(ch, AFF_POISON))
+	if (is_affected_by(ch, AFF_POISON))
 		gain /= 4;
 
-	if (IS_AFFECTED(ch, AFF_PLAGUE))
+	if (is_affected_by(ch, AFF_PLAGUE))
 		gain /= 8;
 
-	if (IS_AFFECTED(ch, AFF_HASTE) || IS_AFFECTED(ch, AFF_SLOW))
+	if (is_affected_by(ch, AFF_HASTE) || is_affected_by(ch, AFF_SLOW))
 		gain *= 2;
 
 	if (is_affected(ch, gsn_camp))
@@ -479,7 +479,7 @@ int move_gain(CHAR_DATA *ch)
 			gain *= 2;
 	}
 	gain *= 2;
-	return UMIN(gain, ch->max_move - ch->move);
+	return std::min(gain, (int)(ch->max_move - ch->move));
 }
 
 /* If you don't want starvation/dehydration in your mud then simply return
@@ -490,7 +490,7 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 	int condition;
 	int counter;
 
-	if (value == 0 || IS_NPC(ch) || IS_IMMORTAL(ch) || IS_HEROIMM(ch) || IS_SET(ch->act, PLR_NOVOID))
+	if (value == 0 || is_npc(ch) || is_immortal(ch) || is_heroimm(ch) || IS_SET(ch->act, PLR_NOVOID))
 		return;
 
 	if (!ch->desc)
@@ -501,7 +501,7 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 	if (condition == -1)
 		return;
 
-	ch->pcdata->condition[iCond] = UMAX(0, condition + value);
+	ch->pcdata->condition[iCond] = std::max(0, condition + value);
 
 	if (ch->level > 10)
 	{
@@ -528,8 +528,8 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 		ch->pcdata->condition[COND_HUNGER] = 0;
 	}
 
-	ch->pcdata->condition[COND_THIRST] = UMIN(ch->pcdata->condition[COND_THIRST], 75);
-	ch->pcdata->condition[COND_HUNGER] = UMIN(ch->pcdata->condition[COND_HUNGER], 75);
+	ch->pcdata->condition[COND_THIRST] = std::min((int)ch->pcdata->condition[COND_THIRST], 75);
+	ch->pcdata->condition[COND_HUNGER] = std::min((int)ch->pcdata->condition[COND_HUNGER], 75);
 
 	if (is_affected(ch, gsn_aura_of_sustenance))
 	{
@@ -564,7 +564,7 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 		send_to_char("You are starving!\n\r", ch);
 
 		if (ch->level > 10)
-			damage_new(ch, ch, UMIN(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "hunger");
+			damage_new(ch, ch, std::min(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "hunger");
 	}
 
 	if (ch->pcdata->condition[COND_THIRST] > COND_HUNGRY + 5 && iCond == COND_THIRST)
@@ -573,7 +573,7 @@ void gain_condition(CHAR_DATA *ch, int iCond, int value)
 		send_to_char("You are dying of thirst!\n\r", ch);
 
 		if (ch->level > 10)
-			damage_new(ch, ch, UMIN(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "thirst");
+			damage_new(ch, ch, std::min(20, number_range(counter, 2 * counter)), TYPE_UNDEFINED, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "thirst");
 	}
 }
 
@@ -594,7 +594,7 @@ void mobile_update(void)
 	{
 		ch_next = ch->next;
 
-		if (!IS_NPC(ch) || ch->in_room == NULL)
+		if (!is_npc(ch) || ch->in_room == NULL)
 			continue;
 
 		if (ch->in_room->area->empty && !IS_SET(ch->act, ACT_UPDATE_ALWAYS) && !IS_SET(ch->act, ACT_WARD_MOB))
@@ -629,7 +629,7 @@ void mobile_update(void)
 
 			for (obj = ch->in_room->contents; obj; obj = obj->next_content)
 			{
-				if (CAN_WEAR(obj, ITEM_TAKE) && can_loot(ch, obj) && obj->cost > max && obj->cost > 0)
+				if (can_wear(obj, ITEM_TAKE) && can_loot(ch, obj) && obj->cost > max && obj->cost > 0)
 				{
 					obj_best = obj;
 					max = obj->cost;
@@ -680,7 +680,7 @@ void mobile_update(void)
 				&& !(pexit->u1.to_room->sector_type == SECT_WATER
 					&& !IS_SET(ch->form, FORM_AQUATIC)
 					&& !IS_SET(ch->form, FORM_FISH)
-					&& !IS_AFFECTED(ch, AFF_FLYING)))
+					&& !is_affected_by(ch, AFF_FLYING)))
 			{
 				move_char(ch, door, false, true);
 			}
@@ -859,12 +859,12 @@ void time_update(void)
 			if (d->connected == CON_PLAYING
 				&& d->character->in_room
 				&& d->character->in_room->sector_type != SECT_UNDERWATER
-				&& IS_OUTSIDE(d->character)
-				&& IS_AWAKE(d->character)
+				&& is_outside(d->character)
+				&& is_awake(d->character)
 				&& !is_editing(d->character)
 				&& !(is_affected_area(d->character->in_room->area, gsn_whiteout))
 				&& !(is_affected_area(d->character->in_room->area, gsn_cyclone))
-				&& !(IS_AFFECTED(d->character, AFF_BLIND)))
+				&& !(is_affected_by(d->character, AFF_BLIND)))
 			{
 				colorconv(colbuf, buf, d->character);
 				send_to_char(colbuf, d->character);
@@ -895,10 +895,10 @@ void gold_update(void)
 
 	for (mob = char_list; mob; mob = mob->next)
 	{
-		if (!IS_NPC(mob) || mob->stolen_from)
+		if (!is_npc(mob) || mob->stolen_from)
 			continue;
 
-		mob_gold = UMAX(total_gold - player_gold, 100000);
+		mob_gold = std::max(total_gold - player_gold, (long)100000);
 		gold = mob->pIndexData->wealth * (mob_gold / total_wealth);
 
 		if (gold > 9)
@@ -1111,30 +1111,30 @@ void char_update(void)
 		ch_next = ch->next;
 		master = NULL;
 
-		if (IS_NPC(ch)
+		if (is_npc(ch)
 			&& (sun == SUN_RISE || sun == SUN_LIGHT)
 			&& ch->in_room
 			&& number_percent() < 90
-			&& !IS_AFFECTED(ch, AFF_SLEEP)
+			&& !is_affected_by(ch, AFF_SLEEP)
 			&& ch->fighting == NULL)
 		{
-			if (IS_SET(ch->act, ACT_DIURNAL) && IS_AFFECTED(ch, AFF_NOSHOW))
+			if (IS_SET(ch->act, ACT_DIURNAL) && is_affected_by(ch, AFF_NOSHOW))
 				REMOVE_BIT(ch->affected_by, AFF_NOSHOW);
-			else if (IS_SET(ch->act, ACT_NOCTURNAL) && !IS_AFFECTED(ch, AFF_NOSHOW))
+			else if (IS_SET(ch->act, ACT_NOCTURNAL) && !is_affected_by(ch, AFF_NOSHOW))
 				SET_BIT(ch->affected_by, AFF_NOSHOW);
 		}
-		else if (IS_NPC(ch) && sun >= SUN_SET && ch->in_room && number_percent() < 90 && ch->fighting == NULL)
+		else if (is_npc(ch) && sun >= SUN_SET && ch->in_room && number_percent() < 90 && ch->fighting == NULL)
 		{
-			if (IS_SET(ch->act, ACT_NOCTURNAL) && IS_AFFECTED(ch, AFF_NOSHOW))
+			if (IS_SET(ch->act, ACT_NOCTURNAL) && is_affected_by(ch, AFF_NOSHOW))
 				REMOVE_BIT(ch->affected_by, AFF_NOSHOW);
-			else if (IS_SET(ch->act, ACT_DIURNAL) && !IS_AFFECTED(ch, AFF_NOSHOW))
+			else if (IS_SET(ch->act, ACT_DIURNAL) && !is_affected_by(ch, AFF_NOSHOW))
 				SET_BIT(ch->affected_by, AFF_NOSHOW);
 		}
 
 		if (ch->pause > 0)
 			ch->pause--;
 
-		if (IS_NPC(ch) && ch->hit < 0 && ch->in_room)
+		if (is_npc(ch) && ch->hit < 0 && ch->in_room)
 		{
 			char buf[MSL];
 			sprintf(buf, "%s in %d has HP %d", ch->name, ch->in_room->vnum, ch->hit);
@@ -1166,7 +1166,7 @@ void char_update(void)
 			ghost = true;
 
 		/* LOWBIE LEVELLING */
-		if (!IS_NPC(ch) && ch->level < 20 && (ch->in_room->vnum > 24599 || ch->in_room->vnum < 24500))
+		if (!is_npc(ch) && ch->level < 20 && (ch->in_room->vnum > 24599 || ch->in_room->vnum < 24500))
 		{
 			char buf1[MSL];
 			while (ch->level < 20)
@@ -1190,10 +1190,10 @@ void char_update(void)
 			}
 		}
 
-		if (!IS_NPC(ch))
+		if (!is_npc(ch))
 			ch->Profs()->UpdateProfPoints();
 
-		if (!IS_AFFECTED(ch, AFF_SLEEP) && is_affected(ch, gsn_bleeding) && ch->position == POS_SLEEPING)
+		if (!is_affected_by(ch, AFF_SLEEP) && is_affected(ch, gsn_bleeding) && ch->position == POS_SLEEPING)
 			ch->position = POS_STANDING;
 
 		if (ch->position >= POS_STUNNED)
@@ -1225,18 +1225,18 @@ void char_update(void)
 		if (ch->position < POS_STUNNED)
 			damage_new(ch, ch, 2, gsn_bleeding, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "slow bleeding");
 
-		ch->talismanic = UMAX(0, ch->talismanic - 0.0625);
+		ch->talismanic = std::max((double)0, ch->talismanic - 0.0625);
 
-		if (!IS_NPC(ch) && ch->in_room)
+		if (!is_npc(ch) && ch->in_room)
 		{
 			ch->pcdata->sect_time[0]++;
 			ch->pcdata->sect_time[ch->in_room->sector_type]++;
 		}
 
-		if (!IS_NPC(ch) && ch->pcdata->save_timer)
+		if (!is_npc(ch) && ch->pcdata->save_timer)
 			ch->pcdata->save_timer--;
 
-		if (!IS_NPC(ch) /* && !IS_IMMORTAL(ch) */)
+		if (!is_npc(ch) /* && !is_immortal(ch) */)
 		{
 			OBJ_DATA *obj;
 
@@ -1244,7 +1244,7 @@ void char_update(void)
 			{
 				if (--obj->value[2] == 0 && ch->in_room != NULL)
 				{
-					ch->in_room->light = UMAX(0, ch->in_room->light - 3);
+					ch->in_room->light = std::max(0, ch->in_room->light - 3);
 					act("$p goes out.", ch, obj, NULL, TO_ROOM);
 					act("$p flickers and goes out.", ch, obj, NULL, TO_CHAR);
 					extract_obj(obj);
@@ -1257,7 +1257,7 @@ void char_update(void)
 
 			ch->timer++;
 
-			if (ch->timer >= 25 && !IS_HEROIMM(ch) && !IS_IMMORTAL(ch) && !IS_SET(ch->act, PLR_NOVOID))
+			if (ch->timer >= 25 && !is_heroimm(ch) && !is_immortal(ch) && !IS_SET(ch->act, PLR_NOVOID))
 			{
 				if (ch->was_in_room == NULL && ch->in_room != NULL)
 				{
@@ -1283,7 +1283,7 @@ void char_update(void)
 			gain_condition(ch, COND_HUNGER, 1);
 		}
 
-		if (!IS_NPC(ch) && ch->desc == NULL)
+		if (!is_npc(ch) && ch->desc == NULL)
 		{
 			/* nothing */
 		}
@@ -1348,7 +1348,7 @@ void char_update(void)
 							}
 
 							paf->duration = paf->init_duration;
-							ch->mana = UMAX(ch->mana - skill_table[paf->type].min_mana, 0);
+							ch->mana = std::max(ch->mana - skill_table[paf->type].min_mana, 0);
 							continue;
 						}
 					}
@@ -1361,7 +1361,7 @@ void char_update(void)
 							send_to_char("\n\r", ch);
 						}
 
-						if (paf->type && str_cmp(skill_table[paf->type].room_msg_off, "") && IS_AWAKE(ch))
+						if (paf->type && str_cmp(skill_table[paf->type].room_msg_off, "") && is_awake(ch))
 							act(skill_table[paf->type].room_msg_off, ch, 0, 0, TO_ROOM);
 					}
 					affect_remove(ch, paf);
@@ -1383,7 +1383,7 @@ void char_update(void)
 		 *   You must add a line to the poison check in damage_new in fight.c!
 		 */
 
-		if (!IS_NPC(ch) && ch->in_room && ch->in_room->sector_type == SECT_BURNING)
+		if (!is_npc(ch) && ch->in_room && ch->in_room->sector_type == SECT_BURNING)
 			damage_new(ch, ch, dice(ch->level / 2, 2), gsn_bleeding, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the searing heat*");
 	}
 	/*
@@ -1420,7 +1420,7 @@ void obj_update(void)
 		if (obj->moved)
 			obj->moved= false;
 
-		if ((IS_AFFECTED(obj, AFF_OBJ_BURNING)
+		if ((is_affected_by(obj, AFF_OBJ_BURNING)
 				&& (obj->carried_by
 					&& (obj->carried_by->in_room->sector_type == SECT_WATER
 						||  obj->carried_by->in_room->sector_type == SECT_UNDERWATER)))
@@ -1487,7 +1487,7 @@ void obj_update(void)
 				message = "$p dies out.";
 				break;
 			case ITEM_CONTAINER:
-				if (CAN_WEAR(obj, ITEM_WEAR_FLOAT))
+				if (can_wear(obj, ITEM_WEAR_FLOAT))
 				{
 					if (obj->contains)
 						message = "$p flickers and vanishes, spilling its contents on the floor.";
@@ -1513,7 +1513,7 @@ void obj_update(void)
 		}
 
 		/* Alright. Is this a cabal item? */
-		if (isCabalItem(obj) && IS_NPC(obj->carried_by))
+		if (isCabalItem(obj) && is_npc(obj->carried_by))
 		{
 			obj->timer = 0;
 			continue;
@@ -1540,7 +1540,7 @@ void obj_update(void)
 
 		if (obj->carried_by != NULL)
 		{
-			if (IS_NPC(obj->carried_by) && obj->carried_by->pIndexData->pShop != NULL)
+			if (is_npc(obj->carried_by) && obj->carried_by->pIndexData->pShop != NULL)
 			{
 				obj->carried_by->gold++;
 			}
@@ -1554,7 +1554,7 @@ void obj_update(void)
 		}
 		else if (obj->in_room != NULL && (rch = obj->in_room->people) != NULL)
 		{
-			if (!(obj->in_obj && obj->in_obj->pIndexData->vnum == OBJ_VNUM_PIT && !CAN_WEAR(obj->in_obj, ITEM_TAKE)))
+			if (!(obj->in_obj && obj->in_obj->pIndexData->vnum == OBJ_VNUM_PIT && !can_wear(obj->in_obj, ITEM_TAKE)))
 			{
 				act(message, rch, obj, NULL, TO_ROOM);
 				act(message, rch, obj, NULL, TO_CHAR);
@@ -1567,12 +1567,12 @@ void obj_update(void)
 			OBJ_DATA *t_obj, *next_obj, *pit_obj;
 
 			/* Put items into the pit that the player recalls to */
-			if (obj->in_room != NULL && IS_EXPLORE(obj->in_room))
+			if (obj->in_room != NULL && is_explore(obj->in_room))
 			{
 				// Gear to char
 				for (owner = char_list; owner != NULL; owner = owner->next)
 				{
-					if (!IS_NPC(owner) && !str_cmp(owner->true_name, obj->owner))
+					if (!is_npc(owner) && !str_cmp(owner->true_name, obj->owner))
 					{
 						if (obj->contains)
 						{
@@ -1631,7 +1631,7 @@ instead...(Ceran)
 void track_attack(CHAR_DATA *mob, CHAR_DATA *victim)
 {
 	char buf[MSL];
-	if (mob->in_room != victim->in_room || !can_see(mob, victim) || mob->fighting || IS_AFFECTED(mob, AFF_NOSHOW))
+	if (mob->in_room != victim->in_room || !can_see(mob, victim) || mob->fighting || is_affected_by(mob, AFF_NOSHOW))
 		return;
 
 	if (mob->pIndexData->attack_yell)
@@ -1653,7 +1653,7 @@ void track_update(void)
 	{
 		tch_next = tch->next;
 
-		if (!IS_NPC(tch))
+		if (!is_npc(tch))
 			continue;
 
 		if (!tch->last_fought)
@@ -1672,7 +1672,7 @@ void track_update(void)
 			continue;
 		}
 
-		if (tch->fighting || IS_AFFECTED(tch, AFF_NOSHOW))
+		if (tch->fighting || is_affected_by(tch, AFF_NOSHOW))
 			continue;
 
 		if (tch->in_room == tch->last_fought->in_room)
@@ -1736,7 +1736,7 @@ void aggr_update(void)
 		if (!wch->in_room)
 			continue;
 
-		if (IS_NPC(wch) && IS_SET(wch->progtypes, MPROG_BEAT))
+		if (is_npc(wch) && IS_SET(wch->progtypes, MPROG_BEAT))
 			(wch->pIndexData->mprogs->beat_prog)(wch);
 
 		for (paf = wch->affected; paf; paf = paf->next)
@@ -1745,24 +1745,24 @@ void aggr_update(void)
 				(*paf->beat_fun)(wch, paf);
 		}
 
-		if ((!IS_NPC(wch) && wch->pulseTimer <= pc_race_table[wch->race].racePulse)
-			|| (IS_NPC(wch) && wch->pulseTimer <= 12))
+		if ((!is_npc(wch) && wch->pulseTimer <= pc_race_table[wch->race].racePulse)
+			|| (is_npc(wch) && wch->pulseTimer <= 12))
 			wch->pulseTimer++;
 
 		timer = wch->pulseTimer;
 
-		if (IS_AFFECTED(wch, AFF_HASTE))
+		if (is_affected_by(wch, AFF_HASTE))
 			timer++;
 
-		if (IS_AFFECTED(wch, AFF_SLOW))
+		if (is_affected_by(wch, AFF_SLOW))
 			timer--;
 
 		if (wch->fighting &&
-			((!IS_NPC(wch) && timer >= pc_race_table[wch->race].racePulse) || (IS_NPC(wch) && timer >= 12)))
+			((!is_npc(wch) && timer >= pc_race_table[wch->race].racePulse) || (is_npc(wch) && timer >= 12)))
 		{
 			update_pc_last_fight(wch, wch->fighting);
 
-			if (IS_AWAKE(wch) && wch->in_room == wch->fighting->in_room)
+			if (is_awake(wch) && wch->in_room == wch->fighting->in_room)
 				multi_hit(wch, wch->fighting, TYPE_UNDEFINED);
 			else
 				stop_fighting(wch, false);
@@ -1773,13 +1773,13 @@ void aggr_update(void)
 		if (wch->position == POS_SLEEPING && IS_SET(wch->imm_flags, IMM_SLEEP))
 			wch->position = POS_STANDING;
 
-		if (IS_AFFECTED(wch, AFF_RAGE) && IS_AWAKE(wch) && !wch->fighting && !(wch->desc == NULL && !IS_NPC(wch)))
+		if (is_affected_by(wch, AFF_RAGE) && is_awake(wch) && !wch->fighting && !(wch->desc == NULL && !is_npc(wch)))
 		{
 			for (vch = wch->in_room->people; vch != NULL; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
-				if (wch != vch && can_see(wch, vch) && !IS_IMMORTAL(vch))
+				if (wch != vch && can_see(wch, vch) && !is_immortal(vch))
 				{
 					if (is_affected(vch, skill_lookup("radiance")))
 						continue;
@@ -1793,10 +1793,10 @@ void aggr_update(void)
 					if (is_same_cabal(wch, vch) && number_range(1, 10000) > 1)
 						continue;
 
-					if (is_same_group(wch, vch) && IS_NPC(vch))
+					if (is_same_group(wch, vch) && is_npc(vch))
 						continue;
 
-					if (IS_NPC(wch) && IS_AFFECTED(wch, AFF_NOSHOW))
+					if (is_npc(wch) && is_affected_by(wch, AFF_NOSHOW))
 						continue;
 
 					if (is_same_cabal(wch, vch) && wch->in_room->cabal != CABAL_HORDE)
@@ -1819,7 +1819,7 @@ void aggr_update(void)
 			}
 		}
 
-		if (!IS_NPC(wch) && is_affected(wch, gsn_divine_frenzy) && IS_AWAKE(wch) && !wch->fighting)
+		if (!is_npc(wch) && is_affected(wch, gsn_divine_frenzy) && is_awake(wch) && !wch->fighting)
 		{
 			for (vch = wch->in_room->people; vch != NULL; vch = vch_next)
 			{
@@ -1837,7 +1837,7 @@ void aggr_update(void)
 				if (is_affected(vch, skill_lookup("radiance")))
 					continue;
 
-				if (!IS_EVIL(vch))
+				if (!is_evil(vch))
 					continue;
 
 				send_to_char("Righteous anger swells within you as you lash out at the wicked!\n\r", wch);
@@ -1847,9 +1847,9 @@ void aggr_update(void)
 		}
 
 		if (is_affected(wch, gsn_mark_of_wrath)
-			&& IS_AWAKE(wch)
+			&& is_awake(wch)
 			&& !wch->fighting
-			&& !(wch->desc == NULL && !IS_NPC(wch)))
+			&& !(wch->desc == NULL && !is_npc(wch)))
 		{
 			paf = affect_find(wch->affected, gsn_mark_of_wrath);
 
@@ -1882,7 +1882,7 @@ void aggr_update(void)
 			}
 		}
 
-		if (IS_NPC(wch) || wch->level >= LEVEL_IMMORTAL || wch->in_room == NULL || wch->in_room->area->empty)
+		if (is_npc(wch) || wch->level >= LEVEL_IMMORTAL || wch->in_room == NULL || wch->in_room->area->empty)
 			continue;
 
 		for (ch = wch->in_room->people; ch != NULL; ch = ch_next)
@@ -1891,15 +1891,15 @@ void aggr_update(void)
 
 			ch_next = ch->next_in_room;
 
-			if (!IS_NPC(ch)
+			if (!is_npc(ch)
 				|| !IS_SET(ch->act, ACT_AGGRESSIVE)
 				|| IS_SET(ch->in_room->room_flags, ROOM_SAFE)
-				|| (IS_NPC(ch) && IS_AFFECTED(ch, AFF_NOSHOW))
-				|| IS_AFFECTED(ch, AFF_CALM)
+				|| (is_npc(ch) && is_affected_by(ch, AFF_NOSHOW))
+				|| is_affected_by(ch, AFF_CALM)
 				|| ch->fighting != NULL
-				|| IS_AFFECTED(ch, AFF_CHARM)
-				|| !IS_AWAKE(ch)
-				|| (IS_SET(ch->act, ACT_WIMPY) && IS_AWAKE(wch))
+				|| is_affected_by(ch, AFF_CHARM)
+				|| !is_awake(ch)
+				|| (IS_SET(ch->act, ACT_WIMPY) && is_awake(wch))
 				|| !can_see(ch, wch)
 				|| number_bits(1) == 0)
 			{
@@ -1918,11 +1918,11 @@ void aggr_update(void)
 			{
 				vch_next = vch->next_in_room;
 
-				if (!IS_NPC(vch)
+				if (!is_npc(vch)
 					&& vch->level < LEVEL_IMMORTAL
-					&& !IS_HEROIMM(vch)
+					&& !is_heroimm(vch)
 					&& ch->level >= vch->level - 5
-					&& (!IS_SET(ch->act, ACT_WIMPY) || !IS_AWAKE(vch))
+					&& (!IS_SET(ch->act, ACT_WIMPY) || !is_awake(vch))
 					&& can_see(ch, vch)
 					&& (!IS_SET(ch->act, ACT_DIURNAL) || sun >= SUN_SET)
 					&& (!IS_SET(ch->act, ACT_NOCTURNAL) || (sun != SUN_RISE && sun != SUN_LIGHT))
@@ -1948,7 +1948,7 @@ int get_age(CHAR_DATA *ch) /* returns age in years. */
 {
 	float result;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return 1;
 
 	// long time = ch->played + (int) (current_time - ch->logon));
@@ -2000,7 +2000,7 @@ char *get_age_name_new(int age, int racenumber)
 
 char *get_age_name(CHAR_DATA *ch)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return "young";
 
 	return get_age_name_new((ch->played + (int)(current_time - ch->logon)), ch->race);
@@ -2018,13 +2018,13 @@ void age_update(void)
 	{
 		ch_next = ch->next;
 
-		if (IS_NPC(ch))
+		if (is_npc(ch))
 			continue;
 
-		if (IS_IMMORTAL(ch))
+		if (is_immortal(ch))
 			continue;
 
-		if (IS_HEROIMM(ch))
+		if (is_heroimm(ch))
 			continue;
 
 		if (ch->pcdata->death_status == HAS_DIED)
@@ -2217,7 +2217,7 @@ void affect_update(void)
 		ch_next = ch->next;
 
 		// Dev's super-fly cheap name hax!
-		if (!IS_NPC(ch) && strcmp(ch->true_name, ch->backup_true_name))
+		if (!is_npc(ch) && strcmp(ch->true_name, ch->backup_true_name))
 		{
 			char buf[MSL];
 
@@ -2373,16 +2373,16 @@ void room_affect_update(void)
 						{
 							v_next = victim->next_in_room;
 
-							if (IS_NPC(victim) && IS_SET(victim->act, ACT_SENTINEL))
+							if (is_npc(victim) && IS_SET(victim->act, ACT_SENTINEL))
 								continue;
 
-							if (!IS_NPC(victim) && is_safe_new(af->owner, victim, false))
+							if (!is_npc(victim) && is_safe_new(af->owner, victim, false))
 								continue;
 
 							if (victim->invis_level > LEVEL_HERO)
 								continue;
 
-							if (IS_NPC(victim))
+							if (is_npc(victim))
 								SET_BIT(victim->act, ACT_WANDER);
 
 							char_from_room(victim);
@@ -2437,7 +2437,7 @@ void room_affect_update(void)
 					{
 						v_next = vch->next_in_room;
 
-						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
+						if (!is_npc(vch) && is_safe_new(af->owner, vch, false))
 							continue;
 
 						send_to_char("Your lungs burn furiously, desperate for air!\n\r", vch);
@@ -2524,14 +2524,14 @@ void room_affect_update(void)
 					if (vch == af->owner)
 						continue;
 
-					if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
+					if (!is_npc(vch) && is_safe_new(af->owner, vch, false))
 						continue;
 
-					if (!IS_NPC(vch))
+					if (!is_npc(vch))
 					{
 						if (vch->in_room == af->owner->in_room)
 						{
-							sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", PERS(af->owner, vch));
+							sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", pers(af->owner, vch));
 							do_myell(vch, buf, NULL);
 						}
 						else
@@ -2560,7 +2560,7 @@ void room_affect_update(void)
 						if (vch == af->owner)
 							continue;
 
-						if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
+						if (!is_npc(vch) && is_safe_new(af->owner, vch, false))
 							continue;
 
 						damage_new(af->owner, vch, dice(af2->modifier, 10), gsn_tidalwave, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the crashing wave*");
@@ -2591,7 +2591,7 @@ void room_affect_update(void)
 							break;
 					}
 
-					if (IS_IMMORTAL(vch))
+					if (is_immortal(vch))
 						continue;
 
 					if (!is_safe(vch, af->owner) && !is_affected(vch, gsn_neutralize))
@@ -2722,18 +2722,18 @@ void room_affect_update(void)
 			{
 				v_next = victim->next_in_room;
 				chance = 8;
-				if (IS_AFFECTED(victim, AFF_FLYING))
+				if (is_affected_by(victim, AFF_FLYING))
 					chance = 35;
 				if (is_affected(victim, gsn_airshield))
 					chance = 0;
-				if (number_percent() >= chance || (IS_NPC(victim) && IS_SET(victim->act, ACT_SENTINEL)) ||
+				if (number_percent() >= chance || (is_npc(victim) && IS_SET(victim->act, ACT_SENTINEL)) ||
 					victim->fighting || victim->invis_level > LEVEL_HERO)
 					continue;
 				to_room = get_random_exit(room);
 
 				if (!to_room)
 					break;
-				if ((to_room->sector_type == SECT_AIR && !IS_AFFECTED(victim, AFF_FLYING)) ||
+				if ((to_room->sector_type == SECT_AIR && !is_affected_by(victim, AFF_FLYING)) ||
 					to_room->area->area_type == ARE_UNOPENED)
 					break;
 				send_to_char("The violent winds buffet you out of the room!\n\r", victim);
@@ -2751,7 +2751,7 @@ void room_affect_update(void)
 
 		for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
 		{
-			if (IS_AFFECTED(obj, AFF_OBJ_BURNING))
+			if (is_affected_by(obj, AFF_OBJ_BURNING))
 				dam += is_worn(obj) ? 8 : 4;
 		}
 
@@ -2786,7 +2786,7 @@ void iprog_pulse_update(bool isTick)
 			&& obj->in_room->sector_type == SECT_WATER
 			&& material_table[obj->pIndexData->material_index].mat_density == 0
 			&& IS_SET(obj->wear_flags, ITEM_TAKE)
-			&& !IS_OBJ_STAT(obj, ITEM_NOPURGE))
+			&& !is_obj_stat(obj, ITEM_NOPURGE))
 		{
 			if (number_range(0, 60) == 0)
 			{
@@ -2822,7 +2822,7 @@ void iprog_pulse_update(bool isTick)
 				||  obj->item_type == ITEM_CORPSE_NPC)
 			&& obj->item_type != ITEM_BOAT
 			&& IS_SET(obj->wear_flags, ITEM_TAKE)
-			&& !IS_OBJ_STAT(obj, ITEM_NOPURGE))
+			&& !is_obj_stat(obj, ITEM_NOPURGE))
 		{
 			if (number_range(0, 5) == 0)
 			{
@@ -2891,7 +2891,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 	sh_int i, sn, rnd, in_room = 0, room_occupant = 0;
 	CHAR_DATA *vch, *victim;
 
-	if (!IS_NPC(ch) || !ch->fighting || ch->pIndexData->cast_spell[0] == NULL)
+	if (!is_npc(ch) || !ch->fighting || ch->pIndexData->cast_spell[0] == NULL)
 		return false;
 
 	for (;;)
@@ -2913,7 +2913,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 	{
 		for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 		{
-			if (victim && !IS_NPC(victim) && victim->fighting && victim->fighting == ch)
+			if (victim && !is_npc(victim) && victim->fighting && victim->fighting == ch)
 				in_room++;
 		}
 
@@ -2921,7 +2921,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 
 		for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
 		{
-			if (!IS_NPC(vch) && vch->fighting == ch)
+			if (!is_npc(vch) && vch->fighting == ch)
 				room_occupant++;
 
 			if (rnd == room_occupant)
@@ -3017,7 +3017,7 @@ CHAR_DATA *get_random_ch(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 
 	for (vch = room->people; vch; vch = vch->next_in_room)
 	{
-		if (!IS_NPC(vch)
+		if (!is_npc(vch)
 			&& !is_safe_new(ch, vch, false)
 			&& vch->invis_level < LEVEL_HERO + 1
 			&& (now = number_percent()) > highest)

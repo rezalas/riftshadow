@@ -16,7 +16,7 @@ int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
 	if (atoi(row[3]) > ch->level && ch->level > 0)
 		return false;
 
-	if (atoi(row[3]) == 51 && (!str_cmp(row[2], "heroimm") && !IS_HEROIMM(ch)))
+	if (atoi(row[3]) == 51 && (!str_cmp(row[2], "heroimm") && !is_heroimm(ch)))
 		return false;
 
 	if (sn > 1 && get_skill(ch, sn) < 1)

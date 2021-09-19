@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <algorithm>
 #include "merc.h"
 #include "magic.h"
 #include "recycle.h"
@@ -24,6 +25,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "material.h"
+#include "utility.h"
 
 //TODO: bring this func back from act_info.c
 extern CHAR_DATA *get_char_room (CHAR_DATA *ch, char *argument);

@@ -174,7 +174,7 @@ void spell_siphon(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_NEGATIVE))
 		dam /= 2;
 
-	if (victim == ch && !IS_IMMORTAL(ch))
+	if (victim == ch && !is_immortal(ch))
 	{
 		send_to_char("You can't siphon yourself!\n\r", ch);
 		return;
@@ -191,7 +191,7 @@ void spell_siphon(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	blood = URANGE(1, ch->level / 15, 4);
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 	{
 		power_urn(ch, blood);
 	}
@@ -254,7 +254,7 @@ void spell_hex(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	hex.mod_name = MOD_NONE;
 
-	if (number_percent() >= 50 && !IS_AFFECTED(victim, AFF_PLAGUE))
+	if (number_percent() >= 50 && !is_affected_by(victim, AFF_PLAGUE))
 	{
 		// plague
 		hex.location = APPLY_STR;
@@ -269,7 +269,7 @@ void spell_hex(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		severity++;
 	}
 
-	if (number_percent() >= 75 && !IS_AFFECTED(victim, AFF_POISON))
+	if (number_percent() >= 75 && !is_affected_by(victim, AFF_POISON))
 	{
 		// poison
 		hex.location = APPLY_STR;
@@ -320,7 +320,7 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (search = char_list; search != NULL; search = search->next)
 	{
-		if (IS_NPC(search)
+		if (is_npc(search)
 			&& search->master == ch
 			&& (search->pIndexData->vnum == MOB_VNUM_ZOMBIE
 				|| (search->pIndexData->vnum >= 2940 && search->pIndexData->vnum <= 2947)))
@@ -329,7 +329,7 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 	}
 
-	if (((control >= 3 && ch->level < 41) || (control >= 4 && ch->level < 52)) && !IS_IMMORTAL(ch))
+	if (((control >= 3 && ch->level < 41) || (control >= 4 && ch->level < 52)) && !is_immortal(ch))
 	{
 		send_to_char("You already control as many undead as you can.\n\r", ch);
 		return;
@@ -364,7 +364,7 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	chance = get_skill(ch, sn);
 	chance -= (corpse->level - ch->level) * 3;
-	chance = UMIN(chance, 80);
+	chance = std::min(chance, 80);
 	corpse->value[4] = chance;
 
 	SET_BIT(corpse->wear_flags, ITEM_NO_SAC);
@@ -579,7 +579,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (pet = char_list; pet != NULL; pet = pet->next)
 	{
-		if (IS_NPC(pet) && IS_AFFECTED(pet, AFF_CHARM) && pet->master && pet->master == ch)
+		if (is_npc(pet) && is_affected_by(pet, AFF_CHARM) && pet->master && pet->master == ch)
 		{
 			stop_fighting(pet, true);
 
@@ -736,7 +736,7 @@ void visceral_four(CHAR_DATA *ch)
 
 	for (mob = ch->in_room->people; mob != NULL; mob = mob->next_in_room)
 	{
-		if (IS_NPC(mob) && IS_AFFECTED(mob, AFF_CHARM) && mob->master && mob->master == ch)
+		if (is_npc(mob) && is_affected_by(mob, AFF_CHARM) && mob->master && mob->master == ch)
 		{
 			af.location = APPLY_DAMROLL;
 			af.modifier = (ch->level / 2) - 5;
@@ -752,7 +752,7 @@ void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (search = char_list; search != NULL; search = search->next)
 	{
-		if (IS_NPC(search)
+		if (is_npc(search)
 			&& search->master == ch
 			&& search->pIndexData->vnum > 2939
 			&& search->pIndexData->vnum < 2945)
@@ -762,7 +762,7 @@ void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 	}
 
-	if (!IS_NPC(victim) || victim->pIndexData->vnum != MOB_VNUM_ZOMBIE || victim->master != ch)
+	if (!is_npc(victim) || victim->pIndexData->vnum != MOB_VNUM_ZOMBIE || victim->master != ch)
 	{
 		send_to_char("You must cast the ritual upon a zombie you control.\n\r", ch);
 		return;
@@ -882,7 +882,7 @@ void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (search = char_list; search != NULL; search = search->next)
 	{
-		if (IS_NPC(search)
+		if (is_npc(search)
 			&& search->master == ch
 			&& search->pIndexData->vnum > 2944
 			&& search->pIndexData->vnum < 2948)
@@ -892,7 +892,7 @@ void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 	}
 
-	if (!IS_NPC(victim) || victim->pIndexData->vnum != MOB_VNUM_ZOMBIE || victim->master != ch)
+	if (!is_npc(victim) || victim->pIndexData->vnum != MOB_VNUM_ZOMBIE || victim->master != ch)
 	{
 		send_to_char("You must cast the ritual upon a zombie you control.\n\r", ch);
 		return;
@@ -1171,7 +1171,7 @@ void spell_corrupt_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 	else if (!str_cmp(arg1, "leg"))
 	{
-		if (IS_AFFECTED(victim, AFF_FLYING))
+		if (is_affected_by(victim, AFF_FLYING))
 		{
 			act("$p flies at $N's legs, but $E flies over it.", ch, obj, victim, TO_NOTVICT);
 			act("$p flies at $N's legs, but $E flies over it.", ch, obj, victim, TO_CHAR);
@@ -1347,7 +1347,7 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (check = char_list; check != NULL; check = check->next)
 	{
-		if (IS_NPC(check)
+		if (is_npc(check)
 			&& check->master == ch
 			&& (check->pIndexData->vnum == 2955 || check->pIndexData->vnum == 2956 || check->pIndexData->vnum == 2957))
 		{
@@ -1438,7 +1438,7 @@ void spell_greater_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (check = char_list; check != NULL; check = check->next)
 	{
-		if (IS_NPC(check)
+		if (is_npc(check)
 			&& check->master == ch
 			&& (check->pIndexData->vnum == 2959 || check->pIndexData->vnum == 2960 || check->pIndexData->vnum == 2961))
 		{
@@ -1469,7 +1469,7 @@ void spell_greater_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (str_cmp(obj->pIndexData->material, "glass") || obj->weight < 20)
 		{
-			if (!IS_IMMORTAL(ch))
+			if (!is_immortal(ch))
 			{
 				send_to_char("To make a glass golem, you must use a large item made of glass.\n\r", ch);
 				return;
@@ -1655,8 +1655,8 @@ bool check_zombie_summon(CHAR_DATA *ch)
 
 	for (mob = char_list; mob != NULL; mob = mob->next)
 	{
-		if (IS_NPC(mob)
-			&& IS_AFFECTED(mob, AFF_CHARM)
+		if (is_npc(mob)
+			&& is_affected_by(mob, AFF_CHARM)
 			&& mob->master
 			&& mob->master == ch
 			&& is_affected(mob, gsn_unholy_bond))
@@ -1678,7 +1678,7 @@ bool check_zombie_summon(CHAR_DATA *ch)
 
 void soul_add(CHAR_DATA *ch, int souls)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->souls > 250)

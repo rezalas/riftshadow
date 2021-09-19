@@ -68,7 +68,7 @@ BEGIN_SPEC(ispec_qwhip)
 			act("Sadistic urges compel you to lash out viciously at $N!",ch,0,ch->fighting,TO_CHAR);
 			//(*dam) = (int)((float)*dam * 1.3);
 			//(*dt)   = 42;
-			//ch->hit = UMIN(ch->max_hit, ch->hit + ((*dam) / 4));
+			//ch->hit = std::min(ch->max_hit, ch->hit + ((*dam) / 4));
 		}
 	END_EVENT
 	EVENT_IFIGHT

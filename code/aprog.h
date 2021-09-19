@@ -16,6 +16,7 @@
 #include "dioextra.h"
 #include "db.h"
 #include "devextra.h"
+#include "utility.h"
 
 extern const struct improg_type aprog_table[];
 

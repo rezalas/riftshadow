@@ -188,7 +188,7 @@ void entry_prog_ilopheth_flute(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 
 	for (vch = cliff->people; vch; vch = vch->next_in_room)
 	{
-		if (!IS_NPC(vch))
+		if (!is_npc(vch))
 			continue;
 		if (vch->pIndexData->vnum == 9010)
 		{
@@ -220,10 +220,10 @@ void entry_prog_sidhe_ankle(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 {
 	AFFECT_DATA af;
 
-	if (IS_AFFECTED(ch, AFF_FLYING))
+	if (is_affected_by(ch, AFF_FLYING))
 		return;
 
-	if (IS_NPC(ch) || IS_IMMORTAL(ch))
+	if (is_npc(ch) || is_immortal(ch))
 		return;
 
 	if (number_percent() < 60)
@@ -480,7 +480,7 @@ void speech_prog_elven_down(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 	ROOM_AFFECT_DATA raf;
 	CHAR_DATA *ich = NULL;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!str_cmp(speech, "hakri gwenidill mafre finae"))

@@ -182,28 +182,28 @@ void do_memtest(CHAR_DATA *ch, char *argument)
 	if(!str_cmp(buf,"dammod"))
 	{
 		for(qch = char_list; qch; qch = qch->next)
-			if(IS_NPC(qch) && qch->pIndexData->vnum == 3001)
+			if(is_npc(qch) && qch->pIndexData->vnum == 3001)
 				qch->dam_mod = atoi(argument);
 		send_to_char("Dammod changed.\n\r",ch);
 	}
 	if(!str_cmp(buf,"hp"))
 	{
 		for(qch = char_list; qch; qch = qch->next)
-			if(IS_NPC(qch) && qch->pIndexData->vnum == 3001)
-				qch->max_hit = UMAX(qch->max_hit - atoi(argument), 100);
+			if(is_npc(qch) && qch->pIndexData->vnum == 3001)
+				qch->max_hit = std::max(qch->max_hit - atoi(argument), 100);
 		send_to_char("Maxhit changed.\n\r",ch);
 	}
 	if(!str_cmp(buf,"begin"))
 	{
 		for(qch = char_list; qch; qch = qch->next)
-			if(IS_NPC(qch) && qch->pIndexData->vnum == 3001 && !IS_AFFECTED(qch, AFF_DETECT_MAGIC))
+			if(is_npc(qch) && qch->pIndexData->vnum == 3001 && !is_affected_by(qch, AFF_DETECT_MAGIC))
 				SET_BIT(qch->affected_by, AFF_DETECT_MAGIC);
 		send_to_char("It HAS BEGUN!\n\r",ch);
 	}
 	if(!str_cmp(buf,"end"))
 	{
 		for(qch = char_list; qch; qch = qch->next)
-			if(IS_NPC(qch) && qch->pIndexData->vnum == 3001 && qch->in_room->vnum > 2399 &&
+			if(is_npc(qch) && qch->pIndexData->vnum == 3001 && qch->in_room->vnum > 2399 &&
 			   qch->in_room->vnum < 2801)
 				extract_char(qch, true);
 		send_to_char("It has.. ENDED!\n\r",ch);

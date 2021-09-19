@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <iterator>
+#include <algorithm>
 #include "merc.h"
 #include "recycle.h"
 #include "tables.h"
@@ -22,6 +23,7 @@
 #include "act_comm.h"
 #include "act_wiz.h"
 #include "const.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

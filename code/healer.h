@@ -18,6 +18,7 @@
 #include "comm.h"
 #include "devextra.h"
 #include "const.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

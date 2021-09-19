@@ -40,7 +40,7 @@ void do_brands(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *obj;
 	OBJ_DATA *objj;
 
-	if (ch->level < 53 || IS_NPC(ch))
+	if (ch->level < 53 || is_npc(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -61,7 +61,7 @@ void do_brands(CHAR_DATA *ch, char *argument)
 	}
 
 	/*
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Trying to tattoo a mob?\n\r", ch);
 		return;
@@ -102,7 +102,7 @@ void do_unbrands(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 
-	if (ch->level < 53 || IS_NPC(ch))
+	if (ch->level < 53 || is_npc(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -122,7 +122,7 @@ void do_unbrands(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Trying to untattoo a mob?\n\r", ch);
 		return;
@@ -211,7 +211,7 @@ void do_invoke_detlef(CHAR_DATA *ch)
 	act("Your $p glows green.",ch,obj,0,TO_CHAR);
 
 	ch->hit += (ch->level*2) * 10;
-	ch->hit = UMIN(ch->hit,ch->max_hit);
+	ch->hit = std::min(ch->hit,ch->max_hit);
 	send_to_char("You smoke a phat blunt and feel MUCH better.\n\r",ch);
 	act("$n smokes $s phat blunt and feels much better.",ch,NULL,NULL,TO_ROOM);
 

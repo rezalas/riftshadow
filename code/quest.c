@@ -130,7 +130,7 @@ bool can_do_quest(CHAR_DATA *ch, int quest)
 	if (((ch->level < quest_table[quest].minlevel) || (ch->level > quest_table[quest].maxlevel)))
 		return false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return false;
 
 	return true;
@@ -198,7 +198,7 @@ void greet_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	char buf[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!can_see(mob, ch))
@@ -238,7 +238,7 @@ void speech_prog_cimar_dollgirl(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
 	char buf[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!can_see(mob, ch))
@@ -339,7 +339,7 @@ void greet_prog_cimar_sorcgm(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	char buf[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!can_see(mob, ch))
@@ -384,7 +384,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 
 	shack = get_room_index(9148);
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!mob)
@@ -404,7 +404,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 
 	for (rch = room->people; rch; rch = rch->next_in_room)
 	{
-		if (!IS_NPC(rch) && (rch != ch))
+		if (!is_npc(rch) && (rch != ch))
 			alone= false;
 	}
 
@@ -541,7 +541,7 @@ void speech_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 	ROOM_INDEX_DATA *outside;
 	bool found= false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->quests[TALISMANIC_QUEST] != 1)
@@ -582,7 +582,7 @@ void give_prog_ilopheth_hermit(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 	bool found= false;
 	ROOM_INDEX_DATA *outside = get_room_index(9147);
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (obj->pIndexData->vnum != 230 && obj->pIndexData->vnum != 1709)
@@ -709,7 +709,7 @@ void pulse_prog_talismanic_page(OBJ_DATA *obj, bool isTick)
 
 	ch = obj->carried_by;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->quests[TALISMANIC_QUEST] == 4)
@@ -733,7 +733,7 @@ void pulse_prog_talismanic_scrap(OBJ_DATA *obj, bool isTick)
 
 	ch = obj->carried_by;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->quests[TALISMANIC_QUEST] != 4)
@@ -782,7 +782,7 @@ void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
 
 	for (d = descriptor_list; d; d = d->next)
 	{
-		if (d->connected == CON_PLAYING && !IS_NPC(d->character) && d->character->in_room != NULL &&
+		if (d->connected == CON_PLAYING && !is_npc(d->character) && d->character->in_room != NULL &&
 			d->character->in_room->area != NULL && d->character->in_room->area == mob->in_room->area &&
 			d->character->pcdata->quests[TALISMANIC_QUEST] == 5 && number_percent() < 5)
 		{
@@ -805,7 +805,7 @@ void greet_prog_drow_scribe(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	char buf[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!can_do_quest(ch, SCRIBE_QUEST))
@@ -835,7 +835,7 @@ void greet_prog_drow_scribe(CHAR_DATA *mob, CHAR_DATA *ch)
 
 void speech_prog_drow_scribe(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!can_do_quest(ch, SCRIBE_QUEST))
@@ -1074,7 +1074,7 @@ BEGIN_SPEC(mspec_academy_smith)
 		if (!can_do_quest(ch, SMITH_QUEST) || STAGE(ch) != 0)
 			return 0;
 		act("$N looks up from his forge, sweat dripping down his brow.", ch, 0, mob, TO_CHAR);
-		if (IS_GOOD(ch))
+		if (is_good(ch))
 			act("$N smiles at you broadly.", ch, 0, mob, TO_CHAR);
 		else
 			act("$N regards you carefully, sizing you up.", ch, 0, mob, TO_CHAR);
@@ -1144,7 +1144,7 @@ BEGIN_SPEC(mspec_academy_smith)
 								{	obj->value[1] = 3; obj->value[2] = 5; improved = 2;}
 								else if(obj->value[1] == 3 && obj->value[2] == 4)
 								{	obj->value[1] = 4; obj->value[2] = 3; improved = 1;}*/
-				obj->value[1] = UMAX(obj->value[1] + 1, 18);
+				obj->value[1] = std::max(obj->value[1] + 1, 18);
 			}
 			char buf[MSL], *tptr;
 			sprintf(buf, "%s", obj->short_descr);

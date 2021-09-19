@@ -15,6 +15,7 @@
 #include "tables.h"
 #include "newmem.h"
 #include "const.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

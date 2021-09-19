@@ -3459,7 +3459,7 @@ void show_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *obj)
 			sprintf(buf, "[v2] Type of dice:   [%d]\n\r", obj->value[2]);
 			send_to_char(buf, ch);
 
-			sprintf(buf, "[v3] Type:           %s\n\r", attack_table[UMAX(0, obj->value[3])].name);
+			sprintf(buf, "[v3] Type:           %s\n\r", attack_table[std::max(0, obj->value[3])].name);
 			send_to_char(buf, ch);
 
 			sprintf(buf, "[v4] Special type:   %s\n\r", flag_string_old(weapon_type2, obj->value[4]));

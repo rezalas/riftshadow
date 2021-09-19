@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <algorithm>
 #include <time.h>
 #include <math.h>
 #include "merc.h"
@@ -21,6 +22,7 @@
 #include "act_comm.h"
 #include "act_info.h"
 #include "const.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

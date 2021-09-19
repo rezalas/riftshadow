@@ -19,6 +19,7 @@
 #include "mprog.h"
 #include "act_obj.h"
 #include "material.h"
+#include "utility.h"
 
 #define STAGE(ch)					ch->pcdata->quests[nQuestIndex]
 #define SET_STAGE(ch, i)			ch->pcdata->quests[nQuestIndex] = i

@@ -39,10 +39,10 @@ bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (is_same_group(ch, victim))
 		return true;
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 		return false;
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 	{
 		if (IS_SET(ch->off_flags, ASSIST_PLAYERS))
 			return true;
@@ -50,7 +50,7 @@ bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
 			return false;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CHARM))
+	if (is_affected_by(ch, AFF_CHARM))
 		return false;
 
 	if (IS_SET(ch->off_flags, ASSIST_ALL))
@@ -68,9 +68,9 @@ bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (IS_SET(ch->off_flags, ASSIST_ALIGN)
 		&& !IS_SET(ch->act, ACT_NOALIGN)
 		&& !IS_SET(victim->act, ACT_NOALIGN)
-		&& ((IS_GOOD(ch) && IS_GOOD(victim))
-			|| (IS_EVIL(ch) && IS_EVIL(victim))
-			|| (IS_NEUTRAL(ch) && IS_NEUTRAL(victim))))
+		&& ((is_good(ch) && is_good(victim))
+			|| (is_evil(ch) && is_evil(victim))
+			|| (is_neutral(ch) && is_neutral(victim))))
 	{
 		return true;
 	}
@@ -465,7 +465,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 	bool using_switched= false;
 	CHAR_DATA *original = ch;
 
-	if (IS_NPC(ch) && ch->desc && ch->desc->original && IS_SET(ch->comm, COMM_SWITCHSKILLS))
+	if (is_npc(ch) && ch->desc && ch->desc->original && IS_SET(ch->comm, COMM_SWITCHSKILLS))
 		using_switched = true;
 
 	if (using_switched)
@@ -480,9 +480,9 @@ int get_skill(CHAR_DATA *ch, int sn)
 		bug("Bad sn %d in get_skill.", sn);
 		skill = 0;
 	}
-	else if (!IS_NPC(ch))
+	else if (!is_npc(ch))
 	{
-		if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()] && !IS_IMMORTAL(ch))
+		if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()] && !is_immortal(ch))
 			skill = 0;
 		else
 			skill = ch->pcdata->learned[sn];
@@ -577,7 +577,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 		}
 	}
 
-	if (!IS_NPC(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
+	if (!is_npc(ch) && ch->pcdata->condition[COND_DRUNK] > 10)
 		skill = 9 * skill / 10;
 
 	// note: AFTER THIS NPCS WITH SWITCHED SKILLS RETURN TO THEIR NPC STATUS
@@ -597,7 +597,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 	if (is_affected(ch, gsn_leadership))
 		skill += (int)(skill * .1);
 
-	if (is_affected_room(ch->in_room, gsn_infidels_fate) && IS_GOOD(ch))
+	if (is_affected_room(ch->in_room, gsn_infidels_fate) && is_good(ch))
 		skill += (int)(skill * .1);
 
 	if (ch->fighting && is_affected(ch->fighting, gsn_traitors_luck))
@@ -609,7 +609,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 	}
 
 	if (ch->fighting
-		&& (IS_EVIL(ch) && is_affected(ch->fighting, gsn_awe))
+		&& (is_evil(ch) && is_affected(ch->fighting, gsn_awe))
 		&& ch->level > ch->fighting->level
 		&& number_percent() > 96)
 	{
@@ -684,7 +684,7 @@ int get_weapon_skill(CHAR_DATA *ch, int sn)
 	int skill;
 
 	/* -1 is exotic */
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		if (sn == -1)
 			skill = 3 * ch->level;
@@ -713,7 +713,7 @@ void reset_char(CHAR_DATA *ch)
 	OBJ_APPLY_DATA *app;
 	int i;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->perm_hit == 0
@@ -824,7 +824,7 @@ int get_trust(CHAR_DATA *ch)
 	if (ch->trust)
 		return ch->trust;
 
-	if (IS_NPC(ch) && ch->level >= LEVEL_HERO)
+	if (is_npc(ch) && ch->level >= LEVEL_HERO)
 		return LEVEL_HERO - 1;
 	else
 		return ch->level;
@@ -840,7 +840,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 	int max;
 	int mod = 0;
 
-	if (IS_NPC(ch) || ch->level > LEVEL_IMMORTAL)
+	if (is_npc(ch) || ch->level > LEVEL_IMMORTAL)
 		max = 25;
 
 	else
@@ -886,7 +886,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 			}
 		}
 
-		max = UMIN(max, 25);
+		max = std::min(max, 25);
 	}
 
 	if (ch->fighting && is_affected(ch->fighting, gsn_traitors_luck))
@@ -897,7 +897,7 @@ int get_curr_stat(CHAR_DATA *ch, int stat)
 			mod = 2;
 	}
 
-	return UMIN(URANGE(3, ch->perm_stat[stat] + ch->mod_stat[stat], max) + mod, 25);
+	return std::min(URANGE(3, ch->perm_stat[stat] + ch->mod_stat[stat], max) + mod, 25);
 }
 
 /* command for returning max training score */
@@ -908,7 +908,7 @@ int get_max_train(CHAR_DATA *ch, int stat)
 
 	iClass = (ch->Class()->GetIndex() + 1);
 
-	if (IS_NPC(ch) || ch->level > LEVEL_IMMORTAL)
+	if (is_npc(ch) || ch->level > LEVEL_IMMORTAL)
 		return 25;
 
 	max = pc_race_table[ch->race].max_stats[stat];
@@ -950,7 +950,7 @@ int get_max_train(CHAR_DATA *ch, int stat)
 		}
 	}
 
-	return UMIN(max, 25);
+	return std::min(max, 25);
 }
 
 /*
@@ -958,10 +958,10 @@ int get_max_train(CHAR_DATA *ch, int stat)
  */
 int can_carry_n(CHAR_DATA *ch)
 {
-	if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
+	if (!is_npc(ch) && ch->level >= LEVEL_IMMORTAL)
 		return 1000;
 
-	if (IS_NPC(ch) && IS_SET(ch->act, ACT_PET))
+	if (is_npc(ch) && IS_SET(ch->act, ACT_PET))
 		return 0;
 
 	return MAX_WEAR + ch->level / 6 + dex_app[get_curr_stat(ch, STAT_DEX)].carry;
@@ -972,10 +972,10 @@ int can_carry_n(CHAR_DATA *ch)
  */
 int can_carry_w(CHAR_DATA *ch)
 {
-	if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
+	if (!is_npc(ch) && ch->level >= LEVEL_IMMORTAL)
 		return 10000000;
 
-	if (IS_NPC(ch) && IS_SET(ch->act, ACT_PET))
+	if (is_npc(ch) && IS_SET(ch->act, ACT_PET))
 		return 0;
 
 	return MAX_WEAR + ch->level * 2 + str_app[get_curr_stat(ch, STAT_STR)].carry;
@@ -997,8 +997,8 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (levelDif <= -1)
 		levelDif *= -1;
 
-	if (IS_NPC(ch)
-		|| IS_NPC(victim)
+	if (is_npc(ch)
+		|| is_npc(victim)
 		|| ch->ghost > 0
 		|| victim->ghost > 0
 		|| ch->level < MIN_LEVEL_TO_PK
@@ -1008,8 +1008,8 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 		return false;
 	}
 
-	if (!IS_NPC(ch)
-		&& !IS_NPC(victim)
+	if (!is_npc(ch)
+		&& !is_npc(victim)
 		&& ch->level == LEVEL_HERO
 		&& victim->level == LEVEL_HERO)
 	{
@@ -1178,11 +1178,11 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 	 * Check for weapon wielding.
 	 * Guard against recursion (for weapons with affects).
 	 */
-	if (!IS_NPC(ch)
+	if (!is_npc(ch)
 		&& (wield = get_eq_char(ch, WEAR_WIELD)) != NULL
 		&& get_obj_weight(wield) > str_app[get_curr_stat(ch, STAT_STR)].wield
-		&& !IS_OBJ_STAT(wield, ITEM_NODISARM)
-		&& !IS_IMMORTAL(ch))
+		&& !is_obj_stat(wield, ITEM_NODISARM)
+		&& !is_immortal(ch))
 	{
 		static int depth;
 
@@ -1198,10 +1198,10 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		}
 	}
 
-	if (!IS_NPC(ch)
+	if (!is_npc(ch)
 		&& (wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != NULL
 		&& get_obj_weight(wield) > str_app[get_curr_stat(ch, STAT_STR)].wield
-		&& !IS_OBJ_STAT(wield, ITEM_NODISARM))
+		&& !is_obj_stat(wield, ITEM_NODISARM))
 	{
 		static int depth;
 
@@ -1217,7 +1217,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		}
 	}
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		/* Arms */
 		if ((wield = get_eq_char(ch, WEAR_WIELD)) != NULL && ch->arms < 1)
@@ -1255,7 +1255,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		if ((wield = get_eq_char(ch, WEAR_WIELD)) != NULL
 			&& ch->arms < 2
 			&& ch->size < SIZE_LARGE
-			&& (IS_WEAPON_STAT(wield, WEAPON_TWO_HANDS)
+			&& (is_weapon_stat(wield, WEAPON_TWO_HANDS)
 				|| wield->value[0] == WEAPON_STAFF
 				|| wield->value[0] == WEAPON_POLEARM
 				|| wield->value[0] == WEAPON_SPEAR))
@@ -1392,7 +1392,7 @@ void new_affect_to_char(CHAR_DATA *ch, AFFECT_DATA *paf)
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_SLEEP) && IS_SET(paf->bitvector, AFF_SLEEP) && ch->position == POS_SLEEPING)
+	if (is_affected_by(ch, AFF_SLEEP) && IS_SET(paf->bitvector, AFF_SLEEP) && ch->position == POS_SLEEPING)
 		return;
 
 	if (is_affected(ch, gsn_indom) && paf->aftype != AFT_TIMER)
@@ -1566,15 +1566,15 @@ void char_from_room(CHAR_DATA *ch)
 		return;
 	}
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 		--ch->in_room->area->nplayer;
 
 	for (obj = ch->carrying; obj; obj = obj->next_content)
 	{
 		if (obj->wear_loc != WEAR_NONE)
 		{
-			if ((obj->item_type == ITEM_LIGHT || IS_OBJ_STAT(obj, ITEM_GLOW)) && ch->in_room)
-				ch->in_room->light = UMAX(0, ch->in_room->light - 3);
+			if ((obj->item_type == ITEM_LIGHT || is_obj_stat(obj, ITEM_GLOW)) && ch->in_room)
+				ch->in_room->light = std::max(0, ch->in_room->light - 3);
 		}
 	}
 
@@ -1666,7 +1666,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	ch->next_in_room = pRoomIndex->people;
 	pRoomIndex->people = ch;
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		/* this is crashing us */
 		if (ch->in_room->area->empty)
@@ -1684,7 +1684,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	{
 		if (obj->wear_loc != WEAR_NONE)
 		{
-			if ((obj->item_type == ITEM_LIGHT || IS_OBJ_STAT(obj, ITEM_GLOW)) && ch->in_room)
+			if ((obj->item_type == ITEM_LIGHT || is_obj_stat(obj, ITEM_GLOW)) && ch->in_room)
 				ch->in_room->light += 3;
 		}
 	}
@@ -1692,7 +1692,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	if (IS_SET(ch->progtypes, MPROG_MOVE))
 		ch->in_room->move_progs = true;
 
-	if (IS_AFFECTED(ch, AFF_PLAGUE))
+	if (is_affected_by(ch, AFF_PLAGUE))
 	{
 		AFFECT_DATA *af;
 
@@ -1711,7 +1711,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 		}
 	}
 
-	if ((!IS_ZERO_VECTOR(ch->in_room->affected_by) || ch->in_room->has_rune) && IS_IMMORTAL(ch))
+	if ((!IS_ZERO_VECTOR(ch->in_room->affected_by) || ch->in_room->has_rune) && is_immortal(ch))
 		do_raffects(ch, "");
 }
 
@@ -1872,7 +1872,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 
 	int palign = ch->alignment, pethos = get_ethos(ch);
 
-	if (!IS_NPC(ch) && is_affected(ch, gsn_false_motives))
+	if (!is_npc(ch) && is_affected(ch, gsn_false_motives))
 	{
 		AFFECT_DATA *pal;
 		for (pal = ch->affected; pal; pal = pal->next)
@@ -1888,13 +1888,13 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 		}
 	}
 
-	if (!IS_NPC(ch)
-		&& (IS_OBJ_STAT(obj, ITEM_ANTI_EVIL) && palign < 0)
-		|| (IS_OBJ_STAT(obj, ITEM_ANTI_GOOD) && palign > 0)
-		|| (IS_OBJ_STAT(obj, ITEM_ANTI_NEUTRAL) && palign == 0)
-		|| (IS_OBJ_STAT(obj, ITEM_ANTI_LAWFUL) && pethos > 0)
-		|| (IS_OBJ_STAT(obj, ITEM_ANTI_NEUT) && pethos == 0)
-		|| (IS_OBJ_STAT(obj, ITEM_ANTI_CHAOTIC) && pethos < 0)
+	if (!is_npc(ch)
+		&& (is_obj_stat(obj, ITEM_ANTI_EVIL) && palign < 0)
+		|| (is_obj_stat(obj, ITEM_ANTI_GOOD) && palign > 0)
+		|| (is_obj_stat(obj, ITEM_ANTI_NEUTRAL) && palign == 0)
+		|| (is_obj_stat(obj, ITEM_ANTI_LAWFUL) && pethos > 0)
+		|| (is_obj_stat(obj, ITEM_ANTI_NEUT) && pethos == 0)
+		|| (is_obj_stat(obj, ITEM_ANTI_CHAOTIC) && pethos < 0)
 		|| is_restricted(ch, obj))
 	{
 		/*
@@ -1937,7 +1937,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 		affect_to_char(ch, paf);
 	}
 
-	if ((obj->item_type == ITEM_LIGHT || IS_OBJ_STAT(obj, ITEM_GLOW)) && ch->in_room)
+	if ((obj->item_type == ITEM_LIGHT || is_obj_stat(obj, ITEM_GLOW)) && ch->in_room)
 		ch->in_room->light += 3;
 
 	if (show && obj->pIndexData->wear_echo[0] != NULL)
@@ -1997,8 +1997,8 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 		affect_strip(ch, paf->type);
 	}
 
-	if ((obj->item_type == ITEM_LIGHT || IS_OBJ_STAT(obj, ITEM_GLOW)) && ch->in_room)
-		ch->in_room->light = UMAX(0, ch->in_room->light - 3);
+	if ((obj->item_type == ITEM_LIGHT || is_obj_stat(obj, ITEM_GLOW)) && ch->in_room)
+		ch->in_room->light = std::max(0, ch->in_room->light - 3);
 
 	if (show && obj->pIndexData->remove_echo[0] != NULL)
 		act(palloc_string(obj->pIndexData->remove_echo[0]), ch, obj, 0, TO_CHAR);
@@ -2041,7 +2041,7 @@ void obj_from_room(OBJ_DATA *obj)
 	}
 
 	if (obj->item_type == ITEM_CAMPFIRE)
-		in_room->light = UMAX(in_room->light - obj->value[0], 0);
+		in_room->light = std::max(in_room->light - obj->value[0], 0);
 
 	for (ch = in_room->people; ch != NULL; ch = ch->next_in_room)
 	{
@@ -2243,12 +2243,12 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 	{
 		char buf[MSL], vn[50];
 
-		if (IS_NPC(ch))
+		if (is_npc(ch))
 			sprintf(vn, "%d", ch->pIndexData->vnum);
 
 		sprintf(buf, "Extract_char: in_room is NULL.  %s%s.",
-			IS_NPC(ch) ? "Vnum is " : "Name is ",
-			IS_NPC(ch) ? vn : ch->name);
+			is_npc(ch) ? "Vnum is " : "Name is ",
+			is_npc(ch) ? vn : ch->name);
 		bug(buf, 0);
 	}
 	/* remove all tracking */
@@ -2257,10 +2257,10 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 		if (tch->last_fought == ch)
 			tch->last_fought = NULL;
 
-		if (!IS_NPC(ch) && !IS_NPC(tch) && tch->last_fight_name == ch->true_name)
+		if (!is_npc(ch) && !is_npc(tch) && tch->last_fight_name == ch->true_name)
 			tch->last_fight_name = NULL;
 
-		if (!IS_NPC(tch) && !IS_NPC(ch) && tch->pcdata->trusting == ch)
+		if (!is_npc(tch) && !is_npc(ch) && tch->pcdata->trusting == ch)
 			tch->pcdata->trusting = NULL;
 
 		for (af = tch->affected; af; af = af->next)
@@ -2282,9 +2282,9 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 	{
 		obj_next = obj->next_content;
 
-		if (!(obj->wear_loc == WEAR_BRAND || IS_SET(obj->extra_flags, ITEM_FIXED)) && !IS_NPC(ch))
+		if (!(obj->wear_loc == WEAR_BRAND || IS_SET(obj->extra_flags, ITEM_FIXED)) && !is_npc(ch))
 		{
-			if (!IS_NPC(ch) && (fPull))
+			if (!is_npc(ch) && (fPull))
 				obj->pIndexData->limcount++;
 
 			extract_obj(obj);
@@ -2293,17 +2293,17 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 
 	char_from_room(ch);
 
-	if (IS_NPC(ch) && CQueue::HasQueuePending(ch))
+	if (is_npc(ch) && CQueue::HasQueuePending(ch))
 	{
 		bug("Attempt at extracting mob %d while it has queue events pending.  Deleting events.", ch->pIndexData->vnum);
 		CQueue::DeleteQueuedEventsInvolving(ch);
 	}
 
 	/* Death room is set in the cabal table now */
-	if (!fPull && !IS_NPC(ch))
+	if (!fPull && !is_npc(ch))
 		return char_to_room(ch, get_room_index(ROOM_VNUM_ALTAR));
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		--ch->pIndexData->count;
 		total_wealth -= ch->pIndexData->wealth;
@@ -2408,7 +2408,7 @@ CHAR_DATA *get_char_world(CHAR_DATA *ch, char *argument)
 
 	for (wch = char_list; wch != NULL; wch = wch->next)
 	{
-		if (IS_IMMORTAL(ch) && !IS_NPC(wch))
+		if (is_immortal(ch) && !is_npc(wch))
 			sprintf(name, wch->true_name);
 		else
 			sprintf(name, wch->name);
@@ -2416,7 +2416,7 @@ CHAR_DATA *get_char_world(CHAR_DATA *ch, char *argument)
 		if (wch->in_room == NULL || !can_see(ch, wch) || !is_name(arg, name))
 			continue;
 
-		if (IS_NPC(wch) && wch->pIndexData->vnum == MOB_VNUM_DECOY && IS_IMMORTAL(ch))
+		if (is_npc(wch) && wch->pIndexData->vnum == MOB_VNUM_DECOY && is_immortal(ch))
 			continue;
 
 		if (++count == number)
@@ -2592,7 +2592,7 @@ void deduct_cost(CHAR_DATA *ch, int cost)
 {
 	int gold = 0;
 
-	gold = UMIN(ch->gold, cost);
+	gold = std::min(ch->gold, (long)cost);
 
 	ch->gold -= gold;
 
@@ -2613,7 +2613,7 @@ OBJ_DATA *create_money(int gold)
 	if (gold <= 0)
 	{
 		bug("Create_money: zero or negative money.", gold);
-		gold = UMAX(1, gold);
+		gold = std::max(1, gold);
 	}
 	else if (gold == 1)
 	{
@@ -2763,14 +2763,14 @@ bool can_see_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	if (IS_SET(pRoomIndex->room_flags, ROOM_IMP_ONLY) && get_trust(ch) < MAX_LEVEL)
 		return false;
 
-	if (IS_SET(pRoomIndex->room_flags, ROOM_GODS_ONLY) && !IS_IMMORTAL(ch))
+	if (IS_SET(pRoomIndex->room_flags, ROOM_GODS_ONLY) && !is_immortal(ch))
 		return false;
 
-	if (IS_SET(pRoomIndex->room_flags, ROOM_HEROES_ONLY) && !IS_IMMORTAL(ch))
+	if (IS_SET(pRoomIndex->room_flags, ROOM_HEROES_ONLY) && !is_immortal(ch))
 		return false;
 
-	if (IS_SET(pRoomIndex->room_flags, ROOM_NEWBIES_ONLY) && ch->level > 10 && !IS_IMMORTAL(ch) &&
-		(!IS_NPC(ch) || ch->pIndexData->vnum != ACADEMY_PET))
+	if (IS_SET(pRoomIndex->room_flags, ROOM_NEWBIES_ONLY) && ch->level > 10 && !is_immortal(ch) &&
+		(!is_npc(ch) || ch->pIndexData->vnum != ACADEMY_PET))
 		return false;
 
 	return true;
@@ -2784,16 +2784,16 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 	AREA_AFFECT_DATA *paf;
 	AFFECT_DATA *af;
 
-	if (IS_NPC(ch) && IS_SET(ch->act, ACT_DETECT_SPECIAL))
+	if (is_npc(ch) && IS_SET(ch->act, ACT_DETECT_SPECIAL))
 		return true;
 
 	if (ch == victim)
 		return true;
 
-	if (!IS_IMMORTAL(ch) && IS_AFFECTED(victim, AFF_NOSHOW))
+	if (!is_immortal(ch) && is_affected_by(victim, AFF_NOSHOW))
 		return false;
 
-	if (IS_CABAL_GUARD(ch) && !ch->desc)
+	if (is_cabal_guard(ch) && !ch->desc)
 		return true;
 
 	if (get_trust(ch) < victim->invis_level)
@@ -2802,29 +2802,29 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (get_trust(ch) < victim->incog_level && ch->in_room != victim->in_room)
 		return false;
 
-	if (get_trust(ch) == LEVEL_HERO && victim->invis_level == LEVEL_HERO && !IS_HEROIMM(ch))
+	if (get_trust(ch) == LEVEL_HERO && victim->invis_level == LEVEL_HERO && !is_heroimm(ch))
 		return false;
 
-	if ((!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT)) || (IS_NPC(ch) && IS_IMMORTAL(ch)))
+	if ((!is_npc(ch) && IS_SET(ch->act, PLR_HOLYLIGHT)) || (is_npc(ch) && is_immortal(ch)))
 		return true;
 
-	if (IS_NPC(ch) && victim->invis_level >= LEVEL_HERO)
+	if (is_npc(ch) && victim->invis_level >= LEVEL_HERO)
 		return false;
 
-	if (!IS_NPC(ch) && ch->pcdata->death_status == HAS_DIED)
+	if (!is_npc(ch) && ch->pcdata->death_status == HAS_DIED)
 		return true;
 
 	/* Make sure cabal guardians can always see */
-	if (IS_CABAL_GUARD(ch))
+	if (is_cabal_guard(ch))
 		return true;
 
-	if (IS_AFFECTED(ch, AFF_BLIND))
+	if (is_affected_by(ch, AFF_BLIND))
 		return false;
 
 	if (is_affected(victim, gsn_ultradiffusion))
 		return false;
 
-	if (is_affected_area(ch->in_room->area, gsn_whiteout) && IS_OUTSIDE(ch))
+	if (is_affected_area(ch->in_room->area, gsn_whiteout) && is_outside(ch))
 	{
 		for (paf = ch->in_room->area->affected; paf; paf = paf->next)
 		{
@@ -2842,8 +2842,8 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (is_affected(victim, gsn_earthfade))
 		return false;
 
-	if (IS_AFFECTED(victim, AFF_INVISIBLE)
-		&& !IS_AFFECTED(ch, AFF_DETECT_INVIS)
+	if (is_affected_by(victim, AFF_INVISIBLE)
+		&& !is_affected_by(ch, AFF_DETECT_INVIS)
 		&& (!(is_affected(ch, gsn_hydroperception)
 			&& (ch->in_room->sector_type == SECT_WATER
 				|| ch->in_room->sector_type == SECT_UNDERWATER
@@ -2857,14 +2857,14 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 			&& victim->in_room->sector_type != SECT_AIR
 			&& ch->in_room->sector_type != SECT_UNDERWATER
 			&& ch->in_room->sector_type != SECT_AIR
-			&& !IS_AFFECTED(victim, AFF_SNEAK)
-			&& !IS_AFFECTED(victim, AFF_FLYING))))
+			&& !is_affected_by(victim, AFF_SNEAK)
+			&& !is_affected_by(victim, AFF_FLYING))))
 	{
 		return false;
 	}
 
-	if (IS_AFFECTED(victim, AFF_HIDE)
-		&& !IS_AFFECTED(ch, AFF_DETECT_HIDDEN)
+	if (is_affected_by(victim, AFF_HIDE)
+		&& !is_affected_by(ch, AFF_DETECT_HIDDEN)
 		&& victim->fighting == NULL
 		&& !(is_affected(ch, gsn_darksight)
 			&& (af = affect_find(ch->affected, gsn_darksight))
@@ -2880,19 +2880,19 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 			&& victim->in_room->sector_type != SECT_AIR
 			&& ch->in_room->sector_type != SECT_UNDERWATER
 			&& ch->in_room->sector_type != SECT_AIR
-			&& !IS_AFFECTED(victim, AFF_SNEAK)
-			&& !IS_AFFECTED(victim, AFF_FLYING)))
+			&& !is_affected_by(victim, AFF_SNEAK)
+			&& !is_affected_by(victim, AFF_FLYING)))
 	{
 		return false;
 	}
 
-	if (IS_AFFECTED(victim, AFF_CAMOUFLAGE) && !IS_AFFECTED(ch, AFF_DETECT_CAMO))
+	if (is_affected_by(victim, AFF_CAMOUFLAGE) && !is_affected_by(ch, AFF_DETECT_CAMO))
 		return false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return true;
 
-	if (room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_DARK_VISION))
+	if (room_is_dark(ch->in_room) && !is_affected_by(ch, AFF_DARK_VISION))
 		return false;
 
 	return true;
@@ -2921,23 +2921,23 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 				break;
 		}
 
-		if (oaf->owner != ch && !IS_IMMORTAL(ch))
+		if (oaf->owner != ch && !is_immortal(ch))
 			return false;
 	}
 
-	if (IS_OBJ_STAT(obj, ITEM_NOSHOW) && !IS_IMMORTAL(ch) && is_worn(obj) && (tat = get_eq_char(ch, WEAR_BRAND)) != obj)
+	if (is_obj_stat(obj, ITEM_NOSHOW) && !is_immortal(ch) && is_worn(obj) && (tat = get_eq_char(ch, WEAR_BRAND)) != obj)
 		return false;
 
-	if (!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
+	if (!is_npc(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
 		return true;
 
 	if (IS_SET(obj->extra_flags, ITEM_VIS_DEATH))
 		return false;
 
-	if ((IS_AFFECTED(ch, AFF_BLIND) && obj->item_type != ITEM_POTION))
+	if ((is_affected_by(ch, AFF_BLIND) && obj->item_type != ITEM_POTION))
 		return false;
 
-	if (is_affected_area(ch->in_room->area, gsn_whiteout) && IS_OUTSIDE(ch) && obj->item_type != ITEM_POTION)
+	if (is_affected_area(ch->in_room->area, gsn_whiteout) && is_outside(ch) && obj->item_type != ITEM_POTION)
 	{
 		for (paf = ch->in_room->area->affected; paf; paf = paf->next)
 		{
@@ -2952,13 +2952,13 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (obj->item_type == ITEM_LIGHT && obj->value[2] != 0)
 		return true;
 
-	if (IS_SET(obj->extra_flags, ITEM_INVIS) && !IS_AFFECTED(ch, AFF_DETECT_INVIS))
+	if (IS_SET(obj->extra_flags, ITEM_INVIS) && !is_affected_by(ch, AFF_DETECT_INVIS))
 		return false;
 
-	if (IS_OBJ_STAT(obj, ITEM_GLOW) || IS_AFFECTED(obj, AFF_OBJ_BURNING))
+	if (is_obj_stat(obj, ITEM_GLOW) || is_affected_by(obj, AFF_OBJ_BURNING))
 		return true;
 
-	if (room_is_dark(ch->in_room) && !IS_AFFECTED(ch, AFF_DARK_VISION))
+	if (room_is_dark(ch->in_room) && !is_affected_by(ch, AFF_DARK_VISION))
 		return false;
 
 	return true;
@@ -2972,7 +2972,7 @@ bool can_drop_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 	if (!IS_SET(obj->extra_flags, ITEM_NODROP))
 		return true;
 
-	if (!IS_NPC(ch) && ch->level >= LEVEL_IMMORTAL)
+	if (!is_npc(ch) && ch->level >= LEVEL_IMMORTAL)
 		return true;
 
 	return false;
@@ -4806,13 +4806,13 @@ char *aaffect_loc_name(int location)
 bool is_safe_rspell_nom(int level, CHAR_DATA *victim)
 {
 	/* ghosts are safe */
-	if (!IS_NPC(victim) && (victim->ghost))
+	if (!is_npc(victim) && (victim->ghost))
 		return true;
 
-	if (victim->level < 5 && !IS_NPC(victim))
+	if (victim->level < 5 && !is_npc(victim))
 		return true;
 
-	if (!IS_NPC(victim) && ((level >= victim->level + 10) || (victim->level >= level + 10)))
+	if (!is_npc(victim) && ((level >= victim->level + 10) || (victim->level >= level + 10)))
 		return true;
 
 	return false;
@@ -4982,7 +4982,7 @@ void modify_location(CHAR_DATA *ch, int location, int mod, bool add)
 			ch->regen_rate += mod;
 			break;
 		case APPLY_ENERGYSTATE:
-			if (!IS_NPC(ch))
+			if (!is_npc(ch))
 				ch->pcdata->energy_state += mod;
 			break;
 		case APPLY_ARMS:
@@ -4995,7 +4995,7 @@ void modify_location(CHAR_DATA *ch, int location, int mod, bool add)
 			ch->alignment += mod;
 			break;
 		case APPLY_ETHOS:
-			if (!IS_NPC(ch))
+			if (!is_npc(ch))
 				ch->pcdata->ethos += mod;
 			break;
 		case APPLY_BEAUTY:
@@ -5023,7 +5023,7 @@ int get_align(CHAR_DATA *ch)
 
 int get_ethos(CHAR_DATA *ch)
 {
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 		return ch->pcdata->ethos;
 
 	return 0;

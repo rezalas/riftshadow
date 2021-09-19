@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <algorithm>
 #include "merc.h"
 #include "recycle.h"
 #include "tables.h"
@@ -14,6 +15,7 @@
 #include "act_move.h"
 #include "comm.h"
 #include "const.h"
+#include "utility.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 //#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"

@@ -39,13 +39,13 @@ void do_gain(CHAR_DATA *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
 	CHAR_DATA *trainer;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	/* find a trainer */
 	for (trainer = ch->in_room->people; trainer != NULL; trainer = trainer->next_in_room)
 	{
-		if (IS_NPC(trainer) && (IS_SET(trainer->act, ACT_GAIN) || IS_SET(trainer->act, ACT_TRAIN)))
+		if (is_npc(trainer) && (IS_SET(trainer->act, ACT_GAIN) || IS_SET(trainer->act, ACT_TRAIN)))
 			break;
 	}
 
@@ -108,7 +108,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 	bool fAll= false, found= false;
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->Class()->ctype != CLASS_CASTER)
@@ -197,7 +197,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 			}
 			else
 			{
-				mana = UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - level));
+				mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - level));
 				sprintf(buf, "%-18s  %3d mana  ", skill_table[sn].name, mana);
 			}
 
@@ -246,7 +246,7 @@ void do_skills(CHAR_DATA *ch, char *argument)
 	bool fAll= false, found= false, hide_skill= false;
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (argument[0] != '\0')
@@ -438,7 +438,7 @@ void list_group_costs(CHAR_DATA *ch)
 
 void list_group_chosen(CHAR_DATA *ch)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	return;
@@ -448,7 +448,7 @@ int exp_per_level(CHAR_DATA *ch)
 {
 	float epl;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return 1500;
 
 	epl = pc_race_table[ch->race].xpadd + 1500;
@@ -606,7 +606,7 @@ bool parse_gen_groups(CHAR_DATA *ch,char *argument)
 /* shows all groups, or the sub-members of a group */
 void do_groups(CHAR_DATA *ch, char *argument)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	return;
@@ -677,10 +677,10 @@ void check_improve(CHAR_DATA *ch, int sn, bool success, int multiplier)
 	float chance;
 	char buf[100];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
-	if (IS_AFFECTED(ch, AFF_CALM))
+	if (is_affected_by(ch, AFF_CALM))
 		return;
 
 	if (ch->level < skill_table[sn].skill_level[ch->Class()->GetIndex()]
@@ -747,7 +747,7 @@ void check_improve(CHAR_DATA *ch, int sn, bool success, int multiplier)
 
 			send_to_char(buf, ch);
 			ch->pcdata->learned[sn] += inum;
-			ch->pcdata->learned[sn] = UMIN(ch->pcdata->learned[sn], 100);
+			ch->pcdata->learned[sn] = std::min((int)ch->pcdata->learned[sn], 100);
 			gain_exp(ch, 4);
 		}
 	}
@@ -855,7 +855,7 @@ void gn_remove(CHAR_DATA *ch, int gn)
 /* use for processing a skill or group for addition  */
 void group_add(CHAR_DATA *ch, const char *name, bool deduct)
 {
-	if (IS_NPC(ch)) /* NPCs do not have skills */
+	if (is_npc(ch)) /* NPCs do not have skills */
 		return;
 
 	int sn = skill_lookup(name);
