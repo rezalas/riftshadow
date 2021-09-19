@@ -37,7 +37,7 @@ int get_bv_stage(CHAR_DATA *ch)
 {
 	AFFECT_DATA *af;
 
-	if (!is_affected(ch, gsn_burning_vision) /*|| IS_IMMORTAL(ch)*/)
+	if (!is_affected(ch, gsn_burning_vision) /*|| is_immortal(ch)*/)
 		return -1;
 
 	for (af = ch->affected; af != NULL; af = af->next)
@@ -105,7 +105,7 @@ void burning_vision_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 {
 	AFFECT_DATA *caf;
 
-	if (get_bv_stage(ch) >= 4 && !IS_AFFECTED(ch, AFF_BLIND))
+	if (get_bv_stage(ch) >= 4 && !is_affected_by(ch, AFF_BLIND))
 	{
 		act("You are blinded!", ch, 0, 0, TO_CHAR);
 		act("$n appears to be blinded.", ch, 0, 0, TO_ROOM);

@@ -135,8 +135,8 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 		pMobIndex->ac[AC_SLASH],
 		pMobIndex->ac[AC_EXOTIC]);
 	fprintf(fp, "%s %s ",
-		position_table[UMAX(pMobIndex->start_pos, 0)].name,
-		sex_table[UMAX(pMobIndex->sex, 1)].name);
+		position_table[std::max((int)pMobIndex->start_pos, 0)].name,
+		sex_table[std::max((int)pMobIndex->sex, 1)].name);
 	fprintf(fp, "%s\n", wealth_lookup(pMobIndex->wealth));
 
 	copy_vector(dummy, pMobIndex->form);
@@ -145,7 +145,7 @@ void save_mobile(FILE *fp, MOB_INDEX_DATA *pMobIndex)
 	BITWISE_XAND(dummy2, race_data_lookup(pMobIndex->race)->parts);
 
 	fprintf(fp, "%s %s %s\n", bitvector_to_flag(dummy), bitvector_to_flag(dummy2),
-			size_table[UMAX(pMobIndex->size, 0)].name);
+			size_table[std::max((int)pMobIndex->size, 0)].name);
 
 	for (i = 0; i < (32 * MAX_BITVECTOR); i++)
 	{
@@ -374,7 +374,7 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 				weapon_name_lookup(pObjIndex->value[0]),
 				pObjIndex->value[1],
 				pObjIndex->value[2],
-				attack_table[UMAX(0, pObjIndex->value[3])].name,
+				attack_table[std::max(0, pObjIndex->value[3])].name,
 				bitvector_to_flag(dummy));
 			break;
 		case ITEM_DRINK_CON:
@@ -382,7 +382,7 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 			fprintf(fp, "%d %d '%s' %d %d\n",
 				pObjIndex->value[0],
 				pObjIndex->value[1],
-				liq_table[UMAX(pObjIndex->value[2], 0)].liq_name,
+				liq_table[std::max(pObjIndex->value[2], 0)].liq_name,
 				pObjIndex->value[3], pObjIndex->value[4]);
 			break;
 		case ITEM_WAND:
@@ -391,7 +391,7 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 				pObjIndex->value[0],
 				pObjIndex->value[1],
 				pObjIndex->value[2],
-				skill_table[UMAX(pObjIndex->value[3], 0)].name,
+				skill_table[std::max(pObjIndex->value[3], 0)].name,
 				pObjIndex->value[4]);
 			break;
 		case ITEM_POTION:
@@ -399,10 +399,10 @@ void save_object(FILE *fp, OBJ_INDEX_DATA *pObjIndex)
 		case ITEM_PILL:
 			fprintf(fp, "%d '%s' '%s' '%s' '%s'\n",
 				pObjIndex->value[0],
-				skill_table[UMAX(pObjIndex->value[1], 0)].name,
-				skill_table[UMAX(pObjIndex->value[2], 0)].name,
-				skill_table[UMAX(pObjIndex->value[3], 0)].name,
-				skill_table[UMAX(pObjIndex->value[4], 0)].name);
+				skill_table[std::max(pObjIndex->value[1], 0)].name,
+				skill_table[std::max(pObjIndex->value[2], 0)].name,
+				skill_table[std::max(pObjIndex->value[3], 0)].name,
+				skill_table[std::max(pObjIndex->value[4], 0)].name);
 			break;
 		case ITEM_CONTAINER:
 			dummy[0] = pObjIndex->value[1];
@@ -553,7 +553,7 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 
 			fprintf(fp, "#%d\n", pRoom->vnum);
 			fprintf(fp, "%s~\n%s~\n", buf1, buf2);
-			fprintf(fp, "%s\n", sect_table[UMAX(0, pRoom->sector_type)].name);
+			fprintf(fp, "%s\n", sect_table[std::max(0, (int)pRoom->sector_type)].name);
 
 			rs_temp = 0;
 
@@ -573,7 +573,7 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 					sprintf(buf1, pexit->keyword ? munch(pexit->keyword) : "door");
 					sprintf(buf2, munch(pexit->description));
 					fprintf(fp, "D %s %d %s %d\n%s~\n%s~\n",
-						upstring(direction_table[UMAX(0, i)].name),
+						upstring(direction_table[std::max((long)0, i)].name),
 						pexit->u1.to_room ? pexit->u1.to_room->vnum : 0,
 						bitvector_to_flag(pexit->exit_info),
 						pexit->key,

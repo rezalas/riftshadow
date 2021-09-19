@@ -224,7 +224,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	MYSQL_ROW row;
 	bool end= false, fMatch= false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!str_cmp(argument, ""))

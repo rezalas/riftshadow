@@ -40,6 +40,7 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
+#include <algorithm>
 #include "merc.h"
 #include "necro.h"
 #include "magic.h"
@@ -65,6 +66,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "material.h"
+#include "utility.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

@@ -24,6 +24,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "material.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

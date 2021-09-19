@@ -467,10 +467,10 @@ void greet_prog_arangird(CHAR_DATA *mob, CHAR_DATA *ch)
 	OBJ_DATA *obj;
 	bool found= false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		found = true;
 
-	if (!IS_NPC(ch) && check_stealth(ch, mob))
+	if (!is_npc(ch) && check_stealth(ch, mob))
 		found = true;
 
 	if ((obj = get_eq_char(ch, WEAR_ABOUT)) != NULL
@@ -565,10 +565,10 @@ void pulse_prog_arangird_patrol(CHAR_DATA *mob)
 
 	for (vch = mob->in_room->people; vch; vch = vch->next_in_room)
 	{
-		if (IS_NPC(vch))
+		if (is_npc(vch))
 			continue;
 
-		if (IS_IMMORTAL(vch))
+		if (is_immortal(vch))
 			continue;
 
 		if ((robes = get_eq_char(vch, WEAR_ABOUT)) != NULL && robes->pIndexData->vnum == 21800)
@@ -598,20 +598,20 @@ void greet_prog_ruins_spirit(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	char buf[MSL];
 
-	if (mob->fighting || IS_IMMORTAL(ch))
+	if (mob->fighting || is_immortal(ch))
 		return;
 
 	if (check_stealth(ch, mob))
 		return;
 
-	if (IS_EVIL(ch) && can_see(mob, ch))
+	if (is_evil(ch) && can_see(mob, ch))
 	{
 		sprintf(buf, "How dare you enter this place of holiness, %s?  You shall suffer the consequences!", ch->name);
 		do_say(mob, buf);
 		do_murder(mob, ch->name);
 	}
 
-	if (IS_NEUTRAL(ch) && can_see(mob, ch))
+	if (is_neutral(ch) && can_see(mob, ch))
 	{
 		sprintf(buf, "You may go about your business, %s, but touch nothing!", ch->name);
 		do_say(mob, buf);
@@ -654,7 +654,7 @@ void speech_prog_ruins_mouth(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 void greet_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch)
 {
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 		do_say(mob, "Hey, want to dice?  I could use some of that gold in your pouch.");
 }
 
@@ -681,7 +681,7 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 			act("$n does a very foolish thing....", ch, NULL, NULL, TO_ROOM);
 
-			ch->gold = UMAX(0, (ch->gold + (2 * amount)));
+			ch->gold = std::max((long)0, ch->gold + (2 * amount));
 			return;
 		}
 
@@ -742,7 +742,7 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 void greet_prog_knight(CHAR_DATA *mob, CHAR_DATA *ch)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->ghost > 0)
@@ -859,7 +859,7 @@ void formian_egg_hatch(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 void greet_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *ch)
 {
-	if (IS_NPC(ch) || ch->invis_level > LEVEL_HERO - 1)
+	if (is_npc(ch) || ch->invis_level > LEVEL_HERO - 1)
 		return;
 
 	if (mob->cabal == ch->cabal)
@@ -1043,7 +1043,7 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 		{
 			adjmob_next = adjmob->next_in_room;
 
-			if (!IS_NPC(adjmob))
+			if (!is_npc(adjmob))
 				continue;
 
 			if (adjmob->pIndexData->vnum != 9011)
@@ -1117,7 +1117,7 @@ void attack_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *attacker)
 {
 	char buf[MSL];
 
-	if (IS_NPC(attacker))
+	if (is_npc(attacker))
 		return;
 
 	if (attacker->ghost)
@@ -1136,7 +1136,7 @@ void greet_prog_inner_guardian(CHAR_DATA *mob, CHAR_DATA *ch)
 {
 	char buf[MSL];
 
-	if (IS_NPC(ch) || IS_IMMORTAL(ch))
+	if (is_npc(ch) || is_immortal(ch))
 		return;
 
 	if (ch->cabal == mob->cabal)
@@ -1275,7 +1275,7 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 		if (d->connected == CON_PLAYING
 			&& d->character->in_room != NULL
 			&& d->character->in_room->area == mob->in_room->area
-			&& IS_EVIL(d->character))
+			&& is_evil(d->character))
 		{
 			ch = d->character;
 			mist = create_mobile(get_mob_index(1616));
@@ -1296,7 +1296,7 @@ bool move_prog_horde_shrine_ward(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA 
 	if (direction != DIR_SOUTH)
 		return true;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return false;
 
 	if (!is_affected(ch, gsn_horde_communion))
@@ -1434,10 +1434,10 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 	{
 		vch_next = vch->next_in_room;
 
-		if (vch == mob || IS_IMMORTAL(vch))
+		if (vch == mob || is_immortal(vch))
 			continue;
 
-		if (IS_NPC(vch) && IS_SET(vch->act, ACT_SENTINEL))
+		if (is_npc(vch) && IS_SET(vch->act, ACT_SENTINEL))
 			continue;
 
 		act("$n hustles you out the door.", mob, 0, vch, TO_VICT);
@@ -1459,7 +1459,7 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 
 bool move_prog_theatre_guard(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
 {
-	if (direction != DIR_SOUTH || IS_IMMORTAL(ch))
+	if (direction != DIR_SOUTH || is_immortal(ch))
 		return true;
 
 	if (ch->pause)
@@ -1484,7 +1484,7 @@ void greet_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (!can_see(master, ch))
 		return;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	act("$n rises into the air and opens its mouth in a silent shriek!", mob, 0, ch, TO_ROOM);
@@ -2140,7 +2140,7 @@ void speech_prog_cimeries(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		RS.Queue.AddToQueue(9, 1, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_CIMERIES] = CIMERIES_EAR;
-		ch->pcdata->beauty = UMAX(1, ch->pcdata->beauty - 4);
+		ch->pcdata->beauty = std::max(1, ch->pcdata->beauty - 4);
 		return;
 	}
 
@@ -2159,7 +2159,7 @@ void speech_prog_cimeries(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		RS.Queue.AddToQueue(9, 1, delay_extract, mob);
 
 		ch->pcdata->greaterdata[GREATER_CIMERIES] = CIMERIES_NOSE;
-		ch->pcdata->beauty = UMAX(1, ch->pcdata->beauty - 4);
+		ch->pcdata->beauty = std::max(1, ch->pcdata->beauty - 4);
 		return;
 	}
 }
@@ -2215,7 +2215,7 @@ void pulse_prog_imp(CHAR_DATA *mob)
 			{
 				if (number_percent() > 75)
 				{
-					if (IS_NPC(victim))
+					if (is_npc(victim))
 						multi_hit(victim, mob, TYPE_UNDEFINED);
 				}
 				else
@@ -2404,7 +2404,7 @@ bool death_prog_cim(CHAR_DATA *mob, CHAR_DATA *killer)
 
 	for (extract = mob->in_room->people; extract != NULL; extract = extract->next_in_room)
 	{
-		if (IS_NPC(extract) && extract->pIndexData->vnum == 2499)
+		if (is_npc(extract) && extract->pIndexData->vnum == 2499)
 			break;
 
 		continue;
@@ -2421,7 +2421,7 @@ void greet_prog_tower_shopkeeper(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (is_affected(mob, gsn_bash))
 		return;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	init_affect(&af);
@@ -2455,7 +2455,7 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 	{
 		vch_next = vch->next_in_room;
 
-		if (IS_NPC(vch))
+		if (is_npc(vch))
 			continue;
 
 		found= false;
@@ -2610,7 +2610,7 @@ void beat_prog_law_track(CHAR_DATA *mob)
 	if (min == 0 || max == 0)
 		return;
 
-	if (IS_AFFECTED(mob, AFF_NOSHOW))
+	if (is_affected_by(mob, AFF_NOSHOW))
 		return;
 
 	if (ch == NULL)
@@ -2653,7 +2653,7 @@ void beat_prog_law_track(CHAR_DATA *mob)
 		return;
 	}
 
-	if (!can_see(mob, ch) || !IS_AWAKE(mob))
+	if (!can_see(mob, ch) || !is_awake(mob))
 	{
 		mob->last_fought = NULL;
 		mob->tracktimer = 0;
@@ -2710,7 +2710,7 @@ CHAR_DATA *check_sector(int min, int max)
 		{
 			for (ch = pRoom->people; ch != NULL; ch = ch->next_in_room)
 			{
-				if (IS_NPC(ch))
+				if (is_npc(ch))
 					continue;
 
 				if (is_affected(ch, gsn_aggressor))
@@ -3181,7 +3181,7 @@ void pulse_prog_area_echo_ward(CHAR_DATA *mob)
 		mob->regen_rate = mob->level; // interval in sec = mob level
 	}
 
-	mob->regen_rate = UMAX(0, mob->regen_rate - 4); //(PULSE_MOBILE / PULSE_PER_SECOND), one mpulse per 4 sec
+	mob->regen_rate = std::max(0, mob->regen_rate - 4); //(PULSE_MOBILE / PULSE_PER_SECOND), one mpulse per 4 sec
 
 	if (mob->regen_rate)
 		return;
@@ -3448,13 +3448,13 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 {
 	CHAR_DATA *victim;
 
-	if (!IS_AFFECTED(mob, AFF_NOSHOW) && !IS_AFFECTED(mob, AFF_DETECT_MAGIC))
+	if (!is_affected_by(mob, AFF_NOSHOW) && !is_affected_by(mob, AFF_DETECT_MAGIC))
 	{
 		SET_BIT(mob->affected_by, AFF_NOSHOW);
 		return;
 	}
 
-	if ((sun == SUN_RISE || sun == SUN_LIGHT) && !IS_AFFECTED(mob, AFF_NOSHOW))
+	if ((sun == SUN_RISE || sun == SUN_LIGHT) && !is_affected_by(mob, AFF_NOSHOW))
 	{
 		if (mob->fighting)
 			stop_fighting(mob, true);
@@ -3464,7 +3464,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 		SET_BIT(mob->affected_by, AFF_NOSHOW);
 		return;
 	}
-	else if ((sun == SUN_SET || sun == SUN_DARK) && IS_AFFECTED(mob, AFF_NOSHOW) && IS_AFFECTED(mob, AFF_DETECT_MAGIC))
+	else if ((sun == SUN_SET || sun == SUN_DARK) && is_affected_by(mob, AFF_NOSHOW) && is_affected_by(mob, AFF_DETECT_MAGIC))
 	{
 		REMOVE_BIT(mob->affected_by, AFF_NOSHOW);
 
@@ -3519,7 +3519,7 @@ void sucker_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 
 	for (owner = char_list; owner; owner = owner->next)
 	{
-		if (IS_NPC(owner) && owner->pIndexData->vnum == 3002 && owner->hunting == ch)
+		if (is_npc(owner) && owner->pIndexData->vnum == 3002 && owner->hunting == ch)
 			break;
 	}
 
@@ -3547,7 +3547,7 @@ void greet_prog_face_sucker(CHAR_DATA *mob, CHAR_DATA *ch)
 	AFFECT_DATA af;
 
 	if (mob->fighting
-		|| IS_NPC(ch)
+		|| is_npc(ch)
 		|| mob == ch
 		|| mob->hunting == ch
 		|| !can_see(mob, ch)

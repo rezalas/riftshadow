@@ -12,6 +12,7 @@
 #include <time.h>
 #include <math.h>
 #include <iterator>
+#include <algorithm>
 #include "merc.h"
 #include "handler.h"
 #include "magic.h"
@@ -31,6 +32,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "material.h"
+#include "utility.h"
 
 extern char *const dir_name[];
 extern const sh_int rev_dir[];

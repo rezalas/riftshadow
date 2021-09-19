@@ -13,6 +13,7 @@
 #include "update.h"
 #include "db.h"
 #include "magic.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

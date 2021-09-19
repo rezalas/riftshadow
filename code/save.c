@@ -68,7 +68,7 @@ void save_char_obj(CHAR_DATA *ch)
 	CHAR_DATA *search;
 	int res;
 
-	if (IS_NPC(ch) || mPort == 4000) // do not save, sir!!!
+	if (is_npc(ch) || mPort == 4000) // do not save, sir!!!
 		return;
 
 	if (ch->desc != NULL && ch->desc->original != NULL)
@@ -80,7 +80,7 @@ void save_char_obj(CHAR_DATA *ch)
 	/* create god log */
 	fclose(fpReserve);
 
-	if (!IS_IMMORTAL(ch))
+	if (!is_immortal(ch))
 	{
 		res = RS.SQL.Update(
 			"players SET pks=%.2f,level=%d,class=%d,race=%d,cabal=%d,sex=%d,hours=%ld,align=%d,ethos=%d,gold=%ld WHERE "\
@@ -121,12 +121,12 @@ void save_char_obj(CHAR_DATA *ch)
 
 		for (search = char_list; search != NULL; search = search->next)
 		{
-			if (IS_NPC(search)
+			if (is_npc(search)
 				&& search->master == ch
 				&& (IS_SET(search->act, ACT_UNDEAD)
 					|| (!strcmp(ch->Class()->name, "necromancer") && !IS_SET(search->act, ACT_PET)))
 				/*  && search->in_room->vnum==ch->in_room->vnum */
-				&& IS_AFFECTED(search, AFF_CHARM))
+				&& is_affected_by(search, AFF_CHARM))
 			{
 				fwrite_charmie(search, fp);
 			}
@@ -221,7 +221,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 	OBJ_DATA *belt;
 	TROPHY_DATA *placeholder;
 
-	fprintf(fp, "#%s\n", IS_NPC(ch) ? "MOB" : "PLAYER");
+	fprintf(fp, "#%s\n", is_npc(ch) ? "MOB" : "PLAYER");
 	fprintf(fp, "Name %s~\n", ch->true_name);
 	fprintf(fp, "Ghost %d~\n", ch->ghost);
 	fprintf(fp, "Id   %ld\n", ch->id);
@@ -271,7 +271,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 	fprintf(fp, "Sec  %d\n", ch->pcdata->security); /* OLC */
 	fprintf(fp, "Plyd %d\n", ch->played + (int)(current_time - ch->logon));
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		fprintf(fp, "Agemod %d\n", ch->pcdata->age_mod);
 
@@ -297,7 +297,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 	fprintf(fp, "HMV  %d %d %d %d %d %d\n", ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move);
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		if (ch->pcdata->death_count == 0)
 			fprintf(fp, "Deaths %d\n", 0);
@@ -438,7 +438,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 			ch->mod_stat[STAT_CON]);
 	}
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		fprintf(fp, "Vnum %d\n", ch->pIndexData->vnum);
 	}
@@ -1430,9 +1430,9 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 					/* adjust hp mana move up  -- here for speed's sake */
 					percent = (current_time - lastlogoff) * 25 / (2 * 60 * 60);
 
-					percent = UMIN(percent, 100);
+					percent = std::min(percent, 100);
 
-					if (percent > 0 && !IS_AFFECTED(ch, AFF_POISON) && !IS_AFFECTED(ch, AFF_PLAGUE))
+					if (percent > 0 && !is_affected_by(ch, AFF_POISON) && !is_affected_by(ch, AFF_PLAGUE))
 					{
 						ch->hit += (ch->max_hit - ch->hit) * percent / 100;
 						ch->mana += (ch->max_mana - ch->mana) * percent / 100;
@@ -1960,9 +1960,9 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 					/* adjust hp mana move up  -- here for speed's sake */
 					percent = (current_time - lastlogoff) * 25 / (2 * 60 * 60);
 
-					if (percent > 0 && !IS_AFFECTED(ch, AFF_POISON) && !IS_AFFECTED(ch, AFF_PLAGUE))
+					if (percent > 0 && !is_affected_by(ch, AFF_POISON) && !is_affected_by(ch, AFF_PLAGUE))
 					{
-						percent = UMIN(percent, 100);
+						percent = std::min(percent, 100);
 						pet->hit += (pet->max_hit - pet->hit) * percent / 100;
 						pet->mana += (pet->max_mana - pet->mana) * percent / 100;
 						pet->move += (pet->max_move - pet->move) * percent / 100;

@@ -50,7 +50,7 @@ void healing_sleep_end(CHAR_DATA *ch, AFFECT_DATA *af)
 {
 	AFFECT_DATA *laf;
 
-	if (IS_AWAKE(ch))
+	if (is_awake(ch))
 		return;
 
 	for (laf = ch->affected; laf != NULL; laf = laf->next)

@@ -210,7 +210,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	{
 		v_next = victim->next_in_room;
 
-		if (!IS_NPC(victim) && is_safe_new(ch, victim, false))
+		if (!is_npc(victim) && is_safe_new(ch, victim, false))
 			continue;
 
 		dam = dice(20, 20);
@@ -560,7 +560,7 @@ void conflagration_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 			dam = dice(vch->level / 2, 3) + 5;
 
-			if (IS_NPC(vch) && (vch->max_hit) > 0 && ((vch->hit * 100) / vch->max_hit < 50))
+			if (is_npc(vch) && (vch->max_hit) > 0 && ((vch->hit * 100) / vch->max_hit < 50))
 				dam -= (int)((float)dam * 0.05) * (50 - (vch->hit * 100) / vch->max_hit);
 
 			if (is_affected(vch, gsn_heatshield))
@@ -830,7 +830,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (IS_OBJ_STAT(obj, ITEM_NODISARM))
+	if (is_obj_stat(obj, ITEM_NODISARM))
 	{
 		act("You rapidly raise the temperature of $N's weapon, but $E adjusts $S grip.", ch, obj, victim, TO_CHAR);
 		act("Your weapon suddenly becomes burning to the touch, but you quickly find a comfortable grip.", ch, obj, victim, TO_VICT);
@@ -840,7 +840,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (IS_OBJ_STAT(obj, ITEM_NOREMOVE))
+	if (is_obj_stat(obj, ITEM_NOREMOVE))
 	{
 		act("You rapidly raise the temperature of $N's weapon, but it clings to $S hand, burning him!", ch, obj, victim, TO_CHAR);
 		act("Your weapon suddenly becomes burning to the touch, but you cannot let go of it!", ch, obj, victim, TO_VICT);
@@ -859,7 +859,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	obj_from_char(obj);
 
-	if (IS_OBJ_STAT(obj, ITEM_NODROP) || IS_OBJ_STAT(obj, ITEM_INVENTORY))
+	if (is_obj_stat(obj, ITEM_NODROP) || is_obj_stat(obj, ITEM_INVENTORY))
 	{
 		obj_to_char(obj, victim);
 	}
@@ -867,7 +867,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		obj_to_room(obj, victim->in_room);
 
-		if (IS_NPC(victim) && victim->wait == 0 && can_see_obj(victim, obj))
+		if (is_npc(victim) && victim->wait == 0 && can_see_obj(victim, obj))
 			get_obj(victim, obj, NULL, true);
 	}
 
@@ -1011,12 +1011,12 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		vch_next = vch->next_in_room;
 
-		if (!IS_NPC(vch) && is_safe_new(ch, vch, false))
+		if (!is_npc(vch) && is_safe_new(ch, vch, false))
 			continue;
 
-		if (!IS_NPC(vch) && !is_same_group(vch, ch))
+		if (!is_npc(vch) && !is_same_group(vch, ch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -1165,10 +1165,10 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 				{
 					vch_next = vch->next_in_room;
 
-					if (IS_NPC(vch) && IS_SET(vch->act, ACT_SENTINEL))
+					if (is_npc(vch) && IS_SET(vch->act, ACT_SENTINEL))
 						continue;
 
-					if (!IS_NPC(vch) && is_safe_new(af->owner, vch, false))
+					if (!is_npc(vch) && is_safe_new(af->owner, vch, false))
 						continue;
 
 					direction = flag_name_lookup(reverse_d(i), direction_table);
@@ -1293,7 +1293,7 @@ void spell_diuretic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	heal = dice(2, 8) + level / 2;
-	victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+	victim->hit = std::min(victim->hit + heal, (int)victim->max_hit);
 
 	update_pos(victim);
 
@@ -1380,8 +1380,8 @@ void spell_immolate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (obj->pIndexData->material_index > 0
 			&& number_percent() < 30 * material_table[obj->pIndexData->material_index].mat_flammability
-			&& !(is_affected_obj(obj, gsn_immolate) || IS_AFFECTED(obj, AFF_OBJ_BURNING))
-			&& !IS_OBJ_STAT(obj, ITEM_BURN_PROOF))
+			&& !(is_affected_obj(obj, gsn_immolate) || is_affected_by(obj, AFF_OBJ_BURNING))
+			&& !is_obj_stat(obj, ITEM_BURN_PROOF))
 		{
 			init_affect_obj(&oaf);
 			oaf.where = TO_OBJ_AFFECTS;
@@ -1448,9 +1448,9 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!IS_NPC(ch) && !IS_NPC(vch) && (ch->fighting == NULL || vch->fighting == NULL))
+		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == NULL || vch->fighting == NULL))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -1496,18 +1496,18 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		vch_next = vch->next_in_room;
 
-		if ((IS_IMMORTAL(vch) && !can_see(ch, vch))
+		if ((is_immortal(vch) && !can_see(ch, vch))
 			|| is_same_group(vch, ch)
 			|| is_safe(ch, vch)
 			|| is_same_cabal(ch, vch)
-			|| IS_AFFECTED(vch, AFF_FLYING))
+			|| is_affected_by(vch, AFF_FLYING))
 		{
 			continue;
 		}
 
-		if (!IS_NPC(vch))
+		if (!is_npc(vch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -1685,7 +1685,7 @@ void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (IS_AFFECTED(victim, AFF_BLIND)
+	if (is_affected_by(victim, AFF_BLIND)
 		|| saves_spell(level, victim, DAM_ENERGY)
 		|| IS_SET(victim->act, ACT_UNDEAD)
 		|| IS_SET(victim->form, FORM_UNDEAD))
@@ -1994,7 +1994,7 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 
-	if (!IS_NPC(victim) && victim->pcdata->condition[COND_THIRST] > COND_HUNGRY)
+	if (!is_npc(victim) && victim->pcdata->condition[COND_THIRST] > COND_HUNGRY)
 	{
 		act("$N is already too dehydrated to be affected.", ch, 0, victim, TO_CHAR);
 		return;
@@ -2004,7 +2004,7 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("A wave of nausea overcomes you as your gut clenches and sweat gushes from your pores.\n\rYou feel desperately thirsty.", ch, 0, victim, TO_VICT);
 	act("$N doubles over in agony as rolls of sweat drip from $S body.", ch, 0, victim, TO_NOTVICT);
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		damage_new(ch, victim, dice(level, 3), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 	}
@@ -2028,7 +2028,7 @@ void spell_drown(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (ch->in_room->sector_type == SECT_WATER || ch->in_room->sector_type == SECT_UNDERWATER)
 		dam *= 2;
 
-	if (IS_AFFECTED(victim, AFF_WATERBREATH))
+	if (is_affected_by(victim, AFF_WATERBREATH))
 		dam /= 2;
 
 	damage_new(ch, victim, dam, sn, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
@@ -2133,7 +2133,7 @@ void spell_hydration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	else
 		act("You feel your wounds mending rapidly as the life-giving water fills you with vigor!", victim, 0, 0, TO_CHAR);
 
-	victim->hit = UMIN(victim->hit + heal, victim->max_hit);
+	victim->hit = std::min(victim->hit + heal, (int)victim->max_hit);
 }
 
 void spell_regeneration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -2285,7 +2285,7 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 					break;
 			}
 
-			duration = UMAX(oaf->duration - 1, 0);
+			duration = std::max(oaf->duration - 1, 0);
 		}
 
 		init_affect_room(&raf);
@@ -2372,7 +2372,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				raf.level = level;
 				raf.duration = -1;
 				raf.location = APPLY_ROOM_NONE;
-				raf.modifier = UMAX((i * 2) - 1, 2);
+				raf.modifier = std::max((i * 2) - 1, 2);
 				raf.owner = ch;
 				raf.end_fun = NULL;
 				raf.tick_fun = NULL;
@@ -2406,7 +2406,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				raf.level = level;
 				raf.duration = -1;
 				raf.location = APPLY_ROOM_NONE;
-				raf.modifier = UMAX((i * 2) - 1, 2);
+				raf.modifier = std::max((i * 2) - 1, 2);
 				raf.owner = ch;
 				raf.end_fun = NULL;
 				raf.tick_fun = NULL;
@@ -2453,12 +2453,12 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (vch == ch)
 			continue;
 
-		if (!IS_NPC(vch) && is_safe_new(ch, vch, false))
+		if (!is_npc(vch) && is_safe_new(ch, vch, false))
 			continue;
 
-		if (!IS_NPC(vch))
+		if (!is_npc(vch))
 		{
-			sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", PERS(ch, vch));
+			sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -2709,7 +2709,7 @@ void spell_diffusion(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (!IS_AFFECTED(victim, AFF_PASS_DOOR))
+	if (!is_affected_by(victim, AFF_PASS_DOOR))
 	{
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -2774,7 +2774,7 @@ void spell_anchor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		wch_next = wch->next;
 
-		if (IS_NPC(wch) && wch->pIndexData->vnum == MOB_VNUM_ANCHOR && wch->hunting == ch)
+		if (is_npc(wch) && wch->pIndexData->vnum == MOB_VNUM_ANCHOR && wch->hunting == ch)
 		{
 			oldanchor = wch;
 			break;
@@ -2819,7 +2819,7 @@ void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, void *vo, int 
 	{
 		wch_next = wch->next;
 
-		if (IS_NPC(wch) && wch->pIndexData->vnum == MOB_VNUM_ANCHOR && wch->hunting == ch)
+		if (is_npc(wch) && wch->pIndexData->vnum == MOB_VNUM_ANCHOR && wch->hunting == ch)
 		{
 			anchor = wch;
 			break;
@@ -2854,7 +2854,7 @@ void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, void *vo, int 
 				continue;
 			}
 
-			if (!IS_SET(pRoomIndex->room_flags, ROOM_NO_RECALL) && !IS_EXPLORE(pRoomIndex) && !pRoomIndex->cabal)
+			if (!IS_SET(pRoomIndex->room_flags, ROOM_NO_RECALL) && !is_explore(pRoomIndex) && !pRoomIndex->cabal)
 				break;
 		}
 
@@ -3168,7 +3168,7 @@ void spell_reduce(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (!trusts(ch, victim))
 	{
-		sprintf(buf, "Die, %s, you sorcerous dog!", PERS(ch, victim));
+		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 	}
@@ -3271,8 +3271,8 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (IS_AFFECTED(victim, AFF_SLEEP)
-		|| (IS_NPC(victim) && IS_SET(victim->act, ACT_UNDEAD))
+	if (is_affected_by(victim, AFF_SLEEP)
+		|| (is_npc(victim) && IS_SET(victim->act, ACT_UNDEAD))
 		|| saves_spell(level - 1, victim, DAM_COLD)
 		|| IS_SET(victim->imm_flags, IMM_SLEEP))
 	{
@@ -3294,7 +3294,7 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.mod_name = MOD_CONC;
 	affect_join(victim, &af);
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		if (is_affected(victim, gsn_indom))
 		{
@@ -3393,7 +3393,7 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, void *vo, i
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		act("You lack the necessary understanding of $N's structure to accomplish that.", ch, 0, victim, TO_CHAR);
 		return;
@@ -3581,7 +3581,7 @@ void agitate_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 {
 	int dam;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->pcdata->energy_state > 4)
@@ -3631,7 +3631,7 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (obj == NULL || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
 			continue;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF))
+		if (is_obj_stat(obj, ITEM_BURN_PROOF))
 			continue;
 
 		if (obj->pIndexData->material_index > 0)
@@ -4138,13 +4138,13 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 			pexit = ch->in_room->exit[door];
 
-			if (!IS_SET(pexit->exit_info, EX_CLOSED) && !IS_IMMORTAL(ch))
+			if (!IS_SET(pexit->exit_info, EX_CLOSED) && !is_immortal(ch))
 			{
 				send_to_char("It's not closed.\n\r", ch);
 				return;
 			}
 
-			if (pexit->key < 0 && !IS_IMMORTAL(ch))
+			if (pexit->key < 0 && !is_immortal(ch))
 			{
 				send_to_char("It can't be corroded.\n\r", ch);
 				return;
@@ -4156,7 +4156,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				return;
 			}
 
-			if (IS_SET(pexit->exit_info, EX_PICKPROOF) && !IS_IMMORTAL(ch))
+			if (IS_SET(pexit->exit_info, EX_PICKPROOF) && !is_immortal(ch))
 			{
 				send_to_char("You failed.\n\r", ch);
 				return;
@@ -4228,7 +4228,7 @@ void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 
 	damage_new(af->owner, ch, dice(af->level, 4), gsn_attract, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the lightning strike*");
 
-	if (!IS_AWAKE(ch))
+	if (!is_awake(ch))
 		ch->position = POS_STANDING;
 }
 
@@ -4271,7 +4271,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	victim = get_char_world(ch, target_name);
 
-	if (victim == NULL || (ch->in_room->area != victim->in_room->area || IS_NPC(victim)))
+	if (victim == NULL || (ch->in_room->area != victim->in_room->area || is_npc(victim)))
 	{
 		send_to_char("Call lightning on whom?\n\r", ch);
 		return;
@@ -4354,7 +4354,7 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (!trusts(ch, victim) && saves_spell(level, victim, DAM_OTHER))
 	{
 		send_to_char("They resisted your spell.\n\r", ch);
-		sprintf(buf, "Die, %s, you sorcerous dog!", PERS(ch, victim));
+		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 		return;
@@ -4395,14 +4395,14 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("As $n gestures, $N seems more firmly connected to the earth beneath $M.", ch, NULL, victim, TO_NOTVICT);
 	}
 
-	if (IS_AFFECTED(victim, AFF_FLYING))
+	if (is_affected_by(victim, AFF_FLYING))
 	{
 		REMOVE_BIT(victim->affected_by, AFF_FLYING);
 	}
 
 	if (!trusts(ch, victim))
 	{
-		sprintf(buf, "Die, %s, you sorcerous dog!", PERS(ch, victim));
+		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 	}
@@ -4448,9 +4448,9 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!IS_NPC(ch) && !IS_NPC(vch) && (ch->fighting == NULL || vch->fighting == NULL))
+		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == NULL || vch->fighting == NULL))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -4666,7 +4666,7 @@ void spell_putrid_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_affected(vch, gsn_ultradiffusion))
 			continue;
 
-		if (IS_NPC(vch) && !IS_SET(vch->form, FORM_BIPED))
+		if (is_npc(vch) && !IS_SET(vch->form, FORM_BIPED))
 			continue;
 
 		if (vch == ch)
@@ -4706,7 +4706,7 @@ void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 {
 	AFFECT_DATA af;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 	{
 		send_to_char("I don't think so.\n\r", ch);
 		return;
@@ -4809,7 +4809,7 @@ void spell_heat_earth(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *vch, *vch_next;
 	int dam;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be on solid ground to cast this spell.\n\r", ch);
 		return;
@@ -4827,16 +4827,16 @@ void spell_heat_earth(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!IS_NPC(ch) && !IS_NPC(vch) && (!ch->fighting || !vch->fighting))
+		if (!is_npc(ch) && !is_npc(vch) && (!ch->fighting || !vch->fighting))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
 		if (saves_spell(level, vch, DAM_FIRE))
 			dam /= 2;
 
-		if (IS_AFFECTED(vch, AFF_FLYING))
+		if (is_affected_by(vch, AFF_FLYING))
 			dam /= 2;
 
 		damage_new(ch, vch, dam, TYPE_UNDEFINED, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "scorched earth");
@@ -4872,7 +4872,7 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_OUTSIDE(ch))
+	if (!is_outside(ch))
 	{
 		send_to_char("No amount of concentration will make it snow indoors.\n\r", ch);
 		return;
@@ -5003,7 +5003,7 @@ void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (pexit == NULL
 		|| pexit->u1.to_room == NULL
-		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !IS_AFFECTED(ch, AFF_PASS_DOOR))
+		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 	{
 		send_to_char("That direction is obstructed!\n\r", ch);
@@ -5063,7 +5063,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 
 	if (pexit == NULL
 		|| pexit->u1.to_room == NULL
-		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !IS_AFFECTED(ch, AFF_PASS_DOOR))
+		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 	{
 		act("Since the exit $t has become obstructed, the swirling winds dissipate.", ch, direction, 0, TO_ALL);
@@ -5078,7 +5078,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 
 		if (pexit == NULL
 			|| pexit->u1.to_room == NULL
-			|| (IS_SET(pexit->exit_info, EX_CLOSED) && !IS_AFFECTED(ch, AFF_PASS_DOOR))
+			|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 			|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 		{
 			send_to_char("Your rapid motion comes to a crashing halt as you strike an obstacle!\n\r", ch);
@@ -5095,16 +5095,16 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 		{
 			wch_next = wch->next_in_room;
 
-			if (IS_NPC(wch)
+			if (is_npc(wch)
 				&& ((IS_SET(wch->act, ACT_AGGRESSIVE) && wch->level >= ch->level + 5)
 					|| IS_SET(wch->off_flags, SPAM_MURDER))
-				&& IS_AWAKE(wch)
+				&& is_awake(wch)
 				&& wch->fighting != NULL
 				&& can_see(wch, ch)
-				&& !IS_AFFECTED(wch, AFF_CALM)
+				&& !is_affected_by(wch, AFF_CALM)
 				&& !IS_SET(ch->in_room->room_flags, ROOM_SAFE))
 			{
-				sprintf(buf, "As you hurtle along, %s suddenly obstructs your path!\n\r", PERS(wch, ch));
+				sprintf(buf, "As you hurtle along, %s suddenly obstructs your path!\n\r", pers(wch, ch));
 				send_to_char(buf, ch);
 
 				WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -5244,7 +5244,7 @@ void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be in contact with the ground to cast this spell.\n\r", ch);
 		return;
@@ -5288,7 +5288,7 @@ void spell_whiteout(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_OUTSIDE(ch))
+	if (!is_outside(ch))
 	{
 		send_to_char("You must be able to see the sky to create a whiteout.\n\r", ch);
 		return;
@@ -5369,7 +5369,7 @@ void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_affected(vch, gsn_ultradiffusion))
 			continue;
 
-		if (IS_NPC(vch) && !IS_SET(vch->form, FORM_BIPED))
+		if (is_npc(vch) && !IS_SET(vch->form, FORM_BIPED))
 			continue;
 
 		if (vch == ch)
@@ -5454,7 +5454,7 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	AFFECT_DATA af;
 	int dam = 2 * dice(level, 3);
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must have ground beneath you to cast this spell.\n\r", ch);
 		return;
@@ -5566,7 +5566,7 @@ void spell_frost_growth(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	ROOM_AFFECT_DATA raf;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be on solid ground to cast this spell.\n\r", ch);
 		return;
@@ -5597,13 +5597,13 @@ void spell_bind_feet(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("There is no ground here to entrap their feet.\n\r", ch);
 		return;
 	}
 
-	if (IS_AFFECTED(victim, AFF_FLYING))
+	if (is_affected_by(victim, AFF_FLYING))
 	{
 		send_to_char("Their feet are not in contact with the ground.\n\r", ch);
 		return;
@@ -5677,7 +5677,7 @@ void spell_hailstorm(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	dam = dice(level, 4);
 
-	if (IS_OUTSIDE(ch))
+	if (is_outside(ch))
 		dam = (int)((float)dam * 1.75);
 
 	act("You conjure a rain of deadly hailstones to pelt the area!", ch, 0, 0, TO_CHAR);
@@ -5690,9 +5690,9 @@ void spell_hailstorm(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!IS_NPC(ch) && !IS_NPC(vch) && (!ch->fighting || !vch->fighting))
+		if (!is_npc(ch) && !is_npc(vch) && (!ch->fighting || !vch->fighting))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -5707,7 +5707,7 @@ void spell_stalactites(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	ROOM_AFFECT_DATA raf;
 
-	if (IS_OUTSIDE(ch))
+	if (is_outside(ch))
 	{
 		send_to_char("You must be indoors to cast this spell.\n\r", ch);
 		return;
@@ -5909,7 +5909,7 @@ void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	oaf.aftype = AFT_SPELL;
 	oaf.type = gsn_sheath_of_ice;
 	oaf.location = APPLY_OBJ_WEIGHT;
-	oaf.modifier = UMAX(5, wield->weight * (level / 50));
+	oaf.modifier = std::max(5, wield->weight * (level / 50));
 	oaf.duration = level / 5;
 	oaf.level = level;
 	oaf.owner = ch;
@@ -5981,7 +5981,7 @@ void spell_metal_shards(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_METAL(weapon))
+	if (!is_metal(weapon))
 	{
 		send_to_char("You are not wielding a metallic weapon!\n\r", ch);
 		return;
@@ -6067,7 +6067,7 @@ void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		return;
 	}
 
-	if (!IS_METAL(weapon))
+	if (!is_metal(weapon))
 	{
 		send_to_char("You can only fortify metallic weapons.\n\r", ch);
 		return;
@@ -6241,7 +6241,7 @@ void spell_fortify_armor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_METAL(armor))
+	if (!is_metal(armor))
 	{
 		send_to_char("You can only fortify metallic armor.\n\r", ch);
 		return;
@@ -6342,7 +6342,7 @@ void spell_alter_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_METAL(obj))
+	if (!is_metal(obj))
 	{
 		send_to_char("You can only cast this spell on metal objects.\n\r", ch);
 		return;
@@ -6457,7 +6457,7 @@ void spell_vigorize(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			refresh /= 3;
 
 		send_to_char("As the mist settles over you, you feel refreshed!\n\r", vch);
-		vch->move = UMIN(vch->move + refresh, vch->max_move);
+		vch->move = std::min(vch->move + refresh, (int)vch->max_move);
 	}
 }
 
@@ -6466,7 +6466,7 @@ void spell_creeping_tomb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be on land to cast this spell.\n\r", ch);
 		return;
@@ -6557,7 +6557,7 @@ void spell_quicksand(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	ROOM_AFFECT_DATA raf;
 	AFFECT_DATA af;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be on land to cast this spell.\n\r", ch);
 		return;
@@ -6603,13 +6603,13 @@ void quicksand_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 void quicksand_pulse_sink(CHAR_DATA *ch, AFFECT_DATA *af)
 {
-	if (!IS_GROUND(ch->in_room) || !is_affected_room(ch->in_room, gsn_quicksand))
+	if (!is_ground(ch->in_room) || !is_affected_room(ch->in_room, gsn_quicksand))
 	{
 		affect_remove(ch, af);
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_FLYING))
+	if (is_affected_by(ch, AFF_FLYING))
 	{
 		affect_remove(ch, af);
 		send_to_char("You float into the air, escaping from the quicksand.\n\r", ch);
@@ -6628,7 +6628,7 @@ void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be on solid ground to cast this spell.\n\r", ch);
 		return;
@@ -6638,7 +6638,7 @@ void spell_sap_endurance(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("A tendril of ooze springs from the earth to sap your endurance!", ch, 0, victim, TO_VICT);
 	act("A tendril of ooze springs from the earth to sap $N's endurance!", ch, 0, victim, TO_NOTVICT);
 
-	victim->move = UMAX(0, victim->move - number_range((int)((float)level * .9), (int)((float)level * 1.1)));
+	victim->move = std::max(0, victim->move - number_range((int)((float)level * .9), (int)((float)level * 1.1)));
 }
 
 void spell_emulsify(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -6700,7 +6700,7 @@ void spell_rust(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (number_percent() > 50)
 			continue;
 
-		if (!CAN_RUST(eq))
+		if (!can_rust(eq))
 			continue;
 
 		switch (eq->wear_loc)
@@ -6973,7 +6973,7 @@ void spell_earthfade(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("Fade into what earth?\n\r", ch);
 		return;
@@ -7089,9 +7089,9 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch))
 			continue;
 
-		if (!IS_NPC(vch))
+		if (!is_npc(vch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -7116,9 +7116,9 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch))
 			continue;
 
-		if (!IS_NPC(vch))
+		if (!is_npc(vch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -7316,7 +7316,7 @@ void essence_of_plasma_pulse(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	damage_new(af->owner, victim, dam, gsn_essence_of_plasma, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the essence of plasma*");
 
-	if (!fighting && !IS_NPC(victim))
+	if (!fighting && !is_npc(victim))
 		stop_fighting(victim, true);
 
 	af->modifier++;
@@ -7482,7 +7482,7 @@ void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (!IS_GROUND(ch->in_room))
+	if (!is_ground(ch->in_room))
 	{
 		send_to_char("You must be in contact with the ground to cast this spell.\n\r", ch);
 		return;
@@ -7529,10 +7529,10 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (obj == NULL || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
 			continue;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF))
+		if (is_obj_stat(obj, ITEM_BURN_PROOF))
 			continue;
 
-		if (!IS_STONE(obj))
+		if (!is_stone(obj))
 			continue;
 
 		if (number_range(0, 100) > (40 + (ch->level / 2)))
@@ -7796,7 +7796,7 @@ void spell_detonation(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (vch == ch)
 			continue;
 
-		if (!IS_NPC(vch) && is_safe_new(ch, vch, true))
+		if (!is_npc(vch) && is_safe_new(ch, vch, true))
 			continue;
 
 		if (is_same_group(ch, vch) || is_same_cabal(ch, vch))
@@ -7836,7 +7836,7 @@ void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	charges = UMAX(1, oaf->modifier / 100);
+	charges = std::max(1, oaf->modifier / 100);
 
 	if (is_affected(ch, gsn_rotating_ward))
 	{

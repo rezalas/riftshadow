@@ -52,7 +52,7 @@ ROOM_INDEX_DATA *get_random_room(CHAR_DATA *ch)
 			&& !IS_SET(room->room_flags, ROOM_GODS_ONLY)
 			&& !IS_SET(room->room_flags, ROOM_NO_GATE))
 		{
-			if (!IS_NPC(ch))
+			if (!is_npc(ch))
 				return room;
 
 			if (!(IS_SET(ch->act, ACT_AGGRESSIVE) && !IS_SET(room->room_flags, ROOM_LAW)))
@@ -86,15 +86,15 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	}
 
 	if (portal->item_type != ITEM_PORTAL
-		|| (IS_SET_OLD(portal->value[1], EX_CLOSED) && !IS_TRUSTED(ch, ANGEL)))
+		|| (IS_SET_OLD(portal->value[1], EX_CLOSED) && !is_trusted(ch, ANGEL)))
 	{
 		send_to_char("You can't seem to find a way in.\n\r", ch);
 		return;
 	}
 
-	if (!IS_TRUSTED(ch, ANGEL)
+	if (!is_trusted(ch, ANGEL)
 		&& !IS_SET_OLD(portal->value[2], GATE_NOCURSE) 
-		&& (IS_AFFECTED(ch, AFF_CURSE) || IS_SET(old_room->room_flags, ROOM_NO_RECALL)))
+		&& (is_affected_by(ch, AFF_CURSE) || IS_SET(old_room->room_flags, ROOM_NO_RECALL)))
 	{
 		send_to_char("Something prevents you from leaving...\n\r", ch);
 		return;
@@ -114,13 +114,13 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	if (location == NULL 
 		|| location == old_room 
 		|| !can_see_room(ch, location) 
-		|| (room_is_private(location) && !IS_TRUSTED(ch, IMPLEMENTOR)))
+		|| (room_is_private(location) && !is_trusted(ch, IMPLEMENTOR)))
 	{
 		act("$p doesn't seem to go anywhere.", ch, portal, NULL, TO_CHAR);
 		return;
 	}
 
-	if (IS_NPC(ch) 
+	if (is_npc(ch) 
 		&& IS_SET(ch->act, ACT_AGGRESSIVE) 
 		&& IS_SET(location->room_flags, ROOM_LAW))
 	{
@@ -171,7 +171,7 @@ void do_enter(CHAR_DATA *ch, char *argument)
 		}
 
 		/* Greet trigger for mobs  */
-		if (IS_NPC(fch) && IS_SET(fch->progtypes, MPROG_GREET))
+		if (is_npc(fch) && IS_SET(fch->progtypes, MPROG_GREET))
 			fch->pIndexData->mprogs->greet_prog(fch, ch);
 	}
 
@@ -190,12 +190,12 @@ void do_enter(CHAR_DATA *ch, char *argument)
 		if (portal == NULL || portal->value[0] == 0)
 			continue;
 
-		if (fch->master == ch && IS_AFFECTED(fch, AFF_CHARM) && fch->position < POS_STANDING)
+		if (fch->master == ch && is_affected_by(fch, AFF_CHARM) && fch->position < POS_STANDING)
 			do_stand(fch, "");
 
 		if (fch->master == ch && fch->position == POS_STANDING)
 		{
-			if (IS_SET(ch->in_room->room_flags, ROOM_LAW) && (IS_NPC(fch) && IS_SET(fch->act, ACT_AGGRESSIVE)))
+			if (IS_SET(ch->in_room->room_flags, ROOM_LAW) && (is_npc(fch) && IS_SET(fch->act, ACT_AGGRESSIVE)))
 			{
 				act("You can't bring $N into the city.", ch, NULL, fch, TO_CHAR);
 				act("You aren't allowed in the city.", fch, NULL, NULL, TO_CHAR);

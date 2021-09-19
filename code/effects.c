@@ -71,7 +71,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 		int chance;
 		char *msg;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF) || IS_OBJ_STAT(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
+		if (is_obj_stat(obj, ITEM_BURN_PROOF) || is_obj_stat(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
 			return;
 
 		chance = level / 4 + dam / 10;
@@ -82,7 +82,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 		if (chance > 50)
 			chance = (chance - 50) / 2 + 50;
 
-		if (IS_OBJ_STAT(obj, ITEM_BLESS))
+		if (is_obj_stat(obj, ITEM_BLESS))
 			chance -= 5;
 
 		chance -= obj->level * 2;
@@ -136,7 +136,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 					af_found = true;
 					paf->type = -1;
 					paf->modifier += 1;
-					paf->level = UMAX(paf->level, level);
+					paf->level = std::max((int)paf->level, level);
 					break;
 				}
 			}
@@ -236,7 +236,7 @@ void cold_effect(void *vo, int level, int dam, int target)
 		}
 
 		/* hunger! (warmth sucked out */
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			gain_condition(victim, COND_HUNGER, dam / 20);
 
 		/* let's toast some gear */
@@ -255,7 +255,7 @@ void cold_effect(void *vo, int level, int dam, int target)
 		int chance;
 		char *msg;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF) || IS_OBJ_STAT(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
+		if (is_obj_stat(obj, ITEM_BURN_PROOF) || is_obj_stat(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
 			return;
 
 		chance = level / 4 + dam / 10;
@@ -265,7 +265,7 @@ void cold_effect(void *vo, int level, int dam, int target)
 		if (chance > 50)
 			chance = (chance - 50) / 2 + 50;
 
-		if (IS_OBJ_STAT(obj, ITEM_BLESS))
+		if (is_obj_stat(obj, ITEM_BLESS))
 			chance -= 5;
 
 		chance -= obj->level * 2;
@@ -320,7 +320,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 		OBJ_DATA *obj, *obj_next;
 
 		/* chance of blindness */
-		if (!IS_AFFECTED(victim, AFF_BLIND) && !saves_spell(level / 4 + dam / 20, victim, DAM_FIRE))
+		if (!is_affected_by(victim, AFF_BLIND) && !saves_spell(level / 4 + dam / 20, victim, DAM_FIRE))
 		{
 			AFFECT_DATA af;
 			act("$n is blinded by smoke!", victim, NULL, NULL, TO_ROOM);
@@ -340,7 +340,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 		}
 
 		/* getting thirsty */
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			gain_condition(victim, COND_THIRST, dam / 20);
 
 		/* let's toast some gear! */
@@ -361,7 +361,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 		int chance;
 		char *msg;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF) || IS_OBJ_STAT(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
+		if (is_obj_stat(obj, ITEM_BURN_PROOF) || is_obj_stat(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
 			return;
 
 		chance = level / 4 + dam / 10;
@@ -371,7 +371,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 		if (chance > 50)
 			chance = (chance - 50) / 2 + 50;
 
-		if (IS_OBJ_STAT(obj, ITEM_BLESS))
+		if (is_obj_stat(obj, ITEM_BLESS))
 			chance -= 5;
 		chance -= obj->level * 2;
 
@@ -502,7 +502,7 @@ void poison_effect(void *vo, int level, int dam, int target)
 		OBJ_DATA *obj = (OBJ_DATA *)vo;
 		int chance;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF) || IS_OBJ_STAT(obj, ITEM_BLESS) || number_range(0, 4) == 0)
+		if (is_obj_stat(obj, ITEM_BURN_PROOF) || is_obj_stat(obj, ITEM_BLESS) || number_range(0, 4) == 0)
 			return;
 
 		chance = level / 4 + dam / 10;
@@ -573,7 +573,7 @@ void shock_effect(void *vo, int level, int dam, int target)
 		int chance;
 		char *msg;
 
-		if (IS_OBJ_STAT(obj, ITEM_BURN_PROOF) || IS_OBJ_STAT(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
+		if (is_obj_stat(obj, ITEM_BURN_PROOF) || is_obj_stat(obj, ITEM_NOPURGE) || number_range(0, 4) == 0)
 			return;
 
 		chance = level / 4 + dam / 10;
@@ -584,7 +584,7 @@ void shock_effect(void *vo, int level, int dam, int target)
 		if (chance > 50)
 			chance = (chance - 50) / 2 + 50;
 
-		if (IS_OBJ_STAT(obj, ITEM_BLESS))
+		if (is_obj_stat(obj, ITEM_BLESS))
 			chance -= 5;
 
 		chance -= obj->level * 2;

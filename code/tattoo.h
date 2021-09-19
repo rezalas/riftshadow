@@ -13,6 +13,7 @@
 #include "comm.h"
 #include "interp.h"
 #include "db.h"
+#include "utility.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

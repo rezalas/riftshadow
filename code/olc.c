@@ -676,7 +676,7 @@ int get_security(CHAR_DATA *ch)
 
 bool check_security(CHAR_DATA *ch)
 {
-	if (IS_SWITCHED(ch) || IS_NPC(ch))
+	if (is_switched(ch) || is_npc(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return false;
@@ -758,7 +758,7 @@ void do_aedit(CHAR_DATA *ch, char *argument)
 	{
 		if (!str_cmp(arg, "create"))
 		{
-			if (!IS_NPC(ch) && (ch->pcdata->security < 9))
+			if (!is_npc(ch) && (ch->pcdata->security < 9))
 			{
 				send_to_char("You do not have the access to create areas.\n\r", ch);
 				return;
@@ -874,7 +874,7 @@ void do_oedit(CHAR_DATA *ch, char *argument)
 	char arg1[MAX_STRING_LENGTH];
 	int value = 0;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (!check_security(ch))

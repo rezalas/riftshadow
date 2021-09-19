@@ -149,10 +149,10 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	void *vo;
 	int mana, where, sn, target = 0;
 
-	if (IS_NPC(ch) && ch->desc == NULL)
+	if (is_npc(ch) && ch->desc == NULL)
 		return;
 
-	if (ch->Class()->ctype != CLASS_CASTER && !IS_IMMORTAL(ch))
+	if (ch->Class()->ctype != CLASS_CASTER && !is_immortal(ch))
 		send_to_char("You do not know how to create runes.\n\r", ch);
 
 	if (IS_SET(ch->act, PLR_BETRAYER))
@@ -161,13 +161,13 @@ void do_rune(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(ch) && ch->pcdata->oalign == 3 && ch->alignment == -1000)
+	if (!is_npc(ch) && ch->pcdata->oalign == 3 && ch->alignment == -1000)
 	{
 		send_to_char("You feel cut off from your source of power.\n\r", ch);
 		return;
 	}
 
-	if (!IS_NPC(ch) && ch->pcdata->energy_state > 2)
+	if (!is_npc(ch) && ch->pcdata->energy_state > 2)
 	{
 		send_to_char("You cannot concentrate enough to complete the incantation.\n\r", ch);		
 		return;
@@ -186,8 +186,8 @@ void do_rune(CHAR_DATA *ch, char *argument)
 
 	if ((sn = find_spell(ch, arg1)) < 1
 		|| skill_table[sn].spell_fun == spell_null
-		|| (!IS_NPC(ch) && get_skill(ch, sn) < 5)
-		|| (!IS_NPC(ch) && ch->pcdata->learned[sn] == 0))
+		|| (!is_npc(ch) && get_skill(ch, sn) < 5)
+		|| (!is_npc(ch) && ch->pcdata->learned[sn] == 0))
 	{
 		send_to_char("You don't know any runes of that name.\n\r", ch);
 		return;
@@ -201,7 +201,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 
 	if ((skill_table[sn].ctype == CMD_COMMUNE || skill_table[sn].ctype == CMD_POWER ||
 		 skill_table[sn].ctype == CMD_SPELL) &&
-		!(skill_table[sn].target & RUNE_CAST) && !IS_IMMORTAL(ch))
+		!(skill_table[sn].target & RUNE_CAST) && !is_immortal(ch))
 	{
 		send_to_char("You can't draw that rune.\n\r", ch);
 		return;
@@ -210,7 +210,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	if (ch->level + 2 == skill_table[sn].skill_level[ch->Class()->GetIndex()])
 		mana = 50;
 	else
-		mana = UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+		mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
 
 	obj = NULL;
 	vo = NULL;
@@ -299,7 +299,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(ch) && ch->mana < mana)
+	if (!is_npc(ch) && ch->mana < mana)
 	{
 		send_to_char("You don't have enough mana.\n\r", ch);
 		return;

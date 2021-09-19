@@ -2497,41 +2497,6 @@ struct kill_data
 #define MAT_GAS						2
 #define MAT_PLASMA					3
 
-#define PIECE_NONE					-1
-#define WHITE_PAWN					0
-#define WHITE_KNIGHT				1
-#define WHITE_BISHOP				2
-#define WHITE_ROOK					3
-#define WHITE_QUEEN					4
-#define WHITE_KING					5
-#define BLACK_PAWN					6
-#define BLACK_KNIGHT				7
-#define BLACK_BISHOP				8
-#define BLACK_ROOK					9
-#define BLACK_QUEEN					10
-#define BLACK_KING					11
-#define MAX_PIECE					12
-
-#define WHITE_SQUARE				0
-#define BLACK_SQUARE				1
-
-#define WHITE_PIECE					0
-#define BLACK_PIECE					1
-
-#define IS_WHITE(piece)		((piece == WHITE_PAWN || \
-								piece == WHITE_KNIGHT || \
-								piece == WHITE_BISHOP || \
-								piece == WHITE_ROOK || \
-								piece == WHITE_QUEEN || \
-								piece == WHITE_KING))
-
-#define IS_BLACK(piece)		((piece == BLACK_PAWN || \
-								piece == BLACK_KNIGHT || \
-								piece == BLACK_BISHOP || \
-								piece == BLACK_ROOK || \
-								piece == BLACK_QUEEN || \
-								piece == BLACK_KING))
-
 //
 // Prototype for a mob.
 // This is the in-memory version of #MOBILES.
@@ -3939,11 +3904,6 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 // Utility macros.
 //
 
-#define IS_VALID(data)				(data != NULL && data->valid)
-#define VALIDATE(data)				(data->valid = true)
-#define INVALIDATE(data)			(data->valid = false)
-#define UMIN(a, b)					(a < b ? a : b)
-#define UMAX(a, b)					(a > b ? a : b)
 #define URANGE(a, b, c)				(b < a ? a : (b > c ? c : b))
 #define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
 #define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
@@ -3955,128 +3915,6 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 #define REMOVE_BIT_OLD(var,bit) 	(var &= ~((long)pow(2,bit)))
 #define TOGGLE_BIT(var, bit)		(IS_SET(var,bit) ? REMOVE_BIT(var,bit) : SET_BIT(var,bit))
 #define TOGGLE_BIT_OLD(var, bit)	(IS_SET_OLD(var,bit) ? REMOVE_BIT_OLD(var,bit) : SET_BIT_OLD(var,bit))
-#define PERCENT(cur, max)			(max == 0 ? 0 :(cur * 100) / (max))
-
-//
-// Character macros.
-//
-
-#define IS_CABAL_GUARD(ch)			(IS_NPC(ch) && IS_SET(ch->act, ACT_INNER_GUARDIAN))
-#define IS_NPC(ch)					(IS_SET(ch->act, ACT_IS_NPC))
-#define IS_IMMORTAL(ch)				(get_trust(ch) >= LEVEL_IMMORTAL)
-#define IS_HERO(ch)					(get_trust(ch) >= LEVEL_HERO)
-#define IS_HEROIMM(ch)				(IS_SET(ch->act,PLR_HEROIMM))
-#define IS_TRUSTED(ch,level)		(get_trust(ch) >= level)
-#define IS_AFFECTED(ch, sn)			(IS_SET(ch->affected_by, sn))
-#define IS_ANSI(ch)					(!IS_NPC(ch) && IS_SET(ch->comm, COMM_ANSI))
-
-
-#define IS_GOOD(ch)					(get_align(ch) > 333)
-#define IS_EVIL(ch)					(get_align(ch) < -333)
-#define IS_NEUTRAL(ch)				(!IS_GOOD(ch) && !IS_EVIL(ch))
-
-#define IS_LAWFUL(ch)				(get_ethos(ch) > 333)
-#define IS_CHAOTIC(ch)				(get_ethos(ch) < -333)
-#define IS_ENEUTRAL(ch)				(!IS_LAWFUL(ch) && !IS_CHAOTIC(ch))
-
-#define IS_SAME_ALIGN(one,two)		((one < 333 && two < 333) || (one > -333 && one < 333 && two > -333 && two < 333) || (one > 333 && two > 333))
-#define IS_OPP_ALIGN(ch,vch)		((IS_GOOD(ch) && IS_EVIL(vch)) || (IS_EVIL(ch) && IS_GOOD(vch)))
-#define IS_NUM_GOOD(num)			(num > 333)
-#define IS_NUM_EVIL(num)			(num < -333)
-#define IS_NUM_NEUTRAL(num)			(!IS_NUM_GOOD(num) && !IS_NUM_EVIL(num))
-
-#define IS_NUM_LAWFUL(num)			(num > 333)
-#define IS_NUM_CHAOTIC(num)			(num < -333)
-#define IS_NUM_ENEUTRAL(num)		(!IS_NUM_LAWFUL(num) && !IS_NUM_CHAOTIC(num))
-
-
-#define IS_AWAKE(ch)				(ch->position > POS_SLEEPING)
-#define GET_AC(ch,type)				(ch->armor[type])
-#define GET_HITROLL(ch)				(ch->hitroll+dex_app[get_curr_stat(ch,STAT_DEX)].tohit)
-#define GET_DAMROLL(ch) 			(ch->damroll+str_app[get_curr_stat(ch,STAT_STR)].todam)
-
-#define IS_OUTSIDE(ch)				(!IS_SET(ch->in_room->room_flags, ROOM_INDOORS) 		\
- 										&& ch->in_room->sector_type != SECT_INSIDE 			\
-										&& ch->in_room->sector_type != SECT_UNDERWATER)
-
-#define get_carry_weight(ch)		(ch->carry_weight + ch->gold/10000)
-
-#define IS_SHIFTED(ch)				(false)
-#define IS_HUNGRY(ch)				(IS_NPC(ch) ? false : (ch)->pcdata->condition[COND_HUNGER] > COND_HUNGRY ? true : false)
-#define IS_THIRSTY(ch)				(IS_NPC(ch) ? false : (ch)->pcdata->condition[COND_THIRST] > COND_HUNGRY ? true : false)
-
-//
-// Room Macros
-//
-
-#define IS_ROOM_AFFECTED(room, sn)	(IS_SET(room->affected_by, sn))
-#define IS_RAFFECTED(room, sn)		(IS_SET(room->affected_by, sn))
-#define IS_GROUND(room)				(room->sector_type != SECT_AIR && room->sector_type != SECT_WATER && room->sector_type != SECT_UNDERWATER && room->sector_type != SECT_VERTICAL)
-#define IS_WATER(room)				(room->sector_type == SECT_WATER || room->sector_type == SECT_UNDERWATER)
-
-//
-// Object macros.
-//
-
-#define CAN_WEAR(obj, part)			(IS_SET(obj->wear_flags, part))
-#define IS_OBJ_STAT(obj, stat)		(IS_SET(obj->extra_flags, stat))
-#define IS_WEAPON_STAT(obj,stat)	(IS_SET_OLD(obj->value[4], stat))
-#define WEIGHT_MULT(obj)			(obj->item_type == ITEM_CONTAINER ? obj->value[4] : 100)
-#define IS_EXPLORE(room)			(IS_SET(room->room_flags, ROOM_AREA_EXPLORE) || IS_SET(room->area->area_flags, AREA_EXPLORE) ? true : false)
-#define IS_METAL(obj)				(!str_cmp(obj->material, "iron")			\
-										|| !str_cmp(obj->material, "steel")		\
-										|| !str_cmp(obj->material, "mithril")	\
-										|| !str_cmp(obj->material, "copper")	\
-										|| !str_cmp(obj->material, "gold")		\
-										|| !str_cmp(obj->material, "silver")	\
-										|| !str_cmp(obj->material, "platinum")	\
-										|| !str_cmp(obj->material, "brass")		\
-										|| !str_cmp(obj->material, "bronze")	\
-										|| !str_cmp(obj->material, "metal")		\
-										|| !str_cmp(obj->material, "pewter")	\
-										|| !str_cmp(obj->material, "lead")		\
-										|| !str_cmp(obj->material, "electrum")	\
-										|| !str_cmp(obj->material, "tin"))
-
-#define IS_STONE(obj)				(!str_cmp(obj->material, "ceramic")			\
-										|| !str_cmp(obj->material, "porcelain")	\
-										|| !str_cmp(obj->material, "marble")	\
-										|| !str_cmp(obj->material, "stone")		\
-										|| !str_cmp(obj->material, "quartz")	\
-										|| !str_cmp(obj->material, "corundum")	\
-										|| !str_cmp(obj->material, "flint")		\
-										|| !str_cmp(obj->material, "lodestone")	\
-										|| !str_cmp(obj->material, "granite")	\
-										|| !str_cmp(obj->material, "enamel")	\
-										|| !str_cmp(obj->material, "obsidian")	\
-										|| !str_cmp(obj->material, "glass")		\
-										|| !str_cmp(obj->material, "pottery")	\
-										|| !str_cmp(obj->material, "crystal")	\
-										|| !str_cmp(obj->material, "coral")		\
-										|| !str_cmp(obj->material, "sandstone")	\
-										|| !str_cmp(obj->material, "clay")		\
-										|| !str_cmp(obj->material, "earth")		\
-										|| !str_cmp(obj->material, "ceramic"))
-
-#define CAN_RUST(obj)				(!str_cmp(obj->material, "iron")			\
-										|| !str_cmp(obj->material, "steel")		\
-										|| !str_cmp(obj->material, "copper")	\
-										|| !str_cmp(obj->material, "brass")		\
-										|| !str_cmp(obj->material, "bronze")	\
-										|| !str_cmp(obj->material, "metal")		\
-										|| !str_cmp(obj->material, "pewter")	\
-										|| !str_cmp(obj->material, "lead")		\
-										|| !str_cmp(obj->material, "tin"))
-
-//
-// Description macros.
-//
-
-#define PERS(ch, looker)			(can_see(looker, ch) && !is_affected(looker, gsn_plasma_arc)	\
-										? (IS_NPC(ch) ? ch->short_descr : ch->name)					\
-										: (IS_IMMORTAL(ch) && !IS_NPC(ch) && ch->invis_level > 50	\
-												&& (!ch->desc || !ch->desc->original) 				\
-											? "An Immortal" : "someone"))
 
 //
 // Structure for a social in the socials table.
@@ -4248,14 +4086,6 @@ extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 #define LOW_VNUM					-1
 
 
-#define IS_SWITCHED( ch )			(ch->desc && ch->desc->original)	// ROM OLC
-
-/*
-#define exit(x)						(x != 3 ? bug_exit(__FILE__,__LINE__) : exit(3))
-#define str_cmp(a,b)				((gLastFile = __FILE__) ? (gLastLine = __LINE__) ? str_cmp(a,b) : 0 : 0)
-#define SAFE_EXIT					66
-#define exit(x)						(x != SAFE_EXIT ? kill(getpid(), SIGSEGV) : exit(x))
-*/
 extern bool bDebug;
 
 #define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';

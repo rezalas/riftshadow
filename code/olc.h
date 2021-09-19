@@ -43,6 +43,7 @@
 #include "act_comm.h"
 #include "help.h"
 #include "magic.h"
+#include "utility.h"
 
 /*
  * Interpreter Table Prototypes
@@ -80,7 +81,7 @@ typedef	bool OLC_FUN (CHAR_DATA *ch, char *argument);
  * Macros
  */
 
-#define IS_BUILDER(ch, area)	(!IS_SWITCHED(ch) &&																\
+#define IS_BUILDER(ch, area)	(!is_switched(ch) &&																\
 									((ch->pcdata->security <= area->security && strstr(area->builders, ch->name))	\
 										|| ch->pcdata->security > area->security									\
 										|| strstr(area->builders, "All")))

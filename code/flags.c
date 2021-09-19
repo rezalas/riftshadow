@@ -97,7 +97,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		/* select a flag to set */
 		if (!str_prefix(arg3, "act"))
 		{
-			if (!IS_NPC(victim))
+			if (!is_npc(victim))
 			{
 				send_to_char("Use plr for PCs.\n\r", ch);
 				return;
@@ -108,7 +108,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		}
 		else if (!str_prefix(arg3, "plr"))
 		{
-			if (IS_NPC(victim))
+			if (is_npc(victim))
 			{
 				send_to_char("Use act for NPCs.\n\r", ch);
 				return;
@@ -139,7 +139,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		}
 		else if (!str_prefix(arg3, "off"))
 		{
-			if (!IS_NPC(victim))
+			if (!is_npc(victim))
 			{
 				send_to_char("OFF can't be set on PCs.\n\r", ch);
 				return;
@@ -150,7 +150,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		}
 		else if (!str_prefix(arg3, "form"))
 		{
-			if (!IS_NPC(victim))
+			if (!is_npc(victim))
 			{
 				send_to_char("Form can't be set on PCs.\n\r", ch);
 				return;
@@ -161,7 +161,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		}
 		else if (!str_prefix(arg3, "parts"))
 		{
-			if (!IS_NPC(victim))
+			if (!is_npc(victim))
 			{
 				send_to_char("Parts can't be set on PCs.\n\r", ch);
 				return;
@@ -172,7 +172,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		}
 		else if (!str_prefix(arg3, "comm"))
 		{
-			if (IS_NPC(victim))
+			if (is_npc(victim))
 			{
 				send_to_char("Comm can't be set on NPCs.\n\r", ch);
 				return;

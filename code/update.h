@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iterator>
+#include <algorithm>
 #include "merc.h"
 #include "interp.h"
 #include "tables.h"
@@ -33,6 +34,7 @@
 #include "const.h"
 #include "material.h"
 #include "titles.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

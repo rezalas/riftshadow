@@ -79,15 +79,15 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 	{
 		check_improve(ch, gsn_backstab, true, 1);
 
-		if (!IS_NPC(ch) && !IS_NPC(victim) && victim->fighting == NULL)
+		if (!is_npc(ch) && !is_npc(victim) && victim->fighting == NULL)
 		{
 			switch (number_range(0, 1))
 			{
 				case 0:
-					sprintf(buf, "Die, %s you backstabbing fool!", PERS(ch, victim));
+					sprintf(buf, "Die, %s you backstabbing fool!", pers(ch, victim));
 					break;
 				case 1:
-					sprintf(buf, "Help! I'm being backstabbed by %s!", PERS(ch, victim));
+					sprintf(buf, "Help! I'm being backstabbed by %s!", pers(ch, victim));
 					break;
 			}
 
@@ -100,15 +100,15 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 	{
 		check_improve(ch, gsn_backstab, false, 1);
 
-		if (!IS_NPC(ch) && !IS_NPC(victim) && victim->fighting == NULL)
+		if (!is_npc(ch) && !is_npc(victim) && victim->fighting == NULL)
 		{
 			switch (number_range(0, 1))
 			{
 				case 0:
-					sprintf(buf, "Die, %s you backstabbing fool!", PERS(ch, victim));
+					sprintf(buf, "Die, %s you backstabbing fool!", pers(ch, victim));
 					break;
 				case 1:
-					sprintf(buf, "Help! I'm being backstabbed by %s!", PERS(ch, victim));
+					sprintf(buf, "Help! I'm being backstabbed by %s!", pers(ch, victim));
 					break;
 			}
 
@@ -286,7 +286,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 	int chance, size;
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	one_argument(argument, arg);
@@ -357,7 +357,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 	if (size > 0)
 		chance -= 15 * size;
 
-	if (IS_AFFECTED(victim, AFF_HASTE))
+	if (is_affected_by(victim, AFF_HASTE))
 		chance += 10;
 
 	if (get_eq_char(victim, WEAR_HEAD) != NULL)
@@ -424,9 +424,9 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 
 		WAIT_STATE(ch, 2 * PULSE_VIOLENCE);
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 		{
-			sprintf(buf, "Help! %s tried to blackjack me!", PERS(ch, victim));
+			sprintf(buf, "Help! %s tried to blackjack me!", pers(ch, victim));
 			do_myell(victim, buf, ch);
 			multi_hit(ch, victim, TYPE_UNDEFINED);
 		}
@@ -442,7 +442,7 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 
 	one_argument(argument, arg);
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	chance = get_skill(ch, gsn_bind);
@@ -611,7 +611,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_CABAL_GUARD(victim))
+	if (is_cabal_guard(victim))
 	{
 		send_to_char("You can't do that.\n\r", ch);
 		return;
@@ -626,17 +626,17 @@ void do_plant(CHAR_DATA *ch, char *argument)
 	percent += 25;
 	percent += ((victim->level - ch->level) * 2);
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		percent -= get_curr_stat(ch, STAT_DEX);
 		percent += get_curr_stat(victim, STAT_INT) / 2;
 		percent += get_curr_stat(victim, STAT_DEX) / 3;
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->pShop)
+	if (is_npc(victim) && victim->pIndexData->pShop)
 		chance = 0;
 
-	if (!IS_AWAKE(victim))
+	if (!is_awake(victim))
 		chance += 100;
 
 	obj = get_obj_carry(ch, arg1, ch);
@@ -659,9 +659,9 @@ void do_plant(CHAR_DATA *ch, char *argument)
 		act("$n tried to slip $p into your inventory.\n\r", ch, obj, victim, TO_VICT);
 		act("$n tried to slip $p into $N's inventory.\n\r", ch, obj, victim, TO_NOTVICT);
 
-		if (!IS_NPC(ch))
+		if (!is_npc(ch))
 		{
-			if (IS_NPC(victim) && IS_AWAKE(victim))
+			if (is_npc(victim) && is_awake(victim))
 			{
 				multi_hit(victim, ch, TYPE_UNDEFINED);
 			}
@@ -708,7 +708,7 @@ void do_ungag(CHAR_DATA *ch, char *argument)
 	if (vch == NULL)
 		vch = ch;
 
-	if (!IS_NPC(vch) && vch != ch)
+	if (!is_npc(vch) && vch != ch)
 	{
 		send_to_char("You cannot undo their gag.\n\r", ch);
 		return;
@@ -791,7 +791,7 @@ void do_gag(CHAR_DATA *ch, char *argument)
 	if (is_safe(ch, victim))
 		return;
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		send_to_char("You can only gag people who are unconscious.\n\r", ch);
 		return;
@@ -900,13 +900,13 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	if (is_safe_new(ch, victim, true))
 		return;
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		send_to_char("You can only drag unconscious poeple around.\n\r", ch);
 		return;
 	}
 
-	if (IS_NPC(victim) && IS_SET(victim->act, ACT_SENTINEL))
+	if (is_npc(victim) && IS_SET(victim->act, ACT_SENTINEL))
 	{
 		act("You can't seem to move $N from $S position!", ch, 0, victim, TO_CHAR);
 		return;
@@ -950,7 +950,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim) && victim->pIndexData->barred_entry)
+	if (is_npc(victim) && victim->pIndexData->barred_entry)
 	{
 		send_to_char("They are too firmly in place to drag around.\n\r", ch);
 		return;
@@ -965,9 +965,9 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(ch) && !IS_NPC(victim) && (ch->fighting == NULL || victim->fighting == NULL))
+	if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == NULL || victim->fighting == NULL))
 	{
-		sprintf(store, "Help! %s is dragging me around!", PERS(ch, victim));
+		sprintf(store, "Help! %s is dragging me around!", pers(ch, victim));
 		do_myell(victim, store, ch);
 	}
 
@@ -1022,7 +1022,7 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->in_room->sector_type != SECT_CITY && ch->in_room->sector_type != SECT_INSIDE && !IS_IMMORTAL(ch))
+	if (ch->in_room->sector_type != SECT_CITY && ch->in_room->sector_type != SECT_INSIDE && !is_immortal(ch))
 	{
 		send_to_char("You can only lay tripwires in cities.\n\r", ch);
 		return;
@@ -1142,7 +1142,7 @@ void do_sign(CHAR_DATA *ch, char *argument)
 
 	for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 	{
-		if (IS_AWAKE(victim))
+		if (is_awake(victim))
 		{
 			{
 				if (number_percent() < get_skill(ch, gsn_sign)
@@ -1252,7 +1252,7 @@ void do_slash(CHAR_DATA *ch, char *argument)
 
 	percent = number_percent();
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		percent -= get_curr_stat(ch, STAT_DEX) * 2;
 		percent += get_curr_stat(victim, STAT_DEX) * 2;
@@ -1306,9 +1306,9 @@ void do_slash(CHAR_DATA *ch, char *argument)
 	extract_obj(obj);
 
 	/*
-	if (IS_AWAKE(victim) && !IS_NPC(victim))
+	if (is_awake(victim) && !is_npc(victim))
 	{
-		sprintf(buf,"Help! %s just slashed my sack!", PERS(ch,victim));
+		sprintf(buf,"Help! %s just slashed my sack!", pers(ch,victim));
 		do_myell(victim, buf,ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 	}
@@ -1330,7 +1330,7 @@ void do_stash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->in_room->sector_type != SECT_CITY && ch->in_room->sector_type != SECT_INSIDE && !IS_IMMORTAL(ch))
+	if (ch->in_room->sector_type != SECT_CITY && ch->in_room->sector_type != SECT_INSIDE && !is_immortal(ch))
 	{
 		send_to_char("You can only stash things in cities.\n\r", ch);
 		return;
@@ -1767,7 +1767,7 @@ bool check_stealth(CHAR_DATA *ch, CHAR_DATA *mob)
 {
 	int skill;
 
-	if (!IS_AFFECTED(ch, AFF_SNEAK))
+	if (!is_affected_by(ch, AFF_SNEAK))
 		return false;
 
 	if (mob->last_fought == ch)
@@ -1872,7 +1872,7 @@ void do_strip(CHAR_DATA *ch, char *argument)
 	chance /= 2;
 	chance += 6 * (get_curr_stat(ch, STAT_DEX) - 20);
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 		chance -= 5 * (victim->level - ch->level);
 	else
 		chance -= 2 * (victim->level - ch->level);
@@ -1882,20 +1882,20 @@ void do_strip(CHAR_DATA *ch, char *argument)
 	else
 		chance += 5;
 
-	if (!IS_AFFECTED(ch, AFF_SNEAK))
+	if (!is_affected_by(ch, AFF_SNEAK))
 		chance -= 10;
 
-	if (!IS_AWAKE(victim))
+	if (!is_awake(victim))
 		chance += 25;
 	else
 		chance -= 2 * (get_curr_stat(victim, STAT_DEX) - 15);
 
-	if (IS_NPC(victim) && victim->pIndexData->pShop)
+	if (is_npc(victim) && victim->pIndexData->pShop)
 		chance = 0;
 
-	if ((IS_AWAKE(victim)
+	if ((is_awake(victim)
 			&& (obj->wear_loc == WEAR_FINGER_L || obj->wear_loc == WEAR_FINGER_R))
-		|| (!IS_AWAKE(victim)))
+		|| (!is_awake(victim)))
 	{
 		if (number_percent() < (chance - 30))
 		{
@@ -1940,23 +1940,23 @@ void thief_yell(CHAR_DATA *ch, CHAR_DATA *victim)
 	{
 		case 0:
 		case 1:
-			sprintf(buf, "%s is a lousy thief!", PERS(ch, victim));
+			sprintf(buf, "%s is a lousy thief!", pers(ch, victim));
 			break;
 		case 2:
-			sprintf(buf, "%s tried to rob me!", PERS(ch, victim));
+			sprintf(buf, "%s tried to rob me!", pers(ch, victim));
 			break;
 		case 3:
-			sprintf(buf, "Keep your hands out of there, %s!", PERS(ch, victim));
+			sprintf(buf, "Keep your hands out of there, %s!", pers(ch, victim));
 			break;
 	}
 
-	if (!IS_AWAKE(victim))
+	if (!is_awake(victim))
 	{
 		victim->position = POS_STANDING;
 		update_pos(victim);
 	}
 
-	if (!IS_NPC(victim))
+	if (!is_npc(victim))
 		do_myell(victim, buf, ch);
 
 	one_hit(victim, ch, TYPE_UNDEFINED);
@@ -2051,7 +2051,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim) && !IS_SET(victim->form, FORM_BIPED))
+	if (is_npc(victim) && !IS_SET(victim->form, FORM_BIPED))
 	{
 		send_to_char("You can't do that to them.\n\r", ch);
 		return;
@@ -2180,18 +2180,18 @@ void do_bind(CHAR_DATA *ch, char *argument)
 		check_improve(ch, gsn_bind, false, 2);
 	}
 
-	if (!IS_AFFECTED(victim, AFF_SLEEP))
+	if (!is_affected_by(victim, AFF_SLEEP))
 	{
 		if (!str_cmp(arg2, "head"))
-			sprintf(buf, "Help! %s is putting a sack over my head!", PERS(ch, victim));
+			sprintf(buf, "Help! %s is putting a sack over my head!", pers(ch, victim));
 
 		if (!str_cmp(arg2, "arms"))
-			sprintf(buf, "Help! %s is tying my arms behind my back!", PERS(ch, victim));
+			sprintf(buf, "Help! %s is tying my arms behind my back!", pers(ch, victim));
 
 		if (!str_cmp(arg2, "legs"))
-			sprintf(buf, "Help! %s is tying up my legs!", PERS(ch, victim));
+			sprintf(buf, "Help! %s is tying up my legs!", pers(ch, victim));
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 			do_myell(victim, buf, ch);
 
 		do_stand(victim, "");
@@ -2268,7 +2268,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 	if ((get_skill(ch, gsn_knife) == 0) || ch->level < skill_table[gsn_knife].skill_level[ch->Class()->GetIndex()])
 	{
-		if (!IS_NPC(ch))
+		if (!is_npc(ch))
 		{
 			send_to_char("You don't know how to knife.\n\r", ch);
 			return;
@@ -2312,15 +2312,15 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 
-	if (!IS_NPC(ch) && !IS_NPC(victim))
+	if (!is_npc(ch) && !is_npc(victim))
 	{
 		switch (number_range(0, 1))
 		{
 			case 0:
-				sprintf(buf, "Die, %s you knifing fool!", PERS(ch, victim));
+				sprintf(buf, "Die, %s you knifing fool!", pers(ch, victim));
 				break;
 			case 1:
-				sprintf(buf, "Help! %s knifed me!", PERS(ch, victim));
+				sprintf(buf, "Help! %s knifed me!", pers(ch, victim));
 				break;
 		}
 
@@ -2466,7 +2466,7 @@ void do_false_motives(CHAR_DATA *ch, char *argument)
 
 	skill = get_skill(ch, gsn_false_motives);
 
-	if (skill < 2 || IS_NPC(ch))
+	if (skill < 2 || is_npc(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;

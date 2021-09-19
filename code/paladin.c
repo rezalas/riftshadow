@@ -19,7 +19,7 @@ void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int 
 		else
 			continue;
 
-		if (is_same_group(to, ch) && !IS_NPC(to) && !is_affected(to, sn))
+		if (is_same_group(to, ch) && !is_npc(to) && !is_affected(to, sn))
 		{
 			to->pcdata->condition[COND_HUNGER] = 0;
 			to->pcdata->condition[COND_THIRST] = 0;
@@ -83,13 +83,13 @@ void spell_spiritual_hammer(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 		return;
 	}
 
-	if (IS_EVIL(victim))
+	if (is_evil(victim))
 	{
 		act("A brilliant hammer descends from the heavens, striking you with great force!", ch, 0, victim, TO_VICT);
 		act("A brilliant hammer descends from the heavens, striking $N with great force!", ch, 0, victim, TO_NOTVICT);
 		dam *= 1.5;
 	}
-	else if (IS_GOOD(victim))
+	else if (is_good(victim))
 	{
 		act("A flickering hammer fades into existence above you and hesitantly descends.", ch, 0, victim, TO_VICT);
 		act("A flickering hammer fades into existence above $N and slowly descends upon $M.", ch, 0, victim,
@@ -142,13 +142,13 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 	{
 		v_next = victim->next_in_room;
 
-		if (!IS_NPC(victim) || victim == ch || !IS_SET(victim->act, ACT_UNDEAD))
+		if (!is_npc(victim) || victim == ch || !IS_SET(victim->act, ACT_UNDEAD))
 			continue;
 
 		difference = ch->level - victim->level;
 		if (IS_SET(victim->act, ACT_UNDEAD))
 			set_fighting(ch, victim);
-		if (difference >= 10 && IS_NPC(victim))
+		if (difference >= 10 && is_npc(victim))
 		{
 			act("Horrible screams of undeath fill the air as $n is reduced to scattered ashes by brilliant white flames.", victim, 0, ch, TO_ROOM);
 			raw_kill(ch, victim);
@@ -173,7 +173,7 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			if (!IS_AFFECTED(victim, AFF_CHARM))
+			if (!is_affected_by(victim, AFF_CHARM))
 			{
 				act("$N shrieks in unholy fury and bounds toward you!", ch, 0, victim, TO_CHAR);
 				act("$n shrieks in unholy fury and bounds toward $N!", victim, 0, ch, TO_ROOM);
@@ -207,7 +207,7 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 
 bool check_benevolence(CHAR_DATA *ch, CHAR_DATA *keeper)
 {
-	if (!IS_GOOD(keeper))
+	if (!is_good(keeper))
 		return false;
 
 	if (number_percent() > get_skill(ch, gsn_benevolence))
@@ -228,13 +228,13 @@ bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int d
 	if (!is_same_group(victim, paladin))
 		return false;
 
-	if (!IS_AWAKE(paladin))
+	if (!is_awake(paladin))
 		return false;
 
 	if (paladin->fighting != ch)
 		return false;
 
-	if (!IS_NPC(ch) && (!can_pk(ch, paladin) || !can_pk(paladin, ch)))
+	if (!is_npc(ch) && (!can_pk(ch, paladin) || !can_pk(paladin, ch)))
 		return false;
 
 	if ((skill = get_skill(paladin, gsn_intercept)) <= 1)
@@ -267,29 +267,29 @@ bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int d
 	skill = skill * (15 + get_skill(ch, gsn_shield_block) / 4) / 100;
 	chance = skill * chance / 100;
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		if (check_posture(ch) == POSTURE_DEFENSE && style_check(gsn_posture, ch->pcdata->style))
 			chance += 8;
 	}
 
-	if (IS_NPC(victim) || IS_NPC(ch))
+	if (is_npc(victim) || is_npc(ch))
 		chance += (victim->level - ch->level) / 2;
 
 	attack = get_dam_message(ch, dt);
 
 	sprintf(buf1, "You thrust your shield between %s's %s and $N.",
-		IS_NPC(ch) ? ch->short_descr : ch->name,
+		is_npc(ch) ? ch->short_descr : ch->name,
 		attack);
 	act(buf1, paladin, 0, victim, TO_CHAR);
 
 	sprintf(buf2, "%s thrusts $s shield in front of you, deflecting $N's %s.",
-		IS_NPC(paladin) ? paladin->short_descr : paladin->name,
+		is_npc(paladin) ? paladin->short_descr : paladin->name,
 		attack);
 	act(buf2, victim, 0, ch, TO_CHAR);
 
 	sprintf(buf3, "$n thrusts $s shield in front of %s, deflecting your %s.",
-		IS_NPC(victim) ? victim->short_descr : victim->name,
+		is_npc(victim) ? victim->short_descr : victim->name,
 		attack);
 	act(buf3, ch, 0, paladin, TO_CHAR);
 
@@ -318,7 +318,7 @@ void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		b_hitroll = -4;
 		b_duration = 1;
 
-		if (IS_GOOD(victim))
+		if (is_good(victim))
 		{
 			if (number_percent() > 25)
 				continue;
@@ -327,7 +327,7 @@ void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			hitroll = b_hitroll;
 			duration = b_duration;
 		}
-		else if (IS_NEUTRAL(victim))
+		else if (is_neutral(victim))
 		{
 			if (number_percent() > 75)
 				continue;
@@ -344,14 +344,14 @@ void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 
 		char buf2[MSL];
-		sprintf(buf2, "Die, %s, you sorcerous dog!", PERS(ch, victim));
+		sprintf(buf2, "Die, %s, you sorcerous dog!", pers(ch, victim));
 
-		if (!victim->fighting && !IS_NPC(victim))
+		if (!victim->fighting && !is_npc(victim))
 			do_myell(victim, buf2, ch);
 
 		damage_new(ch, victim, dam, sn, DAM_LIGHT, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 
-		if (!saves_spell(ch->level, victim, DAM_LIGHT) && !IS_AFFECTED(victim, AFF_BLIND))
+		if (!saves_spell(ch->level, victim, DAM_LIGHT) && !is_affected_by(victim, AFF_BLIND))
 		{
 			act("$n falters as the light sears $s eyes.", victim, 0, ch, TO_ROOM);
 			act("You are blinded by the bright light!", ch, 0, victim, TO_VICT);
@@ -390,8 +390,8 @@ void spell_voice_of_damnation(int sn, int level, CHAR_DATA *ch, void *vo, int ta
 			continue;
 		}
 
-		if ((IS_NPC(victim) && !IS_EVIL(victim))
-			|| (!IS_NPC(victim) && (IS_GOOD(victim) || IS_NEUTRAL(victim))
+		if ((is_npc(victim) && !is_evil(victim))
+			|| (!is_npc(victim) && (is_good(victim) || is_neutral(victim))
 				&& (victim->pcdata->kills[PK_GOOD] <= victim->pcdata->kills[PK_EVIL])))
 		{
 			act("Knowing that you have not persecuted the righteous in the past, you are not concerned.", ch, 0, victim, TO_VICT);
@@ -840,7 +840,7 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 		&& ((to_room = pexit->u1.to_room) != NULL)
 		&& (!IS_SET(pexit->exit_info, EX_CLOSED)
 			|| ((IS_SET(pexit->exit_info, EX_CLOSED)
-				&& IS_AFFECTED(ch, AFF_PASS_DOOR))
+				&& is_affected_by(ch, AFF_PASS_DOOR))
 				&& !IS_SET(pexit->exit_info, EX_NOPASS))))
 	{
 		direction = flag_name_lookup(dir, direction_table);
@@ -1103,8 +1103,8 @@ int check_arms(CHAR_DATA *ch, OBJ_DATA *wield, bool bOncePerRound)
 	{
 		if (bOncePerRound == true
 			&& number_percent() > 75
-			&& !IS_NPC(victim)
-			&& (IS_EVIL(victim) || victim->pcdata->kills[PK_GOOD] < victim->pcdata->kills[PK_EVIL]))
+			&& !is_npc(victim)
+			&& (is_evil(victim) || victim->pcdata->kills[PK_GOOD] < victim->pcdata->kills[PK_EVIL]))
 		{
 			if (!saves_spell(ch->level, victim, DAM_HOLY))
 			{

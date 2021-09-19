@@ -18,6 +18,7 @@
 #include "comm.h"
 #include "interp.h"
 #include "db.h"
+#include "utility.h"
 
 //#include "prof.h"
 extern void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis);

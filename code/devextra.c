@@ -406,7 +406,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 	char *escape;
 	int id, results = 0;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	conn = open_conn();
@@ -827,7 +827,7 @@ void one_query(char *query)
 
 void enter_text(CHAR_DATA *ch, DO_FUN *end_fun)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	ch->pcdata->entering_text = true;
@@ -1121,12 +1121,12 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 
 bool trusts(CHAR_DATA *ch, CHAR_DATA *victim)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return false;
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
-		if (IS_AFFECTED(victim, AFF_CHARM) && victim->master == ch)
+		if (is_affected_by(victim, AFF_CHARM) && victim->master == ch)
 			return true;
 		else
 			return false;
@@ -1158,7 +1158,7 @@ void mob_recho(CHAR_DATA *ch, char *argument)
 	{
 		if (d->connected == CON_PLAYING
 			&& d->character->in_room == ch->in_room
-			&& IS_AWAKE(d->character)
+			&& is_awake(d->character)
 			&& d->character != ch)
 		{
 			if (get_trust(d->character) >= 55)
@@ -1218,7 +1218,7 @@ void outdoors_echo(AREA_DATA *area, char *echo)
 			&& d->character->in_room->area == area
 			&& d->character->in_room->sector_type != SECT_INSIDE
 			&& d->character->in_room->sector_type != SECT_UNDERWATER
-			&& IS_AWAKE(d->character)
+			&& is_awake(d->character)
 			&& !IS_SET(d->character->in_room->room_flags, ROOM_INDOORS))
 		{
 			colorconv(buffer, echo, d->character);
@@ -1239,7 +1239,7 @@ bool check_volley(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	skill = get_skill(victim, gsn_volley);
 
-	if (!skill || victim->fighting || !IS_AWAKE(victim) || victim == ch)
+	if (!skill || victim->fighting || !is_awake(victim) || victim == ch)
 		return false;
 
 	if (get_trust(victim) == MAX_LEVEL)
@@ -1265,7 +1265,7 @@ char *get_char_color(CHAR_DATA *ch, char *event)
 	if (ch->desc != NULL && ch->desc->original != NULL)
 		ch = ch->desc->original;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return "";
 
 	if (!IS_SET(ch->comm, COMM_ANSI))
@@ -1361,7 +1361,7 @@ void WAIT_STATE(CHAR_DATA *ch, int npulse)
 
 	if (!ch)
 		return;
-	if (!IS_NPC(ch) && ch->pcdata->energy_state == -4)
+	if (!is_npc(ch) && ch->pcdata->energy_state == -4)
 	{
 		wait *= 2;
 	}
@@ -1381,7 +1381,7 @@ void WAIT_STATE(CHAR_DATA *ch, int npulse)
 	if (get_trust(ch) == MAX_LEVEL)
 		wait = 0;
 
-	ch->wait = UMAX(ch->wait, wait);
+	ch->wait = std::max((int)ch->wait, wait);
 }
 
 void LAG_CHAR(CHAR_DATA *ch, int npulse)
@@ -1400,7 +1400,7 @@ void LAG_CHAR(CHAR_DATA *ch, int npulse)
 	if (wait < 0)
 		wait = 0;
 
-	ch->wait = UMAX(ch->wait, wait);
+	ch->wait = std::max((int)ch->wait, wait);
 }
 
 void bounty_log(char *string)
@@ -1425,16 +1425,16 @@ void do_credits(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int i = 0;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
-	if (!ch->pcdata->bounty_credits && ch->cabal != CABAL_BOUNTY && !IS_IMMORTAL(ch))
+	if (!ch->pcdata->bounty_credits && ch->cabal != CABAL_BOUNTY && !is_immortal(ch))
 	{
 		send_to_char("You are not in that cabal.\n\r", ch);
 		return;
 	}
 
-	if (IS_IMMORTAL(ch) && str_cmp(argument, ""))
+	if (is_immortal(ch) && str_cmp(argument, ""))
 	{
 		argument = one_argument(argument, buf);
 		argument = one_argument(argument, buf2);
@@ -1446,7 +1446,7 @@ void do_credits(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (IS_NPC(victim))
+		if (is_npc(victim))
 		{
 			send_to_char("Mobs have no bounty credits.\n\r", ch);
 			return;
@@ -1483,7 +1483,7 @@ void bounty_credit(CHAR_DATA *ch, int credit)
 	char buf[300], buf2[300], blog[500];
 	int i, old_credit = ch->pcdata->bounty_credits;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	sprintf(buf, "You receive %i bounty credits for your kill!\n\r", credit);
@@ -1569,12 +1569,12 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!arg1 || !arg2 || (!is_number(arg2) && !IS_IMMORTAL(ch)))
+	if (!arg1 || !arg2 || (!is_number(arg2) && !is_immortal(ch)))
 	{
 		send_to_char("Syntax:   bounty <character> <amount>\n\r", ch);
 		send_to_char("Places a bounty of the specified amount on the life of the specified character.\n\r", ch);
 
-		if (IS_IMMORTAL(ch))
+		if (is_immortal(ch))
 		{
 			send_to_char("          bounty <character> <clear>\n\r", ch);
 			send_to_char("Clears the bounty on the specified character.\n\r", ch);
@@ -1591,15 +1591,15 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim)
+	if (is_npc(victim)
 		|| ch->cabal == CABAL_BOUNTY
-		|| ((IS_IMMORTAL(victim) || IS_HEROIMM(victim)) && !IS_IMMORTAL(ch)))
+		|| ((is_immortal(victim) || is_heroimm(victim)) && !is_immortal(ch)))
 	{
 		send_to_char("You can't do that.\n\r", ch);
 		return;
 	}
 
-	if (!is_number(arg2) && IS_IMMORTAL(ch) && !str_cmp(arg2, "clear"))
+	if (!is_number(arg2) && is_immortal(ch) && !str_cmp(arg2, "clear"))
 	{
 		sprintf(tempstr, "%ld", victim->pcdata->bounty);
 		act("The bounty on $N's head has been cleared. (formerly $t gold)", ch, tempstr, victim, TO_CHAR);
@@ -1633,13 +1633,13 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (victim == ch && !IS_IMMORTAL(ch))
+	if (victim == ch && !is_immortal(ch))
 	{
 		send_to_char("Desperate for attention?\n\r", ch);
 		return;
 	}
 
-	famount = amount / (UMAX(calculate_inflation() - 1, 1));
+	famount = amount / std::max(calculate_inflation() - 1, (float)1);
 	victim->pcdata->bounty += (int)famount;
 	ch->gold -= amount;
 
@@ -1886,7 +1886,7 @@ void do_affto(CHAR_DATA *ch, char *argument)
 	SET_BIT(af.bitvector, bitvector);
 	affect_to_char(victim, &af);
 
-	sprintf(returnstr, "%s has been given the %s affect.\n\r", IS_NPC(victim) ? victim->short_descr : victim->name, skill_table[sn].name);
+	sprintf(returnstr, "%s has been given the %s affect.\n\r", is_npc(victim) ? victim->short_descr : victim->name, skill_table[sn].name);
 	send_to_char(returnstr, ch);
 }
 
@@ -2069,7 +2069,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 		buf[0] = '\0';
 
 		if (skill < 91);
-			sprintf(buf, "%s seems to be affected by %s.\n\r", IS_NPC(victim) ? victim->short_descr : victim->name, skill_table[paf->type].name);
+			sprintf(buf, "%s seems to be affected by %s.\n\r", is_npc(victim) ? victim->short_descr : victim->name, skill_table[paf->type].name);
 
 		if (skill >= 91);
 		{
@@ -2083,7 +2083,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 					showdur = paf->duration - fuzzy;
 
 				sprintf(buf, "%s seems to be affected by %s for about %d hours.\n\r",
-					IS_NPC(victim) ? victim->short_descr : victim->name,
+					is_npc(victim) ? victim->short_descr : victim->name,
 					skill_table[paf->type].name,
 					showdur);
 			}
@@ -2091,7 +2091,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 			if (paf->duration == -1)
 			{
 				sprintf(buf, "%s seems to be affected by %s permanently.\n\r",
-					IS_NPC(victim) ? victim->short_descr : victim->name,
+					is_npc(victim) ? victim->short_descr : victim->name,
 					skill_table[paf->type].name);
 			}
 		}
@@ -2116,10 +2116,10 @@ void do_supps(CHAR_DATA *ch, char *argument)
 	bool fAll= false, found= false;
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
-	if (ch->Class()->ctype != CLASS_COMMUNER && !IS_IMMORTAL(ch))
+	if (ch->Class()->ctype != CLASS_COMMUNER && !is_immortal(ch))
 	{
 		send_to_char("Your class knows no prayers.\n\r", ch);
 		return;
@@ -2206,7 +2206,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 			}
 			else
 			{
-				mana = UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - level));
+				mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - level));
 				sprintf(buf, "%-18s  %3d mana  ", skill_table[sn].name, mana);
 			}
 
@@ -2259,13 +2259,13 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	AFFECT_DATA af, *paf;
 	int target;
 
-	if (IS_NPC(ch) && ch->desc == NULL)
+	if (is_npc(ch) && ch->desc == NULL)
 		return;
 
 	target_name = one_argument(argument, arg1);
 	one_argument(target_name, arg2);
 
-	if (ch->Class()->ctype != CLASS_COMMUNER && !IS_IMMORTAL(ch))
+	if (ch->Class()->ctype != CLASS_COMMUNER && !is_immortal(ch))
 	{
 		send_to_char("You aren't in touch well enough with the gods to commune prayers.\n\r", ch);
 		return;
@@ -2277,13 +2277,13 @@ void do_commune(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(ch) && ch->pcdata->energy_state > 3)
+	if (!is_npc(ch) && ch->pcdata->energy_state > 3)
 	{
 		send_to_char("You cannot collect your thoughts enough to contact your deity.\n\r", ch);
 		return;
 	}
 
-	if (!IS_NPC(ch) && ch->pcdata->oalign == 3 && ch->alignment == -1000)
+	if (!is_npc(ch) && ch->pcdata->oalign == 3 && ch->alignment == -1000)
 	{
 		send_to_char("Your god has forsaken you!\n\r", ch);
 		return;
@@ -2305,8 +2305,8 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 	if (sn < 1
 		|| skill_table[sn].spell_fun == spell_null
-		|| (!IS_NPC(ch) && get_skill(ch, sn) < 5)
-		|| (!IS_NPC(ch) && ch->pcdata->learned[sn] == 0))
+		|| (!is_npc(ch) && get_skill(ch, sn) < 5)
+		|| (!is_npc(ch) && ch->pcdata->learned[sn] == 0))
 	{
 		send_to_char("You don't know any prayers of that name.\n\r", ch);
 		return;
@@ -2332,7 +2332,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 	if (skill_table[sn].skill_level[ch->Class()->GetIndex()] >= 25
 		&& !IS_SET(ch->act, PLR_EMPOWERED)
-		&& !IS_IMMORTAL(ch))
+		&& !is_immortal(ch))
 	{
 		send_to_char("The gods do not find you worthy of a prayer of that magnitude.\n\r", ch);
 		return;
@@ -2350,7 +2350,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	if ((skill_table[sn].ctype == CMD_SPELL
 			|| skill_table[sn].ctype == CMD_POWER
 			|| skill_table[sn].ctype == CMD_RUNE)
-		&& !IS_IMMORTAL(ch))
+		&& !is_immortal(ch))
 	{
 		send_to_char("You can't commune that.\n\r", ch);
 		return;
@@ -2364,11 +2364,11 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	{
 		if (is_affected(ch, gsn_concuss))
 		{
-			mana = UMAX((skill_table[sn].min_mana * 4), 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+			mana = std::max(skill_table[sn].min_mana * 4, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
 		}
 		else
 		{
-			mana = UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+			mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
 		}
 	}
 
@@ -2407,7 +2407,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				}
 			}
 
-			if (IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim)
+			if (is_affected_by(ch, AFF_CHARM) && ch->master == victim)
 			{
 				send_to_char("You can't do that on your own master.\n\r", ch);
 				return;
@@ -2494,7 +2494,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 			if (target == TARGET_CHAR) /* check the sanity of the attack */
 			{
-				if (IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim)
+				if (is_affected_by(ch, AFF_CHARM) && ch->master == victim)
 				{
 					send_to_char("You can't do that on your own follower.\n\r", ch);
 					return;
@@ -2555,14 +2555,14 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
-	if (!IS_NPC(ch) && ch->mana < mana)
+	if (!is_npc(ch) && ch->mana < mana)
 	{
 		send_to_char("You don't have enough mana.\n\r", ch);
 		return;
 	}
 
 	WAIT_STATE(ch, skill_table[sn].beats);
-	if (!IS_NPC(ch) && (number_percent() > get_skill(ch, sn)))
+	if (!is_npc(ch) && (number_percent() > get_skill(ch, sn)))
 	{
 		send_to_char("You failed to commune the power of your deity.\n\r", ch);
 		check_improve(ch, sn, false, 1);
@@ -2584,20 +2584,20 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
 		{
-			if (!IS_NPC(ch) && !IS_NPC(victim) && (ch->fighting == NULL || victim->fighting == NULL))
+			if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == NULL || victim->fighting == NULL))
 			{
 				switch (number_range(0, 2))
 				{
 					case 0:
 					case 1:
-						sprintf(buf, "Die, %s you filthy dog!", PERS(ch, victim));
+						sprintf(buf, "Die, %s you filthy dog!", pers(ch, victim));
 						break;
 					case 2:
-						sprintf(buf, "Help! %s is communing a supplication on me!", PERS(ch, victim));
+						sprintf(buf, "Help! %s is communing a supplication on me!", pers(ch, victim));
 						break;
 				}
 
-				if (victim != ch && !IS_NPC(ch))
+				if (victim != ch && !is_npc(ch))
 					do_myell(victim, buf, ch);
 			}
 		}
@@ -2688,7 +2688,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	int sn;
 	int target;
 
-	if (IS_NPC(ch) && ch->desc == NULL)
+	if (is_npc(ch) && ch->desc == NULL)
 		return;
 
 	target_name = one_argument(argument, arg1);
@@ -2705,8 +2705,8 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 	if (sn < 1
 		|| skill_table[sn].spell_fun == spell_null
-		|| (!IS_NPC(ch) && get_skill(ch, sn) < 5)
-		|| (!IS_NPC(ch) && ch->pcdata->learned[sn] == 0))
+		|| (!is_npc(ch) && get_skill(ch, sn) < 5)
+		|| (!is_npc(ch) && ch->pcdata->learned[sn] == 0))
 	{
 		send_to_char("You don't know any powers of that name.\n\r", ch);
 		return;
@@ -2718,7 +2718,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (skill_table[sn].ctype != CMD_POWER && !IS_IMMORTAL(ch))
+	if (skill_table[sn].ctype != CMD_POWER && !is_immortal(ch))
 	{
 		send_to_char("You can't call that.\n\r", ch);
 		return;
@@ -2730,7 +2730,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	if (ch->level + 2 == skill_table[sn].skill_level[ch->Class()->GetIndex()])
 		mana = 50;
 	else
-		mana = UMAX(skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
+		mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
 
 	/*
 	 * Locate targets.
@@ -2767,7 +2767,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 				}
 			}
 
-			if (IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim)
+			if (is_affected_by(ch, AFF_CHARM) && ch->master == victim)
 			{
 				send_to_char("You can't do that on your own master.\n\r", ch);
 				return;
@@ -2844,7 +2844,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 			if (target == TARGET_CHAR) /* check the sanity of the attack */
 			{
-				if (IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim)
+				if (is_affected_by(ch, AFF_CHARM) && ch->master == victim)
 				{
 					send_to_char("You can't do that on your own follower.\n\r", ch);
 					return;
@@ -2905,7 +2905,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			return;
 	}
 
-	if (!IS_NPC(ch) && ch->mana < mana)
+	if (!is_npc(ch) && ch->mana < mana)
 	{
 		send_to_char("You don't have enough mana.\n\r", ch);
 		return;
@@ -2913,7 +2913,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 	WAIT_STATE(ch, skill_table[sn].beats);
 
-	if (!IS_NPC(ch) && (number_percent() > get_skill(ch, sn)))
+	if (!is_npc(ch) && (number_percent() > get_skill(ch, sn)))
 	{
 		send_to_char("You lost your concentration.\n\r", ch);
 
@@ -2931,20 +2931,20 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
 		{
-			if (!IS_NPC(ch) && !IS_NPC(victim) && (ch->fighting == NULL || victim->fighting == NULL))
+			if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == NULL || victim->fighting == NULL))
 			{
 				switch (number_range(0, 2))
 				{
 					case 0:
 					case 1:
-						sprintf(buf, "Die, %s you sorcerous dog!", PERS(ch, victim));
+						sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, victim));
 						break;
 					case 2:
-						sprintf(buf, "Help! %s is casting a spell on me!", PERS(ch, victim));
+						sprintf(buf, "Help! %s is casting a spell on me!", pers(ch, victim));
 						break;
 				}
 
-				if (victim != ch && !IS_NPC(ch))
+				if (victim != ch && !is_npc(ch))
 					do_myell(victim, buf, ch);
 			}
 
@@ -3012,7 +3012,7 @@ void do_snare(CHAR_DATA *ch, char *argument)
 			&& ch->in_room->sector_type != SECT_DESERT
 			&& ch->in_room->sector_type != SECT_FIELD
 			&& ch->in_room->sector_type != SECT_HILLS
-			&& !IS_IMMORTAL(ch))
+			&& !is_immortal(ch))
 		|| (ch->in_room->vnum == 5700 || ch->in_room->cabal))
 	{
 		send_to_char("You cannot create a snare in this environment.\n\r", ch);
@@ -3213,7 +3213,7 @@ OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeti
 
 	for (ch = char_list; ch->next; ch = ch->next)
 	{
-		if (IS_NPC(ch))
+		if (is_npc(ch))
 			break;
 	}
 
