@@ -16,4 +16,5 @@ mix.js("resources/js/app.js", "public/js")
 	.js("resources/js/vendor/installer/finished.js", "public/installer/js")
 	.vue()
 	.sass("resources/sass/vendor/installer/style.scss", "public/installer/css")
-	.sass("resources/sass/app.scss", "public/css");
+	.sass("resources/sass/app.scss", "public/css")
+	.copyDirectory("resources/img/favicon", "public/installer/img/favicon");

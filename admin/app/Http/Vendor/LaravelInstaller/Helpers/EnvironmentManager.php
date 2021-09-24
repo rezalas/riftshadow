@@ -46,7 +46,7 @@ class EnvironmentManager extends BaseClass
 		'CACHE_DRIVER=' . $request->cache_driver . "\n" .
 		'SESSION_DRIVER=' . $request->session_driver . "\n" .
 		'SESSION_LIFETIME=' . $request->session_lifetime . "\n" .
-		'QUEUE_DRIVER=' . $request->queue_driver . "\n\n" .
+		'QUEUE_CONNECTION=' . $request->queue_connection . "\n\n" .
 		'REDIS_HOST=' . $request->redis_hostname . "\n" .
 		'REDIS_PASSWORD=' . ($request->redis_password ?? 'null') . "\n" .
 		'REDIS_PORT=' . $request->redis_port . "\n\n" .
@@ -62,7 +62,6 @@ class EnvironmentManager extends BaseClass
 
 		try {
 			file_put_contents($this->envPath, $envFileData);
-
 		}
 		catch(Exception $e) {
 			$results = trans('installer_messages.environment.errors');

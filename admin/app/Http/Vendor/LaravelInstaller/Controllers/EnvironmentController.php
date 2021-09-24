@@ -38,10 +38,9 @@ class EnvironmentController extends BaseController
 	 * Processes the newly saved environment configuration (Form Wizard).
 	 *
 	 * @param Request $request
-	 * @param Redirector $redirect
 	 * @return \Illuminate\Http\RedirectResponse
 	 */
-	public function saveWizard(Request $request, Redirector $redirect)
+	public function saveWizard(Request $request)
 	{
 		$rules = config('installer.environment.form.rules');
 		$messages = [
@@ -52,16 +51,18 @@ class EnvironmentController extends BaseController
 
 		if ($validator->fails()) {
 			// Fix this bug present in the library; envConfig var isn't present in library.
-			$envConfig = $this->EnvironmentManager->getEnvContent();
+			$dotenv = Dotenv::create(base_path());
+			$envConfig = $dotenv->load();
+			
 			$errors = $validator->errors();
-			return view('vendor.installer.environment-wizard', compact('errors', 'envConfig'));
+			return view('vendor.installer.environment-wizard', compact(['errors', 'envConfig']));
 		}
 
 		$results = $this->EnvironmentManager->saveFileWizard($request);
 
 		event(new EnvironmentSaved($request));
 
-		return $redirect->route('LaravelInstaller::database')
+		return redirect()->route('LaravelInstaller::database')
 						->with(['results' => $results]);
 	}
 }

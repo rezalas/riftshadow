@@ -8,18 +8,15 @@ keys:
 folders:
   - map: ./
     to: /home/vagrant/code
-    #type: "nfs" #optional
+    #type: "nfs"
 sites:
   - map: admin.riftshadow.org # can be changed
     to: /home/vagrant/code/admin/public
 databases:
-  - name: rift
-    user: rift
-    pass: rift123
-  - name: rift_core
-    user: rift
-    pass: rift123
+  - rift
+  - rift_core
 features:
+  - mysql: true
   - mariadb: false
   - ohmyzsh: false
   - webdriver: false

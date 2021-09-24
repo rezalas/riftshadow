@@ -13,8 +13,7 @@ afterScriptPath = "after.sh"
 customizationScriptPath = "user-customizations.sh"
 aliasesPath = "aliases"
 
-#require File.expand_path(confDir + '/scripts/homestead.rb')
-require File.expand_path(File.dirname(__FILE__) + './homestead.rb')
+require File.expand_path(confDir + '/scripts/homestead.rb')
 
 Vagrant.require_version '>= 2.2.4'
 
