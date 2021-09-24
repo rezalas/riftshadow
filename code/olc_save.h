@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <algorithm>
 #include "merc.h"
 #include "handler.h"
 #include "olc.h"
@@ -22,6 +23,9 @@
 #include "spec.h"
 #include "db.h"
 #include "act_comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 
 /*
  *  Verbose writes reset data in plain english into the comments

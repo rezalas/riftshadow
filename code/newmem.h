@@ -16,6 +16,7 @@
 #include "tables.h"
 #include "update.h"
 #include "interp.h"
+#include "utility.h"
 
 //#define free public_fREe
 //tweakable parameters

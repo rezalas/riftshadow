@@ -15,6 +15,35 @@
 #include "lookup.h"
 #include "tables.h"
 
+#define PIECE_NONE					-1
+#define WHITE_PAWN					0
+#define WHITE_KNIGHT				1
+#define WHITE_BISHOP				2
+#define WHITE_ROOK					3
+#define WHITE_QUEEN					4
+#define WHITE_KING					5
+#define BLACK_PAWN					6
+#define BLACK_KNIGHT				7
+#define BLACK_BISHOP				8
+#define BLACK_ROOK					9
+#define BLACK_QUEEN					10
+#define BLACK_KING					11
+#define MAX_PIECE					12
+
+#define WHITE_SQUARE				0
+#define BLACK_SQUARE				1
+
+#define WHITE_PIECE					0
+#define BLACK_PIECE					1
+
+struct piece_type
+{
+	char *row1;
+	char *row2;
+	char *row3;
+};
+
+extern const struct piece_type piece_table[2][MAX_PIECE];
 extern sh_int chessboard[8][8];
 extern CHAR_DATA *chess_white;
 extern CHAR_DATA *chess_black;
@@ -50,5 +79,8 @@ char num_to_letter (int coord);
 void do_diku (CHAR_DATA *ch, char *argument);
 void do_antiidle (CHAR_DATA *ch, char *arg);
 void idle_pulse (CHAR_DATA *ch, AFFECT_DATA *af);
+
+bool is_white (int piece);
+bool is_black (int piece);
 
 #endif /* MISC_H */

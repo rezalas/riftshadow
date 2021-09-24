@@ -501,7 +501,7 @@ void load_mobs(FILE *fp)
 		/* vital statistics */
 		pMobIndex->start_pos = position_lookup(fread_word(fp));
 		pMobIndex->sex = sex_lookup(fread_word(fp));
-		pMobIndex->sex = UMAX(0, pMobIndex->sex);
+		pMobIndex->sex = std::max(0, (int)pMobIndex->sex);
 		temp_wealth = fread_word(fp);
 		if (is_number(temp_wealth))
 			wealth = atoi(temp_wealth);
@@ -520,7 +520,7 @@ void load_mobs(FILE *fp)
 
 		/* size */
 		pMobIndex->size = size_lookup(fread_word(fp));
-		pMobIndex->size = UMAX(pMobIndex->size, 0);
+		pMobIndex->size = std::max((int)pMobIndex->size, 0);
 		pMobIndex->mprogs = NULL;
 		pMobIndex->restrict_low = LOW_VNUM;
 		pMobIndex->restrict_high = HIGH_VNUM;
@@ -1052,7 +1052,7 @@ void load_objs(FILE *fp)
 		switch (pObjIndex->item_type)
 		{
 			case ITEM_WEAPON:
-				pObjIndex->value[0] = weapon_type(fread_word(fp));
+				pObjIndex->value[0] = weapon_type_lookup(fread_word(fp));
 				pObjIndex->value[1] = fread_number(fp);
 				pObjIndex->value[2] = fread_number(fp);
 				pObjIndex->value[3] = attack_lookup(fread_word(fp));

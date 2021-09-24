@@ -42,6 +42,7 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include <iterator>
+#include <algorithm>
 #include "merc.h"
 #include "db2.h"
 #include "recycle.h"
@@ -60,6 +61,8 @@
 #include "handler.h"
 #include "misc.h"
 #include "dioextra.h"
+#include "chardef.h"
+#include "const.h"
 
 #ifndef OLD_RAND
 #define OLD_RAND
@@ -199,7 +202,6 @@ void do_alist(CHAR_DATA *ch,char *argument);
 */
 void do_llimit(CHAR_DATA *ch, char *argument);
 void load_rooms (FILE *fp);
-void load_votes (void);
 void load_newresets (FILE * fp);
 void clean_notes (void);
 void load_race_info (void);

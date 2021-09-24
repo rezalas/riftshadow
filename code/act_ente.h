@@ -12,6 +12,7 @@
 #include "db.h"
 #include "act_info.h"
 #include "act_move.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

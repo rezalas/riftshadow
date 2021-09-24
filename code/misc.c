@@ -1,6 +1,141 @@
 /* blah */
 #include "misc.h"
 
+sh_int chessboard[8][8];
+CHAR_DATA *chess_white;
+CHAR_DATA *chess_black;
+
+const struct piece_type piece_table[2][MAX_PIECE] =
+{
+	{
+		{
+			"::::::::", 
+			":::\x01B[1;37m()\x01B[0m:::",				/* White pawn */
+			"::\x01B[1;37m/__\\\x01B[0m::"
+		},
+		{
+			"::\x01B[1;37m^_>>\x01B[0m::",
+			"::\x01B[1;37m| \\\x01B[0m:::",				/* White knight */
+			"::\x01B[1;37m|__\\\x01B[0m::"
+		},
+		{	
+			":::\x01B[1;37m/+\x01B[0m:::",
+			":::\x01B[1;37m()\x01B[0m:::",				/* White bishop */
+			"::\x01B[1;37m/__\\\x01B[0m::"
+		},
+		{	
+			"::\x01B[1;37m___\x01B[0m:::",
+			":\x01B[1;37m[ _ ]\x01B[0m::",				/* White Rook */
+			":\x01B[1;37m[_ _]\x01B[0m::"
+		},
+		{	
+			"::\x01B[1;37m(QQ)\x01B[0m::",
+			":\x01B[1;37m(_  _)\x01B[0m:",				/* White Queen */
+			":\x01B[1;37m\\____/\x01B[0m:"
+		},
+		{	
+			"::\x01B[1;37m|KK|\x01B[0m::",
+			":\x01B[1;37m|_  _|\x01B[0m:",				/* White King */
+			":\x01B[1;37m\\____/\x01B[0m:"
+		},
+		{	
+			"::::::::",
+			":::\x01B[0;31m()\x01B[0m:::",				/* Black pawn */
+			"::\x01B[0;31m/__\\\x01B[0m::"
+		},
+		{	
+			"::\x01B[0;31m^_>>\x01B[0m::",
+			"::\x01B[0;31m| \\\x01B[0m:::",				/* Black knight */
+			"::\x01B[0;31m|__\\\x01B[0m::"
+		},
+		{	
+			":::\x01B[0;31m/+\x01B[0m:::",
+			":::\x01B[0;31m()\x01B[0m:::",				/* Black bishop */
+			"::\x01B[0;31m/__\\\x01B[0m::"
+		},
+		{	
+			"::\x01B[0;31m___\x01B[0m:::",
+			":\x01B[0;31m[ _ ]\x01B[0m::",				/* Black Rook */
+			":\x01B[0;31m[_ _]\x01B[0m::"
+		},
+		{	
+			"::\x01B[0;31m(QQ)\x01B[0m::",
+			":\x01B[0;31m(_  _)\x01B[0m:",				/* Black Queen */
+			":\x01B[0;31m\\____/\x01B[0m:"
+		},
+		{	
+			"::\x01B[0;31m|KK|\x01B[0m::",
+			":\x01B[0;31m|_  _|\x01B[0m:",				/* Black King */
+			":\x01B[0;31m\\____/\x01B[0m:"
+		}
+	},
+
+	/* ON BLACK SQUARES */
+
+	{
+		{	
+			"        ",
+			"   \x01B[1;37m()\x01B[0m   ",				/* White pawn */
+			"  \x01B[1;37m/__\\\x01B[0m  "
+		},
+		{	
+			"  \x01B[1;37m^_>>\x01B[0m  ",
+			"  \x01B[1;37m| \\\x01B[0m   ",				/* White knight */
+			"  \x01B[1;37m|__\\\x01B[0m  "
+		},
+		{	
+			"   \x01B[1;37m/+\x01B[0m   ",
+			"   \x01B[1;37m()\x01B[0m   ",				/* White bishop */
+			"  \x01B[1;37m/__\\\x01B[0m  "
+		},
+		{	
+			"  \x01B[1;37m___\x01B[0m   ",
+			" \x01B[1;37m[ _ ]\x01B[0m  ",				/* White Rook */
+			" \x01B[1;37m[_ _]\x01B[0m  "
+		},
+		{	
+			"  \x01B[1;37m(QQ)\x01B[0m  ",
+			" \x01B[1;37m(_  _)\x01B[0m ",				/* White Queen */
+			" \x01B[1;37m\\____/\x01B[0m "
+		},
+		{	
+			"  \x01B[1;37m|KK|\x01B[0m  ",
+			" \x01B[1;37m|_  _|\x01B[0m ",				/* White King */
+			" \x01B[1;37m\\____/\x01B[0m "
+		},
+		{	
+			"        ",
+			"   \x01B[0;31m()\x01B[0m   ",				/* Black pawn */
+			"  \x01B[0;31m/__\\\x01B[0m  "
+		},
+		{	
+			"  \x01B[0;31m^_>>\x01B[0m  ",
+			"  \x01B[0;31m| \\\x01B[0m   ",				/* Black knight */
+			"  \x01B[0;31m|__\\\x01B[0m  "
+		},
+		{	
+			"   \x01B[0;31m/+\x01B[0m   ",
+			"   \x01B[0;31m()\x01B[0m   ",				/* Black bishop */
+			"  \x01B[0;31m/__\\\x01B[0m  "
+		},
+		{	
+			"  \x01B[0;31m___\x01B[0m   ",
+			" \x01B[0;31m[ _ ]\x01B[0m  ",				/* Black Rook */
+			" \x01B[0;31m[_ _]\x01B[0m  "
+		},
+		{	
+			"  \x01B[0;31m(QQ)\x01B[0m  ",
+			" \x01B[0;31m(_  _)\x01B[0m ",				/* Black Queen */
+			" \x01B[0;31m\\____/\x01B[0m "
+		},
+		{	
+			"  \x01B[0;31m|KK|\x01B[0m  ",
+			" \x01B[0;31m|_  _|\x01B[0m ",				/* Black King */
+			" \x01B[0;31m\\____/\x01B[0m "
+		}
+	}
+};
+
 char *act_msg(const char *point, CHAR_DATA *ch)
 {
 	static char buf[MSL];
@@ -811,7 +946,6 @@ void do_chess(CHAR_DATA *ch, char *argument)
 
 void print_chessboard(CHAR_DATA *ch)
 {
-	extern const struct piece_type piece_table[2][MAX_PIECE];
 	char buf[MSL];
 	int i, j;
 	int square;
@@ -977,7 +1111,7 @@ void move_piece(CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_t
 		return;
 	}
 
-	if ((IS_WHITE(piece_to) && IS_WHITE(piece_from)) || (IS_BLACK(piece_to) && IS_BLACK(piece_from)))
+	if ((is_white(piece_to) && is_white(piece_from)) || (is_black(piece_to) && is_black(piece_from)))
 	{
 		send_to_char("You already have a piece there!\n\r", ch);
 		return;
@@ -987,7 +1121,7 @@ void move_piece(CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_t
 	chessboard[col_from][row_from] = PIECE_NONE;
 
 	sprintf(buf, "You move the %s %s from %c%d to %c%d.\n\r",
-		(IS_WHITE(piece_from)) ? "white" : "black",
+		(is_white(piece_from)) ? "white" : "black",
 		piece_name(piece_from),
 		num_to_letter(col_from),
 		row_from + 1,
@@ -996,7 +1130,7 @@ void move_piece(CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_t
 	send_to_char(buf, ch);
 
 	sprintf(buf, "$n moves the %s %s from %c%d to %c%d.",
-		(IS_WHITE(piece_from)) ? "white" : "black",
+		(is_white(piece_from)) ? "white" : "black",
 		piece_name(piece_from),
 		num_to_letter(col_from),
 		row_from + 1,
@@ -1008,10 +1142,10 @@ void move_piece(CHAR_DATA *ch, int col_from, int row_from, int col_to, int row_t
 	if (piece_to == PIECE_NONE)
 		return;
 
-	sprintf(buf, "You capture the %s %s.\n\r", (IS_WHITE(piece_to)) ? "white" : "black", piece_name(piece_to));
+	sprintf(buf, "You capture the %s %s.\n\r", (is_white(piece_to)) ? "white" : "black", piece_name(piece_to));
 	send_to_char(buf, ch);
 
-	sprintf(buf, "$n captures the %s %s.", (IS_WHITE(piece_to)) ? "white" : "black", piece_name(piece_to));
+	sprintf(buf, "$n captures the %s %s.", (is_white(piece_to)) ? "white" : "black", piece_name(piece_to));
 	act(buf, ch, 0, 0, TO_ROOM);
 }
 
@@ -1102,4 +1236,30 @@ void idle_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 		return;
 
 	send_to_char("\n\r", ch);
+}
+
+/// Checks if the given chess piece is white.
+/// @param piece: The chess piece whose color to check.
+/// @returns true if the chess piece is white; false otherwise.
+bool is_white (int piece)
+{
+	return piece == WHITE_PAWN
+			|| piece == WHITE_KNIGHT
+			|| piece == WHITE_BISHOP
+			|| piece == WHITE_ROOK
+			|| piece == WHITE_QUEEN
+			|| piece == WHITE_KING;
+}
+
+/// Checks if the given chess piece is black.
+/// @param piece: The chess piece whose color to check.
+/// @returns true if the chess piece is black; false otherwise.
+bool is_black (int piece)
+{
+	return piece == BLACK_PAWN
+			|| piece == BLACK_KNIGHT
+			|| piece == BLACK_BISHOP
+			|| piece == BLACK_ROOK
+			|| piece == BLACK_QUEEN
+			|| piece == BLACK_KING;
 }

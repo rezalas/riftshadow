@@ -3,6 +3,14 @@
 
 #include <time.h>
 #include <vector>
+#include <algorithm>
+
+// TODO: these are defined in utility.h as regular functions but for some reason the compiler freaks out
+// TODO: so leaving them as macros for the time being
+//#define IS_SET(flag, bit)			((flag[(int)(bit/32)]) & ((long)pow(2,(bit % 32))))
+#define IS_NPC(ch)					(IS_SET(ch->act, ACT_IS_NPC))
+#define IS_GROUND(room)				(room->sector_type != SECT_AIR && room->sector_type != SECT_WATER && room->sector_type != SECT_UNDERWATER && room->sector_type != SECT_VERTICAL)
+//
 
 #define PFLAGS_NONE 0
 #define PFLAGS_BASIC 1

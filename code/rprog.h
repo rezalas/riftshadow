@@ -17,6 +17,9 @@
 #include "rift.h"
 #include "db.h"
 #include "devextra.h"
+#include "utility.h"
+
+extern const struct improg_type rprog_table[];
 
 //
 // LOCAL FUNCTIONS

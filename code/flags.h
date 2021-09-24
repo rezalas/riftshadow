@@ -13,6 +13,7 @@
 #include "interp.h"
 #include "db.h"
 #include "lookup.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

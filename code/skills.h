@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <algorithm>
 #include "merc.h"
 #include "handler.h"
 #include "magic.h"
@@ -14,6 +15,9 @@
 #include "update.h"
 #include "devextra.h"
 #include "act_comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

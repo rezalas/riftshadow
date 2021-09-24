@@ -175,7 +175,7 @@ void game_loop_unix(int control)
 
 		for (d = descriptor_list; d; d = d->next)
 		{
-			maxdesc = UMAX(maxdesc, d->descriptor);
+			maxdesc = std::max(maxdesc, (int)d->descriptor);
 			FD_SET(d->descriptor, &in_set);
 			FD_SET(d->descriptor, &out_set);
 			FD_SET(d->descriptor, &exc_set);
@@ -788,12 +788,12 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 			sprintf(wound, "%s", get_battle_condition(victim, percent));
 
 			sprintf(buf, "%s %s \n\r",
-				(can_see(ch, victim)) ? (IS_NPC(victim) ? victim->short_descr : PERS(victim, ch)) : "Someone",
+				(can_see(ch, victim)) ? (is_npc(victim) ? victim->short_descr : pers(victim, ch)) : "Someone",
 				wound);
 			buf[0] = UPPER(buf[0]);
 			write_to_buffer(d, buf, 0);
 
-			if (IS_IMMORTAL(ch))
+			if (is_immortal(ch))
 			{
 				sprintf(buf, "(Waiting: %d)\n\r", (ch->wait / PULSE_VIOLENCE));
 				write_to_buffer(d, buf, 0);
@@ -803,7 +803,7 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 		ch = d->original ? d->original : d->character;
 		if (!IS_SET(ch->comm, COMM_COMPACT))
 			write_to_buffer(d, "\n\r", 2);
-		if (!IS_NPC(ch) && ch->pcdata->entering_text)
+		if (!is_npc(ch) && ch->pcdata->entering_text)
 			write_to_buffer(d, ": ", 2);
 		else if (IS_SET(ch->comm, COMM_PROMPT))
 			bust_a_prompt(d->character);
@@ -868,7 +868,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 	DESCRIPTOR_DATA *d;
 	point = buf;
 
-	if (IS_NPC(ch)
+	if (is_npc(ch)
 		|| !str_cmp(ch->prompt, "")
 		|| !str_cmp(ch->prompt, "<%hhp %mm %vmv> ")
 		|| !str_cmp(ch->prompt, "<%hhp %mm %vmv>"))
@@ -908,14 +908,14 @@ void bust_a_prompt(CHAR_DATA *ch)
 						&& pexit->u1.to_room != NULL
 						&& can_see_room(ch, pexit->u1.to_room)
 						&& !IS_SET(pexit->exit_info, EX_NONOBVIOUS)
-						&& (!IS_SET(pexit->exit_info, EX_CLOSED) || IS_IMMORTAL(ch)))
+						&& (!IS_SET(pexit->exit_info, EX_CLOSED) || is_immortal(ch)))
 					{
 						found = true;
 						strcat(doors, dir_name[door]);
 					}
 				}
 
-				if (!found || (IS_AFFECTED(ch, AFF_BLIND) && !IS_IMMORTAL(ch)))
+				if (!found || (is_affected_by(ch, AFF_BLIND) && !is_immortal(ch)))
 					strcat(buf, "none");
 
 				sprintf(buf2, "%s", doors);
@@ -990,7 +990,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'X':
-				sprintf(buf2, "%d", IS_NPC(ch) ? 0 : ch->level * exp_per_level(ch) - ch->exp);
+				sprintf(buf2, "%d", is_npc(ch) ? 0 : ch->level * exp_per_level(ch) - ch->exp);
 				i = buf2;
 				break;
 			case 'g':
@@ -998,15 +998,15 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'a':
-				sprintf(buf2, "%s", IS_GOOD(ch) ? "good" : IS_EVIL(ch) ? "evil" : "neutral");
+				sprintf(buf2, "%s", is_good(ch) ? "good" : is_evil(ch) ? "evil" : "neutral");
 				i = buf2;
 				break;
 			case 'r':
 				if (ch->in_room != NULL)
 				{
 					sprintf(buf2, "%s",
-						((!IS_NPC(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
-							|| (!IS_AFFECTED(ch, AFF_BLIND) && !room_is_dark(ch->in_room)))
+						((!is_npc(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
+							|| (!is_affected_by(ch, AFF_BLIND) && !room_is_dark(ch->in_room)))
 								? get_room_name(ch->in_room)
 								: "darkness");
 				}
@@ -1018,7 +1018,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'R':
-				if (IS_IMMORTAL(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != NULL)
 					sprintf(buf2, "%d", ch->in_room->vnum);
 				else
 					sprintf(buf2, " ");
@@ -1026,7 +1026,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'z':
-				if (IS_IMMORTAL(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != NULL)
 					sprintf(buf2, "%s", ch->in_room->area->name);
 				else
 					sprintf(buf2, " ");
@@ -1034,7 +1034,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'p':
-				if (IS_IMMORTAL(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != NULL)
 				{
 					number_people = 0;
 
@@ -1043,7 +1043,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 						if (d->connected == CON_PLAYING
 							&& d->character->in_room != NULL
 							&& d->character->in_room->area == ch->in_room->area
-							&& !IS_IMMORTAL(d->character))
+							&& !is_immortal(d->character))
 						{
 							number_people++;
 						}
@@ -1059,7 +1059,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'P':
-				if (IS_IMMORTAL(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != NULL)
 				{
 					number_people = 0;
 					for (d = descriptor_list; d != NULL; d = d->next)
@@ -1083,7 +1083,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'C':
-				if (IS_IMMORTAL(ch))
+				if (is_immortal(ch))
 				{
 					number_people = 0;
 
@@ -1272,7 +1272,7 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 				act = true;
 				break;
 			case 'n':
-				if (d->character && IS_ANSI(d->character))
+				if (d->character && is_ansi(d->character))
 					sprintf(buf2, "%s", ANSI_NORMAL);
 				else
 					buf2[0] = '\0';
@@ -1288,7 +1288,7 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 
 		if (act)
 		{
-			if (d->character && IS_ANSI(d->character))
+			if (d->character && is_ansi(d->character))
 			{
 				sprintf(buf2, "%s", color_value_string(color, bold, flash));
 				color_code = true;
@@ -1381,7 +1381,7 @@ bool write_to_descriptor(int desc, char *txt, int length)
 
 	for (iStart = 0; iStart < length; iStart += nWrite)
 	{
-		nBlock = UMIN(length - iStart, 4096);
+		nBlock = std::min(length - iStart, 4096);
 		if ((nWrite = write(desc, txt + iStart, nBlock)) < 0)
 		{
 			perror("Write_to_descriptor");
@@ -1480,7 +1480,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			}
 			else
 			{
-				if (wizlock && (!IS_IMMORTAL(ch) && !(IS_HEROIMM(ch))))
+				if (wizlock && (!is_immortal(ch) && !(is_heroimm(ch))))
 				{
 					write_to_buffer(d, "The game is currently wizlocked.\n\r", 0);
 					close_socket(d);
@@ -1588,7 +1588,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			wiznet(log_buf, NULL, NULL, WIZ_SITES, 0, get_trust(ch));
 
-			if (IS_IMMORTAL(ch))
+			if (is_immortal(ch))
 			{
 				do_help(ch, "imotd");
 				d->connected = CON_READ_IMOTD;
@@ -2623,7 +2623,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				ch->max_hit = (ch->Class()->gainconst + 2) * 8;
 				ch->hit = ch->max_hit;
 				ch->pcdata->perm_hit = ch->max_hit;
-				ch->max_mana = UMAX(ch->perm_stat[STAT_INT] - 10, 11) * 15;
+				ch->max_mana = std::max(ch->perm_stat[STAT_INT] - 10, 11) * 15;
 				ch->pcdata->perm_mana = ch->max_mana;
 				ch->max_move = (sh_int)((ch->perm_stat[STAT_DEX] + ch->perm_stat[STAT_CON]) * 7.5);
 				ch->mana = ch->max_mana;
@@ -2699,7 +2699,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			{
 				char_to_room(ch, ch->in_room);
 			}
-			else if (IS_IMMORTAL(ch))
+			else if (is_immortal(ch))
 			{
 				char_to_room(ch, get_room_index(ROOM_VNUM_CHAT));
 			}
@@ -2710,7 +2710,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			ch->pcdata->host = palloc_string(ch->desc->host);
 
-			if (!IS_IMMORTAL(ch))
+			if (!is_immortal(ch))
 				act("$n awakens into the world of Shalar.", ch, NULL, NULL, TO_ROOM);
 
 			group_add(ch, "class basics", false);
@@ -2749,7 +2749,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			sprintf(buf, "$N (%s) has left real life behind.", (ch->cabal > 0) ? capitalize(cabal_table[ch->cabal].name) : "Uncaballed");
 			wiznet(buf, ch, NULL, WIZ_LOGINS, 0, get_trust(ch));
 
-			if (IS_IMMORTAL(ch))
+			if (is_immortal(ch))
 			{
 				do_unread(ch, "");
 				do_listoffer(ch, "auto");
@@ -2887,7 +2887,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 
 	for (ch = char_list; ch != NULL; ch = ch->next)
 	{
-		if (!IS_NPC(ch)
+		if (!is_npc(ch)
 			&& (!fConn || ch->desc == NULL)
 			&& !str_cmp((d->character->true_name ? d->character->true_name : d->character->name), (ch->true_name ? ch->true_name : ch->name)))
 		{
@@ -2901,8 +2901,8 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 				for (fch = char_list; fch; fch = fch_next)
 				{
 					fch_next = fch->next;
-					if (IS_NPC(fch)
-						&& (is_affected(fch, gsn_animate_dead) || IS_AFFECTED(fch, AFF_CHARM))
+					if (is_npc(fch)
+						&& (is_affected(fch, gsn_animate_dead) || is_affected_by(fch, AFF_CHARM))
 						&& fch->master == d->character)
 					{
 						extract_char(fch, true);
@@ -2986,9 +2986,11 @@ void stop_idling(CHAR_DATA *ch)
 	act("$n has returned from the void.", ch, NULL, NULL, TO_ROOM);
 }
 
-/*
- * Write to one char.
- */
+///
+/// Send a message to a character 
+/// @param txt: The message to send
+/// @param ch: The character to receive it
+///
 void send_to_char(const char *txt, CHAR_DATA *ch)
 {
 	if (txt != NULL && ch->desc != NULL)
@@ -3081,12 +3083,15 @@ void show_string(struct descriptor_data *d, char *input)
 void fix_sex(CHAR_DATA *ch)
 {
 	if (ch->sex < 0 || ch->sex > 2)
-		ch->sex = IS_NPC(ch) ? 0 : ch->pcdata->true_sex;
+		ch->sex = is_npc(ch) ? 0 : ch->pcdata->true_sex;
 }
 
+///
+/// Exists for compatibility only with older code that may use it.
+/// @deprecated Please use act_new instead.
+///
 void act(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type)
 {
-	/* to be compatible with older code */
 	act_new(format, ch, arg1, arg2, type, POS_RESTING);
 }
 
@@ -3120,12 +3125,12 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 			if (IS_SET(d->character->in_room->room_flags, ROOM_SILENCE))
 				continue;
 
-			if (!IS_AWAKE(d->character))
+			if (!is_awake(d->character))
 				continue;
 
 			to = d->character;
 
-			if ((!IS_NPC(to) && to->desc == NULL))
+			if ((!is_npc(to) && to->desc == NULL))
 				continue;
 
 			point = buf;
@@ -3195,6 +3200,15 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 	}
 }
 
+///
+/// Sends a message to an area, group, etc. E.g. "The shopkeeper gives jimmyDean the magic blender."
+///
+/// @param format: The format of the text to send
+/// @param ch: The character sending the words
+/// @param arg1: The first subject mentioned
+/// @param arg2: (optional) The second subject mentioned
+/// @param type: The scope of the message, e.g. TO_ROOM, TO_GROUP, etc.
+/// @param min_pos: The minimum position for the act (lowest default is POS_RESTING)
 void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *arg2, int type, int min_pos)
 {
 	static char *const he_she[] = {"it", "he", "she"};
@@ -3241,7 +3255,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 	for (; to != NULL; to = to->next_in_room)
 	{
-		if ((!IS_NPC(to) && to->desc == NULL) || to->position < min_pos)
+		if ((!is_npc(to) && to->desc == NULL) || to->position < min_pos)
 			continue;
 
 		if ((type == TO_CHAR) && to != ch)
@@ -3256,7 +3270,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 		if (type == TO_NOTVICT && (to == ch || to == vch))
 			continue;
 
-		if (type == TO_IMMINROOM && (!(IS_IMMORTAL(to)) || (to == ch) || !(can_see(to, ch))))
+		if (type == TO_IMMINROOM && (!(is_immortal(to)) || (to == ch) || !(can_see(to, ch))))
 			continue;
 
 		if (type == TO_GROUP && !is_same_group(to, ch))
@@ -3407,7 +3421,7 @@ void announce_login(CHAR_DATA *ch)
 	CHAR_DATA *guardian;
 	char *rstring, buf[MAX_STRING_LENGTH], rbuf[MAX_STRING_LENGTH];
 
-	if (ch->cabal == 0 || ch->cabal > MAX_CABAL || IS_IMMORTAL(ch))
+	if (ch->cabal == 0 || ch->cabal > MAX_CABAL || is_immortal(ch))
 		return;
 
 	guardian = get_cabal_guardian(ch->cabal);
@@ -3427,7 +3441,7 @@ void announce_logout(CHAR_DATA *ch)
 	CHAR_DATA *guardian;
 	char *rstring, buf[MAX_STRING_LENGTH], rbuf[MAX_STRING_LENGTH];
 
-	if (ch->cabal == 0 || ch->cabal > MAX_CABAL || IS_IMMORTAL(ch))
+	if (ch->cabal == 0 || ch->cabal > MAX_CABAL || is_immortal(ch))
 		return;
 
 	guardian = get_cabal_guardian(ch->cabal);
@@ -3471,7 +3485,7 @@ void do_rename(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("Use string.\n\r", ch);
 		return;
@@ -3495,7 +3509,7 @@ void do_rename(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (is_affected(victim, gsn_cloak_form) || IS_SHIFTED(victim))
+	if (is_affected(victim, gsn_cloak_form) || is_shifted(victim))
 	{
 		send_to_char("They must be in normal form.\n\r", ch);
 		return;
@@ -3546,7 +3560,7 @@ int color(char type, CHAR_DATA *ch, char *string)
 	char code[20];
 	char *p = (char *)'\0';
 
-	if (IS_NPC(ch) && !IS_SET(ch->act, ACT_WARD_MOB))
+	if (is_npc(ch) && !IS_SET(ch->act, ACT_WARD_MOB))
 		return 0;
 
 	switch (type)
@@ -3634,7 +3648,7 @@ void colorconv(char *buffer, const char *txt, CHAR_DATA *ch)
 
 	if (txt)
 	{
-		if (IS_SET(ch->act, PLR_COLOR) || IS_NPC(ch))
+		if (IS_SET(ch->act, PLR_COLOR) || is_npc(ch))
 		{
 			for (point = txt; *point; point++)
 			{

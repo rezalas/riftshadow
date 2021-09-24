@@ -79,9 +79,9 @@ void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	send_to_char("Your entire body and gear rapidly grow in size, but you feel somewhat more frail afterward.\n\r", victim);
 	act("$n suddenly swells in all directions, expanding to half again $s normal size!", victim, 0, 0, TO_ROOM);
 
-	if (!IS_NPC(victim) && !trusts(ch, victim) && (!ch->fighting || !victim->fighting))
+	if (!is_npc(victim) && !trusts(ch, victim) && (!ch->fighting || !victim->fighting))
 	{
-		sprintf(buf, "Die, %s, you sorcerous dog!", PERS(ch, victim));
+		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 	}
@@ -350,7 +350,7 @@ void spell_awaken(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA *laf;
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		act("$N is already awake.", ch, NULL, victim, TO_CHAR);
 		return;
@@ -648,7 +648,7 @@ void spell_soften(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void spell_rejuvenate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
-	victim->hit = UMIN(victim->hit + 200, victim->max_hit);
+	victim->hit = std::min(victim->hit + 200, (int)victim->max_hit);
 
 	update_pos(victim);
 

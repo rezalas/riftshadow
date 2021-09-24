@@ -25,6 +25,7 @@ set(RIFT_SOURCE config.cpp
 	comm.c
 	comm.h
 	const.c
+	const.h
 	db.c
 	db.h
 	db2.c
@@ -68,6 +69,7 @@ set(RIFT_SOURCE config.cpp
 	cabal.c
 	cabal.h
 	material.c
+	material.h
 	moremagic.c
 	moremagic.h
 	devextra.c
@@ -82,6 +84,7 @@ set(RIFT_SOURCE config.cpp
 	aprog.h
 	titles.c
 	chardef.c
+	chardef.h
 	necro.c
 	necro.h
 	misc.c
@@ -135,6 +138,10 @@ set(RIFT_SOURCE config.cpp
 	class.h
 	prof.c
 	prof.h
+	vote.c
+	vote.h
+	utility.c
+	utility.h
 )
 
 set_source_files_properties(${RIFT_SOURCE} main.c PROPERTIES LANGUAGE CXX)

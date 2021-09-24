@@ -150,7 +150,7 @@ void tick_prog_academy_reset(AREA_DATA *area)
 
 	for (ch = char_list; ch; ch = ch->next)
 	{
-		if (!IS_NPC(ch) && ch->in_room->area == area && ch->level > 10 && !ch->fighting && !IS_IMMORTAL(ch))
+		if (!is_npc(ch) && ch->in_room->area == area && ch->level > 10 && !ch->fighting && !is_immortal(ch))
 		{
 			char buf[MSL];
 
@@ -177,7 +177,7 @@ void tick_prog_academy_reset(AREA_DATA *area)
 
 			sprintf(buf, "A Royal Academy Guard says '%sA tip from me: if you're looking to learn further, I might try %s.%s'\n\r",
 				get_char_color(ch, "speech"),
-				IS_GOOD(ch)
+				is_good(ch)
 					? "the parrots in the forest off of the road south of Cimar or the trolls in the forests off the Great Shalaran Road"
 					: "the parrots in the forest off of the road south of Cimar or the pixies in the Emerald Forest off the Melcene Plains Road",
 				END_COLOR(ch));
@@ -350,7 +350,7 @@ void pulse_prog_ruins_shark(AREA_DATA *area)
 
 	for (shark = char_list; shark; shark = shark->next)
 	{
-		if (!IS_NPC(shark))
+		if (!is_npc(shark))
 			continue;
 
 		if (shark->pIndexData->vnum == 20111)
@@ -436,8 +436,8 @@ void myell_prog_lawful_city(AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 {
 	AFFECT_DATA af;
 
-	if ((IS_NPC(victim) && !IS_SET(victim->act, ACT_LAW))
-		|| IS_NPC(ch)
+	if ((is_npc(victim) && !IS_SET(victim->act, ACT_LAW))
+		|| is_npc(ch)
 		|| is_affected(ch, gsn_aggressor))
 	{
 		return;

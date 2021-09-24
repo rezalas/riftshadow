@@ -26,7 +26,10 @@
 #include "db.h"
 #include "devextra.h"
 #include "magic.h"
-
+#include "quest.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
 
 #define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
 

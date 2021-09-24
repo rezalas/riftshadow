@@ -621,7 +621,7 @@ void fight_prog_skean(OBJ_DATA *obj, CHAR_DATA *ch)
 			return;
 		}
 
-		if (IS_GOOD(ch->fighting))
+		if (is_good(ch->fighting))
 		{
 			act("You swoon for a moment, and the world goes slightly hazy...", ch->fighting, 0, 0, TO_CHAR);
 			WAIT_STATE(ch->fighting, PULSE_VIOLENCE * 2);
@@ -741,7 +741,7 @@ void invoke_prog_tattoo_dioxide(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	act("Your $p glows blue.", ch, obj, 0, TO_CHAR);
 
 	ch->hit += (ch->level * 2) * 8;
-	ch->hit = UMIN(ch->hit, ch->max_hit);
+	ch->hit = std::min(ch->hit, (int)ch->max_hit);
 
 	send_to_char("You feel MUCH better.\n\r", ch);
 	act("$n looks much better.", ch, NULL, NULL, TO_ROOM);
@@ -1058,7 +1058,7 @@ void fight_prog_scales(OBJ_DATA *obj, CHAR_DATA *ch)
 
 			break;
 		case 1:
-			if (number_percent() > 85 && !IS_NPC(victim) && !IS_IMMORTAL(victim))
+			if (number_percent() > 85 && !is_npc(victim) && !is_immortal(victim))
 			{
 				act("$N's $p begins to glow, and you feel drained.", victim, obj, ch, TO_VICT);
 				act("Your $p begins to glow as it drains energy from $n.", ch, obj, victim, TO_CHAR);
@@ -1087,7 +1087,7 @@ void fight_prog_amber_medallion(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	int intel;
 
-	if (!is_worn(obj) || number_percent() < 92 || ch->mana >= ch->max_mana || IS_NPC(ch))
+	if (!is_worn(obj) || number_percent() < 92 || ch->mana >= ch->max_mana || is_npc(ch))
 		return;
 
 	intel = get_curr_stat(ch, STAT_INT);
@@ -1095,14 +1095,14 @@ void fight_prog_amber_medallion(OBJ_DATA *obj, CHAR_DATA *ch)
 	act("$p glows softly and you feel refreshed.", ch, obj, 0, TO_CHAR);
 	act("$p glows softly.", ch, obj, 0, TO_ROOM);
 
-	ch->mana = UMIN(ch->mana + number_range(intel, intel * 2), ch->max_mana);
+	ch->mana = std::min(ch->mana + number_range(intel, intel * 2), (int)ch->max_mana);
 }
 
 bool give_prog_cabal_item(OBJ_DATA *obj, CHAR_DATA *from, CHAR_DATA *to)
 {
 	char buf[MSL];
 
-	if (!IS_CABAL_GUARD(to) || IS_IMMORTAL(to))
+	if (!is_cabal_guard(to) || is_immortal(to))
 		return false;
 
 	if (from->cabal != to->cabal)
@@ -1113,7 +1113,7 @@ bool give_prog_cabal_item(OBJ_DATA *obj, CHAR_DATA *from, CHAR_DATA *to)
 
 	cabal_shudder(obj->pIndexData->cabal, true);
 
-	sprintf(buf, "%s has given me %s.", PERS(from, to), obj->short_descr);
+	sprintf(buf, "%s has given me %s.", pers(from, to), obj->short_descr);
 	do_cb(to, buf);
 	obj_from_char(obj);
 	obj_to_char(obj, to);
@@ -1190,7 +1190,7 @@ void greet_prog_corpse_explode(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	for (owner = char_list; owner != NULL; owner = owner->next)
 	{
-		if (!IS_NPC(owner) && (!str_cmp(owner->true_name, obj->owner)))
+		if (!is_npc(owner) && (!str_cmp(owner->true_name, obj->owner)))
 			break;
 	}
 
@@ -1221,7 +1221,7 @@ void fight_prog_horde_bull(OBJ_DATA *obj, CHAR_DATA *ch)
 	send_to_char("The fortitude of the Bull fills you, inspiring you to ignore your pain and fight on.\n\r", ch);
 	act("$n's muscles ripple with fresh vigor as $s eyes harden with new resolve.", ch, 0, 0, TO_ROOM);
 
-	ch->hit = UMIN(ch->max_hit, ch->hit + number_range(ch->level * (short)1.2, ch->level * (short)2.2));
+	ch->hit = std::min((int)ch->max_hit, ch->hit + number_range(ch->level * (short)1.2, ch->level * (short)2.2));
 }
 
 void fight_prog_horde_bear(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -1407,7 +1407,7 @@ void verb_prog_check_bounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "You can not decipher the words in the book.\n\r");
 
-	if (ch->cabal != CABAL_BOUNTY && !IS_IMMORTAL(ch))
+	if (ch->cabal != CABAL_BOUNTY && !is_immortal(ch))
 	{
 		send_to_char(buf, ch);
 		return;
@@ -1899,7 +1899,7 @@ void verb_prog_energize_tattoo(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_NPC(ch->fighting))
+	if (is_npc(ch->fighting))
 	{
 		send_to_char("You must find a purer source of power.\n\r", ch);
 		return;
@@ -2158,7 +2158,7 @@ void verb_prog_kneel_guillotine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	raw_kill(ch, ch);
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		char_from_room(ch);
 		char_to_room(ch, old_room);
@@ -2188,19 +2188,19 @@ void hit_prog_essence_light(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, int
 	if (damage <= 0)
 		return;
 
-	if (!(IS_NPC(victim) && IS_SET(victim->act, ACT_UNDEAD)) && !IS_SET(victim->form, FORM_UNDEAD))
+	if (!(is_npc(victim) && IS_SET(victim->act, ACT_UNDEAD)) && !IS_SET(victim->form, FORM_UNDEAD))
 	{
-		if (IS_GOOD(victim))
+		if (is_good(victim))
 		{
 			if (victim->hit < victim->max_hit && number_percent() <= 50)
 			{
 				act("A pearly luminescence flows into $n's wounds.", victim, obj, ch, TO_ROOM);
 				act("A pearly luminescence flows into your wounds.", victim, obj, ch, TO_CHAR);
 				send_to_char("You feel healed!\n\r", victim);
-				victim->hit = UMIN(victim->max_hit, victim->hit + dice(8, 8));
+				victim->hit = std::min((int)victim->max_hit, victim->hit + dice(8, 8));
 			}
 		}
-		else if (IS_NEUTRAL(victim))
+		else if (is_neutral(victim))
 		{
 			if (number_percent() <= 50)
 			{
@@ -2250,7 +2250,7 @@ void hit_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, 
 
 	leech = damage / 3;
 
-	if (IS_AFFECTED(victim, AFF_SANCTUARY))
+	if (is_affected_by(victim, AFF_SANCTUARY))
 		leech *= 2;
 
 	ch->hit += leech;
@@ -2280,7 +2280,7 @@ void hit_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch, CHAR_DATA *victim, 
 		return;
 	}
 
-	if (IS_GOOD(victim) && number_percent() <= 40)
+	if (is_good(victim) && number_percent() <= 40)
 	{
 		if ((get_eq_char(ch, WEAR_DUAL_WIELD)) == obj)
 			dual = true;
@@ -2309,7 +2309,7 @@ void fight_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch)
 	if ((victim = ch->fighting) == NULL)
 		return;
 
-	ch->alignment = UMAX(-1000, ch->alignment - 10);
+	ch->alignment = std::max(-1000, ch->alignment - 10);
 
 	switch (number_range(1, 3))
 	{
@@ -2414,7 +2414,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, bool isTick)
 
 	for (mob = room->people; mob; mob = mob->next_in_room)
 	{
-		if (IS_NPC(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
+		if (is_npc(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
 		{
 			found = true;
 			break;
@@ -2432,7 +2432,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, bool isTick)
 	{
 		mob_next = mob->next_in_room;
 
-		if (IS_NPC(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
+		if (is_npc(mob) && (IS_SET(mob->act, ACT_UNDEAD) || IS_SET(mob->form, FORM_UNDEAD)))
 		{
 			act("$n dissolves into dust as the shining blue light sweeps over it!", mob, 0, 0, TO_ROOM);
 			extract_char(mob, true);
@@ -2476,7 +2476,7 @@ bool loot_prog_shelf(OBJ_DATA *shelf, OBJ_DATA *obj, CHAR_DATA *ch)
 
 	for (mob = room->people; mob; mob = mob->next_in_room)
 	{
-		if (!IS_NPC(mob))
+		if (!is_npc(mob))
 			continue;
 
 		if (mob->pIndexData->vnum == mobvnum)
@@ -2960,7 +2960,7 @@ void communion_handler(CHAR_DATA *ch)
 
 			for (animal = (get_room_index(23633))->people; animal; animal = animal->next_in_room)
 			{
-				if (IS_NPC(animal) && animal->pIndexData->vnum == 23630)
+				if (is_npc(animal) && animal->pIndexData->vnum == 23630)
 				{
 					extract_char(animal, true);
 					break;
@@ -2998,7 +2998,7 @@ void communion_handler(CHAR_DATA *ch)
 
 			cabal_members[CABAL_HORDE]++;
 
-			if (IS_IMMORTAL(af->owner) && IS_IMMORTAL(ch))
+			if (is_immortal(af->owner) && is_immortal(ch))
 			{
 				sprintf(query, "insert into inductions(ch, victim, cabal, ctime, chsite, victimsite) values('%s','%s',%d,%ld,'%s','%s')",
 					af->owner->true_name,
@@ -3100,7 +3100,7 @@ void pulse_prog_cimar_babies(OBJ_DATA *obj, bool isTick)
 {
 	CHAR_DATA *ch = obj->carried_by;
 
-	if (ch == NULL || IS_NPC(ch))
+	if (ch == NULL || is_npc(ch))
 		return;
 
 	if (number_percent() <= 98 || is_affected_obj(obj, gsn_bash))
@@ -3241,7 +3241,7 @@ bool open_prog_beef_balls(OBJ_DATA *obj, CHAR_DATA *ch)
 
 	for (mob = char_list; mob != NULL; mob = mob->next)
 	{
-		if (IS_NPC(mob))
+		if (is_npc(mob))
 		{
 			if (mob->pIndexData->vnum == 24549)
 			{
@@ -3427,7 +3427,7 @@ void verb_prog_pull_lever(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	for (check = char_list; check != NULL; check = check->next)
 	{
-		if (IS_NPC(check) && check->in_room == ch->in_room &&
+		if (is_npc(check) && check->in_room == ch->in_room &&
 			(check->pIndexData->vnum == 24538 || check->pIndexData->vnum == 24539 || check->pIndexData->vnum == 24540))
 		{
 			found = true;
@@ -3710,7 +3710,7 @@ void fight_prog_bugzapper(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	CHAR_DATA *victim = ch->fighting;
 
-	if (!victim || !IS_NPC(victim) || victim->pIndexData->vnum < 3000 || victim->pIndexData->vnum > 3010 || !is_worn(obj))
+	if (!victim || !is_npc(victim) || victim->pIndexData->vnum < 3000 || victim->pIndexData->vnum > 3010 || !is_worn(obj))
 		return;
 
 	act("$n shrinks back suddenly at the sight of $p.", victim, obj, 0, TO_ROOM);

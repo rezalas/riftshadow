@@ -31,6 +31,10 @@
 #include "db.h"
 #include "magic.h"
 #include "mprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
 
 #define GOD_LOG_FILE	"glog.txt"
 

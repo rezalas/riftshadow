@@ -161,9 +161,6 @@ typedef struct aprog_data		APROG_DATA;
 typedef struct bounty			BOUNTY_DATA;
 typedef struct old_char			OLD_CHAR;
 typedef struct barred_data		BARRED_DATA;
-typedef struct ballot_data		BALLOT_DATA;
-typedef struct vote_data		VOTE_DATA;
-typedef struct vote_sort		VOTE_SORT;
 typedef struct room_affect_data	ROOM_AFFECT_DATA;
 typedef struct area_affect_data	AREA_AFFECT_DATA;
 typedef struct obj_affect_data	OBJ_AFFECT_DATA;
@@ -616,44 +613,6 @@ struct bounty
 };
 
 //
-// Attribute bonus structures.
-//
-
-struct str_app_type
-{
-	sh_int topenetrate;
-	sh_int todam;
-	sh_int carry;
-	sh_int wield;
-};
-
-struct int_app_type
-{
-	sh_int learn;
-};
-
-struct wis_app_type
-{
-	sh_int practice;
-};
-
-struct dex_app_type
-{
-	sh_int defensive;
-	sh_int carry;
-	sh_int tohit;
-	sh_int armor;
-};
-
-struct con_app_type
-{
-	sh_int hitp;
-	sh_int shock;
-};
-
-
-
-//
 // TO types for act.
 //
 
@@ -722,33 +681,6 @@ struct barred_data
 	char *message_two;	// room message for echo type
 };
 
-//
-// Voting
-//
-
-struct ballot_data
-{
-	BALLOT_DATA *next;			// next ballot.
-	char *name;					// name of ballot
-	char *top_votes_name[15];
-	sh_int top_votes[15];
-	VOTE_DATA *first_vote;		// first vote. yay.
-};
-
-struct vote_data
-{
-	VOTE_DATA *next;
-	char *voter;	// name of person placing vote
-	char *vote_for;	// who they voted for
-	char *time;		// time they voted
-	char *ip;		// ip they voted from
-};
-
-struct vote_sort
-{
-	char who[MAX_STRING_LENGTH]; // person voted for
-	int votes;					 // how many votes
-};
 
 //
 // Per-class stuff.
@@ -796,51 +728,6 @@ struct class_type
 	sh_int status;
 };
 
-struct item_type
-{
-	int type;
-	char *name;
-};
-
-struct weapon_type
-{
-	char *name;
-	sh_int vnum;
-	sh_int type;
-	sh_int *gsn;
-};
-
-struct wiznet_type
-{
-	char *name;
-	int flag;
-	int level;
-};
-
-struct attack_type
-{
-	char *name;		// name
-	char *noun;		// message
-	int damage;		// damage class
-	int modifier;	// difficulty to parry, - for harder + for easier
-};
-
-struct race_type
-{
-	char *name;		// call name of the race
-	bool pc_race;	// can be chosen by pcs
-	long act[10];	// act bits for the race
-	long aff[10];	// aff bits for the race
-	long off[10];	// off bits for the race
-	long imm[10];	// imm bits for the race
-	long res[10];	// res bits for the race
-	long vuln[10];	// vuln bits for the race
-	long form[15];	// default form flag for the race
-	long parts[15];	// default parts for the race
-	int arms;
-	int legs;
-};
-
 struct race_data
 {
 	RACE_DATA *first;
@@ -859,26 +746,6 @@ struct race_data
 	int arms;
 	int legs;
 };
-
-struct pc_race_type // additional data for pc races
-{
-	char *name;						// MUST be in race_type
-	char who_name[8];
-	char *who_name_five;
-	char *race_time;		
-	float agemod;
-	int death_modifier;				// how soon they die
-	sh_int align;					// alignments race can have: 0=gne 1=gn 2=ne 3=g 4=n 5=e
-	sh_int xpadd;					// extra xp per lvl needed
-	char *skills[5];				// bonus skills for the race
-	sh_int classes[MAX_CLASS]; 		// class restricts for races
-	sh_int max_stats[MAX_STATS];	// maximum stats
-	sh_int size;					// aff bits for the race
-	sh_int racePulse;				// combat pulse for this race
-	float racialDam;				// racial dam modifier
-	sh_int status;
-};
-
 
 struct old_char
 {
@@ -2630,41 +2497,6 @@ struct kill_data
 #define MAT_GAS						2
 #define MAT_PLASMA					3
 
-#define PIECE_NONE					-1
-#define WHITE_PAWN					0
-#define WHITE_KNIGHT				1
-#define WHITE_BISHOP				2
-#define WHITE_ROOK					3
-#define WHITE_QUEEN					4
-#define WHITE_KING					5
-#define BLACK_PAWN					6
-#define BLACK_KNIGHT				7
-#define BLACK_BISHOP				8
-#define BLACK_ROOK					9
-#define BLACK_QUEEN					10
-#define BLACK_KING					11
-#define MAX_PIECE					12
-
-#define WHITE_SQUARE				0
-#define BLACK_SQUARE				1
-
-#define WHITE_PIECE					0
-#define BLACK_PIECE					1
-
-#define IS_WHITE(piece)		((piece == WHITE_PAWN || \
-								piece == WHITE_KNIGHT || \
-								piece == WHITE_BISHOP || \
-								piece == WHITE_ROOK || \
-								piece == WHITE_QUEEN || \
-								piece == WHITE_KING))
-
-#define IS_BLACK(piece)		((piece == BLACK_PAWN || \
-								piece == BLACK_KNIGHT || \
-								piece == BLACK_BISHOP || \
-								piece == BLACK_ROOK || \
-								piece == BLACK_QUEEN || \
-								piece == BLACK_KING))
-
 //
 // Prototype for a mob.
 // This is the in-memory version of #MOBILES.
@@ -3213,33 +3045,6 @@ struct gen_data
 };
 
 //
-// Liquids.
-//
-
-#define LIQ_WATER					0
-
-struct liq_type
-{
-	char * liq_name;
-	char * liq_color;
-	sh_int liq_affect[5];
-};
-
-struct material_type
-{
-	char * mat_name;
-	sh_int mat_phase;
-	sh_int mat_hardness;
-	sh_int mat_rarity;
-	sh_int mat_conductivity;
-	sh_int mat_flammability;
-	sh_int mat_density;
-	long mat_flags;
-};
-
-extern const struct material_type material_table[];
-
-//
 // Extra description data for a room or object.
 //
 
@@ -3584,34 +3389,6 @@ struct pathfind_data
 #define RUNE_WEAPON					4
 #define RUNE_DOOR					8
 #define RUNE_ROOM					16
-
-
-//
-// Skills include spells as a particular case.
-//
-
-struct skill_type
-{
-	char *name;							// Name of skill
-	sh_int skill_level[MAX_CLASS];		// Level needed by class
-	SPELL_FUN *spell_fun;				// Spell pointer (for spells)
-	sh_int target;						// Legal targets
-	sh_int minimum_position;			// Position for caster / user
-	sh_int *pgsn;						// Pointer to associated gsn
-	sh_int dispel;						// affect bitvector for dispel
-	sh_int min_mana;					// Minimum mana used
-	sh_int beats;						// Waiting time after use
-	char *noun_damage;					// Damage message
-	char *msg_off;						// Wear off message
-	char *room_msg_off;					// Wear off message to room
-	sh_int ctype;						// Is this a spell or prayer or power?
-};
-
-struct  group_type
-{
-	char *name;
-	char *spells[MAX_IN_GROUP];
-};
 
 
 extern int nAllocPerm;
@@ -4127,11 +3904,6 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 // Utility macros.
 //
 
-#define IS_VALID(data)				(data != NULL && data->valid)
-#define VALIDATE(data)				(data->valid = true)
-#define INVALIDATE(data)			(data->valid = false)
-#define UMIN(a, b)					(a < b ? a : b)
-#define UMAX(a, b)					(a > b ? a : b)
 #define URANGE(a, b, c)				(b < a ? a : (b > c ? c : b))
 #define LOWER(c)					(c >= 'A' && c <= 'Z' ? c + 'a' - 'A' : c)
 #define UPPER(c)					(c >= 'a' && c <= 'z' ? c + 'A' - 'a' : c)
@@ -4143,128 +3915,6 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 #define REMOVE_BIT_OLD(var,bit) 	(var &= ~((long)pow(2,bit)))
 #define TOGGLE_BIT(var, bit)		(IS_SET(var,bit) ? REMOVE_BIT(var,bit) : SET_BIT(var,bit))
 #define TOGGLE_BIT_OLD(var, bit)	(IS_SET_OLD(var,bit) ? REMOVE_BIT_OLD(var,bit) : SET_BIT_OLD(var,bit))
-#define PERCENT(cur, max)			(max == 0 ? 0 :(cur * 100) / (max))
-
-//
-// Character macros.
-//
-
-#define IS_CABAL_GUARD(ch)			(IS_NPC(ch) && IS_SET(ch->act, ACT_INNER_GUARDIAN))
-#define IS_NPC(ch)					(IS_SET(ch->act, ACT_IS_NPC))
-#define IS_IMMORTAL(ch)				(get_trust(ch) >= LEVEL_IMMORTAL)
-#define IS_HERO(ch)					(get_trust(ch) >= LEVEL_HERO)
-#define IS_HEROIMM(ch)				(IS_SET(ch->act,PLR_HEROIMM))
-#define IS_TRUSTED(ch,level)		(get_trust(ch) >= level)
-#define IS_AFFECTED(ch, sn)			(IS_SET(ch->affected_by, sn))
-#define IS_ANSI(ch)					(!IS_NPC(ch) && IS_SET(ch->comm, COMM_ANSI))
-
-
-#define IS_GOOD(ch)					(get_align(ch) > 333)
-#define IS_EVIL(ch)					(get_align(ch) < -333)
-#define IS_NEUTRAL(ch)				(!IS_GOOD(ch) && !IS_EVIL(ch))
-
-#define IS_LAWFUL(ch)				(get_ethos(ch) > 333)
-#define IS_CHAOTIC(ch)				(get_ethos(ch) < -333)
-#define IS_ENEUTRAL(ch)				(!IS_LAWFUL(ch) && !IS_CHAOTIC(ch))
-
-#define IS_SAME_ALIGN(one,two)		((one < 333 && two < 333) || (one > -333 && one < 333 && two > -333 && two < 333) || (one > 333 && two > 333))
-#define IS_OPP_ALIGN(ch,vch)		((IS_GOOD(ch) && IS_EVIL(vch)) || (IS_EVIL(ch) && IS_GOOD(vch)))
-#define IS_NUM_GOOD(num)			(num > 333)
-#define IS_NUM_EVIL(num)			(num < -333)
-#define IS_NUM_NEUTRAL(num)			(!IS_NUM_GOOD(num) && !IS_NUM_EVIL(num))
-
-#define IS_NUM_LAWFUL(num)			(num > 333)
-#define IS_NUM_CHAOTIC(num)			(num < -333)
-#define IS_NUM_ENEUTRAL(num)		(!IS_NUM_LAWFUL(num) && !IS_NUM_CHAOTIC(num))
-
-
-#define IS_AWAKE(ch)				(ch->position > POS_SLEEPING)
-#define GET_AC(ch,type)				(ch->armor[type])
-#define GET_HITROLL(ch)				(ch->hitroll+dex_app[get_curr_stat(ch,STAT_DEX)].tohit)
-#define GET_DAMROLL(ch) 			(ch->damroll+str_app[get_curr_stat(ch,STAT_STR)].todam)
-
-#define IS_OUTSIDE(ch)				(!IS_SET(ch->in_room->room_flags, ROOM_INDOORS) 		\
- 										&& ch->in_room->sector_type != SECT_INSIDE 			\
-										&& ch->in_room->sector_type != SECT_UNDERWATER)
-
-#define get_carry_weight(ch)		(ch->carry_weight + ch->gold/10000)
-
-#define IS_SHIFTED(ch)				(false)
-#define IS_HUNGRY(ch)				(IS_NPC(ch) ? false : (ch)->pcdata->condition[COND_HUNGER] > COND_HUNGRY ? true : false)
-#define IS_THIRSTY(ch)				(IS_NPC(ch) ? false : (ch)->pcdata->condition[COND_THIRST] > COND_HUNGRY ? true : false)
-
-//
-// Room Macros
-//
-
-#define IS_ROOM_AFFECTED(room, sn)	(IS_SET(room->affected_by, sn))
-#define IS_RAFFECTED(room, sn)		(IS_SET(room->affected_by, sn))
-#define IS_GROUND(room)				(room->sector_type != SECT_AIR && room->sector_type != SECT_WATER && room->sector_type != SECT_UNDERWATER && room->sector_type != SECT_VERTICAL)
-#define IS_WATER(room)				(room->sector_type == SECT_WATER || room->sector_type == SECT_UNDERWATER)
-
-//
-// Object macros.
-//
-
-#define CAN_WEAR(obj, part)			(IS_SET(obj->wear_flags, part))
-#define IS_OBJ_STAT(obj, stat)		(IS_SET(obj->extra_flags, stat))
-#define IS_WEAPON_STAT(obj,stat)	(IS_SET_OLD(obj->value[4], stat))
-#define WEIGHT_MULT(obj)			(obj->item_type == ITEM_CONTAINER ? obj->value[4] : 100)
-#define IS_EXPLORE(room)			(IS_SET(room->room_flags, ROOM_AREA_EXPLORE) || IS_SET(room->area->area_flags, AREA_EXPLORE) ? true : false)
-#define IS_METAL(obj)				(!str_cmp(obj->material, "iron")			\
-										|| !str_cmp(obj->material, "steel")		\
-										|| !str_cmp(obj->material, "mithril")	\
-										|| !str_cmp(obj->material, "copper")	\
-										|| !str_cmp(obj->material, "gold")		\
-										|| !str_cmp(obj->material, "silver")	\
-										|| !str_cmp(obj->material, "platinum")	\
-										|| !str_cmp(obj->material, "brass")		\
-										|| !str_cmp(obj->material, "bronze")	\
-										|| !str_cmp(obj->material, "metal")		\
-										|| !str_cmp(obj->material, "pewter")	\
-										|| !str_cmp(obj->material, "lead")		\
-										|| !str_cmp(obj->material, "electrum")	\
-										|| !str_cmp(obj->material, "tin"))
-
-#define IS_STONE(obj)				(!str_cmp(obj->material, "ceramic")			\
-										|| !str_cmp(obj->material, "porcelain")	\
-										|| !str_cmp(obj->material, "marble")	\
-										|| !str_cmp(obj->material, "stone")		\
-										|| !str_cmp(obj->material, "quartz")	\
-										|| !str_cmp(obj->material, "corundum")	\
-										|| !str_cmp(obj->material, "flint")		\
-										|| !str_cmp(obj->material, "lodestone")	\
-										|| !str_cmp(obj->material, "granite")	\
-										|| !str_cmp(obj->material, "enamel")	\
-										|| !str_cmp(obj->material, "obsidian")	\
-										|| !str_cmp(obj->material, "glass")		\
-										|| !str_cmp(obj->material, "pottery")	\
-										|| !str_cmp(obj->material, "crystal")	\
-										|| !str_cmp(obj->material, "coral")		\
-										|| !str_cmp(obj->material, "sandstone")	\
-										|| !str_cmp(obj->material, "clay")		\
-										|| !str_cmp(obj->material, "earth")		\
-										|| !str_cmp(obj->material, "ceramic"))
-
-#define CAN_RUST(obj)				(!str_cmp(obj->material, "iron")			\
-										|| !str_cmp(obj->material, "steel")		\
-										|| !str_cmp(obj->material, "copper")	\
-										|| !str_cmp(obj->material, "brass")		\
-										|| !str_cmp(obj->material, "bronze")	\
-										|| !str_cmp(obj->material, "metal")		\
-										|| !str_cmp(obj->material, "pewter")	\
-										|| !str_cmp(obj->material, "lead")		\
-										|| !str_cmp(obj->material, "tin"))
-
-//
-// Description macros.
-//
-
-#define PERS(ch, looker)			(can_see(looker, ch) && !is_affected(looker, gsn_plasma_arc)	\
-										? (IS_NPC(ch) ? ch->short_descr : ch->name)					\
-										: (IS_IMMORTAL(ch) && !IS_NPC(ch) && ch->invis_level > 50	\
-												&& (!ch->desc || !ch->desc->original) 				\
-											? "An Immortal" : "someone"))
 
 //
 // Structure for a social in the socials table.
@@ -4289,30 +3939,7 @@ struct social_type
 // Global constants.
 //
 
-extern const struct str_app_type str_app[26];
-extern const struct int_app_type int_app[26];
-extern const struct wis_app_type wis_app[26];
-extern const struct dex_app_type dex_app[26];
-extern const struct con_app_type con_app[26];
-
 extern const struct class_type class_table[MAX_CLASS];
-extern const struct weapon_type weapon_table[];
-extern const struct item_type item_table[];
-extern const struct wiznet_type wiznet_table[];
-extern const struct attack_type attack_table[];
-extern const struct race_type race_table[];
-extern const struct pc_race_type pc_race_table[];
-extern const struct liq_type liq_table[];
-extern const struct skill_type skill_table[MAX_SKILL];
-extern const struct group_type group_table[MAX_GROUP];
-extern struct social_type social_table[MAX_SOCIALS];
-extern char * const title_table[MAX_CLASS][MAX_LEVEL+1][2];
-
-extern const struct improg_type iprog_table[];
-extern const struct improg_type verb_prog_table[];
-extern const struct improg_type mprog_table[];
-extern const struct improg_type rprog_table[];
-extern const struct improg_type aprog_table[];
 
 //
 // Global variables.
@@ -4369,7 +3996,6 @@ extern sh_int count_data[30000];
 #define GOD_DIR						RIFT_ROOT_DIR "/gods/"						// list of gods
 #define TEMP_FILE					RIFT_PLAYER_DIR "/romtmp"
 #define PLAYER_LIST					RIFT_PLAYER_DIR "/Player.lst"				// Player list for limits
-#define VOTE_FILE					RIFT_AREA_DIR "/votes.txt"
 #define AREA_LIST					RIFT_AREA_DIR "/area.lst"					// List of areas
 #define BUG_FILE					RIFT_AREA_DIR "/bugs.txt"					// For 'bug' and bug()
 #define TYPO_FILE					RIFT_AREA_DIR "/typos.txt"					// For 'typo'
@@ -4383,15 +4009,12 @@ extern sh_int count_data[30000];
 #define MULT_EXP					5
 
 
-extern BALLOT_DATA *ballot_first;
-extern VOTE_DATA  *vote_first;
 extern QUEUE_DATA *global_queue;
 extern AREA_DATA *area_first;
 extern PATHFIND_DATA *best_path;
 extern RACE_DATA * race_list;
 extern int iterations;
 
-extern const struct liq_type liq_table[];
 extern bool command_result;
 extern char *command_line;
 
@@ -4457,53 +4080,12 @@ extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
 extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 
-/* bit.c */
-extern const struct flag_type area_flags[];
-extern const struct flag_type sex_flags[];
-extern const struct flag_type exit_flags[];
-extern const struct flag_type door_resets[];
-extern const struct flag_type room_flags[];
-extern const struct flag_type sector_flags[];
-extern const struct flag_type type_flags[];
-extern const struct flag_type extra_flags[];
-extern const struct flag_type wear_flags[];
-extern const struct flag_type act_flags[];
-extern const struct flag_type affect_flags[];
-extern const struct flag_type apply_flags[];
-extern const struct flag_type wear_loc_strings[];
-extern const struct flag_type wear_loc_flags[];
-extern const struct flag_type weapon_flags[];
-extern const struct flag_type container_flags[];
-
-/* ROM OLC: */
-
-extern const struct flag_type material_type[];
-extern const struct flag_type form_flags[];
-extern const struct flag_type part_flags[];
-extern const struct flag_type ac_type[];
-extern const struct flag_type size_flags[];
-extern const struct flag_type off_flags[];
-extern const struct flag_type imm_flags[];
-extern const struct flag_type res_flags[];
-extern const struct flag_type vuln_flags[];
-extern const struct flag_type position_flags[];
-extern const struct flag_type weapon_class[];
-extern const struct flag_type weapon_type2[];
-extern const struct flag_type furniture_flags[];
 
 #define CAP(st)						(*(st) = UPPER(*(st)), st)
 #define	HIGH_VNUM					65535
 #define LOW_VNUM					-1
 
 
-#define IS_SWITCHED( ch )			(ch->desc && ch->desc->original)	// ROM OLC
-
-/*
-#define exit(x)						(x != 3 ? bug_exit(__FILE__,__LINE__) : exit(3))
-#define str_cmp(a,b)				((gLastFile = __FILE__) ? (gLastLine = __LINE__) ? str_cmp(a,b) : 0 : 0)
-#define SAFE_EXIT					66
-#define exit(x)						(x != SAFE_EXIT ? kill(getpid(), SIGSEGV) : exit(x))
-*/
 extern bool bDebug;
 
 #define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';

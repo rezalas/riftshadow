@@ -31,6 +31,7 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <cstddef>
 #include "db.h"
 
 /* LOAD CABAL ITEMS */
@@ -70,9 +71,6 @@ long total_gold = 0;
 long player_gold = 0;
 long total_wealth = 0;
 RACE_DATA *race_list;
-sh_int chessboard[8][8];
-CHAR_DATA *chess_white;
-CHAR_DATA *chess_black;
 
 sh_int gsn_timer;
 sh_int gsn_repose;
@@ -557,9 +555,6 @@ ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 char *string_hash[MAX_KEY_HASH];
 
 AREA_DATA *area_last;
-
-BALLOT_DATA *ballot_first;
-VOTE_DATA *vote_first;
 
 char *string_space;
 char *top_string;
@@ -1188,7 +1183,7 @@ void load_cabal_items(void)
 		{
 			for (mob = char_list; mob; mob = mob->next)
 			{
-				if (mob->cabal == inum && IS_CABAL_GUARD(mob))
+				if (mob->cabal == inum && is_cabal_guard(mob))
 					obj_to_char(obj, mob);
 			}
 
@@ -1511,9 +1506,9 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				for (pObj2 = pRoomIndex->contents; pObj2; pObj2 = pObj2->next_content)
 				{
 					if (pObj2->pIndexData->vnum == pObjIndex->vnum
-						&& !IS_OBJ_STAT(pObj2, ITEM_DONATION_PIT)
-						&& !IS_OBJ_STAT(pObj2, ITEM_CORPSE_PC)
-						&& !IS_OBJ_STAT(pObj2, ITEM_CORPSE_NPC)
+						&& !is_obj_stat(pObj2, ITEM_DONATION_PIT)
+						&& !is_obj_stat(pObj2, ITEM_CORPSE_PC)
+						&& !is_obj_stat(pObj2, ITEM_CORPSE_NPC)
 						&& pObj2->item_type == ITEM_CONTAINER
 						&& !pObj2->contains)
 					{
@@ -1528,7 +1523,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					break;
 				}
 
-				pObj = create_object(pObjIndex, UMIN(number_fuzzy(level), LEVEL_HERO - 1));
+				pObj = create_object(pObjIndex, std::min(number_fuzzy(level), LEVEL_HERO - 1));
 				pObj->cost = 0;
 				pObj->owner = palloc_string("none");
 				pObj->talked = palloc_string("someone a long long time ago");
@@ -1625,11 +1620,11 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 									{
 										for (j = 0; j < MAX_CLASS; j++)
 										{
-											olevel = UMIN(olevel, skill_table[pObjIndex->value[i]].skill_level[j]);
+											olevel = std::min(olevel, (int)skill_table[pObjIndex->value[i]].skill_level[j]);
 										}
 									}
 								}
-								olevel = UMAX(0, (olevel * 3 / 4) - 2);
+								olevel = std::max(0, (olevel * 3 / 4) - 2);
 								break;
 							case ITEM_WAND:
 								olevel = number_range(10, 20);
@@ -1675,7 +1670,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					}
 					else
 					{
-						pObj = create_object(pObjIndex, UMIN(number_fuzzy(level), LEVEL_HERO - 1));
+						pObj = create_object(pObjIndex, std::min(number_fuzzy(level), LEVEL_HERO - 1));
 					}
 
 					pObj->owner = palloc_string("none");
@@ -1723,7 +1718,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				for (rch = LastMob->in_room->people; rch != NULL; rch = rch->next_in_room)
 				{
-					if (IS_NPC(rch) && (pReset->arg2 == rch->pIndexData->vnum))
+					if (is_npc(rch) && (pReset->arg2 == rch->pIndexData->vnum))
 					{
 						found = true;
 						break;
@@ -1936,7 +1931,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 		/* computed on the spot */
 		for (i = 0; i < MAX_STATS; i++)
 		{
-			mob->perm_stat[i] = UMIN(25, 11 + mob->level / 4);
+			mob->perm_stat[i] = std::min(25, 11 + mob->level / 4);
 		}
 
 		if (mob->pIndexData->Class()->GetIndex() == CLASS_WARRIOR)
@@ -1982,7 +1977,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 		af.duration = -1;
 		af.location = APPLY_NONE;
 
-		if (IS_AFFECTED(mob, AFF_SANCTUARY))
+		if (is_affected_by(mob, AFF_SANCTUARY))
 		{
 			SET_BIT(af.bitvector, AFF_SANCTUARY);
 			affect_to_char(mob, &af);
@@ -2081,7 +2076,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	int i;
 	AFFECT_DATA *paf;
 
-	if (parent == NULL || clone == NULL || !IS_NPC(parent))
+	if (parent == NULL || clone == NULL || !is_npc(parent))
 		return;
 
 	/* start fixing values */
@@ -2188,7 +2183,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 	if (pObjIndex->new_format)
 		obj->level = pObjIndex->level;
 	else
-		obj->level = UMAX(0, level);
+		obj->level = std::max(0, level);
 
 	obj->wear_loc = -1;
 	obj->name = palloc_string(pObjIndex->name);				  /* OLC */
@@ -2800,7 +2795,7 @@ char *fread_string(FILE *fp)
 
 					plast[-1] = '\0';
 
-					iHash = UMIN(MAX_KEY_HASH - 1, plast - 1 - top_string);
+					iHash = std::min(MAX_KEY_HASH - 1, plast - 1 - top_string);
 					for (pHash = string_hash[iHash]; pHash; pHash = pHashPrev)
 					{
 						for (ic = 0; ic < sizeof(char *); ic++)
@@ -3377,7 +3372,7 @@ int number_fuzzy(int number)
 			break;
 	}
 
-	return UMAX(1, number);
+	return std::max(1, number);
 }
 
 /*
@@ -3402,14 +3397,15 @@ int number_range(int from, int to)
 	return from + number;
 }
 
-/*
- * Generate a percentile roll.
- */
+///
+/// Generate a percentile roll.
+///
+/// @return a random integer from 1 - 99
+///
 int number_percent(void)
 {
 	int percent;
-
-	while ((percent = number_mm() & (128 - 1)) > 99);
+	while ((percent = number_mm() & 127) > 99);
 
 	return 1 + percent;
 }
@@ -3446,6 +3442,10 @@ int number_bits(int width)
 static int rgiState[2 + 55];
 #endif
 
+///
+/// This is mandatory for the random number generator to work, and MUST run 
+/// during the startup phase for randomization to function properly in the game.
+///
 void init_mm()
 {
 #ifdef OLD_RAND
@@ -3468,9 +3468,31 @@ void init_mm()
 #endif
 }
 
+///
+/// Generates a random number using Mitchell-Moore algorithm from Knuth Volume II.
+///
+/// @return a randomly generated long.
+///
 long number_mm(void)
 {
 #ifdef OLD_RAND
+	
+	if(rgiState[0] == 0) // check if they're all zero, if so call init_mm()
+	{
+		bool isAnyrgiStateNumberNotZero = false;
+		for(auto i = 0; i < std::size(rgiState); i++)
+		{
+			if(rgiState[i] != 0)
+			{
+				isAnyrgiStateNumberNotZero = true;
+				break;
+			}
+		}
+		if(isAnyrgiStateNumberNotZero == false)
+		{
+			init_mm();
+		}
+	}
 	int *piState;
 	int iState1;
 	int iState2;
@@ -3667,7 +3689,7 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
 	FILE *fp;
 	char buf[MSL];
 
-	if (IS_NPC(ch) || str[0] == '\0')
+	if (is_npc(ch) || str[0] == '\0')
 		return;
 
 	fclose(fpReserve);
@@ -3767,7 +3789,7 @@ void do_force_reset(CHAR_DATA *ch, char *argument)
 	char buf[MAX_STRING_LENGTH];
 	CHAR_DATA *ich, *ich_next;
 
-	if (get_trust(ch) < LEVEL_IMMORTAL && !IS_HEROIMM(ch))
+	if (get_trust(ch) < LEVEL_IMMORTAL && !is_heroimm(ch))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -3785,7 +3807,7 @@ void do_force_reset(CHAR_DATA *ch, char *argument)
 	{
 		ich_next = ich->next;
 
-		if (IS_NPC(ich) && ich->in_room && ich->in_room->area == pArea && pArea->area_type == ARE_UNOPENED)
+		if (is_npc(ich) && ich->in_room && ich->in_room->area == pArea && pArea->area_type == ARE_UNOPENED)
 			extract_char(ich, true);
 	}
 
@@ -3898,7 +3920,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	{
 		carrier = obj->carried_by;
 
-		if (carrier != NULL && !IS_NPC(carrier))
+		if (carrier != NULL && !is_npc(carrier))
 			continue;
 
 		obj->pIndexData->limcount++;
@@ -4194,58 +4216,6 @@ void load_rooms(FILE *fp)
 		room_list = pRoomIndex;
 		top_room++;
 	}
-}
-
-void load_votes()
-{
-	FILE *fp;
-	BALLOT_DATA *ballot;
-	VOTE_DATA *vote;
-	char discard, *word;
-
-	fp = fopen(VOTE_FILE, "r");
-	if (!fp)
-		return;
-
-	return; //TODO: memory leak
-
-	vote_first = NULL;
-	ballot_first = NULL;
-
-	for (;;)
-	{
-		// Discard the first '#'
-		discard = fread_letter(fp);
-
-		if (discard == '$')
-			break;
-
-		ballot = new BALLOT_DATA;
-		ballot->name = fread_string(fp);
-		ballot->next = ballot_first;
-
-		for (;;)
-		{
-			// votez
-			word = fread_word(fp);
-
-			if (!str_cmp(word, "ENDVOTES"))
-				break;
-
-			vote = new VOTE_DATA;
-			vote->voter = palloc_string(word);
-			vote->vote_for = palloc_string(fread_word(fp));
-			vote->time = fread_string(fp);
-			vote->ip = fread_string(fp);
-			vote->next = vote_first;
-			vote_first = vote;
-			ballot->first_vote = vote;
-		}
-
-		ballot_first = ballot;
-	}
-
-	fclose(fp);
 }
 
 void load_newresets(FILE *fp)

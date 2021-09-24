@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <algorithm>
 #include "merc.h"
 #include "handler.h"
 #include "interp.h"
@@ -33,6 +34,10 @@
 #include "misc.h"
 #include "ap.h"
 #include "iprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
 
 #define HITS 					(dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8

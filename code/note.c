@@ -59,7 +59,7 @@ void do_unread(CHAR_DATA *ch, char *arg)
 	int count;
 	bool found= false;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if ((count = count_spool(ch, NOTE_NOTE)) > 0)
@@ -123,16 +123,16 @@ bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
 	if (is_name("all", to_list))
 		return true;
 
-	if (IS_IMMORTAL(ch) && is_name("immortal", to_list))
+	if (is_immortal(ch) && is_name("immortal", to_list))
 		return true;
 
-	if (IS_HEROIMM(ch) && is_name("heroimm", to_list))
+	if (is_heroimm(ch) && is_name("heroimm", to_list))
 		return true;
 
 	if (IS_SET(ch->act, PLR_CODER) && is_name("coder", to_list))
 		return true;
 
-	if (!IS_NPC(ch) && is_name(ch->Class()->name, to_list))
+	if (!is_npc(ch) && is_name(ch->Class()->name, to_list))
 		return true;
 
 	if (ch->cabal && is_name(cabal_table[ch->cabal].name, to_list))
@@ -156,7 +156,7 @@ void note_attach(CHAR_DATA *ch, int type)
 
 	pnote = new_note();
 	pnote->next = NULL;
-	pnote->sender = (IS_NPC(ch)) ? palloc_string(ch->short_descr) : palloc_string(ch->true_name);
+	pnote->sender = (is_npc(ch)) ? palloc_string(ch->short_descr) : palloc_string(ch->true_name);
 	pnote->date = palloc_string("");
 	pnote->to_list = palloc_string("");
 	pnote->subject = palloc_string("");
@@ -170,7 +170,7 @@ bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 {
 	time_t last_read;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return true;
 
 	switch (atoi(row[0]))
@@ -209,25 +209,25 @@ bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 void update_read(CHAR_DATA *ch, long stamp, int type)
 {
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	switch (type)
 	{
 		case NOTE_NOTE:
-			ch->pcdata->last_note = UMAX(ch->pcdata->last_note, stamp);
+			ch->pcdata->last_note = std::max(static_cast<long>(ch->pcdata->last_note), stamp);
 			break;
 		case NOTE_IDEA:
-			ch->pcdata->last_idea = UMAX(ch->pcdata->last_idea, stamp);
+			ch->pcdata->last_idea = std::max(static_cast<long>(ch->pcdata->last_idea), stamp);
 			break;
 		case NOTE_PENALTY:
-			ch->pcdata->last_penalty = UMAX(ch->pcdata->last_penalty, stamp);
+			ch->pcdata->last_penalty = std::max(static_cast<long>(ch->pcdata->last_penalty), stamp);
 			break;
 		case NOTE_NEWS:
-			ch->pcdata->last_news = UMAX(ch->pcdata->last_news, stamp);
+			ch->pcdata->last_news = std::max(static_cast<long>(ch->pcdata->last_news), stamp);
 			break;
 		case NOTE_CHANGES:
-			ch->pcdata->last_changes = UMAX(ch->pcdata->last_changes, stamp);
+			ch->pcdata->last_changes = std::max(static_cast<long>(ch->pcdata->last_changes), stamp);
 			break;
 		default:
 			return;
@@ -456,7 +456,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 	}
 
 	/* below this point only certain people can edit notes */
-	if ((type == NOTE_NEWS && !IS_TRUSTED(ch, ANGEL)) || (type == NOTE_CHANGES && !IS_TRUSTED(ch, CREATOR)))
+	if ((type == NOTE_NEWS && !is_trusted(ch, ANGEL)) || (type == NOTE_CHANGES && !is_trusted(ch, CREATOR)))
 	{
 		sprintf(buf, "You aren't high enough level to write %s.", list_name);
 		send_to_char(buf, ch);
@@ -571,15 +571,15 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 		}
 
 		if (is_name("all", argument)
-			&& !IS_IMMORTAL(ch)
-			&& !IS_HEROIMM(ch)
+			&& !is_immortal(ch)
+			&& !is_heroimm(ch)
 			&& ch->pcdata->induct != CABAL_LEADER)
 		{
 			send_to_char("Sorry, you can't do that!\n\r", ch);
 			return;
 		}
 
-		if (is_number(argument) && !IS_IMMORTAL(ch))
+		if (is_number(argument) && !is_immortal(ch))
 		{
 			send_to_char("You can't do that.\n\r", ch);
 			return;
@@ -652,7 +652,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 			return;
 		}
 
-		if (is_affected_prof(ch, "note_written") && !IS_IMMORTAL(ch))
+		if (is_affected_prof(ch, "note_written") && !is_immortal(ch))
 		{
 			send_to_char("You have written a note too recently.\n\r", ch);
 			return;

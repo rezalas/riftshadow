@@ -13,8 +13,12 @@ sites:
   - map: admin.riftshadow.org # can be changed
     to: /home/vagrant/code/admin/public
 databases:
-  - rift
-  - rift_core
+  - name: rift
+    user: rift
+    pass: rift123
+  - name: rift_core
+    user: rift
+    pass: rift123
 features:
   - mysql: true
   - mariadb: false

@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <algorithm>
 #include "merc.h"
 #include "recycle.h"
 #include "lookup.h"
@@ -19,6 +20,9 @@
 #include "magic.h"
 #include "dioextra.h"
 #include "comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
 
 #define MAX_NEST	100
 

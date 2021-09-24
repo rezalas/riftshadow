@@ -29,6 +29,9 @@
 #include "sorcerer.h"
 #include "chrono.h"
 #include "update.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
 
 // TODO: add to race.h
 extern bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room);

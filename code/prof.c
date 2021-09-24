@@ -212,6 +212,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		return send_to_char("You cannot attempt to track them again yet.\n\r",ch);
 	if(!(victim = get_char_world(ch, argument)) || victim == ch || IS_NPC(victim))
 		return send_to_char("Track who?\n\r",ch);
+	
 	if(!IS_GROUND(ch->in_room) || sect == SECT_CITY || sect == SECT_INSIDE || sect == SECT_BURNING || sect == SECT_ROAD)
 		return send_to_char("Even if they had been here, there would be no suitable tracks left for you to follow.\n\r",ch);
 	act("$n begins to poke and prod at the ground, clearly searching for something.",ch, 0, 0, TO_ROOM);
@@ -237,7 +238,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		sprintf(buf,"From the pattern of tracks here, you suspect $N left $t.");
 	}
 	act(buf,ch,direction,victim,TO_CHAR);
-	add_prof_affect(ch, "tracking", (UMAX(0, 5 - ch->Profs()->GetProf("tracking"))));
+	add_prof_affect(ch, "tracking", (std::max(0, 5 - ch->Profs()->GetProf("tracking"))));
 	ch->Profs()->CheckImprove("tracking", 150);
 }
 
@@ -302,7 +303,7 @@ void prof_appraise(CHAR_DATA *ch, char *argument)
 	if(number_percent() > 50)
 		tcost = obj->cost + (mcost * obj->cost);
 	else
-		tcost = UMAX(0, obj->cost - (mcost * obj->cost));
+		tcost = std::max((float)0, obj->cost - (mcost * obj->cost));
 	char buf[MSL];
 	sprintf(buf,"You estimate the value of $p to be approximately %d gold.",(int)tcost);
 	act(buf, ch, obj, 0, TO_CHAR);
@@ -323,7 +324,7 @@ void prof_butcher(CHAR_DATA *ch, char *argument)
 	act("You butcher $p, carefully gutting it, extracting the edible portions and slicing them into rough chunks.",
 		ch, obj, 0, TO_CHAR);
 	extract_obj(obj);
-	int nummeat = UMAX(1, (ch->Profs()->GetProf("butchery") + 2) / 3);
+	int nummeat = std::max(1, (ch->Profs()->GetProf("butchery") + 2) / 3);
 
 	act("After the butchering process, you are left with $i pieces of meat.", ch, &nummeat, 0, TO_CHAR);
 	for(int i = 0; i < nummeat; i++)
@@ -365,8 +366,8 @@ void prof_bandage(CHAR_DATA *ch, char *argument)
 		act("$n bandages your wounds, staunching the worst of the bleeding.",ch,0,victim,TO_VICT);
 		act("$n bandages $N's wounds, staunching the worst of $S bleeding.",ch,0,victim,TO_NOTVICT);
 	}
-	float hadd = (UMAX(ch->Profs()->GetProf("bandaging") * .4, 1) * victim->level) + victim->hit;
-	victim->hit = UMIN(victim->max_hit, (int)hadd);
+	float hadd = (std::max(ch->Profs()->GetProf("bandaging") * 0.4, (double)1) * victim->level) + victim->hit;
+	victim->hit = std::min((float)victim->max_hit, hadd);
 	ch->Profs()->CheckImprove("bandaging", 1000);
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 }

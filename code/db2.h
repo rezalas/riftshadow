@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include <iterator>
+#include <algorithm>
 #include "merc.h"
 #include "handler.h"
 #include "db.h"
@@ -23,6 +24,8 @@
 #include "mprog.h"
 #include "rprog.h"
 #include "aprog.h"
+
+extern struct social_type social_table[MAX_SOCIALS];
 
 //
 // LOCAL FUNCTIONS

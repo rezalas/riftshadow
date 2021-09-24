@@ -1,7 +1,9 @@
+#include <cstddef>
 #include <string.h>
 #include <stddef.h>
 #include "catch.hpp"
 #include "../code/db.h"
+#include "../code/db.c"
 
 // TEST_CASE("Test capitalization", "[string]" )
 // {
@@ -114,5 +116,28 @@ SCENARIO("Testing string suffix", "[str_suffix]")
 	// TODO: test if aString is null
 	// TODO: test if bString is null
 	// TODO: test if both strings are null
+}
+SCENARIO("Testing random number generator", "[random_mm]")
+{
+	GIVEN("A request for a random number")
+	{
+		WHEN("rgiState has not been initialized properly")
+		{
+			THEN("init_mm() should be called to ensure rgiState is not filled with zeros")
+			{
+				auto number = number_mm();
+				bool anyNonZero = false;
+				for(auto i = 0; i < std::size(rgiState); i++)
+				{
+					if(rgiState[i] != 0)
+					{
+						anyNonZero = true;
+						break;
+					}
+				}
 
+				REQUIRE(anyNonZero == true);
+			}
+		}
+	}
 }

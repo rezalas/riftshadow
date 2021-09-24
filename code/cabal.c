@@ -27,46 +27,50 @@
 
 #include "cabal.h"
 
+///
+/// Checks if the character is a member of the Horde Cabal.
+/// @param ch: The character to check
+/// @return True if a Horde member
+///
 bool check_horde(CHAR_DATA *ch)
 {
-	if (ch->cabal == CABAL_HORDE)
-	{
-		send_to_char("Huh?\n\r", ch);
-		return true;
-	}
-	
-	return false;
+	return ch->cabal == CABAL_HORDE;
 }
 
+
+
+///
+/// Updates the cabal-associated skills for a character. If they
+/// don't have a cabal, this removes all cabal-related skills. 
+/// @param ch: The character to operate on
+///
 void update_cskills(CHAR_DATA *ch)
 {
-	int i;
+	if(ch == NULL) // We cannot update what does not exist
+		return;
+	
+	if(ch->cabal == false) // if they don't have a cabal, remove all their cabal skills.
+	{ 
+		for (auto skill : cabal_skills)
+			ch->pcdata->learned[skill_lookup(skill.skill)] = 0;
 
-	if (ch->cabal)
-	{
-		for (i = 0; cabal_skills[i].skill; i++)
-		{
-			if (ch->cabal != cabal_skills[i].cabal)
-				continue;
-
-			if (ch->pcdata->cabal_level < cabal_skills[i].level && cabal_skills[i].level != 10)
-				continue;
-
-			if (ch->pcdata->cabal_level != cabal_skills[i].level && cabal_skills[i].specific)
-				continue;
-
-			if (cabal_skills[i].level == 10 && ch->pcdata->induct != CABAL_LEADER)
-				continue;
-
-			if (ch->pcdata->learned[skill_lookup(cabal_skills[i].skill)] < 2)
-				ch->pcdata->learned[skill_lookup(cabal_skills[i].skill)] = 70;
-		}
+		return;
 	}
-	else
+
+	auto charCabalLevel = ch->pcdata->cabal_level;
+
+	for(cabal_list skill : cabal_skills)
 	{
-		for (i = 0; cabal_skills[i].skill; i++)
+		if (ch->cabal != skill.cabal || (charCabalLevel < skill.level && skill.level != 10))
+			continue;
+		 
+		if((charCabalLevel != skill.level && skill.specific) || (skill.level == 10 && ch->pcdata->induct != CABAL_LEADER))
+			continue;
+		
+		auto skillPosInLearned = skill_lookup(skill.skill);
+		if(ch->pcdata->learned[skillPosInLearned] < 2)
 		{
-			ch->pcdata->learned[skill_lookup(cabal_skills[i].skill)] = 0;
+			ch->pcdata->learned[skillPosInLearned] = 70;
 		}
 	}
 }
@@ -84,7 +88,7 @@ void do_storytell(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->in_room->cabal != ch->cabal && !IS_IMMORTAL(ch))
+	if (ch->in_room->cabal != ch->cabal && !is_immortal(ch))
 	{
 		send_to_char("You don't feel comfortable telling stories here.\n\r", ch);
 		return;
@@ -204,7 +208,7 @@ void spell_rage(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *obj;
 	char buf[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (is_affected(ch, sn) || is_affected(ch, gsn_rage))
@@ -589,9 +593,9 @@ void spell_scourge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!IS_NPC(ch) && !IS_NPC(vch) && (ch->fighting == NULL || vch->fighting == NULL))
+		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == NULL || vch->fighting == NULL))
 		{
-			sprintf(buf, "Die, %s you scourging dog!", PERS(ch, vch));
+			sprintf(buf, "Die, %s you scourging dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -671,7 +675,7 @@ void spell_hire_mercenary(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	for (merc = char_list; merc != NULL; merc = merc->next)
 	{
-		if (IS_NPC(merc)
+		if (is_npc(merc)
 			&& merc->pIndexData->vnum >= MOB_VNUM_WARRIOR_MERCENARY
 			&& merc->pIndexData->vnum <= MOB_VNUM_SHAMAN_MERCENARY
 			&& merc->master == ch)
@@ -764,7 +768,7 @@ void spell_hunters_strength(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	AFFECT_DATA af;
 	float bcr;
 
-	if (is_affected(ch, sn) || IS_NPC(ch))
+	if (is_affected(ch, sn) || is_npc(ch))
 	{
 		send_to_char("You already have the enhanced strength of a hunter.\n\r", ch);
 		return;
@@ -794,7 +798,7 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 	CHAR_DATA *victim;
 	AFFECT_DATA af;
 
-	if (IS_NPC(ch) || IS_SWITCHED(ch))
+	if (is_npc(ch) || is_switched(ch))
 		return;
 
 	if (is_affected(ch, sn) || (ch->pcdata->cabal_level == 5 && ch->mana < 100))
@@ -809,7 +813,7 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 		return;
 	}
 
-	if (!(victim = get_char_world(ch, target_name)) || IS_NPC(victim))
+	if (!(victim = get_char_world(ch, target_name)) || is_npc(victim))
 	{
 		send_to_char("You are unable to find them.\n\r", ch);
 		return;
@@ -821,7 +825,7 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 		return;
 	}
 
-	if (is_adj_range(victim->in_room->area, ch->in_room->area, UMIN(ch->pcdata->cabal_level + 1, 4)))
+	if (is_adj_range(victim->in_room->area, ch->in_room->area, std::min(ch->pcdata->cabal_level + 1, 4)))
 	{
 		if (ch->pcdata->cabal_level == 5)
 		{
@@ -922,7 +926,7 @@ void spell_informant(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (saves_spell(level + 8, victim, DAM_OTHER) || IS_NPC(victim) || IS_IMMORTAL(victim))
+	if (saves_spell(level + 8, victim, DAM_OTHER) || is_npc(victim) || is_immortal(victim))
 	{
 		act("Your spies are unable to locate $N.", ch, 0, victim, TO_CHAR);
 		return;
@@ -1007,7 +1011,7 @@ void do_howl(CHAR_DATA *ch, char *argument)
 			if (vch != ch
 				&& !check_leadership_save(vch, gsn_howl)
 				&& vch->fighting == ch
-				&& (!IS_NPC(vch) || (IS_NPC(vch) && !IS_SET(vch->act, ACT_SENTINEL))))
+				&& (!is_npc(vch) || (is_npc(vch) && !IS_SET(vch->act, ACT_SENTINEL))))
 			{
 				act("$n looks frightened and tries to run!", vch, 0, 0, TO_ROOM);
 				do_flee(vch, "");
@@ -1249,10 +1253,10 @@ void spell_horde_communion(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (IS_NPC(ch) && (!ch->desc || !ch->desc->original))
+	if (is_npc(ch) && (!ch->desc || !ch->desc->original))
 		return;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		ch = ch->desc->original;
 
 	if (is_affected(victim, gsn_horde_communion))
@@ -1266,13 +1270,13 @@ void spell_horde_communion(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		return;
 	}
 
-	if ((ch->cabal != CABAL_HORDE || ch->pcdata->induct != CABAL_LEADER) && !IS_IMMORTAL(ch))
+	if ((ch->cabal != CABAL_HORDE || ch->pcdata->induct != CABAL_LEADER) && !is_immortal(ch))
 	{
 		send_to_char("It is not your place to call upon the spirits thus!\n\r", ch);
 		return;
 	}
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("You profane the spirits with such notions.\n\r", ch);
 		return;
@@ -1291,7 +1295,7 @@ void spell_horde_communion(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	}
 
 	if (victim->level < 15
-		|| IS_LAWFUL(victim)
+		|| is_lawful(victim)
 		|| victim->Class()->name == "sorcerer"
 		|| victim->Class()->name == "paladin"
 		|| victim->Class()->name == "necromancer"
@@ -1352,12 +1356,12 @@ void do_exile(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	OBJ_DATA *remove;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	argument = one_argument(argument, arg1);
 
-	if ((ch->level < 54 && ch->pcdata->induct != CABAL_LEADER) || IS_NPC(ch) || ch->cabal != CABAL_HORDE)
+	if ((ch->level < 54 && ch->pcdata->induct != CABAL_LEADER) || is_npc(ch) || ch->cabal != CABAL_HORDE)
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -1403,7 +1407,7 @@ void spell_piety(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	AFFECT_DATA af;
 	char buf[MSL];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (is_affected(ch, gsn_piety))
@@ -1477,13 +1481,13 @@ void spell_spiritual_healing(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 		return;
 	}
 
-	if (!IS_GOOD(victim))
+	if (!is_good(victim))
 	{
 		act("$N is too impure!", ch, 0, victim, TO_CHAR);
 		return;
 	}
 
-	victim->hit = UMIN(victim->max_hit, victim->hit + dice(ch->level, 3));
+	victim->hit = std::min((int)victim->max_hit, victim->hit + dice(ch->level, 3));
 
 	if (ch != victim)
 	{
@@ -1561,7 +1565,7 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	for (vch = ch->in_room->people; vch; vch = vch->next_in_room)
 	{
-		if (IS_EVIL(vch) && !is_safe_new(ch, vch, false))
+		if (is_evil(vch) && !is_safe_new(ch, vch, false))
 			break;
 	}
 
@@ -1571,7 +1575,7 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		return;
 	}
 
-	if (!victim || !IS_EVIL(victim))
+	if (!victim || !is_evil(victim))
 		victim = vch;
 
 	if (!victim)
@@ -1588,7 +1592,7 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	for (vch = ch->in_room->people; vch; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
-		if (!IS_GOOD(vch) && !is_safe_new(ch, vch, false))
+		if (!is_good(vch) && !is_safe_new(ch, vch, false))
 		{
 			damage_new(ch, vch, (int)((float)ch->hit * .35), sn, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
 			LAG_CHAR(vch, PULSE_VIOLENCE * 2);
@@ -1608,10 +1612,10 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	for (vch = ch->in_room->people; vch; vch = vch->next_in_room)
 	{
-		if (IS_GOOD(vch) && vch != ch)
+		if (is_good(vch) && vch != ch)
 		{
 			affect_to_char(vch, &af);
-			vch->hit = UMIN(vch->max_hit, vch->hit + (level * 10 * (ch->hit / ch->max_hit)));
+			vch->hit = std::min((int)vch->max_hit, vch->hit + (level * 10 * (ch->hit / ch->max_hit)));
 			act("$n's sacrifice infuses you with newfound vigor!", ch, 0, vch, TO_VICT);
 		}
 	}
@@ -1647,7 +1651,7 @@ void spell_retribution(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (IS_GOOD(victim))
+	if (is_good(victim))
 	{
 		send_to_char("They are not an acceptable target for your vengeance.\n\r", ch);
 		return;
@@ -1681,7 +1685,7 @@ void do_phalanx(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, arg1);
 
-	if (ch->cabal != CABAL_PHALANX && !IS_IMMORTAL(ch) && ch->pcdata->induct == CABAL_LEADER)
+	if (ch->cabal != CABAL_PHALANX && !is_immortal(ch) && ch->pcdata->induct == CABAL_LEADER)
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;

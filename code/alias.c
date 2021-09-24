@@ -43,7 +43,7 @@ void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
 
 	ch = d->original ? d->original : d->character;
 
-	if (IS_NPC(ch)
+	if (is_npc(ch)
 		|| ch->pcdata->alias[0] == NULL
 		|| !str_prefix("alias", argument)
 		|| !str_prefix("una", argument)
@@ -102,7 +102,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 	else
 		rch = ch->desc->original ? ch->desc->original : ch;
 
-	if (IS_NPC(rch))
+	if (is_npc(rch))
 		return;
 
 	argument = one_argument(argument, arg);
@@ -202,7 +202,7 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 	else
 		rch = ch->desc->original ? ch->desc->original : ch;
 
-	if (IS_NPC(rch))
+	if (is_npc(rch))
 		return;
 
 	argument = one_argument(argument, arg);

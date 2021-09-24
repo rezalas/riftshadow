@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iterator>
+#include <algorithm>
 #include "merc.h"
 #include "interp.h"
 #include "tables.h"
@@ -29,7 +30,11 @@
 #include "devextra.h"
 #include "act_comm.h"
 #include "comm.h"
-
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "titles.h"
+#include "utility.h"
 
 //
 // LOCAL FUNCTIONS
@@ -119,7 +124,6 @@ void ayell_update (void);
 /* iprog pulse update, also drift/sink code plugged in */
 void iprog_pulse_update (bool isTick);
 bool do_mob_cast (CHAR_DATA *ch);
-void save_votes (void);
 /* used for saving */
 int reverse_d (int dir);
 int get_grav_distance (OBJ_DATA *obj);

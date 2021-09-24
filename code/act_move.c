@@ -67,7 +67,7 @@ void drowning_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 		return;
 	}
 
-	if (IS_IMMORTAL(ch))
+	if (is_immortal(ch))
 		return;
 
 	switch (af->duration)
@@ -97,8 +97,8 @@ void check_waterbreath(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 	if (!is_affected(ch, gsn_drowning)
 		&& to_room->sector_type == SECT_UNDERWATER
 		&& !is_affected_room(to_room, gsn_airy_water)
-		&& !IS_IMMORTAL(ch)
-		&& !IS_HEROIMM(ch))
+		&& !is_immortal(ch)
+		&& !is_heroimm(ch))
 	{
 		AFFECT_DATA af;
 		init_affect(&af);
@@ -191,7 +191,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 	* Crashing..*/
 
-	if (IS_ROOM_AFFECTED(in_room, AFF_ROOM_RANDOMIZER))
+	if (is_room_affected(in_room, AFF_ROOM_RANDOMIZER))
 	{
 		for (auto i = 0; i < 1000; i++)
 		{
@@ -207,7 +207,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 	}
 
-	if (IS_NPC(ch) && !IS_AFFECTED(ch, AFF_PASS_DOOR))
+	if (is_npc(ch) && !is_affected_by(ch, AFF_PASS_DOOR))
 	{
 		if (IS_SET(pexit->exit_info, EX_LOCKED) && ch->pIndexData->Class()->GetIndex() == CLASS_THIEF)
 			do_pick(ch, dir_name[door]);
@@ -220,8 +220,8 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	}
 
 	if (IS_SET(pexit->exit_info, EX_CLOSED)
-		&& (!IS_AFFECTED(ch, AFF_PASS_DOOR) || IS_SET(pexit->exit_info, EX_NOPASS))
-		&& !IS_TRUSTED(ch, ANGEL))
+		&& (!is_affected_by(ch, AFF_PASS_DOOR) || IS_SET(pexit->exit_info, EX_NOPASS))
+		&& !is_trusted(ch, ANGEL))
 	{
 		act("Alas, you cannot go that way.", ch, NULL, pexit->keyword, TO_CHAR);
 		return;
@@ -236,7 +236,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		return;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CHARM)
+	if (is_affected_by(ch, AFF_CHARM)
 		&& ch->master != NULL
 		&& in_room == ch->master->in_room)
 	{
@@ -250,7 +250,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		return;
 	}
 
-	if (!IS_NPC(ch)
+	if (!is_npc(ch)
 		&& isNewbie(ch)
 		&& (IS_SET(to_room->room_flags, ROOM_AREA_EXPLORE) || IS_SET(to_room->area->area_flags, AREA_NO_NEWBIES)))
 	{
@@ -258,25 +258,25 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		return;
 	}
 
-	if (IS_NPC(ch) && IS_SET(to_room->room_flags, ROOM_NO_MOB))
+	if (is_npc(ch) && IS_SET(to_room->room_flags, ROOM_NO_MOB))
 		return;
 
-	if (!IS_NPC(ch) && ch->ghost > 0 && IS_SET(to_room->area->area_flags, AREA_UNGHOST))
+	if (!is_npc(ch) && ch->ghost > 0 && IS_SET(to_room->area->area_flags, AREA_UNGHOST))
 		ch->ghost = 0;
 
 	auto found = false, swimmer = false, mountaineer = false;
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		if ((to_room->sector_type == SECT_VERTICAL || to_room->sector_type == SECT_AIR)
-			&& !IS_AFFECTED(ch, AFF_FLYING)
-			&& !IS_IMMORTAL(ch))
+			&& !is_affected_by(ch, AFF_FLYING)
+			&& !is_immortal(ch))
 		{
 			send_to_char("You can't fly.\n\r", ch);
 			return;
 		}
 
 		if (to_room->sector_type == SECT_WATER
-			&& (!IS_AFFECTED(ch, AFF_FLYING) && !IS_AFFECTED(ch, AFF_WATERBREATH)))
+			&& (!is_affected_by(ch, AFF_FLYING) && !is_affected_by(ch, AFF_WATERBREATH)))
 		{
 			for (auto obj = ch->carrying; obj != NULL; obj = obj->next_content)
 			{
@@ -284,7 +284,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 					found = true;
 			}
 
-			if (!found && /*!IS_IMMORTAL(ch)) &&*/ !ch->Profs()->HasProf(psn_swimming))
+			if (!found && /*!is_immortal(ch)) &&*/ !ch->Profs()->HasProf(psn_swimming))
 			{
 				send_to_char("You need a boat to go there.\n\r", ch);
 				return;
@@ -296,7 +296,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 
 		/* Waterbreath check */
-		if ((to_room->sector_type == SECT_UNDERWATER && !IS_AFFECTED(ch, AFF_WATERBREATH))
+		if ((to_room->sector_type == SECT_UNDERWATER && !is_affected_by(ch, AFF_WATERBREATH))
 			|| (in_room->sector_type == SECT_UNDERWATER && to_room->sector_type != SECT_UNDERWATER))
 		{
 			check_waterbreath(ch, to_room);
@@ -346,17 +346,17 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		move /= 2; /* i.e. the average */
 
 		/* conditional effects */
-		if (IS_AFFECTED(ch, AFF_FLYING) || IS_AFFECTED(ch, AFF_HASTE))
+		if (is_affected_by(ch, AFF_FLYING) || is_affected_by(ch, AFF_HASTE))
 			move *= .75;
 
-		if (IS_AFFECTED(ch, AFF_SLOW))
+		if (is_affected_by(ch, AFF_SLOW))
 			move *= 2;
 
 		wait = sect_table[to_room->sector_type].wait;
 		if (ch->pcdata->energy_state < -2)
 			wait += 6;
 
-		if (!IS_NPC(ch) && is_affected(ch, gsn_rage) && ch->pcdata->tribe == TRIBE_ELK)
+		if (!is_npc(ch) && is_affected(ch, gsn_rage) && ch->pcdata->tribe == TRIBE_ELK)
 		{
 			wait = 0;
 			move = 1;
@@ -391,7 +391,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 			if (is_affected_room(gravroom, gsn_gravity_well))
 			{
-				wait = UMAX(8 - distance, wait);
+				wait = std::max((float)(8 - distance), wait);
 				move = (32 * move) / (pow(2, distance));
 			}
 		}
@@ -403,7 +403,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		{
 			move *= 1.5;
 			wait *= 2;
-			wait = UMAX(wait, 3);
+			wait = std::max(wait, (float)3);
 		}
 
 		if (is_affected(ch, gsn_creeping_tomb))
@@ -435,12 +435,12 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 
 		if ((to_room->sector_type == SECT_MOUNTAIN || to_room->sector_type == SECT_HILLS)
-			&& !IS_NPC(ch)
+			&& !is_npc(ch)
 			&& ch->Profs()->HasProf(psn_mountaineering))
 		{
 			mountaineer = true;
-			move = UMAX(2, move - ch->Profs()->GetProf(psn_mountaineering) > 3 ? 3 : 2);
-			wait = UMAX(1, wait - ch->Profs()->GetProf(psn_mountaineering) > 6 ? 3 : 2);
+			move = std::max(2, move - ch->Profs()->GetProf(psn_mountaineering) > 3 ? 3 : 2);
+			wait = std::max(1, wait - ch->Profs()->GetProf(psn_mountaineering) > 6 ? 3 : 2);
 			ch->Profs()->CheckImprove(psn_mountaineering, 6);
 		}
 
@@ -457,7 +457,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		ch->move -= (int)move;
 	}
 
-	if (IS_AFFECTED(ch, AFF_CAMOUFLAGE) && !is_affected(ch, gsn_creep))
+	if (is_affected_by(ch, AFF_CAMOUFLAGE) && !is_affected(ch, gsn_creep))
 		un_camouflage(ch, NULL);
 
 	un_blade_barrier(ch, NULL);
@@ -494,7 +494,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			un_sneak(ch, NULL);
 	}
 
-	if (IS_AFFECTED(ch, AFF_HIDE)
+	if (is_affected_by(ch, AFF_HIDE)
 		&& to_room->sector_type != SECT_CITY
 		&& to_room->sector_type != SECT_INSIDE
 		&& !is_affected(ch, gsn_creep))
@@ -509,10 +509,10 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	}
 
 	char exbuf[MAX_STRING_LENGTH];
-	if (!IS_AFFECTED(ch, AFF_SNEAK)
+	if (!is_affected_by(ch, AFF_SNEAK)
 		&& !check_silent_movement(ch, ch->in_room)
 		&& ch->invis_level < LEVEL_HERO
-		&& !IS_AFFECTED(ch, AFF_NOSHOW)
+		&& !is_affected_by(ch, AFF_NOSHOW)
 		&& !is_affected(ch, gsn_creep)
 		&& !is_affected(ch, gsn_watermeld))
 	{
@@ -525,7 +525,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 		if (to_room->sector_type == SECT_UNDERWATER || ch->in_room->sector_type == SECT_UNDERWATER || swimmer)
 			sprintf(exbuf, "swim");
-		else if (IS_AFFECTED(ch, AFF_FLYING))
+		else if (is_affected_by(ch, AFF_FLYING))
 			sprintf(exbuf, "float");
 		else if (ch->legs < 1)
 			sprintf(exbuf, "crawl");
@@ -552,7 +552,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		un_camouflage(ch, NULL);
 	}
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		add_tracks(in_room, ch, door);
 	}
@@ -570,13 +570,13 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			auto victim = d->character;
 			if (d->connected == CON_PLAYING
 				&& victim != NULL
-				&& !IS_NPC(victim)
+				&& !is_npc(victim)
 				&& victim->in_room != NULL
 				&& victim->in_room->area == ch->in_room->area
-				&& !IS_IMMORTAL(ch)
+				&& !is_immortal(ch)
 				&& get_skill(victim, gsn_shadowsense) > 1
 				&& victim != ch
-				&& IS_EVIL(ch))
+				&& is_evil(ch))
 			{
 				if (!can_see(ch, victim))
 					ss_chance = (int)((get_skill(victim, gsn_shadowsense) * .85) / 2);
@@ -596,20 +596,20 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		}
 	}
 
-	if (!IS_AFFECTED(ch, AFF_SNEAK) 
+	if (!is_affected_by(ch, AFF_SNEAK) 
 		&& !check_silent_movement(ch, ch->in_room)
 		&& ch->invis_level < LEVEL_HERO
 		&& !is_affected(ch, gsn_creep)
 		&& !is_affected(ch, gsn_watermeld)
-		&& !IS_AFFECTED(ch, AFF_NOSHOW))
+		&& !is_affected_by(ch, AFF_NOSHOW))
 	{
 		sprintf(exbuf, "has arrived");
 
-		if (!IS_NPC(ch))
+		if (!is_npc(ch))
 		{
 			if (to_room->sector_type == SECT_UNDERWATER || ch->in_room->sector_type == SECT_UNDERWATER)
 				sprintf(exbuf, "swims in");
-			else if (IS_AFFECTED(ch, AFF_FLYING))
+			else if (is_affected_by(ch, AFF_FLYING))
 				sprintf(exbuf, "floats in");
 			else if (ch->legs < 1)
 				sprintf(exbuf, "crawls in");
@@ -660,7 +660,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				break;
 		}
 
-		if (IS_AFFECTED(ch, AFF_FLYING))
+		if (is_affected_by(ch, AFF_FLYING))
 			return;
 
 		if (raf->owner == ch)
@@ -741,7 +741,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				break;
 		}
 
-		if (IS_AFFECTED(ch, AFF_FLYING))
+		if (is_affected_by(ch, AFF_FLYING))
 			break;
 
 		if (is_same_cabal(ch, raf->owner) || is_same_group(ch, raf->owner))
@@ -772,7 +772,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	while (is_affected_room(to_room, gsn_quicksand))
 	{
-		if (IS_NPC(ch))
+		if (is_npc(ch))
 			break;
 
 		auto raf = to_room->affected;
@@ -788,7 +788,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		if (is_affected(ch, gsn_ultradiffusion))
 			break;
 
-		if (IS_AFFECTED(ch, AFF_FLYING))
+		if (is_affected_by(ch, AFF_FLYING))
 		{
 			send_to_char("As you float into the room, you spy a pool of quicksand concealed beneath you!\n\r", ch);
 			break;
@@ -846,7 +846,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 			damage_new(raf->owner, ch, 0, gsn_stalactites, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the falling stalactite*");
 		}
 
-		if (!IS_NPC(ch))
+		if (!is_npc(ch))
 			stop_fighting(ch, true);
 
 		if (--raf->modifier <= 0)
@@ -867,7 +867,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				break;
 		}
 
-		if (IS_IMMORTAL(ch))
+		if (is_immortal(ch))
 			return;
 
 		if (!is_safe(raf->owner, ch) && !is_affected(ch, gsn_neutralize))
@@ -958,7 +958,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	if (in_room == to_room) /* no circular follows */
 		return;
 
-	if (!IS_NPC(ch) && ch->Profs()->HasProf("trap detecting"))
+	if (!is_npc(ch) && ch->Profs()->HasProf("trap detecting"))
 	{
 		for (auto i = 0; i < MAX_EXITS; i++)
 		{
@@ -990,7 +990,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	auto room_has_pc = false;
 	for (auto fch = to_room->people; fch != NULL; fch = fch->next_in_room)
 	{
-		if (!IS_NPC(fch))
+		if (!is_npc(fch))
 			room_has_pc = true;
 	}
 
@@ -1008,11 +1008,11 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 				CALL_IEVENT(obj, TRAP_IGREET, ch, obj);
 		}
 
-		if (IS_NPC(fch) && fch->last_fought == ch && number_percent() > 60)
+		if (is_npc(fch) && fch->last_fought == ch && number_percent() > 60)
 		{
 			track_attack(fch, ch);
 		}
-		else if (IS_NPC(fch) && fch->last_fought == ch)
+		else if (is_npc(fch) && fch->last_fought == ch)
 		{
 			RS.Queue.AddToQueue((number_percent() > 25) ? 1 : 2, 2, track_attack, fch, ch);
 		}
@@ -1040,12 +1040,12 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 		{
 			fch_next = fch->next_in_room;
 
-			if (fch->master == ch && IS_AFFECTED(fch, AFF_CHARM) && fch->position < POS_STANDING)
+			if (fch->master == ch && is_affected_by(fch, AFF_CHARM) && fch->position < POS_STANDING)
 				do_stand(fch, "");
 
 			if (fch->master == ch && fch->position == POS_STANDING && can_see_room(fch, to_room))
 			{
-				if (IS_SET(ch->in_room->room_flags, ROOM_LAW) && (IS_NPC(fch) && IS_SET(fch->act, ACT_AGGRESSIVE)))
+				if (IS_SET(ch->in_room->room_flags, ROOM_LAW) && (is_npc(fch) && IS_SET(fch->act, ACT_AGGRESSIVE)))
 				{
 					act("You can't bring $N into the city.", ch, NULL, fch, TO_CHAR);
 					act("You aren't allowed in the city.", fch, NULL, NULL, TO_CHAR);
@@ -1069,7 +1069,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 	if (IS_SET(ch->progtypes, MPROG_ENTRY))
 		ch->pIndexData->mprogs->entry_prog(ch);
 
-	if (!IS_NPC(ch) && to_room->tracks[0] != NULL)
+	if (!is_npc(ch) && to_room->tracks[0] != NULL)
 	{
 		auto i = 0;
 		for (; i < MAX_TRACKS; i++)
@@ -1176,7 +1176,7 @@ void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)
 	if (!trap->armed)
 		return;
 
-	if (!IS_NPC(ch) && ch->Profs()->HasProf("trap detecting"))
+	if (!is_npc(ch) && ch->Profs()->HasProf("trap detecting"))
 	{
 		if (ch->Profs()->GetProf("trap detecting") / 2 >= trap->quality)
 		{
@@ -1948,14 +1948,14 @@ void do_pick(CHAR_DATA *ch, char *argument)
 	/* look for guards */
 	for (auto gch = ch->in_room->people; gch; gch = gch->next_in_room)
 	{
-		if (IS_NPC(gch) && IS_AWAKE(gch) && ch->level + 5 < gch->level)
+		if (is_npc(gch) && is_awake(gch) && ch->level + 5 < gch->level)
 		{
 			act("$N is standing too close to the lock.", ch, NULL, gch, TO_CHAR);
 			return;
 		}
 	}
 
-	if (!IS_NPC(ch) && number_percent() > get_skill(ch, gsn_pick_lock))
+	if (!is_npc(ch) && number_percent() > get_skill(ch, gsn_pick_lock))
 	{
 		send_to_char("You failed.\n\r", ch);
 		check_improve(ch, gsn_pick_lock, false, 2);
@@ -2045,13 +2045,13 @@ void do_pick(CHAR_DATA *ch, char *argument)
 
 	/* 'pick door' */
 	auto pexit = ch->in_room->exit[door];
-	if (!IS_SET(pexit->exit_info, EX_CLOSED) && !IS_IMMORTAL(ch))
+	if (!IS_SET(pexit->exit_info, EX_CLOSED) && !is_immortal(ch))
 	{
 		send_to_char("It's not closed.\n\r", ch);
 		return;
 	}
 
-	if (pexit->key < 0 && !IS_IMMORTAL(ch))
+	if (pexit->key < 0 && !is_immortal(ch))
 	{
 		send_to_char("It can't be picked.\n\r", ch);
 		return;
@@ -2063,7 +2063,7 @@ void do_pick(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_SET(pexit->exit_info, EX_PICKPROOF) && !IS_IMMORTAL(ch))
+	if (IS_SET(pexit->exit_info, EX_PICKPROOF) && !is_immortal(ch))
 	{
 		send_to_char("You failed.\n\r", ch);
 		return;
@@ -2124,7 +2124,7 @@ void do_stand(CHAR_DATA *ch, char *argument)
 	switch (ch->position)
 	{
 		case POS_SLEEPING:
-			if (IS_AFFECTED(ch, AFF_SLEEP))
+			if (is_affected_by(ch, AFF_SLEEP))
 			{
 				send_to_char("You can't wake up!\n\r", ch);
 				return;
@@ -2250,7 +2250,7 @@ void do_rest(CHAR_DATA *ch, char *argument)
 	switch (ch->position)
 	{
 		case POS_SLEEPING:
-			if (IS_AFFECTED(ch, AFF_SLEEP) || is_affected(ch, gsn_blackjack))
+			if (is_affected_by(ch, AFF_SLEEP) || is_affected(ch, gsn_blackjack))
 			{
 				send_to_char("You can't wake up!\n\r", ch);
 				return;
@@ -2408,7 +2408,7 @@ void do_sit(CHAR_DATA *ch, char *argument)
 	switch (ch->position)
 	{
 		case POS_SLEEPING:
-			if (IS_AFFECTED(ch, AFF_SLEEP) || is_affected(ch, gsn_blackjack))
+			if (is_affected_by(ch, AFF_SLEEP) || is_affected(ch, gsn_blackjack))
 			{
 				send_to_char("You can't wake up!\n\r", ch);
 				return;
@@ -2579,7 +2579,7 @@ void do_wake(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_AWAKE(ch))
+	if (!is_awake(ch))
 	{
 		send_to_char("You are asleep yourself!\n\r", ch);
 		return;
@@ -2592,13 +2592,13 @@ void do_wake(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (IS_AWAKE(victim))
+	if (is_awake(victim))
 	{
 		act("$N is already awake.", ch, NULL, victim, TO_CHAR);
 		return;
 	}
 
-	if (IS_AFFECTED(victim, AFF_SLEEP))
+	if (is_affected_by(victim, AFF_SLEEP))
 	{
 		act("You can't wake $M!", ch, NULL, victim, TO_CHAR);
 		return;
@@ -2636,7 +2636,7 @@ void do_sneak(CHAR_DATA *ch, char *argument)
 
 	send_to_char("You attempt to move silently.\n\r", ch);
 
-	if (IS_AFFECTED(ch, AFF_SNEAK))
+	if (is_affected_by(ch, AFF_SNEAK))
 		return;
 
 	if (number_percent() >= get_skill(ch, gsn_sneak))
@@ -2920,7 +2920,7 @@ void do_camouflage(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_IMMORTAL(ch) 
+	if (!is_immortal(ch) 
 		&& (ch->in_room->sector_type != SECT_FOREST) 
 		&& (ch->in_room->sector_type != SECT_MOUNTAIN)
 		&& (ch->in_room->sector_type != SECT_HILLS))
@@ -2957,7 +2957,7 @@ void do_creep(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_AFFECTED(ch, AFF_CAMOUFLAGE))
+	if (!is_affected_by(ch, AFF_CAMOUFLAGE))
 	{
 		send_to_char("You must be blended in with your surroundings to creep.\n\r", ch);
 		return;
@@ -3036,7 +3036,7 @@ void do_hide(CHAR_DATA *ch, char *argument)
 	if (ch->in_room->sector_type != SECT_CITY
 		&& ch->in_room->sector_type != SECT_INSIDE
 		&& ch->in_room->sector_type != SECT_ROAD
-		&& !IS_IMMORTAL(ch))
+		&& !is_immortal(ch))
 	{
 		send_to_char("The shadows here are too natural to blend with.\n\r", ch);
 		return;
@@ -3050,7 +3050,7 @@ void do_hide(CHAR_DATA *ch, char *argument)
 
 	send_to_char("You attempt to hide.\n\r", ch);
 
-	if (IS_AFFECTED(ch, AFF_HIDE))
+	if (is_affected_by(ch, AFF_HIDE))
 		return;
 
 	if (number_percent() < get_skill(ch, gsn_hide))
@@ -3065,7 +3065,7 @@ void do_hide(CHAR_DATA *ch, char *argument)
 
 void un_camouflage(CHAR_DATA *ch, char *argument)
 {
-	if (!IS_AFFECTED(ch, AFF_CAMOUFLAGE))
+	if (!is_affected_by(ch, AFF_CAMOUFLAGE))
 		return;
 
 	REMOVE_BIT(ch->affected_by, AFF_CAMOUFLAGE);
@@ -3088,7 +3088,7 @@ void un_strangle(CHAR_DATA *ch, char *argument)
 
 void un_hide(CHAR_DATA *ch, char *argument)
 {
-	if (!IS_AFFECTED(ch, AFF_HIDE))
+	if (!is_affected_by(ch, AFF_HIDE))
 		return;
 
 	REMOVE_BIT(ch->affected_by, AFF_HIDE);
@@ -3099,7 +3099,7 @@ void un_hide(CHAR_DATA *ch, char *argument)
 
 void un_invis(CHAR_DATA *ch, char *argument)
 {
-	if (!IS_AFFECTED(ch, AFF_INVISIBLE))
+	if (!is_affected_by(ch, AFF_INVISIBLE))
 		return;
 
 	affect_strip(ch, gsn_invis);
@@ -3116,7 +3116,7 @@ void un_sneak(CHAR_DATA *ch, char *argument)
 	if (IS_SET(race_table[ch->race].aff, AFF_SNEAK))
 		return;
 
-	if (!IS_AFFECTED(ch, AFF_SNEAK) && !is_affected(ch, gsn_silent_movement))
+	if (!is_affected_by(ch, AFF_SNEAK) && !is_affected(ch, gsn_silent_movement))
 		return;
 
 	if (is_affected(ch, gsn_silent_movement))
@@ -3191,13 +3191,13 @@ void do_visible(CHAR_DATA *ch, char *argument)
 
 void do_recall(CHAR_DATA *ch, char *argument)
 {
-	if (IS_NPC(ch) && !IS_SET(ch->act, ACT_PET))
+	if (is_npc(ch) && !IS_SET(ch->act, ACT_PET))
 	{
 		send_to_char("Only players can recall.\n\r", ch);
 		return;
 	}
 
-	if (ch->level > 15 && !IS_IMMORTAL(ch) && !ch->ghost)
+	if (ch->level > 15 && !is_immortal(ch) && !ch->ghost)
 	{
 		send_to_char("Those who have passed the 15th rank cannot recall.\n\r", ch);
 		return;
@@ -3215,7 +3215,7 @@ void do_recall(CHAR_DATA *ch, char *argument)
 	if (ch->in_room == location)
 		return;
 
-	if (IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL) || IS_AFFECTED(ch, AFF_CURSE))
+	if (IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL) || is_affected_by(ch, AFF_CURSE))
 	{
 		send_to_char("The gods have forsaken you.\n\r", ch);
 		return;
@@ -3265,7 +3265,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	/*
@@ -3274,7 +3274,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 	auto mob = ch->in_room->people;
 	for (; mob != NULL; mob = mob->next_in_room)
 	{
-		if (IS_NPC(mob) && IS_SET(mob->act, ACT_TRAIN))
+		if (is_npc(mob) && IS_SET(mob->act, ACT_TRAIN))
 			break;
 	}
 
@@ -3578,8 +3578,8 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	auto mob = char_list;
 	for (; mob != NULL; mob = mob->next)
 	{
-		if (IS_NPC(mob)
-			&& IS_AFFECTED(mob, AFF_CHARM)
+		if (is_npc(mob)
+			&& is_affected_by(mob, AFF_CHARM)
 			&& (mob->master == ch)
 			&& ((mob->pIndexData->vnum == MOB_VNUM_FALCON)
 				|| (mob->pIndexData->vnum == MOB_VNUM_WOLF)
@@ -3750,7 +3750,7 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 
 	auto track_dir = mob->in_room->tracks[i]->direction;
 
-	if (IS_AFFECTED(mob, AFF_CHARM))
+	if (is_affected_by(mob, AFF_CHARM))
 		return;
 
 	if (IS_SET(mob->act, ACT_SENTINEL))
@@ -3768,10 +3768,10 @@ void track_char(CHAR_DATA *ch, CHAR_DATA *mob)
 
 void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 {
-	if (!IS_NPC(mob) || !IS_SET(mob->act, ACT_SMARTTRACK))
+	if (!is_npc(mob) || !IS_SET(mob->act, ACT_SMARTTRACK))
 		return;
 
-	if (IS_SET(mob->act, ACT_SENTINEL) || IS_AFFECTED(ch, AFF_NOSHOW))
+	if (IS_SET(mob->act, ACT_SENTINEL) || is_affected_by(ch, AFF_NOSHOW))
 		return;
 
 	if (IS_SET(mob->off_flags, STATIC_TRACKING))
@@ -3850,7 +3850,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 
 void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 {
-	if (!IS_NPC(mob))
+	if (!is_npc(mob))
 		return;
 
 	if (IS_SET(mob->act, ACT_SENTINEL))
@@ -4131,10 +4131,10 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 
 	auto chance = get_skill(ch, gsn_door_bash);
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		chance = 50;
 
-	if (!IS_NPC(ch) && (chance == 0 || ch->level < skill_table[gsn_door_bash].skill_level[ch->Class()->GetIndex()]))
+	if (!is_npc(ch) && (chance == 0 || ch->level < skill_table[gsn_door_bash].skill_level[ch->Class()->GetIndex()]))
 	{
 		send_to_char("You'd hurt yourself doing that.\n\r", ch);
 		return;
@@ -4163,14 +4163,14 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		chance /= 4;
 		chance += ch->carry_weight / 10;
 		chance += get_curr_stat(ch, STAT_STR) / 2;
 	}
 
-	if (!IS_NPC(ch))
+	if (!is_npc(ch))
 	{
 		if (!str_cmp(pc_race_table[ch->race].name, "planar")
 			|| !str_cmp(pc_race_table[ch->race].name, "abyss")
@@ -4180,7 +4180,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (!IS_NPC(ch) && IS_IMMORTAL(ch))
+	if (!is_npc(ch) && is_immortal(ch))
 		chance = 100;
 
 	do_visible(ch, "");
@@ -4223,7 +4223,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 		REMOVE_BIT(pexit_rev->exit_info, EX_JAMMED);
 	}
 
-	if (number_percent() < (3 * get_curr_stat(ch, STAT_DEX)) || IS_NPC(ch))
+	if (number_percent() < (3 * get_curr_stat(ch, STAT_DEX)) || is_npc(ch))
 		return;
 
 	/*
@@ -4249,7 +4249,7 @@ void do_door_bash(CHAR_DATA *ch, char *argument)
 
 void do_hometown(CHAR_DATA *ch, char *argument)
 {
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	if (ch->in_room->vnum != 0) // ROOM_VNUM_HOMETOWNS)
@@ -4329,7 +4329,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 
 	for (auto blocker = ch->in_room->people; blocker != NULL; blocker = blocker->next_in_room)
 	{
-		if (IS_NPC(blocker)
+		if (is_npc(blocker)
 			&& blocker->pIndexData->barred_entry
 			&& blocker->pIndexData->barred_entry->vnum == to_room->vnum)
 		{
@@ -4361,7 +4361,7 @@ bool check_barred(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 				&& IS_SET(blocker->act, ACT_GUILDGUARD)
 				&& ch->pause > 0
 				&& ch->ghost <= 0
-				&& !IS_IMMORTAL(ch))
+				&& !is_immortal(ch))
 			{
 				send_to_char("Your guild will not offer you sanctuary yet.\n\r", ch);
 				return true;
@@ -4407,12 +4407,12 @@ bool bar_entry(CHAR_DATA *ch, CHAR_DATA *blocker, ROOM_INDEX_DATA *to_room)
 
 			buf2[0] = UPPER(buf2[0]);
 
-			if (!IS_IMMORTAL(ch) || ch->invis_level < LEVEL_HERO + 1)
+			if (!is_immortal(ch) || ch->invis_level < LEVEL_HERO + 1)
 				mob_recho(ch, buf2);
 		}
 	}
 
-	if (IS_IMMORTAL(ch))
+	if (is_immortal(ch))
 		return false;
 
 	return true;
@@ -4478,7 +4478,7 @@ bool is_land(ROOM_INDEX_DATA *room)
 
 void add_tracks(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction)
 {
-	if (IS_GROUND(room) && is_affected(ch, gsn_pass_without_trace))
+	if (is_ground(room) && is_affected(ch, gsn_pass_without_trace))
 		return;
 
 	if (room->tracks[0] == NULL)
@@ -4501,8 +4501,8 @@ void add_tracks(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int direction)
 	room->tracks[0]->prey = ch;
 	room->tracks[0]->time = time_info;
 	room->tracks[0]->direction = direction;
-	room->tracks[0]->flying = IS_AFFECTED(ch, AFF_FLYING);
-	room->tracks[0]->sneaking = IS_AFFECTED(ch, AFF_SNEAK);
+	room->tracks[0]->flying = is_affected_by(ch, AFF_FLYING);
+	room->tracks[0]->sneaking = is_affected_by(ch, AFF_SNEAK);
 	room->tracks[0]->bleeding = is_affected(ch, gsn_bleeding);
 	room->tracks[0]->legs = ch->legs;
 }

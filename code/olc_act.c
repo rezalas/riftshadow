@@ -3459,7 +3459,7 @@ void show_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *obj)
 			sprintf(buf, "[v2] Type of dice:   [%d]\n\r", obj->value[2]);
 			send_to_char(buf, ch);
 
-			sprintf(buf, "[v3] Type:           %s\n\r", attack_table[UMAX(0, obj->value[3])].name);
+			sprintf(buf, "[v3] Type:           %s\n\r", attack_table[std::max(0, obj->value[3])].name);
 			send_to_char(buf, ch);
 
 			sprintf(buf, "[v4] Special type:   %s\n\r", flag_string_old(weapon_type2, obj->value[4]));
@@ -3627,9 +3627,9 @@ bool set_obj_values(CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *ar
 				case 0:
 					send_to_char("WEAPON CLASS SET.\n\r\n\r", ch);
 					if (!str_prefix(argument, "hand"))
-						pObj->value[0] = weapon_type("weapon");
+						pObj->value[0] = weapon_type_lookup("weapon");
 					else
-						pObj->value[0] = weapon_type(argument);
+						pObj->value[0] = weapon_type_lookup(argument);
 					break;
 				case 1:
 					send_to_char("NUMBER OF DICE SET.\n\r\n\r", ch);

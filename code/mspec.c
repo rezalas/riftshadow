@@ -270,7 +270,7 @@ void apet_force(CHAR_DATA *ch, const char *cmd, int delay)
 	RS.Queue.AddToQueue(delay, 2, interpret, ch, cmd);
 	RS.Queue.AddToQueue(delay, 2, send_to_char, tal, ch);
 
-	ch->wait = UMIN(ch->wait, 20);
+	ch->wait = std::min((int)ch->wait, 20);
 }
 
 void apet_at_room(CHAR_DATA *ch, int vnum)
@@ -355,7 +355,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			return 0;
 		}
 
-		if (ch->leader->level > 22 && !IS_IMMORTAL(ch->leader))
+		if (ch->leader->level > 22 && !is_immortal(ch->leader))
 		{
 			do_say(ch, "You are strong enough to stand on your own now.  Perhaps we shall meet again.");
 			act("$n fades into the shadows.", ch, 0, 0, TO_ROOM);

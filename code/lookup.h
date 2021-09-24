@@ -43,6 +43,7 @@
 #include "tables.h"
 #include "newmem.h"
 #include "db.h"
+#include "material.h"
 
 //
 // LOCAL FUNCTIONS

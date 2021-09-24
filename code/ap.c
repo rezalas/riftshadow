@@ -19,7 +19,7 @@ void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	if (af_old != NULL)
 	{
-		af_old->duration += UMIN(288, af_old->duration + 96);
+		af_old->duration += std::min(288, af_old->duration + 96);
 	}
 	else
 	{
@@ -58,7 +58,7 @@ void check_leech(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (IS_SET(victim->imm_flags, IMM_MAGIC))
 		return;
 
-	leeched = UMIN(victim->hit / 100, number_range(8, 12));
+	leeched = std::min(victim->hit / 100, number_range(8, 12));
 
 	if (victim->hit <= leeched)
 		return;
@@ -109,7 +109,7 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 
 	chance = get_skill(ch, skill_lookup("taunt")) - 20;
 
-	if (!IS_NPC(victim) && IS_LAWFUL(victim) && IS_SET(victim->in_room->room_flags, ROOM_LAW))
+	if (!is_npc(victim) && is_lawful(victim) && IS_SET(victim->in_room->room_flags, ROOM_LAW))
 		chance -= 50;
 
 	chance += 4 * (get_curr_stat(ch, STAT_INT) - get_curr_stat(victim, STAT_INT));
@@ -222,7 +222,7 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (!IS_NPC(victim) && IS_LAWFUL(victim) && IS_SET(victim->in_room->room_flags, ROOM_LAW))
+	if (!is_npc(victim) && is_lawful(victim) && IS_SET(victim->in_room->room_flags, ROOM_LAW))
 		level -= 15;
 
 	if ((victim != ch) && (!saves_spell(level, victim, DAM_NEGATIVE)))
@@ -247,7 +247,7 @@ void spell_inspire_lust(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		act("You failed to fill $N's mind with greed.", ch, 0, victim, TO_CHAR);
 
-		if (!IS_NPC(victim))
+		if (!is_npc(victim))
 		{
 			sprintf(buf, "Die, %s, you sorcerous dog!", ch->name);
 			do_myell(victim, buf, ch);
@@ -282,7 +282,7 @@ void lust_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	char buf[MSL];
 	int skill;
 
-	if (ch->fighting || !IS_AWAKE(ch))
+	if (ch->fighting || !is_awake(ch))
 		return;
 
 	skill = (int)(get_skill(ch, skill_lookup("steal")) * 0.8);
@@ -307,7 +307,7 @@ void lust_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 				sprintf(buf, "%s tried to steal from me!", ch->name);
 				do_myell(victim, buf, ch);
 
-				if (IS_NPC(victim))
+				if (is_npc(victim))
 					multi_hit(victim, ch, TYPE_UNDEFINED);
 			}
 			else
@@ -593,7 +593,7 @@ void spell_word_of_command(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		return;
 	}
 
-	if (IS_IMMORTAL(victim) && !IS_IMMORTAL(ch))
+	if (is_immortal(victim) && !is_immortal(ch))
 	{
 		send_to_char("Don't even think about it.\n\r", ch);
 		return;
@@ -602,7 +602,7 @@ void spell_word_of_command(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	if (is_safe_new(ch, victim, true))
 		return;
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("You cannot manipulate such a being's mind.\n\r", ch);
 		return;
@@ -614,7 +614,7 @@ void spell_word_of_command(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		return;
 	}
 
-	if (IS_IMMORTAL(victim) && get_trust(ch) < get_trust(victim))
+	if (is_immortal(victim) && get_trust(ch) < get_trust(victim))
 	{
 		send_to_char("Don't do that.  No, really.  Don't.\n\r", ch);
 		return;
@@ -705,7 +705,7 @@ void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	if (IS_NPC(victim))
+	if (is_npc(victim))
 	{
 		send_to_char("That foe is not deserving of your Lord's mark.\n\r", ch);
 		return;
@@ -734,7 +734,7 @@ void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.owner = victim;
 	af.level = level;
 
-	if (IS_GOOD(victim))
+	if (is_good(victim))
 		af.duration = (int)(level * 0.8);
 	else
 		af.duration = (int)(level * 0.4);
@@ -862,7 +862,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 		affect_remove_obj(obj, af, false);
 
 		af2->modifier--;
-		af2->modifier = UMAX(0, af2->modifier);
+		af2->modifier = std::max(0, (int)af2->modifier);
 		affect_to_obj(obj, af2);
 
 		return;
@@ -875,7 +875,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	if (!(obj->wear_loc == WEAR_WIELD || obj->wear_loc == WEAR_DUAL_WIELD))
 		return;
 
-	if (IS_NPC(ch->fighting) && number_percent() > 5)
+	if (is_npc(ch->fighting) && number_percent() > 5)
 		return;
 
 	af2 = new_affect_obj();
@@ -891,19 +891,19 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	af2->pulse_fun = af->pulse_fun;
 	affect_remove_obj(obj, af, false);
 
-	if (IS_NPC(ch->fighting) && af2->modifier <= 15)
+	if (is_npc(ch->fighting) && af2->modifier <= 15)
 	{
 		af2->modifier++;
-		af2->modifier = UMIN(af2->modifier, 15);
+		af2->modifier = std::min((int)af2->modifier, 15);
 	}
-	else if (IS_NPC(ch->fighting))
+	else if (is_npc(ch->fighting))
 	{
 		af2->modifier -= 2;
 	}
 	else
 	{
 		af2->modifier++;
-		af2->modifier = UMIN(af2->modifier, 50);
+		af2->modifier = std::min((int)af2->modifier, 50);
 	}
 
 	affect_to_obj(obj, af2);
@@ -964,7 +964,7 @@ void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (check = char_list; check != NULL; check = check->next)
 	{
-		if (IS_NPC(check) && check->leader == ch)
+		if (is_npc(check) && check->leader == ch)
 		{
 			found = true;
 			break;
@@ -1133,7 +1133,7 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 	int failed = 0;
 	char *said;
 
-	if (IS_NPC(ch))
+	if (is_npc(ch))
 		return;
 
 	af = affect_find(ch->affected, gsn_unholy_communion);
@@ -1173,8 +1173,8 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 	if (type == -1)
 		return;
 
-	if ((!IS_OUTSIDE(ch) && !IS_SET(ch->in_room->room_flags, ROOM_DARK))
-		|| (IS_OUTSIDE(ch) && sun != SUN_DARK))
+	if ((!is_outside(ch) && !IS_SET(ch->in_room->room_flags, ROOM_DARK))
+		|| (is_outside(ch) && sun != SUN_DARK))
 	{
 		send_to_char("It occurs to you that a well-lit place is perhaps not ideal for this.\n\r", ch);
 		return;
@@ -1183,8 +1183,8 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 	for (d = descriptor_list; d; d = d->next)
 	{
 		if (d->connected == CON_PLAYING 
-			&& !IS_IMMORTAL(d->character)
-			&& !IS_NPC(d->character)
+			&& !is_immortal(d->character)
+			&& !is_npc(d->character)
 			&& d->character->in_room->area == ch->in_room->area
 			&& d->character != ch)
 		{
@@ -1501,7 +1501,7 @@ void lesser_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 {
 	char buf[MSL];
 
-	if (!IS_NPC(mob) || !af->owner)
+	if (!is_npc(mob) || !af->owner)
 		return;
 
 	switch (mob->pIndexData->vnum)
@@ -1578,7 +1578,7 @@ void greater_demon_tick(CHAR_DATA *mob, AFFECT_DATA *af)
 {
 	char buf[MSL];
 
-	if (!IS_NPC(mob) || !af->owner)
+	if (!is_npc(mob) || !af->owner)
 		return;
 
 	switch (mob->pIndexData->vnum)
@@ -1712,7 +1712,7 @@ void furcas_vanish(CHAR_DATA *ch, CHAR_DATA *mob)
 		if (nocrash > 100000)
 			bug("Furcas bug!", 0);
 
-		if (!IS_EXPLORE(pRoomIndex)
+		if (!is_explore(pRoomIndex)
 			&& !pRoomIndex->cabal
 			&& pRoomIndex->area->area_type != ARE_UNOPENED
 			&& pRoomIndex->area->area_type != ARE_SHRINE
@@ -1768,7 +1768,7 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 		insanity_fight(ch);
 		return;
 	}
-	else if (!IS_IMMORTAL(ch))
+	else if (!is_immortal(ch))
 	{
 		WAIT_STATE(ch, 4 * PULSE_PER_SECOND);
 	}
@@ -2274,7 +2274,7 @@ void check_orobas_gamygyn(CHAR_DATA *ch, CHAR_DATA *victim)
 		return;
 	}
 
-	if (is_affected(ch, gsn_gamygyn_soul) && IS_GOOD(victim))
+	if (is_affected(ch, gsn_gamygyn_soul) && is_good(victim))
 	{
 		act("With a terrible wail, a figure composed of gloomy light springs from your torso!", ch, 0, 0, TO_CHAR);
 		act("Suddenly, a figure composed of gloomy light springs from from $n's torso!", ch, 0, 0, TO_ROOM);

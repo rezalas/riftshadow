@@ -1,11 +1,6 @@
 /* Dev's code reorg, contains pc/npc race defs and class defs, attribute app tables also */
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <time.h>
-#include "merc.h"
-#include "magic.h"
-#include "interp.h"
+#include "chardef.h"
 
 const	struct	pc_race_type	pc_race_table	[]	=
 {
@@ -109,7 +104,7 @@ const	struct	pc_race_type	pc_race_table	[]	=
 };
 
 	
-const 	struct	race_type	race_table	[]		=
+const std::vector<race_type> race_table	=
 {
 /*
     {
