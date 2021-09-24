@@ -56,7 +56,7 @@ return [
 	|--------------------------------------------------------------------------
 	|
 	| This are the default form vield validation rules. Available Rules:
-	| https://laravel.com/docs/5.4/validation#available-validation-rules
+	| https://laravel.com/docs/6.x/validation#available-validation-rules
 	|
 	*/
 	'environment' => [
@@ -75,27 +75,25 @@ return [
 				'rift_port'		 => 'required|numeric',
 				'rift_name'		 => 'required|string|max:50',
 				'rift_username'	 => 'required|string|max:50',
-				'rift_password'	 => (env('APP_ENV', 'production') === 'production' ? 'required|' : 'nullable|').
-				'string|max:50',
+				'rift_password'	 => 'string|max:50' . (env('APP_ENV', 'production') === 'production' ? '|required' : '|nullable'),
 				'rift_core_hostname'	=> 'required|string|max:50',
 				'rift_core_port'		=> 'required|numeric',
 				'rift_core_name'		=> 'required|string|max:50',
 				'rift_core_username'	=> 'required|string|max:50',
-				'rift_core_password'	=> (env('APP_ENV', 'production') === 'production' ? 'required|' : 'nullable|').
-				'string|max:50',
+				'rift_core_password'	=> 'string|max:50' . (env('APP_ENV', 'production') === 'production' ? '|required' : '|nullable'),
 				'broadcast_driver'	  => 'required|string|max:50',
 				'cache_driver'		  => 'required|string|max:50',
 				'session_driver'		=> 'required|string|max:50',
-				'queue_driver'		  => 'required|string|max:50',
+				'queue_connection'		  => 'string|max:50',
 				'redis_hostname'		=> 'required|string|max:50',
-				'redis_password'		=> 'required|string|max:50',
+				'redis_password'		=> 'string|max:50|nullable',
 				'redis_port'			=> 'required|numeric',
 				'mail_driver'		   => 'required|string|max:50',
 				'mail_host'			 => 'required|string|max:50',
 				'mail_port'			 => 'required|string|max:50',
-				'mail_username'		 => 'required|string|max:50',
-				'mail_password'		 => 'required|string|max:50',
-				'mail_encryption'	   => 'required|string|max:50',
+				'mail_username'		 => 'string|max:50|nullable',
+				'mail_password'		 => 'string|max:50|nullable',
+				'mail_encryption'	   => 'string|max:50|nullable',
 				'pusher_app_id'		 => 'max:50',
 				'pusher_app_key'		=> 'max:50',
 				'pusher_app_secret'	 => 'max:50',

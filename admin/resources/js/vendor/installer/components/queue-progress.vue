@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { axios } from "../../../bootstrap";
 import moment from "moment";
 
 export default {
