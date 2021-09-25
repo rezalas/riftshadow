@@ -4,7 +4,7 @@
 
 # VSCode entries
 .vs/
-.vscode/launch.json
+!.vscode/launch.json
 .vscode/tasks.json
 !.vscode/settings.json
 .vscode/c_cpp_properties.json
