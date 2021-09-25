@@ -105,8 +105,8 @@
 			"${workspaceRoot}/code/*.c",
 			"${workspaceRoot}/code/*.cpp",
 			"${workspaceRoot}/tests/*.c",
-			"${workspaceRoot}/tests/*.cpp",
-		],
+			"${workspaceRoot}/tests/*.cpp"
+		]
 	},
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
