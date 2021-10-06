@@ -277,7 +277,7 @@ void check_assist(CHAR_DATA *ch, CHAR_DATA *victim)
 
 					if (target != NULL)
 					{
-						sprintf(buf, rch->short_descr);
+						sprintf(buf, "%s", rch->short_descr);
 						pbuf = &buf[0];
 
 						if (!str_prefix("a ", rch->short_descr))

@@ -726,19 +726,19 @@ void time_update(void)
 				{
 					case 7:
 						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sprintf(buf, "%s", bw1);
 						break;
 					case 8:
 						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sprintf(buf, "%s", bw2);
 						break;
 					case 16:
 						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sprintf(buf, "%s", bw3);
 						break;
 					case 17:
 						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -752,19 +752,19 @@ void time_update(void)
 				{
 					case 6:
 						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sprintf(buf, "%s", bw1);
 						break;
 					case 7:
 						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sprintf(buf, "%s", bw2);
 						break;
 					case 18:
 						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sprintf(buf, "%s", bw3);
 						break;
 					case 19:
 						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -778,19 +778,19 @@ void time_update(void)
 				{
 					case 5:
 						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sprintf(buf, "%s", bw1);
 						break;
 					case 6:
 						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sprintf(buf, "%s", bw2);
 						break;
 					case 20:
 						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sprintf(buf, "%s", bw3);
 						break;
 					case 21:
 						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -804,19 +804,19 @@ void time_update(void)
 				{
 					case 6:
 						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sprintf(buf, "%s", bw1);
 						break;
 					case 7:
 						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sprintf(buf, "%s", bw2);
 						break;
 					case 18:
 						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sprintf(buf, "%s", bw3);
 						break;
 					case 19:
 						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;

@@ -2197,7 +2197,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 				}
 				else
 				{
-					sprintf(buf2, pers(gch, ch));
+					sprintf(buf2, "%s", pers(gch, ch));
 					if (buf2[0] != '\0')
 						buf2[0] = UPPER(buf2[0]);
 

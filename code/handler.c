@@ -2409,9 +2409,9 @@ CHAR_DATA *get_char_world(CHAR_DATA *ch, char *argument)
 	for (wch = char_list; wch != NULL; wch = wch->next)
 	{
 		if (is_immortal(ch) && !is_npc(wch))
-			sprintf(name, wch->true_name);
+			sprintf(name, "%s", wch->true_name);
 		else
-			sprintf(name, wch->name);
+			sprintf(name, "%s", wch->name);
 
 		if (wch->in_room == NULL || !can_see(ch, wch) || !is_name(arg, name))
 			continue;
