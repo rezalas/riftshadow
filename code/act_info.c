@@ -1712,7 +1712,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 		if (get_bv_stage(ch) < 2)
 		{
-			sprintf(buf, get_room_name(ch->in_room));
+			sprintf(buf, "%s", get_room_name(ch->in_room));
 			buf[0] = UPPER(buf[0]);
 			send_to_char(buf, ch);
 
@@ -5424,7 +5424,7 @@ void add_role(CHAR_DATA *ch, char *string)
 	chomp(strtime);
 
 	if (ch->pcdata->role)
-		sprintf(buf, ch->pcdata->role);
+		sprintf(buf, "%s", ch->pcdata->role);
 	else
 		strcpy(buf, "");
 

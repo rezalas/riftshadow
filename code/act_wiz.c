@@ -6947,7 +6947,7 @@ void add_history(CHAR_DATA *ch, CHAR_DATA *victim, char *string)
 	chomp(strtime);
 
 	if (victim->pcdata->history_buffer)
-		sprintf(buf, victim->pcdata->history_buffer);
+		sprintf(buf, "%s", victim->pcdata->history_buffer);
 	else
 		strcpy(buf, "");
 

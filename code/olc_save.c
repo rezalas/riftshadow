@@ -548,8 +548,8 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 			if (pRoom->area != pArea)
 				continue;
 
-			sprintf(buf1, munch(pRoom->name));
-			sprintf(buf2, munch(pRoom->description));
+			sprintf(buf1, "%s", munch(pRoom->name));
+			sprintf(buf2, "%s", munch(pRoom->description));
 
 			fprintf(fp, "#%d\n", pRoom->vnum);
 			fprintf(fp, "%s~\n%s~\n", buf1, buf2);
@@ -570,8 +570,8 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 			{
 				if ((pexit = pRoom->exit[i]))
 				{
-					sprintf(buf1, pexit->keyword ? munch(pexit->keyword) : "door");
-					sprintf(buf2, munch(pexit->description));
+					sprintf(buf1, "%s", pexit->keyword ? munch(pexit->keyword) : "door");
+					sprintf(buf2, "%s", munch(pexit->description));
 					fprintf(fp, "D %s %d %s %d\n%s~\n%s~\n",
 						upstring(direction_table[std::max((long)0, i)].name),
 						pexit->u1.to_room ? pexit->u1.to_room->vnum : 0,

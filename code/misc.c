@@ -390,7 +390,7 @@ void fprint_vector(FILE *fp, char *string, long vector[], bool eol)
 {
 	char buf[MSL], buf2[MSL];
 
-	sprintf(buf, string);
+	sprintf(buf, "%s", string);
 	for (int i = 0; i < MAX_BITVECTOR; i++)
 	{
 		sprintf(buf2, " %ld", vector[i]);
@@ -400,7 +400,7 @@ void fprint_vector(FILE *fp, char *string, long vector[], bool eol)
 	if (eol)
 		strcat(buf, "\n");
 
-	fprintf(fp, buf);
+	fprintf(fp, "%s", buf);
 }
 
 char *int_to_cap_string(int number)
