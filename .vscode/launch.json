@@ -217,6 +217,26 @@
             "windows": {
                 "MIMode": "gdb"
             }
+        },
+		{
+            "name": "Standalone Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/standalone_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
         }
     ]
 }
