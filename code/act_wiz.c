@@ -7808,7 +7808,7 @@ void do_racedump(CHAR_DATA *ch, char *argument)
 
 		for (i = 0; i < 15; i++)
 		{
-			if (race_table[race].form[i] != NO_FLAG && race_table[race].form[i] < cc)
+			if (race_table[race].form[i] != NO_FLAG && race_table[race].form[i] < ASCII_cc)
 			{
 				temp_bit += (long int)pow(2, race_table[race].form[i]);
 				sprintf(buf, "(FORM) %d-%d = %ld\n\r", race, i, (long int)pow(2, race_table[race].parts[i]));
@@ -7821,7 +7821,7 @@ void do_racedump(CHAR_DATA *ch, char *argument)
 
 		for (i = 0; i < 15; i++)
 		{
-			if (race_table[race].parts[i] != NO_FLAG && race_table[race].parts[i] < cc)
+			if (race_table[race].parts[i] != NO_FLAG && race_table[race].parts[i] < ASCII_cc)
 			{
 				temp_bit += (long int)pow(2, race_table[race].parts[i]);
 				sprintf(buf, "(PARTS) %d-%d = %ld\n\r", race, i, (long int)pow(2, race_table[race].parts[i]));

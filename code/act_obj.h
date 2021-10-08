@@ -31,7 +31,7 @@
 #include "utility.h"
 
 #define CABAL_ITEMS_FILE	"citems.txt"
-#define MINOTAUR_ONLY		I
+#define MINOTAUR_ONLY		ASCII_I
 
 
 //
