@@ -48,6 +48,8 @@
 #include "chardef.h"
 #include "const.h"
 #include "material.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 struct olc_help_type
 {

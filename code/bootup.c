@@ -87,9 +87,8 @@ void CMud::LoadObjLimits()
                         }
 			if(lastlogin && plevel && plevel < 52 && lastlogin + 3456000 < current_time)
 			{
-				char tbuf[MSL];
-				sprintf(tbuf, "Autodeleting %s.", temp_player_name);
-				log_string(tbuf);
+				auto buffer = fmt::format("Autodeleting {}.", temp_player_name);
+				log_string(buffer.c_str());
 				breakout = true;
 				delete_char(temp_player_name, true);
 				break;
@@ -169,7 +168,6 @@ void CMud::LoadTime()
 void CMud::LoadAreas()
 {
 	FILE *fpList;
-	char strAreaFullPath[MAX_STRING_LENGTH];
 	//	CArea::LoadAreaData();	//loads the data about each area - name, uid, etc
 
 
@@ -197,10 +195,10 @@ void CMud::LoadAreas()
 		}
 		else
 		{
-			sprintf(strAreaFullPath, "%s/%s", RIFT_AREA_DIR, strArea);
-			if ( ( fpArea = fopen(strAreaFullPath, "r" ) ) == NULL )
+			auto strAreaFullPath = fmt::format("{}/{}", RIFT_AREA_DIR, strArea);
+			if ( ( fpArea = fopen(strAreaFullPath.c_str(), "r" ) ) == NULL )
 			{
-				perror( strAreaFullPath );
+				perror(strAreaFullPath.c_str());
 				exit( 1 );
 			}
 		}

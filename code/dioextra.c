@@ -323,7 +323,6 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 	char arg2[MAX_STRING_LENGTH];
 	char arg3[MAX_STRING_LENGTH];
 	char arg4[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
 	int enchant_type, value, duration;
 	bool isgoodaffect;
@@ -435,16 +434,17 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 	af.aftype = AFT_COMMUNE;
 	affect_to_char(victim, &af);
 
+	std::string buffer;
 	if (isgoodaffect == true)
 	{
-		sprintf(buf, "%s is blessed with %s.\n\r", victim->name, arg2);
-		send_to_char(buf, ch);
+		buffer = fmt::format("{} is blessed with {}.\n\r", victim->name, arg2);
+		send_to_char(buffer.c_str(), ch);
 		send_to_char("You have been blessed by the Immortals.\n\r", victim);
 	}
 	else
 	{
-		sprintf(buf, "%s is cursed with %s.\n\r", victim->name, arg2);
-		send_to_char(buf, ch);
+		buffer = fmt::format("{} is cursed with {}.\n\r", victim->name, arg2);
+		send_to_char(buffer.c_str(), ch);
 		send_to_char("You have been cursed by the Immortals.\n\r", victim);
 	}
 }
@@ -453,7 +453,6 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 {
 	char arg1[MAX_STRING_LENGTH];
 	char arg2[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	int cabal;
 	DESCRIPTOR_DATA *d;
 
@@ -487,14 +486,14 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	sprintf(buf, "%s%s: %s%s%s\n\r",
+	auto buffer = fmt::format("{}{}: {}{}{}\n\r",
 		cabal_table[cabal].who_name,
 		is_npc(ch) ? ch->short_descr : ch->name,
 		get_char_color(ch, "channels"),
 		arg2,
 		END_COLOR(ch));
 
-	send_to_char(buf, ch);
+	send_to_char(buffer.c_str(), ch);
 
 	for (d = descriptor_list; d != NULL; d = d->next)
 	{
@@ -507,13 +506,13 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 				|| (IS_SET(d->character->comm, COMM_ALL_CABALS)
 					&& d->character != ch))
 			{
-				sprintf(buf, "%s%s: %s%s%s\n\r",
+				buffer = fmt::format("{}{}: {}{}{}\n\r",
 					cabal_table[cabal].who_name,
 					pers(ch, d->character),
 					get_char_color(d->character, "channels"),
 					arg2,
 					END_COLOR(ch));
-				send_to_char(buf, d->character);
+				send_to_char(buffer.c_str(), d->character);
 			}
 		}
 	}
@@ -965,8 +964,6 @@ void do_finger(CHAR_DATA *ch, char *argument)
 {
 	char arg1[MAX_STRING_LENGTH];
 	char arg2[MAX_STRING_LENGTH];
-	char dir[MAX_STRING_LENGTH];
-	char dir2[MAX_STRING_LENGTH];
 	char buf1[MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH];
 	char buf3[MAX_STRING_LENGTH];
@@ -1029,8 +1026,8 @@ void do_finger(CHAR_DATA *ch, char *argument)
 	desc = NULL;
 
 	sprintf(eqbuf, "Sorry, that is unavailable.\n\r");
-	sprintf(dir, "%s/%s%s", RIFT_PLAYER_DIR, arg1, ".plr");
-	sprintf(dir2, "%s/dead_char/%s%s", RIFT_PLAYER_DIR, arg1, ".plr");
+	auto dir = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, arg1, ".plr");
+	auto dir2 = fmt::format("{}/dead_char/{}{}", RIFT_PLAYER_DIR, arg1, ".plr");
 
 	if (!str_cmp(arg1, "Zzz"))
 	{
@@ -1038,11 +1035,11 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (((fp = fopen(dir, "r")) != NULL))
+	if (((fp = fopen(dir.c_str(), "r")) != NULL))
 	{
 		dead = false;
 	}
-	else if (((fp = fopen(dir2, "r")) != NULL))
+	else if (((fp = fopen(dir2.c_str(), "r")) != NULL))
 	{
 		dead = true;
 	}
@@ -1324,8 +1321,8 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 		sprintf(buf3, "%d (b%d)", time_info.year - born, born);
 		sprintf(buf1, "%d (d%d)", played / 3600, dtime);
-		sprintf(buf2, "  Hours: %-16s Age:   %-20s Objs: %d (%d L)\n\r", buf1, buf3, aobj, lobj);
-		send_to_char(buf2, ch);
+		auto buffer2 = fmt::sprintf("  Hours: %-16s Age:   %-20s Objs: %d (%d L)\n\r", buf1, buf3, aobj, lobj);
+		send_to_char(buffer2.c_str(), ch);
 
 		sprintf(buf3, "%s%s%s%s",
 			IS_SET(act, PLR_HEROIMM) ? " heroimm" : "",
@@ -1336,19 +1333,19 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		if (!str_cmp(buf3, ""))
 			sprintf(buf3, " none");
 
-		sprintf(buf2, "  Town:  %-16s Flag: %-21s Room: %d\n\r",
+		buffer2 = fmt::sprintf("  Town:  %-16s Flag: %-21s Room: %d\n\r",
 			hometown ? hometown_table[hometown].name : "(none)",
 			buf3,
 			room);
-		send_to_char(buf2, ch);
+		send_to_char(buffer2.c_str(), ch);
 
 		sprintf(buf3, "%dk/%dd", kills, pkilled);
-		sprintf(buf2, "  PKr:   %-16s ", buf3);
-		send_to_char(buf2, ch);
+		buffer2 = fmt::sprintf("  PKr:   %-16s ", buf3);
+		send_to_char(buffer2.c_str(), ch);
 
 		sprintf(buf3, "%dg, %dn, %de", gkills, nkills, ekills);
-		sprintf(buf2, "PKs:   %-20s MOBd: %d\n\r", buf3, mkilled);
-		send_to_char(buf2, ch);
+		buffer2 = fmt::sprintf("PKs:   %-20s MOBd: %d\n\r", buf3, mkilled);
+		send_to_char(buffer2.c_str(), ch);
 
 		if (sect_time[0] > 0)
 		{
@@ -1610,7 +1607,6 @@ void do_pload(CHAR_DATA *ch, char *argument)
 {
 	DESCRIPTOR_DATA *d;
 	char name[MAX_STRING_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	CHAR_DATA *victim;
 
 	argument = one_argument(argument, name);
@@ -1637,8 +1633,8 @@ void do_pload(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	sprintf(buf, "cp %s%s%s %spload.txt", RIFT_PLAYER_DIR, name, ".plr", RIFT_PLAYER_DIR);
-	system(buf);
+	auto buffer = fmt::format("cp {}{}{} {}pload.txt", RIFT_PLAYER_DIR, name, ".plr", RIFT_PLAYER_DIR);
+	system(buffer.c_str());
 
 	d->character->desc = NULL;
 	d->character->next = char_list;
@@ -1657,9 +1653,9 @@ void do_pload(CHAR_DATA *ch, char *argument)
 
 	interpret(ch, argument);
 
-	sprintf(buf, "%s/%s%s", RIFT_PLAYER_DIR, name, ".plr");
+	buffer = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, name, ".plr");
 
-	if (fopen(buf, "r") != NULL)
+	if (fopen(buffer.c_str(), "r") != NULL)
 	{
 		save_char_obj(victim);
 		extract_char(victim, true);

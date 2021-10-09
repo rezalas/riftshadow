@@ -135,8 +135,8 @@ void string_add(CHAR_DATA *ch, char *argument)
 			smash_tilde(arg3); /* Just to be sure -- Hugin */
 			*ch->desc->pString = string_replace(*ch->desc->pString, arg2, arg3);
 
-			sprintf(buf, "'%s' replaced with '%s'.\n\r", arg2, arg3);
-			send_to_char(buf, ch);
+			auto buffer = fmt::format("'{}' replaced with '{}'.\n\r", arg2, arg3);
+			send_to_char(buffer.c_str(), ch);
 			return;
 		}
 

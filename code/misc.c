@@ -596,7 +596,7 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 void do_chess(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MSL], arg2[MSL], arg3[MSL], arg4[MSL], buf[MSL];
+	char arg1[MSL], arg2[MSL], arg3[MSL], arg4[MSL];
 	int col_from, row_from, col_to, row_to;
 	OBJ_DATA *board;
 	CHAR_DATA *victim;
@@ -924,11 +924,11 @@ void do_chess(CHAR_DATA *ch, char *argument)
 				return;
 			}
 
-			sprintf(buf, "You place a %s %s on the board at %s.", arg2, arg3, arg4);
-			act(buf, ch, 0, 0, TO_CHAR);
+			auto buffer = fmt::format("You place a {} {} on the board at {}.", arg2, arg3, arg4);
+			act(buffer.c_str(), ch, 0, 0, TO_CHAR);
 
-			sprintf(buf, "$n places a %s %s on the board at %s.", arg2, arg3, arg4);
-			act(buf, ch, 0, 0, TO_ROOM);
+			buffer = fmt::format("$n places a {} {} on the board at {}.", arg2, arg3, arg4);
+			act(buffer.c_str(), ch, 0, 0, TO_ROOM);
 
 			chessboard[col_to][row_to] = piece;
 			return;

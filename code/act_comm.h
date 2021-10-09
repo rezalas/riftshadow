@@ -33,6 +33,7 @@
 #include "ap.h"
 #include "thief.h"
 #include "chardef.h"
+#include "./include/fmt/format.h"
 
 #define PDEATH_LOG_FILE	RIFT_AREA_DIR "/permdeaths.txt"
 #define DEATH_LOG_FILE	RIFT_AREA_DIR "/tempdeaths.txt"

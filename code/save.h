@@ -23,6 +23,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 #define MAX_NEST	100
 

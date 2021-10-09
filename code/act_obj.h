@@ -29,6 +29,7 @@
 #include "const.h"
 #include "material.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 #define CABAL_ITEMS_FILE	"citems.txt"
 #define MINOTAUR_ONLY		ASCII_I

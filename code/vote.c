@@ -164,8 +164,8 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 				test = (time_t)atol(row[3]);
 
 				strftime(time, 200, "%m-%d-%Y %H:%M:%S", localtime(&test));
-				sprintf(buf, "\t%d: %s votes for %s (at %s from %s)\n\r", count, row[0], row[1], time, row[4]);
-				send_to_char(buf, ch);
+				auto buffer = fmt::format("\t{}: {} votes for {} (at {} from {})\n\r", std::to_string(count), row[0], row[1], time, row[4]); //TODO: change the rest of the sprintf calls to format
+				send_to_char(buffer.c_str(), ch);
 			}
 		}
 		else
@@ -215,7 +215,7 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 
 void do_vote(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MSL], dir[MSL], buf[MSL], *word;
+	char arg1[MSL], buf[MSL], *word;
 	char *escape;
 	int cabal = 0, cvote = 0;
 	FILE *fp;
@@ -237,7 +237,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 
 	arg1[0] = UPPER(arg1[0]);
 
-	sprintf(dir, "%s/%s%s", RIFT_PLAYER_DIR, arg1, ".plr");
+	auto dir = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, arg1, ".plr"); //TODO: change the rest of the sprintf calls to format
 
 	victim = get_char_world(ch, arg1);
 
@@ -247,7 +247,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		fp = fopen(dir, "r");
+		fp = fopen(dir.c_str(), "r");
 
 		if (fp == NULL)
 		{
@@ -328,11 +328,11 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		sprintf(buf, "INSERT INTO votes VALUES('%s','%s', %d, %ld, '%s')", ch->true_name, arg1, ch->cabal, current_time, escape);
-		one_query(buf);
+		auto buffer = fmt::sprintf("INSERT INTO votes VALUES('%s','%s', %d, %ld, '%s')", ch->true_name, arg1, ch->cabal, current_time, escape); //TODO: change the rest of the sprintf calls to format
+		one_query(buffer.data());
 
-		sprintf(buf, "You have placed your vote for %s.\n\r", (!str_cmp(arg1, ch->true_name)) ? "yourself" : arg1);
-		send_to_char(buf, ch);
+		buffer= fmt::format("You have placed your vote for {}.\n\r", (!str_cmp(arg1, ch->true_name)) ? "yourself" : arg1);
+		send_to_char(buffer.c_str(), ch);
 	}
 
 	mysql_free_result(res);

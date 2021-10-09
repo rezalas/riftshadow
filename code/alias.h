@@ -12,6 +12,8 @@
 #include "interp.h"
 #include "db.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
+
 
 //
 // LOCAL FUNCTIONS

@@ -24,6 +24,7 @@
 #include "act_wiz.h"
 #include "const.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 //
 // LOCAL FUNCTIONS

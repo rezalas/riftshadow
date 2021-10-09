@@ -287,7 +287,8 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 	MYSQL_FIELD *field;
 	MYSQL_ROW row;
 	MYSQL_RES *res_set;
-	char buf[MSL], query[MSL], arg1[MSL];
+	char buf[MSL], arg1[MSL];
+
 	if (!str_cmp(argument, ""))
 	{
 		send_to_char("Syntax: listhelp all\n\r", ch);
@@ -299,10 +300,9 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, arg1);
 
-	if (!str_cmp(arg1, "ALL"))
-		sprintf(query, "select * from helpfiles");
-	else
-		sprintf(query, "select * from helpfiles where %s RLIKE '%s'", arg1, argument);
+	auto query = !str_cmp(arg1, "ALL")
+		? std::string("select * from helpfiles")
+		: fmt::format("select * from helpfiles where {} RLIKE '{}'", arg1, argument);
 
 	conn = open_conn();
 	if (!conn)
@@ -311,7 +311,7 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	mysql_query(conn, query);
+	mysql_query(conn, query.c_str());
 	res_set = mysql_store_result(conn);
 
 	if (res_set == NULL || mysql_field_count(conn) < 1)
