@@ -4,6 +4,8 @@
 #include "merc.h"
 #include "devextra.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 #define VOTE_FILE RIFT_AREA_DIR "/votes.txt"
 

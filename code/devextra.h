@@ -28,6 +28,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"

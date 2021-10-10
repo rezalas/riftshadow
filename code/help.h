@@ -15,6 +15,7 @@
 #include "interp.h"
 #include "act_comm.h"
 #include "devextra.h"
+#include "./include/fmt/format.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

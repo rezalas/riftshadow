@@ -3718,7 +3718,7 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
  */
 void bug(const char *str, int param)
 {
-	char buf[MAX_STRING_LENGTH];
+	std::string buffer;
 
 	if (fpArea != NULL)
 	{
@@ -3742,14 +3742,14 @@ void bug(const char *str, int param)
 			fseek(fpArea, iChar, 0);
 		}
 
-		sprintf(buf, "[*****] FILE: %s LINE: %d", strArea, iLine);
-		log_string(buf);
+		buffer = fmt::format("[*****] FILE: {} LINE: {}", strArea, iLine);
+		log_string(buffer.c_str());
 	}
 
-	strcpy(buf, "[*****] BUG: ");
-	sprintf(buf + strlen(buf), str, param);
-	log_string(buf);
-	wiznet(buf, 0, 0, WIZ_DEBUG, 0, 0);
+	buffer = fmt::sprintf(str, param);
+	buffer = fmt::format("[*****] BUG: {}", buffer);
+	log_string(buffer.c_str());
+	wiznet(buffer.data(), 0, 0, WIZ_DEBUG, 0, 0);
 }
 
 /*
@@ -3892,9 +3892,9 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	FILE *fpChar_list;
 	FILE *fpChar;
 	char strPlr[MAX_INPUT_LENGTH];
-	char catplr[MAX_INPUT_LENGTH];
+//	char catplr[MAX_INPUT_LENGTH];
 	char chkbuf[MAX_STRING_LENGTH];
-	char pbuf[100];
+//	char pbuf[100];
 	OBJ_INDEX_DATA *lObjIndex;
 	OBJ_DATA *obj;
 	int i;
@@ -3928,9 +3928,8 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 
 	send_to_char("Loading all pfile object counts now.\n\r", ch);
 
-	sprintf(catplr, "%s/%s", RIFT_PLAYER_DIR, "*.plr");
-	sprintf(pbuf, "ls %s > %s", catplr, PLAYER_LIST);
-	system(pbuf);
+	auto buffer = fmt::format("ls {}/{} > {}", RIFT_PLAYER_DIR, "*.plr", PLAYER_LIST); //TODO: change the rest of the sprintf calls to format
+	system(buffer.c_str());
 
 	fpChar_list = fopen(PLAYER_LIST, "r");
 

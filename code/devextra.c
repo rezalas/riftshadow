@@ -247,8 +247,8 @@ void do_listoffer(CHAR_DATA *ch, char *argument)
 			sprintf(query, "UPDATE offerings SET status=%i WHERE time=%s AND player='%s'", status, row[5], row[3]);
 			one_query(query);
 
-			sprintf(buf, "%s's offering has been %sed.\n\r", row[3], arg1);
-			send_to_char(buf, ch);
+			auto buffer = fmt::format("{}'s offering has been {}ed.\n\r", row[3], arg1); //TODO: change the rest of the sprintf calls to format
+			send_to_char(buffer.c_str(), ch);
 
 			found = true;
 			break;
@@ -402,6 +402,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 	MYSQL_RES *res_set, *res2;
 	MYSQL_ROW row, row2;
 	BUFFER *buffer;
+	std::string query_buffer;
 	char buf[MSL], arg1[MSL], arg2[MSL], query[MSL];
 	char *escape;
 	int id, results = 0;
@@ -467,10 +468,10 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		sprintf(query, "INSERT INTO sitetracker VALUES(NULL, '%s',0)", escape);
 		one_query(query);
 
-		sprintf(buf,"A new site (%s) was added to the IP listings.  You should add a comment now explaining why it was added.\n\r", arg2);
+		auto listing = fmt::format("A new site ({}) was added to the IP listings.  You should add a comment now explaining why it was added.\n\r", arg2);
 
 		do_disc(conn);
-		send_to_char(buf, ch);
+		send_to_char(listing.c_str(), ch);
 		return;
 	}
 
@@ -489,8 +490,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg1, "delcomment") && get_trust(ch) >= 58)
 	{
-		sprintf(query, "DELETE FROM sitecomments WHERE comment_id=%s", arg2);
-		one_query(query);
+		query_buffer = fmt::format("DELETE FROM sitecomments WHERE comment_id={}", arg2);
+		one_query(query_buffer.data());
 
 		do_disc(conn);
 		send_to_char("Ok.\n\r", ch);
@@ -499,8 +500,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg1, "delsite") && get_trust(ch) >= 58)
 	{
-		sprintf(query, "DELETE FROM sitetracker WHERE site_id=%s", arg2);
-		one_query(query);
+		query_buffer = fmt::format("DELETE FROM sitetracker WHERE site_id={}", arg2);
+		one_query(query_buffer.data());
 
 		do_disc(conn);
 		send_to_char("Ok.\n\r", ch);
@@ -510,8 +511,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 	if (is_number(arg1))
 	{
 		buffer = new_buf();
-		sprintf(query, "SELECT * from sitetracker where site_id=%s", arg1);
-		mysql_query(conn, query);
+		query_buffer = fmt::format("SELECT * from sitetracker where site_id={}", arg1);
+		mysql_query(conn, query_buffer.c_str());
 
 		res_set = mysql_store_result(conn);
 
@@ -530,8 +531,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		send_to_char("Comments:\n\r", ch);
 
 		conn2 = open_conn();
-		sprintf(query, "SELECT * from sitecomments where site_id=%s", arg1);
-		mysql_query(conn2, query);
+		query_buffer = fmt::format("SELECT * from sitecomments where site_id={}", arg1);
+		mysql_query(conn2, query_buffer.c_str());
 
 		res2 = mysql_store_result(conn2);
 		buf[0] = '\r';
@@ -1041,7 +1042,7 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 	MYSQL_ROW row;
 	MYSQL_RES *res_set;
 	BUFFER *buffer;
-	char arg1[MSL], query[MSL], qpart[MSL], buf[MSL];
+	char arg1[MSL], qpart[MSL], buf[MSL];
 	int i = 0;
 	bool found= false;
 
@@ -1080,9 +1081,9 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	sprintf(query, "SELECT * FROM pklogs WHERE %s", qpart);
+	auto query = fmt::format("SELECT * FROM pklogs WHERE {}", qpart);
 	conn = open_conn();
-	mysql_query(conn, query);
+	mysql_query(conn, query.c_str());
 	res_set = mysql_store_result(conn);
 
 	if (res_set == NULL && mysql_field_count(conn) > 0)
@@ -1918,7 +1919,7 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 	MYSQL_ROW row;
 	MYSQL_RES *res_set;
 	BUFFER *buffer;
-	char arg1[MSL], arg2[MSL], query[MSL], buf[MSL];
+	char arg1[MSL], arg2[MSL], buf[MSL];
 	int type = -1, show = -1, i = 0;
 
 	argument = one_argument(argument, arg1);
@@ -1953,7 +1954,7 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 
 	buffer = new_buf();
 	sprintf(buf, "%d", type);
-	sprintf(query, "SELECT * FROM logins WHERE (name RLIKE '%s' OR site RLIKE '%s' OR time RLIKE '%s') %s%s ORDER BY ctime DESC",
+	auto query = fmt::format("SELECT * FROM logins WHERE (name RLIKE '{}' OR site RLIKE '{}' OR time RLIKE '{}') {}{} ORDER BY ctime DESC",
 		arg1,
 		arg1,
 		arg1,
@@ -1961,7 +1962,7 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 		type > -1 ? buf : "");
 
 	conn = open_conn();
-	mysql_query(conn, query);
+	mysql_query(conn, query.c_str());
 	res_set = mysql_store_result(conn);
 
 	if (res_set == NULL && mysql_field_count(conn) > 0)

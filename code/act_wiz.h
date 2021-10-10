@@ -35,6 +35,8 @@
 #include "const.h"
 #include "material.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 #define GOD_LOG_FILE	"glog.txt"
 

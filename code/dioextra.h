@@ -30,6 +30,8 @@
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 #define TEMP_PKTRACK_FILE "../temp/temppktrack.tmp"
 

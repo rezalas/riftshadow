@@ -71,6 +71,7 @@
 #include "iprog.h"
 #include "const.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 /* for command types */
 #define ML				MAX_LEVEL		/* implementor */

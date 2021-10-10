@@ -3805,7 +3805,8 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *armor;
 	AFFECT_DATA af;
 
-	char tochar[MSL], tovict[MSL], toroom[MSL],
+	std::string buffer;
+	char //tochar[MSL], tovict[MSL], toroom[MSL],
 		tochar2[MSL], tovict2[MSL], toroom2[MSL],
 		tochar3[MSL], tovict3[MSL], toroom3[MSL],
 		bodypart[MSL];
@@ -3870,22 +3871,24 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		dam *= 2;
 	}
 
-	sprintf(tochar, "You spray a stream of hissing acid at $N, striking $S %s!", bodypart);
-	sprintf(tovict, "$n sprays a stream of hissing acid at you, striking your %s!", bodypart);
-	sprintf(toroom, "$n sprays a stream of hissing acid at $N, striking $S %s!", bodypart);
-
 	if (ch != victim)
 	{
-		act(tochar, ch, 0, victim, TO_CHAR);
-		act(tovict, ch, 0, victim, TO_VICT);
-		act(toroom, ch, 0, victim, TO_NOTVICT);
+		buffer = fmt::format("You spray a stream of hissing acid at $N, striking $S {}!", bodypart);
+		act(buffer.c_str(), ch, 0, victim, TO_CHAR);
+
+		buffer = fmt::format("$n sprays a stream of hissing acid at you, striking your {}!", bodypart);
+		act(buffer.c_str(), ch, 0, victim, TO_VICT);
+
+		buffer = fmt::format("$n sprays a stream of hissing acid at $N, striking $S {}!", bodypart);
+		act(buffer.c_str(), ch, 0, victim, TO_NOTVICT);
 	}
 	else
 	{
-		sprintf(tovict, "A stream of hissing acid hits you, striking your %s!", bodypart);
-		sprintf(toroom, "A stream of hissing acid hits $n, striking $s %s!", bodypart);
-		act(tovict, ch, 0, 0, TO_CHAR);
-		act(toroom, ch, 0, 0, TO_ROOM);
+		buffer = fmt::format("A stream of hissing acid hits you, striking your %s!", bodypart);
+		act(buffer.c_str(), ch, 0, 0, TO_CHAR);
+
+		buffer = fmt::format("A stream of hissing acid hits $n, striking $s %s!", bodypart);
+		act(buffer.c_str(), ch, 0, 0, TO_ROOM);
 	}
 
 	if (ch != victim)

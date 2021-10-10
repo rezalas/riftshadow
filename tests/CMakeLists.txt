@@ -18,6 +18,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	prof_tests.c
 	queue_tests.c
 	utility_tests.c
+	standalone_tests.c
 )
 
 ##

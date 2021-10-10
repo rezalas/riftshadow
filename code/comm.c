@@ -1399,6 +1399,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 {
 	DESCRIPTOR_DATA *d_old, *d_next;
 	char buf[MAX_STRING_LENGTH], word[200], tword[200], cword[200];
+	std::string buffer;
 	char arg[MAX_INPUT_LENGTH];
 	CHAR_DATA *ch;
 	OBJ_DATA *fobj; /* For pfile limit bug */
@@ -2766,8 +2767,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 					else
 						strcat(buf,", c_logins=c_logins+1");
 				} */
-			sprintf(buffile, "%s WHERE name = '%s'", buf, ch->true_name);
-			cres = RS.SQL.Update(buffile);
+			buffer = fmt::format("{} WHERE name = '{}'", buf, ch->true_name);
+			cres = RS.SQL.Update(buffer.c_str());
 
 			if (ch->pet != NULL)
 			{
@@ -3419,7 +3420,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 void announce_login(CHAR_DATA *ch)
 {
 	CHAR_DATA *guardian;
-	char *rstring, buf[MAX_STRING_LENGTH], rbuf[MAX_STRING_LENGTH];
+	char *rstring;
 
 	if (ch->cabal == 0 || ch->cabal > MAX_CABAL || is_immortal(ch))
 		return;
@@ -3431,15 +3432,15 @@ void announce_login(CHAR_DATA *ch)
 
 	rstring = talloc_string(cabal_messages[ch->cabal].login);
 
-	sprintf(buf, rstring, ch->name);
-	sprintf(rbuf, "\x01B[1;37m%s\x01B[0;37m", buf);
-	do_cb(guardian, buf);
+	auto buffer = fmt::sprintf(rstring, ch->name);
+	buffer = fmt::format("\x01B[1;37m{}\x01B[0;37m", buffer);
+	do_cb(guardian, buffer.data());
 }
 
 void announce_logout(CHAR_DATA *ch)
 {
 	CHAR_DATA *guardian;
-	char *rstring, buf[MAX_STRING_LENGTH], rbuf[MAX_STRING_LENGTH];
+	char *rstring;
 
 	if (ch->cabal == 0 || ch->cabal > MAX_CABAL || is_immortal(ch))
 		return;
@@ -3451,9 +3452,9 @@ void announce_logout(CHAR_DATA *ch)
 
 	rstring = talloc_string(cabal_messages[ch->cabal].logout);
 
-	sprintf(buf, rstring, ch->name);
-	sprintf(rbuf, "\x01B[1;37m%s\x01B[0;37m", buf);
-	do_cb(guardian, buf);
+	auto buffer = fmt::sprintf(rstring, ch->name);
+	buffer = fmt::format("\x01B[1;37m{}\x01B[0;37m", buffer);
+	do_cb(guardian, buffer.data());
 }
 
 void do_rename(CHAR_DATA *ch, char *argument)

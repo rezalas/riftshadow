@@ -67,6 +67,7 @@
 #include "const.h"
 #include "material.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

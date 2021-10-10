@@ -94,6 +94,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *rch;
 	char arg[MAX_INPUT_LENGTH], buf[MAX_STRING_LENGTH];
+	std::string buffer;
 	int pos;
 	smash_tilde(argument);
 
@@ -170,8 +171,8 @@ void do_alias(CHAR_DATA *ch, char *argument)
 			free_pstring(rch->pcdata->alias_sub[pos]);
 			rch->pcdata->alias_sub[pos] = palloc_string(argument);
 
-			sprintf(buf, "%s is now realiased to '%s'.\n\r", arg, argument);
-			send_to_char(buf, ch);
+			buffer = fmt::format("{} is now realiased to '{}'.\n\r", arg, argument); //TODO: change the rest of the sprintf calls to format
+			send_to_char(buffer.c_str(), ch);
 			return;
 		}
 	}
@@ -186,8 +187,8 @@ void do_alias(CHAR_DATA *ch, char *argument)
 	rch->pcdata->alias[pos] = palloc_string(arg);
 	rch->pcdata->alias_sub[pos] = palloc_string(argument);
 
-	sprintf(buf, "%s is now aliased to '%s'.\n\r", arg, argument);
-	send_to_char(buf, ch);
+	buffer = fmt::format("{} is now aliased to '{}'.\n\r", arg, argument);
+	send_to_char(buffer.c_str(), ch);
 }
 
 void do_unalias(CHAR_DATA *ch, char *argument)
