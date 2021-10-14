@@ -2440,7 +2440,7 @@ void clear_char(CHAR_DATA *ch)
 	ch->move = 100;
 	ch->max_move = 100;
 	ch->last_fought = NULL;
-	ch->last_fight_time = NULL;
+	ch->last_fight_time = 0;
 	ch->last_fight_name = NULL;
 	ch->on = NULL;
 	ch->hometown = 0;
@@ -3929,7 +3929,9 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	send_to_char("Loading all pfile object counts now.\n\r", ch);
 
 	auto buffer = fmt::format("ls {}/{} > {}", RIFT_PLAYER_DIR, "*.plr", PLAYER_LIST); //TODO: change the rest of the sprintf calls to format
-	system(buffer.c_str());
+	auto returnCode = system(buffer.c_str());
+	if(returnCode != 0) // ls returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 
 	fpChar_list = fopen(PLAYER_LIST, "r");
 

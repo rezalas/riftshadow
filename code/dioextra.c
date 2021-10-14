@@ -1427,7 +1427,10 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 
 	sprintf(arg, "%s", lowstring(arg));
 	sprintf(buf, "grep 'Cabal %s~' %s/%s > %s", arg, RIFT_PLAYER_DIR, "*.plr", TEMP_GREP_RESULTS);
-	system(buf);
+
+	auto returnCode = system(buf);
+	if(returnCode != 0) // grep returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
 	fpChar = fopen(TEMP_GREP_RESULTS, "r");
 	if (fpChar == NULL)
@@ -1634,7 +1637,10 @@ void do_pload(CHAR_DATA *ch, char *argument)
 	}
 
 	auto buffer = fmt::format("cp {}{}{} {}pload.txt", RIFT_PLAYER_DIR, name, ".plr", RIFT_PLAYER_DIR);
-	system(buffer.c_str());
+
+	auto returnCode = system(buffer.c_str());
+	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 
 	d->character->desc = NULL;
 	d->character->next = char_list;

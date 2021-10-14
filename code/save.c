@@ -1005,7 +1005,10 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 		fclose(fp);
 
 		auto buffer = fmt::format("gzip -dfq {}", strsave);
-		system(buffer.c_str());
+
+		auto returnCode = system(buffer.c_str());
+		if(returnCode != 0) // gzip returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
+			bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 	}
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(name));

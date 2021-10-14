@@ -61,7 +61,10 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 	}
 
 	sprintf(buf, "cp %s/%s%s %s/pload.txt", RIFT_PLAYER_DIR, name, ".plr", RIFT_PLAYER_DIR);
-	system(buf);
+
+	auto returnCode = system(buf);
+	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
 	d->character->desc = NULL;
 	d->character->next = char_list;
@@ -726,7 +729,9 @@ void delete_char(char *name, bool save_pfile)
 	else
 		sprintf(buf2, "rm %s/%s.plr", RIFT_PLAYER_DIR, name);
 
-	system(buf2);
+	auto returnCode = system(buf2);
+	if(returnCode != 0) // both mv and rm return 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buf2, returnCode);
 
 	cres = RS.SQL.Delete("players WHERE name='%s'", name);
 

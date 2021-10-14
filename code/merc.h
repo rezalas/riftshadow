@@ -238,7 +238,14 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 //
 
 #define MAX_KEY_HASH				1024
+
+#ifdef MAX_STRING_LENGTH
+#undef MAX_STRING_LENGTH
 #define MAX_STRING_LENGTH			4608
+#else
+#define MAX_STRING_LENGTH			4608
+#endif
+
 #define MAX_INPUT_LENGTH			4608
 #define PAGELEN						20
 #define MSL							MAX_STRING_LENGTH
@@ -2399,7 +2406,14 @@ struct kill_data
 #define WIZ_TICKS					(ASCII_B)
 #define WIZ_LOGINS					(ASCII_C)
 #define WIZ_SITES					(ASCII_D)
+
+#ifdef WIZ_LINKS
+#undef WIZ_LINKS
 #define WIZ_LINKS					(ASCII_E)
+#else
+#define WIZ_LINKS					(ASCII_E)
+#endif
+
 #define WIZ_DEATHS					(ASCII_F)
 #define WIZ_RESETS					(ASCII_G)
 #define WIZ_MOBDEATHS				(ASCII_H)
