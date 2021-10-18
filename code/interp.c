@@ -1006,7 +1006,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 					return;
 				}
 
-				vo = (void *)where;
+				vo = (void *)(long)where;
 				break;
 			case TAR_IGNORE:
 			default:

@@ -18,73 +18,79 @@ void CMud::LoadObjLimits()
 	long min_bounty = 0;
 	float tempfloat;
 
-    RS.Log("Loading object counts off players now...");
-        sprintf(pbuf,"ls %s/%s > %s", RIFT_PLAYER_DIR,"*.plr", PLAYER_LIST);
-        system(pbuf);
+	RS.Log("Loading object counts off players now...");
+	sprintf(pbuf,"ls %s/%s > %s", RIFT_PLAYER_DIR,"*.plr", PLAYER_LIST);
 
-        if ((fpChar_list = fopen( PLAYER_LIST, "r")) == NULL)
-        {
-                perror(PLAYER_LIST);
-                exit(1);
-        }
+	auto returnCode = system(pbuf);
+	if(returnCode != 0) // ls returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", pbuf, returnCode);
 
-        //for(i=0;i<=MAX_TOP_BOUNTY;i++)
-        //      top_bounty_value[i]=0;
-        sprintf(chkbuf,"%s/%s", RIFT_PLAYER_DIR,"Zzz.plr");
-        for (; ;)
-        {
-                strcpy(strPlr, fread_word(fpChar_list) );
-                if(bDebug)
-                        log_string(strPlr);
+	if ((fpChar_list = fopen( PLAYER_LIST, "r")) == NULL)
+	{
+		perror(PLAYER_LIST);
+		exit(1);
+	}
 
-                if (!str_cmp(strPlr,chkbuf))
-                        break;
+	//for(i=0;i<=MAX_TOP_BOUNTY;i++)
+	//      top_bounty_value[i]=0;
+	sprintf(chkbuf,"%s/%s", RIFT_PLAYER_DIR,"Zzz.plr");
+	for (; ;)
+	{
+		strcpy(strPlr, fread_word(fpChar_list) );
+		if(bDebug)
+			log_string(strPlr);
 
-                if ( (  fpChar = fopen(strPlr, "r") ) == NULL)
-                {
-                        perror(strPlr);
-                        exit(1);
-                }
+		if (!str_cmp(strPlr,chkbuf))
+			break;
 
-                num_pfiles++;
-                temp_bounty=0;
+		if ( (  fpChar = fopen(strPlr, "r") ) == NULL)
+		{
+			perror(strPlr);
+			exit(1);
+		}
 
-                for (; ;)
-                {
-                        int vnum, lastlogin = 0, plevel = 0;
+		num_pfiles++;
+		temp_bounty=0;
+
+		for (; ;)
+		{
+			int vnum, lastlogin = 0, plevel = 0;
 			bool breakout;
-                        char letter;
-                        char *word;
-                        OBJ_INDEX_DATA *pObjIndex;
+			char letter;
+			char *word;
+			OBJ_INDEX_DATA *pObjIndex;
+
 			temp_player_name[0] = '\0';
-                        letter = fread_letter(fpChar);
+			letter = fread_letter(fpChar);
 
-                        if (letter != '#')
-                                continue;
+			if (letter != '#')
+				continue;
 
-                        word = fread_word(fpChar);
+			word = fread_word(fpChar);
 
-                        if (!str_cmp(word,"End"))
-                                break;
-                        if ( !str_cmp( word, "PLAYER"))
-                        {
-                                for ( ; ; )
-                                {
-                                        word   = fread_word( fpChar );
+			if (!str_cmp(word,"End"))
+				break;
+
+			if ( !str_cmp( word, "PLAYER"))
+			{
+				for ( ; ; )
+				{
+					word   = fread_word( fpChar );
 					//NOTE: Be careful that occurances of this word INSIDE role/desc don't fuck it up!
 					//read before/after role/desc and test accordingly
-                                        if(!str_cmp(word,"Name") && temp_player_name[0] == '\0')
-                                                sprintf(temp_player_name,"%s",fread_string( fpChar ));
-                                        if(!str_cmp(word,"Cabal"))
-                                                cabal_members[cabal_lookup(fread_string(fpChar))]++;
+					if(!str_cmp(word,"Name") && temp_player_name[0] == '\0')
+						sprintf(temp_player_name,"%s",fread_string( fpChar ));
+					if(!str_cmp(word,"Cabal"))
+						cabal_members[cabal_lookup(fread_string(fpChar))]++;
 					if(!str_cmp(word,"LogO") && lastlogin == 0)
 						lastlogin = fread_number(fpChar);
 					if(!str_cmp(word,"Levl"))
 						plevel = fread_number(fpChar);
 					if(!str_cmp(word,"End"))
 						break;
-                                }
-                        }
+				}
+			}
+
 			if(lastlogin && plevel && plevel < 52 && lastlogin + 3456000 < current_time)
 			{
 				auto buffer = fmt::format("Autodeleting {}.", temp_player_name);
@@ -93,34 +99,38 @@ void CMud::LoadObjLimits()
 				delete_char(temp_player_name, true);
 				break;
 			}
-                        if ( !str_cmp( word, "O") || !str_cmp( word, "OBJECT"))
-                        {
-                                word = fread_word(fpChar);
 
-                                if (!str_cmp(word, "Vnum"))
-                                {
-                                        vnum = fread_number(fpChar);
-                                        if ( (get_obj_index(vnum)) != NULL)
-                                        {
-                                                pObjIndex = get_obj_index(vnum);
-                                                pObjIndex->limcount++;
-                                        }
-                                }
-                        }
-                }
-                fclose(fpChar);
-                fpChar = NULL;
-        }
-        fclose( fpChar_list);
-        RS.Log("Object Limits loaded");
+			if ( !str_cmp( word, "O") || !str_cmp( word, "OBJECT"))
+			{
+				word = fread_word(fpChar);
 
-        /* CABAL LIMITS */
-        for(i=1;i<MAX_CABAL;i++)
-        {
-                tempfloat = num_pfiles / cabal_table[i].max_members;
-                cabal_max[i] = (short)tempfloat<=15 ? 15 : (short)tempfloat;
-        }
-        RS.Log("Cabal Limits loaded");
+				if (!str_cmp(word, "Vnum"))
+				{
+					vnum = fread_number(fpChar);
+					if ( (get_obj_index(vnum)) != NULL)
+					{
+						pObjIndex = get_obj_index(vnum);
+						pObjIndex->limcount++;
+					}
+				}
+			}
+		}
+
+		fclose(fpChar);
+		fpChar = NULL;
+	}
+
+	fclose( fpChar_list);
+	RS.Log("Object Limits loaded");
+
+	/* CABAL LIMITS */
+	for(i=1;i<MAX_CABAL;i++)
+	{
+		tempfloat = num_pfiles / cabal_table[i].max_members;
+		cabal_max[i] = (short)tempfloat<=15 ? 15 : (short)tempfloat;
+	}
+
+	RS.Log("Cabal Limits loaded");
 }
 
 
