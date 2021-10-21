@@ -3,8 +3,7 @@ When you work on anything please create an issue for it or comment on the approp
 Please be descriptive in your issues, posts, and PRs and describe what you are trying to achieve.
 
 ## Commenting
-Not everything needs to be commented, but complex topics should have comments added to ease reading them. Try to be "self documenting"
-by using descriptive variable names, short function bodies, and adding spacer lines between ideas where appropriate. If you think someone might wonder 'why' something was done a certain way and you have a good reason, that's a good spot for  a friendly comment. 
+We use the Doxygen format of commenting and documentation generation. For styling and use, please see: [Doxygen Docs](https://www.doxygen.nl/manual/docblocks.html). Not everything needs to be commented, but complex topics should have comments added to ease reading them. Try to be "self documenting" by using descriptive variable names, short function bodies, and adding spacer lines between ideas where appropriate. If you think someone might wonder 'why' something was done a certain way and you have a good reason, that's a good spot for  a friendly comment. Provide supporting information for functions (and their parameters) and classes so community members can easily understand how and why to use the tools available.
 
 ## Optimization
 Though the goal of modernizing will include optimization, avoid premature optimization without reason. The program is quite large and old, and as such some things may react poorly to optimizing in ways that are not easily noticed. If you optimize code, be certain the function and make sure to spin up a server instance and validate your changes.
