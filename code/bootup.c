@@ -175,11 +175,15 @@ void CMud::LoadTime()
 	calabren_pos = ((current_time-RS_EPOCH)%(CALABREN_SPD*360))/CALABREN_SPD;
 }
 
+///
+/// 
+/// Loads all areas from the area index file declared as  @see AREA_LIST
+/// 
+/// @param someparam description
+///
 void CMud::LoadAreas()
 {
 	FILE *fpList;
-	//	CArea::LoadAreaData();	//loads the data about each area - name, uid, etc
-
 
 	log_string("Loading area files now...");
 
@@ -249,18 +253,6 @@ void CMud::LoadAreas()
 
 	fBootDb = false;
 	
-}
-
-
-void CArea::LoadAreaData()
-{
-	/* NOTE: class macro weapon is disabled 'cause it's a double for some
-	* reason: fix0r */
-	RS.Log("Loading area data...");
-//	CArea::LoadAreaTable("* FROM world_areas ORDER BY min_vnum ASC");
-//	begin_benchmark
-//	CRoom::LoadRoomTable("* FROM world_rooms ORDER BY vnum ASC");
-//	end_benchmark("Loading rooms");
 }
 
 void CMud::LoadOptions()

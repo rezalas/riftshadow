@@ -968,7 +968,10 @@ void bug_exit(char *file, int nLine)
 }
 
 /*
- * Snarf an obj section. dev style
+ * @brief processes object sections for a provided file
+ * 
+ * @old Snarf an obj section. dev style
+ * 
  */
 void load_objs(FILE *fp)
 {
@@ -994,6 +997,8 @@ void load_objs(FILE *fp)
 			exit(1);
 		}
 
+		// object areas end with an empty #0 line to denote the end
+		// of the object definitions
 		vnum = fread_number(fp);
 		if (vnum == 0)
 			break;

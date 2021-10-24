@@ -32,6 +32,7 @@
  ***************************************************************************/
 
 #include "moremagic.h"
+#include "weather_enums.h"
 
 void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
@@ -111,16 +112,16 @@ void spell_sunray(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (sun == SUN_SET)
 		dam = 100;
 
-	if (ch->in_room->area->sky == SKY_CLEAR)
+	if (ch->in_room->area->sky == WeatherCondition::Clear)
 		dam = (int)((float)dam * 1.7);
 
-	if (ch->in_room->area->sky == SKY_PCLOUDY)
+	if (ch->in_room->area->sky == WeatherCondition::PartlyCloudy)
 		dam *= 1;
 
-	if (ch->in_room->area->sky == SKY_DRIZZLE)
+	if (ch->in_room->area->sky == WeatherCondition::Drizzle)
 		dam = (int)((float)dam * .8);
 
-	if (ch->in_room->area->sky == SKY_TSTORM)
+	if (ch->in_room->area->sky == WeatherCondition::ThunderStorm)
 		dam *= 1;
 
 	// Fuzz it up.

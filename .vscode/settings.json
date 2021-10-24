@@ -129,5 +129,6 @@
 				}
 			}
 		]
-	}
+	},
+	"cmake.configureOnOpen": false
 }

@@ -33,6 +33,8 @@
 
 #include "act_wiz.h"
 #include "prof.h"
+#include "weather_enums.h"
+
 
 AREA_DATA *area_first;
 unsigned int *gDebug;
@@ -2327,16 +2329,16 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 	switch (area->temp)
 	{
-		case TEMP_HOT:
+		case Temperature::Hot:
 			sprintf(buf, "Hot\n\r");
 			break;
-		case TEMP_WARM:
+		case Temperature::Warm:
 			sprintf(buf, "Warm\n\r");
 			break;
-		case TEMP_COOL:
+		case Temperature::Cool:
 			sprintf(buf, "Cool\n\r");
 			break;
-		case TEMP_COLD:
+		case Temperature::Cold:
 			sprintf(buf, "Cold\n\r");
 			break;
 		default:
@@ -2350,16 +2352,16 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 	switch (area->wind)
 	{
-		case WIND_CALM:
+		case Windspeed::Calm:
 			sprintf(buf, "Calm\n\r");
 			break;
-		case WIND_BREEZE:
+		case Windspeed::Breeze:
 			sprintf(buf, "Breeze\n\r");
 			break;
-		case WIND_WINDY:
+		case Windspeed::Windy:
 			sprintf(buf, "Windy\n\r");
 			break;
-		case WIND_GALE:
+		case Windspeed::Gale:
 			sprintf(buf, "Gale\n\r");
 			break;
 		default:
@@ -2373,31 +2375,31 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 	switch (area->sky)
 	{
-		case SKY_CLEAR:
+		case WeatherCondition::Clear:
 			sprintf(buf, "Clear\n\r");
 			break;
-		case SKY_PCLOUDY:
+		case WeatherCondition::PartlyCloudy:
 			sprintf(buf, "Partly cloudy\n\r");
 			break;
-		case SKY_OVERCAST:
+		case WeatherCondition::Overcast:
 			sprintf(buf, "Overcast\n\r");
 			break;
-		case SKY_DRIZZLE:
+		case WeatherCondition::Drizzle:
 			sprintf(buf, "Drizzling\n\r");
 			break;
-		case SKY_DOWNPOUR:
+		case WeatherCondition::Downpour:
 			sprintf(buf, "Pouring rain\n\r");
 			break;
-		case SKY_TSTORM:
+		case WeatherCondition::ThunderStorm:
 			sprintf(buf, "Thunderstorm\n\r");
 			break;
-		case SKY_FLURRY:
+		case WeatherCondition::SnowFlurry:
 			sprintf(buf, "Snow flurries\n\r");
 			break;
-		case SKY_BLIZZARD:
+		case WeatherCondition::Blizzard:
 			sprintf(buf, "Blizzard\n\r");
 			break;
-		case SKY_HAIL:
+		case WeatherCondition::Hail:
 			sprintf(buf, "Hail\n\r");
 			break;
 		default:
@@ -7701,11 +7703,11 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 
 	fp = fopen(RIFT_CODE_DIR "/climate-dump.txt", "w");
 
-	for (i = 0; climate_table[i].number != CLIMATE_ENGLISH; i++)
+	for (i = 0; climate_table[i].number != Climate::English; i++)
 	{
 		fprintf(fp, "%s;%d;", climate_table[i].name, climate_table[i].number);
 
-		for (j = 0; j < MAX_SKY; j++)
+		for (j = 0; j < WeatherCondition::MaxWeatherCondition; j++)
 		{
 			if (j != 0)
 				fprintf(fp, ",");
@@ -7721,7 +7723,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 
 		fprintf(fp, ";");
 
-		for (j = 0; j < MAX_TEMP; j++)
+		for (j = 0; j < Temperature::MaxTemperature; j++)
 		{
 			if (j != 0)
 				fprintf(fp, ",");
