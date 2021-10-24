@@ -2192,43 +2192,6 @@ struct kill_data
 #define WEAR_COSMETIC				21
 #define MAX_WEAR					22
 
-//
-// Climate types
-//
-
-#define CLIMATE_NONE				0
-#define CLIMATE_TEMPERATE			1
-#define CLIMATE_DESERT				2
-#define CLIMATE_TROPICAL			3
-#define CLIMATE_ALPINE				4
-#define CLIMATE_TUNDRA				5
-#define CLIMATE_SUBTROPICAL			6
-#define CLIMATE_ARID				7
-#define CLIMATE_ENGLISH				8
-#define MAX_CLIMATE					9
-
-#define SKY_CLEAR					0
-#define SKY_PCLOUDY					1
-#define SKY_OVERCAST				2
-#define SKY_DRIZZLE					3
-#define SKY_DOWNPOUR				4
-#define SKY_TSTORM					5
-#define SKY_FLURRY					6
-#define SKY_BLIZZARD				7
-#define SKY_HAIL					8
-#define MAX_SKY						9
-
-#define TEMP_HOT					0
-#define TEMP_WARM					1
-#define TEMP_COOL					2
-#define TEMP_COLD					3
-#define MAX_TEMP					4
-
-#define WIND_CALM					0
-#define WIND_BREEZE					1
-#define WIND_WINDY					2
-#define WIND_GALE					3
-#define MAX_WIND					4
 
 #define BLOCK_YES					1
 #define BLOCK_NO					0

@@ -14,7 +14,6 @@ public:
 	CArea *			next;
 	static CArea *	first;
 	
-	static void		LoadAreaData();
 	static void		LoadAreaTable(const char *query); /*this is reserved for bootstrap use*/
 	
 	int				GetPlayerCount(void);

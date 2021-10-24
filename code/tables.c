@@ -32,7 +32,7 @@
  ***************************************************************************/
 
 #include "tables.h"
-
+#include "weather_enums.h"
 
 //Steal the flag table, we're not storing bitvectors, but shhh, we like their functions!
 const struct flag_type aftype_table[] =
@@ -758,36 +758,36 @@ const struct flag_type area_type_table[] =
 	{	NULL,			0,				true	}
 };
 
-const struct flag_type sky_table[MAX_SKY] =
+const struct flag_type sky_table[WeatherCondition::MaxWeatherCondition] =
 {
 	//	name			bit				settable
-	{	"clear",		SKY_CLEAR,		true	},
-	{	"partlycloudy",	SKY_PCLOUDY,	true	},
-	{	"overcast",		SKY_OVERCAST,	true	},
-	{	"drizzle",		SKY_DRIZZLE,	true	},
-	{	"downpour",		SKY_DOWNPOUR,	true	},
-	{	"thunderstorm",	SKY_TSTORM,		true	},
-	{	"flurry",		SKY_FLURRY,		true	},
-	{	"blizzard",		SKY_BLIZZARD,	true	},
-	{	"hail",			SKY_HAIL,		true	}
+	{	"clear",		WeatherCondition::Clear,		true	},
+	{	"partlycloudy",	WeatherCondition::PartlyCloudy,	true	},
+	{	"overcast",		WeatherCondition::Overcast,	true	},
+	{	"drizzle",		WeatherCondition::Drizzle,	true	},
+	{	"downpour",		WeatherCondition::Downpour,	true	},
+	{	"thunderstorm",	WeatherCondition::ThunderStorm,		true	},
+	{	"flurry",		WeatherCondition::SnowFlurry,		true	},
+	{	"blizzard",		WeatherCondition::Blizzard,	true	},
+	{	"hail",			WeatherCondition::Hail,		true	}
 };
 
-const struct flag_type temp_table[MAX_TEMP] =
+const struct flag_type temp_table[Temperature::MaxTemperature] =
 {
 	//	name		bit				settable
-	{	"hot",		TEMP_HOT,		true	},
-	{	"warm",		TEMP_WARM,		true	},
-	{	"cool",		TEMP_COOL,		true	},
-	{	"cold",		TEMP_COLD,		true	}
+	{	"hot",		Temperature::Hot,		true	},
+	{	"warm",		Temperature::Warm,		true	},
+	{	"cool",		Temperature::Cool,		true	},
+	{	"cold",		Temperature::Cold,		true	}
 };
 
-const struct flag_type wind_table[MAX_WIND] =
+const struct flag_type wind_table[Windspeed::MaxWindspeed] =
 {
 	//	name		bit				settable
-	{	"calm",		WIND_CALM,		true	},
-	{	"breeze",	WIND_BREEZE,	true	},
-	{	"windy",	WIND_WINDY,		true	},
-	{	"gale",		WIND_GALE,		true	}
+	{	"calm",		Windspeed::Calm,		true	},
+	{	"breeze",	Windspeed::Breeze,	true	},
+	{	"windy",	Windspeed::Windy,		true	},
+	{	"gale",		Windspeed::Gale,		true	}
 };
 
 const struct restrict_type restrict_table[] =
@@ -1076,11 +1076,11 @@ const struct demon_type demon_table[] =
  *                                                    --Eladrian
  */
 
-const struct climate_type climate_table[MAX_CLIMATE] =
+const struct climate_type climate_table[Climate::MaxClimate] =
 {	
 	{	
 		"none",											// Climate name
-		CLIMATE_NONE,									// Climate number
+		Climate::None,									// Climate number
 		{												// Sky frequencies by season
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},	//		Winter
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},	//		Spring
@@ -1096,7 +1096,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"temperate",
-		CLIMATE_TEMPERATE,
+		Climate::Temperate,
 		{
 			{	20,		40,		60,		60,		60,		 65,	 90,	 95,	100		},
 			{	20,		40,		60,		70,		80,		 90,	 97,	 98,	100		},
@@ -1112,7 +1112,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"desert",
-		CLIMATE_DESERT,
+		Climate::Desert,
 		{
 			{	70,		 80,	 80,	 80,	 95,	100,	100,	100,	100		},
 			{	80,		 90,	 90,	 90,	 98,	100,	100,	100,	100		},
@@ -1128,7 +1128,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"tropical",
-		CLIMATE_TROPICAL,
+		Climate::Tropical,
 		{
 			{	5,		10,		30,		50,		80,		100,	100,	100,	100		},
 			{	5,		10,		30,		50,		80,		100,	100,	100,	100		},
@@ -1144,7 +1144,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"alpine",
-		CLIMATE_ALPINE,
+		Climate::Alpine,
 		{
 			{	20,		40,		60,		60,		60,		60,		70,		95,		100		},
 			{	20,		40,		60,		60,		60,		60,		80,		90,		100		},
@@ -1160,7 +1160,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"tundra",
-		CLIMATE_TUNDRA,
+		Climate::Tundra,
 		{
 			{	30,		40,		50,		50,		50,		50,		70,		95,		100		},
 			{	30,		40,		50,		50,		50,		50,		80,		90,		100		},
@@ -1176,7 +1176,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"subtropical",
-		CLIMATE_SUBTROPICAL,
+		Climate::Subtropical,
 		{
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
@@ -1192,7 +1192,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"arid",
-		CLIMATE_ARID,
+		Climate::Arid,
 		{
 			{	30,		40,		 50,	 60,	 80,	 96,	 98,	 98,	100		},
 			{	50,		75,		 85,	 90,	 95,	100,	100,	100,	100		},
@@ -1208,7 +1208,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"english",
-		CLIMATE_ENGLISH,
+		Climate::English,
 		{
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},

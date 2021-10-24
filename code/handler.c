@@ -2847,7 +2847,7 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 		&& (!(is_affected(ch, gsn_hydroperception)
 			&& (ch->in_room->sector_type == SECT_WATER
 				|| ch->in_room->sector_type == SECT_UNDERWATER
-				|| (ch->in_room->sector_type != SECT_INSIDE && victim->in_room->area->sky >= SKY_DRIZZLE))
+				|| (ch->in_room->sector_type != SECT_INSIDE && victim->in_room->area->sky >= WeatherCondition::Drizzle))
 			&& ch->in_room == victim->in_room))
 		&& !(is_affected(ch, gsn_sense_disturbance)
 			&& ch->in_room->sector_type != SECT_UNDERWATER
@@ -2873,7 +2873,7 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 		&& !(is_affected(ch, gsn_hydroperception)
 			&& (ch->in_room->sector_type == SECT_WATER
 				|| ch->in_room->sector_type == SECT_UNDERWATER
-				|| (ch->in_room->sector_type != SECT_INSIDE && victim->in_room->area->sky >= SKY_DRIZZLE))
+				|| (ch->in_room->sector_type != SECT_INSIDE && victim->in_room->area->sky >= WeatherCondition::Drizzle))
 			&& ch->in_room == victim->in_room)
 		&& !(is_affected(ch, gsn_sensevibrations)
 			&& victim->in_room->sector_type != SECT_UNDERWATER
@@ -4633,22 +4633,22 @@ void affect_modify_area(AREA_DATA *area, AREA_AFFECT_DATA *paf, bool fAdd)
 		case APPLY_AREA_TEMP:
 			area->temp += paf->modifier;
 
-			if (area->temp >= MAX_TEMP)
-				area->temp = MAX_TEMP - 1;
+			if (area->temp >= Temperature::MaxTemperature)
+				area->temp = Temperature::MaxTemperature - 1;
 
 			break;
 		case APPLY_AREA_WIND:
 			area->wind += paf->modifier;
 
-			if (area->wind >= MAX_WIND)
-				area->wind = MAX_WIND - 1;
+			if (area->wind >= Windspeed::MaxWindspeed)
+				area->wind = Windspeed::MaxWindspeed - 1;
 
 			break;
 		case APPLY_AREA_SKY:
 			area->sky += paf->modifier;
 
-			if (area->sky >= MAX_SKY)
-				area->sky = MAX_SKY - 1;
+			if (area->sky >= WeatherCondition::MaxWeatherCondition)
+				area->sky = WeatherCondition::MaxWeatherCondition - 1;
 
 			break;
 		default:

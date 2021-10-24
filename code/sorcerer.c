@@ -2,6 +2,7 @@
  *                        Welcome to Sorcerer land.                         *
  ****************************************************************************/
 #include "sorcerer.h"
+#include "weather_enums.h"
 
 int para_compute(int ele1, int ele2)
 {
@@ -2111,7 +2112,7 @@ void spell_hydration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			break;
 	}
 
-	if (ch->in_room->area->sky == SKY_DRIZZLE
+	if (ch->in_room->area->sky == WeatherCondition::Drizzle
 		&& ch->in_room->sector_type != SECT_WATER
 		&& ch->in_room->sector_type != SECT_INSIDE
 		&& ch->in_room->sector_type != SECT_UNDERWATER)
@@ -4220,7 +4221,7 @@ void spell_attract(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 {
-	if (ch->in_room->area->sky < SKY_OVERCAST || IS_SET(ch->in_room->room_flags, ROOM_INDOORS))
+	if (ch->in_room->area->sky < WeatherCondition::Overcast || IS_SET(ch->in_room->room_flags, ROOM_INDOORS))
 		return;
 
 	act("Your skin tingles briefly, and a bolt arcs down from the dark skies above!", ch, NULL, ch, TO_CHAR);
@@ -4286,7 +4287,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		return;
 	}
 
-	if (ch->in_room->area->sky < SKY_DRIZZLE)
+	if (ch->in_room->area->sky < WeatherCondition::Drizzle)
 	{
 		send_to_char("The weather is not suitable for calling lightning.\n\r", ch);
 		return;
@@ -4881,7 +4882,7 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (ch->in_room->area->temp == TEMP_HOT)
+	if (ch->in_room->area->temp == Temperature::Hot)
 	{
 		send_to_char("It is too hot to create even magical snow right now.\n\r", ch);
 		return;
@@ -4940,16 +4941,16 @@ void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	switch (ch->in_room->area->temp)
 	{
-		case TEMP_HOT:
+		case Temperature::Hot:
 			dam = (int)((float)dam * 0.25);
 			break;
-		case TEMP_WARM:
+		case Temperature::Warm:
 			dam = (int)((float)dam * 0.75);
 			break;
-		case TEMP_COOL:
+		case Temperature::Cool:
 			dam = (int)((float)dam * 1.25);
 			break;
-		case TEMP_COLD:
+		case Temperature::Cold:
 			dam = (int)((float)dam * 1.75);
 			break;
 		default:
@@ -5144,16 +5145,16 @@ void spell_frost_glaze(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	switch (ch->in_room->area->temp)
 	{
-		case TEMP_HOT:
+		case Temperature::Hot:
 			acmod /= (int)2;
 			break;
-		case TEMP_WARM:
+		case Temperature::Warm:
 			acmod = (int)((float)acmod * 0.8);
 			break;
-		case TEMP_COOL:
+		case Temperature::Cool:
 			acmod = (int)((float)acmod * 1.25);
 			break;
-		case TEMP_COLD:
+		case Temperature::Cold:
 			acmod = (int)((float)acmod * 1.5);
 			break;
 	}
@@ -5305,7 +5306,7 @@ void spell_whiteout(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (area->temp == TEMP_HOT || area->sky == SKY_CLEAR)
+	if (area->temp == Temperature::Hot || area->sky == WeatherCondition::Clear)
 	{
 		send_to_char("It is beyond your magic to change the weather so drastically.\n\r", ch);
 		return;
@@ -5320,7 +5321,7 @@ void spell_whiteout(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	aaf.level = level;
 	aaf.duration = 2;
 	aaf.location = APPLY_AREA_TEMP;
-	aaf.modifier = TEMP_COLD - area->temp;
+	aaf.modifier = Temperature::Cold - area->temp;
 	aaf.owner = ch;
 	aaf.end_fun = whiteout_end;
 	aaf.tick_fun = NULL;
@@ -5328,11 +5329,11 @@ void spell_whiteout(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	aaf.end_fun = NULL;
 	aaf.location = APPLY_AREA_WIND;
-	aaf.modifier = WIND_GALE - area->wind;
+	aaf.modifier = Windspeed::Gale - area->wind;
 	affect_to_area(area, &aaf);
 
 	aaf.location = APPLY_AREA_SKY;
-	aaf.modifier = SKY_BLIZZARD - area->sky;
+	aaf.modifier = WeatherCondition::Blizzard - area->sky;
 	affect_to_area(area, &aaf);
 
 	init_affect(&af);
@@ -5382,19 +5383,19 @@ void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		switch (ch->in_room->area->temp)
 		{
-			case TEMP_HOT:
+			case Temperature::Hot:
 				if (chance <= 80)
 					continue;
 				break;
-			case TEMP_WARM:
+			case Temperature::Warm:
 				if (chance <= 60)
 					continue;
 				break;
-			case TEMP_COOL:
+			case Temperature::Cool:
 				if (chance <= 40)
 					continue;
 				break;
-			case TEMP_COLD:
+			case Temperature::Cold:
 				if (chance <= 20)
 					continue;
 				break;
@@ -5419,7 +5420,7 @@ void spell_pure_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (ch->in_room->area->temp <= TEMP_WARM)
+	if (ch->in_room->area->temp <= Temperature::Warm)
 	{
 		send_to_char("The air here is too warm for a purifying breeze.\n\r", ch);
 		return;
@@ -5644,7 +5645,7 @@ void spell_glaciate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (room->area->temp == TEMP_HOT)
+	if (room->area->temp == Temperature::Hot)
 	{
 		send_to_char("The ambient temperature is too high to freeze the water.\n\r", ch);
 		return;
@@ -5897,7 +5898,7 @@ void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (ch->in_room->area->temp == TEMP_HOT)
+	if (ch->in_room->area->temp == Temperature::Hot)
 	{
 		send_to_char("It is too hot to create ice in such quantity.\n\r", ch);
 		return;
@@ -6448,7 +6449,7 @@ void spell_vigorize(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	refresh = level;
 
-	if (ch->in_room->area->temp == TEMP_HOT || ch->in_room->area->temp == TEMP_COLD)
+	if (ch->in_room->area->temp == Temperature::Hot || ch->in_room->area->temp == Temperature::Cold)
 		refresh /= 2;
 
 	act("You blanket the area with a soothing mist.", ch, 0, 0, TO_CHAR);

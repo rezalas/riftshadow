@@ -32,6 +32,7 @@
  ***************************************************************************/
 
 #include "act_info.h"
+#include "weather_enums.h"
 
 char *const where_name[] = {
 	"<used as light>     ",
@@ -70,7 +71,7 @@ static char *const moon_look[MAX_MOON] =
 	"crescent waning"
 };
 
-static char *const sky_look[MAX_SKY] = 
+static char *const sky_look[WeatherCondition::MaxWeatherCondition] = 
 {
 	"The sky is cloudless",
 	"The sky is partly cloudy",
@@ -83,7 +84,7 @@ static char *const sky_look[MAX_SKY] =
 	"Pebble-sized hailstones fall from the sky"
 };
 
-static char *const temp_look[MAX_TEMP] = 
+static char *const temp_look[Temperature::MaxTemperature] = 
 {
 	"hot",
 	"warm",
@@ -91,7 +92,7 @@ static char *const temp_look[MAX_TEMP] =
 	"cold"
 };
 
-static char *const wind_look[MAX_WIND] = 
+static char *const wind_look[Windspeed::MaxWindspeed] = 
 {
 	"is perfectly still.", 
 	"wafts on a gentle breeze.", 
@@ -1992,7 +1993,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (ch->in_room->area->sky == SKY_OVERCAST || ch->in_room->area->sky >= SKY_DOWNPOUR)
+		if (ch->in_room->area->sky == WeatherCondition::Overcast || ch->in_room->area->sky >= WeatherCondition::Downpour)
 		{
 			send_to_char("You cannot make out the moons through the cloud cover.\n\r", ch);
 			return;
@@ -2811,7 +2812,7 @@ void do_weather(CHAR_DATA *ch, char *argument)
 
 	if (sun != SUN_LIGHT)
 	{
-		if (ch->in_room->area->sky == SKY_OVERCAST || ch->in_room->area->sky >= SKY_DOWNPOUR)
+		if (ch->in_room->area->sky == WeatherCondition::Overcast || ch->in_room->area->sky >= WeatherCondition::Downpour)
 		{
 			send_to_char("You cannot make out the twin moons through the thick cloud cover.\n\r", ch);
 			return;

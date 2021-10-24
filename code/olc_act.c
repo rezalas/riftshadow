@@ -2064,7 +2064,7 @@ int aclimate_lookup(const char *name)
 {
 	int sn;
 
-	for (sn = 0; sn < MAX_CLIMATE; sn++)
+	for (sn = 0; sn < Climate::MaxClimate; sn++)
 	{
 		if (climate_table[sn].name == NULL)
 			break;
@@ -2096,7 +2096,7 @@ bool aedit_climate(CHAR_DATA *ch, char *argument)
 		send_to_char(buffer.c_str(), ch);
 		send_to_char("The following climates are available:\n\r", ch);
 
-		for (climate = 0; climate < MAX_CLIMATE; climate++)
+		for (climate = 0; climate < Climate::MaxClimate; climate++)
 		{
 			if (climate_table[climate].name == NULL)
 				break;

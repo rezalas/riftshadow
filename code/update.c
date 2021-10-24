@@ -32,6 +32,7 @@
  ***************************************************************************/
 
 #include "update.h"
+#include "weather_enums.h"
 
 int save_number = 0;
 
@@ -927,7 +928,7 @@ void weather_update(void)
 	{
 		random = number_percent();
 
-		for (i = 0; i < MAX_SKY; i++)
+		for (i = 0; i < WeatherCondition::MaxWeatherCondition; i++)
 		{
 			if (random <= climate_table[area->climate].skyfreqs[season][i])
 			{
@@ -938,7 +939,7 @@ void weather_update(void)
 
 		random = number_percent();
 
-		for (i = 0; i < MAX_TEMP; i++)
+		for (i = 0; i < Temperature::MaxTemperature; i++)
 		{
 			if (random <= climate_table[area->climate].tempfreqs[season][i])
 			{
@@ -981,17 +982,19 @@ void weather_update(void)
 				area->temp = (area->sky + average) / 2;
 		}
 
-		if (area->sky >= SKY_FLURRY && area->temp < TEMP_COOL)
-			area->temp = TEMP_COOL;
+		if (area->sky >= WeatherCondition::SnowFlurry && area->temp < Temperature::Cool)
+			area->temp = Temperature::Cool;
 
-		if (area->sky == SKY_DOWNPOUR || area->sky == SKY_TSTORM || area->sky == SKY_BLIZZARD)
+		if (area->sky == WeatherCondition::Downpour
+				 || area->sky == WeatherCondition::ThunderStorm
+				 || area->sky == WeatherCondition::Blizzard)
 			area->wind++;
 
-		if (area->climate == CLIMATE_NONE)
+		if (area->climate == Climate::None)
 		{
-			area->sky = SKY_PCLOUDY;
-			area->temp = TEMP_WARM;
-			area->wind = WIND_CALM;
+			area->sky = WeatherCondition::PartlyCloudy;
+			area->temp = Temperature::Warm;
+			area->wind = Windspeed::Calm;
 		}
 	}
 
@@ -1000,31 +1003,31 @@ void weather_update(void)
 	{
 		switch (area->sky)
 		{
-			case SKY_CLEAR:
+			case WeatherCondition::Clear:
 				sprintf(buf, "There is not a cloud to be seen in the sky above.");
 				break;
-			case SKY_PCLOUDY:
+			case WeatherCondition::PartlyCloudy:
 				sprintf(buf, "A few clouds dot the skies above.");
 				break;
-			case SKY_OVERCAST:
+			case WeatherCondition::Overcast:
 				sprintf(buf, "A thick grey mass of clouds obscures the sky.");
 				break;
-			case SKY_DRIZZLE:
+			case WeatherCondition::Drizzle:
 				sprintf(buf, "A light drizzle falls from the sky.");
 				break;
-			case SKY_DOWNPOUR:
+			case WeatherCondition::Downpour:
 				sprintf(buf, "Sheets of rain pour down from the skies above.");
 				break;
-			case SKY_TSTORM:
+			case WeatherCondition::ThunderStorm:
 				sprintf(buf, "Lightning flashes in the distance as a booming peal of thunder approaches.");
 				break;
-			case SKY_FLURRY:
+			case WeatherCondition::SnowFlurry:
 				sprintf(buf, "Scattered snowflakes drift down from the skies above.");
 				break;
-			case SKY_BLIZZARD:
+			case WeatherCondition::Blizzard:
 				sprintf(buf, "Driving snow sweeps down from the skies as a chill fills the air.");
 				break;
-			case SKY_HAIL:
+			case WeatherCondition::Hail:
 				sprintf(buf, "Pebble-sized hailstones begin to fall from the skies.");
 				break;
 			default:

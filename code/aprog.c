@@ -1,6 +1,7 @@
 /* IMPROGS Expansion: AREA PROGS (Eladrian) */
 
 #include "aprog.h"
+#include "weather_enums.h"
 
 const struct improg_type aprog_table[] = 
 {
@@ -220,7 +221,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 	if ((time_info.hour != 15 && time_info.hour != 17) || time_info.half)
 		return;
 
-	if (area->sky >= SKY_OVERCAST)
+	if (area->sky >= WeatherCondition::Overcast)
 		return;
 
 	for (obj = pedroom->contents; obj; obj = obj->next_content)

@@ -39,7 +39,7 @@
 #include <time.h>
 #include "merc.h"
 #include "material.h"
-
+#include "weather_enums.h"
 
 struct flag_type
 {
@@ -209,8 +209,8 @@ struct climate_type
 {
 	char *name;
 	sh_int number;
-	sh_int skyfreqs[NUM_SEASONS][MAX_SKY];
-	sh_int tempfreqs[NUM_SEASONS][MAX_TEMP];
+	sh_int skyfreqs[NUM_SEASONS][WeatherCondition::MaxWeatherCondition];
+	sh_int tempfreqs[NUM_SEASONS][Temperature::MaxTemperature];
 };
 
 struct demon_type
@@ -269,9 +269,9 @@ extern const struct flag_type room_flags[];
 extern const struct flag_type direction_table[];
 extern const struct flag_type exit_flags[];
 extern const struct flag_type area_type_table[];
-extern const struct flag_type sky_table[MAX_SKY];
-extern const struct flag_type temp_table[MAX_TEMP];
-extern const struct flag_type wind_table[MAX_WIND];
+extern const struct flag_type sky_table[WeatherCondition::MaxWeatherCondition];
+extern const struct flag_type temp_table[Temperature::MaxTemperature];
+extern const struct flag_type wind_table[Windspeed::MaxWindspeed];
 extern const struct restrict_type restrict_table[];
 extern const struct tribe_type tribe_table[];
 extern const char* day_name[];
@@ -284,7 +284,7 @@ extern const struct style_list style_percent[];
 extern const std::vector<cabal_list> cabal_skills;
 extern const struct flag_type wealth_table[];
 extern const struct demon_type demon_table[];
-extern const struct climate_type climate_table[MAX_CLIMATE];
+extern const struct climate_type climate_table[Climate::MaxClimate];
 extern const struct beauty_type beauty_table[];
 extern const struct order_list order_table[];
 extern const struct flag_type area_flags[];

@@ -1931,7 +1931,7 @@ void spell_create_water(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	water = std::min(level * (ch->in_room->area->sky >= SKY_DRIZZLE ? 4 : 2), obj->value[0] - obj->value[1]);
+	water = std::min(level * (ch->in_room->area->sky >= WeatherCondition::Drizzle ? 4 : 2), obj->value[0] - obj->value[1]);
 
 	if (water > 0)
 	{
