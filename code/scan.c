@@ -85,10 +85,10 @@ void do_scan(CHAR_DATA *ch, char *argument)
 
 	depth = 3;
 
-	if (sun == SUN_LIGHT)
+	if (sun == SolarPosition::Daylight)
 		depth++;
 
-	if (sun == SUN_DARK)
+	if (sun == SolarPosition::Dark)
 		depth--;
 
 	if (ch->in_room->area->sky == WeatherCondition::Drizzle

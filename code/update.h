@@ -71,6 +71,7 @@ void gold_update (void);
 void weather_update (void);
 void berus_update (void);
 void calabren_update (void);
+void LunarCycle_update(sh_int *moon, sh_int *moon_pos);
 /*
  * Update all chars, including mobs.
 */

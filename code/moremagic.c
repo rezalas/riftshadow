@@ -100,16 +100,16 @@ void spell_sunray(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (sun == SUN_DARK)
+	if (sun == SolarPosition::Dark)
 		dam = 65;
 
-	if (sun == SUN_RISE)
+	if (sun == SolarPosition::Sunrise)
 		dam = 110;
 
-	if (sun == SUN_LIGHT)
+	if (sun == SolarPosition::Daylight)
 		dam = 150;
 
-	if (sun == SUN_SET)
+	if (sun == SolarPosition::Sunset)
 		dam = 100;
 
 	if (ch->in_room->area->sky == WeatherCondition::Clear)

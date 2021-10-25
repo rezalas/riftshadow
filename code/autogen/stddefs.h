@@ -259,9 +259,3 @@
 #define ARE_CITY			4
 #define ARE_UNOPENED			5
 #define ARE_SHRINE			6
-#define DIR_NORTH			0
-#define DIR_EAST			1
-#define DIR_SOUTH			2
-#define DIR_WEST			3
-#define DIR_UP			4
-#define DIR_DOWN			5

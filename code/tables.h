@@ -209,8 +209,8 @@ struct climate_type
 {
 	char *name;
 	sh_int number;
-	sh_int skyfreqs[NUM_SEASONS][WeatherCondition::MaxWeatherCondition];
-	sh_int tempfreqs[NUM_SEASONS][Temperature::MaxTemperature];
+	sh_int skyfreqs[Seasons::SeasonsCount][WeatherCondition::MaxWeatherCondition];
+	sh_int tempfreqs[Seasons::SeasonsCount][Temperature::MaxTemperature];
 };
 
 struct demon_type

@@ -412,17 +412,17 @@ void half_chop(const char *string, char *arg1, char *arg2)
 
 char *chaldir(int dir)
 {
-	if (dir == DIR_NORTH)
+	if (dir == Directions::North)
 		return "the north";
-	else if (dir == DIR_SOUTH)
+	else if (dir == Directions::South)
 		return "the south";
-	else if (dir == DIR_WEST)
+	else if (dir == Directions::West)
 		return "the west";
-	else if (dir == DIR_EAST)
+	else if (dir == Directions::East)
 		return "the east";
-	else if (dir == DIR_UP)
+	else if (dir == Directions::Up)
 		return "above";
-	else if (dir == DIR_DOWN)
+	else if (dir == Directions::Down)
 		return "down";
 	else
 		return "null";

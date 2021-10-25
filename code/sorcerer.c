@@ -4975,27 +4975,27 @@ void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (!str_cmp(target_name, "n") || !str_cmp(target_name, "north"))
 	{
-		dir = DIR_NORTH;
+		dir = Directions::North;
 	}
 	else if (!str_cmp(target_name, "e") || !str_cmp(target_name, "east"))
 	{
-		dir = DIR_EAST;
+		dir = Directions::East;
 	}
 	else if (!str_cmp(target_name, "s") || !str_cmp(target_name, "south"))
 	{
-		dir = DIR_SOUTH;
+		dir = Directions::South;
 	}
 	else if (!str_cmp(target_name, "w") || !str_cmp(target_name, "west"))
 	{
-		dir = DIR_WEST;
+		dir = Directions::West;
 	}
 	else if (!str_cmp(target_name, "u") || !str_cmp(target_name, "up"))
 	{
-		dir = DIR_UP;
+		dir = Directions::Up;
 	}
 	else if (!str_cmp(target_name, "d") || !str_cmp(target_name, "down"))
 	{
-		dir = DIR_DOWN;
+		dir = Directions::Down;
 	}
 	else
 	{
