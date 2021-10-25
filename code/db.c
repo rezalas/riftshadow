@@ -2272,6 +2272,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 		case ITEM_BOOK:
 		case ITEM_PEN:
 		case ITEM_ALTAR:
+		case ITEM_STONE:
 		case ITEM_CAMPFIRE:
 			break;
 		case ITEM_SCROLL:
