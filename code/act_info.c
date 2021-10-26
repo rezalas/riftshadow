@@ -59,7 +59,7 @@ char *const where_name[] = {
 	"<cosmetic gear>     "
 };
 
-static char *const moon_look[MAX_MOON] = 
+static char *const moon_look[LunarCyclePosition::MaxLunarCycles] = 
 {
 	"new",
 	"crescent waxing",
@@ -1635,7 +1635,7 @@ bool show_altdesc(ROOM_INDEX_DATA *room)
 	if (!room->alt_description)
 		return false;
 
-	if (room->alt_description_cond == AD_COND_NIGHT && sun == SUN_DARK)
+	if (room->alt_description_cond == AD_COND_NIGHT && sun == SolarPosition::Dark)
 		return true;
 
 	return false;
@@ -1987,7 +1987,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (sun == SUN_LIGHT)
+		if (sun == SolarPosition::Daylight)
 		{
 			send_to_char("You cannot make out the moons during the day.\n\r", ch);
 			return;
@@ -2810,7 +2810,7 @@ void do_weather(CHAR_DATA *ch, char *argument)
 		wind_look[ch->in_room->area->wind]);
 	send_to_char(buf, ch);
 
-	if (sun != SUN_LIGHT)
+	if (sun != SolarPosition::Daylight)
 	{
 		if (ch->in_room->area->sky == WeatherCondition::Overcast || ch->in_room->area->sky >= WeatherCondition::Downpour)
 		{

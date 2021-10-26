@@ -161,18 +161,18 @@ void CMud::LoadTime()
 	time_info.season= ((time_info.month + 1) % 12) / 3;
 
 	if ( time_info.hour <  5 )
-		sun = SUN_DARK;
+		sun = SolarPosition::Dark;
 	else if ( time_info.hour <  6 )
-		sun = SUN_RISE;
+		sun = SolarPosition::Sunrise;
 	else if ( time_info.hour < 19 )
-		sun = SUN_LIGHT;
+		sun = SolarPosition::Daylight;
 	else if ( time_info.hour < 20 )
-		sun = SUN_SET;
+		sun = SolarPosition::Sunset;
 	else
-		sun = SUN_DARK;
+		sun = SolarPosition::Dark;
 
-	berus_pos = ((current_time-RS_EPOCH)%(BERUS_SPD*360))/BERUS_SPD;
-	calabren_pos = ((current_time-RS_EPOCH)%(CALABREN_SPD*360))/CALABREN_SPD;
+	berus_pos = ((current_time-RS_EPOCH)%(LunarSpeed::Berus*360))/LunarSpeed::Berus;
+	calabren_pos = ((current_time-RS_EPOCH)%(LunarSpeed::Calabren*360))/LunarSpeed::Calabren;
 }
 
 ///

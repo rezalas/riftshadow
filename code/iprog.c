@@ -1125,7 +1125,7 @@ bool give_prog_cabal_item(OBJ_DATA *obj, CHAR_DATA *from, CHAR_DATA *to)
 void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	AFFECT_DATA af;
-	EXIT_DATA *pexit = ch->in_room->exit[DIR_UP];
+	EXIT_DATA *pexit = ch->in_room->exit[Directions::Up];
 	CHAR_DATA *vch;
 
 	act("As you pick up $p, a booming voice can be heard.", ch, obj, 0, TO_CHAR);
@@ -1878,7 +1878,7 @@ void verb_prog_twist_two_faced(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("As you rotate the sundial, a trap door beneath the table slowly swings open!\n\r", ch);
 
-		pexit = ch->in_room->exit[DIR_DOWN];
+		pexit = ch->in_room->exit[Directions::Down];
 
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 		REMOVE_BIT(pexit->exit_info, EX_CLOSED);
@@ -2565,10 +2565,10 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	switch (room->vnum)
 	{
 		case 2277:
-			dir = DIR_DOWN;
+			dir = Directions::Down;
 			break;
 		case 22600:
-			dir = DIR_UP;
+			dir = Directions::Up;
 			break;
 		default:
 			act("You turn the wheel and it spins rapidly, seemingly unattached to anything.", ch, 0, 0, TO_CHAR);
@@ -3186,7 +3186,7 @@ void baby_burp(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 void verb_prog_pull_book(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	EXIT_DATA *pexit = ch->in_room->exit[DIR_DOWN];
+	EXIT_DATA *pexit = ch->in_room->exit[Directions::Down];
 	ROOM_AFFECT_DATA raf;
 
 	if (!IS_SET(pexit->exit_info, EX_CLOSED))
@@ -3218,7 +3218,7 @@ void verb_prog_pull_book(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 /* Fix0red by Morglum */
 void trapdoor_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
-	EXIT_DATA *pexit = room->exit[DIR_DOWN];
+	EXIT_DATA *pexit = room->exit[Directions::Down];
 	CHAR_DATA *ch, *ch_next;
 
 	SET_BIT(pexit->exit_info, EX_CLOSED);
@@ -3508,7 +3508,7 @@ void verb_prog_tie_rope(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void verb_prog_turn_wheel(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	EXIT_DATA *exit = obj->in_room->exit[DIR_DOWN];
+	EXIT_DATA *exit = obj->in_room->exit[Directions::Down];
 
 	if (!is_affected_obj(obj, gsn_trip))
 	{
@@ -3527,7 +3527,7 @@ void verb_prog_turn_wheel(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void rope_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 {
-	EXIT_DATA *exit = obj->in_room->exit[DIR_DOWN];
+	EXIT_DATA *exit = obj->in_room->exit[Directions::Down];
 	ROOM_INDEX_DATA *room = obj->in_room;
 
 	SET_BIT(exit->exit_info, EX_NONOBVIOUS);
@@ -3543,7 +3543,7 @@ void rope_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 void verb_prog_tilt_bust(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	EXIT_DATA *exit = ch->in_room->exit[DIR_SOUTH];
+	EXIT_DATA *exit = ch->in_room->exit[Directions::South];
 
 	if (!IS_SET(exit->exit_info, EX_CLOSED))
 	{
@@ -3563,7 +3563,7 @@ void verb_prog_tilt_bust(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void verb_prog_roll_tablet(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	EXIT_DATA *exit = ch->in_room->exit[DIR_EAST];
+	EXIT_DATA *exit = ch->in_room->exit[Directions::East];
 
 	if (ch->fighting != NULL)
 	{

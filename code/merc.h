@@ -469,31 +469,9 @@ struct buf_type
 
 
 
-//
-// Time and weather stuff.
-///
-
-#define SUN_DARK					0
-#define SUN_RISE					1
-#define SUN_LIGHT					2
-#define SUN_SET						3
-
-#define MOON_NEW					0
-#define MOON_CWAXING				1
-#define	MOON_HWAXING				2
-#define MOON_GWAXING				3
-#define MOON_FULL					4
-#define	MOON_GWANING				5
-#define	MOON_HWANING				6
-#define	MOON_CWANING				7
-#define MAX_MOON					8
-
-#define BERUS_SPD					90
-#define CALABREN_SPD				150
 
 #define RS_EPOCH					972370801
 
-#define NUM_SEASONS					4
 
 struct time_info_data
 {
@@ -2017,19 +1995,6 @@ struct kill_data
 #define ROOM_NO_MAGIC				(ASCII_cc)
 #define ROOM_AREA_EXPLORE			(ASCII_dd) // Don't use - Use area flags instead
 #define ROOM_NO_COMMUNE				(ASCII_ee)
-
-//
-// Directions.
-// Used in #ROOMS.
-//
-
-#define DIR_NORTH					0
-#define DIR_EAST					1
-#define DIR_SOUTH					2
-#define DIR_WEST					3
-#define DIR_UP						4
-#define DIR_DOWN					5
-
 
 //
 // Exit flags.

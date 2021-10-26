@@ -2714,7 +2714,7 @@ bool room_is_dark(ROOM_INDEX_DATA *pRoomIndex)
 	if (pRoomIndex->sector_type == SECT_INSIDE || pRoomIndex->sector_type == SECT_CITY)
 		return false;
 
-	if (sun == SUN_SET || sun == SUN_DARK)
+	if (sun == SolarPosition::Sunset || sun == SolarPosition::Dark)
 		return true;
 
 	return false;

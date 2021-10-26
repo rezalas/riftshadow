@@ -33,6 +33,7 @@
 
 #include "tables.h"
 #include "weather_enums.h"
+#include "room.h"
 
 //Steal the flag table, we're not storing bitvectors, but shhh, we like their functions!
 const struct flag_type aftype_table[] =
@@ -719,12 +720,12 @@ const struct flag_type room_flags[] =
 const struct flag_type direction_table [] =
 {
 	//	name		bit				settable
-	{	"north",	DIR_NORTH,		true	},
-	{	"east",		DIR_EAST,		true	},
-	{	"south",	DIR_SOUTH, 		true	},
-	{	"west",		DIR_WEST,		true	},
-	{	"up",		DIR_UP,			true	},
-	{	"down",		DIR_DOWN,		true	},
+	{	"north",	Directions::North,		true	},
+	{	"east",		Directions::East,		true	},
+	{	"south",	Directions::South, 		true	},
+	{	"west",		Directions::West,		true	},
+	{	"up",		Directions::Up,			true	},
+	{	"down",		Directions::Down,		true	},
 	{	NULL,		0,				true	}
 };
 

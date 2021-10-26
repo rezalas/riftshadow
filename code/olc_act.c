@@ -2726,7 +2726,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 
 bool redit_north(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_NORTH))
+	if (change_exit(ch, argument, Directions::North))
 		return true;
 
 	return false;
@@ -2734,7 +2734,7 @@ bool redit_north(CHAR_DATA *ch, char *argument)
 
 bool redit_south(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_SOUTH))
+	if (change_exit(ch, argument, Directions::South))
 		return true;
 
 	return false;
@@ -2742,7 +2742,7 @@ bool redit_south(CHAR_DATA *ch, char *argument)
 
 bool redit_east(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_EAST))
+	if (change_exit(ch, argument, Directions::East))
 		return true;
 
 	return false;
@@ -2750,7 +2750,7 @@ bool redit_east(CHAR_DATA *ch, char *argument)
 
 bool redit_west(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_WEST))
+	if (change_exit(ch, argument, Directions::West))
 		return true;
 
 	return false;
@@ -2758,7 +2758,7 @@ bool redit_west(CHAR_DATA *ch, char *argument)
 
 bool redit_up(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_UP))
+	if (change_exit(ch, argument, Directions::Up))
 		return true;
 
 	return false;
@@ -2766,7 +2766,7 @@ bool redit_up(CHAR_DATA *ch, char *argument)
 
 bool redit_down(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_DOWN))
+	if (change_exit(ch, argument, Directions::Down))
 		return true;
 
 	return false;

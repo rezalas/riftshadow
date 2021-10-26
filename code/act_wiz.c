@@ -7712,7 +7712,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 			if (j != 0)
 				fprintf(fp, ",");
 
-			for (k = 0; k < NUM_SEASONS; k++)
+			for (k = 0; k < Seasons::SeasonsCount; k++)
 			{
 				if (k != 0)
 					fprintf(fp, "|");
@@ -7728,7 +7728,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 			if (j != 0)
 				fprintf(fp, ",");
 
-			for (k = 0; k < NUM_SEASONS; k++)
+			for (k = 0; k < Seasons::SeasonsCount; k++)
 			{
 				if (k != 0)
 					fprintf(fp, "|");
