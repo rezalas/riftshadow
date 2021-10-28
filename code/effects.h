@@ -1,19 +1,6 @@
 #ifndef EFFECTS_H
 #define EFFECTS_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "handler.h"
-#include "recycle.h"
-#include "comm.h"
-#include "update.h"
-#include "db.h"
-#include "magic.h"
-#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

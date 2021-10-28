@@ -1,8 +1,43 @@
 /****************************************************************************
  *                        Welcome to Sorcerer land.                         *
  ****************************************************************************/
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
+#include <iterator>
+#include <algorithm>
 #include "sorcerer.h"
 #include "weather_enums.h"
+#include "act_info.h"
+#include "act_ente.h"
+#include "comm.h"
+#include "update.h"
+#include "room.h"
+#include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "interp.h"
+#include "tables.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "fight.h"
+#include "newmem.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "act_move.h"
+#include "act_obj.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "misc.h"
+#include "utility.h"
+#include "skills.h"
+#include "./include/fmt/format.h"
 
 int para_compute(int ele1, int ele2)
 {

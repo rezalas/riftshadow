@@ -31,7 +31,18 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "alias.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
 
 /* does aliasing and other fun stuff */
 void substitute_alias(DESCRIPTOR_DATA *d, char *argument)

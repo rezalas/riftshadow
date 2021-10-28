@@ -36,7 +36,46 @@
  *            of course for exclusive use by the Riftshadow MUD.           *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "fight.h"
+#include "handler.h"
+#include "interp.h"
+#include "tables.h"
+#include "magic.h"
+#include "recycle.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "warrior.h"
+#include "sorcerer.h"
+#include "devextra.h"
+#include "skills.h"
+#include "thief.h"
+#include "save.h"
+#include "paladin.h"
+#include "act_obj.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "dioextra.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "dioextra.h"
+#include "db.h"
+#include "misc.h"
+#include "ap.h"
+#include "iprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "lookup.h"
+#include "./include/fmt/format.h"
 
 /*
  * Control the fights going on.

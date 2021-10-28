@@ -34,40 +34,9 @@
 #ifndef MAGIC_H
 #define MAGIC_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include <algorithm>
 #include "merc.h"
-#include "necro.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-#include "act_obj.h"
-#include "act_ente.h"
-#include "act_comm.h"
-#include "warrior.h"
-#include "dioextra.h"
-#include "sorcerer.h"
-#include "act_move.h"
-#include "fight.h"
-#include "act_info.h"
-#include "newmem.h"
-#include "handler.h"
-#include "effects.h"
-#include "comm.h"
-#include "interp.h"
-#include "skill.h"
-#include "devextra.h"
-#include "db.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
+
+extern char *target_name;
 
 //
 // TODO: UNKNOWN FUNCTIONS

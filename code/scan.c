@@ -1,8 +1,21 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "scan.h"
+#include "handler.h"
+#include "act_info.h"
+#include "zealot.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
+#include "weather_enums.h"
+#include "act_move.h"
 
 void do_scan(CHAR_DATA *ch, char *argument)
 {
-	extern char *const dir_name[];
 	char arg1[MAX_INPUT_LENGTH], buf[MAX_INPUT_LENGTH];
 	ROOM_INDEX_DATA *scan_room;
 	OBJ_AFFECT_DATA *af;
@@ -170,7 +183,6 @@ void do_scan(CHAR_DATA *ch, char *argument)
 void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int door)
 {
 	CHAR_DATA *rch;
-	extern char *const dir_name[];
 	char *const distance[7] =
 	{
 		" **** 1 %s **** ",
@@ -181,8 +193,6 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 		" **** 6 %s **** ",
 		" **** 7 %s **** "
 	};
-
-	//   extern char *const distance[];
 
 	char buf[MAX_INPUT_LENGTH], buf2[MAX_INPUT_LENGTH];
 

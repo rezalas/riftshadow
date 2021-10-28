@@ -31,7 +31,20 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <algorithm>
 #include "heal.h"
+#include "magic.h"
+#include "devextra.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "interp.h"
+#include "utility.h"
+#include "db.h"
 
 float get_mod_cost(CHAR_DATA *ch, int cost)
 {

@@ -31,8 +31,45 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iterator>
+#include <algorithm>
 #include "update.h"
 #include "weather_enums.h"
+#include "room.h"
+#include "newmem.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "tables.h"
+#include "recycle.h"
+#include "update.h"
+#include "spec.h"
+#include "lookup.h"
+#include "chrono.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "thief.h"
+#include "save.h"
+#include "misc.h"
+#include "act_obj.h"
+#include "fight.h"
+#include "skills.h"
+#include "dioextra.h"
+#include "olc.h"
+#include "db.h"
+#include "devextra.h"
+#include "act_comm.h"
+#include "comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "titles.h"
+#include "utility.h"
+#include "magic.h"
 
 int save_number = 0;
 
@@ -887,7 +924,6 @@ void time_update(void)
 void gold_update(void)
 {
 	CHAR_DATA *mob;
-	extern long total_wealth;
 	long mob_gold;
 	long gold;
 

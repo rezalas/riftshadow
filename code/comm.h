@@ -1,13 +1,7 @@
 #ifndef COMM_H
 #define COMM_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <ctype.h>
 #include <errno.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <time.h>
 #include <signal.h>
 #include <fcntl.h>
@@ -25,39 +19,8 @@
 	#include <sys/socket.h>
 #endif
 
-#include <algorithm>
 #include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "olc.h"
-#include "interp.h"
-#include "act_comm.h"
-#include "act_info.h"
-#include "save.h"
-#include "dioextra.h"
-#include "mspec.h"
-#include "newmem.h"
-#include "handler.h"
-#include "sorcerer.h"
-#include "act_wiz.h"
-#include "alias.h"
-#include "ban.h"
-#include "update.h"
-#include "fight.h"
-#include "skills.h"
-#include "db.h"
-#include "devextra.h"
-#include "magic.h"
-#include "handler.h"
-#include "misc.h"
 #include "telnet.h"
-#include "string.h"
-#include "chardef.h"
-#include "const.h"
-#include "titles.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
 
 #define CHAR_WRAP			85
 
@@ -102,6 +65,19 @@
 #elif __linux__
 	int	socket (int domain, int type, int protocol);
 #endif
+
+extern DESCRIPTOR_DATA *descriptor_list;
+extern FILE *fpReserve;
+extern bool merc_down;
+extern bool rebooting;
+extern int reboot_num;
+extern bool wizlock;
+extern bool newlock;
+extern bool MOBtrigger;
+extern char str_boot_time[MAX_INPUT_LENGTH];
+extern time_t current_time;
+extern int mPort;
+extern bool bDebug;
 
 // Telnet commands
 

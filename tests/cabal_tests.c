@@ -1,6 +1,10 @@
 #include "catch.hpp"
 #include "../code/merc.h"
 #include "../code/cabal.h"
+#include "../code/lookup.h"
+#include "../code/magic.h"
+#include "../code/tables.h"
+#include "../code/db.h"
 
 char_data* TestHelperCreatePlayer(char *name = "player 1")
 {

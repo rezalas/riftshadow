@@ -6,10 +6,8 @@
 #include "merc.h"
 #include "mud.h"
 #include "comm.h"
-
-extern char str_boot_time[MAX_INPUT_LENGTH];
-extern FILE *fpReserve;
-extern CMud RS;
+#include "interp.h"
+#include "db.h"
 
 int main(int argc, char **argv)
 {

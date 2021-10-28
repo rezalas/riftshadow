@@ -1,7 +1,36 @@
 /****************************************************************************/
 /* Welcome to Warrior land.                                                 */
 /****************************************************************************/
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
+#include <iterator>
 #include "warrior.h"
+#include "sorcerer.h"
+#include "act_comm.h"
+#include "comm.h"
+#include "devextra.h"
+#include "update.h"
+#include "act_move.h"
+#include "handler.h"
+#include "fight.h"
+#include "magic.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "skills.h"
+#include "newmem.h"
+#include "interp.h"
+#include "act_info.h"
+#include "act_obj.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
 
 int style_lookup(char *argument)
 {

@@ -31,7 +31,19 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "flags.h"
+#include "handler.h"
+#include "tables.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "lookup.h"
+#include "utility.h"
 
 void do_flag(CHAR_DATA *ch, char *argument)
 {

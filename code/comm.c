@@ -49,7 +49,47 @@
  * -- Furey  26 Jan 1993
  */
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <algorithm>
 #include "comm.h"
+#include "recycle.h"
+#include "tables.h"
+#include "olc.h"
+#include "interp.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "save.h"
+#include "dioextra.h"
+#include "mspec.h"
+#include "newmem.h"
+#include "handler.h"
+#include "sorcerer.h"
+#include "act_wiz.h"
+#include "alias.h"
+#include "ban.h"
+#include "update.h"
+#include "fight.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "handler.h"
+#include "misc.h"
+#include "string.h"
+#include "chardef.h"
+#include "const.h"
+#include "titles.h"
+#include "utility.h"
+#include "note.h"
+#include "help.h"
+#include "lookup.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 /*
  * Global variables.
@@ -507,7 +547,6 @@ void init_descriptor(int control)
 	 * Send the greeting.
 	 */
 	{
-		extern char *help_greeting;
 		if (help_greeting[0] == '.')
 			write_to_buffer(dnew, help_greeting + 1, 0);
 		else
@@ -753,8 +792,6 @@ const char *get_battle_condition(CHAR_DATA *victim, int percent)
  */
 bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 {
-	extern bool merc_down;
-
 	/*
 	 * Bust a prompt.
 	 */
@@ -2861,7 +2898,6 @@ bool check_parse_name(char *name)
 	 * Prevent players from naming themselves after mobs.
 	 */
 	{
-		extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
 		MOB_INDEX_DATA *pMobIndex;
 		int iHash;
 

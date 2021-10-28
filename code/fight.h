@@ -1,51 +1,12 @@
 #ifndef FIGHT_H
 #define FIGHT_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "interp.h"
-#include "tables.h"
-#include "magic.h"
-#include "recycle.h"
-#include "spec.h"
-#include "act_comm.h"
-#include "act_move.h"
-#include "warrior.h"
-#include "devextra.h"
-#include "skills.h"
-#include "thief.h"
-#include "save.h"
-#include "paladin.h"
-#include "act_obj.h"
-#include "act_info.h"
-#include "newmem.h"
-#include "dioextra.h"
-#include "comm.h"
-#include "act_wiz.h"
-#include "update.h"
-#include "dioextra.h"
-#include "db.h"
-#include "misc.h"
-#include "ap.h"
-#include "iprog.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
 
 #define HITS 					(dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8
 #define BASE_PEER_FACTOR		1.75
 #define SUMMONED_XP_PENALTY		0.55
-
-extern char *const dir_name[];
 
 //
 // TODO: UNKNOWN FUNCTIONS

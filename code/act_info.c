@@ -31,8 +31,55 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <time.h>
+
+#ifdef _WIN32
+	#include <windows.h>
+	#include <wincrypt.h>
+#else
+	#include <crypt.h>
+#endif
+
 #include "act_info.h"
 #include "weather_enums.h"
+#include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "interp.h"
+#include "db.h"
+#include "db2.h"
+#include "zealot.h"
+#include "help.h"
+#include "misc.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "skills.h"
+#include "save.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
+
+#define DEBUG_LOG_FILE	"debug.txt"
+#define GOD_LOG_FILE	"glog.txt"
 
 char *const where_name[] = {
 	"<used as light>     ",
@@ -2277,8 +2324,6 @@ void do_read(CHAR_DATA *ch, char *argument)
  */
 void do_exits(CHAR_DATA *ch, char *argument)
 {
-	extern char *const dir_name[];
-
 	if (!check_blind(ch))
 		return;
 
@@ -2751,7 +2796,6 @@ void do_affects(CHAR_DATA *ch, char *argument)
 
 void do_time(CHAR_DATA *ch, char *argument)
 {
-	extern char str_boot_time[];
 	char buf[MAX_STRING_LENGTH];
 	char *suf;
 

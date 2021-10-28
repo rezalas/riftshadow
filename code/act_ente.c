@@ -31,7 +31,20 @@
  *       found in the file /Tartarus/doc/tartarus.doc                       *
  ****************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "act_ente.h"
+#include "handler.h"
+#include "magic.h"
+#include "comm.h"
+#include "db.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "utility.h"
+#include "magic.h"
 
 /* random room generation procedure */
 ROOM_INDEX_DATA *get_random_room(CHAR_DATA *ch)

@@ -11,6 +11,12 @@
 #include "db.h"
 #include "lookup.h"
 #include "tables.h"
+#include "comm.h"
+#include "devextra.h"
+#include "interp.h"
+#include "update.h"
+#include "newmem.h"
+#include "act_info.h"
 
 // #include <string>
 // #include "./include/fmt/core.h"

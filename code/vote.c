@@ -1,4 +1,15 @@
 #include "vote.h"
+#include "db.h"
+#include "comm.h"
+#include "lookup.h"
+#include "interp.h"
+#include "devextra.h"
+#include "newmem.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
+
+#define VOTE_FILE RIFT_AREA_DIR "/votes.txt"
 
 BALLOT_DATA *ballot_first;
 VOTE_DATA *vote_first;

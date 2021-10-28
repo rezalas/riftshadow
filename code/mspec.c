@@ -1,4 +1,24 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "mspec.h"
+#include "handler.h"
+#include "spec.h"
+#include "tables.h"
+#include "mprog.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "devextra.h"
+#include "utility.h"
+#include "room.h"
 
 BEGIN_MSPECS
 	DEF_SPEC(mspec_academy_smith, TRAP_MGREET | TRAP_MGIVE | TRAP_MSPEECH) /* smith quest */

@@ -1,4 +1,19 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
 #include "druid.h"
+#include "handler.h"
+#include "interp.h"
+#include "tables.h"
+#include "recycle.h"
+#include "magic.h"
+#include "db.h"
+#include "lookup.h"
+#include "comm.h"
+#include "devextra.h"
 
 /*
 void spell_imbue_stone(int sn, int level, CHAR_DATA *ch, void *vo, int target)

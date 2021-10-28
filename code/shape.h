@@ -15,6 +15,7 @@
 #define FORM_DEFENSE		2
 #define FORM_UTILITY		3
 
+// TODO: FIND OUT WHERE THIS IS IMPLEMENTED
 extern const struct form_type form_table[MAX_FORM];
 
 struct form_type

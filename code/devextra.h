@@ -1,34 +1,9 @@
 #ifndef DEVEXTRA_H
 #define DEVEXTRA_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include <mysql.h>
-#include <algorithm>
-#include <iterator>
 #include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "time.h"
-#include "interp.h"
-#include "help.h"
-#include "save.h"
-#include "cabal.h"
-#include "magic.h"
-#include "act_info.h"
-#include "config.h"
-#include "olc_act.h"
-#include "bit.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
+#include "handler.h"
 
 #define LOGIN_LOG_FILE			"logins.txt"
 #define BOUNTY_LOG_FILE			"bounties.txt"

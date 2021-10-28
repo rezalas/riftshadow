@@ -2,33 +2,13 @@
 #define NOTE_H
 
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <ctype.h>
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <mysql.h>
 #include "merc.h"
-#include "handler.h"
-#include "recycle.h"
-#include "tables.h"
-#include "newmem.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "utility.h"
 
 //#include "prof.h"
 extern void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis);
 extern bool is_affected_prof(CHAR_DATA *ch, char *prof);
 
-
-/* globals from db.c for load_notes */
-extern int _filbuf (FILE *);
-extern FILE * fpArea;
-extern char strArea[MAX_INPUT_LENGTH];
 
 //
 // LOCAL FUNCTIONS

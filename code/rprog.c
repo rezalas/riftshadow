@@ -1,6 +1,25 @@
 /* IMPROGS Expansion: ROOM PROGS (Eladrian) */
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "rprog.h"
+#include "quest.h"
+#include "comm.h"
+#include "fight.h"
+#include "newmem.h"
+#include "magic.h"
+#include "interp.h"
+#include "recycle.h"
+#include "tables.h"
+#include "room.h"
+#include "rift.h"
+#include "db.h"
+#include "devextra.h"
+#include "utility.h"
+#include "act_move.h"
 
 const struct improg_type rprog_table[] =
 {

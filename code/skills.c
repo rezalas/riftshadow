@@ -31,7 +31,26 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <algorithm>
 #include "skills.h"
+#include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "tables.h"
+#include "update.h"
+#include "devextra.h"
+#include "act_comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "db.h"
+#include "comm.h"
+#include "interp.h"
 
 /* used to get new skills */
 void do_gain(CHAR_DATA *ch, char *argument)

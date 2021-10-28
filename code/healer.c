@@ -1,4 +1,21 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
 #include "healer.h"
+#include "handler.h"
+#include "interp.h"
+#include "tables.h"
+#include "recycle.h"
+#include "magic.h"
+#include "db.h"
+#include "lookup.h"
+#include "comm.h"
+#include "devextra.h"
+#include "const.h"
+#include "utility.h"
 
 void spell_healing_sleep(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

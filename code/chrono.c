@@ -1,4 +1,24 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
 #include "chrono.h"
+#include "magic.h"
+#include "comm.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "newmem.h"
+#include "const.h"
+#include "utility.h"
+#include "skills.h"
+#include "devextra.h"
+#include "fight.h"
+#include "interp.h"
+#include "update.h"
 
 void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

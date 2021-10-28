@@ -31,7 +31,35 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "tables.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_obj.h"
+#include "act_wiz.h"
+#include "warrior.h"
+#include "fight.h"
+#include "skill.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "misc.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "sorcerer.h"
+#include "skills.h"
 
 /* friend stuff -- for NPC's mostly */
 bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -2237,7 +2265,6 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 	ROOM_INDEX_DATA *room;
 	ROOM_AFFECT_DATA *raf;
 	AFFECT_DATA *af;
-	extern long total_wealth;
 
 	if (ch->in_room == NULL)
 	{

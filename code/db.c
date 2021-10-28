@@ -31,12 +31,40 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
-#include <cstddef>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/time.h>
+#include <iterator>
+#include <algorithm>
 #include "db.h"
+#include "db2.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "tables.h"
+#include "update.h"
+#include "interp.h"
+#include "olc.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "devextra.h"
+#include "magic.h"
+#include "handler.h"
+#include "misc.h"
+#include "dioextra.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 /* LOAD CABAL ITEMS */
-extern int mPort;
-
 char *top_bounty_name[MAX_TOP_BOUNTY];
 long top_bounty_value[MAX_TOP_BOUNTY];
 /*

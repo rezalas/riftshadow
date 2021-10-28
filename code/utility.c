@@ -1,4 +1,7 @@
 #include "utility.h"
+#include "db.h"
+#include "chardef.h"
+#include "handler.h"
 
 /// Checks if the given character is a cabal guard.
 /// @param ch: The character to check for guard status.

@@ -31,7 +31,24 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <mysql.h>
 #include "note.h"
+#include "devextra.h"
+#include "handler.h"
+#include "recycle.h"
+#include "tables.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
 
 int count_spool(CHAR_DATA *ch, int type)
 {

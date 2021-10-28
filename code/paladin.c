@@ -1,4 +1,27 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
 #include "paladin.h"
+#include "interp.h"
+#include "tables.h"
+#include "recycle.h"
+#include "magic.h"
+#include "db.h"
+#include "lookup.h"
+#include "warrior.h"
+#include "fight.h"
+#include "skills.h"
+#include "const.h"
+#include "misc.h"
+#include "comm.h"
+#include "devextra.h"
+#include "utility.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "newmem.h"
 
 void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

@@ -1,25 +1,8 @@
 #ifndef MSPEC_H
 #define MSPEC_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
 #include "spec.h"
-#include "tables.h"
-#include "mprog.h"
-#include "act_comm.h"
-#include "act_move.h"
-#include "fight.h"
-#include "newmem.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "devextra.h"
 
 extern va_list arglist;
 

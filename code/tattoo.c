@@ -31,7 +31,20 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "tattoo.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
+#include "handler.h"
 
 void do_brands(CHAR_DATA *ch, char *argument)
 {

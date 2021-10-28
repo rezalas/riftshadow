@@ -1,19 +1,7 @@
 #ifndef ZEALOT_H
 #define ZEALOT_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
 #include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
 
 //
 // LOCAL FUNCTIONS

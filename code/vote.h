@@ -2,12 +2,6 @@
 #define VOTE_H
 
 #include "merc.h"
-#include "devextra.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
-
-#define VOTE_FILE RIFT_AREA_DIR "/votes.txt"
 
 typedef struct ballot_data BALLOT_DATA;
 typedef struct vote_data VOTE_DATA;

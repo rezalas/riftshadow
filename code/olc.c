@@ -11,9 +11,32 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "olc.h"
+#ifdef macintosh
+#include <types.h>
+#else
+#include <sys/types.h>
+#endif
 
-extern int mPort;
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include "olc.h"
+#include "handler.h"
+#include "tables.h"
+#include "mem.h"
+#include "olc_act.h"
+#include "lookup.h"
+#include "bit.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "act_comm.h"
+#include "help.h"
+#include "magic.h"
+#include "act_move.h"
+#include "act_wiz.h"
 
 /*****************************************************************************
  *                           Interpreter Tables.                             *

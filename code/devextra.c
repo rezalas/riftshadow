@@ -1,7 +1,43 @@
 /****************************************************************************
  * Dev's happy place.                                                       *
  ****************************************************************************/
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
+#include <iterator>
 #include "devextra.h"
+#include "magic.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "time.h"
+#include "interp.h"
+#include "help.h"
+#include "save.h"
+#include "cabal.h"
+#include "magic.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "act_obj.h"
+#include "act_wiz.h"
+#include "config.h"
+#include "olc_act.h"
+#include "bit.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "sorcerer.h"
+#include "comm.h"
+#include "newmem.h"
+#include "fight.h"
+#include "skills.h"
+#include "update.h"
+#include "./include/fmt/format.h"
 
 bool IS_IMP(CHAR_DATA *ch)
 {
