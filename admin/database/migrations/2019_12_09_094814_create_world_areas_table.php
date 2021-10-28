@@ -14,7 +14,7 @@ class CreateWorldAreasTable extends Migration
 	public function up()
 	{
 		Schema::database('rift_core')->create('world_areas', function (Blueprint $table) {
-			$table->bigInteger('id')->default(0);
+			$table->integer('id')->default(0);
 			$table->string('name', 50);
 			$table->string('credits', 50);
 			$table->integer('low_range')->default(0);

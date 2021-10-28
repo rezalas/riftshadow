@@ -15,6 +15,7 @@ class SeedWorldAreasTable extends Seeder
 			->table('world_areas')
 			->insert([
 				[
+					'id' => 0,
 					'name' => 'Limbo',
 					'credits' => 'Rift',
 					'low_range' => 52,
@@ -26,6 +27,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 1,
 					'name' => 'Test Shrine',
 					'credits' => 'None',
 					'low_range' => 1,
@@ -37,6 +39,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 2,
 					'name' => 'Eluviel\'s Shrine',
 					'credits' => 'Eluviel',
 					'low_range' => 1,
@@ -48,6 +51,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 3,
 					'name' => 'Zethus\'s Palace',
 					'credits' => 'Zethus',
 					'low_range' => 1,
@@ -59,6 +63,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 4,
 					'name' => 'The Shrine of Morglum',
 					'credits' => 'Morglum',
 					'low_range' => 1,
@@ -70,6 +75,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 5,
 					'name' => 'The Shrine of Waekath',
 					'credits' => 'Waekath',
 					'low_range' => 1,
@@ -81,6 +87,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 6,
 					'name' => 'The Shrine of Tiernus',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -92,6 +99,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 7,
 					'name' => 'The Shrine of Seikilos',
 					'credits' => 'Seikilos',
 					'low_range' => 1,
@@ -103,6 +111,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 8,
 					'name' => 'Mount Cim',
 					'credits' => 'Zethus',
 					'low_range' => 20,
@@ -114,6 +123,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 9,
 					'name' => 'Plains',
 					'credits' => 'Copper',
 					'low_range' => 1,
@@ -125,6 +135,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 10,
 					'name' => 'The Antava Marsh',
 					'credits' => 'Sekh',
 					'low_range' => 15,
@@ -136,6 +147,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 13,
 					'name' => 'Old Southern Road',
 					'credits' => 'Karsus',
 					'low_range' => 1,
@@ -147,6 +159,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 13,
 					'name' => 'Old Southern Road',
 					'credits' => 'Karsus',
 					'low_range' => 1,
@@ -158,6 +171,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 13,
 					'name' => 'Old Southern Road',
 					'credits' => 'Karsus',
 					'low_range' => 1,
@@ -169,6 +183,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 14,
 					'name' => 'Valley of Gehir',
 					'credits' => 'Jathruk',
 					'low_range' => 10,
@@ -180,6 +195,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 15,
 					'name' => 'Melcene',
 					'credits' => 'Eluviel/Zethus',
 					'low_range' => 1,
@@ -191,6 +207,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 16,
 					'name' => 'Caelumaedan',
 					'credits' => 'ROM',
 					'low_range' => 51,
@@ -202,6 +219,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 17,
 					'name' => 'High Tower',
 					'credits' => 'Skylar',
 					'low_range' => 10,
@@ -213,6 +231,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 18,
 					'name' => 'Estates of Adrianna',
 					'credits' => 'Karsus',
 					'low_range' => 10,
@@ -224,6 +243,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 19,
 					'name' => 'Tahluir\'rethan',
 					'credits' => 'Eluviel',
 					'low_range' => 45,
@@ -235,6 +255,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 1,
 				],
 				[
+					'id' => 20,
 					'name' => 'Forest of Sarloth',
 					'credits' => 'Eluviel',
 					'low_range' => 1,
@@ -246,6 +267,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 21,
 					'name' => 'Temple of Cetan\'Det',
 					'credits' => 'Kolaius',
 					'low_range' => 1,
@@ -257,6 +279,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 22,
 					'name' => 'Catacombs',
 					'credits' => 'Raff',
 					'low_range' => 10,
@@ -268,6 +291,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 23,
 					'name' => 'Dawnview Monastery',
 					'credits' => 'Karsus',
 					'low_range' => 25,
@@ -279,6 +303,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 24,
 					'name' => 'Sewers of Cimar',
 					'credits' => 'Karsus',
 					'low_range' => 20,
@@ -290,6 +315,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 25,
 					'name' => 'Cimar',
 					'credits' => 'Seikilos',
 					'low_range' => 1,
@@ -301,6 +327,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 26,
 					'name' => 'Nightwalker Caves',
 					'credits' => 'Karsus',
 					'low_range' => 20,
@@ -312,6 +339,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 27,
 					'name' => 'The Skills File',
 					'credits' => 'Riftshadow',
 					'low_range' => 1,
@@ -323,6 +351,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 28,
 					'name' => 'Rodit\'s Area',
 					'credits' => 'Rodit',
 					'low_range' => 1,
@@ -334,6 +363,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 29,
 					'name' => 'Chasm Tower',
 					'credits' => 'Gatog',
 					'low_range' => 20,
@@ -345,6 +375,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 30,
 					'name' => 'Cim Caverns',
 					'credits' => 'Waekath',
 					'low_range' => 10,
@@ -356,6 +387,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 31,
 					'name' => 'The Ur\'Tazi Caves',
 					'credits' => 'Rudem',
 					'low_range' => 30,
@@ -367,6 +399,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 32,
 					'name' => 'The Tombs of Carantoc',
 					'credits' => 'Zethus',
 					'low_range' => 1,
@@ -378,6 +411,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 33,
 					'name' => 'The Great Shalaran Road',
 					'credits' => 'Riftshadow',
 					'low_range' => 1,
@@ -389,6 +423,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 34,
 					'name' => 'The Jungles of Tieran Loch',
 					'credits' => 'Metaphiusen',
 					'low_range' => 20,
@@ -400,6 +435,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 35,
 					'name' => 'Iseldheim',
 					'credits' => 'Zethus',
 					'low_range' => 1,
@@ -411,6 +447,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 36,
 					'name' => 'The Forgotten Tower',
 					'credits' => 'Metaphiusen',
 					'low_range' => 40,
@@ -422,6 +459,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 37,
 					'name' => 'Ruins of Malkeran',
 					'credits' => 'Karsus',
 					'low_range' => 0,
@@ -433,6 +471,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 38,
 					'name' => 'Sidhe Village',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -444,6 +483,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 39,
 					'name' => 'Forgotten Hills',
 					'credits' => 'Rhuann',
 					'low_range' => 10,
@@ -455,6 +495,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 40,
 					'name' => 'The Fallen Keep',
 					'credits' => 'Rendsin',
 					'low_range' => 20,
@@ -466,6 +507,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 41,
 					'name' => 'The Elven Stronghold',
 					'credits' => 'Wispen',
 					'low_range' => 20,
@@ -477,6 +519,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 14,
 				],
 				[
+					'id' => 42,
 					'name' => 'The Tribal Grounds',
 					'credits' => 'Tymari',
 					'low_range' => 10,
@@ -488,6 +531,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 43,
 					'name' => 'Thalos',
 					'credits' => 'Drkside',
 					'low_range' => 10,
@@ -499,6 +543,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 44,
 					'name' => 'Haon Dor',
 					'credits' => 'Diku',
 					'low_range' => 5,
@@ -510,6 +555,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 45,
 					'name' => 'Mausoleum',
 					'credits' => 'Khargqw',
 					'low_range' => 25,
@@ -521,6 +567,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 1,
 				],
 				[
+					'id' => 46,
 					'name' => 'Sewers',
 					'credits' => 'Diku',
 					'low_range' => 5,
@@ -532,6 +579,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 47,
 					'name' => 'Floating Continent',
 					'credits' => 'Zethus',
 					'low_range' => 40,
@@ -543,6 +591,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 48,
 					'name' => 'The Sky Palace',
 					'credits' => 'zethus',
 					'low_range' => 47,
@@ -554,6 +603,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 49,
 					'name' => 'Valley of the Elves',
 					'credits' => 'Hatchet',
 					'low_range' => 5,
@@ -565,6 +615,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 50,
 					'name' => 'Valley of Ilopheth',
 					'credits' => 'Tiernus',
 					'low_range' => 8,
@@ -576,6 +627,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 51,
 					'name' => 'Elemental Canyon',
 					'credits' => 'Raff',
 					'low_range' => 5,
@@ -587,6 +639,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 52,
 					'name' => 'Sanihar il Dur',
 					'credits' => 'Vornak',
 					'low_range' => 30,
@@ -598,6 +651,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 53,
 					'name' => 'Gannyte Shoals',
 					'credits' => 'Trevelyan',
 					'low_range' => 1,
@@ -609,6 +663,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 54,
 					'name' => 'The Dragon Tower',
 					'credits' => 'Barsak',
 					'low_range' => 35,
@@ -620,6 +675,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 55,
 					'name' => 'Udgaard',
 					'credits' => 'Pet/Aeo',
 					'low_range' => 20,
@@ -631,6 +687,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 56,
 					'name' => 'Koteras Village',
 					'credits' => 'Metaphiusen',
 					'low_range' => 1,
@@ -642,6 +699,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 57,
 					'name' => 'The Valley Cantrevs',
 					'credits' => 'Metaphiusen',
 					'low_range' => 1,
@@ -653,6 +711,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 58,
 					'name' => 'Duergar Mines',
 					'credits' => 'Berand',
 					'low_range' => 45,
@@ -664,6 +723,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 59,
 					'name' => 'Rivenrock Canyon',
 					'credits' => 'Kyriss',
 					'low_range' => 5,
@@ -675,6 +735,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 60,
 					'name' => 'The Dale',
 					'credits' => 'Ceran',
 					'low_range' => 1,
@@ -686,6 +747,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 61,
 					'name' => 'Ruins of Drannor',
 					'credits' => 'Ceran',
 					'low_range' => 30,
@@ -697,6 +759,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 62,
 					'name' => 'Rakshasa Tower',
 					'credits' => 'Ceran',
 					'low_range' => 30,
@@ -708,6 +771,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 63,
 					'name' => 'Beholder Corps',
 					'credits' => 'Ceran',
 					'low_range' => 30,
@@ -719,6 +783,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 64,
 					'name' => 'The Crimson Sea',
 					'credits' => 'Sheil',
 					'low_range' => 1,
@@ -730,6 +795,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 65,
 					'name' => 'The Naiadian Sea',
 					'credits' => 'Kyriss',
 					'low_range' => 20,
@@ -741,6 +807,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 66,
 					'name' => 'The Glimmering Forest',
 					'credits' => 'Karsus',
 					'low_range' => 0,
@@ -752,6 +819,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 67,
 					'name' => 'The Obsidian Order',
 					'credits' => 'Barsak',
 					'low_range' => 25,
@@ -763,6 +831,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 68,
 					'name' => 'Gehir Keep',
 					'credits' => 'Jathruk',
 					'low_range' => 0,
@@ -774,6 +843,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 69,
 					'name' => 'The Barren Hollows',
 					'credits' => 'Zethus',
 					'low_range' => 0,
@@ -785,6 +855,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 70,
 					'name' => 'Emerald Forest',
 					'credits' => 'FeaR',
 					'low_range' => 15,
@@ -796,6 +867,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 71,
 					'name' => 'Ruins of the Deep',
 					'credits' => 'Teiphicker',
 					'low_range' => 45,
@@ -807,6 +879,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 72,
 					'name' => 'Naiadia',
 					'credits' => 'Kyriss',
 					'low_range' => 1,
@@ -818,6 +891,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 73,
 					'name' => 'Dagdan',
 					'credits' => 'Macheath',
 					'low_range' => 1,
@@ -829,6 +903,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 74,
 					'name' => 'Aran\'gird',
 					'credits' => 'Berand',
 					'low_range' => 45,
@@ -840,6 +915,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 75,
 					'name' => 'Varggin Shih',
 					'credits' => 'Barsak',
 					'low_range' => 40,
@@ -851,6 +927,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 76,
 					'name' => 'Forest of Myth Drannor',
 					'credits' => 'Ceran',
 					'low_range' => 20,
@@ -862,6 +939,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 77,
 					'name' => 'Caverns of Thargeld',
 					'credits' => 'Karsus',
 					'low_range' => 35,
@@ -873,6 +951,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 78,
 					'name' => 'The Red Tower',
 					'credits' => 'Ceran',
 					'low_range' => 35,
@@ -884,6 +963,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 79,
 					'name' => 'The Blue Tower',
 					'credits' => 'Ceran',
 					'low_range' => 35,
@@ -895,6 +975,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 80,
 					'name' => 'The Green Tower',
 					'credits' => 'Ceran',
 					'low_range' => 35,
@@ -906,6 +987,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 81,
 					'name' => 'Bounty Cabal',
 					'credits' => 'Jathruk/Tiernus',
 					'low_range' => 1,
@@ -917,6 +999,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 82,
 					'name' => 'The Horde Longhouse',
 					'credits' => 'Ktyvan',
 					'low_range' => 1,
@@ -928,6 +1011,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 83,
 					'name' => 'The Scion Enclave',
 					'credits' => 'Zethus',
 					'low_range' => 1,
@@ -939,6 +1023,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 84,
 					'name' => 'The Common Guild',
 					'credits' => 'Waekath',
 					'low_range' => 1,
@@ -950,6 +1035,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 85,
 					'name' => 'The Regal Theatre',
 					'credits' => 'Eluviel',
 					'low_range' => 1,
@@ -961,6 +1047,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 86,
 					'name' => 'The Glass Tower',
 					'credits' => 'Zethus',
 					'low_range' => 1,
@@ -972,6 +1059,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 87,
 					'name' => 'The Sun Temple',
 					'credits' => 'None',
 					'low_range' => 0,
@@ -983,6 +1071,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 88,
 					'name' => 'Dead Forest',
 					'credits' => 'Ceran',
 					'low_range' => 10,
@@ -994,6 +1083,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 89,
 					'name' => 'Dying Forest',
 					'credits' => 'Ceran',
 					'low_range' => 25,
@@ -1005,6 +1095,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 90,
 					'name' => 'Koteras-Udgaard Road',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -1016,6 +1107,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 91,
 					'name' => 'Melcene-Udgaard Road',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -1027,6 +1119,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 92,
 					'name' => 'Melcene-Plains Road',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -1038,6 +1131,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 93,
 					'name' => 'Melcene-Cimar Road',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -1049,6 +1143,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 94,
 					'name' => 'Iseldheim-Dale Road',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -1060,6 +1155,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 95,
 					'name' => 'Iseldheim-Varggin Shih Road',
 					'credits' => 'Tiernus',
 					'low_range' => 1,
@@ -1071,6 +1167,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 96,
 					'name' => 'The Shalaran Academy',
 					'credits' => 'Seikilos',
 					'low_range' => 1,
@@ -1082,6 +1179,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 97,
 					'name' => 'Kobold Mines',
 					'credits' => 'Skrije',
 					'low_range' => 10,
@@ -1093,6 +1191,7 @@ class SeedWorldAreasTable extends Seeder
 					'flags' => 0,
 				],
 				[
+					'id' => 98,
 					'name' => 'Brynn Mahar',
 					'credits' => 'Amadioru',
 					'low_range' => 30,
