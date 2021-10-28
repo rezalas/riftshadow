@@ -3,6 +3,16 @@
 
 #define MAX_EXIT 		6
 #define MAX_TRACKS 		4
+
+enum Directions {
+	North = 0,
+	East = 1,
+	South = 2,
+	West = 3,
+	Up = 4,
+	Down = 5
+};
+
 class CRoom
 {
 friend class CArea;

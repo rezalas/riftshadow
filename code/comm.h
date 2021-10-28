@@ -56,6 +56,8 @@
 #include "const.h"
 #include "titles.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 #define CHAR_WRAP			85
 

@@ -888,7 +888,6 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 {
 	char strsave[MAX_INPUT_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	CHAR_DATA *ch;
 	FILE *fp;
 	bool found;
@@ -1004,8 +1003,12 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 	if ((fp = fopen(strsave, "r")) != NULL)
 	{
 		fclose(fp);
-		sprintf(buf, "gzip -dfq %s", strsave);
-		system(buf);
+
+		auto buffer = fmt::format("gzip -dfq {}", strsave);
+
+		auto returnCode = system(buffer.c_str());
+		if(returnCode != 0) // gzip returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
+			bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 	}
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(name));

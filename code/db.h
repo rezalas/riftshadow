@@ -63,6 +63,8 @@
 #include "dioextra.h"
 #include "chardef.h"
 #include "const.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 #ifndef OLD_RAND
 #define OLD_RAND

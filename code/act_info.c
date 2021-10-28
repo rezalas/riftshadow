@@ -32,6 +32,7 @@
  ***************************************************************************/
 
 #include "act_info.h"
+#include "weather_enums.h"
 
 char *const where_name[] = {
 	"<used as light>     ",
@@ -58,7 +59,7 @@ char *const where_name[] = {
 	"<cosmetic gear>     "
 };
 
-static char *const moon_look[MAX_MOON] = 
+static char *const moon_look[LunarCyclePosition::MaxLunarCycles] = 
 {
 	"new",
 	"crescent waxing",
@@ -70,7 +71,7 @@ static char *const moon_look[MAX_MOON] =
 	"crescent waning"
 };
 
-static char *const sky_look[MAX_SKY] = 
+static char *const sky_look[WeatherCondition::MaxWeatherCondition] = 
 {
 	"The sky is cloudless",
 	"The sky is partly cloudy",
@@ -83,7 +84,7 @@ static char *const sky_look[MAX_SKY] =
 	"Pebble-sized hailstones fall from the sky"
 };
 
-static char *const temp_look[MAX_TEMP] = 
+static char *const temp_look[Temperature::MaxTemperature] = 
 {
 	"hot",
 	"warm",
@@ -91,7 +92,7 @@ static char *const temp_look[MAX_TEMP] =
 	"cold"
 };
 
-static char *const wind_look[MAX_WIND] = 
+static char *const wind_look[Windspeed::MaxWindspeed] = 
 {
 	"is perfectly still.", 
 	"wafts on a gentle breeze.", 
@@ -695,10 +696,10 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 				if (!found)
 					act("\n\r$N is using:", ch, NULL, victim, TO_CHAR);
 
-				sprintf(buf2, "%s>", tObj->wear_loc_name ? tObj->wear_loc_name : "bug: unset wear_loc on cosmetic");
-				sprintf(buf, "<worn %-14s", buf2);
+				auto buffer = fmt::format("{}>", tObj->wear_loc_name ? tObj->wear_loc_name : "bug: unset wear_loc on cosmetic");
+				buffer = fmt::sprintf("<worn %-14s", buffer);
 
-				send_to_char(buf, ch);
+				send_to_char(buffer.c_str(), ch);
 
 				if (can_see_obj(ch, tObj))
 					send_to_char(format_obj_to_char(tObj, ch, true), ch);
@@ -1603,7 +1604,7 @@ void do_examine(CHAR_DATA *ch, char *argument)
 	if (!check_blind(ch))
 		return;
 
-	char buf[MAX_STRING_LENGTH];
+	std::string buffer;
 
 	auto obj = get_obj_here(ch, arg);
 	if (obj != NULL)
@@ -1614,14 +1615,14 @@ void do_examine(CHAR_DATA *ch, char *argument)
 			case ITEM_CONTAINER:
 			case ITEM_CORPSE_NPC:
 			case ITEM_CORPSE_PC:
-				sprintf(buf, "in %s", arg);
+				buffer = fmt::format("in {}", arg);
 				break;
 			default:
-				sprintf(buf, "%s", arg);
+				buffer = std::string(arg);
 				break;
 		}
 
-		do_look(ch, buf);
+		do_look(ch, buffer.data());
 	}
 	else
 	{
@@ -1634,7 +1635,7 @@ bool show_altdesc(ROOM_INDEX_DATA *room)
 	if (!room->alt_description)
 		return false;
 
-	if (room->alt_description_cond == AD_COND_NIGHT && sun == SUN_DARK)
+	if (room->alt_description_cond == AD_COND_NIGHT && sun == SolarPosition::Dark)
 		return true;
 
 	return false;
@@ -1712,7 +1713,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 		if (get_bv_stage(ch) < 2)
 		{
-			sprintf(buf, get_room_name(ch->in_room));
+			sprintf(buf, "%s", get_room_name(ch->in_room));
 			buf[0] = UPPER(buf[0]);
 			send_to_char(buf, ch);
 
@@ -1986,13 +1987,13 @@ void do_look(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (sun == SUN_LIGHT)
+		if (sun == SolarPosition::Daylight)
 		{
 			send_to_char("You cannot make out the moons during the day.\n\r", ch);
 			return;
 		}
 
-		if (ch->in_room->area->sky == SKY_OVERCAST || ch->in_room->area->sky >= SKY_DOWNPOUR)
+		if (ch->in_room->area->sky == WeatherCondition::Overcast || ch->in_room->area->sky >= WeatherCondition::Downpour)
 		{
 			send_to_char("You cannot make out the moons through the cloud cover.\n\r", ch);
 			return;
@@ -2164,12 +2165,11 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 	if (count > 0 && count != number)
 	{
-		if (count == 1)
-			sprintf(buf, "You only see one %s here.\n\r", arg3);
-		else
-			sprintf(buf, "You only see %d of those here.\n\r", count);
+		auto buffer = count == 1
+			? fmt::format("You only see one {} here.\n\r", arg3)
+			: fmt::format("You only see {} of those here.\n\r", count); //TODO: change the rest of the sprintf calls to format
 
-		send_to_char(buf, ch);
+		send_to_char(buffer.c_str(), ch);
 		return;
 	}
 
@@ -2675,7 +2675,7 @@ void do_affects(CHAR_DATA *ch, char *argument)
 	send_to_char("You are affected by:\n\r", ch);
 
 	AFFECT_DATA *paf_last = NULL;
-	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
+	char buf[MAX_STRING_LENGTH];
 	for (auto paf = ch->affected; paf != NULL; paf = paf->next)
 	{
 		if (paf->aftype == AFT_INVIS)
@@ -2684,7 +2684,6 @@ void do_affects(CHAR_DATA *ch, char *argument)
 		for (auto i = 0; i < MAX_STRING_LENGTH; i++)
 		{
 			buf[i] = '\0';
-			buf2[i] = '\0';
 		}
 
 		if (paf_last != NULL
@@ -2718,31 +2717,29 @@ void do_affects(CHAR_DATA *ch, char *argument)
 		if (ch->level >= 20)
 		{
 			auto showdur = paf->duration + 1;
-			sprintf(buf3, "%d", paf->modifier);
 
-			sprintf(buf, "| modifies %s%s%s ",
+			auto buffer = fmt::format("| modifies {}{}{} ",
 					(paf->mod_name > -1) ? mod_names[paf->mod_name].name : affect_loc_name(paf->location),
 					(paf->mod_name > -1) ? "" : " by ",
-					(paf->mod_name > -1) ? "" : buf3);
+					(paf->mod_name > -1) ? "" : std::to_string(paf->modifier)); //TODO: change the rest of the sprintf calls to format
 
 			if (paf->aftype != AFT_INVIS)
-				send_to_char(buf, ch);
+				send_to_char(buffer.c_str(), ch);
 
 			if (paf->duration == -1)
 			{
-				sprintf(buf, "permanently");
+				buffer = "permanently";
 			}
 			else
 			{
-				sprintf(buf2, " %d", (showdur / 2));
-				sprintf(buf, "for%s%s%s hour%s.",
-					(showdur == 1) ? "" : buf2,
+				buffer = fmt::format("for%s%s%s hour%s.",
+					(showdur == 1) ? "" : std::to_string(showdur / 2),
 					(showdur % 2 == 0) ? "" : (showdur == 1) ? "" : " and", (showdur % 2 == 0) ? "" : " a half",
 					(showdur == 1 || showdur == 2) ? "" : "s");
 			}
 
 			if (paf->aftype != AFT_INVIS)
-				send_to_char(buf, ch);
+				send_to_char(buffer.c_str(), ch);
 		}
 
 		if (paf->aftype != AFT_INVIS)
@@ -2813,9 +2810,9 @@ void do_weather(CHAR_DATA *ch, char *argument)
 		wind_look[ch->in_room->area->wind]);
 	send_to_char(buf, ch);
 
-	if (sun != SUN_LIGHT)
+	if (sun != SolarPosition::Daylight)
 	{
-		if (ch->in_room->area->sky == SKY_OVERCAST || ch->in_room->area->sky >= SKY_DOWNPOUR)
+		if (ch->in_room->area->sky == WeatherCondition::Overcast || ch->in_room->area->sky >= WeatherCondition::Downpour)
 		{
 			send_to_char("You cannot make out the twin moons through the thick cloud cover.\n\r", ch);
 			return;
@@ -2905,6 +2902,8 @@ void do_whois(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
+	std::string buffer;
+
 	auto output = new_buf();
 	auto found = false;
 	for (auto d = descriptor_list; d != NULL; d = d->next)
@@ -2975,7 +2974,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 					break;
 			}
 
-			char buf[MAX_STRING_LENGTH], rbuf[MAX_STRING_LENGTH], disp[MAX_STRING_LENGTH];
+			char rbuf[MAX_STRING_LENGTH], disp[MAX_STRING_LENGTH];
 
 			/* a little formatting */
 			if (is_immortal(ch) || (is_heroimm(wch) && wch->level < 52))
@@ -2985,7 +2984,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 				else
 					strcpy(rbuf, "");
 
-				sprintf(buf, "[%2d %-5s %s%s] %s%s%s%s%s%s%s%s%s%s%s%s\n\r",
+				buffer = fmt::sprintf("[%2d %-5s %s%s] %s%s%s%s%s%s%s%s%s%s%s%s\n\r",
 					wch->level,
 					pc_race_table[wch->race].who_name_five,
 					class_name,
@@ -3002,7 +3001,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 					wch->true_name,
 					is_npc(wch) ? "" : wch->pcdata->title,
 					is_npc(wch) ? "" : wch->pcdata->extitle ? wch->pcdata->extitle : "");
-				add_buf(output, buf);
+				add_buf(output, buffer.data());
 			}
 			else if (get_trust(wch) >= 52 && !is_immortal(ch))
 			{
@@ -3017,12 +3016,14 @@ void do_whois(CHAR_DATA *ch, char *argument)
 						pc_race_table[wch->race].who_name_five,
 						class_name);
 
-				sprintf(buf, "%s %s%s%s%s\n\r",
+				buffer = fmt::format("{} {}{}{}{}\n\r",
 					disp,
 					wch->cabal == ch->cabal ? cabal_table[wch->cabal].who_name : "",
-					wch->name, is_npc(wch) ? "" : wch->pcdata->title,
-					is_npc(wch) ? "" : (wch->pcdata->extitle) ? wch->pcdata->extitle : "");
-				add_buf(output, buf);
+					wch->name, 
+					is_npc(wch) ? "" : wch->pcdata->title,
+					is_npc(wch) ? "" : (wch->pcdata->extitle) ? wch->pcdata->extitle : ""); //TODO: change the rest of the sprintf calls to format
+
+				add_buf(output, buffer.data());
 			}
 			else
 			{
@@ -3037,7 +3038,8 @@ void do_whois(CHAR_DATA *ch, char *argument)
 						pc_race_table[wch->race].who_name_five,
 						class_name);
 
-				sprintf(buf, "%s %s%s%s%s%s%s%s%s%s%s%s%s\n\r",
+				// TODO: originally had 13 placeholders, but it only has 12 arguments. could be a bug.
+				buffer = fmt::format("{} {}{}{}{}{}{}{}{}{}{}{}\n\r",
 					disp,
 					can_pk(ch, wch) ? "(PK) " : "",
 					wch->incog_level >= LEVEL_HERO ? "(Incog) " : "",
@@ -3050,7 +3052,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 					wch->name,
 					is_npc(wch) ? "" : wch->pcdata->title,
 					is_npc(wch) ? "" : (wch->pcdata->extitle) ? wch->pcdata->extitle : "");
-				add_buf(output, buf);
+				add_buf(output, buffer.data());
 			}
 		}
 	}
@@ -3070,6 +3072,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
  */
 void do_who(CHAR_DATA *ch, char *argument)
 {
+	std::string buffer;
 	char buf[MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH];
 	char rbuf[MAX_STRING_LENGTH];
@@ -3366,7 +3369,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 			auto trust = get_trust(ch);
 			strcpy(rbuf, trust >= 52 ? "  " : "");
 
-			sprintf(buf, "[%2d %-5s %s%s] %s%s%s%s%s%s%s%s%s%s%s%s%s\n\r",
+			buffer = fmt::sprintf("[%2d %-5s %s%s] %s%s%s%s%s%s%s%s%s%s%s%s%s\n\r",
 				wch->level,
 				pc_race_table[wch->race].who_name_five,
 				class_name,
@@ -3384,7 +3387,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 				wch->true_name,
 				is_npc(wch) ? "" : wch->pcdata->title,
 				is_npc(wch) ? "" : wch->pcdata->extitle ? wch->pcdata->extitle : "");
-			add_buf(output, buf);
+			add_buf(output, buffer.data());
 		}
 		else if (get_trust(wch) >= 52 && !is_immortal(ch))
 		{
@@ -3403,13 +3406,13 @@ void do_who(CHAR_DATA *ch, char *argument)
 					class_name);
 			}
 
-			sprintf(buf, "%s %s%s%s%s\n\r",
+			buffer = fmt::format("{} {}{}{}{}\n\r", 
 				disp,
 				wch->cabal == ch->cabal ? cabal_table[wch->cabal].who_name : "",
 				wch->true_name,
 				is_npc(wch) ? "" : wch->pcdata->title,
-				is_npc(wch) ? "" : (wch->pcdata->extitle) ? wch->pcdata->extitle : "");
-			add_buf(output, buf);
+				is_npc(wch) ? "" : (wch->pcdata->extitle) ? wch->pcdata->extitle : ""); //TODO: change the rest of the sprintf calls to format
+			add_buf(output, buffer.data());
 		}
 		else
 		{
@@ -3428,7 +3431,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 					class_name);
 			}
 
-			sprintf(buf, "%s %s%s%s%s%s%s%s%s%s%s%s\n\r",
+			buffer = fmt::format("{} {}{}{}{}{}{}{}{}{}{}{}\n\r",
 				disp,
 				can_pk(ch, wch) ? "(PK) " : "",
 				wch->incog_level >= LEVEL_HERO ? "(Incog) " : "",
@@ -3441,7 +3444,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 				wch->true_name,
 				is_npc(wch) ? "" : wch->pcdata->title,
 				is_npc(wch) ? "" : wch->pcdata->extitle ? wch->pcdata->extitle : "");
-			add_buf(output, buf);
+			add_buf(output, buffer.data());
 		}
 	}
 
@@ -3494,10 +3497,9 @@ void do_equipment(CHAR_DATA *ch, char *argument)
 			{
 				if (tObj->wear_loc == WEAR_COSMETIC)
 				{
-					char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
-					sprintf(buf2, "%s>", tObj->wear_loc_name ? tObj->wear_loc_name : "bug: unset wear_loc on cosmetic");
-					sprintf(buf, "<worn %-14s", buf2);
-					send_to_char(buf, ch);
+					auto buffer = fmt::format("{}>", tObj->wear_loc_name ? tObj->wear_loc_name : "bug: unset wear_loc on cosmetic");
+					buffer = fmt::sprintf("<worn %-14s", buffer);
+					send_to_char(buffer.c_str(), ch);
 
 					if (can_see_obj(ch, tObj))
 						send_to_char(format_obj_to_char(tObj, ch, true), ch);
@@ -4130,7 +4132,7 @@ void do_description(CHAR_DATA *ch, char *argument)
 
 void do_report(CHAR_DATA *ch, char *argument)
 {
-	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH], buf4[MAX_STRING_LENGTH];
+	char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
 
 	auto percenta = ch->max_hit == 0  ? 0 : (ch->hit * 100) / ch->max_hit;
 	auto percentb = ch->max_mana == 0 ? 0 : (ch->mana * 100) / ch->max_mana;
@@ -4181,8 +4183,8 @@ void do_report(CHAR_DATA *ch, char *argument)
 	else
 		sprintf(buf3, "no remaining");
 
-	sprintf(buf4, "I am %s, with %s mental focus, and %s endurance.", buf, buf2, buf3);
-	do_say(ch, buf4);
+	auto buffer = fmt::format("I am {}, with {} mental focus, and {} endurance.", buf, buf2, buf3); //TODO: change the rest of the sprintf calls to format
+	do_say(ch, buffer.data());
 }
 
 void do_practice(CHAR_DATA *ch, char *argument)
@@ -4945,9 +4947,11 @@ void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 	if (number_percent() < get_skill(ch, gsn_lore) + lorebonus * 15)
 	{
 		char buf[MAX_STRING_LENGTH];
-		sprintf(buf, "Object '%s' is type %s.\n\r", obj->name, item_name_lookup(obj->item_type));
-		sprintf(buf, "%sIt weighs %d pounds.\n\r", buf, obj->weight);
-		send_to_char(buf, ch);
+		auto buffer = fmt::format("Object '{}' is type {}.\n\rIt weighs {} pounds.\n\r",
+			obj->name, 
+			item_name_lookup(obj->item_type),
+			std::to_string(obj->weight)); //TODO: change the rest of the sprintf calls to format
+		send_to_char(buffer.c_str(), ch);
 
 		sprintf(buf, "It is level %d.\n\r", obj->level);
 
@@ -5424,7 +5428,7 @@ void add_role(CHAR_DATA *ch, char *string)
 	chomp(strtime);
 
 	if (ch->pcdata->role)
-		sprintf(buf, ch->pcdata->role);
+		sprintf(buf, "%s", ch->pcdata->role);
 	else
 		strcpy(buf, "");
 

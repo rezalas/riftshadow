@@ -582,7 +582,7 @@ void clear_cmd_queue(CHAR_DATA *ch)
 void interpret(CHAR_DATA *ch, char *argument)
 {
 	char command[MAX_INPUT_LENGTH], arg_dup[MSL], object[MSL];
-	char logline[MAX_INPUT_LENGTH], qcommand[MSL];
+	char logline[MAX_INPUT_LENGTH];
 	char skill_name[MSL];
 	char buf[MSL];
 	int cmd, gn, skill_num, cmd2;
@@ -655,9 +655,9 @@ void interpret(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		sprintf(qcommand, "%s %s", command, argument);
-		strcpy(ch->pcdata->queue[ch->pcdata->write_next], qcommand);
-		//		sprintf(buf,"Command '%s' queued.\n\r",qcommand);
+		auto qcommand = fmt::format("{} {}", command, argument);
+		strcpy(ch->pcdata->queue[ch->pcdata->write_next], qcommand.c_str());
+		//		sprintf(buf,"Command '%s' queued.\n\r",qcommand.c_str());
 		//		send_to_char(buf,ch);
 		ch->pcdata->write_next++;
 		ch->pcdata->pending = true;
@@ -1006,7 +1006,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 					return;
 				}
 
-				vo = (void *)where;
+				vo = (void *)(long)where;
 				break;
 			case TAR_IGNORE:
 			default:

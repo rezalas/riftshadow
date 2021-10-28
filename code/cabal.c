@@ -77,7 +77,7 @@ void update_cskills(CHAR_DATA *ch)
 
 void do_storytell(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MSL], arg2[MSL], buf[MSL];
+	char arg1[MSL], arg2[MSL];
 	bool color = false;
 
 	argument = one_argument(argument, arg1);
@@ -108,13 +108,13 @@ void do_storytell(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	sprintf(buf, "%s %s '%s%s%s'",
+	auto buffer = fmt::format("{} {} '{}{}{}'",
 		ch->name,
 		color ? arg2 : arg1,
 		color ? get_char_color(ch, arg1) : "",
 		argument,
 		color ? END_COLOR(ch) : "");
-	area_echo(ch, buf);
+	area_echo(ch, buffer.data());
 }
 
 /*

@@ -854,6 +854,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 {
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
+	std::string buffer;
 	MOB_INDEX_DATA *pMobIndex;
 	bool found = false;
 
@@ -910,8 +911,8 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 
 		if (!found)
 		{
-			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("{} is not a valid program to choose from.\n\r", prog); //TODO: change the rest of the sprintf calls to format
+			send_to_char(buffer.c_str(), ch);
 			return false;
 		}
 		else if (!str_prefix(add, "add"))
@@ -924,20 +925,20 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 
 			mprog_set(pMobIndex, prog_type, prog);
 
-			sprintf(buf, "The '%s' field for this mobile as been set to the '%s' program.\n\r", prog_type, prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("The '{}' field for this mobile as been set to the '{}' program.\n\r", prog_type, prog);
+			send_to_char(buffer.c_str(), ch);
 		}
 		else if (!str_prefix(add, "del"))
 		{
 			if (pMobIndex->mprogs && mprog_unset(pMobIndex, prog_type, prog))
 			{
-				sprintf(buf, "The '%s' field for this mobile has been cleared.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field for this mobile has been cleared.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 			}
 			else
 			{
-				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field is not set.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 				return false;
 			}
 		}
@@ -950,6 +951,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 {
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
+	std::string buffer;
 	OBJ_INDEX_DATA *pObjIndex;
 	bool found = false;
 
@@ -1013,27 +1015,27 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 
 		if (!found)
 		{
-			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("{} is not a valid program to choose from.\n\r", prog); //TODO: change the rest of the sprintf calls to format
+			send_to_char(buffer.c_str(), ch);
 			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
 			iprog_set(pObjIndex, prog_type, prog);
-			sprintf(buf, "The '%s' field for this object as been set to the '%s' program.\n\r", prog_type, prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("The '{}' field for this object as been set to the '{}' program.\n\r", prog_type, prog); 
+			send_to_char(buffer.c_str(), ch);
 		}
 		else if (!str_prefix(add, "del"))
 		{
 			if (iprog_unset(pObjIndex, prog_type, prog))
 			{
-				sprintf(buf, "The '%s' field for this mobile has been cleared.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field for this mobile has been cleared.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 			}
 			else
 			{
-				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field is not set.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 				return false;
 			}
 		}
@@ -1046,6 +1048,7 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 {
 	int count = 0;
 	char buf[MSL], add[MSL], prog[MSL];
+	std::string buffer;
 	OBJ_INDEX_DATA *pObjIndex;
 
 	EDIT_OBJ(ch, pObjIndex);
@@ -1069,16 +1072,16 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 
 	if (!ispec_table[count].spec_name)
 	{
-		sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
-		send_to_char(buf, ch);
+		buffer = fmt::format("{} is not a valid program to choose from.\n\r", prog); //TODO: change the rest of the sprintf calls to format
+		send_to_char(buffer.c_str(), ch);
 		return false;
 	}
 	else if (!str_prefix(add, "add"))
 	{
 		pObjIndex->spec_prog.func = ispec_table[count].spec_func;
 		pObjIndex->spec_prog.trapvector = ispec_table[count].spec_events;
-		sprintf(buf, "Object spec prog has been set to '%s'.\n\r", prog);
-		send_to_char(buf, ch);
+		buffer = fmt::format("Object spec prog has been set to '{}'.\n\r", prog);
+		send_to_char(buffer.c_str(), ch);
 	}
 	else if (!str_prefix(add, "del"))
 	{
@@ -1238,6 +1241,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 {
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
+	std::string buffer;
 	ROOM_INDEX_DATA *pRoomIndex;
 	bool found = false;
 
@@ -1301,27 +1305,27 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 
 		if (!found)
 		{
-			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("{} is not a valid program to choose from.\n\r", prog); //TODO: change the rest of the sprintf calls to format
+			send_to_char(buffer.c_str(), ch);
 			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
 			rprog_set(pRoomIndex, prog_type, prog);
-			sprintf(buf, "The '%s' field for this room as been set to the '%s' program.\n\r", prog_type, prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("The '{}' field for this room as been set to the '{}' program.\n\r", prog_type, prog);
+			send_to_char(buffer.c_str(), ch);
 		}
 		else if (!str_prefix(add, "del"))
 		{
 			if (rprog_unset(pRoomIndex, prog_type, prog))
 			{
-				sprintf(buf, "The '%s' field for this room has been cleared.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field for this room has been cleared.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 			}
 			else
 			{
-				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field is not set.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 				return false;
 			}
 		}
@@ -1476,6 +1480,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 {
 	int count = 0, col = 0;
 	char buf[MSL], add[MSL], prog[MSL], prog_type[MSL];
+	std::string buffer;
 	AREA_DATA *pArea;
 	bool found = false;
 
@@ -1538,27 +1543,27 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 
 		if (!found)
 		{
-			sprintf(buf, "%s is not a valid program to choose from.\n\r", prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("{} is not a valid program to choose from.\n\r", prog); //TODO: change the rest of the sprintf calls to format
+			send_to_char(buffer.c_str(), ch);
 			return false;
 		}
 		else if (!str_prefix(add, "add"))
 		{
 			aprog_set(pArea, prog_type, prog);
-			sprintf(buf, "The '%s' field for this area as been set to the '%s' program.\n\r", prog_type, prog);
-			send_to_char(buf, ch);
+			buffer = fmt::format("The '{}' field for this area as been set to the '{}' program.\n\r", prog_type, prog);
+			send_to_char(buffer.c_str(), ch);
 		}
 		else if (!str_prefix(add, "del"))
 		{
 			if (aprog_unset(pArea, prog_type, prog))
 			{
-				sprintf(buf, "The '%s' field for this area has been cleared.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field for this area has been cleared.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 			}
 			else
 			{
-				sprintf(buf, "The '%s' field is not set.\n\r", prog_type);
-				send_to_char(buf, ch);
+				buffer = fmt::format("The '{}' field is not set.\n\r", prog_type);
+				send_to_char(buffer.c_str(), ch);
 				return false;
 			}
 		}
@@ -2059,7 +2064,7 @@ int aclimate_lookup(const char *name)
 {
 	int sn;
 
-	for (sn = 0; sn < MAX_CLIMATE; sn++)
+	for (sn = 0; sn < Climate::MaxClimate; sn++)
 	{
 		if (climate_table[sn].name == NULL)
 			break;
@@ -2074,6 +2079,7 @@ int aclimate_lookup(const char *name)
 bool aedit_climate(CHAR_DATA *ch, char *argument)
 {
 	AREA_DATA *pArea;
+	std::string buffer;
 	char wcli[MSL];
 	char hold[MSL];
 	int icli = 0, climate;
@@ -2086,11 +2092,11 @@ bool aedit_climate(CHAR_DATA *ch, char *argument)
 
 	if (icli < 0)
 	{
-		sprintf(hold, "%s is not a valid climate.\n\r", wcli);
-		send_to_char(hold, ch);
+		buffer = fmt::format("{} is not a valid climate.\n\r", wcli);
+		send_to_char(buffer.c_str(), ch);
 		send_to_char("The following climates are available:\n\r", ch);
 
-		for (climate = 0; climate < MAX_CLIMATE; climate++)
+		for (climate = 0; climate < Climate::MaxClimate; climate++)
 		{
 			if (climate_table[climate].name == NULL)
 				break;
@@ -2098,9 +2104,9 @@ bool aedit_climate(CHAR_DATA *ch, char *argument)
 			sprintf(hold, "%s ", climate_table[climate].name);
 
 			if (climate % 3 == 0)
-				sprintf(hold, "%s\n\r", hold);
+				buffer = fmt::format("{}\n\r", hold);
 
-			send_to_char(hold, ch);
+			send_to_char(buffer.c_str(), ch);
 		}
 
 		if (climate % 3 != 0)
@@ -2223,13 +2229,16 @@ bool redit_show(CHAR_DATA *ch, char *argument)
 
 	if (pRoom->trap)
 	{
-		sprintf(buf, "\n\r Type:          [%s]\n\r", flag_name_lookup(pRoom->trap->type, trap_table));
-		sprintf(buf, "%s Quality:       [%2d]\n\r", buf, pRoom->trap->quality);
-		sprintf(buf, "%s Complexity:    [%3d]\n\r", buf, pRoom->trap->complexity);
-		sprintf(buf, "%s Timer:         [%d seconds]\n\r", buf, pRoom->trap->timer);
-		sprintf(buf, "%s Trigger Echo:  [%s]\n\r", buf, (pRoom->trap->trig_echo != NULL) ? pRoom->trap->trig_echo : "None");
-		sprintf(buf, "%s Execute Echo:  [%s]\n\r", buf, (pRoom->trap->exec_echo != NULL) ? pRoom->trap->exec_echo : "None");
-		strcat(buf1, buf);
+		auto buffer = 
+			fmt::sprintf("\n\r Type:          [%s]\n\r Quality:       [%2d]\n\r Complexity:    [%3d]\n\r Timer:         [%d seconds]\n\r Trigger Echo:  [%s]\n\r Execute Echo:  [%s]\n\r",
+				flag_name_lookup(pRoom->trap->type, trap_table),
+				pRoom->trap->quality,
+				pRoom->trap->complexity,
+				pRoom->trap->timer,
+				(pRoom->trap->trig_echo != NULL) ? pRoom->trap->trig_echo : "None",
+				(pRoom->trap->exec_echo != NULL) ? pRoom->trap->exec_echo : "None"); //TODO: change the rest of the sprintf calls to format
+
+		strcat(buf1, buffer.data());
 	}
 	else
 	{
@@ -2558,8 +2567,6 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 
 	if (!str_cmp(command, "dig"))
 	{
-		char buf[MAX_STRING_LENGTH];
-
 		if (arg[0] == '\0' || !is_number(arg))
 		{
 			for (count = ch->in_room->area->min_vnum; count <= ch->in_room->area->max_vnum; count++)
@@ -2585,8 +2592,8 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		}
 
 		redit_create(ch, arg);
-		sprintf(buf, "link %s", arg);
-		change_exit(ch, buf, door);
+		auto buffer = fmt::format("link {}", arg);
+		change_exit(ch, buffer.data(), door);
 
 		move_to = get_room_index(atoi(arg));
 
@@ -2719,7 +2726,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 
 bool redit_north(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_NORTH))
+	if (change_exit(ch, argument, Directions::North))
 		return true;
 
 	return false;
@@ -2727,7 +2734,7 @@ bool redit_north(CHAR_DATA *ch, char *argument)
 
 bool redit_south(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_SOUTH))
+	if (change_exit(ch, argument, Directions::South))
 		return true;
 
 	return false;
@@ -2735,7 +2742,7 @@ bool redit_south(CHAR_DATA *ch, char *argument)
 
 bool redit_east(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_EAST))
+	if (change_exit(ch, argument, Directions::East))
 		return true;
 
 	return false;
@@ -2743,7 +2750,7 @@ bool redit_east(CHAR_DATA *ch, char *argument)
 
 bool redit_west(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_WEST))
+	if (change_exit(ch, argument, Directions::West))
 		return true;
 
 	return false;
@@ -2751,7 +2758,7 @@ bool redit_west(CHAR_DATA *ch, char *argument)
 
 bool redit_up(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_UP))
+	if (change_exit(ch, argument, Directions::Up))
 		return true;
 
 	return false;
@@ -2759,7 +2766,7 @@ bool redit_up(CHAR_DATA *ch, char *argument)
 
 bool redit_down(CHAR_DATA *ch, char *argument)
 {
-	if (change_exit(ch, argument, DIR_DOWN))
+	if (change_exit(ch, argument, Directions::Down))
 		return true;
 
 	return false;
@@ -4131,19 +4138,19 @@ bool oedit_show(CHAR_DATA *ch, char *argument)
 
 		if (pObj->charaffs)
 		{
-			sprintf(buf, " AFF ");
 			i = 0;
 
+			std::string buffer = std::string(" AFF ");
 			for (af = pObj->charaffs; af; af = af->next)
 			{
 				if (i > 0)
-					sprintf(buf, "%s     ", buf);
+					buffer += fmt::format("{}     ", buffer);
 
-				sprintf(buf, "%s[%s]\n\r", buf, skill_table[af->type].name);
+				buffer += fmt::format("[{}]\n\r", skill_table[af->type].name);
 				i++;
 			}
 
-			send_to_char(buf, ch);
+			send_to_char(buffer.c_str(), ch);
 		}
 	}
 
@@ -4510,7 +4517,6 @@ bool oedit_restrict(CHAR_DATA *ch, char *argument)
 {
 	OBJ_INDEX_DATA *pObj;
 	int bit, count;
-	char buf[MSL] = "";
 
 	EDIT_OBJ(ch, pObj);
 
@@ -4525,18 +4531,19 @@ bool oedit_restrict(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("That was an invalid restriction type.  Choose from the following:\n\r", ch);
 
+		std::string buffer = std::string("");
 		for (count = 0; restrict_table[count].name != NULL; count++)
 		{
-			sprintf(buf, "%s%s ", buf, restrict_table[count].name);
+			buffer += fmt::format("{} ", restrict_table[count].name);
 
 			if (count % 5 == 0 && count > 0)
-				sprintf(buf, "%s\n\r", buf);
+				buffer += std::string("\n\r");
 		}
 
 		if (count % 5 != 0)
-			sprintf(buf, "%s\n\r", buf);
+			buffer += std::string("\n\r");
 
-		send_to_char(buf, ch);
+		send_to_char(buffer.c_str(), ch);
 		return false;
 	}
 
@@ -5787,8 +5794,8 @@ bool medit_show(CHAR_DATA *ch, char *argument)
 		sprintf(buf, " Check Type:   [%s]\n\r", flag_name_lookup(pMob->barred_entry->type, criterion_flags));
 		send_to_char(buf, ch);
 
-		sprintf(buf, " Comparison:   [%s]\n\r", comparison);
-		send_to_char(buf, ch);
+		auto buffer = fmt::format(" Comparison:   [{}]\n\r", comparison); //TODO: change the rest of the sprintf calls to format
+		send_to_char(buffer.c_str(), ch);
 
 		sprintf(buf, " Value:        [%d]\n\r", pMob->barred_entry->value);
 		send_to_char(buf, ch);
@@ -5796,8 +5803,8 @@ bool medit_show(CHAR_DATA *ch, char *argument)
 		sprintf(buf, " Target Vnum:  [%d]\n\r", pMob->barred_entry->vnum);
 		send_to_char(buf, ch);
 
-		sprintf(buf, " Message Type: [%s]\n\r", msg_type);
-		send_to_char(buf, ch);
+		buffer = fmt::format(" Message Type: [{}]\n\r", msg_type);
+		send_to_char(buffer.c_str(), ch);
 
 		if (pMob->barred_entry->msg_type == BAR_ECHO)
 		{

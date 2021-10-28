@@ -32,6 +32,7 @@
  ***************************************************************************/
 
 #include "update.h"
+#include "weather_enums.h"
 
 int save_number = 0;
 
@@ -725,20 +726,20 @@ void time_update(void)
 				switch (++time_info.hour)
 				{
 					case 7:
-						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sun = SolarPosition::Sunrise;
+						sprintf(buf, "%s", bw1);
 						break;
 					case 8:
-						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sun = SolarPosition::Daylight;
+						sprintf(buf, "%s", bw2);
 						break;
 					case 16:
-						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sun = SolarPosition::Sunset;
+						sprintf(buf, "%s", bw3);
 						break;
 					case 17:
-						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sun = SolarPosition::Dark;
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -751,20 +752,20 @@ void time_update(void)
 				switch (++time_info.hour)
 				{
 					case 6:
-						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sun = SolarPosition::Sunrise;
+						sprintf(buf, "%s", bw1);
 						break;
 					case 7:
-						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sun = SolarPosition::Daylight;
+						sprintf(buf, "%s", bw2);
 						break;
 					case 18:
-						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sun = SolarPosition::Sunset;
+						sprintf(buf, "%s", bw3);
 						break;
 					case 19:
-						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sun = SolarPosition::Dark;
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -777,20 +778,20 @@ void time_update(void)
 				switch (++time_info.hour)
 				{
 					case 5:
-						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sun = SolarPosition::Sunrise;
+						sprintf(buf, "%s", bw1);
 						break;
 					case 6:
-						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sun = SolarPosition::Daylight;
+						sprintf(buf, "%s", bw2);
 						break;
 					case 20:
-						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sun = SolarPosition::Sunset;
+						sprintf(buf, "%s", bw3);
 						break;
 					case 21:
-						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sun = SolarPosition::Dark;
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -803,20 +804,20 @@ void time_update(void)
 				switch (++time_info.hour)
 				{
 					case 6:
-						sun = SUN_RISE;
-						sprintf(buf, bw1);
+						sun = SolarPosition::Sunrise;
+						sprintf(buf, "%s", bw1);
 						break;
 					case 7:
-						sun = SUN_LIGHT;
-						sprintf(buf, bw2);
+						sun = SolarPosition::Daylight;
+						sprintf(buf, "%s", bw2);
 						break;
 					case 18:
-						sun = SUN_SET;
-						sprintf(buf, bw3);
+						sun = SolarPosition::Sunset;
+						sprintf(buf, "%s", bw3);
 						break;
 					case 19:
-						sun = SUN_DARK;
-						sprintf(buf, bw4);
+						sun = SolarPosition::Dark;
+						sprintf(buf, "%s", bw4);
 						break;
 					case 24:
 						time_info.hour = 0;
@@ -927,7 +928,7 @@ void weather_update(void)
 	{
 		random = number_percent();
 
-		for (i = 0; i < MAX_SKY; i++)
+		for (i = 0; i < WeatherCondition::MaxWeatherCondition; i++)
 		{
 			if (random <= climate_table[area->climate].skyfreqs[season][i])
 			{
@@ -938,7 +939,7 @@ void weather_update(void)
 
 		random = number_percent();
 
-		for (i = 0; i < MAX_TEMP; i++)
+		for (i = 0; i < Temperature::MaxTemperature; i++)
 		{
 			if (random <= climate_table[area->climate].tempfreqs[season][i])
 			{
@@ -981,17 +982,19 @@ void weather_update(void)
 				area->temp = (area->sky + average) / 2;
 		}
 
-		if (area->sky >= SKY_FLURRY && area->temp < TEMP_COOL)
-			area->temp = TEMP_COOL;
+		if (area->sky >= WeatherCondition::SnowFlurry && area->temp < Temperature::Cool)
+			area->temp = Temperature::Cool;
 
-		if (area->sky == SKY_DOWNPOUR || area->sky == SKY_TSTORM || area->sky == SKY_BLIZZARD)
+		if (area->sky == WeatherCondition::Downpour
+				 || area->sky == WeatherCondition::ThunderStorm
+				 || area->sky == WeatherCondition::Blizzard)
 			area->wind++;
 
-		if (area->climate == CLIMATE_NONE)
+		if (area->climate == Climate::None)
 		{
-			area->sky = SKY_PCLOUDY;
-			area->temp = TEMP_WARM;
-			area->wind = WIND_CALM;
+			area->sky = WeatherCondition::PartlyCloudy;
+			area->temp = Temperature::Warm;
+			area->wind = Windspeed::Calm;
 		}
 	}
 
@@ -1000,31 +1003,31 @@ void weather_update(void)
 	{
 		switch (area->sky)
 		{
-			case SKY_CLEAR:
+			case WeatherCondition::Clear:
 				sprintf(buf, "There is not a cloud to be seen in the sky above.");
 				break;
-			case SKY_PCLOUDY:
+			case WeatherCondition::PartlyCloudy:
 				sprintf(buf, "A few clouds dot the skies above.");
 				break;
-			case SKY_OVERCAST:
+			case WeatherCondition::Overcast:
 				sprintf(buf, "A thick grey mass of clouds obscures the sky.");
 				break;
-			case SKY_DRIZZLE:
+			case WeatherCondition::Drizzle:
 				sprintf(buf, "A light drizzle falls from the sky.");
 				break;
-			case SKY_DOWNPOUR:
+			case WeatherCondition::Downpour:
 				sprintf(buf, "Sheets of rain pour down from the skies above.");
 				break;
-			case SKY_TSTORM:
+			case WeatherCondition::ThunderStorm:
 				sprintf(buf, "Lightning flashes in the distance as a booming peal of thunder approaches.");
 				break;
-			case SKY_FLURRY:
+			case WeatherCondition::SnowFlurry:
 				sprintf(buf, "Scattered snowflakes drift down from the skies above.");
 				break;
-			case SKY_BLIZZARD:
+			case WeatherCondition::Blizzard:
 				sprintf(buf, "Driving snow sweeps down from the skies as a chill fills the air.");
 				break;
-			case SKY_HAIL:
+			case WeatherCondition::Hail:
 				sprintf(buf, "Pebble-sized hailstones begin to fall from the skies.");
 				break;
 			default:
@@ -1036,50 +1039,74 @@ void weather_update(void)
 	}
 }
 
-void berus_update(void)
+/**
+ * @brief Updates the position and phase of a given moon by
+ * one day, determining the phase of the moon given the 
+ * re-assessed year-based date. 
+ * 
+ * @param moon A moon phase for a given moon
+ * @param moon_pos The position of the given moon
+ */
+void LunarCycle_update(sh_int *moon, sh_int *moon_pos)
 {
-	if (++berus_pos >= 360)
-		berus_pos = 0;
+	if (++(*moon_pos) >= 360)
+		*moon_pos = 0;
 
-	if (berus_pos >= 0 && berus_pos < 45)
-		moon_berus = MOON_NEW;
-	else if (berus_pos >= 45 && berus_pos < 90)
-		moon_berus = MOON_CWAXING;
-	else if (berus_pos >= 90 && berus_pos < 135)
-		moon_berus = MOON_HWAXING;
-	else if (berus_pos >= 135 && berus_pos < 180)
-		moon_berus = MOON_GWAXING;
-	else if (berus_pos >= 180 && berus_pos < 225)
-		moon_berus = MOON_FULL;
-	else if (berus_pos >= 225 && berus_pos < 270)
-		moon_berus = MOON_GWANING;
-	else if (berus_pos >= 270 && berus_pos < 315)
-		moon_berus = MOON_HWANING;
-	else if (berus_pos >= 315 && berus_pos < 360)
-		moon_berus = MOON_CWANING;
+	switch(*moon_pos)
+	{
+		case 0 ... 44:
+			*moon = LunarCyclePosition::NewMoon;
+			break;
+		case 45 ... 89:
+			*moon = LunarCyclePosition::CrescentWaxing;
+			break;
+		case 90 ... 134:
+			*moon = LunarCyclePosition::HalfWaxing;
+			break;
+		case 135 ... 179:
+			*moon = LunarCyclePosition::GibbousWaxing;
+			break;
+		case 180 ... 224:
+			*moon = LunarCyclePosition::FullMoon;
+			break;
+		case 225 ... 269:
+			*moon = LunarCyclePosition::GibbousWaning;
+			break;
+		case 270 ... 314:
+			*moon = LunarCyclePosition::HalfWaning;
+			break;
+		case 315 ... 359:
+			*moon = LunarCyclePosition::CrescentWaning;
+			break;
+		default:
+			*moon = LunarCyclePosition::NewMoon;
+			*moon_pos = 0;
+		break;
+	}
 }
 
+/**
+ * @brief Updates the lunar cycle of Berus by 1 day. Uses
+ * LunarCycle_Update internally now. Future updates
+ * should move this data to a moon class to handle this 
+ * internally.  
+ * 
+ */
+void berus_update(void)
+{
+	LunarCycle_update(&moon_berus, &berus_pos);
+}
+
+/**
+ * @brief Updates the lunar cycle of Calabren by 1 day. Uses
+ * LunarCycle_Update internally now. Future updates
+ * should move this data to a moon class to handle this 
+ * internally.  
+ * 
+ */
 void calabren_update(void)
 {
-	if (++calabren_pos >= 360)
-		calabren_pos = 0;
-
-	if (calabren_pos >= 0 && calabren_pos < 45)
-		moon_calabren = MOON_NEW;
-	else if (calabren_pos >= 45 && calabren_pos < 90)
-		moon_calabren = MOON_CWAXING;
-	else if (calabren_pos >= 90 && calabren_pos < 135)
-		moon_calabren = MOON_HWAXING;
-	else if (calabren_pos >= 135 && calabren_pos < 180)
-		moon_calabren = MOON_GWAXING;
-	else if (calabren_pos >= 180 && calabren_pos < 225)
-		moon_calabren = MOON_FULL;
-	else if (calabren_pos >= 225 && calabren_pos < 270)
-		moon_calabren = MOON_GWANING;
-	else if (calabren_pos >= 270 && calabren_pos < 315)
-		moon_calabren = MOON_HWANING;
-	else if (calabren_pos >= 315 && calabren_pos < 360)
-		moon_calabren = MOON_CWANING;
+	LunarCycle_update(&moon_calabren, &calabren_pos);
 }
 
 /*
@@ -1112,7 +1139,7 @@ void char_update(void)
 		master = NULL;
 
 		if (is_npc(ch)
-			&& (sun == SUN_RISE || sun == SUN_LIGHT)
+			&& (sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight)
 			&& ch->in_room
 			&& number_percent() < 90
 			&& !is_affected_by(ch, AFF_SLEEP)
@@ -1123,7 +1150,7 @@ void char_update(void)
 			else if (IS_SET(ch->act, ACT_NOCTURNAL) && !is_affected_by(ch, AFF_NOSHOW))
 				SET_BIT(ch->affected_by, AFF_NOSHOW);
 		}
-		else if (is_npc(ch) && sun >= SUN_SET && ch->in_room && number_percent() < 90 && ch->fighting == NULL)
+		else if (is_npc(ch) && sun >= SolarPosition::Sunset && ch->in_room && number_percent() < 90 && ch->fighting == NULL)
 		{
 			if (IS_SET(ch->act, ACT_NOCTURNAL) && is_affected_by(ch, AFF_NOSHOW))
 				REMOVE_BIT(ch->affected_by, AFF_NOSHOW);
@@ -1924,8 +1951,8 @@ void aggr_update(void)
 					&& ch->level >= vch->level - 5
 					&& (!IS_SET(ch->act, ACT_WIMPY) || !is_awake(vch))
 					&& can_see(ch, vch)
-					&& (!IS_SET(ch->act, ACT_DIURNAL) || sun >= SUN_SET)
-					&& (!IS_SET(ch->act, ACT_NOCTURNAL) || (sun != SUN_RISE && sun != SUN_LIGHT))
+					&& (!IS_SET(ch->act, ACT_DIURNAL) || sun >= SolarPosition::Sunset)
+					&& (!IS_SET(ch->act, ACT_NOCTURNAL) || (sun != SolarPosition::Sunrise && sun != SolarPosition::Daylight))
 					&& !is_safe_new(ch, vch, false)
 					&& !is_affected(vch, skill_lookup("radiance")))
 				{
@@ -1964,36 +1991,44 @@ int get_hours(CHAR_DATA *ch)
  }
 
 /* returns the age name type */
+/**
+ * @brief Returns the "age name" of a PC given the number of 
+ * seconds that character has been played. 
+ * 
+ * @param age The current age in seconds of a player character
+ * @param racenumber The race index of the player race (used as an age adjustment)
+ * @return char* The "age name", i.e. "young", "old", etc.
+ */
 char *get_age_name_new(int age, int racenumber)
 {
 	char *name;
+	if(age < 0)
+		age = 0;
 
-	age /= 3600;
-
-	/*
-		0 - 20:	young
-		21 - 120:	mature
-		121 - 220:	middle aged
-		221 - 300:	old
-		301 - 350:	very old
-		351 - 1000:	ancient
-		1001 -  ~ :	worm-food
-	*/
-
-	if (age <= 20)
-		name = "young";
-	else if (age <= 120)
-		name = "mature";
-	else if (age <= 220)
-		name = "middle aged";
-	else if (age <= 300)
-		name = "old";
-	else if (age <= 350)
-		name = "very old";
-	else if (age <= 1000)
-		name = "ancient";
-	else
-		name = "worm-food";
+	switch(age)
+	{
+		case 0 ... 72000: // 20 hours
+			name = "young";
+			break;
+		case 72001 ... 432000: // 120 hours
+			name = "mature";
+			break;
+		case 432001 ... 792000: // 220 hours
+			name = "middle aged";
+			break;
+		case 792001 ... 1080000: // 300 hours
+			name = "old";
+			break;
+		case 1080001 ... 1260000: // 350 hours
+			name = "very old";
+			break;
+		case 1260001 ... 3600000: // 1000 hours
+			name = "ancient";
+			break;
+		default: // all values over 1000 hours
+			name = "worm-food";
+			break;
+	}
 
 	return name;
 }
@@ -2828,18 +2863,18 @@ void iprog_pulse_update(bool isTick)
 			{
 				if ((obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC) && obj->contains == NULL)
 				{
-					door = DIR_UP;
+					door = Directions::Up;
 				}
 				else
 				{
-					door = DIR_DOWN;
+					door = Directions::Down;
 				}
 
 				pexit = obj->in_room->exit[door];
 
 				if (pexit != NULL && (to_room = pexit->u1.to_room) != NULL)
 				{
-					if (door == DIR_UP)
+					if (door == Directions::Up)
 					{
 						if (obj->in_room->people && obj->in_room->sector_type == SECT_UNDERWATER)
 						{
@@ -2957,27 +2992,40 @@ bool do_mob_cast(CHAR_DATA *ch)
 	return true;
 }
 
+/**
+ * @brief Reverse the direction of motion given.
+ * 
+ * @param dir The current path of travel
+ * @return int The new inverse path of travel (Up/Down, East/West, North/South)
+ */
 int reverse_d(int dir)
 {
-	if (dir == DIR_NORTH)
-		return DIR_SOUTH;
-
-	if (dir == DIR_SOUTH)
-		return DIR_NORTH;
-
-	if (dir == DIR_WEST)
-		return DIR_EAST;
-
-	if (dir == DIR_EAST)
-		return DIR_WEST;
-
-	if (dir == DIR_UP)
-		return DIR_DOWN;
-
-	if (dir == DIR_DOWN)
-		return DIR_UP;
-
-	return 0;
+	int newDir = 0;
+	switch(dir)
+	{
+		case Directions::North:
+			newDir = Directions::South;
+			break;
+		case Directions::South:
+			newDir = Directions::North;
+			break;
+		case Directions::West:
+			newDir = Directions::East;
+			break;
+		case Directions::East:
+			newDir = Directions::West;
+			break;
+		case Directions::Up: 
+			newDir = Directions::Down;
+			break;
+		case Directions::Down:
+			newDir = Directions::Up;
+			break;
+		default:
+			newDir = Directions::North;
+			break;
+	}
+	return newDir;
 }
 
 int get_grav_distance(OBJ_DATA *obj)

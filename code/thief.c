@@ -2119,9 +2119,9 @@ void do_bind(CHAR_DATA *ch, char *argument)
 		af.type = gsn_bind;
 		af.level = ch->level;
 
-		sprintf(buf, "bind %s", arg2);
+		auto buffer = fmt::format("bind {}", arg2);
 
-		af.name = palloc_string(buf);
+		af.name = palloc_string(buffer.c_str()); // TODO: not sure what palloc_string does
 		af.duration = -1;
 
 		if (!str_cmp(arg2, "head"))

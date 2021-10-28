@@ -36,7 +36,7 @@
 bool check_ban(char *usite, int type, int host)
 {
 	BAN_DATA *pban;
-	char buf[MSL], site[MSL];
+	char site[MSL];
 	CRow row;
 
 	strcpy(site, capitalize(usite));
@@ -50,8 +50,8 @@ bool check_ban(char *usite, int type, int host)
 			row = RS.SQL.GetRow();
 			if (strstr(site, row[0]) != NULL)
 			{
-				sprintf(buf, "BANNED - %s just tried to connect.", site);
-				wiznet(buf, NULL, NULL, WIZ_LOGINS, 0, 0);
+				auto buffer = fmt::format("BANNED - {} just tried to connect.", site); //TODO: change the rest of the sprintf calls to format
+				wiznet(buffer.data(), NULL, NULL, WIZ_LOGINS, 0, 0);
 				return true;
 			}
 		}

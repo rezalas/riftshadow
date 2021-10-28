@@ -68,6 +68,25 @@
 		"cinttypes": "cpp"
 	},
 	"testMate.cpp.test.executables": "tests/*{_tests}*",
+	"testMate.cpp.debug.configTemplate": { 
+		"type": "cppvsdbg", 
+		"program": "${exec}", 
+		"args": "${argsArray}", 
+		"env": "${envObj}", 
+		"environment": "${envObjArray}", 
+		"cwd": "${workspaceFolder}",
+		"linux": { 
+			"type": "cppdbg", 
+			"MIMode": "gdb"
+		}, 
+		"osx": { 
+			"type": "cppdbg", 
+			"MIMode": "lldb" 
+		}, 
+		"windows": { 
+			"type": "cppvsdbg" 
+		}, 
+	},
 	"C_Cpp.intelliSenseEngine": "Tag Parser",
 	"php.suggest.basic": false,
 	"php.validate.enable": false,
@@ -110,5 +129,6 @@
 				}
 			}
 		]
-	}
+	},
+	"cmake.configureOnOpen": false
 }

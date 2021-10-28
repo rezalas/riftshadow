@@ -33,6 +33,8 @@
 
 #include "act_wiz.h"
 #include "prof.h"
+#include "weather_enums.h"
+
 
 AREA_DATA *area_first;
 unsigned int *gDebug;
@@ -331,9 +333,11 @@ void do_induct(CHAR_DATA *ch, char *argument)
 			for (i = 1; i < MAX_CABAL; i++)
 			{
 				sprintf(tbuf, "%d", cabal_max[i]);
-				sprintf(buf, "%-12s %-4d / %s\n\r", capitalize(cabal_table[i].name), cabal_members[i],
-						(cabal_table[i].max_members != 1) ? tbuf : "none");
-				send_to_char(buf, ch);
+				auto buffer = fmt::sprintf("%-12s %-4d / %s\n\r", 
+					capitalize(cabal_table[i].name), 
+					cabal_members[i],
+					(cabal_table[i].max_members != 1) ? tbuf : "none");
+				send_to_char(buffer.c_str(), ch);
 			}
 
 			send_to_char("--------------------------\n\r", ch);
@@ -1288,9 +1292,8 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 				&& d->character->in_room != NULL
 				&& can_see(ch, d->character))
 			{
-				char buf[MAX_STRING_LENGTH];
-				sprintf(buf, "%s %s", d->character->name, arg2);
-				do_transfer(ch, buf);
+				auto buffer = fmt::format("{} {}", d->character->name, arg2);
+				do_transfer(ch, buffer.data());
 			}
 		}
 
@@ -2262,7 +2265,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		else
 			sprintf(buf2, "Spell");
 
-		sprintf(buf, "%s: '%s' modifies %s by %d for %d%s hours with %s-bits %s, owner %s, level %d.\n\r",
+		auto buffer = fmt::sprintf(buf, "%s: '%s' modifies %s by %d for %d%s hours with %s-bits %s, owner %s, level %d.\n\r",
 			buf2,
 			skill_table[(int)paf->type].name,
 			(paf->where == TO_OBJ_AFFECTS)
@@ -2278,7 +2281,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 			(paf->where == TO_OBJ_AFFECTS) ? "aff" : (paf->where == TO_OBJ_APPLY) ? "apply" : "?",
 			oaffect_bit_name(paf->bitvector),
 			(paf->owner) ? paf->owner->name : "none", paf->level);
-		send_to_char(buf, ch);
+		send_to_char(buffer.c_str(), ch);
 	}
 }
 
@@ -2326,16 +2329,16 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 	switch (area->temp)
 	{
-		case TEMP_HOT:
+		case Temperature::Hot:
 			sprintf(buf, "Hot\n\r");
 			break;
-		case TEMP_WARM:
+		case Temperature::Warm:
 			sprintf(buf, "Warm\n\r");
 			break;
-		case TEMP_COOL:
+		case Temperature::Cool:
 			sprintf(buf, "Cool\n\r");
 			break;
-		case TEMP_COLD:
+		case Temperature::Cold:
 			sprintf(buf, "Cold\n\r");
 			break;
 		default:
@@ -2349,16 +2352,16 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 	switch (area->wind)
 	{
-		case WIND_CALM:
+		case Windspeed::Calm:
 			sprintf(buf, "Calm\n\r");
 			break;
-		case WIND_BREEZE:
+		case Windspeed::Breeze:
 			sprintf(buf, "Breeze\n\r");
 			break;
-		case WIND_WINDY:
+		case Windspeed::Windy:
 			sprintf(buf, "Windy\n\r");
 			break;
-		case WIND_GALE:
+		case Windspeed::Gale:
 			sprintf(buf, "Gale\n\r");
 			break;
 		default:
@@ -2372,31 +2375,31 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 	switch (area->sky)
 	{
-		case SKY_CLEAR:
+		case WeatherCondition::Clear:
 			sprintf(buf, "Clear\n\r");
 			break;
-		case SKY_PCLOUDY:
+		case WeatherCondition::PartlyCloudy:
 			sprintf(buf, "Partly cloudy\n\r");
 			break;
-		case SKY_OVERCAST:
+		case WeatherCondition::Overcast:
 			sprintf(buf, "Overcast\n\r");
 			break;
-		case SKY_DRIZZLE:
+		case WeatherCondition::Drizzle:
 			sprintf(buf, "Drizzling\n\r");
 			break;
-		case SKY_DOWNPOUR:
+		case WeatherCondition::Downpour:
 			sprintf(buf, "Pouring rain\n\r");
 			break;
-		case SKY_TSTORM:
+		case WeatherCondition::ThunderStorm:
 			sprintf(buf, "Thunderstorm\n\r");
 			break;
-		case SKY_FLURRY:
+		case WeatherCondition::SnowFlurry:
 			sprintf(buf, "Snow flurries\n\r");
 			break;
-		case SKY_BLIZZARD:
+		case WeatherCondition::Blizzard:
 			sprintf(buf, "Blizzard\n\r");
 			break;
-		case SKY_HAIL:
+		case WeatherCondition::Hail:
 			sprintf(buf, "Hail\n\r");
 			break;
 		default:
@@ -2457,6 +2460,7 @@ void do_astat(CHAR_DATA *ch, char *argument)
 
 void do_mstat(CHAR_DATA *ch, char *argument)
 {
+	std::string buffer;
 	char buf[MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH];
 	char cred[MSL], tbuf[MSL];
@@ -2626,7 +2630,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 
 		sprintf(cred, "%d", victim->pcdata->bounty_credits);
-		sprintf(buf, "Limbs:  %-2d/%-2d       DefMod: %-3d%%        Cabal:  %-9s  CLevel: %-7d %s %s%s%s\n\r",
+		buffer = fmt::sprintf("Limbs:  %-2d/%-2d       DefMod: %-3d%%        Cabal:  %-9s  CLevel: %-7d %s %s%s%s\n\r",
 			victim->arms,
 			victim->legs,
 			victim->defense_mod,
@@ -2635,8 +2639,8 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 			victim->pcdata->tribe ? "Tribe: " : "",
 			victim->pcdata->tribe ? tribe_table[victim->pcdata->tribe].name : "",
 			victim->pcdata->bounty_credits > 0 ? "Credits: " : "",
-			victim->pcdata->bounty_credits > 0 ? cred : "");
-		send_to_char(buf, ch);
+			victim->pcdata->bounty_credits > 0 ? cred : ""); //TODO: change the rest of the sprintf calls to format
+		send_to_char(buffer.c_str(), ch);
 
 		sprintf(buf, "PKDs:   %-4.1f (%-2d)   MobDs:  %-10d  PKWins: %.1f(%-3d)   G/N/E:  %.1f(%-2d)/%.1f(%-2d)/%.1f(%-2d)\n\r",
 			victim->pcdata->fragged,
@@ -2888,14 +2892,14 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		char tbuf[MSL];
 		colorconv(tbuf, victim->short_descr, ch);
 		strcat(tbuf, "\n\r");
-		sprintf(buf, "Ward does the following area echo every %d seconds between %d%s and %d%s to the vnum range %d-%d:\n\r%s",
+		buffer = fmt::sprintf("Ward does the following area echo every %d seconds between %d%s and %d%s to the vnum range %d-%d:\n\r%s",
 			victim->level,
 			victim->armor[2] % 12 > 0 ? victim->armor[2] % 12 : 12, victim->armor[2] >= 12 ? "pm" : "am",
 			victim->armor[3] % 12 > 0 ? victim->armor[3] % 12 : 12, victim->armor[3] >= 12 ? "pm" : "am",
 			victim->armor[0],
 			victim->armor[1],
 			tbuf);
-		send_to_char(buf, ch);
+		send_to_char(buffer.c_str(), ch);
 	}
 
 	if (is_npc(victim))
@@ -3002,7 +3006,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		else
 			sprintf(buf2, "Spell");
 
-		sprintf(buf, "%s: '%s' %s%s%smodifies %s by %d for %d%s hours with %s-bits %s, owner %s, level %d.\n\r",
+		buffer = fmt::sprintf("%s: '%s' %s%s%smodifies %s by %d for %d%s hours with %s-bits %s, owner %s, level %d.\n\r",
 			buf2,
 			skill_table[(int)paf->type].name,
 			paf->name ? "(" : "", paf->name ? paf->name : "",
@@ -3018,7 +3022,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 				? imm_bit_name(paf->bitvector)
 				: affect_bit_name(paf->bitvector),
 			paf->owner != NULL ? paf->owner->true_name : "none", paf->level);
-		send_to_char(buf, ch);
+		send_to_char(buffer.c_str(), ch);
 	}
 
 	if (is_affected(victim, gsn_word_of_command))
@@ -3429,26 +3433,27 @@ void do_reboot(CHAR_DATA *ch, char *argument)
 	extern int reboot_num;
 	int mins = 0;
 	char send[MSL];
-	char arg1[MSL], area[MSL] = "";
+	char arg1[MSL];
 	AREA_DATA *pArea = NULL;
 	bool found = false;
 
 	argument = one_argument(argument, arg1);
 	mins = atoi(arg1);
 
+	std::string area = std::string("");
 	for (pArea = area_first; pArea != NULL; pArea = pArea->next)
 	{
 		if (IS_SET(pArea->area_flags, AREA_CHANGED) || IS_SET(pArea->area_flags, AREA_ADDED))
 		{
 			found = true;
-			sprintf(area, "%s%24s\n\r", area, pArea->name);
+			area += fmt::sprintf("%24s\n\r", pArea->name);
 		}
 	}
 
 	if ((str_cmp(argument, "now") && str_cmp(arg1, "now")) && found)
 	{
 		send_to_char("The following areas have had changes made and need to be saved.  If you want\n\rto override, specify 'now' after your reboot command.\n\r", ch);
-		send_to_char(area, ch);
+		send_to_char(area.c_str(), ch);
 		return;
 	}
 
@@ -6809,8 +6814,8 @@ void do_history(CHAR_DATA *ch, char *argument)
 	if (victim == NULL)
 	{
 		send_to_char("They aren't here, attempting offline history...\n\r", ch);
-		sprintf(buf, "finger %s history", arg1);
-		interpret(ch, buf);
+		auto buffer = fmt::format("finger {} history", arg1);
+		interpret(ch, buffer.data());
 		return;
 	}
 
@@ -6947,7 +6952,7 @@ void add_history(CHAR_DATA *ch, CHAR_DATA *victim, char *string)
 	chomp(strtime);
 
 	if (victim->pcdata->history_buffer)
-		sprintf(buf, victim->pcdata->history_buffer);
+		sprintf(buf, "%s", victim->pcdata->history_buffer);
 	else
 		strcpy(buf, "");
 
@@ -7698,16 +7703,16 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 
 	fp = fopen(RIFT_CODE_DIR "/climate-dump.txt", "w");
 
-	for (i = 0; climate_table[i].number != CLIMATE_ENGLISH; i++)
+	for (i = 0; climate_table[i].number != Climate::English; i++)
 	{
 		fprintf(fp, "%s;%d;", climate_table[i].name, climate_table[i].number);
 
-		for (j = 0; j < MAX_SKY; j++)
+		for (j = 0; j < WeatherCondition::MaxWeatherCondition; j++)
 		{
 			if (j != 0)
 				fprintf(fp, ",");
 
-			for (k = 0; k < NUM_SEASONS; k++)
+			for (k = 0; k < Seasons::SeasonsCount; k++)
 			{
 				if (k != 0)
 					fprintf(fp, "|");
@@ -7718,12 +7723,12 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 
 		fprintf(fp, ";");
 
-		for (j = 0; j < MAX_TEMP; j++)
+		for (j = 0; j < Temperature::MaxTemperature; j++)
 		{
 			if (j != 0)
 				fprintf(fp, ",");
 
-			for (k = 0; k < NUM_SEASONS; k++)
+			for (k = 0; k < Seasons::SeasonsCount; k++)
 			{
 				if (k != 0)
 					fprintf(fp, "|");
@@ -7808,7 +7813,7 @@ void do_racedump(CHAR_DATA *ch, char *argument)
 
 		for (i = 0; i < 15; i++)
 		{
-			if (race_table[race].form[i] != NO_FLAG && race_table[race].form[i] < cc)
+			if (race_table[race].form[i] != NO_FLAG && race_table[race].form[i] < ASCII_cc)
 			{
 				temp_bit += (long int)pow(2, race_table[race].form[i]);
 				sprintf(buf, "(FORM) %d-%d = %ld\n\r", race, i, (long int)pow(2, race_table[race].parts[i]));
@@ -7821,7 +7826,7 @@ void do_racedump(CHAR_DATA *ch, char *argument)
 
 		for (i = 0; i < 15; i++)
 		{
-			if (race_table[race].parts[i] != NO_FLAG && race_table[race].parts[i] < cc)
+			if (race_table[race].parts[i] != NO_FLAG && race_table[race].parts[i] < ASCII_cc)
 			{
 				temp_bit += (long int)pow(2, race_table[race].parts[i]);
 				sprintf(buf, "(PARTS) %d-%d = %ld\n\r", race, i, (long int)pow(2, race_table[race].parts[i]));

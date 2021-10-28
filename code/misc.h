@@ -14,6 +14,7 @@
 #include "db.h"
 #include "lookup.h"
 #include "tables.h"
+#include "./include/fmt/format.h"
 
 #define PIECE_NONE					-1
 #define WHITE_PAWN					0

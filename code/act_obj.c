@@ -3772,9 +3772,9 @@ void do_buy(CHAR_DATA *ch, char *argument)
 
 		if (arg[0] != '\0')
 		{
-			sprintf(buf, "%s %s", pet->name, arg);
+			auto buffer = fmt::format("{} {}", pet->name, arg);
 			free_pstring(pet->name);
-			pet->name = palloc_string(buf);
+			pet->name = palloc_string(buffer.c_str()); // TODO: not sure what palloc_string does
 		}
 
 		sprintf(buf, "%sA neck tag says 'I belong to %s'.\n\r", pet->description, ch->name);

@@ -407,7 +407,7 @@ bool open_prog_nodoor(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *exit)
 bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 {
 	ROOM_INDEX_DATA *room2 = get_room_index(24559);
-	EXIT_DATA *exit = room2->exit[DIR_EAST];
+	EXIT_DATA *exit = room2->exit[Directions::East];
 	OBJ_DATA *obj, *corpse;
 	bool found= false;
 
@@ -445,13 +445,13 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 
 bool move_prog_horde_shrine(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 {
-	if (dir == DIR_SOUTH && !is_affected(ch, gsn_horde_communion))
+	if (dir == Directions::South && !is_affected(ch, gsn_horde_communion))
 	{
 		send_to_char("Alas, you cannot go that way.\n\r", ch);
 		return false;
 	}
 
-	if (dir == DIR_SOUTH && is_affected(ch, gsn_horde_communion))
+	if (dir == Directions::South && is_affected(ch, gsn_horde_communion))
 	{
 		send_to_char("With a muted hush, the bushes part easily, allowing you passage to the south.\n\r", ch);
 		return true;

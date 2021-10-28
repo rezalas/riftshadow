@@ -11,10 +11,10 @@ else()
 	set(CXXCOMPILER "/usr/bin/g++")
 endif()
 set(CMAKE_C_COMPILER "${CCOMPILER}")
-set(CMAKE_C_FLAGS "-O1 -g")
+set(CMAKE_C_FLAGS "-O1 -g -DFMT_HEADER_ONLY")
 
 set(CMAKE_CXX_COMPILER "${CXXCOMPILER}")
-set(CMAKE_CXX_FLAGS "-O1 -g -Wno-write-strings")
+set(CMAKE_CXX_FLAGS "-O1 -g -Wno-write-strings -DFMT_HEADER_ONLY")
 
 
 project(riftshadow)

@@ -505,59 +505,59 @@ void pulse_prog_arangird_patrol(CHAR_DATA *mob)
 	{
 		case 21847:
 			do_south(mob, "");
-			dir_next = DIR_WEST;
+			dir_next = Directions::West;
 			break;
 		case 21848:
 			do_west(mob, "");
-			dir_next = DIR_WEST;
+			dir_next = Directions::West;
 			break;
 		case 21849:
 			do_west(mob, "");
-			dir_next = DIR_WEST;
+			dir_next = Directions::West;
 			break;
 		case 21850:
 			do_west(mob, "");
-			dir_next = DIR_NORTH;
+			dir_next = Directions::North;
 			break;
 		case 21851:
 			do_north(mob, "");
-			dir_next = DIR_WEST;
+			dir_next = Directions::West;
 			break;
 		case 21852:
 			do_west(mob, "");
-			dir_next = DIR_NORTH;
+			dir_next = Directions::North;
 			break;
 		case 21853:
 			do_north(mob, "");
-			dir_next = DIR_NORTH;
+			dir_next = Directions::North;
 			break;
 		case 21854:
 			do_north(mob, "");
-			dir_next = DIR_EAST;
+			dir_next = Directions::East;
 			break;
 		case 21855:
 			do_east(mob, "");
-			dir_next = DIR_SOUTH;
+			dir_next = Directions::South;
 			break;
 		case 21856:
 			do_south(mob, "");
-			dir_next = DIR_EAST;
+			dir_next = Directions::East;
 			break;
 		case 21857:
 			do_east(mob, "");
-			dir_next = DIR_EAST;
+			dir_next = Directions::East;
 			break;
 		case 21858:
 			do_east(mob, "");
-			dir_next = DIR_EAST;
+			dir_next = Directions::East;
 			break;
 		case 21859:
 			do_east(mob, "");
-			dir_next = DIR_SOUTH;
+			dir_next = Directions::South;
 			break;
 		case 21860:
 			do_south(mob, "");
-			dir_next = DIR_SOUTH;
+			dir_next = Directions::South;
 			break;
 		default:
 			return;
@@ -1003,7 +1003,7 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 	if (room->vnum < 9141 || room->vnum > 9146)
 		return;
 
-	if (!room->exit[DIR_UP] || ((surface = room->exit[DIR_UP]->u1.to_room) == NULL))
+	if (!room->exit[Directions::Up] || ((surface = room->exit[Directions::Up]->u1.to_room) == NULL))
 		return;
 
 	if (is_affected_room(surface, gsn_glaciate))
@@ -1074,13 +1074,13 @@ void pulse_prog_ilopheth_weatherbeaten(CHAR_DATA *mob)
 	if (mob->fighting || mob->position < POS_RESTING)
 		return;
 
-	if (sun == SUN_SET && mob->in_room->vnum == 9121)
+	if (sun == SolarPosition::Sunset && mob->in_room->vnum == 9121)
 	{
 		act("The old man glances up at the darkening sky, and trudges off into the forest to the south.", mob, 0, 0, TO_ROOM);
 		char_from_room(mob);
 		char_to_room(mob, limbo);
 	}
-	else if (sun == SUN_RISE && mob->in_room->vnum == 2)
+	else if (sun == SolarPosition::Sunrise && mob->in_room->vnum == 2)
 	{
 		char_from_room(mob);
 		char_to_room(mob, forest);
@@ -1293,7 +1293,7 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 
 bool move_prog_horde_shrine_ward(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
 {
-	if (direction != DIR_SOUTH)
+	if (direction != Directions::South)
 		return true;
 
 	if (is_npc(ch))
@@ -1459,7 +1459,7 @@ void pulse_prog_shopkeeper(CHAR_DATA *mob)
 
 bool move_prog_theatre_guard(CHAR_DATA *ch, CHAR_DATA *mob, ROOM_INDEX_DATA *from, int direction)
 {
-	if (direction != DIR_SOUTH || is_immortal(ch))
+	if (direction != Directions::South || is_immortal(ch))
 		return true;
 
 	if (ch->pause)
@@ -2384,7 +2384,7 @@ void fight_prog_gking(CHAR_DATA *mob, CHAR_DATA *victim)
 
 void pulse_prog_nocturnal_mob(CHAR_DATA *mob)
 {
-	if ((sun == SUN_RISE || sun == SUN_LIGHT) && number_percent() < 30 && mob->fighting == NULL)
+	if ((sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight) && number_percent() < 30 && mob->fighting == NULL)
 	{
 		extract_char(mob, true);
 	}
@@ -2392,7 +2392,7 @@ void pulse_prog_nocturnal_mob(CHAR_DATA *mob)
 
 void pulse_prog_diurnal_mob(CHAR_DATA *mob)
 {
-	if (sun == SUN_DARK && number_percent() < 30 && mob->fighting == NULL)
+	if (sun == SolarPosition::Dark && number_percent() < 30 && mob->fighting == NULL)
 	{
 		extract_char(mob, true);
 	}
@@ -3454,7 +3454,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 		return;
 	}
 
-	if ((sun == SUN_RISE || sun == SUN_LIGHT) && !is_affected_by(mob, AFF_NOSHOW))
+	if ((sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight) && !is_affected_by(mob, AFF_NOSHOW))
 	{
 		if (mob->fighting)
 			stop_fighting(mob, true);
@@ -3464,7 +3464,7 @@ void pulse_prog_night_creeps(CHAR_DATA *mob)
 		SET_BIT(mob->affected_by, AFF_NOSHOW);
 		return;
 	}
-	else if ((sun == SUN_SET || sun == SUN_DARK) && is_affected_by(mob, AFF_NOSHOW) && is_affected_by(mob, AFF_DETECT_MAGIC))
+	else if ((sun == SolarPosition::Sunset || sun == SolarPosition::Dark) && is_affected_by(mob, AFF_NOSHOW) && is_affected_by(mob, AFF_DETECT_MAGIC))
 	{
 		REMOVE_BIT(mob->affected_by, AFF_NOSHOW);
 

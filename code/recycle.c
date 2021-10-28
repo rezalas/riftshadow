@@ -404,12 +404,12 @@ PATHFIND_DATA *new_path_data(void)
 
 void free_path(PATHFIND_DATA *path)
 {
-	if (!path->dir_to[DIR_NORTH]
-		&& !path->dir_to[DIR_EAST]
-		&& !path->dir_to[DIR_SOUTH]
-		&& !path->dir_to[DIR_WEST]
-		&& !path->dir_to[DIR_UP]
-		&& !path->dir_to[DIR_DOWN])
+	if (!path->dir_to[Directions::North]
+		&& !path->dir_to[Directions::East]
+		&& !path->dir_to[Directions::South]
+		&& !path->dir_to[Directions::West]
+		&& !path->dir_to[Directions::Up]
+		&& !path->dir_to[Directions::Down])
 	{
 		delete path;
 	}

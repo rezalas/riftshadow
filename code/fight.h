@@ -38,6 +38,7 @@
 #include "const.h"
 #include "material.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 #define HITS 					(dt==gsn_kick||dt==gsn_throw||dt==gsn_bash)
 #define PEER_BALANCE_DISTANCE	8

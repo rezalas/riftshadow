@@ -525,22 +525,20 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	char buf[MAX_STRING_LENGTH];
-	if (level > LEVEL_HERO)
-		sprintf(buf, " [%d]: %s", level, buf2);
-	else
-		sprintf(buf, ": %s", buf2);
+	auto buffer = level > LEVEL_HERO
+		? fmt::format(" [{}]: {}", level, buf2)
+		: fmt::format(": {}", buf2); //TODO: change the rest of the sprintf calls to format
 
 	REMOVE_BIT(ch->comm, COMM_NOWIZ);
 
 	if (IS_SET(ch->comm, COMM_ANSI))
 	{
 		sprintf(buf2, "%s[IMM] $n$t%s", get_char_color(ch, "immtalk"), END_COLOR(ch));
-		act_new(buf2, ch, buf, 0, TO_CHAR, POS_DEAD);
+		act_new(buf2, ch, buffer.data(), 0, TO_CHAR, POS_DEAD);
 	}
 	else
 	{
-		act_new("[IMM] $n$t", ch, buf, 0, TO_CHAR, POS_DEAD);
+		act_new("[IMM] $n$t", ch, buffer.data(), 0, TO_CHAR, POS_DEAD);
 	}
 
 	for (auto wch = char_list; wch != NULL; wch = wch->next)
@@ -553,11 +551,11 @@ void do_immtalk(CHAR_DATA *ch, char *argument)
 			if (IS_SET(wch->comm, COMM_ANSI))
 			{
 				sprintf(buf2, "%s[IMM] $n$t%s", get_char_color(wch, "immtalk"), END_COLOR(wch));
-				act_new(buf2, ch, buf, wch, TO_VICT, POS_DEAD);
+				act_new(buf2, ch, buffer.data(), wch, TO_VICT, POS_DEAD);
 			}
 			else
 			{
-				act_new("[IMM] $n$t", ch, buf, wch, TO_VICT, POS_DEAD);
+				act_new("[IMM] $n$t", ch, buffer.data(), wch, TO_VICT, POS_DEAD);
 			}
 		}
 	}
@@ -689,9 +687,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 	else
 		sprintf(saymsg, "say");
 
-	char buf[MAX_STRING_LENGTH];
-	sprintf(buf, "You %s '%s$T%s'", saymsg, get_char_color(ch, "speech"), END_COLOR(ch));
-	act(buf, ch, NULL, argument, TO_CHAR);
+	auto buffer = fmt::format("You {} '{}$T{}'", saymsg, get_char_color(ch, "speech"), END_COLOR(ch));
+	act(buffer.c_str(), ch, NULL, argument, TO_CHAR);
 
 	for (auto victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
 	{
@@ -703,8 +700,8 @@ void do_say(CHAR_DATA *ch, char *argument)
 			}
 			else
 			{
-				sprintf(buf, "$n %ss '%s$t%s'", saymsg, get_char_color(victim, "speech"), END_COLOR(victim));
-				act(buf, ch, argument, victim, TO_VICT);
+				buffer = fmt::format("$n {}s '{}$t{}'", saymsg, get_char_color(victim, "speech"), END_COLOR(victim));
+				act(buffer.c_str(), ch, argument, victim, TO_VICT);
 
 				if (is_affected(victim, gsn_word_of_command) && strstr(argument, victim->pcdata->command[0]))
 					command_execute(victim);
@@ -815,9 +812,8 @@ void say_to(CHAR_DATA *ch, CHAR_DATA *victim, char *argument, char *extra)
 		}
 		else
 		{
-			char buf[MAX_STRING_LENGTH];
-			sprintf(buf, "$n %ss '%s%s%s'", saymsg, get_char_color(victim, "speech"), argument, END_COLOR(victim));
-			act(buf, ch, extra, victim, TO_VICT);
+			auto buffer = fmt::format("$n {}s '{}{}{}'", saymsg, get_char_color(victim, "speech"), argument, END_COLOR(victim));
+			act(buffer.c_str(), ch, extra, victim, TO_VICT);
 
 			if (is_affected(victim, gsn_word_of_command) && strstr(argument, victim->pcdata->command[0]))
 				command_execute(victim);
@@ -1015,7 +1011,7 @@ void do_sing(CHAR_DATA *ch, char *argument)
 
 	buf2[i] = '\0';
 
-	char buf3[MAX_STRING_LENGTH];
+	std::string buffer3;
 	for (auto victim = ch->in_room->people; victim; victim = victim->next_in_room)
 	{
 		if (is_awake(victim))
@@ -1026,8 +1022,8 @@ void do_sing(CHAR_DATA *ch, char *argument)
 			}
 			else
 			{
-				sprintf(buf3, "$n sings '%s%s%s'", get_char_color(victim, "song"), buf, END_COLOR(victim));
-				act(buf3, ch, 0, victim, TO_VICT);
+				buffer3 = fmt::format("$n sings '{}{}{}'", get_char_color(victim, "song"), buf, END_COLOR(victim));
+				act(buffer3.c_str(), ch, 0, victim, TO_VICT);
 
 				if (is_affected(victim, gsn_word_of_command) && strstr(argument, victim->pcdata->command[0]))
 					command_execute(victim);
@@ -1035,8 +1031,8 @@ void do_sing(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	sprintf(buf3, "You sing '%s%s%s'", get_char_color(ch, "song"), buf2, END_COLOR(ch));
-	act(buf3, ch, 0, 0, TO_CHAR);
+	buffer3 = fmt::format("You sing '{}{}{}'", get_char_color(ch, "song"), buf2, END_COLOR(ch));
+	act(buffer3.c_str(), ch, 0, 0, TO_CHAR);
 }
 
 void do_pray(CHAR_DATA *ch, char *argument)
@@ -2170,11 +2166,12 @@ void do_group(CHAR_DATA *ch, char *argument)
 
 	if (arg[0] == '\0')
 	{
-		char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH];
+		std::string buffer;
+		char buf2[MAX_STRING_LENGTH];
 		auto leader = ch->leader != NULL ? ch->leader : ch;
 
-		sprintf(buf, "%s's group:\n\r", pers(leader, ch));
-		send_to_char(buf, ch);
+		buffer = fmt::format("{}'s group:\n\r", pers(leader, ch));
+		send_to_char(buffer.c_str(), ch);
 
 		for (auto gch = char_list; gch != NULL; gch = gch->next)
 		{
@@ -2186,7 +2183,7 @@ void do_group(CHAR_DATA *ch, char *argument)
 					auto epl = pc_race_table[gch->race].xpadd + 1500;
 					epl += (int)((gch->level - 2) * epl * 0.08);
 					auto exp_ltl = (gch->level * exp_per_level(gch) - (gch->level - 1) * epl);
-					sprintf(buf, "[%2d %s] %-32s %3d%%hp %3d%%mana %3d%%mv %3d%%tnl\n\r",
+					buffer = fmt::sprintf("[%2d %s] %-32s %3d%%hp %3d%%mana %3d%%mv %3d%%tnl\n\r",
 							gch->level,
 							is_npc(gch) ? "Mob" : gch->Class()->who_name,
 							capitalize(pers(gch, ch)),
@@ -2197,18 +2194,18 @@ void do_group(CHAR_DATA *ch, char *argument)
 				}
 				else
 				{
-					sprintf(buf2, pers(gch, ch));
+					sprintf(buf2, "%s", pers(gch, ch));
 					if (buf2[0] != '\0')
 						buf2[0] = UPPER(buf2[0]);
 
-					sprintf(buf, "[Minion] %-32s %3d%%hp %3d%%mana %3d%%mv\n\r",
+					buffer = fmt::sprintf("[Minion] %-32s %3d%%hp %3d%%mana %3d%%mv\n\r",
 							buf2,
 							(gch->max_hit == 0) ? 0 : (gch->hit * 100) / gch->max_hit,
 							(gch->max_mana == 0) ? 0 : (gch->mana * 100) / gch->max_mana,
 							(gch->max_move == 0) ? 0 : (gch->move * 100) / gch->max_move);
 				}
 
-				send_to_char(buf, ch);
+				send_to_char(buffer.c_str(), ch);
 			}
 		}
 
@@ -2515,6 +2512,7 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 
 	free_pstring(copy);
 
+	std::string buffer; // outside of switch to appease the compiler gods
 	switch (line->type)
 	{
 	case SPEECH_SAY:
@@ -2524,8 +2522,8 @@ void speech_handler(CHAR_DATA *ch, CHAR_DATA *mob, SPEECH_DATA *speech)
 		say_to(mob, ch, buf, "");
 		break;
 	case SPEECH_TELL:
-		sprintf(buf, "%s %s", ch->name, buf);
-		do_tell(mob, buf);
+		buffer = fmt::format("{} {}", ch->name, buf);
+		do_tell(mob, buffer.data());
 		break;
 	case SPEECH_WHISPER:
 		do_whisper(mob, buf);

@@ -32,7 +32,8 @@
  ***************************************************************************/
 
 #include "tables.h"
-
+#include "weather_enums.h"
+#include "room.h"
 
 //Steal the flag table, we're not storing bitvectors, but shhh, we like their functions!
 const struct flag_type aftype_table[] =
@@ -208,173 +209,173 @@ const struct size_type size_table[] =
 
 const struct flag_type act_flags[] =
 {
-	//	name				bit		settable
-	{	"npc",				A,		false	},
-	{	"sentinel",			B,		true	},
-	{	"scavenger",		C,		true	},
-	{	"ward_mob",			D,		true	},
-	{	"wander",			E,		true	},
-	{	"aggressive",		F,		true	},
-	{	"stay_area",		G,		true	},
-	{	"wimpy",			H,		true	},
-	{	"pet",				I,		true	},
-	{	"train",			J,		true	},
-	{	"practice",			K,		true	},
-	{	"smarttrack",		L,		true	},
-	{	"undead",			O,		true	},
-	{	"inner_guardian",	P,		true	},
-	{	"cleric",			Q,		true	},
-	{	"mage",				R,		true	},
-	{	"intelligent",		S,		true	},
-	{	"fast_track",		T,		true	},
-	{	"noalign",			U,		true	},
-	{	"nopurge",			V,		true	},
-	{	"outdoors",			W,		true	},
-	{	"indoors",			Y,		true	},
-	{	"guildguard",		Z,		true	},
-	{	"healer",			aa,		true	},
-	{	"gain",				bb,		true	},
-	{	"update_always",	cc,		true	},
-	{	"detect_special",	dd,		true	},
-	{	"banker",			ee,		true	},
-	{	"nocturnal",		ff,		true	},
-	{	"diurnal",			gg, 	true	},
-	{	"fastwander",		hh, 	true	},
-	{	"law",				ii, 	true	},
-	{	NULL,				0,		false	}
+	//	name				bit			settable
+	{	"npc",				ASCII_A,	false	},
+	{	"sentinel",			ASCII_B,	true	},
+	{	"scavenger",		ASCII_C,	true	},
+	{	"ward_mob",			ASCII_D,	true	},
+	{	"wander",			ASCII_E,	true	},
+	{	"aggressive",		ASCII_F,	true	},
+	{	"stay_area",		ASCII_G,	true	},
+	{	"wimpy",			ASCII_H,	true	},
+	{	"pet",				ASCII_I,	true	},
+	{	"train",			ASCII_J,	true	},
+	{	"practice",			ASCII_K,	true	},
+	{	"smarttrack",		ASCII_L,	true	},
+	{	"undead",			ASCII_O,	true	},
+	{	"inner_guardian",	ASCII_P,	true	},
+	{	"cleric",			ASCII_Q,	true	},
+	{	"mage",				ASCII_R,	true	},
+	{	"intelligent",		ASCII_S,	true	},
+	{	"fast_track",		ASCII_T,	true	},
+	{	"noalign",			ASCII_U,	true	},
+	{	"nopurge",			ASCII_V,	true	},
+	{	"outdoors",			ASCII_W,	true	},
+	{	"indoors",			ASCII_Y,	true	},
+	{	"guildguard",		ASCII_Z,	true	},
+	{	"healer",			ASCII_aa,	true	},
+	{	"gain",				ASCII_bb,	true	},
+	{	"update_always",	ASCII_cc,	true	},
+	{	"detect_special",	ASCII_dd,	true	},
+	{	"banker",			ASCII_ee,	true	},
+	{	"nocturnal",		ASCII_ff,	true	},
+	{	"diurnal",			ASCII_gg, 	true	},
+	{	"fastwander",		ASCII_hh, 	true	},
+	{	"law",				ASCII_ii, 	true	},
+	{	NULL,				0,			false	}
 };
 
 const struct flag_type plr_flags[] =
 {
 	//	name				bit				settable
-	{	"npc",				A,				false	},
-	{	"autoabort",		B,				false	},
-	{	"autoassist",		C,				false	},
-	{	"autoexit",			D,				false	},
-	{	"autoloot",			E,				false	},
-	{	"autosac",			F,				false	},
-	{	"autogold",			G,				false	},
-	{	"autosplit",		H,				false	},
+	{	"npc",				ASCII_A,		false	},
+	{	"autoabort",		ASCII_B,		false	},
+	{	"autoassist",		ASCII_C,		false	},
+	{	"autoexit",			ASCII_D,		false	},
+	{	"autoloot",			ASCII_E,		false	},
+	{	"autosac",			ASCII_F,		false	},
+	{	"autogold",			ASCII_G,		false	},
+	{	"autosplit",		ASCII_H,		false	},
 	{	"ignorant",			PLR_IGNORANT,	true	},
-	{	"betrayer",			K,				true	},
+	{	"betrayer",			ASCII_K,		true	},
 	{	"coder",			PLR_CODER,		true	},
-	{	"heroimm",			M,				true	},
-	{	"holylight",		N,				false	},
-	{	"empowered",		O,				false	},
-	{	"no_void",			P,				false	},
-	{	"nosummon",			Q,				false	},
-	{	"nofollow",			R,				false	},
-	{	"no_transfer",		T,				true	},
-	{	"permit",			U,				true	},
-	{	"moron",			V,				true	},
-	{	"log",				W,				false	},
-	{	"deny",				X,				true	},
-	{	"freeze",			Y,				false	},
-	{	"thief",			Z,				false	},
-	{	"killer",			aa,				false	},
-	{	"criminal",			bb,				false	},
+	{	"heroimm",			ASCII_M,		true	},
+	{	"holylight",		ASCII_N,		false	},
+	{	"empowered",		ASCII_O,		false	},
+	{	"no_void",			ASCII_P,		false	},
+	{	"nosummon",			ASCII_Q,		false	},
+	{	"nofollow",			ASCII_R,		false	},
+	{	"no_transfer",		ASCII_T,		true	},
+	{	"permit",			ASCII_U,		true	},
+	{	"moron",			ASCII_V,		true	},
+	{	"log",				ASCII_W,		false	},
+	{	"deny",				ASCII_X,		true	},
+	{	"freeze",			ASCII_Y,		false	},
+	{	"thief",			ASCII_Z,		false	},
+	{	"killer",			ASCII_aa,		false	},
+	{	"criminal",			ASCII_bb,		false	},
 	{	NULL,				0,				false	}
 };
 
 const struct flag_type affect_flags[] =
 {
-	//	name				bit		settable
-	{	"blind",			A,		true	},
-	{	"invisible",		B,		true	},
-	{	"detect_evil",		C,		true	},
-	{	"detect_invis",		D,		true	},
-	{	"detect_magic",		E,		true	},
-	{	"detect_hidden",	F,		true	},
-	{	"detect_good",		G,		true	},
-	{	"sanctuary",		H,		true	},
-	{	"detect_camo",		I,		true	},
-	{	"infrared",			J,		true	},
-	{	"curse",			K,		true	},
-	{   "camouflage",		L,		true	},
-	{	"poison",			M,		true	},
-	{	"protection",		N,		true	},
-	{	"rage",				O,		true	},
-	{	"sneak",			P,		true	},
-	{	"hide",				Q,		true	},
-	{	"sleep",			R,		true	},
-	{	"charm",			S,		true	},
-	{	"flying",			T,		true	},
-	{	"pass_door",		U,		true	},
-	{	"haste",			V,		true	},
-	{	"calm",				W,		true	},
-	{	"plague",			X,		true	},
-	{	"permanent",		Y,		true	},
-	{	"dark_vision",		Z,		true	},
-	{	"berserk",			aa,		true	},
-	{	"waterbreath",		bb,		true	},
-	{	"regeneration",		cc,		true	},
-	{	"slow",				dd,		true	},
-	{	"noshow",			ee,		true	},
-	{	"darksanc",			ff, 	true	},
-	{	NULL,				0,		false	}
+	//	name				bit			settable
+	{	"blind",			ASCII_A,	true	},
+	{	"invisible",		ASCII_B,	true	},
+	{	"detect_evil",		ASCII_C,	true	},
+	{	"detect_invis",		ASCII_D,	true	},
+	{	"detect_magic",		ASCII_E,	true	},
+	{	"detect_hidden",	ASCII_F,	true	},
+	{	"detect_good",		ASCII_G,	true	},
+	{	"sanctuary",		ASCII_H,	true	},
+	{	"detect_camo",		ASCII_I,	true	},
+	{	"infrared",			ASCII_J,	true	},
+	{	"curse",			ASCII_K,	true	},
+	{   "camouflage",		ASCII_L,	true	},
+	{	"poison",			ASCII_M,	true	},
+	{	"protection",		ASCII_N,	true	},
+	{	"rage",				ASCII_O,	true	},
+	{	"sneak",			ASCII_P,	true	},
+	{	"hide",				ASCII_Q,	true	},
+	{	"sleep",			ASCII_R,	true	},
+	{	"charm",			ASCII_S,	true	},
+	{	"flying",			ASCII_T,	true	},
+	{	"pass_door",		ASCII_U,	true	},
+	{	"haste",			ASCII_V,	true	},
+	{	"calm",				ASCII_W,	true	},
+	{	"plague",			ASCII_X,	true	},
+	{	"permanent",		ASCII_Y,	true	},
+	{	"dark_vision",		ASCII_Z,	true	},
+	{	"berserk",			ASCII_aa,	true	},
+	{	"waterbreath",		ASCII_bb,	true	},
+	{	"regeneration",		ASCII_cc,	true	},
+	{	"slow",				ASCII_dd,	true	},
+	{	"noshow",			ASCII_ee,	true	},
+	{	"darksanc",			ASCII_ff, 	true	},
+	{	NULL,				0,			false	}
 };
 
 const struct flag_type off_flags[] =
 {
-	//	name				bit		settable
-	{	"area_attack",		A,		true	},
-	{	"backstab",			B,		true	},
-	{	"bash",				C,		true	},
-	{	"berserk",			D,		true	},
-	{	"disarm",			E,		true	},
-	{	"dodge",			F,		true	},
-	{	"fade",				G,		true	},
-	{	"fast",				H,		true	},
-	{	"kick",				I,		true	},
-	{	"dirt_kick",		J,		true	},
-	{	"parry",			K,		true	},
-	{	"rescue",			L,		true	},
-	{	"tail",				M,		true	},
-	{	"trip",				N,		true	},
-	{	"crush",			O,		true	},
-	{	"assist_all",		P,		true	},
-	{	"assist_align",		Q,		true	},
-	{	"assist_race",		R,		true	},
-	{	"assist_players",	S,		true	},
-	{	"assist_guard",		T,		true	},
-	{	"assist_vnum",		U,		true	},
-	{	"no_track",			V,		true	},
-	{	"static_track",		W,		true	},
-	{	"spam_murder",		X,		true	},
-	{	"intimidated",		Y,		true	},
-	{	"unused",			Z,		true	},
-	{	"assist_group",		aa,		true	},
-	{	NULL,				0,		0		}
+	//	name				bit			settable
+	{	"area_attack",		ASCII_A,	true	},
+	{	"backstab",			ASCII_B,	true	},
+	{	"bash",				ASCII_C,	true	},
+	{	"berserk",			ASCII_D,	true	},
+	{	"disarm",			ASCII_E,	true	},
+	{	"dodge",			ASCII_F,	true	},
+	{	"fade",				ASCII_G,	true	},
+	{	"fast",				ASCII_H,	true	},
+	{	"kick",				ASCII_I,	true	},
+	{	"dirt_kick",		ASCII_J,	true	},
+	{	"parry",			ASCII_K,	true	},
+	{	"rescue",			ASCII_L,	true	},
+	{	"tail",				ASCII_M,	true	},
+	{	"trip",				ASCII_N,	true	},
+	{	"crush",			ASCII_O,	true	},
+	{	"assist_all",		ASCII_P,	true	},
+	{	"assist_align",		ASCII_Q,	true	},
+	{	"assist_race",		ASCII_R,	true	},
+	{	"assist_players",	ASCII_S,	true	},
+	{	"assist_guard",		ASCII_T,	true	},
+	{	"assist_vnum",		ASCII_U,	true	},
+	{	"no_track",			ASCII_V,	true	},
+	{	"static_track",		ASCII_W,	true	},
+	{	"spam_murder",		ASCII_X,	true	},
+	{	"intimidated",		ASCII_Y,	true	},
+	{	"unused",			ASCII_Z,	true	},
+	{	"assist_group",		ASCII_aa,	true	},
+	{	NULL,				0,			0		}
 };
 
 const struct flag_type imm_flags[] =
 {
-	//	name				bit		settable
-	{	"summon",			A,		true	},
-	{	"charm",			B,		true	},
-	{	"magic",			C,		true	},
-	{	"weapon",			D,		true	},
-	{	"bash",				E,		true	},
-	{	"pierce",			F,		true	},
-	{	"slash",			G,		true	},
-	{	"fire",				H,		true	},
-	{	"cold",				I,		true	},
-	{	"lightning",		J,		true	},
-	{	"acid",				K,		true	},
-	{	"poison",			L,		true	},
-	{	"negative",			M,		true	},
-	{	"holy",				N,		true	},
-	{	"energy",			O,		true	},
-	{	"mental",			P,		true	},
-	{	"disease",			Q,		true	},
-	{	"drowning",			R,		true	},
-	{	"light",			S,		true	},
-	{	"sound",			T,		true	},
-	{	"mithril",			X,		true	},
-	{	"silver",			Y,		true	},
-	{	"iron",				Z,		true	},
-	{   "sleep",			aa,		true	},
-	{	NULL,				0,		0		}
+	//	name				bit			settable
+	{	"summon",			ASCII_A,	true	},
+	{	"charm",			ASCII_B,	true	},
+	{	"magic",			ASCII_C,	true	},
+	{	"weapon",			ASCII_D,	true	},
+	{	"bash",				ASCII_E,	true	},
+	{	"pierce",			ASCII_F,	true	},
+	{	"slash",			ASCII_G,	true	},
+	{	"fire",				ASCII_H,	true	},
+	{	"cold",				ASCII_I,	true	},
+	{	"lightning",		ASCII_J,	true	},
+	{	"acid",				ASCII_K,	true	},
+	{	"poison",			ASCII_L,	true	},
+	{	"negative",			ASCII_M,	true	},
+	{	"holy",				ASCII_N,	true	},
+	{	"energy",			ASCII_O,	true	},
+	{	"mental",			ASCII_P,	true	},
+	{	"disease",			ASCII_Q,	true	},
+	{	"drowning",			ASCII_R,	true	},
+	{	"light",			ASCII_S,	true	},
+	{	"sound",			ASCII_T,	true	},
+	{	"mithril",			ASCII_X,	true	},
+	{	"silver",			ASCII_Y,	true	},
+	{	"iron",				ASCII_Z,	true	},
+	{   "sleep",			ASCII_aa,	true	},
+	{	NULL,				0,			0		}
 };
 
 const struct flag_type extra_flags[] =
@@ -443,27 +444,27 @@ const struct flag_type wear_locations[] =
 
 const struct flag_type wear_flags[] =
 {
-	//	name			bit		settable
-	{	"take",			A,		true	},
-	{	"finger",		B,		true	},
-	{	"neck",			C,		true	},
-	{	"body",			D,		true	},
-	{	"head",			E,		true	},
-	{	"legs",			F,		true	},
-	{	"feet",			G,		true	},
-	{	"hands",		H,		true	},
-	{	"arms",			I,		true	},
-	{	"shield",		J,		true	},
-	{	"about",		K,		true	},
-	{	"waist",		L,		true	},
-	{	"wrist",		M,		true	},
-	{	"wield",		N,		true	},
-	{	"hold",			O,		true	},
-	{	"float",		P,		true	},
-	{	"brand",		Q,		true	},
-	{	"strapped",		R,		true	},
-	{	"cosmetic",		S,		true	},
-	{	NULL,			0,		0		}
+	//	name			bit			settable
+	{	"take",			ASCII_A,	true	},
+	{	"finger",		ASCII_B,	true	},
+	{	"neck",			ASCII_C,	true	},
+	{	"body",			ASCII_D,	true	},
+	{	"head",			ASCII_E,	true	},
+	{	"legs",			ASCII_F,	true	},
+	{	"feet",			ASCII_G,	true	},
+	{	"hands",		ASCII_H,	true	},
+	{	"arms",			ASCII_I,	true	},
+	{	"shield",		ASCII_J,	true	},
+	{	"about",		ASCII_K,	true	},
+	{	"waist",		ASCII_L,	true	},
+	{	"wrist",		ASCII_M,	true	},
+	{	"wield",		ASCII_N,	true	},
+	{	"hold",			ASCII_O,	true	},
+	{	"float",		ASCII_P,	true	},
+	{	"brand",		ASCII_Q,	true	},
+	{	"strapped",		ASCII_R,	true	},
+	{	"cosmetic",		ASCII_S,	true	},
+	{	NULL,			0,			0		}
 };
 
 
@@ -719,12 +720,12 @@ const struct flag_type room_flags[] =
 const struct flag_type direction_table [] =
 {
 	//	name		bit				settable
-	{	"north",	DIR_NORTH,		true	},
-	{	"east",		DIR_EAST,		true	},
-	{	"south",	DIR_SOUTH, 		true	},
-	{	"west",		DIR_WEST,		true	},
-	{	"up",		DIR_UP,			true	},
-	{	"down",		DIR_DOWN,		true	},
+	{	"north",	Directions::North,		true	},
+	{	"east",		Directions::East,		true	},
+	{	"south",	Directions::South, 		true	},
+	{	"west",		Directions::West,		true	},
+	{	"up",		Directions::Up,			true	},
+	{	"down",		Directions::Down,		true	},
 	{	NULL,		0,				true	}
 };
 
@@ -758,71 +759,71 @@ const struct flag_type area_type_table[] =
 	{	NULL,			0,				true	}
 };
 
-const struct flag_type sky_table[MAX_SKY] =
+const struct flag_type sky_table[WeatherCondition::MaxWeatherCondition] =
 {
 	//	name			bit				settable
-	{	"clear",		SKY_CLEAR,		true	},
-	{	"partlycloudy",	SKY_PCLOUDY,	true	},
-	{	"overcast",		SKY_OVERCAST,	true	},
-	{	"drizzle",		SKY_DRIZZLE,	true	},
-	{	"downpour",		SKY_DOWNPOUR,	true	},
-	{	"thunderstorm",	SKY_TSTORM,		true	},
-	{	"flurry",		SKY_FLURRY,		true	},
-	{	"blizzard",		SKY_BLIZZARD,	true	},
-	{	"hail",			SKY_HAIL,		true	}
+	{	"clear",		WeatherCondition::Clear,		true	},
+	{	"partlycloudy",	WeatherCondition::PartlyCloudy,	true	},
+	{	"overcast",		WeatherCondition::Overcast,	true	},
+	{	"drizzle",		WeatherCondition::Drizzle,	true	},
+	{	"downpour",		WeatherCondition::Downpour,	true	},
+	{	"thunderstorm",	WeatherCondition::ThunderStorm,		true	},
+	{	"flurry",		WeatherCondition::SnowFlurry,		true	},
+	{	"blizzard",		WeatherCondition::Blizzard,	true	},
+	{	"hail",			WeatherCondition::Hail,		true	}
 };
 
-const struct flag_type temp_table[MAX_TEMP] =
+const struct flag_type temp_table[Temperature::MaxTemperature] =
 {
 	//	name		bit				settable
-	{	"hot",		TEMP_HOT,		true	},
-	{	"warm",		TEMP_WARM,		true	},
-	{	"cool",		TEMP_COOL,		true	},
-	{	"cold",		TEMP_COLD,		true	}
+	{	"hot",		Temperature::Hot,		true	},
+	{	"warm",		Temperature::Warm,		true	},
+	{	"cool",		Temperature::Cool,		true	},
+	{	"cold",		Temperature::Cold,		true	}
 };
 
-const struct flag_type wind_table[MAX_WIND] =
+const struct flag_type wind_table[Windspeed::MaxWindspeed] =
 {
 	//	name		bit				settable
-	{	"calm",		WIND_CALM,		true	},
-	{	"breeze",	WIND_BREEZE,	true	},
-	{	"windy",	WIND_WINDY,		true	},
-	{	"gale",		WIND_GALE,		true	}
+	{	"calm",		Windspeed::Calm,		true	},
+	{	"breeze",	Windspeed::Breeze,	true	},
+	{	"windy",	Windspeed::Windy,		true	},
+	{	"gale",		Windspeed::Gale,		true	}
 };
 
 const struct restrict_type restrict_table[] =
 {
-	//	name, 					bit, 	type,				value
-	{	"human_only",			A,		RESTRICT_RACE,		"human"			},
-	{	"dwarf_only",			B,		RESTRICT_RACE,		"dwarf"			},
-	{	"elf_only",				C,		RESTRICT_RACE,		"elf"			},
-	{	"drow_only",			D,		RESTRICT_RACE,		"drow"			},
-	{	"duergar_only",			E,		RESTRICT_RACE,		"duergar"		},
-	{	"imp_only",				F,		RESTRICT_RACE,		"imp"			},
-	{	"halfling_only",		G,		RESTRICT_RACE,		"halfling"		},
-	{	"titan_only",			H,		RESTRICT_RACE,		"titan"			},
-	{	"minotaur_only",		I,		RESTRICT_RACE,		"minotaur"		},
-	{	"sidhe_only",			J,		RESTRICT_RACE,		"sidhe"			},
-	{	"warrior_only",			K,		RESTRICT_CLASS,		"warrior"		},
-	{	"thief_only",			L,		RESTRICT_CLASS,		"thief"			},
-	{	"zealot_only",			M,		RESTRICT_CLASS,		"zealot"		},
-	{	"paladin_only",			N,		RESTRICT_CLASS,		"paladin"		},
-	{	"anti_paladin_only",	O,		RESTRICT_CLASS,		"anti-paladin"	},
-	{	"ranger_only",			P,		RESTRICT_CLASS,		"ranger"		},
-	{	"monk_only",			Q,		RESTRICT_CLASS,		"monk"			},
-	{	"shapeshifter_only",	R,		RESTRICT_CLASS,		"shapeshifter"	},
-	{	"assassin_only",		S,		RESTRICT_CLASS,		"assassin"		},
-	{	"necromancer_only",		T,		RESTRICT_CLASS,		"necromancer"	},
-	{	"sorcerer_only",		U,		RESTRICT_CLASS,		"sorcerer"		},
-	{	"scion_only",			W,		RESTRICT_CABAL,		"scion"			},
-	{	"horde_only",			X,		RESTRICT_CABAL,		"horde"			},
-	{	"theatre_only",			Y,		RESTRICT_CABAL,		"theatre"		},
-	{	"bounty_only",			Z,		RESTRICT_CABAL,		"bounty"		},
-	{	"mage_only",			aa,		RESTRICT_OTHER,		""				},
-	{	"newbie_only",			bb,		RESTRICT_OTHER,		""				},
-	{	"female_only",			cc,		RESTRICT_OTHER,		""				},
-	{	"male_only",			dd,		RESTRICT_OTHER,		""				},
-	{	NULL,					0,		0,					""				}
+	//	name, 					bit, 			type,				value
+	{	"human_only",			ASCII_A,		RESTRICT_RACE,		"human"			},
+	{	"dwarf_only",			ASCII_B,		RESTRICT_RACE,		"dwarf"			},
+	{	"elf_only",				ASCII_C,		RESTRICT_RACE,		"elf"			},
+	{	"drow_only",			ASCII_D,		RESTRICT_RACE,		"drow"			},
+	{	"duergar_only",			ASCII_E,		RESTRICT_RACE,		"duergar"		},
+	{	"imp_only",				ASCII_F,		RESTRICT_RACE,		"imp"			},
+	{	"halfling_only",		ASCII_G,		RESTRICT_RACE,		"halfling"		},
+	{	"titan_only",			ASCII_H,		RESTRICT_RACE,		"titan"			},
+	{	"minotaur_only",		ASCII_I,		RESTRICT_RACE,		"minotaur"		},
+	{	"sidhe_only",			ASCII_J,		RESTRICT_RACE,		"sidhe"			},
+	{	"warrior_only",			ASCII_K,		RESTRICT_CLASS,		"warrior"		},
+	{	"thief_only",			ASCII_L,		RESTRICT_CLASS,		"thief"			},
+	{	"zealot_only",			ASCII_M,		RESTRICT_CLASS,		"zealot"		},
+	{	"paladin_only",			ASCII_N,		RESTRICT_CLASS,		"paladin"		},
+	{	"anti_paladin_only",	ASCII_O,		RESTRICT_CLASS,		"anti-paladin"	},
+	{	"ranger_only",			ASCII_P,		RESTRICT_CLASS,		"ranger"		},
+	{	"monk_only",			ASCII_Q,		RESTRICT_CLASS,		"monk"			},
+	{	"shapeshifter_only",	ASCII_R,		RESTRICT_CLASS,		"shapeshifter"	},
+	{	"assassin_only",		ASCII_S,		RESTRICT_CLASS,		"assassin"		},
+	{	"necromancer_only",		ASCII_T,		RESTRICT_CLASS,		"necromancer"	},
+	{	"sorcerer_only",		ASCII_U,		RESTRICT_CLASS,		"sorcerer"		},
+	{	"scion_only",			ASCII_W,		RESTRICT_CABAL,		"scion"			},
+	{	"horde_only",			ASCII_X,		RESTRICT_CABAL,		"horde"			},
+	{	"theatre_only",			ASCII_Y,		RESTRICT_CABAL,		"theatre"		},
+	{	"bounty_only",			ASCII_Z,		RESTRICT_CABAL,		"bounty"		},
+	{	"mage_only",			ASCII_aa,		RESTRICT_OTHER,		""				},
+	{	"newbie_only",			ASCII_bb,		RESTRICT_OTHER,		""				},
+	{	"female_only",			ASCII_cc,		RESTRICT_OTHER,		""				},
+	{	"male_only",			ASCII_dd,		RESTRICT_OTHER,		""				},
+	{	NULL,					0,				0,					""				}
 };
 
 const struct tribe_type tribe_table[] =
@@ -1076,11 +1077,11 @@ const struct demon_type demon_table[] =
  *                                                    --Eladrian
  */
 
-const struct climate_type climate_table[MAX_CLIMATE] =
+const struct climate_type climate_table[Climate::MaxClimate] =
 {	
 	{	
 		"none",											// Climate name
-		CLIMATE_NONE,									// Climate number
+		Climate::None,									// Climate number
 		{												// Sky frequencies by season
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},	//		Winter
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},	//		Spring
@@ -1096,7 +1097,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"temperate",
-		CLIMATE_TEMPERATE,
+		Climate::Temperate,
 		{
 			{	20,		40,		60,		60,		60,		 65,	 90,	 95,	100		},
 			{	20,		40,		60,		70,		80,		 90,	 97,	 98,	100		},
@@ -1112,7 +1113,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"desert",
-		CLIMATE_DESERT,
+		Climate::Desert,
 		{
 			{	70,		 80,	 80,	 80,	 95,	100,	100,	100,	100		},
 			{	80,		 90,	 90,	 90,	 98,	100,	100,	100,	100		},
@@ -1128,7 +1129,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"tropical",
-		CLIMATE_TROPICAL,
+		Climate::Tropical,
 		{
 			{	5,		10,		30,		50,		80,		100,	100,	100,	100		},
 			{	5,		10,		30,		50,		80,		100,	100,	100,	100		},
@@ -1144,7 +1145,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"alpine",
-		CLIMATE_ALPINE,
+		Climate::Alpine,
 		{
 			{	20,		40,		60,		60,		60,		60,		70,		95,		100		},
 			{	20,		40,		60,		60,		60,		60,		80,		90,		100		},
@@ -1160,7 +1161,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"tundra",
-		CLIMATE_TUNDRA,
+		Climate::Tundra,
 		{
 			{	30,		40,		50,		50,		50,		50,		70,		95,		100		},
 			{	30,		40,		50,		50,		50,		50,		80,		90,		100		},
@@ -1176,7 +1177,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"subtropical",
-		CLIMATE_SUBTROPICAL,
+		Climate::Subtropical,
 		{
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
@@ -1192,7 +1193,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"arid",
-		CLIMATE_ARID,
+		Climate::Arid,
 		{
 			{	30,		40,		 50,	 60,	 80,	 96,	 98,	 98,	100		},
 			{	50,		75,		 85,	 90,	 95,	100,	100,	100,	100		},
@@ -1208,7 +1209,7 @@ const struct climate_type climate_table[MAX_CLIMATE] =
 	},
 	{
 		"english",
-		CLIMATE_ENGLISH,
+		Climate::English,
 		{
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
 			{	0,	0,	0,	0,	0,	0,	0,	0,	0	},
@@ -1517,13 +1518,13 @@ const struct flag_type weapon_flags[]=
 
 const struct flag_type container_flags[] =
 {
-	//	name,			bit,	settable
-	{	"closeable",	A,		true	},
-	{	"pickproof",	B,		true	},
-	{	"closed",		C,		true	},
-	{	"locked",		D,		true	},
-	{	"puton",		E,		true	},
-	{	NULL,			0,		0		}
+	//	name,			bit,		settable
+	{	"closeable",	ASCII_A,	true	},
+	{	"pickproof",	ASCII_B,	true	},
+	{	"closed",		ASCII_C,	true	},
+	{	"locked",		ASCII_D,	true	},
+	{	"puton",		ASCII_E,	true	},
+	{	NULL,			0,			0		}
 };
 
 /*****************************************************************************

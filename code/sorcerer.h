@@ -33,6 +33,7 @@
 #include "const.h"
 #include "material.h"
 #include "utility.h"
+#include "./include/fmt/format.h"
 
 extern char *const dir_name[];
 extern const sh_int rev_dir[];

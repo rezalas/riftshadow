@@ -58,7 +58,6 @@ int find_spell(CHAR_DATA *ch, const char *name)
 void say_spell(CHAR_DATA *ch, int sn)
 {
 	char buf[MAX_STRING_LENGTH];
-	char buf2[MAX_STRING_LENGTH];
 	CHAR_DATA *rch;
 	char *pName;
 	int iSyl;
@@ -146,8 +145,8 @@ void say_spell(CHAR_DATA *ch, int sn)
 			length = 1;
 	}
 
-	sprintf(buf2, "$n utters the words, '%s'.", buf);
-	sprintf(buf, "$n utters the words, '%s'.", skill_table[sn].name);
+	auto buffer2 = fmt::format("$n utters the words, '{}'.", buf);
+	auto buffer = fmt::format("$n utters the words, '{}'.", skill_table[sn].name);
 
 	for (rch = ch->in_room->people; rch; rch = rch->next_in_room)
 	{
@@ -159,15 +158,15 @@ void say_spell(CHAR_DATA *ch, int sn)
 				&& number_percent() > (rch->Profs()->GetProf("ancient languages") + 2) * 10)
 			{
 				send_to_char("Your knowledge of ancient languages allows you to translate the incantation.\n\r", rch);
-				act(buf, ch, NULL, rch, TO_VICT);
+				act(buffer.c_str(), ch, NULL, rch, TO_VICT);
 			}
 			else if (!is_npc(rch) && ch->Class()->GetIndex() == rch->Class()->GetIndex())
 			{
-				act(buf, ch, NULL, rch, TO_VICT);
+				act(buffer.c_str(), ch, NULL, rch, TO_VICT);
 			}
 			else
 			{
-				act(buf2, ch, NULL, rch, TO_VICT);
+				act(buffer2.c_str(), ch, NULL, rch, TO_VICT);
 			}
 		}
 	}
@@ -1932,7 +1931,7 @@ void spell_create_water(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	water = std::min(level * (ch->in_room->area->sky >= SKY_DRIZZLE ? 4 : 2), obj->value[0] - obj->value[1]);
+	water = std::min(level * (ch->in_room->area->sky >= WeatherCondition::Drizzle ? 4 : 2), obj->value[0] - obj->value[1]);
 
 	if (water > 0)
 	{
@@ -4548,21 +4547,19 @@ void spell_turn_undead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void spell_ventriloquate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	char buf1[MAX_STRING_LENGTH];
-	char buf2[MAX_STRING_LENGTH];
 	char speaker[MAX_INPUT_LENGTH];
 	CHAR_DATA *vch;
 
 	target_name = one_argument(target_name, speaker);
 
-	sprintf(buf1, "%s says '%s'.\n\r", speaker, target_name);
-	sprintf(buf2, "Someone makes %s say '%s'.\n\r", speaker, target_name);
-	buf1[0] = UPPER(buf1[0]);
+	auto buffer1 = fmt::format("{} says '{}'.\n\r", speaker, target_name);
+	auto buffer2 = fmt::format("Someone makes {} say '{}'.\n\r", speaker, target_name);
+	buffer1[0] = toupper(buffer1[0]);
 
 	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
 	{
 		if (!is_exact_name(speaker, vch->name) && is_awake(vch))
-			send_to_char(saves_spell(level, vch, DAM_OTHER) ? buf2 : buf1, vch);
+			send_to_char(saves_spell(level, vch, DAM_OTHER) ? buffer2.c_str() : buffer1.c_str(), vch);
 	}
 }
 

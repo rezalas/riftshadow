@@ -1,0 +1,242 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/code/rift",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/code/",
+            "environment": [],
+            "externalConsole": true,
+            // "miDebuggerPath": "/bin",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "C++ Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceRoot}/code/rift",
+            "processId": "${command:pickProcess}",
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "ActObj Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/act_obj_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Cabal Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/cabal_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Db Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/db_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Fight Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/fight_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Handler Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/handler_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Magic Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/magic_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Prof Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/prof_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Queue Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/queue_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
+            "name": "Utility Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/utility_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+		{
+            "name": "Standalone Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/standalone_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        }
+    ]
+}

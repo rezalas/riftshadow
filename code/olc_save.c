@@ -548,8 +548,8 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 			if (pRoom->area != pArea)
 				continue;
 
-			sprintf(buf1, munch(pRoom->name));
-			sprintf(buf2, munch(pRoom->description));
+			sprintf(buf1, "%s", munch(pRoom->name));
+			sprintf(buf2, "%s", munch(pRoom->description));
 
 			fprintf(fp, "#%d\n", pRoom->vnum);
 			fprintf(fp, "%s~\n%s~\n", buf1, buf2);
@@ -570,8 +570,8 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 			{
 				if ((pexit = pRoom->exit[i]))
 				{
-					sprintf(buf1, pexit->keyword ? munch(pexit->keyword) : "door");
-					sprintf(buf2, munch(pexit->description));
+					sprintf(buf1, "%s", pexit->keyword ? munch(pexit->keyword) : "door");
+					sprintf(buf2, "%s", munch(pexit->description));
 					fprintf(fp, "D %s %d %s %d\n%s~\n%s~\n",
 						upstring(direction_table[std::max((long)0, i)].name),
 						pexit->u1.to_room ? pexit->u1.to_room->vnum : 0,
@@ -900,15 +900,22 @@ void save_shops(FILE *fp, AREA_DATA *pArea)
 
 void save_area(AREA_DATA *pArea)
 {
+	std::string buffer;
 	long long temp_bit;
 	char buf[MSL];
 	FILE *fp = NULL;
 	fclose(fpReserve);
 
 	sprintf(buf, "mv -f %s " RIFT_AREA_DIR "/backup/%s.bak", pArea->file_name, pArea->file_name);
-	system(buf);
 
-	system("touch " RIFT_CODE_DIR "/area-dump.txt");
+	auto returnCode = system(buf);
+	if(returnCode != 0) // mv returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
+
+	buffer = std::string("touch " RIFT_CODE_DIR "/area-dump.txt");
+	returnCode = system(buffer.c_str());
+	if(returnCode != 0) // couldn't find exit code for touch, assuming touch returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 
 	if (!(fp = fopen(pArea->file_name, "w")))
 	{

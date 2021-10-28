@@ -2272,6 +2272,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 		case ITEM_BOOK:
 		case ITEM_PEN:
 		case ITEM_ALTAR:
+		case ITEM_STONE:
 		case ITEM_CAMPFIRE:
 			break;
 		case ITEM_SCROLL:
@@ -2440,7 +2441,7 @@ void clear_char(CHAR_DATA *ch)
 	ch->move = 100;
 	ch->max_move = 100;
 	ch->last_fought = NULL;
-	ch->last_fight_time = NULL;
+	ch->last_fight_time = 0;
 	ch->last_fight_name = NULL;
 	ch->on = NULL;
 	ch->hometown = 0;
@@ -3204,7 +3205,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	aff_count = 0;
 
 	/* mobile prototypes */
-	fprintf(fp, "MobProt	%4d (%8d bytes)\n", top_mob_index, top_mob_index * (sizeof(*pMobIndex)));
+	fprintf(fp, "MobProt	%4d (%8lu bytes)\n", top_mob_index, top_mob_index * (sizeof(*pMobIndex)));
 
 	/* mobs */
 	count = 0;
@@ -3228,7 +3229,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 		count2++;
 	}
 
-	fprintf(fp, "Mobs	%4d (%8d bytes), %2d free (%d bytes)\n", count, count * (sizeof(*fch)), count2, count2 * (sizeof(*fch)));
+	fprintf(fp, "Mobs	%4d (%8lu bytes), %2d free (%lu bytes)\n", count, count * (sizeof(*fch)), count2, count2 * (sizeof(*fch)));
 
 	/* pcdata */
 	count = 0;
@@ -3238,7 +3239,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 		count++;
 	}
 
-	fprintf(fp, "Pcdata	%4d (%8d bytes), %2d free (%d bytes)\n", num_pcs, num_pcs * (sizeof(*pc)), count, count * (sizeof(*pc)));
+	fprintf(fp, "Pcdata	%4d (%8lu bytes), %2d free (%lu bytes)\n", num_pcs, num_pcs * (sizeof(*pc)), count, count * (sizeof(*pc)));
 
 	/* descriptors */
 	count = 0;
@@ -3254,7 +3255,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 		count2++;
 	}
 
-	fprintf(fp, "Descs	%4d (%8d bytes), %2d free (%d bytes)\n", count, count * (sizeof(*d)), count2, count2 * (sizeof(*d)));
+	fprintf(fp, "Descs	%4d (%8lu bytes), %2d free (%lu bytes)\n", count, count * (sizeof(*d)), count2, count2 * (sizeof(*d)));
 
 	/* object prototypes */
 	for (vnum = 0; nMatch < top_obj_index; vnum++)
@@ -3272,7 +3273,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	fprintf(fp, "ObjProt	%4d (%8d bytes)\n", top_obj_index, top_obj_index * (sizeof(*pObjIndex)));
+	fprintf(fp, "ObjProt	%4d (%8lu bytes)\n", top_obj_index, top_obj_index * (sizeof(*pObjIndex)));
 
 	/* objects */
 	count = 0;
@@ -3293,7 +3294,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 		count2++;
 	}
 
-	fprintf(fp, "Objs	%4d (%8d bytes), %2d free (%d bytes)\n", count, count * (sizeof(*obj)), count2, count2 * (sizeof(*obj)));
+	fprintf(fp, "Objs	%4d (%8lu bytes), %2d free (%lu bytes)\n", count, count * (sizeof(*obj)), count2, count2 * (sizeof(*obj)));
 
 	/* affects */
 	count = 0;
@@ -3302,13 +3303,13 @@ void do_dump(CHAR_DATA *ch, char *argument)
 		count++;
 	}
 
-	fprintf(fp, "Affects	%4d (%8d bytes), %2d free (%d bytes)\n", aff_count, aff_count * (sizeof(*af)), count, count * (sizeof(*af)));
+	fprintf(fp, "Affects	%4d (%8lu bytes), %2d free (%lu bytes)\n", aff_count, aff_count * (sizeof(*af)), count, count * (sizeof(*af)));
 
 	/* rooms */
-	fprintf(fp, "Rooms	%4d (%8d bytes)\n", top_room, top_room * (sizeof(*room)));
+	fprintf(fp, "Rooms	%4d (%8lu bytes)\n", top_room, top_room * (sizeof(*room)));
 
 	/* exits */
-	fprintf(fp, "Exits	%4d (%8d bytes)\n", top_exit, top_exit * (sizeof(*exit)));
+	fprintf(fp, "Exits	%4d (%8lu bytes)\n", top_exit, top_exit * (sizeof(*exit)));
 
 	fclose(fp);
 
@@ -3718,7 +3719,7 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
  */
 void bug(const char *str, int param)
 {
-	char buf[MAX_STRING_LENGTH];
+	std::string buffer;
 
 	if (fpArea != NULL)
 	{
@@ -3742,14 +3743,14 @@ void bug(const char *str, int param)
 			fseek(fpArea, iChar, 0);
 		}
 
-		sprintf(buf, "[*****] FILE: %s LINE: %d", strArea, iLine);
-		log_string(buf);
+		buffer = fmt::format("[*****] FILE: {} LINE: {}", strArea, iLine);
+		log_string(buffer.c_str());
 	}
 
-	strcpy(buf, "[*****] BUG: ");
-	sprintf(buf + strlen(buf), str, param);
-	log_string(buf);
-	wiznet(buf, 0, 0, WIZ_DEBUG, 0, 0);
+	buffer = fmt::sprintf(str, param);
+	buffer = fmt::format("[*****] BUG: {}", buffer);
+	log_string(buffer.c_str());
+	wiznet(buffer.data(), 0, 0, WIZ_DEBUG, 0, 0);
 }
 
 /*
@@ -3892,9 +3893,9 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	FILE *fpChar_list;
 	FILE *fpChar;
 	char strPlr[MAX_INPUT_LENGTH];
-	char catplr[MAX_INPUT_LENGTH];
+//	char catplr[MAX_INPUT_LENGTH];
 	char chkbuf[MAX_STRING_LENGTH];
-	char pbuf[100];
+//	char pbuf[100];
 	OBJ_INDEX_DATA *lObjIndex;
 	OBJ_DATA *obj;
 	int i;
@@ -3928,9 +3929,10 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 
 	send_to_char("Loading all pfile object counts now.\n\r", ch);
 
-	sprintf(catplr, "%s/%s", RIFT_PLAYER_DIR, "*.plr");
-	sprintf(pbuf, "ls %s > %s", catplr, PLAYER_LIST);
-	system(pbuf);
+	auto buffer = fmt::format("ls {}/{} > {}", RIFT_PLAYER_DIR, "*.plr", PLAYER_LIST); //TODO: change the rest of the sprintf calls to format
+	auto returnCode = system(buffer.c_str());
+	if(returnCode != 0) // ls returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
+		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 
 	fpChar_list = fopen(PLAYER_LIST, "r");
 

@@ -238,7 +238,14 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 //
 
 #define MAX_KEY_HASH				1024
+
+#ifdef MAX_STRING_LENGTH
+#undef MAX_STRING_LENGTH
 #define MAX_STRING_LENGTH			4608
+#else
+#define MAX_STRING_LENGTH			4608
+#endif
+
 #define MAX_INPUT_LENGTH			4608
 #define PAGELEN						20
 #define MSL							MAX_STRING_LENGTH
@@ -344,63 +351,63 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 // mprog stuff
 //
 
-#define MPROG_BRIBE					(A)
-#define MPROG_ENTRY					(B)
-#define MPROG_GREET					(C)
-#define MPROG_GIVE					(D)
-#define MPROG_FIGHT					(E)
-#define MPROG_DEATH					(F)
-#define MPROG_PULSE					(G)
-#define MPROG_SPEECH				(H)
-#define MPROG_ATTACK				(I)
-#define MPROG_MOVE					(J)
-#define MPROG_BEAT					(K)
-#define MPROG_AGGRESS				(L)
+#define MPROG_BRIBE					(ASCII_A)
+#define MPROG_ENTRY					(ASCII_B)
+#define MPROG_GREET					(ASCII_C)
+#define MPROG_GIVE					(ASCII_D)
+#define MPROG_FIGHT					(ASCII_E)
+#define MPROG_DEATH					(ASCII_F)
+#define MPROG_PULSE					(ASCII_G)
+#define MPROG_SPEECH				(ASCII_H)
+#define MPROG_ATTACK				(ASCII_I)
+#define MPROG_MOVE					(ASCII_J)
+#define MPROG_BEAT					(ASCII_K)
+#define MPROG_AGGRESS				(ASCII_L)
 
 //
 // iprog stuff
 //
 
-#define IPROG_WEAR					(A)
-#define IPROG_REMOVE				(B)
-#define IPROG_DROP					(C)
-#define IPROG_SAC					(D)
-#define IPROG_GIVE					(E)
-#define IPROG_GREET					(F)
-#define IPROG_FIGHT					(G)
-#define IPROG_DEATH					(H)
-#define IPROG_SPEECH				(I)
-#define IPROG_ENTRY					(J)
-#define IPROG_GET					(K)
-#define IPROG_PULSE					(L)
-#define IPROG_INVOKE				(M)
-#define IPROG_VERB					(N)
-#define IPROG_LOOT					(O)
-#define IPROG_OPEN					(P)
-#define IPROG_LOOK					(R)
-#define IPROG_HIT					(S)
+#define IPROG_WEAR					(ASCII_A)
+#define IPROG_REMOVE				(ASCII_B)
+#define IPROG_DROP					(ASCII_C)
+#define IPROG_SAC					(ASCII_D)
+#define IPROG_GIVE					(ASCII_E)
+#define IPROG_GREET					(ASCII_F)
+#define IPROG_FIGHT					(ASCII_G)
+#define IPROG_DEATH					(ASCII_H)
+#define IPROG_SPEECH				(ASCII_I)
+#define IPROG_ENTRY					(ASCII_J)
+#define IPROG_GET					(ASCII_K)
+#define IPROG_PULSE					(ASCII_L)
+#define IPROG_INVOKE				(ASCII_M)
+#define IPROG_VERB					(ASCII_N)
+#define IPROG_LOOT					(ASCII_O)
+#define IPROG_OPEN					(ASCII_P)
+#define IPROG_LOOK					(ASCII_R)
+#define IPROG_HIT					(ASCII_S)
 
 //
 // rprog stuff
 //
 
-#define RPROG_PULSE					(A)
-#define RPROG_ENTRY					(B)
-#define RPROG_MOVE					(C)
-#define RPROG_DROP					(D)
-#define RPROG_SPEECH				(E)
-#define RPROG_OPEN					(F)
+#define RPROG_PULSE					(ASCII_A)
+#define RPROG_ENTRY					(ASCII_B)
+#define RPROG_MOVE					(ASCII_C)
+#define RPROG_DROP					(ASCII_D)
+#define RPROG_SPEECH				(ASCII_E)
+#define RPROG_OPEN					(ASCII_F)
 
 //
 // aprog stuff
 //
 
-#define APROG_PULSE					(A)
-#define APROG_RESET					(B)
-#define APROG_SUN					(C)
-#define APROG_TICK					(D)
-#define APROG_AGGRESS				(E)
-#define APROG_MYELL					(F)
+#define APROG_PULSE					(ASCII_A)
+#define APROG_RESET					(ASCII_B)
+#define APROG_SUN					(ASCII_C)
+#define APROG_TICK					(ASCII_D)
+#define APROG_AGGRESS				(ASCII_E)
+#define APROG_MYELL					(ASCII_F)
 
 //
 // Quests!
@@ -462,31 +469,9 @@ struct buf_type
 
 
 
-//
-// Time and weather stuff.
-///
-
-#define SUN_DARK					0
-#define SUN_RISE					1
-#define SUN_LIGHT					2
-#define SUN_SET						3
-
-#define MOON_NEW					0
-#define MOON_CWAXING				1
-#define	MOON_HWAXING				2
-#define MOON_GWAXING				3
-#define MOON_FULL					4
-#define	MOON_GWANING				5
-#define	MOON_HWANING				6
-#define	MOON_CWANING				7
-#define MAX_MOON					8
-
-#define BERUS_SPD					90
-#define CALABREN_SPD				150
 
 #define RS_EPOCH					972370801
 
-#define NUM_SEASONS					4
 
 struct time_info_data
 {
@@ -926,10 +911,10 @@ struct obj_affect_data
 #define CMD_BOTH					4
 #define CMD_RUNE					5
 
-#define CAN_DISPEL					(1 << A)
-#define CAN_CANCEL					(1 << B)
-#define CAN_CLEANSE					(1 << C)
-#define CAN_PURIFY					(1 << D)
+#define CAN_DISPEL					(1 << ASCII_A)
+#define CAN_CANCEL					(1 << ASCII_B)
+#define CAN_CLEANSE					(1 << ASCII_C)
+#define CAN_PURIFY					(1 << ASCII_D)
 
 //
 // wear definitions
@@ -1133,87 +1118,87 @@ struct kill_data
 // RT ASCII conversions -- used so we can have letters in this file
 //
 
-#define A							0
-#define B							1
-#define C							2
-#define D							3
-#define E							4
-#define F							5
-#define G							6
-#define H							7
-#define I							8
-#define J							9
-#define K							10
-#define L							11
-#define M							12
-#define N							13
-#define O							14
-#define P							15
-#define Q							16
-#define R							17
-#define S							18
-#define T							19
-#define U							20
-#define V							21
-#define W							22
-#define X							23
-#define Y							24
-#define Z							25
-#define aa							26
-#define bb							27
-#define cc							28
-#define dd							29
-#define ee							30
-#define ff							31
-#define gg							32
-#define hh							33
-#define ii							34
-#define jj							35
-#define kk							36
-#define ll							37
-#define mm							38
-#define nn							39
-#define oo							40
-#define pp							41
-#define MAX_BIT						42
+#define ASCII_A							0
+#define ASCII_B							1
+#define ASCII_C							2
+#define ASCII_D							3
+#define ASCII_E							4
+#define ASCII_F							5
+#define ASCII_G							6
+#define ASCII_H							7
+#define ASCII_I							8
+#define ASCII_J							9
+#define ASCII_K							10
+#define ASCII_L							11
+#define ASCII_M							12
+#define ASCII_N							13
+#define ASCII_O							14
+#define ASCII_P							15
+#define ASCII_Q							16
+#define ASCII_R							17
+#define ASCII_S							18
+#define ASCII_T							19
+#define ASCII_U							20
+#define ASCII_V							21
+#define ASCII_W							22
+#define ASCII_X							23
+#define ASCII_Y							24
+#define ASCII_Z							25
+#define ASCII_aa						26
+#define ASCII_bb						27
+#define ASCII_cc						28
+#define ASCII_dd						29
+#define ASCII_ee						30
+#define ASCII_ff						31
+#define ASCII_gg						32
+#define ASCII_hh						33
+#define ASCII_ii						34
+#define ASCII_jj						35
+#define ASCII_kk						36
+#define ASCII_ll						37
+#define ASCII_mm						38
+#define ASCII_nn						39
+#define ASCII_oo						40
+#define ASCII_pp						41
+#define MAX_BIT							42
 
 //
 // ACT bits for mobs.
 // Used in #MOBILES.
 //
 
-#define ACT_IS_NPC					(A)	// Auto set for mobs
-#define ACT_SENTINEL				(B)	// Stays in one room
-#define ACT_SCAVENGER				(C)	// Picks up objects
-#define ACT_WARD_MOB				(D)	// Ward mobs
-#define ACT_WANDER					(E)	// wanders
-#define ACT_AGGRESSIVE				(F)	// Attacks PC's
-#define ACT_STAY_AREA				(G)	// Won't leave area
-#define ACT_WIMPY					(H)
-#define ACT_PET						(I)	// Auto set for pets
-#define ACT_TRAIN					(J)	// Can train PC's
-#define ACT_PRACTICE				(K)	// Can practice PC's
-#define ACT_SMARTTRACK				(L)	// Will use pathfinding
-#define ACT_UNDEAD					(O)
-#define ACT_INNER_GUARDIAN			(P)	// yay.
-#define ACT_CLERIC					(Q)
-#define ACT_MAGE					(R)
-#define ACT_INTELLIGENT 			(S)
-#define ACT_FAST_TRACK				(T)
-#define ACT_NOALIGN					(U)
-#define ACT_NOPURGE					(V)
-#define ACT_OUTDOORS				(W)
-#define ACT_INDOORS					(Y)
-#define ACT_GUILDGUARD				(Z)
-#define ACT_IS_HEALER				(aa)
-#define ACT_GAIN					(bb)
-#define ACT_UPDATE_ALWAYS			(cc)
-#define ACT_DETECT_SPECIAL			(dd)
-#define ACT_BANKER					(ee)
-#define ACT_NOCTURNAL				(ff)
-#define ACT_DIURNAL					(gg)
-#define ACT_FASTWANDER				(hh)
-#define ACT_LAW						(ii)
+#define ACT_IS_NPC					(ASCII_A)	// Auto set for mobs
+#define ACT_SENTINEL				(ASCII_B)	// Stays in one room
+#define ACT_SCAVENGER				(ASCII_C)	// Picks up objects
+#define ACT_WARD_MOB				(ASCII_D)	// Ward mobs
+#define ACT_WANDER					(ASCII_E)	// wanders
+#define ACT_AGGRESSIVE				(ASCII_F)	// Attacks PC's
+#define ACT_STAY_AREA				(ASCII_G)	// Won't leave area
+#define ACT_WIMPY					(ASCII_H)
+#define ACT_PET						(ASCII_I)	// Auto set for pets
+#define ACT_TRAIN					(ASCII_J)	// Can train PC's
+#define ACT_PRACTICE				(ASCII_K)	// Can practice PC's
+#define ACT_SMARTTRACK				(ASCII_L)	// Will use pathfinding
+#define ACT_UNDEAD					(ASCII_O)
+#define ACT_INNER_GUARDIAN			(ASCII_P)	// yay.
+#define ACT_CLERIC					(ASCII_Q)
+#define ACT_MAGE					(ASCII_R)
+#define ACT_INTELLIGENT 			(ASCII_S)
+#define ACT_FAST_TRACK				(ASCII_T)
+#define ACT_NOALIGN					(ASCII_U)
+#define ACT_NOPURGE					(ASCII_V)
+#define ACT_OUTDOORS				(ASCII_W)
+#define ACT_INDOORS					(ASCII_Y)
+#define ACT_GUILDGUARD				(ASCII_Z)
+#define ACT_IS_HEALER				(ASCII_aa)
+#define ACT_GAIN					(ASCII_bb)
+#define ACT_UPDATE_ALWAYS			(ASCII_cc)
+#define ACT_DETECT_SPECIAL			(ASCII_dd)
+#define ACT_BANKER					(ASCII_ee)
+#define ACT_NOCTURNAL				(ASCII_ff)
+#define ACT_DIURNAL					(ASCII_gg)
+#define ACT_FASTWANDER				(ASCII_hh)
+#define ACT_LAW						(ASCII_ii)
 
 //
 // damage classes
@@ -1245,33 +1230,33 @@ struct kill_data
 // OFF bits for mobiles
 //
 
-#define OFF_AREA_ATTACK				(A)
-#define OFF_BACKSTAB				(B)
-#define OFF_BASH					(C)
-#define OFF_BERSERK					(D)
-#define OFF_DISARM					(E)
-#define OFF_DODGE					(F)
-#define OFF_FADE					(G) // UNUSED
-#define OFF_FAST					(H)
-#define OFF_KICK					(I)
-#define OFF_KICK_DIRT				(J)
-#define OFF_PARRY					(K)
-#define OFF_RESCUE					(L)
-#define OFF_TAIL					(M)
-#define OFF_TRIP					(N)
-#define OFF_CRUSH					(O)
-#define ASSIST_ALL					(P)
-#define ASSIST_ALIGN				(Q)
-#define ASSIST_RACE					(R)
-#define ASSIST_PLAYERS				(S)
-#define ASSIST_GUARD				(T)
-#define ASSIST_VNUM					(U)
-#define NO_TRACK					(V)
-#define STATIC_TRACKING				(W)
-#define SPAM_MURDER					(X)
-#define OFF_INTIMIDATED				(Y)
-#define OFF_UNDEAD_DRAIN			(Z)	// True undead drain, very powerful
-#define ASSIST_GROUP				(aa)
+#define OFF_AREA_ATTACK				(ASCII_A)
+#define OFF_BACKSTAB				(ASCII_B)
+#define OFF_BASH					(ASCII_C)
+#define OFF_BERSERK					(ASCII_D)
+#define OFF_DISARM					(ASCII_E)
+#define OFF_DODGE					(ASCII_F)
+#define OFF_FADE					(ASCII_G) // UNUSED
+#define OFF_FAST					(ASCII_H)
+#define OFF_KICK					(ASCII_I)
+#define OFF_KICK_DIRT				(ASCII_J)
+#define OFF_PARRY					(ASCII_K)
+#define OFF_RESCUE					(ASCII_L)
+#define OFF_TAIL					(ASCII_M)
+#define OFF_TRIP					(ASCII_N)
+#define OFF_CRUSH					(ASCII_O)
+#define ASSIST_ALL					(ASCII_P)
+#define ASSIST_ALIGN				(ASCII_Q)
+#define ASSIST_RACE					(ASCII_R)
+#define ASSIST_PLAYERS				(ASCII_S)
+#define ASSIST_GUARD				(ASCII_T)
+#define ASSIST_VNUM					(ASCII_U)
+#define NO_TRACK					(ASCII_V)
+#define STATIC_TRACKING				(ASCII_W)
+#define SPAM_MURDER					(ASCII_X)
+#define OFF_INTIMIDATED				(ASCII_Y)
+#define OFF_UNDEAD_DRAIN			(ASCII_Z)	// True undead drain, very powerful
+#define ASSIST_GROUP				(ASCII_aa)
 
 //
 // return values for check_imm
@@ -1286,208 +1271,208 @@ struct kill_data
 // IMM bits for mobs
 //
 
-#define IMM_SUMMON					(A)
-#define IMM_CHARM					(B)
-#define IMM_MAGIC					(C)
-#define IMM_WEAPON					(D)
-#define IMM_BASH					(E)
-#define IMM_PIERCE					(F)
-#define IMM_SLASH					(G)
-#define IMM_FIRE					(H)
-#define IMM_COLD					(I)
-#define IMM_LIGHTNING				(J)
-#define IMM_ACID					(K)
-#define IMM_POISON					(L)
-#define IMM_NEGATIVE				(M)
-#define IMM_HOLY					(N)
-#define IMM_ENERGY					(O)
-#define IMM_MENTAL					(P)
-#define IMM_DISEASE					(Q)
-#define IMM_DROWNING				(R)
-#define IMM_LIGHT					(S)
-#define IMM_SOUND					(T)
-#define IMM_INTERNAL				(U)
-#define IMM_MITHRIL					(X)
-#define IMM_SILVER					(Y)
-#define IMM_IRON					(Z)
-#define IMM_SLEEP					(aa)
+#define IMM_SUMMON					(ASCII_A)
+#define IMM_CHARM					(ASCII_B)
+#define IMM_MAGIC					(ASCII_C)
+#define IMM_WEAPON					(ASCII_D)
+#define IMM_BASH					(ASCII_E)
+#define IMM_PIERCE					(ASCII_F)
+#define IMM_SLASH					(ASCII_G)
+#define IMM_FIRE					(ASCII_H)
+#define IMM_COLD					(ASCII_I)
+#define IMM_LIGHTNING				(ASCII_J)
+#define IMM_ACID					(ASCII_K)
+#define IMM_POISON					(ASCII_L)
+#define IMM_NEGATIVE				(ASCII_M)
+#define IMM_HOLY					(ASCII_N)
+#define IMM_ENERGY					(ASCII_O)
+#define IMM_MENTAL					(ASCII_P)
+#define IMM_DISEASE					(ASCII_Q)
+#define IMM_DROWNING				(ASCII_R)
+#define IMM_LIGHT					(ASCII_S)
+#define IMM_SOUND					(ASCII_T)
+#define IMM_INTERNAL				(ASCII_U)
+#define IMM_MITHRIL					(ASCII_X)
+#define IMM_SILVER					(ASCII_Y)
+#define IMM_IRON					(ASCII_Z)
+#define IMM_SLEEP					(ASCII_aa)
 
 //
 // RES bits for mobs
 //
 
-#define RES_SUMMON					(A)
-#define RES_CHARM					(B)
-#define RES_MAGIC					(C)
-#define RES_WEAPON					(D)
-#define RES_BASH					(E)
-#define RES_PIERCE					(F)
-#define RES_SLASH					(G)
-#define RES_FIRE					(H)
-#define RES_COLD					(I)
-#define RES_LIGHTNING				(J)
-#define RES_ACID					(K)
-#define RES_POISON					(L)
-#define RES_NEGATIVE				(M)
-#define RES_HOLY					(N)
-#define RES_ENERGY					(O)
-#define RES_MENTAL					(P)
-#define RES_DISEASE					(Q)
-#define RES_DROWNING				(R)
-#define RES_LIGHT					(S)
-#define RES_SOUND					(T)
-#define RES_INTERNAL				(U)
-#define RES_MITHRIL					(X)
-#define RES_SILVER					(Y)
-#define RES_IRON					(Z)
+#define RES_SUMMON					(ASCII_A)
+#define RES_CHARM					(ASCII_B)
+#define RES_MAGIC					(ASCII_C)
+#define RES_WEAPON					(ASCII_D)
+#define RES_BASH					(ASCII_E)
+#define RES_PIERCE					(ASCII_F)
+#define RES_SLASH					(ASCII_G)
+#define RES_FIRE					(ASCII_H)
+#define RES_COLD					(ASCII_I)
+#define RES_LIGHTNING				(ASCII_J)
+#define RES_ACID					(ASCII_K)
+#define RES_POISON					(ASCII_L)
+#define RES_NEGATIVE				(ASCII_M)
+#define RES_HOLY					(ASCII_N)
+#define RES_ENERGY					(ASCII_O)
+#define RES_MENTAL					(ASCII_P)
+#define RES_DISEASE					(ASCII_Q)
+#define RES_DROWNING				(ASCII_R)
+#define RES_LIGHT					(ASCII_S)
+#define RES_SOUND					(ASCII_T)
+#define RES_INTERNAL				(ASCII_U)
+#define RES_MITHRIL					(ASCII_X)
+#define RES_SILVER					(ASCII_Y)
+#define RES_IRON					(ASCII_Z)
  
 //
 // VULN bits for mobs
 //
 
-#define VULN_SUMMON					(A)
-#define VULN_CHARM					(B)
-#define VULN_MAGIC					(C)
-#define VULN_WEAPON					(D)
-#define VULN_BASH					(E)
-#define VULN_PIERCE					(F)
-#define VULN_SLASH					(G)
-#define VULN_FIRE					(H)
-#define VULN_COLD					(I)
-#define VULN_LIGHTNING				(J)
-#define VULN_ACID					(K)
-#define VULN_POISON					(L)
-#define VULN_NEGATIVE				(M)
-#define VULN_HOLY					(N)
-#define VULN_ENERGY					(O)
-#define VULN_MENTAL					(P)
-#define VULN_DISEASE				(Q)
-#define VULN_DROWNING				(R)
-#define VULN_LIGHT					(S)
-#define VULN_SOUND					(T)
-#define VULN_INTERNAL				(U)
-#define VULN_MITHRIL				(X)
-#define VULN_SILVER					(Y)
-#define VULN_IRON					(Z)
+#define VULN_SUMMON					(ASCII_A)
+#define VULN_CHARM					(ASCII_B)
+#define VULN_MAGIC					(ASCII_C)
+#define VULN_WEAPON					(ASCII_D)
+#define VULN_BASH					(ASCII_E)
+#define VULN_PIERCE					(ASCII_F)
+#define VULN_SLASH					(ASCII_G)
+#define VULN_FIRE					(ASCII_H)
+#define VULN_COLD					(ASCII_I)
+#define VULN_LIGHTNING				(ASCII_J)
+#define VULN_ACID					(ASCII_K)
+#define VULN_POISON					(ASCII_L)
+#define VULN_NEGATIVE				(ASCII_M)
+#define VULN_HOLY					(ASCII_N)
+#define VULN_ENERGY					(ASCII_O)
+#define VULN_MENTAL					(ASCII_P)
+#define VULN_DISEASE				(ASCII_Q)
+#define VULN_DROWNING				(ASCII_R)
+#define VULN_LIGHT					(ASCII_S)
+#define VULN_SOUND					(ASCII_T)
+#define VULN_INTERNAL				(ASCII_U)
+#define VULN_MITHRIL				(ASCII_X)
+#define VULN_SILVER					(ASCII_Y)
+#define VULN_IRON					(ASCII_Z)
 
 //
 // body form
 //
 
-#define FORM_EDIBLE					(A)
-#define FORM_POISON					(B)
-#define FORM_MAGICAL				(C)
-#define FORM_INSTANT_DECAY			(D)
-#define FORM_OTHER					(E) // defined by material bit
+#define FORM_EDIBLE					(ASCII_A)
+#define FORM_POISON					(ASCII_B)
+#define FORM_MAGICAL				(ASCII_C)
+#define FORM_INSTANT_DECAY			(ASCII_D)
+#define FORM_OTHER					(ASCII_E) // defined by material bit
 
 //
 // actual form
 //
 
-#define FORM_ANIMAL					(G)
-#define FORM_SENTIENT				(H)
-#define FORM_UNDEAD					(I)
-#define FORM_CONSTRUCT				(J)
-#define FORM_MIST					(K)
-#define FORM_INTANGIBLE				(L)
+#define FORM_ANIMAL					(ASCII_G)
+#define FORM_SENTIENT				(ASCII_H)
+#define FORM_UNDEAD					(ASCII_I)
+#define FORM_CONSTRUCT				(ASCII_J)
+#define FORM_MIST					(ASCII_K)
+#define FORM_INTANGIBLE				(ASCII_L)
 
-#define FORM_BIPED					(M)
-#define FORM_AQUATIC				(N)
-#define FORM_INSECT					(O)
-#define FORM_SPIDER					(P)
-#define FORM_CRUSTACEAN				(Q)
-#define FORM_WORM					(R)
-#define FORM_BLOB					(S)
+#define FORM_BIPED					(ASCII_M)
+#define FORM_AQUATIC				(ASCII_N)
+#define FORM_INSECT					(ASCII_O)
+#define FORM_SPIDER					(ASCII_P)
+#define FORM_CRUSTACEAN				(ASCII_Q)
+#define FORM_WORM					(ASCII_R)
+#define FORM_BLOB					(ASCII_S)
 
-#define FORM_MAMMAL					(V)
-#define FORM_BIRD					(W)
-#define FORM_REPTILE				(X)
-#define FORM_SNAKE					(Y)
-#define FORM_DRAGON					(Z)
-#define FORM_AMPHIBIAN				(aa)
-#define FORM_FISH					(bb)
-#define FORM_COLD_BLOOD				(cc)
-#define FORM_NOSPEECH				(dd)
+#define FORM_MAMMAL					(ASCII_V)
+#define FORM_BIRD					(ASCII_W)
+#define FORM_REPTILE				(ASCII_X)
+#define FORM_SNAKE					(ASCII_Y)
+#define FORM_DRAGON					(ASCII_Z)
+#define FORM_AMPHIBIAN				(ASCII_aa)
+#define FORM_FISH					(ASCII_bb)
+#define FORM_COLD_BLOOD				(ASCII_cc)
+#define FORM_NOSPEECH				(ASCII_dd)
 
 //
 // body parts
 //
 
-#define PART_HEAD					(A)
-#define PART_ARMS					(B)
-#define PART_LEGS					(C)
-#define PART_HEART					(D)
-#define PART_BRAINS					(E)
-#define PART_GUTS					(F)
-#define PART_HANDS					(G)
-#define PART_FEET					(H)
-#define PART_FINGERS				(I)
-#define PART_EAR					(J)
-#define PART_EYE					(K)
-#define PART_LONG_TONGUE			(L)
-#define PART_EYESTALKS				(M)
-#define PART_TENTACLES				(N)
-#define PART_FINS					(O)
-#define PART_WINGS					(P)
-#define PART_TAIL					(Q)
+#define PART_HEAD					(ASCII_A)
+#define PART_ARMS					(ASCII_B)
+#define PART_LEGS					(ASCII_C)
+#define PART_HEART					(ASCII_D)
+#define PART_BRAINS					(ASCII_E)
+#define PART_GUTS					(ASCII_F)
+#define PART_HANDS					(ASCII_G)
+#define PART_FEET					(ASCII_H)
+#define PART_FINGERS				(ASCII_I)
+#define PART_EAR					(ASCII_J)
+#define PART_EYE					(ASCII_K)
+#define PART_LONG_TONGUE			(ASCII_L)
+#define PART_EYESTALKS				(ASCII_M)
+#define PART_TENTACLES				(ASCII_N)
+#define PART_FINS					(ASCII_O)
+#define PART_WINGS					(ASCII_P)
+#define PART_TAIL					(ASCII_Q)
 
 //
 // for combat
 //
 
-#define PART_CLAWS					(U)
-#define PART_FANGS					(V)
-#define PART_HORNS					(W)
-#define PART_SCALES					(X)
-#define PART_TUSKS					(Y)
+#define PART_CLAWS					(ASCII_U)
+#define PART_FANGS					(ASCII_V)
+#define PART_HORNS					(ASCII_W)
+#define PART_SCALES					(ASCII_X)
+#define PART_TUSKS					(ASCII_Y)
 
 //
 // Bits for 'affected_by'.
 // Used in #MOBILES.
 //
 
-#define AFF_BLIND					(A)
-#define AFF_INVISIBLE				(B)
-#define AFF_DETECT_EVIL				(C)
-#define AFF_DETECT_INVIS			(D)
-#define AFF_DETECT_MAGIC			(E)
-#define AFF_DETECT_HIDDEN			(F)
-#define AFF_DETECT_GOOD				(G)
-#define AFF_SANCTUARY				(H)
-#define AFF_DETECT_CAMO				(I)
-#define AFF_INFRARED				(J) // unused!
-#define AFF_CURSE					(K)
-#define AFF_CAMOUFLAGE				(L)
-#define AFF_POISON					(M)
-#define AFF_PROTECTION				(N)
-#define AFF_RAGE					(O)
-#define AFF_SNEAK					(P)
-#define AFF_HIDE					(Q)
-#define AFF_SLEEP					(R)
-#define AFF_CHARM					(S)
-#define AFF_FLYING					(T)
-#define AFF_PASS_DOOR				(U)
-#define AFF_HASTE					(V)
-#define AFF_CALM					(W)
-#define AFF_PLAGUE					(X)
-#define AFF_PERMANENT				(Y)
-#define AFF_DARK_VISION				(Z)
-#define AFF_BERSERK					(aa)
-#define AFF_WATERBREATH				(bb)
-#define AFF_REGENERATION			(cc)
-#define AFF_SLOW					(dd)
-#define AFF_NOSHOW					(ee)
+#define AFF_BLIND					(ASCII_A)
+#define AFF_INVISIBLE				(ASCII_B)
+#define AFF_DETECT_EVIL				(ASCII_C)
+#define AFF_DETECT_INVIS			(ASCII_D)
+#define AFF_DETECT_MAGIC			(ASCII_E)
+#define AFF_DETECT_HIDDEN			(ASCII_F)
+#define AFF_DETECT_GOOD				(ASCII_G)
+#define AFF_SANCTUARY				(ASCII_H)
+#define AFF_DETECT_CAMO				(ASCII_I)
+#define AFF_INFRARED				(ASCII_J) // unused!
+#define AFF_CURSE					(ASCII_K)
+#define AFF_CAMOUFLAGE				(ASCII_L)
+#define AFF_POISON					(ASCII_M)
+#define AFF_PROTECTION				(ASCII_N)
+#define AFF_RAGE					(ASCII_O)
+#define AFF_SNEAK					(ASCII_P)
+#define AFF_HIDE					(ASCII_Q)
+#define AFF_SLEEP					(ASCII_R)
+#define AFF_CHARM					(ASCII_S)
+#define AFF_FLYING					(ASCII_T)
+#define AFF_PASS_DOOR				(ASCII_U)
+#define AFF_HASTE					(ASCII_V)
+#define AFF_CALM					(ASCII_W)
+#define AFF_PLAGUE					(ASCII_X)
+#define AFF_PERMANENT				(ASCII_Y)
+#define AFF_DARK_VISION				(ASCII_Z)
+#define AFF_BERSERK					(ASCII_aa)
+#define AFF_WATERBREATH				(ASCII_bb)
+#define AFF_REGENERATION			(ASCII_cc)
+#define AFF_SLOW					(ASCII_dd)
+#define AFF_NOSHOW					(ASCII_ee)
 
 //
 // AFF bits for rooms
 //
 
-#define AFF_ROOM_RANDOMIZER			(A)
-#define AFF_ROOM_CURSE				(K)
-#define AFF_ROOM_POISON				(M)
-#define AFF_ROOM_SLEEP				(R)
-#define AFF_ROOM_PLAGUE				(X)
-#define AFF_ROOM_SLOW				(dd)
+#define AFF_ROOM_RANDOMIZER			(ASCII_A)
+#define AFF_ROOM_CURSE				(ASCII_K)
+#define AFF_ROOM_POISON				(ASCII_M)
+#define AFF_ROOM_SLEEP				(ASCII_R)
+#define AFF_ROOM_PLAGUE				(ASCII_X)
+#define AFF_ROOM_SLOW				(ASCII_dd)
 
 // Aff bits for.. AREAS!
 // -- None currently. --
@@ -1497,7 +1482,7 @@ struct kill_data
 // Aff bits for OBJS
 //
 
-#define	AFF_OBJ_BURNING				(A)
+#define	AFF_OBJ_BURNING				(ASCII_A)
 
 //
 // Sex.
@@ -1703,64 +1688,64 @@ struct kill_data
 // Used in #OBJECTS.
 ///
 
-#define ITEM_GLOW					(A)
-#define ITEM_HUM					(B)
-#define ITEM_DARK					(C)
-#define ITEM_NOSHOW					(D)
-#define ITEM_EVIL					(E)
-#define ITEM_INVIS					(F)
-#define ITEM_MAGIC					(G)
-#define ITEM_NODROP					(H)
-#define ITEM_BLESS					(I)
-#define ITEM_ANTI_GOOD				(J)
-#define ITEM_ANTI_EVIL				(K)
-#define ITEM_ANTI_NEUTRAL			(L)
-#define ITEM_NOREMOVE				(M)
-#define ITEM_INVENTORY				(N)
-#define ITEM_NOPURGE				(O)
-#define ITEM_ROT_DEATH				(P)
-#define ITEM_VIS_DEATH				(Q)
-#define ITEM_FIXED					(R)
-#define ITEM_NODISARM				(S)
-#define ITEM_NOLOCATE				(T)
-#define ITEM_MELT_DROP				(U)
-#define ITEM_UNDER_CLOTHES			(V)
-#define ITEM_SELL_EXTRACT			(W)
-#define ITEM_BURN_PROOF				(Y)
-#define ITEM_NOUNCURSE				(Z)
-#define ITEM_BRAND					(aa)
-#define CORPSE_NO_ANIMATE			(bb)
-#define ITEM_ANTI_LAWFUL			(cc)
-#define ITEM_ANTI_NEUT				(dd)
-#define ITEM_ANTI_CHAOTIC			(ee)
-#define ITEM_NO_STASH				(ff)
-#define ITEM_NO_SAC					(gg)
-#define ITEM_DONATION_PIT			(hh)
+#define ITEM_GLOW					(ASCII_A)
+#define ITEM_HUM					(ASCII_B)
+#define ITEM_DARK					(ASCII_C)
+#define ITEM_NOSHOW					(ASCII_D)
+#define ITEM_EVIL					(ASCII_E)
+#define ITEM_INVIS					(ASCII_F)
+#define ITEM_MAGIC					(ASCII_G)
+#define ITEM_NODROP					(ASCII_H)
+#define ITEM_BLESS					(ASCII_I)
+#define ITEM_ANTI_GOOD				(ASCII_J)
+#define ITEM_ANTI_EVIL				(ASCII_K)
+#define ITEM_ANTI_NEUTRAL			(ASCII_L)
+#define ITEM_NOREMOVE				(ASCII_M)
+#define ITEM_INVENTORY				(ASCII_N)
+#define ITEM_NOPURGE				(ASCII_O)
+#define ITEM_ROT_DEATH				(ASCII_P)
+#define ITEM_VIS_DEATH				(ASCII_Q)
+#define ITEM_FIXED					(ASCII_R)
+#define ITEM_NODISARM				(ASCII_S)
+#define ITEM_NOLOCATE				(ASCII_T)
+#define ITEM_MELT_DROP				(ASCII_U)
+#define ITEM_UNDER_CLOTHES			(ASCII_V)
+#define ITEM_SELL_EXTRACT			(ASCII_W)
+#define ITEM_BURN_PROOF				(ASCII_Y)
+#define ITEM_NOUNCURSE				(ASCII_Z)
+#define ITEM_BRAND					(ASCII_aa)
+#define CORPSE_NO_ANIMATE			(ASCII_bb)
+#define ITEM_ANTI_LAWFUL			(ASCII_cc)
+#define ITEM_ANTI_NEUT				(ASCII_dd)
+#define ITEM_ANTI_CHAOTIC			(ASCII_ee)
+#define ITEM_NO_STASH				(ASCII_ff)
+#define ITEM_NO_SAC					(ASCII_gg)
+#define ITEM_DONATION_PIT			(ASCII_hh)
 
 //
 // Wear flags.
 // Used in #OBJECTS.
 //
 
-#define ITEM_TAKE					(A)
-#define ITEM_WEAR_FINGER			(B)
-#define ITEM_WEAR_NECK				(C)
-#define ITEM_WEAR_BODY				(D)
-#define ITEM_WEAR_HEAD				(E)
-#define ITEM_WEAR_LEGS				(F)
-#define ITEM_WEAR_FEET				(G)
-#define ITEM_WEAR_HANDS				(H)
-#define ITEM_WEAR_ARMS				(I)
-#define ITEM_WEAR_SHIELD			(J)
-#define ITEM_WEAR_ABOUT				(K)
-#define ITEM_WEAR_WAIST				(L)
-#define ITEM_WEAR_WRIST				(M)
-#define ITEM_WEAR_WIELD				(N)
-#define ITEM_WEAR_HOLD				(O)
-#define ITEM_WEAR_FLOAT				(P)
-#define ITEM_WEAR_BRAND				(Q)
-#define ITEM_WEAR_STRAPPED			(R)
-#define ITEM_WEAR_COSMETIC			(S) //cosmetic, misc, up to 5/person
+#define ITEM_TAKE					(ASCII_A)
+#define ITEM_WEAR_FINGER			(ASCII_B)
+#define ITEM_WEAR_NECK				(ASCII_C)
+#define ITEM_WEAR_BODY				(ASCII_D)
+#define ITEM_WEAR_HEAD				(ASCII_E)
+#define ITEM_WEAR_LEGS				(ASCII_F)
+#define ITEM_WEAR_FEET				(ASCII_G)
+#define ITEM_WEAR_HANDS				(ASCII_H)
+#define ITEM_WEAR_ARMS				(ASCII_I)
+#define ITEM_WEAR_SHIELD			(ASCII_J)
+#define ITEM_WEAR_ABOUT				(ASCII_K)
+#define ITEM_WEAR_WAIST				(ASCII_L)
+#define ITEM_WEAR_WRIST				(ASCII_M)
+#define ITEM_WEAR_WIELD				(ASCII_N)
+#define ITEM_WEAR_HOLD				(ASCII_O)
+#define ITEM_WEAR_FLOAT				(ASCII_P)
+#define ITEM_WEAR_BRAND				(ASCII_Q)
+#define ITEM_WEAR_STRAPPED			(ASCII_R)
+#define ITEM_WEAR_COSMETIC			(ASCII_S) //cosmetic, misc, up to 5/person
 
 #define RESTRICT_OTHER				0
 #define RESTRICT_CLASS				1
@@ -1784,12 +1769,12 @@ struct kill_data
 #define PALADIN_CRUSADER			2
 
 #define STYLE_NONE					-1
-#define STYLE_GLADIATOR				(A)
-#define STYLE_BARBARIAN				(B)
-#define STYLE_DUELIST				(C)
-#define STYLE_SKIRMISHER			(D)
-#define STYLE_DRAGOON				(E)
-#define STYLE_TACTICIAN				(F)
+#define STYLE_GLADIATOR				(ASCII_A)
+#define STYLE_BARBARIAN				(ASCII_B)
+#define STYLE_DUELIST				(ASCII_C)
+#define STYLE_SKIRMISHER			(ASCII_D)
+#define STYLE_DRAGOON				(ASCII_E)
+#define STYLE_TACTICIAN				(ASCII_F)
 #define MAX_STYLE					7
 #define MAX_STYLE_SKILL				38
 
@@ -1813,49 +1798,49 @@ struct kill_data
 // weapon types
 //
 
-#define WEAPON_FLAMING				(A)
-#define WEAPON_FROST				(B)
-#define WEAPON_VAMPIRIC				(C)
-#define WEAPON_SHARP				(D)
-#define WEAPON_VORPAL				(E)
-#define WEAPON_TWO_HANDS			(F)
-#define WEAPON_SHOCKING				(G)
-#define WEAPON_POISON				(H)
-#define WEAPON_AVENGER				(I)
-#define WEAPON_SHADOWBANE			(J)
-#define WEAPON_LIGHTBRINGER			(K)
+#define WEAPON_FLAMING				(ASCII_A)
+#define WEAPON_FROST				(ASCII_B)
+#define WEAPON_VAMPIRIC				(ASCII_C)
+#define WEAPON_SHARP				(ASCII_D)
+#define WEAPON_VORPAL				(ASCII_E)
+#define WEAPON_TWO_HANDS			(ASCII_F)
+#define WEAPON_SHOCKING				(ASCII_G)
+#define WEAPON_POISON				(ASCII_H)
+#define WEAPON_AVENGER				(ASCII_I)
+#define WEAPON_SHADOWBANE			(ASCII_J)
+#define WEAPON_LIGHTBRINGER			(ASCII_K)
 
 //
 // gate flags
 //
 
-#define GATE_NORMAL_EXIT			(A)
-#define GATE_NOCURSE				(B)
-#define GATE_GOWITH					(C)
-#define GATE_BUGGY					(D)
-#define GATE_RANDOM					(E)
+#define GATE_NORMAL_EXIT			(ASCII_A)
+#define GATE_NOCURSE				(ASCII_B)
+#define GATE_GOWITH					(ASCII_C)
+#define GATE_BUGGY					(ASCII_D)
+#define GATE_RANDOM					(ASCII_E)
 
 //
 // furniture flags
 //
 
-#define STAND_AT					(A)
-#define STAND_ON					(B)
-#define STAND_IN					(C)
-#define SIT_AT						(D)
-#define SIT_ON						(E)
-#define SIT_IN						(F)
-#define REST_AT						(G)
-#define REST_ON						(H)
-#define REST_IN						(I)
-#define SLEEP_AT					(J)
-#define SLEEP_ON					(K)
-#define SLEEP_IN					(L)
-#define PUT_AT						(M)
-#define PUT_ON						(N)
-#define PUT_IN						(O)
-#define PUT_INSIDE					(P)
-#define LOUNGE_ON					(Q)
+#define STAND_AT					(ASCII_A)
+#define STAND_ON					(ASCII_B)
+#define STAND_IN					(ASCII_C)
+#define SIT_AT						(ASCII_D)
+#define SIT_ON						(ASCII_E)
+#define SIT_IN						(ASCII_F)
+#define REST_AT						(ASCII_G)
+#define REST_ON						(ASCII_H)
+#define REST_IN						(ASCII_I)
+#define SLEEP_AT					(ASCII_J)
+#define SLEEP_ON					(ASCII_K)
+#define SLEEP_IN					(ASCII_L)
+#define PUT_AT						(ASCII_M)
+#define PUT_ON						(ASCII_N)
+#define PUT_IN						(ASCII_O)
+#define PUT_INSIDE					(ASCII_P)
+#define LOUNGE_ON					(ASCII_Q)
 	
 //
 // Apply types (for affects).
@@ -1935,11 +1920,11 @@ struct kill_data
 // Used in #OBJECTS.
 //
 
-#define CONT_CLOSEABLE				(A)
-#define CONT_PICKPROOF				(B)
-#define CONT_CLOSED					(C)
-#define CONT_LOCKED					(D)
-#define CONT_PUT_ON					(E)
+#define CONT_CLOSEABLE				(ASCII_A)
+#define CONT_PICKPROOF				(ASCII_B)
+#define CONT_CLOSED					(ASCII_C)
+#define CONT_LOCKED					(ASCII_D)
+#define CONT_PUT_ON					(ASCII_E)
 
 #define WIELD_ONE					1
 #define WIELD_TWO					2
@@ -1986,60 +1971,47 @@ struct kill_data
 // Used in #ROOMS.
 //
 
-#define ROOM_DARK					(A)
-#define ROOM_NO_MOB					(C)
-#define ROOM_INDOORS				(D)
-#define ROOM_NO_CONSECRATE			(E)
-#define ROOM_PRIVATE				(J)
-#define ROOM_SAFE					(K)
-#define ROOM_SOLITARY				(L)
-#define ROOM_PET_SHOP				(M)
-#define ROOM_NO_RECALL				(N)
-#define ROOM_IMP_ONLY				(O)
-#define ROOM_GODS_ONLY				(P)
-#define ROOM_HEROES_ONLY			(Q)
-#define ROOM_NEWBIES_ONLY			(R)
-#define ROOM_LAW					(S)
-#define ROOM_NOWHERE				(T)
-#define ROOM_NO_GATE				(U)
-#define ROOM_SILENCE				(V)
-#define ROOM_NO_SUMMON_TO			(W)
-#define ROOM_NO_SUMMON_FROM			(X)
-#define ROOM_NO_ALARM				(Z)
-#define ROOM_FORCE_DUEL				(bb)
-#define ROOM_NO_MAGIC				(cc)
-#define ROOM_AREA_EXPLORE			(dd) // Don't use - Use area flags instead
-#define ROOM_NO_COMMUNE				(ee)
-
-//
-// Directions.
-// Used in #ROOMS.
-//
-
-#define DIR_NORTH					0
-#define DIR_EAST					1
-#define DIR_SOUTH					2
-#define DIR_WEST					3
-#define DIR_UP						4
-#define DIR_DOWN					5
-
+#define ROOM_DARK					(ASCII_A)
+#define ROOM_NO_MOB					(ASCII_C)
+#define ROOM_INDOORS				(ASCII_D)
+#define ROOM_NO_CONSECRATE			(ASCII_E)
+#define ROOM_PRIVATE				(ASCII_J)
+#define ROOM_SAFE					(ASCII_K)
+#define ROOM_SOLITARY				(ASCII_L)
+#define ROOM_PET_SHOP				(ASCII_M)
+#define ROOM_NO_RECALL				(ASCII_N)
+#define ROOM_IMP_ONLY				(ASCII_O)
+#define ROOM_GODS_ONLY				(ASCII_P)
+#define ROOM_HEROES_ONLY			(ASCII_Q)
+#define ROOM_NEWBIES_ONLY			(ASCII_R)
+#define ROOM_LAW					(ASCII_S)
+#define ROOM_NOWHERE				(ASCII_T)
+#define ROOM_NO_GATE				(ASCII_U)
+#define ROOM_SILENCE				(ASCII_V)
+#define ROOM_NO_SUMMON_TO			(ASCII_W)
+#define ROOM_NO_SUMMON_FROM			(ASCII_X)
+#define ROOM_NO_ALARM				(ASCII_Z)
+#define ROOM_FORCE_DUEL				(ASCII_bb)
+#define ROOM_NO_MAGIC				(ASCII_cc)
+#define ROOM_AREA_EXPLORE			(ASCII_dd) // Don't use - Use area flags instead
+#define ROOM_NO_COMMUNE				(ASCII_ee)
 
 //
 // Exit flags.
 // Used in #ROOMS.
 //
 
-#define EX_ISDOOR					(A)
-#define EX_CLOSED					(B)
-#define EX_LOCKED					(C)
-#define EX_PICKPROOF				(D)
-#define EX_NOPASS					(E)
-#define EX_NOCLOSE					(F)
-#define EX_NOLOCK					(G)
-#define EX_NOBASH					(H)
-#define EX_NONOBVIOUS				(I)
-#define EX_TRANSLUCENT				(J)
-#define EX_JAMMED					(K)
+#define EX_ISDOOR					(ASCII_A)
+#define EX_CLOSED					(ASCII_B)
+#define EX_LOCKED					(ASCII_C)
+#define EX_PICKPROOF				(ASCII_D)
+#define EX_NOPASS					(ASCII_E)
+#define EX_NOCLOSE					(ASCII_F)
+#define EX_NOLOCK					(ASCII_G)
+#define EX_NOBASH					(ASCII_H)
+#define EX_NONOBVIOUS				(ASCII_I)
+#define EX_TRANSLUCENT				(ASCII_J)
+#define EX_JAMMED					(ASCII_K)
 
 #define ARE_NORMAL					0
 #define ARE_ROAD_RIVER				1
@@ -2185,43 +2157,6 @@ struct kill_data
 #define WEAR_COSMETIC				21
 #define MAX_WEAR					22
 
-//
-// Climate types
-//
-
-#define CLIMATE_NONE				0
-#define CLIMATE_TEMPERATE			1
-#define CLIMATE_DESERT				2
-#define CLIMATE_TROPICAL			3
-#define CLIMATE_ALPINE				4
-#define CLIMATE_TUNDRA				5
-#define CLIMATE_SUBTROPICAL			6
-#define CLIMATE_ARID				7
-#define CLIMATE_ENGLISH				8
-#define MAX_CLIMATE					9
-
-#define SKY_CLEAR					0
-#define SKY_PCLOUDY					1
-#define SKY_OVERCAST				2
-#define SKY_DRIZZLE					3
-#define SKY_DOWNPOUR				4
-#define SKY_TSTORM					5
-#define SKY_FLURRY					6
-#define SKY_BLIZZARD				7
-#define SKY_HAIL					8
-#define MAX_SKY						9
-
-#define TEMP_HOT					0
-#define TEMP_WARM					1
-#define TEMP_COOL					2
-#define TEMP_COLD					3
-#define MAX_TEMP					4
-
-#define WIND_CALM					0
-#define WIND_BREEZE					1
-#define WIND_WINDY					2
-#define WIND_GALE					3
-#define MAX_WIND					4
 
 #define BLOCK_YES					1
 #define BLOCK_NO					0
@@ -2291,135 +2226,142 @@ struct kill_data
 // ACT bits for players.
 //
 
-#define PLR_IS_NPC					(A) // Don't EVER set.
+#define PLR_IS_NPC					(ASCII_A) // Don't EVER set.
 
 //
 // RT auto flags
 //
 
-#define PLR_AUTOABORT				(B)
-#define PLR_AUTOASSIST				(C)
-#define PLR_AUTOEXIT				(D)
-#define PLR_AUTOLOOT				(E)
-#define PLR_AUTOSAC					(F)
-#define PLR_AUTOGOLD				(G)
-#define PLR_AUTOSPLIT				(H)
-#define PLR_COLOR					(I)
-#define PLR_IGNORANT				(J)
-#define PLR_BETRAYER				(K)
+#define PLR_AUTOABORT				(ASCII_B)
+#define PLR_AUTOASSIST				(ASCII_C)
+#define PLR_AUTOEXIT				(ASCII_D)
+#define PLR_AUTOLOOT				(ASCII_E)
+#define PLR_AUTOSAC					(ASCII_F)
+#define PLR_AUTOGOLD				(ASCII_G)
+#define PLR_AUTOSPLIT				(ASCII_H)
+#define PLR_COLOR					(ASCII_I)
+#define PLR_IGNORANT				(ASCII_J)
+#define PLR_BETRAYER				(ASCII_K)
 
 //
 // RT personal flags
 //
 
-#define PLR_CODER					(L)
-#define PLR_HEROIMM					(M)
-#define PLR_HOLYLIGHT				(N)
-#define PLR_EMPOWERED				(O)
-#define PLR_NOVOID					(P)
-#define PLR_NOSUMMON				(Q)
-#define PLR_NOFOLLOW				(R)
+#define PLR_CODER					(ASCII_L)
+#define PLR_HEROIMM					(ASCII_M)
+#define PLR_HOLYLIGHT				(ASCII_N)
+#define PLR_EMPOWERED				(ASCII_O)
+#define PLR_NOVOID					(ASCII_P)
+#define PLR_NOSUMMON				(ASCII_Q)
+#define PLR_NOFOLLOW				(ASCII_R)
 
 //
 // 2 bits reserved, S-T
 //
 
-#define PLR_NO_TRANSFER				(T)
+#define PLR_NO_TRANSFER				(ASCII_T)
 
 //
 // Bad flags
 //
 
-#define PLR_PERMIT					(U)
-#define PLR_MORON					(V)
-#define PLR_LOG						(W)
-#define PLR_DENY					(X)
-#define PLR_FREEZE					(Y)
-#define PLR_THIEF					(Z)
-#define PLR_KILLER					(aa)
-#define PLR_CRIMINAL				(bb)
+#define PLR_PERMIT					(ASCII_U)
+#define PLR_MORON					(ASCII_V)
+#define PLR_LOG						(ASCII_W)
+#define PLR_DENY					(ASCII_X)
+#define PLR_FREEZE					(ASCII_Y)
+#define PLR_THIEF					(ASCII_Z)
+#define PLR_KILLER					(ASCII_aa)
+#define PLR_CRIMINAL				(ASCII_bb)
 
 //
 // RT comm flags -- may be used on both mobs and chars
 //
 
-#define COMM_QUIET					(A)
-#define COMM_DEAF					(B)
-#define COMM_NOWIZ					(C)
-#define COMM_NOAUCTION				(D)
-#define COMM_NOGOSSIP				(E)
-#define COMM_NOQUESTION				(F)
-#define COMM_NONEWBIE				(G)
-#define COMM_NOCABAL				(H)
-#define COMM_NOQUOTE				(I)
-#define COMM_SHOUTSOFF				(J)
-#define COMM_ANSI					(K)
+#define COMM_QUIET					(ASCII_A)
+#define COMM_DEAF					(ASCII_B)
+#define COMM_NOWIZ					(ASCII_C)
+#define COMM_NOAUCTION				(ASCII_D)
+#define COMM_NOGOSSIP				(ASCII_E)
+#define COMM_NOQUESTION				(ASCII_F)
+#define COMM_NONEWBIE				(ASCII_G)
+#define COMM_NOCABAL				(ASCII_H)
+#define COMM_NOQUOTE				(ASCII_I)
+#define COMM_SHOUTSOFF				(ASCII_J)
+#define COMM_ANSI					(ASCII_K)
 
 //
 // display flags
 //
 
-#define COMM_COMPACT				(L)
-#define COMM_BRIEF					(M)
-#define COMM_PROMPT					(N)
-#define COMM_COMBINE				(O)
-#define COMM_TELNET_GA				(P)
-#define COMM_SHOW_AFFECTS			(Q)
-#define COMM_IMMORTAL				(S)
+#define COMM_COMPACT				(ASCII_L)
+#define COMM_BRIEF					(ASCII_M)
+#define COMM_PROMPT					(ASCII_N)
+#define COMM_COMBINE				(ASCII_O)
+#define COMM_TELNET_GA				(ASCII_P)
+#define COMM_SHOW_AFFECTS			(ASCII_Q)
+#define COMM_IMMORTAL				(ASCII_S)
 
 //
 // penalties
 //
 
-#define COMM_NOEMOTE				(T)
-#define COMM_NOSHOUT				(U)
-#define COMM_NOTELL					(V)
-#define COMM_NOCHANNELS				(W) 
-#define COMM_BUILDER				(X)
-#define COMM_SNOOP_PROOF			(Y)
-#define COMM_AFK					(Z)
-#define COMM_ALL_CABALS				(aa)
-#define COMM_NOSOCKET				(bb)
-#define COMM_SWITCHSKILLS			(cc)
-#define COMM_NOBUILDER				(dd)
-#define COMM_LOTS_O_COLOR			(ee)
+#define COMM_NOEMOTE				(ASCII_T)
+#define COMM_NOSHOUT				(ASCII_U)
+#define COMM_NOTELL					(ASCII_V)
+#define COMM_NOCHANNELS				(ASCII_W) 
+#define COMM_BUILDER				(ASCII_X)
+#define COMM_SNOOP_PROOF			(ASCII_Y)
+#define COMM_AFK					(ASCII_Z)
+#define COMM_ALL_CABALS				(ASCII_aa)
+#define COMM_NOSOCKET				(ASCII_bb)
+#define COMM_SWITCHSKILLS			(ASCII_cc)
+#define COMM_NOBUILDER				(ASCII_dd)
+#define COMM_LOTS_O_COLOR			(ASCII_ee)
 
 //
 // Trust flags
 //
 
-#define TRUST_GROUP					(A)
-#define TRUST_CABAL					(B)
+#define TRUST_GROUP					(ASCII_A)
+#define TRUST_CABAL					(ASCII_B)
 
 //
 // WIZnet flags
 //
 
-#define WIZ_ON						(A)
-#define WIZ_TICKS					(B)
-#define WIZ_LOGINS					(C)
-#define WIZ_SITES					(D)
-#define WIZ_LINKS					(E)
-#define WIZ_DEATHS					(F)
-#define WIZ_RESETS					(G)
-#define WIZ_MOBDEATHS				(H)
-#define WIZ_FLAGS					(I)
-#define WIZ_PENALTIES				(J)
-#define WIZ_SACCING					(K)
-#define WIZ_LEVELS					(L)
-#define WIZ_SECURE					(M)
-#define WIZ_SWITCHES				(N)
-#define WIZ_SNOOPS					(O)
-#define WIZ_RESTORE					(P)
-#define WIZ_LOAD					(Q)
-#define WIZ_NEWBIE					(R)
-#define WIZ_PREFIX					(S)
-#define WIZ_SPAM					(T)
-#define WIZ_CABAL					(U)
-#define WIZ_PERCENT					(V)
-#define WIZ_LOG						(W)
-#define	WIZ_OOC						(X)
-#define WIZ_DEBUG					(Y)
+#define WIZ_ON						(ASCII_A)
+#define WIZ_TICKS					(ASCII_B)
+#define WIZ_LOGINS					(ASCII_C)
+#define WIZ_SITES					(ASCII_D)
+
+#ifdef WIZ_LINKS
+#undef WIZ_LINKS
+#define WIZ_LINKS					(ASCII_E)
+#else
+#define WIZ_LINKS					(ASCII_E)
+#endif
+
+#define WIZ_DEATHS					(ASCII_F)
+#define WIZ_RESETS					(ASCII_G)
+#define WIZ_MOBDEATHS				(ASCII_H)
+#define WIZ_FLAGS					(ASCII_I)
+#define WIZ_PENALTIES				(ASCII_J)
+#define WIZ_SACCING					(ASCII_K)
+#define WIZ_LEVELS					(ASCII_L)
+#define WIZ_SECURE					(ASCII_M)
+#define WIZ_SWITCHES				(ASCII_N)
+#define WIZ_SNOOPS					(ASCII_O)
+#define WIZ_RESTORE					(ASCII_P)
+#define WIZ_LOAD					(ASCII_Q)
+#define WIZ_NEWBIE					(ASCII_R)
+#define WIZ_PREFIX					(ASCII_S)
+#define WIZ_SPAM					(ASCII_T)
+#define WIZ_CABAL					(ASCII_U)
+#define WIZ_PERCENT					(ASCII_V)
+#define WIZ_LOG						(ASCII_W)
+#define	WIZ_OOC						(ASCII_X)
+#define WIZ_DEBUG					(ASCII_Y)
 
 //
 // AP Demonic Favors Defines
@@ -2488,9 +2430,9 @@ struct kill_data
 #define ELE_TYPE_PRIMARY			1
 #define ELE_TYPE_PARA				2
 
-#define MAT_TRANSLUCENT				(A)
-#define MAT_TRANSPARENT				(B)
-#define MAT_EDIBLE					(C)
+#define MAT_TRANSLUCENT				(ASCII_A)
+#define MAT_TRANSPARENT				(ASCII_B)
+#define MAT_EDIBLE					(ASCII_C)
 
 #define MAT_SOLID					0
 #define MAT_LIQUID					1
@@ -4034,12 +3976,12 @@ extern char *command_line;
 //
 
 #define AREA_NONE					0
-#define AREA_EXPLORE				(A)		// So far, only that gear returns to newbies
-#define AREA_NO_NEWBIES				(B)		// Newbies can't go in
-#define AREA_UNGHOST				(C)		// Walking in unghosts you
-#define AREA_CHANGED				(D)		// Area has been modified.
-#define AREA_ADDED					(E)		// Area has been added to.
-#define AREA_LOADING				(F)		// Used for counting in db.c
+#define AREA_EXPLORE				(ASCII_A)		// So far, only that gear returns to newbies
+#define AREA_NO_NEWBIES				(ASCII_B)		// Newbies can't go in
+#define AREA_UNGHOST				(ASCII_C)		// Walking in unghosts you
+#define AREA_CHANGED				(ASCII_D)		// Area has been modified.
+#define AREA_ADDED					(ASCII_E)		// Area has been added to.
+#define AREA_LOADING				(ASCII_F)		// Used for counting in db.c
 
 #define MAX_DIR						6
 #define NO_FLAG						-99		// Must not be used in flags or stats.

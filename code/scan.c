@@ -85,22 +85,22 @@ void do_scan(CHAR_DATA *ch, char *argument)
 
 	depth = 3;
 
-	if (sun == SUN_LIGHT)
+	if (sun == SolarPosition::Daylight)
 		depth++;
 
-	if (sun == SUN_DARK)
+	if (sun == SolarPosition::Dark)
 		depth--;
 
-	if (ch->in_room->area->sky == SKY_DRIZZLE
-		|| ch->in_room->area->sky == SKY_FLURRY
-		|| ch->in_room->area->sky == SKY_HAIL)
+	if (ch->in_room->area->sky == WeatherCondition::Drizzle
+		|| ch->in_room->area->sky == WeatherCondition::SnowFlurry
+		|| ch->in_room->area->sky == WeatherCondition::Hail)
 	{
 		depth--;
 	}
 
-	if (ch->in_room->area->sky == SKY_DOWNPOUR
-		|| ch->in_room->area->sky == SKY_TSTORM
-		|| ch->in_room->area->sky == SKY_BLIZZARD)
+	if (ch->in_room->area->sky == WeatherCondition::Downpour
+		|| ch->in_room->area->sky == WeatherCondition::ThunderStorm
+		|| ch->in_room->area->sky == WeatherCondition::Blizzard)
 	{
 		depth -= 2;
 	}

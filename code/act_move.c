@@ -229,7 +229,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (is_affected_room(in_room, gsn_glaciate) 
 		&& in_room->sector_type == SECT_ICE 
-		&& door == DIR_DOWN 
+		&& door == Directions::Down 
 		&& to_room->sector_type == SECT_UNDERWATER)
 	{
 		send_to_char("You can't break through the thick layer of ice!\n\r", ch);
@@ -1113,7 +1113,7 @@ void do_north(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_NORTH, false, true);
+	move_char(ch, Directions::North, false, true);
 }
 
 void do_east(CHAR_DATA *ch, char *argument)
@@ -1124,7 +1124,7 @@ void do_east(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_EAST, false, true);
+	move_char(ch, Directions::East, false, true);
 }
 
 void do_south(CHAR_DATA *ch, char *argument)
@@ -1135,7 +1135,7 @@ void do_south(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_SOUTH, false, true);
+	move_char(ch, Directions::South, false, true);
 }
 
 void do_west(CHAR_DATA *ch, char *argument)
@@ -1146,7 +1146,7 @@ void do_west(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_WEST, false, true);
+	move_char(ch, Directions::West, false, true);
 }
 
 void do_up(CHAR_DATA *ch, char *argument)
@@ -1157,7 +1157,7 @@ void do_up(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_UP, false, true);
+	move_char(ch, Directions::Up, false, true);
 }
 
 void do_down(CHAR_DATA *ch, char *argument)
@@ -1168,7 +1168,7 @@ void do_down(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	move_char(ch, DIR_DOWN, false, true);
+	move_char(ch, Directions::Down, false, true);
 }
 
 void trip_trap(CHAR_DATA *ch, ROOM_INDEX_DATA *room, TRAP_DATA *trap)

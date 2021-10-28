@@ -1086,7 +1086,7 @@ void spell_unholy_communion(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 		return;
 	}
 
-	if (!IS_SET(ch->in_room->room_flags, ROOM_DARK) && sun != SUN_SET && sun != SUN_DARK)
+	if (!IS_SET(ch->in_room->room_flags, ROOM_DARK) && sun != SolarPosition::Sunset && sun != SolarPosition::Dark)
 	{
 		send_to_char("The unholy powers prefer to conduct their affairs under cover of darkness.\n\r", ch);
 		return;
@@ -1174,7 +1174,7 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 		return;
 
 	if ((!is_outside(ch) && !IS_SET(ch->in_room->room_flags, ROOM_DARK))
-		|| (is_outside(ch) && sun != SUN_DARK))
+		|| (is_outside(ch) && sun != SolarPosition::Dark))
 	{
 		send_to_char("It occurs to you that a well-lit place is perhaps not ideal for this.\n\r", ch);
 		return;
@@ -1825,8 +1825,8 @@ void insanity_two(CHAR_DATA *ch, int room)
 
 	switch (room)
 	{
-		case DIR_NORTH:
-			if (in_room->exit[DIR_NORTH] == NULL)
+		case Directions::North:
+			if (in_room->exit[Directions::North] == NULL)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1838,7 +1838,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 			}
 
 			break;
-		case DIR_EAST:
+		case Directions::East:
 			if (in_room->exit[room] == NULL)
 			{
 				room = number_range(0, 5);
@@ -1851,7 +1851,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 			}
 
 			break;
-		case DIR_SOUTH:
+		case Directions::South:
 			if (in_room->exit[room] == NULL)
 			{
 				room = number_range(0, 5);
@@ -1864,7 +1864,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 			}
 
 			break;
-		case DIR_WEST:
+		case Directions::West:
 			if (in_room->exit[room] == NULL)
 			{
 				room = number_range(0, 5);
@@ -1877,7 +1877,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 			}
 
 			break;
-		case DIR_UP:
+		case Directions::Up:
 			if (in_room->exit[room] == NULL)
 			{
 				room = number_range(0, 5);
@@ -1890,7 +1890,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 			}
 
 			break;
-		case DIR_DOWN:
+		case Directions::Down:
 			if (in_room->exit[room] == NULL)
 			{
 				room = number_range(0, 5);

@@ -254,7 +254,7 @@ void check_assist(CHAR_DATA *ch, CHAR_DATA *victim)
 				{
 					CHAR_DATA *vch;
 					CHAR_DATA *target = NULL;
-					char buf[300], buf2[300], *pbuf;
+					char buf[300], *pbuf;
 					int number = 0, tnumber;
 
 					if (number_bits(1) == 0)
@@ -277,7 +277,7 @@ void check_assist(CHAR_DATA *ch, CHAR_DATA *victim)
 
 					if (target != NULL)
 					{
-						sprintf(buf, rch->short_descr);
+						sprintf(buf, "%s", rch->short_descr);
 						pbuf = &buf[0];
 
 						if (!str_prefix("a ", rch->short_descr))
@@ -285,8 +285,8 @@ void check_assist(CHAR_DATA *ch, CHAR_DATA *victim)
 						else if (!str_prefix("the ", rch->short_descr))
 							pbuf += 4;
 
-						sprintf(buf2, "%s%s", pbuf != &buf[0] ? "Another " : "", pbuf);
-						act("$t comes to the aid of $n, attacking $N!", ch, buf2, target, TO_ROOM);
+						auto buffer = fmt::format("{}{}", pbuf != &buf[0] ? "Another " : "", pbuf);
+						act("$t comes to the aid of $n, attacking $N!", ch, buffer.c_str(), target, TO_ROOM);
 
 						multi_hit(rch, target, TYPE_UNDEFINED);
 					}

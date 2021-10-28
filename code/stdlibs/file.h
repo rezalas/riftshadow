@@ -13,7 +13,9 @@
 #endif
 
 #define MAX_WORD_LENGTH 2048
-#define MAX_STRING_LENGTH 4096
+//TODO: MAX_STRING_LENGTH also defined in merc.h. Only referenced in the ReadString method in file.c. 
+// Leaving it here for now. If it's used in the future, we can fix it then.
+#define MAX_STRING_LENGTH 4096 
 
 #define MODE_READ 	0
 #define MODE_WRITE 	1

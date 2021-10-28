@@ -29,7 +29,7 @@ END_EVENT_TYPES
 // Fallen Desert Progs
 BEGIN_SPEC(mspec_fallendesert_spirits)
 	EVENT_MDEATH
-		EXIT_DATA *pexit = ch->in_room->exit[DIR_NORTH];
+		EXIT_DATA *pexit = ch->in_room->exit[Directions::North];
 
 		REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 		REMOVE_BIT(pexit->exit_info, EX_CLOSED);

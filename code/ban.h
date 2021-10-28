@@ -13,6 +13,7 @@
 #include "act_wiz.h"
 #include "interp.h"
 #include "db.h"
+#include "./include/fmt/format.h"
 
 //
 // LOCAL FUNCTIONS

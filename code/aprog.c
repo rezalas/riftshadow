@@ -1,6 +1,7 @@
 /* IMPROGS Expansion: AREA PROGS (Eladrian) */
 
 #include "aprog.h"
+#include "weather_enums.h"
 
 const struct improg_type aprog_table[] = 
 {
@@ -220,7 +221,7 @@ void tick_prog_ilopheth(AREA_DATA *area)
 	if ((time_info.hour != 15 && time_info.hour != 17) || time_info.half)
 		return;
 
-	if (area->sky >= SKY_OVERCAST)
+	if (area->sky >= WeatherCondition::Overcast)
 		return;
 
 	for (obj = pedroom->contents; obj; obj = obj->next_content)
@@ -399,10 +400,10 @@ void sun_prog_ilopheth(AREA_DATA *area)
 {
 	switch (sun)
 	{
-		case SUN_RISE:
+		case SolarPosition::Sunrise:
 			RS.Queue.AddToQueue(15, 2, (void *)zone_echo, area,	(char *)"With the beginning of the day sounds of life fill the valley, as the forest comes alive.");
 			break;
-		case SUN_SET:
+		case SolarPosition::Sunset:
 			RS.Queue.AddToQueue(15, 2, (void *)zone_echo, area, (char *)"The forest grows still, as the night sky settles over the valley.");
 			break;
 	}
@@ -417,16 +418,16 @@ void sun_prog_glasstower(AREA_DATA *area)
 {
 	switch (sun)
 	{
-		case (SUN_RISE):
+		case (SolarPosition::Sunrise):
 			zone_echo(area, "{RThe magical luminescence of the Tower fades, replaced by the ruddy hue of sunrise.{x");
 			break;
-		case (SUN_LIGHT):
+		case (SolarPosition::Daylight):
 			zone_echo(area, "{YBrilliant rays of light are shattered by the complex structures of glass as the sun illuminates the Tower.{x");
 			break;
-		case (SUN_SET):
+		case (SolarPosition::Sunset):
 			zone_echo(area, "{MAs the sun begins to set, the Tower takes on the color of the dusky sky.{x");
 			break;
-		case (SUN_DARK):
+		case (SolarPosition::Dark):
 			zone_echo(area, "{WThe natural light now being insufficient, the Tower itself begins to glow with magical energy.{x");
 			break;
 	}

@@ -19,6 +19,7 @@
 #include "spec.h"
 #include <string.h>
 #include "const.h"
+#include "./include/fmt/format.h"
 
 /*
  *  * Local booting procedures.

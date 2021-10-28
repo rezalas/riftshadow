@@ -5,6 +5,8 @@
 #include <arpa/inet.h>
 #include <cstddef>
 
+//TODO: WIZ_LINKS also defined in merc.h. Nothing appears to reference this define. 
+// Leaving it here for now. If it's used in the future, we can fix it then.
 #define WIZ_LINKS 1
 
 #define PLAYER_OUTPUT_SIZE	8192	//flah.
