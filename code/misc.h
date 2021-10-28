@@ -1,41 +1,9 @@
 #ifndef MISC_H
 #define MISC_H
 
-#include <sys/types.h>
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <ctype.h>
 #include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "./include/fmt/format.h"
 
-#define PIECE_NONE					-1
-#define WHITE_PAWN					0
-#define WHITE_KNIGHT				1
-#define WHITE_BISHOP				2
-#define WHITE_ROOK					3
-#define WHITE_QUEEN					4
-#define WHITE_KING					5
-#define BLACK_PAWN					6
-#define BLACK_KNIGHT				7
-#define BLACK_BISHOP				8
-#define BLACK_ROOK					9
-#define BLACK_QUEEN					10
-#define BLACK_KING					11
 #define MAX_PIECE					12
-
-#define WHITE_SQUARE				0
-#define BLACK_SQUARE				1
-
-#define WHITE_PIECE					0
-#define BLACK_PIECE					1
 
 struct piece_type
 {

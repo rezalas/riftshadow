@@ -5,7 +5,38 @@
 
 */
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#include <ctype.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/time.h>
 #include "newmem.h"
+#include "db.h"
+#include "comm.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "tables.h"
+#include "update.h"
+#include "interp.h"
+#include "utility.h"
+#include "act_wiz.h"
+#include "handler.h"
+#include "fight.h"
+
+//#define free public_fREe
+//tweakable parameters
+#define TEMP_STRING_MEM_SIZE		320000
+#define TEMP_STRUCT_MEM_SIZE		100000
+#define PERM_STRING_LIST_CHUNK		30000
+#define PERM_STRING_CHUNK_SIZE		131072
+#define PERM_STRING_MAX_SIZE		3500000
+#define EMERGENCY_DISABLE_TALLOC	FALSE
+
+typedef struct string_entry STRING_ENTRY;
+typedef struct mallinfo MALLOC_INFO;
 
 char *temp;
 

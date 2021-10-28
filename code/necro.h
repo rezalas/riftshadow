@@ -6,23 +6,7 @@
 #ifndef NECRO_H
 #define NECRO_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <algorithm>
 #include "merc.h"
-#include "necro.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "magic.h"
-#include "interp.h"
-#include "fight.h"
-#include "db.h"
-#include "misc.h"
-#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

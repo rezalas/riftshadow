@@ -1,4 +1,25 @@
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <algorithm>
 #include "necro.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "magic.h"
+#include "interp.h"
+#include "fight.h"
+#include "db.h"
+#include "misc.h"
+#include "utility.h"
+#include "skills.h"
+#include "devextra.h"
+#include "newmem.h"
 
 void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

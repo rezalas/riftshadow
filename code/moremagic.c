@@ -31,8 +31,33 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <algorithm>
 #include "moremagic.h"
 #include "weather_enums.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "magic.h"
+#include "act_move.h"
+#include "comm.h"
+#include "const.h"
+#include "utility.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "devextra.h"
+#include "act_info.h"
+#include "act_comm.h"
+#include "skills.h"
+#include "db.h"
+
+#define LOGIN_LOG_FILE			"logins.txt"
+//#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
+
 
 void spell_enlarge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {

@@ -1,30 +1,7 @@
 #ifndef CABAL_H
 #define CABAL_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <math.h>
-#include <iterator>
-#include <algorithm>
 #include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "magic.h"
-#include "warrior.h"
-#include "fight.h"
-#include "dioextra.h"
-#include "db.h"
-#include "devextra.h"
-#include "act_info.h"
-#include "act_comm.h"
-#include "act_wiz.h"
-#include "const.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
 
 //
 // LOCAL FUNCTIONS

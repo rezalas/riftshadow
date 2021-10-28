@@ -1,6 +1,37 @@
 /* Eladrian's Kickin' Quest Tracking System -- ph34r */
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "quest.h"
+#include "comm.h"
+#include "update.h"
+#include "magic.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "interp.h"
+#include "spec.h"
+#include "mprog.h"
+#include "act_obj.h"
+#include "material.h"
+#include "utility.h"
+#include "newmem.h"
+#include "handler.h"
+#include "devextra.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "fight.h"
+
+#define STAGE(ch)					ch->pcdata->quests[nQuestIndex]
+#define SET_STAGE(ch, i)			ch->pcdata->quests[nQuestIndex] = i
+
+#define SMITH_QUEST_LASTCOMP		"Smith Quest Last Component"
+#define SMITH_QUEST_COMP_ACQUIRED	"Smith Quest Components Used"
+
 
 const struct quest_type quest_table[MAX_QUESTS] =
 {

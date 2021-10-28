@@ -1,7 +1,4 @@
-#include <string.h>
-#include <stddef.h>
 #include "catch.hpp"
-#include "../code/merc.h"
 #include "../code/fight.h"
 
 SCENARIO("testing updating victim position", "[update_pos]")

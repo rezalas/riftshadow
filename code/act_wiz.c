@@ -31,15 +31,55 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iterator>
 #include "act_wiz.h"
 #include "prof.h"
 #include "weather_enums.h"
+#include "db2.h"
+#include "handler.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "olc.h"
+#include "spec.h"
+#include "interp.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "act_obj.h"
+#include "save.h"
+#include "dioextra.h"
+#include "help.h"
+#include "devextra.h"
+#include "newmem.h"
+#include "update.h"
+#include "cabal.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "fight.h"
+#include "skills.h"
+#include "db.h"
+#include "magic.h"
+#include "mprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "misc.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
+
+#define GOD_LOG_FILE	"glog.txt"
+
 
 
 AREA_DATA *area_first;
 unsigned int *gDebug;
-
-extern bool wizlock;
 
 void do_wiznet(CHAR_DATA *ch, char *argument)
 {
@@ -3084,7 +3124,6 @@ void do_vnum(CHAR_DATA *ch, char *argument)
 
 void do_mfind(CHAR_DATA *ch, char *argument)
 {
-	extern int top_mob_index;
 	char buf[MAX_STRING_LENGTH];
 	char arg[MAX_INPUT_LENGTH];
 	MOB_INDEX_DATA *pMobIndex;
@@ -3133,7 +3172,6 @@ void do_mfind(CHAR_DATA *ch, char *argument)
 
 void do_ofind(CHAR_DATA *ch, char *argument)
 {
-	extern int top_obj_index;
 	char buf[MAX_STRING_LENGTH];
 	char arg[MAX_INPUT_LENGTH];
 	OBJ_INDEX_DATA *pObjIndex;
@@ -3339,7 +3377,6 @@ void do_reboo(CHAR_DATA *ch, char *argument)
 void reboot_now(CHAR_DATA *ch)
 {
 	DESCRIPTOR_DATA *d, *d_next;
-	extern bool merc_down;
 	CHAR_DATA *vch;
 
 	/*
@@ -3402,8 +3439,6 @@ void reboot_now(CHAR_DATA *ch)
 void start_reboot(CHAR_DATA *ch)
 {
 	char buf[MSL];
-	extern int reboot_num;
-	extern bool rebooting;
 
 	if (reboot_num == -1)
 	{
@@ -3429,8 +3464,6 @@ void start_reboot(CHAR_DATA *ch)
 
 void do_reboot(CHAR_DATA *ch, char *argument)
 {
-	extern bool rebooting;
-	extern int reboot_num;
 	int mins = 0;
 	char send[MSL];
 	char arg1[MSL];
@@ -4596,7 +4629,6 @@ void do_peace(CHAR_DATA *ch, char *argument)
 
 void do_wizlock(CHAR_DATA *ch, char *argument)
 {
-	extern bool wizlock;
 	wizlock = !wizlock;
 
 	if (wizlock)
@@ -4615,7 +4647,6 @@ void do_wizlock(CHAR_DATA *ch, char *argument)
 
 void do_newlock(CHAR_DATA *ch, char *argument)
 {
-	extern bool newlock;
 	newlock = !newlock;
 
 	if (newlock)
@@ -6719,7 +6750,6 @@ void do_vmstat(CHAR_DATA *ch, char *argument)
 
 void do_vostat(CHAR_DATA *ch, char *argument)
 {
-	extern int top_obj_index;
 	char buf[MAX_STRING_LENGTH];
 	char arg1[MAX_INPUT_LENGTH];
 	OBJ_INDEX_DATA *pObjIndex = NULL;

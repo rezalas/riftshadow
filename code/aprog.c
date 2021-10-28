@@ -1,7 +1,24 @@
 /* IMPROGS Expansion: AREA PROGS (Eladrian) */
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "aprog.h"
 #include "weather_enums.h"
+#include "comm.h"
+#include "magic.h"
+#include "interp.h"
+#include "recycle.h"
+#include "tables.h"
+#include "dioextra.h"
+#include "db.h"
+#include "devextra.h"
+#include "utility.h"
+#include "fight.h"
+#include "act_info.h"
+#include "newmem.h"
 
 const struct improg_type aprog_table[] = 
 {

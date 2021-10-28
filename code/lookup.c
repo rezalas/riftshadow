@@ -31,7 +31,17 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <time.h>
 #include "lookup.h"
+#include "tables.h"
+#include "newmem.h"
+#include "db.h"
+#include "material.h"
+#include "room.h"
 
 int flag_lookup(const char *name, const struct flag_type *flag_table)
 {

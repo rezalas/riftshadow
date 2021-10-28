@@ -1,12 +1,7 @@
 #ifndef CHARDEF_H
 #define CHARDEF_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <time.h>
 #include "merc.h"
-#include "magic.h"
-#include "interp.h"
 
 struct pc_race_type // additional data for pc races
 {

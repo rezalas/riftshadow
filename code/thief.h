@@ -1,28 +1,7 @@
 #ifndef THIEF_H
 #define THIEF_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
 #include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
-#include "act_move.h"
-#include "act_comm.h"
-#include "dioextra.h"
-#include "fight.h"
-#include "db.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
 
 
 //

@@ -24,6 +24,8 @@
 #define OPTION_FILE RIFT_AREA_DIR "/rs.conf"
 #define CONFIG_FILE RIFT_ROOT_DIR "/config.json"
 
+extern CMud RS;
+
 class CMud
 {	
 public:

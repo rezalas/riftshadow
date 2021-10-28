@@ -1,5 +1,22 @@
 // Dev's awesome databased helpfiles. Yay.
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <ctype.h>
 #include "help.h"
+#include "db.h"
+#include "magic.h"
+#include "lookup.h"
+#include "tables.h"
+#include "interp.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "devextra.h"
+#include "newmem.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
 
 int can_see_help(CHAR_DATA *ch, MYSQL_ROW row, bool fOnlyResult)
 {

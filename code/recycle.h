@@ -34,24 +34,16 @@
 #ifndef RECYCLE_H
 #define RECYCLE_H
 
-#ifdef macintosh
-#include <types.h>
-#include <time.h>
-#else
-#include <sys/types.h>
-#include <sys/time.h>
-#endif
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "merc.h"
-#include "handler.h"
-#include "newmem.h"
 
-/* externs */
-extern char str_empty[1];
-extern int mobile_count;
+/* externals for counting purposes */
+extern NOTE_DATA *note_free;
+extern DESCRIPTOR_DATA *descriptor_free;
+extern EXTRA_DESCR_DATA	*extra_descr_free;
+extern AFFECT_DATA *affect_free;
+extern OBJ_DATA *obj_free;
+extern CHAR_DATA *char_free;
+extern PC_DATA *pcdata_free;
 
 
 /* stuff for providing a crash-proof buffer */

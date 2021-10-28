@@ -1,10 +1,13 @@
-#include <string.h>
-#include <stddef.h>
 #include "catch.hpp"
 #include "../code/act_obj.h"
 #include "../code/merc.h"
 #include "../code/handler.h"
+#include "../code/const.h"
+#include "../code/lookup.h"
+#include "../code/tables.h"
+#include "../code/db.h"
 //#include "../code/bootup.h"
+
 
 void TestHelperLoadGSNList()
 {

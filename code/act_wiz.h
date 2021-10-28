@@ -1,44 +1,9 @@
 #ifndef ACT_WIZ_H
 #define ACT_WIZ_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <iterator>
 #include "merc.h"
-#include "handler.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "olc.h"
-#include "spec.h"
-#include "interp.h"
-#include "act_info.h"
-#include "save.h"
-#include "dioextra.h"
-#include "help.h"
-#include "devextra.h"
-#include "newmem.h"
-#include "update.h"
-#include "cabal.h"
-#include "comm.h"
-#include "act_comm.h"
-#include "fight.h"
-#include "skills.h"
-#include "db.h"
-#include "magic.h"
-#include "mprog.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
 
-#define GOD_LOG_FILE	"glog.txt"
+extern AREA_DATA *area_first;
 
 typedef struct multdata MULTDATA;
 

@@ -31,7 +31,38 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <mysql.h>
+#include <iterator>
 #include "dioextra.h"
+#include "handler.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "save.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "fight.h"
+#include "mspec.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "quest.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "newmem.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 void do_crumble(CHAR_DATA *ch, char *argument)
 {

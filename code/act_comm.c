@@ -32,7 +32,44 @@
  *       found in the file /Tartarus/doc/tartarus.doc                       *
  ****************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <mysql.h>
 #include "act_comm.h"
+#include "recycle.h"
+#include "tables.h"
+#include "olc.h"
+#include "spec.h"
+#include "comm.h"
+#include "devextra.h"
+#include "warrior.h"
+#include "save.h"
+#include "act_info.h"
+#include "newmem.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "fight.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "dioextra.h"
+#include "act_move.h"
+#include "handler.h"
+#include "ap.h"
+#include "thief.h"
+#include "chardef.h"
+#include "update.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
+
+#define PDEATH_LOG_FILE	RIFT_AREA_DIR "/permdeaths.txt"
+#define DEATH_LOG_FILE	RIFT_AREA_DIR "/tempdeaths.txt"
+#define MOB_LOG_FILE	RIFT_AREA_DIR "/mobdeaths.txt"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)

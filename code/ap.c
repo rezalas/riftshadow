@@ -1,5 +1,32 @@
 /* Home for everything Anti */
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <algorithm>
+#include <time.h>
+#include <math.h>
 #include "ap.h"
+#include "interp.h"
+#include "tables.h"
+#include "recycle.h"
+#include "magic.h"
+#include "db.h"
+#include "lookup.h"
+#include "fight.h"
+#include "act_ente.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "const.h"
+#include "utility.h"
+#include "skills.h"
+#include "room.h"
+#include "devextra.h"
+#include "dioextra.h"
 
 void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 {

@@ -31,16 +31,34 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/time.h>
+#include <iterator>
+#include <algorithm>
 #include "db2.h"
+#include "handler.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "recycle.h"
+#include "spec.h"
+#include "warrior.h"
+#include "misc.h"
+#include "recycle.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "aprog.h"
+#include "newmem.h"
+#include "magic.h"
+#include "interp.h"
 
 struct social_type social_table[MAX_SOCIALS];
 int social_count;
-
-extern AREA_DATA *area_last;
-extern MOB_INDEX_DATA *mindex_list;
-extern OBJ_INDEX_DATA *oIndex_list;
-extern SHOP_DATA *shop_first;
-extern SHOP_DATA *shop_last;
 
 /* snarf a socials file */
 void load_socials(FILE *fp)

@@ -20,8 +20,35 @@
  *  mob etc is part of that area.
  */
 
+#ifdef macintosh
+#include <types.h>
+#else
+#include <sys/types.h>
+#endif
+
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "olc_save.h"
+#include "handler.h"
+#include "olc.h"
+#include "tables.h"
+#include "lookup.h"
+#include "update.h"
+#include "interp.h"
+#include "spec.h"
+#include "db.h"
+#include "act_comm.h"
+#include "act_wiz.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
 #include "prof.h"
+#include "comm.h"
+#include "misc.h"
 
 char *fix_string(const char *str)
 {

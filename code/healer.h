@@ -1,24 +1,7 @@
 #ifndef HEALER_H
 #define HEALER_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
 #include "merc.h"
-#include "handler.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
-#include "comm.h"
-#include "devextra.h"
-#include "const.h"
-#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

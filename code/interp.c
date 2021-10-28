@@ -31,7 +31,70 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "interp.h"
+#include "ban.h"
+#include "handler.h"
+#include "magic.h"
+#include "tables.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "act_ente.h"
+#include "act_move.h"
+#include "act_obj.h"
+#include "devextra.h"
+#include "vote.h"
+#include "skills.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "fight.h"
+#include "db.h"
+#include "db2.h"
+#include "note.h"
+#include "olc.h"
+#include "olc_act.h"
+#include "olc_save.h"
+#include "magic.h"
+#include "heal.h"
+#include "tattoo.h"
+#include "quest.h"
+#include "flags.h"
+#include "scan.h"
+#include "act_info.h"
+#include "act_wiz.h"
+#include "iprog.h"
+#include "const.h"
+#include "utility.h"
+#include "ap.h"
+#include "paladin.h"
+#include "cabal.h"
+#include "necro.h"
+#include "help.h"
+#include "warrior.h"
+#include "misc.h"
+#include "dioextra.h"
+#include "chrono.h"
+#include "thief.h"
+#include "update.h"
+#include "newmem.h"
+#include "lookup.h"
+#include "./include/fmt/format.h"
+
+#define COM_INGORE		1
+
+/*
+ * Command logging types.
+ */
+#define LOG_NORMAL		0
+#define LOG_ALWAYS		1
+#define LOG_NEVER		2
+
+#define LAST_COMMAND 	"lastcommand.txt"
 
 bool command_result= false;
 char *command_line;

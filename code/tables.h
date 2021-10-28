@@ -34,11 +34,7 @@
 #ifndef TABLES_H
 #define TABLES_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <time.h>
 #include "merc.h"
-#include "material.h"
 #include "weather_enums.h"
 
 struct flag_type

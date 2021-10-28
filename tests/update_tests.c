@@ -1,5 +1,7 @@
 #include "catch.hpp"
 #include "../code/update.h"
+#include "../code/room.h"
+#include "../code/weather_enums.h"
 
 SCENARIO("checking if lunar cycles advance with the right values","[LunarCycle_update]")
 {

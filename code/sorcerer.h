@@ -5,38 +5,7 @@
 /****************************************************************************
  *                        Welcome to Sorcerer land.                         *
  ****************************************************************************/
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
-#include <iterator>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "interp.h"
-#include "tables.h"
-#include "act_comm.h"
-#include "act_move.h"
-#include "fight.h"
-#include "newmem.h"
-#include "devextra.h"
-#include "dioextra.h"
-#include "act_move.h"
-#include "act_obj.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-
-extern char *const dir_name[];
-extern const sh_int rev_dir[];
 
 //
 // LOCAL FUNCTIONS

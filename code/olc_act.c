@@ -11,7 +11,55 @@
  *                                                                         *
  ***************************************************************************/
 
+#ifdef macintosh
+#include <types.h>
+#else
+#include <sys/types.h>
+#endif
+
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "olc_act.h"
+#include "handler.h"
+#include "olc.h"
+#include "tables.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "spec.h"
+#include "misc.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "act_wiz.h"
+#include "warrior.h"
+#include "comm.h"
+#include "db.h"
+#include "bit.h"
+#include "string.h"
+#include "aprog.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "aprog.h"
+#include "help.h"
+#include "mem.h"
+#include "room.h"
+#include "interp.h"
+#include "newmem.h"
+#include "magic.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
+
 
 /*
  * This table contains help commands and a brief description of each.

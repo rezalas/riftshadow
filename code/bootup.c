@@ -1,7 +1,25 @@
-#include "bootup.h"
+#include "autogen/coldefs.h"
+#include "stdlibs/file.h"
 
-extern char strArea[MAX_INPUT_LENGTH];
-extern FILE *                  fpArea;
+#include <stdlib.h>
+#include <string.h>
+#include "area.h"
+#include "room.h"
+#include "exit.h"
+#include "bootup.h"
+#include "db.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "tables.h"
+#include "update.h"
+#include "interp.h"
+#include "olc.h"
+#include "spec.h"
+#include "const.h"
+#include "devextra.h"
+#include "comm.h"
+#include "./include/fmt/format.h"
+
 CRoom *CRoom::first = NULL;
 
 //Loads all the object limits and related info

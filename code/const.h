@@ -3,17 +3,6 @@
 
 #include <vector>
 #include "merc.h"
-#include "magic.h"
-#include "moremagic.h"
-#include "interp.h"
-#include "druid.h"
-#include "cabal.h"
-#include "healer.h"
-#include "necro.h"
-#include "paladin.h"
-#include "misc.h"
-#include "ap.h"
-#include "sorcerer.h"
 
 struct item_type
 {

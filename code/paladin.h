@@ -1,24 +1,7 @@
 #ifndef PALADIN_H
 #define PALADIN_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <math.h>
 #include "merc.h"
-#include "interp.h"
-#include "tables.h"
-#include "recycle.h"
-#include "magic.h"
-#include "db.h"
-#include "lookup.h"
-#include "warrior.h"
-#include "fight.h"
-#include "skills.h"
-#include "const.h"
-#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

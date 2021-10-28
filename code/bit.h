@@ -1,22 +1,6 @@
 #ifndef BIT_H
 #define BIT_H
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include "merc.h"
-#include "tables.h"
-#include "interp.h"
-#include "db.h"
-
-
 struct flag_stat_type
 {
 	const struct flag_type *structure;

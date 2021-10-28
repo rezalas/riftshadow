@@ -25,7 +25,38 @@
  *  ROM license, in the file Tartarus/doc/rom.license                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "mprog.h"
+#include "ap.h"
+#include "note.h"
+#include "necro.h"
+#include "magic.h"
+#include "interp.h"
+#include "recycle.h"
+#include "tables.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "act_wiz.h"
+#include "thief.h"
+#include "fight.h"
+#include "act_obj.h"
+#include "save.h"
+#include "update.h"
+#include "misc.h"
+#include "db.h"
+#include "devextra.h"
+#include "comm.h"
+#include "quest.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "newmem.h"
+#include "room.h"
 
 const struct improg_type mprog_table[] =
 {

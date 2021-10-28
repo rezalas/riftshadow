@@ -31,9 +31,26 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
-#include "recycle.h"
+#ifdef macintosh
+#include <types.h>
+#include <time.h>
+#else
+#include <sys/types.h>
+#include <sys/time.h>
+#endif
 
-extern bool bDebug;
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "recycle.h"
+#include "comm.h"
+#include "db.h"
+#include "handler.h"
+#include "newmem.h"
+#include "misc.h"
+#include "utility.h"
+#include "room.h"
+
 
 /* buffer sizes */
 const int buf_size[MAX_BUF_LIST] = {16, 32, 64, 128, 256, 1024, 2048, 4096, 8192, 16384};

@@ -1,25 +1,8 @@
 #ifndef BOOTUP_H
 #define BOOTUP_H
 
-#include "stdlibs/file.h"
 #include "autogen/coldefs.h"
-
-#include <stdlib.h>
-#include "area.h"
-#include "room.h"
-#include "exit.h"
 #include "merc.h"
-#include "db.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "tables.h"
-#include "update.h"
-#include "interp.h"
-#include "olc.h"
-#include "spec.h"
-#include <string.h>
-#include "const.h"
-#include "./include/fmt/format.h"
 
 /*
  *  * Local booting procedures.

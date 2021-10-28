@@ -1,31 +1,7 @@
 #ifndef MPROG_H
 #define MPROG_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "merc.h"
-#include "magic.h"
-#include "interp.h"
-#include "recycle.h"
-#include "tables.h"
-#include "act_comm.h"
-#include "act_move.h"
-#include "thief.h"
-#include "fight.h"
-#include "act_obj.h"
-#include "save.h"
-#include "update.h"
-#include "misc.h"
-#include "db.h"
-#include "devextra.h"
-#include "comm.h"
-#include "quest.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
 
 extern const struct improg_type mprog_table[];
 

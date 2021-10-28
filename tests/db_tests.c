@@ -1,8 +1,4 @@
-#include <cstddef>
-#include <string.h>
-#include <stddef.h>
 #include "catch.hpp"
-#include "../code/db.h"
 #include "../code/db.c"
 
 // TEST_CASE("Test capitalization", "[string]" )

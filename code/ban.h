@@ -1,19 +1,7 @@
 #ifndef BAN_H
 #define BAN_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "merc.h"
-#include "recycle.h"
-#include "time.h"
-#include "comm.h"
-#include "act_wiz.h"
-#include "interp.h"
-#include "db.h"
-#include "./include/fmt/format.h"
 
 //
 // LOCAL FUNCTIONS

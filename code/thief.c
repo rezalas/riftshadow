@@ -1,4 +1,33 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
 #include "thief.h"
+#include "comm.h"
+#include "devextra.h"
+#include "skills.h"
+#include "newmem.h"
+#include "update.h"
+#include "act_info.h"
+#include "act_wiz.h"
+#include "misc.h"
+#include "interp.h"
+#include "tables.h"
+#include "recycle.h"
+#include "magic.h"
+#include "db.h"
+#include "lookup.h"
+#include "act_move.h"
+#include "act_comm.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "db.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
 
 void do_backstab(CHAR_DATA *ch, char *argument)
 {

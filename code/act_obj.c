@@ -31,7 +31,42 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <algorithm>
 #include "act_obj.h"
+#include "handler.h"
+#include "magic.h"
+#include "tables.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "act_wiz.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "paladin.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "update.h"
+#include "interp.h"
+#include "db.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "warrior.h"
+#include "misc.h"
+#include "skills.h"
+#include "./include/fmt/format.h"
+
+#define CABAL_ITEMS_FILE	"citems.txt"
+#define MINOTAUR_ONLY		ASCII_I
 
 /* RT part of the corpse looting code */
 

@@ -31,7 +31,41 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
 #include "act_move.h"
+#include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "interp.h"
+#include "tables.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "db.h"
+#include "act_obj.h"
+#include "act_info.h"
+#include "sorcerer.h"
+#include "chrono.h"
+#include "update.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "effects.h"
+#include "room.h"
+#include "skills.h"
+#include "lookup.h"
+#include "thief.h"
 
 char *const dir_name[] =
 {

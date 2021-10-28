@@ -1,6 +1,11 @@
 /* Dev's code reorg, contains pc/npc race defs and class defs, attribute app tables also */
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <time.h>
 #include "chardef.h"
+#include "magic.h"
+#include "interp.h"
 
 const	struct	pc_race_type	pc_race_table	[]	=
 {

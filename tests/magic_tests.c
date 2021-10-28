@@ -1,5 +1,6 @@
 #include "catch.hpp"
 #include "../code/magic.h"
+#include "../code/const.h"
 
 char* substr(char* arr, int begin, int len = 0)
 {	

@@ -31,7 +31,19 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "ban.h"
+#include "recycle.h"
+#include "time.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "db.h"
+#include "./include/fmt/format.h"
 
 bool check_ban(char *usite, int type, int host)
 {

@@ -1,19 +1,7 @@
 #ifndef TATTOO_H
 #define TATTOO_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "merc.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "utility.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

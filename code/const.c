@@ -32,6 +32,21 @@
  ***************************************************************************/
 
 #include "const.h"
+#include "magic.h"
+#include "moremagic.h"
+#include "interp.h"
+#include "druid.h"
+#include "cabal.h"
+#include "healer.h"
+#include "necro.h"
+#include "paladin.h"
+#include "misc.h"
+#include "ap.h"
+#include "sorcerer.h"
+#include "zealot.h"
+#include "chrono.h"
+#include "fight.h"
+#include "db.h"
 
 /* item type list */
 const std::vector<item_type> item_table	=

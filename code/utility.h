@@ -2,7 +2,6 @@
 #define UTILITY_H
 
 #include "merc.h"
-#include "handler.h"
 
 #ifdef __cplusplus
 extern "C" {

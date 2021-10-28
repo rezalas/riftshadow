@@ -31,9 +31,12 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <time.h>
 #include "tables.h"
-#include "weather_enums.h"
 #include "room.h"
+
 
 //Steal the flag table, we're not storing bitvectors, but shhh, we like their functions!
 const struct flag_type aftype_table[] =

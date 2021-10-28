@@ -1,35 +1,7 @@
 #ifndef SAVE_H
 #define SAVE_H
 
-#include <sys/types.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <algorithm>
 #include "merc.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "tables.h"
-#include "act_comm.h"
-#include "act_wiz.h"
-#include "skills.h"
-#include "db.h"
-#include "devextra.h"
-#include "magic.h"
-#include "dioextra.h"
-#include "comm.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-
-#define MAX_NEST	100
-
-extern int _filbuf (FILE *);
-extern int mPort;
-extern	OBJ_DATA *obj_free;
 
 
 //

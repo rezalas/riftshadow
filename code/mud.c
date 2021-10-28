@@ -13,27 +13,12 @@
 #include "mud.h"
 #include "merc.h"
 #include "update.h"
-extern FILE *fpArea;
-extern char strArea[MAX_INPUT_LENGTH];
-extern char *top_string;
-extern bool fBootDb;
-extern char *help_greeting;
+#include "newmem.h"
+#include "dioextra.h"
+#include "db.h"
+#include "db2.h"
+#include "misc.h"
 
-
-void init_mm (void);
-void sort_areas(void);
-void load_race_info(void);
-void fix_exits (void);
-void find_adjacents (void);
-void clean_notes (void);
-void load_improgs (FILE *fp);
-void load_specs (FILE *fp);
-void reset_area (AREA_DATA * pArea);
-long process_bounty (char *name, long bounty);
-void load_socials (FILE *fp);
-void load_votes (void);
-void load_cabal_items (void);
-void reset_chessboard (void);
 
 CMud RS;
 
