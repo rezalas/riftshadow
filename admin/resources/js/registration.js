@@ -1,5 +1,5 @@
 import Vue from "vue";
-import axios from "axios";
+import { axios } from "./bootstrap";
 require("./bootstrap");
 
 window.addEventListener("load", function() {
