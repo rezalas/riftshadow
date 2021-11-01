@@ -8,13 +8,17 @@
 | ------------------ |
 |**[Summary](#summary)**|
 |**[Goals](#goals)**|
+|**[Contributing](#contributing)**|
 |**[Build Requirements](#build-requirements)**|
 |**[SQL Setup](#sql-setup)**|
 |**[config json](#config-json)**|
 
 ## Summary
 
-Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MUD) from the early 2000s. As the original server is no longer live, the original authors provided the source code to the community to use and modify so that RS can live on. The primary goals for this community are to restore RS to a fully-functional state capable of operating on modern hardware with all features finished and bugs eliminated or codified as features. Preservation of the game for future generations requires  adapting the code to be easier to read and maintain, but without changing the feel of the core gameplay.
+Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MUD) from the early 2000s. As the original server is no longer live, the original authors provided the source code to the community to use and modify so that RS can live on. 
+The primary goals for this community are to restore RS to a fully-functional state capable of operating on modern hardware with all features finished and bugs eliminated or codified as features.
+
+Preservation of the game for future generations requires  adapting the code to be easier to read and maintain, but without changing the feel of the core gameplay.
 
 ## Goals
 
@@ -24,6 +28,10 @@ Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MU
 * Preserve core gameplay.
 * Improve security (ex. data storage of passwords) and thus safety for players and maintainers.
 * Decouple storage types from the code to support multiple backends with limited code changes.
+
+## Contributing
+
+If you're interested in helping us with this project, you can find more information on our [Contributing page](CONTRIBUTING.md#basic)
 
 ## Build Reqs
 

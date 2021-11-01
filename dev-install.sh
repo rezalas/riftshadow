@@ -36,7 +36,10 @@ sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu bionic main'
 sudo apt-get update
 
 # Install deps
-sudo apt-get install -y ninja-build cmake gcc g++ libmariadb-dev libmariadb-dev-compat
+sudo apt-get install -y ninja-build make cmake gcc g++ libmariadb-dev libmariadb-dev-compat mariadb-client mariadb-server
 
 # Update alternatives
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
+
+# Setup Database
+sudo mysql mysql < setup.sql
