@@ -42,4 +42,4 @@ sudo apt-get install -y ninja-build make cmake gcc g++ libmariadb-dev libmariadb
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
 
 # Setup Database
-mysql < source 
+sudo mysql mysql < setup.sql
