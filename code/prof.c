@@ -43,7 +43,7 @@ const struct prof_level_type prof_level_table[MAX_PLEVEL] =
 /* note: profs can be referred to either by psn or by profname, use psn in the rare cases where it's checked very often
         otherwise use psn_none and refer by profname */
 
-const std::vector<proficiency_type> CProficiencies::prof_table =
+const struct proficiency_type CProficiencies::prof_table[MAX_PROFS] =
 {
 	//ppsn, 		name,       		cost, 		mnlevel,requires, 	flags
 	{ &psn_swimming, 	"swimming", 		18, 		1, 	NULL,		PFLAGS_BASIC 	},

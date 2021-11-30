@@ -78,7 +78,7 @@ private:
 	char_data	*ch;
 	int		points;
 	int		profs[MAX_PROFS];
-	static const std::vector<proficiency_type> prof_table;
+	static const struct proficiency_type prof_table[MAX_PROFS];
 };
 
 extern sh_int psn_none;
