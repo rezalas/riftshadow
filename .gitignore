@@ -24,6 +24,7 @@ CTestTestfile.cmake
 # Object files
 *.o
 libRiftCore.a
+*.so
 
 # Player data
 player/*.plr
