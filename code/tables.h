@@ -304,6 +304,5 @@ extern const struct flag_type position_flags[];
 extern const struct flag_type portal_flags[];
 extern const struct flag_type furniture_flags[];
 extern const struct display_type altdesc_condtable[];
-//extern const struct proficiency_type prof_table[];
 
 #endif /* TABLES_H */
