@@ -124,7 +124,7 @@ SCENARIO("check to see if a character has a proficiency (int)", "[HasProf]")
 		}
 	}
 
-	GIVEN("a character who doesn't have the proficiency")
+	GIVEN("a character who has the proficiency")
 	{
 		WHEN("the function is called")
 		{
@@ -132,7 +132,7 @@ SCENARIO("check to see if a character has a proficiency (int)", "[HasProf]")
 			player->Profs()->SetChar(player);
 			player->Profs()->SetProf(6, 1); // cooking
 
-			THEN("it should return false")
+			THEN("it should return true")
 			{
 				auto result = player->Profs()->HasProf(6);
 
