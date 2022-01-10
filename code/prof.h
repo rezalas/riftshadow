@@ -42,11 +42,24 @@ struct proficiency_msg
 };
 
 struct char_data;
+typedef struct char_data CHAR_DATA;
 
 extern char *format_string (char *oldstring);
 extern sh_int psn_none;
 extern sh_int psn_swimming;
 extern sh_int psn_mountaineering;
+
+void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis);
+bool is_affected_prof(CHAR_DATA *ch, char *prof);
+void do_proficiencies(CHAR_DATA *ch, char *argument);
+void prof_tracking(CHAR_DATA *ch, char *argument);
+void build_fire(CHAR_DATA *ch, int dur);
+void prof_firestart(CHAR_DATA *ch, char *argument);
+void prof_cook(CHAR_DATA *ch, char *argument);
+void prof_appraise(CHAR_DATA *ch, char *argument);
+void prof_butcher(CHAR_DATA *ch, char *argument);
+void prof_bandage(CHAR_DATA *ch, char *argument);
+
 
 class CProficiencies
 {
