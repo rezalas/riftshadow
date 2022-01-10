@@ -204,11 +204,6 @@ sh_int psn_none;
 sh_int psn_swimming;
 sh_int psn_mountaineering;
 
-CProficiencies * char_data::Profs()
-{
-	return pcdata ? &pcdata->profs : &prof_none;
-}
-
 CProficiencies::CProficiencies()
 {
 	ch = 0;
