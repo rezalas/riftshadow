@@ -60,7 +60,6 @@ const std::vector<proficiency_type> CProficiencies::prof_table =
 	{ &psn_none,			"tracking",					30,		30,			NULL,		PFLAGS_NONE		}
 };
 
-//TODO: bring prof_cmd_type from tables.h over to prof.h
 const std::vector<prof_cmd_type> prof_cmd_table =
 {
 	// name,		cmd,			requires

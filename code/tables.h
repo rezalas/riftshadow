@@ -227,13 +227,6 @@ struct order_list
 	char * command;
 };
 
-struct prof_cmd_type
-{
-	char *name;
-	DO_FUN *cmd;
-	char *requires;
-};
-
 extern const struct flag_type aftype_table[];
 extern const struct display_type apply_locations[];
 extern const struct mod_name_type mod_names[];
