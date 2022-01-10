@@ -112,6 +112,8 @@ private:
 	int profs[MAX_PROFS];
 	static const std::vector<prof_level_type> prof_level_table;
 	static const std::vector<proficiency_type> prof_table;
+	static const std::vector<prof_cmd_type> prof_cmd_table;
+	static const struct proficiency_msg prof_msg_table [MAX_PROFS];
 };
 
 #endif /* PROF_H */

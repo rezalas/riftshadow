@@ -60,7 +60,7 @@ const std::vector<proficiency_type> CProficiencies::prof_table =
 	{ &psn_none,			"tracking",					30,		30,			NULL,		PFLAGS_NONE		}
 };
 
-const std::vector<prof_cmd_type> prof_cmd_table =
+const std::vector<prof_cmd_type> CProficiencies::prof_cmd_table =
 {
 	// name,		cmd,			requires
 	{ "butcher",	prof_butcher,	"butchery"		},
@@ -72,7 +72,7 @@ const std::vector<prof_cmd_type> prof_cmd_table =
 };
 
 //last entry in each one should be null
-const struct proficiency_msg prof_msg_table [] =
+const struct proficiency_msg CProficiencies::prof_msg_table [] =
 {
 	// swimming
 	{
