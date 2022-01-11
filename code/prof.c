@@ -65,10 +65,10 @@ const std::vector<prof_cmd_type> CProficiencies::prof_cmd_table =
 	// name,		cmd,			requires
 	{ "butcher",	prof_butcher,	"butchery"		},
 	{ "bandage",	prof_bandage,	"bandaging"		},
-	{ "appraise",	prof_appraise,	"appraise"		},
-	{ "cook",		prof_cook,		"cook"			},
+	{ "appraise",	prof_appraise,	"appraising"	},
+	{ "cook",		prof_cook,		"cooking"		},
 	{ "firestart",	prof_firestart, "firestarting"	},
-	{ "track",		prof_tracking,	"track"			}
+	{ "track",		prof_tracking,	"tracking"		}
 };
 
 //last entry in each one should be null
@@ -890,9 +890,15 @@ void do_proficiencies(CHAR_DATA *ch, char *argument)
 /// @param argument: The target of the tracking.
 void prof_tracking(CHAR_DATA *ch, char *argument)
 {
-	if (is_affected_prof(ch, "tracking"))
+	if (ch == nullptr)
 	{
-		send_to_char("You cannot attempt to track them again yet.\n\r",ch);
+		bug("prof_bandage: ch is nullptr");
+		return;
+	}
+
+	if (argument == nullptr)
+	{
+		send_to_char("Track who?\n\r",ch);
 		return;
 	}
 
@@ -902,7 +908,13 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		send_to_char("Track who?\n\r",ch);
 		return;
 	}
-	
+
+	if (is_affected_prof(ch, "tracking"))
+	{
+		send_to_char("You cannot attempt to track them again yet.\n\r",ch);
+		return;
+	}
+
 	auto sect = ch->in_room->sector_type;
 	if (!IS_GROUND(ch->in_room) || sect == SECT_CITY || sect == SECT_INSIDE || sect == SECT_BURNING || sect == SECT_ROAD)
 	{
@@ -937,7 +949,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 			? ch->in_room->tracks[i]->direction
 			: number_range(0, MAX_DIR - 1);
 
-		direction = flag_name_lookup(diruse,direction_table);
+		direction = flag_name_lookup(diruse, direction_table);
 
 		buffer = std::string("From the pattern of tracks here, you suspect $N left $t.");
 	}

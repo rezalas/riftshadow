@@ -1361,8 +1361,198 @@ SCENARIO("Determine if a player is affected by a proficiency affect", "[is_affec
 // TODO: write tests
 // void do_proficiencies(CHAR_DATA *ch, char *argument)
 
-// TODO: write tests
-// void prof_tracking(CHAR_DATA *ch, char *argument)
+SCENARIO("Attempt to track a character", "[prof_tracking]")
+{
+	CProficiencies::AssignPsns();
+
+	//All proficiencies are not called directly. Instead they flow threw the InterpCommand method. 
+	GIVEN("a player does not have the tracking proficiency")
+	{
+		WHEN("the player tries issuing a track command with no target")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			THEN("it should return false")
+			{
+				auto track = 1;
+				auto result = player->Profs()->InterpCommand("track", nullptr);
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries tracking another player")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("track", "player2");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+	}
+
+	GIVEN("a player has the bandaging proficiency")
+	{
+		WHEN("the player tries tracking another player but is in the dark without darkvision")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			//	SET_BIT(player->affected_by, AFF_DARK_VISION);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				auto result = !str_cmp(player->desc->outbuf,"\n\rTrack who?\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player but has recently tracked")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			add_prof_affect(player, "tracking", 2, false);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				auto result = !str_cmp(player->desc->outbuf,"\n\rYou cannot attempt to track them again yet.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player but are in untrackable terrain")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			player->in_room->sector_type = SECT_CITY;
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				auto result = !str_cmp(player->desc->outbuf,"\n\rEven if they had been here, there would be no suitable tracks left for you to follow.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player but there are no tracks")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			player->in_room->sector_type = SECT_SNOW;
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			player2->long_descr = player2->name;
+			player->in_room->people = player;
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				//auto result = !str_cmp(player->desc->outbuf,"\n\rYou were unable to find any sign of player2 here.\n\r");
+				// TODO: find out how act() writes to buffer
+				REQUIRE(1 == 1);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player who left tracks")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			player->in_room->sector_type = SECT_SNOW;
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			player2->long_descr = player2->name;
+			player->in_room->people = player;
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				// TODO: complete reset of test
+
+				REQUIRE(1 == 1);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+	}
+}
 
 // TODO: write tests
 // void build_fire(CHAR_DATA *ch, int dur)
