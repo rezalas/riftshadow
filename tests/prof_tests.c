@@ -1313,8 +1313,50 @@ SCENARIO("testing interpreting proficiency commands", "[InterpCommand]")
 	}
 }
 
-// TODO: write tests
-// bool is_affected_prof(CHAR_DATA *ch, char *prof)
+SCENARIO("Determine if a player is affected by a proficiency affect", "[is_affected_prof]")
+{
+	GIVEN("a player not under the effects of an affect")
+	{
+		WHEN("the function is called")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			//add_prof_affect(player, "bandage", 2, false);
+
+			THEN("it should return false")
+			{
+				auto result = is_affected_prof(player, "bandage");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+	}
+
+	GIVEN("a player under the effects of an affect")
+	{
+		WHEN("the function is called")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			add_prof_affect(player, "bandage", 2, false);
+
+			THEN("it should return true")
+			{
+				auto result = is_affected_prof(player, "bandage");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+	}
+}
 
 // TODO: write tests
 // void do_proficiencies(CHAR_DATA *ch, char *argument)
