@@ -1110,21 +1110,15 @@ void prof_butcher(CHAR_DATA *ch, char *argument)
 /// @param argument: The character to bandage.
 void prof_bandage(CHAR_DATA *ch, char *argument)
 {
-	if (argument == nullptr)
+	if (ch == nullptr)
 	{
-		if (ch != nullptr)
-		{
-			send_to_char("They aren't here.\n\r", ch);
-			return;
-		}
-
-		bug("prof_bandage: argument is nullptr");
+		bug("prof_bandage: ch is nullptr");
 		return;
 	}
 
-	auto victim = argument[0] != '\0'
-		? get_char_room(ch, argument)
-		: ch;
+	auto victim = argument == nullptr || argument[0] == '\0'
+		? get_char_room(ch, "self")
+		: get_char_room(ch, argument);
 
 	if (!victim)
 	{

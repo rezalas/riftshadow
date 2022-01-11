@@ -1468,25 +1468,6 @@ SCENARIO("Attempt to bandage a character", "[prof_bandage]")
 
 	GIVEN("a player has the bandaging proficiency")
 	{
-		WHEN("the player tries issuing a bandage command with no target")
-		{
-			auto player = new char_data();
-			TestHelperSetupPlayerBuffer(player);
-
-			player->Profs()->SetChar(player);
-			player->Profs()->SetProf(3, 1);
-
-			THEN("it should display a message notifying the player")
-			{
-				player->Profs()->InterpCommand("bandage", nullptr);
-				auto result = !str_cmp(player->desc->outbuf,"\n\rThey aren't here.\n\r");
-
-				REQUIRE(result == true);
-			}
-
-			TestHelperCleanupPlayerObject(player);
-		}
-
 		WHEN("the player tries bandaging themselve while not bleeding")
 		{
 			auto player = new char_data();
