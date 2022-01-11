@@ -2,6 +2,8 @@
 #include "../code/prof.h"
 #include "../code/merc.h"
 #include "../code/db.h"
+#include "../code/handler.h"
+#include "../code/mud.h"
 #include "test_helpers.c"
 
 SCENARIO("performing an index lookup based on proficiency name", "[ProfIndexLookup]")
@@ -1335,5 +1337,183 @@ SCENARIO("testing interpreting proficiency commands", "[InterpCommand]")
 // TODO: write tests
 // void prof_butcher(CHAR_DATA *ch, char *argument)
 
-// TODO: write tests
-// void prof_bandage(CHAR_DATA *ch, char *argument)
+SCENARIO("Attempt to bandage a character", "[prof_bandage]")
+{
+	CProficiencies::AssignPsns();
+
+	// All proficiencies are not called directly. Instead they flow threw the InterpCommand method. 
+	GIVEN("a player does not have the bandaging proficiency")
+	{
+		WHEN("the player tries issuing a bandage command with no target")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			THEN("it should return false")
+			{
+				auto result = player->Profs()->InterpCommand("bandage", nullptr);
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("bandage", "self");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging another player in the same room")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2");
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("bandage", "player2");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries bandaging another player in another room")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("bandage", "player2");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+	}
+
+	GIVEN("a player has the bandaging proficiency")
+	{
+		WHEN("the player tries issuing a bandage command with no target")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", nullptr);
+				auto result = !str_cmp(player->desc->outbuf,"\n\rThey aren't here.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve while not bleeding")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", "self");
+				auto result = !str_cmp(player->desc->outbuf,"\n\rYou can only bandage wounds that are bleeding.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve while bleeding but was recently bandaged")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+			add_prof_affect(player, "bandage", 2, false);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", "self");
+				auto result = !str_cmp(player->desc->outbuf,"\n\rThat wound has been bandaged too recently.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve while bleeding")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+
+			RS.LoadGsn();
+
+			AFFECT_DATA af;
+			init_affect(&af);
+			af.type = gsn_bleeding;
+			af.where = TO_AFFECTS;
+			af.aftype = AFT_TIMER;
+			af.location = APPLY_LEGS;
+			af.duration = 6;
+			af.level = 6;
+			af.modifier = -1;
+			affect_to_char(player, &af);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", "self");
+				auto result = !str_cmp(player->desc->outbuf,"\n\rYou bandage your wounds, staunching the worst of the bleeding.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+	}
+}
