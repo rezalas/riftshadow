@@ -2,6 +2,8 @@
 #include "../code/prof.h"
 #include "../code/merc.h"
 #include "../code/db.h"
+#include "../code/handler.h"
+#include "../code/mud.h"
 #include "test_helpers.c"
 
 SCENARIO("performing an index lookup based on proficiency name", "[ProfIndexLookup]")
@@ -1311,14 +1313,246 @@ SCENARIO("testing interpreting proficiency commands", "[InterpCommand]")
 	}
 }
 
-// TODO: write tests
-// bool is_affected_prof(CHAR_DATA *ch, char *prof)
+SCENARIO("Determine if a player is affected by a proficiency affect", "[is_affected_prof]")
+{
+	GIVEN("a player not under the effects of an affect")
+	{
+		WHEN("the function is called")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			//add_prof_affect(player, "bandage", 2, false);
+
+			THEN("it should return false")
+			{
+				auto result = is_affected_prof(player, "bandage");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+	}
+
+	GIVEN("a player under the effects of an affect")
+	{
+		WHEN("the function is called")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			add_prof_affect(player, "bandage", 2, false);
+
+			THEN("it should return true")
+			{
+				auto result = is_affected_prof(player, "bandage");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+	}
+}
 
 // TODO: write tests
 // void do_proficiencies(CHAR_DATA *ch, char *argument)
 
-// TODO: write tests
-// void prof_tracking(CHAR_DATA *ch, char *argument)
+SCENARIO("Attempt to track a character", "[prof_tracking]")
+{
+	CProficiencies::AssignPsns();
+
+	//All proficiencies are not called directly. Instead they flow threw the InterpCommand method. 
+	GIVEN("a player does not have the tracking proficiency")
+	{
+		WHEN("the player tries issuing a track command with no target")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			THEN("it should return false")
+			{
+				auto track = 1;
+				auto result = player->Profs()->InterpCommand("track", nullptr);
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries tracking another player")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("track", "player2");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+	}
+
+	GIVEN("a player has the bandaging proficiency")
+	{
+		WHEN("the player tries tracking another player but is in the dark without darkvision")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			//	SET_BIT(player->affected_by, AFF_DARK_VISION);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				auto result = !str_cmp(player->desc->outbuf,"\n\rTrack who?\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player but has recently tracked")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			add_prof_affect(player, "tracking", 2, false);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				auto result = !str_cmp(player->desc->outbuf,"\n\rYou cannot attempt to track them again yet.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player but are in untrackable terrain")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			player->in_room->sector_type = SECT_CITY;
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				auto result = !str_cmp(player->desc->outbuf,"\n\rEven if they had been here, there would be no suitable tracks left for you to follow.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player but there are no tracks")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			player->in_room->sector_type = SECT_SNOW;
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			player2->long_descr = player2->name;
+			player->in_room->people = player;
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				//auto result = !str_cmp(player->desc->outbuf,"\n\rYou were unable to find any sign of player2 here.\n\r");
+				// TODO: find out how act() writes to buffer
+				REQUIRE(1 == 1);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries tracking another player who left tracks")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(12, 1);
+			player->in_room->light = 5;
+			player->in_room->sector_type = SECT_SNOW;
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			player2->long_descr = player2->name;
+			player->in_room->people = player;
+
+			THEN("it should display a message notifying the player")
+			{
+				char_list = player2;
+				player->Profs()->InterpCommand("track", "player2");
+
+				// TODO: complete reset of test
+
+				REQUIRE(1 == 1);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+	}
+}
 
 // TODO: write tests
 // void build_fire(CHAR_DATA *ch, int dur)
@@ -1335,5 +1569,164 @@ SCENARIO("testing interpreting proficiency commands", "[InterpCommand]")
 // TODO: write tests
 // void prof_butcher(CHAR_DATA *ch, char *argument)
 
-// TODO: write tests
-// void prof_bandage(CHAR_DATA *ch, char *argument)
+SCENARIO("Attempt to bandage a character", "[prof_bandage]")
+{
+	CProficiencies::AssignPsns();
+
+	// All proficiencies are not called directly. Instead they flow threw the InterpCommand method. 
+	GIVEN("a player does not have the bandaging proficiency")
+	{
+		WHEN("the player tries issuing a bandage command with no target")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			THEN("it should return false")
+			{
+				auto result = player->Profs()->InterpCommand("bandage", nullptr);
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("bandage", "self");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging another player in the same room")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2");
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("bandage", "player2");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+
+		WHEN("the player tries bandaging another player in another room")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+
+			auto player2 = new char_data();
+			TestHelperSetupPlayerBuffer(player2, "player2", "room2");
+
+			THEN("it should return false")
+			{
+				auto t = 1;
+				auto result = player->Profs()->InterpCommand("bandage", "player2");
+
+				REQUIRE(result == false);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+			TestHelperCleanupPlayerObject(player2);
+		}
+	}
+
+	GIVEN("a player has the bandaging proficiency")
+	{
+		WHEN("the player tries bandaging themselve while not bleeding")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", "self");
+				auto result = !str_cmp(player->desc->outbuf,"\n\rYou can only bandage wounds that are bleeding.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve while bleeding but was recently bandaged")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+			add_prof_affect(player, "bandage", 2, false);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", "self");
+				auto result = !str_cmp(player->desc->outbuf,"\n\rThat wound has been bandaged too recently.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+
+		WHEN("the player tries bandaging themselve while bleeding")
+		{
+			auto player = new char_data();
+			TestHelperSetupPlayerBuffer(player);
+
+			player->Profs()->SetChar(player);
+			player->Profs()->SetProf(3, 1);
+
+			RS.LoadGsn();
+
+			AFFECT_DATA af;
+			init_affect(&af);
+			af.type = gsn_bleeding;
+			af.where = TO_AFFECTS;
+			af.aftype = AFT_TIMER;
+			af.location = APPLY_LEGS;
+			af.duration = 6;
+			af.level = 6;
+			af.modifier = -1;
+			affect_to_char(player, &af);
+
+			THEN("it should display a message notifying the player")
+			{
+				player->Profs()->InterpCommand("bandage", "self");
+				auto result = !str_cmp(player->desc->outbuf,"\n\rYou bandage your wounds, staunching the worst of the bleeding.\n\r");
+
+				REQUIRE(result == true);
+			}
+
+			TestHelperCleanupPlayerObject(player);
+		}
+	}
+}

@@ -4562,13 +4562,13 @@ char *get_descr_form(CHAR_DATA *ch, CHAR_DATA *looker, bool get_long)
 /* Replacement for the handler.c get_char_room to handle morph dragon */
 CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
 {
-	// TODO: the following will always be false since arg hasnt been given a value
 	char arg[MAX_INPUT_LENGTH];
+	auto count = 0;
+	auto number = number_argument(argument, arg);
+
 	if (!str_cmp(arg, "self"))
 		return ch;
 
-	auto count = 0;
-	auto number = number_argument(argument, arg);
 	for (auto rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
 	{
 		if (argument[0] == '\0')
@@ -4591,13 +4591,13 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
 
 CHAR_DATA *get_char_from_room(CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argument)
 {
-	// TODO: the following will always be false since arg hasnt been given a value
 	char arg[MAX_INPUT_LENGTH];
+	auto count = 0;
+	auto number = number_argument(argument, arg);
+
 	if (!str_cmp(arg, "self"))
 		return ch;
 
-	auto count = 0;
-	auto number = number_argument(argument, arg);
 	for (auto rch = room->people; rch != NULL; rch = rch->next_in_room)
 	{
 		if (!can_see(ch, rch))

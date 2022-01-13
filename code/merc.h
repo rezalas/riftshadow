@@ -2675,169 +2675,6 @@ struct aprog_data
 	char *myell_name;
 };
 
-extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking IS_NPC
-
-//
-// One character (PC or NPC).
-//
-class	char_data
-{
-public:
-	CHAR_DATA *next;
-	CHAR_DATA *next_in_room;
-	CHAR_DATA *master;
-	CHAR_DATA *leader;
-	CHAR_DATA *fighting;
-	CHAR_DATA *reply;
-	CHAR_DATA *pet;
-	CHAR_DATA *last_fought;
-	int tracktimer;
-	time_t last_fight_time;
-	char * last_fight_name;
-	CHAR_DATA *hunting;
-	CHAR_DATA *defending;
-	MEM_DATA *memory;
-	GAME_FUN *game_fun;
-	MOB_INDEX_DATA *pIndexData;
-	DESCRIPTOR_DATA *desc;
-	AFFECT_DATA *affected;
-	NOTE_DATA *pnote;
-	OBJ_DATA *carrying;
-	OBJ_DATA *on;
-	ROOM_INDEX_DATA *in_room;
-	ROOM_INDEX_DATA *was_in_room;
-	AREA_DATA *zone;
-	PC_DATA *pcdata;
-	GEN_DATA *gen_data;
-	PATHFIND_DATA *path;	// For smart pathfinding/tracking.  Mob only.
-	PATHFIND_DATA *best;	// Stores best direction thus far.  Mob only.
-	bool valid;
-	char *name;
-	char *true_name;
-	long id;
-	sh_int version;
-	char *short_descr;
-	char *long_descr;
-	char *description;
-	char *prompt;
-	char *prefix;
-	sh_int group;
-	sh_int cabal;
-	sh_int sex;
-
-	CClass *Class()
-	{
-		return !my_class
-			? (pIndexData && pIndexData->Class()
-				? pIndexData->Class()
-				:  CClass::GetClass(CLASS_NONE))
-			: my_class;
-	}
-
-	void		SetClass(int nClassIndex)
-	{
-		my_class = CClass::GetClass(nClassIndex);
-	}
-
-	sh_int race;
-	sh_int level;
-	sh_int trust;
-	int played;
-	int lines;							// for the pager
-	time_t logon;
-	sh_int timer;
-	sh_int wait;
-	sh_int regen_rate;					// For imbue regeneration spell
-	int hit;
-	sh_int max_hit;
-	sh_int mana;
-	sh_int max_mana;
-	sh_int move;
-	sh_int max_move;
-	long gold;
-	long gold_bank;
-	int exp;
-	long act[MAX_BITVECTOR];
-	long comm[MAX_BITVECTOR];			// RT added to pad the vector
-	long wiznet[MAX_BITVECTOR];			// wiz stuff
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	sh_int invis_level;
-	sh_int incog_level;
-	long affected_by[MAX_BITVECTOR];
-	sh_int position;
-	sh_int practice;
-	sh_int train;
-	sh_int carry_weight;
-	sh_int carry_number;
-	sh_int saving_throw;				//svs
-	sh_int alignment;
-	sh_int hitroll;
-	sh_int damroll;
-	sh_int armor[4];
-	sh_int wimpy;
-	char *speechbuf[10];				// Buffer for various mob speech, progs, etc...
-
-	//
-	// stats
-	//
-
-	sh_int perm_stat[MAX_STATS];
-	sh_int mod_stat[MAX_STATS];
-
-	//
-	// parts stuff
-	//
-
-	long form[MAX_BITVECTOR];
-	long parts[MAX_BITVECTOR];
-	sh_int size;
-	char *material;
-
-	//
-	// mobile stuff
-	//
-
-	ROOM_INDEX_DATA *home_room;
-	int mobstyle;
-	long off_flags[MAX_BITVECTOR];
-	sh_int damage[3];
-	sh_int dam_type;
-	sh_int start_pos;
-	sh_int pause;
-	sh_int ghost;
-	int status;
-	long progtypes[MAX_BITVECTOR];
-	int hometown;
-	float dam_mod;
-	sh_int defense_mod;
-	bool moved;
-
-	//
-	// skill/spell-specific stuff
-	//
-
-	sh_int arms;
-	sh_int legs;
-	sh_int balance;
-	sh_int batter;
-	CHAR_DATA *analyzePC;
-	int analyze;
-	sh_int pulseTimer;					// counter for racial combat pulse
-	char *backup_true_name;				// Dev's SUPAR CLEVAR CORRUPTION FIX!!!
-	float talismanic;
-	bool disrupted;						// Has queue-using spell been disrupted?
-	int bounty_timer;
-	bool law_pass;
-	bool stolen_from;
-	CProficiencies *Profs();
-private:
-	CClass *	my_class;
-};
-
-
-
 //
 // Data which only PC's have.
 //
@@ -3279,6 +3116,170 @@ struct pathfind_data
 	int steps;							// Number of steps from parent node
 	PATHFIND_DATA *prev;				// Room we came from
 	PATHFIND_DATA *dir_to[6];			// Points to up to 6 rooms, NEWSUD.
+};
+
+
+//
+// One character (PC or NPC).
+//
+
+
+extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking IS_NPC
+
+class	char_data
+{
+public:
+	CHAR_DATA *next;
+	CHAR_DATA *next_in_room;
+	CHAR_DATA *master;
+	CHAR_DATA *leader;
+	CHAR_DATA *fighting;
+	CHAR_DATA *reply;
+	CHAR_DATA *pet;
+	CHAR_DATA *last_fought;
+	int tracktimer;
+	time_t last_fight_time;
+	char * last_fight_name;
+	CHAR_DATA *hunting;
+	CHAR_DATA *defending;
+	MEM_DATA *memory;
+	GAME_FUN *game_fun;
+	MOB_INDEX_DATA *pIndexData;
+	DESCRIPTOR_DATA *desc;
+	AFFECT_DATA *affected;
+	NOTE_DATA *pnote;
+	OBJ_DATA *carrying;
+	OBJ_DATA *on;
+	ROOM_INDEX_DATA *in_room;
+	ROOM_INDEX_DATA *was_in_room;
+	AREA_DATA *zone;
+	PC_DATA *pcdata;
+	GEN_DATA *gen_data;
+	PATHFIND_DATA *path;	// For smart pathfinding/tracking.  Mob only.
+	PATHFIND_DATA *best;	// Stores best direction thus far.  Mob only.
+	bool valid;
+	char *name;
+	char *true_name;
+	long id;
+	sh_int version;
+	char *short_descr;
+	char *long_descr;
+	char *description;
+	char *prompt;
+	char *prefix;
+	sh_int group;
+	sh_int cabal;
+	sh_int sex;
+
+	CClass *Class()
+	{
+		return !my_class
+			? (pIndexData && pIndexData->Class()
+				? pIndexData->Class()
+				:  CClass::GetClass(CLASS_NONE))
+			: my_class;
+	}
+
+	void		SetClass(int nClassIndex)
+	{
+		my_class = CClass::GetClass(nClassIndex);
+	}
+
+	sh_int race;
+	sh_int level;
+	sh_int trust;
+	int played;
+	int lines;							// for the pager
+	time_t logon;
+	sh_int timer;
+	sh_int wait;
+	sh_int regen_rate;					// For imbue regeneration spell
+	int hit;
+	sh_int max_hit;
+	sh_int mana;
+	sh_int max_mana;
+	sh_int move;
+	sh_int max_move;
+	long gold;
+	long gold_bank;
+	int exp;
+	long act[MAX_BITVECTOR];
+	long comm[MAX_BITVECTOR];			// RT added to pad the vector
+	long wiznet[MAX_BITVECTOR];			// wiz stuff
+	long imm_flags[MAX_BITVECTOR];
+	long res_flags[MAX_BITVECTOR];
+	long vuln_flags[MAX_BITVECTOR];
+	sh_int invis_level;
+	sh_int incog_level;
+	long affected_by[MAX_BITVECTOR];
+	sh_int position;
+	sh_int practice;
+	sh_int train;
+	sh_int carry_weight;
+	sh_int carry_number;
+	sh_int saving_throw;				//svs
+	sh_int alignment;
+	sh_int hitroll;
+	sh_int damroll;
+	sh_int armor[4];
+	sh_int wimpy;
+	char *speechbuf[10];				// Buffer for various mob speech, progs, etc...
+
+	//
+	// stats
+	//
+
+	sh_int perm_stat[MAX_STATS];
+	sh_int mod_stat[MAX_STATS];
+
+	//
+	// parts stuff
+	//
+
+	long form[MAX_BITVECTOR];
+	long parts[MAX_BITVECTOR];
+	sh_int size;
+	char *material;
+
+	//
+	// mobile stuff
+	//
+
+	ROOM_INDEX_DATA *home_room;
+	int mobstyle;
+	long off_flags[MAX_BITVECTOR];
+	sh_int damage[3];
+	sh_int dam_type;
+	sh_int start_pos;
+	sh_int pause;
+	sh_int ghost;
+	int status;
+	long progtypes[MAX_BITVECTOR];
+	int hometown;
+	float dam_mod;
+	sh_int defense_mod;
+	bool moved;
+
+	//
+	// skill/spell-specific stuff
+	//
+
+	sh_int arms;
+	sh_int legs;
+	sh_int balance;
+	sh_int batter;
+	CHAR_DATA *analyzePC;
+	int analyze;
+	sh_int pulseTimer;					// counter for racial combat pulse
+	char *backup_true_name;				// Dev's SUPAR CLEVAR CORRUPTION FIX!!!
+	float talismanic;
+	bool disrupted;						// Has queue-using spell been disrupted?
+	int bounty_timer;
+	bool law_pass;
+	bool stolen_from;
+	CProficiencies *Profs() { return pcdata ? &pcdata->profs : &prof_none; }
+private:
+	CClass *	my_class;
 };
 
 //

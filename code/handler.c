@@ -4782,9 +4782,10 @@ void affect_strip_area(AREA_DATA *area, int sn)
 
 bool is_affected_area(AREA_DATA *area, int sn)
 {
-	AREA_AFFECT_DATA *paf;
+	if (area == nullptr)
+		return false;
 
-	for (paf = area->affected; paf != NULL; paf = paf->next)
+	for (auto paf = area->affected; paf != NULL; paf = paf->next)
 	{
 		if (paf->type == sn)
 			return true;

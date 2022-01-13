@@ -30,17 +30,6 @@
 #define OBJ_VNUM_MEAT_CHUNKS	75
 #define OBJ_VNUM_CAMPFIRE		76
 
-void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis);
-bool is_affected_prof(CHAR_DATA *ch, char *prof);
-void do_proficiencies(CHAR_DATA *ch, char *argument);
-void prof_tracking(CHAR_DATA *ch, char *argument);
-void build_fire(CHAR_DATA *ch, int dur);
-void prof_firestart(CHAR_DATA *ch, char *argument);
-void prof_cook(CHAR_DATA *ch, char *argument);
-void prof_appraise(CHAR_DATA *ch, char *argument);
-void prof_butcher(CHAR_DATA *ch, char *argument);
-void prof_bandage(CHAR_DATA *ch, char *argument);
-
 const std::vector<prof_level_type> CProficiencies::prof_level_table =
 {
 	// name,				level
@@ -71,20 +60,19 @@ const std::vector<proficiency_type> CProficiencies::prof_table =
 	{ &psn_none,			"tracking",					30,		30,			NULL,		PFLAGS_NONE		}
 };
 
-//TODO: bring prof_cmd_type from tables.h over to prof.h
-const std::vector<prof_cmd_type> prof_cmd_table =
+const std::vector<prof_cmd_type> CProficiencies::prof_cmd_table =
 {
 	// name,		cmd,			requires
 	{ "butcher",	prof_butcher,	"butchery"		},
 	{ "bandage",	prof_bandage,	"bandaging"		},
-	{ "appraise",	prof_appraise,	"appraise"		},
-	{ "cook",		prof_cook,		"cook"			},
+	{ "appraise",	prof_appraise,	"appraising"	},
+	{ "cook",		prof_cook,		"cooking"		},
 	{ "firestart",	prof_firestart, "firestarting"	},
-	{ "track",		prof_tracking,	"track"			}
+	{ "track",		prof_tracking,	"tracking"		}
 };
 
 //last entry in each one should be null
-const struct proficiency_msg prof_msg_table [] =
+const struct proficiency_msg CProficiencies::prof_msg_table [] =
 {
 	// swimming
 	{
@@ -203,11 +191,6 @@ CProficiencies prof_none;
 sh_int psn_none;
 sh_int psn_swimming;
 sh_int psn_mountaineering;
-
-CProficiencies * char_data::Profs()
-{
-	return pcdata ? &pcdata->profs : &prof_none;
-}
 
 CProficiencies::CProficiencies()
 {
@@ -907,9 +890,15 @@ void do_proficiencies(CHAR_DATA *ch, char *argument)
 /// @param argument: The target of the tracking.
 void prof_tracking(CHAR_DATA *ch, char *argument)
 {
-	if (is_affected_prof(ch, "tracking"))
+	if (ch == nullptr)
 	{
-		send_to_char("You cannot attempt to track them again yet.\n\r",ch);
+		bug("prof_bandage: ch is nullptr");
+		return;
+	}
+
+	if (argument == nullptr)
+	{
+		send_to_char("Track who?\n\r",ch);
 		return;
 	}
 
@@ -919,7 +908,13 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 		send_to_char("Track who?\n\r",ch);
 		return;
 	}
-	
+
+	if (is_affected_prof(ch, "tracking"))
+	{
+		send_to_char("You cannot attempt to track them again yet.\n\r",ch);
+		return;
+	}
+
 	auto sect = ch->in_room->sector_type;
 	if (!IS_GROUND(ch->in_room) || sect == SECT_CITY || sect == SECT_INSIDE || sect == SECT_BURNING || sect == SECT_ROAD)
 	{
@@ -954,7 +949,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 			? ch->in_room->tracks[i]->direction
 			: number_range(0, MAX_DIR - 1);
 
-		direction = flag_name_lookup(diruse,direction_table);
+		direction = flag_name_lookup(diruse, direction_table);
 
 		buffer = std::string("From the pattern of tracks here, you suspect $N left $t.");
 	}
@@ -1127,9 +1122,15 @@ void prof_butcher(CHAR_DATA *ch, char *argument)
 /// @param argument: The character to bandage.
 void prof_bandage(CHAR_DATA *ch, char *argument)
 {
-	auto victim = argument[0] != '\0'
-		? get_char_room(ch, argument)
-		: ch;
+	if (ch == nullptr)
+	{
+		bug("prof_bandage: ch is nullptr");
+		return;
+	}
+
+	auto victim = argument == nullptr || argument[0] == '\0'
+		? get_char_room(ch, "self")
+		: get_char_room(ch, argument);
 
 	if (!victim)
 	{
