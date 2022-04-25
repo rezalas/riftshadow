@@ -64,9 +64,6 @@ extern PC_DATA *pcdata_free;
 /* note recycling */
 NOTE_DATA *new_note(void);
 void free_note(NOTE_DATA *note);
-/* ban data recycling */
-BAN_DATA *new_ban(void);
-void free_ban(BAN_DATA *ban);
 /* descriptor recycling */
 DESCRIPTOR_DATA *new_descriptor(void);
 void free_descriptor(DESCRIPTOR_DATA *d);

@@ -56,7 +56,6 @@
 const int buf_size[MAX_BUF_LIST] = {16, 32, 64, 128, 256, 1024, 2048, 4096, 8192, 16384};
 
 NOTE_DATA *note_free;
-BAN_DATA *ban_free;
 DESCRIPTOR_DATA *descriptor_free;
 GEN_DATA *gen_data_free;
 EXTRA_DESCR_DATA *extra_descr_free;
@@ -110,41 +109,6 @@ void free_note(NOTE_DATA *note)
 	note->valid = false;
 	note->next = note_free;
 	note_free = note;
-}
-
-/* stuff for recycling ban structures */
-BAN_DATA *new_ban(void)
-{
-	static BAN_DATA ban_zero;
-	BAN_DATA *ban;
-
-	if (ban_free == NULL)
-	{
-		ban = new BAN_DATA;
-	}
-	else
-	{
-		ban = ban_free;
-		ban_free = ban_free->next;
-	}
-
-	*ban = ban_zero;
-
-	ban->valid = true;
-	ban->name = &str_empty[0];
-	return ban;
-}
-
-void free_ban(BAN_DATA *ban)
-{
-	if (!(ban != NULL && ban->valid))
-		return;
-
-	free_pstring(ban->name);
-
-	ban->valid = false;
-	ban->next = ban_free;
-	ban_free = ban;
 }
 
 /* stuff for recycling descriptors */
