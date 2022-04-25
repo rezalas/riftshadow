@@ -21,6 +21,7 @@ set(TEST_SRC_FILES act_obj_tests.c
 	standalone_tests.c
 	update_tests.c
 	test_helpers.c
+	ban_tests.c
 )
 
 ##

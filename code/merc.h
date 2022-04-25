@@ -128,7 +128,6 @@ int remove();
 
 typedef struct affect_data		AFFECT_DATA;
 typedef struct area_data		AREA_DATA;
-typedef struct ban_data			BAN_DATA;
 typedef struct buf_type			BUFFER;
 typedef struct char_data		CHAR_DATA;
 typedef struct descriptor_data	DESCRIPTOR_DATA;
@@ -423,36 +422,6 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 
 #define NOTE_UNSTARTED				0
 #define NOTE_IN_PROGRESS			1
-
-//
-// Site ban structure.
-//
-
-#define BAN_SUFFIX					A
-#define BAN_PREFIX					B
-#define BAN_NEWBIES					C
-#define BAN_ALL						D
-#define BAN_PERMIT					E
-#define BAN_PERMANENT				F
-
-//
-// New ban defines
-//
-
-#define NBAN_ALL					0
-#define NBAN_NEWBIE					1
-
-#define NBAN_IP						1
-#define NBAN_HOST					0
-
-struct ban_data
-{
-	BAN_DATA *next;
-	bool valid;
-	long ban_flags[MAX_BITVECTOR];
-	sh_int level;
-	char *name;
-};
 
 struct buf_type
 {
@@ -3383,7 +3352,6 @@ extern QUEUE_DATA *global_queue;
 #define PENALTY_FILE				RIFT_AREA_DIR "/penal.not"
 #define NEWS_FILE					RIFT_AREA_DIR "/news.not"
 #define CHANGES_FILE				RIFT_AREA_DIR "/chang.not"
-#define BAN_FILE					RIFT_AREA_DIR "/ban.txt"
 #define MULT_EXP					5
 
 //**********************************************
