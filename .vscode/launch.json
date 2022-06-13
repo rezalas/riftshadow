@@ -179,6 +179,26 @@
             }
         },
         {
+            "name": "Note Tests Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/tests/note_tests",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/tests/",
+            "environment": [],
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            }
+        },
+        {
             "name": "Prof Tests Launch",
             "type": "cppdbg",
             "request": "launch",

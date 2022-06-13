@@ -10,18 +10,19 @@ add_library(TestMain SHARED main.c)
 set_target_properties(TestMain PROPERTIES LINKER_LANGUAGE CXX)
 
 set(TEST_SRC_FILES act_obj_tests.c
+	ban_tests.c
 	cabal_tests.c
 	db_tests.c
 	fight_tests.c
 	handler_tests.c
 	magic_tests.c
+	note_tests.c
 	prof_tests.c
 	queue_tests.c
 	utility_tests.c
 	standalone_tests.c
-	update_tests.c
 	test_helpers.c
-	ban_tests.c
+	update_tests.c
 )
 
 ##

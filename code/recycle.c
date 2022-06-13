@@ -55,7 +55,6 @@
 /* buffer sizes */
 const int buf_size[MAX_BUF_LIST] = {16, 32, 64, 128, 256, 1024, 2048, 4096, 8192, 16384};
 
-NOTE_DATA *note_free;
 DESCRIPTOR_DATA *descriptor_free;
 GEN_DATA *gen_data_free;
 EXTRA_DESCR_DATA *extra_descr_free;
@@ -75,41 +74,6 @@ BUFFER *buf_free;
 
 long last_pc_id;
 long last_mob_id;
-
-/* stuff for recyling notes */
-NOTE_DATA *new_note()
-{
-	NOTE_DATA *note;
-
-	if (note_free == NULL)
-	{
-		note = new NOTE_DATA;
-	}
-	else
-	{
-		note = note_free;
-		note_free = note_free->next;
-	}
-
-	note->valid = true;
-	return note;
-}
-
-void free_note(NOTE_DATA *note)
-{
-	if (!(note != NULL && note->valid))
-		return;
-
-	free_pstring(note->text);
-	free_pstring(note->subject);
-	free_pstring(note->to_list);
-	free_pstring(note->date);
-	free_pstring(note->sender);
-
-	note->valid = false;
-	note->next = note_free;
-	note_free = note;
-}
 
 /* stuff for recycling descriptors */
 DESCRIPTOR_DATA *new_descriptor(void)

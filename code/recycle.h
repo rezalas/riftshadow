@@ -37,7 +37,6 @@
 #include "merc.h"
 
 /* externals for counting purposes */
-extern NOTE_DATA *note_free;
 extern DESCRIPTOR_DATA *descriptor_free;
 extern EXTRA_DESCR_DATA	*extra_descr_free;
 extern AFFECT_DATA *affect_free;
@@ -61,9 +60,6 @@ extern PC_DATA *pcdata_free;
 // LOCAL FUNCTIONS
 //
 
-/* note recycling */
-NOTE_DATA *new_note(void);
-void free_note(NOTE_DATA *note);
 /* descriptor recycling */
 DESCRIPTOR_DATA *new_descriptor(void);
 void free_descriptor(DESCRIPTOR_DATA *d);
