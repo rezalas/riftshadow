@@ -139,7 +139,6 @@ typedef struct mem_data			MEM_DATA;
 typedef struct mob_index_data	MOB_INDEX_DATA;
 typedef struct speech_data		SPEECH_DATA;
 typedef struct line_data		LINE_DATA;
-typedef struct note_data		NOTE_DATA;
 typedef struct obj_data			OBJ_DATA;
 typedef struct obj_index_data	OBJ_INDEX_DATA;
 typedef struct pc_data			PC_DATA;
@@ -716,31 +715,6 @@ struct old_char
 	OLD_CHAR *next;
 	OBJ_DATA *carrying;
 };
-
-//
-// Data structure for notes.
-//
-
-#define NOTE_NOTE					0
-#define NOTE_IDEA					1
-#define NOTE_PENALTY				2
-#define NOTE_NEWS					3
-#define NOTE_CHANGES				4
-
-struct note_data
-{
-	NOTE_DATA *next;
-	bool valid;
-	sh_int type;
-	char *sender;
-	char *date;
-	char *to_list;
-	char *subject;
-	char *text;
-	time_t date_stamp;
-};
-
-
 
 //
 // An affect.
@@ -3087,6 +3061,8 @@ struct pathfind_data
 	PATHFIND_DATA *dir_to[6];			// Points to up to 6 rooms, NEWSUD.
 };
 
+struct note_data;
+typedef struct note_data NOTE_DATA;
 
 //
 // One character (PC or NPC).
@@ -3347,7 +3323,6 @@ extern QUEUE_DATA *global_queue;
 #define BUG_FILE					RIFT_AREA_DIR "/bugs.txt"					// For 'bug' and bug()
 #define TYPO_FILE					RIFT_AREA_DIR "/typos.txt"					// For 'typo'
 #define IDEAS_FILE					RIFT_AREA_DIR "/ideas.txt"					// For ideas!
-#define NOTE_FILE					RIFT_AREA_DIR "/notes.not"					// For 'notes'
 #define IDEA_FILE					RIFT_AREA_DIR "/ideas.not"
 #define PENALTY_FILE				RIFT_AREA_DIR "/penal.not"
 #define NEWS_FILE					RIFT_AREA_DIR "/news.not"
