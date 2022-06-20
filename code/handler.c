@@ -271,7 +271,7 @@ long wiznet_lookup(const char *name)
 char *color_value_string(int color, bool bold, bool flash)
 {
 	static char buf[64];
-	static sh_int COLOR_INDEX[8] = {30, 34, 32, 31, 36, 35, 33, 37};
+	static short COLOR_INDEX[8] = {30, 34, 32, 31, 36, 35, 33, 37};
 
 	if (flash && bold)
 		sprintf(buf, "\x01B[1;%dm%s", COLOR_INDEX[color % 8], ANSI_BLINK);
@@ -288,7 +288,7 @@ char *color_value_string(int color, bool bold, bool flash)
 int strlen_color(char *argument)
 {
 	char *str;
-	sh_int length;
+	short length;
 
 	if (argument == NULL || argument[0] == '\0')
 		return 0;

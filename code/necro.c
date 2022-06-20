@@ -531,7 +531,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	float dmod = corpse->level * (corpse->item_type == ITEM_CORPSE_PC ? -.55 : -.3);
 
-	zombie->defense_mod = (sh_int)dmod;
+	zombie->defense_mod = (short)dmod;
 
 	sprintf(buf1, "the zombie of %s", name);
 	sprintf(buf2, "The %s%s zombie of %s lurches here, its flesh hanging loosely.\n\r",

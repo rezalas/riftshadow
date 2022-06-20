@@ -4,7 +4,7 @@
 #include "merc.h"
 
 extern char *const dir_name[];
-extern const sh_int rev_dir[];
+extern const short rev_dir[];
 extern PATHFIND_DATA *best_path;
 extern int iterations;
 

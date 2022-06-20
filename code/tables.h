@@ -64,9 +64,9 @@ struct cabal_type
 	char *extitle;
 	char *long_name;
 	bool independent; /* true for loners */
-	sh_int item_vnum;
-	sh_int max_members;
-	sh_int start_level;
+	short item_vnum;
+	short max_members;
+	short start_level;
 };
 
 struct cabal_list
@@ -146,11 +146,11 @@ struct sect_type
 
 struct quest_type
 {
-	sh_int number;
+	short number;
 	char *name;
 	char *description;
-	sh_int minlevel;
-	sh_int maxlevel;
+	short minlevel;
+	short maxlevel;
 	char *stages[9];
 };
 
@@ -184,7 +184,7 @@ struct style_type
 struct style_list
 {
 	char *name;
-	sh_int percent;
+	short percent;
 };
 
 struct para_sphere
@@ -196,24 +196,24 @@ struct para_sphere
 
 struct ele_sphere
 {
-	sh_int element;
-	sh_int type;
+	short element;
+	short type;
 	char *name;
 };
 
 struct climate_type
 {
 	char *name;
-	sh_int number;
-	sh_int skyfreqs[Seasons::SeasonsCount][WeatherCondition::MaxWeatherCondition];
-	sh_int tempfreqs[Seasons::SeasonsCount][Temperature::MaxTemperature];
+	short number;
+	short skyfreqs[Seasons::SeasonsCount][WeatherCondition::MaxWeatherCondition];
+	short tempfreqs[Seasons::SeasonsCount][Temperature::MaxTemperature];
 };
 
 struct demon_type
 {
 	char *name;
-	sh_int number;
-	sh_int type;
+	short number;
+	short type;
 };
 
 struct beauty_type

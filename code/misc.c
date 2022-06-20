@@ -40,7 +40,7 @@
 #define WHITE_PIECE					0
 #define BLACK_PIECE					1
 
-sh_int chessboard[8][8];
+short chessboard[8][8];
 CHAR_DATA *chess_white;
 CHAR_DATA *chess_black;
 

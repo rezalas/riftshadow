@@ -63,12 +63,9 @@ int remove();
 	#define const
 	#endif /* const */
 
-	typedef int sh_int;
 	typedef int bool;
 
 	#define unix
-#else
-	typedef short int sh_int;
 #endif /* _AIX */
 
 
@@ -426,9 +423,9 @@ struct buf_type
 {
 	BUFFER *next;
 	bool valid;
-	sh_int state; // error state of the buffer
-	sh_int size;  // size in k
-	char *string; // buffer's string
+	short state;	// error state of the buffer
+	short size;		// size in k
+	char *string;	// buffer's string
 };
 
 
@@ -537,8 +534,8 @@ struct descriptor_data
 	CHAR_DATA *original;
 	bool valid;
 	char *host;
-	sh_int descriptor;
-	sh_int connected;
+	short descriptor;
+	short connected;
 	bool fcommand;
 	char inbuf[4 * MAX_INPUT_LENGTH];
 	char incomm[MAX_INPUT_LENGTH];
@@ -552,7 +549,7 @@ struct descriptor_data
 	void *pEdit;	// OLC
 	char **pString;	// OLC
 	int editor;		// OLC
-	sh_int type;
+	short type;
 };
 
 struct bounty
@@ -582,7 +579,7 @@ struct bounty
 struct help_data
 {
 	HELP_DATA *next;
-	sh_int level;
+	short level;
 	char *keyword;
 	char *text;
 };
@@ -600,9 +597,9 @@ struct shop_data
 	int pet_cage_vnum;
 	SHOP_DATA *next;			// Next shop in list
 	MOB_INDEX_DATA *pMobIndex;
-	sh_int open_hour;			// First opening hour
-	sh_int close_hour;			// First closing hour
-	sh_int direction;			// exit dir
+	short open_hour;			// First opening hour
+	short close_hour;			// First closing hour
+	short direction;			// exit dir
 };
 
 #define BAR_CLASS					0
@@ -621,11 +618,11 @@ struct shop_data
 
 struct barred_data
 {
-	sh_int type;		// Bar on basis of guild.. or?
-	sh_int comparison;	// less than greater than = to
-	sh_int value;		// value allowed in
-	sh_int vnum;		// Vnum it bars entry to
-	sh_int msg_type;	// echo/say/emote
+	short type;			// Bar on basis of guild.. or?
+	short comparison;	// less than greater than = to
+	short value;		// value allowed in
+	short vnum;			// Vnum it bars entry to
+	short msg_type;		// echo/say/emote
 	char *message;		// message when access is barred
 	char *message_two;	// room message for echo type
 };
@@ -661,27 +658,27 @@ struct class_type
 {
 	char *name;				// the full name of the class
 	char who_name[4];		// Three-letter name for 'who'
-	sh_int attr_prime;		// Prime attribute/Prime Stat
-	sh_int align;			// see pc_race_type
-	sh_int xpadd;			// see pc_race_type
-	sh_int weapon;			// First weapon
-	sh_int skill_adept;		// Maximum skill level
-	sh_int thac0_00;		// Thac0 for level 0
-	sh_int thac0_32;		// Thac0 for level 32
-	sh_int hp_min;			// Min hp gained on leveling
-	sh_int hp_max;			// Max hp gained on leveling
+	short attr_prime;		// Prime attribute/Prime Stat
+	short align;			// see pc_race_type
+	short xpadd;			// see pc_race_type
+	short weapon;			// First weapon
+	short skill_adept;		// Maximum skill level
+	short thac0_00;			// Thac0 for level 0
+	short thac0_32;			// Thac0 for level 32
+	short hp_min;			// Min hp gained on leveling
+	short hp_max;			// Max hp gained on leveling
 	bool fMana;				// Class gains mana on level
 	char *base_group;		// base skills gained
 	char *default_group;	// default skills gained
-	sh_int ctype;			// communer/caster?
-	sh_int status;
+	short ctype;			// communer/caster?
+	short status;
 };
 
 struct race_data
 {
 	RACE_DATA *first;
 	RACE_DATA *next;
-	sh_int number;
+	short number;
 	char *name;
 	bool pc_race;
 	long act[MAX_BITVECTOR];
@@ -702,12 +699,12 @@ struct old_char
 	char *short_descr;
 	char *long_descr;
 	char *description;
-	sh_int perm_stats[MAX_STATS];
-	sh_int armor[4];
+	short perm_stats[MAX_STATS];
+	short armor[4];
 	float dam_mod;
-	sh_int carry_weight;
-	sh_int carry_number;
-	sh_int saving_throw;
+	short carry_weight;
+	short carry_number;
+	short saving_throw;
 	long affected_by[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
@@ -726,19 +723,19 @@ struct affect_data
 	CHAR_DATA *owner;
 	char *name;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
-	sh_int mod_name;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
+	short mod_name;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	AFF_FUN *tick_fun;		// goes off every tick that char is affected
 	AFF_FUN *pulse_fun;
 	AFF_FUN *end_fun;		// when the affect wears off this is called
-	sh_int init_duration;
+	short init_duration;
 	AFF_FUN *beat_fun;		// goes off every beat
 };
 
@@ -751,12 +748,12 @@ struct room_affect_data
 	ROOM_AFFECT_DATA *next;
 	CHAR_DATA *owner;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	RAFF_FUN *pulse_fun;
@@ -773,12 +770,12 @@ struct area_affect_data
 	AREA_AFFECT_DATA *next;
 	CHAR_DATA *owner;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	AAFF_FUN *pulse_fun;
@@ -791,12 +788,12 @@ struct obj_affect_data
 	OBJ_AFFECT_DATA *next;
 	CHAR_DATA *owner;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	OAFF_FUN *pulse_fun;
@@ -960,8 +957,8 @@ struct obj_affect_data
 //
 struct kill_data
 {
-	sh_int number;
-	sh_int killed;
+	short number;
+	short killed;
 };
 
 
@@ -2393,46 +2390,46 @@ public:
 	AREA_DATA *area;
 	SPEECH_DATA *speech;
 	long progtypes[MAX_BITVECTOR];
-	sh_int vnum;
-	sh_int group;
+	short vnum;
+	short group;
 	bool new_format;
-	sh_int count;
-	sh_int killed;
+	short count;
+	short killed;
 	char *player_name;
 	char *short_descr;
 	char *long_descr;
 	char *description;
 	long act[MAX_BITVECTOR];
 	long affected_by[MAX_BITVECTOR];
-	sh_int alignment;
-	sh_int level;
-	sh_int hitroll;
-	sh_int hit[3];
-	sh_int mana[3];
-	sh_int damage[3];
-	sh_int ac[4];
-	sh_int dam_type;
+	short alignment;
+	short level;
+	short hitroll;
+	short hit[3];
+	short mana[3];
+	short damage[3];
+	short ac[4];
+	short dam_type;
 	long off_flags[MAX_BITVECTOR];
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
 	long mprog_flags[MAX_BITVECTOR];
-	sh_int xp_mod;
+	short xp_mod;
 	float dam_mod;
-	sh_int start_pos;
-	sh_int sex;
-	sh_int race;
+	short start_pos;
+	short sex;
+	short race;
 	int wealth;
 	long form[MAX_BITVECTOR];
 	long parts[MAX_BITVECTOR];
-	sh_int size;
+	short size;
 
 	// restrict mobs to a specific region
 
 	int restrict_low;	// Low end of vnum range 
 	int restrict_high;	// High end of vnum range
 
-	sh_int affect_sn[MAX_MOB_AFFECT];
+	short affect_sn[MAX_MOB_AFFECT];
 	long affect_bit[MAX_MOB_AFFECT];
 	char *cast_spell[MAX_MOB_CAST];
 
@@ -2446,16 +2443,16 @@ public:
 		my_class = CClass::GetClass(nClassIndex);
 	}
 
-	sh_int cabal;
+	short cabal;
 	long styles[MAX_BITVECTOR];
-	sh_int ele_major;
-	sh_int ele_para;
-	sh_int arms;
-	sh_int legs;
+	short ele_major;
+	short ele_para;
+	short arms;
+	short legs;
 	char *notes;
 	int swealth;
 	char *attack_yell;
-	sh_int profs_taught[MAX_PROFS_TAUGHT_BY_MOB];
+	short profs_taught[MAX_PROFS_TAUGHT_BY_MOB];
 	SPEC_FUNC spec_prog;
 private:
 	CClass *my_class;
@@ -2491,7 +2488,7 @@ struct line_data
 	LINE_DATA *prev;
 	int number;
 	int delay;
-	sh_int type;
+	short type;
 	char *text;
 };
 	
@@ -2639,33 +2636,33 @@ struct pc_data
 	time_t last_penalty;
 	time_t last_news;
 	time_t last_changes;
-	sh_int perm_hit;
-	sh_int perm_mana;
-	sh_int perm_move;
-	sh_int true_sex;
-	sh_int age_mod;
-	sh_int death_timer;
-	sh_int death_status;
-	sh_int ethos;
-	sh_int oalign;
-	sh_int oethos;
-	sh_int sp;
-	sh_int special;
-	sh_int wanteds;
-	sh_int death_count;
-	sh_int induct;
-	sh_int start_weapon;
-	sh_int killed[2]; 			// 0 = PK_KILLED, 1 = MOB_KILLED
-	sh_int kills[4];
+	short perm_hit;
+	short perm_mana;
+	short perm_move;
+	short true_sex;
+	short age_mod;
+	short death_timer;
+	short death_status;
+	short ethos;
+	short oalign;
+	short oethos;
+	short sp;
+	short special;
+	short wanteds;
+	short death_count;
+	short induct;
+	short start_weapon;
+	short killed[2]; 			// 0 = PK_KILLED, 1 = MOB_KILLED
+	short kills[4];
 	float frags[4];
 	float fragged;
 	char *recentkills[100];
-	sh_int old_room;
+	short old_room;
 	int last_level;
-	sh_int beauty;
-	sh_int reputation;
-	sh_int condition[6];
-	sh_int learned[MAX_SKILL];
+	short beauty;
+	short reputation;
+	short condition[6];
+	short learned[MAX_SKILL];
 	bool group_known[MAX_GROUP];
 	bool confirm_delete;
 	char *alias[MAX_ALIAS];
@@ -2676,9 +2673,9 @@ struct pc_data
 	//
 
 	long bounty;
-	sh_int bounty_credits;
+	short bounty_credits;
 
-	sh_int helpid;
+	short helpid;
 	char *temp_history_buffer;
 	char *history_buffer;
 	char *role;
@@ -2692,16 +2689,16 @@ struct pc_data
 	DO_FUN *end_fun;
 	long trust[MAX_BITVECTOR];
 	CHAR_DATA *trusting;
-	sh_int energy_state;
+	short energy_state;
 	char *host;
-	sh_int quests[MAX_QUESTS];
+	short quests[MAX_QUESTS];
 	time_t roll_time;
-	sh_int birth_date;
-	sh_int death_time;
-	sh_int tribe;
+	short birth_date;
+	short death_time;
+	short tribe;
 	long sect_time[SECT_MAX];
-	sh_int save_timer;
-	sh_int style;
+	short save_timer;
+	short style;
 	long styles[MAX_BITVECTOR];
 	long ele_sphere[MAX_BITVECTOR];
 	TROPHY_DATA *trophy;
@@ -2711,9 +2708,9 @@ struct pc_data
 	// Sorcerer elements data
 	//
 
-	sh_int ele_temp[4];					// used only for creation
-	sh_int ele_major;
-	sh_int ele_para;
+	short ele_temp[4];					// used only for creation
+	short ele_major;
+	short ele_para;
 
 	//
 	// AP devil favors data
@@ -2725,21 +2722,21 @@ struct pc_data
 
 	int editing_item;
 	int security;						// OLC - Builder security
-	sh_int souls;
+	short souls;
 	int cabal_level;
 	int bounty_killed;
  	char *temp_str;
-	sh_int deposited_items[5];
-	sh_int paladin_path;
-	sh_int temp_quest;
+	short deposited_items[5];
+	short paladin_path;
+	short temp_quest;
 
 	//
 	// CMD_QUEUE data
 	//
 
 	char queue[20][MAX_INPUT_LENGTH];
-	sh_int read_next;
-	sh_int write_next;
+	short read_next;
+	short write_next;
 	bool pending;
 
 	//
@@ -2791,25 +2788,25 @@ struct obj_index_data
 	char *name;
 	char *short_descr;
 	char *description;
-	sh_int vnum;
-	sh_int reset_num;
-	sh_int cabal;
+	short vnum;
+	short reset_num;
+	short cabal;
 	char *material;
-	sh_int material_index;
-	sh_int item_type;
+	short material_index;
+	short item_type;
 	long extra_flags[MAX_BITVECTOR];
 	long wear_flags[MAX_BITVECTOR];
 	long restrict_flags[MAX_BITVECTOR];
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
-	sh_int start_timer;
-	sh_int level;
-	sh_int condition;
-	sh_int limtotal;
-	sh_int limcount;
-	sh_int count;
-	sh_int weight;
+	short start_timer;
+	short level;
+	short condition;
+	short limtotal;
+	short limcount;
+	short count;
+	short weight;
 	int cost;
 	int value[5];
 	IPROG_DATA *iprogs;
@@ -2848,20 +2845,20 @@ struct obj_data
 	char *name;
 	char *short_descr;
 	char *description;
-	sh_int item_type;
+	short item_type;
 	long extra_flags[MAX_BITVECTOR];
 	long wear_flags[MAX_BITVECTOR];
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
 	long affected_by[MAX_BITVECTOR];
-	sh_int wear_loc;
-	sh_int weight;
+	short wear_loc;
+	short weight;
 	int cost;
-	sh_int level;
-	sh_int condition;
+	short level;
+	short condition;
 	char *material;
-	sh_int timer;
+	short timer;
 	int value[5];
 	long progtypes[MAX_BITVECTOR];
 	int ohp;
@@ -2873,9 +2870,9 @@ struct obj_data
 struct obj_apply_data
 {
 	bool valid;
-	sh_int location;
-	sh_int modifier;
-	sh_int type;						// For gsns, if relevant.
+	short location;
+	short modifier;
+	short type;						// For gsns, if relevant.
 	OBJ_APPLY_DATA *next;
 };
 
@@ -2889,11 +2886,11 @@ struct exit_data
 	union
 	{
 		ROOM_INDEX_DATA *to_room;
-		sh_int vnum;
+		short vnum;
 	} u1;
 
 	long exit_info[MAX_BITVECTOR];
-	sh_int key;
+	short key;
 	char *keyword;
 	char *description;
 	EXIT_DATA *next;					// OLC
@@ -2925,10 +2922,10 @@ struct reset_data
 {
 	RESET_DATA *next;
 	char command;
-	sh_int arg1;
-	sh_int arg2;
-	sh_int arg3;
-	sh_int arg4;
+	short arg1;
+	short arg2;
+	short arg3;
+	short arg4;
 };
 
 
@@ -2947,22 +2944,22 @@ struct area_data
 	char *file_name;
 	char *name;
 	char *credits;
-	sh_int age;
-	sh_int nplayer;
-	sh_int low_range;
-	sh_int high_range;
-	sh_int min_vnum;
-	sh_int max_vnum;
-	sh_int area_type;
+	short age;
+	short nplayer;
+	short low_range;
+	short high_range;
+	short min_vnum;
+	short max_vnum;
+	short area_type;
 	long area_flags[MAX_BITVECTOR];
 	bool empty;
 	long affected_by[MAX_BITVECTOR];
 	AREA_AFFECT_DATA *affected;
 	AREA_DATA *adjacent[MAX_ADJACENT];
-	sh_int climate;
-	sh_int sky;
-	sh_int temp;
-	sh_int wind;
+	short climate;
+	short sky;
+	short temp;
+	short wind;
 	char *builders;						// OLC - Listing of
 	int vnum;							// OLC - Area vnum
 	int security;						// OLC - Value 1-9
@@ -2990,14 +2987,14 @@ struct room_index_data
 	char *description;
 	char *alt_description;
 	char *owner;
-	sh_int alt_description_cond;
-	sh_int vnum;
+	short alt_description_cond;
+	short vnum;
 	long room_flags[MAX_BITVECTOR];
-	sh_int sector_type;
-	sh_int heal_rate;
-	sh_int mana_rate;
-	sh_int cabal;
-	sh_int guild;
+	short sector_type;
+	short heal_rate;
+	short mana_rate;
+	short cabal;
+	short guild;
 	ROOM_AFFECT_DATA *affected;
 	long affected_by[MAX_BITVECTOR];
 	RPROG_DATA *rprogs;
@@ -3006,7 +3003,7 @@ struct room_index_data
 	TRAP_DATA *trap;
 	RUNE_DATA *rune;
 	bool has_rune;
-	sh_int light;
+	short light;
 	RESET_DATA *reset_first;			// OLC
 	RESET_DATA *reset_last; 			// OLC
 };
@@ -3044,7 +3041,7 @@ struct track_data
 {
 	CHAR_DATA *prey;					// Who passed through.
 	TIME_INFO_DATA time;				// When they passed through.
-	sh_int direction;					// Which way they went.
+	short direction;					// Which way they went.
 	bool flying;						// Are they?
 	bool sneaking;						// Are they?
 	int legs;							// How many?
@@ -3106,15 +3103,15 @@ public:
 	char *name;
 	char *true_name;
 	long id;
-	sh_int version;
+	short version;
 	char *short_descr;
 	char *long_descr;
 	char *description;
 	char *prompt;
 	char *prefix;
-	sh_int group;
-	sh_int cabal;
-	sh_int sex;
+	short group;
+	short cabal;
+	short sex;
 
 	CClass *Class()
 	{
@@ -3130,21 +3127,21 @@ public:
 		my_class = CClass::GetClass(nClassIndex);
 	}
 
-	sh_int race;
-	sh_int level;
-	sh_int trust;
+	short race;
+	short level;
+	short trust;
 	int played;
 	int lines;							// for the pager
 	time_t logon;
-	sh_int timer;
-	sh_int wait;
-	sh_int regen_rate;					// For imbue regeneration spell
+	short timer;
+	short wait;
+	short regen_rate;					// For imbue regeneration spell
 	int hit;
-	sh_int max_hit;
-	sh_int mana;
-	sh_int max_mana;
-	sh_int move;
-	sh_int max_move;
+	short max_hit;
+	short mana;
+	short max_mana;
+	short move;
+	short max_move;
 	long gold;
 	long gold_bank;
 	int exp;
@@ -3154,28 +3151,28 @@ public:
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
-	sh_int invis_level;
-	sh_int incog_level;
+	short invis_level;
+	short incog_level;
 	long affected_by[MAX_BITVECTOR];
-	sh_int position;
-	sh_int practice;
-	sh_int train;
-	sh_int carry_weight;
-	sh_int carry_number;
-	sh_int saving_throw;				//svs
-	sh_int alignment;
-	sh_int hitroll;
-	sh_int damroll;
-	sh_int armor[4];
-	sh_int wimpy;
+	short position;
+	short practice;
+	short train;
+	short carry_weight;
+	short carry_number;
+	short saving_throw;				//svs
+	short alignment;
+	short hitroll;
+	short damroll;
+	short armor[4];
+	short wimpy;
 	char *speechbuf[10];				// Buffer for various mob speech, progs, etc...
 
 	//
 	// stats
 	//
 
-	sh_int perm_stat[MAX_STATS];
-	sh_int mod_stat[MAX_STATS];
+	short perm_stat[MAX_STATS];
+	short mod_stat[MAX_STATS];
 
 	//
 	// parts stuff
@@ -3183,7 +3180,7 @@ public:
 
 	long form[MAX_BITVECTOR];
 	long parts[MAX_BITVECTOR];
-	sh_int size;
+	short size;
 	char *material;
 
 	//
@@ -3193,29 +3190,29 @@ public:
 	ROOM_INDEX_DATA *home_room;
 	int mobstyle;
 	long off_flags[MAX_BITVECTOR];
-	sh_int damage[3];
-	sh_int dam_type;
-	sh_int start_pos;
-	sh_int pause;
-	sh_int ghost;
+	short damage[3];
+	short dam_type;
+	short start_pos;
+	short pause;
+	short ghost;
 	int status;
 	long progtypes[MAX_BITVECTOR];
 	int hometown;
 	float dam_mod;
-	sh_int defense_mod;
+	short defense_mod;
 	bool moved;
 
 	//
 	// skill/spell-specific stuff
 	//
 
-	sh_int arms;
-	sh_int legs;
-	sh_int balance;
-	sh_int batter;
+	short arms;
+	short legs;
+	short balance;
+	short batter;
 	CHAR_DATA *analyzePC;
 	int analyze;
-	sh_int pulseTimer;					// counter for racial combat pulse
+	short pulseTimer;					// counter for racial combat pulse
 	char *backup_true_name;				// Dev's SUPAR CLEVAR CORRUPTION FIX!!!
 	float talismanic;
 	bool disrupted;						// Has queue-using spell been disrupted?

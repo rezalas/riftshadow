@@ -1444,7 +1444,7 @@ void spell_blindness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void spell_burning_hands(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
-	static const sh_int dam_each[] =
+	static const short dam_each[] =
 	{
 		0,  0,  0,  0,  0,  14, 17, 20, 23, 26, 29, 29, 29, 30, 30, 31, 31,
 		32, 32, 33, 33, 34, 34, 35, 35, 36, 36, 37, 37, 38, 38, 39, 39, 40,
@@ -1759,7 +1759,7 @@ void spell_charm_person(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
-	static const sh_int dam_each[] =
+	static const short dam_each[] =
 	{
 		0,  0,  0,  6,  7,  8,  9,  12, 13, 13, 13, 14, 14, 14, 15, 15, 15,
 		16, 16, 16, 17, 17, 17, 18, 18, 18, 19, 19, 19, 20, 20, 20, 21, 21,
@@ -1800,7 +1800,7 @@ void spell_chill_touch(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void spell_color_spray(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
-	static const sh_int dam_each[] =
+	static const short dam_each[] =
 	{
 		0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  30, 35, 40, 45, 50, 55,
 		55, 55, 56, 57, 58, 58, 59, 60, 61, 61, 62, 63, 64, 64, 65, 66, 67,
@@ -2707,7 +2707,7 @@ void spell_fireball(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
 	char buf[MAX_STRING_LENGTH];
-	static const sh_int dam_each[] =
+	static const short dam_each[] =
 	{
 		  0,   0,	0,	 0,	  0,   0,	0,	 0,	  0,   0,	0,	 0,	  0,
 		  0,   0,	30,	 35,  40,  45,	50,	 55,  60,  65,	70,	 75,  80,
@@ -3463,7 +3463,7 @@ void spell_know_alignment(int sn, int level, CHAR_DATA *ch, void *vo, int target
 void spell_lightning_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
-	static const sh_int dam_each[] =
+	static const short dam_each[] =
 	{
 		0,  0,  0,  0,  0,  0,  0,  0,  0,  25, 28, 31, 34, 37, 40, 40, 41,
 		42, 42, 43, 44, 44, 45, 46, 46, 47, 48, 48, 49, 50, 50, 51, 52, 52,

@@ -167,7 +167,7 @@ bool can_do_quest(CHAR_DATA *ch, int quest)
 	return true;
 }
 
-void store_quest_val(CHAR_DATA *ch, char *valname, sh_int value)
+void store_quest_val(CHAR_DATA *ch, char *valname, short value)
 {
 	AFFECT_DATA af;
 

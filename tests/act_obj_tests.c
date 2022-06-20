@@ -27,7 +27,7 @@ void TestHelperAddPlayerToRoom(char_data *player, room_index_data *room)
     room->people = player;
 }
 
-void TestHelperSetPlayerStats(char_data *player, sh_int value)
+void TestHelperSetPlayerStats(char_data *player, short value)
 {
     player->perm_stat[STAT_STR] = value;
     player->perm_stat[STAT_INT] = value;

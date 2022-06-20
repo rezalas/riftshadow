@@ -2663,7 +2663,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				ch->pcdata->perm_hit = ch->max_hit;
 				ch->max_mana = std::max(ch->perm_stat[STAT_INT] - 10, 11) * 15;
 				ch->pcdata->perm_mana = ch->max_mana;
-				ch->max_move = (sh_int)((ch->perm_stat[STAT_DEX] + ch->perm_stat[STAT_CON]) * 7.5);
+				ch->max_move = (short)((ch->perm_stat[STAT_DEX] + ch->perm_stat[STAT_CON]) * 7.5);
 				ch->mana = ch->max_mana;
 				ch->move = ch->max_move;
 

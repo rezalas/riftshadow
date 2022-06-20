@@ -11,15 +11,15 @@ struct pc_race_type // additional data for pc races
 	char *race_time;		
 	float agemod;
 	int death_modifier;				// how soon they die
-	sh_int align;					// alignments race can have: 0=gne 1=gn 2=ne 3=g 4=n 5=e
-	sh_int xpadd;					// extra xp per lvl needed
+	short align;					// alignments race can have: 0=gne 1=gn 2=ne 3=g 4=n 5=e
+	short xpadd;					// extra xp per lvl needed
 	char *skills[5];				// bonus skills for the race
-	sh_int classes[MAX_CLASS]; 		// class restricts for races
-	sh_int max_stats[MAX_STATS];	// maximum stats
-	sh_int size;					// aff bits for the race
-	sh_int racePulse;				// combat pulse for this race
+	short classes[MAX_CLASS]; 		// class restricts for races
+	short max_stats[MAX_STATS];	// maximum stats
+	short size;					// aff bits for the race
+	short racePulse;				// combat pulse for this race
 	float racialDam;				// racial dam modifier
-	sh_int status;
+	short status;
 };
 
 struct race_type
@@ -44,34 +44,34 @@ struct race_type
 
 struct str_app_type
 {
-	sh_int topenetrate;
-	sh_int todam;
-	sh_int carry;
-	sh_int wield;
+	short topenetrate;
+	short todam;
+	short carry;
+	short wield;
 };
 
 struct int_app_type
 {
-	sh_int learn;
+	short  learn;
 };
 
 struct wis_app_type
 {
-	sh_int practice;
+	short practice;
 };
 
 struct dex_app_type
 {
-	sh_int defensive;
-	sh_int carry;
-	sh_int tohit;
-	sh_int armor;
+	short defensive;
+	short carry;
+	short tohit;
+	short armor;
 };
 
 struct con_app_type
 {
-	sh_int hitp;
-	sh_int shock;
+	short hitp;
+	short shock;
 };
 
 extern const struct pc_race_type pc_race_table[];

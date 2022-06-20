@@ -44,7 +44,7 @@ struct ban_data
 	BAN_DATA *next;
 	bool valid;
 	long ban_flags[MAX_BITVECTOR];
-	sh_int level;
+	short level;
 	char *name;
 };
 

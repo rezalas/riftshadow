@@ -21,7 +21,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 	OBJ_AFFECT_DATA *af;
 	OBJ_DATA *obj;
 	EXIT_DATA *pExit;
-	sh_int door, depth, i;
+	short door, depth, i;
 
 	argument = one_argument(argument, arg1);
 
@@ -180,7 +180,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int door)
+void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, short depth, short door)
 {
 	CHAR_DATA *rch;
 	char *const distance[7] =

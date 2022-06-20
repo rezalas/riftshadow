@@ -29,7 +29,7 @@ struct note_data
 {
 	NOTE_DATA *next;
 	bool valid;
-	sh_int type;
+	short type;
 	char *sender;
 	char *date;
 	char *to_list;

@@ -414,11 +414,11 @@ void load_mobs(FILE *fp)
 	SPEECH_DATA *speech;
 	LINE_DATA *line;
 	char bugtext[250];
-	sh_int wealth;
+	short wealth;
 
 	for (;;)
 	{
-		sh_int vnum;
+		short vnum;
 		char letter, let[5];
 		int iHash;
 
@@ -1004,7 +1004,7 @@ void load_objs(FILE *fp)
 
 	for (;;)
 	{
-		sh_int vnum;
+		short vnum;
 		char letter;
 		int iHash;
 

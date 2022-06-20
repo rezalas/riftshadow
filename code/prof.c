@@ -188,9 +188,9 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 };
 
 CProficiencies prof_none; 
-sh_int psn_none;
-sh_int psn_swimming;
-sh_int psn_mountaineering;
+short psn_none;
+short psn_swimming;
+short psn_mountaineering;
 
 CProficiencies::CProficiencies()
 {
@@ -218,7 +218,7 @@ void CProficiencies::AssignPsns()
 /// Queries the proficiency table for the index of the specific proficiency.
 /// @param profname: The name of the proficiency to query.
 /// @returns The table index of the given proficiency. (Default: -1)
-sh_int CProficiencies::ProfIndexLookup(const char *profname)
+short CProficiencies::ProfIndexLookup(const char *profname)
 {
 	if (profname == nullptr)
 		return -1;

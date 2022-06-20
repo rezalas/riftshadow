@@ -13,7 +13,7 @@ struct piece_type
 };
 
 extern const struct piece_type piece_table[2][MAX_PIECE];
-extern sh_int chessboard[8][8];
+extern short chessboard[8][8];
 extern CHAR_DATA *chess_white;
 extern CHAR_DATA *chess_black;
 
