@@ -18,7 +18,7 @@ void sortvotes(CHAR_DATA *ch, BALLOT_DATA *ballot)
 {
 	/*
 	char *top_name[200], *tempname, buf[MSL];
-	sh_int top_value[200], temptop, top = 1, i = 0, x = 0;
+	short top_value[200], temptop, top = 1, i = 0, x = 0;
 	int mod_votes=0,fempty=0;
 	VOTE_SORT svote[200];
 	VOTE_DATA *vote;

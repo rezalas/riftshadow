@@ -18,7 +18,7 @@ void TestHelperSetupTrainer(CHAR_DATA *trainer, char *name = "trainer1")
 {
 	trainer->name = name;
 	trainer->pIndexData = new mob_index_data();
-	memset(trainer->pIndexData->profs_taught, -1, sizeof(sh_int) * MAX_PROFS_TAUGHT_BY_MOB);
+	memset(trainer->pIndexData->profs_taught, -1, sizeof(short) * MAX_PROFS_TAUGHT_BY_MOB);
 }
 
 void TestHelperCleanupPlayerObject(CHAR_DATA *player)

@@ -77,7 +77,7 @@ char *const dir_name[] =
 	"down"
 };
 
-const sh_int rev_dir[] =
+const short rev_dir[] =
 {
 	2,
 	3,
@@ -3327,7 +3327,7 @@ void do_train(CHAR_DATA *ch, char *argument)
 
 	auto cost = 1;
 	char *pOutput = NULL;
-	sh_int stat = -1;
+	short stat = -1;
 
 	if (!str_cmp(argument, "str"))
 	{

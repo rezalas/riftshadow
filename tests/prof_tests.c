@@ -616,7 +616,7 @@ SCENARIO("retrieve a procifiency by its psn (int)", "[GetProficiency]")
 			player->Profs()->SetChar(player);
 			player->Profs()->SetProf(2, 1); // mountaineering
 
-			sh_int psn_mountaineering = 2;
+			short psn_mountaineering = 2;
 			struct proficiency_type proficiency =
 			{
 				&psn_mountaineering,
@@ -729,7 +729,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 			player->Profs()->SetChar(player);
 			player->Profs()->SetProf(2, 1); // mountaineering
 
-			sh_int psn_mountaineering = 2;
+			short psn_mountaineering = 2;
 			struct proficiency_type proficiency =
 			{
 				&psn_mountaineering,

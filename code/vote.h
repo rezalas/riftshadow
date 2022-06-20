@@ -12,7 +12,7 @@ struct ballot_data
 	BALLOT_DATA *next;			// next ballot.
 	char *name;					// name of ballot
 	char *top_votes_name[15];
-	sh_int top_votes[15];
+	short top_votes[15];
 	VOTE_DATA *first_vote;		// first vote. yay.
 };
 

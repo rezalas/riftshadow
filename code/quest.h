@@ -15,7 +15,7 @@ extern const struct quest_type quest_table[];
 void do_clearquests(CHAR_DATA *ch, char *argument);
 int agrees(CHAR_DATA *ch, char *speech);
 bool can_do_quest(CHAR_DATA *ch, int quest);
-void store_quest_val(CHAR_DATA *ch, char *valname, sh_int value);
+void store_quest_val(CHAR_DATA *ch, char *valname, short value);
 void setbit_quest_val(CHAR_DATA *ch, char *valname, long value);
 int get_quest_val(CHAR_DATA *ch, char *valname);
 void delete_quest_val(CHAR_DATA *ch, char *valname);

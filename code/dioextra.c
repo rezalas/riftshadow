@@ -1011,7 +1011,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 	bool dead = false;
 	char eqbuf[MAX_STRING_LENGTH];
 	long sect_time[SECT_MAX];
-	sh_int quests[MAX_QUESTS];
+	short quests[MAX_QUESTS];
 	char questtext[MSL];
 	BUFFER *output;
 	long act[MAX_BITVECTOR];

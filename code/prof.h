@@ -20,11 +20,10 @@
 struct char_data;										
 typedef struct char_data CHAR_DATA;						// mirrored definition from merc.h
 typedef void DO_FUN (CHAR_DATA *ch, char *argument);	// mirrored definition from merc.h
-typedef short int sh_int;								// mirrored definition from merc.h
 
 struct proficiency_type
 {
-	sh_int *ppsn;
+	short *ppsn;
 	char *  name;
 	int     cost;
 	int     minlevel;
@@ -52,9 +51,9 @@ struct prof_cmd_type
 
 
 extern char *format_string (char *oldstring);
-extern sh_int psn_none;
-extern sh_int psn_swimming;
-extern sh_int psn_mountaineering;
+extern short psn_none;
+extern short psn_swimming;
+extern short psn_mountaineering;
 
 void add_prof_affect(CHAR_DATA *ch, char *name, int duration, bool fInvis);
 bool is_affected_prof(CHAR_DATA *ch, char *prof);
@@ -77,7 +76,7 @@ public:
 	~CProficiencies();
 
 	static void AssignPsns(void);
-	static sh_int ProfIndexLookup(const char *profname);
+	static short ProfIndexLookup(const char *profname);
 	bool HasProf(int psn);
 	bool HasProf(char *profname);
 	int GetProf(int psn);

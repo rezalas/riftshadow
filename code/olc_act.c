@@ -2483,7 +2483,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 	if (value != NO_FLAG)
 	{
 		ROOM_INDEX_DATA *pToRoom;
-		sh_int rev; /* ROM OLC */
+		short rev; /* ROM OLC */
 
 		if (!pRoom->exit[door])
 		{
@@ -2531,7 +2531,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 	if (!str_cmp(command, "delete"))
 	{
 		ROOM_INDEX_DATA *pToRoom;
-		sh_int rev; /* ROM OLC */
+		short rev; /* ROM OLC */
 
 		if (!pRoom->exit[door])
 		{

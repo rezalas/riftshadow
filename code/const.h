@@ -13,9 +13,9 @@ struct item_type
 struct weapon_type
 {
 	char *name;
-	sh_int vnum;
-	sh_int type;
-	sh_int *gsn;
+	short vnum;
+	short type;
+	short *gsn;
 };
 
 struct wiznet_type
@@ -40,18 +40,18 @@ struct attack_type
 struct skill_type
 {
 	char *name;							// Name of skill
-	sh_int skill_level[MAX_CLASS];		// Level needed by class
+	short skill_level[MAX_CLASS];		// Level needed by class
 	SPELL_FUN *spell_fun;				// Spell pointer (for spells)
-	sh_int target;						// Legal targets
-	sh_int minimum_position;			// Position for caster / user
-	sh_int *pgsn;						// Pointer to associated gsn
-	sh_int dispel;						// affect bitvector for dispel
-	sh_int min_mana;					// Minimum mana used
-	sh_int beats;						// Waiting time after use
+	short target;						// Legal targets
+	short minimum_position;			// Position for caster / user
+	short *pgsn;						// Pointer to associated gsn
+	short dispel;						// affect bitvector for dispel
+	short min_mana;					// Minimum mana used
+	short beats;						// Waiting time after use
 	char *noun_damage;					// Damage message
 	char *msg_off;						// Wear off message
 	char *room_msg_off;					// Wear off message to room
-	sh_int ctype;						// Is this a spell or prayer or power?
+	short ctype;						// Is this a spell or prayer or power?
 };
 
 struct  group_type

@@ -15,7 +15,7 @@ SCENARIO("checking if lunar cycles advance with the right values","[LunarCycle_u
 			THEN("The moon and position should be set to a new cycle")
 			{
 				LunarCyclePosition expectedMoon = LunarCyclePosition::NewMoon;
-				sh_int expectedPos = 0;
+				short expectedPos = 0;
 				REQUIRE(testMoon == expectedMoon);
 				REQUIRE(testMoon_pos == expectedPos);
 			}

@@ -58,11 +58,11 @@ struct cmd_type
 {
 	char * const name;
 	DO_FUN *do_fun;
-	sh_int position;
-	sh_int level;
-	sh_int log;
-	sh_int show;
-	sh_int hide;
+	short position;
+	short level;
+	short log;
+	short show;
+	short hide;
 	char * const skill_name;
 };
 

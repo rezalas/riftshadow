@@ -1083,7 +1083,7 @@ void weather_update(void)
  * @param moon A moon phase for a given moon
  * @param moon_pos The position of the given moon
  */
-void LunarCycle_update(sh_int *moon, sh_int *moon_pos)
+void LunarCycle_update(short *moon, short *moon_pos)
 {
 	if (++(*moon_pos) >= 360)
 		*moon_pos = 0;
@@ -2959,7 +2959,7 @@ void iprog_pulse_update(bool isTick)
 
 bool do_mob_cast(CHAR_DATA *ch)
 {
-	sh_int i, sn, rnd, in_room = 0, room_occupant = 0;
+	short i, sn, rnd, in_room = 0, room_occupant = 0;
 	CHAR_DATA *vch, *victim;
 
 	if (!is_npc(ch) || !ch->fighting || ch->pIndexData->cast_spell[0] == NULL)
