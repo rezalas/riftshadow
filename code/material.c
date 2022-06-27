@@ -105,7 +105,7 @@ const struct material_type material_table[] =
 	{ "hair", 				MAT_SOLID,		0,		0,		0,		4,		0,		0				},
 	{ "titanium",			MAT_SOLID,		4,		3,		4,		0,		3,		0				},
 	{ "seaweed",			MAT_SOLID,		1,		1,		0,		0,		0,		0				},
-	{ NULL,					0,				0,		0,		0,		0,		0,		0				}
+	{ nullptr,				0,				0,		0,		0,		0,		0,		0				}
 };
 
 
@@ -147,5 +147,5 @@ const std::vector<liq_type> liq_table =
 	{ "framboise",			"red",			 {    50,   1,     7,   1,    5 }},
 	{ "rum",				"amber",		 {   151,   1,     4,   0,    2 }},
 	{ "cordial",			"clear",		 {   100,   1,     5,   0,    2 }},
-	{ NULL,					NULL,			 {     0,   0,     0,   0, 	  0 }}
+	{ nullptr,					nullptr,	 {     0,   0,     0,   0, 	  0 }}
 };

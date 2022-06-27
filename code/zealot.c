@@ -55,7 +55,7 @@ int get_bv_stage(CHAR_DATA *ch)
 	if (!is_affected(ch, gsn_burning_vision) /*|| is_immortal(ch)*/)
 		return -1;
 
-	for (af = ch->affected; af != NULL; af = af->next)
+	for (af = ch->affected; af != nullptr; af = af->next)
 	{
 		if (af->type == gsn_burning_vision)
 			break;
@@ -72,7 +72,7 @@ void spell_burning_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	if (is_affected(victim, gsn_burning_vision))
 	{
-		for (maf = victim->affected; maf != NULL; maf = maf->next)
+		for (maf = victim->affected; maf != nullptr; maf = maf->next)
 		{
 			if (maf->type == gsn_burning_vision)
 				break;
@@ -125,7 +125,7 @@ void burning_vision_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 		act("You are blinded!", ch, 0, 0, TO_CHAR);
 		act("$n appears to be blinded.", ch, 0, 0, TO_ROOM);
 
-		for (caf = ch->affected; caf != NULL; caf = caf->next)
+		for (caf = ch->affected; caf != nullptr; caf = caf->next)
 		{
 			if (caf->type == gsn_burning_vision)
 				break;
@@ -148,7 +148,7 @@ void spell_divine_malison(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		return;
 	}
 
-	if (victim && (paf = affect_find(victim->affected, gsn_divine_ward)) != NULL && paf->owner == ch)
+	if (victim && (paf = affect_find(victim->affected, gsn_divine_ward)) != nullptr && paf->owner == ch)
 	{
 		act("Your deity already protects you from $N!", ch, 0, victim, TO_CHAR);
 		return;

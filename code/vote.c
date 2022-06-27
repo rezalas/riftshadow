@@ -23,7 +23,7 @@ void sortvotes(CHAR_DATA *ch, BALLOT_DATA *ballot)
 	VOTE_SORT svote[200];
 	VOTE_DATA *vote;
 
-	for(vote=ballot->first_vote; vote!=NULL; vote=vote->next)
+	for(vote=ballot->first_vote; vote!=nullptr; vote=vote->next)
 	{
 		fempty=0;
 
@@ -88,13 +88,13 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 
 	if (i > 0)
 	{
-		while ((row = mysql_fetch_row(res)) != NULL)
+		while ((row = mysql_fetch_row(res)) != nullptr)
 		{
 			added = false;
 
 			for (j = 0; j < hold_size; j++)
 			{
-				if (hold[j] == NULL)
+				if (hold[j] == nullptr)
 					break;
 
 				if (!str_cmp(hold[j], row[0]))
@@ -116,7 +116,7 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 		{
 			for (m = 0; m < hold_size - j; m++)
 			{
-				if (!holdi[m] || hold[m] == NULL)
+				if (!holdi[m] || hold[m] == nullptr)
 					continue;
 
 				if (holdi[m] < holdi[m + 1])
@@ -169,7 +169,7 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 		{
 			count = 0;
 
-			while ((row = mysql_fetch_row(res)) != NULL)
+			while ((row = mysql_fetch_row(res)) != nullptr)
 			{
 				count++;
 				test = (time_t)atol(row[3]);
@@ -192,7 +192,7 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 		auto hold_size = std::size(hold);
 		for (j = 0; j < hold_size; j++)
 		{
-			hold[j] = NULL;
+			hold[j] = nullptr;
 			holdi[j] = 0;
 		}
 
@@ -214,7 +214,7 @@ void do_listvotes(CHAR_DATA *ch, char *argument)
 		// NOTE: hold and holdi are the same size.
 		for (j = 0; j < hold_size; j++)
 		{
-			if (hold[j] == NULL)
+			if (hold[j] == nullptr)
 				continue;
 
 			count++;
@@ -252,7 +252,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim != NULL)
+	if (victim != nullptr)
 	{
 		cabal = victim->cabal;
 	}
@@ -260,7 +260,7 @@ void do_vote(CHAR_DATA *ch, char *argument)
 	{
 		fp = fopen(dir.c_str(), "r");
 
-		if (fp == NULL)
+		if (fp == nullptr)
 		{
 			send_to_char("There is no such person.\n\r", ch);
 			return;
@@ -362,8 +362,8 @@ void load_votes()
 
 	return; //TODO: memory leak
 
-	vote_first = NULL;
-	ballot_first = NULL;
+	vote_first = nullptr;
+	ballot_first = nullptr;
 
 	for (;;)
 	{
@@ -410,11 +410,11 @@ void save_votes()
 	if (!(fp = fopen(VOTE_FILE, "w")))
 		return;
 
-	for (ballot = ballot_first; ballot != NULL; ballot = ballot->next)
+	for (ballot = ballot_first; ballot != nullptr; ballot = ballot->next)
 	{
 		fprintf(fp, "#%s~\n", ballot->name);
 
-		for (vote = ballot_first->first_vote; vote != NULL; vote = vote->next)
+		for (vote = ballot_first->first_vote; vote != nullptr; vote = vote->next)
 		{
 			fprintf(fp, "%s %s %s~ %s~\n", vote->voter, vote->vote_for, vote->time, vote->ip);
 		}

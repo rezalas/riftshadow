@@ -575,7 +575,7 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, arg);
 
-	if ((victim = get_char_world(ch, arg)) == NULL)
+	if ((victim = get_char_world(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -583,7 +583,7 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, devil);
 
-	if (devil == NULL)
+	if (devil == nullptr)
 	{
 		send_to_char("Which devil?\n\r", ch);
 		return;
@@ -691,7 +691,7 @@ void do_chess(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg1, "challenge"))
 	{
-		if ((victim = get_char_room(ch, arg2)) == NULL)
+		if ((victim = get_char_room(ch, arg2)) == nullptr)
 		{
 			send_to_char("Challenge whom?\n\r", ch);
 			return;

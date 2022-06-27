@@ -56,7 +56,7 @@ char *fix_string(const char *str)
 	int i;
 	int o;
 
-	if (str == NULL)
+	if (str == nullptr)
 		return (char *)'\0';
 
 	for (o = i = 0; str[i + o] != '\0'; i++)
@@ -82,7 +82,7 @@ void save_area_list()
 	FILE *fp;
 	AREA_DATA *pArea;
 
-	if ((fp = fopen(RIFT_AREA_DIR "/area.lst", "w")) == NULL)
+	if ((fp = fopen(RIFT_AREA_DIR "/area.lst", "w")) == nullptr)
 	{
 		bug("Save_area_list: fopen", 0);
 		perror("area.lst");
@@ -647,9 +647,9 @@ void save_rooms(FILE *fp, AREA_DATA *pArea)
 void save_progs(FILE *fp, AREA_DATA *pArea)
 {
 	long iHash;
-	MOB_INDEX_DATA *mIndex = NULL;
-	OBJ_INDEX_DATA *pObjIndex = NULL;
-	ROOM_INDEX_DATA *pRoomIndex = NULL;
+	MOB_INDEX_DATA *mIndex = nullptr;
+	OBJ_INDEX_DATA *pObjIndex = nullptr;
+	ROOM_INDEX_DATA *pRoomIndex = nullptr;
 
 	fprintf(fp, "#IMPROGS\n");
 
@@ -876,10 +876,10 @@ void save_resets(FILE *fp, AREA_DATA *pArea)
 
 	for (i = pArea->min_vnum; i < (pArea->max_vnum + 1); i++)
 	{
-		if ((pRoomIndex = get_room_index(i)) == NULL)
+		if ((pRoomIndex = get_room_index(i)) == nullptr)
 			continue;
 
-		for (pReset = pRoomIndex->reset_first; pReset != NULL; pReset = pReset->next)
+		for (pReset = pRoomIndex->reset_first; pReset != nullptr; pReset = pReset->next)
 		{
 			switch (pReset->command)
 			{
@@ -930,7 +930,7 @@ void save_area(AREA_DATA *pArea)
 	std::string buffer;
 	long long temp_bit;
 	char buf[MSL];
-	FILE *fp = NULL;
+	FILE *fp = nullptr;
 	fclose(fpReserve);
 
 	sprintf(buf, "mv -f %s " RIFT_AREA_DIR "/backup/%s.bak", pArea->file_name, pArea->file_name);
@@ -983,7 +983,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 	int value;
 	bool found = false;
 
-	fp = NULL;
+	fp = nullptr;
 
 	if (!check_security(ch))
 		return;
@@ -1096,7 +1096,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 		{
 			save_area_list();
 
-			for (pArea = area_first; pArea != NULL; pArea = pArea->next)
+			for (pArea = area_first; pArea != nullptr; pArea = pArea->next)
 			{
 				char buf[MSL];
 
@@ -1110,7 +1110,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 				log_string(pArea->name);
 
 				sprintf(buf, "Saving..%s\n", pArea->name);
-				wiznet(buf, 0, NULL, WIZ_DEBUG, 0, 0);
+				wiznet(buf, 0, nullptr, WIZ_DEBUG, 0, 0);
 
 				save_area(pArea);
 			}

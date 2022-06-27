@@ -72,7 +72,7 @@ SCENARIO("Testing race lookup", "[race_lookup]")
 	{
 		WHEN("race_lookup function is called")
 		{
-			int test = race_lookup(NULL);
+			int test = race_lookup(nullptr);
 
 			THEN("then it should return an index of -1")
 			{
@@ -144,7 +144,7 @@ SCENARIO("Testing liq lookup", "[liq_lookup]")
 	{
 		WHEN("liq_lookup function is called")
 		{
-			int test = liq_lookup(NULL);
+			int test = liq_lookup(nullptr);
 
 			THEN("then it should return an index of 0")
 			{
@@ -216,7 +216,7 @@ SCENARIO("Testing weapon lookup", "[weapon_lookup]")
 	{
 		WHEN("weapon_lookup function is called")
 		{
-			int test = weapon_lookup(NULL);
+			int test = weapon_lookup(nullptr);
 
 			THEN("then it should return an index of -1")
 			{
@@ -288,7 +288,7 @@ SCENARIO("Testing weapon type lookup", "[weapon_type_lookup]")
 	{
 		WHEN("weapon_type_lookup function is called")
 		{
-			int test = weapon_type_lookup(NULL);
+			int test = weapon_type_lookup(nullptr);
 
 			THEN("then it should return the WEAPON_EXOTIC type")
 			{
@@ -399,7 +399,7 @@ SCENARIO("Testing item lookup", "[item_lookup]")
 	{
 		WHEN("item_lookup function is called")
 		{
-			int test = item_lookup(NULL);
+			int test = item_lookup(nullptr);
 
 			THEN("then it should return an index of -1")
 			{
@@ -500,7 +500,7 @@ SCENARIO("Testing attack lookup", "[attack_lookup]")
 	{
 		WHEN("attack_lookup function is called")
 		{
-			int test = attack_lookup(NULL);
+			int test = attack_lookup(nullptr);
 
 			THEN("then it should return an index of 0")
 			{
@@ -572,7 +572,7 @@ SCENARIO("Testing wiznet lookup", "[wiznet_lookup]")
 	{
 		WHEN("wiznet_lookup function is called")
 		{
-			long test = wiznet_lookup(NULL);
+			long test = wiznet_lookup(nullptr);
 
 			THEN("then it should return an index of -1")
 			{

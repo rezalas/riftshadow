@@ -92,7 +92,7 @@ void do_modhelp(CHAR_DATA *ch, char *argument)
 	mysql_query(conn, query);
 
 	res_set = mysql_store_result(conn);
-	if (res_set == NULL)
+	if (res_set == nullptr)
 	{
 		send_to_char("Error accessing that id number.\n\r", ch);
 	}
@@ -112,7 +112,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 {
 	int numresults = 0;
 	MYSQL *conn;
-	MYSQL_RES *res_set = NULL, *res_set2 = NULL;
+	MYSQL_RES *res_set = nullptr, *res_set2 = nullptr;
 	MYSQL_ROW row;
 	char query[MSL * 2], buf[MSL];
 
@@ -146,7 +146,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 	res_set = mysql_store_result(conn);
 	numresults = mysql_affected_rows(conn);
 
-	if (!numresults || (res_set == NULL && mysql_field_count(conn) > 0))
+	if (!numresults || (res_set == nullptr && mysql_field_count(conn) > 0))
 	{
 		send_to_char("No matching helpfiles found.\n\r", ch);
 	}
@@ -185,7 +185,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char("Multiple helpfiles matched your request:\n\r", ch);
 
-			while ((row = mysql_fetch_row(res_set)) != NULL)
+			while ((row = mysql_fetch_row(res_set)) != nullptr)
 			{
 				if (!can_see_help(ch, row, false))
 					continue;
@@ -290,7 +290,7 @@ void do_addhelp(CHAR_DATA *ch, char *argument)
 	escape = escape_string(ttitle);
 	escape2 = escape_string(ch->pcdata->entered_text);
 
-	sprintf(buf, "INSERT INTO helpfiles VALUES(NULL, \"%s\", \"%s\", %d, \"%s\")", escape, skill, minlevel, escape2);
+	sprintf(buf, "INSERT INTO helpfiles VALUES(nullptr, \"%s\", \"%s\", %d, \"%s\")", escape, skill, minlevel, escape2);
 	mysql_query(conn, buf);
 
 	sprintf(buf, "Help file added:\n\rTitle: %s\n\rSkill Required: %s\n\rMinimum Level: %d\n\rHelp Text: %s\n\r", ttitle, skill, minlevel, ch->pcdata->entered_text);
@@ -331,13 +331,13 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 	mysql_query(conn, query.c_str());
 	res_set = mysql_store_result(conn);
 
-	if (res_set == NULL || mysql_field_count(conn) < 1)
+	if (res_set == nullptr || mysql_field_count(conn) < 1)
 	{
 		send_to_char("Error accessing results.\n\r", ch);
 	}
 	else
 	{
-		while ((row = mysql_fetch_row(res_set)) != NULL)
+		while ((row = mysql_fetch_row(res_set)) != nullptr)
 		{
 			mysql_field_seek(res_set, 0);
 			field = mysql_fetch_field(res_set);
@@ -359,17 +359,17 @@ MYSQL *do_conn(const char *host_name, const char *user_name, const char *passwor
 {
 	MYSQL *conn; /* pointer to connection handler */
 
-	conn = mysql_init(NULL); /* allocate, initialize connection handler */
-	if (conn == NULL)
+	conn = mysql_init(nullptr); /* allocate, initialize connection handler */
+	if (conn == nullptr)
 	{
-		print_error(NULL, "mysql_init() failed (probably out of memory)");
-		return NULL;
+		print_error(nullptr, "mysql_init() failed (probably out of memory)");
+		return nullptr;
 	}
 
-	if (mysql_real_connect(conn, host_name, user_name, password, db_name, port_num, socket_name, flags) == NULL)
+	if (mysql_real_connect(conn, host_name, user_name, password, db_name, port_num, socket_name, flags) == nullptr)
 	{
 		print_error(conn, "mysql_real_connect() failed");
-		return NULL;
+		return nullptr;
 	}
 
 	return conn; /* connection is established */
@@ -384,7 +384,7 @@ void print_error(MYSQL *conn, char *message)
 {
 	fprintf(stderr, "%s\n", message);
 
-	if (conn != NULL)
+	if (conn != nullptr)
 	{
 		fprintf(stderr, "Error %u (%s)\n", mysql_errno(conn), mysql_error(conn));
 	}

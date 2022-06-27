@@ -651,11 +651,11 @@ void interpret(CHAR_DATA *ch, char *argument)
 	int cmd, gn, skill_num, cmd2;
 	int trust, sn = 0, where, mana = 0;
 	bool found, is_social= false, vprog= false;
-	void *vo = NULL;
+	void *vo = nullptr;
 	int i;
 	AFFECT_DATA *paf;
-	CHAR_DATA *victim = NULL;
-	OBJ_DATA *obj, *vpobj = NULL;
+	CHAR_DATA *victim = nullptr;
+	OBJ_DATA *obj, *vpobj = nullptr;
 
 	/*
 	 * Strip leading spaces.
@@ -752,11 +752,11 @@ void interpret(CHAR_DATA *ch, char *argument)
 	if ((!is_npc(ch) && IS_SET(ch->act, PLR_LOG)) || fLogAll || cmd_table[cmd].log == LOG_ALWAYS)
 	{
 		sprintf(log_buf, "Log %s: %s", ch->desc->original ? ch->desc->original->true_name : ch->true_name, logline);
-		wiznet(log_buf, ch, NULL, WIZ_SECURE, 0, get_trust(ch));
+		wiznet(log_buf, ch, nullptr, WIZ_SECURE, 0, get_trust(ch));
 		log_string(log_buf);
 	}
 
-	if (ch->desc != NULL && ch->desc->snoop_by != NULL)
+	if (ch->desc != nullptr && ch->desc->snoop_by != nullptr)
 	{
 		write_to_buffer(ch->desc->snoop_by, "% ", 2);
 		write_to_buffer(ch->desc->snoop_by, logline, 0);
@@ -900,7 +900,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 
 	strcpy(arg_dup, one_argument(arg_dup, object));
 
-	if (vprog && ((vpobj = get_obj_here(ch, object)) != NULL) && (vpobj->pIndexData->verb) &&
+	if (vprog && ((vpobj = get_obj_here(ch, object)) != nullptr) && (vpobj->pIndexData->verb) &&
 		(!str_cmp(command, vpobj->pIndexData->verb) && (ch->position >= POS_RESTING)))
 	{
 		if (IS_SET(vpobj->progtypes, IPROG_VERB))
@@ -966,7 +966,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	 * Hide parsing.
 	 */
 	if (cmd_table[cmd].hide)
-		un_hide(ch, NULL);
+		un_hide(ch, nullptr);
 
 	/* Style checks */
 	if (!is_npc(ch) && get_trust(ch) < 60 && ch->pcdata->style && str_cmp(cmd_table[cmd].skill_name, "none"))
@@ -1002,7 +1002,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 			case TAR_CHAR_OFFENSIVE:
 				if (argument[0] == '\0')
 				{
-					if ((victim = ch->fighting) == NULL)
+					if ((victim = ch->fighting) == nullptr)
 					{
 						send_to_char("Do that to who?\n\r", ch);
 						return;
@@ -1010,7 +1010,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 				}
 				else
 				{
-					if ((victim = get_char_room(ch, argument)) == NULL)
+					if ((victim = get_char_room(ch, argument)) == nullptr)
 					{
 						send_to_char("They aren't here.\n\r", ch);
 						return;
@@ -1029,7 +1029,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 				}
 				else
 				{
-					if ((victim = get_char_room(ch, argument)) == NULL)
+					if ((victim = get_char_room(ch, argument)) == nullptr)
 					{
 						send_to_char("They aren't here.\n\r", ch);
 						return;
@@ -1054,7 +1054,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 					return;
 				}
 
-				if ((obj = get_obj_carry(ch, argument, ch)) == NULL)
+				if ((obj = get_obj_carry(ch, argument, ch)) == nullptr)
 				{
 					send_to_char("You are not carrying that.\n\r", ch);
 					return;
@@ -1184,27 +1184,27 @@ bool check_social(CHAR_DATA *ch, char *command, char *argument)
 
 	one_argument(argument, arg);
 
-	victim = NULL;
+	victim = nullptr;
 
 	if (arg[0] == '\0')
 	{
-		act(social_table[cmd].others_no_arg, ch, NULL, victim, TO_ROOM);
-		act(social_table[cmd].char_no_arg, ch, NULL, victim, TO_CHAR);
+		act(social_table[cmd].others_no_arg, ch, nullptr, victim, TO_ROOM);
+		act(social_table[cmd].char_no_arg, ch, nullptr, victim, TO_CHAR);
 	}
-	else if ((victim = get_char_room(ch, arg)) == NULL)
+	else if ((victim = get_char_room(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 	}
 	else if (victim == ch)
 	{
-		act(social_table[cmd].others_auto, ch, NULL, victim, TO_ROOM);
-		act(social_table[cmd].char_auto, ch, NULL, victim, TO_CHAR);
+		act(social_table[cmd].others_auto, ch, nullptr, victim, TO_ROOM);
+		act(social_table[cmd].char_auto, ch, nullptr, victim, TO_CHAR);
 	}
 	else
 	{
-		act(social_table[cmd].others_found, ch, NULL, victim, TO_NOTVICT);
-		act(social_table[cmd].vict_found, ch, NULL, victim, TO_VICT);
-		act(social_table[cmd].char_found, ch, NULL, victim, TO_CHAR);
+		act(social_table[cmd].others_found, ch, nullptr, victim, TO_NOTVICT);
+		act(social_table[cmd].vict_found, ch, nullptr, victim, TO_VICT);
+		act(social_table[cmd].char_found, ch, nullptr, victim, TO_CHAR);
 	}
 
 	return true;

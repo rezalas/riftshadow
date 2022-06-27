@@ -82,7 +82,7 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 	name[0] = UPPER(name[0]);
 	return;
 
-	if (get_char_world(ch, name) != NULL)
+	if (get_char_world(ch, name) != nullptr)
 	{
 		send_to_char("That character is already online!\n\r", ch);
 		return;
@@ -102,7 +102,7 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
 		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
-	d->character->desc = NULL;
+	d->character->desc = nullptr;
 	d->character->next = char_list;
 	char_list = d->character;
 	d->outsize = 2000;
@@ -200,7 +200,7 @@ void clean_mud()
 				continue;
 			}
 
-			d->character->desc = NULL;
+			d->character->desc = nullptr;
 
 			if (d->character->level >= 30)
 				perm_death_log(d->character, 4);
@@ -421,7 +421,7 @@ void do_offer(CHAR_DATA *ch, char *argument)
 
 	escape = escape_string(obj->short_descr);
 
-	sprintf(query, "INSERT INTO offerings VALUES(\"%s\", %d, \"%s\", '%s', 0, %ld, NULL)",
+	sprintf(query, "INSERT INTO offerings VALUES(\"%s\", %d, \"%s\", '%s', 0, %ld, nullptr)",
 		altar->in_room->owner,
 		obj->pIndexData->vnum,
 		escape,
@@ -463,7 +463,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 		add_buf(buffer, "ID #     Site                       Denials    Comments\n\r");
 
-		while ((row = mysql_fetch_row(res_set)) != NULL)
+		while ((row = mysql_fetch_row(res_set)) != nullptr)
 		{
 			id = atoi(row[0]);
 
@@ -504,7 +504,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		}
 
 		escape = escape_string(arg2);
-		sprintf(query, "INSERT INTO sitetracker VALUES(NULL, '%s',0)", escape);
+		sprintf(query, "INSERT INTO sitetracker VALUES(nullptr, '%s',0)", escape);
 		one_query(query);
 
 		auto listing = fmt::format("A new site ({}) was added to the IP listings.  You should add a comment now explaining why it was added.\n\r", arg2);
@@ -638,7 +638,7 @@ void comment_end_fun(CHAR_DATA *ch, char *argument)
 	}
 
 	escape = escape_string(argument);
-	sprintf(query, "INSERT INTO sitecomments VALUES(%d, NULL, \"%s\", \"%s\", \"%s\")",
+	sprintf(query, "INSERT INTO sitecomments VALUES(%d, nullptr, \"%s\", \"%s\", \"%s\")",
 		ch->pcdata->helpid,
 		ch->true_name,
 		log_time(),
@@ -794,7 +794,7 @@ MYSQL *open_fconn(void)
 	CSQLInterface nSQL;
 	DbConnection riftForum = nSQL.Settings.GetDbConnection("riftforum");
 	return do_conn(riftForum.Host.c_str(), riftForum.User.c_str(),
-	 riftForum.Pwd.c_str(), riftForum.Db.c_str(), riftForum.Port, NULL, 0);
+	 riftForum.Pwd.c_str(), riftForum.Db.c_str(), riftForum.Port, nullptr, 0);
 }
 
 MYSQL_ROW one_query_row(char *query)
@@ -879,7 +879,7 @@ void enter_text(CHAR_DATA *ch, DO_FUN *end_fun)
 	send_to_char("Type 'finish' to quit and save changes, 'exit' to quit without saving changes, 'backline' to delete the last\n\r", ch);
 	send_to_char("line entered, 'show' to show existing lines, and anything else to add it to the existing text.\n\r",  ch);
 
-	if (ch->pcdata->entered_text != NULL && ch->pcdata->entered_text[0] != '\0')
+	if (ch->pcdata->entered_text != nullptr && ch->pcdata->entered_text[0] != '\0')
 	{
 		send_to_char("Current text:\n\r", ch);
 		send_to_char(ch->pcdata->entered_text, ch);
@@ -899,7 +899,7 @@ MYSQL *open_conn(void)
 	CSQLInterface nSQL;
 	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
 	return do_conn(riftCore.Host.c_str(), riftCore.User.c_str(),
-	 riftCore.Pwd.c_str(), riftCore.Db.c_str(), riftCore.Port, NULL, 0);
+	 riftCore.Pwd.c_str(), riftCore.Db.c_str(), riftCore.Port, nullptr, 0);
 }
 
 void one_fquery(char *query)
@@ -973,7 +973,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	qrow = one_fquery_row("select max(zthreadid) from gabe20010201051916");
 
-	if (qrow[0] != NULL)
+	if (qrow[0] != nullptr)
 	{
 		sprintf(stid, "%15.0f", (float)(atoi(qrow[0]) + 1));
 
@@ -991,7 +991,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 	sprintf(cur_date, "%s/%s/%s %s", month, dom, year, time);
 	sprintf(unique, "%s%s%s%s", year, month, dom, ntime);
 	sprintf(name, "(%s) %s%s", type_death, ch->true_name, ch->pcdata->title);
-	if (ch->pcdata->extitle != NULL)
+	if (ch->pcdata->extitle != nullptr)
 		sprintf(name, "%s%s", name, ch->pcdata->extitle);
 
 	/* Message */
@@ -1010,7 +1010,7 @@ void plug_graveyard(CHAR_DATA *ch, int type)
 
 	sprintf(message, "%s %s %s\n\r%s%s", message_date, ch->true_name, message_death, ch->true_name, ch->pcdata->title);
 
-	if (ch->pcdata->extitle != NULL)
+	if (ch->pcdata->extitle != nullptr)
 		sprintf(message, "%s%s", message, ch->pcdata->extitle);
 
 	sprintf(message, "%s\rLevel: %d\rAge: %d %s years old, born in the Caelumaedani year %d.\rHours: %d\rRace: %s\rSex: %s\rClass: %s\r",
@@ -1127,13 +1127,13 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 	mysql_query(conn, query.c_str());
 	res_set = mysql_store_result(conn);
 
-	if (res_set == NULL && mysql_field_count(conn) > 0)
+	if (res_set == nullptr && mysql_field_count(conn) > 0)
 	{
 		send_to_char("Error accessing results.\n\r", ch);
 	}
 	else if (res_set)
 	{
-		while ((row = mysql_fetch_row(res_set)) != NULL)
+		while ((row = mysql_fetch_row(res_set)) != nullptr)
 		{
 			sprintf(buf, "%3d) %s(%s) killed %s(%s) at %s on %s\n\r",
 				++i,
@@ -1219,8 +1219,8 @@ void area_echo(CHAR_DATA *ch, char *echo)
 	for (DESCRIPTOR_DATA *d = descriptor_list; d; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
-			&& d->character->in_room != NULL
-			&& ch->in_room != NULL
+			&& d->character->in_room != nullptr
+			&& ch->in_room != nullptr
 			&& d->character->in_room->area == ch->in_room->area)
 		{
 			colorconv(buffer, echo, d->character);
@@ -1237,8 +1237,8 @@ void rarea_echo(ROOM_INDEX_DATA *room, char *echo)
 	for (DESCRIPTOR_DATA *d = descriptor_list; d; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
-			&& d->character->in_room != NULL
-			&& room != NULL
+			&& d->character->in_room != nullptr
+			&& room != nullptr
 			&& d->character->in_room->area == room->area)
 		{
 			colorconv(buffer, echo, d->character);
@@ -1255,8 +1255,8 @@ void outdoors_echo(AREA_DATA *area, char *echo)
 	for (DESCRIPTOR_DATA *d = descriptor_list; d; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
-			&& d->character->in_room != NULL
-			&& area != NULL
+			&& d->character->in_room != nullptr
+			&& area != nullptr
 			&& d->character->in_room->area == area
 			&& d->character->in_room->sector_type != SECT_INSIDE
 			&& d->character->in_room->sector_type != SECT_UNDERWATER
@@ -1304,7 +1304,7 @@ char *get_char_color(CHAR_DATA *ch, char *event)
 	if (IS_SET(ch->comm, COMM_LOTS_O_COLOR))
 		return color_table[number_range(0, MAX_COLORS - 1)].color_ascii;
 
-	if (ch->desc != NULL && ch->desc->original != NULL)
+	if (ch->desc != nullptr && ch->desc->original != nullptr)
 		ch = ch->desc->original;
 
 	if (is_npc(ch))
@@ -1346,13 +1346,13 @@ char *get_color_name(char *name)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 char *color_name_to_ascii(char *name)
 {
 	if (!strcmp(name, ""))
-		return NULL;
+		return nullptr;
 
 	for (int i = 0; i < MAX_COLORS; i++)
 	{
@@ -1362,7 +1362,7 @@ char *color_name_to_ascii(char *name)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 char *END_COLOR(CHAR_DATA *ch)
@@ -1370,7 +1370,7 @@ char *END_COLOR(CHAR_DATA *ch)
 	if (IS_SET(ch->comm, COMM_LOTS_O_COLOR))
 		return color_table[number_range(0, MAX_COLORS - 1)].color_ascii;
 
-	if (ch->desc != NULL && ch->desc->original != NULL)
+	if (ch->desc != nullptr && ch->desc->original != nullptr)
 	{
 		if (IS_SET(ch->desc->original->comm, COMM_ANSI))
 			return "\x01B[0m";
@@ -1410,7 +1410,7 @@ void WAIT_STATE(CHAR_DATA *ch, int npulse)
 
 	if (ch->in_room && is_affected_room(ch->in_room, gsn_gravity_well))
 	{
-		for (raf = ch->in_room->affected; raf != NULL; raf = raf->next)
+		for (raf = ch->in_room->affected; raf != nullptr; raf = raf->next)
 		{
 			if (raf->type == gsn_gravity_well)
 				break;
@@ -1454,7 +1454,7 @@ void bounty_log(char *string)
 	strtime[strlen(strtime) - 1] = '\0';
 
 	fp = fopen(BOUNTY_LOG_FILE, "a");
-	if (fp != NULL)
+	if (fp != nullptr)
 	{
 		fprintf(fp, "%s :: %s\n", strtime, string);
 		fclose(fp);
@@ -1693,7 +1693,7 @@ void do_bounty(CHAR_DATA *ch, char *argument)
 	sprintf(buf2, "%s places a bounty of %.0f gold on the life of %s.", ch->true_name, famount, victim->name);
 	bounty_log(buf2);
 
-	wiznet(buf2, NULL, NULL, WIZ_LOG, 0, 0);
+	wiznet(buf2, nullptr, nullptr, WIZ_LOG, 0, 0);
 }
 
 void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -1739,10 +1739,10 @@ void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
 		credit = 0;
 
 	sprintf(buf, "Base - %.2f, Mod - %.2f, Bonus - %.2f", (float)credit, mod, (float)bonus);
-	wiznet(buf, NULL, NULL, WIZ_LOG, 0, 0);
+	wiznet(buf, nullptr, nullptr, WIZ_LOG, 0, 0);
 
 	sprintf(sbounty, "%s collects the %ld gold bounty on %s.", ch->name, victim->pcdata->bounty, victim->name);
-	wiznet(sbounty, NULL, NULL, WIZ_CABAL, 0, 0);
+	wiznet(sbounty, nullptr, nullptr, WIZ_CABAL, 0, 0);
 
 	sprintf(buf, "%s has collected the %ld gold bounty on the life of %s.", ch->name, victim->pcdata->bounty, victim->true_name);
 	bounty_cb(buf);
@@ -1938,7 +1938,7 @@ char *flags_to_string(CHAR_DATA *ch, const struct flag_type *showflags, int flag
 	char temp_value[MAX_INPUT_LENGTH];
 	temp_value[0] = '\0';
 
-	for (flag = 0; showflags[flag].name != NULL; flag = flag++)
+	for (flag = 0; showflags[flag].name != nullptr; flag = flag++)
 	{
 		strcat(temp_value, showflags[flag].name);
 
@@ -2006,13 +2006,13 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 	mysql_query(conn, query.c_str());
 	res_set = mysql_store_result(conn);
 
-	if (res_set == NULL && mysql_field_count(conn) > 0)
+	if (res_set == nullptr && mysql_field_count(conn) > 0)
 	{
 		send_to_char("Error accessing results.\n\r", ch);
 	}
 	else if (res_set)
 	{
-		while ((row = mysql_fetch_row(res_set)) != NULL)
+		while ((row = mysql_fetch_row(res_set)) != nullptr)
 		{
 			i++;
 
@@ -2070,7 +2070,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -2095,7 +2095,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (victim->affected == NULL)
+	if (victim->affected == nullptr)
 	{
 		send_to_char("You are unable to find any signs of affliction.\n\r", ch);
 		check_improve(ch, skill_lookup("assess"), true, 1);
@@ -2106,7 +2106,7 @@ void do_assess_old(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (paf = victim->affected; paf != NULL; paf = paf->next)
+	for (paf = victim->affected; paf != nullptr; paf = paf->next)
 	{
 		buf[0] = '\0';
 
@@ -2227,7 +2227,7 @@ void do_supps(CHAR_DATA *ch, char *argument)
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
 	{
-		if (skill_table[sn].name == NULL)
+		if (skill_table[sn].name == nullptr)
 			break;
 
 		level = skill_table[sn].skill_level[ch->Class()->GetIndex()];
@@ -2301,7 +2301,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	AFFECT_DATA af, *paf;
 	int target;
 
-	if (is_npc(ch) && ch->desc == NULL)
+	if (is_npc(ch) && ch->desc == nullptr)
 		return;
 
 	target_name = one_argument(argument, arg1);
@@ -2356,7 +2356,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 	if (is_affected(ch, gsn_severed))
 	{
-		for (paf = ch->affected; paf != NULL; paf = paf->next)
+		for (paf = ch->affected; paf != nullptr; paf = paf->next)
 		{
 			if (paf->type == gsn_severed)
 				break;
@@ -2417,9 +2417,9 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	/*
 	 * Locate targets.
 	 */
-	victim = NULL;
-	obj = NULL;
-	vo = NULL;
+	victim = nullptr;
+	obj = nullptr;
+	vo = nullptr;
 	target = TARGET_NONE;
 	af.aftype = AFT_COMMUNE;
 
@@ -2432,7 +2432,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			{
 				victim = ch->fighting;
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("Commune the prayer on whom?\n\r", ch);
 					return;
@@ -2442,7 +2442,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			{
 				victim = get_char_room(ch, target_name);
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("They aren't here.\n\r", ch);
 					return;
@@ -2467,7 +2467,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			{
 				victim = get_char_room(ch, target_name);
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("They aren't here.\n\r", ch);
 					return;
@@ -2504,7 +2504,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 			obj = get_obj_carry(ch, target_name, ch);
 
-			if (obj == NULL)
+			if (obj == nullptr)
 			{
 				send_to_char("You are not carrying that.\n\r", ch);
 				return;
@@ -2518,7 +2518,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			{
 				victim = ch->fighting;
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("Commune the prayer on whom or what?\n\r", ch);
 					return;
@@ -2530,7 +2530,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			{
 				victim = get_char_room(ch, target_name);
 
-			 	if (victim != NULL)
+			 	if (victim != nullptr)
 					target = TARGET_CHAR;
 			}
 
@@ -2544,7 +2544,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 				vo = (void *)victim;
 			}
-			else if ((obj = get_obj_here(ch, target_name)) != NULL)
+			else if ((obj = get_obj_here(ch, target_name)) != nullptr)
 			{
 				vo = (void *)obj;
 				target = TARGET_OBJ;
@@ -2562,12 +2562,12 @@ void do_commune(CHAR_DATA *ch, char *argument)
 				vo = (void *)ch;
 				target = TARGET_CHAR;
 			}
-			else if ((victim = get_char_room(ch, target_name)) != NULL)
+			else if ((victim = get_char_room(ch, target_name)) != nullptr)
 			{
 				vo = (void *)victim;
 				target = TARGET_CHAR;
 			}
-			else if ((obj = get_obj_carry(ch, target_name, ch)) != NULL)
+			else if ((obj = get_obj_carry(ch, target_name, ch)) != nullptr)
 			{
 				vo = (void *)obj;
 				target = TARGET_OBJ;
@@ -2626,7 +2626,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 
 		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
 		{
-			if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == NULL || victim->fighting == NULL))
+			if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == nullptr || victim->fighting == nullptr))
 			{
 				switch (number_range(0, 2))
 				{
@@ -2703,12 +2703,12 @@ void do_commune(CHAR_DATA *ch, char *argument)
 	{
 		CHAR_DATA *vch;
 		CHAR_DATA *vch_next;
-		un_blade_barrier(ch, NULL);
+		un_blade_barrier(ch, nullptr);
 
 		for (vch = ch->in_room->people; vch; vch = vch_next)
 		{
 			vch_next = vch->next_in_room;
-			if (victim == vch && victim->fighting == NULL)
+			if (victim == vch && victim->fighting == nullptr)
 			{
 				multi_hit(victim, ch, TYPE_UNDEFINED);
 				break;
@@ -2730,7 +2730,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 	int sn;
 	int target;
 
-	if (is_npc(ch) && ch->desc == NULL)
+	if (is_npc(ch) && ch->desc == nullptr)
 		return;
 
 	target_name = one_argument(argument, arg1);
@@ -2777,9 +2777,9 @@ void do_call(CHAR_DATA *ch, char *argument)
 	/*
 	 * Locate targets.
 	 */
-	victim = NULL;
-	obj = NULL;
-	vo = NULL;
+	victim = nullptr;
+	obj = nullptr;
+	vo = nullptr;
 	target = TARGET_NONE;
 
 	switch (skill_table[sn].target)
@@ -2792,7 +2792,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			{
 				victim = ch->fighting;
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("Call the power on whom?\n\r", ch);
 					return;
@@ -2802,7 +2802,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			{
 				victim = get_char_room(ch, target_name);
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("They aren't here.\n\r", ch);
 					return;
@@ -2825,7 +2825,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			{
 				victim = get_char_room(ch, target_name);
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("They aren't here.\n\r", ch);
 					return;
@@ -2854,7 +2854,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 			obj = get_obj_carry(ch, target_name, ch);
 
-			if (obj == NULL)
+			if (obj == nullptr)
 			{
 				send_to_char("You are not carrying that.\n\r", ch);
 				return;
@@ -2868,7 +2868,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			{
 				victim = ch->fighting;
 
-				if (victim == NULL)
+				if (victim == nullptr)
 				{
 					send_to_char("Call the power on who or what?\n\r", ch);
 					return;
@@ -2880,7 +2880,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			{
 				victim = get_char_room(ch, target_name);
 
-				if (victim != NULL)
+				if (victim != nullptr)
 					target = TARGET_CHAR;
 			}
 
@@ -2894,7 +2894,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 				vo = (void *)victim;
 			}
-			else if ((obj = get_obj_here(ch, target_name)) != NULL)
+			else if ((obj = get_obj_here(ch, target_name)) != nullptr)
 			{
 				vo = (void *)obj;
 				target = TARGET_OBJ;
@@ -2912,12 +2912,12 @@ void do_call(CHAR_DATA *ch, char *argument)
 				vo = (void *)ch;
 				target = TARGET_CHAR;
 			}
-			else if ((victim = get_char_room(ch, target_name)) != NULL)
+			else if ((victim = get_char_room(ch, target_name)) != nullptr)
 			{
 				vo = (void *)victim;
 				target = TARGET_CHAR;
 			}
-			else if ((obj = get_obj_carry(ch, target_name, ch)) != NULL)
+			else if ((obj = get_obj_carry(ch, target_name, ch)) != nullptr)
 			{
 				vo = (void *)obj;
 				target = TARGET_OBJ;
@@ -2973,7 +2973,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 
 		if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
 		{
-			if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == NULL || victim->fighting == NULL))
+			if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == nullptr || victim->fighting == nullptr))
 			{
 				switch (number_range(0, 2))
 				{
@@ -3011,13 +3011,13 @@ void do_call(CHAR_DATA *ch, char *argument)
 	{
 		CHAR_DATA *vch;
 		CHAR_DATA *vch_next;
-		un_blade_barrier(ch, NULL);
+		un_blade_barrier(ch, nullptr);
 
 		for (vch = ch->in_room->people; vch; vch = vch_next)
 		{
 			vch_next = vch->next_in_room;
 
-			if (victim == vch && victim->fighting == NULL)
+			if (victim == vch && victim->fighting == nullptr)
 			{
 				multi_hit(victim, ch, TYPE_UNDEFINED);
 				break;
@@ -3070,8 +3070,8 @@ void do_snare(CHAR_DATA *ch, char *argument)
 	af.location = APPLY_NONE;
 	af.modifier = 0;
 	af.owner = ch;
-	af.end_fun = NULL;
-	af.tick_fun = NULL;
+	af.end_fun = nullptr;
+	af.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &af);
 
 	init_affect(&snaretimer);

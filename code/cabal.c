@@ -76,7 +76,7 @@ bool check_horde(CHAR_DATA *ch)
 ///
 void update_cskills(CHAR_DATA *ch)
 {
-	if(ch == NULL) // We cannot update what does not exist
+	if(ch == nullptr) // We cannot update what does not exist
 		return;
 	
 	if(ch->cabal == false) // if they don't have a cabal, remove all their cabal skills.
@@ -618,12 +618,12 @@ void spell_scourge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *vch;
 	char buf[MAX_STRING_LENGTH];
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == NULL || vch->fighting == NULL))
+		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == nullptr || vch->fighting == nullptr))
 		{
 			sprintf(buf, "Die, %s you scourging dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
@@ -639,7 +639,7 @@ void spell_scourge(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			spell_weaken(skill_lookup("weaken"), level - 4, ch, vch, TAR_CHAR_OFFENSIVE);
 	}
 
-	spell_fireball(sn, level - 2, ch, NULL, TAR_CHAR_OFFENSIVE);
+	spell_fireball(sn, level - 2, ch, nullptr, TAR_CHAR_OFFENSIVE);
 }
 
 void spell_hunters_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -703,7 +703,7 @@ void spell_hire_mercenary(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		return;
 	}
 
-	for (merc = char_list; merc != NULL; merc = merc->next)
+	for (merc = char_list; merc != nullptr; merc = merc->next)
 	{
 		if (is_npc(merc)
 			&& merc->pIndexData->vnum >= MOB_VNUM_WARRIOR_MERCENARY
@@ -1018,7 +1018,7 @@ void do_howl(CHAR_DATA *ch, char *argument)
 
 	for (auto pexit : ch->in_room->exit)
 	{
-		if (pexit != NULL && !IS_SET(pexit->exit_info, EX_CLOSED))
+		if (pexit != nullptr && !IS_SET(pexit->exit_info, EX_CLOSED))
 			exits++;
 	}
 
@@ -1035,7 +1035,7 @@ void do_howl(CHAR_DATA *ch, char *argument)
 		check_improve(ch, gsn_howl, true, 2);
 
 		/* Loop through all the people in the room */
-		for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+		for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 		{
 			vch_next = vch->next_in_room;
 			if (vch != ch
@@ -1097,13 +1097,13 @@ void spell_scribe(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (obj->pIndexData->vnum == OBJ_VNUM_SCRIBE && obj->item_type == ITEM_TRASH)
 			break;
 	}
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		act("You do not have a blank scroll to scribe on.", ch, 0, 0, TO_CHAR);
 		return;
@@ -1250,7 +1250,7 @@ void spell_medicine(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
 		if (is_affected(vch, gsn_medicine) || !is_same_group(ch, vch))
 			continue;
@@ -1362,7 +1362,7 @@ void spell_horde_communion(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	new_affect_to_char(victim, &af);
 
 	af.duration = 24;
-	af.tick_fun = NULL;
+	af.tick_fun = nullptr;
 	new_affect_to_char(ch, &af);
 }
 
@@ -1397,7 +1397,7 @@ void do_exile(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("You can't seem to find them.\n\r", ch);
 		return;
@@ -1416,13 +1416,13 @@ void do_exile(CHAR_DATA *ch, char *argument)
 
 	update_cskills(victim);
 
-	if ((remove = get_eq_char(victim, WEAR_WAIST)) != NULL)
+	if ((remove = get_eq_char(victim, WEAR_WAIST)) != nullptr)
 	{
 		obj_from_char(remove);
 		extract_obj(remove);
 	}
 
-	if ((remove = get_eq_char(victim, WEAR_ABOUT)) != NULL)
+	if ((remove = get_eq_char(victim, WEAR_ABOUT)) != nullptr)
 	{
 		obj_from_char(remove);
 		extract_obj(remove);
@@ -1624,7 +1624,7 @@ void spell_crimson_martyr(int sn, int level, CHAR_DATA *ch, void *vo, int target
 		vch_next = vch->next_in_room;
 		if (!is_good(vch) && !is_safe_new(ch, vch, false))
 		{
-			damage_new(ch, vch, (int)((float)ch->hit * .35), sn, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, vch, (int)((float)ch->hit * .35), sn, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			LAG_CHAR(vch, PULSE_VIOLENCE * 2);
 		}
 	}
@@ -1702,7 +1702,7 @@ void spell_retribution(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n unleashes the vengeance of the Phalanx upon $N!", ch, 0, victim, TO_NOTVICT);
 	act("$n unleashes the vengeance of the Phalanx upon you!", ch, 0, victim, TO_VICT);
 
-	af.tick_fun = NULL;
+	af.tick_fun = nullptr;
 	af.duration = level - 5;
 	af.aftype = AFT_TIMER;
 	affect_to_char(ch, &af);
@@ -1727,7 +1727,7 @@ void do_phalanx(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("You cannot find that person.\n\r", ch);
 		return;

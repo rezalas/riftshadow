@@ -186,7 +186,7 @@ void game_loop_unix(int control)
 	struct timeval last_time;
 
 	signal(SIGPIPE, SIG_IGN);
-	gettimeofday(&last_time, NULL);
+	gettimeofday(&last_time, nullptr);
 	current_time = (time_t)last_time.tv_sec;
 
 	/* Main loop */
@@ -236,7 +236,7 @@ void game_loop_unix(int control)
 		/*
 		 * Kick out the freaky folks.
 		 */
-		for (d = descriptor_list; d != NULL; d = d_next)
+		for (d = descriptor_list; d != nullptr; d = d_next)
 		{
 			d_next = d->next;
 
@@ -256,21 +256,21 @@ void game_loop_unix(int control)
 		/*
 		 * Process input.
 		 */
-		for (d = descriptor_list; d != NULL; d = d_next)
+		for (d = descriptor_list; d != nullptr; d = d_next)
 		{
 			d_next = d->next;
 			d->fcommand= false;
 
 			if (FD_ISSET(d->descriptor, &in_set))
 			{
-				if (d->character != NULL)
+				if (d->character != nullptr)
 					d->character->timer = 0;
 
 				if (!read_from_descriptor(d))
 				{
 					FD_CLR(d->descriptor, &out_set);
 
-					if (d->character != NULL && d->character->level > 1)
+					if (d->character != nullptr && d->character->level > 1)
 						save_char_obj(d->character);
 
 					d->outtop = 0;
@@ -279,10 +279,10 @@ void game_loop_unix(int control)
 				}
 			}
 
-			if (d->character != NULL && d->character->wait > 0)
+			if (d->character != nullptr && d->character->wait > 0)
 				--d->character->wait;
 
-			if (d->character != NULL && d->character->wait <= 0 && d->character->pcdata->pending)
+			if (d->character != nullptr && d->character->wait <= 0 && d->character->pcdata->pending)
 			{
 				int i = 0;
 				interpret(d->character, d->character->pcdata->queue[0]);
@@ -367,7 +367,7 @@ void game_loop_unix(int control)
 		/*
 		 * Output.
 		 */
-		for (d = descriptor_list; d != NULL; d = d_next)
+		for (d = descriptor_list; d != nullptr; d = d_next)
 		{
 			d_next = d->next;
 
@@ -375,7 +375,7 @@ void game_loop_unix(int control)
 			{
 				if (!process_output(d, true))
 				{
-					if (d->character != NULL && d->character->level > 1)
+					if (d->character != nullptr && d->character->level > 1)
 						save_char_obj(d->character);
 
 					d->outtop = 0;
@@ -394,7 +394,7 @@ void game_loop_unix(int control)
 			long secDelta;
 			long usecDelta;
 
-			gettimeofday(&now_time, NULL);
+			gettimeofday(&now_time, nullptr);
 
 			usecDelta = ((int)last_time.tv_usec) - ((int)now_time.tv_usec) + 1000000 / PULSE_PER_SECOND;
 			secDelta = ((int)last_time.tv_sec) - ((int)now_time.tv_sec);
@@ -418,7 +418,7 @@ void game_loop_unix(int control)
 				stall_time.tv_usec = usecDelta;
 				stall_time.tv_sec = secDelta;
 
-				if (select(0, NULL, NULL, NULL, &stall_time) < 0)
+				if (select(0, nullptr, nullptr, nullptr, &stall_time) < 0)
 				{
 					perror("Game_loop: select: stall");
 					exit(1);
@@ -426,7 +426,7 @@ void game_loop_unix(int control)
 			}
 		}
 
-		gettimeofday(&last_time, NULL);
+		gettimeofday(&last_time, nullptr);
 		current_time = (time_t)last_time.tv_sec;
 	}
 }
@@ -469,11 +469,11 @@ void init_descriptor(int control)
 	dnew = new_descriptor();
 	dnew->descriptor = desc;
 	dnew->connected = CON_GET_NAME;
-	dnew->showstr_head = NULL;
-	dnew->showstr_point = NULL;
+	dnew->showstr_head = nullptr;
+	dnew->showstr_point = nullptr;
 	dnew->outsize = 2000;
-	dnew->pEdit = NULL;	  /* OLC */
-	dnew->pString = NULL; /* OLC */
+	dnew->pEdit = nullptr;	  /* OLC */
+	dnew->pString = nullptr; /* OLC */
 	dnew->editor = 0;	  /* OLC */
 	dnew->outbuf = new char[dnew->outsize];
 	dnew->outtop = 0;
@@ -509,7 +509,7 @@ void init_descriptor(int control)
 			return;
 		}
 
-		if ((from = gethostbyaddr((char *)&sock.sin_addr, sizeof(sock.sin_addr), AF_INET)) != NULL)
+		if ((from = gethostbyaddr((char *)&sock.sin_addr, sizeof(sock.sin_addr), AF_INET)) != nullptr)
 		{
 			dnew->host = palloc_string(from->h_name);
 			dnew->type = 0;
@@ -562,7 +562,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 	if (dclose->outtop > 0)
 		process_output(dclose, false);
 
-	if (dclose->snoop_by != NULL)
+	if (dclose->snoop_by != nullptr)
 	{
 		write_to_buffer(dclose->snoop_by, "Your victim has left the game.\n\r", 0);
 	}
@@ -570,14 +570,14 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 	{
 		DESCRIPTOR_DATA *d;
 
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
 			if (d->snoop_by == dclose)
-				d->snoop_by = NULL;
+				d->snoop_by = nullptr;
 		}
 	}
 
-	if ((ch = dclose->character) != NULL)
+	if ((ch = dclose->character) != nullptr)
 	{
 		sprintf(log_buf, "Closing link to %s.", ch->name);
 		log_string(log_buf);
@@ -587,15 +587,15 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 		{
 			int ftime = current_time - ch->last_fight_time;
 			if (ch->invis_level < 51)
-				act("$n has lost $s link.", ch, NULL, NULL, TO_ROOM);
+				act("$n has lost $s link.", ch, nullptr, nullptr, TO_ROOM);
 
 			sprintf(buf, "$N has lost $S link (Last fought %s %d %s ago).",
-				ch->last_fight_name != NULL ? ch->last_fight_name : "nobody",
+				ch->last_fight_name != nullptr ? ch->last_fight_name : "nobody",
 				ch->last_fight_time ? ftime > 600 ? (int)(ftime / 60) : ftime : -1,
 				ftime > 600 ? "minutes" : "seconds");
-			wiznet(buf, ch, NULL, WIZ_LINKS, 0, get_trust(ch));
+			wiznet(buf, ch, nullptr, WIZ_LINKS, 0, get_trust(ch));
 
-			ch->desc = NULL;
+			ch->desc = nullptr;
 		}
 		else
 		{
@@ -616,7 +616,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 
 		for (d = descriptor_list; d && d->next != dclose; d = d->next);
 
-		if (d != NULL)
+		if (d != nullptr)
 			d->next = dclose->next;
 		else
 			bug("Close_socket: dclose not found.", 0);
@@ -754,13 +754,13 @@ void read_from_buffer(DESCRIPTOR_DATA *d)
 
 const char *get_battle_condition(CHAR_DATA *victim, int percent)
 {
-	AFFECT_DATA *b_af = NULL;
+	AFFECT_DATA *b_af = nullptr;
 
 	if (is_affected(victim, gsn_bluff))
 	{
-		AFFECT_DATA *b_af = NULL;
+		AFFECT_DATA *b_af = nullptr;
 
-		for (b_af = victim->affected; b_af != NULL; b_af = b_af->next)
+		for (b_af = victim->affected; b_af != nullptr; b_af = b_af->next)
 		{
 			if (b_af->type == gsn_bluff)
 				break;
@@ -799,7 +799,7 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 	{
 		write_to_buffer(d, "[Hit Return to continue]\n\r", 0);
 	}
-	else if (d->pString != NULL)
+	else if (d->pString != nullptr)
 	{
 		write_to_buffer(d, "EDIT> ", 0);
 	}
@@ -811,7 +811,7 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 		ch = d->character;
 
 		/* battle prompt */
-		if ((victim = ch->fighting) != NULL)
+		if ((victim = ch->fighting) != nullptr)
 		{
 			int percent;
 			char wound[100];
@@ -858,9 +858,9 @@ bool process_output(DESCRIPTOR_DATA *d, bool fPrompt)
 	/*
 	 * Snoop-o-rama.
 	 */
-	if (d->snoop_by != NULL)
+	if (d->snoop_by != nullptr)
 	{
-		if (d->character != NULL)
+		if (d->character != nullptr)
 			write_to_buffer(d->snoop_by, d->character->name, 0);
 
 		write_to_buffer(d->snoop_by, "> ", 2);
@@ -894,7 +894,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 	char buf[MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH], buf3[MSL];
 	/*const*/ char *str, *orig;
-	const char *i = NULL;
+	const char *i = nullptr;
 	char *point;
 	char doors[MAX_INPUT_LENGTH];
 	EXIT_DATA *pexit;
@@ -941,8 +941,8 @@ void bust_a_prompt(CHAR_DATA *ch)
 
 				for (door = 0; door < 6; door++)
 				{
-					if ((pexit = ch->in_room->exit[door]) != NULL
-						&& pexit->u1.to_room != NULL
+					if ((pexit = ch->in_room->exit[door]) != nullptr
+						&& pexit->u1.to_room != nullptr
 						&& can_see_room(ch, pexit->u1.to_room)
 						&& !IS_SET(pexit->exit_info, EX_NONOBVIOUS)
 						&& (!IS_SET(pexit->exit_info, EX_CLOSED) || is_immortal(ch)))
@@ -1039,7 +1039,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'r':
-				if (ch->in_room != NULL)
+				if (ch->in_room != nullptr)
 				{
 					sprintf(buf2, "%s",
 						((!is_npc(ch) && IS_SET(ch->act, PLR_HOLYLIGHT))
@@ -1055,7 +1055,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'R':
-				if (is_immortal(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != nullptr)
 					sprintf(buf2, "%d", ch->in_room->vnum);
 				else
 					sprintf(buf2, " ");
@@ -1063,7 +1063,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'z':
-				if (is_immortal(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != nullptr)
 					sprintf(buf2, "%s", ch->in_room->area->name);
 				else
 					sprintf(buf2, " ");
@@ -1071,14 +1071,14 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'p':
-				if (is_immortal(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != nullptr)
 				{
 					number_people = 0;
 
-					for (d = descriptor_list; d != NULL; d = d->next)
+					for (d = descriptor_list; d != nullptr; d = d->next)
 					{
 						if (d->connected == CON_PLAYING
-							&& d->character->in_room != NULL
+							&& d->character->in_room != nullptr
 							&& d->character->in_room->area == ch->in_room->area
 							&& !is_immortal(d->character))
 						{
@@ -1096,13 +1096,13 @@ void bust_a_prompt(CHAR_DATA *ch)
 				i = buf2;
 				break;
 			case 'P':
-				if (is_immortal(ch) && ch->in_room != NULL)
+				if (is_immortal(ch) && ch->in_room != nullptr)
 				{
 					number_people = 0;
-					for (d = descriptor_list; d != NULL; d = d->next)
+					for (d = descriptor_list; d != nullptr; d = d->next)
 					{
 						if (d->connected == CON_PLAYING
-							&& d->character->in_room != NULL
+							&& d->character->in_room != nullptr
 							&& d->character->in_room->area == ch->in_room->area
 							&& can_see(ch, d->character))
 						{
@@ -1124,7 +1124,7 @@ void bust_a_prompt(CHAR_DATA *ch)
 				{
 					number_people = 0;
 
-					for (d = descriptor_list; d != NULL; d = d->next)
+					for (d = descriptor_list; d != nullptr; d = d->next)
 					{
 						if (d->connected == CON_PLAYING && can_see(ch, d->character))
 							number_people++;
@@ -1203,8 +1203,8 @@ bool output_buffer(DESCRIPTOR_DATA *d)
 	bool act= false, ok = true, color_code= false;
 	int color = 7, o_color;
 
-	/* discard NULL descriptor */
-	if (d == NULL)
+	/* discard nullptr descriptor */
+	if (d == nullptr)
 		return false;
 
 	memset(buf, '\0', MAX_STRING_LENGTH);
@@ -1484,7 +1484,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			sprintf(buffile, "%s/dead_char/%s.plr", RIFT_PLAYER_DIR, argument);
 
-			if ((deadchar = fopen(buffile, "r")) != NULL)
+			if ((deadchar = fopen(buffile, "r")) != nullptr)
 			{ // 20191006 rezalas - previously this kicked players picking
 			// a name of a dead char. Better practice is to notify them to
 			// choose again vs 'spanking' them and closing the connection.
@@ -1570,7 +1570,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 					write_to_buffer(d, "Thank you.  Please select a more suitable name: ", 0);
 
 					free_char(d->character);
-					d->character = NULL;
+					d->character = nullptr;
 					d->connected = CON_GET_NAME;
 					return;
 				default:
@@ -1592,7 +1592,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				/*
 				* This  should hopefully handle the pfile obj->limcount bug with bad pwds
 				*/
-				for (fobj = ch->carrying; fobj != NULL; fobj = fobj_next)
+				for (fobj = ch->carrying; fobj != nullptr; fobj = fobj_next)
 				{
 					fobj_next = fobj->next_content;
 					fobj->pIndexData->limcount++; /* Increment count due to drop from */
@@ -1624,7 +1624,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			log_string(log_buf);
 			login_log(ch, 1);
 
-			wiznet(log_buf, NULL, NULL, WIZ_SITES, 0, get_trust(ch));
+			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
 
 			if (is_immortal(ch))
 			{
@@ -1646,10 +1646,10 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			{
 				case 'y':
 				case 'Y':
-					for (d_old = descriptor_list; d_old != NULL; d_old = d_next)
+					for (d_old = descriptor_list; d_old != nullptr; d_old = d_next)
 					{
 						d_next = d_old->next;
-						if (d_old == d || d_old->character == NULL)
+						if (d_old == d || d_old->character == nullptr)
 							continue;
 
 						if (str_cmp((ch->true_name ? ch->true_name : ch->name), d_old->original
@@ -1667,10 +1667,10 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 					write_to_buffer(d, "Reconnect attempt failed.\n\rName: ", 0);
 
-					if (d->character != NULL)
+					if (d->character != nullptr)
 					{
 						free_char(d->character);
-						d->character = NULL;
+						d->character = nullptr;
 					}
 
 					d->connected = CON_GET_NAME;
@@ -1679,10 +1679,10 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				case 'N':
 					write_to_buffer(d, "Name: ", 0);
 
-					if (d->character != NULL)
+					if (d->character != nullptr)
 					{
 						free_char(d->character);
-						d->character = NULL;
+						d->character = nullptr;
 					}
 
 					d->connected = CON_GET_NAME;
@@ -1728,7 +1728,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				case 'N':
 					write_to_buffer(d, "Ok, what IS it, then? ", 0);
 					free_char(d->character);
-					d->character = NULL;
+					d->character = nullptr;
 					d->connected = CON_GET_NAME;
 					break;
 				default:
@@ -1868,7 +1868,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			/* add skills */
 			for (i = 0; i < 5; i++)
 			{
-				if (pc_race_table[race].skills[i] == NULL)
+				if (pc_race_table[race].skills[i] == nullptr)
 					break;
 
 				sn = skill_lookup(pc_race_table[race].skills[i]);
@@ -2025,8 +2025,8 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			log_string(log_buf);
 			login_log(ch, 0);
 
-			wiznet("Newbie alert!  $N sighted.", ch, NULL, WIZ_NEWBIE, 0, 0);
-			wiznet(log_buf, NULL, NULL, WIZ_SITES, 0, get_trust(ch));
+			wiznet("Newbie alert!  $N sighted.", ch, nullptr, WIZ_NEWBIE, 0, 0);
+			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
 
 			if (ch->Class()->GetIndex() == CLASS_SORCERER)
 			{
@@ -2550,7 +2550,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			ch->pcdata->learned[gsn_recall] = 100;
 
-			for (type = 0; weapon_table[type].name != NULL; type++)
+			for (type = 0; weapon_table[type].name != nullptr; type++)
 			{
 				if ((ch->Class()->GetIndex() == CLASS_WARRIOR && type == ch->pcdata->start_weapon)
 					|| (ch->Class()->GetIndex() != CLASS_WARRIOR && ch->Class()->weapon == weapon_table[type].vnum))
@@ -2627,7 +2627,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			d->connected = CON_READ_MOTD;
 			break;
 		case CON_READ_MOTD:
-			if (ch->pcdata == NULL || ch->pcdata->pwd[0] == '\0')
+			if (ch->pcdata == nullptr || ch->pcdata->pwd[0] == '\0')
 			{
 				write_to_buffer(d, "Warning! Null password!\n\r", 0);
 				write_to_buffer(d, "Please report old password with bug.\n\r", 0);
@@ -2733,7 +2733,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				RS.Queue.AddToQueue(3, 1, create_academy_pet, ch);
 				// academy pet here, on queue
 			}
-			else if (ch->in_room != NULL)
+			else if (ch->in_room != nullptr)
 			{
 				char_to_room(ch, ch->in_room);
 			}
@@ -2749,7 +2749,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			ch->pcdata->host = palloc_string(ch->desc->host);
 
 			if (!is_immortal(ch))
-				act("$n awakens into the world of Shalar.", ch, NULL, NULL, TO_ROOM);
+				act("$n awakens into the world of Shalar.", ch, nullptr, nullptr, TO_ROOM);
 
 			group_add(ch, "class basics", false);
 
@@ -2764,7 +2764,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			{
 				OBJ_DATA *obj;
 				OBJ_DATA *obj_next;
-				for (obj = object_list; obj != NULL; obj = obj_next)
+				for (obj = object_list; obj != nullptr; obj = obj_next)
 				{
 					obj_next = obj->next;
 					if (obj->carried_by == ch)
@@ -2785,7 +2785,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			ch->pcdata->old_room = 0;
 
 			sprintf(buf, "$N (%s) has left real life behind.", (ch->cabal > 0) ? capitalize(cabal_table[ch->cabal].name) : "Uncaballed");
-			wiznet(buf, ch, NULL, WIZ_LOGINS, 0, get_trust(ch));
+			wiznet(buf, ch, nullptr, WIZ_LOGINS, 0, get_trust(ch));
 
 			if (is_immortal(ch))
 			{
@@ -2807,10 +2807,10 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			buffer = fmt::format("{} WHERE name = '{}'", buf, ch->true_name);
 			cres = RS.SQL.Update(buffer.c_str());
 
-			if (ch->pet != NULL)
+			if (ch->pet != nullptr)
 			{
 				char_to_room(ch->pet, ch->in_room);
-				act("$n awakens into the world of Shalar.", ch->pet, NULL, NULL, TO_ROOM);
+				act("$n awakens into the world of Shalar.", ch->pet, nullptr, nullptr, TO_ROOM);
 			}
 
 			if (ch->cabal != 0)
@@ -2903,7 +2903,7 @@ bool check_parse_name(char *name)
 
 		for (iHash = 0; iHash < MAX_KEY_HASH; iHash++)
 		{
-			for (pMobIndex = mob_index_hash[iHash]; pMobIndex != NULL; pMobIndex = pMobIndex->next)
+			for (pMobIndex = mob_index_hash[iHash]; pMobIndex != nullptr; pMobIndex = pMobIndex->next)
 			{
 				if (is_name(name, pMobIndex->player_name))
 					return false;
@@ -2922,10 +2922,10 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 	CHAR_DATA *ch, *fch, *fch_next;
 	OBJ_DATA *obj;
 
-	for (ch = char_list; ch != NULL; ch = ch->next)
+	for (ch = char_list; ch != nullptr; ch = ch->next)
 	{
 		if (!is_npc(ch)
-			&& (!fConn || ch->desc == NULL)
+			&& (!fConn || ch->desc == nullptr)
 			&& !str_cmp((d->character->true_name ? d->character->true_name : d->character->name), (ch->true_name ? ch->true_name : ch->name)))
 		{
 			if (fConn == false)
@@ -2955,11 +2955,11 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 				send_to_char("Reconnecting. Type replay to see missed tells.\n\r", ch);
 
 				if (ch->invis_level < 51)
-					act("$n has reconnected.", ch, NULL, NULL, TO_ROOM);
+					act("$n has reconnected.", ch, nullptr, nullptr, TO_ROOM);
 
 				ch->pcdata->host = palloc_string(ch->desc->host);
 				/* Limit crap to balance reconnect objects from extracted link object */
-				for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+				for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 				{
 					obj->pIndexData->limcount++;
 				}
@@ -2967,7 +2967,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 				sprintf(log_buf, "%s@%s reconnected.", ch->name, d->host);
 				log_string(log_buf);
 
-				wiznet("$N recovers from link death.", ch, NULL, WIZ_LINKS, 0, get_trust(ch));
+				wiznet("$N recovers from link death.", ch, nullptr, WIZ_LINKS, 0, get_trust(ch));
 				d->connected = CON_PLAYING;
 			}
 
@@ -2988,7 +2988,7 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 	for (dold = descriptor_list; dold; dold = dold->next)
 	{
 		if (dold != d
-			&& dold->character != NULL
+			&& dold->character != nullptr
 			&& dold->connected != CON_GET_NAME
 			&& dold->connected != CON_GET_OLD_PASSWORD
 			&& !str_cmp(name, dold->original ? dold->original->true_name : dold->character->true_name))
@@ -3006,10 +3006,10 @@ bool check_playing(DESCRIPTOR_DATA *d, char *name)
 
 void stop_idling(CHAR_DATA *ch)
 {
-	if (ch == NULL
-		|| ch->desc == NULL
+	if (ch == nullptr
+		|| ch->desc == nullptr
 		|| ch->desc->connected != CON_PLAYING
-		|| ch->was_in_room == NULL
+		|| ch->was_in_room == nullptr
 		|| ch->in_room != get_room_index(ROOM_VNUM_LIMBO))
 		return;
 
@@ -3018,9 +3018,9 @@ void stop_idling(CHAR_DATA *ch)
 	char_from_room(ch);
 	char_to_room(ch, ch->was_in_room);
 
-	ch->was_in_room = NULL;
+	ch->was_in_room = nullptr;
 
-	act("$n has returned from the void.", ch, NULL, NULL, TO_ROOM);
+	act("$n has returned from the void.", ch, nullptr, nullptr, TO_ROOM);
 }
 
 ///
@@ -3030,13 +3030,13 @@ void stop_idling(CHAR_DATA *ch)
 ///
 void send_to_char(const char *txt, CHAR_DATA *ch)
 {
-	if (txt != NULL && ch->desc != NULL)
+	if (txt != nullptr && ch->desc != nullptr)
 		write_to_buffer(ch->desc, txt, strlen(txt));
 }
 
 void send_to_chars(const char *txt, CHAR_DATA *ch, int min, ...)
 {
-	if (txt != NULL && ch->desc != NULL)
+	if (txt != nullptr && ch->desc != nullptr)
 		write_to_buffer(ch->desc, txt, strlen(txt));
 }
 
@@ -3045,7 +3045,7 @@ void send_to_chars(const char *txt, CHAR_DATA *ch, int min, ...)
  */
 void page_to_char(const char *txt, CHAR_DATA *ch)
 {
-	if (txt == NULL || ch->desc == NULL)
+	if (txt == nullptr || ch->desc == nullptr)
 		return;
 
 	if (ch->lines == 0)
@@ -3147,15 +3147,15 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 	/*
 	 * Discard null and zero-length messages.
 	 */
-	if (format == NULL || format[0] == '\0')
+	if (format == nullptr || format[0] == '\0')
 		return;
 
 	/*colorconv(format, format, ch);*/
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
 			&& d->character
-			&& d->character->in_room != NULL
+			&& d->character->in_room != nullptr
 			&& d->character->in_room->area == ch->in_room->area
 			&& !IS_SET(d->character->comm, COMM_QUIET))
 		{
@@ -3167,7 +3167,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 			to = d->character;
 
-			if ((!is_npc(to) && to->desc == NULL))
+			if ((!is_npc(to) && to->desc == nullptr))
 				continue;
 
 			point = buf;
@@ -3222,7 +3222,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 			*point = '\0';
 
-			if (to->desc != NULL)
+			if (to->desc != nullptr)
 			{
 				sprintf(buf2, "%s yells '%s", ch->short_descr, get_char_color(to, "yells"));
 				buf2[0] = UPPER(buf2[0]);
@@ -3265,11 +3265,11 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	/*
 	 * Discard null and zero-length messages.
 	 */
-	if (format == NULL || format[0] == '\0')
+	if (format == nullptr || format[0] == '\0')
 		return;
 
 	/* discard null rooms and chars */
-	if (ch == NULL || ch->in_room == NULL)
+	if (ch == nullptr || ch->in_room == nullptr)
 		return;
 
 	/*colorconv(format, format, ch);*/
@@ -3277,22 +3277,22 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 	if (type == TO_VICT)
 	{
-		if (vch == NULL)
+		if (vch == nullptr)
 		{
 			sprintf(buf, "Act: null vch with TO_VICT. -- %s", format);
 			bug(buf, 0);
 			return;
 		}
 
-		if (vch->in_room == NULL)
+		if (vch->in_room == nullptr)
 			return;
 
 		to = vch->in_room->people;
 	}
 
-	for (; to != NULL; to = to->next_in_room)
+	for (; to != nullptr; to = to->next_in_room)
 	{
-		if ((!is_npc(to) && to->desc == NULL) || to->position < min_pos)
+		if ((!is_npc(to) && to->desc == nullptr) || to->position < min_pos)
 			continue;
 
 		if ((type == TO_CHAR) && to != ch)
@@ -3332,7 +3332,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 			++str;
 
-			if (arg2 == NULL && *str >= 'A' && *str <= 'Z' && *str != 'I')
+			if (arg2 == nullptr && *str >= 'A' && *str <= 'Z' && *str != 'I')
 			{
 				bug("Act: missing arg2 for code %d.", *str);
 				i = " <@@@> ";
@@ -3412,7 +3412,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 						i = can_see_obj(to, obj2) ? obj2->short_descr : "something";
 						break;
 					case 'd':
-						if (arg2 == NULL || ((char *)arg2)[0] == '\0')
+						if (arg2 == nullptr || ((char *)arg2)[0] == '\0')
 						{
 							i = "door";
 						}
@@ -3448,7 +3448,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 		else
 			buf[0] = UPPER(buf[0]);
 
-		if (to->desc != NULL)
+		if (to->desc != nullptr)
 			write_to_buffer(to->desc, buf, point - buf);
 	}
 }
@@ -3554,7 +3554,7 @@ void do_rename(CHAR_DATA *ch, char *argument)
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(new_name));
 
-	if (fopen(strsave, "r") != NULL)
+	if (fopen(strsave, "r") != nullptr)
 	{
 		send_to_char("A player with that name already exists.\n\r", ch);
 		return;
@@ -3583,7 +3583,7 @@ void do_rename(CHAR_DATA *ch, char *argument)
 	//	unlink(strsave);
 
 	send_to_char("Character renamed.\n\r", ch);
-	act("$n has renamed you to $N!", ch, NULL, victim, TO_VICT);
+	act("$n has renamed you to $N!", ch, nullptr, victim, TO_VICT);
 }
 
 void do_renam(CHAR_DATA *ch, char *argument)
@@ -3786,7 +3786,7 @@ void process_text(CHAR_DATA *ch, char *text)
 	{
 		ch->pcdata->entering_text= false;
 		ch->pcdata->entered_text[0] = '\0';
-		ch->pcdata->end_fun = NULL;
+		ch->pcdata->end_fun = nullptr;
 
 		send_to_char("Exiting without saving changes.\n\r", ch);
 		return;
@@ -3800,13 +3800,13 @@ void process_text(CHAR_DATA *ch, char *text)
 			(*ch->pcdata->end_fun)(ch, ch->pcdata->entered_text);
 
 		ch->pcdata->entering_text= false;
-		ch->pcdata->end_fun = NULL;
+		ch->pcdata->end_fun = nullptr;
 		return;
 	}
 
 	if (!str_cmp(text, "backline"))
 	{
-		if (ch->pcdata->entered_text == NULL || ch->pcdata->entered_text[0] == '\0')
+		if (ch->pcdata->entered_text == nullptr || ch->pcdata->entered_text[0] == '\0')
 		{
 			send_to_char("No lines left to remove.", ch);
 			return;

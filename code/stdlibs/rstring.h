@@ -2,7 +2,6 @@
 #define RSTRING_H
 
 #define RSTRING
-#define NULL		0
 #define size_t		unsigned int
 
 #define MAX_FORMATTED_SIZE 4096

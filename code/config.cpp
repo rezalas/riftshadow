@@ -27,7 +27,7 @@ std::string Config::GetValue(const char* key)
         
     }
 
-    return NULL;   
+    return nullptr;
 }
 DbConnection Config::GetDbConnection(const char* connection)
 {

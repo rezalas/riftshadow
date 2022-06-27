@@ -82,7 +82,7 @@ void do_crumble(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -96,7 +96,7 @@ void do_crumble(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg2, "inventory"))
 	{
-		if ((obj = get_obj_carry(victim, arg3, ch)) == NULL)
+		if ((obj = get_obj_carry(victim, arg3, ch)) == nullptr)
 		{
 			send_to_char("You can't find it.\n\r", ch);
 			return;
@@ -104,7 +104,7 @@ void do_crumble(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_prefix(arg2, "equipment"))
 	{
-		if ((obj = get_obj_wear(victim, arg3)) == NULL)
+		if ((obj = get_obj_wear(victim, arg3)) == nullptr)
 		{
 			send_to_char("You can't find it.\n\r", ch);
 			return;
@@ -117,7 +117,7 @@ void do_crumble(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$p crumbles into dust.", victim, obj, NULL, TO_CHAR);
+	act("$p crumbles into dust.", victim, obj, nullptr, TO_CHAR);
 	act("$N: $p crumbles into dust.", ch, obj, victim, TO_CHAR);
 	obj_from_char(obj);
 	extract_obj(obj);
@@ -153,7 +153,7 @@ void do_ghost(CHAR_DATA *ch, char *argument)
 		{
 			if (d->connected == CON_PLAYING
 				&& d->character != ch
-				&& d->character->in_room != NULL
+				&& d->character->in_room != nullptr
 				&& can_see(ch, d->character))
 			{
 				if (!str_cmp(arg2, "yes"))
@@ -179,7 +179,7 @@ void do_ghost(CHAR_DATA *ch, char *argument)
 		{
 			if (d->connected == CON_PLAYING 
 				&& d->character != ch
-				&& d->character->in_room != NULL
+				&& d->character->in_room != nullptr
 				&& can_see(ch, d->character)
 				&& d->character->in_room->area == ch->in_room->area)
 			{
@@ -202,7 +202,7 @@ void do_ghost(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -238,7 +238,7 @@ void do_praclist(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -249,7 +249,7 @@ void do_praclist(CHAR_DATA *ch, char *argument)
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
 	{
-		if (skill_table[sn].name == NULL)
+		if (skill_table[sn].name == nullptr)
 			break;
 
 		if (skill_table[sn].skill_level[victim->Class()->GetIndex()] > 52)
@@ -293,7 +293,7 @@ void do_affrem(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -318,7 +318,7 @@ void do_affrem(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (af = victim->affected; af != NULL; af = af_next)
+	for (af = victim->affected; af != nullptr; af = af_next)
 	{
 		af_next = af->next;
 
@@ -370,7 +370,7 @@ void do_divine_intervention(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -526,7 +526,7 @@ void do_ccb(CHAR_DATA *ch, char *argument)
 
 	send_to_char(buffer.c_str(), ch);
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
 		if (d->connected == CON_PLAYING)
 		{
@@ -728,7 +728,7 @@ void do_heroimm(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg)) == NULL)
+	if ((victim = get_char_world(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -766,7 +766,7 @@ void check_keen_vision(CHAR_DATA *ch, CHAR_DATA *victim)
 	CHAR_DATA *gch;
 	int chance;
 
-	for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
+	for (gch = ch->in_room->people; gch != nullptr; gch = gch->next_in_room)
 	{
 		if (gch == ch || gch == victim)
 			continue;
@@ -807,9 +807,9 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 
 		found = false;
 		afound = false;
-		guardian = NULL;
+		guardian = nullptr;
 
-		for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
+		for (gch = ch->in_room->people; gch != nullptr; gch = gch->next_in_room)
 		{
 			if (is_cabal_guard(gch))
 			{
@@ -818,7 +818,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 
 				sprintf(buf, "I hold ");
 
-				for (obj = gch->carrying; obj != NULL; obj = obj_next)
+				for (obj = gch->carrying; obj != nullptr; obj = obj_next)
 				{
 					obj_next = obj->next_content;
 
@@ -827,7 +827,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 						total++;
 						found = true;
 
-						if (obj_next != NULL)
+						if (obj_next != nullptr)
 						{
 							sprintf(pbuf, "%s, ", obj->short_descr);
 							strcat(buf, pbuf);
@@ -857,19 +857,19 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (afound && guardian != NULL)
+		if (afound && guardian != nullptr)
 			do_say(guardian, buf);
 
 		return;
 	}
 
-	guardian = NULL;
+	guardian = nullptr;
 	if (strstr(argument, "where is") || strstr(argument, "Where is"))
 	{
 		if (is_npc(ch))
 			return;
 
-		for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
+		for (gch = ch->in_room->people; gch != nullptr; gch = gch->next_in_room)
 		{
 			if (is_cabal_guard(gch))
 			{
@@ -878,18 +878,18 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (guardian == NULL)
+		if (guardian == nullptr)
 			return;
 
 		sprintf(buf1, "%s is the guardian.", guardian->short_descr);
-		wiznet(buf1, 0, NULL, WIZ_DEBUG, 0, 0);
+		wiznet(buf1, 0, nullptr, WIZ_DEBUG, 0, 0);
 
-		for (obj = object_list; obj != NULL; obj = obj->next)
+		for (obj = object_list; obj != nullptr; obj = obj->next)
 		{
 			if (obj->pIndexData->cabal != guardian->cabal)
 				continue;
 
-			if (obj->carried_by != NULL)
+			if (obj->carried_by != nullptr)
 			{
 				sprintf(pbuf, "%s is carried by %s.",
 					obj->short_descr,
@@ -898,7 +898,7 @@ void report_cabal_items(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (guardian != NULL && pbuf != NULL && obj != NULL)
+		if (guardian != nullptr && pbuf != nullptr && obj != nullptr)
 			do_say(guardian, pbuf);
 	}
 }
@@ -914,7 +914,7 @@ void easy_uninduct(CHAR_DATA *ch)
 
 	for (gns = 0; gns < MAX_SKILL; gns++)
 	{
-		if (group_table[gn].spells[gns] == NULL)
+		if (group_table[gn].spells[gns] == nullptr)
 			break;
 
 		sn = skill_lookup(group_table[gn].spells[gns]);
@@ -947,7 +947,7 @@ void do_lag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They're not here.", ch);
 		return;
@@ -998,7 +998,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 	char buf1[MAX_STRING_LENGTH];
 	char buf2[MAX_STRING_LENGTH];
 	char buf3[MAX_STRING_LENGTH];
-	char buf97[MAX_STRING_LENGTH], *tbuf = NULL;
+	char buf97[MAX_STRING_LENGTH], *tbuf = nullptr;
 	FILE *fp;
 	int align = -1, class_index = -1, ethos = -1, kills = -1, gkills = -1, nkills = -1, ekills = -1;
 	int pkilled = -1, mkilled = -1, level = -1, played = -1, cabal = 0, induct = -1, race = -1;
@@ -1046,15 +1046,15 @@ void do_finger(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf3, "(none)");
 
-	history = NULL;
+	history = nullptr;
 
 	name = palloc_string(buf3);
 	login = palloc_string(buf3);
 	sex = palloc_string(buf3);
-	title = NULL;
-	extitle = NULL;
-	allsites = NULL;
-	desc = NULL;
+	title = nullptr;
+	extitle = nullptr;
+	allsites = nullptr;
+	desc = nullptr;
 
 	sprintf(eqbuf, "Sorry, that is unavailable.\n\r");
 	auto dir = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, arg1, ".plr");
@@ -1066,11 +1066,11 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (((fp = fopen(dir.c_str(), "r")) != NULL))
+	if (((fp = fopen(dir.c_str(), "r")) != nullptr))
 	{
 		dead = false;
 	}
-	else if (((fp = fopen(dir2.c_str(), "r")) != NULL))
+	else if (((fp = fopen(dir2.c_str(), "r")) != nullptr))
 	{
 		dead = true;
 	}
@@ -1248,7 +1248,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		sprintf(buf2, "FINGER: %s's player history:\n\r", name);
 		send_to_char(buf2, ch);
 
-		if (history == NULL || history[0] == '\0')
+		if (history == nullptr || history[0] == '\0')
 		{
 			send_to_char("No pfile history available.\n\r", ch);
 		}
@@ -1274,7 +1274,7 @@ void do_finger(CHAR_DATA *ch, char *argument)
 		sprintf(buf2, "FINGER: %s's description:\n\r", name);
 		send_to_char(buf2, ch);
 
-		if (desc != NULL)
+		if (desc != nullptr)
 			send_to_char(desc, ch);
 		else
 			send_to_char("No description available.\n\r", ch);
@@ -1432,7 +1432,7 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 	char buf2[MAX_STRING_LENGTH];
 	char newbuf[MAX_STRING_LENGTH];
 	char results[MAX_STRING_LENGTH];
-	char *login = NULL;
+	char *login = nullptr;
 	FILE *fpChar;
 	FILE *fpChar2;
 	int numMatches = 0, cabal, counter;
@@ -1464,7 +1464,7 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
 	fpChar = fopen(TEMP_GREP_RESULTS, "r");
-	if (fpChar == NULL)
+	if (fpChar == nullptr)
 	{
 		send_to_char("Error opening results.\n\r", ch);
 		return;
@@ -1518,9 +1518,9 @@ void do_ctrack(CHAR_DATA *ch, char *argument)
 char *get_login(CHAR_DATA *ch, FILE *fpChar2)
 {
 	bool fMatch, end = false;
-	char *login = NULL, *word;
+	char *login = nullptr, *word;
 
-	if (fpChar2 == NULL)
+	if (fpChar2 == nullptr)
 	{
 		send_to_char("Error opening pfile.\n\r", ch);
 		return "";
@@ -1612,7 +1612,7 @@ int count_carried(CHAR_DATA *ch, bool limited)
 	OBJ_DATA *obj;
 	int count = 0;
 
-	for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (limited && obj->pIndexData->limtotal <= 0)
 			continue;
@@ -1625,9 +1625,9 @@ int count_carried(CHAR_DATA *ch, bool limited)
 
 bool auto_check_multi(DESCRIPTOR_DATA *d_check, char *host)
 {
-	for (DESCRIPTOR_DATA *d = descriptor_list; d != NULL; d = d->next)
+	for (DESCRIPTOR_DATA *d = descriptor_list; d != nullptr; d = d->next)
 	{
-		if (d == d_check || d->character == NULL)
+		if (d == d_check || d->character == nullptr)
 			continue;
 
 		if (!str_cmp(host, d->host))
@@ -1653,7 +1653,7 @@ void do_pload(CHAR_DATA *ch, char *argument)
 
 	name[0] = UPPER(name[0]);
 
-	if (get_char_world(ch, name) != NULL)
+	if (get_char_world(ch, name) != nullptr)
 	{
 		send_to_char("That character is already online!\n\r", ch);
 		return;
@@ -1673,7 +1673,7 @@ void do_pload(CHAR_DATA *ch, char *argument)
 	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
 		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 
-	d->character->desc = NULL;
+	d->character->desc = nullptr;
 	d->character->next = char_list;
 
 	char_list = d->character;
@@ -1692,7 +1692,7 @@ void do_pload(CHAR_DATA *ch, char *argument)
 
 	buffer = fmt::format("{}/{}{}", RIFT_PLAYER_DIR, name, ".plr");
 
-	if (fopen(buffer.c_str(), "r") != NULL)
+	if (fopen(buffer.c_str(), "r") != nullptr)
 	{
 		save_char_obj(victim);
 		extract_char(victim, true);
@@ -1717,7 +1717,7 @@ void do_damage(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_room(ch, arg1)) == NULL)
+	if ((victim = get_char_room(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1746,7 +1746,7 @@ void zone_echo(AREA_DATA *area, char *echo)
 
 	for (DESCRIPTOR_DATA *d = descriptor_list; d; d = d->next)
 	{
-		if (d->connected == CON_PLAYING && d->character->in_room != NULL && d->character->in_room->area == area)
+		if (d->connected == CON_PLAYING && d->character->in_room != nullptr && d->character->in_room->area == area)
 		{
 			colorconv(buffer, echo, d->character);
 			send_to_char(buffer, d->character);
@@ -1759,19 +1759,19 @@ bool old_is_adjacent_area(AREA_DATA *area, AREA_DATA *area2)
 {
 	ROOM_INDEX_DATA *to_room;
 
-	for (auto room = room_list; room != NULL; room = room->next_room)
+	for (auto room = room_list; room != nullptr; room = room->next_room)
 	{
 		if (room->area != area)
 			continue;
 
 		for (auto exit : room->exit)
 		{
-			if (exit == NULL)
+			if (exit == nullptr)
 				continue;
 
 			to_room = exit->u1.to_room;
 
-			if (to_room != NULL && to_room->area == area2)
+			if (to_room != nullptr && to_room->area == area2)
 				return true;
 		}
 	}
@@ -1797,7 +1797,7 @@ bool is_adj_range(AREA_DATA *area, AREA_DATA *area2, int range)
 
 	for (int i = 0; i < MAX_ADJACENT; i++)
 	{
-		if (range > 1 && area != NULL && area->adjacent[i] != NULL)
+		if (range > 1 && area != nullptr && area->adjacent[i] != nullptr)
 		{
 			range -= 1;
 			if (is_adj_range(area->adjacent[i], area2, range))

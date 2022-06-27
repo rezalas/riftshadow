@@ -12,11 +12,11 @@ char_data* TestHelperCreatePlayer(char *name = "player 1")
 	player->pcdata = new pc_data();
 	player->name = name;
 	auto dnew = new descriptor_data();
-	dnew->showstr_head = NULL;
-	dnew->showstr_point = NULL;
+	dnew->showstr_head = nullptr;
+	dnew->showstr_point = nullptr;
 	dnew->outsize = 2000;
-	dnew->pEdit = NULL;	  /* OLC */
-	dnew->pString = NULL; /* OLC */
+	dnew->pEdit = nullptr;	  /* OLC */
+	dnew->pString = nullptr; /* OLC */
 	dnew->editor = 0;	  /* OLC */
 	dnew->outbuf = new char[dnew->outsize];
 	dnew->outtop = 0;	
@@ -89,7 +89,7 @@ SCENARIO("testing update cabal skills","[update_cskills]")
 		{
 			THEN("it should return without crashing")
 			{				
-				REQUIRE_NOTHROW(update_cskills(NULL));
+				REQUIRE_NOTHROW(update_cskills(nullptr));
 			}
 		}
 	}

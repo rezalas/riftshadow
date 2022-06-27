@@ -66,10 +66,10 @@ bool check_ban(char *usite, int type, int host)
 		while (!RS.SQL.End())
 		{
 			auto row = RS.SQL.GetRow();
-			if (strstr(site, row[0]) != NULL)
+			if (strstr(site, row[0]) != nullptr)
 			{
 				auto buffer = fmt::format("BANNED - {} just tried to connect.", site); //TODO: change the rest of the sprintf calls to format
-				wiznet(buffer.data(), NULL, NULL, WIZ_LOGINS, 0, 0);
+				wiznet(buffer.data(), nullptr, nullptr, WIZ_LOGINS, 0, 0);
 				return true;
 			}
 		}

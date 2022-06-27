@@ -155,7 +155,7 @@ void advance_level(CHAR_DATA *ch, bool hide)
 			&& strcmp(ch->pcdata->recentkills[i], ""))
 		{
 			free_pstring(ch->pcdata->recentkills[i]);
-			ch->pcdata->recentkills[i] = NULL;
+			ch->pcdata->recentkills[i] = nullptr;
 		}
 	}
 
@@ -199,7 +199,7 @@ void gain_exp(CHAR_DATA *ch, int gain)
 		log_string(buf);
 
 		sprintf(buf, "$N has attained level %d!", ch->level);
-		wiznet(buf, ch, NULL, WIZ_LEVELS, 0, 0);
+		wiznet(buf, ch, nullptr, WIZ_LEVELS, 0, 0);
 
 		advance_level(ch, false);
 		// ch->hit = ch->max_hit;
@@ -217,7 +217,7 @@ int hit_gain(CHAR_DATA *ch)
 	int gain;
 	int number;
 
-	if (ch->in_room == NULL)
+	if (ch->in_room == nullptr)
 		return 0;
 
 	if (is_affected(ch, gsn_atrophy) || is_affected(ch, gsn_prevent_healing))
@@ -290,7 +290,7 @@ int hit_gain(CHAR_DATA *ch)
 			gain /= 2;
 	}
 
-	if (ch->on != NULL && ch->on->item_type == ITEM_FURNITURE)
+	if (ch->on != nullptr && ch->on->item_type == ITEM_FURNITURE)
 		gain = (gain * 7 / 5);
 
 	if (is_affected(ch, gsn_bleeding))
@@ -342,7 +342,7 @@ int mana_gain(CHAR_DATA *ch)
 	int gain;
 	int number;
 
-	if (ch->in_room == NULL)
+	if (ch->in_room == nullptr)
 		return 0;
 
 	if (is_affected(ch, gsn_atrophy) || is_affected(ch, gsn_prevent_healing))
@@ -423,7 +423,7 @@ int mana_gain(CHAR_DATA *ch)
 			gain /= 2;
 	}
 
-	if (ch->on != NULL && ch->on->item_type == ITEM_FURNITURE)
+	if (ch->on != nullptr && ch->on->item_type == ITEM_FURNITURE)
 		gain = gain * 7 / 5;
 
 	if (is_affected_by(ch, AFF_POISON))
@@ -457,7 +457,7 @@ int move_gain(CHAR_DATA *ch)
 {
 	int gain;
 
-	if (ch->in_room == NULL)
+	if (ch->in_room == nullptr)
 		return 0;
 
 	if (is_affected(ch, gsn_atrophy) || is_affected(ch, gsn_prevent_healing))
@@ -499,7 +499,7 @@ int move_gain(CHAR_DATA *ch)
 
 	gain *= ch->in_room->heal_rate / 100;
 
-	if (ch->on != NULL && ch->on->item_type == ITEM_FURNITURE)
+	if (ch->on != nullptr && ch->on->item_type == ITEM_FURNITURE)
 		gain = gain * 6 / 5;
 
 	if (is_affected_by(ch, AFF_POISON))
@@ -624,21 +624,21 @@ void mobile_update(void)
 {
 	CHAR_DATA *ch;
 	CHAR_DATA *ch_next;
-	EXIT_DATA *pexit = NULL;
+	EXIT_DATA *pexit = nullptr;
 	int door;
 
 	/* Examine all mobs. */
-	for (ch = char_list; ch != NULL; ch = ch_next)
+	for (ch = char_list; ch != nullptr; ch = ch_next)
 	{
 		ch_next = ch->next;
 
-		if (!is_npc(ch) || ch->in_room == NULL)
+		if (!is_npc(ch) || ch->in_room == nullptr)
 			continue;
 
 		if (ch->in_room->area->empty && !IS_SET(ch->act, ACT_UPDATE_ALWAYS) && !IS_SET(ch->act, ACT_WARD_MOB))
 			continue;
 
-		if (ch->position == POS_FIGHTING && ch->pIndexData->cast_spell[0] != NULL && number_percent() > 50)
+		if (ch->position == POS_FIGHTING && ch->pIndexData->cast_spell[0] != nullptr && number_percent() > 50)
 			if (do_mob_cast(ch))
 				continue;
 
@@ -656,7 +656,7 @@ void mobile_update(void)
 			continue;
 
 		/* Scavenge */
-		if (IS_SET(ch->act, ACT_SCAVENGER) && ch->in_room->contents != NULL && number_bits(6) == 0)
+		if (IS_SET(ch->act, ACT_SCAVENGER) && ch->in_room->contents != nullptr && number_bits(6) == 0)
 		{
 			OBJ_DATA *obj;
 			OBJ_DATA *obj_best;
@@ -676,10 +676,10 @@ void mobile_update(void)
 
 			if (obj_best)
 			{
-				/*		get_obj(ch,obj,NULL, false);*/
+				/*		get_obj(ch,obj,nullptr, false);*/
 				obj_from_room(obj_best);
 				obj_to_char(obj_best, ch);
-				act("$n gets $p.", ch, obj_best, NULL, TO_ROOM);
+				act("$n gets $p.", ch, obj_best, nullptr, TO_ROOM);
 			}
 		}
 
@@ -697,15 +697,15 @@ void mobile_update(void)
 					|| ch->in_room->exit[4]
 					|| ch->in_room->exit[5]))
 			{
-				while((pexit = ch->in_room->exit[door]) == NULL || pexit->u1.to_room == NULL)
+				while((pexit = ch->in_room->exit[door]) == nullptr || pexit->u1.to_room == nullptr)
 				{
 					door = number_range(0, 5);
 				}
 			}
 			*/
 
-			if ((pexit = ch->in_room->exit[door]) != NULL
-				&& pexit->u1.to_room != NULL
+			if ((pexit = ch->in_room->exit[door]) != nullptr
+				&& pexit->u1.to_room != nullptr
 				&& !IS_SET(pexit->exit_info, EX_CLOSED)
 				&& !IS_SET(pexit->u1.to_room->room_flags, ROOM_NO_MOB)
 				&& !(pexit->u1.to_room->vnum < ch->pIndexData->restrict_low
@@ -892,7 +892,7 @@ void time_update(void)
 
 	if (buf[0] != '\0')
 	{
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
 			if (d->connected == CON_PLAYING
 				&& d->character->in_room
@@ -913,7 +913,7 @@ void time_update(void)
 
 	if (buf[0] != '\0')
 	{
-		for (area = area_first; area != NULL; area = area->next)
+		for (area = area_first; area != nullptr; area = area->next)
 		{
 			if (IS_SET(area->progtypes, APROG_SUN))
 				(area->aprogs->sun_prog)(area);
@@ -1156,7 +1156,7 @@ void char_update(void)
 	int hgain;
 	bool ghost= false;
 
-	ch_quit = NULL;
+	ch_quit = nullptr;
 
 	/* update save counter */
 	save_number++;
@@ -1164,7 +1164,7 @@ void char_update(void)
 	if (save_number > 2)
 		save_number = 0;
 
-	for (ch = char_list; ch != NULL; ch = ch_next)
+	for (ch = char_list; ch != nullptr; ch = ch_next)
 	{
 		CHAR_DATA *master;
 		AFFECT_DATA *paf;
@@ -1172,21 +1172,21 @@ void char_update(void)
 		bool charm_gone;
 
 		ch_next = ch->next;
-		master = NULL;
+		master = nullptr;
 
 		if (is_npc(ch)
 			&& (sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight)
 			&& ch->in_room
 			&& number_percent() < 90
 			&& !is_affected_by(ch, AFF_SLEEP)
-			&& ch->fighting == NULL)
+			&& ch->fighting == nullptr)
 		{
 			if (IS_SET(ch->act, ACT_DIURNAL) && is_affected_by(ch, AFF_NOSHOW))
 				REMOVE_BIT(ch->affected_by, AFF_NOSHOW);
 			else if (IS_SET(ch->act, ACT_NOCTURNAL) && !is_affected_by(ch, AFF_NOSHOW))
 				SET_BIT(ch->affected_by, AFF_NOSHOW);
 		}
-		else if (is_npc(ch) && sun >= SolarPosition::Sunset && ch->in_room && number_percent() < 90 && ch->fighting == NULL)
+		else if (is_npc(ch) && sun >= SolarPosition::Sunset && ch->in_room && number_percent() < 90 && ch->fighting == nullptr)
 		{
 			if (IS_SET(ch->act, ACT_NOCTURNAL) && is_affected_by(ch, AFF_NOSHOW))
 				REMOVE_BIT(ch->affected_by, AFF_NOSHOW);
@@ -1303,18 +1303,18 @@ void char_update(void)
 		{
 			OBJ_DATA *obj;
 
-			if ((obj = get_eq_char(ch, WEAR_LIGHT)) != NULL && obj->item_type == ITEM_LIGHT && obj->value[2] > 0)
+			if ((obj = get_eq_char(ch, WEAR_LIGHT)) != nullptr && obj->item_type == ITEM_LIGHT && obj->value[2] > 0)
 			{
-				if (--obj->value[2] == 0 && ch->in_room != NULL)
+				if (--obj->value[2] == 0 && ch->in_room != nullptr)
 				{
 					ch->in_room->light = std::max(0, ch->in_room->light - 3);
-					act("$p goes out.", ch, obj, NULL, TO_ROOM);
-					act("$p flickers and goes out.", ch, obj, NULL, TO_CHAR);
+					act("$p goes out.", ch, obj, nullptr, TO_ROOM);
+					act("$p flickers and goes out.", ch, obj, nullptr, TO_CHAR);
 					extract_obj(obj);
 				}
-				else if (obj->value[2] <= 5 && ch->in_room != NULL)
+				else if (obj->value[2] <= 5 && ch->in_room != nullptr)
 				{
-					act("$p flickers.", ch, obj, NULL, TO_CHAR);
+					act("$p flickers.", ch, obj, nullptr, TO_CHAR);
 				}
 			}
 
@@ -1322,14 +1322,14 @@ void char_update(void)
 
 			if (ch->timer >= 25 && !is_heroimm(ch) && !is_immortal(ch) && !IS_SET(ch->act, PLR_NOVOID))
 			{
-				if (ch->was_in_room == NULL && ch->in_room != NULL)
+				if (ch->was_in_room == nullptr && ch->in_room != nullptr)
 				{
 					ch->was_in_room = ch->in_room;
 
-					if (ch->fighting != NULL)
+					if (ch->fighting != nullptr)
 						stop_fighting(ch, true);
 
-					act("$n disappears into the void.", ch, NULL, NULL, TO_ROOM);
+					act("$n disappears into the void.", ch, nullptr, nullptr, TO_ROOM);
 					send_to_char("You disappear into the void.\n\r", ch);
 
 					if (ch->level > 1)
@@ -1346,13 +1346,13 @@ void char_update(void)
 			gain_condition(ch, COND_HUNGER, 1);
 		}
 
-		if (!is_npc(ch) && ch->desc == NULL)
+		if (!is_npc(ch) && ch->desc == nullptr)
 		{
 			/* nothing */
 		}
 		else
 		{
-			for (paf = ch->affected; paf != NULL; paf = paf_next)
+			for (paf = ch->affected; paf != nullptr; paf = paf_next)
 			{
 				paf_next = paf->next;
 				charm_gone= false;
@@ -1385,7 +1385,7 @@ void char_update(void)
 						break;
 				}
 				else if (paf->type == gsn_entwine
-					&& (paf->owner == NULL || (paf->owner && ch->in_room != paf->owner->in_room)))
+					&& (paf->owner == nullptr || (paf->owner && ch->in_room != paf->owner->in_room)))
 				{
 					affect_remove(ch, paf);
 				}
@@ -1416,7 +1416,7 @@ void char_update(void)
 						}
 					}
 
-					if (paf_next == NULL || paf_next->type != paf->type || paf_next->duration > 0)
+					if (paf_next == nullptr || paf_next->type != paf->type || paf_next->duration > 0)
 					{
 						if (paf->type > 0 && str_cmp(skill_table[paf->type].msg_off, ""))
 						{
@@ -1453,11 +1453,11 @@ void char_update(void)
 	 * Autosave and autoquit.
 	 * Check that these chars still exist.
 	 */
-	for (ch = char_list; ch != NULL; ch = ch_next)
+	for (ch = char_list; ch != nullptr; ch = ch_next)
 	{
 		ch_next = ch->next;
 
-		if (ch->desc != NULL && ch->desc->descriptor % 3 == save_number)
+		if (ch->desc != nullptr && ch->desc->descriptor % 3 == save_number)
 			save_char_obj(ch);
 	}
 }
@@ -1473,7 +1473,7 @@ void obj_update(void)
 	OBJ_AFFECT_DATA *paf, *paf_next;
 	CHAR_DATA *owner, *cguard;
 
-	for (obj = object_list; obj != NULL; obj = obj_next)
+	for (obj = object_list; obj != nullptr; obj = obj_next)
 	{
 		CHAR_DATA *rch;
 		char *message;
@@ -1497,7 +1497,7 @@ void obj_update(void)
 		}
 
 		/* go through affects and decrement */
-		for (paf = obj->affected; paf != NULL; paf = paf_next)
+		for (paf = obj->affected; paf != nullptr; paf = paf_next)
 		{
 			paf_next = paf->next;
 
@@ -1594,33 +1594,33 @@ void obj_update(void)
 				continue;
 			}
 
-			act(message, obj->carried_by, obj, NULL, TO_CHAR);
+			act(message, obj->carried_by, obj, nullptr, TO_CHAR);
 			obj_from_char(obj);
 			obj_to_char(obj, cguard);
 			obj->timer = 0;
 			continue;
 		}
 
-		if (obj->carried_by != NULL)
+		if (obj->carried_by != nullptr)
 		{
-			if (is_npc(obj->carried_by) && obj->carried_by->pIndexData->pShop != NULL)
+			if (is_npc(obj->carried_by) && obj->carried_by->pIndexData->pShop != nullptr)
 			{
 				obj->carried_by->gold++;
 			}
 			else
 			{
-				act(message, obj->carried_by, obj, NULL, TO_CHAR);
+				act(message, obj->carried_by, obj, nullptr, TO_CHAR);
 
 				if (obj->wear_loc == WEAR_FLOAT)
-					act(message, obj->carried_by, obj, NULL, TO_ROOM);
+					act(message, obj->carried_by, obj, nullptr, TO_ROOM);
 			}
 		}
-		else if (obj->in_room != NULL && (rch = obj->in_room->people) != NULL)
+		else if (obj->in_room != nullptr && (rch = obj->in_room->people) != nullptr)
 		{
 			if (!(obj->in_obj && obj->in_obj->pIndexData->vnum == OBJ_VNUM_PIT && !can_wear(obj->in_obj, ITEM_TAKE)))
 			{
-				act(message, rch, obj, NULL, TO_ROOM);
-				act(message, rch, obj, NULL, TO_CHAR);
+				act(message, rch, obj, nullptr, TO_ROOM);
+				act(message, rch, obj, nullptr, TO_CHAR);
 			}
 		}
 
@@ -1630,10 +1630,10 @@ void obj_update(void)
 			OBJ_DATA *t_obj, *next_obj, *pit_obj;
 
 			/* Put items into the pit that the player recalls to */
-			if (obj->in_room != NULL && is_explore(obj->in_room))
+			if (obj->in_room != nullptr && is_explore(obj->in_room))
 			{
 				// Gear to char
-				for (owner = char_list; owner != NULL; owner = owner->next)
+				for (owner = char_list; owner != nullptr; owner = owner->next)
 				{
 					if (!is_npc(owner) && !str_cmp(owner->true_name, obj->owner))
 					{
@@ -1642,7 +1642,7 @@ void obj_update(void)
 							send_to_char("Your corpse decays.\n\r", owner);
 
 							// It's their corpse.
-							for (t_obj = obj->contains; t_obj != NULL; t_obj = next_obj)
+							for (t_obj = obj->contains; t_obj != nullptr; t_obj = next_obj)
 							{
 								next_obj = t_obj->next_content;
 								act_new("$p returns to you.", owner, t_obj, 0, TO_CHAR, POS_DEAD);
@@ -1672,7 +1672,7 @@ void obj_update(void)
 			else
 				pit_obj = get_obj_type(get_obj_index(OBJ_VNUM_PIT));
 
-			for (t_obj = obj->contains; t_obj != NULL; t_obj = next_obj)
+			for (t_obj = obj->contains; t_obj != nullptr; t_obj = next_obj)
 			{
 				next_obj = t_obj->next_content;
 				obj_from_obj(t_obj);
@@ -1712,7 +1712,7 @@ void track_update(void)
 	CHAR_DATA *tch_next;
 	char buf[MAX_STRING_LENGTH];
 
-	for (tch = char_list; tch != NULL; tch = tch_next)
+	for (tch = char_list; tch != nullptr; tch = tch_next)
 	{
 		tch_next = tch->next;
 
@@ -1758,7 +1758,7 @@ void track_update(void)
 			tch->tracktimer--;
 
 		if (tch->tracktimer == 0)
-			tch->last_fought = NULL;
+			tch->last_fought = nullptr;
 	}
 }
 
@@ -1789,7 +1789,7 @@ void aggr_update(void)
 	int timer;
 	char buf[MAX_STRING_LENGTH];
 
-	for (wch = char_list; wch != NULL; wch = wch_next)
+	for (wch = char_list; wch != nullptr; wch = wch_next)
 	{
 		wch_next = wch->next;
 
@@ -1836,9 +1836,9 @@ void aggr_update(void)
 		if (wch->position == POS_SLEEPING && IS_SET(wch->imm_flags, IMM_SLEEP))
 			wch->position = POS_STANDING;
 
-		if (is_affected_by(wch, AFF_RAGE) && is_awake(wch) && !wch->fighting && !(wch->desc == NULL && !is_npc(wch)))
+		if (is_affected_by(wch, AFF_RAGE) && is_awake(wch) && !wch->fighting && !(wch->desc == nullptr && !is_npc(wch)))
 		{
-			for (vch = wch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = wch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1884,7 +1884,7 @@ void aggr_update(void)
 
 		if (!is_npc(wch) && is_affected(wch, gsn_divine_frenzy) && is_awake(wch) && !wch->fighting)
 		{
-			for (vch = wch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = wch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1912,7 +1912,7 @@ void aggr_update(void)
 		if (is_affected(wch, gsn_mark_of_wrath)
 			&& is_awake(wch)
 			&& !wch->fighting
-			&& !(wch->desc == NULL && !is_npc(wch)))
+			&& !(wch->desc == nullptr && !is_npc(wch)))
 		{
 			paf = affect_find(wch->affected, gsn_mark_of_wrath);
 
@@ -1945,10 +1945,10 @@ void aggr_update(void)
 			}
 		}
 
-		if (is_npc(wch) || wch->level >= LEVEL_IMMORTAL || wch->in_room == NULL || wch->in_room->area->empty)
+		if (is_npc(wch) || wch->level >= LEVEL_IMMORTAL || wch->in_room == nullptr || wch->in_room->area->empty)
 			continue;
 
-		for (ch = wch->in_room->people; ch != NULL; ch = ch_next)
+		for (ch = wch->in_room->people; ch != nullptr; ch = ch_next)
 		{
 			int count;
 
@@ -1959,7 +1959,7 @@ void aggr_update(void)
 				|| IS_SET(ch->in_room->room_flags, ROOM_SAFE)
 				|| (is_npc(ch) && is_affected_by(ch, AFF_NOSHOW))
 				|| is_affected_by(ch, AFF_CALM)
-				|| ch->fighting != NULL
+				|| ch->fighting != nullptr
 				|| is_affected_by(ch, AFF_CHARM)
 				|| !is_awake(ch)
 				|| (IS_SET(ch->act, ACT_WIMPY) && is_awake(wch))
@@ -1975,9 +1975,9 @@ void aggr_update(void)
 			 *   giving each 'vch' an equal chance of selection.
 			 */
 			count = 0;
-			victim = NULL;
+			victim = nullptr;
 
-			for (vch = wch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = wch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1999,7 +1999,7 @@ void aggr_update(void)
 				}
 			}
 
-			if (victim == NULL)
+			if (victim == nullptr)
 				continue;
 
 			multi_hit(ch, victim, TYPE_UNDEFINED);
@@ -2085,7 +2085,7 @@ void age_update(void)
 	bool timedied= false;
 	char *cname;
 
-	for (ch = char_list; ch != NULL; ch = ch_next)
+	for (ch = char_list; ch != nullptr; ch = ch_next)
 	{
 		ch_next = ch->next;
 
@@ -2110,7 +2110,7 @@ void age_update(void)
 			{
 				act("$n slowly fades away as $s souls departs the mortal planes.", ch, 0, 0, TO_ROOM);
 				send_to_char("Your soul finally departs the mortal planes.\n\r", ch);
-				wiznet("$N has finally died of old age.", ch, NULL, 0, 0, 0);
+				wiznet("$N has finally died of old age.", ch, nullptr, 0, 0, 0);
 
 				perm_death_log(ch, 3);
 				plug_graveyard(ch, 2);
@@ -2144,7 +2144,7 @@ void age_update(void)
 		ch->pcdata->death_timer = 50;
 		ch->pcdata->death_status = HAS_DIED;
 
-		wiznet("$N has become an old age ghost.", ch, NULL, 0, 0, 0);
+		wiznet("$N has become an old age ghost.", ch, nullptr, 0, 0, 0);
 		timedied= false;
 	}
 }
@@ -2235,7 +2235,7 @@ void update_handler(void)
 
 	if (--pulse_point <= 0)
 	{
-		wiznet("TICK!", NULL, NULL, WIZ_TICKS, 0, 0);
+		wiznet("TICK!", nullptr, nullptr, WIZ_TICKS, 0, 0);
 		pulse_point = number_range(PULSE_TICK - 5, PULSE_TICK + 5);
 
 		time_update();
@@ -2257,7 +2257,7 @@ void update_handler(void)
 
 void do_forcetick(CHAR_DATA *ch, char *argument)
 {
-	wiznet("TICK!", NULL, NULL, WIZ_TICKS, 0, 0);
+	wiznet("TICK!", nullptr, nullptr, WIZ_TICKS, 0, 0);
 
 	time_update();
 	char_update();
@@ -2297,7 +2297,7 @@ void affect_update(void)
 			ch->name = palloc_string(ch->backup_true_name);
 			ch->true_name = palloc_string(ch->backup_true_name);
 
-			wiznet("ERROR: $N had corrupt name!  Name has been properly repaired.  Check for other errors.", ch, NULL, 0, 0, 0);
+			wiznet("ERROR: $N had corrupt name!  Name has been properly repaired.  Check for other errors.", ch, nullptr, 0, 0, 0);
 			sprintf(buf, "Error: %s has corrupt name.  Repaired.\n\r", ch->true_name);
 			bug(buf, 0);
 			log_string(buf);
@@ -2366,7 +2366,7 @@ void room_update(void)
 
 		room_next = room->aff_next;
 
-		for (paf = room->affected; paf != NULL; paf = paf_next)
+		for (paf = room->affected; paf != nullptr; paf = paf_next)
 		{
 			paf_next = paf->next;
 
@@ -2406,13 +2406,13 @@ void room_affect_update(void)
 			OBJ_DATA *well;
 			char *dirname;
 
-			for (af = room->affected; af != NULL; af = af->next)
+			for (af = room->affected; af != nullptr; af = af->next)
 			{
 				if (af->type == gsn_gravity_well)
 					break;
 			}
 
-			for (well = object_list; well != NULL; well = well->next)
+			for (well = object_list; well != nullptr; well = well->next)
 			{
 				if (well->item_type == ITEM_GRAVITYWELL && well->in_room && well->in_room == room)
 					break;
@@ -2427,7 +2427,7 @@ void room_affect_update(void)
 			direction = 0;
 			for (auto rexit : room->exit)
 			{
-				if (rexit == NULL)
+				if (rexit == nullptr)
 					continue;
 
 				droom = rexit->u1.to_room;
@@ -2435,12 +2435,12 @@ void room_affect_update(void)
 
 				for (distance = 0; distance <= well_grav_distance; distance++)
 				{
-					if (droom == prevroom || droom == room || droom == NULL)
+					if (droom == prevroom || droom == room || droom == nullptr)
 						break;
 
 					if (droom->people)
 					{
-						for (victim = droom->people; victim != NULL; victim = v_next)
+						for (victim = droom->people; victim != nullptr; victim = v_next)
 						{
 							v_next = victim->next_in_room;
 
@@ -2484,7 +2484,7 @@ void room_affect_update(void)
 
 		if (is_affected_room(room, gsn_vacuum))
 		{
-			for (af = room->affected; af != NULL; af = af->next)
+			for (af = room->affected; af != nullptr; af = af->next)
 			{
 				if (af->type == gsn_vacuum)
 					break;
@@ -2498,13 +2498,13 @@ void room_affect_update(void)
 
 				for (auto rexit : room->exit)
 				{
-					if (rexit != NULL && !IS_SET(rexit->exit_info, EX_CLOSED))
+					if (rexit != nullptr && !IS_SET(rexit->exit_info, EX_CLOSED))
 						roomcount++;
 				}
 
 				if (roomcount == 0)
 				{
-					for (vch = room->people; vch != NULL; vch = v_next)
+					for (vch = room->people; vch != nullptr; vch = v_next)
 					{
 						v_next = vch->next_in_room;
 
@@ -2512,7 +2512,7 @@ void room_affect_update(void)
 							continue;
 
 						send_to_char("Your lungs burn furiously, desperate for air!\n\r", vch);
-						damage_new(vch, vch, dice(10, 5) + 5, TYPE_HIT + attack_lookup("asphyxiation"), DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+						damage_new(vch, vch, dice(10, 5) + 5, TYPE_HIT + attack_lookup("asphyxiation"), DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 					}
 				}
 				else
@@ -2524,7 +2524,7 @@ void room_affect_update(void)
 
 		if (is_affected_room(room, gsn_earthquake))
 		{
-			for (af = room->affected; af != NULL; af = af->next)
+			for (af = room->affected; af != nullptr; af = af->next)
 			{
 				if (af->type == gsn_earthquake)
 					break;
@@ -2532,7 +2532,7 @@ void room_affect_update(void)
 
 			if (number_range(1, 4) == 1)
 			{
-				for (vch = room->people; vch != NULL; vch = v_next)
+				for (vch = room->people; vch != nullptr; vch = v_next)
 				{
 					v_next = vch->next_in_room;
 
@@ -2554,7 +2554,7 @@ void room_affect_update(void)
 
 		if (is_affected_room(room, gsn_tidalwave))
 		{
-			for (af = room->affected; af != NULL; af = af->next)
+			for (af = room->affected; af != nullptr; af = af->next)
 			{
 				if (af->type == gsn_tidalwave && af->location == APPLY_ROOM_NONE)
 					break;
@@ -2562,7 +2562,7 @@ void room_affect_update(void)
 
 			if (af->modifier == 1)
 			{
-				for (vch = room->people; vch != NULL; vch = vch->next_in_room)
+				for (vch = room->people; vch != nullptr; vch = vch->next_in_room)
 				{
 					sprintf(buf, "%sA towering tidal wave obscures the entire horizon, approaching rapidly!%s\n\r",
 						get_char_color(vch, "cyan"),
@@ -2574,13 +2574,13 @@ void room_affect_update(void)
 			}
 			else if (af->modifier == 0)
 			{
-				for (af2 = room->affected; af2 != NULL; af2 = af2->next)
+				for (af2 = room->affected; af2 != nullptr; af2 = af2->next)
 				{
 					if (af2->type == gsn_tidalwave && af2->location == APPLY_ROOM_NOPE)
 						break;
 				}
 
-				for (vch = room->people; vch != NULL; vch = vch->next_in_room)
+				for (vch = room->people; vch != nullptr; vch = vch->next_in_room)
 				{
 					sprintf(buf, "%sA massive tidal wave rolls in, engulfing the area!%s\n\r",
 						get_char_color(vch, "cyan"),
@@ -2588,7 +2588,7 @@ void room_affect_update(void)
 					send_to_char(buf, vch);
 				}
 
-				for (vch = room->people; vch != NULL; vch = v_next)
+				for (vch = room->people; vch != nullptr; vch = v_next)
 				{
 					v_next = vch->next_in_room;
 
@@ -2603,12 +2603,12 @@ void room_affect_update(void)
 						if (vch->in_room == af->owner->in_room)
 						{
 							sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", pers(af->owner, vch));
-							do_myell(vch, buf, NULL);
+							do_myell(vch, buf, nullptr);
 						}
 						else
 						{
 							sprintf(buf, "Help! I'm being drowned by a tidal wave!");
-							do_myell(vch, buf, NULL);
+							do_myell(vch, buf, nullptr);
 						}
 					}
 
@@ -2617,14 +2617,14 @@ void room_affect_update(void)
 
 				if (room->sector_type != SECT_WATER)
 				{
-					for (vch = room->people; vch != NULL; vch = vch->next_in_room)
+					for (vch = room->people; vch != nullptr; vch = vch->next_in_room)
 					{
 						sprintf(buf, "%sAs the tidal wave reaches land, the accumulated mass of water comes crashing down upon you!%s\n\r",
 							get_char_color(vch, "cyan"),
 							END_COLOR(vch));
 						send_to_char(buf, vch);
 					}
-					for (vch = room->people; vch != NULL; vch = v_next)
+					for (vch = room->people; vch != nullptr; vch = v_next)
 					{
 						v_next = vch->next_in_room;
 
@@ -2652,11 +2652,11 @@ void room_affect_update(void)
 		{
 			if (room->people)
 			{
-				for (vch = room->people; vch != NULL; vch = v_next)
+				for (vch = room->people; vch != nullptr; vch = v_next)
 				{
 					v_next = vch->next_in_room;
 
-					for (af = vch->in_room->affected; af != NULL; af = af->next)
+					for (af = vch->in_room->affected; af != nullptr; af = af->next)
 					{
 						if (af->type == gsn_caustic_vapor)
 							break;
@@ -2681,7 +2681,7 @@ void room_affect_update(void)
 							new_affect_to_char(vch, &cvaf);
 						}
 
-						for (paf = vch->affected; paf != NULL; paf = paf->next)
+						for (paf = vch->affected; paf != nullptr; paf = paf->next)
 						{
 							if (paf->type == gsn_noxious_fumes)
 								break;
@@ -2742,7 +2742,7 @@ void room_affect_update(void)
 		}
 	}
 
-	for (room = room_list; room != NULL; room = room->next_room)
+	for (room = room_list; room != nullptr; room = room->next_room)
 	{
 		// cyke
 
@@ -2754,7 +2754,7 @@ void room_affect_update(void)
 					break;
 			}
 
-			for (obj = room->contents; obj != NULL; obj = obj->next_content)
+			for (obj = room->contents; obj != nullptr; obj = obj->next_content)
 			{
 				if (!obj->in_room || obj->in_room != room)
 					continue;
@@ -2789,7 +2789,7 @@ void room_affect_update(void)
 				dam = dice(obj->weight + 1, 8);
 				damage_new(aaf->owner, victim, dam, skill_lookup("cyclone"), DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the flying debris*");
 			}
-			for (victim = room->people; victim != NULL; victim = v_next)
+			for (victim = room->people; victim != nullptr; victim = v_next)
 			{
 				v_next = victim->next_in_room;
 				chance = 8;
@@ -2816,11 +2816,11 @@ void room_affect_update(void)
 			}
 		}
 	}
-	for (ch = char_list; ch != NULL; ch = ch->next)
+	for (ch = char_list; ch != nullptr; ch = ch->next)
 	{
 		dam = 0;
 
-		for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+		for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 		{
 			if (is_affected_by(obj, AFF_OBJ_BURNING))
 				dam += is_worn(obj) ? 8 : 4;
@@ -2848,7 +2848,7 @@ void iprog_pulse_update(bool isTick)
 	EXIT_DATA *pexit;
 	int door;
 
-	for (obj = object_list; obj != NULL; obj = obj_next)
+	for (obj = object_list; obj != nullptr; obj = obj_next)
 	{
 		obj_next = obj->next;
 
@@ -2866,7 +2866,7 @@ void iprog_pulse_update(bool isTick)
 					door = number_range(0, 3);
 					pexit = obj->in_room->exit[door];
 
-					if (pexit != NULL && (to_room = pexit->u1.to_room) != NULL && to_room->sector_type == SECT_WATER)
+					if (pexit != nullptr && (to_room = pexit->u1.to_room) != nullptr && to_room->sector_type == SECT_WATER)
 					{
 						if (obj->in_room->people)
 						{
@@ -2897,7 +2897,7 @@ void iprog_pulse_update(bool isTick)
 		{
 			if (number_range(0, 5) == 0)
 			{
-				if ((obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC) && obj->contains == NULL)
+				if ((obj->item_type == ITEM_CORPSE_PC || obj->item_type == ITEM_CORPSE_NPC) && obj->contains == nullptr)
 				{
 					door = Directions::Up;
 				}
@@ -2908,7 +2908,7 @@ void iprog_pulse_update(bool isTick)
 
 				pexit = obj->in_room->exit[door];
 
-				if (pexit != NULL && (to_room = pexit->u1.to_room) != NULL)
+				if (pexit != nullptr && (to_room = pexit->u1.to_room) != nullptr)
 				{
 					if (door == Directions::Up)
 					{
@@ -2945,7 +2945,7 @@ void iprog_pulse_update(bool isTick)
 			}
 		}
 
-		if ((obj->in_room != NULL && obj->in_room->area->nplayer > 0)
+		if ((obj->in_room != nullptr && obj->in_room->area->nplayer > 0)
 		|| (obj->carried_by && obj->carried_by->in_room && obj->carried_by->in_room->area->nplayer > 0))
 		{
 			if (IS_SET(obj->progtypes, IPROG_PULSE))
@@ -2962,13 +2962,13 @@ bool do_mob_cast(CHAR_DATA *ch)
 	short i, sn, rnd, in_room = 0, room_occupant = 0;
 	CHAR_DATA *vch, *victim;
 
-	if (!is_npc(ch) || !ch->fighting || ch->pIndexData->cast_spell[0] == NULL)
+	if (!is_npc(ch) || !ch->fighting || ch->pIndexData->cast_spell[0] == nullptr)
 		return false;
 
 	for (;;)
 	{
 		i = number_range(0, 9);
-		if (ch->pIndexData->cast_spell[i] != NULL)
+		if (ch->pIndexData->cast_spell[i] != nullptr)
 			break;
 	}
 
@@ -2982,7 +2982,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 	//
 	if (skill_table[sn].target == TAR_CHAR_OFFENSIVE)
 	{
-		for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
+		for (victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 		{
 			if (victim && !is_npc(victim) && victim->fighting && victim->fighting == ch)
 				in_room++;
@@ -2990,7 +2990,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 
 		rnd = number_range(1, in_room);
 
-		for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+		for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 		{
 			if (!is_npc(vch) && vch->fighting == ch)
 				room_occupant++;
@@ -2999,7 +2999,7 @@ bool do_mob_cast(CHAR_DATA *ch)
 				break;
 		}
 
-		victim = vch != NULL ? vch : ch->fighting;
+		victim = vch != nullptr ? vch : ch->fighting;
 	}
 
 	if (skill_table[sn].target == TAR_CHAR_DEFENSIVE)
@@ -3091,12 +3091,12 @@ ROOM_INDEX_DATA *get_random_exit(ROOM_INDEX_DATA *room)
 			return room->exit[exit]->u1.to_room;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 CHAR_DATA *get_random_ch(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 {
-	CHAR_DATA *vch, *victim = NULL;
+	CHAR_DATA *vch, *victim = nullptr;
 	int now = 0, highest = 0;
 
 	for (vch = room->people; vch; vch = vch->next_in_room)
@@ -3116,7 +3116,7 @@ CHAR_DATA *get_random_ch(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 
 CHAR_DATA *get_rand_from_room(ROOM_INDEX_DATA *room)
 {
-	CHAR_DATA *vch, *victim = NULL;
+	CHAR_DATA *vch, *victim = nullptr;
 	int now = 0, highest = 0;
 
 	for (vch = room->people; vch; vch = vch->next_in_room)

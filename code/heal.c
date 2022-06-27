@@ -60,7 +60,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	int cost, sn, mod_cost, level = 0;
 	SPELL_FUN *spell;
 	char *words;
-	OBJ_DATA *cursed = NULL;
+	OBJ_DATA *cursed = nullptr;
 
 	/* check for healer */
 	for (mob = ch->in_room->people; mob; mob = mob->next_in_room)
@@ -69,7 +69,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 			break;
 	}
 
-	if (mob == NULL)
+	if (mob == nullptr)
 	{
 		send_to_char("You can't do that here.\n\r", ch);
 		return;
@@ -95,7 +95,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	if (arg[0] == '\0')
 	{
 		/* display price list */
-		act("$N says 'I offer the following spells:'", ch, NULL, mob, TO_CHAR);
+		act("$N says 'I offer the following spells:'", ch, nullptr, mob, TO_CHAR);
 
 		mod_cost = (int)get_mod_cost(mob, 2500);
 		sprintf(buf, "  heal   : healing spell            %6d gold\n\r", mod_cost);
@@ -212,7 +212,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_prefix(arg, "mana") || !str_prefix(arg, "energize"))
 	{
-		spell = NULL;
+		spell = nullptr;
 		sn = -1;
 		words = "energizer";
 		cost = 500;
@@ -226,7 +226,7 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("$N says 'Type 'heal' for a list of spells.'", ch, NULL, mob, TO_CHAR);
+		act("$N says 'Type 'heal' for a list of spells.'", ch, nullptr, mob, TO_CHAR);
 		return;
 	}
 
@@ -241,9 +241,9 @@ void do_heal(CHAR_DATA *ch, char *argument)
 	WAIT_STATE(ch, (ch->cabal == CABAL_HORDE) ? (PULSE_VIOLENCE * 3) : PULSE_VIOLENCE);
 
 	deduct_cost(ch, cost);
-	act("$n utters the words '$T'.", mob, NULL, words, TO_ROOM);
+	act("$n utters the words '$T'.", mob, nullptr, words, TO_ROOM);
 
-	if (spell == NULL)
+	if (spell == nullptr)
 	{
 		ch->mana += dice(4, 8) + mob->level / 3;
 		ch->mana = std::min(ch->mana, ch->max_mana);

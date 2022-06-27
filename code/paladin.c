@@ -35,7 +35,7 @@ void spell_rites_of_preparation(int sn, int level, CHAR_DATA *ch, void *vo, int 
 		return;
 	}
 
-	for (to = ch->in_room->people; to != NULL; to = to->next_in_room)
+	for (to = ch->in_room->people; to != nullptr; to = to->next_in_room)
 	{
 		if (is_same_group(to, ch) && to != ch)
 			hasgroup = true;
@@ -161,7 +161,7 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 	act("You raise your hands aloft and extend an aura of purity about you.", ch, 0, 0, TO_CHAR);
 	act("$n raises $s hands aloft, and a faint aura billows out from $s form.", ch, 0, 0, TO_ROOM);
 
-	for (victim = ch->in_room->people; victim != NULL; victim = v_next)
+	for (victim = ch->in_room->people; victim != nullptr; victim = v_next)
 	{
 		v_next = victim->next_in_room;
 
@@ -181,7 +181,7 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 		{
 			dam = dice(ch->level, 20);
 			act("$n is suddenly engulfed by holy fire!", victim, 0, ch, TO_ROOM);
-			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			forceflee = true;
 		}
 		else if (difference > -5)
@@ -192,7 +192,7 @@ void do_turn_undead(CHAR_DATA *ch, char *argument)
 			if (number_percent() > 50)
 				forceflee = true;
 
-			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, victim, dam, gsn_turn_undead, DAM_HOLY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 		}
 		else
 		{
@@ -263,7 +263,7 @@ bool check_intercept(CHAR_DATA *ch, CHAR_DATA *victim, CHAR_DATA *paladin, int d
 	if ((skill = get_skill(paladin, gsn_intercept)) <= 1)
 		return false;
 
-	if (get_eq_char(paladin, WEAR_SHIELD) == NULL)
+	if (get_eq_char(paladin, WEAR_SHIELD) == nullptr)
 		return false;
 
 	if (paladin == victim)
@@ -329,7 +329,7 @@ void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You bring forth an orb of blinding light to sear the eyes of your foes!", ch, 0, 0, TO_CHAR);
 	act("$n calls forth a brilliant orb of radiant light!", ch, 0, 0, TO_ROOM);
 
-	for (victim = ch->in_room->people; victim != NULL; victim = vch_next)
+	for (victim = ch->in_room->people; victim != nullptr; victim = vch_next)
 	{
 		vch_next = victim->next_in_room;
 
@@ -372,7 +372,7 @@ void spell_blinding_orb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (!victim->fighting && !is_npc(victim))
 			do_myell(victim, buf2, ch);
 
-		damage_new(ch, victim, dam, sn, DAM_LIGHT, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dam, sn, DAM_LIGHT, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 		if (!saves_spell(ch->level, victim, DAM_LIGHT) && !is_affected_by(victim, AFF_BLIND))
 		{
@@ -401,7 +401,7 @@ void spell_voice_of_damnation(int sn, int level, CHAR_DATA *ch, void *vo, int ta
 	act("Imbued with the strength of your god, you threaten those around you with eternal damnation!", ch, 0, victim, TO_CHAR);
 	act("$N shouts threats of damnation in a strange and powerful voice!", victim, 0, ch, TO_ROOM);
 
-	for (victim = ch->in_room->people; victim != NULL; victim = vch_next)
+	for (victim = ch->in_room->people; victim != nullptr; victim = vch_next)
 	{
 		vch_next = victim->next_in_room;
 
@@ -422,7 +422,7 @@ void spell_voice_of_damnation(int sn, int level, CHAR_DATA *ch, void *vo, int ta
 		}
 
 		act("The terrifying voice resounds in your head, filling you with fear about your fate!", ch, 0, victim, TO_VICT);
-		damage_new(ch, victim, dice(ch->level, 5), sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(ch->level, 5), sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 		WAIT_STATE(victim, PULSE_VIOLENCE * 1);
 	}
 }
@@ -474,7 +474,7 @@ void spell_arms_of_light(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	target_name = one_argument(target_name, arg);
 
-	if ((weapon = get_obj_carry(ch, arg, ch)) == NULL)
+	if ((weapon = get_obj_carry(ch, arg, ch)) == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
@@ -536,7 +536,7 @@ void spell_arms_of_purity(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	OBJ_AFFECT_DATA oaf;
 	target_name = one_argument(target_name, arg);
 
-	if ((weapon = get_obj_carry(ch, arg, ch)) == NULL)
+	if ((weapon = get_obj_carry(ch, arg, ch)) == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
@@ -598,7 +598,7 @@ void spell_arms_of_wrath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	target_name = one_argument(target_name, arg);
 
-	if ((weapon = get_obj_carry(ch, arg, ch)) == NULL)
+	if ((weapon = get_obj_carry(ch, arg, ch)) == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
@@ -661,7 +661,7 @@ void spell_arms_of_judgement(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 
 	target_name = one_argument(target_name, arg);
 
-	if ((weapon = get_obj_carry(ch, arg, ch)) == NULL)
+	if ((weapon = get_obj_carry(ch, arg, ch)) == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
@@ -727,7 +727,7 @@ void do_strike_of_virtue(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (weapon == NULL)
+	if (weapon == nullptr)
 	{
 		send_to_char("You must be wielding a weapon.\n\r", ch);
 		return;
@@ -738,7 +738,7 @@ void do_strike_of_virtue(CHAR_DATA *ch, char *argument)
 		act("$n brings $s $p around for a particularly brutal blow!", ch, weapon, 0, TO_ROOM);
 		act("You deliver a brutal blow to $N!", ch, 0, victim, TO_CHAR);
 
-		one_hit_new(ch, victim, gsn_strike_of_virtue, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, NULL);
+		one_hit_new(ch, victim, gsn_strike_of_virtue, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, nullptr);
 		check_improve(ch, gsn_strike_of_virtue, true, 1);
 	}
 	else
@@ -784,10 +784,10 @@ void spell_divine_frenzy(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void do_group_retreat(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	CHAR_DATA *to = NULL;
+	CHAR_DATA *to = nullptr;
 	CHAR_DATA *vch, *vch_next;
 	CHAR_DATA *victim = ch->fighting;
-	ROOM_INDEX_DATA *to_room = NULL;
+	ROOM_INDEX_DATA *to_room = nullptr;
 	char buf[MAX_INPUT_LENGTH];
 	EXIT_DATA *pexit;
 	int dir;
@@ -849,18 +849,18 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 	if (skill - 10 < number_percent())
 	{
 		WAIT_STATE(ch, PULSE_VIOLENCE);
-		for (to = ch->in_room->people; to != NULL; to = to->next_in_room)
+		for (to = ch->in_room->people; to != nullptr; to = to->next_in_room)
 		{
 			if (is_same_group(victim, to))
-				one_hit_new(to, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, NULL);
+				one_hit_new(to, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, nullptr);
 		}
 
 		send_to_char("You expose yourself to your foes, but fail to cover your group's retreat!\n\r", ch);
 		return;
 	}
 
-	if (pexit != NULL
-		&& ((to_room = pexit->u1.to_room) != NULL)
+	if (pexit != nullptr
+		&& ((to_room = pexit->u1.to_room) != nullptr)
 		&& (!IS_SET(pexit->exit_info, EX_CLOSED)
 			|| ((IS_SET(pexit->exit_info, EX_CLOSED)
 				&& is_affected_by(ch, AFF_PASS_DOOR))
@@ -871,12 +871,12 @@ void do_group_retreat(CHAR_DATA *ch, char *argument)
 		act("You quickly position yourself to cover your group's retreat!", ch, 0, 0, TO_CHAR);
 		act("$n positions $mself to cover $s group's retreat!", ch, 0, 0, TO_ROOM);
 
-		for (to = ch->in_room->people; to != NULL; to = vch_next)
+		for (to = ch->in_room->people; to != nullptr; to = vch_next)
 		{
 			vch_next = to->next_in_room;
 
 			if (is_same_group(victim, to))
-				one_hit_new(to, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+				one_hit_new(to, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 			if (is_same_group(to, ch) && to != ch)
 			{
@@ -919,7 +919,7 @@ void do_valiant_charge(CHAR_DATA *ch, char *argument)
 		send_to_char("Lead a charge against whom?\n\r", ch);
 		return;
 	}
-	else if ((victim = get_char_room(ch, arg)) == NULL)
+	else if ((victim = get_char_room(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -937,7 +937,7 @@ void do_valiant_charge(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (to = ch->in_room->people; to != NULL; to = to->next_in_room)
+	for (to = ch->in_room->people; to != nullptr; to = to->next_in_room)
 	{
 		if (is_same_group(ch, to) && to != ch)
 		{
@@ -956,15 +956,15 @@ void do_valiant_charge(CHAR_DATA *ch, char *argument)
 	act("$n drops his guard and charges directly into you!", ch, 0, victim, TO_VICT);
 	act("You charge into combat, opening the way for others to strike!", ch, 0, victim, TO_CHAR);
 
-	for (to = ch->in_room->people; to != NULL; to = to->next_in_room)
+	for (to = ch->in_room->people; to != nullptr; to = to->next_in_room)
 	{
 		if (is_same_group(victim, to))
-			one_hit_new(to, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			one_hit_new(to, ch, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 		if (is_same_group(ch, to) && to != ch && count < 5)
 		{
 			count++;
-			one_hit_new(to, victim, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			one_hit_new(to, victim, TYPE_UNDEFINED, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 		}
 	}
 
@@ -1001,7 +1001,7 @@ void spell_shield_of_faith(int level, int sn, CHAR_DATA *ch, void *vo, int targe
 	AFFECT_DATA af;
 	CHAR_DATA *to = (CHAR_DATA *)vo;
 
-	if (to == NULL)
+	if (to == nullptr)
 		to = ch;
 
 	if (is_affected(ch, gsn_shield_of_faith) && ch == to)
@@ -1036,7 +1036,7 @@ void spell_holy_shroud(int level, int sn, CHAR_DATA *ch, void *vo, int target)
 	AFFECT_DATA af;
 	CHAR_DATA *to = (CHAR_DATA *)vo;
 
-	if (to == NULL)
+	if (to == nullptr)
 		to = ch;
 
 	if (is_affected(ch, gsn_holy_shroud) && ch == to)
@@ -1254,7 +1254,7 @@ void ispirit_beat(CHAR_DATA *ch, AFFECT_DATA *af)
 
 		if (diff > (ch->mana / 2))
 		{
-			af->end_fun = NULL;
+			af->end_fun = nullptr;
 			affect_strip(ch, gsn_indomitable_spirit);
 
 			act("Your body collapses under the strain of your spiritual exertion.", ch, 0, 0, TO_CHAR);
@@ -1291,7 +1291,7 @@ void spell_altruism(int level, int sn, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (from_af = vict->affected; from_af != NULL; from_af = faf_next)
+	for (from_af = vict->affected; from_af != nullptr; from_af = faf_next)
 	{
 		faf_next = from_af->next;
 
@@ -1300,7 +1300,7 @@ void spell_altruism(int level, int sn, CHAR_DATA *ch, void *vo, int target)
 			init_affect(&to_af);
 			to_af.owner = from_af->owner;
 
-			if (from_af->name != NULL)
+			if (from_af->name != nullptr)
 				to_af.name = talloc_string(from_af->name);
 
 			to_af.valid = from_af->valid;

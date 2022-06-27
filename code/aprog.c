@@ -30,7 +30,7 @@ const struct improg_type aprog_table[] =
 	{ "tick_prog", "tick_prog_academy_reset", (void *)tick_prog_academy_reset, "None" },
 	{ "tick_prog", "tick_prog_ilopheth", (void*)tick_prog_ilopheth, "Valley of Ilopheth"},
 	{ "myell_prog", "myell_prog_lawful_city", (void*)myell_prog_lawful_city, "Cimar"},
-	{ NULL, NULL, NULL, NULL},
+	{ nullptr, nullptr, nullptr, nullptr},
 };
 
 bool aprog_unset(AREA_DATA *area, const char *progtype, const char *name)
@@ -48,37 +48,37 @@ bool aprog_unset(AREA_DATA *area, const char *progtype, const char *name)
 
 	if (!str_cmp(progtype, "pulse_prog"))
 	{
-		area->aprogs->pulse_prog = NULL;
+		area->aprogs->pulse_prog = nullptr;
 		free_pstring(area->aprogs->pulse_name);
 		REMOVE_BIT(area->progtypes, APROG_PULSE);
 	}
 	else if (!str_cmp(progtype, "reset_prog"))
 	{
-		area->aprogs->reset_prog = NULL;
+		area->aprogs->reset_prog = nullptr;
 		free_pstring(area->aprogs->reset_name);
 		REMOVE_BIT(area->progtypes, APROG_RESET);
 	}
 	else if (!str_cmp(progtype, "sun_prog"))
 	{
-		area->aprogs->sun_prog = NULL;
+		area->aprogs->sun_prog = nullptr;
 		free_pstring(area->aprogs->sun_name);
 		REMOVE_BIT(area->progtypes, APROG_SUN);
 	}
 	else if (!str_cmp(progtype, "tick_prog"))
 	{
-		area->aprogs->tick_prog = NULL;
+		area->aprogs->tick_prog = nullptr;
 		free_pstring(area->aprogs->tick_name);
 		REMOVE_BIT(area->progtypes, APROG_TICK);
 	}
 	else if (!str_cmp(progtype, "aggress_prog"))
 	{
-		area->aprogs->aggress_prog = NULL;
+		area->aprogs->aggress_prog = nullptr;
 		free_pstring(area->aprogs->aggress_name);
 		REMOVE_BIT(area->progtypes, APROG_AGGRESS);
 	}
 	else if (!str_cmp(progtype, "myell_prog"))
 	{
-		area->aprogs->myell_prog = NULL;
+		area->aprogs->myell_prog = nullptr;
 		free_pstring(area->aprogs->myell_name);
 		REMOVE_BIT(area->progtypes, APROG_MYELL);
 	}
@@ -226,7 +226,7 @@ void tick_prog_academy_reset(AREA_DATA *area)
 
 void tick_prog_ilopheth(AREA_DATA *area)
 {
-	OBJ_DATA *pedestal = NULL, *sphere = NULL, *old_portal = NULL, *new_portal = NULL, *obj;
+	OBJ_DATA *pedestal = nullptr, *sphere = nullptr, *old_portal = nullptr, *new_portal = nullptr, *obj;
 	ROOM_INDEX_DATA *pedroom = get_room_index(9096);
 	ROOM_INDEX_DATA *portroom = get_room_index(9114);
 	char buf[MSL];
@@ -360,7 +360,7 @@ void reset_prog_cimsewer(AREA_DATA *area)
 void pulse_prog_ruins_shark(AREA_DATA *area)
 {
 	DESCRIPTOR_DATA *d;
-	CHAR_DATA *shark, *ch = NULL;
+	CHAR_DATA *shark, *ch = nullptr;
 	int count = 0;
 
 	if (area->nplayer == 0)
@@ -386,7 +386,7 @@ void pulse_prog_ruins_shark(AREA_DATA *area)
 	for (d = descriptor_list; d; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
-			&& d->character->in_room != NULL
+			&& d->character->in_room != nullptr
 			&& d->character->in_room->area == area
 			&& number_percent() > 90)
 		{
