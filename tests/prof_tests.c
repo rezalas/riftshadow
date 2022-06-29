@@ -578,7 +578,7 @@ SCENARIO("retrieve a procifiency by its psn (int)", "[GetProficiency]")
 		{
 			auto player = new char_data();
 			player->Profs()->SetChar(player);
-			proficiency_type proficiency = { &psn_none, "", 0, 0, NULL, PFLAGS_NONE };
+			proficiency_type proficiency = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
 
 			THEN("it should return a blank proficiency")
 			{
@@ -623,7 +623,7 @@ SCENARIO("retrieve a procifiency by its psn (int)", "[GetProficiency]")
 				"mountaineering",
 				13,
 				1,
-				NULL,
+				nullptr,
 				PFLAGS_BASIC
 			};
 
@@ -654,7 +654,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 		{
 			auto player = new char_data();
 			player->Profs()->SetChar(player);
-			proficiency_type proficiency = { &psn_none, "", 0, 0, NULL, PFLAGS_NONE };
+			proficiency_type proficiency = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
 
 			THEN("it should return a blank proficiency")
 			{
@@ -678,7 +678,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 		{
 			auto player = new char_data();
 			player->Profs()->SetChar(player);
-			proficiency_type proficiency = { &psn_none, "", 0, 0, NULL, PFLAGS_NONE };
+			proficiency_type proficiency = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
 
 			THEN("it should return a blank proficiency")
 			{
@@ -703,7 +703,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 			auto player = new char_data();
 			player->Profs()->SetChar(player);
 			player->Profs()->SetProf(2, 1); // mountaineering
-			proficiency_type proficiency = { &psn_none, "", 0, 0, NULL, PFLAGS_NONE };
+			proficiency_type proficiency = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
 
 			THEN("it should return a blank proficiency")
 			{
@@ -736,7 +736,7 @@ SCENARIO("retrieve a procifiency by its psn (string)", "[GetProficiency]")
 				"mountaineering",
 				13,
 				1,
-				NULL,
+				nullptr,
 				PFLAGS_BASIC
 			};
 

@@ -124,7 +124,7 @@ void do_wiznet(CHAR_DATA *ch, char *argument)
 		if (!IS_SET(ch->wiznet, WIZ_ON))
 			strcat(buf, "off ");
 
-		for (flag = 0; wiznet_table[flag].name != NULL; flag++)
+		for (flag = 0; wiznet_table[flag].name != nullptr; flag++)
 		{
 			if (IS_SET(ch->wiznet, wiznet_table[flag].flag))
 			{
@@ -145,7 +145,7 @@ void do_wiznet(CHAR_DATA *ch, char *argument)
 	{
 		buf[0] = '\0';
 
-		for (flag = 0; wiznet_table[flag].name != NULL; flag++)
+		for (flag = 0; wiznet_table[flag].name != nullptr; flag++)
 		{
 			if (wiznet_table[flag].level <= get_trust(ch))
 			{
@@ -189,7 +189,7 @@ void wiznet(char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_ski
 {
 	char str[MAX_STRING_LENGTH];
 
-	for (DESCRIPTOR_DATA *d = descriptor_list; d != NULL; d = d->next)
+	for (DESCRIPTOR_DATA *d = descriptor_list; d != nullptr; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
 			&& d->character
@@ -232,7 +232,7 @@ void do_leader(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -254,7 +254,7 @@ void do_leader(CHAR_DATA *ch, char *argument)
 		victim->pcdata->induct = 0;
 
 		sprintf(buf, "AUTO: %s removed leadership.\n\r", ch->true_name);
-		add_history(NULL, victim, buf);
+		add_history(nullptr, victim, buf);
 		return;
 	}
 	else
@@ -268,7 +268,7 @@ void do_leader(CHAR_DATA *ch, char *argument)
 		update_cskills(victim);
 
 		sprintf(buf, "AUTO: %s gave leadership.\n\r", ch->true_name);
-		add_history(NULL, victim, buf);
+		add_history(nullptr, victim, buf);
 		return;
 	}
 
@@ -296,7 +296,7 @@ void do_smite(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -314,9 +314,9 @@ void do_smite(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("A bolt from the heavens smites $N!", ch, NULL, victim, TO_NOTVICT);
-	act("A bolt from the heavens smites you!", ch, NULL, victim, TO_VICT);
-	act("You smite $N!", ch, NULL, victim, TO_CHAR);
+	act("A bolt from the heavens smites $N!", ch, nullptr, victim, TO_NOTVICT);
+	act("A bolt from the heavens smites you!", ch, nullptr, victim, TO_VICT);
+	act("You smite $N!", ch, nullptr, victim, TO_CHAR);
 
 	victim->hit /= 2;
 }
@@ -402,7 +402,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -452,7 +452,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 				ch->true_name);
 
 			if (!is_immortal(victim))
-				add_history(NULL, victim, buf);
+				add_history(nullptr, victim, buf);
 
 			return;
 		}
@@ -500,7 +500,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "AUTO: Inducted into %s by %s.\n\r", capitalize(cabal_table[cabal].name), ch->true_name);
 	if (!is_immortal(victim))
-		add_history(NULL, victim, buf);
+		add_history(nullptr, victim, buf);
 
 	if (is_immortal(ch) && is_immortal(victim))
 	{
@@ -566,7 +566,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_BODY);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(body), 0);
 		obj->cost = 0;
@@ -575,7 +575,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	}
 	/*
 	obj = get_eq_char(ch, WEAR_HEAD);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3706), 0);
 		obj->cost = 0;
@@ -584,7 +584,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	}
 
 	obj = get_eq_char(ch, WEAR_NECK_1);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3705), 0);
 		obj->cost = 0;
@@ -593,7 +593,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	}
 
 	obj = get_eq_char(ch, WEAR_NECK_2);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3705), 0);
 		obj->cost = 0;
@@ -604,7 +604,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_LEGS);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(legs), 0);
 		obj->cost = 0;
@@ -614,7 +614,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_FEET);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(feet), 0);
 		obj->cost = 0;
@@ -624,7 +624,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_HANDS);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(hands), 0);
 		obj->cost = 0;
@@ -634,7 +634,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_ARMS);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(arms), 0);
 		obj->cost = 0;
@@ -644,7 +644,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	/*
 	obj = get_eq_char(ch, WEAR_ABOUT);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3711), 0);
 		obj->cost = 0;
@@ -653,7 +653,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	}
 
 	obj = get_eq_char(ch, WEAR_WAIST);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3712), 0);
 		obj->cost = 0;
@@ -662,7 +662,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	}
 
 	obj = get_eq_char(ch, WEAR_WRIST_L);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3713), 0);
 		obj->cost = 0;
@@ -671,7 +671,7 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	}
 
 	obj = get_eq_char(ch, WEAR_WRIST_R);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = create_object(get_obj_index(3713), 0);
 		obj->cost = 0;
@@ -683,12 +683,12 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 	/* do the weapon thing*/
 	obj = get_eq_char(ch, WEAR_WIELD);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		sn = 0;
 		vnum = OBJ_VNUM_SCHOOL_SWORD;
 
-		for (i = 0; weapon_table[i].name != NULL; i++)
+		for (i = 0; weapon_table[i].name != nullptr; i++)
 		{
 			if (ch->Class()->GetIndex() == CLASS_WARRIOR && ch->pcdata->start_weapon == i)
 			{
@@ -708,9 +708,9 @@ void do_outfit(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_WIELD);
 
-	if ((obj == NULL || !is_weapon_stat(obj, WEAPON_TWO_HANDS))
-		&& (obj = get_eq_char(ch, WEAR_LIGHT)) == NULL
-		&& (obj = get_eq_char(ch, WEAR_SHIELD)) == NULL)
+	if ((obj == nullptr || !is_weapon_stat(obj, WEAPON_TWO_HANDS))
+		&& (obj = get_eq_char(ch, WEAR_LIGHT)) == nullptr
+		&& (obj = get_eq_char(ch, WEAR_SHIELD)) == nullptr)
 	{
 		obj = create_object(get_obj_index(OBJ_VNUM_SCHOOL_SHIELD), 0);
 		obj->cost = 0;
@@ -772,7 +772,7 @@ void do_nochannels(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -792,7 +792,7 @@ void do_nochannels(CHAR_DATA *ch, char *argument)
 		send_to_char("NOCHANNELS removed.\n\r", ch);
 
 		sprintf(buf, "$N restores channels to %s", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 	else
 	{
@@ -802,7 +802,7 @@ void do_nochannels(CHAR_DATA *ch, char *argument)
 		send_to_char("NOCHANNELS set.\n\r", ch);
 
 		sprintf(buf, "$N revokes %s's channels.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 }
 
@@ -825,7 +825,7 @@ void do_smote(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (strstr(argument, ch->name) == NULL && !is_npc(ch))
+	if (strstr(argument, ch->name) == nullptr && !is_npc(ch))
 	{
 		send_to_char("You must include your name in an smote.\n\r", ch);
 		return;
@@ -834,14 +834,14 @@ void do_smote(CHAR_DATA *ch, char *argument)
 	send_to_char(argument, ch);
 	send_to_char("\n\r", ch);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
-		if (vch->desc == NULL || vch == ch)
+		if (vch->desc == nullptr || vch == ch)
 			continue;
 
 		letter = strstr(argument, vch->name);
 
-		if (letter == NULL)
+		if (letter == nullptr)
 		{
 			send_to_char(argument, vch);
 			send_to_char("\n\r", vch);
@@ -916,7 +916,7 @@ void do_bamfin(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (strstr(argument, ch->name) == NULL)
+		if (strstr(argument, ch->name) == nullptr)
 		{
 			send_to_char("You must include your name.\n\r", ch);
 			return;
@@ -945,7 +945,7 @@ void do_bamfout(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (strstr(argument, ch->name) == NULL)
+		if (strstr(argument, ch->name) == nullptr)
 		{
 			send_to_char("You must include your name.\n\r", ch);
 			return;
@@ -975,7 +975,7 @@ void do_deny(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -998,7 +998,7 @@ void do_deny(CHAR_DATA *ch, char *argument)
 	send_to_char("You are denied access!\n\r", victim);
 
 	sprintf(buf, "$N denies access to %s", victim->name);
-	wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+	wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 
 	send_to_char("OK.\n\r", ch);
 
@@ -1016,7 +1016,7 @@ void do_deny(CHAR_DATA *ch, char *argument)
 	}
 
 	sprintf(buf, "AUTO: Denied by %s.\n\r", ch->true_name);
-	add_history(NULL, victim, buf);
+	add_history(nullptr, victim, buf);
 
 	cname = palloc_string(victim->true_name);
 
@@ -1041,7 +1041,7 @@ void do_disconnect(CHAR_DATA *ch, char *argument)
 	if (is_number(arg))
 	{
 		int desc = atoi(arg);
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
 			if (d->descriptor == desc)
 			{
@@ -1054,7 +1054,7 @@ void do_disconnect(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1066,13 +1066,13 @@ void do_disconnect(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (victim->desc == NULL)
+	if (victim->desc == nullptr)
 	{
-		act("$N doesn't have a descriptor.", ch, NULL, victim, TO_CHAR);
+		act("$N doesn't have a descriptor.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
 		if (d == victim->desc)
 		{
@@ -1103,7 +1103,7 @@ void do_pardon(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1235,8 +1235,8 @@ void do_zecho(CHAR_DATA *ch, char *argument)
 	for (d = descriptor_list; d; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
-			&& d->character->in_room != NULL
-			&& ch->in_room != NULL
+			&& d->character->in_room != nullptr
+			&& ch->in_room != nullptr
 			&& d->character->in_room->area == ch->in_room->area)
 		{
 			colorconv(buffer, argument, d->character);
@@ -1266,7 +1266,7 @@ void do_pecho(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("Target not found.\n\r", ch);
 		return;
@@ -1295,15 +1295,15 @@ ROOM_INDEX_DATA *find_location(CHAR_DATA *ch, char *arg)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim != NULL)
+	if (victim != nullptr)
 		return victim->in_room;
 
 	obj = get_obj_world(ch, arg);
 
-	if (obj != NULL)
+	if (obj != nullptr)
 		return obj->in_room;
 
-	return NULL;
+	return nullptr;
 }
 
 void do_transfer(CHAR_DATA *ch, char *argument)
@@ -1325,11 +1325,11 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg1, "all"))
 	{
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
 			if (d->connected == CON_PLAYING
 				&& d->character != ch
-				&& d->character->in_room != NULL
+				&& d->character->in_room != nullptr
 				&& can_see(ch, d->character))
 			{
 				auto buffer = fmt::format("{} {}", d->character->name, arg2);
@@ -1351,7 +1351,7 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 	{
 		location = find_location(ch, arg2);
 
-		if (location == NULL)
+		if (location == nullptr)
 		{
 			send_to_char("No such location.\n\r", ch);
 			return;
@@ -1372,13 +1372,13 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
-	if (victim->in_room == NULL)
+	if (victim->in_room == nullptr)
 	{
 		send_to_char("They are in limbo.\n\r", ch);
 		return;
@@ -1390,18 +1390,18 @@ void do_transfer(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (victim->fighting != NULL)
+	if (victim->fighting != nullptr)
 		stop_fighting(victim, true);
 
-	act("$n disappears in a mushroom cloud.", victim, NULL, NULL, TO_ROOM);
+	act("$n disappears in a mushroom cloud.", victim, nullptr, nullptr, TO_ROOM);
 
 	char_from_room(victim);
 	char_to_room(victim, location);
 
-	act("$n arrives from a puff of smoke.", victim, NULL, NULL, TO_ROOM);
+	act("$n arrives from a puff of smoke.", victim, nullptr, nullptr, TO_ROOM);
 
 	if (ch != victim)
-		act("$n has transferred you.", ch, NULL, victim, TO_VICT);
+		act("$n has transferred you.", ch, nullptr, victim, TO_VICT);
 
 	do_look(victim, "auto");
 
@@ -1426,7 +1426,7 @@ void do_at(CHAR_DATA *ch, char *argument)
 
 	location = find_location(ch, arg);
 
-	if (location == NULL)
+	if (location == nullptr)
 	{
 		send_to_char("No such location.\n\r", ch);
 		return;
@@ -1455,7 +1455,7 @@ void do_at(CHAR_DATA *ch, char *argument)
 	 * See if 'ch' still exists before continuing!
 	 * Handles 'at XXXX quit' case.
 	 */
-	for (wch = char_list; wch != NULL; wch = wch->next)
+	for (wch = char_list; wch != nullptr; wch = wch->next)
 	{
 		if (wch == ch)
 		{
@@ -1481,7 +1481,7 @@ void do_goto(CHAR_DATA *ch, char *argument)
 
 	location = find_location(ch, argument);
 
-	if (location == NULL)
+	if (location == nullptr)
 	{
 		send_to_char("No such location.\n\r", ch);
 		return;
@@ -1489,7 +1489,7 @@ void do_goto(CHAR_DATA *ch, char *argument)
 
 	count = 0;
 
-	for (rch = location->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = location->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		count++;
 	}
@@ -1506,37 +1506,37 @@ void do_goto(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->fighting != NULL)
+	if (ch->fighting != nullptr)
 		stop_fighting(ch, true);
 
-	for (rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
 			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !is_heroimm(rch))
 				continue;
 
-			if (ch->pcdata != NULL && ch->pcdata->bamfout[0] != '\0' && !is_switched(ch))
+			if (ch->pcdata != nullptr && ch->pcdata->bamfout[0] != '\0' && !is_switched(ch))
 				act("$t", ch, ch->pcdata->bamfout, rch, TO_VICT);
 			else
-				act("$n leaves in a swirling mist.", ch, NULL, rch, TO_VICT);
+				act("$n leaves in a swirling mist.", ch, nullptr, rch, TO_VICT);
 		}
 	}
 
 	char_from_room(ch);
 	char_to_room(ch, location);
 
-	for (rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
 			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !is_heroimm(rch))
 				continue;
 
-			if (ch->pcdata != NULL && ch->pcdata->bamfin[0] != '\0' && !is_switched(ch))
+			if (ch->pcdata != nullptr && ch->pcdata->bamfin[0] != '\0' && !is_switched(ch))
 				act("$t", ch, ch->pcdata->bamfin, rch, TO_VICT);
 			else
-				act("$n appears in a swirling mist.", ch, NULL, rch, TO_VICT);
+				act("$n appears in a swirling mist.", ch, nullptr, rch, TO_VICT);
 		}
 	}
 
@@ -1556,7 +1556,7 @@ void do_violate(CHAR_DATA *ch, char *argument)
 
 	location = find_location(ch, argument);
 
-	if (location == NULL)
+	if (location == nullptr)
 	{
 		send_to_char("No such location.\n\r", ch);
 		return;
@@ -1568,34 +1568,34 @@ void do_violate(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->fighting != NULL)
+	if (ch->fighting != nullptr)
 		stop_fighting(ch, true);
 
-	for (rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
 			if (get_trust(rch) == LEVEL_HERO && ch->invis_level == LEVEL_HERO && !is_heroimm(rch))
 				continue;
 
-			if (ch->pcdata != NULL && ch->pcdata->bamfout[0] != '\0')
+			if (ch->pcdata != nullptr && ch->pcdata->bamfout[0] != '\0')
 				act("$t", ch, ch->pcdata->bamfout, rch, TO_VICT);
 			else
-				act("$n leaves in a swirling mist.", ch, NULL, rch, TO_VICT);
+				act("$n leaves in a swirling mist.", ch, nullptr, rch, TO_VICT);
 		}
 	}
 
 	char_from_room(ch);
 	char_to_room(ch, location);
 
-	for (rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (get_trust(rch) >= ch->invis_level)
 		{
-			if (ch->pcdata != NULL && ch->pcdata->bamfin[0] != '\0')
+			if (ch->pcdata != nullptr && ch->pcdata->bamfin[0] != '\0')
 				act("$t", ch, ch->pcdata->bamfin, rch, TO_VICT);
 			else
-				act("$n appears in a swirling mist.", ch, NULL, rch, TO_VICT);
+				act("$n appears in a swirling mist.", ch, nullptr, rch, TO_VICT);
 		}
 	}
 
@@ -1654,7 +1654,7 @@ void do_stat(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, argument);
 
-	if (victim != NULL)
+	if (victim != nullptr)
 	{
 		do_mstat(ch, argument);
 		return;
@@ -1662,7 +1662,7 @@ void do_stat(CHAR_DATA *ch, char *argument)
 
 	obj = get_obj_world(ch, argument);
 
-	if (obj != NULL)
+	if (obj != nullptr)
 	{
 		do_ostat(ch, argument);
 		return;
@@ -1670,7 +1670,7 @@ void do_stat(CHAR_DATA *ch, char *argument)
 
 	location = find_location(ch, argument);
 
-	if (location != NULL)
+	if (location != nullptr)
 	{
 		do_rstat(ch, argument);
 		return;
@@ -1693,7 +1693,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 
 	location = (arg[0] == '\0') ? ch->in_room : find_location(ch, arg);
 
-	if (location == NULL)
+	if (location == nullptr)
 	{
 		send_to_char("No such location.\n\r", ch);
 		return;
@@ -1721,7 +1721,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "Description:\n\r%s", location->description);
 	send_to_char(buf, ch);
 
-	if (location->extra_descr != NULL)
+	if (location->extra_descr != nullptr)
 	{
 		EXTRA_DESCR_DATA *ed;
 
@@ -1730,7 +1730,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 		for (ed = location->extra_descr; ed; ed = ed->next)
 		{
 			send_to_char(ed->keyword, ch);
-			if (ed->next != NULL)
+			if (ed->next != nullptr)
 				send_to_char(" ", ch);
 		}
 
@@ -1763,11 +1763,11 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 	{
 		char ebuf[500];
 
-		if (pexit != NULL)
+		if (pexit != nullptr)
 		{
 			ebuf[0] = '\0';
 
-			for (i = 0; exit_flags[i].name != NULL; i++)
+			for (i = 0; exit_flags[i].name != nullptr; i++)
 			{
 				if (IS_SET(pexit->exit_info, exit_flags[i].bit))
 				{
@@ -1778,7 +1778,7 @@ void do_rstat(CHAR_DATA *ch, char *argument)
 
 			sprintf(buf, "Door: %d.  To: %d.  Key: %d.  Exit flags:%s.\n\rKeyword: '%s'.  Description: %s",
 				door,
-				(pexit->u1.to_room == NULL ? -1 : pexit->u1.to_room->vnum),
+				(pexit->u1.to_room == nullptr ? -1 : pexit->u1.to_room->vnum),
 				pexit->key,
 				ebuf,
 				pexit->keyword,
@@ -1838,7 +1838,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 
 	obj = get_obj_world(ch, argument);
 
-	if (obj == NULL || (obj && obj->carried_by && !can_see(ch, obj->carried_by)))
+	if (obj == nullptr || (obj && obj->carried_by && !can_see(ch, obj->carried_by)))
 	{
 		send_to_char("Nothing like that in hell, earth, or heaven.\n\r", ch);
 		return;
@@ -1886,9 +1886,9 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 	send_to_char(buf, ch);
 
 	sprintf(buf, "In room: %d  In object: %s  Carried by: %s  Wear_loc: %d\n\r",
-		obj->in_room == NULL ? 0 : obj->in_room->vnum,
-		obj->in_obj == NULL ? "(none)" : obj->in_obj->short_descr,
-		obj->carried_by == NULL ? "(none)" : can_see(ch, obj->carried_by) ? obj->carried_by->name : "someone",
+		obj->in_room == nullptr ? 0 : obj->in_room->vnum,
+		obj->in_obj == nullptr ? "(none)" : obj->in_obj->short_descr,
+		obj->carried_by == nullptr ? "(none)" : can_see(ch, obj->carried_by) ? obj->carried_by->name : "someone",
 		obj->wear_loc);
 	send_to_char(buf, ch);
 
@@ -2068,22 +2068,22 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	if (obj->extra_descr != NULL || obj->pIndexData->extra_descr != NULL)
+	if (obj->extra_descr != nullptr || obj->pIndexData->extra_descr != nullptr)
 	{
 		EXTRA_DESCR_DATA *ed, *ed2;
 		bool duplicate = false; /* Don't duplicate extradescs. */
 
 		send_to_char("Extra description keywords: '", ch);
 
-		for (ed = obj->extra_descr; ed != NULL; ed = ed->next)
+		for (ed = obj->extra_descr; ed != nullptr; ed = ed->next)
 		{
 			send_to_char(ed->keyword, ch);
 
-			if (ed->next != NULL)
+			if (ed->next != nullptr)
 				send_to_char(" ", ch);
 		}
 
-		for (ed = obj->pIndexData->extra_descr; ed != NULL; ed = ed->next)
+		for (ed = obj->pIndexData->extra_descr; ed != nullptr; ed = ed->next)
 		{
 			for (ed2 = obj->extra_descr; ed2; ed2 = ed2->next)
 			{
@@ -2096,7 +2096,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 
 			send_to_char(ed->keyword, ch);
 
-			if (ed->next != NULL)
+			if (ed->next != nullptr)
 				send_to_char(" ", ch);
 		}
 
@@ -2223,31 +2223,31 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		send_to_char("\n\r", ch);
 	}
 
-	if (obj->pIndexData->wear_echo[0] != NULL)
+	if (obj->pIndexData->wear_echo[0] != nullptr)
 	{
 		sprintf(buf, "Item echos to wearer: %s\n\r", obj->pIndexData->wear_echo[0]);
 		send_to_char(buf, ch);
 	}
 
-	if (obj->pIndexData->wear_echo[1] != NULL)
+	if (obj->pIndexData->wear_echo[1] != nullptr)
 	{
 		sprintf(buf, "Item echos to room on wear: %s\n\r", obj->pIndexData->wear_echo[1]);
 		send_to_char(buf, ch);
 	}
 
-	if (obj->pIndexData->remove_echo[0] != NULL)
+	if (obj->pIndexData->remove_echo[0] != nullptr)
 	{
 		sprintf(buf, "Item echos to remover: %s\n\r", obj->pIndexData->remove_echo[0]);
 		send_to_char(buf, ch);
 	}
 
-	if (obj->pIndexData->remove_echo[1] != NULL)
+	if (obj->pIndexData->remove_echo[1] != nullptr)
 	{
 		sprintf(buf, "Item echos to room on remove: %s\n\r", obj->pIndexData->remove_echo[1]);
 		send_to_char(buf, ch);
 	}
 
-	if (obj->pIndexData->wear_loc_name != NULL)
+	if (obj->pIndexData->wear_loc_name != nullptr)
 	{
 		sprintf(buf, "Item has cosmetic wear location: worn \"%s\"\n\r", obj->pIndexData->wear_loc_name);
 		send_to_char(buf, ch);
@@ -2292,7 +2292,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	for (paf = obj->affected; paf != NULL; paf = paf->next)
+	for (paf = obj->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->aftype == AFT_SKILL)
 			sprintf(buf2, "Skill");
@@ -2486,8 +2486,8 @@ void do_astat(CHAR_DATA *ch, char *argument)
 				paf->modifier,
 				(paf->duration == -1) ? paf->duration : paf->duration / 2,
 				"flag",
-				"NULL",
-				paf->owner != NULL ? paf->owner->name : "none",
+				"nullptr",
+				paf->owner != nullptr ? paf->owner->name : "none",
 				paf->level);
 			send_to_char(buf, ch);
 		}
@@ -2520,7 +2520,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, argument);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -2630,7 +2630,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		sprintf(buf, "Short:  %-30s  ", victim->short_descr);
 		send_to_char(buf, ch);
 
-		if (victim->last_fought != NULL)
+		if (victim->last_fought != nullptr)
 		{
 			sprintf(buf, "Tracking: Player %s.  Remaining Timer: %d\n\r",
 				victim->last_fought->name,
@@ -2768,7 +2768,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 	if (!is_npc(victim))
 	{
 		sprintf(buf, "Last PC fought: %s, %d seconds ago\n\r",
-			victim->last_fight_name != NULL ? victim->last_fight_name : "(none)",
+			victim->last_fight_name != nullptr ? victim->last_fight_name : "(none)",
 			victim->last_fight_time ? (int)(current_time - victim->last_fight_time) : -1);
 		send_to_char(buf, ch);
 	}
@@ -2960,7 +2960,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 	{
 		for (auto victim_cast_spell : victim->pIndexData->cast_spell)
 		{
-			if (victim_cast_spell == NULL)
+			if (victim_cast_spell == nullptr)
 				break;
 
 			sprintf(buf, "Mobile casts spell '%s'.\n\r", victim_cast_spell);
@@ -3025,7 +3025,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 		send_to_char(buf, ch);
 	}
 
-	for (paf = victim->affected; paf != NULL; paf = paf->next)
+	for (paf = victim->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->aftype == AFT_SPELL)
 			sprintf(buf2, "Spell");
@@ -3061,7 +3061,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 			paf->where == TO_IMMUNE || paf->where == TO_RESIST || paf->where == TO_VULN
 				? imm_bit_name(paf->bitvector)
 				: affect_bit_name(paf->bitvector),
-			paf->owner != NULL ? paf->owner->true_name : "none", paf->level);
+			paf->owner != nullptr ? paf->owner->true_name : "none", paf->level);
 		send_to_char(buffer.c_str(), ch);
 	}
 
@@ -3154,7 +3154,7 @@ void do_mfind(CHAR_DATA *ch, char *argument)
 	{
 		pMobIndex = get_mob_index(vnum);
 
-		if (pMobIndex != NULL)
+		if (pMobIndex != nullptr)
 		{
 			nMatch++;
 			if (fAll || is_name(argument, pMobIndex->player_name))
@@ -3201,7 +3201,7 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 	{
 		pObjIndex = get_obj_index(vnum);
 
-		if (pObjIndex != NULL)
+		if (pObjIndex != nullptr)
 		{
 			nMatch++;
 			if (fAll || is_name(argument, pObjIndex->name))
@@ -3238,24 +3238,24 @@ void do_owhere(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (obj = object_list; obj != NULL; obj = obj->next)
+	for (obj = object_list; obj != nullptr; obj = obj->next)
 	{
 		if (!can_see_obj(ch, obj) || !is_name(argument, obj->name) || ch->level < obj->level)
 			continue;
 
 		number++;
 
-		for (in_obj = obj; in_obj->in_obj != NULL; in_obj = in_obj->in_obj)
+		for (in_obj = obj; in_obj->in_obj != nullptr; in_obj = in_obj->in_obj)
 			;
 
-		if (in_obj->carried_by != NULL && can_see(ch, in_obj->carried_by) && in_obj->carried_by->in_room != NULL)
+		if (in_obj->carried_by != nullptr && can_see(ch, in_obj->carried_by) && in_obj->carried_by->in_room != nullptr)
 		{
 			sprintf(buf, "%3d) %s is carried by %s [Room %d]\n\r",
 				number, obj->short_descr,
 				pers(in_obj->carried_by, ch),
 				in_obj->carried_by->in_room->vnum);
 		}
-		else if (in_obj->in_room != NULL && can_see_room(ch, in_obj->in_room))
+		else if (in_obj->in_room != nullptr && can_see_room(ch, in_obj->in_room))
 		{
 			sprintf(buf, "%3d) %s is in %s [Room %d]\n\r",
 				number,
@@ -3301,18 +3301,18 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 		/* show characters logged */
 
 		buffer = new_buf();
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
-			if (d->character != NULL
+			if (d->character != nullptr
 				&& d->connected == CON_PLAYING
-				&& d->character->in_room != NULL
+				&& d->character->in_room != nullptr
 				&& can_see(ch, d->character)
 				&& can_see_room(ch, d->character->in_room))
 			{
 				victim = d->character;
 				count++;
 
-				if (d->original != NULL)
+				if (d->original != nullptr)
 				{
 					sprintf(buf, "%3d) %s (in the body of %s) is in %s [%d]\n\r",
 						count,
@@ -3342,9 +3342,9 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 	found = false;
 	buffer = new_buf();
 
-	for (victim = char_list; victim != NULL; victim = victim->next)
+	for (victim = char_list; victim != nullptr; victim = victim->next)
 	{
-		if (victim->in_room != NULL && can_see(ch, victim) && is_name(argument, victim->name))
+		if (victim->in_room != nullptr && can_see(ch, victim) && is_name(argument, victim->name))
 		{
 			found = true;
 			count++;
@@ -3360,7 +3360,7 @@ void do_mwhere(CHAR_DATA *ch, char *argument)
 	}
 
 	if (!found)
-		act("You didn't find any $T.", ch, NULL, argument, TO_CHAR);
+		act("You didn't find any $T.", ch, nullptr, argument, TO_CHAR);
 	else
 		page_to_char(buf_string(buffer), ch);
 
@@ -3381,18 +3381,18 @@ void reboot_now(CHAR_DATA *ch)
 
 	/*
 	OBJ_DATA *t_obj, *obj;
-	for (obj = object_list; obj != NULL; obj = obj->next)
+	for (obj = object_list; obj != nullptr; obj = obj->next)
 	{
 		if(obj->item_type != ITEM_CORPSE_PC || !obj->contains)
 			continue;
 
-		for(owner=char_list;owner!=NULL;owner=owner->next)
+		for(owner=char_list;owner!=nullptr;owner=owner->next)
 		{
 			if(!is_npc(owner) && !str_cmp(owner->true_name,obj->owner))
 			{
 				send_to_char("Your corpse decays.\n\r",owner);
 
-				for (t_obj = obj->contains; t_obj != NULL; t_obj = t_obj->next_content)
+				for (t_obj = obj->contains; t_obj != nullptr; t_obj = t_obj->next_content)
 				{
 					act_new("$p returns to you.",owner,t_obj,0,TO_CHAR,POS_DEAD);
 
@@ -3417,12 +3417,12 @@ void reboot_now(CHAR_DATA *ch)
 	do_force(ch, "all save");
 	do_echo(ch, "*** REBOOTING NOW ***");
 
-	for (d = descriptor_list; d != NULL; d = d_next)
+	for (d = descriptor_list; d != nullptr; d = d_next)
 	{
 		d_next = d->next;
 		vch = d->original ? d->original : d->character;
 
-		if (vch != NULL && d->connected == 0)
+		if (vch != nullptr && d->connected == 0)
 		{
 			if (is_affected(vch, gsn_cloak_form))
 				do_cloak(vch, "auto");
@@ -3467,14 +3467,14 @@ void do_reboot(CHAR_DATA *ch, char *argument)
 	int mins = 0;
 	char send[MSL];
 	char arg1[MSL];
-	AREA_DATA *pArea = NULL;
+	AREA_DATA *pArea = nullptr;
 	bool found = false;
 
 	argument = one_argument(argument, arg1);
 	mins = atoi(arg1);
 
 	std::string area = std::string("");
-	for (pArea = area_first; pArea != NULL; pArea = pArea->next)
+	for (pArea = area_first; pArea != nullptr; pArea = pArea->next)
 	{
 		if (IS_SET(pArea->area_flags, AREA_CHANGED) || IS_SET(pArea->area_flags, AREA_ADDED))
 		{
@@ -3535,7 +3535,7 @@ void do_protect(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, argument);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("You can't find them.\n\r", ch);
 		return;
@@ -3543,13 +3543,13 @@ void do_protect(CHAR_DATA *ch, char *argument)
 
 	if (IS_SET(victim->comm, COMM_SNOOP_PROOF))
 	{
-		act_new("$N is no longer snoop-proof.", ch, NULL, victim, TO_CHAR, POS_DEAD);
+		act_new("$N is no longer snoop-proof.", ch, nullptr, victim, TO_CHAR, POS_DEAD);
 		/*send_to_char("Your snoop-proofing was just removed.\n\r",victim);*/
 		REMOVE_BIT(victim->comm, COMM_SNOOP_PROOF);
 	}
 	else
 	{
-		act_new("$N is now snoop-proof.", ch, NULL, victim, TO_CHAR, POS_DEAD);
+		act_new("$N is now snoop-proof.", ch, nullptr, victim, TO_CHAR, POS_DEAD);
 		/*send_to_char("You are now immune to snooping.\n\r",victim);*/
 		SET_BIT(victim->comm, COMM_SNOOP_PROOF);
 	}
@@ -3572,13 +3572,13 @@ void do_snoop(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
-	if (victim->desc == NULL)
+	if (victim->desc == nullptr)
 	{
 		send_to_char("No descriptor to snoop.\n\r", ch);
 		return;
@@ -3587,18 +3587,18 @@ void do_snoop(CHAR_DATA *ch, char *argument)
 	if (victim == ch)
 	{
 		send_to_char("Cancelling all snoops.\n\r", ch);
-		wiznet("$N stops being such a snoop.", ch, NULL, WIZ_SNOOPS, WIZ_SECURE, get_trust(ch));
+		wiznet("$N stops being such a snoop.", ch, nullptr, WIZ_SNOOPS, WIZ_SECURE, get_trust(ch));
 
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
 			if (d->snoop_by == ch->desc)
-				d->snoop_by = NULL;
+				d->snoop_by = nullptr;
 		}
 
 		return;
 	}
 
-	if (victim->desc->snoop_by != NULL)
+	if (victim->desc->snoop_by != nullptr)
 	{
 		send_to_char("Busy already.\n\r", ch);
 		return;
@@ -3625,9 +3625,9 @@ void do_snoop(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->desc != NULL)
+	if (ch->desc != nullptr)
 	{
-		for (d = ch->desc->snoop_by; d != NULL; d = d->snoop_by)
+		for (d = ch->desc->snoop_by; d != nullptr; d = d->snoop_by)
 		{
 			if (d->character == victim || d->original == victim)
 			{
@@ -3640,7 +3640,7 @@ void do_snoop(CHAR_DATA *ch, char *argument)
 	victim->desc->snoop_by = ch->desc;
 
 	sprintf(buf, "$N starts snooping on %s", (is_npc(ch) ? victim->short_descr : victim->name));
-	wiznet(buf, ch, NULL, WIZ_SNOOPS, WIZ_SECURE, get_trust(ch));
+	wiznet(buf, ch, nullptr, WIZ_SNOOPS, WIZ_SECURE, get_trust(ch));
 
 	send_to_char("Ok.\n\r", ch);
 }
@@ -3658,10 +3658,10 @@ void do_switch(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		return;
 
-	if (ch->desc->original != NULL)
+	if (ch->desc->original != nullptr)
 	{
 		send_to_char("You are already switched.\n\r", ch);
 		return;
@@ -3669,7 +3669,7 @@ void do_switch(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -3696,23 +3696,23 @@ void do_switch(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (victim->desc != NULL)
+	if (victim->desc != nullptr)
 	{
 		send_to_char("Character in use.\n\r", ch);
 		return;
 	}
 
 	sprintf(buf, "$N switches into %s.", victim->short_descr);
-	wiznet(buf, ch, NULL, WIZ_SWITCHES, WIZ_SECURE, get_trust(ch));
+	wiznet(buf, ch, nullptr, WIZ_SWITCHES, WIZ_SECURE, get_trust(ch));
 
 	ch->desc->character = victim;
 	ch->desc->original = ch;
 	victim->desc = ch->desc;
 	victim->pcdata = ch->pcdata;
-	ch->desc = NULL;
+	ch->desc = nullptr;
 	/* change communications to match */
 	/*
-	if (ch->prompt != NULL)
+	if (ch->prompt != nullptr)
 		victim->prompt = palloc_string(ch->prompt);
 	*/
 
@@ -3726,10 +3726,10 @@ void do_return(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		return;
 
-	if (ch->desc->original == NULL)
+	if (ch->desc->original == nullptr)
 	{
 		send_to_char("You aren't switched.\n\r", ch);
 		return;
@@ -3737,21 +3737,21 @@ void do_return(CHAR_DATA *ch, char *argument)
 
 	send_to_char("You return to your original body. Type replay to see any missed tells.\n\r", ch);
 
-	if (ch->prompt != NULL)
+	if (ch->prompt != nullptr)
 	{
 		free_pstring(ch->prompt);
-		ch->prompt = NULL;
+		ch->prompt = nullptr;
 	}
 
 	sprintf(buf, "$N returns from %s.", ch->short_descr);
 
 	wiznet(buf, ch->desc->original, 0, WIZ_SWITCHES, WIZ_SECURE, get_trust(ch));
 
-	ch->pcdata = NULL;
+	ch->pcdata = nullptr;
 	ch->desc->character = ch->desc->original;
-	ch->desc->original = NULL;
+	ch->desc->original = nullptr;
 	ch->desc->character->desc = ch->desc;
-	ch->desc = NULL;
+	ch->desc = nullptr;
 }
 
 /* trust levels for load and clone */
@@ -3772,7 +3772,7 @@ void recursive_clone(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *clone)
 {
 	OBJ_DATA *t_obj;
 
-	for (OBJ_DATA *c_obj = obj->contains; c_obj != NULL; c_obj = c_obj->next_content)
+	for (OBJ_DATA *c_obj = obj->contains; c_obj != nullptr; c_obj = c_obj->next_content)
 	{
 		if (obj_check(ch, c_obj))
 		{
@@ -3802,10 +3802,10 @@ void do_clone(CHAR_DATA *ch, char *argument)
 
 	if (!str_prefix(arg, "object"))
 	{
-		mob = NULL;
+		mob = nullptr;
 		obj = get_obj_here(ch, rest);
 
-		if (obj == NULL)
+		if (obj == nullptr)
 		{
 			send_to_char("You don't see that here.\n\r", ch);
 			return;
@@ -3813,10 +3813,10 @@ void do_clone(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_prefix(arg, "mobile") || !str_prefix(arg, "character"))
 	{
-		obj = NULL;
+		obj = nullptr;
 		mob = get_char_room(ch, rest);
 
-		if (mob == NULL)
+		if (mob == nullptr)
 		{
 			send_to_char("You don't see that here.\n\r", ch);
 			return;
@@ -3826,7 +3826,7 @@ void do_clone(CHAR_DATA *ch, char *argument)
 	{
 		mob = get_char_room(ch, argument);
 		obj = get_obj_here(ch, argument);
-		if (mob == NULL && obj == NULL)
+		if (mob == nullptr && obj == nullptr)
 		{
 			send_to_char("You don't see that here.\n\r", ch);
 			return;
@@ -3834,7 +3834,7 @@ void do_clone(CHAR_DATA *ch, char *argument)
 	}
 
 	/* clone an object */
-	if (obj != NULL)
+	if (obj != nullptr)
 	{
 		OBJ_DATA *clone;
 
@@ -3847,19 +3847,19 @@ void do_clone(CHAR_DATA *ch, char *argument)
 		clone = create_object(obj->pIndexData, 0);
 		clone_object(obj, clone);
 
-		if (obj->carried_by != NULL)
+		if (obj->carried_by != nullptr)
 			obj_to_char(clone, ch);
 		else
 			obj_to_room(clone, ch->in_room);
 
 		recursive_clone(ch, obj, clone);
 
-		act("$n has created $p.", ch, clone, NULL, TO_ROOM);
-		act("You clone $p.", ch, clone, NULL, TO_CHAR);
+		act("$n has created $p.", ch, clone, nullptr, TO_ROOM);
+		act("You clone $p.", ch, clone, nullptr, TO_CHAR);
 
 		wiznet("$N clones $p.", ch, clone, WIZ_LOAD, WIZ_SECURE, get_trust(ch));
 	}
-	else if (mob != NULL)
+	else if (mob != nullptr)
 	{
 		CHAR_DATA *clone;
 		OBJ_DATA *new_obj;
@@ -3884,7 +3884,7 @@ void do_clone(CHAR_DATA *ch, char *argument)
 		clone = create_mobile(mob->pIndexData);
 		clone_mobile(mob, clone);
 
-		for (obj = mob->carrying; obj != NULL; obj = obj->next_content)
+		for (obj = mob->carrying; obj != nullptr; obj = obj->next_content)
 		{
 			if (obj_check(ch, obj))
 			{
@@ -3898,11 +3898,11 @@ void do_clone(CHAR_DATA *ch, char *argument)
 
 		char_to_room(clone, ch->in_room);
 
-		act("$n has created $N.", ch, NULL, clone, TO_ROOM);
-		act("You clone $N.", ch, NULL, clone, TO_CHAR);
+		act("$n has created $N.", ch, nullptr, clone, TO_ROOM);
+		act("You clone $N.", ch, nullptr, clone, TO_CHAR);
 
 		sprintf(buf, "$N clones %s.", clone->short_descr);
-		wiznet(buf, ch, NULL, WIZ_LOAD, WIZ_SECURE, get_trust(ch));
+		wiznet(buf, ch, nullptr, WIZ_LOAD, WIZ_SECURE, get_trust(ch));
 	}
 }
 
@@ -3955,7 +3955,7 @@ void do_mload(CHAR_DATA *ch, char *argument)
 
 	pMobIndex = get_mob_index(atoi(arg));
 
-	if (pMobIndex == NULL)
+	if (pMobIndex == nullptr)
 	{
 		send_to_char("No mob has that vnum.\n\r", ch);
 		return;
@@ -3965,10 +3965,10 @@ void do_mload(CHAR_DATA *ch, char *argument)
 
 	char_to_room(victim, ch->in_room);
 
-	act("$n has created $N!", ch, NULL, victim, ch->invis_level > 50 ? TO_IMMINROOM : TO_ROOM);
+	act("$n has created $N!", ch, nullptr, victim, ch->invis_level > 50 ? TO_IMMINROOM : TO_ROOM);
 
 	sprintf(buf, "$N loads %s.", victim->short_descr);
-	wiznet(buf, ch, NULL, WIZ_LOAD, WIZ_SECURE, get_trust(ch));
+	wiznet(buf, ch, nullptr, WIZ_LOAD, WIZ_SECURE, get_trust(ch));
 
 	send_to_char("Ok.\n\r", ch);
 }
@@ -4010,7 +4010,7 @@ void do_oload(CHAR_DATA *ch, char *argument)
 
 	pObjIndex = get_obj_index(atoi(arg1));
 
-	if (pObjIndex == NULL)
+	if (pObjIndex == nullptr)
 	{
 		send_to_char("No object has that vnum.\n\r", ch);
 		return;
@@ -4023,7 +4023,7 @@ void do_oload(CHAR_DATA *ch, char *argument)
 	else
 		obj_to_room(obj, ch->in_room);
 
-	act("$n has created $p!", ch, obj, NULL, ch->invis_level > 50 ? TO_IMMINROOM : TO_ROOM);
+	act("$n has created $p!", ch, obj, nullptr, ch->invis_level > 50 ? TO_IMMINROOM : TO_ROOM);
 
 	wiznet("$N loads $p.", ch, obj, WIZ_LOAD, WIZ_SECURE, get_trust(ch));
 	send_to_char("Ok.\n\r", ch);
@@ -4045,7 +4045,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 		CHAR_DATA *vnext;
 		OBJ_DATA *obj_next;
 
-		for (victim = ch->in_room->people; victim != NULL; victim = vnext)
+		for (victim = ch->in_room->people; victim != nullptr; victim = vnext)
 		{
 			vnext = victim->next_in_room;
 
@@ -4053,7 +4053,7 @@ void do_purge(CHAR_DATA *ch, char *argument)
 				extract_char(victim, true);
 		}
 
-		for (obj = ch->in_room->contents; obj != NULL; obj = obj_next)
+		for (obj = ch->in_room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 
@@ -4061,14 +4061,14 @@ void do_purge(CHAR_DATA *ch, char *argument)
 				extract_obj(obj);
 		}
 
-		act("$n purges the room!", ch, NULL, NULL, TO_ROOM);
+		act("$n purges the room!", ch, nullptr, nullptr, TO_ROOM);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4098,13 +4098,13 @@ void do_purge(CHAR_DATA *ch, char *argument)
 		d = victim->desc;
 		extract_char(victim, true);
 
-		if (d != NULL)
+		if (d != nullptr)
 			close_socket(d);
 
 		return;
 	}
 
-	act("$n purges $N.", ch, NULL, victim, TO_NOTVICT);
+	act("$n purges $N.", ch, nullptr, victim, TO_NOTVICT);
 	extract_char(victim, true);
 }
 
@@ -4128,7 +4128,7 @@ void do_advance(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("That player is not here.\n\r", ch);
 		return;
@@ -4223,7 +4223,7 @@ void do_trust(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("That player is not here.\n\r", ch);
 		return;
@@ -4259,7 +4259,7 @@ void do_restore(CHAR_DATA *ch, char *argument)
 	{
 		/* cure room */
 
-		for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+		for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 		{
 			affect_strip(vch, gsn_plague);
 			affect_strip(vch, gsn_poison);
@@ -4274,11 +4274,11 @@ void do_restore(CHAR_DATA *ch, char *argument)
 			if (!is_npc(vch))
 				update_pos(vch);
 
-			act("$n has restored you.", ch, NULL, vch, TO_VICT);
+			act("$n has restored you.", ch, nullptr, vch, TO_VICT);
 		}
 
 		sprintf(buf, "$N restored room %d.", ch->in_room->vnum);
-		wiznet(buf, ch, NULL, WIZ_RESTORE, WIZ_SECURE, get_trust(ch));
+		wiznet(buf, ch, nullptr, WIZ_RESTORE, WIZ_SECURE, get_trust(ch));
 
 		send_to_char("Room restored.\n\r", ch);
 		return;
@@ -4288,11 +4288,11 @@ void do_restore(CHAR_DATA *ch, char *argument)
 	{
 		/* cure all */
 
-		for (d = descriptor_list; d != NULL; d = d->next)
+		for (d = descriptor_list; d != nullptr; d = d->next)
 		{
 			victim = d->character;
 
-			if (victim == NULL || is_npc(victim))
+			if (victim == nullptr || is_npc(victim))
 				continue;
 
 			affect_strip(victim, gsn_plague);
@@ -4308,10 +4308,10 @@ void do_restore(CHAR_DATA *ch, char *argument)
 			if (!is_npc(victim))
 				update_pos(victim);
 
-			if (victim->in_room != NULL)
+			if (victim->in_room != nullptr)
 			{
 				if (!argument || !str_cmp(argument, ""))
-					act("$n has restored you.", ch, NULL, victim, TO_VICT);
+					act("$n has restored you.", ch, nullptr, victim, TO_VICT);
 				else
 					act("$t has restored you.", ch, argument, victim, TO_VICT);
 			}
@@ -4323,7 +4323,7 @@ void do_restore(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4342,10 +4342,10 @@ void do_restore(CHAR_DATA *ch, char *argument)
 	if (!is_npc(victim))
 		update_pos(victim);
 
-	act("$n has restored you.", ch, NULL, victim, TO_VICT);
+	act("$n has restored you.", ch, nullptr, victim, TO_VICT);
 
 	sprintf(buf, "$N restored %s", is_npc(victim) ? victim->short_descr : victim->name);
-	wiznet(buf, ch, NULL, WIZ_RESTORE, WIZ_SECURE, get_trust(ch));
+	wiznet(buf, ch, nullptr, WIZ_RESTORE, WIZ_SECURE, get_trust(ch));
 
 	send_to_char("Ok.\n\r", ch);
 }
@@ -4365,7 +4365,7 @@ void do_freeze(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4389,7 +4389,7 @@ void do_freeze(CHAR_DATA *ch, char *argument)
 		send_to_char("You can play again.\n\r", victim);
 		send_to_char("FREEZE removed.\n\r", ch);
 		sprintf(buf, "$N thaws %s.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 	else
 	{
@@ -4397,7 +4397,7 @@ void do_freeze(CHAR_DATA *ch, char *argument)
 		send_to_char("You can't do ANYthing!\n\r", victim);
 		send_to_char("FREEZE set.\n\r", ch);
 		sprintf(buf, "$N puts %s in the deep freeze.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 
 	save_char_obj(victim);
@@ -4434,7 +4434,7 @@ void do_log(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4476,7 +4476,7 @@ void do_noemote(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4494,7 +4494,7 @@ void do_noemote(CHAR_DATA *ch, char *argument)
 		send_to_char("You can emote again.\n\r", victim);
 		send_to_char("NOEMOTE removed.\n\r", ch);
 		sprintf(buf, "$N restores emotes to %s.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 	else
 	{
@@ -4502,7 +4502,7 @@ void do_noemote(CHAR_DATA *ch, char *argument)
 		send_to_char("You can't emote!\n\r", victim);
 		send_to_char("NOEMOTE set.\n\r", ch);
 		sprintf(buf, "$N revokes %s's emotes.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 }
 
@@ -4521,7 +4521,7 @@ void do_noshout(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4547,7 +4547,7 @@ void do_noshout(CHAR_DATA *ch, char *argument)
 		send_to_char("NOSHOUT removed.\n\r", ch);
 
 		sprintf(buf, "$N restores shouts to %s.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 	else
 	{
@@ -4557,7 +4557,7 @@ void do_noshout(CHAR_DATA *ch, char *argument)
 		send_to_char("NOSHOUT set.\n\r", ch);
 
 		sprintf(buf, "$N revokes %s's shouts.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 }
 
@@ -4576,7 +4576,7 @@ void do_notell(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4596,7 +4596,7 @@ void do_notell(CHAR_DATA *ch, char *argument)
 		send_to_char("NOTELL removed.\n\r", ch);
 
 		sprintf(buf, "$N restores tells to %s.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 	else
 	{
@@ -4606,22 +4606,22 @@ void do_notell(CHAR_DATA *ch, char *argument)
 		send_to_char("NOTELL set.\n\r", ch);
 
 		sprintf(buf, "$N revokes %s's tells.", victim->name);
-		wiznet(buf, ch, NULL, WIZ_PENALTIES, WIZ_SECURE, 0);
+		wiznet(buf, ch, nullptr, WIZ_PENALTIES, WIZ_SECURE, 0);
 	}
 }
 
 void do_peace(CHAR_DATA *ch, char *argument)
 {
-	for (CHAR_DATA *rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
+	for (CHAR_DATA *rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
-		if (rch->fighting != NULL)
+		if (rch->fighting != nullptr)
 			stop_fighting(rch, true);
 
 		if (is_npc(rch) && IS_SET(rch->act, ACT_AGGRESSIVE))
 			REMOVE_BIT(rch->act, ACT_AGGRESSIVE);
 
 		if (is_npc(rch))
-			rch->last_fought = NULL;
+			rch->last_fought = nullptr;
 	}
 
 	send_to_char("Ok.\n\r", ch);
@@ -4633,12 +4633,12 @@ void do_wizlock(CHAR_DATA *ch, char *argument)
 
 	if (wizlock)
 	{
-		wiznet("$N has wizlocked the game.", ch, NULL, 0, 0, 0);
+		wiznet("$N has wizlocked the game.", ch, nullptr, 0, 0, 0);
 		send_to_char("Game wizlocked.\n\r", ch);
 	}
 	else
 	{
-		wiznet("$N removes wizlock.", ch, NULL, 0, 0, 0);
+		wiznet("$N removes wizlock.", ch, nullptr, 0, 0, 0);
 		send_to_char("Game un-wizlocked.\n\r", ch);
 	}
 }
@@ -4651,12 +4651,12 @@ void do_newlock(CHAR_DATA *ch, char *argument)
 
 	if (newlock)
 	{
-		wiznet("$N locks out new characters.", ch, NULL, 0, 0, 0);
+		wiznet("$N locks out new characters.", ch, nullptr, 0, 0, 0);
 		send_to_char("New characters have been locked out.\n\r", ch);
 	}
 	else
 	{
-		wiznet("$N allows new characters back in.", ch, NULL, 0, 0, 0);
+		wiznet("$N allows new characters back in.", ch, nullptr, 0, 0, 0);
 		send_to_char("Newlock removed.\n\r", ch);
 	}
 }
@@ -4679,7 +4679,7 @@ void do_slookup(CHAR_DATA *ch, char *argument)
 	{
 		for (sn = 0; sn < MAX_SKILL; sn++)
 		{
-			if (skill_table[sn].name == NULL)
+			if (skill_table[sn].name == nullptr)
 				break;
 
 			sprintf(buf, "Sn: %3d  Skill/spell: '%s'\n\r", sn, skill_table[sn].name);
@@ -4774,7 +4774,7 @@ void do_sgset(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4844,7 +4844,7 @@ void do_sset(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -4886,7 +4886,7 @@ void do_sset(CHAR_DATA *ch, char *argument)
 	{
 		for (sn = 0; sn < MAX_SKILL; sn++)
 		{
-			if (skill_table[sn].name != NULL)
+			if (skill_table[sn].name != nullptr)
 				victim->pcdata->learned[sn] = value;
 		}
 	}
@@ -4926,14 +4926,14 @@ void do_mset(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
 	/* clear zones for mobs */
-	victim->zone = NULL;
+	victim->zone = nullptr;
 
 	/*
 	 * Snarf the value (which need not be numeric).
@@ -5512,14 +5512,14 @@ void do_string(CHAR_DATA *ch, char *argument)
 	{
 		victim = get_char_world(ch, arg1);
 
-		if (victim == NULL)
+		if (victim == nullptr)
 		{
 			send_to_char("They aren't here.\n\r", ch);
 			return;
 		}
 
 		/* clear zone for mobs */
-		victim->zone = NULL;
+		victim->zone = nullptr;
 
 		/* string something */
 
@@ -5570,7 +5570,7 @@ void do_string(CHAR_DATA *ch, char *argument)
 		/* string an obj */
 		obj = get_obj_world(ch, arg1);
 
-		if (obj == NULL)
+		if (obj == nullptr)
 		{
 			send_to_char("Nothing like that in heaven or earth.\n\r", ch);
 			return;
@@ -5603,7 +5603,7 @@ void do_string(CHAR_DATA *ch, char *argument)
 
 			argument = one_argument(argument, arg3);
 
-			if (argument == NULL)
+			if (argument == nullptr)
 			{
 				send_to_char("Syntax: oset <object> ed <keyword> <string>\n\r", ch);
 				return;
@@ -5650,7 +5650,7 @@ void do_oset(CHAR_DATA *ch, char *argument)
 
 	obj = get_obj_world(ch, arg1);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("Nothing like that in heaven or earth.\n\r", ch);
 		return;
@@ -5749,7 +5749,7 @@ void do_rset(CHAR_DATA *ch, char *argument)
 
 	location = find_location(ch, arg1);
 
-	if (location == NULL)
+	if (location == nullptr)
 	{
 		send_to_char("No such location.\n\r", ch);
 		return;
@@ -5806,9 +5806,9 @@ void do_sockets(CHAR_DATA *ch, char *argument)
 
 	one_argument(argument, arg);
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
-		if (d->character != NULL
+		if (d->character != nullptr
 			&& ((!d->original && can_see(ch, d->character))
 				|| (d->original && can_see(ch, d->original)))
 			&& (!IS_SET(d->character->comm, COMM_NOSOCKET) || get_trust(ch) == MAX_LEVEL)
@@ -5897,9 +5897,9 @@ void do_multicheck(CHAR_DATA *ch, char *argument)
 
 	buf[0] = '\0';
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
-		if (d->character != NULL && can_see(ch, d->character))
+		if (d->character != nullptr && can_see(ch, d->character))
 		{
 			CHARLIST[i].des = d;
 			i++;
@@ -5990,7 +5990,7 @@ void do_lagout(CHAR_DATA *ch, char *argument)
 	}
 
 	victim = get_char_world(ch, arg);
-	if (victim == NULL)
+	if (victim == nullptr)
 		return;
 
 	WAIT_STATE(victim, 24);
@@ -6032,7 +6032,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		for (vch = char_list; vch != NULL; vch = vch_next)
+		for (vch = char_list; vch != nullptr; vch = vch_next)
 		{
 			vch_next = vch->next;
 
@@ -6041,7 +6041,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 				if (!can_see(vch, ch))
 					sprintf(buf, "An irresistable urge forces you to '%s'.", argument);
 
-				act(buf, ch, NULL, vch, TO_VICT);
+				act(buf, ch, nullptr, vch, TO_VICT);
 				interpret(vch, argument);
 			}
 		}
@@ -6054,13 +6054,13 @@ void do_force(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		for (vch = char_list; vch != NULL; vch = vch_next)
+		for (vch = char_list; vch != nullptr; vch = vch_next)
 		{
 			vch_next = vch->next;
 
 			if (!is_npc(vch) && get_trust(vch) < get_trust(ch) && vch->level < LEVEL_HERO)
 			{
-				act(buf, ch, NULL, vch, TO_VICT);
+				act(buf, ch, nullptr, vch, TO_VICT);
 				interpret(vch, argument);
 			}
 		}
@@ -6073,13 +6073,13 @@ void do_force(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		for (vch = char_list; vch != NULL; vch = vch_next)
+		for (vch = char_list; vch != nullptr; vch = vch_next)
 		{
 			vch_next = vch->next;
 
 			if (!is_npc(vch) && get_trust(vch) < get_trust(ch) && vch->level >= LEVEL_HERO)
 			{
-				act(buf, ch, NULL, vch, TO_VICT);
+				act(buf, ch, nullptr, vch, TO_VICT);
 				interpret(vch, argument);
 			}
 		}
@@ -6088,7 +6088,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 	{
 		CHAR_DATA *victim = get_char_world(ch, arg);
 
-		if (victim == NULL)
+		if (victim == nullptr)
 		{
 			send_to_char("They aren't here.\n\r", ch);
 			return;
@@ -6101,7 +6101,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 		}
 
 		/*
-		if(victim->desc == NULL)
+		if(victim->desc == nullptr)
 		{
 			send_to_char("They have no descriptor!\n\r",ch);
 			return;
@@ -6129,7 +6129,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		act(buf, ch, NULL, victim, TO_VICT);
+		act(buf, ch, nullptr, victim, TO_VICT);
 		interpret(victim, argument);
 	}
 
@@ -6154,12 +6154,12 @@ void do_invis(CHAR_DATA *ch, char *argument)
 		if (ch->invis_level)
 		{
 			ch->invis_level = 0;
-			act("$n uncloaks $s presence.", ch, NULL, NULL, TO_ROOM);
+			act("$n uncloaks $s presence.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You uncloak your presence.\n\r", ch);
 		}
 		else
 		{
-			act("$n cloaks $s presence.", ch, NULL, NULL, TO_ROOM);
+			act("$n cloaks $s presence.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You cloak your presence.\n\r", ch);
 
 			ch->invis_level = get_trust(ch);
@@ -6178,9 +6178,9 @@ void do_invis(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			ch->reply = NULL;
+			ch->reply = nullptr;
 
-			act("$n cloaks $s presence.", ch, NULL, NULL, TO_ROOM);
+			act("$n cloaks $s presence.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You cloak your presence.\n\r", ch);
 
 			ch->invis_level = level;
@@ -6203,13 +6203,13 @@ void do_incognito(CHAR_DATA *ch, char *argument)
 		if (ch->incog_level)
 		{
 			ch->incog_level = 0;
-			act("$n is no longer cloaked.", ch, NULL, NULL, TO_ROOM);
+			act("$n is no longer cloaked.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You are no longer cloaked.\n\r", ch);
 		}
 		else
 		{
 			ch->incog_level = get_trust(ch);
-			act("$n cloaks $s presence.", ch, NULL, NULL, TO_ROOM);
+			act("$n cloaks $s presence.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You cloak your presence.\n\r", ch);
 		}
 	}
@@ -6225,9 +6225,9 @@ void do_incognito(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			ch->reply = NULL;
+			ch->reply = nullptr;
 			ch->incog_level = level;
-			act("$n cloaks $s presence.", ch, NULL, NULL, TO_ROOM);
+			act("$n cloaks $s presence.", ch, nullptr, nullptr, TO_ROOM);
 			send_to_char("You cloak your presence.\n\r", ch);
 		}
 	}
@@ -6303,13 +6303,13 @@ void do_astrip(CHAR_DATA *ch, char *argument)
 	else
 		victim = get_char_world(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
-	for (af = victim->affected; af != NULL; af = af_next)
+	for (af = victim->affected; af != nullptr; af = af_next)
 	{
 		af_next = af->next;
 
@@ -6341,7 +6341,7 @@ void do_limcounter(CHAR_DATA *ch, char *argument)
 
 	pObjIndex = get_obj_index(vnum);
 
-	if (pObjIndex == NULL)
+	if (pObjIndex == nullptr)
 	{
 		send_to_char("Not found.\n\r", ch);
 		return;
@@ -6358,7 +6358,7 @@ void do_classes(CHAR_DATA *ch, char *argument)
 	int iRace;
 	int iClass;
 
-	for (iRace = 1; race_table[iRace].name != NULL; iRace++)
+	for (iRace = 1; race_table[iRace].name != nullptr; iRace++)
 	{
 		if (!race_table[iRace].pc_race)
 			break;
@@ -6391,7 +6391,7 @@ void do_rinfo(CHAR_DATA *ch, char *argument)
 		? ch->in_room
 		: find_location(ch, arg);
 
-	if (location == NULL)
+	if (location == nullptr)
 	{
 		send_to_char("No such location.\n\r", ch);
 		return;
@@ -6408,7 +6408,7 @@ void do_rinfo(CHAR_DATA *ch, char *argument)
 	if (IS_SET(location->area->area_flags, AREA_UNGHOST))
 		strcat(buf, "AREA_UNGHOST\n\r");
 
-	for (int i = 0; room_flags[i].name != NULL; i++)
+	for (int i = 0; room_flags[i].name != nullptr; i++)
 	{
 		if (IS_SET(location->room_flags, room_flags[i].bit))
 		{
@@ -6439,7 +6439,7 @@ void do_deathmessage(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if (strstr(argument, ch->name) == NULL)
+		if (strstr(argument, ch->name) == nullptr)
 		{
 			send_to_char("You must include your name.\n\r", ch);
 			return;
@@ -6482,7 +6482,7 @@ void do_max_limits(CHAR_DATA *ch, char *argument)
 	{
 		pobj = get_obj_index(vnum);
 
-		if (pobj == NULL)
+		if (pobj == nullptr)
 		{
 			send_to_char("No object by that vnum exists.\n\r", ch);
 			return;
@@ -6496,7 +6496,7 @@ void do_max_limits(CHAR_DATA *ch, char *argument)
 
 		/*
 		count = 0;
-		for (obj = object_list; obj != NULL; obj = o_next)
+		for (obj = object_list; obj != nullptr; obj = o_next)
 		{
 			o_next = obj->next;
 			if (obj->pIndexData->vnum == pobj->vnum)
@@ -6552,7 +6552,7 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 	}
 
 	obj = get_obj_world(ch, arg1);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("No such object exists!\n\r", ch);
 		return;
@@ -6566,14 +6566,14 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 			free_affect(paf);
 		}
 
-		obj->charaffs = NULL;
+		obj->charaffs = nullptr;
 
 		for (app = obj->apply; app; app = app_next)
 		{
 			app_next = app->next;
 		}
 
-		obj->apply = NULL;
+		obj->apply = nullptr;
 
 		act("All affects removed from $p.", ch, obj, 0, TO_CHAR);
 		return;
@@ -6649,7 +6649,7 @@ void do_addapply(CHAR_DATA *ch, char *argument)
 		af.duration = -1;
 		af.location = 0;
 		af.modifier = 0;
-		af.owner = NULL;
+		af.owner = nullptr;
 		charaff_to_obj(obj, &af);
 	}
 
@@ -6666,7 +6666,7 @@ void log_naughty(CHAR_DATA *ch, char *argument, int logtype)
 
 	fp = fopen(GOD_LOG_FILE, "a");
 
-	if (fp != NULL)
+	if (fp != nullptr)
 	{
 		if (logtype == 1)
 			fprintf(fp, "%s: LOAD- %s is loading %s.\n", strtime, ch->name, argument);
@@ -6732,7 +6732,7 @@ void do_vmstat(CHAR_DATA *ch, char *argument)
 
 	pMobIndex = get_mob_index(atoi(arg));
 
-	if (pMobIndex == NULL)
+	if (pMobIndex == nullptr)
 	{
 		send_to_char("No mob has that vnum.\n\r", ch);
 		return;
@@ -6752,7 +6752,7 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 {
 	char buf[MAX_STRING_LENGTH];
 	char arg1[MAX_INPUT_LENGTH];
-	OBJ_INDEX_DATA *pObjIndex = NULL;
+	OBJ_INDEX_DATA *pObjIndex = nullptr;
 	OBJ_DATA *obj;
 	bool found = false;
 	int vnum, nMatch = 0;
@@ -6769,7 +6769,7 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 	{
 		pObjIndex = get_obj_index(atoi(arg1));
 
-		if (pObjIndex == NULL)
+		if (pObjIndex == nullptr)
 		{
 			send_to_char("No object has that vnum.\n\r", ch);
 			return;
@@ -6784,7 +6784,7 @@ void do_vostat(CHAR_DATA *ch, char *argument)
 		{
 			pObjIndex = get_obj_index(vnum);
 
-			if (pObjIndex != NULL)
+			if (pObjIndex != nullptr)
 			{
 				nMatch++;
 
@@ -6841,7 +6841,7 @@ void do_history(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch,arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here, attempting offline history...\n\r", ch);
 		auto buffer = fmt::format("finger {} history", arg1);
@@ -6875,12 +6875,12 @@ void do_history(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		victim->pcdata->history_buffer = NULL;
+		victim->pcdata->history_buffer = nullptr;
 	}
 
 	if (!strcmp(arg2, "add"))
 	{
-		if (victim->pcdata->temp_history_buffer == NULL || victim->pcdata->temp_history_buffer[0] == '\0')
+		if (victim->pcdata->temp_history_buffer == nullptr || victim->pcdata->temp_history_buffer[0] == '\0')
 		{
 			send_to_char("The temporary buffer for that character is empty.\n\r", ch);
 			return;
@@ -6890,7 +6890,7 @@ void do_history(CHAR_DATA *ch, char *argument)
 			add_history(ch, victim, victim->pcdata->temp_history_buffer);
 
 			free_pstring(victim->pcdata->temp_history_buffer);
-			victim->pcdata->temp_history_buffer = NULL;
+			victim->pcdata->temp_history_buffer = nullptr;
 
 			show_history(ch, victim);
 		}
@@ -6932,7 +6932,7 @@ void do_history(CHAR_DATA *ch, char *argument)
 	if (!strcmp(arg2, "-"))
 	{
 
-		if (victim->pcdata->temp_history_buffer == NULL || victim->pcdata->temp_history_buffer[0] == '\0')
+		if (victim->pcdata->temp_history_buffer == nullptr || victim->pcdata->temp_history_buffer[0] == '\0')
 		{
 			send_to_char("No lines left to remove.\n\r", ch);
 			return;
@@ -7007,7 +7007,7 @@ void show_temp_history(CHAR_DATA *ch, CHAR_DATA *victim)
 	send_to_char(victim->name, ch);
 	send_to_char("'s temporary history buffer:\n\r", ch);
 
-	if (victim->pcdata->temp_history_buffer == NULL || victim->pcdata->temp_history_buffer[0] == '\0')
+	if (victim->pcdata->temp_history_buffer == nullptr || victim->pcdata->temp_history_buffer[0] == '\0')
 	{
 		send_to_char("Temporary buffer is clear.\n\r", ch);
 	}
@@ -7028,7 +7028,7 @@ void show_history(CHAR_DATA *ch, CHAR_DATA *victim)
 	send_to_char(victim->name, ch);
 	send_to_char("'s player history:\n\r", ch);
 
-	if (victim->pcdata->history_buffer == NULL || victim->pcdata->history_buffer[0] == '\0')
+	if (victim->pcdata->history_buffer == nullptr || victim->pcdata->history_buffer[0] == '\0')
 	{
 		send_to_char("No pfile history available.\n\r", ch);
 	}
@@ -7049,7 +7049,7 @@ void do_afk(CHAR_DATA *ch, char *argument)
 		REMOVE_BIT(ch->comm, COMM_AFK);
 
 		send_to_char("AFK removed.\n\r", ch);
-		wiznet("$N is no longer AFK.", ch, NULL, 0, 0, 0);
+		wiznet("$N is no longer AFK.", ch, nullptr, 0, 0, 0);
 
 		do_replay(ch, "");
 	}
@@ -7064,7 +7064,7 @@ void do_afk(CHAR_DATA *ch, char *argument)
 		else
 			sprintf(buf, "$N is now AFK.");
 
-		wiznet(buf, ch, NULL, 0, 0, 0);
+		wiznet(buf, ch, nullptr, 0, 0, 0);
 	}
 }
 
@@ -7092,7 +7092,7 @@ void do_empower(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg);
 
-	if (victim == NULL || is_npc(victim))
+	if (victim == nullptr || is_npc(victim))
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -7108,10 +7108,10 @@ void do_empower(CHAR_DATA *ch, char *argument)
 			act("You have UNEMPOWERED $N, until you notify $M, $E doesn't know.", ch, 0, victim, TO_CHAR);
 
 			sprintf(buf, "$N revokes %s's empowerment.", victim->name);
-			wiznet(buf, ch, NULL, WIZ_PENALTIES, 0, 0);
+			wiznet(buf, ch, nullptr, WIZ_PENALTIES, 0, 0);
 
 			sprintf(buf, "AUTO: Unempowered by %s.\n\r", ch->true_name);
-			add_history(NULL, victim, buf);
+			add_history(nullptr, victim, buf);
 
 			return;
 		}
@@ -7130,10 +7130,10 @@ void do_empower(CHAR_DATA *ch, char *argument)
 			act("You have EMPOWERED $N, until you notify $M, $E doesn't know.", ch, 0, victim, TO_CHAR);
 
 			sprintf(buf, "$N empowers %s.", victim->name);
-			wiznet(buf, ch, NULL, WIZ_PENALTIES, 0, 0);
+			wiznet(buf, ch, nullptr, WIZ_PENALTIES, 0, 0);
 
 			sprintf(buf, "AUTO: Empowered by %s.\n\r", ch->true_name);
-			add_history(NULL, victim, buf);
+			add_history(nullptr, victim, buf);
 
 			return;
 		}
@@ -7158,12 +7158,12 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 	bool found = false;
 	int i = 0;
 
-	if (ch->in_room->affected != NULL)
+	if (ch->in_room->affected != nullptr)
 	{
 		found = true;
 		send_to_char("The room is affected by:\n\r", ch);
 
-		for (paf = ch->in_room->affected; paf != NULL; paf = paf->next)
+		for (paf = ch->in_room->affected; paf != nullptr; paf = paf->next)
 		{
 			if (paf->aftype == AFT_SPELL)
 				sprintf(buf, "Spell: '%s' ", skill_table[paf->type].name);
@@ -7187,8 +7187,8 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 				paf->modifier,
 				paf->duration / 2,
 				paf->where == TO_ROOM_FLAGS ? "flag" : paf->where == TO_ROOM_CONST ? "const" : "aff",
-				"NULL",
-				paf->owner != NULL ? paf->owner->name : "none",
+				"nullptr",
+				paf->owner != nullptr ? paf->owner->name : "none",
 				paf->level);
 			send_to_char(buf, ch);
 		}
@@ -7231,18 +7231,18 @@ void do_raffects(CHAR_DATA *ch, char *argument)
 void do_rastrip(CHAR_DATA *ch, char *argument)
 {
 	ROOM_AFFECT_DATA *af, *af_next;
-	ROOM_INDEX_DATA *location = NULL;
+	ROOM_INDEX_DATA *location = nullptr;
 
 	if (argument[0] == '\0')
 		location = ch->in_room;
 
-	if (location == NULL && (location = find_location(ch, argument)) == NULL)
+	if (location == nullptr && (location = find_location(ch, argument)) == nullptr)
 	{
 		send_to_char("No such room exists.\n\r", ch);
 		return;
 	}
 
-	for (af = location->affected; af != NULL; af = af_next)
+	for (af = location->affected; af != nullptr; af = af_next)
 	{
 		af_next = af->next;
 		affect_remove_room(location, af);
@@ -7289,7 +7289,7 @@ void do_oastrip(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (af = obj->affected; af != NULL; af = af_next)
+	for (af = obj->affected; af != nullptr; af = af_next)
 	{
 		af_next = af->next;
 
@@ -7319,7 +7319,7 @@ void do_givexp(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("You can't find them.\n\r", ch);
 		return;
@@ -7353,7 +7353,7 @@ void do_givexp(CHAR_DATA *ch, char *argument)
 	send_to_char(temp, ch);
 
 	sprintf(temp, "AUTO: %s gave %d experience.\n\r", ch->true_name, xp);
-	add_history(NULL, victim, temp);
+	add_history(nullptr, victim, temp);
 }
 
 void do_setpath(CHAR_DATA *ch, char *argument)
@@ -7371,7 +7371,7 @@ void do_setpath(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_world(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("You cannot find that person.\n\r", ch);
 		return;
@@ -7405,7 +7405,7 @@ void do_setpath(CHAR_DATA *ch, char *argument)
 		return;
 	}
 	
-	add_history(NULL, victim, temp);
+	add_history(nullptr, victim, temp);
 }
 
 void do_clearfavors(CHAR_DATA *ch, char *argument)
@@ -7444,7 +7444,7 @@ void do_gsnlist(CHAR_DATA *ch, char *argument)
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
 	{
-		if (skill_table[sn].name == NULL)
+		if (skill_table[sn].name == nullptr)
 			continue;
 
 		sprintf(buf, "%-18s %3d  ", skill_table[sn].name, sn);
@@ -7483,8 +7483,8 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 {
 	char arg1[MSL], arg2[MSL], query[MSL], str[200];
 	MYSQL *conn;
-	MYSQL_RES *res_set = NULL;
-	MYSQL_ROW row = NULL;
+	MYSQL_RES *res_set = nullptr;
+	MYSQL_ROW row = nullptr;
 
 	if (argument[0] == '\0')
 	{
@@ -7610,7 +7610,7 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 		send_to_char("ID    Added By    Summary\n\r", ch);
 		send_to_char("---   ---------   ------------\n\r", ch);
 
-		while ((row = mysql_fetch_row(res_set)) != NULL)
+		while ((row = mysql_fetch_row(res_set)) != nullptr)
 		{
 			sprintf(query, "%-5s %-11s %s %s\n\r", row[0], row[1], row[3], atoi(row[5]) == 1 ? "(SOLVED)" : "");
 			send_to_char(query, ch);
@@ -7625,7 +7625,7 @@ void buglist_end_fun(CHAR_DATA *ch, char *argument)
 {
 	char query[MSL];
 
-	sprintf(query, "INSERT INTO buglist VALUES(NULL, '%s', '%s', '%s', '%s', 0)",
+	sprintf(query, "INSERT INTO buglist VALUES(nullptr, '%s', '%s', '%s', '%s', 0)",
 		ch->true_name,
 		log_time(),
 		ch->pcdata->temp_str,
@@ -7717,7 +7717,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 	int i = 0, j = 0, k = 0;
 	int bit = 0;
 
-	for (i = 0; cmd_table[i].do_fun != NULL; i++)
+	for (i = 0; cmd_table[i].do_fun != nullptr; i++)
 	{
 		bit = 0;
 
@@ -7780,7 +7780,7 @@ void do_racedump(CHAR_DATA *ch, char *argument)
 	long temp_bit = 0;
 	char buf[MSL];
 
-	for (race = 0; race_table[race].name != NULL; race++)
+	for (race = 0; race_table[race].name != nullptr; race++)
 	{
 		fprintf(fp, ";%s;%s;%s;%s;", race_table[race].name, race_table[race].name, race_table[race].name, race_table[race].name);
 		fprintf(fp, " %d;", race_table[race].pc_race);

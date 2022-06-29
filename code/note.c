@@ -190,11 +190,11 @@ bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
 /// @param type: The type of the note being attached.
 void note_attach(CHAR_DATA *ch, int type)
 {
-	if (ch->pnote != NULL)
+	if (ch->pnote != nullptr)
 		return;
 
 	auto pnote = new_note();
-	pnote->next = NULL;
+	pnote->next = nullptr;
 	pnote->sender = (is_npc(ch))
 		? palloc_string(ch->short_descr)
 		: palloc_string(ch->true_name);
@@ -560,7 +560,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 			return;
 		}
 
-		if (ch->pnote->text == NULL || ch->pnote->text[0] == '\0')
+		if (ch->pnote->text == nullptr || ch->pnote->text[0] == '\0')
 		{
 			send_to_char("No lines left to remove.\n\r", ch);
 			return;
@@ -647,10 +647,10 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 	if (!str_prefix(arg, "clear"))
 	{
-		if (ch->pnote != NULL)
+		if (ch->pnote != nullptr)
 		{
 			free_note(ch->pnote);
-			ch->pnote = NULL;
+			ch->pnote = nullptr;
 		}
 
 		send_to_char("Ok.\n\r", ch);
@@ -659,7 +659,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 	if (!str_prefix(arg, "show"))
 	{
-		if (ch->pnote == NULL)
+		if (ch->pnote == nullptr)
 		{
 			send_to_char("You have no note in progress.\n\r", ch);
 			return;
@@ -681,7 +681,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 	{
 		char *strtime;
 
-		if (ch->pnote == NULL)
+		if (ch->pnote == nullptr)
 		{
 			send_to_char("You have no note in progress.\n\r", ch);
 			return;
@@ -711,14 +711,14 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 			return;
 		}
 
-		ch->pnote->next = NULL;
+		ch->pnote->next = nullptr;
 		strtime = ctime(&current_time);
 		strtime[strlen(strtime) - 1] = '\0';
 		ch->pnote->date = palloc_string(strtime);
 		ch->pnote->date_stamp = current_time;
 
 		append_note(ch->pnote);
-		ch->pnote = NULL;
+		ch->pnote = nullptr;
 		send_to_char("Note sent.\n\r", ch);
 		add_prof_affect(ch, "note_written", 4, true);
 		return;
@@ -733,7 +733,7 @@ NOTE_DATA *new_note()
 {
 	NOTE_DATA *note;
 
-	if (note_free == NULL)
+	if (note_free == nullptr)
 	{
 		note = new NOTE_DATA;
 	}
@@ -751,7 +751,7 @@ NOTE_DATA *new_note()
 /// @param note: The note to recycle.
 void free_note(NOTE_DATA *note)
 {
-	if (!(note != NULL && note->valid))
+	if (!(note != nullptr && note->valid))
 		return;
 
 	free_pstring(note->text);

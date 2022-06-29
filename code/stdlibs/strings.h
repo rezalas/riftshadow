@@ -10,7 +10,6 @@
 	#include <stdbool.h>
 #endif
 
-//#define NULL        0
 //#define size_t      int //unsigned int 20161104 Rezalas
 
 #define DEFAULTCASE				true

@@ -44,20 +44,20 @@ const std::vector<prof_level_type> CProficiencies::prof_level_table =
 
 const std::vector<proficiency_type> CProficiencies::prof_table =
 {
-	// ppsn, 				name,						cost,	mnlevel,	requires, 	flags
-	{ &psn_swimming, 		"swimming",					18,		 1, 		NULL,		PFLAGS_BASIC 	},
-	{ &psn_none, 			"butchery",					18,		 1, 		NULL,		PFLAGS_BASIC 	},
-	{ &psn_mountaineering,	"mountaineering",			13,		 1,			NULL,		PFLAGS_BASIC	},
-	{ &psn_none,			"bandaging",				18,		 1,			NULL,		PFLAGS_BASIC	},
-	{ &psn_none,			"appraising",				15,		 1,			NULL,		PFLAGS_BASIC	},
-	{ &psn_none,			"trap detecting",			20,		 1,			NULL,		PFLAGS_BASIC	},
-	{ &psn_none,			"cooking",					13,		 1,			NULL,		PFLAGS_BASIC	},
-	{ &psn_none,			"firestarting", 			15,		 1,			NULL,		PFLAGS_BASIC	},
-	{ &psn_none,			"wildlore",					10,		 1,			NULL,		PFLAGS_NONE		},
-	{ &psn_none,			"wilderness subsistence",	26,		 1,			NULL,		PFLAGS_NONE		},
-	{ &psn_none,			"ancient languages",		25,		30,			NULL,		PFLAGS_NONE		},
-	{ &psn_none,			"forgotten lore",			20,		30,			NULL,		PFLAGS_NONE		},
-	{ &psn_none,			"tracking",					30,		30,			NULL,		PFLAGS_NONE		}
+	// ppsn, 				name,						cost,	mnlevel,	requires, 		flags
+	{ &psn_swimming, 		"swimming",					18,		 1, 		nullptr,		PFLAGS_BASIC 	},
+	{ &psn_none, 			"butchery",					18,		 1, 		nullptr,		PFLAGS_BASIC 	},
+	{ &psn_mountaineering,	"mountaineering",			13,		 1,			nullptr,		PFLAGS_BASIC	},
+	{ &psn_none,			"bandaging",				18,		 1,			nullptr,		PFLAGS_BASIC	},
+	{ &psn_none,			"appraising",				15,		 1,			nullptr,		PFLAGS_BASIC	},
+	{ &psn_none,			"trap detecting",			20,		 1,			nullptr,		PFLAGS_BASIC	},
+	{ &psn_none,			"cooking",					13,		 1,			nullptr,		PFLAGS_BASIC	},
+	{ &psn_none,			"firestarting", 			15,		 1,			nullptr,		PFLAGS_BASIC	},
+	{ &psn_none,			"wildlore",					10,		 1,			nullptr,		PFLAGS_NONE		},
+	{ &psn_none,			"wilderness subsistence",	26,		 1,			nullptr,		PFLAGS_NONE		},
+	{ &psn_none,			"ancient languages",		25,		30,			nullptr,		PFLAGS_NONE		},
+	{ &psn_none,			"forgotten lore",			20,		30,			nullptr,		PFLAGS_NONE		},
+	{ &psn_none,			"tracking",					30,		30,			nullptr,		PFLAGS_NONE		}
 };
 
 const std::vector<prof_cmd_type> CProficiencies::prof_cmd_table =
@@ -80,7 +80,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N describes basic swimming strokes.", 
 			"$N shares a few anecdotes about Shalaran rivers and oceans.", 
 			"$N makes you practice breathing in the most efficient manner.",
-			NULL
+			nullptr
 		}
 	},
 	// butchery
@@ -89,7 +89,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N grumbles and drags a dead calf out of the back room.", 
 			"Taking time to point out the 'good parts', $N hacks up the corpse.",
 			"By the time $E's done, chunks of fresh, edible meat litter the floor around the corpse.", 
-			NULL
+			nullptr
 		}
 	},
 	// mountaineering
@@ -97,7 +97,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 		{
 			"$N begins to speak about the common mistakes inexperienced travelers make when traversing mountains.",
 			"$N describes how to avoid treacherous spots that could tire legs and make travel more difficult.",
-			NULL
+			nullptr
 		}
 	},
 	// bandaging
@@ -106,7 +106,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N takes out a roll of bandages and a tourniquet, explaining where to apply pressure.",
 			"$N describes how to treat the various types of bleeding you might encounter.",
 			"$N wraps a few practice bandages as you watch.",
-			NULL
+			nullptr
 		}
 	},
 	// appraising
@@ -115,7 +115,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N pulls out a gem and holds it up to the light, pointing out tiny flaws and irregularities.",
 			"$N shows you basic methods of estimating value based on an items condition and rarity.",
 			"$N describes how to best convince a shopkeeper that their price is too high based on your knowledge.",
-			NULL
+			nullptr
 		}
 	},
 	// trap detecting
@@ -124,7 +124,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N describes the most common types of traps you will encounter in your travels.",
 			"$N shows you how to recognize trap triggers before you stumble into them.",
 			"$N makes you practice rolling and ducking to avoid traps after you've triggered them.",
-			NULL
+			nullptr
 		}
 	},
 	// cooking
@@ -133,7 +133,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N mutters and tells you to watch, tossing some raw meat into a pan and frying it.",
 			"$N makes you practice cooking common foods, requiring you to prove basic competence before moving on.",
 			"$N nods slightly as you finish cooking a chicken.",
-			NULL
+			nullptr
 		}
 	},
 	// firestarting
@@ -142,20 +142,20 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N shows you how to gather kindling and small twigs.",
 			"$N demonstrates the best way to arrange the wood for the fire.",
 			"$N makes you rub sticks together until you can reliably produce a spark.",
-			NULL
+			nullptr
 		}
 	},
 	// wildlore
 	{
 		{ 
-			"Blah", NULL
+			"Blah", nullptr
 		}
 	},
 	// wilderness subsistence
 	{
 		{
 			"Blah2",
-			NULL
+			nullptr
 		}
 	},
 	// ancient languages
@@ -164,7 +164,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N hobbles slowly over to the bookshelf, returning with numerous old, dusty books.", 
 			"$N drops the books on a table with a thud, motioning for you to open the one before you.",
 			"$N goes on to explain the intricacies of certain languages, demonstrating pronunciation, reading, and writing.", 
-			NULL
+			nullptr
 		}
 	},
 	// forgotten lore
@@ -173,7 +173,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N takes out some ancient artifacts, showing you common identifiers to recognize.",
 			"$N hands you a musty old tome, suggesting you memorize the contents for future reference.",
 			"You spend a few hours studying the index.",
-			NULL
+			nullptr
 		}
 	},
 	// tracking
@@ -182,7 +182,7 @@ const struct proficiency_msg CProficiencies::prof_msg_table [] =
 			"$N beckons you over to a nearby tree.", 
 			"As $E points out small details you would not have noticed on your own, you see something has passed by recently.", 
 			"$E tells you of other signs to look for, and you feel more adept at tracking.",
-			NULL
+			nullptr
 		}
 	}
 };
@@ -394,7 +394,7 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 	act("You ask $N to teach you about $t.", ch, proficiency.name, trainer, TO_CHAR);
 
 	auto messages = prof_msg_table[prof];
-	for (i = 0; messages.learning_msgs[i] != NULL && i < 5; i++)
+	for (i = 0; messages.learning_msgs[i] != nullptr && i < 5; i++)
 	{
 		if (i == 4 || !messages.learning_msgs[i + 1])
 		{
@@ -636,7 +636,7 @@ void CProficiencies::DisplayProfsForStat(CHAR_DATA *imm)
 	char buf[MSL], buf2[MSL];
 	int i;
 	sprintf(buf, "Proficiencies (%d pts left): ", GetPoints());
-	for(i = 0; prof_table[i].name != NULL; i++)
+	for(i = 0; prof_table[i].name != nullptr; i++)
 	{
 		if(profs[i] == -1)
 			continue;
@@ -840,7 +840,7 @@ bool is_affected_prof(CHAR_DATA *ch, char *prof)
 /// @param argument: TBD
 void do_proficiencies(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *trainer = NULL;
+	CHAR_DATA *trainer = nullptr;
 	bool bBreak= false;
 
 	if (IS_NPC(ch))
@@ -925,7 +925,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 	act("$n begins to poke and prod at the ground, clearly searching for something.", ch, 0, 0, TO_ROOM);
 	auto buffer = std::string("You were unable to find any sign of $N here.");
 
-	char *direction = NULL;
+	char *direction = nullptr;
 	for (auto i = 0; i < MAX_TRACKS; i++)
 	{
 		if (!ch->in_room->tracks[i])

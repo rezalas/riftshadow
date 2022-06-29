@@ -100,7 +100,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 	if (!str_prefix(arg1, "mob") || !str_prefix(arg1, "char"))
 	{
 		victim = get_char_world(ch, arg2);
-		if (victim == NULL)
+		if (victim == nullptr)
 		{
 			send_to_char("You can't find them.\n\r", ch);
 			return;
@@ -200,7 +200,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_prefix(arg1, "obj"))
 	{
-		if ((obj = get_obj_world(ch, arg2)) == NULL)
+		if ((obj = get_obj_world(ch, arg2)) == nullptr)
 		{
 			send_to_char("Nothing like that anywhere.\n\r", ch);
 			return;
@@ -254,7 +254,7 @@ void do_flag(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	for (pos = 0; flag_table[pos].name != NULL; pos++)
+	for (pos = 0; flag_table[pos].name != nullptr; pos++)
 	{
 		if ((get_trust(ch) == MAX_LEVEL || flag_table[pos].settable) && flag_table[pos].bit == pos2)
 		{

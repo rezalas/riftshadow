@@ -150,7 +150,7 @@ const struct improg_type mprog_table[] =
 	{"move_prog", "move_prog_horde_shrine_ward", (void *)move_prog_horde_shrine_ward, "None"},
 	{"move_prog", "move_prog_theatre_guard", (void *)move_prog_theatre_guard, "None"},
 	{"entry_prog", "entry_prog_cornogun", (void *)entry_prog_cornogun, "None"},
-	{NULL, NULL, NULL, NULL},
+	{nullptr, nullptr, nullptr, nullptr},
 };
 
 void mprog_tell(int inc, char *arg, CHAR_DATA *mob, CHAR_DATA *ch)
@@ -213,7 +213,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 {
 	int i;
 
-	for (i = 0; mprog_table[i].name != NULL; i++)
+	for (i = 0; mprog_table[i].name != nullptr; i++)
 	{
 		if (!str_cmp(mprog_table[i].name, name))
 			break;
@@ -225,7 +225,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 	// IF YOU ADD A NEW TYPE ALSO PUT IT IN DB.C DO_ADUMP!
 	if (!str_cmp(progtype, "bribe_prog"))
 	{
-		mobindex->mprogs->bribe_prog = NULL;
+		mobindex->mprogs->bribe_prog = nullptr;
 		free_pstring(mobindex->mprogs->bribe_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_BRIBE);
 		return true;
@@ -233,7 +233,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "entry_prog"))
 	{
-		mobindex->mprogs->entry_prog = NULL;
+		mobindex->mprogs->entry_prog = nullptr;
 		free_pstring(mobindex->mprogs->entry_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_ENTRY);
 		return true;
@@ -241,7 +241,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "greet_prog"))
 	{
-		mobindex->mprogs->greet_prog = NULL;
+		mobindex->mprogs->greet_prog = nullptr;
 		free_pstring(mobindex->mprogs->greet_name);
 		mobindex->mprogs->greet_name = palloc_string(name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_GREET);
@@ -250,7 +250,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "fight_prog"))
 	{
-		mobindex->mprogs->fight_prog = NULL;
+		mobindex->mprogs->fight_prog = nullptr;
 		free_pstring(mobindex->mprogs->fight_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_FIGHT);
 		return true;
@@ -258,7 +258,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "death_prog")) /* returning true prevents death */
 	{
-		mobindex->mprogs->death_prog = NULL;
+		mobindex->mprogs->death_prog = nullptr;
 		free_pstring(mobindex->mprogs->death_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_DEATH);
 		return true;
@@ -266,7 +266,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "beat_prog"))
 	{
-		mobindex->mprogs->beat_prog = NULL;
+		mobindex->mprogs->beat_prog = nullptr;
 		free_pstring(mobindex->mprogs->beat_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_BEAT);
 		return true;
@@ -274,7 +274,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "pulse_prog"))
 	{
-		mobindex->mprogs->pulse_prog = NULL;
+		mobindex->mprogs->pulse_prog = nullptr;
 		free_pstring(mobindex->mprogs->pulse_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_PULSE);
 		return true;
@@ -282,7 +282,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "speech_prog"))
 	{
-		mobindex->mprogs->speech_prog = NULL;
+		mobindex->mprogs->speech_prog = nullptr;
 		free_pstring(mobindex->mprogs->speech_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_SPEECH);
 		return true;
@@ -290,7 +290,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "give_prog"))
 	{
-		mobindex->mprogs->give_prog = NULL;
+		mobindex->mprogs->give_prog = nullptr;
 		free_pstring(mobindex->mprogs->give_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_GIVE);
 		return true;
@@ -298,7 +298,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "attack_prog"))
 	{
-		mobindex->mprogs->attack_prog = NULL;
+		mobindex->mprogs->attack_prog = nullptr;
 		free_pstring(mobindex->mprogs->attack_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_ATTACK);
 		return true;
@@ -306,7 +306,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "aggress_prog")) /* Returning true stops attack */
 	{
-		mobindex->mprogs->aggress_prog = NULL;
+		mobindex->mprogs->aggress_prog = nullptr;
 		free_pstring(mobindex->mprogs->aggress_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_AGGRESS);
 		return true;
@@ -314,7 +314,7 @@ bool mprog_unset(MOB_INDEX_DATA *mobindex, const char *progtype, const char *nam
 
 	if (!str_cmp(progtype, "move_prog"))
 	{
-		mobindex->mprogs->move_prog = NULL;
+		mobindex->mprogs->move_prog = nullptr;
 		free_pstring(mobindex->mprogs->move_name);
 		REMOVE_BIT(mobindex->progtypes, MPROG_MOVE);
 		return true;
@@ -327,7 +327,7 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 {
 	int i;
 
-	for (i = 0; mprog_table[i].name != NULL; i++)
+	for (i = 0; mprog_table[i].name != nullptr; i++)
 	{
 		if (!str_cmp(mprog_table[i].name, name))
 			break;
@@ -504,7 +504,7 @@ void greet_prog_arangird(CHAR_DATA *mob, CHAR_DATA *ch)
 	if (!is_npc(ch) && check_stealth(ch, mob))
 		found = true;
 
-	if ((obj = get_eq_char(ch, WEAR_ABOUT)) != NULL
+	if ((obj = get_eq_char(ch, WEAR_ABOUT)) != nullptr
 		&& (obj->pIndexData->vnum == 12219 || obj->pIndexData->vnum == 21800))
 	{
 		found = true;
@@ -602,7 +602,7 @@ void pulse_prog_arangird_patrol(CHAR_DATA *mob)
 		if (is_immortal(vch))
 			continue;
 
-		if ((robes = get_eq_char(vch, WEAR_ABOUT)) != NULL && robes->pIndexData->vnum == 21800)
+		if ((robes = get_eq_char(vch, WEAR_ABOUT)) != nullptr && robes->pIndexData->vnum == 21800)
 			continue;
 
 		do_yell(mob, "Intruder!  Sound the alarm!");
@@ -663,7 +663,7 @@ void speech_prog_testmob(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 
 void speech_prog_ruins_mouth(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 {
-	ROOM_INDEX_DATA *to_room = NULL;
+	ROOM_INDEX_DATA *to_room = nullptr;
 
 	if (strstr(speech, "testing") || strstr(speech, "Testing"))
 		to_room = get_room_index(20159);
@@ -710,7 +710,7 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			sprintf(buf, "You win %d gold!!\n\r", 2 * amount);
 			send_to_char(buf, ch);
 
-			act("$n does a very foolish thing....", ch, NULL, NULL, TO_ROOM);
+			act("$n does a very foolish thing....", ch, nullptr, nullptr, TO_ROOM);
 
 			ch->gold = std::max((long)0, ch->gold + (2 * amount));
 			return;
@@ -723,13 +723,13 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		}
 		else
 		{
-			act("$n rolls $s dice.", mob, NULL, NULL, TO_ROOM);
-			act("You roll your dice.", mob, NULL, NULL, TO_CHAR);
+			act("$n rolls $s dice.", mob, nullptr, nullptr, TO_ROOM);
+			act("You roll your dice.", mob, nullptr, nullptr, TO_CHAR);
 
 			sroll = dice(5, 6);
 
-			act("$n rolls $s dice.", ch, NULL, NULL, TO_ROOM);
-			act("You roll your dice.", ch, NULL, NULL, TO_CHAR);
+			act("$n rolls $s dice.", ch, nullptr, nullptr, TO_ROOM);
+			act("You roll your dice.", ch, nullptr, nullptr, TO_CHAR);
 
 			proll = dice(5, 6);
 
@@ -737,9 +737,9 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			{
 				sprintf(buf, "$N lost %d gold!", amount);
 				sprintf(arg, "You lost %d gold!!", amount);
-				act("$n has won some gold!!", mob, NULL, ch, TO_NOTVICT);
-				act(buf, mob, NULL, ch, TO_CHAR);
-				act(arg, mob, NULL, ch, TO_VICT);
+				act("$n has won some gold!!", mob, nullptr, ch, TO_NOTVICT);
+				act(buf, mob, nullptr, ch, TO_CHAR);
+				act(arg, mob, nullptr, ch, TO_VICT);
 
 				ch->gold -= amount;
 
@@ -748,9 +748,9 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 			}
 			else if (sroll == proll)
 			{
-				act("You tied with $N!  You don't lose any money.", ch, NULL, mob, TO_CHAR);
-				act("You tied with $n!  You don't lose any money.", ch, NULL, mob, TO_VICT);
-				act("$n tied with $N!  Neither wins the game.", ch, NULL, mob, TO_NOTVICT);
+				act("You tied with $N!  You don't lose any money.", ch, nullptr, mob, TO_CHAR);
+				act("You tied with $n!  You don't lose any money.", ch, nullptr, mob, TO_VICT);
+				act("$n tied with $N!  Neither wins the game.", ch, nullptr, mob, TO_NOTVICT);
 
 				do_say(mob, "Would you like to try that again?");
 			}
@@ -759,9 +759,9 @@ void speech_prog_sailor(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 				sprintf(buf, "$n won %d gold!", amount);
 				sprintf(arg, "You won %d gold!!", amount);
 
-				act("$n has won some gold!!", ch, NULL, mob, TO_NOTVICT);
-				act(buf, ch, NULL, mob, TO_VICT);
-				act(arg, ch, NULL, mob, TO_CHAR);
+				act("$n has won some gold!!", ch, nullptr, mob, TO_NOTVICT);
+				act(buf, ch, nullptr, mob, TO_VICT);
+				act(arg, ch, nullptr, mob, TO_CHAR);
 
 				ch->gold += amount;
 
@@ -946,7 +946,7 @@ bool aggress_prog_arangird_demon(CHAR_DATA *mob, CHAR_DATA *attacker)
 {
 	CHAR_DATA *regthor;
 
-	if ((regthor = get_char_room(mob, "regthor")) != NULL)
+	if ((regthor = get_char_room(mob, "regthor")) != nullptr)
 	{
 		act("An invisible barrier flares around $n, protecting $m from harm.", mob, 0, attacker, TO_VICT);
 		act("An invisible barrier flares around $n as $N approaches.", mob, 0, attacker, TO_NOTVICT);
@@ -964,7 +964,7 @@ bool aggress_prog_arangird_regthor(CHAR_DATA *mob, CHAR_DATA *attacker)
 {
 	CHAR_DATA *demon;
 
-	if ((demon = get_char_room(mob, "ertruza")) == NULL)
+	if ((demon = get_char_room(mob, "ertruza")) == nullptr)
 		return false;
 
 	act("A look of horror crosses $n's face as $s concentration falters.", mob, 0, demon, TO_ALL);
@@ -1022,7 +1022,7 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 	CHAR_DATA *victim, *adjmob, *adjmob_next;
 	int rindex;
 
-	if ((room = mob->in_room) == NULL)
+	if ((room = mob->in_room) == nullptr)
 		return;
 
 	if (mob->fighting)
@@ -1034,13 +1034,13 @@ void pulse_prog_ilopheth_piranha(CHAR_DATA *mob)
 	if (room->vnum < 9141 || room->vnum > 9146)
 		return;
 
-	if (!room->exit[Directions::Up] || ((surface = room->exit[Directions::Up]->u1.to_room) == NULL))
+	if (!room->exit[Directions::Up] || ((surface = room->exit[Directions::Up]->u1.to_room) == nullptr))
 		return;
 
 	if (is_affected_room(surface, gsn_glaciate))
 		return;
 
-	if ((victim = get_rand_from_room(surface)) == NULL)
+	if ((victim = get_rand_from_room(surface)) == nullptr)
 	{
 		if (mob->in_room != mob->home_room)
 			walk_to_room(mob, mob->home_room);
@@ -1195,9 +1195,9 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 
 	do_cb(mob, "Alas, my life has come to an end.");
 
-	if ((cabalguardian = get_cabal_guardian(mob->cabal)) != NULL)
+	if ((cabalguardian = get_cabal_guardian(mob->cabal)) != nullptr)
 	{
-		for (obj = cabalguardian->carrying; obj != NULL; obj = obj_next)
+		for (obj = cabalguardian->carrying; obj != nullptr; obj = obj_next)
 		{
 			present= false;
 			obj_next = obj->next_content;
@@ -1207,7 +1207,7 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 
 			if (obj->pIndexData->cabal != cabalguardian->cabal)
 			{
-				for (vch = killer->in_room->people; vch != NULL; vch = vch->next_in_room)
+				for (vch = killer->in_room->people; vch != nullptr; vch = vch->next_in_room)
 				{
 					if (is_same_group(vch, killer))
 					{
@@ -1217,7 +1217,7 @@ bool death_prog_outer_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 						}
 					}
 				}
-				if (present && (othercabalguardian = get_cabal_guardian(obj->pIndexData->cabal)) != NULL)
+				if (present && (othercabalguardian = get_cabal_guardian(obj->pIndexData->cabal)) != nullptr)
 				{
 					sprintf(buf, "As %s falls, %s returns to %s!",
 						mob->short_descr,
@@ -1248,7 +1248,7 @@ bool death_prog_inner_guardian(CHAR_DATA *mob, CHAR_DATA *killer)
 
 	do_cb(mob, "Alas, my life has come to an end.");
 
-	for (obj = mob->carrying; obj != NULL; obj = obj_next)
+	for (obj = mob->carrying; obj != nullptr; obj = obj_next)
 	{
 		found= false;
 		obj_next = obj->next_content;
@@ -1301,10 +1301,10 @@ void pulse_prog_tahlu_mist_ward(CHAR_DATA *mob)
 	if (!mob->in_room->area->nplayer || number_percent() <= 90)
 		return;
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
 		if (d->connected == CON_PLAYING
-			&& d->character->in_room != NULL
+			&& d->character->in_room != nullptr
 			&& d->character->in_room->area == mob->in_room->area
 			&& is_evil(d->character))
 		{
@@ -1357,10 +1357,10 @@ bool death_prog_glass(CHAR_DATA *mob, CHAR_DATA *killer)
 	CHAR_DATA *ch, *vch, *vch_next;
 	ch = mob->leader;
 
-	if (ch == NULL)
+	if (ch == nullptr)
 		return false;
 
-	for (vch = mob->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = mob->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -1370,13 +1370,13 @@ bool death_prog_glass(CHAR_DATA *mob, CHAR_DATA *killer)
 		act("Some of the exploding glass from $n strikes you!", mob, 0, vch, TO_VICT);
 		damage_new(ch, vch, dice(mob->level, 6), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 
-		if ((vch != NULL) && (number_percent() > 60))
+		if ((vch != nullptr) && (number_percent() > 60))
 			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
-		if ((vch != NULL) && (number_percent() > 70))
+		if ((vch != nullptr) && (number_percent() > 70))
 			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
-		if ((vch != NULL) && (number_percent() > 80))
+		if ((vch != nullptr) && (number_percent() > 80))
 			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
-		if ((vch != NULL) && (number_percent() > 90))
+		if ((vch != nullptr) && (number_percent() > 90))
 			damage_new(ch, vch, dice(mob->level, 2), TYPE_UNDEFINED, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the shattered glass*");
 	}
 
@@ -1535,7 +1535,7 @@ bool death_prog_necro_skull(CHAR_DATA *mob, CHAR_DATA *killer)
 
 void pulse_prog_necro_skull(CHAR_DATA *mob)
 {
-	if (mob->leader == NULL)
+	if (mob->leader == nullptr)
 	{
 		act("$n crumbles into a pile of dust.", mob, 0, 0, TO_ROOM);
 		extract_char(mob, true);
@@ -2212,7 +2212,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 			act("$n ceases flapping its wings incessantly to let out a mournful screech.", mob, 0, 0, TO_ROOM);
 			break;
 		default:
-			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, NULL, TAR_IGNORE);
+			spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, nullptr, TAR_IGNORE);
 			break;
 	}
 }
@@ -2220,7 +2220,7 @@ void pulse_prog_cornogun(CHAR_DATA *mob)
 void entry_prog_cornogun(CHAR_DATA *mob)
 {
 	act("$n flaps in on its tiny wings.", mob, 0, 0, TO_ROOM);
-	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, NULL, TAR_IGNORE);
+	spell_faerie_fog(skill_lookup("faerie fog"), mob->level, mob, nullptr, TAR_IGNORE);
 }
 
 void pulse_prog_imp(CHAR_DATA *mob)
@@ -2266,7 +2266,7 @@ void fight_prog_geulgon(CHAR_DATA *mob, CHAR_DATA *victim)
 	CHAR_DATA *vch;
 	CHAR_DATA *vch_next;
 	CHAR_DATA *ch = mob->master;
-	if (mob->fighting == NULL)
+	if (mob->fighting == nullptr)
 		return;
 
 	if (!victim)
@@ -2286,7 +2286,7 @@ void fight_prog_geulgon(CHAR_DATA *mob, CHAR_DATA *victim)
 			break;
 		case 4:
 		case 5:
-			for (vch = mob->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = mob->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -2296,7 +2296,7 @@ void fight_prog_geulgon(CHAR_DATA *mob, CHAR_DATA *victim)
 				if (ch->cabal > 0 && ch->cabal == vch->cabal)
 					continue;
 
-				if (is_safe(ch, vch) && vch->fighting != NULL && vch->fighting != ch)
+				if (is_safe(ch, vch) && vch->fighting != nullptr && vch->fighting != ch)
 					continue;
 
 				spell_iceball(skill_lookup("iceball"), mob->level, mob, vch, TAR_IGNORE);
@@ -2331,7 +2331,7 @@ void give_prog_minotaur(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 
 	act("$n lets out a fierce warcry as he wields $p.", mob, obj, ch, TO_ROOM);
 
-	if (get_eq_char(mob, WEAR_WIELD) == NULL)
+	if (get_eq_char(mob, WEAR_WIELD) == nullptr)
 	{
 		equip_char(mob, obj, WEAR_WIELD, true);
 		return;
@@ -2415,7 +2415,7 @@ void fight_prog_gking(CHAR_DATA *mob, CHAR_DATA *victim)
 
 void pulse_prog_nocturnal_mob(CHAR_DATA *mob)
 {
-	if ((sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight) && number_percent() < 30 && mob->fighting == NULL)
+	if ((sun == SolarPosition::Sunrise || sun == SolarPosition::Daylight) && number_percent() < 30 && mob->fighting == nullptr)
 	{
 		extract_char(mob, true);
 	}
@@ -2423,7 +2423,7 @@ void pulse_prog_nocturnal_mob(CHAR_DATA *mob)
 
 void pulse_prog_diurnal_mob(CHAR_DATA *mob)
 {
-	if (sun == SolarPosition::Dark && number_percent() < 30 && mob->fighting == NULL)
+	if (sun == SolarPosition::Dark && number_percent() < 30 && mob->fighting == nullptr)
 	{
 		extract_char(mob, true);
 	}
@@ -2433,7 +2433,7 @@ bool death_prog_cim(CHAR_DATA *mob, CHAR_DATA *killer)
 {
 	CHAR_DATA *extract;
 
-	for (extract = mob->in_room->people; extract != NULL; extract = extract->next_in_room)
+	for (extract = mob->in_room->people; extract != nullptr; extract = extract->next_in_room)
 	{
 		if (is_npc(extract) && extract->pIndexData->vnum == 2499)
 			break;
@@ -2474,7 +2474,7 @@ void pulse_prog_wizard_summon(CHAR_DATA *mob)
 	ROOM_INDEX_DATA *room2 = mob->in_room;
 	CHAR_DATA *vch, *vch_next;
 	bool found= false;
-	AFFECT_DATA af, *paf = NULL;
+	AFFECT_DATA af, *paf = nullptr;
 
 	if (!room->people && is_affected(mob, gsn_bash))
 	{
@@ -2644,18 +2644,18 @@ void beat_prog_law_track(CHAR_DATA *mob)
 	if (is_affected_by(mob, AFF_NOSHOW))
 		return;
 
-	if (ch == NULL)
+	if (ch == nullptr)
 	{
 		mob->last_fought = check_sector(min, max);
 
-		if (mob->last_fought != NULL)
+		if (mob->last_fought != nullptr)
 		{
 			set_aggressor_hunt(mob);
 			ch = mob->last_fought;
 		}
 		else
 		{
-			mob->last_fought = NULL;
+			mob->last_fought = nullptr;
 			mob->tracktimer = 0;
 			return;
 		}
@@ -2666,7 +2666,7 @@ void beat_prog_law_track(CHAR_DATA *mob)
 
 	if (!verify_aggressor(mob, ch, min, max))
 	{
-		mob->last_fought = NULL;
+		mob->last_fought = nullptr;
 		mob->tracktimer = 0;
 		return;
 	}
@@ -2679,14 +2679,14 @@ void beat_prog_law_track(CHAR_DATA *mob)
 
 	if (!is_affected(ch, gsn_aggressor))
 	{
-		mob->last_fought = NULL;
+		mob->last_fought = nullptr;
 		mob->tracktimer = 0;
 		return;
 	}
 
 	if (!can_see(mob, ch) || !is_awake(mob))
 	{
-		mob->last_fought = NULL;
+		mob->last_fought = nullptr;
 		mob->tracktimer = 0;
 		return;
 	}
@@ -2718,7 +2718,7 @@ bool verify_aggressor(CHAR_DATA *mob, CHAR_DATA *ch, int min, int max)
 	{
 		if ((pRoom = get_room_index(i)))
 		{
-			for (tch = pRoom->people; tch != NULL; tch = tch->next_in_room)
+			for (tch = pRoom->people; tch != nullptr; tch = tch->next_in_room)
 			{
 				if (ch == tch)
 					found = true;
@@ -2739,7 +2739,7 @@ CHAR_DATA *check_sector(int min, int max)
 	{
 		if ((pRoom = get_room_index(i)))
 		{
-			for (ch = pRoom->people; ch != NULL; ch = ch->next_in_room)
+			for (ch = pRoom->people; ch != nullptr; ch = ch->next_in_room)
 			{
 				if (is_npc(ch))
 					continue;
@@ -2750,7 +2750,7 @@ CHAR_DATA *check_sector(int min, int max)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void set_aggressor_hunt(CHAR_DATA *mob)
@@ -2771,10 +2771,10 @@ void set_aggressor_hunt(CHAR_DATA *mob)
 
 void pulse_prog_fisherman(CHAR_DATA *mob)
 {
-	OBJ_DATA *obj = NULL, *obj_next = NULL, *fish = NULL;
+	OBJ_DATA *obj = nullptr, *obj_next = nullptr, *fish = nullptr;
 	AFFECT_DATA af;
 
-	for (obj = mob->in_room->contents; obj != NULL; obj = obj_next)
+	for (obj = mob->in_room->contents; obj != nullptr; obj = obj_next)
 	{
 		obj_next = obj->next_content;
 
@@ -2933,8 +2933,8 @@ void fight_prog_law_subdue(CHAR_DATA *mob, CHAR_DATA *ch)
 			hydra_vnum = mob->pIndexData->vnum + 2;
 	}
 
-	if (((hydra = get_char_room(mob, "hydra trooper soldier")) == NULL)
-		|| ((dragon = get_char_room(mob, "dragon trooper soldier")) == NULL))
+	if (((hydra = get_char_room(mob, "hydra trooper soldier")) == nullptr)
+		|| ((dragon = get_char_room(mob, "dragon trooper soldier")) == nullptr))
 	{
 		return;
 	}
@@ -2949,7 +2949,7 @@ void fight_prog_law_subdue(CHAR_DATA *mob, CHAR_DATA *ch)
 		stop_fighting(ch, true);
 		stop_fighting(mob, true);
 
-		mob->last_fought = NULL;
+		mob->last_fought = nullptr;
 		mob->tracktimer = 0;
 
 		if (number_range(1, 2) == 1)
@@ -3191,7 +3191,7 @@ void pulse_prog_troopers(CHAR_DATA *mob)
 {
 	CHAR_DATA *gryphon;
 
-	if ((gryphon = get_char_room(mob, "gryphon trooper soldier")) == NULL)
+	if ((gryphon = get_char_room(mob, "gryphon trooper soldier")) == nullptr)
 	{
 		act("$n looks around hurriedly then retreats to call in reinforcements.", mob, 0, 0, TO_ROOM);
 		extract_char(mob, true);
@@ -3243,7 +3243,7 @@ void pulse_prog_shade(CHAR_DATA *mob)
 {
 	CHAR_DATA *victim = mob->fighting;
 	int sn;
-	char *spell = NULL;
+	char *spell = nullptr;
 	if (!victim || number_percent() > 13)
 		return;
 
@@ -3270,7 +3270,7 @@ void pulse_prog_banshee(CHAR_DATA *mob)
 {
 	CHAR_DATA *victim = mob->fighting;
 	int sn, dam;
-	char *spell = NULL;
+	char *spell = nullptr;
 
 	if (!victim || number_percent() > 20)
 		return;
@@ -3308,7 +3308,7 @@ void pulse_prog_phantasm(CHAR_DATA *mob)
 {
 	CHAR_DATA *victim = mob->fighting;
 	int sn = 0;
-	char *spell = NULL;
+	char *spell = nullptr;
 
 	if (!victim || number_percent() > 10)
 		return;
@@ -3352,7 +3352,7 @@ void pulse_prog_ravghoul(CHAR_DATA *mob)
 	CHAR_DATA *victim = mob->fighting;
 	AFFECT_DATA af;
 
-	if (victim == NULL || victim->in_room != mob->in_room || number_percent() > 10)
+	if (victim == nullptr || victim->in_room != mob->in_room || number_percent() > 10)
 		return;
 
 	switch (number_range(0, 2))
@@ -3412,7 +3412,7 @@ void pulse_prog_behemoth(CHAR_DATA *mob)
 {
 	CHAR_DATA *victim = mob->fighting;
 
-	if (victim == NULL || victim->in_room != mob->in_room || number_percent() > 15)
+	if (victim == nullptr || victim->in_room != mob->in_room || number_percent() > 15)
 		return;
 
 	int dam = dice(14, 14);
@@ -3455,7 +3455,7 @@ void pulse_prog_glass(CHAR_DATA *mob)
 		af.aftype = AFT_MALADY;
 		af.level = mob->level;
 		af.owner = mob->leader;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		new_affect_to_char(victim, &af);
 
 		af.location = APPLY_DEX;
@@ -3470,7 +3470,7 @@ void pulse_prog_glass(CHAR_DATA *mob)
 		caf.level = mob->level;
 		caf.aftype = AFT_SKILL;
 		caf.owner = mob->leader;
-		caf.end_fun = NULL;
+		caf.end_fun = nullptr;
 		new_affect_to_char(mob, &caf);
 	}
 }

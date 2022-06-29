@@ -44,7 +44,7 @@ void check_bloodlust(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	af_old = affect_find(ch->affected, gsn_bloodlust);
 
-	if (af_old != NULL)
+	if (af_old != nullptr)
 	{
 		af_old->duration += std::min(288, af_old->duration + 96);
 	}
@@ -122,7 +122,7 @@ void do_taunt(CHAR_DATA *ch, char *argument)
 	char arg[MAX_INPUT_LENGTH];
 	argument = one_argument(argument, arg);
 
-	if ((victim = get_char_room(ch, arg)) == NULL)
+	if ((victim = get_char_room(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -357,7 +357,7 @@ void spell_dispaters(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	target_name = one_argument(target_name, arg);
 
-	if (((victim = get_char_world(ch, arg)) == NULL) || (!can_see(ch, victim)))
+	if (((victim = get_char_world(ch, arg)) == nullptr) || (!can_see(ch, victim)))
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -370,7 +370,7 @@ void spell_dispaters(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (int wear = 0; wear < MAX_WEAR; wear++)
 	{
-		if ((obj = get_eq_char(victim, wear)) != NULL && (can_see_obj(ch, obj)))
+		if ((obj = get_eq_char(victim, wear)) != nullptr && (can_see_obj(ch, obj)))
 		{
 			send_to_char(get_where_name(wear), ch);
 			send_to_char(format_obj_to_char(obj, ch, true), ch);
@@ -399,7 +399,7 @@ void do_consume(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((corpse = get_obj_here(ch, arg)) == NULL)
+	if ((corpse = get_obj_here(ch, arg)) == nullptr)
 	{
 		send_to_char("You do not see that here.\n\r", ch);
 		return;
@@ -411,7 +411,7 @@ void do_consume(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (corpse->item_type == ITEM_CORPSE_PC && corpse->contains != NULL)
+	if (corpse->item_type == ITEM_CORPSE_PC && corpse->contains != nullptr)
 	{
 		send_to_char("It's too heavily laden for you to eat.\n\r", ch);
 		return;
@@ -490,8 +490,8 @@ void spell_baals_mastery(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	SET_BIT(af.bitvector, AFF_PERMANENT);
 
-	af.end_fun = NULL;
-	af.tick_fun = NULL;
+	af.end_fun = nullptr;
+	af.tick_fun = nullptr;
 	affect_to_char(ch, &af);
 }
 
@@ -529,28 +529,28 @@ void check_baals_mastery(CHAR_DATA *ch, CHAR_DATA *victim)
 			act("A wicked grin flashes across $n's face as $s axe rends your flesh!", ch, 0, victim, TO_VICT);
 			act("A wicked grin flashes across $n's face as $s axe rends $N's flesh!", ch, 0, victim, TO_NOTVICT);
 
-			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, NULL);
+			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, nullptr);
 			break;
 		case WEAPON_SWORD:
 			act("With a surge of unholy vigor, your drive your blade deep into $N!", ch, 0, victim, TO_CHAR);
 			act("A wicked grin flashes across $n's face as $e plunges $s sword into you!", ch, 0, victim, TO_VICT);
 			act("A wicked grin flashes across $n's face as $e plunges $s sword into $N!", ch, 0, victim, TO_NOTVICT);
 
-			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, NULL);
+			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, nullptr);
 			break;
 		case WEAPON_MACE:
 			act("With a surge of unholy might, you bring your mace crashing down upon $N!", ch, 0, victim, TO_CHAR);
 			act("A wicked grin flashes across $n's face as $e brings $s mace down upon you!", ch, 0, victim, TO_VICT);
 			act("A wicked grin flashes across $n's face as $e brings $s mace down upon $N!", ch, 0, victim, TO_NOTVICT);
 
-			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, NULL);
+			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 150, nullptr);
 			break;
 		case WEAPON_SPEAR:
 			act("With a surge of unholy might, you thrust your spear through $N's guard!", ch, 0, victim, TO_CHAR);
 			act("A wicked grin flashes across $n's face as $e drives $s spear into you!", ch, 0, victim, TO_VICT);
 			act("A wicked grin flashes across $n's face as $e drives $s spear into $N!", ch, 0, victim, TO_NOTVICT);
 
-			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 200, NULL);
+			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 200, nullptr);
 
 			if (number_percent() < 40 && !is_affected(victim, gsn_bleeding))
 			{
@@ -576,7 +576,7 @@ void check_baals_mastery(CHAR_DATA *ch, CHAR_DATA *victim)
 			act("A wicked grin flashes across $n's face as $e brings $s flail down upon you!", ch, 0, victim, TO_VICT);
 			act("A wicked grin flashes across $n's face as $e brings $s flail down upon $N!", ch, 0, victim, TO_NOTVICT);
 
-			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 175, NULL);
+			one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 175, nullptr);
 			break;
 		default:
 			return;
@@ -605,7 +605,7 @@ void spell_word_of_command(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		return;
 	}
 
-	if ((victim = get_char_room(ch, arg1)) == NULL)
+	if ((victim = get_char_room(ch, arg1)) == nullptr)
 	{
 		ch->wait = 0;
 		ch->mana += 150;
@@ -815,7 +815,7 @@ void living_blade_pulse(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 	CHAR_DATA *ch;
 	OBJ_AFFECT_DATA *af2;
 
-	if ((ch = obj->carried_by) == NULL)
+	if ((ch = obj->carried_by) == nullptr)
 		return;
 
 	if (ch != af->owner)
@@ -989,7 +989,7 @@ void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	float hp_mod = 1;
 	bool found = false;
 
-	for (check = char_list; check != NULL; check = check->next)
+	for (check = char_list; check != nullptr; check = check->next)
 	{
 		if (is_npc(check) && check->leader == ch)
 		{
@@ -1155,7 +1155,7 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 	DESCRIPTOR_DATA *d;
 	AFFECT_DATA *af;
 	int demon = -1, type = -1;
-	int *typeptr = NULL, *demonptr = NULL;
+	int *typeptr = nullptr, *demonptr = nullptr;
 	int i;
 	int failed = 0;
 	char *said;
@@ -1283,7 +1283,7 @@ void check_unholy_communion(CHAR_DATA *ch, char *argument)
 
 	act("As the name of the $t demon escapes your lips, the shadows writhe violently.", ch, (type == LESSER_DEMON) ? "lesser" : "greater", 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(2, 5, act, "A sonorous throbbing fills your surroundings, and then all is deathly silent.", ch, NULL, NULL, TO_ALL);
+	RS.Queue.AddToQueue(2, 5, act, "A sonorous throbbing fills your surroundings, and then all is deathly silent.", ch, nullptr, nullptr, TO_ALL);
 
 	affect_remove(ch, af);
 
@@ -1775,8 +1775,8 @@ void spell_insanity(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.owner = ch;
 	affect_to_char(ch, &af);
 
-	af.pulse_fun = NULL;
-	af.end_fun = NULL;
+	af.pulse_fun = nullptr;
+	af.end_fun = nullptr;
 	af.location = APPLY_HITROLL;
 	affect_to_char(ch, &af);
 }
@@ -1790,7 +1790,7 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (number_percent() < 5)
 		return;
 
-	if (ch->fighting != NULL)
+	if (ch->fighting != nullptr)
 	{
 		insanity_fight(ch);
 		return;
@@ -1800,9 +1800,9 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 		WAIT_STATE(ch, 4 * PULSE_PER_SECOND);
 	}
 
-	for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
+	for (victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 	{
-		if (ch->fighting != NULL)
+		if (ch->fighting != nullptr)
 			return;
 
 		if ((victim == ch) || (is_safe_new(ch, victim, false)) || (number_percent() > 95))
@@ -1827,7 +1827,7 @@ void insanity_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 				act("$n flashes a quick grin, $s eyes gleaming with a dark madness.", ch, 0, 0, TO_ROOM);
 				act("Coalesced energy erupts from $n's body, covering the area in flames.", ch, 0, 0, TO_ROOM);
 				act("You utter arcane words as a ball of fire erupts from your body.", ch, 0, 0, TO_CHAR);
-				spell_fireball(skill_lookup("fireball"), ch->level, ch, NULL, TAR_IGNORE);
+				spell_fireball(skill_lookup("fireball"), ch->level, ch, nullptr, TAR_IGNORE);
 				break;
 			case 4:
 				insanity_two(ch, room);
@@ -1853,7 +1853,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 	switch (room)
 	{
 		case Directions::North:
-			if (in_room->exit[Directions::North] == NULL)
+			if (in_room->exit[Directions::North] == nullptr)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1866,7 +1866,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 
 			break;
 		case Directions::East:
-			if (in_room->exit[room] == NULL)
+			if (in_room->exit[room] == nullptr)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1879,7 +1879,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 
 			break;
 		case Directions::South:
-			if (in_room->exit[room] == NULL)
+			if (in_room->exit[room] == nullptr)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1892,7 +1892,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 
 			break;
 		case Directions::West:
-			if (in_room->exit[room] == NULL)
+			if (in_room->exit[room] == nullptr)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1905,7 +1905,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 
 			break;
 		case Directions::Up:
-			if (in_room->exit[room] == NULL)
+			if (in_room->exit[room] == nullptr)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1918,7 +1918,7 @@ void insanity_two(CHAR_DATA *ch, int room)
 
 			break;
 		case Directions::Down:
-			if (in_room->exit[room] == NULL)
+			if (in_room->exit[room] == nullptr)
 			{
 				room = number_range(0, 5);
 				insanity_two(ch, room);
@@ -1943,7 +1943,7 @@ void insanity_fight(CHAR_DATA *ch)
 {
 	CHAR_DATA *victim = ch->fighting;
 
-	if (victim == NULL)
+	if (victim == nullptr)
 		return;
 
 	if (number_percent() < 50)
@@ -1952,7 +1952,7 @@ void insanity_fight(CHAR_DATA *ch)
 	switch (number_range(1, 5))
 	{
 		case 1:
-			if (get_eq_char(ch, WEAR_WIELD) == NULL)
+			if (get_eq_char(ch, WEAR_WIELD) == nullptr)
 				break;
 
 			act("$n brutally drives $s weapon into your chest!", ch, 0, victim, TO_VICT);
@@ -1998,7 +1998,7 @@ void insanity_fight(CHAR_DATA *ch)
 					spell_energy_drain(skill_lookup("energy drain"), ch->level, ch, victim, TAR_CHAR_OFFENSIVE);
 					break;
 				case 3:
-					spell_iceball(skill_lookup("iceball"), ch->level, ch, NULL, TAR_IGNORE);
+					spell_iceball(skill_lookup("iceball"), ch->level, ch, nullptr, TAR_IGNORE);
 					break;
 			}
 
@@ -2203,7 +2203,7 @@ void do_touch(CHAR_DATA *ch, char *argument)
 			return;
 		}
 	}
-	else if ((victim = get_char_room(ch, argument)) == NULL)
+	else if ((victim = get_char_room(ch, argument)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -2215,8 +2215,8 @@ void do_touch(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (get_eq_char(ch, WEAR_WIELD) != NULL
-		&& (get_eq_char(ch, WEAR_DUAL_WIELD) != NULL && get_eq_char(ch, WEAR_SHIELD) != NULL))
+	if (get_eq_char(ch, WEAR_WIELD) != nullptr
+		&& (get_eq_char(ch, WEAR_DUAL_WIELD) != nullptr && get_eq_char(ch, WEAR_SHIELD) != nullptr))
 	{
 		send_to_char("You must have a free hand to touch your opponent.\n\r", ch);
 		return;
@@ -2254,7 +2254,7 @@ void do_touch(CHAR_DATA *ch, char *argument)
 		af.owner = ch;
 		af.type = skill_lookup("burning touch");
 		af.aftype = AFT_MALADY;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		af.pulse_fun = burning_pulse;
 		af.duration = ch->level / 12;
 		affect_to_char(victim, &af);
@@ -2417,7 +2417,7 @@ char *get_insight_line(long where[])
 	buf[0] = '\0';
 	last[0] = '\0';
 
-	for (i = 0; imm_flags[i].name != NULL; i++)
+	for (i = 0; imm_flags[i].name != nullptr; i++)
 	{
 		if (IS_SET(where, imm_flags[i].bit))
 		{

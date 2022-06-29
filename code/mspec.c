@@ -103,7 +103,7 @@ BEGIN_SPEC(mspec_horde_tanner)
 	EVENT_MGIVE
 		if (obj->item_type == ITEM_CORPSE_NPC)
 		{
-			OBJ_DATA *venison = NULL;
+			OBJ_DATA *venison = nullptr;
 			int i, num;
 			char give[MSL], buf2[MSL];
 
@@ -295,7 +295,7 @@ void apet_force(CHAR_DATA *ch, const char *cmd, int delay)
 
 void apet_at_room(CHAR_DATA *ch, int vnum)
 {
-	ch->leader->master = NULL;
+	ch->leader->master = nullptr;
 	ch->master = ch->leader;
 
 	CHAR_DATA *player = ch->leader;
@@ -380,9 +380,9 @@ BEGIN_SPEC(mspec_academy_pet)
 			do_say(ch, "You are strong enough to stand on your own now.  Perhaps we shall meet again.");
 			act("$n fades into the shadows.", ch, 0, 0, TO_ROOM);
 
-			ch->leader->pet = NULL;
-			ch->leader = NULL;
-			ch->master = NULL;
+			ch->leader->pet = nullptr;
+			ch->leader = nullptr;
+			ch->master = nullptr;
 
 			extract_char(ch, true);
 			return 0;
@@ -467,7 +467,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			}
 
 			ch->master = mob;
-			mob->master = NULL;
+			mob->master = nullptr;
 
 			apet_walk_to_room(mob, CIM_FOOD);
 			return 0;
@@ -484,7 +484,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			}
 
 			ch->master = mob;
-			mob->master = NULL;
+			mob->master = nullptr;
 
 			apet_walk_to_room(mob, CIM_WATER);
 			return 0;
@@ -504,7 +504,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			}
 
 			ch->master = mob;
-			mob->master = NULL;
+			mob->master = nullptr;
 
 			int vnum = 0, cclass = ch->Class()->GetIndex();
 
@@ -593,7 +593,7 @@ BEGIN_SPEC(mspec_academy_pet)
 			}
 
 			ch->master = mob;
-			mob->master = NULL;
+			mob->master = nullptr;
 
 			apet_walk_to_room(mob, CIM_BOAT);
 			return 0;

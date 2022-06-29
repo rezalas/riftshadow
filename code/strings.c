@@ -8,7 +8,7 @@
 
 RString::RString()
 {
-	myString = NULL;
+	myString = nullptr;
 }
 
 TString::TString()
@@ -123,7 +123,7 @@ void RString::Clone(RString& clone_to)
 	/* makes shared copy */
 	clone_to.SafeDealloc();
 	if(!myString)
-		return (void)(clone_to.myString = NULL);
+		return (void)(clone_to.myString = nullptr);
 	
 	if(RefCount() > 250)
 		CloneString();
@@ -363,7 +363,7 @@ void RString::SafeDealloc(void)
 	if(RefCount() > 0)
 	{
 		SetRefCount(RefCount() - 1);
-		myString = NULL;
+		myString = nullptr;
 		return;
 	}
 	//hack
@@ -398,7 +398,7 @@ RString& RString::Format(const char *msg, ...)
 
 RString& RString::Format(va_list arglist, const char *msg, ...)
 {
-	if(msg == NULL)
+	if(msg == nullptr)
 		return *this;
 	char buf[MAX_FORMATTED_SIZE]; //format can be used to stack overflow if you're a dumbass.  so don't be one.	
 	
@@ -421,7 +421,7 @@ TString& TString::Format(const char *msg, ...)
 
 TString& TString::Format(va_list arglist, const char *msg, ...)
 {
-	if(msg == NULL)
+	if(msg == nullptr)
 		return *this;
 	
 	vsnprintf(myString, TSTR_LEN, msg, arglist);
@@ -474,7 +474,7 @@ RString& RString::operator =(RString &str)
 RString& RString::operator =(const char *str)
 {
 	SafeDealloc();
-	if(str != NULL)
+	if(str != nullptr)
 		AllocString(str);
 	return *this;
 }

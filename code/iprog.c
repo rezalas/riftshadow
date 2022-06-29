@@ -144,7 +144,7 @@ const struct improg_type iprog_table[] = {
 	{"hit_prog", "hit_prog_essence_light", (void *)hit_prog_essence_light, "None"},
 	{"hit_prog", "hit_prog_essence_darkness", (void *)hit_prog_essence_darkness, "None"},
 	{"fight_prog", "fight_prog_bugzapper", (void *)fight_prog_bugzapper, "None"},
-	{NULL, NULL, NULL, NULL},
+	{nullptr, nullptr, nullptr, nullptr},
 };
 #undef fight_prog
 const struct improg_type verb_prog_table[] = {
@@ -186,13 +186,13 @@ const struct improg_type verb_prog_table[] = {
 	{"place", "verb_prog_place_star", (void *)verb_prog_place_star, "None"},
 	{"turn", "verb_prog_turn_wyntran", (void *)verb_prog_turn_wyntran, "The Elven Stronghold"},
 	{"climb", "verb_prog_fallendesert_climb_ladder", (void *)verb_prog_fallendesert_climb_ladder, "Fallen Desert"},
-	{NULL, NULL, NULL, NULL},
+	{nullptr, nullptr, nullptr, nullptr},
 };
 
 void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 {
 	int i;
-	for (i = 0; iprog_table[i].name != NULL; i++)
+	for (i = 0; iprog_table[i].name != nullptr; i++)
 	{
 		if (!str_cmp(iprog_table[i].name, name))
 			break;
@@ -439,7 +439,7 @@ bool iprog_unset(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 {
 	int i;
 
-	for (i = 0; iprog_table[i].name != NULL; i++)
+	for (i = 0; iprog_table[i].name != nullptr; i++)
 	{
 		if (!str_cmp(iprog_table[i].name, name))
 			break;
@@ -450,125 +450,125 @@ bool iprog_unset(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 
 	if (!str_cmp(progtype, "wear_prog"))
 	{
-		obj->iprogs->wear_prog = NULL;
+		obj->iprogs->wear_prog = nullptr;
 		free_pstring(obj->iprogs->wear_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_WEAR);
 	}
 	else if (!str_cmp(progtype, "remove_prog"))
 	{
-		obj->iprogs->remove_prog = NULL;
+		obj->iprogs->remove_prog = nullptr;
 		free_pstring(obj->iprogs->remove_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_REMOVE);
 	}
 	else if (!str_cmp(progtype, "get_prog"))
 	{
-		obj->iprogs->get_prog = NULL;
+		obj->iprogs->get_prog = nullptr;
 		free_pstring(obj->iprogs->get_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_GET);
 	}
 	else if (!str_cmp(progtype, "loot_prog")) /* Returning false prevents taking */
 	{
-		obj->iprogs->loot_prog = NULL;
+		obj->iprogs->loot_prog = nullptr;
 		free_pstring(obj->iprogs->loot_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_LOOT);
 	}
 	else if (!str_cmp(progtype, "drop_prog"))
 	{
-		obj->iprogs->drop_prog = NULL;
+		obj->iprogs->drop_prog = nullptr;
 		free_pstring(obj->iprogs->drop_name);
 		REMOVE_BIT(obj->progtypes, IPROG_DROP);
 	}
 	else if (!str_cmp(progtype, "sac_prog"))
 	{
-		obj->iprogs->sac_prog = NULL;
+		obj->iprogs->sac_prog = nullptr;
 		free_pstring(obj->iprogs->sac_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_SAC);
 	}
 	else if (!str_cmp(progtype, "entry_prog"))
 	{
-		obj->iprogs->entry_prog = NULL;
+		obj->iprogs->entry_prog = nullptr;
 		free_pstring(obj->iprogs->entry_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_ENTRY);
 	}
 	else if (!str_cmp(progtype, "give_prog"))
 	{
-		obj->iprogs->give_prog = NULL;
+		obj->iprogs->give_prog = nullptr;
 		free_pstring(obj->iprogs->give_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_GIVE);
 	}
 	else if (!str_cmp(progtype, "greet_prog"))
 	{
-		obj->iprogs->greet_prog = NULL;
+		obj->iprogs->greet_prog = nullptr;
 		free_pstring(obj->iprogs->greet_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_GREET);
 	}
 	else if (!str_cmp(progtype, "fight_prog"))
 	{
-		obj->iprogs->fight_prog = NULL;
+		obj->iprogs->fight_prog = nullptr;
 		free_pstring(obj->iprogs->fight_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_FIGHT);
 	}
 	else if (!str_cmp(progtype, "death_prog")) /* returning true prevents death */
 	{
-		obj->iprogs->death_prog = NULL;
+		obj->iprogs->death_prog = nullptr;
 		free_pstring(obj->iprogs->death_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_DEATH);
 	}
 	else if (!str_cmp(progtype, "speech_prog"))
 	{
-		obj->iprogs->speech_prog = NULL;
+		obj->iprogs->speech_prog = nullptr;
 		free_pstring(obj->iprogs->speech_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_SPEECH);
 	}
 	else if (!str_cmp(progtype, "pulse_prog"))
 	{
-		obj->iprogs->pulse_prog = NULL;
+		obj->iprogs->pulse_prog = nullptr;
 		free_pstring(obj->iprogs->pulse_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_PULSE);
 	}
 	else if (!str_cmp(progtype, "invoke_prog"))
 	{
-		obj->iprogs->invoke_prog = NULL;
+		obj->iprogs->invoke_prog = nullptr;
 		free_pstring(obj->iprogs->invoke_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_INVOKE);
 	}
 	else if (!str_cmp(progtype, "open_prog"))
 	{
-		obj->iprogs->open_prog = NULL;
+		obj->iprogs->open_prog = nullptr;
 		free_pstring(obj->iprogs->open_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_OPEN);
 	}
 	if (!str_cmp(progtype, "look_prog"))
 	{
-		obj->iprogs->look_prog = NULL;
+		obj->iprogs->look_prog = nullptr;
 		free_pstring(obj->iprogs->look_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_OPEN);
 	}
 	if (!str_cmp(progtype, "verb_prog"))
 	{
-		obj->iprogs->verb_prog = NULL;
+		obj->iprogs->verb_prog = nullptr;
 		free_pstring(obj->iprogs->verb_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_VERB);
 	}
 	if (!str_cmp(progtype, "hit_prog"))
 	{
-		obj->iprogs->hit_prog = NULL;
+		obj->iprogs->hit_prog = nullptr;
 		free_pstring(obj->iprogs->hit_name);
 
 		REMOVE_BIT(obj->progtypes, IPROG_HIT);
@@ -691,7 +691,7 @@ void fight_prog_axe_trelaran(OBJ_DATA *obj, CHAR_DATA *ch)
 		obj_cast_spell(skill_lookup("plague"), 60, ch, ch, obj);
 		obj_cast_spell(skill_lookup("poison"), 60, ch, ch, obj);
 	}
-	else if ((crown = get_eq_char(ch, WEAR_HEAD)) != NULL)
+	else if ((crown = get_eq_char(ch, WEAR_HEAD)) != nullptr)
 	{
 		if (number_percent() < 6 && (crown->pIndexData->vnum == 21825))
 		{
@@ -714,19 +714,19 @@ void fight_prog_cure_critical(OBJ_DATA *obj, CHAR_DATA *ch)
 void pulse_prog_steal(OBJ_DATA *obj, bool isTick)
 {
 	CHAR_DATA *vch, *ch = obj->carried_by;
-	OBJ_DATA *stolen = NULL;
+	OBJ_DATA *stolen = nullptr;
 	bool dbreak= false;
 	int invnum = number_range(0, 5), i = 0;
 
 	if (!ch || !is_worn(obj) || ch->position != POS_STANDING)
 		return;
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
 		if (number_percent() < 98 || vch == ch)
 			continue;
 
-		for (stolen = vch->carrying; stolen != NULL; stolen = stolen->next_content)
+		for (stolen = vch->carrying; stolen != nullptr; stolen = stolen->next_content)
 		{
 			if (stolen->wear_loc == WEAR_NONE && (can_see_obj(ch, stolen)) && (invnum == i || !stolen->next_content))
 			{
@@ -773,35 +773,35 @@ void invoke_prog_tattoo_dioxide(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	ch->hit = std::min(ch->hit, (int)ch->max_hit);
 
 	send_to_char("You feel MUCH better.\n\r", ch);
-	act("$n looks much better.", ch, NULL, NULL, TO_ROOM);
+	act("$n looks much better.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("blindness")))
-		act("$n is no longer blinded.", ch, NULL, NULL, TO_ROOM);
+		act("$n is no longer blinded.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("curse")))
-		act("$n is no longer cursed.", ch, NULL, NULL, TO_ROOM);
+		act("$n is no longer cursed.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("faerie fire")))
-		act("$n's pink outline fades.", ch, NULL, NULL, TO_ROOM);
+		act("$n's pink outline fades.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("slow")))
-		act("$n is no longer moving so slowly.", ch, NULL, NULL, TO_ROOM);
+		act("$n is no longer moving so slowly.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("weaken")))
-		act("$n looks stronger.", ch, NULL, NULL, TO_ROOM);
+		act("$n looks stronger.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("poison")))
-		act("$n looks less ill.", ch, NULL, NULL, TO_ROOM);
+		act("$n looks less ill.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("plague")))
-		act("$n's sores vanish.", ch, NULL, NULL, TO_ROOM);
+		act("$n's sores vanish.", ch, nullptr, nullptr, TO_ROOM);
 
 	if (check_dispel(ch->level + 3, ch, skill_lookup("windwall")))
-		act("$n's is no longer blinded by dust and dirt.", ch, NULL, NULL, TO_ROOM);
+		act("$n's is no longer blinded by dust and dirt.", ch, nullptr, nullptr, TO_ROOM);
 
 
 	send_to_char("Your pulse races fiercely as you burn with raging fury!\n\r", ch);
-	act("$n gets a furious look in $s eyes as $e burns with raging fury!", ch, NULL, NULL, TO_ROOM);
+	act("$n gets a furious look in $s eyes as $e burns with raging fury!", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -825,7 +825,7 @@ void invoke_prog_tattoo_jackass(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	send_to_char("You smite yourself! What a jackass!\n\r", ch);
 
-	act("$n smites $mself! What a jackass!", ch, NULL, NULL, TO_ROOM);
+	act("$n smites $mself! What a jackass!", ch, nullptr, nullptr, TO_ROOM);
 	ch->hit /= 2;
 }
 
@@ -974,8 +974,8 @@ void entry_prog_explosives(OBJ_DATA *obj)
 	if (obj->timer == 0)
 		return;
 
-	if (obj->carried_by != NULL)
-		act("You hear soft ticking from somewhere.", obj->carried_by, NULL, NULL, TO_ROOM);
+	if (obj->carried_by != nullptr)
+		act("You hear soft ticking from somewhere.", obj->carried_by, nullptr, nullptr, TO_ROOM);
 }
 
 bool death_prog_explosives(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -1179,7 +1179,7 @@ void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 		af.location = APPLY_STR;
 		af.modifier = -100;
 		af.tick_fun = plague_tick;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 
 		SET_BIT(af.bitvector, AFF_PLAGUE);
 
@@ -1191,7 +1191,7 @@ void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 	else
 	{
 		act("'I believe you've earned a rest from your hard exertions, and a chance to enjoy the spoils of your victory.'", ch, 0, 0, TO_ALL);
-		pexit->u1.to_room = NULL;
+		pexit->u1.to_room = nullptr;
 
 		init_affect(&af);
 		af.where = TO_AFFECTS;
@@ -1202,8 +1202,8 @@ void get_prog_bad_idea(OBJ_DATA *obj, CHAR_DATA *ch)
 		af.duration = -1;
 		af.location = APPLY_NONE;
 		af.modifier = 0;
-		af.tick_fun = NULL;
-		af.end_fun = NULL;
+		af.tick_fun = nullptr;
+		af.end_fun = nullptr;
 		SET_BIT(af.bitvector, AFF_DETECT_GOOD);
 
 		for (vch = ch->in_room->people; vch; vch = vch->next_in_room)
@@ -1217,13 +1217,13 @@ void greet_prog_corpse_explode(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	CHAR_DATA *owner;
 
-	for (owner = char_list; owner != NULL; owner = owner->next)
+	for (owner = char_list; owner != nullptr; owner = owner->next)
 	{
 		if (!is_npc(owner) && (!str_cmp(owner->true_name, obj->owner)))
 			break;
 	}
 
-	if (owner == NULL)
+	if (owner == nullptr)
 		return;
 
 	if (owner == ch)
@@ -1293,7 +1293,7 @@ void fight_prog_horde_lion(OBJ_DATA *obj, CHAR_DATA *ch)
 	af.duration = ch->level / 7;
 	af.owner = ch;
 	af.tick_fun = bleeding_tick;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	new_affect_to_char(ch->fighting, &af);
 
 	send_to_char("Blood begins to gush from your vicious wounds.\n\r", ch->fighting);
@@ -1326,7 +1326,7 @@ void fight_prog_horde_wolf(OBJ_DATA *obj, CHAR_DATA *ch)
 		af.level = ch->level - 5;
 		af.duration = ch->level / 10;
 		af.owner = ch;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		new_affect_to_char(ch->fighting, &af);
 	}
 
@@ -1341,7 +1341,7 @@ void fight_prog_horde_wolf(OBJ_DATA *obj, CHAR_DATA *ch)
 		af.level = ch->level - 5;
 		af.duration = ch->level / 18;
 		af.owner = ch;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		new_affect_to_char(ch->fighting, &af);
 
 		act("You hear the satisfying crunch of bone as you tear deeply into $N's throat.", ch, 0, ch->fighting, TO_CHAR);
@@ -1359,7 +1359,7 @@ void fight_prog_horde_hawk(OBJ_DATA *obj, CHAR_DATA *ch)
 	act("$n pauses for a moment before unleashing a well aimed blow at you.", ch, 0, ch->fighting, TO_VICT);
 	act("$n pauses for a moment before unleashing a well aimed blow at $N.", ch, 0, ch->fighting, TO_NOTVICT);
 
-	one_hit_new(ch, ch->fighting, TYPE_TRUESTRIKE, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	one_hit_new(ch, ch->fighting, TYPE_TRUESTRIKE, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void pulse_prog_horde_jackal(OBJ_DATA *obj, bool isTick)
@@ -1442,7 +1442,7 @@ void verb_prog_check_bounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((mob = get_char_room(ch, "dargor")) == NULL)
+	if ((mob = get_char_room(ch, "dargor")) == nullptr)
 	{
 		send_to_char(buf, ch);
 		return;
@@ -1468,9 +1468,9 @@ void verb_prog_check_bounties(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	do_say(mob, "Now then..");
 	do_emote(mob, "studies his list of bounties.");
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
-		if (d->connected == CON_PLAYING && d->character && d->character->in_room != NULL)
+		if (d->connected == CON_PLAYING && d->character && d->character->in_room != nullptr)
 		{
 			if (d->character->pcdata && d->character->pcdata->bounty)
 			{
@@ -1642,7 +1642,7 @@ void verb_prog_antava_touch_hand(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 void verb_prog_sidhe_climb_vine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	ROOM_INDEX_DATA *up_room = NULL, *down_room = NULL;
+	ROOM_INDEX_DATA *up_room = nullptr, *down_room = nullptr;
 
 	if (ch->in_room->vnum == 4100)
 	{
@@ -1712,9 +1712,9 @@ void verb_prog_listen_conversation(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	CRow row;
 
 	rand = dice(1, 4);
-	if ((violet = get_char_room(ch, "violet")) == NULL
-		|| (fat = get_char_room(ch, "fat")) == NULL
-		|| (minotaur = get_char_room(ch, "minotaur")) == NULL)
+	if ((violet = get_char_room(ch, "violet")) == nullptr
+		|| (fat = get_char_room(ch, "fat")) == nullptr
+		|| (minotaur = get_char_room(ch, "minotaur")) == nullptr)
 	{
 		return;
 	}
@@ -1861,7 +1861,7 @@ void verb_prog_twist_ring(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	act("As you twist a tarnished gold ring on your finger, you feel lighter on your feet.", ch, 0, 0, TO_CHAR);
 	act("$n twists $p on his finger.", ch, obj, 0, TO_ROOM);
-	obj_cast_spell(skill_lookup("refresh"), obj->level, ch, ch, NULL);
+	obj_cast_spell(skill_lookup("refresh"), obj->level, ch, ch, nullptr);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE);
 }
@@ -2077,7 +2077,7 @@ void verb_prog_throw_net(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		if ((victim = get_char_room(ch, argument)) == NULL)
+		if ((victim = get_char_room(ch, argument)) == nullptr)
 		{
 			send_to_char("They aren't here.\n\r", ch);
 			return;
@@ -2144,7 +2144,7 @@ void verb_prog_fire_pistol(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		if ((victim = get_char_room(ch, argument)) == NULL)
+		if ((victim = get_char_room(ch, argument)) == nullptr)
 		{
 			send_to_char("They aren't here.\n\r", ch);
 			return;
@@ -2335,7 +2335,7 @@ void fight_prog_essence_darkness(OBJ_DATA *obj, CHAR_DATA *ch)
 	if (number_percent() > 35)
 		return;
 
-	if ((victim = ch->fighting) == NULL)
+	if ((victim = ch->fighting) == nullptr)
 		return;
 
 	ch->alignment = std::max(-1000, ch->alignment - 10);
@@ -2401,7 +2401,7 @@ void verb_prog_gate_talisman(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	vnum = atoi(argument);
 
-	if (((to_room = get_room_index(vnum)) == NULL) || (str_cmp(to_room->area->builders, ch->name) && vnum != 1200))
+	if (((to_room = get_room_index(vnum)) == nullptr) || (str_cmp(to_room->area->builders, ch->name) && vnum != 1200))
 	{
 		send_to_char("You can't go there!\n\r", ch);
 		return;
@@ -2435,7 +2435,7 @@ void pulse_prog_pillar_zap(OBJ_DATA *obj, bool isTick)
 	ROOM_INDEX_DATA *room;
 	bool found= false;
 
-	if ((room = obj->in_room) == NULL)
+	if ((room = obj->in_room) == nullptr)
 		return;
 
 	if (!room->people)
@@ -2476,7 +2476,7 @@ bool loot_prog_shelf(OBJ_DATA *shelf, OBJ_DATA *obj, CHAR_DATA *ch)
 	int mobvnum = 0;
 	bool found= false;
 
-	if ((room = shelf->in_room) == NULL)
+	if ((room = shelf->in_room) == nullptr)
 		return true;
 
 	switch (shelf->pIndexData->vnum)
@@ -2564,11 +2564,11 @@ void verb_prog_pull_hook(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 
 	send_to_char("You tug on a hook of metal inside this notch.\n\r", ch);
-	act("$n tugs on a small metal hook inside a notch in the marble.", ch, NULL, pexit->keyword, TO_ROOM);
+	act("$n tugs on a small metal hook inside a notch in the marble.", ch, nullptr, pexit->keyword, TO_ROOM);
 	act("A soft click is audible and then the southern wall slides noisily open!", ch, 0, 0, TO_ALL);
 
-	if ((to_room = pexit->u1.to_room) != NULL
-		&& (pexit_rev = to_room->exit[0]) != NULL
+	if ((to_room = pexit->u1.to_room) != nullptr
+		&& (pexit_rev = to_room->exit[0]) != nullptr
 		&& pexit_rev->u1.to_room == ch->in_room)
 	{
 		REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
@@ -3042,7 +3042,7 @@ void communion_handler(CHAR_DATA *ch)
 			obj = create_object(get_obj_index(OBJ_VNUM_TROPHY_BELT), 60);
 			obj_to_char(obj, ch);
 
-			if ((remove = get_eq_char(ch, WEAR_WAIST)) != NULL)
+			if ((remove = get_eq_char(ch, WEAR_WAIST)) != nullptr)
 				unequip_char(ch, remove, false);
 
 			equip_char(ch, obj, WEAR_WAIST, false);
@@ -3088,7 +3088,7 @@ void communion_handler(CHAR_DATA *ch)
 			obj = create_object(get_obj_index(pelt), 60);
 			obj_to_char(obj, ch);
 
-			if ((remove = get_eq_char(ch, WEAR_ABOUT)) != NULL)
+			if ((remove = get_eq_char(ch, WEAR_ABOUT)) != nullptr)
 				unequip_char(ch, remove, false);
 
 			equip_char(ch, obj, WEAR_ABOUT, false);
@@ -3129,7 +3129,7 @@ void pulse_prog_cimar_babies(OBJ_DATA *obj, bool isTick)
 {
 	CHAR_DATA *ch = obj->carried_by;
 
-	if (ch == NULL || is_npc(ch))
+	if (ch == nullptr || is_npc(ch))
 		return;
 
 	if (number_percent() <= 98 || is_affected_obj(obj, gsn_bash))
@@ -3151,7 +3151,7 @@ void verb_prog_feed_baby(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (milk = ch->carrying; milk != NULL; milk = milk->next_content)
+	for (milk = ch->carrying; milk != nullptr; milk = milk->next_content)
 	{
 		if (milk->pIndexData->vnum == 2454)
 		{
@@ -3195,7 +3195,7 @@ void baby_end(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 {
 	CHAR_DATA *ch = obj->carried_by;
 
-	if (ch == NULL)
+	if (ch == nullptr)
 		return;
 
 	act("$p suddenly wakens and looks around curiously.", ch, obj, 0, TO_CHAR);
@@ -3206,7 +3206,7 @@ void baby_burp(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 {
 	CHAR_DATA *ch = obj->carried_by;
 
-	if (ch == NULL)
+	if (ch == nullptr)
 		return;
 
 	act("$p burps loudly.", ch, obj, 0, TO_CHAR);
@@ -3254,7 +3254,7 @@ void trapdoor_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	SET_BIT(pexit->exit_info, EX_LOCKED);
 	SET_BIT(pexit->exit_info, EX_NONOBVIOUS);
 
-	for (ch = char_list; ch != NULL; ch = ch_next)
+	for (ch = char_list; ch != nullptr; ch = ch_next)
 	{
 		ch_next = ch->next;
 
@@ -3268,7 +3268,7 @@ bool open_prog_beef_balls(OBJ_DATA *obj, CHAR_DATA *ch)
 	CHAR_DATA *mob;
 	bool found= false;
 
-	for (mob = char_list; mob != NULL; mob = mob->next)
+	for (mob = char_list; mob != nullptr; mob = mob->next)
 	{
 		if (is_npc(mob))
 		{
@@ -3303,7 +3303,7 @@ void verb_prog_pour_wine(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	bool found= false;
 	OBJ_AFFECT_DATA af;
 
-	for (obj2 = ch->carrying; obj2 != NULL; obj2 = obj2->next_content)
+	for (obj2 = ch->carrying; obj2 != nullptr; obj2 = obj2->next_content)
 	{
 		if (obj2->pIndexData->vnum == 2412)
 		{
@@ -3366,7 +3366,7 @@ void verb_prog_attach_weapon(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	OBJ_DATA *pole, *finished;
 	bool found= false;
 
-	for (pole = ch->carrying; pole != NULL; pole = pole->next_content)
+	for (pole = ch->carrying; pole != nullptr; pole = pole->next_content)
 	{
 		if (pole->pIndexData->vnum == 2431)
 		{
@@ -3454,7 +3454,7 @@ void verb_prog_pull_lever(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	char buf[MSL], buf2[MSL];
 	bool found= false;
 
-	for (check = char_list; check != NULL; check = check->next)
+	for (check = char_list; check != nullptr; check = check->next)
 	{
 		if (is_npc(check) && check->in_room == ch->in_room &&
 			(check->pIndexData->vnum == 24538 || check->pIndexData->vnum == 24539 || check->pIndexData->vnum == 24540))
@@ -3509,7 +3509,7 @@ void verb_prog_tie_rope(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	for (obj2 = ch->in_room->contents; obj2 != NULL; obj2 = obj2->next_content)
+	for (obj2 = ch->in_room->contents; obj2 != nullptr; obj2 = obj2->next_content)
 	{
 		if (obj2->pIndexData->vnum == 24548)
 			break;
@@ -3594,7 +3594,7 @@ void verb_prog_roll_tablet(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 	EXIT_DATA *exit = ch->in_room->exit[Directions::East];
 
-	if (ch->fighting != NULL)
+	if (ch->fighting != nullptr)
 	{
 		send_to_char("You're too busy fighting to roll the tablet!\n\r", ch);
 		return;
@@ -3629,9 +3629,9 @@ void close_elevator(ROOM_INDEX_DATA *pRoom)
 			toRoom = pRoom->exit[i]->u1.to_room;
 
 			if (toRoom->exit[reverse_d(i)]->u1.to_room)
-				toRoom->exit[reverse_d(i)]->u1.to_room = NULL;
+				toRoom->exit[reverse_d(i)]->u1.to_room = nullptr;
 
-			pRoom->exit[i]->u1.to_room = NULL;
+			pRoom->exit[i]->u1.to_room = nullptr;
 		}
 	}
 }
@@ -3675,7 +3675,7 @@ void act_to_room(void *vo1, void *vo2)
 void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
 
-	ROOM_INDEX_DATA *lRoom = ch->in_room, *eleRoom, *tRoom = NULL;
+	ROOM_INDEX_DATA *lRoom = ch->in_room, *eleRoom, *tRoom = nullptr;
 	int eDir = obj->value[0], i;
 	bool elInTransit = true;
 	char *mmsg;
@@ -3745,7 +3745,7 @@ void fight_prog_bugzapper(OBJ_DATA *obj, CHAR_DATA *ch)
 	act("$n shrinks back suddenly at the sight of $p.", victim, obj, 0, TO_ROOM);
 	act("Imbued with newfound vigor, you hack mercilessly at $n.", victim, 0, ch, TO_VICT);
 	act("$N suddenly strikes $n with a brutal blow.", victim, 0, ch, TO_NOTVICT);
-	one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 700, NULL);
+	one_hit_new(ch, victim, TYPE_UNDEFINED, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 700, nullptr);
 }
 
 void fight_prog_arms_light(OBJ_DATA *obj, CHAR_DATA *ch)
@@ -3785,7 +3785,7 @@ void drop_prog_elven_gem(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 	OBJ_DATA *obj2;
 
-	for (obj2 = ch->in_room->contents; obj2 != NULL; obj2 = obj2->next_content)
+	for (obj2 = ch->in_room->contents; obj2 != nullptr; obj2 = obj2->next_content)
 	{
 		if (obj->pIndexData->vnum == obj2->pIndexData->vnum)
 		{
@@ -3931,7 +3931,7 @@ void verb_prog_turn_wyntran(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	char buf[MAX_STRING_LENGTH];
 
-	if ((pMobIndex = get_mob_index(4627)) == NULL)
+	if ((pMobIndex = get_mob_index(4627)) == nullptr)
 	{
 		bug("verb_prog_turn_wyntran mob loading error");
 		return;
@@ -4028,7 +4028,7 @@ void verb_prog_place_star(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 // Fallen Desert Progs
 void verb_prog_fallendesert_climb_ladder(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	ROOM_INDEX_DATA *to_room = NULL;
+	ROOM_INDEX_DATA *to_room = nullptr;
 	int vnum = 0;
 
 	if (ch->in_room->vnum == 29176)
@@ -4073,7 +4073,7 @@ void verb_prog_fallendesert_climb_ladder(OBJ_DATA *obj, CHAR_DATA *ch, char *arg
 
 void verb_prog_fallendesert_(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 {
-	ROOM_INDEX_DATA *to_room = NULL;
+	ROOM_INDEX_DATA *to_room = nullptr;
 	int vnum = 0;
 
 	if (ch->in_room->vnum == 29176)

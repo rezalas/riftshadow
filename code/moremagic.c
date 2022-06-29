@@ -312,7 +312,7 @@ bool cleansed(CHAR_DATA *ch, CHAR_DATA *victim, int diffmodifier, int sn)
 int get_affect_level(CHAR_DATA *ch, int sn)
 {
 	// Go through all affects on ch and return the level of the one that matches sn.
-	for (AFFECT_DATA *paf = ch->affected; paf != NULL; paf = paf->next)
+	for (AFFECT_DATA *paf = ch->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type == sn)
 			return paf->level;
@@ -330,7 +330,7 @@ void spell_cure_deafness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (victim == ch)
 			send_to_char("You aren't deaf.\n\r", ch);
 		else
-			act("$N doesn't appear to be deafened.", ch, NULL, victim, TO_CHAR);
+			act("$N doesn't appear to be deafened.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
@@ -338,7 +338,7 @@ void spell_cure_deafness(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (check_dispel(level, victim, gsn_deafen))
 	{
 		send_to_char("Your hearing returns!\n\r", victim);
-		act("$n is no longer deafened.", victim, NULL, NULL, TO_ROOM);
+		act("$n is no longer deafened.", victim, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
@@ -355,7 +355,7 @@ void spell_remove_paralysis(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 		if (victim == ch)
 			send_to_char("You aren't paralyzed.\n\r", ch);
 		else
-			act("$N doesn't appear to be paralyzed.", ch, NULL, victim, TO_CHAR);
+			act("$N doesn't appear to be paralyzed.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
@@ -363,7 +363,7 @@ void spell_remove_paralysis(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	if (check_dispel(level, victim, skill_lookup("hold person")))
 	{
 		send_to_char("The feeling in your body returns!\n\r", victim);
-		act("$n is no longer paraylzed.", victim, NULL, NULL, TO_ROOM);
+		act("$n is no longer paraylzed.", victim, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
@@ -378,17 +378,17 @@ void spell_awaken(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_awake(victim))
 	{
-		act("$N is already awake.", ch, NULL, victim, TO_CHAR);
+		act("$N is already awake.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
-	for (laf = victim->affected; laf != NULL; laf = laf->next)
+	for (laf = victim->affected; laf != nullptr; laf = laf->next)
 	{
 		if (IS_SET(laf->bitvector, AFF_SLEEP))
 			break;
 	}
 
-	if (laf == NULL)
+	if (laf == nullptr)
 	{
 		send_to_char("They don't seem to be in deep sleep.\n\r", ch);
 		return;
@@ -397,7 +397,7 @@ void spell_awaken(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (check_dispel(level, victim, laf->type))
 	{
 		send_to_char("You suddenly awaken.\n\r", victim);
-		act("$n suddenly awakens.", victim, NULL, NULL, TO_ROOM);
+		act("$n suddenly awakens.", victim, nullptr, nullptr, TO_ROOM);
 		do_stand(victim, "");
 	}
 	else
@@ -416,13 +416,13 @@ void spell_resist_heat(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (victim == ch)
 			send_to_char("You are already resisting heat.\n\r", ch);
 		else
-			act("$E is already resisting heat.", ch, NULL, victim, TO_CHAR);
+			act("$E is already resisting heat.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
 
 	send_to_char("You feel resistant to heat.\n\r", victim);
-	act("$n is resistant to heat.", victim, NULL, NULL, TO_ROOM);
+	act("$n is resistant to heat.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -449,13 +449,13 @@ void spell_resist_cold(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (victim == ch)
 			send_to_char("You are already resisting cold.\n\r", ch);
 		else
-			act("$E is already resisting cold.", ch, NULL, victim, TO_CHAR);
+			act("$E is already resisting cold.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
 
 	send_to_char("You feel resistant to cold.\n\r", victim);
-	act("$n is resistant to cold.", victim, NULL, NULL, TO_ROOM);
+	act("$n is resistant to cold.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -482,13 +482,13 @@ void spell_resist_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 		if (victim == ch)
 			send_to_char("You are already resisting lightning.\n\r", ch);
 		else
-			act("$E is already resisting lightning.", ch, NULL, victim, TO_CHAR);
+			act("$E is already resisting lightning.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
 
 	send_to_char("You feel resistant to lightning.\n\r", victim);
-	act("$n is resistant to lightning.", victim, NULL, NULL, TO_ROOM);
+	act("$n is resistant to lightning.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -515,13 +515,13 @@ void spell_resist_mental(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (victim == ch)
 			send_to_char("You are already resisting mental attacks.\n\r", ch);
 		else
-			act("$E is already resisting mental attacks.", ch, NULL, victim, TO_CHAR);
+			act("$E is already resisting mental attacks.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
 
 	send_to_char("You feel resistant to mental attacks.\n\r", victim);
-	act("$n is resistant to mental attacks.", victim, NULL, NULL, TO_ROOM);
+	act("$n is resistant to mental attacks.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -548,13 +548,13 @@ void spell_resist_acid(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (victim == ch)
 			send_to_char("You are already resisting acid.\n\r", ch);
 		else
-			act("$E is already resisting acid.", ch, NULL, victim, TO_CHAR);
+			act("$E is already resisting acid.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
 
 	send_to_char("You feel resistant to acid.\n\r", victim);
-	act("$n is resistant to acid.", victim, NULL, NULL, TO_ROOM);
+	act("$n is resistant to acid.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -581,13 +581,13 @@ void spell_resist_negative(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		if (victim == ch)
 			send_to_char("You are already resisting negative damage.\n\r", ch);
 		else
-			act("$E is already resisting negative damage.", ch, NULL, victim, TO_CHAR);
+			act("$E is already resisting negative damage.", ch, nullptr, victim, TO_CHAR);
 
 		return;
 	}
 
 	send_to_char("You feel resistant to negative damage.\n\r", victim);
-	act("$n is resistant to negative damage.", victim, NULL, NULL, TO_ROOM);
+	act("$n is resistant to negative damage.", victim, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_RESIST;
@@ -616,25 +616,25 @@ void spell_group_teleport(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	if (ch->in_room != old_room)
 	{
-		for (group = old_room->people; group != NULL; group = g_next)
+		for (group = old_room->people; group != nullptr; group = g_next)
 		{
 			g_next = group->next_in_room;
 
-			if (!is_same_group(group, ch) || (group->fighting != NULL) || group == ch)
+			if (!is_same_group(group, ch) || (group->fighting != nullptr) || group == ch)
 				continue;
 
 			if (group == ch)
 				continue;
 
 			send_to_char("You have been teleported!\n\r", group);
-			act("$n vanishes!", group, NULL, NULL, TO_ROOM);
+			act("$n vanishes!", group, nullptr, nullptr, TO_ROOM);
 
 			char_from_room(group);
 			char_to_room(group, ch->in_room);
 
-			act("$n slowly fades into existence.", group, NULL, NULL, TO_ROOM);
+			act("$n slowly fades into existence.", group, nullptr, nullptr, TO_ROOM);
 
-			un_blade_barrier(group, NULL);
+			un_blade_barrier(group, nullptr);
 
 			do_look(group, "auto");
 		}
@@ -700,7 +700,7 @@ void spell_fatigue(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		victim->move -= dam / 2;
 	}
 
-	damage_new(ch, victim, dam, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_strength(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -750,12 +750,12 @@ void spell_remove_taint(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (number_percent() < chance)
 	{
-		act("The sickly red aura of $p fades away.", ch, obj, NULL, TO_ALL);
+		act("The sickly red aura of $p fades away.", ch, obj, nullptr, TO_ALL);
 		REMOVE_BIT(obj->extra_flags, ITEM_EVIL);
 	}
 	else
 	{
-		act("$p shivers softly, but the sickly red aura remains.", ch, obj, NULL, TO_ALL);
+		act("$p shivers softly, but the sickly red aura remains.", ch, obj, nullptr, TO_ALL);
 	}
 }
 

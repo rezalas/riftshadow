@@ -2,7 +2,7 @@
 
 CFile::CFile()
 {
-	fp = NULL;
+	fp = nullptr;
 	endoffile = false;
 }
 
@@ -19,7 +19,7 @@ bool CFile::LoadFile(const char *file, int mode)
 		return false;
 
     fp = fopen(file, mode == MODE_READ ? "r" : mode == MODE_WRITE ? "w+" : "a+");
-	if(fp == NULL)
+	if(fp == nullptr)
 	{
 		fprintf(stderr,"LoadFile error: Unable to open %s.", file);
 		return false;
@@ -34,7 +34,7 @@ void CFile::CloseFile(void)
 		return;
 
 	fclose(fp);
-	fp = NULL;
+	fp = nullptr;
 }
 
 bool CFile::End(void)

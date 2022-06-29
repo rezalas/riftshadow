@@ -70,7 +70,7 @@ void healing_sleep_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (is_awake(ch))
 		return;
 
-	for (laf = ch->affected; laf != NULL; laf = laf->next)
+	for (laf = ch->affected; laf != nullptr; laf = laf->next)
 	{
 		if (laf->type > 5 && skill_table[laf->type].dispel & CAN_CLEANSE)
 			affect_strip(ch, laf->type);

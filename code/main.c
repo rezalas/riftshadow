@@ -26,14 +26,14 @@ int main(int argc, char **argv)
 	/*
 	 * Init time.
 	 */
-	gettimeofday(&now_time, NULL);
+	gettimeofday(&now_time, nullptr);
 	current_time = (time_t)now_time.tv_sec;
 	strcpy(str_boot_time, ctime(&current_time));
 
 	/*
 	 * Reserve one channel for our use.
 	 */
-	if ((fpReserve = fopen(NULL_FILE, "r")) == NULL)
+	if ((fpReserve = fopen(NULL_FILE, "r")) == nullptr)
 	{
 		perror(NULL_FILE);
 		exit(0);

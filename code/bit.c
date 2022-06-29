@@ -109,7 +109,7 @@ int flag_lookup2(const char *name, const struct flag_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (!str_cmp(name, flag_table[flag].name) && flag_table[flag].settable)
 			return flag_table[flag].bit;
@@ -148,7 +148,7 @@ char *flag_string(const struct flag_type *flag_table, long bits[])
 
 	buf[0] = '\0';
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (!is_stat(flag_table) && IS_SET(bits, flag_table[flag].bit))
 		{
@@ -194,7 +194,7 @@ char *restrict_string(const struct restrict_type *restrict_table, long bits[])
 
 	buf[0] = '\0';
 
-	for (flag = 0; restrict_table[flag].name != NULL; flag++)
+	for (flag = 0; restrict_table[flag].name != nullptr; flag++)
 	{
 		if (IS_SET(bits, restrict_table[flag].bit))
 		{
@@ -215,7 +215,7 @@ char *flag_string_old(const struct flag_type *flag_table, int bits)
 
 	buf[0] = '\0';
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (!is_stat(flag_table) && IS_SET_OLD(bits, flag_table[flag].bit))
 		{

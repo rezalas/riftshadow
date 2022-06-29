@@ -11,8 +11,8 @@
 #define HISTORY_FILE			"history.txt"
 
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);
-#define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,NULL,NULL),obj);
-#define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,NULL,c),obj);
+#define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,nullptr,nullptr),obj);
+#define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,nullptr,c),obj);
 
 
 //

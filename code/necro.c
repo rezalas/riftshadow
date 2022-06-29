@@ -28,7 +28,7 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	urn = find_urn(ch);
 	corpse = get_obj_here(ch, target_name);
 	
-	if (urn != NULL && urn->value[3] >= corpse->level)
+	if (urn != nullptr && urn->value[3] >= corpse->level)
 	{
 		send_to_char("You already have a dark vessel in your possession.\n\r", ch);
 		return;	
@@ -55,7 +55,7 @@ void spell_dark_vessel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	bool isNewUrn = false;
-	if(urn == NULL)
+	if(urn == nullptr)
 	{
 		urn = create_object(get_obj_index(OBJ_VNUM_URN), 0);
 		if (!urn) // something went wrong, stop the creation
@@ -118,13 +118,13 @@ OBJ_DATA *find_urn(CHAR_DATA *ch)
 {
 	OBJ_DATA *urn;
 
-	for (urn = ch->carrying; urn != NULL; urn = urn->next_content)
+	for (urn = ch->carrying; urn != nullptr; urn = urn->next_content)
 	{
 		if (urn->item_type == ITEM_URN)
 			return urn;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 bool drain_urn(CHAR_DATA *ch, int charges)
@@ -339,7 +339,7 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (search = char_list; search != NULL; search = search->next)
+	for (search = char_list; search != nullptr; search = search->next)
 	{
 		if (is_npc(search)
 			&& search->master == ch
@@ -365,13 +365,13 @@ void spell_animate_dead(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	obj_name = palloc_string(target_name);
 	corpse = get_obj_here(ch, obj_name);
 
-	if (corpse == NULL || (corpse->item_type != ITEM_CORPSE_NPC && corpse->item_type != ITEM_CORPSE_PC) || !corpse->ohp)
+	if (corpse == nullptr || (corpse->item_type != ITEM_CORPSE_NPC && corpse->item_type != ITEM_CORPSE_PC) || !corpse->ohp)
 	{
 		send_to_char("You can't animate that.\n\r", ch);
 		return;
 	}
 
-	if (corpse->item_type != ITEM_CORPSE_NPC && corpse->contains != NULL)
+	if (corpse->item_type != ITEM_CORPSE_NPC && corpse->contains != nullptr)
 	{
 		send_to_char("It's too laden for you to gut.\n\r", ch);
 		return;
@@ -414,8 +414,8 @@ void animate_two(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	if (ch->fighting)
 	{
-		act("The interruption disrupts your concentration, and $p crumbles to dust.", ch, corpse, NULL, TO_CHAR);
-		act("$n is unable to continue the animation process, and $p crumbles to dust.", ch, corpse, NULL, TO_ROOM);
+		act("The interruption disrupts your concentration, and $p crumbles to dust.", ch, corpse, nullptr, TO_CHAR);
+		act("$n is unable to continue the animation process, and $p crumbles to dust.", ch, corpse, nullptr, TO_ROOM);
 
 		extract_obj(corpse);
 
@@ -423,8 +423,8 @@ void animate_two(CHAR_DATA *ch, OBJ_DATA *corpse)
 		return;
 	}
 
-	act("You carve elaborate runes onto the torso of $p.", ch, corpse, NULL, TO_CHAR);
-	act("$n carves elaborate runes onto the torso of $p.", ch, corpse, NULL, TO_ROOM);
+	act("You carve elaborate runes onto the torso of $p.", ch, corpse, nullptr, TO_CHAR);
+	act("$n carves elaborate runes onto the torso of $p.", ch, corpse, nullptr, TO_ROOM);
 
 	RS.Queue.AddToQueue(2, 2, animate_three, ch, corpse);
 }
@@ -444,8 +444,8 @@ void animate_three(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	if (ch->fighting)
 	{
-		act("The interruption disrupts your concentration, and $p crumbles to dust.", ch, corpse, NULL, TO_CHAR);
-		act("$n is unable to continue the animation process, and $p crumbles to dust.", ch, corpse, NULL, TO_ROOM);
+		act("The interruption disrupts your concentration, and $p crumbles to dust.", ch, corpse, nullptr, TO_CHAR);
+		act("$n is unable to continue the animation process, and $p crumbles to dust.", ch, corpse, nullptr, TO_ROOM);
 
 		extract_obj(corpse);
 
@@ -453,7 +453,7 @@ void animate_three(CHAR_DATA *ch, OBJ_DATA *corpse)
 		return;
 	}
 
-	act("The flesh of the corpse begins to decay rapidly, its skin left bloated and sagging.", ch, NULL, NULL, TO_ALL);
+	act("The flesh of the corpse begins to decay rapidly, its skin left bloated and sagging.", ch, nullptr, nullptr, TO_ALL);
 
 	RS.Queue.AddToQueue(2, 2, animate_four, ch, corpse);
 }
@@ -477,7 +477,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 	if (number_percent() > corpse->value[4])
 	{
 		act("The magics fail to take hold, leaving the corpse a worthless pile of entrails.", ch, 0, 0, TO_CHAR);
-		act("$n's efforts to animate $p result only in a disgusting pile of entrails.", ch, corpse, NULL, TO_ROOM);
+		act("$n's efforts to animate $p result only in a disgusting pile of entrails.", ch, corpse, nullptr, TO_ROOM);
 
 		extract_obj(corpse);
 		return;
@@ -598,7 +598,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n draws a black circle on the ground and falls into deep concentration.", ch, 0, 0, TO_ROOM);
 	act("You draw a black circle on the ground and fall into deep concentration.", ch, 0, 0, TO_CHAR);
 
-	for (pet = char_list; pet != NULL; pet = pet->next)
+	for (pet = char_list; pet != nullptr; pet = pet->next)
 	{
 		if (is_npc(pet) && is_affected_by(pet, AFF_CHARM) && pet->master && pet->master == ch)
 		{
@@ -609,7 +609,7 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			char_from_room(pet);
 			char_to_room(pet, ch->in_room);
 
-			act("$N arrives suddenly, kneeling before you outside the circle.", ch, NULL, pet, TO_CHAR);
+			act("$N arrives suddenly, kneeling before you outside the circle.", ch, nullptr, pet, TO_CHAR);
 			act("$N arrives suddenly, kneeling before $n outside the circle.", ch, 0, pet, TO_ROOM);
 
 			found = true;
@@ -629,9 +629,9 @@ void spell_black_circle(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.modifier = 0;
 	af.location = 0;
 	af.duration = 60;
-	af.owner = NULL;
+	af.owner = nullptr;
 	af.level = ch->level;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	new_affect_to_char(ch, &af);
 }
 
@@ -646,7 +646,7 @@ void spell_visceral(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (corpse = object_list; corpse != NULL && corpses < 3; corpse = corpse->next)
+	for (corpse = object_list; corpse != nullptr && corpses < 3; corpse = corpse->next)
 	{
 		if (corpse->in_room
 			&& corpse->in_room == ch->in_room
@@ -703,7 +703,7 @@ void visceral_three(CHAR_DATA *ch)
 	{
 		send_to_char("The dark powers are furious at the disruption of the unholy orgy!\n\r", ch);
 
-		act("A swirling black cloud coalesces above and lashes out at $n!", ch, NULL, NULL, TO_ROOM);
+		act("A swirling black cloud coalesces above and lashes out at $n!", ch, nullptr, nullptr, TO_ROOM);
 
 		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
 
@@ -730,7 +730,7 @@ void visceral_four(CHAR_DATA *ch)
 		send_to_char("The unseen dark powers howl in fury at the disruption!\n\r", ch);
 		send_to_char("Invisible claws rend at your flesh as they seek to sate their bloodthirst!\n\r", ch);
 
-		act("Swirling shadows surround $n, tearing at his flesh as $e shrieks in agony!", ch, NULL, NULL, TO_ROOM);
+		act("Swirling shadows surround $n, tearing at his flesh as $e shrieks in agony!", ch, nullptr, nullptr, TO_ROOM);
 
 		damage_new(ch, ch, dice(30, 40), gsn_unholy_bond, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "the unholy assault*");
 		return;
@@ -746,7 +746,7 @@ void visceral_four(CHAR_DATA *ch)
 	af.level = ch->level;
 	af.duration = 60;
 	af.owner = ch;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	af.location = APPLY_HIT;
 	af.modifier = ch->level * 8;
 	new_affect_to_char(ch, &af);
@@ -755,7 +755,7 @@ void visceral_four(CHAR_DATA *ch)
 	af.modifier = 0;
 	new_affect_to_char(ch, &af);
 
-	for (mob = ch->in_room->people; mob != NULL; mob = mob->next_in_room)
+	for (mob = ch->in_room->people; mob != nullptr; mob = mob->next_in_room)
 	{
 		if (is_npc(mob) && is_affected_by(mob, AFF_CHARM) && mob->master && mob->master == ch)
 		{
@@ -771,7 +771,7 @@ void spell_ritual_soul(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *search, *victim = (CHAR_DATA *)vo;
 
-	for (search = char_list; search != NULL; search = search->next)
+	for (search = char_list; search != nullptr; search = search->next)
 	{
 		if (is_npc(search)
 			&& search->master == ch
@@ -853,7 +853,7 @@ void ritual_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (ch->fighting)
 	{
 		send_to_char("The Dark Gods are angered at the disruption, and unleash their fury upon you!\n\r", ch);
-		act("A swirling black cloud coalesces above and lashes out at $n!", ch, NULL, NULL, TO_ROOM);
+		act("A swirling black cloud coalesces above and lashes out at $n!", ch, nullptr, nullptr, TO_ROOM);
 		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
 		return;
 	}
@@ -901,7 +901,7 @@ void spell_ritual_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *search, *victim = (CHAR_DATA *)vo;
 
-	for (search = char_list; search != NULL; search = search->next)
+	for (search = char_list; search != nullptr; search = search->next)
 	{
 		if (is_npc(search)
 			&& search->master == ch
@@ -975,7 +975,7 @@ void flesh_four(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (ch->fighting)
 	{
 		send_to_char("The Dark Gods are angered at the disruption, and unleash their fury upon you!\n\r", ch);
-		act("A swirling black cloud coalesces above and lashes out at $n!", ch, NULL, NULL, TO_ROOM);
+		act("A swirling black cloud coalesces above and lashes out at $n!", ch, nullptr, nullptr, TO_ROOM);
 		damage_new(ch, ch, dice(18, 18), gsn_unholy_bond, DAM_NEGATIVE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "a nether bolt*");
 		return;
 	}
@@ -1078,13 +1078,13 @@ void spell_corrupt_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	victim = ch;
 
-	if (arg1[0] == '\0' || (obj = get_obj_carry(ch, arg1, ch)) == NULL)
+	if (arg1[0] == '\0' || (obj = get_obj_carry(ch, arg1, ch)) == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
 	}
 
-	if (str_cmp(arg1, "head") && (arg2[0] == '\0' || (victim = get_char_room(ch, arg2)) == NULL))
+	if (str_cmp(arg1, "head") && (arg2[0] == '\0' || (victim = get_char_room(ch, arg2)) == nullptr))
 	{
 		ch->wait = 0;
 
@@ -1123,7 +1123,7 @@ void spell_corrupt_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		do_myell(victim, buf, ch);
 		obj_from_char(obj);
 
-		if (ch->fighting == NULL)
+		if (ch->fighting == nullptr)
 			one_hit(victim, ch, TYPE_HIT);
 	}
 
@@ -1273,7 +1273,7 @@ void spell_corpse_trap(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (corpse->item_type != ITEM_CORPSE_NPC && corpse->contains != NULL)
+	if (corpse->item_type != ITEM_CORPSE_NPC && corpse->contains != nullptr)
 	{
 		send_to_char("You can't trap a corpse with things in it!\n\r", ch);
 		return;
@@ -1366,7 +1366,7 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (check = char_list; check != NULL; check = check->next)
+	for (check = char_list; check != nullptr; check = check->next)
 	{
 		if (is_npc(check)
 			&& check->master == ch
@@ -1457,7 +1457,7 @@ void spell_greater_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (check = char_list; check != NULL; check = check->next)
+	for (check = char_list; check != nullptr; check = check->next)
 	{
 		if (is_npc(check)
 			&& check->master == ch
@@ -1482,7 +1482,7 @@ void spell_greater_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (!str_cmp(type, "glass"))
 	{
-		if ((obj = get_obj_carry(ch, arg, ch)) == NULL)
+		if ((obj = get_obj_carry(ch, arg, ch)) == nullptr)
 		{
 			send_to_char("You aren't carrying that.\n\r", ch);
 			return;
@@ -1571,7 +1571,7 @@ void do_drain(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (corpse == NULL)
+	if (corpse == nullptr)
 	{
 		send_to_char("You don't see that here.\n\r", ch);
 		return;
@@ -1674,7 +1674,7 @@ bool check_zombie_summon(CHAR_DATA *ch)
 	if (get_skill(ch, gsn_unholy_bond) < 1)
 		return false;
 
-	for (mob = char_list; mob != NULL; mob = mob->next)
+	for (mob = char_list; mob != nullptr; mob = mob->next)
 	{
 		if (is_npc(mob)
 			&& is_affected_by(mob, AFF_CHARM)

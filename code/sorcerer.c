@@ -127,7 +127,7 @@ void spell_scorch(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("Waves of heat ripple through the air as $n's flesh crackles.", victim, 0, ch, TO_ROOM);
 	act("Waves of heat ripple through the air towards you.\n\rYou feel your skin crackling.", ch, 0, victim, TO_VICT);
-	damage_new(ch, victim, dam, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_gravity_well(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -161,7 +161,7 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	if (well->item_type == ITEM_CORPSE_PC && well->contains != NULL)
+	if (well->item_type == ITEM_CORPSE_PC && well->contains != nullptr)
 	{
 		send_to_char("You cannot focus on the corpse while it is laden.\n\r", ch);
 		return;
@@ -188,7 +188,7 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.location = 0;
 	raf.modifier = 0;
 	raf.owner = ch;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	raf.end_fun = gravity_well_explode;
 	new_affect_to_room(ch->in_room, &raf);
 
@@ -211,8 +211,8 @@ void spell_gravity_well(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	aaf.location = 0;
 	aaf.modifier = 0;
 	aaf.owner = ch;
-	aaf.tick_fun = NULL;
-	aaf.end_fun = NULL;
+	aaf.tick_fun = nullptr;
+	aaf.end_fun = nullptr;
 	affect_to_area(ch->in_room->area, &aaf);
 }
 
@@ -225,7 +225,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	affect_strip_area(room->area, gsn_gravity_well);
 
-	for (well = object_list; well != NULL; well = well->next)
+	for (well = object_list; well != nullptr; well = well->next)
 	{
 		if (well->item_type == ITEM_GRAVITYWELL && well->in_room && well->in_room == room)
 			break;
@@ -242,7 +242,7 @@ void gravity_well_explode(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	extract_obj(well);
 	affect_strip_room(room, gsn_gravity_well);
 
-	for (victim = room->people; victim != NULL; victim = v_next)
+	for (victim = room->people; victim != nullptr; victim = v_next)
 	{
 		v_next = victim->next_in_room;
 
@@ -339,7 +339,7 @@ void cyclone_begin(AREA_DATA *area, AREA_AFFECT_DATA *af)
 	aaf.location = 0;
 	aaf.modifier = 0;
 	aaf.owner = af->owner;
-	aaf.tick_fun = NULL;
+	aaf.tick_fun = nullptr;
 	aaf.end_fun = cyclone_end_fun;
 	affect_to_area(area, &aaf);
 }
@@ -393,8 +393,8 @@ void spell_chill(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void spell_chillmetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	CHAR_DATA *victim = NULL;
-	OBJ_DATA *obj = NULL;
+	CHAR_DATA *victim = nullptr;
+	OBJ_DATA *obj = nullptr;
 	OBJ_AFFECT_DATA oaf;
 
 	if (target == TARGET_CHAR)
@@ -403,7 +403,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		obj = get_eq_char(victim, WEAR_WIELD);
 
-		if (obj == NULL)
+		if (obj == nullptr)
 		{
 			send_to_char("They are not wielding a weapon.\n\r", ch);
 			return;
@@ -416,7 +416,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (obj->pIndexData->material_index < 0 || material_table[obj->pIndexData->material_index].mat_conductivity <= 0)
 	{
-		act("You can only draw sufficient heat out of metal weapons.", ch, obj, NULL, TO_CHAR);
+		act("You can only draw sufficient heat out of metal weapons.", ch, obj, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -432,7 +432,7 @@ void spell_chillmetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 	else
 	{
-		act("You draw the heat out of $p, leaving it icy to the touch.", ch, obj, NULL, TO_CHAR);
+		act("You draw the heat out of $p, leaving it icy to the touch.", ch, obj, nullptr, TO_CHAR);
 	}
 
 	init_affect_obj(&oaf);
@@ -506,7 +506,7 @@ void spell_conflagration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.owner = ch;
 	raf.end_fun = conflag_burnout;
 	raf.pulse_fun = conflagration_pulse;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &raf);
 
 	init_affect(&af);
@@ -534,7 +534,7 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 
 	for (auto exit : room->exit)
 	{
-		if (exit != NULL) {
+		if (exit != nullptr) {
 			found = true;
 			break;
 		}
@@ -564,12 +564,12 @@ bool conflagrate_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *oldaf)
 	raf.owner = oldaf->owner;
 	raf.end_fun = oldaf->end_fun;
 	raf.pulse_fun = conflagration_pulse;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(room, &raf);
 
-	for (rch = room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = room->people; rch != nullptr; rch = rch->next_in_room)
 	{
-		act("The room erupts in a fiery explosion and is engulfed in searing flames!", rch, NULL, NULL, TO_CHAR);
+		act("The room erupts in a fiery explosion and is engulfed in searing flames!", rch, nullptr, nullptr, TO_CHAR);
 	}
 
 	zone_echo(room->area, "The crackling roar of fire reaches your ears.\n\r");
@@ -634,13 +634,13 @@ void conflag_burnout(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 	raf.location = APPLY_ROOM_SECT;
 	raf.modifier = SECT_DESERT - (room->sector_type - af->modifier);
 	raf.owner = af->owner;
-	raf.end_fun = NULL;
-	raf.tick_fun = NULL;
+	raf.end_fun = nullptr;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(room, &raf);
 
-	for (rch = room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = room->people; rch != nullptr; rch = rch->next_in_room)
 	{
-		act("The raging flames die out as smoldering smoke lingers about scorched land.", rch, NULL, NULL, TO_CHAR);
+		act("The raging flames die out as smoldering smoke lingers about scorched land.", rch, nullptr, nullptr, TO_CHAR);
 	}
 }
 
@@ -661,13 +661,13 @@ void spell_ultradiffusion(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 		SET_BIT(af.bitvector, AFF_PASS_DOOR);
 
-		af.owner = NULL;
+		af.owner = nullptr;
 		af.end_fun = ultradiffusion_end;
 		af.tick_fun = ultradiffusion_tick;
 		af.mod_name = MOD_PHASE;
 
-		act("The molecules of your body diffuse as your body becomes invisible to the naked eye.", ch, NULL, NULL, TO_CHAR);
-		act("The molecules of $n's body diffuse as $e vanishes from sight.", ch, NULL, NULL, TO_ROOM);
+		act("The molecules of your body diffuse as your body becomes invisible to the naked eye.", ch, nullptr, nullptr, TO_CHAR);
+		act("The molecules of $n's body diffuse as $e vanishes from sight.", ch, nullptr, nullptr, TO_ROOM);
 		new_affect_to_char(ch, &af);
 	}
 	else
@@ -712,7 +712,7 @@ void un_ultradiffusion(CHAR_DATA *ch, char *argument)
 	if (!is_affected(ch, gsn_ultradiffusion))
 		return;
 
-	for (paf = ch->affected; paf != NULL; paf = paf->next)
+	for (paf = ch->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type == gsn_ultradiffusion)
 			break;
@@ -738,64 +738,64 @@ void ultradiffusion_end(CHAR_DATA *ch, AFFECT_DATA *af)
 	}
 	else if (af->duration == 0)
 	{
-		act("As your molecular cohesion entirely evaporates, your consciousness drifts away into nothingness.", ch, NULL, NULL, TO_CHAR);
-		act("$n's molecular cohesion entirely evaporates!", ch, NULL, NULL, TO_ROOM);
+		act("As your molecular cohesion entirely evaporates, your consciousness drifts away into nothingness.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n's molecular cohesion entirely evaporates!", ch, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
-		act("You attempt to recollect the molecules of your body as you become visible to the naked eye.", ch, NULL, NULL, TO_CHAR);
-		act("$n attempts to recollect the molecules of $s body as $e becomes visible.", ch, NULL, NULL, TO_ROOM);
+		act("You attempt to recollect the molecules of your body as you become visible to the naked eye.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n attempts to recollect the molecules of $s body as $e becomes visible.", ch, nullptr, nullptr, TO_ROOM);
 	}
 
 	for (rpaf = ch->affected; rpaf; rpaf = rpaf->next)
 	{
 		if (rpaf->type == gsn_ultradiffusion && rpaf->end_fun)
-			rpaf->end_fun = NULL;
+			rpaf->end_fun = nullptr;
 	}
 
 	switch (af->duration)
 	{
 		case 20:
 		case 19:
-			damage_new(ch, ch, 20, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 20, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 18:
 		case 17:
-			damage_new(ch, ch, 30, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 30, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 16:
 		case 15:
-			damage_new(ch, ch, 50, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 50, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 14:
 		case 13:
-			damage_new(ch, ch, 100, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 100, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 12:
 		case 11:
-			damage_new(ch, ch, 200, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 200, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 10:
 		case 9:
-			damage_new(ch, ch, 300, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 300, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 8:
 		case 7:
-			damage_new(ch, ch, 400, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 400, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			break;
 		case 6:
 		case 5:
-			damage_new(ch, ch, 600, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 600, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			modifier = 1;
 			break;
 		case 4:
 		case 3:
-			damage_new(ch, ch, 800, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 800, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			modifier = 2;
 			break;
 		case 2:
 		case 1:
-			damage_new(ch, ch, 1000, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+			damage_new(ch, ch, 1000, gsn_ultradiffusion, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 			modifier = 3;
 			break;
 		case 0:
@@ -846,7 +846,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	obj = get_eq_char(victim, WEAR_WIELD);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("They are not wielding a weapon.\n\r", ch);
 		return;
@@ -871,7 +871,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("You rapidly raise the temperature of $N's weapon, but $E adjusts $S grip.", ch, obj, victim, TO_CHAR);
 		act("Your weapon suddenly becomes burning to the touch, but you quickly find a comfortable grip.", ch, obj, victim, TO_VICT);
 		act("$N's weapon glows a dull red, but $E adjusts $S grip.", ch, obj, victim, TO_NOTVICT);
-		damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 		set_fighting(ch, victim);
 		return;
 	}
@@ -881,7 +881,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("You rapidly raise the temperature of $N's weapon, but it clings to $S hand, burning him!", ch, obj, victim, TO_CHAR);
 		act("Your weapon suddenly becomes burning to the touch, but you cannot let go of it!", ch, obj, victim, TO_VICT);
 		act("$N's weapon glows a dull red, but it clings to $S hand, burning him!", ch, obj, victim, TO_NOTVICT);
-		damage_new(ch, victim, dice(level, 5), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(level, 5), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 		set_fighting(ch, victim);
 		return;
 	}
@@ -890,7 +890,7 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("Your weapon suddenly becomes burning to the touch, and you instinctively drop it!", ch, obj, victim, TO_VICT);
 	act("$N's weapon glows a dull red and $E drops it, pulling back $S hand in pain!", ch, obj, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice(4, 4), gsn_burning_hands, DAM_FIRE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 	set_fighting(ch, victim);
 
 	obj_from_char(obj);
@@ -904,14 +904,14 @@ void spell_heat_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		obj_to_room(obj, victim->in_room);
 
 		if (is_npc(victim) && victim->wait == 0 && can_see_obj(victim, obj))
-			get_obj(victim, obj, NULL, true);
+			get_obj(victim, obj, nullptr, true);
 	}
 
 	reslot_weapon(victim);
 
 	obj2 = get_eq_char(victim, WEAR_DUAL_WIELD);
 
-	if (obj2 != NULL)
+	if (obj2 != nullptr)
 	{
 		unequip_char(victim, obj2, false);
 		act("You hastily swap $p into your primary hand.", ch, obj2, 0, TO_CHAR);
@@ -976,8 +976,8 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		to_room = pexit->u1.to_room;
 
-		if (to_room != NULL
-			&& (pexit_opp = to_room->exit[reverse_d(door)]) != NULL
+		if (to_room != nullptr
+			&& (pexit_opp = to_room->exit[reverse_d(door)]) != nullptr
 			&& pexit_opp->u1.to_room == ch->in_room)
 		{
 			REMOVE_BIT(pexit_opp->exit_info, EX_LOCKED);
@@ -987,7 +987,7 @@ void spell_knock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		direction = flag_name_lookup(reverse_d(door), direction_table);
 
-		for (fch = to_room->people; fch != NULL; fch = fch->next_in_room)
+		for (fch = to_room->people; fch != nullptr; fch = fch->next_in_room)
 		{
 			act("The $T door suddenly buckles on its hinges and bursts open!", fch, 0, direction, TO_ALL);
 			break;
@@ -1015,7 +1015,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (auto exit : ch->in_room->exit)
 	{
-		if (exit != NULL) {
+		if (exit != nullptr) {
 			found = true;
 			break;
 		}
@@ -1040,10 +1040,10 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.modifier = 0;
 	raf.owner = ch;
 	raf.end_fun = vacuum_end_fun;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &raf);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -1064,7 +1064,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	auto i = 0;
 	for (auto pexit : ch->in_room->exit)
 	{
-		if (pexit == NULL)
+		if (pexit == nullptr)
 			continue;
 
 		to_room = pexit->u1.to_room;
@@ -1097,7 +1097,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 	for (auto pexit : room->exit)
 	{
-		if (pexit == NULL)
+		if (pexit == nullptr)
 			continue;
 
 		if (!IS_SET(pexit->exit_info, EX_CLOSED))
@@ -1105,7 +1105,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 		to_room = pexit->u1.to_room;
 
-		if (to_room != NULL && to_room->people)
+		if (to_room != nullptr && to_room->people)
 		{
 			direction = flag_name_lookup(reverse_d(i), direction_table);
 			act("Air rushes back $Tward!", to_room->people, 0, direction, TO_ALL);
@@ -1114,7 +1114,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 		i++;
 	}
 
-	for (vch = room->people; vch != NULL; vch = vch_next)
+	for (vch = room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -1140,7 +1140,7 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 			if (to_room)
 			{
-				for (obj = to_room->contents; obj != NULL; obj = obj_next)
+				for (obj = to_room->contents; obj != nullptr; obj = obj_next)
 				{
 					if (objcount > 8)
 						break;
@@ -1154,14 +1154,14 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 						obj_from_room(obj);
 						obj_to_room(obj, room);
-						smacked = NULL;
+						smacked = nullptr;
 
 						while (!smacked && room->people)
 						{
 							randperson = number_range(0, pplcount);
 							j = 0;
 
-							for (vch = room->people; vch != NULL; vch = vch_next)
+							for (vch = room->people; vch != nullptr; vch = vch_next)
 							{
 								vch_next = vch->next_in_room;
 
@@ -1190,14 +1190,14 @@ void vacuum_end_fun(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 
 		for (auto pexit : room->exit)
 		{
-			if (pexit == NULL || IS_SET(pexit->exit_info, EX_CLOSED))
+			if (pexit == nullptr || IS_SET(pexit->exit_info, EX_CLOSED))
 				continue;
 
 			to_room = pexit->u1.to_room;
 
 			if (to_room)
 			{
-				for (vch = to_room->people; vch != NULL; vch = vch_next)
+				for (vch = to_room->people; vch != nullptr; vch = vch_next)
 				{
 					vch_next = vch->next_in_room;
 
@@ -1247,7 +1247,7 @@ void spell_incandescense(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 
 	send_to_char("You begin to glow with a soft white light.\n\r", victim);
-	act("$n begins to glow with a soft white light.", victim, NULL, NULL, TO_ROOM);
+	act("$n begins to glow with a soft white light.", victim, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_infravision(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1309,7 +1309,7 @@ void spell_diuretic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (ch != victim)
 	{
 		act("You infuse $N with a rush of healing warmth.", ch, 0, victim, TO_CHAR);
-		act_new("A feeling of warmth washes over you.", victim, NULL, NULL, TO_CHAR, POS_SLEEPING);
+		act_new("A feeling of warmth washes over you.", victim, nullptr, nullptr, TO_CHAR, POS_SLEEPING);
 		act("$n looks flushed for a moment.", ch, 0, victim, TO_NOTVICT);
 	}
 
@@ -1318,7 +1318,7 @@ void spell_diuretic(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (af)
 	{
-		for (af = victim->affected; af != NULL; af = af->next)
+		for (af = victim->affected; af != nullptr; af = af->next)
 		{
 			if (af->type == gsn_bleeding && af->level < 150)
 				af->level = (int)((float)af->level * 1.33);
@@ -1409,7 +1409,7 @@ void spell_immolate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends $s hand towards you, releasing an oppressive wave of heat that washes over you.", ch, 0, victim, TO_VICT);
 	act("$n extends $s hand towards $N, releasing a burst of heat that washes over $M!", ch, 0, victim, TO_NOTVICT);
 
-	for (obj = victim->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = victim->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (!is_worn(obj) || obj->wear_loc == WEAR_BRAND)
 			continue;
@@ -1432,7 +1432,7 @@ void spell_immolate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			SET_BIT(oaf.bitvector, AFF_OBJ_BURNING);
 
 			oaf.end_fun = immolate_end;
-			oaf.tick_fun = NULL;
+			oaf.tick_fun = nullptr;
 			affect_to_obj(obj, &oaf);
 
 			act("$p bursts into flames!", victim, obj, 0, TO_ALL);
@@ -1477,14 +1477,14 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	SET_BIT(af.bitvector, AFF_BLIND);
 	af.mod_name = MOD_VISION;
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == NULL || vch->fighting == NULL))
+		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == nullptr || vch->fighting == nullptr))
 		{
 			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
@@ -1528,7 +1528,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("The earth beneath you rumbles violently!", ch, 0, 0, TO_ALL);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -1550,7 +1550,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("You lose your footing amidst the shaking and fall to the ground!", vch, 0, 0, TO_CHAR);
 
 		WAIT_STATE(vch, PULSE_VIOLENCE);
-		damage_new(ch, vch, dice(10, 3), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, vch, dice(10, 3), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 	}
 
 	switch (ch->in_room->sector_type)
@@ -1568,7 +1568,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			if (ch->in_room->sector_type != SECT_HILLS)
 				act("Loose rocks and earth tumbles down from the cave around you!", ch, 0, 0, TO_ALL);
 
-			for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1580,7 +1580,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 			break;
 		case SECT_CITY:
-			for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1593,7 +1593,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 			break;
 		case SECT_FOREST:
-			for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1616,11 +1616,11 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			raf.location = 0;
 			raf.modifier = 0;
 			raf.owner = ch;
-			raf.end_fun = NULL;
-			raf.tick_fun = NULL;
+			raf.end_fun = nullptr;
+			raf.tick_fun = nullptr;
 			new_affect_to_room(ch->in_room, &raf);
 
-			for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+			for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 			{
 				vch_next = vch->next_in_room;
 
@@ -1649,7 +1649,7 @@ void spell_electrocute(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *obj;
 	int tconduct = 0;
 
-	for (obj = victim->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = victim->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (obj->pIndexData->material_index < 0)
 			continue;
@@ -1691,7 +1691,7 @@ void spell_electrocute(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("$n lets out a horrible shriek as the electric current roasts $m alive within $s armor!", victim, 0, 0, TO_ROOM);
 	}
 
-	damage_new(ch, victim, dice((level / 15) * tconduct, 4), sn, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice((level / 15) * tconduct, 4), sn, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 	LAG_CHAR(victim, (tconduct / 15) * PULSE_VIOLENCE);
 }
 
@@ -1713,7 +1713,7 @@ void spell_induce_pain(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("Your vision clouds as searing pain courses through your body!", victim, 0, 0, TO_CHAR);
 	}
 
-	damage_new(ch, victim, dam, sn, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_OTHER, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1746,7 +1746,7 @@ void spell_disrupt_vision(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	affect_to_char(victim, &af);
 
 	send_to_char("A white flash blankets your field of vision, and you cannot see anything!\n\r", victim);
-	act("$n appears to be blinded.", victim, NULL, NULL, TO_ROOM);
+	act("$n appears to be blinded.", victim, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_mana_conduit(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1791,7 +1791,7 @@ void spell_synaptic_enhancement(int sn, int level, CHAR_DATA *ch, void *vo, int 
 	if (is_affected(victim, gsn_synaptic_impairment))
 	{
 		send_to_char("The haze lifts from your mind, and you can think clearly once again.\n\r", victim);
-		act("$n appears to be thinking normally again.", victim, NULL, NULL, TO_ROOM);
+		act("$n appears to be thinking normally again.", victim, nullptr, nullptr, TO_ROOM);
 		affect_strip(victim, gsn_synaptic_impairment);
 		return;
 	}
@@ -1831,7 +1831,7 @@ void spell_synaptic_impairment(int sn, int level, CHAR_DATA *ch, void *vo, int t
 	if (is_affected(victim, gsn_synaptic_enhancement))
 	{
 		send_to_char("Your mind clouds slightly as your synaptic enhancement wears off.\n\r", victim);
-		act("$n appears to be thinking normally again.", victim, NULL, NULL, TO_ROOM);
+		act("$n appears to be thinking normally again.", victim, nullptr, nullptr, TO_ROOM);
 		affect_strip(victim, gsn_synaptic_enhancement);
 		return;
 	}
@@ -1905,9 +1905,9 @@ void spell_scramble_neurons(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	af.mod_name = MOD_CONC;
 	affect_to_char(victim, &af);
 
-	act("You disrupt $N's neurons!", ch, NULL, victim, TO_CHAR);
-	act("You reel in confusion as an odd sensation muddies your thoughts.", ch, NULL, victim, TO_VICT);
-	act("$n disrupts $N's neurons!", ch, NULL, victim, TO_NOTVICT);
+	act("You disrupt $N's neurons!", ch, nullptr, victim, TO_CHAR);
+	act("You reel in confusion as an odd sensation muddies your thoughts.", ch, nullptr, victim, TO_VICT);
+	act("$n disrupts $N's neurons!", ch, nullptr, victim, TO_NOTVICT);
 }
 
 void spell_mana_leech(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -1919,7 +1919,7 @@ void spell_mana_leech(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends tendrils of electricity towards you.", ch, 0, victim, TO_VICT);
 	act("$n extends tendrils of electricity towards $N.", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dice(5, 2), sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice(5, 2), sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 	if (saves_spell(level, victim, DAM_ENERGY))
 	{
@@ -1976,7 +1976,7 @@ void spell_interference(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	aaf.location = 0;
 	aaf.modifier = 0;
 	aaf.owner = ch;
-	aaf.tick_fun = NULL;
+	aaf.tick_fun = nullptr;
 	aaf.end_fun = interference_end;
 	affect_to_area(area, &aaf);
 
@@ -2042,11 +2042,11 @@ void spell_dehydrate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_npc(victim))
 	{
-		damage_new(ch, victim, dice(level, 3), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(level, 3), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 	}
 	else
 	{
-		damage_new(ch, victim, dice(COND_HUNGRY - victim->pcdata->condition[COND_THIRST], level / 5), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, victim, dice(COND_HUNGRY - victim->pcdata->condition[COND_THIRST], level / 5), sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 		if (victim->pcdata->condition[COND_THIRST] >= 0)
 			victim->pcdata->condition[COND_THIRST] = COND_HUNGRY;
@@ -2067,7 +2067,7 @@ void spell_drown(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (is_affected_by(victim, AFF_WATERBREATH))
 		dam /= 2;
 
-	damage_new(ch, victim, dam, sn, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_DROWNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_hydration(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -2278,7 +2278,7 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	pexit = ch->in_room->exit[door];
 
-	if (pexit != NULL && ((to_room = pexit->u1.to_room) != NULL))
+	if (pexit != nullptr && ((to_room = pexit->u1.to_room) != nullptr))
 	{
 
 		if (to_room->sector_type == SECT_CITY)
@@ -2315,7 +2315,7 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (is_affected_room(ch->in_room, sn))
 		{
-			for (oaf = ch->in_room->affected; oaf != NULL; oaf = oaf->next)
+			for (oaf = ch->in_room->affected; oaf != nullptr; oaf = oaf->next)
 			{
 				if (oaf->type == sn)
 					break;
@@ -2334,7 +2334,7 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		raf.modifier = SECT_WATER - to_room->sector_type;
 		raf.owner = ch;
 		raf.end_fun = flood_recede;
-		raf.tick_fun = NULL;
+		raf.tick_fun = nullptr;
 		new_affect_to_room(to_room, &raf);
 	}
 	else
@@ -2346,7 +2346,7 @@ void spell_flood(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void flood_recede(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
 	if (room->people)
-		act("The flood begins to recede, and before long no trace of the water remains.", room->people, NULL, NULL, TO_ALL);
+		act("The flood begins to recede, and before long no trace of the water remains.", room->people, nullptr, nullptr, TO_ALL);
 
 	if (is_affected_room(room, gsn_riptide))
 		affect_strip_room(room, gsn_riptide);
@@ -2387,7 +2387,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	pexit = ch->in_room->exit[door];
 
-	if (pexit == NULL)
+	if (pexit == nullptr)
 	{
 		send_to_char("You cannot force any water in that direction.\n\r", ch);
 		return;
@@ -2397,7 +2397,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	for (i = 1; i < 5; i++)
 	{
-		if (to_room != NULL)
+		if (to_room != nullptr)
 		{
 			if (to_room->sector_type == SECT_WATER)
 			{
@@ -2410,8 +2410,8 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				raf.location = APPLY_ROOM_NONE;
 				raf.modifier = std::max((i * 2) - 1, 2);
 				raf.owner = ch;
-				raf.end_fun = NULL;
-				raf.tick_fun = NULL;
+				raf.end_fun = nullptr;
+				raf.tick_fun = nullptr;
 				new_affect_to_room(to_room, &raf);
 
 				raf.location = APPLY_ROOM_NOPE;
@@ -2444,8 +2444,8 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				raf.location = APPLY_ROOM_NONE;
 				raf.modifier = std::max((i * 2) - 1, 2);
 				raf.owner = ch;
-				raf.end_fun = NULL;
-				raf.tick_fun = NULL;
+				raf.end_fun = nullptr;
+				raf.tick_fun = nullptr;
 				new_affect_to_room(to_room, &raf);
 
 				raf.location = APPLY_ROOM_NOPE;
@@ -2469,7 +2469,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		pexit = to_room->exit[door];
 
-		if (pexit == NULL)
+		if (pexit == nullptr)
 			break;
 
 		to_room = pexit->u1.to_room;
@@ -2482,7 +2482,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("The tidal wave surges $T, leaving havoc in its wake!", ch, 0, direction, TO_ALL);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = v_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = v_next)
 	{
 		v_next = vch->next_in_room;
 
@@ -2514,9 +2514,9 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void spell_riptide(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	ROOM_INDEX_DATA *room, *first_room = NULL, *second_room = NULL;
+	ROOM_INDEX_DATA *room, *first_room = nullptr, *second_room = nullptr;
 	AFFECT_DATA af;
-	ROOM_AFFECT_DATA *raf, *fraf = NULL, nraf;
+	ROOM_AFFECT_DATA *raf, *fraf = nullptr, nraf;
 
 	if (is_affected(ch, sn))
 	{
@@ -2534,7 +2534,7 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		if (is_affected_room(room, sn))
 		{
-			for (raf = room->affected; raf != NULL; raf = raf->next)
+			for (raf = room->affected; raf != nullptr; raf = raf->next)
 			{
 				if (raf->type == sn && raf->owner == ch && raf->location == APPLY_ROOM_NONE && raf->modifier == 1)
 				{
@@ -2591,7 +2591,7 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		nraf.modifier = 2;
 		nraf.owner = ch;
 		nraf.end_fun = riptide_two_end;
-		nraf.tick_fun = NULL;
+		nraf.tick_fun = nullptr;
 		new_affect_to_room(ch->in_room, &nraf);
 
 		fraf->duration = 24;
@@ -2621,23 +2621,23 @@ void spell_riptide(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		nraf.modifier = 1;
 		nraf.owner = ch;
 		nraf.end_fun = riptide_one_end;
-		nraf.tick_fun = NULL;
+		nraf.tick_fun = nullptr;
 		new_affect_to_room(ch->in_room, &nraf);
 	}
 }
 
 void riptide_one_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
-	act("Your control over your riptide's water currents wanes.", af->owner, NULL, NULL, TO_CHAR);
+	act("Your control over your riptide's water currents wanes.", af->owner, nullptr, nullptr, TO_CHAR);
 
 	if (room->people)
-		act("The ripples in the water cease.", room->people, NULL, NULL, TO_ALL);
+		act("The ripples in the water cease.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void riptide_two_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
 	if (room->people)
-		act("The ripples in the water cease.", room->people, NULL, NULL, TO_ALL);
+		act("The ripples in the water cease.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 int average_ac(CHAR_DATA *ch)
@@ -2672,13 +2672,13 @@ void spell_watermeld(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		af.duration = level / 5;
 		af.location = 0;
 		af.modifier = 0;
-		af.owner = NULL;
-		af.end_fun = NULL;
+		af.owner = nullptr;
+		af.end_fun = nullptr;
 		af.mod_name = MOD_VISIBILITY;
 		new_affect_to_char(ch, &af);
 
-		act("You blend into the water around you and fade from sight.", ch, NULL, NULL, TO_CHAR);
-		act("$n blends into the water around $m until $e can no longer be seen.", ch, NULL, NULL, TO_ROOM);
+		act("You blend into the water around you and fade from sight.", ch, nullptr, nullptr, TO_CHAR);
+		act("$n blends into the water around $m until $e can no longer be seen.", ch, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{
@@ -2715,7 +2715,7 @@ void spell_travelease(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	AFFECT_DATA af;
 	CHAR_DATA *gch;
 
-	for (gch = ch->in_room->people; gch != NULL; gch = gch->next_in_room)
+	for (gch = ch->in_room->people; gch != nullptr; gch = gch->next_in_room)
 	{
 		if (!is_same_group(gch, ch))
 			continue;
@@ -2758,11 +2758,11 @@ void spell_diffusion(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		SET_BIT(af.bitvector, AFF_PASS_DOOR);
 
-		af.owner = NULL;
-		af.end_fun = NULL;
+		af.owner = nullptr;
+		af.end_fun = nullptr;
 
-		act("An odd tingling washes over you as your density is decreased to the point of translucence.", victim, NULL, NULL, TO_CHAR);
-		act("$n's body seems to stretch slightly as $e becomes translucent!", victim, NULL, NULL, TO_ROOM);
+		act("An odd tingling washes over you as your density is decreased to the point of translucence.", victim, nullptr, nullptr, TO_CHAR);
+		act("$n's body seems to stretch slightly as $e becomes translucent!", victim, nullptr, nullptr, TO_ROOM);
 
 		af.mod_name = MOD_PHASE;
 		new_affect_to_char(victim, &af);
@@ -2791,12 +2791,12 @@ void spell_disruption(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends a hand towards you and you feel a horrible rending pain deep within you!", ch, 0, victim, TO_VICT);
 	act("$n extends a hand towards $N, who lurches in agony despite no visible injury!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_anchor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	CHAR_DATA *anchor, *wch, *wch_next, *oldanchor = NULL;
+	CHAR_DATA *anchor, *wch, *wch_next, *oldanchor = nullptr;
 
 	if (ch->in_room->sector_type == SECT_INSIDE
 		|| ch->in_room->sector_type == SECT_UNDERWATER
@@ -2806,7 +2806,7 @@ void spell_anchor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	for (wch = char_list; wch != NULL; wch = wch_next)
+	for (wch = char_list; wch != nullptr; wch = wch_next)
 	{
 		wch_next = wch->next;
 
@@ -2834,7 +2834,7 @@ void spell_anchor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	CHAR_DATA *anchor = NULL, *wch, *wch_next;
+	CHAR_DATA *anchor = nullptr, *wch, *wch_next;
 	ROOM_INDEX_DATA *pRoomIndex;
 
 	if (IS_SET(ch->in_room->room_flags, ROOM_NO_RECALL)
@@ -2851,7 +2851,7 @@ void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, void *vo, int 
 		return;
 	}
 
-	for (wch = char_list; wch != NULL; wch = wch_next)
+	for (wch = char_list; wch != nullptr; wch = wch_next)
 	{
 		wch_next = wch->next;
 
@@ -2904,7 +2904,7 @@ void spell_aerial_transferrence(int sn, int level, CHAR_DATA *ch, void *vo, int 
 		act("$n plummets suddenly from the sky, hitting the ground hard!", ch, 0, 0, TO_ROOM);
 
 		do_look(ch, "auto");
-		damage_new(ch, ch, dice(10, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, ch, dice(10, 10), sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 		check_plasma_thread(ch, -1);
 	}
 }
@@ -2956,8 +2956,8 @@ void spell_hardenfist(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		af.duration = level / 3;
 		af.location = 0;
 		af.modifier = 0;
-		af.owner = NULL;
-		af.end_fun = NULL;
+		af.owner = nullptr;
+		af.end_fun = nullptr;
 		new_affect_to_char(ch, &af);
 
 		act("$n clenches $s fists tightly as the flesh seems to take on a stony pallor.", ch, 0, 0, TO_ROOM);
@@ -3025,8 +3025,8 @@ void spell_sensevibrations(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		af.duration = level / 2;
 		af.location = 0;
 		af.modifier = 0;
-		af.owner = NULL;
-		af.end_fun = NULL;
+		af.owner = nullptr;
+		af.end_fun = nullptr;
 		af.mod_name = MOD_PERCEPTION;
 		new_affect_to_char(ch, &af);
 
@@ -3052,8 +3052,8 @@ void spell_diamondskin(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			af.level = level + 8;
 			af.duration = 18 - level / 5;
 			af.location = 0;
-			af.owner = NULL;
-			af.end_fun = NULL;
+			af.owner = nullptr;
+			af.end_fun = nullptr;
 			af.modifier = (dice(5, 20) + 100) * 20;
 			af.mod_name = MOD_PROTECTION;
 			new_affect_to_char(ch, &af);
@@ -3266,7 +3266,7 @@ void spell_coagulate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (!str_cmp(target_name, ""))
 	{
-		if (ch->fighting != NULL)
+		if (ch->fighting != nullptr)
 		{
 			victim = ch->fighting;
 		}
@@ -3339,7 +3339,7 @@ void spell_hypothermia(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		}
 
 		send_to_char("A sudden wave of cold shocks you, and then your consciousness slips away.\n\r", victim);
-		act("$n is overcome with a sudden fit of shivering and slumps to the ground.", victim, NULL, NULL, TO_ROOM);
+		act("$n is overcome with a sudden fit of shivering and slumps to the ground.", victim, nullptr, nullptr, TO_ROOM);
 		victim->position = POS_SLEEPING;
 	}
 }
@@ -3357,7 +3357,7 @@ void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_affected(victim, sn))
 	{
-		act("$N's voice is already imprisoned.", ch, NULL, victim, TO_CHAR);
+		act("$N's voice is already imprisoned.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -3378,8 +3378,8 @@ void spell_imprisonvoice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.mod_name = MOD_SPEECH;
 	affect_to_char(victim, &af);
 
-	act("You freeze $N's vocal cords, rendering speech impossible.", ch, NULL, victim, TO_CHAR);
-	act_new("Your throat constricts painfully as your vocal cords are frozen solid.", ch, NULL, victim, TO_VICT, POS_SLEEPING);
+	act("You freeze $N's vocal cords, rendering speech impossible.", ch, nullptr, victim, TO_CHAR);
+	act_new("Your throat constricts painfully as your vocal cords are frozen solid.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
 }
 
 void spell_frigidaura(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -3552,12 +3552,12 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, void *vo, i
 		af.location = APPLY_ENERGYSTATE;
 		af.modifier = es;
 		af.mod_name = MOD_ENERGY_STATE;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 
 		if (es > 0)
 			af.tick_fun = agitate_tick;
 		else
-			af.tick_fun = NULL;
+			af.tick_fun = nullptr;
 
 		af.owner = ch;
 
@@ -3577,7 +3577,7 @@ void spell_enervate_agitate_helper(int sn, int level, CHAR_DATA *ch, void *vo, i
 		af.duration = 5;
 		af.location = APPLY_DEX;
 		af.modifier = -4 + (es + 2) * 2;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		af.owner = ch;
 		new_affect_to_char(victim, &af);
 	}
@@ -3664,7 +3664,7 @@ void spell_freezemetal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		obj = get_eq_char(victim, iWear);
 
-		if (obj == NULL || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
+		if (obj == nullptr || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
 			continue;
 
 		if (is_obj_stat(obj, ITEM_BURN_PROOF))
@@ -3730,7 +3730,7 @@ void spell_frostbite(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act_new("Your arm goes limp as $n draws heat from it.", ch, 0, victim, TO_VICT, POS_SLEEPING);
 		act("$N's arm goes limp as $n draws heat from it.", ch, 0, victim, TO_NOTVICT);
 
-		for (paf = victim->affected; paf != NULL; paf = paf->next)
+		for (paf = victim->affected; paf != nullptr; paf = paf->next)
 		{
 			if (paf->type == sn && paf->location == APPLY_STR)
 				affect_remove(victim, paf);
@@ -3775,7 +3775,7 @@ void spell_frostbite(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act_new("Your leg goes limp as $n draws heat from it.", ch, 0, victim, TO_VICT, POS_SLEEPING);
 		act("$N's leg goes limp as $n draws heat from it.", ch, 0, victim, TO_NOTVICT);
 
-		for (paf = victim->affected; paf != NULL; paf = paf->next)
+		for (paf = victim->affected; paf != nullptr; paf = paf->next)
 		{
 			if (paf->type == sn && paf->location == APPLY_DEX)
 				affect_remove(victim, paf);
@@ -3816,7 +3816,7 @@ int scramble_sn(CHAR_DATA *ch, int sn)
 
 	for (gsn = 0; gsn < MAX_SKILL; gsn++)
 	{
-		if (skill_table[gsn].name == NULL
+		if (skill_table[gsn].name == nullptr
 			|| skill_table[gsn].skill_level[ch->Class()->GetIndex()] > 52
 			|| ch->level < skill_table[gsn].skill_level[ch->Class()->GetIndex()]
 			|| ch->pcdata->learned[gsn] < 1
@@ -3874,7 +3874,7 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	armor = get_eq_char(victim, location);
 
-	if (armor != NULL)
+	if (armor != nullptr)
 	{
 		hardness = material_table[armor->pIndexData->material_index].mat_hardness;
 
@@ -3937,7 +3937,7 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act(toroom2, ch, 0, victim, TO_NOTVICT);
 
-	if (hardness > 3 || (armor != NULL && number_percent() > 50))
+	if (hardness > 3 || (armor != nullptr && number_percent() > 50))
 	{
 		if (ch != victim)
 			damage_new(ch, victim, dam, gsn_acid_stream, DAM_ACID, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "acid stream");
@@ -4026,7 +4026,7 @@ void spell_acid_vein(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	weapon = get_obj_carry(ch, arg, ch);
 
-	if (weapon == NULL)
+	if (weapon == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
@@ -4098,7 +4098,7 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		obj = get_obj_here(ch, arg);
 
-		if (obj != NULL)
+		if (obj != nullptr)
 		{
 			if (obj->item_type == ITEM_PORTAL)
 			{
@@ -4163,8 +4163,8 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				REMOVE_BIT_OLD(obj->value[1], CONT_LOCKED);
 			}
 
-			act("You touch $p with an acid coated hand and corrode the lock.", ch, obj, NULL, TO_CHAR);
-			act("$n corrodes the lock on $p with his acid touch.", ch, obj, NULL, TO_ROOM);
+			act("You touch $p with an acid coated hand and corrode the lock.", ch, obj, nullptr, TO_CHAR);
+			act("$n corrodes the lock on $p with his acid touch.", ch, obj, nullptr, TO_ROOM);
 
 			check_improve(ch, gsn_corrode_lock, true, 2);
 			return;
@@ -4204,12 +4204,12 @@ void spell_corrode_lock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			REMOVE_BIT(pexit->exit_info, EX_LOCKED);
 
 			send_to_char("You corrode the lock on the door.\n\r", ch);
-			act("$n corrodes the lock on $T.", ch, NULL, pexit->keyword, TO_ROOM);
+			act("$n corrodes the lock on $T.", ch, nullptr, pexit->keyword, TO_ROOM);
 
 			check_improve(ch, gsn_corrode_lock, true, 2);
 
-			if ((to_room = pexit->u1.to_room) != NULL
-				&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
+			if ((to_room = pexit->u1.to_room) != nullptr
+				&& (pexit_rev = to_room->exit[rev_dir[door]]) != nullptr
 				&& pexit_rev->u1.to_room == ch->in_room)
 			{
 				REMOVE_BIT(pexit_rev->exit_info, EX_LOCKED);
@@ -4232,7 +4232,7 @@ void spell_attract(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_LIGHTNING))
 	{
 		send_to_char("You failed.\n\r", ch);
-		act_new("You feel a slight tingling sensation, but it disspates.", ch, NULL, victim, TO_VICT, POS_SLEEPING);
+		act_new("You feel a slight tingling sensation, but it disspates.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
 		return;
 	}
 
@@ -4249,9 +4249,9 @@ void spell_attract(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.mod_name = MOD_RESISTANCE;
 	new_affect_to_char(victim, &af);
 
-	act("You enchant $N to attract raw lightning energy.", ch, NULL, victim, TO_CHAR);
-	act_new("An intense tingling sensation overcomes you, but you note no immediate effects.", ch, NULL, victim, TO_VICT, POS_SLEEPING);
-	act("$N crackles with electricity for a moment as $n extends a hand toward $M.", ch, NULL, victim, TO_NOTVICT);
+	act("You enchant $N to attract raw lightning energy.", ch, nullptr, victim, TO_CHAR);
+	act_new("An intense tingling sensation overcomes you, but you note no immediate effects.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+	act("$N crackles with electricity for a moment as $n extends a hand toward $M.", ch, nullptr, victim, TO_NOTVICT);
 }
 
 void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
@@ -4259,8 +4259,8 @@ void attract_tick(CHAR_DATA *ch, AFFECT_DATA *af)
 	if (ch->in_room->area->sky < WeatherCondition::Overcast || IS_SET(ch->in_room->room_flags, ROOM_INDOORS))
 		return;
 
-	act("Your skin tingles briefly, and a bolt arcs down from the dark skies above!", ch, NULL, ch, TO_CHAR);
-	act("The skies light up as lightning arcs like quicksilver towards $N!", ch, NULL, ch, TO_ROOM);
+	act("Your skin tingles briefly, and a bolt arcs down from the dark skies above!", ch, nullptr, ch, TO_CHAR);
+	act("The skies light up as lightning arcs like quicksilver towards $N!", ch, nullptr, ch, TO_ROOM);
 
 	if (!af->owner)
 		af->owner = ch;
@@ -4293,7 +4293,7 @@ void spell_absorb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 
 	send_to_char("Warmth fills your body as you attune yourself to channel raw lightning.\n\r", victim);
-	act("Flashes of light illuminate $N's eyes for a moment as $E completes the spell.", ch, NULL, victim, TO_ROOM);
+	act("Flashes of light illuminate $N's eyes for a moment as $E completes the spell.", ch, nullptr, victim, TO_ROOM);
 }
 
 void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4310,7 +4310,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target
 
 	victim = get_char_world(ch, target_name);
 
-	if (victim == NULL || (ch->in_room->area != victim->in_room->area || is_npc(victim)))
+	if (victim == nullptr || (ch->in_room->area != victim->in_room->area || is_npc(victim)))
 	{
 		send_to_char("Call lightning on whom?\n\r", ch);
 		return;
@@ -4337,8 +4337,8 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	if (is_safe(ch, victim))
 		return;
 
-	act("You call forth a bolt of lightning upon $N's location!", ch, NULL, victim, TO_CHAR);
-	act("A bolt of lightning streaks down from the clouds above!", ch, NULL, victim, TO_VICT);
+	act("You call forth a bolt of lightning upon $N's location!", ch, nullptr, victim, TO_CHAR);
+	act("A bolt of lightning streaks down from the clouds above!", ch, nullptr, victim, TO_VICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -4350,7 +4350,7 @@ void spell_call_lightning(int sn, int level, CHAR_DATA *ch, void *vo, int target
 	af.modifier = 0;
 	affect_to_char(ch, &af);
 
-	do_myell(victim, "Argh, I've been struck by lightning!", NULL);
+	do_myell(victim, "Argh, I've been struck by lightning!", nullptr);
 
 	dam = dice(level, 8);
 
@@ -4420,18 +4420,18 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.end_fun = grounding_end;
 	new_affect_to_char(victim, &af);
 
-	act("You bind $N to the earth, grounding $M against lightning.", ch, NULL, victim, TO_CHAR);
+	act("You bind $N to the earth, grounding $M against lightning.", ch, nullptr, victim, TO_CHAR);
 
 	if (is_affected(victim, gsn_fly))
 	{
 		affect_strip(victim, gsn_fly);
-		act("As $n gestures, you drop heavily to the ground!", ch, NULL, victim, TO_VICT);
-		act("As $n gestures, $N drops heavily to the ground!", ch, NULL, victim, TO_NOTVICT);
+		act("As $n gestures, you drop heavily to the ground!", ch, nullptr, victim, TO_VICT);
+		act("As $n gestures, $N drops heavily to the ground!", ch, nullptr, victim, TO_NOTVICT);
 	}
 	else
 	{
-		act("As $n gestures, you feel more firmly connected to the earth beneath you.", ch, NULL, victim, TO_VICT);
-		act("As $n gestures, $N seems more firmly connected to the earth beneath $M.", ch, NULL, victim, TO_NOTVICT);
+		act("As $n gestures, you feel more firmly connected to the earth beneath you.", ch, nullptr, victim, TO_VICT);
+		act("As $n gestures, $N seems more firmly connected to the earth beneath $M.", ch, nullptr, victim, TO_NOTVICT);
 	}
 
 	if (is_affected_by(victim, AFF_FLYING))
@@ -4480,14 +4480,14 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.location = 0;
 	af.mod_name = MOD_HEARING;
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
 		if (is_same_group(vch, ch) || is_safe(ch, vch) || is_same_cabal(ch, vch))
 			continue;
 
-		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == NULL || vch->fighting == NULL))
+		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == nullptr || vch->fighting == nullptr))
 		{
 			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
@@ -4584,7 +4584,7 @@ void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.modifier = 0;
 	raf.owner = ch;
 	raf.end_fun = caustic_vapor_burnout;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &raf);
 
 	init_affect(&af);
@@ -4603,9 +4603,9 @@ void spell_caustic_vapor(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void caustic_vapor_burnout(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
-	for (CHAR_DATA *rch = room->people; rch != NULL; rch = rch->next_in_room)
+	for (CHAR_DATA *rch = room->people; rch != nullptr; rch = rch->next_in_room)
 	{
-		act("The caustic vapors dissipate, leaving nary a trace behind.", rch, NULL, NULL, TO_CHAR);
+		act("The caustic vapors dissipate, leaving nary a trace behind.", rch, nullptr, nullptr, TO_CHAR);
 	}
 }
 
@@ -4636,7 +4636,7 @@ void spell_smokescreen(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.modifier = 0;
 	raf.owner = ch;
 	raf.end_fun = smokescreen_end;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &raf);
 
 	init_affect(&af);
@@ -4653,7 +4653,7 @@ void spell_smokescreen(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 void smokescreen_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
 	if (room->people)
-		act("The thick smoke in the room clears.", room->people, NULL, NULL, TO_ALL);
+		act("The thick smoke in the room clears.", room->people, nullptr, nullptr, TO_ALL);
 }
 
 void spell_smother(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4698,7 +4698,7 @@ void spell_putrid_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("A wave of putrid air sweeps through the area!", ch, 0, 0, TO_ALL);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -4714,8 +4714,8 @@ void spell_putrid_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (number_percent() > 10 * (get_curr_stat(vch, STAT_CON) - 15))
 		{
 			do_visible(vch, "");
-			act("You burst out in a fit of coughing.", vch, NULL, NULL, TO_CHAR);
-			act("$n bursts out in a fit of coughing.", vch, NULL, NULL, TO_ROOM);
+			act("You burst out in a fit of coughing.", vch, nullptr, nullptr, TO_CHAR);
+			act("$n bursts out in a fit of coughing.", vch, nullptr, nullptr, TO_ROOM);
 		}
 	}
 }
@@ -4738,7 +4738,7 @@ void spell_asphyxiate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_INTERNAL))
 		dam /= 2;
 
-	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_INTERNAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_shroud_of_secrecy(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -4933,7 +4933,7 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.modifier = SECT_SNOW - ch->in_room->sector_type;
 	raf.owner = ch;
 	raf.end_fun = blanket_melt;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &raf);
 
 	init_affect(&af);
@@ -4953,7 +4953,7 @@ void spell_blanket(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void blanket_melt(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 {
-	for (CHAR_DATA *rch = room->people; rch != NULL; rch = rch->next_in_room)
+	for (CHAR_DATA *rch = room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		act("The layer of snow blanketing the earth fades away as the magic dissipates.", rch, 0, 0, TO_CHAR);
 	}
@@ -4992,21 +4992,21 @@ void spell_boreal_wind(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			break;
 	}
 
-	act("You gesture at $N, sending a bitter blast of frigid air towards $M!", ch, NULL, victim, TO_CHAR);
-	act("$n gestures at you, sending a bitter blast of frigid air towards you!", ch, NULL, victim, TO_VICT);
-	act("$n gestures at $N, sending a bitter blast of frigid air towards $M!", ch, NULL, victim, TO_NOTVICT);
+	act("You gesture at $N, sending a bitter blast of frigid air towards $M!", ch, nullptr, victim, TO_CHAR);
+	act("$n gestures at you, sending a bitter blast of frigid air towards you!", ch, nullptr, victim, TO_VICT);
+	act("$n gestures at $N, sending a bitter blast of frigid air towards $M!", ch, nullptr, victim, TO_NOTVICT);
 
 	if (saves_spell(level, victim, DAM_COLD))
 		dam /= 2;
 
-	damage_new(ch, victim, dam, sn, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 }
 
 void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	EXIT_DATA *pexit;
 	int dir;
-	int *dirptr = NULL;
+	int *dirptr = nullptr;
 
 	if (!str_cmp(target_name, "n") || !str_cmp(target_name, "north"))
 	{
@@ -5040,8 +5040,8 @@ void spell_concave_shell(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	pexit = ch->in_room->exit[dir];
 
-	if (pexit == NULL
-		|| pexit->u1.to_room == NULL
+	if (pexit == nullptr
+		|| pexit->u1.to_room == nullptr
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 	{
@@ -5100,8 +5100,8 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 
 	pexit = ch->in_room->exit[dir];
 
-	if (pexit == NULL
-		|| pexit->u1.to_room == NULL
+	if (pexit == nullptr
+		|| pexit->u1.to_room == nullptr
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 		|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 	{
@@ -5115,8 +5115,8 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 
 		pexit = ch->in_room->exit[dir];
 
-		if (pexit == NULL
-			|| pexit->u1.to_room == NULL
+		if (pexit == nullptr
+			|| pexit->u1.to_room == nullptr
 			|| (IS_SET(pexit->exit_info, EX_CLOSED) && !is_affected_by(ch, AFF_PASS_DOOR))
 			|| (IS_SET(pexit->exit_info, EX_CLOSED) && IS_SET(pexit->exit_info, EX_NOPASS)))
 		{
@@ -5130,7 +5130,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 			break;
 		}
 
-		for (wch = ch->in_room->people; wch != NULL; wch = wch_next)
+		for (wch = ch->in_room->people; wch != nullptr; wch = wch_next)
 		{
 			wch_next = wch->next_in_room;
 
@@ -5138,7 +5138,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 				&& ((IS_SET(wch->act, ACT_AGGRESSIVE) && wch->level >= ch->level + 5)
 					|| IS_SET(wch->off_flags, SPAM_MURDER))
 				&& is_awake(wch)
-				&& wch->fighting != NULL
+				&& wch->fighting != nullptr
 				&& can_see(wch, ch)
 				&& !is_affected_by(wch, AFF_CALM)
 				&& !IS_SET(ch->in_room->room_flags, ROOM_SAFE))
@@ -5220,7 +5220,7 @@ void spell_unbreakable(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	OBJ_DATA *obj;
 	AFFECT_DATA af;
 
-	if (victim == NULL)
+	if (victim == nullptr)
 		victim = ch;
 
 	obj = get_eq_char(victim, WEAR_WIELD);
@@ -5294,7 +5294,7 @@ void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (victim == ch)
 			send_to_char("Your skin is already as hard as a rock.\n\r", ch);
 		else
-			act("$N is already as hard as can be.", ch, NULL, victim, TO_CHAR);
+			act("$N is already as hard as can be.", ch, nullptr, victim, TO_CHAR);
 	}
 	else
 	{
@@ -5308,7 +5308,7 @@ void spell_earthsembrace(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		af.modifier = level / 2;
 		affect_to_char(victim, &af);
 
-		act("Stone and soil flow like liquid from the ground below, encasing $n.", victim, NULL, NULL, TO_ROOM);
+		act("Stone and soil flow like liquid from the ground below, encasing $n.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("Stone and soil flow like liquid from the ground, encasing you in armor.\n\r", victim);
 	}
 }
@@ -5359,10 +5359,10 @@ void spell_whiteout(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	aaf.modifier = Temperature::Cold - area->temp;
 	aaf.owner = ch;
 	aaf.end_fun = whiteout_end;
-	aaf.tick_fun = NULL;
+	aaf.tick_fun = nullptr;
 	affect_to_area(area, &aaf);
 
-	aaf.end_fun = NULL;
+	aaf.end_fun = nullptr;
 	aaf.location = APPLY_AREA_WIND;
 	aaf.modifier = Windspeed::Gale - area->wind;
 	affect_to_area(area, &aaf);
@@ -5401,7 +5401,7 @@ void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("A wave of chilled air sweeps through the area!", ch, 0, 0, TO_ALL);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -5436,8 +5436,8 @@ void spell_frigid_breeze(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 				break;
 		}
 
-		act("Your breath mists in the cold air, revealing your presence!", vch, NULL, NULL, TO_CHAR);
-		act("A plume of misted breath betrays $n's presence!", vch, NULL, NULL, TO_ROOM);
+		act("Your breath mists in the cold air, revealing your presence!", vch, nullptr, nullptr, TO_CHAR);
+		act("A plume of misted breath betrays $n's presence!", vch, nullptr, nullptr, TO_ROOM);
 		do_visible(vch, "");
 	}
 }
@@ -5463,11 +5463,11 @@ void spell_pure_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("A gentle breeze of icy air sweeps through the area.", ch, 0, 0, TO_ALL);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
 		cleansed = false;
 
-		for (laf = ch->affected; laf != NULL; laf = laf->next)
+		for (laf = ch->affected; laf != nullptr; laf = laf->next)
 		{
 			if (skill_table[laf->type].dispel & CAN_PURIFY)
 			{
@@ -5476,7 +5476,7 @@ void spell_pure_air(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			}
 		}
 
-		for (raf = ch->in_room->affected; raf != NULL; raf = raf->next)
+		for (raf = ch->in_room->affected; raf != nullptr; raf = raf->next)
 		{
 			if (skill_table[raf->type].dispel & CAN_PURIFY)
 				affect_strip_room(ch->in_room, raf->type);
@@ -5506,7 +5506,7 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n gestures at the ground and a jagged lance of ice erupts, impaling you!", ch, 0, victim, TO_VICT);
 	act("$n gestures at the ground and a jagged lance of ice erupts, impaling $N!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dam, sn, DAM_PIERCE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 	if (number_percent() <= 15)
 	{
@@ -5519,7 +5519,7 @@ void spell_icelance(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		af.modifier = 0;
 		af.aftype = AFT_MALADY;
 		af.tick_fun = bleeding_tick;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		af.owner = ch;
 		new_affect_to_char(victim, &af);
 
@@ -5575,8 +5575,8 @@ void spell_freeze_door(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	to_room = pexit->u1.to_room;
 
-	if (to_room != NULL
-		&& (pexit_opp = to_room->exit[reverse_d(door)]) != NULL
+	if (to_room != nullptr
+		&& (pexit_opp = to_room->exit[reverse_d(door)]) != nullptr
 		&& pexit_opp->u1.to_room == ch->in_room)
 	{
 		SET_BIT(pexit_opp->exit_info, EX_JAMMED);
@@ -5696,7 +5696,7 @@ void spell_glaciate(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.modifier = SECT_ICE - ch->in_room->sector_type;
 	raf.owner = ch;
 	raf.end_fun = glaciate_melt;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(room, &raf);
 
 	act("The water beneath you suddenly congeals into glacial ice.", ch, 0, 0, TO_CHAR);
@@ -5770,8 +5770,8 @@ void spell_stalactites(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.modifier = dice(1, 6);
 	raf.duration = level / 5;
 	raf.owner = ch;
-	raf.end_fun = NULL;
-	raf.tick_fun = NULL;
+	raf.end_fun = nullptr;
+	raf.tick_fun = nullptr;
 	new_affect_to_room(ch->in_room, &raf);
 }
 
@@ -5785,7 +5785,7 @@ void spell_ice_blast(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("$n extends an arm toward you and sends forth a frigid blast!", ch, 0, victim, TO_VICT);
 	act("$n extends an arm toward $N and sends forth a frigid blast!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, victim, dice(level, 3), gsn_ice_blast, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, victim, dice(level, 3), gsn_ice_blast, DAM_COLD, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 	for (obj = victim->carrying; obj; obj = obj_next)
 	{
@@ -5823,7 +5823,7 @@ void spell_ice_blast(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 					oaf.duration = level / 6;
 					oaf.owner = ch;
 					oaf.end_fun = container_defrost;
-					oaf.tick_fun = NULL;
+					oaf.tick_fun = nullptr;
 					affect_to_obj(obj, &oaf);
 				}
 
@@ -5842,7 +5842,7 @@ void container_defrost(OBJ_DATA *obj, OBJ_AFFECT_DATA *af)
 
 void spell_icy_carapace(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	OBJ_DATA *obj = NULL;
+	OBJ_DATA *obj = nullptr;
 	AFFECT_DATA af;
 	bool puddle = false, fountain = false;
 
@@ -5921,7 +5921,7 @@ void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	wield = get_eq_char(victim, WEAR_WIELD);
 
-	if (wield == NULL)
+	if (wield == nullptr)
 	{
 		send_to_char("They are not wielding a weapon!\n\r", ch);
 		return;
@@ -5953,8 +5953,8 @@ void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	oaf.level = level;
 	oaf.owner = ch;
 	oaf.end_fun = ice_sheath_melt;
-	oaf.tick_fun = NULL;
-	oaf.pulse_fun = NULL;
+	oaf.tick_fun = nullptr;
+	oaf.pulse_fun = nullptr;
 	affect_to_obj(wield, &oaf);
 
 	/* Cheaphack to make it check for strength disarm... this is about as
@@ -5995,7 +5995,7 @@ void spell_ironskin(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.location = APPLY_AC;
 	af.modifier = level / 3;
 	af.duration = level / 4;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	new_affect_to_char(ch, &af);
 
 	af.where = TO_VULN;
@@ -6014,7 +6014,7 @@ void spell_metal_shards(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	weapon = get_eq_char(ch, WEAR_WIELD);
 
-	if (weapon == NULL)
+	if (weapon == nullptr)
 	{
 		send_to_char("You must be wielding a weapon to cast this spell.\n\r", ch);
 		return;
@@ -6088,14 +6088,14 @@ void spell_burden(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.location = APPLY_CARRY_WEIGHT;
 	af.modifier = (level * victim->carry_weight) / 50;
 	af.duration = level / 4;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	new_affect_to_char(victim, &af);
 }
 
 void spell_fortify_weapon(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	OBJ_DATA *weapon = (OBJ_DATA *)vo;
-	OBJ_APPLY_DATA *hitapp = NULL, *damapp = NULL;
+	OBJ_APPLY_DATA *hitapp = nullptr, *damapp = nullptr;
 	bool damfound = false, hitfound = false;
 	bool dambonus = false, hitbonus = false;
 	int chance = 50, diff, oldhit = 0, olddam = 0;
@@ -6375,7 +6375,7 @@ void spell_alter_metal(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	obj = get_obj_carry(ch, arg1, ch);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You aren't carrying that.\n\r", ch);
 		return;
@@ -6466,7 +6466,7 @@ void spell_cloak_of_mist(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.location = 0;
 	af.modifier = 0;
 	af.duration = level / 4;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	af.mod_name = MOD_PROTECTION;
 	affect_to_char(ch, &af);
 }
@@ -6532,7 +6532,7 @@ void spell_creeping_tomb(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	af.location = APPLY_DEX;
 	af.modifier = -level / 11;
 	af.duration = 8;
-	af.end_fun = NULL;
+	af.end_fun = nullptr;
 	af.tick_fun = creeping_tomb_tick;
 	af.mod_name = MOD_MOVEMENT;
 	affect_to_char(victim, &af);
@@ -6620,7 +6620,7 @@ void spell_quicksand(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	raf.location = 0;
 	raf.duration = 24;
 	raf.modifier = 0;
-	raf.tick_fun = NULL;
+	raf.tick_fun = nullptr;
 	raf.end_fun = quicksand_end;
 	new_affect_to_room(ch->in_room, &raf);
 
@@ -6958,7 +6958,7 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		SET_BIT(af.bitvector, AFF_POISON);
 
 		af.tick_fun = poison_tick;
-		af.end_fun = NULL;
+		af.end_fun = nullptr;
 		affect_to_char(victim, &af);
 	}
 
@@ -6979,8 +6979,8 @@ void spell_prismatic_spray(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 
 		SET_BIT(af.bitvector, AFF_BLIND);
 
-		af.tick_fun = NULL;
-		af.end_fun = NULL;
+		af.tick_fun = nullptr;
+		af.end_fun = nullptr;
 		affect_to_char(victim, &af);
 	}
 
@@ -7066,9 +7066,9 @@ void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	CHAR_DATA *victim = (CHAR_DATA *)vo;
 	AFFECT_DATA af;
 
-	act("You conjure a super-bright arc of plasma at $N!", ch, NULL, victim, TO_CHAR);
-	act("$n conjures a super-bright arc of plasma at you!", ch, NULL, victim, TO_VICT);
-	act("$n conjures a super-bright arc of plasma at $N!", ch, NULL, victim, TO_NOTVICT);
+	act("You conjure a super-bright arc of plasma at $N!", ch, nullptr, victim, TO_CHAR);
+	act("$n conjures a super-bright arc of plasma at you!", ch, nullptr, victim, TO_VICT);
+	act("$n conjures a super-bright arc of plasma at $N!", ch, nullptr, victim, TO_NOTVICT);
 
 	if (saves_spell(level, victim, DAM_ENERGY))
 	{
@@ -7089,13 +7089,13 @@ void spell_plasma_arc(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(victim, &af);
 
 	send_to_char("Your vision is disrupted!\n\r", victim);
-	act("$n's vision is disrupted!", victim, NULL, NULL, TO_ROOM);
+	act("$n's vision is disrupted!", victim, nullptr, nullptr, TO_ROOM);
 }
 
 void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	CHAR_DATA *vch, *vch_next;
-	ROOM_INDEX_DATA *pRoomIndex = NULL;
+	ROOM_INDEX_DATA *pRoomIndex = nullptr;
 	char buf[MSL];
 	int i;
 
@@ -7121,7 +7121,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	act("You briefly envelop yourself in pure plasma, streaking away!", ch, 0, 0, TO_CHAR);
 	act("$n flares with energy and streaks out of the area!", ch, 0, 0, TO_ROOM);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -7134,7 +7134,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			do_myell(vch, buf, ch);
 		}
 
-		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 	}
 
 	stop_fighting(ch, true);
@@ -7148,7 +7148,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	do_look(ch, "auto");
 	check_plasma_thread(ch, -1);
 
-	for (vch = ch->in_room->people; vch != NULL; vch = vch_next)
+	for (vch = ch->in_room->people; vch != nullptr; vch = vch_next)
 	{
 		vch_next = vch->next_in_room;
 
@@ -7161,7 +7161,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			do_myell(vch, buf, ch);
 		}
 
-		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+		damage_new(ch, vch, level / 2, sn, DAM_ENERGY, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 	}
 }
 
@@ -7175,7 +7175,7 @@ void sphere_of_plasma_end(CHAR_DATA *ch, AFFECT_DATA *paf)
 		return;
 	}
 
-	act("The sphere of plasma encasing you dissipates.", ch, NULL, NULL, TO_CHAR);
+	act("The sphere of plasma encasing you dissipates.", ch, nullptr, nullptr, TO_CHAR);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -7199,7 +7199,7 @@ void sphere_of_plasma_pulse(CHAR_DATA *ch, AFFECT_DATA *af)
 	act("A tendril of plasma from the sphere encircling you lashes out at $N!", ch, 0, ch->fighting, TO_CHAR);
 	act("A writhing, pulsating tendril of plasma lashes out from $n's body!", ch, 0, 0, TO_ROOM);
 
-	damage_new(ch, ch->fighting, af->level, gsn_sphere_of_plasma, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, NULL);
+	damage_new(ch, ch->fighting, af->level, gsn_sphere_of_plasma, DAM_TRUESTRIKE, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, nullptr);
 
 	if (--af->modifier <= 0)
 		affect_remove(ch, af);
@@ -7215,8 +7215,8 @@ void spell_sphere_of_plasma(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 		return;
 	}
 
-	act("Rippling links of plasma join to form a massive sphere of plasma around you!", ch, NULL, NULL, TO_CHAR);
-	act("Rippling links of plasma join to form a massive sphere of plasma around $n!", ch, NULL, NULL, TO_ROOM);
+	act("Rippling links of plasma join to form a massive sphere of plasma around you!", ch, nullptr, nullptr, TO_CHAR);
+	act("Rippling links of plasma join to form a massive sphere of plasma around $n!", ch, nullptr, nullptr, TO_ROOM);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -7375,7 +7375,7 @@ void essence_of_plasma_end(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *af)
 void plasma_thread_end(CHAR_DATA *ch, AFFECT_DATA *paf)
 {
 	if (paf->owner)
-		act("The thread of plasma no longer connects you to $N.", ch, NULL, paf->owner, TO_CHAR);
+		act("The thread of plasma no longer connects you to $N.", ch, nullptr, paf->owner, TO_CHAR);
 }
 
 void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, void *vo, int target)
@@ -7397,7 +7397,7 @@ void spell_plasma_thread(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	victim = get_char_room(ch, target_name);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -7461,11 +7461,11 @@ void check_plasma_thread(CHAR_DATA *ch, int direction)
 
 	af = affect_find(ch->affected, gsn_plasma_thread);
 
-	if (af != NULL)
+	if (af != nullptr)
 	{
 		victim = af->owner;
 
-		if (victim == NULL)
+		if (victim == nullptr)
 		{
 			affect_remove(ch, af);
 			return;
@@ -7546,7 +7546,7 @@ void spell_accumulate_heat(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 		af.mod_name = MOD_RESISTANCE;
 		affect_to_char(victim, &af);
 
-		act("Waves of heat begin to radiate from $n.", victim, NULL, NULL, TO_ROOM);
+		act("Waves of heat begin to radiate from $n.", victim, nullptr, nullptr, TO_ROOM);
 		send_to_char("Waves of heat raise from the ground and begin radiating from you.\n\r", victim);
 	}
 }
@@ -7565,7 +7565,7 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	{
 		obj = get_eq_char(victim, iWear);
 
-		if (obj == NULL || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
+		if (obj == nullptr || iWear == WEAR_WIELD || iWear == WEAR_DUAL_WIELD)
 			continue;
 
 		if (is_obj_stat(obj, ITEM_BURN_PROOF))
@@ -7602,7 +7602,7 @@ void spell_melt_rock(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-	ROOM_INDEX_DATA *to_room = NULL, *old_room = NULL;
+	ROOM_INDEX_DATA *to_room = nullptr, *old_room = nullptr;
 	EXIT_DATA *pexit;
 	int where, count = 0, mcount = (ch->level / 15) + 2;
 	bool next = true;
@@ -7630,7 +7630,7 @@ void spell_magma_tunnel(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		if (count >= mcount)
 			break;
 
-		if ((pexit = old_room->exit[where]) == NULL || (to_room = pexit->u1.to_room) == NULL) // can't move any further
+		if ((pexit = old_room->exit[where]) == nullptr || (to_room = pexit->u1.to_room) == nullptr) // can't move any further
 		{
 			if (count > 0)
 			{
@@ -7768,7 +7768,7 @@ void spell_mana_beam(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	obj = get_eq_char(ch, WEAR_HOLD);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You must be holding a charged crystal to cast this spell.\n\r", ch);
 		return;
@@ -7809,7 +7809,7 @@ void spell_detonation(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	obj = get_eq_char(ch, WEAR_HOLD);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You must be holding a charged crystal to cast this spell.\n\r", ch);
 		return;
@@ -7861,7 +7861,7 @@ void spell_rotating_ward(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	obj = get_eq_char(ch, WEAR_HOLD);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You must be holding a charged crystal to cast this spell.\n\r", ch);
 		return;
@@ -7944,7 +7944,7 @@ void spell_fortify_crystal(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 
 	act("$p hums briefly as you stabilize the energies within it.", ch, crystal, 0, TO_CHAR);
 
-	af->tick_fun = NULL;
+	af->tick_fun = nullptr;
 	af->modifier /= 2;
 }
 

@@ -23,7 +23,7 @@
 void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
 	int dir = 0;
-	EXIT_DATA *pexit = NULL;
+	EXIT_DATA *pexit = nullptr;
 	RUNE_DATA *rune;
 
 	 // it's been casted, so we don't get the dir handed straight to us (this is pre TAR_DIR)
@@ -62,7 +62,7 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		rune->trigger_type = RUNE_TRIGGER_EXIT; // grep for rune trigger types if you need to
 		rune->type = sn;
 		rune->duration = level / 10;
-		rune->end_fun = NULL;
+		rune->end_fun = nullptr;
 		rune->function = trigger_stasis_wall; // this is what's called when the rune is triggered
 		apply_rune(rune);					  // this will create a new copy of the talloced rune
 
@@ -79,7 +79,7 @@ void spell_stasis_wall(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	rune->type = sn;
 	rune->duration = level / 10;
 	rune->extra = dir;
-	rune->end_fun = NULL;
+	rune->end_fun = nullptr;
 	rune->drawn_in = ch->in_room->vnum;
 	rune->function = activate_stasis_wall;
 
@@ -132,7 +132,7 @@ bool activate_stasis_wall(void *vo, void *vo2, void *vo3, void *vo4)
 	new_rune.trigger_type = RUNE_TRIGGER_EXIT;
 	new_rune.type = rune->type;
 	new_rune.duration = rune->level / 10;
-	new_rune.end_fun = NULL;
+	new_rune.end_fun = nullptr;
 	new_rune.function = trigger_stasis_wall;
 	apply_rune(&new_rune);
 
@@ -165,11 +165,11 @@ void do_rune(CHAR_DATA *ch, char *argument)
 {
 	char arg1[MAX_INPUT_LENGTH], arg2[MAX_INPUT_LENGTH], ttype[MSL];
 	OBJ_DATA *obj;
-	EXIT_DATA *pexit = NULL;
+	EXIT_DATA *pexit = nullptr;
 	void *vo;
 	int mana, where, sn, target = 0;
 
-	if (is_npc(ch) && ch->desc == NULL)
+	if (is_npc(ch) && ch->desc == nullptr)
 		return;
 
 	if (ch->Class()->ctype != CLASS_CASTER && !is_immortal(ch))
@@ -232,8 +232,8 @@ void do_rune(CHAR_DATA *ch, char *argument)
 	else
 		mana = std::max((int)skill_table[sn].min_mana, 100 / (2 + ch->level - skill_table[sn].skill_level[ch->Class()->GetIndex()]));
 
-	obj = NULL;
-	vo = NULL;
+	obj = nullptr;
+	vo = nullptr;
 
 	if (!str_prefix(ttype, "armor"))
 	{
@@ -284,7 +284,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		if ((obj = get_obj_carry(ch, target_name, ch)) == NULL)
+		if ((obj = get_obj_carry(ch, target_name, ch)) == nullptr)
 		{
 			send_to_char("You are not carrying that.\n\r", ch);
 			return;
@@ -341,7 +341,7 @@ void do_rune(CHAR_DATA *ch, char *argument)
 
 RUNE_DATA *find_rune(void *vo, int target_type, int trigger_type, RUNE_DATA *rune_prev)
 {
-	RUNE_DATA *rune = NULL, *rune_loop;
+	RUNE_DATA *rune = nullptr, *rune_loop;
 
 	switch (target_type)
 	{
@@ -358,7 +358,7 @@ RUNE_DATA *find_rune(void *vo, int target_type, int trigger_type, RUNE_DATA *run
 	}
 
 	if (rune_prev && !rune_prev->next_content)
-		return NULL;
+		return nullptr;
 
 	if (rune_prev)
 		rune = rune_prev->next_content;
@@ -369,7 +369,7 @@ RUNE_DATA *find_rune(void *vo, int target_type, int trigger_type, RUNE_DATA *run
 			return rune_loop;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void extract_rune(RUNE_DATA *rune)
@@ -445,7 +445,7 @@ void apply_rune(RUNE_DATA *rune)
 	*rune_new = *rune;
 	rune_new->next = rune_list;
 	rune_list = rune_new;
-	rune_new->next_content = NULL;
+	rune_new->next_content = nullptr;
 
 	switch (rune_new->target_type)
 	{

@@ -43,8 +43,8 @@ char *temp;
 char *talloc_string(const char *str)
 {
 	static long tStrMem = 0;
-	static void *tStrPtr = NULL;
-	static void *tStrBase = NULL;
+	static void *tStrPtr = nullptr;
+	static void *tStrBase = nullptr;
 	static int nIterations = 0;
 	unsigned int tStrLen;
 	char *tStrNew;
@@ -54,12 +54,12 @@ char *talloc_string(const char *str)
 		tStrBase = tStrPtr;
 	}
 	if(!tStrPtr)
-		return NULL;
+		return nullptr;
 	tStrLen = strlen(str) + 1; //+1 for the null we add at the end
 	if(tStrLen > TEMP_STRING_MEM_SIZE)
 	{
 		bug("Error: Temp string too large.",0);
-		return NULL;
+		return nullptr;
 	}
 	if(tStrMem + tStrLen >= TEMP_STRING_MEM_SIZE)
 	{	//current loc + new string is over limit, go back around the mulberry bush
@@ -67,12 +67,12 @@ char *talloc_string(const char *str)
 		nIterations++;
 		sprintf(buf,"Temporary string allocation space allotted (%d times since boot), returning to origination.",
 			nIterations);
-		wiznet(buf,NULL,NULL,WIZ_LOG,0,0);
+		wiznet(buf,nullptr,nullptr,WIZ_LOG,0,0);
 		tStrPtr = tStrBase;
 		tStrMem = 0;
 	}
 //	else if(tStrMem + tStrLen >= TEMP_STRING_WARN_SIZE)
-//		wiznet("95% tstring saturation reached.",NULL,NULL,WIZ_DEBUG,0,0);
+//		wiznet("95% tstring saturation reached.",nullptr,nullptr,WIZ_DEBUG,0,0);
 	tStrNew = (char *)tStrPtr;
 	strcpy(tStrNew, str);
 	tStrPtr = (void *)((char *)tStrPtr + tStrLen);
@@ -83,7 +83,7 @@ char *talloc_string(const char *str)
 void *talloc_struct(long nStructSize)
 {
 	static long tStrMem = 0;
-	static void *tStrPtr = NULL, *tStrBase;
+	static void *tStrPtr = nullptr, *tStrBase;
 	char *tStrNew; 
  
 	if(!tStrPtr) {
@@ -91,15 +91,15 @@ void *talloc_struct(long nStructSize)
 		tStrBase = tStrPtr;
 	}
 	if(!tStrPtr)
-		return NULL;
+		return nullptr;
 	if(nStructSize > TEMP_STRUCT_MEM_SIZE)
 	{
 		bug("Error: Temp struct too large.",0);
-		return NULL;
+		return nullptr;
 	}
 	if(tStrMem + nStructSize >= TEMP_STRUCT_MEM_SIZE)
 	{       //current loc + new struct is over limit, go back around the mulberry bush
-		wiznet("Temporary struct allocation space allotted, returning to origination.",NULL,NULL,WIZ_LOG,0,0);
+		wiznet("Temporary struct allocation space allotted, returning to origination.",nullptr,nullptr,WIZ_LOG,0,0);
 		tStrPtr = tStrBase;
 		tStrMem = 0;
 	}
@@ -114,10 +114,10 @@ char *palloc_string(const char *str)
 {
 	char *tstr;
 	int slen = strlen(str) + 1;
-	if(str == NULL)
+	if(str == nullptr)
 	{
-		bug("Bad code form that'll lead to free_pstr() crashes: attempting to palloc_string a NULL.",0);
-                return NULL;
+		bug("Bad code form that'll lead to free_pstr() crashes: attempting to palloc_string a nullptr.",0);
+                return nullptr;
 	}
 	nAllocString++;
 //	sAllocString += slen;
@@ -125,7 +125,7 @@ char *palloc_string(const char *str)
 	if(!tstr)
 	{
 		bug("Unable to allocate pstring.",0);
-		return NULL;
+		return nullptr;
 	}
 	strcpy(tstr,str);
 	return tstr;
@@ -136,7 +136,7 @@ void *palloc_struct(long nStructSize)
 	if(nStructSize < 1)
 	{
 		bug("Attempting to palloc_struct of 0 or less size.  Bad idea.",0);
-		return NULL;
+		return nullptr;
 	}
 	nAllocPerm++;
 	sAllocPerm += nStructSize;
@@ -148,9 +148,9 @@ void free_pstring(char *pstr)
 //	char buf[MSL];
 //	sprintf(buf,"Trying to free %s : %ld.",pstr,(long)pstr);
 //	bug(buf,0);
-//	if(pstr == NULL)
+//	if(pstr == nullptr)
 //		bug("Error: Trying to free null pstring.",0);
-	if(pstr == NULL 
+	if(pstr == nullptr 
          ||   pstr == &str_empty[0]) 
                 return;
 	nAllocString--;
@@ -159,7 +159,7 @@ void free_pstring(char *pstr)
 }
 /*void free_pstruct(void *pstruct)
 {
-	if(pstruct == NULL)
+	if(pstruct == nullptr)
 		return;
 	nAllocPerm--;
 	sAllocPerm -= sizeof(pstruct);
@@ -171,7 +171,7 @@ void *calloc_struct(long nStructSize)
 	int i;
 	nPtr = palloc_struct(nStructSize);
 	if(!nPtr)
-		return NULL;
+		return nullptr;
 	for(i=0; i<nStructSize; i++)
 		*((char *)nPtr+i) = '\0';
 	return nPtr;

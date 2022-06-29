@@ -1,6 +1,6 @@
 #include "class.h"
 
-CClass *CClass::first = NULL;
+CClass *CClass::first = nullptr;
 
 CClass::CClass()
 {

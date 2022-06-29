@@ -38,7 +38,7 @@ void CMud::Bootup()
 	char tempbuf[MSL], buf[MSL];
 		RS.Log("\n\r*** Beginning RIFTSHADOW MUD server ***");
 		
-		top_string = NULL;
+		top_string = nullptr;
 		fBootDb = true;
 
 		RS.Log("Creating persistent SQL connection...");

@@ -162,7 +162,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "young";
 			THEN("young should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("an unexpectedly large number of hours is passed for the age in get_age_name_new")
@@ -171,7 +171,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "worm-food";
 			THEN("worm-food should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 	}
@@ -184,7 +184,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "young";
 			THEN("young should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("20 hours is passed for the age in get_age_name_new")
@@ -193,7 +193,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "young";
 			THEN("young should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("120 hours is passed for the age in get_age_name_new")
@@ -202,7 +202,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "mature";
 			THEN("mature should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("220 hours is passed for the age in get_age_name_new")
@@ -211,7 +211,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "middle aged";
 			THEN("middle aged should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("300 hours is passed for the age in get_age_name_new")
@@ -220,7 +220,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "old";
 			THEN("old should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("350 hours is passed for the age in get_age_name_new")
@@ -229,7 +229,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "very old";
 			THEN("very old should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("1000 hours is passed for the age in get_age_name_new")
@@ -238,7 +238,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "ancient";
 			THEN("ancient should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 		WHEN("1001 hours is passed for the age in get_age_name_new")
@@ -247,7 +247,7 @@ SCENARIO("checking that get_age_name_new provides the right age names", "[get_ag
 			auto expected = "worm-food";
 			THEN("worm-food should be returned")
 			{
-				REQUIRE(strstr(expected,result) != NULL);
+				REQUIRE(strstr(expected,result) != nullptr);
 			}
 		}
 	}

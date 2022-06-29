@@ -90,7 +90,7 @@ const std::vector<item_type> item_table	=
 	{	ITEM_PEN,		  "pen"			},
 	{	ITEM_ALTAR,		  "altar"		},
 	{	ITEM_CAMPFIRE,	  "campfire"	},
-	{	0,				  NULL			}
+	{	0,				  nullptr		}
 };
 
 
@@ -108,7 +108,7 @@ const std::vector<weapon_type> weapon_table =
 	{	"polearm",		OBJ_VNUM_SCHOOL_POLEARM, WEAPON_POLEARM, &gsn_polearm	},
 	{	"staff", 		OBJ_VNUM_SCHOOL_STAFF,	 WEAPON_STAFF,	 &gsn_staff		},
 	{	"hand to hand", OBJ_VNUM_SCHOOL_SWORD,	 WEAPON_HAND,	 &gsn_sword		},
-	{	NULL,			0,						 0,				 NULL			}
+	{	nullptr,		0,						 0,				 nullptr		}
 };
 
 
@@ -142,7 +142,7 @@ const std::vector<wiznet_type> wiznet_table =
 	{	"logging",		WIZ_LOG,		IM	},
 	{	"ooc",			WIZ_OOC,		IM	},
 	{	"debug",		WIZ_DEBUG,		L5	},
-	{	NULL,			0,				0	}
+	{	nullptr,		0,				0	}
 };
 
 /* attack table  -- not very organized :( */
@@ -210,7 +210,7 @@ const std::vector<attack_type> attack_table	=
 	{	"sblast",		"searing blast",		DAM_FIRE,		  0		},
 	{	"disease",		"poisonous bite",		DAM_POISON,		  0		},	
 	{	"grasp",		"foul grasp",			DAM_NEGATIVE,	  0		},
-	{	NULL,			NULL,					0,				  0		}
+	{	nullptr,		nullptr,				0,				  0		}
 };
 
 
@@ -228,7 +228,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"reserved", { 60, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99 },
 		0, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "", "", CMD_NONE
 	},
 	{
@@ -240,7 +240,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"mana transfer", { 60, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
 		spell_mana_transfer, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 2, 24,
+		nullptr, 0, 2, 24,
 		"", "", "", CMD_POWER
 	},
 	{
@@ -270,7 +270,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"acid blast", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_acid_blast, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"acid blast", "!Acid Blast!", "", CMD_SPELL
 	},
 	{
@@ -282,13 +282,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"talk to dead", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 21, 53 },
 		spell_talk_to_dead, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "", "", CMD_BOTH
 	},
 	{
 		"deathspell", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_deathspell, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 150, 12,
+		nullptr, 0, 150, 12,
 		"explosion of negative energy", "", "", CMD_SPELL
 	},
 	{
@@ -348,7 +348,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"lifebane", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_lifebane, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 45, 12,
+		nullptr, 0, 45, 12,
 		"lifebane", "", "", CMD_SPELL
 	},
 	{
@@ -378,13 +378,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"armor", { 60, 53, 53, 53, 2, 5, 7, 1, 1, 1, 3, 1 },
 		spell_armor, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_CANCEL|CAN_DISPEL, 5, 12,
+		nullptr, CAN_CANCEL|CAN_DISPEL, 5, 12,
 		"", "You feel less armored.", "", CMD_BOTH
 	},
 	{
 		"bless", { 60, 53, 53, 53, 5, 53, 53, 53, 53, 7, 53, 53 },
 		spell_bless, TAR_OBJ_CHAR_DEF, POS_STANDING,
-		NULL, CAN_CANCEL|CAN_DISPEL, 5, 12,
+		nullptr, CAN_CANCEL|CAN_DISPEL, 5, 12,
 		"", "You feel less righteous.", "$n's holy aura fades.", CMD_COMMUNE
 	},
 	{
@@ -409,37 +409,37 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"cancellation", { 60, 53, 53, 19, 53, 53, 53, 53, 16, 24, 18, 19 },
 		spell_cancellation, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "!cancellation!", "", CMD_BOTH
 	},
 	{
 		"cause critical", { 60, 53, 53, 18, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_cause_critical, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"spell", "!Cause Critical!", "", CMD_COMMUNE
 	},
 	{
 		"cause light", { 60, 53, 53, 3, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_cause_light, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"spell", "!Cause Light!", "", CMD_COMMUNE
 	},
 	{
 		"cause serious", { 60, 53, 53, 12, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_cause_serious, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 17, 12,
+		nullptr, 0, 17, 12,
 		"spell", "!Cause Serious!", "", CMD_COMMUNE
 	},
 	{
 		"chain lightning", { 60, 53, 53, 53, 53, 53, 53, 53, 26, 53, 53, 53 },
 		spell_chain_lightning, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"lightning", "!Chain Lightning!", "", CMD_SPELL
 	},
 	{
 		"change sex", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_change_sex, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, CAN_CLEANSE|CAN_CANCEL|CAN_DISPEL, 15, 12,
+		nullptr, CAN_CLEANSE|CAN_CANCEL|CAN_DISPEL, 15, 12,
 		"", "Your body feels familiar again.", "", CMD_SPELL
 	},
 	{
@@ -457,7 +457,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"color spray", { 60, 53, 53, 53, 53, 53, 53, 53, 13, 53, 53, 53 },
 		spell_color_spray, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"color spray", "!Colour Spray!", "", CMD_SPELL
 	},
 	{
@@ -469,37 +469,37 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"heavenly wrath", { 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61 },
 		spell_heavenly_sceptre_frenzy, TAR_CHAR_SELF, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "The heavenly wrath bestowed upon you fades away.", "", CMD_NONE
 	},
 	{
 		"heavenly fire", { 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61 },
 		spell_heavenly_sceptre_fire, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"heavenly fire", "You feel the power drained from you by the scetpre's heavenly fire return.", "", CMD_NONE
 	},
 	{
 		"wrath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_wrath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 16,
+		nullptr, 0, 20, 16,
 		"heavenly wrath", "!wrath!", "", CMD_COMMUNE
 	},
 	{
 		"continual light", { 60, 53, 53, 53, 53, 53, 53, 53, 12, 4, 53, 53 },
 		spell_continual_light, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 7, 12,
+		nullptr, 0, 7, 12,
 		"", "!Continual Light!", "", CMD_BOTH
 	},
 	{
 		"control weather", { 60, 53, 53, 53, 53, 53, 20, 53, 53, 53, 53, 53 },
 		spell_control_weather, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"", "!Control Weather!", "", CMD_SPELL
 	},
 	{
 		"create food", { 60, 53, 53, 53, 4, 53, 53, 53, 53, 1, 53, 53 },
 		spell_create_food, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 5, 12,
+		nullptr, 0, 5, 12,
 		"", "!Create Food!", "", CMD_BOTH
 	},
 	{
@@ -511,49 +511,49 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"create spring", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 17, 53, 9 },
 		spell_create_spring, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "!Create Spring!", "", CMD_BOTH
 	},
 	{
 		"create water", { 60, 53, 53, 53, 4, 53, 53, 53, 53, 53, 53, 53 },
 		spell_create_water, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 5, 12,
+		nullptr, 0, 5, 12,
 		"", "!Create Water!", "", CMD_BOTH
 	},
 	{
 		"cure blindness", { 60, 53, 53, 13, 11, 53, 53, 53, 53, 7, 53, 53 },
 		spell_cure_blindness, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 5, 12,
+		nullptr, 0, 5, 12,
 		"", "!Cure Blindness!", "", CMD_COMMUNE
 	},
 	{
 		"cure critical", { 60, 53, 53, 18, 10, 53, 53, 35, 53, 9, 53, 53 },
 		spell_cure_critical, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"", "!Cure Critical!", "", CMD_BOTH
 	},
 	{
 		"cure disease", { 60, 53, 53, 15, 16, 53, 53, 28, 53, 11, 53, 53 },
 		spell_cure_disease, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "!Cure Disease!", "", CMD_BOTH
 	},
 	{
 		"cure light", { 60, 53, 53, 3, 1, 53, 53, 53, 53, 1, 53, 53 },
 		spell_cure_light, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 10, 12,
+		nullptr, 0, 10, 12,
 		"", "!Cure Light!", "", CMD_COMMUNE
 	},
 	{
 		"cure poison", { 60, 53, 53, 13, 18, 53, 53, 24, 53, 10, 53, 53 },
 		spell_cure_poison, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 5, 12,
+		nullptr, 0, 5, 12,
 		"", "!Cure Poison!", "", CMD_BOTH
 	},
 	{
 		"cure serious", { 60, 53, 53, 9, 53, 53, 53, 53, 53, 2, 53, 53 },
 		spell_cure_serious, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"", "!Cure Serious!", "", CMD_COMMUNE
 	},
 	{
@@ -565,13 +565,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"dark wrath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_dark_wrath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"unholy dark wrath", "!DarkWrath!", "", CMD_BOTH
 	},
 	{
 		"demonfire", { 60, 53, 53, 33, 53, 53, 53, 40, 53, 53, 53, 53 },
 		spell_demonfire, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"torments$", "!Demonfire!", "", CMD_BOTH
 	}, 
 	{
@@ -595,13 +595,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"detect evil", { 60, 53, 53, 53, 1, 53, 53, 53, 53, 5, 53, 53 },
 		spell_detect_evil, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_CANCEL|CAN_DISPEL, 5, 12,
+		nullptr, CAN_CANCEL|CAN_DISPEL, 5, 12,
 		"", "The red in your vision disappears.", "", CMD_COMMUNE
 	},
 	{
 		"detect good", { 60, 53, 53, 53, 53, 10, 53, 53, 53, 5, 53, 53 },
 		spell_detect_good, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_CANCEL|CAN_DISPEL, 5, 12,
+		nullptr, CAN_CANCEL|CAN_DISPEL, 5, 12,
 		"", "The gold in your vision disappears.", "", CMD_BOTH
 	},
 	{
@@ -631,43 +631,43 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"detect invis", { 60, 53, 53, 9, 8, 10, 53, 7, 8, 8, 8, 53 },
 		spell_detect_invis, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 5, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 5, 12,
 		"", "You no longer see invisible objects.", "", CMD_BOTH
 	},
 	{
 		"detect magic", { 60, 53, 53, 4, 53, 53, 53, 53, 53, 53, 5, 1 },
 		spell_detect_magic, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 5, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 5, 12,
 		"", "The detect magic wears off.", "", CMD_BOTH
 	},
 	{
 		"detect poison", { 60, 53, 53, 8, 53, 53, 53, 53, 53, 8, 53, 53 },
 		spell_detect_poison, TAR_OBJ_INV, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 5, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 5, 12,
 		"", "!Detect Poison!", "", CMD_BOTH
 	},
 	{
 		"dispel evil", { 60, 53, 53, 15, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_dispel_evil, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"dispel evil", "!Dispel Evil!", "", CMD_COMMUNE
 	},
 	{
 		"dispel good", { 60, 53, 53, 15, 53, 15, 53, 53, 53, 53, 53, 53 },
 		spell_dispel_good, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"dispel good", "!Dispel Good!", "", CMD_BOTH
 	},
 	{
 		"dispel magic", { 60, 53, 53, 20, 53, 53, 53, 53, 15, 53, 18, 18 },
 		spell_dispel_magic, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"", "!Dispel Magic!", "", CMD_BOTH
 	},
 	{
 		"energy drain", { 60, 53, 53, 25, 53, 27, 53, 53, 53, 53, 19, 53 },
 		spell_energy_drain, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"energy drain", "The cold chill in your body fades away.", "", CMD_BOTH
 	},
 	{
@@ -691,13 +691,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"fireball", { 60, 53, 53, 53, 53, 22, 53, 53, 27, 53, 53, 53 },
 		spell_fireball, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"fireball", "!Fireball!", "", CMD_SPELL
 	},
 	{
 		"voice of damnation", { 60, 53, 53, 53, 27, 53, 53, 53, 53, 53, 53, 53 },
 		spell_voice_of_damnation, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 45, 24,
+		nullptr, 0, 45, 24,
 		"booming voice", "", "", CMD_COMMUNE
 	},
 	{
@@ -709,67 +709,67 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"fireproof", { 60, 53, 53, 53, 53, 53, 53, 53, 25, 53, 53, 53 },
 		spell_fireproof, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 10, 12,
+		nullptr, 0, 10, 12,
 		"", "", "$p's protective aura fades.", CMD_SPELL
 	},
 	{
 		"flamestrike", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_flamestrike, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"flamestrike", "!Flamestrike!", "", CMD_BOTH
 	},
 	{
 		"fly", { 60, 53, 53, 19, 53, 53, 53, 53, 18, 17, 53, 16 },
 		spell_fly, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 10, 18,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 10, 18,
 		"", "You slowly float to the ground.", "$n slowly floats to the ground.", CMD_BOTH
 	},
 	{
 		"frenzy", { 60, 53, 53, 25, 53, 53, 53, 53, 53, 22, 53, 53 },
 		spell_frenzy, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_CANCEL|CAN_DISPEL, 30, 24,
+		nullptr, CAN_CANCEL|CAN_DISPEL, 30, 24,
 		"", "Your rage ebbs.", "", CMD_COMMUNE
 	},
 	{
 		"gate", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 10, 53, 53 },
 		spell_gate, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 80, 12,
+		nullptr, 0, 80, 12,
 		"", "!Gate!", "", CMD_COMMUNE
 	},
 	{
 		"giant strength", { 60, 53, 53, 53, 53, 53, 53, 53, 24, 53, 53, 53 },
 		spell_giant_strength, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 20, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 20, 12,
 		"", "You feel weaker.", "", CMD_BOTH
 	},
 	{
 		"harm", { 60, 53, 53, 24, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_harm, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 35, 12,
+		nullptr, 0, 35, 12,
 		"harm spell", "!Harm!", "", CMD_COMMUNE
 	},
 	{
 		"haste", { 60, 53, 53, 53, 53, 53, 53, 53, 23, 53, 53, 53 },
 		spell_haste, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 30, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 30, 12,
 		"", "You feel yourself slow down.", "", CMD_SPELL
 	},
 	{
 		"heal", { 60, 53, 53, 53, 27, 53, 53, 53, 53, 17, 53, 53 },
 		spell_heal, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 50, 12,
+		nullptr, 0, 50, 12,
 		"", "!Heal!", "", CMD_COMMUNE
 	},
 	{
 		"holy word", { 60, 53, 53, 35, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_holy_word, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 200, 24,
+		nullptr, 0, 200, 24,
 		"divine wrath", "!Holy Word!", "", CMD_COMMUNE
 	},
 	{
 		"identify", { 60, 53, 53, 14, 53, 53, 53, 19, 15, 21, 14, 15 },
 		spell_identify, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 12, 18,
+		nullptr, 0, 12, 18,
 		"", "!Identify!", "", CMD_BOTH
 	},
 	{
@@ -787,25 +787,25 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"know alignment", { 60, 53, 53, 53, 3, 53, 53, 53, 53, 8, 53, 53 },
 		spell_know_alignment, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 9, 12,
+		nullptr, 0, 9, 12,
 		"", "!Know Alignment!", "", CMD_COMMUNE
 	},
 	{
 		"locate object", { 60, 53, 53, 20, 53, 53, 53, 53, 20, 24, 20, 20 },
 		spell_locate_object, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 20, 18,
+		nullptr, 0, 20, 18,
 		"", "!Locate Object!", "", CMD_BOTH
 	},
 	{
 		"magic missile", { 60, 53, 53, 53, 53, 1, 53, 53, 1, 53, 53, 1 },
 		spell_magic_missile, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"magic missiles", "!Magic Missile!", "", CMD_SPELL
 	},
 	{
 		"mass healing", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 35, 53, 53 },
 		spell_mass_healing, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 100, 36,
+		nullptr, 0, 100, 36,
 		"", "!Mass Healing!", "", CMD_COMMUNE
 	},
 	{
@@ -817,7 +817,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"pass door", { 60, 53, 53, 36, 53, 53, 53, 38, 30, 26, 53, 53 },
 		spell_pass_door, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 20, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 20, 12,
 		"", "You feel solid again.", "", CMD_BOTH
 	},
 	{
@@ -841,37 +841,37 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"power word kill", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_power_word_kill, TAR_CHAR_OFFENSIVE, POS_STANDING,
-		NULL, 0, 150, 24,
+		nullptr, 0, 150, 24,
 		"word of power", "PowerWordKill!", "", CMD_SPELL
 	},
 	{
 		"protection", { 60, 53, 53, 53, 6, 15, 53, 53, 53, 8, 53, 53 },
 		spell_protection, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_CANCEL|CAN_DISPEL, 5, 12,
+		nullptr, CAN_CANCEL|CAN_DISPEL, 5, 12,
 		"", "You feel less protected.", "", CMD_BOTH
 	},
 	{
 		"ray of truth", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_ray_of_truth, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"ray of truth", "!Ray of Truth!", "", CMD_COMMUNE
 	},
 	{
 		"recharge", { 60, 53, 53, 53, 53, 53, 53, 53, 27, 53, 53, 53 },
 		spell_recharge, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 60, 24,
+		nullptr, 0, 60, 24,
 		"", "!Recharge!", "", CMD_SPELL
 	},
 	{
 		"refresh", { 60, 53, 53, 7, 53, 53, 53, 53, 53, 6, 53, 53 },
 		spell_refresh, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 12, 18,
+		nullptr, 0, 12, 18,
 		"refresh", "!Refresh!", "", CMD_BOTH
 	},
 	{
 		"remove curse", { 60, 53, 53, 20, 15, 53, 53, 53, 53, 12, 53, 53 },
 		spell_remove_curse, TAR_OBJ_CHAR_DEF, POS_STANDING,
-		NULL, 0, 5, 12,
+		nullptr, 0, 5, 12,
 		"", "!Remove Curse!", "", CMD_COMMUNE
 	},
 	{
@@ -889,7 +889,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"shocking grasp", { 60, 53, 53, 53, 53, 53, 53, 53, 5, 53, 53, 53 },
 		spell_shocking_grasp, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"shocking grasp", "!Shocking Grasp!", "", CMD_SPELL
 	},
 	{
@@ -901,7 +901,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"slow", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_slow, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, CAN_CLEANSE|CAN_DISPEL|CAN_CANCEL, 30, 12,
+		nullptr, CAN_CLEANSE|CAN_DISPEL|CAN_CANCEL, 30, 12,
 		"", "You feel yourself speed up.", "", CMD_SPELL
 	},
 	{
@@ -913,25 +913,25 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"summon", { 60, 53, 53, 15, 21, 21, 53, 53, 53, 53, 27, 53 },
 		spell_summon, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 50, 27,
+		nullptr, 0, 50, 27,
 		"", "!Summon!", "", CMD_BOTH
 	},
 	{
 		"teleport", { 60, 53, 53, 53, 53, 22, 53, 53, 15, 19, 15, 16 },
 		spell_teleport, TAR_CHAR_SELF, POS_STANDING,
-		NULL, 0, 35, 12,
+		nullptr, 0, 35, 12,
 		"", "!Teleport!", "", CMD_BOTH
 	},
 	{
 		"ventriloquate", { 60, 53, 53, 53, 53, 53, 53, 53, 4, 53, 53, 53 },
 		spell_ventriloquate, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 5, 12,
+		nullptr, 0, 5, 12,
 		"", "!Ventriloquate!", "", CMD_BOTH
 	},
 	{
 		"weaken", { 60, 53, 53, 8, 53, 27, 53, 53, 53, 53, 13, 53 },
 		spell_weaken, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, CAN_CLEANSE|CAN_DISPEL|CAN_CANCEL, 20, 12,
+		nullptr, CAN_CLEANSE|CAN_DISPEL|CAN_CANCEL, 20, 12,
 		"spell", "You feel stronger.", "", CMD_BOTH
 	},
 	{
@@ -943,7 +943,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"word of recall", { 60, 53, 53, 28, 30, 53, 53, 53, 29, 27, 33, 30 },
 		spell_word_of_recall, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 5, 24,
+		nullptr, 0, 5, 24,
 		"", "!Word of Recall!", "", CMD_BOTH
 	},
 	{
@@ -955,7 +955,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"summon nephilim", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_summon_nephilim, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 400, 36,
+		nullptr, 0, 400, 36,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -967,7 +967,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"utter heal", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_utter_heal, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 75, 12,
+		nullptr, 0, 75, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
@@ -979,7 +979,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"valiant charge", { 60, 53, 53, 53, 45, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 0, 36,
+		nullptr, 0, 0, 36,
 		"", "", "", CMD_NONE
 	},
 	{
@@ -1074,37 +1074,37 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"acid breath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_acid_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"blast of acid", "!Acid Breath!", "", CMD_SPELL
 	},
 	{
 		"fire breath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_fire_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 200, 24,
+		nullptr, 0, 200, 24,
 		"blast of flame", "The smoke leaves your eyes.", "", CMD_SPELL
 	},
 	{
 		"frost breath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_frost_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 125, 24,
+		nullptr, 0, 125, 24,
 		"blast of frost", "!Frost Breath!", "", CMD_SPELL
 	},
 	{
 		"gas breath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_gas_breath, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 175, 24,
+		nullptr, 0, 175, 24,
 		"blast of gas", "!Gas Breath!", "", CMD_SPELL
 	},
 	{
 		"lightning breath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_lightning_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 150, 24,
+		nullptr, 0, 150, 24,
 		"blast of lightning", "!Lightning Breath!", "", CMD_SPELL
 	},
 	{
 		"nether breath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_nether_breath, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"blast of nether", "!Nether Breath!", "", CMD_SPELL
 	},
 
@@ -1133,7 +1133,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"mind sear", { 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61 },
 		spell_null, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"mind sear", "The burning in your mind fades away.", "", CMD_NONE
 	},
 	{
@@ -1217,7 +1217,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"darkshield", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_dark_shield, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "The dark shield surrounding you fades away.", "", CMD_SPELL
 	},
 	{
@@ -1235,25 +1235,25 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"power word fear", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_power_word_fear, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "You feel the fear plaguing your mind fade away.", "", CMD_SPELL
 	},
 	{
 		"preserve", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 20, 53 },
 		spell_preserve, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 10, 12,
+		nullptr, 0, 10, 12,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"imbue regeneration", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 35, 53, 53 },
 		spell_imbue_regeneration, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 50, 12,
+		nullptr, 0, 50, 12,
 		"", "Your body stops regenerating.", "", CMD_COMMUNE
 	},
 	{
 		"restoration", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 19, 53, 53 },
 		spell_restoration, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 50, 12,
+		nullptr, 0, 50, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
@@ -1784,7 +1784,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"holy fire", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_holy_fire, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"holy fire", "", "", CMD_SPELL
 	},
 	{
@@ -1802,7 +1802,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"iceball", { 60, 53, 53, 53, 53, 29, 53, 53, 53, 53, 53, 53 },
 		spell_iceball, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"iceball", "", "", CMD_SPELL
 	},
 	{
@@ -1856,7 +1856,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"transfer object", { 60, 53, 53, 53, 53, 53, 53, 53, 32, 53, 53, 53 },
 		spell_transfer_object, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -1936,7 +1936,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"prevent", { 60, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51 },
 		spell_null, TAR_IGNORE, POS_STANDING,
-		NULL, 		0, 50, 0,
+		nullptr, 		0, 50, 0,
 		"", "", "", CMD_SPELL
 	},
 	*/
@@ -1949,7 +1949,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"truestrike", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "", "", CMD_NONE
 	},
 	{
@@ -1961,7 +1961,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"rejuvenate", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 40, 53, 53 },
 		spell_rejuvenate, TAR_CHAR_DEFENSIVE, POS_FIGHTING,
-		NULL, 0, 80, 12,
+		nullptr, 0, 80, 12,
 		"", "!Rejuvenate!", "", CMD_COMMUNE
 	},
 	{
@@ -2003,8 +2003,8 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"outfit", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 0, 24,
-		"outfit", NULL, "", CMD_NONE
+		nullptr, 0, 0, 24,
+		"outfit", nullptr, "", CMD_NONE
 	},
 	{
 		"soften", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
@@ -2015,79 +2015,79 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"cure deafness", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 11, 53, 53 },
 		spell_cure_deafness, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 10, 12,
+		nullptr, 0, 10, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
 		"awaken", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 20, 53, 53 },
 		spell_awaken, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 40, 24,
+		nullptr, 0, 40, 24,
 		"", "", "", CMD_COMMUNE
 	},
 	{
 		"resist heat", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 10, 53, 53 },
 		spell_resist_heat, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 50, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 50, 12,
 		"", "You are no longer resistant to heat.", "", CMD_COMMUNE
 	},
 	{
 		"resist cold", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 12, 53, 53 },
 		spell_resist_cold, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 50, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 50, 12,
 		"", "You are no longer resistant to cold.", "", CMD_COMMUNE
 	},
 	{
 		"resist lightning", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 14, 53, 53 },
 		spell_resist_lightning, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 50, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 50, 12,
 		"", "You are no longer resistant to lightning.", "", CMD_COMMUNE
 	},
 	{
 		"resist mental", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 16, 53, 53 },
 		spell_resist_mental, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 50, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 50, 12,
 		"", "You are no longer resistant to mental attacks.", "", CMD_COMMUNE
 	},
 	{
 		"resist acid", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 16, 53, 53 },
 		spell_resist_acid, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 50, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 50, 12,
 		"", "You are no longer resistant to acid.", "", CMD_COMMUNE
 	},
 	{
 		"resist negative", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 20, 53, 53 },
 		spell_resist_negative, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 50, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 50, 12,
 		"", "You are no longer resistant to negative damage.", "", CMD_COMMUNE
 	},
 	{
 		"remove paralysis", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 30, 53, 53 },
 		spell_remove_paralysis, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 70, 12,
+		nullptr, 0, 70, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
 		"group teleport", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 33, 53, 53 },
 		spell_group_teleport, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 90, 12,
+		nullptr, 0, 90, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
 		"offhand disarm", { 60, 25, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 0, 24,
+		nullptr, 0, 0, 24,
 		"", "", "", CMD_NONE
 	},
 	{
 		"cleanse", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 35, 53, 53 },
 		spell_cleanse, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 75, 12,
+		nullptr, 0, 75, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
 		"strength of faith", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_strength, TAR_CHAR_SELF, POS_STANDING,
-		NULL, 0, 250, 80,
+		nullptr, 0, 250, 80,
 		"", "The absolute certainty in your faith begins to waver.", "", CMD_COMMUNE
 	},
 	{
@@ -2099,19 +2099,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"stupidity", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_DEAD,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "You feel marginally, although not all that much, less stupid.", "", CMD_NONE
 	},
 	{
 		"fatigue", { 60, 53, 53, 26, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_fatigue, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"fatigue", "", "", CMD_COMMUNE
 	},
 	{
 		"remove taint", { 60, 53, 53, 53, 21, 53, 53, 53, 53, 53, 53, 53 },
 		spell_remove_taint, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 50, 12,
+		nullptr, 0, 50, 12,
 		"", "", "", CMD_COMMUNE
 	},
 	{
@@ -2141,19 +2141,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"informant", { 60, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38 },
 		spell_informant, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 80, 24,
+		nullptr, 0, 80, 24,
 		"", "", "", CMD_POWER
 	},
 	{
 		"hunters strength", { 60, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
 		spell_hunters_strength, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 60, 12,
+		nullptr, 0, 60, 12,
 		"", "Your hunter's strength wanes as your concentration wavers.", "", CMD_POWER
 	},
 	{
 		"hunters awareness", { 60, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 },
 		spell_hunters_awareness, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 60, 12,
+		nullptr, 0, 60, 12,
 		"", "You feel ready to call upon your hunter's instincts again.", "", CMD_POWER
 	},
 	{
@@ -2165,13 +2165,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"hire mercenary", { 60, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31 },
 		spell_hire_mercenary, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 100, 12,
+		nullptr, 0, 100, 12,
 		"", "The guild will put you in touch with a new mercenary-for-hire.", "", CMD_POWER
 	},
 	{
 		"hunters vision", { 60, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 },
 		spell_hunters_vision, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 75, 12,
+		nullptr, 0, 75, 12,
 		"", "Your predatorial sight dulls as your concentration wavers.", "", CMD_POWER
 	},
 	{
@@ -2189,19 +2189,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"water breathing", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 1 },
 		spell_waterbreath, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 35, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 35, 12,
 		"", "You can no longer breathe under water.", "", CMD_BOTH
 	},
 	{
 		"dark vessel", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 20, 53 },
 		spell_dark_vessel, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 300, 24,
+		nullptr, 0, 300, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"siphon", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 29, 53 },
 		spell_siphon, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"siphoning", "", "", CMD_SPELL
 	},
 	{
@@ -2219,19 +2219,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"dark summons", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 49, 53 },
 		spell_black_circle, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 250, 24,
+		nullptr, 0, 250, 24,
 		"", "You feel able to call your minions to you again.", "", CMD_SPELL
 	},
 	{
 		"ritual of soul", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 51, 53 },
 		spell_ritual_soul, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 200, 36,
+		nullptr, 0, 200, 36,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"ritual of flesh", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 45, 53 },
 		spell_ritual_flesh, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 200, 36,
+		nullptr, 0, 200, 36,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -2250,11 +2250,11 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 		"ultradiffusion", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 45 },
 		spell_ultradiffusion, TAR_CHAR_DEFENSIVE, POS_STANDING,
 		&gsn_ultradiffusion, 0, 200, 36,
-		"molecular disjunction", NULL, "", CMD_SPELL
+		"molecular disjunction", nullptr, "", CMD_SPELL
 	},
 	{
 		"disjunction", { 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61 },
-		NULL, TAR_IGNORE, POS_DEAD,
+		nullptr, TAR_IGNORE, POS_DEAD,
 		&gsn_molecular_disjunction, 0, 0, 0,
 		"", "", "", CMD_SPELL
 	},
@@ -2266,14 +2266,14 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	},
 	{
 		"forming cyclone", { 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61 },
-		NULL, TAR_IGNORE, POS_DEAD,
+		nullptr, TAR_IGNORE, POS_DEAD,
 		&gsn_cyclone_forming, 0, 0, 0,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"knock", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 29 },
 		spell_knock, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 20, 24,
+		nullptr, 0, 20, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -2291,7 +2291,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"heat metal", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 21 },
 		spell_heat_metal, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 24,
+		nullptr, 0, 25, 24,
 		"", "!Heat Metal!", "", CMD_SPELL
 	},
 	{
@@ -2321,7 +2321,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"scathing wind", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 40 },
 		spell_scathing, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"scathing wind", "You can see again.", "", CMD_SPELL
 	},
 	{
@@ -2345,19 +2345,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"electrocute", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 28 },
 		spell_electrocute, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"electrocution", "", "", CMD_SPELL
 	},
 	{
 		"induce pain", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 1 },
 		spell_induce_pain, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"induced pain", "", "", CMD_SPELL
 	},
 	{
 		"disrupt vision", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 13 },
 		spell_disrupt_vision, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 20, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 20, 12,
 		"", "You can see again.", "", CMD_SPELL
 	},
 	{
@@ -2393,7 +2393,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"mana leech", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 45 },
 		spell_mana_leech, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 5, 24,
+		nullptr, 0, 5, 24,
 		"mana leech", "", "", CMD_SPELL
 	},
 	{
@@ -2423,19 +2423,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"dehydrate", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 17 },
 		spell_dehydrate, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"dehydration", "", "", CMD_SPELL
 	},
 	{
 		"drown", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 21 },
 		spell_drown, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"drowning", "", "", CMD_SPELL
 	},
 	{
 		"hydration", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 31 },
 		spell_hydration, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 50, 24,
+		nullptr, 0, 50, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -2447,25 +2447,25 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"story tell", { 60, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 },
 		spell_null, TAR_CHAR_OFFENSIVE, POS_STANDING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "", "", CMD_NONE
 	},
 	{
 		"epic strength", { 60, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28 },
 		spell_epic, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 50, 12,
+		nullptr, 0, 50, 12,
 		"", "Your increased stamina fades as your concentration wavers.", "", CMD_POWER
 	},
 	{	
 		"corrupt flesh", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 36, 53 },
 		spell_corrupt_flesh, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 35, 24,
+		nullptr, 0, 35, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"corpse trap", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 26, 53 },
 		spell_corpse_trap, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "You feel ready to make another trap.", "", CMD_SPELL
 	},
 	{
@@ -2477,7 +2477,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"torn muscles", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "Your muscles slowly begin to mend.", "", CMD_NONE
 	},
 	{
@@ -2502,7 +2502,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"regeneration", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 24 },
 		spell_regeneration, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 75, 24,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 75, 24,
 		"", "The soothing coolness of your regeneration wanes.", "", CMD_SPELL
 	},
 	{
@@ -2538,13 +2538,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"diffusion", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 27 },
 		spell_diffusion, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 30, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 30, 12,
 		"", "You feel solid again.", "", CMD_SPELL
 	},
 	{
 		"disruption", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 1 },
 		spell_disruption, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"disruption", "", "", CMD_SPELL
 	},
 	{
@@ -2568,7 +2568,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"crush", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 26 },
 		spell_crush, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"crush", "", "", CMD_SPELL
 	},
 	{
@@ -2580,7 +2580,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"overbear", { 60, 53, 53, 53, 53, 53, 53, 35, 53, 53, 53, 31 },
 		spell_overbear, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 35, 24,
+		nullptr, 0, 35, 24,
 		"overbear", "", "", CMD_SPELL
 	},
 	{
@@ -2610,13 +2610,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"anchor", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 36 },
 		spell_anchor, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 60, 24,
+		nullptr, 0, 60, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"transferrence", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 36 },
 		spell_aerial_transferrence, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"rough landing", "", "", CMD_SPELL
 	},
 	{
@@ -2652,13 +2652,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"chill metal", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 18 },
 		spell_chillmetal, TAR_OBJ_CHAR_DEF, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"freeze metal", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 21 },
 		spell_freezemetal, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -2682,7 +2682,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"frostbite", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 33 },
 		spell_frostbite, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 40, 24,
+		nullptr, 0, 40, 24,
 		"", "A dull aching replaces the terrible numbness as warmth creeps back into your limbs.", "", CMD_SPELL
 	},
 	{
@@ -3049,7 +3049,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"lightning bolt", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 15 },
 		spell_lightning_bolt, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 15, 12,
+		nullptr, 0, 15, 12,
 		"lightning bolt", "!Lightning Bolt!", "", CMD_SPELL
 	},
 	{
@@ -3067,7 +3067,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"thunderclap", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 32 },
 		spell_thunderclap, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 60, 24,
+		nullptr, 0, 60, 24,
 		"thunderclap", "!Thunderclap!", "", CMD_SPELL
 	},
 	{
@@ -3115,13 +3115,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"asphyxiate", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 13 },
 		spell_asphyxiate, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 40, 12,
+		nullptr, 0, 40, 12,
 		"asphyxiation", "", "", CMD_SPELL
 	},
 	{
 		"putrid air", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 18 },
 		spell_putrid_air, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 50, 24,
+		nullptr, 0, 50, 24,
 		"", "!putrid air!", "", CMD_SPELL
 	},
 	{
@@ -3139,7 +3139,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"molten stones", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 17 },
 		spell_molten_stones, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3151,7 +3151,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"heat earth", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 29 },
 		spell_heat_earth, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"heat earth", "", "", CMD_SPELL
 	},
 	{
@@ -3169,19 +3169,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"boreal wind", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 15 },
 		spell_boreal_wind, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"boreal wind", "", "", CMD_SPELL
 	},
 	{
 		"concave shell", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 30 },
 		spell_concave_shell, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 40, 24,
+		nullptr, 0, 40, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"frost glaze", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 20 },
 		spell_frost_glaze, TAR_CHAR_SELF, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 15, 24,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 15, 24,
 		"", "The frost on your armor melts away.", "", CMD_SPELL
 	},
 	{
@@ -3205,7 +3205,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"frigid breeze", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 21 },
 		spell_frigid_breeze, TAR_IGNORE, POS_STANDING,
-		NULL, CAN_DISPEL|CAN_CANCEL, 20, 12,
+		nullptr, CAN_DISPEL|CAN_CANCEL, 20, 12,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3217,13 +3217,13 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"pure air", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 29 },
 		spell_pure_air, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 40, 24,
+		nullptr, 0, 40, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"icelance", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 25 },
 		spell_icelance, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 20, 12,
+		nullptr, 0, 20, 12,
 		"icelance", "", "", CMD_SPELL
 	},
 	{
@@ -3253,7 +3253,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"hailstorm", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 23 },
 		spell_hailstorm, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"hailstorm", "", "", CMD_SPELL
 	},
 	{
@@ -3295,7 +3295,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"metal shards", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 15 },
 		spell_metal_shards, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"metal shard", "", "", CMD_SPELL
 	},
 	{
@@ -3307,19 +3307,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"fortify weapon", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 35 },
 		spell_fortify_weapon, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"fortify armor", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 30 },
 		spell_fortify_armor, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"alter metal", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 42 },
 		spell_alter_metal, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 150, 24,
+		nullptr, 0, 150, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3332,7 +3332,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"vigorize", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 11 },
 		spell_vigorize, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 20, 24,
+		nullptr, 0, 20, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3363,7 +3363,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"sap endurance", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 18 },
 		spell_sap_endurance, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 12,
+		nullptr, 0, 30, 12,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3375,7 +3375,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"emulsify", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 28 },
 		spell_emulsify, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 25, 12,
+		nullptr, 0, 25, 12,
 		"emulsification", "", "", CMD_SPELL
 	},
 	{
@@ -3399,7 +3399,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"prismatic spray", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 31 },
 		spell_prismatic_spray, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 35, 24,
+		nullptr, 0, 35, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3411,7 +3411,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"plasma bolt", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 21 },
 		spell_plasma_bolt, TAR_CHAR_SELF, POS_FIGHTING,
-		NULL, 0, 25, 24,
+		nullptr, 0, 25, 24,
 		"plasma bolt", "", "", CMD_SPELL
 	},
 	{
@@ -3454,19 +3454,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"mana beam", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 22 },
 		spell_mana_beam, TAR_CHAR_OFFENSIVE, POS_FIGHTING,
-		NULL, 0, 30, 24,
+		nullptr, 0, 30, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"detonation", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 27 },
 		spell_detonation, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 40, 24,
+		nullptr, 0, 40, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
 		"fortify crystal", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 36 },
 		spell_fortify_crystal, TAR_OBJ_INV, POS_STANDING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3543,30 +3543,30 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"taunt", { 60, 53, 53, 53, 53, 25, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_CHAR_OFFENSIVE, POS_STANDING,
-		NULL, 0, 0, 24,
+		nullptr, 0, 0, 24,
 		"", "", "", CMD_NONE
 	},
 	{	"wrack", { 60, 53, 53, 53, 53, 47, 53, 53, 53, 53, 53, 53 },
 		spell_wrack, TAR_CHAR_OFFENSIVE, POS_STANDING,
-		NULL, 0, 50, 24,
+		nullptr, 0, 50, 24,
 		"", "You feel your body strengthen.", "", CMD_SPELL
 	},
 	{
 		"radiance", { 60, 53, 53, 53, 53, 47, 53, 53, 53, 53, 53, 53 },
 		spell_radiance, TAR_CHAR_SELF, POS_STANDING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "You no longer feel so beautiful.", "", CMD_SPELL
 	},
 	{
 		"inspire lust", { 60, 53, 53, 53, 53, 47, 53, 53, 53, 53, 53, 53 },
 		spell_inspire_lust, TAR_CHAR_GENERAL, POS_STANDING,
-		NULL, 0, 50, 24,
+		nullptr, 0, 50, 24,
 		"", "Your thoughts of riches fade away.", "", CMD_SPELL
 	},
 	{
 		"dispaters watch", { 60, 53, 53, 53, 53, 51, 53, 53, 53, 53, 53, 53 },
 		spell_dispaters, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3578,7 +3578,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"consume", { 60, 53, 53, 53, 53, 25, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_STANDING,
-		NULL, 0, 0, 24,
+		nullptr, 0, 0, 24,
 		"", "", "", CMD_NONE
 	},
 	{
@@ -3608,7 +3608,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"insanity", { 60, 53, 53, 53, 53, 51, 53, 53, 53, 53, 53, 53 },
 		spell_insanity, TAR_CHAR_SELF, POS_FIGHTING,
-		NULL, 0, 100, 24,
+		nullptr, 0, 100, 24,
 		"", "", "", CMD_SPELL
 	},
 	{
@@ -3626,19 +3626,19 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"breath of mephisto", { 60, 53, 53, 53, 53, 43, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "", "", CMD_NONE
 	},
 	{
 		"burning touch", { 60, 53, 53, 53, 53, 43, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0,0,0,
+		nullptr, 0,0,0,
 		"", "The burning stops.", "", CMD_NONE
 	},
 	{
 		"dark insight", { 60, 53, 53, 53, 53, 25, 53, 53, 53, 53, 53, 53 },
 		spell_dark_insight, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 60, 24,
+		nullptr, 0, 60, 24,
 		"", "", "", CMD_SPELL
 	}, 
 	{
@@ -3674,7 +3674,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"colorful blessings", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_colorful, TAR_IGNORE, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "Your colorful blessings fade away and the world returns to its drab state.", "$n stops staggering around like a drunk.", CMD_NONE
 	},
 	{
@@ -3733,7 +3733,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{ 
 		"safehaven", { 60, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 },
 		spell_safehaven, TAR_CHAR_DEFENSIVE, POS_STANDING,
-		NULL, 0, 50, 12,
+		nullptr, 0, 50, 12,
 		"", "", "", CMD_POWER
 	},
 	{ 
@@ -3763,7 +3763,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 	{
 		"end", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
 		spell_null, TAR_END, POS_FIGHTING,
-		NULL, 0, 0, 0,
+		nullptr, 0, 0, 0,
 		"", "THIS MUST BE LAST!", "", CMD_NONE
 	}
 	//END MUST BE LAST!!!!

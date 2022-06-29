@@ -53,13 +53,13 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
-	if (ch->fighting != NULL || victim->fighting)
+	if (ch->fighting != nullptr || victim->fighting)
 	{
 		send_to_char("You're facing the wrong end.\n\r", ch);
 		return;
@@ -83,7 +83,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 	{
 		obj = get_eq_char(ch, WEAR_DUAL_WIELD);
 
-		if (obj == NULL || obj->value[0] != WEAPON_DAGGER)
+		if (obj == nullptr || obj->value[0] != WEAPON_DAGGER)
 		{
 			send_to_char("You must be wielding a dagger to backstab.\n\r", ch);
 			return;
@@ -98,7 +98,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 
 	if (victim->hit < victim->max_hit * 8.5 / 10)
 	{
-		act("$N is hurt and suspicious ... you can't sneak up.", ch, NULL, victim, TO_CHAR);
+		act("$N is hurt and suspicious ... you can't sneak up.", ch, nullptr, victim, TO_CHAR);
 		return;
 	}
 
@@ -108,7 +108,7 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 	{
 		check_improve(ch, gsn_backstab, true, 1);
 
-		if (!is_npc(ch) && !is_npc(victim) && victim->fighting == NULL)
+		if (!is_npc(ch) && !is_npc(victim) && victim->fighting == nullptr)
 		{
 			switch (number_range(0, 1))
 			{
@@ -123,13 +123,13 @@ void do_backstab(CHAR_DATA *ch, char *argument)
 			do_myell(victim, buf, ch);
 		}
 
-		one_hit_new(ch, victim, gsn_backstab, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, URANGE(100, (ch->level - 9) * 10, 375), NULL);
+		one_hit_new(ch, victim, gsn_backstab, HIT_NOSPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, URANGE(100, (ch->level - 9) * 10, 375), nullptr);
 	}
 	else
 	{
 		check_improve(ch, gsn_backstab, false, 1);
 
-		if (!is_npc(ch) && !is_npc(victim) && victim->fighting == NULL)
+		if (!is_npc(ch) && !is_npc(victim) && victim->fighting == nullptr)
 		{
 			switch (number_range(0, 1))
 			{
@@ -210,25 +210,25 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 	{
 		victim = ch->fighting;
 
-		if (victim == NULL)
+		if (victim == nullptr)
 		{
 			send_to_char("But you aren't fighting anyone.\n\r", ch);
 			return;
 		}
 	}
-	else if ((victim = get_char_room(ch, arg)) == NULL)
+	else if ((victim = get_char_room(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
 	}
 
-	if (ch->fighting == NULL)
+	if (ch->fighting == nullptr)
 	{
 		send_to_char("You can't circle someone like that.\n\r", ch);
 		return;
 	}
 
-	for (v_check = ch->in_room->people; v_check != NULL; v_check = v_next)
+	for (v_check = ch->in_room->people; v_check != nullptr; v_check = v_next)
 	{
 		v_next = v_check->next_in_room;
 
@@ -247,13 +247,13 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 
 	obj = get_eq_char(ch, WEAR_WIELD);
 
-	if (obj == NULL || obj->value[0] != WEAPON_DAGGER)
+	if (obj == nullptr || obj->value[0] != WEAPON_DAGGER)
 	{
 		attempt_dual = true;
 		obj = get_eq_char(ch, WEAR_DUAL_WIELD);
 	}
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You must wield a dagger to circle stab.\n\r", ch);
 		return;
@@ -272,9 +272,9 @@ void do_circle_stab(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < chance)
 	{
-		act("You circle around $N to land a critical strike.", ch, NULL, victim, TO_CHAR);
-		act("$n circles around you to land a critical strike.", ch, NULL, victim, TO_VICT);
-		act("$n circles $N to land a critical strike.", ch, NULL, victim, TO_NOTVICT);
+		act("You circle around $N to land a critical strike.", ch, nullptr, victim, TO_CHAR);
+		act("$n circles around you to land a critical strike.", ch, nullptr, victim, TO_VICT);
+		act("$n circles $N to land a critical strike.", ch, nullptr, victim, TO_NOTVICT);
 
 		check_improve(ch, gsn_circle, true, 1);
 
@@ -336,7 +336,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -389,7 +389,7 @@ void do_blackjack(CHAR_DATA *ch, char *argument)
 	if (is_affected_by(victim, AFF_HASTE))
 		chance += 10;
 
-	if (get_eq_char(victim, WEAR_HEAD) != NULL)
+	if (get_eq_char(victim, WEAR_HEAD) != nullptr)
 		chance -= 10;
 
 	if (is_affected(victim, gsn_cloak_form))
@@ -490,7 +490,7 @@ void do_ghetto_bind(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -619,7 +619,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg2);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -634,7 +634,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 	if (is_safe(ch, victim))
 		return;
 
-	if (victim->fighting != NULL)
+	if (victim->fighting != nullptr)
 	{
 		send_to_char("Can't plant while that person is fighting.\n\r", ch);
 		return;
@@ -670,7 +670,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 
 	obj = get_obj_carry(ch, arg1, ch);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You can't find it.\n\r", ch);
 		return;
@@ -697,7 +697,7 @@ void do_plant(CHAR_DATA *ch, char *argument)
 			else
 			{
 				sprintf(buf, "$N tried to plant %s on %s.", obj->name, victim->name);
-				wiznet(buf, ch, NULL, WIZ_FLAGS, 0, 0);
+				wiznet(buf, ch, nullptr, WIZ_FLAGS, 0, 0);
 			}
 		}
 
@@ -734,7 +734,7 @@ void do_ungag(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *vch;
 	vch = get_char_room(ch, argument);
 
-	if (vch == NULL)
+	if (vch == nullptr)
 		vch = ch;
 
 	if (!is_npc(vch) && vch != ch)
@@ -749,7 +749,7 @@ void do_ungag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (check_bind(vch, "arms") != NULL)
+	if (check_bind(vch, "arms") != nullptr)
 	{
 		act("$T arms are bound too tightly for you to reach $T gag!\n\r", ch, 0, vch == ch ? "your" : "their", TO_CHAR);
 		return;
@@ -782,7 +782,7 @@ void do_ungag(CHAR_DATA *ch, char *argument)
 
 void do_gag(CHAR_DATA *ch, char *argument)
 {
-	CHAR_DATA *victim = NULL;
+	CHAR_DATA *victim = nullptr;
 	AFFECT_DATA af, *paf;
 	char arg[MSL];
 	int chance;
@@ -805,7 +805,7 @@ void do_gag(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -850,9 +850,9 @@ void do_gag(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < chance)
 	{
-		act("You firmly place a gag around $N's mouth.", ch, NULL, victim, TO_CHAR);
-		act("You feel someone place a gag around your mouth.", ch, NULL, victim, TO_VICT);
-		act("$n places a gag around $N's mouth.", ch, NULL, victim, TO_NOTVICT);
+		act("You firmly place a gag around $N's mouth.", ch, nullptr, victim, TO_CHAR);
+		act("You feel someone place a gag around your mouth.", ch, nullptr, victim, TO_VICT);
+		act("$n places a gag around $N's mouth.", ch, nullptr, victim, TO_NOTVICT);
 
 		af.aftype = AFT_SKILL;
 		af.duration = -1;
@@ -862,9 +862,9 @@ void do_gag(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("You try to place a gag around $N's mouth, but it breaks.", ch, NULL, victim, TO_CHAR);
-		act("You feel someone try to place a gag around your mouth, but the tightness goes away.", ch, NULL, victim, TO_VICT);
-		act("$n tries to place a gag around $N's mouth, but it breaks.", ch, NULL, victim, TO_NOTVICT);
+		act("You try to place a gag around $N's mouth, but it breaks.", ch, nullptr, victim, TO_CHAR);
+		act("You feel someone try to place a gag around your mouth, but the tightness goes away.", ch, nullptr, victim, TO_VICT);
+		act("$n tries to place a gag around $N's mouth, but it breaks.", ch, nullptr, victim, TO_NOTVICT);
 		check_improve(ch, gsn_gag, true, 2);
 	}
 
@@ -881,7 +881,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	int where, skill;
 	ROOM_INDEX_DATA *to_room;
 	EXIT_DATA *pexit;
-	CHAR_DATA *victim = NULL;
+	CHAR_DATA *victim = nullptr;
 	char *direction;
 	char store[MSL], target[MSL], dir[MSL];
 
@@ -919,7 +919,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	/* Set victim */
 	victim = get_char_room(ch, target);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -973,7 +973,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 	/* Make sure the exit is valid */
 	pexit = ch->in_room->exit[where];
 
-	if (pexit == NULL)
+	if (pexit == nullptr)
 	{
 		send_to_char("You cannot drag anyone that direction.\n\r", ch);
 		return;
@@ -994,7 +994,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == NULL || victim->fighting == NULL))
+	if (!is_npc(ch) && !is_npc(victim) && (ch->fighting == nullptr || victim->fighting == nullptr))
 	{
 		sprintf(store, "Help! %s is dragging me around!", pers(ch, victim));
 		do_myell(victim, store, ch);
@@ -1078,7 +1078,7 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 
 		act("You lay a concealed tripwire across the exit $Tward and draw it taut.", ch, 0, direction, TO_CHAR);
 
-		for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
+		for (victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 		{
 			if (can_see(victim, ch))
 				act("$n lays a concealed tripwire across the exit $tward and draws it taut.", ch, direction, victim, TO_VICT);
@@ -1094,8 +1094,8 @@ void do_tripwire(CHAR_DATA *ch, char *argument)
 		raf.modifier = door;
 		new_affect_to_room(ch->in_room, &raf);
 
-		if (to_room != NULL
-			&& (pexit_opp = to_room->exit[reverse_d(door)]) != NULL
+		if (to_room != nullptr
+			&& (pexit_opp = to_room->exit[reverse_d(door)]) != nullptr
 			&& pexit_opp->u1.to_room == ch->in_room)
 		{
 			raf.modifier = reverse_d(door);
@@ -1142,7 +1142,7 @@ void do_sign(CHAR_DATA *ch, char *argument)
 
 	argument[700] = '\0';
 
-	act(buf, ch, NULL, argument, TO_CHAR);
+	act(buf, ch, nullptr, argument, TO_CHAR);
 
 	switch (number_range(0, 6))
 	{
@@ -1169,7 +1169,7 @@ void do_sign(CHAR_DATA *ch, char *argument)
 			break;
 	}
 
-	for (victim = ch->in_room->people; victim != NULL; victim = victim->next_in_room)
+	for (victim = ch->in_room->people; victim != nullptr; victim = victim->next_in_room)
 	{
 		if (is_awake(victim))
 		{
@@ -1219,7 +1219,7 @@ void do_slash(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg2);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1234,7 +1234,7 @@ void do_slash(CHAR_DATA *ch, char *argument)
 	if (is_safe(ch, victim))
 		return;
 
-	if (victim->fighting != NULL)
+	if (victim->fighting != nullptr)
 	{
 		send_to_char("You can't do that while they are fighting.\n\r", ch);
 		return;
@@ -1254,11 +1254,11 @@ void do_slash(CHAR_DATA *ch, char *argument)
 
 	obj = get_obj_carry(victim, arg1, ch);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		obj = get_obj_wear(victim, arg1);
 
-		if (obj == NULL)
+		if (obj == nullptr)
 		{
 			send_to_char("They are not carrying or wearing that.\n\r", ch);
 			return;
@@ -1300,8 +1300,8 @@ void do_slash(CHAR_DATA *ch, char *argument)
 
 		check_improve(ch, gsn_slash, false, 2);
 
-		act("$n tried to slash your belongings.\n\r", ch, NULL, victim, TO_VICT);
-		act("$n tried to slash $N's belongings.\n\r", ch, NULL, victim, TO_NOTVICT);
+		act("$n tried to slash your belongings.\n\r", ch, nullptr, victim, TO_VICT);
+		act("$n tried to slash $N's belongings.\n\r", ch, nullptr, victim, TO_NOTVICT);
 
 		thief_yell(ch, victim);
 		return;
@@ -1325,7 +1325,7 @@ void do_slash(CHAR_DATA *ch, char *argument)
 
 	check_improve(ch, gsn_slash, true, 1);
 
-	for (iobj = obj->contains; iobj != NULL; iobj = iobj_next)
+	for (iobj = obj->contains; iobj != nullptr; iobj = iobj_next)
 	{
 		iobj_next = iobj->next_content;
 		obj_from_char(iobj);
@@ -1369,7 +1369,7 @@ void do_stash(CHAR_DATA *ch, char *argument)
 
 	obj = get_obj_carry(ch, arg, ch);
 
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You can't find it.\n\r", ch);
 		return;
@@ -1404,7 +1404,7 @@ void do_disguise(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *corpse;
 	OBJ_AFFECT_DATA oaf;
 	AFFECT_DATA af;
-	MOB_INDEX_DATA *mob = NULL;
+	MOB_INDEX_DATA *mob = nullptr;
 	char arg[MSL];
 	int skill;
 
@@ -1550,7 +1550,7 @@ void disguise_remove(CHAR_DATA *ch)
 	ch->description = palloc_string(ch->pcdata->old->description);
 
 	free_oldchar(ch->pcdata->old);
-	ch->pcdata->old = NULL;
+	ch->pcdata->old = nullptr;
 }
 
 void do_undisguise(CHAR_DATA *ch, char *argument)
@@ -1579,7 +1579,7 @@ void do_undisguise(CHAR_DATA *ch, char *argument)
 
 void do_search(CHAR_DATA *ch, char *argument)
 {
-	OBJ_DATA *obj = NULL;
+	OBJ_DATA *obj = nullptr;
 	OBJ_AFFECT_DATA *oaf;
 	int chance;
 
@@ -1588,11 +1588,11 @@ void do_search(CHAR_DATA *ch, char *argument)
 
 	chance = number_percent();
 
-	for (obj = ch->in_room->contents; obj != NULL; obj = obj->next_content)
+	for (obj = ch->in_room->contents; obj != nullptr; obj = obj->next_content)
 	{
 		if (is_affected_obj(obj, gsn_stash))
 		{
-			for (oaf = obj->affected; oaf != NULL; oaf = oaf->next)
+			for (oaf = obj->affected; oaf != nullptr; oaf = oaf->next)
 			{
 				if (oaf->type == gsn_stash)
 					break;
@@ -1641,7 +1641,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 
 	orig = get_obj_carry(ch, arg1, ch);
 
-	if (orig == NULL)
+	if (orig == nullptr)
 	{
 		send_to_char("You can't find the original item.\n\r", ch);
 		return;
@@ -1649,7 +1649,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 
 	copy = get_obj_carry(ch, arg2, ch);
 
-	if (copy == NULL)
+	if (copy == nullptr)
 	{
 		send_to_char("You can't find the copy item.\n\r", ch);
 		return;
@@ -1857,7 +1857,7 @@ void do_strip(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg2);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -1995,13 +1995,13 @@ AFFECT_DATA *check_bind(CHAR_DATA *ch, char *type)
 {
 	AFFECT_DATA *af;
 
-	for (af = ch->affected; af != NULL; af = af->next)
+	for (af = ch->affected; af != nullptr; af = af->next)
 	{
 		if (af->type == gsn_bind && !str_infix(type, af->name))
 			return af;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void do_bind(CHAR_DATA *ch, char *argument)
@@ -2068,7 +2068,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg1);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -2097,7 +2097,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg2, "head"))
 	{
-		if (check_bind(victim, "head") != NULL)
+		if (check_bind(victim, "head") != nullptr)
 		{
 			send_to_char("Their head is already bound.\n\r", ch);
 			return;
@@ -2108,7 +2108,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 	{
 		if (victim->arms > 0)
 		{
-			if (check_bind(victim, "arms") != NULL)
+			if (check_bind(victim, "arms") != nullptr)
 			{
 				send_to_char("Their arms are already bound.\n\r", ch);
 				return;
@@ -2125,7 +2125,7 @@ void do_bind(CHAR_DATA *ch, char *argument)
 	{
 		if (victim->legs > 0)
 		{
-			if (check_bind(victim, "legs") != NULL)
+			if (check_bind(victim, "legs") != nullptr)
 			{
 				send_to_char("Their legs are already bound.\n\r", ch);
 				return;
@@ -2232,7 +2232,7 @@ void do_unbind(CHAR_DATA *ch, char *argument)
 {
 	AFFECT_DATA *af = check_bind(ch, "arms");
 
-	if (af != NULL)
+	if (af != nullptr)
 	{
 		if (number_percent() < get_curr_stat(ch, STAT_STR) * 6)
 		{
@@ -2248,7 +2248,7 @@ void do_unbind(CHAR_DATA *ch, char *argument)
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 	}
-	else if ((af = check_bind(ch, "head")) != NULL)
+	else if ((af = check_bind(ch, "head")) != nullptr)
 	{
 		if (number_percent() < get_curr_stat(ch, STAT_DEX) * 6)
 		{
@@ -2264,7 +2264,7 @@ void do_unbind(CHAR_DATA *ch, char *argument)
 
 		WAIT_STATE(ch, PULSE_VIOLENCE);
 	}
-	else if ((af = check_bind(ch, "legs")) != NULL)
+	else if ((af = check_bind(ch, "legs")) != nullptr)
 	{
 		if (number_percent() < (get_curr_stat(ch, STAT_DEX) * 3 + get_curr_stat(ch, STAT_STR) * 3))
 		{
@@ -2310,7 +2310,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (ch->fighting != NULL)
+	if (ch->fighting != nullptr)
 	{
 		send_to_char("No way! You're still fighting!\n\r", ch);
 		return;
@@ -2318,7 +2318,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 
 	victim = get_char_room(ch, arg);
 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -2362,7 +2362,7 @@ void do_knife(CHAR_DATA *ch, char *argument)
 		act("$n slams $s dagger into your side!", ch, 0, victim, TO_VICT);
 		act("$n slams $s dagger into $N's side!", ch, 0, victim, TO_NOTVICT);
 
-		bool killed = one_hit_new(ch, victim, gsn_knife, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, NULL);
+		bool killed = one_hit_new(ch, victim, gsn_knife, HIT_SPECIALS, HIT_UNBLOCKABLE, HIT_NOADD, 125, nullptr);
 
 		check_improve(ch, gsn_knife, true, 1);
 
