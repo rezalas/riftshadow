@@ -53,22 +53,6 @@ int remove();
 	#include "mud.h"
 #endif /* RIFTINCLD */
 
-//
-// Short scalar types.
-// Diavolo reports AIX compiler has bugs with short types.
-//
-
-#ifdef _AIX
-	#ifndef const
-	#define const
-	#endif /* const */
-
-	typedef int bool;
-
-	#define unix
-#endif /* _AIX */
-
-
 /*
  * OLC
  * Use these macros to load any new area formats that you choose to
