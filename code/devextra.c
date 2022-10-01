@@ -166,8 +166,10 @@ void clean_mud()
 	DESCRIPTOR_DATA *d;
 
 	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
-	nSQL.StartSQLServer(riftCore.Host.c_str(),
-		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str());
+	if (!nSQL.StartSQLServer(riftCore.Host.c_str(),
+		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+		return RS.Bug("clean_mud: failed to establish a database connection.");
+
 	// 5184000 = one month
 
 	sprintf(buf, "DELETE FROM logins WHERE ctime + 5184000 < %ld", current_time);

@@ -32,7 +32,7 @@ CMud::~CMud()
 		RS.Shutdown();
 }
 
-void CMud::Bootup()
+bool CMud::Bootup()
 {
 	FILE *fp;
 	char tempbuf[MSL], buf[MSL];
@@ -43,8 +43,12 @@ void CMud::Bootup()
 
 		RS.Log("Creating persistent SQL connection...");
 		DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
-		RS.SQL.StartSQLServer(riftCore.Host.c_str(),
-		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str());
+		if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
+		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+		{
+			RS.Log("Failed to create a SQL connection.");
+			return false;
+		}
 		
 		game_up = true;
 		
@@ -132,6 +136,7 @@ void CMud::Bootup()
 		//RS.SQL.IQuery("UNLOCK TABLES");
 #endif
 		//RS.GameEngine.GameLoop();
+		return true;
 }
 
 inline bool CMud::RunGame()

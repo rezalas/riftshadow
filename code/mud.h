@@ -36,7 +36,7 @@ public:
 //	CInterpreter		Interpreter;
 	CQueue				Queue;
 
-	void				Bootup();
+	bool				Bootup();
 	void				Shutdown();
 
 	void				LoadGreetingScreen();

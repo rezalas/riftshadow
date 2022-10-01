@@ -25,7 +25,7 @@ class CSQLInterface
 public:
 	CSQLInterface();
 	~CSQLInterface();
-	void 		StartSQLServer(const char* host, const char* db, const char* user, const char* pass);		//called at boot
+	bool 		StartSQLServer(const char* host, const char* db, const char* user, const char* pass);		//called at boot
 	void 		FreeResults(void);			//self explanatory
 	
 	Config					Settings;
