@@ -69,7 +69,12 @@ int main(int argc, char **argv)
 	control = init_socket(port);
 
 	// boot_db( );
-	RS.Bootup();
+	if (!RS.Bootup())
+	{
+		log_string("Riftshadow failed to boot, aborting.");
+		exit(0);
+		return 0;
+	}
 
 	sprintf(buf, "Riftshadow booted, binding on port %d.", port);
 	log_string(buf);
