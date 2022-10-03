@@ -7,10 +7,13 @@
 void Config::Load()
 {
     FILE* fp = fopen(_FilePath,"r");
+    if (fp == NULL)
+        return;
     char buffer[65536];
     rapidjson::FileReadStream inputStream(fp,buffer, sizeof(buffer));
     Settings.ParseStream(inputStream);
     fclose(fp);
+    loaded = true;
 }
 std::string Config::GetValue(const char* key)
 {
@@ -47,5 +50,11 @@ DbConnection Config::GetDbConnection(const char* connection)
 Config::Config(const char* file)
 {
     _FilePath = file;
+    loaded = false;
     Load();
+}
+
+bool Config::isLoaded()
+{
+    return loaded;
 }
