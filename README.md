@@ -49,6 +49,17 @@ The following packages are required to build on linux x86 and test the applicati
 
 To build, run `cmake .` at the root of the project directory which will build system-appropriate Makefile configs. Then, run `make` to begin the build process. Afterward if successful the binary is located in the `./code/` directory and ready to execute.
 
+### Running the Server
+1. Get your environment ready with the steps in "[Setting up your Environment](./CONTRIBUTING.md)"
+2. From the root directory, run `make rift` to build the executable. 
+3. Navigate to `./code/` and run `./rift`
+
+### Connecting with Telnet
+After the server is running open another terminal instance and run
+`telnet localhost 9999`
+
+(The domain name and port might be different if your overridden the development defaults)
+
 ### Database injection
 
 You will also need to inject the databases into the mysql server, add a user named 'rift', and set up your connection strings properly in order to start up. 
