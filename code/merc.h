@@ -1115,10 +1115,10 @@ struct kill_data
 #define ACT_UPDATE_ALWAYS			28
 #define ACT_DETECT_SPECIAL			29
 #define ACT_BANKER					30
-#define ACT_NOCTURNAL				(ASCII_ff)
-#define ACT_DIURNAL					(ASCII_gg)
-#define ACT_FASTWANDER				(ASCII_hh)
-#define ACT_LAW						(ASCII_ii)
+#define ACT_NOCTURNAL				31
+#define ACT_DIURNAL					32
+#define ACT_FASTWANDER				33
+#define ACT_LAW						34
 
 //
 // damage classes
@@ -1638,9 +1638,9 @@ struct kill_data
 #define ITEM_ANTI_LAWFUL			28
 #define ITEM_ANTI_NEUT				29
 #define ITEM_ANTI_CHAOTIC			30
-#define ITEM_NO_STASH				(ASCII_ff)
-#define ITEM_NO_SAC					(ASCII_gg)
-#define ITEM_DONATION_PIT			(ASCII_hh)
+#define ITEM_NO_STASH				31
+#define ITEM_NO_SAC					32
+#define ITEM_DONATION_PIT			33
 
 //
 // Wear flags.
