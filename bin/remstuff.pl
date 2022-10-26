@@ -1,8 +1,10 @@
 #!/usr/bin/perl
 
-$looking = "af.where     = TO_AFFECTS;\n";
-$replace = "af.where     = TO_AFFECTS;\naf.aftype	= AFT_SPELL;\n";
-$ls = `ls *.c`;
+# Original location of script: /area/
+
+$looking = "Aetullan";
+$replace = "Melcene";
+$ls = `ls *.are`;
 @ls = split(/\s+/,$ls);
 
 foreach $itemfile (@ls) {
@@ -11,10 +13,8 @@ foreach $itemfile (@ls) {
 	@tempdata = <GDATA>;
 	close(GDATA);
 	$data = join("", @tempdata);
-	if ($data =~ m/\s/) {
-#		$data =~ s/$looking/$replace/g;
-#		$data =~ s/af.where(\s+)=(\s+)TO_AFFECTS;\n/af.where$1\=$2\TO_AFFECTS;\naf.aftype$1\=$2\AFT_SPELL;\n/g;
-		$data =~ s/ +[\n\r]/\n/g;
+	if ($data =~ m/$looking/) {
+		$data =~ s/$looking/$replace/g;
 		open(PDATA, ">$itemfile");
 		print PDATA $data;
 		close(PDATA);

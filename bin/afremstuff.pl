@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+# Original location of script: /code/
+
+
 $ls = `ls *.c`;
 @ls = split(/\s+/,$ls);
 

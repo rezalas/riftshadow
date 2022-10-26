@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+
+# Original location of script: /
+
 use English;
 
 $timekill = 180;

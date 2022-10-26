@@ -1,5 +1,8 @@
 #!/usr/local/bin/perl
 
+# Original location of script: /area/
+
+
 $File = "logins.txt";
 $MaxShow = 20;
 open(GDATA, "$File");

@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+# Original location of script: /
+
+
 $grep = `ps ux | grep -E '([0-9]) perl startmud.pl'`;
 
 @data = split(/\s+/,$grep);
