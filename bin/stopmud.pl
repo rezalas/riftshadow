@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+# Original location of script: /area/
+
 $grep = `ps ux | grep startmud.pl`;
 
 @data = split(/\s+/,$grep);

@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+# Original location of script: /area/
+
 $file = "tempdeaths.txt";
 $tempfile = $ARGV[0];
 $display = $ARGV[1];

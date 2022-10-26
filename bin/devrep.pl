@@ -1,14 +1,16 @@
 #!/usr/bin/perl
 
+# Original location of script: /area/
+
+
 #$looking = 'affect_to_area\s*\(\s*([a-zA-Z->_0-9\(\)]*)\s*,\s*&([a-zA-Z->_0-9\(\)]*)\s*\);';
 #$looking = '->class\s*=\s*(.*);';
 #$looking = '->perm_stat\[([a-zA-Z->_0-9\[\]]*)\]';
 #$looking = 'skill_table\[([a-zA-Z->_0-9\[\]]*)\]\.';
 #$looking = '[^n]*\s*send_to_char\s*\((.*),\s*([a-zA-Z->_0-9\(\)]*)\s*\);';
 #$looking = 'add_act_to_queue\((.*),\(char\*\)\"(.*)\",(.*),(.*),(.*),(.*)\);';
-$looking = '\s*{\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*,\s*(\d*)\s*}';
-#$looking = '},\s*\n\s*{\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*,\s*([10])\s*},';
-$ls = `ls const.c`;
+$looking = '\nTEACHES swimming~';
+$ls = `ls *.are`;
 @ls = split(/\s+/,$ls);
 
 foreach $itemfile (@ls) {
@@ -18,7 +20,7 @@ foreach $itemfile (@ls) {
         close(GDATA);
         $data = join("", @tempdata);
 		if ($data =~ m/$looking/) {
-                $data =~ s/$looking/ {60, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11}/g;
+                $data =~ s/$looking/\n/g;
                 open(PDATA, ">$itemfile");
                 print PDATA $data;
                 close(PDATA);

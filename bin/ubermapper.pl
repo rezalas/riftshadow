@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+# Original location of script: /area/
+
 print "File name: ";
 chomp($file = <STDIN>);
 
