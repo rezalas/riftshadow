@@ -1,5 +1,6 @@
 #include <sys/types.h>
 #include <sys/time.h>
+#include <stdio_ext.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -108,7 +109,8 @@ void make_urn(CHAR_DATA *ch, OBJ_DATA *corpse)
 	else if (corpse->item_type == ITEM_CORPSE_PC && corpse->owner)
 	{
 		free_pstring(corpse->description);
-		sprintf(buf, "The defiled corpse of %s is here, its heart missing.", corpse->owner);
+		
+		std::snprintf(buf, static_cast<size_t>(MSL), "The defiled corpse of %s is here, its heart missing.", corpse->owner);
 		corpse->description = palloc_string(buf);
 		SET_BIT(corpse->wear_flags, CORPSE_NO_ANIMATE);
 	}
@@ -130,7 +132,8 @@ OBJ_DATA *find_urn(CHAR_DATA *ch)
 bool drain_urn(CHAR_DATA *ch, int charges)
 {
 	OBJ_DATA *urn = find_urn(ch);
-	char buf[300];
+	int buffSize = 300;
+	char buf[buffSize];
 
 	if (!urn)
 	{
@@ -146,7 +149,7 @@ bool drain_urn(CHAR_DATA *ch, int charges)
 
 	urn->value[4] -= charges;
 
-	sprintf(buf, "You harness %s ounce%s of blood to strengthen your dark magic.\n\r",
+	std::snprintf(buf, static_cast<size_t>(buffSize), "You harness %s ounce%s of blood to strengthen your dark magic.\n\r",
 		int_to_string(charges),
 		(charges == 1) ? "" : "s");
 
@@ -157,7 +160,8 @@ bool drain_urn(CHAR_DATA *ch, int charges)
 void power_urn(CHAR_DATA *ch, int charges)
 {
 	OBJ_DATA *urn = find_urn(ch);
-	char buf[300];
+	int buffSize = 300;
+	char buf[buffSize];
 
 	if (!urn)
 	{
@@ -182,7 +186,7 @@ void power_urn(CHAR_DATA *ch, int charges)
 
 	urn->value[4] += charges;
 
-	sprintf(buf, "You drain a small amount of blood into %s!\n\r", urn->short_descr);
+	std::snprintf(buf, static_cast<size_t>(buffSize), "You drain a small amount of blood into %s!\n\r", urn->short_descr);
 	send_to_char(buf, ch);
 }
 
@@ -533,20 +537,21 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 
 	zombie->defense_mod = (short)dmod;
 
-	sprintf(buf1, "the zombie of %s", name);
-	sprintf(buf2, "The %s%s zombie of %s lurches here, its flesh hanging loosely.\n\r",
-		zombie->size == 0 ? "tiny, " :
+	auto zombieSize = zombie->size == 0 ? "tiny, " :
 			zombie->size == 1 ? "small, " :
 			zombie->size == 2 ? "" :
 			zombie->size == 3 ? "large, " :
 			zombie->size == 4 ? "huge, " :
-			zombie->size == 5 ? "giant, " : "immense, ",
-		zombie->level < 11 ? "pathetic" :
+			zombie->size == 5 ? "giant, " : "immense, ";
+
+	auto zombieLevel = zombie->level < 11 ? "pathetic" :
 			zombie->level < 21 ? "weak" :
 			zombie->level < 31 ? "average" :
 			zombie->level < 41 ? "strong" :
-			zombie->level < 52 ? "powerful" : "utterly deadly",
-		name);
+			zombie->level < 52 ? "powerful" : "utterly deadly";
+
+	std::snprintf(buf1, static_cast<size_t>(MAX_STRING_LENGTH), "the zombie of %s", name);
+	std::snprintf(buf2, static_cast<size_t>(MAX_STRING_LENGTH), "The %s%s zombie of %s lurches here, its flesh hanging loosely.\n\r", zombieSize, zombieLevel, name);
 
 	free_pstring(zombie->short_descr);
 	free_pstring(zombie->long_descr);
@@ -554,7 +559,7 @@ void animate_four(CHAR_DATA *ch, OBJ_DATA *corpse)
 	zombie->short_descr = palloc_string(buf1);
 	zombie->long_descr = palloc_string(buf2);
 
-	sprintf(buf1, "%s", name);
+	std::snprintf(buf1, static_cast<size_t>(MAX_STRING_LENGTH), "%s", name);
 	add_follower(zombie, ch);
 
 	zombie->leader = ch;
@@ -1118,7 +1123,7 @@ void spell_corrupt_flesh(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		act("$p rises into the air and attacks $N!", ch, obj, victim, TO_NOTVICT);
 		act("$p rises into the air and attacks you!", ch, obj, victim, TO_VICT);
 
-		sprintf(buf, "Help!  I am being attacked by %s!", obj->short_descr);
+		std::snprintf(buf, static_cast<size_t>(MSL), "Help!  I am being attacked by %s!", obj->short_descr);
 
 		do_myell(victim, buf, ch);
 		obj_from_char(obj);

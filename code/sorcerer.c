@@ -1052,7 +1052,7 @@ void spell_vacuum(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(vch) && !is_same_group(vch, ch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std:snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -1486,7 +1486,7 @@ void spell_scathing(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == nullptr || vch->fighting == nullptr))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -1543,7 +1543,7 @@ void spell_earthquake(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(vch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -1991,7 +1991,7 @@ void spell_interference(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	affect_to_char(ch, &af);
 
 	send_to_char("You blanket the area with a veil of electrical interference.\n\r", ch);
-	sprintf(buf, "{yA smell of ozone fills the %s as electricity crackles around you.{x",
+	std::snprintf(buf, static_cast<int>(MSL), "{yA smell of ozone fills the %s as electricity crackles around you.{x",
 		ch->in_room->sector_type == SECT_UNDERWATER ? "water" : "air");
 
 	rarea_echo(ch->in_room, buf);
@@ -2494,7 +2494,7 @@ void spell_tidalwave(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(vch))
 		{
-			sprintf(buf, "Help! I'm being drowned by %s's tidal wave!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Help! I'm being drowned by %s's tidal wave!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -3204,7 +3204,7 @@ void spell_reduce(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (!trusts(ch, victim))
 	{
-		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
+		std::snprintf(buf, static_cast<int>(MSL), "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 	}
@@ -3880,20 +3880,20 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (hardness <= 3)
 		{
-			sprintf(tovict2, "The sizzling acid seeps through your %s armor!",
+			std::snprintf(tovict2, static_cast<int>(MSL), "The sizzling acid seeps through your %s armor!",
 				material_table[armor->pIndexData->material_index].mat_name);
-			sprintf(tochar2, "The sizzling acid seeps through $N's %s armor!",
+			std::snprintf(tochar2, static_cast<int>(MSL), "The sizzling acid seeps through $N's %s armor!",
 				material_table[armor->pIndexData->material_index].mat_name);
-			sprintf(toroom2, "The sizzling acid seeps through $N's %s armor!",
+			std::snprintf(toroom2, static_cast<int>(MSL), "The sizzling acid seeps through $N's %s armor!",
 				material_table[armor->pIndexData->material_index].mat_name);
 		}
 		else
 		{
-			sprintf(tovict2, "The sizzling acid drips off your %s armor!",
+			std::snprintf(tovict2, static_cast<int>(MSL), "The sizzling acid drips off your %s armor!",
 				material_table[armor->pIndexData->material_index].mat_name);
-			sprintf(tochar2, "The sizzling acid drips off $N's %s armor!",
+			std::snprintf(tochar2, static_cast<int>(MSL), "The sizzling acid drips off $N's %s armor!",
 				material_table[armor->pIndexData->material_index].mat_name);
-			sprintf(toroom2, "The sizzling acid drips off $N's %s armor!",
+			std::snprintf(toroom2, static_cast<int>(MSL), "The sizzling acid drips off $N's %s armor!",
 				material_table[armor->pIndexData->material_index].mat_name);
 
 			dam /= 2;
@@ -3901,9 +3901,9 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 	else
 	{
-		sprintf(tovict2, "You shriek in agony as the acid burns your exposed flesh!");
-		sprintf(tochar2, "$N shrieks in agony as the acid burns $S exposed flesh!");
-		sprintf(toroom2, "$N shrieks in agony as the acid burns $S exposed flesh!");
+		std::snprintf(tovict2, static_cast<int>(MSL), "You shriek in agony as the acid burns your exposed flesh!");
+		std::snprintf(tochar2, static_cast<int>(MSL), "$N shrieks in agony as the acid burns $S exposed flesh!");
+		std::snprintf(toroom2, static_cast<int>(MSL), "$N shrieks in agony as the acid burns $S exposed flesh!");
 		dam *= 2;
 	}
 
@@ -3956,26 +3956,26 @@ void spell_acid_stream(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	switch (location)
 	{
 		case WEAR_ARMS:
-			sprintf(tochar3, "$N's arm goes limp as the acid sears $S flesh!");
-			sprintf(tovict3, "Your muscles clench as the acid sears your flesh!");
-			sprintf(toroom3, "$N's arm goes limp as the acid sears $S flesh!");
+			std::snprintf(tochar3, static_cast<int>(MSL), "$N's arm goes limp as the acid sears $S flesh!");
+			std::snprintf(tovict3, static_cast<int>(MSL), "Your muscles clench as the acid sears your flesh!");
+			std::snprintf(toroom3, static_cast<int>(MSL), "$N's arm goes limp as the acid sears $S flesh!");
 			af.duration = level / 10;
 			af.location = APPLY_STR;
 			af.modifier = -level / 10;
 			break;
 		case WEAR_LEGS:
-			sprintf(tochar3, "$N's legs buckle as the acid sears $S flesh!");
-			sprintf(tovict3, "Your legs buckle beneath you as the acid sears your flesh!");
-			sprintf(toroom3, "$N's legs buckle as the acid sears $S flesh!");
+			std::snprintf(tochar3, static_cast<int>(MSL), "$N's legs buckle as the acid sears $S flesh!");
+			std::snprintf(tovict3, static_cast<int>(MSL), "Your legs buckle beneath you as the acid sears your flesh!");
+			std::snprintf(toroom3, static_cast<int>(MSL), "$N's legs buckle as the acid sears $S flesh!");
 			af.duration = level / 10;
 			af.location = APPLY_DEX;
 			af.modifier = -level / 10;
 			LAG_CHAR(victim, PULSE_VIOLENCE);
 			break;
 		case WEAR_HEAD:
-			sprintf(tochar3, "$N shrieks in agony as the acid burns $S face!");
-			sprintf(tovict3, "The world dissolves into a haze of pain as acid sears your face!");
-			sprintf(toroom3, "$N shrieks in agony as the acid burns $S face!");
+			std::snprintf(tochar3, static_cast<int>(MSL), "$N shrieks in agony as the acid burns $S face!");
+			std::snprintf(tovict3, static_cast<int>(MSL), "The world dissolves into a haze of pain as acid sears your face!");
+			std::snprintf(toroom3, static_cast<int>(MSL), "$N shrieks in agony as the acid burns $S face!");
 			af.duration = 1;
 			af.location = APPLY_HITROLL;
 			af.modifier = -4;
@@ -4393,7 +4393,7 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (!trusts(ch, victim) && saves_spell(level, victim, DAM_OTHER))
 	{
 		send_to_char("They resisted your spell.\n\r", ch);
-		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
+		std::snprintf(buf, static_cast<int>(MSL), "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 		return;
@@ -4441,7 +4441,7 @@ void spell_grounding(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (!trusts(ch, victim))
 	{
-		sprintf(buf, "Die, %s, you sorcerous dog!", pers(ch, victim));
+		std::snprintf(buf, static_cast<int>(MSL), "Die, %s, you sorcerous dog!", pers(ch, victim));
 		do_myell(victim, buf, ch);
 		multi_hit(victim, ch, TYPE_UNDEFINED);
 	}
@@ -4489,7 +4489,7 @@ void spell_thunderclap(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(ch) && !is_npc(vch) && (ch->fighting == nullptr || vch->fighting == nullptr))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf,static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -4868,7 +4868,7 @@ void spell_heat_earth(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(ch) && !is_npc(vch) && (!ch->fighting || !vch->fighting))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -5143,7 +5143,7 @@ void concave_shell_move(CHAR_DATA *ch, int *dirptr, ROOM_INDEX_DATA *oldroom)
 				&& !is_affected_by(wch, AFF_CALM)
 				&& !IS_SET(ch->in_room->room_flags, ROOM_SAFE))
 			{
-				sprintf(buf, "As you hurtle along, %s suddenly obstructs your path!\n\r", pers(wch, ch));
+				std::snprintf(buf, static_cast<size_t>(MSL), "As you hurtle along, %s suddenly obstructs your path!\n\r", pers(wch, ch));
 				send_to_char(buf, ch);
 
 				WAIT_STATE(ch, PULSE_VIOLENCE);
@@ -5731,7 +5731,7 @@ void spell_hailstorm(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(ch) && !is_npc(vch) && (!ch->fighting || !vch->fighting))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<size_t>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -7130,7 +7130,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(vch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
@@ -7157,7 +7157,7 @@ void spell_plasma_bolt(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 		if (!is_npc(vch))
 		{
-			sprintf(buf, "Die, %s you sorcerous dog!", pers(ch, vch));
+			std::snprintf(buf, static_cast<int>(MSL), "Die, %s you sorcerous dog!", pers(ch, vch));
 			do_myell(vch, buf, ch);
 		}
 
