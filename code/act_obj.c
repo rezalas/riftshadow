@@ -3887,7 +3887,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (ch->gold < cost * number)
+		if (ch->gold < static_cast<long>(cost) * number)
 		{
 			if (number > 1)
 				act("$n tells you 'You can't afford to buy that many.", keeper, obj, ch, TO_VICT);
