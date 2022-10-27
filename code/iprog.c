@@ -55,7 +55,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
-#include "sorcerer.h"
+#include "characterClasses/sorcerer.h"
 #include "mprog.h"
 #include "room.h"
 #include "newmem.h"

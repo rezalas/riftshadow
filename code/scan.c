@@ -6,7 +6,7 @@
 #include "scan.h"
 #include "handler.h"
 #include "act_info.h"
-#include "zealot.h"
+#include "characterClasses/zealot.h"
 #include "comm.h"
 #include "interp.h"
 #include "db.h"

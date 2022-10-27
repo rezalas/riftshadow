@@ -21,7 +21,7 @@ set(RIFT_SOURCE config.cpp
 	fight.c
 	flags.c
 	handler.c
-	healer.c
+	characterClasses/healer.c
 	interp.c
 	lookup.c
 	note.c
@@ -45,19 +45,19 @@ set(RIFT_SOURCE config.cpp
 	aprog.c
 	titles.c
 	chardef.c
-	necro.c
+	characterClasses/necro.c
 	misc.c
-	sorcerer.c
+	characterClasses/sorcerer.c
 	help.c
 	quest.c
-	warrior.c
-	chrono.c
-	ap.c
-	thief.c
+	characterClasses/warrior.c
+	characterClasses/chrono.c
+	characterClasses/ap.c
+	characterClasses/thief.c
 	race.c
-	zealot.c
-	paladin.c
-	druid.c
+	characterClasses/zealot.c
+	characterClasses/paladin.c
+	characterClasses/druid.c
 	heal.c
 	olc.c
 	olc_act.c
@@ -70,7 +70,7 @@ set(RIFT_SOURCE config.cpp
 	newmem.c
 	mud.c
 	bootup.c
-	class.c
+	characterClasses/class.c
 	prof.c
 	vote.c
 	utility.c

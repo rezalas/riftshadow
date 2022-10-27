@@ -1,7 +1,7 @@
 #ifndef PALADIN_H
 #define PALADIN_H
 
-#include "merc.h"
+#include "../merc.h"
 
 //
 // LOCAL FUNCTIONS

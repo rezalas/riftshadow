@@ -68,7 +68,7 @@
 #include "mspec.h"
 #include "newmem.h"
 #include "handler.h"
-#include "sorcerer.h"
+#include "characterClasses/sorcerer.h"
 #include "act_wiz.h"
 #include "alias.h"
 #include "ban.h"

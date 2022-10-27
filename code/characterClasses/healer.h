@@ -1,7 +1,7 @@
 #ifndef HEALER_H
 #define HEALER_H
 
-#include "merc.h"
+#include "../merc.h"
 
 //
 // LOCAL FUNCTIONS

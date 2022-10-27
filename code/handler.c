@@ -46,7 +46,7 @@
 #include "act_info.h"
 #include "act_obj.h"
 #include "act_wiz.h"
-#include "warrior.h"
+#include "characterClasses/warrior.h"
 #include "fight.h"
 #include "skill.h"
 #include "newmem.h"
@@ -58,7 +58,7 @@
 #include "const.h"
 #include "material.h"
 #include "utility.h"
-#include "sorcerer.h"
+#include "characterClasses/sorcerer.h"
 #include "skills.h"
 
 /* friend stuff -- for NPC's mostly */

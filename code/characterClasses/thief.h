@@ -1,7 +1,7 @@
 #ifndef THIEF_H
 #define THIEF_H
 
-#include "merc.h"
+#include "../merc.h"
 
 
 //
