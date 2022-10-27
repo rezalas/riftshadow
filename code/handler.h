@@ -216,6 +216,7 @@ OBJ_DATA *get_obj_here (CHAR_DATA *ch, char *argument);
 OBJ_DATA *get_obj_world (CHAR_DATA *ch, char *argument);
 /* deduct cost from a character */
 void deduct_cost (CHAR_DATA *ch, int cost);
+void deduct_cost(CHAR_DATA *ch, long cost);
 /*
  * Create a 'money' obj.
  */

@@ -3646,62 +3646,23 @@ OBJ_DATA *get_obj_keeper(CHAR_DATA *ch, CHAR_DATA *keeper, char *argument)
 	return nullptr;
 }
 
-int get_cost(CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy)
+long get_cost(CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy)
 {
 	SHOP_DATA *pShop;
-	float cost;
+	long cost;
 
 	if (obj == nullptr || (pShop = keeper->pIndexData->pShop) == nullptr)
 		return 0;
 
-	cost = obj->cost * calculate_inflation();
+	cost = floor(obj->cost * calculate_inflation());
 
-	/*
-	else
-	{
-		OBJ_DATA *obj2;
-		int itype;
-
-		cost = 0;
-		for (itype = 0; itype < MAX_TRADE; itype++)
-		{
-			if (obj->item_type == pShop->buy_type[itype])
-			{
-				cost = (obj->cost * pShop->profit_sell / 100) * calculate_inflation();
-				break;
-			}
-		}
-
-		if (!is_obj_stat(obj,ITEM_SELL_EXTRACT))
-		{
-			for (obj2 = keeper->carrying; obj2; obj2 = obj2->next_content)
-			{
-				if (obj->pIndexData == obj2->pIndexData && !str_cmp(obj->short_descr,obj2->short_descr))
-				{
-					if (is_obj_stat(obj2,ITEM_INVENTORY))
-						cost /= 2;
-					else
-						cost = cost * 3 / 4;
-				}
-			}
-		}
-
-		if (obj->item_type == ITEM_STAFF || obj->item_type == ITEM_WAND)
-		{
-			if (obj->value[1] == 0)
-				cost /= 4;
-			else
-				cost = cost * obj->value[2] / obj->value[1];
-		}
-	}
-	*/
-
-	return (int)cost;
+	return cost;
 }
 
 void do_buy(CHAR_DATA *ch, char *argument)
 {
-	int cost, roll;
+	int roll;
+	long cost;
 	int i;
 
 	if (check_horde(ch))
@@ -3755,7 +3716,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			return;
 		}
 
-		cost = 10 * pet->level * pet->level;
+		cost = 10L * pet->level * pet->level;
 
 		if (ch->gold < cost)
 		{
@@ -3779,14 +3740,14 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			if (get_skill(ch, gsn_haggle) > 60)
 				cost -= cost / 3 * roll / 100;
 
-			sprintf(buf, "You haggle the price down to %d coins.\n\r", cost);
+			sprintf(buf, "You haggle the price down to %ld coins.\n\r", cost);
 
 			if (appraised && cost)
 			{
 				float mcost = cost * ch->Profs()->ProfEffect("appraising") / 100;
 				cost = (int)mcost;
 
-				sprintf(buf, "Knowing it is inflated, you argue the price down to %d coins.\n\r", cost);
+				sprintf(buf, "Knowing it is inflated, you argue the price down to %ld coins.\n\r", cost);
 			}
 
 			send_to_char(buf, ch);
@@ -3887,7 +3848,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (ch->gold < static_cast<long>(cost) * number)
+		if (ch->gold < cost * number)
 		{
 			if (number > 1)
 				act("$n tells you 'You can't afford to buy that many.", keeper, obj, ch, TO_VICT);
@@ -3933,9 +3894,9 @@ void do_buy(CHAR_DATA *ch, char *argument)
 
 			if (appraised && cost)
 			{
-				float mcost = cost * ch->Profs()->ProfEffect("appraising") / 100;
-				cost = (int)mcost;
-				sprintf(buf, "Knowing it is inflated, you argue the price down to %d coins.\n\r", cost);
+				float mcost = floor(cost * ch->Profs()->ProfEffect("appraising") / 100);
+				cost = static_cast<long>(mcost);
+				sprintf(buf, "Knowing it is inflated, you argue the price down to %ld coins.\n\r", cost);
 				send_to_char(buf, ch);
 			}
 			else
@@ -3947,7 +3908,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 		}
 
 		act("$n hands some gold to $N.", ch, 0, keeper, TO_ROOM);
-		sprintf(buf, "You hand $N %d gold.", cost * number);
+		sprintf(buf, "You hand $N %ld gold.", cost * number);
 		act(buf, ch, 0, keeper, TO_CHAR);
 
 		for (i = 0; i < number; i++)

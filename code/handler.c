@@ -2612,7 +2612,7 @@ OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
 ///
 /// Deduct a sum from a character's currency pool. If this would cause
 /// the character to have negative currency, it sets the value to 0 
-/// instead. 
+/// instead. Accepts an integer vs the standard long. 
 /// @param ch: The character to take from
 /// @param cost: The sum to deduct
 void deduct_cost(CHAR_DATA *ch, int cost)
@@ -2629,6 +2629,27 @@ void deduct_cost(CHAR_DATA *ch, int cost)
 		ch->gold = 0;
 	}
 }
+///
+/// Deduct a sum from a character's currency pool. If this would cause
+/// the character to have negative currency, it sets the value to 0 
+/// instead. 
+/// @param ch: The character to take from
+/// @param cost: The sum to deduct
+void deduct_cost(CHAR_DATA *ch, long cost)
+{
+	long gold = 0;
+
+	gold = std::min(ch->gold, cost);
+
+	ch->gold -= gold;
+
+	if (ch->gold < 0)
+	{
+		bug("deduct costs: gold %d < 0", ch->gold);
+		ch->gold = 0;
+	}
+}
+
 /*
  * Create a 'money' obj.
  */
