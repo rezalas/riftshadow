@@ -69,7 +69,7 @@ CHAR_DATA *find_keeper (CHAR_DATA *ch);
 void obj_to_keeper (OBJ_DATA *obj, CHAR_DATA *ch);
 /* get an object from a shopkeeper's list */
 OBJ_DATA *get_obj_keeper (CHAR_DATA *ch, CHAR_DATA *keeper, char *argument);
-int get_cost (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy);
+long get_cost (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy);
 void do_buy (CHAR_DATA *ch, char *argument);
 void do_list (CHAR_DATA *ch, char *argument);
 void do_sell (CHAR_DATA *ch, char *argument);
