@@ -3380,7 +3380,7 @@ PROFICIENCY for more information.
 ** The easiest way to report BUGS and TYPOS is on the Riftshadow forums.
 
 All ideas are welcome, and criticisms equally so.  You can communicate 
-with the immortals and other players at http://forums.riftshadow.org.
+with the immortals and other players at https://github.com/rezalas/riftshadow.
 
 We are still accepting immortal/builder applications via the standard 
 process (see HELP IMMING).
