@@ -35,7 +35,7 @@
 #include "act_info.h"
 #include "act_move.h"
 #include "act_wiz.h"
-#include "warrior.h"
+#include "characterClasses/warrior.h"
 #include "comm.h"
 #include "db.h"
 #include "bit.h"

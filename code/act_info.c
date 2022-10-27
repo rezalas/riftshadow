@@ -66,7 +66,7 @@
 #include "interp.h"
 #include "db.h"
 #include "db2.h"
-#include "zealot.h"
+#include "characterClasses/zealot.h"
 #include "help.h"
 #include "misc.h"
 #include "chardef.h"

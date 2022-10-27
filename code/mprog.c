@@ -31,9 +31,9 @@
 #include <string.h>
 #include <time.h>
 #include "mprog.h"
-#include "ap.h"
+#include "characterClasses/ap.h"
 #include "note.h"
-#include "necro.h"
+#include "characterClasses/necro.h"
 #include "magic.h"
 #include "interp.h"
 #include "recycle.h"
@@ -42,7 +42,7 @@
 #include "act_info.h"
 #include "act_move.h"
 #include "act_wiz.h"
-#include "thief.h"
+#include "characterClasses/thief.h"
 #include "fight.h"
 #include "act_obj.h"
 #include "save.h"

@@ -6,7 +6,7 @@
 #ifndef NECRO_H
 #define NECRO_H
 
-#include "merc.h"
+#include "../merc.h"
 
 //
 // LOCAL FUNCTIONS

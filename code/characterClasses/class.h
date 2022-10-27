@@ -2,7 +2,7 @@
 #define CLASS_H
 
 #include <stdio.h> //temp
-#include "rift.h"
+#include "../rift.h"
 /*
 #define CLASS_NONE          0
 #define CLASS_WARRIOR       1

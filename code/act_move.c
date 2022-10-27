@@ -55,8 +55,8 @@
 #include "db.h"
 #include "act_obj.h"
 #include "act_info.h"
-#include "sorcerer.h"
-#include "chrono.h"
+#include "characterClasses/sorcerer.h"
+#include "characterClasses/chrono.h"
 #include "update.h"
 #include "chardef.h"
 #include "const.h"
@@ -65,7 +65,7 @@
 #include "room.h"
 #include "skills.h"
 #include "lookup.h"
-#include "thief.h"
+#include "characterClasses/thief.h"
 
 char *const dir_name[] =
 {

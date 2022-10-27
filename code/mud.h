@@ -16,7 +16,7 @@
 #include "queue.h"
 #include "interp2.h"
 #include "skill.h"
-#include "class.h"
+#include "characterClasses/class.h"
 #include "race.h"
 #include "prof.h"
 #include "config.h"

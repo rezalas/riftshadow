@@ -38,7 +38,7 @@
 #include "tables.h"
 #include "lookup.h"
 #include "magic.h"
-#include "warrior.h"
+#include "characterClasses/warrior.h"
 #include "fight.h"
 #include "dioextra.h"
 #include "db.h"

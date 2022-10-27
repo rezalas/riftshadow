@@ -1,7 +1,7 @@
 #ifndef DRUID_H
 #define DRUID_H
 
-#include "merc.h"
+#include "../merc.h"
 
 //
 // LOCAL FUNCTIONS

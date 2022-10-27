@@ -46,7 +46,7 @@
 #include "tables.h"
 #include "recycle.h"
 #include "spec.h"
-#include "warrior.h"
+#include "characterClasses/warrior.h"
 #include "misc.h"
 #include "recycle.h"
 #include "iprog.h"

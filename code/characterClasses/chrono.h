@@ -1,7 +1,7 @@
 #ifndef CHRONO_H
 #define CHRONO_H
 
-#include "merc.h"
+#include "../merc.h"
 
 //
 // LOCAL FUNCTIONS

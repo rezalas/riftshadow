@@ -31,7 +31,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
-#include "sorcerer.h"
+#include "characterClasses/sorcerer.h"
 #include "comm.h"
 #include "newmem.h"
 #include "fight.h"

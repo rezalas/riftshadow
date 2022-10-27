@@ -1,7 +1,7 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 
-#include "merc.h"
+#include "../merc.h"
 
 //
 // LOCAL FUNCTIONS
