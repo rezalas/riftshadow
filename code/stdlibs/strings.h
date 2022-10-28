@@ -14,13 +14,14 @@
 
 #define DEFAULTCASE				true
 #define MAX_FORMATTED_SIZE		4096
-#define TSTR_LEN 2048
+#define TSTR_LEN 				2048
 #define MUNCH_VARARG(msg, str)	va_list arglist;va_start(arglist, msg);str.Format(arglist, msg);va_end(arglist);
 
 #define UPCHAR(c)				((c) >= 'a' && (c) <= 'z' ? (c) + 'A' - 'a' : (c))
 
 class RString
 {
+//friend class TString;
 public:
 	RString();
 	RString(const RString& nStr);
@@ -30,6 +31,7 @@ public:
 	/* OPERATORS */
 	
 	operator const char*() const;				/* you can use it as a const char * but MODIFY IT AND DIE!! (use getbuffer to mod) */
+//	RString& operator =(TString& str); 
 	RString& operator =(RString& str);			/* pointer-based copy [equiv to RString.Clone()] */
 	RString& operator =(const char *str);		/* sets RString to value */
 	RString operator +(const char *str);
@@ -80,6 +82,7 @@ protected:
 	void PrepForMod();
 	int RefCount();
 	void SetRefCount(int nRef);
+//	bool IsTString(void);						/* horrid hack */
 };
 
 class TString
@@ -88,6 +91,7 @@ public:
 	TString();
 	TString(const TString& nStr);
 	~TString();
+
 	/* OPERATORS */
 	
 	operator const char*() const;				/* you can use it as a const char * but MODIFY IT AND DIE!! (use getbuffer to mod) */

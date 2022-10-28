@@ -1,8 +1,7 @@
 #ifndef EXCEPTION
 #define EXCEPTION
-#ifndef BEENHERE
-	#include "tstring.h"
-#endif
+#include "strings.h"
+
 extern void bug(const char *bugstr, ...);
 
 class Exception
