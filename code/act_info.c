@@ -79,7 +79,7 @@
 #include "./include/fmt/printf.h"
 
 #define DEBUG_LOG_FILE	"debug.txt"
-#define GOD_LOG_FILE	"glog.txt"
+#define GOD_LOG_FILE	RIFT_ROOT_DIR "/logs/glog.txt"
 
 char *const where_name[] = {
 	"<used as light>     ",

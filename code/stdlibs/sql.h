@@ -23,6 +23,7 @@ public:
 class CSQLInterface
 {
 public:
+	CSQLInterface(Config conf);
 	CSQLInterface();
 	~CSQLInterface();
 	bool 		StartSQLServer(const char* host, const char* db, const char* user, const char* pass);		//called at boot

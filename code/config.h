@@ -13,6 +13,7 @@ private:
 	const char* _FilePath;
 	bool loaded;
 	void Load();
+	//void SaveSettings();
 public:
 	Config(const char* file = "../config.json");
 	std::string GetValue(const char* key);

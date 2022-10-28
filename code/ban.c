@@ -45,9 +45,6 @@
 #include "db.h"
 #include "./include/fmt/format.h"
 
-#define BAN_FILE RIFT_AREA_DIR "/ban.txt"
-
-
 /// Determines if a player has been banned.
 /// @param usite: The IP address or DNS name of the computer that the player uses to connect.
 /// @param type: The type of ban in place. Valid input is either NBAN_ALL or NBAN_NEWBIE.

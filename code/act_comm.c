@@ -67,9 +67,10 @@
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
 
-#define PDEATH_LOG_FILE	RIFT_AREA_DIR "/permdeaths.txt"
-#define DEATH_LOG_FILE	RIFT_AREA_DIR "/tempdeaths.txt"
-#define MOB_LOG_FILE	RIFT_AREA_DIR "/mobdeaths.txt"
+#define PDEATH_LOG_FILE	RIFT_ROOT_DIR "/logs/permdeaths.txt"
+#define DEATH_LOG_FILE	RIFT_ROOT_DIR "/logs/tempdeaths.txt"
+#define MOB_LOG_FILE	RIFT_ROOT_DIR "/logs/mobdeaths.txt"
+#define PRAYER_FILE 	RIFT_ROOT_DIR "/logs/prays.txt"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)
@@ -1092,7 +1093,7 @@ void do_pray(CHAR_DATA *ch, char *argument)
 
 	char buf[MAX_STRING_LENGTH];
 
-	auto fp = fopen(RIFT_AREA_DIR "/prays.txt", "a");
+	auto fp = fopen(PRAYER_FILE, "a");
 	if (fp)
 	{
 		sprintf(buf, "%s: %s [%d] is PRAYing for: %s\n",

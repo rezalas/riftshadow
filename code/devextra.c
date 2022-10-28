@@ -39,6 +39,8 @@
 #include "update.h"
 #include "./include/fmt/format.h"
 
+#define DEMO_LOG_FILE	RIFT_ROOT_DIR "/logs/demo.txt"
+
 bool IS_IMP(CHAR_DATA *ch)
 {
 	if (get_trust(ch) == MAX_LEVEL)
@@ -738,7 +740,7 @@ void do_demo(CHAR_DATA *ch, char *name)
 	send_to_char(buf, ch);
 	return;
 
-	fp = fopen("demo.txt", "r");
+	fp = fopen(DEMO_LOG_FILE, "r");
 	if (!fp)
 	{
 		send_to_char("Error opening demographics.\n\r", ch);

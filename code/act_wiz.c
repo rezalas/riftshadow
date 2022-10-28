@@ -74,10 +74,6 @@
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
 
-#define GOD_LOG_FILE	"glog.txt"
-
-
-
 AREA_DATA *area_first;
 unsigned int *gDebug;
 

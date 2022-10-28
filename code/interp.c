@@ -94,7 +94,6 @@
 #define LOG_ALWAYS		1
 #define LOG_NEVER		2
 
-#define LAST_COMMAND 	"lastcommand.txt"
 
 bool command_result= false;
 char *command_line;

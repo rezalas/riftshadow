@@ -55,7 +55,6 @@
 #include "skills.h"
 #include "db.h"
 
-#define LOGIN_LOG_FILE			"logins.txt"
 //#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
 
 

@@ -1,8 +1,10 @@
 #include "config.h"
-#include "include/rapidjson/document.h"
 #include <iostream>
+#include "include/rapidjson/document.h"
+#include "include/rapidjson/writer.h"
 #include "include/rapidjson/rapidjson.h"
 #include "include/rapidjson/filereadstream.h"
+#include "include/rapidjson/filewritestream.h"
 
 void Config::Load()
 {
@@ -15,6 +17,7 @@ void Config::Load()
     fclose(fp);
     loaded = true;
 }
+
 std::string Config::GetValue(const char* key)
 {
     if(Settings.HasMember(key))
@@ -32,6 +35,8 @@ std::string Config::GetValue(const char* key)
 
     return nullptr;
 }
+
+
 DbConnection Config::GetDbConnection(const char* connection)
 {
     auto conn = Settings["DbConnections"][connection].GetObject();
