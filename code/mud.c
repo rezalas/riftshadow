@@ -19,11 +19,19 @@
 #include "db2.h"
 #include "misc.h"
 
+#define LOGIN_BANNER_FILE	RIFT_ROOT_DIR "/configs/login_banner.txt"
 
 CMud RS;
 
 CMud::CMud()
 {
+	Settings = Config(CONFIG_FILE);
+	
+	if (!Settings.isLoaded())
+	{
+		RS.Bug("Unable to load configuration!\r\n");
+		exit(0);
+	}		
 }
 
 CMud::~CMud()
@@ -58,8 +66,6 @@ bool CMud::Bootup()
 		RS.LoadOptions();
 
 		InitializeTables();
-		
-		RS.Log("Initializing host sockets...");
 
         RS.Log("Initialize random number generator...");
         init_mm();
@@ -100,16 +106,14 @@ bool CMud::Bootup()
 		weather_update();
 		RS.Log("Priming weather");
 		reset_chessboard();
-		fp = fopen(RIFT_AREA_DIR "/login.txt", "r");
+		fp = fopen(LOGIN_BANNER_FILE, "r");
 		while(fgets(tempbuf,200,fp))
 		{
 			strcat(buf,tempbuf);
 			strcat(buf,"\r");
 		}
 		fclose(fp);
-		fp = fopen(RIFT_AREA_DIR "/gold.txt", "r");
-		gold_constant = fread_number(fp);
-		fclose(fp);
+		gold_constant = std::stol(Settings.GetValue("Gold"));
 		chop(buf);
 		chop(buf);
 		help_greeting = palloc_string(buf);

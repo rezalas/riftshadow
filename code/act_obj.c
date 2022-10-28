@@ -65,7 +65,7 @@
 #include "skills.h"
 #include "./include/fmt/format.h"
 
-#define CABAL_ITEMS_FILE	"citems.txt"
+#define CABAL_ITEMS_FILE	RIFT_ROOT_DIR "/docs/citems.txt"
 #define MINOTAUR_ONLY		ASCII_I
 
 /* RT part of the corpse looting code */

@@ -2,7 +2,7 @@
 #define ACT_INFO_H
 
 #include "merc.h"
-
+#define GOD_LOG_FILE	RIFT_ROOT_DIR "/logs/glog.txt"
 //
 // TODO: UNKNOWN FUNCTIONS
 //

@@ -3143,15 +3143,12 @@ void save_demos()
 	//gold constant....
 	*/
 
-	FILE *fp;
+	//auto settings = CMud::GetSettings();
+	//settings.SetValue("Gold", gold_constant);
+	//settings.SaveSettings();
 
-	if (!(fp = fopen(RIFT_AREA_DIR "/gold.txt", "w")))
-		return;
-
-	fprintf(fp, "%ld", gold_constant);
-	fclose(fp);
 	/*
-	if(!(fp=fopen("demo.txt","w")))
+	if(!(fp=fopen(DEMO_LOG_FILE,"w")))
 		return bug("Error opening demographics.",0);
 	conn = open_conn();
 	//racial crap

@@ -35,7 +35,7 @@ public:
 	CSQLInterface		SQL;
 //	CInterpreter		Interpreter;
 	CQueue				Queue;
-
+	Config				Settings;
 	bool				Bootup();
 	void				Shutdown();
 
@@ -46,6 +46,7 @@ public:
 	void				LoadObjLimits();
 	void				LoadTime();
 	void				InitializeTables();		//load up the big old lists of classes, races, etc etc etc
+	Config				GetSettings();
 
 	/* warning, log and debug reporting functions
 	 * 0 - errors [bugs] & logged events only

@@ -972,7 +972,7 @@ void bugout(char *reason)
 {
 	FILE *fp;
 	bug(reason, 0);
-	fp = fopen(RIFT_AREA_DIR "/bugout.txt", "a");
+	fp = fopen(RIFT_ROOT_DIR "../logs/bugout.txt", "a");
 	fprintf(fp, "%s\n", reason);
 	fclose(fp);
 	exit(3);

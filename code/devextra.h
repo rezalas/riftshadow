@@ -5,10 +5,10 @@
 #include "merc.h"
 #include "handler.h"
 
-#define LOGIN_LOG_FILE			"logins.txt"
-#define BOUNTY_LOG_FILE			"bounties.txt"
+#define LOGIN_LOG_FILE			RIFT_ROOT_DIR "/logs/logins.txt"
+#define BOUNTY_LOG_FILE			RIFT_ROOT_DIR "/logs/bounties.txt"
 //#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
-#define HISTORY_FILE			"history.txt"
+#define HISTORY_FILE			RIFT_ROOT_DIR "/logs/history.txt"
 
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);
 #define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,nullptr,nullptr),obj);

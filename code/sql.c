@@ -7,13 +7,7 @@ CSQLInterface::CSQLInterface(void)
 {
 	connstate = STATE_INVALID;
 	result_set = nullptr;
-	Settings = Config("../config.json");
-	if (!Settings.isLoaded())
-	{
-		RS.Bug("Unable to load configuration!\r\n");
-		exit(0);
-	}
-	return;
+	Settings = Config(CONFIG_FILE);
 }
 
 CSQLInterface::~CSQLInterface(void)

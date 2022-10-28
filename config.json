@@ -19,5 +19,7 @@
                "Pwd" : "rift123",
                "Db" : "riftforum"
           }
-     }
+     },
+	 "PlayerDir": "./player/",
+	 "Gold" : 80000
 }

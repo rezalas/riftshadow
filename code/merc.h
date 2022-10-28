@@ -3301,22 +3301,18 @@ extern QUEUE_DATA *global_queue;
 #define TEMP_FILE					RIFT_PLAYER_DIR "/romtmp"
 #define PLAYER_LIST					RIFT_PLAYER_DIR "/Player.lst"				// Player list for limits
 #define AREA_LIST					RIFT_AREA_DIR "/area.lst"					// List of areas
-#define BUG_FILE					RIFT_AREA_DIR "/bugs.txt"					// For 'bug' and bug()
-#define TYPO_FILE					RIFT_AREA_DIR "/typos.txt"					// For 'typo'
-#define IDEAS_FILE					RIFT_AREA_DIR "/ideas.txt"					// For ideas!
-#define IDEA_FILE					RIFT_AREA_DIR "/ideas.not"
-#define PENALTY_FILE				RIFT_AREA_DIR "/penal.not"
-#define NEWS_FILE					RIFT_AREA_DIR "/news.not"
-#define CHANGES_FILE				RIFT_AREA_DIR "/chang.not"
+#define BUG_FILE					RIFT_ROOT_DIR "/logs/bugs.txt"					// For 'bug' and bug()
+#define TYPO_FILE					RIFT_ROOT_DIR "/logs/typos.txt"					// For 'typo'
+#define IDEAS_FILE					RIFT_ROOT_DIR "/docs/ideas.txt"					// For ideas!
 #define MULT_EXP					5
 
 //**********************************************
 //						OLC
 // *********************************************
-
 //
 // Object defined in limbo.are
 // Used in save.c to load objects that don't exist.
+//
 //
 
 #define OBJ_VNUM_DUMMY				70
