@@ -74,6 +74,11 @@
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
 
+#define RACE_DUMP_FILE RIFT_ROOT_DIR "/logs/racdump.txt"
+#define CLIMATE_DUMP_FILE RIFT_ROOT_DIR "/logs/climate-dump.txt"
+#define INTERP_DUMP_FILE RIFT_ROOT_DIR "/logs/interpdump.txt"
+#define CONST_DUMP_FILE RIFT_ROOT_DIR "/logs/constdump.txt"
+
 AREA_DATA *area_first;
 unsigned int *gDebug;
 
@@ -7634,7 +7639,7 @@ void buglist_end_fun(CHAR_DATA *ch, char *argument)
 
 void do_constdump(CHAR_DATA *ch, char *argument)
 {
-	FILE *fp = fopen(RIFT_CODE_DIR "/constdump.txt", "w"), *fp2;
+	FILE *fp = fopen(CONST_DUMP_FILE, "w"), *fp2;
 	int sn, i;
 
 	if (!fp)
@@ -7709,7 +7714,7 @@ void do_constdump(CHAR_DATA *ch, char *argument)
 
 void do_interpdump(CHAR_DATA *ch, char *argument)
 {
-	FILE *fp = fopen(RIFT_CODE_DIR "/interpdump.txt", "w");
+	FILE *fp = fopen(INTERP_DUMP_FILE, "w");
 	int i = 0, j = 0, k = 0;
 	int bit = 0;
 
@@ -7727,7 +7732,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 	}
 	fclose(fp);
 
-	fp = fopen(RIFT_CODE_DIR "/climate-dump.txt", "w");
+	fp = fopen(CLIMATE_DUMP_FILE, "w");
 
 	for (i = 0; climate_table[i].number != Climate::English; i++)
 	{
@@ -7771,7 +7776,7 @@ void do_interpdump(CHAR_DATA *ch, char *argument)
 
 void do_racedump(CHAR_DATA *ch, char *argument)
 {
-	FILE *fp = fopen(RIFT_CODE_DIR "/racdump.txt", "w");
+	FILE *fp = fopen(RACE_DUMP_FILE, "w");
 	int race = 0, i = 0;
 	long temp_bit = 0;
 	char buf[MSL];
