@@ -8,9 +8,8 @@
 #include <string.h>
 #include <ctype.h>
 #include "../rift.h"
-#ifndef BEENHERE
+
 //	#define throwbug(...) throw Exception(__FILE__, __LINE__, __VA_ARGS__);
-#endif
 
 #define MAX_WORD_LENGTH 2048
 //TODO: MAX_STRING_LENGTH also defined in merc.h. Only referenced in the ReadString method in file.c. 

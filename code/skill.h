@@ -1,14 +1,13 @@
 #ifndef SKILL_H
 #define SKILL_H
 
+#include "rift.h"
+
 /*
  * Replacement for const.c skill/spell table.
  * As well as anything with a gsn.
- */
-#ifndef BEENHERE
-//#include "stdlibs/funcptr.h"
-#include "rift.h"
-#endif
+*/
+
 class CSkill
 {
 public:
