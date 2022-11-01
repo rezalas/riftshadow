@@ -50,6 +50,8 @@
 #include "comm.h"
 #include "misc.h"
 
+#define AREA_DUMP_FILE RIFT_ROOT_DIR "/logs/area-dump.txt"
+
 char *fix_string(const char *str)
 {
 	static char strfix[MAX_STRING_LENGTH];
@@ -939,7 +941,7 @@ void save_area(AREA_DATA *pArea)
 	if(returnCode != 0) // mv returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
 		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
-	buffer = std::string("touch " RIFT_CODE_DIR "/area-dump.txt");
+	buffer = std::string("touch " AREA_DUMP_FILE);
 	returnCode = system(buffer.c_str());
 	if(returnCode != 0) // couldn't find exit code for touch, assuming touch returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
 		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
