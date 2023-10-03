@@ -1815,7 +1815,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				else
 					do_help(ch, argument);
 
-				write_to_buffer(d, "\n\rWhat is your race (type 'help' for more information)?", 0);
+				write_to_buffer(d, "\n\rWhat is your race (type 'help' for more information)? ", 0);
 				break;
 			}
 
@@ -1849,7 +1849,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 					}
 				}
 
-				write_to_buffer(d, "\n\rWhat is your race? (type 'help' for more information)", 0);
+				write_to_buffer(d, "\n\rWhat is your race (type 'help' for more information)? ", 0);
 				break;
 			}
 
@@ -1989,7 +1989,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 					do_help(ch, "class");
 				else
 					do_help(ch, argument);
-				write_to_buffer(d, "\n\rChoose your class (type 'help' for more information):", 0);
+				write_to_buffer(d, "\n\rChoose your class (type 'help' for more information): ", 0);
 				break;
 			}
 
@@ -2114,7 +2114,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				else
 					do_help(ch, argument);
 
-				write_to_buffer(d, "\n\rChoose your Material focus [Air/Earth] (type 'help' for more information):", 0);
+				write_to_buffer(d, "\n\rChoose your Material focus [Air/Earth] (type 'help' for more information): ", 0);
 				break;
 			}
 
@@ -2122,7 +2122,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			if (ele_num != ELE_AIR && ele_num != ELE_EARTH)
 			{
-				write_to_buffer(d, "That is not a valid element.\n\rChoose your Material focus [Air/Earth] (type 'help' for more information):", 0);
+				write_to_buffer(d, "That is not a valid element.\n\rChoose your Material focus [Air/Earth] (type 'help' for more information): ", 0);
 				return;
 			}
 
@@ -2131,7 +2131,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			sprintf(buf, "You have chosen a Material focus of %s.\n\r", sphere_table[ele_num].name);
 			write_to_buffer(d, buf, 0);
 
-			sprintf(buf, "\n\rChoose your Dynamic focus [Water/Electricity] (type 'help' for more information:");
+			sprintf(buf, "\n\rChoose your Dynamic focus [Water/Electricity] (type 'help' for more information): ");
 			write_to_buffer(d, buf, 0);
 
 			d->connected = CON_GET_DYNAMIC;
@@ -2148,7 +2148,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				else
 					do_help(ch, argument);
 
-				write_to_buffer(d,"\n\rChoose your Dynamic focus [Water/Electricity] (type 'help' for more information):", 0);
+				write_to_buffer(d,"\n\rChoose your Dynamic focus [Water/Electricity] (type 'help' for more information): ", 0);
 				break;
 			}
 
@@ -2156,7 +2156,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 
 			if (ele_num != ELE_WATER && ele_num != ELE_ELECTRICITY)
 			{
-				write_to_buffer(d, "That is not a valid element.\n\rChoose your Dynamic focus [Water/Electricity] (type 'help' for more information):", 0);
+				write_to_buffer(d, "That is not a valid element.\n\rChoose your Dynamic focus [Water/Electricity] (type 'help' for more information): ", 0);
 				return;
 			}
 
@@ -2188,7 +2188,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				else
 					do_help(ch, argument);
 
-				write_to_buffer(d, "\n\rChoose your elemental foci (type 'help' for more information):", 0);
+				write_to_buffer(d, "\n\rChoose your elemental foci (type 'help' for more information): ", 0);
 				break;
 			}
 
