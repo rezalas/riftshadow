@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include "rift.h"
 #include "area.h"
 #include "room.h"
 #include "exit.h"
@@ -316,7 +317,7 @@ void CMud::LoadOptions()
 void CMud::LoadGreetingScreen()
 {
 	//can't use cfile because of weird \r action
-	FILE *fp = fopen(GREET_FILE, "r");
+	FILE *fp = fopen(LOGIN_BANNER_FILE, "r");
 	char tempbuf[210], buf[4096];
 	int i;
 	buf[0] = '\0';
