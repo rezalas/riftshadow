@@ -19,7 +19,6 @@
 #include "db2.h"
 #include "misc.h"
 
-#define LOGIN_BANNER_FILE	RIFT_ROOT_DIR "/configs/login_banner.txt"
 
 CMud RS;
 
