@@ -1,0 +1,22 @@
+areas:
+- area/**
+
+characters:
+- code/characterClasses/**
+
+tests:
+- tests/**
+
+admin:
+- admin/**
+
+docs:
+- docs/**
+
+core:
+- code/**
+
+setup:
+- Makefile
+- *.sql
+- *.sh
