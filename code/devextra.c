@@ -40,8 +40,6 @@
 #include "update.h"
 #include "./include/fmt/format.h"
 
-#define DEMO_LOG_FILE	RIFT_ROOT_DIR "/logs/demo.txt"
-
 bool IS_IMP(CHAR_DATA *ch)
 {
 	if (get_trust(ch) == MAX_LEVEL)
