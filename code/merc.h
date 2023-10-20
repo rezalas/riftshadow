@@ -3277,33 +3277,6 @@ private:
 extern const struct class_type class_table[MAX_CLASS];
 extern QUEUE_DATA *global_queue;
 
-//
-// Data files used by the server.
-//
-// AREA_LIST contains a list of areas to boot.
-// All files are read in completely at bootup.
-// Most output files (bug, idea, typo, shutdown) are append-only.
-//
-// The NULL_FILE is held open so that we have a stream handle in reserve,
-//   so players can go ahead and telnet to all the other descriptors.
-// Then we close it whenever we need to open a file (e.g. a save file).
-//
-
-#ifdef __unix__
-	#define NULL_FILE				"/dev/null"				// To reserve one stream
-#elif _WIN32
-	#define NULL_FILE 				RIFT_ROOT_DIR "/nul"	// win32 equiv to /dev/null
-#endif
-
-#define TEMP_GREP_RESULTS 			RIFT_TEMP_DIR "/tempgrepresults.tmp" 		// Temporary grep results
-#define TEMP_GREP_RESULTS_TWO 		RIFT_TEMP_DIR "/temp/tempgrepresults2.tmp"
-#define GOD_DIR						RIFT_ROOT_DIR "/gods/"						// list of gods
-#define TEMP_FILE					RIFT_PLAYER_DIR "/romtmp"
-#define PLAYER_LIST					RIFT_PLAYER_DIR "/Player.lst"				// Player list for limits
-#define AREA_LIST					RIFT_AREA_DIR "/area.lst"					// List of areas
-#define BUG_FILE					RIFT_ROOT_DIR "/logs/bugs.txt"					// For 'bug' and bug()
-#define TYPO_FILE					RIFT_ROOT_DIR "/logs/typos.txt"					// For 'typo'
-#define IDEAS_FILE					RIFT_ROOT_DIR "/docs/ideas.txt"					// For ideas!
 #define MULT_EXP					5
 
 //**********************************************
