@@ -1,4 +1,9 @@
 ---
+--- Set the database name
+---
+use rift;
+
+---
 --- Import data
 ---
 SELECT 'Importing bans data' AS ' ';
