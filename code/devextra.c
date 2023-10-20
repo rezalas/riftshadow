@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <iterator>
 #include "devextra.h"
+#include "rift.h"
 #include "magic.h"
 #include "recycle.h"
 #include "db.h"
