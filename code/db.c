@@ -42,6 +42,7 @@
 #include <algorithm>
 #include "db.h"
 #include "db2.h"
+#include "rift.h"
 #include "recycle.h"
 #include "lookup.h"
 #include "tables.h"
@@ -1197,7 +1198,7 @@ void load_cabal_items(void)
 	if (mPort != 9999)
 		return;
 
-	fp = fopen("citems.txt", "r");
+	fp = fopen(CABAL_ITEMS_FILE, "r");
 
 	if (!fp)
 		return;

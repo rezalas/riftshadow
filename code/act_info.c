@@ -47,6 +47,7 @@
 #endif
 
 #include "act_info.h"
+#include "rift.h"
 #include "weather_enums.h"
 #include "handler.h"
 #include "magic.h"
@@ -77,9 +78,6 @@
 #include "save.h"
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
-
-#define DEBUG_LOG_FILE	"debug.txt"
-#define GOD_LOG_FILE	RIFT_ROOT_DIR "/logs/glog.txt"
 
 char *const where_name[] = {
 	"<used as light>     ",

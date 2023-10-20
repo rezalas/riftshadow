@@ -38,6 +38,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include "act_obj.h"
+#include "rift.h"
 #include "handler.h"
 #include "magic.h"
 #include "tables.h"
@@ -65,7 +66,6 @@
 #include "skills.h"
 #include "./include/fmt/format.h"
 
-#define CABAL_ITEMS_FILE	RIFT_ROOT_DIR "/docs/citems.txt"
 #define MINOTAUR_ONLY		ASCII_I
 
 /* RT part of the corpse looting code */

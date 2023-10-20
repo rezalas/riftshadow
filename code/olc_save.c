@@ -33,6 +33,7 @@
 #include <time.h>
 #include <algorithm>
 #include "olc_save.h"
+#include "rift.h"
 #include "handler.h"
 #include "olc.h"
 #include "tables.h"
@@ -49,8 +50,6 @@
 #include "prof.h"
 #include "comm.h"
 #include "misc.h"
-
-#define AREA_DUMP_FILE RIFT_ROOT_DIR "/logs/area-dump.txt"
 
 char *fix_string(const char *str)
 {

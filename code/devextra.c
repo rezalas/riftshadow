@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <iterator>
 #include "devextra.h"
+#include "rift.h"
 #include "magic.h"
 #include "recycle.h"
 #include "db.h"
@@ -38,8 +39,6 @@
 #include "skills.h"
 #include "update.h"
 #include "./include/fmt/format.h"
-
-#define DEMO_LOG_FILE	RIFT_ROOT_DIR "/logs/demo.txt"
 
 bool IS_IMP(CHAR_DATA *ch)
 {
