@@ -7,6 +7,7 @@
 | Table of Contents |
 | ------------------ |
 |**[Summary](#summary)**|
+|**[Original Contributors](#original-contributors)**|
 |**[Goals](#goals)**|
 |**[Contributing](#contributing)**|
 |**[Build Requirements](#build-requirements)**|
@@ -19,6 +20,9 @@ Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MU
 The primary goals for this community are to restore RS to a fully-functional state capable of operating on modern hardware with all features finished and bugs eliminated or codified as features.
 
 Preservation of the game for future generations requires  adapting the code to be easier to read and maintain, but without changing the feel of the core gameplay.
+
+## Original Contributors
+Original DikuMUD (c) Hans Staerfeldt, Katya Nyboe, Tom Madsen, Michael Seifert, and Sebastian Hammer - Based on ROM 2.4 
 
 ## Goals
 
