@@ -30,6 +30,8 @@ libRiftCore.a
 player/*.plr
 player/Player.lst
 
+
+
 # Binaries
 rift
 code/rift
@@ -49,3 +51,6 @@ tests/libTestMain.a
 /vendor
 /Homestead.json
 /Homestead.yaml
+
+# Database Files
+!/db/rift/
