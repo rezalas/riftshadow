@@ -39,6 +39,7 @@
 #include <time.h>
 #include <iterator>
 #include "act_wiz.h"
+#include "rift.h"
 #include "prof.h"
 #include "weather_enums.h"
 #include "db2.h"
@@ -73,11 +74,6 @@
 #include "misc.h"
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
-
-#define RACE_DUMP_FILE RIFT_ROOT_DIR "/logs/racdump.txt"
-#define CLIMATE_DUMP_FILE RIFT_ROOT_DIR "/logs/climate-dump.txt"
-#define INTERP_DUMP_FILE RIFT_ROOT_DIR "/logs/interpdump.txt"
-#define CONST_DUMP_FILE RIFT_ROOT_DIR "/logs/constdump.txt"
 
 AREA_DATA *area_first;
 unsigned int *gDebug;
