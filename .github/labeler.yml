@@ -20,3 +20,15 @@ setup:
 - Makefile
 - *.sql
 - *.sh
+
+dev-install:
+- dev-install.sh
+
+db:
+- db/**
+
+db-rift:
+- db/rift/**
+
+db-rift-core:
+- db/rift_core/**
