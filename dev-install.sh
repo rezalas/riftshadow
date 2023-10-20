@@ -68,6 +68,15 @@ mySqlPresent=$(type mysql >/dev/null 2>&1 && echo true || echo false)
 if $mySqlPresent; then
 	echo "${GREEN}A MySQL distribution found!"
 	echo "${GREEN}You are currently using: ${NOCOLOR}$(mysqld --version)\n"
+
+	{
+		sudo service mariadb start
+		sudo service mariadb status
+	} || {
+		sudo service mysqld start
+		sudo service mysqld status
+	}
+
 else
 	echo "${YELLOW}No MySQL distribution found, installing MariaDB now.\n${NOCOLOR}"
 	sudo apt-get install -y libmariadb-dev libmariadb-dev-compat mariadb-client mariadb-server
@@ -88,10 +97,25 @@ fi
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
 
 # Setup Database
-echo "${NOCOLOR}Running setup.sql\n"
+echo "${NOCOLOR}Running database scaffolding\n"
 {
-	sudo mysql -v mysql < setup.sql 
+	cd ./db/rift_core/tables
+	sudo mysql -v mysql < ./setup.sql
+	
+	cd ../data
+	sudo mysql -v mysql < ./setup.sql
+	
+	cd ../../../db/rift/tables
+	sudo mysql -v mysql < ./setup.sql
+	
+	cd ../data
+	sudo mysql -v mysql < ./setup.sql
+
+	cd ../../mysql
+	sudo mysql -v mysql < ./setup.sql
 } ||
 { # log that there was an error and to check the MySQL settings
 	echo "${RED}There was a problem running setup.sql on your local server. Inspect the error above"
 }
+
+echo "${GREEN}Database scaffolding successful! Huzzah!"
