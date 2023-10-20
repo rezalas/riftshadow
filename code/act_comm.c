@@ -40,6 +40,7 @@
 #include <time.h>
 #include <mysql.h>
 #include "act_comm.h"
+#include "rift.h"
 #include "recycle.h"
 #include "tables.h"
 #include "olc.h"
@@ -66,11 +67,6 @@
 #include "update.h"
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
-
-#define PDEATH_LOG_FILE	RIFT_ROOT_DIR "/logs/permdeaths.txt"
-#define DEATH_LOG_FILE	RIFT_ROOT_DIR "/logs/tempdeaths.txt"
-#define MOB_LOG_FILE	RIFT_ROOT_DIR "/logs/mobdeaths.txt"
-#define PRAYER_FILE 	RIFT_ROOT_DIR "/logs/prays.txt"
 
 /* RT code to delete yourself */
 void do_delet(CHAR_DATA *ch, char *argument)
