@@ -1,4 +1,9 @@
 ---
+--- Set the database name
+---
+use rift_core;
+
+---
 --- Import data
 ---
 
