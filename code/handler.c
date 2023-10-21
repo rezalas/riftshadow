@@ -3188,7 +3188,7 @@ char *extra_bit_name(long extra_flags[])
 		strcat(buf, " anti-lawful");
 
 	if (IS_SET(extra_flags, ITEM_ANTI_NEUT))
-		strcat(buf, " anti-neutrale");	// TODO: should this be anti-neutral
+		strcat(buf, " anti-neutral");
 
 	if (IS_SET(extra_flags, ITEM_ANTI_CHAOTIC))
 		strcat(buf, " anti-chaotic");
