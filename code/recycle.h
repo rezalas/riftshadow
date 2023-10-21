@@ -108,7 +108,7 @@ void free_affect_area(AREA_AFFECT_DATA *af);
 /* object recycling */
 OBJ_DATA *new_obj(void);
 void free_obj(OBJ_DATA *obj);
-/* character recyling */
+/* character recycling */
 CHAR_DATA *new_char(void);
 void free_char(CHAR_DATA *ch);
 PC_DATA *new_pcdata(void);

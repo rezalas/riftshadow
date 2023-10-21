@@ -258,7 +258,7 @@ bool CProficiencies::HasProf(char *profname)
 	return hasProf;
 }
 
-/// Retrieves the level of procificiency in the proficiency table by the specific psn.
+/// Retrieves the level of proficiency in the proficiency table by the specific psn.
 /// @param psn: The psn used to retrieve the level.
 /// @returns The level of the retrieved proficiency. (Default: -1)
 int CProficiencies::GetProf(int psn)
@@ -318,7 +318,7 @@ void CProficiencies::GetProfsTaughtByTrainer(char_data* ch, char_data* trainer)
 	}
 }
 
-/// Trains a specific character in a specific profciency taught by a specific trainer.
+/// Trains a specific character in a specific proficiency taught by a specific trainer.
 /// @param ch: The character to train.
 /// @param trainer: The trainer whom trains the character.
 /// @param argument: The proficiency being trained.
@@ -418,7 +418,7 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 
 /// Retrieves a proficiency by a specific psn.
 /// @param psn: The psn of the proficiency to retrieve.
-/// @returns The procificiency with the given psn. (Default: uninitialized proficiency)
+/// @returns The proficiency with the given psn. (Default: uninitialized proficiency)
 proficiency_type CProficiencies::GetProficiency(int psn)
 {
 	proficiency_type result = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
@@ -432,7 +432,7 @@ proficiency_type CProficiencies::GetProficiency(int psn)
 
 /// Retrieves a proficiency by a specific name.
 /// @param profname: The name of the proficiency to retrieve.
-/// @returns The procificiency with the given name. (Default: uninitialized proficiency)
+/// @returns The proficiency with the given name. (Default: uninitialized proficiency)
 proficiency_type CProficiencies::GetProficiency(char* profname)
 {
 	proficiency_type result = { &psn_none, "", 0, 0, nullptr, PFLAGS_NONE };
@@ -571,7 +571,7 @@ void CProficiencies::ListBasicProficiencies(char_data* player)
 	send_to_char("\n\rMany other proficiencies are known to Shalaran adventurers, but you must first find a teacher.\n\r", player);
 }
 
-/// Assigns a specific chanracter to these proficiencies.
+/// Assigns a specific character to these proficiencies.
 /// @param nch: The character to whom these proficiencies are assigned.
 void CProficiencies::SetChar(char_data *nch)
 {
@@ -596,7 +596,7 @@ void CProficiencies::SetProf(int profindex, int proflevel)
 }
 
 /// Writes a list of proficiencies and their assigned points to a specific file handle.
-/// @param vfp: The file handle used to write the proficieny list.
+/// @param vfp: The file handle used to write the proficiency list.
 /// @note The calling method is expected to handle the opening / closing of the file handle.
 void CProficiencies::WriteProfs(void *vfp)
 {
@@ -649,8 +649,8 @@ void CProficiencies::DisplayProfsForStat(CHAR_DATA *imm)
 	free_pstring(fbuf);
 }
 
-/// Retrieves the skill mastery name based on the procificiency level.
-/// @param ind: The level of the procifiency.
+/// Retrieves the skill mastery name based on the proficiency level.
+/// @param ind: The level of the proficiency.
 /// @returns The name of the skill mastery that correlates with the specific level.
 const char* CProficiencies::GetSkillLevelName(int ind)
 {
@@ -686,14 +686,14 @@ void CProficiencies::ShowProfsToChar()
 	}
 }
 
-/// Assigns a specific number of points that a character can use to learn procificiencies.
+/// Assigns a specific number of points that a character can use to learn proficiencies.
 /// @param newpoints: The number of points to assign to the character.
 void CProficiencies::SetPoints(int newpoints)
 {
 	points = newpoints;
 }
 
-/// Reduces the number of points that a character can use to learn procificiencies by a specific amount.
+/// Reduces the number of points that a character can use to learn proficiencies by a specific amount.
 /// @param dpoints: The number of points to deduct from the character.
 void CProficiencies::DeductPoints(int dpoints)
 {
@@ -713,7 +713,7 @@ void CProficiencies::SetPATime(time_t newtime)
 	pawardedtime = newtime;
 }
 
-/// Updates the number of points a character can use to learn procificiencies.
+/// Updates the number of points a character can use to learn proficiencies.
 void CProficiencies::UpdateProfPoints()
 {
 	if (ch->played + (current_time - ch->logon) < pawardedtime + 3600)

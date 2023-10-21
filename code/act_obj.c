@@ -5055,7 +5055,7 @@ void do_flip(CHAR_DATA *ch, char *argument)
 		if (number_percent() < ((get_curr_stat(ch, STAT_DEX) * 10) - 150))
 		{
 			act("You perform an agile backflip, landing solidly on your feet!", ch, 0, 0, TO_CHAR);
-			act("$n suddenly performs an agile backflip, landling solidly on $s feet!", ch, 0, 0, TO_ROOM);
+			act("$n suddenly performs an agile backflip, landing solidly on $s feet!", ch, 0, 0, TO_ROOM);
 
 			WAIT_STATE(ch, PULSE_VIOLENCE);
 			return;

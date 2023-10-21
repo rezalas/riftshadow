@@ -362,7 +362,7 @@ void spell_remove_paralysis(int sn, int level, CHAR_DATA *ch, void *vo, int targ
 	if (check_dispel(level, victim, skill_lookup("hold person")))
 	{
 		send_to_char("The feeling in your body returns!\n\r", victim);
-		act("$n is no longer paraylzed.", victim, nullptr, nullptr, TO_ROOM);
+		act("$n is no longer paralyzed.", victim, nullptr, nullptr, TO_ROOM);
 	}
 	else
 	{

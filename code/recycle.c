@@ -688,7 +688,7 @@ void free_obj(OBJ_DATA *obj)
 	obj_free = obj;
 }
 
-/* stuff for recyling characters */
+/* stuff for recycling characters */
 
 CHAR_DATA *new_char(void)
 {

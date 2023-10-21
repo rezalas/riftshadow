@@ -476,7 +476,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 		"heavenly fire", { 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61 },
 		spell_heavenly_sceptre_fire, TAR_IGNORE, POS_FIGHTING,
 		nullptr, 0, 0, 0,
-		"heavenly fire", "You feel the power drained from you by the scetpre's heavenly fire return.", "", CMD_NONE
+		"heavenly fire", "You feel the power drained from you by the sceptre's heavenly fire return.", "", CMD_NONE
 	},
 	{
 		"wrath", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
@@ -1386,7 +1386,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 		"poison dust", { 60, 53, 53, 53, 53, 53, 53, 14, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_FIGHTING,
 		&gsn_poison_dust, 0, 0, 0,
-		"poison", "The poison in your blood is neutralised.", "", CMD_NONE
+		"poison", "The poison in your blood is neutralized.", "", CMD_NONE
 	},
 
 	{
@@ -1545,7 +1545,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 		"barkskin", { 60, 53, 53, 53, 53, 53, 18, 53, 53, 53, 53, 53 },
 		spell_null, TAR_IGNORE, POS_STANDING,
 		&gsn_barkskin, 0, 0, 12,
-		"", "The bark on your skin peels off and falls aways.", "", CMD_NONE
+		"", "The bark on your skin peels off and falls away.", "", CMD_NONE
 	},
 	{
 		"enlist", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53 },
@@ -3062,7 +3062,7 @@ const struct skill_type skill_table	[MAX_SKILL]	=
 		"grounding", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 29 },
 		spell_grounding, TAR_IGNORE, POS_STANDING,
 		&gsn_grounding, CAN_DISPEL|CAN_CANCEL, 70, 12,
-		"", "You lose your grounding against electricty.", "", CMD_SPELL
+		"", "You lose your grounding against electricity.", "", CMD_SPELL
 	},
 	{
 		"thunderclap", { 60, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 32 },

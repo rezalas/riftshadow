@@ -195,49 +195,49 @@ bool is_opp_align (CHAR_DATA *ch, CHAR_DATA *vch)
 	return (is_good(ch) && is_evil(vch)) || (is_evil(ch) && is_good(vch));
 }
 
-/// Checks if the given number cooresponds to the good alignment.
+/// Checks if the given number corresponds to the good alignment.
 /// @param num: The number whose alignment to check.
-/// @returns true if the number cooresponds to the good alignment; false otherwise.
+/// @returns true if the number corresponds to the good alignment; false otherwise.
 bool is_num_good (short num)
 {
 	return num > 333;
 }
 
-/// Checks if the given number cooresponds to the evil alignment.
+/// Checks if the given number corresponds to the evil alignment.
 /// @param num: The number whose alignment to check.
-/// @returns true if the number cooresponds to the evil alignment; false otherwise.
+/// @returns true if the number corresponds to the evil alignment; false otherwise.
 bool is_num_evil (short num)
 {
 	return num < -333;
 }
 
-/// Checks if the given number cooresponds to the neutral alignment.
+/// Checks if the given number corresponds to the neutral alignment.
 /// @param num: The number whose alignment to check.
-/// @returns true if the number cooresponds to the neutral alignment; false otherwise.
+/// @returns true if the number corresponds to the neutral alignment; false otherwise.
 bool is_num_neutral (short num)
 {
 	return !is_num_good(num) && !is_num_evil(num);
 }
 
-/// Checks if the given number cooresponds to the lawful ethos.
+/// Checks if the given number corresponds to the lawful ethos.
 /// @param num: The number whose ethos to check.
-/// @returns true if the number cooresponds to the lawful ethos; false otherwise.
+/// @returns true if the number corresponds to the lawful ethos; false otherwise.
 bool is_num_lawful (short num)
 {
 	return num > 333;
 }
 
-/// Checks if the given number cooresponds to the chaotic ethos.
+/// Checks if the given number corresponds to the chaotic ethos.
 /// @param num: The number whose ethos to check.
-/// @returns true if the number cooresponds to the chaotic ethos; false otherwise.
+/// @returns true if the number corresponds to the chaotic ethos; false otherwise.
 bool is_num_chaotic (short num)
 {
 	return num < -333;
 }
 
-/// Checks if the given number cooresponds to the neutral ethos.
+/// Checks if the given number corresponds to the neutral ethos.
 /// @param num: The number whose ethos to check.
-/// @returns true if the number cooresponds to the neutral ethos; false otherwise.
+/// @returns true if the number corresponds to the neutral ethos; false otherwise.
 bool is_num_eneutral (short num)
 {
 	return !is_num_lawful(num) && !is_num_chaotic(num);

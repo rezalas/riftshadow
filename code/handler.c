@@ -337,7 +337,7 @@ int strlen_color(char *argument)
 	return length;
 }
 
-/* for immunity, vulnerabiltiy, and resistant
+/* for immunity, vulnerability, and resistant
    the 'globals' (magic and weapons) may be overriden
    three other cases -- wood, silver, and iron -- are checked in fight.c */
 
@@ -3188,7 +3188,7 @@ char *extra_bit_name(long extra_flags[])
 		strcat(buf, " anti-lawful");
 
 	if (IS_SET(extra_flags, ITEM_ANTI_NEUT))
-		strcat(buf, " anti-neutrale");
+		strcat(buf, " anti-neutrale");	// TODO: should this be anti-neutral
 
 	if (IS_SET(extra_flags, ITEM_ANTI_CHAOTIC))
 		strcat(buf, " anti-chaotic");

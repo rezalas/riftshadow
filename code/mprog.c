@@ -994,7 +994,7 @@ void fight_prog_ilopheth_druid(CHAR_DATA *mob, CHAR_DATA *victim)
 	if (rand == 1)
 	{
 		act("The powerful winds send you tumbling headlong through the bushes!", victim, 0, 0, TO_CHAR);
-		act("The powerful winds send $n tumbling headling through the bushes!", victim, 0, 0, TO_ROOM);
+		act("The powerful winds send $n tumbling headlong through the bushes!", victim, 0, 0, TO_ROOM);
 
 		LAG_CHAR(victim, 2 * PULSE_VIOLENCE);
 
@@ -1776,7 +1776,7 @@ void speech_prog_aamon(CHAR_DATA *mob, CHAR_DATA *ch, char *speech)
 		default:
 			do_emote(mob, "laughs giddily and whirls to leave.");
 			RS.Queue.AddToQueue(1, 2, do_say, mob, (char *)"I'll be leaving now,  and leaving you to your thoughts!  You'll never know the answer to my riddle.");
-			RS.Queue.AddToQueue(2, 5, act, "With a puff of hazy purple smoke and a sound like a cough, $n disapears.", mob, 0, 0, TO_ROOM);
+			RS.Queue.AddToQueue(2, 5, act, "With a puff of hazy purple smoke and a sound like a cough, $n disappears.", mob, 0, 0, TO_ROOM);
 			RS.Queue.AddToQueue(3, 1, delay_extract, mob);
 			ch->pcdata->lesserdata[LESSER_AAMON] = FAVOR_FAILED;
 			break;
@@ -3286,7 +3286,7 @@ void pulse_prog_banshee(CHAR_DATA *mob)
 	}
 	else if (number_percent() > 40)
 	{
-		act("$n screeches gleefully, mimicing a laugh.", mob, 0, victim, TO_ALL);
+		act("$n screeches gleefully, mimicking a laugh.", mob, 0, victim, TO_ALL);
 		act("$n's face contorts in terror.", victim, 0, mob, TO_ALL);
 		act("$N's wailing causes your muscles to contort wildly in pain!", mob, 0, victim, TO_CHAR);
 

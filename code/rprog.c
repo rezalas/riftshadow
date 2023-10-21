@@ -108,7 +108,7 @@ void rprog_set(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 
 	if (!rprog_table[i].name)
 	{
-		bug("Lood_improgs: 'R': Function not found for vnum %d", room->vnum);
+		bug("Load_improgs: 'R': Function not found for vnum %d", room->vnum);
 		return;
 	}
 

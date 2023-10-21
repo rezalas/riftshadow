@@ -146,7 +146,7 @@ void check_waterbreath(CHAR_DATA *ch, ROOM_INDEX_DATA *to_room)
 		new_affect_to_char(ch, &af);
 
 		act("You take a deep breath and hold it tight as you descend into the water.", ch, 0, 0, TO_CHAR);
-		act("$n takes a deep breath as $e decends into the water.", ch, 0, 0, TO_ROOM);
+		act("$n takes a deep breath as $e descends into the water.", ch, 0, 0, TO_ROOM);
 	}
 	else if (is_affected(ch, gsn_drowning)
 		&& (to_room->sector_type != SECT_UNDERWATER || is_affected_room(to_room, gsn_airy_water)))
@@ -2837,7 +2837,7 @@ void do_vigilance(CHAR_DATA *ch, char *argument)
 	ch->mana -= 30;
 
 	send_to_char("Your eyes tingle.\n\r",ch);
-	send_to_char("You are more sensitive to the prescence of magical auras.\n\r",ch);
+	send_to_char("You are more sensitive to the presence of magical auras.\n\r",ch);
 	return;
 }
 */

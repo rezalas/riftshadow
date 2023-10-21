@@ -599,7 +599,7 @@ const char* title_table [MAX_CLASS][MAX_LEVEL+1][2] =
 			{ "Master Scribe",					"Master Scribe"							},
 			{ "Apprentice Alchemist",			"Apprentice Alchemist"					},
 			{ "Student of Alchemy",				"Student of Alchemy "					},
-			{ "Journeyman Alchemist",			"Jourenywoman Alchemist"				},
+			{ "Journeyman Alchemist",			"Journeywoman Alchemist"				},
 			{ "Alchemist",						"Alchemist"								},
 			{ "Master of Alchemy",				"Master of Alchemy"						},
 			{ "Wizard",							"Witch"									},

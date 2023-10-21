@@ -2629,7 +2629,7 @@ void verb_prog_turn_spindle(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		act("A massive rusted grates slides noisily shut, barring the tunnal $tward!", ch, direction, 0, TO_ALL);
+		act("A massive rusted grates slides noisily shut, barring the tunnel $tward!", ch, direction, 0, TO_ALL);
 
 		SET_BIT(pexit->exit_info, EX_CLOSED);
 		SET_BIT(pexit->exit_info, EX_LOCKED);
@@ -3942,8 +3942,8 @@ void verb_prog_turn_wyntran(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, 0, 0, TO_ROOM);
 	act("The temperature in the room drops rapidly as a darkened portal opens overhead.", ch, 0, 0, TO_CHAR);
 
-	RS.Queue.AddToQueue(3, 5, act, "Acompanied by peals of thunder a shrouded being descends from the portal.", ch, 0, 0, TO_CHAR);
-	RS.Queue.AddToQueue(3, 5, act, "Acompanied by peals of thunder a shrouded being descends from the portal.", ch, 0, 0, TO_ROOM);
+	RS.Queue.AddToQueue(3, 5, act, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, 0, 0, TO_CHAR);
+	RS.Queue.AddToQueue(3, 5, act, "Accompanied by peals of thunder a shrouded being descends from the portal.", ch, 0, 0, TO_ROOM);
 	RS.Queue.AddToQueue(4, 2, char_to_room, victim, ch->in_room);
 
 	WAIT_STATE(ch, PULSE_VIOLENCE * 2);
@@ -4045,7 +4045,7 @@ void verb_prog_fallendesert_climb_ladder(OBJ_DATA *obj, CHAR_DATA *ch, char *arg
 	}
 	else
 	{
-		bug("error climbin ladder in fallen desert, wrong vnum for room");
+		bug("error climbing ladder in fallen desert, wrong vnum for room");
 		return;
 	}
 
@@ -4090,7 +4090,7 @@ void verb_prog_fallendesert_(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		bug("error climbin ladder in fallen desert, wrong vnum for room");
+		bug("error climbing ladder in fallen desert, wrong vnum for room");
 		return;
 	}
 

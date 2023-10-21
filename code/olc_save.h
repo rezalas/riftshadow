@@ -50,7 +50,7 @@ char *fwrite_flag (long flags, char buf[]);
 void save_mobile (FILE *fp, MOB_INDEX_DATA *pMobIndex);
 /*****************************************************************************
  Name:		save_mobiles
- Purpose:	Save #MOBILES secion of an area file.
+ Purpose:	Save #MOBILES section of an area file.
  Called by:	save_area(olc_save.c).
  Notes:         Changed for ROM OLC.
  ****************************************************************************/

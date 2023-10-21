@@ -283,7 +283,7 @@ void apet_force(CHAR_DATA *ch, const char *cmd, int delay)
 {
 	char buf[MSL], *tal, *tcmd;
 
-	sprintf(buf, "You feel the irresistable urge to '%s'.\n\r", cmd);
+	sprintf(buf, "You feel the irresistible urge to '%s'.\n\r", cmd);
 
 	tal = talloc_string(buf);
 

@@ -2047,7 +2047,7 @@ struct kill_data
 
 
 //
-// Equpiment wear locations.
+// Equipment wear locations.
 // Used in #RESETS.
 //
 

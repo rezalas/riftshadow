@@ -1475,7 +1475,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 
 				if (get_mob_index(is_number(arg3) ? atoi(arg3) : 1) == nullptr)
 				{
-					send_to_char("Mob no existe.\n\r", ch);
+					send_to_char("Mob no exists.\n\r", ch);
 					return;
 				}
 
@@ -1511,7 +1511,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 
 					if (get_obj_index(atoi(arg3)) == nullptr)
 					{
-						send_to_char("Vnum no existe.\n\r", ch);
+						send_to_char("Vnum no exists.\n\r", ch);
 						return;
 					}
 
@@ -1532,7 +1532,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 
 					if (get_obj_index(atoi(arg3)) == nullptr)
 					{
-						send_to_char("Vnum no existe.\n\r", ch);
+						send_to_char("Vnum no exists.\n\r", ch);
 						return;
 					}
 

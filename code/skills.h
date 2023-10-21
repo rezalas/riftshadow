@@ -32,7 +32,7 @@ bool style_check (int sn, int style);
 bool group_skill_lookup (int gn, int sn);
 /* recursively adds a group given its number -- uses group_add */
 void gn_add (CHAR_DATA *ch, int gn);
-/* recusively removes a group given its number -- uses group_remove */
+/* recursively removes a group given its number -- uses group_remove */
 void gn_remove (CHAR_DATA *ch, int gn);
 /* use for processing a skill or group for addition  */
 void group_add (CHAR_DATA *ch, const char *name, bool deduct);

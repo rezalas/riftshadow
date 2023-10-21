@@ -785,7 +785,7 @@ void do_nochannels(CHAR_DATA *ch, char *argument)
 	{
 		REMOVE_BIT(victim->comm, COMM_NOCHANNELS);
 
-		send_to_char("The gods have restored your channel priviliges.\n\r", victim);
+		send_to_char("The gods have restored your channel privileges.\n\r", victim);
 		send_to_char("NOCHANNELS removed.\n\r", ch);
 
 		sprintf(buf, "$N restores channels to %s", victim->name);
@@ -795,7 +795,7 @@ void do_nochannels(CHAR_DATA *ch, char *argument)
 	{
 		SET_BIT(victim->comm, COMM_NOCHANNELS);
 
-		send_to_char("The gods have revoked your channel priviliges.\n\r", victim);
+		send_to_char("The gods have revoked your channel privileges.\n\r", victim);
 		send_to_char("NOCHANNELS set.\n\r", ch);
 
 		sprintf(buf, "$N revokes %s's channels.", victim->name);
@@ -4797,7 +4797,7 @@ void do_sgset(CHAR_DATA *ch, char *argument)
 		{
 			ch->pcdata->group_known[gn] = true;
 
-			/* Check for sorc focus and adjust acordingly */
+			/* Check for sorc focus and adjust accordingly */
 			for (i = 0; i < (MAX_ELE); i++)
 			{
 				if (!str_cmp(arg2, sphere_table[i].name))
@@ -6036,7 +6036,7 @@ void do_force(CHAR_DATA *ch, char *argument)
 			if (!is_npc(vch) && get_trust(vch) < get_trust(ch))
 			{
 				if (!can_see(vch, ch))
-					sprintf(buf, "An irresistable urge forces you to '%s'.", argument);
+					sprintf(buf, "An irresistible urge forces you to '%s'.", argument);
 
 				act(buf, ch, nullptr, vch, TO_VICT);
 				interpret(vch, argument);
@@ -7337,7 +7337,7 @@ void do_givexp(CHAR_DATA *ch, char *argument)
 	}
 
 	if (!str_cmp(argument, ""))
-		sprintf(temp, "You recieve %d experience points for outstanding performance.\n\r", xp);
+		sprintf(temp, "You receive %d experience points for outstanding performance.\n\r", xp);
 	else
 		sprintf(temp, "%s\n\r", argument);
 

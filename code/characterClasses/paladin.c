@@ -488,7 +488,7 @@ void spell_arms_of_light(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_affected(ch, sn))
 	{
-		send_to_char("You may not commune this suplication again yet.\n\r", ch);
+		send_to_char("You may not commune this supplication again yet.\n\r", ch);
 		return;
 	}
 
