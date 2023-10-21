@@ -288,7 +288,7 @@ void do_cb(CHAR_DATA *ch, char *argument)
 
 	if (IS_SET(ch->comm, COMM_NOCHANNELS))
 	{
-		send_to_char("The gods have revoked your channel priviliges.\n\r", ch);
+		send_to_char("The gods have revoked your channel privileges.\n\r", ch);
 		return;
 	}
 
@@ -665,7 +665,7 @@ void do_say(CHAR_DATA *ch, char *argument)
 	}
 	check_ooc(ch, argument, "SAY");
 
-#pragma region  Reasons you shouldnt be able to talk
+#pragma region  Reasons you should not be able to talk
 	if (is_affected(ch, gsn_silence))
 	{
 		send_to_char("You cannot find the words within you.\n\r", ch);
@@ -1607,7 +1607,7 @@ void do_pmote(CHAR_DATA *ch, char *argument)
 }
 
 /* Simple, yet brilliant.  Notify immortals when players are using words that
- * are offensive/harrassing or commonly associated with OOC speech.  Immortals
+ * are offensive/harassing or commonly associated with OOC speech.  Immortals
  * can then respond accordingly if a rule violation is detected.
  * 											-El
  */

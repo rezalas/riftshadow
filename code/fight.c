@@ -1034,7 +1034,7 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 	if (victim->position == POS_DEAD)
 		return 0;
 
-	/* Cheaphack to have poison et al count for PKs */
+	/* Cheap hack to have poison et al count for PKs */
 	if ((dt == gsn_poison
 			|| dt == gsn_plague
 			|| dt == gsn_impale
@@ -6311,7 +6311,7 @@ void spell_power_word_kill(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	{
 		act("$N shudders in shock as $S heart explodes!", ch, nullptr, victim, TO_NOTVICT);
 		send_to_char("You feel your heart rupture in a violent explosion of pain!\n\r", victim);
-		act("Your word of power vaporises $N's heart, killing $M instantly!", ch, nullptr, victim, TO_CHAR);
+		act("Your word of power vaporizes $N's heart, killing $M instantly!", ch, nullptr, victim, TO_CHAR);
 		raw_kill(ch, victim);
 		return;
 	}
@@ -8133,7 +8133,7 @@ void do_flee(CHAR_DATA *ch, char *argument)
 	send_to_char("PANIC! You couldn't escape!\n\r", ch);
 }
 
-/* Nasty assassinattion skill. Chance of success is very high, should be
+/* Nasty assassination skill. Chance of success is very high, should be
 changed if you plan on using this on a PK mud. -Ceran
 */
 void do_assassinate(CHAR_DATA *ch, char *argument)
@@ -8607,7 +8607,7 @@ void do_call_to_arms(CHAR_DATA *ch, char *arguement)
 
 		ch->mana -= 15;
 
-		act("$N rallys to your call!", ch, nullptr, target, TO_CHAR);
+		act("$N rallies to your call!", ch, nullptr, target, TO_CHAR);
 		act("$n screams and rushes to attack $N!", target, nullptr, ch->fighting, TO_NOTVICT);
 		act("$n screams and rushes forwards to attack you!", target, nullptr, ch->fighting, TO_VICT);
 		multi_hit(target, ch->fighting, TYPE_UNDEFINED);
@@ -8690,7 +8690,7 @@ void do_quiet_movement(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		send_to_char("You aren't in the right kind of wilderness to mvoe quietly.\n\r", ch);
+		send_to_char("You aren't in the right kind of wilderness to move quietly.\n\r", ch);
 		return;
 	}
 
@@ -8875,8 +8875,8 @@ bool check_catch(CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj)
 	else
 	{
 		act("As $N's $t hurtles through the air, you reach out and catch it!", ch, weapon_name_lookup(obj->value[0]), victim, TO_CHAR);
-		act("As your $t hurtles through the air, $n reaches out and catchs it in midair!", ch, weapon_name_lookup(obj->value[0]), victim, TO_VICT);
-		act("As $N's $t hurtles through the air, $n reaches out and catchs it in midair!", ch, weapon_name_lookup(obj->value[0]), victim, TO_NOTVICT);
+		act("As your $t hurtles through the air, $n reaches out and catches it in midair!", ch, weapon_name_lookup(obj->value[0]), victim, TO_VICT);
+		act("As $N's $t hurtles through the air, $n reaches out and catches it in midair!", ch, weapon_name_lookup(obj->value[0]), victim, TO_NOTVICT);
 		return true;
 	}
 }

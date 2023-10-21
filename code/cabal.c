@@ -861,7 +861,7 @@ void spell_hunters_awareness(int sn, int level, CHAR_DATA *ch, void *vo, int tar
 		{
 			ch->mana -= 100;
 
-			act("You stalk $N relentlessly, persuing $M with all the tools at your disposal.", ch, 0, victim, TO_CHAR);
+			act("You stalk $N relentlessly, pursuing $M with all the tools at your disposal.", ch, 0, victim, TO_CHAR);
 
 			if (saves_spell(level + 8, victim, DAM_OTHER))
 			{
@@ -1065,9 +1065,9 @@ void spell_mana_transfer(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("You transfer part of your energy to $N!", ch, 0, victim, TO_CHAR);
 	act("$n transfers part of $s energy to you!", ch, 0, victim, TO_VICT);
-	act("$n tranfers part of $s energy to $N!", ch, 0, victim, TO_NOTVICT);
+	act("$n transfers part of $s energy to $N!", ch, 0, victim, TO_NOTVICT);
 
-	damage_new(ch, ch, mod, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana tranfer");
+	damage_new(ch, ch, mod, sn, DAM_MENTAL, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "mana transfer");
 
 	victim->mana += mod;
 

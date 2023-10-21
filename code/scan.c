@@ -143,7 +143,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 
 	if (depth <= 0)
 	{
-		send_to_char("Weather conditions hamper your visibilty too much to see that far.\n\r", ch);
+		send_to_char("Weather conditions hamper your visibility too much to see that far.\n\r", ch);
 		return;
 	}
 

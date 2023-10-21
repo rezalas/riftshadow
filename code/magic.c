@@ -6244,9 +6244,9 @@ void spell_imbue_regeneration(int sn, int level, CHAR_DATA *ch, void *vo, int ta
 	{
 		if (victim != ch)
 		{
-			act("$N's emanciated body heals up with your touch.", ch, 0, victim, TO_CHAR);
-			act("Your emanciated body heals up with $n's touch.", ch, 0, victim, TO_VICT);
-			act("$N's emanciated body heals up with $n's touch.", ch, 0, victim, TO_NOTVICT);
+			act("$N's emaciated body heals up with your touch.", ch, 0, victim, TO_CHAR);
+			act("Your emaciated body heals up with $n's touch.", ch, 0, victim, TO_VICT);
+			act("$N's emaciated body heals up with $n's touch.", ch, 0, victim, TO_NOTVICT);
 		}
 		else
 		{
@@ -6642,7 +6642,7 @@ void spell_talismanic_aura(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 	else
 	{
 		send_to_char("A multihued aura coalesces around you.\n\r", ch);
-		act("A multihued aura coalsesces around $n.", ch, nullptr, ch, TO_ROOM);
+		act("A multihued aura coalesces around $n.", ch, nullptr, ch, TO_ROOM);
 		affect_to_char(ch, &af);
 
 		af.location = 0;

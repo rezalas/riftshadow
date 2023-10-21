@@ -37,7 +37,7 @@ void string_add(CHAR_DATA *ch, char *argument);
  */
 /*****************************************************************************
  Name:		format_string
- Purpose:	Special string formating and word-wrapping.
+ Purpose:	Special string formatting and word-wrapping.
  Called by:	string_add(string.c) (many)olc_act.c
  ****************************************************************************/
 char *format_string(char *oldstring /*, bool fSpace */);

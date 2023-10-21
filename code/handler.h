@@ -32,7 +32,7 @@ int attack_lookup  (const char *name);
 long wiznet_lookup (const char *name);
 char *color_value_string (int color, bool bold, bool flash);
 int strlen_color (char *argument);
-/* for immunity, vulnerabiltiy, and resistant
+/* for immunity, vulnerability, and resistant
    the 'globals' (magic and weapons) may be overriden
    three other cases -- wood, silver, and iron -- are checked in fight.c */
 int check_immune (CHAR_DATA *ch, int dam_type);

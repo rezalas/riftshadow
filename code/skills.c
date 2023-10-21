@@ -857,7 +857,7 @@ void gn_add(CHAR_DATA *ch, int gn)
 	}
 }
 
-/* recusively removes a group given its number -- uses group_remove */
+/* recursively removes a group given its number -- uses group_remove */
 void gn_remove(CHAR_DATA *ch, int gn)
 {
 	ch->pcdata->group_known[gn]= false;

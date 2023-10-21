@@ -32,7 +32,7 @@ class CInterpreter
 {
 public:
 	/*
-	 * Note: we're a friend class of CSocket and refer to it interchangably
+	 * Note: we're a friend class of CSocket and refer to it interchangeably
 	 */
 	CInterpreter();
 	~CInterpreter();

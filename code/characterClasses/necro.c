@@ -1367,7 +1367,7 @@ void spell_lesser_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_affected(ch, gsn_lesser_golem))
 	{
-		send_to_char("You cannot creater another lesser golem so soon.\n\r", ch);
+		send_to_char("You cannot create another lesser golem so soon.\n\r", ch);
 		return;
 	}
 
@@ -1458,7 +1458,7 @@ void spell_greater_golem(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_affected(ch, gsn_greater_golem))
 	{
-		send_to_char("You cannot creater another greater golem so soon.\n\r", ch);
+		send_to_char("You cannot create another greater golem so soon.\n\r", ch);
 		return;
 	}
 

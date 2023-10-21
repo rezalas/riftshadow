@@ -176,7 +176,7 @@ void spell_wrack(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	act("You infuse $N's body with your anger, causing $M to be vulnerable to attack!", ch, 0, victim, TO_CHAR);
 	act("You feel a sudden surge of anger, followed by wracking pain.", ch, 0, victim, TO_VICT);
-	act("$n infuses $s anger into $N, leaving $M vunlnerable.", ch, 0, victim, TO_NOTVICT);
+	act("$n infuses $s anger into $N, leaving $M vulnerable.", ch, 0, victim, TO_NOTVICT);
 
 	init_affect(&af);
 	af.where = TO_AFFECTS;
@@ -751,7 +751,7 @@ void spell_mark_of_wrath(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	}
 
 	act("You intone unholy words and a flaming brand appears on $N's forehead!", ch, 0, victim, TO_CHAR);
-	act("A wave of rage clouds your thoughts as $n chants in an unintelligble tongue.", ch, 0, victim, TO_VICT);
+	act("A wave of rage clouds your thoughts as $n chants in an unintelligible tongue.", ch, 0, victim, TO_VICT);
 	act("A flaming brand appears on $N's forehead, radiating malevolence.", ch, 0, victim, TO_NOTVICT);
 
 	init_affect(&af);
