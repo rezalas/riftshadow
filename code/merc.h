@@ -53,25 +53,6 @@ int remove();
 	#include "mud.h"
 #endif /* RIFTINCLD */
 
-//
-// Short scalar types.
-// Diavolo reports AIX compiler has bugs with short types.
-//
-
-#ifdef _AIX
-	#ifndef const
-	#define const
-	#endif /* const */
-
-	typedef int sh_int;
-	typedef int bool;
-
-	#define unix
-#else
-	typedef short int sh_int;
-#endif /* _AIX */
-
-
 /*
  * OLC
  * Use these macros to load any new area formats that you choose to
@@ -122,17 +103,12 @@ int remove();
 #endif
 
 
-
-
-extern CMud RS;
-
 //
 // Structure types.
 //
 
 typedef struct affect_data		AFFECT_DATA;
 typedef struct area_data		AREA_DATA;
-typedef struct ban_data			BAN_DATA;
 typedef struct buf_type			BUFFER;
 typedef struct char_data		CHAR_DATA;
 typedef struct descriptor_data	DESCRIPTOR_DATA;
@@ -144,7 +120,6 @@ typedef struct mem_data			MEM_DATA;
 typedef struct mob_index_data	MOB_INDEX_DATA;
 typedef struct speech_data		SPEECH_DATA;
 typedef struct line_data		LINE_DATA;
-typedef struct note_data		NOTE_DATA;
 typedef struct obj_data			OBJ_DATA;
 typedef struct obj_index_data	OBJ_INDEX_DATA;
 typedef struct pc_data			PC_DATA;
@@ -351,63 +326,63 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 // mprog stuff
 //
 
-#define MPROG_BRIBE					(ASCII_A)
-#define MPROG_ENTRY					(ASCII_B)
-#define MPROG_GREET					(ASCII_C)
-#define MPROG_GIVE					(ASCII_D)
-#define MPROG_FIGHT					(ASCII_E)
-#define MPROG_DEATH					(ASCII_F)
-#define MPROG_PULSE					(ASCII_G)
-#define MPROG_SPEECH				(ASCII_H)
-#define MPROG_ATTACK				(ASCII_I)
-#define MPROG_MOVE					(ASCII_J)
-#define MPROG_BEAT					(ASCII_K)
-#define MPROG_AGGRESS				(ASCII_L)
+#define MPROG_BRIBE					0
+#define MPROG_ENTRY					1
+#define MPROG_GREET					2
+#define MPROG_GIVE					3
+#define MPROG_FIGHT					4
+#define MPROG_DEATH					5
+#define MPROG_PULSE					6
+#define MPROG_SPEECH				7
+#define MPROG_ATTACK				8
+#define MPROG_MOVE					9
+#define MPROG_BEAT					10
+#define MPROG_AGGRESS				11
 
 //
 // iprog stuff
 //
 
-#define IPROG_WEAR					(ASCII_A)
-#define IPROG_REMOVE				(ASCII_B)
-#define IPROG_DROP					(ASCII_C)
-#define IPROG_SAC					(ASCII_D)
-#define IPROG_GIVE					(ASCII_E)
-#define IPROG_GREET					(ASCII_F)
-#define IPROG_FIGHT					(ASCII_G)
-#define IPROG_DEATH					(ASCII_H)
-#define IPROG_SPEECH				(ASCII_I)
-#define IPROG_ENTRY					(ASCII_J)
-#define IPROG_GET					(ASCII_K)
-#define IPROG_PULSE					(ASCII_L)
-#define IPROG_INVOKE				(ASCII_M)
-#define IPROG_VERB					(ASCII_N)
-#define IPROG_LOOT					(ASCII_O)
-#define IPROG_OPEN					(ASCII_P)
-#define IPROG_LOOK					(ASCII_R)
-#define IPROG_HIT					(ASCII_S)
+#define IPROG_WEAR					0
+#define IPROG_REMOVE				1
+#define IPROG_DROP					2
+#define IPROG_SAC					3
+#define IPROG_GIVE					4
+#define IPROG_GREET					5
+#define IPROG_FIGHT					6
+#define IPROG_DEATH					7
+#define IPROG_SPEECH				8
+#define IPROG_ENTRY					9
+#define IPROG_GET					10
+#define IPROG_PULSE					11
+#define IPROG_INVOKE				12
+#define IPROG_VERB					13
+#define IPROG_LOOT					14
+#define IPROG_OPEN					15
+#define IPROG_LOOK					17
+#define IPROG_HIT					18
 
 //
 // rprog stuff
 //
 
-#define RPROG_PULSE					(ASCII_A)
-#define RPROG_ENTRY					(ASCII_B)
-#define RPROG_MOVE					(ASCII_C)
-#define RPROG_DROP					(ASCII_D)
-#define RPROG_SPEECH				(ASCII_E)
-#define RPROG_OPEN					(ASCII_F)
+#define RPROG_PULSE					0
+#define RPROG_ENTRY					1
+#define RPROG_MOVE					2
+#define RPROG_DROP					3
+#define RPROG_SPEECH				4
+#define RPROG_OPEN					5
 
 //
 // aprog stuff
 //
 
-#define APROG_PULSE					(ASCII_A)
-#define APROG_RESET					(ASCII_B)
-#define APROG_SUN					(ASCII_C)
-#define APROG_TICK					(ASCII_D)
-#define APROG_AGGRESS				(ASCII_E)
-#define APROG_MYELL					(ASCII_F)
+#define APROG_PULSE					0
+#define APROG_RESET					1
+#define APROG_SUN					2
+#define APROG_TICK					3
+#define APROG_AGGRESS				4
+#define APROG_MYELL					5
 
 //
 // Quests!
@@ -428,43 +403,13 @@ typedef void APROG_FUN_MYELL (AREA_DATA *area, CHAR_DATA *ch, CHAR_DATA *victim)
 #define NOTE_UNSTARTED				0
 #define NOTE_IN_PROGRESS			1
 
-//
-// Site ban structure.
-//
-
-#define BAN_SUFFIX					A
-#define BAN_PREFIX					B
-#define BAN_NEWBIES					C
-#define BAN_ALL						D
-#define BAN_PERMIT					E
-#define BAN_PERMANENT				F
-
-//
-// New ban defines
-//
-
-#define NBAN_ALL					0
-#define NBAN_NEWBIE					1
-
-#define NBAN_IP						1
-#define NBAN_HOST					0
-
-struct ban_data
-{
-	BAN_DATA *next;
-	bool valid;
-	long ban_flags[MAX_BITVECTOR];
-	sh_int level;
-	char *name;
-};
-
 struct buf_type
 {
 	BUFFER *next;
 	bool valid;
-	sh_int state; // error state of the buffer
-	sh_int size;  // size in k
-	char *string; // buffer's string
+	short state;	// error state of the buffer
+	short size;		// size in k
+	char *string;	// buffer's string
 };
 
 
@@ -573,8 +518,8 @@ struct descriptor_data
 	CHAR_DATA *original;
 	bool valid;
 	char *host;
-	sh_int descriptor;
-	sh_int connected;
+	short descriptor;
+	short connected;
 	bool fcommand;
 	char inbuf[4 * MAX_INPUT_LENGTH];
 	char incomm[MAX_INPUT_LENGTH];
@@ -588,7 +533,7 @@ struct descriptor_data
 	void *pEdit;	// OLC
 	char **pString;	// OLC
 	int editor;		// OLC
-	sh_int type;
+	short type;
 };
 
 struct bounty
@@ -618,7 +563,7 @@ struct bounty
 struct help_data
 {
 	HELP_DATA *next;
-	sh_int level;
+	short level;
 	char *keyword;
 	char *text;
 };
@@ -636,9 +581,9 @@ struct shop_data
 	int pet_cage_vnum;
 	SHOP_DATA *next;			// Next shop in list
 	MOB_INDEX_DATA *pMobIndex;
-	sh_int open_hour;			// First opening hour
-	sh_int close_hour;			// First closing hour
-	sh_int direction;			// exit dir
+	short open_hour;			// First opening hour
+	short close_hour;			// First closing hour
+	short direction;			// exit dir
 };
 
 #define BAR_CLASS					0
@@ -657,11 +602,11 @@ struct shop_data
 
 struct barred_data
 {
-	sh_int type;		// Bar on basis of guild.. or?
-	sh_int comparison;	// less than greater than = to
-	sh_int value;		// value allowed in
-	sh_int vnum;		// Vnum it bars entry to
-	sh_int msg_type;	// echo/say/emote
+	short type;			// Bar on basis of guild.. or?
+	short comparison;	// less than greater than = to
+	short value;		// value allowed in
+	short vnum;			// Vnum it bars entry to
+	short msg_type;		// echo/say/emote
 	char *message;		// message when access is barred
 	char *message_two;	// room message for echo type
 };
@@ -697,27 +642,27 @@ struct class_type
 {
 	char *name;				// the full name of the class
 	char who_name[4];		// Three-letter name for 'who'
-	sh_int attr_prime;		// Prime attribute/Prime Stat
-	sh_int align;			// see pc_race_type
-	sh_int xpadd;			// see pc_race_type
-	sh_int weapon;			// First weapon
-	sh_int skill_adept;		// Maximum skill level
-	sh_int thac0_00;		// Thac0 for level 0
-	sh_int thac0_32;		// Thac0 for level 32
-	sh_int hp_min;			// Min hp gained on leveling
-	sh_int hp_max;			// Max hp gained on leveling
+	short attr_prime;		// Prime attribute/Prime Stat
+	short align;			// see pc_race_type
+	short xpadd;			// see pc_race_type
+	short weapon;			// First weapon
+	short skill_adept;		// Maximum skill level
+	short thac0_00;			// Thac0 for level 0
+	short thac0_32;			// Thac0 for level 32
+	short hp_min;			// Min hp gained on leveling
+	short hp_max;			// Max hp gained on leveling
 	bool fMana;				// Class gains mana on level
 	char *base_group;		// base skills gained
 	char *default_group;	// default skills gained
-	sh_int ctype;			// communer/caster?
-	sh_int status;
+	short ctype;			// communer/caster?
+	short status;
 };
 
 struct race_data
 {
 	RACE_DATA *first;
 	RACE_DATA *next;
-	sh_int number;
+	short number;
 	char *name;
 	bool pc_race;
 	long act[MAX_BITVECTOR];
@@ -738,12 +683,12 @@ struct old_char
 	char *short_descr;
 	char *long_descr;
 	char *description;
-	sh_int perm_stats[MAX_STATS];
-	sh_int armor[4];
+	short perm_stats[MAX_STATS];
+	short armor[4];
 	float dam_mod;
-	sh_int carry_weight;
-	sh_int carry_number;
-	sh_int saving_throw;
+	short carry_weight;
+	short carry_number;
+	short saving_throw;
 	long affected_by[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
@@ -751,31 +696,6 @@ struct old_char
 	OLD_CHAR *next;
 	OBJ_DATA *carrying;
 };
-
-//
-// Data structure for notes.
-//
-
-#define NOTE_NOTE					0
-#define NOTE_IDEA					1
-#define NOTE_PENALTY				2
-#define NOTE_NEWS					3
-#define NOTE_CHANGES				4
-
-struct note_data
-{
-	NOTE_DATA *next;
-	bool valid;
-	sh_int type;
-	char *sender;
-	char *date;
-	char *to_list;
-	char *subject;
-	char *text;
-	time_t date_stamp;
-};
-
-
 
 //
 // An affect.
@@ -787,19 +707,19 @@ struct affect_data
 	CHAR_DATA *owner;
 	char *name;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
-	sh_int mod_name;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
+	short mod_name;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	AFF_FUN *tick_fun;		// goes off every tick that char is affected
 	AFF_FUN *pulse_fun;
 	AFF_FUN *end_fun;		// when the affect wears off this is called
-	sh_int init_duration;
+	short init_duration;
 	AFF_FUN *beat_fun;		// goes off every beat
 };
 
@@ -812,12 +732,12 @@ struct room_affect_data
 	ROOM_AFFECT_DATA *next;
 	CHAR_DATA *owner;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	RAFF_FUN *pulse_fun;
@@ -834,12 +754,12 @@ struct area_affect_data
 	AREA_AFFECT_DATA *next;
 	CHAR_DATA *owner;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	AAFF_FUN *pulse_fun;
@@ -852,12 +772,12 @@ struct obj_affect_data
 	OBJ_AFFECT_DATA *next;
 	CHAR_DATA *owner;
 	bool valid;
-	sh_int where;
-	sh_int type;
-	sh_int level;
-	sh_int duration;
-	sh_int location;
-	sh_int modifier;
+	short where;
+	short type;
+	short level;
+	short duration;
+	short location;
+	short modifier;
 	long bitvector[MAX_BITVECTOR];
 	int aftype;
 	OAFF_FUN *pulse_fun;
@@ -1021,8 +941,8 @@ struct obj_affect_data
 //
 struct kill_data
 {
-	sh_int number;
-	sh_int killed;
+	short number;
+	short killed;
 };
 
 
@@ -1167,38 +1087,38 @@ struct kill_data
 // Used in #MOBILES.
 //
 
-#define ACT_IS_NPC					(ASCII_A)	// Auto set for mobs
-#define ACT_SENTINEL				(ASCII_B)	// Stays in one room
-#define ACT_SCAVENGER				(ASCII_C)	// Picks up objects
-#define ACT_WARD_MOB				(ASCII_D)	// Ward mobs
-#define ACT_WANDER					(ASCII_E)	// wanders
-#define ACT_AGGRESSIVE				(ASCII_F)	// Attacks PC's
-#define ACT_STAY_AREA				(ASCII_G)	// Won't leave area
-#define ACT_WIMPY					(ASCII_H)
-#define ACT_PET						(ASCII_I)	// Auto set for pets
-#define ACT_TRAIN					(ASCII_J)	// Can train PC's
-#define ACT_PRACTICE				(ASCII_K)	// Can practice PC's
-#define ACT_SMARTTRACK				(ASCII_L)	// Will use pathfinding
-#define ACT_UNDEAD					(ASCII_O)
-#define ACT_INNER_GUARDIAN			(ASCII_P)	// yay.
-#define ACT_CLERIC					(ASCII_Q)
-#define ACT_MAGE					(ASCII_R)
-#define ACT_INTELLIGENT 			(ASCII_S)
-#define ACT_FAST_TRACK				(ASCII_T)
-#define ACT_NOALIGN					(ASCII_U)
-#define ACT_NOPURGE					(ASCII_V)
-#define ACT_OUTDOORS				(ASCII_W)
-#define ACT_INDOORS					(ASCII_Y)
-#define ACT_GUILDGUARD				(ASCII_Z)
-#define ACT_IS_HEALER				(ASCII_aa)
-#define ACT_GAIN					(ASCII_bb)
-#define ACT_UPDATE_ALWAYS			(ASCII_cc)
-#define ACT_DETECT_SPECIAL			(ASCII_dd)
-#define ACT_BANKER					(ASCII_ee)
-#define ACT_NOCTURNAL				(ASCII_ff)
-#define ACT_DIURNAL					(ASCII_gg)
-#define ACT_FASTWANDER				(ASCII_hh)
-#define ACT_LAW						(ASCII_ii)
+#define ACT_IS_NPC					0	// Auto set for mobs
+#define ACT_SENTINEL				1	// Stays in one room
+#define ACT_SCAVENGER				2	// Picks up objects
+#define ACT_WARD_MOB				3	// Ward mobs
+#define ACT_WANDER					4	// wanders
+#define ACT_AGGRESSIVE				5	// Attacks PC's
+#define ACT_STAY_AREA				6	// Won't leave area
+#define ACT_WIMPY					7
+#define ACT_PET						8	// Auto set for pets
+#define ACT_TRAIN					9	// Can train PC's
+#define ACT_PRACTICE				10	// Can practice PC's
+#define ACT_SMARTTRACK				11	// Will use pathfinding
+#define ACT_UNDEAD					14
+#define ACT_INNER_GUARDIAN			15	// yay.
+#define ACT_CLERIC					16
+#define ACT_MAGE					17
+#define ACT_INTELLIGENT 			18
+#define ACT_FAST_TRACK				19
+#define ACT_NOALIGN					20
+#define ACT_NOPURGE					21
+#define ACT_OUTDOORS				22
+#define ACT_INDOORS					24
+#define ACT_GUILDGUARD				25
+#define ACT_IS_HEALER				26
+#define ACT_GAIN					27
+#define ACT_UPDATE_ALWAYS			28
+#define ACT_DETECT_SPECIAL			29
+#define ACT_BANKER					30
+#define ACT_NOCTURNAL				31
+#define ACT_DIURNAL					32
+#define ACT_FASTWANDER				33
+#define ACT_LAW						34
 
 //
 // damage classes
@@ -1230,33 +1150,33 @@ struct kill_data
 // OFF bits for mobiles
 //
 
-#define OFF_AREA_ATTACK				(ASCII_A)
-#define OFF_BACKSTAB				(ASCII_B)
-#define OFF_BASH					(ASCII_C)
-#define OFF_BERSERK					(ASCII_D)
-#define OFF_DISARM					(ASCII_E)
-#define OFF_DODGE					(ASCII_F)
-#define OFF_FADE					(ASCII_G) // UNUSED
-#define OFF_FAST					(ASCII_H)
-#define OFF_KICK					(ASCII_I)
-#define OFF_KICK_DIRT				(ASCII_J)
-#define OFF_PARRY					(ASCII_K)
-#define OFF_RESCUE					(ASCII_L)
-#define OFF_TAIL					(ASCII_M)
-#define OFF_TRIP					(ASCII_N)
-#define OFF_CRUSH					(ASCII_O)
-#define ASSIST_ALL					(ASCII_P)
-#define ASSIST_ALIGN				(ASCII_Q)
-#define ASSIST_RACE					(ASCII_R)
-#define ASSIST_PLAYERS				(ASCII_S)
-#define ASSIST_GUARD				(ASCII_T)
-#define ASSIST_VNUM					(ASCII_U)
-#define NO_TRACK					(ASCII_V)
-#define STATIC_TRACKING				(ASCII_W)
-#define SPAM_MURDER					(ASCII_X)
-#define OFF_INTIMIDATED				(ASCII_Y)
-#define OFF_UNDEAD_DRAIN			(ASCII_Z)	// True undead drain, very powerful
-#define ASSIST_GROUP				(ASCII_aa)
+#define OFF_AREA_ATTACK				0
+#define OFF_BACKSTAB				1
+#define OFF_BASH					2
+#define OFF_BERSERK					3
+#define OFF_DISARM					4
+#define OFF_DODGE					5
+#define OFF_FADE					6 // UNUSED
+#define OFF_FAST					7
+#define OFF_KICK					8
+#define OFF_KICK_DIRT				9
+#define OFF_PARRY					10
+#define OFF_RESCUE					11
+#define OFF_TAIL					12
+#define OFF_TRIP					13
+#define OFF_CRUSH					14
+#define ASSIST_ALL					15
+#define ASSIST_ALIGN				16
+#define ASSIST_RACE					17
+#define ASSIST_PLAYERS				18
+#define ASSIST_GUARD				19
+#define ASSIST_VNUM					20
+#define NO_TRACK					21
+#define STATIC_TRACKING				22
+#define SPAM_MURDER					23
+#define OFF_INTIMIDATED				24
+#define OFF_UNDEAD_DRAIN			25	// True undead drain, very powerful
+#define ASSIST_GROUP				26
 
 //
 // return values for check_imm
@@ -1271,208 +1191,208 @@ struct kill_data
 // IMM bits for mobs
 //
 
-#define IMM_SUMMON					(ASCII_A)
-#define IMM_CHARM					(ASCII_B)
-#define IMM_MAGIC					(ASCII_C)
-#define IMM_WEAPON					(ASCII_D)
-#define IMM_BASH					(ASCII_E)
-#define IMM_PIERCE					(ASCII_F)
-#define IMM_SLASH					(ASCII_G)
-#define IMM_FIRE					(ASCII_H)
-#define IMM_COLD					(ASCII_I)
-#define IMM_LIGHTNING				(ASCII_J)
-#define IMM_ACID					(ASCII_K)
-#define IMM_POISON					(ASCII_L)
-#define IMM_NEGATIVE				(ASCII_M)
-#define IMM_HOLY					(ASCII_N)
-#define IMM_ENERGY					(ASCII_O)
-#define IMM_MENTAL					(ASCII_P)
-#define IMM_DISEASE					(ASCII_Q)
-#define IMM_DROWNING				(ASCII_R)
-#define IMM_LIGHT					(ASCII_S)
-#define IMM_SOUND					(ASCII_T)
-#define IMM_INTERNAL				(ASCII_U)
-#define IMM_MITHRIL					(ASCII_X)
-#define IMM_SILVER					(ASCII_Y)
-#define IMM_IRON					(ASCII_Z)
-#define IMM_SLEEP					(ASCII_aa)
+#define IMM_SUMMON					0
+#define IMM_CHARM					1
+#define IMM_MAGIC					2
+#define IMM_WEAPON					3
+#define IMM_BASH					4
+#define IMM_PIERCE					5
+#define IMM_SLASH					6
+#define IMM_FIRE					7
+#define IMM_COLD					8
+#define IMM_LIGHTNING				9
+#define IMM_ACID					10
+#define IMM_POISON					11
+#define IMM_NEGATIVE				12
+#define IMM_HOLY					13
+#define IMM_ENERGY					14
+#define IMM_MENTAL					15
+#define IMM_DISEASE					16
+#define IMM_DROWNING				17
+#define IMM_LIGHT					18
+#define IMM_SOUND					19
+#define IMM_INTERNAL				20
+#define IMM_MITHRIL					23
+#define IMM_SILVER					24
+#define IMM_IRON					25
+#define IMM_SLEEP					26
 
 //
 // RES bits for mobs
 //
 
-#define RES_SUMMON					(ASCII_A)
-#define RES_CHARM					(ASCII_B)
-#define RES_MAGIC					(ASCII_C)
-#define RES_WEAPON					(ASCII_D)
-#define RES_BASH					(ASCII_E)
-#define RES_PIERCE					(ASCII_F)
-#define RES_SLASH					(ASCII_G)
-#define RES_FIRE					(ASCII_H)
-#define RES_COLD					(ASCII_I)
-#define RES_LIGHTNING				(ASCII_J)
-#define RES_ACID					(ASCII_K)
-#define RES_POISON					(ASCII_L)
-#define RES_NEGATIVE				(ASCII_M)
-#define RES_HOLY					(ASCII_N)
-#define RES_ENERGY					(ASCII_O)
-#define RES_MENTAL					(ASCII_P)
-#define RES_DISEASE					(ASCII_Q)
-#define RES_DROWNING				(ASCII_R)
-#define RES_LIGHT					(ASCII_S)
-#define RES_SOUND					(ASCII_T)
-#define RES_INTERNAL				(ASCII_U)
-#define RES_MITHRIL					(ASCII_X)
-#define RES_SILVER					(ASCII_Y)
-#define RES_IRON					(ASCII_Z)
+#define RES_SUMMON					0
+#define RES_CHARM					1
+#define RES_MAGIC					2
+#define RES_WEAPON					3
+#define RES_BASH					4
+#define RES_PIERCE					5
+#define RES_SLASH					6
+#define RES_FIRE					7
+#define RES_COLD					8
+#define RES_LIGHTNING				9
+#define RES_ACID					10
+#define RES_POISON					11
+#define RES_NEGATIVE				12
+#define RES_HOLY					13
+#define RES_ENERGY					14
+#define RES_MENTAL					15
+#define RES_DISEASE					16
+#define RES_DROWNING				17
+#define RES_LIGHT					18
+#define RES_SOUND					19
+#define RES_INTERNAL				20
+#define RES_MITHRIL					23
+#define RES_SILVER					24
+#define RES_IRON					25
  
 //
 // VULN bits for mobs
 //
 
-#define VULN_SUMMON					(ASCII_A)
-#define VULN_CHARM					(ASCII_B)
-#define VULN_MAGIC					(ASCII_C)
-#define VULN_WEAPON					(ASCII_D)
-#define VULN_BASH					(ASCII_E)
-#define VULN_PIERCE					(ASCII_F)
-#define VULN_SLASH					(ASCII_G)
-#define VULN_FIRE					(ASCII_H)
-#define VULN_COLD					(ASCII_I)
-#define VULN_LIGHTNING				(ASCII_J)
-#define VULN_ACID					(ASCII_K)
-#define VULN_POISON					(ASCII_L)
-#define VULN_NEGATIVE				(ASCII_M)
-#define VULN_HOLY					(ASCII_N)
-#define VULN_ENERGY					(ASCII_O)
-#define VULN_MENTAL					(ASCII_P)
-#define VULN_DISEASE				(ASCII_Q)
-#define VULN_DROWNING				(ASCII_R)
-#define VULN_LIGHT					(ASCII_S)
-#define VULN_SOUND					(ASCII_T)
-#define VULN_INTERNAL				(ASCII_U)
-#define VULN_MITHRIL				(ASCII_X)
-#define VULN_SILVER					(ASCII_Y)
-#define VULN_IRON					(ASCII_Z)
+#define VULN_SUMMON					0
+#define VULN_CHARM					1
+#define VULN_MAGIC					2
+#define VULN_WEAPON					3
+#define VULN_BASH					4
+#define VULN_PIERCE					5
+#define VULN_SLASH					6
+#define VULN_FIRE					7
+#define VULN_COLD					8
+#define VULN_LIGHTNING				9
+#define VULN_ACID					10
+#define VULN_POISON					11
+#define VULN_NEGATIVE				12
+#define VULN_HOLY					13
+#define VULN_ENERGY					14
+#define VULN_MENTAL					15
+#define VULN_DISEASE				16
+#define VULN_DROWNING				17
+#define VULN_LIGHT					18
+#define VULN_SOUND					19
+#define VULN_INTERNAL				20
+#define VULN_MITHRIL				23
+#define VULN_SILVER					24
+#define VULN_IRON					25
 
 //
 // body form
 //
 
-#define FORM_EDIBLE					(ASCII_A)
-#define FORM_POISON					(ASCII_B)
-#define FORM_MAGICAL				(ASCII_C)
-#define FORM_INSTANT_DECAY			(ASCII_D)
-#define FORM_OTHER					(ASCII_E) // defined by material bit
+#define FORM_EDIBLE					0
+#define FORM_POISON					1
+#define FORM_MAGICAL				2
+#define FORM_INSTANT_DECAY			3
+#define FORM_OTHER					4 // defined by material bit
 
 //
 // actual form
 //
 
-#define FORM_ANIMAL					(ASCII_G)
-#define FORM_SENTIENT				(ASCII_H)
-#define FORM_UNDEAD					(ASCII_I)
-#define FORM_CONSTRUCT				(ASCII_J)
-#define FORM_MIST					(ASCII_K)
-#define FORM_INTANGIBLE				(ASCII_L)
+#define FORM_ANIMAL					6
+#define FORM_SENTIENT				7
+#define FORM_UNDEAD					8
+#define FORM_CONSTRUCT				9
+#define FORM_MIST					10
+#define FORM_INTANGIBLE				11
 
-#define FORM_BIPED					(ASCII_M)
-#define FORM_AQUATIC				(ASCII_N)
-#define FORM_INSECT					(ASCII_O)
-#define FORM_SPIDER					(ASCII_P)
-#define FORM_CRUSTACEAN				(ASCII_Q)
-#define FORM_WORM					(ASCII_R)
-#define FORM_BLOB					(ASCII_S)
+#define FORM_BIPED					12
+#define FORM_AQUATIC				13
+#define FORM_INSECT					14
+#define FORM_SPIDER					15
+#define FORM_CRUSTACEAN				16
+#define FORM_WORM					17
+#define FORM_BLOB					18
 
-#define FORM_MAMMAL					(ASCII_V)
-#define FORM_BIRD					(ASCII_W)
-#define FORM_REPTILE				(ASCII_X)
-#define FORM_SNAKE					(ASCII_Y)
-#define FORM_DRAGON					(ASCII_Z)
-#define FORM_AMPHIBIAN				(ASCII_aa)
-#define FORM_FISH					(ASCII_bb)
-#define FORM_COLD_BLOOD				(ASCII_cc)
-#define FORM_NOSPEECH				(ASCII_dd)
+#define FORM_MAMMAL					21
+#define FORM_BIRD					22
+#define FORM_REPTILE				23
+#define FORM_SNAKE					24
+#define FORM_DRAGON					25
+#define FORM_AMPHIBIAN				26
+#define FORM_FISH					27
+#define FORM_COLD_BLOOD				28
+#define FORM_NOSPEECH				29
 
 //
 // body parts
 //
 
-#define PART_HEAD					(ASCII_A)
-#define PART_ARMS					(ASCII_B)
-#define PART_LEGS					(ASCII_C)
-#define PART_HEART					(ASCII_D)
-#define PART_BRAINS					(ASCII_E)
-#define PART_GUTS					(ASCII_F)
-#define PART_HANDS					(ASCII_G)
-#define PART_FEET					(ASCII_H)
-#define PART_FINGERS				(ASCII_I)
-#define PART_EAR					(ASCII_J)
-#define PART_EYE					(ASCII_K)
-#define PART_LONG_TONGUE			(ASCII_L)
-#define PART_EYESTALKS				(ASCII_M)
-#define PART_TENTACLES				(ASCII_N)
-#define PART_FINS					(ASCII_O)
-#define PART_WINGS					(ASCII_P)
-#define PART_TAIL					(ASCII_Q)
+#define PART_HEAD					0
+#define PART_ARMS					1
+#define PART_LEGS					2
+#define PART_HEART					3
+#define PART_BRAINS					4
+#define PART_GUTS					5
+#define PART_HANDS					6
+#define PART_FEET					7
+#define PART_FINGERS				8
+#define PART_EAR					9
+#define PART_EYE					10
+#define PART_LONG_TONGUE			11
+#define PART_EYESTALKS				12
+#define PART_TENTACLES				13
+#define PART_FINS					14
+#define PART_WINGS					15
+#define PART_TAIL					16
 
 //
 // for combat
 //
 
-#define PART_CLAWS					(ASCII_U)
-#define PART_FANGS					(ASCII_V)
-#define PART_HORNS					(ASCII_W)
-#define PART_SCALES					(ASCII_X)
-#define PART_TUSKS					(ASCII_Y)
+#define PART_CLAWS					20
+#define PART_FANGS					21
+#define PART_HORNS					22
+#define PART_SCALES					23
+#define PART_TUSKS					24
 
 //
 // Bits for 'affected_by'.
 // Used in #MOBILES.
 //
 
-#define AFF_BLIND					(ASCII_A)
-#define AFF_INVISIBLE				(ASCII_B)
-#define AFF_DETECT_EVIL				(ASCII_C)
-#define AFF_DETECT_INVIS			(ASCII_D)
-#define AFF_DETECT_MAGIC			(ASCII_E)
-#define AFF_DETECT_HIDDEN			(ASCII_F)
-#define AFF_DETECT_GOOD				(ASCII_G)
-#define AFF_SANCTUARY				(ASCII_H)
-#define AFF_DETECT_CAMO				(ASCII_I)
-#define AFF_INFRARED				(ASCII_J) // unused!
-#define AFF_CURSE					(ASCII_K)
-#define AFF_CAMOUFLAGE				(ASCII_L)
-#define AFF_POISON					(ASCII_M)
-#define AFF_PROTECTION				(ASCII_N)
-#define AFF_RAGE					(ASCII_O)
-#define AFF_SNEAK					(ASCII_P)
-#define AFF_HIDE					(ASCII_Q)
-#define AFF_SLEEP					(ASCII_R)
-#define AFF_CHARM					(ASCII_S)
-#define AFF_FLYING					(ASCII_T)
-#define AFF_PASS_DOOR				(ASCII_U)
-#define AFF_HASTE					(ASCII_V)
-#define AFF_CALM					(ASCII_W)
-#define AFF_PLAGUE					(ASCII_X)
-#define AFF_PERMANENT				(ASCII_Y)
-#define AFF_DARK_VISION				(ASCII_Z)
-#define AFF_BERSERK					(ASCII_aa)
-#define AFF_WATERBREATH				(ASCII_bb)
-#define AFF_REGENERATION			(ASCII_cc)
-#define AFF_SLOW					(ASCII_dd)
-#define AFF_NOSHOW					(ASCII_ee)
+#define AFF_BLIND					0
+#define AFF_INVISIBLE				1
+#define AFF_DETECT_EVIL				2
+#define AFF_DETECT_INVIS			3
+#define AFF_DETECT_MAGIC			4
+#define AFF_DETECT_HIDDEN			5
+#define AFF_DETECT_GOOD				6
+#define AFF_SANCTUARY				7
+#define AFF_DETECT_CAMO				8
+#define AFF_INFRARED				9 // unused!
+#define AFF_CURSE					10
+#define AFF_CAMOUFLAGE				11
+#define AFF_POISON					12
+#define AFF_PROTECTION				13
+#define AFF_RAGE					14
+#define AFF_SNEAK					15
+#define AFF_HIDE					16
+#define AFF_SLEEP					17
+#define AFF_CHARM					18
+#define AFF_FLYING					19
+#define AFF_PASS_DOOR				20
+#define AFF_HASTE					21
+#define AFF_CALM					22
+#define AFF_PLAGUE					23
+#define AFF_PERMANENT				24
+#define AFF_DARK_VISION				25
+#define AFF_BERSERK					26
+#define AFF_WATERBREATH				27
+#define AFF_REGENERATION			28
+#define AFF_SLOW					29
+#define AFF_NOSHOW					30
 
 //
 // AFF bits for rooms
 //
 
-#define AFF_ROOM_RANDOMIZER			(ASCII_A)
-#define AFF_ROOM_CURSE				(ASCII_K)
-#define AFF_ROOM_POISON				(ASCII_M)
-#define AFF_ROOM_SLEEP				(ASCII_R)
-#define AFF_ROOM_PLAGUE				(ASCII_X)
-#define AFF_ROOM_SLOW				(ASCII_dd)
+#define AFF_ROOM_RANDOMIZER			0
+#define AFF_ROOM_CURSE				10
+#define AFF_ROOM_POISON				12
+#define AFF_ROOM_SLEEP				17
+#define AFF_ROOM_PLAGUE				23
+#define AFF_ROOM_SLOW				29
 
 // Aff bits for.. AREAS!
 // -- None currently. --
@@ -1482,7 +1402,7 @@ struct kill_data
 // Aff bits for OBJS
 //
 
-#define	AFF_OBJ_BURNING				(ASCII_A)
+#define	AFF_OBJ_BURNING				0
 
 //
 // Sex.
@@ -1688,64 +1608,64 @@ struct kill_data
 // Used in #OBJECTS.
 ///
 
-#define ITEM_GLOW					(ASCII_A)
-#define ITEM_HUM					(ASCII_B)
-#define ITEM_DARK					(ASCII_C)
-#define ITEM_NOSHOW					(ASCII_D)
-#define ITEM_EVIL					(ASCII_E)
-#define ITEM_INVIS					(ASCII_F)
-#define ITEM_MAGIC					(ASCII_G)
-#define ITEM_NODROP					(ASCII_H)
-#define ITEM_BLESS					(ASCII_I)
-#define ITEM_ANTI_GOOD				(ASCII_J)
-#define ITEM_ANTI_EVIL				(ASCII_K)
-#define ITEM_ANTI_NEUTRAL			(ASCII_L)
-#define ITEM_NOREMOVE				(ASCII_M)
-#define ITEM_INVENTORY				(ASCII_N)
-#define ITEM_NOPURGE				(ASCII_O)
-#define ITEM_ROT_DEATH				(ASCII_P)
-#define ITEM_VIS_DEATH				(ASCII_Q)
-#define ITEM_FIXED					(ASCII_R)
-#define ITEM_NODISARM				(ASCII_S)
-#define ITEM_NOLOCATE				(ASCII_T)
-#define ITEM_MELT_DROP				(ASCII_U)
-#define ITEM_UNDER_CLOTHES			(ASCII_V)
-#define ITEM_SELL_EXTRACT			(ASCII_W)
-#define ITEM_BURN_PROOF				(ASCII_Y)
-#define ITEM_NOUNCURSE				(ASCII_Z)
-#define ITEM_BRAND					(ASCII_aa)
-#define CORPSE_NO_ANIMATE			(ASCII_bb)
-#define ITEM_ANTI_LAWFUL			(ASCII_cc)
-#define ITEM_ANTI_NEUT				(ASCII_dd)
-#define ITEM_ANTI_CHAOTIC			(ASCII_ee)
-#define ITEM_NO_STASH				(ASCII_ff)
-#define ITEM_NO_SAC					(ASCII_gg)
-#define ITEM_DONATION_PIT			(ASCII_hh)
+#define ITEM_GLOW					0
+#define ITEM_HUM					1
+#define ITEM_DARK					2
+#define ITEM_NOSHOW					3
+#define ITEM_EVIL					4
+#define ITEM_INVIS					5
+#define ITEM_MAGIC					6
+#define ITEM_NODROP					7
+#define ITEM_BLESS					8
+#define ITEM_ANTI_GOOD				9
+#define ITEM_ANTI_EVIL				10
+#define ITEM_ANTI_NEUTRAL			11
+#define ITEM_NOREMOVE				12
+#define ITEM_INVENTORY				13
+#define ITEM_NOPURGE				14
+#define ITEM_ROT_DEATH				15
+#define ITEM_VIS_DEATH				16
+#define ITEM_FIXED					17
+#define ITEM_NODISARM				18
+#define ITEM_NOLOCATE				19
+#define ITEM_MELT_DROP				20
+#define ITEM_UNDER_CLOTHES			21
+#define ITEM_SELL_EXTRACT			22
+#define ITEM_BURN_PROOF				24
+#define ITEM_NOUNCURSE				25
+#define ITEM_BRAND					26
+#define CORPSE_NO_ANIMATE			27
+#define ITEM_ANTI_LAWFUL			28
+#define ITEM_ANTI_NEUT				29
+#define ITEM_ANTI_CHAOTIC			30
+#define ITEM_NO_STASH				31
+#define ITEM_NO_SAC					32
+#define ITEM_DONATION_PIT			33
 
 //
 // Wear flags.
 // Used in #OBJECTS.
 //
 
-#define ITEM_TAKE					(ASCII_A)
-#define ITEM_WEAR_FINGER			(ASCII_B)
-#define ITEM_WEAR_NECK				(ASCII_C)
-#define ITEM_WEAR_BODY				(ASCII_D)
-#define ITEM_WEAR_HEAD				(ASCII_E)
-#define ITEM_WEAR_LEGS				(ASCII_F)
-#define ITEM_WEAR_FEET				(ASCII_G)
-#define ITEM_WEAR_HANDS				(ASCII_H)
-#define ITEM_WEAR_ARMS				(ASCII_I)
-#define ITEM_WEAR_SHIELD			(ASCII_J)
-#define ITEM_WEAR_ABOUT				(ASCII_K)
-#define ITEM_WEAR_WAIST				(ASCII_L)
-#define ITEM_WEAR_WRIST				(ASCII_M)
-#define ITEM_WEAR_WIELD				(ASCII_N)
-#define ITEM_WEAR_HOLD				(ASCII_O)
-#define ITEM_WEAR_FLOAT				(ASCII_P)
-#define ITEM_WEAR_BRAND				(ASCII_Q)
-#define ITEM_WEAR_STRAPPED			(ASCII_R)
-#define ITEM_WEAR_COSMETIC			(ASCII_S) //cosmetic, misc, up to 5/person
+#define ITEM_TAKE					0
+#define ITEM_WEAR_FINGER			1
+#define ITEM_WEAR_NECK				2
+#define ITEM_WEAR_BODY				3
+#define ITEM_WEAR_HEAD				4
+#define ITEM_WEAR_LEGS				5
+#define ITEM_WEAR_FEET				6
+#define ITEM_WEAR_HANDS				7
+#define ITEM_WEAR_ARMS				8
+#define ITEM_WEAR_SHIELD			9
+#define ITEM_WEAR_ABOUT				10
+#define ITEM_WEAR_WAIST				11
+#define ITEM_WEAR_WRIST				12
+#define ITEM_WEAR_WIELD				13
+#define ITEM_WEAR_HOLD				14
+#define ITEM_WEAR_FLOAT				15
+#define ITEM_WEAR_BRAND				16
+#define ITEM_WEAR_STRAPPED			17
+#define ITEM_WEAR_COSMETIC			18 //cosmetic, misc, up to 5/person
 
 #define RESTRICT_OTHER				0
 #define RESTRICT_CLASS				1
@@ -1769,12 +1689,12 @@ struct kill_data
 #define PALADIN_CRUSADER			2
 
 #define STYLE_NONE					-1
-#define STYLE_GLADIATOR				(ASCII_A)
-#define STYLE_BARBARIAN				(ASCII_B)
-#define STYLE_DUELIST				(ASCII_C)
-#define STYLE_SKIRMISHER			(ASCII_D)
-#define STYLE_DRAGOON				(ASCII_E)
-#define STYLE_TACTICIAN				(ASCII_F)
+#define STYLE_GLADIATOR				0
+#define STYLE_BARBARIAN				1
+#define STYLE_DUELIST				2
+#define STYLE_SKIRMISHER			3
+#define STYLE_DRAGOON				4
+#define STYLE_TACTICIAN				5
 #define MAX_STYLE					7
 #define MAX_STYLE_SKILL				38
 
@@ -1798,49 +1718,49 @@ struct kill_data
 // weapon types
 //
 
-#define WEAPON_FLAMING				(ASCII_A)
-#define WEAPON_FROST				(ASCII_B)
-#define WEAPON_VAMPIRIC				(ASCII_C)
-#define WEAPON_SHARP				(ASCII_D)
-#define WEAPON_VORPAL				(ASCII_E)
-#define WEAPON_TWO_HANDS			(ASCII_F)
-#define WEAPON_SHOCKING				(ASCII_G)
-#define WEAPON_POISON				(ASCII_H)
-#define WEAPON_AVENGER				(ASCII_I)
-#define WEAPON_SHADOWBANE			(ASCII_J)
-#define WEAPON_LIGHTBRINGER			(ASCII_K)
+#define WEAPON_FLAMING				0
+#define WEAPON_FROST				1
+#define WEAPON_VAMPIRIC				2
+#define WEAPON_SHARP				3
+#define WEAPON_VORPAL				4
+#define WEAPON_TWO_HANDS			5
+#define WEAPON_SHOCKING				6
+#define WEAPON_POISON				7
+#define WEAPON_AVENGER				8
+#define WEAPON_SHADOWBANE			9
+#define WEAPON_LIGHTBRINGER			10
 
 //
 // gate flags
 //
 
-#define GATE_NORMAL_EXIT			(ASCII_A)
-#define GATE_NOCURSE				(ASCII_B)
-#define GATE_GOWITH					(ASCII_C)
-#define GATE_BUGGY					(ASCII_D)
-#define GATE_RANDOM					(ASCII_E)
+#define GATE_NORMAL_EXIT			0
+#define GATE_NOCURSE				1
+#define GATE_GOWITH					2
+#define GATE_BUGGY					3
+#define GATE_RANDOM					4
 
 //
 // furniture flags
 //
 
-#define STAND_AT					(ASCII_A)
-#define STAND_ON					(ASCII_B)
-#define STAND_IN					(ASCII_C)
-#define SIT_AT						(ASCII_D)
-#define SIT_ON						(ASCII_E)
-#define SIT_IN						(ASCII_F)
-#define REST_AT						(ASCII_G)
-#define REST_ON						(ASCII_H)
-#define REST_IN						(ASCII_I)
-#define SLEEP_AT					(ASCII_J)
-#define SLEEP_ON					(ASCII_K)
-#define SLEEP_IN					(ASCII_L)
-#define PUT_AT						(ASCII_M)
-#define PUT_ON						(ASCII_N)
-#define PUT_IN						(ASCII_O)
-#define PUT_INSIDE					(ASCII_P)
-#define LOUNGE_ON					(ASCII_Q)
+#define STAND_AT					0
+#define STAND_ON					1
+#define STAND_IN					2
+#define SIT_AT						3
+#define SIT_ON						4
+#define SIT_IN						5
+#define REST_AT						6
+#define REST_ON						7
+#define REST_IN						8
+#define SLEEP_AT					9
+#define SLEEP_ON					10
+#define SLEEP_IN					11
+#define PUT_AT						12
+#define PUT_ON						13
+#define PUT_IN						14
+#define PUT_INSIDE					15
+#define LOUNGE_ON					16
 	
 //
 // Apply types (for affects).
@@ -1920,11 +1840,11 @@ struct kill_data
 // Used in #OBJECTS.
 //
 
-#define CONT_CLOSEABLE				(ASCII_A)
-#define CONT_PICKPROOF				(ASCII_B)
-#define CONT_CLOSED					(ASCII_C)
-#define CONT_LOCKED					(ASCII_D)
-#define CONT_PUT_ON					(ASCII_E)
+#define CONT_CLOSEABLE				0
+#define CONT_PICKPROOF				1
+#define CONT_CLOSED					2
+#define CONT_LOCKED					3
+#define CONT_PUT_ON					4
 
 #define WIELD_ONE					1
 #define WIELD_TWO					2
@@ -1971,47 +1891,47 @@ struct kill_data
 // Used in #ROOMS.
 //
 
-#define ROOM_DARK					(ASCII_A)
-#define ROOM_NO_MOB					(ASCII_C)
-#define ROOM_INDOORS				(ASCII_D)
-#define ROOM_NO_CONSECRATE			(ASCII_E)
-#define ROOM_PRIVATE				(ASCII_J)
-#define ROOM_SAFE					(ASCII_K)
-#define ROOM_SOLITARY				(ASCII_L)
-#define ROOM_PET_SHOP				(ASCII_M)
-#define ROOM_NO_RECALL				(ASCII_N)
-#define ROOM_IMP_ONLY				(ASCII_O)
-#define ROOM_GODS_ONLY				(ASCII_P)
-#define ROOM_HEROES_ONLY			(ASCII_Q)
-#define ROOM_NEWBIES_ONLY			(ASCII_R)
-#define ROOM_LAW					(ASCII_S)
-#define ROOM_NOWHERE				(ASCII_T)
-#define ROOM_NO_GATE				(ASCII_U)
-#define ROOM_SILENCE				(ASCII_V)
-#define ROOM_NO_SUMMON_TO			(ASCII_W)
-#define ROOM_NO_SUMMON_FROM			(ASCII_X)
-#define ROOM_NO_ALARM				(ASCII_Z)
-#define ROOM_FORCE_DUEL				(ASCII_bb)
-#define ROOM_NO_MAGIC				(ASCII_cc)
-#define ROOM_AREA_EXPLORE			(ASCII_dd) // Don't use - Use area flags instead
-#define ROOM_NO_COMMUNE				(ASCII_ee)
+#define ROOM_DARK					0
+#define ROOM_NO_MOB					2
+#define ROOM_INDOORS				3
+#define ROOM_NO_CONSECRATE			4
+#define ROOM_PRIVATE				9
+#define ROOM_SAFE					10
+#define ROOM_SOLITARY				11
+#define ROOM_PET_SHOP				12
+#define ROOM_NO_RECALL				13
+#define ROOM_IMP_ONLY				14
+#define ROOM_GODS_ONLY				15
+#define ROOM_HEROES_ONLY			16
+#define ROOM_NEWBIES_ONLY			17
+#define ROOM_LAW					18
+#define ROOM_NOWHERE				19
+#define ROOM_NO_GATE				20
+#define ROOM_SILENCE				21
+#define ROOM_NO_SUMMON_TO			22
+#define ROOM_NO_SUMMON_FROM			23
+#define ROOM_NO_ALARM				25
+#define ROOM_FORCE_DUEL				27
+#define ROOM_NO_MAGIC				28
+#define ROOM_AREA_EXPLORE			29 // Don't use - Use area flags instead
+#define ROOM_NO_COMMUNE				30
 
 //
 // Exit flags.
 // Used in #ROOMS.
 //
 
-#define EX_ISDOOR					(ASCII_A)
-#define EX_CLOSED					(ASCII_B)
-#define EX_LOCKED					(ASCII_C)
-#define EX_PICKPROOF				(ASCII_D)
-#define EX_NOPASS					(ASCII_E)
-#define EX_NOCLOSE					(ASCII_F)
-#define EX_NOLOCK					(ASCII_G)
-#define EX_NOBASH					(ASCII_H)
-#define EX_NONOBVIOUS				(ASCII_I)
-#define EX_TRANSLUCENT				(ASCII_J)
-#define EX_JAMMED					(ASCII_K)
+#define EX_ISDOOR					0
+#define EX_CLOSED					1
+#define EX_LOCKED					2
+#define EX_PICKPROOF				3
+#define EX_NOPASS					4
+#define EX_NOCLOSE					5
+#define EX_NOLOCK					6
+#define EX_NOBASH					7
+#define EX_NONOBVIOUS				8
+#define EX_TRANSLUCENT				9
+#define EX_JAMMED					10
 
 #define ARE_NORMAL					0
 #define ARE_ROAD_RIVER				1
@@ -2226,142 +2146,142 @@ struct kill_data
 // ACT bits for players.
 //
 
-#define PLR_IS_NPC					(ASCII_A) // Don't EVER set.
+#define PLR_IS_NPC					0 // Don't EVER set.
 
 //
 // RT auto flags
 //
 
-#define PLR_AUTOABORT				(ASCII_B)
-#define PLR_AUTOASSIST				(ASCII_C)
-#define PLR_AUTOEXIT				(ASCII_D)
-#define PLR_AUTOLOOT				(ASCII_E)
-#define PLR_AUTOSAC					(ASCII_F)
-#define PLR_AUTOGOLD				(ASCII_G)
-#define PLR_AUTOSPLIT				(ASCII_H)
-#define PLR_COLOR					(ASCII_I)
-#define PLR_IGNORANT				(ASCII_J)
-#define PLR_BETRAYER				(ASCII_K)
+#define PLR_AUTOABORT				1
+#define PLR_AUTOASSIST				2
+#define PLR_AUTOEXIT				3
+#define PLR_AUTOLOOT				4
+#define PLR_AUTOSAC					5
+#define PLR_AUTOGOLD				6
+#define PLR_AUTOSPLIT				7
+#define PLR_COLOR					8
+#define PLR_IGNORANT				9
+#define PLR_BETRAYER				10
 
 //
 // RT personal flags
 //
 
-#define PLR_CODER					(ASCII_L)
-#define PLR_HEROIMM					(ASCII_M)
-#define PLR_HOLYLIGHT				(ASCII_N)
-#define PLR_EMPOWERED				(ASCII_O)
-#define PLR_NOVOID					(ASCII_P)
-#define PLR_NOSUMMON				(ASCII_Q)
-#define PLR_NOFOLLOW				(ASCII_R)
+#define PLR_CODER					11
+#define PLR_HEROIMM					12
+#define PLR_HOLYLIGHT				13
+#define PLR_EMPOWERED				14
+#define PLR_NOVOID					15
+#define PLR_NOSUMMON				16
+#define PLR_NOFOLLOW				17
 
 //
 // 2 bits reserved, S-T
 //
 
-#define PLR_NO_TRANSFER				(ASCII_T)
+#define PLR_NO_TRANSFER				19
 
 //
 // Bad flags
 //
 
-#define PLR_PERMIT					(ASCII_U)
-#define PLR_MORON					(ASCII_V)
-#define PLR_LOG						(ASCII_W)
-#define PLR_DENY					(ASCII_X)
-#define PLR_FREEZE					(ASCII_Y)
-#define PLR_THIEF					(ASCII_Z)
-#define PLR_KILLER					(ASCII_aa)
-#define PLR_CRIMINAL				(ASCII_bb)
+#define PLR_PERMIT					20
+#define PLR_MORON					21
+#define PLR_LOG						22
+#define PLR_DENY					23
+#define PLR_FREEZE					24
+#define PLR_THIEF					25
+#define PLR_KILLER					26
+#define PLR_CRIMINAL				27
 
 //
 // RT comm flags -- may be used on both mobs and chars
 //
 
-#define COMM_QUIET					(ASCII_A)
-#define COMM_DEAF					(ASCII_B)
-#define COMM_NOWIZ					(ASCII_C)
-#define COMM_NOAUCTION				(ASCII_D)
-#define COMM_NOGOSSIP				(ASCII_E)
-#define COMM_NOQUESTION				(ASCII_F)
-#define COMM_NONEWBIE				(ASCII_G)
-#define COMM_NOCABAL				(ASCII_H)
-#define COMM_NOQUOTE				(ASCII_I)
-#define COMM_SHOUTSOFF				(ASCII_J)
-#define COMM_ANSI					(ASCII_K)
+#define COMM_QUIET					0
+#define COMM_DEAF					1
+#define COMM_NOWIZ					2
+#define COMM_NOAUCTION				3
+#define COMM_NOGOSSIP				4
+#define COMM_NOQUESTION				5
+#define COMM_NONEWBIE				6
+#define COMM_NOCABAL				7
+#define COMM_NOQUOTE				8
+#define COMM_SHOUTSOFF				9
+#define COMM_ANSI					10
 
 //
 // display flags
 //
 
-#define COMM_COMPACT				(ASCII_L)
-#define COMM_BRIEF					(ASCII_M)
-#define COMM_PROMPT					(ASCII_N)
-#define COMM_COMBINE				(ASCII_O)
-#define COMM_TELNET_GA				(ASCII_P)
-#define COMM_SHOW_AFFECTS			(ASCII_Q)
-#define COMM_IMMORTAL				(ASCII_S)
+#define COMM_COMPACT				11
+#define COMM_BRIEF					12
+#define COMM_PROMPT					13
+#define COMM_COMBINE				14
+#define COMM_TELNET_GA				15
+#define COMM_SHOW_AFFECTS			16
+#define COMM_IMMORTAL				18
 
 //
 // penalties
 //
 
-#define COMM_NOEMOTE				(ASCII_T)
-#define COMM_NOSHOUT				(ASCII_U)
-#define COMM_NOTELL					(ASCII_V)
-#define COMM_NOCHANNELS				(ASCII_W) 
-#define COMM_BUILDER				(ASCII_X)
-#define COMM_SNOOP_PROOF			(ASCII_Y)
-#define COMM_AFK					(ASCII_Z)
-#define COMM_ALL_CABALS				(ASCII_aa)
-#define COMM_NOSOCKET				(ASCII_bb)
-#define COMM_SWITCHSKILLS			(ASCII_cc)
-#define COMM_NOBUILDER				(ASCII_dd)
-#define COMM_LOTS_O_COLOR			(ASCII_ee)
+#define COMM_NOEMOTE				19
+#define COMM_NOSHOUT				20
+#define COMM_NOTELL					21
+#define COMM_NOCHANNELS				22 
+#define COMM_BUILDER				23
+#define COMM_SNOOP_PROOF			24
+#define COMM_AFK					25
+#define COMM_ALL_CABALS				26
+#define COMM_NOSOCKET				27
+#define COMM_SWITCHSKILLS			28
+#define COMM_NOBUILDER				29
+#define COMM_LOTS_O_COLOR			30
 
 //
 // Trust flags
 //
 
-#define TRUST_GROUP					(ASCII_A)
-#define TRUST_CABAL					(ASCII_B)
+#define TRUST_GROUP					0
+#define TRUST_CABAL					1
 
 //
 // WIZnet flags
 //
 
-#define WIZ_ON						(ASCII_A)
-#define WIZ_TICKS					(ASCII_B)
-#define WIZ_LOGINS					(ASCII_C)
-#define WIZ_SITES					(ASCII_D)
+#define WIZ_ON						0
+#define WIZ_TICKS					1
+#define WIZ_LOGINS					2
+#define WIZ_SITES					3
 
 #ifdef WIZ_LINKS
 #undef WIZ_LINKS
-#define WIZ_LINKS					(ASCII_E)
+#define WIZ_LINKS					4
 #else
-#define WIZ_LINKS					(ASCII_E)
+#define WIZ_LINKS					4
 #endif
 
-#define WIZ_DEATHS					(ASCII_F)
-#define WIZ_RESETS					(ASCII_G)
-#define WIZ_MOBDEATHS				(ASCII_H)
-#define WIZ_FLAGS					(ASCII_I)
-#define WIZ_PENALTIES				(ASCII_J)
-#define WIZ_SACCING					(ASCII_K)
-#define WIZ_LEVELS					(ASCII_L)
-#define WIZ_SECURE					(ASCII_M)
-#define WIZ_SWITCHES				(ASCII_N)
-#define WIZ_SNOOPS					(ASCII_O)
-#define WIZ_RESTORE					(ASCII_P)
-#define WIZ_LOAD					(ASCII_Q)
-#define WIZ_NEWBIE					(ASCII_R)
-#define WIZ_PREFIX					(ASCII_S)
-#define WIZ_SPAM					(ASCII_T)
-#define WIZ_CABAL					(ASCII_U)
-#define WIZ_PERCENT					(ASCII_V)
-#define WIZ_LOG						(ASCII_W)
-#define	WIZ_OOC						(ASCII_X)
-#define WIZ_DEBUG					(ASCII_Y)
+#define WIZ_DEATHS					5
+#define WIZ_RESETS					6
+#define WIZ_MOBDEATHS				7
+#define WIZ_FLAGS					8
+#define WIZ_PENALTIES				9
+#define WIZ_SACCING					10
+#define WIZ_LEVELS					11
+#define WIZ_SECURE					12
+#define WIZ_SWITCHES				13
+#define WIZ_SNOOPS					14
+#define WIZ_RESTORE					15
+#define WIZ_LOAD					16
+#define WIZ_NEWBIE					17
+#define WIZ_PREFIX					18
+#define WIZ_SPAM					19
+#define WIZ_CABAL					20
+#define WIZ_PERCENT					21
+#define WIZ_LOG						22
+#define	WIZ_OOC						23
+#define WIZ_DEBUG					24
 
 //
 // AP Demonic Favors Defines
@@ -2430,9 +2350,9 @@ struct kill_data
 #define ELE_TYPE_PRIMARY			1
 #define ELE_TYPE_PARA				2
 
-#define MAT_TRANSLUCENT				(ASCII_A)
-#define MAT_TRANSPARENT				(ASCII_B)
-#define MAT_EDIBLE					(ASCII_C)
+#define MAT_TRANSLUCENT				0
+#define MAT_TRANSPARENT				1
+#define MAT_EDIBLE					2
 
 #define MAT_SOLID					0
 #define MAT_LIQUID					1
@@ -2454,46 +2374,46 @@ public:
 	AREA_DATA *area;
 	SPEECH_DATA *speech;
 	long progtypes[MAX_BITVECTOR];
-	sh_int vnum;
-	sh_int group;
+	short vnum;
+	short group;
 	bool new_format;
-	sh_int count;
-	sh_int killed;
+	short count;
+	short killed;
 	char *player_name;
 	char *short_descr;
 	char *long_descr;
 	char *description;
 	long act[MAX_BITVECTOR];
 	long affected_by[MAX_BITVECTOR];
-	sh_int alignment;
-	sh_int level;
-	sh_int hitroll;
-	sh_int hit[3];
-	sh_int mana[3];
-	sh_int damage[3];
-	sh_int ac[4];
-	sh_int dam_type;
+	short alignment;
+	short level;
+	short hitroll;
+	short hit[3];
+	short mana[3];
+	short damage[3];
+	short ac[4];
+	short dam_type;
 	long off_flags[MAX_BITVECTOR];
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
 	long mprog_flags[MAX_BITVECTOR];
-	sh_int xp_mod;
+	short xp_mod;
 	float dam_mod;
-	sh_int start_pos;
-	sh_int sex;
-	sh_int race;
+	short start_pos;
+	short sex;
+	short race;
 	int wealth;
 	long form[MAX_BITVECTOR];
 	long parts[MAX_BITVECTOR];
-	sh_int size;
+	short size;
 
 	// restrict mobs to a specific region
 
 	int restrict_low;	// Low end of vnum range 
 	int restrict_high;	// High end of vnum range
 
-	sh_int affect_sn[MAX_MOB_AFFECT];
+	short affect_sn[MAX_MOB_AFFECT];
 	long affect_bit[MAX_MOB_AFFECT];
 	char *cast_spell[MAX_MOB_CAST];
 
@@ -2507,16 +2427,16 @@ public:
 		my_class = CClass::GetClass(nClassIndex);
 	}
 
-	sh_int cabal;
+	short cabal;
 	long styles[MAX_BITVECTOR];
-	sh_int ele_major;
-	sh_int ele_para;
-	sh_int arms;
-	sh_int legs;
+	short ele_major;
+	short ele_para;
+	short arms;
+	short legs;
 	char *notes;
 	int swealth;
 	char *attack_yell;
-	sh_int profs_taught[MAX_PROFS_TAUGHT_BY_MOB];
+	short profs_taught[MAX_PROFS_TAUGHT_BY_MOB];
 	SPEC_FUNC spec_prog;
 private:
 	CClass *my_class;
@@ -2552,7 +2472,7 @@ struct line_data
 	LINE_DATA *prev;
 	int number;
 	int delay;
-	sh_int type;
+	short type;
 	char *text;
 };
 	
@@ -2679,169 +2599,6 @@ struct aprog_data
 	char *myell_name;
 };
 
-extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking IS_NPC
-
-//
-// One character (PC or NPC).
-//
-class	char_data
-{
-public:
-	CHAR_DATA *next;
-	CHAR_DATA *next_in_room;
-	CHAR_DATA *master;
-	CHAR_DATA *leader;
-	CHAR_DATA *fighting;
-	CHAR_DATA *reply;
-	CHAR_DATA *pet;
-	CHAR_DATA *last_fought;
-	int tracktimer;
-	time_t last_fight_time;
-	char * last_fight_name;
-	CHAR_DATA *hunting;
-	CHAR_DATA *defending;
-	MEM_DATA *memory;
-	GAME_FUN *game_fun;
-	MOB_INDEX_DATA *pIndexData;
-	DESCRIPTOR_DATA *desc;
-	AFFECT_DATA *affected;
-	NOTE_DATA *pnote;
-	OBJ_DATA *carrying;
-	OBJ_DATA *on;
-	ROOM_INDEX_DATA *in_room;
-	ROOM_INDEX_DATA *was_in_room;
-	AREA_DATA *zone;
-	PC_DATA *pcdata;
-	GEN_DATA *gen_data;
-	PATHFIND_DATA *path;	// For smart pathfinding/tracking.  Mob only.
-	PATHFIND_DATA *best;	// Stores best direction thus far.  Mob only.
-	bool valid;
-	char *name;
-	char *true_name;
-	long id;
-	sh_int version;
-	char *short_descr;
-	char *long_descr;
-	char *description;
-	char *prompt;
-	char *prefix;
-	sh_int group;
-	sh_int cabal;
-	sh_int sex;
-
-	CClass *Class()
-	{
-		return !my_class
-			? (pIndexData && pIndexData->Class()
-				? pIndexData->Class()
-				:  CClass::GetClass(CLASS_NONE))
-			: my_class;
-	}
-
-	void		SetClass(int nClassIndex)
-	{
-		my_class = CClass::GetClass(nClassIndex);
-	}
-
-	sh_int race;
-	sh_int level;
-	sh_int trust;
-	int played;
-	int lines;							// for the pager
-	time_t logon;
-	sh_int timer;
-	sh_int wait;
-	sh_int regen_rate;					// For imbue regeneration spell
-	int hit;
-	sh_int max_hit;
-	sh_int mana;
-	sh_int max_mana;
-	sh_int move;
-	sh_int max_move;
-	long gold;
-	long gold_bank;
-	int exp;
-	long act[MAX_BITVECTOR];
-	long comm[MAX_BITVECTOR];			// RT added to pad the vector
-	long wiznet[MAX_BITVECTOR];			// wiz stuff
-	long imm_flags[MAX_BITVECTOR];
-	long res_flags[MAX_BITVECTOR];
-	long vuln_flags[MAX_BITVECTOR];
-	sh_int invis_level;
-	sh_int incog_level;
-	long affected_by[MAX_BITVECTOR];
-	sh_int position;
-	sh_int practice;
-	sh_int train;
-	sh_int carry_weight;
-	sh_int carry_number;
-	sh_int saving_throw;				//svs
-	sh_int alignment;
-	sh_int hitroll;
-	sh_int damroll;
-	sh_int armor[4];
-	sh_int wimpy;
-	char *speechbuf[10];				// Buffer for various mob speech, progs, etc...
-
-	//
-	// stats
-	//
-
-	sh_int perm_stat[MAX_STATS];
-	sh_int mod_stat[MAX_STATS];
-
-	//
-	// parts stuff
-	//
-
-	long form[MAX_BITVECTOR];
-	long parts[MAX_BITVECTOR];
-	sh_int size;
-	char *material;
-
-	//
-	// mobile stuff
-	//
-
-	ROOM_INDEX_DATA *home_room;
-	int mobstyle;
-	long off_flags[MAX_BITVECTOR];
-	sh_int damage[3];
-	sh_int dam_type;
-	sh_int start_pos;
-	sh_int pause;
-	sh_int ghost;
-	int status;
-	long progtypes[MAX_BITVECTOR];
-	int hometown;
-	float dam_mod;
-	sh_int defense_mod;
-	bool moved;
-
-	//
-	// skill/spell-specific stuff
-	//
-
-	sh_int arms;
-	sh_int legs;
-	sh_int balance;
-	sh_int batter;
-	CHAR_DATA *analyzePC;
-	int analyze;
-	sh_int pulseTimer;					// counter for racial combat pulse
-	char *backup_true_name;				// Dev's SUPAR CLEVAR CORRUPTION FIX!!!
-	float talismanic;
-	bool disrupted;						// Has queue-using spell been disrupted?
-	int bounty_timer;
-	bool law_pass;
-	bool stolen_from;
-	CProficiencies *Profs();
-private:
-	CClass *	my_class;
-};
-
-
-
 //
 // Data which only PC's have.
 //
@@ -2863,33 +2620,33 @@ struct pc_data
 	time_t last_penalty;
 	time_t last_news;
 	time_t last_changes;
-	sh_int perm_hit;
-	sh_int perm_mana;
-	sh_int perm_move;
-	sh_int true_sex;
-	sh_int age_mod;
-	sh_int death_timer;
-	sh_int death_status;
-	sh_int ethos;
-	sh_int oalign;
-	sh_int oethos;
-	sh_int sp;
-	sh_int special;
-	sh_int wanteds;
-	sh_int death_count;
-	sh_int induct;
-	sh_int start_weapon;
-	sh_int killed[2]; 			// 0 = PK_KILLED, 1 = MOB_KILLED
-	sh_int kills[4];
+	short perm_hit;
+	short perm_mana;
+	short perm_move;
+	short true_sex;
+	short age_mod;
+	short death_timer;
+	short death_status;
+	short ethos;
+	short oalign;
+	short oethos;
+	short sp;
+	short special;
+	short wanteds;
+	short death_count;
+	short induct;
+	short start_weapon;
+	short killed[2]; 			// 0 = PK_KILLED, 1 = MOB_KILLED
+	short kills[4];
 	float frags[4];
 	float fragged;
 	char *recentkills[100];
-	sh_int old_room;
+	short old_room;
 	int last_level;
-	sh_int beauty;
-	sh_int reputation;
-	sh_int condition[6];
-	sh_int learned[MAX_SKILL];
+	short beauty;
+	short reputation;
+	short condition[6];
+	short learned[MAX_SKILL];
 	bool group_known[MAX_GROUP];
 	bool confirm_delete;
 	char *alias[MAX_ALIAS];
@@ -2900,9 +2657,9 @@ struct pc_data
 	//
 
 	long bounty;
-	sh_int bounty_credits;
+	short bounty_credits;
 
-	sh_int helpid;
+	short helpid;
 	char *temp_history_buffer;
 	char *history_buffer;
 	char *role;
@@ -2916,16 +2673,16 @@ struct pc_data
 	DO_FUN *end_fun;
 	long trust[MAX_BITVECTOR];
 	CHAR_DATA *trusting;
-	sh_int energy_state;
+	short energy_state;
 	char *host;
-	sh_int quests[MAX_QUESTS];
+	short quests[MAX_QUESTS];
 	time_t roll_time;
-	sh_int birth_date;
-	sh_int death_time;
-	sh_int tribe;
+	short birth_date;
+	short death_time;
+	short tribe;
 	long sect_time[SECT_MAX];
-	sh_int save_timer;
-	sh_int style;
+	short save_timer;
+	short style;
 	long styles[MAX_BITVECTOR];
 	long ele_sphere[MAX_BITVECTOR];
 	TROPHY_DATA *trophy;
@@ -2935,9 +2692,9 @@ struct pc_data
 	// Sorcerer elements data
 	//
 
-	sh_int ele_temp[4];					// used only for creation
-	sh_int ele_major;
-	sh_int ele_para;
+	short ele_temp[4];					// used only for creation
+	short ele_major;
+	short ele_para;
 
 	//
 	// AP devil favors data
@@ -2949,21 +2706,21 @@ struct pc_data
 
 	int editing_item;
 	int security;						// OLC - Builder security
-	sh_int souls;
+	short souls;
 	int cabal_level;
 	int bounty_killed;
  	char *temp_str;
-	sh_int deposited_items[5];
-	sh_int paladin_path;
-	sh_int temp_quest;
+	short deposited_items[5];
+	short paladin_path;
+	short temp_quest;
 
 	//
 	// CMD_QUEUE data
 	//
 
 	char queue[20][MAX_INPUT_LENGTH];
-	sh_int read_next;
-	sh_int write_next;
+	short read_next;
+	short write_next;
 	bool pending;
 
 	//
@@ -3015,25 +2772,25 @@ struct obj_index_data
 	char *name;
 	char *short_descr;
 	char *description;
-	sh_int vnum;
-	sh_int reset_num;
-	sh_int cabal;
+	short vnum;
+	short reset_num;
+	short cabal;
 	char *material;
-	sh_int material_index;
-	sh_int item_type;
+	short material_index;
+	short item_type;
 	long extra_flags[MAX_BITVECTOR];
 	long wear_flags[MAX_BITVECTOR];
 	long restrict_flags[MAX_BITVECTOR];
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
-	sh_int start_timer;
-	sh_int level;
-	sh_int condition;
-	sh_int limtotal;
-	sh_int limcount;
-	sh_int count;
-	sh_int weight;
+	short start_timer;
+	short level;
+	short condition;
+	short limtotal;
+	short limcount;
+	short count;
+	short weight;
 	int cost;
 	int value[5];
 	IPROG_DATA *iprogs;
@@ -3072,20 +2829,20 @@ struct obj_data
 	char *name;
 	char *short_descr;
 	char *description;
-	sh_int item_type;
+	short item_type;
 	long extra_flags[MAX_BITVECTOR];
 	long wear_flags[MAX_BITVECTOR];
 	long imm_flags[MAX_BITVECTOR];
 	long res_flags[MAX_BITVECTOR];
 	long vuln_flags[MAX_BITVECTOR];
 	long affected_by[MAX_BITVECTOR];
-	sh_int wear_loc;
-	sh_int weight;
+	short wear_loc;
+	short weight;
 	int cost;
-	sh_int level;
-	sh_int condition;
+	short level;
+	short condition;
 	char *material;
-	sh_int timer;
+	short timer;
 	int value[5];
 	long progtypes[MAX_BITVECTOR];
 	int ohp;
@@ -3097,9 +2854,9 @@ struct obj_data
 struct obj_apply_data
 {
 	bool valid;
-	sh_int location;
-	sh_int modifier;
-	sh_int type;						// For gsns, if relevant.
+	short location;
+	short modifier;
+	short type;						// For gsns, if relevant.
 	OBJ_APPLY_DATA *next;
 };
 
@@ -3113,11 +2870,11 @@ struct exit_data
 	union
 	{
 		ROOM_INDEX_DATA *to_room;
-		sh_int vnum;
+		short vnum;
 	} u1;
 
 	long exit_info[MAX_BITVECTOR];
-	sh_int key;
+	short key;
 	char *keyword;
 	char *description;
 	EXIT_DATA *next;					// OLC
@@ -3149,10 +2906,10 @@ struct reset_data
 {
 	RESET_DATA *next;
 	char command;
-	sh_int arg1;
-	sh_int arg2;
-	sh_int arg3;
-	sh_int arg4;
+	short arg1;
+	short arg2;
+	short arg3;
+	short arg4;
 };
 
 
@@ -3171,22 +2928,22 @@ struct area_data
 	char *file_name;
 	char *name;
 	char *credits;
-	sh_int age;
-	sh_int nplayer;
-	sh_int low_range;
-	sh_int high_range;
-	sh_int min_vnum;
-	sh_int max_vnum;
-	sh_int area_type;
+	short age;
+	short nplayer;
+	short low_range;
+	short high_range;
+	short min_vnum;
+	short max_vnum;
+	short area_type;
 	long area_flags[MAX_BITVECTOR];
 	bool empty;
 	long affected_by[MAX_BITVECTOR];
 	AREA_AFFECT_DATA *affected;
 	AREA_DATA *adjacent[MAX_ADJACENT];
-	sh_int climate;
-	sh_int sky;
-	sh_int temp;
-	sh_int wind;
+	short climate;
+	short sky;
+	short temp;
+	short wind;
 	char *builders;						// OLC - Listing of
 	int vnum;							// OLC - Area vnum
 	int security;						// OLC - Value 1-9
@@ -3214,14 +2971,14 @@ struct room_index_data
 	char *description;
 	char *alt_description;
 	char *owner;
-	sh_int alt_description_cond;
-	sh_int vnum;
+	short alt_description_cond;
+	short vnum;
 	long room_flags[MAX_BITVECTOR];
-	sh_int sector_type;
-	sh_int heal_rate;
-	sh_int mana_rate;
-	sh_int cabal;
-	sh_int guild;
+	short sector_type;
+	short heal_rate;
+	short mana_rate;
+	short cabal;
+	short guild;
 	ROOM_AFFECT_DATA *affected;
 	long affected_by[MAX_BITVECTOR];
 	RPROG_DATA *rprogs;
@@ -3230,7 +2987,7 @@ struct room_index_data
 	TRAP_DATA *trap;
 	RUNE_DATA *rune;
 	bool has_rune;
-	sh_int light;
+	short light;
 	RESET_DATA *reset_first;			// OLC
 	RESET_DATA *reset_last; 			// OLC
 };
@@ -3268,7 +3025,7 @@ struct track_data
 {
 	CHAR_DATA *prey;					// Who passed through.
 	TIME_INFO_DATA time;				// When they passed through.
-	sh_int direction;					// Which way they went.
+	short direction;					// Which way they went.
 	bool flying;						// Are they?
 	bool sneaking;						// Are they?
 	int legs;							// How many?
@@ -3283,6 +3040,172 @@ struct pathfind_data
 	int steps;							// Number of steps from parent node
 	PATHFIND_DATA *prev;				// Room we came from
 	PATHFIND_DATA *dir_to[6];			// Points to up to 6 rooms, NEWSUD.
+};
+
+struct note_data;
+typedef struct note_data NOTE_DATA;
+
+//
+// One character (PC or NPC).
+//
+
+
+extern CProficiencies prof_none; //empty proficiencies for jackasses who are going to ref ch->Profs() without checking IS_NPC
+
+class	char_data
+{
+public:
+	CHAR_DATA *next;
+	CHAR_DATA *next_in_room;
+	CHAR_DATA *master;
+	CHAR_DATA *leader;
+	CHAR_DATA *fighting;
+	CHAR_DATA *reply;
+	CHAR_DATA *pet;
+	CHAR_DATA *last_fought;
+	int tracktimer;
+	time_t last_fight_time;
+	char * last_fight_name;
+	CHAR_DATA *hunting;
+	CHAR_DATA *defending;
+	MEM_DATA *memory;
+	GAME_FUN *game_fun;
+	MOB_INDEX_DATA *pIndexData;
+	DESCRIPTOR_DATA *desc;
+	AFFECT_DATA *affected;
+	NOTE_DATA *pnote;
+	OBJ_DATA *carrying;
+	OBJ_DATA *on;
+	ROOM_INDEX_DATA *in_room;
+	ROOM_INDEX_DATA *was_in_room;
+	AREA_DATA *zone;
+	PC_DATA *pcdata;
+	GEN_DATA *gen_data;
+	PATHFIND_DATA *path;	// For smart pathfinding/tracking.  Mob only.
+	PATHFIND_DATA *best;	// Stores best direction thus far.  Mob only.
+	bool valid;
+	char *name;
+	char *true_name;
+	long id;
+	short version;
+	char *short_descr;
+	char *long_descr;
+	char *description;
+	char *prompt;
+	char *prefix;
+	short group;
+	short cabal;
+	short sex;
+
+	CClass *Class()
+	{
+		return !my_class
+			? (pIndexData && pIndexData->Class()
+				? pIndexData->Class()
+				:  CClass::GetClass(CLASS_NONE))
+			: my_class;
+	}
+
+	void		SetClass(int nClassIndex)
+	{
+		my_class = CClass::GetClass(nClassIndex);
+	}
+
+	short race;
+	short level;
+	short trust;
+	int played;
+	int lines;							// for the pager
+	time_t logon;
+	short timer;
+	short wait;
+	short regen_rate;					// For imbue regeneration spell
+	int hit;
+	short max_hit;
+	short mana;
+	short max_mana;
+	short move;
+	short max_move;
+	long gold;
+	long gold_bank;
+	int exp;
+	long act[MAX_BITVECTOR];
+	long comm[MAX_BITVECTOR];			// RT added to pad the vector
+	long wiznet[MAX_BITVECTOR];			// wiz stuff
+	long imm_flags[MAX_BITVECTOR];
+	long res_flags[MAX_BITVECTOR];
+	long vuln_flags[MAX_BITVECTOR];
+	short invis_level;
+	short incog_level;
+	long affected_by[MAX_BITVECTOR];
+	short position;
+	short practice;
+	short train;
+	short carry_weight;
+	short carry_number;
+	short saving_throw;				//svs
+	short alignment;
+	short hitroll;
+	short damroll;
+	short armor[4];
+	short wimpy;
+	char *speechbuf[10];				// Buffer for various mob speech, progs, etc...
+
+	//
+	// stats
+	//
+
+	short perm_stat[MAX_STATS];
+	short mod_stat[MAX_STATS];
+
+	//
+	// parts stuff
+	//
+
+	long form[MAX_BITVECTOR];
+	long parts[MAX_BITVECTOR];
+	short size;
+	char *material;
+
+	//
+	// mobile stuff
+	//
+
+	ROOM_INDEX_DATA *home_room;
+	int mobstyle;
+	long off_flags[MAX_BITVECTOR];
+	short damage[3];
+	short dam_type;
+	short start_pos;
+	short pause;
+	short ghost;
+	int status;
+	long progtypes[MAX_BITVECTOR];
+	int hometown;
+	float dam_mod;
+	short defense_mod;
+	bool moved;
+
+	//
+	// skill/spell-specific stuff
+	//
+
+	short arms;
+	short legs;
+	short balance;
+	short batter;
+	CHAR_DATA *analyzePC;
+	int analyze;
+	short pulseTimer;					// counter for racial combat pulse
+	char *backup_true_name;				// Dev's SUPAR CLEVAR CORRUPTION FIX!!!
+	float talismanic;
+	bool disrupted;						// Has queue-using spell been disrupted?
+	int bounty_timer;
+	bool law_pass;
+	bool stolen_from;
+	CProficiencies *Profs() { return pcdata ? &pcdata->profs : &prof_none; }
+private:
+	CClass *	my_class;
 };
 
 //
@@ -3333,515 +3256,6 @@ struct pathfind_data
 #define RUNE_ROOM					16
 
 
-extern int nAllocPerm;
-extern int sAllocPerm;
-extern char *target_name;
-
-//
-// These are skill_lookup return values for common skills and spells.
-//
-
-extern sh_int gsn_timer;
-extern sh_int gsn_repose;
-extern sh_int gsn_medicine;
-extern sh_int gsn_somatic_casting;
-extern sh_int gsn_frigidaura;
-extern sh_int gsn_stasis_wall;
-extern sh_int gsn_integrate;
-extern sh_int gsn_hardenfist;
-extern sh_int gsn_sensevibrations;
-extern sh_int gsn_diamondskin;
-extern sh_int gsn_jackal;
-extern sh_int gsn_strike_of_virtue;
-extern sh_int gsn_awe;
-extern sh_int gsn_divine_frenzy;
-extern sh_int gsn_mangled;
-extern sh_int gsn_bleeding;
-extern sh_int gsn_calm;
-extern sh_int gsn_decrepify;
-extern sh_int gsn_rage;
-extern sh_int gsn_horde_communion;
-extern sh_int gsn_agitate;
-extern sh_int gsn_immolate;
-extern sh_int gsn_enervate;
-extern sh_int gsn_corona;
-extern sh_int gsn_infravision;
-extern sh_int gsn_faerie_fire;
-extern sh_int gsn_faerie_fog;
-extern sh_int gsn_displacement;
-extern sh_int gsn_backstab;
-extern sh_int gsn_detect_hidden;
-extern sh_int gsn_detect_movement;
-extern sh_int gsn_bluff;
-extern sh_int gsn_false_motives;
-extern sh_int gsn_dodge;
-extern sh_int gsn_envenom;
-extern sh_int gsn_hide;
-extern sh_int gsn_peek;
-extern sh_int gsn_pick_lock;
-extern sh_int gsn_sneak;
-extern sh_int gsn_steal;
-extern sh_int gsn_silence;
-extern sh_int gsn_disarm;
-extern sh_int gsn_enhanced_damage;
-extern sh_int gsn_kick;
-extern sh_int gsn_parry;
-extern sh_int gsn_rescue;
-extern sh_int gsn_second_attack;
-extern sh_int gsn_third_attack;
-extern sh_int gsn_fourth_attack;
-
-extern sh_int gsn_blindness;
-extern sh_int gsn_burning_hands;
-extern sh_int gsn_chill_touch;
-extern sh_int gsn_charm_person;
-extern sh_int gsn_curse;
-extern sh_int gsn_invis;
-extern sh_int gsn_mass_invis;
-extern sh_int gsn_plague;
-extern sh_int gsn_poison;
-extern sh_int gsn_sleep;
-extern sh_int gsn_fly;
-extern sh_int gsn_sanctuary;
-
-/* new gsn's */
-extern sh_int gsn_axe;
-extern sh_int gsn_dagger;
-extern sh_int gsn_flail;
-extern sh_int gsn_mace;
-extern sh_int gsn_polearm;
-extern sh_int gsn_shield_block;
-extern sh_int gsn_spear;
-extern sh_int gsn_sword;
-extern sh_int gsn_whip;
- 
-extern sh_int gsn_bash;
-extern sh_int gsn_berserk;
-extern sh_int gsn_dirt;
-extern sh_int gsn_hand_to_hand;
-extern sh_int gsn_trip;
- 
-extern sh_int gsn_fast_healing;
-extern sh_int gsn_haggle;
-extern sh_int gsn_lore;
-extern sh_int gsn_meditation;
- 
-extern sh_int gsn_scrolls;
-extern sh_int gsn_staves;
-extern sh_int gsn_wands;
-extern sh_int gsn_recall;
-
-extern sh_int gsn_mimic;
-extern sh_int gsn_liquify;
-extern sh_int gsn_morph_weapon;
-
-extern sh_int gsn_ground_control;
-
-extern sh_int gsn_absorb;
-extern sh_int gsn_camouflage;
-extern sh_int gsn_acute_vision;
-extern sh_int gsn_ambush;
-extern sh_int gsn_laying_hands;
-extern sh_int gsn_battlecry;
-extern sh_int gsn_circle;
-extern sh_int gsn_empower;
-extern sh_int gsn_dual_backstab;
-extern sh_int gsn_power_word_fear;
-extern sh_int gsn_skin;
-extern sh_int gsn_camp;
-extern sh_int gsn_steel_nerves;
-extern sh_int gsn_animate_dead;
-extern sh_int gsn_barkskin;
-extern sh_int gsn_animal_call;
-extern sh_int gsn_aura_of_sustenance;
-extern sh_int gsn_shadowgate;
-extern sh_int gsn_eye_of_the_predator;
-extern sh_int gsn_blackjack;
-extern sh_int gsn_dual_wield;
-extern sh_int gsn_trance;
-extern sh_int gsn_wanted;
-extern sh_int gsn_cleave;
-extern sh_int gsn_herb;
-extern sh_int gsn_bandage;
-extern sh_int gsn_protective_shield;
-extern sh_int gsn_consecrate;
-extern sh_int gsn_true_sight;
-extern sh_int gsn_butcher;
-extern sh_int gsn_vanish;
-extern sh_int gsn_embalm;
-extern sh_int gsn_counter;
-extern sh_int gsn_acid_spit;
-extern sh_int gsn_bear_call;
-extern sh_int gsn_trophy;
-extern sh_int gsn_tail;
-extern sh_int gsn_spellbane;
-extern sh_int gsn_request;
-extern sh_int gsn_endure;
-extern sh_int gsn_throw;
-extern sh_int gsn_nerve;
-extern sh_int gsn_poison_dust;
-extern sh_int gsn_blindness_dust;
-extern sh_int gsn_strangle;
-extern sh_int gsn_warcry;
-extern sh_int gsn_chimera_lion;
-extern sh_int gsn_chimera_goat;
-extern sh_int gsn_strange_form;
-extern sh_int gsn_enlist;
-extern sh_int gsn_shadowplane;
-extern sh_int gsn_blackjack_timer;
-extern sh_int gsn_strangle_timer;
-extern sh_int gsn_tame;
-extern sh_int gsn_track;
-extern sh_int gsn_find_water;
-extern sh_int gsn_shield_cleave;
-extern sh_int gsn_spellcraft;
-extern sh_int gsn_cloak_form;
-extern sh_int gsn_demand;
-extern sh_int gsn_shapeshift;
-extern sh_int gsn_regeneration;
-extern sh_int gsn_parrot;
-extern sh_int gsn_door_bash;
-extern sh_int gsn_headbutt;
-extern sh_int gsn_gore;
-extern sh_int gsn_scorch;
-extern sh_int gsn_turn_undead;
-extern sh_int gsn_spiritual_hammer;
-extern sh_int gsn_crimson_martyr;
-extern sh_int gsn_benevolence;
-extern sh_int gsn_intercept;
-extern sh_int gsn_champions_defense;
-extern sh_int gsn_indomitable_spirit;
-extern sh_int gsn_shattered_bone;
-extern sh_int gsn_forget;
-extern sh_int gsn_earthbind;
-extern sh_int gsn_divine_touch;
-extern sh_int gsn_forage;
-extern sh_int gsn_assassinate;
-extern sh_int gsn_defend;
-extern sh_int gsn_intimidate;
-extern sh_int gsn_escape;
-extern sh_int gsn_moving_ambush;
-extern sh_int gsn_pugil;
-extern sh_int gsn_staff;
-extern sh_int gsn_protection_heat_cold;
-extern sh_int gsn_rally;
-extern sh_int gsn_tactics;
-extern sh_int gsn_lash;
-extern sh_int gsn_prevent_healing;
-extern sh_int gsn_regeneration;
-extern sh_int gsn_quiet_movement;
-extern sh_int gsn_iron_resolve;
-extern sh_int gsn_atrophy;
-extern sh_int gsn_stoneskin;
-extern sh_int gsn_shield;
-extern sh_int gsn_starvation;
-extern sh_int gsn_spore;
-extern sh_int gsn_barbarian_strike;
-extern sh_int gsn_barbarian_bone_tear;
-extern sh_int gsn_dehydrated;			// For starve/thirst
-extern sh_int gsn_hold_person;			// Hold person -Detlef
-extern sh_int gsn_flurry;				// Quest flurry -Dioxide
-extern sh_int gsn_drum;					// Quest drum -Dioxide
-extern sh_int gsn_knife;				// Thief knife -Dioxide
-extern sh_int gsn_disperse;				// Disperse for Outlaw -Dioxide
-extern sh_int gsn_lightwalk;			// Quest lightwalk -Dioxide
-extern sh_int gsn_sanguine_ward;
-extern sh_int gsn_executioner;
-extern sh_int gsn_bind;
-extern sh_int gsn_deafen;				// Deafen for AP -Detlef
-extern sh_int gsn_divine_intervention;	// divine intervention -Dioxide
-extern sh_int gsn_creep;				// creep skill -Dioxide
-extern sh_int gsn_unholy_timer;
-extern sh_int gsn_phat_blunt;
-extern sh_int gsn_parting_blow;
-extern sh_int gsn_mysterious_dream;
-extern sh_int gsn_pincer;
-extern sh_int gsn_devour;
-extern sh_int gsn_keen_vision;
-extern sh_int gsn_vampiric_touch;
-extern sh_int gsn_snare;
-extern sh_int gsn_snaretimer;
-extern sh_int gsn_soften;
-extern sh_int gsn_consecrate;
-extern sh_int gsn_blade_barrier;
-extern sh_int gsn_sunray;
-extern sh_int gsn_enlarge;
-extern sh_int gsn_mana_drain;
-extern sh_int cabal_members[MAX_CABAL];
-extern sh_int cabal_max[MAX_CABAL];
-extern sh_int gsn_worldbind;
-extern sh_int gsn_sceptre;
-extern sh_int gsn_sceptret;
-extern sh_int gsn_dark_blessing;
-extern sh_int gsn_web;
-extern sh_int gsn_volley;
-
-extern sh_int gsn_talismanic;
-extern sh_int gsn_hex;
-extern sh_int gsn_visceral;
-extern sh_int gsn_conflagration;
-extern sh_int gsn_gravity_well;
-extern sh_int gsn_ultradiffusion;
-extern sh_int gsn_molecular_disjunction;
-extern sh_int gsn_vacuum;
-extern sh_int gsn_cyclone_forming;
-extern sh_int gsn_cyclone;
-extern sh_int gsn_incandescense;
-extern sh_int gsn_diuretic;
-extern sh_int gsn_corona;
-extern sh_int gsn_earthquake;
-extern sh_int gsn_mana_conduit;
-extern sh_int gsn_synaptic_enhancement;
-extern sh_int gsn_synaptic_impairment;
-extern sh_int gsn_interference;
-extern sh_int gsn_elecshield;
-extern sh_int gsn_abite;
-extern sh_int gsn_lbite;
-extern sh_int gsn_hydroperception;
-extern sh_int gsn_watershield;
-extern sh_int gsn_flood;
-extern sh_int gsn_tidalwave;
-extern sh_int gsn_riptide;
-extern sh_int gsn_watermeld;
-extern sh_int gsn_sense_disturbance;
-extern sh_int gsn_travelease;
-extern sh_int gsn_stability;
-extern sh_int gsn_crush;
-extern sh_int gsn_earthshield;
-extern sh_int gsn_coldshield;
-extern sh_int gsn_heatshield;
-extern sh_int gsn_chill;
-extern sh_int gsn_reduce;
-extern sh_int gsn_airshield;
-extern sh_int gsn_coagulate;
-extern sh_int gsn_unholy_bond;
-extern sh_int gsn_drive;
-extern sh_int gsn_hypothermia;
-extern sh_int gsn_retreat;
-extern sh_int gsn_dash;
-extern sh_int gsn_imprisonvoice;
-extern sh_int gsn_howl;
-extern sh_int gsn_scramble_neurons;
-extern sh_int gsn_acid_vein;
-extern sh_int gsn_acid_stream;
-extern sh_int gsn_corrode_lock;
-extern sh_int gsn_attract;
-extern sh_int gsn_call_lightning;
-extern sh_int gsn_grounding;
-extern sh_int gsn_neutralize;
-extern sh_int gsn_caustic_vapor;
-extern sh_int gsn_noxious_fumes;
-extern sh_int gsn_drain;
-extern sh_int gsn_smokescreen;
-extern sh_int gsn_shroud_of_secrecy;
-extern sh_int gsn_smother;
-extern sh_int gsn_noxious_ward;
-extern sh_int gsn_blanket;
-extern sh_int gsn_accumulate_heat;
-extern sh_int gsn_earthsembrace;
-extern sh_int gsn_melt_rock;
-extern sh_int gsn_magma_tunnel;
-extern sh_int gsn_heat_earth;
-extern sh_int gsn_whiteout;
-extern sh_int gsn_unbreakable;
-extern sh_int gsn_freeze_door;
-extern sh_int gsn_frost_growth;
-extern sh_int gsn_bind_feet;
-extern sh_int gsn_glaciate;
-extern sh_int gsn_stalactites;
-extern sh_int gsn_ice_blast;
-extern sh_int gsn_icy_carapace;
-extern sh_int gsn_sheath_of_ice;
-extern sh_int gsn_ironskin;
-extern sh_int gsn_burden;
-extern sh_int gsn_cloak_of_mist;
-extern sh_int gsn_airy_water;
-extern sh_int gsn_cooling_mist;
-extern sh_int gsn_creeping_tomb;
-extern sh_int gsn_pass_without_trace;
-extern sh_int gsn_quicksand;
-extern sh_int gsn_quicksand_sinking;
-extern sh_int gsn_earthfade;
-extern sh_int gsn_rust;
-extern sh_int gsn_puddle;
-extern sh_int gsn_indom;
-extern sh_int gsn_traitors_luck;
-extern sh_int gsn_darksight;
-extern sh_int gsn_bloodlust;
-extern sh_int gsn_unholy_communion;
-extern sh_int gsn_lesser_demon;
-extern sh_int gsn_greater_demon;
-extern sh_int gsn_gamygyn_soul;
-extern sh_int gsn_orobas_soul;
-extern sh_int gsn_dark_familiar;
-extern sh_int gsn_word_of_command;
-extern sh_int gsn_mark_of_wrath;
-extern sh_int gsn_baals_mastery;
-extern sh_int gsn_living_blade;
-extern sh_int gsn_leech;
-extern sh_int gsn_plasma_arc;
-extern sh_int gsn_sphere_of_plasma;
-extern sh_int gsn_essence_of_plasma;
-extern sh_int gsn_plasma_cube;
-extern sh_int gsn_plasma_thread;
-extern sh_int gsn_fashion_crystal;
-extern sh_int gsn_farsee;
-extern sh_int gsn_blinding_orb;
-extern sh_int gsn_rotating_ward;
-extern sh_int gsn_plant;
-extern sh_int gsn_gag;
-extern sh_int gsn_drag;
-extern sh_int gsn_palm;
-extern sh_int gsn_trail;
-extern sh_int gsn_tripwire;
-extern sh_int gsn_sign;
-extern sh_int gsn_slash;
-extern sh_int gsn_stash;
-extern sh_int gsn_avoid;
-extern sh_int gsn_disguise;
-extern sh_int gsn_shadow_cloak;
-extern sh_int gsn_stealth;
-extern sh_int gsn_counterfeit;
-extern sh_int gsn_strip;
-extern sh_int gsn_silent_movement;
-extern sh_int gsn_infidels_weight;
-extern sh_int gsn_burning_vision;
-extern sh_int gsn_divine_ward;
-extern sh_int gsn_scribe;
-extern sh_int gsn_healing_sleep;
-extern sh_int gsn_deny_magic;
-extern sh_int gsn_nullify;
-extern sh_int gsn_bane;
-extern sh_int gsn_gking;
-extern sh_int gsn_lesser_golem;
-extern sh_int gsn_greater_golem;
-extern sh_int gsn_aggressor;
-extern sh_int gsn_subdue;
-extern sh_int gsn_drowning;
-extern sh_int gsn_hunters_awareness;
-extern sh_int gsn_hunters_stealth;
-extern sh_int gsn_hunters_net;
-extern sh_int gsn_severed;
-
-extern sh_int gsn_group_retreat;
-extern sh_int gsn_arms_of_light;
-extern sh_int gsn_arms_of_wrath;
-extern sh_int gsn_arms_of_purity;
-extern sh_int gsn_arms_of_judgement;
-extern sh_int gsn_holy_shroud;
-extern sh_int gsn_seraphic_mantle;
-extern sh_int gsn_shield_of_faith;
-extern sh_int gsn_rites_of_preparation;
-extern sh_int gsn_channeling;
-extern sh_int gsn_empathy;
-extern sh_int gsn_altruism;
-extern sh_int gsn_tower_of_fortitude;
-extern sh_int gsn_shadowsense;
-extern sh_int gsn_fervor;
-extern sh_int gsn_piety;
-extern sh_int gsn_spiritual_healing;
-extern sh_int gsn_retribution;
-extern sh_int gsn_shroud_of_light;
-extern sh_int gsn_infidels_fate;
-extern sh_int gsn_mana_sickness;
-extern sh_int gsn_mana_infusion;
-extern sh_int gsn_tangleroot;
-
-//
-// GSNS
-//
-
-//
-// Gladiator
-//
-
-extern sh_int gsn_fend;
-extern sh_int gsn_entrap;
-extern sh_int gsn_gouge;
-extern sh_int gsn_hobble;
-extern sh_int gsn_crippling_blow;
-extern sh_int gsn_bleed;
-
-//
-// Duelist
-//
-
-extern sh_int gsn_maneuvering;
-extern sh_int gsn_catch;
-extern sh_int gsn_posture;
-extern sh_int gsn_unbalance;
-extern sh_int gsn_sidestep;
-extern sh_int gsn_concuss;
-extern sh_int gsn_disrupt_formation;
-
-//
-// Barbarian
-//
-
-extern sh_int gsn_brutality;
-extern sh_int gsn_shatter;
-extern sh_int gsn_uppercut;
-extern sh_int gsn_impale;
-extern sh_int gsn_overhead;
-extern sh_int gsn_batter;
-
-//
-// Dragoon
-//
-
-extern sh_int gsn_exchange;
-extern sh_int gsn_charge;
-extern sh_int gsn_deflect;
-extern sh_int gsn_ease;
-extern sh_int gsn_brace;
-extern sh_int gsn_shieldbash;
-
-//
-// Skirmisher
-//
-
-extern sh_int gsn_evasion;
-extern sh_int gsn_hurl;
-extern sh_int gsn_dart;
-extern sh_int gsn_cracked_sternum;
-extern sh_int gsn_bloody_eyes;
-extern sh_int gsn_broken_arm;
-extern sh_int gsn_entwine;
-extern sh_int gsn_pull;
-extern sh_int gsn_fifth_attack;
-extern sh_int gsn_whirlwind;
-
-//
-// Tactician
-//
-
-extern sh_int gsn_leadership;
-extern sh_int gsn_assess;
-extern sh_int gsn_exploit;
-extern sh_int gsn_outflank;
-extern sh_int gsn_terrain_mastery;
-extern sh_int gsn_analyze;
-
-//
-// Style skills to keep track of percents
-//
-
-extern sh_int gsn_duelist_skill;
-extern sh_int gsn_gladiator_skill;
-extern sh_int gsn_barbarian_skill;
-extern sh_int gsn_dragoon_skill;
-extern sh_int gsn_skirmisher_skill;
-extern sh_int gsn_tactician_skill;
-
-//
-// Varius gsns
-//
-
-extern sh_int gsn_rprog_elven_down;
-
-extern char *top_bounty_name[MAX_TOP_BOUNTY];
-extern long top_bounty_value[MAX_TOP_BOUNTY];
-
 //
 // Utility macros.
 //
@@ -3858,115 +3272,20 @@ extern long top_bounty_value[MAX_TOP_BOUNTY];
 #define TOGGLE_BIT(var, bit)		(IS_SET(var,bit) ? REMOVE_BIT(var,bit) : SET_BIT(var,bit))
 #define TOGGLE_BIT_OLD(var, bit)	(IS_SET_OLD(var,bit) ? REMOVE_BIT_OLD(var,bit) : SET_BIT_OLD(var,bit))
 
-//
-// Structure for a social in the socials table.
-//
 
-struct social_type
-{
-	char name[20];
-	char *char_no_arg;
-	char *others_no_arg;
-	char *char_found;
-	char *others_found;
-	char *vict_found;
-	char *char_not_found;
-	char *char_auto;
-	char *others_auto;
-};
-
-
-
-//
-// Global constants.
-//
-
+//TODO: Find out where these are implemented
 extern const struct class_type class_table[MAX_CLASS];
-
-//
-// Global variables.
-//
-
-extern HELP_DATA *help_first;
-extern SHOP_DATA *shop_first;
-
-extern CHAR_DATA *char_list;
-extern DESCRIPTOR_DATA *descriptor_list;
-extern OBJ_DATA *object_list;
-extern ROOM_INDEX_DATA *room_list;
-extern RUNE_DATA *rune_list;
-extern long gold_constant;
-extern long total_gold;
-extern long player_gold;
-extern int num_pfiles;
-extern char bug_buf[];
-extern time_t current_time;
-extern bool fLogAll;
-extern bool MOBtrigger;
-extern FILE *fpReserve;
-extern KILL_DATA kill_table[];
-extern char log_buf[];
-extern TIME_INFO_DATA time_info;
-extern sh_int sun;
-extern sh_int moon_berus;
-extern sh_int berus_pos;
-extern sh_int moon_calabren;
-extern sh_int calabren_pos;
-extern ROOM_INDEX_DATA *top_affected_room;
-extern sh_int count_data[30000];
-
-//
-// Data files used by the server.
-//
-// AREA_LIST contains a list of areas to boot.
-// All files are read in completely at bootup.
-// Most output files (bug, idea, typo, shutdown) are append-only.
-//
-// The NULL_FILE is held open so that we have a stream handle in reserve,
-//   so players can go ahead and telnet to all the other descriptors.
-// Then we close it whenever we need to open a file (e.g. a save file).
-//
-
-#ifdef __unix__
-	#define NULL_FILE				"/dev/null"				// To reserve one stream
-#elif _WIN32
-	#define NULL_FILE 				RIFT_ROOT_DIR "/nul"	// win32 equiv to /dev/null
-#endif
-
-#define TEMP_GREP_RESULTS 			RIFT_TEMP_DIR "/tempgrepresults.tmp" 		// Temporary grep results
-#define TEMP_GREP_RESULTS_TWO 		RIFT_TEMP_DIR "/temp/tempgrepresults2.tmp"
-#define GOD_DIR						RIFT_ROOT_DIR "/gods/"						// list of gods
-#define TEMP_FILE					RIFT_PLAYER_DIR "/romtmp"
-#define PLAYER_LIST					RIFT_PLAYER_DIR "/Player.lst"				// Player list for limits
-#define AREA_LIST					RIFT_AREA_DIR "/area.lst"					// List of areas
-#define BUG_FILE					RIFT_AREA_DIR "/bugs.txt"					// For 'bug' and bug()
-#define TYPO_FILE					RIFT_AREA_DIR "/typos.txt"					// For 'typo'
-#define IDEAS_FILE					RIFT_AREA_DIR "/ideas.txt"					// For ideas!
-#define NOTE_FILE					RIFT_AREA_DIR "/notes.not"					// For 'notes'
-#define IDEA_FILE					RIFT_AREA_DIR "/ideas.not"
-#define PENALTY_FILE				RIFT_AREA_DIR "/penal.not"
-#define NEWS_FILE					RIFT_AREA_DIR "/news.not"
-#define CHANGES_FILE				RIFT_AREA_DIR "/chang.not"
-#define BAN_FILE					RIFT_AREA_DIR "/ban.txt"
-#define MULT_EXP					5
-
-
 extern QUEUE_DATA *global_queue;
-extern AREA_DATA *area_first;
-extern PATHFIND_DATA *best_path;
-extern RACE_DATA * race_list;
-extern int iterations;
 
-extern bool command_result;
-extern char *command_line;
+#define MULT_EXP					5
 
 //**********************************************
 //						OLC
 // *********************************************
-
 //
 // Object defined in limbo.are
 // Used in save.c to load objects that don't exist.
+//
 //
 
 #define OBJ_VNUM_DUMMY				70
@@ -3976,59 +3295,21 @@ extern char *command_line;
 //
 
 #define AREA_NONE					0
-#define AREA_EXPLORE				(ASCII_A)		// So far, only that gear returns to newbies
-#define AREA_NO_NEWBIES				(ASCII_B)		// Newbies can't go in
-#define AREA_UNGHOST				(ASCII_C)		// Walking in unghosts you
-#define AREA_CHANGED				(ASCII_D)		// Area has been modified.
-#define AREA_ADDED					(ASCII_E)		// Area has been added to.
-#define AREA_LOADING				(ASCII_F)		// Used for counting in db.c
+#define AREA_EXPLORE				0		// So far, only that gear returns to newbies
+#define AREA_NO_NEWBIES				1		// Newbies can't go in
+#define AREA_UNGHOST				2		// Walking in unghosts you
+#define AREA_CHANGED				3		// Area has been modified.
+#define AREA_ADDED					4		// Area has been added to.
+#define AREA_LOADING				5		// Used for counting in db.c
 
 #define MAX_DIR						6
 #define NO_FLAG						-99		// Must not be used in flags or stats.
-
-//
-// Global Constants
-//
-
-extern char * const dir_name[];
-extern const sh_int rev_dir[];				// sh_int - ROM OLC
-
-//
-// Global variables
-//
-
-extern AREA_DATA *area_first;
-extern AREA_DATA *area_last;
-extern SHOP_DATA *shop_last;
-
-extern int top_affect;
-extern int top_area;
-extern int top_ed;
-extern int top_exit;
-extern int top_help;
-extern int top_mob_index;
-extern int top_obj_index;
-extern int top_reset;
-extern int top_room;
-extern int top_shop;
-
-extern int top_vnum_mob;
-extern int top_vnum_obj;
-extern int top_vnum_room;
-
-extern char str_empty[1];
-
-extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
-extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
-extern ROOM_INDEX_DATA *room_index_hash[MAX_KEY_HASH];
 
 
 #define CAP(st)						(*(st) = UPPER(*(st)), st)
 #define	HIGH_VNUM					65535
 #define LOW_VNUM					-1
 
-
-extern bool bDebug;
 
 #define CLEAR_MEM(stru, x)		for(unsigned int clearmem = 0; clearmem < x; clearmem++) *((char *)stru + clearmem) = '\0';
 

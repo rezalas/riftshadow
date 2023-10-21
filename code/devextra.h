@@ -1,43 +1,13 @@
 #ifndef DEVEXTRA_H
 #define DEVEXTRA_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include <mysql.h>
-#include <algorithm>
-#include <iterator>
 #include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "time.h"
-#include "interp.h"
-#include "help.h"
-#include "save.h"
-#include "cabal.h"
-#include "magic.h"
-#include "act_info.h"
-#include "config.h"
-#include "olc_act.h"
-#include "bit.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-
-#define LOGIN_LOG_FILE			"logins.txt"
-#define BOUNTY_LOG_FILE			"bounties.txt"
-//#define TEMP_GREP_RESULTS_TWO	"../temp/tempgrepresults2.tmp"
-#define HISTORY_FILE			"history.txt"
+#include "handler.h"
 
 #define COSM_UNDER(a,b,c,d)		obj_to_obj(make_cosmetic(a,b,c,d),obj);
-#define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,NULL,NULL),obj);
-#define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,NULL,c),obj);
+#define COSM_WEAR(a,b)			obj_to_obj(make_cosmetic(a,b,nullptr,nullptr),obj);
+#define COSM_NORM(a,b,c)		obj_to_obj(make_cosmetic(a,b,nullptr,c),obj);
 
 
 //

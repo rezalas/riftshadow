@@ -31,7 +31,26 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <algorithm>
 #include "skills.h"
+#include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "tables.h"
+#include "update.h"
+#include "devextra.h"
+#include "act_comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "db.h"
+#include "comm.h"
+#include "interp.h"
 
 /* used to get new skills */
 void do_gain(CHAR_DATA *ch, char *argument)
@@ -43,13 +62,13 @@ void do_gain(CHAR_DATA *ch, char *argument)
 		return;
 
 	/* find a trainer */
-	for (trainer = ch->in_room->people; trainer != NULL; trainer = trainer->next_in_room)
+	for (trainer = ch->in_room->people; trainer != nullptr; trainer = trainer->next_in_room)
 	{
 		if (is_npc(trainer) && (IS_SET(trainer->act, ACT_GAIN) || IS_SET(trainer->act, ACT_TRAIN)))
 			break;
 	}
 
-	if (trainer == NULL || !can_see(ch, trainer))
+	if (trainer == nullptr || !can_see(ch, trainer))
 	{
 		send_to_char("You can't do that here.\n\r", ch);
 		return;
@@ -68,11 +87,11 @@ void do_gain(CHAR_DATA *ch, char *argument)
 	{
 		if (ch->practice < 10)
 		{
-			act("$N tells you 'You are not yet ready.'", ch, NULL, trainer, TO_CHAR);
+			act("$N tells you 'You are not yet ready.'", ch, nullptr, trainer, TO_CHAR);
 			return;
 		}
 
-		act("$N helps you apply your practice to training", ch, NULL, trainer, TO_CHAR);
+		act("$N helps you apply your practice to training", ch, nullptr, trainer, TO_CHAR);
 		ch->practice -= 10;
 		ch->train += 1;
 		return;
@@ -83,17 +102,17 @@ void do_gain(CHAR_DATA *ch, char *argument)
 	{
 		if (ch->train < 1)
 		{
-			act("$N tells you 'You do not have the training to apply to your skill practices yet.'", ch, NULL, trainer, TO_CHAR);
+			act("$N tells you 'You do not have the training to apply to your skill practices yet.'", ch, nullptr, trainer, TO_CHAR);
 			return;
 		}
 
-		act("$N helps you apply your training to skills practices.", ch, NULL, trainer, TO_CHAR);
+		act("$N helps you apply your training to skills practices.", ch, nullptr, trainer, TO_CHAR);
 		ch->practice += 10;
 		ch->train -= 1;
 		return;
 	}
 
-	act("$N tells you 'I do not understand...'", ch, NULL, trainer, TO_CHAR);
+	act("$N tells you 'I do not understand...'", ch, nullptr, trainer, TO_CHAR);
 }
 
 /* RT spells and skills show the players spells (or skills) */
@@ -178,7 +197,7 @@ void do_spells(CHAR_DATA *ch, char *argument)
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
 	{
-		if (skill_table[sn].name == NULL)
+		if (skill_table[sn].name == nullptr)
 			break;
 
 		if ((level = skill_table[sn].skill_level[ch->Class()->GetIndex()]) < LEVEL_HERO + 1
@@ -337,7 +356,7 @@ void do_skills(CHAR_DATA *ch, char *argument)
 
 	for (sn = 0; sn < MAX_SKILL; sn++)
 	{
-		if (skill_table[sn].name == NULL)
+		if (skill_table[sn].name == nullptr)
 			break;
 
 		hide_skill= false;
@@ -758,7 +777,7 @@ int group_lookup(const char *name)
 {
 	for (int gn = 0; gn < MAX_GROUP; gn++)
 	{
-		if (group_table[gn].name == NULL)
+		if (group_table[gn].name == nullptr)
 			break;
 
 		if (LOWER(name[0]) == LOWER(group_table[gn].name[0]) && !str_prefix(name, group_table[gn].name))
@@ -774,12 +793,12 @@ int gn_skill_lookup(int sn)
 
 	for (i = 0; i < MAX_GROUP; i++)
 	{
-		if (group_table[i].name == NULL)
+		if (group_table[i].name == nullptr)
 			break;
 
 		for (j = 0; j < MAX_IN_GROUP; j++)
 		{
-			if (group_table[i].spells[j] == NULL)
+			if (group_table[i].spells[j] == nullptr)
 				break;
 
 			if (!str_prefix(skill_table[sn].name, group_table[i].spells[j]))
@@ -811,7 +830,7 @@ bool group_skill_lookup(int gn, int sn)
 {
 	for (int i = 0; i < MAX_IN_GROUP; i++)
 	{
-		if (group_table[gn].spells[i] == NULL)
+		if (group_table[gn].spells[i] == nullptr)
 			break;
 
 		if (sn < 1)
@@ -831,7 +850,7 @@ void gn_add(CHAR_DATA *ch, int gn)
 
 	for (int i = 0; i < MAX_IN_GROUP; i++)
 	{
-		if (group_table[gn].spells[i] == NULL)
+		if (group_table[gn].spells[i] == nullptr)
 			break;
 
 		group_add(ch, group_table[gn].spells[i], false);
@@ -845,7 +864,7 @@ void gn_remove(CHAR_DATA *ch, int gn)
 
 	for (int i = 0; i < MAX_IN_GROUP; i++)
 	{
-		if (group_table[gn].spells[i] == NULL)
+		if (group_table[gn].spells[i] == nullptr)
 			break;
 
 		group_remove(ch, group_table[gn].spells[i]);

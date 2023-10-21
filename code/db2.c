@@ -31,16 +31,34 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/time.h>
+#include <iterator>
+#include <algorithm>
 #include "db2.h"
+#include "handler.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "recycle.h"
+#include "spec.h"
+#include "characterClasses/warrior.h"
+#include "misc.h"
+#include "recycle.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "aprog.h"
+#include "newmem.h"
+#include "magic.h"
+#include "interp.h"
 
 struct social_type social_table[MAX_SOCIALS];
 int social_count;
-
-extern AREA_DATA *area_last;
-extern MOB_INDEX_DATA *mindex_list;
-extern OBJ_INDEX_DATA *oIndex_list;
-extern SHOP_DATA *shop_first;
-extern SHOP_DATA *shop_last;
 
 /* snarf a socials file */
 void load_socials(FILE *fp)
@@ -50,14 +68,14 @@ void load_socials(FILE *fp)
 		struct social_type social;
 		char *temp;
 		/* clear social */
-		social.char_no_arg = NULL;
-		social.others_no_arg = NULL;
-		social.char_found = NULL;
-		social.others_found = NULL;
-		social.vict_found = NULL;
-		social.char_not_found = NULL;
-		social.char_auto = NULL;
-		social.others_auto = NULL;
+		social.char_no_arg = nullptr;
+		social.others_no_arg = nullptr;
+		social.char_found = nullptr;
+		social.others_found = nullptr;
+		social.vict_found = nullptr;
+		social.char_not_found = nullptr;
+		social.char_auto = nullptr;
+		social.others_auto = nullptr;
 
 		temp = fread_word(fp);
 		if (!strcmp(temp, "#0"))
@@ -74,7 +92,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.char_no_arg = NULL;
+			social.char_no_arg = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -94,7 +112,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.others_no_arg = NULL;
+			social.others_no_arg = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -114,7 +132,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.char_found = NULL;
+			social.char_found = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -134,7 +152,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.others_found = NULL;
+			social.others_found = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -154,7 +172,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.vict_found = NULL;
+			social.vict_found = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -174,7 +192,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.char_not_found = NULL;
+			social.char_not_found = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -194,7 +212,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.char_auto = NULL;
+			social.char_auto = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -210,7 +228,7 @@ void load_socials(FILE *fp)
 		temp = fread_string_eol(fp);
 		if (!strcmp(temp, "$"))
 		{
-			social.others_auto = NULL;
+			social.others_auto = nullptr;
 		}
 		else if (!strcmp(temp, "#"))
 		{
@@ -254,7 +272,7 @@ void load_improgs(FILE *fp)
 				break;
 			case 'I':
 				pObjIndex = get_obj_index(fread_number(fp));
-				if (pObjIndex->iprogs == NULL)
+				if (pObjIndex->iprogs == nullptr)
 				{
 					pObjIndex->iprogs = new_iprog();
 					CLEAR_MEM(pObjIndex->iprogs, sizeof(IPROG_DATA))
@@ -289,7 +307,7 @@ void load_improgs(FILE *fp)
 				break;
 			case 'M':
 				pMobIndex = get_mob_index(fread_number(fp));
-				if (pMobIndex->mprogs == NULL)
+				if (pMobIndex->mprogs == nullptr)
 				{
 					pMobIndex->mprogs = new MPROG_DATA;
 					CLEAR_MEM(pMobIndex->mprogs, sizeof(MPROG_DATA))
@@ -396,11 +414,11 @@ void load_mobs(FILE *fp)
 	SPEECH_DATA *speech;
 	LINE_DATA *line;
 	char bugtext[250];
-	sh_int wealth;
+	short wealth;
 
 	for (;;)
 	{
-		sh_int vnum;
+		short vnum;
 		char letter, let[5];
 		int iHash;
 
@@ -416,7 +434,7 @@ void load_mobs(FILE *fp)
 			break;
 
 		fBootDb = false;
-		if (get_mob_index(vnum) != NULL)
+		if (get_mob_index(vnum) != nullptr)
 		{
 			bug("Load_new_mobiles: vnum %d duplicated.", vnum);
 			exit(1);
@@ -433,12 +451,12 @@ void load_mobs(FILE *fp)
 		pMobIndex->short_descr = fread_string(fp);
 		pMobIndex->long_descr = fread_string(fp);
 		pMobIndex->description = fread_string(fp);
-		pMobIndex->barred_entry = NULL;
+		pMobIndex->barred_entry = nullptr;
 		pMobIndex->long_descr[0] = UPPER(pMobIndex->long_descr[0]);
 		pMobIndex->description[0] = UPPER(pMobIndex->description[0]);
 
-		pMobIndex->pShop = NULL;
-		pMobIndex->notes = NULL;
+		pMobIndex->pShop = nullptr;
+		pMobIndex->notes = nullptr;
 		pMobIndex->alignment = fread_number(fp);
 		pMobIndex->group = fread_number(fp);
 		pMobIndex->xp_mod = fread_number(fp);
@@ -448,7 +466,7 @@ void load_mobs(FILE *fp)
 		pMobIndex->SetClass(CLASS_NONE);
 		pMobIndex->cabal = 0;
 		pMobIndex->spec_prog.trapvector = 0;
-		pMobIndex->spec_prog.func = NULL;
+		pMobIndex->spec_prog.func = nullptr;
 
 		if (!mindex_list)
 			mindex_list = pMobIndex;
@@ -521,7 +539,7 @@ void load_mobs(FILE *fp)
 		/* size */
 		pMobIndex->size = size_lookup(fread_word(fp));
 		pMobIndex->size = std::max((int)pMobIndex->size, 0);
-		pMobIndex->mprogs = NULL;
+		pMobIndex->mprogs = nullptr;
 		pMobIndex->restrict_low = LOW_VNUM;
 		pMobIndex->restrict_high = HIGH_VNUM;
 
@@ -692,7 +710,7 @@ void load_mobs(FILE *fp)
 		auto pMobIndex_cast_spell_size = std::size(pMobIndex->cast_spell);
 		for (i = 0; i < pMobIndex_cast_spell_size; i++)
 		{
-			pMobIndex->cast_spell[i] = NULL;
+			pMobIndex->cast_spell[i] = nullptr;
 		}
 
 		for (;;)
@@ -787,7 +805,7 @@ void load_mobs(FILE *fp)
 				word = fread_word(fp);
 				for (i = 0; i < pMobIndex_cast_spell_size; i++)
 				{
-					if (pMobIndex->cast_spell[i] == NULL)
+					if (pMobIndex->cast_spell[i] == nullptr)
 					{
 						pMobIndex->cast_spell[i] = palloc_string(word);
 						break;
@@ -841,7 +859,7 @@ void load_mobs(FILE *fp)
 					bar->message_two = fread_string(fp);
 
 					if (!str_cmp(bar->message_two, ""))
-						bar->message_two = NULL;
+						bar->message_two = nullptr;
 
 					pMobIndex->barred_entry = bar;
 					continue;
@@ -892,10 +910,10 @@ void load_mobs(FILE *fp)
 				if (pShop->direction == NO_FLAG)
 					bugout("Improper direction in shopkeeper definition.");
 
-				if (shop_first == NULL)
+				if (shop_first == nullptr)
 					shop_first = pShop;
 
-				if (shop_last != NULL)
+				if (shop_last != nullptr)
 					shop_last->next = pShop;
 
 				pMobIndex->pShop = pShop;
@@ -954,7 +972,7 @@ void bugout(char *reason)
 {
 	FILE *fp;
 	bug(reason, 0);
-	fp = fopen(RIFT_AREA_DIR "/bugout.txt", "a");
+	fp = fopen(RIFT_ROOT_DIR "../logs/bugout.txt", "a");
 	fprintf(fp, "%s\n", reason);
 	fclose(fp);
 	exit(3);
@@ -986,7 +1004,7 @@ void load_objs(FILE *fp)
 
 	for (;;)
 	{
-		sh_int vnum;
+		short vnum;
 		char letter;
 		int iHash;
 
@@ -1005,7 +1023,7 @@ void load_objs(FILE *fp)
 
 		fBootDb = false;
 
-		if (get_obj_index(vnum) != NULL)
+		if (get_obj_index(vnum) != nullptr)
 		{
 			bug("Load_objects: vnum %d duplicated.", vnum);
 			exit(1);
@@ -1025,7 +1043,7 @@ void load_objs(FILE *fp)
 		newobjs++;
 		pObjIndex->limcount = 0;
 		pObjIndex->limtotal = 0;
-		pObjIndex->extra_descr = NULL;
+		pObjIndex->extra_descr = nullptr;
 
 		pObjIndex->name = fread_string(fp);
 		pObjIndex->short_descr = fread_string(fp);
@@ -1040,19 +1058,19 @@ void load_objs(FILE *fp)
 		zero_vector(pObjIndex->res_flags);
 		zero_vector(pObjIndex->vuln_flags);
 		pObjIndex->start_timer = -1;
-		pObjIndex->notes = NULL;
-		pObjIndex->charaffs = NULL;
-		pObjIndex->apply = NULL;
-		pObjIndex->wear_echo[0] = NULL;
-		pObjIndex->remove_echo[0] = NULL;
-		pObjIndex->wear_echo[1] = NULL;
-		pObjIndex->remove_echo[1] = NULL;
-		pObjIndex->wear_loc_name = NULL;
-		pObjIndex->affected = NULL;
+		pObjIndex->notes = nullptr;
+		pObjIndex->charaffs = nullptr;
+		pObjIndex->apply = nullptr;
+		pObjIndex->wear_echo[0] = nullptr;
+		pObjIndex->remove_echo[0] = nullptr;
+		pObjIndex->wear_echo[1] = nullptr;
+		pObjIndex->remove_echo[1] = nullptr;
+		pObjIndex->wear_loc_name = nullptr;
+		pObjIndex->affected = nullptr;
 		pObjIndex->spec_prog.trapvector = 0;
 		pObjIndex->cabal = 0;
-		pObjIndex->verb = NULL;
-		pObjIndex->spec_prog.func = NULL;
+		pObjIndex->verb = nullptr;
+		pObjIndex->spec_prog.func = nullptr;
 
 		switch (pObjIndex->item_type)
 		{
@@ -1107,7 +1125,7 @@ void load_objs(FILE *fp)
 		pObjIndex->level = fread_number(fp);
 		pObjIndex->weight = fread_number(fp);
 		pObjIndex->cost = fread_number(fp);
-		pObjIndex->iprogs = NULL;
+		pObjIndex->iprogs = nullptr;
 		zero_vector(pObjIndex->progtypes);
 
 		/* condition */

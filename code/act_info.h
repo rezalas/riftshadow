@@ -1,51 +1,7 @@
 #ifndef ACT_INFO_H
 #define ACT_INFO_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <time.h>
-
-#ifdef _WIN32
-	#include <windows.h>
-	#include <wincrypt.h>
-#else
-	#include <crypt.h>
-#endif
-
 #include "merc.h"
-#include "handler.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "act_comm.h"
-#include "cabal.h"
-#include "devextra.h"
-#include "dioextra.h"
-#include "fight.h"
-#include "newmem.h"
-#include "comm.h"
-#include "act_wiz.h"
-#include "update.h"
-#include "interp.h"
-#include "db.h"
-#include "db2.h"
-#include "zealot.h"
-#include "help.h"
-#include "misc.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
-
-#define DEBUG_LOG_FILE	"debug.txt"
-#define GOD_LOG_FILE	"glog.txt"
 
 //
 // TODO: UNKNOWN FUNCTIONS

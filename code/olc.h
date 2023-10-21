@@ -19,30 +19,7 @@
 #ifndef OLC_H
 #define OLC_H
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "merc.h"
-#include "handler.h"
-#include "tables.h"
-#include "mem.h"
-#include "olc_act.h"
-#include "lookup.h"
-#include "bit.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "act_comm.h"
-#include "help.h"
-#include "magic.h"
 #include "utility.h"
 
 /*

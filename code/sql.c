@@ -6,9 +6,8 @@
 CSQLInterface::CSQLInterface(void)
 {
 	connstate = STATE_INVALID;
-	result_set = NULL;
-	Settings = Config("../config.json");
-	return;
+	result_set = nullptr;
+	Settings = Config(CONFIG_FILE);
 }
 
 CSQLInterface::~CSQLInterface(void)
@@ -25,14 +24,18 @@ inline bool CSQLInterface::SQLValid(void)
 	return connstate > STATE_INVALID;
 }
 
-void CSQLInterface::StartSQLServer(const char* host, const char* db, const char* user, const char* pass)
+bool CSQLInterface::StartSQLServer(const char* host, const char* db, const char* user, const char* pass)
 {
-	connection = mysql_init(NULL);
+	connection = mysql_init(nullptr);
 
-	if(!mysql_real_connect(connection, host, user, pass, db, 0, NULL, 0))
-		return RS.Bug("Unable to connect to mysql database: %s", mysql_error(connection));
+	if(!mysql_real_connect(connection, host, user, pass, db, 0, nullptr, 0))
+	{
+		RS.Bug("Unable to connect to mysql database: %s\r\n", mysql_error(connection));
+		return false;
+	}
 	
 	connstate = STATE_VALID;
+	return true;
 }
 
 void CSQLInterface::FreeResults(void)
@@ -41,7 +44,7 @@ void CSQLInterface::FreeResults(void)
 		return;
 	
 	mysql_free_result(result_set);
-	result_set = NULL;
+	result_set = nullptr;
 }
 
 int CSQLInterface::IQuery(const char *query)

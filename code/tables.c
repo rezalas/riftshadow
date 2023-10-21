@@ -31,9 +31,12 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <time.h>
 #include "tables.h"
-#include "weather_enums.h"
 #include "room.h"
+
 
 //Steal the flag table, we're not storing bitvectors, but shhh, we like their functions!
 const struct flag_type aftype_table[] =
@@ -47,7 +50,7 @@ const struct flag_type aftype_table[] =
 	{	"AFT_INVIS",	AFT_INVIS,		true	},
 	{	"AFT_RUNE",		AFT_RUNE,		true	},
 	{	"AFT_TIMER",	AFT_TIMER,		true	},
-	{	NULL,			0,				false	}
+	{	nullptr,			0,			false	}
 };
 
 const struct display_type apply_locations[] =
@@ -91,7 +94,7 @@ const struct display_type apply_locations[] =
 	{	"beauty",			APPLY_BEAUTY,			"none"					},
 	{	"alignment",		APPLY_ALIGNMENT,		"none"					},
 	{	"ethos",			APPLY_ETHOS,			"none"					},
-	{	NULL,				0,						0						} // NULL, 0, FALSE
+	{	nullptr,			0,						0						} // nullptr, 0, FALSE
 };
 
 const struct mod_name_type mod_names[] =
@@ -181,7 +184,7 @@ const struct position_type position_table[] =
 	{	"sitting",				"sit"		},
 	{	"fighting",				"fight"		},
 	{	"standing",				"stand"		},
-	{	NULL,					NULL		}
+	{	nullptr,				nullptr		}
 };
 
 const struct sex_type sex_table[] =
@@ -191,7 +194,7 @@ const struct sex_type sex_table[] =
 	{	"male"		},
 	{	"female"	},
 	{	"either"	},
-	{	NULL		}
+	{	nullptr		}
 };
 
 const struct size_type size_table[] =
@@ -204,7 +207,7 @@ const struct size_type size_table[] =
 	{	"huge", 	},
 	{	"giant" 	},
 	{	"immense"	},
-	{	NULL		}
+	{	nullptr		}
 };
 
 const struct flag_type act_flags[] =
@@ -242,7 +245,7 @@ const struct flag_type act_flags[] =
 	{	"diurnal",			ASCII_gg, 	true	},
 	{	"fastwander",		ASCII_hh, 	true	},
 	{	"law",				ASCII_ii, 	true	},
-	{	NULL,				0,			false	}
+	{	nullptr,			0,			false	}
 };
 
 const struct flag_type plr_flags[] =
@@ -274,7 +277,7 @@ const struct flag_type plr_flags[] =
 	{	"thief",			ASCII_Z,		false	},
 	{	"killer",			ASCII_aa,		false	},
 	{	"criminal",			ASCII_bb,		false	},
-	{	NULL,				0,				false	}
+	{	nullptr,			0,				false	}
 };
 
 const struct flag_type affect_flags[] =
@@ -312,7 +315,7 @@ const struct flag_type affect_flags[] =
 	{	"slow",				ASCII_dd,	true	},
 	{	"noshow",			ASCII_ee,	true	},
 	{	"darksanc",			ASCII_ff, 	true	},
-	{	NULL,				0,			false	}
+	{	nullptr,			0,			false	}
 };
 
 const struct flag_type off_flags[] =
@@ -345,7 +348,7 @@ const struct flag_type off_flags[] =
 	{	"intimidated",		ASCII_Y,	true	},
 	{	"unused",			ASCII_Z,	true	},
 	{	"assist_group",		ASCII_aa,	true	},
-	{	NULL,				0,			0		}
+	{	nullptr,			0,			0		}
 };
 
 const struct flag_type imm_flags[] =
@@ -375,7 +378,7 @@ const struct flag_type imm_flags[] =
 	{	"silver",			ASCII_Y,	true	},
 	{	"iron",				ASCII_Z,	true	},
 	{   "sleep",			ASCII_aa,	true	},
-	{	NULL,				0,			0		}
+	{	nullptr,			0,			0		}
 };
 
 const struct flag_type extra_flags[] =
@@ -414,7 +417,7 @@ const struct flag_type extra_flags[] =
 	{	"nostash",			ITEM_NO_STASH,			true	},
 	{	"nosac",			ITEM_NO_SAC,			true	},
 	{	"donation",			ITEM_DONATION_PIT,		true	},
-	{	NULL,				0,						0		}
+	{	nullptr,			0,						0		}
 };
 
 const struct flag_type wear_locations[] =
@@ -464,7 +467,7 @@ const struct flag_type wear_flags[] =
 	{	"brand",		ASCII_Q,	true	},
 	{	"strapped",		ASCII_R,	true	},
 	{	"cosmetic",		ASCII_S,	true	},
-	{	NULL,			0,			0		}
+	{	nullptr,		0,			0		}
 };
 
 
@@ -498,7 +501,7 @@ const struct flag_type form_flags[] =
 	{	"fish",			FORM_FISH ,			true	},
 	{	"cold_blood",	FORM_COLD_BLOOD,	true	},
 	{   "nospeech",		FORM_NOSPEECH,		true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type part_flags[] =
@@ -526,7 +529,7 @@ const struct flag_type part_flags[] =
 	{	"horns",		PART_HORNS,			true	},
 	{	"scales",		PART_SCALES,		true	},
 	{	"tusks",		PART_TUSKS,			true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type comm_flags[] =
@@ -557,7 +560,7 @@ const struct flag_type comm_flags[] =
 	{	"nosocket",		COMM_NOSOCKET,		false	},
 	{	"switchskills",	COMM_SWITCHSKILLS,	true	},
 	{	"lots_o_color",	COMM_LOTS_O_COLOR,	true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type criterion_flags[] =
@@ -568,7 +571,7 @@ const struct flag_type criterion_flags[] =
 	{	"size",			BAR_SIZE,		true	},
 	{	"tattoo",		BAR_TATTOO,		true	},
 	{	"level",		BAR_LEVEL,		true	},
-	{	NULL,			0,				true	}
+	{	nullptr,		0,				true	}
 };
 
 const struct flag_type trap_table[] =
@@ -585,7 +588,7 @@ const struct flag_type trap_table[] =
 	{	"concealed pit",	TRAP_PIT,		true	},
 	{	"boulder",			TRAP_BOULDER,	true	},
 	{	"mana drain",		TRAP_DRAIN,		true	},
-	{	NULL,				0,				true	}
+	{	nullptr,			0,				true	}
 };
 
 const struct flag_type speech_table[] =
@@ -599,7 +602,7 @@ const struct flag_type speech_table[] =
 	{	"emote",		SPEECH_EMOTE,	true	},
 	{	"echo",			SPEECH_ECHO,	true	},
 	{	"sing",			SPEECH_SING,	true	},
-	{	NULL,			0,				true	}
+	{	nullptr,		0,				true	}
 };
 
 const struct bounty_type bounty_table[MAX_BOUNTY] =
@@ -685,7 +688,7 @@ const struct sect_type sect_table[] =
 	{	"ice",				SECT_ICE,			2,		3 },
 	{	"snow",				SECT_SNOW,			6,		2 },
 	{	"cave",				SECT_CAVE,			2,		2 },
-	{	NULL,				0,					0,		0 }
+	{	nullptr,			0,					0,		0 }
 };
 
 const struct flag_type room_flags[] =
@@ -714,7 +717,7 @@ const struct flag_type room_flags[] =
 	{	"no_magic",			ROOM_NO_MAGIC,			true	},
 	{	"explore",			ROOM_AREA_EXPLORE,		true	},
 	{	"no_commune",		ROOM_NO_COMMUNE,		true	},
-	{  NULL,				0,						true	}
+	{	nullptr,			0,						true	}
 };
 
 const struct flag_type direction_table [] =
@@ -726,7 +729,7 @@ const struct flag_type direction_table [] =
 	{	"west",		Directions::West,		true	},
 	{	"up",		Directions::Up,			true	},
 	{	"down",		Directions::Down,		true	},
-	{	NULL,		0,				true	}
+	{	nullptr,	0,						true	}
 };
 
 const struct flag_type exit_flags [] =
@@ -743,7 +746,7 @@ const struct flag_type exit_flags [] =
 	{	"nonobvious",	EX_NONOBVIOUS,	true	},
 	{	"translucent",	EX_TRANSLUCENT,	true	},
 	{	"jammed",		EX_JAMMED,		true	},
-	{	NULL,			0,				true	}
+	{	nullptr,		0,				true	}
 };
 
 const struct flag_type area_type_table[] =
@@ -756,21 +759,21 @@ const struct flag_type area_type_table[] =
 	{	"city",			ARE_CITY,		true	},
 	{	"unopened",		ARE_UNOPENED,	true	},
 	{	"shrine",		ARE_SHRINE,		true	},
-	{	NULL,			0,				true	}
+	{	nullptr,		0,				true	}
 };
 
 const struct flag_type sky_table[WeatherCondition::MaxWeatherCondition] =
 {
-	//	name			bit				settable
+	//	name			bit								settable
 	{	"clear",		WeatherCondition::Clear,		true	},
 	{	"partlycloudy",	WeatherCondition::PartlyCloudy,	true	},
-	{	"overcast",		WeatherCondition::Overcast,	true	},
-	{	"drizzle",		WeatherCondition::Drizzle,	true	},
-	{	"downpour",		WeatherCondition::Downpour,	true	},
-	{	"thunderstorm",	WeatherCondition::ThunderStorm,		true	},
-	{	"flurry",		WeatherCondition::SnowFlurry,		true	},
-	{	"blizzard",		WeatherCondition::Blizzard,	true	},
-	{	"hail",			WeatherCondition::Hail,		true	}
+	{	"overcast",		WeatherCondition::Overcast,		true	},
+	{	"drizzle",		WeatherCondition::Drizzle,		true	},
+	{	"downpour",		WeatherCondition::Downpour,		true	},
+	{	"thunderstorm",	WeatherCondition::ThunderStorm,	true	},
+	{	"flurry",		WeatherCondition::SnowFlurry,	true	},
+	{	"blizzard",		WeatherCondition::Blizzard,		true	},
+	{	"hail",			WeatherCondition::Hail,			true	}
 };
 
 const struct flag_type temp_table[Temperature::MaxTemperature] =
@@ -784,11 +787,11 @@ const struct flag_type temp_table[Temperature::MaxTemperature] =
 
 const struct flag_type wind_table[Windspeed::MaxWindspeed] =
 {
-	//	name		bit				settable
-	{	"calm",		Windspeed::Calm,		true	},
+	//	name		bit					settable
+	{	"calm",		Windspeed::Calm,	true	},
 	{	"breeze",	Windspeed::Breeze,	true	},
-	{	"windy",	Windspeed::Windy,		true	},
-	{	"gale",		Windspeed::Gale,		true	}
+	{	"windy",	Windspeed::Windy,	true	},
+	{	"gale",		Windspeed::Gale,	true	}
 };
 
 const struct restrict_type restrict_table[] =
@@ -823,7 +826,7 @@ const struct restrict_type restrict_table[] =
 	{	"newbie_only",			ASCII_bb,		RESTRICT_OTHER,		""				},
 	{	"female_only",			ASCII_cc,		RESTRICT_OTHER,		""				},
 	{	"male_only",			ASCII_dd,		RESTRICT_OTHER,		""				},
-	{	NULL,					0,				0,					""				}
+	{	nullptr,				0,				0,					""				}
 };
 
 const struct tribe_type tribe_table[] =
@@ -840,7 +843,7 @@ const struct tribe_type tribe_table[] =
 	{	"fox",		"Tribe of the Fox",			TRIBE_FOX,		},
 	{	"bull",		"Tribe of the Bull",		TRIBE_BULL,		},
 	{	"panther",	"Tribe of the Panther",		TRIBE_PANTHER,	},
-	{	NULL,		NULL,						TRIBE_NONE,		},
+	{	nullptr,	nullptr,					TRIBE_NONE,		},
 };
 
 const char* day_name[] =
@@ -1003,7 +1006,7 @@ const std::vector<cabal_list> cabal_skills =
 	{	CABAL_PHALANX,	"crimson martyr",		 3,		true	},
 	{	CABAL_PHALANX,	"retribution",			 3,		true	},
 	{	CABAL_PHALANX,	"infidels fate",		 3,		true	},
-	{	CABAL_NONE,		NULL,					 0,		false	}
+	{	CABAL_NONE,		nullptr,					 0,		false	}
 };
 
 const struct flag_type wealth_table[] =
@@ -1015,7 +1018,7 @@ const struct flag_type wealth_table[] =
 	{	"affluent",		  100,		false	},
 	{	"rich",			 1000,		false	},
 	{	"peerless",		10000,		false	},
-	{	NULL,			    0,		false	},
+	{	nullptr,		    0,		false	},
 };
 
 
@@ -1032,7 +1035,7 @@ const struct demon_type demon_table[] =
 	{	"orobas",		GREATER_OROBAS,		GREATER_DEMON	},
 	{	"geryon",		GREATER_GERYON,		GREATER_DEMON	},
 	{	"cimeries",		GREATER_CIMERIES, 	GREATER_DEMON	},
-	{	NULL,			0,					0				},
+	{	nullptr,		0,					0				},
 };
 
 /* Sky:
@@ -1268,7 +1271,7 @@ const struct flag_type area_flags[] =
 	{	"changed",		AREA_CHANGED,		true	},
 	{	"added",		AREA_ADDED,			true	},
 	{	"loading",		AREA_LOADING,		false	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type sex_flags[] =
@@ -1279,7 +1282,7 @@ const struct flag_type sex_flags[] =
 	{	"neutral",		SEX_NEUTRAL,	true	},
 	{	"random",		3,				true	},   /* ROM */
 	{	"none",			SEX_NEUTRAL,	true	},
-	{	NULL,			0,				0		}
+	{	nullptr,		0,				0		}
 };
 
 const struct flag_type door_resets[] =
@@ -1288,7 +1291,7 @@ const struct flag_type door_resets[] =
 	{	"open and unlocked",	0,		true	},
 	{	"closed and unlocked",	1,		true	},
 	{	"closed and locked",	2,		true	},
-	{	NULL,					0,		0		}
+	{	nullptr,				0,		0		}
 };
 
 const struct flag_type sector_flags[] =
@@ -1315,7 +1318,7 @@ const struct flag_type sector_flags[] =
 	{	"ice",				SECT_ICE,			true	},
 	{	"snow",				SECT_SNOW,			true	},
 	{	"cave",				SECT_CAVE,			true	},
-	{	NULL,				0,					0		}
+	{	nullptr,			0,					0		}
 };
 
 const struct flag_type type_flags[] =
@@ -1351,7 +1354,7 @@ const struct flag_type type_flags[] =
 	{	"jewelry",			ITEM_JEWELRY,		true	},
 	{	"campfire",			ITEM_CAMPFIRE,		true	},
 	{	"altar",			ITEM_ALTAR,			true	},
-	{	NULL,				0,		  			0		}
+	{	nullptr,			0,		  			0		}
 };
 
 
@@ -1389,7 +1392,7 @@ const struct flag_type apply_flags[] =
 	{	"savingspell",		APPLY_SAVING_SPELL,		true	},
 	{	"spellaffect",		APPLY_SPELL_AFFECT,		false	},
 	{	"beauty",			APPLY_BEAUTY,			true,	},
-	{	NULL,				0,						0		}
+	{	nullptr,			0,						0		}
 };
 
 /*
@@ -1418,7 +1421,7 @@ const struct flag_type wear_loc_strings[] =
 	{	"wielded",				WEAR_WIELD,		true	},
 	{	"held in the hands",	WEAR_HOLD,		true	},
 	{	"floating nearby",		WEAR_FLOAT,		true	},
-	{	NULL,					0,				0		}
+	{	nullptr,				0,				0		}
 };
 
 
@@ -1446,7 +1449,7 @@ const struct flag_type wear_loc_flags[] =
 	{	"hold",		WEAR_HOLD,		true	},
 	{	"floating",	WEAR_FLOAT,		true	},
 	{	"tattoo",	WEAR_BRAND,		true	},
-	{	NULL,		0,				0		}
+	{	nullptr,	0,				0		}
 };
 
 const struct flag_type weapon_flags[]=
@@ -1513,7 +1516,7 @@ const struct flag_type weapon_flags[]=
 	{	"sblast",			58,		true	},
 	{	"poisbite",			59,		true	},
 	{	"foulgrasp",		60,		true	},	/* 60 */
-	{	NULL,				0,		0		}
+	{	nullptr,			0,		0		}
 };
 
 const struct flag_type container_flags[] =
@@ -1524,7 +1527,7 @@ const struct flag_type container_flags[] =
 	{	"closed",		ASCII_C,	true	},
 	{	"locked",		ASCII_D,	true	},
 	{	"puton",		ASCII_E,	true	},
-	{	NULL,			0,			0		}
+	{	nullptr,		0,			0		}
 };
 
 /*****************************************************************************
@@ -1538,7 +1541,7 @@ const struct flag_type ac_type[] =
 	{	"bash",			AC_BASH,		true	},
 	{	"slash",		AC_SLASH,		true	},
 	{	"exotic",		AC_EXOTIC,		true	},
-	{	NULL,			0,				0		}
+	{	nullptr,		0,				0		}
 };
 
 
@@ -1551,7 +1554,7 @@ const struct flag_type size_flags[] =
 	{	"large",		SIZE_LARGE,		true	},
 	{	"huge",			SIZE_HUGE,		true	},
 	{	"giant",		SIZE_GIANT,		true	},
-	{	NULL,			0,				0		}
+	{	nullptr,		0,				0		}
 };
 
 
@@ -1570,7 +1573,7 @@ const struct flag_type weapon_class[] =
 	{	"polearm",		 9,			true	},
 	{	"staff",		10,			true	},
 	{	"hand",			11,			true	},
-	{	NULL,			 0,			0		}
+	{	nullptr,		 0,			0		}
 };
 
 const struct flag_type weapon_type2[] =
@@ -1585,7 +1588,7 @@ const struct flag_type weapon_type2[] =
 	{	"twohands",		WEAPON_TWO_HANDS,	true	},
 	{	"shocking",		WEAPON_SHOCKING,	true	},
 	{	"poison",		WEAPON_POISON,		true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type res_flags[] =
@@ -1613,7 +1616,7 @@ const struct flag_type res_flags[] =
 	{	"sound",		RES_SOUND,		 	true	},
 	{	"silver",		RES_SILVER,			true	},
 	{	"iron",			RES_IRON,			true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type vuln_flags[] =
@@ -1641,14 +1644,14 @@ const struct flag_type vuln_flags[] =
 	{	"sound",		VULN_SOUND,			true	},
 	{	"silver",		VULN_SILVER,		true	},
 	{	"iron",			VULN_IRON,			true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type material_type[] =    /* not yet implemented */
 {
 	//	name,		bit,	settable
 	{	"none",		0,		true	},
-	{	NULL,		0,		0		}
+	{	nullptr,	0,		0		}
 };
 
 const struct flag_type position_flags[] =
@@ -1663,7 +1666,7 @@ const struct flag_type position_flags[] =
 	{	"sitting",		POS_SITTING,		true	},
 	{	"fighting",		POS_FIGHTING,		false	},
 	{	"standing",		POS_STANDING,		true	},
-	{	NULL,			0,					0		}
+	{	nullptr,		0,					0		}
 };
 
 const struct flag_type portal_flags[]=
@@ -1674,7 +1677,7 @@ const struct flag_type portal_flags[]=
 	{	"go_with",		GATE_GOWITH,		true	},
 	{	"buggy",		GATE_BUGGY,			true	},
 	{	"random",		GATE_RANDOM,		true	},
-	{	NULL,		 	 0,					0		}
+	{	nullptr,	 	0,					0		}
 };
 
 const struct flag_type furniture_flags[]=
@@ -1698,12 +1701,12 @@ const struct flag_type furniture_flags[]=
 	{	"put_in",		PUT_IN,			true	},
 	{	"put_inside", 	PUT_INSIDE,		true	},
 	{	"lounge_on",	LOUNGE_ON,		true	},
-	{	NULL,			0,				0		}
+	{	nullptr,		0,				0		}
 };
 
 const struct display_type altdesc_condtable[] =
 {
 	//	name,			bit,			display
 	{	"nighttime",	AD_COND_NIGHT,	"shown while sun is down"	},
-	{	NULL,			0,				NULL						}
+	{	nullptr,		0,				nullptr						}
 };

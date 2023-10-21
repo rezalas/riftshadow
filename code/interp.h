@@ -36,42 +36,7 @@
 #ifndef INTERP_H
 #define INTERP_H
 
-#include <sys/types.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "merc.h"
-#include "handler.h"
-#include "magic.h"
-#include "tables.h"
-#include "spec.h"
-#include "act_move.h"
-#include "devextra.h"
-#include "vote.h"
-#include "skills.h"
-#include "comm.h"
-#include "act_wiz.h"
-#include "fight.h"
-#include "db.h"
-#include "db2.h"
-#include "note.h"
-#include "olc.h"
-#include "olc_act.h"
-#include "olc_save.h"
-#include "magic.h"
-#include "heal.h"
-#include "tattoo.h"
-#include "quest.h"
-#include "flags.h"
-#include "scan.h"
-#include "act_info.h"
-#include "act_wiz.h"
-#include "iprog.h"
-#include "const.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
 
 /* for command types */
 #define ML				MAX_LEVEL		/* implementor */
@@ -86,17 +51,6 @@
 #define IM				LEVEL_IMMORTAL	/* avatar */
 #define HE				LEVEL_HERO		/* hero */
 
-#define COM_INGORE		1
-
-/*
- * Command logging types.
- */
-#define LOG_NORMAL		0
-#define LOG_ALWAYS		1
-#define LOG_NEVER		2
-
-#define LAST_COMMAND 	"lastcommand.txt"
-
 /*
  * Structure for a command in the command lookup table.
  */
@@ -104,29 +58,28 @@ struct cmd_type
 {
 	char * const name;
 	DO_FUN *do_fun;
-	sh_int position;
-	sh_int level;
-	sh_int log;
-	sh_int show;
-	sh_int hide;
+	short position;
+	short level;
+	short log;
+	short show;
+	short hide;
 	char * const skill_name;
 };
 
 /* the command table itself */
 extern const struct cmd_type cmd_table[];
 
-// TODO: where is this implemented
-extern void do_wizhelp(CHAR_DATA *ch, char *argument);
-
+extern bool command_result;
+extern char *command_line;
+extern bool fLogAll;
 
 extern void do_silent_movement(CHAR_DATA *ch, char *argument); // race.c
 extern void do_proficiencies(CHAR_DATA *ch, char *argument); // prof.c
-extern void do_bandage(CHAR_DATA *ch, char *argument); // temp_interep.c
 
 //
 // TODO: UNKNOWN FUNCTIONS
 //
-
+// extern void do_bandage(CHAR_DATA *ch, char *argument); // temp_interep.c
 // extern void do_answer(CHAR_DATA *ch, char *argument);
 // extern void do_auction(CHAR_DATA *ch, char *argument);
 // extern void do_shadowgate(CHAR_DATA *ch, char *argument);

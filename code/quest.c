@@ -1,6 +1,37 @@
 /* Eladrian's Kickin' Quest Tracking System -- ph34r */
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "quest.h"
+#include "comm.h"
+#include "update.h"
+#include "magic.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "interp.h"
+#include "spec.h"
+#include "mprog.h"
+#include "act_obj.h"
+#include "material.h"
+#include "utility.h"
+#include "newmem.h"
+#include "handler.h"
+#include "devextra.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "fight.h"
+
+#define STAGE(ch)					ch->pcdata->quests[nQuestIndex]
+#define SET_STAGE(ch, i)			ch->pcdata->quests[nQuestIndex] = i
+
+#define SMITH_QUEST_LASTCOMP		"Smith Quest Last Component"
+#define SMITH_QUEST_COMP_ACQUIRED	"Smith Quest Components Used"
+
 
 const struct quest_type quest_table[MAX_QUESTS] =
 {
@@ -79,7 +110,7 @@ void do_clearquests(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int i;
 
-	if ((victim = get_char_world(ch, argument)) == NULL)
+	if ((victim = get_char_world(ch, argument)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -136,7 +167,7 @@ bool can_do_quest(CHAR_DATA *ch, int quest)
 	return true;
 }
 
-void store_quest_val(CHAR_DATA *ch, char *valname, sh_int value)
+void store_quest_val(CHAR_DATA *ch, char *valname, short value)
 {
 	AFFECT_DATA af;
 
@@ -182,7 +213,7 @@ int get_quest_val(CHAR_DATA *ch, char *valname)
 
 void delete_quest_val(CHAR_DATA *ch, char *valname)
 {
-	AFFECT_DATA *paf, *paf_next = NULL;
+	AFFECT_DATA *paf, *paf_next = nullptr;
 
 	for (paf = ch->affected; paf; paf = paf_next)
 	{
@@ -521,7 +552,7 @@ void speech_prog_ilopheth_shack(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *spee
 			break;
 		case 5:
 			act("A bolt of lightning streaks down from the clouds above!", ch, 0, 0, TO_ALL);
-			do_myell(ch, "Argh!  I've been struck by lightning!", NULL);
+			do_myell(ch, "Argh!  I've been struck by lightning!", nullptr);
 
 			damage_new(mob, ch, dice(ch->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 			sprintf(buf, "%s Get the hell away from here, and don't you ever come back, you dirty grubber!", ch->name);
@@ -782,15 +813,15 @@ void pulse_prog_ilopheth_hermit(CHAR_DATA *mob)
 
 	for (d = descriptor_list; d; d = d->next)
 	{
-		if (d->connected == CON_PLAYING && !is_npc(d->character) && d->character->in_room != NULL &&
-			d->character->in_room->area != NULL && d->character->in_room->area == mob->in_room->area &&
+		if (d->connected == CON_PLAYING && !is_npc(d->character) && d->character->in_room != nullptr &&
+			d->character->in_room->area != nullptr && d->character->in_room->area == mob->in_room->area &&
 			d->character->pcdata->quests[TALISMANIC_QUEST] == 5 && number_percent() < 5)
 		{
 			sprintf(buf, "%s You!  Coming again to grub, eh?  You'll pay, oh yes yes, you will!", d->character->name);
 			do_tell(mob, buf);
 
 			act("A bolt of lightning streaks down from the clouds above!", d->character, 0, 0, TO_ALL);
-			do_myell(d->character, "Argh!  I've been struck by lightning!", NULL);
+			do_myell(d->character, "Argh!  I've been struck by lightning!", nullptr);
 
 			damage_new(mob, d->character, dice(d->character->level, 8), gsn_call_lightning, DAM_LIGHTNING, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "The lightning strike*");
 		}
@@ -988,7 +1019,7 @@ void give_prog_starvin_pete(CHAR_DATA *mob, CHAR_DATA *ch, OBJ_DATA *obj)
 			if (!str_cmp(material_table[obj->pIndexData->material_index].mat_name, "meat"))
 			{
 				if (is_affected(mob, gsn_bash)
-					&& ((paf = affect_find(mob->affected, gsn_bash)) != NULL && (ch == paf->owner)))
+					&& ((paf = affect_find(mob->affected, gsn_bash)) != nullptr && (ch == paf->owner)))
 				{
 					act("$n gobbles down $p noisily.", mob, obj, ch, TO_ALL);
 					do_say(mob, "Pete got no more money for you.");
@@ -1165,7 +1196,7 @@ BEGIN_SPEC(mspec_academy_smith)
 			free_pstring(obj->short_descr);
 			obj->short_descr = palloc_string(buf);
 			setbit_quest_val(ch, SMITH_QUEST_COMP_ACQUIRED, (comp_vnum - MIN_COMPONENT));
-			mprog_give(10, NULL, obj, mob, ch);
+			mprog_give(10, nullptr, obj, mob, ch);
 			SET_STAGE(ch, 2);
 			if (get_quest_val(ch, SMITH_QUEST_COMP_ACQUIRED) >= 15) // all done
 			{

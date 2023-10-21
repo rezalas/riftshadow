@@ -13,32 +13,24 @@
 #include "mud.h"
 #include "merc.h"
 #include "update.h"
-extern FILE *fpArea;
-extern char strArea[MAX_INPUT_LENGTH];
-extern char *top_string;
-extern bool fBootDb;
-extern char *help_greeting;
+#include "newmem.h"
+#include "dioextra.h"
+#include "db.h"
+#include "db2.h"
+#include "misc.h"
 
-
-void init_mm (void);
-void sort_areas(void);
-void load_race_info(void);
-void fix_exits (void);
-void find_adjacents (void);
-void clean_notes (void);
-void load_improgs (FILE *fp);
-void load_specs (FILE *fp);
-void reset_area (AREA_DATA * pArea);
-long process_bounty (char *name, long bounty);
-void load_socials (FILE *fp);
-void load_votes (void);
-void load_cabal_items (void);
-void reset_chessboard (void);
 
 CMud RS;
 
 CMud::CMud()
 {
+	Settings = Config(CONFIG_FILE);
+	
+	if (!Settings.isLoaded())
+	{
+		RS.Bug("Unable to load configuration!\r\n");
+		exit(0);
+	}		
 }
 
 CMud::~CMud()
@@ -47,19 +39,23 @@ CMud::~CMud()
 		RS.Shutdown();
 }
 
-void CMud::Bootup()
+bool CMud::Bootup()
 {
 	FILE *fp;
 	char tempbuf[MSL], buf[MSL];
 		RS.Log("\n\r*** Beginning RIFTSHADOW MUD server ***");
 		
-		top_string = NULL;
+		top_string = nullptr;
 		fBootDb = true;
 
 		RS.Log("Creating persistent SQL connection...");
 		DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
-		RS.SQL.StartSQLServer(riftCore.Host.c_str(),
-		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str());
+		if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
+		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+		{
+			RS.Log("Failed to create a SQL connection.");
+			return false;
+		}
 		
 		game_up = true;
 		
@@ -69,8 +65,6 @@ void CMud::Bootup()
 		RS.LoadOptions();
 
 		InitializeTables();
-		
-		RS.Log("Initializing host sockets...");
 
         RS.Log("Initialize random number generator...");
         init_mm();
@@ -111,16 +105,14 @@ void CMud::Bootup()
 		weather_update();
 		RS.Log("Priming weather");
 		reset_chessboard();
-		fp = fopen(RIFT_AREA_DIR "/login.txt", "r");
+		fp = fopen(LOGIN_BANNER_FILE, "r");
 		while(fgets(tempbuf,200,fp))
 		{
 			strcat(buf,tempbuf);
 			strcat(buf,"\r");
 		}
 		fclose(fp);
-		fp = fopen(RIFT_AREA_DIR "/gold.txt", "r");
-		gold_constant = fread_number(fp);
-		fclose(fp);
+		gold_constant = std::stol(Settings.GetValue("Gold"));
 		chop(buf);
 		chop(buf);
 		help_greeting = palloc_string(buf);
@@ -147,6 +139,7 @@ void CMud::Bootup()
 		//RS.SQL.IQuery("UNLOCK TABLES");
 #endif
 		//RS.GameEngine.GameLoop();
+		return true;
 }
 
 inline bool CMud::RunGame()

@@ -1,38 +1,7 @@
 #ifndef ACT_OBJ_H
 #define ACT_OBJ_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "magic.h"
-#include "tables.h"
-#include "spec.h"
-#include "act_comm.h"
-#include "cabal.h"
-#include "devextra.h"
-#include "dioextra.h"
-#include "paladin.h"
-#include "fight.h"
-#include "newmem.h"
-#include "comm.h"
-#include "act_wiz.h"
-#include "update.h"
-#include "interp.h"
-#include "db.h"
-#include "act_move.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-
-#define CABAL_ITEMS_FILE	"citems.txt"
-#define MINOTAUR_ONLY		ASCII_I
 
 
 //
@@ -100,7 +69,7 @@ CHAR_DATA *find_keeper (CHAR_DATA *ch);
 void obj_to_keeper (OBJ_DATA *obj, CHAR_DATA *ch);
 /* get an object from a shopkeeper's list */
 OBJ_DATA *get_obj_keeper (CHAR_DATA *ch, CHAR_DATA *keeper, char *argument);
-int get_cost (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy);
+long get_cost (CHAR_DATA *keeper, OBJ_DATA *obj, bool fBuy);
 void do_buy (CHAR_DATA *ch, char *argument);
 void do_list (CHAR_DATA *ch, char *argument);
 void do_sell (CHAR_DATA *ch, char *argument);

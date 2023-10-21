@@ -1,23 +1,7 @@
 #ifndef SKILLS_H
 #define SKILLS_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-#include "update.h"
-#include "devextra.h"
-#include "act_comm.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
 
 //
 // LOCAL FUNCTIONS

@@ -31,7 +31,18 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "alias.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
 
 /* does aliasing and other fun stuff */
 void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
@@ -44,7 +55,7 @@ void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
 	ch = d->original ? d->original : d->character;
 
 	if (is_npc(ch)
-		|| ch->pcdata->alias[0] == NULL
+		|| ch->pcdata->alias[0] == nullptr
 		|| !str_prefix("alias", argument)
 		|| !str_prefix("una", argument)
 		|| !str_prefix("prefix", argument))
@@ -57,7 +68,7 @@ void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
 
 	for (alias = 0; alias < MAX_ALIAS; alias++) /* go through the aliases */
 	{
-		if (ch->pcdata->alias[alias] == NULL)
+		if (ch->pcdata->alias[alias] == nullptr)
 			break;
 
 		if (!str_prefix(ch->pcdata->alias[alias], argument))
@@ -98,7 +109,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 	int pos;
 	smash_tilde(argument);
 
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		rch = ch;
 	else
 		rch = ch->desc->original ? ch->desc->original : ch;
@@ -110,7 +121,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 
 	if (arg[0] == '\0')
 	{
-		if (rch->pcdata->alias[0] == NULL)
+		if (rch->pcdata->alias[0] == nullptr)
 		{
 			send_to_char("You have no aliases defined.\n\r", ch);
 			return;
@@ -120,7 +131,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 
 		for (pos = 0; pos < MAX_ALIAS; pos++)
 		{
-			if (rch->pcdata->alias[pos] == NULL || rch->pcdata->alias_sub[pos] == NULL)
+			if (rch->pcdata->alias[pos] == nullptr || rch->pcdata->alias_sub[pos] == nullptr)
 				break;
 
 			sprintf(buf, "    %s:  %s\n\r", rch->pcdata->alias[pos], rch->pcdata->alias_sub[pos]);
@@ -140,7 +151,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 	{
 		for (pos = 0; pos < MAX_ALIAS; pos++)
 		{
-			if (rch->pcdata->alias[pos] == NULL || rch->pcdata->alias_sub[pos] == NULL)
+			if (rch->pcdata->alias[pos] == nullptr || rch->pcdata->alias_sub[pos] == nullptr)
 				break;
 
 			if (!str_cmp(arg, rch->pcdata->alias[pos]))
@@ -163,7 +174,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 
 	for (pos = 0; pos < MAX_ALIAS; pos++)
 	{
-		if (rch->pcdata->alias[pos] == NULL)
+		if (rch->pcdata->alias[pos] == nullptr)
 			break;
 
 		if (!str_cmp(arg, rch->pcdata->alias[pos])) /* redefine an alias */
@@ -198,7 +209,7 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 	int pos;
 	bool found = false;
 
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		rch = ch;
 	else
 		rch = ch->desc->original ? ch->desc->original : ch;
@@ -216,7 +227,7 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 
 	for (pos = 0; pos < MAX_ALIAS; pos++)
 	{
-		if (rch->pcdata->alias[pos] == NULL)
+		if (rch->pcdata->alias[pos] == nullptr)
 			break;
 
 		if (found)
@@ -224,8 +235,8 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 
 			rch->pcdata->alias[pos - 1] = rch->pcdata->alias[pos];
 			rch->pcdata->alias_sub[pos - 1] = rch->pcdata->alias_sub[pos];
-			rch->pcdata->alias[pos] = NULL;
-			rch->pcdata->alias_sub[pos] = NULL;
+			rch->pcdata->alias[pos] = nullptr;
+			rch->pcdata->alias_sub[pos] = nullptr;
 			continue;
 		}
 
@@ -235,8 +246,8 @@ void do_unalias(CHAR_DATA *ch, char *argument)
 
 			free_pstring(rch->pcdata->alias[pos]);
 			free_pstring(rch->pcdata->alias_sub[pos]);
-			rch->pcdata->alias[pos] = NULL;
-			rch->pcdata->alias_sub[pos] = NULL;
+			rch->pcdata->alias[pos] = nullptr;
+			rch->pcdata->alias_sub[pos] = nullptr;
 
 			found = true;
 		}

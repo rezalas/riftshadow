@@ -31,7 +31,20 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include "merc.h"
 #include "effects.h"
+#include "handler.h"
+#include "recycle.h"
+#include "comm.h"
+#include "update.h"
+#include "db.h"
+#include "magic.h"
+#include "utility.h"
 
 void acid_effect(void *vo, int level, int dam, int target)
 {
@@ -40,7 +53,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
 		OBJ_DATA *obj, *obj_next;
 
-		for (obj = room->contents; obj != NULL; obj = obj_next)
+		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			acid_effect(obj, level, dam, TARGET_OBJ);
@@ -55,7 +68,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 		OBJ_DATA *obj, *obj_next;
 
 		/* let's toast some gear */
-		for (obj = victim->carrying; obj != NULL; obj = obj_next)
+		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			acid_effect(obj, level, dam, TARGET_OBJ);
@@ -118,10 +131,10 @@ void acid_effect(void *vo, int level, int dam, int target)
 		if (number_percent() > chance)
 			return;
 
-		if (obj->carried_by != NULL)
-			act(msg, obj->carried_by, obj, NULL, TO_ALL);
-		else if (obj->in_room != NULL && obj->in_room->people != NULL)
-			act(msg, obj->in_room->people, obj, NULL, TO_ALL);
+		if (obj->carried_by != nullptr)
+			act(msg, obj->carried_by, obj, nullptr, TO_ALL);
+		else if (obj->in_room != nullptr && obj->in_room->people != nullptr)
+			act(msg, obj->in_room->people, obj, nullptr, TO_ALL);
 
 		if (obj->item_type == ITEM_ARMOR) /* etch it */
 		{
@@ -129,7 +142,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 			bool af_found = false;
 			int i;
 
-			for (paf = obj->affected; paf != NULL; paf = paf->next)
+			for (paf = obj->affected; paf != nullptr; paf = paf->next)
 			{
 				if (paf->location == APPLY_AC)
 				{
@@ -155,7 +168,7 @@ void acid_effect(void *vo, int level, int dam, int target)
 				obj->affected = paf;
 			}
 
-			if (obj->carried_by != NULL && obj->wear_loc != WEAR_NONE)
+			if (obj->carried_by != nullptr && obj->wear_loc != WEAR_NONE)
 			{
 				for (i = 0; i < 4; i++)
 				{
@@ -169,16 +182,16 @@ void acid_effect(void *vo, int level, int dam, int target)
 		/* get rid of the object */
 		if (obj->contains) /* dump contents */
 		{
-			for (t_obj = obj->contains; t_obj != NULL; t_obj = n_obj)
+			for (t_obj = obj->contains; t_obj != nullptr; t_obj = n_obj)
 			{
 				n_obj = t_obj->next_content;
 				obj_from_obj(t_obj);
 
-				if (obj->in_room != NULL)
+				if (obj->in_room != nullptr)
 				{
 					obj_to_room(t_obj, obj->in_room);
 				}
-				else if (obj->carried_by != NULL)
+				else if (obj->carried_by != nullptr)
 				{
 					obj_to_room(t_obj, obj->carried_by->in_room);
 				}
@@ -203,7 +216,7 @@ void cold_effect(void *vo, int level, int dam, int target)
 		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
 		OBJ_DATA *obj, *obj_next;
 
-		for (obj = room->contents; obj != NULL; obj = obj_next)
+		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			cold_effect(obj, level, dam, TARGET_OBJ);
@@ -222,8 +235,8 @@ void cold_effect(void *vo, int level, int dam, int target)
 		{
 			AFFECT_DATA af;
 
-			act("$n turns blue and shivers.", victim, NULL, NULL, TO_ROOM);
-			act("A chill sinks deep into your bones.", victim, NULL, NULL, TO_CHAR);
+			act("$n turns blue and shivers.", victim, nullptr, nullptr, TO_ROOM);
+			act("A chill sinks deep into your bones.", victim, nullptr, nullptr, TO_CHAR);
 			init_affect(&af);
 			af.where = TO_AFFECTS;
 			af.aftype = AFT_SPELL;
@@ -240,7 +253,7 @@ void cold_effect(void *vo, int level, int dam, int target)
 			gain_condition(victim, COND_HUNGER, dam / 20);
 
 		/* let's toast some gear */
-		for (obj = victim->carrying; obj != NULL; obj = obj_next)
+		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			cold_effect(obj, level, dam, TARGET_OBJ);
@@ -289,10 +302,10 @@ void cold_effect(void *vo, int level, int dam, int target)
 		if (number_percent() > chance)
 			return;
 
-		if (obj->carried_by != NULL)
-			act(msg, obj->carried_by, obj, NULL, TO_ALL);
-		else if (obj->in_room != NULL && obj->in_room->people != NULL)
-			act(msg, obj->in_room->people, obj, NULL, TO_ALL);
+		if (obj->carried_by != nullptr)
+			act(msg, obj->carried_by, obj, nullptr, TO_ALL);
+		else if (obj->in_room != nullptr && obj->in_room->people != nullptr)
+			act(msg, obj->in_room->people, obj, nullptr, TO_ALL);
 
 		extract_obj(obj);
 	}
@@ -305,7 +318,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
 		OBJ_DATA *obj, *obj_next;
 
-		for (obj = room->contents; obj != NULL; obj = obj_next)
+		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			fire_effect(obj, level, dam, TARGET_OBJ);
@@ -323,8 +336,8 @@ void fire_effect(void *vo, int level, int dam, int target)
 		if (!is_affected_by(victim, AFF_BLIND) && !saves_spell(level / 4 + dam / 20, victim, DAM_FIRE))
 		{
 			AFFECT_DATA af;
-			act("$n is blinded by smoke!", victim, NULL, NULL, TO_ROOM);
-			act("Your eyes tear up from smoke...you can't see a thing!", victim, NULL, NULL, TO_CHAR);
+			act("$n is blinded by smoke!", victim, nullptr, nullptr, TO_ROOM);
+			act("Your eyes tear up from smoke...you can't see a thing!", victim, nullptr, nullptr, TO_CHAR);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -344,7 +357,7 @@ void fire_effect(void *vo, int level, int dam, int target)
 			gain_condition(victim, COND_THIRST, dam / 20);
 
 		/* let's toast some gear! */
-		for (obj = victim->carrying; obj != NULL; obj = obj_next)
+		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 
@@ -410,25 +423,25 @@ void fire_effect(void *vo, int level, int dam, int target)
 		if (number_percent() > chance)
 			return;
 
-		if (obj->carried_by != NULL)
-			act(msg, obj->carried_by, obj, NULL, TO_ALL);
-		else if (obj->in_room != NULL && obj->in_room->people != NULL)
-			act(msg, obj->in_room->people, obj, NULL, TO_ALL);
+		if (obj->carried_by != nullptr)
+			act(msg, obj->carried_by, obj, nullptr, TO_ALL);
+		else if (obj->in_room != nullptr && obj->in_room->people != nullptr)
+			act(msg, obj->in_room->people, obj, nullptr, TO_ALL);
 
 		if (obj->contains)
 		{
 			/* dump the contents */
 
-			for (t_obj = obj->contains; t_obj != NULL; t_obj = n_obj)
+			for (t_obj = obj->contains; t_obj != nullptr; t_obj = n_obj)
 			{
 				n_obj = t_obj->next_content;
 				obj_from_obj(t_obj);
 
-				if (obj->in_room != NULL)
+				if (obj->in_room != nullptr)
 				{
 					obj_to_room(t_obj, obj->in_room);
 				}
-				else if (obj->carried_by != NULL)
+				else if (obj->carried_by != nullptr)
 				{
 					obj_to_room(t_obj, obj->carried_by->in_room);
 				}
@@ -453,7 +466,7 @@ void poison_effect(void *vo, int level, int dam, int target)
 		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
 		OBJ_DATA *obj, *obj_next;
 
-		for (obj = room->contents; obj != NULL; obj = obj_next)
+		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			poison_effect(obj, level, dam, TARGET_OBJ);
@@ -473,7 +486,7 @@ void poison_effect(void *vo, int level, int dam, int target)
 			AFFECT_DATA af;
 
 			send_to_char("You feel poison coursing through your veins.\n\r", victim);
-			act("$n looks very ill.", victim, NULL, NULL, TO_ROOM);
+			act("$n looks very ill.", victim, nullptr, nullptr, TO_ROOM);
 
 			init_affect(&af);
 			af.where = TO_AFFECTS;
@@ -488,7 +501,7 @@ void poison_effect(void *vo, int level, int dam, int target)
 		}
 
 		/* equipment */
-		for (obj = victim->carrying; obj != NULL; obj = obj_next)
+		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			poison_effect(obj, level, dam, TARGET_OBJ);
@@ -543,7 +556,7 @@ void shock_effect(void *vo, int level, int dam, int target)
 		ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA *)vo;
 		OBJ_DATA *obj, *obj_next;
 
-		for (obj = room->contents; obj != NULL; obj = obj_next)
+		for (obj = room->contents; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			shock_effect(obj, level, dam, TARGET_OBJ);
@@ -558,7 +571,7 @@ void shock_effect(void *vo, int level, int dam, int target)
 		OBJ_DATA *obj, *obj_next;
 
 		/* toast some gear */
-		for (obj = victim->carrying; obj != NULL; obj = obj_next)
+		for (obj = victim->carrying; obj != nullptr; obj = obj_next)
 		{
 			obj_next = obj->next_content;
 			shock_effect(obj, level, dam, TARGET_OBJ);
@@ -608,10 +621,10 @@ void shock_effect(void *vo, int level, int dam, int target)
 		if (number_percent() > chance)
 			return;
 
-		if (obj->carried_by != NULL)
-			act(msg, obj->carried_by, obj, NULL, TO_ALL);
-		else if (obj->in_room != NULL && obj->in_room->people != NULL)
-			act(msg, obj->in_room->people, obj, NULL, TO_ALL);
+		if (obj->carried_by != nullptr)
+			act(msg, obj->carried_by, obj, nullptr, TO_ALL);
+		else if (obj->in_room != nullptr && obj->in_room->people != nullptr)
+			act(msg, obj->in_room->people, obj, nullptr, TO_ALL);
 
 		extract_obj(obj);
 	}

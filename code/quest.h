@@ -3,29 +3,8 @@
 
 /* Eladrian's Kickin' Quest Tracking System -- ph34r */
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "interp.h"
-#include "spec.h"
-#include "mprog.h"
-#include "act_obj.h"
-#include "material.h"
-#include "utility.h"
 
-#define STAGE(ch)					ch->pcdata->quests[nQuestIndex]
-#define SET_STAGE(ch, i)			ch->pcdata->quests[nQuestIndex] = i
-
-#define SMITH_QUEST_LASTCOMP		"Smith Quest Last Component"
-#define SMITH_QUEST_COMP_ACQUIRED	"Smith Quest Components Used"
 
 extern const struct quest_type quest_table[];
 
@@ -36,7 +15,7 @@ extern const struct quest_type quest_table[];
 void do_clearquests(CHAR_DATA *ch, char *argument);
 int agrees(CHAR_DATA *ch, char *speech);
 bool can_do_quest(CHAR_DATA *ch, int quest);
-void store_quest_val(CHAR_DATA *ch, char *valname, sh_int value);
+void store_quest_val(CHAR_DATA *ch, char *valname, short value);
 void setbit_quest_val(CHAR_DATA *ch, char *valname, long value);
 int get_quest_val(CHAR_DATA *ch, char *valname);
 void delete_quest_val(CHAR_DATA *ch, char *valname);

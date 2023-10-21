@@ -31,8 +31,53 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <time.h>
+
+#ifdef _WIN32
+	#include <windows.h>
+	#include <wincrypt.h>
+#else
+	#include <crypt.h>
+#endif
+
 #include "act_info.h"
+#include "rift.h"
 #include "weather_enums.h"
+#include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "act_comm.h"
+#include "act_move.h"
+#include "cabal.h"
+#include "devextra.h"
+#include "dioextra.h"
+#include "fight.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "update.h"
+#include "interp.h"
+#include "db.h"
+#include "db2.h"
+#include "characterClasses/zealot.h"
+#include "help.h"
+#include "misc.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "skills.h"
+#include "save.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 char *const where_name[] = {
 	"<used as light>     ",
@@ -109,8 +154,8 @@ char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
 
 	buf[0] = '\0';
 
-	if ((fShort && (obj->short_descr == NULL || obj->short_descr[0] == '\0'))
-		|| (obj->description == NULL || obj->description[0] == '\0'))
+	if ((fShort && (obj->short_descr == nullptr || obj->short_descr[0] == '\0'))
+		|| (obj->description == nullptr || obj->description[0] == '\0'))
 	{
 		return buf;
 	}
@@ -142,7 +187,7 @@ char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
 	if (is_affected_obj(obj, gsn_stash) && is_immortal(ch))
 	{
 		auto oaf = obj->affected;
-		for (; oaf != NULL; oaf = oaf->next)
+		for (; oaf != nullptr; oaf = oaf->next)
 		{
 			if (oaf->type == gsn_stash)
 				break;
@@ -156,12 +201,12 @@ char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
 
 	if (fShort)
 	{
-		if (obj->short_descr != NULL)
+		if (obj->short_descr != nullptr)
 			strcat(buf, obj->short_descr);
 	}
 	else
 	{
-		if (obj->description != NULL)
+		if (obj->description != nullptr)
 			strcat(buf, obj->description);
 	}
 
@@ -174,7 +219,7 @@ char *format_obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch, bool fShort)
  */
 void show_list_to_char(OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNothing)
 {
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		return;
 
 	/*
@@ -183,7 +228,7 @@ void show_list_to_char(OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNot
 	auto line = ch->lines;
 	auto count = 0;
 
-	for (auto obj = list; obj != NULL; obj = obj->next_content)
+	for (auto obj = list; obj != nullptr; obj = obj->next_content)
 	{
 		count++;
 	}
@@ -201,7 +246,7 @@ void show_list_to_char(OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNot
 	/*
 	 * Format the list of objects.
 	 */
-	for (auto obj = list; obj != NULL; obj = obj->next_content)
+	for (auto obj = list; obj != nullptr; obj = obj->next_content)
 	{
 		if (IS_SET(obj->extra_flags, ITEM_NOSHOW) && !is_immortal(ch))
 			continue;
@@ -403,7 +448,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 		strcat(buf, "(Rigid) ");
 
 	auto af = affect_find(victim->affected, gsn_creeping_tomb);
-	if (is_affected(victim, gsn_creeping_tomb) && (af != NULL && af->duration <= 2))
+	if (is_affected(victim, gsn_creeping_tomb) && (af != nullptr && af->duration <= 2))
 		strcat(buf, "(Entombed) ");
 
 	if (!is_npc(victim) && victim->pcdata->energy_state == -5)
@@ -452,7 +497,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 			strcat(buf, " is lying here stunned.");
 			break;
 		case POS_SLEEPING:
-			if (victim->on != NULL)
+			if (victim->on != nullptr)
 			{
 				if (IS_SET_OLD(victim->on->value[2], SLEEP_AT))
 				{
@@ -476,7 +521,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 			}
 			break;
 		case POS_RESTING:
-			if (victim->on != NULL)
+			if (victim->on != nullptr)
 			{
 				if (IS_SET_OLD(victim->on->value[2], REST_AT))
 				{
@@ -505,7 +550,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 			}
 			break;
 		case POS_SITTING:
-			if (victim->on != NULL)
+			if (victim->on != nullptr)
 			{
 				if (IS_SET_OLD(victim->on->value[2], SIT_AT))
 				{
@@ -529,7 +574,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 			}
 			break;
 		case POS_STANDING:
-			if (victim->on != NULL)
+			if (victim->on != nullptr)
 			{
 				if (IS_SET_OLD(victim->on->value[2], STAND_AT))
 				{
@@ -555,7 +600,7 @@ void show_char_to_char_0(CHAR_DATA *victim, CHAR_DATA *ch)
 		case POS_FIGHTING:
 			strcat(buf, " is here, fighting ");
 
-			if (victim->fighting == NULL)
+			if (victim->fighting == nullptr)
 			{
 				strcat(buf, "thin air??");
 			}
@@ -588,7 +633,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 	if (victim->description[0] != '\0')
 		send_to_char(victim->description, ch);
 	else
-		act("You see nothing special about $M.", ch, NULL, victim, TO_CHAR);
+		act("You see nothing special about $M.", ch, nullptr, victim, TO_CHAR);
 
 	auto percent = victim->max_hit > 0
 		? (100 * victim->hit) / victim->max_hit
@@ -694,7 +739,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 					continue;
 
 				if (!found)
-					act("\n\r$N is using:", ch, NULL, victim, TO_CHAR);
+					act("\n\r$N is using:", ch, nullptr, victim, TO_CHAR);
 
 				auto buffer = fmt::format("{}>", tObj->wear_loc_name ? tObj->wear_loc_name : "bug: unset wear_loc on cosmetic");
 				buffer = fmt::sprintf("<worn %-14s", buffer);
@@ -712,12 +757,12 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 		}
 
 		auto obj = get_eq_char(victim, iWear);
-		if (iWear != WEAR_COSMETIC && obj != NULL && can_see_obj(ch, obj))
+		if (iWear != WEAR_COSMETIC && obj != nullptr && can_see_obj(ch, obj))
 		{
 			if (!found)
 			{
 				send_to_char("\n\r", ch);
-				act("$N is using:", ch, NULL, victim, TO_CHAR);
+				act("$N is using:", ch, nullptr, victim, TO_CHAR);
 				found = true;
 			}
 
@@ -730,7 +775,7 @@ void show_char_to_char_1(CHAR_DATA *victim, CHAR_DATA *ch)
 	auto belt = get_eq_char(victim, WEAR_WAIST);
 	if (!is_npc(victim)
 		&& victim->cabal == CABAL_HORDE
-		&& belt != NULL
+		&& belt != nullptr
 		&& belt->pIndexData->vnum == OBJ_VNUM_TROPHY_BELT
 		&& victim->pcdata->trophy && belt->value[4] >= 1)
 	{
@@ -854,12 +899,12 @@ void show_char_to_char_2(CHAR_DATA *victim, CHAR_DATA *ch)
 	for (auto iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
 		auto obj = get_eq_char(victim, iWear);
-		if (obj != NULL && can_see_obj(ch, obj))
+		if (obj != nullptr && can_see_obj(ch, obj))
 		{
 			if (!found)
 			{
 				send_to_char("\n\r", ch);
-				act("$N is using:", ch, NULL, victim, TO_CHAR);
+				act("$N is using:", ch, nullptr, victim, TO_CHAR);
 				found = true;
 			}
 
@@ -886,19 +931,19 @@ void show_char_to_char_3(CHAR_DATA *victim, CHAR_DATA *ch)
 	{
 		if (ch == victim)
 		{
-			act("$n looks closely at $mself.", ch, NULL, NULL, TO_ROOM);
+			act("$n looks closely at $mself.", ch, nullptr, nullptr, TO_ROOM);
 		}
 		else
 		{
-			act("$n looks closely at you.", ch, NULL, victim, TO_VICT);
-			act("$n looks closely at $N.", ch, NULL, victim, TO_NOTVICT);
+			act("$n looks closely at you.", ch, nullptr, victim, TO_VICT);
+			act("$n looks closely at $N.", ch, nullptr, victim, TO_NOTVICT);
 		}
 	}
 
 	if (victim->description[0] != '\0')
 		send_to_char(victim->description, ch);
 	else
-		act("You see nothing special about $M.", ch, NULL, victim, TO_CHAR);
+		act("You see nothing special about $M.", ch, nullptr, victim, TO_CHAR);
 
 	auto percent = victim->max_hit > 0
 		? (100 * victim->hit) / victim->max_hit
@@ -927,7 +972,7 @@ void show_char_to_char_3(CHAR_DATA *victim, CHAR_DATA *ch)
 
 void show_char_to_char(CHAR_DATA *list, CHAR_DATA *ch)
 {
-	for (auto rch = list; rch != NULL; rch = rch->next_in_room)
+	for (auto rch = list; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (rch == ch)
 			continue;
@@ -957,7 +1002,7 @@ bool check_blind(CHAR_DATA *ch)
 	if (is_affected_area(ch->in_room->area, gsn_whiteout) && is_outside(ch))
 	{
 		auto paf = ch->in_room->area->affected;
-		for (; paf != NULL; paf = paf->next)
+		for (; paf != nullptr; paf = paf->next)
 		{
 			if (paf->type == gsn_whiteout)
 				break;
@@ -1215,7 +1260,7 @@ void do_color(CHAR_DATA *ch, char *argument)
 	}
 
 	auto color = get_color_name(arg2);
-	if (color == NULL)
+	if (color == nullptr)
 	{
 		send_to_char("Invalid color selection.\n\r", ch);
 		return;
@@ -1535,7 +1580,7 @@ void do_nosummon(CHAR_DATA *ch, char *argument)
 
 void do_glance(CHAR_DATA *ch, char *argument)
 {
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		return;
 
 	if (argument[0] == '\0')
@@ -1560,7 +1605,7 @@ void do_glance(CHAR_DATA *ch, char *argument)
 		return;
 
 	auto victim = get_char_room(ch, argument); 
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("That person isn't here.\n\r", ch);
 		return;
@@ -1577,7 +1622,7 @@ void do_glance(CHAR_DATA *ch, char *argument)
 
 void do_examine(CHAR_DATA *ch, char *argument)
 {
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		return;
 
 	char arg[MAX_INPUT_LENGTH];
@@ -1607,7 +1652,7 @@ void do_examine(CHAR_DATA *ch, char *argument)
 	std::string buffer;
 
 	auto obj = get_obj_here(ch, arg);
-	if (obj != NULL)
+	if (obj != nullptr)
 	{
 		switch (obj->item_type)
 		{
@@ -1670,7 +1715,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 	int door;
 	int i;
 
-	if (ch->desc == NULL)
+	if (ch->desc == nullptr)
 		return;
 
 	if (ch->position < POS_SLEEPING)
@@ -1813,7 +1858,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 		if (is_affected_room(ch->in_room, gsn_riptide))
 		{
-			for (auto raf = ch->in_room->affected; raf != NULL; raf = raf->next)
+			for (auto raf = ch->in_room->affected; raf != nullptr; raf = raf->next)
 			{
 				if (raf->type == gsn_riptide && raf->owner == ch && raf->location == APPLY_ROOM_NONE &&
 					raf->modifier == 1)
@@ -1896,7 +1941,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 	pdesc = get_extra_descr(arg3, ch->in_room->extra_descr);
 
-	if (pdesc != NULL)
+	if (pdesc != nullptr)
 	{
 		if (++count == number)
 		{
@@ -1921,7 +1966,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 		}
 
 		auto obj = get_obj_here(ch, arg2);
-		if (obj == NULL)
+		if (obj == nullptr)
 		{
 			send_to_char("You do not see that here.\n\r", ch);
 			return;
@@ -1960,7 +2005,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 					break;
 				}
 
-				act("$p holds:", ch, obj, NULL, TO_CHAR);
+				act("$p holds:", ch, obj, nullptr, TO_CHAR);
 
 				if (obj->contains)
 				{
@@ -2011,7 +2056,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 	}
 
 	auto victim = get_char_room(ch, arg1);
-	if (victim != NULL)
+	if (victim != nullptr)
 	{
 		if (is_affected(ch, gsn_plasma_arc))
 		{
@@ -2028,13 +2073,13 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 	auto found = false;
 	auto obj = ch->in_room->contents;
-	for (; obj != NULL; obj = obj->next_content)
+	for (; obj != nullptr; obj = obj->next_content)
 	{
 		if (!can_see_obj(ch, obj))
 			continue;
 
 		pdesc = get_extra_descr(arg3, obj->extra_descr);
-		if (pdesc != NULL)
+		if (pdesc != nullptr)
 		{
 			if (++count == number)
 			{
@@ -2047,7 +2092,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 		}
 
 		pdesc = get_extra_descr(arg3, obj->pIndexData->extra_descr);
-		if (pdesc != NULL)
+		if (pdesc != nullptr)
 		{
 			if (++count == number)
 			{
@@ -2071,13 +2116,13 @@ void do_look(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (!can_see_obj(ch, obj))
 			continue;
 
 		pdesc = get_extra_descr(arg3, obj->extra_descr);
-		if (pdesc != NULL)
+		if (pdesc != nullptr)
 		{
 			if (++count == number)
 			{
@@ -2090,7 +2135,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 		}
 
 		pdesc = get_extra_descr(arg3, obj->pIndexData->extra_descr);
-		if (pdesc != NULL)
+		if (pdesc != nullptr)
 		{
 			if (++count == number)
 			{
@@ -2208,7 +2253,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 	/* if the current room is outside, up should show weather.. */
 
 	auto pexit = ch->in_room->exit[door];
-	if (pexit == NULL)
+	if (pexit == nullptr)
 	{
 		if (door == 4 && is_outside(ch))
 		{
@@ -2232,7 +2277,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if (pexit->description != NULL && pexit->description[0] != '\0')
+	if (pexit->description != nullptr && pexit->description[0] != '\0')
 		send_to_char(pexit->description, ch);
 	else
 		send_to_char("Nothing special there.\n\r", ch);
@@ -2243,7 +2288,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 		&& pexit->u1.to_room)
 	{
 		auto crystal = get_eq_char(ch, WEAR_HOLD);
-		if (crystal != NULL && crystal->pIndexData->vnum == OBJ_VNUM_CRYSTAL)
+		if (crystal != nullptr && crystal->pIndexData->vnum == OBJ_VNUM_CRYSTAL)
 		{
 			send_to_char("Focusing through your crystal, you extend your sights....\n\r", ch);
 
@@ -2257,12 +2302,12 @@ void do_look(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (pexit->keyword != NULL && pexit->keyword[0] != '\0' && pexit->keyword[0] != ' ')
+	if (pexit->keyword != nullptr && pexit->keyword[0] != '\0' && pexit->keyword[0] != ' ')
 	{
 		if (IS_SET(pexit->exit_info, EX_CLOSED) && !IS_SET(pexit->exit_info, EX_NONOBVIOUS))
-			act("The $T is closed.", ch, NULL, pexit->keyword, TO_CHAR);
+			act("The $T is closed.", ch, nullptr, pexit->keyword, TO_CHAR);
 		else if (IS_SET(pexit->exit_info, EX_ISDOOR) && !IS_SET(pexit->exit_info, EX_NONOBVIOUS))
-			act("The $T is open.", ch, NULL, pexit->keyword, TO_CHAR);
+			act("The $T is open.", ch, nullptr, pexit->keyword, TO_CHAR);
 	}
 }
 
@@ -2277,8 +2322,6 @@ void do_read(CHAR_DATA *ch, char *argument)
  */
 void do_exits(CHAR_DATA *ch, char *argument)
 {
-	extern char *const dir_name[];
-
 	if (!check_blind(ch))
 		return;
 
@@ -2305,8 +2348,8 @@ void do_exits(CHAR_DATA *ch, char *argument)
 	{
 		auto pexit = ch->in_room->exit[door];
 
-		if (pexit != NULL
-			&& pexit->u1.to_room != NULL
+		if (pexit != nullptr
+			&& pexit->u1.to_room != nullptr
 			&& can_see_room(ch, pexit->u1.to_room)
 			&& (!IS_SET(pexit->exit_info, EX_NONOBVIOUS) || is_immortal(ch))
 			&& !is_affected_room(ch->in_room, gsn_smokescreen))
@@ -2666,7 +2709,7 @@ void do_score(CHAR_DATA *ch, char *argument)
 
 void do_affects(CHAR_DATA *ch, char *argument)
 {
-	if (ch->affected == NULL || !(ch->affected->aftype != AFT_INVIS || ch->affected->next != NULL))
+	if (ch->affected == nullptr || !(ch->affected->aftype != AFT_INVIS || ch->affected->next != nullptr))
 	{
 		send_to_char("You are not affected by anything.\n\r", ch);
 		return;
@@ -2674,9 +2717,9 @@ void do_affects(CHAR_DATA *ch, char *argument)
 
 	send_to_char("You are affected by:\n\r", ch);
 
-	AFFECT_DATA *paf_last = NULL;
+	AFFECT_DATA *paf_last = nullptr;
 	char buf[MAX_STRING_LENGTH];
-	for (auto paf = ch->affected; paf != NULL; paf = paf->next)
+	for (auto paf = ch->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->aftype == AFT_INVIS)
 			continue;
@@ -2686,8 +2729,8 @@ void do_affects(CHAR_DATA *ch, char *argument)
 			buf[i] = '\0';
 		}
 
-		if (paf_last != NULL
-			&& (paf->type == paf_last->type && ((paf->name == NULL && paf_last->name == NULL) || !str_cmp(paf->name, paf_last->name))))
+		if (paf_last != nullptr
+			&& (paf->type == paf_last->type && ((paf->name == nullptr && paf_last->name == nullptr) || !str_cmp(paf->name, paf_last->name))))
 		{
 			if (ch->level >= 20)
 				sprintf(buf, "                          ");
@@ -2751,7 +2794,6 @@ void do_affects(CHAR_DATA *ch, char *argument)
 
 void do_time(CHAR_DATA *ch, char *argument)
 {
-	extern char str_boot_time[];
 	char buf[MAX_STRING_LENGTH];
 	char *suf;
 
@@ -2844,7 +2886,7 @@ void do_oldhelp(CHAR_DATA *ch, char *argument)
 	}
 
 	auto output = new_buf();
-	for (auto pHelp = help_first; pHelp != NULL; pHelp = pHelp->next)
+	for (auto pHelp = help_first; pHelp != nullptr; pHelp = pHelp->next)
 	{
 		auto level = (pHelp->level < 0) ? -1 * pHelp->level - 1 : pHelp->level;
 
@@ -2877,7 +2919,7 @@ void do_oldhelp(CHAR_DATA *ch, char *argument)
 			found = true;
 
 			/* small hack :) */
-			if (ch->desc != NULL && ch->desc->connected != CON_PLAYING && ch->desc->connected != CON_GEN_GROUPS)
+			if (ch->desc != nullptr && ch->desc->connected != CON_PLAYING && ch->desc->connected != CON_GEN_GROUPS)
 				break;
 		}
 	}
@@ -2906,7 +2948,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 
 	auto output = new_buf();
 	auto found = false;
-	for (auto d = descriptor_list; d != NULL; d = d->next)
+	for (auto d = descriptor_list; d != nullptr; d = d->next)
 	{
 		char const *class_name;
 		char const *imm_lvl;
@@ -2914,7 +2956,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 		if (d->connected != CON_PLAYING || !can_see(ch, d->character))
 			continue;
 
-		auto wch = (d->original != NULL) ? d->original : d->character;
+		auto wch = (d->original != nullptr) ? d->original : d->character;
 
 		if (!can_see(ch, wch))
 			continue;
@@ -2988,7 +3030,7 @@ void do_whois(CHAR_DATA *ch, char *argument)
 					wch->level,
 					pc_race_table[wch->race].who_name_five,
 					class_name,
-					get_trust(ch) >= 52 && wch->pcdata->history_buffer != NULL ? " *" : rbuf,
+					get_trust(ch) >= 52 && wch->pcdata->history_buffer != nullptr ? " *" : rbuf,
 					can_pk(ch, wch) ? "(PK) " : "",
 					wch->incog_level >= LEVEL_HERO ? "(Incog) " : "",
 					wch->invis_level >= LEVEL_HERO ? "(Wizi) " : "",
@@ -3254,7 +3296,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 
 	auto nMatch = 0;
 	auto output = new_buf();
-	for (auto d = descriptor_list; d != NULL; d = d->next)
+	for (auto d = descriptor_list; d != nullptr; d = d->next)
 	{
 		/*
 		 * Check for match against restrictions.
@@ -3263,7 +3305,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 		if (d->connected != CON_PLAYING || !can_see(ch, d->character))
 			continue;
 
-		auto wch = d->original != NULL
+		auto wch = d->original != nullptr
 			? d->original
 			: d->character;
 
@@ -3298,7 +3340,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 			|| (fEthos == 2 && !is_eneutral(wch))
 			|| (fEthos == 1 && !is_chaotic(wch))
 			|| (fRole && !wch->pcdata->role)
-			|| (fNoDesc && wch->description != NULL && strlen(wch->description) > 144)
+			|| (fNoDesc && wch->description != nullptr && strlen(wch->description) > 144)
 			|| fOChar)
 		{
 			continue;
@@ -3373,7 +3415,7 @@ void do_who(CHAR_DATA *ch, char *argument)
 				wch->level,
 				pc_race_table[wch->race].who_name_five,
 				class_name,
-				trust >= 52 && wch->pcdata->history_buffer != NULL ? " *" : rbuf,
+				trust >= 52 && wch->pcdata->history_buffer != nullptr ? " *" : rbuf,
 				can_pk(ch, wch) ? "(PK) " : "",
 				wch->incog_level >= LEVEL_HERO ? "(Incog) " : "",
 				wch->invis_level >= LEVEL_HERO ? "(Wizi) " : "",
@@ -3459,7 +3501,7 @@ void do_count(CHAR_DATA *ch, char *argument)
 	auto not_seen = 0;
 	auto count = 0;
 
-	for (auto d = descriptor_list; d != NULL; d = d->next)
+	for (auto d = descriptor_list; d != nullptr; d = d->next)
 	{
 		if (d->connected == CON_PLAYING)
 		{
@@ -3513,7 +3555,7 @@ void do_equipment(CHAR_DATA *ch, char *argument)
 		}
 
 		auto obj = get_eq_char(ch, iWear);
-		if (iWear == WEAR_COSMETIC || obj == NULL)
+		if (iWear == WEAR_COSMETIC || obj == nullptr)
 			continue;
 
 		send_to_char(where_name[iWear], ch);
@@ -3545,7 +3587,7 @@ void do_compare(CHAR_DATA *ch, char *argument)
 	}
 
 	auto obj1 = get_obj_carry(ch, arg1, ch);
-	if (obj1 == NULL)
+	if (obj1 == nullptr)
 	{
 		send_to_char("You do not have that item.\n\r", ch);
 		return;
@@ -3554,7 +3596,7 @@ void do_compare(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *obj2;
 	if (arg2[0] == '\0')
 	{
-		for (obj2 = ch->carrying; obj2 != NULL; obj2 = obj2->next_content)
+		for (obj2 = ch->carrying; obj2 != nullptr; obj2 = obj2->next_content)
 		{
 			if (obj2->wear_loc != WEAR_NONE 
 				&& can_see_obj(ch, obj2) 
@@ -3567,7 +3609,7 @@ void do_compare(CHAR_DATA *ch, char *argument)
 			}
 		}
 
-		if (obj2 == NULL)
+		if (obj2 == nullptr)
 		{
 			send_to_char("You aren't wearing anything comparable.\n\r", ch);
 			return;
@@ -3576,14 +3618,14 @@ void do_compare(CHAR_DATA *ch, char *argument)
 	else
 	{
 		obj2 = get_obj_carry(ch, arg2, ch);
-		if (obj2 == NULL)
+		if (obj2 == nullptr)
 		{
 			send_to_char("You do not have that item.\n\r", ch);
 			return;
 		}
 	}
 
-	char *msg = NULL;
+	char *msg = nullptr;
 	auto value1 = 0;
 	auto value2 = 0;
 
@@ -3613,7 +3655,7 @@ void do_compare(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (msg == NULL)
+	if (msg == nullptr)
 	{
 		if (value1 == value2)
 			msg = "$p and $P look about the same.";
@@ -3628,7 +3670,7 @@ void do_compare(CHAR_DATA *ch, char *argument)
 
 void do_where(CHAR_DATA *ch, char *argument)
 {
-	if (ch == NULL)
+	if (ch == nullptr)
 		return;
 
 	if (is_affected_by(ch, AFF_BLIND) || (get_bv_stage(ch) > -1))
@@ -3662,9 +3704,9 @@ void do_where(CHAR_DATA *ch, char *argument)
 		{
 			auto victim = d->character;
 			if (d->connected == CON_PLAYING
-				&& victim != NULL
+				&& victim != nullptr
 				&& !is_npc(victim)
-				&& victim->in_room != NULL
+				&& victim->in_room != nullptr
 				&& !IS_SET(victim->in_room->room_flags, ROOM_NOWHERE) 
 				&& (!IS_SET(victim->in_room->room_flags, ROOM_IMP_ONLY) || ch->level == 60)
 				&& (is_room_owner(ch, victim->in_room) || !room_is_private(victim->in_room))
@@ -3697,9 +3739,9 @@ void do_where(CHAR_DATA *ch, char *argument)
 		{
 			auto victim = d->character;
 			if (d->connected == CON_PLAYING
-				&& victim != NULL
+				&& victim != nullptr
 				&& !is_npc(victim)
-				&& victim->in_room != NULL
+				&& victim->in_room != nullptr
 				&& !IS_SET(victim->in_room->room_flags, ROOM_NOWHERE)
 				&& (!IS_SET(victim->in_room->room_flags, ROOM_IMP_ONLY) || ch->level == 60)
 				&& (is_room_owner(ch, victim->in_room) || !room_is_private(victim->in_room))
@@ -3722,13 +3764,13 @@ void do_where(CHAR_DATA *ch, char *argument)
 		}
 
 		if (!found)
-			act("You didn't find anyone in PK.", ch, NULL, arg, TO_CHAR);
+			act("You didn't find anyone in PK.", ch, nullptr, arg, TO_CHAR);
 	}
 	else
 	{
-		for (auto victim = char_list; victim != NULL; victim = victim->next)
+		for (auto victim = char_list; victim != nullptr; victim = victim->next)
 		{
-			if (victim->in_room != NULL
+			if (victim->in_room != nullptr
 				&& (victim->in_room->area == ch->in_room->area
 					|| (is_adjacent_area(victim->in_room->area, ch->in_room->area) && is_immortal(ch)))
 				&& !is_affected_by(victim, AFF_SNEAK)
@@ -3751,7 +3793,7 @@ void do_where(CHAR_DATA *ch, char *argument)
 		}
 
 		if (!found)
-			act("You didn't find any $T.", ch, NULL, arg, TO_CHAR);
+			act("You didn't find any $T.", ch, nullptr, arg, TO_CHAR);
 	}
 }
 
@@ -3766,7 +3808,7 @@ void do_consider(CHAR_DATA *ch, char *argument)
 	}
 
 	auto victim = get_char_room(ch, arg);
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("They're not here.\n\r", ch);
 		return;
@@ -3869,7 +3911,7 @@ void do_title(CHAR_DATA *ch, char *argument)
 	}
 
 	auto victim = get_char_world(ch, arg1);
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("Player isn't on.\n\r", ch);
 		return;
@@ -3891,7 +3933,7 @@ void do_title(CHAR_DATA *ch, char *argument)
 		argument[45] = '\0';
 
 	auto fp = fopen(GOD_LOG_FILE, "a");
-	if (fp != NULL)
+	if (fp != nullptr)
 	{
 		auto strtime = ctime(&current_time);
 		strtime[strlen(strtime) - 1] = '\0';
@@ -3902,7 +3944,7 @@ void do_title(CHAR_DATA *ch, char *argument)
 
 	char buf[MAX_STRING_LENGTH];
 	sprintf(buf, "AUTO: Titled to (%s) by %s.\n\r", argument, ch->true_name);
-	add_history(NULL, victim, buf);
+	add_history(nullptr, victim, buf);
 
 	smash_tilde(argument);
 	set_title(victim, argument);
@@ -3974,7 +4016,7 @@ void do_extitle(CHAR_DATA *ch, char *argument)
 	}
 
 	auto victim = get_char_world(ch, arg1);
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("That player isn't on.\n\r", ch);
 		return;
@@ -3995,7 +4037,7 @@ void do_extitle(CHAR_DATA *ch, char *argument)
 	if (argument[0] == '\0')
 	{
 		free_pstring(ch->pcdata->extitle);
-		ch->pcdata->extitle = NULL;
+		ch->pcdata->extitle = nullptr;
 
 		send_to_char("Extitle cleared.\n\r", ch);
 		return;
@@ -4005,7 +4047,7 @@ void do_extitle(CHAR_DATA *ch, char *argument)
 		argument[45] = '\0';
 
 	auto fp = fopen(GOD_LOG_FILE, "a");
-	if (fp != NULL)
+	if (fp != nullptr)
 	{
 		auto strtime = ctime(&current_time);
 		strtime[strlen(strtime) - 1] = '\0';
@@ -4016,7 +4058,7 @@ void do_extitle(CHAR_DATA *ch, char *argument)
 
 	char buf[MAX_STRING_LENGTH];
 	sprintf(buf, "AUTO: Extitled to (%s) by %s.\n\r", argument, ch->true_name);
-	add_history(NULL, victim, buf);
+	add_history(nullptr, victim, buf);
 
 	smash_tilde(argument);
 	set_extitle(victim, argument);
@@ -4046,7 +4088,7 @@ void do_description(CHAR_DATA *ch, char *argument)
 		if (ch->description)
 			free_pstring(ch->description);
 
-		ch->description = NULL;
+		ch->description = nullptr;
 
 		send_to_char("Description cleared.\n\r", ch);
 	}
@@ -4072,7 +4114,7 @@ void do_description(CHAR_DATA *ch, char *argument)
 	}
 	else if (!str_cmp(arg1, "-"))
 	{
-		if (ch->description == NULL || ch->description[0] == '\0')
+		if (ch->description == nullptr || ch->description[0] == '\0')
 		{
 			send_to_char("No lines left to remove.\n\r", ch);
 			return;
@@ -4213,7 +4255,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 		for (auto sn = 0; sn < MAX_SKILL; sn++)
 		{
 			auto hide_skill= false;
-			if (skill_table[sn].name == NULL)
+			if (skill_table[sn].name == nullptr)
 				break;
 
 			for (auto p = 0; p < MAX_STYLE_SKILL; p++)
@@ -4279,13 +4321,13 @@ void do_practice(CHAR_DATA *ch, char *argument)
 		return;
 
 	auto mob = ch->in_room->people;
-	for (; mob != NULL; mob = mob->next_in_room)
+	for (; mob != nullptr; mob = mob->next_in_room)
 	{
 		if (is_npc(mob) && IS_SET(mob->act, ACT_PRACTICE))
 			break;
 	}
 
-	if (mob == NULL)
+	if (mob == nullptr)
 	{
 		send_to_char("You can't do that here.\n\r", ch);
 		return;
@@ -4372,7 +4414,7 @@ void do_practice(CHAR_DATA *ch, char *argument)
 	if (ch->pcdata->learned[sn] >= adept)
 	{
 		ch->pcdata->learned[sn] = adept;
-		act("You have mastered the fundamental aspects of $T.", ch, NULL, skill_table[sn].name, TO_CHAR);
+		act("You have mastered the fundamental aspects of $T.", ch, nullptr, skill_table[sn].name, TO_CHAR);
 	}
 }
 
@@ -4518,17 +4560,17 @@ char *get_descr_form(CHAR_DATA *ch, CHAR_DATA *looker, bool get_long)
 /* Replacement for the handler.c get_char_room to handle morph dragon */
 CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
 {
-	// TODO: the following will always be false since arg hasnt been given a value
 	char arg[MAX_INPUT_LENGTH];
+	auto count = 0;
+	auto number = number_argument(argument, arg);
+
 	if (!str_cmp(arg, "self"))
 		return ch;
 
-	auto count = 0;
-	auto number = number_argument(argument, arg);
-	for (auto rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room)
+	for (auto rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (argument[0] == '\0')
-			return NULL;
+			return nullptr;
 
 		if (!can_see(ch, rch))
 			continue;
@@ -4542,19 +4584,19 @@ CHAR_DATA *get_char_room(CHAR_DATA *ch, char *argument)
 			return rch;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 CHAR_DATA *get_char_from_room(CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argument)
 {
-	// TODO: the following will always be false since arg hasnt been given a value
 	char arg[MAX_INPUT_LENGTH];
+	auto count = 0;
+	auto number = number_argument(argument, arg);
+
 	if (!str_cmp(arg, "self"))
 		return ch;
 
-	auto count = 0;
-	auto number = number_argument(argument, arg);
-	for (auto rch = room->people; rch != NULL; rch = rch->next_in_room)
+	for (auto rch = room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (!can_see(ch, rch))
 			continue;
@@ -4568,19 +4610,19 @@ CHAR_DATA *get_char_from_room(CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argume
 			return rch;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 void do_balance(CHAR_DATA *ch, char *argument)
 {
 	auto banker = ch->in_room->people;
-	for (; banker != NULL; banker = banker->next_in_room)
+	for (; banker != nullptr; banker = banker->next_in_room)
 	{
 		if (is_npc(banker) && IS_SET(banker->act, ACT_BANKER))
 			break;
 	}
 
-	if (banker == NULL)
+	if (banker == nullptr)
 	{
 		send_to_char("You can't do that here.\n\r", ch);
 		return;
@@ -4601,13 +4643,13 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 	OBJ_INDEX_DATA *pIndex;
 
 	auto banker = ch->in_room->people;
-	for (; banker != NULL; banker = banker->next_in_room)
+	for (; banker != nullptr; banker = banker->next_in_room)
 	{
 		if (IS_SET(banker->act, ACT_BANKER))
 			break;
 	}
 
-	if (banker == NULL || is_npc(ch))
+	if (banker == nullptr || is_npc(ch))
 	{
 		send_to_char("You can't do that here.\n\r", ch);
 		return;
@@ -4658,7 +4700,7 @@ void do_withdraw(CHAR_DATA *ch, char *argument)
 	if (amount > 0 && amount <= MAX_STORED_ITEMS)
 	{
 		auto i = ch->pcdata->deposited_items[amount - 1];
-		if (i == 0 || (pIndex = get_obj_index(i)) == NULL)
+		if (i == 0 || (pIndex = get_obj_index(i)) == nullptr)
 		{
 			mob_tell(banker, ch, "I'm sorry, but I can't seem to find any record of that.");
 			return;
@@ -4722,13 +4764,13 @@ void do_deposit(CHAR_DATA *ch, char *argument)
 	char buf[MAX_STRING_LENGTH];
 
 	auto banker = ch->in_room->people;
-	for (; banker != NULL; banker = banker->next_in_room)
+	for (; banker != nullptr; banker = banker->next_in_room)
 	{
 		if (is_npc(banker) && IS_SET(banker->act, ACT_BANKER))
 			break;
 	}
 
-	if (banker == NULL || is_npc(ch))
+	if (banker == nullptr || is_npc(ch))
 	{
 		send_to_char("You can't do that here.\n\r", ch);
 		return;
@@ -4744,7 +4786,7 @@ void do_deposit(CHAR_DATA *ch, char *argument)
 	}
 
 	auto deposited = get_obj_carry(ch, arg, ch);
-	if (!is_number(arg) && deposited == NULL)
+	if (!is_number(arg) && deposited == nullptr)
 	{
 		send_to_char("You don't have that.\n\r", ch);
 		return;
@@ -4843,7 +4885,7 @@ void do_records(CHAR_DATA *ch, char *argument)
 	sprintf(buf, "Listing of current active players :\n\r");
 
 	auto count = 0;
-	for (auto victim = char_list; victim != NULL; victim = victim->next)
+	for (auto victim = char_list; victim != nullptr; victim = victim->next)
 	{
 		if (is_npc(victim))
 			continue;
@@ -4885,11 +4927,11 @@ void do_ratings(CHAR_DATA *ch, char *argument)
 	else
 	{
 		auto victim = get_char_world(ch, buf);
-		if (victim == NULL || is_npc(victim))
+		if (victim == nullptr || is_npc(victim))
 			return;
 
 		send_to_char("\n\r", ch);
-		act("$N's PK record:", ch, NULL, victim, TO_CHAR);
+		act("$N's PK record:", ch, nullptr, victim, TO_CHAR);
 
 		sprintf(buf, "Total PKills: %d\n\rGood Kills: %d\n\rNeutral Kills: %d\n\rEvil Kills: %d\n\r\n\rPKDeaths: %d\n\rMob Deaths: %d",
 			victim->pcdata->kills[PK_KILLS],
@@ -4921,7 +4963,7 @@ void do_lore(CHAR_DATA *ch, char *argument) /* Lore by Detlef */
 	}
 
 	auto obj = get_obj_carry(ch, object_name, ch);
-	if (obj == NULL)
+	if (obj == nullptr)
 	{
 		send_to_char("You are not carrying that.\n\r", ch);
 		return;
@@ -5098,7 +5140,7 @@ void debug_string(const char *str)
 {
 	auto fp = fopen(DEBUG_LOG_FILE, "a");
 
-	if (fp != NULL)
+	if (fp != nullptr)
 	{
 		fprintf(fp, "DEBUG :: %s\n", str);
 		fclose(fp);
@@ -5114,7 +5156,7 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 	}
 
 	auto victim = get_char_world(ch, argument);
-	if (victim == NULL)
+	if (victim == nullptr)
 	{
 		send_to_char("No such player found.\n\r", ch);
 		return;
@@ -5147,7 +5189,7 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 	send_to_char("In room: ", ch);
 
 	auto foundIR = 0;
-	for (auto vch = victim->in_room->people; vch != NULL; vch = vch->next_in_room)
+	for (auto vch = victim->in_room->people; vch != nullptr; vch = vch->next_in_room)
 	{
 		if (vch == victim)
 			continue;
@@ -5169,7 +5211,7 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 	if (foundIR == 0)
 		send_to_char("none.", ch);
 
-	if (victim->fighting != NULL)
+	if (victim->fighting != nullptr)
 	{
 		send_to_char("\n\rFighting: ", ch);
 		send_to_char((is_npc(victim->fighting) ? victim->fighting->short_descr : victim->fighting->name), ch);
@@ -5190,7 +5232,7 @@ void do_xlook(CHAR_DATA *ch, char *argument)
 	for (auto iWear = 0; iWear < MAX_WEAR; iWear++)
 	{
 		auto obj = get_eq_char(victim, iWear);
-		if (obj != NULL && can_see_obj(ch, obj))
+		if (obj != nullptr && can_see_obj(ch, obj))
 		{
 			send_to_char(where_name[iWear], ch);
 			send_to_char(format_obj_to_char(obj, ch, true), ch);
@@ -5264,7 +5306,7 @@ void do_trustchar(CHAR_DATA *ch, char *argument)
 		}
 
 		act("You no longer trust $N with questionable actions.", ch, 0, ch->pcdata->trusting, TO_CHAR);
-		ch->pcdata->trusting = NULL;
+		ch->pcdata->trusting = nullptr;
 		return;
 	}
 
@@ -5288,7 +5330,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 		if (!strcmp(arg1, "show") && is_immortal(ch) && get_trust(ch) > 52)
 		{
 			auto victim = get_char_world(ch, argument);
-			if (victim == NULL)
+			if (victim == nullptr)
 			{
 				send_to_char("They aren't here.\n\r", ch);
 				return;
@@ -5303,7 +5345,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 			send_to_char(victim->true_name, ch);
 			send_to_char("'s role:\n\r", ch);
 
-			if (victim->pcdata->role == NULL || victim->pcdata->role[0] == '\0')
+			if (victim->pcdata->role == nullptr || victim->pcdata->role[0] == '\0')
 			{
 				send_to_char("No role available.\n\r", ch);
 				return;
@@ -5318,7 +5360,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 
 		if (!strcmp(arg1, "-"))
 		{
-			if (ch->pcdata->temp_role == NULL || ch->pcdata->temp_role[0] == '\0')
+			if (ch->pcdata->temp_role == nullptr || ch->pcdata->temp_role[0] == '\0')
 			{
 				send_to_char("No lines left to remove.\n\r", ch);
 				return;
@@ -5383,7 +5425,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 
 		if (!strcmp(arg1, "add"))
 		{
-			if (ch->pcdata->temp_role == NULL || ch->pcdata->temp_role[0] == '\0')
+			if (ch->pcdata->temp_role == nullptr || ch->pcdata->temp_role[0] == '\0')
 			{
 				send_to_char("You have no role in progress to add.\n\r", ch);
 				return;
@@ -5392,7 +5434,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 			{
 				add_role(ch, ch->pcdata->temp_role);
 				free_pstring(ch->pcdata->temp_role);
-				ch->pcdata->temp_role = NULL;
+				ch->pcdata->temp_role = nullptr;
 				show_role(ch);
 			}
 
@@ -5416,7 +5458,7 @@ void do_role(CHAR_DATA *ch, char *argument)
 
 	show_role(ch);
 
-	if (ch->pcdata->temp_role != NULL)
+	if (ch->pcdata->temp_role != nullptr)
 		show_temp_role(ch);
 }
 
@@ -5449,7 +5491,7 @@ void show_temp_role(CHAR_DATA *ch)
 {
 	send_to_char("Role entry in progress:\n\r", ch);
 
-	if (ch->pcdata->temp_role == NULL || ch->pcdata->temp_role[0] == '\0')
+	if (ch->pcdata->temp_role == nullptr || ch->pcdata->temp_role[0] == '\0')
 	{
 		send_to_char("You have no role in progress.\n\r", ch);
 	}
@@ -5466,7 +5508,7 @@ void show_role(CHAR_DATA *ch)
 {
 	send_to_char("Your role:\n\r", ch);
 
-	if (ch->pcdata->role == NULL || ch->pcdata->role[0] == '\0')
+	if (ch->pcdata->role == nullptr || ch->pcdata->role[0] == '\0')
 	{
 		send_to_char("(Empty)\n\r", ch);
 	}

@@ -1,5 +1,6 @@
 #include "catch.hpp"
 #include "../code/magic.h"
+#include "../code/const.h"
 
 char* substr(char* arr, int begin, int len = 0)
 {	
@@ -41,7 +42,7 @@ SCENARIO("testing skill lookup","[skill_lookup]")
 		WHEN("skill_lookup is called")
 		{
 			auto expected = -1;
-			auto actual = skill_lookup(NULL);
+			auto actual = skill_lookup(nullptr);
 			THEN("it should return negative 1")
 			{
 				REQUIRE(expected == -1);

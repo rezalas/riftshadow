@@ -1,151 +1,83 @@
 project(riftshadow_src)
 
 set(RIFT_SOURCE config.cpp
-	config.h
 	strings.c
 	file.c
 	sql.c
 	bitvector.c
 	act_comm.c
-	act_comm.h
 	act_ente.c
-	act_ente.h
 	act_info.c
-	act_info.h
 	act_move.c
-	act_move.h
 	act_obj.c
-	act_obj.h
 	act_wiz.c
-	act_wiz.h
 	alias.c
-	alias.h
 	ban.c
-	ban.h
 	comm.c
-	comm.h
 	const.c
-	const.h
 	db.c
-	db.h
 	db2.c
-	db2.h
 	effects.c
-	effects.h
 	fight.c
-	fight.h
 	flags.c
-	flags.h
 	handler.c
-	handler.h
-	healer.c
-	healer.h
+	characterClasses/healer.c
 	interp.c
-	interp.h
 	lookup.c
-	lookup.h
 	note.c
-	note.h
 	magic.c
-	magic.h
 	recycle.c
-	recycle.h
 	save.c
-	save.h
 	scan.c
-	scan.h
 	skills.c
-	skills.h
 	tables.c
-	tables.h
 	update.c
-	update.h
 	queue.c
-	queue.h
 	tattoo.c
-	tattoo.h
 	dioextra.c
-	dioextra.h
 	cabal.c
-	cabal.h
 	material.c
-	material.h
 	moremagic.c
-	moremagic.h
 	devextra.c
-	devextra.h
 	iprog.c
-	iprog.h
 	mprog.c
-	mprog.h
 	rprog.c
-	rprog.h
 	aprog.c
-	aprog.h
 	titles.c
 	chardef.c
-	chardef.h
-	necro.c
-	necro.h
+	characterClasses/necro.c
 	misc.c
-	misc.h
-	sorcerer.c
-	sorcerer.h
+	characterClasses/sorcerer.c
 	help.c
-	help.h
 	quest.c
-	quest.h
-	warrior.c
-	warrior.h
-	chrono.c
-	chrono.h
-	ap.c
-	ap.h
-	thief.c
-	thief.h
+	characterClasses/warrior.c
+	characterClasses/chrono.c
+	characterClasses/ap.c
+	characterClasses/thief.c
 	race.c
-	race.h
-	zealot.c
-	zealot.h
-	paladin.c
-	paladin.h
-	druid.c
-	druid.h
+	characterClasses/zealot.c
+	characterClasses/paladin.c
+	characterClasses/druid.c
 	heal.c
-	heal.h
 	olc.c
-	olc.h
 	olc_act.c
-	olc_act.h
 	olc_save.c
-	olc_save.h
 	bit.c
-	bit.h
 	mem.c
-	mem.h
 	string.c
-	string.h
 	mspec.c
-	mspec.h
 	ispec.c
 	newmem.c
-	newmem.h
 	mud.c
-	mud.h
 	bootup.c
-	bootup.h
-	class.c
-	class.h
+	characterClasses/class.c
 	prof.c
-	prof.h
 	vote.c
-	vote.h
 	utility.c
-	utility.h
 )
 
 set_source_files_properties(${RIFT_SOURCE} main.c PROPERTIES LANGUAGE CXX)
-add_library(RiftCore STATIC ${RIFT_SOURCE})
+add_library(RiftCore SHARED ${RIFT_SOURCE})
 add_executable(rift main.c)
 
 target_link_libraries(rift PRIVATE RiftCore ${CRYPTOLIB} ${MARIADBLIB} m)

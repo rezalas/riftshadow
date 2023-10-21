@@ -1,17 +1,23 @@
 #include "config.h"
-#include "include/rapidjson/document.h"
 #include <iostream>
+#include "include/rapidjson/document.h"
+#include "include/rapidjson/writer.h"
 #include "include/rapidjson/rapidjson.h"
 #include "include/rapidjson/filereadstream.h"
+#include "include/rapidjson/filewritestream.h"
 
 void Config::Load()
 {
     FILE* fp = fopen(_FilePath,"r");
+    if (fp == NULL)
+        return;
     char buffer[65536];
     rapidjson::FileReadStream inputStream(fp,buffer, sizeof(buffer));
     Settings.ParseStream(inputStream);
     fclose(fp);
+    loaded = true;
 }
+
 std::string Config::GetValue(const char* key)
 {
     if(Settings.HasMember(key))
@@ -27,8 +33,10 @@ std::string Config::GetValue(const char* key)
         
     }
 
-    return NULL;   
+    return nullptr;
 }
+
+
 DbConnection Config::GetDbConnection(const char* connection)
 {
     auto conn = Settings["DbConnections"][connection].GetObject();
@@ -47,5 +55,11 @@ DbConnection Config::GetDbConnection(const char* connection)
 Config::Config(const char* file)
 {
     _FilePath = file;
+    loaded = false;
     Load();
+}
+
+bool Config::isLoaded()
+{
+    return loaded;
 }

@@ -31,7 +31,20 @@
  *       found in the file /Tartarus/doc/tartarus.doc                       *
  ****************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "act_ente.h"
+#include "handler.h"
+#include "magic.h"
+#include "comm.h"
+#include "db.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "utility.h"
+#include "magic.h"
 
 /* random room generation procedure */
 ROOM_INDEX_DATA *get_random_room(CHAR_DATA *ch)
@@ -41,7 +54,7 @@ ROOM_INDEX_DATA *get_random_room(CHAR_DATA *ch)
 		return get_room_index(number_range(0, 65535));
 	};
 	
-	for (auto room = getRoomIndex(); room != NULL; room = getRoomIndex())
+	for (auto room = getRoomIndex(); room != nullptr; room = getRoomIndex())
 	{
 		if (can_see_room(ch, room)
 			&& !room_is_private(room)
@@ -60,13 +73,13 @@ ROOM_INDEX_DATA *get_random_room(CHAR_DATA *ch)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /* RT Enter portals */
 void do_enter(CHAR_DATA *ch, char *argument)
 {
-	if (ch->fighting != NULL)
+	if (ch->fighting != nullptr)
 		return;
 
 	/* nifty portal stuff */
@@ -79,7 +92,7 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	auto old_room = ch->in_room;
 
 	auto portal = get_obj_list(ch, argument, ch->in_room->contents);
-	if (portal == NULL)
+	if (portal == nullptr)
 	{
 		send_to_char("You don't see that here.\n\r", ch);
 		return;
@@ -111,12 +124,12 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	}
 
 	auto location = get_room_index(portal->value[3]);
-	if (location == NULL 
+	if (location == nullptr 
 		|| location == old_room 
 		|| !can_see_room(ch, location) 
 		|| (room_is_private(location) && !is_trusted(ch, IMPLEMENTOR)))
 	{
-		act("$p doesn't seem to go anywhere.", ch, portal, NULL, TO_CHAR);
+		act("$p doesn't seem to go anywhere.", ch, portal, nullptr, TO_CHAR);
 		return;
 	}
 
@@ -128,12 +141,12 @@ void do_enter(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("$n steps into $p.", ch, portal, NULL, TO_ROOM);
+	act("$n steps into $p.", ch, portal, nullptr, TO_ROOM);
 
 	if (IS_SET_OLD(portal->value[2], GATE_NORMAL_EXIT))
-		act("The world bends around you as you enter $p.", ch, portal, NULL, TO_CHAR);
+		act("The world bends around you as you enter $p.", ch, portal, nullptr, TO_CHAR);
 	else
-		act("You walk through $p and find yourself somewhere else...", ch, portal, NULL, TO_CHAR);
+		act("You walk through $p and find yourself somewhere else...", ch, portal, nullptr, TO_CHAR);
 
 	char_from_room(ch);
 	char_to_room(ch, location);
@@ -145,9 +158,9 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	}
 
 	if (IS_SET_OLD(portal->value[2], GATE_NORMAL_EXIT))
-		act("$n has arrived.", ch, portal, NULL, TO_ROOM);
+		act("$n has arrived.", ch, portal, nullptr, TO_ROOM);
 	else
-		act("$n has arrived through $p.", ch, portal, NULL, TO_ROOM);
+		act("$n has arrived through $p.", ch, portal, nullptr, TO_ROOM);
 
 	do_look(ch, "auto");
 
@@ -161,10 +174,10 @@ void do_enter(CHAR_DATA *ch, char *argument)
 
 	auto to_room = location;
 
-	for (auto fch = to_room->people; fch != NULL; fch = fch->next_in_room)
+	for (auto fch = to_room->people; fch != nullptr; fch = fch->next_in_room)
 	{
 		/* greet trigger for items carried by people in room */
-		for (auto obj = fch->carrying; obj != NULL; obj = obj->next_content)
+		for (auto obj = fch->carrying; obj != nullptr; obj = obj->next_content)
 		{
 			if (IS_SET(obj->progtypes, IPROG_GREET))
 				obj->pIndexData->iprogs->greet_prog(obj, ch);
@@ -175,7 +188,7 @@ void do_enter(CHAR_DATA *ch, char *argument)
 			fch->pIndexData->mprogs->greet_prog(fch, ch);
 	}
 
-	for (auto obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (auto obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (IS_SET(obj->progtypes, IPROG_ENTRY))
 			obj->pIndexData->iprogs->entry_prog(obj);
@@ -184,10 +197,10 @@ void do_enter(CHAR_DATA *ch, char *argument)
 	if (IS_SET(to_room->progtypes, RPROG_ENTRY))
 		to_room->rprogs->entry_prog(to_room, ch);
 
-	for (auto fch = old_room->people; fch != NULL; fch = fch->next_in_room)
+	for (auto fch = old_room->people; fch != nullptr; fch = fch->next_in_room)
 	{
 		/* no following through dead portals */
-		if (portal == NULL || portal->value[0] == 0)
+		if (portal == nullptr || portal->value[0] == 0)
 			continue;
 
 		if (fch->master == ch && is_affected_by(fch, AFF_CHARM) && fch->position < POS_STANDING)
@@ -197,28 +210,28 @@ void do_enter(CHAR_DATA *ch, char *argument)
 		{
 			if (IS_SET(ch->in_room->room_flags, ROOM_LAW) && (is_npc(fch) && IS_SET(fch->act, ACT_AGGRESSIVE)))
 			{
-				act("You can't bring $N into the city.", ch, NULL, fch, TO_CHAR);
-				act("You aren't allowed in the city.", fch, NULL, NULL, TO_CHAR);
+				act("You can't bring $N into the city.", ch, nullptr, fch, TO_CHAR);
+				act("You aren't allowed in the city.", fch, nullptr, nullptr, TO_CHAR);
 				continue;
 			}
 
-			act("You follow $N.", fch, NULL, ch, TO_CHAR);
+			act("You follow $N.", fch, nullptr, ch, TO_CHAR);
 			do_enter(fch, argument);
 		}
 	}
 
-	if (portal != NULL && portal->value[0] == 0)
+	if (portal != nullptr && portal->value[0] == 0)
 	{
-		act("$p shimmers and rapidly closes behind you.", ch, portal, NULL, TO_CHAR);
+		act("$p shimmers and rapidly closes behind you.", ch, portal, nullptr, TO_CHAR);
 
 		if (ch->in_room == old_room)
 		{
-			act("$p flares brilliantly and fades away.", ch, portal, NULL, TO_ROOM);
+			act("$p flares brilliantly and fades away.", ch, portal, nullptr, TO_ROOM);
 		}
-		else if (old_room->people != NULL)
+		else if (old_room->people != nullptr)
 		{
-			act("$p flares brilliantly and fades away.", old_room->people, portal, NULL, TO_CHAR);
-			act("$p flares brilliantly and fades away.", old_room->people, portal, NULL, TO_ROOM);
+			act("$p flares brilliantly and fades away.", old_room->people, portal, nullptr, TO_CHAR);
+			act("$p flares brilliantly and fades away.", old_room->people, portal, nullptr, TO_ROOM);
 		}
 
 		extract_obj(portal);

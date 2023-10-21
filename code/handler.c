@@ -31,7 +31,35 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "handler.h"
+#include "magic.h"
+#include "recycle.h"
+#include "tables.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_obj.h"
+#include "act_wiz.h"
+#include "characterClasses/warrior.h"
+#include "fight.h"
+#include "skill.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "misc.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "utility.h"
+#include "characterClasses/sorcerer.h"
+#include "skills.h"
 
 /* friend stuff -- for NPC's mostly */
 bool is_friend(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -84,10 +112,10 @@ int count_users(OBJ_DATA *obj)
 	CHAR_DATA *fch;
 	int count = 0;
 
-	if (obj->in_room == NULL)
+	if (obj->in_room == nullptr)
 		return 0;
 
-	for (fch = obj->in_room->people; fch != NULL; fch = fch->next_in_room)
+	for (fch = obj->in_room->people; fch != nullptr; fch = fch->next_in_room)
 	{
 		if (fch->on == obj)
 			count++;
@@ -102,7 +130,7 @@ int count_users(OBJ_DATA *obj)
 int race_lookup(const char *name)
 {
 	auto it = std::find_if(race_table.begin(), race_table.end(), [name] (auto race) {
-		return race.name != NULL && !str_prefix(name, race.name);
+		return race.name != nullptr && !str_prefix(name, race.name);
 	});
 
 	return it != race_table.end()
@@ -115,7 +143,7 @@ int act_lookup(const char *name)
 	int act;
 
 	// TODO: change act_flags from array to vector. requires detailed refactoring.
-	for (act = 0; act_flags[act].name != NULL; act++)
+	for (act = 0; act_flags[act].name != nullptr; act++)
 	{
 		if (LOWER(name[0]) == LOWER(act_flags[act].name[0]) && !str_prefix(name, act_flags[act].name))
 			return act;
@@ -130,7 +158,7 @@ int act_lookup(const char *name)
 int liq_lookup(const char *name)
 {
 	auto it = std::find_if(liq_table.begin(), liq_table.end(), [name] (auto liquid) {
-		return liquid.liq_name != NULL && !str_prefix(name, liquid.liq_name);
+		return liquid.liq_name != nullptr && !str_prefix(name, liquid.liq_name);
 	});
 
 	return it != liq_table.end()
@@ -144,7 +172,7 @@ int liq_lookup(const char *name)
 int weapon_lookup(const char *name)
 {
 	auto it = std::find_if(weapon_table.begin(), weapon_table.end(), [name] (auto weapon) {
-		return weapon.name != NULL && !str_prefix(name, weapon.name);
+		return weapon.name != nullptr && !str_prefix(name, weapon.name);
 	});
 
 	return it != weapon_table.end()
@@ -170,7 +198,7 @@ int weapon_type_lookup(const char *name)
 char *weapon_name_lookup(int type, char* default_name)
 {
 	auto it = std::find_if(weapon_table.begin(), weapon_table.end(), [type] (auto weapon) {
-		return weapon.name != NULL && type == weapon.type;
+		return weapon.name != nullptr && type == weapon.type;
 	});
 
 	if (it == weapon_table.end())
@@ -186,7 +214,7 @@ char *weapon_name_lookup(int type, char* default_name)
 int item_lookup(const char *name)
 {
 	auto it = std::find_if(item_table.begin(), item_table.end(), [name] (auto item) {
-		return item.name != NULL && !str_prefix(name, item.name);
+		return item.name != nullptr && !str_prefix(name, item.name);
 	});
 
 	if (it == item_table.end())
@@ -202,7 +230,7 @@ int item_lookup(const char *name)
 char *item_name_lookup(int item_type)
 {
 	auto it = std::find_if(item_table.begin(), item_table.end(), [item_type] (auto item) {
-		return item.name != NULL && item_type == item.type;
+		return item.name != nullptr && item_type == item.type;
 	});
 
 	if (it == item_table.end())
@@ -218,7 +246,7 @@ char *item_name_lookup(int item_type)
 int attack_lookup(const char *name)
 {
 	auto it = std::find_if(attack_table.begin(), attack_table.end(), [name] (auto attack) {
-		return attack.name != NULL && !str_prefix(name, attack.name);
+		return attack.name != nullptr && !str_prefix(name, attack.name);
 	});
 
 	return it != attack_table.end()
@@ -232,7 +260,7 @@ int attack_lookup(const char *name)
 long wiznet_lookup(const char *name)
 {
 	auto it = std::find_if(wiznet_table.begin(), wiznet_table.end(), [name] (auto wiznet) {
-		return wiznet.name != NULL && !str_prefix(name, wiznet.name);
+		return wiznet.name != nullptr && !str_prefix(name, wiznet.name);
 	});
 
 	return it != wiznet_table.end()
@@ -243,7 +271,7 @@ long wiznet_lookup(const char *name)
 char *color_value_string(int color, bool bold, bool flash)
 {
 	static char buf[64];
-	static sh_int COLOR_INDEX[8] = {30, 34, 32, 31, 36, 35, 33, 37};
+	static short COLOR_INDEX[8] = {30, 34, 32, 31, 36, 35, 33, 37};
 
 	if (flash && bold)
 		sprintf(buf, "\x01B[1;%dm%s", COLOR_INDEX[color % 8], ANSI_BLINK);
@@ -260,9 +288,9 @@ char *color_value_string(int color, bool bold, bool flash)
 int strlen_color(char *argument)
 {
 	char *str;
-	sh_int length;
+	short length;
 
-	if (argument == NULL || argument[0] == '\0')
+	if (argument == nullptr || argument[0] == '\0')
 		return 0;
 
 	length = 0;
@@ -444,7 +472,7 @@ bool is_same_cabal(CHAR_DATA *ch, CHAR_DATA *victim)
 /* checks mob format */
 bool is_old_mob(CHAR_DATA *ch)
 {
-	if (ch->pIndexData == NULL)
+	if (ch->pIndexData == nullptr)
 		return false;
 	else if (ch->pIndexData->new_format)
 		return false;
@@ -635,7 +663,7 @@ int get_weapon_sn_new(CHAR_DATA *ch, int type)
 	if (type == gsn_dual_wield)
 		wield = get_eq_char(ch, WEAR_DUAL_WIELD);
 
-	if (wield == NULL || wield->item_type != ITEM_WEAPON)
+	if (wield == nullptr || wield->item_type != ITEM_WEAPON)
 	{
 		sn = gsn_hand_to_hand;
 	}
@@ -726,15 +754,15 @@ void reset_char(CHAR_DATA *ch)
 		{
 			obj = get_eq_char(ch, loc);
 
-			if (obj == NULL)
+			if (obj == nullptr)
 				continue;
 
-			for (af = obj->charaffs; af != NULL; af = af->next)
+			for (af = obj->charaffs; af != nullptr; af = af->next)
 			{
 				affect_strip(ch, af->type);
 			}
 
-			for (app = obj->apply; app != NULL; app = app->next)
+			for (app = obj->apply; app != nullptr; app = app->next)
 			{
 				modify_location(ch, app->location, app->modifier, false);
 			}
@@ -783,7 +811,7 @@ void reset_char(CHAR_DATA *ch)
 	{
 		obj = get_eq_char(ch, loc);
 
-		if (obj == NULL)
+		if (obj == nullptr)
 			continue;
 
 		for (i = 0; i < 4; i++)
@@ -791,19 +819,19 @@ void reset_char(CHAR_DATA *ch)
 			ch->armor[i] += apply_ac(obj, loc, i);
 		}
 
-		for (af = obj->charaffs; af != NULL; af = af->next)
+		for (af = obj->charaffs; af != nullptr; af = af->next)
 		{
 			affect_modify(ch, af, true);
 		}
 
-		for (app = obj->apply; app != NULL; app = app->next)
+		for (app = obj->apply; app != nullptr; app = app->next)
 		{
 			modify_location(ch, app->location, app->modifier, true);
 		}
 	}
 
 	/* now add back spell effects */
-	for (af = ch->affected; af != NULL; af = af->next)
+	for (af = ch->affected; af != nullptr; af = af->next)
 	{
 		modify_location(ch, af->location, af->modifier, true);
 	}
@@ -818,7 +846,7 @@ void reset_char(CHAR_DATA *ch)
  */
 int get_trust(CHAR_DATA *ch)
 {
-	if (ch->desc != NULL && ch->desc->original != NULL)
+	if (ch->desc != nullptr && ch->desc->original != nullptr)
 		ch = ch->desc->original;
 
 	if (ch->trust)
@@ -989,7 +1017,7 @@ bool can_pk(CHAR_DATA *ch, CHAR_DATA *victim)
 	if (ch == victim)
 		return true;
 
-	if (ch == NULL || victim == NULL)
+	if (ch == nullptr || victim == nullptr)
 		return false;
 
 	int levelDif = victim->level - ch->level;
@@ -1050,12 +1078,12 @@ bool is_name(const char *str, const char *namelist)
 	char name[MAX_INPUT_LENGTH], part[MAX_INPUT_LENGTH];
 	char *list, *string;
 
-	/* fix crash on NULL namelist */
-	if (namelist == NULL || namelist[0] == '\0')
+	/* fix crash on nullptr namelist */
+	if (namelist == nullptr || namelist[0] == '\0')
 		return false;
 
 	/* fixed to prevent is_name on "" returning true */
-	if (str == NULL || str[0] == '\0')
+	if (str == nullptr || str[0] == '\0')
 		return false;
 
 	string = (char *)str;
@@ -1089,7 +1117,7 @@ bool is_exact_name(char *str, char *namelist)
 {
 	char name[MAX_INPUT_LENGTH];
 
-	if (namelist == NULL)
+	if (namelist == nullptr)
 		return false;
 
 	for (;;)
@@ -1106,7 +1134,7 @@ bool is_exact_name(char *str, char *namelist)
 void init_affect(AFFECT_DATA *paf)
 {
 	paf->where = TO_AFFECTS;
-	paf->name = NULL;
+	paf->name = nullptr;
 	paf->type = 0;
 	paf->aftype = AFT_SPELL;
 	paf->level = 0;
@@ -1117,11 +1145,11 @@ void init_affect(AFFECT_DATA *paf)
 	paf->mod_name = MOD_NONE;
 
 	zero_vector(paf->bitvector);
-	paf->tick_fun = NULL;
-	paf->pulse_fun = NULL;
-	paf->end_fun = NULL;
-	paf->owner = NULL;
-	paf->beat_fun = NULL;
+	paf->tick_fun = nullptr;
+	paf->pulse_fun = nullptr;
+	paf->end_fun = nullptr;
+	paf->owner = nullptr;
+	paf->beat_fun = nullptr;
 }
 
 /*
@@ -1179,7 +1207,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 	 * Guard against recursion (for weapons with affects).
 	 */
 	if (!is_npc(ch)
-		&& (wield = get_eq_char(ch, WEAR_WIELD)) != NULL
+		&& (wield = get_eq_char(ch, WEAR_WIELD)) != nullptr
 		&& get_obj_weight(wield) > str_app[get_curr_stat(ch, STAT_STR)].wield
 		&& !is_obj_stat(wield, ITEM_NODISARM)
 		&& !is_immortal(ch))
@@ -1189,8 +1217,8 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		if (depth == 0)
 		{
 			depth++;
-			act("You can no longer find the strength to wield $p.", ch, wield, NULL, TO_CHAR);
-			act("$n can no longer find the strength to wield $p.", ch, wield, NULL, TO_ROOM);
+			act("You can no longer find the strength to wield $p.", ch, wield, nullptr, TO_CHAR);
+			act("$n can no longer find the strength to wield $p.", ch, wield, nullptr, TO_ROOM);
 			disarmed = true;
 			obj_from_char(wield);
 			obj_to_char(wield, ch);
@@ -1199,7 +1227,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 	}
 
 	if (!is_npc(ch)
-		&& (wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != NULL
+		&& (wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != nullptr
 		&& get_obj_weight(wield) > str_app[get_curr_stat(ch, STAT_STR)].wield
 		&& !is_obj_stat(wield, ITEM_NODISARM))
 	{
@@ -1208,8 +1236,8 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		if (depth == 0)
 		{
 			depth++;
-			act("You can no longer find the strength to wield $p.", ch, wield, NULL, TO_CHAR);
-			act("$n can no longer find the strength to wield $p.", ch, wield, NULL, TO_ROOM);
+			act("You can no longer find the strength to wield $p.", ch, wield, nullptr, TO_CHAR);
+			act("$n can no longer find the strength to wield $p.", ch, wield, nullptr, TO_ROOM);
 			disarmed = true;
 			obj_from_char(wield);
 			obj_to_char(wield, ch);
@@ -1220,15 +1248,15 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 	if (!is_npc(ch))
 	{
 		/* Arms */
-		if ((wield = get_eq_char(ch, WEAR_WIELD)) != NULL && ch->arms < 1)
+		if ((wield = get_eq_char(ch, WEAR_WIELD)) != nullptr && ch->arms < 1)
 		{
 			static int depth;
 
 			if (depth == 0)
 			{
 				depth++;
-				act("You are no longer able to grasp $p.", ch, wield, NULL, TO_CHAR);
-				act("$n is no longer able to grasp $p.", ch, wield, NULL, TO_ROOM);
+				act("You are no longer able to grasp $p.", ch, wield, nullptr, TO_CHAR);
+				act("$n is no longer able to grasp $p.", ch, wield, nullptr, TO_ROOM);
 				disarmed = true;
 				obj_from_char(wield);
 				obj_to_char(wield, ch);
@@ -1236,15 +1264,15 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 			}
 		}
 
-		if ((wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != NULL && ch->arms < 2)
+		if ((wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != nullptr && ch->arms < 2)
 		{
 			static int depth;
 
 			if (depth == 0)
 			{
 				depth++;
-				act("You are no longer able to grasp $p.", ch, wield, NULL, TO_CHAR);
-				act("$n is no longer able to grasp $p.", ch, wield, NULL, TO_ROOM);
+				act("You are no longer able to grasp $p.", ch, wield, nullptr, TO_CHAR);
+				act("$n is no longer able to grasp $p.", ch, wield, nullptr, TO_ROOM);
 				disarmed = true;
 				obj_from_char(wield);
 				obj_to_char(wield, ch);
@@ -1252,7 +1280,7 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 			}
 		}
 
-		if ((wield = get_eq_char(ch, WEAR_WIELD)) != NULL
+		if ((wield = get_eq_char(ch, WEAR_WIELD)) != nullptr
 			&& ch->arms < 2
 			&& ch->size < SIZE_LARGE
 			&& (is_weapon_stat(wield, WEAPON_TWO_HANDS)
@@ -1265,8 +1293,8 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 			if (depth == 0)
 			{
 				depth++;
-				act("You are no longer able to grasp $p.", ch, wield, NULL, TO_CHAR);
-				act("$n is no longer able to grasp $p.", ch, wield, NULL, TO_ROOM);
+				act("You are no longer able to grasp $p.", ch, wield, nullptr, TO_CHAR);
+				act("$n is no longer able to grasp $p.", ch, wield, nullptr, TO_ROOM);
 				disarmed = true;
 				obj_from_char(wield);
 				obj_to_char(wield, ch);
@@ -1275,9 +1303,9 @@ void affect_modify(CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd)
 		}
 	}
 
-	if ((wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != NULL)
+	if ((wield = get_eq_char(ch, WEAR_DUAL_WIELD)) != nullptr)
 	{
-		if (disarmed && get_eq_char(ch, WEAR_WIELD) == NULL)
+		if (disarmed && get_eq_char(ch, WEAR_WIELD) == nullptr)
 		{
 			unequip_char(ch, wield, false);
 			act("You swap $p into your primary hand.", ch, wield, 0, TO_CHAR);
@@ -1292,52 +1320,52 @@ AFFECT_DATA *affect_find(AFFECT_DATA *paf, int sn)
 {
 	AFFECT_DATA *paf_find;
 
-	for (paf_find = paf; paf_find != NULL; paf_find = paf_find->next)
+	for (paf_find = paf; paf_find != nullptr; paf_find = paf_find->next)
 	{
 		if (paf_find->type == sn)
 			return paf_find;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 OBJ_AFFECT_DATA *affect_find_obj(OBJ_AFFECT_DATA *paf, int sn)
 {
 	OBJ_AFFECT_DATA *paf_find;
 
-	for (paf_find = paf; paf_find != NULL; paf_find = paf_find->next)
+	for (paf_find = paf; paf_find != nullptr; paf_find = paf_find->next)
 	{
 		if (paf_find->type == sn)
 			return paf_find;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 ROOM_AFFECT_DATA *affect_find_room(ROOM_AFFECT_DATA *paf, int sn)
 {
 	ROOM_AFFECT_DATA *paf_find;
 
-	for (paf_find = paf; paf_find != NULL; paf_find = paf_find->next)
+	for (paf_find = paf; paf_find != nullptr; paf_find = paf_find->next)
 	{
 		if (paf_find->type == sn)
 			return paf_find;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 AREA_AFFECT_DATA *affect_find_area(AREA_AFFECT_DATA *paf, int sn)
 {
 	AREA_AFFECT_DATA *paf_find;
 
-	for (paf_find = paf; paf_find != NULL; paf_find = paf_find->next)
+	for (paf_find = paf; paf_find != nullptr; paf_find = paf_find->next)
 	{
 		if (paf_find->type == sn)
 			return paf_find;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /* fix object affects when removing one */
@@ -1348,7 +1376,7 @@ void affect_check(CHAR_DATA *ch, int where, long vector[])
 	if (where == TO_OBJECT || where == TO_WEAPON || vector == 0)
 		return;
 
-	for (paf = ch->affected; paf != NULL; paf = paf->next)
+	for (paf = ch->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->where == where && vector_equal(paf->bitvector, vector))
 		{
@@ -1424,13 +1452,13 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 	int where;
 	long vector[MAX_BITVECTOR];
 
-	if (ch->affected == NULL)
+	if (ch->affected == nullptr)
 	{
 		bug("Affect_remove: no affect on %s.", ch->name);
 		return;
 	}
 
-	if (paf->end_fun != NULL)
+	if (paf->end_fun != nullptr)
 		(*paf->end_fun)(ch, paf);
 
 	affect_modify(ch, paf, false);
@@ -1445,7 +1473,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 	{
 		AFFECT_DATA *prev;
 
-		for (prev = ch->affected; prev != NULL; prev = prev->next)
+		for (prev = ch->affected; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == paf)
 			{
@@ -1454,7 +1482,7 @@ void affect_remove(CHAR_DATA *ch, AFFECT_DATA *paf)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("Affect_remove: cannot find paf.", 0);
 			return;
@@ -1473,7 +1501,7 @@ void affect_strip(CHAR_DATA *ch, int sn)
 	AFFECT_DATA *paf;
 	AFFECT_DATA *paf_next;
 
-	for (paf = ch->affected; paf != NULL; paf = paf_next)
+	for (paf = ch->affected; paf != nullptr; paf = paf_next)
 	{
 		paf_next = paf->next;
 
@@ -1494,7 +1522,7 @@ bool is_affected(CHAR_DATA *ch, int sn)
 	if (!ch)
 		return false;
 
-	for (paf = ch->affected; paf != NULL; paf = paf->next)
+	for (paf = ch->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type == sn)
 			return true;
@@ -1507,7 +1535,7 @@ bool is_affected_obj( OBJ_DATA *obj, int sn )
 {
 	AFFECT_DATA *paf;
 
-	for ( paf = obj->affected; paf != NULL; paf = paf->next )
+	for ( paf = obj->affected; paf != nullptr; paf = paf->next )
 	{
 		if ( paf->type == sn )
 			return true;
@@ -1523,8 +1551,8 @@ bool is_affected_obj( OBJ_DATA *obj, int sn )
 
 void affect_join(CHAR_DATA *ch, AFFECT_DATA *paf)
 {
-	paf->owner = NULL;
-	paf->end_fun = NULL;
+	paf->owner = nullptr;
+	paf->end_fun = nullptr;
 	new_affect_join(ch, paf);
 }
 
@@ -1532,7 +1560,7 @@ void new_affect_join(CHAR_DATA *ch, AFFECT_DATA *paf)
 {
 	AFFECT_DATA *paf_old;
 
-	for (paf_old = ch->affected; paf_old != NULL; paf_old = paf_old->next)
+	for (paf_old = ch->affected; paf_old != nullptr; paf_old = paf_old->next)
 	{
 		if (paf_old->type == paf->type)
 		{
@@ -1560,9 +1588,9 @@ void char_from_room(CHAR_DATA *ch)
 	bool other= false;
 	AFFECT_DATA *aaf;
 
-	if (ch->in_room == NULL)
+	if (ch->in_room == nullptr)
 	{
-		bug("Char_from_room: NULL.", 0);
+		bug("Char_from_room: nullptr.", 0);
 		return;
 	}
 
@@ -1607,18 +1635,18 @@ void char_from_room(CHAR_DATA *ch)
 			}
 		}
 		/*
-		if ( prev == NULL )
+		if ( prev == nullptr )
 			bug( "Char_from_room: ch not found.", 0 );
 		*/
 	}
 
-	ch->in_room = NULL;
-	ch->next_in_room = NULL;
-	ch->on = NULL; /* sanity check! */
+	ch->in_room = nullptr;
+	ch->next_in_room = nullptr;
+	ch->on = nullptr; /* sanity check! */
 
 	if (is_affected_room(prev_room, gsn_gravity_well))
 	{
-		for (af = prev_room->affected; af != NULL; af = af->next)
+		for (af = prev_room->affected; af != nullptr; af = af->next)
 		{
 			if (af->type == gsn_gravity_well)
 				break;
@@ -1629,7 +1657,7 @@ void char_from_room(CHAR_DATA *ch)
 	}
 	if (!is_affected(ch, gsn_pull) && (check_entwine(ch, 1) || check_entwine(ch, 2)))
 	{
-		for (aaf = ch->affected; aaf != NULL; aaf = aaf->next)
+		for (aaf = ch->affected; aaf != nullptr; aaf = aaf->next)
 		{
 			if (aaf->type == gsn_entwine && (aaf->modifier == 1 || aaf->location == APPLY_DEX))
 				break;
@@ -1650,13 +1678,13 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 {
 	OBJ_DATA *obj;
 
-	if (pRoomIndex == NULL)
+	if (pRoomIndex == nullptr)
 	{
 		ROOM_INDEX_DATA *room;
 
-		bug("Char_to_room: NULL.", 0);
+		bug("Char_to_room: nullptr.", 0);
 
-		if ((room = get_room_index(ROOM_VNUM_TEMPLE)) != NULL)
+		if ((room = get_room_index(ROOM_VNUM_TEMPLE)) != nullptr)
 			char_to_room(ch, room);
 
 		return;
@@ -1676,7 +1704,7 @@ void char_to_room(CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex)
 	}
 	else
 	{
-		if (ch->home_room == NULL)
+		if (ch->home_room == nullptr)
 			ch->home_room = pRoomIndex;
 	}
 
@@ -1726,8 +1754,8 @@ void obj_to_char(OBJ_DATA *obj, CHAR_DATA *ch)
 	obj->next_content = ch->carrying;
 	ch->carrying = obj;
 	obj->carried_by = ch;
-	obj->in_room = NULL;
-	obj->in_obj = NULL;
+	obj->in_room = nullptr;
+	obj->in_obj = nullptr;
 	ch->carry_number += get_obj_number(obj);
 	ch->carry_weight += get_obj_weight(obj);
 }
@@ -1739,7 +1767,7 @@ void obj_from_char(OBJ_DATA *obj)
 {
 	CHAR_DATA *ch;
 
-	if ((ch = obj->carried_by) == NULL)
+	if ((ch = obj->carried_by) == nullptr)
 	{
 		bug("Obj_from_char: null ch.", 0);
 		return;
@@ -1756,7 +1784,7 @@ void obj_from_char(OBJ_DATA *obj)
 	{
 		OBJ_DATA *prev;
 
-		for (prev = ch->carrying; prev != NULL; prev = prev->next_content)
+		for (prev = ch->carrying; prev != nullptr; prev = prev->next_content)
 		{
 			if (prev->next_content == obj)
 			{
@@ -1765,12 +1793,12 @@ void obj_from_char(OBJ_DATA *obj)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 			bug("Obj_from_char: obj not in list.", 0);
 	}
 
-	obj->carried_by = NULL;
-	obj->next_content = NULL;
+	obj->carried_by = nullptr;
+	obj->next_content = nullptr;
 	ch->carry_number -= get_obj_number(obj);
 	ch->carry_weight -= get_obj_weight(obj);
 }
@@ -1831,16 +1859,16 @@ OBJ_DATA *get_eq_char(CHAR_DATA *ch, int iWear)
 {
 	OBJ_DATA *obj;
 
-	if (ch == NULL)
-		return NULL;
+	if (ch == nullptr)
+		return nullptr;
 
-	for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (obj->wear_loc == iWear)
 			return obj;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 bool is_worn(OBJ_DATA *obj)
@@ -1863,7 +1891,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 	bool status;
 
 	status= false;
-	if (iWear != WEAR_COSMETIC && get_eq_char(ch, iWear) != NULL)
+	if (iWear != WEAR_COSMETIC && get_eq_char(ch, iWear) != nullptr)
 	{
 		sprintf(buf, "Equip_char: already equipped (%d) -- %s -- %s.", iWear, ch->name, ch->in_room->area->file_name);
 		bug(buf, 0);
@@ -1900,8 +1928,8 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 		/*
 		 * Thanks to Morgenes for the bug fix here!
 		 */
-		act("$p rejects you, sliding from your hands despite your best efforts.", ch, obj, NULL, TO_CHAR);
-		act("$n drops $p onto the ground.", ch, obj, NULL, TO_ROOM);
+		act("$p rejects you, sliding from your hands despite your best efforts.", ch, obj, nullptr, TO_CHAR);
+		act("$n drops $p onto the ground.", ch, obj, nullptr, TO_ROOM);
 		obj_from_char(obj);
 		obj_to_room(obj, ch->in_room);
 		return;
@@ -1932,7 +1960,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 		modify_location(ch, app->location, app->modifier, true);
 	}
 
-	for (paf = obj->charaffs; paf != NULL; paf = paf->next)
+	for (paf = obj->charaffs; paf != nullptr; paf = paf->next)
 	{
 		affect_to_char(ch, paf);
 	}
@@ -1940,10 +1968,10 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
 	if ((obj->item_type == ITEM_LIGHT || is_obj_stat(obj, ITEM_GLOW)) && ch->in_room)
 		ch->in_room->light += 3;
 
-	if (show && obj->pIndexData->wear_echo[0] != NULL)
+	if (show && obj->pIndexData->wear_echo[0] != nullptr)
 		act(palloc_string(obj->pIndexData->wear_echo[0]), ch, obj, 0, TO_CHAR);
 
-	if (show && obj->pIndexData->wear_echo[1] != NULL)
+	if (show && obj->pIndexData->wear_echo[1] != nullptr)
 		act(palloc_string(obj->pIndexData->wear_echo[1]), ch, obj, 0, TO_ROOM);
 }
 
@@ -1952,7 +1980,7 @@ void equip_char(CHAR_DATA *ch, OBJ_DATA *obj, int iWear, bool show)
  */
 void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 {
-	AFFECT_DATA *paf = NULL;
+	AFFECT_DATA *paf = nullptr;
 	OBJ_APPLY_DATA *app;
 	int i, wearloc = obj->wear_loc;
 
@@ -1992,7 +2020,7 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 		modify_location(ch, app->location, app->modifier, false);
 	}
 
-	for (paf = obj->charaffs; paf != NULL; paf = paf->next)
+	for (paf = obj->charaffs; paf != nullptr; paf = paf->next)
 	{
 		affect_strip(ch, paf->type);
 	}
@@ -2000,10 +2028,10 @@ void unequip_char(CHAR_DATA *ch, OBJ_DATA *obj, bool show)
 	if ((obj->item_type == ITEM_LIGHT || is_obj_stat(obj, ITEM_GLOW)) && ch->in_room)
 		ch->in_room->light = std::max(0, ch->in_room->light - 3);
 
-	if (show && obj->pIndexData->remove_echo[0] != NULL)
+	if (show && obj->pIndexData->remove_echo[0] != nullptr)
 		act(palloc_string(obj->pIndexData->remove_echo[0]), ch, obj, 0, TO_CHAR);
 
-	if (show && obj->pIndexData->remove_echo[1] != NULL)
+	if (show && obj->pIndexData->remove_echo[1] != nullptr)
 		act(palloc_string(obj->pIndexData->remove_echo[1]), ch, obj, 0, TO_ROOM);
 }
 
@@ -2017,7 +2045,7 @@ int count_obj_list(OBJ_INDEX_DATA *pObjIndex, OBJ_DATA *list)
 
 	nMatch = 0;
 
-	for (obj = list; obj != NULL; obj = obj->next_content)
+	for (obj = list; obj != nullptr; obj = obj->next_content)
 	{
 		if (obj->pIndexData == pObjIndex)
 			nMatch++;
@@ -2034,19 +2062,19 @@ void obj_from_room(OBJ_DATA *obj)
 	ROOM_INDEX_DATA *in_room;
 	CHAR_DATA *ch;
 
-	if ((in_room = obj->in_room) == NULL)
+	if ((in_room = obj->in_room) == nullptr)
 	{
-		bug("obj_from_room: NULL.", 0);
+		bug("obj_from_room: nullptr.", 0);
 		return;
 	}
 
 	if (obj->item_type == ITEM_CAMPFIRE)
 		in_room->light = std::max(in_room->light - obj->value[0], 0);
 
-	for (ch = in_room->people; ch != NULL; ch = ch->next_in_room)
+	for (ch = in_room->people; ch != nullptr; ch = ch->next_in_room)
 	{
 		if (ch->on == obj)
-			ch->on = NULL;
+			ch->on = nullptr;
 	}
 
 	if (obj == in_room->contents)
@@ -2066,15 +2094,15 @@ void obj_from_room(OBJ_DATA *obj)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("Obj_from_room: obj not found.", 0);
 			return;
 		}
 	}
 
-	obj->in_room = NULL;
-	obj->next_content = NULL;
+	obj->in_room = nullptr;
+	obj->next_content = nullptr;
 }
 
 /*
@@ -2082,7 +2110,7 @@ void obj_from_room(OBJ_DATA *obj)
  */
 void obj_to_room(OBJ_DATA *obj, ROOM_INDEX_DATA *pRoomIndex)
 {
-	if (pRoomIndex == NULL || obj == NULL)
+	if (pRoomIndex == nullptr || obj == nullptr)
 		return;
 
 	if (obj->item_type == ITEM_CAMPFIRE)
@@ -2091,8 +2119,8 @@ void obj_to_room(OBJ_DATA *obj, ROOM_INDEX_DATA *pRoomIndex)
 	obj->next_content = pRoomIndex->contents;
 	pRoomIndex->contents = obj;
 	obj->in_room = pRoomIndex;
-	obj->carried_by = NULL;
-	obj->in_obj = NULL;
+	obj->carried_by = nullptr;
+	obj->in_obj = nullptr;
 }
 
 /*
@@ -2100,21 +2128,21 @@ void obj_to_room(OBJ_DATA *obj, ROOM_INDEX_DATA *pRoomIndex)
  */
 void obj_to_obj(OBJ_DATA *obj, OBJ_DATA *obj_to)
 {
-	if (obj == NULL || obj_to == NULL || obj == obj_to)
+	if (obj == nullptr || obj_to == nullptr || obj == obj_to)
 		return;
 
 	obj->next_content = obj_to->contains;
 	obj_to->contains = obj;
 	obj->in_obj = obj_to;
-	obj->in_room = NULL;
-	obj->carried_by = NULL;
+	obj->in_room = nullptr;
+	obj->carried_by = nullptr;
 
 	if (obj_to->pIndexData->vnum == OBJ_VNUM_PIT)
 		obj->cost = 0;
 
-	for (; obj_to != NULL; obj_to = obj_to->in_obj)
+	for (; obj_to != nullptr; obj_to = obj_to->in_obj)
 	{
-		if (obj_to->carried_by != NULL)
+		if (obj_to->carried_by != nullptr)
 		{
 			obj_to->carried_by->carry_weight += get_obj_weight(obj);
 		}
@@ -2128,7 +2156,7 @@ void obj_from_obj(OBJ_DATA *obj)
 {
 	OBJ_DATA *obj_from;
 
-	if ((obj_from = obj->in_obj) == NULL)
+	if ((obj_from = obj->in_obj) == nullptr)
 	{
 		bug("Obj_from_obj: null obj_from.", 0);
 		return;
@@ -2151,19 +2179,19 @@ void obj_from_obj(OBJ_DATA *obj)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("Obj_from_obj: obj not found.", 0);
 			return;
 		}
 	}
 
-	obj->next_content = NULL;
-	obj->in_obj = NULL;
+	obj->next_content = nullptr;
+	obj->in_obj = nullptr;
 
-	for (; obj_from != NULL; obj_from = obj_from->in_obj)
+	for (; obj_from != nullptr; obj_from = obj_from->in_obj)
 	{
-		if (obj_from->carried_by != NULL)
+		if (obj_from->carried_by != nullptr)
 		{
 			obj_from->carried_by->carry_weight -= get_obj_weight(obj);
 		}
@@ -2178,11 +2206,11 @@ void extract_obj(OBJ_DATA *obj)
 	OBJ_DATA *obj_content;
 	OBJ_DATA *obj_next;
 
-	if (obj->in_room != NULL)
+	if (obj->in_room != nullptr)
 		obj_from_room(obj);
-	else if (obj->carried_by != NULL)
+	else if (obj->carried_by != nullptr)
 		obj_from_char(obj);
-	else if (obj->in_obj != NULL)
+	else if (obj->in_obj != nullptr)
 		obj_from_obj(obj);
 
 	obj->pIndexData->limcount -= 1;
@@ -2201,7 +2229,7 @@ void extract_obj(OBJ_DATA *obj)
 	{
 		OBJ_DATA *prev;
 
-		for (prev = object_list; prev != NULL; prev = prev->next)
+		for (prev = object_list; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == obj)
 			{
@@ -2210,7 +2238,7 @@ void extract_obj(OBJ_DATA *obj)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("Extract_obj: obj %d not found.", obj->pIndexData->vnum);
 			return;
@@ -2237,48 +2265,47 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 	ROOM_INDEX_DATA *room;
 	ROOM_AFFECT_DATA *raf;
 	AFFECT_DATA *af;
-	extern long total_wealth;
 
-	if (ch->in_room == NULL)
+	if (ch->in_room == nullptr)
 	{
 		char buf[MSL], vn[50];
 
 		if (is_npc(ch))
 			sprintf(vn, "%d", ch->pIndexData->vnum);
 
-		sprintf(buf, "Extract_char: in_room is NULL.  %s%s.",
+		sprintf(buf, "Extract_char: in_room is nullptr.  %s%s.",
 			is_npc(ch) ? "Vnum is " : "Name is ",
 			is_npc(ch) ? vn : ch->name);
 		bug(buf, 0);
 	}
 	/* remove all tracking */
-	for (tch = char_list; tch != NULL; tch = tch->next)
+	for (tch = char_list; tch != nullptr; tch = tch->next)
 	{
 		if (tch->last_fought == ch)
-			tch->last_fought = NULL;
+			tch->last_fought = nullptr;
 
 		if (!is_npc(ch) && !is_npc(tch) && tch->last_fight_name == ch->true_name)
-			tch->last_fight_name = NULL;
+			tch->last_fight_name = nullptr;
 
 		if (!is_npc(tch) && !is_npc(ch) && tch->pcdata->trusting == ch)
-			tch->pcdata->trusting = NULL;
+			tch->pcdata->trusting = nullptr;
 
 		for (af = tch->affected; af; af = af->next)
 		{
 			if (af->owner == ch)
-				af->owner = NULL;
+				af->owner = nullptr;
 		}
 	}
 
 	nuke_pets(ch);
-	ch->pet = NULL; /* just in case */
+	ch->pet = nullptr; /* just in case */
 
 	if (fPull)
 		die_follower(ch);
 
 	stop_fighting(ch, true);
 
-	for (obj = ch->carrying; obj != NULL; obj = obj_next)
+	for (obj = ch->carrying; obj != nullptr; obj = obj_next)
 	{
 		obj_next = obj->next_content;
 
@@ -2309,21 +2336,21 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 		total_wealth -= ch->pIndexData->wealth;
 	}
 
-	if (ch->desc != NULL && ch->desc->original != NULL)
+	if (ch->desc != nullptr && ch->desc->original != nullptr)
 	{
 		do_return(ch, "");
-		ch->desc = NULL;
+		ch->desc = nullptr;
 	}
 
-	for (wch = char_list; wch != NULL; wch = wch->next)
+	for (wch = char_list; wch != nullptr; wch = wch->next)
 	{
 		if (wch->reply == ch)
-			wch->reply = NULL;
+			wch->reply = nullptr;
 	}
 
 	for (room = top_affected_room; room; room = room->aff_next)
 	{
-		for (raf = room->affected; raf != NULL; raf = raf->next)
+		for (raf = room->affected; raf != nullptr; raf = raf->next)
 		{
 			if (raf->owner == ch)
 			{
@@ -2339,7 +2366,7 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 	else
 	{
 		CHAR_DATA *prev;
-		for (prev = char_list; prev != NULL; prev = prev->next)
+		for (prev = char_list; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == ch)
 			{
@@ -2348,15 +2375,15 @@ void extract_char(CHAR_DATA *ch, bool fPull)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("Extract_char: char not found.", 0);
 			return;
 		}
 	}
 
-	if (ch->desc != NULL)
-		ch->desc->character = NULL;
+	if (ch->desc != nullptr)
+		ch->desc->character = nullptr;
 
 	free_char(ch);
 }
@@ -2376,7 +2403,7 @@ CHAR_DATA *get_char_room( CHAR_DATA *ch, char *argument )
 	count  = 0;
 	if ( !str_cmp( arg, "self" ) )
 	return ch;
-	for ( rch = ch->in_room->people; rch != NULL; rch = rch->next_in_room )
+	for ( rch = ch->in_room->people; rch != nullptr; rch = rch->next_in_room )
 	{
 		if ( !can_see( ch, rch ) || (arg[0] != '\0' && !is_name( arg, rch->name )))
 			continue;
@@ -2385,7 +2412,7 @@ CHAR_DATA *get_char_room( CHAR_DATA *ch, char *argument )
 			return rch;
 	}
 
-	return NULL;
+	return nullptr;
 }
 */
 
@@ -2400,20 +2427,20 @@ CHAR_DATA *get_char_world(CHAR_DATA *ch, char *argument)
 	int count;
 	char name[MAX_STRING_LENGTH];
 
-	if ((wch = get_char_room(ch, argument)) != NULL)
+	if ((wch = get_char_room(ch, argument)) != nullptr)
 		return wch;
 
 	number = number_argument(argument, arg);
 	count = 0;
 
-	for (wch = char_list; wch != NULL; wch = wch->next)
+	for (wch = char_list; wch != nullptr; wch = wch->next)
 	{
 		if (is_immortal(ch) && !is_npc(wch))
 			sprintf(name, "%s", wch->true_name);
 		else
 			sprintf(name, "%s", wch->name);
 
-		if (wch->in_room == NULL || !can_see(ch, wch) || !is_name(arg, name))
+		if (wch->in_room == nullptr || !can_see(ch, wch) || !is_name(arg, name))
 			continue;
 
 		if (is_npc(wch) && wch->pIndexData->vnum == MOB_VNUM_DECOY && is_immortal(ch))
@@ -2423,7 +2450,7 @@ CHAR_DATA *get_char_world(CHAR_DATA *ch, char *argument)
 			return wch;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2434,13 +2461,13 @@ OBJ_DATA *get_obj_type(OBJ_INDEX_DATA *pObjIndex)
 {
 	OBJ_DATA *obj;
 
-	for (obj = object_list; obj != NULL; obj = obj->next)
+	for (obj = object_list; obj != nullptr; obj = obj->next)
 	{
 		if (obj->pIndexData == pObjIndex)
 			return obj;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2455,7 +2482,7 @@ OBJ_DATA *get_obj_list(CHAR_DATA *ch, char *argument, OBJ_DATA *list)
 
 	number = number_argument(argument, arg);
 	count = 0;
-	for (obj = list; obj != NULL; obj = obj->next_content)
+	for (obj = list; obj != nullptr; obj = obj->next_content)
 	{
 		if ((can_see_obj(ch, obj)) && (arg[0] == '\0' || is_name(arg, obj->name)))
 		{
@@ -2464,7 +2491,7 @@ OBJ_DATA *get_obj_list(CHAR_DATA *ch, char *argument, OBJ_DATA *list)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2474,13 +2501,13 @@ OBJ_DATA *get_obj_room(OBJ_DATA *obj, ROOM_INDEX_DATA *room)
 {
 	OBJ_DATA *obj2;
 
-	for (obj2 = room->contents; obj2 != NULL; obj2 = obj2->next_content)
+	for (obj2 = room->contents; obj2 != nullptr; obj2 = obj2->next_content)
 	{
 		if (obj->pIndexData->vnum == obj2->pIndexData->vnum)
 			return obj2;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2495,7 +2522,7 @@ OBJ_DATA *get_obj_carry(CHAR_DATA *ch, char *argument, CHAR_DATA *viewer)
 
 	number = number_argument(argument, arg);
 	count = 0;
-	for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (obj->wear_loc == WEAR_NONE && (can_see_obj(viewer, obj)) && (arg[0] == '\0' || is_name(arg, obj->name)))
 		{
@@ -2504,7 +2531,7 @@ OBJ_DATA *get_obj_carry(CHAR_DATA *ch, char *argument, CHAR_DATA *viewer)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2519,7 +2546,7 @@ OBJ_DATA *get_obj_wear(CHAR_DATA *ch, char *argument)
 
 	number = number_argument(argument, arg);
 	count = 0;
-	for (obj = ch->carrying; obj != NULL; obj = obj->next_content)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next_content)
 	{
 		if (obj->wear_loc != WEAR_NONE && can_see_obj(ch, obj) && (arg[0] == '\0' || is_name(arg, obj->name)))
 		{
@@ -2528,7 +2555,7 @@ OBJ_DATA *get_obj_wear(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2539,19 +2566,19 @@ OBJ_DATA *get_obj_here(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *obj;
 
 	if (!str_cmp(argument, ""))
-		return NULL;
+		return nullptr;
 
 	obj = get_obj_list(ch, argument, ch->in_room->contents);
-	if (obj != NULL)
+	if (obj != nullptr)
 		return obj;
 
-	if ((obj = get_obj_carry(ch, argument, ch)) != NULL)
+	if ((obj = get_obj_carry(ch, argument, ch)) != nullptr)
 		return obj;
 
-	if ((obj = get_obj_wear(ch, argument)) != NULL)
+	if ((obj = get_obj_wear(ch, argument)) != nullptr)
 		return obj;
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2564,13 +2591,13 @@ OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
 	int number;
 	int count;
 
-	if ((obj = get_obj_here(ch, argument)) != NULL)
+	if ((obj = get_obj_here(ch, argument)) != nullptr)
 		return obj;
 
 	number = number_argument(argument, arg);
 	count = 0;
 
-	for (obj = object_list; obj != NULL; obj = obj->next)
+	for (obj = object_list; obj != nullptr; obj = obj->next)
 	{
 		if (can_see_obj(ch, obj) && is_name(arg, obj->name))
 		{
@@ -2579,13 +2606,13 @@ OBJ_DATA *get_obj_world(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 ///
 /// Deduct a sum from a character's currency pool. If this would cause
 /// the character to have negative currency, it sets the value to 0 
-/// instead. 
+/// instead. Accepts an integer vs the standard long. 
 /// @param ch: The character to take from
 /// @param cost: The sum to deduct
 void deduct_cost(CHAR_DATA *ch, int cost)
@@ -2602,13 +2629,34 @@ void deduct_cost(CHAR_DATA *ch, int cost)
 		ch->gold = 0;
 	}
 }
+///
+/// Deduct a sum from a character's currency pool. If this would cause
+/// the character to have negative currency, it sets the value to 0 
+/// instead. 
+/// @param ch: The character to take from
+/// @param cost: The sum to deduct
+void deduct_cost(CHAR_DATA *ch, long cost)
+{
+	long gold = 0;
+
+	gold = std::min(ch->gold, cost);
+
+	ch->gold -= gold;
+
+	if (ch->gold < 0)
+	{
+		bug("deduct costs: gold %d < 0", ch->gold);
+		ch->gold = 0;
+	}
+}
+
 /*
  * Create a 'money' obj.
  */
 OBJ_DATA *create_money(int gold)
 {
 	char buf[MAX_STRING_LENGTH];
-	OBJ_DATA *obj = NULL;
+	OBJ_DATA *obj = nullptr;
 
 	if (gold <= 0)
 	{
@@ -2658,7 +2706,7 @@ int get_obj_weight(OBJ_DATA *obj)
 	OBJ_DATA *tobj;
 
 	int weight = obj->weight;
-	for (tobj = obj->contains; tobj != NULL; tobj = tobj->next_content)
+	for (tobj = obj->contains; tobj != nullptr; tobj = tobj->next_content)
 	{
 		weight += get_obj_weight(tobj);
 	}
@@ -2669,7 +2717,7 @@ int get_obj_weight(OBJ_DATA *obj)
 int get_true_weight(OBJ_DATA *obj)
 {
 	int weight = obj->weight;
-	for (obj = obj->contains; obj != NULL; obj = obj->next_content)
+	for (obj = obj->contains; obj != nullptr; obj = obj->next_content)
 	{
 		weight += get_obj_weight(obj);
 	}
@@ -2682,7 +2730,7 @@ int get_contents_weight(OBJ_DATA *obj)
 	OBJ_DATA *stuff;
 	int weight = 0;
 
-	for (stuff = obj->contains; stuff != NULL; stuff = stuff->next_content)
+	for (stuff = obj->contains; stuff != nullptr; stuff = stuff->next_content)
 		weight += get_obj_weight(stuff);
 
 	return weight;
@@ -2693,7 +2741,7 @@ int get_contents_number(OBJ_DATA *obj)
 	OBJ_DATA *stuff;
 	int number = 0;
 
-	for (stuff = obj->contains; stuff != NULL; stuff = stuff->next_content)
+	for (stuff = obj->contains; stuff != nullptr; stuff = stuff->next_content)
 		number++;
 
 	return number;
@@ -2722,7 +2770,7 @@ bool room_is_dark(ROOM_INDEX_DATA *pRoomIndex)
 
 bool is_room_owner(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 {
-	if (room->owner == NULL || room->owner[0] == '\0')
+	if (room->owner == nullptr || room->owner[0] == '\0')
 		return false;
 
 	return is_name(ch->name, room->owner);
@@ -2738,11 +2786,11 @@ bool room_is_private(ROOM_INDEX_DATA *pRoomIndex)
 
 	return false;
 
-	if (pRoomIndex->owner != NULL && pRoomIndex->owner[0] != '\0')
+	if (pRoomIndex->owner != nullptr && pRoomIndex->owner[0] != '\0')
 		return true;
 
 	count = 0;
-	for (rch = pRoomIndex->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = pRoomIndex->people; rch != nullptr; rch = rch->next_in_room)
 		count++;
 
 	if (IS_SET(pRoomIndex->room_flags, ROOM_PRIVATE) && count >= 2)
@@ -2865,7 +2913,7 @@ bool can_see(CHAR_DATA *ch, CHAR_DATA *victim)
 
 	if (is_affected_by(victim, AFF_HIDE)
 		&& !is_affected_by(ch, AFF_DETECT_HIDDEN)
-		&& victim->fighting == NULL
+		&& victim->fighting == nullptr
 		&& !(is_affected(ch, gsn_darksight)
 			&& (af = affect_find(ch->affected, gsn_darksight))
 			&& af->aftype == AFT_SKILL
@@ -2915,7 +2963,7 @@ bool can_see_obj(CHAR_DATA *ch, OBJ_DATA *obj)
 
 	if (is_affected_obj(obj, gsn_stash))
 	{
-		for (oaf = obj->affected; oaf != NULL; oaf = oaf->next)
+		for (oaf = obj->affected; oaf != nullptr; oaf = oaf->next)
 		{
 			if (oaf->type == gsn_stash)
 				break;
@@ -2983,7 +3031,7 @@ bool can_drop_obj(CHAR_DATA *ch, OBJ_DATA *obj)
  */
 char *affect_loc_name(int location)
 {
-	for (int i = 0; apply_locations[i].name != NULL; i++)
+	for (int i = 0; apply_locations[i].name != nullptr; i++)
 	{
 		if (apply_locations[i].bit == location)
 			return apply_locations[i].display;
@@ -3199,7 +3247,7 @@ char *restrict_bit_name(long restrict_flags[])
 	static char buf[512];
 	buf[0] = '\0';
 
-	for (int i = 0; restrict_table[i].name != NULL; i++)
+	for (int i = 0; restrict_table[i].name != nullptr; i++)
 	{
 		if (IS_SET(restrict_flags, restrict_table[i].bit))
 		{
@@ -3892,10 +3940,10 @@ void init_affect_room(ROOM_AFFECT_DATA *paf)
 
 	zero_vector(paf->bitvector);
 
-	paf->pulse_fun = NULL;
-	paf->tick_fun = NULL;
-	paf->end_fun = NULL;
-	paf->owner = NULL;
+	paf->pulse_fun = nullptr;
+	paf->tick_fun = nullptr;
+	paf->end_fun = nullptr;
+	paf->owner = nullptr;
 	/* Morg - Valgrind fix */
 	paf->valid= false;
 }
@@ -3961,9 +4009,9 @@ void affect_modify_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf, bool fAdd)
  */
 void affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 {
-	paf->owner = NULL;
-	paf->end_fun = NULL;
-	paf->tick_fun = NULL;
+	paf->owner = nullptr;
+	paf->end_fun = nullptr;
+	paf->tick_fun = nullptr;
 	new_affect_to_room(room, paf);
 }
 
@@ -3977,7 +4025,7 @@ void new_affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 		if (top_affected_room)
 		{
 
-			for (pRoomIndex = top_affected_room; pRoomIndex->aff_next != NULL; pRoomIndex = pRoomIndex->aff_next)
+			for (pRoomIndex = top_affected_room; pRoomIndex->aff_next != nullptr; pRoomIndex = pRoomIndex->aff_next)
 			{
 				continue;
 			}
@@ -3989,7 +4037,7 @@ void new_affect_to_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 			top_affected_room = room;
 		}
 
-		room->aff_next = NULL;
+		room->aff_next = nullptr;
 	}
 
 	paf_new = new_affect_room();
@@ -4008,7 +4056,7 @@ void affect_check_room(ROOM_INDEX_DATA *room, int where, long vector[])
 	if (IS_ZERO_VECTOR(vector))
 		return;
 
-	for (paf = room->affected; paf != NULL; paf = paf->next)
+	for (paf = room->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->where == where && vector_equal(paf->bitvector, vector))
 		{
@@ -4037,13 +4085,13 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 	int where;
 	long vector[MAX_BITVECTOR];
 
-	if (room->affected == NULL)
+	if (room->affected == nullptr)
 	{
 		bug("Affect_remove_room: no affect.", 0);
 		return;
 	}
 
-	if (paf->end_fun != NULL)
+	if (paf->end_fun != nullptr)
 		(*paf->end_fun)(room, paf);
 
 	affect_modify_room(room, paf, false);
@@ -4058,7 +4106,7 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 	{
 		ROOM_AFFECT_DATA *prev;
 
-		for (prev = room->affected; prev != NULL; prev = prev->next)
+		for (prev = room->affected; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == paf)
 			{
@@ -4067,7 +4115,7 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("Affect_remove_room: cannot find paf.", 0);
 			return;
@@ -4093,14 +4141,14 @@ void affect_remove_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 				}
 			}
 
-			if (prev == NULL)
+			if (prev == nullptr)
 			{
 				bug("Affect_remove_room: cannot find room.", 0);
 				return;
 			}
 		}
 
-		room->aff_next = NULL;
+		room->aff_next = nullptr;
 	}
 
 	free_affect_room(paf);
@@ -4116,7 +4164,7 @@ void affect_strip_room(ROOM_INDEX_DATA *room, int sn)
 	ROOM_AFFECT_DATA *paf;
 	ROOM_AFFECT_DATA *paf_next;
 
-	for (paf = room->affected; paf != NULL; paf = paf_next)
+	for (paf = room->affected; paf != nullptr; paf = paf_next)
 	{
 		paf_next = paf->next;
 
@@ -4135,7 +4183,7 @@ bool is_affected_room(ROOM_INDEX_DATA *room, int sn)
 	if (!room)
 		return false;
 
-	for (paf = room->affected; paf != NULL; paf = paf->next)
+	for (paf = room->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type == sn)
 			return true;
@@ -4151,7 +4199,7 @@ void affect_join_room(ROOM_INDEX_DATA *room, ROOM_AFFECT_DATA *paf)
 {
 	ROOM_AFFECT_DATA *paf_old;
 
-	for (paf_old = room->affected; paf_old != NULL; paf_old = paf_old->next)
+	for (paf_old = room->affected; paf_old != nullptr; paf_old = paf_old->next)
 	{
 		if (paf_old->type == paf->type)
 		{
@@ -4238,7 +4286,7 @@ void charaff_to_obj_index(OBJ_INDEX_DATA *obj, AFFECT_DATA *paf)
 
 void charaff_from_obj_index(OBJ_INDEX_DATA *obj, AFFECT_DATA *paf)
 {
-	if (obj->charaffs == NULL)
+	if (obj->charaffs == nullptr)
 	{
 		bug("charaff_from_obj_index: no affect.", 0);
 		return;
@@ -4251,7 +4299,7 @@ void charaff_from_obj_index(OBJ_INDEX_DATA *obj, AFFECT_DATA *paf)
 	else
 	{
 		AFFECT_DATA *prev;
-		for (prev = obj->charaffs; prev != NULL; prev = prev->next)
+		for (prev = obj->charaffs; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == paf)
 			{
@@ -4260,7 +4308,7 @@ void charaff_from_obj_index(OBJ_INDEX_DATA *obj, AFFECT_DATA *paf)
 			}
 		}
 
-		if (prev == NULL)
+		if (prev == nullptr)
 		{
 			bug("charaff_from_obj_index: cannot find paf.", 0);
 			return;
@@ -4284,10 +4332,10 @@ void init_affect_obj(OBJ_AFFECT_DATA *paf)
 	paf->location = 0;
 	paf->modifier = 0;
 	zero_vector(paf->bitvector);
-	paf->tick_fun = NULL;
-	paf->pulse_fun = NULL;
-	paf->end_fun = NULL;
-	paf->owner = NULL;
+	paf->tick_fun = nullptr;
+	paf->pulse_fun = nullptr;
+	paf->end_fun = nullptr;
+	paf->owner = nullptr;
 }
 
 void affect_modify_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool fAdd)
@@ -4435,7 +4483,7 @@ void affect_check_obj(OBJ_DATA *obj, int where, long vector[])
 	if (IS_ZERO_VECTOR(vector))
 		return;
 
-	for (paf = obj->affected; paf != NULL; paf = paf->next)
+	for (paf = obj->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->where == where && vector_equal(paf->bitvector, vector))
 		{
@@ -4462,7 +4510,7 @@ void affect_remove_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show)
 		return;
 	}
 
-	if (paf->end_fun != NULL && show)
+	if (paf->end_fun != nullptr && show)
 		(*paf->end_fun)(obj, paf);
 
 	affect_modify_obj(obj, paf, false);
@@ -4477,7 +4525,7 @@ void affect_remove_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf, bool show)
 	{
 		OBJ_AFFECT_DATA *prev;
 
-		for (prev = obj->affected; prev != NULL; prev = prev->next)
+		for (prev = obj->affected; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == paf)
 			{
@@ -4502,7 +4550,7 @@ void affect_strip_obj(OBJ_DATA *obj, int sn)
 	OBJ_AFFECT_DATA *paf;
 	OBJ_AFFECT_DATA *paf_next;
 
-	for (paf = obj->affected; paf != NULL; paf = paf_next)
+	for (paf = obj->affected; paf != nullptr; paf = paf_next)
 	{
 		paf_next = paf->next;
 
@@ -4515,7 +4563,7 @@ bool is_affected_obj(OBJ_DATA *obj, int sn)
 {
 	OBJ_AFFECT_DATA *paf;
 
-	for (paf = obj->affected; paf != NULL; paf = paf->next)
+	for (paf = obj->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type == sn)
 			return true;
@@ -4528,7 +4576,7 @@ void affect_join_obj(OBJ_DATA *obj, OBJ_AFFECT_DATA *paf)
 {
 	OBJ_AFFECT_DATA *paf_old;
 
-	for (paf_old = obj->affected; paf_old != NULL; paf_old = paf_old->next)
+	for (paf_old = obj->affected; paf_old != nullptr; paf_old = paf_old->next)
 	{
 		if (paf_old->type == paf->type)
 		{
@@ -4593,10 +4641,10 @@ void init_affect_area(AREA_AFFECT_DATA *paf)
 	paf->location = 0;
 	paf->modifier = 0;
 	zero_vector(paf->bitvector);
-	paf->pulse_fun = NULL;
-	paf->tick_fun = NULL;
-	paf->end_fun = NULL;
-	paf->owner = NULL;
+	paf->pulse_fun = nullptr;
+	paf->tick_fun = nullptr;
+	paf->end_fun = nullptr;
+	paf->owner = nullptr;
 }
 
 void affect_modify_area(AREA_DATA *area, AREA_AFFECT_DATA *paf, bool fAdd)
@@ -4676,7 +4724,7 @@ void affect_check_area(AREA_DATA *area, int where, long vector[])
 	if (vector == 0)
 		return;
 
-	for (paf = area->affected; paf != NULL; paf = paf->next)
+	for (paf = area->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->where == where && vector_equal(paf->bitvector, vector))
 		{
@@ -4703,7 +4751,7 @@ void affect_remove_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 		return;
 	}
 
-	if (paf->end_fun != NULL)
+	if (paf->end_fun != nullptr)
 		(*paf->end_fun)(area, paf);
 
 	affect_modify_area(area, paf, false);
@@ -4718,7 +4766,7 @@ void affect_remove_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 	{
 		AREA_AFFECT_DATA *prev;
 
-		for (prev = area->affected; prev != NULL; prev = prev->next)
+		for (prev = area->affected; prev != nullptr; prev = prev->next)
 		{
 			if (prev->next == paf)
 			{
@@ -4744,7 +4792,7 @@ void affect_strip_area(AREA_DATA *area, int sn)
 	AREA_AFFECT_DATA *paf;
 	AREA_AFFECT_DATA *paf_next;
 
-	for (paf = area->affected; paf != NULL; paf = paf_next)
+	for (paf = area->affected; paf != nullptr; paf = paf_next)
 	{
 		paf_next = paf->next;
 
@@ -4755,9 +4803,10 @@ void affect_strip_area(AREA_DATA *area, int sn)
 
 bool is_affected_area(AREA_DATA *area, int sn)
 {
-	AREA_AFFECT_DATA *paf;
+	if (area == nullptr)
+		return false;
 
-	for (paf = area->affected; paf != NULL; paf = paf->next)
+	for (auto paf = area->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type == sn)
 			return true;
@@ -4770,7 +4819,7 @@ void affect_join_area(AREA_DATA *area, AREA_AFFECT_DATA *paf)
 {
 	AREA_AFFECT_DATA *paf_old;
 
-	for (paf_old = area->affected; paf_old != NULL; paf_old = paf_old->next)
+	for (paf_old = area->affected; paf_old != nullptr; paf_old = paf_old->next)
 	{
 		if (paf_old->type == paf->type)
 		{
@@ -4822,8 +4871,8 @@ bool is_safe_rspell(int level, CHAR_DATA *victim)
 {
 	if (is_safe_rspell_nom(level, victim))
 	{
-		act("The gods protect $n.", victim, NULL, NULL, TO_CHAR);
-		act("The gods protect $n from the spell of room.", victim, NULL, NULL, TO_ROOM);
+		act("The gods protect $n.", victim, nullptr, nullptr, TO_CHAR);
+		act("The gods protect $n from the spell of room.", victim, nullptr, nullptr, TO_ROOM);
 
 		return true;
 	}

@@ -8,7 +8,7 @@ typedef int SFUN (long event_vector, ...);
 #define BEGIN_ISPECS    		const struct spec_type ispec_table[] = {
 #define BEGIN_RSPECS    		const struct spec_type rspec_table[] = {
 #define BEGIN_ASPECS    		const struct spec_type aspec_table[] = {
-#define END_SPECS			{ NULL, NULL, 0 }, };
+#define END_SPECS			{ nullptr, nullptr, 0 }, };
 
 #define DEF_SPEC(fname, events)		{ #fname, fname, events },
 #define BEGIN_SPEC(sname)		int sname (long event_vector, ...) {

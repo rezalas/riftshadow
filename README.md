@@ -8,13 +8,17 @@
 | ------------------ |
 |**[Summary](#summary)**|
 |**[Goals](#goals)**|
+|**[Contributing](#contributing)**|
 |**[Build Requirements](#build-requirements)**|
 |**[SQL Setup](#sql-setup)**|
 |**[config json](#config-json)**|
 
 ## Summary
 
-Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MUD) from the early 2000s. As the original server is no longer live, the original authors provided the source code to the community to use and modify so that RS can live on. The primary goals for this community are to restore RS to a fully-functional state capable of operating on modern hardware with all features finished and bugs eliminated or codified as features. Preservation of the game for future generations requires  adapting the code to be easier to read and maintain, but without changing the feel of the core gameplay.
+Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MUD) from the early 2000s. As the original server is no longer live, the original authors provided the source code to the community to use and modify so that RS can live on. 
+The primary goals for this community are to restore RS to a fully-functional state capable of operating on modern hardware with all features finished and bugs eliminated or codified as features.
+
+Preservation of the game for future generations requires  adapting the code to be easier to read and maintain, but without changing the feel of the core gameplay.
 
 ## Goals
 
@@ -24,6 +28,10 @@ Riftshadow (RS) is a swords and sorcery style PVP-enabled multi-user dungeon (MU
 * Preserve core gameplay.
 * Improve security (ex. data storage of passwords) and thus safety for players and maintainers.
 * Decouple storage types from the code to support multiple backends with limited code changes.
+
+## Contributing
+
+If you're interested in helping us with this project, you can find more information on our [Contributing page](CONTRIBUTING.md#basic)
 
 ## Build Reqs
 
@@ -40,6 +48,17 @@ The following packages are required to build on linux x86 and test the applicati
 ### Building
 
 To build, run `cmake .` at the root of the project directory which will build system-appropriate Makefile configs. Then, run `make` to begin the build process. Afterward if successful the binary is located in the `./code/` directory and ready to execute.
+
+### Running the Server
+1. Get your environment ready with the steps in "[Setting up your Environment](./CONTRIBUTING.md)"
+2. From the root directory, run `make rift` to build the executable. 
+3. Navigate to `./code/` and run `./rift`
+
+### Connecting with Telnet
+After the server is running open another terminal instance and run
+`telnet localhost 9999`
+
+(The domain name and port might be different if your overridden the development defaults)
 
 ### Database injection
 

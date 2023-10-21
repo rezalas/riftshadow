@@ -48,7 +48,7 @@ public:
 	
 	CCharacter *	GetCharacter();
 	int				GetState();
-	void			SetState(int newstate, const char *msg = NULL);
+	void			SetState(int newstate, const char *msg = nullptr);
 
 	static CSocket *first;
 	CSocket * 		next;
@@ -78,7 +78,7 @@ public:
 	void			FlushOutput();
 	void			ReadFromSocket();
 	void			WriteToSocket(const char *txt, int slen = 0);	//low level IMMEDIATE WRITE, unnecessary 99% of the time
-	void			SetInputHandler(SOCKHANDLER newhandler, const char *msg = NULL);
+	void			SetInputHandler(SOCKHANDLER newhandler, const char *msg = nullptr);
 	
 	void			SocketInterpret(const char *cmd, const char *args);
 

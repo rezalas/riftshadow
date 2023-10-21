@@ -1,25 +1,8 @@
 #ifndef BOOTUP_H
 #define BOOTUP_H
 
-#include "stdlibs/file.h"
 #include "autogen/coldefs.h"
-
-#include <stdlib.h>
-#include "area.h"
-#include "room.h"
-#include "exit.h"
 #include "merc.h"
-#include "db.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "tables.h"
-#include "update.h"
-#include "interp.h"
-#include "olc.h"
-#include "spec.h"
-#include <string.h>
-#include "const.h"
-#include "./include/fmt/format.h"
 
 /*
  *  * Local booting procedures.
@@ -55,7 +38,7 @@ void classname::funcname(const char *query)										\
 	classname *stackcopy;														\
 	int i = 0;																	\
 	int nResults = RS.SQL.Select(query), nSize = nResults * sizeof(classname);	\
-	classname *lastp = NULL, *memptr = NULL;									\
+	classname *lastp = nullptr, *memptr = nullptr;								\
 	while(!RS.SQL.End())														\
 	{																			\
 		row = RS.SQL.GetRow();													\
@@ -68,7 +51,7 @@ void classname::funcname(const char *query)										\
 			((classname *)lastp)->next 	= stackcopy;							\
 		stackcopy->index = i++;													\
 		loaddef(stackcopy)														\
-		stackcopy->next = NULL;													\
+		stackcopy->next = nullptr;												\
 		lastp = stackcopy;														\
 	}																			\
 	RS.SQL.FreeResults();														\

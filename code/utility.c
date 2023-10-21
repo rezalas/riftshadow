@@ -1,4 +1,7 @@
 #include "utility.h"
+#include "db.h"
+#include "chardef.h"
+#include "handler.h"
 
 /// Checks if the given character is a cabal guard.
 /// @param ch: The character to check for guard status.
@@ -173,7 +176,7 @@ bool is_eneutral (CHAR_DATA *ch)
 /// @param one: The first number whose alignment to check.
 /// @param two: The second number whose alignment to check.
 /// @returns true if the two characters are of opposite alignment; false otherwise.
-bool is_same_align (sh_int one, sh_int two)
+bool is_same_align (short one, short two)
 {
 	return (one < 333 && two < 333)
 		|| (one > -333 && one < 333 && two > -333 && two < 333)
@@ -195,7 +198,7 @@ bool is_opp_align (CHAR_DATA *ch, CHAR_DATA *vch)
 /// Checks if the given number cooresponds to the good alignment.
 /// @param num: The number whose alignment to check.
 /// @returns true if the number cooresponds to the good alignment; false otherwise.
-bool is_num_good (sh_int num)
+bool is_num_good (short num)
 {
 	return num > 333;
 }
@@ -203,7 +206,7 @@ bool is_num_good (sh_int num)
 /// Checks if the given number cooresponds to the evil alignment.
 /// @param num: The number whose alignment to check.
 /// @returns true if the number cooresponds to the evil alignment; false otherwise.
-bool is_num_evil (sh_int num)
+bool is_num_evil (short num)
 {
 	return num < -333;
 }
@@ -211,7 +214,7 @@ bool is_num_evil (sh_int num)
 /// Checks if the given number cooresponds to the neutral alignment.
 /// @param num: The number whose alignment to check.
 /// @returns true if the number cooresponds to the neutral alignment; false otherwise.
-bool is_num_neutral (sh_int num)
+bool is_num_neutral (short num)
 {
 	return !is_num_good(num) && !is_num_evil(num);
 }
@@ -219,7 +222,7 @@ bool is_num_neutral (sh_int num)
 /// Checks if the given number cooresponds to the lawful ethos.
 /// @param num: The number whose ethos to check.
 /// @returns true if the number cooresponds to the lawful ethos; false otherwise.
-bool is_num_lawful (sh_int num)
+bool is_num_lawful (short num)
 {
 	return num > 333;
 }
@@ -227,7 +230,7 @@ bool is_num_lawful (sh_int num)
 /// Checks if the given number cooresponds to the chaotic ethos.
 /// @param num: The number whose ethos to check.
 /// @returns true if the number cooresponds to the chaotic ethos; false otherwise.
-bool is_num_chaotic (sh_int num)
+bool is_num_chaotic (short num)
 {
 	return num < -333;
 }
@@ -235,7 +238,7 @@ bool is_num_chaotic (sh_int num)
 /// Checks if the given number cooresponds to the neutral ethos.
 /// @param num: The number whose ethos to check.
 /// @returns true if the number cooresponds to the neutral ethos; false otherwise.
-bool is_num_eneutral (sh_int num)
+bool is_num_eneutral (short num)
 {
 	return !is_num_lawful(num) && !is_num_chaotic(num);
 }
@@ -255,7 +258,7 @@ bool is_awake(CHAR_DATA *ch)
 /// @param ch: The character whose armor class to retrieve.
 /// @param type: The armor type the character is wearing.
 /// @returns The armor class of the piece of armor the character is wearing.
-sh_int get_ac (CHAR_DATA *ch, sh_int type)
+short get_ac (CHAR_DATA *ch, short type)
 {
 	if (ch == nullptr || type > std::size(ch->armor))
 		return false;
@@ -266,7 +269,7 @@ sh_int get_ac (CHAR_DATA *ch, sh_int type)
 /// Calculates the given character's hit roll with modifiers applied.
 /// @param ch: The character whose hit roll to calculate.
 /// @returns The character's tabulated hit roll.
-sh_int get_hitroll (CHAR_DATA *ch)
+short get_hitroll (CHAR_DATA *ch)
 {
 	if (ch == nullptr)
 		return 0;
@@ -278,7 +281,7 @@ sh_int get_hitroll (CHAR_DATA *ch)
 /// Calculates the given character's damage roll with modifiers applied.
 /// @param ch: The character whose damage roll to calculate.
 /// @returns The character's tabulated damage roll.
-sh_int get_damroll (CHAR_DATA *ch)
+short get_damroll (CHAR_DATA *ch)
 {
 	if (ch == nullptr)
 		return 0;

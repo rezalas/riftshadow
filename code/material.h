@@ -14,18 +14,18 @@ struct liq_type
 {
 	char * liq_name;
 	char * liq_color;
-	sh_int liq_affect[5];
+	short liq_affect[5];
 };
 
 struct material_type
 {
 	char * mat_name;
-	sh_int mat_phase;
-	sh_int mat_hardness;
-	sh_int mat_rarity;
-	sh_int mat_conductivity;
-	sh_int mat_flammability;
-	sh_int mat_density;
+	short mat_phase;
+	short mat_hardness;
+	short mat_rarity;
+	short mat_conductivity;
+	short mat_flammability;
+	short mat_density;
 	long mat_flags;
 };
 

@@ -31,7 +31,20 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "tattoo.h"
+#include "recycle.h"
+#include "tables.h"
+#include "lookup.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
+#include "handler.h"
 
 void do_brands(CHAR_DATA *ch, char *argument)
 {
@@ -54,7 +67,7 @@ void do_brands(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -74,13 +87,13 @@ void do_brands(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((obj = get_eq_char(victim, WEAR_BRAND)) != NULL)
+	if ((obj = get_eq_char(victim, WEAR_BRAND)) != nullptr)
 	{
 		send_to_char("That person already has a tattoo.\n\r", ch);
 		return;
 	}
 
-	if ((obj = get_eq_char(ch, WEAR_BRAND)) != NULL)
+	if ((obj = get_eq_char(ch, WEAR_BRAND)) != nullptr)
 	{
 		objj = create_object(obj->pIndexData, 0);
 		clone_object(obj, objj);
@@ -116,7 +129,7 @@ void do_unbrands(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((victim = get_char_world(ch, arg1)) == NULL)
+	if ((victim = get_char_world(ch, arg1)) == nullptr)
 	{
 		send_to_char("They aren't playing.\n\r", ch);
 		return;
@@ -134,7 +147,7 @@ void do_unbrands(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((obj = get_eq_char(victim, WEAR_BRAND)) == NULL)
+	if ((obj = get_eq_char(victim, WEAR_BRAND)) == nullptr)
 	{
 		send_to_char("That person doesn't have a tattoo.\n\r", ch);
 		return;
@@ -161,7 +174,7 @@ void do_invoke(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ((obj = get_obj_wear(ch, arg)) == NULL)
+	if ((obj = get_obj_wear(ch, arg)) == nullptr)
 	{
 		send_to_char("You're not wearing that.\n\r", ch);
 		return;
@@ -189,7 +202,7 @@ void do_invoke_jackass(CHAR_DATA *ch)
 
 	send_to_char("You smite yourself! What a jackass!\n\r", ch);
 
-	act("$n smites $mself! What a jackass!", ch, NULL, NULL, TO_ROOM);
+	act("$n smites $mself! What a jackass!", ch, nullptr, nullptr, TO_ROOM);
 	ch->hit /= 2;
 }
 
@@ -213,21 +226,21 @@ void do_invoke_detlef(CHAR_DATA *ch)
 	ch->hit += (ch->level*2) * 10;
 	ch->hit = std::min(ch->hit,ch->max_hit);
 	send_to_char("You smoke a phat blunt and feel MUCH better.\n\r",ch);
-	act("$n smokes $s phat blunt and feels much better.",ch,NULL,NULL,TO_ROOM);
+	act("$n smokes $s phat blunt and feels much better.",ch,nullptr,nullptr,TO_ROOM);
 
 	if (check_dispel(ch->level+3,ch,skill_lookup("blindness")))
 	{
-		act("$n is no longer blinded.",ch,NULL,NULL,TO_ROOM);
+		act("$n is no longer blinded.",ch,nullptr,nullptr,TO_ROOM);
 	}
 
 	if (check_dispel(ch->level+3,ch,skill_lookup("poison")))
 	{
-		act("$n looks less ill.",ch,NULL,NULL,TO_ROOM);
+		act("$n looks less ill.",ch,nullptr,nullptr,TO_ROOM);
 	}
 
 	if (check_dispel(ch->level+3,ch,skill_lookup("plague")))
 	{
-		act("$n's sores vanish.",ch,NULL,NULL,TO_ROOM);
+		act("$n's sores vanish.",ch,nullptr,nullptr,TO_ROOM);
 	}
 
 	init_affect(&af);

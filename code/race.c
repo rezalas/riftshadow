@@ -11,6 +11,10 @@
 #include "magic.h"
 #include "db.h"
 #include "lookup.h"
+#include "comm.h"
+#include "skills.h"
+#include "handler.h"
+#include "chardef.h"
 
 bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room)
 {

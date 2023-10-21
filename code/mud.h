@@ -16,13 +16,15 @@
 #include "queue.h"
 #include "interp2.h"
 #include "skill.h"
-#include "class.h"
+#include "characterClasses/class.h"
 #include "race.h"
 #include "prof.h"
 #include "config.h"
 
 #define OPTION_FILE RIFT_AREA_DIR "/rs.conf"
 #define CONFIG_FILE RIFT_ROOT_DIR "/config.json"
+
+extern CMud RS;
 
 class CMud
 {	
@@ -33,8 +35,8 @@ public:
 	CSQLInterface		SQL;
 //	CInterpreter		Interpreter;
 	CQueue				Queue;
-
-	void				Bootup();
+	Config				Settings;
+	bool				Bootup();
 	void				Shutdown();
 
 	void				LoadGreetingScreen();
@@ -44,6 +46,7 @@ public:
 	void				LoadObjLimits();
 	void				LoadTime();
 	void				InitializeTables();		//load up the big old lists of classes, races, etc etc etc
+	Config				GetSettings();
 
 	/* warning, log and debug reporting functions
 	 * 0 - errors [bugs] & logged events only

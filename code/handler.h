@@ -1,34 +1,7 @@
 #ifndef HANDLER_H
 #define HANDLER_H
 
-#include <sys/types.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <string.h>
-#include <time.h>
-#include <algorithm>
 #include "merc.h"
-#include "magic.h"
-#include "recycle.h"
-#include "tables.h"
-#include "spec.h"
-#include "act_comm.h"
-#include "warrior.h"
-#include "fight.h"
-#include "skill.h"
-#include "newmem.h"
-#include "act_obj.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "misc.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "utility.h"
-
-//TODO: bring this func back from act_info.c
-extern CHAR_DATA *get_char_room (CHAR_DATA *ch, char *argument);
 
 //
 // TODO: UNKNOWN FUNCTIONS
@@ -243,6 +216,7 @@ OBJ_DATA *get_obj_here (CHAR_DATA *ch, char *argument);
 OBJ_DATA *get_obj_world (CHAR_DATA *ch, char *argument);
 /* deduct cost from a character */
 void deduct_cost (CHAR_DATA *ch, int cost);
+void deduct_cost(CHAR_DATA *ch, long cost);
 /*
  * Create a 'money' obj.
  */

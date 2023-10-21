@@ -1,21 +1,8 @@
 #ifndef HELP_H
 #define HELP_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include <mysql.h>
-#include <ctype.h>
 #include "merc.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "interp.h"
-#include "act_comm.h"
-#include "devextra.h"
-#include "./include/fmt/format.h"
 
 //
 // TODO: UNKNOWN FUNCTIONS

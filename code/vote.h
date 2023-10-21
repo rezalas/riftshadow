@@ -2,12 +2,6 @@
 #define VOTE_H
 
 #include "merc.h"
-#include "devextra.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
-
-#define VOTE_FILE RIFT_AREA_DIR "/votes.txt"
 
 typedef struct ballot_data BALLOT_DATA;
 typedef struct vote_data VOTE_DATA;
@@ -18,7 +12,7 @@ struct ballot_data
 	BALLOT_DATA *next;			// next ballot.
 	char *name;					// name of ballot
 	char *top_votes_name[15];
-	sh_int top_votes[15];
+	short top_votes[15];
 	VOTE_DATA *first_vote;		// first vote. yay.
 };
 

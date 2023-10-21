@@ -1,5 +1,3 @@
-#include <string.h>
-#include <stddef.h>
 #include "catch.hpp"
 #include "../code/queue.h"
 #include "../code/merc.h"

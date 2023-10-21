@@ -2,7 +2,6 @@
 #define UTILITY_H
 
 #include "merc.h"
-#include "handler.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -33,20 +32,20 @@ bool is_lawful (CHAR_DATA *ch);
 bool is_chaotic (CHAR_DATA *ch);
 bool is_eneutral (CHAR_DATA *ch);
 
-bool is_same_align (sh_int one, sh_int two);
+bool is_same_align (short one, short two);
 bool is_opp_align (CHAR_DATA *ch, CHAR_DATA *vch);
-bool is_num_good (sh_int num);
-bool is_num_evil (sh_int num);
-bool is_num_neutral (sh_int num);
+bool is_num_good (short num);
+bool is_num_evil (short num);
+bool is_num_neutral (short num);
 
-bool is_num_lawful (sh_int num);
-bool is_num_chaotic (sh_int num);
-bool is_num_eneutral (sh_int num);
+bool is_num_lawful (short num);
+bool is_num_chaotic (short num);
+bool is_num_eneutral (short num);
 
 bool is_awake (CHAR_DATA *ch);
-sh_int get_ac (CHAR_DATA *ch, sh_int type);
-sh_int get_hitroll (CHAR_DATA *ch);
-sh_int get_damroll (CHAR_DATA *ch);
+short get_ac (CHAR_DATA *ch, short type);
+short get_hitroll (CHAR_DATA *ch);
+short get_damroll (CHAR_DATA *ch);
 
 bool is_outside (CHAR_DATA *ch);
 

@@ -72,3 +72,35 @@ TEST_CASE("test missing placeholders", "[standalone]")
 	auto buf2 = std::string("the meaning of life is unknown");
 	REQUIRE(strcmp(buf.data(), buf2.data()) != 0); // these strings arent equal
 }
+
+TEST_CASE("test if null and nullptr are both valid for uninstantiated types", "[standalone]")
+{
+
+	class Test
+	{
+		Test()
+		{
+		}
+	};
+
+	Test* test = nullptr;
+
+	REQUIRE(test == NULL);
+	REQUIRE(test == nullptr);
+
+	test = NULL;
+
+	REQUIRE(test == NULL);
+	REQUIRE(test == nullptr);
+
+	int* test2 = nullptr;
+
+	REQUIRE(test2 == NULL);
+	REQUIRE(test2 == nullptr);
+
+	test2 = nullptr;
+
+	REQUIRE(test2 == NULL);
+	REQUIRE(test2 == nullptr);
+
+}

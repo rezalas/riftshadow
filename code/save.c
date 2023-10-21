@@ -1,4 +1,30 @@
+#include <sys/types.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "save.h"
+#include "newmem.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "tables.h"
+#include "act_comm.h"
+#include "act_wiz.h"
+#include "skills.h"
+#include "db.h"
+#include "devextra.h"
+#include "magic.h"
+#include "dioextra.h"
+#include "comm.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "misc.h"
+#include "./include/fmt/format.h"
+
+#define MAX_NEST	100
 
 long lvuln_flags[MAX_BITVECTOR];
 long limmune_flags[MAX_BITVECTOR];
@@ -71,11 +97,11 @@ void save_char_obj(CHAR_DATA *ch)
 	if (is_npc(ch) || mPort == 4000) // do not save, sir!!!
 		return;
 
-	if (ch->desc != NULL && ch->desc->original != NULL)
+	if (ch->desc != nullptr && ch->desc->original != nullptr)
 		ch = ch->desc->original;
 
 	if (!check_parse_name(ch->true_name))
-		wiznet("ALERT!! $N/$F name corrupt!!", ch, NULL, 0, 0, 0);
+		wiznet("ALERT!! $N/$F name corrupt!!", ch, nullptr, 0, 0, 0);
 
 	/* create god log */
 	fclose(fpReserve);
@@ -100,7 +126,7 @@ void save_char_obj(CHAR_DATA *ch)
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(ch->true_name));
 
-	if ((fp = fopen(TEMP_FILE, "w")) == NULL)
+	if ((fp = fopen(TEMP_FILE, "w")) == nullptr)
 	{
 		bug("Save_char_obj: fopen", 0);
 		perror(strsave);
@@ -116,10 +142,10 @@ void save_char_obj(CHAR_DATA *ch)
 			fwrite_obj(ch, ch->pcdata->old->carrying, fp, 0);
 
 		/* save the pets */
-		if (ch->pet != NULL && ch->pet->in_room == ch->in_room)
+		if (ch->pet != nullptr && ch->pet->in_room == ch->in_room)
 			fwrite_pet(ch->pet, fp);
 
-		for (search = char_list; search != NULL; search = search->next)
+		for (search = char_list; search != nullptr; search = search->next)
 		{
 			if (is_npc(search)
 				&& search->master == ch
@@ -160,7 +186,7 @@ void fread_charmie(CHAR_DATA *ch, FILE *fp)
 	AFFECT_DATA af;
 	vnum = fread_number(fp);
 
-	if (get_mob_index(vnum) == NULL)
+	if (get_mob_index(vnum) == nullptr)
 	{
 		bug("Fread_charmie: bad vnum %d!!!!", vnum);
 		charmed = create_mobile(get_mob_index(24594));
@@ -246,7 +272,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 	if (ch->pcdata->old && ch->pcdata->old->description[0] != '\0')
 		fprintf(fp, "Desc %s~\n", ch->pcdata->old->description);
 
-	if (ch->prompt != NULL || !str_cmp(ch->prompt, "<%hhp %mm %vmv> "))
+	if (ch->prompt != nullptr || !str_cmp(ch->prompt, "<%hhp %mm %vmv> "))
 		fprintf(fp, "Prom %s~\n", ch->prompt);
 
 	fprintf(fp, "Race %s~\n", pc_race_table[ch->race].name);
@@ -291,9 +317,9 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 	fprintf(fp, "Scro %d\n", ch->lines);
 	fprintf(fp, "HomeTown %d\n", ch->hometown);
 	fprintf(fp, "Room %d\n",
-			(ch->in_room == get_room_index(ROOM_VNUM_LIMBO) && ch->was_in_room != NULL)
+			(ch->in_room == get_room_index(ROOM_VNUM_LIMBO) && ch->was_in_room != nullptr)
 				? ch->was_in_room->vnum
-				: ch->in_room == NULL ? ROOM_VNUM_TEMPLE : ch->in_room->vnum);
+				: ch->in_room == nullptr ? ROOM_VNUM_TEMPLE : ch->in_room->vnum);
 
 	fprintf(fp, "HMV  %d %d %d %d %d %d\n", ch->hit, ch->max_hit, ch->mana, ch->max_mana, ch->move, ch->max_move);
 
@@ -491,7 +517,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 			for (i = 0; i < 100; i++)
 			{
-				if (ch->pcdata->recentkills[i] == NULL)
+				if (ch->pcdata->recentkills[i] == nullptr)
 					break;
 
 				fprintf(fp, "%s ", ch->pcdata->recentkills[i]);
@@ -530,7 +556,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 		for (pos = 0; pos < MAX_ALIAS; pos++)
 		{
-			if (ch->pcdata->alias[pos] == NULL || ch->pcdata->alias_sub[pos] == NULL)
+			if (ch->pcdata->alias[pos] == nullptr || ch->pcdata->alias_sub[pos] == nullptr)
 				break;
 
 			fprintf(fp, "Alias %s %s~\n", ch->pcdata->alias[pos], ch->pcdata->alias_sub[pos]);
@@ -540,18 +566,18 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 		for (sn = 0; sn < MAX_SKILL; sn++)
 		{
-			if (skill_table[sn].name != NULL && (ch->pcdata->learned[sn] > 0 || ch->pcdata->learned[sn] == -2))
+			if (skill_table[sn].name != nullptr && (ch->pcdata->learned[sn] > 0 || ch->pcdata->learned[sn] == -2))
 				fprintf(fp, "Sk %d '%s'\n", ch->pcdata->learned[sn], skill_table[sn].name);
 		}
 
 		for (gn = 0; gn < MAX_GROUP; gn++)
 		{
-			if (group_table[gn].name != NULL && ch->pcdata->group_known[gn])
+			if (group_table[gn].name != nullptr && ch->pcdata->group_known[gn])
 				fprintf(fp, "Gr '%s'\n", group_table[gn].name);
 		}
 	}
 
-	for (paf = ch->affected; paf != NULL; paf = paf->next)
+	for (paf = ch->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type < 0 || paf->type >= MAX_SKILL)
 			continue;
@@ -576,7 +602,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 	if (ch->pcdata->trophy
 		&& ch->pcdata->trophy->victname
 		&& ch->cabal == CABAL_HORDE
-		&& (belt = get_eq_char(ch, WEAR_WAIST)) != NULL
+		&& (belt = get_eq_char(ch, WEAR_WAIST)) != nullptr
 		&& belt->pIndexData->vnum == OBJ_VNUM_TROPHY_BELT
 		&& belt->value[4] >= 1)
 	{
@@ -607,10 +633,10 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 	fprintf(fp, "TimePlayed %d~\n", (int)((current_time - ch->logon) / 60));
 
-	if (ch->pcdata->history_buffer != NULL)
+	if (ch->pcdata->history_buffer != nullptr)
 		fprintf(fp, "History %s~\n", ch->pcdata->history_buffer);
 
-	if (ch->pcdata->role != NULL)
+	if (ch->pcdata->role != nullptr)
 		fprintf(fp, "Role %s~\n", ch->pcdata->role);
 
 	fprintf(fp, "TrackAObj %d~\n", count_carried(ch, false));
@@ -620,7 +646,7 @@ void fwrite_char(CHAR_DATA *ch, FILE *fp)
 
 	for (i = 0; i < MAX_WEAR; i++)
 	{
-		if ((obj = get_eq_char(ch, i)) == NULL)
+		if ((obj = get_eq_char(ch, i)) == nullptr)
 			fprintf(fp, " 0");
 		else
 			fprintf(fp, " %d", obj->pIndexData->vnum);
@@ -703,7 +729,7 @@ void fwrite_pet(CHAR_DATA *pet, FILE *fp)
 		pet->mod_stat[STAT_DEX],
 		pet->mod_stat[STAT_CON]);
 	/*
-	for ( paf = pet->affected; paf != NULL; paf = paf->next )
+	for ( paf = pet->affected; paf != nullptr; paf = paf->next )
 	{
 		if (paf->type < 0 || paf->type >= MAX_SKILL)
 			continue;
@@ -733,7 +759,7 @@ void fwrite_pet(CHAR_DATA *pet, FILE *fp)
  */
 void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 {
-	EXTRA_DESCR_DATA *ed = NULL;
+	EXTRA_DESCR_DATA *ed = nullptr;
 	OBJ_AFFECT_DATA *paf;
 	OBJ_APPLY_DATA *oad;
 
@@ -741,7 +767,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 	 * Slick recursion to write lists backwards,
 	 *   so loading them will load in forwards order.
 	 */
-	if (obj->next_content != NULL)
+	if (obj->next_content != nullptr)
 		fwrite_obj(ch, obj->next_content, fp, iNest);
 
 	/*
@@ -837,7 +863,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 			break;
 	}
 
-	for (paf = obj->affected; paf != NULL; paf = paf->next)
+	for (paf = obj->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->type < 0 || paf->type >= MAX_SKILL)
 			continue;
@@ -870,7 +896,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 			fprintf(fp, "AddApp %d %d %d\n", oad->location, oad->modifier, oad->type);
 	}
 
-	if ((ed = obj->extra_descr) != NULL)
+	if ((ed = obj->extra_descr) != nullptr)
 	{
 		if ((!obj->pIndexData->extra_descr) || (str_cmp(ed->keyword, obj->pIndexData->extra_descr->keyword)))
 			fprintf(fp, "ExDe %s~ %s~\n", ed->keyword, ed->description);
@@ -878,7 +904,7 @@ void fwrite_obj(CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest)
 
 	fprintf(fp, "End\n\n");
 
-	if (obj->contains != NULL)
+	if (obj->contains != nullptr)
 		fwrite_obj(ch, obj->contains, fp, iNest + 1);
 }
 
@@ -927,7 +953,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 	ch->Profs()->SetChar(ch);
 	ch->Profs()->SetPATime(0);
 	ch->pcdata->confirm_delete = false;
-	ch->pcdata->pwd = NULL;
+	ch->pcdata->pwd = nullptr;
 	ch->pcdata->bamfin = palloc_string("");
 	ch->pcdata->bamfout = palloc_string("");
 	ch->pcdata->title = palloc_string("");
@@ -962,7 +988,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 	ch->pcdata->bounty = 0;
 	ch->pcdata->bounty_credits = 0;
 	ch->bounty_timer = 0;
-	ch->pcdata->end_fun = NULL;
+	ch->pcdata->end_fun = nullptr;
 	ch->pcdata->energy_state = 0;
 	ch->dam_mod = 100;
 	ch->pcdata->shifted = -1;
@@ -980,7 +1006,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 	for (pos = 0; pos < 100; pos++)
 	{
-		ch->pcdata->recentkills[pos] = NULL;
+		ch->pcdata->recentkills[pos] = nullptr;
 	}
 
 	for (pos = 0; pos < MAX_EVENTS; pos++)
@@ -1000,7 +1026,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 	/* decompress if .gz file exists */
 	sprintf(strsave, "%s%s%s", RIFT_PLAYER_DIR, capitalize(name), ".gz");
 
-	if ((fp = fopen(strsave, "r")) != NULL)
+	if ((fp = fopen(strsave, "r")) != nullptr)
 	{
 		fclose(fp);
 
@@ -1013,12 +1039,12 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(name));
 
-	if ((fp = fopen(strsave, "r")) != NULL)
+	if ((fp = fopen(strsave, "r")) != nullptr)
 	{
 		int iNest;
 
 		for (iNest = 0; iNest < MAX_NEST; iNest++)
-			rgObjNest[iNest] = NULL;
+			rgObjNest[iNest] = nullptr;
 
 		found = true;
 
@@ -1102,7 +1128,7 @@ bool load_char_obj(DESCRIPTOR_DATA *d, char *name)
 
 		for (i = 0; i < 5; i++)
 		{
-			if (pc_race_table[ch->race].skills[i] == NULL)
+			if (pc_race_table[ch->race].skills[i] == nullptr)
 				break;
 
 			group_add(ch, pc_race_table[ch->race].skills[i], false);
@@ -1516,7 +1542,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				KEY("Hit", ch->hitroll, fread_number(fp))
 				KEY("HomeTown", ch->hometown, fread_number(fp))
 
-				ch->pcdata->temp_history_buffer = NULL;
+				ch->pcdata->temp_history_buffer = nullptr;
 
 				if (!str_cmp(word, "HpManaMove") || !str_cmp(word, "HMV"))
 				{
@@ -1652,7 +1678,7 @@ void fread_char(CHAR_DATA *ch, FILE *fp)
 				{
 					ch->in_room = get_room_index(fread_number(fp));
 
-					if (ch->in_room == NULL)
+					if (ch->in_room == nullptr)
 						ch->in_room = get_room_index(ROOM_VNUM_LIMBO);
 
 					fMatch = true;
@@ -1822,7 +1848,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 		vnum = fread_number(fp);
 
-		if (get_mob_index(vnum) == NULL)
+		if (get_mob_index(vnum) == nullptr)
 		{
 			bug("Fread_pet: bad vnum %d.", vnum);
 			pet = create_mobile(get_mob_index(MOB_VNUM_FIDO));
@@ -1869,7 +1895,7 @@ void fread_pet(CHAR_DATA *ch, FILE *fp)
 
 				if (!str_cmp(word, "Affc"))
 				{
-					CHAR_DATA *wch = NULL;
+					CHAR_DATA *wch = nullptr;
 					char *owner;
 					char *afname;
 					AFFECT_DATA *paf;
@@ -2037,7 +2063,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 	bool make_new;	 /* update object */
 
 	fVnum = false;
-	obj = NULL;
+	obj = nullptr;
 	first = true; /* used to counter fp offset */
 	new_format = false;
 	make_new = false;
@@ -2049,7 +2075,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 		first = false; /* fp will be in right place */
 
 		vnum = fread_number(fp);
-		if (get_obj_index(vnum) == NULL)
+		if (get_obj_index(vnum) == nullptr)
 		{
 			bug("Fread_obj: bad vnum %d.", vnum);
 		}
@@ -2061,7 +2087,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 		}
 	}
 
-	if (obj == NULL) /* either not found or old style */
+	if (obj == nullptr) /* either not found or old style */
 	{
 		obj = new_obj();
 		obj->name = palloc_string("");
@@ -2171,7 +2197,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 					ed->keyword = fread_string(fp);
 
 					/* Don't repeat extra descriptions... */
-					if ((obj->extra_descr != NULL) && !str_cmp(ed->keyword, obj->extra_descr->keyword))
+					if ((obj->extra_descr != nullptr) && !str_cmp(ed->keyword, obj->extra_descr->keyword))
 					{
 						free_extra_descr(ed);
 					}
@@ -2187,7 +2213,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				if (!str_cmp(word, "End"))
 				{
-					if (!fNest || (fVnum && obj->pIndexData == NULL))
+					if (!fNest || (fVnum && obj->pIndexData == nullptr))
 					{
 						bug("Fread_obj: incomplete object.", 0);
 						free_pstring(obj->name);
@@ -2235,7 +2261,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 							obj->wear_loc = wear;
 						}
 
-						if (iNest == 0 || rgObjNest[iNest] == NULL)
+						if (iNest == 0 || rgObjNest[iNest] == nullptr)
 							obj_to_char(obj, ch);
 						else
 							obj_to_obj(obj, rgObjNest[iNest - 1]);
@@ -2282,7 +2308,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 				if (!str_cmp(word, "Oldstyle"))
 				{
-					if (obj->pIndexData != NULL && obj->pIndexData->new_format)
+					if (obj->pIndexData != nullptr && obj->pIndexData->new_format)
 						make_new = true;
 
 					fMatch = true;
@@ -2358,7 +2384,7 @@ void fread_obj(CHAR_DATA *ch, FILE *fp)
 
 					vnum = fread_number(fp);
 
-					if ((obj->pIndexData = get_obj_index(vnum)) == NULL)
+					if ((obj->pIndexData = get_obj_index(vnum)) == nullptr)
 						bug("Fread_obj: bad vnum %d.", vnum);
 					else
 						fVnum = true;

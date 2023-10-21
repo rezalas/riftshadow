@@ -34,16 +34,7 @@
 #ifndef LOOKUP_H
 #define LOOKUP_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <time.h>
 #include "merc.h"
-#include "tables.h"
-#include "newmem.h"
-#include "db.h"
-#include "material.h"
 
 //
 // LOCAL FUNCTIONS

@@ -31,13 +31,23 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <time.h>
 #include "lookup.h"
+#include "tables.h"
+#include "newmem.h"
+#include "db.h"
+#include "material.h"
+#include "room.h"
 
 int flag_lookup(const char *name, const struct flag_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (LOWER(name[0]) == LOWER(flag_table[flag].name[0]) && !str_prefix(name, flag_table[flag].name))
 			return flag_table[flag].bit;
@@ -50,7 +60,7 @@ int climate_lookup(const char *name)
 {
 	int climate;
 
-	for (climate = 0; climate_table[climate].name != NULL; climate++)
+	for (climate = 0; climate_table[climate].name != nullptr; climate++)
 	{
 		if (LOWER(name[0]) == LOWER(climate_table[climate].name[0]) && !str_prefix(name, climate_table[climate].name))
 			return climate_table[climate].number;
@@ -63,7 +73,7 @@ int restrict_lookup(const char *name)
 {
 	int flag;
 
-	for (flag = 0; restrict_table[flag].name != NULL; flag++)
+	for (flag = 0; restrict_table[flag].name != nullptr; flag++)
 	{
 		if (LOWER(name[0]) == LOWER(restrict_table[flag].name[0]) && !str_prefix(name, restrict_table[flag].name))
 			return restrict_table[flag].bit;
@@ -102,7 +112,7 @@ int display_lookup(const char *name, const struct display_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (LOWER(name[0]) == LOWER(flag_table[flag].name[0]) && !str_prefix(name, flag_table[flag].name))
 			return flag_table[flag].bit;
@@ -160,26 +170,26 @@ char *display_name_lookup(long bitv, const struct display_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (flag_table[flag].bit == bitv)
 			return flag_table[flag].name;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 char *restrict_name_lookup(long bitv)
 {
 	int flag;
 
-	for (flag = 0; restrict_table[flag].name != NULL; flag++)
+	for (flag = 0; restrict_table[flag].name != nullptr; flag++)
 	{
 		if (restrict_table[flag].bit == bitv)
 			return restrict_table[flag].name;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 char *tribe_name_lookup(long bitv)
@@ -192,7 +202,7 @@ char *tribe_name_lookup(long bitv)
 			return tribe_table[flag].name;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 int ele_name_lookup(const char *name)
@@ -225,20 +235,20 @@ char *flag_name_lookup(long bitv, const struct flag_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (flag_table[flag].bit == bitv)
 			return talloc_string(flag_table[flag].name);
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 int flag_index_ilookup(int i, const struct flag_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (flag_table[flag].bit == i)
 			return flag;
@@ -251,7 +261,7 @@ int flag_index_lookup(const char *name, const struct flag_type *flag_table)
 {
 	int flag;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (LOWER(name[0]) == LOWER(flag_table[flag].name[0]) && !str_prefix(name, flag_table[flag].name))
 			return flag;
@@ -264,7 +274,7 @@ int material_lookup(const char *name)
 {
 	int flag;
 
-	for (flag = 0; material_table[flag].mat_name != NULL; flag++)
+	for (flag = 0; material_table[flag].mat_name != nullptr; flag++)
 	{
 		if (LOWER(name[0]) == LOWER(material_table[flag].mat_name[0]) && !str_prefix(name, material_table[flag].mat_name))
 			return flag;
@@ -277,7 +287,7 @@ int sect_lookup(const char *name)
 {
 	int flag;
 
-	for (flag = 0; sect_table[flag].name != NULL; flag++)
+	for (flag = 0; sect_table[flag].name != nullptr; flag++)
 	{
 		if (LOWER(name[0]) == LOWER(sect_table[flag].name[0]) && !str_prefix(name, sect_table[flag].name))
 			return flag;
@@ -290,7 +300,7 @@ int sect_numlookup(int number)
 {
 	int flag;
 
-	for (flag = 0; sect_table[flag].name != NULL; flag++)
+	for (flag = 0; sect_table[flag].name != nullptr; flag++)
 	{
 		if (sect_table[flag].value == number)
 			return flag;
@@ -316,7 +326,7 @@ int position_lookup(const char *name)
 {
 	int pos;
 
-	for (pos = 0; position_table[pos].name != NULL; pos++)
+	for (pos = 0; position_table[pos].name != nullptr; pos++)
 	{
 		if (LOWER(name[0]) == LOWER(position_table[pos].name[0]) && !str_prefix(name, position_table[pos].name))
 			return pos;
@@ -329,7 +339,7 @@ int sex_lookup(const char *name)
 {
 	int sex;
 
-	for (sex = 0; sex_table[sex].name != NULL; sex++)
+	for (sex = 0; sex_table[sex].name != nullptr; sex++)
 	{
 		if (LOWER(name[0]) == LOWER(sex_table[sex].name[0]) && !str_prefix(name, sex_table[sex].name))
 			return sex;
@@ -342,7 +352,7 @@ int size_lookup(const char *name)
 {
 	int size;
 
-	for (size = 0; size_table[size].name != NULL; size++)
+	for (size = 0; size_table[size].name != nullptr; size++)
 	{
 		if (LOWER(name[0]) == LOWER(size_table[size].name[0]) && !str_prefix(name, size_table[size].name))
 			return size;

@@ -1,31 +1,7 @@
 #ifndef OLC_SAVE_H
 #define OLC_SAVE_H
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "olc.h"
-#include "tables.h"
-#include "lookup.h"
-#include "update.h"
-#include "interp.h"
-#include "spec.h"
-#include "db.h"
-#include "act_comm.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
 
 /*
  *  Verbose writes reset data in plain english into the comments

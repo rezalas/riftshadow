@@ -1,18 +1,7 @@
 #ifndef ALIAS_H
 #define ALIAS_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "merc.h"
-#include "newmem.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "utility.h"
-#include "./include/fmt/format.h"
 
 
 //

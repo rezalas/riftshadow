@@ -1,14 +1,27 @@
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "scan.h"
+#include "handler.h"
+#include "act_info.h"
+#include "characterClasses/zealot.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
+#include "weather_enums.h"
+#include "act_move.h"
 
 void do_scan(CHAR_DATA *ch, char *argument)
 {
-	extern char *const dir_name[];
 	char arg1[MAX_INPUT_LENGTH], buf[MAX_INPUT_LENGTH];
 	ROOM_INDEX_DATA *scan_room;
 	OBJ_AFFECT_DATA *af;
 	OBJ_DATA *obj;
 	EXIT_DATA *pExit;
-	sh_int door, depth, i;
+	short door, depth, i;
 
 	argument = one_argument(argument, arg1);
 
@@ -70,8 +83,8 @@ void do_scan(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	act("You scan $T.", ch, NULL, dir_name[door], TO_CHAR);
-	act("$n scans $T.", ch, NULL, dir_name[door], TO_ROOM);
+	act("You scan $T.", ch, nullptr, dir_name[door], TO_CHAR);
+	act("$n scans $T.", ch, nullptr, dir_name[door], TO_ROOM);
 
 	if (is_affected_room(ch->in_room, gsn_smokescreen))
 	{
@@ -111,7 +124,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 	if (!is_outside(ch))
 		depth = 3;
 
-	if ((obj = get_eq_char(ch, WEAR_HOLD)) != NULL)
+	if ((obj = get_eq_char(ch, WEAR_HOLD)) != nullptr)
 	{
 		if (is_affected(ch, gsn_farsee) && obj->pIndexData->vnum == OBJ_VNUM_CRYSTAL)
 		{
@@ -136,13 +149,13 @@ void do_scan(CHAR_DATA *ch, char *argument)
 
 	for (i = 1; i <= depth; i++)
 	{
-		if ((pExit = scan_room->exit[door]) != NULL)
+		if ((pExit = scan_room->exit[door]) != nullptr)
 		{
 			if (!IS_SET(pExit->exit_info, EX_CLOSED) || IS_SET(pExit->exit_info, EX_TRANSLUCENT))
 			{
 				scan_room = pExit->u1.to_room;
 
-				if (scan_room == NULL)
+				if (scan_room == nullptr)
 					return;
 
 				if (is_affected_room(scan_room, gsn_conflagration))
@@ -167,10 +180,9 @@ void do_scan(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int door)
+void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, short depth, short door)
 {
 	CHAR_DATA *rch;
-	extern char *const dir_name[];
 	char *const distance[7] =
 	{
 		" **** 1 %s **** ",
@@ -182,13 +194,11 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 		" **** 7 %s **** "
 	};
 
-	//   extern char *const distance[];
-
 	char buf[MAX_INPUT_LENGTH], buf2[MAX_INPUT_LENGTH];
 
 	buf[0] = '\0';
 
-	if (scan_room == NULL)
+	if (scan_room == nullptr)
 		return;
 
 	sprintf(buf2, distance[(depth - 1)], dir_name[door]);
@@ -197,7 +207,7 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 	send_to_char(buf, ch);
 	send_to_char("\n\r", ch);
 
-	for (rch = scan_room->people; rch != NULL; rch = rch->next_in_room)
+	for (rch = scan_room->people; rch != nullptr; rch = rch->next_in_room)
 	{
 		if (rch == ch)
 			continue;

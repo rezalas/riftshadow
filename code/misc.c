@@ -1,7 +1,46 @@
 /* blah */
+#include <sys/types.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <ctype.h>
 #include "misc.h"
+#include "magic.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "recycle.h"
+#include "db.h"
+#include "lookup.h"
+#include "tables.h"
+#include "interp.h"
+#include "handler.h"
+#include "./include/fmt/format.h"
 
-sh_int chessboard[8][8];
+#define PIECE_NONE					-1
+#define WHITE_PAWN					0
+#define WHITE_KNIGHT				1
+#define WHITE_BISHOP				2
+#define WHITE_ROOK					3
+#define WHITE_QUEEN					4
+#define WHITE_KING					5
+#define BLACK_PAWN					6
+#define BLACK_KNIGHT				7
+#define BLACK_BISHOP				8
+#define BLACK_ROOK					9
+#define BLACK_QUEEN					10
+#define BLACK_KING					11
+#define MAX_PIECE					12
+
+#define WHITE_SQUARE				0
+#define BLACK_SQUARE				1
+
+#define WHITE_PIECE					0
+#define BLACK_PIECE					1
+
+short chessboard[8][8];
 CHAR_DATA *chess_white;
 CHAR_DATA *chess_black;
 
@@ -536,7 +575,7 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, arg);
 
-	if ((victim = get_char_world(ch, arg)) == NULL)
+	if ((victim = get_char_world(ch, arg)) == nullptr)
 	{
 		send_to_char("They aren't here.\n\r", ch);
 		return;
@@ -544,7 +583,7 @@ void do_devilfavor(CHAR_DATA *ch, char *argument)
 
 	argument = one_argument(argument, devil);
 
-	if (devil == NULL)
+	if (devil == nullptr)
 	{
 		send_to_char("Which devil?\n\r", ch);
 		return;
@@ -652,7 +691,7 @@ void do_chess(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(arg1, "challenge"))
 	{
-		if ((victim = get_char_room(ch, arg2)) == NULL)
+		if ((victim = get_char_room(ch, arg2)) == nullptr)
 		{
 			send_to_char("Challenge whom?\n\r", ch);
 			return;

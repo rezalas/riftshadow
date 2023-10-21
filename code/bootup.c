@@ -1,8 +1,27 @@
-#include "bootup.h"
+#include "autogen/coldefs.h"
+#include "stdlibs/file.h"
 
-extern char strArea[MAX_INPUT_LENGTH];
-extern FILE *                  fpArea;
-CRoom *CRoom::first = NULL;
+#include <stdlib.h>
+#include <string.h>
+#include "rift.h"
+#include "area.h"
+#include "room.h"
+#include "exit.h"
+#include "bootup.h"
+#include "db.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "tables.h"
+#include "update.h"
+#include "interp.h"
+#include "olc.h"
+#include "spec.h"
+#include "const.h"
+#include "devextra.h"
+#include "comm.h"
+#include "./include/fmt/format.h"
+
+CRoom *CRoom::first = nullptr;
 
 //Loads all the object limits and related info
 void CMud::LoadObjLimits()
@@ -25,7 +44,7 @@ void CMud::LoadObjLimits()
 	if(returnCode != 0) // ls returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
 		bug("Command [%s] failed with exit code [%d]", pbuf, returnCode);
 
-	if ((fpChar_list = fopen( PLAYER_LIST, "r")) == NULL)
+	if ((fpChar_list = fopen( PLAYER_LIST, "r")) == nullptr)
 	{
 		perror(PLAYER_LIST);
 		exit(1);
@@ -43,7 +62,7 @@ void CMud::LoadObjLimits()
 		if (!str_cmp(strPlr,chkbuf))
 			break;
 
-		if ( (  fpChar = fopen(strPlr, "r") ) == NULL)
+		if ( (  fpChar = fopen(strPlr, "r") ) == nullptr)
 		{
 			perror(strPlr);
 			exit(1);
@@ -107,7 +126,7 @@ void CMud::LoadObjLimits()
 				if (!str_cmp(word, "Vnum"))
 				{
 					vnum = fread_number(fpChar);
-					if ( (get_obj_index(vnum)) != NULL)
+					if ( (get_obj_index(vnum)) != nullptr)
 					{
 						pObjIndex = get_obj_index(vnum);
 						pObjIndex->limcount++;
@@ -117,7 +136,7 @@ void CMud::LoadObjLimits()
 		}
 
 		fclose(fpChar);
-		fpChar = NULL;
+		fpChar = nullptr;
 	}
 
 	fclose( fpChar_list);
@@ -142,7 +161,7 @@ void CMud::LoadGsn()
 	int sn;
 
 	for ( sn = 0; sn < MAX_SKILL; sn++ )
-		if ( skill_table[sn].pgsn != NULL )
+		if ( skill_table[sn].pgsn != nullptr )
 			*skill_table[sn].pgsn = sn;
 
 }
@@ -187,7 +206,7 @@ void CMud::LoadAreas()
 
 	log_string("Loading area files now...");
 
-	if ( ( fpList = fopen( AREA_LIST, "r" ) ) == NULL )
+	if ( ( fpList = fopen( AREA_LIST, "r" ) ) == nullptr )
 	{
 		perror( AREA_LIST );
 		exit( 1 );
@@ -210,7 +229,7 @@ void CMud::LoadAreas()
 		else
 		{
 			auto strAreaFullPath = fmt::format("{}/{}", RIFT_AREA_DIR, strArea);
-			if ( ( fpArea = fopen(strAreaFullPath.c_str(), "r" ) ) == NULL )
+			if ( ( fpArea = fopen(strAreaFullPath.c_str(), "r" ) ) == nullptr )
 			{
 				perror(strAreaFullPath.c_str());
 				exit( 1 );
@@ -247,7 +266,7 @@ void CMud::LoadAreas()
 
 		if ( fpArea != stdin )
 			fclose( fpArea );
-		fpArea = NULL;
+		fpArea = nullptr;
 	}
 	fclose( fpList );
 
@@ -298,7 +317,7 @@ void CMud::LoadOptions()
 void CMud::LoadGreetingScreen()
 {
 	//can't use cfile because of weird \r action
-	FILE *fp = fopen(GREET_FILE, "r");
+	FILE *fp = fopen(LOGIN_BANNER_FILE, "r");
 	char tempbuf[210], buf[4096];
 	int i;
 	buf[0] = '\0';

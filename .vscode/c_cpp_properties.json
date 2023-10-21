@@ -9,6 +9,11 @@
                 "/usr/lib/gcc/x86_64-linux-gnu/9/include",
                 "/usr/local/include"
             ],
+			"browse": {
+				"path": [
+					"${workspaceFolder}/**"
+				]
+			},
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",

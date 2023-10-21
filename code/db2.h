@@ -2,30 +2,27 @@
 #define DB2_H
 
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <time.h>
-#include <sys/types.h>
-#include <sys/time.h>
-#include <iterator>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "db.h"
-#include "lookup.h"
-#include "tables.h"
-#include "recycle.h"
-#include "spec.h"
-#include "warrior.h"
-#include "misc.h"
-#include "recycle.h"
-#include "iprog.h"
-#include "mprog.h"
-#include "rprog.h"
-#include "aprog.h"
+
+//
+// Structure for a social in the socials table.
+//
+
+struct social_type
+{
+	char name[20];
+	char *char_no_arg;
+	char *others_no_arg;
+	char *char_found;
+	char *others_found;
+	char *vict_found;
+	char *char_not_found;
+	char *char_auto;
+	char *others_auto;
+};
 
 extern struct social_type social_table[MAX_SOCIALS];
+extern int social_count;
 
 //
 // LOCAL FUNCTIONS

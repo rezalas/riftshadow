@@ -1,30 +1,7 @@
 #ifndef IPROG_H
 #define IPROG_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <algorithm>
-#include <time.h>
 #include "merc.h"
-#include "magic.h"
-#include "interp.h"
-#include "recycle.h"
-#include "tables.h"
-#include "lookup.h"
-#include "act_comm.h"
-#include "cabal.h"
-#include "fight.h"
-#include "act_obj.h"
-#include "update.h"
-#include "db.h"
-#include "devextra.h"
-#include "quest.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
 
 extern const struct improg_type iprog_table[];
 extern const struct improg_type verb_prog_table[];

@@ -1,10 +1,13 @@
-#include <string.h>
-#include <stddef.h>
 #include "catch.hpp"
 #include "../code/act_obj.h"
 #include "../code/merc.h"
 #include "../code/handler.h"
+#include "../code/const.h"
+#include "../code/lookup.h"
+#include "../code/tables.h"
+#include "../code/db.h"
 //#include "../code/bootup.h"
+
 
 void TestHelperLoadGSNList()
 {
@@ -12,7 +15,7 @@ void TestHelperLoadGSNList()
 
 	for ( sn = 0; sn < MAX_SKILL; sn++ )
 	{
-		if ( skill_table[sn].pgsn != NULL)
+		if ( skill_table[sn].pgsn != nullptr)
 			*skill_table[sn].pgsn = sn;
 	}
 }
@@ -24,7 +27,7 @@ void TestHelperAddPlayerToRoom(char_data *player, room_index_data *room)
     room->people = player;
 }
 
-void TestHelperSetPlayerStats(char_data *player, sh_int value)
+void TestHelperSetPlayerStats(char_data *player, short value)
 {
     player->perm_stat[STAT_STR] = value;
     player->perm_stat[STAT_INT] = value;
@@ -63,7 +66,7 @@ void TestHelperLoadCClass()
 	CClass::first->name;
 }
 
-char_data* TestHelperCreatePlayer(char *name, obj_data *item = NULL)
+char_data* TestHelperCreatePlayer(char *name, obj_data *item = nullptr)
 {
 	auto player = new char_data();
 	player->name = name;
@@ -72,17 +75,17 @@ char_data* TestHelperCreatePlayer(char *name, obj_data *item = NULL)
 	TestHelperLoadCClass();
 	player->SetClass(5);
 	player->level = 51;
-	dnew->showstr_head = NULL;
-	dnew->showstr_point = NULL;
+	dnew->showstr_head = nullptr;
+	dnew->showstr_point = nullptr;
 	dnew->outsize = 2000;
-	dnew->pEdit = NULL;	  /* OLC */
-	dnew->pString = NULL; /* OLC */
+	dnew->pEdit = nullptr;	  /* OLC */
+	dnew->pString = nullptr; /* OLC */
 	dnew->editor = 0;	  /* OLC */
 	dnew->outbuf = new char[dnew->outsize];
 	dnew->outtop = 0;	
 	player->desc = dnew;
 
-	if(item != NULL)
+	if(item != nullptr)
 		obj_to_char(item, player);
 	
 
@@ -131,7 +134,7 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
             auto result = find_keeper(player);
             THEN("find_keeper should return null")
             {
-                REQUIRE(result == NULL);
+                REQUIRE(result == nullptr);
             }
         }
     }
@@ -150,7 +153,7 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
             auto result = find_keeper(player1);
             THEN("find_keeper should return null")
             {
-                REQUIRE(result == NULL);
+                REQUIRE(result == nullptr);
             }
         }
     }
@@ -192,7 +195,7 @@ SCENARIO("testing finding shop keepers","[find_keeper]")
              auto result = find_keeper(player1);
             THEN("find_keeper should return null")
             {
-                REQUIRE(result == NULL);
+                REQUIRE(result == nullptr);
             }
         }
     }
@@ -218,7 +221,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 			auto actual = player1->desc->outbuf;
 			THEN("do_sell should return after notifying the player and rejecting the command.")
 			{
-				REQUIRE(strstr(actual,expected) != NULL);
+				REQUIRE(strstr(actual,expected) != nullptr);
 			}
 		}
 
@@ -234,7 +237,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 
 			THEN("do_sell should return after notifying the player and rejecting the command.")
 			{
-				REQUIRE(strstr(actual, expected) != NULL);
+				REQUIRE(strstr(actual, expected) != nullptr);
 			}
 		}
 
@@ -253,7 +256,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 
 			THEN("do_sell should return after notifying the player and rejecting the command.")
 			{
-				REQUIRE(strstr(actual, expected) != NULL);
+				REQUIRE(strstr(actual, expected) != nullptr);
 			}
 		}
 
@@ -291,7 +294,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 			auto expected = "You would never trade for coin when coin can be taken!";
 			THEN("it should not be sold to the shopkeeper")
 			{
-				REQUIRE(strstr(actual, expected) != NULL);
+				REQUIRE(strstr(actual, expected) != nullptr);
 				REQUIRE(player->carrying == item);
 				REQUIRE(player->gold == 0);
 				REQUIRE(keeper->carrying != item);
@@ -313,7 +316,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 
 			THEN("it should be sold to the shopkeeper at an unskilled multiplier")
 			{
-				REQUIRE(strstr(actual,expected) != NULL);
+				REQUIRE(strstr(actual,expected) != nullptr);
 				REQUIRE(player->carrying != item);
 				REQUIRE(player->gold > 0);
 				REQUIRE(keeper->carrying == item);
@@ -337,7 +340,7 @@ SCENARIO("testing selling to merchants", "[do_sell]")
 
 			THEN("it should be sold to the shopkeeper at a skilled multiplier")
 			{
-				REQUIRE(strstr(actual,expected) != NULL);
+				REQUIRE(strstr(actual,expected) != nullptr);
 				REQUIRE(player->carrying != item);
 				REQUIRE(player->gold > 0);
 				REQUIRE(keeper->carrying == item);

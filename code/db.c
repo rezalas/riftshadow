@@ -31,12 +31,41 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
-#include <cstddef>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <time.h>
+#include <sys/types.h>
+#include <sys/time.h>
+#include <iterator>
+#include <algorithm>
 #include "db.h"
+#include "db2.h"
+#include "rift.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "tables.h"
+#include "update.h"
+#include "interp.h"
+#include "olc.h"
+#include "spec.h"
+#include "act_comm.h"
+#include "newmem.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "devextra.h"
+#include "magic.h"
+#include "handler.h"
+#include "misc.h"
+#include "dioextra.h"
+#include "chardef.h"
+#include "const.h"
+#include "utility.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
 
 /* LOAD CABAL ITEMS */
-extern int mPort;
-
 char *top_bounty_name[MAX_TOP_BOUNTY];
 long top_bounty_value[MAX_TOP_BOUNTY];
 /*
@@ -56,496 +85,496 @@ KILL_DATA kill_table[MAX_LEVEL];
 NOTE_DATA *note_list;
 OBJ_DATA *object_list;
 TIME_INFO_DATA time_info;
-sh_int sun;
-sh_int moon_berus;
-sh_int berus_pos;
-sh_int moon_calabren;
-sh_int calabren_pos;
-ROOM_INDEX_DATA *room_list = NULL;
+short sun;
+short moon_berus;
+short berus_pos;
+short moon_calabren;
+short calabren_pos;
+ROOM_INDEX_DATA *room_list = nullptr;
 ROOM_INDEX_DATA *top_affected_room;
-RUNE_DATA *rune_list = NULL;
-MOB_INDEX_DATA *mindex_list = NULL;
-OBJ_INDEX_DATA *oIndex_list = NULL;
+RUNE_DATA *rune_list = nullptr;
+MOB_INDEX_DATA *mindex_list = nullptr;
+OBJ_INDEX_DATA *oIndex_list = nullptr;
 long gold_constant = 0;
 long total_gold = 0;
 long player_gold = 0;
 long total_wealth = 0;
 RACE_DATA *race_list;
 
-sh_int gsn_timer;
-sh_int gsn_repose;
-sh_int gsn_medicine;
-sh_int gsn_somatic_casting;
-sh_int gsn_frigidaura;
-sh_int gsn_stasis_wall;
-sh_int gsn_integrate;
-sh_int gsn_sensevibrations;
-sh_int gsn_diamondskin;
-sh_int gsn_hardenfist;
-sh_int gsn_jackal;
-sh_int gsn_mangled;
-sh_int gsn_rage;
-sh_int gsn_horde_communion;
-sh_int gsn_bleeding;
-sh_int gsn_calm;
-sh_int gsn_agitate;
-sh_int gsn_immolate;
-sh_int gsn_enervate;
-sh_int gsn_corona;
-sh_int gsn_infravision;
-sh_int gsn_faerie_fire;
-sh_int gsn_faerie_fog;
-sh_int gsn_backstab;
-sh_int gsn_detect_hidden;
-sh_int gsn_detect_movement;
-sh_int gsn_bluff;
-sh_int gsn_dodge;
-sh_int gsn_envenom;
-sh_int gsn_hide;
-sh_int gsn_peek;
-sh_int gsn_pick_lock;
-sh_int gsn_sneak;
-sh_int gsn_steal;
-sh_int gsn_silence;
-sh_int gsn_disarm;
-sh_int gsn_enhanced_damage;
-sh_int gsn_kick;
-sh_int gsn_parry;
-sh_int gsn_rescue;
-sh_int gsn_second_attack;
-sh_int gsn_third_attack;
-sh_int gsn_fourth_attack;
-sh_int gsn_fifth_attack;
+short gsn_timer;
+short gsn_repose;
+short gsn_medicine;
+short gsn_somatic_casting;
+short gsn_frigidaura;
+short gsn_stasis_wall;
+short gsn_integrate;
+short gsn_sensevibrations;
+short gsn_diamondskin;
+short gsn_hardenfist;
+short gsn_jackal;
+short gsn_mangled;
+short gsn_rage;
+short gsn_horde_communion;
+short gsn_bleeding;
+short gsn_calm;
+short gsn_agitate;
+short gsn_immolate;
+short gsn_enervate;
+short gsn_corona;
+short gsn_infravision;
+short gsn_faerie_fire;
+short gsn_faerie_fog;
+short gsn_backstab;
+short gsn_detect_hidden;
+short gsn_detect_movement;
+short gsn_bluff;
+short gsn_dodge;
+short gsn_envenom;
+short gsn_hide;
+short gsn_peek;
+short gsn_pick_lock;
+short gsn_sneak;
+short gsn_steal;
+short gsn_silence;
+short gsn_disarm;
+short gsn_enhanced_damage;
+short gsn_kick;
+short gsn_parry;
+short gsn_rescue;
+short gsn_second_attack;
+short gsn_third_attack;
+short gsn_fourth_attack;
+short gsn_fifth_attack;
 
-sh_int gsn_blindness;
-sh_int gsn_chill_touch;
-sh_int gsn_burning_hands;
-sh_int gsn_charm_person;
-sh_int gsn_curse;
-sh_int gsn_invis;
-sh_int gsn_mass_invis;
-sh_int gsn_poison;
-sh_int gsn_plague;
-sh_int gsn_sleep;
-sh_int gsn_sanctuary;
-sh_int gsn_stoneskin;
-sh_int gsn_shield;
-sh_int gsn_fly;
+short gsn_blindness;
+short gsn_chill_touch;
+short gsn_burning_hands;
+short gsn_charm_person;
+short gsn_curse;
+short gsn_invis;
+short gsn_mass_invis;
+short gsn_poison;
+short gsn_plague;
+short gsn_sleep;
+short gsn_sanctuary;
+short gsn_stoneskin;
+short gsn_shield;
+short gsn_fly;
 /* new gsn's */
 
-sh_int gsn_axe;
-sh_int gsn_dagger;
-sh_int gsn_flail;
-sh_int gsn_mace;
-sh_int gsn_polearm;
-sh_int gsn_shield_block;
-sh_int gsn_spear;
-sh_int gsn_sword;
-sh_int gsn_whip;
+short gsn_axe;
+short gsn_dagger;
+short gsn_flail;
+short gsn_mace;
+short gsn_polearm;
+short gsn_shield_block;
+short gsn_spear;
+short gsn_sword;
+short gsn_whip;
 
-sh_int gsn_bash;
-sh_int gsn_berserk;
-sh_int gsn_dirt;
-sh_int gsn_hand_to_hand;
-sh_int gsn_trip;
+short gsn_bash;
+short gsn_berserk;
+short gsn_dirt;
+short gsn_hand_to_hand;
+short gsn_trip;
 
-sh_int gsn_fast_healing;
-sh_int gsn_haggle;
-sh_int gsn_lore;
-sh_int gsn_meditation;
+short gsn_fast_healing;
+short gsn_haggle;
+short gsn_lore;
+short gsn_meditation;
 
-sh_int gsn_scrolls;
-sh_int gsn_staves;
-sh_int gsn_wands;
-sh_int gsn_recall;
+short gsn_scrolls;
+short gsn_staves;
+short gsn_wands;
+short gsn_recall;
 
-sh_int gsn_crush;
-sh_int gsn_ground_control;
+short gsn_crush;
+short gsn_ground_control;
 
-sh_int gsn_absorb;
-sh_int gsn_camouflage;
-sh_int gsn_acute_vision;
-sh_int gsn_ambush;
-sh_int gsn_laying_hands;
-sh_int gsn_circle_stab;
-sh_int gsn_circle;
-sh_int gsn_dual_backstab;
-sh_int gsn_skin;
-sh_int gsn_camp;
+short gsn_absorb;
+short gsn_camouflage;
+short gsn_acute_vision;
+short gsn_ambush;
+short gsn_laying_hands;
+short gsn_circle_stab;
+short gsn_circle;
+short gsn_dual_backstab;
+short gsn_skin;
+short gsn_camp;
 
-sh_int gsn_morph_red;
-sh_int gsn_morph_black;
-sh_int gsn_morph_blue;
-sh_int gsn_morph_green;
-sh_int gsn_morph_white;
+short gsn_morph_red;
+short gsn_morph_black;
+short gsn_morph_blue;
+short gsn_morph_green;
+short gsn_morph_white;
 
-sh_int gsn_morph_dragon;
-sh_int gsn_mimic;
-sh_int gsn_morph_weapon;
-sh_int gsn_liquify;
-sh_int gsn_breath_morph;
-sh_int gsn_animate_dead;
-sh_int gsn_barkskin;
-sh_int gsn_animal_call;
-sh_int gsn_aura_of_sustenance;
-sh_int gsn_shadowgate;
-sh_int gsn_eye_of_the_predator;
-sh_int gsn_blackjack;
-sh_int gsn_dual_wield;
-sh_int gsn_trance;
-sh_int gsn_wanted;
-sh_int gsn_cleave;
-sh_int gsn_herb;
-sh_int gsn_protective_shield;
-sh_int gsn_timestop;
-sh_int gsn_timestop_done;
-sh_int gsn_true_sight;
-sh_int gsn_butcher;
-sh_int gsn_vanish;
-sh_int gsn_embalm;
-sh_int gsn_counter;
-sh_int gsn_acid_spit;
-sh_int gsn_bear_call;
-sh_int gsn_trophy;
-sh_int gsn_tail;
-sh_int gsn_spellbane;
-sh_int gsn_request;
-sh_int gsn_endure;
-sh_int gsn_nerve;
-sh_int gsn_throw;
-sh_int gsn_poison_dust;
-sh_int gsn_blindness_dust;
-sh_int gsn_strangle;
-sh_int gsn_warcry;
-sh_int gsn_chimera_lion;
-sh_int gsn_chimera_goat;
-sh_int gsn_strange_form;
-sh_int gsn_enlist;
-sh_int gsn_shadowplane;
-sh_int gsn_blackjack_timer;
-sh_int gsn_strangle_timer;
-sh_int gsn_tame;
-sh_int gsn_find_water;
-sh_int gsn_track;
-sh_int gsn_shield_cleave;
-sh_int gsn_spellcraft;
-sh_int gsn_cloak_form;
-sh_int gsn_demand;
-sh_int gsn_shapeshift;
-sh_int gsn_parrot;
-sh_int gsn_door_bash;
-sh_int gsn_headbutt;
-sh_int gsn_gore;
-sh_int gsn_scorch;
-sh_int gsn_shattered_bone;
-sh_int gsn_forget;
-sh_int gsn_earthbind;
-sh_int gsn_divine_touch;
-sh_int gsn_forage;
-sh_int gsn_assassinate;
-sh_int gsn_defend;
-sh_int gsn_intimidate;
-sh_int gsn_escape;
-sh_int gsn_moving_ambush;
-sh_int gsn_pugil;
-sh_int gsn_staff;
-sh_int gsn_evaluation;
-sh_int gsn_protection_heat_cold;
-sh_int gsn_rally;
-sh_int gsn_tactics;
-sh_int gsn_lash;
-sh_int gsn_prevent_healing;
-sh_int gsn_regeneration;
-sh_int gsn_iron_resolve;
-sh_int gsn_quiet_movement;
-sh_int gsn_atrophy;
-sh_int gsn_knife;
-sh_int gsn_disperse;
-sh_int gsn_lightwalk;
-sh_int gsn_starvation;
-sh_int gsn_dehydrated;
-sh_int gsn_spore;
-sh_int gsn_spiritual_hammer;
-sh_int gsn_barbarian_strike;
-sh_int gsn_barbarian_bone_tear;
-sh_int gsn_hold_person;
-sh_int gsn_kinetic_shield;
-sh_int gsn_sanguine_ward;
-sh_int gsn_impale;
-sh_int gsn_retribution;
-sh_int gsn_shroud_of_light;
-sh_int gsn_bind;
-sh_int gsn_cheap_shot;
-sh_int gsn_deafen;
-sh_int gsn_divine_intervention;
-sh_int gsn_creep;
-sh_int gsn_unholy_timer;
-sh_int gsn_parting_blow;
-sh_int gsn_mysterious_dream;
-sh_int gsn_pincer;
-sh_int gsn_devour;
-sh_int gsn_keen_vision;
-sh_int gsn_false_motives;
-sh_int gsn_incinerate;
-sh_int gsn_vampiric_touch;
-sh_int gsn_mana_drain;
-sh_int gsn_snare;
-sh_int gsn_snaretimer;
-sh_int gsn_ironhands;
-sh_int gsn_charge;
-sh_int gsn_overhead;
-sh_int gsn_legsweep;
-sh_int gsn_entwine;
-sh_int gsn_whirl;
-sh_int gsn_soften;
-sh_int gsn_barrier;
-sh_int gsn_consecrate;
-sh_int gsn_blade_barrier;
-sh_int gsn_aura;
-sh_int gsn_sunray;
-sh_int gsn_enlarge;
-sh_int gsn_worldbind;
-sh_int gsn_sceptre;
-sh_int gsn_sceptret;
-sh_int gsn_dark_blessing;
-sh_int gsn_web;
-sh_int gsn_displacement;
-sh_int gsn_volley;
-sh_int gsn_hex;
-sh_int gsn_visceral;
-sh_int gsn_conflagration;
-sh_int gsn_gravity_well;
-sh_int gsn_ultradiffusion;
-sh_int gsn_molecular_disjunction;
-sh_int gsn_vacuum;
-sh_int gsn_cyclone_forming;
-sh_int gsn_cyclone;
-sh_int gsn_incandescense;
-sh_int gsn_diuretic;
-sh_int gsn_earthquake;
-sh_int gsn_mana_conduit;
-sh_int gsn_synaptic_enhancement;
-sh_int gsn_synaptic_impairment;
-sh_int gsn_elecshield;
-sh_int gsn_interference;
-sh_int gsn_abite;
-sh_int gsn_lbite;
-sh_int gsn_hydroperception;
-sh_int gsn_decrepify;
-sh_int gsn_watershield;
-sh_int gsn_flood;
-sh_int gsn_tidalwave;
-sh_int gsn_riptide;
-sh_int gsn_watermeld;
-sh_int gsn_sense_disturbance;
-sh_int gsn_travelease;
-sh_int gsn_stability;
-sh_int gsn_earthshield;
-sh_int gsn_heatshield;
-sh_int gsn_coldshield;
-sh_int gsn_chill;
-sh_int gsn_reduce;
-sh_int gsn_airshield;
-sh_int gsn_coagulate;
-sh_int gsn_entrap;
-sh_int gsn_drive;
-sh_int gsn_hypothermia;
-sh_int gsn_imprisonvoice;
-sh_int gsn_dash;
-sh_int gsn_howl;
-sh_int gsn_fend;
-sh_int gsn_gouge;
-sh_int gsn_hobble;
-sh_int gsn_crippling_blow;
-sh_int gsn_maneuvering;
-sh_int gsn_bleed;
-sh_int gsn_catch;
-sh_int gsn_posture;
-sh_int gsn_unbalance;
-sh_int gsn_sidestep;
-sh_int gsn_concuss;
-sh_int gsn_retreat;
-sh_int gsn_unholy_bond;
-sh_int gsn_uppercut;
-sh_int gsn_disrupt_formation;
-sh_int gsn_dart;
-sh_int gsn_brutality;
-sh_int gsn_shatter;
-sh_int gsn_batter;
-sh_int gsn_bloody_eyes;
-sh_int gsn_broken_arm;
-sh_int gsn_cracked_sternum;
-sh_int gsn_hurl;
-sh_int gsn_exchange;
-sh_int gsn_deflect;
-sh_int gsn_ease;
-sh_int gsn_shieldbash;
-sh_int gsn_brace;
-sh_int gsn_evasion;
-sh_int gsn_whirlwind;
-sh_int gsn_leadership;
-sh_int gsn_assess;
-sh_int gsn_exploit;
-sh_int gsn_outflank;
-sh_int gsn_terrain_mastery;
-sh_int gsn_analyze;
-sh_int gsn_pull;
-sh_int gsn_scramble_neurons;
-sh_int gsn_acid_stream;
-sh_int gsn_duelist_skill;
-sh_int gsn_gladiator_skill;
-sh_int gsn_barbarian_skill;
-sh_int gsn_dragoon_skill;
-sh_int gsn_skirmisher_skill;
-sh_int gsn_tactician_skill;
+short gsn_morph_dragon;
+short gsn_mimic;
+short gsn_morph_weapon;
+short gsn_liquify;
+short gsn_breath_morph;
+short gsn_animate_dead;
+short gsn_barkskin;
+short gsn_animal_call;
+short gsn_aura_of_sustenance;
+short gsn_shadowgate;
+short gsn_eye_of_the_predator;
+short gsn_blackjack;
+short gsn_dual_wield;
+short gsn_trance;
+short gsn_wanted;
+short gsn_cleave;
+short gsn_herb;
+short gsn_protective_shield;
+short gsn_timestop;
+short gsn_timestop_done;
+short gsn_true_sight;
+short gsn_butcher;
+short gsn_vanish;
+short gsn_embalm;
+short gsn_counter;
+short gsn_acid_spit;
+short gsn_bear_call;
+short gsn_trophy;
+short gsn_tail;
+short gsn_spellbane;
+short gsn_request;
+short gsn_endure;
+short gsn_nerve;
+short gsn_throw;
+short gsn_poison_dust;
+short gsn_blindness_dust;
+short gsn_strangle;
+short gsn_warcry;
+short gsn_chimera_lion;
+short gsn_chimera_goat;
+short gsn_strange_form;
+short gsn_enlist;
+short gsn_shadowplane;
+short gsn_blackjack_timer;
+short gsn_strangle_timer;
+short gsn_tame;
+short gsn_find_water;
+short gsn_track;
+short gsn_shield_cleave;
+short gsn_spellcraft;
+short gsn_cloak_form;
+short gsn_demand;
+short gsn_shapeshift;
+short gsn_parrot;
+short gsn_door_bash;
+short gsn_headbutt;
+short gsn_gore;
+short gsn_scorch;
+short gsn_shattered_bone;
+short gsn_forget;
+short gsn_earthbind;
+short gsn_divine_touch;
+short gsn_forage;
+short gsn_assassinate;
+short gsn_defend;
+short gsn_intimidate;
+short gsn_escape;
+short gsn_moving_ambush;
+short gsn_pugil;
+short gsn_staff;
+short gsn_evaluation;
+short gsn_protection_heat_cold;
+short gsn_rally;
+short gsn_tactics;
+short gsn_lash;
+short gsn_prevent_healing;
+short gsn_regeneration;
+short gsn_iron_resolve;
+short gsn_quiet_movement;
+short gsn_atrophy;
+short gsn_knife;
+short gsn_disperse;
+short gsn_lightwalk;
+short gsn_starvation;
+short gsn_dehydrated;
+short gsn_spore;
+short gsn_spiritual_hammer;
+short gsn_barbarian_strike;
+short gsn_barbarian_bone_tear;
+short gsn_hold_person;
+short gsn_kinetic_shield;
+short gsn_sanguine_ward;
+short gsn_impale;
+short gsn_retribution;
+short gsn_shroud_of_light;
+short gsn_bind;
+short gsn_cheap_shot;
+short gsn_deafen;
+short gsn_divine_intervention;
+short gsn_creep;
+short gsn_unholy_timer;
+short gsn_parting_blow;
+short gsn_mysterious_dream;
+short gsn_pincer;
+short gsn_devour;
+short gsn_keen_vision;
+short gsn_false_motives;
+short gsn_incinerate;
+short gsn_vampiric_touch;
+short gsn_mana_drain;
+short gsn_snare;
+short gsn_snaretimer;
+short gsn_ironhands;
+short gsn_charge;
+short gsn_overhead;
+short gsn_legsweep;
+short gsn_entwine;
+short gsn_whirl;
+short gsn_soften;
+short gsn_barrier;
+short gsn_consecrate;
+short gsn_blade_barrier;
+short gsn_aura;
+short gsn_sunray;
+short gsn_enlarge;
+short gsn_worldbind;
+short gsn_sceptre;
+short gsn_sceptret;
+short gsn_dark_blessing;
+short gsn_web;
+short gsn_displacement;
+short gsn_volley;
+short gsn_hex;
+short gsn_visceral;
+short gsn_conflagration;
+short gsn_gravity_well;
+short gsn_ultradiffusion;
+short gsn_molecular_disjunction;
+short gsn_vacuum;
+short gsn_cyclone_forming;
+short gsn_cyclone;
+short gsn_incandescense;
+short gsn_diuretic;
+short gsn_earthquake;
+short gsn_mana_conduit;
+short gsn_synaptic_enhancement;
+short gsn_synaptic_impairment;
+short gsn_elecshield;
+short gsn_interference;
+short gsn_abite;
+short gsn_lbite;
+short gsn_hydroperception;
+short gsn_decrepify;
+short gsn_watershield;
+short gsn_flood;
+short gsn_tidalwave;
+short gsn_riptide;
+short gsn_watermeld;
+short gsn_sense_disturbance;
+short gsn_travelease;
+short gsn_stability;
+short gsn_earthshield;
+short gsn_heatshield;
+short gsn_coldshield;
+short gsn_chill;
+short gsn_reduce;
+short gsn_airshield;
+short gsn_coagulate;
+short gsn_entrap;
+short gsn_drive;
+short gsn_hypothermia;
+short gsn_imprisonvoice;
+short gsn_dash;
+short gsn_howl;
+short gsn_fend;
+short gsn_gouge;
+short gsn_hobble;
+short gsn_crippling_blow;
+short gsn_maneuvering;
+short gsn_bleed;
+short gsn_catch;
+short gsn_posture;
+short gsn_unbalance;
+short gsn_sidestep;
+short gsn_concuss;
+short gsn_retreat;
+short gsn_unholy_bond;
+short gsn_uppercut;
+short gsn_disrupt_formation;
+short gsn_dart;
+short gsn_brutality;
+short gsn_shatter;
+short gsn_batter;
+short gsn_bloody_eyes;
+short gsn_broken_arm;
+short gsn_cracked_sternum;
+short gsn_hurl;
+short gsn_exchange;
+short gsn_deflect;
+short gsn_ease;
+short gsn_shieldbash;
+short gsn_brace;
+short gsn_evasion;
+short gsn_whirlwind;
+short gsn_leadership;
+short gsn_assess;
+short gsn_exploit;
+short gsn_outflank;
+short gsn_terrain_mastery;
+short gsn_analyze;
+short gsn_pull;
+short gsn_scramble_neurons;
+short gsn_acid_stream;
+short gsn_duelist_skill;
+short gsn_gladiator_skill;
+short gsn_barbarian_skill;
+short gsn_dragoon_skill;
+short gsn_skirmisher_skill;
+short gsn_tactician_skill;
 
-sh_int gsn_talismanic;
+short gsn_talismanic;
 
-sh_int gsn_acid_vein;
-sh_int gsn_corrode_lock;
-sh_int gsn_attract;
-sh_int gsn_call_lightning;
-sh_int gsn_grounding;
-sh_int gsn_neutralize;
-sh_int gsn_caustic_vapor;
-sh_int gsn_noxious_fumes;
-sh_int gsn_drain;
-sh_int gsn_smokescreen;
-sh_int gsn_shroud_of_secrecy;
-sh_int gsn_smother;
-sh_int gsn_noxious_ward;
+short gsn_acid_vein;
+short gsn_corrode_lock;
+short gsn_attract;
+short gsn_call_lightning;
+short gsn_grounding;
+short gsn_neutralize;
+short gsn_caustic_vapor;
+short gsn_noxious_fumes;
+short gsn_drain;
+short gsn_smokescreen;
+short gsn_shroud_of_secrecy;
+short gsn_smother;
+short gsn_noxious_ward;
 
-sh_int gsn_blanket;
-sh_int gsn_whiteout;
+short gsn_blanket;
+short gsn_whiteout;
 
-sh_int gsn_accumulate_heat;
-sh_int gsn_earthsembrace;
-sh_int gsn_melt_rock;
-sh_int gsn_magma_tunnel;
-sh_int gsn_heat_earth;
+short gsn_accumulate_heat;
+short gsn_earthsembrace;
+short gsn_melt_rock;
+short gsn_magma_tunnel;
+short gsn_heat_earth;
 
-sh_int gsn_unbreakable;
-sh_int gsn_freeze_door;
-sh_int gsn_frost_growth;
-sh_int gsn_bind_feet;
+short gsn_unbreakable;
+short gsn_freeze_door;
+short gsn_frost_growth;
+short gsn_bind_feet;
 
-sh_int gsn_glaciate;
-sh_int gsn_stalactites;
-sh_int gsn_ice_blast;
-sh_int gsn_icy_carapace;
-sh_int gsn_sheath_of_ice;
+short gsn_glaciate;
+short gsn_stalactites;
+short gsn_ice_blast;
+short gsn_icy_carapace;
+short gsn_sheath_of_ice;
 
-sh_int gsn_ironskin;
-sh_int gsn_burden;
+short gsn_ironskin;
+short gsn_burden;
 
-sh_int gsn_cloak_of_mist;
-sh_int gsn_rust;
-sh_int gsn_airy_water;
-sh_int gsn_cooling_mist;
+short gsn_cloak_of_mist;
+short gsn_rust;
+short gsn_airy_water;
+short gsn_cooling_mist;
 
-sh_int gsn_creeping_tomb;
-sh_int gsn_pass_without_trace;
-sh_int gsn_earthfade;
-sh_int gsn_quicksand;
-sh_int gsn_quicksand_sinking;
+short gsn_creeping_tomb;
+short gsn_pass_without_trace;
+short gsn_earthfade;
+short gsn_quicksand;
+short gsn_quicksand_sinking;
 
-sh_int gsn_puddle;
-sh_int gsn_indom;
-sh_int gsn_unholy_communion;
-sh_int gsn_lesser_demon;
-sh_int gsn_greater_demon;
-sh_int gsn_gamygyn_soul;
-sh_int gsn_orobas_soul;
-sh_int gsn_dark_familiar;
-sh_int gsn_traitors_luck;
-sh_int gsn_darksight;
-sh_int gsn_word_of_command;
-sh_int gsn_bloodlust;
-sh_int gsn_mark_of_wrath;
-sh_int gsn_leech;
-sh_int gsn_baals_mastery;
-sh_int gsn_living_blade;
+short gsn_puddle;
+short gsn_indom;
+short gsn_unholy_communion;
+short gsn_lesser_demon;
+short gsn_greater_demon;
+short gsn_gamygyn_soul;
+short gsn_orobas_soul;
+short gsn_dark_familiar;
+short gsn_traitors_luck;
+short gsn_darksight;
+short gsn_word_of_command;
+short gsn_bloodlust;
+short gsn_mark_of_wrath;
+short gsn_leech;
+short gsn_baals_mastery;
+short gsn_living_blade;
 
-sh_int gsn_plasma_arc;
-sh_int gsn_sphere_of_plasma;
-sh_int gsn_essence_of_plasma;
-sh_int gsn_plasma_cube;
-sh_int gsn_plasma_thread;
+short gsn_plasma_arc;
+short gsn_sphere_of_plasma;
+short gsn_essence_of_plasma;
+short gsn_plasma_cube;
+short gsn_plasma_thread;
 
-sh_int gsn_fashion_crystal;
-sh_int gsn_farsee;
-sh_int gsn_rotating_ward;
+short gsn_fashion_crystal;
+short gsn_farsee;
+short gsn_rotating_ward;
 
-sh_int gsn_plant;
-sh_int gsn_gag;
-sh_int gsn_drag;
-sh_int gsn_palm;
-sh_int gsn_trail;
-sh_int gsn_tripwire;
-sh_int gsn_sign;
-sh_int gsn_slash;
-sh_int gsn_stash;
-sh_int gsn_avoid;
-sh_int gsn_disguise;
-sh_int gsn_shadow_cloak;
-sh_int gsn_stealth;
-sh_int gsn_counterfeit;
-sh_int gsn_strip;
-sh_int gsn_silent_movement;
-sh_int gsn_infidels_weight;
-sh_int gsn_burning_vision;
-sh_int gsn_divine_ward;
-sh_int gsn_scribe;
-sh_int gsn_healing_sleep;
-sh_int gsn_divine_frenzy;
-sh_int gsn_awe;
-sh_int gsn_strike_of_virtue;
-sh_int gsn_arms_of_light;
-sh_int gsn_arms_of_wrath;
-sh_int gsn_arms_of_purity;
-sh_int gsn_arms_of_judgement;
-sh_int gsn_group_retreat;
-sh_int gsn_holy_shroud;
-sh_int gsn_seraphic_mantle;
-sh_int gsn_shield_of_faith;
-sh_int gsn_deny_magic;
-sh_int gsn_nullify;
-sh_int gsn_bane;
-sh_int gsn_gking;
-sh_int gsn_lesser_golem;
-sh_int gsn_greater_golem;
-sh_int gsn_aggressor;
-sh_int gsn_subdue;
-sh_int gsn_drowning;
-sh_int gsn_hunters_awareness;
-sh_int gsn_hunters_stealth;
-sh_int gsn_hunters_net;
-sh_int gsn_severed;
-sh_int gsn_rites_of_preparation;
-sh_int gsn_turn_undead;
-sh_int gsn_benevolence;
-sh_int gsn_intercept;
-sh_int gsn_blinding_orb;
-sh_int gsn_channeling;
-sh_int gsn_empathy;
-sh_int gsn_altruism;
-sh_int gsn_tower_of_fortitude;
-sh_int gsn_shadowsense;
-sh_int gsn_champions_defense;
-sh_int gsn_indomitable_spirit;
-sh_int gsn_fervor;
-sh_int gsn_piety;
-sh_int gsn_spiritual_healing;
-sh_int gsn_crimson_martyr;
-sh_int gsn_infidels_fate;
-sh_int gsn_mana_sickness;
-sh_int gsn_mana_infusion;
-sh_int gsn_tangleroot;
-sh_int gsn_rprog_elven_down;
+short gsn_plant;
+short gsn_gag;
+short gsn_drag;
+short gsn_palm;
+short gsn_trail;
+short gsn_tripwire;
+short gsn_sign;
+short gsn_slash;
+short gsn_stash;
+short gsn_avoid;
+short gsn_disguise;
+short gsn_shadow_cloak;
+short gsn_stealth;
+short gsn_counterfeit;
+short gsn_strip;
+short gsn_silent_movement;
+short gsn_infidels_weight;
+short gsn_burning_vision;
+short gsn_divine_ward;
+short gsn_scribe;
+short gsn_healing_sleep;
+short gsn_divine_frenzy;
+short gsn_awe;
+short gsn_strike_of_virtue;
+short gsn_arms_of_light;
+short gsn_arms_of_wrath;
+short gsn_arms_of_purity;
+short gsn_arms_of_judgement;
+short gsn_group_retreat;
+short gsn_holy_shroud;
+short gsn_seraphic_mantle;
+short gsn_shield_of_faith;
+short gsn_deny_magic;
+short gsn_nullify;
+short gsn_bane;
+short gsn_gking;
+short gsn_lesser_golem;
+short gsn_greater_golem;
+short gsn_aggressor;
+short gsn_subdue;
+short gsn_drowning;
+short gsn_hunters_awareness;
+short gsn_hunters_stealth;
+short gsn_hunters_net;
+short gsn_severed;
+short gsn_rites_of_preparation;
+short gsn_turn_undead;
+short gsn_benevolence;
+short gsn_intercept;
+short gsn_blinding_orb;
+short gsn_channeling;
+short gsn_empathy;
+short gsn_altruism;
+short gsn_tower_of_fortitude;
+short gsn_shadowsense;
+short gsn_champions_defense;
+short gsn_indomitable_spirit;
+short gsn_fervor;
+short gsn_piety;
+short gsn_spiritual_healing;
+short gsn_crimson_martyr;
+short gsn_infidels_fate;
+short gsn_mana_sickness;
+short gsn_mana_infusion;
+short gsn_tangleroot;
+short gsn_rprog_elven_down;
 
 /* GSNS */
-sh_int cabal_members[MAX_CABAL];
-sh_int cabal_max[MAX_CABAL];
+short cabal_members[MAX_CABAL];
+short cabal_max[MAX_CABAL];
 /*
  * Locals.
  */
@@ -560,7 +589,7 @@ char *string_space;
 char *top_string;
 char str_empty[1];
 
-sh_int count_data[30000];
+short count_data[30000];
 
 int top_affect;
 int top_area;
@@ -692,17 +721,17 @@ void load_area(FILE *fp)
 
 	pArea = new AREA_DATA;
 	/*
-	pArea->reset_first	= NULL;
-	pArea->reset_last	= NULL;
+	pArea->reset_first	= nullptr;
+	pArea->reset_last	= nullptr;
 	*/
 	pArea->file_name = fread_string(fp);
 
-	pArea->prev = NULL;
+	pArea->prev = nullptr;
 
 	zero_vector(pArea->area_flags);
 	SET_BIT(pArea->area_flags, AREA_LOADING); /* OLC */
 	pArea->vnum = top_area;					  /* OLC */
-	pArea->affected = NULL;
+	pArea->affected = nullptr;
 	pArea->name = fread_string(fp);
 	pArea->credits = fread_string(fp);
 	pArea->low_range = fread_number(fp);
@@ -723,7 +752,7 @@ void load_area(FILE *fp)
 
 	/* Morg - Valgrind fix. */
 	zero_vector(pArea->progtypes);
-	pArea->aprogs = NULL;
+	pArea->aprogs = nullptr;
 	pArea->temp = 0;
 	pArea->sky = 0;
 
@@ -739,7 +768,7 @@ void load_area(FILE *fp)
 	}
 
 	area_last = pArea;
-	pArea->next = NULL;
+	pArea->next = nullptr;
 
 	top_area++;
 }
@@ -850,12 +879,12 @@ void new_load_area(FILE *fp)
 				if (!str_cmp(word, "End"))
 				{
 					fMatch = true;
-					if (area_first == NULL)
+					if (area_first == nullptr)
 						area_first = pArea;
-					if (area_last != NULL)
+					if (area_last != nullptr)
 						area_last->next = pArea;
 					area_last = pArea;
-					pArea->next = NULL;
+					pArea->next = nullptr;
 					top_area++;
 					return;
 				}
@@ -909,7 +938,7 @@ void new_reset(ROOM_INDEX_DATA *pR, RESET_DATA *pReset)
 	{
 		pR->reset_last->next = pReset;
 		pR->reset_last = pReset;
-		pR->reset_last->next = NULL;
+		pR->reset_last->next = nullptr;
 	}
 
 	top_reset++;
@@ -934,7 +963,7 @@ void load_resets(FILE *fp)
 	for (;;)
 	{
 		ROOM_INDEX_DATA *pRoomIndex;
-		EXIT_DATA *pexit = NULL;
+		EXIT_DATA *pexit = nullptr;
 		char letter;
 		/*
 		OBJ_INDEX_DATA *temp_index;
@@ -1101,15 +1130,15 @@ void load_resets(FILE *fp)
 		}
 
 		/*
-		if (area_last->reset_first == NULL)
+		if (area_last->reset_first == nullptr)
 			area_last->reset_first = pReset;
 	
-		if (area_last->reset_last != NULL)
+		if (area_last->reset_last != nullptr)
 			area_last->reset_last->next	= pReset;
 
 		area_last->reset_last = pReset;
 		*/
-		pReset->next = NULL;
+		pReset->next = nullptr;
 		top_reset++;
 	}
 }
@@ -1146,13 +1175,13 @@ void load_shops(FILE *fp)
 		pMobIndex = get_mob_index(pShop->keeper);
 		pMobIndex->pShop = pShop;
 
-		if (shop_first == NULL)
+		if (shop_first == nullptr)
 			shop_first = pShop;
-		if (shop_last != NULL)
+		if (shop_last != nullptr)
 			shop_last->next = pShop;
 
 		shop_last = pShop;
-		pShop->next	= NULL;
+		pShop->next	= nullptr;
 		top_shop++;
 	}
 	*/
@@ -1169,7 +1198,7 @@ void load_cabal_items(void)
 	if (mPort != 9999)
 		return;
 
-	fp = fopen("citems.txt", "r");
+	fp = fopen(CABAL_ITEMS_FILE, "r");
 
 	if (!fp)
 		return;
@@ -1213,7 +1242,7 @@ void fix_exits(void)
 
 	for (auto iHash = 0; iHash < MAX_KEY_HASH; iHash++)
 	{
-		for (pRoomIndex = room_index_hash[iHash]; pRoomIndex != NULL; pRoomIndex = pRoomIndex->next)
+		for (pRoomIndex = room_index_hash[iHash]; pRoomIndex != nullptr; pRoomIndex = pRoomIndex->next)
 		{
 			bool fexit = false;
 
@@ -1222,11 +1251,11 @@ void fix_exits(void)
 			{
 				pexit = pRoomIndex->exit[door];
 
-				if (pexit != NULL)
+				if (pexit != nullptr)
 				{
-					if (pexit->u1.vnum <= 0 || get_room_index(pexit->u1.vnum) == NULL)
+					if (pexit->u1.vnum <= 0 || get_room_index(pexit->u1.vnum) == nullptr)
 					{
-						pexit->u1.to_room = NULL;
+						pexit->u1.to_room = nullptr;
 					}
 					else
 					{
@@ -1246,13 +1275,13 @@ void fix_exits(void)
 	/*
 	for (iHash = 0; iHash < MAX_KEY_HASH; iHash++)
 	{
-		for (pRoomIndex  = room_index_hash[iHash]; pRoomIndex != NULL; pRoomIndex  = pRoomIndex->next)
+		for (pRoomIndex  = room_index_hash[iHash]; pRoomIndex != nullptr; pRoomIndex  = pRoomIndex->next)
 		{
 			for (door = 0; door <= 5; door++)
 			{
-				if ((pexit = pRoomIndex->exit[door]) != NULL
-					&& (to_room = pexit->u1.to_room) != NULL
-					&& (pexit_rev = to_room->exit[rev_dir[door]]) != NULL
+				if ((pexit = pRoomIndex->exit[door]) != nullptr
+					&& (to_room = pexit->u1.to_room) != nullptr
+					&& (pexit_rev = to_room->exit[rev_dir[door]]) != nullptr
 					&& pexit_rev->u1.to_room != pRoomIndex
 					&& (pRoomIndex->vnum < 1200 || pRoomIndex->vnum > 1299))
 				{
@@ -1261,7 +1290,7 @@ void fix_exits(void)
 						door,
 						to_room->vnum,
 						rev_dir[door],
-						pexit_rev->u1.to_room == NULL ? 0 : pexit_rev->u1.to_room->vnum );
+						pexit_rev->u1.to_room == nullptr ? 0 : pexit_rev->u1.to_room->vnum );
 
 					bug(buf, 0);
 				}
@@ -1283,21 +1312,21 @@ void find_adjacents(void)
 
 		for (i = 0; i < MAX_ADJACENT; i++)
 		{
-			area->adjacent[i] = NULL;
+			area->adjacent[i] = nullptr;
 		}
 
-		for (room = room_list; room != NULL; room = room->next_room)
+		for (room = room_list; room != nullptr; room = room->next_room)
 		{
 			if (room->area != area)
 				continue;
 
 			for (auto pexit : room->exit)
 			{
-				if (pexit == NULL)
+				if (pexit == nullptr)
 					continue;
 
 				to_room = pexit->u1.to_room;
-				if (to_room != NULL && to_room->area != area)
+				if (to_room != nullptr && to_room->area != area)
 				{
 					in = false;
 
@@ -1327,7 +1356,7 @@ void area_update(void)
 	AREA_AFFECT_DATA *paf, *paf_next;
 	char buf[MAX_STRING_LENGTH];
 
-	for (pArea = area_first; pArea != NULL; pArea = pArea->next)
+	for (pArea = area_first; pArea != nullptr; pArea = pArea->next)
 	{
 		if (IS_SET(pArea->progtypes, APROG_TICK))
 			(pArea->aprogs->tick_prog)(pArea);
@@ -1370,7 +1399,7 @@ void area_update(void)
 				(pArea->aprogs->reset_prog)(pArea);
 
 			sprintf(buf, "%s has just been reset.", pArea->name);
-			wiznet(buf, NULL, NULL, WIZ_RESETS, 0, 0);
+			wiznet(buf, nullptr, nullptr, WIZ_RESETS, 0, 0);
 			pArea->age = number_range(0, 2);
 		}
 	}
@@ -1386,9 +1415,9 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 	CHAR_DATA *pMob;
 	CHAR_DATA *mob;
 	OBJ_DATA *pObj, *pObj2;
-	CHAR_DATA *LastMob = NULL;
-	OBJ_DATA *LastObj = NULL;
-	EXIT_DATA *pexit = NULL;
+	CHAR_DATA *LastMob = nullptr;
+	OBJ_DATA *LastObj = nullptr;
+	EXIT_DATA *pexit = nullptr;
 	bool last;
 	int level = 0;
 	char buf[MSL];
@@ -1398,19 +1427,19 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 	if (!pRoom)
 		return;
 
-	pMob = NULL;
+	pMob = nullptr;
 	last = true;
 
 	if (pRoom->trap)
 		pRoom->trap->armed = true;
 
-	for (pReset = pRoom->reset_first; pReset != NULL; pReset = pReset->next)
+	for (pReset = pRoom->reset_first; pReset != nullptr; pReset = pReset->next)
 	{
-		ROOM_INDEX_DATA *pRoomIndex = NULL;
-		MOB_INDEX_DATA *pMobIndex = NULL;
-		OBJ_INDEX_DATA *pObjIndex = NULL;
-		OBJ_INDEX_DATA *pObjToIndex = NULL;
-		OBJ_DATA *secondary = NULL;
+		ROOM_INDEX_DATA *pRoomIndex = nullptr;
+		MOB_INDEX_DATA *pMobIndex = nullptr;
+		OBJ_INDEX_DATA *pObjIndex = nullptr;
+		OBJ_INDEX_DATA *pObjToIndex = nullptr;
+		OBJ_DATA *secondary = nullptr;
 		int count, limit;
 
 		switch (pReset->command)
@@ -1418,7 +1447,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 			case 'M':
 				pMobIndex = get_mob_index(pReset->arg1);
 
-				if (pMobIndex == NULL)
+				if (pMobIndex == nullptr)
 				{
 					bug("Reset_area: 'M': bad vnum %d.", pReset->arg1);
 					continue;
@@ -1426,7 +1455,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				pRoomIndex = get_room_index(pReset->arg3);
 
-				if (pRoomIndex == NULL)
+				if (pRoomIndex == nullptr)
 				{
 					bug("Reset_area: 'R': bad vnum %d.", pReset->arg3);
 					continue;
@@ -1439,7 +1468,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				}
 
 				count = 0;
-				for (mob = pRoomIndex->people; mob != NULL; mob = mob->next_in_room)
+				for (mob = pRoomIndex->people; mob != nullptr; mob = mob->next_in_room)
 				{
 					if (mob->pIndexData == pMobIndex)
 					{
@@ -1557,8 +1586,8 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					limit = pReset->arg2;
 
 				if (pRoom->area->nplayer > 1
-					|| (LastObj = get_obj_type(pObjToIndex)) == NULL
-					|| (LastObj->in_room == NULL && !last)
+					|| (LastObj = get_obj_type(pObjToIndex)) == nullptr
+					|| (LastObj->in_room == nullptr && !last)
 					|| (pObjIndex->limtotal > 0 && pObjIndex->limcount >= pObjIndex->limtotal)
 					|| (pObjIndex->count >= limit /* && number_range(0,4) != 0 */)
 					|| (count = count_obj_list(pObjIndex, LastObj->contains)) > pReset->arg4)
@@ -1684,7 +1713,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					{
 						secondary = get_eq_char(LastMob, WEAR_WIELD);
 
-						if (secondary != NULL)
+						if (secondary != nullptr)
 						{
 							unequip_char(LastMob, secondary, true);
 							equip_char(LastMob, secondary, 18, true);
@@ -1697,7 +1726,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 					}
 					else if (pReset->arg3 == 18)
 					{
-						if (get_eq_char(LastMob, WEAR_WIELD) == NULL)
+						if (get_eq_char(LastMob, WEAR_WIELD) == nullptr)
 							equip_char(LastMob, pObj, 16, true);
 						else
 							equip_char(LastMob, pObj, pReset->arg3, true);
@@ -1716,7 +1745,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 				if (!LastMob)
 					continue;
 
-				for (rch = LastMob->in_room->people; rch != NULL; rch = rch->next_in_room)
+				for (rch = LastMob->in_room->people; rch != nullptr; rch = rch->next_in_room)
 				{
 					if (is_npc(rch) && (pReset->arg2 == rch->pIndexData->vnum))
 					{
@@ -1734,7 +1763,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 			case 'D':
 				pRoomIndex = get_room_index(pReset->arg1);
 
-				if (pRoomIndex == NULL)
+				if (pRoomIndex == nullptr)
 				{
 					bug("Reset_area: 'D': bad vnum %d.", pReset->arg1);
 					continue;
@@ -1742,7 +1771,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				pexit = pRoomIndex->exit[pReset->arg2];
 
-				if (pexit == NULL)
+				if (pexit == nullptr)
 					break;
 
 				SET_BIT(pexit->exit_info, EX_ISDOOR);
@@ -1825,9 +1854,9 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
 	mobile_count++;
 
-	if (pMobIndex == NULL)
+	if (pMobIndex == nullptr)
 	{
-		bug("Create_mobile: NULL pMobIndex.", 0);
+		bug("Create_mobile: nullptr pMobIndex.", 0);
 		exit(1);
 	}
 
@@ -1841,7 +1870,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 		mob->description = palloc_string(pMobIndex->description); /* OLC */
 
 	mob->id = get_mob_id();
-	mob->prompt = NULL;
+	mob->prompt = nullptr;
 
 	copy_vector(mob->progtypes, pMobIndex->progtypes);
 	total_wealth += pMobIndex->wealth;
@@ -2059,7 +2088,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
 	mob->position = mob->start_pos;
 	mob->cabal = mob->pIndexData->cabal;
-	mob->home_room = NULL;
+	mob->home_room = nullptr;
 
 	/* link the mob to the world list */
 	mob->next = char_list;
@@ -2076,7 +2105,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	int i;
 	AFFECT_DATA *paf;
 
-	if (parent == NULL || clone == NULL || !is_npc(parent))
+	if (parent == nullptr || clone == nullptr || !is_npc(parent))
 		return;
 
 	/* start fixing values */
@@ -2153,7 +2182,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	}
 
 	/* now add the affects */
-	for (paf = parent->affected; paf != NULL; paf = paf->next)
+	for (paf = parent->affected; paf != nullptr; paf = paf->next)
 	{
 		affect_to_char(clone, paf);
 	}
@@ -2169,15 +2198,15 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 	OBJ_DATA *obj;
 	int i;
 
-	if (pObjIndex == NULL)
+	if (pObjIndex == nullptr)
 	{
-		bug("Create_object: NULL pObjIndex.");
+		bug("Create_object: nullptr pObjIndex.");
 		exit(1);
 	}
 
 	obj = new_obj();
 	obj->pIndexData = pObjIndex;
-	obj->in_room = NULL;
+	obj->in_room = nullptr;
 	obj->ohp = 0;
 
 	if (pObjIndex->new_format)
@@ -2194,7 +2223,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 	if (pObjIndex->wear_loc_name)
 		obj->wear_loc_name = palloc_string(pObjIndex->wear_loc_name);
 	else
-		obj->wear_loc_name = NULL;
+		obj->wear_loc_name = nullptr;
 
 	obj->item_type = pObjIndex->item_type;
 
@@ -2217,7 +2246,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 	copy_vector(obj->progtypes, pObjIndex->progtypes);
 
 	/* Morg - Valgrind Fix */
-	obj->contains = NULL;
+	obj->contains = nullptr;
 
 	if (pObjIndex->extra_descr)
 	{
@@ -2326,7 +2355,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 			break;
 	}
 
-	for (paf = pObjIndex->affected; paf != NULL; paf = paf->next)
+	for (paf = pObjIndex->affected; paf != nullptr; paf = paf->next)
 	{
 		if (paf->location == APPLY_SPELL_AFFECT)
 		{
@@ -2359,7 +2388,7 @@ void clone_object(OBJ_DATA *parent, OBJ_DATA *clone)
 	OBJ_AFFECT_DATA *paf;
 	EXTRA_DESCR_DATA *ed, *ed_new;
 
-	if (parent == NULL || clone == NULL)
+	if (parent == nullptr || clone == nullptr)
 		return;
 
 	/* start fixing the object */
@@ -2395,13 +2424,13 @@ void clone_object(OBJ_DATA *parent, OBJ_DATA *clone)
 
 	/* affects */
 
-	for (paf = parent->affected; paf != NULL; paf = paf->next)
+	for (paf = parent->affected; paf != nullptr; paf = paf->next)
 	{
 		affect_to_obj(clone, paf);
 	}
 
 	/* extended desc */
-	for (ed = parent->extra_descr; ed != NULL; ed = ed->next)
+	for (ed = parent->extra_descr; ed != nullptr; ed = ed->next)
 	{
 		ed_new = new_extra_descr();
 		ed_new->keyword = palloc_string(ed->keyword);
@@ -2440,10 +2469,10 @@ void clear_char(CHAR_DATA *ch)
 	ch->max_mana = 100;
 	ch->move = 100;
 	ch->max_move = 100;
-	ch->last_fought = NULL;
+	ch->last_fought = nullptr;
 	ch->last_fight_time = 0;
-	ch->last_fight_name = NULL;
-	ch->on = NULL;
+	ch->last_fight_name = nullptr;
+	ch->on = nullptr;
 	ch->hometown = 0;
 	ch->arms = 2;
 	ch->legs = 2;
@@ -2457,13 +2486,13 @@ void clear_char(CHAR_DATA *ch)
  */
 char *get_extra_descr(const char *name, EXTRA_DESCR_DATA *ed)
 {
-	for (; ed != NULL; ed = ed->next)
+	for (; ed != nullptr; ed = ed->next)
 	{
 		if (is_name((char *)name, ed->keyword))
 			return ed->description;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2474,7 +2503,7 @@ MOB_INDEX_DATA *get_mob_index(int vnum)
 {
 	MOB_INDEX_DATA *pMobIndex;
 
-	for (pMobIndex = mob_index_hash[vnum % MAX_KEY_HASH]; pMobIndex != NULL; pMobIndex = pMobIndex->next)
+	for (pMobIndex = mob_index_hash[vnum % MAX_KEY_HASH]; pMobIndex != nullptr; pMobIndex = pMobIndex->next)
 	{
 		if (pMobIndex->vnum == vnum)
 			return pMobIndex;
@@ -2486,7 +2515,7 @@ MOB_INDEX_DATA *get_mob_index(int vnum)
 		exit(1);
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2497,7 +2526,7 @@ OBJ_INDEX_DATA *get_obj_index(int vnum)
 {
 	OBJ_INDEX_DATA *pObjIndex;
 
-	for (pObjIndex = obj_index_hash[vnum % MAX_KEY_HASH]; pObjIndex != NULL; pObjIndex = pObjIndex->next)
+	for (pObjIndex = obj_index_hash[vnum % MAX_KEY_HASH]; pObjIndex != nullptr; pObjIndex = pObjIndex->next)
 	{
 		if (pObjIndex->vnum == vnum)
 			return pObjIndex;
@@ -2509,7 +2538,7 @@ OBJ_INDEX_DATA *get_obj_index(int vnum)
 		exit(1);
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2520,7 +2549,7 @@ ROOM_INDEX_DATA *get_room_index(int vnum)
 {
 	ROOM_INDEX_DATA *pRoomIndex;
 
-	for (pRoomIndex = room_index_hash[vnum % MAX_KEY_HASH]; pRoomIndex != NULL; pRoomIndex = pRoomIndex->next)
+	for (pRoomIndex = room_index_hash[vnum % MAX_KEY_HASH]; pRoomIndex != nullptr; pRoomIndex = pRoomIndex->next)
 	{
 		if (pRoomIndex->vnum == vnum)
 			return pRoomIndex;
@@ -2532,7 +2561,7 @@ ROOM_INDEX_DATA *get_room_index(int vnum)
 		exit(1);
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2768,7 +2797,7 @@ char *fread_string(FILE *fp)
 			case EOF:
 				/* temp fix */
 				bug("Fread_string: EOF", 0);
-				return NULL;
+				return nullptr;
 				/* exit( 1 ); */
 				break;
 			case '\n':
@@ -2952,7 +2981,7 @@ char *fread_word(FILE *fp)
 	bug("Fread_word: word too long.", 0);
 	bug(word, 0);
 	exit(1);
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -2980,7 +3009,7 @@ void *iamlame(int sMem)
 		exit(1);
 	}
 
-	if (rgFreeList[iList] == NULL)
+	if (rgFreeList[iList] == nullptr)
 	{
 		pMem = palloc_struct(rgSizeList[iList]);
 	}
@@ -2996,7 +3025,7 @@ void *iamlame(int sMem)
 
 	return pMem;
 	*/
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -3062,11 +3091,11 @@ void *crappyold(int sMem)
 		exit(1);
 	}
 
-	if (pMemPerm == NULL || iMemPerm + sMem > MAX_PERM_BLOCK)
+	if (pMemPerm == nullptr || iMemPerm + sMem > MAX_PERM_BLOCK)
 	{
 		iMemPerm = 0;
 
-		if ((pMemPerm = calloc( 1, MAX_PERM_BLOCK ) ) == NULL)
+		if ((pMemPerm = calloc( 1, MAX_PERM_BLOCK ) ) == nullptr)
 		{
 			perror("Alloc_perm");
 			exit(1);
@@ -3079,7 +3108,7 @@ void *crappyold(int sMem)
 	sAllocPerm += sMem;
 	return pMem;
 	*/
-	return NULL;
+	return nullptr;
 }
 
 /*
@@ -3101,7 +3130,7 @@ char *iamnotereet(const char *str)
 	strcpy(str_new, str);
 	return str_new;
 	*/
-	return NULL;
+	return nullptr;
 }
 
 void do_areas(CHAR_DATA *ch, char *argument)
@@ -3211,20 +3240,20 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	count = 0;
 	count2 = 0;
 
-	for (fch = char_list; fch != NULL; fch = fch->next)
+	for (fch = char_list; fch != nullptr; fch = fch->next)
 	{
 		count++;
 
-		if (fch->pcdata != NULL)
+		if (fch->pcdata != nullptr)
 			num_pcs++;
 
-		for (af = fch->affected; af != NULL; af = af->next)
+		for (af = fch->affected; af != nullptr; af = af->next)
 		{
 			aff_count++;
 		}
 	}
 
-	for (fch = char_free; fch != NULL; fch = fch->next)
+	for (fch = char_free; fch != nullptr; fch = fch->next)
 	{
 		count2++;
 	}
@@ -3234,7 +3263,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	/* pcdata */
 	count = 0;
 
-	for (pc = pcdata_free; pc != NULL; pc = pc->next)
+	for (pc = pcdata_free; pc != nullptr; pc = pc->next)
 	{
 		count++;
 	}
@@ -3245,12 +3274,12 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	count = 0;
 	count2 = 0;
 
-	for (d = descriptor_list; d != NULL; d = d->next)
+	for (d = descriptor_list; d != nullptr; d = d->next)
 	{
 		count++;
 	}
 
-	for (d = descriptor_free; d != NULL; d = d->next)
+	for (d = descriptor_free; d != nullptr; d = d->next)
 	{
 		count2++;
 	}
@@ -3262,9 +3291,9 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	{
 		pObjIndex = get_obj_index(vnum);
 
-		if (pObjIndex != NULL)
+		if (pObjIndex != nullptr)
 		{
-			for (af = pObjIndex->affected; af != NULL; af = af->next)
+			for (af = pObjIndex->affected; af != nullptr; af = af->next)
 			{
 				aff_count++;
 			}
@@ -3279,17 +3308,17 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	count = 0;
 	count2 = 0;
 
-	for (obj = object_list; obj != NULL; obj = obj->next)
+	for (obj = object_list; obj != nullptr; obj = obj->next)
 	{
 		count++;
 
-		for (oaf = obj->affected; oaf != NULL; oaf = oaf->next)
+		for (oaf = obj->affected; oaf != nullptr; oaf = oaf->next)
 		{
 			aff_count++;
 		}
 	}
 
-	for (obj = obj_free; obj != NULL; obj = obj->next)
+	for (obj = obj_free; obj != nullptr; obj = obj->next)
 	{
 		count2++;
 	}
@@ -3298,7 +3327,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 
 	/* affects */
 	count = 0;
-	for (af = affect_free; af != NULL; af = af->next)
+	for (af = affect_free; af != nullptr; af = af->next)
 	{
 		count++;
 	}
@@ -3325,7 +3354,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	{
 		pMobIndex = get_mob_index(vnum);
 
-		if (pMobIndex != NULL)
+		if (pMobIndex != nullptr)
 		{
 			nMatch++;
 			fprintf(fp, "#%-4d %3d active %3d killed     %s\n", pMobIndex->vnum, pMobIndex->count, pMobIndex->killed, pMobIndex->short_descr);
@@ -3346,7 +3375,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	{
 		pObjIndex = get_obj_index(vnum);
 
-		if (pObjIndex != NULL)
+		if (pObjIndex != nullptr)
 		{
 			nMatch++;
 			fprintf(fp, "#%-4d %3d active %3d reset      %s\n", pObjIndex->vnum, pObjIndex->count, pObjIndex->reset_num, pObjIndex->short_descr);
@@ -3465,7 +3494,7 @@ void init_mm()
 		piState[iState] = (piState[iState - 1] + piState[iState - 2]) & ((1 << 30) - 1);
 	}
 #else
-	srandom(time(NULL) ^ getpid());
+	srandom(time(nullptr) ^ getpid());
 #endif
 }
 
@@ -3568,14 +3597,14 @@ void smash_tilde(char *str)
  */
 bool str_cmp(const char *astr, const char *bstr)
 {
-	if (astr == NULL)
+	if (astr == nullptr)
 	{
 		//	sprintf(buf,"Str_cmp: null astr, bstr: %s (%s:%d dev=pimp)",gLastFile, gLastLine, bstr);
 		//	bug( buf, 0 );
 		return true;
 	}
 
-	if (bstr == NULL)
+	if (bstr == nullptr)
 	{
 		//	sprintf(buf,"Str_cmp: null bstr, astr: %s",astr);
 		//	bug( buf, 0 );
@@ -3598,13 +3627,13 @@ bool str_cmp(const char *astr, const char *bstr)
  */
 bool str_prefix(const char *astr, const char *bstr)
 {
-	if (astr == NULL)
+	if (astr == nullptr)
 	{
 		bug("Strn_cmp: null astr.", 0);
 		return true;
 	}
 
-	if (bstr == NULL)
+	if (bstr == nullptr)
 	{
 		bug("Strn_cmp: null bstr.", 0);
 		return true;
@@ -3697,7 +3726,7 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
 
 	fp = fopen(file, "a");
 
-	if (fp == NULL)
+	if (fp == nullptr)
 	{
 		perror(file);
 		send_to_char("Could not open the file!\n\r", ch);
@@ -3721,7 +3750,7 @@ void bug(const char *str, int param)
 {
 	std::string buffer;
 
-	if (fpArea != NULL)
+	if (fpArea != nullptr)
 	{
 		int iLine;
 		int iChar;
@@ -3839,7 +3868,7 @@ void do_alist(CHAR_DATA *ch,char *argument)
 	i = atoi(argument);
 	buf[0]='\0';
 
-	for(pArea = area_first; pArea != NULL; pArea = pArea->next)
+	for(pArea = area_first; pArea != nullptr; pArea = pArea->next)
 	{
 		if(pArea->min_vnum<=i && pArea->max_vnum>=i)
 				sprintf(buf,"%-25s: %4d %4d\n\r",pArea->name,pArea->min_vnum,pArea->max_vnum);
@@ -3854,7 +3883,7 @@ void do_alist(CHAR_DATA *ch,char *argument)
 		return send_to_char("No areas containing that vnum were found.\n\r",ch);
 	}
 
-	for (pArea = area_first; pArea != NULL; pArea = pArea->next)
+	for (pArea = area_first; pArea != nullptr; pArea = pArea->next)
 	{
 		i++;
 		sprintf(buf,"%-25s: %4d %4d",pArea->name,pArea->min_vnum,pArea->max_vnum);
@@ -3908,7 +3937,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	{
 		lObjIndex = get_obj_index(i);
 
-		if (lObjIndex == NULL)
+		if (lObjIndex == nullptr)
 			continue;
 
 		lObjIndex->limcount = 0;
@@ -3917,11 +3946,11 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	send_to_char("Counts set to zero....\n\r", ch);
 	send_to_char("Loading all in-game counts now (excluding PC objects).\n\r", ch);
 
-	for (obj = object_list; obj != NULL; obj = obj->next)
+	for (obj = object_list; obj != nullptr; obj = obj->next)
 	{
 		carrier = obj->carried_by;
 
-		if (carrier != NULL && !is_npc(carrier))
+		if (carrier != nullptr && !is_npc(carrier))
 			continue;
 
 		obj->pIndexData->limcount++;
@@ -3936,7 +3965,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 
 	fpChar_list = fopen(PLAYER_LIST, "r");
 
-	if (fpChar_list == NULL)
+	if (fpChar_list == nullptr)
 	{
 		perror(PLAYER_LIST);
 		exit(1);
@@ -3953,7 +3982,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 
 		fpChar = fopen(strPlr, "r");
 
-		if (fpChar == NULL)
+		if (fpChar == nullptr)
 		{
 			perror(strPlr);
 			exit(1);
@@ -3983,7 +4012,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 				if (!str_cmp(word, "Vnum"))
 				{
 					vnum = fread_number(fpChar);
-					if (get_obj_index(vnum) == NULL)
+					if (get_obj_index(vnum) == nullptr)
 					{
 						/*	bug("Bad obj vnum in limits: %d",vnum); */
 					}
@@ -3997,7 +4026,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 		}
 
 		fclose(fpChar);
-		fpChar = NULL;
+		fpChar = nullptr;
 	}
 
 	fclose(fpChar_list);
@@ -4013,12 +4042,12 @@ void load_rooms(FILE *fp)
 	char error_v[MAX_STRING_LENGTH];
 	int i;
 
-	if (area_last == NULL)
+	if (area_last == nullptr)
 		bugout("Load_resets: no #AREA seen yet.");
 
 	for (;;)
 	{
-		sh_int vnum = 0;
+		short vnum = 0;
 		char letter, str[20];
 		char *bword;
 		long bitvect;
@@ -4040,7 +4069,7 @@ void load_rooms(FILE *fp)
 
 		fBootDb= false;
 
-		if (get_room_index(vnum) != NULL)
+		if (get_room_index(vnum) != nullptr)
 		{
 			sprintf(error_v, "Load_rooms: vnum %d duplicated.", vnum);
 			bugout(error_v);
@@ -4049,18 +4078,18 @@ void load_rooms(FILE *fp)
 		fBootDb = true;
 
 		pRoomIndex = new ROOM_INDEX_DATA;
-		pRoomIndex->reset_first = NULL;
-		pRoomIndex->reset_last = NULL;
+		pRoomIndex->reset_first = nullptr;
+		pRoomIndex->reset_last = nullptr;
 		pRoomIndex->owner = palloc_string("");
 		pRoomIndex->move_progs= false;
-		pRoomIndex->people = NULL;
-		pRoomIndex->contents = NULL;
-		pRoomIndex->extra_descr = NULL;
-		pRoomIndex->alt_description = NULL;
+		pRoomIndex->people = nullptr;
+		pRoomIndex->contents = nullptr;
+		pRoomIndex->extra_descr = nullptr;
+		pRoomIndex->alt_description = nullptr;
 		pRoomIndex->alt_description_cond = 0;
-		pRoomIndex->alt_name = NULL;
-		pRoomIndex->trap = NULL;
-		pRoomIndex->affected = NULL;
+		pRoomIndex->alt_name = nullptr;
+		pRoomIndex->trap = nullptr;
+		pRoomIndex->affected = nullptr;
 		zero_vector(pRoomIndex->room_flags);
 
 		for (i = 0; i < MAX_TRACKS; i++)
@@ -4079,7 +4108,7 @@ void load_rooms(FILE *fp)
 		pRoomIndex->sector_type = sect_table[sect_lookup(fread_word(fp))].value;
 
 		/* Morg - Valgrind fix. */
-		pRoomIndex->rprogs = NULL;
+		pRoomIndex->rprogs = nullptr;
 		zero_vector(pRoomIndex->progtypes);
 		pRoomIndex->cabal = 0;
 		pRoomIndex->has_rune= false;
@@ -4095,7 +4124,7 @@ void load_rooms(FILE *fp)
 		auto pRoomIndex_exit_size = std::size(pRoomIndex->exit);
 		for (door = 0; door < pRoomIndex_exit_size; door++)
 		{
-			pRoomIndex->exit[door] = NULL;
+			pRoomIndex->exit[door] = nullptr;
 		}
 
 		/* defaults */
@@ -4226,7 +4255,7 @@ void load_newresets(FILE *fp)
 	int iLastRoom = 0;
 	int iLastObj = 0;
 
-	if (area_last == NULL)
+	if (area_last == nullptr)
 	{
 		bug("Load_resets: no #AREA seen yet.", 0);
 		exit(1);
@@ -4234,7 +4263,7 @@ void load_newresets(FILE *fp)
 
 	for (;;)
 	{
-		ROOM_INDEX_DATA *pRoomIndex = NULL;
+		ROOM_INDEX_DATA *pRoomIndex = nullptr;
 		char letter, tletter;
 		OBJ_INDEX_DATA *temp_index;
 		char *word;
@@ -4429,7 +4458,7 @@ void load_newresets(FILE *fp)
 
 		fread_to_eol(fp);
 
-		pReset->next = NULL;
+		pReset->next = nullptr;
 		top_reset++;
 	}
 }
@@ -4449,7 +4478,7 @@ void load_race_info(void)
 	race_list = new_race_data();
 	race_list->first = race_list;
 
-	for (i = 0; race_table[i].name != NULL; i++)
+	for (i = 0; race_table[i].name != nullptr; i++)
 	{
 		race_list->name = palloc_string(race_table[i].name);
 		race_list->pc_race = race_table[i].pc_race;
@@ -4510,7 +4539,7 @@ void load_race_info(void)
 		race_list = race_list->next;
 	}
 
-	race_list->next = NULL;
+	race_list->next = nullptr;
 	race_list = race_list->first;
 }
 

@@ -1,6 +1,25 @@
 /* IMPROGS Expansion: ROOM PROGS (Eladrian) */
 
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "rprog.h"
+#include "quest.h"
+#include "comm.h"
+#include "fight.h"
+#include "newmem.h"
+#include "magic.h"
+#include "interp.h"
+#include "recycle.h"
+#include "tables.h"
+#include "room.h"
+#include "rift.h"
+#include "db.h"
+#include "devextra.h"
+#include "utility.h"
+#include "act_move.h"
 
 const struct improg_type rprog_table[] =
 {
@@ -21,7 +40,7 @@ const struct improg_type rprog_table[] =
 	{"open_prog", "open_prog_nodoor", (void *)open_prog_nodoor, "None"},
 	{"entry_prog", "entry_prog_iseldheim_lift", (void *)entry_prog_iseldheim_lift, "None"},
 	{"drop_prog", "drop_prog_elven_star", (void *)drop_prog_elven_star, "None"},
-	{NULL, NULL, NULL, NULL},
+	{nullptr, nullptr, nullptr, nullptr},
 };
 
 bool rprog_unset(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
@@ -39,37 +58,37 @@ bool rprog_unset(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 	// IF YOU ADD A NEW TYPE ALSO PUT IT IN DB.C DO_ADUMP
 	if (!str_cmp(progtype, "pulse_prog"))
 	{
-		room->rprogs->pulse_prog = NULL;
+		room->rprogs->pulse_prog = nullptr;
 		free_pstring(room->rprogs->pulse_name);
 		REMOVE_BIT(room->progtypes, RPROG_PULSE);
 	}
 	else if (!str_cmp(progtype, "entry_prog"))
 	{
-		room->rprogs->entry_prog = NULL;
+		room->rprogs->entry_prog = nullptr;
 		free_pstring(room->rprogs->entry_name);
 		REMOVE_BIT(room->progtypes, RPROG_ENTRY);
 	}
 	else if (!str_cmp(progtype, "move_prog"))
 	{
-		room->rprogs->move_prog = NULL;
+		room->rprogs->move_prog = nullptr;
 		free_pstring(room->rprogs->move_name);
 		REMOVE_BIT(room->progtypes, RPROG_MOVE);
 	}
 	else if (!str_cmp(progtype, "drop_prog"))
 	{
-		room->rprogs->drop_prog = NULL;
+		room->rprogs->drop_prog = nullptr;
 		free_pstring(room->rprogs->drop_name);
 		REMOVE_BIT(room->progtypes, RPROG_DROP);
 	}
 	else if (!str_cmp(progtype, "speech_prog"))
 	{
-		room->rprogs->speech_prog = NULL;
+		room->rprogs->speech_prog = nullptr;
 		free_pstring(room->rprogs->speech_name);
 		REMOVE_BIT(room->progtypes, RPROG_SPEECH);
 	}
 	else if (!str_cmp(progtype, "open_prog"))
 	{
-		room->rprogs->open_prog = NULL;
+		room->rprogs->open_prog = nullptr;
 		free_pstring(room->rprogs->open_name);
 		REMOVE_BIT(room->progtypes, RPROG_OPEN);
 	}
@@ -180,7 +199,7 @@ void pulse_prog_cim_conv(ROOM_INDEX_DATA *room)
 void entry_prog_ilopheth_flute(ROOM_INDEX_DATA *room, CHAR_DATA *ch)
 {
 	ROOM_INDEX_DATA *cliff, *adj;
-	CHAR_DATA *man = NULL, *vch;
+	CHAR_DATA *man = nullptr, *vch;
 	char buf[MSL];
 
 	cliff = get_room_index(9121);
@@ -260,7 +279,7 @@ bool open_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, EXIT_DATA *ex
 	OBJ_DATA *obj, *obj2;
 	bool found= false;
 
-	for (obj2 = ch->carrying; obj2 != NULL; obj2 = obj2->next_content)
+	for (obj2 = ch->carrying; obj2 != nullptr; obj2 = obj2->next_content)
 	{
 		if (obj2->pIndexData->vnum == 24596)
 		{
@@ -290,7 +309,7 @@ bool move_prog_mudschool_key(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 	OBJ_DATA *obj;
 	bool found= false;
 
-	for (obj = ch->carrying; obj != NULL; obj = obj->next)
+	for (obj = ch->carrying; obj != nullptr; obj = obj->next)
 	{
 		if (obj->pIndexData->vnum == 24596)
 		{
@@ -349,13 +368,13 @@ void pulse_prog_mudschool_snake(ROOM_INDEX_DATA *room)
 	if (number_percent() > 90)
 		return;
 
-	for (ch = room->people; ch != NULL; ch = ch->next_in_room)
+	for (ch = room->people; ch != nullptr; ch = ch->next_in_room)
 	{
 		if (is_affected(ch, gsn_trip))
 			continue;
 	}
 
-	if (ch == NULL)
+	if (ch == nullptr)
 		return;
 
 	snake = create_mobile(get_mob_index(24546));
@@ -420,7 +439,7 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 
 	act("As you pass through, the stone rolls violently back into place!", ch, 0, 0, TO_CHAR);
 
-	for (corpse = room->contents; corpse != NULL; corpse = corpse->next)
+	for (corpse = room->contents; corpse != nullptr; corpse = corpse->next)
 	{
 		if (corpse->pIndexData->vnum == 24558)
 		{
@@ -478,7 +497,7 @@ void speech_prog_elven_down(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 {
 	AFFECT_DATA af;
 	ROOM_AFFECT_DATA raf;
-	CHAR_DATA *ich = NULL;
+	CHAR_DATA *ich = nullptr;
 
 	if (is_npc(ch))
 		return;
@@ -498,7 +517,7 @@ void speech_prog_elven_down(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 		act("A chill wind blows through the room, extinguishing the candle.", ch, 0, 0, TO_CHAR);
 		act("A chill wind blows through the room, extinguishing the candle.", ch, 0, 0, TO_ROOM);
 
-		for (ich = ch->in_room->people; ich != NULL; ich = ich->next_in_room)
+		for (ich = ch->in_room->people; ich != nullptr; ich = ich->next_in_room)
 		{
 			// Small char affect that will restore the original light after a tick.
 			init_affect(&af);
@@ -516,7 +535,7 @@ void speech_prog_elven_down(ROOM_INDEX_DATA *room, CHAR_DATA *ch, char *speech)
 
 void rprog_elven_down_end(CHAR_DATA *ch, AFFECT_DATA *af)
 {
-	ROOM_INDEX_DATA *to_room = NULL;
+	ROOM_INDEX_DATA *to_room = nullptr;
 
 	to_room = get_room_index(4704);
 
@@ -534,7 +553,7 @@ void pulse_prog_elven_star(ROOM_INDEX_DATA *room)
 	CHAR_DATA *ch=room->people;
 	int nMatch=0;
 
-	for(obj=room->contents; obj != NULL; obj=obj->next_content)
+	for(obj=room->contents; obj != nullptr; obj=obj->next_content)
 	{
 		if(obj->pIndexData->vnum == (4637 || 4638 || 4639 || 4640 || 4641))
 		{
@@ -543,7 +562,7 @@ void pulse_prog_elven_star(ROOM_INDEX_DATA *room)
 		}
 		if(nMatch > 4)
 		{
-			if(ch != NULL)
+			if(ch != nullptr)
 			{
 				act("As the star is completed, you hear a noise nearby.",ch,0,0,TO_ROOM);
 				act("Their purpose fulfilled, the gems disintegrate.",ch,0,0,TO_ROOM);

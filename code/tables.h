@@ -34,11 +34,7 @@
 #ifndef TABLES_H
 #define TABLES_H
 
-#include <sys/types.h>
-#include <stdio.h>
-#include <time.h>
 #include "merc.h"
-#include "material.h"
 #include "weather_enums.h"
 
 struct flag_type
@@ -68,9 +64,9 @@ struct cabal_type
 	char *extitle;
 	char *long_name;
 	bool independent; /* true for loners */
-	sh_int item_vnum;
-	sh_int max_members;
-	sh_int start_level;
+	short item_vnum;
+	short max_members;
+	short start_level;
 };
 
 struct cabal_list
@@ -150,11 +146,11 @@ struct sect_type
 
 struct quest_type
 {
-	sh_int number;
+	short number;
 	char *name;
 	char *description;
-	sh_int minlevel;
-	sh_int maxlevel;
+	short minlevel;
+	short maxlevel;
 	char *stages[9];
 };
 
@@ -188,7 +184,7 @@ struct style_type
 struct style_list
 {
 	char *name;
-	sh_int percent;
+	short percent;
 };
 
 struct para_sphere
@@ -200,24 +196,24 @@ struct para_sphere
 
 struct ele_sphere
 {
-	sh_int element;
-	sh_int type;
+	short element;
+	short type;
 	char *name;
 };
 
 struct climate_type
 {
 	char *name;
-	sh_int number;
-	sh_int skyfreqs[Seasons::SeasonsCount][WeatherCondition::MaxWeatherCondition];
-	sh_int tempfreqs[Seasons::SeasonsCount][Temperature::MaxTemperature];
+	short number;
+	short skyfreqs[Seasons::SeasonsCount][WeatherCondition::MaxWeatherCondition];
+	short tempfreqs[Seasons::SeasonsCount][Temperature::MaxTemperature];
 };
 
 struct demon_type
 {
 	char *name;
-	sh_int number;
-	sh_int type;
+	short number;
+	short type;
 };
 
 struct beauty_type
@@ -229,13 +225,6 @@ struct beauty_type
 struct order_list
 {
 	char * command;
-};
-
-struct prof_cmd_type
-{
-	char *name;
-	DO_FUN *cmd;
-	char *requires;
 };
 
 extern const struct flag_type aftype_table[];
@@ -308,6 +297,5 @@ extern const struct flag_type position_flags[];
 extern const struct flag_type portal_flags[];
 extern const struct flag_type furniture_flags[];
 extern const struct display_type altdesc_condtable[];
-//extern const struct proficiency_type prof_table[];
 
 #endif /* TABLES_H */

@@ -9,6 +9,12 @@
 #include "spec.h"
 #include "tables.h"
 #include "interp.h"
+#include "comm.h"
+#include "act_comm.h"
+#include "db.h"
+#include "handler.h"
+#include "devextra.h"
+
 va_list arglist;
 
 DECLARE_SPEC(ispec_g_money);

@@ -2,6 +2,13 @@
 When you work on anything please create an issue for it or comment on the appropriate issue to avoid duplication of work. 
 Please be descriptive in your issues, posts, and PRs and describe what you are trying to achieve.
 
+## Setting up your Environment
+
+1. Clone this repo to a Linux Machine or a WSL Distro on a Windows Machine
+	- More information about WSL can be found [here](https://code.visualstudio.com/docs/remote/wsl)
+2. Install the Dev Dependencies by running `dev-install.sh` in the root directory
+3. Run `cmake .` from the root directory
+
 ## Commenting
 We use the Doxygen format of commenting and documentation generation. For styling and use, please see: [Doxygen Docs](https://www.doxygen.nl/manual/docblocks.html). Not everything needs to be commented, but complex topics should have comments added to ease reading them. Try to be "self documenting" by using descriptive variable names, short function bodies, and adding spacer lines between ideas where appropriate. If you think someone might wonder 'why' something was done a certain way and you have a good reason, that's a good spot for  a friendly comment. Provide supporting information for functions (and their parameters) and classes so community members can easily understand how and why to use the tools available.
 

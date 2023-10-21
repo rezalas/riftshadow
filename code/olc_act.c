@@ -11,7 +11,55 @@
  *                                                                         *
  ***************************************************************************/
 
+#ifdef macintosh
+#include <types.h>
+#else
+#include <sys/types.h>
+#endif
+
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <algorithm>
 #include "olc_act.h"
+#include "handler.h"
+#include "olc.h"
+#include "tables.h"
+#include "recycle.h"
+#include "lookup.h"
+#include "spec.h"
+#include "misc.h"
+#include "act_comm.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "act_wiz.h"
+#include "characterClasses/warrior.h"
+#include "comm.h"
+#include "db.h"
+#include "bit.h"
+#include "string.h"
+#include "aprog.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "chardef.h"
+#include "const.h"
+#include "material.h"
+#include "iprog.h"
+#include "mprog.h"
+#include "rprog.h"
+#include "aprog.h"
+#include "help.h"
+#include "mem.h"
+#include "room.h"
+#include "interp.h"
+#include "newmem.h"
+#include "magic.h"
+#include "./include/fmt/format.h"
+#include "./include/fmt/printf.h"
+
 
 /*
  * This table contains help commands and a brief description of each.
@@ -51,7 +99,7 @@ const struct olc_help_type help_table[] =
 	{"portal", portal_flags, "Portal types."},
 	{"furniture", furniture_flags, "Furniture types."},
 	{"traps", trap_table, "Trap types."},
-	{NULL, NULL, NULL}
+	{nullptr, nullptr, nullptr}
 };
 
 const struct wear_type wear_table[] =
@@ -102,7 +150,7 @@ void show_flag_cmds(CHAR_DATA *ch, const struct flag_type *flag_table)
 	buf1[0] = '\0';
 	col = 0;
 
-	for (flag = 0; flag_table[flag].name != NULL; flag++)
+	for (flag = 0; flag_table[flag].name != nullptr; flag++)
 	{
 		if (flag_table[flag].settable)
 		{
@@ -165,7 +213,7 @@ void show_spec_cmds( CHAR_DATA *ch )
 	buf1[0] = '\0';
 	col = 0;
 	send_to_char( "Preceed special functions with 'spec_'\n\r\n\r", ch );
-	for (spec = 0; spec_table[spec].function != NULL; spec++)
+	for (spec = 0; spec_table[spec].function != nullptr; spec++)
 	{
 	sprintf( buf, "%-19.18s", &spec_table[spec].name[5] );
 	strcat( buf1, buf );
@@ -199,7 +247,7 @@ bool show_help(CHAR_DATA *ch, char *argument)
 		send_to_char("Syntax:  ? [command]\n\r\n\r", ch);
 		send_to_char("[command]  [description]\n\r", ch);
 
-		for (cnt = 0; help_table[cnt].command != NULL; cnt++)
+		for (cnt = 0; help_table[cnt].command != nullptr; cnt++)
 		{
 			sprintf(buf, "%-10.10s -%s\n\r", capitalize(help_table[cnt].command), help_table[cnt].desc);
 			send_to_char(buf, ch);
@@ -212,7 +260,7 @@ bool show_help(CHAR_DATA *ch, char *argument)
 	 * Find the command, show changeable data.
 	 * ---------------------------------------
 	 */
-	for (cnt = 0; help_table[cnt].command != NULL; cnt++)
+	for (cnt = 0; help_table[cnt].command != nullptr; cnt++)
 	{
 		if (arg[0] == help_table[cnt].command[0] && !str_prefix(arg, help_table[cnt].command))
 		{
@@ -325,7 +373,7 @@ bool redit_mview(CHAR_DATA *ch, char *argument)
 	}
 
 	pMob = get_mob_index(vnum);
-	if (pMob == NULL)
+	if (pMob == nullptr)
 		return false;
 
 	send_to_char("Viewing mobile:\n\r", ch);
@@ -379,7 +427,7 @@ bool redit_mlist(CHAR_DATA *ch, char *argument)
 	{
 		pMobIndex = get_mob_index(vnum);
 
-		if (pMobIndex != NULL)
+		if (pMobIndex != nullptr)
 		{
 			if (fAll || is_name(arg, pMobIndex->player_name))
 			{
@@ -653,7 +701,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 
 		speech = find_speech(pMobIndex, cmd);
 
-		if (speech != NULL)
+		if (speech != nullptr)
 		{
 			sort_speech(speech);
 
@@ -698,7 +746,7 @@ bool medit_speech(CHAR_DATA *ch, char *argument)
 					new_line->type = type;
 					new_line->text = palloc_string(argument);
 
-					for (lptr = speech->first_line; lptr->next != NULL; lptr = lptr->next)
+					for (lptr = speech->first_line; lptr->next != nullptr; lptr = lptr->next)
 					{
 						lptr->next = new_line;
 					}
@@ -864,7 +912,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("The following mob progs are available:\n\r", ch);
 
-		for (count = 0; mprog_table[count].type != NULL; count++)
+		for (count = 0; mprog_table[count].type != nullptr; count++)
 		{
 			if (ch->pcdata->security < 10)
 			{
@@ -900,7 +948,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 			return false;
 		}
 
-		for (count = 0; mprog_table[count].type != NULL; count++)
+		for (count = 0; mprog_table[count].type != nullptr; count++)
 		{
 			if (!str_cmp(mprog_table[count].name, prog))
 			{
@@ -917,7 +965,7 @@ bool medit_prog(CHAR_DATA *ch, char *argument)
 		}
 		else if (!str_prefix(add, "add"))
 		{
-			if (pMobIndex->mprogs == NULL)
+			if (pMobIndex->mprogs == nullptr)
 			{
 				pMobIndex->mprogs = new MPROG_DATA;
 				CLEAR_MEM(pMobIndex->mprogs, sizeof(MPROG_DATA))
@@ -961,7 +1009,7 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("The following object programs are available:\n\r", ch);
 
-		for (count = 0; iprog_table[count].type != NULL; count++)
+		for (count = 0; iprog_table[count].type != nullptr; count++)
 		{
 			if (ch->pcdata->security < 10)
 			{
@@ -998,13 +1046,13 @@ bool oedit_prog(CHAR_DATA *ch, char *argument)
 			return false;
 		}
 
-		if (pObjIndex->iprogs == NULL)
+		if (pObjIndex->iprogs == nullptr)
 		{
 			pObjIndex->iprogs = new IPROG_DATA;
 			CLEAR_MEM(pObjIndex->iprogs, sizeof(IPROG_DATA))
 		}
 
-		for (count = 0; iprog_table[count].type != NULL; count++)
+		for (count = 0; iprog_table[count].type != nullptr; count++)
 		{
 			if (!str_cmp(iprog_table[count].name, prog))
 			{
@@ -1087,7 +1135,7 @@ bool oedit_spec(CHAR_DATA *ch, char *argument)
 	{
 		if (pObjIndex->spec_prog.func)
 		{
-			pObjIndex->spec_prog.func = NULL;
+			pObjIndex->spec_prog.func = nullptr;
 			pObjIndex->spec_prog.trapvector = 0;
 			sprintf(buf, "The item spec for this item has been cleared.\n\r");
 			send_to_char(buf, ch);
@@ -1191,7 +1239,7 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 		else if (!str_cmp(arg1, "delete"))
 		{
 			free_trap(pRoom->trap);
-			pRoom->trap = NULL;
+			pRoom->trap = nullptr;
 			send_to_char("Trap deleted.\n\r", ch);
 			return true;
 		}
@@ -1209,8 +1257,8 @@ bool redit_trap(CHAR_DATA *ch, char *argument)
 		trap->quality = 0;
 		trap->complexity = 0;
 		trap->timer = 0;
-		trap->trig_echo = NULL;
-		trap->exec_echo = NULL;
+		trap->trig_echo = nullptr;
+		trap->exec_echo = nullptr;
 		trap->armed = false;
 		pRoom->trap = trap;
 		send_to_char("Trap created.\n\r", ch);
@@ -1251,7 +1299,7 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("The following room programs are available:\n\r", ch);
 
-		for (count = 0; rprog_table[count].type != NULL; count++)
+		for (count = 0; rprog_table[count].type != nullptr; count++)
 		{
 			if (ch->pcdata->security < 10)
 			{
@@ -1288,13 +1336,13 @@ bool redit_prog(CHAR_DATA *ch, char *argument)
 			return false;
 		}
 
-		if (pRoomIndex->rprogs == NULL)
+		if (pRoomIndex->rprogs == nullptr)
 		{
 			pRoomIndex->rprogs = new RPROG_DATA;
 			CLEAR_MEM(pRoomIndex->rprogs, sizeof(RPROG_DATA))
 		}
 
-		for (count = 0; rprog_table[count].type != NULL; count++)
+		for (count = 0; rprog_table[count].type != nullptr; count++)
 		{
 			if (!str_cmp(rprog_table[count].name, prog))
 			{
@@ -1357,7 +1405,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		free_pstring(pRoom->alt_description);
 		free_pstring(pRoom->alt_name);
 		pRoom->alt_description_cond = 0;
-		pRoom->alt_description = NULL;
+		pRoom->alt_description = nullptr;
 
 		send_to_char("Alternate description deleted.\n\r", ch);
 		return true;
@@ -1368,7 +1416,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 		char buf[MSL];
 		send_to_char("Alternate description types:\n\r", ch);
 
-		for (int i = 0; altdesc_condtable[i].name != NULL; i++)
+		for (int i = 0; altdesc_condtable[i].name != nullptr; i++)
 		{
 			sprintf(buf, "%s - %s.\n\r", altdesc_condtable[i].name, capitalize(altdesc_condtable[i].display));
 			send_to_char(buf, ch);
@@ -1393,7 +1441,7 @@ bool redit_altdesc(CHAR_DATA *ch, char *argument)
 
 		int i;
 
-		for (i = 0; altdesc_condtable[i].name != NULL; i++)
+		for (i = 0; altdesc_condtable[i].name != nullptr; i++)
 		{
 			if (!str_cmp(altdesc_condtable[i].name, argument))
 				break;
@@ -1490,7 +1538,7 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("The following area programs are available:\n\r", ch);
 
-		for (count = 0; aprog_table[count].type != NULL; count++)
+		for (count = 0; aprog_table[count].type != nullptr; count++)
 		{
 			if (ch->pcdata->security < 10)
 			{
@@ -1526,13 +1574,13 @@ bool aedit_prog(CHAR_DATA *ch, char *argument)
 			return false;
 		}
 
-		if (pArea->aprogs == NULL)
+		if (pArea->aprogs == nullptr)
 		{
 			pArea->aprogs = new APROG_DATA;
 			CLEAR_MEM(pArea->aprogs, sizeof(APROG_DATA))
 		}
 
-		for (count = 0; aprog_table[count].type != NULL; count++)
+		for (count = 0; aprog_table[count].type != nullptr; count++)
 		{
 			if (!str_cmp(aprog_table[count].name, prog))
 			{
@@ -2066,7 +2114,7 @@ int aclimate_lookup(const char *name)
 
 	for (sn = 0; sn < Climate::MaxClimate; sn++)
 	{
-		if (climate_table[sn].name == NULL)
+		if (climate_table[sn].name == nullptr)
 			break;
 
 		if (LOWER(name[0]) == LOWER(climate_table[sn].name[0]) && !str_prefix(name, climate_table[sn].name))
@@ -2098,7 +2146,7 @@ bool aedit_climate(CHAR_DATA *ch, char *argument)
 
 		for (climate = 0; climate < Climate::MaxClimate; climate++)
 		{
-			if (climate_table[climate].name == NULL)
+			if (climate_table[climate].name == nullptr)
 				break;
 
 			sprintf(hold, "%s ", climate_table[climate].name);
@@ -2235,8 +2283,8 @@ bool redit_show(CHAR_DATA *ch, char *argument)
 				pRoom->trap->quality,
 				pRoom->trap->complexity,
 				pRoom->trap->timer,
-				(pRoom->trap->trig_echo != NULL) ? pRoom->trap->trig_echo : "None",
-				(pRoom->trap->exec_echo != NULL) ? pRoom->trap->exec_echo : "None"); //TODO: change the rest of the sprintf calls to format
+				(pRoom->trap->trig_echo != nullptr) ? pRoom->trap->trig_echo : "None",
+				(pRoom->trap->exec_echo != nullptr) ? pRoom->trap->exec_echo : "None"); //TODO: change the rest of the sprintf calls to format
 
 		strcat(buf1, buffer.data());
 	}
@@ -2346,7 +2394,7 @@ bool redit_show(CHAR_DATA *ch, char *argument)
 	{
 		EXIT_DATA *pexit = pRoom->exit[door];
 
-		if (pexit != NULL)
+		if (pexit != nullptr)
 		{
 			char word[MAX_INPUT_LENGTH];
 			char reset_state[MAX_STRING_LENGTH];
@@ -2435,7 +2483,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 	if (value != NO_FLAG)
 	{
 		ROOM_INDEX_DATA *pToRoom;
-		sh_int rev; /* ROM OLC */
+		short rev; /* ROM OLC */
 
 		if (!pRoom->exit[door])
 		{
@@ -2459,7 +2507,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 			pToRoom = pRoom->exit[door]->u1.to_room; /* ROM OLC */
 			rev = rev_dir[door];
 
-			if (pToRoom->exit[rev] != NULL)
+			if (pToRoom->exit[rev] != nullptr)
 				TOGGLE_BIT(pToRoom->exit[rev]->exit_info, value);
 
 			send_to_char("Linking room exit flag toggled.\n\r", ch);
@@ -2483,7 +2531,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 	if (!str_cmp(command, "delete"))
 	{
 		ROOM_INDEX_DATA *pToRoom;
-		sh_int rev; /* ROM OLC */
+		short rev; /* ROM OLC */
 
 		if (!pRoom->exit[door])
 		{
@@ -2500,14 +2548,14 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		if (pToRoom->exit[rev])
 		{
 			free_exit(pToRoom->exit[rev]);
-			pToRoom->exit[rev] = NULL;
+			pToRoom->exit[rev] = nullptr;
 		}
 
 		/*
 		 * Remove this exit.
 		 */
 		free_exit(pRoom->exit[door]);
-		pRoom->exit[door] = NULL;
+		pRoom->exit[door] = nullptr;
 
 		send_to_char("Exit unlinked.\n\r", ch);
 		return true;
@@ -2571,7 +2619,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 		{
 			for (count = ch->in_room->area->min_vnum; count <= ch->in_room->area->max_vnum; count++)
 			{
-				if ((get_room_index(count)) == NULL)
+				if ((get_room_index(count)) == nullptr)
 				{
 					dFound = true;
 					dMove = true;
@@ -2597,7 +2645,7 @@ bool change_exit(CHAR_DATA *ch, char *argument, int door)
 
 		move_to = get_room_index(atoi(arg));
 
-		if (move_to != NULL && dMove)
+		if (move_to != nullptr && dMove)
 		{
 			char_from_room(ch);
 			char_to_room(ch, move_to);
@@ -2837,7 +2885,7 @@ bool redit_ed(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(command, "delete"))
 	{
-		EXTRA_DESCR_DATA *ped = NULL;
+		EXTRA_DESCR_DATA *ped = nullptr;
 
 		if (argument[0] == '\0')
 		{
@@ -3112,7 +3160,7 @@ bool redit_mreset(CHAR_DATA *ch, char *argument)
 			capitalize(pMobIndex->short_descr), pMobIndex->vnum, pReset->arg2);
 	send_to_char(output, ch);
 
-	act("$n has created $N!", ch, NULL, newmob, TO_ROOM);
+	act("$n has created $N!", ch, nullptr, newmob, TO_ROOM);
 	return true;
 }
 
@@ -3205,7 +3253,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 	/*
 	 * Load into object's inventory.
 	 */
-	else if (argument[0] == '\0' && ((to_obj = get_obj_list(ch, arg2, pRoom->contents)) != NULL))
+	else if (argument[0] == '\0' && ((to_obj = get_obj_list(ch, arg2, pRoom->contents)) != nullptr))
 	{
 		pReset = new_reset_data();
 		pReset->command = 'P';
@@ -3215,7 +3263,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		pReset->arg4 = 1;
 		//		add_reset( pRoom, pReset, 0/* Last slot*/ );
 
-		for (pReset1 = pRoom->reset_first; pReset1 != NULL; pReset1 = pReset1->next)
+		for (pReset1 = pRoom->reset_first; pReset1 != nullptr; pReset1 = pReset1->next)
 		{
 			pReset2 = pReset1;
 
@@ -3250,7 +3298,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		to_mob = get_char_room(ch, arg2);
 	}
 
-	if (to_mob != NULL)
+	if (to_mob != nullptr)
 	{
 		int wear_loc;
 
@@ -3368,7 +3416,7 @@ bool redit_oreset(CHAR_DATA *ch, char *argument)
 		return false;
 	}
 
-	act("$n has created $p!", ch, newobj, NULL, TO_ROOM);
+	act("$n has created $p!", ch, newobj, nullptr, TO_ROOM);
 	return true;
 }
 
@@ -4105,7 +4153,7 @@ bool oedit_show(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	if (pObj->notes != NULL)
+	if (pObj->notes != nullptr)
 	{
 		sprintf(buf, "Notes: %s\n\r", pObj->notes);
 		send_to_char(buf, ch);
@@ -4361,7 +4409,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 			if (pObj->wear_echo[0])
 				free_pstring(pObj->wear_echo[0]);
 
-			if (argument != NULL)
+			if (argument != nullptr)
 				pObj->wear_echo[0] = palloc_string(argument);
 		}
 		else if (!str_prefix(target, "room"))
@@ -4369,7 +4417,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 			if (pObj->wear_echo[1])
 				free_pstring(pObj->wear_echo[1]);
 
-			if (argument != NULL)
+			if (argument != nullptr)
 				pObj->wear_echo[1] = palloc_string(argument);
 		}
 		else
@@ -4385,7 +4433,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 			if (pObj->remove_echo[0])
 				free_pstring(pObj->remove_echo[0]);
 
-			if (argument != NULL)
+			if (argument != nullptr)
 				pObj->remove_echo[0] = palloc_string(argument);
 		}
 		else if (!str_prefix(target, "room"))
@@ -4393,7 +4441,7 @@ bool oedit_msg(CHAR_DATA *ch, char *argument)
 			if (pObj->remove_echo[1])
 				free_pstring(pObj->remove_echo[1]);
 
-			if (argument != NULL)
+			if (argument != nullptr)
 				pObj->remove_echo[1] = palloc_string(argument);
 		}
 		else
@@ -4532,7 +4580,7 @@ bool oedit_restrict(CHAR_DATA *ch, char *argument)
 		send_to_char("That was an invalid restriction type.  Choose from the following:\n\r", ch);
 
 		std::string buffer = std::string("");
-		for (count = 0; restrict_table[count].name != NULL; count++)
+		for (count = 0; restrict_table[count].name != nullptr; count++)
 		{
 			buffer += fmt::format("{} ", restrict_table[count].name);
 
@@ -4643,13 +4691,13 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 
 		if (!str_cmp(arg3, "delete"))
 		{
-			for (af = pObj->charaffs; af != NULL; af = af->next)
+			for (af = pObj->charaffs; af != nullptr; af = af->next)
 			{
 				if (af->type == skill_lookup(arg2))
 					break;
 			}
 
-			if (af == NULL || skill_lookup(arg2) == -1)
+			if (af == nullptr || skill_lookup(arg2) == -1)
 			{
 				send_to_char("That object doesn't have that flag affect.\n\r", ch);
 				return false;
@@ -4967,7 +5015,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(command, "delete"))
 	{
-		EXTRA_DESCR_DATA *ped = NULL;
+		EXTRA_DESCR_DATA *ped = nullptr;
 
 		if (argument[0] == '\0')
 		{
@@ -5001,7 +5049,7 @@ bool oedit_ed(CHAR_DATA *ch, char *argument)
 
 	if (!str_cmp(command, "format"))
 	{
-		EXTRA_DESCR_DATA *ped = NULL;
+		EXTRA_DESCR_DATA *ped = nullptr;
 
 		if (argument[0] == '\0')
 		{
@@ -5239,7 +5287,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 	char arg5[MSL], arg6[MSL], arg7[MSL];
 	int sn, bit, i;
 	bool added = false;
-	BARRED_DATA *bar = NULL;
+	BARRED_DATA *bar = nullptr;
 
 	EDIT_MOB(ch, pMob);
 
@@ -5309,7 +5357,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		{
 			if (!str_cmp(arg2, "delete"))
 			{
-				pMob->barred_entry = NULL;
+				pMob->barred_entry = nullptr;
 				delete pMob->barred_entry;
 				send_to_char("Barred entry removed.\n\r", ch);
 				return false;
@@ -5385,7 +5433,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 			bar->message_two = palloc_string(argument);
 
 			if (!str_cmp(bar->message_two, ""))
-				bar->message_two = NULL;
+				bar->message_two = nullptr;
 
 			pMob->barred_entry = bar;
 		}
@@ -5409,7 +5457,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 			if (sn >= 0 && sn < MAX_MOB_CAST)
 			{
 				free_pstring(pMob->cast_spell[sn]);
-				free_pstring(pMob->cast_spell[sn] = NULL);
+				free_pstring(pMob->cast_spell[sn] = nullptr);
 				send_to_char("Optional: Castable Spell Reset.\n\r", ch);
 				return true;
 			}
@@ -5432,7 +5480,7 @@ bool medit_optional(CHAR_DATA *ch, char *argument)
 		{
 			for (i = 0; i < MAX_MOB_CAST; i++)
 			{
-				if (pMob->cast_spell[i] == NULL)
+				if (pMob->cast_spell[i] == nullptr)
 				{
 					pMob->cast_spell[i] = palloc_string(arg2);
 					added = true;
@@ -5982,7 +6030,7 @@ bool medit_spec(CHAR_DATA *ch, char *argument)
 
 	if ( !str_cmp( argument, "none" ) )
 	{
-		pMob->spec_fun = NULL;
+		pMob->spec_fun = nullptr;
 
 		send_to_char( "Spec removed.\n\r", ch);
 		return true;
@@ -6179,7 +6227,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 	MOB_INDEX_DATA *pMob;
 	char arg1[MAX_INPUT_LENGTH], arg2[MSL];
 	int direction;
-	SHOP_DATA *pShop = NULL;
+	SHOP_DATA *pShop = nullptr;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -6196,7 +6244,7 @@ bool medit_shop(CHAR_DATA *ch, char *argument)
 	if (!str_cmp(arg1, "delete"))
 	{
 		free_shop(pMob->pShop);
-		pMob->pShop = NULL;
+		pMob->pShop = nullptr;
 		send_to_char("Shop deleted.\n\r", ch);
 		return false;
 	}
@@ -6812,7 +6860,7 @@ bool medit_race(CHAR_DATA *ch, char *argument)
 
 		send_to_char("Available races are:", ch);
 
-		for (race = 0; race_table[race].name != NULL; race++)
+		for (race = 0; race_table[race].name != nullptr; race++)
 		{
 			if (race % 3 == 0)
 				send_to_char("\n\r", ch);
@@ -6899,7 +6947,7 @@ bool oedit_liqlist(CHAR_DATA *ch, char *argument)
 
 	buffer = new_buf();
 
-	for (int liq = 0; liq_table[liq].liq_name != NULL; liq++)
+	for (int liq = 0; liq_table[liq].liq_name != nullptr; liq++)
 	{
 		if (liq % 21 == 0)
 			add_buf(buffer, "Name                 Color          Proof Full Thirst Food Ssize\n\r");

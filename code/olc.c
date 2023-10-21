@@ -11,9 +11,32 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "olc.h"
+#ifdef macintosh
+#include <types.h>
+#else
+#include <sys/types.h>
+#endif
 
-extern int mPort;
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include "olc.h"
+#include "handler.h"
+#include "tables.h"
+#include "mem.h"
+#include "olc_act.h"
+#include "lookup.h"
+#include "bit.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "act_comm.h"
+#include "help.h"
+#include "magic.h"
+#include "act_move.h"
+#include "act_wiz.h"
 
 /*****************************************************************************
  *                           Interpreter Tables.                             *
@@ -40,7 +63,7 @@ const struct olc_cmd_type aedit_table[] =
 	{"credits", aedit_credits},
 	{"level", aedit_level},
 	{"type", aedit_type},
-	{NULL, 0}
+	{nullptr, 0}
 };
 
 const struct olc_cmd_type redit_table[] =
@@ -80,7 +103,7 @@ const struct olc_cmd_type redit_table[] =
 	{"altdesc", redit_altdesc},
 	{"?", show_help},
 	{"version", show_version},
-	{NULL, 0}
+	{nullptr, 0}
 };
 
 const struct olc_cmd_type oedit_table[] =
@@ -122,7 +145,7 @@ const struct olc_cmd_type oedit_table[] =
 	{"verb", oedit_verb},
 	{"?", show_help},
 	{"version", show_version},
-	{NULL, 0}
+	{nullptr, 0}
 };
 
 const struct olc_cmd_type medit_table[] =
@@ -169,7 +192,7 @@ const struct olc_cmd_type medit_table[] =
 	//	{	"vnum",		medit_vnum},
 	{"?", show_help},
 	{"version", show_version},
-	{NULL, 0}
+	{nullptr, 0}
 };
 
 /*****************************************************************************
@@ -183,7 +206,7 @@ const struct editor_cmd_type editor_table[] =
 	{"room", do_redit},
 	{"object", do_oedit},
 	{"mobile", do_medit},
-	{NULL, 0}
+	{nullptr, 0}
 };
 
 
@@ -304,7 +327,7 @@ void show_olc_cmds(CHAR_DATA *ch, const struct olc_cmd_type *olc_table)
 
 	buf1[0] = '\0';
 
-	for (int cmd = 0; olc_table[cmd].name != NULL; cmd++)
+	for (int cmd = 0; olc_table[cmd].name != nullptr; cmd++)
 	{
 		sprintf(buf, "%-15.15s", olc_table[cmd].name);
 		strcat(buf1, buf);
@@ -370,7 +393,7 @@ AREA_DATA *get_area_data(int vnum)
  ****************************************************************************/
 bool edit_done(CHAR_DATA *ch)
 {
-	ch->desc->pEdit = NULL;
+	ch->desc->pEdit = nullptr;
 	ch->desc->editor = 0;
 
 	send_to_char("Exiting Riftshadow OLC...\n\r", ch);
@@ -431,7 +454,7 @@ void aedit(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Search Table and Dispatch Command. */
-	for (cmd = 0; aedit_table[cmd].name != NULL; cmd++)
+	for (cmd = 0; aedit_table[cmd].name != nullptr; cmd++)
 	{
 		if (!str_prefix(command, aedit_table[cmd].name))
 		{
@@ -528,7 +551,7 @@ void redit(CHAR_DATA *ch, char *argument)
 		sprintf(command, "down");
 
 	/* Search Table and Dispatch Command. */
-	for (cmd = 0; redit_table[cmd].name != NULL; cmd++)
+	for (cmd = 0; redit_table[cmd].name != nullptr; cmd++)
 	{
 		if (!str_prefix(command, redit_table[cmd].name))
 		{
@@ -586,7 +609,7 @@ void oedit(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Search Table and Dispatch Command. */
-	for (cmd = 0; oedit_table[cmd].name != NULL; cmd++)
+	for (cmd = 0; oedit_table[cmd].name != nullptr; cmd++)
 	{
 		if (!str_prefix(command, oedit_table[cmd].name))
 		{
@@ -649,7 +672,7 @@ void medit(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Search Table and Dispatch Command. */
-	for (cmd = 0; medit_table[cmd].name != NULL; cmd++)
+	for (cmd = 0; medit_table[cmd].name != nullptr; cmd++)
 	{
 		if (!str_prefix(command, medit_table[cmd].name))
 		{
@@ -717,7 +740,7 @@ void do_olc(CHAR_DATA *ch, char *argument)
 	}
 
 	/* Search Table and Dispatch Command. */
-	for (cmd = 0; editor_table[cmd].name != NULL; cmd++)
+	for (cmd = 0; editor_table[cmd].name != nullptr; cmd++)
 	{
 		if (!str_prefix(command, editor_table[cmd].name))
 		{
@@ -767,7 +790,7 @@ void do_aedit(CHAR_DATA *ch, char *argument)
 			argument = one_argument(argument, value2);
 			value = atoi(value2);
 
-			if (get_area_data(value) != NULL)
+			if (get_area_data(value) != nullptr)
 			{
 				send_to_char("That area already exists!", ch);
 				return;
@@ -843,7 +866,7 @@ void do_redit(CHAR_DATA *ch, char *argument)
 	{
 		pRoom2 = get_room_index(atoi(arg1));
 
-		if (pRoom2 != NULL && IS_BUILDER(ch, pRoom2->area))
+		if (pRoom2 != nullptr && IS_BUILDER(ch, pRoom2->area))
 		{
 			char_from_room(ch);
 			char_to_room(ch, pRoom2);
@@ -1026,7 +1049,7 @@ void display_resets(CHAR_DATA *ch)
 {
 	ROOM_INDEX_DATA *pRoom;
 	RESET_DATA *pReset;
-	MOB_INDEX_DATA *pMob = NULL;
+	MOB_INDEX_DATA *pMob = nullptr;
 	char buf[MAX_STRING_LENGTH];
 	char final[MAX_STRING_LENGTH];
 	int iReset = 0;
@@ -1245,7 +1268,7 @@ void add_reset(ROOM_INDEX_DATA *room, RESET_DATA *pReset, int index)
 	{
 		room->reset_first = pReset;
 		room->reset_last = pReset;
-		pReset->next = NULL;
+		pReset->next = nullptr;
 		return;
 	}
 
@@ -1285,7 +1308,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 	char arg5[MAX_INPUT_LENGTH];
 	char arg6[MAX_INPUT_LENGTH];
 	char arg7[MAX_INPUT_LENGTH];
-	RESET_DATA *pReset = NULL;
+	RESET_DATA *pReset = nullptr;
 
 	if (!check_security(ch))
 		return;
@@ -1350,12 +1373,12 @@ void do_resets(CHAR_DATA *ch, char *argument)
 				pRoom->reset_first = pRoom->reset_first->next;
 
 				if (!pRoom->reset_first)
-					pRoom->reset_last = NULL;
+					pRoom->reset_last = nullptr;
 			}
 			else
 			{
 				int iReset = 0;
-				RESET_DATA *prev = NULL;
+				RESET_DATA *prev = nullptr;
 
 				for (pReset = pRoom->reset_first; pReset; pReset = pReset->next)
 				{
@@ -1422,13 +1445,13 @@ void do_resets(CHAR_DATA *ch, char *argument)
 			pReset = new_reset_data();
 			pReset->command = 'F';
 
-			if (get_mob_index(atoi(arg3)) == NULL)
+			if (get_mob_index(atoi(arg3)) == nullptr)
 			{
 				send_to_char("That is not a valid follower vnum.\n\r", ch);
 				return;
 			}
 
-			if (get_mob_index(atoi(arg4)) == NULL)
+			if (get_mob_index(atoi(arg4)) == nullptr)
 			{
 				send_to_char("That is not a valid leader vnum.\n\r", ch);
 				return;
@@ -1450,7 +1473,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 				pReset = new_reset_data();
 				pReset->command = 'M';
 
-				if (get_mob_index(is_number(arg3) ? atoi(arg3) : 1) == NULL)
+				if (get_mob_index(is_number(arg3) ? atoi(arg3) : 1) == nullptr)
 				{
 					send_to_char("Mob no existe.\n\r", ch);
 					return;
@@ -1464,7 +1487,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 			else if (!str_cmp(arg2, "obj")) /* Check for Object reset. */
 			{
 				pReset = new_reset_data();
-				if (get_obj_index(atoi(arg3)) == NULL)
+				if (get_obj_index(atoi(arg3)) == nullptr)
 					return send_to_char("That object does not exist.\n\r", ch);
 				pReset->arg1 = atoi(arg3);
 
@@ -1486,7 +1509,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 					pReset = new_reset_data();
 					pReset->command = 'O';
 
-					if (get_obj_index(atoi(arg3)) == NULL)
+					if (get_obj_index(atoi(arg3)) == nullptr)
 					{
 						send_to_char("Vnum no existe.\n\r", ch);
 						return;
@@ -1507,7 +1530,7 @@ void do_resets(CHAR_DATA *ch, char *argument)
 
 					pReset = new_reset_data();
 
-					if (get_obj_index(atoi(arg3)) == NULL)
+					if (get_obj_index(atoi(arg3)) == nullptr)
 					{
 						send_to_char("Vnum no existe.\n\r", ch);
 						return;
@@ -1551,7 +1574,7 @@ void do_alist(CHAR_DATA *ch, char *argument)
 	char result[MAX_STRING_LENGTH * 2]; /* May need tweaking. */
 	AREA_DATA *pArea;
 	int vmatch = 0;
-	char *nmatch = NULL, *amatch = NULL;
+	char *nmatch = nullptr, *amatch = nullptr;
 
 	if (is_number(argument))
 		vmatch = atoi(argument);
@@ -1573,7 +1596,7 @@ void do_alist(CHAR_DATA *ch, char *argument)
 
 	for (pArea = area_first; pArea; pArea = pArea->next)
 	{
-		if (nmatch != NULL && !strstr(lowstring(pArea->name), nmatch))
+		if (nmatch != nullptr && !strstr(lowstring(pArea->name), nmatch))
 			continue;
 		else if (vmatch && (pArea->min_vnum > vmatch || pArea->max_vnum < vmatch))
 			continue;

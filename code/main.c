@@ -6,10 +6,8 @@
 #include "merc.h"
 #include "mud.h"
 #include "comm.h"
-
-extern char str_boot_time[MAX_INPUT_LENGTH];
-extern FILE *fpReserve;
-extern CMud RS;
+#include "interp.h"
+#include "db.h"
 
 int main(int argc, char **argv)
 {
@@ -28,14 +26,14 @@ int main(int argc, char **argv)
 	/*
 	 * Init time.
 	 */
-	gettimeofday(&now_time, NULL);
+	gettimeofday(&now_time, nullptr);
 	current_time = (time_t)now_time.tv_sec;
 	strcpy(str_boot_time, ctime(&current_time));
 
 	/*
 	 * Reserve one channel for our use.
 	 */
-	if ((fpReserve = fopen(NULL_FILE, "r")) == NULL)
+	if ((fpReserve = fopen(NULL_FILE, "r")) == nullptr)
 	{
 		perror(NULL_FILE);
 		exit(0);
@@ -71,7 +69,12 @@ int main(int argc, char **argv)
 	control = init_socket(port);
 
 	// boot_db( );
-	RS.Bootup();
+	if (!RS.Bootup())
+	{
+		log_string("Riftshadow failed to boot, aborting.");
+		exit(0);
+		return 0;
+	}
 
 	sprintf(buf, "Riftshadow booted, binding on port %d.", port);
 	log_string(buf);

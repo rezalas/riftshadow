@@ -1,7 +1,6 @@
-#include <string.h>
-#include <stddef.h>
 #include "catch.hpp"
 #include "../code/utility.h"
+#include "../code/db.h"
 
 // TEST_CASE("Test capitalization", "[string]" )
 // {
@@ -1238,10 +1237,10 @@ SCENARIO("retrieve a player character's armor type", "[get_ac]")
 
 
 // TODO: write tests
-// sh_int get_hitroll (CHAR_DATA *ch)
+// short get_hitroll (CHAR_DATA *ch)
 
 // TODO: write tests
-// sh_int get_damroll (CHAR_DATA *ch)
+// short get_damroll (CHAR_DATA *ch)
 
 // TODO: write tests
 // bool is_outside (CHAR_DATA *ch)

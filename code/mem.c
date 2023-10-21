@@ -11,7 +11,23 @@
  *                                                                         *
  ***************************************************************************/
 
+#ifdef macintosh
+	#include <types.h>
+#else
+	#include <sys/types.h>
+#endif
+
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "mem.h"
+#include "db.h"
+#include "handler.h"
+#include "newmem.h"
+#include "recycle.h"
+#include "misc.h"
 
 /*
  * Globals
@@ -42,7 +58,7 @@ RESET_DATA *new_reset_data(void)
 		reset_free = reset_free->next;
 	}
 
-	pReset->next = NULL;
+	pReset->next = nullptr;
 	pReset->command = 'X';
 	pReset->arg1 = 0;
 	pReset->arg2 = 0;
@@ -75,7 +91,7 @@ AREA_DATA *new_area(void)
 		area_free = area_free->next;
 	}
 
-	pArea->next = NULL;
+	pArea->next = nullptr;
 	pArea->name = palloc_string("New area");
 
 	SET_BIT(pArea->area_flags, AREA_ADDED);
@@ -129,15 +145,15 @@ EXIT_DATA *new_exit(void)
 		exit_free = exit_free->next;
 	}
 
-	pExit->u1.to_room = NULL; /* ROM OLC */
-	pExit->next = NULL;
+	pExit->u1.to_room = nullptr; /* ROM OLC */
+	pExit->next = nullptr;
 	/*  pExit->vnum         =   0;                        ROM OLC */
 
 	zero_vector(pExit->exit_info);
 
 	pExit->key = 0;
-	pExit->keyword = NULL;
-	pExit->description = NULL;
+	pExit->keyword = nullptr;
+	pExit->description = nullptr;
 
 	return pExit;
 }
@@ -167,9 +183,9 @@ EXTRA_DESCR_DATA *new_extra_descr(void)
 		extra_descr_free = extra_descr_free->next;
 	}
 
-	pExtra->keyword = NULL;
-	pExtra->description = NULL;
-	pExtra->next = NULL;
+	pExtra->keyword = nullptr;
+	pExtra->description = nullptr;
+	pExtra->next = nullptr;
 
 	return pExtra;
 }
@@ -201,20 +217,20 @@ ROOM_INDEX_DATA *new_room_index(void)
 		room_index_free = room_index_free->next;
 	}
 
-	pRoom->next = NULL;
-	pRoom->next_room = NULL;
-	pRoom->aff_next = NULL;
-	pRoom->people = NULL;
-	pRoom->contents = NULL;
-	pRoom->extra_descr = NULL;
-	pRoom->area = NULL;
-	pRoom->alt_description = NULL;
-	pRoom->alt_name = NULL;
+	pRoom->next = nullptr;
+	pRoom->next_room = nullptr;
+	pRoom->aff_next = nullptr;
+	pRoom->people = nullptr;
+	pRoom->contents = nullptr;
+	pRoom->extra_descr = nullptr;
+	pRoom->area = nullptr;
+	pRoom->alt_description = nullptr;
+	pRoom->alt_name = nullptr;
 	pRoom->alt_description_cond = 0;
 
 	for (door = 0; door < MAX_DIR; door++)
 	{
-		pRoom->exit[door] = NULL;
+		pRoom->exit[door] = nullptr;
 	}
 
 	for (i = 0; i < MAX_TRACKS; i++)
@@ -222,9 +238,9 @@ ROOM_INDEX_DATA *new_room_index(void)
 		pRoom->tracks[i] = new_track_data();
 	}
 
-	pRoom->path = NULL;
+	pRoom->path = nullptr;
 	pRoom->name = palloc_string("Dummy Room");
-	pRoom->description = NULL;
+	pRoom->description = nullptr;
 	pRoom->owner = palloc_string("none");
 	pRoom->vnum = 0;
 
@@ -235,20 +251,20 @@ ROOM_INDEX_DATA *new_room_index(void)
 	pRoom->mana_rate = 100;
 	pRoom->cabal = 0;
 	pRoom->guild = 0;
-	pRoom->affected = NULL;
+	pRoom->affected = nullptr;
 
 	zero_vector(pRoom->affected_by);
 
 	pRoom->move_progs= false;
-	pRoom->rune = NULL;
+	pRoom->rune = nullptr;
 	pRoom->has_rune= false;
 	pRoom->light = 0;
-	pRoom->reset_first = NULL;
-	pRoom->reset_last = NULL;
+	pRoom->reset_first = nullptr;
+	pRoom->reset_last = nullptr;
 
 	zero_vector(pRoom->progtypes);
 
-	pRoom->trap = NULL;
+	pRoom->trap = nullptr;
 	return pRoom;
 }
 
@@ -268,7 +284,7 @@ AFFECT_DATA *new_affect(void)
 		affect_free = affect_free->next;
 	}
 
-	pAf->next = NULL;
+	pAf->next = nullptr;
 	pAf->location = 0;
 	pAf->modifier = 0;
 	pAf->type = 0;
@@ -323,10 +339,10 @@ OBJ_INDEX_DATA *new_obj_index(void)
 		obj_index_free = obj_index_free->next;
 	}
 
-	pObj->next = NULL;
-	pObj->extra_descr = NULL;
-	pObj->affected = NULL;
-	pObj->area = NULL;
+	pObj->next = nullptr;
+	pObj->extra_descr = nullptr;
+	pObj->affected = nullptr;
+	pObj->area = nullptr;
 	pObj->name = palloc_string("no name");
 	pObj->level = 1;
 	pObj->short_descr = palloc_string("dummy object");
@@ -345,19 +361,19 @@ OBJ_INDEX_DATA *new_obj_index(void)
 	pObj->limtotal = 0;
 	pObj->material = palloc_string("unknown"); /* ROM */
 	pObj->condition = 100;					   /* ROM */
-	pObj->verb = NULL;
-	pObj->wear_echo[0] = NULL;
-	pObj->wear_echo[1] = NULL;
-	pObj->wear_echo[2] = NULL;
-	pObj->remove_echo[0] = NULL;
-	pObj->remove_echo[1] = NULL;
-	pObj->remove_echo[2] = NULL;
+	pObj->verb = nullptr;
+	pObj->wear_echo[0] = nullptr;
+	pObj->wear_echo[1] = nullptr;
+	pObj->wear_echo[2] = nullptr;
+	pObj->remove_echo[0] = nullptr;
+	pObj->remove_echo[1] = nullptr;
+	pObj->remove_echo[2] = nullptr;
 	pObj->cabal = 0;
-	pObj->notes = NULL;
-	pObj->wear_loc_name = NULL;
-	pObj->charaffs = NULL;
-	pObj->extra_descr = NULL;
-	pObj->apply = NULL;
+	pObj->notes = nullptr;
+	pObj->wear_loc_name = nullptr;
+	pObj->charaffs = nullptr;
+	pObj->extra_descr = nullptr;
+	pObj->apply = nullptr;
 
 	for (value = 0; value < 5; value++) /* 5 - ROM */
 	{
@@ -416,13 +432,13 @@ MOB_INDEX_DATA *new_mob_index(void)
 		mob_index_free = mob_index_free->next;
 	}
 
-	pMob->next = NULL;
-	pMob->pShop = NULL;
-	pMob->area = NULL;
+	pMob->next = nullptr;
+	pMob->pShop = nullptr;
+	pMob->area = nullptr;
 	pMob->player_name = palloc_string("no name");
 	pMob->short_descr = palloc_string("dummy mob");
 	pMob->long_descr = palloc_string("A dummy mob is standing here.\n\r");
-	pMob->description = NULL;
+	pMob->description = nullptr;
 	pMob->vnum = 0;
 	pMob->count = 0;
 	pMob->killed = 0;
@@ -466,9 +482,9 @@ MOB_INDEX_DATA *new_mob_index(void)
 	pMob->restrict_high = 65535;
 	pMob->SetClass(CLASS_NONE);
 	pMob->new_format = true; /* ROM */
-	pMob->barred_entry = NULL;
-	pMob->mprogs = NULL;
-	pMob->game_fun = NULL;
+	pMob->barred_entry = nullptr;
+	pMob->mprogs = nullptr;
+	pMob->game_fun = nullptr;
 
 	zero_vector(pMob->progtypes);
 
@@ -479,13 +495,13 @@ MOB_INDEX_DATA *new_mob_index(void)
 
 	for (i = 0; i < MAX_MOB_CAST; i++)
 	{
-		pMob->cast_spell[i] = NULL;
+		pMob->cast_spell[i] = nullptr;
 	}
 
-	pMob->speech = NULL; // DIE MORGLUM DIE
+	pMob->speech = nullptr; // DIE MORGLUM DIE
 	pMob->cabal = 0;
-	pMob->attack_yell = NULL;
-	pMob->notes = NULL;
+	pMob->attack_yell = nullptr;
+	pMob->notes = nullptr;
 
 	zero_vector(pMob->styles);
 

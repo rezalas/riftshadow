@@ -31,8 +31,31 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <mysql.h>
 #include "note.h"
+#include "devextra.h"
+#include "handler.h"
+#include "recycle.h"
+#include "tables.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "utility.h"
 
+NOTE_DATA *note_free;
+
+/// Counts the number of type-specific notes related to the character.
+/// @param ch: The character whose notes to count.
+/// @param type: The type of note to count.
+/// @returns The number of notes for the given character. 
 int count_spool(CHAR_DATA *ch, int type)
 {
 	int count = 0;
@@ -53,56 +76,66 @@ int count_spool(CHAR_DATA *ch, int type)
 	return count;
 }
 
+/// Sends the number of unread notes a character has to the player.
+/// @param ch: The character being sent the message.
+/// @param arg: unused
 void do_unread(CHAR_DATA *ch, char *arg)
 {
 	char buf[MAX_STRING_LENGTH];
-	int count;
-	bool found= false;
 
 	if (is_npc(ch))
 		return;
 
-	if ((count = count_spool(ch, NOTE_NOTE)) > 0)
+	auto count = count_spool(ch, NOTE_NOTE); 
+	if (count > 0)
 	{
-		found = true;
-
 		sprintf(buf, "You have %d new note%s waiting.\n\r", count, count > 1 ? "s" : "");
 		send_to_char(buf, ch);
+		return;
 	}
 
-	if ((count = count_spool(ch, NOTE_IDEA)) > 0)
+	count = count_spool(ch, NOTE_IDEA);
+	if (count > 0)
 	{
-		found = true;
-
 		sprintf(buf, "You have %d unread idea%s to peruse.\n\r", count, count > 1 ? "s" : "");
 		send_to_char(buf, ch);
+		return;
 	}
 
-	if (!found)
-		send_to_char("You have no unread notes.\n\r", ch);
+	send_to_char("You have no unread notes.\n\r", ch);
 }
 
+/// Processes the character's notes of type NOTE_NOTE by interpreting the given command. (eg. read, list, delete, send, etc)
+/// @param ch: The character interacting with their associated notes.
+/// @param argument: A command and its arguments used to describe the process (eg. read all).
 void do_note(CHAR_DATA *ch, char *argument)
 {
 	parse_note(ch, argument, NOTE_NOTE);
 }
 
+/// Processes the character's notes of type NOTE_NEWS by interpreting the given command. (eg. read, list, delete, send, etc)
+/// @param ch: The character interacting with their associated notes.
+/// @param argument: A command and its arguments used to describe the process (eg. read all).
 void do_news(CHAR_DATA *ch, char *argument)
 {
 	parse_note(ch, argument, NOTE_NEWS);
 }
 
+/// Processes the character's notes of type NOTE_CHANGES by interpreting the given command. (eg. read, list, delete, send, etc)
+/// @param ch: The character interacting with their associated notes.
+/// @param argument: A command and its arguments used to describe the process (eg. read all).
 void do_changes(CHAR_DATA *ch, char *argument)
 {
 	parse_note(ch, argument, NOTE_CHANGES);
 }
 
+/// Inserts a new note directly into the underlying data store.
+/// @param pnote: The note to insert.
 void append_note(NOTE_DATA *pnote)
 {
 	char query[MSL];
-	char *escape;
 
-	escape = escape_string(pnote->text);
+	auto escape = escape_string(pnote->text);
 	sprintf(query, "INSERT INTO notes VALUES(%d,\"%s\",'%s',\"%s\",\"%s\",\"%s\",%ld)",
 		pnote->type,
 		pnote->sender,
@@ -115,6 +148,11 @@ void append_note(NOTE_DATA *pnote)
 	one_query(query);
 }
 
+/// Determines if a character can read a note.
+/// @param ch: The character to check for read privileges for the note.
+/// @param sender: The sender of the note.
+/// @param to_list: The recipient of the note.
+/// @returns true if the character can read the note; false otherwise.
 bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
 {
 	if (!str_cmp(ch->true_name, sender))
@@ -147,16 +185,19 @@ bool is_note_to(CHAR_DATA *ch, char *sender, char *to_list)
 	return false;
 }
 
+/// Attaches a new note to the character.
+/// @param ch: The character whom to attach the note.
+/// @param type: The type of the note being attached.
 void note_attach(CHAR_DATA *ch, int type)
 {
-	NOTE_DATA *pnote;
-
-	if (ch->pnote != NULL)
+	if (ch->pnote != nullptr)
 		return;
 
-	pnote = new_note();
-	pnote->next = NULL;
-	pnote->sender = (is_npc(ch)) ? palloc_string(ch->short_descr) : palloc_string(ch->true_name);
+	auto pnote = new_note();
+	pnote->next = nullptr;
+	pnote->sender = (is_npc(ch))
+		? palloc_string(ch->short_descr)
+		: palloc_string(ch->true_name);
 	pnote->date = palloc_string("");
 	pnote->to_list = palloc_string("");
 	pnote->subject = palloc_string("");
@@ -166,6 +207,10 @@ void note_attach(CHAR_DATA *ch, int type)
 	ch->pnote = pnote;
 }
 
+/// Determines if a note is to be hidden from the character.
+/// @param ch: The character to potentially hide the note from.
+/// @param row: The SQL datarow that contains the note.
+/// @returns true if the note is to be hidden from the character; false otherwise.
 bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 {
 	time_t last_read;
@@ -206,9 +251,12 @@ bool hide_note(CHAR_DATA *ch, MYSQL_ROW row)
 	return false;
 }
 
+/// Updates the last read timestamp of the type-specific note related to the character. 
+/// @param ch: The character whose note to update.
+/// @param stamp: The timestamp of the note when it was read.
+/// @param type: The type of the note to update.
 void update_read(CHAR_DATA *ch, long stamp, int type)
 {
-
 	if (is_npc(ch))
 		return;
 
@@ -234,8 +282,13 @@ void update_read(CHAR_DATA *ch, long stamp, int type)
 	}
 }
 
+/// Processes the character's notes by interpreting the given command. (eg. read, list, delete, send, etc)
+/// @param ch: The character interacting with their associated notes.
+/// @param argument: A command and its arguments used to describe the process (eg. read all).
+/// @param type: The type of note to process.
 void parse_note(CHAR_DATA *ch, char *argument, int type)
 {
+	// TODO: Break this function up into its constituent parts. It's doing like 12 different things.
 	BUFFER *buffer;
 	char buf[MAX_STRING_LENGTH], query[MSL];
 	char arg[MAX_INPUT_LENGTH];
@@ -313,7 +366,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 		}
 		else if (is_number(argument))
 		{
-			fAll= false;
+			fAll = false;
 			anum = atoi(argument);
 		}
 		else
@@ -507,7 +560,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 			return;
 		}
 
-		if (ch->pnote->text == NULL || ch->pnote->text[0] == '\0')
+		if (ch->pnote->text == nullptr || ch->pnote->text[0] == '\0')
 		{
 			send_to_char("No lines left to remove.\n\r", ch);
 			return;
@@ -594,10 +647,10 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 	if (!str_prefix(arg, "clear"))
 	{
-		if (ch->pnote != NULL)
+		if (ch->pnote != nullptr)
 		{
 			free_note(ch->pnote);
-			ch->pnote = NULL;
+			ch->pnote = nullptr;
 		}
 
 		send_to_char("Ok.\n\r", ch);
@@ -606,7 +659,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 
 	if (!str_prefix(arg, "show"))
 	{
-		if (ch->pnote == NULL)
+		if (ch->pnote == nullptr)
 		{
 			send_to_char("You have no note in progress.\n\r", ch);
 			return;
@@ -628,7 +681,7 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 	{
 		char *strtime;
 
-		if (ch->pnote == NULL)
+		if (ch->pnote == nullptr)
 		{
 			send_to_char("You have no note in progress.\n\r", ch);
 			return;
@@ -658,18 +711,56 @@ void parse_note(CHAR_DATA *ch, char *argument, int type)
 			return;
 		}
 
-		ch->pnote->next = NULL;
+		ch->pnote->next = nullptr;
 		strtime = ctime(&current_time);
 		strtime[strlen(strtime) - 1] = '\0';
 		ch->pnote->date = palloc_string(strtime);
 		ch->pnote->date_stamp = current_time;
 
 		append_note(ch->pnote);
-		ch->pnote = NULL;
+		ch->pnote = nullptr;
 		send_to_char("Note sent.\n\r", ch);
 		add_prof_affect(ch, "note_written", 4, true);
 		return;
 	}
 
 	send_to_char("You can't do that.\n\r", ch);
+}
+
+/// Creates a note by preferably recycling old ones.
+/// @returns A new note
+NOTE_DATA *new_note()
+{
+	NOTE_DATA *note;
+
+	if (note_free == nullptr)
+	{
+		note = new NOTE_DATA;
+	}
+	else
+	{
+		note = note_free;
+		note_free = note_free->next;
+	}
+
+	note->valid = true;
+	return note;
+}
+
+/// Frees a note by recycling it.
+/// @param note: The note to recycle.
+void free_note(NOTE_DATA *note)
+{
+	if (!(note != nullptr && note->valid))
+		return;
+
+	free_pstring(note->text);
+	free_pstring(note->subject);
+	free_pstring(note->to_list);
+	free_pstring(note->date);
+	free_pstring(note->sender);
+
+	note->valid = false;
+	note->next = note_free;
+	note_free = note;
 }

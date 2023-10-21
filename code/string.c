@@ -11,7 +11,23 @@
  *                                                                         *
  ***************************************************************************/
 
+#ifdef macintosh
+	#include <types.h>
+#else
+	#include <sys/types.h>
+#endif
+
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "string.h"
+#include "newmem.h"
+#include "comm.h"
+#include "interp.h"
+#include "db.h"
+#include "./include/fmt/format.h"
 
 /*****************************************************************************
  Name:		string_edit
@@ -25,7 +41,7 @@ void string_edit(CHAR_DATA *ch, char **pString)
 	send_to_char(" Terminate with a ~ or @ on a blank line.\n\r", ch);
 	send_to_char("-=======================================-\n\r", ch);
 
-	if (*pString == NULL)
+	if (*pString == nullptr)
 		*pString = palloc_string("");
 	else
 		**pString = '\0';
@@ -45,7 +61,7 @@ void string_append(CHAR_DATA *ch, char **pString)
 	send_to_char(" Terminate with a ~ or @ on a blank line.\n\r", ch);
 	send_to_char("-=======================================-\n\r", ch);
 
-	if (*pString == NULL)
+	if (*pString == nullptr)
 		*pString = palloc_string("");
 
 	send_to_char(*pString, ch);
@@ -69,7 +85,7 @@ char *string_replace(char *orig, char *old, char *newstr)
 	xbuf[0] = '\0';
 	strcpy(xbuf, orig);
 
-	if (strstr(orig, old) != NULL)
+	if (strstr(orig, old) != nullptr)
 	{
 		i = strlen(orig) - strlen(strstr(orig, old));
 
@@ -206,7 +222,7 @@ void string_add(CHAR_DATA *ch, char *argument)
 
 	if (*argument == '~' || *argument == '@')
 	{
-		ch->desc->pString = NULL;
+		ch->desc->pString = nullptr;
 		return;
 	}
 
@@ -221,7 +237,7 @@ void string_add(CHAR_DATA *ch, char *argument)
 		send_to_char("String too long, last line skipped.\n\r", ch);
 
 		/* Force character out of editing mode. */
-		ch->desc->pString = NULL;
+		ch->desc->pString = nullptr;
 		return;
 	}
 

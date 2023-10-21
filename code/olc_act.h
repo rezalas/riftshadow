@@ -14,42 +14,7 @@
  *                                                                         *
  ***************************************************************************/
 
-#ifdef macintosh
-#include <types.h>
-#else
-#include <sys/types.h>
-#endif
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <algorithm>
 #include "merc.h"
-#include "handler.h"
-#include "olc.h"
-#include "tables.h"
-#include "recycle.h"
-#include "lookup.h"
-#include "spec.h"
-#include "act_comm.h"
-#include "misc.h"
-#include "act_move.h"
-#include "warrior.h"
-#include "comm.h"
-#include "db.h"
-#include "bit.h"
-#include "string.h"
-#include "aprog.h"
-#include "iprog.h"
-#include "mprog.h"
-#include "rprog.h"
-#include "chardef.h"
-#include "const.h"
-#include "material.h"
-#include "./include/fmt/format.h"
-#include "./include/fmt/printf.h"
 
 struct olc_help_type
 {
@@ -66,19 +31,6 @@ struct wear_type
 
 extern const struct olc_help_type help_table[];
 extern const struct wear_type wear_table[];
-
-//#include "iprog.h"
-//#include "mprog.h"
-//#include "rprog.h"
-//#include "aprog.h"
-extern void iprog_set (OBJ_INDEX_DATA *, const char *, const char *);
-extern void mprog_set (MOB_INDEX_DATA *, const char *, const char *);
-extern void rprog_set (ROOM_INDEX_DATA *, const char *, const char *);
-extern void aprog_set (AREA_DATA *, const char *, const char *);
-extern bool mprog_unset (MOB_INDEX_DATA *, const char *, const char *);
-extern bool aprog_unset (AREA_DATA *, const char *, const char *);
-extern bool iprog_unset (OBJ_INDEX_DATA *, const char *, const char *);
-extern bool rprog_unset (ROOM_INDEX_DATA *, const char *, const char *);
 
 //
 // LOCAL FUNCTIONS

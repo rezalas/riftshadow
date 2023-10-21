@@ -31,27 +31,42 @@
  *       found in the file /Tartarus/doc/tartarus.doc                      *
  ***************************************************************************/
 
+#include <sys/types.h>
+#include <sys/time.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "ban.h"
+#include "recycle.h"
+#include "time.h"
+#include "comm.h"
+#include "act_wiz.h"
+#include "interp.h"
+#include "db.h"
+#include "./include/fmt/format.h"
 
+/// Determines if a player has been banned.
+/// @param usite: The IP address or DNS name of the computer that the player uses to connect.
+/// @param type: The type of ban in place. Valid input is either NBAN_ALL or NBAN_NEWBIE.
+/// @param host: The type of host defined in usite. Valid input is either NBAN_IP or NBAN_HOST.
+/// @returns true if the player has been ban; false otherwise.
 bool check_ban(char *usite, int type, int host)
 {
-	BAN_DATA *pban;
 	char site[MSL];
-	CRow row;
 
 	strcpy(site, capitalize(usite));
 	site[0] = LOWER(site[0]);
 
-	int res = RS.SQL.Select("site,duration FROM bans WHERE ban_type=%d AND host_type=%d", type, host);
+	auto res = RS.SQL.Select("site,duration FROM bans WHERE ban_type=%d AND host_type=%d", type, host);
 	if (res)
 	{
 		while (!RS.SQL.End())
 		{
-			row = RS.SQL.GetRow();
-			if (strstr(site, row[0]) != NULL)
+			auto row = RS.SQL.GetRow();
+			if (strstr(site, row[0]) != nullptr)
 			{
 				auto buffer = fmt::format("BANNED - {} just tried to connect.", site); //TODO: change the rest of the sprintf calls to format
-				wiznet(buffer.data(), NULL, NULL, WIZ_LOGINS, 0, 0);
+				wiznet(buffer.data(), nullptr, nullptr, WIZ_LOGINS, 0, 0);
 				return true;
 			}
 		}
@@ -60,13 +75,19 @@ bool check_ban(char *usite, int type, int host)
 	return false;
 }
 
+/// Bans a player from the game.
+///
+/// NOTE: If the argument equals "show" then it prints out the current list of bans.
+/// @param ch: The character that is banning the player.
+/// @param argument: A list of arguments related to the player being banned including ip/host name, ban type, duration and reason.
 void do_ban(CHAR_DATA *ch, char *argument)
 {
+	//TODO: This is function really needs to be two functions. One to perform bans and the other to list bans.
+
 	char buf[MSL];
 	char arg1[MSL], arg2[MSL], arg3[MSL], arg4[MSL], date[MSL];
 	BUFFER *buffer;
 	int ban_type = 0, host_type = 0, res, duration = 0;
-	CRow row;
 
 	argument = one_argument(argument, arg1);
 	argument = one_argument(argument, arg2);
@@ -86,7 +107,7 @@ void do_ban(CHAR_DATA *ch, char *argument)
 
 			while (!RS.SQL.End())
 			{
-				row = RS.SQL.GetRow();
+				auto row = RS.SQL.GetRow();
 
 				sprintf(buf, "%-25s\t%-10s\t%-10s\t%-10s\t%-10s\t%-10s\n\r",
 					row[0],
@@ -162,19 +183,18 @@ void do_ban(CHAR_DATA *ch, char *argument)
 	}
 }
 
+/// Unbans a player from the game.
+/// @param ch: The character that is unbanning the player.
+/// @param argument: The IP address or DNS name of the computer that the player uses to connect.
 void do_unban(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH];
-	char buf[MAX_STRING_LENGTH];
-	int res = 0;
-
 	if (argument[0] == '\0')
 	{
 		send_to_char("Remove which site from the ban list?\n\r", ch);
 		return;
 	}
 
-	res = RS.SQL.Delete("bans WHERE site LIKE \'%%%s%%\'", argument);
+	auto res = RS.SQL.Delete("bans WHERE site LIKE \'%%%s%%\'", argument);
 	if (res)
 		send_to_char("Site unbanned.\n\r", ch);
 	else

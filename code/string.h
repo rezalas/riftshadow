@@ -1,23 +1,7 @@
 #ifndef STRING_H
 #define STRING_H
 
-#ifdef macintosh
-	#include <types.h>
-#else
-	#include <sys/types.h>
-#endif
-
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include "merc.h"
-#include "newmem.h"
-#include "comm.h"
-#include "interp.h"
-#include "db.h"
-#include "./include/fmt/format.h"
 
 //
 // LOCAL FUNCTIONS

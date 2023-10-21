@@ -1,37 +1,12 @@
 #ifndef ACT_MOVE_H
 #define ACT_MOVE_H
 
-#include <sys/types.h>
-#include <sys/time.h>
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include "merc.h"
-#include "handler.h"
-#include "magic.h"
-#include "recycle.h"
-#include "interp.h"
-#include "tables.h"
-#include "spec.h"
-#include "act_comm.h"
-#include "cabal.h"
-#include "devextra.h"
-#include "dioextra.h"
-#include "fight.h"
-#include "newmem.h"
-#include "comm.h"
-#include "act_wiz.h"
-#include "update.h"
-#include "db.h"
-#include "act_obj.h"
-#include "act_info.h"
-#include "act_move.h"
-#include "sorcerer.h"
-#include "chrono.h"
-#include "update.h"
-#include "chardef.h"
-#include "const.h"
-#include "utility.h"
+
+extern char *const dir_name[];
+extern const short rev_dir[];
+extern PATHFIND_DATA *best_path;
+extern int iterations;
 
 // TODO: add to race.h
 extern bool check_silent_movement(CHAR_DATA *ch, ROOM_INDEX_DATA *room);
