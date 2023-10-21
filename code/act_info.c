@@ -1822,7 +1822,7 @@ void do_look(CHAR_DATA *ch, char *argument)
 
 		if (is_affected_room(ch->in_room, gsn_glaciate) && ch->in_room->sector_type == SECT_ICE)
 		{
-			sprintf(buf, "%sThe water here has congealed into a thick glacial iceflow!%s\n\r",
+			sprintf(buf, "%sThe water here has congealed into a thick glacial ice floe!%s\n\r",
 				get_char_color(ch, "white"),
 				END_COLOR(ch));
 
