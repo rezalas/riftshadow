@@ -99,19 +99,7 @@ fi
 # Setup Database
 echo "${NOCOLOR}Running database scaffolding\n"
 {
-	cd ./db/rift_core/tables
-	sudo mysql -v mysql < ./setup.sql
-	
-	cd ../data
-	sudo mysql -v mysql < ./setup.sql
-	
-	cd ../../../db/rift/tables
-	sudo mysql -v mysql < ./setup.sql
-	
-	cd ../data
-	sudo mysql -v mysql < ./setup.sql
-
-	cd ../../mysql
+	cd ./db
 	sudo mysql -v mysql < ./setup.sql
 } ||
 { # log that there was an error and to check the MySQL settings
