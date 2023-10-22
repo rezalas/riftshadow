@@ -346,7 +346,7 @@ void cyclone_begin(AREA_DATA *area, AREA_AFFECT_DATA *af)
 
 void cyclone_begin_tick(AREA_DATA *area, AREA_AFFECT_DATA *af)
 {
-	zone_echo(area, "{cThe surrounding winds seem to pick up noticably as the horizon darkens.{x");
+	zone_echo(area, "{cThe surrounding winds seem to pick up noticeably as the horizon darkens.{x");
 }
 
 void cyclone_end_fun(AREA_DATA *area, AREA_AFFECT_DATA *af)
@@ -1256,7 +1256,7 @@ void spell_infravision(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_affected(ch, sn))
 	{
-		send_to_char("Your eyes are already accomodated to detecting heat nearby.\n\r", ch);
+		send_to_char("Your eyes are already accommodated to detecting heat nearby.\n\r", ch);
 		return;
 	}
 
@@ -2008,7 +2008,7 @@ void spell_hydroperception(int sn, int level, CHAR_DATA *ch, void *vo, int targe
 
 	if (is_affected(ch, sn))
 	{
-		send_to_char("Your eyes are already accomodated to seeing in water.\n\r", ch);
+		send_to_char("Your eyes are already accommodated to seeing in water.\n\r", ch);
 		return;
 	}
 
@@ -4232,7 +4232,7 @@ void spell_attract(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_LIGHTNING))
 	{
 		send_to_char("You failed.\n\r", ch);
-		act_new("You feel a slight tingling sensation, but it disspates.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
+		act_new("You feel a slight tingling sensation, but it dissipates.", ch, nullptr, victim, TO_VICT, POS_SLEEPING);
 		return;
 	}
 
@@ -4831,9 +4831,9 @@ void spell_molten_stones(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	if (saves_spell(level, victim, DAM_FIRE))
 		fire /= 2;
 
-	act("$n grabs a large stone, liquifies it in a flash and sends it flying at $N!", ch, 0, victim, TO_NOTVICT);
+	act("$n grabs a large stone, liquefies it in a flash and sends it flying at $N!", ch, 0, victim, TO_NOTVICT);
 	act("You grab a large stone, liquify it with a burst of heat, and send it flying at $N!", ch, 0, victim, TO_CHAR);
-	act("$n grabs a large stone, liquifies it in a flash and sends it flying at you!", ch, 0, victim, TO_VICT);
+	act("$n grabs a large stone, liquefies it in a flash and sends it flying at you!", ch, 0, victim, TO_VICT);
 
 	damage_new(ch, victim, blunt, sn, DAM_BASH, true, HIT_UNBLOCKABLE, HIT_NOADD, HIT_NOMULT, "molten stone");
 
@@ -5957,7 +5957,7 @@ void spell_sheath_of_ice(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 	oaf.pulse_fun = nullptr;
 	affect_to_obj(wield, &oaf);
 
-	/* Cheaphack to make it check for strength disarm... this is about as
+	/* Cheap hack to make it check for strength disarm... this is about as
 	 * cheap as they come. :P
 	 */
 	init_affect(&af);
@@ -5979,7 +5979,7 @@ void spell_ironskin(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 
 	if (is_affected(ch, gsn_ironskin) || is_affected(ch, gsn_diamondskin) || is_affected(ch, gsn_stoneskin))
 	{
-		send_to_char("Your skin is already magically hardenened.\n\r", ch);
+		send_to_char("Your skin is already magically hardened.\n\r", ch);
 		return;
 	}
 
@@ -6608,7 +6608,7 @@ void spell_quicksand(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	act("You gesture at the ground beneath you, liquifying it to trap the unsuspecting.", ch, 0, 0, TO_CHAR);
+	act("You gesture at the ground beneath you, liquefying it to trap the unsuspecting.", ch, 0, 0, TO_CHAR);
 	act("$n gestures at the ground, which seems to ripple ominously for a moment.", ch, 0, 0, TO_ROOM);
 
 	init_affect_room(&raf);
@@ -7033,7 +7033,7 @@ void spell_earthfade(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 		return;
 	}
 
-	act("The ground beneath $n liquifies and $e vanishes below the surface!", ch, 0, 0, TO_ROOM);
+	act("The ground beneath $n liquefies and $e vanishes below the surface!", ch, 0, 0, TO_ROOM);
 	act("You liquify the ground beneath you and conceal yourself within.", ch, 0, 0, TO_CHAR);
 
 	init_affect(&af);

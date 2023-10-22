@@ -34,7 +34,7 @@
 
 /*****************************************************************************
  Name:		flag_stat_table
- Purpose:	This table catagorizes the tables following the lookup
+ Purpose:	This table categorizes the tables following the lookup
  		functions below into stats and flags.  Flags can be toggled
  		but stats can only be assigned.  Update this table when a
  		new set of flags is installed.

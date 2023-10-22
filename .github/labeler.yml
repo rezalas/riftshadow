@@ -18,8 +18,8 @@ core:
 
 setup:
 - Makefile
-- *sql
-- *sh
+- '**/*.sql'
+- '**/*.sh'
 
 dev-install:
 - dev-install.sh

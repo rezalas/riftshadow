@@ -290,7 +290,7 @@ void do_rngtest(CHAR_DATA *ch, char *argument)
 
 	//	sprintf(buf,"number_percent -- Total: %ld | Number of rolls: %d | Average: %f | Deviation: %f\n\r", total,
 	// count, (float)total/(float)count, ((float)total/(float)count) - (float)50);
-	sprintf(buf, "number_range -- Total %ld | Number of rolls: %d | Average %f | Deviation %f | Occurances of Max %d (id20)\n\r",
+	sprintf(buf, "number_range -- Total %ld | Number of rolls: %d | Average %f | Deviation %f | Occurrences of Max %d (id20)\n\r",
 		total,
 		count,
 		(float)total / (float)count,

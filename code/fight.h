@@ -153,7 +153,7 @@ void do_defend (CHAR_DATA *ch, char *argument);
 void do_intimidate (CHAR_DATA *ch, char *argument);
 //New flee...this allows 'flee <direction>' for the thief skill escape.
 void do_flee (CHAR_DATA *ch, char *argument);
-/* Nasty assassinattion skill. Chance of success is very high, should be
+/* Nasty assassination skill. Chance of success is very high, should be
 changed if you plan on using this on a PK mud. -Ceran
 */
 void do_assassinate (CHAR_DATA *ch, char *argument);

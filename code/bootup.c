@@ -95,7 +95,7 @@ void CMud::LoadObjLimits()
 				for ( ; ; )
 				{
 					word   = fread_word( fpChar );
-					//NOTE: Be careful that occurances of this word INSIDE role/desc don't fuck it up!
+					//NOTE: Be careful that occurrences of this word INSIDE role/desc don't fuck it up!
 					//read before/after role/desc and test accordingly
 					if(!str_cmp(word,"Name") && temp_player_name[0] == '\0')
 						sprintf(temp_player_name,"%s",fread_string( fpChar ));

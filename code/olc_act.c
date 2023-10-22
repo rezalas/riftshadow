@@ -89,7 +89,7 @@ const struct olc_help_type help_table[] =
 	{"part", part_flags, "Mobile body parts."},
 	{"imm", imm_flags, "Mobile immunity."},
 	{"res", res_flags, "Mobile resistance."},
-	{"vuln", vuln_flags, "Mobile vlnerability."},
+	{"vuln", vuln_flags, "Mobile vulnerability."},
 	{"off", off_flags, "Mobile offensive behaviour."},
 	{"size", size_flags, "Mobile size."},
 	{"position", position_flags, "Mobile positions."},
@@ -212,7 +212,7 @@ void show_spec_cmds( CHAR_DATA *ch )
 
 	buf1[0] = '\0';
 	col = 0;
-	send_to_char( "Preceed special functions with 'spec_'\n\r\n\r", ch );
+	send_to_char( "Precede special functions with 'spec_'\n\r\n\r", ch );
 	for (spec = 0; spec_table[spec].function != nullptr; spec++)
 	{
 	sprintf( buf, "%-19.18s", &spec_table[spec].name[5] );
@@ -4673,7 +4673,7 @@ bool oedit_flag(CHAR_DATA *ch, char *argument)
 
 		if (bit == NO_FLAG)
 		{
-			send_to_char("That is not a vlaid flag type for vulnerbilities.\n\r", ch);
+			send_to_char("That is not a valid flag type for vulnerabilities.\n\r", ch);
 			return false;
 		}
 		else

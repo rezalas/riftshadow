@@ -48,7 +48,7 @@ void do_myell (CHAR_DATA *ch, char *argument, CHAR_DATA *attacker);
 void do_emote (CHAR_DATA *ch, char *argument);
 void do_pmote (CHAR_DATA *ch, char *argument);
 /* Simple, yet brilliant.  Notify immortals when players are using words that
- * are offensive/harrassing or commonly associated with OOC speech.  Immortals
+ * are offensive/harassing or commonly associated with OOC speech.  Immortals
  * can then respond accordingly if a rule violation is detected.
  * -El
  */

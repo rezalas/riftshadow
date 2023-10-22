@@ -2628,7 +2628,7 @@ void do_shieldbash(CHAR_DATA *ch, char *argument)
 	if (number_percent() < chance)
 	{
 		act("You smash your shield into $N's chest, bearing down upon it with your weight!", ch, 0, victim, TO_CHAR);
-		act("$n smashes $s shield into your chest, bearign down upon you with $s weight!", ch, 0, victim, TO_VICT);
+		act("$n smashes $s shield into your chest, bearing down upon you with $s weight!", ch, 0, victim, TO_VICT);
 		act("$n smashes $s shield into $N's chest, bearing down upon it with $s weight!", ch, 0, victim, TO_NOTVICT);
 
 		dam = (int)((float)dice(ch->level / 4, 4) + ((float)weight / (float)20));
@@ -3130,9 +3130,9 @@ void do_shatter(CHAR_DATA *ch, char *argument)
 			}
 			*/
 
-			sprintf(chfail, "You strike mightly at $N's $t, but it holds firm.");
-			sprintf(victfail, "$n strikes mightly at your $t, but it holds firm.");
-			sprintf(nvictfail, "$n strikes mightly at $N's $t, but it holds firm.");
+			sprintf(chfail, "You strike mightily at $N's $t, but it holds firm.");
+			sprintf(victfail, "$n strikes mightily at your $t, but it holds firm.");
+			sprintf(nvictfail, "$n strikes mightily at $N's $t, but it holds firm.");
 			sprintf(chsuc, "Driving in mightily, you shatter $N's $t with a single powerful blow!");
 			sprintf(victsuc, "Driving in mightily, $n shatters your $t with a single powerful blow!");
 			sprintf(nvictsuc, "Driving in mightily, $n shatters $N's $t with a single powerful blow!");
@@ -4098,7 +4098,7 @@ void do_exploit(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		sprintf(anfail, "You lack a sufficent understanding of $N's anatomy.");
+		sprintf(anfail, "You lack a sufficient understanding of $N's anatomy.");
 	}
 
 	if (number_percent() <= skill && anatomy && (arm || leg || torso || head || broken))

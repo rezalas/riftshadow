@@ -219,7 +219,7 @@ inline bool RString::Matches(const char *nstr, bool fIgnoreCase)
 	return !strcmp(myString, nstr);
 }
 
-/* Find occurence of letter c inside myString */
+/* Find occurrence of letter c inside myString */
 signed int RString::Find(const char c, int cStartPos, bool fIgnoreCase)
 {
 	char *cptr = myString + cStartPos;
@@ -230,7 +230,7 @@ signed int RString::Find(const char c, int cStartPos, bool fIgnoreCase)
 	return (cptr - myString);
 }
 
-/* find occurence of cstr inside myString */
+/* find occurrence of cstr inside myString */
 inline signed int RString::Find(const char *cstr, int cStartPos, bool fIgnoreCase)
 {
 	char *cptr = strstr(myString + cStartPos, cstr);

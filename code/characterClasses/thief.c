@@ -931,7 +931,7 @@ void do_drag(CHAR_DATA *ch, char *argument)
 
 	if (is_awake(victim))
 	{
-		send_to_char("You can only drag unconscious poeple around.\n\r", ch);
+		send_to_char("You can only drag unconscious people around.\n\r", ch);
 		return;
 	}
 
@@ -1669,7 +1669,7 @@ void do_counterfeit(CHAR_DATA *ch, char *argument)
 
 	if (number_percent() < skill)
 	{
-		act("You successfully conterfeit $p.", ch, orig, 0, TO_CHAR);
+		act("You successfully counterfeit $p.", ch, orig, 0, TO_CHAR);
 
 		free_pstring(copy->short_descr);
 		copy->short_descr = palloc_string(orig->short_descr);
@@ -2455,7 +2455,7 @@ void do_bluff(CHAR_DATA *ch, char *argument)
 
 		if (!str_prefix(arg, "good"))
 		{
-			send_to_char("You cover your wounds and straighten your posture, putting on a convincing show of being healhier.\n\r", ch);
+			send_to_char("You cover your wounds and straighten your posture, putting on a convincing show of being healthier.\n\r", ch);
 			af.modifier = 1;
 		}
 		else if (!str_prefix(arg, "bad"))

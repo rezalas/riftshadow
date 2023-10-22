@@ -287,7 +287,7 @@ void game_loop_unix(int control)
 				int i = 0;
 				interpret(d->character, d->character->pcdata->queue[0]);
 
-				if (!d->character) // Cal: Silly Morglum.  But what if we just interped a "quit"?
+				if (!d->character) // Cal: Silly Morglum.  But what if we just interpreted a "quit"?
 					continue;	   // then d->character is null and we just crashed. :(
 
 				for (i = 1; i < d->character->pcdata->write_next; i++)
