@@ -18,11 +18,11 @@ class DatabaseManager extends BaseManager implements ConnectionResolverInterface
 	{
 		return $this->connection(config('database.default'), $dbname);
 	}
-	
+
 	/**
 	 * Get a database connection instance.
 	 *
-	 * @param  string|null  $name
+	 * @param  string  $name
 	 * @param  string|null  $dbname
 	 * @return \Illuminate\Database\Connection
 	 */
@@ -30,8 +30,8 @@ class DatabaseManager extends BaseManager implements ConnectionResolverInterface
 	{
 		[$database, $type] = $this->parseConnectionName($name);
 
-		$name = Str::before($name, '~') ?: $database;
-		
+		$name = Str::before($name ?? 'mysql', '~') ?: $database;
+
 		$dbname = $dbname ?: $this->app['config']['database.database'];
 
 		// If we haven't created this connection, we'll create it based on the config
@@ -39,7 +39,8 @@ class DatabaseManager extends BaseManager implements ConnectionResolverInterface
 		// set the "fetch mode" for PDO which determines the query return types.
 		if (! isset($this->connections["$name~$dbname"])) {
 			$this->connections["$name~$dbname"] = $this->configure(
-				$this->makeConnection($database, $dbname), $type
+				$this->makeConnection($database, $dbname),
+				$type
 			);
 			//dump($this->connections["$name~$dbname"]->getName(), $name, $dbname, $database);
 		}
@@ -59,22 +60,22 @@ class DatabaseManager extends BaseManager implements ConnectionResolverInterface
 	protected function configuration($name, $dbname = null)
 	{
 		$name = Str::before($name ?: $this->getDefaultConnection(), '-');
-		
+
 		$dbname = $dbname ?: $this->app['config']['database.database'];
 
 		// To get the database connection configuration, we will just pull each of the
 		// connection configurations and get the configurations for the given name.
 		// If the configuration doesn't exist, we'll throw an exception and bail.
 		$connections = $this->app['config']['database.connections'];
-		
+
 		if (is_null($config = Arr::get($connections, $name . '.' . $dbname))) {
 			throw new InvalidArgumentException("Database [{$name}] not configured.");
 		}
 
-		return (new ConfigurationUrlParser)
+		return (new ConfigurationUrlParser())
 					->parseConfiguration($config);
 	}
-	
+
 	/**
 	 * Make the database connection instance.
 	 *
@@ -99,7 +100,7 @@ class DatabaseManager extends BaseManager implements ConnectionResolverInterface
 		if (isset($this->extensions[$driver = $config['driver']])) {
 			return call_user_func($this->extensions[$driver], $config, $name);
 		}
-		
+
 		return $this->factory->make($config, "$name~$dbname");
 	}
 }

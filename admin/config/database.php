@@ -24,7 +24,7 @@ return [
 	| Here the default db may be specified, since riftshadow uses two
 	| databases.  Defaults to 'rift'.  May be 'rift' or 'rift_core'.
 	*/
-	
+
 	'database' => env('DB_DATABASE', 'rift'),
 
 	/*
@@ -195,7 +195,7 @@ return [
 
 		'options' => [
 			'cluster' => env('REDIS_CLUSTER', 'redis'),
-			'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+			'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
 		],
 
 		'default' => [

@@ -38,7 +38,7 @@ class Admin
 		$shouldTrust = false;
 
 		// Check the trust level of each player file; if any of them returns
-		// a number greater than $targetLevel, they can be trusted and the loop is 
+		// a number greater than $targetLevel, they can be trusted and the loop is
 		// broken
 		foreach ($user->playerFiles as $playerFile) {
 			if ($playerFile->trust > $targetLevel) {

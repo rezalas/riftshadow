@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class ClassesController extends Controller
 {
-
 	/**
 	 * Instantiate a new controller instance.
 	 *
@@ -66,7 +65,7 @@ class ClassesController extends Controller
 
 		// Data valid; save...
 
-		$class = new ClassTable;
+		$class = new ClassTable();
 
 		$class->name = $validated['name'];
 		$class->who_name = $validated['abbrev'];
@@ -81,7 +80,7 @@ class ClassesController extends Controller
 		$class->default_group = $validated['default_group'];
 		$class->ctype = $validated['ctype'];
 		$class->status = $validated['status'];
-		
+
 		$class->save();
 
 		return redirect()
@@ -154,7 +153,7 @@ class ClassesController extends Controller
 		$class->default_group = $validated['default_group'];
 		$class->ctype = $validated['ctype'];
 		$class->status = $validated['status'];
-		
+
 		$class->save();
 
 		return redirect()

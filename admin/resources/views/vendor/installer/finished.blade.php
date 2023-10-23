@@ -37,5 +37,5 @@
 @endsection
 
 @push('scripts')
-	<script type="text/javascript" src="{{mix('/installer/js/finished.js')}}"></script>
+	@vite(['resources/js/vendor/installer/finished.js'])
 @endpush
