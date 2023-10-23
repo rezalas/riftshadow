@@ -51,6 +51,7 @@ tests/libTestMain.a
 /vendor
 /Homestead.json
 /Homestead.yaml
+/ca.homestead.riftshadow.crt
 
 # Database Files
 !/db/rift/

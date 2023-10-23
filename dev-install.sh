@@ -73,8 +73,8 @@ if $mySqlPresent; then
 		sudo service mariadb start
 		sudo service mariadb status
 	} || {
-		sudo service mysqld start
-		sudo service mysqld status
+		sudo service mysql start
+		sudo service mysql status
 	}
 
 else
@@ -99,11 +99,18 @@ fi
 # Setup Database
 echo "${NOCOLOR}Running database scaffolding\n"
 {
-	cd ./db
-	sudo mysql -v mysql < ./setup.sql
+	if [ -e ./db/setup.sql ]; then
+		sudo mysql -v mysql < ./db/setup.sql
+	elif [ -e ~/code/db/setup-vagrant.sql ]; then
+		sudo mysql -v mysql < ~/code/db/setup-vagrant.sql
+		sudo mysql -v rift_core < ~/code/db/rift_core.sql >/dev/null 2>&1
+		sudo mysql -v rift < ~/code/db/rift.sql >/dev/null 2>&1
+		~/code/admin/artisan migrate
+	fi
 } ||
 { # log that there was an error and to check the MySQL settings
 	echo "${RED}There was a problem running setup.sql on your local server. Inspect the error above"
+	exit
 }
 
 echo "${GREEN}Database scaffolding successful! Huzzah!"
