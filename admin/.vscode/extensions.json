@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "obliviousharmony.vscode-php-codesniffer",
+        "junstyle.php-cs-fixer",
+        "neilbrayfield.php-docblocker",
+        "zobo.php-intellisense",
+        "syler.sass-indented"
+    ]
+}

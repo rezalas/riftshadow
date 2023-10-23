@@ -105,8 +105,8 @@ class RacesController extends Controller
 
 		$newBitCols = $this->mapFlags($request);
 
-		$race = new RaceTable;
-		
+		$race = new RaceTable();
+
 		$race->name = $request->name;
 		$race->short_name = $request->short_name;
 		$race->imm_name = $request->imm_name;
@@ -208,7 +208,7 @@ class RacesController extends Controller
 		]);
 
 		$modifiedBitCols = $this->mapFlags($request);
-		
+
 		$race->name = $request->name;
 		$race->short_name = $request->short_name;
 		$race->imm_name = $request->imm_name;
@@ -290,7 +290,7 @@ class RacesController extends Controller
 			];
 		});
 	}
-	
+
 	/**
 	 * Generate an array containing the select form fields and
 	 * whether they start selected or not

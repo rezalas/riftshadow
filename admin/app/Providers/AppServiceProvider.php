@@ -2,12 +2,14 @@
 
 namespace App\Providers;
 
-use App\Models\{ClassTable, RaceTable};
+use App\Models\ClassTable;
+use App\Models\RaceTable;
 use App\Services\Database\DatabaseManager;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
+		// Use bootstrap for the pagination
+		Paginator::useBootstrap();
+
 		// Alias Blade includes
 		Blade::include('includes.modelselect', 'modelselect');
 

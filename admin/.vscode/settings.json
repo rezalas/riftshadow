@@ -1,0 +1,8 @@
+{
+    "php-cs-fixer.executablePathWindows": "",
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.onsave": true,
+    "phpCodeSniffer.standard": "Automatic",
+    "phpCodeSniffer.autoExecutable": true,
+    "php-cs-fixer.pathMode": "override"
+}
