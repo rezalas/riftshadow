@@ -3226,7 +3226,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	int vnum, nMatch = 0;
 
 	fclose(fpReserve);
-	fp = fopen("mem.dmp", "w");
+	fp = fopen(MEM_DUMP_FILE, "w");
 
 	/* report use of data structures */
 
@@ -3343,7 +3343,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	fclose(fp);
 
 	/* start printing out mobile data */
-	fp = fopen("mob.dmp", "w");
+	fp = fopen(MOB_DUMP_FILE, "w");
 
 	fprintf(fp, "\nMobile Analysis\n");
 	fprintf(fp, "---------------\n");
@@ -3364,7 +3364,7 @@ void do_dump(CHAR_DATA *ch, char *argument)
 	fclose(fp);
 
 	/* start printing out object data */
-	fp = fopen("obj.dmp", "w");
+	fp = fopen(OBJ_DUMP_FILE, "w");
 
 	fprintf(fp, "\nObject Analysis\n");
 	fprintf(fp, "---------------\n");
