@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "rift.h"
+#include "newmem.h"
 #include "area.h"
 #include "room.h"
 #include "exit.h"
@@ -276,42 +277,9 @@ void CMud::LoadAreas()
 
 void CMud::LoadOptions()
 {
-	CFile myFile;
-	TString word;
-	
-	if(myFile.LoadFile(OPTION_FILE) == false)
-		return;
-	
-	for(word = myFile.ReadWord(); !myFile.End(); word = myFile.ReadWord())
-	{
-		if(word[0] == '#')
-		{
-			myFile.ReadToEOL();
-			continue;
-		}
-		
-		if(word == "game_port")
-		{
-			game_port = atoi(myFile.ReadWord());
-			continue;
-		}
-		
-		if(word == "base_directory")
-		{
-			base_directory = (const char *)(myFile.ReadWord());
-			continue;
-		}
-
-		if(word == "player_dir")
-		{
-			player_dir = (const char *)(myFile.ReadWord());
-			continue;
-		}
-
-		RS.Bug("LoadOptions Error: Unrecognized option '%s'", (RSTR)word);
-	}
-
-	myFile.CloseFile();
+	game_port = stoi(Settings.GetValue("Port"));
+	base_directory = (Settings.GetValue("BaseDir").c_str());
+	player_dir = (Settings.GetValue("PlayerDir").c_str());
 }
 
 void CMud::LoadGreetingScreen()
@@ -331,6 +299,7 @@ void CMud::LoadGreetingScreen()
 	buf[i-2] = '\0';
    	fclose(fp);
 	greeting_screen = buf;
+	help_greeting = palloc_string(buf);
 }
 
 void CMud::InitializeTables()

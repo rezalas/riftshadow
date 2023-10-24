@@ -13,7 +13,6 @@
 #include "mud.h"
 #include "merc.h"
 #include "update.h"
-#include "newmem.h"
 #include "dioextra.h"
 #include "db.h"
 #include "db2.h"
@@ -105,17 +104,7 @@ bool CMud::Bootup()
 		weather_update();
 		RS.Log("Priming weather");
 		reset_chessboard();
-		fp = fopen(LOGIN_BANNER_FILE, "r");
-		while(fgets(tempbuf,200,fp))
-		{
-			strcat(buf,tempbuf);
-			strcat(buf,"\r");
-		}
-		fclose(fp);
 		gold_constant = std::stol(Settings.GetValue("Gold"));
-		chop(buf);
-		chop(buf);
-		help_greeting = palloc_string(buf);
 		update_db_gold();
 
 		//CSocket::InitializeSockets();

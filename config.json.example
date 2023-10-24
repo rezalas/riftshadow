@@ -21,5 +21,6 @@
           }
      },
 	 "PlayerDir": "./player/",
-	 "Gold" : 80000
+	 "Gold" : 80000,
+	 "BaseDir": "./"
 }
