@@ -30,7 +30,8 @@ libRiftCore.a
 player/*.plr
 player/Player.lst
 
-
+# Live config files
+config.json
 
 # Binaries
 rift
