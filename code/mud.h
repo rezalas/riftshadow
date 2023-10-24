@@ -21,7 +21,6 @@
 #include "prof.h"
 #include "config.h"
 
-#define OPTION_FILE RIFT_AREA_DIR "/rs.conf"
 #define CONFIG_FILE RIFT_ROOT_DIR "/config.json"
 
 extern CMud RS;
@@ -81,9 +80,6 @@ public:
 //	CRace				Races;
 //	CClass				Classes;
 //	CCommand			Commands;
-	/* mud options arei
-	 * read off a plaintext - #define OPTION_FILE "rs.conf"
-	 */
 	
 	RString				greeting_screen;
 	RString				motd;
