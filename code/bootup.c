@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "rift.h"
+#include "newmem.h"
 #include "area.h"
 #include "room.h"
 #include "exit.h"
@@ -298,6 +299,7 @@ void CMud::LoadGreetingScreen()
 	buf[i-2] = '\0';
    	fclose(fp);
 	greeting_screen = buf;
+	help_greeting = palloc_string(buf);
 }
 
 void CMud::InitializeTables()
