@@ -3773,25 +3773,13 @@ void bug(const char *str, int param)
 		}
 
 		buffer = fmt::format("[*****] FILE: {} LINE: {}", strArea, iLine);
-		log_string(buffer.c_str());
+		RS.Log(buffer.c_str());
 	}
 
 	buffer = fmt::sprintf(str, param);
 	buffer = fmt::format("[*****] BUG: {}", buffer);
-	log_string(buffer.c_str());
+	RS.Log(buffer.c_str());
 	wiznet(buffer.data(), 0, 0, WIZ_DEBUG, 0, 0);
-}
-
-/*
- * Writes a string to the log.
- */
-void log_string(const char *str)
-{
-	char *strtime;
-
-	strtime = ctime(&current_time);
-	strtime[strlen(strtime) - 1] = '\0';
-	fprintf(stderr, "%s :: %s\n", strtime, str);
 }
 
 /*
@@ -3974,7 +3962,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 	for (;;)
 	{
 		strcpy(strPlr, fread_word(fpChar_list));
-		//     log_string(strPlr);
+		//     RS.Log(strPlr);
 		sprintf(chkbuf, "%s/%s", RIFT_PLAYER_DIR, "Zzz.plr");
 
 		if (!str_cmp(strPlr, chkbuf))

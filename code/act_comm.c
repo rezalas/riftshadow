@@ -1801,7 +1801,7 @@ void do_quit_new(CHAR_DATA *ch, char *argument, bool autoq)
 			count_carried(ch, false),
 			count_carried(ch, true));
 
-	log_string(log_buf);
+	RS.Log(log_buf);
 	wiznet(log_buf, ch, nullptr, WIZ_SITES, 0, get_trust(ch));
 	login_log(ch, 2);
 

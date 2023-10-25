@@ -58,7 +58,7 @@ void CMud::LoadObjLimits()
 	{
 		strcpy(strPlr, fread_word(fpChar_list) );
 		if(bDebug)
-			log_string(strPlr);
+			RS.Log(strPlr);
 
 		if (!str_cmp(strPlr,chkbuf))
 			break;
@@ -114,7 +114,7 @@ void CMud::LoadObjLimits()
 			if(lastlogin && plevel && plevel < 52 && lastlogin + 3456000 < current_time)
 			{
 				auto buffer = fmt::format("Autodeleting {}.", temp_player_name);
-				log_string(buffer.c_str());
+				RS.Log(buffer.c_str());
 				breakout = true;
 				delete_char(temp_player_name, true);
 				break;
@@ -205,7 +205,7 @@ void CMud::LoadAreas()
 {
 	FILE *fpList;
 
-	log_string("Loading area files now...");
+	RS.Log("Loading area files now...");
 
 	if ( ( fpList = fopen( AREA_LIST, "r" ) ) == nullptr )
 	{
@@ -221,7 +221,7 @@ void CMud::LoadAreas()
 			break;
 
 		if (bDebug)
-			log_string(strArea);
+			RS.Log(strArea);
 
 		if ( strArea[0] == '-' )
 		{

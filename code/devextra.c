@@ -229,7 +229,7 @@ void clean_mud()
 			if (!load_char_obj(d, tbuf))
 			{
 				nSQL.Delete("players WHERE name = '%s'", row[0]);
-				log_string("Deleting player...");
+				RS.Log("Deleting player...");
 			}
 
 			free_char(d->character);

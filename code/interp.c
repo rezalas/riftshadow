@@ -752,7 +752,7 @@ void interpret(CHAR_DATA *ch, char *argument)
 	{
 		sprintf(log_buf, "Log %s: %s", ch->desc->original ? ch->desc->original->true_name : ch->true_name, logline);
 		wiznet(log_buf, ch, nullptr, WIZ_SECURE, 0, get_trust(ch));
-		log_string(log_buf);
+		RS.Log(log_buf);
 	}
 
 	if (ch->desc != nullptr && ch->desc->snoop_by != nullptr)
