@@ -113,7 +113,7 @@ bool can_loot(CHAR_DATA *ch, OBJ_DATA *obj)
 				: ch->name,
 		obj->short_descr);
 
-		log_string(buf);
+		RS.Log(buf);
 		ch->pause = 5;
 	}
 

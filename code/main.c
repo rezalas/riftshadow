@@ -71,13 +71,13 @@ int main(int argc, char **argv)
 	// boot_db( );
 	if (!RS.Bootup())
 	{
-		log_string("Riftshadow failed to boot, aborting.");
+		RS.Log("Riftshadow failed to boot, aborting.");
 		exit(0);
 		return 0;
 	}
 
 	sprintf(buf, "Riftshadow booted, binding on port %d.", port);
-	log_string(buf);
+	RS.Log(buf);
 
 	game_loop_unix(control);
 	close(control);
@@ -85,7 +85,7 @@ int main(int argc, char **argv)
 	/*
 	 * That's all, folks.
 	 */
-	log_string("Normal termination of game.");
+	RS.Log("Normal termination of game.");
 	exit(0);
 	return 0;
 }

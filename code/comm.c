@@ -497,11 +497,11 @@ void init_descriptor(int control)
 
 		sprintf(buf, "%d.%d.%d.%d", (addr >> 24) & 0xFF, (addr >> 16) & 0xFF, (addr >> 8) & 0xFF, (addr)&0xFF);
 		sprintf(log_buf, "Sock.sinaddr:  %s", buf);
-		log_string(log_buf);
+		RS.Log(log_buf);
 
 		if (strstr(buf, "204.82.56."))
 		{
-			log_string("DNS lookup refused. Forbidding access.");
+			RS.Log("DNS lookup refused. Forbidding access.");
 			write_to_descriptor(desc, "Your site has been banned from this mud due to DNS problems.\n\r", 0);
 
 			close(desc);
@@ -580,7 +580,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 	if ((ch = dclose->character) != nullptr)
 	{
 		sprintf(log_buf, "Closing link to %s.", ch->name);
-		log_string(log_buf);
+		RS.Log(log_buf);
 
 		/* cut down on wiznet spam when rebooting */
 		if (dclose->connected == CON_PLAYING && !merc_down)
@@ -640,7 +640,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 	if (iStart >= sizeof(d->inbuf) - 10)
 	{
 		sprintf(log_buf, "%s input overflow!", d->host);
-		log_string(log_buf);
+		RS.Log(log_buf);
 
 		write_to_descriptor(d->descriptor, "\n\r*** PUT A LID ON IT!!! ***\n\r", 0);
 		return false;
@@ -659,7 +659,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		}
 		else if (nRead == 0)
 		{
-			log_string("EOF encountered on read.");
+			RS.Log("EOF encountered on read.");
 			return false;
 		}
 		else if (errno == EAGAIN)
@@ -1498,7 +1498,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			if (IS_SET(ch->act, PLR_DENY))
 			{
 				sprintf(log_buf, "Denying access to %s@%s.", argument, d->host);
-				log_string(log_buf);
+				RS.Log(log_buf);
 
 				write_to_buffer(d, "You are denied access.\n\r", 0);
 				close_socket(d);
@@ -1621,7 +1621,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 				count_carried(ch, true),
 				auto_check_multi(d, d->host) ? " (MULTI)" : "");
 
-			log_string(log_buf);
+			RS.Log(log_buf);
 			login_log(ch, 1);
 
 			wiznet(log_buf, nullptr, nullptr, WIZ_SITES, 0, get_trust(ch));
@@ -2022,7 +2022,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			sprintf(log_buf, "%s@%s new player.%s",
 				ch->name, d->host,
 				auto_check_multi(d, d->host) ? " (MULTI-CHAR?)" : "");
-			log_string(log_buf);
+			RS.Log(log_buf);
 			login_log(ch, 0);
 
 			wiznet("Newbie alert!  $N sighted.", ch, nullptr, WIZ_NEWBIE, 0, 0);
@@ -2965,7 +2965,7 @@ bool check_reconnect(DESCRIPTOR_DATA *d, char *name, bool fConn)
 				}
 
 				sprintf(log_buf, "%s@%s reconnected.", ch->name, d->host);
-				log_string(log_buf);
+				RS.Log(log_buf);
 
 				wiznet("$N recovers from link death.", ch, nullptr, WIZ_LINKS, 0, get_trust(ch));
 				d->connected = CON_PLAYING;

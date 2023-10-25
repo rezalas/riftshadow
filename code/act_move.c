@@ -3866,7 +3866,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 		mob->in_room->vnum,
 		ch->in_room->vnum,
 		iterations);
-	log_string(buf);
+	RS.Log(buf);
 	*/
 
 	move_char(mob, solve->dir_from, false, true);
@@ -3933,7 +3933,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 		mob->in_room->vnum,
 		goal->vnum,
 		iterations);
-	log_string(buf);
+	RS.Log(buf);
 	*/
 
 	move_char(mob, solve->dir_from, false, true);

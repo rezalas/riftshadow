@@ -726,7 +726,6 @@ void append_file (CHAR_DATA *ch, char *file, char *str);
  * Reports a bug.
  */
 void bug(const char *str, int param);
-void log_string (const char *str);
 void tail_chain(void);
 void do_force_reset(CHAR_DATA *ch, char *argument);
 /*

@@ -1479,7 +1479,7 @@ int damage_new(CHAR_DATA *ch, CHAR_DATA *victim, int idam, int dt, int dam_type,
 				victim->name,
 				(is_npc(ch) ? ch->short_descr : ch->name),
 				ch->in_room->vnum);
-			log_string(log_buf);
+			RS.Log(log_buf);
 		}
 
 		/*
@@ -3582,21 +3582,21 @@ void pk_record(CHAR_DATA *ch, CHAR_DATA *victim)
 		if (is_same_group(wch, ch) && !is_npc(wch) && (wch->in_room == ch->in_room || wch->ghost > 0))
 		{
 			sprintf(buf, "Adding %s to killer_group", wch->name);
-			log_string(buf);
+			RS.Log(buf);
 			killer_group++;
 		}
 
 		if (is_same_group(wch, ch) && wch->in_room == ch->in_room && !is_npc(wch))
 		{
 			sprintf(buf, "Adding %s to killer_in_room", wch->name);
-			log_string(buf);
+			RS.Log(buf);
 			killer_in_room++;
 		}
 
 		if (is_same_group(wch, victim) && (wch->in_room == victim->in_room || wch->ghost > 0))
 		{
 			sprintf(buf, "Adding %s to victim_group.", wch->name);
-			log_string(buf);
+			RS.Log(buf);
 			victim_group++;
 		}
 	}

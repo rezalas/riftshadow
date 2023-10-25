@@ -1108,7 +1108,7 @@ void do_asave(CHAR_DATA *ch, char *argument)
 					continue;
 
 				clean_olc_aflags(pArea);
-				log_string(pArea->name);
+				RS.Log(pArea->name);
 
 				sprintf(buf, "Saving..%s\n", pArea->name);
 				wiznet(buf, 0, nullptr, WIZ_DEBUG, 0, 0);
