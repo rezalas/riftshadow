@@ -10,7 +10,10 @@ use Illuminate\Queue\SerializesModels;
 
 class ReguardTable implements ShouldQueue
 {
-	use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+	use Dispatchable;
+	use InteractsWithQueue;
+	use Queueable;
+	use SerializesModels;
 
 	/**
 	 * The model to regard

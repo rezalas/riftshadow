@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\{
+	ClassesController,
+	HelpFilesController,
+	HomeController,
+	RacesController,
+	UtilitiesController
+};
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,28 +21,30 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->middleware('admin-menu')->name('home');
+Route::get('/', [HomeController::class, 'index'])->middleware('admin-menu')->name('home');
 
 // Users of trust/level lower than 52 cannot access the routes
 // in this group
 Route::middleware(['admin:52', 'admin-menu'])->group(function () {
 	// Classes
-	Route::get('classes/{class}/delete', 'ClassesController@delete')->name('classes.delete');
-	Route::resource('classes', 'ClassesController');
+	Route::get('classes/{class}/delete', [ClassesController::class, 'delete'])->name('classes.delete');
+	Route::resource('classes', ClassesController::class);
 
 	// Races
-	Route::get('races/{race}/delete', 'RacesController@delete')->name('races.delete');
-	Route::resource('races', 'RacesController');
+	Route::get('races/{race}/delete', [RacesController::class, 'delete'])->name('races.delete');
+	Route::resource('races', RacesController::class);
 
 	// Help Files
-	Route::get('helpfiles/{helpfile}/delete', 'HelpFilesController@delete')->name('helpfiles.delete');
-	Route::resource('helpfiles', 'HelpFilesController');
+	Route::get('helpfiles/{helpfile}/delete', [HelpFilesController::class, 'delete'])->name('helpfiles.delete');
+	Route::resource('helpfiles', HelpFilesController::class);
 
 	// Utilities
-	Route::get('utilities/gen-defs', 'UtilitiesController@genDefs')->name('utilities.genDefs');
-	Route::get('utilities/update-area-ids', 'UtilitiesController@updateAreaIds')->name('utilities.updateAreaIds');
+	Route::get('utilities/gen-defs', [UtilitiesController::class, 'genDefs'])->name('utilities.genDefs');
+	Route::get('utilities/update-area-ids', [UtilitiesController::class, 'updateAreaIds'])
+		->name('utilities.updateAreaIds');
 	// TODO: Implement
-	//Route::get('utilities/update-room-ids', 'UtilitiesController@updateRoomIds')->name('utilities.updateRoomIds');
+	//Route::get('utilities/update-room-ids', [UtilitiesController::class, 'updateRoomIds'])
+	//	->name('utilities.updateRoomIds');
 });
 
 // Overwrite the controller for this route

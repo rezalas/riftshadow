@@ -1,4 +1,8 @@
+import Popper from "popper.js";
+import $ from "jquery";
 import axiosBase from "axios";
+import _ from "lodash";
+import "bootstrap";
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
@@ -17,11 +21,11 @@ if (!token) {
 const axios = axiosBase.create({
 	headers: {
 		"X-Requested-With": "XMLHttpRequest",
-		"X-CSRF-TOKEN": token.content
-	}
+		"X-CSRF-TOKEN": token.content,
+	},
 });
 
-window._ = require("lodash");
+window._ = _;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -30,10 +34,8 @@ window._ = require("lodash");
  */
 
 try {
-	window.Popper = require("popper.js").default;
-	window.$ = window.jQuery = require("jquery");
-
-	require("bootstrap");
+	window.Popper = Popper;
+	window.$ = window.jQuery = $;
 } catch (e) {}
 
 /**

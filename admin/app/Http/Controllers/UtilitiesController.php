@@ -116,8 +116,10 @@ class UtilitiesController extends Controller
 					$worldRoom = WorldRoom::where('vnum', '>=', $worldArea->min_vnum)
 						->where('vnum', '<=', $worldArea->max_vnum)
 						->first();
-					$worldRoom->area_id = $idx;
-					$worldRoom->save();
+					if ($worldRoom !== null) {
+						$worldRoom->area_id = $idx;
+						$worldRoom->save();
+					}
 				}
 			} catch (Exception $e) {
 				$error .= "\n{$e->getMessage()}";
@@ -144,7 +146,7 @@ class UtilitiesController extends Controller
 	{
 		// Not implemented yet
 		// TODO: Implement
-		
+
 		$redirect = redirect()->route('home');
 
 		return $redirect->with('message', trans('utilities.updateRoomIds'));
@@ -287,23 +289,23 @@ class UtilitiesController extends Controller
 		$content = $this->genHeader;
 
 		foreach ($tables as $tableName => $columns) {
-				$m_var = "";
-		
+			$m_var = "";
+
 			if ($tableName === "world_rooms") {
 				$m_var .= "#define\tLOAD_EXIT_DATA(eptr)\\\n";
 				$m_var .= "eptr->exit_info = eptr->RowToNumber(COL_WORLD_ROOMS_0_EXIT_INFO);\\\n";
 				$m_var .= "eptr->key = eptr->RowToNumber(COL_WORLD_ROOMS_0_KEY);\\\n";
 				$m_var .= "eptr->keyword.NoDeallocSetTo(COL_WORLD_ROOMS_0_KEYWORD);\n\n";
 			}
-		
+
 			$m_var .= "#define\tLOAD_" . strtoupper($tableName) . "(tvar)\\\n";
-		
+
 			if ($tableName === "world_rooms") {
 				$m_var .= "ASSOCIATE_AREA(tvar, row[COL_WORLD_ROOMS_AREA_ID]);\\\n";
 			}
 
 			$i = 0;
-			
+
 			foreach ($columns as $colData) {
 				$f_name = $colData['name'];
 				$f_type = $colData['type'];
@@ -311,7 +313,7 @@ class UtilitiesController extends Controller
 				$first_flag = $flags[0] ?? '';
 				$d_name = strtoupper("COL_{$tableName}_{$f_name}");
 				$line = "#define\t$d_name\t\t$i\n";
-		
+
 				$go = true;
 				foreach ($flags as $flag) {
 					if ($flag === "auto_increment") {
@@ -319,7 +321,7 @@ class UtilitiesController extends Controller
 						break;
 					}
 				}
-		
+
 				if ($f_type === "string" && $first_flag === "" && $f_name !== 'description') {
 					$go = false;
 				}
@@ -339,8 +341,8 @@ class UtilitiesController extends Controller
 				if ($f_name === "max_con") {
 					$f_name = "max_stats[4]";
 				}
-		
-		
+
+
 				// world related id columns that shouldn't show up
 				if ($d_name === "COL_WORLD_AREAS_ID") {
 					$go = 0;
@@ -357,7 +359,7 @@ class UtilitiesController extends Controller
 					$content .= $line;
 					$go = 0;
 				}
-		
+
 				if ($go) {
 					$content .= $line;
 					$pchar = '.';
@@ -383,7 +385,7 @@ class UtilitiesController extends Controller
 					} else {
 						die("Error with field types! - {$f_name}, {$f_type}");
 					}
-		
+
 					// Add the allocate_exits macro for loading rooms from
 					// world_rooms - needs to be near the end.
 					if ($d_name === "COL_WORLD_ROOMS_OWNER") {
@@ -401,11 +403,11 @@ class UtilitiesController extends Controller
 					} else {
 						$count--;
 					}
-					
+
 					if (!$autoIncrementNext && $i < $count) {
 						$m_var .= "\\";
 					}
-		
+
 					$m_var .= "\n";
 				}
 				$i++;
@@ -425,19 +427,19 @@ class UtilitiesController extends Controller
 	private function genFunDefs()
 	{
 		$content = $this->genHeader;
-		
+
 		/* kick out the interp do_funs */
 		$dofunargs = "CCharacter *ch, const char *args";
 
 		$content .= "typedef void (*DOFUNTYPE) ($dofunargs);\n";
 		$content .= "struct do_fun_type{ DOFUNTYPE name; };\n";
-		
+
 		/* we have to prototype the do_funs first */
 		$interps = InterpTable::select('do_fun_name', 'id')
 			->distinct()
 			->orderBy('id', 'asc')
 			->get();
-		
+
 		foreach ($interps as $interp) {
 			$content .= "void $interp->do_fun_name ($dofunargs);\n";
 		}
@@ -449,7 +451,7 @@ class UtilitiesController extends Controller
 		}
 
 		$content .= "};\n";
-		
+
 		return $content;
 	}
 
@@ -474,7 +476,7 @@ class UtilitiesController extends Controller
 		foreach ($interps as $interp) {
 			$content .= "void $interp->do_fun_name($dofunargs)\n{\n\treturn;\n}\n\n";
 		}
-		
+
 		// Remove last \n
 		return substr($content, 0, -1);
 	}
@@ -487,7 +489,7 @@ class UtilitiesController extends Controller
 	private function genStdDefs()
 	{
 		$content = $this->genHeader;
-		
+
 		$bitLookups = BitLookup::select('define', 'bit')->get();
 
 		foreach ($bitLookups as $bitLookup) {

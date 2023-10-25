@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-16x16.png') }}" sizes="16x16"/>
 		<link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-32x32.png') }}" sizes="32x32"/>
 		<link rel="icon" type="image/png" href="{{ asset('installer/img/favicon/favicon-96x96.png') }}" sizes="96x96"/>
-		<link href="{{ mix('/installer/css/style.css') }}" rel="stylesheet"/>
+		@vite(['resources/sass/vendor/installer/style.scss'])
 		@yield('style')
 		<script>
 			window.Laravel = @json(['csrfToken' => csrf_token()]);

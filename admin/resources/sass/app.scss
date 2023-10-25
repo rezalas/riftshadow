@@ -5,13 +5,17 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 .was-validated select.form-control[size]:invalid,
 select.form-control.is-invalid[size] {
-    background-image: none;
+	background-image: none;
 }
 
 textarea {
-    width: 80%;
+	width: 80%;
+}
+
+[v-cloak] {
+	display: none;
 }

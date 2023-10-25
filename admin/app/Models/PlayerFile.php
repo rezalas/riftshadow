@@ -41,7 +41,7 @@ class PlayerFile extends Model
 	 */
 	public function getTrustAttribute()
 	{
-		return (integer) Arr::get($this->getKeyData('Tru'), 'data.0') ?? $this->level;
+		return (int) Arr::get($this->getKeyData('Tru'), 'data.0') ?? $this->level;
 	}
 
 	/**
@@ -60,8 +60,9 @@ class PlayerFile extends Model
 	 *
 	 * @return string|integer
 	 */
-	public function getLevelAttribute() {
-		return (integer) Arr::get($this->getKeyData('Levl'), 'data.0') ?? 1;
+	public function getLevelAttribute()
+	{
+		return (int) Arr::get($this->getKeyData('Levl'), 'data.0') ?? 1;
 	}
 
 	/**
@@ -92,7 +93,7 @@ class PlayerFile extends Model
 
 		// Edit a line in the array of lines
 		foreach ($lines as $key => $val) {
-			$val_array = explode(' ',$val);
+			$val_array = explode(' ', $val);
 			$new_key = $val_array[0];
 			if ($new_key === $fileKey) {
 				$data[] = $new_key . ' ' . $data;
@@ -104,7 +105,7 @@ class PlayerFile extends Model
 		// Figure out the EOL character(s) and use it to join the array
 		if (\preg_match('/\r\n$/m', $file_contents) === 1) {
 			$join = "\r\n";
-		} else if (\preg_match('/\n$/m', $file_contents) === 1) {
+		} elseif (\preg_match('/\n$/m', $file_contents) === 1) {
 			$join = "\n";
 		} else {
 			$join = "\n";
@@ -127,7 +128,7 @@ class PlayerFile extends Model
 		$data = [];
 
 		foreach ($lines as $key => $val) {
-			$val_array = explode(' ',$val);
+			$val_array = explode(' ', $val);
 			$new_key = $val_array[0];
 			if ($new_key === $fileKey) {
 				$data = [

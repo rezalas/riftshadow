@@ -35,60 +35,60 @@ echo "Setting up the riftshadow development environment"
 echo "Installing the CMake signing key"
 {
 	sudo wget -O /etc/apt/trusted.gpg.d/kitware.asc https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null
-	echo "${GREEN}CMake key installed\n"
+	echo "${GREEN}CMake key installed${NOCOLOR}\n"
 } || {
-	echo "${RED}Failed to install CMake signing key. Aborting."
+	echo "${RED}Failed to install CMake signing key. Aborting.${NOCOLOR}"
 	exit
 }
 
 # Add the cmake repo to sources list
-echo "${NOCOLOR}Adding CMake Repo"
+echo "Adding CMake Repo"
 {
 	sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu bionic main'
-	echo "${GREEN}CMake Repo Added\n"
+	echo "${GREEN}CMake Repo Added${NOCOLOR}\n"
 } || {
-	echo "${RED}Failed to add the CMake repo. Aborting."
+	echo "${RED}Failed to add the CMake repo. Aborting.${NOCOLOR}"
 	exit
 }
 
 # Add another repo to sources list for gcc-9, g++-9, and update
 #sudo apt-add-repository ppa:ubuntu-toolchain-r/test
-echo "${NOCOLOR}Updating APT"
+echo "${NOCOLOR}Updating APT${NOCOLOR}"
 sudo apt-get update
 echo "${GREEN}Update Complete${NOCOLOR}\n"
 
 # Install deps
 echo "Installing dependencies"
 sudo apt-get install -y ninja-build make cmake gcc g++ 
-echo "${GREEN}Finished installing\n"
+echo "${GREEN}Finished installing${NOCOLOR}\n"
 
-echo "${NOCOLOR}Checking environment for a MySQL distribution"
+echo "Checking environment for a MySQL distribution"
 mySqlPresent=$(type mysql >/dev/null 2>&1 && echo true || echo false)
 
 if $mySqlPresent; then
-	echo "${GREEN}A MySQL distribution found!"
+	echo "${GREEN}A MySQL distribution found!${NOCOLOR}"
 	echo "${GREEN}You are currently using: ${NOCOLOR}$(mysqld --version)\n"
 
 	{
 		sudo service mariadb start
 		sudo service mariadb status
 	} || {
-		sudo service mysqld start
-		sudo service mysqld status
+		sudo service mysql start
+		sudo service mysql status
 	}
 
 else
 	echo "${YELLOW}No MySQL distribution found, installing MariaDB now.\n${NOCOLOR}"
 	sudo apt-get install -y libmariadb-dev libmariadb-dev-compat mariadb-client mariadb-server
 
-	echo "${GREEN}Finished installing MariaDB server and client."
-	echo "${NOCOLOR} Starting MariaDB"
+	echo "${GREEN}Finished installing MariaDB server and client.${NOCOLOR}"
+	echo "Starting MariaDB"
 
 	{
 		sudo service mariadb start
 		sudo service mariadb status
 	} || {
-		echo "${RED}Failed to start MariaDB, please check your service settings."
+		echo "${RED}Failed to start MariaDB, please check your service settings.${NOCOLOR}"
 		exit
 	}
 fi
@@ -99,11 +99,18 @@ fi
 # Setup Database
 echo "${NOCOLOR}Running database scaffolding\n"
 {
-	cd ./db
-	sudo mysql -v mysql < ./setup.sql
+	if [ -e ./db/setup.sql ]; then
+		sudo mysql -v mysql < ./db/setup.sql
+	elif [ -e ~/code/db/setup-vagrant.sql ]; then
+		sudo mysql -v mysql < ~/code/db/setup-vagrant.sql
+		sudo mysql -v rift_core < ~/code/db/rift_core.sql >/dev/null 2>&1
+		sudo mysql -v rift < ~/code/db/rift.sql >/dev/null 2>&1
+		~/code/admin/artisan migrate
+	fi
 } ||
 { # log that there was an error and to check the MySQL settings
-	echo "${RED}There was a problem running setup.sql on your local server. Inspect the error above"
+	echo "${RED}There was a problem running setup.sql on your local server. Inspect the error above${NOCOLOR}"
+	exit
 }
 
-echo "${GREEN}Database scaffolding successful! Huzzah!"
+echo "${GREEN}Database scaffolding successful! Huzzah!${NOCOLOR}"

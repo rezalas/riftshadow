@@ -48,7 +48,7 @@ class HelpFilesController extends Controller
 				$helpfilesQuery = $helpfilesQuery->where($c, $comparator, $lq);
 			}
 		}
-		
+
 		$helpfiles = $helpfilesQuery->paginate();
 
 		if ($request->c && $request->q !== '') {
@@ -84,7 +84,7 @@ class HelpFilesController extends Controller
 			'author' => 'nullable'
 		]);
 
-		$helpfile = new HelpFile;
+		$helpfile = new HelpFile();
 
 		$helpfile->title = $request->title;
 		$helpfile->skill = $request->skill ?? 'none';

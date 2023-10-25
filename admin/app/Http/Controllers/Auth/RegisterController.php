@@ -24,7 +24,6 @@ class RegisterController extends Controller
 	| provide this functionality without requiring any additional code.
 	|
 	*/
-
 	use RegistersUsers;
 
 	/**
@@ -151,9 +150,9 @@ class RegisterController extends Controller
 						return;
 					}
 
-					
+
 					$player_file_test = $this->testPlayerFilePass($value, $player_file_pass);
-					
+
 					if ($player_file_test === false) {
 						$fail(trans('auth.player_files.pass_mismatch', compact('value')));
 					}
@@ -177,8 +176,7 @@ class RegisterController extends Controller
 			'password' => Hash::make($data['password'])
 		]);
 
-		if (count($player_files) > 0)
-		{
+		if (count($player_files) > 0) {
 			$existingPlayerFiles = PlayerFile::whereIn('name', $player_files)->get();
 
 			$newPlayerFileNames = collect($player_files)->diff($existingPlayerFiles->pluck('name'));
@@ -186,11 +184,11 @@ class RegisterController extends Controller
 			$orphanedPlayerFileNames = collect($player_files)->intersect($existingPlayerFiles->pluck('name'));
 
 			$orphanedPlayerFiles = PlayerFile::whereIn('name', $orphanedPlayerFileNames)->get();
-			
+
 			$newPlayerFileNames->transform(function ($filename) {
 				return ['name' => $filename];
 			});
-			
+
 			$user->playerFiles()->createMany($newPlayerFileNames->toArray());
 
 			$user->playerFiles()->saveMany($orphanedPlayerFiles);

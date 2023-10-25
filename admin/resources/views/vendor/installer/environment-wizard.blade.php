@@ -37,7 +37,7 @@
 			<div class="tab" id="tab1content">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-				<div class="form-group {{ $errors->has('app_name') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('app_name') ? ' has-error ' : '' }}">
 					<label for="app_name">
 						{{ trans('installer_messages.environment.wizard.form.app_name_label') }}
 					</label>
@@ -50,7 +50,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('environment') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('environment') ? ' has-error ' : '' }}">
 					<label for="environment">
 						{{ trans('installer_messages.environment.wizard.form.app_environment_label') }}
 					</label>
@@ -94,7 +94,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('app_debug') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('app_debug') ? ' has-error ' : '' }}">
 					<label for="app_debug">
 						{{ trans('installer_messages.environment.wizard.form.app_debug_label') }}
 					</label>
@@ -114,7 +114,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('app_url') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('app_url') ? ' has-error ' : '' }}">
 					<label for="app_url">
 						{{ trans('installer_messages.environment.wizard.form.app_url_label') }}
 					</label>
@@ -127,7 +127,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('log_channel') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('log_channel') ? ' has-error ' : '' }}">
 					<label for="log_channel">
 						{{ trans('installer_messages.environment.wizard.form.log_channel_label') }}
 					</label>
@@ -140,7 +140,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('code_directory') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('code_directory') ? ' has-error ' : '' }}">
 					<label for="code_directory">
 						{{ trans('installer_messages.environment.wizard.form.code_directory_label') }}
 					</label>
@@ -153,7 +153,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('player_directory') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('player_directory') ? ' has-error ' : '' }}">
 					<label for="player_directory">
 						{{ trans('installer_messages.environment.wizard.form.player_directory_label') }}
 					</label>
@@ -175,7 +175,7 @@
 			</div>
 			<div class="tab" id="tab2content">
 
-				<div class="form-group {{ $errors->has('database_connection') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('database_connection') ? ' has-error ' : '' }}">
 					<label for="database_connection">
 						{{ trans('installer_messages.environment.wizard.form.db_connection_label') }}
 					</label>
@@ -195,7 +195,7 @@
 
 				<hr />
 
-				<div class="form-group {{ $errors->has('rift_hostname') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_hostname') ? ' has-error ' : '' }}">
 					<label for="rift_hostname">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_host_label') }}
 					</label>
@@ -208,7 +208,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_port') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_port') ? ' has-error ' : '' }}">
 					<label for="rift_port">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_port_label') }}
 					</label>
@@ -221,7 +221,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_name') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_name') ? ' has-error ' : '' }}">
 					<label for="rift_name">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_name_label') }}
 					</label>
@@ -234,7 +234,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_username') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_username') ? ' has-error ' : '' }}">
 					<label for="rift_username">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_username_label') }}
 					</label>
@@ -247,7 +247,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_password') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_password') ? ' has-error ' : '' }}">
 					<label for="rift_password">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_password_label') }}
 					</label>
@@ -262,7 +262,7 @@
 
 				<hr />
 
-				<div class="form-group {{ $errors->has('rift_core_hostname') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_core_hostname') ? ' has-error ' : '' }}">
 					<label for="rift_core_hostname">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_core_host_label') }}
 					</label>
@@ -275,7 +275,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_core_port') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_core_port') ? ' has-error ' : '' }}">
 					<label for="rift_core_port">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_core_port_label') }}
 					</label>
@@ -288,7 +288,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_core_name') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_core_name') ? ' has-error ' : '' }}">
 					<label for="rift_core_name">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_core_name_label') }}
 					</label>
@@ -301,7 +301,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_core_username') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_core_username') ? ' has-error ' : '' }}">
 					<label for="rift_core_username">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_core_username_label') }}
 					</label>
@@ -314,7 +314,7 @@
 					@endif
 				</div>
 
-				<div class="form-group {{ $errors->has('rift_core_password') ? ' has-error ' : '' }}">
+				<div class="mb-3 {{ $errors->has('rift_core_password') ? ' has-error ' : '' }}">
 					<label for="rift_core_password">
 						{{ trans('installer_messages.environment.wizard.form.db_rift_core_password_label') }}
 					</label>
@@ -344,7 +344,7 @@
 					</label>
 
 					<div class="info">
-						<div class="form-group {{ $errors->has('broadcast_driver') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('broadcast_driver') ? ' has-error ' : '' }}">
 							<label for="broadcast_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.broadcasting_label') }}
 								<sup>
 									<a href="https://laravel.com/docs/6.x/broadcasting" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
@@ -362,7 +362,7 @@
 							@endif
 						</div>
 
-						<div class="form-group {{ $errors->has('cache_driver') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('cache_driver') ? ' has-error ' : '' }}">
 							<label for="cache_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.cache_label') }}
 								<sup>
 									<a href="https://laravel.com/docs/6.x/cache" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
@@ -380,7 +380,7 @@
 							@endif
 						</div>
 
-						<div class="form-group {{ $errors->has('queue_connection') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('queue_connection') ? ' has-error ' : '' }}">
 							<label for="queue_connection">{{ trans('installer_messages.environment.wizard.form.app_tabs.queue_label') }}
 								<sup>
 									<a href="https://laravel.com/docs/6.x/queues" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
@@ -398,7 +398,7 @@
 							@endif
 						</div>
 
-						<div class="form-group {{ $errors->has('session_driver') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('session_driver') ? ' has-error ' : '' }}">
 							<label for="session_driver">{{ trans('installer_messages.environment.wizard.form.app_tabs.session_label') }}
 								<sup>
 									<a href="https://laravel.com/docs/6.x/session" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
@@ -416,7 +416,7 @@
 							@endif
 						</div>
 
-						<div class="form-group {{ $errors->has('session_lifetime') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('session_lifetime') ? ' has-error ' : '' }}">
 							<label for="session_lifetime">{{ trans('installer_messages.environment.wizard.form.app_tabs.session_lifetime_label') }}
 								<sup>
 									<a href="https://laravel.com/docs/6.x/session" target="_blank" title="{{ trans('installer_messages.environment.wizard.form.app_tabs.more_info') }}">
@@ -443,7 +443,7 @@
 						</span>
 					</label>
 					<div class="info">
-						<div class="form-group {{ $errors->has('redis_hostname') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('redis_hostname') ? ' has-error ' : '' }}">
 							<label for="redis_hostname">
 								{{ trans('installer_messages.environment.wizard.form.app_tabs.redis_host') }}
 								<sup>
@@ -462,7 +462,7 @@
 							@endif
 						</div>
 
-						<div class="form-group {{ $errors->has('redis_password') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('redis_password') ? ' has-error ' : '' }}">
 							<label for="redis_password">{{ trans('installer_messages.environment.wizard.form.app_tabs.redis_password') }}</label>
 							<input type="password" name="redis_password" id="redis_password" value="" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.redis_password') }}" />
 							@if ($errors->has('redis_password'))
@@ -473,7 +473,7 @@
 							@endif
 						</div>
 
-						<div class="form-group {{ $errors->has('redis_port') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('redis_port') ? ' has-error ' : '' }}">
 							<label for="redis_port">{{ trans('installer_messages.environment.wizard.form.app_tabs.redis_port') }}</label>
 							<input type="number" name="redis_port" id="redis_port" value="{{$envConfig['REDIS_PORT']}}" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.redis_port') }}" />
 							@if ($errors->has('redis_port'))
@@ -493,7 +493,7 @@
 						</span>
 					</label>
 					<div class="info">
-						<div class="form-group {{ $errors->has('mail_driver') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('mail_driver') ? ' has-error ' : '' }}">
 							<label for="mail_driver">
 								{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_driver_label') }}
 								<sup>
@@ -511,7 +511,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('mail_host') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('mail_host') ? ' has-error ' : '' }}">
 							<label for="mail_host">{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_host_label') }}</label>
 							<input type="text" name="mail_host" id="mail_host" value="{{$envConfig['MAIL_HOST']}}" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_host_placeholder') }}" />
 							@if ($errors->has('mail_host'))
@@ -521,7 +521,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('mail_port') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('mail_port') ? ' has-error ' : '' }}">
 							<label for="mail_port">{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_port_label') }}</label>
 							<input type="number" name="mail_port" id="mail_port" value="{{$envConfig['MAIL_PORT']}}" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_port_placeholder') }}" />
 							@if ($errors->has('mail_port'))
@@ -531,7 +531,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('mail_username') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('mail_username') ? ' has-error ' : '' }}">
 							<label for="mail_username">{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_username_label') }}</label>
 							<input type="text" name="mail_username" id="mail_username" value="{{$envConfig['MAIL_USERNAME'] === 'null' ? '' : $envConfig['MAIL_USERNAME']}}" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_username_placeholder') }}" />
 							@if ($errors->has('mail_username'))
@@ -541,7 +541,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('mail_password') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('mail_password') ? ' has-error ' : '' }}">
 							<label for="mail_password">{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_password_label') }}</label>
 							<input type="text" name="mail_password" id="mail_password" value="" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_password_placeholder') }}" />
 							@if ($errors->has('mail_password'))
@@ -551,7 +551,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('mail_encryption') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('mail_encryption') ? ' has-error ' : '' }}">
 							<label for="mail_encryption">{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_encryption_label') }}</label>
 							<input type="text" name="mail_encryption" id="mail_encryption" value="{{$envConfig['MAIL_ENCRYPTION'] === 'null' ? '' : $envConfig['MAIL_ENCRYPTION']}}" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.mail_encryption_placeholder') }}" />
 							@if ($errors->has('mail_encryption'))
@@ -572,7 +572,7 @@
 						</span>
 					</label>
 					<div class="info">
-						<div class="form-group {{ $errors->has('pusher_app_id') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('pusher_app_id') ? ' has-error ' : '' }}">
 							<label for="pusher_app_id">
 								{{ trans('installer_messages.environment.wizard.form.app_tabs.pusher_app_id_label') }}
 								<sup>
@@ -590,7 +590,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('pusher_app_key') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('pusher_app_key') ? ' has-error ' : '' }}">
 							<label for="pusher_app_key">{{ trans('installer_messages.environment.wizard.form.app_tabs.pusher_app_key_label') }}</label>
 							<input type="text" name="pusher_app_key" id="pusher_app_key" value="" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.pusher_app_key_palceholder') }}" />
 							@if ($errors->has('pusher_app_key'))
@@ -600,7 +600,7 @@
 								</span>
 							@endif
 						</div>
-						<div class="form-group {{ $errors->has('pusher_app_secret') ? ' has-error ' : '' }}">
+						<div class="mb-3 {{ $errors->has('pusher_app_secret') ? ' has-error ' : '' }}">
 							<label for="pusher_app_secret">{{ trans('installer_messages.environment.wizard.form.app_tabs.pusher_app_secret_label') }}</label>
 							<input type="password" name="pusher_app_secret" id="pusher_app_secret" value="" placeholder="{{ trans('installer_messages.environment.wizard.form.app_tabs.pusher_app_secret_palceholder') }}" />
 							@if ($errors->has('pusher_app_secret'))
