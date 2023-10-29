@@ -2,26 +2,13 @@
 -- mariadb setup script for riftshadow
 -- (FOR DEVELOPMENT ONLY)
 --
-
--- create the required databases
-CREATE DATABASE IF NOT EXISTS rift_core;
-CREATE DATABASE IF NOT EXISTS rift;
-
--- import rift_core script into rift_core db
-use rift_core;
-source rift_core.sql;
-
--- import rift script into rift db
-use rift;
-source rift.sql;
-
 -- create the rift user
 use mysql;
 DROP USER IF EXISTS 'rift'@'localhost';
 CREATE USER 'rift'@'localhost' IDENTIFIED BY 'rift123';
 
 -- grant rift user rights to access mariadb and all rights to the two dbs
-GRANT USAGE ON *.* TO 'rift'@'localhost' IDENTIFIED BY 'rift123';
+GRANT USAGE ON *.* TO 'rift'@'localhost';
 GRANT ALL PRIVILEGES ON rift.* TO 'rift'@'localhost';
 GRANT ALL PRIVILEGES ON rift_core.* TO 'rift'@'localhost';
 FLUSH PRIVILEGES;
