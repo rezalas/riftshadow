@@ -1,6 +1,9 @@
 --
 -- mariadb setup script for riftshadow
 -- (FOR DEVELOPMENT ONLY)
+CREATE DATABASE IF NOT EXISTS rift_core;
+CREATE DATABASE IF NOT EXISTS rift;
+
 --
 -- create the rift user
 use mysql;
