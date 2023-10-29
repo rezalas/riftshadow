@@ -104,7 +104,7 @@ echo "${NOCOLOR}Running database scaffolding\n"
 		sudo mysql -v rift_core < ./db/rift_core.sql >/dev/null 2>&1
 		sudo mysql -v rift < ./db/rift.sql >/dev/null 2>&1
 	elif [ -e ~/code/db/setup.sql ]; then
-		sudo mysql -v mysql < ~/code/db/setup-vagrant.sql
+		sudo mysql -v mysql < ~/code/db/setup.sql
 		sudo mysql -v rift_core < ~/code/db/rift_core.sql >/dev/null 2>&1
 		sudo mysql -v rift < ~/code/db/rift.sql >/dev/null 2>&1
 		~/code/admin/artisan migrate
