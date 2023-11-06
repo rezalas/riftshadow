@@ -10,66 +10,14 @@
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
 
-BALLOT_DATA *ballot_first;
-VOTE_DATA *vote_first;
-
-void sortvotes(CHAR_DATA *ch, BALLOT_DATA *ballot)
-{
-	/*
-	char *top_name[200], *tempname, buf[MSL];
-	short top_value[200], temptop, top = 1, i = 0, x = 0;
-	int mod_votes=0,fempty=0;
-	VOTE_SORT svote[200];
-	VOTE_DATA *vote;
-
-	for(vote=ballot->first_vote; vote!=nullptr; vote=vote->next)
-	{
-		fempty=0;
-
-		if(svote[0].votes<1)
-		{
-			sprintf(svote[0].who,"%s",vote->vote_for);
-			svote[0].votes = 1;
-		}
-		else
-		{
-			for(x=0; x<200; x++)
-			{
-				if(!fempty)
-				{
-					if(strcmp(svote[x].who, vote->vote_for)==0)
-					{
-						svote[x].votes++;
-					}
-					else
-					{
-						sprintf(svote[x].who,"%s",vote->vote_for);
-						svote[x].votes = 1;
-						fempty=1;
-					}
-				}
-			}
-		}
-	}
-
-	for(x=0; x<200; x++)
-	{
-		if(svote[x].votes)
-		{
-			sprintf(buf,"%s has %d votes.\n\r",svote[x].who,svote[x].votes);
-			send_to_char(buf, ch);
-		}
-	}
-	*/
-}
-
 bool sort_votes(char *hold[], int *holdi, int cabal)
 {
 	MYSQL_RES *res;
 	MYSQL_ROW row;
 	char buf[MSL];
 	int j, m, i;
-	bool added= false;
+	bool added = false;
+	bool retVal = true;
 	char *temp;
 	int tempi;
 
@@ -132,11 +80,11 @@ bool sort_votes(char *hold[], int *holdi, int cabal)
 	}
 	else
 	{
-		return false;
+		retVal = false;
 	}
 
-	return true;
 	mysql_free_result(res);
+	return retVal;
 }
 
 void do_listvotes(CHAR_DATA *ch, char *argument)
@@ -347,80 +295,3 @@ void do_vote(CHAR_DATA *ch, char *argument)
 
 	mysql_free_result(res);
 }
-
-void load_votes()
-{
-	FILE *fp;
-	BALLOT_DATA *ballot;
-	VOTE_DATA *vote;
-	char discard, *word;
-
-	fp = fopen(VOTE_FILE, "r");
-	if (!fp)
-		return;
-
-	return; //TODO: memory leak
-
-	vote_first = nullptr;
-	ballot_first = nullptr;
-
-	for (;;)
-	{
-		// Discard the first '#'
-		discard = fread_letter(fp);
-
-		if (discard == '$')
-			break;
-
-		ballot = new BALLOT_DATA;
-		ballot->name = fread_string(fp);
-		ballot->next = ballot_first;
-
-		for (;;)
-		{
-			// votez
-			word = fread_word(fp);
-
-			if (!str_cmp(word, "ENDVOTES"))
-				break;
-
-			vote = new VOTE_DATA;
-			vote->voter = palloc_string(word);
-			vote->vote_for = palloc_string(fread_word(fp));
-			vote->time = fread_string(fp);
-			vote->ip = fread_string(fp);
-			vote->next = vote_first;
-			vote_first = vote;
-			ballot->first_vote = vote;
-		}
-
-		ballot_first = ballot;
-	}
-
-	fclose(fp);
-}
-
-void save_votes()
-{
-	FILE *fp;
-	BALLOT_DATA *ballot;
-	VOTE_DATA *vote;
-
-	if (!(fp = fopen(VOTE_FILE, "w")))
-		return;
-
-	for (ballot = ballot_first; ballot != nullptr; ballot = ballot->next)
-	{
-		fprintf(fp, "#%s~\n", ballot->name);
-
-		for (vote = ballot_first->first_vote; vote != nullptr; vote = vote->next)
-		{
-			fprintf(fp, "%s %s %s~ %s~\n", vote->voter, vote->vote_for, vote->time, vote->ip);
-		}
-		fprintf(fp, "ENDVOTES\n");
-	}
-
-	fprintf(fp, "$");
-	fclose(fp);
-}
-

@@ -17,7 +17,6 @@ void load_newresets (FILE *fp);
 void load_rooms (FILE *fp);
 void load_socials (FILE *fp);
 void load_bans (void);
-void load_votes (void);
 void load_cabal_items (void);
 void fix_exits (void);
 void find_adjacents (void);
