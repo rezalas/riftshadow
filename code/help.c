@@ -63,7 +63,7 @@ void modhelp_end_fun(CHAR_DATA *ch, char *argument)
 
 	sprintf(results, "%i helpfiles updated.\n\r", (int)mysql_affected_rows(conn));
 	send_to_char(results, ch);
-	do_disc(conn);
+	mysql_close(conn);
 }
 void do_modhelp(CHAR_DATA *ch, char *argument)
 {
@@ -105,7 +105,7 @@ void do_modhelp(CHAR_DATA *ch, char *argument)
 		mysql_free_result(res_set);
 	}
 
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void do_help(CHAR_DATA *ch, char *argument)
@@ -197,7 +197,7 @@ void do_help(CHAR_DATA *ch, char *argument)
 	}
 
 	mysql_free_result(res_set);
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void do_delhelp(CHAR_DATA *ch, char *argument)
@@ -232,7 +232,7 @@ void do_delhelp(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "%i helpfiles deleted.\n\r", (int)mysql_affected_rows(conn));
 	send_to_char(buf, ch);
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void addhelp_end_fun(CHAR_DATA *ch, char *argument)
@@ -295,7 +295,7 @@ void do_addhelp(CHAR_DATA *ch, char *argument)
 
 	sprintf(buf, "Help file added:\n\rTitle: %s\n\rSkill Required: %s\n\rMinimum Level: %d\n\rHelp Text: %s\n\r", ttitle, skill, minlevel, ch->pcdata->entered_text);
 	send_to_char(buf, ch);
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void do_listhelp(CHAR_DATA *ch, char *argument)
@@ -350,7 +350,7 @@ void do_listhelp(CHAR_DATA *ch, char *argument)
 		mysql_free_result(res_set);
 	}
 
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 MYSQL *do_conn(const char *host_name, const char *user_name, const char *password,
@@ -373,11 +373,6 @@ MYSQL *do_conn(const char *host_name, const char *user_name, const char *passwor
 	}
 
 	return conn; /* connection is established */
-}
-
-void do_disc(MYSQL *conn)
-{
-	mysql_close(conn);
 }
 
 void print_error(MYSQL *conn, char *message)

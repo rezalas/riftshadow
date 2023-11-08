@@ -7538,7 +7538,7 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 		}
 
 		mysql_free_result(res_set);
-		do_disc(conn);
+		mysql_close(conn);
 		return;
 	}
 	else if (!strcmp(arg1, "last"))
@@ -7615,7 +7615,7 @@ void do_buglist(CHAR_DATA *ch, char *argument)
 	}
 
 	mysql_free_result(res_set);
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void buglist_end_fun(CHAR_DATA *ch, char *argument)
