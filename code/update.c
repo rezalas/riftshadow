@@ -3221,7 +3221,7 @@ void save_demos()
 	mysql_free_result(res_set);
 	fprintf(fp,"\n\rTotal        %d\n\r",total);
 	fclose(fp);
-	do_disc(conn);
+	mysql_close(conn);
 	*/
 }
 

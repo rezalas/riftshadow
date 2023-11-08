@@ -23,7 +23,6 @@ void addhelp_end_fun (CHAR_DATA *ch, char *argument);
 void do_addhelp (CHAR_DATA *ch, char *argument);
 void do_listhelp (CHAR_DATA *ch, char *argument);
 MYSQL *do_conn (const char *host_name, const char *user_name, const char *password, const char *db_name, unsigned int port_num, const char *socket_name, unsigned int flags);
-void do_disc (MYSQL *conn);
 void print_error (MYSQL *conn, char *message);
 
 #endif /* HELP_H */

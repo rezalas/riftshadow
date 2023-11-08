@@ -489,8 +489,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		page_to_char(buf_string(buffer), ch);
 		mysql_free_result(res_set);
 
-		do_disc(conn);
-		do_disc(conn2);
+		mysql_close(conn);
+		mysql_close(conn2);
 		free_buf(buffer);
 		return;
 	}
@@ -512,7 +512,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 
 		auto listing = fmt::format("A new site ({}) was added to the IP listings.  You should add a comment now explaining why it was added.\n\r", arg2);
 
-		do_disc(conn);
+		mysql_close(conn);
 		send_to_char(listing.c_str(), ch);
 		return;
 	}
@@ -526,7 +526,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		ch->pcdata->helpid = atoi(arg2);
 		enter_text(ch, comment_end_fun);
 
-		do_disc(conn);
+		mysql_close(conn);
 		return;
 	}
 
@@ -535,7 +535,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		query_buffer = fmt::format("DELETE FROM sitecomments WHERE comment_id={}", arg2);
 		one_query(query_buffer.data());
 
-		do_disc(conn);
+		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
@@ -545,7 +545,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		query_buffer = fmt::format("DELETE FROM sitetracker WHERE site_id={}", arg2);
 		one_query(query_buffer.data());
 
-		do_disc(conn);
+		mysql_close(conn);
 		send_to_char("Ok.\n\r", ch);
 		return;
 	}
@@ -561,7 +561,7 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		if (!res_set || mysql_affected_rows(conn) < 1)
 		{
 			send_to_char("Invalid ID number.\n\r", ch);
-			do_disc(conn);			
+			mysql_close(conn);
 			return;
 		}
 
@@ -623,8 +623,8 @@ void do_sitetrack(CHAR_DATA *ch, char *argument)
 		mysql_free_result(res_set);
 		mysql_free_result(res2);
 
-		do_disc(conn);
-		do_disc(conn2);
+		mysql_close(conn);
+		mysql_close(conn2);
 		free_buf(buffer);
 	}
 }
@@ -671,7 +671,7 @@ void show_database_info(CHAR_DATA *ch, char *argument)
 	if (!mysql_affected_rows(conn))
 	{
 		mysql_free_result(res_set);
-		do_disc(conn);
+		mysql_close(conn);
 		send_to_char("  No database entry for player found.\n\r", ch);
 		return;
 	}
@@ -713,8 +713,8 @@ void show_database_info(CHAR_DATA *ch, char *argument)
 	}
 
 	mysql_free_result(res_set);
-	do_disc(conn2);
-	do_disc(conn);
+	mysql_close(conn2);
+	mysql_close(conn);
 }
 
 void do_demo(CHAR_DATA *ch, char *name)
@@ -825,7 +825,7 @@ MYSQL_ROW one_fquery_row(char *query)
 
 	mysql_free_result(res_set);
 
-	do_disc(conn);
+	mysql_close(conn);
 	return row;
 }
 
@@ -839,7 +839,7 @@ MYSQL_RES *one_query_res(char *query)
 	mysql_query(conn, query);
 	res_set = mysql_store_result(conn);
 
-	do_disc(conn);
+	mysql_close(conn);
 	return res_set;
 }
 
@@ -857,7 +857,7 @@ int one_query_count(char *query)
 
 	mysql_free_result(res_set);
 
-	do_disc(conn);
+	mysql_close(conn);
 	return res;
 }
 
@@ -867,7 +867,7 @@ void one_query(char *query)
 
 	conn = open_conn();
 	mysql_query(conn, query);
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void enter_text(CHAR_DATA *ch, DO_FUN *end_fun)
@@ -910,7 +910,7 @@ void one_fquery(char *query)
 	MYSQL *conn;
 	conn = open_fconn();
 	mysql_query(conn, query);
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 void plug_graveyard(CHAR_DATA *ch, int type)
@@ -1161,7 +1161,7 @@ void do_pktrack(CHAR_DATA *ch, char *argument)
 		free_buf(buffer);
 	}
 
-	do_disc(conn);
+	mysql_close(conn);
 }
 
 bool trusts(CHAR_DATA *ch, CHAR_DATA *victim)
@@ -2040,11 +2040,13 @@ void do_ltrack(CHAR_DATA *ch, char *argument)
 		mysql_free_result(res_set);
 		page_to_char(buf_string(buffer), ch);
 		free_buf(buffer);
-		return do_disc(conn);
+		mysql_close(conn);
+		return;
 	}
 
 	send_to_char("No matching results were found.\n\r", ch);
-	return do_disc(conn);
+	mysql_close(conn);
+	return;
 }
 
 void do_assess_old(CHAR_DATA *ch, char *argument)
