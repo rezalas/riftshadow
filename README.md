@@ -1,4 +1,4 @@
-# Riftshadow MUD
+# Riftshadow MUD   
 
 [![Build & Test](https://github.com/rezalas/riftshadow/actions/workflows/cmake.yml/badge.svg)](https://github.com/rezalas/riftshadow/actions/workflows/cmake.yml)
 
