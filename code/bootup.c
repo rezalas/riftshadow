@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <fstream>
 #include "rift.h"
 #include "newmem.h"
 #include "area.h"
@@ -20,6 +21,7 @@
 #include "const.h"
 #include "devextra.h"
 #include "comm.h"
+#include "./stdlibs/cdirectory.h"
 #include "./include/fmt/format.h"
 
 CRoom *CRoom::first = nullptr;
@@ -27,7 +29,6 @@ CRoom *CRoom::first = nullptr;
 //Loads all the object limits and related info
 void CMud::LoadObjLimits()
 {
-	FILE *fpChar_list;
 	FILE *fpChar;
 	char strPlr[MAX_INPUT_LENGTH];
 	char chkbuf[MAX_STRING_LENGTH];
@@ -39,31 +40,28 @@ void CMud::LoadObjLimits()
 	float tempfloat;
 
 	RS.Log("Loading object counts off players now...");
-	sprintf(pbuf,"ls %s/%s > %s", RIFT_PLAYER_DIR,"*.plr", PLAYER_LIST);
 
-	auto returnCode = system(pbuf);
-	if(returnCode != 0) // ls returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		bug("Command [%s] failed with exit code [%d]", pbuf, returnCode);
+	auto dir = CDirectory(RIFT_PLAYER_DIR);
+	auto files = dir.GetFiles(".plr");
 
-	if ((fpChar_list = fopen( PLAYER_LIST, "r")) == nullptr)
-	{
-		perror(PLAYER_LIST);
-		exit(1);
-	}
+	std::ofstream player_list(PLAYER_LIST, std::ios::trunc);
+	for(auto file : files) player_list << file << std::endl;
+	player_list.close();
 
 	//for(i=0;i<=MAX_TOP_BOUNTY;i++)
 	//      top_bounty_value[i]=0;
 	sprintf(chkbuf,"%s/%s", RIFT_PLAYER_DIR,"Zzz.plr");
-	for (; ;)
+	for (auto file : files)
 	{
-		strcpy(strPlr, fread_word(fpChar_list) );
+		strcpy(strPlr, file.data());
 		if(bDebug)
 			RS.Log(strPlr);
 
 		if (!str_cmp(strPlr,chkbuf))
 			break;
 
-		if ( (  fpChar = fopen(strPlr, "r") ) == nullptr)
+		fpChar = fopen(strPlr, "r");
+		if (fpChar == nullptr)
 		{
 			perror(strPlr);
 			exit(1);
@@ -140,7 +138,6 @@ void CMud::LoadObjLimits()
 		fpChar = nullptr;
 	}
 
-	fclose( fpChar_list);
 	RS.Log("Object Limits loaded");
 
 	/* CABAL LIMITS */

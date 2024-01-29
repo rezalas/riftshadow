@@ -3,6 +3,7 @@ project(riftshadow_src)
 set(RIFT_SOURCE config.cpp
 	strings.c
 	file.c
+	cdirectory.c
 	sql.c
 	bitvector.c
 	act_comm.c
