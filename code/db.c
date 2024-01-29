@@ -38,6 +38,7 @@
 #include <time.h>
 #include <sys/types.h>
 #include <sys/time.h>
+#include <fstream>
 #include <iterator>
 #include <algorithm>
 #include "db.h"
@@ -62,6 +63,7 @@
 #include "chardef.h"
 #include "const.h"
 #include "utility.h"
+#include "./stdlibs/cdirectory.h"
 #include "./include/fmt/format.h"
 #include "./include/fmt/printf.h"
 
@@ -3907,7 +3909,6 @@ void do_alist(CHAR_DATA *ch,char *argument)
 
 void do_llimit(CHAR_DATA *ch, char *argument)
 {
-	FILE *fpChar_list;
 	FILE *fpChar;
 	char strPlr[MAX_INPUT_LENGTH];
 //	char catplr[MAX_INPUT_LENGTH];
@@ -3946,30 +3947,24 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 
 	send_to_char("Loading all pfile object counts now.\n\r", ch);
 
-	auto buffer = fmt::format("ls {}/{} > {}", RIFT_PLAYER_DIR, "*.plr", PLAYER_LIST); //TODO: change the rest of the sprintf calls to format
-	auto returnCode = system(buffer.c_str());
-	if(returnCode != 0) // ls returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
+	auto dir = CDirectory(RIFT_PLAYER_DIR);
+	auto files = dir.GetFiles(".plr");
 
-	fpChar_list = fopen(PLAYER_LIST, "r");
+	std::ofstream player_list(PLAYER_LIST, std::ios::trunc);
+	for(auto file : files) player_list << file << std::endl;
+	player_list.close();
 
-	if (fpChar_list == nullptr)
+	sprintf(chkbuf, "%s/%s", RIFT_PLAYER_DIR, "Zzz.plr");
+	for (auto file : files)
 	{
-		perror(PLAYER_LIST);
-		exit(1);
-	}
-
-	for (;;)
-	{
-		strcpy(strPlr, fread_word(fpChar_list));
-		//     RS.Log(strPlr);
-		sprintf(chkbuf, "%s/%s", RIFT_PLAYER_DIR, "Zzz.plr");
+		strcpy(strPlr, file.data());
+		if(bDebug)
+			RS.Log(strPlr);
 
 		if (!str_cmp(strPlr, chkbuf))
 			break; /* Exit if == Zzz.plr file */
 
 		fpChar = fopen(strPlr, "r");
-
 		if (fpChar == nullptr)
 		{
 			perror(strPlr);
@@ -4017,7 +4012,6 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 		fpChar = nullptr;
 	}
 
-	fclose(fpChar_list);
 	send_to_char("All object counts reset.\n\r", ch);
 }
 
