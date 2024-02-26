@@ -130,7 +130,7 @@ void save_char_obj(CHAR_DATA *ch)
 	if ((fp = fopen(strsave, "w")) == nullptr)
 	{
 		auto buf = fmt::format("Save_char_obj: fopen failes for character: {} file name: {} ", ch->true_name, strsave);
-		bug(buf), 0);
+		bug(buf.c_str(), 0);
 		perror(strsave);
 	}
 	else
@@ -163,8 +163,7 @@ void save_char_obj(CHAR_DATA *ch)
 		fprintf(fp, "#END\n");
 	}
 
-	bug("Save_char_obj: error writing file: %s", strsave);
-
+	//bug("Save_char_obj: error writing file: %s", strsave);
 	
 	if (fp != nullptr)
 		fclose(fp);
