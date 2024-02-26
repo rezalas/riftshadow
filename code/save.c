@@ -126,9 +126,11 @@ void save_char_obj(CHAR_DATA *ch)
 
 	sprintf(strsave, "%s/%s.plr", RIFT_PLAYER_DIR, capitalize(ch->true_name));
 
-	if ((fp = fopen(TEMP_FILE, "w")) == nullptr)
+
+	if ((fp = fopen(strsave, "w")) == nullptr)
 	{
-		bug("Save_char_obj: fopen", 0);
+		auto buf = fmt::format("Save_char_obj: fopen failes for character: {} file name: {} ", ch->true_name, strsave);
+		bug(buf), 0);
 		perror(strsave);
 	}
 	else
@@ -161,9 +163,11 @@ void save_char_obj(CHAR_DATA *ch)
 		fprintf(fp, "#END\n");
 	}
 
-	fclose(fp);
-	rename(TEMP_FILE, strsave);
+	bug("Save_char_obj: error writing file: %s", strsave);
 
+	
+	if (fp != nullptr)
+		fclose(fp);
 	fpReserve = fopen(NULL_FILE, "r");
 }
 
