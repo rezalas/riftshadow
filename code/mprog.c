@@ -334,7 +334,10 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 	}
 
 	if (!mprog_table[i].name)
-		return bug("Load_improgs: 'M': Function not found for vnum %d", mobindex->vnum);
+	{
+		RS.Bug("Load_improgs: 'M': Function not found for vnum %d", mobindex->vnum);
+		return;
+	}
 
 	// IF YOU ADD A NEW TYPE ALSO PUT IT IN DB.C DO_ADUMP!
 	if (!str_cmp(progtype, "bribe_prog"))
@@ -469,7 +472,7 @@ void mprog_set(MOB_INDEX_DATA *mobindex, const char *progtype, const char *name)
 		return;
 	}
 
-	bug("Load_improgs: 'M': invalid program type for vnum %d", mobindex->vnum);
+	RS.Bug("Load_improgs: 'M': invalid program type for vnum %d", mobindex->vnum);
 	exit(1);
 }
 

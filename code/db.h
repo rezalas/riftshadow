@@ -722,10 +722,6 @@ bool str_infix (const char *astr, const char *bstr);
 bool str_suffix (const char *astr, const char *bstr);
 char *capitalize (const char *str);
 void append_file (CHAR_DATA *ch, char *file, char *str);
-/*
- * Reports a bug.
- */
-void bug(const char *str, int param);
 void tail_chain(void);
 void do_force_reset(CHAR_DATA *ch, char *argument);
 /*

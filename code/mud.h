@@ -23,6 +23,10 @@
 
 #define CONFIG_FILE RIFT_ROOT_DIR "/config.json"
 
+typedef struct char_data CHAR_DATA;
+typedef struct obj_data	OBJ_DATA;
+extern void wiznet(char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_skip, int min_level);
+
 extern CMud RS;
 
 class CMud

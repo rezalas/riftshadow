@@ -320,7 +320,7 @@ void load_improgs(FILE *fp)
 			case 'S':
 				break;
 			default:
-				bug("Load_improgs: letter '%c' not *IMS.", letter);
+				RS.Bug("Load_improgs: letter '%c' not *IMS.", letter);
 				exit(1);
 		}
 
@@ -359,7 +359,7 @@ void load_specs(FILE *fp)
 				}
 
 				if (!ispec_table[i].spec_name)
-					bug("Error: Unable to load ispec for #%d.", pObjIndex->vnum);
+					RS.Bug("Error: Unable to load ispec for #%d.", pObjIndex->vnum);
 
 				break;
 			/*
@@ -395,11 +395,11 @@ void load_specs(FILE *fp)
 				}
 
 				if (!mspec_table[i].spec_name)
-					bug("Error: Unable to load mspec for #%d.", pMobIndex->vnum);
+					RS.Bug("Error: Unable to load mspec for #%d.", pMobIndex->vnum);
 
 				break;
 			default:
-				bug("Load_specs: letter '%c' not *IMRA.", letter);
+				RS.Bug("Load_specs: letter '%c' not *IMRA.", letter);
 				exit(1);
 		}
 
@@ -425,7 +425,7 @@ void load_mobs(FILE *fp)
 		letter = fread_letter(fp);
 		if (letter != '#')
 		{
-			bug("Load_new_mobiles: # not found.", 0);
+			RS.Bug("Load_new_mobiles: # not found.");
 			exit(1);
 		}
 
@@ -436,7 +436,7 @@ void load_mobs(FILE *fp)
 		fBootDb = false;
 		if (get_mob_index(vnum) != nullptr)
 		{
-			bug("Load_new_mobiles: vnum %d duplicated.", vnum);
+			RS.Bug("Load_new_mobiles: vnum %d duplicated.", vnum);
 			exit(1);
 		}
 		fBootDb = true;
@@ -690,12 +690,11 @@ void load_mobs(FILE *fp)
 
 			if (pos == -1)
 			{
-				sprintf(bugtext, "No flag in the %s table named %s was found (mob %s - %d).",
+				RS.Bug("No flag in the %s table named %s was found (mob %s - %d).",
 					aword,
 					bword,
 					pMobIndex->player_name,
 					pMobIndex->vnum);
-				bug(bugtext, 0);
 				exit(1);
 			}
 		}
@@ -760,7 +759,7 @@ void load_mobs(FILE *fp)
 				}
 				else
 				{
-					bug("Flag remove: flag not found.", 0);
+					RS.Bug("Flag remove: flag not found.");
 					exit(1);
 				}
 			}
@@ -931,11 +930,11 @@ void load_mobs(FILE *fp)
 				}
 
 				if (opennum >= MAX_PROFS_TAUGHT_BY_MOB)
-					bug("Error: Mob %d teaches too many profs.", pMobIndex->vnum);
+					RS.Bug("Error: Mob %d teaches too many profs.", pMobIndex->vnum);
 
 				pMobIndex->profs_taught[opennum] = CProficiencies::ProfIndexLookup(fread_string(fp));
 				if (pMobIndex->profs_taught[opennum] == -1)
-					bug("Error: Mob %d trying to teach invalid proficiency.", pMobIndex->vnum);
+					RS.Bug("Error: Mob %d trying to teach invalid proficiency.", pMobIndex->vnum);
 			}
 			else if (letter == 'Y')
 			{
@@ -970,9 +969,9 @@ void load_mobs(FILE *fp)
 
 void bugout(char *reason)
 {
-	FILE *fp;
-	bug(reason, 0);
-	fp = fopen(RIFT_ROOT_DIR "../logs/bugout.txt", "a");
+	RS.Bug(reason);
+
+	auto fp = fopen(RIFT_ROOT_DIR "../logs/bugout.txt", "a");
 	fprintf(fp, "%s\n", reason);
 	fclose(fp);
 	exit(3);
@@ -998,7 +997,7 @@ void load_objs(FILE *fp)
 
 	if (!area_last) /* OLC */
 	{
-		bug("Load_objects: no #AREA seen yet.", 0);
+		RS.Bug("Load_objects: no #AREA seen yet.");
 		exit(1);
 	}
 
@@ -1011,7 +1010,7 @@ void load_objs(FILE *fp)
 		letter = fread_letter(fp);
 		if (letter != '#')
 		{
-			bug("Load_objects: # not found.", 0);
+			RS.Bug("Load_objects: # not found.");
 			exit(1);
 		}
 
@@ -1025,7 +1024,7 @@ void load_objs(FILE *fp)
 
 		if (get_obj_index(vnum) != nullptr)
 		{
-			bug("Load_objects: vnum %d duplicated.", vnum);
+			RS.Bug("Load_objects: vnum %d duplicated.", vnum);
 			exit(1);
 		}
 
@@ -1186,7 +1185,7 @@ void load_objs(FILE *fp)
 
 				if (pObjIndex->cabal)
 				{
-					bug("Load_rooms: duplicate cabal fields.", 0);
+					RS.Bug("Load_rooms: duplicate cabal fields.");
 					exit(1);
 				}
 

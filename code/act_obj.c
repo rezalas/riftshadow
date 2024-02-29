@@ -1640,7 +1640,6 @@ void do_pour(CHAR_DATA *ch, char *argument)
 void do_drink(CHAR_DATA *ch, char *argument)
 {
 	char arg[MAX_INPUT_LENGTH];
-	char buf[MAX_STRING_LENGTH];
 	OBJ_DATA *obj;
 	int amount;
 	int liquid;
@@ -1697,11 +1696,7 @@ void do_drink(CHAR_DATA *ch, char *argument)
 
 			if (liquid < 0)
 			{
-				sprintf(buf, "Do_drink: bad liquid number, %d, on %s.", liquid, obj->short_descr);
-				bug(buf, 0);
-				/*
-					bug( "Do_drink: bad liquid number %d.", liquid );
-				*/
+				RS.Bug("Do_drink: bad liquid number, %d, on %s.", liquid, obj->short_descr);
 				liquid = obj->value[2] = 0;
 			}
 
@@ -1718,11 +1713,7 @@ void do_drink(CHAR_DATA *ch, char *argument)
 
 			if (liquid < 0)
 			{
-				sprintf(buf, "Do_drink: bad liquid number, %d, on %s.", liquid, obj->short_descr);
-				bug(buf, 0);
-				/*
-						bug( "Do_drink: bad liquid number %d.", liquid );
-				*/
+				RS.Bug("Do_drink: bad liquid number, %d, on %s.", liquid, obj->short_descr);
 				liquid = obj->value[2] = 0;
 			}
 
@@ -2061,7 +2052,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		bug("Wear_obj: no free neck.", 0);
+		RS.Bug("Wear_obj: no free neck.");
 		send_to_char("You already wear two neck items.\n\r", ch);
 		return;
 	}
@@ -2194,7 +2185,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		bug("Wear_obj: no free wrist.", 0);
+		RS.Bug("Wear_obj: no free wrist.");
 		send_to_char("You already wear two wrist items.\n\r", ch);
 		return;
 	}
@@ -3097,7 +3088,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 
 	if (sn < 0 || sn >= MAX_SKILL || skill_table[sn].spell_fun == 0)
 	{
-		bug("Do_brandish: bad sn %d.", sn);
+		RS.Bug("Do_brandish: bad sn %d.", sn);
 		return;
 	}
 
@@ -3151,7 +3142,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 
 						break;
 				default:
-					bug("Do_brandish: bad target for sn %d.", sn);
+					RS.Bug("Do_brandish: bad target for sn %d.", sn);
 					return;
 				}
 
@@ -3694,7 +3685,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 		pRoomIndexNext = get_room_index(ch->in_room->vnum + 1);
 		if (pRoomIndexNext == nullptr)
 		{
-			bug("Do_buy: bad pet shop at vnum %d.", ch->in_room->vnum);
+			RS.Bug("Do_buy: bad pet shop at vnum %d.", ch->in_room->vnum);
 			send_to_char("Sorry, you can't buy that here.\n\r", ch);
 			return;
 		}
@@ -3976,7 +3967,7 @@ void do_list(CHAR_DATA *ch, char *argument)
 
 		if (pRoomIndexNext == nullptr)
 		{
-			bug("Do_list: bad pet shop at vnum %d.", ch->in_room->vnum);
+			RS.Bug("Do_list: bad pet shop at vnum %d.", ch->in_room->vnum);
 			send_to_char("You can't do that here.\n\r", ch);
 			return;
 		}
@@ -4416,7 +4407,7 @@ bool hands_full(CHAR_DATA *ch)
 		return false;
 
 	if (count > 2)
-		bug("Hands full: Character holding %d items.", count);
+		RS.Bug("Hands full: Character holding %d items.", count);
 
 	return true;
 }
@@ -4819,19 +4810,16 @@ void reslot_weapon(CHAR_DATA *ch)
 void report_weapon_skill(CHAR_DATA *ch, OBJ_DATA *obj)
 {
 	int skill, sn;
-	char buf[MAX_STRING_LENGTH];
 
 	if (is_npc(ch))
 		return;
 
 	if (obj->item_type != ITEM_WEAPON)
 	{
-		sprintf(buf, "report_weapon_skill: Bad obj->type, %d, vnum %d, carried by %s.",
+		RS.Bug("report_weapon_skill: Bad obj->type, %d, vnum %d, carried by %s.", 
 			obj->item_type,
 			obj->pIndexData->vnum,
 			ch->name);
-
-		bug(buf, 0);
 		return;
 	}
 

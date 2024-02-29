@@ -85,7 +85,7 @@ void save_area_list()
 
 	if ((fp = fopen(RIFT_AREA_DIR "/area.lst", "w")) == nullptr)
 	{
-		bug("Save_area_list: fopen", 0);
+		RS.Bug("Save_area_list: fopen");
 		perror("area.lst");
 	}
 	else
@@ -839,7 +839,7 @@ void save_specs(FILE *fp, AREA_DATA *pArea)
 					fprintf(fp, "I %d %s\n", pObjIndex->vnum, ispec_table[i].spec_name);
 				/*
 				else
-					bug("Problem saving ispec on obj %d.", pObjIndex->vnum);
+					RS.Bug("Problem saving ispec on obj %d.", pObjIndex->vnum);
 				*/
 			}
 		}
@@ -858,7 +858,7 @@ void save_specs(FILE *fp, AREA_DATA *pArea)
 					fprintf(fp, "M %d %s\n", pMob->vnum, mspec_table[i].spec_name);
 				/*
 				else if(mspec_table[i].spec_func != pMob->spec_prog.func)
-					bug("Problem saving mspec on mob %d.", pMob->vnum);
+					RS.Bug("Problem saving mspec on mob %d.", pMob->vnum);
 				*/
 			}
 		}
@@ -938,16 +938,16 @@ void save_area(AREA_DATA *pArea)
 
 	auto returnCode = system(buf);
 	if(returnCode != 0) // mv returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
+		RS.Bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
 	buffer = std::string("touch " AREA_DUMP_FILE);
 	returnCode = system(buffer.c_str());
 	if(returnCode != 0) // couldn't find exit code for touch, assuming touch returns 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
+		RS.Bug("Command [%s] failed with exit code [%d]", buffer.data(), returnCode);
 
 	if (!(fp = fopen(pArea->file_name, "w")))
 	{
-		bug("Open_area: fopen", 0);
+		RS.Bug("Open_area: fopen");
 		perror(pArea->file_name);
 	}
 

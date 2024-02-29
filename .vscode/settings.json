@@ -65,7 +65,8 @@
 		"iostream": "cpp",
 		"stdexcept": "cpp",
 		"cfenv": "cpp",
-		"cinttypes": "cpp"
+		"cinttypes": "cpp",
+		"codecvt": "cpp"
 	},
 	"testMate.cpp.test.executables": "tests/*{_tests}*",
 	"testMate.cpp.debug.configTemplate": { 

@@ -407,7 +407,7 @@ char *format_string(char *oldstring /*, bool fSpace */)
 		}
 		else
 		{
-			bug("No spaces", 0);
+			RS.Bug("No spaces");
 			*(rdesc + 75) = 0;
 			strcat(xbuf, rdesc);
 			strcat(xbuf, "-\n\r");

@@ -100,7 +100,7 @@ RACE_DATA *race_data_lookup(const int race)
 	}
 
 	if (!found)
-		bug("Race lookup failed!!", 0);
+		RS.Bug("Race lookup failed!!");
 
 	if (!temp || !found)
 		temp = race_list;

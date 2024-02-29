@@ -108,7 +108,7 @@ void rprog_set(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 
 	if (!rprog_table[i].name)
 	{
-		bug("Load_improgs: 'R': Function not found for vnum %d", room->vnum);
+		RS.Bug("Load_improgs: 'R': Function not found for vnum %d", room->vnum);
 		return;
 	}
 
@@ -170,7 +170,7 @@ void rprog_set(ROOM_INDEX_DATA *room, const char *progtype, const char *name)
 		return;
 	}
 
-	bug("Load_improgs: 'R': invalid program type for vnum %d", room->vnum);
+	RS.Bug("Load_improgs: 'R': invalid program type for vnum %d", room->vnum);
 	exit(1);
 }
 
@@ -450,7 +450,7 @@ bool move_prog_stone_roll(ROOM_INDEX_DATA *room, CHAR_DATA *ch, int dir)
 
 	if (!found)
 	{
-		bug("Corpse in 24560 missing.  Odd.", 0);
+		RS.Bug("Corpse in 24560 missing.  Odd.");
 		return true;
 	}
 

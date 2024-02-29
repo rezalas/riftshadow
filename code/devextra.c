@@ -101,7 +101,7 @@ void do_pswitch(CHAR_DATA *ch, char *argument)
 
 	auto returnCode = system(buf);
 	if(returnCode != 0) // cp returns 0 on SUCCESS, 1 on ERROR. system returns -1 on ERROR
-		bug("Command [%s] failed with exit code [%d]", buf, returnCode);
+		RS.Bug("Command [%s] failed with exit code [%d]", buf, returnCode);
 
 	d->character->desc = nullptr;
 	d->character->next = char_list;
@@ -169,7 +169,10 @@ void clean_mud()
 	DbConnection riftCore = nSQL.Settings.GetDbConnection("rift");
 	if (!nSQL.StartSQLServer(riftCore.Host.c_str(),
 		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
-		return RS.Bug("clean_mud: failed to establish a database connection.");
+	{
+		RS.Bug("clean_mud: failed to establish a database connection.");
+		return;
+	}
 
 	// 5184000 = one month
 
@@ -770,7 +773,7 @@ void delete_char(char *name, bool save_pfile)
 
 	auto returnCode = system(buf2);
 	if(returnCode != 0) // both mv and rm return 0 on SUCCESS, > 0 on ERROR. system returns -1 on ERROR
-		bug("Command [%s] failed with exit code [%d]", buf2, returnCode);
+		RS.Bug("Command [%s] failed with exit code [%d]", buf2, returnCode);
 
 	cres = RS.SQL.Delete("players WHERE name='%s'", name);
 
@@ -1719,7 +1722,7 @@ void pay_bounty(CHAR_DATA *ch, CHAR_DATA *victim)
 	mod = 2.0 * (float)((float)victim->level / (float)100);
 
 	if (!mod)
-		bug("Error: Mod is 0.", 0);
+		RS.Bug("Error: Mod is 0.");
 
 	if (victim->cabal > 0)
 		credit = (int)((float)credit * 1.3);
@@ -2598,7 +2601,7 @@ void do_commune(CHAR_DATA *ch, char *argument)
 			target = TARGET_RUNE;
 			break;
 		default:
-			bug("Do_cast: bad target for sn %d.", sn);
+			RS.Bug("Do_cast: bad target for sn %d.", sn);
 			return;
 	}
 
@@ -2948,7 +2951,7 @@ void do_call(CHAR_DATA *ch, char *argument)
 			target = TARGET_DIR;
 			break;
 		default:
-			bug("Do_cast: bad target for sn %d.", sn);
+			RS.Bug("Do_cast: bad target for sn %d.", sn);
 			return;
 	}
 
@@ -3268,7 +3271,7 @@ OBJ_DATA *make_cosmetic(char *name, char *wearloc, char *underloc, char *cosmeti
 
 	if (!ch)
 	{
-		bug("Make_cosmetic bug: no charlist?!", 0);
+		RS.Bug("Make_cosmetic bug: no charlist?!");
 		return 0;
 	}
 

@@ -1199,9 +1199,7 @@ void char_update(void)
 
 		if (is_npc(ch) && ch->hit < 0 && ch->in_room)
 		{
-			char buf[MSL];
-			sprintf(buf, "%s in %d has HP %d", ch->name, ch->in_room->vnum, ch->hit);
-			bug(buf, 0);
+			RS.Bug("%s in %d has HP %d", ch->name, ch->in_room->vnum, ch->hit);
 		}
 
 		if (ch->ghost > 0)
@@ -2299,7 +2297,7 @@ void affect_update(void)
 
 			wiznet("ERROR: $N had corrupt name!  Name has been properly repaired.  Check for other errors.", ch, nullptr, 0, 0, 0);
 			sprintf(buf, "Error: %s has corrupt name.  Repaired.\n\r", ch->true_name);
-			bug(buf, 0);
+			RS.Bug(buf);
 			RS.Log(buf);
 		}
 
@@ -3149,7 +3147,7 @@ void save_demos()
 
 	/*
 	if(!(fp=fopen(DEMO_LOG_FILE,"w")))
-		return bug("Error opening demographics.",0);
+		return RS.Bug("Error opening demographics.",0);
 	conn = open_conn();
 	//racial crap
 	fprintf(fp,"Riftshadow Demographics\n\r");

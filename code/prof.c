@@ -291,7 +291,7 @@ void CProficiencies::GetProfsTaughtByTrainer(char_data* ch, char_data* trainer)
 {
 	if (ch == nullptr)
 	{
-		bug("CProficiencies::GetProfsTaughtByTrainer: Charater is null.");
+		RS.Bug("CProficiencies::GetProfsTaughtByTrainer: Charater is null.");
 		return;
 	}
 	
@@ -326,7 +326,7 @@ void CProficiencies::TrainProficiency(char_data* ch, char_data* trainer, char* a
 {
 	if (ch == nullptr)
 	{
-		bug("CProficiencies::TrainProficiency: Charater is null.");
+		RS.Bug("CProficiencies::TrainProficiency: Charater is null.");
 		return;
 	}
 	
@@ -502,7 +502,7 @@ void CProficiencies::ListKnownProficiencies(char_data* player)
 {
 	if (player == nullptr)
 	{
-		bug("CProficiencies::ListKnownProficiencies: Player is null.");
+		RS.Bug("CProficiencies::ListKnownProficiencies: Player is null.");
 		return;
 	}
 
@@ -539,7 +539,7 @@ void CProficiencies::ListBasicProficiencies(char_data* player)
 {
 	if (player == nullptr)
 	{
-		bug("CProficiencies::ListBasicProficiencies: Player is null.");
+		RS.Bug("CProficiencies::ListBasicProficiencies: Player is null.");
 		return;
 	}
 
@@ -586,7 +586,7 @@ void CProficiencies::SetProf(int profindex, int proflevel)
 	auto profs_size = std::size(profs);
 	if (profindex < 0 || profindex > profs_size - 1)
 	{
-		bug("CProficiencies::SetProf : profindex out of bounds", profindex);
+		RS.Bug("CProficiencies::SetProf : profindex out of bounds [%d]", profindex);
 		return;
 	}
 
@@ -657,7 +657,7 @@ const char* CProficiencies::GetSkillLevelName(int ind)
 	auto profs_size = std::size(profs);
 	if(ind < 0 || ind > profs_size - 1)
 	{
-		bug("CProficiencies::GetSkillLevelName : index out of bounds", ind);
+		RS.Bug("CProficiencies::GetSkillLevelName : index out of bounds [%d]", ind);
 		return "";
 	}
 
@@ -892,7 +892,7 @@ void prof_tracking(CHAR_DATA *ch, char *argument)
 {
 	if (ch == nullptr)
 	{
-		bug("prof_bandage: ch is nullptr");
+		RS.Bug("prof_bandage: ch is nullptr");
 		return;
 	}
 
@@ -1124,7 +1124,7 @@ void prof_bandage(CHAR_DATA *ch, char *argument)
 {
 	if (ch == nullptr)
 	{
-		bug("prof_bandage: ch is nullptr");
+		RS.Bug("prof_bandage: ch is nullptr");
 		return;
 	}
 

@@ -158,11 +158,18 @@ void bug(const char *bugstr, ...)
 	RS.Bug(bugstr);
 }
 
+/// Reports a bug 
+/// @param tError: The message to report as a bug.
+/// @param  ... - A list of values as related to the format specifiers in tError.
+/// @note Format specifiers are in the printf-family style.
 void CMud::Bug(const char *tError, ...)
 {
 	TString bug;
 	MUNCH_VARARG(tError, bug) //mmm, chewy.
 	fprintf(stderr,"%s", (RSTR)bug);
+
+	std::string str = std::string((RSTR)bug);
+	wiznet(str.data(), 0, 0, WIZ_DEBUG, 0, 0);
 }
 
 void CMud::Debug(const char *tDebug, ...)

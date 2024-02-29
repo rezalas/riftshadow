@@ -200,7 +200,7 @@ void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 
 	if (!iprog_table[i].name)
 	{
-		bug("Load_improgs: 'I': Function not found for vnum %d", obj->vnum);
+		RS.Bug("Load_improgs: 'I': Function not found for vnum %d", obj->vnum);
 		return;
 	}
 
@@ -431,7 +431,7 @@ void iprog_set(OBJ_INDEX_DATA *obj, const char *progtype, const char *name)
 		return;
 	}
 
-	bug("Load_improgs: 'I': invalid program type for vnum %d", obj->vnum);
+	RS.Bug("Load_improgs: 'I': invalid program type for vnum %d", obj->vnum);
 	exit(1);
 }
 
@@ -3654,7 +3654,7 @@ void open_elevator(ROOM_INDEX_DATA *eleRoom, ROOM_INDEX_DATA *toRoom)
 
 			if (!eleRoom->exit[reverse_d(i)])
 			{
-				bug("Invalid eleRoom exit in Open_Elevator", 0);
+				RS.Bug("Invalid eleRoom exit in Open_Elevator");
 				return;
 			}
 
@@ -3701,7 +3701,10 @@ void verb_prog_iseldheim_lever_pull(OBJ_DATA *obj, CHAR_DATA *ch, char *argument
 	}
 
 	if (!tRoom)
-		return bug("Whack ass shit up in dis lizzever!", 0);
+	{
+		RS.Bug("Whack ass shit up in dis lizzever!");
+		return;
+	}
 
 	mmsg = talloc_string("A loud grinding noise can be heard as the gears above the lift begin to turn.");
 	eleRoom->mana_rate = 101; // ele in use
@@ -3933,7 +3936,7 @@ void verb_prog_turn_wyntran(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 
 	if ((pMobIndex = get_mob_index(4627)) == nullptr)
 	{
-		bug("verb_prog_turn_wyntran mob loading error");
+		RS.Bug("verb_prog_turn_wyntran mob loading error");
 		return;
 	}
 
@@ -4045,7 +4048,7 @@ void verb_prog_fallendesert_climb_ladder(OBJ_DATA *obj, CHAR_DATA *ch, char *arg
 	}
 	else
 	{
-		bug("error climbing ladder in fallen desert, wrong vnum for room");
+		RS.Bug("error climbing ladder in fallen desert, wrong vnum for room");
 		return;
 	}
 
@@ -4090,7 +4093,7 @@ void verb_prog_fallendesert_(OBJ_DATA *obj, CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		bug("error climbing ladder in fallen desert, wrong vnum for room");
+		RS.Bug("error climbing ladder in fallen desert, wrong vnum for room");
 		return;
 	}
 

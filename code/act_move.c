@@ -163,7 +163,7 @@ void move_char(CHAR_DATA *ch, int door, bool automatic, bool fcharm)
 
 	if (door < 0 || door > 5)
 	{
-		bug("Do_move: bad door %d.", door);
+		RS.Bug("Do_move: bad door %d.", door);
 		return;
 	}
 
@@ -3653,7 +3653,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	auto pMobIndex = get_mob_index(type);
 	if (pMobIndex == nullptr)
 	{
-		bug("Animal call: Bad mob vnum call %d.", type);
+		RS.Bug("Animal call: Bad mob vnum call %d.", type);
 
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
 		act("$n calls out to the wild but nothing responds.", ch, 0, 0, TO_ROOM);
@@ -3718,7 +3718,7 @@ void do_animal_call(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		bug("Bad animal call: %d.", type);
+		RS.Bug("Bad animal call: %d.", type);
 
 		send_to_char("You call out to the wild but nothing responds.\n\r", ch);
 		act("$n calls out to the wild but nothing comes.\n\r", ch, 0, 0, TO_ROOM);
@@ -3846,7 +3846,7 @@ void smart_track(CHAR_DATA *ch, CHAR_DATA *mob)
 		sprintf(buf,"MOB %s tracking from ROOM %d to ROOM %d -- %d iterations.\n\r",
 			mob->name, mob->in_room->vnum,
 			ch->in_room->vnum,iterations);
-		bug(buf,0);
+		RS.Bug(buf);
 		*/
 		return;
 	}
@@ -3915,7 +3915,7 @@ void walk_to_room(CHAR_DATA *mob, ROOM_INDEX_DATA *goal)
 	auto solve = best_path;
 	if (!best_path)
 	{
-		bug("Some weird tracking shit just happened with mob vnum %d.", mob->pIndexData->vnum);
+		RS.Bug("Some weird tracking shit just happened with mob vnum %d.", mob->pIndexData->vnum);
 		return;
 	}
 
