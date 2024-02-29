@@ -240,7 +240,7 @@ void CMud::LoadAreas()
 
 			if ( fread_letter( fpArea ) != '#' )
 			{
-				bug( "Boot_db: # not found.", 0 );
+				RS.Bug("Boot_db: # not found.");
 				exit( 1 );
 			}
 
@@ -258,7 +258,7 @@ void CMud::LoadAreas()
 			else if ( !str_cmp( word, "SPECS" ) ) load_specs(fpArea);
 			else
 			{
-				bug( "Boot_db: bad section name.", 0 );
+				RS.Bug("Boot_db: bad section name.");
 			}
 		}
 

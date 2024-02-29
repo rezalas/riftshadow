@@ -958,7 +958,7 @@ void load_resets(FILE *fp)
 
 	if (!area_last)
 	{
-		bug("Load_resets: no #AREA seen yet.", 0);
+		RS.Bug("Load_resets: no #AREA seen yet.");
 		exit(1);
 	}
 
@@ -1083,14 +1083,14 @@ void load_resets(FILE *fp)
 					|| !(pexit = pRoomIndex->exit[pReset->arg2])
 					|| !IS_SET(pexit->exit_info, EX_ISDOOR))
 				{
-					bug("Load_resets: 'D': exit %d not door.", pReset->arg2);
+					RS.Bug("Load_resets: 'D': exit %d not door.", pReset->arg2);
 					exit(1);
 				}
 
 				/*
 				if (pReset->arg3 < 0 || pReset->arg3 > 2)
 				{
-					bug("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
+					RS.Bug("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
 					exit(1);
 				}
 				*/
@@ -1107,7 +1107,7 @@ void load_resets(FILE *fp)
 						SET_BIT(pexit->exit_info, EX_LOCKED);
 						break;
 					default:
-						bug("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
+						RS.Bug("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
 						break;
 				}
 
@@ -1117,7 +1117,7 @@ void load_resets(FILE *fp)
 
 				if (pReset->arg2 < 0 || pReset->arg2 > 6)
 				{
-					bug("Load_resets: 'R': bad exit %d.", pReset->arg2);
+					RS.Bug("Load_resets: 'R': bad exit %d.", pReset->arg2);
 					exit(1);
 				}
 
@@ -1126,7 +1126,7 @@ void load_resets(FILE *fp)
 
 				break;
 			default:
-				bug("Load_resets: bad command '%c'.", letter);
+				RS.Bug("Load_resets: bad command '%c'.", letter);
 				exit(1);
 				break;
 		}
@@ -1287,14 +1287,12 @@ void fix_exits(void)
 					&& pexit_rev->u1.to_room != pRoomIndex
 					&& (pRoomIndex->vnum < 1200 || pRoomIndex->vnum > 1299))
 				{
-					sprintf(buf, "Fix_exits: %d:%d -> %d:%d -> %d.",
+					RS.Bug("Fix_exits: %d:%d -> %d:%d -> %d.",
 						pRoomIndex->vnum,
 						door,
 						to_room->vnum,
 						rev_dir[door],
-						pexit_rev->u1.to_room == nullptr ? 0 : pexit_rev->u1.to_room->vnum );
-
-					bug(buf, 0);
+						pexit_rev->u1.to_room == nullptr ? 0 : pexit_rev->u1.to_room->vnum);
 				}
 			}
 		}
@@ -1451,7 +1449,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pMobIndex == nullptr)
 				{
-					bug("Reset_area: 'M': bad vnum %d.", pReset->arg1);
+					RS.Bug("Reset_area: 'M': bad vnum %d.", pReset->arg1);
 					continue;
 				}
 
@@ -1459,7 +1457,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pRoomIndex == nullptr)
 				{
-					bug("Reset_area: 'R': bad vnum %d.", pReset->arg3);
+					RS.Bug("Reset_area: 'R': bad vnum %d.", pReset->arg3);
 					continue;
 				}
 
@@ -1518,9 +1516,8 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjIndex)
 				{
-					bug("Reset_room: 'O' 1 : bad vnum %d", pReset->arg1);
-					sprintf(buf, "%d %d %d %d", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
-					bug(buf, 1);
+					RS.Bug("Reset_room: 'O' 1 : bad vnum %d", pReset->arg1);
+					RS.Bug("%d %d %d %d", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
 					continue;
 				}
 
@@ -1528,9 +1525,8 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pRoomIndex)
 				{
-					bug("Reset_room: 'O' 2 : bad vnum %d.", pReset->arg3);
-					sprintf(buf, "%d %d %d %d", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
-					bug(buf, 1);
+					RS.Bug("Reset_room: 'O' 2 : bad vnum %d.", pReset->arg3);
+					RS.Bug("%d %d %d %d", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
 					continue;
 				}
 
@@ -1568,7 +1564,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjIndex)
 				{
-					bug("Reset_room: 'P': bad vnum %d.", pReset->arg1);
+					RS.Bug("Reset_room: 'P': bad vnum %d.", pReset->arg1);
 					continue;
 				}
 
@@ -1576,7 +1572,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjToIndex)
 				{
-					bug("Reset_room: 'P': bad vnum %d.", pReset->arg3);
+					RS.Bug("Reset_room: 'P': bad vnum %d.", pReset->arg3);
 					continue;
 				}
 
@@ -1619,7 +1615,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjIndex)
 				{
-					bug("Reset_room: 'E' or 'G': bad vnum %d.", pReset->arg1);
+					RS.Bug("Reset_room: 'E' or 'G': bad vnum %d.", pReset->arg1);
 					continue;
 				}
 
@@ -1628,7 +1624,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!LastMob)
 				{
-					bug("Reset_room: 'E' or 'G': null mob for vnum %d.", pReset->arg1);
+					RS.Bug("Reset_room: 'E' or 'G': null mob for vnum %d.", pReset->arg1);
 					last= false;
 					break;
 				}
@@ -1767,7 +1763,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pRoomIndex == nullptr)
 				{
-					bug("Reset_area: 'D': bad vnum %d.", pReset->arg1);
+					RS.Bug("Reset_area: 'D': bad vnum %d.", pReset->arg1);
 					continue;
 				}
 
@@ -1801,7 +1797,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pRoomIndex)
 				{
-					bug("Reset_room: 'R': bad vnum %d.", pReset->arg1);
+					RS.Bug("Reset_room: 'R': bad vnum %d.", pReset->arg1);
 					continue;
 				}
 
@@ -1821,7 +1817,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				break;
 			default:
-				bug("Reset_area: bad command %c.", pReset->command);
+				RS.Bug("Reset_area: bad command %c.", pReset->command);
 				break;
 		}
 	}
@@ -1858,7 +1854,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
 	if (pMobIndex == nullptr)
 	{
-		bug("Create_mobile: nullptr pMobIndex.", 0);
+		RS.Bug("Create_mobile: nullptr pMobIndex.");
 		exit(1);
 	}
 
@@ -2202,7 +2198,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 
 	if (pObjIndex == nullptr)
 	{
-		bug("Create_object: nullptr pObjIndex.");
+		RS.Bug("Create_object: nullptr pObjIndex.");
 		exit(1);
 	}
 
@@ -2353,7 +2349,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 
 			break;
 		default:
-			bug("Read_object: vnum %d bad type.", pObjIndex->vnum);
+			RS.Bug("Read_object: vnum %d bad type.", pObjIndex->vnum);
 			break;
 	}
 
@@ -2513,7 +2509,7 @@ MOB_INDEX_DATA *get_mob_index(int vnum)
 
 	if (fBootDb)
 	{
-		bug("Get_mob_index: funky vnum %d.", vnum);
+		RS.Bug("Get_mob_index: funky vnum %d.", vnum);
 		exit(1);
 	}
 
@@ -2536,7 +2532,7 @@ OBJ_INDEX_DATA *get_obj_index(int vnum)
 
 	if (fBootDb)
 	{
-		bug("Get_obj_index: bad vnum %d.", vnum);
+		RS.Bug("Get_obj_index: bad vnum %d.", vnum);
 		exit(1);
 	}
 
@@ -2559,7 +2555,7 @@ ROOM_INDEX_DATA *get_room_index(int vnum)
 
 	if (fBootDb)
 	{
-		bug("Get_room_index: bad vnum %d.", vnum);
+		RS.Bug("Get_room_index: bad vnum %d.", vnum);
 		exit(1);
 	}
 
@@ -2621,7 +2617,7 @@ int fread_number(FILE *fp)
 			strcat(buf, dbuf);
 		}
 
-		bug(buf, 0);
+		RS.Bug(buf);
 		exit(1);
 	}
 
@@ -2798,7 +2794,7 @@ char *fread_string(FILE *fp)
 		{
 			case EOF:
 				/* temp fix */
-				bug("Fread_string: EOF", 0);
+				RS.Bug("Fread_string: EOF");
 				return nullptr;
 				/* exit( 1 ); */
 				break;
@@ -2909,7 +2905,7 @@ char *fread_string_eol(FILE *fp)
 		switch (plast[-1])
 		{
 			case EOF:
-				bug("Fread_string_eol  EOF", 0);
+				RS.Bug("Fread_string_eol  EOF");
 				exit(1);
 				break;
 			case '\n':
@@ -2980,8 +2976,7 @@ char *fread_word(FILE *fp)
 		}
 	}
 
-	bug("Fread_word: word too long.", 0);
-	bug(word, 0);
+	RS.Bug("Fread_word: word too long [%s].", word);
 	exit(1);
 	return nullptr;
 }
@@ -3007,7 +3002,7 @@ void *iamlame(int sMem)
 
 	if (iList == MAX_MEM_LIST)
 	{
-		bug("Alloc_mem: size %d too large.", sMem);
+		RS.Bug("Alloc_mem: size %d too large.", sMem);
 		exit(1);
 	}
 
@@ -3045,8 +3040,8 @@ void soami(void *pMem, int sMem)
 
 	if (*magic != MAGIC_NUM)
 	{
-		//bug("Attempt to recycle invalid memory of size %d.",sMem);
-		//bug((char*) pMem + sizeof(*magic),0);
+		//RS.Bug("Attempt to recycle invalid memory of size %d.",sMem);
+		//RS.Bug((char*) pMem + sizeof(*magic));
 		return;
 	}
 
@@ -3061,7 +3056,7 @@ void soami(void *pMem, int sMem)
 
 	if (iList == MAX_MEM_LIST)
 	{
-		bug("Free_mem: size %d too large.", sMem);
+		RS.Bug("Free_mem: size %d too large.", sMem);
 		exit(1);
 	}
 
@@ -3089,7 +3084,7 @@ void *crappyold(int sMem)
 
 	if (sMem > MAX_PERM_BLOCK)
 	{
-		bug("Alloc_perm: %d too large.", sMem);
+		RS.Bug("Alloc_perm: %d too large.", sMem);
 		exit(1);
 	}
 
@@ -3601,15 +3596,13 @@ bool str_cmp(const char *astr, const char *bstr)
 {
 	if (astr == nullptr)
 	{
-		//	sprintf(buf,"Str_cmp: null astr, bstr: %s (%s:%d dev=pimp)",gLastFile, gLastLine, bstr);
-		//	bug( buf, 0 );
+		//	RS.Bug("Str_cmp: null astr, bstr: %s (%s:%d dev=pimp)",gLastFile, gLastLine, bstr);
 		return true;
 	}
 
 	if (bstr == nullptr)
 	{
-		//	sprintf(buf,"Str_cmp: null bstr, astr: %s",astr);
-		//	bug( buf, 0 );
+		//	RS.Bug("Str_cmp: null bstr, astr: %s", astr);
 		return true;
 	}
 
@@ -3631,13 +3624,13 @@ bool str_prefix(const char *astr, const char *bstr)
 {
 	if (astr == nullptr)
 	{
-		bug("Strn_cmp: null astr.", 0);
+		RS.Bug("Strn_cmp: null astr.");
 		return true;
 	}
 
 	if (bstr == nullptr)
 	{
-		bug("Strn_cmp: null bstr.", 0);
+		RS.Bug("Strn_cmp: null bstr.");
 		return true;
 	}
 
@@ -3743,45 +3736,6 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
 	}
 
 	fpReserve = fopen(NULL_FILE, "r");
-}
-
-/*
- * Reports a bug.
- */
-void bug(const char *str, int param)
-{
-	std::string buffer;
-
-	if (fpArea != nullptr)
-	{
-		int iLine;
-		int iChar;
-
-		if (fpArea == stdin)
-		{
-			iLine = 0;
-		}
-		else
-		{
-			iChar = ftell(fpArea);
-			fseek(fpArea, 0, 0);
-
-			for (iLine = 0; ftell(fpArea) < iChar; iLine++)
-			{
-				while (getc(fpArea) != '\n');
-			}
-
-			fseek(fpArea, iChar, 0);
-		}
-
-		buffer = fmt::format("[*****] FILE: {} LINE: {}", strArea, iLine);
-		RS.Log(buffer.c_str());
-	}
-
-	buffer = fmt::sprintf(str, param);
-	buffer = fmt::format("[*****] BUG: {}", buffer);
-	RS.Log(buffer.c_str());
-	wiznet(buffer.data(), 0, 0, WIZ_DEBUG, 0, 0);
 }
 
 /*
@@ -3997,7 +3951,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 					vnum = fread_number(fpChar);
 					if (get_obj_index(vnum) == nullptr)
 					{
-						/*	bug("Bad obj vnum in limits: %d",vnum); */
+						/*	RS.Bug("Bad obj vnum in limits: %d",vnum); */
 					}
 					else
 					{
@@ -4030,7 +3984,7 @@ void load_rooms(FILE *fp)
 	for (;;)
 	{
 		short vnum = 0;
-		char letter, str[20];
+		char letter;
 		char *bword;
 		long bitvect;
 		int door;
@@ -4039,9 +3993,8 @@ void load_rooms(FILE *fp)
 		letter = fread_letter(fp);
 		if (letter != '#')
 		{
-			sprintf(str, "Letter is %c.", letter);
-			bug(str, 0);
-			bug("Load_newrooms: # not found, last vnum %d.", vnum);
+			RS.Bug("Letter is %c.", letter);
+			RS.Bug("Load_newrooms: # not found, last vnum %d.", vnum);
 			exit(0);
 		}
 
@@ -4148,7 +4101,7 @@ void load_rooms(FILE *fp)
 				door = flag_lookup(fread_word(fp), direction_table);
 				if (door < 0 || door > 5)
 				{
-					bug("Fread_rooms: vnum %d has bad door number.", vnum);
+					RS.Bug("Fread_rooms: vnum %d has bad door number.", vnum);
 					exit(1);
 				}
 
@@ -4239,7 +4192,7 @@ void load_newresets(FILE *fp)
 
 	if (area_last == nullptr)
 	{
-		bug("Load_resets: no #AREA seen yet.", 0);
+		RS.Bug("Load_resets: no #AREA seen yet.");
 		exit(1);
 	}
 
@@ -4427,13 +4380,13 @@ void load_newresets(FILE *fp)
 
 				if (pReset->arg2 < 0 || pReset->arg2 > 6)
 				{
-					bug("Load_resets: 'R': bad exit %d.", pReset->arg2);
+					RS.Bug("Load_resets: 'R': bad exit %d.", pReset->arg2);
 					exit(1);
 				}
 
 				break;
 			default:
-				bug("Load_resets: bad command '%c'.", letter);
+				RS.Bug("Load_resets: bad command '%c'.", letter);
 				exit(1);
 				break;
 		}

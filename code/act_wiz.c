@@ -1079,7 +1079,7 @@ void do_disconnect(CHAR_DATA *ch, char *argument)
 		}
 	}
 
-	bug("Do_disconnect: desc not found.", 0);
+	RS.Bug("Do_disconnect: desc not found.");
 	send_to_char("Descriptor not found!\n\r", ch);
 }
 
@@ -2200,7 +2200,7 @@ void do_ostat(CHAR_DATA *ch, char *argument)
 
 		if (!ispec_table[i].spec_name)
 		{
-			bug("Error: Invalid ispec.", 0);
+			RS.Bug("Error: Invalid ispec.");
 			return;
 		}
 
@@ -2838,7 +2838,7 @@ void do_mstat(CHAR_DATA *ch, char *argument)
 
 		if (!mspec_table[i].spec_name)
 		{
-			bug("Error: Invalid mspec.", 0);
+			RS.Bug("Error: Invalid mspec.");
 			return;
 		}
 

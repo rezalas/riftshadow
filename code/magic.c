@@ -978,7 +978,7 @@ void do_cast(CHAR_DATA *ch, char *argument)
 			target = TARGET_DIR;
 			break;
 		default:
-			bug("Do_cast: bad target for sn %d.", sn);
+			RS.Bug("Do_cast: bad target for sn %d.", sn);
 			return;
 	}
 	/*
@@ -1132,7 +1132,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
 
 	if (sn >= MAX_SKILL || skill_table[sn].spell_fun == 0)
 	{
-		bug("Obj_cast_spell: bad sn %d.", sn);
+		RS.Bug("Obj_cast_spell: bad sn %d.", sn);
 		return;
 	}
 
@@ -1261,7 +1261,7 @@ void obj_cast_spell(int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DAT
 
 			break;
 		default:
-			bug("Obj_cast_spell: bad target for sn %d.", sn);
+			RS.Bug("Obj_cast_spell: bad target for sn %d.", sn);
 			return;
 	}
 

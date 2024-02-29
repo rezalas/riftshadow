@@ -89,7 +89,6 @@ bool aprog_unset(AREA_DATA *area, const char *progtype, const char *name)
 void aprog_set(AREA_DATA *area, const char *progtype, const char *name)
 {
 	int i;
-	char buf[MSL];
 
 	for (i = 0; aprog_table[i].name; i++)
 	{
@@ -99,8 +98,7 @@ void aprog_set(AREA_DATA *area, const char *progtype, const char *name)
 
 	if (!aprog_table[i].name)
 	{
-		sprintf(buf, "Load_improgs: 'A': Function not found for area %s.", area->name);
-		bug(buf, 0);
+		RS.Bug("Load_improgs: 'A': Function not found for area %s.", area->name);
 		return;
 	}
 

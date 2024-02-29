@@ -619,7 +619,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 		if (d != nullptr)
 			d->next = dclose->next;
 		else
-			bug("Close_socket: dclose not found.", 0);
+			RS.Bug("Close_socket: dclose not found.");
 	}
 
 	close(dclose->descriptor);
@@ -1381,7 +1381,7 @@ void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
 
 		if (d->outsize >= 32000)
 		{
-			bug("Buffer overflow. Closing.\n\r", 0);
+			RS.Bug("Buffer overflow. Closing.\n\r");
 			d->outtop = 0;
 			close_socket(d);
 			return;
@@ -2828,7 +2828,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			do_unread(ch, "");
 			break;
 		default:
-			bug("Nanny: bad d->connected %d.", d->connected);
+			RS.Bug("Nanny: bad d->connected %d.", d->connected);
 			close_socket(d);
 			return;
 	}
@@ -3185,7 +3185,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 				if (*str >= 'A' && *str <= 'Z')
 				{
-					bug("Act: missing arg2 for code %d.", *str);
+					RS.Bug("Act: missing arg2 for code %d.", *str);
 					i = " <@@@> ";
 				}
 				else
@@ -3206,7 +3206,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 							i = his_her[URANGE(0, victim->sex, 2)];
 							break;
 						default:
-							bug("Act: bad code %d.", *str);
+							RS.Bug("Act: bad code %d.", *str);
 							i = " <@@@> ";
 							break;
 					}
@@ -3279,8 +3279,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	{
 		if (vch == nullptr)
 		{
-			sprintf(buf, "Act: null vch with TO_VICT. -- %s", format);
-			bug(buf, 0);
+			RS.Bug("Act: null vch with TO_VICT. -- %s", format);
 			return;
 		}
 
@@ -3334,7 +3333,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 			if (arg2 == nullptr && *str >= 'A' && *str <= 'Z' && *str != 'I')
 			{
-				bug("Act: missing arg2 for code %d.", *str);
+				RS.Bug("Act: missing arg2 for code %d.", *str);
 				i = " <@@@> ";
 			}
 			else
@@ -3423,7 +3422,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 						}
 						break;
 					default:
-						bug("Act: bad code %d.", *str);
+						RS.Bug("Act: bad code %d.", *str);
 						i = " <@@@> ";
 						break;
 				}

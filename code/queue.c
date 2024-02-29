@@ -1,6 +1,5 @@
 #include "queue.h"
 #define NOP asm volatile("nop");
-void bug( const char *str, int param );
 
 CQueue *CQueue::queue_first = 0; /*null*/
 
@@ -66,8 +65,11 @@ void CQueue::AddToQueue(int nTimer, int nArgs, ...)
 	va_list ap;
 	int i;
 	void *hax[MAX_QUEUE_ARGS];
-	if(nTimer < 0)
-		bug("Negative Queue Timer - NumArgs: %d", nArgs);	
+	//TODO: since RS is CMud and CMud has a reference to CQueue we can't rely on extern as it would cause a circular reference.
+	//TODO: thus we need to inject CMud into the CQueue constructor and reference it that way.
+	//TODO: commenting out for now.
+	// if(nTimer < 0)
+	// 	RS.Bug("Negative Queue Timer - NumArgs: %d", nArgs);	
 	CQueue *nq = new CQueue;
 	nq->queue_delay = nTimer;
 	nq->queue_numargs = nArgs;
@@ -122,5 +124,9 @@ void CQueue::DeleteQueuedEventsInvolving(void *qChar)
 				break;
 			}
 	}
-	bug("%d events deleted.", deleted);
+
+	//TODO: since RS is CMud and CMud has a reference to CQueue we can't rely on extern as it would cause a circular reference.
+	//TODO: thus we need to inject CMud into the CQueue constructor and reference it that way.
+	//TODO: commenting out for now.
+	//RS.Bug("%d events deleted.", deleted);
 }

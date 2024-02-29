@@ -1050,7 +1050,7 @@ void spell_dark_familiar(int sn, int level, CHAR_DATA *ch, void *vo, int target)
 			hp_mod = 1;
 			break;
 		default:
-			bug("dark_familiar: invalid devil", 0);
+			RS.Bug("dark_familiar: invalid devil");
 			return;
 	}
 
@@ -1329,7 +1329,7 @@ void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 				vnum = MOB_VNUM_IPOS;
 				break;
 			default:
-				bug("demon_appear: invalid lesser", 0);
+				RS.Bug("demon_appear: invalid lesser");
 				return;
 		}
 	}
@@ -1359,7 +1359,7 @@ void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 				vnum = MOB_VNUM_CIMERIES;
 				break;
 			default:
-				bug("demon_appear: invalid greater", 0);
+				RS.Bug("demon_appear: invalid greater");
 				return;
 		}
 	}
@@ -1440,7 +1440,7 @@ void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 				affect_to_char(mob, &af);
 				break;
 			default:
-				bug("demon_appear: invalid lesser", 0);
+				RS.Bug("demon_appear: invalid lesser");
 				return;
 		}
 	}
@@ -1518,7 +1518,7 @@ void demon_appear(CHAR_DATA *ch, int *demonptr, int *typeptr)
 				affect_to_char(mob, &af);
 				break;
 			default:
-				bug("demon_appear: invalid greater", 0);
+				RS.Bug("demon_appear: invalid greater");
 				return;
 		}
 	}
@@ -1737,7 +1737,7 @@ void furcas_vanish(CHAR_DATA *ch, CHAR_DATA *mob)
 		pRoomIndex = get_random_room(mob);
 
 		if (nocrash > 100000)
-			bug("Furcas bug!", 0);
+			RS.Bug("Furcas bug!");
 
 		if (!is_explore(pRoomIndex)
 			&& !pRoomIndex->cabal
