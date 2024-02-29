@@ -166,7 +166,7 @@ void CMud::Bug(const char *tError, ...)
 {
 	TString bug;
 	MUNCH_VARARG(tError, bug) //mmm, chewy.
-	fprintf(stderr,"[*****] BUG: %s", (RSTR)bug);
+	fprintf(stderr,"[*****] BUG: %s\n\r", (RSTR)bug);
 
 	std::string str = std::string((RSTR)bug);
 	wiznet(str.data(), 0, 0, WIZ_DEBUG, 0, 0);
