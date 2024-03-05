@@ -22,6 +22,7 @@
 #include "devextra.h"
 #include "comm.h"
 #include "./stdlibs/cdirectory.h"
+#include "./stdlibs/clogger.h"
 #include "./include/fmt/format.h"
 
 CRoom *CRoom::first = nullptr;

@@ -66,7 +66,9 @@
 		"stdexcept": "cpp",
 		"cfenv": "cpp",
 		"cinttypes": "cpp",
-		"codecvt": "cpp"
+		"codecvt": "cpp",
+		"charconv": "cpp",
+		"source_location": "cpp"
 	},
 	"testMate.cpp.test.executables": "tests/*{_tests}*",
 	"testMate.cpp.debug.configTemplate": { 
