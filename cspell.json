@@ -1373,6 +1373,7 @@
         "totalhrsplayed",
         "totalpk",
         "tovict",
+        "tparam",
         "tptr",
         "tquery",
         "tracktimer",

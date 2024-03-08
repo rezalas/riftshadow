@@ -68,7 +68,8 @@
 		"cinttypes": "cpp",
 		"codecvt": "cpp",
 		"charconv": "cpp",
-		"source_location": "cpp"
+		"source_location": "cpp",
+		"cerrno": "cpp"
 	},
 	"testMate.cpp.test.executables": "tests/*{_tests}*",
 	"testMate.cpp.debug.configTemplate": { 
