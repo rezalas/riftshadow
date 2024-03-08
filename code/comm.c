@@ -122,13 +122,13 @@ BIND_AGAIN:
 
 	if ((fd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
 	{
-		perror("Init_socket: socket");
+		RS.Logger.Error("Init_socket: socket: {}", std::strerror(errno));
 		exit(0);
 	}
 
 	if (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, (char *)&x, sizeof(x)) < 0)
 	{
-		perror("Init_socket: SO_REUSEADDR");
+		RS.Logger.Error("Init_socket: SO_REUSEADDR: {}", std::strerror(errno));
 		close(fd);
 		exit(0);
 	}
@@ -143,7 +143,7 @@ BIND_AGAIN:
 		if ( setsockopt( fd, SOL_SOCKET, SO_DONTLINGER,
 		(char *) &ld, sizeof(ld) ) < 0 )
 		{
-			perror( "Init_socket: SO_DONTLINGER" );
+			RS.Logger.Error("Init_socket: SO_DONTLINGER: {}", std::strerror(errno));
 			close(fd);
 			exit( SAFE_EXIT );
 		}
@@ -156,7 +156,7 @@ BIND_AGAIN:
 
 	if (bind(fd, (struct sockaddr *)&sa, sizeof(sa)) < 0)
 	{
-		perror("Init socket: bind");
+		RS.Logger.Warn("Init_socket: bind: {}", std::strerror(errno));
 		if (--done < 0)
 		{
 			fprintf(stderr, "Unable to allocate port.  Exiting.\n\r");
@@ -172,7 +172,7 @@ BIND_AGAIN:
 
 	if (listen(fd, 3) < 0)
 	{
-		perror("Init socket: listen");
+		RS.Logger.Warn("Init_socket: listen: {}", std::strerror(errno));
 		close(fd);
 		exit(0);
 	}
@@ -223,7 +223,7 @@ void game_loop_unix(int control)
 
 		if (select(maxdesc + 1, &in_set, &out_set, &exc_set, &null_time) < 0)
 		{
-			perror("Game_loop: select: poll");
+			RS.Logger.Error("Game_loop: select poll: {}", std::strerror(errno));
 			exit(0);
 		}
 
@@ -420,7 +420,7 @@ void game_loop_unix(int control)
 
 				if (select(0, nullptr, nullptr, nullptr, &stall_time) < 0)
 				{
-					perror("Game_loop: select: stall");
+					RS.Logger.Error("Game_loop: select stall: {}", std::strerror(errno));
 					exit(1);
 				}
 			}
@@ -445,20 +445,20 @@ void init_descriptor(int control)
 
 	if ((desc = accept(control, (struct sockaddr *)&sock, (socklen_t *)&size)) < 0)
 	{
-		perror("New_descriptor: accept");
+		RS.Logger.Warn("Init_descriptor: accept: {}", std::strerror(errno));
 		return;
 	}
 
 	if (fcntl(desc, F_SETFL, FNDELAY) == -1)
 	{
-		perror("New_descriptor: fcntl: FNDELAY");
+		RS.Logger.Warn("Init_descriptor: fcntl FNDELAY: {}", std::strerror(errno));
 		return;
 	}
 
 #ifndef _WIN32  /* windows doesn't lock files like this so we should be able to bypass */
 	if (fcntl(desc, F_SETFL, FNDELAY) == -1)
 	{
-		perror( "New_descriptor: fcntl: FNDELAY" );
+		RS.Logger.Warn("Init_descriptor: fcntl FNDELAY: {}", std::strerror(errno));
 		return;
 	}
 #endif
@@ -482,7 +482,7 @@ void init_descriptor(int control)
 
 	if (getpeername(desc, (struct sockaddr *)&sock, (socklen_t *)&size) < 0)
 	{
-		perror("New_descriptor: getpeername");
+		RS.Logger.Warn("Init_descriptor: getpeername: {}", std::strerror(errno));
 		dnew->host = palloc_string("(unknown)");
 	}
 	else
@@ -616,7 +616,7 @@ void close_socket(DESCRIPTOR_DATA *dclose)
 		if (d != nullptr)
 			d->next = dclose->next;
 		else
-			RS.Bug("Close_socket: dclose not found.");
+			RS.Logger.Warn("Close_socket: dclose not found.");
 	}
 
 	close(dclose->descriptor);
@@ -664,7 +664,7 @@ bool read_from_descriptor(DESCRIPTOR_DATA *d)
 		}
 		else
 		{
-			perror("Read_from_descriptor");
+			RS.Logger.Warn("Init_descriptor: read: {}", std::strerror(errno));
 			return false;
 		}
 	}
@@ -1377,7 +1377,7 @@ void write_to_buffer(DESCRIPTOR_DATA *d, const char *txt, int length)
 
 		if (d->outsize >= 32000)
 		{
-			RS.Bug("Buffer overflow. Closing.\n\r");
+			RS.Logger.Warn("Buffer overflow. Closing.\n\r");
 			d->outtop = 0;
 			close_socket(d);
 			return;
@@ -1417,7 +1417,7 @@ bool write_to_descriptor(int desc, char *txt, int length)
 		nBlock = std::min(length - iStart, 4096);
 		if ((nWrite = write(desc, txt + iStart, nBlock)) < 0)
 		{
-			perror("Write_to_descriptor");
+			RS.Logger.Warn("Write_to_descriptor: write: {}", std::strerror(errno));
 			return false;
 		}
 	}
@@ -2822,7 +2822,7 @@ void nanny(DESCRIPTOR_DATA *d, char *argument)
 			do_unread(ch, "");
 			break;
 		default:
-			RS.Bug("Nanny: bad d->connected %d.", d->connected);
+			RS.Logger.Warn("Nanny: bad d->connected {}.", d->connected);
 			close_socket(d);
 			return;
 	}
@@ -3178,7 +3178,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 
 				if (*str >= 'A' && *str <= 'Z')
 				{
-					RS.Bug("Act: missing arg2 for code %d.", *str);
+					RS.Logger.Warn("Act: missing arg2 for code {}.", *str);
 					i = " <@@@> ";
 				}
 				else
@@ -3199,7 +3199,7 @@ void act_area(const char *format, CHAR_DATA *ch, CHAR_DATA *victim)
 							i = his_her[URANGE(0, victim->sex, 2)];
 							break;
 						default:
-							RS.Bug("Act: bad code %d.", *str);
+							RS.Logger.Warn("Act: bad code {}.", *str);
 							i = " <@@@> ";
 							break;
 					}
@@ -3272,7 +3272,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 	{
 		if (vch == nullptr)
 		{
-			RS.Bug("Act: null vch with TO_VICT. -- %s", format);
+			RS.Logger.Warn("Act: null vch with TO_VICT. -- {}", format);
 			return;
 		}
 
@@ -3326,7 +3326,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 
 			if (arg2 == nullptr && *str >= 'A' && *str <= 'Z' && *str != 'I')
 			{
-				RS.Bug("Act: missing arg2 for code %d.", *str);
+				RS.Logger.Warn("Act: missing arg2 for code {}.", *str);
 				i = " <@@@> ";
 			}
 			else
@@ -3415,7 +3415,7 @@ void act_new(const char *format, CHAR_DATA *ch, const void *arg1, const void *ar
 						}
 						break;
 					default:
-						RS.Bug("Act: bad code %d.", *str);
+						RS.Logger.Warn("Act: bad code {}.", *str);
 						i = " <@@@> ";
 						break;
 				}

@@ -1693,7 +1693,7 @@ void do_drink(CHAR_DATA *ch, char *argument)
 
 			if (liquid < 0)
 			{
-				RS.Bug("Do_drink: bad liquid number, %d, on %s.", liquid, obj->short_descr);
+				RS.Logger.Warn("Do_drink: bad liquid number, {}, on {}.", liquid, obj->short_descr);
 				liquid = obj->value[2] = 0;
 			}
 
@@ -1710,7 +1710,7 @@ void do_drink(CHAR_DATA *ch, char *argument)
 
 			if (liquid < 0)
 			{
-				RS.Bug("Do_drink: bad liquid number, %d, on %s.", liquid, obj->short_descr);
+				RS.Logger.Warn("Do_drink: bad liquid number, {}, on {}.", liquid, obj->short_descr);
 				liquid = obj->value[2] = 0;
 			}
 
@@ -2049,7 +2049,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		RS.Bug("Wear_obj: no free neck.");
+		RS.Logger.Warn("Wear_obj: no free neck.");
 		send_to_char("You already wear two neck items.\n\r", ch);
 		return;
 	}
@@ -2182,7 +2182,7 @@ void wear_obj(CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace)
 			return;
 		}
 
-		RS.Bug("Wear_obj: no free wrist.");
+		RS.Logger.Warn("Wear_obj: no free wrist.");
 		send_to_char("You already wear two wrist items.\n\r", ch);
 		return;
 	}
@@ -3085,7 +3085,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 
 	if (sn < 0 || sn >= MAX_SKILL || skill_table[sn].spell_fun == 0)
 	{
-		RS.Bug("Do_brandish: bad sn %d.", sn);
+		RS.Logger.Warn("Do_brandish: bad sn {}.", sn);
 		return;
 	}
 
@@ -3139,7 +3139,7 @@ void do_brandish(CHAR_DATA *ch, char *argument)
 
 						break;
 				default:
-					RS.Bug("Do_brandish: bad target for sn %d.", sn);
+					RS.Logger.Warn("Do_brandish: bad target for sn {}.", sn);
 					return;
 				}
 
@@ -3682,7 +3682,7 @@ void do_buy(CHAR_DATA *ch, char *argument)
 		pRoomIndexNext = get_room_index(ch->in_room->vnum + 1);
 		if (pRoomIndexNext == nullptr)
 		{
-			RS.Bug("Do_buy: bad pet shop at vnum %d.", ch->in_room->vnum);
+			RS.Logger.Debug("Do_buy: bad pet shop at vnum {}.", ch->in_room->vnum);
 			send_to_char("Sorry, you can't buy that here.\n\r", ch);
 			return;
 		}
@@ -3964,7 +3964,7 @@ void do_list(CHAR_DATA *ch, char *argument)
 
 		if (pRoomIndexNext == nullptr)
 		{
-			RS.Bug("Do_list: bad pet shop at vnum %d.", ch->in_room->vnum);
+			RS.Logger.Debug("Do_list: bad pet shop at vnum {}", ch->in_room->vnum);
 			send_to_char("You can't do that here.\n\r", ch);
 			return;
 		}
@@ -4404,7 +4404,7 @@ bool hands_full(CHAR_DATA *ch)
 		return false;
 
 	if (count > 2)
-		RS.Bug("Hands full: Character holding %d items.", count);
+		RS.Logger.Warn("Hands full: Character holding {} items.", count);
 
 	return true;
 }
@@ -4813,7 +4813,7 @@ void report_weapon_skill(CHAR_DATA *ch, OBJ_DATA *obj)
 
 	if (obj->item_type != ITEM_WEAPON)
 	{
-		RS.Bug("report_weapon_skill: Bad obj->type, %d, vnum %d, carried by %s.", 
+		RS.Logger.Debug("report_weapon_skill: Bad obj->type, {}, vnum {}, carried by {}.", 
 			obj->item_type,
 			obj->pIndexData->vnum,
 			ch->name);
@@ -4903,7 +4903,7 @@ void save_cabal_items(void)
 
 	if (fp == nullptr)
 	{
-		perror(CABAL_ITEMS_FILE);
+		RS.Logger.Warn("Save_cabal_items: fopen {}: {}", CABAL_ITEMS_FILE, std::strerror(errno));
 		return;
 	}
 

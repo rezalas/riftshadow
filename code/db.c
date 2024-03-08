@@ -958,7 +958,7 @@ void load_resets(FILE *fp)
 
 	if (!area_last)
 	{
-		RS.Bug("Load_resets: no #AREA seen yet.");
+		RS.Logger.Error("Load_resets: no #AREA seen yet.");
 		exit(1);
 	}
 
@@ -1083,14 +1083,14 @@ void load_resets(FILE *fp)
 					|| !(pexit = pRoomIndex->exit[pReset->arg2])
 					|| !IS_SET(pexit->exit_info, EX_ISDOOR))
 				{
-					RS.Bug("Load_resets: 'D': exit %d not door.", pReset->arg2);
+					RS.Logger.Error("Load_resets: 'D': exit {} not door.", pReset->arg2);
 					exit(1);
 				}
 
 				/*
 				if (pReset->arg3 < 0 || pReset->arg3 > 2)
 				{
-					RS.Bug("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
+					RS.Logger.Error("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
 					exit(1);
 				}
 				*/
@@ -1107,7 +1107,7 @@ void load_resets(FILE *fp)
 						SET_BIT(pexit->exit_info, EX_LOCKED);
 						break;
 					default:
-						RS.Bug("Load_resets: 'D': bad 'locks': %d.", pReset->arg3);
+						RS.Logger.Warn("Load_resets: 'D': bad 'locks': {}.", pReset->arg3);
 						break;
 				}
 
@@ -1117,7 +1117,7 @@ void load_resets(FILE *fp)
 
 				if (pReset->arg2 < 0 || pReset->arg2 > 6)
 				{
-					RS.Bug("Load_resets: 'R': bad exit %d.", pReset->arg2);
+					RS.Logger.Error("Load_resets: 'R': bad exit {}.", pReset->arg2);
 					exit(1);
 				}
 
@@ -1126,7 +1126,7 @@ void load_resets(FILE *fp)
 
 				break;
 			default:
-				RS.Bug("Load_resets: bad command '%c'.", letter);
+				RS.Logger.Error("Load_resets: bad command '{}'.", letter);
 				exit(1);
 				break;
 		}
@@ -1287,7 +1287,7 @@ void fix_exits(void)
 					&& pexit_rev->u1.to_room != pRoomIndex
 					&& (pRoomIndex->vnum < 1200 || pRoomIndex->vnum > 1299))
 				{
-					RS.Bug("Fix_exits: %d:%d -> %d:%d -> %d.",
+					RS.Logger.Warn("Fix_exits: {}:{} -> {}:{} -> {}.",
 						pRoomIndex->vnum,
 						door,
 						to_room->vnum,
@@ -1449,7 +1449,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pMobIndex == nullptr)
 				{
-					RS.Bug("Reset_area: 'M': bad vnum %d.", pReset->arg1);
+					RS.Logger.Warn("Reset_area: 'M': bad vnum {}.", pReset->arg1);
 					continue;
 				}
 
@@ -1457,7 +1457,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pRoomIndex == nullptr)
 				{
-					RS.Bug("Reset_area: 'R': bad vnum %d.", pReset->arg3);
+					RS.Logger.Warn("Reset_area: 'R': bad vnum {}.", pReset->arg3);
 					continue;
 				}
 
@@ -1516,8 +1516,8 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjIndex)
 				{
-					RS.Bug("Reset_room: 'O' 1 : bad vnum %d", pReset->arg1);
-					RS.Bug("%d %d %d %d", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
+					RS.Logger.Warn("Reset_room: 'O' 1 : bad vnum {}", pReset->arg1);
+					RS.Logger.Warn("{} {} {} {}", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
 					continue;
 				}
 
@@ -1525,8 +1525,8 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pRoomIndex)
 				{
-					RS.Bug("Reset_room: 'O' 2 : bad vnum %d.", pReset->arg3);
-					RS.Bug("%d %d %d %d", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
+					RS.Logger.Warn("Reset_room: 'O' 2 : bad vnum {}.", pReset->arg3);
+					RS.Logger.Warn("{} {} {} {}", pReset->arg1, pReset->arg2, pReset->arg3, pReset->arg4);
 					continue;
 				}
 
@@ -1564,7 +1564,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjIndex)
 				{
-					RS.Bug("Reset_room: 'P': bad vnum %d.", pReset->arg1);
+					RS.Logger.Warn("Reset_room: 'P': bad vnum {}.", pReset->arg1);
 					continue;
 				}
 
@@ -1572,7 +1572,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjToIndex)
 				{
-					RS.Bug("Reset_room: 'P': bad vnum %d.", pReset->arg3);
+					RS.Logger.Warn("Reset_room: 'P': bad vnum {}.", pReset->arg3);
 					continue;
 				}
 
@@ -1615,7 +1615,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pObjIndex)
 				{
-					RS.Bug("Reset_room: 'E' or 'G': bad vnum %d.", pReset->arg1);
+					RS.Logger.Warn("Reset_room: 'E' or 'G': bad vnum {}.", pReset->arg1);
 					continue;
 				}
 
@@ -1624,7 +1624,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!LastMob)
 				{
-					RS.Bug("Reset_room: 'E' or 'G': null mob for vnum %d.", pReset->arg1);
+					RS.Logger.Warn("Reset_room: 'E' or 'G': null mob for vnum {}.", pReset->arg1);
 					last= false;
 					break;
 				}
@@ -1763,7 +1763,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (pRoomIndex == nullptr)
 				{
-					RS.Bug("Reset_area: 'D': bad vnum %d.", pReset->arg1);
+					RS.Logger.Warn("Reset_area: 'D': bad vnum {}.", pReset->arg1);
 					continue;
 				}
 
@@ -1797,7 +1797,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				if (!pRoomIndex)
 				{
-					RS.Bug("Reset_room: 'R': bad vnum %d.", pReset->arg1);
+					RS.Logger.Warn("Reset_room: 'R': bad vnum {}.", pReset->arg1);
 					continue;
 				}
 
@@ -1817,7 +1817,7 @@ void reset_room(ROOM_INDEX_DATA *pRoom)
 
 				break;
 			default:
-				RS.Bug("Reset_area: bad command %c.", pReset->command);
+				RS.Logger.Warn("Reset_area: bad command {}.", pReset->command);
 				break;
 		}
 	}
@@ -1854,7 +1854,7 @@ CHAR_DATA *create_mobile(MOB_INDEX_DATA *pMobIndex)
 
 	if (pMobIndex == nullptr)
 	{
-		RS.Bug("Create_mobile: nullptr pMobIndex.");
+		RS.Logger.Error("Create_mobile: nullptr pMobIndex.");
 		exit(1);
 	}
 
@@ -2198,7 +2198,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 
 	if (pObjIndex == nullptr)
 	{
-		RS.Bug("Create_object: nullptr pObjIndex.");
+		RS.Logger.Error("Create_object: nullptr pObjIndex.");
 		exit(1);
 	}
 
@@ -2349,7 +2349,7 @@ OBJ_DATA *create_object(OBJ_INDEX_DATA *pObjIndex, int level)
 
 			break;
 		default:
-			RS.Bug("Read_object: vnum %d bad type.", pObjIndex->vnum);
+			RS.Logger.Warn("Read_object: vnum {} bad type.", pObjIndex->vnum);
 			break;
 	}
 
@@ -2509,7 +2509,7 @@ MOB_INDEX_DATA *get_mob_index(int vnum)
 
 	if (fBootDb)
 	{
-		RS.Bug("Get_mob_index: funky vnum %d.", vnum);
+		RS.Logger.Error("Get_mob_index: funky vnum {}.", vnum);
 		exit(1);
 	}
 
@@ -2532,7 +2532,7 @@ OBJ_INDEX_DATA *get_obj_index(int vnum)
 
 	if (fBootDb)
 	{
-		RS.Bug("Get_obj_index: bad vnum %d.", vnum);
+		RS.Logger.Error("Get_obj_index: bad vnum {}.", vnum);
 		exit(1);
 	}
 
@@ -2555,7 +2555,7 @@ ROOM_INDEX_DATA *get_room_index(int vnum)
 
 	if (fBootDb)
 	{
-		RS.Bug("Get_room_index: bad vnum %d.", vnum);
+		RS.Logger.Error("Get_room_index: bad vnum %d.", vnum);
 		exit(1);
 	}
 
@@ -2617,7 +2617,7 @@ int fread_number(FILE *fp)
 			strcat(buf, dbuf);
 		}
 
-		RS.Bug(buf);
+		RS.Logger.Error(buf);
 		exit(1);
 	}
 
@@ -2794,7 +2794,7 @@ char *fread_string(FILE *fp)
 		{
 			case EOF:
 				/* temp fix */
-				RS.Bug("Fread_string: EOF");
+				RS.Logger.Warn("Fread_string: EOF");
 				return nullptr;
 				/* exit( 1 ); */
 				break;
@@ -2905,7 +2905,7 @@ char *fread_string_eol(FILE *fp)
 		switch (plast[-1])
 		{
 			case EOF:
-				RS.Bug("Fread_string_eol  EOF");
+				RS.Logger.Error("Fread_string_eol  EOF");
 				exit(1);
 				break;
 			case '\n':
@@ -2976,7 +2976,7 @@ char *fread_word(FILE *fp)
 		}
 	}
 
-	RS.Bug("Fread_word: word too long [%s].", word);
+	RS.Logger.Error("Fread_word: word too long [{}].", word);
 	exit(1);
 	return nullptr;
 }
@@ -3002,7 +3002,7 @@ void *iamlame(int sMem)
 
 	if (iList == MAX_MEM_LIST)
 	{
-		RS.Bug("Alloc_mem: size %d too large.", sMem);
+		RS.Logger.Error("Alloc_mem: size {} too large.", sMem);
 		exit(1);
 	}
 
@@ -3040,8 +3040,8 @@ void soami(void *pMem, int sMem)
 
 	if (*magic != MAGIC_NUM)
 	{
-		//RS.Bug("Attempt to recycle invalid memory of size %d.",sMem);
-		//RS.Bug((char*) pMem + sizeof(*magic));
+		//RS.Logger.Warn("Attempt to recycle invalid memory of size {}.",sMem);
+		//RS.Logger.Warn((char*) pMem + sizeof(*magic));
 		return;
 	}
 
@@ -3056,7 +3056,7 @@ void soami(void *pMem, int sMem)
 
 	if (iList == MAX_MEM_LIST)
 	{
-		RS.Bug("Free_mem: size %d too large.", sMem);
+		RS.Logger.Error("Free_mem: size {} too large.", sMem);
 		exit(1);
 	}
 
@@ -3084,7 +3084,7 @@ void *crappyold(int sMem)
 
 	if (sMem > MAX_PERM_BLOCK)
 	{
-		RS.Bug("Alloc_perm: %d too large.", sMem);
+		RS.Logger.Error("Alloc_perm: {} too large.", sMem);
 		exit(1);
 	}
 
@@ -3094,7 +3094,7 @@ void *crappyold(int sMem)
 
 		if ((pMemPerm = calloc( 1, MAX_PERM_BLOCK ) ) == nullptr)
 		{
-			perror("Alloc_perm");
+			RS.Logger.Error("Crappyold: calloc: {}", std::strerror(errno));
 			exit(1);
 		}
 	}
@@ -3596,13 +3596,13 @@ bool str_cmp(const char *astr, const char *bstr)
 {
 	if (astr == nullptr)
 	{
-		//	RS.Bug("Str_cmp: null astr, bstr: %s (%s:%d dev=pimp)",gLastFile, gLastLine, bstr);
+		//	RS.Logger.Warn("Str_cmp: null astr, bstr: {} ({}:{} dev=pimp)",gLastFile, gLastLine, bstr);
 		return true;
 	}
 
 	if (bstr == nullptr)
 	{
-		//	RS.Bug("Str_cmp: null bstr, astr: %s", astr);
+		//	RS.Logger.Warn("Str_cmp: null bstr, astr: {}", astr);
 		return true;
 	}
 
@@ -3624,13 +3624,13 @@ bool str_prefix(const char *astr, const char *bstr)
 {
 	if (astr == nullptr)
 	{
-		RS.Bug("Strn_cmp: null astr.");
+		RS.Logger.Debug("Strn_cmp: null astr.");
 		return true;
 	}
 
 	if (bstr == nullptr)
 	{
-		RS.Bug("Strn_cmp: null bstr.");
+		RS.Logger.Debug("Strn_cmp: null bstr.");
 		return true;
 	}
 
@@ -3723,7 +3723,7 @@ void append_file(CHAR_DATA *ch, char *file, char *str)
 
 	if (fp == nullptr)
 	{
-		perror(file);
+		RS.Logger.Warn("Append_file: fopen {}: {}", file, std::strerror(errno));
 		send_to_char("Could not open the file!\n\r", ch);
 	}
 	else
@@ -3921,7 +3921,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 		fpChar = fopen(strPlr, "r");
 		if (fpChar == nullptr)
 		{
-			perror(strPlr);
+			RS.Logger.Error("Do_llimit: fopen {}: {}", strPlr, std::strerror(errno));
 			exit(1);
 		}
 
@@ -3951,7 +3951,7 @@ void do_llimit(CHAR_DATA *ch, char *argument)
 					vnum = fread_number(fpChar);
 					if (get_obj_index(vnum) == nullptr)
 					{
-						/*	RS.Bug("Bad obj vnum in limits: %d",vnum); */
+						/*	RS.Logger.Warn("Bad obj vnum in limits: {}",vnum); */
 					}
 					else
 					{

@@ -64,7 +64,7 @@ void CMud::LoadObjLimits()
 		fpChar = fopen(strPlr, "r");
 		if (fpChar == nullptr)
 		{
-			perror(strPlr);
+			RS.Logger.Error("LoadObjLimits: fopen {}: {}", strPlr, std::strerror(errno));
 			exit(1);
 		}
 
@@ -206,7 +206,7 @@ void CMud::LoadAreas()
 
 	if ( ( fpList = fopen( AREA_LIST, "r" ) ) == nullptr )
 	{
-		perror( AREA_LIST );
+		RS.Logger.Error("LoadAreas: fopen {}: {}", AREA_LIST, std::strerror(errno));
 		exit( 1 );
 	}
 
@@ -229,7 +229,7 @@ void CMud::LoadAreas()
 			auto strAreaFullPath = fmt::format("{}/{}", RIFT_AREA_DIR, strArea);
 			if ( ( fpArea = fopen(strAreaFullPath.c_str(), "r" ) ) == nullptr )
 			{
-				perror(strAreaFullPath.c_str());
+				RS.Logger.Error("LoadAreas: fopen {}: {}", strAreaFullPath, std::strerror(errno));
 				exit( 1 );
 			}
 		}
@@ -240,7 +240,7 @@ void CMud::LoadAreas()
 
 			if ( fread_letter( fpArea ) != '#' )
 			{
-				RS.Bug("Boot_db: # not found.");
+				RS.Logger.Error("Boot_db: # not found.");
 				exit( 1 );
 			}
 
@@ -258,7 +258,7 @@ void CMud::LoadAreas()
 			else if ( !str_cmp( word, "SPECS" ) ) load_specs(fpArea);
 			else
 			{
-				RS.Bug("Boot_db: bad section name.");
+				RS.Logger.Warn("Boot_db: bad section name.");
 			}
 		}
 

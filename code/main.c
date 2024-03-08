@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 	 */
 	if ((fpReserve = fopen(NULL_FILE, "r")) == nullptr)
 	{
-		perror(NULL_FILE);
+		RS.Logger.Error("Main: fopen {}: {}", NULL_FILE, std::strerror(errno));
 		exit(0);
 	}
 
