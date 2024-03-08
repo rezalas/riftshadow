@@ -17,6 +17,7 @@
 #include "db.h"
 #include "db2.h"
 #include "misc.h"
+#include "./stdlibs/clogger.h"
 
 
 CMud RS;
@@ -24,111 +25,112 @@ CMud RS;
 CMud::CMud()
 {
 	Settings = Config(CONFIG_FILE);
-	
+	Logger = CLogger();
+	Logger.Initialize();
+
 	if (!Settings.isLoaded())
 	{
-		RS.Bug("Unable to load configuration!\r\n");
+		Logger.Error("Unable to load configuration!\r\n");
 		exit(0);
-	}		
+	}
 }
 
 CMud::~CMud()
 {
 	if(game_up)
 		RS.Shutdown();
+
+	Logger.Shutdown();
 }
 
 bool CMud::Bootup()
 {
-	FILE *fp;
-	char tempbuf[MSL], buf[MSL];
-		RS.Log("\n\r*** Beginning RIFTSHADOW MUD server ***");
-		
-		top_string = nullptr;
-		fBootDb = true;
+	Logger.Info("*** Beginning RIFTSHADOW MUD server ***");
 
-		RS.Log("Creating persistent SQL connection...");
-		DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
-		if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
-		riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
-		{
-			RS.Log("Failed to create a SQL connection.");
-			return false;
-		}
-		
-		game_up = true;
-		
-		RS.Log("Loading options and greeting screen...");
-		RS.LoadGreetingScreen();
-		
-		RS.LoadOptions();
+	top_string = nullptr;
+	fBootDb = true;
 
-		InitializeTables();
+	Logger.Info("Creating persistent SQL connection...");
+	DbConnection riftCore = RS.SQL.Settings.GetDbConnection("rift_core");
+	if (!RS.SQL.StartSQLServer(riftCore.Host.c_str(),
+	riftCore.Db.c_str(), riftCore.User.c_str(), riftCore.Pwd.c_str()))
+	{
+		Logger.Warn("Failed to create a SQL connection.");
+		return false;
+	}
 
-        RS.Log("Initialize random number generator...");
-        init_mm();
-				
-		RS.Log("Setting time, weather, and berus/calabren pos...");
-		RS.LoadTime();
-		
-		RS.Log("Assigning gsns and psns to skills and spells...");
-		RS.LoadGsn();
-		CProficiencies::AssignPsns();
+	game_up = true;
 
-		RS.Log("Reading the race info...");
-		load_race_info();
+	Logger.Info("Loading options and greeting screen...");
+	RS.LoadGreetingScreen();
 
-		RS.Log("Sorting area list..");
-		sort_areas();
+	RS.LoadOptions();
 
-		RS.Log("Loading area files..");
-		RS.LoadAreas();
+	InitializeTables();
 
-		RS.Log("Starting player file parsing..");
-		RS.LoadObjLimits();
-		
+	Logger.Info("Initialize random number generator...");
+	init_mm();
 
-		fix_exits( );
-		RS.Log("Exits fixed");
-		find_adjacents( );
-		RS.Log("Adjacent areas found");
-		clean_notes( );
-		RS.Log("Notes cleaned");
-		fBootDb= false;
-		area_update( );
-		RS.Log("Area update");
-		gold_update( );
-		RS.Log("Allocating gold");
-		load_cabal_items();
-		RS.Log("Cabal Items loaded");
-		weather_update();
-		RS.Log("Priming weather");
-		reset_chessboard();
-		gold_constant = std::stol(Settings.GetValue("Gold"));
-		update_db_gold();
-
-		//CSocket::InitializeSockets();
+	Logger.Info("Setting time, weather, and berus/calabren pos...");
+	RS.LoadTime();
 	
-	    /* 
-		*      load up the "tables" - linked lists containing most
-		*      of the static game data.  Races, classes, lookups, etc etc.
-		*/
+	Logger.Info("Assigning gsns and psns to skills and spells...");
+	RS.LoadGsn();
+	CProficiencies::AssignPsns();
+
+	Logger.Info("Reading the race info...");
+	load_race_info();
+
+	Logger.Info("Sorting area list..");
+	sort_areas();
+
+	Logger.Info("Loading area files..");
+	RS.LoadAreas();
+
+	Logger.Info("Starting player file parsing..");
+	RS.LoadObjLimits();
+
+	fix_exits( );
+	Logger.Info("Exits fixed");
+	find_adjacents( );
+	Logger.Info("Adjacent areas found");
+	clean_notes( );
+	Logger.Info("Notes cleaned");
+	fBootDb= false;
+	area_update( );
+	Logger.Info("Area update");
+	gold_update( );
+	Logger.Info("Allocating gold");
+	load_cabal_items();
+	Logger.Info("Cabal Items loaded");
+	weather_update();
+	Logger.Info("Priming weather");
+	reset_chessboard();
+	gold_constant = std::stol(Settings.GetValue("Gold"));
+	update_db_gold();
+
+	//CSocket::InitializeSockets();
+
+	/* 
+	*      load up the "tables" - linked lists containing most
+	*      of the static game data.  Races, classes, lookups, etc etc.
+	*/
 
 #ifndef NOLOAD
-		/*RS.SQL.IQuery("LOCK TABLES class_table READ, race_table READ, interp_table READ, 
-				world_areas READ, world_rooms READ");
-		*/	
+	/*RS.SQL.IQuery("LOCK TABLES class_table READ, race_table READ, interp_table READ, 
+			world_areas READ, world_rooms READ");
+	*/	
 
-		/*
-		* Load areas, rooms, object templates, and mob templates
-		*/
-		
-		//RS.LoadAreas();
+	/*
+	* Load areas, rooms, object templates, and mob templates
+	*/
+	
+	//RS.LoadAreas();
 
-		//RS.SQL.IQuery("UNLOCK TABLES");
+	//RS.SQL.IQuery("UNLOCK TABLES");
 #endif
-		//RS.GameEngine.GameLoop();
-		return true;
+	//RS.GameEngine.GameLoop();
+	return true;
 }
 
 inline bool CMud::RunGame()

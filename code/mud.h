@@ -12,6 +12,7 @@
 
 #include "rift.h"
 #include "gameloop.h"
+#include "stdlibs/clogger.h"
 #include "stdlibs/sql.h"
 #include "queue.h"
 #include "interp2.h"
@@ -36,6 +37,7 @@ public:
 	virtual ~CMud();
 //	CGameLoop 			GameEngine;
 	CSQLInterface		SQL;
+	CLogger				Logger;
 //	CInterpreter		Interpreter;
 	CQueue				Queue;
 	Config				Settings;
